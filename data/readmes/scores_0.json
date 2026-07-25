@@ -1,0 +1,38 @@
+[
+  {
+    "id": "pkg:@upstash/context7-mcp",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "3 concrete prompts, CLI+MCP modes, OAuth setup, honest rate-limit notes. Core tool is doc-fetch; remote docs are a prompt-injection surface."
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-filesystem",
+    "expertise": 62,
+    "verdict": "thin",
+    "note": "Monorepo index README only; one-line server desc ('secure file ops, access controls'). Honest reference-not-prod caveat; no tool docs/examples."
+  },
+  {
+    "id": "pkg:chrome-devtools-mcp",
+    "expertise": 87,
+    "verdict": "deep",
+    "note": "DevTools team: perf traces, source-mapped stack traces, network, puppeteer auto-wait. Honest disclaimers, CrUX opt-out, linked tool reference."
+  },
+  {
+    "id": "pkg:@supabase/mcp-server-supabase",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Official; security-first framing, OAuth 2.1, remote/local/self-hosted, typed createToolSchemas() example. Tool list offloaded to docs."
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-memory",
+    "expertise": 55,
+    "verdict": "thin",
+    "note": "Same monorepo index README; one-line desc ('knowledge-graph persistent memory'). No tool signatures/examples; honest reference-not-prod caveat."
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-sequential-thinking",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Same monorepo index README; one-line desc. Thinnest reference server: a thought-scaffold, no external capability, no concrete tools/examples."
+  }
+]

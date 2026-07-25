@@ -3,97 +3,135 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mastered — measure what actually works</title>
-  <meta name="description" content="The intelligence layer for AI capabilities. Mastered measures real-world adoption of MCP servers and skills from public signal — not stars, not listings, not opinions.">
-  <meta name="theme-color" content="#09090b">
-  <meta property="og:title" content="Mastered — measure what actually works">
-  <meta property="og:description" content="The intelligence layer for AI capabilities. Real adoption from public signal, not stars or listings.">
+  <title>tashan — measure what actually works</title>
+  <meta name="description" content="The intelligence layer for AI capabilities. tashan measures real-world adoption of MCP servers and skills from public signal — not stars, not listings, not opinions.">
+  <meta name="theme-color" content="#0b0b0a">
+  <meta property="og:title" content="tashan — measure what actually works">
+  <meta property="og:description" content="The measured marketplace for AI capabilities. Buy what works — the ranking is evidence, not spend — and creators keep more.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tashan.sh/">
+  <link rel="canonical" href="https://tashan.sh/">
   <link rel="icon" href="/assets/favicon.svg">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=1">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="tashan — measure what actually works">
+  <meta name="twitter:description" content="The measured marketplace for AI capabilities — the only store where the ranking can't be bought. Creators keep more.">
+  <link rel="stylesheet" href="/css/site.css?v=45">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"tashan","url":"https://tashan.sh/","description":"The measured marketplace for AI capabilities — a store for MCP servers and agent-skills whose evidence-based ranking can't be bought.","slogan":"Measure what actually works."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"tashan","url":"https://tashan.sh/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://tashan.sh/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does tashan score MCP servers and skills?","acceptedAnswer":{"@type":"Answer","text":"tashan computes a transparent Trust score from maintenance and freshness, gated by real adoption (npm downloads and public config reach). A separate LLM expertise-eval reads the actual capability and grades it deep / solid / thin / wrapper / slop. Every number is re-derivable from public sources."}},{"@type":"Question","name":"Does tashan sell the capabilities it scores?","acceptedAnswer":{"@type":"Answer","text":"Yes — tashan is a marketplace and creators keep the majority share. But you can never pay to rank: the cut is thin and flat (the same whether a capability scores 9 or 1), so the ranking stays evidence, not spend. There are no sponsored slots, and free and paid capabilities rank side by side."}},{"@type":"Question","name":"What is the difference between an MCP server and an agent skill?","acceptedAnswer":{"@type":"Answer","text":"An MCP server exposes tools to an AI agent over the Model Context Protocol; an agent skill is a folder with a SKILL.md that the agent loads on demand. tashan tracks and scores both in one unified capability model."}}]}</script>
 </head>
 <body>
   <nav class="nav"><div class="wrap nav__in">
-    <a class="brand" href="/"><span class="brand__mark"></span>Mastered<small>v1 · public-signal</small></a>
+    <a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>
     <div class="nav__links">
       <a href="/" aria-current="page">Index</a>
       <a href="/methodology.html">Methodology</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/learn/">Learn</a><a href="/requests.html">Requests</a>
       <a href="/about.html">About</a>
     </div>
   </div></nav>
 
-  <header class="hero"><div class="wrap">
+  <header class="hero">
+    <canvas id="ridge" aria-hidden="true"></canvas>
+    <pre class="ascii-range" aria-hidden="true">                     /\                          /\
+         /\         /  \            /\          /  \
+     /\ /  \   /\  /    \    /\    /  \    /\   /    \      /\
+    /  \    \ /  \/      \  /  \  /    \  /  \ /      \    /  \   /\
+ __/        \/            \/    \/      \/    \/       \__/    \_/  \__</pre>
+    <div class="wrap hero__in">
     <p class="hero__eyebrow">The intelligence layer for AI capabilities</p>
-    <h1>Measure what actually <em>works</em>.</h1>
-    <p class="hero__sub">
-      There are millions of skills and thousands of MCP servers — and almost no honest signal about which ones
-      are real. Mastered measures <strong>actual adoption from public evidence</strong>, not stars, not listings,
-      not opinions. This is the beginning: MCP servers, ranked by how many people truly run them.
-    </p>
+    <h1 class="hero__title"><span class="w">Measure</span> <span class="w">what</span> <span class="w">actually</span> <em class="w">works</em><span class="w dot">.</span></h1>
+    <p class="hero__rot mono" aria-hidden="true">measuring&nbsp; <span id="rot" class="rot"><span>adoption</span></span><span class="caret"></span></p>
+    <p class="hero__sub">Every MCP server and skill, scored on <strong>public evidence</strong> — not stars, not listings.</p>
     <div class="hero__stat" id="heroStat">
-      <span><b class="k" id="sCaps">—</b> capabilities measured</span>
-      <span><b id="sRepos">—</b> public repos mined</span>
-      <span><b id="sConfigs">—</b> configs parsed</span>
+      <span><b class="k" id="sCaps">—</b> capabilities tracked</span>
+      <span><b id="sRepos">—</b> quality-measured</span>
+      <span><b id="sConfigs">—</b> ranked</span>
       <span class="dim" id="sDate">measuring…</span>
     </div>
-    <p style="margin-top:var(--sp-8)">
+    <p class="hero__cta">
+      <a class="btn btn--primary" href="#board-anchor">Explore the Index &darr;</a>
       <a class="btn btn--ghost" href="/methodology.html">How we measure &rsaquo;</a>
     </p>
   </div></header>
 
-  <section class="section"><div class="wrap">
+  <section class="section" id="board-anchor"><div class="wrap">
     <div class="section__head">
       <div>
         <p class="kicker">The Index</p>
-        <h2>MCP servers, ranked by real adoption</h2>
-        <p>Owner-reach dedupes one person's many repos, so a spammed monorepo can't buy rank. Every number is
-          measured from public configs and reproducible.</p>
-      </div>
-      <div class="chips" id="chips" role="group" aria-label="Filter by type">
-        <button class="chip" data-f="all" aria-pressed="true">All</button>
-        <button class="chip" data-f="npm" aria-pressed="false">npm</button>
-        <button class="chip" data-f="remote" aria-pressed="false">remote</button>
-        <button class="chip" data-f="docker" aria-pressed="false">docker</button>
-        <button class="chip" data-f="python" aria-pressed="false">python</button>
+        <h2 id="boardTitle">The field, ranked</h2>
+        <p id="boardDesc">Every MCP server and skill, filed by domain and ranked on measured evidence — Trust
+          (maintenance + freshness, gated by adoption) plus an expertise read like <span class="vd vd--deep">deep</span>
+          or <span class="vd vd--thin">thin</span>. Browse a category on the left, refine on top, open any row for the full breakdown.</p>
       </div>
     </div>
 
-    <div class="board"><div class="board__scroll">
-      <table class="board__t">
-        <thead><tr>
-          <th class="rank">#</th>
-          <th>Capability</th>
-          <th class="num" title="Distinct owners running it (dedupes monorepos)">Reach</th>
-          <th class="num" title="Distinct public repos in the sample">Repos</th>
-          <th class="num" title="Median stars of host repos">★ med</th>
-          <th title="Most recent push of a host repo">Fresh</th>
-          <th class="num" title="Mastered Signal — owner-reach, normalized (see Methodology)">Signal</th>
-        </tr></thead>
-        <tbody id="rows"><tr><td colspan="7"><div class="loading">Loading measured data…</div></td></tr></tbody>
-      </table>
-    </div></div>
-    <p class="dim mono" style="font-size:.76rem;margin-top:var(--sp-3)" id="boardNote"></p>
+    <div class="index-layout">
+      <aside class="catrail" aria-label="Browse by category">
+        <p class="catrail__h mono">Categories</p>
+        <div id="catrail"></div>
+      </aside>
+
+      <div class="index-main">
+        <div class="toolbar" id="toolbar" role="group" aria-label="Filter and sort"></div>
+        <div class="activebar" id="activebar" hidden></div>
+        <div class="board"><div class="board__scroll">
+          <table class="board__t">
+            <thead><tr>
+              <th class="rank">#</th>
+              <th>Capability</th>
+              <th class="num" title="Real npm weekly downloads, or distinct public repos when unpublished">Adoption</th>
+              <th class="num" title="Maintainers, release cadence, deprecation, registry status (0–100)">Maint</th>
+              <th title="Recency of the latest release / host-repo push">Fresh</th>
+              <th class="num" title="Trust — maintenance + freshness, gated by adoption (see Methodology)">Trust</th>
+            </tr></thead>
+            <tbody id="rows"><tr><td colspan="6"><div class="loading">Loading measured data…</div></td></tr></tbody>
+          </table>
+        </div></div>
+        <p class="dim mono" style="font-size:.76rem;margin-top:var(--sp-3)" id="boardNote"></p>
+      </div>
+    </div>
   </div></section>
 
   <section class="section"><div class="wrap">
     <p class="kicker">Why trust this</p>
-    <div class="section__head"><h2>Not a directory. A measurement.</h2></div>
+    <div class="section__head"><h2>Ranked on evidence, not spend.</h2></div>
     <div class="trust">
-      <div class="card"><h3>No stars, no listings</h3><p>GitHub stars measure hype; download counts measure curiosity. We measure whether people actually <em>wire it into their config</em> — and keep it there.</p></div>
-      <div class="card"><h3>No pay-to-rank, ever</h3><p>Rank is a function of measured evidence, not spend. There is no promoted slot, no boost, no advertising in the Index.</p></div>
-      <div class="card"><h3>Reproducible &amp; open</h3><p>Every signal is defined and re-derivable from public GitHub. If you don't believe a number, you can check it.</p></div>
+      <div class="card"><h3>Earned, not bought</h3><p>Adoption, maintenance, freshness, real expertise — every rank comes from public evidence. No stars, no sponsorships, no louder listing moving up the board.</p></div>
+      <div class="card"><h3>We read the actual expertise</h3><p>Directories list; we open each capability and grade the real thing — deep domain work versus a thin wrapper or AI-slop. GitHub evaluates code. Nobody else evaluates the expertise.</p></div>
+      <div class="card"><h3>Every number, re-derivable</h3><p>No black box. Each signal is defined and checkable against public sources — the registry, npm, git history. If you don't believe a number, verify it.</p></div>
     </div>
   </div></section>
 
-  <footer class="footer"><div class="wrap" style="display:contents">
-    <span class="brand" style="font-size:.9rem"><span class="brand__mark" style="width:12px;height:12px"></span>Mastered</span>
-    <span class="mono" id="footMethod">public-signal v1</span>
-    <span class="dim">Measure what actually works.</span>
-  </div></footer>
+  <footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__brand">
+      <span class="brand"><span class="brand__mark"></span>tashan</span>
+      <p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p>
+      <p class="footer__meta" id="footMethod">public-signal v2</p>
+    </div>
+    <nav class="footer__col"><p class="footer__h">Explore</p>
+      <a href="/">The Index</a><a href="/learn/">Learn</a><a href="/requests.html">Requests</a></nav>
+    <nav class="footer__col"><p class="footer__h">Trust</p>
+      <a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a></nav>
+    <nav class="footer__col"><p class="footer__h">Sources</p>
+      <a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>
+      <a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>
+      <a href="https://github.com/" rel="noopener">GitHub ↗</a></nav>
+  </div>
+  <div class="wrap footer__bar">
+    <span>© 2026 SeroLabs, Inc.</span>
+    <span>Every score re-derivable from public evidence.</span>
+  </div>
+</footer>
 
-  <script src="/js/site.js" defer></script>
-  <script src="/js/index.js" defer></script>
+  <script src="/js/ridge.js?v=45" defer></script>
+  <script src="/js/hero.js?v=45" defer></script>
+  <script src="/js/terminal.js?v=45" defer></script>
+  <script src="/js/site.js?v=45" defer></script>
+  <script src="/js/index.js?v=45" defer></script>
 </body>
 </html>

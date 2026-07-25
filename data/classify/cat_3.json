@@ -1,0 +1,242 @@
+[
+  {
+    "id": "pkg:@vayacore/mcp",
+    "category": "data"
+  },
+  {
+    "id": "pkg:bidsparq-mcp-server",
+    "category": "data"
+  },
+  {
+    "id": "pkg:@codmir/mcp",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:mcp-sqlite",
+    "category": "database"
+  },
+  {
+    "id": "pkg:@demomagic/mcp",
+    "category": "design"
+  },
+  {
+    "id": "pkg:@spideriq/mcp-gate",
+    "category": "ai"
+  },
+  {
+    "id": "pkg:@spideriq/mcp-mail",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:@spideriq/mcp-publish",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@knorq/docx-mcp-server",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@openbnb/mcp-server-airbnb",
+    "category": "search"
+  },
+  {
+    "id": "pkg:blender-mcp",
+    "category": "design"
+  },
+  {
+    "id": "pkg:buywhere-mcp",
+    "category": "search"
+  },
+  {
+    "id": "pkg:@traderouter/trade-router-mcp",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:@pimzino/spec-workflow-mcp",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:@autonomad1/computeback-mcp",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:@trustrails/mcp-server",
+    "category": "search"
+  },
+  {
+    "id": "pkg:@nordic-data/mcp",
+    "category": "data"
+  },
+  {
+    "id": "pkg:@clihub/cli",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:@angiejones/mcp-selenium",
+    "category": "browser"
+  },
+  {
+    "id": "pkg:@armoryworks/drive-mcp",
+    "category": "files"
+  },
+  {
+    "id": "pkg:telbase",
+    "category": "cloud"
+  },
+  {
+    "id": "pkg:3dstreet-mcp",
+    "category": "design"
+  },
+  {
+    "id": "pkg:@apogeoapi/mcp",
+    "category": "data"
+  },
+  {
+    "id": "pkg:@i18n-agent/mcp-client",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:mcp-socialapi",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:@calx/selis-mcp",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@claidex-mcp/claidex-mcp",
+    "category": "data"
+  },
+  {
+    "id": "pkg:z-mcp-yapi",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:@agenttrust/mcp-server",
+    "category": "security"
+  },
+  {
+    "id": "pkg:@executeautomation/playwright-mcp-server",
+    "category": "browser"
+  },
+  {
+    "id": "pkg:@jpisnice/shadcn-ui-mcp-server",
+    "category": "design"
+  },
+  {
+    "id": "pkg:@knorq/xlsx-mcp-server",
+    "category": "data"
+  },
+  {
+    "id": "pkg:nocturnusai-mcp",
+    "category": "ai"
+  },
+  {
+    "id": "pkg:@proofslip/mcp-server",
+    "category": "security"
+  },
+  {
+    "id": "pkg:@toolprint/hypertool-mcp",
+    "category": "ai"
+  },
+  {
+    "id": "pkg:@iflow-mcp/sunwood-ai-labs-duckduckgo-web-search",
+    "category": "search"
+  },
+  {
+    "id": "pkg:stitch-mcp",
+    "category": "design"
+  },
+  {
+    "id": "pkg:ponlo-ai",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@hovecapital/read-only-mysql-mcp-server",
+    "category": "database"
+  },
+  {
+    "id": "pkg:@larksuiteoapi/lark-mcp",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:@scanbim-labs/scanbim-mcp",
+    "category": "design"
+  },
+  {
+    "id": "pkg:docqa-mcp",
+    "category": "ai"
+  },
+  {
+    "id": "pkg:yt-dlp-mcp",
+    "category": "other"
+  },
+  {
+    "id": "pkg:@businys/mcp-server",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:contextstudios-mcp",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@promptguard/mcp-server",
+    "category": "security"
+  },
+  {
+    "id": "pkg:@truncus/mcp-server",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:mcp-server-mysql",
+    "category": "database"
+  },
+  {
+    "id": "pkg:arc-security-mcp",
+    "category": "security"
+  },
+  {
+    "id": "pkg:@bitsbound/mcp-server",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:questlog-mcp",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@cloudflare/mcp-server-cloudflare",
+    "category": "cloud"
+  },
+  {
+    "id": "pkg:@meetlark/mcp-server",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:@636865636b73756d/mcp-v1",
+    "category": "search"
+  },
+  {
+    "id": "pkg:ref-tools-mcp",
+    "category": "docs"
+  },
+  {
+    "id": "pkg:bellwether-mcp",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:mcp-server-sqlite-npx",
+    "category": "database"
+  },
+  {
+    "id": "pkg:@wildcard-ai/deepcontext",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:@edjl/github-mcp",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:@jetbrains/mcp-proxy",
+    "category": "devtools"
+  }
+]

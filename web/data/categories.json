@@ -1,0 +1,19 @@
+{
+  "categories": [
+    { "id": "browser",      "label": "Browser & Web",   "blurb": "Headless browsers, scraping, page automation, fetch." },
+    { "id": "search",       "label": "Search",          "blurb": "Web search, retrieval, and answer engines." },
+    { "id": "database",     "label": "Database",        "blurb": "SQL, NoSQL, vector stores, query & schema tools." },
+    { "id": "devtools",     "label": "Dev Tools & CI",  "blurb": "Git, GitHub, code, testing, build & CI." },
+    { "id": "cloud",        "label": "Cloud & Infra",   "blurb": "Kubernetes, AWS, Docker, serverless, deploy." },
+    { "id": "files",        "label": "Files & Memory",  "blurb": "Filesystem access, memory, knowledge graphs." },
+    { "id": "data",         "label": "Data & Analytics","blurb": "Pipelines, analytics, spreadsheets, BI." },
+    { "id": "docs",         "label": "Docs & Knowledge","blurb": "Docs lookup, notes, wikis, context retrieval." },
+    { "id": "comms",        "label": "Communication",   "blurb": "Slack, email, chat, calendars, meetings." },
+    { "id": "design",       "label": "Design",          "blurb": "Figma, UI, images, creative & design tooling." },
+    { "id": "ai",           "label": "AI & Agents",     "blurb": "Reasoning, agents, model & LLM orchestration." },
+    { "id": "finance",      "label": "Finance & Crypto","blurb": "Payments, markets, blockchain, wallets." },
+    { "id": "productivity", "label": "Productivity",    "blurb": "Tasks, automation, workflows, personal tools." },
+    { "id": "security",     "label": "Security",        "blurb": "Auth, secrets, scanning, identity." },
+    { "id": "other",        "label": "Other",           "blurb": "Everything not yet categorized." }
+  ]
+}

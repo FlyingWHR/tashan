@@ -1,0 +1,3024 @@
+[
+  {
+    "id": "pkg:@upstash/context7-mcp",
+    "name": "@upstash/context7-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@upstash/context7-mcp",
+    "source_repo": "upstash/context7",
+    "co_used": [
+      "playwright",
+      "@modelcontextprotocol/server-filesystem",
+      "@supabase/mcp-server-supabase",
+      "firecrawl-mcp"
+    ]
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-filesystem",
+    "name": "@modelcontextprotocol/server-filesystem",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@modelcontextprotocol/server-filesystem",
+    "source_repo": "modelcontextprotocol/servers",
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "@modelcontextprotocol/server-github",
+      "@upstash/context7-mcp",
+      "firecrawl-mcp"
+    ]
+  },
+  {
+    "id": "pkg:chrome-devtools-mcp",
+    "name": "chrome-devtools-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "chrome-devtools-mcp",
+    "source_repo": "ChromeDevTools/chrome-devtools-mcp",
+    "co_used": [
+      "playwright",
+      "nx-mcp",
+      "@upstash/context7-mcp"
+    ]
+  },
+  {
+    "id": "pkg:@supabase/mcp-server-supabase",
+    "name": "@supabase/mcp-server-supabase",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@supabase/mcp-server-supabase",
+    "source_repo": "supabase/mcp",
+    "co_used": [
+      "playwright",
+      "@upstash/context7-mcp",
+      "firecrawl-mcp",
+      "netlify-mcp"
+    ]
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-memory",
+    "name": "@modelcontextprotocol/server-memory",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@modelcontextprotocol/server-memory",
+    "source_repo": "modelcontextprotocol/servers",
+    "co_used": [
+      "@modelcontextprotocol/server-filesystem",
+      "@modelcontextprotocol/server-github",
+      "@modelcontextprotocol/server-sequential-thinking",
+      "@modelcontextprotocol/server-brave-search"
+    ]
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-sequential-thinking",
+    "name": "@modelcontextprotocol/server-sequential-thinking",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@modelcontextprotocol/server-sequential-thinking",
+    "source_repo": "modelcontextprotocol/servers",
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "@modelcontextprotocol/server-github",
+      "mcp-server-fetch",
+      "@modelcontextprotocol/server-filesystem"
+    ]
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-everything",
+    "name": "@modelcontextprotocol/server-everything",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@modelcontextprotocol/server-everything",
+    "source_repo": "modelcontextprotocol/servers",
+    "co_used": [
+      "@modelcontextprotocol/server-supabase",
+      "@modelcontextprotocol/server-filesystem"
+    ]
+  },
+  {
+    "id": "pkg:@cloudbase/cloudbase-mcp",
+    "name": "@cloudbase/cloudbase-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@cloudbase/cloudbase-mcp",
+    "source_repo": "TencentCloudBase/CloudBase-MCP",
+    "co_used": []
+  },
+  {
+    "id": "pkg:tavily-mcp",
+    "name": "tavily-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "tavily-mcp",
+    "source_repo": "tavily-ai/tavily-mcp",
+    "co_used": [
+      "ref-tools-mcp",
+      "serena",
+      "semgrep"
+    ]
+  },
+  {
+    "id": "pkg:@notionhq/notion-mcp-server",
+    "name": "@notionhq/notion-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@notionhq/notion-mcp-server",
+    "source_repo": "makenotion/notion-mcp-server",
+    "co_used": [
+      "@modelcontextprotocol/server-slack",
+      "@google/sheets-mcp-server",
+      "@modelcontextprotocol/server-filesystem"
+    ]
+  },
+  {
+    "id": "pkg:firecrawl-mcp",
+    "name": "firecrawl-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "firecrawl-mcp",
+    "source_repo": "firecrawl/firecrawl-mcp-server",
+    "co_used": [
+      "playwright",
+      "@modelcontextprotocol/server-filesystem",
+      "@supabase/mcp-server-supabase",
+      "@upstash/context7-mcp"
+    ]
+  },
+  {
+    "id": "pkg:@auth0/auth0-mcp-server",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Auth0 MCP Server \u2014 Auth0 MCP Server: Manage Auth0 applications, APIs, actions, logs, and forms using natural language",
+    "npm_pkg": "@auth0/auth0-mcp-server",
+    "source_repo": "auth0/auth0-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@codescene/codehealth-mcp",
+    "name": "codescene-mcp-server",
+    "kind": "npm",
+    "description": " \u2014 An MCP server that provides CodeScene Code Health analysis tools.",
+    "npm_pkg": "@codescene/codehealth-mcp",
+    "source_repo": "codescene-oss/codescene-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:hostinger-api-mcp",
+    "name": "hostinger-api-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "hostinger-api-mcp",
+    "source_repo": "hostinger/api-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:figma-console-mcp",
+    "name": "figma-console-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "figma-console-mcp",
+    "source_repo": "southleft/figma-console-mcp",
+    "co_used": [
+      "@anthropic/figma-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@apideck/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Apideck Unified API MCP \u2014 330 tools across 200+ SaaS connectors (accounting, CRM, HRIS, ATS).",
+    "npm_pkg": "@apideck/mcp",
+    "source_repo": "apideck-libraries/mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-server-kubernetes",
+    "name": "mcp-server-kubernetes",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "mcp-server-kubernetes",
+    "source_repo": "Flux159/mcp-server-kubernetes",
+    "co_used": [
+      "flux-operator-mcp"
+    ]
+  },
+  {
+    "id": "pkg:figma-developer-mcp",
+    "name": "figma-developer-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "figma-developer-mcp",
+    "source_repo": "GLips/Figma-Context-MCP",
+    "co_used": [
+      "playwright",
+      "@supabase/mcp-server-supabase",
+      "@upstash/context7-mcp",
+      "firecrawl-mcp"
+    ]
+  },
+  {
+    "id": "pkg:kubernetes-mcp-server",
+    "name": "kubernetes-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "kubernetes-mcp-server",
+    "source_repo": "containers/kubernetes-mcp-server",
+    "co_used": [
+      "cd cmd/mcp-server && go run ."
+    ]
+  },
+  {
+    "id": "pkg:@adbutler/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": "AdButler \u2014 Manage AdButler campaigns, zones, ad items, VAST, and reports from Claude, ChatGPT, and Cursor.",
+    "npm_pkg": "@adbutler/mcp-server",
+    "source_repo": "adbutler/mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@ankimcp/anki-mcp-server",
+    "name": "@ankimcp/anki-mcp-server",
+    "kind": "npm",
+    "description": "Anki MCP Server \u2014 MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
+    "npm_pkg": "@ankimcp/anki-mcp-server",
+    "source_repo": "ankimcp/anki-mcp-server",
+    "co_used": [
+      "obsidian-mcp-server",
+      "@mokei/mcp-sqlite",
+      "@iflow-mcp/sunwood-ai-labs-duckduckgo-web-search"
+    ]
+  },
+  {
+    "id": "pkg:obsidian-mcp-server",
+    "name": "obsidian-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "obsidian-mcp-server",
+    "source_repo": "cyanheads/obsidian-mcp-server",
+    "co_used": [
+      "@ankimcp/anki-mcp-server",
+      "@mokei/mcp-sqlite",
+      "@iflow-mcp/sunwood-ai-labs-duckduckgo-web-search"
+    ]
+  },
+  {
+    "id": "pkg:@localstack/localstack-mcp-server",
+    "name": "@localstack/localstack-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@localstack/localstack-mcp-server",
+    "source_repo": "localstack/localstack-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@adeu/mcp-server",
+    "name": "adeu",
+    "kind": "npm",
+    "description": " \u2014 Automated DOCX Redlining Engine",
+    "npm_pkg": "@adeu/mcp-server",
+    "source_repo": "dealfluence/adeu",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@oobe-protocol-labs/sap-mcp-server",
+    "name": "sap-mcp",
+    "kind": "npm",
+    "description": "SAP MCP Server \u2014 Solana-native MCP gateway for SAP, DeFi tools, SNS identity, and x402 payments.",
+    "npm_pkg": "@oobe-protocol-labs/sap-mcp-server",
+    "source_repo": "OOBE-PROTOCOL/sap-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@trusty-squire/mcp",
+    "name": "trusty-squire",
+    "kind": "npm",
+    "description": "Trusty Squire \u2014 Trusty Squire signs up / in to websites for you so you don\u2019t have to.",
+    "npm_pkg": "@trusty-squire/mcp",
+    "source_repo": "Trusty-Squire/trusty-squire",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@braincloud/mcp-helper",
+    "name": "braincloud-mcp-helper",
+    "kind": "npm",
+    "description": "brainCloud MCP Helper \u2014 Helper for brainCloud MCP that gives it local file access, enabling easy git sync of cloud code.",
+    "npm_pkg": "@braincloud/mcp-helper",
+    "source_repo": "getbraincloud/braincloud-mcp-helper",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@aetherwealth/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Aether Wealth \u2014 Aether Wealth MCP for AI assistants: trades, alerts, market data, macro calendar & indicators.",
+    "npm_pkg": "@aetherwealth/mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@chronary/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Chronary \u2014 Calendar API for AI agents: events, availability, Google/Microsoft setup, scheduling, and iCal.",
+    "npm_pkg": "@chronary/mcp",
+    "source_repo": "Chronary/chronary-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:raven-mcp",
+    "name": "raven-mcp",
+    "kind": "npm",
+    "description": "Raven \u2014 Design intelligence for AI-generated UI \u2014 principles, patterns, content, brand, design tokens.",
+    "npm_pkg": "raven-mcp",
+    "source_repo": "rhinocap/raven-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@vaaya/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Vaaya \u2014 Pay-per-call agent superpowers: media/video gen, product demos, research, GTM, scraping, compute.",
+    "npm_pkg": "@vaaya/mcp",
+    "source_repo": "vaaya-ai/vaaya-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@black-duck/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": "Black Duck Security Scanner \u2014 AI-powered security scanning using Black Duck Signal for vulnerability detection.",
+    "npm_pkg": "@black-duck/mcp-server",
+    "source_repo": "blackducksoftware/mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-web-probe",
+    "name": "mcp-web-probe",
+    "kind": "npm",
+    "description": "AgentUtility Web Probe \u2014 MCP server for the @agentutility web-probe cluster \u2014 pay-per-call x402 tools, no API keys, USDC on\u2026",
+    "npm_pkg": "@agentutility/mcp-web-probe",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-server-scf",
+    "name": "mcp-server-scf",
+    "kind": "npm",
+    "description": " \u2014 MCP server for the SCF Controls Platform \u2014 83 tools for controls, evidence, risk, and TPRM.",
+    "npm_pkg": "mcp-server-scf",
+    "source_repo": "MarkAC007/mcp-server-scf",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@aioproductoscom/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "AIOProductOS MCP \u2014 AIOProductOS spine over MCP \u2014 customers, revenue, feedback, work, analytics on one typed record.",
+    "npm_pkg": "@aioproductoscom/mcp",
+    "source_repo": "AIOProductOS/claude-plugin",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@mokei/mcp-sqlite",
+    "name": "@mokei/mcp-sqlite",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@mokei/mcp-sqlite",
+    "source_repo": "TairuFramework/mokei",
+    "co_used": [
+      "obsidian-mcp-server",
+      "@ankimcp/anki-mcp-server",
+      "@iflow-mcp/sunwood-ai-labs-duckduckgo-web-search"
+    ]
+  },
+  {
+    "id": "pkg:@agentutility/mcp-compose",
+    "name": "mcp-compose",
+    "kind": "npm",
+    "description": "AgentUtility Compose \u2014 MCP server for the @agentutility compose cluster \u2014 pay-per-call x402 tools, no API keys, USDC on\u2026",
+    "npm_pkg": "@agentutility/mcp-compose",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@clize/clize",
+    "name": "clize",
+    "kind": "npm",
+    "description": "Clize \u2014 Real-world actions for AI coding agents: domains, email, deploys, payments, and media generation.",
+    "npm_pkg": "@clize/clize",
+    "source_repo": "cooldk/clize-cli",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@kawacode/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Kawa Code \u2014 Team-aware memory: intent, decisions, real-time conflicts for AI coding assistants.",
+    "npm_pkg": "@kawacode/mcp",
+    "source_repo": "kawacode-ai/kawa.mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@uplink-code/mcp",
+    "name": "uplink",
+    "kind": "npm",
+    "description": "Uplink \u2014 Automate a real, logged-in browser on your own device \u2014 no stored credentials, no bot detection.",
+    "npm_pkg": "@uplink-code/mcp",
+    "source_repo": "uplink-code/mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@argosvix/mcp-server",
+    "name": "server",
+    "kind": "npm",
+    "description": " \u2014 Observability MCP server: query LLM cost/errors/latency & operate alerts/evals from Claude/Cursor",
+    "npm_pkg": "@argosvix/mcp-server",
+    "source_repo": "argosvix/mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@clauderecallhq/cli",
+    "name": "recall",
+    "kind": "npm",
+    "description": " \u2014 Persistent memory for Claude Code. Search, recall, and re-inject context from any session.",
+    "npm_pkg": "@clauderecallhq/cli",
+    "source_repo": "https://gitlab.com/clauderecallhq/claude-recall-plugin",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@suekou/mcp-notion-server",
+    "name": "@suekou/mcp-notion-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@suekou/mcp-notion-server",
+    "source_repo": "suekou/mcp-notion-server",
+    "co_used": [
+      "@modelcontextprotocol/server-github",
+      "figma-developer-mcp",
+      "playwright"
+    ]
+  },
+  {
+    "id": "pkg:@bolthub/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "bolthub \u2014 The bolthub API marketplace, L402 gateways, and your other MCP servers, on one Lightning budget.",
+    "npm_pkg": "@bolthub/mcp",
+    "source_repo": "signaltech-org/bolthub-sdk",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@signal8ai/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Signal8 \u2014 SEC filings, dilution, insider & institutional ownership, and political-trade data for AI agents.",
+    "npm_pkg": "@signal8ai/mcp",
+    "source_repo": "signal8ai/signal8-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:altmetric-mcp",
+    "name": "altmetric-mcp",
+    "kind": "npm",
+    "description": " \u2014 MCP server for Altmetric APIs - track research attention across news, policy, social media, and more",
+    "npm_pkg": "altmetric-mcp",
+    "source_repo": "altmetric/altmetric-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:crew-mcp",
+    "name": "crew-mcp",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "crew-mcp",
+    "source_repo": "chasenstark/crew-mcp",
+    "co_used": [
+      "@modelcontextprotocol/server-github"
+    ]
+  },
+  {
+    "id": "pkg:@agentutility/mcp-edge-market",
+    "name": "mcp-edge-market",
+    "kind": "npm",
+    "description": "AgentUtility Edge Market \u2014 MCP server for the @agentutility edge-market cluster \u2014 pay-per-call x402 tools, no API keys, USDC\u2026",
+    "npm_pkg": "@agentutility/mcp-edge-market",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-wordmint",
+    "name": "mcp-wordmint",
+    "kind": "npm",
+    "description": "AgentUtility Wordmint \u2014 MCP server for the @agentutility wordmint cluster \u2014 pay-per-call x402 tools, no API keys, USDC on\u2026",
+    "npm_pkg": "@agentutility/mcp-wordmint",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:bizmuse-mcp",
+    "name": "bizmuse",
+    "kind": "npm",
+    "description": "BizMuse AI Music Video \u2014 Official BizMuse MCP for complete AI music videos from audio and 1-7 reference images.",
+    "npm_pkg": "bizmuse-mcp",
+    "source_repo": "BizMuse-AI/mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:justdrop-mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Live, end-to-end encrypted, ephemeral file transfer between your AI agent and any device.",
+    "npm_pkg": "justdrop-mcp",
+    "source_repo": "Managed-Digital-LLC/justdrop-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@keenable/mcp",
+    "name": "web-search",
+    "kind": "npm",
+    "description": " \u2014 Live web search and clean-markdown page fetch over the Keenable web index.",
+    "npm_pkg": "@keenable/mcp",
+    "source_repo": "keenableai/keenable-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@perplexity-ai/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": "Perplexity API Platform \u2014 Real-time web search, reasoning, and research through Perplexity's API",
+    "npm_pkg": "@perplexity-ai/mcp-server",
+    "source_repo": "perplexityai/modelcontextprotocol",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@tuteliq/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Detect grooming, bullying, fraud, and 16+ online threats across text, voice, image, and video.",
+    "npm_pkg": "@tuteliq/mcp",
+    "source_repo": "Tuteliq/mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@henkey/postgres-mcp-server",
+    "name": "@henkey/postgres-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@henkey/postgres-mcp-server",
+    "source_repo": "HenkDz/postgresql-mcp-server",
+    "co_used": [
+      "@executeautomation/playwright-mcp-server",
+      "@modelcontextprotocol/server-filesystem",
+      "@cyanheads/git-mcp-server",
+      "fetch"
+    ]
+  },
+  {
+    "id": "pkg:@agentutility/mcp-edge-finance",
+    "name": "mcp-edge-finance",
+    "kind": "npm",
+    "description": "AgentUtility Edge Finance \u2014 MCP server for the @agentutility edge-finance cluster \u2014 pay-per-call x402 tools, no API keys, USDC\u2026",
+    "npm_pkg": "@agentutility/mcp-edge-finance",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-locale",
+    "name": "mcp-locale",
+    "kind": "npm",
+    "description": "AgentUtility Locale \u2014 MCP server for the @agentutility locale cluster \u2014 pay-per-call x402 tools, no API keys, USDC on\u2026",
+    "npm_pkg": "@agentutility/mcp-locale",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-mediakit",
+    "name": "mcp-mediakit",
+    "kind": "npm",
+    "description": "AgentUtility Mediakit \u2014 MCP server for the @agentutility mediakit cluster \u2014 pay-per-call x402 tools, no API keys, USDC on\u2026",
+    "npm_pkg": "@agentutility/mcp-mediakit",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-synthforge",
+    "name": "mcp-synthforge",
+    "kind": "npm",
+    "description": "AgentUtility Synthforge \u2014 MCP server for the @agentutility synthforge cluster \u2014 pay-per-call x402 tools, no API keys, USDC\u2026",
+    "npm_pkg": "@agentutility/mcp-synthforge",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@certscore/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "CertScore MCP \u2014 CertScore website risk-signal tools for scans, findings, evidence, and latest-domain lookups.",
+    "npm_pkg": "@certscore/mcp",
+    "source_repo": "ergoveritas1-alt/certscore.ai",
+    "co_used": []
+  },
+  {
+    "id": "pkg:cortex-rmcp",
+    "name": "cortex-rmcp",
+    "kind": "npm",
+    "description": "Cortex RMCP \u2014 Rust MCP server for homelab logs, syslog, Docker logs, FTS search, and AI transcript correlation.",
+    "npm_pkg": "cortex-rmcp",
+    "source_repo": "jmagar/cortex",
+    "co_used": []
+  },
+  {
+    "id": "pkg:tokonomix-council-mcp",
+    "name": "council",
+    "kind": "npm",
+    "description": "Tokonomix Council \u2014 Multi-model consensus: 2-6 frontier LLMs answer, an independent judge synthesises one answer.",
+    "npm_pkg": "tokonomix-council-mcp",
+    "source_repo": "TokonoMix/tokonomix-council-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mason-context",
+    "name": "mason",
+    "kind": "npm",
+    "description": " \u2014 Context engineering MCP server \u2014 generates CLAUDE.md files via structured codebase analysis",
+    "npm_pkg": "mason-context",
+    "source_repo": "adrianczuczka/mason",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@billingserv/mcp-server",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 BillingServ MCP server for customers, invoices, orders, packages, licenses, and revenue reports.",
+    "npm_pkg": "@billingserv/mcp-server",
+    "source_repo": "billingserv/mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-relay-client",
+    "name": "mcp-relay-client",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "mcp-relay-client",
+    "source_repo": "Particle-Academy/mcp-relay-client",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-prooflayer",
+    "name": "mcp-prooflayer",
+    "kind": "npm",
+    "description": "AgentUtility Prooflayer \u2014 MCP server for the @agentutility prooflayer cluster \u2014 pay-per-call x402 tools, no API keys, USDC\u2026",
+    "npm_pkg": "@agentutility/mcp-prooflayer",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:arcane-rmcp",
+    "name": "arcane-rmcp",
+    "kind": "npm",
+    "description": "Arcane RMCP \u2014 Rust MCP server and CLI for Arcane Docker and container management.",
+    "npm_pkg": "arcane-rmcp",
+    "source_repo": "jmagar/arcane-rmcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:synapse-rmcp",
+    "name": "synapse-rmcp",
+    "kind": "npm",
+    "description": "Synapse RMCP \u2014 Rust MCP and CLI server for Docker, host inspection, SSH, logs, ZFS, and safe file operations.",
+    "npm_pkg": "synapse-rmcp",
+    "source_repo": "jmagar/synapse-rmcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@mafdet/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Read-only Mafdet AI account tools (models, balance, usage, subscription) and docs search.",
+    "npm_pkg": "@mafdet/mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@shipeasy/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Feature flags, A/B experiments, kill switches, dynamic config & i18n \u2014 Shipeasy MCP server.",
+    "npm_pkg": "@shipeasy/mcp",
+    "source_repo": "shipeasy-ai/shipeasy",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@spekoai/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Speko \u2014 Official Speko MCP server: voice AI routing and failover across STT, TTS, and V2V providers.",
+    "npm_pkg": "@spekoai/mcp",
+    "source_repo": "SpekoAI/mcp-bridge",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@tensorfeed/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": "TensorFeed \u2014 AI news, model pricing, service status, and machine-payable premium tools. AFTA-certified.",
+    "npm_pkg": "@tensorfeed/mcp-server",
+    "source_repo": "RipperMercs/tensorfeed-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@odyssey365/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": " \u2014 Odyssey \uc571\uc758 \ud560\uc77c\u00b7\uba54\ubaa8\u00b7\ud504\ub85c\uc81d\ud2b8\u00b7\ud0c0\uc784\ub77c\uc778\uc744 MCP \ud074\ub77c\uc774\uc5b8\ud2b8\uc5d0\uc11c \uad00\ub9ac",
+    "npm_pkg": "@odyssey365/mcp-server",
+    "source_repo": "Odyssey365App/odyssey30_60",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@sonarapp/mcp",
+    "name": "sonar",
+    "kind": "npm",
+    "description": " \u2014 ASO tools for AI agents: keyword research, rank tracking, competitor analysis (iOS & Android).",
+    "npm_pkg": "@sonarapp/mcp",
+    "source_repo": "trysonar/mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@muovi/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": " \u2014 Read-only MCP server for Muovi, Argentina's trust-first local services marketplace (6 tools).",
+    "npm_pkg": "@muovi/mcp-server",
+    "source_repo": "muovi-latam/mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:tempguru-mcp",
+    "name": "event-staffing",
+    "kind": "npm",
+    "description": "TempGuru Event Staffing \u2014 Plan, price, and request quotes for W-2 event staff across 345 US/CA markets; rates and compliance.",
+    "npm_pkg": "tempguru-mcp",
+    "source_repo": "tempguru-co/tempguru-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@aioproductoscom/mcp-studio",
+    "name": "mcp-studio",
+    "kind": "npm",
+    "description": "AIOProductOS Studio \u2014 Turn your AI host into a product videographer: scripted app demos, voice-over, captions, MP4/GIF.",
+    "npm_pkg": "@aioproductoscom/mcp-studio",
+    "source_repo": "AIOProductOS/studio-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@cyanheads/git-mcp-server",
+    "name": "@cyanheads/git-mcp-server",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "@cyanheads/git-mcp-server",
+    "source_repo": "cyanheads/git-mcp-server",
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "image-process-mcp-server",
+      "@nuskey8/godot-docs-mcp",
+      "C:/Users/Conner/Downloads/VeilbreakersGame/addons/gdai-mcp-plugin-godot/gdai_mcp_server.py"
+    ]
+  },
+  {
+    "id": "pkg:dreamd-mcp",
+    "name": "dreamd-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "dreamd-mcp",
+    "source_repo": "botzrDev/dreamd",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-bestiary",
+    "name": "mcp-bestiary",
+    "kind": "npm",
+    "description": "AgentUtility Bestiary \u2014 MCP server for the @agentutility bestiary cluster \u2014 pay-per-call x402 tools, no API keys, USDC on\u2026",
+    "npm_pkg": "@agentutility/mcp-bestiary",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-matchpoint",
+    "name": "mcp-matchpoint",
+    "kind": "npm",
+    "description": "AgentUtility Matchpoint \u2014 MCP server for the @agentutility matchpoint cluster \u2014 pay-per-call x402 tools, no API keys, USDC\u2026",
+    "npm_pkg": "@agentutility/mcp-matchpoint",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-model-router",
+    "name": "mcp-model-router",
+    "kind": "npm",
+    "description": "AgentUtility Model Router \u2014 MCP server for the @agentutility model-router cluster \u2014 pay-per-call x402 tools, no API keys, USDC\u2026",
+    "npm_pkg": "@agentutility/mcp-model-router",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-retail",
+    "name": "mcp-retail",
+    "kind": "npm",
+    "description": "AgentUtility Retail \u2014 MCP server for the @agentutility retail cluster \u2014 pay-per-call x402 tools, no API keys, USDC on\u2026",
+    "npm_pkg": "@agentutility/mcp-retail",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-rollforge",
+    "name": "mcp-rollforge",
+    "kind": "npm",
+    "description": "AgentUtility Rollforge \u2014 MCP server for the @agentutility rollforge cluster \u2014 pay-per-call x402 tools, no API keys, USDC on\u2026",
+    "npm_pkg": "@agentutility/mcp-rollforge",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-statline",
+    "name": "mcp-statline",
+    "kind": "npm",
+    "description": "AgentUtility Statline \u2014 MCP server for the @agentutility statline cluster \u2014 pay-per-call x402 tools, no API keys, USDC on\u2026",
+    "npm_pkg": "@agentutility/mcp-statline",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@getbourdon/mcp-server",
+    "name": "bourdon",
+    "kind": "npm",
+    "description": "Bourdon \u2014 Recognition-first cross-agent memory federation. One shared memory across all your agents.",
+    "npm_pkg": "@getbourdon/mcp-server",
+    "source_repo": "https://gitlab.com/getbourdon/bourdon",
+    "co_used": []
+  },
+  {
+    "id": "pkg:ytdl-rmcp",
+    "name": "ytdl-rmcp",
+    "kind": "npm",
+    "description": "YTDL RMCP \u2014 Rust MCP server and CLI for yt-dlp search, downloads, metadata, transfers, and Plex playlists.",
+    "npm_pkg": "ytdl-rmcp",
+    "source_repo": "jmagar/ytdl-rmcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@fouradata/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Reliable web access for AI agents: smart HTTP, rotating proxies, and full-browser rendering.",
+    "npm_pkg": "@fouradata/mcp",
+    "source_repo": "fouradata/mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@monnet/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Model Context Protocol server for Monnet \u2014 motions, plans, and approvals for MCP-compatible clients.",
+    "npm_pkg": "@monnet/mcp",
+    "source_repo": "GregoireCasoetto/monnet-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@unpaper/cli",
+    "name": "cli",
+    "kind": "npm",
+    "description": " \u2014 Slide decks locally: templates, checks, HTML to editable PowerPoint, .pptx rescue. No AI inside.",
+    "npm_pkg": "@unpaper/cli",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:verifox-mcp",
+    "name": "email-verifier",
+    "kind": "npm",
+    "description": " \u2014 Verify email deliverability & find business emails (single or bulk) via the Verifox API.",
+    "npm_pkg": "verifox-mcp",
+    "source_repo": "verifoxturnix1/verifox-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@percher/mcp",
+    "name": "percher",
+    "kind": "npm",
+    "description": "Percher \u2014 MCP-native hosting: publish and operate AI-built web apps live at name.percher.run.",
+    "npm_pkg": "@percher/mcp",
+    "source_repo": "mattiasmalmborg/percher",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@borough/mcp",
+    "name": "borough",
+    "kind": "npm",
+    "description": "Borough NYC Real Estate API \u2014 Search NYC rentals and sales, property details, building data, and market analytics",
+    "npm_pkg": "@borough/mcp",
+    "source_repo": "jdmay2/borough",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@policyforge/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Generate, audit, and maintain legal policies that match what your code actually does.",
+    "npm_pkg": "@policyforge/mcp",
+    "source_repo": "Ekirapapaul/legal-policy-pilot",
+    "co_used": []
+  },
+  {
+    "id": "pkg:whooshly-mcp",
+    "name": "whooshly-mcp",
+    "kind": "npm",
+    "description": " \u2014 Create short links, QR codes, UTM templates, vCards, and landing pages from your AI assistant.",
+    "npm_pkg": "whooshly-mcp",
+    "source_repo": "ankurmans/whooshly-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:ai-rook-trading-mcp",
+    "name": "trading-mcp",
+    "kind": "npm",
+    "description": " \u2014 22 pay-per-call agent APIs on x402: trading, web, AI, image gen. USDC on Base.",
+    "npm_pkg": "ai-rook-trading-mcp",
+    "source_repo": "Ai-Rook/trading-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@attrove/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Attrove \u2014 Catch conversations going quiet \u2014 watch outcomes and search Gmail, Slack, and meetings. One MCP.",
+    "npm_pkg": "@attrove/mcp",
+    "source_repo": "attrove/attrove-js",
+    "co_used": []
+  },
+  {
+    "id": "pkg:exa-mcp-server",
+    "name": "exa-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "exa-mcp-server",
+    "source_repo": "exa-labs/exa-mcp-server",
+    "co_used": [
+      "@upstash/context7-mcp"
+    ]
+  },
+  {
+    "id": "pkg:@agentutility/mcp-agentops",
+    "name": "mcp-agentops",
+    "kind": "npm",
+    "description": "AgentUtility Agentops \u2014 MCP server for the @agentutility agentops cluster \u2014 pay-per-call x402 tools, no API keys, USDC on\u2026",
+    "npm_pkg": "@agentutility/mcp-agentops",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agentutility/mcp-browser-workflow",
+    "name": "mcp-browser-workflow",
+    "kind": "npm",
+    "description": "AgentUtility Browser Workflow \u2014 MCP server for the @agentutility browser-workflow cluster \u2014 pay-per-call x402 tools, no API keys\u2026",
+    "npm_pkg": "@agentutility/mcp-browser-workflow",
+    "source_repo": "rooz21/x402",
+    "co_used": []
+  },
+  {
+    "id": "pkg:yarr-mcp",
+    "name": "yarr-mcp",
+    "kind": "npm",
+    "description": "Yarr MCP \u2014 Rust MCP and CLI server for Sonarr, Radarr, Prowlarr, Plex, Jellyfin, and download clients.",
+    "npm_pkg": "yarr-mcp",
+    "source_repo": "jmagar/yarr",
+    "co_used": []
+  },
+  {
+    "id": "pkg:proxyllm-mcp",
+    "name": "proxyllm-mcp",
+    "kind": "npm",
+    "description": " \u2014 OpenAI-compatible LLM gateway: models, savings math, key provisioning, autonomous email-OTP signup",
+    "npm_pkg": "proxyllm-mcp",
+    "source_repo": "proxyllm-ai/proxyllm-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:kaduno-pullpush-mcp",
+    "name": "pullpush-mcp",
+    "kind": "npm",
+    "description": " \u2014 Connect any two APIs and keep them in sync \u2014 45 MCP tools with shadow previews and diagnostics.",
+    "npm_pkg": "kaduno-pullpush-mcp",
+    "source_repo": "Kaduno-systems/pullpush-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@shippp/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Deterministic Chakra UI code from your Shippp design files, straight into your IDE agent.",
+    "npm_pkg": "@shippp/mcp",
+    "source_repo": "Comet-Studio-Io/shippp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@verlon-ai/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Verlon AI MCP \u2014 Inspect and manage Verlon AI gates, logs, recommendations, and experiments from any MCP client.",
+    "npm_pkg": "@verlon-ai/mcp",
+    "source_repo": "verlon-ai/mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:cellarion-mcp",
+    "name": "cellarion",
+    "kind": "npm",
+    "description": "Cellarion \u2014 Wine cellar manager: bottles, racks, drink windows, pairings and a shared wine registry.",
+    "npm_pkg": "cellarion-mcp",
+    "source_repo": "jagduvi1/Cellarion",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@cleanor/mcp",
+    "name": "cleanor",
+    "kind": "npm",
+    "description": "Cleanor \u2014 Zero-auth MCP: image optimize, cited storage/format data, and dev utilities LLMs get wrong.",
+    "npm_pkg": "@cleanor/mcp",
+    "source_repo": "cleanor-app/cleanor-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@scope-bid/scope-aec-mcp",
+    "name": "aec",
+    "kind": "npm",
+    "description": "Scope (AEC) - Preview \u2014 AEC subcontractor vendor procurement plumbing layer. Preview - V3 launches 2027.",
+    "npm_pkg": "@scope-bid/scope-aec-mcp",
+    "source_repo": "scope-bid/scope-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@scope-bid/scope-claims-mcp",
+    "name": "claims",
+    "kind": "npm",
+    "description": "Scope (Claims) - Preview \u2014 Insurance claims-side vendor procurement (IMEs, IA, surveillance). Preview - V2 launches Q3 2026.",
+    "npm_pkg": "@scope-bid/scope-claims-mcp",
+    "source_repo": "scope-bid/scope-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@scope-bid/scope-mcp",
+    "name": "legal",
+    "kind": "npm",
+    "description": "Scope (Legal) \u2014 Dispatch litigation work to legal-services vendors from any MCP-compatible AI workflow.",
+    "npm_pkg": "@scope-bid/scope-mcp",
+    "source_repo": "scope-bid/scope-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@appfigures/cli",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Appfigures \u2014 Access your app analytics, ASO tools, and app market intelligence with Appfigures.",
+    "npm_pkg": "@appfigures/cli",
+    "source_repo": "appfigures/cli",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@attribloom/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Attribloom \u2014 Affiliate attribution and commission data for iOS (StoreKit 2) and Shopify",
+    "npm_pkg": "@attribloom/mcp",
+    "source_repo": "attribloom/attribloom-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-server-fetch",
+    "name": "mcp-server-fetch",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "mcp-server-fetch",
+    "source_repo": "theinfosecguy/npx-canary",
+    "co_used": [
+      "@modelcontextprotocol/server-filesystem",
+      "@modelcontextprotocol/server-memory",
+      "@modelcontextprotocol/server-sequential-thinking",
+      "mcp-server-reddit"
+    ]
+  },
+  {
+    "id": "pkg:mcp-adr-analysis-server",
+    "name": "mcp-adr-analysis-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "mcp-adr-analysis-server",
+    "source_repo": "tosin2013/mcp-adr-analysis-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@callmcp/server",
+    "name": "server",
+    "kind": "npm",
+    "description": " \u2014 One MCP tool contract for telephony \u2014 any call provider, hosted, local, or BYOK.",
+    "npm_pkg": "@callmcp/server",
+    "source_repo": "CallMCP/callmcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:gotify-rmcp",
+    "name": "gotify-rmcp",
+    "kind": "npm",
+    "description": "Gotify RMCP \u2014 Rust MCP server and CLI for Gotify push notifications and message management.",
+    "npm_pkg": "gotify-rmcp",
+    "source_repo": "jmagar/gotify-rmcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:labby-mcp",
+    "name": "labby",
+    "kind": "npm",
+    "description": "Labby \u2014 Local-first MCP gateway and homelab control plane with CLI, HTTP API, and web UI.",
+    "npm_pkg": "labby-mcp",
+    "source_repo": "jmagar/labby",
+    "co_used": []
+  },
+  {
+    "id": "pkg:tailscale-rmcp",
+    "name": "tailscale-rmcp",
+    "kind": "npm",
+    "description": "Tailscale RMCP \u2014 Rust MCP server and CLI for Tailscale devices, users, keys, policies, and auth.",
+    "npm_pkg": "tailscale-rmcp",
+    "source_repo": "jmagar/tailscale-rmcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:unifi-rmcp",
+    "name": "unifi-rmcp",
+    "kind": "npm",
+    "description": "UniFi RMCP \u2014 Rust MCP server and CLI for UniFi Network controller operations.",
+    "npm_pkg": "unifi-rmcp",
+    "source_repo": "jmagar/unifi-rmcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:kavel-mcp",
+    "name": "kavel-mcp",
+    "kind": "npm",
+    "description": " \u2014 Discover Kavel's AI photo/video generators, get tuned prompts, and open the right tool on kavel.ai.",
+    "npm_pkg": "kavel-mcp",
+    "source_repo": "hanshs474/kavel-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:lithtrix-mcp",
+    "name": "lithtrix-mcp",
+    "kind": "npm",
+    "description": "Lithtrix \u2014 Identity, Memory & Trust for AI Agents \u2014 Identity, memory, trust, and swarm primitives for AI agents. MIRC base always free.",
+    "npm_pkg": "lithtrix-mcp",
+    "source_repo": "lithtrix/lithtrix-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:positif-ai",
+    "name": "positif",
+    "kind": "npm",
+    "description": "Positif \u2014 The agent switchboard: identity, policy, loop-guard, and an append-only audit ledger.",
+    "npm_pkg": "positif-ai",
+    "source_repo": "https://gitlab.com/getpositif/positif",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@variel/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": "Variel MCP Server \u2014 Generate your brand in-agent, then keep tokens, components, and copy on-brand over MCP.",
+    "npm_pkg": "@variel/mcp-server",
+    "source_repo": "jeisenberg/ai-brand-studio",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@voris-ai/mcp",
+    "name": "server",
+    "kind": "npm",
+    "description": "Voris \u2014 Voris privacy-native web analytics for AI agents: query metrics & citations, scaffold tracking.",
+    "npm_pkg": "@voris-ai/mcp",
+    "source_repo": "Rocket-Venture-Labs/voris-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:kogiqa-mcp",
+    "name": "kogiqa-mcp",
+    "kind": "npm",
+    "description": "kogiQA MCP Web Browser \u2014 This web browser has been designed to help your agent debug and develop complex web applications.",
+    "npm_pkg": "kogiqa-mcp",
+    "source_repo": "atagon-GmbH/kogiqa-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:bowmark-mcp",
+    "name": "bowmark",
+    "kind": "npm",
+    "description": "Bowmark \u2014 Pre-computed navigation recipes for public websites \u2014 skip explore-and-discover.",
+    "npm_pkg": "bowmark-mcp",
+    "source_repo": "bowmark-ai/skill",
+    "co_used": []
+  },
+  {
+    "id": "pkg:apprise-rmcp",
+    "name": "apprise-rmcp",
+    "kind": "npm",
+    "description": "Apprise RMCP \u2014 Rust MCP server and CLI for Apprise notification fan-out across dozens of delivery backends.",
+    "npm_pkg": "apprise-rmcp",
+    "source_repo": "jmagar/apprise-rmcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:unraid-rmcp",
+    "name": "unraid-rmcp",
+    "kind": "npm",
+    "description": "Unraid RMCP \u2014 Rust MCP server and CLI for Unraid GraphQL, NAS, Docker, VM, and storage workflows.",
+    "npm_pkg": "unraid-rmcp",
+    "source_repo": "jmagar/unraid-rmcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:fodda-mcp",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": "Fodda Knowledge Graphs \u2014 Expert-curated knowledge, brand, research & earnings intelligence \u2014 31 tools, 220+ graphs.",
+    "npm_pkg": "fodda-mcp",
+    "source_repo": "piers-fawkes/fodda-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@ai-dossier/mcp-server",
+    "name": "dossier",
+    "kind": "npm",
+    "description": " \u2014 MCP server for dossier automation standard - enables LLMs to discover, verify, and execute dossiers",
+    "npm_pkg": "@ai-dossier/mcp-server",
+    "source_repo": "imboard-ai/ai-dossier",
+    "co_used": []
+  },
+  {
+    "id": "pkg:spritecook-mcp",
+    "name": "generate",
+    "kind": "npm",
+    "description": "SpriteCook \u2014 Generate game sprites and assets from text prompts for game development.",
+    "npm_pkg": "spritecook-mcp",
+    "source_repo": "SpriteCook/spritecook-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@aicandidatehub/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Profile, CV, jobs, compensation & application-tracking tools for AI agents, by aicandidatehub.com.",
+    "npm_pkg": "@aicandidatehub/mcp",
+    "source_repo": "gradebg96/candidatehub",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@bvcc/agent-mcp",
+    "name": "bvcc-agent-wallet",
+    "kind": "npm",
+    "description": " \u2014 Non-custodial BVCC Agent Wallet on-chain for AI agents: balances, transfers, approvals, swaps.",
+    "npm_pkg": "@bvcc/agent-mcp",
+    "source_repo": "blockventurechaincapital-crypto/bvcc-agent-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@circulara/plugin",
+    "name": "plugin",
+    "kind": "npm",
+    "description": " \u2014 Circulara Observe MCP plugin - meters your AI agents' token spend and carbon, free tier.",
+    "npm_pkg": "@circulara/plugin",
+    "source_repo": "CircularRoute/circulara-core",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@clarxai/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Score agent manifests, generate CI workflows, and pull Clarx scan findings into your IDE.",
+    "npm_pkg": "@clarxai/mcp",
+    "source_repo": "Gernika-Labs/clarx-cloud",
+    "co_used": []
+  },
+  {
+    "id": "pkg:soma-rmcp",
+    "name": "soma-rmcp",
+    "kind": "npm",
+    "description": "Soma \u2014 Drop-in RMCP runtime for provider-backed MCP tools, prompts, resources, and agent capabilities.",
+    "npm_pkg": "soma-rmcp",
+    "source_repo": "jmagar/soma",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@matihlabs/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 The grounded data layer for any LLM: governed SQL, metrics, lineage and catalog over your data.",
+    "npm_pkg": "@matihlabs/mcp",
+    "source_repo": "matih-labs/matih-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:memeboat-mcp",
+    "name": "memeboat-mcp",
+    "kind": "npm",
+    "description": " \u2014 Search 25,000+ meme templates and create shareable memes on memebo.at. Free, anonymous, no API key.",
+    "npm_pkg": "memeboat-mcp",
+    "source_repo": "memebo-at/memeboat-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@signdocs-brasil/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": " \u2014 SignDocs Brasil e-signature tools for AI agents \u2014 signing sessions, envelopes, verification.",
+    "npm_pkg": "@signdocs-brasil/mcp-server",
+    "source_repo": "signdocsbrasil/signdocs-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:artifyde-mcp",
+    "name": "artifyde-mcp",
+    "kind": "npm",
+    "description": " \u2014 A home for your agent's HTML artifacts - publish, pull, share and review them over MCP.",
+    "npm_pkg": "artifyde-mcp",
+    "source_repo": "kennethkoontz/artifyde-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@asksakina/islamic-knowledge-mcp",
+    "name": "islamic-knowledge",
+    "kind": "npm",
+    "description": " \u2014 Verified Quran verses, duas, 99 Names of Allah, and prophets. Multi-madhab reviewed.",
+    "npm_pkg": "@asksakina/islamic-knowledge-mcp",
+    "source_repo": "yserrag/sakina-v3",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-server-git",
+    "name": "mcp-server-git",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "mcp-server-git",
+    "source_repo": "theinfosecguy/npx-canary",
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "@modelcontextprotocol/server-sequential-thinking",
+      "@modelcontextprotocol/server-filesystem",
+      "mcp-server-fetch"
+    ]
+  },
+  {
+    "id": "pkg:brewpage-mcp",
+    "name": "brewpage-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "brewpage-mcp",
+    "source_repo": "kochetkov-ma/brewpage-openapi",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@optimalai/optibot-mcp",
+    "name": "optibot",
+    "kind": "npm",
+    "description": "Optibot \u2014 AI code review for your AI assistant \u2014 review local changes, branch diffs, and patch files.",
+    "npm_pkg": "@optimalai/optibot-mcp",
+    "source_repo": "Optimal-AI/optibot-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@sendinel/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": "Sendinel \u2014 AI-controlled email ops for campaigns, contacts, segments, analytics, and sending.",
+    "npm_pkg": "@sendinel/mcp-server",
+    "source_repo": "kmdesle/sendinel-ai",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@corralimited/snapdiff-mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Visual-diff & change-detection tools that catch agentic UI drift for coding agents.",
+    "npm_pkg": "@corralimited/snapdiff-mcp",
+    "source_repo": "corralimited/snapdiff-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:ssid-mcp",
+    "name": "ssid-mcp",
+    "kind": "npm",
+    "description": " \u2014 Identify the manufacturer behind any MAC address; flags randomized/private addresses.",
+    "npm_pkg": "ssid-mcp",
+    "source_repo": "Drumworks/ssid",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@humanform/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "Humanform \u2014 Anthropometric prediction API: predict measurements, list countries, list measurement names.",
+    "npm_pkg": "@humanform/mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@hovecapital/read-only-postgres-mcp-server",
+    "name": "read-only-local-postgres-mcp-server",
+    "kind": "npm",
+    "description": " \u2014 MCP server for read-only PostgreSQL database queries in Claude Desktop",
+    "npm_pkg": "@hovecapital/read-only-postgres-mcp-server",
+    "source_repo": "hovecapital/read-only-local-postgres-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:pepys-mcp",
+    "name": "pepys-mcp",
+    "kind": "npm",
+    "description": " \u2014 Transcribe audio & video: diarization, timed SRT/VTT, podcasts, paste-a-link, whole-feed batch.",
+    "npm_pkg": "pepys-mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:402coffee-mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Trust layer for agent payments (x402, Base): verify agents, risk scores, signed escrow verdicts.",
+    "npm_pkg": "402coffee-mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:b20check-mcp",
+    "name": "b20check",
+    "kind": "npm",
+    "description": "B20 Check \u2014 Verify B20 tokens on Base: issuer powers, imposter detection, signed EIP-712 verdicts.",
+    "npm_pkg": "b20check-mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:bykaranteli-mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Live crypto data: funding rates, funding arbitrage, OI pressure, Fear & Greed. Free, no API key.",
+    "npm_pkg": "bykaranteli-mcp",
+    "source_repo": "bykarantelicom/bykaranteli-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@cueapi/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Schedule agent work and report write-once outcomes via CueAPI from any MCP host.",
+    "npm_pkg": "@cueapi/mcp",
+    "source_repo": "cueapi/cueapi-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:radmail-mcp",
+    "name": "radmail-mcp",
+    "kind": "npm",
+    "description": " \u2014 Email OS for agents - real-inbox search, triage, commitments, and a verifiable BEC hard-stop.",
+    "npm_pkg": "radmail-mcp",
+    "source_repo": "dougsureel-tech/radmail-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@webuplink/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "WebUplink \u2014 Give any MCP client the ability to browse and interact with the web via WebUplink.",
+    "npm_pkg": "@webuplink/mcp",
+    "source_repo": "webuplink-dev/webuplink-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@undisk-mcp/stdio-proxy",
+    "name": "stdio-proxy",
+    "kind": "npm",
+    "description": " \u2014 Undisk MCP: safe file memory for AI agents.",
+    "npm_pkg": "@undisk-mcp/stdio-proxy",
+    "source_repo": "kiarashplusplus/undisk-mcp-tracker",
+    "co_used": []
+  },
+  {
+    "id": "pkg:lovie",
+    "name": "company-formation",
+    "kind": "npm",
+    "description": "Lovie Company Formation \u2014 Form companies, manage bank accounts, cards, invoices and more \u2014 directly from your AI coding tools.",
+    "npm_pkg": "lovie",
+    "source_repo": "lovieco/lovie-company-formation-mcp-npx",
+    "co_used": []
+  },
+  {
+    "id": "pkg:kodiak-mcp",
+    "name": "kodiak",
+    "kind": "npm",
+    "description": " \u2014 Verifiable fact-checking: verdict, confidence, sources, and a tamper-evident certificate.",
+    "npm_pkg": "kodiak-mcp",
+    "source_repo": "bildow/kodiak",
+    "co_used": []
+  },
+  {
+    "id": "pkg:blackwall-mcp",
+    "name": "blackwall",
+    "kind": "npm",
+    "description": " \u2014 Pre-action risk gate: AI agents call before any irreversible action (money, SQL, delete).",
+    "npm_pkg": "blackwall-mcp",
+    "source_repo": "bluetieroperations-create/blackwall-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@bounceprotect/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Email validation and SMTP verification for Claude Desktop, Cursor, and Claude Code.",
+    "npm_pkg": "@bounceprotect/mcp",
+    "source_repo": "bounceprotect/bounceprotect-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:deepseek-mcp-server",
+    "name": "deepseek-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "deepseek-mcp-server",
+    "source_repo": "DMontgomery40/deepseek-mcp-server",
+    "co_used": [
+      "mcp-server-fetch",
+      "@smithery-ai-brave-search",
+      "matkoson-brave-playwright",
+      "@executeautomation/playwright-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:autonomad-travel",
+    "name": "travel",
+    "kind": "npm",
+    "description": " \u2014 AI travel agent \u2014 book flights, hotels, activities, and events worldwide via autonomad.ai.",
+    "npm_pkg": "autonomad-travel",
+    "source_repo": "Autonomad1/autonomad1",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@getvetai/mcp",
+    "name": "vet",
+    "kind": "npm",
+    "description": " \u2014 Discover and vet MCP servers: search 200K+ AI tools with security verification and schemas.",
+    "npm_pkg": "@getvetai/mcp",
+    "source_repo": "getvetai/vet",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@marchward/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": " \u2014 Runtime authority for AI agents: credential mediation, spend cap, approval gates, audit log.",
+    "npm_pkg": "@marchward/mcp-server",
+    "source_repo": "marchward/marchward",
+    "co_used": []
+  },
+  {
+    "id": "pkg:snowsure-mcp-server",
+    "name": "snow",
+    "kind": "npm",
+    "description": "SnowSure \u2014 Snow & Ski \u2014 Live ski snow, multi-model forecasts, powder rankings & a grounded Answer Engine for 500+ resorts.",
+    "npm_pkg": "snowsure-mcp-server",
+    "source_repo": "mikeslone/snowsure-web",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@synchronex/mcp-proxy",
+    "name": "mcp-proxy",
+    "kind": "npm",
+    "description": "Synchronex \u2014 Connect any AI agent to your Synchronex workspace \u2014 portable memory, decisions, and workers.",
+    "npm_pkg": "@synchronex/mcp-proxy",
+    "source_repo": "kmdesle/synchronex",
+    "co_used": []
+  },
+  {
+    "id": "pkg:voxplo-mcp",
+    "name": "voxplo",
+    "kind": "npm",
+    "description": "Voxplo \u2014 Give AI agents a phone: outbound AI calls that return a summary, transcript, and extracted fields.",
+    "npm_pkg": "voxplo-mcp",
+    "source_repo": "allexp1/voxplo-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:cloudmindmaps-mcp",
+    "name": "mindmaps",
+    "kind": "npm",
+    "description": " \u2014 Create and read mind maps on CloudMindMaps from Claude and other AI assistants.",
+    "npm_pkg": "cloudmindmaps-mcp",
+    "source_repo": "jan-rezab/cloudmindmaps",
+    "co_used": []
+  },
+  {
+    "id": "pkg:chartforge-mcp",
+    "name": "chartforge",
+    "kind": "npm",
+    "description": " \u2014 MCP server for ChartForge \u2014 generate stunning charts and diagrams from natural language",
+    "npm_pkg": "chartforge-mcp",
+    "source_repo": "crawde/chartforge-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@buywhere/mcp-server",
+    "name": "buywhere-mcp",
+    "kind": "npm",
+    "description": "BuyWhere MCP \u2014 Product search, price comparison, and affiliate-ready shopping across Singapore and US retailers.",
+    "npm_pkg": "@buywhere/mcp-server",
+    "source_repo": "BuyWhere/buywhere-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@rolli/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Social media search, expert discovery, and analytics across X, Reddit, YouTube, and more",
+    "npm_pkg": "@rolli/mcp",
+    "source_repo": "rolliinc/rolli-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@beacio/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 MCP server for Web Bluetooth on iOS Safari: scaffolding, UUID lookup, extension detection.",
+    "npm_pkg": "@beacio/mcp",
+    "source_repo": "wklm/beacio-sdk",
+    "co_used": []
+  },
+  {
+    "id": "pkg:blackveil-dns",
+    "name": "dns",
+    "kind": "npm",
+    "description": " \u2014 DNS & email security scanner \u2014 51 tools for SPF, DMARC, DKIM, DNSSEC, SSL, and more.",
+    "npm_pkg": "blackveil-dns",
+    "source_repo": "MadaBurns/bv-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:stripe-mcp",
+    "name": "stripe-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "stripe-mcp",
+    "source_repo": null,
+    "co_used": [
+      "@supabase/mcp-server-supabase",
+      "@upstash/context7-mcp",
+      "firecrawl-mcp",
+      "netlify-mcp"
+    ]
+  },
+  {
+    "id": "pkg:@spideriq/mcp-media",
+    "name": "media",
+    "kind": "npm",
+    "description": " \u2014 SpiderIQ Media: SpiderMedia files, videos, per-tenant media catalog (read)",
+    "npm_pkg": "@spideriq/mcp-media",
+    "source_repo": "SpiderIQ/SpiderIQ",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@tensorfeed/x402-base-mcp",
+    "name": "x402-base-mcp",
+    "kind": "npm",
+    "description": "TensorFeed x402 Base Reader \u2014 Read-only Base mainnet reader. Verifies x402 payment settlements + AFTA federation status.",
+    "npm_pkg": "@tensorfeed/x402-base-mcp",
+    "source_repo": "RipperMercs/tensorfeed-x402-base-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@voxell/forge-mcp",
+    "name": "forge",
+    "kind": "npm",
+    "description": " \u2014 MCP server for Forge, Voxell's hosted text-embedding API. Tools: embed and list_models.",
+    "npm_pkg": "@voxell/forge-mcp",
+    "source_repo": "VoxellInc/forge-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@takehub/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 Manage discussion topics, gather votes and video rationale, and read AI insights.",
+    "npm_pkg": "@takehub/mcp",
+    "source_repo": "mauurda/takehub",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@drantoniou/uploadcheck-mcp",
+    "name": "uploadcheck",
+    "kind": "npm",
+    "description": " \u2014 QC videos, podcasts, and clips before upload \u2014 timestamped flags with agent-ready repair prompts.",
+    "npm_pkg": "@drantoniou/uploadcheck-mcp",
+    "source_repo": "ajantoniou/uploadcheck-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@vayacore/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 VayaPin MCP: pin resolution + Google Maps geocoding/places + AfterShip tracking, with BYOK.",
+    "npm_pkg": "@vayacore/mcp",
+    "source_repo": "martinshein/vayacore",
+    "co_used": []
+  },
+  {
+    "id": "pkg:bidsparq-mcp-server",
+    "name": "mcp",
+    "kind": "npm",
+    "description": "BidSparq \u2014 55 tools for federal/state/local RFPs, awards, vendors, contact graph, contract vehicles, pursuits.",
+    "npm_pkg": "bidsparq-mcp-server",
+    "source_repo": "n0edlg/bidsparq-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@codmir/mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 AI-powered task execution, tickets, sprints, error debugging, and desktop control.",
+    "npm_pkg": "@codmir/mcp",
+    "source_repo": "codmir/codmir",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-sqlite",
+    "name": "mcp-sqlite",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "mcp-sqlite",
+    "source_repo": "jparkerweb/mcp-sqlite",
+    "co_used": [
+      "@modelcontextprotocol/server-filesystem",
+      "claude-flow",
+      "firecrawl-mcp",
+      "shadcn"
+    ]
+  },
+  {
+    "id": "pkg:@demomagic/mcp",
+    "name": "interactive-video-guide",
+    "kind": "npm",
+    "description": "DemoMagic \u2014 Guides for making interactive videos & AI product demos that answer viewers' questions.",
+    "npm_pkg": "@demomagic/mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@spideriq/mcp-gate",
+    "name": "gate",
+    "kind": "npm",
+    "description": " \u2014 SpiderIQ Gate: SpiderGate LLM gateway (completions, models, usage, traces)",
+    "npm_pkg": "@spideriq/mcp-gate",
+    "source_repo": "SpiderIQ/SpiderIQ",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@spideriq/mcp-mail",
+    "name": "mail",
+    "kind": "npm",
+    "description": " \u2014 SpiderIQ Mail: SpiderMail mailboxes, messages, threads, send, compose for AI agents",
+    "npm_pkg": "@spideriq/mcp-mail",
+    "source_repo": "SpiderIQ/SpiderIQ",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@spideriq/mcp-publish",
+    "name": "publish",
+    "kind": "npm",
+    "description": " \u2014 SpiderIQ Publish: content platform MCP (pages, posts, templates, components, domains, media)",
+    "npm_pkg": "@spideriq/mcp-publish",
+    "source_repo": "SpiderIQ/SpiderIQ",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@knorq/docx-mcp-server",
+    "name": "@knorq/docx-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@knorq/docx-mcp-server",
+    "source_repo": "knorq-ai/docx-mcp-server",
+    "co_used": [
+      "@knorq/xlsx-mcp-server",
+      "agent-format"
+    ]
+  },
+  {
+    "id": "pkg:@openbnb/mcp-server-airbnb",
+    "name": "@openbnb/mcp-server-airbnb",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@openbnb/mcp-server-airbnb",
+    "source_repo": null,
+    "co_used": [
+      "playwright"
+    ]
+  },
+  {
+    "id": "pkg:blender-mcp",
+    "name": "blender-mcp",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "blender-mcp",
+    "source_repo": null,
+    "co_used": [
+      "C:\\Users\\Ben\\code\\cave-crawler\\godot-mcp\\build\\index.js",
+      "mcp-server-git",
+      "@modelcontextprotocol/server-filesystem"
+    ]
+  },
+  {
+    "id": "pkg:buywhere-mcp",
+    "name": "buywhere-mcp",
+    "kind": "npm",
+    "description": "BuyWhere MCP \u2014 BuyWhere MCP server for product search, price comparison, and affiliate-ready shopping workflows.",
+    "npm_pkg": "buywhere-mcp",
+    "source_repo": "BuyWhere/buywhere-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@traderouter/trade-router-mcp",
+    "name": "trade-router-mcp",
+    "kind": "npm",
+    "description": " \u2014 Non-custodial Solana swap & limit order engine for AI agents.",
+    "npm_pkg": "@traderouter/trade-router-mcp",
+    "source_repo": "TradeRouter/trade-router-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@pimzino/spec-workflow-mcp",
+    "name": "@pimzino/spec-workflow-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@pimzino/spec-workflow-mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@autonomad1/computeback-mcp",
+    "name": "computeback",
+    "kind": "npm",
+    "description": " \u2014 Agent Rewards Marketplace: earn $NOMD on B2B work, spend on agent capabilities.",
+    "npm_pkg": "@autonomad1/computeback-mcp",
+    "source_repo": "Autonomad1/computeback-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@trustrails/mcp-server",
+    "name": "server",
+    "kind": "npm",
+    "description": " \u2014 Search UK electronics products across retailers. Real-time prices, stock, and specs.",
+    "npm_pkg": "@trustrails/mcp-server",
+    "source_repo": "james-webdev/trustrails-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@nordic-data/mcp",
+    "name": "nordic-data",
+    "kind": "npm",
+    "description": " \u2014 Global B2B intelligence for AI agents: 35M+ companies, 1.6M sanctions, KYB pack. 78 tools.",
+    "npm_pkg": "@nordic-data/mcp",
+    "source_repo": "sofiajameson20-star/Nordicdata",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@clihub/cli",
+    "name": "clihub",
+    "kind": "npm",
+    "description": " \u2014 Convert any CLI binary to an MCP server via `ch mcp wrap`; discover CLI tools & recipes.",
+    "npm_pkg": "@clihub/cli",
+    "source_repo": "arcwolf/dev-clihub",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@angiejones/mcp-selenium",
+    "name": "@angiejones/mcp-selenium",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@angiejones/mcp-selenium",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@armoryworks/drive-mcp",
+    "name": "@armoryworks/drive-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@armoryworks/drive-mcp",
+    "source_repo": "armoryworks/drive-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:telbase",
+    "name": "deploy",
+    "kind": "npm",
+    "description": "Telbase \u2014 Deploy any web project with one command. AI-native platform with self-healing feedback.",
+    "npm_pkg": "telbase",
+    "source_repo": "Victor-EU/telbase",
+    "co_used": []
+  },
+  {
+    "id": "pkg:3dstreet-mcp",
+    "name": "3dstreet",
+    "kind": "npm",
+    "description": " \u2014 Drive an open 3DStreet scene tab from Claude Desktop or Claude Code via MCP tool calls.",
+    "npm_pkg": "3dstreet-mcp",
+    "source_repo": "3DStreet/3dstreet-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@apogeoapi/mcp",
+    "name": "apogeoapi-mcp",
+    "kind": "npm",
+    "description": " \u2014 Geographic data API: 250+ countries, 150K+ cities, IP geolocation, 161 live FX rates.",
+    "npm_pkg": "@apogeoapi/mcp",
+    "source_repo": "APOGEOAPI/apogeoapi-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@i18n-agent/mcp-client",
+    "name": "i18n-agent",
+    "kind": "npm",
+    "description": "i18n-agent \u2014 AI-powered translation for 48 languages with context-aware quality",
+    "npm_pkg": "@i18n-agent/mcp-client",
+    "source_repo": "i18n-agent/mcp-client",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-socialapi",
+    "name": "socialapi",
+    "kind": "npm",
+    "description": " \u2014 MCP server for SocialAPI \u2014 manage social media comments, DMs, reviews, and mentions across platforms",
+    "npm_pkg": "mcp-socialapi",
+    "source_repo": "SocialAPI-AI/mcp-socialapi",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@calx/selis-mcp",
+    "name": "pmo",
+    "kind": "npm",
+    "description": "Selis MCP \u2014 MCP server for Selis TMiS \u2014 manage PMO entities from any MCP client",
+    "npm_pkg": "@calx/selis-mcp",
+    "source_repo": "calx-sa/selis-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@claidex-mcp/claidex-mcp",
+    "name": "failure-intelligence",
+    "kind": "npm",
+    "description": "Claidex MCP \u2014 Biomedical failure intelligence platform for terminated trials and translational analysis.",
+    "npm_pkg": "@claidex-mcp/claidex-mcp",
+    "source_repo": "ssatanis/claidex-sentinel",
+    "co_used": []
+  },
+  {
+    "id": "pkg:z-mcp-yapi",
+    "name": "z-mcp-yapi",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "z-mcp-yapi",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@agenttrust/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": "AgentTrust \u2014 Identity & Trust for A2A Agents \u2014 Identity, trust, and A2A orchestration for autonomous AI agents. Official A2A partner.",
+    "npm_pkg": "@agenttrust/mcp-server",
+    "source_repo": "agenttrust/mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@executeautomation/playwright-mcp-server",
+    "name": "@executeautomation/playwright-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@executeautomation/playwright-mcp-server",
+    "source_repo": "executeautomation/mcp-playwright",
+    "co_used": [
+      "@modelcontextprotocol/server-filesystem",
+      "mcp-server-fetch",
+      "@smithery-ai-brave-search",
+      "matkoson-brave-playwright"
+    ]
+  },
+  {
+    "id": "pkg:@jpisnice/shadcn-ui-mcp-server",
+    "name": "@jpisnice/shadcn-ui-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@jpisnice/shadcn-ui-mcp-server",
+    "source_repo": "Jpisnice/shadcn-ui-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@knorq/xlsx-mcp-server",
+    "name": "@knorq/xlsx-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@knorq/xlsx-mcp-server",
+    "source_repo": "knorq-ai/xlsx-mcp-server",
+    "co_used": [
+      "@knorq/docx-mcp-server",
+      "agent-format"
+    ]
+  },
+  {
+    "id": "pkg:nocturnusai-mcp",
+    "name": "logic-server",
+    "kind": "npm",
+    "description": " \u2014 Agent reasoning, memory, and token-optimized context for AI applications.",
+    "npm_pkg": "nocturnusai-mcp",
+    "source_repo": "Auctalis/nocturnusai",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@proofslip/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": "ProofSlip \u2014 Receipt-based verification for AI agent workflows \u2014 create, verify, and poll ephemeral proof objects",
+    "npm_pkg": "@proofslip/mcp-server",
+    "source_repo": "Johnny-Z13/proofslip",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@toolprint/hypertool-mcp",
+    "name": "hypertool-mcp",
+    "kind": "npm",
+    "description": " \u2014 Dynamically expose tools from proxied servers based on an Agent Persona",
+    "npm_pkg": "@toolprint/hypertool-mcp",
+    "source_repo": "toolprint/hypertool-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@iflow-mcp/sunwood-ai-labs-duckduckgo-web-search",
+    "name": "@iflow-mcp/sunwood-ai-labs-duckduckgo-web-search",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@iflow-mcp/sunwood-ai-labs-duckduckgo-web-search",
+    "source_repo": "Sunwood-ai-labs/duckduckgo-web-search",
+    "co_used": [
+      "obsidian-mcp-server",
+      "@ankimcp/anki-mcp-server",
+      "@mokei/mcp-sqlite"
+    ]
+  },
+  {
+    "id": "pkg:stitch-mcp",
+    "name": "stitch-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "stitch-mcp",
+    "source_repo": "Kargatharaakash/stitch-mcp",
+    "co_used": [
+      "magicuidesign-mcp",
+      "shadcn",
+      "playwright",
+      "21st-magic"
+    ]
+  },
+  {
+    "id": "pkg:ponlo-ai",
+    "name": "server",
+    "kind": "npm",
+    "description": " \u2014 Family calendar, tasks, meals, lists & rewards hub for AI assistants.",
+    "npm_pkg": "ponlo-ai",
+    "source_repo": "ClaudioGodoyB/ponlo-ai",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@hovecapital/read-only-mysql-mcp-server",
+    "name": "read-only-local-mysql-mcp-server",
+    "kind": "npm",
+    "description": " \u2014 MCP server for read-only MySQL database queries in Claude Desktop",
+    "npm_pkg": "@hovecapital/read-only-mysql-mcp-server",
+    "source_repo": "hovecapital/read-only-local-mysql-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@larksuiteoapi/lark-mcp",
+    "name": "@larksuiteoapi/lark-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@larksuiteoapi/lark-mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@scanbim-labs/scanbim-mcp",
+    "name": "scanbim-mcp",
+    "kind": "npm",
+    "description": " \u2014 AI Hub for AEC \u2014 46 tools for Revit, Navisworks, ACC, XR via Autodesk Platform Services",
+    "npm_pkg": "@scanbim-labs/scanbim-mcp",
+    "source_repo": "ScanBIM-Labs/scanbim-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:docqa-mcp",
+    "name": "docqa",
+    "kind": "npm",
+    "description": "DocQA MCP \u2014 AI document verification: catch hallucinations, arithmetic errors, and field mismatches.",
+    "npm_pkg": "docqa-mcp",
+    "source_repo": "digitalpromptmarket-beep/docqa-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:yt-dlp-mcp",
+    "name": "yt-dlp-mcp",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "yt-dlp-mcp",
+    "source_repo": "yourusername/yt-dlp-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@businys/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": " \u2014 221 MCP tools across 26 practices for independent professionals. Clients, invoices, contracts.",
+    "npm_pkg": "@businys/mcp-server",
+    "source_repo": "hiatys/businys-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:contextstudios-mcp",
+    "name": "mcp",
+    "kind": "npm",
+    "description": " \u2014 AI agency API: 25 free tools for glossary, comparisons, blog, guides, and estimates",
+    "npm_pkg": "contextstudios-mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@promptguard/mcp-server",
+    "name": "security",
+    "kind": "npm",
+    "description": "PromptGuard \u2014 Scan prompts for injection attacks, redact PII, and audit LLM SDK usage from any MCP client",
+    "npm_pkg": "@promptguard/mcp-server",
+    "source_repo": "acebot712/promptguard",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@truncus/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": " \u2014 Send transactional emails from AI agents via Truncus. Validate, track delivery, and manage domains.",
+    "npm_pkg": "@truncus/mcp-server",
+    "source_repo": "vanmoose/truncus-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-server-mysql",
+    "name": "mcp-server-mysql",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "mcp-server-mysql",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:arc-security-mcp",
+    "name": "arc-security",
+    "kind": "npm",
+    "description": " \u2014 Scan AI agent skills for 25 attack classes + runtime monitoring. 1,316+ findings.",
+    "npm_pkg": "arc-security-mcp",
+    "source_repo": "ArcSelf/arc-security-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@bitsbound/mcp-server",
+    "name": "contract-analysis",
+    "kind": "npm",
+    "description": " \u2014 AI contract automation with partner-level redlines, OOXML Track Changes, and risk analysis.",
+    "npm_pkg": "@bitsbound/mcp-server",
+    "source_repo": "taytrom/bitsbound-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:questlog-mcp",
+    "name": "questlog-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "questlog-mcp",
+    "source_repo": null,
+    "co_used": [
+      "laravel-boost",
+      "shadcn"
+    ]
+  },
+  {
+    "id": "pkg:@cloudflare/mcp-server-cloudflare",
+    "name": "@cloudflare/mcp-server-cloudflare",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@cloudflare/mcp-server-cloudflare",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@meetlark/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": " \u2014 Agent-first meeting schedule polls for humans and agents. Create polls, vote, find times.",
+    "npm_pkg": "@meetlark/mcp-server",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@636865636b73756d/mcp-v1",
+    "name": "mcp-v1",
+    "kind": "npm",
+    "description": " \u2014 Sub-cent factual claim verification against live data sources.",
+    "npm_pkg": "@636865636b73756d/mcp-v1",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:ref-tools-mcp",
+    "name": "ref-tools-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "ref-tools-mcp",
+    "source_repo": null,
+    "co_used": [
+      "serena",
+      "tavily-mcp",
+      "semgrep"
+    ]
+  },
+  {
+    "id": "pkg:bellwether-mcp",
+    "name": "bellwether-mcp",
+    "kind": "npm",
+    "description": " \u2014 Live prediction market data from Polymarket and Kalshi with VWAP pricing and reportability.",
+    "npm_pkg": "bellwether-mcp",
+    "source_repo": "elliotjames-paschal/bellwether-platform",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-server-sqlite-npx",
+    "name": "mcp-server-sqlite-npx",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "mcp-server-sqlite-npx",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@wildcard-ai/deepcontext",
+    "name": "deepcontext",
+    "kind": "npm",
+    "description": " \u2014 Advanced codebase indexing and semantic search MCP server",
+    "npm_pkg": "@wildcard-ai/deepcontext",
+    "source_repo": "Wildcard-Official/deepcontext",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@edjl/github-mcp",
+    "name": "@edjl/github-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@edjl/github-mcp",
+    "source_repo": null,
+    "co_used": [
+      "@supabase/mcp-server-supabase",
+      "@upstash/context7-mcp",
+      "firecrawl-mcp",
+      "netlify-mcp"
+    ]
+  },
+  {
+    "id": "pkg:@jetbrains/mcp-proxy",
+    "name": "@jetbrains/mcp-proxy",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@jetbrains/mcp-proxy",
+    "source_repo": "JetBrains/mcp-jetbrains",
+    "co_used": [
+      "mcp-server-fetch",
+      "@smithery-ai-brave-search",
+      "matkoson-brave-playwright",
+      "@executeautomation/playwright-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@motiffcom/motiff-mcp-server",
+    "name": "@motiffcom/motiff-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@motiffcom/motiff-mcp-server",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@contextlayer/mcp",
+    "name": "contextlayer-mcp",
+    "kind": "npm",
+    "description": " \u2014 Personal context management for AI assistants",
+    "npm_pkg": "@contextlayer/mcp",
+    "source_repo": "autoblocksai/ctxl",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@bolthub/mcp-registry",
+    "name": "registry",
+    "kind": "npm",
+    "description": "bolthub Marketplace \u2014 Discover and call every paid API on the bolthub marketplace with automatic L402 Lightning payments.",
+    "npm_pkg": "@bolthub/mcp-registry",
+    "source_repo": "signaltech-org/bolthub-sdk",
+    "co_used": []
+  },
+  {
+    "id": "pkg:ctxl",
+    "name": "ctxl",
+    "kind": "npm",
+    "description": " \u2014 Personal context management for AI assistants",
+    "npm_pkg": "ctxl",
+    "source_repo": "autoblocksai/ctxl",
+    "co_used": []
+  },
+  {
+    "id": "pkg:ctxl-mcp",
+    "name": "ctxl-mcp",
+    "kind": "npm",
+    "description": " \u2014 Personal context management for AI assistants",
+    "npm_pkg": "ctxl-mcp",
+    "source_repo": "autoblocksai/ctxl",
+    "co_used": []
+  },
+  {
+    "id": "pkg:lawai-mcp-server",
+    "name": "lawyer-search",
+    "kind": "npm",
+    "description": "Law.AI \u2014 Lawyer Search \u2014 Verified lawyer and attorney search, discovery, and matching for AI \u2014 991K+ US profiles.",
+    "npm_pkg": "lawai-mcp-server",
+    "source_repo": "risk-ai/lawai-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-server-reddit",
+    "name": "mcp-server-reddit",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "mcp-server-reddit",
+    "source_repo": "hlos-ai/mcp-servers",
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "mcp-server-fetch",
+      "mcp-server-time",
+      "@ramidecodes/mcp-server-notion"
+    ]
+  },
+  {
+    "id": "pkg:mcp-trello",
+    "name": "mcp-trello",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "mcp-trello",
+    "source_repo": "hint-services/mcp-trello",
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "image-process-mcp-server",
+      "@nuskey8/godot-docs-mcp",
+      "@cyanheads/git-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@gongrzhe/server-gmail-autoauth-mcp",
+    "name": "@gongrzhe/server-gmail-autoauth-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@gongrzhe/server-gmail-autoauth-mcp",
+    "source_repo": "gongrzhe/server-gmail-autoauth-mcp",
+    "co_used": [
+      "mcp-gsuite",
+      "@modelcontextprotocol/server-memory",
+      "agent_personnel",
+      "@gongrzhe/server-calendar-autoauth-mcp"
+    ]
+  },
+  {
+    "id": "pkg:dependency-mcp",
+    "name": "dependency-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "dependency-mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:tiendanube-mcp-server",
+    "name": "tiendanube-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "tiendanube-mcp-server",
+    "source_repo": "PedroHSGuimaraes/--Tiendanube-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:boostedtravel-mcp",
+    "name": "travel",
+    "kind": "npm",
+    "description": "BoostedTravel \u2014 Flight search & booking for AI agents. 400+ airlines, $20-50 cheaper than OTAs.",
+    "npm_pkg": "boostedtravel-mcp",
+    "source_repo": "Boosted-Chat/BoostedTravel",
+    "co_used": []
+  },
+  {
+    "id": "pkg:wolfram-mcp",
+    "name": "wolfram-mcp",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "wolfram-mcp",
+    "source_repo": null,
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "image-process-mcp-server",
+      "@nuskey8/godot-docs-mcp",
+      "@cyanheads/git-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:aistudio-mcp-server",
+    "name": "aistudio-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "aistudio-mcp-server",
+    "source_repo": "eternnoir/aistudio-mcp-server",
+    "co_used": [
+      "@enescinar/twitter-mcp",
+      "heygen-mcp",
+      "@misbahsy/video-audio-mcp",
+      "cloudinary-asset-mgmt"
+    ]
+  },
+  {
+    "id": "pkg:cursor-cloud-agent-mcp",
+    "name": "cursor-cloud-agent-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "cursor-cloud-agent-mcp",
+    "source_repo": "jxnl/cursor-cloud-agent-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-atlassian",
+    "name": "mcp-atlassian",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "mcp-atlassian",
+    "source_repo": "Vijay-Duke/mcp-atlassian",
+    "co_used": [
+      "memory",
+      "ghcr.io/github/github-mcp-server",
+      "time",
+      "docker"
+    ]
+  },
+  {
+    "id": "pkg:mcp-server-sqlite",
+    "name": "mcp-server-sqlite",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "mcp-server-sqlite",
+    "source_repo": "madnh/mcp-server-sqlite",
+    "co_used": [
+      "mcp/sequentialthinking"
+    ]
+  },
+  {
+    "id": "pkg:vibe-coder-mcp",
+    "name": "vibe-coder-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "vibe-coder-mcp",
+    "source_repo": "freshtechbro/Vibe-Coder-MCP",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@fernforestgames/mcp-server-godot",
+    "name": "@fernforestgames/mcp-server-godot",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "@fernforestgames/mcp-server-godot",
+    "source_repo": "fernforestgames/mcp-server-godot",
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "image-process-mcp-server",
+      "@nuskey8/godot-docs-mcp",
+      "@cyanheads/git-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@rapay/mcp-server",
+    "name": "mcp-server",
+    "kind": "npm",
+    "description": "Ra Pay \u2014 Send fiat payments via MCP with two-step confirmation and Stripe Connect.",
+    "npm_pkg": "@rapay/mcp-server",
+    "source_repo": "Ra-Pay-AI/rapay",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@nuskey8/godot-docs-mcp",
+    "name": "@nuskey8/godot-docs-mcp",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "@nuskey8/godot-docs-mcp",
+    "source_repo": null,
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "image-process-mcp-server",
+      "@cyanheads/git-mcp-server",
+      "C:/Users/Conner/Downloads/VeilbreakersGame/addons/gdai-mcp-plugin-godot/gdai_mcp_server.py"
+    ]
+  },
+  {
+    "id": "pkg:reactbits-dev-mcp-server",
+    "name": "reactbits-dev-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "reactbits-dev-mcp-server",
+    "source_repo": "ceorkm/reactbits-mcp-server",
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-merchant",
+    "name": "mcp-merchant",
+    "kind": "npm",
+    "description": " \u2014 Search-only commerce MCP server backed by Stripe (test)",
+    "npm_pkg": "mcp-merchant",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:bruzethegreat-gsap-master-mcp-server",
+    "name": "bruzethegreat-gsap-master-mcp-server",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "bruzethegreat-gsap-master-mcp-server",
+    "source_repo": "bruzethegreat/gsap-master-mcp-server",
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "image-process-mcp-server",
+      "@nuskey8/godot-docs-mcp",
+      "@cyanheads/git-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@peng-shawn/mermaid-mcp-server",
+    "name": "@peng-shawn/mermaid-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@peng-shawn/mermaid-mcp-server",
+    "source_repo": "peng-shawn/mermaid-mcp-server",
+    "co_used": [
+      "@enescinar/twitter-mcp",
+      "heygen-mcp",
+      "@misbahsy/video-audio-mcp",
+      "cloudinary-asset-mgmt"
+    ]
+  },
+  {
+    "id": "pkg:@kevinwatt/mcp-server-searxng",
+    "name": "@kevinwatt/mcp-server-searxng",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@kevinwatt/mcp-server-searxng",
+    "source_repo": "kevinwatt/mcp-server-searxng",
+    "co_used": []
+  },
+  {
+    "id": "pkg:coderabbitai-mcp",
+    "name": "coderabbitai-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "coderabbitai-mcp",
+    "source_repo": "bradthebeeble/coderabbitai-mcp",
+    "co_used": [
+      "browsermcp"
+    ]
+  },
+  {
+    "id": "pkg:topia-mcp",
+    "name": "topia-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "topia-mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@enescinar/twitter-mcp",
+    "name": "@enescinar/twitter-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@enescinar/twitter-mcp",
+    "source_repo": "EnesCinr/twitter-mcp",
+    "co_used": [
+      "heygen-mcp",
+      "@misbahsy/video-audio-mcp",
+      "cloudinary-asset-mgmt",
+      "mcp-server-giphy"
+    ]
+  },
+  {
+    "id": "pkg:fal-mcp-server",
+    "name": "fal-mcp-server",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "fal-mcp-server",
+    "source_repo": "Gravicity/fal-mcp-server",
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "image-process-mcp-server",
+      "@nuskey8/godot-docs-mcp",
+      "@cyanheads/git-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:wikipedia-mcp",
+    "name": "wikipedia-mcp",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "wikipedia-mcp",
+    "source_repo": null,
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "mcp-server-fetch",
+      "mcp-server-reddit",
+      "mcp-server-time"
+    ]
+  },
+  {
+    "id": "pkg:vercel-mcp",
+    "name": "vercel-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "vercel-mcp",
+    "source_repo": "zueai/vercel-api-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-github",
+    "name": "@modelcontextprotocol/server-github",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@modelcontextprotocol/server-github",
+    "source_repo": null,
+    "co_used": [
+      "@modelcontextprotocol/server-filesystem",
+      "@modelcontextprotocol/server-memory",
+      "@modelcontextprotocol/server-brave-search",
+      "@modelcontextprotocol/server-sequential-thinking"
+    ]
+  },
+  {
+    "id": "pkg:obsidian-mcp",
+    "name": "obsidian-mcp",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "obsidian-mcp",
+    "source_repo": "StevenStavrakis/obsidian-mcp",
+    "co_used": [
+      "@hanweg/mcp-discord",
+      "@modelcontextprotocol/server-memory",
+      "playwright",
+      "@modelcontextprotocol/server-github"
+    ]
+  },
+  {
+    "id": "pkg:mcp-server-giphy",
+    "name": "mcp-server-giphy",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "mcp-server-giphy",
+    "source_repo": "magarcia/mcp-server-giphy",
+    "co_used": [
+      "@enescinar/twitter-mcp",
+      "heygen-mcp",
+      "@misbahsy/video-audio-mcp",
+      "cloudinary-asset-mgmt"
+    ]
+  },
+  {
+    "id": "pkg:shadcn-ui-mcp-server",
+    "name": "shadcn-ui-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "shadcn-ui-mcp-server",
+    "source_repo": "ymadd/shadcn-ui-mcp-server",
+    "co_used": [
+      "@upstash/context7-mcp",
+      "playwright",
+      "convex"
+    ]
+  },
+  {
+    "id": "pkg:github-repo-mcp",
+    "name": "github-repo-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "github-repo-mcp",
+    "source_repo": "Ryan0204/github-repo-mcp",
+    "co_used": []
+  },
+  {
+    "id": "pkg:uni-app-x-mcp",
+    "name": "uni-app-x-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "uni-app-x-mcp",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:mcp-server-lottiefiles",
+    "name": "mcp-server-lottiefiles",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "mcp-server-lottiefiles",
+    "source_repo": null,
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "image-process-mcp-server",
+      "@nuskey8/godot-docs-mcp",
+      "@cyanheads/git-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-puppeteer",
+    "name": "@modelcontextprotocol/server-puppeteer",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@modelcontextprotocol/server-puppeteer",
+    "source_repo": null,
+    "co_used": [
+      "mcp-server-fetch",
+      "@smithery-ai-brave-search",
+      "matkoson-brave-playwright",
+      "@executeautomation/playwright-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@ramidecodes/mcp-server-notion",
+    "name": "@ramidecodes/mcp-server-notion",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@ramidecodes/mcp-server-notion",
+    "source_repo": "ramidecodes/mcp-server-notion",
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "mcp-server-fetch",
+      "mcp-server-reddit",
+      "mcp-server-time"
+    ]
+  },
+  {
+    "id": "pkg:image-process-mcp-server",
+    "name": "image-process-mcp-server",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "image-process-mcp-server",
+    "source_repo": null,
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "@nuskey8/godot-docs-mcp",
+      "@cyanheads/git-mcp-server",
+      "C:/Users/Conner/Downloads/VeilbreakersGame/addons/gdai-mcp-plugin-godot/gdai_mcp_server.py"
+    ]
+  },
+  {
+    "id": "pkg:mcp-figma",
+    "name": "mcp-figma",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "mcp-figma",
+    "source_repo": "noahcn/mcp-figma",
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "image-process-mcp-server",
+      "@nuskey8/godot-docs-mcp",
+      "@cyanheads/git-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-slack",
+    "name": "@modelcontextprotocol/server-slack",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@modelcontextprotocol/server-slack",
+    "source_repo": null,
+    "co_used": [
+      "@notionhq/notion-mcp-server",
+      "@google/sheets-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@liuyoshio/mcp-compass",
+    "name": "@liuyoshio/mcp-compass",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@liuyoshio/mcp-compass",
+    "source_repo": "liuyoshio/mcp-compass",
+    "co_used": [
+      "mcp-server-fetch",
+      "@smithery-ai-brave-search",
+      "matkoson-brave-playwright",
+      "@executeautomation/playwright-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:mcp-server-taskwarrior",
+    "name": "mcp-server-taskwarrior",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "mcp-server-taskwarrior",
+    "source_repo": null,
+    "co_used": [
+      "/home/blyons/finances/main.ledger",
+      "github:utensils/mcp-nixos"
+    ]
+  },
+  {
+    "id": "pkg:@thedaviddias/mcp-llms-txt-explorer",
+    "name": "@thedaviddias/mcp-llms-txt-explorer",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@thedaviddias/mcp-llms-txt-explorer",
+    "source_repo": "thedaviddias/mcp-llms-txt-explorer",
+    "co_used": [
+      "mcp-server-fetch",
+      "@smithery-ai-brave-search",
+      "matkoson-brave-playwright",
+      "@executeautomation/playwright-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@gongrzhe/server-calendar-autoauth-mcp",
+    "name": "@gongrzhe/server-calendar-autoauth-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@gongrzhe/server-calendar-autoauth-mcp",
+    "source_repo": "gongrzhe/server-calendar-autoauth-mcp",
+    "co_used": [
+      "mcp-gsuite",
+      "@modelcontextprotocol/server-memory",
+      "agent_personnel",
+      "@gongrzhe/server-gmail-autoauth-mcp"
+    ]
+  },
+  {
+    "id": "pkg:mcp-gsuite",
+    "name": "mcp-gsuite",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "mcp-gsuite",
+    "source_repo": null,
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "agent_personnel",
+      "@gongrzhe/server-calendar-autoauth-mcp",
+      "@gongrzhe/server-gmail-autoauth-mcp"
+    ]
+  },
+  {
+    "id": "pkg:mcp-guide",
+    "name": "mcp-guide",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "mcp-guide",
+    "source_repo": "qpd-v/mcp-guide",
+    "co_used": [
+      "mcp-server-fetch",
+      "@smithery-ai-brave-search",
+      "matkoson-brave-playwright",
+      "@executeautomation/playwright-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@emmett.deen/linear-mcp-server",
+    "name": "@emmett.deen/linear-mcp-server",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@emmett.deen/linear-mcp-server",
+    "source_repo": "yourusername/Linear-MCP-Server",
+    "co_used": [
+      "mcp-server-fetch",
+      "@smithery-ai-brave-search",
+      "matkoson-brave-playwright",
+      "@executeautomation/playwright-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-brave-search",
+    "name": "@modelcontextprotocol/server-brave-search",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@modelcontextprotocol/server-brave-search",
+    "source_repo": null,
+    "co_used": [
+      "@modelcontextprotocol/server-github",
+      "@modelcontextprotocol/server-memory",
+      "@modelcontextprotocol/server-filesystem",
+      "@upstash/context7-mcp"
+    ]
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-postgres",
+    "name": "@modelcontextprotocol/server-postgres",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@modelcontextprotocol/server-postgres",
+    "source_repo": null,
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "@modelcontextprotocol/server-aws",
+      "@modelcontextprotocol/server-github",
+      "@modelcontextprotocol/server-brave-search"
+    ]
+  },
+  {
+    "id": "pkg:@pydantic/mcp-run-python",
+    "name": "@pydantic/mcp-run-python",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@pydantic/mcp-run-python",
+    "source_repo": null,
+    "co_used": []
+  },
+  {
+    "id": "pkg:@anaisbetts/mcp-installer",
+    "name": "@anaisbetts/mcp-installer",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@anaisbetts/mcp-installer",
+    "source_repo": null,
+    "co_used": [
+      "mcp-server-fetch",
+      "@smithery-ai-brave-search",
+      "matkoson-brave-playwright",
+      "@executeautomation/playwright-mcp-server"
+    ]
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-gdrive",
+    "name": "@modelcontextprotocol/server-gdrive",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "@modelcontextprotocol/server-gdrive",
+    "source_repo": null,
+    "co_used": [
+      "@modelcontextprotocol/server-gmail",
+      "@modelcontextprotocol/server-google-calendar"
+    ]
+  },
+  {
+    "id": "pkg:netlify-mcp",
+    "name": "netlify-mcp",
+    "kind": "npm",
+    "description": "",
+    "npm_pkg": "netlify-mcp",
+    "source_repo": null,
+    "co_used": [
+      "@supabase/mcp-server-supabase",
+      "@upstash/context7-mcp",
+      "firecrawl-mcp",
+      "playwright"
+    ]
+  },
+  {
+    "id": "pkg:mcp-server-time",
+    "name": "mcp-server-time",
+    "kind": "pkg",
+    "description": "",
+    "npm_pkg": "mcp-server-time",
+    "source_repo": null,
+    "co_used": [
+      "@modelcontextprotocol/server-memory",
+      "mcp-server-fetch",
+      "mcp-server-reddit",
+      "@ramidecodes/mcp-server-notion"
+    ]
+  },
+  {
+    "id": "pkg:marketintell",
+    "name": "marketintell",
+    "kind": "npm",
+    "description": " \u2014 AI analyst desk for stocks, options & crypto with sourced trade setups and a public accuracy record.",
+    "npm_pkg": "marketintell",
+    "source_repo": "ravidsrk/marketintell",
+    "co_used": []
+  }
+]

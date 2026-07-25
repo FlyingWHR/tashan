@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="98" height="20" role="img" aria-label="tashan: 34 ">
+<rect width="98" height="20" rx="4" fill="#09090b"/>
+<rect width="69" height="20" rx="4" fill="#18181b"/>
+<rect x="65" width="4" height="20" fill="#18181b"/>
+<rect x="69" width="29" height="20" rx="4" fill="#0d0d10"/>
+<rect x="69" width="4" height="20" fill="#0d0d10"/>
+<line x1="69" y1="3" x2="69" y2="17" stroke="rgba(233,162,59,.35)"/>
+<text x="8" y="14" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="600"><tspan fill="#34e0a0">◆</tspan><tspan fill="#ededf0"> tashan</tspan></text>
+<text x="77" y="14" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="600"><tspan fill="#34e0a0">34</tspan></text>
+</svg>

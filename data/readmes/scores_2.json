@@ -1,0 +1,38 @@
+[
+  {
+    "id": "pkg:@codescene/codehealth-mcp",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "Real CodeScene Code Health engine; license-tiered tools, agent skills, many install paths. README setup-heavy, tool examples linked out."
+  },
+  {
+    "id": "pkg:hostinger-api-mcp",
+    "expertise": 50,
+    "verdict": "thin",
+    "note": "234 auto-generated tools = OpenAPI passthrough, split into domain binaries. Solid OAuth PKCE/secure-cred docs but no usage examples/depth."
+  },
+  {
+    "id": "pkg:figma-console-mcp",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Deep design-system tooling: DTCG dialects, WCAG/axe-core, version blame, scored audits, bidir token sync; active changelog. Marketing-heavy."
+  },
+  {
+    "id": "pkg:@apideck/mcp",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Passthrough to Apideck unified API (200+ connectors). Clean multi-client install, but README is all config—no tool list or usage depth."
+  },
+  {
+    "id": "pkg:mcp-server-kubernetes",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "Legit K8s mgmt (kubectl+Helm), multi-source kubeconfig, thorough multi-client setup, active maintenance. README light on tool examples."
+  },
+  {
+    "id": "pkg:figma-developer-mcp",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "Focused Figma→code; real insight—simplifies Figma API to cut LLM context. Clear docs, popular. Narrow, tools/examples linked out."
+  }
+]

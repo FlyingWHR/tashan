@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Mastered V1 — public-signal scraper.
+tashan V1 — public-signal scraper.
 
 Measures REAL adoption of MCP servers from public GitHub configs (mcp.json,
 claude_desktop_config.json, .cursor mcp configs). No user instrumentation, no
@@ -202,7 +202,7 @@ def repo_meta(full, cache):
 
 
 def main():
-    print("Mastered scraper — collecting public MCP configs...", flush=True)
+    print("tashan scraper — collecting public MCP configs...", flush=True)
     files = collect_files()
     print(f"Collected {len(files)} config files. Parsing...", flush=True)
 

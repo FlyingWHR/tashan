@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Requests — the demand board · tashan</title>
+  <meta name="description" content="Request that a capability be tracked and graded. Ranked by measured demand — you fund the grade, never the score. A grade-bounty pays out when the grade is published, whatever it says.">
+  <meta name="theme-color" content="#0b0b0a">
+  <link rel="canonical" href="https://tashan.sh/requests.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Requests — the demand board · tashan">
+  <meta property="og:description" content="Fund a grade, never a score. Request a capability be tracked and graded; the bounty settles when the grade is published — whatever it says.">
+  <meta property="og:url" content="https://tashan.sh/requests.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/assets/favicon.svg">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css?v=45">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does a grade-bounty work?","acceptedAnswer":{"@type":"Answer","text":"You request that a capability be tracked and expertise-graded, and optionally co-fund the grade in USDC. The bounty settles the moment the grade is published — and the payout is identical whether the capability scores 9 or 1. You are paying for a measurement to happen, never for its result."}},{"@type":"Question","name":"Can I pay to raise my capability's score?","acceptedAnswer":{"@type":"Answer","text":"No. Money buys priority, depth, and access — never the number. The funder, the grader, and the scoring engine are separate. Vendors may fund a grade of their own product, but it is badged and published regardless of outcome, and they can neither preview nor pull it."}}]}</script>
+</head>
+<body>
+  <nav class="nav"><div class="wrap nav__in">
+    <a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>
+    <div class="nav__links">
+      <a href="/">Index</a>
+      <a href="/methodology.html">Methodology</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/learn/">Learn</a><a href="/requests.html">Requests</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div></nav>
+
+  <main class="wrap">
+    <div class="cap-hd">
+      <p class="kicker">The demand board</p>
+      <h1>Request a grade — not a placement.</h1>
+      <p class="cap-desc">Other stores let you pay for a placement. Here you request a capability to be
+        <strong>tracked and graded</strong> — the board is ranked by measured demand, and the grade you get is the
+        one the evidence gives, whatever it says. You can buy the measurement; you can't buy the number.</p>
+    </div>
+
+    <div class="callout firewall">
+      <b>The firewall.</b> You fund the <b>grade</b>, never the <b>score</b>. A grade-bounty settles the moment the
+      grade is <b>published</b> — and the payout is identical whether the capability scores 9/10 or 1/10. Money buys
+      <b>priority, depth, and access</b>; it can never touch the number. Funder, grader, and scoring engine are separate.
+    </div>
+
+    <section class="capsec">
+      <div class="capsec__hd"><h2>Most wanted</h2><span class="capsec__aside mono">ranked by backing · $0.20 / grade floor</span></div>
+      <p class="capsec__sub">Back a request to move it up the queue and unlock the full evidence dossier when it publishes.
+        Backers become patrons — named on the report, early access to the dossier.</p>
+      <div class="board"><div class="board__scroll">
+        <table class="board__t reqtable">
+          <thead><tr>
+            <th class="rank">#</th><th>Capability</th>
+            <th class="num">Backing</th><th class="num">Backers</th><th>Status</th><th></th>
+          </tr></thead>
+          <tbody id="reqrows"><tr><td colspan="6"><div class="loading">Loading the demand board…</div></td></tr></tbody>
+        </table>
+      </div></div>
+    </section>
+
+    <section class="capsec">
+      <div class="capsec__hd"><h2>Request something we don't grade yet</h2></div>
+      <p class="capsec__sub">Missing a capability, or want a re-grade? Open a public request — it's an issue on GitHub, so the
+        demand is itself public evidence. No account, no paywall to ask.</p>
+      <p><a class="btn btn--primary" id="submitBtn" href="https://github.com/tashan-sh/tashan/issues/new?labels=grade-request&amp;title=Grade+request%3A+" rel="noopener">Open a request ↗</a></p>
+    </section>
+
+    <div class="callout" style="margin-top:var(--sp-12)"><b>Why this is safe.</b> This mirrors an escrowed bounty
+      board (pump.fun GO), with one change that makes it neutral: settlement triggers on <b>publication</b>, never on
+      the result. Ungradeable within the window? The backing refunds. See the
+      <a class="link" href="/methodology.html">methodology</a> for exactly what a grade measures.</div>
+  </main>
+
+  <footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__brand">
+      <span class="brand"><span class="brand__mark"></span>tashan</span>
+      <p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p>
+      <p class="footer__meta" id="footMethod">public-signal v2</p>
+    </div>
+    <nav class="footer__col"><p class="footer__h">Explore</p>
+      <a href="/">The Index</a><a href="/learn/">Learn</a><a href="/requests.html">Requests</a></nav>
+    <nav class="footer__col"><p class="footer__h">Trust</p>
+      <a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a></nav>
+    <nav class="footer__col"><p class="footer__h">Sources</p>
+      <a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>
+      <a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>
+      <a href="https://github.com/" rel="noopener">GitHub ↗</a></nav>
+  </div>
+  <div class="wrap footer__bar">
+    <span>© 2026 SeroLabs, Inc.</span>
+    <span>Every score re-derivable from public evidence.</span>
+  </div>
+</footer>
+
+  <script src="/js/terminal.js?v=45" defer></script>
+  <script src="/js/site.js?v=45" defer></script>
+  <script src="/js/requests.js?v=45" defer></script>
+</body>
+</html>

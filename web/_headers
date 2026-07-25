@@ -17,3 +17,7 @@
   Cache-Control: no-cache
 /data/*
   Cache-Control: no-cache
+
+# embeddable badges — refresh hourly (GitHub's camo proxy caches longer anyway)
+/badge/*
+  Cache-Control: public, max-age=3600

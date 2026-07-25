@@ -1,0 +1,238 @@
+[
+  {
+    "id": "pkg:@motiffcom/motiff-mcp-server",
+    "category": "design"
+  },
+  {
+    "id": "pkg:@contextlayer/mcp",
+    "category": "files"
+  },
+  {
+    "id": "pkg:@bolthub/mcp-registry",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:ctxl",
+    "category": "files"
+  },
+  {
+    "id": "pkg:ctxl-mcp",
+    "category": "files"
+  },
+  {
+    "id": "pkg:lawai-mcp-server",
+    "category": "search"
+  },
+  {
+    "id": "pkg:mcp-server-reddit",
+    "category": "search"
+  },
+  {
+    "id": "pkg:mcp-trello",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@gongrzhe/server-gmail-autoauth-mcp",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:dependency-mcp",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:tiendanube-mcp-server",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:boostedtravel-mcp",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:wolfram-mcp",
+    "category": "search"
+  },
+  {
+    "id": "pkg:aistudio-mcp-server",
+    "category": "ai"
+  },
+  {
+    "id": "pkg:cursor-cloud-agent-mcp",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:mcp-atlassian",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:mcp-server-sqlite",
+    "category": "database"
+  },
+  {
+    "id": "pkg:vibe-coder-mcp",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:@fernforestgames/mcp-server-godot",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:@rapay/mcp-server",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:@nuskey8/godot-docs-mcp",
+    "category": "docs"
+  },
+  {
+    "id": "pkg:reactbits-dev-mcp-server",
+    "category": "design"
+  },
+  {
+    "id": "pkg:mcp-merchant",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:bruzethegreat-gsap-master-mcp-server",
+    "category": "design"
+  },
+  {
+    "id": "pkg:@peng-shawn/mermaid-mcp-server",
+    "category": "design"
+  },
+  {
+    "id": "pkg:@kevinwatt/mcp-server-searxng",
+    "category": "search"
+  },
+  {
+    "id": "pkg:coderabbitai-mcp",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:topia-mcp",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:@enescinar/twitter-mcp",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:fal-mcp-server",
+    "category": "design"
+  },
+  {
+    "id": "pkg:wikipedia-mcp",
+    "category": "docs"
+  },
+  {
+    "id": "pkg:vercel-mcp",
+    "category": "cloud"
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-github",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:obsidian-mcp",
+    "category": "docs"
+  },
+  {
+    "id": "pkg:mcp-server-giphy",
+    "category": "search"
+  },
+  {
+    "id": "pkg:shadcn-ui-mcp-server",
+    "category": "design"
+  },
+  {
+    "id": "pkg:github-repo-mcp",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:uni-app-x-mcp",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:mcp-server-lottiefiles",
+    "category": "design"
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-puppeteer",
+    "category": "browser"
+  },
+  {
+    "id": "pkg:@ramidecodes/mcp-server-notion",
+    "category": "docs"
+  },
+  {
+    "id": "pkg:image-process-mcp-server",
+    "category": "design"
+  },
+  {
+    "id": "pkg:mcp-figma",
+    "category": "design"
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-slack",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:@liuyoshio/mcp-compass",
+    "category": "search"
+  },
+  {
+    "id": "pkg:mcp-server-taskwarrior",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@thedaviddias/mcp-llms-txt-explorer",
+    "category": "docs"
+  },
+  {
+    "id": "pkg:@gongrzhe/server-calendar-autoauth-mcp",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:mcp-gsuite",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:mcp-guide",
+    "category": "docs"
+  },
+  {
+    "id": "pkg:@emmett.deen/linear-mcp-server",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-brave-search",
+    "category": "search"
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-postgres",
+    "category": "database"
+  },
+  {
+    "id": "pkg:@pydantic/mcp-run-python",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:@anaisbetts/mcp-installer",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:@modelcontextprotocol/server-gdrive",
+    "category": "files"
+  },
+  {
+    "id": "pkg:netlify-mcp",
+    "category": "cloud"
+  },
+  {
+    "id": "pkg:mcp-server-time",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:marketintell",
+    "category": "finance"
+  }
+]

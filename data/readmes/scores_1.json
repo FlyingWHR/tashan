@@ -1,0 +1,38 @@
+[
+  {
+    "id": "pkg:@modelcontextprotocol/server-everything",
+    "expertise": 54,
+    "verdict": "thin",
+    "note": "Shared monorepo README; a deliberate reference/test server demoing MCP features, not domain capability. Honestly flagged non-production."
+  },
+  {
+    "id": "pkg:@cloudbase/cloudbase-mcp",
+    "expertise": 73,
+    "verdict": "solid",
+    "note": "Tencent CloudBase backend from chat—DB/functions/storage/deploy, dated releases, PG migrations; honest 'confirm sensitive actions' caveat."
+  },
+  {
+    "id": "pkg:tavily-mcp",
+    "expertise": 65,
+    "verdict": "solid",
+    "note": "Four tools (search/extract/map/crawl), LLM-optimized search; README mostly cross-client install+OAuth. API key in URL query = mild leak risk."
+  },
+  {
+    "id": "pkg:@notionhq/notion-mcp-server",
+    "expertise": 84,
+    "verdict": "solid",
+    "note": "Official; v2.0 data-source migration, 22 tools, token-efficient markdown page endpoints; honest sunset/breaking notes. Reads as migration doc."
+  },
+  {
+    "id": "pkg:firecrawl-mcp",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Seven web tools (scrape/search/crawl/map/extract/agent), keyless tier, separate read-only search OAuth, self-host; API key in URL path."
+  },
+  {
+    "id": "pkg:@auth0/auth0-mcp-server",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Official Auth0 mgmt; real example prompts, --read-only + glob tool filtering (least privilege), per-client scoping; honest beta caution."
+  }
+]

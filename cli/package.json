@@ -1,0 +1,13 @@
+{
+  "name": "tashan",
+  "version": "0.1.0",
+  "description": "The measured layer for AI capabilities — search, rank, and install MCP servers & agent skills from your terminal.",
+  "type": "module",
+  "bin": { "tashan": "tashan.mjs" },
+  "engines": { "node": ">=18" },
+  "files": ["tashan.mjs"],
+  "keywords": ["mcp", "model-context-protocol", "claude", "cursor", "agent-skills", "ai", "cli"],
+  "homepage": "https://tashan.sh",
+  "license": "MIT",
+  "scripts": { "test": "node tashan.test.mjs" }
+}

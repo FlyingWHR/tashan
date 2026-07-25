@@ -1,0 +1,225 @@
+#!/usr/bin/env python3
+"""tashan — prerender static, indexable capability pages + a full sitemap.
+
+The Index's detail pages were client-rendered under ?id= — invisible to crawlers and AI answer engines.
+This generates a real file per capability at web/capability/<slug>.html with:
+  - a real <title>, meta description, canonical, Open Graph + Twitter tags
+  - JSON-LD (SoftwareApplication + AggregateRating + BreadcrumbList + FAQPage) — rich results & AI citation
+  - a server-rendered summary (real content crawlers see with JS off)
+  - <meta name="cap-id"> so capability.js hydrates the full interactive page for humans
+Then regenerates web/sitemap.xml with every page. Runs after build.py's export. Stdlib only.
+
+ponytail: the summary is intentionally a subset of capability.js's render — the JSON-LD carries the
+structured data, so we don't duplicate the whole client template in Python. Keep them loosely in sync.
+"""
+import json, os, re, html
+from datetime import datetime, timezone
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA = os.path.join(ROOT, "web", "data", "capabilities.json")
+OUT = os.path.join(ROOT, "web", "capability")
+BASE = "https://tashan.sh"
+os.makedirs(OUT, exist_ok=True)
+
+CAT = {"browser":"Browser & Web","search":"Search","database":"Database","devtools":"Dev Tools & CI",
+       "cloud":"Cloud & Infra","files":"Files & Memory","data":"Data & Analytics","docs":"Docs & Knowledge",
+       "comms":"Communication","design":"Design","ai":"AI & Agents","finance":"Finance & Crypto",
+       "productivity":"Productivity","security":"Security","other":"Other"}
+
+def slugify(cid): return re.sub(r"[^a-z0-9]+", "-", cid.lower()).strip("-")
+def esc(s): return html.escape(str(s), quote=True)
+def pretty(name):
+    return re.sub(r"^mcp-", "", re.sub(r"^mcp-server-", "", re.sub(r"-mcp$", "",
+        re.sub(r"^@modelcontextprotocol/server-", "", str(name)))))
+
+def official_org(c):
+    s = ((c.get("npm_pkg") or "") + " " + (c.get("source_repo") or "")).lower()
+    if re.search(r"modelcontextprotocol|anthropic", s): return "Anthropic"
+    if re.search(r"(^|[/@\s])openai", s): return "OpenAI"
+    if re.search(r"google|googleapis|gemini", s): return "Google"
+    if re.search(r"(^|[/@\s])microsoft|(^|/)azure", s): return "Microsoft"
+    return None
+
+def desc_for(c):
+    n = pretty(c["name"])
+    d = c.get("description") or (n + " — an AI capability (" + (c.get("kind") or "server") + ") tracked and scored by tashan on public evidence.")
+    if c.get("trust") is not None:
+        d = d.rstrip(".") + ". Trust " + str(c["trust"]) + "/100"
+        if c.get("expertise_verdict"): d += " · expertise: " + c["expertise_verdict"]
+        d += "."
+    return d[:300]
+
+def faq(c):
+    n = pretty(c["name"]); qa = []
+    # Is it safe / trustworthy
+    safe = "tashan scores " + n + " on public evidence — "
+    parts = []
+    if c.get("trust") is not None: parts.append("Trust " + str(c["trust"]) + "/100")
+    if c.get("vitality"): parts.append("it is currently " + c["vitality"])
+    if c.get("single_maintainer"): parts.append("note: a single primary maintainer (bus-factor risk)")
+    if c.get("gh_archived"): parts.append("warning: the repository is archived")
+    safe += (", ".join(parts) if parts else "see the measured signals") + ". This is a maintenance/adoption read, not a security audit."
+    qa.append(("Is " + n + " safe and trustworthy?", safe))
+    # How to install
+    if c.get("kind") == "skill":
+        inst = "Drop the skill folder into ~/.claude/skills/ (user scope) or .claude/skills/ (project scope)."
+    elif c.get("npm_pkg"):
+        inst = "In Claude Code: run `claude mcp add " + re.sub(r'[^a-z0-9_-]', '-', pretty(c['name'])).strip('-') + " -- npx -y " + c["npm_pkg"] + "`. In Cursor / Claude Desktop, add it to mcp.json / claude_desktop_config.json."
+    else:
+        inst = "Configure it from its source repository — it is a remote / registry server."
+    qa.append(("How do I install " + n + "?", inst))
+    # Who maintains
+    who = []
+    if c.get("gh_contributors") is not None: who.append(str(c["gh_contributors"]) + " GitHub contributors")
+    if official_org(c): who.append("published by " + official_org(c))
+    if c.get("source_repo"): who.append("source: " + c["source_repo"])
+    qa.append(("Who maintains " + n + "?", (", ".join(who) if who else "See the linked source repository.") + "."))
+    return qa
+
+def jsonld(c):
+    n = pretty(c["name"]); url = BASE + "/capability/" + c["slug"] + ".html"
+    app = {"@context":"https://schema.org","@type":"SoftwareApplication","name": n,
+           "description": desc_for(c), "applicationCategory":"DeveloperApplication",
+           "operatingSystem":"Cross-platform","url": url}
+    if c.get("source_repo"): app["codeRepository"] = "https://github.com/" + c["source_repo"]
+    if c.get("gh_license"): app["license"] = c["gh_license"]
+    if c.get("trust") is not None:
+        app["aggregateRating"] = {"@type":"AggregateRating","ratingValue": c["trust"],
+            "bestRating": 100, "worstRating": 0, "ratingCount": 1,
+            "reviewAspect":"tashan Trust score (maintenance + freshness, gated by adoption)"}
+    if c.get("npm_pkg"):
+        app["offers"] = {"@type":"Offer","price":"0","priceCurrency":"USD"}
+    crumbs = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"The Index","item": BASE + "/"},
+        {"@type":"ListItem","position":2,"name": n, "item": url}]}
+    faqld = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name": q, "acceptedAnswer":{"@type":"Answer","text": a}} for q, a in faq(c)]}
+    return "\n".join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False) + "</script>"
+                     for x in (app, crumbs, faqld))
+
+NAV = ('<nav class="nav"><div class="wrap nav__in">'
+       '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
+       '<div class="nav__links"><a href="/">Index</a><a href="/methodology.html">Methodology</a>'
+       '<a href="/pricing.html">Pricing</a><a href="/learn/">Learn</a><a href="/requests.html">Requests</a><a href="/about.html">About</a></div></div></nav>')
+FOOT = ('<footer class="footer"><div class="wrap footer__in">'
+        '<div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span>'
+        '<p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p>'
+        '<p class="footer__meta" id="footMethod">public-signal v2</p></div>'
+        '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/learn/">Learn</a><a href="/requests.html">Requests</a></nav>'
+        '<nav class="footer__col"><p class="footer__h">Trust</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a></nav>'
+        '<nav class="footer__col"><p class="footer__h">Sources</p>'
+        '<a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>'
+        '<a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>'
+        '<a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div>'
+        '<div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span>'
+        '<span>Every score re-derivable from public evidence.</span></div></footer>')
+
+def summary(c):
+    """Server-rendered content crawlers see with JS off (capability.js replaces it for humans)."""
+    n = pretty(c["name"]); rows = []
+    def kv(k, v): rows.append("<li><b>" + esc(k) + ":</b> " + esc(v) + "</li>") if v not in (None, "", "—") else None
+    kv("Trust", c.get("trust"))
+    kv("Expertise", (str(c["expertise"]) + " (" + c["expertise_verdict"] + ")") if c.get("expertise") is not None and c.get("expertise_verdict") else c.get("expertise"))
+    kv("Adoption", (compact(c["npm_downloads"]) + "/wk") if c.get("npm_downloads") is not None else (str(c.get("config_reach")) + " repos" if c.get("config_reach") else None))
+    kv("Vitality", c.get("vitality"))
+    kv("GitHub stars", fmt(c.get("gh_stars")) if c.get("gh_stars") is not None else None)
+    kv("Contributors", c.get("gh_contributors"))
+    kv("License", c.get("gh_license"))
+    install = ""
+    if c.get("npm_pkg"):
+        install = '<p class="install__lbl mono">Install (Claude Code):</p><pre class="install__snip"><code>claude mcp add ' + \
+            esc(re.sub(r'[^a-z0-9_-]', '-', n).strip('-')) + ' -- npx -y ' + esc(c["npm_pkg"]) + '</code></pre>'
+    verdict = ('<div class="expert-read"><span class="vd vd--' + esc(c["expertise_verdict"]) + '">' + esc(c["expertise_verdict"]) +
+               '</span><p>&ldquo;' + esc(c["expertise_note"]) + '&rdquo;</p></div>') if c.get("expertise_note") else ""
+    # works-with (protocol-derived) — real content for "does X work with Cursor" queries
+    if c.get("kind") == "skill": clients = ["Claude Code", "Cursor", "Codex CLI"]
+    elif c.get("kind") == "remote": clients = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "ChatGPT"]
+    else: clients = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "Cline", "Windsurf", "VS Code"]
+    works = '<p class="mono" style="color:var(--text-faint);font-size:.8rem"><b>Works with:</b> ' + esc(", ".join(clients)) + '</p>'
+    links = []
+    if c.get("npm_pkg"): links.append('<a class="link" href="https://www.npmjs.com/package/' + esc(c["npm_pkg"]) + '">npm ↗</a>')
+    if c.get("source_repo"): links.append('<a class="link" href="https://github.com/' + esc(c["source_repo"]) + '">source ↗</a>')
+    return ('<div class="cap-hd"><a class="back" href="/">&lsaquo; The Index</a>'
+            '<h1>' + esc(n) + '</h1>'
+            '<div class="cid">' + esc(c["id"]) + ' · <span class="tag">' + esc(c.get("kind") or "") + '</span>' +
+            (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
+            + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
+            + works + install + verdict +
+            ('<ul class="prose" style="max-width:none">' + "".join(rows) + '</ul>' if rows else '') +
+            ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else ''))
+
+def compact(n):
+    n = n or 0
+    if n >= 1e6: return ("%.0f" if n >= 1e7 else "%.1f") % (n / 1e6) + "M"
+    if n >= 1e3: return ("%.0f" if n >= 1e4 else "%.1f") % (n / 1e3) + "k"
+    return str(n)
+def fmt(n): return "{:,}".format(n) if isinstance(n, (int, float)) else n
+
+def page(c, gen):
+    n = pretty(c["name"]); url = BASE + "/capability/" + c["slug"] + ".html"
+    title = n + " — Trust " + (str(c["trust"]) if c.get("trust") is not None else "—") + " · tashan"
+    d = esc(desc_for(c))
+    return ("<!doctype html>\n<html lang=\"en\">\n<head>\n"
+        '<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+        "<title>" + esc(title) + "</title>\n"
+        '<meta name="description" content="' + d + '">\n'
+        '<meta name="cap-id" content="' + esc(c["id"]) + '">\n'
+        '<meta name="theme-color" content="#0b0b0a">\n'
+        '<link rel="canonical" href="' + url + '">\n'
+        '<meta property="og:type" content="website">\n'
+        '<meta property="og:title" content="' + esc(title) + '">\n'
+        '<meta property="og:description" content="' + d + '">\n'
+        '<meta property="og:url" content="' + url + '">\n'
+        '<meta name="twitter:card" content="summary">\n'
+        '<meta name="twitter:title" content="' + esc(title) + '">\n'
+        '<meta name="twitter:description" content="' + d + '">\n'
+        '<link rel="icon" href="/assets/favicon.svg">\n'
+        '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>\n'
+        '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>\n'
+        '<link rel="stylesheet" href="/css/site.css?v=45">\n'
+        + jsonld(c) + "\n</head>\n<body>\n" + NAV +
+        '<main class="wrap" id="cap">' + summary(c) + "</main>\n" + FOOT +
+        inline_data(c, gen) +                                    # this cap's full data, inline — no 1.2 MB fetch
+        '<script src="/js/terminal.js?v=45" defer></script>\n<script src="/js/site.js?v=45" defer></script>\n'
+        '<script src="/js/capability.js?v=45" defer></script>\n</body>\n</html>\n')
+
+def inline_data(c, gen):
+    # a non-executable JSON island the detail page reads directly (CSP-safe). Escape </ so no early </script>.
+    payload = json.dumps({"c": c, "at": gen}, ensure_ascii=False).replace("</", "<\\/")
+    return '<script type="application/json" id="cap-data">' + payload + "</script>\n"
+
+def sitemap(caps):
+    urls = ["/", "/methodology.html", "/pricing.html", "/about.html", "/requests.html"]
+    static = "".join("  <url><loc>" + BASE + u + "</loc></url>\n" for u in urls)
+    caps_x = "".join('  <url><loc>' + BASE + "/capability/" + c["slug"] + '.html</loc>'
+                     '<changefreq>weekly</changefreq></url>\n' for c in caps)
+    # learn/agents pages if present
+    extra = ""
+    for sub in ("learn", "agents"):
+        d = os.path.join(ROOT, "web", sub)
+        if os.path.isdir(d):
+            for f in sorted(os.listdir(d)):
+                if f.endswith(".html"):
+                    extra += "  <url><loc>" + BASE + "/" + sub + "/" + f + "</loc></url>\n"
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + static + caps_x + extra + "</urlset>\n")
+    open(os.path.join(ROOT, "web", "sitemap.xml"), "w").write(xml)
+
+def main():
+    d = json.load(open(DATA))
+    gen = d.get("generated_at", "")
+    caps = [c for c in d["capabilities"] if c.get("id", "").split(":", 1)[0] != "key"]
+    for c in caps:
+        c.setdefault("slug", slugify(c["id"]))
+    have = {c["slug"] for c in caps}  # only these have prerendered pages
+    for c in caps:
+        if c.get("co_used"):  # drop co-use links to caps we didn't prerender (would 404 / hit the slow legacy path)
+            c["co_used"] = [x for x in c["co_used"] if slugify(x["id"]) in have]
+    for c in caps:
+        open(os.path.join(OUT, c["slug"] + ".html"), "w").write(page(c, gen))
+    sitemap(caps)
+    print("prerendered %d capability pages -> %s" % (len(caps), OUT))
+    print("sitemap: %d capability URLs + core pages" % len(caps))
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to tell if an MCP server is safe · tashan</title>
+<meta name="description" content="MCP servers run with your agent&#x27;s permissions. Judge safety by maintainer count, maintenance recency, permission surface (file/shell/network), and whether it&#x27;s official — not by GitHub stars.">
+<meta name="theme-color" content="#0b0b0a">
+<link rel="canonical" href="https://tashan.sh/learn/how-to-tell-if-an-mcp-server-is-safe.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to tell if an MCP server is safe">
+<meta property="og:description" content="MCP servers run with your agent&#x27;s permissions. Judge safety by maintainer count, maintenance recency, permission surface (file/shell/network), and whether it&#x27;s official — not by GitHub stars.">
+<meta property="og:url" content="https://tashan.sh/learn/how-to-tell-if-an-mcp-server-is-safe.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/assets/favicon.svg">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css?v=45">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to tell if an MCP server is safe", "description": "MCP servers run with your agent's permissions. Judge safety by maintainer count, maintenance recency, permission surface (file/shell/network), and whether it's official — not by GitHub stars.", "inLanguage": "en", "author": {"@type": "Organization", "name": "tashan"}, "publisher": {"@type": "Organization", "name": "tashan"}, "mainEntityOfPage": "https://tashan.sh/learn/how-to-tell-if-an-mcp-server-is-safe.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Learn", "item": "https://tashan.sh/learn/"}, {"@type": "ListItem", "position": 2, "name": "How to tell if an MCP server is safe", "item": "https://tashan.sh/learn/how-to-tell-if-an-mcp-server-is-safe.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are MCP servers safe to run?", "acceptedAnswer": {"@type": "Answer", "text": "They're as safe as any tool you install — judge the maintainer, recency, and permission surface. Prefer official or well-maintained servers; be cautious with single-maintainer, archived, or typosquat-looking ones."}}, {"@type": "Question", "name": "Can an MCP server steal my data?", "acceptedAnswer": {"@type": "Answer", "text": "A malicious one with file/network access could, which is why the permission surface and maintainer trust matter. tashan flags single-maintainer and archived servers as elevated risk."}}]}</script>
+</head>
+<body>
+<nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a><div class="nav__links"><a href="/">Index</a><a href="/methodology.html">Methodology</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a><a href="/about.html">About</a></div></div></nav><main class="wrap"><article class="prose">
+<p class="kicker"><a class="link" href="/learn/">Learn</a></p>
+<h1>How to tell if an MCP server is safe</h1>
+<div class="callout"><b>Quick answer.</b> An MCP server runs tools your agent invokes, so treat it like installing a CLI. Check five things: a <b>named, active maintainer</b> (not a single anonymous one), <b>recent maintenance</b>, a clear <b>permission surface</b> (does it read/write files, run shells, or reach the network?), <b>no unpatched advisories</b>, and whether it's <b>official</b> from a model company. tashan surfaces these per server so you don't have to dig.</div>
+<h2>What are the real security risks of an MCP server?</h2>
+<p>The named ones: <b>tool-poisoning / prompt-injection</b> via tool descriptions the model sees but you don't; <b>rug-pulls</b> (a server silently changing tool behavior after you approve it); <b>single-maintainer / supply-chain</b> risk; and <b>typosquats</b> (near-identical names). None of these show up in a star count.</p>
+<h2>How does tashan help judge MCP safety?</h2>
+<p>Every capability page shows the <b>bus factor</b> (real contributor count), an <b>archived/deprecated</b> flag, the <b>maintainer</b> and license, and a plain-language read. It's a maintenance/adoption read, not a full audit — but it's the fast first filter a store's install counter can't give you. Read the <a class='link' href='/methodology.html'>methodology</a>.</p>
+<h2>FAQ</h2>
+<h3>Are MCP servers safe to run?</h3><p>They&#x27;re as safe as any tool you install — judge the maintainer, recency, and permission surface. Prefer official or well-maintained servers; be cautious with single-maintainer, archived, or typosquat-looking ones.</p>
+<h3>Can an MCP server steal my data?</h3><p>A malicious one with file/network access could, which is why the permission surface and maintainer trust matter. tashan flags single-maintainer and archived servers as elevated risk.</p>
+<p style="margin-top:var(--sp-12)"><a class="btn btn--ghost" href="/">See the ranked Index &rsaquo;</a></p>
+</article></main>
+<footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod">public-signal v2</p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/learn/">Learn</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Trust</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Every score re-derivable from public evidence.</span></div></footer><script src="/js/terminal.js?v=45" defer></script>
+<script src="/js/site.js?v=45" defer></script>
+</body>
+</html>

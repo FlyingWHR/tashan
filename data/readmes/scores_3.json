@@ -1,0 +1,38 @@
+[
+  {
+    "id": "pkg:kubernetes-mcp-server",
+    "expertise": 87,
+    "verdict": "deep",
+    "note": "Native Go K8s/OpenShift server, not a kubectl wrapper; generic CRUD, pod exec/logs/top, Helm, Tekton, OTEL. Deep; pod-exec is broad power."
+  },
+  {
+    "id": "pkg:@adbutler/mcp-server",
+    "expertise": 44,
+    "verdict": "wrapper",
+    "note": "600+ tools auto-exposing the full AdButler v2 REST API = passthrough; value-add is 9 workflow prompts. Tool bloat, broad account writes."
+  },
+  {
+    "id": "pkg:@ankimcp/anki-mcp-server",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "42 tools over AnkiConnect; named tool-flow examples, per-card render note shows Anki depth. Honest beta. Mostly AnkiConnect passthrough."
+  },
+  {
+    "id": "pkg:obsidian-mcp-server",
+    "expertise": 83,
+    "verdict": "solid",
+    "note": "14 precise tools: surgical patch by heading/block, BM25/JSONLogic search, refuses whole-file writes, opt-in guarded cmd exec. Mature."
+  },
+  {
+    "id": "pkg:@localstack/localstack-mcp-server",
+    "expertise": 80,
+    "verdict": "solid",
+    "note": "Official; deploys CDK/TF/SAM, auto-gens IAM from log errors, injects chaos/latency, Cloud Pods, ephemeral instances. Honest preview."
+  },
+  {
+    "id": "pkg:@adeu/mcp-server",
+    "expertise": 85,
+    "verdict": "deep",
+    "note": "docx to LLM redliner via CriticMarkup + semantic appendix; validation gate, native Word Track Changes preserving OpenXML. Narrow but deep."
+  }
+]

@@ -1,6 +1,14 @@
-# Mastered — brand & design system
+# tashan — brand & design system
 
-> **Mastered** — the intelligence layer for AI capabilities. *Measure what actually works.*
+> **tashan** — the intelligence layer for AI capabilities. *Measure what actually works.*
+
+## The name
+**tashan** (他山) is from the Chinese proverb **他山之石，可以攻玉** — *a stone from another
+mountain can polish your jade.* It's the product thesis in three characters: we judge the
+field using the field's **own public evidence** (its stones — registries, npm, git history,
+the READMEs people wrote) to reveal which capabilities are jade and which are gravel. We bring
+no stone of our own to sell; we only sharpen with what's already out there. Always lowercase —
+it's a command you run (`tashan`, `tashan.sh`, `npx tashan`), not a company you shout.
 
 ## Positioning
 Not a directory, not a store — an **instrument**. Closer to Bloomberg / Consumer Reports /
@@ -40,7 +48,7 @@ Self-hosted, no external requests (privacy + speed):
 Rule: **numbers are mono, prose is sans, wisdom is serif.**
 
 ## Components
-- **Wordmark:** amber rounded-square mark (`brand__mark`, glowing) + `Mastered` in Geist 600, with a
+- **Wordmark:** amber rounded-square mark (`brand__mark`, glowing) + `tashan` in Geist 600, with a
   mono `v1 · public-signal` chip.
 - **The Index (leaderboard):** hairline-bordered dark table, mono numerals, the headline metric
   ("Signal") in amber with a thin gradient bar. Rows are the product.

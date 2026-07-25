@@ -3,94 +3,128 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Methodology — Mastered</title>
-  <meta name="description" content="Exactly how Mastered measures AI-capability adoption from public signal — and what it deliberately does not do.">
-  <meta name="theme-color" content="#09090b">
+  <title>Methodology — tashan</title>
+  <meta name="description" content="Exactly how tashan measures AI-capability adoption from public signal — and what it deliberately does not do.">
+  <meta name="theme-color" content="#0b0b0a">
+  <link rel="canonical" href="https://tashan.sh/methodology.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Methodology — tashan">
+  <meta property="og:description" content="Exactly how tashan measures AI-capability adoption from public signal — and what it deliberately does not do.">
+  <meta property="og:url" content="https://tashan.sh/methodology.html">
+  <meta name="twitter:card" content="summary">
   <link rel="icon" href="/assets/favicon.svg">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=1">
+  <link rel="stylesheet" href="/css/site.css?v=45">
 </head>
 <body>
   <nav class="nav"><div class="wrap nav__in">
-    <a class="brand" href="/"><span class="brand__mark"></span>Mastered<small>v1 · public-signal</small></a>
-    <div class="nav__links"><a href="/">Index</a><a href="/methodology.html">Methodology</a><a href="/about.html">About</a></div>
+    <a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>
+    <div class="nav__links"><a href="/">Index</a><a href="/methodology.html">Methodology</a><a href="/pricing.html">Pricing</a>
+      <a href="/learn/">Learn</a><a href="/requests.html">Requests</a>
+      <a href="/about.html">About</a></div>
   </div></nav>
 
   <main class="wrap"><article class="prose">
-    <h1>How Mastered measures</h1>
-    <p class="updated" id="updated">public-signal · v1</p>
-    <p class="lede">Mastered exists because the AI-capability ecosystem has massive supply and almost no honest
-      signal. So the first rule is: <strong>we measure what people actually run, from public evidence — and we
-      show our work.</strong> Here is exactly what we count, how the ranking is computed, and what we deliberately
-      refuse to do.</p>
+    <h1>How tashan measures</h1>
+    <p class="updated" id="updated">public-signal · v2</p>
+    <p class="lede">tashan exists because the AI-capability ecosystem has massive supply and almost no honest
+      signal. So the first rule is: <strong>we score capabilities on public evidence — and we show every
+      component.</strong> Here is exactly what we count, how Trust is computed, and what we deliberately refuse to do.</p>
 
-    <div class="callout"><b>No user tracking.</b> Mastered installs nothing, instruments no one, and reads no
-      private data. Every number on this site is derived from <b>public GitHub</b> and is re-derivable by anyone.</div>
+    <div class="callout"><b>No user tracking.</b> tashan installs nothing, instruments no one, and reads no
+      private data. Every number here is derived from <b>public sources</b> — the MCP registry, npm, and public
+      GitHub configs — and is re-derivable by anyone.</div>
 
-    <h2>What we count (V1)</h2>
-    <p>We mine public GitHub for the files where people declare the capabilities they actually use —
-      <span class="mono">mcp.json</span>, <span class="mono">claude_desktop_config.json</span>, and
-      <span class="mono">.cursor</span> MCP configs — and extract each declared server. From that sample we measure:</p>
+    <h2>Coverage — the whole field, not a sample</h2>
+    <p>We ingest the <b>official MCP registry</b> as the spine of coverage: thousands of capabilities with their
+      canonical name, description, source repository, package, and active/deprecated status. On top of that we mine
+      public GitHub configs (<span class="mono">mcp.json</span>, <span class="mono">claude_desktop_config.json</span>,
+      <span class="mono">.cursor</span>) for real-world usage the registry can't see. The goal is simple: track
+      everything, then rank it on evidence.</p>
+
+    <h2>What we measure</h2>
     <ul>
-      <li><b>Reach</b> — distinct <em>owners</em> who wired the capability into a real config. Owner-level, so one
-        person's fifty repos count once. This is the hardest signal to fake and the one we rank on.</li>
-      <li><b>Repos</b> — distinct public repositories referencing it in the sample.</li>
-      <li><b>Host quality</b> — the star distribution (median / max) of the repos that use it. Are <em>serious</em>
-        projects reaching for it, or only throwaways?</li>
-      <li><b>Freshness</b> — the most recent push of a host repo. Is it living in <em>active</em> code, or in repos
-        that went quiet a year ago?</li>
+      <li><b>Adoption</b> — real <span class="mono">npm</span> weekly downloads where a capability is published;
+        distinct public repos (owner-deduped) that wire it into a real config otherwise. Downloads <em>alone</em> are
+        curiosity — we never rank on them alone (see below).</li>
+      <li><b>Maintenance</b> — release cadence, maintainer count (bus factor), whether the package is deprecated, and
+        the registry's active/deprecated status. Is someone actually keeping it alive?</li>
+      <li><b>Freshness</b> — recency of the latest release or host-repo push. Living code, or quietly abandoned?</li>
+      <li><b>Expertise</b> — a language model reads the capability's own README/docs against a fixed rubric and grades
+        the <em>real thing</em>: deep domain work, a solid tool, a thin wrapper, or AI-slop — with a one-line,
+        evidence-based verdict you can read. This is the signal a directory can't produce: it requires
+        <em>judgment about the work</em>, not a count. Rolling out from the top of the Index outward.</li>
       <li><b>Co-use</b> — which capabilities get configured alongside it. The shape of real stacks.</li>
     </ul>
 
-    <h2>The Mastered Signal</h2>
-    <p>The single Index number is deliberately simple and public — no black box:</p>
-    <div class="callout mono" style="font-size:.9rem">Signal = round( 100 × ln(1 + <b>reach</b>) ÷ ln(1 + reach<sub>max</sub>) )</div>
-    <p>It's <strong>owner-reach, log-normalized to the most-adopted capability in the sample.</strong> Log scale so a
-      handful of giants don't flatten everything below them; owner-based so a spammed monorepo can't buy rank. That's it.
-      When we add retention and evals (below), they'll be shown as <em>separate, labelled</em> scores — never quietly
-      blended into one number you can't inspect.</p>
+    <h2>The Trust score</h2>
+    <p>The single Index number is a <strong>transparent composite</strong> — and every input is shown on the
+      capability's page, never hidden:</p>
+    <div class="callout mono" style="font-size:.88rem">Trust = mean(<b>Maintenance</b>, <b>Freshness</b>) × gate(<b>Adoption</b>)</div>
+    <p>Maintenance and freshness carry the score; adoption <em>gates</em> it, so a well-kept package nobody uses can't
+      outrank a well-kept package everyone uses. Adoption itself blends npm downloads (log-scaled) and config reach.
+      Capabilities we can't yet measure quality on are shown <b>unrated</b> — plainly marked, never invented. When
+      retention and evals land, they'll be <em>separate, labelled</em> scores, never quietly folded into one number.</p>
 
     <h2>What we deliberately don't do</h2>
     <ul>
       <li><b>We don't count stars.</b> Stars measure hype and are trivially farmed. A 20k-star "awesome list" tells you
         nothing about whether a capability works.</li>
-      <li><b>We don't count downloads.</b> A download is curiosity; keeping something in your config is a decision.</li>
+      <li><b>We don't rank on downloads alone.</b> A download is curiosity. We use it only as one input to Adoption, and
+        Adoption only <em>gates</em> a score built from maintenance and freshness.</li>
       <li><b>We don't take pay-to-rank.</b> There is no promoted slot, no boost, no ad in the Index — now or ever.</li>
-      <li><b>We don't launder reviews.</b> Self-reported "5 stars" is the failure mode of every store that came before us.</li>
-      <li><b>We don't re-list registries and call it usage.</b> A directory entry is supply. We measure demand.</li>
+      <li><b>We don't launder reviews.</b> Self-reported "5 stars" is the failure mode of every store before us.</li>
+      <li><b>We don't re-list a registry and call it usage.</b> A directory entry is supply. We measure demand and upkeep.</li>
     </ul>
 
     <h2>What this is <em>not</em> (yet) — stated plainly</h2>
     <ul>
-      <li>It's a <b>sample</b>, not a census. GitHub code search is rate-limited and indexes only public default
-        branches, so absolute counts are directional. Relative ranking is the signal.</li>
-      <li>Adoption is <b>not</b> quality. Popular ≠ good. Reach tells you what people <em>chose</em>, not whether it
-        served them well. That gap is exactly what the roadmap closes.</li>
-      <li>Private, enterprise, and non-GitHub usage is invisible to V1.</li>
+      <li>Adoption and maintenance are <b>not</b> outcome quality. They tell you a capability is used and kept alive —
+        not whether it does its job well. That gap is exactly what the roadmap closes.</li>
+      <li>Config mining is a <b>sample</b>: GitHub code search is rate-limited and indexes only public default branches,
+        so config-reach counts are directional. npm downloads and registry status are exact.</li>
+      <li>Private, enterprise, and non-public usage is invisible to us.</li>
     </ul>
 
     <h2>The roadmap — trust as an output of evidence</h2>
     <ul>
       <li><b>Retention &amp; churn</b> — from git history: which capabilities get <em>added then removed</em>, and what
         replaced them. Removal is the most honest review there is.</li>
+      <li><b>Security</b> — CVEs, single-maintainer risk, typosquats, and prompt-injection in tool descriptions.</li>
       <li><b>Controlled evals</b> — reproducible benchmarks we run ourselves, so "it works" is measured, not claimed.</li>
-      <li><b>Compatibility</b> — which models and environments a capability actually works in.</li>
       <li><b>Cost</b> — token/latency footprint on load and per call.</li>
     </ul>
-    <p>Each of those is a separate, defensible measurement. Stacked, they become something no directory can copy:
+    <p>Each is a separate, defensible measurement. Stacked, they become something no directory can copy:
       an evidence base for <a class="link" href="/">what actually works</a>.</p>
 
     <p style="margin-top:var(--sp-12)"><a class="btn btn--ghost" href="/">&lsaquo; Back to the Index</a></p>
   </article></main>
 
-  <footer class="footer"><div class="wrap" style="display:contents">
-    <span class="brand" style="font-size:.9rem"><span class="brand__mark" style="width:12px;height:12px"></span>Mastered</span>
-    <span class="mono">public-signal v1</span>
-    <span class="dim">Measure what actually works.</span>
-  </div></footer>
+  <footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__brand">
+      <span class="brand"><span class="brand__mark"></span>tashan</span>
+      <p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p>
+      <p class="footer__meta" id="footMethod">public-signal v2</p>
+    </div>
+    <nav class="footer__col"><p class="footer__h">Explore</p>
+      <a href="/">The Index</a><a href="/learn/">Learn</a><a href="/requests.html">Requests</a></nav>
+    <nav class="footer__col"><p class="footer__h">Trust</p>
+      <a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a></nav>
+    <nav class="footer__col"><p class="footer__h">Sources</p>
+      <a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>
+      <a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>
+      <a href="https://github.com/" rel="noopener">GitHub ↗</a></nav>
+  </div>
+  <div class="wrap footer__bar">
+    <span>© 2026 SeroLabs, Inc.</span>
+    <span>Every score re-derivable from public evidence.</span>
+  </div>
+</footer>
 
-  <script src="/js/site.js" defer></script>
-  <script src="/js/methodology.js" defer></script>
+  <script src="/js/terminal.js?v=45" defer></script>
+  <script src="/js/site.js?v=45" defer></script>
+  <script src="/js/methodology.js?v=45" defer></script>
 </body>
 </html>

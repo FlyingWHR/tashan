@@ -1,0 +1,242 @@
+[
+  {
+    "id": "pkg:lithtrix-mcp",
+    "category": "ai"
+  },
+  {
+    "id": "pkg:positif-ai",
+    "category": "security"
+  },
+  {
+    "id": "pkg:@variel/mcp-server",
+    "category": "design"
+  },
+  {
+    "id": "pkg:@voris-ai/mcp",
+    "category": "data"
+  },
+  {
+    "id": "pkg:kogiqa-mcp",
+    "category": "browser"
+  },
+  {
+    "id": "pkg:bowmark-mcp",
+    "category": "browser"
+  },
+  {
+    "id": "pkg:apprise-rmcp",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:unraid-rmcp",
+    "category": "cloud"
+  },
+  {
+    "id": "pkg:fodda-mcp",
+    "category": "docs"
+  },
+  {
+    "id": "pkg:@ai-dossier/mcp-server",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:spritecook-mcp",
+    "category": "design"
+  },
+  {
+    "id": "pkg:@aicandidatehub/mcp",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@bvcc/agent-mcp",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:@circulara/plugin",
+    "category": "data"
+  },
+  {
+    "id": "pkg:@clarxai/mcp",
+    "category": "security"
+  },
+  {
+    "id": "pkg:soma-rmcp",
+    "category": "ai"
+  },
+  {
+    "id": "pkg:@matihlabs/mcp",
+    "category": "data"
+  },
+  {
+    "id": "pkg:memeboat-mcp",
+    "category": "design"
+  },
+  {
+    "id": "pkg:@signdocs-brasil/mcp-server",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:artifyde-mcp",
+    "category": "cloud"
+  },
+  {
+    "id": "pkg:@asksakina/islamic-knowledge-mcp",
+    "category": "docs"
+  },
+  {
+    "id": "pkg:mcp-server-git",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:brewpage-mcp",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@optimalai/optibot-mcp",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:@sendinel/mcp-server",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:@corralimited/snapdiff-mcp",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:ssid-mcp",
+    "category": "security"
+  },
+  {
+    "id": "pkg:@humanform/mcp",
+    "category": "data"
+  },
+  {
+    "id": "pkg:@hovecapital/read-only-postgres-mcp-server",
+    "category": "database"
+  },
+  {
+    "id": "pkg:pepys-mcp",
+    "category": "other"
+  },
+  {
+    "id": "pkg:402coffee-mcp",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:b20check-mcp",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:bykaranteli-mcp",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:@cueapi/mcp",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:radmail-mcp",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:@webuplink/mcp",
+    "category": "browser"
+  },
+  {
+    "id": "pkg:@undisk-mcp/stdio-proxy",
+    "category": "files"
+  },
+  {
+    "id": "pkg:lovie",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:kodiak-mcp",
+    "category": "ai"
+  },
+  {
+    "id": "pkg:blackwall-mcp",
+    "category": "security"
+  },
+  {
+    "id": "pkg:@bounceprotect/mcp",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:deepseek-mcp-server",
+    "category": "ai"
+  },
+  {
+    "id": "pkg:autonomad-travel",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@getvetai/mcp",
+    "category": "search"
+  },
+  {
+    "id": "pkg:@marchward/mcp-server",
+    "category": "security"
+  },
+  {
+    "id": "pkg:snowsure-mcp-server",
+    "category": "search"
+  },
+  {
+    "id": "pkg:@synchronex/mcp-proxy",
+    "category": "files"
+  },
+  {
+    "id": "pkg:voxplo-mcp",
+    "category": "comms"
+  },
+  {
+    "id": "pkg:cloudmindmaps-mcp",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:chartforge-mcp",
+    "category": "data"
+  },
+  {
+    "id": "pkg:@buywhere/mcp-server",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@rolli/mcp",
+    "category": "search"
+  },
+  {
+    "id": "pkg:@beacio/mcp",
+    "category": "devtools"
+  },
+  {
+    "id": "pkg:blackveil-dns",
+    "category": "security"
+  },
+  {
+    "id": "pkg:stripe-mcp",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:@spideriq/mcp-media",
+    "category": "files"
+  },
+  {
+    "id": "pkg:@tensorfeed/x402-base-mcp",
+    "category": "finance"
+  },
+  {
+    "id": "pkg:@voxell/forge-mcp",
+    "category": "ai"
+  },
+  {
+    "id": "pkg:@takehub/mcp",
+    "category": "productivity"
+  },
+  {
+    "id": "pkg:@drantoniou/uploadcheck-mcp",
+    "category": "productivity"
+  }
+]
