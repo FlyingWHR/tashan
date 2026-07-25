@@ -18,11 +18,13 @@ Run BEFORE build.py's github/scoring phases (or standalone) — it writes identi
 source URL; build.py's github phase then enriches the source repo, and scoring/export treat skills
 like any other capability. npm_pkg stays NULL (skills aren't published to npm).
 
-CAVEAT ON SCORING (read before trusting a skill's numbers): every skill in a repo shares that repo's
-maintenance/freshness signals, because that is genuinely all the public evidence there is for a folder
-inside a monorepo. So skill scores are REPO-LEVEL, not per-skill. The site must say so wherever a skill
-score is shown, and skills are kept off the trust-ranked board for that reason — 800 same-scored rows
-from one repo would bury every independently-measured MCP server.
+SCORING (read before trusting a skill's numbers): every skill in a repo shares that repo's
+maintenance/freshness signals — that is genuinely all the public evidence there is for a folder inside a
+monorepo. Measured: 854 skills scored 42.0 with a within-repo spread of 42.0-42.0, i.e. the number says
+"the repo is alive", not "this skill is good". So skills live in the SAME catalog as everything else
+(one capability model, filterable by type) but their trust is WITHHELD rather than faked: export marks
+them rated=false with a reason. Per-skill evidence — an expertise grade of the SKILL.md itself, or real
+cross-repo adoption (config_reach > 1) — is what promotes one into the ranking.
 
 Stdlib + `gh` only (no pip deps).  Env: SKILL_CAP (max skills ingested per repo, default 400).
 """
@@ -32,6 +34,7 @@ import build  # reuse db()
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, "data", "skills_cache.json")
 CAP = int(os.environ.get("SKILL_CAP", "400"))
+TEMPLATE_MIN = int(os.environ.get("SKILL_TEMPLATE_MIN", "5"))  # shared-description count that marks a stub
 
 # (owner/repo, is_official). Order matters: it is the DEDUP PRIORITY — the community "awesome" mirrors
 # vendor copies of upstream skills, so upstream/official repos must come first to win the name.
@@ -102,30 +105,37 @@ def load_cache():
 def norm(s):
     return re.sub(r"[^a-z0-9]+", "-", (s or "").strip().lower()).strip("-")
 
-def upsert(con, cid, name, title, desc, repo, homepage, official):
-    con.execute("""INSERT INTO capabilities (id, name, kind, title, description, source_repo, homepage, in_registry)
-      VALUES (?,?, 'skill', ?, ?, ?, ?, ?)
+def upsert(con, cid, name, title, desc, repo, homepage, official, reach, repos):
+    """reach = how many INDEPENDENT public repos carry this skill.
+
+    This is the per-skill adoption signal, and it is why duplicates are counted rather than discarded.
+    A skill vendored into six different collections has been chosen six times by six maintainers; that is
+    the same kind of evidence as an MCP server appearing in many public agent configs, so it goes in the
+    same column (config_reach) and means the same thing: independent adoption. Without it every skill in
+    a monorepo scores identically and none of them can be ranked honestly."""
+    con.execute("""INSERT INTO capabilities (id, name, kind, title, description, source_repo, homepage,
+        in_registry, config_reach, config_repos)
+      VALUES (?,?, 'skill', ?, ?, ?, ?, ?, ?, ?)
       ON CONFLICT(id) DO UPDATE SET
         title=COALESCE(excluded.title, capabilities.title),
         description=COALESCE(excluded.description, capabilities.description),
         source_repo=COALESCE(excluded.source_repo, capabilities.source_repo),
-        homepage=COALESCE(excluded.homepage, capabilities.homepage), kind='skill'""",
-      (cid, name, title, desc, repo, homepage, 1 if official else 0))
+        homepage=COALESCE(excluded.homepage, capabilities.homepage),
+        config_reach=excluded.config_reach, config_repos=excluded.config_repos, kind='skill'""",
+      (cid, name, title, desc, repo, homepage, 1 if official else 0, reach, repos))
 
 def main():
     con = build.db()
     cache = load_cache()
-    seen, total, dupes, thin = set(), 0, 0, 0
-    # pre-seed dedup with skills already in the DB so re-runs don't re-add a renamed duplicate
-    for (n,) in con.execute("SELECT name FROM capabilities WHERE kind='skill'"):
-        seen.add(norm(n))
+    found, thin, scanned = {}, 0, 0
+    # PASS 1 — collect every occurrence of every skill across every repo. Duplicates are the point:
+    # they are the adoption signal, so nothing is discarded here.
     for repo, official in SKILL_REPOS:
-        owner = repo.split("/")[0]
         paths = skill_paths(repo)
-        added = 0
+        taken = 0
         for d, path, sha in paths:
-            if added >= CAP:
-                print(f"    (capped at {CAP}; {len(paths) - added} more in this repo not ingested)", flush=True)
+            if taken >= CAP:
+                print(f"    (capped at {CAP}; {len(paths) - taken} more in this repo not scanned)", flush=True)
                 break
             md = cache.get(sha)
             if md is None:
@@ -137,24 +147,62 @@ def main():
             nm = fm.get("name") or (d.rsplit("/", 1)[-1] if d else repo.split("/")[-1])
             desc = fm.get("description")
             key = norm(nm)
-            if not key or key in seen:
-                dupes += 1
+            if not key:
                 continue
             if not desc or len(desc) < 20:
-                # identity without a description is not a directory entry anyone can use
-                thin += 1
+                thin += 1                       # identity without a description isn't a usable entry
                 continue
-            seen.add(key)
             home = f"https://github.com/{repo}/tree/HEAD/{d}" if d else f"https://github.com/{repo}"
-            upsert(con, f"skill:{owner}/{key}", key, nm, desc, repo, home, official)
-            total += 1; added += 1
-        print(f"  {repo}: {len(paths)} SKILL.md found, {added} new", flush=True)
-        con.commit()
+            found.setdefault(key, []).append(
+                {"name": nm, "desc": desc, "repo": repo, "home": home, "official": official})
+            taken += 1; scanned += 1
+        print(f"  {repo}: {len(paths)} SKILL.md found, {taken} scanned", flush=True)
+
+    # PASS 1b — drop auto-generated stubs. Measured on this corpus: 339 of 865 skills shared ONE
+    # description template ("Automate {vendor} tasks via Rube MCP (Composio). Always search tools first
+    # for current schemas.") with only the vendor name swapped — one entry per SaaS product, carrying no
+    # per-skill information whatsoever. That is the skills equivalent of the "Send personalized greetings"
+    # demo servers, and at 39% of the corpus it would have been the single largest thing in the catalog.
+    # A description that is a fill-in-the-blank shared by hundreds of entries is not a description.
+    def shape(name, desc):
+        s = (desc or "").lower()
+        for tok in re.split(r"[-_ ]", (name or "").lower()):
+            if len(tok) > 2:
+                s = s.replace(tok, "{}")
+        return re.sub(r"\s+", " ", s).strip()[:120]
+
+    shapes = {}
+    for key, occ in found.items():
+        shapes.setdefault(shape(occ[0]["name"], occ[0]["desc"]), []).append(key)
+    boiler = {k for sh, keys in shapes.items() if len(keys) >= TEMPLATE_MIN for k in keys}
+    for k in boiler:
+        found.pop(k, None)
+    if boiler:
+        print(f"  dropped {len(boiler)} auto-generated stubs (description template shared by "
+              f">={TEMPLATE_MIN} skills)", flush=True)
+
+    # PASS 2 — one row per skill, carrying how many independent repos vendor it. SKILL_REPOS order is
+    # the canonical-source priority, so the official copy wins identity and the rest become reach.
+    prio = {r: i for i, (r, _) in enumerate(SKILL_REPOS)}
+    total = multi = 0
+    for key, occ in found.items():
+        occ.sort(key=lambda o: prio.get(o["repo"], 99))
+        best = occ[0]
+        repos = sorted({o["repo"] for o in occ})
+        reach = len(repos)
+        if reach > 1:
+            multi += 1
+        owner = best["repo"].split("/")[0]
+        upsert(con, f"skill:{owner}/{key}", key, best["name"], best["desc"], best["repo"],
+               best["home"], best["official"], reach, ",".join(repos)[:500])
+        total += 1
+    con.commit()
     with open(CACHE, "w") as f:
         json.dump(cache, f)
     n = con.execute("SELECT COUNT(*) FROM capabilities WHERE kind='skill'").fetchone()[0]
-    print(f"ingested {total} new; skipped {dupes} duplicate-name, {thin} without a usable description; "
-          f"{n} skills total in DB")
+    print(f"scanned {scanned} SKILL.md across {len(SKILL_REPOS)} repos -> {total} distinct skills "
+          f"({multi} vendored by more than one repo); skipped {thin} without a usable description; "
+          f"{n} skills in DB")
     con.close()
 
 if __name__ == "__main__":

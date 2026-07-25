@@ -181,10 +181,12 @@ img { max-width: 100%; display: block; }
 /* ---------- generated hub pages (category / skills) ---------- */
 .muted { color: var(--text-faint); font-weight:400; font-size:.8em; font-family: var(--font-mono); }
 .note { color: var(--text-faint); font-size:.9rem; max-width:62ch; margin-top: var(--sp-4); }
-.skills { list-style:none; padding:0; margin: var(--sp-4) 0 0; max-width:none; }
-.skills li { padding: var(--sp-3) 0; border-bottom:1px solid var(--hairline); font-size:.94rem;
-  color: var(--text-dim); line-height:1.5; }
-.skills li b { color: var(--text); font-family: var(--font-mono); font-size:.9rem; margin-right:.4rem; }
+/* One catalog: a capability we can't rate is still listed, it just says so instead of showing a number
+   we didn't earn. Deliberately quiet — this is an absence of evidence, not a warning about the item. */
+.unrated { font-family: var(--font-mono); font-size:.72rem; font-weight:400; color: var(--text-faint);
+  letter-spacing:.02em; white-space:nowrap; }
+.tag--skill { color: var(--jade); border-color: var(--jade-line); }
+.tag--server { color: var(--text-faint); }
 
 /* ---------- category catalog — measured cards (each previews its trust leader) ---------- */
 .catgrid { display:grid; grid-template-columns: repeat(auto-fill, minmax(172px, 1fr)); gap: var(--sp-3); }
@@ -561,3 +563,11 @@ body.pal-open { overflow:hidden; }
 .pfaq p { color: var(--text-dim); font-size:.9rem; line-height:1.5; margin:0; }
 
 @media (prefers-reduced-motion: reduce){ * { animation:none!important; transition:none!important; } }
+
+/* Requests board is illustrative until grade-bounties are live. The banner is deliberately loud —
+   a quiet disclaimer under dollar amounts still reads as real to someone skimming, and fabricated
+   figures are the one thing this product cannot afford to have mistaken for measurement. */
+.preview-banner { border-color: #b98900; background: rgba(185,137,0,.10); color: var(--text); }
+.preview-banner b { color: #ffc94d; }
+.is-preview { opacity:.72; }
+.is-preview .btn { pointer-events:none; opacity:.5; }

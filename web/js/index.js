@@ -182,6 +182,11 @@
   function normKind(c) { return (c.kind === "npm" || c.kind === "pkg") ? (c.kind) : c.kind; }
 
   function sortComparator(a, b) {
+    // Unrated capabilities (catalogued, no per-item evidence yet) always sort BELOW rated ones, whatever
+    // the chosen sort. They are real and installable, but a board is a ranking — an item we can't rank
+    // must not occupy a rank. Within the unrated block the chosen sort still applies.
+    var ar = a.trust != null, br = b.trust != null;
+    if (ar !== br) return ar ? -1 : 1;
     switch (state.sort) {
       case "adoption": return (num(b.npm_downloads) || num(b.config_reach)) - (num(a.npm_downloads) || num(a.config_reach));
       case "fresh": return recency(b) - recency(a);
@@ -223,7 +228,9 @@
         '<td class="num">' + adoption(c) + '</td>' +
         '<td class="num num--dim">' + score(c.maintenance) + '</td>' +
         '<td><span class="fresh ' + fr.cls + '"' + (fr.title ? ' title="' + esc(fr.title) + '"' : '') + '>' + fr.txt + '</span></td>' +
-        '<td><div class="sig' + (t == null ? ' sig--none' : '') + '"><span class="sig__val">' + (t == null ? '—' : t) + '</span>' +
+        '<td><div class="sig' + (t == null ? ' sig--none' : '') + '">' + (t == null
+          ? '<span class="unrated" title="Catalogued, not rated: its only maintenance evidence is the repository it lives in, which every skill in that repo shares. A grade of its own SKILL.md is what makes it rankable.">not rated yet</span>'
+          : '<span class="sig__val">' + t + '</span>') +
         '<span class="bar"><i style="width:' + bar + '%"></i></span></div></td>' +
         '</tr>';
     });

@@ -102,7 +102,7 @@ def jsonld(c):
 
 NAV = ('<nav class="nav"><div class="wrap nav__in">'
        '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
-       '<div class="nav__links"><a href="/">Index</a><a href="/skills/">Skills</a><a href="/methodology.html">Methodology</a>'
+       '<div class="nav__links"><a href="/">Index</a><a href="/methodology.html">Methodology</a>'
        '<a href="/pricing.html">Pricing</a><a href="/learn/">Learn</a><a href="/requests.html">Requests</a><a href="/about.html">About</a></div></div></nav>')
 FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         '<div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span>'

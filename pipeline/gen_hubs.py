@@ -1,24 +1,21 @@
 #!/usr/bin/env python3
-"""tashan — category hub pages, the skills directory, and llms.txt.
+"""tashan — category hub pages and llms.txt over the ONE catalog.
 
 THE FLYWHEEL. Every capability we measure should create indexable surface area, and every new surface
 should link back into the ranked data. Concretely:
 
-    capability page  ──▶  its category hub  ──▶  sibling capabilities in that category
+    capability page  ──▶  its category hub  ──▶  sibling capabilities doing the same job
            ▲                     │                          │
-           └──────── /skills/ ───┴──────── /llms.txt ◀───────┘
+           └─────────────────────┴──────── /llms.txt ◀───────┘
 
-- /category/<id>.html   one hub per taxonomy category, listing that category's measured capabilities
-                        ranked by trust. Targets the real query shape ("best MCP server for databases")
-                        with a live, data-backed ranking rather than a hand-curated opinion list —
-                        which is also what makes it citable by answer engines.
-- /skills/              the agent-skills directory. Skills are kept OFF the trust board on purpose
-                        (see ingest_skills.py: their signals are repo-level, so a 400-skill monorepo
-                        would score identically and bury independently-measured servers) — but they
-                        are real capabilities people search for, so they get their own ranked-by-source
-                        directory that says plainly what is and isn't measured about them.
-- /llms.txt             the emerging convention for answer engines: a plain-markdown map of the site
-                        with the data inline, so a model can cite tashan without rendering JS.
+ONE CATALOG. A user has a job ("query Postgres"), not a preference for artifact types — MCP server,
+skill and CLI are properties of an answer, filterable, never separate pages. The former /skills/
+directory was a silo built around our own ingestion pipeline and has been deleted; skills are rows in
+the same index, carrying `rated=false` when we have no per-skill evidence rather than a fabricated score.
+
+- /category/<id>.html   one hub per category, covering the whole catalog (rated rows ranked, catalogued
+                        rows listed below) with ItemList + BreadcrumbList + FAQPage JSON-LD.
+- /llms.txt             the answer-engine convention: a plain-markdown map with the data inline.
 
 Every page emits ItemList + BreadcrumbList JSON-LD, and every list item links to a real prerendered
 page. Stdlib only. Run after build.py's export (reads web/data/capabilities.json).
@@ -33,7 +30,6 @@ DATA = os.path.join(ROOT, "web", "data", "capabilities.json")
 CATS = os.path.join(ROOT, "web", "data", "categories.json")
 BASE = "https://tashan.sh"
 OUT_CAT = os.path.join(ROOT, "web", "category")
-OUT_SKILL = os.path.join(ROOT, "web", "skills")
 
 def esc(s): return html.escape(str(s), quote=True)
 def pretty(name):
@@ -43,13 +39,13 @@ def slugify(cid): return re.sub(r"[^a-z0-9]+", "-", str(cid).lower()).strip("-")
 
 NAV = ('<nav class="nav"><div class="wrap nav__in">'
        '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
-       '<div class="nav__links"><a href="/">Index</a><a href="/skills/">Skills</a>'
+       '<div class="nav__links"><a href="/">Index</a>'
        '<a href="/methodology.html">Methodology</a>'
        '<a href="/pricing.html">Pricing</a><a href="/learn/">Learn</a><a href="/about.html">About</a></div></div></nav>')
 FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         '<div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span>'
         '<p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p></div>'
-        '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/skills/">Skills</a>'
+        '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a>'
         '<a href="/learn/">Learn</a><a href="/requests.html">Requests</a></nav>'
         '<nav class="footer__col"><p class="footer__h">Trust</p><a href="/methodology.html">Methodology</a>'
         '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a></nav>'
@@ -94,9 +90,12 @@ def board(rows):
     for i, c in enumerate(rows):
         href = "/capability/" + c["slug"] + ".html"
         d = (c.get("description") or "")[:110]
-        out.append('<tr><td class="rank">' + str(i + 1) + '</td>'
-                   '<td><a class="link" href="' + href + '">' + esc(pretty(c["name"])) + "</a></td>"
-                   '<td class="num"><b>' + (str(c["trust"]) if c.get("trust") is not None else "—") + "</b></td>"
+        kindlbl = {"skill": "skill"}.get(c.get("kind"), "server")
+        out.append('<tr><td class="rank">' + (str(i + 1) if c.get("trust") is not None else "·") + '</td>'
+                   '<td><a class="link" href="' + href + '">' + esc(pretty(c["name"])) + "</a>"
+                   ' <span class="tag tag--' + kindlbl + '">' + kindlbl + "</span></td>"
+                   '<td class="num"><b>' + (str(c["trust"]) if c.get("trust") is not None
+                                            else '<span class="unrated">not rated</span>') + "</b></td>"
                    "<td>" + esc(c.get("vitality") or "—") + "</td>"
                    '<td class="num">' + (str(c["adoption"]) if c.get("adoption") is not None else "—") + "</td>"
                    "<td>" + esc(d) + "</td></tr>")
@@ -165,131 +164,7 @@ def cat_page(cat, rows, all_cats, gen):
 def repo_slug(repo): return slugify(repo)
 
 
-PER_PAGE = 150      # keeps every generated page under ~70 KB; the 400-skill repos were shipping 300 KB
-
-
-def skill_page_name(repo, pg):
-    return repo_slug(repo) + (("-" + str(pg + 1)) if pg else "") + ".html"
-
-
-def skill_repo_page(repo, group, pg, pages, gen):
-    """One page per source repo, paginated. The single combined page was 375 KB — too heavy to load and
-    too unfocused to rank; these are ~40 KB and each targets a real query ("obra superpowers skills")."""
-    part = group[pg * PER_PAGE:(pg + 1) * PER_PAGE]
-    url = BASE + "/skills/" + skill_page_name(repo, pg)
-    suffix = (" (page " + str(pg + 1) + " of " + str(pages) + ")") if pages > 1 else ""
-    title = repo + " — " + str(len(group)) + " agent skills, indexed" + suffix + " · tashan"
-    desc = ("Every SKILL.md in " + repo + " (" + str(len(group)) + " skills), with descriptions and "
-            "direct source links. Agent skills are folders an AI loads on demand." + suffix)
-    lds = [
-        {"@context": "https://schema.org", "@type": "ItemList", "name": repo + " agent skills",
-         "numberOfItems": len(part), "itemListElement": [
-             {"@type": "ListItem", "position": i + 1, "name": s["name"],
-              "item": {"@type": "SoftwareSourceCode", "name": s["name"],
-                       "description": (s.get("description") or "")[:200],
-                       "codeRepository": "https://github.com/" + repo}}
-             for i, s in enumerate(part[:60])]},
-        {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "The Index", "item": BASE + "/"},
-            {"@type": "ListItem", "position": 2, "name": "Skills", "item": BASE + "/skills/"},
-            {"@type": "ListItem", "position": 3, "name": repo, "item": url}]},
-    ]
-    items = "".join(
-        '<li><b>' + esc(s["name"]) + "</b> — " + esc((s.get("description") or "")[:200]) +
-        (' <a class="link" href="' + esc(s["homepage"]) + '" rel="noopener">source ↗</a>' if s.get("homepage") else "") +
-        "</li>" for s in part)
-    pager = ""
-    if pages > 1:
-        pager = '<nav class="chips" style="margin-top:var(--sp-8)">' + "".join(
-            ('<span class="chip chip--on">' + str(i + 1) + "</span>") if i == pg else
-            ('<a class="chip" href="/skills/' + skill_page_name(repo, i) + '">' + str(i + 1) + "</a>")
-            for i in range(pages)) + "</nav>"
-    body = ('<main class="wrap">\n'
-        '<p class="kicker"><a class="link" href="/">The Index</a> · '
-        '<a class="link" href="/skills/">Skills</a> · ' + esc(repo) + "</p>\n"
-        "<h1>" + esc(repo) + "</h1>\n"
-        '<p class="lede"><b>' + str(len(group)) + "</b> agent skills indexed from this repository"
-        + (", showing " + str(len(part)) + " on this page" if pages > 1 else "") + ". "
-        'Install one by copying its folder into <code>~/.claude/skills/</code> (user scope) or '
-        "<code>.claude/skills/</code> (project scope).</p>\n"
-        '<p><a class="link" href="https://github.com/' + esc(repo) + '" rel="noopener">'
-        "View " + esc(repo) + " on GitHub ↗</a></p>\n"
-        '<ul class="skills">' + items + "</ul>\n" + pager +
-        '<p style="margin-top:var(--sp-12)"><a class="btn btn--ghost" href="/skills/">All skill sources &rsaquo;</a></p>\n'
-        "</main>\n")
-    return head(title, desc, url, lds) + body + FOOT + \
-        '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n' \
-        '<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n'
-
-
-def skills_page(skills, gen):
-    url = BASE + "/skills/"
-    title = "Agent Skills directory — every SKILL.md we can find · tashan"
-    desc = ("A directory of " + str(len(skills)) + " agent skills (the SKILL.md format Claude and other "
-            "agents load on demand), indexed from public repositories with source links.")
-    by_repo = {}
-    for s in skills:
-        by_repo.setdefault(s.get("source_repo") or "unknown", []).append(s)
-    lds = [
-        {"@context": "https://schema.org", "@type": "ItemList", "name": "Agent Skills directory",
-         "numberOfItems": len(skills), "itemListElement": [
-             {"@type": "ListItem", "position": i + 1, "name": s["name"],
-              "item": {"@type": "SoftwareSourceCode", "name": s["name"],
-                       "description": (s.get("description") or "")[:300],
-                       "codeRepository": "https://github.com/" + s["source_repo"] if s.get("source_repo") else None}}
-             for i, s in enumerate(skills[:40])]},
-        {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "The Index", "item": BASE + "/"},
-            {"@type": "ListItem", "position": 2, "name": "Skills", "item": url}]},
-        {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-            {"@type": "Question", "name": "What is an agent skill?",
-             "acceptedAnswer": {"@type": "Answer", "text":
-                ("A folder containing a SKILL.md file with YAML frontmatter (name, description) that an "
-                 "agent loads on demand. Unlike an MCP server it runs no process — it is instruction "
-                 "content the model reads when the task matches. Install by dropping the folder into "
-                 "~/.claude/skills/ for user scope or .claude/skills/ inside a project.")}},
-            {"@type": "Question", "name": "Are skills scored like MCP servers?",
-             "acceptedAnswer": {"@type": "Answer", "text":
-                ("No, and we don't pretend otherwise. A skill is a folder inside a repository, so the only "
-                 "public maintenance signal available is the repository's — every skill in a monorepo would "
-                 "share one score. Skills are therefore listed and grouped by source rather than ranked on "
-                 "the trust board.")}}]},
-    ]
-    sections = []
-    # Official sources first, then by size. Sorting purely by count led the directory with 400
-    # auto-generated "*-automation" stubs and buried Anthropic's own skills — the opposite of the
-    # signal a quality-first index should send.
-    def rank(kv):
-        repo = kv[0]
-        return (0 if repo.startswith("anthropics/") else 1, -len(kv[1]), repo)
-    for repo, group in sorted(by_repo.items(), key=rank):
-        sample = ", ".join(s["name"] for s in sorted(group, key=lambda x: x["name"])[:10])
-        sections.append(
-            '<h2><a class="link" href="/skills/' + repo_slug(repo) + '.html">' + esc(repo) + "</a> "
-            '<small class="muted">' + str(len(group)) + " skills</small></h2>\n"
-            "<p>" + esc(sample) + ("…" if len(group) > 10 else "") + "</p>\n"
-            '<p><a class="link" href="/skills/' + repo_slug(repo) + '.html">'
-            "Browse all " + str(len(group)) + " &rsaquo;</a></p>\n")
-    body = ('<main class="wrap">\n'
-        '<p class="kicker"><a class="link" href="/">The Index</a> · Skills</p>\n'
-        "<h1>Agent Skills directory</h1>\n"
-        '<p class="lede"><b>' + str(len(skills)) + "</b> skills indexed from public repositories. A skill is a "
-        "<code>SKILL.md</code> folder an agent loads on demand — no process, no install step beyond dropping "
-        "the folder into <code>~/.claude/skills/</code>.</p>\n"
-        '<div class="callout"><b>What we do not claim.</b> These are catalogued, not trust-ranked. A skill '
-        "lives inside a repository, so the only public maintenance evidence is that repository's — every "
-        "skill in a 400-skill monorepo would carry an identical score. Publishing that as a per-skill "
-        "ranking would be a number with no meaning behind it, so we don't. "
-        '<a class="link" href="/methodology.html">What we do measure &rsaquo;</a></div>\n'
-        + "".join(sections) +
-        '<p style="margin-top:var(--sp-12)"><a class="btn btn--ghost" href="/">See the ranked Index &rsaquo;</a></p>\n'
-        "</main>\n")
-    return head(title, desc, url, lds) + body + FOOT + \
-        '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n' \
-        '<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n'
-
-
-def llms_txt(caps, cats, by_cat, skills, gen):
+def llms_txt(caps, cats, by_cat, gen):
     """The /llms.txt convention: a plain-markdown map an answer engine can read without running JS."""
     L = ["# tashan", "",
          "> The intelligence layer for AI capabilities. tashan scores MCP servers and agent skills on "
@@ -318,11 +193,7 @@ def llms_txt(caps, cats, by_cat, skills, gen):
         L.append("- [" + cat["label"] + "](" + BASE + "/category/" + cat["id"] + ".html) — "
                  + str(len(rows)) + " measured. " + cat["blurb"]
                  + " Top: " + ", ".join(pretty(c["name"]) for c in rows[:3]) + ".")
-    L += ["", "## Agent skills", "",
-          "- [Skills directory](" + BASE + "/skills/) — " + str(len(skills)) + " SKILL.md capabilities "
-          "indexed from public repositories. Catalogued, not trust-ranked: a skill inside a monorepo has "
-          "only its repository's maintenance signal, so a per-skill score would be meaningless.",
-          "", "## Reference", "",
+    L += ["", "## Reference", "",
           "- [Methodology](" + BASE + "/methodology.html) — every input, weight and known limitation.",
           "- [Learn](" + BASE + "/learn/) — install guides and comparisons, backed by the live ranking.",
           "- [About](" + BASE + "/about.html) — who builds this and the payment firewall.",
@@ -336,7 +207,7 @@ def llms_txt(caps, cats, by_cat, skills, gen):
 def main():
     d = json.load(open(DATA))
     gen = d.get("generated_at", "")
-    caps = [c for c in d["capabilities"] if c.get("trust") is not None]
+    caps = list(d["capabilities"])          # rated AND catalogued — one catalog, filterable by type
     for c in caps:
         c.setdefault("slug", slugify(c["id"]))
     cats = json.load(open(CATS))["categories"]
@@ -357,36 +228,8 @@ def main():
         written += 1
     print("category hubs: %d written (%d categorised capabilities)" % (written, sum(len(v) for v in by_cat.values())))
 
-    # skills come from the DB, not the export (they're deliberately off the trust board)
-    skills = []
-    try:
-        import sqlite3
-        con = sqlite3.connect("file:" + os.path.join(ROOT, "data", "tashan.db") + "?mode=ro", uri=True)
-        skills = [{"name": n, "description": de, "source_repo": sr, "homepage": hp}
-                  for n, de, sr, hp in con.execute(
-                      "SELECT name, description, source_repo, homepage FROM capabilities "
-                      "WHERE kind='skill' ORDER BY name")]
-        con.close()
-    except Exception as e:
-        print("  (skills unavailable: %s)" % e)
-    if skills:
-        os.makedirs(OUT_SKILL, exist_ok=True)
-        open(os.path.join(OUT_SKILL, "index.html"), "w").write(skills_page(skills, gen))
-        by_repo = {}
-        for s in skills:
-            by_repo.setdefault(s.get("source_repo") or "unknown", []).append(s)
-        npages = 1
-        for repo, group in by_repo.items():
-            group = sorted(group, key=lambda x: x["name"])
-            pages = max(1, -(-len(group) // PER_PAGE))
-            for pg in range(pages):
-                open(os.path.join(OUT_SKILL, skill_page_name(repo, pg)), "w").write(
-                    skill_repo_page(repo, group, pg, pages, gen))
-                npages += 1
-        print("skills directory: %d skills across %d repos (%d pages)"
-              % (len(skills), len(by_repo), npages))
 
-    open(os.path.join(ROOT, "web", "llms.txt"), "w").write(llms_txt(caps, cats, by_cat, skills, gen))
+    open(os.path.join(ROOT, "web", "llms.txt"), "w").write(llms_txt(caps, cats, by_cat, gen))
     print("llms.txt: %d capabilities + %d categories indexed" % (min(40, len(caps)), len(by_cat)))
 
 

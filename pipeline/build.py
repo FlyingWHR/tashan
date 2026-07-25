@@ -45,6 +45,11 @@ CREATE TABLE IF NOT EXISTS capabilities (
 CREATE TABLE IF NOT EXISTS signal_history (
   cap_id TEXT, metric TEXT, value REAL, at TEXT
 );
+-- one row per source: where the last incremental sync got to. A catalog is a clock, not a snapshot;
+-- without this every run is a full crawl and coverage stays capped by however long we are willing to wait.
+CREATE TABLE IF NOT EXISTS sync_state (
+  source TEXT PRIMARY KEY, last_synced TEXT, last_cursor TEXT, seen INTEGER DEFAULT 0, note TEXT
+);
 CREATE INDEX IF NOT EXISTS idx_trust ON capabilities(trust DESC);
 """
 
@@ -57,9 +62,12 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            "gh_has_discussions INTEGER", "gh_archived INTEGER",
            "vitality TEXT", "single_maintainer INTEGER",
            # product-specific community/support signals (the project's own Discord + homepage/docs)
-           "discord_url TEXT", "gh_homepage TEXT"]
+           "discord_url TEXT", "gh_homepage TEXT",
+           # which source(s) asserted this row — provenance is publishable evidence and lets a bad
+           # source be retracted wholesale (docs/SOURCING.md §4)
+           "sources TEXT"]
 
-SCHEMA_VERSION = 2  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 3  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # indexes on the columns actually filtered/sorted — created AFTER MIGRATE so category/gh_* exist.
 # At 100k+ rows these turn every facet/sort/history query from an O(N) scan into an index seek.
@@ -122,9 +130,31 @@ def load_configs(con):
     con.commit(); return n
 
 # ---------- phase B: ingest MCP registry (coverage) ----------
-def ingest_registry(con):
-    base = "https://registry.modelcontextprotocol.io/v0/servers?limit=100"
-    cursor, seen = None, 0
+def ingest_registry(con, full=False):
+    """Incremental sync of the official registry via the Generic MCP Registry API.
+
+    Three fixes over the previous version (all measured — see docs/SOURCING.md §2):
+      - /v0.1, not /v0. v0.1 is the documented spec; /v0 still answers but isn't what the docs describe.
+      - `updated_since` delta. A full walk of 6,000 servers took 562s, which is why REG_CAP existed and
+        why we held only 1,717 of >=6,000. The delta is seconds, so the cap stops being load-bearing.
+      - `status` is honoured. The registry marks servers `deprecated` or `deleted`, and the moderation
+        policy says `deleted` typically means spam, malware or illegal content. An index whose product
+        is trust must not be the last place a known-bad server stays listed, so those are removed.
+
+    Pass full=True (or REG_FULL=1) to force a complete reconcile — run weekly to catch anything the
+    delta feed missed. State lives in sync_state so a run can resume rather than restart.
+    """
+    SRC = "mcp-registry"
+    base = "https://registry.modelcontextprotocol.io/v0.1/servers?limit=100"
+    row = con.execute("SELECT last_synced FROM sync_state WHERE source=?", (SRC,)).fetchone()
+    since = None if (full or os.environ.get("REG_FULL")) else (row[0] if row else None)
+    if since:
+        base += "&updated_since=" + urllib.parse.quote(since)
+        print(f"  registry: incremental since {since}", flush=True)
+    else:
+        print("  registry: FULL reconcile (no prior sync state)", flush=True)
+    started = datetime.now(timezone.utc).isoformat()
+    cursor, seen, removed, deprecated = None, 0, 0, 0
     while seen < REG_CAP:
         url = base + (f"&cursor={urllib.parse.quote(cursor)}" if cursor else "")
         try:
@@ -155,6 +185,15 @@ def ingest_registry(con):
                 m = re.search(r"github\.com[/:]([\w.-]+/[\w.-]+?)(?:\.git|/|$)", repo)
                 repo = m.group(1) if m else repo
             cid = f"pkg:{npm_pkg}" if npm_pkg else f"registry:{name}"
+            status = meta.get("status")
+            if status == "deleted":
+                # spam / malware / illegal per the registry moderation policy — delist, don't just skip,
+                # or a server that was clean last week stays in our index forever after being pulled.
+                con.execute("DELETE FROM capabilities WHERE id=? AND kind!='skill'", (cid,))
+                removed += 1
+                continue
+            if status == "deprecated":
+                deprecated += 1
             con.execute("""INSERT INTO capabilities (id,name,kind,title,description,npm_pkg,source_repo,registry_name,registry_status,registry_updated,in_registry)
               VALUES (?,?,?,?,?,?,?,?,?,?,1)
               ON CONFLICT(id) DO UPDATE SET title=COALESCE(excluded.title,capabilities.title),
@@ -168,9 +207,19 @@ def ingest_registry(con):
             seen += 1
         con.commit()
         cursor = (d.get("metadata") or {}).get("nextCursor")
-        print(f"  registry: {seen} servers ingested", flush=True)
+        if seen % 1000 < 100:
+            print(f"  registry: {seen} servers...", flush=True)
         if not cursor:
             break
+    # only advance the watermark on a clean finish; a crash must re-read the same window next time
+    con.execute("INSERT INTO sync_state (source,last_synced,last_cursor,seen,note) VALUES (?,?,?,?,?) "
+                "ON CONFLICT(source) DO UPDATE SET last_synced=excluded.last_synced, "
+                "last_cursor=excluded.last_cursor, seen=excluded.seen, note=excluded.note",
+                (SRC, started, cursor, seen,
+                 f"{seen} seen, {deprecated} deprecated, {removed} removed as deleted"))
+    con.commit()
+    print(f"  registry: {seen} servers ({deprecated} deprecated, {removed} delisted as deleted/spam)",
+          flush=True)
     return seen
 
 # ---------- phase C: npm enrichment (quality) ----------
@@ -456,10 +505,13 @@ def export(con):
     # Only trust-ranked caps are ever exported (ranked = trust-not-null, capped below), so fetch just the top
     # slice via idx_trust instead of materializing the whole table. LIMIT is a buffer above the 800 board cap
     # so junk-filtering still leaves ≥800. At 1M rows this reads ~1500 rows, not all of them.
+    # Everything the user can act on belongs in ONE catalog — a skill and an MCP server answer the same
+    # question ("make my agent do X"), so splitting them by artifact type organises the site around our
+    # pipeline instead of their job. Unrated rows come along; they are simply not ranked (see below).
     rows = con.execute(f"SELECT {','.join(cols)} FROM capabilities "
-                       "WHERE trust IS NOT NULL "
-                       "ORDER BY trust DESC, config_reach DESC, npm_downloads DESC "
-                       "LIMIT 1500").fetchall()
+                       "WHERE trust IS NOT NULL OR kind = 'skill' "
+                       "ORDER BY trust DESC NULLS LAST, config_reach DESC, npm_downloads DESC "
+                       "LIMIT 3000").fetchall()
     # bare single-word generic names carry no identity in a ranking (registry ingest skips the scraper's filter)
     DENY = {"mcp", "server", "mcp-server", "run", "serve", "cli", "app", "main", "index",
             "stdio", "tools", "mcp-serve", "client", "core", "test", "demo"}
@@ -554,7 +606,26 @@ def export(con):
     if dropped:
         print("  dedup: dropped %d duplicate listing(s) sharing a description with a higher-signal row" % dropped)
     caps = deduped
+    # RATED vs CATALOGUED. A skill lives inside a repository, so repo maintenance is shared by every skill
+    # in it: measured just now, 854 skills scored 42.0 with a within-repo spread of 42.0-42.0. That number
+    # says "the repo is alive", not "this skill is good", and publishing it per-skill would be a claim we
+    # cannot support. So it is withheld rather than shown — the row stays fully browsable, searchable and
+    # installable, it just isn't ranked until there is per-skill evidence (an expertise grade of its own
+    # SKILL.md, or real cross-repo adoption). Saying "not rated yet" is the honest version of not knowing.
+    for c in caps:
+        per_item = (c.get("expertise") is not None) or ((c.get("config_reach") or 0) > 1) \
+                   or (c.get("npm_downloads") is not None)
+        if c.get("kind") == "skill" and not per_item:
+            c["trust"] = None
+            c["rated"] = False
+            c["rating_basis"] = ("Catalogued, not rated. Its only maintenance evidence is the repository "
+                                 "it lives in, which every skill in that repo shares — so a per-skill "
+                                 "score would carry no information. A grade of its own SKILL.md is what "
+                                 "makes it rankable.")
+        else:
+            c["rated"] = c.get("trust") is not None
     ranked = [c for c in caps if c.get("trust") is not None][:800]
+    catalogued = [c for c in caps if c.get("trust") is None]
     tot = con.execute("SELECT COUNT(*) FROM capabilities").fetchone()[0]
     enriched = con.execute("SELECT COUNT(*) FROM capabilities WHERE npm_downloads IS NOT NULL").fetchone()[0]
     graded = con.execute("SELECT COUNT(*) FROM capabilities WHERE expertise IS NOT NULL").fetchone()[0]
@@ -565,10 +636,13 @@ def export(con):
         "enriched_npm": enriched,
         "expertise_graded": graded,
         "ranked": len(ranked),
+        "catalogued": len(catalogued),
         "note": "V2. Ranked by a transparent Trust score (maintenance + freshness, gated by real adoption). "
                 "Expertise is a separate, LLM-graded read of the actual capability — real depth vs. thin wrapper. "
                 "Retention (added-then-removed from git history) is the next signal.",
-        "capabilities": ranked,
+        # ONE catalog: ranked first, then catalogued-but-unrated. Both are installable and searchable;
+        # only the ranked ones carry a trust number, and `rated` says which is which.
+        "capabilities": ranked + catalogued,
     }
     out = os.path.join(ROOT, "web", "data", "capabilities.json")
     os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -579,13 +653,14 @@ def export(con):
     # detail pages carry those INLINE (prerender), so nothing downloads the 1.2 MB dossier at runtime.
     SLIM = ["id", "slug", "name", "kind", "category", "npm_pkg", "source_repo", "registry_status",
             "config_reach", "npm_downloads", "trust", "maintenance", "vitality",
-            "expertise", "expertise_verdict", "npm_deprecated", "gh_archived"]
+            "expertise", "expertise_verdict", "npm_deprecated", "gh_archived", "rated"]  # NOT description: it is 104 KB gz of the index and the board never reads it
     slim = {k: payload[k] for k in ("generated_at", "method", "total_capabilities", "enriched_npm",
-                                    "expertise_graded", "ranked", "note")}
-    slim["capabilities"] = [{k: c.get(k) for k in SLIM} for c in ranked]
+                                    "expertise_graded", "ranked", "catalogued", "note")}
+    slim["capabilities"] = [{k: c.get(k) for k in SLIM} for c in (ranked + catalogued)]
     slim_out = os.path.join(ROOT, "web", "data", "index.json")
     json.dump(slim, open(slim_out, "w"))
-    print(f"\nExported {len(caps)} ranked / {tot} total ({enriched} npm-enriched) -> {out}")
+    print(f"\nExported {len(ranked)} rated + {len(catalogued)} catalogued / {tot} total "
+          f"({enriched} npm-enriched) -> {out}")
     print(f"Slim index ({len(SLIM)} fields/cap) -> {slim_out}")
     print("Top 12 by Trust:")
     for c in caps[:12]:
