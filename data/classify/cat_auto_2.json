@@ -1,0 +1,914 @@
+[
+ {
+  "id": "registry:ai.roopslaw/legalsearch",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.smithery/browserbasehq-mcp-browserbase",
+  "category": "browser"
+ },
+ {
+  "id": "registry:app.humantaste/taste-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:cloud.agentdomain/agentdomain-mcp",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:com.actablesite/readiness",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.checkrecall/vehicle-recalls",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.clauxel.agentmailrooms/agentmailrooms-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.autobrowserapproval/autobrowserapproval-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.bumblebeereceipt/bumblebeereceipt-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.byterovermemory/byterovermemory-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.clauxel.chromedevtoolsmcp/chromedevtoolsmcp-mcp",
+  "category": "browser"
+ },
+ {
+  "id": "registry:com.clauxel.clawmanagerfleet/clawmanagerfleet-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.codegworkspace/codegworkspace-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.context7docs/context7docs-mcp",
+  "category": "docs"
+ },
+ {
+  "id": "registry:com.clauxel.coralquery/coralquery-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.clauxel.decapodkernel/decapodkernel-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.equiblesagent/equiblesagent-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.clauxel.evalscopebench/evalscopebench-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.clauxel.futureagievals/futureagievals-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.clauxel.hyperframesrender/hyperframesrender-mcp",
+  "category": "design"
+ },
+ {
+  "id": "registry:com.clauxel.lixversion/lixversion-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.mcpgatewaydesk/mcpgatewaydesk-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.playwritermcp/playwritermcp-mcp",
+  "category": "browser"
+ },
+ {
+  "id": "registry:com.clauxel.pptmasterdeck/pptmasterdeck-mcp",
+  "category": "design"
+ },
+ {
+  "id": "registry:com.clauxel.rtkcontext/rtkcontext-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.clauxel.shipswiftcomponents/shipswiftcomponents-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.skybridgepackager/skybridgepackager-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.sregymgate/sregymgate-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.statewrightgate/statewrightgate-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.unitymcptest/unitymcptest-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.zeroidagent/zeroidagent-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.zerolangcompiler/zerolangcompiler-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.boolsai/directory",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.boolsai/grep",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.boolsai/scan",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.boolsai/signals",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.smithery/hustcc-mcp-mermaid",
+  "category": "design"
+ },
+ {
+  "id": "registry:app.sentinelx/sentinelx",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:cloud.nordicdata/nordic-data",
+  "category": "data"
+ },
+ {
+  "id": "registry:co.flow2/flow2",
+  "category": "design"
+ },
+ {
+  "id": "registry:com.clauxel.a2adependencyinspector/a2adependencyinspector-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.a2aidentitytoll/a2aidentitytoll-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.a2areplayreceipt/a2areplayreceipt-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.agentdataboundary/agentdataboundary-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.agenticbudgetrouter/agenticbudgetrouter-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.agentichtmlexportqa/agentichtmlexportqa-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.agentmemorymcp/agentmemorymcp-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.clauxel.agentmonitorrelay/agentmonitorrelay-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.agentskillupdategate/agentskillupdategate-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.aistudioandroidreleasegate/aistudioandroidreleasegate-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.aistudioworkspaceapproval/aistudioworkspaceapproval-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.aiwaiverdesk/aiwaiverdesk-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.antigravityextensiongate/antigravityextensiongate-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.antigravityrunledger/antigravityrunledger-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.browserspendguard/browserspendguard-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.c2padisclosure/c2padisclosure-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.c2paintake/c2paintake-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.clianythingharness/clianythingharness-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.codegraphcontext/codegraphcontext-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.codexrunledger/codexrunledger-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.copilotcliswitchgate/copilotcliswitchgate-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.copilotconnectorledger/copilotconnectorledger-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.fastmcpruntime/fastmcpruntime-mcp",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:com.clauxel.geminiomnirights/geminiomnirights-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.geminiupgradeqa/geminiupgradeqa-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.clauxel.genaispanmapper/genaispanmapper-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.clauxel.kirowebreleasebinder/kirowebreleasebinder-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.mcpdeprecation/mcpdeprecation-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.mcpoauthscopegate/mcpoauthscopegate-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.mcpscopeconsent/mcpscopeconsent-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.mcptoollicense/mcptoollicense-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.mcpuptimeledger/mcpuptimeledger-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.opendesignguard/opendesignguard-mcp",
+  "category": "design"
+ },
+ {
+  "id": "registry:com.clauxel.playwrightselectorguard/playwrightselectorguard-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.pydanticcontract/pydanticcontract-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.safetyreplay/safetyreplay-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.schemadriftgate/schemadriftgate-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.clauxel.semblecodesearchgate/semblecodesearchgate-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.speckitacceptance/speckitacceptance-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.clauxel.toolcallwitness/toolcallwitness-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.tracepiishield/tracepiishield-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.clauxel.universalcartmerchantgate/universalcartmerchantgate-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:com.clauxel.veocreditwaste/veocreditwaste-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.clauxel.webmcpactionreceipt/webmcpactionreceipt-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.haymon/database",
+  "category": "database"
+ },
+ {
+  "id": "registry:ai.newzai.api/NewzAI",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.newzai.api/news-mcp",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.pyrimid/pyrimid",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.smithery/mjucius-cozi_mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:co.heista/api",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.100hires/100hires",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.compeller/compel",
+  "category": "design"
+ },
+ {
+  "id": "registry:ai.nexustoken/nexustoken-sdk",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.almured/marketplace",
+  "category": "other"
+ },
+ {
+  "id": "registry:com.catchdoms/expired-domains",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:ai.djwizard/tvwizard",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.paperlantern/code",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.smithery/kkjdaniel-bgg-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/lukaskostka99-marketing-miner-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.trydock/dock",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:app.contendeo/contendeo",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.inflowpay.app/inflow",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.nefesh/human-state",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.nothumansearch/search",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.preclick/preclick-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.smithery/docfork-mcp",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.urlcheck/urlcheck-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.bitvoya/bitvoya-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.law/lawyer-search",
+  "category": "other"
+ },
+ {
+  "id": "registry:cc.contexta/contexta-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.smithery/cristianoaredes-mcp-dadosbr",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/rainbowgore-stealthee-mcp-tools",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.tunnelmind/scry",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.anots/directory",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.awardflightdaily/award-flight-daily",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/hithereiamaliff-mcp-nextcloud",
+  "category": "files"
+ },
+ {
+  "id": "registry:ai.smithery/xinkuang-china-stock-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.smithery/zwldarren-akshare-one-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.stompy/stompy",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.unulu/unulu",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:ai.explorium/mcp-explorium",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/ramadasmr-networkcalc-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.aiqbee/brain",
+  "category": "docs"
+ },
+ {
+  "id": "registry:com.axiomatic-ai/prover",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.smithery/keithah-hostex-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/zeta-chain-cli",
+  "category": "other"
+ },
+ {
+  "id": "registry:com.bizgigz/agent-marketplace",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.bizgigz/talent-ecosystem",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/Artin0123-gemini-image-mcp-server",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.smithery/Leghis-smart-thinking",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.smithery/alphago2580-naramarketmcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/hollaugo-financial-research-mcp-server",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.waystation/airtable",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.waystation/gmail",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.waystation/jira",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.waystation/miro",
+  "category": "design"
+ },
+ {
+  "id": "registry:ai.waystation/monday",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.waystation/office",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.waystation/postgres",
+  "category": "database"
+ },
+ {
+  "id": "registry:ai.waystation/slack",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.waystation/supabase",
+  "category": "database"
+ },
+ {
+  "id": "registry:ai.waystation/teams",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.waystation/wrike",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.smithery/PixdataOrg-coderide",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.smithery/devbrother2024-typescript-mcp-server-boilerplate",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.smithery/CryptoCultCurt-appfolio-mcp-server",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/IlyaGusev-academia_mcp",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.smithery/arjunkmrm-perplexity-search",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.smithery/keithah-tessie-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/pinion05-supabase-mcp-lite",
+  "category": "database"
+ },
+ {
+  "id": "registry:ai.smithery/Hint-Services-obsidian-github-mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.smithery/mfukushim-map-traveler-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/mrugankpednekar-mcp-optimizer",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.smithery/samihalawa-whatsapp-go-mcp",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.smithery/flight505-mcp_dincoder",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.smithery/kodey-ai-salesforce-mcp",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.smithery/kodey-ai-salesforce-mcp-kodey",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.smithery/kodey-ai-salesforce-mcp-minimal",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.smithery/kodey-ai-salesforce-mcp-server",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.smithery/aicastle-school-openai-api-agent-project",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.smithery/aicastle-school-openai-api-agent-project11",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.parallel/task-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.smithery/BadRooBot-test_m",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/BowenXU0126-aistudio_hw3",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/FelixYifeiWang-felix-mcp-smithery",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/JunoJunHyun-festival-finder-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/Phionx-mcp-hello-server",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/aamangeldi-dad-jokes-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/afgong-sqlite-mcp-server",
+  "category": "database"
+ },
+ {
+  "id": "registry:ai.smithery/akilat-spec-leave-manager-mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.smithery/alex-llm-attack-mcp-server",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.smithery/bergeramit-bergeramit-hw3-tech",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/bergeramit-bergeramit-hw3-tech-1",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/bhushangitfull-file-mcp-smith",
+  "category": "files"
+ },
+ {
+  "id": "registry:ai.smithery/bielacki-igdb-mcp-server",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/blacklotusdev8-test_m",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/cindyloo-dropbox-mcp-server",
+  "category": "files"
+ },
+ {
+  "id": "registry:ai.smithery/cuongpo-coti-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/cuongpo-coti-mcp-1",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/dsharipova-mcp-hw",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/huuthangntk-claude-vision-mcp-server",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.smithery/isnow890-data4library-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/jekakos-mcp-user-data-enrichment",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/jenniferjiang0511-mit-ai-studio-hw3",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/jessicayanwang-test",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.smithery/keremurat-json",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.smithery/keremurat-jsonmcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.smithery/keremurat-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.smithery/leandrogavidia-vechain-mcp-server",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.smithery/magenie33-quality-dimension-generator",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.smithery/miguelgarzons-mcp-cun",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/mrugankpednekar-bill_splitter_mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.smithery/renCosta2025-context7fork",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.smithery/sebastianall1977-gmail-mcp",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.smithery/serkan-ozal-driflyte-mcp-server",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.smithery/shoumikdc-arxiv-mcp",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.smithery/slhad-aha-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/smithery-ai-cookbook-python-quickstart",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.smithery/smithery-ai-cookbook-ts-smithery-cli",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.smithery/szge-lolwiki-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/turnono-datacommons-mcp-server",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/wgong-sqlite-mcp-server",
+  "category": "database"
+ },
+ {
+  "id": "registry:ai.smithery/zhaoganghao-hellomcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/Aman-Amith-Shastry-scientific_computation_mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/BigVik193-reddit-ads-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/BigVik193-reddit-ads-mcp-api",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/BigVik193-reddit-ads-mcp-test",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/BigVik193-reddit-user-mcp",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.smithery/Danushkumar-V-mcp-discord",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.smithery/ImRonAI-mcp-server-browserbase",
+  "category": "browser"
+ },
+ {
+  "id": "registry:ai.smithery/Kim-soung-won-mcp-smithery-exam",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/PabloLec-keyprobe-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.smithery/adamamer20-paper-search-mcp-openai",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.smithery/aryankeluskar-poke-video-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/callmybot-cookbook-mcp-server",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/callmybot-domoticz",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/callmybot-hello-mcp-server",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/cc25a-openai-api-agent-project123123123",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.smithery/ctaylor86-mcp-video-download-server",
+  "category": "files"
+ },
+ {
+  "id": "registry:ai.smithery/faithk7-gmail-mcp",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.smithery/jirispilka-actors-mcp-server",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.smithery/kwp-lab-rss-reader-mcp",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.smithery/lineex-pubmed-mcp-smithery",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.smithery/morosss-sdfsdf",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.smithery/plainyogurt21-sec-edgar-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.smithery/MisterSandFR-supabase-mcp-selfhosted",
+  "category": "database"
+ },
+ {
+  "id": "registry:ai.smithery/MetehanGZL-pokemcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/blbl147-xhs-mcp",
+  "category": "search"
+ }
+]

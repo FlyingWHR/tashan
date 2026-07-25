@@ -9,8 +9,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```sh
 # Full data regen, in order (each step depends on the prior):
 python3 scraper/scrape.py            # config-adoption → data/capabilities.json (needs gh CLI auth)
+python3 pipeline/ingest_skills.py    # agent skills (SKILL.md) from public repos → kind='skill'
 python3 pipeline/build.py            # registry + npm → SQLite → web/data/capabilities.json
+python3 pipeline/enrich_meta.py      # npm description / homepage / license backfill (+ re-export)
 python3 pipeline/gen_badges.py       # embeddable SVGs → web/badge/<slug>.svg
+
+# Site generation (after any data change) — one command does all of it and bumps the asset version:
+python3 pipeline/bump_assets.py      # ?v= bump + prerender + gen_content + gen_hubs
+python3 pipeline/bump_assets.py --check   # assert every ?v= on disk matches assets.V
 
 # Preview the site locally (no build step):
 cd web && python3 -m http.server 4173 --bind 127.0.0.1   # → http://localhost:4173
@@ -51,9 +57,27 @@ Both merge scripts `import build` to reuse `db()` + `export()`, so merging a gra
 Zero-dependency, vanilla JS, strict-CSP, **no build step** — this is a deliberate feature, not a gap. Do not add a framework or any external request without a strong reason (the CSP in `_headers` is `default-src 'self'`; nothing external loads).
 
 - Each `*.html` pairs with a `js/<page>.js`; all pages fetch `/data/capabilities.json` (+ `index` also `/data/categories.json`) at runtime. `terminal.js`, `hero.js`, `smoke.js` are the shared chrome/motion loaded everywhere.
-- **Cache-busting:** `css/js` are served `no-cache` (`_headers`), but pages link assets with `?v=N`. When you change **any** file in `web/css/` or `web/js/`, bump `?v=N` in lockstep across **all of** `web/*.html` + `pipeline/prerender.py` + `pipeline/gen_content.py`, then re-run both generators, so browsers (and the no-cache-less local dev server) fetch the new file. One-shot: `python3 -c "import re,glob; [open(f,'w').write(re.sub(r'(\?v=)OLD',r'\g<1>NEW',open(f).read())) for f in glob.glob('web/*.html')+['pipeline/prerender.py','pipeline/gen_content.py']]"` then `python3 pipeline/prerender.py && python3 pipeline/gen_content.py`. Current: **`v=45`**. (Forgetting the bump is how stale JS / a shipped hoisting bug reached the browser this cycle — it's a real footgun; a single asset-version constant is a documented backlog item.)
+- **Cache-busting — SOLVED, don't hand-edit `?v=` any more.** `pipeline/assets.py` holds the single constant `V`; the generators import it, and `python3 pipeline/bump_assets.py` increments it, rewrites `web/*.html`, and re-runs every generator. `--check` asserts every `?v=` on disk agrees with `assets.V` and runs in the test suite, so a missed bump now fails loudly instead of silently serving stale JS. (This was the documented footgun: it caused a shipped hoisting bug and a full round of "my fix didn't apply" debugging.)
+  - **Local-preview trap:** `?v=` busts css/js but **not the HTML page itself**, and `python3 -m http.server` sends no cache headers — so the browser reuses a cached `index.html` still linking the OLD `?v=`, and your change looks like it didn't apply. Before concluding anything about a visual change, check `document.querySelector('link[rel=stylesheet]').getAttribute('href')`; force a fresh doc with `/index.html?fresh=N`. Production is unaffected (Pages revalidates HTML).
 - Fonts (`assets/fonts/*.woff2`, Geist + GeistMono, self-hosted) are cached `immutable`. Badges (`/badge/*`) cache 1h.
 - `gen_badges.py` slug = `id` lowercased with non-alphanumerics → `-`. Badge colors key off the expertise verdict.
+
+### The generated SEO/GEO tier (`pipeline/gen_hubs.py`)
+
+The flywheel: every measured capability creates indexable surface, and every surface links back into the ranked data.
+
+- `/category/<id>.html` — 15 hubs, one per taxonomy category, each a live trust-ranked table with `ItemList` + `BreadcrumbList` + `FAQPage` JSON-LD. Targets "best MCP server for X" with data instead of opinion. **Every capability page links to its hub** (`prerender.py`'s `summary()`); without that edge the hubs are orphans only the sitemap knows about.
+- `/skills/` + `/skills/<owner>-<repo>[-N].html` — the agent-skills directory, paginated at 150/page (one combined page was 375 KB). Official sources are listed first.
+- `/llms.txt` — the answer-engine convention: site summary, how the score works, top 40 capabilities, categories, citation guidance.
+- `robots.txt` names the major AI crawlers explicitly and points at `llms.txt`.
+
+**Export quality gates in `build.py`'s `export()`** — all three exist because real junk was ranking:
+1. `DEMO` / `DEMO_NAME` — tutorial servers ("Send personalized greetings", dad jokes, `*-hw3` homework). 19 were on the board.
+2. `CANARY` — self-declared non-capabilities. Two **dependency-confusion canaries** (`mcp-server-fetch`, `mcp-server-git`, shadowing the official `@modelcontextprotocol/server-*`) were ranked Trust 54/51 *and* the install snippet told readers to `npx` them.
+3. **Dedup on identical description** — the same product listed as both a `pkg:` row and its `registry:` twin; keeps the higher-signal row.
+4. `similar_official` — neutral name-confusion note for unscoped packages that normalise to an official scoped name. Stated as a fact ("an official package with a similar name exists"), **never** as an accusation of typosquatting, which is a claim we cannot support.
+
+**Skills are deliberately NOT on the trust board.** A skill is a folder inside a repo, so its only public maintenance signal is the repository's — all 400 skills in a monorepo would score identically and bury every independently-measured server. They get a directory that says so plainly instead.
 
 ## Working principles (from PROJECT.md §12)
 

@@ -138,7 +138,6 @@
   <url><loc>https://tashan.sh/capability/pkg-appfigures-cli.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-attrove-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-buywhere-mcp.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-mcp-server-fetch.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-jpisnice-shadcn-ui-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-kavel-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-voris-ai-mcp.html</loc><changefreq>weekly</changefreq></url>
@@ -162,7 +161,6 @@
   <url><loc>https://tashan.sh/capability/pkg-artifyde-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-memeboat-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-asksakina-islamic-knowledge-mcp.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-mcp-server-git.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-knorq-docx-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-corralimited-snapdiff-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-bykaranteli-mcp.html</loc><changefreq>weekly</changefreq></url>
@@ -201,7 +199,6 @@
   <url><loc>https://tashan.sh/capability/pkg-bidsparq-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-vayacore-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ac-tandem-docs-mcp.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-adeu-adeu.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-aliengiraffe-spotdb.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-ankimcp-anki-mcp-server-addon.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-biddeed-biddeed-mcp.html</loc><changefreq>weekly</changefreq></url>
@@ -217,7 +214,6 @@
   <url><loc>https://tashan.sh/capability/registry-ai-com-mcp-registry.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-com-mcp-strava.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-creativescope-creative-intelligence.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-dinglebear-soma.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-djzs-trust-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-drillr-drillr.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-dynsoft-sac.html</loc><changefreq>weekly</changefreq></url>
@@ -286,7 +282,6 @@
   <url><loc>https://tashan.sh/capability/registry-com-builtwithjon-builtwithjon.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-cabal-hunter-api-cabal-hunter.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-coachwatts-coach-watts.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-com-codescene-codescene-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-commonlands-optics-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-completionkit-evals.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-contrastcyber-api.html</loc><changefreq>weekly</changefreq></url>
@@ -296,7 +291,6 @@
   <url><loc>https://tashan.sh/capability/pkg-spideriq-mcp-gate.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-spideriq-mcp-publish.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-demomagic-mcp.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-bowmark-bowmark.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-everway-everway-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-flowcastle-flowcastle.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-justdomain-just-domain.html</loc><changefreq>weekly</changefreq></url>
@@ -370,7 +364,6 @@
   <url><loc>https://tashan.sh/capability/pkg-clihub-cli.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-markettrace-agent-feed.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-physea-liminality.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-radmail-radmail-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-sunub-obsidian-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-syntitan-syntitan-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-thinkneo-control-plane.html</loc><changefreq>weekly</changefreq></url>
@@ -409,7 +402,6 @@
   <url><loc>https://tashan.sh/capability/registry-ai-groundroute-web-search.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-mrmarket-mrmarket-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-responsibleailabs-rail-score.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-spritecook-generate.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-bot-ttrpg-grimoire.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ch-fedlex-connector-fedlex-connector.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-boostermage-mtg-prices.html</loc><changefreq>weekly</changefreq></url>
@@ -423,7 +415,6 @@
   <url><loc>https://tashan.sh/capability/registry-ai-joinmultiplayer-gpu.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-masnavi-masnavi.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-presentations-presentations-ai.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-anirbanbasu-pymcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-infranodus-mcp-server-infranodus.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-br-com-brasilnfe-fiscal.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ca-netgrant-canadian-grants.html</loc><changefreq>weekly</changefreq></url>
@@ -469,7 +460,6 @@
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-browserbasehq-mcp-browserbase.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-app-humantaste-taste-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-cloud-agentdomain-agentdomain-mcp.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-com-actablesite-readiness.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-checkrecall-vehicle-recalls.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-clauxel-agentmailrooms-agentmailrooms-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-clauxel-autobrowserapproval-autobrowserapproval-mcp.html</loc><changefreq>weekly</changefreq></url>
@@ -508,7 +498,6 @@
   <url><loc>https://tashan.sh/capability/registry-ai-boolsai-signals.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-hustcc-mcp-mermaid.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-app-sentinelx-sentinelx.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-cloud-nordicdata-nordic-data.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-co-flow2-flow2.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-clauxel-a2adependencyinspector-a2adependencyinspector-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-clauxel-a2aidentitytoll-a2aidentitytoll-mcp.html</loc><changefreq>weekly</changefreq></url>
@@ -558,9 +547,7 @@
   <url><loc>https://tashan.sh/capability/pkg-truncus-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-contextstudios-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-promptguard-mcp-server.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-haymon-database.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-newzai-api-newzai.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-newzai-api-news-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-pyrimid-pyrimid.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-mjucius-cozi-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-co-heista-api.html</loc><changefreq>weekly</changefreq></url>
@@ -587,17 +574,14 @@
   <url><loc>https://tashan.sh/capability/registry-app-contendeo-contendeo.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ref-tools-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-thedaviddias-mcp-llms-txt-explorer.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-lawai-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-inflowpay-app-inflow.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-nefesh-human-state.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-nothumansearch-search.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-preclick-preclick-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-docfork-mcp.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-urlcheck-urlcheck-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-bitvoya-bitvoya-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-server-sqlite-npx.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-wildcard-ai-deepcontext.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-law-lawyer-search.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-cc-contexta-contexta-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-motiffcom-motiff-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-edjl-github-mcp.html</loc><changefreq>weekly</changefreq></url>
@@ -607,11 +591,9 @@
   <url><loc>https://tashan.sh/capability/registry-com-anots-directory.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-awardflightdaily-award-flight-daily.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ctxl-mcp.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-contextlayer-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-gongrzhe-server-gmail-autoauth-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-trello.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-server-reddit.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-ctxl.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-hithereiamaliff-mcp-nextcloud.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-xinkuang-china-stock-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-zwldarren-akshare-one-mcp.html</loc><changefreq>weekly</changefreq></url>
@@ -625,7 +607,6 @@
   <url><loc>https://tashan.sh/capability/registry-com-axiomatic-ai-prover.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-wolfram-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-keithah-hostex-mcp.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-zeta-chain-cli.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-bizgigz-agent-marketplace.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-com-bizgigz-talent-ecosystem.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-aistudio-mcp-server.html</loc><changefreq>weekly</changefreq></url>
@@ -648,7 +629,6 @@
   <url><loc>https://tashan.sh/capability/pkg-mcp-server-sqlite.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-rapay-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-pixdataorg-coderide.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-devbrother2024-typescript-mcp-server-boilerplate.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-cryptocultcurt-appfolio-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-ilyagusev-academia-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-arjunkmrm-perplexity-search.html</loc><changefreq>weekly</changefreq></url>
@@ -682,35 +662,25 @@
   <url><loc>https://tashan.sh/capability/pkg-mcp-figma.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ramidecodes-mcp-server-notion.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-parallel-task-mcp.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-badroobot-test-m.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-bowenxu0126-aistudio-hw3.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-felixyifeiwang-felix-mcp-smithery.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-junojunhyun-festival-finder-mcp.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-phionx-mcp-hello-server.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-aamangeldi-dad-jokes-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-afgong-sqlite-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-akilat-spec-leave-manager-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-alex-llm-attack-mcp-server.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-bergeramit-bergeramit-hw3-tech.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-bergeramit-bergeramit-hw3-tech-1.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-bhushangitfull-file-mcp-smith.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-bielacki-igdb-mcp-server.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-blacklotusdev8-test-m.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-cindyloo-dropbox-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-cuongpo-coti-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-cuongpo-coti-mcp-1.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-dsharipova-mcp-hw.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-huuthangntk-claude-vision-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-isnow890-data4library-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-jekakos-mcp-user-data-enrichment.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-jenniferjiang0511-mit-ai-studio-hw3.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-jessicayanwang-test.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-keremurat-json.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-keremurat-jsonmcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-keremurat-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-leandrogavidia-vechain-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-magenie33-quality-dimension-generator.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-miguelgarzons-mcp-cun.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-mrugankpednekar-bill-splitter-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-rencosta2025-context7fork.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-sebastianall1977-gmail-mcp.html</loc><changefreq>weekly</changefreq></url>
@@ -719,10 +689,8 @@
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-slhad-aha-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-smithery-ai-cookbook-python-quickstart.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-smithery-ai-cookbook-ts-smithery-cli.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-szge-lolwiki-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-turnono-datacommons-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-wgong-sqlite-mcp-server.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-zhaoganghao-hellomcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-gongrzhe-server-calendar-autoauth-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-server-taskwarrior.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-gsuite.html</loc><changefreq>weekly</changefreq></url>
@@ -734,17 +702,13 @@
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-bigvik193-reddit-user-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-danushkumar-v-mcp-discord.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-imronai-mcp-server-browserbase.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-kim-soung-won-mcp-smithery-exam.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-pablolec-keyprobe-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-adamamer20-paper-search-mcp-openai.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-aryankeluskar-poke-video-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-callmybot-cookbook-mcp-server.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-callmybot-domoticz.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-callmybot-hello-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-cc25a-openai-api-agent-project123123123.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-ctaylor86-mcp-video-download-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-faithk7-gmail-mcp.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/registry-ai-smithery-jirispilka-actors-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-kwp-lab-rss-reader-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-lineex-pubmed-mcp-smithery.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-morosss-sdfsdf.html</loc><changefreq>weekly</changefreq></url>
@@ -769,4 +733,31 @@
   <url><loc>https://tashan.sh/learn/mcp-fuwuqi-tuijian.html</loc></url>
   <url><loc>https://tashan.sh/learn/mcp-vs-agent-skills-vs-cli.html</loc></url>
   <url><loc>https://tashan.sh/learn/where-are-claude-skills-stored.html</loc></url>
+  <url><loc>https://tashan.sh/category/ai.html</loc></url>
+  <url><loc>https://tashan.sh/category/browser.html</loc></url>
+  <url><loc>https://tashan.sh/category/cloud.html</loc></url>
+  <url><loc>https://tashan.sh/category/comms.html</loc></url>
+  <url><loc>https://tashan.sh/category/data.html</loc></url>
+  <url><loc>https://tashan.sh/category/database.html</loc></url>
+  <url><loc>https://tashan.sh/category/design.html</loc></url>
+  <url><loc>https://tashan.sh/category/devtools.html</loc></url>
+  <url><loc>https://tashan.sh/category/docs.html</loc></url>
+  <url><loc>https://tashan.sh/category/files.html</loc></url>
+  <url><loc>https://tashan.sh/category/finance.html</loc></url>
+  <url><loc>https://tashan.sh/category/other.html</loc></url>
+  <url><loc>https://tashan.sh/category/productivity.html</loc></url>
+  <url><loc>https://tashan.sh/category/search.html</loc></url>
+  <url><loc>https://tashan.sh/category/security.html</loc></url>
+  <url><loc>https://tashan.sh/skills/alirezarezvani-claude-skills-2.html</loc></url>
+  <url><loc>https://tashan.sh/skills/alirezarezvani-claude-skills-3.html</loc></url>
+  <url><loc>https://tashan.sh/skills/alirezarezvani-claude-skills.html</loc></url>
+  <url><loc>https://tashan.sh/skills/anthropics-claude-plugins-official.html</loc></url>
+  <url><loc>https://tashan.sh/skills/anthropics-skills.html</loc></url>
+  <url><loc>https://tashan.sh/skills/composiohq-awesome-claude-skills-2.html</loc></url>
+  <url><loc>https://tashan.sh/skills/composiohq-awesome-claude-skills-3.html</loc></url>
+  <url><loc>https://tashan.sh/skills/composiohq-awesome-claude-skills.html</loc></url>
+  <url><loc>https://tashan.sh/skills/index.html</loc></url>
+  <url><loc>https://tashan.sh/skills/jeffallan-claude-skills.html</loc></url>
+  <url><loc>https://tashan.sh/skills/multica-ai-andrej-karpathy-skills.html</loc></url>
+  <url><loc>https://tashan.sh/skills/obra-superpowers.html</loc></url>
 </urlset>

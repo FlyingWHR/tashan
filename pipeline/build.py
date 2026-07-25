@@ -463,8 +463,28 @@ def export(con):
     # bare single-word generic names carry no identity in a ranking (registry ingest skips the scraper's filter)
     DENY = {"mcp", "server", "mcp-server", "run", "serve", "cli", "app", "main", "index",
             "stdio", "tools", "mcp-serve", "client", "core", "test", "demo"}
+    # Tutorial/homework servers published to the registry: "Send personalized greetings", "Pirate Mode",
+    # dad jokes, MIT-course hw3 submissions. They score like any low-adoption server and were ranking on
+    # the board, which undercuts the whole claim to measure what works. Patterns are deliberately
+    # unambiguous — "template repository"/"boilerplate" are included (a scaffold is not a capability you
+    # install to do work) but bare "template" is not, since real tools describe themselves that way.
+    DEMO = re.compile(r"\bgreet(ing)?s?\b|hello,?\s*world|pirate mode|swashbuckling|dad joke"
+                      r"|add two numbers|template repository|boilerplate", re.I)
+    DEMO_NAME = re.compile(r"(^|[-_])(hw\d|test_m|hello|hellomcp|smithery-exam)([-_]|\d|$)", re.I)
+    # Self-declared non-capabilities. `mcp-server-fetch` and `mcp-server-git` are dependency-confusion
+    # CANARIES — unscoped npm names shadowing the official @modelcontextprotocol/server-* packages,
+    # picking up thousands of weekly installs from people who assume the unscoped name is the real one.
+    # They scored Trust 54 and 51 here, and the install snippet was telling readers to npx them. An index
+    # that exists to say what is trustworthy must not rank a typosquat, so anything that declares itself
+    # a canary/placeholder/not-for-production is not a capability and does not belong on the board.
+    CANARY = re.compile(r"security research canary|\bcanary\b.*not for production"
+                        r"|not for production use|placeholder package|name reservation|reserved name"
+                        r"|do not (install|use) this package", re.I)
     def junk(o):
         n = (o["npm_pkg"] or o["id"].split(":", 1)[-1] or "")
+        blurb = (o.get("description") or "") + " " + (o.get("title") or "")
+        if DEMO.search(blurb) or DEMO_NAME.search(n.split("/")[-1]) or CANARY.search(blurb):
+            return True
         if n.startswith("@"):
             return False  # scoped = real identity
         leaf = n.split("/")[-1].lower()
@@ -481,6 +501,59 @@ def export(con):
     # The board is trust-RANKED: only caps with a real trust score belong on it. This is also the exact
     # set prerender turns into pages, so capabilities.json, index.json, and /capability/*.html stay aligned
     # (no board row or co-use link can point at a page that doesn't exist).
+    # NAME-CONFUSION NOTE (the Agensi "security scan" answered with public evidence instead of a claim).
+    # We cannot audit anyone's code, so we don't pretend to. What we CAN show from public data is when an
+    # unscoped package normalises to the same name as an official scoped one — the exact shape that let
+    # two dependency-confusion canaries pull thousands of installs. This is stated as a neutral fact
+    # ("an official package with a similar name exists"), never as an accusation: an unscoped package
+    # having a similar name is not by itself evidence of bad intent, and calling it a typosquat would be
+    # a claim we cannot support. Exact normalised-name equality only, so it stays conservative.
+    def norm_name(p):
+        leaf = (p or "").split("/")[-1].lower()
+        return re.sub(r"[^a-z0-9]", "", re.sub(r"\b(mcp|server)\b", "", leaf.replace("-", " ")))
+    official = {}
+    for c in caps:
+        p = c.get("npm_pkg") or ""
+        if p.startswith("@modelcontextprotocol/") or p.startswith("@anthropic-ai/"):
+            official.setdefault(norm_name(p), p)
+    shadowed = 0
+    for c in caps:
+        p = c.get("npm_pkg") or ""
+        if not p or p.startswith("@"):
+            continue
+        twin = official.get(norm_name(p))
+        if twin and twin != p:
+            c["similar_official"] = twin
+            shadowed += 1
+    if shadowed:
+        print("  name-confusion: %d unscoped package(s) share a normalised name with an official one" % shadowed)
+
+    # Same product listed twice (usually a pkg: row and its registry: twin, e.g. @codescene/codehealth-mcp
+    # vs com.codescene/codescene-mcp-server). Two genuinely different capabilities essentially never ship
+    # byte-identical descriptions, so an exact match on a non-trivial description means one product — keep
+    # the row with the most signal behind it and drop the echo. A ranking that lists the same thing twice
+    # is telling the reader something false about the field.
+    best, dropped = {}, 0
+    for c in caps:
+        k = (c.get("description") or "").strip().lower()
+        if len(k) <= 25:
+            continue
+        prev = best.get(k)
+        if prev is None or (c.get("trust") or 0) > (prev.get("trust") or 0):
+            best[k] = c
+    keep = set()
+    for k, c in best.items():
+        keep.add(c["id"])
+    deduped = []
+    for c in caps:
+        k = (c.get("description") or "").strip().lower()
+        if len(k) > 25 and c["id"] not in keep:
+            dropped += 1
+            continue
+        deduped.append(c)
+    if dropped:
+        print("  dedup: dropped %d duplicate listing(s) sharing a description with a higher-signal row" % dropped)
+    caps = deduped
     ranked = [c for c in caps if c.get("trust") is not None][:800]
     tot = con.execute("SELECT COUNT(*) FROM capabilities").fetchone()[0]
     enriched = con.execute("SELECT COUNT(*) FROM capabilities WHERE npm_downloads IS NOT NULL").fetchone()[0]

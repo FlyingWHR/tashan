@@ -1,0 +1,922 @@
+[
+ {
+  "id": "registry:ac.tandem/docs-mcp",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.adeu/adeu",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.aliengiraffe/spotdb",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.ankimcp/anki-mcp-server-addon",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.biddeed/biddeed-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.biel/biel-ai",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.cabrini/market-data",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.canvora/canvora",
+  "category": "design"
+ },
+ {
+  "id": "registry:ai.certscore/mcp-light",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.com.mcp/contabo",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:ai.com.mcp/lenny-rachitsky-podcast",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.com.mcp/linkedin",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.com.mcp/openai-tools",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.com.mcp/petstore",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.com.mcp/registry",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.com.mcp/strava",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.creativescope/creative-intelligence",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.dinglebear/soma",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.djzs/trust-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.drillr/drillr",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.dynsoft/sac",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.epinu/epinu",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.exa/exa",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.example4/xmp4",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.gatetest.www/gatetest",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.gondola/gondola",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.lumify/sports-intelligence",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.maximem/synap",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.meetsquad/squad",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.nauro/nauro",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.nexez/commerce",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.outlit/outlit",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.palmyr/palmyr",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:ai.plori/plori",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:ai.sleepwalker/sleepwalker",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/ChiR24-unreal_mcp",
+  "category": "design"
+ },
+ {
+  "id": "registry:ai.smithery/ChiR24-unreal_mcp_server",
+  "category": "design"
+ },
+ {
+  "id": "registry:ai.smithery/Nekzus-npm-sentinel-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.smithery/TakoData-tako-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/anirbanbasu-frankfurtermcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.smithery/blockscout-mcp-server",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/brave",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.smithery/jjlabsio-korea-stock-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.smithery/kirbah-mcp-youtube",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/neverinfamous-memory-journal-mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.smithery/pinkpixel-dev-web-scout-mcp",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.smithery/rfdez-pvpc-mcp-server",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/saidsef-mcp-github-pr-issue-analyser",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.smithery/truss44-mcp-crypto-price",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.sovantica/engrava",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.sugra/api-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.syntheticbrew/syntheticbrew",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.veecle/chiplab",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.windsor/windsor-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.wiplash/wiplash",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.xpoz/social-insights",
+  "category": "search"
+ },
+ {
+  "id": "registry:app.cellarion/wine-registry",
+  "category": "data"
+ },
+ {
+  "id": "registry:app.desktopcommander/remote-desktop-commander",
+  "category": "files"
+ },
+ {
+  "id": "registry:app.knowtis/knowtis",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:app.paichart/mcp-hub",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:app.peil/peil-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:app.reassign/reassign",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:app.toolsnap/toolsnap-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ar.com.consignatarias/cattle-market",
+  "category": "data"
+ },
+ {
+  "id": "registry:cc.operandi/operandi",
+  "category": "other"
+ },
+ {
+  "id": "registry:ch.opencaselaw/swiss-caselaw",
+  "category": "docs"
+ },
+ {
+  "id": "registry:co.creativeclaw/creative-claw",
+  "category": "design"
+ },
+ {
+  "id": "registry:co.obto/obto",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:coach.marian/eng-leadership-toolkit",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:com.530amodel/calculator",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.accountingqb/accountingqb",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.acjlabs/catalog-normalizer",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.acjlabs/receipt-extraction",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.aineedhelpfromotherai/reasoning-commons",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.apify/apify-mcp-server",
+  "category": "browser"
+ },
+ {
+  "id": "registry:com.automox/automox-mcp",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.babyblueviper/invinoveritas",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.bidda/bidda-compliance",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.bikefuchs/bikefuchs",
+  "category": "other"
+ },
+ {
+  "id": "registry:com.blackswancausallabs/dagstudio-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.blackswancausallabs/target-mcp",
+  "category": "docs"
+ },
+ {
+  "id": "registry:com.blackveilsecurity/dns",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.browser-use/browser-use",
+  "category": "browser"
+ },
+ {
+  "id": "registry:com.builtwithjon/builtwithjon",
+  "category": "other"
+ },
+ {
+  "id": "registry:com.cabal-hunter.api/cabal-hunter",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.coachwatts/coach-watts",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.codescene/codescene-mcp-server",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:com.commonlands/optics-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:com.completionkit/evals",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.contrastcyber/api",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.bowmark/bowmark",
+  "category": "browser"
+ },
+ {
+  "id": "registry:ai.everway/everway-mcp-server",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.flowcastle/flowcastle",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.justdomain/just-domain",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:ai.justpublish/just-publish",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:ai.kumbuka/kumbuka-server",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.ludo/game-assets",
+  "category": "design"
+ },
+ {
+  "id": "registry:ai.maguyva/maguyva",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.mcpanalytics/analytics",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.mcpcap/mcpcap",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.openarx/openarx",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.radixia/blog",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.retrodiffusion/pixel-art",
+  "category": "design"
+ },
+ {
+  "id": "registry:ai.smithery/222wcnm-bilistalkermcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/JMoak-chrono-mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.smithery/ScrapeGraphAI-scrapegraph-mcp",
+  "category": "browser"
+ },
+ {
+  "id": "registry:ai.smithery/kesslerio-attio-mcp-server",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.smithery/kesslerio-attio-mcp-server-beta",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.smithery/yuna0x0-anilist-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/yuna0x0-hackmd-mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.tunnelmind/sigil",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.zimac/mnema",
+  "category": "ai"
+ },
+ {
+  "id": "registry:app.cleanor/cleanor",
+  "category": "files"
+ },
+ {
+  "id": "registry:app.cnvs/whiteboard",
+  "category": "design"
+ },
+ {
+  "id": "registry:app.crawlie/crawlie",
+  "category": "data"
+ },
+ {
+  "id": "registry:app.forgeengine/forge",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:app.recao/recao-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:app.remoote/remote-jobs",
+  "category": "other"
+ },
+ {
+  "id": "registry:app.superdocs/superdocs",
+  "category": "docs"
+ },
+ {
+  "id": "registry:app.trustydata/trustydata",
+  "category": "data"
+ },
+ {
+  "id": "registry:bid.scope/healthcare",
+  "category": "other"
+ },
+ {
+  "id": "registry:bid.scope/pharma",
+  "category": "other"
+ },
+ {
+  "id": "registry:cc.orionlabsone/orion-agent-kit",
+  "category": "data"
+ },
+ {
+  "id": "registry:ch.wejob/wejob",
+  "category": "other"
+ },
+ {
+  "id": "registry:click.toolcall/toolcall",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:cn.housingsentinel/housing-sentinel",
+  "category": "data"
+ },
+ {
+  "id": "registry:co.tempguru/event-staffing",
+  "category": "other"
+ },
+ {
+  "id": "registry:com.acquislaw/acquis",
+  "category": "docs"
+ },
+ {
+  "id": "registry:com.actablesite/ai-crawler-robots-monitor",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.adspirer/ads",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.arcaneforecasting/world-sense",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.atom/premium-domains",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:com.backtest360/backtest360",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.breckenwander/travel-connector",
+  "category": "other"
+ },
+ {
+  "id": "registry:com.cinderfi/retirement-planning",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.citestamp/citestamp",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.arpi/arpi-mcp",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.backengine/backengine-mcp",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.basethread/basethread",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.com.mcp/skills-search",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.creationloop/creationloop",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.vortexiq/vortex-iq",
+  "category": "data"
+ },
+ {
+  "id": "registry:app.twiceshy/twiceshy",
+  "category": "ai"
+ },
+ {
+  "id": "registry:au.com.ato-mcp/ato-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:bio.atlarium/habitat-database",
+  "category": "data"
+ },
+ {
+  "id": "registry:bot.myagi/openagent-registry",
+  "category": "data"
+ },
+ {
+  "id": "registry:ci.git/mymlh-mcp-server",
+  "category": "other"
+ },
+ {
+  "id": "registry:com.ai-gist/aigist",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:com.aihomedesign/aihomedesign-mcp",
+  "category": "design"
+ },
+ {
+  "id": "registry:com.atlassian/atlassian-mcp-server",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:com.blackwalltier/blackwall-x402-guardrail",
+  "category": "security"
+ },
+ {
+  "id": "registry:com.boothcheck/boothcheck",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.brainiall/tts",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.catalystedgescanner/catalyst-edge-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.markettrace/agent-feed",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.physea/liminality",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.radmail/radmail-mcp",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.smithery/sunub-obsidian-mcp-server",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.syntitan/syntitan-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.thinkneo/control-plane",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.webanatomy/webanatomy",
+  "category": "design"
+ },
+ {
+  "id": "registry:app.lucid.mcp/lucid",
+  "category": "design"
+ },
+ {
+  "id": "registry:app.octotrip/flights",
+  "category": "other"
+ },
+ {
+  "id": "registry:app.octotrip/rental-cars",
+  "category": "other"
+ },
+ {
+  "id": "registry:cat.2022/catalunya-2022",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ch.jassverband/jasswiki",
+  "category": "docs"
+ },
+ {
+  "id": "registry:com.ai2fin/ai2fin-tax-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.agenticterminal/directory",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.haymon/dbmcp",
+  "category": "database"
+ },
+ {
+  "id": "registry:ai.magicinsights/insights",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/hithereiamaliff-mcp-datagovmy",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.smithery/ref-tools-ref-tools-mcp",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.upriver/upriver",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.wellnessproject/wellness-project",
+  "category": "data"
+ },
+ {
+  "id": "registry:app.anakior/atlas-mind",
+  "category": "docs"
+ },
+ {
+  "id": "registry:app.getsalta/salta",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:app.pulltrader/seller-economics",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ch.martinelli/jooq-mcp",
+  "category": "docs"
+ },
+ {
+  "id": "registry:cloud.anythink/anythink",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:com.achriom/achriom",
+  "category": "data"
+ },
+ {
+  "id": "registry:com.arzbin/market-data",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.cityparity/cityparity",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.byteask/embedded-docs",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.groundroute/web-search",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.mrmarket/mrmarket-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.responsibleailabs/rail-score",
+  "category": "security"
+ },
+ {
+  "id": "registry:ai.spritecook/generate",
+  "category": "design"
+ },
+ {
+  "id": "registry:bot.ttrpg/grimoire",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ch.fedlex-connector/fedlex-connector",
+  "category": "docs"
+ },
+ {
+  "id": "registry:com.boostermage/mtg-prices",
+  "category": "other"
+ },
+ {
+  "id": "registry:com.clauxel.jcodeharness/jcodeharness-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.canaryusers/canaryusers",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.cofoundagent/cofound",
+  "category": "other"
+ },
+ {
+  "id": "registry:ai.inxy/seo-audit",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.joinmultiplayer/gpu",
+  "category": "comms"
+ },
+ {
+  "id": "registry:ai.masnavi/masnavi",
+  "category": "docs"
+ },
+ {
+  "id": "registry:ai.presentations/presentations-ai",
+  "category": "design"
+ },
+ {
+  "id": "registry:ai.smithery/anirbanbasu-pymcp",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.smithery/infranodus-mcp-server-infranodus",
+  "category": "data"
+ },
+ {
+  "id": "registry:br.com.brasilnfe/fiscal",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ca.netgrant/canadian-grants",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.ambermem/amber",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.appendix/appendix",
+  "category": "other"
+ },
+ {
+  "id": "registry:com.avalara/atc",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.avalara/avatax",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.avalara/bl",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.avalara/classification",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.avalara/cross-border",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.avalara/docs",
+  "category": "docs"
+ },
+ {
+  "id": "registry:com.avalara/elr",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.avalara/returns",
+  "category": "finance"
+ },
+ {
+  "id": "registry:ai.auralogs/auralogs",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.bareun/bareun",
+  "category": "ai"
+ },
+ {
+  "id": "registry:ai.smithery/LinkupPlatform-linkup-mcp-server",
+  "category": "search"
+ },
+ {
+  "id": "registry:ai.smithery/oxylabs-oxylabs-mcp",
+  "category": "browser"
+ },
+ {
+  "id": "registry:ai.threadminder/threadminder",
+  "category": "ai"
+ },
+ {
+  "id": "registry:bot.yeehaw/events",
+  "category": "other"
+ },
+ {
+  "id": "registry:cn.whylingxi/insurance",
+  "category": "finance"
+ },
+ {
+  "id": "registry:co.sivut.pay/sec-crypto-filing-radar",
+  "category": "finance"
+ },
+ {
+  "id": "registry:com.agent-tune/agenttune",
+  "category": "ai"
+ },
+ {
+  "id": "registry:com.anotepad/notes",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:com.astravue/astravue-mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "registry:ai.anomalyarmor/armor-mcp",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.auxen/auxen",
+  "category": "cloud"
+ },
+ {
+  "id": "registry:ai.bittlebits/bittlebits",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.klavis/strata",
+  "category": "devtools"
+ },
+ {
+  "id": "registry:ai.law.mcp/lawyer-search",
+  "category": "other"
+ },
+ {
+  "id": "registry:co.gemina/filetag",
+  "category": "files"
+ },
+ {
+  "id": "registry:co.servicegraph.mcp/servicegraph",
+  "category": "data"
+ },
+ {
+  "id": "registry:ai.buywhere/catalog-api",
+  "category": "other"
+ }
+]

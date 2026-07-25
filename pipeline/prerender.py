@@ -12,10 +12,13 @@ Then regenerates web/sitemap.xml with every page. Runs after build.py's export. 
 ponytail: the summary is intentionally a subset of capability.js's render — the JSON-LD carries the
 structured data, so we don't duplicate the whole client template in Python. Keep them loosely in sync.
 """
-import json, os, re, html
+import json, os, re, html, sys
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import assets
+AV = str(assets.V)   # single source of truth for cache-busting
 DATA = os.path.join(ROOT, "web", "data", "capabilities.json")
 OUT = os.path.join(ROOT, "web", "capability")
 BASE = "https://tashan.sh"
@@ -99,7 +102,7 @@ def jsonld(c):
 
 NAV = ('<nav class="nav"><div class="wrap nav__in">'
        '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
-       '<div class="nav__links"><a href="/">Index</a><a href="/methodology.html">Methodology</a>'
+       '<div class="nav__links"><a href="/">Index</a><a href="/skills/">Skills</a><a href="/methodology.html">Methodology</a>'
        '<a href="/pricing.html">Pricing</a><a href="/learn/">Learn</a><a href="/requests.html">Requests</a><a href="/about.html">About</a></div></div></nav>')
 FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         '<div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span>'
@@ -139,12 +142,18 @@ def summary(c):
     links = []
     if c.get("npm_pkg"): links.append('<a class="link" href="https://www.npmjs.com/package/' + esc(c["npm_pkg"]) + '">npm ↗</a>')
     if c.get("source_repo"): links.append('<a class="link" href="https://github.com/' + esc(c["source_repo"]) + '">source ↗</a>')
+    if c.get("homepage"): links.append('<a class="link" href="' + esc(c["homepage"]) + '" rel="noopener">homepage ↗</a>')
+    # the flywheel edge: every capability points at its category hub, which points back at its siblings.
+    # Without this the hubs are orphans that only the sitemap knows about.
+    cat = ('<p class="mono" style="font-size:.8rem"><b>Category:</b> <a class="link" href="/category/'
+           + esc(c["category"]) + '.html">' + esc(CAT.get(c["category"], c["category"]))
+           + " — see all ranked &rsaquo;</a></p>") if c.get("category") else ""
     return ('<div class="cap-hd"><a class="back" href="/">&lsaquo; The Index</a>'
             '<h1>' + esc(n) + '</h1>'
             '<div class="cid">' + esc(c["id"]) + ' · <span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
-            + works + install + verdict +
+            + works + cat + install + verdict +
             ('<ul class="prose" style="max-width:none">' + "".join(rows) + '</ul>' if rows else '') +
             ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else ''))
 
@@ -170,18 +179,23 @@ def page(c, gen):
         '<meta property="og:title" content="' + esc(title) + '">\n'
         '<meta property="og:description" content="' + d + '">\n'
         '<meta property="og:url" content="' + url + '">\n'
-        '<meta name="twitter:card" content="summary">\n'
+        '<meta property="og:image" content="https://tashan.sh/assets/og.png">\n'
+        '<meta property="og:image:width" content="1200">\n'
+        '<meta property="og:image:height" content="630">\n'
+        '<meta name="twitter:card" content="summary_large_image">\n'
+        '<meta name="twitter:image" content="https://tashan.sh/assets/og.png">\n'
         '<meta name="twitter:title" content="' + esc(title) + '">\n'
         '<meta name="twitter:description" content="' + d + '">\n'
         '<link rel="icon" href="/assets/favicon.svg">\n'
+        '<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>\n'
-        '<link rel="stylesheet" href="/css/site.css?v=45">\n'
+        '<link rel="stylesheet" href="/css/site.css?v=' + AV + '">\n'
         + jsonld(c) + "\n</head>\n<body>\n" + NAV +
         '<main class="wrap" id="cap">' + summary(c) + "</main>\n" + FOOT +
         inline_data(c, gen) +                                    # this cap's full data, inline — no 1.2 MB fetch
-        '<script src="/js/terminal.js?v=45" defer></script>\n<script src="/js/site.js?v=45" defer></script>\n'
-        '<script src="/js/capability.js?v=45" defer></script>\n</body>\n</html>\n')
+        '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n'
+        '<script src="/js/capability.js?v=' + AV + '" defer></script>\n</body>\n</html>\n')
 
 def inline_data(c, gen):
     # a non-executable JSON island the detail page reads directly (CSP-safe). Escape </ so no early </script>.
@@ -193,9 +207,10 @@ def sitemap(caps):
     static = "".join("  <url><loc>" + BASE + u + "</loc></url>\n" for u in urls)
     caps_x = "".join('  <url><loc>' + BASE + "/capability/" + c["slug"] + '.html</loc>'
                      '<changefreq>weekly</changefreq></url>\n' for c in caps)
-    # learn/agents pages if present
+    # generated hubs + learn/agents pages if present. These are real indexable pages; leaving them out
+    # of the sitemap is how a whole content tier stays invisible to crawlers.
     extra = ""
-    for sub in ("learn", "agents"):
+    for sub in ("learn", "agents", "category", "skills"):
         d = os.path.join(ROOT, "web", sub)
         if os.path.isdir(d):
             for f in sorted(os.listdir(d)):
@@ -217,6 +232,14 @@ def main():
             c["co_used"] = [x for x in c["co_used"] if slugify(x["id"]) in have]
     for c in caps:
         open(os.path.join(OUT, c["slug"] + ".html"), "w").write(page(c, gen))
+    # Remove pages for capabilities that dropped out of the export (junk-filtered, deprecated, renamed).
+    # Without this they linger as orphans: still crawlable, in no sitemap, linked from nothing, and
+    # frozen at whatever asset version last wrote them.
+    stale = [f for f in os.listdir(OUT) if f.endswith(".html") and f[:-5] not in have]
+    for f in stale:
+        os.remove(os.path.join(OUT, f))
+    if stale:
+        print("removed %d orphaned page(s) no longer in the export" % len(stale))
     sitemap(caps)
     print("prerendered %d capability pages -> %s" % (len(caps), OUT))
     print("sitemap: %d capability URLs + core pages" % len(caps))

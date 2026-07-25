@@ -24,7 +24,11 @@ node tests/test_render.mjs || fail=1
 echo; echo "── firewall (ranking can't be bought) ─────────"
 python3 tests/test_firewall.py || fail=1
 
-# 4. analytics collector field-shaping
+# 4. generated tier: asset versioning, hubs, skills, llms.txt, orphan pages
+echo; echo "── hubs / SEO+GEO tier ────────────────────────"
+python3 tests/test_hubs.py || fail=1
+
+# 5. analytics collector field-shaping
 echo; echo "── analytics collector ────────────────────────"
 node functions/api/e.test.mjs 2>/dev/null || fail=1
 

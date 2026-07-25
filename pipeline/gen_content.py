@@ -11,10 +11,13 @@ This ships the FRAMEWORK + a few exemplar articles (EN + 中文). The full query
 as a separate pass — this file is the deterministic renderer + template those articles slot into.
 Stdlib only.
 """
-import json, os, re, html
+import json, os, re, html, sys
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import assets
+AV = str(assets.V)   # single source of truth for cache-busting
 DATA = os.path.join(ROOT, "web", "data", "capabilities.json")
 OUT = os.path.join(ROOT, "web", "learn")
 BASE = "https://tashan.sh"
@@ -27,7 +30,7 @@ def pretty(name):
 
 NAV = ('<nav class="nav"><div class="wrap nav__in">'
        '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
-       '<div class="nav__links"><a href="/">Index</a><a href="/methodology.html">Methodology</a>'
+       '<div class="nav__links"><a href="/">Index</a><a href="/skills/">Skills</a><a href="/methodology.html">Methodology</a>'
        '<a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a><a href="/about.html">About</a></div></div></nav>')
 FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         '<div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span>'
@@ -73,11 +76,16 @@ def head(a):
         '<meta name="theme-color" content="#0b0b0a">\n<link rel="canonical" href="' + url + '">\n'
         '<meta property="og:type" content="article">\n<meta property="og:title" content="' + esc(a["title"]) + '">\n'
         '<meta property="og:description" content="' + esc(a["desc"]) + '">\n<meta property="og:url" content="' + url + '">\n'
-        '<meta name="twitter:card" content="summary">\n'
+        '<meta property="og:image" content="https://tashan.sh/assets/og.png">\n'
+        '<meta property="og:image:width" content="1200">\n'
+        '<meta property="og:image:height" content="630">\n'
+        '<meta name="twitter:card" content="summary_large_image">\n'
+        '<meta name="twitter:image" content="https://tashan.sh/assets/og.png">\n'
         '<link rel="icon" href="/assets/favicon.svg">\n'
+        '<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>\n'
-        '<link rel="stylesheet" href="/css/site.css?v=45">\n' + ld + "\n</head>\n<body>\n" + NAV)
+        '<link rel="stylesheet" href="/css/site.css?v=' + AV + '">\n' + ld + "\n</head>\n<body>\n" + NAV)
 
 def article_html(a):
     secs = ""
@@ -93,7 +101,7 @@ def article_html(a):
         + secs + faq +
         '<p style="margin-top:var(--sp-12)"><a class="btn btn--ghost" href="/">See the ranked Index &rsaquo;</a></p>\n'
         "</article></main>\n" + FOOT +
-        '<script src="/js/terminal.js?v=45" defer></script>\n<script src="/js/site.js?v=45" defer></script>\n</body>\n</html>\n')
+        '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n')
 
 def top_table(caps, kind_filter=None, n=10):
     rows = [c for c in caps if c.get("trust") is not None and (kind_filter is None or kind_filter(c))][:n]
@@ -230,7 +238,7 @@ def index_page(A):
             '<div class="trust" style="margin-top:var(--sp-8)">' + cards + '</div></article></main>')
     a0 = {"slug": "index", "lang": "en", "title": "Learn — MCP & agent-skill guides",
           "desc": "Evidence-backed guides to MCP servers and agent skills — where they're stored, how to install them, and which are worth it."}
-    return head(a0) + body + FOOT + '<script src="/js/terminal.js?v=45" defer></script>\n<script src="/js/site.js?v=45" defer></script>\n</body>\n</html>\n'
+    return head(a0) + body + FOOT + '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n'
 
 def main():
     caps = json.load(open(DATA))["capabilities"]

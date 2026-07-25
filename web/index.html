@@ -10,14 +10,20 @@
   <meta property="og:description" content="The measured marketplace for AI capabilities. Buy what works — the ranking is evidence, not spend — and creators keep more.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tashan.sh/">
+  <meta property="og:image" content="https://tashan.sh/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="tashan — the index of AI capabilities, ranked by measured trust">
+  <meta name="twitter:image" content="https://tashan.sh/assets/og.png">
   <link rel="canonical" href="https://tashan.sh/">
   <link rel="icon" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="tashan — measure what actually works">
   <meta name="twitter:description" content="The measured marketplace for AI capabilities — the only store where the ranking can't be bought. Creators keep more.">
-  <link rel="stylesheet" href="/css/site.css?v=45">
+  <link rel="stylesheet" href="/css/site.css?v=59">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"tashan","url":"https://tashan.sh/","description":"The measured marketplace for AI capabilities — a store for MCP servers and agent-skills whose evidence-based ranking can't be bought.","slogan":"Measure what actually works."}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"tashan","url":"https://tashan.sh/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://tashan.sh/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does tashan score MCP servers and skills?","acceptedAnswer":{"@type":"Answer","text":"tashan computes a transparent Trust score from maintenance and freshness, gated by real adoption (npm downloads and public config reach). A separate LLM expertise-eval reads the actual capability and grades it deep / solid / thin / wrapper / slop. Every number is re-derivable from public sources."}},{"@type":"Question","name":"Does tashan sell the capabilities it scores?","acceptedAnswer":{"@type":"Answer","text":"Yes — tashan is a marketplace and creators keep the majority share. But you can never pay to rank: the cut is thin and flat (the same whether a capability scores 9 or 1), so the ranking stays evidence, not spend. There are no sponsored slots, and free and paid capabilities rank side by side."}},{"@type":"Question","name":"What is the difference between an MCP server and an agent skill?","acceptedAnswer":{"@type":"Answer","text":"An MCP server exposes tools to an AI agent over the Model Context Protocol; an agent skill is a folder with a SKILL.md that the agent loads on demand. tashan tracks and scores both in one unified capability model."}}]}</script>
@@ -27,7 +33,8 @@
     <a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>
     <div class="nav__links">
       <a href="/" aria-current="page">Index</a>
-      <a href="/methodology.html">Methodology</a>
+      <a href="/skills/">Skills</a>
+     <a href="/methodology.html">Methodology</a>
       <a href="/pricing.html">Pricing</a>
       <a href="/learn/">Learn</a><a href="/requests.html">Requests</a>
       <a href="/about.html">About</a>
@@ -128,10 +135,10 @@
   </div>
 </footer>
 
-  <script src="/js/ridge.js?v=45" defer></script>
-  <script src="/js/hero.js?v=45" defer></script>
-  <script src="/js/terminal.js?v=45" defer></script>
-  <script src="/js/site.js?v=45" defer></script>
-  <script src="/js/index.js?v=45" defer></script>
+  <script src="/js/ridge.js?v=59" defer></script>
+  <script src="/js/hero.js?v=59" defer></script>
+  <script src="/js/terminal.js?v=59" defer></script>
+  <script src="/js/site.js?v=59" defer></script>
+  <script src="/js/index.js?v=59" defer></script>
 </body>
 </html>

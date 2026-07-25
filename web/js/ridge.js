@@ -14,21 +14,32 @@
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var FONT_PX = 15, LINE = 17, CELLW = 9;
-  var RAMP = " .-:=+ic*oaeznxsuQO08B#%@";        // light → heavy ink coverage (ASCII-only: no missing-glyph tofu)
+  // Calm knobs — turn these, not the code, when the art reads busy or too faint.
+  // Ramp is deliberately SHORT and letterform-free: 'a e z n x Q B' read as text noise, not as tone.
+  var RAMP = " ..--=+*#";                       // light → heavy (ASCII-only: no missing-glyph tofu)
+  var CUT = 0.15;                                 // brightness below this draws NOTHING — THE sparseness knob
+  var GAMMA = 1.05;                               // >1 pushes mid-tones toward blank (calm), <1 fills in
+  // Keep leading spaces in RAMP to ONE: more, and the ramp starts blanking before CUT does, so turning CUT
+  // stops doing anything and the art silently goes empty.
   var SKY = 0.40;                                 // upper band kept clear (the headline lives there)
-  var DAY_MS = 240000;                            // a full day↔night in ~4 min
+  var DAY_MS = 600000;                            // a full day↔night in ~10 min (was 4 — the light
+                                                  // sweep is what pops glyphs; slower sweep = calmer)
 
   var W = 0, H = 0, cols = 0, rows = 0, running = true, prev = 0, t0 = 0, resolveStart = 0, dayStart = 0, curWind = 0.5;
-  var layers = [], mist = [];
+  var layers = [], mist = [], dith = null, lastB = null, lastGi = null;
+  var HYST = 0.045;  // a cell keeps its glyph until brightness moves this much. Too high and the art
+                     // freezes: nothing in the scene changes enough to ever cross it.
   var fcv = document.createElement("canvas"), fctx = fcv.getContext("2d", { willReadFrequently: true });
 
   // ---------- day/night: key-light tint + ambient + sun/moon phase (sky itself isn't drawn) ----------
+  // The whole cycle stays in the jade family — the art should read as the brand accent at any hour, not
+  // amber at 3pm. Variety comes from value/saturation across the day, not from leaving the hue.
   var SKYK = [
-    { p: 0.00, lit: [225, 165, 95],  amb: 0.80, orb: 1 },   // dawn (amber)
-    { p: 0.25, lit: [110, 235, 175], amb: 1.00, orb: 1 },   // noon (jade day)
-    { p: 0.50, lit: [230, 130, 80],  amb: 0.82, orb: 1 },   // dusk (orange)
-    { p: 0.75, lit: [140, 175, 230], amb: 0.66, orb: 0 },   // night (moonlit blue)
-    { p: 1.00, lit: [225, 165, 95],  amb: 0.80, orb: 1 }
+    { p: 0.00, lit: [118, 214, 162], amb: 0.82, orb: 1 },   // dawn (soft jade)
+    { p: 0.25, lit: [92, 240, 192],  amb: 1.00, orb: 1 },   // noon (jade-bright, = --jade-bright)
+    { p: 0.50, lit: [52, 224, 160],  amb: 0.86, orb: 1 },   // dusk (--jade proper)
+    { p: 0.75, lit: [64, 156, 146],  amb: 0.68, orb: 0 },   // night (dim teal-jade)
+    { p: 1.00, lit: [118, 214, 162], amb: 0.82, orb: 1 }
   ];
   function lerp(a, b, t) { return a + (b - a) * t; }
   function rgb(a, b, t) { return [Math.round(lerp(a[0], b[0], t)), Math.round(lerp(a[1], b[1], t)), Math.round(lerp(a[2], b[2], t))]; }
@@ -53,18 +64,22 @@
     var s = 1 + Math.random() * 90;
     // val = field brightness of the layer: 近山 bright & low (front) → 远山 dim & high (misty distance)
     layers = [
-      { crest: makeHill(s + 3, 0.9, 0.62, 0.055), lift: 0.08, val: 0.34 },   // 远山
-      { crest: makeHill(s + 7, 1.1, 0.75, 0.075), lift: 0.13, val: 0.60 },   // 中景
-      { crest: makeHill(s + 1, 1.3, 0.88, 0.100), lift: 0.18, val: 1.00 }    // 近山
+      { crest: makeHill(s + 3, 0.9, 0.56, 0.085), lift: 0.08, val: 0.34 },   // 远山
+      { crest: makeHill(s + 7, 1.1, 0.69, 0.105), lift: 0.13, val: 0.60 },   // 中景
+      { crest: makeHill(s + 1, 1.3, 0.82, 0.130), lift: 0.18, val: 1.00 }    // 近山
     ];
     // drifting mist wisps (soft additive blobs) — the living 云雾 of the scene
     mist = [];
-    for (var i = 0; i < 7; i++) mist.push({ x: Math.random(), y: 0.74 + Math.random() * 0.16, r: 0.10 + Math.random() * 0.14, ph: Math.random() * 6.28, sp: 0.5 + Math.random() * 0.9 });
+    // more, SMALLER wisps: a big soft blob brightens a whole region at once (a flash); small ones read as
+    // something travelling across the slope.
+    for (var i = 0; i < 7; i++) mist.push({ x: Math.random(), y: 0.74 + Math.random() * 0.16, r: 0.045 + Math.random() * 0.06, ph: Math.random() * 6.28, sp: 0.5 + Math.random() * 0.9 });
     var hr = new Date().getHours() + new Date().getMinutes() / 60;    // grounded in the visitor's real time-of-day
     dayStart = ((hr - 6 + 24) % 24) / 24;
   }
   function windAt(now) {   // slow, organic breeze (drives the mist drift)
-    var w = 0.5 + 0.30 * Math.sin(now * 0.00003) + 0.17 * Math.sin(now * 0.0001 + 1.3) + 0.11 * Math.sin(now * 0.00025 + 2.1);
+    // All terms are slow on purpose. The old 0.00025 term gusted on a ~25s cycle, which accelerated the
+    // mist hard enough to read as a pulse rather than a breeze.
+    var w = 0.5 + 0.30 * Math.sin(now * 0.00003) + 0.17 * Math.sin(now * 0.00007 + 1.3) + 0.09 * Math.sin(now * 0.00011 + 2.1);
     return w < 0.05 ? 0.05 : w;
   }
 
@@ -75,33 +90,54 @@
     fctx.fillStyle = "#000"; fctx.fillRect(0, 0, fw, fh);
     // mountains far→near (near paints over far = clean 前后 occlusion). Painted PER COLUMN so EACH column's
     // crest is the bright lit edge — a clear ridgeline — fading down to a dark valley base (contrast = shape).
+    var band = Math.max(2.2, fh * 0.11);   // crest-band thickness in ROWS — the density knob, independent of height
     for (var li = 0; li < layers.length; li++) {
       var L = layers[li], peak = Math.min(1, 0.62 + 0.38 * L.val);
+      // always-on life: a wave TRAVELLING along each ridge, not a uniform bob. Uniform motion lifts every
+      // cell at once, so they all cross the glyph threshold together and the layer flashes; a spatial phase
+      // makes the change arrive column by column — vegetation sweeping, not a strobe.
+      // Tuning history — the usable band is narrow, so change these by ~2x, not 10x:
+      //   0.010 amp x 0.000035 rate = frozen (a cell never crosses HYST)
+      //   0.030 amp x 0.00016  rate = too much
+      //   0.020 amp x 0.00008  rate = here. Crest travels ~1 row / 19s.
+      // Amplitude is safe at this level BECAUSE the phase is spatial — the stagger is what keeps it a
+      // sweep rather than a flash, not the smallness.
+      var ph = now * 0.00008 + li * 2.1;
       for (var c = 0; c < fw; c++) {
-        var y0 = (L.crest(c) - L.lift * env(c)) * fh;
+        var breathe = 0.020 * Math.sin(ph - c * 0.05);
+        var y0 = (L.crest(c) - L.lift * env(c) + breathe) * fh;
         if (y0 >= fh - 0.5) continue;
-        var g = fctx.createLinearGradient(0, y0, 0, fh);
+        // Gradient ends a FIXED number of rows below the crest, not at the canvas bottom — so raising a
+        // ridge moves it up without also thickening it. (Spanning to fh coupled height to density: a higher
+        // crest stretched the falloff and inked far more rows.) Past the last stop the gradient clamps to
+        // 0.005, i.e. under CUT, so the body below stays empty.
+        var g = fctx.createLinearGradient(0, y0, 0, y0 + band);
         g.addColorStop(0, "rgba(255,255,255," + peak.toFixed(3) + ")");
-        g.addColorStop(0.4, "rgba(255,255,255," + (peak * 0.42).toFixed(3) + ")");
-        g.addColorStop(1, "rgba(255,255,255,0.02)");
+        g.addColorStop(0.32, "rgba(255,255,255," + (peak * 0.30).toFixed(3) + ")");
+        g.addColorStop(0.70, "rgba(255,255,255," + (peak * 0.10).toFixed(3) + ")");
+        g.addColorStop(1, "rgba(255,255,255,0.005)");
         fctx.fillStyle = g; fctx.fillRect(c, y0, 1.02, fh - y0);
       }
     }
-    fctx.globalCompositeOperation = "lighter";
-    // key light: brighten the lit (sun/moon) side, ambient-scaled — this is what shifts with day/night
+    // key light: MULTIPLY, not add. Additive light lifts the empty sky/valley above CUT too, which inks the
+    // whole band with haze — the "busy" look. Multiplying shapes what's already there and keeps black black.
+    fctx.globalCompositeOperation = "multiply";
     var prog = dp < 0.5 ? dp / 0.5 : (dp - 0.5) / 0.5;
     var ox = prog * fw, oy = fh * (0.30 - 0.18 * Math.sin(prog * Math.PI));
-    var lg = fctx.createRadialGradient(ox, oy, 0, ox, oy, fw * 0.75);
-    lg.addColorStop(0, "rgba(255,255,255," + (0.20 * sky.amb).toFixed(3) + ")"); lg.addColorStop(1, "rgba(255,255,255,0)");
+    var lg = fctx.createRadialGradient(ox, oy, 0, ox, oy, fw * 0.9);
+    var dim = Math.round(255 * (0.40 + 0.42 * sky.amb));    // unlit side falls off; ambient sets how far
+    lg.addColorStop(0, "#ffffff"); lg.addColorStop(1, "rgb(" + dim + "," + dim + "," + dim + ")");
     fctx.fillStyle = lg; fctx.fillRect(0, 0, fw, fh);
-    // mist: soft radial wisps drifting on the wind (additive → they read as brighter glyph clouds)
+    // mist: soft radial wisps drifting on the wind. Additive, but kept UNDER CUT on its own — so mist only
+    // becomes visible where it drifts across a slope, never as free-floating fog in empty sky.
+    fctx.globalCompositeOperation = "lighter";
     for (var i = 0; i < mist.length; i++) {
       var m = mist[i];
-      var mx = (((m.x + now * 0.0000045 * m.sp * (0.5 + wind)) % 1.16) - 0.08) * fw;
+      var mx = (((m.x + now * 0.0000030 * m.sp * (0.5 + wind)) % 1.16) - 0.08) * fw;
       var my = (m.y + 0.014 * Math.sin(now * 0.00003 * m.sp + m.ph)) * fh;
       var mr = m.r * fw;
       var mg = fctx.createRadialGradient(mx, my, 0, mx, my, mr);
-      mg.addColorStop(0, "rgba(255,255,255,0.13)"); mg.addColorStop(0.6, "rgba(255,255,255,0.05)"); mg.addColorStop(1, "rgba(255,255,255,0)");
+      mg.addColorStop(0, "rgba(255,255,255,0.10)"); mg.addColorStop(0.6, "rgba(255,255,255,0.03)"); mg.addColorStop(1, "rgba(255,255,255,0)");
       fctx.fillStyle = mg; fctx.fillRect(mx - mr, my - mr, mr * 2, mr * 2);
     }
     fctx.globalCompositeOperation = "source-over";
@@ -109,8 +145,10 @@
   }
 
   // stone (dim) → time-of-day key light (bright), by brightness
+  // Ramp to the lit color across the range cells ACTUALLY occupy (CUT..~0.6). The old divisor of 0.88 put a
+  // typical cell at t≈0.2 — still stone grey — which is why the field read brown instead of jade.
   function tint(b, sky) {
-    var base = [72, 74, 70], lit = sky.lit, t = Math.max(0, Math.min(1, (b - 0.12) / 0.88));
+    var base = [56, 76, 68], lit = sky.lit, t = Math.max(0, Math.min(1, (b - CUT) / 0.42));
     return "rgb(" + Math.round(base[0] + (lit[0] - base[0]) * t) + "," + Math.round(base[1] + (lit[1] - base[1]) * t) + "," + Math.round(base[2] + (lit[2] - base[2]) * t) + ")";
   }
 
@@ -121,28 +159,54 @@
     ctx.clearRect(0, 0, W, H);
     var data = paintField(now, sky, dp, wind);
     ctx.textBaseline = "top";
-    var lastW = -1, drift = now * 0.00022;                      // texture slides slowly (alive, not flickering)
+    var lastW = -1;
     for (var r = Math.floor(rows * SKY) - 2; r < rows; r++) {   // skip the clear upper band entirely
       if (r < 0) r = 0;
       var rowBase = r * LINE, ri = r * cols;
       for (var c = 0; c < cols; c++) {
         var b = data[(ri + c) * 4] / 255;                       // grayscale → brightness
-        if (b <= 0.05) continue;
-        // dither: a little drifting per-cell noise breaks the smooth iso-brightness rows into organic
-        // texture (kills the horizontal +++ banding) and makes the glyphs shimmer as it slides
-        var h = Math.sin((c + drift) * 12.9898 + r * 78.233) * 43758.5453; h -= Math.floor(h);
-        var bb = (b + (h - 0.5) * 0.13) * ease;
-        if (bb <= 0.045) continue;
-        var gi = (Math.pow(bb, 0.82) * RAMP.length) | 0; if (gi >= RAMP.length) gi = RAMP.length - 1;
+        if (b <= CUT) continue;
+        var k = ri + c, bb = b + dith[k];
+        if (bb <= CUT) continue;
+        // Reveal fades ALPHA, never brightness. Scaling brightness by the ease meant every cell sat under
+        // CUT until the ease was nearly done, so the art popped in instead of resolving. Sweeps left→right.
+        var rv = ease >= 1 ? 1 : ease * 1.45 - (c / cols) * 0.45;
+        if (rv <= 0) continue; else if (rv > 1) rv = 1;
+        // hysteresis: hold the glyph unless brightness really moved. Without this, mist drifting a fraction
+        // of a cell tips a whole run of cells across a ramp step at once and the ridge twinkles.
+        // ...and jitter the threshold per cell, or every cell at a similar brightness snaps on the SAME
+        // frame — that synchronized snap is what reads as the mountain flashing rather than a sweep.
+        var gi, hy = HYST + dith[k] * 1.6;
+        if (lastB[k] >= 0 && Math.abs(bb - lastB[k]) < hy) {
+          gi = lastGi[k];
+        } else {
+          gi = (Math.pow(bb, GAMMA) * RAMP.length) | 0; if (gi >= RAMP.length) gi = RAMP.length - 1;
+          lastB[k] = bb; lastGi[k] = gi;
+        }
         var ch = RAMP[gi]; if (ch === " ") continue;
-        var wq = Math.round((230 + bb * 560) / 60) * 60;        // continuous weight, quantized so we re-set ctx.font rarely
+        var wq = 220 + gi * 60;                                 // weight follows the HELD glyph, so it can't pop on its own
         if (wq !== lastW) { ctx.font = wq + " " + FONT_PX + "px 'GeistMono', ui-monospace, monospace"; lastW = wq; }
-        ctx.globalAlpha = Math.min(1, 0.4 + 0.6 * bb);
+        ctx.globalAlpha = Math.min(1, 0.15 + 0.60 * bb) * rv;   // dim cells actually recede instead of floor-40%
         ctx.fillStyle = tint(bb, sky);
         ctx.fillText(ch, c * CELLW, rowBase);
       }
     }
     ctx.globalAlpha = 1;
+  }
+
+  // Per-cell dither, computed ONCE per size. It breaks the smooth iso-brightness rows into organic texture.
+  // It must be STATIC in time: the hash is chaotic, so advancing it even slightly re-randomizes every cell
+  // each frame and the whole field boils like TV static. That flicker — not the density — is what reads as
+  // busy and cheap. With it frozen, the only motion left is the real scene: slow mist, slower light.
+  function makeDither() {
+    dith = new Float32Array(cols * rows);
+    lastB = new Float32Array(cols * rows).fill(-1); lastGi = new Int8Array(cols * rows);
+    for (var r = 0; r < rows; r++) {
+      for (var c = 0; c < cols; c++) {
+        var h = Math.sin(c * 12.9898 + r * 78.233) * 43758.5453;
+        dith[r * cols + c] = (h - Math.floor(h) - 0.5) * 0.05;
+      }
+    }
   }
 
   function resize() {
@@ -151,16 +215,17 @@
     CELLW = Math.max(6, ctx.measureText("M").width);
     cols = Math.ceil(W / CELLW); rows = Math.ceil(H / LINE);
     fcv.width = cols; fcv.height = rows;
+    makeDither();
   }
 
   function render(now) {
     if (!running) return;
     requestAnimationFrame(render);
-    if (now - prev < 42) return;            // ~24fps (the per-cell font set makes this the right budget)
+    if (now - prev < 55) return;            // ~18fps — enough for the sweep to read as continuous motion
     prev = now;
     if (!t0) t0 = now;
     if (!resolveStart) resolveStart = now;
-    var res = Math.min(1, (now - resolveStart) / 1400);
+    var res = Math.min(1, (now - resolveStart) / 1900);
     frame(now, res >= 1 ? 1 : 1 - Math.pow(1 - res, 3));   // resolve-from-nothing flourish on first paint
   }
 
@@ -177,6 +242,6 @@
   });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(init); else init();
 
-  // ponytail: dev self-check — the ramp is ASCII-only and ordered space→'@'
-  console.assert(RAMP[0] === " " && RAMP[RAMP.length - 1] === "@" && !/[^\x20-\x7e]/.test(RAMP), "ridge ramp");
+  // ponytail: dev self-check — ramp is ASCII-only, starts blank, and stays letterform-free (no alphabet soup)
+  console.assert(RAMP[0] === " " && !/[^\x20-\x7e]/.test(RAMP) && !/[a-zA-Z]/.test(RAMP), "ridge ramp");
 })();

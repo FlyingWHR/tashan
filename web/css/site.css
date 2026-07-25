@@ -93,12 +93,22 @@ img { max-width: 100%; display: block; }
 /* ---------- hero ---------- */
 .hero { position: relative; overflow: hidden; isolation: isolate;
   padding-block: clamp(var(--sp-16), 12vh, var(--sp-24)) var(--sp-12); }
+/* mask band opens higher + reaches lower than the ridge crests, or raising the mountains just clips them */
 #ridge { position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0 22%, #000 46%, #000 74%, transparent 100%);
-          mask-image: linear-gradient(180deg, transparent 0 22%, #000 46%, #000 74%, transparent 100%); }
+  -webkit-mask-image: linear-gradient(180deg, transparent 0 16%, #000 38%, #000 80%, transparent 100%);
+          mask-image: linear-gradient(180deg, transparent 0 16%, #000 38%, #000 80%, transparent 100%); }
 .hero__in { position: relative; z-index: 1;
   /* soft dark halo so the copy stays legible over the living mountain behind it */
-  text-shadow: 0 1px 2px rgba(11,11,10,.6), 0 2px 22px rgba(11,11,10,.85); }
+  /* tight halo hugs each glyph (readability) + a wide soft one (separation). Doing the work here rather
+     than in the scrim keeps the mountain visible — a bigger scrim just erases the art. */
+  text-shadow: 0 1px 2px rgba(11,11,10,.95), 0 0 10px rgba(11,11,10,.9),
+               0 0 26px rgba(11,11,10,.8), 0 2px 34px rgba(11,11,10,.7); }
+/* A text-shadow only hugs the glyphs; the ridge still crowds the copy between lines. This is the real
+   shadow AREA — a wide scrim behind the hero text, sitting above the canvas but under the words. */
+.hero__in::before { content:""; position:absolute; z-index:-1; pointer-events:none;
+  left:-4%; right:0; top:-6%; bottom:-8%;
+  background: radial-gradient(52% 58% at 20% 46%,
+    rgba(11,11,10,.82) 0%, rgba(11,11,10,.52) 40%, rgba(11,11,10,.18) 68%, rgba(11,11,10,0) 100%); }
 .hero__eyebrow { font-family: var(--font-mono); font-size:.78rem; letter-spacing:.12em; text-transform:uppercase;
   color: var(--jade); margin: 0 0 var(--sp-6); display:flex; align-items:center; gap:.6rem; }
 .hero__eyebrow::before { content:""; width:22px; height:1px; background: var(--jade-line); display:inline-block; }
@@ -144,11 +154,12 @@ img { max-width: 100%; display: block; }
 }
 
 .btn { display:inline-flex; align-items:center; gap:.5em; padding:.7em 1.15em; border-radius: var(--radius-pill);
+  text-shadow:none;   /* buttons sit on their own fill — the hero's halo just muddies the label */
   font-size:.92rem; font-weight:500; transition: background .18s var(--ease), border-color .18s var(--ease), transform .12s var(--ease); }
 .btn--primary { background: var(--text); color:#000; }
 .btn--primary:hover { background:#fff; }
-.btn--ghost { border:1px solid var(--hairline); color: var(--text); }
-.btn--ghost:hover { border-color: var(--jade-line); background: var(--jade-dim); }
+.btn--ghost { border:1px solid var(--jade-line); color: var(--jade); }
+.btn--ghost:hover { border-color: var(--jade); background: var(--jade-dim); color: var(--jade-bright); }
 .btn:active { transform: translateY(1px); }
 
 /* ---------- section shell ---------- */
@@ -165,6 +176,15 @@ img { max-width: 100%; display: block; }
   transition: color .15s, border-color .15s, background .15s; }
 .chip:hover { color: var(--text); }
 .chip[aria-pressed="true"] { color:#000; background: var(--jade); border-color: var(--jade); font-weight:500; }
+.chip--on { color:#000; background: var(--jade); border-color: var(--jade); font-weight:500; }  /* static (paginated hubs) */
+
+/* ---------- generated hub pages (category / skills) ---------- */
+.muted { color: var(--text-faint); font-weight:400; font-size:.8em; font-family: var(--font-mono); }
+.note { color: var(--text-faint); font-size:.9rem; max-width:62ch; margin-top: var(--sp-4); }
+.skills { list-style:none; padding:0; margin: var(--sp-4) 0 0; max-width:none; }
+.skills li { padding: var(--sp-3) 0; border-bottom:1px solid var(--hairline); font-size:.94rem;
+  color: var(--text-dim); line-height:1.5; }
+.skills li b { color: var(--text); font-family: var(--font-mono); font-size:.9rem; margin-right:.4rem; }
 
 /* ---------- category catalog — measured cards (each previews its trust leader) ---------- */
 .catgrid { display:grid; grid-template-columns: repeat(auto-fill, minmax(172px, 1fr)); gap: var(--sp-3); }
