@@ -81,7 +81,15 @@ INDEXES = [
 ]
 
 def db():
-    con = sqlite3.connect(DB)
+    # 60s busy timeout: pipeline stages legitimately overlap (a long npm enrichment still writing while
+    # a plugin ingest opens), and the default behaviour is to fail instantly with "database is locked"
+    # and lose the whole run. WAL lets a reader work while a writer commits.
+    con = sqlite3.connect(DB, timeout=60)
+    con.execute("PRAGMA busy_timeout = 60000")
+    try:
+        con.execute("PRAGMA journal_mode = WAL")
+    except sqlite3.OperationalError:
+        pass                      # a concurrent writer may hold it; the busy_timeout still applies
     con.executescript(SCHEMA)
     have = {r[1] for r in con.execute("PRAGMA table_info(capabilities)")}
     for coldef in MIGRATE:
