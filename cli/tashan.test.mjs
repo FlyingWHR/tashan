@@ -54,3 +54,42 @@ assert.ok(!rm[0].cmd.includes("npx"), "remote has no fake npx command");
 assert.strictEqual(slugify("Pkg: Foo/Bar!"), "pkg-foo-bar");
 
 console.log("ok — CLI pure logic (search / top / find / install / slugify)");
+
+// ---- doctor ----------------------------------------------------------------
+import { stripVersion, identify, match, assess, collect } from "./doctor.mjs";
+const assertEq = (a, b, msg) => assert.deepStrictEqual(a, b, msg);
+
+// stripVersion: the bug that made every pinned server unmatchable. A numeric-only regex missed
+// "@latest", so chrome-devtools-mcp@latest never matched chrome-devtools-mcp.
+assertEq(stripVersion("chrome-devtools-mcp@latest"), "chrome-devtools-mcp", "strip @latest");
+assertEq(stripVersion("@playwright/mcp@latest"), "@playwright/mcp", "strip tag, keep scope");
+assertEq(stripVersion("@upstash/context7-mcp"), "@upstash/context7-mcp", "scoped, unversioned, untouched");
+assertEq(stripVersion("tavily-mcp@1.2.3"), "tavily-mcp", "strip semver");
+
+assertEq(identify({ command: "npx", args: ["-y", "tavily-mcp@1.0.0"] }).id, "tavily-mcp", "npx identity");
+assertEq(identify({ command: "docker", args: ["run", "ghcr.io/x/y"] }).id, "ghcr.io/x/y", "docker identity");
+assertEq(identify({ url: "https://mcp.example.com/sse" }).id, "mcp.example.com", "remote identity");
+assertEq(identify({}), null, "empty entry -> null");
+
+const ROWS = [
+  { name: "tavily", npm_pkg: "tavily-mcp", trust: 82, vitality: "active" },
+  { name: "deadthing", npm_pkg: "dead-mcp", trust: 20, vitality: "abandoned", gh_archived: 1 },
+  { name: "caveman", kind: "skill", trust: null, rated: false },
+];
+assertEq(match({ kind: "npm", id: "tavily-mcp" }, ROWS).name, "tavily", "npm match");
+assertEq(match({ kind: "skill", id: "caveman" }, ROWS).name, "caveman", "skill match");
+assertEq(match({ kind: "npm", id: "nope" }, ROWS), null, "no match -> null");
+
+assertEq(assess({}, null).level, "unknown", "unindexed -> unknown");
+assertEq(assess({}, ROWS[0]).level, "ok", "healthy -> ok");
+assertEq(assess({}, ROWS[1]).level, "alert", "archived -> alert");
+// an unrated row must NOT render as a green tick: we know it exists and nothing about its quality
+assertEq(assess({}, ROWS[2]).level, "unrated", "rated:false -> unrated, not ok");
+
+// a malformed config must be reported, never thrown — the tool is needed most when config is broken
+const bad = collect([{ client: "X", path: "/fake", key: "mcpServers" }], [],
+  () => "{ not json", () => true, () => []);
+assertEq(bad.problems.length, 1, "malformed config reported not thrown");
+assertEq(bad.found.length, 0, "nothing collected from a broken file");
+
+process.stdout.write("ok — doctor (identity / match / assess / malformed-config safety)\n");
