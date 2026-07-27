@@ -11,7 +11,7 @@ search snippets. Counts are what each site displayed on the day. LobeHub has its
 | Site | What it really is | Scale (displayed) | Per-item quality signal | Revenue |
 |---|---|---|---|---|
 | **LobeHub** | Agent runtime; catalog is supply | MCP **81,430** · Skills **332,962** · Agents **234,885** | 9-item hygiene checklist → F/B/A. **Skills: none** | Credits (consumption) |
-| **Glama** | Pure registry, deepest IA | **61,109** servers + connectors | **3 grades**: license / quality / maintenance | Unclear / gateway |
+| **Glama** | Registry + Inspector + **Gateway**; builds & runs every server | **61,109** servers · 9,970 connectors · **306,671 tools** | **Deepest in the field**: sandboxed execution, syscall/network behavioural analysis, open-source TDQS (6 dims/tool) + coherence + cohesiveness → license/quality/maintenance grades | $9–80/mo credits + hosting |
 | **MCP Market** | Skills marketplace + hub | Skills **334,042** | None visible | Sells skills |
 | **PulseMCP** | Curated directory, partner-first | **22,256**, "last update 5 hours ago" | Classification: Official/Reference/Community + **est. visitors/week** | Partnerships |
 | **Smithery** | **Hosted gateway** — they proxy traffic | 400k+ devs/mo (reported) | **98/100 + uptime + calls + latency + top clients** | Hosting/usage |
@@ -50,8 +50,15 @@ This is the finding that reframes the strategy.
   broken out by name (Claude Code 68,517 · Codex 42,737 · Cursor …). They can do this because they
   *proxy the traffic*. Nobody working from public metadata can reproduce it.
   **Limit:** it only exists for servers hosted through Smithery, and it is first-party and unauditable.
-- **Glama — three letter grades** per server: `license`, `quality`, `maintenance`. Closest in shape to
-  our multi-dimensional model.
+- **Glama — builds and runs the code, then grades the schema.** *Corrected 2026-07-27: I first described
+  this as "three unexplained letter grades". That was wrong — see `docs/COMPETITIVE-GLAMA.md`.* They
+  clone full git history, build each server (Dockerfile authored or AI-inferred) and execute it inside a
+  **Firecracker microVM**, observing syscalls and network for credential access, unexpected egress and
+  exfiltration signatures (findings published as Malicious/Risky). They then score every tool with
+  **TDQS** — six dimensions, published, **open-source**, grounded in two Feb-2026 arXiv papers — plus
+  tool-set coherence and server cohesiveness, with per-dimension gap analysis shown publicly. Over a
+  million scans in twelve months; re-scan on every commit. For remote connectors they add schema-drift
+  diffing and **prompt-injection detection in tool descriptions**.
 - **LobeHub — a 9-item packaging checklist** graded F(0–60)/B(60–80)/A(80–100): validated, ≥1 install
   method, ≥1 tool, has README, easy install, has LICENSE, has prompts, has resources, and
   **"Not Claimed by Owner"**. It measures tidiness, not life: a well-licensed, fully-documented,
@@ -113,11 +120,11 @@ to grant something access cares enormously about read-only vs write.
 |---|---|
 | LobeHub | Grade ignores adoption + liveness entirely; "Not Claimed by Owner" is a conflict written into the rubric; ratings are agent-generated on their own instruction ("always rate and comment"); three marketplaces = three taxonomies, so the same job is filed three different ways; detail pages are client-rendered skeletons (weak for crawlers/answer engines) |
 | Smithery | Only covers what they host; telemetry is first-party and unverifiable; a gateway has an interest in servers running through it |
-| Glama | Grades are unexplained letters; no adoption signal; enormous unfiltered corpus |
+| Glama | **No demand signal at all** — every grade describes the artifact, none asks whether anyone uses or keeps it; listing is opt-in and GitHub-OAuth-gated, so the deep analysis only reaches servers whose authors showed up; they earn from hosting the things they grade; MCP only, zero skills |
 | PulseMCP | Est. visitors is a proxy for the *site*, not the software; partner-gated API ("working directly with partners"); smallest curated corpus |
 | Agensi | Structural conflict — 30% of every sale, grading its own shelf; thin liquidity (found a **$19 skill with "0 installs"** displayed on its own page); only covers submitted inventory |
 | MCP Market | Pure volume, no measurement |
-| Everyone | **Nobody measures skills. Nobody publishes a method you can re-derive. Nobody publishes retention.** |
+| Everyone | **Nobody measures skills. Nobody measures demand and retention together. Nobody is disinterested.** (Note: "nobody publishes a re-derivable method" was my earlier claim and it is false — Glama's is open source and better documented than ours.) |
 
 ---
 
@@ -142,8 +149,9 @@ Five positions, ranked by how defensible they are:
    the only party with nothing to sell on the shelf. Say it once, plainly, and let readers check.
 4. **One catalog, one taxonomy.** Users have jobs, not artifact preferences. LobeHub needs three
    products merged to match this; Glama and PulseMCP don't carry skills at all.
-5. **Published method + published coverage.** Everyone else shows a number with no arithmetic behind it.
-   We show the formula *and* the honest denominator ("N of ~M known, from these sources, synced T").
+5. **Published coverage.** Not "published method" — Glama's method is open-source and better documented
+   than ours, so that ground is contested. What is still unclaimed is the honest denominator: "N of ~M
+   known, from these sources, synced T". Nobody states what they are missing.
 
 **Adopt (they're better, and cheap to match):** the dual agent/human surface with per-item `skill.md`;
 hosting model (local/remote/hybrid) as a facet; protocol capability facets (tools/resources/prompts);
