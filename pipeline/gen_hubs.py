@@ -36,6 +36,14 @@ def pretty(name):
     return re.sub(r"^mcp-", "", re.sub(r"^mcp-server-", "", re.sub(r"-mcp$", "",
         re.sub(r"^@modelcontextprotocol/server-", "", str(name)))))
 def slugify(cid): return re.sub(r"[^a-z0-9]+", "-", str(cid).lower()).strip("-")
+def clip(text, n):
+    """Truncate on a word boundary. Cutting mid-word ('Run flexible…', 'view det…', 'Moni…') reads as
+    broken output rather than as an abbreviation."""
+    t = (text or "").strip()
+    if len(t) <= n:
+        return t
+    cut = t[:n].rsplit(" ", 1)[0].rstrip(" ,.;:—-")
+    return (cut or t[:n]) + "…"
 
 NAV = ('<nav class="nav"><div class="wrap nav__in">'
        '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
@@ -90,15 +98,15 @@ def board(rows):
            '<th>Vitality</th><th class="num">Adoption</th><th>What it does</th></tr></thead><tbody>']
     for i, c in enumerate(rows):
         href = "/capability/" + c["slug"] + ".html"
-        d = (c.get("description") or "")[:110]
+        d = clip(c.get("description"), 110)
         kindlbl = {"skill": "skill"}.get(c.get("kind"), "server")
         out.append('<tr><td class="rank">' + (str(i + 1) if c.get("trust") is not None else "·") + '</td>'
                    '<td><a class="link" href="' + href + '">' + esc(pretty(c["name"])) + "</a>"
                    ' <span class="tag tag--' + kindlbl + '">' + kindlbl + "</span></td>"
-                   '<td class="num"><b>' + (str(c["trust"]) if c.get("trust") is not None
+                   '<td class="num"><b>' + (str(int(round(c["trust"]))) if c.get("trust") is not None
                                             else '<span class="unrated">not rated</span>') + "</b></td>"
                    "<td>" + esc(c.get("vitality") or "—") + "</td>"
-                   '<td class="num">' + (str(c["adoption"]) if c.get("adoption") is not None else "—") + "</td>"
+                   '<td class="num">' + (str(int(round(c["adoption"]))) if c.get("adoption") is not None else "—") + "</td>"
                    "<td>" + esc(d) + "</td></tr>")
     out.append("</tbody></table></div></div>")
     return "".join(out)

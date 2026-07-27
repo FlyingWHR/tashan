@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=63">
+  <link rel="stylesheet" href="/css/site.css?v=65">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Audit and choose AI capabilities with tashan","description":"Check the MCP servers and agent skills already installed on your machine, then find and install measured replacements.","step":[{"@type":"HowToStep","position":1,"name":"Audit what you already have","text":"Run npx tashan doctor. It reads your local agent config and reports what is deprecated, archived, abandoned, or shares a name with an official package. Nothing is uploaded."},{"@type":"HowToStep","position":2,"name":"Find something better","text":"Run npx tashan search <query>, or browse the Index by category. Results are ranked by a Trust score derived from public evidence."},{"@type":"HowToStep","position":3,"name":"Install it","text":"Run npx tashan add <name> to get the exact install command for your client — Claude Code, Cursor, Claude Desktop, Codex or plain npx."}]}</script>
 </head>
 <body>
@@ -39,7 +39,7 @@
         or one whose name shadows an official one. <strong>One command answers it.</strong></p>
     </header>
 
-    <section class="capsec">
+    <section class="capsec use-step">
       <div class="capsec__hd"><h2>1 · Audit your config</h2><span class="capsec__aside mono">nothing is uploaded</span></div>
       <pre class="install__snip"><code>npx tashan doctor</code></pre>
       <p class="capsec__sub">Reads the agent config on this machine — Claude Code, Claude Desktop, Cursor,
@@ -50,7 +50,7 @@
         <li><b class="lv-dim">·</b> &nbsp;catalogued but <a class="link" href="/methodology.html#unrated">not rated</a> — we know it exists and nothing about its quality</li>
         <li><b class="lv-dim">?</b> &nbsp;not in the Index at all — unmeasured, which is not the same as bad</li>
       </ul>
-      <div class="callout"><b>It is local, and there is nothing to opt out of.</b> <code>doctor</code> reads files
+      <div class="callout use-note"><b>It is local, and there is nothing to opt out of.</b> <code>doctor</code> reads files
         on your disk and compares them against a public JSON file. There is no account, no key, no beacon and no
         upload. If we ever add aggregate contribution it will be a separate, explicit command — and the rule we
         hold ourselves to is that <em>any data that feeds a score must be published</em>. A score computed from
@@ -59,7 +59,7 @@
         <code>npx tashan doctor || echo "stack needs a look"</code>. Add <code>--json</code> to pipe it.</p>
     </section>
 
-    <section class="capsec">
+    <section class="capsec use-step">
       <div class="capsec__hd"><h2>2 · Find something worth installing</h2></div>
       <pre class="install__snip"><code>npx tashan search database
 npx tashan top browser
@@ -72,7 +72,7 @@ npx tashan info context7</code></pre>
         Every row links to a dossier showing the arithmetic behind its score.</p>
     </section>
 
-    <section class="capsec">
+    <section class="capsec use-step">
       <div class="capsec__hd"><h2>3 · Install it</h2></div>
       <pre class="install__snip"><code>npx tashan add context7 --client claude</code></pre>
       <p class="capsec__sub">Prints the exact command or config block for <code>claude</code>, <code>cursor</code>,
@@ -80,7 +80,7 @@ npx tashan info context7</code></pre>
         website, so the terminal and the page never disagree.</p>
     </section>
 
-    <section class="capsec">
+    <section class="capsec use-step">
       <div class="capsec__hd"><h2>For maintainers</h2></div>
       <p class="capsec__sub">If you publish a capability, embed its measurement. The badge is generated from the
         same data as the Index and updates when the evidence does — including downward. That is the point of it.</p>
@@ -89,7 +89,7 @@ npx tashan info context7</code></pre>
         changes a score — see <a class="link" href="/methodology.html">the methodology</a>.</p>
     </section>
 
-    <section class="capsec">
+    <section class="capsec use-step">
       <div class="capsec__hd"><h2>For agents and machines</h2></div>
       <ul class="prose" style="max-width:none">
         <li><a class="link" href="/llms.txt"><code>/llms.txt</code></a> — the site as plain markdown: how the score
@@ -129,7 +129,7 @@ npx tashan info context7</code></pre>
   </div>
 </footer>
 
-  <script src="/js/terminal.js?v=63" defer></script>
-  <script src="/js/site.js?v=63" defer></script>
+  <script src="/js/terminal.js?v=65" defer></script>
+  <script src="/js/site.js?v=65" defer></script>
 </body>
 </html>

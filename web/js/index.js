@@ -230,7 +230,7 @@
         '<td><span class="fresh ' + fr.cls + '"' + (fr.title ? ' title="' + esc(fr.title) + '"' : '') + '>' + fr.txt + '</span></td>' +
         '<td><div class="sig' + (t == null ? ' sig--none' : '') + '">' + (t == null
           ? '<span class="unrated" title="Catalogued, not rated: its only maintenance evidence is the repository it lives in, which every skill in that repo shares. A grade of its own SKILL.md is what makes it rankable.">not rated yet</span>'
-          : '<span class="sig__val">' + t + '</span>') +
+          : '<span class="sig__val">' + Math.round(t) + '</span>') +
         '<span class="bar"><i style="width:' + bar + '%"></i></span></div></td>' +
         '</tr>';
     });

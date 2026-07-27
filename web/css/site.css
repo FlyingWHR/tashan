@@ -502,6 +502,9 @@ body { padding-bottom: 30px; }
 kbd { font-family: var(--font-mono); border:1px solid var(--hairline); border-bottom-width:2px;
   border-radius:4px; padding:0 .35em; color: var(--text-dim); font-size:.9em; }
 @media (max-width:720px){ .sl-i:nth-child(n+4), .sl-dim { display:none; } }
+/* The ⌘K hint survived the 720px rule and overflowed the fixed status bar on phones — where it is also
+   pointless, since there is no keyboard shortcut to press. Measured at 390px before removing. */
+@media (max-width:560px){ .sl-k { display:none; } .statusline { font-size:.7rem; } }
 /* command palette */
 .pal { position:fixed; inset:0; z-index:100; background: rgba(6,6,8,.72);
   backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
@@ -592,3 +595,32 @@ body.pal-open { overflow:hidden; }
 .legend li { padding: var(--sp-2) 0; color: var(--text-dim); font-size:.92rem; }
 .legend b { font-family: var(--font-mono); display:inline-block; width:1.2em; }
 .lv-alert { color: var(--red); } .lv-warn { color:#e3b341; } .lv-dim { color: var(--text-faint); }
+
+/* ---------- responsive repair (2026-07-28 UI pass) ----------
+   The nav gained a fifth link ("Use it") and stopped fitting at phone widths. A flex row that cannot
+   fit does not shrink — it overflows, which widens the document, which clips EVERY element on the page
+   to the right. The mobile capture showed body copy cut mid-word; the cause was up here, not in the
+   prose. Wrapping is preferred over horizontal scroll: five short labels read fine on two lines and a
+   scrolling nav hides destinations. */
+.nav__in { flex-wrap: wrap; row-gap: var(--sp-2); }
+.nav__links { flex-wrap: wrap; row-gap: var(--sp-1); min-width: 0; }
+@media (max-width: 30rem){
+  .nav__in { gap: var(--sp-2); }
+  .nav__links { gap: var(--sp-3); font-size: .82rem; }
+}
+/* belt and braces: nothing in normal flow may exceed the viewport */
+.wrap > * { min-width: 0; }
+pre, code, .install__snip { max-width: 100%; }
+
+/* ---------- /start: usage page polish ----------
+   Problems found in the capture: the h1 ran straight into the lede with no separation; body copy wrapped
+   at ~62ch while code blocks and callouts spanned the full 1130px, so the eye had two different column
+   widths on one page; and the privacy callout was visually louder than the instruction it annotates. */
+.phead__sub { margin-top: var(--sp-5); }
+.use-step { max-width: 60rem; }
+.use-step .install__snip { max-width: 46rem; }
+.use-step .capsec__sub { max-width: 46rem; }
+.use-note { max-width: 46rem; border-color: var(--hairline); background: var(--surface);
+  font-size: .88rem; color: var(--text-dim); }
+.use-note b { color: var(--text); }
+.legend { max-width: 46rem; }

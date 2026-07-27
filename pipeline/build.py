@@ -525,10 +525,24 @@ def export(con):
     # Everything the user can act on belongs in ONE catalog — a skill and an MCP server answer the same
     # question ("make my agent do X"), so splitting them by artifact type organises the site around our
     # pipeline instead of their job. Unrated rows come along; they are simply not ranked (see below).
-    rows = con.execute(f"SELECT {','.join(cols)} FROM capabilities "
-                       "WHERE trust IS NOT NULL OR kind = 'skill' "
-                       "ORDER BY trust DESC NULLS LAST, config_reach DESC, npm_downloads DESC "
-                       "LIMIT 3000").fetchall()
+    # TWO queries, deliberately. A single "trust IS NOT NULL OR kind='skill'" query ordered by trust and
+    # capped silently deleted an entire tier the moment enough rows gained a score: registry rows filled
+    # the slice and every unrated skill fell off the end, taking `catalogued` to zero. The ranked set and
+    # the catalogued set are different populations and must be selected separately.
+    RANK_CAP = 900
+    rows = con.execute(f"SELECT {','.join(cols)} FROM capabilities WHERE trust IS NOT NULL "
+                       "ORDER BY trust DESC, config_reach DESC, npm_downloads DESC "
+                       f"LIMIT {RANK_CAP + 300}").fetchall()          # buffer absorbs junk/dedup drops
+    # Catalogued: things we deliberately list without a score (skills and plugins with no per-item
+    # evidence). They are browsable and installable; they simply are not ranked.
+    # NOT filtered on trust: skills carry a stored trust that is meaningless (repo-level, all ~42.0) and
+    # is nulled in Python below. Filtering on it here excluded every skill by rank instead of by rule.
+    seen_ids = {r[0] for r in rows}
+    rows += [r for r in con.execute(
+        f"SELECT {','.join(cols)} FROM capabilities WHERE kind IN ('skill','plugin') "
+        "AND description IS NOT NULL AND description != '' "
+        "ORDER BY gh_stars DESC NULLS LAST, config_reach DESC LIMIT 1400").fetchall()
+        if r[0] not in seen_ids]
     # bare single-word generic names carry no identity in a ranking (registry ingest skips the scraper's filter)
     DENY = {"mcp", "server", "mcp-server", "run", "serve", "cli", "app", "main", "index",
             "stdio", "tools", "mcp-serve", "client", "core", "test", "demo"}
@@ -558,9 +572,25 @@ def export(con):
             return False  # scoped = real identity
         leaf = n.split("/")[-1].lower()
         return leaf in DENY
+    # Descriptions come from READMEs and manifests and arrive full of markup. One row on the Database hub
+    # rendered as a raw markdown image link — "[![smithery badge](https://…)](https://…)" — straight into
+    # the "what it does" column. Clean once here so every surface (board, hubs, dossiers, llms.txt, CLI,
+    # badges) benefits, rather than patching each renderer.
+    MD_IMG = re.compile(r"!\[[^\]]*\]\([^)]*\)")
+    MD_LINK = re.compile(r"\[([^\]]*)\]\([^)]*\)")
+    def clean_desc(d):
+        if not d:
+            return d
+        d = MD_IMG.sub("", d)                 # images carry no meaning in a one-line summary
+        d = MD_LINK.sub(r"\1", d)             # keep link text, drop the URL
+        d = re.sub(r"[`*_#>]+", "", d)        # inline emphasis / heading marks
+        d = re.sub(r"\s+", " ", d).strip()
+        return d or None
+
     caps = []
     for r in rows:
         o = dict(zip(cols, r))
+        o["description"] = clean_desc(o.get("description"))
         if junk(o):
             continue
         o["co_used"] = json.loads(o["co_used"]) if o["co_used"] else []
@@ -641,7 +671,7 @@ def export(con):
                                  "makes it rankable.")
         else:
             c["rated"] = c.get("trust") is not None
-    ranked = [c for c in caps if c.get("trust") is not None][:800]
+    ranked = [c for c in caps if c.get("trust") is not None][:RANK_CAP]
     catalogued = [c for c in caps if c.get("trust") is None]
     tot = con.execute("SELECT COUNT(*) FROM capabilities").fetchone()[0]
     enriched = con.execute("SELECT COUNT(*) FROM capabilities WHERE npm_downloads IS NOT NULL").fetchone()[0]
