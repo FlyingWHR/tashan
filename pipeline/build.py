@@ -529,20 +529,27 @@ def export(con):
     # capped silently deleted an entire tier the moment enough rows gained a score: registry rows filled
     # the slice and every unrated skill fell off the end, taking `catalogued` to zero. The ranked set and
     # the catalogued set are different populations and must be selected separately.
-    RANK_CAP = 900
+    RANK_CAP = 1150   # tuned empirically: the largest board that fits the 45 KB gz index budget
     rows = con.execute(f"SELECT {','.join(cols)} FROM capabilities WHERE trust IS NOT NULL "
                        "ORDER BY trust DESC, config_reach DESC, npm_downloads DESC "
                        f"LIMIT {RANK_CAP + 300}").fetchall()          # buffer absorbs junk/dedup drops
     # Catalogued: things we deliberately list without a score (skills and plugins with no per-item
     # evidence). They are browsable and installable; they simply are not ranked.
-    # NOT filtered on trust: skills carry a stored trust that is meaningless (repo-level, all ~42.0) and
-    # is nulled in Python below. Filtering on it here excluded every skill by rank instead of by rule.
+    # Each tier gets its OWN quota. Ordering one combined query by stars filled all 1400 slots with
+    # starred plugins, so skills (stars NULL, sorted last) never made the cut and `catalogued` went to
+    # zero — the same class of silent-tier-deletion bug as before, one layer down. Populations that are
+    # selected against different signals must not share a LIMIT.
     seen_ids = {r[0] for r in rows}
-    rows += [r for r in con.execute(
-        f"SELECT {','.join(cols)} FROM capabilities WHERE kind IN ('skill','plugin') "
-        "AND description IS NOT NULL AND description != '' "
-        "ORDER BY gh_stars DESC NULLS LAST, config_reach DESC LIMIT 1400").fetchall()
-        if r[0] not in seen_ids]
+    def take(where, order, limit):
+        out = [r for r in con.execute(
+            f"SELECT {','.join(cols)} FROM capabilities WHERE {where} "
+            f"ORDER BY {order} LIMIT {limit}").fetchall() if r[0] not in seen_ids]
+        seen_ids.update(r[0] for r in out)
+        return out
+
+    DESC_OK = "description IS NOT NULL AND description != ''"
+    rows += take(f"kind='plugin' AND {DESC_OK}", "gh_stars DESC NULLS LAST", 700)
+    rows += take(f"kind='skill'  AND {DESC_OK}", "config_reach DESC, name", 700)
     # bare single-word generic names carry no identity in a ranking (registry ingest skips the scraper's filter)
     DENY = {"mcp", "server", "mcp-server", "run", "serve", "cli", "app", "main", "index",
             "stdio", "tools", "mcp-serve", "client", "core", "test", "demo"}
@@ -563,8 +570,17 @@ def export(con):
     CANARY = re.compile(r"security research canary|\bcanary\b.*not for production"
                         r"|not for production use|placeholder package|name reservation|reserved name"
                         r"|do not (install|use) this package", re.I)
+    # Local paths and shell fragments scraped into the corpus as capability names — "/home/blyons/
+    # finances/main.ledger", "C:\\Users\\david\\OneDrive - Qolcom\\...", "cd cmd/mcp-server && go".
+    # None currently reach the export because they carry no trust, but that is luck, not a rule: one
+    # enrichment pass away from a score and they would be on the board.
+    PATHY = re.compile(r"^[/~]|^[A-Za-z]:[\\/]|\\\\|^(cd|source|export|sudo|bash|sh|python|node|go)\s"
+                       r"|&&|\.(jar|exe|ledger)$|/etc/|OneDrive", re.I)
+
     def junk(o):
         n = (o["npm_pkg"] or o["id"].split(":", 1)[-1] or "")
+        if PATHY.search(n) or PATHY.search(o.get("name") or ""):
+            return True
         blurb = (o.get("description") or "") + " " + (o.get("title") or "")
         if DEMO.search(blurb) or DEMO_NAME.search(n.split("/")[-1]) or CANARY.search(blurb):
             return True
@@ -587,10 +603,22 @@ def export(con):
         d = re.sub(r"\s+", " ", d).strip()
         return d or None
 
+    # Resolve the publisher ONCE here instead of re-deriving it in index.js, prerender.py and the CLI
+    # from a source_repo string each of them had to carry. Shipping the answer costs a short token;
+    # shipping the input cost 9 KB gzipped in the board index, which is 20% of its whole budget.
+    def official_of(pkg, repo):
+        t = ((pkg or "") + " " + (repo or "")).lower()
+        if re.search(r"modelcontextprotocol|anthropic", t): return "Anthropic"
+        if re.search(r"(^|[/@\s])openai", t): return "OpenAI"
+        if re.search(r"google|googleapis|gemini", t): return "Google"
+        if re.search(r"(^|[/@\s])microsoft|(^|/)azure", t): return "Microsoft"
+        return None
+
     caps = []
     for r in rows:
         o = dict(zip(cols, r))
         o["description"] = clean_desc(o.get("description"))
+        o["official"] = official_of(o.get("npm_pkg"), o.get("source_repo"))
         if junk(o):
             continue
         o["co_used"] = json.loads(o["co_used"]) if o["co_used"] else []
@@ -698,7 +726,7 @@ def export(con):
     # SLIM index — only the ~15 fields the board / ticker / ⌘K palette actually render. The heavy per-cap
     # fields (co_used, description, expertise_note, gh_topics, install, repo-health, community) are dropped;
     # detail pages carry those INLINE (prerender), so nothing downloads the 1.2 MB dossier at runtime.
-    SLIM = ["id", "slug", "name", "kind", "category", "npm_pkg", "source_repo", "registry_status",
+    SLIM = ["id", "slug", "name", "kind", "category", "npm_pkg", "official", "registry_status",
             "config_reach", "npm_downloads", "trust", "maintenance", "vitality",
             "expertise", "expertise_verdict", "npm_deprecated", "gh_archived", "rated"]  # NOT description: it is 104 KB gz of the index and the board never reads it
     slim = {k: payload[k] for k in ("generated_at", "method", "total_capabilities", "enriched_npm",

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""tashan — assign categories to skills so they live in the same taxonomy as everything else.
+"""tashan — assign a category to any capability that lacks one, so it can appear on a hub.
 
 A user browsing "Docs & Knowledge" wants every capability that does that job — an MCP server that reads
 Confluence AND a skill that writes docx. Leaving skills uncategorised kept them out of every category
@@ -46,8 +46,11 @@ RULES = [
                      r"summar|citation|changelog|tutorial|blog)\b"),
     ("data",         r"\b(data|analytic|dashboard|etl|excel|spreadsheet|chart|visuali[sz]|metric|"
                      r"statistic|pandas|dataset|scraping|report)\b"),
-    ("ai",           r"\b(llm|prompt|agent|subagent|model|eval|openai|anthropic|claude|gpt|inference|"
-                     r"context|memory|mcp|skill)\b"),
+    # NB: deliberately does NOT include bare claude/mcp/skill/agent. Almost every plugin is called
+    # "claude-something", so those tokens swallowed 2,295 of 3,633 rows into one bucket on the first
+    # run — a 63% shelf is not a classification. Kept to terms that actually denote AI *work*.
+    ("ai",           r"\b(llm|prompt-|subagent|fine-tun|eval|openai|anthropic|gpt|inference|"
+                     r"embedding|context-|memory|rag)\b"),
     ("productivity", r"\b(task|todo|calendar|schedul|project|jira|linear|notion|workflow|planning|plan|"
                      r"meeting|okr|standup|habit|productivity)\b"),
     ("devtools",     r"\b(git|github|gitlab|ci|cd|lint|test|debug|refactor|review|compil|build|"
@@ -56,10 +59,15 @@ RULES = [
 ]
 
 
+# Prefixes carried by nearly every plugin. Stripping them stops "claude-figma" reading as an AI tool
+# when it is plainly a design one.
+NOISE = re.compile(r"^(claude|cc|mcp|agent|ai)[-_]+")
+
 def classify(name, desc):
     """Name-anchored. `desc` is accepted for signature stability but deliberately unused — including it
     is what produced the wrong shelves above."""
     hay = re.sub(r"[_/]", "-", (name or "").lower())
+    hay = NOISE.sub("", hay)
     for cat, pat in RULES:
         if re.search(pat, hay):
             return cat
@@ -69,18 +77,26 @@ def classify(name, desc):
 def main():
     dry = "--dry-run" in sys.argv
     con = build.db()
+    # Plugins need this as much as skills do: the manifest's own `category` field only covers part of
+    # the vocabulary (CATMAP in ingest_plugins.py), so anything unmapped arrives uncategorised and then
+    # cannot appear on a category hub.
+    # ANY uncategorised capability, not just skills and plugins. Newly-enriched npm/registry rows arrive
+    # without a category too, and an uncategorised row cannot appear on a category hub — it is invisible
+    # to anyone browsing by job. The rules are name-anchored and work the same on a package name.
     rows = con.execute("SELECT id, name, title, description FROM capabilities "
-                       "WHERE kind='skill' AND (category IS NULL OR category='')").fetchall()
+                       "WHERE category IS NULL OR category=''").fetchall()
     tally, samples = {}, {}
     for cid, name, title, desc in rows:
-        cat = classify((name or "") + " " + (title or ""), desc)
+        # NAME ONLY. `title` holds the marketplace name for plugins ("claude-plugins-community"), so
+        # including it made every plugin look like an AI capability.
+        cat = classify(name, desc)
         tally[cat] = tally.get(cat, 0) + 1
         samples.setdefault(cat, []).append(name)
         if not dry:
             con.execute("UPDATE capabilities SET category=? WHERE id=?", (cat, cid))
     if not dry:
         con.commit()
-    print(f"{'would classify' if dry else 'classified'} {len(rows)} skills")
+    print(f"{'would classify' if dry else 'classified'} {len(rows)} capabilities")
     for cat, n in sorted(tally.items(), key=lambda kv: -kv[1]):
         print(f"  {cat:14} {n:4}   e.g. {', '.join(samples[cat][:4])[:78]}")
     if not dry:

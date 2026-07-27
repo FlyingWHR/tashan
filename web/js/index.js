@@ -292,7 +292,9 @@
     return fresh(c.npm_last_publish || c.gh_pushed || c.last_seen);
   }
 
-  function officialOrg(c) {
+  // resolved at export time (build.py) — the board no longer ships source_repo just to re-derive this
+  function officialOrg(c) { return c.official || null; }
+  function officialOrgLegacy(c) {
     var s = ((c.npm_pkg || "") + " " + (c.source_repo || "")).toLowerCase();
     if (/modelcontextprotocol|anthropic/.test(s)) return "Anthropic";
     if (/(^|[\/@\s])openai/.test(s)) return "OpenAI";

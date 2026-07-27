@@ -22,6 +22,11 @@ PUBLIC_SIGNAL = {
     "registry_status", "registry_updated", "in_registry", "in_configs",
     "gh_stars", "gh_forks", "gh_open_issues", "gh_pushed", "gh_contributors", "gh_last_release",
     "gh_license", "gh_topics", "gh_has_discussions", "gh_archived",
+    # `kind` is the artifact type (npm / remote / skill / plugin). It is public, structural, and carries
+    # no commercial meaning — the scorer reads it because plugins have no download telemetry and must
+    # take adoption from their own repo's stars instead. It decides WHICH public signal applies, never
+    # whether a capability is favoured.
+    "kind",
 }
 
 # Words that must NEVER appear inside compute_scores(): if commerce ever leaks into scoring, it shows up here.
