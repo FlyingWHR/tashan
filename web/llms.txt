@@ -57,21 +57,21 @@ Generated: 2026-07-27. Capabilities tracked: 1669 ranked. Every number below is 
 
 ## Categories
 
-- [Browser & Web](https://tashan.sh/category/browser.html) — 28 measured. Headless browsers, scraping, page automation, fetch. Top: chrome-devtools, firecrawl, trusty-squire.
-- [Search](https://tashan.sh/category/search.html) — 17 measured. Web search, retrieval, and answer engines. Top: tavily, server, exa-mcp-server.
-- [Database](https://tashan.sh/category/database.html) — 16 measured. SQL, NoSQL, vector stores, query & schema tools. Top: @supabase/mcp-server-supabase, @mokei/mcp-sqlite, read-only-local-mysql-mcp-server.
-- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 120 measured. Git, GitHub, code, testing, build & CI. Top: everything, codescene-mcp-server, @cyanheads/git-mcp-server.
-- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 33 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: azure, @cloudbase/cloudbase, hostinger-api.
-- [Files & Memory](https://tashan.sh/category/files.html) — 19 measured. Filesystem access, memory, knowledge graphs. Top: filesystem, memory, braincloud-mcp-helper.
-- [Data & Analytics](https://tashan.sh/category/data.html) — 37 measured. Pipelines, analytics, spreadsheets, BI. Top: altmetric, qsv-data-wrangling, sonar.
-- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 30 measured. Docs lookup, notes, wikis, context retrieval. Top: @upstash/context7, @notionhq/notion-mcp-server, @ankimcp/anki-mcp-server.
-- [Communication](https://tashan.sh/category/comms.html) — 25 measured. Slack, email, chat, calendars, meetings. Top: mcp, agent-comms, telegram-group-stats.
-- [Design](https://tashan.sh/category/design.html) — 34 measured. Figma, UI, images, creative & design tooling. Top: figma-developer, figma-console, mcp.
-- [AI & Agents](https://tashan.sh/category/ai.html) — 48 measured. Reasoning, agents, model & LLM orchestration. Top: sequential-thinking, mcp, context-mode.
-- [Finance & Crypto](https://tashan.sh/category/finance.html) — 38 measured. Payments, markets, blockchain, wallets. Top: sap, crypto-quant-signal, mcp.
-- [Productivity](https://tashan.sh/category/productivity.html) — 53 measured. Tasks, automation, workflows, personal tools. Top: mcp, server, atlassian.
-- [Security](https://tashan.sh/category/security.html) — 41 measured. Auth, secrets, scanning, identity. Top: mcp, scf, server.
-- [Other](https://tashan.sh/category/other.html) — 1130 measured. Everything not yet categorized. Top: smartbear, mcp, postman-mcp-server.
+- [Browser & Web](https://tashan.sh/category/browser.html) — 19 measured. Headless browsers, scraping, page automation, fetch. Top: chrome-devtools, firecrawl, mtop-devtools.
+- [Search](https://tashan.sh/category/search.html) — 22 measured. Web search, retrieval, and answer engines. Top: tavily, server, exa-mcp-server.
+- [Database](https://tashan.sh/category/database.html) — 23 measured. SQL, NoSQL, vector stores, query & schema tools. Top: @supabase/mcp-server-supabase, tmdb, @mokei/mcp-sqlite.
+- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 423 measured. Git, GitHub, code, testing, build & CI. Top: everything, smartbear, codescene-mcp-server.
+- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 47 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: azure, @cloudbase/cloudbase, hostinger-api.
+- [Files & Memory](https://tashan.sh/category/files.html) — 11 measured. Filesystem access, memory, knowledge graphs. Top: filesystem, memory, braincloud-mcp-helper.
+- [Data & Analytics](https://tashan.sh/category/data.html) — 97 measured. Pipelines, analytics, spreadsheets, BI. Top: server, powerbi-modeling, microsoft-fabric.
+- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 16 measured. Docs lookup, notes, wikis, context retrieval. Top: @upstash/context7, @notionhq/notion-mcp-server, @ankimcp/anki-mcp-server.
+- [Communication](https://tashan.sh/category/comms.html) — 23 measured. Slack, email, chat, calendars, meetings. Top: mcp, server, nitrosend.
+- [Design](https://tashan.sh/category/design.html) — 66 measured. Figma, UI, images, creative & design tooling. Top: figma-developer, figma-console, mcp.
+- [AI & Agents](https://tashan.sh/category/ai.html) — 30 measured. Reasoning, agents, model & LLM orchestration. Top: sequential-thinking, mcp, server.
+- [Finance & Crypto](https://tashan.sh/category/finance.html) — 79 measured. Payments, markets, blockchain, wallets. Top: savvly, blockrun, sap.
+- [Productivity](https://tashan.sh/category/productivity.html) — 663 measured. Tasks, automation, workflows, personal tools. Top: mcp, unleash, server.
+- [Security](https://tashan.sh/category/security.html) — 127 measured. Auth, secrets, scanning, identity. Top: mcp, ai-agent-firewall, codesherlock-mcp-server.
+- [Other](https://tashan.sh/category/other.html) — 23 measured. Everything not yet categorized. Top: cli, ytdl-rmcp, hashlock.
 
 ## Reference
 

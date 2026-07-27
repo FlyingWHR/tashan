@@ -143,6 +143,23 @@ check("home declares og:image", "og:image" in home)
 check("twitter card is large", "summary_large_image" in home)
 
 print()
+print("# classifier accuracy (regression guard)")
+# The categoriser is a trained model, so it can rot silently when features, priors or the label set
+# change. This asserts it still beats a floor measured on the same held-out split — the point is that a
+# change which drops accuracy fails here instead of quietly mis-shelving thousands of capabilities.
+import subprocess
+_r = subprocess.run([sys.executable, os.path.join(ROOT, "pipeline", "classify.py"), "--eval"],
+                    capture_output=True, text=True, cwd=ROOT,
+                    env={**os.environ, "PYTHONPATH": os.path.join(ROOT, "pipeline")})
+_m = re.search(r"margin\s+0\.0\s+accuracy\s+([\d.]+)%", _r.stdout)
+check("classifier --eval reports an accuracy", bool(_m), _r.stdout[-200:] or _r.stderr[-200:])
+if _m:
+    _acc = float(_m.group(1))
+    check(f"classifier accuracy >= 55% (is {_acc:.1f}%)", _acc >= 55.0,
+          "measured 62.9% when written; floor set below it to allow noise, not decay")
+
+print()
 print("=" * 46)
 print("hubs: %d/%d passed%s" % (ok, ok + fail, " · all green" if not fail else ""))
 sys.exit(1 if fail else 0)
+
