@@ -422,17 +422,26 @@ def months_since(iso):
 def compute_scores(con):
     rows = con.execute("SELECT id, config_reach, npm_downloads, npm_last_publish, npm_maintainers, "
                        "npm_versions, npm_deprecated, registry_status, gh_pushed, gh_last_release, "
-                       "gh_archived, gh_stars, gh_open_issues, gh_contributors, gh_has_discussions "
+                       "gh_archived, gh_stars, gh_open_issues, gh_contributors, gh_has_discussions, kind "
                        "FROM capabilities").fetchall()
     max_dl = max((r[2] or 0) for r in rows) or 1
     max_reach = max((r[1] or 0) for r in rows) or 1
     now_iso = datetime.now(timezone.utc).isoformat()
+    max_star = max((r[11] or 0) for r in rows) or 1
     for (cid, reach, dl, lastpub, maint, vers, dep, rstatus, gh_pushed, gh_release,
-         gh_arch, gh_stars, gh_issues, gh_contrib, gh_disc) in rows:
+         gh_arch, gh_stars, gh_issues, gh_contrib, gh_disc, kind) in rows:
         # ADOPTION: blend real npm downloads (log) + config reach (log), 0-100
         a_dl = math.log1p(dl or 0) / math.log1p(max_dl)
         a_reach = math.log1p(reach or 0) / math.log1p(max_reach)
         adoption = round(100 * (0.7 * a_dl + 0.3 * a_reach)) if (dl or reach) else None
+        # PLUGINS have no public download telemetry — the channel simply does not publish one. Stars on
+        # the plugin's OWN repository are the only public popularity signal, so they stand in for
+        # adoption here and NOWHERE else. Two guards make this honest: gh_stars is only populated when
+        # the repo hosts exactly one plugin (see ingest_plugins.py), so this can never be a marketplace's
+        # popularity wearing a plugin's name; and the methodology page states the substitution outright.
+        # A plugin with no per-item star count keeps adoption=None and stays unrated.
+        if adoption is None and kind == "plugin" and gh_stars:
+            adoption = round(100 * math.log1p(gh_stars) / math.log1p(max_star))
         # FRESHNESS: recency of the MOST RECENT public activity — npm publish OR git push OR release.
         # (a repo can be active on git but stale on npm, and vice-versa — take the freshest signal)
         acts = [months_since(x) for x in (lastpub, gh_pushed, gh_release)]

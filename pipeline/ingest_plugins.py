@@ -43,6 +43,17 @@ CAP = int(os.environ.get("PLUGIN_CAP", "1200"))
 SEED_MARKETPLACES = [
     ("anthropics/claude-plugins-official", "official"),
     ("anthropics/claude-plugins-community", "community"),
+    # Known-good standalone marketplaces. These are the ones people recommend to each other by name and
+    # then install directly — the exact population that was invisible to us. Seeding them explicitly
+    # means a rate-limited code search can never silently drop a capability we know is good; discovery
+    # is best-effort, this list is not. Each owns its repo, so its stars are a true per-plugin signal.
+    ("pbakaus/impeccable", "curated"),
+    ("DietrichGebert/ponytail", "curated"),
+    ("AvdLee/SwiftUI-Agent-Skill", "curated"),
+    ("Shopify/shopify-ai-toolkit", "curated"),
+    ("AgriciDaniel/claude-seo", "curated"),
+    ("bradautomates/claude-video", "curated"),
+    ("obra/superpowers", "curated"),
 ]
 
 # Disjoint-ish shards, because code search caps at 1000 results per query. Unioned and deduped by repo.
@@ -95,6 +106,30 @@ def discover():
     return list(repos)
 
 
+GH_RE = re.compile(r"github\.com[/:]([^/\s]+/[^/\s#?]+?)(?:\.git)?/?$")
+
+def home_repo(src, marketplace_repo):
+    """Where the plugin ACTUALLY lives — which is usually NOT the marketplace repo.
+
+    This distinction is the whole ballgame. `anthropics/claude-plugins-community` has 32,734 stars and
+    lists 2,269 plugins; attributing those stars to each plugin would repeat, at larger scale, exactly
+    the error that forced us to withhold ratings for 854 monorepo skills (all scoring an identical 42.0).
+    The manifest tells us the truth: 1,874 community plugins declare `source: {url: <own repo>}` and 391
+    declare `git-subdir` against a vendor repo. Only the handful using a relative "./" path genuinely
+    live in the marketplace repo."""
+    if isinstance(src, str):
+        return marketplace_repo if src.strip().startswith(".") else None
+    if not isinstance(src, dict):
+        return None
+    u = (src.get("url") or "").strip()
+    if not u:
+        return marketplace_repo
+    if re.match(r"^[\w.-]+/[\w.-]+$", u):        # already "owner/repo"
+        return u
+    m = GH_RE.search(u)
+    return m.group(1) if m else None
+
+
 def parse(manifest, repo):
     """A manifest declares one or more plugins. Returns [] on anything malformed — a broken manifest is
     not installable, so it is not a catalogue entry."""
@@ -123,6 +158,7 @@ def parse(manifest, repo):
             "homepage": p.get("homepage") or (owner.get("url") if isinstance(owner, dict) else None),
             "author": (auth or {}).get("name") if isinstance(auth, dict) else None,
             "repo": repo,
+            "home": home_repo(p.get("source"), repo),
             "marketplace": m.get("name") or repo.split("/")[-1],
         })
     return out
@@ -144,7 +180,10 @@ CATMAP = {
 }
 
 
-def upsert(con, p, gh_meta):
+def upsert(con, p, gh_meta, shared):
+    """shared=True means this repo hosts more than one plugin, so its stars are NOT a per-item signal.
+    Those rows carry the metadata but no stars, so scoring cannot mistake a vendor's repo popularity
+    for evidence about one plugin inside it."""
     cid = "plugin:" + p["repo"].lower() + "/" + re.sub(r"[^a-z0-9]+", "-", p["name"].lower()).strip("-")
     cat = CATMAP.get(p.get("category") or "", None)
     con.execute("""INSERT INTO capabilities
@@ -160,8 +199,9 @@ def upsert(con, p, gh_meta):
         gh_license=COALESCE(excluded.gh_license, capabilities.gh_license),
         gh_topics=COALESCE(excluded.gh_topics, capabilities.gh_topics),
         sources=excluded.sources, kind='plugin'""",
-      (cid, p["name"], p.get("marketplace"), p["description"], p["repo"], p.get("homepage"), cat,
-       gh_meta.get("stars"), gh_meta.get("pushed"), gh_meta.get("license"), ",".join(p.get("tags") or []),
+      (cid, p["name"], p.get("marketplace"), p["description"], p.get("home") or p["repo"], p.get("homepage"), cat,
+       (None if shared else gh_meta.get("stars")), gh_meta.get("pushed"), gh_meta.get("license"),
+       ",".join(p.get("tags") or []),
        "plugin-marketplace:" + (p.get("tier") or "discovered")))
 
 
@@ -172,54 +212,65 @@ def main():
         try: cache = json.load(open(CACHE))
         except Exception: cache = {}
 
-    con = build.db()
-    plugins = skipped = 0
-
-    # 1. seeded marketplaces (highest provenance, cheapest)
+    # ---- PASS 1: collect every plugin declaration, from seeds then the discovered tail ----
+    found = []
     for repo, tier in SEED_MARKETPLACES:
-        man = raw(repo)
+        man = cache.get("man:" + repo) or raw(repo)
         if not man:
             print(f"  {repo}: unreachable", flush=True); continue
-        r = gh("/repos/" + repo) or {}
-        meta = {"stars": r.get("stargazers_count"), "pushed": (r.get("pushed_at") or "")[:10] or None,
-                "license": ((r.get("license") or {}) or {}).get("spdx_id")}
+        cache["man:" + repo] = man
         got = parse(man, repo)
-        for pl in got:
-            pl["tier"] = tier
-            upsert(con, pl, meta)
-            plugins += 1
+        for pl in got: pl["tier"] = tier
+        found += got
         print(f"  {repo} [{tier}]: {len(got)} plugins", flush=True)
-        con.commit()
 
-    # 2. the long tail, discovered by manifest
-    repos = discover()[:CAP]
-    for i, repo in enumerate(repos):
-        if i and i % 100 == 0:
-            print(f"    {i}/{len(repos)} repos…", flush=True)
-            con.commit(); json.dump(cache, open(CACHE, "w"))
-        man = cache.get(repo, {}).get("manifest") if isinstance(cache.get(repo), dict) else None
-        meta = cache.get(repo, {}).get("meta") if isinstance(cache.get(repo), dict) else None
-        if man is None:
-            man = raw(repo)
-            if man is None:
-                skipped += 1; continue
-        if meta is None:
-            r = gh("/repos/" + repo) or {}
+    for repo in discover()[:CAP]:
+        man = cache.get("man:" + repo) or raw(repo)
+        if not man:
+            continue
+        cache["man:" + repo] = man
+        got = parse(man, repo)
+        for pl in got: pl["tier"] = "discovered"
+        found += got
+
+    # ---- PASS 2: how many plugins share each home repo? ----
+    # A repo hosting exactly one plugin gives per-item signals. A repo hosting several does not, and
+    # publishing its stars against each of them would be the marketplace-stars error in miniature.
+    counts = {}
+    for p in found:
+        if p.get("home"):
+            counts[p["home"]] = counts.get(p["home"], 0) + 1
+    solo = {r for r, n in counts.items() if n == 1}
+    print(f"  {len(found)} plugin declarations across {len(counts)} home repos "
+          f"({len(solo)} own their repo outright -> ratable)", flush=True)
+
+    # ---- PASS 3: fetch stars ONLY where they mean something, then upsert ----
+    con = build.db()
+    fetched = rated = 0
+    for i, p in enumerate(found):
+        home, is_solo = p.get("home"), p.get("home") in solo
+        meta = cache.get("meta:" + home) if home else None
+        if is_solo and meta is None:
+            r = gh("/repos/" + home) or {}
             meta = {"stars": r.get("stargazers_count"), "pushed": (r.get("pushed_at") or "")[:10] or None,
-                    "license": ((r.get("license") or {}) or {}).get("spdx_id"),
-                    "archived": 1 if r.get("archived") else 0}
-        cache[repo] = {"manifest": man, "meta": meta}
-        for p in parse(man, repo):
-            upsert(con, p, meta)
-            plugins += 1
+                    "license": ((r.get("license") or {}) or {}).get("spdx_id")}
+            cache["meta:" + home] = meta
+            fetched += 1
+            if fetched % 150 == 0:
+                print(f"    {fetched} repos fetched…", flush=True)
+                con.commit(); json.dump(cache, open(CACHE, "w"))
+        upsert(con, p, meta or {}, shared=not is_solo)
+        rated += 1 if (is_solo and (meta or {}).get("stars") is not None) else 0
     con.commit()
     json.dump(cache, open(CACHE, "w"))
+
     n = con.execute("SELECT COUNT(*) FROM capabilities WHERE kind='plugin'").fetchone()[0]
-    top = con.execute("SELECT name, gh_stars FROM capabilities WHERE kind='plugin' AND gh_stars IS NOT NULL "
-                      "ORDER BY gh_stars DESC LIMIT 8").fetchall()
-    print(f"ingested {plugins} plugin(s) from {len(repos)} repos ({skipped} unreachable); {n} plugins in DB")
-    for name, st in top:
-        print(f"    {st:>7} ★  {name}")
+    top = con.execute("SELECT name, gh_stars, source_repo FROM capabilities WHERE kind='plugin' "
+                      "AND gh_stars IS NOT NULL ORDER BY gh_stars DESC LIMIT 10").fetchall()
+    print(f"ingested {len(found)} declarations -> {n} plugins in DB; "
+          f"{rated} carry a per-plugin star count, {len(found)-rated} left unstarred (shared repo)")
+    for name, st, repo in top:
+        print(f"    {st:>7} \u2605  {name:32} {repo}")
     con.close()
 
 
