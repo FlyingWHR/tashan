@@ -2,7 +2,7 @@
 
 > The intelligence layer for AI capabilities. tashan scores MCP servers and agent skills on public evidence — npm downloads and publish cadence, GitHub activity, registry status, and how often a server appears in real public agent configs. Nobody can pay to change a score, rank, or listing; payment buys depth and tooling only.
 
-Generated: 2026-07-25. Capabilities tracked: 1240 ranked. Every number below is re-derivable from public sources.
+Generated: 2026-07-27. Capabilities tracked: 1240 ranked. Every number below is re-derivable from public sources.
 
 ## How the score works
 
@@ -16,29 +16,29 @@ Generated: 2026-07-25. Capabilities tracked: 1240 ranked. Every number below is 
 
 - [@upstash/context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) — Trust 94.0, active. MCP server for Context7
 - [chrome-devtools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) — Trust 93.0, active. MCP server for Chrome DevTools
-- [filesystem](https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html) — Trust 92.0, active. MCP server for filesystem access
+- [filesystem](https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html) — Trust 91.0, active. MCP server for filesystem access
 - [memory](https://tashan.sh/capability/pkg-modelcontextprotocol-server-memory.html) — Trust 85.0, active. MCP server for enabling memory for Claude through a knowledge graph
-- [@supabase/mcp-server-supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) — Trust 85.0, active. MCP server for interacting with Supabase
-- [sequential-thinking](https://tashan.sh/capability/pkg-modelcontextprotocol-server-sequential-thinking.html) — Trust 84.0, active. MCP server for sequential thinking and problem solving
+- [@supabase/mcp-server-supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) — Trust 85.0, active. MCP server for interacting with the Supabase platform
+- [sequential-thinking](https://tashan.sh/capability/pkg-modelcontextprotocol-server-sequential-thinking.html) — Trust 83.0, active. MCP server for sequential thinking and problem solving
 - [everything](https://tashan.sh/capability/pkg-modelcontextprotocol-server-everything.html) — Trust 83.0, active. MCP server that exercises all the features of the MCP protocol
-- [tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) — Trust 82.0, active. MCP server for advanced web search using Tavily
+- [tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) — Trust 81.0, active. MCP server for advanced web search using Tavily
 - [@cloudbase/cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) — Trust 80.0, active. 腾讯云开发 MCP Server，通过AI提示词和MCP协议+云开发，让开发更智能、更高效,当你在Cursor/ VSCode GitHub Copilot/WinSurf/CodeBuddy/Augment Code/Claude Code等AI编程工具里写代码时，它能自动帮你生成可直接部署的前后
 - [@notionhq/notion-mcp-server](https://tashan.sh/capability/pkg-notionhq-notion-mcp-server.html) — Trust 79.0, active. Official MCP server for Notion API
 - [firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) — Trust 75.0, active. MCP server for Firecrawl — search, scrape, and interact with the web. Supports both cloud and self-hosted instances. Features include web search, scra
 - [mcp](https://tashan.sh/capability/pkg-auth0-auth0-mcp-server.html) — Trust 74.0, active. Auth0 MCP Server: Manage Auth0 applications, APIs, actions, logs, and forms using natural language
 - [codescene-mcp-server](https://tashan.sh/capability/pkg-codescene-codehealth-mcp.html) — Trust 74.0, active. An MCP server that provides CodeScene Code Health analysis tools.
 - [hostinger-api](https://tashan.sh/capability/pkg-hostinger-api-mcp.html) — Trust 72.0, active. MCP server for Hostinger API
-- [kubernetes](https://tashan.sh/capability/pkg-mcp-server-kubernetes.html) — Trust 71.0, active. MCP server for interacting with Kubernetes clusters via kubectl
 - [server](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) — Trust 71.0, active. Real-time web search, reasoning, and research through Perplexity's API
 - [figma-developer](https://tashan.sh/capability/pkg-figma-developer-mcp.html) — Trust 70.0, active. Give your coding agent access to your Figma data. Implement designs in any framework in one-shot.
 - [figma-console](https://tashan.sh/capability/pkg-figma-console-mcp.html) — Trust 70.0, active. The most comprehensive MCP server for Figma — design tokens, variables, components, write tools, version history diff, accessibility audits, FigJam, S
-- [exa-mcp-server](https://tashan.sh/capability/pkg-exa-mcp-server.html) — Trust 70.0, active. A Model Context Protocol server with Exa for web search and web crawling. Provides real-time web searches with configurable tool selection, allowing u
-- [@localstack/localstack-mcp-server](https://tashan.sh/capability/pkg-localstack-localstack-mcp-server.html) — Trust 70.0, active. A LocalStack MCP Server providing essential tools for local cloud development & testing
+- [kubernetes](https://tashan.sh/capability/pkg-mcp-server-kubernetes.html) — Trust 70.0, active. MCP server for interacting with Kubernetes clusters via kubectl
 - [mcp](https://tashan.sh/capability/pkg-apideck-mcp.html) — Trust 70.0, active. Apideck Unified API MCP — 330 tools across 200+ SaaS connectors (accounting, CRM, HRIS, ATS).
+- [exa-mcp-server](https://tashan.sh/capability/pkg-exa-mcp-server.html) — Trust 69.0, active. A Model Context Protocol server with Exa for web search and web crawling. Provides real-time web searches with configurable tool selection, allowing u
 - [kubernetes-mcp-server](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) — Trust 69.0, active. Model Context Protocol (MCP) server for Kubernetes and OpenShift
+- [@localstack/localstack-mcp-server](https://tashan.sh/capability/pkg-localstack-localstack-mcp-server.html) — Trust 69.0, active. A LocalStack MCP Server providing essential tools for local cloud development & testing
 - [server](https://tashan.sh/capability/pkg-adbutler-mcp-server.html) — Trust 68.0, active. Manage AdButler campaigns, zones, ad items, VAST, and reports from Claude, ChatGPT, and Cursor.
-- [@ankimcp/anki-mcp-server](https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html) — Trust 66.0, active. MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.
 - [@cyanheads/git-mcp-server](https://tashan.sh/capability/pkg-cyanheads-git-mcp-server.html) — Trust 65.0, active. A secure and scalable Git MCP server enabling AI agents to perform comprehensive Git version control operations via STDIO and Streamable HTTP.
+- [@ankimcp/anki-mcp-server](https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html) — Trust 65.0, active. MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.
 - [atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) — Trust 64.0, active. MCP server for Atlassian (Confluence and Jira) integration
 - [@suekou/mcp-notion-server](https://tashan.sh/capability/pkg-suekou-mcp-notion-server.html) — Trust 64.0, active. AI-friendly MCP server for the Notion API
 - [sap](https://tashan.sh/capability/pkg-oobe-protocol-labs-sap-mcp-server.html) — Trust 64.0, active. Solana-native MCP gateway for SAP, DeFi tools, SNS identity, and x402 payments.
@@ -47,13 +47,13 @@ Generated: 2026-07-25. Capabilities tracked: 1240 ranked. Every number below is 
 - [mcp](https://tashan.sh/capability/pkg-vaaya-mcp.html) — Trust 64.0, active. Pay-per-call agent superpowers: media/video gen, product demos, research, GTM, scraping, compute.
 - [braincloud-mcp-helper](https://tashan.sh/capability/pkg-braincloud-mcp-helper.html) — Trust 64.0, active. Helper for brainCloud MCP that gives it local file access, enabling easy git sync of cloud code.
 - [obsidian-mcp-server](https://tashan.sh/capability/pkg-obsidian-mcp-server.html) — Trust 63.0, active. Read, write, search, and surgically edit Obsidian vault notes, tags, and frontmatter via MCP. STDIO or Streamable HTTP.
-- [raven](https://tashan.sh/capability/pkg-raven-mcp.html) — Trust 63.0, active. Design intelligence for AI-generated UI — principles, patterns, content, brand, design tokens.
+- [raven](https://tashan.sh/capability/pkg-raven-mcp.html) — Trust 63.0, active. Design intelligence for coding agents: audits, design systems, and a taste profile agents consult.
 - [mcp](https://tashan.sh/capability/pkg-chronary-mcp.html) — Trust 63.0, active. Calendar API for AI agents: events, availability, Google/Microsoft setup, scheduling, and iCal.
 - [mcp](https://tashan.sh/capability/pkg-spekoai-mcp.html) — Trust 63.0, active. Official Speko MCP server: voice AI routing and failover across STT, TTS, and V2V providers.
-- [mcp](https://tashan.sh/capability/pkg-aioproductoscom-mcp.html) — Trust 62.0, active. AIOProductOS spine over MCP — customers, revenue, feedback, work, analytics on one typed record.
 - [scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) — Trust 62.0, active. MCP server for the SCF Controls Platform — 83 tools for controls, evidence, risk, and TPRM.
 - [server](https://tashan.sh/capability/pkg-black-duck-mcp-server.html) — Trust 62.0, active. AI-powered security scanning using Black Duck Signal for vulnerability detection.
 - [mcp](https://tashan.sh/capability/pkg-aetherwealth-mcp.html) — Trust 62.0, active. Aether Wealth MCP for AI assistants: trades, alerts, market data, macro calendar & indicators.
+- [adr-analysis-server](https://tashan.sh/capability/pkg-mcp-adr-analysis-server.html) — Trust 61.0, active. MCP server for analyzing Architectural Decision Records and project architecture
 
 ## Categories
 
@@ -81,4 +81,4 @@ Generated: 2026-07-25. Capabilities tracked: 1240 ranked. Every number below is 
 
 ## Citing tashan
 
-Scores change as evidence changes; cite the date. Attribute as: tashan (tashan.sh), measured 2026-07-25. Full machine-readable export: https://tashan.sh/data/capabilities.json
+Scores change as evidence changes; cite the date. Attribute as: tashan (tashan.sh), measured 2026-07-27. Full machine-readable export: https://tashan.sh/data/capabilities.json

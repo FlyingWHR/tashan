@@ -102,14 +102,18 @@ def jsonld(c):
 
 NAV = ('<nav class="nav"><div class="wrap nav__in">'
        '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
-       '<div class="nav__links"><a href="/">Index</a><a href="/methodology.html">Methodology</a>'
-       '<a href="/pricing.html">Pricing</a><a href="/learn/">Learn</a><a href="/requests.html">Requests</a><a href="/about.html">About</a></div></div></nav>')
+       '<div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a>'
+       '<a href="/methodology.html">Methodology</a><a href="/learn/">Learn</a>'
+       '<a href="/about.html">About</a></div></div></nav>')
 FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         '<div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span>'
-        '<p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p>'
+        '<p class="footer__tag">The measurement layer for AI capabilities — MCP servers and agent skills, '
+        'measured on public evidence.</p>'
         '<p class="footer__meta" id="footMethod">public-signal v2</p></div>'
-        '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/learn/">Learn</a><a href="/requests.html">Requests</a></nav>'
-        '<nav class="footer__col"><p class="footer__h">Trust</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a></nav>'
+        '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a>'
+        '<a href="/start.html">Use it</a><a href="/learn/">Learn</a></nav>'
+        '<nav class="footer__col"><p class="footer__h">Trust</p><a href="/methodology.html">Methodology</a>'
+        '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>'
         '<nav class="footer__col"><p class="footer__h">Sources</p>'
         '<a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>'
         '<a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>'
@@ -148,6 +152,11 @@ def summary(c):
     cat = ('<p class="mono" style="font-size:.8rem"><b>Category:</b> <a class="link" href="/category/'
            + esc(c["category"]) + '.html">' + esc(CAT.get(c["category"], c["category"]))
            + " — see all ranked &rsaquo;</a></p>") if c.get("category") else ""
+    # every dossier offers the next action: check whether YOU are running this, and what else you run.
+    # without it a capability page is a dead end — the reader learns about one thing and leaves.
+    audit = ('<p class="mono" style="font-size:.8rem;margin-top:var(--sp-6)"><b>Already running this?</b> '
+             '<code>npx tashan doctor</code> checks your whole config against the Index — '
+             '<a class="link" href="/start.html">how it works &rsaquo;</a></p>')
     return ('<div class="cap-hd"><a class="back" href="/">&lsaquo; The Index</a>'
             '<h1>' + esc(n) + '</h1>'
             '<div class="cid">' + esc(c["id"]) + ' · <span class="tag">' + esc(c.get("kind") or "") + '</span>' +
@@ -155,7 +164,7 @@ def summary(c):
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
             + works + cat + install + verdict +
             ('<ul class="prose" style="max-width:none">' + "".join(rows) + '</ul>' if rows else '') +
-            ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else ''))
+            ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else '') + audit)
 
 def compact(n):
     n = n or 0
@@ -203,7 +212,7 @@ def inline_data(c, gen):
     return '<script type="application/json" id="cap-data">' + payload + "</script>\n"
 
 def sitemap(caps):
-    urls = ["/", "/methodology.html", "/pricing.html", "/about.html", "/requests.html"]
+    urls = ["/", "/start.html", "/methodology.html", "/about.html", "/pricing.html", "/requests.html"]
     static = "".join("  <url><loc>" + BASE + u + "</loc></url>\n" for u in urls)
     caps_x = "".join('  <url><loc>' + BASE + "/capability/" + c["slug"] + '.html</loc>'
                      '<changefreq>weekly</changefreq></url>\n' for c in caps)

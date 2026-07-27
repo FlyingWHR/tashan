@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Use tashan — check your stack, find what works</title>
+  <meta name="description" content="Audit the MCP servers and skills you already have with one command, find what's worth installing, and embed the measurement. No account, no telemetry, nothing uploaded.">
+  <meta name="theme-color" content="#0b0b0a">
+  <link rel="canonical" href="https://tashan.sh/start.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Use tashan — check your stack, find what works">
+  <meta property="og:description" content="npx tashan doctor audits the agent config you already have: what's dead, deprecated, or impersonating something official. Local only.">
+  <meta property="og:url" content="https://tashan.sh/start.html">
+  <meta property="og:image" content="https://tashan.sh/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="tashan — the index of AI capabilities, ranked by measured trust">
+  <meta name="twitter:image" content="https://tashan.sh/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css?v=63">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Audit and choose AI capabilities with tashan","description":"Check the MCP servers and agent skills already installed on your machine, then find and install measured replacements.","step":[{"@type":"HowToStep","position":1,"name":"Audit what you already have","text":"Run npx tashan doctor. It reads your local agent config and reports what is deprecated, archived, abandoned, or shares a name with an official package. Nothing is uploaded."},{"@type":"HowToStep","position":2,"name":"Find something better","text":"Run npx tashan search <query>, or browse the Index by category. Results are ranked by a Trust score derived from public evidence."},{"@type":"HowToStep","position":3,"name":"Install it","text":"Run npx tashan add <name> to get the exact install command for your client — Claude Code, Cursor, Claude Desktop, Codex or plain npx."}]}</script>
+</head>
+<body>
+  <nav class="nav"><div class="wrap nav__in">
+    <a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>
+    <div class="nav__links"><a href="/">Index</a><a href="/start.html" aria-current="page">Use it</a><a href="/methodology.html">Methodology</a><a href="/learn/">Learn</a><a href="/about.html">About</a></div>
+  </div></nav>
+
+  <main class="wrap">
+    <header class="phead">
+      <p class="hero__eyebrow">Use tashan</p>
+      <h1 class="phead__h">Start with the stack you already have.</h1>
+      <p class="phead__sub">Most advice tells you what to install. The more useful question is what you're
+        already running that shouldn't be there — a server the author archived, a package marked deprecated,
+        or one whose name shadows an official one. <strong>One command answers it.</strong></p>
+    </header>
+
+    <section class="capsec">
+      <div class="capsec__hd"><h2>1 · Audit your config</h2><span class="capsec__aside mono">nothing is uploaded</span></div>
+      <pre class="install__snip"><code>npx tashan doctor</code></pre>
+      <p class="capsec__sub">Reads the agent config on this machine — Claude Code, Claude Desktop, Cursor,
+        VS Code, Windsurf, and <code>~/.claude/skills/</code> — and matches every entry against the Index.</p>
+      <ul class="legend">
+        <li><b class="lv-alert">!</b> &nbsp;deprecated on npm, archived repo, or a name that shadows an official package</li>
+        <li><b class="lv-warn">~</b> &nbsp;no recent activity — looks abandoned</li>
+        <li><b class="lv-dim">·</b> &nbsp;catalogued but <a class="link" href="/methodology.html#unrated">not rated</a> — we know it exists and nothing about its quality</li>
+        <li><b class="lv-dim">?</b> &nbsp;not in the Index at all — unmeasured, which is not the same as bad</li>
+      </ul>
+      <div class="callout"><b>It is local, and there is nothing to opt out of.</b> <code>doctor</code> reads files
+        on your disk and compares them against a public JSON file. There is no account, no key, no beacon and no
+        upload. If we ever add aggregate contribution it will be a separate, explicit command — and the rule we
+        hold ourselves to is that <em>any data that feeds a score must be published</em>. A score computed from
+        numbers only we can see is exactly the thing this site exists to be an alternative to.</div>
+      <p class="capsec__sub">Exit code is <code>2</code> when something needs attention, so it drops into CI:
+        <code>npx tashan doctor || echo "stack needs a look"</code>. Add <code>--json</code> to pipe it.</p>
+    </section>
+
+    <section class="capsec">
+      <div class="capsec__hd"><h2>2 · Find something worth installing</h2></div>
+      <pre class="install__snip"><code>npx tashan search database
+npx tashan top browser
+npx tashan info context7</code></pre>
+      <p class="capsec__sub">Or browse in the page: <a class="link" href="/">the full Index</a>, filtered by
+        type, activity and depth — or jump straight to a category such as
+        <a class="link" href="/category/database.html">Database</a>,
+        <a class="link" href="/category/browser.html">Browser &amp; Web</a> or
+        <a class="link" href="/category/devtools.html">Dev Tools &amp; CI</a>.
+        Every row links to a dossier showing the arithmetic behind its score.</p>
+    </section>
+
+    <section class="capsec">
+      <div class="capsec__hd"><h2>3 · Install it</h2></div>
+      <pre class="install__snip"><code>npx tashan add context7 --client claude</code></pre>
+      <p class="capsec__sub">Prints the exact command or config block for <code>claude</code>, <code>cursor</code>,
+        <code>desktop</code>, <code>codex</code>, or plain <code>npx</code> — generated from the same logic as the
+        website, so the terminal and the page never disagree.</p>
+    </section>
+
+    <section class="capsec">
+      <div class="capsec__hd"><h2>For maintainers</h2></div>
+      <p class="capsec__sub">If you publish a capability, embed its measurement. The badge is generated from the
+        same data as the Index and updates when the evidence does — including downward. That is the point of it.</p>
+      <pre class="install__snip"><code>![tashan](https://tashan.sh/badge/pkg-upstash-context7-mcp.svg)</code></pre>
+      <p class="capsec__sub">Your slug is on your capability page. Nothing about a badge, a claim or a payment
+        changes a score — see <a class="link" href="/methodology.html">the methodology</a>.</p>
+    </section>
+
+    <section class="capsec">
+      <div class="capsec__hd"><h2>For agents and machines</h2></div>
+      <ul class="prose" style="max-width:none">
+        <li><a class="link" href="/llms.txt"><code>/llms.txt</code></a> — the site as plain markdown: how the score
+          works, the top capabilities, every category. Written to be read by a model, not rendered.</li>
+        <li><a class="link" href="/data/capabilities.json"><code>/data/capabilities.json</code></a> — the full
+          export, every field, no key required.</li>
+        <li><code>npx tashan search &lt;q&gt; --json</code> — the same data through the CLI, for scripting.</li>
+      </ul>
+      <p class="capsec__sub">Scores change as the evidence changes, so cite the date. Attribution:
+        <em>tashan (tashan.sh), measured &lt;date&gt;</em>.</p>
+    </section>
+
+    <p style="margin:var(--sp-16) 0 var(--sp-12)">
+      <a class="btn btn--primary" href="/">Browse the Index &rsaquo;</a>
+      <a class="btn btn--ghost" href="/methodology.html" style="margin-left:var(--sp-3)">How we measure &rsaquo;</a></p>
+  </main>
+
+  <footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__brand">
+      <span class="brand"><span class="brand__mark"></span>tashan</span>
+      <p class="footer__tag">The measurement layer for AI capabilities — MCP servers and agent skills, measured on public evidence.</p>
+      <p class="footer__meta" id="footMethod">public-signal v2</p>
+    </div>
+    <nav class="footer__col"><p class="footer__h">Explore</p>
+      <a href="/">The Index</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a></nav>
+    <nav class="footer__col"><p class="footer__h">Trust</p>
+      <a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>
+    <nav class="footer__col"><p class="footer__h">Sources</p>
+      <a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>
+      <a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>
+      <a href="https://github.com/" rel="noopener">GitHub ↗</a></nav>
+  </div>
+  <div class="wrap footer__bar">
+    <span>© 2026 SeroLabs, Inc.</span>
+    <span>Every score re-derivable from public evidence.</span>
+  </div>
+</footer>
+
+  <script src="/js/terminal.js?v=63" defer></script>
+  <script src="/js/site.js?v=63" defer></script>
+</body>
+</html>

@@ -571,3 +571,24 @@ body.pal-open { overflow:hidden; }
 .preview-banner b { color: #ffc94d; }
 .is-preview { opacity:.72; }
 .is-preview .btn { pointer-events:none; opacity:.5; }
+
+/* ---------- the three jobs (homepage) ----------
+   A visitor should not have to infer what this site does for them. Three cards, three real questions,
+   in the order people actually arrive with them — audit first, because it is the one thing nobody else
+   answers and it needs no prior knowledge of the catalog. */
+.section--jobs { padding-block: var(--sp-12) 0; }
+.jobs { display:grid; gap: var(--sp-4); grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 60rem){ .jobs { grid-template-columns: 1fr; } }
+.job { display:block; padding: var(--sp-6); border:1px solid var(--hairline); border-radius: var(--radius);
+  background: var(--surface); transition: border-color .18s var(--ease), background .18s var(--ease); }
+.job:hover { border-color: var(--jade-line); background: var(--surface-2); }
+.job__k { font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color: var(--text-faint); margin:0 0 var(--sp-3); }
+.job__h { font-size:1.06rem; font-weight:500; margin:0 0 var(--sp-2); letter-spacing:-.01em; }
+.job__d { font-size:.9rem; color: var(--text-dim); line-height:1.55; margin:0 0 var(--sp-4); }
+.job__cta { font-size:.82rem; color: var(--jade); margin:0; }
+
+/* doctor legend on /start — mirrors the CLI's own marks so the page and the terminal agree */
+.legend { list-style:none; padding:0; margin: var(--sp-4) 0 0; max-width:none; }
+.legend li { padding: var(--sp-2) 0; color: var(--text-dim); font-size:.92rem; }
+.legend b { font-family: var(--font-mono); display:inline-block; width:1.2em; }
+.lv-alert { color: var(--red); } .lv-warn { color:#e3b341; } .lv-dim { color: var(--text-faint); }

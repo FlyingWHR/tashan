@@ -30,14 +30,18 @@ def pretty(name):
 
 NAV = ('<nav class="nav"><div class="wrap nav__in">'
        '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
-       '<div class="nav__links"><a href="/">Index</a><a href="/methodology.html">Methodology</a>'
-       '<a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a><a href="/about.html">About</a></div></div></nav>')
+       '<div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a>'
+       '<a href="/methodology.html">Methodology</a><a href="/learn/">Learn</a>'
+       '<a href="/about.html">About</a></div></div></nav>')
 FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         '<div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span>'
-        '<p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p>'
+        '<p class="footer__tag">The measurement layer for AI capabilities — MCP servers and agent skills, '
+        'measured on public evidence.</p>'
         '<p class="footer__meta" id="footMethod">public-signal v2</p></div>'
-        '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/learn/">Learn</a><a href="/requests.html">Requests</a></nav>'
-        '<nav class="footer__col"><p class="footer__h">Trust</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a></nav>'
+        '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a>'
+        '<a href="/start.html">Use it</a><a href="/learn/">Learn</a></nav>'
+        '<nav class="footer__col"><p class="footer__h">Trust</p><a href="/methodology.html">Methodology</a>'
+        '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>'
         '<nav class="footer__col"><p class="footer__h">Sources</p>'
         '<a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>'
         '<a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>'
