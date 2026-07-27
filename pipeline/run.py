@@ -1,0 +1,86 @@
+#!/usr/bin/env python3
+"""tashan — the whole pipeline, one command.
+
+There were 16 scripts and the correct order existed only as prose in CLAUDE.md. That is the kind of
+weight that doesn't show up in a line count: every run needs a human to remember a sequence, and every
+forgotten step is a silent data bug. This is the order, in code.
+
+    python3 pipeline/run.py                 # the daily loop (incremental, cheap)
+    python3 pipeline/run.py --full          # full reconcile: re-walk every source
+    python3 pipeline/run.py --site          # site generation only (no network)
+    python3 pipeline/run.py --list          # show the stages and exit
+
+Every stage is idempotent and independently runnable — this schedules them, it does not hide them.
+Stages that need a key or a human (LLM grading) are marked optional and skipped with a note rather
+than failing the run.
+"""
+import argparse, os, subprocess, sys, time
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PY = sys.executable
+
+# (name, argv, phase, why) — phase: source | enrich | score | site
+STAGES = [
+    ("config-adoption", ["scraper/scrape.py"], "source",
+     "what people actually put in real public agent configs — the un-backfillable signal"),
+    ("skills",          ["pipeline/ingest_skills.py"], "source",
+     "every SKILL.md across the tracked source repos"),
+    ("registry+npm",    ["pipeline/build.py"], "source",
+     "official registry (incremental) + npm quality + scoring + export"),
+    ("metadata",        ["pipeline/enrich_meta.py"], "enrich",
+     "npm description / homepage / license backfill"),
+    ("categories",      ["pipeline/classify_skills.py"], "enrich",
+     "name-anchored category routing for skills (LLM path supersedes)"),
+    ("badges",          ["pipeline/gen_badges.py"], "site",
+     "embeddable SVGs — cast range"),
+    # NOT bump_assets here: a daily run must not increment the asset version. The data changes daily,
+    # the CSS/JS does not, and bumping would rewrite all ~3,000 generated pages every night for nothing.
+    # Bumping is a developer action for when assets actually change (pipeline/bump_assets.py).
+    ("pages",           ["pipeline/prerender.py"], "site", "capability pages + sitemap"),
+    ("content",         ["pipeline/gen_content.py"], "site", "learn articles"),
+    ("hubs",            ["pipeline/gen_hubs.py"], "site", "category hubs + llms.txt"),
+]
+SITE_ONLY = {"badges", "pages", "content", "hubs"}
+
+
+def run(name, argv, full):
+    cmd = [PY] + [os.path.join(ROOT, argv[0])] + argv[1:]
+    env = dict(os.environ)
+    if full:
+        env["REG_FULL"] = "1"
+    t0 = time.time()
+    print(f"\n\033[1m▸ {name}\033[0m  ({' '.join(argv)})", flush=True)
+    r = subprocess.run(cmd, cwd=ROOT, env=env)
+    dt = time.time() - t0
+    if r.returncode != 0:
+        print(f"  ✗ {name} failed ({r.returncode}) after {dt:.0f}s", flush=True)
+        return False
+    print(f"  ✓ {name} in {dt:.0f}s", flush=True)
+    return True
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--full", action="store_true", help="full reconcile instead of incremental")
+    ap.add_argument("--site", action="store_true", help="site generation only, no network")
+    ap.add_argument("--list", action="store_true", help="print the stages and exit")
+    a = ap.parse_args()
+
+    stages = [s for s in STAGES if (s[0] in SITE_ONLY if a.site else True)]
+    if a.list:
+        for name, argv, phase, why in STAGES:
+            print(f"  {phase:7} {name:16} {argv[0]:32} {why}")
+        return 0
+
+    print(f"tashan pipeline — {len(stages)} stages, {'FULL' if a.full else 'incremental'}")
+    failed = [name for name, argv, _, _ in stages if not run(name, argv, a.full)]
+    print()
+    if failed:
+        print(f"\033[31mfailed: {', '.join(failed)}\033[0m")
+        return 1
+    print("\033[32mall stages green\033[0m")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

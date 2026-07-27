@@ -1,0 +1,59 @@
+# tashan — the daily heartbeat.
+#
+# This exists to protect the only asset that compounds. `signal_history` records one trust/adoption
+# snapshot per capability per day; "added, then removed" is a verdict that can only be ACCUMULATED,
+# never backfilled. A competitor starting later cannot buy the missing days — but neither can we.
+#
+# Before this file the series had 3 days in it and had already missed two, because it only advanced
+# when a human happened to run the pipeline. That is not a moat, it is a hobby. Now it runs whether
+# anyone is watching or not.
+#
+# Deliberately light: no runners beyond ubuntu-latest, no services, no secrets other than the token
+# GitHub already provides. The pipeline is stdlib Python + the gh CLI, both preinstalled.
+
+name: daily
+
+on:
+  schedule:
+    - cron: "17 6 * * *"      # 06:17 UTC daily — off the hour, registries are quieter
+  workflow_dispatch:           # and runnable by hand
+
+permissions:
+  contents: write              # to commit the day's snapshot back
+
+concurrency:
+  group: daily
+  cancel-in-progress: false    # never interrupt a run mid-write; the DB is the source of truth
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the pipeline (incremental)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # scraper + registry ingest use the gh CLI
+        run: python3 pipeline/run.py
+
+      - name: Verify before publishing anything
+        run: bash tests/run.sh
+
+      - name: Commit the day's snapshot
+        run: |
+          git config user.name  "tashan-bot"
+          git config user.email "bot@tashan.sh"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no change today"
+          else
+            # the snapshot count is the headline: it is the thing that cannot be reconstructed later
+            DAYS=$(python3 -c "import sqlite3;print(sqlite3.connect('data/tashan.db').execute(\"select count(distinct substr(at,1,10)) from signal_history\").fetchone()[0])")
+            git commit -m "daily: measure ($DAYS days of retention history)"
+            git push
+          fi

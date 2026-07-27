@@ -7,16 +7,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```sh
-# Full data regen, in order (each step depends on the prior):
-python3 scraper/scrape.py            # config-adoption → data/capabilities.json (needs gh CLI auth)
-python3 pipeline/ingest_skills.py    # agent skills (SKILL.md) from public repos → kind='skill'
-python3 pipeline/build.py            # registry + npm → SQLite → web/data/capabilities.json
-python3 pipeline/enrich_meta.py      # npm description / homepage / license backfill (+ re-export)
-python3 pipeline/gen_badges.py       # embeddable SVGs → web/badge/<slug>.svg
+# THE pipeline. One command, correct order, every stage idempotent:
+python3 pipeline/run.py              # daily loop (incremental — registry delta, cached npm/skills)
+python3 pipeline/run.py --full       # full reconcile: re-walk every source
+python3 pipeline/run.py --site       # regenerate the site only, no network
+python3 pipeline/run.py --list       # show the stages
 
-# Site generation (after any data change) — one command does all of it and bumps the asset version:
-python3 pipeline/bump_assets.py      # ?v= bump + prerender + gen_content + gen_hubs
-python3 pipeline/bump_assets.py --check   # assert every ?v= on disk matches assets.V
+# Asset version — a DEVELOPER action, only when web/css or web/js changes. Never in the daily run
+# (it would rewrite ~3,000 generated pages nightly for nothing):
+python3 pipeline/bump_assets.py           # ?v= bump + prerender + gen_content + gen_hubs
+python3 pipeline/bump_assets.py --check   # assert every ?v= on disk matches assets.V (runs in the suite)
+
+# .github/workflows/daily.yml runs `run.py` + the test suite every day and commits the snapshot.
+# That workflow is not convenience — signal_history cannot be backfilled, so a day nobody runs the
+# pipeline is a hole in the only asset that compounds.
 
 # Preview the site locally (no build step):
 cd web && python3 -m http.server 4173 --bind 127.0.0.1   # → http://localhost:4173

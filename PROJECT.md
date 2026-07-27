@@ -10,12 +10,18 @@ and `README.md` (how to run). Everything below is current as of 2026-07-24.
 
 ## 1. What it is, in one breath
 
-There are ~thousands of MCP servers and millions of "skills," and almost no honest signal about which
-ones actually work. **tashan tracks the whole field and scores it on public evidence** — real adoption,
-how actively it's maintained, how fresh it is, and (uniquely) an LLM read of how good the actual
-*expertise* is. It is an **instrument**, not a directory and not a store. Closer to Consumer Reports /
-Bloomberg / Michelin than to npm or the GPT Store: trusted because it **measures**, independently, and
-**does not sell what it scores.**
+There are ~61,000–81,000 MCP servers and ~333,000 skills in the wild, and almost no honest signal about
+which ones actually work. **tashan is a measurement layer: it measures what people actually keep, and
+publishes the arithmetic.** Real adoption from public configs, how actively a thing is maintained, how
+fresh it is, and an LLM read of how good the actual *expertise* is.
+
+It is a **thin layer, not a destination** — not a store, not a runtime, not another directory. Closer to
+Consumer Reports than to npm or the GPT Store: trusted because it **measures**, independently, and
+**sells, hosts and runs none of what it scores.**
+
+**Say the denominator.** We hold ~1,240 capabilities against a field of tens of thousands. "Whole-field
+coverage" is an aspiration, not a fact, and claiming it is the same sin as any other unmeasured claim —
+publish `N of ~M known, from these sources, synced T` (see `docs/SOURCING.md` §0).
 
 ### The name (the whole thesis in three characters)
 **他山** (*tashan*), from **他山之石，可以攻玉** — *a stone from another mountain can polish your jade.*
@@ -33,8 +39,33 @@ grade — it structurally cannot publish honest evidence-based scores without ca
 competitor can add a downloads column in a weekend; it can't buy disinterest."
 
 Reinforced by two things a store can't copy:
-1. **Whole-field coverage** — we rank everything, not just opted-in for-sale supply.
+1. **Coverage beyond opted-in supply** — we can rank what nobody submitted and nobody sells.
 2. **Compounding, un-backfillable data** — retention/churn history from git needs *time* to accrue.
+
+### The strategy in one line: a thin layer, one niche dataset, maximum cast range
+
+The 2026-07-26 landscape sweep (`docs/MARKET.md`) killed the idea that scoring is itself the edge —
+**Smithery, Glama and LobeHub all ship a score.** What none of them has:
+
+- **The niche dataset.** What developers actually *keep in real public configs, over time.* Smithery has
+  runtime telemetry but only for servers it hosts; LobeHub has installs only inside its own app; Glama
+  and PulseMCP have crawl metadata. Nobody has the config corpus, and nobody can backfill it. It is also
+  **cheap to collect** — a code search and a git-history walk. No runtime, no proxy, no hosting.
+- **Disinterest.** Every one of them earns from the shelf: LobeHub and Smithery from consumption, Agensi
+  from a 30% cut. LobeHub's public rubric even docks a server for not claiming its listing. We earn from
+  none of it.
+- **A measurement of skills.** ~333,000 exist; not one carries a published quality grade anywhere.
+
+**Cast range is the distribution strategy.** A rating nobody sees at install time changes nothing, so the
+measurement must travel *off* the site: embeddable badges (in the maintainer's own README), `llms.txt`,
+the machine-readable export, the CLI, and eventually a subregistry endpoint serving scores under `_meta`
+so MCP hosts consume them natively (`docs/SOURCING.md` §6). We do not need traffic; we need the number
+to be present where the decision is made.
+
+**Stay thin.** The temptation is to answer LobeHub with more surface — a runtime, a marketplace, 650k
+listings. That trade loses: it costs the neutrality, which is the only asset a funded competitor cannot
+buy. One command runs the whole pipeline (`pipeline/run.py`); if a stage isn't feeding the dataset or
+its cast range, it shouldn't exist.
 
 **The firewall (absolute rule):** *You never pay to change a score, a rank, or a listing. You pay for
 depth, access, and tooling.* If a maintainer could pay to look better, the instrument is worthless.

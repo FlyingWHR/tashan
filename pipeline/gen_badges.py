@@ -11,6 +11,13 @@ OUT = os.path.join(ROOT, "web", "badge")
 os.makedirs(OUT, exist_ok=True)
 
 VCOLOR = {"deep": "#5cf0c0", "solid": "#34e0a0", "thin": "#8a8a93", "wrapper": "#f2604a", "slop": "#f2604a"}
+# The 他山之石 stone, as vector paths — same geometry as web/assets/favicon.svg and the --logo CSS var.
+# The badge is the highest cast-range artifact we ship (it renders inside other people's READMEs), so it
+# must carry the actual mark, not a generic ◆ that could be anyone's.
+MARK = ('<g transform="translate(7,4.2) scale(0.38)">'
+        '<path d="M17 4 L23 10 L29 22 L18 28 L5 24 L4 13 Z" fill="#34e0a0"/>'
+        '<path d="M17 4 L4 13 L14 15 Z" fill="#5cf0c0"/>'
+        '<path d="M17 4 L23 10 L29 22 L18 28 L14 15 Z" fill="#1f9e78"/></g>')
 CW = 6.6          # monospace char width at 11px
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 
@@ -21,7 +28,7 @@ def esc(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 def badge(trust, verdict):
-    left = "◆ tashan"
+    left = "  tashan"          # leading space reserves room for the vector mark
     right_score = str(int(trust))
     right = right_score + ("  " + verdict if verdict else "")
     lw = round(len(left) * CW + 16)
@@ -41,7 +48,7 @@ def badge(trust, verdict):
 <rect x="{lw}" width="{rw}" height="{H}" rx="4" fill="#0d0d10"/>
 <rect x="{lw}" width="4" height="{H}" fill="#0d0d10"/>
 <line x1="{lw}" y1="3" x2="{lw}" y2="17" stroke="rgba(233,162,59,.35)"/>
-<text x="8" y="14" font-family="{MONO}" font-size="11" font-weight="600"><tspan fill="#34e0a0">◆</tspan><tspan fill="#ededf0"> tashan</tspan></text>
+{MARK}<text x="21" y="14" font-family="{MONO}" font-size="11" font-weight="600"><tspan fill="#ededf0">tashan</tspan></text>
 <text x="{lw+8}" y="14" font-family="{MONO}" font-size="11" font-weight="600">{rtext}</text>
 </svg>'''
 
