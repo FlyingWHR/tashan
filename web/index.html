@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="tashan — measure what actually works">
   <meta name="twitter:description" content="The measurement layer for AI capabilities. We host nothing, sell nothing and run nothing — which is why the number means something.">
-  <link rel="stylesheet" href="/css/site.css?v=68">
+  <link rel="stylesheet" href="/css/site.css?v=71">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"tashan","url":"https://tashan.sh/","description":"The neutral measurement layer for AI capabilities. tashan measures MCP servers and agent skills on public evidence and sells none of them.","slogan":"Measure what actually works."}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"tashan","url":"https://tashan.sh/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://tashan.sh/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does tashan score MCP servers and skills?","acceptedAnswer":{"@type":"Answer","text":"tashan computes a transparent Trust score from maintenance and freshness, gated by real adoption (npm downloads and public config reach). A separate LLM expertise-eval reads the actual capability and grades it deep / solid / thin / wrapper / slop. Every number is re-derivable from public sources."}},{"@type":"Question","name":"Does tashan sell the capabilities it scores?","acceptedAnswer":{"@type":"Answer","text":"No. tashan sells nothing it measures, hosts nothing, and takes no cut of any capability. It is a measurement layer, not a store or a runtime — which is the point: every other index in this field either sells the listings, hosts the servers, or earns when you run them. Nothing you can buy, claim or sign up for moves a tashan score, and the scorer is asserted to read only public-signal columns in tests/test_firewall.py."}},{"@type":"Question","name":"What is the difference between an MCP server and an agent skill?","acceptedAnswer":{"@type":"Answer","text":"An MCP server exposes tools to an AI agent over the Model Context Protocol; an agent skill is a folder with a SKILL.md that the agent loads on demand. tashan tracks and scores both in one unified capability model."}}]}</script>
@@ -109,8 +109,8 @@
             <thead><tr>
               <th class="rank">#</th>
               <th>Capability</th>
-              <th class="num" title="Real npm weekly downloads, or distinct public repos when unpublished">Adoption</th>
-              <th class="num" title="Maintainers, release cadence, deprecation, registry status (0–100)">Maint</th>
+              <th class="num" title="Adoption score 0–100, with the evidence it came from underneath: npm weekly downloads, repository stars, or public configs/marketplaces that reference it">Adoption</th>
+              <th class="num" title="Maintainers, release cadence and freshness (0–100), scored only on the axes we can measure for that capability — never penalised for evidence that does not exist">Maint</th>
               <th title="Recency of the latest release / host-repo push">Fresh</th>
               <th class="num" title="Trust — maintenance + freshness, gated by adoption (see Methodology)">Trust</th>
             </tr></thead>
@@ -154,10 +154,10 @@
   </div>
 </footer>
 
-  <script src="/js/ridge.js?v=68" defer></script>
-  <script src="/js/hero.js?v=68" defer></script>
-  <script src="/js/terminal.js?v=68" defer></script>
-  <script src="/js/site.js?v=68" defer></script>
-  <script src="/js/index.js?v=68" defer></script>
+  <script src="/js/ridge.js?v=71" defer></script>
+  <script src="/js/hero.js?v=71" defer></script>
+  <script src="/js/terminal.js?v=71" defer></script>
+  <script src="/js/site.js?v=71" defer></script>
+  <script src="/js/index.js?v=71" defer></script>
 </body>
 </html>

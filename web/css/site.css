@@ -293,6 +293,9 @@ table.board__t { width:100%; border-collapse: collapse; font-size:.92rem; min-wi
 .bar > i { display:block; height:100%; background: linear-gradient(90deg, var(--jade-line), var(--jade)); border-radius:3px; }
 .sig--none .sig__val { color: var(--text-faint); }
 .unit { color: var(--text-faint); font-size:.72rem; }
+/* Adoption cell: score on top, the raw evidence it was derived from underneath. The evidence is the
+   provenance for a number that is otherwise unfalsifiable, so it stays on the row, not in a tooltip. */
+td.num .unit { display:block; line-height:1.25; white-space:nowrap; }
 .cap-desc { color: var(--text-dim); font-size:1rem; line-height:1.6; margin: var(--sp-4) 0 0; max-width: 62ch; }
 .cap-meta { color: var(--text-faint); font-size:.82rem; margin-top: var(--sp-6); }
 .cap-meta code { color: var(--text-dim); }

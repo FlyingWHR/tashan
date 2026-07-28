@@ -93,7 +93,8 @@
     });
   }
   function go() { var o = view[sel]; if (!o) return; location.href = o.kind === "page" ? o.href : capHref(o); }
-  function capHref(o) { return o.slug ? "/capability/" + o.slug + ".html" : "/capability.html?id=" + encodeURIComponent(o.id); }
+  // slug is derived, not shipped — see index.js capHref. Must match build.py slugify() byte for byte.
+  function capHref(o) { return "/capability/" + o.id.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") + ".html"; }
 
   // ---------- keys ----------
   document.addEventListener("keydown", function (e) {

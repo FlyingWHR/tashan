@@ -48,20 +48,30 @@ def static_checks():
     print("\n# structure")
     board = load_board()
     have = page_slugs()
-    want = {r["slug"] for r in board}
+    want = {slugify(r["id"]) for r in board}
 
-    # 1. every board row has a real page — no 404 on click (the bug we just fixed)
-    missing = [c["slug"] for c in bulk["capabilities"] if c.get("slug") and c["slug"] not in have] \
-              if "bulk" in dir() else [r["slug"] for r in board if r["slug"] not in have]
+    # 1. every board row has a real page — no 404 on click (the bug we just fixed).
+    # The slim index no longer SHIPS `slug`: it is exactly slugify(id), and a second copy of every id
+    # cost ~9 KB gz of a 45 KB budget. The board derives it in JS, so this now also proves the derived
+    # form still lands on a real file.
+    missing = [s for s in want if s not in have]
     check("every board row has a prerendered page", not missing,
           f"{len(missing)} rows 404 e.g. {missing[:3]}")
+
+    # 1b. the JS derivation must stay byte-identical to slugify() — if it drifts, EVERY listing 404s
+    # at once, and nothing else in this suite would notice because both sides here are Python.
+    JS_SLUG = '.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")'
+    for f in ("index.js", "terminal.js"):
+        src = open(os.path.join(WEB, "js", f), encoding="utf-8").read()
+        check(f"js/{f} derives the slug exactly as build.py slugify()", JS_SLUG in src,
+              "capHref no longer matches — listings would 404")
 
     # 2. no orphan pages. NOTE: "board" here is the SLIM index (the interactive leaderboard, capped for
     # download weight). Pages are generated from the BULK export, which is deliberately larger — static
     # HTML has no payload budget, so capping it was throwing away 3,148 scored capabilities that had
     # nowhere to live. The real invariant is pages == bulk export, not pages == board.
     bulk = json.load(open(os.path.join(WEB, "data", "capabilities.json")))
-    want = {c["slug"] for c in bulk["capabilities"] if c.get("slug")}
+    want = {slugify(c["id"]) for c in bulk["capabilities"]}
     orphans = have - want
     check("no orphan pages (board == prerendered set)", not orphans,
           f"{len(orphans)} orphans e.g. {sorted(orphans)[:3]}")
@@ -69,7 +79,7 @@ def static_checks():
     # 3. ONE catalog: a row either carries a trust score, or is explicitly marked unrated. What must never
     # happen is a row with no score and no explanation — that reads as a bug or a hidden zero. (This test
     # used to assert every row had a score, which was true only while the catalog held one artifact type.)
-    unexplained = [r["slug"] for r in board
+    unexplained = [r["id"] for r in board
                    if r.get("trust") is None and r.get("rated") is not False]
     check("every unrated row is explicitly marked unrated", not unexplained,
           f"{len(unexplained)} rows with no trust and no rated=false")

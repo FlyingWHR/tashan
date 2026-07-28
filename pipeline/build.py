@@ -419,6 +419,36 @@ def months_since(iso):
     try: return (datetime.now(timezone.utc) - datetime.fromisoformat(iso.replace("Z", "+00:00") if "T" in iso else iso + "T00:00:00+00:00")).days / 30.4
     except Exception: return None
 
+# How hard thin evidence discounts Trust. 0 = coverage ignored (a one-axis read can score as high as a
+# fully-measured one); 1 ≈ the old behaviour, where a capability measured on 35% of the axes lost ~65%.
+# SWEPT on real board composition (top-200 mix, and whether the 51,323★ plugin outranks a 422-downloads/wk
+# package), not chosen by feel:
+#     0.00  → plugins take 177 of the top 200; renormalising alone overshoots
+#     0.20  → 93 of 200; still lopsided
+#     0.30  → 78 npm / 61 remote / 52 plugin; impeccable 72 (#22) vs vaaya 64        <- chosen
+#     0.45  → impeccable 63 vs vaaya 64; the inversion this whole fix exists to kill is BACK
+#     0.60  → plugins gone from the top 200 entirely; the original pathology
+# Re-run the sweep before changing it: TASHAN_COVERAGE_W=x python3 -c "...compute_scores(db())".
+# This is a stopgap for missing inputs, not a permanent knob — every contributor/release count we fetch
+# for non-npm repos raises real coverage and shrinks the discount toward nothing on its own.
+COVERAGE_W = float(os.environ.get("TASHAN_COVERAGE_W", "0.30"))
+# Weight of the adoption axis inside coverage, relative to the 100 points of maintenance axes. Adoption
+# is the single most informative signal we have, so missing it should cost about as much as missing the
+# maintainer count and release cadence together.
+ADOPT_W = 60.0
+# Discount on star-derived adoption vs download-derived adoption. A weekly download is recurring use; a
+# star is a one-time bookmark that never decays — and this site's own hero copy promises "what people
+# KEEP … not stars". Treating them as identical (1.0) contradicted that and handed plugins 138 of the
+# top 200 purely because plugin repos carry huge star counts. Swept on board mix:
+#     1.0 -> 138 plugins in the top 200 (impeccable 78)
+#     0.9 -> 125 (76)
+#     0.8 -> 110 (73)   <- chosen: plugins well represented, neither channel dominating
+#     0.7 ->  95 (71)
+# Not a thumb on the scale for any capability: it is one weight applied to one evidence TYPE, stated
+# here and on the methodology page, and it moves no individual row relative to its peers.
+STAR_W = float(os.environ.get("TASHAN_STAR_W", "0.8"))
+
+
 def compute_scores(con):
     rows = con.execute("SELECT id, config_reach, npm_downloads, npm_last_publish, npm_maintainers, "
                        "npm_versions, npm_deprecated, registry_status, gh_pushed, gh_last_release, "
@@ -447,8 +477,12 @@ def compute_scores(con):
         # ran and impeccable (51,323★) scored the same as an unknown. Reach alone is a 1-3 valued signal
         # here; it cannot carry adoption by itself.
         if kind == "plugin":
+            # STAR_W discounts star-derived adoption against download-derived adoption. They are not the
+            # same evidence: a weekly download is recurring use, a star is a one-time bookmark that never
+            # decays — and this site's own claim is "what people KEEP … not stars". 1.0 treats them as
+            # equal, which is what the raw log-normalisation does.
             a_star = math.log1p(gh_stars or 0) / math.log1p(max_star)
-            adoption = round(100 * (0.7 * a_star + 0.3 * a_reach)) if (gh_stars or reach) else None
+            adoption = round(100 * STAR_W * (0.7 * a_star + 0.3 * a_reach)) if (gh_stars or reach) else None
         # FRESHNESS: recency of the MOST RECENT public activity — npm publish OR git push OR release.
         # (a repo can be active on git but stale on npm, and vice-versa — take the freshest signal)
         acts = [months_since(x) for x in (lastpub, gh_pushed, gh_release)]
@@ -474,21 +508,44 @@ def compute_scores(con):
         # finished != dead: don't let staleness alone bury a stable, still-loved tool
         if vitality == "stable" and freshness is not None:
             freshness = max(freshness, 55)
-        # MAINTENANCE: maintainers(>=2 good) + version cadence + freshness − deprecated/archived
-        m = 0.0; known = False
-        if maint is not None: m += min(1.0, maint / 3) * 40; known = True
-        if vers is not None: m += min(1.0, math.log1p(vers) / math.log1p(30)) * 25; known = True
-        if freshness is not None: m += freshness / 100 * 35; known = True
+        # MAINTENANCE: people + release cadence + freshness, RENORMALISED over the axes we can actually
+        # measure for this capability.
+        #
+        # THE BUG THIS FIXES. The three weights were fixed at 40/25/35 and a missing input scored 0, so
+        # anything not published to npm was capped at 35 however well maintained it was. impeccable
+        # (51,323★, pushed yesterday, listed by 2 marketplaces) scored exactly 35 and ranked BELOW
+        # @vaaya/mcp (422 downloads/wk, 31★), which reached 80 purely by having npm metadata to read.
+        # That is "not on npm" being scored as "badly maintained" — the exact thing this file promises
+        # never to do: unknown inputs stay unknown, they are never faked to 0.
+        #
+        # Renormalising ALONE overshoots the other way: one perfect axis would read 100/100 and every
+        # recently-pushed plugin would outrank properly-measured packages. So the fix is two-sided —
+        # renormalise the score over known weight, then discount TRUST by how much evidence backs it.
+        # Thin evidence costs a little; it no longer costs 65 points, and it cannot buy the top either.
+        m = w = 0.0
+        people = maint if maint is not None else gh_contrib   # npm maintainers, else real contributors
+        if people is not None: m += min(1.0, people / 3) * 40; w += 40
+        if vers is not None: m += min(1.0, math.log1p(vers) / math.log1p(30)) * 25; w += 25
+        if freshness is not None: m += freshness / 100 * 35; w += 35
         if dep: m *= 0.3
         if rstatus == "deprecated": m *= 0.3
         if gh_arch: m *= 0.3
-        maintenance = round(m) if known else None
+        maintenance = round(100 * m / w) if w else None
         # TRUST (v2, transparent): mostly maintenance+freshness gated by adoption; labelled, not final
         parts = [x for x in (maintenance, freshness) if x is not None]
         trust = None
         if parts:
             base = sum(parts) / len(parts)
-            trust = round(base * (0.6 + 0.4 * (adoption or 0) / 100)) if adoption is not None else round(base * 0.7)
+            # UNKNOWN ADOPTION MUST NOT BEAT KNOWN-POOR ADOPTION. The gate used to read 0.7 when adoption
+            # was None but 0.6 + 0.4*a/100 when it was measured — so a capability we knew nothing about
+            # outscored one we had measured as barely used. A 2-star registry server with no adoption
+            # signal tied @vaaya/mcp at Trust 64 exactly this way. Absence of evidence now sits at the
+            # same floor as evidence of absence, and costs coverage on top.
+            gate = 0.6 + 0.4 * (adoption or 0) / 100
+            # Coverage spans every axis Trust rests on — adoption included, since "we never found an
+            # adoption signal" is missing evidence in precisely the sense this discount exists for.
+            cov = (w + (ADOPT_W if adoption is not None else 0)) / (100.0 + ADOPT_W)
+            trust = round(base * gate * (1 - COVERAGE_W * (1 - cov)))
         con.execute("UPDATE capabilities SET adoption=?, freshness=?, maintenance=?, trust=?, "
                     "vitality=?, single_maintainer=?, updated_at=? WHERE id=?",
                     (adoption, freshness, maintenance, trust, vitality, single, now_iso, cid))
@@ -776,8 +833,13 @@ def export(con):
     # SLIM index — only the ~15 fields the board / ticker / ⌘K palette actually render. The heavy per-cap
     # fields (co_used, description, expertise_note, gh_topics, install, repo-health, community) are dropped;
     # detail pages carry those INLINE (prerender), so nothing downloads the 1.2 MB dossier at runtime.
-    SLIM = ["id", "slug", "name", "kind", "category", "npm_pkg", "official", "registry_status",
-            "config_reach", "npm_downloads", "trust", "maintenance", "vitality",
+    # `adoption` and `gh_stars` are here so the board can show the SCORE with its evidence underneath.
+    # Without them the Adoption column could only print raw downloads, which is not comparable across
+    # kinds and made a 422-downloads/wk package look bigger than a 51,323-star plugin.
+    # NO `slug`: it is exactly slugify(id), so the board derives it (see js capHref) instead of paying
+    # ~9 KB gz to ship a second copy of every id.
+    SLIM = ["id", "name", "kind", "category", "npm_pkg", "official", "registry_status",
+            "config_reach", "npm_downloads", "gh_stars", "adoption", "trust", "maintenance", "vitality",
             "expertise", "expertise_verdict", "npm_deprecated", "gh_archived", "rated"]  # NOT description: it is 104 KB gz of the index and the board never reads it
     slim = {k: payload[k] for k in ("generated_at", "method", "total_capabilities", "enriched_npm",
                                     "expertise_graded", "ranked", "catalogued", "measured", "note")}

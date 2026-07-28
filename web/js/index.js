@@ -189,7 +189,10 @@
     var ar = a.trust != null, br = b.trust != null;
     if (ar !== br) return ar ? -1 : 1;
     switch (state.sort) {
-      case "adoption": return (num(b.npm_downloads) || num(b.config_reach)) - (num(a.npm_downloads) || num(a.config_reach));
+      // Sort on the SCORE, not on raw evidence. `npm_downloads || config_reach` compared 422 weekly
+      // downloads against "2 marketplaces" as if they were one magnitude, so 422 always beat a
+      // 51,323-star plugin. The score is the only cross-kind-comparable number we have.
+      case "adoption": return num(b.adoption) - num(a.adoption);
       case "fresh": return recency(b) - recency(a);
       case "expertise": return (num(b.expertise) - num(a.expertise)) || (num(b.trust) - num(a.trust));
       case "maint": return num(b.maintenance) - num(a.maintenance);
@@ -303,14 +306,24 @@
     if (/(^|[\/@\s])microsoft|(^|\/)azure/.test(s)) return "Microsoft";
     return null;
   }
+  // The Adoption cell used to print RAW evidence — "422/wk" on one row, "2 repos" on the next — while
+  // Maint and Trust printed 0–100 scores. So the one column you might sort or compare on was the one
+  // column whose numbers meant different things per row, and 422 downloads looked bigger than the
+  // 51,323 stars behind the row under it. Show the SCORE (comparable, and the number that actually
+  // feeds Trust) with the raw evidence under it as provenance — publish the arithmetic, don't hide it.
+  function evidence(c) {
+    if (c.npm_downloads != null) return compact(c.npm_downloads) + "/wk";
+    if (c.gh_stars != null) return compact(c.gh_stars) + " ★";
+    // config_reach counts different evidence per kind and cannot carry one label: for an MCP server it
+    // is public agent configs that USE it; for a plugin it is marketplace manifests that LIST it.
+    if (c.config_reach) return fmt(c.config_reach) + (c.kind === "plugin" ? " marketplaces" : " repos");
+    return "";
+  }
   function adoption(c) {
-    if (c.npm_downloads != null) return compact(c.npm_downloads) + '<span class="unit">/wk</span>';
-    // config_reach counts different evidence per kind, so it cannot carry one label: for an MCP server
-    // it is public agent configs that USE it; for a plugin it is marketplace manifests that LIST it.
-    // Rendering both as "repos" quietly equated being used with being listed.
-    if (c.config_reach) return fmt(c.config_reach) +
-      '<span class="unit"> ' + (c.kind === "plugin" ? "marketplaces" : "repos") + '</span>';
-    return '<span class="num--dim">—</span>';
+    var ev = evidence(c);
+    if (c.adoption == null) return ev ? '<span class="num--dim">—</span><span class="unit">' + ev + '</span>'
+                                     : '<span class="num--dim">—</span>';
+    return String(c.adoption) + (ev ? '<span class="unit">' + ev + '</span>' : "");
   }
   function score(v) { return (v == null) ? '<span class="num--dim">—</span>' : String(v); }
   function num(v) { return v == null ? 0 : v; }
@@ -325,7 +338,10 @@
     return String(name).replace(/^@modelcontextprotocol\/server-/, "").replace(/-mcp$/, "").replace(/^mcp-server-/, "").replace(/^mcp-/, "");
   }
   // prefer the prerendered, indexable pretty URL; fall back to the client route
-  function capHref(c) { return c.slug ? "/capability/" + c.slug + ".html" : "/capability.html?id=" + encodeURIComponent(c.id); }
+  // slug is DERIVED, not shipped — it is exactly slugify(id) (build.py), and sending both cost ~9 KB gz
+  // of a 45 KB index for a string we can recompute in 40 bytes. Must stay byte-identical to build.py's
+  // slugify or every listing 404s; tests/test_site.py checks the two agree across the whole export.
+  function capHref(c) { return "/capability/" + c.id.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") + ".html"; }
   function compact(n) {
     if (n >= 1e6) return (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "M";
     if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 0 : 1) + "k";
