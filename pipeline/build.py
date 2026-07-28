@@ -319,8 +319,15 @@ def enrich_github(con):
     # Order: never-enriched first (advance coverage across runs), then adoption proxies that exist PRE-scoring.
     # (trust is computed in phase D, AFTER this phase — ordering on it pushed every fresh row to the bottom
     #  forever, so new caps never got enriched: the circular-dependency bug.)
+    #
+    # "Never enriched" is keyed on gh_contributors, NOT gh_pushed. ingest_plugins.py writes gh_pushed and
+    # gh_stars itself, so once plugins arrived every plugin repo LOOKED enriched to this query and sorted
+    # to the bottom forever — while still missing the contributor and release counts that only this
+    # function fetches. That is the entire reason 0% of 3,961 plugins had a maintainer or cadence signal,
+    # which in turn made Maintenance for every rated plugin a copy of Freshness. Key the test on the
+    # column this function alone populates, and it cannot drift again when another ingest adds a source.
     rows = con.execute("SELECT id, source_repo FROM capabilities WHERE source_repo IS NOT NULL "
-                       "ORDER BY (gh_pushed IS NULL) DESC, config_reach DESC, npm_downloads DESC NULLS LAST "
+                       "ORDER BY (gh_contributors IS NULL) DESC, config_reach DESC, npm_downloads DESC NULLS LAST "
                        "LIMIT ?", (GH_CAP,)).fetchall()
     print(f"  enriching {len(rows)} source repos via gh...", flush=True)
     done = 0
@@ -447,6 +454,20 @@ ADOPT_W = 60.0
 # Not a thumb on the scale for any capability: it is one weight applied to one evidence TYPE, stated
 # here and on the methodology page, and it moves no individual row relative to its peers.
 STAR_W = float(os.environ.get("TASHAN_STAR_W", "0.8"))
+# How much of Trust survives when NOTHING uses a capability. This is the single most consequential
+# number in the file: Maintenance and Freshness both saturate near 100 for any recently-pushed repo, so
+# (1 - GATE_FLOOR) is the entire range adoption has to separate "people keep this" from "nobody does".
+# At the original 0.6, Trust was ~60% "is the repo alive" and a 30-star plugin outranked packages with
+# thousands of weekly downloads — which contradicts the hero claim that we measure what people KEEP.
+# Swept on the Design hub, where the contrast is sharpest (figma-developer-mcp: 87k downloads/wk over a
+# 530-day track record, vs impeccable: 51k stars, no usage signal at all):
+#     0.60 -> huggingface 76, impeccable 73, figma 70, and amplitude (30 stars!) at 66
+#     0.45 -> huggingface 69, impeccable 67, figma 66
+#     0.30 -> figma 62 leads, huggingface 62, impeccable 61        <- chosen: usage-led
+#     0.20 -> figma 59, impeccable 58
+# Lowering it compresses every score on the site downward; that is correct, not a regression — the old
+# band was 60-100 because 60 was free.
+GATE_FLOOR = float(os.environ.get("TASHAN_GATE_FLOOR", "0.30"))
 
 
 def compute_scores(con):
@@ -530,7 +551,15 @@ def compute_scores(con):
         if dep: m *= 0.3
         if rstatus == "deprecated": m *= 0.3
         if gh_arch: m *= 0.3
-        maintenance = round(100 * m / w) if w else None
+        # FRESHNESS ALONE IS NOT MAINTENANCE. We already publish recency as its own Freshness column, so
+        # a Maintenance built only from freshness is the same signal wearing a second name — and Trust,
+        # which averages the two, then counted it twice. Measured: all 2,531 rated plugins had Maint
+        # within 2 points of Freshness, and the resulting "Maint 100" for a plugin sat beside a genuinely
+        # three-axis "Maint 71" as if it were the stronger number. Maintenance means people are keeping
+        # it alive, so it requires at least one people-or-cadence axis; without that it is unmeasured and
+        # says so, and Trust rests on freshness alone with coverage reflecting exactly that.
+        upkeep = people is not None or vers is not None
+        maintenance = round(100 * m / w) if (w and upkeep) else None
         # TRUST (v2, transparent): mostly maintenance+freshness gated by adoption; labelled, not final
         parts = [x for x in (maintenance, freshness) if x is not None]
         trust = None
@@ -541,7 +570,7 @@ def compute_scores(con):
             # outscored one we had measured as barely used. A 2-star registry server with no adoption
             # signal tied @vaaya/mcp at Trust 64 exactly this way. Absence of evidence now sits at the
             # same floor as evidence of absence, and costs coverage on top.
-            gate = 0.6 + 0.4 * (adoption or 0) / 100
+            gate = GATE_FLOOR + (1 - GATE_FLOOR) * (adoption or 0) / 100
             # Coverage spans every axis Trust rests on — adoption included, since "we never found an
             # adoption signal" is missing evidence in precisely the sense this discount exists for.
             cov = (w + (ADOPT_W if adoption is not None else 0)) / (100.0 + ADOPT_W)

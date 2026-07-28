@@ -2,7 +2,7 @@
 
 > The intelligence layer for AI capabilities. tashan scores MCP servers and agent skills on public evidence — npm downloads and publish cadence, GitHub activity, registry status, and how often a server appears in real public agent configs. Nobody can pay to change a score, rank, or listing; payment buys depth and tooling only.
 
-Generated: 2026-07-28. Capabilities tracked: 4852 ranked. Every number below is re-derivable from public sources.
+Generated: 2026-07-28. Capabilities tracked: 4872 ranked. Every number below is re-derivable from public sources.
 
 ## How the score works
 
@@ -14,63 +14,63 @@ Generated: 2026-07-28. Capabilities tracked: 4852 ranked. Every number below is 
 
 ## Top capabilities by measured trust
 
-- [@upstash/context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) — Trust 94.0, active. MCP server for Context7
-- [chrome-devtools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) — Trust 93.0, active. MCP server for Chrome DevTools
-- [filesystem](https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html) — Trust 91.0, active. MCP server for filesystem access
-- [memory](https://tashan.sh/capability/pkg-modelcontextprotocol-server-memory.html) — Trust 85.0, active. MCP server for enabling memory for Claude through a knowledge graph
-- [@supabase/mcp-server-supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) — Trust 85.0, active. MCP server for interacting with the Supabase platform
-- [sequential-thinking](https://tashan.sh/capability/pkg-modelcontextprotocol-server-sequential-thinking.html) — Trust 83.0, active. MCP server for sequential thinking and problem solving
-- [everything](https://tashan.sh/capability/pkg-modelcontextprotocol-server-everything.html) — Trust 83.0, active. MCP server that exercises all the features of the MCP protocol
-- [tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) — Trust 81.0, active. MCP server for advanced web search using Tavily
-- [azure](https://tashan.sh/capability/pkg-azure-mcp.html) — Trust 81.0, active. All Azure MCP tools to create a seamless connection between AI agents and Azure services.
-- [@cloudbase/cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) — Trust 80.0, active. 腾讯云开发 MCP Server，通过AI提示词和MCP协议+云开发，让开发更智能、更高效,当你在Cursor/ VSCode GitHub Copilot/WinSurf/CodeBuddy/Augment Code/Claude Code等AI编程工具里写代码时，它能自动帮你生成可直接部署的前后
-- [@notionhq/notion-mcp-server](https://tashan.sh/capability/pkg-notionhq-notion-mcp-server.html) — Trust 79.0, active. Official MCP server for Notion API
-- [smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) — Trust 78.0, active. MCP server for AI access to SmartBear tools, including BugSnag, Reflect, API Hub, PactFlow.
-- [firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) — Trust 75.0, active. MCP server for Firecrawl — search, scrape, and interact with the web. Supports both cloud and self-hosted instances. Features include web search, scra
-- [mattpocock-skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) — Trust 74.0, active. Matt Pocock's agent skills for real engineering — grilling, spec/ticket flows, TDD, code review, domain modelling and more. Plug-and-play, not vibe co
-- [@auth0/auth0-mcp-server](https://tashan.sh/capability/pkg-auth0-auth0-mcp-server.html) — Trust 74.0, active. Auth0 MCP Server: Manage Auth0 applications, APIs, actions, logs, and forms using natural language
-- [codescene-mcp-server](https://tashan.sh/capability/pkg-codescene-codehealth-mcp.html) — Trust 74.0, active. An MCP server that provides CodeScene Code Health analysis tools.
-- [caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) — Trust 73.0, active. Talk like caveman. Cut 65% output tokens (measured). Keep all technical accuracy.
-- [impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) — Trust 73.0, active. Design fluency for frontend development. 1 skill with 23 commands (/impeccable polish, /impeccable audit, /impeccable critique, etc.) and curated anti
-- [@sveltejs/mcp](https://tashan.sh/capability/pkg-sveltejs-mcp.html) — Trust 73.0, active. The official Svelte MCP server providing docs and autofixing tools for Svelte development
-- [hostinger-api](https://tashan.sh/capability/pkg-hostinger-api-mcp.html) — Trust 72.0, active. MCP server for Hostinger API
-- [claude-mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) — Trust 72.0, active. Persistent memory system for Claude Code - seamlessly preserve context across sessions
-- [mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) — Trust 72.0, active. Connect Mem0 to Claude to give your agent persistent memory across sessions. Claude can store user preferences, project context, and conversation hist
-- [understand-anything](https://tashan.sh/capability/plugin-lum1104-understand-anything-understand-anything.html) — Trust 72.0, active. Understand Anything is a Claude Code plugin that analyzes your project with a multi-agent pipeline, builds a knowledge graph of every file, function, 
-- [postman-mcp-server](https://tashan.sh/capability/pkg-postman-postman-mcp-server.html) — Trust 72.0, active. A basic MCP server to operate on the Postman API.
-- [savvly](https://tashan.sh/capability/pkg-savvly-mcp-server.html) — Trust 72.0, active. Savvly MCP: query fund data, model projections, and compare against alternative retirement products.
-- [huggingface-skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) — Trust 71.0, active. Build, train, evaluate, and use open source AI models, datasets, and spaces.
-- [claude-seo](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) — Trust 71.0, active. Comprehensive SEO analysis plugin for Claude Code. 25 sub-skills and 18 sub-agents, plus 8 optional MCP extensions. v2.2.4 adds a managed cross-platfo
-- [context-mode](https://tashan.sh/capability/plugin-mksglu-context-mode-context-mode.html) — Trust 71.0, active. MCP is the protocol for tool access. We're the virtualization layer for context.
-- [next-ai-drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) — Trust 71.0, active. AI-powered Draw.io diagram generation with real-time browser preview. Create flowcharts, architecture diagrams, and more through natural language.
-- [promptfoo-evals](https://tashan.sh/capability/plugin-promptfoo-promptfoo-promptfoo-evals.html) — Trust 71.0, active. Teaches AI coding agents to create and maintain promptfoo eval suites. Encodes best practices like deterministic assertions first, file-based test org
-- [last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) — Trust 71.0, active. Research any topic across Reddit, X, YouTube, TikTok, Instagram, Hacker News, Polymarket, GitHub, and 5+ more sources. AI agent scores by upvotes, lik
-- [XcodeBuildMCP](https://tashan.sh/capability/pkg-xcodebuildmcp.html) — Trust 71.0, active. XcodeBuildMCP provides tools for Xcode project management, simulator management, and app utilities.
-- [@perplexity-ai/mcp-server](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) — Trust 71.0, active. Real-time web search, reasoning, and research through Perplexity's API
-- [mcp](https://tashan.sh/capability/pkg-mcp-aiven.html) — Trust 71.0, active. Provision PostgreSQL, manage Apache Kafka, and deploy apps with Aiven - all from your AI assistant.
-- [githits](https://tashan.sh/capability/pkg-githits.html) — Trust 71.0, active. Search public open-source code, documentation, metadata, vulnerabilities, changelogs, and examples.
-- [figma-developer](https://tashan.sh/capability/pkg-figma-developer-mcp.html) — Trust 70.0, active. Give your coding agent access to your Figma data. Implement designs in any framework in one-shot.
-- [desktop-commander](https://tashan.sh/capability/plugin-wonderwhy-er-desktopcommandermcp-desktop-commander.html) — Trust 70.0, active. Desktop Commander gives Claude Code access to a local MCP server for terminal sessions, filesystem work, structured documents, search, process managem
-- [ponytail](https://tashan.sh/capability/plugin-dietrichgebert-ponytail-ponytail.html) — Trust 70.0, active. Forces the laziest solution that works. YAGNI, stdlib first, one line over fifty.
-- [figma-console](https://tashan.sh/capability/pkg-figma-console-mcp.html) — Trust 70.0, active. The most comprehensive MCP server for Figma — design tokens, variables, components, write tools, version history diff, accessibility audits, FigJam, S
-- [kubernetes](https://tashan.sh/capability/pkg-mcp-server-kubernetes.html) — Trust 70.0, active. MCP server for interacting with Kubernetes clusters via kubectl
+- [@upstash/context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) — Trust 90.0, active. MCP server for Context7
+- [filesystem](https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html) — Trust 89.0, active. MCP server for filesystem access
+- [chrome-devtools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) — Trust 88.0, active. MCP server for Chrome DevTools
+- [@supabase/mcp-server-supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) — Trust 80.0, active. MCP server for interacting with the Supabase platform
+- [memory](https://tashan.sh/capability/pkg-modelcontextprotocol-server-memory.html) — Trust 79.0, active. MCP server for enabling memory for Claude through a knowledge graph
+- [sequential-thinking](https://tashan.sh/capability/pkg-modelcontextprotocol-server-sequential-thinking.html) — Trust 77.0, active. MCP server for sequential thinking and problem solving
+- [superpowers](https://tashan.sh/capability/plugin-obra-superpowers-superpowers.html) — Trust 75.0, active. Core skills library: TDD, debugging, collaboration patterns, and proven techniques
+- [everything](https://tashan.sh/capability/pkg-modelcontextprotocol-server-everything.html) — Trust 73.0, active. MCP server that exercises all the features of the MCP protocol
+- [@notionhq/notion-mcp-server](https://tashan.sh/capability/pkg-notionhq-notion-mcp-server.html) — Trust 70.0, active. Official MCP server for Notion API
+- [tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) — Trust 68.0, active. MCP server for advanced web search using Tavily
+- [azure](https://tashan.sh/capability/pkg-azure-mcp.html) — Trust 68.0, active. All Azure MCP tools to create a seamless connection between AI agents and Azure services.
+- [firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) — Trust 66.0, active. MCP server for Firecrawl — search, scrape, and interact with the web. Supports both cloud and self-hosted instances. Features include web search, scra
+- [frontend-design](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) — Trust 65.0, active. Optional external dependency (official Anthropic). Design guidance for the frontend architects (react, vue, angular, react-native, inertia-). Raw gene
+- [@cloudbase/cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) — Trust 65.0, active. 腾讯云开发 MCP Server，通过AI提示词和MCP协议+云开发，让开发更智能、更高效,当你在Cursor/ VSCode GitHub Copilot/WinSurf/CodeBuddy/Augment Code/Claude Code等AI编程工具里写代码时，它能自动帮你生成可直接部署的前后
+- [caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) — Trust 63.0, active. Talk like caveman. Cut 65% output tokens (measured). Keep all technical accuracy.
+- [mattpocock-skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) — Trust 63.0, active. Matt Pocock's agent skills for real engineering — grilling, spec/ticket flows, TDD, code review, domain modelling and more. Plug-and-play, not vibe co
+- [figma-developer](https://tashan.sh/capability/pkg-figma-developer-mcp.html) — Trust 62.0, active. Give your coding agent access to your Figma data. Implement designs in any framework in one-shot.
+- [huggingface-skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) — Trust 62.0, active. Build, train, evaluate, and use open source AI models, datasets, and spaces.
+- [smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) — Trust 62.0, active. MCP server for AI access to SmartBear tools, including BugSnag, Reflect, API Hub, PactFlow.
+- [desktop-commander](https://tashan.sh/capability/plugin-wonderwhy-er-desktopcommandermcp-desktop-commander.html) — Trust 61.0, active. Desktop Commander gives Claude Code access to a local MCP server for terminal sessions, filesystem work, structured documents, search, process managem
+- [impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) — Trust 61.0, active. Design fluency for frontend development. 1 skill with 23 commands (/impeccable polish, /impeccable audit, /impeccable critique, etc.) and curated anti
+- [hostinger-api](https://tashan.sh/capability/pkg-hostinger-api-mcp.html) — Trust 61.0, active. MCP server for Hostinger API
+- [atomic-agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) — Trust 60.0, active. Comprehensive development workflow for building AI agents with the Atomic Agents framework. Includes specialized agents for schema design, architectur
+- [ponytail](https://tashan.sh/capability/plugin-dietrichgebert-ponytail-ponytail.html) — Trust 60.0, active. Forces the laziest solution that works. YAGNI, stdlib first, one line over fifty.
+- [claude-mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) — Trust 60.0, active. Persistent memory system for Claude Code - seamlessly preserve context across sessions
+- [mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) — Trust 60.0, active. Connect Mem0 to Claude to give your agent persistent memory across sessions. Claude can store user preferences, project context, and conversation hist
+- [understand-anything](https://tashan.sh/capability/plugin-lum1104-understand-anything-understand-anything.html) — Trust 60.0, active. Understand Anything is a Claude Code plugin that analyzes your project with a multi-agent pipeline, builds a knowledge graph of every file, function, 
+- [XcodeBuildMCP](https://tashan.sh/capability/pkg-xcodebuildmcp.html) — Trust 60.0, active. XcodeBuildMCP provides tools for Xcode project management, simulator management, and app utilities.
+- [last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) — Trust 59.0, active. Research any topic across Reddit, X, YouTube, TikTok, Instagram, Hacker News, Polymarket, GitHub, and 5+ more sources. AI agent scores by upvotes, lik
+- [claude-seo](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) — Trust 58.0, active. Comprehensive SEO analysis plugin for Claude Code. 25 sub-skills and 18 sub-agents, plus 8 optional MCP extensions. v2.2.4 adds a managed cross-platfo
+- [figma-console](https://tashan.sh/capability/pkg-figma-console-mcp.html) — Trust 58.0, active. The most comprehensive MCP server for Figma — design tokens, variables, components, write tools, version history diff, accessibility audits, FigJam, S
+- [kubernetes](https://tashan.sh/capability/pkg-mcp-server-kubernetes.html) — Trust 58.0, active. MCP server for interacting with Kubernetes clusters via kubectl
+- [next-ai-drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) — Trust 58.0, active. AI-powered Draw.io diagram generation with real-time browser preview. Create flowcharts, architecture diagrams, and more through natural language.
+- [@sveltejs/mcp](https://tashan.sh/capability/pkg-sveltejs-mcp.html) — Trust 58.0, active. The official Svelte MCP server providing docs and autofixing tools for Svelte development
+- [aws-agents](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-agents.html) — Trust 57.0, active. Build, deploy, and operate AI agents on AWS. Skills for scaffolding agents with Amazon Bedrock AgentCore, connecting tools, memory, policies, evaluati
+- [aws-core](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-core.html) — Trust 57.0, active. Build, deploy, and operate applications on AWS. Skills to author infrastructure-as-code, use core services, and complete common tasks.
+- [aws-data-analytics](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-data-analytics.html) — Trust 57.0, active. Data lake, analytics, and ETL workflows with S3 Tables, AWS Glue, and Athena.
+- [cloudflare](https://tashan.sh/capability/plugin-cloudflare-skills-cloudflare.html) — Trust 57.0, active. Cloudflare platform plugin with curated skills for Workers, Wrangler, and Agents SDK plus the official Cloudflare API MCP server.
+- [expo](https://tashan.sh/capability/plugin-expo-skills-expo.html) — Trust 57.0, active. Official Expo skills for building, deploying, upgrading, and debugging React Native apps with Expo. Covers UI development with Expo Router, SwiftUI an
+- [apps](https://tashan.sh/capability/plugin-modelcontextprotocol-ext-apps-mcp-apps.html) — Trust 57.0, active. Claude Code skill for building MCP Apps with interactive UIs
 
 ## Categories
 
 - [Browser & Web](https://tashan.sh/category/browser.html) — 31 measured. Headless browsers, scraping, page automation, fetch. Top: chrome-devtools, firecrawl, mtop-devtools.
-- [Search](https://tashan.sh/category/search.html) — 80 measured. Web search, retrieval, and answer engines. Top: tavily, @perplexity-ai/mcp-server, exa-mcp-server.
+- [Search](https://tashan.sh/category/search.html) — 80 measured. Web search, retrieval, and answer engines. Top: tavily, exa-mcp-server, @perplexity-ai/mcp-server.
 - [Database](https://tashan.sh/category/database.html) — 42 measured. SQL, NoSQL, vector stores, query & schema tools. Top: @supabase/mcp-server-supabase, whodb, neon.
-- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1191 measured. Git, GitHub, code, testing, build & CI. Top: everything, azure, mattpocock-skills.
-- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 70 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: @cloudbase/cloudbase, hostinger-api, postman-mcp-server.
-- [Files & Memory](https://tashan.sh/category/files.html) — 32 measured. Filesystem access, memory, knowledge graphs. Top: filesystem, memory, braincloud-mcp-helper.
-- [Data & Analytics](https://tashan.sh/category/data.html) — 319 measured. Pipelines, analytics, spreadsheets, BI. Top: savvly, deepeval, qsv-data-wrangling.
-- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 89 measured. Docs lookup, notes, wikis, context retrieval. Top: @upstash/context7, @notionhq/notion-mcp-server, githits.
-- [Communication](https://tashan.sh/category/comms.html) — 115 measured. Slack, email, chat, calendars, meetings. Top: claude-seo, @atomicmail/mcp-modelcontextprotocol, slack.
-- [Design](https://tashan.sh/category/design.html) — 149 measured. Figma, UI, images, creative & design tooling. Top: impeccable, huggingface-skills, figma-developer.
+- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1207 measured. Git, GitHub, code, testing, build & CI. Top: superpowers, everything, azure.
+- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 70 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: @cloudbase/cloudbase, hostinger-api, kubernetes.
+- [Files & Memory](https://tashan.sh/category/files.html) — 32 measured. Filesystem access, memory, knowledge graphs. Top: filesystem, memory, desktop-touch.
+- [Data & Analytics](https://tashan.sh/category/data.html) — 320 measured. Pipelines, analytics, spreadsheets, BI. Top: aws-data-analytics, deepeval, qsv-data-wrangling.
+- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 89 measured. Docs lookup, notes, wikis, context retrieval. Top: @upstash/context7, @notionhq/notion-mcp-server, @suekou/mcp-notion-server.
+- [Communication](https://tashan.sh/category/comms.html) — 115 measured. Slack, email, chat, calendars, meetings. Top: claude-seo, microsoft-fabric, @atomicmail/mcp-modelcontextprotocol.
+- [Design](https://tashan.sh/category/design.html) — 149 measured. Figma, UI, images, creative & design tooling. Top: figma-developer, huggingface-skills, impeccable.
 - [AI & Agents](https://tashan.sh/category/ai.html) — 92 measured. Reasoning, agents, model & LLM orchestration. Top: sequential-thinking, humanize-korean, kage.
-- [Finance & Crypto](https://tashan.sh/category/finance.html) — 215 measured. Payments, markets, blockchain, wallets. Top: blockrun, sap, z-zero.
-- [Productivity](https://tashan.sh/category/productivity.html) — 1953 measured. Tasks, automation, workflows, personal tools. Top: smartbear, caveman, claude-mem.
-- [Security](https://tashan.sh/category/security.html) — 259 measured. Auth, secrets, scanning, identity. Top: @auth0/auth0-mcp-server, safety-net, geosql.
+- [Finance & Crypto](https://tashan.sh/category/finance.html) — 216 measured. Payments, markets, blockchain, wallets. Top: blockrun, sap, z-zero.
+- [Productivity](https://tashan.sh/category/productivity.html) — 1954 measured. Tasks, automation, workflows, personal tools. Top: caveman, smartbear, desktop-commander.
+- [Security](https://tashan.sh/category/security.html) — 260 measured. Auth, secrets, scanning, identity. Top: @auth0/auth0-mcp-server, safety-net, ai-agent-firewall.
 - [Other](https://tashan.sh/category/other.html) — 215 measured. Everything not yet categorized. Top: context-mode, @voyagier/cli, avalanche.
 
 ## Reference
