@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T18:04:24.229256+00:00",
+  "generated_at": "2026-07-28T18:36:08.203329+00:00",
   "method": "public signal: MCP registry + config-adoption + npm quality + LLM expertise-eval (SQLite pipeline)",
   "total_capabilities": 12113,
   "enriched_npm": 1412,
@@ -844,7 +844,20 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "write-tests",
+          "b": "graded"
+        },
+        {
+          "t": "review-code",
+          "b": "graded"
+        },
+        {
+          "t": "plan-and-scope-work",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-mattpocock-skills-mattpocock-skills",
       "rated": true
@@ -895,7 +908,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "manage-prompts",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-juliusbrussee-caveman-caveman",
       "rated": true
@@ -1071,7 +1089,15 @@
       "tasks": [
         {
           "t": "build-a-web-frontend",
-          "b": "declared"
+          "b": "graded"
+        },
+        {
+          "t": "design-a-ui",
+          "b": "graded"
+        },
+        {
+          "t": "run-a-design-review",
+          "b": "graded"
         }
       ],
       "official": null,
@@ -1248,7 +1274,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "implement-a-feature",
+          "b": "graded"
+        },
+        {
+          "t": "refactor-code",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-dietrichgebert-ponytail-ponytail",
       "rated": true
@@ -1364,7 +1399,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "take-and-organize-notes",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-thedotmack-claude-mem-claude-mem",
       "rated": true
@@ -1415,7 +1455,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "explore-a-codebase",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-lum1104-understand-anything-understand-anything",
       "rated": true
@@ -1599,7 +1644,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "take-and-organize-notes",
+          "b": "graded"
+        },
+        {
+          "t": "build-an-agent",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-mem0ai-mem0-mem0",
       "rated": true
@@ -1650,7 +1704,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "optimize-for-search",
+          "b": "graded"
+        },
+        {
+          "t": "do-keyword-research",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-agricidaniel-claude-seo-claude-seo",
       "also_via": [
@@ -1704,7 +1767,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "design-an-architecture",
+          "b": "graded"
+        },
+        {
+          "t": "generate-images",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio",
       "rated": true
@@ -1755,7 +1827,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "fine-tune-a-model",
+          "b": "graded"
+        },
+        {
+          "t": "evaluate-model-output",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-huggingface-skills-huggingface-skills",
       "rated": true
@@ -1806,7 +1887,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "manage-prompts",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-mksglu-context-mode-context-mode",
       "rated": true
@@ -1857,7 +1943,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "evaluate-model-output",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-promptfoo-promptfoo-promptfoo-evals",
       "rated": true
@@ -1959,7 +2050,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "manage-files-and-storage",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-wonderwhy-er-desktopcommandermcp-desktop-commander",
       "rated": true
@@ -2010,7 +2106,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "evaluate-model-output",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-confident-ai-deepeval-deepeval",
       "rated": true
@@ -2061,7 +2162,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "automate-a-browser",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-browser-use-browser-harness-browser-harness",
       "rated": true
@@ -2247,7 +2353,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-an-agent",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-brainblend-ai-atomic-agents-atomic-agents",
       "rated": true
@@ -2298,7 +2409,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "write-tests",
+          "b": "graded"
+        },
+        {
+          "t": "automate-a-browser",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-alirezarezvani-claude-skills-playwright-pro",
       "also_via": [
@@ -2525,7 +2645,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-an-agent",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-revfactory-harness-harness",
       "rated": true
@@ -2576,7 +2701,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "do-market-research",
+          "b": "graded"
+        },
+        {
+          "t": "search-the-web",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-mvanhorn-last30days-skill-last30days",
       "rated": true
@@ -2749,7 +2883,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-a-data-pipeline",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-eventual-inc-daft-daft",
       "rated": true
@@ -2933,7 +3072,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "deploy-a-release",
+          "b": "graded"
+        },
+        {
+          "t": "provision-infrastructure",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-cloudflare-skills-cloudflare",
       "rated": true
@@ -2984,7 +3132,20 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-an-ios-app",
+          "b": "graded"
+        },
+        {
+          "t": "build-an-android-app",
+          "b": "graded"
+        },
+        {
+          "t": "ship-a-mobile-release",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-expo-skills-expo",
       "rated": true
@@ -3035,7 +3196,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-an-ecommerce-store",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-stripe-ai-stripe",
       "rated": true
@@ -3159,7 +3325,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "search-the-web",
+          "b": "graded"
+        },
+        {
+          "t": "do-literature-review",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-exa-labs-exa-mcp-server-exa",
       "also_via": [
@@ -3213,7 +3388,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "query-a-database",
+          "b": "graded"
+        },
+        {
+          "t": "check-data-quality",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-clidey-whodb-whodb",
       "rated": true
@@ -3264,7 +3448,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "work-with-spreadsheets",
+          "b": "graded"
+        },
+        {
+          "t": "analyze-a-dataset",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-dathere-qsv-qsv-data-wrangling",
       "rated": true
@@ -3366,7 +3559,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "provision-infrastructure",
+          "b": "graded"
+        },
+        {
+          "t": "deploy-a-release",
+          "b": "graded"
+        }
+      ],
       "official": "Microsoft",
       "slug": "plugin-microsoft-azure-skills-azure",
       "rated": true
@@ -3417,7 +3619,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "automate-a-workflow",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-chachamaru127-claude-code-harness-claude-harness",
       "rated": true
@@ -3468,7 +3675,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "explore-a-codebase",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-giancarloerra-socraticode-socraticode",
       "rated": true
@@ -3530,7 +3742,7 @@
       "tasks": [
         {
           "t": "build-an-ios-app",
-          "b": "declared"
+          "b": "graded"
         },
         {
           "t": "optimize-performance",
@@ -3587,7 +3799,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "write-long-form-content",
+          "b": "graded"
+        },
+        {
+          "t": "translate-and-localize",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-epoko77-ai-im-not-ai-humanize-korean",
       "rated": true
@@ -3743,7 +3964,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "manage-tasks-and-projects",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-atlassian-atlassian-mcp-server-atlassian",
       "rated": true
@@ -3803,11 +4029,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-a-rag-system",
-          "b": "declared"
+          "t": "explore-a-codebase",
+          "b": "graded"
         },
         {
-          "t": "explore-a-codebase",
+          "t": "build-a-rag-system",
           "b": "declared"
         }
       ],
@@ -3979,7 +4205,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "handoff-design-to-code",
+          "b": "graded"
+        },
+        {
+          "t": "design-a-ui",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-figma-mcp-server-guide-figma",
       "rated": true
@@ -4030,7 +4265,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-a-web-frontend",
+          "b": "graded"
+        }
+      ],
       "official": "Google",
       "slug": "plugin-googlechrome-modern-web-guidance-modern-web-guidance",
       "rated": true
@@ -4081,7 +4321,20 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "plan-and-scope-work",
+          "b": "graded"
+        },
+        {
+          "t": "review-code",
+          "b": "graded"
+        },
+        {
+          "t": "write-tests",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-codeaholicguy-ai-devkit-ai-devkit",
       "rated": true
@@ -4132,7 +4385,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "take-and-organize-notes",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-activeloopai-deeplake-claude-code-plugins-deeplake-hivemind",
       "rated": true
@@ -4183,7 +4441,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "take-and-organize-notes",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-activeloopai-hivemind-hivemind",
       "rated": true
@@ -4234,7 +4497,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "manage-version-control",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-kenryu42-claude-code-safety-net-safety-net",
       "rated": true
@@ -4285,7 +4553,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-an-ios-app",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-evanbacon-serve-sim-serve-sim",
       "rated": true
@@ -4336,7 +4609,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "run-meetings",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-silverstein-minutes-minutes",
       "rated": true
@@ -4447,7 +4725,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "query-a-database",
+          "b": "graded"
+        },
+        {
+          "t": "build-a-data-pipeline",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-clickhouse-agent-skills-clickhouse-best-practices",
       "rated": true
@@ -4498,7 +4785,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-an-ecommerce-store",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-shopify-shopify-ai-toolkit-shopify-ai-toolkit",
       "rated": true
@@ -4621,7 +4913,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "review-code",
+          "b": "graded"
+        },
+        {
+          "t": "refactor-code",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-hyhmrright-brooks-lint-brooks-lint",
       "rated": true
@@ -4723,7 +5024,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "automate-a-browser",
+          "b": "graded"
+        },
+        {
+          "t": "scrape-the-web",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-actionbook-actionbook-actionbook",
       "rated": true
@@ -4774,7 +5084,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-an-agent",
+          "b": "graded"
+        },
+        {
+          "t": "automate-a-workflow",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-growthxai-output-outputai",
       "rated": true
@@ -4825,7 +5144,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "run-user-research",
+          "b": "graded"
+        },
+        {
+          "t": "gather-user-feedback",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-cookiy-ai-user-research-skill-cookiy",
       "rated": true
@@ -4927,7 +5255,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "optimize-for-search",
+          "b": "graded"
+        },
+        {
+          "t": "do-keyword-research",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-aminforou-mcp-gsc-search-console-mcp",
       "rated": true
@@ -4978,7 +5315,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "write-tests",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-nizos-tdd-guard-tdd-guard",
       "rated": true
@@ -5092,7 +5434,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-an-android-app",
+          "b": "graded"
+        },
+        {
+          "t": "build-an-ios-app",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-flutter-agent-plugins-dart-flutter",
       "rated": true
@@ -5316,7 +5667,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "optimize-performance",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-codspeedhq-codspeed-codspeed",
       "rated": true
@@ -5367,7 +5723,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "implement-a-feature",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-oracle-netsuite-suitecloud-sdk-netsuite-suitecloud",
       "rated": true
@@ -5418,7 +5779,20 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "deploy-a-release",
+          "b": "graded"
+        },
+        {
+          "t": "provision-infrastructure",
+          "b": "graded"
+        },
+        {
+          "t": "monitor-and-alert",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-railwayapp-railway-skills-railway",
       "rated": true
@@ -5469,7 +5843,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "generate-music-or-audio",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-spotify-save-to-spotify-save-to-spotify",
       "rated": true
@@ -5520,7 +5899,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "query-a-database",
+          "b": "graded"
+        },
+        {
+          "t": "analyze-a-dataset",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-dekart-xyz-geosql-geosql",
       "rated": true
@@ -5571,7 +5959,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-game-logic",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-jame581-godotprompter-godot-prompter",
       "rated": true
@@ -5622,7 +6015,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "deploy-a-release",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-joaoh82-rustunnel-rustunnel",
       "rated": true
@@ -5673,7 +6071,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-an-ecommerce-store",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-shopify-shopify-ai-toolkit-shopify-plugin",
       "rated": true
@@ -5724,7 +6127,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "refactor-code",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-quenty-nevermoreengine-nevermore-claude",
       "rated": true
@@ -5826,7 +6234,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "scrape-the-web",
+          "b": "graded"
+        },
+        {
+          "t": "search-the-web",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-firecrawl-cli-firecrawl",
       "also_via": [
@@ -5880,7 +6297,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "do-literature-review",
+          "b": "graded"
+        },
+        {
+          "t": "write-long-form-content",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-galaxy-dawn-claude-scholar-claude-scholar",
       "rated": true
@@ -6170,7 +6596,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-a-data-pipeline",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-databricks-databricks-agent-skills-databricks",
       "rated": true
@@ -6221,7 +6652,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "query-a-database",
+          "b": "graded"
+        }
+      ],
       "official": "Microsoft",
       "slug": "plugin-microsoft-dataverse-skills-dataverse",
       "rated": true
@@ -6272,7 +6708,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "automate-a-workflow",
+          "b": "graded"
+        },
+        {
+          "t": "integrate-a-third-party-service",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-zapier-zapier-mcp-zapier",
       "rated": true
@@ -6323,7 +6768,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "evaluate-model-output",
+          "b": "graded"
+        },
+        {
+          "t": "manage-prompts",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-langfuse-skills-langfuse",
       "rated": true
@@ -6425,7 +6879,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "manage-a-crm",
+          "b": "graded"
+        },
+        {
+          "t": "build-a-dashboard",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-mondaycom-mcp-monday-crm",
       "rated": true
@@ -6629,7 +7092,20 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "write-a-prd-or-spec",
+          "b": "graded"
+        },
+        {
+          "t": "prioritize-a-roadmap",
+          "b": "graded"
+        },
+        {
+          "t": "gather-user-feedback",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-product-on-purpose-pm-skills-pm-skills",
       "rated": true
@@ -6680,7 +7156,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "implement-a-feature",
+          "b": "graded"
+        },
+        {
+          "t": "write-tests",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-aaronontheweb-dotnet-skills-dotnet-skills",
       "rated": true
@@ -6731,7 +7216,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "manage-prompts",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-alexgreensh-token-optimizer-token-optimizer",
       "rated": true
@@ -6884,7 +7374,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "generate-images",
+          "b": "graded"
+        },
+        {
+          "t": "edit-video",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-adobe-skills-adobe-for-creativity",
       "rated": true
@@ -6935,7 +7434,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-a-data-pipeline",
+          "b": "graded"
+        },
+        {
+          "t": "query-a-database",
+          "b": "graded"
+        }
+      ],
       "official": "Google",
       "slug": "plugin-gemini-cli-extensions-data-agent-kit-starter-pack-data-agent-kit-starter-pack",
       "rated": true
@@ -6986,7 +7494,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "query-a-database",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-mongodb-agent-skills-mongodb",
       "rated": true
@@ -7037,7 +7550,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "take-and-organize-notes",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-digital-process-tools-claude-remember-remember",
       "rated": true
@@ -7088,7 +7606,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "manage-cms-content",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-sanity-io-agent-toolkit-sanity",
       "rated": true
@@ -7139,7 +7662,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-a-web-frontend",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-sap-open-ux-tools-sap-fiori-mcp-server",
       "rated": true
@@ -7190,7 +7718,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-game-logic",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-epicgames-unreal-engine-skills-for-claude-code-plugin-unreal-engine-skills-for-claude-code",
       "rated": true
@@ -7301,7 +7834,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "edit-video",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-jordanrendric-claude-video-vision-claude-video-vision",
       "rated": true
@@ -7352,7 +7890,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "manage-prompts",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-interfacex-co-jp-genshijin-genshijin",
       "rated": true
@@ -7403,7 +7946,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "deploy-a-release",
+          "b": "graded"
+        },
+        {
+          "t": "build-an-agent",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-lithos-ai-motus-motus",
       "rated": true
@@ -7454,7 +8006,20 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "design-an-architecture",
+          "b": "graded"
+        },
+        {
+          "t": "review-code",
+          "b": "graded"
+        },
+        {
+          "t": "deploy-a-release",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-borghei-claude-skills-praxis-engineering",
       "rated": true
@@ -7505,7 +8070,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "analyze-a-dataset",
+          "b": "graded"
+        },
+        {
+          "t": "do-literature-review",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-jaechang-hits-sciagent-skills-sciagent-skills",
       "rated": true
@@ -7556,7 +8130,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "implement-a-feature",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-crazyguitar-cppcheatsheet-cppcheatsheet",
       "rated": true
@@ -7607,7 +8186,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "implement-a-feature",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-jtydhr88-comfyui-custom-node-skills-comfyui-custom-nodes",
       "rated": true
@@ -7663,6 +8247,10 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [
+        {
+          "t": "scan-for-vulnerabilities",
+          "b": "graded"
+        },
         {
           "t": "review-code",
           "b": "declared"
@@ -8030,7 +8618,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-an-api",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-apollographql-skills-apollo-skills",
       "rated": true
@@ -8081,7 +8674,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "review-code",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-coderabbitai-skills-coderabbit",
       "rated": true
@@ -8132,7 +8730,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "monitor-and-alert",
+          "b": "graded"
+        },
+        {
+          "t": "investigate-an-incident",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-getsentry-cli-sentry-cli",
       "rated": true
@@ -8183,7 +8790,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "implement-a-feature",
+          "b": "graded"
+        },
+        {
+          "t": "automate-a-workflow",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-servicenow-sdk-servicenow-sdk",
       "rated": true
@@ -8234,7 +8850,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "manage-email",
+          "b": "graded"
+        },
+        {
+          "t": "build-an-agent",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-agenticmail-agenticmail-agenticmail",
       "rated": true
@@ -8285,7 +8910,20 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "write-long-form-content",
+          "b": "graded"
+        },
+        {
+          "t": "optimize-for-search",
+          "b": "graded"
+        },
+        {
+          "t": "optimize-for-ai-answers",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-agricidaniel-claude-blog-claude-blog",
       "rated": true
@@ -8387,7 +9025,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "take-and-organize-notes",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-ramakay-claude-self-reflect-claude-self-reflect",
       "rated": true
@@ -8438,7 +9081,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "explore-a-codebase",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-freepeak-leankg-lean-kg",
       "rated": true
@@ -8489,7 +9137,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "optimize-for-search",
+          "b": "graded"
+        },
+        {
+          "t": "find-and-qualify-leads",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-varnan-tech-opendirectory-opendirectory",
       "rated": true
@@ -8540,7 +9197,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "manage-prompts",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-withwoz-wozcode-plugin-wozcode",
       "rated": true
@@ -8591,7 +9253,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "scan-for-vulnerabilities",
+          "b": "graded"
+        },
+        {
+          "t": "threat-model",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-tanweai-wooyun-legacy-wooyun-legacy",
       "rated": true
@@ -8642,7 +9313,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "build-game-logic",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-yucchiy-unicli-unicli",
       "rated": true

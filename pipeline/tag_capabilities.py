@@ -123,6 +123,100 @@ def run_declared(con, tasks, dry=False):
     return hit
 
 
+# ---------------------------------------------------------------- inferred pass — MEASURED, REJECTED
+# A scored lexical match over the capability's full text: IDF-weighted phrase terms, field weighting,
+# threshold and margin. The hope was that 8,476-char SKILL.md bodies saying "Use when the user wants
+# to…" would carry enough signal to skip a model.
+#
+# THEY DO NOT. Swept against the 70-row hand-labelled truth set across field weights (name/desc/body in
+# every combination), thresholds 2-18, margins 0-0.95 and 1-3 tags per capability — 240 configurations.
+# The best F1 was 35.4% at 37.1% precision (name x6 + desc, top-1). Body matching actively hurt: a Swift
+# skill mentions "testing" and "deployment" in passing, and the tagger cannot tell a mention from a
+# purpose. The only configs reaching high precision did so at ~1.5% recall, i.e. by tagging nothing.
+#
+# 37% precision means two of every three published tags would be wrong, at a scale of thousands of rows
+# — the confident-wrong-shelving failure this project keeps having to undo. So this is KEPT AS EVIDENCE
+# and NOT WIRED INTO THE PIPELINE, exactly as classify.py keeps its rejected regex pre-filter
+# ("measured worse, 54.7% vs 56.5% ... if you are tempted to add one back, run --eval first").
+# Reproduce with --sweep before assuming a cleverer weighting fixes it.
+#
+# Tags do NOT reach the site from here. Use --grade (a model reads each capability) or hand grading
+# merged via --merge; both write basis='graded' and carry evidence.
+IDF_MIN = 1.5          # terms this common carry no signal at all
+FIELD_W = {"name": 3.0, "desc": 2.0, "body": 1.0}
+INFER_MIN = float(os.environ.get("TAG_INFER_MIN", "3.0"))   # tuned in --eval, see docstring
+
+
+def _terms(task):
+    """Match phrases, not bare words. 'video editing' is diagnostic; 'video' and 'editing' apart are not."""
+    out = []
+    for w in [task["label"]] + task.get("synonyms", []):
+        t = re.sub(r"[^a-z0-9+#. ]+", " ", str(w).lower()).strip()
+        if len(t) >= 3:
+            out.append(t)
+    return sorted(set(out), key=len, reverse=True)
+
+
+def build_idf(con, tasks):
+    """How discriminating is each term, measured on THIS corpus rather than assumed. 'testing' shows up
+    everywhere and should barely count; 'ffmpeg' or 'dsar' picks out one job. Without this the common
+    words dominate and everything collapses into the biggest task, which is exactly how the old
+    category classifier failed before it was given uniform priors."""
+    import math
+    terms = {t for task in tasks for t in _terms(task)}
+    docs = [((n or "") + " " + (fd or d or "")).lower()
+            for _, n, d, fd, _ in rows_with_text(con)]
+    N = max(1, len(docs))
+    df = {t: 0 for t in terms}
+    for doc in docs:
+        for t in terms:
+            if t in doc:
+                df[t] += 1
+    return {t: math.log(N / (1 + c)) for t, c in df.items()}
+
+
+def score_tasks(name, desc, body, tasks, idf):
+    scores = {}
+    fields = (("name", (name or "").lower()), ("desc", (desc or "").lower()),
+              ("body", (body or "")[:BODY_CHARS].lower()))
+    for task in tasks:
+        s = 0.0
+        for term in _terms(task):
+            w = idf.get(term, 0.0)
+            if w < IDF_MIN:
+                continue
+            pat = r"(?<![a-z0-9])" + re.escape(term) + r"(?![a-z0-9])"
+            for fname, text in fields:
+                if text and re.search(pat, text):
+                    s += w * FIELD_W[fname]
+                    break              # one field credit per term; repetition is not more evidence
+        if s > 0:
+            scores[task["slug"]] = s
+    return scores
+
+
+def run_infer(con, tasks, dry=False, threshold=None):
+    thr = INFER_MIN if threshold is None else threshold
+    idf = build_idf(con, tasks)
+    rows = rows_with_text(con)
+    hit = 0
+    for cap_id, name, desc, full, body in rows:
+        sc = score_tasks(name, full or desc, body, tasks, idf)
+        keep = sorted(sc.items(), key=lambda kv: -kv[1])[:MAX_TAGS]
+        keep = [(s, v) for s, v in keep if v >= thr]
+        if not keep:
+            continue
+        hit += 1
+        if not dry:
+            top = keep[0][1]
+            put_tags(con, cap_id, [(s, round(min(0.7, 0.3 + 0.4 * v / max(top, 1e-9)), 3),
+                                    f"text match (score {v:.1f})") for s, v in keep], "inferred")
+    if not dry:
+        con.commit()
+    print(f"inferred: {hit}/{len(rows)} rows tagged at threshold {thr}")
+    return hit
+
+
 # ---------------------------------------------------------------- graded pass
 def rubric(tasks):
     lines = [f'  {t["slug"]}: {t["label"]} — {t["blurb"]}' for t in tasks]
@@ -213,7 +307,7 @@ def run_eval(con, tasks):
         print(f"no held-out labels at {TRUTH} — hand-label ~150 rows as "
               '{"<cap_id>": ["<task-slug>", ...]} to enable this')
         return 1
-    truth = json.load(open(TRUTH))
+    truth = {k: v for k, v in json.load(open(TRUTH)).items() if not k.startswith("_")}
     tp = fp = fn = 0
     for cap_id, want in truth.items():
         got = {r[0] for r in con.execute("SELECT tag FROM capability_tags WHERE cap_id=?", (cap_id,))}
@@ -222,6 +316,86 @@ def run_eval(con, tasks):
     prec = tp / max(1, tp + fp); rec = tp / max(1, tp + fn)
     f1 = 2 * prec * rec / max(1e-9, prec + rec)
     print(f"held-out n={len(truth)}  precision {prec*100:.1f}%  recall {rec*100:.1f}%  F1 {f1*100:.1f}%")
+    return 0
+
+
+MANUAL = os.path.join(OUTDIR, "manual")
+
+
+def run_batch(con, tasks, size, offset=0):
+    """Print the next batch of ungraded capabilities as compact records to be read and labelled.
+
+    The in-session grading path (CLAUDE.md documents the same shape for expertise): a reader works
+    through batches and writes {cap_id: [task-slug, ...]} into data/tags/manual/*.json, which --merge
+    folds in. Ordered by trust so the rows that will actually head a hub page are graded first.
+    """
+    done = set()
+    for f in sorted(__import__("glob").glob(os.path.join(MANUAL, "*.json"))):
+        done |= {k for k in json.load(open(f)) if not k.startswith("_")}
+    rows = con.execute(
+        """SELECT c.id, c.kind, c.name, COALESCE(t.full_description, c.description), c.trust
+           FROM capabilities c LEFT JOIN capability_text t ON t.cap_id = c.id
+           WHERE c.kind IN ('skill','plugin') AND c.trust IS NOT NULL
+             AND COALESCE(t.full_description, c.description) IS NOT NULL
+           ORDER BY c.trust DESC, c.id""").fetchall()
+    todo = [r for r in rows if r[0] not in done][offset:offset + size]
+    print(f"# {len(done)} already labelled, {len(rows) - len(done)} remaining; showing {len(todo)}")
+    for cid, kind, name, desc, trust in todo:
+        print(f"{cid}\t{name}\t{re.sub(r'[ \t\n]+', ' ', desc or '')[:300]}")
+    return 0
+
+
+def run_merge(con, tasks):
+    """Fold hand-written label files into capability_tags as basis='graded'."""
+    valid = {t["slug"] for t in tasks}
+    files = sorted(__import__("glob").glob(os.path.join(MANUAL, "*.json")))
+    if not files:
+        print(f"no label files in {MANUAL}")
+        return 1
+    n = tagged = bad = 0
+    for f in files:
+        for cap_id, slugs in json.load(open(f)).items():
+            if cap_id.startswith("_"):
+                continue
+            n += 1
+            keep = [s for s in slugs if s in valid]
+            bad += len(slugs) - len(keep)
+            if keep:
+                tagged += 1
+                put_tags(con, cap_id, [(s, 0.9, "graded in session against the published rubric")
+                                       for s in keep[:MAX_TAGS]], "graded")
+    con.commit()
+    print(f"merged {n} labelled capabilities from {len(files)} file(s); {tagged} carry >=1 tag"
+          + (f"; {bad} unknown slugs ignored" if bad else ""))
+    build.export(con)
+    return 0
+
+
+def run_sweep(con, tasks):
+    """Precision/recall of the inferred pass at each threshold, against the hand-labelled truth set.
+    The threshold is CHOSEN from this table, never by feel — publishing a wrong shelf at scale is the
+    failure mode this whole axis has to avoid."""
+    if not os.path.exists(TRUTH):
+        print(f"no truth set at {TRUTH} — label rows first (see --eval)")
+        return 1
+    truth = {k: set(v) for k, v in json.load(open(TRUTH)).items() if not k.startswith("_")}
+    idx = {r[0]: r for r in rows_with_text(con)}
+    idf = build_idf(con, tasks)
+    scored = {c: score_tasks(idx[c][1], idx[c][3] or idx[c][2], idx[c][4], tasks, idf)
+              for c in truth if c in idx}
+    print(f"truth set n={len(scored)} (of {len(truth)} labelled)")
+    print(f"{'thresh':>7} {'prec':>7} {'recall':>7} {'F1':>7} {'tagged':>7}")
+    for thr in (1.5, 2.0, 3.0, 4.0, 5.0, 6.5, 8.0, 10.0):
+        tp = fp = fn = 0; tagged = 0
+        for c, sc in scored.items():
+            keep = {s for s, v in sorted(sc.items(), key=lambda kv: -kv[1])[:MAX_TAGS] if v >= thr}
+            if keep:
+                tagged += 1
+            want = truth[c]
+            tp += len(keep & want); fp += len(keep - want); fn += len(want - keep)
+        p = tp / max(1, tp + fp); r = tp / max(1, tp + fn)
+        f1 = 2 * p * r / max(1e-9, p + r)
+        print(f"{thr:7.1f} {p*100:6.1f}% {r*100:6.1f}% {f1*100:6.1f}% {tagged:7}")
     return 0
 
 
@@ -254,6 +428,17 @@ def main():
     rc = 0
     if "--declared" in sys.argv:
         run_declared(con, tasks, dry)
+    elif "--infer" in sys.argv:
+        thr = next((float(a.split("=")[1]) for a in sys.argv if a.startswith("--threshold=")), None)
+        run_infer(con, tasks, dry, thr)
+    elif "--sweep" in sys.argv:
+        run_sweep(con, tasks)
+    elif "--batch" in sys.argv:
+        size = next((int(a.split("=")[1]) for a in sys.argv if a.startswith("--size=")), 120)
+        off = next((int(a.split("=")[1]) for a in sys.argv if a.startswith("--offset=")), 0)
+        rc = run_batch(con, tasks, size, off)
+    elif "--merge" in sys.argv:
+        rc = run_merge(con, tasks)
     elif "--grade" in sys.argv:
         rc = run_grade(con, tasks, limit, dry)
     elif "--eval" in sys.argv:
