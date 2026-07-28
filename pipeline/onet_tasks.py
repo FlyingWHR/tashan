@@ -60,6 +60,29 @@ KNOWLEDGE_GROUPS = {
 COLLAPSE_PREFIX = ("25-1",)   # postsecondary teachers
 
 
+# LAYER 2 — the relevance filter, stated so it can be argued with. O*NET maps ALL work, including work
+# no software can touch. A capability can help someone analyse data or draft a document; it cannot help
+# them move a pallet, repair a compressor, or motivate a subordinate. Filtering by General Work Activity
+# rather than by hand keeps the decision at 41 checkable calls instead of 1,159 invisible ones.
+OUT_OF_SCOPE_GWA = {
+    "Handling and Moving Objects",
+    "Performing General Physical Activities",
+    "Repairing and Maintaining Electronic Equipment",
+    "Repairing and Maintaining Mechanical Equipment",
+    "Controlling Machines and Processes",
+    "Operating Vehicles, Mechanized Devices, or Equipment",
+    "Assisting and Caring for Others",
+    "Performing for or Working Directly with the Public",
+    "Guiding, Directing, and Motivating Subordinates",
+    "Developing and Building Teams",
+    "Coaching and Developing Others",
+    "Establishing and Maintaining Interpersonal Relationships",
+    "Resolving Conflicts and Negotiating with Others",
+    "Staffing Organizational Units",
+    "Inspecting Equipment, Structures, or Materials",
+}
+
+
 def read(name):
     with open(os.path.join(ONET, name), encoding="utf-8", errors="replace") as f:
         return list(csv.DictReader(f, delimiter="\t"))
