@@ -11,7 +11,7 @@ are rewritten by `python3 pipeline/bump_assets.py`, which also re-runs every gen
 `?v=` by hand again — run the bump script.
 """
 
-V = 66
+V = 68
 
 
 def q():

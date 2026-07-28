@@ -116,15 +116,26 @@
   // Shared, session-cached index loader — reused by index.js too, so the slim index is fetched+parsed ONCE
   // per session instead of on every page navigation (it's `no-cache`, so each nav would otherwise re-round-trip).
   // At ~10k+ caps this becomes the SCALE.md D1 endpoint; sessionStorage is the correct interim.
+  // A SESSION CACHE MUST BE ABLE TO GO STALE, or it outlives the data it copied. This one had no
+  // expiry at all: sessionStorage survives reload AND hard-refresh (⌘⇧R does not clear it) and only
+  // dies when the tab closes, so a tab left open across a pipeline run replayed its snapshot forever.
+  // Observed: a tab kept reporting "757 capabilities measured · Jul 25" for three days while
+  // /data/index.json served 4,852 — and because `_headers` no-cache only governs HTTP, revalidation
+  // never got a chance to fix it. On a product whose whole claim is that the numbers are measured
+  // today, silently serving a three-day-old export is the worst failure it has.
+  // The TTL keeps the reason the cache exists (one fetch+parse per browsing session, not per nav)
+  // while bounding how wrong it can be. Entries written by the old format lack `t`, so they fail this
+  // check and re-fetch — existing sessions heal themselves with no migration.
+  var INDEX_TTL_MS = 5 * 60 * 1000;
   window.tashanIndex = function () {
     if (window.__tashanIndexP) return window.__tashanIndexP;
     var p;
     try {
-      var cached = sessionStorage.getItem("tashan_index");
-      if (cached) p = Promise.resolve(JSON.parse(cached));
+      var box = JSON.parse(sessionStorage.getItem("tashan_index"));
+      if (box && box.d && box.t && (Date.now() - box.t) < INDEX_TTL_MS) p = Promise.resolve(box.d);
     } catch (e) {}
     if (!p) p = fetch("/data/index.json").then(function (r) { return r.json(); }).then(function (d) {
-      try { sessionStorage.setItem("tashan_index", JSON.stringify(d)); } catch (e) {}
+      try { sessionStorage.setItem("tashan_index", JSON.stringify({ t: Date.now(), d: d })); } catch (e) {}
       return d;
     });
     window.__tashanIndexP = p;

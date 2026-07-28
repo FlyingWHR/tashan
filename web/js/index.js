@@ -305,7 +305,11 @@
   }
   function adoption(c) {
     if (c.npm_downloads != null) return compact(c.npm_downloads) + '<span class="unit">/wk</span>';
-    if (c.config_reach) return fmt(c.config_reach) + '<span class="unit"> repos</span>';
+    // config_reach counts different evidence per kind, so it cannot carry one label: for an MCP server
+    // it is public agent configs that USE it; for a plugin it is marketplace manifests that LIST it.
+    // Rendering both as "repos" quietly equated being used with being listed.
+    if (c.config_reach) return fmt(c.config_reach) +
+      '<span class="unit"> ' + (c.kind === "plugin" ? "marketplaces" : "repos") + '</span>';
     return '<span class="num--dim">—</span>';
   }
   function score(v) { return (v == null) ? '<span class="num--dim">—</span>' : String(v); }
