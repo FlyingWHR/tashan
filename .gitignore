@@ -3,3 +3,6 @@ node_modules/
 .DS_Store
 *.log
 __pycache__/
+
+# O*NET source database — 13 MB, redownloadable, CC BY 4.0 (onetcenter.org/database.html)
+data/onet/db_30_3_text/

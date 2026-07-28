@@ -1,0 +1,125 @@
+{
+  "_note": "Layer 3 of the task axis: O*NET's formal step -> the name insiders actually use. O*NET writes in government register ('Analyze data to identify trends or relationships among variables'); practitioners search for 'exploratory data analysis'. Each entry keeps the DWA id as its receipt, so every published tag can cite which occupational process step it came from and which occupations perform it. `onet` is evidence; `slug`/`label` are our naming judgement and are labelled as such wherever published. SOURCE: O*NET 30.3 Database, US Dept of Labor / Employment and Training Administration, CC BY 4.0.",
+  "_status": "SAMPLE — 22 of ~500 relevant steps mapped, to agree the shape before the full pass.",
+
+  "mappings": [
+    {"slug": "requirements-discovery", "label": "Requirements discovery",
+     "insider": "Called 'discovery' or 'requirements gathering'; the artifact is a PRD or spec.",
+     "onet": ["Analyze project data to determine specifications or requirements."],
+     "roles": ["pm", "engineer"]},
+
+    {"slug": "software-architecture", "label": "Software architecture",
+     "insider": "'System design' in interviews, 'architecture' or an ADR in practice.",
+     "onet": ["Design software applications.", "Develop models of information or communications systems."],
+     "roles": ["engineer"]},
+
+    {"slug": "test-automation", "label": "Test automation",
+     "insider": "'Test automation' / 'writing the suite'; TDD when tests lead.",
+     "onet": ["Develop testing routines or procedures.", "Test software performance."],
+     "roles": ["engineer"]},
+
+    {"slug": "database-performance-tuning", "label": "Database performance tuning",
+     "insider": "'Query optimisation' or 'tuning'; the artifact is an EXPLAIN plan.",
+     "onet": ["Assess database performance."],
+     "roles": ["engineer", "data-engineer"]},
+
+    {"slug": "web-development", "label": "Web development",
+     "insider": "'Frontend' or 'full-stack' work; building the app itself.",
+     "onet": ["Design websites or web applications.",
+              "Develop specifications or procedures for website development or maintenance."],
+     "roles": ["web-dev"]},
+
+    {"slug": "incident-response", "label": "Incident response",
+     "insider": "'On-call', 'incident response', 'postmortem' — SRE vocabulary.",
+     "onet": ["Collaborate with others to resolve information technology issues."],
+     "roles": ["devops"]},
+
+    {"slug": "technical-documentation", "label": "Technical documentation",
+     "insider": "'Docs' — READMEs, API reference, runbooks.",
+     "onet": ["Document technical design details.", "Compile technical information or documentation."],
+     "roles": ["engineer", "writer"]},
+
+    {"slug": "exploratory-data-analysis", "label": "Exploratory data analysis",
+     "insider": "'EDA' — the first pass over a dataset before modelling.",
+     "onet": ["Analyze data to identify trends or relationships among variables.",
+              "Determine appropriate methods for data analysis."],
+     "roles": ["data-analyst"]},
+
+    {"slug": "business-intelligence-reporting", "label": "BI and reporting",
+     "insider": "'BI', 'reporting', 'dashboards' — the recurring numbers leadership reads.",
+     "onet": ["Analyze data to inform operational decisions or activities.",
+              "Prepare analytical reports."],
+     "roles": ["data-analyst"]},
+
+    {"slug": "data-pipeline-engineering", "label": "Data pipeline engineering",
+     "insider": "'ETL'/'ELT', 'the pipeline'; dbt and Airflow live here.",
+     "onet": ["Create databases to store electronic data.",
+              "Maintain data in information systems or databases."],
+     "roles": ["data-engineer"]},
+
+    {"slug": "market-analysis", "label": "Market analysis",
+     "insider": "'Market research' / 'competitive intel'; TAM and positioning work.",
+     "onet": ["Analyze market conditions or trends.", "Analyze industry trends.",
+              "Analyze consumer trends."],
+     "roles": ["pm", "marketer"]},
+
+    {"slug": "user-research", "label": "User research",
+     "insider": "'User research' / 'discovery interviews'; synthesis into findings.",
+     "onet": ["Collect data about customer needs.", "Conduct surveys in organizations."],
+     "roles": ["designer", "pm"]},
+
+    {"slug": "campaign-measurement", "label": "Campaign measurement",
+     "insider": "'Attribution' and 'performance marketing'; the funnel numbers.",
+     "onet": ["Measure effectiveness of business strategies or practices.",
+              "Gather organizational performance information."],
+     "roles": ["marketer", "data-analyst"]},
+
+    {"slug": "visual-design", "label": "Visual design",
+     "insider": "'Visual design' / 'layout'; comps and mocks.",
+     "onet": ["Design layout of art or product exhibits, displays, or promotional materials.",
+              "Design layouts for print publications."],
+     "roles": ["designer"]},
+
+    {"slug": "design-critique", "label": "Design critique",
+     "insider": "'Crit' — structured review of work in progress.",
+     "onet": ["Collaborate with others to develop or refine designs."],
+     "roles": ["designer", "pm"]},
+
+    {"slug": "motion-graphics", "label": "Motion graphics and CGI",
+     "insider": "'Motion graphics', 'mograph', 'CGI'.",
+     "onet": ["Create computer-generated graphics or animation."],
+     "roles": ["creator", "designer"]},
+
+    {"slug": "picture-edit", "label": "Picture edit",
+     "insider": "'The edit' / 'post' — assembly, cut, and finishing.",
+     "onet": ["Edit audio or video recordings."],
+     "roles": ["creator"]},
+
+    {"slug": "pre-production", "label": "Pre-production",
+     "insider": "'Pre-pro' — breakdown, scheduling, logistics before the shoot.",
+     "onet": ["Coordinate logistics for productions or events.",
+              "Determine technical requirements of productions or projects."],
+     "roles": ["creator"]},
+
+    {"slug": "script-breakdown", "label": "Script and story development",
+     "insider": "'Script breakdown' — reading a script for what the production needs.",
+     "onet": ["Study scripts to determine project requirements.",
+              "Determine presentation subjects or content."],
+     "roles": ["creator", "writer"]},
+
+    {"slug": "copy-editing", "label": "Copy editing",
+     "insider": "'Editing' / 'line edit' — someone else's draft made publishable.",
+     "onet": ["Edit written materials."],
+     "roles": ["writer"]},
+
+    {"slug": "financial-reporting", "label": "Financial reporting",
+     "insider": "'Close' and 'reporting'; the monthly and quarterly cycle.",
+     "onet": ["Prepare financial documents, reports, or budgets.", "Analyze business or financial data."],
+     "roles": ["finance"]},
+
+    {"slug": "regulatory-compliance", "label": "Regulatory compliance",
+     "insider": "'Compliance' — the evidence file for an audit or regulator.",
+     "onet": ["Prepare documentation for contracts, transactions, or regulatory compliance."],
+     "roles": ["legal", "security"]}
+  ]
+}
