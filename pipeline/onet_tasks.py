@@ -96,7 +96,56 @@ def candidates():
     return occ, dwa_name, dwa_gwa, who
 
 
+def validate_terms():
+    """Falsify the insider names against 5.9M chars of text practitioners actually wrote.
+
+    The rename layer is the part most likely to be quietly wrong: a plausible-sounding name that nobody
+    in the field says produces a tag nobody searches for. Every O*NET phrasing scores ZERO here, which is
+    the whole reason the layer exists — but so did 8 of the first 22 names I proposed
+    ("requirements discovery", "picture edit", "BI and reporting", "campaign measurement" …).
+
+    Document frequency, not raw count: one vendor's auto-generated template repeats "rube search" 183
+    times across hundreds of near-identical skills, and term frequency ranks that above every real word
+    in the corpus.
+
+    READ THE OUTPUT, DO NOT AUTOMATE IT. Frequency proves a term is USED, never that it MEANS the O*NET
+    step. Measured examples of that trap: "transcription" (18 docs) beat every candidate for "Edit audio
+    or video recordings" and is a different process; "copywriting" (35) beat every candidate for "Study
+    scripts to determine project requirements" and is also a different process. Both would have been
+    confident, popular, wrong. Where a domain is genuinely absent from our corpus — video post, finance —
+    the honest answer is `unvalidated`, not the nearest popular word.
+    """
+    import sqlite3
+    db = os.path.join(ROOT, "data", "tashan.db")
+    con = sqlite3.connect("file:%s?mode=ro" % db, uri=True)
+    docs = [((n or "") + ". " + (fd or "") + " " + (b or "")).lower() for n, fd, b in con.execute(
+        "SELECT c.name, t.full_description, t.doc_body "
+        "FROM capabilities c JOIN capability_text t ON t.cap_id = c.id")]
+    con.close()
+    import json as _json
+    import re as _re
+    path = os.path.join(ROOT, "data", "onet", "mapping.json")
+    mapping = _json.load(open(path))["mappings"]
+    print(f"{len(docs)} practitioner-written documents\n")
+    print(f"{'tag':<30}{'docs':>6}  status")
+    for e in mapping:
+        term = (e.get("term") or e["label"]).lower()
+        pat = _re.compile(r"(?<![a-z])" + _re.escape(term) + r"(?![a-z])")
+        n = sum(1 for d in docs if pat.search(d))
+        state = e.get("validation", "")
+        if n >= 5:
+            status = "confirmed — practitioners use this term"
+        elif n > 0:
+            status = "weak — used, but thinly represented here"
+        else:
+            status = "UNVALIDATED — " + (state or "term not found in corpus; domain may be absent")
+        print(f"{e['label'][:29]:<30}{n:>6}  {status}")
+    return 0
+
+
 def main():
+    if "--validate" in sys.argv:
+        return validate_terms()
     occ, dwa_name, dwa_gwa, who = candidates()
     if "--occupations" in sys.argv:
         groups = collections.defaultdict(set)
