@@ -529,10 +529,23 @@ def export(con):
     # capped silently deleted an entire tier the moment enough rows gained a score: registry rows filled
     # the slice and every unrated skill fell off the end, taking `catalogued` to zero. The ranked set and
     # the catalogued set are different populations and must be selected separately.
-    RANK_CAP = 1150   # tuned empirically: the largest board that fits the 45 KB gz index budget
+    # TWO PROJECTIONS OF ONE STORE — this is the fix for "the data is siloed".
+    #
+    # Everything (board, category rail, search) used to read ONE capped payload, so a hard limit set by
+    # the interactive board's download weight silently decided what existed for the whole product:
+    # 4,429 capabilities had a computed trust score and only 1,669 were reachable. We were doing the
+    # work and discarding it at the gate.
+    #
+    #   BULK  (capabilities.json) — every scored capability. Nothing fetches it at runtime; it feeds
+    #         prerender and the hubs, which are static HTML and therefore have NO payload budget, and it
+    #         is the public export. Size here costs a user nothing.
+    #   SLIM  (index.json)        — the interactive board only. Stays capped, because this one IS
+    #         downloaded on first paint.
+    BULK_CAP = 6000   # every scored capability gets a page and a place on its category hub
+    RANK_CAP = 1150   # board only: the largest that fits the 45 KB gz index budget
     rows = con.execute(f"SELECT {','.join(cols)} FROM capabilities WHERE trust IS NOT NULL "
                        "ORDER BY trust DESC, config_reach DESC, npm_downloads DESC "
-                       f"LIMIT {RANK_CAP + 300}").fetchall()          # buffer absorbs junk/dedup drops
+                       f"LIMIT {BULK_CAP}").fetchall()
     # Catalogued: things we deliberately list without a score (skills and plugins with no per-item
     # evidence). They are browsable and installable; they simply are not ranked.
     # Each tier gets its OWN quota. Ordering one combined query by stars filled all 1400 slots with
@@ -699,7 +712,7 @@ def export(con):
                                  "makes it rankable.")
         else:
             c["rated"] = c.get("trust") is not None
-    ranked = [c for c in caps if c.get("trust") is not None][:RANK_CAP]
+    ranked = [c for c in caps if c.get("trust") is not None]
     catalogued = [c for c in caps if c.get("trust") is None]
     tot = con.execute("SELECT COUNT(*) FROM capabilities").fetchone()[0]
     enriched = con.execute("SELECT COUNT(*) FROM capabilities WHERE npm_downloads IS NOT NULL").fetchone()[0]
@@ -712,6 +725,11 @@ def export(con):
         "expertise_graded": graded,
         "ranked": len(ranked),
         "catalogued": len(catalogued),
+        # ONE number a reader can act on: how many capabilities carry evidence and have a page. The old
+        # trio (tracked / npm-enriched / ranked) was pipeline telemetry — three figures that did not
+        # nest, one of them mislabelled "quality-measured" when it counted npm enrichment, and none of
+        # which answered "what can I actually look at?".
+        "measured": len(ranked) + len(catalogued),
         "note": "V2. Ranked by a transparent Trust score (maintenance + freshness, gated by real adoption). "
                 "Expertise is a separate, LLM-graded read of the actual capability — real depth vs. thin wrapper. "
                 "Retention (added-then-removed from git history) is the next signal.",
@@ -730,8 +748,11 @@ def export(con):
             "config_reach", "npm_downloads", "trust", "maintenance", "vitality",
             "expertise", "expertise_verdict", "npm_deprecated", "gh_archived", "rated"]  # NOT description: it is 104 KB gz of the index and the board never reads it
     slim = {k: payload[k] for k in ("generated_at", "method", "total_capabilities", "enriched_npm",
-                                    "expertise_graded", "ranked", "catalogued", "note")}
-    slim["capabilities"] = [{k: c.get(k) for k in SLIM} for c in (ranked + catalogued)]
+                                    "expertise_graded", "ranked", "catalogued", "measured", "note")}
+    # the board is capped; the bulk export above is not
+    board = ranked[:RANK_CAP] + catalogued
+    slim["capabilities"] = [{k: c.get(k) for k in SLIM} for c in board]
+    slim["ranked"] = len(ranked[:RANK_CAP])
     slim_out = os.path.join(ROOT, "web", "data", "index.json")
     json.dump(slim, open(slim_out, "w"))
     print(f"\nExported {len(ranked)} rated + {len(catalogued)} catalogued / {tot} total "

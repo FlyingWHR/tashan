@@ -51,11 +51,17 @@ def static_checks():
     want = {r["slug"] for r in board}
 
     # 1. every board row has a real page — no 404 on click (the bug we just fixed)
-    missing = [r["slug"] for r in board if r["slug"] not in have]
+    missing = [c["slug"] for c in bulk["capabilities"] if c.get("slug") and c["slug"] not in have] \
+              if "bulk" in dir() else [r["slug"] for r in board if r["slug"] not in have]
     check("every board row has a prerendered page", not missing,
           f"{len(missing)} rows 404 e.g. {missing[:3]}")
 
-    # 2. no orphan pages (page with no board row = unreachable dead weight)
+    # 2. no orphan pages. NOTE: "board" here is the SLIM index (the interactive leaderboard, capped for
+    # download weight). Pages are generated from the BULK export, which is deliberately larger — static
+    # HTML has no payload budget, so capping it was throwing away 3,148 scored capabilities that had
+    # nowhere to live. The real invariant is pages == bulk export, not pages == board.
+    bulk = json.load(open(os.path.join(WEB, "data", "capabilities.json")))
+    want = {c["slug"] for c in bulk["capabilities"] if c.get("slug")}
     orphans = have - want
     check("no orphan pages (board == prerendered set)", not orphans,
           f"{len(orphans)} orphans e.g. {sorted(orphans)[:3]}")

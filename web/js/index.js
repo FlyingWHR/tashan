@@ -23,9 +23,10 @@
     fetch("/data/categories.json").then(function (r) { return r.ok ? r.json() : { categories: [] }; }).catch(function () { return { categories: [] }; })
   ]).then(function (res) {
     var d = res[0];
-    set("sCaps", fmt(d.total_capabilities));
-    set("sRepos", fmt(d.enriched_npm));
-    set("sConfigs", fmt(d.ranked));
+    // measured ⊂ tracked — the two nest, so the pair is readable. "quality-measured" previously showed
+    // enriched_npm, which counts npm metadata fetches and is not a quality measurement at all.
+    set("sCaps", fmt(d.measured || d.ranked));
+    set("sRepos", fmt(d.total_capabilities));
     set("sDate", "measured " + fdate(d.generated_at));
     var fm = document.getElementById("footMethod");
     if (fm) fm.textContent = "public-signal v2 · " + fmt(d.total_capabilities) + " capabilities · " + fdate(d.generated_at);

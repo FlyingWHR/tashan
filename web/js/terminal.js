@@ -31,9 +31,8 @@
   function fillStatus(d) {
     statusline.innerHTML =
       '<span class="sl-a"><span class="sl-logo"></span>tashan.sh</span>'
-      + '<span class="sl-i"><b>' + fmt(d.total_capabilities) + '</b> tracked</span>'
-      + '<span class="sl-i"><b>' + fmt(d.expertise_graded || 0) + '</b> expertise-graded</span>'
-      + '<span class="sl-i"><b>' + fmt(d.ranked) + '</b> ranked</span>'
+      + '<span class="sl-i"><b>' + fmt(d.measured || d.ranked) + '</b> measured</span>'
+      + '<span class="sl-i">of <b>' + fmt(d.total_capabilities) + '</b> tracked</span>'
       + '<span class="sl-sp"></span>'
       + '<span class="sl-k">press <kbd>⌘K</kbd> / <kbd>/</kbd> to search</span>'
       + '<span class="sl-i sl-dim">measured ' + fdate(d.generated_at) + '</span>';

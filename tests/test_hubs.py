@@ -130,9 +130,12 @@ check("unrelated packages do not collide",
 check("no ranked capability shadows an official package",
       not [c["id"] for c in export["capabilities"] if c.get("similar_official")],
       str([c["id"] for c in export["capabilities"] if c.get("similar_official")][:3]))
+# Match the PRODUCTION rule (build.py CANARY), not the bare word: "canary" legitimately describes a
+# deployment strategy ("merge -> canary -> promote"), and flagging that was a false positive.
+_CANARY = re.compile(r"security research canary|\bcanary\b[^.]{0,40}not for production"
+                     r"|not for production use|placeholder package|do not (install|use) this package", re.I)
 check("no self-declared canary is ranked",
-      not [c["id"] for c in export["capabilities"]
-           if re.search(r"canary|not for production", (c.get("description") or ""), re.I)])
+      not [c["id"] for c in export["capabilities"] if _CANARY.search(c.get("description") or "")])
 
 print()
 print("# social card")
