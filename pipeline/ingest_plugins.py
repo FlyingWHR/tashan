@@ -151,7 +151,12 @@ def parse(manifest, repo):
         auth = p.get("author") or owner
         out.append({
             "name": str(p["name"]).strip(),
+            # `description` stays clipped — it is the card/table blurb and 500 chars is a display
+            # decision. `description_full` is the untruncated original, written to capability_text for
+            # the tagger and the expertise grader. 514 plugins were sitting exactly at the old cap,
+            # i.e. their text was being cut mid-sentence and the remainder discarded entirely.
             "description": desc[:500],
+            "description_full": desc,
             "version": p.get("version"),
             "category": (p.get("category") or "").strip().lower() or None,
             "tags": [str(t) for t in (p.get("tags") or [])][:12],
@@ -217,6 +222,8 @@ def upsert(con, p, gh_meta, shared, reach):
        (None if shared else gh_meta.get("stars")), gh_meta.get("pushed"), gh_meta.get("license"),
        ",".join(p.get("tags") or []),
        "plugin-marketplace:" + (p.get("tier") or "discovered"), reach))
+    build.put_text(con, cid, full_description=p.get("description_full") or p["description"],
+                   doc_source="marketplace_json")
 
 
 def main():

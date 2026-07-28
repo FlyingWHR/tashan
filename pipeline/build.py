@@ -50,7 +50,31 @@ CREATE TABLE IF NOT EXISTS signal_history (
 CREATE TABLE IF NOT EXISTS sync_state (
   source TEXT PRIMARY KEY, last_synced TEXT, last_cursor TEXT, seen INTEGER DEFAULT 0, note TEXT
 );
+-- FULL text, deliberately in its own table. `capabilities` is already 52 columns wide and every
+-- scoring pass SELECTs across it; SKILL.md bodies run to 70 KB (5.6 MB across the corpus) and would
+-- make every unrelated query drag them along. Kept here, joined only by the things that read prose:
+-- the tagger, the expertise grader, prerender.
+--   doc_source ∈ 'skill_md' | 'marketplace_json' | 'readme'
+-- Note what this does NOT fix: remote/npm descriptions are capped at 100 chars by the MCP REGISTRY
+-- itself, upstream of us. Those need a README fetch, not a truncation fix.
+CREATE TABLE IF NOT EXISTS capability_text (
+  cap_id TEXT PRIMARY KEY, full_description TEXT, doc_body TEXT, doc_source TEXT, fetched_at TEXT
+);
+-- The task axis: multi-valued, queryable, and every assignment carries its own justification.
+-- A capability does several jobs, so this cannot be a column on `capabilities` the way `category` is
+-- (single-valued by design). `basis` + `evidence` exist so a tag can always answer "says who?" —
+-- the same standard expertise_verdict already meets. NOT a repeat of the gh_topics CSV mistake
+-- (docs/ARCHITECTURE-RISKS.md risk #8: unqueryable blob columns).
+--   basis ∈ 'declared'  (the author's own keyword/category — attributable)
+--         | 'graded'    (LLM read the text against the published rubric)
+--         | 'alongside' (measured: appears in the same real configs as other capabilities for this task)
+CREATE TABLE IF NOT EXISTS capability_tags (
+  cap_id TEXT, tag TEXT, confidence REAL, basis TEXT, evidence TEXT,
+  PRIMARY KEY (cap_id, tag)
+);
 CREATE INDEX IF NOT EXISTS idx_trust ON capabilities(trust DESC);
+CREATE INDEX IF NOT EXISTS idx_captag_tag ON capability_tags(tag);
+CREATE INDEX IF NOT EXISTS idx_captag_cap ON capability_tags(cap_id);
 """
 
 # columns added after the first DBs were created — ALTER them in on open (SQLite has no ADD COLUMN IF NOT EXISTS)
@@ -67,7 +91,7 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # source be retracted wholesale (docs/SOURCING.md §4)
            "sources TEXT"]
 
-SCHEMA_VERSION = 3  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 4  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # indexes on the columns actually filtered/sorted — created AFTER MIGRATE so category/gh_* exist.
 # At 100k+ rows these turn every facet/sort/history query from an O(N) scan into an index seek.
@@ -100,6 +124,29 @@ def db():
     con.execute(f"PRAGMA user_version = {SCHEMA_VERSION}")
     con.commit()
     return con
+
+def put_text(con, cap_id, full_description=None, doc_body=None, doc_source=None):
+    """Record a capability's UNTRUNCATED prose. Ingests call this with whatever they already hold.
+
+    Every ingest was clipping text on the way in — plugins at 500 chars — and the full SKILL.md bodies
+    (1,322 of them, up to 70 KB) were fetched, cached, and then thrown away without ever reaching the
+    DB. That text is the only thing a workflow tagger has to read, so the quality ceiling for the whole
+    task axis was set by a truncation nobody needed. COALESCE keeps a later partial write from erasing
+    prose an earlier one captured.
+    """
+    if not (full_description or doc_body):
+        return
+    con.execute(
+        """INSERT INTO capability_text (cap_id, full_description, doc_body, doc_source, fetched_at)
+           VALUES (?,?,?,?,?)
+           ON CONFLICT(cap_id) DO UPDATE SET
+             full_description=COALESCE(excluded.full_description, capability_text.full_description),
+             doc_body=COALESCE(excluded.doc_body, capability_text.doc_body),
+             doc_source=COALESCE(excluded.doc_source, capability_text.doc_source),
+             fetched_at=excluded.fetched_at""",
+        (cap_id, full_description or None, doc_body or None, doc_source,
+         datetime.now(timezone.utc).isoformat()))
+
 
 def get_json(url, timeout=20):
     req = urllib.request.Request(url, headers={"User-Agent": "tashan-pipeline"})
@@ -728,8 +775,16 @@ def export(con):
         return None
 
     caps = []
+    # Task tags, fetched ONCE for the whole export rather than per row — 4,900 single-row lookups inside
+    # the loop below is the shape that turns a 2-second export into a minute.
+    tags_by_cap = {}
+    for cap_id, tag, basis in con.execute(
+            "SELECT cap_id, tag, basis FROM capability_tags ORDER BY confidence DESC"):
+        tags_by_cap.setdefault(cap_id, []).append({"t": tag, "b": basis})
+
     for r in rows:
         o = dict(zip(cols, r))
+        o["tasks"] = tags_by_cap.get(o["id"], [])
         o["description"] = clean_desc(o.get("description"))
         o["official"] = official_of(o.get("npm_pkg"), o.get("source_repo"))
         # A SCOPED package whose leaf is generic has all of its identity in the scope. junk() rightly

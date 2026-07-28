@@ -154,7 +154,11 @@ def main():
                 continue
             home = f"https://github.com/{repo}/tree/HEAD/{d}" if d else f"https://github.com/{repo}"
             found.setdefault(key, []).append(
-                {"name": nm, "desc": desc, "repo": repo, "home": home, "official": official})
+                {"name": nm, "desc": desc, "repo": repo, "home": home, "official": official,
+                 # carry the FULL SKILL.md body through to the DB. It was already fetched and cached
+                 # here and then dropped on the floor; it is the richest prose in the whole corpus
+                 # (p50 ~2,950 chars vs a 100-char registry blurb) and the task tagger reads it.
+                 "body": md})
             taken += 1; scanned += 1
         print(f"  {repo}: {len(paths)} SKILL.md found, {taken} scanned", flush=True)
 
@@ -193,8 +197,11 @@ def main():
         if reach > 1:
             multi += 1
         owner = best["repo"].split("/")[0]
-        upsert(con, f"skill:{owner}/{key}", key, best["name"], best["desc"], best["repo"],
+        cid = f"skill:{owner}/{key}"
+        upsert(con, cid, key, best["name"], best["desc"], best["repo"],
                best["home"], best["official"], reach, ",".join(repos)[:500])
+        build.put_text(con, cid, full_description=best["desc"], doc_body=best.get("body"),
+                       doc_source="skill_md")
         total += 1
     con.commit()
     with open(CACHE, "w") as f:
