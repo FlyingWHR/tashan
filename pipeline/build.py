@@ -544,7 +544,14 @@ def compute_scores(con):
         # renormalise the score over known weight, then discount TRUST by how much evidence backs it.
         # Thin evidence costs a little; it no longer costs 65 points, and it cannot buy the top either.
         m = w = 0.0
-        people = maint if maint is not None else gh_contrib   # npm maintainers, else real contributors
+        # PEOPLE: how many humans are behind this. npm maintainers are publish rights; GitHub
+        # contributors are who actually writes it. Preferring npm and DISCARDING the other punished
+        # projects for being on npm at all: figma-developer-mcp has 1 npm publisher and 30 contributors,
+        # so it scored the bus-factor axis as a one-person project and landed at Maint 70, BELOW a plugin
+        # with the same 30 contributors and no npm metadata at all (Maint 100). More evidence must never
+        # produce a worse score. 100 of 181 rows carrying both were throwing away the larger number.
+        # (single_maintainer is computed separately and still reports publish-rights bus factor honestly.)
+        people = max([x for x in (maint, gh_contrib) if x is not None], default=None)
         if people is not None: m += min(1.0, people / 3) * 40; w += 40
         if vers is not None: m += min(1.0, math.log1p(vers) / math.log1p(30)) * 25; w += 25
         if freshness is not None: m += freshness / 100 * 35; w += 35
