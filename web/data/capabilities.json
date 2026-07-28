@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T18:36:08.203329+00:00",
+  "generated_at": "2026-07-28T18:41:57.682888+00:00",
   "method": "public signal: MCP registry + config-adoption + npm quality + LLM expertise-eval (SQLite pipeline)",
   "total_capabilities": 12113,
   "enriched_npm": 1412,
@@ -1088,11 +1088,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-a-web-frontend",
+          "t": "design-a-ui",
           "b": "graded"
         },
         {
-          "t": "design-a-ui",
+          "t": "build-a-web-frontend",
           "b": "graded"
         },
         {
@@ -2218,7 +2218,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "configure-an-agent",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-jarrodwatts-claude-hud-claude-hud",
       "rated": true
@@ -2761,7 +2766,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "optimize-operations",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-nvidia-skills-nvidia-skills",
       "rated": true
@@ -5204,7 +5214,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "design-hardware",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-aklofas-kicad-happy-kicad-happy",
       "rated": true
@@ -5376,7 +5391,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "model-in-cad",
+          "b": "graded"
+        },
+        {
+          "t": "design-hardware",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-earthtojake-text-to-cad-cad",
       "also_via": [
@@ -5845,7 +5869,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "generate-music-or-audio",
+          "t": "manage-social-media",
           "b": "graded"
         }
       ],
@@ -6183,7 +6207,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "plan-health-and-training",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-liammorrow-liftlog-liftlog-plan-builder",
       "rated": true
@@ -6939,7 +6968,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "configure-an-agent",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-agent-sh-agnix-agnix",
       "rated": true
@@ -7041,7 +7075,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "configure-an-agent",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-manuelschipper-nah-nah",
       "rated": true
@@ -7218,7 +7257,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-prompts",
+          "t": "configure-an-agent",
           "b": "graded"
         }
       ],
@@ -8072,11 +8111,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "analyze-a-dataset",
-          "b": "graded"
-        },
-        {
-          "t": "do-literature-review",
+          "t": "run-scientific-analysis",
           "b": "graded"
         }
       ],
@@ -8974,7 +9009,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "configure-an-agent",
+          "b": "graded"
+        }
+      ],
       "official": null,
       "slug": "plugin-astro-han-claude-lens-claude-lens",
       "rated": true
@@ -9199,7 +9239,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-prompts",
+          "t": "configure-an-agent",
           "b": "graded"
         }
       ],

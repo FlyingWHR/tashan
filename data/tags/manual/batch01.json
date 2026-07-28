@@ -1,53 +1,173 @@
 {
   "_note": "Graded in session against the rubric in tag_capabilities.py. Ordered by trust, so these are the rows that head the hub pages. Empty lists are deliberate: version-note blurbs, meta-tooling and 'skills across 14 professions' grab-bags serve no single job, and forcing a tag on them is how a taxonomy starts lying.",
-
-  "plugin:mattpocock/skills/mattpocock-skills": ["write-tests", "review-code", "plan-and-scope-work"],
-  "plugin:juliusbrussee/caveman/caveman": ["manage-prompts"],
-  "plugin:chromedevtools/chrome-devtools-mcp/chrome-devtools-mcp": ["automate-a-browser", "debug-an-issue", "optimize-performance"],
-  "plugin:pbakaus/impeccable/impeccable": ["design-a-ui", "build-a-web-frontend", "run-a-design-review"],
-  "plugin:dietrichgebert/ponytail/ponytail": ["implement-a-feature", "refactor-code"],
-  "plugin:lum1104/understand-anything/understand-anything": ["explore-a-codebase"],
-  "plugin:thedotmack/claude-mem/claude-mem": ["take-and-organize-notes"],
-  "plugin:mem0ai/mem0/mem0": ["take-and-organize-notes", "build-an-agent"],
-  "plugin:agricidaniel/claude-seo/claude-seo": ["optimize-for-search", "do-keyword-research"],
-  "plugin:dayuanjiang/next-ai-draw-io/next-ai-drawio": ["design-an-architecture", "generate-images"],
-  "plugin:huggingface/skills/huggingface-skills": ["fine-tune-a-model", "evaluate-model-output"],
-  "plugin:mksglu/context-mode/context-mode": ["manage-prompts"],
-  "plugin:promptfoo/promptfoo/promptfoo-evals": ["evaluate-model-output"],
-  "plugin:browser-use/browser-harness/browser-harness": ["automate-a-browser"],
-  "plugin:confident-ai/deepeval/deepeval": ["evaluate-model-output"],
-  "plugin:jarrodwatts/claude-hud/claude-hud": [],
-  "plugin:wonderwhy-er/desktopcommandermcp/desktop-commander": ["manage-files-and-storage"],
-  "plugin:alirezarezvani/claude-skills/playwright-pro": ["write-tests", "automate-a-browser"],
-  "plugin:brainblend-ai/atomic-agents/atomic-agents": ["build-an-agent"],
-  "plugin:mvanhorn/last30days-skill/last30days": ["do-market-research", "search-the-web"],
+  "plugin:mattpocock/skills/mattpocock-skills": [
+    "write-tests",
+    "review-code",
+    "plan-and-scope-work"
+  ],
+  "plugin:juliusbrussee/caveman/caveman": [
+    "manage-prompts"
+  ],
+  "plugin:chromedevtools/chrome-devtools-mcp/chrome-devtools-mcp": [
+    "automate-a-browser",
+    "debug-an-issue",
+    "optimize-performance"
+  ],
+  "plugin:pbakaus/impeccable/impeccable": [
+    "design-a-ui",
+    "build-a-web-frontend",
+    "run-a-design-review"
+  ],
+  "plugin:dietrichgebert/ponytail/ponytail": [
+    "implement-a-feature",
+    "refactor-code"
+  ],
+  "plugin:lum1104/understand-anything/understand-anything": [
+    "explore-a-codebase"
+  ],
+  "plugin:thedotmack/claude-mem/claude-mem": [
+    "take-and-organize-notes"
+  ],
+  "plugin:mem0ai/mem0/mem0": [
+    "take-and-organize-notes",
+    "build-an-agent"
+  ],
+  "plugin:agricidaniel/claude-seo/claude-seo": [
+    "optimize-for-search",
+    "do-keyword-research"
+  ],
+  "plugin:dayuanjiang/next-ai-draw-io/next-ai-drawio": [
+    "design-an-architecture",
+    "generate-images"
+  ],
+  "plugin:huggingface/skills/huggingface-skills": [
+    "fine-tune-a-model",
+    "evaluate-model-output"
+  ],
+  "plugin:mksglu/context-mode/context-mode": [
+    "manage-prompts"
+  ],
+  "plugin:promptfoo/promptfoo/promptfoo-evals": [
+    "evaluate-model-output"
+  ],
+  "plugin:browser-use/browser-harness/browser-harness": [
+    "automate-a-browser"
+  ],
+  "plugin:confident-ai/deepeval/deepeval": [
+    "evaluate-model-output"
+  ],
+  "plugin:jarrodwatts/claude-hud/claude-hud": [
+    "configure-an-agent"
+  ],
+  "plugin:wonderwhy-er/desktopcommandermcp/desktop-commander": [
+    "manage-files-and-storage"
+  ],
+  "plugin:alirezarezvani/claude-skills/playwright-pro": [
+    "write-tests",
+    "automate-a-browser"
+  ],
+  "plugin:brainblend-ai/atomic-agents/atomic-agents": [
+    "build-an-agent"
+  ],
+  "plugin:mvanhorn/last30days-skill/last30days": [
+    "do-market-research",
+    "search-the-web"
+  ],
   "plugin:nyldn/claude-octopus/octo": [],
-  "plugin:revfactory/harness/harness": ["build-an-agent"],
-  "plugin:eventual-inc/daft/daft": ["build-a-data-pipeline"],
-  "plugin:nvidia/skills/nvidia-skills": [],
-  "plugin:clidey/whodb/whodb": ["query-a-database", "check-data-quality"],
-  "plugin:cloudflare/skills/cloudflare": ["deploy-a-release", "provision-infrastructure"],
-  "plugin:dathere/qsv/qsv-data-wrangling": ["work-with-spreadsheets", "analyze-a-dataset"],
-  "plugin:exa-labs/exa-mcp-server/exa": ["search-the-web", "do-literature-review"],
-  "plugin:expo/skills/expo": ["build-an-ios-app", "build-an-android-app", "ship-a-mobile-release"],
-  "plugin:stripe/ai/stripe": ["build-an-ecommerce-store"],
-  "plugin:avdlee/swiftui-agent-skill/swiftui-expert": ["build-an-ios-app"],
-  "plugin:chachamaru127/claude-code-harness/claude-harness": ["automate-a-workflow"],
-  "plugin:epoko77-ai/im-not-ai/humanize-korean": ["write-long-form-content", "translate-and-localize"],
-  "plugin:giancarloerra/socraticode/socraticode": ["explore-a-codebase"],
-  "plugin:microsoft/azure-skills/azure": ["provision-infrastructure", "deploy-a-release"],
-  "plugin:atlassian/atlassian-mcp-server/atlassian": ["manage-tasks-and-projects"],
-  "plugin:cocoindex-io/cocoindex-code/cocoindex-code": ["explore-a-codebase"],
-  "plugin:activeloopai/deeplake-claude-code-plugins/deeplake-hivemind": ["take-and-organize-notes"],
-  "plugin:activeloopai/hivemind/hivemind": ["take-and-organize-notes"],
-  "plugin:codeaholicguy/ai-devkit/ai-devkit": ["plan-and-scope-work", "review-code", "write-tests"],
-  "plugin:evanbacon/serve-sim/serve-sim": ["build-an-ios-app"],
-  "plugin:figma/mcp-server-guide/figma": ["handoff-design-to-code", "design-a-ui"],
-  "plugin:googlechrome/modern-web-guidance/modern-web-guidance": ["build-a-web-frontend"],
-  "plugin:kenryu42/claude-code-safety-net/safety-net": ["manage-version-control"],
-  "plugin:silverstein/minutes/minutes": ["run-meetings"],
-  "plugin:actionbook/actionbook/actionbook": ["automate-a-browser", "scrape-the-web"],
-  "plugin:clickhouse/agent-skills/clickhouse-best-practices": ["query-a-database", "build-a-data-pipeline"],
-  "plugin:hyhmrright/brooks-lint/brooks-lint": ["review-code", "refactor-code"],
+  "plugin:revfactory/harness/harness": [
+    "build-an-agent"
+  ],
+  "plugin:eventual-inc/daft/daft": [
+    "build-a-data-pipeline"
+  ],
+  "plugin:nvidia/skills/nvidia-skills": [
+    "optimize-operations"
+  ],
+  "plugin:clidey/whodb/whodb": [
+    "query-a-database",
+    "check-data-quality"
+  ],
+  "plugin:cloudflare/skills/cloudflare": [
+    "deploy-a-release",
+    "provision-infrastructure"
+  ],
+  "plugin:dathere/qsv/qsv-data-wrangling": [
+    "work-with-spreadsheets",
+    "analyze-a-dataset"
+  ],
+  "plugin:exa-labs/exa-mcp-server/exa": [
+    "search-the-web",
+    "do-literature-review"
+  ],
+  "plugin:expo/skills/expo": [
+    "build-an-ios-app",
+    "build-an-android-app",
+    "ship-a-mobile-release"
+  ],
+  "plugin:stripe/ai/stripe": [
+    "build-an-ecommerce-store"
+  ],
+  "plugin:avdlee/swiftui-agent-skill/swiftui-expert": [
+    "build-an-ios-app"
+  ],
+  "plugin:chachamaru127/claude-code-harness/claude-harness": [
+    "automate-a-workflow"
+  ],
+  "plugin:epoko77-ai/im-not-ai/humanize-korean": [
+    "write-long-form-content",
+    "translate-and-localize"
+  ],
+  "plugin:giancarloerra/socraticode/socraticode": [
+    "explore-a-codebase"
+  ],
+  "plugin:microsoft/azure-skills/azure": [
+    "provision-infrastructure",
+    "deploy-a-release"
+  ],
+  "plugin:atlassian/atlassian-mcp-server/atlassian": [
+    "manage-tasks-and-projects"
+  ],
+  "plugin:cocoindex-io/cocoindex-code/cocoindex-code": [
+    "explore-a-codebase"
+  ],
+  "plugin:activeloopai/deeplake-claude-code-plugins/deeplake-hivemind": [
+    "take-and-organize-notes"
+  ],
+  "plugin:activeloopai/hivemind/hivemind": [
+    "take-and-organize-notes"
+  ],
+  "plugin:codeaholicguy/ai-devkit/ai-devkit": [
+    "plan-and-scope-work",
+    "review-code",
+    "write-tests"
+  ],
+  "plugin:evanbacon/serve-sim/serve-sim": [
+    "build-an-ios-app"
+  ],
+  "plugin:figma/mcp-server-guide/figma": [
+    "handoff-design-to-code",
+    "design-a-ui"
+  ],
+  "plugin:googlechrome/modern-web-guidance/modern-web-guidance": [
+    "build-a-web-frontend"
+  ],
+  "plugin:kenryu42/claude-code-safety-net/safety-net": [
+    "manage-version-control"
+  ],
+  "plugin:silverstein/minutes/minutes": [
+    "run-meetings"
+  ],
+  "plugin:actionbook/actionbook/actionbook": [
+    "automate-a-browser",
+    "scrape-the-web"
+  ],
+  "plugin:clickhouse/agent-skills/clickhouse-best-practices": [
+    "query-a-database",
+    "build-a-data-pipeline"
+  ],
+  "plugin:hyhmrright/brooks-lint/brooks-lint": [
+    "review-code",
+    "refactor-code"
+  ],
   "plugin:mohitagw15856/pm-claude-skills/pm-claude-skills": []
 }
