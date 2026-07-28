@@ -436,12 +436,19 @@ def compute_scores(con):
         adoption = round(100 * (0.7 * a_dl + 0.3 * a_reach)) if (dl or reach) else None
         # PLUGINS have no public download telemetry — the channel simply does not publish one. Stars on
         # the plugin's OWN repository are the only public popularity signal, so they stand in for
-        # adoption here and NOWHERE else. Two guards make this honest: gh_stars is only populated when
-        # the repo hosts exactly one plugin (see ingest_plugins.py), so this can never be a marketplace's
-        # popularity wearing a plugin's name; and the methodology page states the substitution outright.
-        # A plugin with no per-item star count keeps adoption=None and stays unrated.
-        if adoption is None and kind == "plugin" and gh_stars:
-            adoption = round(100 * math.log1p(gh_stars) / math.log1p(max_star))
+        # DOWNLOADS here and NOWHERE else, in the same 0.7/0.3 blend. Two guards make this honest:
+        # gh_stars is only populated when the repo hosts exactly one plugin (see ingest_plugins.py), so
+        # this can never be a marketplace's popularity wearing a plugin's name; and the methodology page
+        # states the substitution outright.
+        #
+        # This MUST be a branch, not an `if adoption is None` fallback. As a fallback it was dead code the
+        # moment config_reach started counting marketplace manifests that reference the plugin: one
+        # referenced by 2 marketplaces got a non-None reach-only adoption of 10, so the star path never
+        # ran and impeccable (51,323★) scored the same as an unknown. Reach alone is a 1-3 valued signal
+        # here; it cannot carry adoption by itself.
+        if kind == "plugin":
+            a_star = math.log1p(gh_stars or 0) / math.log1p(max_star)
+            adoption = round(100 * (0.7 * a_star + 0.3 * a_reach)) if (gh_stars or reach) else None
         # FRESHNESS: recency of the MOST RECENT public activity — npm publish OR git push OR release.
         # (a repo can be active on git but stale on npm, and vice-versa — take the freshest signal)
         acts = [months_since(x) for x in (lastpub, gh_pushed, gh_release)]
@@ -542,7 +549,7 @@ def export(con):
     #   SLIM  (index.json)        — the interactive board only. Stays capped, because this one IS
     #         downloaded on first paint.
     BULK_CAP = 6000   # every scored capability gets a page and a place on its category hub
-    RANK_CAP = 1150   # board only: the largest that fits the 45 KB gz index budget
+    RANK_CAP = 1080   # board only: the largest that fits the 45 KB gz index budget (test_site asserts it)
     rows = con.execute(f"SELECT {','.join(cols)} FROM capabilities WHERE trust IS NOT NULL "
                        "ORDER BY trust DESC, config_reach DESC, npm_downloads DESC "
                        f"LIMIT {BULK_CAP}").fetchall()
@@ -632,6 +639,11 @@ def export(con):
         o = dict(zip(cols, r))
         o["description"] = clean_desc(o.get("description"))
         o["official"] = official_of(o.get("npm_pkg"), o.get("source_repo"))
+        # A SCOPED package whose leaf is generic has all of its identity in the scope. junk() rightly
+        # keeps @vaaya/mcp (the scope makes it a real, distinct package) but the stored name is the bare
+        # leaf, so the design hub listed "mcp" and "mcp-server" as if they were nameless. Show the scope.
+        if (o.get("npm_pkg") or "").startswith("@") and (o.get("name") or "").lower() in DENY:
+            o["name"] = o["npm_pkg"]
         if junk(o):
             continue
         o["co_used"] = json.loads(o["co_used"]) if o["co_used"] else []
@@ -673,27 +685,47 @@ def export(con):
     # byte-identical descriptions, so an exact match on a non-trivial description means one product — keep
     # the row with the most signal behind it and drop the echo. A ranking that lists the same thing twice
     # is telling the reader something false about the field.
-    best, dropped = {}, 0
-    for c in caps:
-        k = (c.get("description") or "").strip().lower()
-        if len(k) <= 25:
-            continue
-        prev = best.get(k)
-        if prev is None or (c.get("trust") or 0) > (prev.get("trust") or 0):
-            best[k] = c
-    keep = set()
-    for k, c in best.items():
-        keep.add(c["id"])
-    deduped = []
-    for c in caps:
-        k = (c.get("description") or "").strip().lower()
-        if len(k) > 25 and c["id"] not in keep:
-            dropped += 1
-            continue
-        deduped.append(c)
-    if dropped:
-        print("  dedup: dropped %d duplicate listing(s) sharing a description with a higher-signal row" % dropped)
-    caps = deduped
+    # TWO collisions, one mechanism — the same product listed more than once:
+    #   (1) byte-identical descriptions (the same author republishing under two names);
+    #   (2) the same name from the same repo reached through two DISTRIBUTION CHANNELS. chrome-devtools-mcp
+    #       is on npm and also ships as a plugin, and it ranked at both T93 and T60 — one product wearing
+    #       two scores, which is worse for a reader than either score alone.
+    # Keep the highest-trust row and fold the loser's channel into `also_via`, so the fact that it is
+    # installable both ways survives while the duplicate listing does not.
+    def collapse(caps, key, label):
+        best = {}
+        for c in caps:
+            k = key(c)
+            if k is None:
+                continue
+            prev = best.get(k)
+            if prev is None or (c.get("trust") or 0) > (prev.get("trust") or 0):
+                best[k] = c
+        keep = {c["id"] for c in best.values()}
+        out, dropped = [], 0
+        for c in caps:
+            k = key(c)
+            if k is not None and c["id"] not in keep:
+                dropped += 1
+                via = best[k].setdefault("also_via", [])
+                if c.get("kind") and c["kind"] not in via:
+                    via.append(c["kind"])
+                continue
+            out.append(c)
+        if dropped:
+            print(f"  dedup: dropped {dropped} duplicate listing(s) sharing {label} with a higher-signal row")
+        return out
+
+    def by_desc(c):
+        d = (c.get("description") or "").strip().lower()
+        return d if len(d) > 25 else None
+
+    def by_repo(c):
+        return ((c["name"].lower(), c["source_repo"].lower())
+                if c.get("name") and c.get("source_repo") else None)
+
+    caps = collapse(caps, by_desc, "a description")
+    caps = collapse(caps, by_repo, "a name and repo")
     # RATED vs CATALOGUED. A skill lives inside a repository, so repo maintenance is shared by every skill
     # in it: measured just now, 854 skills scored 42.0 with a within-repo spread of 42.0-42.0. That number
     # says "the repo is alive", not "this skill is good", and publishing it per-skill would be a claim we

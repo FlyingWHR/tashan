@@ -180,16 +180,29 @@ CATMAP = {
 }
 
 
-def upsert(con, p, gh_meta, shared):
+def plugin_id(p):
+    """Identity is the plugin's OWN home, never the marketplace that happens to list it.
+
+    Keying by marketplace produced one row per listing: impeccable appeared three times (its own
+    marketplace, claude-plugins-community, and a third-party bundle), each with its own category and
+    score. Worse, the solo-repo test counts declarations per home repo, so a plugin listed in two
+    marketplaces looked like two plugins sharing one repo — and had its star count stripped as "shared".
+    impeccable lost 51,323 stars and ponytail 90,263 exactly this way, dropping their trust from 65/63
+    to 47/46. One plugin, one row, keyed by where it actually lives."""
+    home = p.get("home") or p["repo"]
+    return "plugin:" + home.lower() + "/" + re.sub(r"[^a-z0-9]+", "-", p["name"].lower()).strip("-")
+
+
+def upsert(con, p, gh_meta, shared, reach):
     """shared=True means this repo hosts more than one plugin, so its stars are NOT a per-item signal.
     Those rows carry the metadata but no stars, so scoring cannot mistake a vendor's repo popularity
     for evidence about one plugin inside it."""
-    cid = "plugin:" + p["repo"].lower() + "/" + re.sub(r"[^a-z0-9]+", "-", p["name"].lower()).strip("-")
+    cid = plugin_id(p)
     cat = CATMAP.get(p.get("category") or "", None)
     con.execute("""INSERT INTO capabilities
         (id, name, kind, title, description, source_repo, homepage, category, in_registry,
-         gh_stars, gh_pushed, gh_license, gh_topics, sources)
-      VALUES (?,?, 'plugin', ?,?,?,?,?, 0, ?,?,?,?, ?)
+         gh_stars, gh_pushed, gh_license, gh_topics, sources, config_reach)
+      VALUES (?,?, 'plugin', ?,?,?,?,?, 0, ?,?,?,?, ?, ?)
       ON CONFLICT(id) DO UPDATE SET
         title=COALESCE(excluded.title, capabilities.title),
         description=COALESCE(excluded.description, capabilities.description),
@@ -198,11 +211,12 @@ def upsert(con, p, gh_meta, shared):
         gh_stars=excluded.gh_stars, gh_pushed=excluded.gh_pushed,
         gh_license=COALESCE(excluded.gh_license, capabilities.gh_license),
         gh_topics=COALESCE(excluded.gh_topics, capabilities.gh_topics),
-        sources=excluded.sources, kind='plugin'""",
+        sources=excluded.sources, config_reach=MAX(capabilities.config_reach, excluded.config_reach),
+        kind='plugin'""",
       (cid, p["name"], p.get("marketplace"), p["description"], p.get("home") or p["repo"], p.get("homepage"), cat,
        (None if shared else gh_meta.get("stars")), gh_meta.get("pushed"), gh_meta.get("license"),
        ",".join(p.get("tags") or []),
-       "plugin-marketplace:" + (p.get("tier") or "discovered")))
+       "plugin-marketplace:" + (p.get("tier") or "discovered"), reach))
 
 
 def main():
@@ -236,13 +250,18 @@ def main():
     # ---- PASS 2: how many plugins share each home repo? ----
     # A repo hosting exactly one plugin gives per-item signals. A repo hosting several does not, and
     # publishing its stars against each of them would be the marketplace-stars error in miniature.
-    counts = {}
+    # count DISTINCT plugins per home repo — not declarations. The same plugin listed by three
+    # marketplaces is still one plugin, and its repo is still its own.
+    per_home, listings = {}, {}
     for p in found:
+        pid = plugin_id(p)
+        listings[pid] = listings.get(pid, 0) + 1
         if p.get("home"):
-            counts[p["home"]] = counts.get(p["home"], 0) + 1
-    solo = {r for r, n in counts.items() if n == 1}
-    print(f"  {len(found)} plugin declarations across {len(counts)} home repos "
-          f"({len(solo)} own their repo outright -> ratable)", flush=True)
+            per_home.setdefault(p["home"], set()).add(pid)
+    solo = {r for r, ids in per_home.items() if len(ids) == 1}
+    print(f"  {len(found)} plugin declarations across {len(per_home)} home repos "
+          f"({len(solo)} own their repo outright -> ratable); "
+          f"{len(listings)} distinct plugins", flush=True)
 
     # ---- PASS 3: fetch stars ONLY where they mean something, then upsert ----
     con = build.db()
@@ -259,7 +278,7 @@ def main():
             if fetched % 150 == 0:
                 print(f"    {fetched} repos fetched…", flush=True)
                 con.commit(); json.dump(cache, open(CACHE, "w"))
-        upsert(con, p, meta or {}, shared=not is_solo)
+        upsert(con, p, meta or {}, shared=not is_solo, reach=listings.get(plugin_id(p), 1))
         rated += 1 if (is_solo and (meta or {}).get("stars") is not None) else 0
     con.commit()
     json.dump(cache, open(CACHE, "w"))
