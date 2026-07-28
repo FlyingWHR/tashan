@@ -22,8 +22,8 @@ python3 pipeline/bump_assets.py --check   # assert every ?v= on disk matches ass
 # That workflow is not convenience — signal_history cannot be backfilled, so a day nobody runs the
 # pipeline is a hole in the only asset that compounds.
 
-# Preview the site locally (no build step):
-cd web && python3 -m http.server 4173 --bind 127.0.0.1   # → http://localhost:4173
+# Preview the site locally (no build step). USE THIS, not `python3 -m http.server`:
+python3 pipeline/serve.py            # → http://localhost:4173, sends no-store on everything
 
 # Deploy (static; Cloudflare Pages, project "tashan", domain tashan.sh):
 npx wrangler@3 pages deploy web --project-name tashan
@@ -46,7 +46,9 @@ No package.json, no test suite, no linter — pure Python 3 stdlib scripts (`url
 - **D** compute transparent scores (Adoption, Maintenance, Freshness, Trust) — see `compute_scores()`. Scores are labelled and derived from public signal only; unknown inputs stay `None`, never faked to 0.
 - **E** export ranked JSON to `web/data/capabilities.json`
 
-Capability `id` convention: `pkg:<npm>` (npm-backed), `registry:<name>` (registry-only), `key:*` (skipped). The export's `junk()` filter drops bare generic leaf names (`mcp`, `server`, `cli`, …) that carry no identity.
+Capability `id` convention: `pkg:<npm>` (npm-backed), `registry:<name>` (registry-only), `plugin:<home-repo>/<name>`, `skill:<owner>/<name>`, `key:*` (skipped). The export's `junk()` filter drops bare generic leaf names (`mcp`, `server`, `cli`, …) that carry no identity.
+
+**Identity is the artifact's own home, never where it was found.** Plugin ids were once keyed by the *marketplace* that listed them, so impeccable existed three times and — because the "is this repo solo?" test counted listings rather than distinct plugins — had its 51,323 stars nulled as "shared repo", dropping it off the board entirely. Ponytail lost 90,263 the same way. If you add a discovery source, key rows by where the thing lives.
 
 ### LLM-in-the-loop (expertise + categories)
 
