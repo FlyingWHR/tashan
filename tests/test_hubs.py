@@ -100,7 +100,7 @@ if os.path.exists(os.path.join(WEB, "llms.txt")):
 print()
 print("# sitemap covers the generated tier")
 sm = read("sitemap.xml")
-for sub in ("category", "skills"):
+for sub in ("category", "skills", "task"):
     d = os.path.join(WEB, sub)
     if os.path.isdir(d):
         files = [f for f in os.listdir(d) if f.endswith(".html")]

@@ -112,8 +112,7 @@
       "term": "code review",
       "insider": "'PR review' — reading a diff and judging risk before it merges.",
       "onet": [
-        "Evaluate utility of software or hardware technologies.",
-        "Recommend technical design or process changes to improve efficiency, quality, or performance."
+        "Evaluate utility of software or hardware technologies."
       ],
       "roles": [
         "engineer"
@@ -369,7 +368,6 @@
       "insider": "'The pipeline' — ETL/ELT, ingestion, warehouse modelling.",
       "onet": [
         "Create databases to store electronic data.",
-        "Maintain data in information systems or databases.",
         "Develop data analysis or data management procedures.",
         "Develop technical or scientific databases."
       ],
@@ -513,7 +511,6 @@
       "insider": "'PM' work — plans, sequencing, status, unblocking.",
       "onet": [
         "Prepare detailed work plans.",
-        "Communicate project information to others.",
         "Prepare operational progress or status reports.",
         "Coordinate operational activities with external stakeholders."
       ],
@@ -852,7 +849,6 @@
       "term": "knowledge base",
       "insider": "'Second brain' / 'knowledge base' — captured context you can retrieve later.",
       "onet": [
-        "Compile data or documentation.",
         "Maintain operational records.",
         "Maintain operational records or records systems."
       ],
@@ -873,7 +869,6 @@
       "term": "automation",
       "insider": "'Automation' — making a recurring process run without a person.",
       "onet": [
-        "Implement organizational process or policy changes.",
         "Apply information technology to solve business or other applied problems.",
         "Apply new technologies to improve work processes.",
         "Develop technical methods or processes."

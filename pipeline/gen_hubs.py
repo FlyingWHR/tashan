@@ -20,7 +20,7 @@ the same index, carrying `rated=false` when we have no per-skill evidence rather
 Every page emits ItemList + BreadcrumbList JSON-LD, and every list item links to a real prerendered
 page. Stdlib only. Run after build.py's export (reads web/data/capabilities.json).
 """
-import html, json, os, re, sys
+import glob, html, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -170,6 +170,98 @@ def cat_page(cat, rows, all_cats, gen):
         '<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n'
 
 
+TASKS = os.path.join(ROOT, "web", "data", "tasks.json")
+TASK_MIN = 5     # a page needs a real shelf behind it; below this the task is listed, not published
+
+
+def task_page(task, rows, all_tasks, gen):
+    """A page per JOB, not per technology.
+
+    The whole axis exists because every other directory in this field files by what a tool touches —
+    `search / databases / browser automation / memory` — while people arrive knowing what they are
+    trying to get done. What makes this defensible rather than editorial is the citation: the task is a
+    real occupational process step from O*NET, and the page names the occupations that perform it. That
+    is a claim with a source behind it, which "Productivity" never was.
+    """
+    slug, label = task["slug"], task["label"]
+    url = BASE + "/task/" + slug + ".html"
+    title = "Best MCP servers and skills for " + label.lower() + ", ranked by measured trust · tashan"
+    desc = ("The " + str(len(rows)) + " capabilities tashan measures for " + label.lower() +
+            ", ranked by Trust — maintenance, freshness and real adoption, from public evidence only.")
+    top = ", ".join(pretty(c["name"]) for c in rows[:5])
+    occs = task.get("occupations") or []
+    steps = task.get("onet_steps") or []
+    lds = [
+        {"@context": "https://schema.org", "@type": "ItemList",
+         "name": "Capabilities for " + label + ", ranked by trust",
+         "itemListOrder": "https://schema.org/ItemListOrderDescending", "numberOfItems": len(rows),
+         "itemListElement": [
+             {"@type": "ListItem", "position": i + 1,
+              "item": {"@type": "SoftwareApplication", "name": pretty(c["name"]),
+                       "url": BASE + "/capability/" + c["slug"] + ".html",
+                       "applicationCategory": "DeveloperApplication",
+                       "aggregateRating": {"@type": "AggregateRating", "ratingValue": c["trust"],
+                                           "bestRating": 100, "worstRating": 0, "ratingCount": 1}}}
+             for i, c in enumerate(rows[:25]) if c.get("trust") is not None]},
+        {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "The Index", "item": BASE + "/"},
+            {"@type": "ListItem", "position": 2, "name": label, "item": url}]},
+        {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": "What is the best MCP server or skill for " + label.lower() + "?",
+             "acceptedAnswer": {"@type": "Answer", "text":
+                ("By tashan's measured Trust score: " + top + ". Trust combines maintenance and freshness, "
+                 "gated by real adoption — every input is public and re-derivable, and no ranking "
+                 "position can be purchased.")}},
+            {"@type": "Question", "name": "Who does " + label.lower() + " as part of their job?",
+             "acceptedAnswer": {"@type": "Answer", "text":
+                (("This is a process step performed by " + ", ".join(occs[:8]) +
+                  (" and others" if len(occs) > 8 else "") + ", per the O*NET 30.3 occupational database.")
+                 if occs else
+                 ("This is work our corpus shows people doing that O*NET does not yet have a process "
+                  "step for — agentic tooling post-dates its software survey."))}},
+            {"@type": "Question", "name": "How is the ranking calculated?",
+             "acceptedAnswer": {"@type": "Answer", "text":
+                ("From public signal only: npm download volume and publish cadence, GitHub push/release "
+                 "recency, contributor count, registry status, and how often a capability appears in "
+                 "real public agent configs. Nobody can pay to change a score, rank, or listing.")}}]},
+    ]
+    sib = "".join('<a class="chip" href="/task/' + t["slug"] + '.html">' + esc(t["label"]) + "</a>"
+                  for t in all_tasks if t["slug"] != slug)
+    # The provenance block — the part a competitor cannot copy without the occupational data.
+    if occs:
+        who = ('<h2>Who does this work</h2>\n<p>O*NET records this as a core process step for <b>'
+               + str(len(occs)) + "</b> occupations, including "
+               + esc(", ".join(occs[:10])) + (" and others" if len(occs) > 10 else "") + ".</p>\n"
+               + '<p class="note">Recorded there as: '
+               + esc(" / ".join('"' + s.rstrip(".") + '"' for s in steps[:3])) + ". We publish it under "
+               "the name practitioners use.</p>\n")
+    else:
+        who = ('<h2>Who does this work</h2>\n<p class="note">O*NET has no process step for this yet — its '
+               "software occupations were surveyed before agentic tooling existed. We list it because the "
+               "corpus plainly shows people doing it, and we say so rather than forcing it onto an "
+               "unrelated step.</p>\n")
+    body = ('<main class="wrap">\n'
+        '<p class="kicker"><a class="link" href="/">The Index</a> · ' + esc(label) + "</p>\n"
+        "<h1>" + esc(label) + "</h1>\n"
+        '<p class="lede">' + esc(task.get("blurb", "")) + " tashan measures <b>" + str(len(rows)) +
+        "</b> capabilities for this work and ranks them by Trust — a transparent composite of "
+        "maintenance, freshness and real adoption. "
+        '<a class="link" href="/methodology.html">How we measure &rsaquo;</a></p>\n'
+        + board(rows) + who
+        + '<h2>Other work</h2>\n<div class="chips">' + sib + "</div>\n"
+        '<p class="note" style="margin-top:var(--sp-8)">Occupational data from the '
+        '<a class="link" rel="nofollow" href="https://www.onetcenter.org/">O*NET 30.3 Database</a> by the '
+        "U.S. Department of Labor, Employment and Training Administration, used under "
+        '<a class="link" rel="nofollow" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. '
+        "tashan consolidated its process steps into the terms practitioners use; O*NET does not endorse "
+        "this site.</p>\n"
+        '<p style="margin-top:var(--sp-12)"><a class="btn btn--ghost" href="/">See the full Index &rsaquo;</a></p>\n'
+        "</main>\n")
+    return head(title, desc, url, lds) + body + FOOT + \
+        '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n' \
+        '<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n'
+
+
 def repo_slug(repo): return slugify(repo)
 
 
@@ -236,6 +328,29 @@ def main():
         open(os.path.join(OUT_CAT, cat["id"] + ".html"), "w").write(cat_page(cat, rows, cats, gen))
         written += 1
     print("category hubs: %d written (%d categorised capabilities)" % (written, sum(len(v) for v in by_cat.values())))
+
+    # ---- task hubs: one page per job, gated on having a real shelf behind it ----
+    tasks = json.load(open(TASKS))["tasks"]
+    by_task = {}
+    for c in caps:
+        for t in (c.get("tasks") or []):
+            by_task.setdefault(t["t"], []).append(c)
+    for v in by_task.values():
+        v.sort(key=lambda x: -(x.get("trust") or 0))
+    out_task = os.path.join(ROOT, "web", "task")
+    os.makedirs(out_task, exist_ok=True)
+    # publishable tasks are the sibling set too — a chip must never link to a page that does not exist
+    pub = [t for t in tasks
+           if len([c for c in by_task.get(t["slug"], []) if c.get("trust") is not None]) >= TASK_MIN]
+    for stale in glob.glob(os.path.join(out_task, "*.html")):
+        if os.path.basename(stale)[:-5] not in {t["slug"] for t in pub}:
+            os.remove(stale)                     # a task can fall below the gate; leave no orphan behind
+    for t in pub:
+        rows = by_task.get(t["slug"], [])
+        open(os.path.join(out_task, t["slug"] + ".html"), "w").write(task_page(t, rows, pub, gen))
+    thin = len(tasks) - len(pub)
+    print("task hubs: %d written, %d below the %d-capability floor (listed, not published)"
+          % (len(pub), thin, TASK_MIN))
 
 
     open(os.path.join(ROOT, "web", "llms.txt"), "w").write(llms_txt(caps, cats, by_cat, gen))

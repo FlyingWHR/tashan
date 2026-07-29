@@ -195,9 +195,20 @@ def build_tasks_json():
     src = json.load(open(os.path.join(ROOT, "data", "onet", "mapping.json")))
     tasks, roles_used = [], set()
     for e in src["mappings"]:
-        people = set()
+        # WEIGHT OCCUPATIONS BY OVERLAP, don't just union them. Some O*NET steps are performed by nearly
+        # every technical occupation ("Recommend technical design or process changes to improve
+        # efficiency, quality, or performance"), so a plain union made the Code review page cite
+        # Automotive Engineering Technicians and Civil Engineers — true of the STEP, absurd for the TASK,
+        # and it would discredit the one citation competitors cannot copy. An occupation that performs
+        # several of a task's steps is a practitioner of it; one that performs a single generic step is
+        # incidental. Keep the top overlap tier only.
+        hits = collections.Counter()
         for s in e["onet"]:
-            people |= by_step.get(s, set())
+            for p in by_step.get(s, set()):
+                hits[p] += 1
+        best = max(hits.values(), default=0)
+        floor = best if best <= 1 else max(2, best - 1)
+        people = {p for p, n in hits.items() if n >= floor}
         roles_used.update(e.get("roles", []))
         # Synonyms exist for ONE job: matching an author's own manifest keyword to a task, exactly
         # (tag_capabilities.py --declared). Derived from the names we already committed to, plus any

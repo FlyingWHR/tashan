@@ -24,6 +24,22 @@ OUT = os.path.join(ROOT, "web", "capability")
 BASE = "https://tashan.sh"
 os.makedirs(OUT, exist_ok=True)
 
+# Which /task/ pages actually exist, and their labels. Read from disk rather than recomputed, so
+# prerender can never link to a task page gen_hubs declined to write (the population floor means a task
+# can drop below the threshold between runs).
+def _published_tasks():
+    import glob as _g
+    have = {os.path.basename(p)[:-5] for p in _g.glob(os.path.join(ROOT, "web", "task", "*.html"))}
+    labels = {}
+    try:
+        for t in json.load(open(os.path.join(ROOT, "web", "data", "tasks.json")))["tasks"]:
+            labels[t["slug"]] = t["label"]
+    except Exception:
+        pass
+    return have, labels
+
+TASKS_PUBLISHED, TASK_LABEL = _published_tasks()
+
 CAT = {"browser":"Browser & Web","search":"Search","database":"Database","devtools":"Dev Tools & CI",
        "cloud":"Cloud & Infra","files":"Files & Memory","data":"Data & Analytics","docs":"Docs & Knowledge",
        "comms":"Communication","design":"Design","ai":"AI & Agents","finance":"Finance & Crypto",
@@ -152,6 +168,15 @@ def summary(c):
     cat = ('<p class="mono" style="font-size:.8rem"><b>Category:</b> <a class="link" href="/category/'
            + esc(c["category"]) + '.html">' + esc(CAT.get(c["category"], c["category"]))
            + " — see all ranked &rsaquo;</a></p>") if c.get("category") else ""
+    # Same edge for the task axis: what WORK is this for. Category says what it touches; this says what
+    # you would be doing when you reach for it, and it is the link that keeps /task/ hubs out of orphan
+    # status. Only published tasks are linked — TASKS_PUBLISHED holds the ones that cleared gen_hubs'
+    # population floor, so a dossier can never point at a page that was never written.
+    tsk = [t["t"] for t in (c.get("tasks") or []) if t["t"] in TASKS_PUBLISHED]
+    task = ('<p class="mono" style="font-size:.8rem"><b>Work:</b> '
+            + " · ".join('<a class="link" href="/task/' + esc(s) + '.html">'
+                         + esc(TASK_LABEL.get(s, s)) + "</a>" for s in tsk[:4])
+            + "</p>") if tsk else ""
     # every dossier offers the next action: check whether YOU are running this, and what else you run.
     # without it a capability page is a dead end — the reader learns about one thing and leaves.
     audit = ('<p class="mono" style="font-size:.8rem;margin-top:var(--sp-6)"><b>Already running this?</b> '
@@ -162,7 +187,7 @@ def summary(c):
             '<div class="cid">' + esc(c["id"]) + ' · <span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
-            + works + cat + install + verdict +
+            + works + cat + task + install + verdict +
             ('<ul class="prose" style="max-width:none">' + "".join(rows) + '</ul>' if rows else '') +
             ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else '') + audit)
 
@@ -219,7 +244,7 @@ def sitemap(caps):
     # generated hubs + learn/agents pages if present. These are real indexable pages; leaving them out
     # of the sitemap is how a whole content tier stays invisible to crawlers.
     extra = ""
-    for sub in ("learn", "agents", "category", "skills"):
+    for sub in ("learn", "agents", "category", "skills", "task"):
         d = os.path.join(ROOT, "web", sub)
         if os.path.isdir(d):
             for f in sorted(os.listdir(d)):
