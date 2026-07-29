@@ -1,6 +1,6 @@
 {
   "_note": "Layer 3 of the task axis: O*NET's formal process step -> the name insiders actually use. O*NET writes in government register ('Analyze data to identify trends or relationships among variables'); practitioners search for 'exploratory data analysis'. Many O*NET steps consolidate into one insider term — that consolidation IS this layer. Each entry keeps its O*NET steps as the receipt, so any published tag can cite which occupational process it came from and which occupations perform it. `onet` is evidence; `slug`/`label`/`term` are naming judgement and are labelled as such wherever published. `label` is the display name; `term` is the exact string falsified against the corpus by `onet_tasks.py --validate` (a label like 'PRDs and specs' is never written literally, but 'prd' is). SOURCE: O*NET 30.3 Database, US Dept of Labor / Employment and Training Administration, CC BY 4.0.",
-  "_status": "Full pass over the 883 in-scope steps. Seven tasks added after six independent graders converged on the same gaps — the first real inter-rater signal this axis has had.",
+  "_status": "Full pass over the 883 in-scope steps. Tasks are added when INDEPENDENT graders converge on the same gap — 7 after round 1, 6 more after round 2. Convergence is measured with pipeline/tag_agreement.py.",
   "mappings": [
     {
       "slug": "prd-and-specs",
@@ -1221,6 +1221,136 @@
         "job search",
         "coaching",
         "levelling"
+      ]
+    },
+    {
+      "slug": "performance-optimization",
+      "label": "Performance optimisation",
+      "term": "performance",
+      "insider": "Profiling, flamegraphs, bundle size, load tests. THREE independent graders flagged its absence — it existed pre-O*NET-rederivation as `optimize-performance` and was lost in the rebuild, so profilers were landing in `debugging` or `observability`, neither of which is what a profiler is for.",
+      "onet": [
+        "Test software performance.",
+        "Recommend technical design or process changes to improve efficiency, quality, or performance."
+      ],
+      "roles": [
+        "engineer",
+        "devops"
+      ],
+      "synonyms": [
+        "performance",
+        "profiling",
+        "optimization",
+        "latency",
+        "benchmark",
+        "flamegraph",
+        "bundle size"
+      ]
+    },
+    {
+      "slug": "conversion-optimization",
+      "label": "Conversion optimisation",
+      "term": "conversion",
+      "insider": "CRO and A/B testing — hypotheses, sample size, significance, funnel and signup friction. Flagged independently by three graders; it was being split awkwardly between `content-marketing` (the surface) and `product-strategy` (the intent), which described neither.",
+      "onet": [
+        "Measure effectiveness of business strategies or practices.",
+        "Assess the cost effectiveness of products, projects, or services."
+      ],
+      "roles": [
+        "marketer",
+        "pm"
+      ],
+      "synonyms": [
+        "conversion",
+        "cro",
+        "a/b test",
+        "experiment",
+        "funnel",
+        "activation",
+        "signup"
+      ]
+    },
+    {
+      "slug": "ml-engineering",
+      "label": "ML engineering",
+      "term": "machine learning",
+      "insider": "Training, serving and monitoring models — MLOps, feature stores, drift, ONNX/TensorRT. `model-evaluation` only covers scoring output; a computer-vision or MLOps capability had no home.",
+      "onet": [
+        "Apply mathematical principles or statistical approaches to solve problems in scientific or applied fields."
+      ],
+      "roles": [
+        "ai-engineer"
+      ],
+      "synonyms": [
+        "machine learning",
+        "mlops",
+        "training",
+        "inference",
+        "model serving",
+        "drift",
+        "pytorch"
+      ]
+    },
+    {
+      "slug": "version-control",
+      "label": "Version control",
+      "term": "git",
+      "insider": "Commits, branches, rebases, PR creation. Two graders noted git-workflow plugins are common and kept landing in `application-development` for want of anywhere better.",
+      "onet": [],
+      "roles": [
+        "engineer"
+      ],
+      "synonyms": [
+        "git",
+        "commit",
+        "branch",
+        "rebase",
+        "merge",
+        "pull request",
+        "worktree"
+      ],
+      "validation": "no O*NET basis — version control post-dates its software survey"
+    },
+    {
+      "slug": "legal-drafting",
+      "label": "Legal drafting",
+      "term": "legal",
+      "insider": "Producing pleadings, filings and legal instruments — a different job from `contract-review`, which is redlining someone else's terms. Two graders hit a real cluster of court-drafting capabilities with nowhere to put them.",
+      "onet": [
+        "Prepare legal documents.",
+        "Prepare legal or investigatory documentation."
+      ],
+      "roles": [
+        "legal"
+      ],
+      "synonyms": [
+        "legal drafting",
+        "pleading",
+        "filing",
+        "litigation",
+        "petition",
+        "legal document"
+      ]
+    },
+    {
+      "slug": "org-design",
+      "label": "Org design and people ops",
+      "term": "culture",
+      "insider": "Org health, culture, change management, capacity and headcount planning. `career-development` is the individual and `recruiting-and-hiring` is the ATS; the organisation itself had no task, so it was landing in `product-strategy`.",
+      "onet": [
+        "Develop organizational policies or programs.",
+        "Evaluate effectiveness of personnel policies or practices."
+      ],
+      "roles": [
+        "hr",
+        "ops"
+      ],
+      "synonyms": [
+        "culture",
+        "org design",
+        "change management",
+        "headcount",
+        "people ops",
+        "reorg"
       ]
     }
   ],

@@ -507,6 +507,42 @@
       "validation": null
     },
     {
+      "slug": "conversion-optimization",
+      "label": "Conversion optimisation",
+      "term": "conversion",
+      "blurb": "CRO and A/B testing — hypotheses, sample size, significance, funnel and signup friction. Flagged independently by three graders; it was being split awkwardly between `content-marketing` (the surface) and `product-strategy` (the intent), which described neither.",
+      "synonyms": [
+        "a/b test",
+        "activation",
+        "conversion",
+        "conversion optimisation",
+        "conversion optimization",
+        "cro",
+        "experiment",
+        "funnel",
+        "signup"
+      ],
+      "roles": [
+        "marketer",
+        "pm"
+      ],
+      "onet_steps": [
+        "Measure effectiveness of business strategies or practices.",
+        "Assess the cost effectiveness of products, projects, or services."
+      ],
+      "occupations": [
+        "Cost Estimators",
+        "Document Management Specialists",
+        "Financial Quantitative Analysts",
+        "Logisticians",
+        "Logistics Engineers",
+        "Market Research Analysts and Marketing Specialists",
+        "Sustainability Specialists"
+      ],
+      "grounded": true,
+      "validation": null
+    },
+    {
       "slug": "copy-editing",
       "label": "Copy editing",
       "term": "editing",
@@ -1069,6 +1105,44 @@
       "validation": null
     },
     {
+      "slug": "legal-drafting",
+      "label": "Legal drafting",
+      "term": "legal",
+      "blurb": "Producing pleadings, filings and legal instruments — a different job from `contract-review`, which is redlining someone else's terms. Two graders hit a real cluster of court-drafting capabilities with nowhere to put them.",
+      "synonyms": [
+        "filing",
+        "legal",
+        "legal document",
+        "legal drafting",
+        "litigation",
+        "petition",
+        "pleading"
+      ],
+      "roles": [
+        "legal"
+      ],
+      "onet_steps": [
+        "Prepare legal documents.",
+        "Prepare legal or investigatory documentation."
+      ],
+      "occupations": [
+        "Administrative Law Judges, Adjudicators, and Hearing Officers",
+        "Arbitrators, Mediators, and Conciliators",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Coroners",
+        "Court, Municipal, and License Clerks",
+        "Environmental Compliance Inspectors",
+        "Fraud Examiners, Investigators and Analysts",
+        "Judicial Law Clerks",
+        "Lawyers",
+        "Legal Secretaries and Administrative Assistants",
+        "Paralegals and Legal Assistants",
+        "Title Examiners, Abstractors, and Searchers"
+      ],
+      "grounded": true,
+      "validation": null
+    },
+    {
       "slug": "literature-review",
       "label": "Literature review",
       "term": "literature",
@@ -1122,6 +1196,40 @@
         "Logistics Engineers",
         "Parts Salespersons",
         "Shipping, Receiving, and Inventory Clerks"
+      ],
+      "grounded": true,
+      "validation": null
+    },
+    {
+      "slug": "ml-engineering",
+      "label": "ML engineering",
+      "term": "machine learning",
+      "blurb": "Training, serving and monitoring models — MLOps, feature stores, drift, ONNX/TensorRT. `model-evaluation` only covers scoring output; a computer-vision or MLOps capability had no home.",
+      "synonyms": [
+        "drift",
+        "inference",
+        "machine learning",
+        "ml engineering",
+        "mlops",
+        "model serving",
+        "pytorch",
+        "training"
+      ],
+      "roles": [
+        "ai-engineer"
+      ],
+      "onet_steps": [
+        "Apply mathematical principles or statistical approaches to solve problems in scientific or applied fields."
+      ],
+      "occupations": [
+        "Astronomers",
+        "Biostatisticians",
+        "Mathematicians",
+        "Operations Research Analysts",
+        "Physicists",
+        "Quality Control Analysts",
+        "Software Developers",
+        "Statisticians"
       ],
       "grounded": true,
       "validation": null
@@ -1239,6 +1347,60 @@
       "validation": null
     },
     {
+      "slug": "org-design",
+      "label": "Org design and people ops",
+      "term": "culture",
+      "blurb": "Org health, culture, change management, capacity and headcount planning. `career-development` is the individual and `recruiting-and-hiring` is the ATS; the organisation itself had no task, so it was landing in `product-strategy`.",
+      "synonyms": [
+        "change management",
+        "culture",
+        "headcount",
+        "org design",
+        "org design and people ops",
+        "people ops",
+        "reorg"
+      ],
+      "roles": [
+        "hr",
+        "ops"
+      ],
+      "onet_steps": [
+        "Develop organizational policies or programs.",
+        "Evaluate effectiveness of personnel policies or practices."
+      ],
+      "occupations": [
+        "Accountants and Auditors",
+        "Architectural and Engineering Managers",
+        "Chief Executives",
+        "Compensation and Benefits Managers",
+        "Compensation, Benefits, and Job Analysis Specialists",
+        "Compliance Managers",
+        "Computer and Information Systems Managers",
+        "Education Administrators, Kindergarten through Secondary",
+        "Education Administrators, Postsecondary",
+        "Education and Childcare Administrators, Preschool and Daycare",
+        "Entertainment and Recreation Managers, Except Gambling",
+        "First-Line Supervisors of Office and Administrative Support Workers",
+        "Food Service Managers",
+        "Fundraising Managers",
+        "Gambling Managers",
+        "General and Operations Managers",
+        "Human Resources Specialists",
+        "Investment Fund Managers",
+        "Lodging Managers",
+        "Medical and Health Services Managers",
+        "Natural Sciences Managers",
+        "Purchasing Managers",
+        "Regulatory Affairs Managers",
+        "Security Managers",
+        "Social and Community Service Managers",
+        "Training and Development Specialists",
+        "Treasurers and Controllers"
+      ],
+      "grounded": true,
+      "validation": null
+    },
+    {
       "slug": "prd-and-specs",
       "label": "PRDs and specs",
       "term": "prd",
@@ -1261,6 +1423,66 @@
       ],
       "occupations": [
         "Telecommunications Engineering Specialists"
+      ],
+      "grounded": true,
+      "validation": null
+    },
+    {
+      "slug": "performance-optimization",
+      "label": "Performance optimisation",
+      "term": "performance",
+      "blurb": "Profiling, flamegraphs, bundle size, load tests. THREE independent graders flagged its absence — it existed pre-O*NET-rederivation as `optimize-performance` and was lost in the rebuild, so profilers were landing in `debugging` or `observability`, neither of which is what a profiler is for.",
+      "synonyms": [
+        "benchmark",
+        "bundle size",
+        "flamegraph",
+        "latency",
+        "optimization",
+        "performance",
+        "performance optimisation",
+        "performance optimization",
+        "profiling"
+      ],
+      "roles": [
+        "engineer",
+        "devops"
+      ],
+      "onet_steps": [
+        "Test software performance.",
+        "Recommend technical design or process changes to improve efficiency, quality, or performance."
+      ],
+      "occupations": [
+        "Automotive Engineering Technicians",
+        "Bioengineers and Biomedical Engineers",
+        "Civil Engineers",
+        "Computer Hardware Engineers",
+        "Computer Network Support Specialists",
+        "Computer Programmers",
+        "Computer Systems Analysts",
+        "Computer Systems Engineers/Architects",
+        "Computer User Support Specialists",
+        "Data Warehousing Specialists",
+        "Electronics Engineers, Except Computer",
+        "Energy Engineers, Except Wind and Solar",
+        "Fuel Cell Engineers",
+        "Geographic Information Systems Technologists and Technicians",
+        "Human Factors Engineers and Ergonomists",
+        "Industrial Engineers",
+        "Manufacturing Engineers",
+        "Materials Engineers",
+        "Mechanical Engineering Technologists and Technicians",
+        "Mechanical Engineers",
+        "Mechatronics Engineers",
+        "Network and Computer Systems Administrators",
+        "Photonics Technicians",
+        "Software Quality Assurance Analysts and Testers",
+        "Solar Energy Systems Engineers",
+        "Validation Engineers",
+        "Video Game Designers",
+        "Water/Wastewater Engineers",
+        "Web Administrators",
+        "Web Developers",
+        "Wind Energy Engineers"
       ],
       "grounded": true,
       "validation": null
@@ -1922,6 +2144,29 @@
       ],
       "grounded": true,
       "validation": null
+    },
+    {
+      "slug": "version-control",
+      "label": "Version control",
+      "term": "git",
+      "blurb": "Commits, branches, rebases, PR creation. Two graders noted git-workflow plugins are common and kept landing in `application-development` for want of anywhere better.",
+      "synonyms": [
+        "branch",
+        "commit",
+        "git",
+        "merge",
+        "pull request",
+        "rebase",
+        "version control",
+        "worktree"
+      ],
+      "roles": [
+        "engineer"
+      ],
+      "onet_steps": [],
+      "occupations": [],
+      "grounded": false,
+      "validation": "no O*NET basis — version control post-dates its software survey"
     },
     {
       "slug": "video-editing",

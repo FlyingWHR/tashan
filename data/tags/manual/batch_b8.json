@@ -1,0 +1,483 @@
+{
+  "_note": "graded by subagent, batch b8",
+  "skill:alirezarezvani/security-guidance": [
+    "agent-configuration",
+    "security-review"
+  ],
+  "skill:alirezarezvani/security-pen-testing": [
+    "security-review"
+  ],
+  "skill:alirezarezvani/self-eval": [
+    "model-evaluation"
+  ],
+  "skill:alirezarezvani/self-improving-agent": [
+    "agent-configuration",
+    "knowledge-management"
+  ],
+  "skill:alirezarezvani/senior-architect": [
+    "software-architecture"
+  ],
+  "skill:alirezarezvani/senior-backend": [
+    "application-development",
+    "software-architecture"
+  ],
+  "skill:alirezarezvani/senior-computer-vision": [
+    "application-development",
+    "statistical-modeling"
+  ],
+  "skill:alirezarezvani/senior-data-engineer": [
+    "data-pipelines",
+    "data-quality"
+  ],
+  "skill:alirezarezvani/senior-data-scientist": [
+    "statistical-modeling",
+    "exploratory-data-analysis"
+  ],
+  "skill:alirezarezvani/senior-devops": [
+    "infrastructure-and-deployment",
+    "observability"
+  ],
+  "skill:alirezarezvani/senior-frontend": [
+    "web-development"
+  ],
+  "skill:alirezarezvani/senior-fullstack": [
+    "application-development",
+    "web-development"
+  ],
+  "skill:alirezarezvani/senior-ml-engineer": [
+    "infrastructure-and-deployment",
+    "retrieval-systems"
+  ],
+  "skill:alirezarezvani/senior-pm": [
+    "project-management",
+    "risk-assessment"
+  ],
+  "skill:alirezarezvani/senior-prompt-engineer": [
+    "prompt-engineering",
+    "model-evaluation",
+    "retrieval-systems"
+  ],
+  "skill:alirezarezvani/senior-qa": [
+    "test-automation"
+  ],
+  "skill:alirezarezvani/senior-secops": [
+    "security-review",
+    "regulatory-compliance"
+  ],
+  "skill:alirezarezvani/senior-security": [
+    "risk-assessment",
+    "security-review"
+  ],
+  "skill:alirezarezvani/seo-audit": [
+    "seo"
+  ],
+  "skill:alirezarezvani/setup": [
+    "model-evaluation"
+  ],
+  "skill:alirezarezvani/ship-gate": [
+    "code-review",
+    "security-review",
+    "infrastructure-and-deployment"
+  ],
+  "skill:alirezarezvani/signup-flow-cro": [
+    "web-development"
+  ],
+  "skill:alirezarezvani/site-architecture": [
+    "seo",
+    "web-development"
+  ],
+  "skill:alirezarezvani/skill-security-auditor": [
+    "security-review",
+    "agent-configuration"
+  ],
+  "skill:alirezarezvani/skill-tester": [
+    "agent-configuration",
+    "test-automation"
+  ],
+  "skill:alirezarezvani/skillopt-sleep": [
+    "agent-configuration",
+    "knowledge-management"
+  ],
+  "skill:alirezarezvani/slo-architect": [
+    "observability"
+  ],
+  "skill:alirezarezvani/snowflake-development": [
+    "data-pipelines",
+    "database-access"
+  ],
+  "skill:alirezarezvani/soc2-audit-prep": [
+    "regulatory-compliance",
+    "audit"
+  ],
+  "skill:alirezarezvani/soc2-compliance": [
+    "regulatory-compliance",
+    "audit"
+  ],
+  "skill:alirezarezvani/social-content": [
+    "content-marketing"
+  ],
+  "skill:alirezarezvani/social-media-analyzer": [
+    "attribution",
+    "dashboards-and-reporting"
+  ],
+  "skill:alirezarezvani/social-media-manager": [
+    "content-marketing"
+  ],
+  "skill:alirezarezvani/spawn": [
+    "agent-development"
+  ],
+  "skill:alirezarezvani/spec-driven-workflow": [
+    "prd-and-specs",
+    "test-automation"
+  ],
+  "skill:alirezarezvani/spec-to-repo": [
+    "application-development",
+    "prd-and-specs"
+  ],
+  "skill:alirezarezvani/sql-database-assistant": [
+    "database-access",
+    "query-optimization"
+  ],
+  "skill:alirezarezvani/statistical-analyst": [
+    "statistical-modeling"
+  ],
+  "skill:alirezarezvani/status": [
+    "agent-development"
+  ],
+  "skill:alirezarezvani/strategic-alignment": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/stress-test": [
+    "risk-assessment",
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/strict-api": [
+    "agent-configuration"
+  ],
+  "skill:alirezarezvani/stripe-integration-expert": [
+    "application-development",
+    "web-development"
+  ],
+  "skill:alirezarezvani/syllabus": [
+    "training-material",
+    "literature-review"
+  ],
+  "skill:alirezarezvani/tc-tracker": [
+    "technical-documentation",
+    "project-management"
+  ],
+  "skill:alirezarezvani/tdd-guide": [
+    "test-automation"
+  ],
+  "skill:alirezarezvani/team-communications": [
+    "copywriting",
+    "project-management"
+  ],
+  "skill:alirezarezvani/tech-debt-tracker": [
+    "code-review",
+    "project-management"
+  ],
+  "skill:alirezarezvani/tech-stack-evaluator": [
+    "software-architecture"
+  ],
+  "skill:alirezarezvani/terraform-patterns": [
+    "infrastructure-and-deployment"
+  ],
+  "skill:alirezarezvani/testrail": [
+    "test-automation"
+  ],
+  "skill:alirezarezvani/threat-detection": [
+    "security-review",
+    "incident-response"
+  ],
+  "skill:alirezarezvani/ui-design-system": [
+    "visual-design"
+  ],
+  "skill:alirezarezvani/universal-scraping-architect": [
+    "web-scraping",
+    "data-pipelines"
+  ],
+  "skill:alirezarezvani/ux-researcher-designer": [
+    "user-research"
+  ],
+  "skill:alirezarezvani/vendor-management": [
+    "risk-assessment",
+    "audit"
+  ],
+  "skill:alirezarezvani/video-content-strategist": [
+    "content-marketing",
+    "copywriting"
+  ],
+  "skill:alirezarezvani/vpe-advisor": [
+    "project-management",
+    "recruiting-and-hiring"
+  ],
+  "skill:alirezarezvani/vpe-review": [
+    "project-management",
+    "recruiting-and-hiring"
+  ],
+  "skill:alirezarezvani/webinar-marketing": [
+    "content-marketing"
+  ],
+  "skill:alirezarezvani/weekly-review": [
+    "project-management"
+  ],
+  "skill:alirezarezvani/workflow-builder": [
+    "agent-development",
+    "process-automation"
+  ],
+  "skill:alirezarezvani/write-a-skill": [
+    "agent-configuration"
+  ],
+  "skill:alirezarezvani/x-twitter-growth": [
+    "content-marketing",
+    "copywriting"
+  ],
+  "skill:alirezarezvani/youtube-full": [
+    "web-research",
+    "web-scraping"
+  ],
+  "skill:alirezarezvani/zero-hallucination-coder": [
+    "application-development"
+  ],
+  "plugin:1tommycheung/hydra-swarm/hydra-swarm": [
+    "agent-development",
+    "code-review"
+  ],
+  "plugin:adelaidasofia/claude-deconstruct/claude-deconstruct": [
+    "product-strategy"
+  ],
+  "plugin:adelaidasofia/google-workspace-mcp/google-workspace-mcp": [
+    "messaging-and-email",
+    "document-production"
+  ],
+  "plugin:aight-cool/aight-channel-plugin/aight": [
+    "agent-configuration"
+  ],
+  "plugin:alexander-tyagunov/magician/magician": [
+    "application-development"
+  ],
+  "plugin:allanharlen/cc-orchestrador-subagents/cc-orchestrador-subagents": [
+    "agent-development",
+    "prd-and-specs"
+  ],
+  "plugin:allin50-cmd/manus-frontend/ultratech-ai-memory": [
+    "knowledge-management",
+    "agent-configuration"
+  ],
+  "plugin:alphaaiservice/cortex/cortex": [],
+  "plugin:amirlehmam/wmux-orchestrator/wmux-orchestrator": [
+    "agent-development"
+  ],
+  "plugin:ankitkr3/compounded/compounded": [
+    "agent-configuration"
+  ],
+  "plugin:apolloio/apollo-mcp-plugin/apollo": [
+    "sales-pipeline"
+  ],
+  "plugin:apolloio/apollo-mcp-plugin/apollo-mcp-plugin": [
+    "sales-pipeline"
+  ],
+  "plugin:aristoapp/claude-membase/membase": [
+    "knowledge-management"
+  ],
+  "plugin:asaki14/asaki-memory-manager/asaki-memory": [
+    "knowledge-management"
+  ],
+  "plugin:automattic/claude-code-wordpress.com/build-with-wordpress": [
+    "web-development"
+  ],
+  "plugin:avantsoftware/sheepdog/sheepdog": [
+    "agent-configuration"
+  ],
+  "plugin:avesalight/roost/roost": [
+    "agent-development"
+  ],
+  "plugin:bitcraft-apps/spec-first/spec-first": [
+    "prd-and-specs",
+    "application-development"
+  ],
+  "plugin:brainrot-creations/socials-claude-code-plugin/socials": [
+    "content-marketing",
+    "browser-automation"
+  ],
+  "plugin:carboneio/carbone-skill/carbone-skill": [
+    "document-production"
+  ],
+  "plugin:controlplane-com/ai-plugin/cpln": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:daloopa/plugin/daloopa": [
+    "financial-modeling"
+  ],
+  "plugin:danieljohnmorris/ilo-lang/ilo": [
+    "application-development"
+  ],
+  "plugin:devoncarew/flutter-slipstream/slipstream": [
+    "application-development",
+    "agent-configuration"
+  ],
+  "plugin:ej-technologies/jprofiler-mcp/jprofiler": [
+    "debugging",
+    "observability"
+  ],
+  "plugin:estevanhernandez-stack-ed/vibe-cartographer/vibe-cartographer": [
+    "project-management",
+    "prd-and-specs"
+  ],
+  "plugin:estevanhernandez-stack-ed/vibe-doc/vibe-doc": [
+    "technical-documentation"
+  ],
+  "plugin:everdict/everdict/everdict": [
+    "model-evaluation"
+  ],
+  "plugin:franzvill/claude-code-tab-title/claude-code-tab-title": [
+    "agent-configuration"
+  ],
+  "plugin:gchiam/claude-code-plugins/check-pr-comments": [
+    "code-review"
+  ],
+  "plugin:gchiam/claude-code-plugins/claude-cleanup": [
+    "agent-configuration"
+  ],
+  "plugin:gchiam/claude-code-plugins/git-absorb": [
+    "application-development"
+  ],
+  "plugin:gchiam/claude-code-plugins/jira-cli": [
+    "project-management"
+  ],
+  "plugin:gchiam/claude-code-plugins/logseq": [
+    "knowledge-management"
+  ],
+  "plugin:gchiam/claude-code-plugins/mac-notifications": [
+    "agent-configuration"
+  ],
+  "plugin:gchiam/claude-code-plugins/multi-review": [
+    "code-review"
+  ],
+  "plugin:gchiam/claude-code-plugins/pr-desc-review": [
+    "code-review"
+  ],
+  "plugin:gchiam/claude-code-plugins/review-pr-comments": [
+    "code-review"
+  ],
+  "plugin:gchiam/claude-code-plugins/skill-cso-review": [
+    "agent-configuration"
+  ],
+  "plugin:getaero-io/deepline-plugins/deepline": [
+    "sales-pipeline"
+  ],
+  "plugin:gioviat/research-toolkit/research-toolkit": [
+    "scientific-research",
+    "literature-review"
+  ],
+  "plugin:go-kid/ioc/ioc": [
+    "application-development"
+  ],
+  "plugin:guohaonan-shy/excalidrawer/excalidrawer": [
+    "software-architecture",
+    "technical-documentation"
+  ],
+  "plugin:holistics/skills/holistics-development": [
+    "dashboards-and-reporting",
+    "data-pipelines"
+  ],
+  "plugin:holistics/skills/holistics-reporting": [
+    "dashboards-and-reporting",
+    "exploratory-data-analysis"
+  ],
+  "plugin:honeydew-ai/honeydew-ai-coding-agents-plugins/honeydew": [
+    "data-pipelines",
+    "exploratory-data-analysis"
+  ],
+  "plugin:honeydew-ai/honeydew-ai-coding-agents-plugins/honeydew-ai": [
+    "data-pipelines",
+    "exploratory-data-analysis"
+  ],
+  "plugin:is908/claude-lark-plugin/lark": [
+    "agent-configuration"
+  ],
+  "plugin:jaderson-bit/mindmap-markmap-viewer/mindmap-markmap-viewer": [
+    "knowledge-management"
+  ],
+  "plugin:jerry7991/nova-thesis/nova-thesis": [
+    "code-review",
+    "software-architecture"
+  ],
+  "plugin:klausfreiberufler/devflow-mcp/devflow": [
+    "agent-configuration",
+    "project-management"
+  ],
+  "plugin:lanchuske/local-mcp-claude-plugin/local-mcp": [
+    "messaging-and-email"
+  ],
+  "plugin:llodev/skills/django-schema-design": [
+    "software-architecture",
+    "query-optimization"
+  ],
+  "plugin:llodev/skills/pm-tasks-asana": [
+    "project-management"
+  ],
+  "plugin:llodev/skills/pm-tasks-core": [
+    "project-management"
+  ],
+  "plugin:llodev/skills/pm-tasks-jira": [
+    "project-management"
+  ],
+  "plugin:llodev/skills/pm-tasks-linear": [
+    "project-management"
+  ],
+  "plugin:llodev/skills/pm-tasks-trello": [
+    "project-management"
+  ],
+  "plugin:llodev/skills/ts-ddd-controller": [
+    "application-development"
+  ],
+  "plugin:llodev/skills/ts-ddd-domain-service": [
+    "application-development"
+  ],
+  "plugin:llodev/skills/ts-ddd-dto": [
+    "application-development"
+  ],
+  "plugin:llodev/skills/ts-ddd-entity": [
+    "application-development"
+  ],
+  "plugin:llodev/skills/ts-ddd-repository": [
+    "application-development",
+    "database-access"
+  ],
+  "plugin:llodev/skills/ts-ddd-use-case": [
+    "application-development"
+  ],
+  "plugin:llodev/skills/ts-ddd-value-object": [
+    "application-development"
+  ],
+  "plugin:llodev/skills/ts-query-cqrs": [
+    "application-development",
+    "database-access"
+  ],
+  "plugin:mbwsims/claude-universe/claude-universe": [],
+  "plugin:mgallet92i/waterfall/waterfall": [
+    "agent-development",
+    "prd-and-specs"
+  ],
+  "plugin:modelcontextprotocol/ext-apps/mcp-apps-plugin": [
+    "agent-development"
+  ],
+  "plugin:moonmath-ai/worldjen-skills/worldjen": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:mrzeszowski/claude-code-keep-alive/keep-alive": [
+    "agent-configuration"
+  ],
+  "plugin:mykpono/ultimate-seo-geo/ultimate-seo-geo": [
+    "seo"
+  ],
+  "plugin:namuh-eng/everbrowser/ever-browser": [
+    "browser-automation"
+  ],
+  "plugin:ninihen1/power-automate-mcp-skills/flow-studio-power-automate": [
+    "process-automation",
+    "debugging"
+  ]
+}

@@ -1,0 +1,489 @@
+{
+  "_note": "graded by subagent, batch b6",
+  "plugin:windbit/claude-plugins/telegram-tmux-channels": [
+    "agent-configuration"
+  ],
+  "plugin:worldbrain/memex-claude/memex-bookmarking-2nd-brain": [
+    "knowledge-management"
+  ],
+  "plugin:xiaolai/claude-english-buddy-for-claude/claude-english-buddy": [
+    "copy-editing",
+    "training-material"
+  ],
+  "plugin:z80020100/claude-code-statusline/claude-code-statusline": [
+    "agent-configuration"
+  ],
+  "plugin:zakelfassi/htmlify/htmlify": [
+    "document-production"
+  ],
+  "plugin:zoom/zoom-plugin/zoom-plugin": [
+    "application-development"
+  ],
+  "skill:alirezarezvani/a11y-audit": [
+    "visual-design",
+    "web-development"
+  ],
+  "skill:alirezarezvani/ab-test-setup": [
+    "statistical-modeling",
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/ad-creative": [
+    "copywriting",
+    "content-marketing"
+  ],
+  "skill:alirezarezvani/adversarial-reviewer": [
+    "code-review"
+  ],
+  "skill:alirezarezvani/aeo": [
+    "seo"
+  ],
+  "skill:alirezarezvani/agent-decision-receipts": [
+    "regulatory-compliance",
+    "agent-configuration"
+  ],
+  "skill:alirezarezvani/agent-designer": [
+    "agent-development",
+    "software-architecture"
+  ],
+  "skill:alirezarezvani/agent-harness": [
+    "agent-development"
+  ],
+  "skill:alirezarezvani/agent-protocol": [
+    "agent-development"
+  ],
+  "skill:alirezarezvani/agent-workflow-designer": [
+    "agent-development"
+  ],
+  "skill:alirezarezvani/agenthub": [
+    "agent-development",
+    "model-evaluation"
+  ],
+  "skill:alirezarezvani/agile-product-owner": [
+    "project-management",
+    "prd-and-specs"
+  ],
+  "skill:alirezarezvani/ai-act-readiness": [
+    "regulatory-compliance"
+  ],
+  "skill:alirezarezvani/ai-security": [
+    "security-review",
+    "risk-assessment"
+  ],
+  "skill:alirezarezvani/aims-audit": [
+    "regulatory-compliance",
+    "audit"
+  ],
+  "skill:alirezarezvani/analytics-tracking": [
+    "attribution",
+    "data-quality"
+  ],
+  "skill:alirezarezvani/andreessen": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/api-design-reviewer": [
+    "code-review",
+    "software-architecture"
+  ],
+  "skill:alirezarezvani/api-test-suite-builder": [
+    "test-automation"
+  ],
+  "skill:alirezarezvani/app-store-optimization": [
+    "seo"
+  ],
+  "skill:alirezarezvani/apple-hig-expert": [
+    "visual-design",
+    "design-critique"
+  ],
+  "skill:alirezarezvani/arquiteto-de-empresa": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/atlassian-admin": [
+    "project-management",
+    "knowledge-management"
+  ],
+  "skill:alirezarezvani/atlassian-templates": [
+    "knowledge-management",
+    "project-management"
+  ],
+  "skill:alirezarezvani/autoresearch-agent": [
+    "agent-development",
+    "model-evaluation"
+  ],
+  "skill:alirezarezvani/aws-solution-architect": [
+    "infrastructure-and-deployment",
+    "software-architecture"
+  ],
+  "skill:alirezarezvani/azure-cloud-architect": [
+    "infrastructure-and-deployment",
+    "software-architecture"
+  ],
+  "skill:alirezarezvani/behuman": [
+    "prompt-engineering"
+  ],
+  "skill:alirezarezvani/board": [
+    "agent-development"
+  ],
+  "skill:alirezarezvani/board-deck-builder": [
+    "document-production"
+  ],
+  "skill:alirezarezvani/board-meeting": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/board-prep": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/boardroom": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/brief": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/browser-automation": [
+    "browser-automation",
+    "web-scraping"
+  ],
+  "skill:alirezarezvani/browserstack": [
+    "test-automation"
+  ],
+  "skill:alirezarezvani/business-growth-skills": [
+    "sales-pipeline",
+    "customer-support"
+  ],
+  "skill:alirezarezvani/business-investment-advisor": [
+    "financial-modeling"
+  ],
+  "skill:alirezarezvani/business-operations-skills": [
+    "project-management",
+    "technical-documentation"
+  ],
+  "skill:alirezarezvani/c-level-agents": [],
+  "skill:alirezarezvani/c-level-skills": [],
+  "skill:alirezarezvani/caio-review": [
+    "model-evaluation",
+    "regulatory-compliance"
+  ],
+  "skill:alirezarezvani/campaign-analytics": [
+    "attribution",
+    "dashboards-and-reporting"
+  ],
+  "skill:alirezarezvani/capa-officer": [
+    "regulatory-compliance",
+    "audit"
+  ],
+  "skill:alirezarezvani/capacity-planner": [
+    "project-management",
+    "financial-modeling"
+  ],
+  "skill:alirezarezvani/capture": [
+    "knowledge-management"
+  ],
+  "skill:alirezarezvani/caveman": [
+    "agent-configuration"
+  ],
+  "skill:alirezarezvani/cco-review": [
+    "customer-support",
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/cdo-review": [
+    "data-pipelines",
+    "regulatory-compliance"
+  ],
+  "skill:alirezarezvani/ceo-advisor": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/cfo-advisor": [
+    "financial-modeling"
+  ],
+  "skill:alirezarezvani/cfo-review": [
+    "financial-modeling"
+  ],
+  "skill:alirezarezvani/challenge": [
+    "risk-assessment"
+  ],
+  "skill:alirezarezvani/change-management": [
+    "project-management"
+  ],
+  "skill:alirezarezvani/channel-economics": [
+    "financial-modeling",
+    "sales-pipeline"
+  ],
+  "skill:alirezarezvani/chaos-engineering": [
+    "incident-response",
+    "test-automation"
+  ],
+  "skill:alirezarezvani/chief-ai-officer-advisor": [
+    "model-evaluation",
+    "regulatory-compliance"
+  ],
+  "skill:alirezarezvani/chief-customer-officer-advisor": [
+    "customer-support",
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/chief-data-officer-advisor": [
+    "data-pipelines",
+    "regulatory-compliance"
+  ],
+  "skill:alirezarezvani/chief-of-staff": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/chro-advisor": [
+    "recruiting-and-hiring",
+    "career-development"
+  ],
+  "skill:alirezarezvani/churn-prevention": [
+    "customer-support",
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/ci-cd-pipeline-builder": [
+    "infrastructure-and-deployment"
+  ],
+  "skill:alirezarezvani/ciso-advisor": [
+    "security-review",
+    "regulatory-compliance",
+    "risk-assessment"
+  ],
+  "skill:alirezarezvani/ciso-review": [
+    "security-review",
+    "regulatory-compliance"
+  ],
+  "skill:alirezarezvani/claude-coach": [
+    "training-material"
+  ],
+  "skill:alirezarezvani/clinical-research": [
+    "scientific-research",
+    "statistical-modeling"
+  ],
+  "skill:alirezarezvani/cloud-security": [
+    "security-review",
+    "infrastructure-and-deployment"
+  ],
+  "skill:alirezarezvani/cmo-advisor": [
+    "market-analysis",
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/cmo-review": [
+    "market-analysis",
+    "content-marketing"
+  ],
+  "skill:alirezarezvani/code-to-prd": [
+    "prd-and-specs",
+    "technical-documentation"
+  ],
+  "skill:alirezarezvani/code-tour": [
+    "technical-documentation",
+    "training-material"
+  ],
+  "skill:alirezarezvani/codebase-onboarding": [
+    "technical-documentation",
+    "training-material"
+  ],
+  "skill:alirezarezvani/cold-email": [
+    "sales-pipeline",
+    "copywriting"
+  ],
+  "skill:alirezarezvani/collab-proof": [
+    "agent-configuration"
+  ],
+  "skill:alirezarezvani/commercial-forecaster": [
+    "financial-modeling",
+    "sales-pipeline"
+  ],
+  "skill:alirezarezvani/commercial-policy": [
+    "sales-pipeline"
+  ],
+  "skill:alirezarezvani/commercial-skills": [
+    "sales-pipeline",
+    "financial-modeling"
+  ],
+  "skill:alirezarezvani/company-os": [
+    "project-management",
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/competitive-intel": [
+    "market-analysis"
+  ],
+  "skill:alirezarezvani/competitive-teardown": [
+    "market-analysis"
+  ],
+  "skill:alirezarezvani/competitor-alternatives": [
+    "seo",
+    "content-marketing"
+  ],
+  "skill:alirezarezvani/compliance-os": [
+    "regulatory-compliance",
+    "audit"
+  ],
+  "skill:alirezarezvani/compliance-readiness": [
+    "regulatory-compliance",
+    "audit"
+  ],
+  "skill:alirezarezvani/confluence-expert": [
+    "knowledge-management",
+    "technical-documentation"
+  ],
+  "skill:alirezarezvani/content-creator": [
+    "content-marketing"
+  ],
+  "skill:alirezarezvani/content-humanizer": [
+    "copy-editing"
+  ],
+  "skill:alirezarezvani/content-production": [
+    "copywriting",
+    "content-marketing"
+  ],
+  "skill:alirezarezvani/content-strategy": [
+    "content-marketing",
+    "seo"
+  ],
+  "skill:alirezarezvani/context-engine": [
+    "agent-configuration",
+    "knowledge-management"
+  ],
+  "skill:alirezarezvani/contract-and-proposal-writer": [
+    "contract-review",
+    "document-production"
+  ],
+  "skill:alirezarezvani/coo-advisor": [
+    "project-management",
+    "process-automation"
+  ],
+  "skill:alirezarezvani/copy-editing": [
+    "copy-editing"
+  ],
+  "skill:alirezarezvani/copywriting": [
+    "copywriting",
+    "content-marketing"
+  ],
+  "skill:alirezarezvani/coverage": [
+    "test-automation"
+  ],
+  "skill:alirezarezvani/cpo-advisor": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/cpo-review": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/cro-advisor": [
+    "sales-pipeline",
+    "financial-modeling"
+  ],
+  "skill:alirezarezvani/cro-review": [
+    "sales-pipeline"
+  ],
+  "skill:alirezarezvani/cross-eval": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/cs-onboard": [
+    "knowledge-management",
+    "agent-configuration"
+  ],
+  "skill:alirezarezvani/cto-advisor": [
+    "software-architecture"
+  ],
+  "skill:alirezarezvani/cto-review": [
+    "software-architecture"
+  ],
+  "skill:alirezarezvani/culture-architect": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/customer-success-manager": [
+    "customer-support"
+  ],
+  "skill:alirezarezvani/data-quality-auditor": [
+    "data-quality",
+    "exploratory-data-analysis"
+  ],
+  "skill:alirezarezvani/database-designer": [
+    "software-architecture",
+    "query-optimization"
+  ],
+  "skill:alirezarezvani/database-schema-designer": [
+    "software-architecture"
+  ],
+  "skill:alirezarezvani/deal-desk": [
+    "sales-pipeline",
+    "contract-review"
+  ],
+  "skill:alirezarezvani/decide": [
+    "knowledge-management"
+  ],
+  "skill:alirezarezvani/decision-logger": [
+    "knowledge-management",
+    "project-management"
+  ],
+  "skill:alirezarezvani/deep-research": [
+    "web-research"
+  ],
+  "skill:alirezarezvani/deep-work": [
+    "project-management"
+  ],
+  "skill:alirezarezvani/demo-video": [
+    "video-editing",
+    "content-marketing"
+  ],
+  "skill:alirezarezvani/dependency-auditor": [
+    "security-review"
+  ],
+  "skill:alirezarezvani/design-system": [
+    "visual-design"
+  ],
+  "skill:alirezarezvani/docker-development": [
+    "infrastructure-and-deployment"
+  ],
+  "skill:alirezarezvani/dossier": [
+    "web-research",
+    "market-analysis"
+  ],
+  "skill:alirezarezvani/email-sequence": [
+    "content-marketing",
+    "copywriting"
+  ],
+  "skill:alirezarezvani/email-template-builder": [
+    "application-development",
+    "web-development"
+  ],
+  "skill:alirezarezvani/engineering-advanced-skills": [],
+  "skill:alirezarezvani/engineering-skills": [],
+  "skill:alirezarezvani/env-secrets-manager": [
+    "security-review",
+    "infrastructure-and-deployment"
+  ],
+  "skill:alirezarezvani/epic-design": [
+    "web-development",
+    "visual-design",
+    "animation"
+  ],
+  "skill:alirezarezvani/eu-ai-act-specialist": [
+    "regulatory-compliance"
+  ],
+  "skill:alirezarezvani/eval": [
+    "model-evaluation"
+  ],
+  "skill:alirezarezvani/execute": [
+    "project-management"
+  ],
+  "skill:alirezarezvani/executive-mentor": [
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/experiment-designer": [
+    "statistical-modeling",
+    "product-strategy"
+  ],
+  "skill:alirezarezvani/extract": [
+    "agent-development"
+  ],
+  "skill:alirezarezvani/fable-goal": [
+    "prompt-engineering"
+  ],
+  "skill:alirezarezvani/fda-consultant-specialist": [
+    "regulatory-compliance"
+  ],
+  "skill:alirezarezvani/fda-qsr-audit-prep": [
+    "regulatory-compliance",
+    "audit"
+  ],
+  "skill:alirezarezvani/feature-flags-architect": [
+    "infrastructure-and-deployment",
+    "application-development"
+  ]
+}

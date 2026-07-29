@@ -1,0 +1,483 @@
+{
+  "_note": "graded by subagent, batch b9",
+  "plugin:nmoinvaz/speedy-gonzales/arriba": [],
+  "plugin:oldyade/animated-sketch-diagram/animated-sketch-diagram": [
+    "animation",
+    "technical-documentation"
+  ],
+  "plugin:oliver-pringle/acp-find-plugin/acp-find": [
+    "agent-development"
+  ],
+  "plugin:omar-hanafy/dart_helper_utils/dart-helper-utils": [
+    "application-development"
+  ],
+  "plugin:omermaksutii/rugproof/rugproof": [
+    "security-review"
+  ],
+  "plugin:opensesh/karimo/karimo-harness-engineering-agent-orchestration": [
+    "agent-development",
+    "code-review"
+  ],
+  "plugin:optimal-ai/optibot-skill/optibot": [
+    "code-review",
+    "security-review"
+  ],
+  "plugin:orcaqubits/agentic-commerce-claude-plugins/agentic-commerce": [
+    "web-development"
+  ],
+  "plugin:orieg/gws-connector/gws-connector": [
+    "messaging-and-email"
+  ],
+  "plugin:pactflow/pactflow-agent-skills/swagger-contract-testing": [
+    "test-automation"
+  ],
+  "plugin:pactflow/pactflow-agent-skills/swagger-contract-testing-drift": [
+    "test-automation"
+  ],
+  "plugin:pactflow/pactflow-agent-skills/swagger-contract-testing-openapi-parser": [
+    "test-automation"
+  ],
+  "plugin:paper-design/agent-plugins/paper-desktop": [
+    "visual-design"
+  ],
+  "plugin:parcha-ai/grep-research-skills/grep-research-skills": [
+    "web-research"
+  ],
+  "plugin:project-white-rabbit/bitfab-claude-plugin/bitfab": [
+    "model-evaluation",
+    "observability"
+  ],
+  "plugin:rennf93/agent-runway/agent-runway": [
+    "agent-configuration",
+    "prompt-engineering"
+  ],
+  "plugin:rilldata/agent-skills/rill": [
+    "dashboards-and-reporting"
+  ],
+  "plugin:rohitgehe05/mindpowers/mindpowers": [
+    "prd-and-specs",
+    "product-strategy"
+  ],
+  "plugin:roxabi/roxabi-plugins/1b1": [
+    "project-management"
+  ],
+  "plugin:roxabi/roxabi-plugins/compress": [
+    "agent-configuration",
+    "prompt-engineering"
+  ],
+  "plugin:roxabi/roxabi-plugins/cv": [
+    "career-development"
+  ],
+  "plugin:roxabi/roxabi-plugins/dev-core": [
+    "application-development",
+    "code-review"
+  ],
+  "plugin:roxabi/roxabi-plugins/dev-init": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:roxabi/roxabi-plugins/get-invoice-details": [
+    "bookkeeping"
+  ],
+  "plugin:roxabi/roxabi-plugins/gitnexus": [
+    "application-development",
+    "software-architecture"
+  ],
+  "plugin:roxabi/roxabi-plugins/image-prompt-generator": [
+    "animation",
+    "prompt-engineering"
+  ],
+  "plugin:roxabi/roxabi-plugins/linkedin-apply": [
+    "career-development",
+    "web-scraping"
+  ],
+  "plugin:roxabi/roxabi-plugins/linkedin-post-generator": [
+    "content-marketing",
+    "copywriting"
+  ],
+  "plugin:sankahq/sanka-plugin/sanka": [
+    "sales-pipeline",
+    "bookkeeping"
+  ],
+  "plugin:scagogogo/versions-skills/versions": [
+    "application-development"
+  ],
+  "plugin:scratchpad-ai/clearskies-cowork-plugin/clearskies-cowork-plugin": [
+    "sales-pipeline"
+  ],
+  "plugin:senlindesign/claude2figma/claude2figma": [
+    "visual-design",
+    "web-development"
+  ],
+  "plugin:shinpr/pr-review-skill/pr-review": [
+    "code-review"
+  ],
+  "plugin:simons-plugins/indigo-claude-plugin/indigo-claude-plugin": [
+    "application-development"
+  ],
+  "plugin:sirmarkz/staff-engineer-mode/staff-engineer-mode": [],
+  "plugin:snapsynapse/skill-provenance/skill-provenance": [
+    "agent-configuration"
+  ],
+  "plugin:taosdata/agent-skills/idmp-plugin": [
+    "database-access"
+  ],
+  "plugin:tiga-labs/tiga-gtm/tiga-gtm": [
+    "sales-pipeline"
+  ],
+  "plugin:tornado-doc/tdoc/tdoc": [
+    "technical-documentation"
+  ],
+  "plugin:toverux/cantrips/cantrips": [
+    "application-development",
+    "test-automation",
+    "code-review"
+  ],
+  "plugin:tykisgod/quick-question/quick-question": [
+    "application-development",
+    "test-automation",
+    "code-review"
+  ],
+  "plugin:wolfgangrush/indian-banking-drafting-litigation/indian-banking-drafting": [
+    "contract-review",
+    "document-production"
+  ],
+  "plugin:wolfgangrush/indian-company-drafting/indian-company-drafting": [
+    "contract-review",
+    "document-production"
+  ],
+  "plugin:wolfgangrush/indian-consumer-drafting/indian-consumer-drafting": [
+    "contract-review",
+    "document-production"
+  ],
+  "plugin:wolfgangrush/indian-contracts-drafting-litigation/indian-contracts-drafting": [
+    "contract-review",
+    "document-production"
+  ],
+  "plugin:yinanli1917-cloud/searching-apple-notes/searching-apple-notes": [
+    "knowledge-management"
+  ],
+  "plugin:yohayetsion/product-org-os/product-org-os": [
+    "product-strategy",
+    "prd-and-specs",
+    "market-analysis"
+  ],
+  "plugin:yolo-labz/claude-mac-chrome/claude-mac-chrome": [
+    "browser-automation"
+  ],
+  "plugin:yuanyuanma03/research-paper-writing-skills/research-paper-writing": [
+    "scientific-research"
+  ],
+  "plugin:zeta92/design-library-plugin/the-design-library": [
+    "visual-design",
+    "web-development"
+  ],
+  "plugin:zhijiang-li1111/ironflow/ironflow": [
+    "application-development",
+    "test-automation",
+    "code-review"
+  ],
+  "plugin:zipkero/cc-usage/cc-usage": [
+    "agent-configuration"
+  ],
+  "plugin:zunosmartlabs/zsl-superpowers/zsl-superpowers": [
+    "application-development",
+    "prd-and-specs",
+    "test-automation"
+  ],
+  "plugin:2389-research/claude-plugins/better-dev": [],
+  "plugin:2389-research/claude-plugins/botboard-biz": [
+    "content-marketing"
+  ],
+  "plugin:2389-research/claude-plugins/building-multiagent-systems": [
+    "agent-development",
+    "software-architecture"
+  ],
+  "plugin:2389-research/claude-plugins/css-development": [
+    "web-development",
+    "visual-design"
+  ],
+  "plugin:2389-research/claude-plugins/firebase-development": [
+    "application-development"
+  ],
+  "plugin:2389-research/claude-plugins/fresh-eyes-review": [
+    "code-review",
+    "security-review"
+  ],
+  "plugin:2389-research/claude-plugins/remote-system-maintenance": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:2389-research/claude-plugins/scenario-testing": [
+    "test-automation"
+  ],
+  "plugin:2389-research/claude-plugins/sysadmin": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:2389-research/claude-plugins/terminal-title": [
+    "agent-configuration"
+  ],
+  "plugin:adelaidasofia/claude-patterns/claude-patterns": [
+    "knowledge-management",
+    "agent-configuration"
+  ],
+  "plugin:adelaidasofia/claude-performance/claude-performance": [
+    "agent-configuration",
+    "model-evaluation"
+  ],
+  "plugin:adelaidasofia/humanizer/humanizer": [
+    "copy-editing"
+  ],
+  "plugin:albemiglio/keyward/keyward": [
+    "agent-configuration",
+    "security-review"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-abap": [
+    "application-development"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-abap-cds": [
+    "application-development",
+    "data-pipelines"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-ai-core": [
+    "infrastructure-and-deployment",
+    "retrieval-systems"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-api-style": [
+    "technical-documentation"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-best-practices": [
+    "infrastructure-and-deployment",
+    "software-architecture"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-build-work-zone-advanced": [
+    "web-development"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-business-application-studio": [
+    "application-development",
+    "infrastructure-and-deployment"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-cias": [
+    "process-automation",
+    "infrastructure-and-deployment"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-cloud-logging": [
+    "observability"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-cloud-platform": [
+    "infrastructure-and-deployment",
+    "application-development"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-cloud-transport-management": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-connectivity": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-developer-guide": [
+    "application-development",
+    "infrastructure-and-deployment"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-integration-suite": [
+    "process-automation",
+    "infrastructure-and-deployment"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-intelligent-situation-automation": [
+    "process-automation"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-job-scheduling": [
+    "process-automation"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-master-data-integration": [
+    "data-pipelines"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-btp-service-manager": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-cap-capire": [
+    "application-development"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-cloud-sdk-ai": [
+    "agent-development",
+    "application-development"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-datasphere": [
+    "data-pipelines"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-fiori-tools": [
+    "web-development"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-hana-cli": [
+    "database-access"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-hana-cloud-data-intelligence": [
+    "data-pipelines",
+    "statistical-modeling"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-hana-ml": [
+    "statistical-modeling"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-sac-custom-widget": [
+    "dashboards-and-reporting",
+    "web-development"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-sac-planning": [
+    "financial-modeling",
+    "dashboards-and-reporting"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-sac-scripting": [
+    "dashboards-and-reporting"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-sqlscript": [
+    "database-access",
+    "query-optimization"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sapui5": [
+    "web-development"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sapui5-cli": [
+    "web-development"
+  ],
+  "plugin:andreafusar/https-github.com-secondsky-sap-skills/sapui5-linter": [
+    "code-review",
+    "web-development"
+  ],
+  "plugin:anthropics/claude-plugins-community/cowork-plugin-management": [
+    "agent-configuration"
+  ],
+  "plugin:anthropics/claude-plugins-community/quickdesign": [
+    "animation",
+    "video-editing"
+  ],
+  "plugin:anthropics/claude-plugins-community/testdino": [
+    "test-automation",
+    "debugging"
+  ],
+  "plugin:anthropics/claude-plugins-community/tres-finance-plugin": [
+    "bookkeeping"
+  ],
+  "plugin:anthropics/claude-plugins-official/agent-sdk-dev": [
+    "agent-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/asana": [
+    "project-management"
+  ],
+  "plugin:anthropics/claude-plugins-official/clangd-lsp": [
+    "application-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/claude-code-setup": [
+    "agent-configuration"
+  ],
+  "plugin:anthropics/claude-plugins-official/claude-md-management": [
+    "agent-configuration"
+  ],
+  "plugin:anthropics/claude-plugins-official/claude-security": [
+    "security-review"
+  ],
+  "plugin:anthropics/claude-plugins-official/code-modernization": [
+    "application-development",
+    "software-architecture"
+  ],
+  "plugin:anthropics/claude-plugins-official/code-review": [
+    "code-review"
+  ],
+  "plugin:anthropics/claude-plugins-official/code-simplifier": [
+    "application-development",
+    "code-review"
+  ],
+  "plugin:anthropics/claude-plugins-official/commit-commands": [
+    "application-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/context7": [
+    "application-development",
+    "web-research"
+  ],
+  "plugin:anthropics/claude-plugins-official/csharp-lsp": [
+    "application-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/cwc-makers": [
+    "hardware-design"
+  ],
+  "plugin:anthropics/claude-plugins-official/discord": [
+    "messaging-and-email"
+  ],
+  "plugin:anthropics/claude-plugins-official/explanatory-output-style": [
+    "agent-configuration"
+  ],
+  "plugin:anthropics/claude-plugins-official/fakechat": [],
+  "plugin:anthropics/claude-plugins-official/feature-dev": [
+    "application-development",
+    "software-architecture",
+    "code-review"
+  ],
+  "plugin:anthropics/claude-plugins-official/firebase": [
+    "application-development",
+    "infrastructure-and-deployment"
+  ],
+  "plugin:anthropics/claude-plugins-official/fullstory": [
+    "user-research",
+    "exploratory-data-analysis"
+  ],
+  "plugin:anthropics/claude-plugins-official/github": [
+    "code-review",
+    "project-management"
+  ],
+  "plugin:anthropics/claude-plugins-official/gitlab": [
+    "infrastructure-and-deployment",
+    "code-review",
+    "project-management"
+  ],
+  "plugin:anthropics/claude-plugins-official/gopls-lsp": [
+    "application-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/greptile": [
+    "application-development",
+    "software-architecture"
+  ],
+  "plugin:anthropics/claude-plugins-official/hookify": [
+    "agent-configuration"
+  ],
+  "plugin:anthropics/claude-plugins-official/imessage": [
+    "messaging-and-email"
+  ],
+  "plugin:anthropics/claude-plugins-official/jdtls-lsp": [
+    "application-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/jfrog": [
+    "infrastructure-and-deployment",
+    "security-review"
+  ],
+  "plugin:anthropics/claude-plugins-official/kotlin-lsp": [
+    "application-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/laravel-boost": [
+    "web-development",
+    "application-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/learning-output-style": [
+    "agent-configuration",
+    "training-material"
+  ],
+  "plugin:anthropics/claude-plugins-official/linear": [
+    "project-management"
+  ],
+  "plugin:anthropics/claude-plugins-official/lua-lsp": [
+    "application-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/math-olympiad": [
+    "scientific-research"
+  ],
+  "plugin:anthropics/claude-plugins-official/mcp-server-dev": [
+    "agent-development",
+    "application-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/mcp-tunnels": [
+    "agent-configuration",
+    "infrastructure-and-deployment"
+  ],
+  "plugin:anthropics/claude-plugins-official/php-lsp": [
+    "application-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/playground": [
+    "prototyping",
+    "web-development"
+  ]
+}
