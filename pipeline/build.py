@@ -1099,14 +1099,27 @@ def export(con):
     # kinds and made a 422-downloads/wk package look bigger than a 51,323-star plugin.
     # NO `slug`: it is exactly slugify(id), so the board derives it (see js capHref) instead of paying
     # ~9 KB gz to ship a second copy of every id.
+    # single_maintainer and similar_official are here for the CLI, not the board. `assess()` in
+    # cli/doctor.mjs branches on both, the CLI reads THIS file, and neither field was in it — so two
+    # of doctor's seven verdicts were dead code, including the only anti-typosquat warning we have.
+    # similar_official matches 0 rows today (the CANARY description filter removes the two known
+    # shadows before the detector runs) and must ship anyway, so the verdict can fire the day a real
+    # typosquat appears — which, unlike a canary, will not announce itself.
     SLIM = ["id", "name", "kind", "category", "npm_pkg", "official", "registry_status",
             "config_reach", "npm_downloads", "gh_stars", "adoption", "tashan_score", "upkeep", "vitality",
-            "expertise", "expertise_verdict", "npm_deprecated", "gh_archived", "rated"]  # NOT description: it is 104 KB gz of the index and the board never reads it
+            "expertise", "expertise_verdict", "npm_deprecated", "gh_archived", "rated",
+            "single_maintainer", "similar_official"]  # NOT description: it is 104 KB gz of the index and the board never reads it
     slim = {k: payload[k] for k in ("generated_at", "method", "total_capabilities", "enriched_npm",
                                     "expertise_graded", "ranked", "catalogued", "measured", "note")}
     # the board is capped; the bulk export above is not
     board = ranked[:RANK_CAP] + catalogued
-    slim["capabilities"] = [{k: c.get(k) for k in SLIM} for c in board]
+    # SPARSE: omit keys whose value is None. The index sits at ~90% of its 45 KB gz budget and every
+    # new field competes with first paint; dropping nulls buys back ~2 KB, which is how the two CLI
+    # fields above fit with room to spare. Only None is dropped — `false` and `0` are real
+    # measurements, and `assess()` in cli/doctor.mjs tests `row.rated === false` specifically, so
+    # dropping false would silently turn "catalogued but unrated" into "fine". Nothing in the board JS
+    # or the CLI compares to null strictly, so an absent key reads identically to a null one.
+    slim["capabilities"] = [{k: c[k] for k in SLIM if c.get(k) is not None} for c in board]
     slim["ranked"] = len(ranked[:RANK_CAP])
     # TASK INDEX — the browse axis, kept OUT of the board payload on purpose. index.json is fetched on
     # first paint and sits at 39.8 KB of a 45 KB budget; this map is 3.6 KB gz and is fetched only when
