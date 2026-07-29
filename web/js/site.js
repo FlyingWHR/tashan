@@ -59,6 +59,14 @@
     if (/^https?:\/\//.test(href)) {
       var h = hostOf(href);
       if (h && h !== host) send("outbound", { k: h, v: a.getAttribute("data-src") || "" });   // registry / repo / community
+    } else if (href.indexOf("mailto:") === 0) {
+      // THE ONLY CONVERSION EVENT ON THE SITE. Every paid-intent CTA is a mailto — the Pro waitlist
+      // and the "embedding tashan in your product" contact — because there is no checkout yet. The
+      // outbound branch above only matches ^https?://, so all of it recorded nothing, and the pricing
+      // page's entire job (find out which part people would pay for) was unmeasurable. The subject
+      // line distinguishes waitlist from teams from product enquiry, so key on that, not the address.
+      var subj = (href.split("subject=")[1] || "").split("&")[0];
+      send("intent", { k: decodeURIComponent(subj) || "email", v: location.pathname });
     } else if (href.indexOf("/capability/") === 0) {
       send("conav", { k: href.slice(12).replace(/\.html$/, "") });                              // graph traversal (co-use / board)
     }
