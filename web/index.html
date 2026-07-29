@@ -23,10 +23,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="tashan — measure what actually works">
   <meta name="twitter:description" content="The measurement layer for AI capabilities. We host nothing, sell nothing and run nothing — which is why the number means something.">
-  <link rel="stylesheet" href="/css/site.css?v=80">
+  <link rel="stylesheet" href="/css/site.css?v=82">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"tashan","url":"https://tashan.sh/","description":"The neutral measurement layer for AI capabilities. tashan measures MCP servers and agent skills on public evidence and sells none of them.","slogan":"Measure what actually works."}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"tashan","url":"https://tashan.sh/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://tashan.sh/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does tashan score MCP servers and skills?","acceptedAnswer":{"@type":"Answer","text":"tashan computes a transparent score from upkeep and freshness, gated by real adoption (npm downloads and public config reach). A separate LLM expertise-eval reads the actual capability and grades it deep / solid / thin / wrapper / slop. Every number is re-derivable from public sources."}},{"@type":"Question","name":"Does tashan sell the capabilities it scores?","acceptedAnswer":{"@type":"Answer","text":"No. tashan sells nothing it measures, hosts nothing, and takes no cut of any capability. It is a measurement layer, not a store or a runtime — which is the point: every other index in this field either sells the listings, hosts the servers, or earns when you run them. Nothing you can buy, claim or sign up for moves a tashan score, and the scorer is asserted to read only public-signal columns in tests/test_firewall.py."}},{"@type":"Question","name":"What is the difference between an MCP server and an agent skill?","acceptedAnswer":{"@type":"Answer","text":"An MCP server exposes tools to an AI agent over the Model Context Protocol; an agent skill is a folder with a SKILL.md that the agent loads on demand. tashan tracks and scores both in one unified capability model."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does tashan score MCP servers and skills?","acceptedAnswer":{"@type":"Answer","text":"tashan computes a transparent score from upkeep and freshness, gated by real adoption (npm downloads and public config reach). A separate LLM expertise-eval reads the actual capability and grades it deep / solid / thin / wrapper / slop. Every number is re-derivable from public sources."}},{"@type":"Question","name":"Does tashan sell the capabilities it scores?","acceptedAnswer":{"@type":"Answer","text":"No. tashan sells nothing it measures, hosts nothing, and takes no cut. It is not a directory competing with a platform store — Anthropic's own plugin directory tells you what you are allowed to install; tashan tells you what survives contact with real use. A store cannot be a disinterested rater of its own shelves, which is exactly why we sell none of what we score. Nothing you can buy, claim or sign up for moves a tashan score, and the scorer is asserted to read only public-signal columns in tests/test_firewall.py."}},{"@type":"Question","name":"What is the difference between an MCP server and an agent skill?","acceptedAnswer":{"@type":"Answer","text":"An MCP server exposes tools to an AI agent over the Model Context Protocol; an agent skill is a folder with a SKILL.md that the agent loads on demand. tashan tracks and scores both in one unified capability model."}}]}</script>
 </head>
 <body>
   <nav class="nav"><div class="wrap nav__in">
@@ -45,15 +45,17 @@
     <p class="hero__eyebrow">The measurement layer for AI capabilities</p>
     <h1 class="hero__title"><span class="w">Measure</span> <span class="w">what</span> <span class="w">actually</span> <em class="w">works</em><span class="w dot">.</span></h1>
     <p class="hero__rot mono" aria-hidden="true">measuring&nbsp; <span id="rot" class="rot"><span>adoption</span></span><span class="caret"></span></p>
-    <p class="hero__sub">Which MCP servers and skills people actually <strong>keep</strong> — measured from real public configs, not stars or listings. We sell none of them, host none of them, and publish the arithmetic.</p>
+    <p class="hero__sub">Your agent can already install anything. It cannot tell you what <strong>survives contact
+      with real use</strong>. tashan measures that on public evidence — and sells, hosts and runs none of what
+      it scores, which is the only reason the number means anything.</p>
     <div class="hero__stat" id="heroStat">
       <span><b class="k" id="sCaps">—</b> capabilities measured</span>
       <span class="dim">of <b id="sRepos">—</b> tracked</span>
       <span class="dim" id="sDate">measuring…</span>
     </div>
     <p class="hero__cta">
-      <a class="btn btn--primary" href="#board-anchor">Explore the Index &darr;</a>
-      <a class="btn btn--ghost" href="/start.html">Check your stack &rsaquo;</a>
+      <a class="btn btn--primary" href="/start.html">Check my stack &rsaquo;</a>
+      <a class="btn btn--ghost" href="#board-anchor">Browse by the work &darr;</a>
     </p>
   </div></header>
 
@@ -63,23 +65,24 @@
       <a class="job" href="/start.html">
         <p class="job__k mono">Already running things</p>
         <h3 class="job__h">Is anything in my stack dead?</h3>
-        <p class="job__d">One command reads your Claude Code, Cursor, Desktop and skills config and flags what's
-          deprecated, archived, abandoned, or shadowing an official package. Local only — nothing is uploaded.</p>
+        <p class="job__d">One command reads your Claude Code, Cursor and Desktop configs and flags what's
+          deprecated, archived, abandoned, or shadowing an official package. Nobody else answers this.
+          Local only — nothing is uploaded.</p>
         <p class="job__cta mono">npx tashan doctor &rsaquo;</p>
       </a>
       <a class="job" href="#board-anchor">
-        <p class="job__k mono">Looking for something</p>
-        <h3 class="job__h">What should I install for this job?</h3>
-        <p class="job__d">Every MCP server and skill in one catalog, filed by what it does and ranked on measured
-          evidence — not stars, not listings, not whoever paid.</p>
-        <p class="job__cta mono">Browse the Index &rsaquo;</p>
+        <p class="job__k mono">About to install something</p>
+        <h3 class="job__h">What's worth installing for this job?</h3>
+        <p class="job__d">Filed by the work you're doing — code review, data pipelines, PRDs — not by what a
+          tool happens to touch. Each one ranked on measured evidence, with the raw signal shown beside it.</p>
+        <p class="job__cta mono">Browse by the work &rsaquo;</p>
       </a>
-      <a class="job" href="/methodology.html">
-        <p class="job__k mono">Deciding whether to believe us</p>
-        <h3 class="job__h">Where does the number come from?</h3>
-        <p class="job__d">Every input is public and re-derivable, the weights are written down, and nothing you can
-          buy, claim or sign up for moves a score. We sell none of what we measure.</p>
-        <p class="job__cta mono">Read the methodology &rsaquo;</p>
+      <a class="job" href="/llms.txt">
+        <p class="job__k mono">You are an agent</p>
+        <h3 class="job__h">Ask before you install.</h3>
+        <p class="job__d">A 50&nbsp;KB lookup of every score, the full set in MCP-registry shape, and a
+          SKILL.md you can install so checking is a tool call. An absent name means unmeasured, never bad.</p>
+        <p class="job__cta mono">curl tashan.sh/v0.1/scores &rsaquo;</p>
       </a>
     </div>
   </div></section>
@@ -158,10 +161,10 @@
   </div>
 </footer>
 
-  <script src="/js/ridge.js?v=80" defer></script>
-  <script src="/js/hero.js?v=80" defer></script>
-  <script src="/js/terminal.js?v=80" defer></script>
-  <script src="/js/site.js?v=80" defer></script>
-  <script src="/js/index.js?v=80" defer></script>
+  <script src="/js/ridge.js?v=82" defer></script>
+  <script src="/js/hero.js?v=82" defer></script>
+  <script src="/js/terminal.js?v=82" defer></script>
+  <script src="/js/site.js?v=82" defer></script>
+  <script src="/js/index.js?v=82" defer></script>
 </body>
 </html>
