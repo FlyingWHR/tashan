@@ -1,7 +1,23 @@
 #!/usr/bin/env python3
-"""Fetch READMEs for the top-ranked capabilities that have a source repo, for LLM expertise-eval.
-Writes data/readmes/manifest.json = [{id,name,repo,npm_pkg,description,readme(truncated)}]."""
-import json, os, sqlite3, urllib.request, urllib.parse
+"""Fetch READMEs for expertise grading. Writes data/readmes/manifest.json =
+[{id,name,repo,npm_pkg,description,readme(truncated)}].
+
+TWO SAMPLING MODES, because grading serves two different jobs:
+
+  default (top-N)   CURATION — make the most-visible rows on the board good.
+  --stratified      VALIDATION — is the score right at all?
+
+The default silently made validation impossible. Grading only ever ran top-N by score, so all 24
+graded rows landed at or above the 96th percentile, and comparing verdicts against scores produced
+deep+solid mean 84.6 vs thin+wrapper+slop mean 85.9 — the "bad" ones scoring HIGHER. That is not the
+score failing, it is a sample with no variance in it: you cannot measure whether a score separates
+good from bad using only rows the score already called good. --stratified draws an equal number from
+each score band so the correlation means something.
+
+    python3 pipeline/fetch_readmes.py --stratified          # PER_BAND=30 across 5 bands
+    PER_BAND=50 python3 pipeline/fetch_readmes.py --stratified
+"""
+import json, os, sqlite3, sys, urllib.request, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "tashan.db")
@@ -22,9 +38,27 @@ def raw(repo, path):
     return None
 
 con = sqlite3.connect(DB)
-rows = con.execute("SELECT id,name,source_repo,npm_pkg,description FROM capabilities "
-                   "WHERE tashan_score IS NOT NULL AND source_repo IS NOT NULL "
-                   "ORDER BY tashan_score DESC LIMIT ?", (TOP_N,)).fetchall()
+SEL = "SELECT id,name,source_repo,npm_pkg,description FROM capabilities"
+WHERE = " WHERE tashan_score IS NOT NULL AND source_repo IS NOT NULL"
+if "--stratified" in sys.argv:
+    # Equal draw per band. Skills are excluded: every skill in a monorepo carries the SAME repo
+    # signal, so they cluster on one score and would swamp whichever band they land in.
+    BANDS = [(80, 101), (60, 80), (45, 60), (30, 45), (0, 30)]
+    per = int(os.environ.get("PER_BAND", "30"))
+    rows, seen = [], set()
+    for lo, hi in BANDS:
+        band = con.execute(SEL + WHERE + " AND kind!='skill' AND tashan_score >= ? AND tashan_score < ?"
+                           " ORDER BY tashan_score, id", (lo, hi)).fetchall()
+        # spread the draw ACROSS the band rather than taking its top, or each band re-creates in
+        # miniature the very top-slice bias this mode exists to remove
+        step = max(1, len(band) // per)
+        pick = band[::step][:per]
+        for r in pick:
+            if r[0] not in seen:
+                seen.add(r[0]); rows.append(r)
+        print(f"  band {lo:>3}-{hi:<3} {len(band):5,} eligible -> sampled {len(pick)}")
+else:
+    rows = con.execute(SEL + WHERE + " ORDER BY tashan_score DESC LIMIT ?", (TOP_N,)).fetchall()
 man = []
 for cid, name, repo, pkg, desc in rows:
     # try common README locations
