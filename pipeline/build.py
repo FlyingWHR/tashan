@@ -938,6 +938,18 @@ def export(con):
     board = ranked[:RANK_CAP] + catalogued
     slim["capabilities"] = [{k: c.get(k) for k in SLIM} for c in board]
     slim["ranked"] = len(ranked[:RANK_CAP])
+    # TASK INDEX — the browse axis, kept OUT of the board payload on purpose. index.json is fetched on
+    # first paint and sits at 39.8 KB of a 45 KB budget; this map is 3.6 KB gz and is fetched only when
+    # someone actually filters by task. Putting it in SLIM would spend first-paint weight on a filter
+    # most visitors never touch.
+    tag_map = {}
+    for c in ranked + catalogued:
+        for t in (c.get("tasks") or []):
+            tag_map.setdefault(t["t"], []).append(c["id"])
+    json.dump({"generated_at": payload["generated_at"], "tasks": tag_map},
+              open(os.path.join(ROOT, "web", "data", "tags.json"), "w"))
+    print(f"Task index ({len(tag_map)} tasks) -> web/data/tags.json")
+
     slim_out = os.path.join(ROOT, "web", "data", "index.json")
     json.dump(slim, open(slim_out, "w"))
     print(f"\nExported {len(ranked)} rated + {len(catalogued)} catalogued / {tot} total "

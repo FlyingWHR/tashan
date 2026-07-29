@@ -5,9 +5,9 @@
   "use strict";
   var rowsEl = document.getElementById("rows");
   // facets are Sets (multi-select); toggles are bool; sort is one key
-  var state = { cat: new Set(), kind: new Set(), vitality: new Set(), verdict: new Set(),
+  var state = { cat: new Set(), task: new Set(), kind: new Set(), vitality: new Set(), verdict: new Set(),
                 official: false, clean: false, sort: "trust" };
-  var data = { caps: [], cats: [], catMeta: {} };
+  var data = { caps: [], cats: [], catMeta: {}, tasks: [], roles: [], taskMeta: {}, taskIds: null };
   var PAGE = 100, shownCount = PAGE;   // board pagination: show PAGE rows, "show more" reveals the rest
 
   var KIND_LABEL = { npm: "npm", pkg: "npm-pkg", docker: "docker", python: "python", remote: "remote", skill: "skill" };
@@ -20,7 +20,12 @@
   var loadIndex = window.tashanIndex || function () { return fetch("/data/index.json").then(function (r) { if (!r.ok) throw 0; return r.json(); }); };
   Promise.all([
     loadIndex(),
-    fetch("/data/categories.json").then(function (r) { return r.ok ? r.json() : { categories: [] }; }).catch(function () { return { categories: [] }; })
+    fetch("/data/categories.json").then(function (r) { return r.ok ? r.json() : { categories: [] }; }).catch(function () { return { categories: [] }; }),
+    // The task taxonomy (labels, roles) and the tag->capability map. The map is 3.6 KB gz against a
+    // 39.8 KB index, so it is fetched up front: a lazy path for that saves nothing measurable and costs
+    // a loading state, a race on first click, and a filter that silently does nothing until it lands.
+    fetch("/data/tasks.json").then(function (r) { return r.ok ? r.json() : { tasks: [], roles: [] }; }).catch(function () { return { tasks: [], roles: [] }; }),
+    fetch("/data/tags.json").then(function (r) { return r.ok ? r.json() : { tasks: {} }; }).catch(function () { return { tasks: {} }; })
   ]).then(function (res) {
     var d = res[0];
     // measured ⊂ tracked — the two nest, so the pair is readable. "quality-measured" previously showed
@@ -36,8 +41,23 @@
     data.caps = (d.capabilities || []).filter(function (c) { return c.id.indexOf("key:") !== 0; });
     (res[1].categories || []).forEach(function (c) { data.catMeta[c.id] = c; });
     data.cats = res[1].categories || [];
+    data.tasks = (res[2] && res[2].tasks) || [];
+    data.roles = (res[2] && res[2].roles) || [];
+    data.tasks.forEach(function (t) { data.taskMeta[t.slug] = t; });
+    var raw = (res[3] && res[3].tasks) || {};
+    data.taskIds = {};
+    Object.keys(raw).forEach(function (k) { data.taskIds[k] = new Set(raw[k]); });
+    // Count what the board actually holds, not what the export knows: the slim index is capped, so a
+    // rail promising 30 would open onto 12 if we counted the bulk figure.
+    var onBoard = {};
+    data.caps.forEach(function (c) { onBoard[c.id] = 1; });
+    data.tasks.forEach(function (t) {
+      var ids = raw[t.slug] || [];
+      t.count = ids.filter(function (i) { return onBoard[i]; }).length;
+    });
     urlToState();
     buildToolbar();
+    renderTasks();
     renderCatalog();
     render();
     if (hasFilters()) { var a = document.getElementById("board-anchor"); if (a) a.scrollIntoView({ block: "start" }); }
@@ -45,12 +65,13 @@
     rowsEl.innerHTML = '<tr><td colspan="6"><div class="empty">Measurement data isn\'t published yet — the pipeline is still running. Check back shortly.</div></td></tr>';
   });
 
-  addEventListener("popstate", function () { shownCount = PAGE; urlToState(); buildToolbar(); renderCatalog(); render(); });
+  addEventListener("popstate", function () { shownCount = PAGE; urlToState(); buildToolbar(); renderTasks(); renderCatalog(); render(); });
 
   // ---- URL state (shareable, back-button-friendly; defaults omitted) ----
   function urlToState() {
     var q = new URLSearchParams(location.search);
     state.cat = csvSet(q.get("cat"));
+    state.task = csvSet(q.get("task"));
     state.kind = csvSet(q.get("kind"));
     state.vitality = csvSet(q.get("vitality"));
     state.verdict = csvSet(q.get("verdict"));
@@ -61,6 +82,7 @@
   function stateToURL(push) {
     var q = new URLSearchParams();
     if (state.cat.size) q.set("cat", [].concat.apply([], [Array.from(state.cat)]).join(","));
+    if (state.task.size) q.set("task", Array.from(state.task).join(","));
     if (state.kind.size) q.set("kind", Array.from(state.kind).join(","));
     if (state.vitality.size) q.set("vitality", Array.from(state.vitality).join(","));
     if (state.verdict.size) q.set("verdict", Array.from(state.verdict).join(","));
@@ -71,7 +93,7 @@
     history[push ? "pushState" : "replaceState"](null, "", url);
   }
   function csvSet(v) { return new Set(v ? v.split(",").filter(Boolean) : []); }
-  function hasFilters() { return state.cat.size || state.kind.size || state.vitality.size || state.verdict.size || state.official || state.clean; }
+  function hasFilters() { return state.task.size || state.cat.size || state.kind.size || state.vitality.size || state.verdict.size || state.official || state.clean; }
 
   // ---- the toolbar: Type/Activity/Assessment pills + Official/Clean toggles + Sort select ----
   function buildToolbar() {
@@ -132,6 +154,47 @@
   }
 
   // ---- category rail (the browse axis) — compact refinement list; leader shown on hover (measured touch) ----
+  // ---- the task rail: the PRIMARY browse axis — what work are you doing? ----
+  // The 15 domain categories describe what a capability touches; this describes what you are trying to
+  // get done, which is how people actually arrive. Tasks are multi-select (a capability does several
+  // jobs) where category is deliberately single-select (browse ONE domain at a time). Grouped by role
+  // purely for legibility — roles are labels here, never a page or a filter of their own.
+  function renderTasks() {
+    var rail = document.getElementById("taskrail");
+    if (!rail || !data.tasks.length) return;
+    // Only tasks with a real shelf behind them are offered. A rail full of one-capability jobs is a
+    // worse browse than no rail: it promises a catalog we do not have yet.
+    var live = data.tasks.filter(function (t) { return (t.count || 0) >= 3; });
+    if (!live.length) { rail.innerHTML = ""; return; }
+    var byRole = {};
+    live.forEach(function (t) {
+      (t.roles && t.roles.length ? t.roles : ["other"]).forEach(function (r) {
+        (byRole[r] = byRole[r] || []).push(t);
+      });
+    });
+    var roleLabel = {};
+    data.roles.forEach(function (r) { roleLabel[r.id] = r.label; });
+    var order = Object.keys(byRole).sort(function (a, b) { return byRole[b].length - byRole[a].length; });
+    var html = order.map(function (r) {
+      var items = byRole[r].sort(function (a, b) { return (b.count || 0) - (a.count || 0); });
+      return '<div class="trole"><p class="trole__h mono">' + esc(roleLabel[r] || r) + "</p>" +
+        items.map(function (t) {
+          var on = state.task.has(t.slug);
+          return '<button class="crow' + (on ? " is-on" : "") + '" data-task="' + esc(t.slug) + '" type="button" aria-pressed="' + on + '">' +
+            '<span class="crow__l">' + esc(t.label) + "</span>" +
+            '<span class="crow__n">' + (t.count || 0) + "</span></button>";
+        }).join("") + "</div>";
+    }).join("");
+    rail.innerHTML = html;
+    rail.onclick = function (e) {
+      var b = e.target.closest("[data-task]");
+      if (!b) return;
+      var v = b.getAttribute("data-task");
+      state.task.has(v) ? state.task.delete(v) : state.task.add(v);
+      commit();
+    };
+  }
+
   function renderCatalog() {
     var rail = document.getElementById("catrail");
     if (!rail || !data.cats.length) return;
@@ -169,9 +232,17 @@
     };
   }
 
-  function commit() { shownCount = PAGE; stateToURL(true); buildToolbar(); renderCatalog(); render(); }
+  function commit() { shownCount = PAGE; stateToURL(true); buildToolbar(); renderTasks(); renderCatalog(); render(); }
 
   function passes(c) {
+    // Task filter: OR within the group, AND against every other facet — the same shape as Type and
+    // Activity. Tasks are multi-select because a capability genuinely does several jobs; category stays
+    // single-select because browsing two domains at once is not a thing people mean.
+    if (state.task.size) {
+      var hit = false;
+      state.task.forEach(function (t) { var s2 = data.taskIds[t]; if (s2 && s2.has(c.id)) hit = true; });
+      if (!hit) return false;
+    }
     if (state.cat.size && !state.cat.has(c.category)) return false;
     if (state.kind.size && !state.kind.has(normKind(c))) return false;
     if (state.vitality.size && !state.vitality.has(c.vitality)) return false;
@@ -259,6 +330,7 @@
     var bar = document.getElementById("activebar");
     if (!bar) return;
     var chips = [];
+    state.task.forEach(function (v) { chips.push(chip("task", v, data.taskMeta[v] ? data.taskMeta[v].label : v)); });
     state.cat.forEach(function (v) { chips.push(chip("cat", v, data.catMeta[v] ? data.catMeta[v].label : v)); });
     state.kind.forEach(function (v) { chips.push(chip("kind", v, KIND_LABEL[v] || v)); });
     state.vitality.forEach(function (v) { chips.push(chip("vitality", v, VIT_LABEL[v])); });
@@ -283,7 +355,7 @@
     return '<button class="achip" data-rm="' + facet + '" data-val="' + esc(val) + '" type="button">' + esc(label) + ' <span class="achip__x">✕</span></button>';
   }
   function clearAll() {
-    state.cat.clear(); state.kind.clear(); state.vitality.clear(); state.verdict.clear();
+    state.task.clear(); state.cat.clear(); state.kind.clear(); state.vitality.clear(); state.verdict.clear();
     state.official = false; state.clean = false;
     commit();
   }
