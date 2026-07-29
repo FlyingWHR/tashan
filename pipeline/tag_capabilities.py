@@ -307,15 +307,37 @@ def run_eval(con, tasks):
         print(f"no held-out labels at {TRUTH} — hand-label ~150 rows as "
               '{"<cap_id>": ["<task-slug>", ...]} to enable this')
         return 1
-    truth = {k: v for k, v in json.load(open(TRUTH)).items() if not k.startswith("_")}
-    tp = fp = fn = 0
-    for cap_id, want in truth.items():
-        got = {r[0] for r in con.execute("SELECT tag FROM capability_tags WHERE cap_id=?", (cap_id,))}
-        want = set(want)
-        tp += len(got & want); fp += len(got - want); fn += len(want - got)
-    prec = tp / max(1, tp + fp); rec = tp / max(1, tp + fn)
-    f1 = 2 * prec * rec / max(1e-9, prec + rec)
-    print(f"held-out n={len(truth)}  precision {prec*100:.1f}%  recall {rec*100:.1f}%  F1 {f1*100:.1f}%")
+    truth = {k: set(v) for k, v in json.load(open(TRUTH)).items() if not k.startswith("_")}
+    import glob as _g
+    labelled = set()
+    for f in _g.glob(os.path.join(MANUAL, "*.json")):
+        labelled |= {k for k in json.load(open(f)) if not k.startswith("_")}
+
+    def score(keys):
+        tp = fp = fn = 0
+        for cap_id in keys:
+            got = {r[0] for r in con.execute("SELECT tag FROM capability_tags WHERE cap_id=?", (cap_id,))}
+            want = truth[cap_id]
+            tp += len(got & want); fp += len(got - want); fn += len(want - got)
+        p = tp / max(1, tp + fp); r = tp / max(1, tp + fn)
+        return p, r, 2 * p * r / max(1e-9, p + r)
+
+    # SCORE ONLY WHAT WAS ACTUALLY GRADED. The truth set and the graded batches are different samples,
+    # so most truth rows have no prediction at all — and a row nobody graded is not a row graded wrongly.
+    # Counting them scored 18.5% recall when the real figure on comparable rows was 83.3%: the metric was
+    # measuring sample overlap and reading as a quality collapse.
+    overlap = [k for k in truth if k in labelled]
+    print(f"held-out n={len(truth)}, of which {len(overlap)} have been graded "
+          f"({len(truth) - len(overlap)} ungraded and therefore not scored)")
+    if not overlap:
+        print("  nothing comparable yet — grade rows that are IN the truth set before trusting this")
+        return 1
+    p, r, f1 = score(overlap)
+    print(f"  on the {len(overlap)} comparable rows: precision {p*100:.1f}%  recall {r*100:.1f}%  F1 {f1*100:.1f}%")
+    if len(overlap) < 50:
+        print(f"  CAUTION: {len(overlap)} rows is too few to conclude anything. Widen the overlap.")
+    print("  NOTE: this scores agreement with truth.json, whose labels are themselves unvalidated —")
+    print("  it is inter-rater agreement, not accuracy, and the reference can be the weaker side.")
     return 0
 
 
