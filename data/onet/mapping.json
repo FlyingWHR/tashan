@@ -1,6 +1,6 @@
 {
   "_note": "Layer 3 of the task axis: O*NET's formal process step -> the name insiders actually use. O*NET writes in government register ('Analyze data to identify trends or relationships among variables'); practitioners search for 'exploratory data analysis'. Many O*NET steps consolidate into one insider term — that consolidation IS this layer. Each entry keeps its O*NET steps as the receipt, so any published tag can cite which occupational process it came from and which occupations perform it. `onet` is evidence; `slug`/`label`/`term` are naming judgement and are labelled as such wherever published. `label` is the display name; `term` is the exact string falsified against the corpus by `onet_tasks.py --validate` (a label like 'PRDs and specs' is never written literally, but 'prd' is). SOURCE: O*NET 30.3 Database, US Dept of Labor / Employment and Training Administration, CC BY 4.0.",
-  "_status": "Full pass over the 883 in-scope steps, consolidated to the job functions software can serve. Insider terms falsified against 4,846 practitioner-written documents.",
+  "_status": "Full pass over the 883 in-scope steps. Seven tasks added after six independent graders converged on the same gaps — the first real inter-rater signal this axis has had.",
   "mappings": [
     {
       "slug": "prd-and-specs",
@@ -146,7 +146,7 @@
       "slug": "query-optimization",
       "label": "Query optimisation",
       "term": "query optimization",
-      "insider": "'Tuning'; the artifact is an EXPLAIN plan.",
+      "insider": "'Tuning'; the artifact is an EXPLAIN plan. NOT plain database access — see `database-access`.",
       "onet": [
         "Assess database performance.",
         "Develop database parameters or specifications."
@@ -156,10 +156,11 @@
         "data-engineer"
       ],
       "synonyms": [
-        "database",
-        "sql",
-        "query",
-        "performance"
+        "query optimization",
+        "slow query",
+        "index tuning",
+        "explain plan",
+        "database performance"
       ]
     },
     {
@@ -1063,6 +1064,163 @@
         "scraping",
         "crawler",
         "extraction"
+      ]
+    },
+    {
+      "slug": "database-access",
+      "label": "Database access",
+      "term": "database",
+      "insider": "Connecting to a database and getting data out — distinct from tuning it. Six independent graders all routed plain Postgres/Mongo/BigQuery connectors into `query-optimization`, whose label reads as EXPLAIN-plan work; that mismatch is what surfaced this gap.",
+      "onet": [
+        "Enter information into databases or software programs.",
+        "Develop database parameters or specifications."
+      ],
+      "roles": [
+        "engineer",
+        "data-analyst"
+      ],
+      "synonyms": [
+        "database",
+        "sql",
+        "postgres",
+        "mongodb",
+        "bigquery",
+        "connector"
+      ]
+    },
+    {
+      "slug": "recruiting-and-hiring",
+      "label": "Recruiting and hiring",
+      "term": "recruiting",
+      "insider": "'Sourcing', 'screening', 'the loop' — ATS work. The taxonomy had an `hr` role whose only task was building curriculum, so every ATS capability had nowhere to go.",
+      "onet": [
+        "Analyze data to inform personnel decisions.",
+        "Evaluate effectiveness of personnel policies or practices."
+      ],
+      "roles": [
+        "hr"
+      ],
+      "synonyms": [
+        "recruiting",
+        "hiring",
+        "ats",
+        "candidates",
+        "interview",
+        "screening",
+        "applicants"
+      ]
+    },
+    {
+      "slug": "logistics-and-fulfilment",
+      "label": "Logistics and fulfilment",
+      "term": "logistics",
+      "insider": "Shipping, routing, inventory and supply chain — the physical side of running a business.",
+      "onet": [
+        "Analyze logistics processes.",
+        "Analyze shipping information to make routing decisions.",
+        "Calculate shipping costs.",
+        "Advise others on logistics topics."
+      ],
+      "roles": [
+        "ops"
+      ],
+      "synonyms": [
+        "logistics",
+        "shipping",
+        "fulfillment",
+        "inventory",
+        "supply chain",
+        "routing"
+      ]
+    },
+    {
+      "slug": "document-production",
+      "label": "Document production",
+      "term": "docx",
+      "insider": "Producing the deliverable itself — docx, pptx, pdf. Not technical docs (READMEs/ADRs) and not line-editing someone's draft; three graders each had to pick a wrong home for office-format capabilities.",
+      "onet": [
+        "Prepare informational or reference materials.",
+        "Prepare research or technical reports."
+      ],
+      "roles": [
+        "ops",
+        "writer"
+      ],
+      "synonyms": [
+        "docx",
+        "pptx",
+        "pdf",
+        "powerpoint",
+        "word",
+        "presentation",
+        "deck",
+        "report"
+      ]
+    },
+    {
+      "slug": "audio-production",
+      "label": "Audio production",
+      "term": "audio",
+      "insider": "Voice, music, mixing, TTS. Was being absorbed by `video-editing` because its O*NET step reads 'Edit audio or video recordings' — true of the step, wrong for a text-to-speech tool.",
+      "onet": [
+        "Coordinate musical rehearsals or performances."
+      ],
+      "roles": [
+        "creator"
+      ],
+      "synonyms": [
+        "audio",
+        "voice",
+        "tts",
+        "speech",
+        "music",
+        "podcast",
+        "mixing",
+        "transcription"
+      ]
+    },
+    {
+      "slug": "messaging-and-email",
+      "label": "Messaging and email",
+      "term": "email",
+      "insider": "Inbox, chat and calendar — Slack, Gmail, Outlook, iMessage. Repeatedly landed in `process-automation`, which describes the mechanism rather than the job.",
+      "onet": [
+        "Communicate with clients about products, procedures, and policies.",
+        "Communicate with other workers to coordinate activities."
+      ],
+      "roles": [
+        "ops"
+      ],
+      "synonyms": [
+        "email",
+        "inbox",
+        "gmail",
+        "outlook",
+        "slack",
+        "calendar",
+        "messaging",
+        "chat"
+      ]
+    },
+    {
+      "slug": "career-development",
+      "label": "Career development",
+      "term": "career",
+      "insider": "Levelling, promotion readiness, performance reviews, job search. Three capabilities were left empty for want of it, which R3 explicitly calls a taxonomy bug rather than an honest refusal.",
+      "onet": [
+        "Evaluate effectiveness of personnel policies or practices."
+      ],
+      "roles": [
+        "hr"
+      ],
+      "synonyms": [
+        "career",
+        "promotion",
+        "performance review",
+        "resume",
+        "job search",
+        "coaching",
+        "levelling"
       ]
     }
   ],

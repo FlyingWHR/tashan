@@ -232,6 +232,34 @@
       "validation": null
     },
     {
+      "slug": "audio-production",
+      "label": "Audio production",
+      "term": "audio",
+      "blurb": "Voice, music, mixing, TTS. Was being absorbed by `video-editing` because its O*NET step reads 'Edit audio or video recordings' — true of the step, wrong for a text-to-speech tool.",
+      "synonyms": [
+        "audio",
+        "audio production",
+        "mixing",
+        "music",
+        "podcast",
+        "speech",
+        "transcription",
+        "tts",
+        "voice"
+      ],
+      "roles": [
+        "creator"
+      ],
+      "onet_steps": [
+        "Coordinate musical rehearsals or performances."
+      ],
+      "occupations": [
+        "Music Directors and Composers"
+      ],
+      "grounded": true,
+      "validation": null
+    },
+    {
       "slug": "audit",
       "label": "Audit",
       "term": "audit",
@@ -352,6 +380,36 @@
       ],
       "grounded": true,
       "validation": "weak — CAD work is thin in this corpus"
+    },
+    {
+      "slug": "career-development",
+      "label": "Career development",
+      "term": "career",
+      "blurb": "Levelling, promotion readiness, performance reviews, job search. Three capabilities were left empty for want of it, which R3 explicitly calls a taxonomy bug rather than an honest refusal.",
+      "synonyms": [
+        "career",
+        "career development",
+        "coaching",
+        "job search",
+        "levelling",
+        "performance review",
+        "promotion",
+        "resume"
+      ],
+      "roles": [
+        "hr"
+      ],
+      "onet_steps": [
+        "Evaluate effectiveness of personnel policies or practices."
+      ],
+      "occupations": [
+        "Accountants and Auditors",
+        "Compensation, Benefits, and Job Analysis Specialists",
+        "Human Resources Specialists",
+        "Training and Development Specialists"
+      ],
+      "grounded": true,
+      "validation": null
     },
     {
       "slug": "code-review",
@@ -646,6 +704,54 @@
       "validation": null
     },
     {
+      "slug": "database-access",
+      "label": "Database access",
+      "term": "database",
+      "blurb": "Connecting to a database and getting data out — distinct from tuning it. Six independent graders all routed plain Postgres/Mongo/BigQuery connectors into `query-optimization`, whose label reads as EXPLAIN-plan work; that mismatch is what surfaced this gap.",
+      "synonyms": [
+        "bigquery",
+        "connector",
+        "database",
+        "database access",
+        "mongodb",
+        "postgres",
+        "sql"
+      ],
+      "roles": [
+        "engineer",
+        "data-analyst"
+      ],
+      "onet_steps": [
+        "Enter information into databases or software programs.",
+        "Develop database parameters or specifications."
+      ],
+      "occupations": [
+        "Appraisers of Personal and Business Property",
+        "Bioinformatics Technicians",
+        "Cargo and Freight Agents",
+        "Data Entry Keyers",
+        "Database Administrators",
+        "Database Architects",
+        "Desktop Publishers",
+        "Insurance Claims and Policy Processing Clerks",
+        "Library Assistants, Clerical",
+        "Meter Readers, Utilities",
+        "Museum Technicians and Conservators",
+        "New Accounts Clerks",
+        "Payroll and Timekeeping Clerks",
+        "Postal Service Mail Carriers",
+        "Public Safety Telecommunicators",
+        "Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",
+        "Statistical Assistants",
+        "Telephone Operators",
+        "Tellers",
+        "Title Examiners, Abstractors, and Searchers",
+        "Word Processors and Typists"
+      ],
+      "grounded": true,
+      "validation": null
+    },
+    {
       "slug": "debugging",
       "label": "Debugging",
       "term": "root cause",
@@ -714,6 +820,45 @@
         "Software Quality Assurance Analysts and Testers",
         "Telecommunications Engineering Specialists",
         "Video Game Designers"
+      ],
+      "grounded": true,
+      "validation": null
+    },
+    {
+      "slug": "document-production",
+      "label": "Document production",
+      "term": "docx",
+      "blurb": "Producing the deliverable itself — docx, pptx, pdf. Not technical docs (READMEs/ADRs) and not line-editing someone's draft; three graders each had to pick a wrong home for office-format capabilities.",
+      "synonyms": [
+        "deck",
+        "document production",
+        "docx",
+        "pdf",
+        "powerpoint",
+        "pptx",
+        "presentation",
+        "report",
+        "word"
+      ],
+      "roles": [
+        "ops",
+        "writer"
+      ],
+      "onet_steps": [
+        "Prepare informational or reference materials.",
+        "Prepare research or technical reports."
+      ],
+      "occupations": [
+        "Bioinformatics Technicians",
+        "Court, Municipal, and License Clerks",
+        "Executive Secretaries and Executive Administrative Assistants",
+        "First-Line Supervisors of Office and Administrative Support Workers",
+        "Interviewers, Except Eligibility and Loan",
+        "Library Assistants, Clerical",
+        "Payroll and Timekeeping Clerks",
+        "Photonics Engineers",
+        "Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",
+        "Statistical Assistants"
       ],
       "grounded": true,
       "validation": null
@@ -948,6 +1093,40 @@
       "validation": null
     },
     {
+      "slug": "logistics-and-fulfilment",
+      "label": "Logistics and fulfilment",
+      "term": "logistics",
+      "blurb": "Shipping, routing, inventory and supply chain — the physical side of running a business.",
+      "synonyms": [
+        "fulfillment",
+        "inventory",
+        "logistics",
+        "logistics and fulfilment",
+        "routing",
+        "shipping",
+        "supply chain"
+      ],
+      "roles": [
+        "ops"
+      ],
+      "onet_steps": [
+        "Analyze logistics processes.",
+        "Analyze shipping information to make routing decisions.",
+        "Calculate shipping costs.",
+        "Advise others on logistics topics."
+      ],
+      "occupations": [
+        "Cargo and Freight Agents",
+        "Freight Forwarders",
+        "Logistics Analysts",
+        "Logistics Engineers",
+        "Parts Salespersons",
+        "Shipping, Receiving, and Inventory Clerks"
+      ],
+      "grounded": true,
+      "validation": null
+    },
+    {
       "slug": "market-analysis",
       "label": "Market analysis",
       "term": "market research",
@@ -972,6 +1151,36 @@
       "occupations": [
         "Market Research Analysts and Marketing Specialists",
         "Wholesale and Retail Buyers, Except Farm Products"
+      ],
+      "grounded": true,
+      "validation": null
+    },
+    {
+      "slug": "messaging-and-email",
+      "label": "Messaging and email",
+      "term": "email",
+      "blurb": "Inbox, chat and calendar — Slack, Gmail, Outlook, iMessage. Repeatedly landed in `process-automation`, which describes the mechanism rather than the job.",
+      "synonyms": [
+        "calendar",
+        "chat",
+        "email",
+        "gmail",
+        "inbox",
+        "messaging",
+        "messaging and email",
+        "outlook",
+        "slack"
+      ],
+      "roles": [
+        "ops"
+      ],
+      "onet_steps": [
+        "Communicate with clients about products, procedures, and policies.",
+        "Communicate with other workers to coordinate activities."
+      ],
+      "occupations": [
+        "Cashiers",
+        "Historians"
       ],
       "grounded": true,
       "validation": null
@@ -1222,14 +1431,14 @@
       "slug": "query-optimization",
       "label": "Query optimisation",
       "term": "query optimization",
-      "blurb": "'Tuning'; the artifact is an EXPLAIN plan.",
+      "blurb": "'Tuning'; the artifact is an EXPLAIN plan. NOT plain database access — see `database-access`.",
       "synonyms": [
-        "database",
-        "performance",
-        "query",
+        "database performance",
+        "explain plan",
+        "index tuning",
         "query optimisation",
         "query optimization",
-        "sql"
+        "slow query"
       ],
       "roles": [
         "engineer",
@@ -1242,6 +1451,39 @@
       "occupations": [
         "Database Administrators",
         "Database Architects"
+      ],
+      "grounded": true,
+      "validation": null
+    },
+    {
+      "slug": "recruiting-and-hiring",
+      "label": "Recruiting and hiring",
+      "term": "recruiting",
+      "blurb": "'Sourcing', 'screening', 'the loop' — ATS work. The taxonomy had an `hr` role whose only task was building curriculum, so every ATS capability had nowhere to go.",
+      "synonyms": [
+        "applicants",
+        "ats",
+        "candidates",
+        "hiring",
+        "interview",
+        "recruiting",
+        "recruiting and hiring",
+        "screening"
+      ],
+      "roles": [
+        "hr"
+      ],
+      "onet_steps": [
+        "Analyze data to inform personnel decisions.",
+        "Evaluate effectiveness of personnel policies or practices."
+      ],
+      "occupations": [
+        "Accountants and Auditors",
+        "Compensation and Benefits Managers",
+        "Compensation, Benefits, and Job Analysis Specialists",
+        "Human Resources Managers",
+        "Human Resources Specialists",
+        "Training and Development Specialists"
       ],
       "grounded": true,
       "validation": null

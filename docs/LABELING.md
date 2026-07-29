@@ -14,7 +14,7 @@ written down so the same input gets the same answer on a different day, by a dif
 For each capability, ask only: **what is the person doing when they reach for this?**
 
 Not what it is built on, not what it touches, not which vendor made it. `mongodb` is
-`query-a-database` — the job is querying, MongoDB is the technology.
+`database-access` — the job is querying, MongoDB is the technology.
 
 ## Rules
 
@@ -35,7 +35,7 @@ serve no single job. Legitimate empties:
 **Never** use empty because the taxonomy lacks a fit. That is a taxonomy bug: add the task instead. This
 was found in audit — `kicad-happy` (PCB design), `cad` (CAD/robotics), `nvidia-skills` (vehicle routing)
 and `liftlog-plan-builder` (training plans) were all recorded as "serves no job" when the truth was that
-`design-hardware`, `model-in-cad`, `optimize-operations` and `plan-health-and-training` did not exist yet.
+`hardware-design`, `cad-modeling`, `logistics-and-fulfilment` and `career-development` did not exist yet.
 
 **R4 — The bundle rule.** Collections of many skills are the single biggest source of inconsistency, so
 the test is explicit:
@@ -54,17 +54,25 @@ six jobs does not.
 
 **R5 — Distribution is not creation.** Publishing, storing or transporting an artifact is a different job
 from making it. Found in audit: `save-to-spotify` ("save spoken audio to Spotify, manage episodes and
-shows") was tagged `generate-music-or-audio`. It generates nothing.
+shows") was tagged `audio-production`. It generates nothing.
 
 **R6 — Infrastructure for agents is its own job.** Statuslines, config linters, safety guards, token
 optimisers and permission tooling are real work for the people who live in a coding agent — that is
-`configure-an-agent`, not empty and not `automate-a-workflow`.
+`agent-configuration`, not empty and not `process-automation`.
 
 **R7 — When two tasks both fit, pick the more specific one.** `build-an-ecommerce-store` beats
 `build-a-web-frontend` for a Shopify tool. Add the general one too only if the capability genuinely
 serves both.
 
 ---
+
+## Keeping this file honest
+
+**This document is versioned with the taxonomy and drifted once already.** It was written against the
+hand-built v1 slugs and not updated when the axis was rederived from O*NET, so it cited
+`query-a-database`, `optimize-performance` and `optimize-operations` — none of which existed any more.
+Six independent graders read it as gospel and each had to invent a workaround. If you change
+`data/onet/mapping.json`, grep this file for the slugs you renamed before you ship.
 
 ## Validation, and its current limit
 
@@ -73,6 +81,9 @@ legitimately does several jobs, so "exactly right" is the wrong bar.
 
 **The honest caveat: the truth set and the production labels currently share one author, so `--eval`
 measures self-consistency, not correctness.** A single grader agreeing with themselves proves the rubric
-is memorable, not that it is right. Breaking that circularity needs a second, independent grader over the
-same rows, reported as inter-rater agreement. Until that exists, treat the eval number as a floor on
-rubric clarity and nothing more — and do not quote it as tagging accuracy.
+is memorable, not that it is right. Breaking that circularity needed a second, independent grader over the same rows. Six of them have now
+run against this rubric, and the agreement is itself the finding: they converged on the SAME seven gaps
+(`database-access`, `recruiting-and-hiring`, `audio-production`, `document-production`,
+`messaging-and-email`, `logistics-and-fulfilment`, `career-development`), all of which have since been
+added. Independent convergence on a defect is stronger evidence than any single grader's confidence —
+that is what this loop is for, and it is why R3 forbids using an empty label to paper over a missing task.

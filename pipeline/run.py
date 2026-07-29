@@ -42,9 +42,13 @@ STAGES = [
     # NOT bump_assets here: a daily run must not increment the asset version. The data changes daily,
     # the CSS/JS does not, and bumping would rewrite all ~3,000 generated pages every night for nothing.
     # Bumping is a developer action for when assets actually change (pipeline/bump_assets.py).
+    # ORDER MATTERS: hubs BEFORE pages. gen_hubs writes /category/ and /task/; prerender writes the
+    # sitemap by walking those directories AND links each capability to the task hubs that exist. Run
+    # the other way round and every task page added this run is missing from the sitemap (33 were) and
+    # unlinked from the dossiers that should point at it.
+    ("hubs",            ["pipeline/gen_hubs.py"], "site", "category + task hubs, llms.txt"),
     ("pages",           ["pipeline/prerender.py"], "site", "capability pages + sitemap"),
     ("content",         ["pipeline/gen_content.py"], "site", "learn articles"),
-    ("hubs",            ["pipeline/gen_hubs.py"], "site", "category hubs + llms.txt"),
 ]
 SITE_ONLY = {"badges", "pages", "content", "hubs"}
 

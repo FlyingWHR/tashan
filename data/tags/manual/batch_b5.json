@@ -1,0 +1,433 @@
+{
+  "_note": "graded by subagent, batch b5",
+  "skill:anthropics/configure": [
+    "agent-configuration"
+  ],
+  "skill:anthropics/doc-coauthoring": [
+    "technical-documentation",
+    "prd-and-specs"
+  ],
+  "skill:anthropics/docx": [
+    "technical-documentation"
+  ],
+  "skill:anthropics/example-command": [],
+  "skill:anthropics/example-skill": [],
+  "skill:anthropics/hook-development": [
+    "agent-configuration"
+  ],
+  "skill:anthropics/m5-onboard": [
+    "hardware-design"
+  ],
+  "skill:anthropics/math-olympiad": [
+    "scientific-research"
+  ],
+  "skill:anthropics/mcp-builder": [
+    "agent-development",
+    "application-development"
+  ],
+  "skill:anthropics/mcp-integration": [
+    "agent-configuration"
+  ],
+  "skill:anthropics/pdf": [
+    "technical-documentation"
+  ],
+  "skill:anthropics/playground": [
+    "prototyping",
+    "web-development"
+  ],
+  "skill:anthropics/plugin-settings": [
+    "agent-configuration"
+  ],
+  "skill:anthropics/plugin-structure": [
+    "agent-configuration"
+  ],
+  "skill:anthropics/pptx": [
+    "dashboards-and-reporting"
+  ],
+  "skill:anthropics/project-artifact": [
+    "project-management"
+  ],
+  "skill:anthropics/receipts": [
+    "dashboards-and-reporting"
+  ],
+  "skill:anthropics/session-report": [
+    "dashboards-and-reporting",
+    "agent-configuration"
+  ],
+  "skill:anthropics/skill-development": [
+    "agent-configuration"
+  ],
+  "skill:anthropics/slack-gif-creator": [
+    "animation"
+  ],
+  "skill:anthropics/template-skill": [],
+  "skill:anthropics/theme-factory": [
+    "visual-design"
+  ],
+  "skill:anthropics/web-artifacts-builder": [
+    "web-development"
+  ],
+  "skill:anthropics/webapp-testing": [
+    "test-automation",
+    "browser-automation"
+  ],
+  "skill:anthropics/writing-hookify-rules": [
+    "agent-configuration"
+  ],
+  "skill:anthropics/xlsx": [
+    "exploratory-data-analysis",
+    "dashboards-and-reporting"
+  ],
+  "skill:obra/brainstorming": [
+    "prd-and-specs"
+  ],
+  "skill:obra/dispatching-parallel-agents": [
+    "agent-development"
+  ],
+  "skill:obra/executing-plans": [
+    "project-management",
+    "application-development"
+  ],
+  "skill:obra/finishing-a-development-branch": [
+    "application-development"
+  ],
+  "skill:obra/receiving-code-review": [
+    "code-review"
+  ],
+  "skill:obra/requesting-code-review": [
+    "code-review"
+  ],
+  "skill:obra/subagent-driven-development": [
+    "agent-development",
+    "application-development"
+  ],
+  "skill:obra/systematic-debugging": [
+    "debugging"
+  ],
+  "skill:obra/test-driven-development": [
+    "test-automation"
+  ],
+  "skill:obra/using-git-worktrees": [
+    "application-development"
+  ],
+  "skill:obra/using-superpowers": [
+    "agent-configuration"
+  ],
+  "skill:obra/verification-before-completion": [
+    "test-automation"
+  ],
+  "skill:obra/writing-plans": [
+    "prd-and-specs",
+    "project-management"
+  ],
+  "skill:obra/writing-skills": [
+    "agent-configuration"
+  ],
+  "plugin:adelaidasofia/graph-query-mcp/graph-query-mcp": [
+    "knowledge-management"
+  ],
+  "plugin:adobe/spectrum-design-data/design-data": [
+    "visual-design"
+  ],
+  "plugin:adobe/spectrum-design-data/design-data-agent": [
+    "visual-design"
+  ],
+  "plugin:adobe/spectrum-design-data/s2-docs": [
+    "visual-design",
+    "web-development"
+  ],
+  "plugin:adrianv101/obsidian-pkm-plugin/vault-pkm": [
+    "knowledge-management"
+  ],
+  "plugin:agent-sh/audit-project/audit-project": [
+    "code-review"
+  ],
+  "plugin:agent-sh/deslop/deslop": [
+    "code-review"
+  ],
+  "plugin:agent-sh/learn/learn": [
+    "web-research",
+    "knowledge-management"
+  ],
+  "plugin:agent-sh/perf/perf": [
+    "query-optimization",
+    "debugging"
+  ],
+  "plugin:aiven/aiven-ai-plugins/aiven": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:ajbarea/techne/techne": [
+    "infrastructure-and-deployment",
+    "technical-documentation"
+  ],
+  "plugin:altimateai/altimate-claude-plugin/altimate-code": [
+    "data-pipelines",
+    "query-optimization"
+  ],
+  "plugin:amar1404/ai_analyst/ai-analyst-plugin": [
+    "exploratory-data-analysis",
+    "dashboards-and-reporting"
+  ],
+  "plugin:amekala/adspirer-mcp-plugin/adspirer-ads-agent": [
+    "content-marketing",
+    "attribution"
+  ],
+  "plugin:anthropics/claude-plugins-official/frontend-design": [
+    "visual-design",
+    "web-development"
+  ],
+  "plugin:anthropics/claude-plugins-official/security-guidance": [
+    "security-review"
+  ],
+  "plugin:astravueorg/astravue-mcp-server/astravue": [
+    "project-management"
+  ],
+  "plugin:astronomer/agents/astronomer-data-agents": [
+    "data-pipelines"
+  ],
+  "plugin:astronomer/agents/data-engineering": [
+    "data-pipelines"
+  ],
+  "plugin:avansaber/tailtest/tailtest": [
+    "test-automation"
+  ],
+  "plugin:aws/agent-toolkit-for-aws/aws-agents": [
+    "agent-development",
+    "infrastructure-and-deployment"
+  ],
+  "plugin:aws/agent-toolkit-for-aws/aws-core": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:aws/agent-toolkit-for-aws/aws-data-analytics": [
+    "data-pipelines"
+  ],
+  "plugin:awslabs/startups/aws-startup-advisor": [
+    "infrastructure-and-deployment",
+    "software-architecture"
+  ],
+  "plugin:baseinfinity/claude-sdlc-wizard/sdlc-wizard": [
+    "test-automation",
+    "code-review",
+    "project-management"
+  ],
+  "plugin:baseinfinity/claude-sdlc-wizard/sdlc-wizard-cowork": [
+    "test-automation",
+    "code-review",
+    "project-management"
+  ],
+  "plugin:bidah/react-native-hifi/react-native-hifi": [
+    "application-development"
+  ],
+  "plugin:blake-simpson/belmont/belmont": [
+    "prd-and-specs",
+    "project-management"
+  ],
+  "plugin:brightdata/skills/brightdata-plugin": [
+    "web-scraping",
+    "web-research"
+  ],
+  "plugin:carta/plugins/carta-crm": [
+    "sales-pipeline"
+  ],
+  "plugin:circlefin/skills/circle-skills": [
+    "application-development"
+  ],
+  "plugin:clover-security/clover-claude-plugin/clover": [
+    "risk-assessment",
+    "security-review"
+  ],
+  "plugin:daytona/skills/daytona": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:deployhq/deployhq-cli/deployhq-cli": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:dipakkrishnan/deep-review-skill/deep-review": [
+    "scientific-research"
+  ],
+  "plugin:dropbox/dropbox-ai-plugins/dropbox": [
+    "knowledge-management"
+  ],
+  "plugin:egnyte/egnyte-for-ai/egnyte": [
+    "knowledge-management"
+  ],
+  "plugin:enalbenerraw/blanewarrene/comparative-landscape-brief": [
+    "market-analysis",
+    "web-research"
+  ],
+  "plugin:enalbenerraw/blanewarrene/product-in-acquisitions": [
+    "product-strategy",
+    "project-management"
+  ],
+  "plugin:eric-tramel/arx/arx": [
+    "literature-review"
+  ],
+  "plugin:etoyama/insight-blueprint/insight-blueprint": [
+    "exploratory-data-analysis"
+  ],
+  "plugin:grafana/ai-marketplace/grafana-assistant": [
+    "observability",
+    "dashboards-and-reporting"
+  ],
+  "plugin:grafana/ai-marketplace/grafana-mcp": [
+    "observability",
+    "dashboards-and-reporting",
+    "incident-response"
+  ],
+  "plugin:gustavo-meilus/superpipelines/superpipelines": [
+    "agent-development"
+  ],
+  "plugin:hec-ovi/research-skill/research": [
+    "knowledge-management"
+  ],
+  "plugin:heygen-com/hyperframes/hyperframes": [
+    "animation",
+    "video-editing"
+  ],
+  "plugin:heygen-com/hyperframes/hyperframes-by-heygen": [
+    "animation",
+    "video-editing"
+  ],
+  "plugin:ibrahimhajjaj/wu-cli/wu-whatsapp": [
+    "process-automation"
+  ],
+  "plugin:igorganapolsky/thumbgate/codex-bridge": [
+    "code-review",
+    "agent-configuration"
+  ],
+  "plugin:imadattar/kaizen/kaizen": [
+    "agent-configuration"
+  ],
+  "plugin:jonny-1812/corebee-mcp-skills/corebee": [
+    "customer-support"
+  ],
+  "plugin:kaademos/secure-sdlc-agents/secure-sdlc-agents": [
+    "security-review",
+    "regulatory-compliance"
+  ],
+  "plugin:kakarot-dev/deepmiro/deepmiro": [
+    "user-research",
+    "market-analysis"
+  ],
+  "plugin:kamioj/spec-workflow/spec": [
+    "prd-and-specs",
+    "application-development"
+  ],
+  "plugin:korchasa/foxcode/foxcode": [
+    "browser-automation"
+  ],
+  "plugin:kotaroyamame/formal-agent-contracts/formal-agent-contracts": [
+    "agent-development",
+    "software-architecture"
+  ],
+  "plugin:luciqai/agent-skills/luciq": [
+    "observability",
+    "debugging"
+  ],
+  "plugin:marazii/research-co-pilot/research-co-pilot": [
+    "scientific-research",
+    "literature-review"
+  ],
+  "plugin:markswendsen-code/mcp-instacart/striderlabs-instacart": [],
+  "plugin:meetstream-ai/claude-plugin/meetstream-ai-meeting-bot-api": [
+    "application-development"
+  ],
+  "plugin:mozilla/firefox-devtools-mcp/firefox-devtools-mcp": [
+    "browser-automation",
+    "debugging",
+    "query-optimization"
+  ],
+  "plugin:mozilla/firefox-devtools-mcp/firefox-devtools-troubleshoot": [
+    "agent-configuration"
+  ],
+  "plugin:mrpuls/local-ci/local-ci": [
+    "infrastructure-and-deployment",
+    "test-automation"
+  ],
+  "plugin:nethermindeth/defi-skills/defi-skills": [
+    "application-development"
+  ],
+  "plugin:netlify/context-and-tools/context-and-tools": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:netlify/context-and-tools/netlify-skills": [
+    "infrastructure-and-deployment"
+  ],
+  "plugin:nicholasglazer/gnosis-mcp/gnosis-mcp": [
+    "knowledge-management",
+    "retrieval-systems"
+  ],
+  "plugin:oracle-samples/oracle-aidp-samples/oracle-ai-data-platform-workbench-spark-connectors": [
+    "data-pipelines"
+  ],
+  "plugin:pitimon/8-habit-ai-dev/8-habit-ai-dev": [
+    "prd-and-specs",
+    "project-management"
+  ],
+  "plugin:post-bridge-hq/agent-mode/post-bridge": [
+    "content-marketing"
+  ],
+  "plugin:ppak10/rocketsmith/rocketsmith": [
+    "cad-modeling"
+  ],
+  "plugin:project-codeguard/rules/codeguard-security": [
+    "security-review"
+  ],
+  "plugin:proyecto26/autoresearch-ai-plugin/autoresearch-ai-plugin": [
+    "model-evaluation"
+  ],
+  "plugin:pydantic/skills/pydantic-ai": [
+    "agent-development"
+  ],
+  "plugin:remotivated/job-hunt-skills/job-hunt-skills": [],
+  "plugin:resend/resend-skills/resend": [
+    "application-development",
+    "content-marketing"
+  ],
+  "plugin:rsktash/superpowers/superpowers-beads": [
+    "project-management",
+    "test-automation",
+    "code-review"
+  ],
+  "plugin:sazfirst/claude-geeknews-spinner/claude-geeknews-spinner": [
+    "agent-configuration"
+  ],
+  "plugin:siftystudio/viv/viv": [
+    "application-development"
+  ],
+  "plugin:smoldrago/kroki-diagrams/kroki-diagrams": [
+    "technical-documentation",
+    "software-architecture"
+  ],
+  "plugin:stackhawk/agent-skills/stackhawk-api": [
+    "security-review"
+  ],
+  "plugin:stackhawk/agent-skills/stackhawk-hawkscan": [
+    "security-review"
+  ],
+  "plugin:stifler7/claude-plugins/memex-mcp": [
+    "knowledge-management"
+  ],
+  "plugin:streamsapps/nuberea-mcp/nuberea": [],
+  "plugin:swarmwage/swarmwage/swarmwage": [
+    "agent-development"
+  ],
+  "plugin:tehubersheezy/servicenow-cli/sn": [
+    "process-automation",
+    "application-development"
+  ],
+  "plugin:tjc-lp/sanzaru/sanzaru": [
+    "animation"
+  ],
+  "plugin:vantainc/vanta-mcp-plugin/vanta-mcp-plugin": [
+    "regulatory-compliance",
+    "security-review"
+  ],
+  "plugin:vdk888/bubble-shield-public/bubble-shield": [
+    "agent-configuration",
+    "regulatory-compliance"
+  ],
+  "plugin:vercel/vercel-plugin/vercel": [
+    "infrastructure-and-deployment"
+  ]
+}
