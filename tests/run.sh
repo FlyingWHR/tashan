@@ -52,6 +52,10 @@ node functions/api/license.test.mjs 2>/dev/null || fail=1
 echo; echo "── cli ────────────────────────────────────────"
 node cli/tashan.test.mjs || fail=1
 
+# 6b. the MCP server — how agents reach us; protocol + ranking must not regress
+echo; echo "── mcp server (agent surface) ─────────────────"
+node cli/mcp.test.mjs || fail=1
+
 echo
 [ "$fail" = 0 ] && echo "ALL SUITES GREEN ✓" || echo "SOME SUITES FAILED ✗"
 exit $fail
