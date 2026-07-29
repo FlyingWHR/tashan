@@ -54,7 +54,7 @@ def badge(trust, verdict):
 
 def main():
     con = sqlite3.connect(DB)
-    rows = con.execute("SELECT id, trust, expertise_verdict FROM capabilities WHERE trust IS NOT NULL").fetchall()
+    rows = con.execute("SELECT id, trust, expertise_verdict FROM capabilities WHERE tashan_score IS NOT NULL").fetchall()
     n = 0
     for cid, trust, verdict in rows:
         open(os.path.join(OUT, slug(cid) + ".svg"), "w").write(badge(trust, verdict))
@@ -62,7 +62,7 @@ def main():
     print(f"{n} badges -> {OUT}")
     # a couple of demo prints so the slug scheme is visible
     for cid, trust, verdict in rows[:3]:
-        print(f"  {cid}  ->  /badge/{slug(cid)}.svg   (Trust {int(trust)}{' · '+verdict if verdict else ''})")
+        print(f"  {cid}  ->  /badge/{slug(cid)}.svg   (tashan score {int(trust)}{' · '+verdict if verdict else ''})")
 
 if __name__ == "__main__":
     main()

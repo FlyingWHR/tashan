@@ -62,8 +62,8 @@ def official_org(c):
 def desc_for(c):
     n = pretty(c["name"])
     d = c.get("description") or (n + " — an AI capability (" + (c.get("kind") or "server") + ") tracked and scored by tashan on public evidence.")
-    if c.get("trust") is not None:
-        d = d.rstrip(".") + ". Trust " + str(c["trust"]) + "/100"
+    if c.get("tashan_score") is not None:
+        d = d.rstrip(".") + ". tashan score " + str(c["tashan_score"]) + "/100"
         if c.get("expertise_verdict"): d += " · expertise: " + c["expertise_verdict"]
         d += "."
     return d[:300]
@@ -73,7 +73,7 @@ def faq(c):
     # Is it safe / trustworthy
     safe = "tashan scores " + n + " on public evidence — "
     parts = []
-    if c.get("trust") is not None: parts.append("Trust " + str(c["trust"]) + "/100")
+    if c.get("tashan_score") is not None: parts.append("tashan score " + str(c["tashan_score"]) + "/100")
     if c.get("vitality"): parts.append("it is currently " + c["vitality"])
     if c.get("single_maintainer"): parts.append("note: a single primary maintainer (bus-factor risk)")
     if c.get("gh_archived"): parts.append("warning: the repository is archived")
@@ -102,10 +102,10 @@ def jsonld(c):
            "operatingSystem":"Cross-platform","url": url}
     if c.get("source_repo"): app["codeRepository"] = "https://github.com/" + c["source_repo"]
     if c.get("gh_license"): app["license"] = c["gh_license"]
-    if c.get("trust") is not None:
-        app["aggregateRating"] = {"@type":"AggregateRating","ratingValue": c["trust"],
+    if c.get("tashan_score") is not None:
+        app["aggregateRating"] = {"@type":"AggregateRating","ratingValue": c["tashan_score"],
             "bestRating": 100, "worstRating": 0, "ratingCount": 1,
-            "reviewAspect":"tashan Trust score (maintenance + freshness, gated by adoption)"}
+            "reviewAspect":"tashan tashan score (upkeep + freshness, gated by adoption)"}
     if c.get("npm_pkg"):
         app["offers"] = {"@type":"Offer","price":"0","priceCurrency":"USD"}
     crumbs = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -128,7 +128,7 @@ FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         '<p class="footer__meta" id="footMethod">public-signal v2</p></div>'
         '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a>'
         '<a href="/start.html">Use it</a><a href="/learn/">Learn</a></nav>'
-        '<nav class="footer__col"><p class="footer__h">Trust</p><a href="/methodology.html">Methodology</a>'
+        '<nav class="footer__col"><p class="footer__h">tashan score</p><a href="/methodology.html">Methodology</a>'
         '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>'
         '<nav class="footer__col"><p class="footer__h">Sources</p>'
         '<a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>'
@@ -141,7 +141,7 @@ def summary(c):
     """Server-rendered content crawlers see with JS off (capability.js replaces it for humans)."""
     n = pretty(c["name"]); rows = []
     def kv(k, v): rows.append("<li><b>" + esc(k) + ":</b> " + esc(v) + "</li>") if v not in (None, "", "—") else None
-    kv("Trust", c.get("trust"))
+    kv("tashan score", c.get("tashan_score"))
     kv("Expertise", (str(c["expertise"]) + " (" + c["expertise_verdict"] + ")") if c.get("expertise") is not None and c.get("expertise_verdict") else c.get("expertise"))
     kv("Adoption", (compact(c["npm_downloads"]) + "/wk") if c.get("npm_downloads") is not None else (str(c.get("config_reach")) + " repos" if c.get("config_reach") else None))
     kv("Vitality", c.get("vitality"))
@@ -200,7 +200,7 @@ def fmt(n): return "{:,}".format(n) if isinstance(n, (int, float)) else n
 
 def page(c, gen):
     n = pretty(c["name"]); url = BASE + "/capability/" + c["slug"] + ".html"
-    title = n + " — Trust " + (str(c["trust"]) if c.get("trust") is not None else "—") + " · tashan"
+    title = n + " — tashan score " + (str(c["tashan_score"]) if c.get("tashan_score") is not None else "—") + " · tashan"
     d = esc(desc_for(c))
     return ("<!doctype html>\n<html lang=\"en\">\n<head>\n"
         '<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'

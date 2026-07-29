@@ -307,6 +307,8 @@ table.board__t { width:100%; border-collapse: collapse; font-size:.92rem; min-wi
 .bar > i { display:block; height:100%; background: linear-gradient(90deg, var(--jade-line), var(--jade)); border-radius:3px; }
 .sig--none .sig__val { color: var(--text-faint); }
 .unit { color: var(--text-faint); font-size:.72rem; }
+/* raw public signal beside the score — the part a competitor cannot show, so it reads as data not chrome */
+.ev { font-family: var(--font-mono); font-size:.8rem; color: var(--text-dim); white-space:nowrap; }
 /* Adoption cell: score on top, the raw evidence it was derived from underneath. The evidence is the
    provenance for a number that is otherwise unfalsifiable, so it stays on the row, not in a tooltip. */
 td.num .unit { display:block; line-height:1.25; white-space:nowrap; }

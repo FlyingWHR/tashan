@@ -14,15 +14,15 @@
   <meta property="og:image" content="https://tashan.sh/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="tashan — the index of AI capabilities, ranked by measured trust">
+  <meta property="og:image:alt" content="tashan — the index of AI capabilities, ranked by the tashan score">
   <meta name="twitter:image" content="https://tashan.sh/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=76">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Audit and choose AI capabilities with tashan","description":"Check the MCP servers and agent skills already installed on your machine, then find and install measured replacements.","step":[{"@type":"HowToStep","position":1,"name":"Audit what you already have","text":"Run npx tashan doctor. It reads your local agent config and reports what is deprecated, archived, abandoned, or shares a name with an official package. Nothing is uploaded."},{"@type":"HowToStep","position":2,"name":"Find something better","text":"Run npx tashan search <query>, or browse the Index by category. Results are ranked by a Trust score derived from public evidence."},{"@type":"HowToStep","position":3,"name":"Install it","text":"Run npx tashan add <name> to get the exact install command for your client — Claude Code, Cursor, Claude Desktop, Codex or plain npx."}]}</script>
+  <link rel="stylesheet" href="/css/site.css?v=80">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Audit and choose AI capabilities with tashan","description":"Check the MCP servers and agent skills already installed on your machine, then find and install measured replacements.","step":[{"@type":"HowToStep","position":1,"name":"Audit what you already have","text":"Run npx tashan doctor. It reads your local agent config and reports what is deprecated, archived, abandoned, or shares a name with an official package. Nothing is uploaded."},{"@type":"HowToStep","position":2,"name":"Find something better","text":"Run npx tashan search <query>, or browse the Index by category. Results are ranked by a tashan score derived from public evidence."},{"@type":"HowToStep","position":3,"name":"Install it","text":"Run npx tashan add <name> to get the exact install command for your client — Claude Code, Cursor, Claude Desktop, Codex or plain npx."}]}</script>
 </head>
 <body>
   <nav class="nav"><div class="wrap nav__in">
@@ -116,7 +116,7 @@ npx tashan info context7</code></pre>
     </div>
     <nav class="footer__col"><p class="footer__h">Explore</p>
       <a href="/">The Index</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a></nav>
-    <nav class="footer__col"><p class="footer__h">Trust</p>
+    <nav class="footer__col"><p class="footer__h">tashan score</p>
       <a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>
     <nav class="footer__col"><p class="footer__h">Sources</p>
       <a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>
@@ -129,7 +129,7 @@ npx tashan info context7</code></pre>
   </div>
 </footer>
 
-  <script src="/js/terminal.js?v=76" defer></script>
-  <script src="/js/site.js?v=76" defer></script>
+  <script src="/js/terminal.js?v=80" defer></script>
+  <script src="/js/site.js?v=80" defer></script>
 </body>
 </html>

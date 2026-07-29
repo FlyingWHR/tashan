@@ -56,7 +56,7 @@ FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         'measured on public evidence.</p></div>'
         '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a>'
         '<a href="/start.html">Use it</a><a href="/learn/">Learn</a></nav>'
-        '<nav class="footer__col"><p class="footer__h">Trust</p><a href="/methodology.html">Methodology</a>'
+        '<nav class="footer__col"><p class="footer__h">tashan score</p><a href="/methodology.html">Methodology</a>'
         '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>'
         '<nav class="footer__col"><p class="footer__h">Sources</p>'
         '<a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>'
@@ -94,16 +94,16 @@ def head(title, desc, url, lds):
 def board(rows):
     """The same ranked-table shape as the index, server-rendered (no JS needed to read it)."""
     out = ['<div class="board"><div class="board__scroll"><table class="board__t"><thead><tr>'
-           '<th class="rank">#</th><th>Capability</th><th class="num">Trust</th>'
+           '<th class="rank">#</th><th>Capability</th><th class="num">tashan score</th>'
            '<th>Vitality</th><th class="num">Adoption</th><th>What it does</th></tr></thead><tbody>']
     for i, c in enumerate(rows):
         href = "/capability/" + c["slug"] + ".html"
         d = clip(c.get("description"), 110)
         kindlbl = {"skill": "skill"}.get(c.get("kind"), "server")
-        out.append('<tr><td class="rank">' + (str(i + 1) if c.get("trust") is not None else "·") + '</td>'
+        out.append('<tr><td class="rank">' + (str(i + 1) if c.get("tashan_score") is not None else "·") + '</td>'
                    '<td><a class="link" href="' + href + '">' + esc(pretty(c["name"])) + "</a>"
                    ' <span class="tag tag--' + kindlbl + '">' + kindlbl + "</span></td>"
-                   '<td class="num"><b>' + (str(int(round(c["trust"]))) if c.get("trust") is not None
+                   '<td class="num"><b>' + (str(int(round(c["tashan_score"]))) if c.get("tashan_score") is not None
                                             else '<span class="unrated">not rated</span>') + "</b></td>"
                    "<td>" + esc(c.get("vitality") or "—") + "</td>"
                    '<td class="num">' + (str(int(round(c["adoption"]))) if c.get("adoption") is not None else "—") + "</td>"
@@ -115,8 +115,8 @@ def board(rows):
 def cat_page(cat, rows, all_cats, gen):
     label, cid = cat["label"], cat["id"]
     url = BASE + "/category/" + cid + ".html"
-    title = "Best " + label + " MCP servers, ranked by measured trust · tashan"
-    desc = ("The " + str(len(rows)) + " " + label.lower() + " MCP servers tashan measures, ranked by Trust — "
+    title = "Best " + label + " MCP servers, ranked by the tashan score · tashan"
+    desc = ("The " + str(len(rows)) + " " + label.lower() + " MCP servers tashan measures, ranked by tashan score — "
             "maintenance, freshness and real adoption from public evidence. " + cat["blurb"])
     top = ", ".join(pretty(c["name"]) for c in rows[:5])
     lds = [
@@ -127,17 +127,17 @@ def cat_page(cat, rows, all_cats, gen):
               "item": {"@type": "SoftwareApplication", "name": pretty(c["name"]),
                        "url": BASE + "/capability/" + c["slug"] + ".html",
                        "applicationCategory": "DeveloperApplication",
-                       "aggregateRating": {"@type": "AggregateRating", "ratingValue": c["trust"],
+                       "aggregateRating": {"@type": "AggregateRating", "ratingValue": c["tashan_score"],
                                            "bestRating": 100, "worstRating": 0, "ratingCount": 1}}}
-             for i, c in enumerate(rows[:25]) if c.get("trust") is not None]},
+             for i, c in enumerate(rows[:25]) if c.get("tashan_score") is not None]},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "The Index", "item": BASE + "/"},
             {"@type": "ListItem", "position": 2, "name": label, "item": url}]},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": "What is the best " + label.lower() + " MCP server?",
              "acceptedAnswer": {"@type": "Answer", "text":
-                ("By tashan's measured Trust score, the highest-ranked are " + top + ". Trust combines "
-                 "maintenance and freshness, gated by real adoption — every input is public and "
+                ("By tashan's measured score, the highest-ranked are " + top + ". the score combines "
+                 "upkeep and freshness, gated by real adoption — every input is public and "
                  "re-derivable, and no ranking position can be purchased.")}},
             {"@type": "Question", "name": "How many " + label.lower() + " MCP servers are there?",
              "acceptedAnswer": {"@type": "Answer", "text":
@@ -156,7 +156,7 @@ def cat_page(cat, rows, all_cats, gen):
         '<p class="kicker"><a class="link" href="/">The Index</a> · ' + esc(label) + "</p>\n"
         "<h1>" + esc(label) + " MCP servers, ranked</h1>\n"
         '<p class="lede">' + esc(cat["blurb"]) + " tashan measures <b>" + str(len(rows)) +
-        "</b> capabilities here and ranks them by Trust — a transparent composite of maintenance, "
+        "</b> capabilities here and ranks them by tashan score — a transparent composite of maintenance, "
         "freshness and real adoption. <a class=\"link\" href=\"/methodology.html\">How we measure &rsaquo;</a></p>\n"
         + board(rows) +
         ('<p class="note">' + str(len(measured)) + " of these have been expertise-graded against their "
@@ -185,9 +185,9 @@ def task_page(task, rows, all_tasks, gen):
     """
     slug, label = task["slug"], task["label"]
     url = BASE + "/task/" + slug + ".html"
-    title = "Best MCP servers and skills for " + label.lower() + ", ranked by measured trust · tashan"
+    title = "Best MCP servers and skills for " + label.lower() + ", ranked by the tashan score · tashan"
     desc = ("The " + str(len(rows)) + " capabilities tashan measures for " + label.lower() +
-            ", ranked by Trust — maintenance, freshness and real adoption, from public evidence only.")
+            ", ranked by tashan score — maintenance, freshness and real adoption, from public evidence only.")
     top = ", ".join(pretty(c["name"]) for c in rows[:5])
     occs = task.get("occupations") or []
     steps = task.get("onet_steps") or []
@@ -200,16 +200,16 @@ def task_page(task, rows, all_tasks, gen):
               "item": {"@type": "SoftwareApplication", "name": pretty(c["name"]),
                        "url": BASE + "/capability/" + c["slug"] + ".html",
                        "applicationCategory": "DeveloperApplication",
-                       "aggregateRating": {"@type": "AggregateRating", "ratingValue": c["trust"],
+                       "aggregateRating": {"@type": "AggregateRating", "ratingValue": c["tashan_score"],
                                            "bestRating": 100, "worstRating": 0, "ratingCount": 1}}}
-             for i, c in enumerate(rows[:25]) if c.get("trust") is not None]},
+             for i, c in enumerate(rows[:25]) if c.get("tashan_score") is not None]},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "The Index", "item": BASE + "/"},
             {"@type": "ListItem", "position": 2, "name": label, "item": url}]},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": "What is the best MCP server or skill for " + label.lower() + "?",
              "acceptedAnswer": {"@type": "Answer", "text":
-                ("By tashan's measured Trust score: " + top + ". Trust combines maintenance and freshness, "
+                ("By tashan's measured score: " + top + ". the score combines upkeep and freshness, "
                  "gated by real adoption — every input is public and re-derivable, and no ranking "
                  "position can be purchased.")}},
             {"@type": "Question", "name": "Who does " + label.lower() + " as part of their job?",
@@ -244,7 +244,7 @@ def task_page(task, rows, all_tasks, gen):
         '<p class="kicker"><a class="link" href="/">The Index</a> · ' + esc(label) + "</p>\n"
         "<h1>" + esc(label) + "</h1>\n"
         '<p class="lede">' + esc(task.get("blurb", "")) + " tashan measures <b>" + str(len(rows)) +
-        "</b> capabilities for this work and ranks them by Trust — a transparent composite of "
+        "</b> capabilities for this work and ranks them by tashan score — a transparent composite of "
         "maintenance, freshness and real adoption. "
         '<a class="link" href="/methodology.html">How we measure &rsaquo;</a></p>\n'
         + board(rows) + who
@@ -275,7 +275,7 @@ def llms_txt(caps, cats, by_cat, gen):
          "Generated: " + (gen or "")[:10] + ". Capabilities tracked: " + str(len(caps)) +
          " ranked. Every number below is re-derivable from public sources.", "",
          "## How the score works", "",
-         "- **Trust** — composite of maintenance and freshness, gated by real adoption. 0–100.",
+         "- **tashan score** — composite of upkeep and freshness, gated by real adoption. 0–100.",
          "- **Adoption** — npm download volume (log) blended with config-adoption reach across public repos.",
          "- **Freshness** — recency of the most recent public activity: npm publish, git push, or release.",
          "- **Maintenance** — maintainer count, release cadence and freshness, penalised for deprecated/archived.",
@@ -283,8 +283,8 @@ def llms_txt(caps, cats, by_cat, gen):
          "(deep / solid / thin / wrapper / slop). Only a subset is graded; ungraded means ungraded, not zero.",
          "", "## Top capabilities by measured trust", ""]
     for c in caps[:40]:
-        L.append("- [" + pretty(c["name"]) + "](" + BASE + "/capability/" + c["slug"] + ".html) — Trust "
-                 + str(c.get("trust")) + (", " + c["vitality"] if c.get("vitality") else "")
+        L.append("- [" + pretty(c["name"]) + "](" + BASE + "/capability/" + c["slug"] + ".html) — tashan score "
+                 + str(c.get("tashan_score")) + (", " + c["vitality"] if c.get("vitality") else "")
                  + ". " + (c.get("description") or "").replace("\n", " ")[:150])
     L += ["", "## Categories", ""]
     for cat in cats:
@@ -317,7 +317,7 @@ def main():
         if c.get("category"):
             by_cat.setdefault(c["category"], []).append(c)
     for v in by_cat.values():
-        v.sort(key=lambda x: -(x.get("trust") or 0))
+        v.sort(key=lambda x: -(x.get("tashan_score") or 0))
 
     os.makedirs(OUT_CAT, exist_ok=True)
     written = 0
@@ -336,12 +336,12 @@ def main():
         for t in (c.get("tasks") or []):
             by_task.setdefault(t["t"], []).append(c)
     for v in by_task.values():
-        v.sort(key=lambda x: -(x.get("trust") or 0))
+        v.sort(key=lambda x: -(x.get("tashan_score") or 0))
     out_task = os.path.join(ROOT, "web", "task")
     os.makedirs(out_task, exist_ok=True)
     # publishable tasks are the sibling set too — a chip must never link to a page that does not exist
     pub = [t for t in tasks
-           if len([c for c in by_task.get(t["slug"], []) if c.get("trust") is not None]) >= TASK_MIN]
+           if len([c for c in by_task.get(t["slug"], []) if c.get("tashan_score") is not None]) >= TASK_MIN]
     for stale in glob.glob(os.path.join(out_task, "*.html")):
         if os.path.basename(stale)[:-5] not in {t["slug"] for t in pub}:
             os.remove(stale)                     # a task can fall below the gate; leave no orphan behind

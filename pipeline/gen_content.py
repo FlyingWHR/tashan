@@ -4,7 +4,7 @@
 Renders SEO/AEO articles to web/learn/<slug>.html with the answer-engine shape that gets cited:
 a "Quick Answer" block (40–60 words, the exact command/path first), question-format H2s, and
 Article + FAQPage + HowTo JSON-LD. Out-authorities directory sites by backing "best X" lists with
-tashan's live Trust ranking (data-backed = more citable than curated opinion).
+tashan's live tashan score ranking (data-backed = more citable than curated opinion).
 
 This ships the FRAMEWORK + a few exemplar articles (EN + 中文). The full query-cluster sweep
 (where-stored / how-to-install / best-X / is-X-safe × every client × EN/CN) is LLM-in-loop and runs
@@ -40,7 +40,7 @@ FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         '<p class="footer__meta" id="footMethod">public-signal v2</p></div>'
         '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a>'
         '<a href="/start.html">Use it</a><a href="/learn/">Learn</a></nav>'
-        '<nav class="footer__col"><p class="footer__h">Trust</p><a href="/methodology.html">Methodology</a>'
+        '<nav class="footer__col"><p class="footer__h">tashan score</p><a href="/methodology.html">Methodology</a>'
         '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>'
         '<nav class="footer__col"><p class="footer__h">Sources</p>'
         '<a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>'
@@ -70,7 +70,7 @@ def head(a):
             "numberOfItems": len(a["itemlist"]), "itemListElement":[
             {"@type":"ListItem","position": i+1, "item":{"@type":"SoftwareApplication","name": it["name"], "url": it["url"],
              "applicationCategory":"DeveloperApplication",
-             "aggregateRating":{"@type":"AggregateRating","ratingValue": it["trust"], "bestRating": 100, "worstRating": 0, "ratingCount": 1}}}
+             "aggregateRating":{"@type":"AggregateRating","ratingValue": it["tashan_score"], "bestRating": 100, "worstRating": 0, "ratingCount": 1}}}
             for i, it in enumerate(a["itemlist"])]})
     ld = "\n".join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False) + "</script>" for x in lds)
     return ("<!doctype html>\n<html lang=\"" + a.get("lang","en") + "\">\n<head>\n"
@@ -108,9 +108,9 @@ def article_html(a):
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n')
 
 def top_table(caps, kind_filter=None, n=10):
-    rows = [c for c in caps if c.get("trust") is not None and (kind_filter is None or kind_filter(c))][:n]
+    rows = [c for c in caps if c.get("tashan_score") is not None and (kind_filter is None or kind_filter(c))][:n]
     body = ['<div class="board"><div class="board__scroll"><table class="board__t"><thead><tr>'
-            '<th class="rank">#</th><th>Capability</th><th class="num">Trust</th><th>Verdict</th><th class="num">Adoption</th></tr></thead><tbody>']
+            '<th class="rank">#</th><th>Capability</th><th class="num">tashan score</th><th>Verdict</th><th class="num">Adoption</th></tr></thead><tbody>']
     for i, c in enumerate(rows):
         href = "/capability/" + c["slug"] + ".html" if c.get("slug") else "#"
         vd = ('<span class="vd vd--' + c["expertise_verdict"] + '">' + c["expertise_verdict"] + '</span>') if c.get("expertise_verdict") else "—"
@@ -118,7 +118,7 @@ def top_table(caps, kind_filter=None, n=10):
         adopt = ((("%.1fM" % (dl/1e6)) if dl >= 1e6 else ("%.0fk" % (dl/1e3)) if dl >= 1e3 else str(dl)) + "/wk") if dl else "—"
         body.append('<tr data-href="' + href + '"><td class="rank">' + str(i+1) + '</td>'
                     '<td><a href="' + href + '">' + esc(pretty(c["name"])) + '</a></td>'
-                    '<td class="num">' + str(c.get("trust")) + '</td><td>' + vd + '</td>'
+                    '<td class="num">' + str(c.get("tashan_score")) + '</td><td>' + vd + '</td>'
                     '<td class="num">' + adopt + '</td></tr>')
     body.append("</tbody></table></div></div>")
     return "".join(body)
@@ -150,28 +150,28 @@ def build_articles(caps):
     A.append({
         "slug": "best-mcp-servers-for-claude-code", "lang": "en",
         "title": "Best MCP servers for Claude Code (2026)",
-        "desc": "The top MCP servers for Claude Code, ranked by tashan's measured Trust score — real adoption and maintenance, not stars or opinion. Auto-updated from public evidence.",
-        "quick": "The most trustworthy MCP servers for Claude Code right now, by measured Trust (maintenance + freshness, gated by real adoption): <b>context7</b>, <b>chrome-devtools</b>, and <b>filesystem</b> lead. The full ranked list below updates from public evidence — not stars, not sponsorships.",
+        "desc": "The top MCP servers for Claude Code, ranked by tashan's measured score — real adoption and maintenance, not stars or opinion. Auto-updated from public evidence.",
+        "quick": "The most trustworthy MCP servers for Claude Code right now, by measured tashan score (upkeep + freshness, gated by real adoption): <b>context7</b>, <b>chrome-devtools</b>, and <b>filesystem</b> lead. The full ranked list below updates from public evidence — not stars, not sponsorships.",
         "sections": [
             {"q": "Which MCP servers are most trusted for Claude Code?",
-             "body": "<p>Ranked by tashan's Trust score — every number is re-derivable from npm downloads, release cadence, and repository health. Open any row for the full dossier.</p>" + top_table(caps, lambda c: c.get("kind") in ("npm","pkg"), 12)},
-            {"q": "Why rank by Trust instead of GitHub stars?",
-             "body": "<p>Stars measure visibility, not fitness. A server can be starred and abandoned. tashan's Trust blends how actively a server is <b>maintained</b> and how <b>fresh</b> it is, gated by real <b>adoption</b> — and flags single-maintainer and archived risks. See the <a class='link' href='/methodology.html'>methodology</a>.</p>"},
+             "body": "<p>Ranked by tashan's tashan score — every number is re-derivable from npm downloads, release cadence, and repository health. Open any row for the full dossier.</p>" + top_table(caps, lambda c: c.get("kind") in ("npm","pkg"), 12)},
+            {"q": "Why rank by tashan score instead of GitHub stars?",
+             "body": "<p>Stars measure visibility, not fitness. A server can be starred and abandoned. tashan's tashan score blends how actively a server is <b>maintained</b> and how <b>fresh</b> it is, gated by real <b>adoption</b> — and flags single-maintainer and archived risks. See the <a class='link' href='/methodology.html'>methodology</a>.</p>"},
         ],
         "faq": [("How do I install one of these?", "Open its page and copy the per-client snippet — Claude Code, Cursor, Claude Desktop, or Codex. Most are `claude mcp add <name> -- npx -y <pkg>`."),
                 ("Is this list sponsored?", "No. tashan sells nothing on the board, so the ranking is evidence, not spend.")],
-        "itemlist": [{"name": pretty(c["name"]), "url": BASE + "/capability/" + c["slug"] + ".html", "trust": c["trust"]}
-                     for c in [x for x in caps if x.get("trust") is not None and x.get("kind") in ("npm", "pkg")][:12]],
+        "itemlist": [{"name": pretty(c["name"]), "url": BASE + "/capability/" + c["slug"] + ".html", "tashan_score": c["tashan_score"]}
+                     for c in [x for x in caps if x.get("tashan_score") is not None and x.get("kind") in ("npm", "pkg")][:12]],
     })
     # 3. 中文 cluster — tutorial-that-curates shell (CN long-tail)
     A.append({
         "slug": "mcp-fuwuqi-tuijian", "lang": "zh",
-        "title": "MCP 服务器怎么选？用 Trust 评分挑最靠谱的",
-        "desc": "面对上千个 MCP 服务器，怎么选到真正靠谱的？tashan 用公开证据打分（Trust = 维护 + 更新，按真实采用度加权），附带专家评级和安装方法。",
-        "quick": "选 MCP 服务器别只看 star。tashan 用<b>公开证据</b>打 Trust 分（维护活跃度 + 更新新鲜度，按真实下载量加权），并对每个能力做 <b>deep / solid / thin</b> 专家评级。下面是按 Trust 排名的榜单，点开任意一行看完整安装方法和仓库健康度。",
+        "title": "MCP 服务器怎么选？用 tashan score 评分挑最靠谱的",
+        "desc": "面对上千个 MCP 服务器，怎么选到真正靠谱的？tashan 用公开证据打分（tashan score = 维护 + 更新，按真实采用度加权），附带专家评级和安装方法。",
+        "quick": "选 MCP 服务器别只看 star。tashan 用<b>公开证据</b>打 tashan score 分（维护活跃度 + 更新新鲜度，按真实下载量加权），并对每个能力做 <b>deep / solid / thin</b> 专家评级。下面是按 tashan score 排名的榜单，点开任意一行看完整安装方法和仓库健康度。",
         "sections": [
             {"q": "怎么判断一个 MCP 服务器靠不靠谱？",
-             "body": "<p>看三件事：是否<b>仍在维护</b>（最近提交/发版）、有多少<b>真实采用</b>（npm 周下载）、以及是否有<b>单一维护者/已归档</b>风险。tashan 把这些合成一个可复现的 Trust 分。</p>" + top_table(caps, lambda c: c.get("kind") in ("npm","pkg"), 12)},
+             "body": "<p>看三件事：是否<b>仍在维护</b>（最近提交/发版）、有多少<b>真实采用</b>（npm 周下载）、以及是否有<b>单一维护者/已归档</b>风险。tashan 把这些合成一个可复现的 tashan score 分。</p>" + top_table(caps, lambda c: c.get("kind") in ("npm","pkg"), 12)},
             {"q": "MCP 服务器和 Agent Skill 有什么区别？",
              "body": "<p>MCP 服务器通过 Model Context Protocol 给 AI 暴露工具；Agent Skill 是一个带 SKILL.md 的文件夹，按需加载。tashan 用同一套模型同时追踪并打分。</p>"},
         ],
@@ -195,7 +195,7 @@ def build_articles(caps):
                   "Open Settings → MCP and toggle the server on.",
                   "Confirm the server's tools appear; restart Cursor if they don't."],
         "faq": [("Can I scope an MCP server to one project in Cursor?", "Yes — put it in .cursor/mcp.json at the project root; it's committed and shared with the repo."),
-                ("Which MCP servers are worth installing in Cursor?", "See tashan's Trust-ranked Index — every server is scored on measured adoption and maintenance, not stars.")],
+                ("Which MCP servers are worth installing in Cursor?", "See tashan's tashan score-ranked Index — every server is scored on measured adoption and maintenance, not stars.")],
     })
     # 5. is-X-safe cluster (EN) — the trust wedge
     A.append({
@@ -239,7 +239,7 @@ def index_page(A):
     body = ('<main class="wrap"><article class="prose"><h1>Learn</h1>'
             '<p class="lede">Practical, evidence-backed guides to MCP servers and agent skills — where they live, '
             'how to install them in every client, and which ones are actually worth it.</p>'
-            '<div class="trust" style="margin-top:var(--sp-8)">' + cards + '</div></article></main>')
+            '<div class="tashan_score" style="margin-top:var(--sp-8)">' + cards + '</div></article></main>')
     a0 = {"slug": "index", "lang": "en", "title": "Learn — MCP & agent-skill guides",
           "desc": "Evidence-backed guides to MCP servers and agent skills — where they're stored, how to install them, and which are worth it."}
     return head(a0) + body + FOOT + '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n'

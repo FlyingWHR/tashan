@@ -355,11 +355,11 @@ def run_batch(con, tasks, size, offset=0):
     for f in sorted(__import__("glob").glob(os.path.join(MANUAL, "*.json"))):
         done |= {k for k in json.load(open(f)) if not k.startswith("_")}
     rows = con.execute(
-        """SELECT c.id, c.kind, c.name, COALESCE(t.full_description, c.description), c.trust
+        """SELECT c.id, c.kind, c.name, COALESCE(t.full_description, c.description), c.tashan_score
            FROM capabilities c LEFT JOIN capability_text t ON t.cap_id = c.id
-           WHERE c.kind IN ('skill','plugin') AND c.trust IS NOT NULL
+           WHERE c.kind IN ('skill','plugin') AND c.tashan_score IS NOT NULL
              AND COALESCE(t.full_description, c.description) IS NOT NULL
-           ORDER BY c.trust DESC, c.id""").fetchall()
+           ORDER BY c.tashan_score DESC, c.id""").fetchall()
     todo = [r for r in rows if r[0] not in done][offset:offset + size]
     print(f"# {len(done)} already labelled, {len(rows) - len(done)} remaining; showing {len(todo)}")
     for cid, kind, name, desc, trust in todo:
@@ -429,7 +429,7 @@ def run_report(con, tasks):
         print(f"  {basis:9} {n} assignments")
     print("\npopulated tasks (>=5 rated capabilities gets a page):")
     rows = con.execute(
-        """SELECT t.tag, COUNT(*) n, SUM(CASE WHEN c.trust IS NOT NULL THEN 1 ELSE 0 END) rated
+        """SELECT t.tag, COUNT(*) n, SUM(CASE WHEN c.tashan_score IS NOT NULL THEN 1 ELSE 0 END) rated
            FROM capability_tags t JOIN capabilities c ON c.id=t.cap_id
            GROUP BY t.tag ORDER BY rated DESC""").fetchall()
     for tag, n, rated in rows[:25]:

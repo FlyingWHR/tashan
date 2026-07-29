@@ -23,7 +23,7 @@
     var top = caps.slice(0, 26);
     var seg = top.map(function (c) {
       return '<span class="tk"><span class="tk-n">' + esc(pretty(c.name)) + '</span> '
-        + '<span class="tk-t">' + (c.trust == null ? "—" : c.trust) + '</span> ' + verdictHTML(c.expertise_verdict) + '</span>';
+        + '<span class="tk-t">' + (c.tashan_score == null ? "—" : c.tashan_score) + '</span> ' + verdictHTML(c.expertise_verdict) + '</span>';
     }).join('<span class="tk-sep">·</span>');
     var content = '<span class="tk-lead">LIVE ▸ ranked by trust</span>' + seg + '<span class="tk-sep">·</span>';
     track.innerHTML = content + content; // identical halves → seamless -50% loop
@@ -83,7 +83,7 @@
       if (o.kind === "page")
         return '<div class="pal__row' + (i === sel ? " is-sel" : "") + '" data-href="' + o.href + '"><span class="pal__go">go</span><span class="pal__nm">' + esc(o.name) + '</span></div>';
       return '<div class="pal__row' + (i === sel ? " is-sel" : "") + '" data-href="' + capHref(o) + '">'
-        + '<span class="pal__badge">' + (o.trust == null ? "—" : o.trust) + '</span>'
+        + '<span class="pal__badge">' + (o.tashan_score == null ? "—" : o.tashan_score) + '</span>'
         + '<span class="pal__nm">' + esc(pretty(o.name)) + '</span>' + verdictHTML(o.expertise_verdict)
         + '<span class="pal__id">' + esc(o.id) + '</span></div>';
     }).join("");

@@ -80,10 +80,10 @@ def static_checks():
     # happen is a row with no score and no explanation — that reads as a bug or a hidden zero. (This test
     # used to assert every row had a score, which was true only while the catalog held one artifact type.)
     unexplained = [r["id"] for r in board
-                   if r.get("trust") is None and r.get("rated") is not False]
+                   if r.get("tashan_score") is None and r.get("rated") is not False]
     check("every unrated row is explicitly marked unrated", not unexplained,
           f"{len(unexplained)} rows with no trust and no rated=false")
-    rated = [r for r in board if r.get("trust") is not None]
+    rated = [r for r in board if r.get("tashan_score") is not None]
     check("the catalog still has a rated core", len(rated) >= 500, f"only {len(rated)} rated")
 
     # 4. co-use links resolve to real pages (no slow legacy route, no 404)

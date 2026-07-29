@@ -6,14 +6,14 @@
   var rowsEl = document.getElementById("rows");
   // facets are Sets (multi-select); toggles are bool; sort is one key
   var state = { cat: new Set(), task: new Set(), kind: new Set(), vitality: new Set(), verdict: new Set(),
-                official: false, clean: false, combine: false, sort: "trust" };
+                official: false, clean: false, combine: false, sort: "tashan_score" };
   var data = { caps: [], cats: [], catMeta: {}, tasks: [], roles: [], taskMeta: {}, taskIds: null };
   var PAGE = 100, shownCount = PAGE;   // board pagination: show PAGE rows, "show more" reveals the rest
 
   var KIND_LABEL = { npm: "npm", pkg: "npm-pkg", docker: "docker", python: "python", remote: "remote", skill: "skill" };
   var VIT_LABEL = { active: "active", stable: "stable", abandoned: "abandoned" };
   var VERDICTS = ["deep", "solid", "thin", "wrapper", "slop"];
-  var SORTS = [["trust", "Trust"], ["adoption", "Adoption"], ["fresh", "Freshness"],
+  var SORTS = [["tashan_score", "Trust"], ["adoption", "Adoption"], ["fresh", "Freshness"],
                ["expertise", "Expertise"], ["maint", "Maintenance"], ["name", "Name A–Z"]];
 
   // reuse terminal.js's session-cached loader (one fetch+parse of the slim index per session, shared)
@@ -62,7 +62,7 @@
     render();
     if (hasFilters()) { var a = document.getElementById("board-anchor"); if (a) a.scrollIntoView({ block: "start" }); }
   }).catch(function () {
-    rowsEl.innerHTML = '<tr><td colspan="6"><div class="empty">Measurement data isn\'t published yet — the pipeline is still running. Check back shortly.</div></td></tr>';
+    rowsEl.innerHTML = '<tr><td colspan="5"><div class="empty">Measurement data isn\'t published yet — the pipeline is still running. Check back shortly.</div></td></tr>';
   });
 
   addEventListener("popstate", function () { shownCount = PAGE; urlToState(); buildToolbar(); renderTasks(); renderCatalog(); render(); });
@@ -78,7 +78,7 @@
     state.combine = q.get("combine") === "1";
     state.official = q.get("official") === "1";
     state.clean = q.get("clean") === "1";
-    state.sort = q.get("sort") || "trust";
+    state.sort = q.get("sort") || "tashan_score";
   }
   function stateToURL(push) {
     var q = new URLSearchParams();
@@ -90,7 +90,7 @@
     if (state.combine) q.set("combine", "1");
     if (state.official) q.set("official", "1");
     if (state.clean) q.set("clean", "1");
-    if (state.sort !== "trust") q.set("sort", state.sort);
+    if (state.sort !== "tashan_score") q.set("sort", state.sort);
     var url = location.pathname + (q.toString() ? "?" + q.toString() : "");
     history[push ? "pushState" : "replaceState"](null, "", url);
   }
@@ -240,7 +240,7 @@
       data.caps.forEach(function (c) {
         if (!c.category) return;
         counts[c.category] = (counts[c.category] || 0) + 1;
-        if (c.trust != null && (!top[c.category] || c.trust > top[c.category].trust)) top[c.category] = c;
+        if (c.tashan_score != null && (!top[c.category] || c.tashan_score > top[c.category].trust)) top[c.category] = c;
       });
       data._catAgg = { counts: counts, top: top };
     }
@@ -291,7 +291,7 @@
     // Unrated capabilities (catalogued, no per-item evidence yet) always sort BELOW rated ones, whatever
     // the chosen sort. They are real and installable, but a board is a ranking — an item we can't rank
     // must not occupy a rank. Within the unrated block the chosen sort still applies.
-    var ar = a.trust != null, br = b.trust != null;
+    var ar = a.tashan_score != null, br = b.tashan_score != null;
     if (ar !== br) return ar ? -1 : 1;
     switch (state.sort) {
       // Sort on the SCORE, not on raw evidence. `npm_downloads || config_reach` compared 422 weekly
@@ -299,10 +299,10 @@
       // 51,323-star plugin. The score is the only cross-kind-comparable number we have.
       case "adoption": return num(b.adoption) - num(a.adoption);
       case "fresh": return recency(b) - recency(a);
-      case "expertise": return (num(b.expertise) - num(a.expertise)) || (num(b.trust) - num(a.trust));
+      case "expertise": return (num(b.expertise) - num(a.expertise)) || (num(b.tashan_score) - num(a.tashan_score));
       case "maint": return num(b.maintenance) - num(a.maintenance);
       case "name": return pretty(a.name).toLowerCase() < pretty(b.name).toLowerCase() ? -1 : 1;
-      default: return num(b.trust) - num(a.trust);   // trust
+      default: return num(b.tashan_score) - num(a.tashan_score);   // trust
     }
   }
   function recency(c) { var iso = c.npm_last_publish || c.gh_pushed || c.last_seen; return iso ? new Date(iso).getTime() : 0; }
@@ -314,16 +314,16 @@
     var bd = document.getElementById("boardDesc");
     if (bd) bd.innerHTML = singleCat && data.catMeta[singleCat]
       ? esc(data.catMeta[singleCat].blurb)
-      : 'Trust is a transparent composite of maintenance and freshness, gated by real adoption — never one black box. Tags like <span class="vd vd--deep">deep</span> and <span class="vd vd--thin">thin</span> are our expertise-eval\'s read. Open any row for the full breakdown.';
+      : 'Trust is a transparent composite of upkeep and freshness, gated by real adoption — never one black box. Tags like <span class="vd vd--deep">deep</span> and <span class="vd vd--thin">thin</span> are our expertise-eval\'s read. Open any row for the full breakdown.';
 
     var list = data.caps.filter(passes).slice().sort(sortComparator);
     renderActiveBar(list.length);
     var shown = list.slice(0, shownCount);
-    if (!shown.length) { rowsEl.innerHTML = '<tr><td colspan="6"><div class="empty">No capabilities match these filters. <button class="linkbtn" id="clearEmpty" type="button">Clear filters</button></div></td></tr>';
+    if (!shown.length) { rowsEl.innerHTML = '<tr><td colspan="5"><div class="empty">No capabilities match these filters. <button class="linkbtn" id="clearEmpty" type="button">Clear filters</button></div></td></tr>';
       var ce = document.getElementById("clearEmpty"); if (ce) ce.onclick = clearAll; return; }
     var html = "";
     shown.forEach(function (c, i) {
-      var t = c.trust, bar = (t == null) ? 0 : t;
+      var t = c.tashan_score, bar = (t == null) ? 0 : t;
       var fr = vitalityCell(c);
       var dep = c.npm_deprecated ? ' <span class="fresh fresh--cold">deprecated</span>' : "";
       var vd = c.expertise_verdict ? ' <span class="vd vd--' + esc(c.expertise_verdict) + '" title="LLM expertise-eval: ' + (c.expertise || "") + '/100">' + esc(c.expertise_verdict) + '</span>' : "";
@@ -334,18 +334,21 @@
         '<td class="rank">' + (i + 1) + '</td>' +
         '<td><div class="cap__name"><a class="cap__link" href="' + capHref(c) + '">' + esc(pretty(c.name)) + '</a> <span class="tag">' + esc(KIND_LABEL[c.kind] || c.kind) + '</span>' + off + vd + dep + '</div>' +
         '<div class="cap__id">' + esc(c.id) + catTag + '</div></td>' +
-        '<td class="num">' + adoption(c) + '</td>' +
-        '<td class="num num--dim">' + score(c.maintenance) + '</td>' +
-        '<td><span class="fresh ' + fr.cls + '"' + (fr.title ? ' title="' + esc(fr.title) + '"' : '') + '>' + fr.txt + '</span></td>' +
+        // ONE headline, then the evidence it came from, then one health flag. The board used to print
+        // Adoption, Maint, Fresh AND Trust — four numbers competing for the same glance, none of which
+        // is the answer to "should I install this". Components moved to the dossier, which has room to
+        // explain them; the evidence column stays because it is the part no competitor can show.
         '<td><div class="sig' + (t == null ? ' sig--none' : '') + '">' + (t == null
-          ? '<span class="unrated" title="Catalogued, not rated: its only maintenance evidence is the repository it lives in, which every skill in that repo shares. A grade of its own SKILL.md is what makes it rankable.">not rated yet</span>'
+          ? '<span class="unrated" title="Catalogued, not scored: its only upkeep evidence is the repository it lives in, which every skill in that repo shares. A grade of its own SKILL.md is what makes it scorable.">not scored yet</span>'
           : '<span class="sig__val">' + Math.round(t) + '</span>') +
         '<span class="bar"><i style="width:' + bar + '%"></i></span></div></td>' +
+        '<td class="num">' + evidenceCell(c) + '</td>' +
+        '<td><span class="fresh ' + fr.cls + '"' + (fr.title ? ' title="' + esc(fr.title) + '"' : '') + '>' + fr.txt + '</span></td>' +
         '</tr>';
     });
     if (list.length > shown.length) {                      // reveal the rest instead of hard-capping the board
       var more = Math.min(PAGE, list.length - shown.length);
-      html += '<tr class="board__more"><td colspan="6"><button class="btn btn--ghost" id="showMore" type="button">' +
+      html += '<tr class="board__more"><td colspan="5"><button class="btn btn--ghost" id="showMore" type="button">' +
         'Show ' + more + ' more <span class="mono" style="opacity:.55">· ' + shown.length + ' of ' + fmt(list.length) + '</span></button></td></tr>';
     }
     rowsEl.innerHTML = html;
@@ -425,11 +428,9 @@
     if (c.config_reach) return fmt(c.config_reach) + (c.kind === "plugin" ? " marketplaces" : " repos");
     return "";
   }
-  function adoption(c) {
+  function evidenceCell(c) {
     var ev = evidence(c);
-    if (c.adoption == null) return ev ? '<span class="num--dim">—</span><span class="unit">' + ev + '</span>'
-                                     : '<span class="num--dim">—</span>';
-    return String(c.adoption) + (ev ? '<span class="unit">' + ev + '</span>' : "");
+    return ev ? '<span class="ev">' + ev + "</span>" : '<span class="num--dim">—</span>';
   }
   function score(v) { return (v == null) ? '<span class="num--dim">—</span>' : String(v); }
   function num(v) { return v == null ? 0 : v; }

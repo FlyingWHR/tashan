@@ -92,7 +92,7 @@ if os.path.exists(os.path.join(WEB, "llms.txt")):
     L = read("llms.txt")
     check("llms.txt starts with an H1", L.startswith("# "))
     check("llms.txt has a blockquote summary", "\n> " in L)
-    check("llms.txt explains the score", "Trust" in L and "Adoption" in L)
+    check("llms.txt explains the score", "tashan score" in L and "Adoption" in L)
     check("llms.txt links absolute URLs", "https://tashan.sh/capability/" in L)
     check("llms.txt names the firewall", "pay" in L.lower())
     check("llms.txt is under 40 KB", len(L.encode()) < 40_000, "%d bytes" % len(L.encode()))

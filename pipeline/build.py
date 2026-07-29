@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS capabilities (
   npm_downloads INTEGER, npm_last_publish TEXT, npm_created TEXT,
   npm_maintainers INTEGER, npm_versions INTEGER, npm_deprecated INTEGER,
   co_used TEXT,
-  adoption REAL, maintenance REAL, freshness REAL, trust REAL,
+  adoption REAL, upkeep REAL, freshness REAL, tashan_score REAL,
   expertise REAL, expertise_verdict TEXT, expertise_note TEXT,
   retention REAL, retention_note TEXT,
   in_registry INTEGER DEFAULT 0, in_configs INTEGER DEFAULT 0,
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS capability_tags (
   cap_id TEXT, tag TEXT, confidence REAL, basis TEXT, evidence TEXT,
   PRIMARY KEY (cap_id, tag)
 );
-CREATE INDEX IF NOT EXISTS idx_trust ON capabilities(trust DESC);
+CREATE INDEX IF NOT EXISTS idx_score ON capabilities(tashan_score DESC);
 CREATE INDEX IF NOT EXISTS idx_captag_tag ON capability_tags(tag);
 CREATE INDEX IF NOT EXISTS idx_captag_cap ON capability_tags(cap_id);
 """
@@ -91,7 +91,16 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # source be retracted wholesale (docs/SOURCING.md §4)
            "sources TEXT"]
 
-SCHEMA_VERSION = 4  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 5  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+
+# v5 RENAMED the headline score. "Trust" claimed more than this project measures — there is no CVE scan,
+# no prompt-injection audit, no code review behind it — and the methodology page had to disclaim its own
+# headline ("a maintenance/adoption read, not a security audit"). A number whose name needs walking back
+# is misnamed. `tashan_score` names what it is: our measurement, on public evidence. `maintenance`
+# became `upkeep` in the same pass because the board had two words starting "main" in adjacent columns.
+# Existing DBs are renamed in place here rather than rebuilt — signal_history is un-backfillable, so it
+# is re-keyed, never dropped.
+RENAMES = [("trust", "tashan_score"), ("maintenance", "upkeep")]
 
 # indexes on the columns actually filtered/sorted — created AFTER MIGRATE so category/gh_* exist.
 # At 100k+ rows these turn every facet/sort/history query from an O(N) scan into an index seek.
@@ -116,6 +125,11 @@ def db():
         pass                      # a concurrent writer may hold it; the busy_timeout still applies
     con.executescript(SCHEMA)
     have = {r[1] for r in con.execute("PRAGMA table_info(capabilities)")}
+    for old, new in RENAMES:
+        if old in have and new not in have:
+            con.execute(f"ALTER TABLE capabilities RENAME COLUMN {old} TO {new}")
+            con.execute("UPDATE signal_history SET metric=? WHERE metric=?", (new, old))
+            have.discard(old); have.add(new)
     for coldef in MIGRATE:
         if coldef.split()[0] not in have:
             con.execute(f"ALTER TABLE capabilities ADD COLUMN {coldef}")
@@ -445,7 +459,7 @@ def enrich_homepage(con):
     github_cache alongside repo health; only a real http(s) URL that isn't just the repo itself is kept."""
     cache = json.load(open(GH_CACHE)) if os.path.exists(GH_CACHE) else {}
     rows = con.execute("SELECT id, source_repo FROM capabilities WHERE source_repo IS NOT NULL "
-                       "AND trust IS NOT NULL ORDER BY trust DESC LIMIT ?",
+                       "AND tashan_score IS NOT NULL ORDER BY tashan_score DESC LIMIT ?",
                        (int(os.environ.get("HP_CAP", "300")),)).fetchall()
     print(f"  homepage for {len(rows)} repos...", flush=True)
     done = 0
@@ -612,11 +626,11 @@ def compute_scores(con):
         # three-axis "Maint 71" as if it were the stronger number. Maintenance means people are keeping
         # it alive, so it requires at least one people-or-cadence axis; without that it is unmeasured and
         # says so, and Trust rests on freshness alone with coverage reflecting exactly that.
-        upkeep = people is not None or vers is not None
-        maintenance = round(100 * m / w) if (w and upkeep) else None
+        has_upkeep_axis = people is not None or vers is not None
+        upkeep = round(100 * m / w) if (w and has_upkeep_axis) else None
         # TRUST (v2, transparent): mostly maintenance+freshness gated by adoption; labelled, not final
-        parts = [x for x in (maintenance, freshness) if x is not None]
-        trust = None
+        parts = [x for x in (upkeep, freshness) if x is not None]
+        score = None
         if parts:
             base = sum(parts) / len(parts)
             # UNKNOWN ADOPTION MUST NOT BEAT KNOWN-POOR ADOPTION. The gate used to read 0.7 when adoption
@@ -628,10 +642,10 @@ def compute_scores(con):
             # Coverage spans every axis Trust rests on — adoption included, since "we never found an
             # adoption signal" is missing evidence in precisely the sense this discount exists for.
             cov = (w + (ADOPT_W if adoption is not None else 0)) / (100.0 + ADOPT_W)
-            trust = round(base * gate * (1 - COVERAGE_W * (1 - cov)))
-        con.execute("UPDATE capabilities SET adoption=?, freshness=?, maintenance=?, trust=?, "
+            score = round(base * gate * (1 - COVERAGE_W * (1 - cov)))
+        con.execute("UPDATE capabilities SET adoption=?, freshness=?, upkeep=?, tashan_score=?, "
                     "vitality=?, single_maintainer=?, updated_at=? WHERE id=?",
-                    (adoption, freshness, maintenance, trust, vitality, single, now_iso, cid))
+                    (adoption, freshness, upkeep, score, vitality, single, now_iso, cid))
     con.commit()
     snapshot_history(con)
 
@@ -641,10 +655,10 @@ def snapshot_history(con):
     if con.execute("SELECT 1 FROM signal_history WHERE at=? LIMIT 1", (today,)).fetchone():
         return  # already snapshotted today — keep it daily-granular and bounded
     n = 0
-    for cid, trust, adoption in con.execute(
-            "SELECT id, trust, adoption FROM capabilities WHERE trust IS NOT NULL"):
+    for cid, score, adoption in con.execute(
+            "SELECT id, tashan_score, adoption FROM capabilities WHERE tashan_score IS NOT NULL"):
         con.execute("INSERT INTO signal_history (cap_id, metric, value, at) VALUES (?,?,?,?)",
-                    (cid, "trust", trust, today))
+                    (cid, "tashan_score", score, today))
         if adoption is not None:
             con.execute("INSERT INTO signal_history (cap_id, metric, value, at) VALUES (?,?,?,?)",
                         (cid, "adoption", adoption, today))
@@ -660,19 +674,19 @@ def export(con):
     cols = ["id","name","kind","title","description","npm_pkg","source_repo","registry_status",
             "config_reach","config_repos","stars_median","stars_max","last_seen",
             "npm_downloads","npm_last_publish","npm_maintainers","npm_versions","npm_deprecated",
-            "co_used","adoption","freshness","maintenance","trust",
+            "co_used","adoption","freshness","upkeep","tashan_score",
             "expertise","expertise_verdict","expertise_note","retention","retention_note",
             "category","in_registry","in_configs",
             "gh_stars","gh_forks","gh_open_issues","gh_pushed","gh_contributors","gh_last_release",
             "gh_license","gh_topics","gh_has_discussions","gh_archived","vitality","single_maintainer",
             "discord_url","gh_homepage"]
     # Only trust-ranked caps are ever exported (ranked = trust-not-null, capped below), so fetch just the top
-    # slice via idx_trust instead of materializing the whole table. LIMIT is a buffer above the 800 board cap
+    # slice via idx_score instead of materializing the whole table. LIMIT is a buffer above the 800 board cap
     # so junk-filtering still leaves ≥800. At 1M rows this reads ~1500 rows, not all of them.
     # Everything the user can act on belongs in ONE catalog — a skill and an MCP server answer the same
     # question ("make my agent do X"), so splitting them by artifact type organises the site around our
     # pipeline instead of their job. Unrated rows come along; they are simply not ranked (see below).
-    # TWO queries, deliberately. A single "trust IS NOT NULL OR kind='skill'" query ordered by trust and
+    # TWO queries, deliberately. A single "tashan_score IS NOT NULL OR kind='skill'" query ordered by trust and
     # capped silently deleted an entire tier the moment enough rows gained a score: registry rows filled
     # the slice and every unrated skill fell off the end, taking `catalogued` to zero. The ranked set and
     # the catalogued set are different populations and must be selected separately.
@@ -690,8 +704,8 @@ def export(con):
     #         downloaded on first paint.
     BULK_CAP = 6000   # every scored capability gets a page and a place on its category hub
     RANK_CAP = 1080   # board only: the largest that fits the 45 KB gz index budget (test_site asserts it)
-    rows = con.execute(f"SELECT {','.join(cols)} FROM capabilities WHERE trust IS NOT NULL "
-                       "ORDER BY trust DESC, config_reach DESC, npm_downloads DESC "
+    rows = con.execute(f"SELECT {','.join(cols)} FROM capabilities WHERE tashan_score IS NOT NULL "
+                       "ORDER BY tashan_score DESC, config_reach DESC, npm_downloads DESC "
                        f"LIMIT {BULK_CAP}").fetchall()
     # Catalogued: things we deliberately list without a score (skills and plugins with no per-item
     # evidence). They are browsable and installable; they simply are not ranked.
@@ -847,7 +861,7 @@ def export(con):
             if k is None:
                 continue
             prev = best.get(k)
-            if prev is None or (c.get("trust") or 0) > (prev.get("trust") or 0):
+            if prev is None or (c.get("tashan_score") or 0) > (prev.get("tashan_score") or 0):
                 best[k] = c
         keep = {c["id"] for c in best.values()}
         out, dropped = [], 0
@@ -884,16 +898,16 @@ def export(con):
         per_item = (c.get("expertise") is not None) or ((c.get("config_reach") or 0) > 1) \
                    or (c.get("npm_downloads") is not None)
         if c.get("kind") == "skill" and not per_item:
-            c["trust"] = None
+            c["tashan_score"] = None
             c["rated"] = False
             c["rating_basis"] = ("Catalogued, not rated. Its only maintenance evidence is the repository "
                                  "it lives in, which every skill in that repo shares — so a per-skill "
                                  "score would carry no information. A grade of its own SKILL.md is what "
                                  "makes it rankable.")
         else:
-            c["rated"] = c.get("trust") is not None
-    ranked = [c for c in caps if c.get("trust") is not None]
-    catalogued = [c for c in caps if c.get("trust") is None]
+            c["rated"] = c.get("tashan_score") is not None
+    ranked = [c for c in caps if c.get("tashan_score") is not None]
+    catalogued = [c for c in caps if c.get("tashan_score") is None]
     tot = con.execute("SELECT COUNT(*) FROM capabilities").fetchone()[0]
     enriched = con.execute("SELECT COUNT(*) FROM capabilities WHERE npm_downloads IS NOT NULL").fetchone()[0]
     graded = con.execute("SELECT COUNT(*) FROM capabilities WHERE expertise IS NOT NULL").fetchone()[0]
@@ -930,7 +944,7 @@ def export(con):
     # NO `slug`: it is exactly slugify(id), so the board derives it (see js capHref) instead of paying
     # ~9 KB gz to ship a second copy of every id.
     SLIM = ["id", "name", "kind", "category", "npm_pkg", "official", "registry_status",
-            "config_reach", "npm_downloads", "gh_stars", "adoption", "trust", "maintenance", "vitality",
+            "config_reach", "npm_downloads", "gh_stars", "adoption", "tashan_score", "upkeep", "vitality",
             "expertise", "expertise_verdict", "npm_deprecated", "gh_archived", "rated"]  # NOT description: it is 104 KB gz of the index and the board never reads it
     slim = {k: payload[k] for k in ("generated_at", "method", "total_capabilities", "enriched_npm",
                                     "expertise_graded", "ranked", "catalogued", "measured", "note")}
@@ -957,7 +971,7 @@ def export(con):
     print(f"Slim index ({len(SLIM)} fields/cap) -> {slim_out}")
     print("Top 12 by Trust:")
     for c in caps[:12]:
-        print(f"  T{c['trust'] or 0:>3}  A{c['adoption'] or 0:>3}  M{c['maintenance'] or 0:>3}  F{c['freshness'] or 0:>3}  "
+        print(f"  T{c['tashan_score'] or 0:>3}  A{c['adoption'] or 0:>3}  M{c['upkeep'] or 0:>3}  F{c['freshness'] or 0:>3}  "
               f"{(c['npm_downloads'] or 0):>8}dl  {c['name']}")
 
 def main():

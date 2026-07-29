@@ -57,10 +57,10 @@
       worksWith(c) +
       installBlock(c) +
       '<div class="stats">' +
-        stat("Trust", c.trust == null ? "—" : c.trust, "jade", "maintenance + freshness, gated by adoption") +
+        stat("Trust", c.tashan_score == null ? "—" : c.tashan_score, "jade", "maintenance + freshness, gated by adoption") +
         stat("Expertise", c.expertise == null ? "—" : c.expertise, "jade", c.expertise_verdict ? "LLM-graded: " + c.expertise_verdict : "not yet graded") +
         stat("Adoption", adoption(c), "", c.npm_downloads != null ? "npm downloads / week" : "distinct public repos") +
-        stat("Maintenance", score(c.maintenance), "", "cadence · maintainers · status") +
+        stat("Maintenance", score(c.upkeep), "", "cadence · maintainers · status") +
         stat("Freshness", fr.txt, "", "latest release / push", fr.cls) +
         stat("Bus factor", busFactor(c), "", "distinct contributors", c.single_maintainer ? "fresh--cold" : "") +
       '</div>' +
@@ -70,7 +70,7 @@
       alsoOn(c) +
       (co ? section("Configured alongside", '<div class="colist">' + co + '</div>', "In real public configs, these ship together.") : '') +
       community(c) +
-      (c.trust != null ? embedBlock(c) : '') +
+      (c.tashan_score != null ? embedBlock(c) : '') +
       '<div class="callout" style="margin-top:var(--sp-12)"><b>What this means.</b> Trust blends how actively the ' +
         'capability is <b>maintained</b> (release cadence, maintainer/contributor count, deprecation, registry status) and how ' +
         '<b>fresh</b> it is, gated by real <b>adoption</b> — npm weekly downloads where published, distinct public ' +
@@ -84,7 +84,7 @@
 
   // ---------- tashan's read: turn the measured evidence into a one-line DECISION (the whole point) ----------
   function takeBlock(c) {
-    if (c.trust == null && !c.expertise_verdict) return "";
+    if (c.tashan_score == null && !c.expertise_verdict) return "";
     var quality = { deep: "Deep, real domain work", solid: "Solid — does the job well",
       thin: "Thin — shallow coverage", wrapper: "A thin wrapper over an API", slop: "Low-quality, likely AI-slop" }[c.expertise_verdict];
     var maint = { active: "actively maintained", stable: "mature and stable", abandoned: "looks abandoned" }[c.vitality];
@@ -94,7 +94,7 @@
     if (c.single_maintainer) risks.push("one primary maintainer");
     if (c.gh_archived) risks.push("the repo is archived");
     if (c.npm_deprecated) risks.push("the package is deprecated");
-    var t = c.trust || 0, verdict, cls;
+    var t = c.tashan_score || 0, verdict, cls;
     if (c.gh_archived || c.npm_deprecated) { verdict = "Proceed with care"; cls = "take--warn"; }
     else if (t >= 80 && (c.expertise_verdict === "deep" || c.expertise_verdict === "solid")) { verdict = "A safe default"; cls = "take--good"; }
     else if (t >= 62) { verdict = "Worth a look"; cls = "take--ok"; }

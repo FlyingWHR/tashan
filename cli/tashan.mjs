@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // tashan — the measured layer for AI capabilities, in your terminal.
 //
-//   npx tashan search <query>        find MCP servers & skills, ranked by Trust
+//   npx tashan search <query>        find MCP servers & skills, ranked by tashan score
 //   npx tashan top [category]        the leaderboard
 //   npx tashan info <name>           the measured dossier for one capability
 //   npx tashan add <name>            the install command for your client   ← the money shot
@@ -41,7 +41,7 @@ export function search(rows, q) {
     else if (name.includes(q) || pkg.includes(q)) s = 45;
     else if (cat.includes(q)) s = 20;
     if (!s) return null;
-    return { r, s: s + Math.min(30, (r.trust || 0) / 3) };   // quality-weighted: Trust lifts within a match tier
+    return { r, s: s + Math.min(30, (r.trust || 0) / 3) };   // quality-weighted: tashan score lifts within a match tier
   }).filter(Boolean);
   scored.sort((a, b) => b.s - a.s);
   return scored.map((x) => x.r);
@@ -50,7 +50,7 @@ export function search(rows, q) {
 export function top(rows, cat) {
   let list = rows.filter((r) => r.trust != null);
   if (cat) { const c = cat.toLowerCase(); list = list.filter((r) => (r.category || "").toLowerCase() === c); }
-  return list.sort((a, b) => (b.trust || 0) - (a.trust || 0));
+  return list.sort((a, b) => (b.tashan_score || 0) - (a.tashan_score || 0));
 }
 
 export function find(rows, key) {
@@ -117,7 +117,7 @@ function infoCard(r) {
   L.push("  " + bold(pretty(r.name)) + "  " + dim(r.kind || ""));
   L.push("  " + dim(r.id));
   L.push("");
-  L.push("  Trust        " + trustStr(r.trust).trim() + dim("/100") + "   " + dim("maintenance " + (r.maintenance ?? "—") + " · vitality " + (r.vitality || "—")));
+  L.push("  tashan score        " + trustStr(r.trust).trim() + dim("/100") + "   " + dim("maintenance " + (r.maintenance ?? "—") + " · vitality " + (r.vitality || "—")));
   if (r.expertise_verdict) L.push("  Expertise    " + jade(verdict(r.expertise_verdict)) + (r.expertise != null ? dim("  (" + r.expertise + "/100)") : ""));
   L.push("  Adoption     " + dim(fmtNum(r.npm_downloads) + " downloads/wk" + (r.config_reach ? " · reach " + r.config_reach : "")));
   if (r.category) L.push("  Category     " + dim(r.category));
@@ -160,7 +160,7 @@ const rowsOf = (d) => (Array.isArray(d) ? d : d.capabilities || []);
 const USAGE = `
 ${bold("tashan")} — the measured layer for AI capabilities ${dim("· " + SITE)}
 
-  ${jade("tashan search")} <query>       find MCP servers & skills, ranked by Trust
+  ${jade("tashan search")} <query>       find MCP servers & skills, ranked by tashan score
   ${jade("tashan top")} [category]       the leaderboard
   ${jade("tashan info")} <name>          the measured dossier for one capability
   ${jade("tashan add")} <name>           the install command  ${dim("(--client claude|cursor|desktop|codex|npx)")}
@@ -232,7 +232,7 @@ export async function main(argv) {
   if (cmd === "top") {
     const list = top(rows, arg || null);
     if (a.json) { process.stdout.write(JSON.stringify(list.slice(0, a.limit), null, 2) + "\n"); return 0; }
-    process.stdout.write("\n  " + bold("Top by Trust" + (arg ? " · " + arg : "")) + "\n" + table(list, a.limit) + "\n\n" + dim("  ranked on public evidence · tashan.sh") + "\n");
+    process.stdout.write("\n  " + bold("Top by tashan score" + (arg ? " · " + arg : "")) + "\n" + table(list, a.limit) + "\n\n" + dim("  ranked on public evidence · tashan.sh") + "\n");
     return 0;
   }
   if (cmd === "info" || cmd === "add") {

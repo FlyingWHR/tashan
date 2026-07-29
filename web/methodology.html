@@ -14,14 +14,14 @@
   <meta property="og:image" content="https://tashan.sh/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="tashan — the index of AI capabilities, ranked by measured trust">
+  <meta property="og:image:alt" content="tashan — the index of AI capabilities, ranked by the tashan score">
   <meta name="twitter:image" content="https://tashan.sh/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=76">
+  <link rel="stylesheet" href="/css/site.css?v=80">
 </head>
 <body>
   <nav class="nav"><div class="wrap nav__in">
@@ -34,7 +34,7 @@
     <p class="updated" id="updated">public-signal · v2</p>
     <p class="lede">tashan exists because the AI-capability ecosystem has massive supply and almost no honest
       signal. So the first rule is: <strong>we score capabilities on public evidence — and we show every
-      component.</strong> Here is exactly what we count, how Trust is computed, and what we deliberately refuse to do.</p>
+      component.</strong> Here is exactly what we count, how tashan score is computed, and what we deliberately refuse to do.</p>
 
     <div class="callout"><b>No user tracking.</b> tashan installs nothing, instruments no one, and reads no
       private data. Every number here is derived from <b>public sources</b> — the MCP registry, npm, and public
@@ -52,7 +52,7 @@
       <li><b>Adoption</b> — real <span class="mono">npm</span> weekly downloads where a capability is published;
         distinct public repos (owner-deduped) that wire it into a real config otherwise. Downloads <em>alone</em> are
         curiosity — we never rank on them alone (see below).</li>
-      <li><b>Maintenance</b> — release cadence, maintainer count (bus factor), whether the package is deprecated, and
+      <li><b>Upkeep</b> — release cadence, maintainer count (bus factor), whether the package is deprecated, and
         the registry's active/deprecated status. Is someone actually keeping it alive?</li>
       <li><b>Freshness</b> — recency of the latest release or host-repo push. Living code, or quietly abandoned?</li>
       <li><b>Expertise</b> — a language model reads the capability's own README/docs against a fixed rubric and grades
@@ -62,12 +62,12 @@
       <li><b>Co-use</b> — which capabilities get configured alongside it. The shape of real stacks.</li>
     </ul>
 
-    <h2>The Trust score</h2>
+    <h2>The tashan score</h2>
     <p>The single Index number is a <strong>transparent composite</strong> — and every input is shown on the
       capability's page, never hidden:</p>
-    <div class="callout mono" style="font-size:.88rem">Trust = mean(<b>Maintenance</b>, <b>Freshness</b>) × gate(<b>Adoption</b>) × coverage<br>
-      <span style="font-size:.82rem">gate = 0.30 + 0.70 × Adoption⁄100 &nbsp;·&nbsp; coverage discounts a score built on thin evidence</span></div>
-    <p>Maintenance and freshness set the ceiling; <b>adoption decides most of what a capability actually scores</b>.
+    <div class="callout mono" style="font-size:.88rem">tashan score = mean(<b>Upkeep</b>, <b>Freshness</b>) &times; gate(<b>Adoption</b>) &times; coverage<br><span style="font-size:.82rem">gate = 0.30 + 0.70 &times; Adoption&frasl;100 &nbsp;·&nbsp; coverage discounts a score built on thin evidence</span></div>
+    <p class="callout"><b>Why it is called the tashan score, not a trust score.</b> We measure whether people use a capability and whether it is kept alive. We do not audit it: there is no CVE scan, no prompt-injection review, no reading of its code. Calling that "trust" claimed something the arithmetic does not support, and this page had to walk it back a paragraph later. The number is our measurement, on public evidence, and it is named accordingly.</p>
+    <p>Upkeep and freshness set the ceiling; <b>adoption decides most of what a capability actually scores</b>.
       That balance is deliberate and it was wrong before: upkeep and recency both saturate near 100 for any repo
       that was pushed recently, so when the gate floor sat at 0.6 a well-kept capability nobody used still kept 60%
       of the score, and a plugin with 30 stars outranked packages with thousands of weekly downloads. The floor is
@@ -76,11 +76,11 @@
       Capabilities we can't yet measure quality on are shown <b>unrated</b> — plainly marked, never invented. When
       retention and evals land, they'll be <em>separate, labelled</em> scores, never quietly folded into one number.</p>
 
-    <p><b>Missing evidence is not a bad score.</b> Maintenance is scored only across the axes we can actually read for
+    <p><b>Missing evidence is not a bad score.</b> Upkeep is scored only across the axes we can actually read for
       that capability — maintainer count, release cadence, freshness — and rescaled over those, so a capability that
       simply isn't on npm is no longer marked down for metadata that does not exist. It used to be: anything without
       npm was capped at 35/100 however well kept it was, which ranked a 51,000-star plugin pushed yesterday below a
-      package with 422 weekly downloads. Instead, thin evidence discounts <em>Trust</em> in proportion to how much of
+      package with 422 weekly downloads. Instead, thin evidence discounts <em>tashan score</em> in proportion to how much of
       the picture we have, and "we found no adoption signal" is treated no better than a measured-but-low one — absence
       of evidence must never outscore evidence of absence. As we fill in contributor and release data for
       non-npm repositories, that discount shrinks on its own, because the coverage becomes real.</p>
@@ -95,7 +95,7 @@
         so you can always see which of the two you are reading, and the star count belongs to the plugin's own repo,
         never to a marketplace that happens to list it.</li>
       <li><b>We don't rank on downloads alone.</b> A download is curiosity. We use it only as one input to Adoption, and
-        Adoption only <em>gates</em> a score built from maintenance and freshness.</li>
+        Adoption only <em>gates</em> a score built from upkeep and freshness.</li>
       <li><b>We don't take pay-to-rank.</b> There is no promoted slot, no boost, no ad in the Index — now or ever.</li>
       <li><b>We don't launder reviews.</b> Self-reported "5 stars" is the failure mode of every store before us.</li>
       <li><b>We don't re-list a registry and call it usage.</b> A directory entry is supply. We measure demand and upkeep.</li>
@@ -133,7 +133,7 @@
     </div>
     <nav class="footer__col"><p class="footer__h">Explore</p>
       <a href="/">The Index</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a></nav>
-    <nav class="footer__col"><p class="footer__h">Trust</p>
+    <nav class="footer__col"><p class="footer__h">tashan score</p>
       <a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>
     <nav class="footer__col"><p class="footer__h">Sources</p>
       <a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>
@@ -146,8 +146,8 @@
   </div>
 </footer>
 
-  <script src="/js/terminal.js?v=76" defer></script>
-  <script src="/js/site.js?v=76" defer></script>
-  <script src="/js/methodology.js?v=76" defer></script>
+  <script src="/js/terminal.js?v=80" defer></script>
+  <script src="/js/site.js?v=80" defer></script>
+  <script src="/js/methodology.js?v=80" defer></script>
 </body>
 </html>
