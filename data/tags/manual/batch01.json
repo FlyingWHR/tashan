@@ -1,173 +1,167 @@
 {
   "_note": "Graded in session against the rubric in tag_capabilities.py. Ordered by trust, so these are the rows that head the hub pages. Empty lists are deliberate: version-note blurbs, meta-tooling and 'skills across 14 professions' grab-bags serve no single job, and forcing a tag on them is how a taxonomy starts lying.",
   "plugin:mattpocock/skills/mattpocock-skills": [
-    "write-tests",
-    "review-code",
-    "plan-and-scope-work"
+    "test-automation",
+    "code-review",
+    "project-management"
   ],
   "plugin:juliusbrussee/caveman/caveman": [
-    "manage-prompts"
+    "prompt-engineering"
   ],
   "plugin:chromedevtools/chrome-devtools-mcp/chrome-devtools-mcp": [
-    "automate-a-browser",
-    "debug-an-issue",
-    "optimize-performance"
+    "browser-automation",
+    "debugging",
+    "query-optimization"
   ],
   "plugin:pbakaus/impeccable/impeccable": [
-    "design-a-ui",
-    "build-a-web-frontend",
-    "run-a-design-review"
+    "visual-design",
+    "web-development",
+    "design-critique"
   ],
   "plugin:dietrichgebert/ponytail/ponytail": [
-    "implement-a-feature",
-    "refactor-code"
+    "application-development"
   ],
   "plugin:lum1104/understand-anything/understand-anything": [
-    "explore-a-codebase"
+    "software-architecture"
   ],
   "plugin:thedotmack/claude-mem/claude-mem": [
-    "take-and-organize-notes"
+    "knowledge-management"
   ],
   "plugin:mem0ai/mem0/mem0": [
-    "take-and-organize-notes",
-    "build-an-agent"
+    "knowledge-management",
+    "agent-development"
   ],
   "plugin:agricidaniel/claude-seo/claude-seo": [
-    "optimize-for-search",
-    "do-keyword-research"
+    "seo"
   ],
   "plugin:dayuanjiang/next-ai-draw-io/next-ai-drawio": [
-    "design-an-architecture",
-    "generate-images"
+    "software-architecture",
+    "animation"
   ],
   "plugin:huggingface/skills/huggingface-skills": [
-    "fine-tune-a-model",
-    "evaluate-model-output"
+    "model-evaluation"
   ],
   "plugin:mksglu/context-mode/context-mode": [
-    "manage-prompts"
+    "prompt-engineering"
   ],
   "plugin:promptfoo/promptfoo/promptfoo-evals": [
-    "evaluate-model-output"
+    "model-evaluation"
   ],
   "plugin:browser-use/browser-harness/browser-harness": [
-    "automate-a-browser"
+    "browser-automation"
   ],
   "plugin:confident-ai/deepeval/deepeval": [
-    "evaluate-model-output"
+    "model-evaluation"
   ],
   "plugin:jarrodwatts/claude-hud/claude-hud": [
-    "configure-an-agent"
+    "agent-configuration"
   ],
   "plugin:wonderwhy-er/desktopcommandermcp/desktop-commander": [
-    "manage-files-and-storage"
+    "knowledge-management"
   ],
   "plugin:alirezarezvani/claude-skills/playwright-pro": [
-    "write-tests",
-    "automate-a-browser"
+    "test-automation",
+    "browser-automation"
   ],
   "plugin:brainblend-ai/atomic-agents/atomic-agents": [
-    "build-an-agent"
+    "agent-development"
   ],
   "plugin:mvanhorn/last30days-skill/last30days": [
-    "do-market-research",
-    "search-the-web"
+    "market-analysis",
+    "web-research"
   ],
   "plugin:nyldn/claude-octopus/octo": [],
   "plugin:revfactory/harness/harness": [
-    "build-an-agent"
+    "agent-development"
   ],
   "plugin:eventual-inc/daft/daft": [
-    "build-a-data-pipeline"
+    "data-pipelines"
   ],
   "plugin:nvidia/skills/nvidia-skills": [
-    "optimize-operations"
+    "process-automation"
   ],
   "plugin:clidey/whodb/whodb": [
-    "query-a-database",
-    "check-data-quality"
+    "query-optimization",
+    "data-quality"
   ],
   "plugin:cloudflare/skills/cloudflare": [
-    "deploy-a-release",
-    "provision-infrastructure"
+    "infrastructure-and-deployment"
   ],
   "plugin:dathere/qsv/qsv-data-wrangling": [
-    "work-with-spreadsheets",
-    "analyze-a-dataset"
+    "dashboards-and-reporting",
+    "exploratory-data-analysis"
   ],
   "plugin:exa-labs/exa-mcp-server/exa": [
-    "search-the-web",
-    "do-literature-review"
+    "web-research",
+    "literature-review"
   ],
   "plugin:expo/skills/expo": [
-    "build-an-ios-app",
-    "build-an-android-app",
-    "ship-a-mobile-release"
+    "application-development",
+    "infrastructure-and-deployment"
   ],
   "plugin:stripe/ai/stripe": [
-    "build-an-ecommerce-store"
+    "web-development"
   ],
   "plugin:avdlee/swiftui-agent-skill/swiftui-expert": [
-    "build-an-ios-app"
+    "application-development"
   ],
   "plugin:chachamaru127/claude-code-harness/claude-harness": [
-    "automate-a-workflow"
+    "process-automation"
   ],
   "plugin:epoko77-ai/im-not-ai/humanize-korean": [
-    "write-long-form-content",
-    "translate-and-localize"
+    "copywriting",
+    "copy-editing"
   ],
   "plugin:giancarloerra/socraticode/socraticode": [
-    "explore-a-codebase"
+    "software-architecture"
   ],
   "plugin:microsoft/azure-skills/azure": [
-    "provision-infrastructure",
-    "deploy-a-release"
+    "infrastructure-and-deployment"
   ],
   "plugin:atlassian/atlassian-mcp-server/atlassian": [
-    "manage-tasks-and-projects"
+    "project-management"
   ],
   "plugin:cocoindex-io/cocoindex-code/cocoindex-code": [
-    "explore-a-codebase"
+    "software-architecture"
   ],
   "plugin:activeloopai/deeplake-claude-code-plugins/deeplake-hivemind": [
-    "take-and-organize-notes"
+    "knowledge-management"
   ],
   "plugin:activeloopai/hivemind/hivemind": [
-    "take-and-organize-notes"
+    "knowledge-management"
   ],
   "plugin:codeaholicguy/ai-devkit/ai-devkit": [
-    "plan-and-scope-work",
-    "review-code",
-    "write-tests"
+    "project-management",
+    "code-review",
+    "test-automation"
   ],
   "plugin:evanbacon/serve-sim/serve-sim": [
-    "build-an-ios-app"
+    "application-development"
   ],
   "plugin:figma/mcp-server-guide/figma": [
-    "handoff-design-to-code",
-    "design-a-ui"
+    "web-development",
+    "visual-design"
   ],
   "plugin:googlechrome/modern-web-guidance/modern-web-guidance": [
-    "build-a-web-frontend"
+    "web-development"
   ],
   "plugin:kenryu42/claude-code-safety-net/safety-net": [
-    "manage-version-control"
+    "process-automation"
   ],
   "plugin:silverstein/minutes/minutes": [
-    "run-meetings"
+    "knowledge-management"
   ],
   "plugin:actionbook/actionbook/actionbook": [
-    "automate-a-browser",
-    "scrape-the-web"
+    "browser-automation",
+    "web-scraping"
   ],
   "plugin:clickhouse/agent-skills/clickhouse-best-practices": [
-    "query-a-database",
-    "build-a-data-pipeline"
+    "query-optimization",
+    "data-pipelines"
   ],
   "plugin:hyhmrright/brooks-lint/brooks-lint": [
-    "review-code",
-    "refactor-code"
+    "code-review",
+    "application-development"
   ],
   "plugin:mohitagw15856/pm-claude-skills/pm-claude-skills": []
 }

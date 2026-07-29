@@ -1,206 +1,198 @@
 {
   "_note": "Batch 2, graded in session. Same rubric. Note the recurring empty-list shapes: statusline/HUD tools, token-cost optimisers, agent-config linters and 'N skills across M professions' bundles are real software but serve no single job \u2014 tagging them would put noise at the top of hub pages.",
   "plugin:shopify/shopify-ai-toolkit/shopify-ai-toolkit": [
-    "build-an-ecommerce-store"
+    "web-development"
   ],
   "plugin:aklofas/kicad-happy/kicad-happy": [
-    "design-hardware"
+    "hardware-design"
   ],
   "plugin:aminforou/mcp-gsc/search-console-mcp": [
-    "optimize-for-search",
-    "do-keyword-research"
+    "seo"
   ],
   "plugin:cookiy-ai/user-research-skill/cookiy": [
-    "run-user-research",
-    "gather-user-feedback"
+    "user-research"
   ],
   "plugin:earthtojake/text-to-cad/cad": [
-    "model-in-cad",
-    "design-hardware"
+    "cad-modeling",
+    "hardware-design"
   ],
   "plugin:flutter/agent-plugins/dart-flutter": [
-    "build-an-android-app",
-    "build-an-ios-app"
+    "application-development"
   ],
   "plugin:growthxai/output/outputai": [
-    "build-an-agent",
-    "automate-a-workflow"
+    "agent-development",
+    "process-automation"
   ],
   "plugin:nizos/tdd-guard/tdd-guard": [
-    "write-tests"
+    "test-automation"
   ],
   "plugin:codspeedhq/codspeed/codspeed": [
-    "optimize-performance"
+    "query-optimization"
   ],
   "plugin:dekart-xyz/geosql/geosql": [
-    "query-a-database",
-    "analyze-a-dataset"
+    "query-optimization",
+    "exploratory-data-analysis"
   ],
   "plugin:firecrawl/cli/firecrawl": [
-    "scrape-the-web",
-    "search-the-web"
+    "web-scraping",
+    "web-research"
   ],
   "plugin:galaxy-dawn/claude-scholar/claude-scholar": [
-    "do-literature-review",
-    "write-long-form-content"
+    "literature-review",
+    "copywriting"
   ],
   "plugin:jame581/godotprompter/godot-prompter": [
-    "build-game-logic"
+    "application-development"
   ],
   "plugin:joaoh82/rustunnel/rustunnel": [
-    "deploy-a-release"
+    "infrastructure-and-deployment"
   ],
-  "plugin:liammorrow/liftlog/liftlog-plan-builder": [
-    "plan-health-and-training"
-  ],
+  "plugin:liammorrow/liftlog/liftlog-plan-builder": [],
   "plugin:oracle/netsuite-suitecloud-sdk/netsuite-suitecloud": [
-    "implement-a-feature"
+    "application-development"
   ],
   "plugin:quenty/nevermoreengine/nevermore-claude": [
-    "refactor-code"
+    "application-development"
   ],
   "plugin:railwayapp/railway-skills/railway": [
-    "deploy-a-release",
-    "provision-infrastructure",
-    "monitor-and-alert"
+    "infrastructure-and-deployment",
+    "observability"
   ],
   "plugin:shopify/shopify-ai-toolkit/shopify-plugin": [
-    "build-an-ecommerce-store"
+    "web-development"
   ],
   "plugin:spotify/save-to-spotify/save-to-spotify": [
-    "manage-social-media"
+    "content-marketing"
   ],
   "plugin:aaronontheweb/dotnet-skills/dotnet-skills": [
-    "implement-a-feature",
-    "write-tests"
+    "application-development",
+    "test-automation"
   ],
   "plugin:agent-sh/agnix/agnix": [
-    "configure-an-agent"
+    "agent-configuration"
   ],
   "plugin:alexgreensh/token-optimizer/token-optimizer": [
-    "configure-an-agent"
+    "agent-configuration"
   ],
   "plugin:databricks/databricks-agent-skills/databricks": [
-    "build-a-data-pipeline"
+    "data-pipelines"
   ],
   "plugin:jeffallan/claude-skills/fullstack-dev-skills": [],
   "plugin:langfuse/skills/langfuse": [
-    "evaluate-model-output",
-    "manage-prompts"
+    "model-evaluation",
+    "prompt-engineering"
   ],
   "plugin:manuelschipper/nah/nah": [
-    "configure-an-agent"
+    "agent-configuration"
   ],
   "plugin:microsoft/dataverse-skills/dataverse": [
-    "query-a-database"
+    "query-optimization"
   ],
   "plugin:mondaycom/mcp/monday-crm": [
-    "manage-a-crm",
-    "build-a-dashboard"
+    "sales-pipeline",
+    "dashboards-and-reporting"
   ],
   "plugin:product-on-purpose/pm-skills/pm-skills": [
-    "write-a-prd-or-spec",
-    "prioritize-a-roadmap",
-    "gather-user-feedback"
+    "prd-and-specs",
+    "product-strategy",
+    "user-research"
   ],
   "plugin:zapier/zapier-mcp/zapier": [
-    "automate-a-workflow",
-    "integrate-a-third-party-service"
+    "process-automation"
   ],
   "plugin:adobe/skills/adobe-for-creativity": [
-    "generate-images",
-    "edit-video"
+    "animation",
+    "video-editing"
   ],
   "plugin:borghei/claude-skills/praxis-engineering": [
-    "design-an-architecture",
-    "review-code",
-    "deploy-a-release"
+    "software-architecture",
+    "code-review",
+    "infrastructure-and-deployment"
   ],
   "plugin:cosai-oasis/project-codeguard/codeguard-security": [
-    "scan-for-vulnerabilities"
+    "security-review"
   ],
   "plugin:crazyguitar/cppcheatsheet/cppcheatsheet": [
-    "implement-a-feature"
+    "application-development"
   ],
   "plugin:digital-process-tools/claude-remember/remember": [
-    "take-and-organize-notes"
+    "knowledge-management"
   ],
   "plugin:epicgames/unreal-engine-skills-for-claude-code-plugin/unreal-engine-skills-for-claude-code": [
-    "build-game-logic"
+    "application-development"
   ],
   "plugin:gemini-cli-extensions/data-agent-kit-starter-pack/data-agent-kit-starter-pack": [
-    "build-a-data-pipeline",
-    "query-a-database"
+    "data-pipelines",
+    "query-optimization"
   ],
   "plugin:interfacex-co-jp/genshijin/genshijin": [
-    "manage-prompts"
+    "prompt-engineering"
   ],
   "plugin:jaechang-hits/sciagent-skills/sciagent-skills": [
-    "run-scientific-analysis"
+    "scientific-research"
   ],
   "plugin:jordanrendric/claude-video-vision/claude-video-vision": [
-    "edit-video"
+    "video-editing"
   ],
   "plugin:jtydhr88/comfyui-custom-node-skills/comfyui-custom-nodes": [
-    "implement-a-feature"
+    "application-development"
   ],
   "plugin:lithos-ai/motus/motus": [
-    "deploy-a-release",
-    "build-an-agent"
+    "infrastructure-and-deployment",
+    "agent-development"
   ],
   "plugin:mongodb/agent-skills/mongodb": [
-    "query-a-database"
+    "query-optimization"
   ],
   "plugin:sanity-io/agent-toolkit/sanity": [
-    "manage-cms-content"
+    "content-marketing"
   ],
   "plugin:sap/open-ux-tools/sap-fiori-mcp-server": [
-    "build-a-web-frontend"
+    "web-development"
   ],
   "plugin:agenticmail/agenticmail/agenticmail": [
-    "manage-email",
-    "build-an-agent"
+    "process-automation",
+    "agent-development"
   ],
   "plugin:agricidaniel/claude-blog/claude-blog": [
-    "write-long-form-content",
-    "optimize-for-search",
-    "optimize-for-ai-answers"
+    "copywriting",
+    "seo"
   ],
   "plugin:apollographql/skills/apollo-skills": [
-    "build-an-api"
+    "application-development"
   ],
   "plugin:astro-han/claude-lens/claude-lens": [
-    "configure-an-agent"
+    "agent-configuration"
   ],
   "plugin:coderabbitai/skills/coderabbit": [
-    "review-code"
+    "code-review"
   ],
   "plugin:freepeak/leankg/lean-kg": [
-    "explore-a-codebase"
+    "software-architecture"
   ],
   "plugin:getsentry/cli/sentry-cli": [
-    "monitor-and-alert",
-    "investigate-an-incident"
+    "observability",
+    "incident-response"
   ],
   "plugin:ramakay/claude-self-reflect/claude-self-reflect": [
-    "take-and-organize-notes"
+    "knowledge-management"
   ],
   "plugin:servicenow/sdk/servicenow-sdk": [
-    "implement-a-feature",
-    "automate-a-workflow"
+    "application-development",
+    "process-automation"
   ],
   "plugin:tanweai/wooyun-legacy/wooyun-legacy": [
-    "scan-for-vulnerabilities",
-    "threat-model"
+    "security-review",
+    "risk-assessment"
   ],
   "plugin:varnan-tech/opendirectory/opendirectory": [
-    "optimize-for-search",
-    "find-and-qualify-leads"
+    "seo",
+    "sales-pipeline"
   ],
   "plugin:withwoz/wozcode-plugin/wozcode": [
-    "configure-an-agent"
+    "agent-configuration"
   ],
   "plugin:yucchiy/unicli/unicli": [
-    "build-game-logic"
+    "application-development"
   ]
 }

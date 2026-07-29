@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T18:41:57.682888+00:00",
+  "generated_at": "2026-07-29T01:28:15.486853+00:00",
   "method": "public signal: MCP registry + config-adoption + npm quality + LLM expertise-eval (SQLite pipeline)",
   "total_capabilities": 12113,
   "enriched_npm": 1412,
@@ -846,15 +846,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "write-tests",
+          "t": "test-automation",
           "b": "graded"
         },
         {
-          "t": "review-code",
+          "t": "code-review",
           "b": "graded"
         },
         {
-          "t": "plan-and-scope-work",
+          "t": "project-management",
           "b": "graded"
         }
       ],
@@ -910,7 +910,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-prompts",
+          "t": "prompt-engineering",
           "b": "graded"
         }
       ],
@@ -1088,15 +1088,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "design-a-ui",
+          "t": "visual-design",
           "b": "graded"
         },
         {
-          "t": "build-a-web-frontend",
+          "t": "web-development",
           "b": "graded"
         },
         {
-          "t": "run-a-design-review",
+          "t": "design-critique",
           "b": "graded"
         }
       ],
@@ -1276,11 +1276,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "implement-a-feature",
-          "b": "graded"
-        },
-        {
-          "t": "refactor-code",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -1401,7 +1397,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "take-and-organize-notes",
+          "t": "knowledge-management",
           "b": "graded"
         }
       ],
@@ -1457,7 +1453,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "explore-a-codebase",
+          "t": "software-architecture",
           "b": "graded"
         }
       ],
@@ -1646,11 +1642,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "take-and-organize-notes",
+          "t": "knowledge-management",
           "b": "graded"
         },
         {
-          "t": "build-an-agent",
+          "t": "agent-development",
           "b": "graded"
         }
       ],
@@ -1706,11 +1702,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "optimize-for-search",
-          "b": "graded"
-        },
-        {
-          "t": "do-keyword-research",
+          "t": "seo",
           "b": "graded"
         }
       ],
@@ -1769,11 +1761,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "design-an-architecture",
+          "t": "software-architecture",
           "b": "graded"
         },
         {
-          "t": "generate-images",
+          "t": "animation",
           "b": "graded"
         }
       ],
@@ -1829,11 +1821,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "fine-tune-a-model",
-          "b": "graded"
-        },
-        {
-          "t": "evaluate-model-output",
+          "t": "model-evaluation",
           "b": "graded"
         }
       ],
@@ -1889,7 +1877,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-prompts",
+          "t": "prompt-engineering",
           "b": "graded"
         }
       ],
@@ -1945,7 +1933,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "evaluate-model-output",
+          "t": "model-evaluation",
           "b": "graded"
         }
       ],
@@ -2052,7 +2040,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-files-and-storage",
+          "t": "knowledge-management",
           "b": "graded"
         }
       ],
@@ -2108,7 +2096,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "evaluate-model-output",
+          "t": "model-evaluation",
           "b": "graded"
         }
       ],
@@ -2164,7 +2152,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-browser",
+          "t": "browser-automation",
           "b": "graded"
         }
       ],
@@ -2220,7 +2208,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "configure-an-agent",
+          "t": "agent-configuration",
           "b": "graded"
         }
       ],
@@ -2360,7 +2348,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-agent",
+          "t": "agent-development",
           "b": "graded"
         }
       ],
@@ -2416,11 +2404,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "write-tests",
+          "t": "test-automation",
           "b": "graded"
         },
         {
-          "t": "automate-a-browser",
+          "t": "browser-automation",
           "b": "graded"
         }
       ],
@@ -2652,7 +2640,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-agent",
+          "t": "agent-development",
           "b": "graded"
         }
       ],
@@ -2708,11 +2696,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "do-market-research",
+          "t": "market-analysis",
           "b": "graded"
         },
         {
-          "t": "search-the-web",
+          "t": "web-research",
           "b": "graded"
         }
       ],
@@ -2768,7 +2756,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "optimize-operations",
+          "t": "process-automation",
           "b": "graded"
         }
       ],
@@ -2895,7 +2883,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-a-data-pipeline",
+          "t": "data-pipelines",
           "b": "graded"
         }
       ],
@@ -3084,11 +3072,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "deploy-a-release",
-          "b": "graded"
-        },
-        {
-          "t": "provision-infrastructure",
+          "t": "infrastructure-and-deployment",
           "b": "graded"
         }
       ],
@@ -3144,15 +3128,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-ios-app",
+          "t": "application-development",
           "b": "graded"
         },
         {
-          "t": "build-an-android-app",
-          "b": "graded"
-        },
-        {
-          "t": "ship-a-mobile-release",
+          "t": "infrastructure-and-deployment",
           "b": "graded"
         }
       ],
@@ -3208,7 +3188,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-ecommerce-store",
+          "t": "web-development",
           "b": "graded"
         }
       ],
@@ -3337,11 +3317,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "search-the-web",
+          "t": "web-research",
           "b": "graded"
         },
         {
-          "t": "do-literature-review",
+          "t": "literature-review",
           "b": "graded"
         }
       ],
@@ -3400,11 +3380,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "query-a-database",
+          "t": "query-optimization",
           "b": "graded"
         },
         {
-          "t": "check-data-quality",
+          "t": "data-quality",
           "b": "graded"
         }
       ],
@@ -3460,11 +3440,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "work-with-spreadsheets",
+          "t": "dashboards-and-reporting",
           "b": "graded"
         },
         {
-          "t": "analyze-a-dataset",
+          "t": "exploratory-data-analysis",
           "b": "graded"
         }
       ],
@@ -3571,11 +3551,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "provision-infrastructure",
-          "b": "graded"
-        },
-        {
-          "t": "deploy-a-release",
+          "t": "infrastructure-and-deployment",
           "b": "graded"
         }
       ],
@@ -3631,7 +3607,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
+          "t": "process-automation",
           "b": "graded"
         }
       ],
@@ -3687,7 +3663,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "explore-a-codebase",
+          "t": "software-architecture",
           "b": "graded"
         }
       ],
@@ -3751,11 +3727,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-ios-app",
+          "t": "application-development",
           "b": "graded"
         },
         {
-          "t": "optimize-performance",
+          "t": "query-optimization",
           "b": "declared"
         }
       ],
@@ -3811,11 +3787,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "write-long-form-content",
+          "t": "copywriting",
           "b": "graded"
         },
         {
-          "t": "translate-and-localize",
+          "t": "copy-editing",
           "b": "graded"
         }
       ],
@@ -3976,7 +3952,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-tasks-and-projects",
+          "t": "project-management",
           "b": "graded"
         }
       ],
@@ -4039,11 +4015,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "explore-a-codebase",
+          "t": "software-architecture",
           "b": "graded"
         },
         {
-          "t": "build-a-rag-system",
+          "t": "retrieval-systems",
           "b": "declared"
         }
       ],
@@ -4217,11 +4193,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "handoff-design-to-code",
+          "t": "web-development",
           "b": "graded"
         },
         {
-          "t": "design-a-ui",
+          "t": "visual-design",
           "b": "graded"
         }
       ],
@@ -4277,7 +4253,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-a-web-frontend",
+          "t": "web-development",
           "b": "graded"
         }
       ],
@@ -4333,15 +4309,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "plan-and-scope-work",
+          "t": "project-management",
           "b": "graded"
         },
         {
-          "t": "review-code",
+          "t": "code-review",
           "b": "graded"
         },
         {
-          "t": "write-tests",
+          "t": "test-automation",
           "b": "graded"
         }
       ],
@@ -4397,7 +4373,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "take-and-organize-notes",
+          "t": "knowledge-management",
           "b": "graded"
         }
       ],
@@ -4453,7 +4429,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "take-and-organize-notes",
+          "t": "knowledge-management",
           "b": "graded"
         }
       ],
@@ -4509,7 +4485,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-version-control",
+          "t": "process-automation",
           "b": "graded"
         }
       ],
@@ -4565,7 +4541,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-ios-app",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -4621,7 +4597,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "run-meetings",
+          "t": "knowledge-management",
           "b": "graded"
         }
       ],
@@ -4737,11 +4713,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "query-a-database",
+          "t": "query-optimization",
           "b": "graded"
         },
         {
-          "t": "build-a-data-pipeline",
+          "t": "data-pipelines",
           "b": "graded"
         }
       ],
@@ -4797,7 +4773,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-ecommerce-store",
+          "t": "web-development",
           "b": "graded"
         }
       ],
@@ -4925,11 +4901,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "review-code",
+          "t": "code-review",
           "b": "graded"
         },
         {
-          "t": "refactor-code",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -5036,11 +5012,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-browser",
+          "t": "browser-automation",
           "b": "graded"
         },
         {
-          "t": "scrape-the-web",
+          "t": "web-scraping",
           "b": "graded"
         }
       ],
@@ -5096,11 +5072,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-agent",
+          "t": "agent-development",
           "b": "graded"
         },
         {
-          "t": "automate-a-workflow",
+          "t": "process-automation",
           "b": "graded"
         }
       ],
@@ -5156,11 +5132,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "run-user-research",
-          "b": "graded"
-        },
-        {
-          "t": "gather-user-feedback",
+          "t": "user-research",
           "b": "graded"
         }
       ],
@@ -5216,7 +5188,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "design-hardware",
+          "t": "hardware-design",
           "b": "graded"
         }
       ],
@@ -5272,11 +5244,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "optimize-for-search",
-          "b": "graded"
-        },
-        {
-          "t": "do-keyword-research",
+          "t": "seo",
           "b": "graded"
         }
       ],
@@ -5332,7 +5300,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "write-tests",
+          "t": "test-automation",
           "b": "graded"
         }
       ],
@@ -5393,11 +5361,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "model-in-cad",
+          "t": "cad-modeling",
           "b": "graded"
         },
         {
-          "t": "design-hardware",
+          "t": "hardware-design",
           "b": "graded"
         }
       ],
@@ -5460,11 +5428,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-android-app",
-          "b": "graded"
-        },
-        {
-          "t": "build-an-ios-app",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -5693,7 +5657,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "optimize-performance",
+          "t": "query-optimization",
           "b": "graded"
         }
       ],
@@ -5749,7 +5713,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "implement-a-feature",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -5805,15 +5769,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "deploy-a-release",
+          "t": "infrastructure-and-deployment",
           "b": "graded"
         },
         {
-          "t": "provision-infrastructure",
-          "b": "graded"
-        },
-        {
-          "t": "monitor-and-alert",
+          "t": "observability",
           "b": "graded"
         }
       ],
@@ -5869,7 +5829,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-social-media",
+          "t": "content-marketing",
           "b": "graded"
         }
       ],
@@ -5925,11 +5885,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "query-a-database",
+          "t": "query-optimization",
           "b": "graded"
         },
         {
-          "t": "analyze-a-dataset",
+          "t": "exploratory-data-analysis",
           "b": "graded"
         }
       ],
@@ -5985,7 +5945,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-game-logic",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -6041,7 +6001,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "deploy-a-release",
+          "t": "infrastructure-and-deployment",
           "b": "graded"
         }
       ],
@@ -6097,7 +6057,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-ecommerce-store",
+          "t": "web-development",
           "b": "graded"
         }
       ],
@@ -6153,7 +6113,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "refactor-code",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -6207,12 +6167,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "plan-health-and-training",
-          "b": "graded"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-liammorrow-liftlog-liftlog-plan-builder",
       "rated": true
@@ -6265,11 +6220,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "scrape-the-web",
+          "t": "web-scraping",
           "b": "graded"
         },
         {
-          "t": "search-the-web",
+          "t": "web-research",
           "b": "graded"
         }
       ],
@@ -6328,11 +6283,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "do-literature-review",
+          "t": "literature-review",
           "b": "graded"
         },
         {
-          "t": "write-long-form-content",
+          "t": "copywriting",
           "b": "graded"
         }
       ],
@@ -6627,7 +6582,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-a-data-pipeline",
+          "t": "data-pipelines",
           "b": "graded"
         }
       ],
@@ -6683,7 +6638,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "query-a-database",
+          "t": "query-optimization",
           "b": "graded"
         }
       ],
@@ -6739,11 +6694,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
-          "b": "graded"
-        },
-        {
-          "t": "integrate-a-third-party-service",
+          "t": "process-automation",
           "b": "graded"
         }
       ],
@@ -6799,11 +6750,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "evaluate-model-output",
+          "t": "model-evaluation",
           "b": "graded"
         },
         {
-          "t": "manage-prompts",
+          "t": "prompt-engineering",
           "b": "graded"
         }
       ],
@@ -6910,11 +6861,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-a-crm",
+          "t": "sales-pipeline",
           "b": "graded"
         },
         {
-          "t": "build-a-dashboard",
+          "t": "dashboards-and-reporting",
           "b": "graded"
         }
       ],
@@ -6970,7 +6921,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "configure-an-agent",
+          "t": "agent-configuration",
           "b": "graded"
         }
       ],
@@ -7077,7 +7028,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "configure-an-agent",
+          "t": "agent-configuration",
           "b": "graded"
         }
       ],
@@ -7133,15 +7084,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "write-a-prd-or-spec",
+          "t": "prd-and-specs",
           "b": "graded"
         },
         {
-          "t": "prioritize-a-roadmap",
+          "t": "product-strategy",
           "b": "graded"
         },
         {
-          "t": "gather-user-feedback",
+          "t": "user-research",
           "b": "graded"
         }
       ],
@@ -7197,11 +7148,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "implement-a-feature",
+          "t": "application-development",
           "b": "graded"
         },
         {
-          "t": "write-tests",
+          "t": "test-automation",
           "b": "graded"
         }
       ],
@@ -7257,7 +7208,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "configure-an-agent",
+          "t": "agent-configuration",
           "b": "graded"
         }
       ],
@@ -7415,11 +7366,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "generate-images",
+          "t": "animation",
           "b": "graded"
         },
         {
-          "t": "edit-video",
+          "t": "video-editing",
           "b": "graded"
         }
       ],
@@ -7475,11 +7426,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-a-data-pipeline",
+          "t": "data-pipelines",
           "b": "graded"
         },
         {
-          "t": "query-a-database",
+          "t": "query-optimization",
           "b": "graded"
         }
       ],
@@ -7535,7 +7486,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "query-a-database",
+          "t": "query-optimization",
           "b": "graded"
         }
       ],
@@ -7591,7 +7542,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "take-and-organize-notes",
+          "t": "knowledge-management",
           "b": "graded"
         }
       ],
@@ -7647,7 +7598,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-cms-content",
+          "t": "content-marketing",
           "b": "graded"
         }
       ],
@@ -7703,7 +7654,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-a-web-frontend",
+          "t": "web-development",
           "b": "graded"
         }
       ],
@@ -7759,7 +7710,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-game-logic",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -7875,7 +7826,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "edit-video",
+          "t": "video-editing",
           "b": "graded"
         }
       ],
@@ -7931,7 +7882,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-prompts",
+          "t": "prompt-engineering",
           "b": "graded"
         }
       ],
@@ -7987,11 +7938,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "deploy-a-release",
+          "t": "infrastructure-and-deployment",
           "b": "graded"
         },
         {
-          "t": "build-an-agent",
+          "t": "agent-development",
           "b": "graded"
         }
       ],
@@ -8047,15 +7998,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "design-an-architecture",
+          "t": "software-architecture",
           "b": "graded"
         },
         {
-          "t": "review-code",
+          "t": "code-review",
           "b": "graded"
         },
         {
-          "t": "deploy-a-release",
+          "t": "infrastructure-and-deployment",
           "b": "graded"
         }
       ],
@@ -8111,7 +8062,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "run-scientific-analysis",
+          "t": "scientific-research",
           "b": "graded"
         }
       ],
@@ -8167,7 +8118,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "implement-a-feature",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -8223,7 +8174,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "implement-a-feature",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -8283,11 +8234,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "scan-for-vulnerabilities",
+          "t": "security-review",
           "b": "graded"
         },
         {
-          "t": "review-code",
+          "t": "code-review",
           "b": "declared"
         }
       ],
@@ -8655,7 +8606,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-api",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -8711,7 +8662,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "review-code",
+          "t": "code-review",
           "b": "graded"
         }
       ],
@@ -8767,11 +8718,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "monitor-and-alert",
+          "t": "observability",
           "b": "graded"
         },
         {
-          "t": "investigate-an-incident",
+          "t": "incident-response",
           "b": "graded"
         }
       ],
@@ -8827,11 +8778,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "implement-a-feature",
+          "t": "application-development",
           "b": "graded"
         },
         {
-          "t": "automate-a-workflow",
+          "t": "process-automation",
           "b": "graded"
         }
       ],
@@ -8887,11 +8838,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
+          "t": "process-automation",
           "b": "graded"
         },
         {
-          "t": "build-an-agent",
+          "t": "agent-development",
           "b": "graded"
         }
       ],
@@ -8947,15 +8898,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "write-long-form-content",
+          "t": "copywriting",
           "b": "graded"
         },
         {
-          "t": "optimize-for-search",
-          "b": "graded"
-        },
-        {
-          "t": "optimize-for-ai-answers",
+          "t": "seo",
           "b": "graded"
         }
       ],
@@ -9011,7 +8958,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "configure-an-agent",
+          "t": "agent-configuration",
           "b": "graded"
         }
       ],
@@ -9067,7 +9014,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "take-and-organize-notes",
+          "t": "knowledge-management",
           "b": "graded"
         }
       ],
@@ -9123,7 +9070,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "explore-a-codebase",
+          "t": "software-architecture",
           "b": "graded"
         }
       ],
@@ -9179,11 +9126,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "optimize-for-search",
+          "t": "seo",
           "b": "graded"
         },
         {
-          "t": "find-and-qualify-leads",
+          "t": "sales-pipeline",
           "b": "graded"
         }
       ],
@@ -9239,7 +9186,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "configure-an-agent",
+          "t": "agent-configuration",
           "b": "graded"
         }
       ],
@@ -9295,11 +9242,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "scan-for-vulnerabilities",
+          "t": "security-review",
           "b": "graded"
         },
         {
-          "t": "threat-model",
+          "t": "risk-assessment",
           "b": "graded"
         }
       ],
@@ -9355,7 +9302,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-game-logic",
+          "t": "application-development",
           "b": "graded"
         }
       ],
@@ -12909,7 +12856,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-prompts",
+          "t": "prompt-engineering",
           "b": "declared"
         }
       ],
@@ -17263,7 +17210,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "copywriting",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-yanhua1010-self-media-content-workflow-self-media-suite",
       "rated": true
@@ -19905,7 +19857,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "monitor-and-alert",
+          "t": "observability",
           "b": "declared"
         }
       ],
@@ -20071,7 +20023,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "find-and-qualify-leads",
+          "t": "web-development",
           "b": "declared"
         }
       ],
@@ -20184,7 +20136,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-a-web-frontend",
+          "t": "web-development",
+          "b": "declared"
+        },
+        {
+          "t": "agent-development",
           "b": "declared"
         }
       ],
@@ -23104,7 +23060,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "contract-review",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-smucclaw-l4-ide-l4-computational-law",
       "rated": true
@@ -25076,11 +25037,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-a-dashboard",
+          "t": "dashboards-and-reporting",
           "b": "declared"
         },
         {
-          "t": "design-an-architecture",
+          "t": "software-architecture",
           "b": "declared"
         }
       ],
@@ -26282,15 +26243,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
-          "b": "declared"
-        },
-        {
-          "t": "review-code",
-          "b": "declared"
-        },
-        {
-          "t": "write-documentation",
+          "t": "code-review",
           "b": "declared"
         }
       ],
@@ -42802,7 +42755,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
+          "t": "infrastructure-and-deployment",
           "b": "declared"
         }
       ],
@@ -42871,7 +42824,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
+          "t": "infrastructure-and-deployment",
           "b": "declared"
         }
       ],
@@ -42940,7 +42893,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
+          "t": "infrastructure-and-deployment",
           "b": "declared"
         }
       ],
@@ -43009,7 +42962,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
+          "t": "infrastructure-and-deployment",
           "b": "declared"
         }
       ],
@@ -43078,7 +43031,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
+          "t": "infrastructure-and-deployment",
           "b": "declared"
         }
       ],
@@ -49255,7 +49208,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "agent-development",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-tellang-triflux-triflux",
       "rated": true
@@ -54522,12 +54480,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "write-documentation",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-dougstanford-living-manual-living-manual",
       "rated": true
@@ -60443,15 +60396,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-a-web-frontend",
+          "t": "web-development",
           "b": "declared"
         },
         {
-          "t": "query-a-database",
-          "b": "declared"
-        },
-        {
-          "t": "deploy-a-release",
+          "t": "infrastructure-and-deployment",
           "b": "declared"
         }
       ],
@@ -65555,20 +65504,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "fine-tune-a-model",
-          "b": "declared"
-        },
-        {
-          "t": "analyze-a-dataset",
-          "b": "declared"
-        },
-        {
-          "t": "automate-a-workflow",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-yeachan-heo-my-jogyo-gyoshu",
       "rated": true
@@ -73529,11 +73465,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "write-tests",
+          "t": "test-automation",
           "b": "declared"
         },
         {
-          "t": "review-code",
+          "t": "code-review",
           "b": "declared"
         }
       ],
@@ -73595,11 +73531,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "write-tests",
+          "t": "test-automation",
           "b": "declared"
         },
         {
-          "t": "review-code",
+          "t": "code-review",
           "b": "declared"
         }
       ],
@@ -73663,7 +73599,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "handle-privacy-requests",
+          "t": "financial-modeling",
           "b": "declared"
         }
       ],
@@ -73725,7 +73661,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "design-an-architecture",
+          "t": "software-architecture",
           "b": "declared"
         }
       ],
@@ -73887,12 +73823,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "do-literature-review",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-eric-tramel-arx-arx",
       "rated": true
@@ -83034,7 +82965,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
+          "t": "browser-automation",
           "b": "declared"
         }
       ],
@@ -97897,16 +97828,7 @@
       "single_maintainer": 1,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "take-and-organize-notes",
-          "b": "declared"
-        },
-        {
-          "t": "work-with-spreadsheets",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-zheng-phy-obsidian-md-fixer-obsidian-md-fixer",
       "rated": true
@@ -98988,7 +98910,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "review-code",
+          "t": "code-review",
+          "b": "declared"
+        },
+        {
+          "t": "knowledge-management",
           "b": "declared"
         }
       ],
@@ -99051,11 +98977,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "implement-a-feature",
+          "t": "application-development",
           "b": "declared"
         },
         {
-          "t": "tutor-and-explain",
+          "t": "training-material",
           "b": "declared"
         }
       ],
@@ -103153,7 +103079,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "generate-video",
+          "t": "animation",
+          "b": "declared"
+        },
+        {
+          "t": "video-editing",
+          "b": "declared"
+        },
+        {
+          "t": "training-material",
           "b": "declared"
         }
       ],
@@ -103266,11 +103200,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-secrets-and-access",
-          "b": "declared"
-        },
-        {
-          "t": "automate-a-workflow",
+          "t": "security-review",
           "b": "declared"
         }
       ],
@@ -103334,11 +103264,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "take-and-organize-notes",
+          "t": "agent-development",
           "b": "declared"
         },
         {
-          "t": "handle-privacy-requests",
+          "t": "knowledge-management",
+          "b": "declared"
+        },
+        {
+          "t": "regulatory-compliance",
           "b": "declared"
         }
       ],
@@ -111215,7 +111149,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "implement-a-feature",
+          "t": "application-development",
           "b": "declared"
         }
       ],
@@ -111484,15 +111418,19 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
+          "t": "agent-development",
           "b": "declared"
         },
         {
-          "t": "write-tests",
+          "t": "test-automation",
           "b": "declared"
         },
         {
-          "t": "review-code",
+          "t": "code-review",
+          "b": "declared"
+        },
+        {
+          "t": "security-review",
           "b": "declared"
         }
       ],
@@ -112829,7 +112767,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "bookkeeping",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-appcharge-appcharge-skills-appcharge-skills",
       "rated": true
@@ -112883,12 +112826,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "manage-email",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-hangox-thunderbird-skill-cli-thunderbird",
       "rated": true
@@ -112997,7 +112935,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-tasks-and-projects",
+          "t": "project-management",
           "b": "declared"
         }
       ],
@@ -121561,7 +121499,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-ecommerce-store",
+          "t": "web-development",
           "b": "declared"
         }
       ],
@@ -121622,7 +121560,12 @@
       "single_maintainer": 1,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "agent-development",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-yaleh-baime-baime",
       "rated": true
@@ -121735,11 +121678,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-browser",
+          "t": "browser-automation",
           "b": "declared"
         },
         {
-          "t": "audit-accessibility",
+          "t": "visual-design",
+          "b": "declared"
+        },
+        {
+          "t": "test-automation",
           "b": "declared"
         }
       ],
@@ -121855,15 +121802,19 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
+          "t": "agent-development",
           "b": "declared"
         },
         {
-          "t": "write-tests",
+          "t": "test-automation",
           "b": "declared"
         },
         {
-          "t": "review-code",
+          "t": "code-review",
+          "b": "declared"
+        },
+        {
+          "t": "security-review",
           "b": "declared"
         }
       ],
@@ -122079,15 +122030,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
-          "b": "declared"
-        },
-        {
-          "t": "write-tests",
-          "b": "declared"
-        },
-        {
-          "t": "optimize-performance",
+          "t": "test-automation",
           "b": "declared"
         }
       ],
@@ -122148,11 +122091,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
-          "b": "declared"
-        },
-        {
-          "t": "build-an-api",
+          "t": "application-development",
           "b": "declared"
         }
       ],
@@ -122212,7 +122151,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
+          "t": "product-strategy",
           "b": "declared"
         }
       ],
@@ -122274,15 +122213,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
-          "b": "declared"
-        },
-        {
-          "t": "check-compliance",
-          "b": "declared"
-        },
-        {
-          "t": "handle-privacy-requests",
+          "t": "regulatory-compliance",
           "b": "declared"
         }
       ],
@@ -122343,19 +122274,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
+          "t": "exploratory-data-analysis",
           "b": "declared"
         },
         {
-          "t": "analyze-a-dataset",
+          "t": "observability",
           "b": "declared"
         },
         {
-          "t": "monitor-and-alert",
-          "b": "declared"
-        },
-        {
-          "t": "build-a-dashboard",
+          "t": "dashboards-and-reporting",
           "b": "declared"
         }
       ],
@@ -122416,7 +122343,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
+          "t": "copywriting",
+          "b": "declared"
+        },
+        {
+          "t": "content-marketing",
           "b": "declared"
         }
       ],
@@ -122478,11 +122409,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
-          "b": "declared"
-        },
-        {
-          "t": "check-compliance",
+          "t": "audit",
           "b": "declared"
         }
       ],
@@ -122541,12 +122468,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "manage-email",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-sendx-email-skills-hardbounce-unlock",
       "rated": true
@@ -122604,7 +122526,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
+          "t": "security-review",
           "b": "declared"
         }
       ],
@@ -122665,7 +122587,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
+          "t": "product-strategy",
           "b": "declared"
         }
       ],
@@ -122727,7 +122649,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
+          "t": "sales-pipeline",
           "b": "declared"
         }
       ],
@@ -122786,12 +122708,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "manage-email",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-sendx-email-skills-smart-segmentation",
       "rated": true
@@ -122847,16 +122764,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "manage-email",
-          "b": "declared"
-        },
-        {
-          "t": "automate-a-workflow",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-sendx-email-skills-workflow-automation",
       "rated": true
@@ -123018,7 +122926,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "review-code",
+          "t": "code-review",
           "b": "declared"
         }
       ],
@@ -123182,11 +123090,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-version-control",
+          "t": "data-pipelines",
           "b": "declared"
         },
         {
-          "t": "write-tests",
+          "t": "agent-development",
+          "b": "declared"
+        },
+        {
+          "t": "test-automation",
           "b": "declared"
         }
       ],
@@ -123295,12 +123207,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "write-marketing-copy",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-agentchannels-agentchannels-agentchannels",
       "rated": true
@@ -131439,16 +131346,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "handoff-design-to-code",
-          "b": "declared"
-        },
-        {
-          "t": "build-an-agent",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-antivirusakash-cursor-plugin-cc-cursor",
       "rated": true
@@ -131860,7 +131758,12 @@
       "single_maintainer": 1,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "code-review",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-andrewlau624-mimic-mimic",
       "rated": true
@@ -132639,7 +132542,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "project-management",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-manutej-meta-suite-meta-suite",
       "rated": true
@@ -132699,16 +132607,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "fact-check",
-          "b": "declared"
-        },
-        {
-          "t": "do-literature-review",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-kgraph57-evidentia-evidentia",
       "rated": true
@@ -142163,11 +142062,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "find-and-qualify-leads",
-          "b": "declared"
-        },
-        {
-          "t": "manage-a-crm",
+          "t": "sales-pipeline",
           "b": "declared"
         }
       ],
@@ -142993,7 +142888,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "analyze-a-dataset",
+          "t": "exploratory-data-analysis",
           "b": "declared"
         }
       ],
@@ -143052,12 +142947,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "manage-files-and-storage",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-claude-contrib-claude-services-filesystem",
       "rated": true
@@ -143115,11 +143005,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-browser",
-          "b": "declared"
-        },
-        {
-          "t": "automate-a-workflow",
+          "t": "browser-automation",
           "b": "declared"
         }
       ],
@@ -143540,7 +143426,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "bookkeeping",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-straddleio-ai-straddle",
       "rated": true
@@ -143599,7 +143490,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "audit-accessibility",
+          "t": "visual-design",
+          "b": "declared"
+        },
+        {
+          "t": "security-review",
           "b": "declared"
         }
       ],
@@ -150469,7 +150364,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-prompts",
+          "t": "security-review",
+          "b": "declared"
+        },
+        {
+          "t": "prompt-engineering",
           "b": "declared"
         }
       ],
@@ -155498,19 +155397,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "take-and-organize-notes",
+          "t": "knowledge-management",
           "b": "declared"
         },
         {
-          "t": "tutor-and-explain",
+          "t": "training-material",
           "b": "declared"
         },
         {
-          "t": "automate-a-workflow",
-          "b": "declared"
-        },
-        {
-          "t": "monitor-and-alert",
+          "t": "observability",
           "b": "declared"
         }
       ],
@@ -161758,15 +161653,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-ios-app",
+          "t": "test-automation",
           "b": "declared"
         },
         {
-          "t": "write-tests",
-          "b": "declared"
-        },
-        {
-          "t": "optimize-performance",
+          "t": "query-optimization",
           "b": "declared"
         }
       ],
@@ -162439,7 +162330,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-agent",
+          "t": "agent-development",
           "b": "declared"
         }
       ],
@@ -171763,7 +171654,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
+          "t": "debugging",
           "b": "declared"
         }
       ],
@@ -172030,7 +171921,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "write-long-form-content",
+          "t": "copywriting",
           "b": "declared"
         }
       ],
@@ -172448,11 +172339,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-browser",
-          "b": "declared"
-        },
-        {
-          "t": "manage-cms-content",
+          "t": "browser-automation",
           "b": "declared"
         }
       ],
@@ -172514,11 +172401,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "deploy-a-release",
+          "t": "code-review",
           "b": "declared"
         },
         {
-          "t": "review-code",
+          "t": "security-review",
           "b": "declared"
         }
       ],
@@ -173144,11 +173031,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-game-logic",
-          "b": "declared"
-        },
-        {
-          "t": "write-documentation",
+          "t": "technical-documentation",
           "b": "declared"
         }
       ],
@@ -173423,15 +173306,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "write-tests",
+          "t": "security-review",
           "b": "declared"
         },
         {
-          "t": "do-market-research",
+          "t": "test-automation",
           "b": "declared"
         },
         {
-          "t": "check-compliance",
+          "t": "regulatory-compliance",
           "b": "declared"
         }
       ],
@@ -181756,7 +181639,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-agent",
+          "t": "agent-development",
           "b": "declared"
         }
       ],
@@ -181971,7 +181854,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "review-code",
+          "t": "code-review",
           "b": "declared"
         }
       ],
@@ -185373,7 +185256,12 @@
       "single_maintainer": 1,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "security-review",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-almanax-ai-almanax-security-plugin-almanax-security",
       "rated": true
@@ -193032,7 +192920,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "review-code",
+          "t": "code-review",
           "b": "declared"
         }
       ],
@@ -193707,19 +193595,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-email",
-          "b": "declared"
-        },
-        {
-          "t": "work-with-spreadsheets",
-          "b": "declared"
-        },
-        {
-          "t": "automate-a-workflow",
-          "b": "declared"
-        },
-        {
-          "t": "investigate-an-incident",
+          "t": "incident-response",
           "b": "declared"
         }
       ],
@@ -193881,7 +193757,16 @@
       "single_maintainer": 1,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "project-management",
+          "b": "declared"
+        },
+        {
+          "t": "agent-development",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-cfarvidson-sapling-sapling",
       "rated": true
@@ -211377,7 +211262,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "manage-tasks-and-projects",
+          "t": "project-management",
           "b": "declared"
         }
       ],
@@ -212915,20 +212800,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "manage-version-control",
-          "b": "declared"
-        },
-        {
-          "t": "write-documentation",
-          "b": "declared"
-        },
-        {
-          "t": "repurpose-content",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-matthewkhouzam-nn-skill-new-and-noteworthy",
       "rated": true
@@ -213493,12 +213365,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "automate-a-workflow",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-tommaone-claude-skills-turtleman",
       "rated": true
@@ -213553,7 +213420,16 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "agent-development",
+          "b": "declared"
+        },
+        {
+          "t": "project-management",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-tommaone-claude-skills-splinter",
       "rated": true
@@ -213610,7 +213486,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "write-a-prd-or-spec",
+          "t": "prd-and-specs",
           "b": "declared"
         }
       ],
@@ -213670,7 +213546,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "design-an-architecture",
+          "t": "software-architecture",
+          "b": "declared"
+        },
+        {
+          "t": "project-management",
           "b": "declared"
         }
       ],
@@ -213728,7 +213608,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "application-development",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-tommaone-claude-skills-donatello",
       "rated": true
@@ -213785,7 +213670,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "run-a-design-review",
+          "t": "code-review",
+          "b": "declared"
+        },
+        {
+          "t": "design-critique",
           "b": "declared"
         }
       ],
@@ -213899,7 +213788,12 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [],
+      "tasks": [
+        {
+          "t": "code-review",
+          "b": "declared"
+        }
+      ],
       "official": null,
       "slug": "plugin-tommaone-claude-skills-shredder",
       "rated": true
@@ -214469,11 +214363,11 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
+          "t": "risk-assessment",
           "b": "declared"
         },
         {
-          "t": "threat-model",
+          "t": "knowledge-management",
           "b": "declared"
         }
       ],
@@ -216215,12 +216109,7 @@
       "single_maintainer": 1,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "automate-a-workflow",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-saifullahsaeed-claude-issues-claude-issues",
       "rated": true
@@ -217913,16 +217802,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "automate-a-workflow",
-          "b": "declared"
-        },
-        {
-          "t": "monitor-and-alert",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-lover0ne-devstuff-skilltrace",
       "rated": true
@@ -217977,12 +217857,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "automate-a-workflow",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-lover0ne-devstuff-skillforge",
       "rated": true
@@ -232750,12 +232625,7 @@
       "single_maintainer": 1,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "manage-version-control",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-tjboudreaux-cc-plugin-perforce-perforce",
       "rated": true
@@ -234956,11 +234826,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "review-code",
-          "b": "declared"
-        },
-        {
-          "t": "write-a-prd-or-spec",
+          "t": "code-review",
           "b": "declared"
         }
       ],
@@ -235122,16 +234988,7 @@
       "single_maintainer": 0,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "automate-a-workflow",
-          "b": "declared"
-        },
-        {
-          "t": "migrate-or-upgrade",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-gtpgg1013-port-saver-port-saver",
       "rated": true
@@ -245741,12 +245598,7 @@
       "single_maintainer": 1,
       "discord_url": null,
       "gh_homepage": null,
-      "tasks": [
-        {
-          "t": "analyze-a-dataset",
-          "b": "declared"
-        }
-      ],
+      "tasks": [],
       "official": null,
       "slug": "plugin-ab604-claude-code-r-skills-r-skills",
       "rated": true
@@ -246630,11 +246482,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "automate-a-workflow",
-          "b": "declared"
-        },
-        {
-          "t": "write-a-prd-or-spec",
+          "t": "prd-and-specs",
           "b": "declared"
         }
       ],
@@ -253731,11 +253579,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "provision-infrastructure",
-          "b": "declared"
-        },
-        {
-          "t": "design-an-architecture",
+          "t": "software-architecture",
           "b": "declared"
         }
       ],
@@ -254158,19 +254002,19 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "build-an-ios-app",
+          "t": "software-architecture",
           "b": "declared"
         },
         {
-          "t": "design-an-architecture",
+          "t": "code-review",
           "b": "declared"
         },
         {
-          "t": "review-code",
+          "t": "query-optimization",
           "b": "declared"
         },
         {
-          "t": "optimize-performance",
+          "t": "knowledge-management",
           "b": "declared"
         }
       ],
@@ -265210,11 +265054,7 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "prioritize-a-roadmap",
-          "b": "declared"
-        },
-        {
-          "t": "manage-tasks-and-projects",
+          "t": "project-management",
           "b": "declared"
         }
       ],
@@ -270593,7 +270433,15 @@
       "gh_homepage": null,
       "tasks": [
         {
-          "t": "check-compliance",
+          "t": "regulatory-compliance",
+          "b": "declared"
+        },
+        {
+          "t": "security-review",
+          "b": "declared"
+        },
+        {
+          "t": "audit",
           "b": "declared"
         }
       ],
