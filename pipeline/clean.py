@@ -27,7 +27,13 @@ RULES = [
                                      r"|&&|\|\||^\./|^\.\./|\$\{")),
     ("script/file",       re.compile(r"\.(jar|exe|dll|bat|cmd|ps1|ledger|log|txt)$", re.I)),
     ("bare url",          re.compile(r"^https?://")),
-    ("placeholder path",  re.compile(r"/path/to/|your[-_]?(project|path|dir)|xxxx|<[^>]+>", re.I)),
+    ("placeholder path",  re.compile(r"/path/to/|your[-_]?(project|path|dir|username|name|org|repo)"
+                                     r"|xxxx|<[^>]+>", re.I)),
+    # A one-character name is never a published artifact. These were Windows drive letters: a volume
+    # mount (`-v C:/Users/me/data:/data`) parsed as the image, leaving `docker:C` and `docker:D` in the
+    # store. The parser no longer produces them (see scraper/scrape.py + tests/test_scrape.py); this
+    # sweeps the ones already written.
+    ("single character",  re.compile(r"^.$")),
 ]
 
 

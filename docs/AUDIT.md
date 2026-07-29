@@ -2,6 +2,9 @@
 
 Written to be useful, not encouraging. Evidence from the live database and repo, not from the plan.
 
+> **Update, same day: §1 is fixed.** See the "Fixed" block at the end of §1 for the measured result and
+> what it cost. Everything else below stands as written.
+
 **Verdict up front: this is a strong data asset, a credible position, and not yet a business.** The
 engineering is genuinely ahead of most of the field. Revenue infrastructure is at zero, the headline
 number does not discriminate, and there is no evidence any user wants this yet because nobody has ever
@@ -38,6 +41,48 @@ is correct; compression into a 12-point band is not.
 **Fix, in order:** report the score as a *percentile or grade band* alongside the raw number, or
 re-spread the scale so the middle of the field sits near 50. Do this before deploy — a public number is
 much harder to re-baseline afterwards, and every badge already in the wild would shift.
+
+### Fixed — 2026-07-29
+
+Diagnosis above was half right. The gate is the compressor, but not because `GATE_FLOOR` overshot: the
+real cause is that **a capability with no adoption evidence has `gate == 0.30`, capping it at raw 27/100
+however well kept it is — and 38% of the corpus (2,361 of 6,200) has neither a download count nor a star
+count.** More than a third of the index was structurally incapable of exceeding 27. Raising the floor
+would fix the range and re-break the ranking the floor sweep exists to protect, so the two jobs were
+separated instead:
+
+1. **Adoption anchors are now absolute, not the corpus max** (`DL_FULL` / `STAR_FULL` / `REACH_FULL`).
+   Log-normalising against the largest row put the median at the bottom of the scale, and meant one new
+   2M-download package silently restated every badge already minted. Worth doing, but on its own it moved
+   p50 by 2 points — it fixes the top of the range and badge stability, not the band.
+2. **A fixed, strictly order-preserving calibration** (`_calibrate`, knee at raw 50 → 68) stretches the
+   dense lower field onto the published scale. Because it is monotone it *cannot* reorder two
+   capabilities, so no inversion killed by an earlier sweep can come back — asserted in
+   `tests/test_score.py`, and every candidate in the sweep was checked for zero inversions.
+
+| percentile | before | after |
+|---|---|---|
+| p25 | 20 | **28** |
+| p50 | 27 | **39** |
+| p75 | 32 | **46** |
+| p90 | 39 | **58** |
+| p99 | 56 | **76** |
+| IQR width | 12 | **18** |
+| scoring below 50 | 98% | **81%** |
+| scoring 80+ | 4 | **39** |
+
+Deliberately *not* taken all the way to the audit's "median near 50": half this corpus has no usage
+evidence at all, and a median of 50 would claim we think half of it is proven. Spread stops at 30 points
+(p90−p25) for the same reason — past that the map manufactures distinctions the evidence does not
+support. **The remaining flatness is an evidence problem, not an arithmetic one** — it is §4 and §5 of
+this document, and it is fixed by grading expertise and measuring more axes, not by tuning the curve.
+
+Two side effects worth recording. `capability.js`'s verdict thresholds (80 / 62) were written for the
+old 60–100 band and had gone nearly dead — under the old scale essentially every capability page read
+"Weigh the evidence". They now fire as designed (8.3% "Worth a look", 0.7% "A safe default") and needed
+no edit. And the `trust` → `tashan_score` column rename had left three scripts querying a column that no
+longer exists — `gen_badges.py` (crashing the site build), `fetch_readmes.py` and `classify_prep.py`
+(both silently broken, and both feed the expertise work §4 calls the highest-leverage thing here).
 
 ## 2. Monetization: zero infrastructure, and the free tier promises what does not exist
 
@@ -114,7 +159,7 @@ genuinely unique asset and it is the smallest one.
 
 | Risk | Severity | State |
 |---|---|---|
-| Score does not discriminate (§1) | **High** | Unaddressed; fix before deploy |
+| Score does not discriminate (§1) | **High** | **Fixed 2026-07-29** — absolute anchors + order-preserving calibration; p50 27→39, IQR 12→18 |
 | No payment/auth/backend (§2) | **High** | Unbuilt; blocks all revenue |
 | Free tier advertises unbuilt features | **High** | Live on the site now |
 | Anthropic ships install telemetry | Medium | Mitigated only by retention + expertise |
@@ -125,7 +170,7 @@ genuinely unique asset and it is the smallest one.
 ## 8. What I would do, in order
 
 1. **Deploy.** Nothing here has ever met a user. Every judgement above is theory until it ships.
-2. **Fix the score distribution** — before badges spread a number that would need re-baselining.
+2. ~~**Fix the score distribution**~~ — done 2026-07-29, before deploy, as required.
 3. **Cut the pricing page back to what exists.** Say "in development" honestly or remove the tier. A
    neutrality product cannot afford to overstate its own features.
 4. **Point the grader fleet at expertise.** It is the defensible signal and the machinery is proven.

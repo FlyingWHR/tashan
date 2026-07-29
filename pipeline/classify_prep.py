@@ -10,7 +10,7 @@ os.makedirs(OUT, exist_ok=True)
 
 con = sqlite3.connect(DB)
 rows = con.execute("SELECT id,name,kind,title,description,npm_pkg,source_repo,co_used FROM capabilities "
-                   "WHERE trust IS NOT NULL ORDER BY trust DESC").fetchall()
+                   "WHERE tashan_score IS NOT NULL ORDER BY tashan_score DESC").fetchall()
 man = []
 for cid, name, kind, title, desc, pkg, repo, co in rows:
     cou = []

@@ -23,8 +23,8 @@ def raw(repo, path):
 
 con = sqlite3.connect(DB)
 rows = con.execute("SELECT id,name,source_repo,npm_pkg,description FROM capabilities "
-                   "WHERE trust IS NOT NULL AND source_repo IS NOT NULL "
-                   "ORDER BY trust DESC LIMIT ?", (TOP_N,)).fetchall()
+                   "WHERE tashan_score IS NOT NULL AND source_repo IS NOT NULL "
+                   "ORDER BY tashan_score DESC LIMIT ?", (TOP_N,)).fetchall()
 man = []
 for cid, name, repo, pkg, desc in rows:
     # try common README locations

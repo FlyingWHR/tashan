@@ -65,7 +65,7 @@
     <h2>The tashan score</h2>
     <p>The single Index number is a <strong>transparent composite</strong> — and every input is shown on the
       capability's page, never hidden:</p>
-    <div class="callout mono" style="font-size:.88rem">tashan score = mean(<b>Upkeep</b>, <b>Freshness</b>) &times; gate(<b>Adoption</b>) &times; coverage<br><span style="font-size:.82rem">gate = 0.30 + 0.70 &times; Adoption&frasl;100 &nbsp;·&nbsp; coverage discounts a score built on thin evidence</span></div>
+    <div class="callout mono" style="font-size:.88rem">raw = mean(<b>Upkeep</b>, <b>Freshness</b>) &times; gate(<b>Adoption</b>) &times; coverage<br>tashan score = calibrate(raw)<br><span style="font-size:.82rem">gate = 0.30 + 0.70 &times; Adoption&frasl;100 &nbsp;·&nbsp; coverage discounts a score built on thin evidence<br>calibrate = piecewise-linear, raw 50 &rarr; 68; strictly order-preserving</span></div>
     <p class="callout"><b>Why it is called the tashan score, not a trust score.</b> We measure whether people use a capability and whether it is kept alive. We do not audit it: there is no CVE scan, no prompt-injection review, no reading of its code. Calling that "trust" claimed something the arithmetic does not support, and this page had to walk it back a paragraph later. The number is our measurement, on public evidence, and it is named accordingly.</p>
     <p>Upkeep and freshness set the ceiling; <b>adoption decides most of what a capability actually scores</b>.
       That balance is deliberate and it was wrong before: upkeep and recency both saturate near 100 for any repo
@@ -84,6 +84,18 @@
       the picture we have, and "we found no adoption signal" is treated no better than a measured-but-low one — absence
       of evidence must never outscore evidence of absence. As we fill in contributor and release data for
       non-npm repositories, that discount shrinks on its own, because the coverage becomes real.</p>
+
+    <p><b>Why there is a calibration step.</b> The raw formula multiplies three factors that are each at
+      most 1, so it decides the <em>order</em> well and lands in a useless <em>range</em>. A capability with no
+      adoption signal has gate&nbsp;=&nbsp;0.30, which caps it at about 27&frasl;100 however well kept it is — and
+      38% of what we measure has neither a download count nor a star count. The result was half the index
+      inside a 13-point band, 98% below 50, and "well kept but unproven" published as a number that reads
+      as <em>bad</em>. The calibration is a fixed, strictly order-preserving stretch of that raw number onto
+      the published scale: it cannot move any capability past another, it only decides how far apart they
+      are printed. It is deliberately <em>not</em> a percentile — a percentile would re-baseline every night
+      as the index grows, so a badge minted today would quietly mean something different next week. The
+      middle of the index sits near 39 rather than 50, because a median of 50 would claim we think half of
+      these are proven when for most of them we have no usage evidence either way.</p>
 
     <h2>What we deliberately don't do</h2>
     <ul>

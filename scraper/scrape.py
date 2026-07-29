@@ -107,7 +107,13 @@ def capability_id(server_key, entry):
     # docker image
     if cmd == "docker":
         for a in args:
-            if "/" in a and not a.startswith("-") and ":" not in a[:1]:
+            # A HOST PATH IS NOT AN IMAGE NAME. `":" not in a[:1]` only ever looked at the first
+            # character, so a Windows volume mount (`-v C:/Users/me/data:/data`) sailed through and
+            # `a.split(":")[0]` returned the DRIVE LETTER — the ids `docker:C` and `docker:D` were
+            # sitting in the database, and the real image in those configs was never counted at all.
+            if a.startswith(("-", "/", ".", "~")) or re.match(r"^[A-Za-z]:[\\/]", a):
+                continue
+            if "/" in a:
                 if re.search(r"[a-z0-9]+/[a-z0-9._-]+", a) and "run" not in a:
                     return f"docker:{a.split(':')[0]}", "docker"
     # npm/py package in args (skip flags like -y, --key, paths)

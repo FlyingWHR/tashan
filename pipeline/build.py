@@ -318,9 +318,25 @@ def enrich_npm(con):
                 t = meta.get("time") or {}
                 info["last_publish"] = (t.get(latest) or "")[:10] or None
                 info["created"] = (t.get("created") or "")[:10] or None
-                info["maintainers"] = len(meta.get("maintainers") or [])
-                info["versions"] = len(meta.get("versions") or {})
-                info["deprecated"] = 1 if "deprecated" in ((meta.get("versions") or {}).get(latest) or {}) else 0
+                # ABSENT != ZERO. `len(meta.get(k) or [])` read a missing key as a measured 0, and a
+                # published npm package can never truly have 0 maintainers or 0 versions — so every 0
+                # here really meant "the packument did not carry this field". It then entered the scorer
+                # as evidence: people=0 scores the bus-factor axis at 0/40 AND asserts the axis is
+                # measured, so upkeep collapsed to 0. This file promises unknown inputs stay None and are
+                # never faked to 0; this was the leak.
+                info["maintainers"] = len(meta["maintainers"]) if meta.get("maintainers") else None
+                info["versions"] = len(meta["versions"]) if meta.get("versions") else None
+                # UNPUBLISHED IS NOT UNKNOWN. npm answers a removed package with a tombstone packument —
+                # `_id`, `_rev`, `name`, `time` and nothing else: no dist-tags, no versions, no
+                # maintainers. All three rows carrying the faked 0s above (netlify-mcp, mcp-server-time,
+                # marketintell) are this, not a fetch failure. Nulling those fields alone would REGRESS
+                # them: with no maintainer or version axis they would be scored on freshness alone and
+                # climb onto the board, when the truth is the package cannot be installed at all. npm
+                # refusing to serve a version IS npm saying do not use this, which is what npm_deprecated
+                # already means to the scorer and the dossier, so it is recorded there.
+                unpublished = not latest and not meta.get("versions")
+                info["deprecated"] = 1 if (unpublished or "deprecated" in
+                                           ((meta.get("versions") or {}).get(latest) or {})) else 0
                 if not info.get("repo"):
                     ru = (meta.get("repository") or {}).get("url") or ""
                     m = re.search(r"github\.com[/:]([\w.-]+/[\w.-]+?)(?:\.git|/|$)", ru)
@@ -529,6 +545,99 @@ STAR_W = float(os.environ.get("TASHAN_STAR_W", "0.8"))
 # Lowering it compresses every score on the site downward; that is correct, not a regression — the old
 # band was 60-100 because 60 was free.
 GATE_FLOOR = float(os.environ.get("TASHAN_GATE_FLOOR", "0.30"))
+# ADOPTION ANCHORS — the value on each evidence channel that reads as fully adopted (axis = 1.0).
+#
+# THE BUG THIS FIXES: these used to be the CORPUS MAX. On power-law data that puts the median at the
+# bottom of the log scale, and it made the headline score stop discriminating. Measured before the fix,
+# across all 6,200 scored capabilities: p25=20, p50=27, p75=32, p90=39 — half the board inside a
+# 12-point band and 98% below 50. Adoption itself read p50=7, p90=25, so `gate` spanned 0.33-0.48 for
+# nine rows in ten: Maintenance and Freshness spread perfectly well and were then multiplied down by a
+# gate with no range left. The compression was arithmetic, not a fact about the corpus.
+# It was also unstable and unfair in a second way: one new 2M-downloads package rescales every other
+# row's adoption downward, so a badge minted last week silently means something different this week.
+# An absolute anchor makes the score a function of the capability's own evidence, which is what the
+# methodology page claims and what a public badge needs.
+#
+# Chosen where each channel stops carrying information, then swept (see the table in `_adopt_axis`):
+DL_FULL    = float(os.environ.get("TASHAN_DL_FULL", "100000"))  # weekly npm downloads = broad daily use
+REACH_FULL = float(os.environ.get("TASHAN_REACH_FULL", "10"))   # distinct public configs; corpus max is 23
+STAR_FULL  = float(os.environ.get("TASHAN_STAR_FULL", "20000"))  # stars on a plugin's own repo
+
+
+def _adopt_axis(x, full):
+    """One adoption channel, log-scaled to 0-1, reading 1.0 at `full` and clamped there.
+
+    Log because adoption is multiplicative — 10 -> 100 downloads is the same kind of jump as
+    1,000 -> 10,000. Clamped because above `full` the channel has said all it can: the difference
+    between 100k and 2M weekly downloads is not four times the difference between 10 and 100.
+    Swept on the resulting board (DL_FULL / STAR_FULL, spread = p90 - p25 of the published score):
+        corpus max      -> p25 20  p50 27  p75 32  p90 39   spread 19   (the defect)
+        1M / 100k       -> p25 24  p50 31  p75 38  p90 46   spread 22
+        250k / 50k      -> p25 27  p50 35  p75 43  p90 52   spread 25
+        100k / 20k      -> p25 30  p50 39  p75 48  p90 57   spread 27   <- chosen
+        25k  / 5k       -> p25 34  p50 43  p75 53  p90 62   spread 28, but 1,696 dl/wk already saturates
+    Tighter anchors keep buying spread and start buying it dishonestly: at 25k a top-5-percentile
+    package reads the same as one with 40x its usage. 100k/20k is the last rung where the busiest
+    capabilities are still separated from the merely popular ones.
+    """
+    return min(1.0, math.log1p(x or 0) / math.log1p(full))
+
+
+# CALIBRATION — the raw arithmetic decides the ORDER; this decides the RANGE. They are different jobs
+# and conflating them is what broke the headline number.
+#
+# Trust is a product of three factors that are each <= 1: base x gate x coverage. Every prior sweep in
+# this file tuned the ORDER that product produces (usage-led ranking, plugins neither dominating nor
+# absent, unknown adoption never beating known-poor adoption) and those results are good. What was
+# never checked is the RANGE it lands in, and the range is unusable:
+#
+#   A capability with NO adoption evidence has gate == GATE_FLOOR == 0.30. With perfect maintenance,
+#   perfect freshness and every other axis measured, its raw ceiling is 100 * 0.30 * 0.89 = 26.6.
+#   38% of the board (2,361 of 6,200) has neither a download count nor a star count, so more than a
+#   third of everything we publish is structurally incapable of exceeding 27 out of 100 no matter how
+#   good it is. The measured result: p25=21, p50=29, p75=34 — half the corpus inside 13 points, 95%
+#   below 50, and "well-kept but unproven" rendered as a number that reads to a user as "bad".
+#
+# The tempting fix is to raise GATE_FLOOR, but the floor sets ordering too (it is the entire weight of
+# adoption relative to upkeep), and raising it re-introduces the inversion the 0.30 sweep exists to
+# kill — a 30-star plugin outranking a package with 87k weekly downloads. So the floor stays where the
+# ordering sweep put it, and the range is fixed here instead, by a STRICTLY MONOTONE map: it cannot
+# reorder two capabilities, which means it cannot resurrect any inversion this file already fixed.
+#
+# Knees are fixed constants, not corpus percentiles. A percentile map would spread perfectly and
+# re-baseline every night as the corpus grows — a badge minted today would mean something else next
+# week without the capability changing at all. These are stated on the methodology page and move only
+# when swept:
+#     raw 50 -> 68   below the knee the field is dense and gets stretched; above it the field is thin
+#                    (only 280 of 6,200 rows exceed raw 50) and gets compressed into the last 32 points.
+# Swept on the published distribution, with the sanity rows the sweeps above already argue about
+# (spread = p90 - p25; `inversions` counts pairs the map reorders, and must be 0 for every candidate):
+#     none (raw) -> p25 21 p50 29 p75 34 p90 43 | spread 22 | figma 83  impeccable 73  vaaya 50
+#     50:85      -> p25 36 p50 49 p75 58 p90 73 | spread 37 | figma 95  impeccable 92  vaaya 85
+#     50:75      -> p25 32 p50 44 p75 51 p90 64 | spread 32 | figma 92  impeccable 86  vaaya 75
+#     50:68      -> p25 29 p50 39 p75 46 p90 58 | spread 29 | figma 89  impeccable 83  vaaya 68  <- chosen
+#     50:62      -> p25 26 p50 36 p75 42 p90 53 | spread 27 | figma 87  impeccable 79  vaaya 62
+# Chosen on the TOP of the curve, not the middle. @vaaya/mcp is this file's running example of a
+# thinly-used package (422 downloads/wk, 31 stars) and 50:85 publishes it as 85 — the overstatement a
+# neutrality product cannot afford. 50:68 keeps it mid-pack while still separating the proven head
+# (supabase 99, figma 89) from it.
+#
+# The middle of the field lands near 39, not the 50 the audit asked for, and that is deliberate: 38% of
+# the corpus has neither a download count nor a star count, so a median of 50 would claim we think half
+# of it is proven when we have no evidence either way. Spread stops at 29 for the same reason — beyond
+# this the map would be manufacturing distinctions the evidence does not support. The remaining
+# flatness is an evidence problem (more measured axes), not an arithmetic one.
+CAL_KNEES = tuple(tuple(float(n) for n in p.split(":"))
+                  for p in os.environ.get("TASHAN_CAL_KNEES", "50:68").split(","))
+
+
+def _calibrate(raw):
+    """Monotone piecewise-linear stretch of the raw 0-100 product onto the published 0-100 scale."""
+    pts = ((0.0, 0.0),) + CAL_KNEES + ((100.0, 100.0),)
+    for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+        if raw <= x1:
+            return y0 + (y1 - y0) * (raw - x0) / (x1 - x0)
+    return 100.0
 
 
 def compute_scores(con):
@@ -536,15 +645,12 @@ def compute_scores(con):
                        "npm_versions, npm_deprecated, registry_status, gh_pushed, gh_last_release, "
                        "gh_archived, gh_stars, gh_open_issues, gh_contributors, gh_has_discussions, kind "
                        "FROM capabilities").fetchall()
-    max_dl = max((r[2] or 0) for r in rows) or 1
-    max_reach = max((r[1] or 0) for r in rows) or 1
     now_iso = datetime.now(timezone.utc).isoformat()
-    max_star = max((r[11] or 0) for r in rows) or 1
     for (cid, reach, dl, lastpub, maint, vers, dep, rstatus, gh_pushed, gh_release,
          gh_arch, gh_stars, gh_issues, gh_contrib, gh_disc, kind) in rows:
         # ADOPTION: blend real npm downloads (log) + config reach (log), 0-100
-        a_dl = math.log1p(dl or 0) / math.log1p(max_dl)
-        a_reach = math.log1p(reach or 0) / math.log1p(max_reach)
+        a_dl = _adopt_axis(dl, DL_FULL)
+        a_reach = _adopt_axis(reach, REACH_FULL)
         adoption = round(100 * (0.7 * a_dl + 0.3 * a_reach)) if (dl or reach) else None
         # PLUGINS have no public download telemetry — the channel simply does not publish one. Stars on
         # the plugin's OWN repository are the only public popularity signal, so they stand in for
@@ -563,7 +669,7 @@ def compute_scores(con):
             # same evidence: a weekly download is recurring use, a star is a one-time bookmark that never
             # decays — and this site's own claim is "what people KEEP … not stars". 1.0 treats them as
             # equal, which is what the raw log-normalisation does.
-            a_star = math.log1p(gh_stars or 0) / math.log1p(max_star)
+            a_star = _adopt_axis(gh_stars, STAR_FULL)
             adoption = round(100 * STAR_W * (0.7 * a_star + 0.3 * a_reach)) if (gh_stars or reach) else None
         # FRESHNESS: recency of the MOST RECENT public activity — npm publish OR git push OR release.
         # (a repo can be active on git but stale on npm, and vice-versa — take the freshest signal)
@@ -642,7 +748,8 @@ def compute_scores(con):
             # Coverage spans every axis Trust rests on — adoption included, since "we never found an
             # adoption signal" is missing evidence in precisely the sense this discount exists for.
             cov = (w + (ADOPT_W if adoption is not None else 0)) / (100.0 + ADOPT_W)
-            score = round(base * gate * (1 - COVERAGE_W * (1 - cov)))
+            # raw decides the ranking; _calibrate only decides the range it is published on (see above)
+            score = round(_calibrate(base * gate * (1 - COVERAGE_W * (1 - cov))))
         con.execute("UPDATE capabilities SET adoption=?, freshness=?, upkeep=?, tashan_score=?, "
                     "vitality=?, single_maintainer=?, updated_at=? WHERE id=?",
                     (adoption, freshness, upkeep, score, vitality, single, now_iso, cid))
@@ -777,6 +884,28 @@ def export(con):
         d = re.sub(r"\s+", " ", d).strip()
         return d or None
 
+    # `name` is whatever KEY a person typed in their config JSON, and a lot of people just type "mcp".
+    # A SCOPED package whose leaf is generic has all of its identity in the scope: junk() rightly keeps
+    # @vaaya/mcp, but the stored name is the bare leaf, so the Design hub listed "mcp" and "mcp-server"
+    # as if they were nameless. The same is true UNSCOPED and was never handled — pkg:justdrop-mcp
+    # shipped to the board labelled "mcp", pkg:drengr as "server", 30 rows in all, each with its real
+    # identity sitting unused in npm_pkg. junk() is right to keep them (justdrop-mcp is a real package,
+    # not junk); only the label was wrong. Prefer npm_pkg over title because the board's job is to let a
+    # reader identify and install the thing, and the package name is the unambiguous form of that. Same
+    # reasoning as clean_desc above: resolve it once here so the board, hubs, dossiers, llms.txt, CLI and
+    # badges all get the real name rather than each renderer guessing.
+    # DELIBERATELY NOT `DENY`. junk() uses DENY to DROP rows, so a word added there deletes capabilities:
+    # "api" as a display name is meaningless, but registry:com.contrastcyber/api is a real, scored,
+    # described capability whose id leaf is "api" — putting "api" in DENY would erase it from the site.
+    # Bad label and not-a-capability are different judgements and need different lists.
+    GENERIC_LABEL = DENY | {"api"}
+
+    def display_name(o):
+        n = (o.get("name") or "").strip()
+        if n.lower() not in GENERIC_LABEL:
+            return n
+        return o.get("npm_pkg") or (o.get("title") or "").strip() or o["id"].split(":", 1)[-1] or n
+
     # Resolve the publisher ONCE here instead of re-deriving it in index.js, prerender.py and the CLI
     # from a source_repo string each of them had to carry. Shipping the answer costs a short token;
     # shipping the input cost 9 KB gzipped in the board index, which is 20% of its whole budget.
@@ -801,11 +930,7 @@ def export(con):
         o["tasks"] = tags_by_cap.get(o["id"], [])
         o["description"] = clean_desc(o.get("description"))
         o["official"] = official_of(o.get("npm_pkg"), o.get("source_repo"))
-        # A SCOPED package whose leaf is generic has all of its identity in the scope. junk() rightly
-        # keeps @vaaya/mcp (the scope makes it a real, distinct package) but the stored name is the bare
-        # leaf, so the design hub listed "mcp" and "mcp-server" as if they were nameless. Show the scope.
-        if (o.get("npm_pkg") or "").startswith("@") and (o.get("name") or "").lower() in DENY:
-            o["name"] = o["npm_pkg"]
+        o["name"] = display_name(o)          # see display_name: a generic config key is not a name
         if junk(o):
             continue
         o["co_used"] = json.loads(o["co_used"]) if o["co_used"] else []
@@ -886,7 +1011,38 @@ def export(con):
         return ((c["name"].lower(), c["source_repo"].lower())
                 if c.get("name") and c.get("source_repo") else None)
 
+    # A CLONE IS NOT A SECOND PRODUCT. by_desc keys on the WHOLE description, so it misses the copy that
+    # is the original TRUNCATED — and that is the common shape, because a plugin republished under
+    # someone else's repo carries an older/shorter version of the original blurb. Measured:
+    # anthropics/claude-plugins-official/code-review and an unattributed copy in varaku1012/aditi.code
+    # both reached the board at exactly 42, side by side, with nothing telling a reader which is the
+    # original. That is the failure this whole gate exists to prevent.
+    #
+    # Bucketing on the description OPENING alone would be wrong: generic boilerplate collides honestly.
+    # "A comprehensive Model Context Protocol (MCP) server that enables AI assistants to …" opens both an
+    # Unreal Engine server and a Nextcloud one, which are different products and must both survive. So
+    # the opening only nominates candidates, and a bucket collapses only if its members form a true
+    # PREFIX CHAIN — each description literally a prefix of the next. That test verifies the relationship
+    # instead of trusting the heuristic, so boilerplate cannot trigger it.
+    def prefix_chain_keys(caps):
+        buckets = {}
+        for c in caps:
+            d = (c.get("description") or "").strip().lower()
+            if len(d) >= 80:
+                buckets.setdefault(d[:80], []).append((d, c["id"]))
+        keys = {}
+        for k, members in buckets.items():
+            if len(members) < 2:
+                continue
+            members.sort(key=lambda m: len(m[0]))
+            if all(b[0].startswith(a[0]) for a, b in zip(members, members[1:])):
+                for _, cid in members:
+                    keys[cid] = k
+        return keys
+
     caps = collapse(caps, by_desc, "a description")
+    chain = prefix_chain_keys(caps)
+    caps = collapse(caps, lambda c: chain.get(c["id"]), "a truncated copy of one description")
     caps = collapse(caps, by_repo, "a name and repo")
     # RATED vs CATALOGUED. A skill lives inside a repository, so repo maintenance is shared by every skill
     # in it: measured just now, 854 skills scored 42.0 with a within-repo spread of 42.0-42.0. That number

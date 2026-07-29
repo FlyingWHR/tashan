@@ -54,7 +54,8 @@ def badge(trust, verdict):
 
 def main():
     con = sqlite3.connect(DB)
-    rows = con.execute("SELECT id, trust, expertise_verdict FROM capabilities WHERE tashan_score IS NOT NULL").fetchall()
+    rows = con.execute("SELECT id, tashan_score, expertise_verdict FROM capabilities "
+                       "WHERE tashan_score IS NOT NULL").fetchall()
     n = 0
     for cid, trust, verdict in rows:
         open(os.path.join(OUT, slug(cid) + ".svg"), "w").write(badge(trust, verdict))

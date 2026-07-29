@@ -24,6 +24,14 @@ node tests/test_render.mjs || fail=1
 echo; echo "── firewall (ranking can't be bought) ─────────"
 python3 tests/test_firewall.py || fail=1
 
+# 3b. score shape — calibration must never reorder, anchors must never be corpus-relative
+echo; echo "── score shape (order-preserving) ─────────────"
+python3 tests/test_score.py || fail=1
+
+# 3c. config parser — a wrong capability id invents one row AND loses the real one
+echo; echo "── config parser (capability_id) ──────────────"
+python3 tests/test_scrape.py || fail=1
+
 # 4. generated tier: asset versioning, hubs, skills, llms.txt, orphan pages
 echo; echo "── hubs / SEO+GEO tier ────────────────────────"
 python3 tests/test_hubs.py || fail=1
