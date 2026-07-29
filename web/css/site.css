@@ -210,6 +210,12 @@ img { max-width: 100%; display: block; }
 .catrail__h { font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; color: var(--text-faint); margin:0 0 var(--sp-3); padding-left:.3rem; }
 /* The task rail is the primary browse axis, so the domain rail below it is visibly secondary — one
    heading leads, the other is a fallback for people who think in technologies rather than in jobs. */
+.catrail__h--row { display:flex; align-items:center; justify-content:space-between; gap:.5rem; }
+.combtog { font-family: var(--font-mono); font-size:.58rem; letter-spacing:.06em; text-transform:uppercase;
+  color: var(--text-faint); background:transparent; border:1px solid var(--hairline); border-radius: var(--radius-pill);
+  padding:.1rem .45rem; cursor:pointer; transition: color .15s var(--ease), border-color .15s var(--ease); }
+.combtog:hover { color: var(--text-dim); border-color: var(--hairline); }
+.combtog.is-on { color: var(--jade); border-color: var(--jade-line); background: var(--jade-dim); }
 .catrail__h--sub { margin-top: var(--sp-8); padding-top: var(--sp-4); border-top:1px solid var(--line); }
 .trole { margin-bottom: var(--sp-4); }
 .trole__h { font-size:.6rem; letter-spacing:.09em; text-transform:uppercase; color: var(--text-faint);

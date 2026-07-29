@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="tashan — measure what actually works">
   <meta name="twitter:description" content="The measurement layer for AI capabilities. We host nothing, sell nothing and run nothing — which is why the number means something.">
-  <link rel="stylesheet" href="/css/site.css?v=75">
+  <link rel="stylesheet" href="/css/site.css?v=76">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"tashan","url":"https://tashan.sh/","description":"The neutral measurement layer for AI capabilities. tashan measures MCP servers and agent skills on public evidence and sells none of them.","slogan":"Measure what actually works."}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"tashan","url":"https://tashan.sh/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://tashan.sh/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does tashan score MCP servers and skills?","acceptedAnswer":{"@type":"Answer","text":"tashan computes a transparent Trust score from maintenance and freshness, gated by real adoption (npm downloads and public config reach). A separate LLM expertise-eval reads the actual capability and grades it deep / solid / thin / wrapper / slop. Every number is re-derivable from public sources."}},{"@type":"Question","name":"Does tashan sell the capabilities it scores?","acceptedAnswer":{"@type":"Answer","text":"No. tashan sells nothing it measures, hosts nothing, and takes no cut of any capability. It is a measurement layer, not a store or a runtime — which is the point: every other index in this field either sells the listings, hosts the servers, or earns when you run them. Nothing you can buy, claim or sign up for moves a tashan score, and the scorer is asserted to read only public-signal columns in tests/test_firewall.py."}},{"@type":"Question","name":"What is the difference between an MCP server and an agent skill?","acceptedAnswer":{"@type":"Answer","text":"An MCP server exposes tools to an AI agent over the Model Context Protocol; an agent skill is a folder with a SKILL.md that the agent loads on demand. tashan tracks and scores both in one unified capability model."}}]}</script>
@@ -97,7 +97,10 @@
 
     <div class="index-layout">
       <aside class="catrail" aria-label="Browse">
-        <p class="catrail__h mono">Tags — what you're doing</p>
+        <p class="catrail__h mono catrail__h--row">Tags — what you're doing
+          <button class="combtog" id="combineTog" type="button" role="switch" aria-checked="false"
+                  title="Off: picking replaces your selection. On: picks stack, so you can combine several.">combine</button>
+        </p>
         <div id="taskrail"></div>
         <p class="catrail__h mono catrail__h--sub">Categories — what it touches</p>
         <div id="catrail"></div>
@@ -156,10 +159,10 @@
   </div>
 </footer>
 
-  <script src="/js/ridge.js?v=75" defer></script>
-  <script src="/js/hero.js?v=75" defer></script>
-  <script src="/js/terminal.js?v=75" defer></script>
-  <script src="/js/site.js?v=75" defer></script>
-  <script src="/js/index.js?v=75" defer></script>
+  <script src="/js/ridge.js?v=76" defer></script>
+  <script src="/js/hero.js?v=76" defer></script>
+  <script src="/js/terminal.js?v=76" defer></script>
+  <script src="/js/site.js?v=76" defer></script>
+  <script src="/js/index.js?v=76" defer></script>
 </body>
 </html>

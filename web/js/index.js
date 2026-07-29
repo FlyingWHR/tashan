@@ -6,7 +6,7 @@
   var rowsEl = document.getElementById("rows");
   // facets are Sets (multi-select); toggles are bool; sort is one key
   var state = { cat: new Set(), task: new Set(), kind: new Set(), vitality: new Set(), verdict: new Set(),
-                official: false, clean: false, sort: "trust" };
+                official: false, clean: false, combine: false, sort: "trust" };
   var data = { caps: [], cats: [], catMeta: {}, tasks: [], roles: [], taskMeta: {}, taskIds: null };
   var PAGE = 100, shownCount = PAGE;   // board pagination: show PAGE rows, "show more" reveals the rest
 
@@ -75,6 +75,7 @@
     state.kind = csvSet(q.get("kind"));
     state.vitality = csvSet(q.get("vitality"));
     state.verdict = csvSet(q.get("verdict"));
+    state.combine = q.get("combine") === "1";
     state.official = q.get("official") === "1";
     state.clean = q.get("clean") === "1";
     state.sort = q.get("sort") || "trust";
@@ -86,6 +87,7 @@
     if (state.kind.size) q.set("kind", Array.from(state.kind).join(","));
     if (state.vitality.size) q.set("vitality", Array.from(state.vitality).join(","));
     if (state.verdict.size) q.set("verdict", Array.from(state.verdict).join(","));
+    if (state.combine) q.set("combine", "1");
     if (state.official) q.set("official", "1");
     if (state.clean) q.set("clean", "1");
     if (state.sort !== "trust") q.set("sort", state.sort);
@@ -162,6 +164,17 @@
   // ONE row shape for the whole left rail. The two rails had drifted into using the same class names
   // for opposite things — `crow__n` was the COUNT in the task rail and the LABEL in the category rail —
   // so they rendered differently and read as two unrelated widgets glued together.
+  // Picking a tag or a category REPLACES the selection unless "Combine" is on. Multi-select by default
+  // made the common case worse: nearly everyone is browsing one thing at a time, and an additive rail
+  // silently accumulates refinements until the board is empty for reasons the reader cannot see.
+  // Combining is real but occasional, so it is a switch rather than the default.
+  function pick(setName, v) {
+    var set = state[setName];
+    if (state.combine) { set.has(v) ? set.delete(v) : set.add(v); return; }
+    if (set.has(v) && set.size === 1) { set.clear(); return; }   // clicking the active one clears it
+    state[setName] = new Set([v]);
+  }
+
   function railRow(attr, id, label, count, on, tip) {
     return '<button class="crow' + (on ? " is-on" : "") + '" data-' + attr + '="' + esc(id) + '"' +
       ' type="button" aria-pressed="' + !!on + '" title="' + esc(tip || label) + '">' +
@@ -169,7 +182,25 @@
       '<span class="crow__c mono">' + count + "</span></button>";
   }
 
+  function renderCombineToggle() {
+    var t = document.getElementById("combineTog");
+    if (!t) return;
+    t.setAttribute("aria-checked", String(state.combine));
+    t.classList.toggle("is-on", state.combine);
+    t.onclick = function () {
+      state.combine = !state.combine;
+      // Leaving combine mode collapses a stacked selection to one, or the board would keep showing a
+      // multi-selection the rail can no longer express.
+      if (!state.combine) {
+        if (state.task.size > 1) state.task = new Set([Array.from(state.task)[0]]);
+        if (state.cat.size > 1) state.cat = new Set([Array.from(state.cat)[0]]);
+      }
+      commit();
+    };
+  }
+
   function renderTasks() {
+    renderCombineToggle();
     var rail = document.getElementById("taskrail");
     if (!rail || !data.tasks.length) return;
     // Only tasks with a real shelf behind them are offered. A rail full of one-capability jobs is a
@@ -196,8 +227,7 @@
     rail.onclick = function (e) {
       var b = e.target.closest("[data-task]");
       if (!b) return;
-      var v = b.getAttribute("data-task");
-      state.task.has(v) ? state.task.delete(v) : state.task.add(v);
+      pick("task", b.getAttribute("data-task"));
       commit();
     };
   }
@@ -229,11 +259,9 @@
     rail.onclick = function (e) {
       var b = e.target.closest("button[data-cat]");
       if (!b) return;
-      // Multi-select, same as tags. It used to be single-select with an "All" row, so the left rail
-      // had two different interaction models sitting on top of each other — clicking a tag added to a
-      // selection, clicking a category replaced one. Same place, same look, opposite behaviour.
-      var cat = b.dataset.cat;
-      state.cat.has(cat) ? state.cat.delete(cat) : state.cat.add(cat);
+      // Same rule as tags — see pick(). The two rails used to disagree (one additive, one replacing),
+      // which is what made the left column feel unpredictable.
+      pick("cat", b.dataset.cat);
       commit();
     };
   }
@@ -362,7 +390,7 @@
   }
   function clearAll() {
     state.task.clear(); state.cat.clear(); state.kind.clear(); state.vitality.clear(); state.verdict.clear();
-    state.official = false; state.clean = false;
+    state.official = false; state.clean = false;   // `combine` is a mode, not a refinement — it survives Clear all
     commit();
   }
 
