@@ -28,9 +28,12 @@
   <main class="wrap">
     <header class="phead">
       <p class="hero__eyebrow">Pricing</p>
-      <h1 class="phead__h">The Index is free. Pro is $6.</h1>
-      <p class="phead__sub">Every score, every capability, the whole methodology — free forever. <strong>Pro</strong>
-        adds depth: alerts across your stack, compare, full history, and the API.</p>
+      <h1 class="phead__h">The Index is free. Always.</h1>
+      <p class="phead__sub">Every score, every capability, the whole methodology — free forever, and we never gate a
+        number. What's paid is the instrument pointed <strong>at your stack</strong>, <strong>over time</strong>:
+        more than <b>300</b> of the capabilities we measure are abandoned or deprecated right now, and over
+        <b>3,000</b> rest on a single maintainer. The Index tells you that. Pro tells you whether any of them
+        are yours.</p>
     </header>
 
     <div class="plans">
@@ -39,46 +42,60 @@
           <span class="plan__name">Free</span>
           <span class="plan__price">$0<small>/forever</small></span>
         </div>
-        <p class="plan__for">The instrument. For anyone choosing what to trust.</p>
+        <p class="plan__for">The instrument. For anyone choosing what to trust. Nothing here moves behind a paywall.</p>
         <ul class="plan__feat">
-          <li>The full Index — every tashan score &amp; Expertise score</li>
+          <li>The full Index — <b>every</b> tashan score &amp; Expertise score, all of them</li>
           <li>Command-palette search <kbd>⌘K</kbd> · methodology · expert reads</li>
           <li>Embeddable badges for any capability</li>
           <li>Agent endpoints — <code>/v0.1/servers</code>, <code>/v0.1/scores</code> · no key, no quota</li>
-          <li>CLI — <code>search</code>, <code>find</code>, <code>top</code>, <code>install</code>, <code>doctor</code></li>
+          <li>CLI — <code>search</code>, <code>find</code>, <code>top</code>, <code>install</code>, and
+            <code>doctor</code> to check a config on your own machine</li>
         </ul>
         <a class="btn btn--ghost plan__cta" href="/">Browse the Index &rsaquo;</a>
+        <p class="plan__note mono">no account · no key · no quota</p>
       </section>
 
       <section class="plan plan--pro">
         <div class="plan__flag mono">in development</div>
         <div class="plan__top">
           <span class="plan__name">tashan Pro</span>
-          <span class="plan__price">$6<small>/mo</small></span>
         </div>
-        <p class="plan__for">For developers running capabilities in production. <em>Building now — the list below is what Pro will do.</em></p>
+        <p class="plan__for">For anyone <em>running</em> these in production, not just choosing one.
+          <em>Building now — the list below is what Pro will do, and we'll price it when it ships rather than
+          guess at it today.</em></p>
         <ul class="plan__feat">
-          <li>Everything in Free, plus —</li>
-          <li><b>Unlimited</b> watches &amp; alerts across your whole stack</li>
-          <li><b>Unlimited</b> compare, saved side-by-sides</li>
-          <li><b>Full API / CLI</b> — scores, JSON, badges at scale</li>
-          <li><b>Trends &amp; full history</b> — every score over time</li>
-          <li><b>On-demand deep expertise</b> — grade any capability now</li>
+          <li>Everything in Free — nothing is moved out of it, ever</li>
+          <li><b>Your stack, watched</b> — point it at your MCP config or lockfile and get told when
+            <em>your</em> capability is deprecated, archived, loses its last maintainer, or drops</li>
+          <li><b>History &amp; trends</b> — every score, every day, since we started measuring.
+            The Index shows today; this shows the direction</li>
+          <li><b>On-demand expertise</b> — grade any capability now instead of waiting for the queue</li>
           <li><b>Export</b> — CSV / JSON of any view</li>
         </ul>
-        <a class="btn btn--primary plan__cta" href="mailto:hello@tashan.sh?subject=tashan%20Pro%20waitlist">Join the waitlist &rsaquo;</a>
-        <p class="plan__note mono">launching soon · card or USDC · early list gets first access</p>
+        <a class="btn btn--primary plan__cta" href="mailto:hello@tashan.sh?subject=tashan%20Pro%20waitlist&amp;body=Which%20would%20you%20actually%20pay%20for%3F%20(watching%20my%20stack%20%2F%20history%20%26%20trends%20%2F%20on-demand%20expertise%20%2F%20API%20at%20scale)%0A%0A">Join the waitlist &rsaquo;</a>
+        <p class="plan__note mono">tell us which part you need — that's what decides the price</p>
       </section>
     </div>
 
+    <div class="callout"><b>Building on tashan?</b> The endpoints are free and unmetered because we want agents,
+      hosts and IDEs calling them — that <em>is</em> the distribution. If you're embedding scores in a product and
+      need what a free static file can't promise — a keyed endpoint, an uptime and schema-stability commitment,
+      delta feeds and webhooks when a score moves — that's the part worth paying for, and it's a conversation, not a
+      plan tier. <a class="link" href="mailto:hello@tashan.sh?subject=tashan%20in%20our%20product">Tell us what you're
+      building.</a></div>
+
     <div class="callout guarantee"><b>The ranking guarantee.</b> You can never buy your way up the board. No sponsored
-      slots, no bought scores, no removed verdicts — the rank is what the evidence says. That's the whole product.</div>
+      slots, no bought scores, no removed verdicts — the rank is what the evidence says. That's the whole product.
+      Everything above is sold on <em>depth, access and time</em> — never on position.</div>
 
     <p class="pfaq-lead kicker">Questions</p>
     <div class="pfaq">
-      <div><h3>Is the data really free?</h3><p>Yes. The Index and every score stay free forever — it's how the field
-        gets an honest reference. Pro is for people who need it <em>at depth</em>: alerts across a whole stack, history,
-        API, export.</p></div>
+      <div><h3>Is the data really free?</h3><p>Yes, and it stays that way — every score, every capability, no key and
+        no quota. It's how the field gets an honest reference, and a number behind a paywall is worth less to everyone
+        including us. Pro doesn't unlock scores; it watches <em>your</em> stack and keeps the history.</p></div>
+      <div><h3>Why isn't there a price yet?</h3><p>Because nobody has used it. We'd be guessing, and a guessed price
+        anchors the thing for years. The waitlist asks which part you'd actually pay for; that answer sets the
+        price. Same rule as the scores — measured, not claimed.</p></div>
       <div><h3>Can I pay to rank higher?</h3><p>No — and that's the whole point. There is no promoted slot and no way to
         buy a score. Read the <a class="link" href="/methodology.html">methodology</a>.</p></div>
       <div><h3>Do you sell the capabilities?</h3><p>No. We sell nothing we measure, host nothing, and take no cut of
