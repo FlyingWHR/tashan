@@ -44,6 +44,10 @@ node functions/api/e.test.mjs 2>/dev/null || fail=1
 echo; echo "── polar webhook (signature) ──────────────────"
 node functions/api/polar.test.mjs 2>/dev/null || fail=1
 
+# 5c. the paywall — every way of getting paid data without paying must be closed
+echo; echo "── licence gate (paywall) ─────────────────────"
+node functions/api/license.test.mjs 2>/dev/null || fail=1
+
 # 3. CLI pure logic
 echo; echo "── cli ────────────────────────────────────────"
 node cli/tashan.test.mjs || fail=1

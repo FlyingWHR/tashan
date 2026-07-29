@@ -126,3 +126,59 @@ different credential from the webhook signing secret. It is not needed by this e
 Verification and entitlement recording are real. There is still **no auth, no accounts and no session**,
 so nothing on the site reads `ent:<email>` yet — a paid feature cannot be gated until a customer can log
 in and be recognised. That remains the blocking investment (`PROJECT.md`, and §2 of `docs/AUDIT.md`).
+
+---
+
+## Going live — the four things only you can do (2026-07-29)
+
+Everything in code is done and tested. These need the Polar dashboard and Cloudflare, and cannot be
+done from this repo.
+
+**1. Create the product in Polar.** Name it `tashan Pro`, $12/mo recurring, and attach a
+**License Key** benefit. Then replace the placeholder checkout URL in `web/pricing.html`:
+
+```
+web/pricing.html:  href="https://buy.polar.sh/tashan-pro"   <-- PLACEHOLDER, replace with the real link
+```
+
+**2. Set the two secrets** (never commit either):
+
+```sh
+npx wrangler@3 pages secret put POLAR_WEBHOOK_SECRET --project-name tashan   # webhook signing secret
+npx wrangler@3 pages secret put POLAR_ORG_ID         --project-name tashan   # Polar settings -> organization ID
+```
+
+`POLAR_ORG_ID` is what `functions/api/_license.js` validates against. **Without it every paid
+endpoint returns 503 and nobody can use Pro** — the gate fails closed by design.
+
+**3. Bind KV as `TASHAN_KV`** (Pages → Settings → Bindings). It stores two things: entitlement written
+by the webhook, and the history shards read by `/api/history`. Then push the data:
+
+```sh
+CF_ACCOUNT_ID=... CF_KV_NAMESPACE_ID=... CF_API_TOKEN=... python3 pipeline/push_history.py
+```
+
+Add that to the nightly job after `run.py`, or paid history silently stops advancing while the free
+site keeps updating — the worst possible split.
+
+**4. Point the webhook at `https://tashan.sh/api/polar`** (see the section above).
+
+### What a customer's path actually is
+
+Buy on Polar → Polar issues a licence key → they read it from
+[polar.sh/purchases](https://polar.sh/purchases) → they call the API with it:
+
+```sh
+curl -H "Authorization: Bearer <key>" "https://tashan.sh/api/history?id=pkg:tavily-mcp"
+```
+
+There is **no account on tashan.sh**, deliberately. Polar's customer portal is the account system: it
+does email one-time-code sign-in, cancellation, payment-method updates, invoices and receipts. So the
+"backend with accounts and persistence" that `docs/AUDIT.md` §2 called the single blocking investment
+for revenue was never actually needed to start charging.
+
+### Still unbuilt, and labelled as such on the page
+
+Watch-your-stack alerts and on-demand expertise grading are marked `not built yet` in the Pro list and
+in the FAQ. They are shown so a buyer can see the direction; the FAQ states outright that they are not
+what today's $12 buys. Do not quietly start counting them as delivered.

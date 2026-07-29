@@ -577,6 +577,10 @@ body.pal-open { overflow:hidden; }
 .plan__feat b { color: var(--text); }
 .plan__cta { margin-top:auto; justify-content:center; }
 .plan__note { text-align:center; color: var(--text-faint); font-size:.72rem; margin: var(--sp-3) 0 0; }
+/* A roadmap item inside a tier you can BUY has to look different from a feature you are paying for,
+   or the list quietly overstates the product — the exact defect the free tier was just fixed for. */
+.plan__soon { color: var(--text-faint); }
+.plan__soon .mono { font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; opacity:.85; }
 .guarantee { margin: var(--sp-6) 0 var(--sp-16); }
 .pfaq-lead { margin-bottom: var(--sp-5); }
 .pfaq { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--sp-8) var(--sp-12); }

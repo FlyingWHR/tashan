@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=83">
+  <link rel="stylesheet" href="/css/site.css?v=84">
 </head>
 <body>
   <nav class="nav"><div class="wrap nav__in">
@@ -56,24 +56,25 @@
       </section>
 
       <section class="plan plan--pro">
-        <div class="plan__flag mono">in development</div>
         <div class="plan__top">
           <span class="plan__name">tashan Pro</span>
+          <span class="plan__price">$12<small>/mo</small></span>
         </div>
-        <p class="plan__for">For anyone <em>running</em> these in production, not just choosing one.
-          <em>Building now — the list below is what Pro will do, and we'll price it when it ships rather than
-          guess at it today.</em></p>
+        <p class="plan__for">For anyone <em>running</em> these in production, not just choosing one.</p>
         <ul class="plan__feat">
           <li>Everything in Free — nothing is moved out of it, ever</li>
-          <li><b>Your stack, watched</b> — point it at your MCP config or lockfile and get told when
-            <em>your</em> capability is deprecated, archived, loses its last maintainer, or drops</li>
-          <li><b>History &amp; trends</b> — every score, every day, since we started measuring.
-            The Index shows today; this shows the direction</li>
-          <li><b>On-demand expertise</b> — grade any capability now instead of waiting for the queue</li>
-          <li><b>Export</b> — CSV / JSON of any view</li>
+          <li><b>Full score history</b> — every score, every capability, every day since we started
+            measuring, over a keyed API. Nobody can backfill this, including us</li>
+          <li><b>Export</b> — JSON of any capability's whole series</li>
+          <li class="plan__soon">Your stack, watched — alerts when <em>your</em> capability is
+            deprecated, archived or loses its last maintainer <span class="mono">· not built yet</span></li>
+          <li class="plan__soon">On-demand expertise grading
+            <span class="mono">· not built yet</span></li>
         </ul>
-        <a class="btn btn--primary plan__cta" href="mailto:hello@tashan.sh?subject=tashan%20Pro%20waitlist&amp;body=Which%20would%20you%20actually%20pay%20for%3F%20(watching%20my%20stack%20%2F%20history%20%26%20trends%20%2F%20on-demand%20expertise%20%2F%20API%20at%20scale)%0A%0A">Join the waitlist &rsaquo;</a>
-        <p class="plan__note mono">tell us which part you need — that's what decides the price</p>
+        <a class="btn btn--primary plan__cta" href="https://buy.polar.sh/tashan-pro" rel="noopener"
+           data-src="pro-checkout">Subscribe &rsaquo;</a>
+        <p class="plan__note mono">cancel any time in the <a class="link" href="https://polar.sh/purchases"
+          rel="noopener">customer portal</a> · <a class="link" href="/refunds.html">14-day refund</a></p>
       </section>
     </div>
 
@@ -93,9 +94,14 @@
       <div><h3>Is the data really free?</h3><p>Yes, and it stays that way — every score, every capability, no key and
         no quota. It's how the field gets an honest reference, and a number behind a paywall is worth less to everyone
         including us. Pro doesn't unlock scores; it watches <em>your</em> stack and keeps the history.</p></div>
-      <div><h3>Why isn't there a price yet?</h3><p>Because nobody has used it. We'd be guessing, and a guessed price
-        anchors the thing for years. The waitlist asks which part you'd actually pay for; that answer sets the
-        price. Same rule as the scores — measured, not claimed.</p></div>
+      <div><h3>What am I actually paying for today?</h3><p>Score history over a keyed API — every capability,
+        every day we've measured. Two items in the list above are marked <span class="mono">not built yet</span>
+        and you are <em>not</em> paying for them: they're there so you can see where Pro is going, and they'll
+        arrive at this price. We'd rather show you an honest short list than sell a long one.</p></div>
+      <div><h3>Can I get a refund?</h3><p>Yes — 14 days, no reason needed, and after that we'll refund the
+        unused period if Pro was broken or not what this page described. Cancel yourself any time in the
+        <a class="link" href="https://polar.sh/purchases" rel="noopener">portal</a>. Full
+        <a class="link" href="/refunds.html">refund policy</a>.</p></div>
       <div><h3>Can I pay to rank higher?</h3><p>No — and that's the whole point. There is no promoted slot and no way to
         buy a score. Read the <a class="link" href="/methodology.html">methodology</a>.</p></div>
       <div><h3>Do you sell the capabilities?</h3><p>No. We sell nothing we measure, host nothing, and take no cut of
@@ -124,6 +130,8 @@
       <a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>
       <a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>
       <a href="https://github.com/" rel="noopener">GitHub ↗</a></nav>
+    <nav class="footer__col"><p class="footer__h">Legal</p>
+      <a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refunds.html">Refunds</a><a href="/support.html">Support</a></nav>
   </div>
   <div class="wrap footer__bar">
     <span>© 2026 SeroLabs, Inc.</span>
@@ -131,7 +139,7 @@
   </div>
 </footer>
 
-  <script src="/js/terminal.js?v=83" defer></script>
-  <script src="/js/site.js?v=83" defer></script>
+  <script src="/js/terminal.js?v=84" defer></script>
+  <script src="/js/site.js?v=84" defer></script>
 </body>
 </html>

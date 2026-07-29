@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy — tashan</title>
+  <meta name="description" content="What tashan collects, what it does not, and how billing data is handled.">
+  <meta name="theme-color" content="#0b0b0a">
+  <link rel="canonical" href="https://tashan.sh/privacy.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy — tashan">
+  <meta property="og:description" content="What tashan collects, what it does not, and how billing data is handled.">
+  <meta property="og:url" content="https://tashan.sh/privacy.html">
+  <meta property="og:image" content="https://tashan.sh/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="tashan — the index of AI capabilities, ranked by the tashan score">
+  <meta name="twitter:image" content="https://tashan.sh/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css?v=84">
+</head>
+<body>
+  <nav class="nav"><div class="wrap nav__in">
+    <a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>
+    <div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a><a href="/methodology.html">Methodology</a><a href="/learn/">Learn</a><a href="/about.html" aria-current="page">About</a><a href="/pricing.html">Pricing</a></div>
+  </div></nav>
+
+  <main class="wrap"><article class="prose">
+    <h1>Privacy</h1>
+    <p class="updated">Last updated 29 July 2026</p>
+    <p class="lede">The short version: we don't have accounts, we don't set cookies, we don't store
+      your IP address, and we don't sell anything about you.</p>
+
+    <div class="callout"><b>No cookies. No cross-site tracking. No ad networks.</b> The site loads
+      nothing from any third party — the content security policy is <span class="mono">default-src
+      'self'</span>, so fonts, scripts and styles are all served from tashan.sh.</div>
+
+    <h2>What we measure about capabilities</h2>
+    <p>Everything the Index publishes comes from <b>public</b> sources: the MCP registry, npm, and
+      public GitHub repositories and configuration files. We do not read private repositories, and we
+      instrument nothing on your machine.</p>
+
+    <h2>What we record about visits</h2>
+    <p>We keep first-party, aggregate analytics so we can tell which pages are worth writing. Each
+      event records the page path, the referring <em>host</em> (not the full URL), a coarse viewport
+      size, a country code derived at the edge, and an in-memory session id that lasts only for the
+      visit. <b>No IP address is stored, no cookie is set, and no profile is built.</b></p>
+
+    <h2>Billing data</h2>
+    <p>Payments are processed by <b>Polar</b>, the merchant of record. Card details never reach us —
+      we cannot see them. Polar tells us your email address and subscription status so we can grant
+      and revoke access; that is all we store, and we store it keyed to your email in order to serve
+      your licence. Licence keys are never written to our logs or caches in plain form — only a
+      one-way hash is cached, briefly, to check validity. See
+      <a class="link" href="https://polar.sh/legal/privacy" rel="noopener">Polar's privacy policy</a>.</p>
+
+    <h2>Your data</h2>
+    <p>Ask us to export or delete what we hold about you and we will, within 30 days. Because we hold
+      almost nothing, this is usually one email address and a subscription status. Deleting it ends
+      the subscription's access.
+      <a class="link" href="mailto:hello@tashan.sh?subject=tashan%20privacy%20request">hello@tashan.sh</a>.</p>
+
+    <h2>Being measured</h2>
+    <p>If you maintain a capability we list and something is wrong, tell us and we will correct it. We
+      will not remove an accurate, publicly-derived measurement on request — that is what makes the
+      Index worth reading — but we will always fix an error and show the evidence.
+      <a class="link" href="/requests.html">Corrections and requests</a>.</p>
+
+  </article></main>
+
+  <footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__brand">
+      <span class="brand"><span class="brand__mark"></span>tashan</span>
+      <p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p>
+      <p class="footer__meta" id="footMethod">public-signal v2</p>
+    </div>
+    <nav class="footer__col"><p class="footer__h">Explore</p>
+      <a href="/">The Index</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a></nav>
+    <nav class="footer__col"><p class="footer__h">tashan score</p>
+      <a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>
+    <nav class="footer__col"><p class="footer__h">Sources</p>
+      <a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>
+      <a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>
+      <a href="https://github.com/" rel="noopener">GitHub ↗</a></nav>
+    <nav class="footer__col"><p class="footer__h">Legal</p>
+      <a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refunds.html">Refunds</a><a href="/support.html">Support</a></nav>
+  </div>
+  <div class="wrap footer__bar">
+    <span>© 2026 SeroLabs, Inc.</span>
+    <span>Every score re-derivable from public evidence.</span>
+  </div>
+</footer>
+
+  <script src="/js/terminal.js?v=84" defer></script>
+  <script src="/js/site.js?v=84" defer></script>
+</body>
+</html>
