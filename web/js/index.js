@@ -159,6 +159,16 @@
   // get done, which is how people actually arrive. Tasks are multi-select (a capability does several
   // jobs) where category is deliberately single-select (browse ONE domain at a time). Grouped by role
   // purely for legibility — roles are labels here, never a page or a filter of their own.
+  // ONE row shape for the whole left rail. The two rails had drifted into using the same class names
+  // for opposite things — `crow__n` was the COUNT in the task rail and the LABEL in the category rail —
+  // so they rendered differently and read as two unrelated widgets glued together.
+  function railRow(attr, id, label, count, on, tip) {
+    return '<button class="crow' + (on ? " is-on" : "") + '" data-' + attr + '="' + esc(id) + '"' +
+      ' type="button" aria-pressed="' + !!on + '" title="' + esc(tip || label) + '">' +
+      '<span class="crow__l">' + esc(label) + "</span>" +
+      '<span class="crow__c mono">' + count + "</span></button>";
+  }
+
   function renderTasks() {
     var rail = document.getElementById("taskrail");
     if (!rail || !data.tasks.length) return;
@@ -179,10 +189,7 @@
       var items = byRole[r].sort(function (a, b) { return (b.count || 0) - (a.count || 0); });
       return '<div class="trole"><p class="trole__h mono">' + esc(roleLabel[r] || r) + "</p>" +
         items.map(function (t) {
-          var on = state.task.has(t.slug);
-          return '<button class="crow' + (on ? " is-on" : "") + '" data-task="' + esc(t.slug) + '" type="button" aria-pressed="' + on + '">' +
-            '<span class="crow__l">' + esc(t.label) + "</span>" +
-            '<span class="crow__n">' + (t.count || 0) + "</span></button>";
+          return railRow("task", t.slug, t.label, t.count || 0, state.task.has(t.slug), t.blurb);
         }).join("") + "</div>";
     }).join("");
     rail.innerHTML = html;
@@ -210,10 +217,9 @@
     var counts = data._catAgg.counts, top = data._catAgg.top;
     function row(id, label, count, on, lead) {
       var tip = lead ? label + " — top: " + pretty(lead.name) + " (Trust " + lead.trust + ")" : label;
-      return '<button class="crow' + (on ? " is-on" : "") + '" data-cat="' + id + '" title="' + esc(tip) + '">' +
-        '<span class="crow__n">' + esc(label) + '</span><span class="crow__c mono">' + count + '</span></button>';
+      return railRow("cat", id, label, count, on, tip);
     }
-    var html = row("__all", "All", fmt(data.caps.length), state.cat.size === 0, null);
+    var html = "";
     data.cats.forEach(function (cat) {
       var n = counts[cat.id] || 0;
       if (!n) return;
@@ -223,11 +229,11 @@
     rail.onclick = function (e) {
       var b = e.target.closest("button[data-cat]");
       if (!b) return;
-      // category is single-select (browse ONE domain at a time, common practice) — a click replaces,
-      // not stacks; clicking "All" or the active category clears. Toolbar facets stay multi-select.
+      // Multi-select, same as tags. It used to be single-select with an "All" row, so the left rail
+      // had two different interaction models sitting on top of each other — clicking a tag added to a
+      // selection, clicking a category replaced one. Same place, same look, opposite behaviour.
       var cat = b.dataset.cat;
-      if (cat === "__all" || state.cat.has(cat)) state.cat.clear();
-      else state.cat = new Set([cat]);
+      state.cat.has(cat) ? state.cat.delete(cat) : state.cat.add(cat);
       commit();
     };
   }
@@ -243,7 +249,7 @@
       state.task.forEach(function (t) { var s2 = data.taskIds[t]; if (s2 && s2.has(c.id)) hit = true; });
       if (!hit) return false;
     }
-    if (state.cat.size && !state.cat.has(c.category)) return false;
+    if (state.cat.size && !state.cat.has(c.category)) return false;   // OR within group
     if (state.kind.size && !state.kind.has(normKind(c))) return false;
     if (state.vitality.size && !state.vitality.has(c.vitality)) return false;
     if (state.verdict.size && !state.verdict.has(c.expertise_verdict)) return false;
