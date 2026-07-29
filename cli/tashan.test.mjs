@@ -93,3 +93,28 @@ assertEq(bad.problems.length, 1, "malformed config reported not thrown");
 assertEq(bad.found.length, 0, "nothing collected from a broken file");
 
 process.stdout.write("ok — doctor (identity / match / assess / malformed-config safety)\n");
+
+// ---- trend: the paid half of doctor -----------------------------------------------------------
+{
+  const { trend, withTrend } = await import("./doctor.mjs");
+  const S = (o) => ({ tashan_score: o });
+  const t = (o) => trend(S(o));
+  assert.strictEqual(t({ "2026-07-20": 58, "2026-07-21": 55, "2026-07-22": 50, "2026-07-23": 41 }).level, "alert", "a 17-point fall is an alert");
+  assert.strictEqual(t({ "2026-07-20": 58, "2026-07-21": 55, "2026-07-22": 50, "2026-07-23": 41 }).direction, "falling", "...and names the drop");
+  assert.strictEqual(t({ "2026-07-20": 50, "2026-07-21": 48, "2026-07-22": 45 }).level, "warn", "a 5-point slip is a warn");
+  assert.strictEqual(t({ "2026-07-20": 50, "2026-07-21": 50, "2026-07-22": 51 }).level, "ok", "flat is ok");
+  assert.strictEqual(t({ "2026-07-20": 40, "2026-07-21": 44, "2026-07-22": 48 }).direction, "recovering", "a rise off a low is 'recovering'");
+  // A LOW SCORE IS NOT NEWS; A DROP IS. Something parked at 30 all week is already on the free board.
+  assert.strictEqual(t({ "2026-07-20": 30, "2026-07-21": 30, "2026-07-22": 30 }).level, "ok",
+    "a steadily LOW score is still just ok — the free board already shows it");
+  assert.strictEqual(t({ "2026-07-22": 50 }).direction, "new", "too little history refuses to call a trend");
+  assert.strictEqual(trend(null).direction, "new", "no series at all does not throw");
+  assert.strictEqual(trend({}).direction, "new", "empty series does not throw");
+
+  const falling = t({ "2026-07-20": 58, "2026-07-21": 50, "2026-07-22": 41 });
+  const rising  = t({ "2026-07-20": 40, "2026-07-21": 44, "2026-07-22": 48 });
+  assert.strictEqual(withTrend({ level: "ok", notes: [] }, falling).level, "alert", "a fall escalates a clean row");
+  // A recovering score must never quiet an archived repository.
+  assert.strictEqual(withTrend({ level: "alert", notes: [] }, rising).level, "alert", "a rise never de-escalates an alert");
+  assert.strictEqual(withTrend({ level: "warn", notes: [] }, null).level, "warn", "no trend leaves the assessment untouched");
+}

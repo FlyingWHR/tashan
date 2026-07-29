@@ -6,6 +6,10 @@
   <title>Pricing — tashan</title>
   <meta name="description" content="The Index is free forever — every score, no key, no quota. tashan Pro watches your own stack over time: deprecations, lost maintainers, and score history.">
   <meta name="theme-color" content="#0b0b0a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pricing — tashan">
+  <meta property="og:description" content="The Index is free forever — every score, no key, no quota. tashan Pro is $6/mo for the full score history of every capability we measure.">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://tashan.sh/pricing.html">
   <meta property="og:image" content="https://tashan.sh/assets/og.png">
   <meta property="og:image:width" content="1200">
@@ -29,11 +33,10 @@
     <header class="phead">
       <p class="hero__eyebrow">Pricing</p>
       <h1 class="phead__h">The Index is free. Always.</h1>
-      <p class="phead__sub">Every score, every capability, the whole methodology — free forever, and we never gate a
-        number. What's paid is the instrument pointed <strong>at your stack</strong>, <strong>over time</strong>:
-        more than <b>300</b> of the capabilities we measure are abandoned or deprecated right now, and over
-        <b>3,000</b> rest on a single maintainer. The Index tells you that. Pro tells you whether any of them
-        are yours.</p>
+      <p class="phead__sub">Every score, every capability, the whole methodology — free forever, and we never
+        gate a number. More than <b>300</b> of the capabilities we measure are abandoned or deprecated right now,
+        and over <b>3,000</b> rest on a single maintainer. The free Index tells you that.
+        <strong>Pro tells you whether any of them are yours — and which ones got worse this month.</strong></p>
     </header>
 
     <div class="plans">
@@ -60,15 +63,19 @@
           <span class="plan__name">tashan Pro</span>
           <span class="plan__price">$6<small>/mo</small></span>
         </div>
-        <p class="plan__for">For anyone <em>running</em> these in production, not just choosing one.</p>
+        <p class="plan__for">One command tells you if anything you already run is going bad.</p>
+        <div class="callout mono" style="font-size:.8rem;margin:0 0 var(--sp-4)">$ tashan doctor --trend</div>
         <ul class="plan__feat">
           <li>Everything in Free — nothing is moved out of it, ever</li>
-          <li><b>Full score history</b> — every score, every capability, every day since we started
-            measuring, over a keyed API. Nobody can backfill this, including us</li>
-          <li><b>Export</b> — JSON of any capability's whole series</li>
-          <li class="plan__soon">Your stack, watched — alerts when <em>your</em> capability is
-            deprecated, archived or loses its last maintainer <span class="mono">· not built yet</span></li>
-          <li class="plan__soon">On-demand expertise grading
+          <li><b>Catches decline, not just death.</b> Free <code>doctor</code> tells you what's
+            <em>already</em> dead. By then you've depended on it for months. <code>--trend</code>
+            flags the one that <em>fell 17 points this month</em> while still looking fine</li>
+          <li><b>Reads your own config</b> — Claude Code, Cursor, Codex, Claude Desktop. Nothing is
+            uploaded; it checks the files you already have</li>
+          <li><b>Exit code 2 when something's wrong</b>, so you can put it in CI and stop
+            thinking about it</li>
+          <li><b>The full history behind it</b>, over a keyed API, if you'd rather query it yourself</li>
+          <li class="plan__soon">Email alerts, so you don't have to run it
             <span class="mono">· not built yet</span></li>
         </ul>
         <a class="btn btn--primary plan__cta" href="https://buy.polar.sh/tashan-pro" rel="noopener"
@@ -94,10 +101,19 @@
       <div><h3>Is the data really free?</h3><p>Yes, and it stays that way — every score, every capability, no key and
         no quota. It's how the field gets an honest reference, and a number behind a paywall is worth less to everyone
         including us. Pro doesn't unlock scores; it watches <em>your</em> stack and keeps the history.</p></div>
-      <div><h3>What am I actually paying for today?</h3><p>Score history over a keyed API — every capability,
-        every day we've measured. Two items in the list above are marked <span class="mono">not built yet</span>
-        and you are <em>not</em> paying for them: they're there so you can see where Pro is going, and they'll
-        arrive at this price. We'd rather show you an honest short list than sell a long one.</p></div>
+      <div><h3>What am I actually paying for today?</h3><p><code>tashan doctor --trend</code>, and the score
+        history that makes it possible. One row in the list above is marked <span class="mono">not built yet</span>
+        and you are <em>not</em> paying for it — it's there so you can see where Pro is going, and it arrives at
+        this price. We'd rather show you an honest short list than sell a long one.</p></div>
+      <div><h3>Why isn't this free like everything else?</h3><p>Because it's the one thing that can't be
+        re-derived from today's public data. Every score on the Index is a snapshot anyone could recompute;
+        the <em>series</em> only exists because we recorded it, every day, and a day we miss is gone for good —
+        for us too. That's what $6 buys, and it's worth more every month it runs.</p></div>
+      <div><h3>How do I use the key?</h3><p><code>export TASHAN_KEY=…</code> then
+        <code>tashan doctor --trend</code>. The key is in your
+        <a class="link" href="https://polar.sh/purchases" rel="noopener">Polar portal</a>. Nothing about your
+        config is uploaded — the CLI reads your local files and asks us only about capability names.
+        Full details on <a class="link" href="/support.html">support</a>.</p></div>
       <div><h3>Can I get a refund?</h3><p>Yes — 14 days, no reason needed, and after that we'll refund the
         unused period if Pro was broken or not what this page described. Cancel yourself any time in the
         <a class="link" href="https://polar.sh/purchases" rel="noopener">portal</a>. Full

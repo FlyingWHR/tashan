@@ -152,3 +152,57 @@ export function summarize(results) {
   }
   return s;
 }
+
+// ---------------------------------------------------------------------------------------------
+// TREND — the paid half of doctor, and the reason history is worth $6.
+//
+// Free doctor answers "is anything in my stack dead RIGHT NOW". That question is answerable from
+// today's export, so it stays free. It is also the wrong question to ask on the day it matters,
+// because by the time a capability is archived or deprecated you have already been depending on it
+// for months. The question worth paying for is the one nobody else can answer: "is anything in my
+// stack DYING" — which needs the series, and the series cannot be backfilled by anyone, us included.
+//
+// Pure function on purpose: no fetch, no clock, no filesystem. The caller supplies the series it got
+// from /api/history, so this is fully testable and the network stays at the edge of the program.
+// series shape: { tashan_score: { "2026-07-23": 61, ... }, adoption: { ... } }
+
+export function trend(series, minDays = 3) {
+  const points = Object.entries((series && series.tashan_score) || {})
+    .sort((a, b) => (a[0] < b[0] ? -1 : 1));
+  if (points.length < minDays) {
+    return { level: "note", direction: "new", days: points.length,
+             text: `only ${points.length} day(s) of history — not enough to call a trend yet` };
+  }
+  const first = points[0][1], last = points[points.length - 1][1];
+  const delta = Math.round(last - first);
+  const days = points.length;
+  const lo = Math.min(...points.map((p) => p[1]));
+  const off = Math.round(last - lo);
+
+  // A DROP IS NOT THE SAME AS A LOW SCORE, and only the drop is news. A capability that has sat at
+  // 32 for a month is already visible on the free board; one that fell from 58 to 41 this week is
+  // the thing you would never notice by looking at it today.
+  if (delta <= -10) {
+    return { level: "alert", direction: "falling", days, delta,
+             text: `fell ${Math.abs(delta)} points over ${days} days (${first} → ${last})` };
+  }
+  if (delta <= -4) {
+    return { level: "warn", direction: "slipping", days, delta,
+             text: `down ${Math.abs(delta)} points over ${days} days (${first} → ${last})` };
+  }
+  if (delta >= 6 && off >= 4) {
+    return { level: "note", direction: "recovering", days, delta,
+             text: `recovering — up ${delta} points over ${days} days (${first} → ${last})` };
+  }
+  return { level: "ok", direction: "steady", days, delta, text: `steady over ${days} days (${last})` };
+}
+
+// Fold trends into the free assessment. Escalates a level but never de-escalates one: a falling score
+// can make a clean row worth looking at, but a rising score must never quiet an archived repository.
+export function withTrend(assessment, tr) {
+  if (!tr) return assessment;
+  const notes = assessment.notes.concat([{ level: tr.level, text: tr.text, trend: true }]);
+  const rank = { ok: 0, unrated: 1, note: 1, warn: 2, alert: 3 };
+  const level = (rank[tr.level] || 0) > (rank[assessment.level] || 0) ? tr.level : assessment.level;
+  return { ...assessment, level, notes, trend: tr };
+}

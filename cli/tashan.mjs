@@ -6,11 +6,12 @@
 //   npx tashan info <name>           the measured dossier for one capability
 //   npx tashan add <name>            the install command for your client   ← the money shot
 //   npx tashan doctor                audit the config you actually have — dead, deprecated, risky
+//   npx tashan doctor --trend        ...and whether any of it is DECLINING   (tashan Pro)
 //
 // Reads live public data from https://tashan.sh/data/index.json (no account, no backend, no telemetry).
 // Zero dependencies. The pure functions are exported for cli/tashan.test.mjs.
 
-import { configLocations, skillLocations, collect, match, assess, summarize } from "./doctor.mjs";
+import { configLocations, skillLocations, collect, match, assess, summarize, trend, withTrend } from "./doctor.mjs";
 
 const SITE = process.env.TASHAN_SITE || "https://tashan.sh";
 const DATA_URL = SITE + "/data/index.json";
@@ -146,6 +147,30 @@ function renderAdd(r, client) {
 }
 
 // ---- data ----
+// Fetch each matched capability's series from the paid endpoint and fold the trend in. One request
+// per capability, capped: a config with 40 servers should not open 40 sockets at once, and the
+// endpoint is per-id by design (a whole-corpus history download is not what anyone wants).
+// ponytail: sequential with a cap; batch the endpoint if a stack of hundreds ever shows up.
+async function withTrends(results, key, base = SITE, limit = 40) {
+  let n = 0;
+  for (const r of results) {
+    if (!r.row || n >= limit) continue;
+    n++;
+    try {
+      const res = await fetch(`${base}/api/history?id=${encodeURIComponent(r.row.id)}`,
+                              { headers: { authorization: `Bearer ${key}` } });
+      if (res.status === 403 || res.status === 401) {
+        process.stderr.write(red("  licence key not valid — check https://polar.sh/purchases") + "\n");
+        return results;                       // stop early; every other call would fail the same way
+      }
+      if (!res.ok) continue;                  // 404 = nothing recorded yet, 503 = validation down
+      const { series } = await res.json();
+      r.assessment = withTrend(r.assessment, trend(series));
+    } catch { /* offline: trend is an enhancement, never a reason doctor fails */ }
+  }
+  return results;
+}
+
 async function loadData() {
   if (process.env.TASHAN_DATA) {                       // local dev / tests: point at a file
     const fs = await import("node:fs");
@@ -165,6 +190,7 @@ ${bold("tashan")} — the measured layer for AI capabilities ${dim("· " + SITE)
   ${jade("tashan info")} <name>          the measured dossier for one capability
   ${jade("tashan add")} <name>           the install command  ${dim("(--client claude|cursor|desktop|codex|npx)")}
   ${jade("tashan doctor")}               audit the config you already have — dead, deprecated, risky
+  ${jade("tashan doctor --trend")}       ...and whether any of it is declining  ${dim("(Pro · $6/mo · TASHAN_KEY)")}
 
   ${dim("flags:")}  --json   --limit <n>   --client <c>
   ${dim("every score is re-derivable from public evidence · no account, no telemetry")}
@@ -178,6 +204,9 @@ function parseArgs(argv) {
     else if (t === "--limit") a.limit = parseInt(argv[++i], 10) || 20;
     else if (t === "--client") a.client = (argv[++i] || "").toLowerCase();
     else if (t.startsWith("--client=")) a.client = t.slice(9).toLowerCase();
+    else if (t === "--trend") a.trend = true;
+    else if (t === "--key") a.key = argv[++i] || "";
+    else if (t.startsWith("--key=")) a.key = t.slice(6);
     else a._.push(t);
   }
   return a;
@@ -244,7 +273,22 @@ export async function main(argv) {
   }
   if (cmd === "doctor") {
     const { found, problems } = collect(configLocations(), skillLocations());
-    const results = found.map((item) => ({ item, row: match(item, rows), assessment: assess(item, match(item, rows)) }));
+    let results = found.map((item) => ({ item, row: match(item, rows), assessment: assess(item, match(item, rows)) }));
+
+    // --trend is the whole paid product, and it is the SAME command with one flag. A separate
+    // `tashan pro` verb would have been a second thing to learn for no benefit; the question is
+    // identical, only the timeframe changes. Without a key it says so and exits 0 — a missing
+    // subscription is not an error, and it must never look like the config is broken.
+    if (a.trend) {
+      const key = process.env.TASHAN_KEY || a.key;
+      if (!key) {
+        process.stderr.write(red("  --trend needs a licence key: export TASHAN_KEY=... "
+          + "(tashan Pro, $6/mo — https://tashan.sh/pricing.html)") + "\n");
+        return 0;
+      }
+      results = await withTrends(results, key);
+    }
+
     const sum = summarize(results);
     if (a.json) { process.stdout.write(JSON.stringify({ summary: sum, problems, results }, null, 2) + "\n"); return 0; }
     process.stdout.write(renderDoctor(results, problems, sum) + "\n");
