@@ -35,6 +35,14 @@ scale**, never at the integrity of the public data.
 | **On-demand deep expertise** (grade any capability now, not just top-ranked) | — | ✓ |
 | **Export** (CSV/JSON of any view) | — | ✓ |
 
+> **This table is the PLAN, not what ships today (checked 2026-07-29).** Watch/alerts, compare, and
+> on-demand grading are unbuilt, and the free API is deliberately **unmetered** rather than 60/day —
+> free and uncapped *is* the distribution strategy, and a static site cannot meter without auth
+> anyway. The free tier advertised three of these rows as live and a visitor could falsify all three
+> in thirty seconds; that shipped and had to be removed. **Nothing from this table goes on
+> `pricing.html` until it exists.** What Pro actually sells today is full score history over a keyed
+> API — see `docs/PAYMENTS.md`.
+
 Why **$6** (round, not $5.99 — .99 reads retail; was $12): the sweet spot is *cheap enough to be a no-question signup* (Brave Search
 Premium = $3) while premium *feel* comes from the product + a generous free tier + one clean number,
 not the price. Cheap consumer tier is top-of-funnel; the real money is later (Team/Data). Annual

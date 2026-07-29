@@ -134,7 +134,9 @@ in and be recognised. That remains the blocking investment (`PROJECT.md`, and §
 Everything in code is done and tested. These need the Polar dashboard and Cloudflare, and cannot be
 done from this repo.
 
-**1. Create the product in Polar.** Name it `tashan Pro`, $12/mo recurring, and attach a
+**1. Create the product in Polar.** Name it `tashan Pro`, **$6/mo** recurring (the price and its
+reasoning live in `docs/GROWTH.md` — round not $5.99, cheap enough to be a no-question signup, with
+the real money later in Team/Data), and attach a
 **License Key** benefit. Then replace the placeholder checkout URL in `web/pricing.html`:
 
 ```
@@ -181,4 +183,4 @@ for revenue was never actually needed to start charging.
 
 Watch-your-stack alerts and on-demand expertise grading are marked `not built yet` in the Pro list and
 in the FAQ. They are shown so a buyer can see the direction; the FAQ states outright that they are not
-what today's $12 buys. Do not quietly start counting them as delivered.
+what today's $6 buys. Do not quietly start counting them as delivered.
