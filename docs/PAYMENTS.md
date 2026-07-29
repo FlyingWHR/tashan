@@ -134,14 +134,23 @@ in and be recognised. That remains the blocking investment (`PROJECT.md`, and §
 Everything in code is done and tested. These need the Polar dashboard and Cloudflare, and cannot be
 done from this repo.
 
-**1. Create the product in Polar.** Name it `tashan Pro`, **$6/mo** recurring (the price and its
-reasoning live in `docs/GROWTH.md` — round not $5.99, cheap enough to be a no-question signup, with
-the real money later in Team/Data), and attach a
-**License Key** benefit. Then replace the placeholder checkout URL in `web/pricing.html`:
+**1. Product — DONE (2026-07-30).** Live in Polar and verified via the API:
 
-```
-web/pricing.html:  href="https://buy.polar.sh/tashan-pro"   <-- PLACEHOLDER, replace with the real link
-```
+| | |
+|---|---|
+| Product | `tashan Pro` — $6.00 USD/month, recurring, not archived |
+| Product ID | `32a53534-a909-4c01-a6c6-2e35cfbd335a` |
+| Organization ID | `caa0fc1b-2f7f-4e52-864a-c71e878d125d` (this is `POLAR_ORG_ID`) |
+| Licence-key benefit | `80bd4f50-7004-4f79-9a67-102ea9bd8257`, prefix `tashan`, no activation cap |
+| Checkout link | `https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d` |
+| success_url | `https://tashan.sh/welcome.html` |
+
+The product existed but had **no benefits attached**, so a purchase would have issued no licence key
+and the gate would have refused every paying customer. No activation limit is set deliberately: an
+activation cap would break CI use, and the subscription state already governs the key.
+
+**Rotate the organization API token** — it was pasted into a chat transcript. The licence gate never
+needs it; validation is a public endpoint.
 
 **2. Set the two secrets** (never commit either):
 
