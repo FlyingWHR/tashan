@@ -286,7 +286,16 @@ def llms_txt(caps, cats, by_cat, gen):
         L.append("- [" + pretty(c["name"]) + "](" + BASE + "/capability/" + c["slug"] + ".html) — tashan score "
                  + str(c.get("tashan_score")) + (", " + c["vitality"] if c.get("vitality") else "")
                  + ". " + (c.get("description") or "").replace("\n", " ")[:150])
-    L += ["", "## Categories", ""]
+    # The agent-facing surfaces, announced where a crawler or an agent will actually look. An endpoint
+    # nobody can discover is not distribution.
+    L += ["", "## For agents", "",
+          "- [/v0.1/scores](" + BASE + "/v0.1/scores) — compact lookup, `name -> [score, vitality, "
+          "evidence]`, ~50 KB gzipped. Fetch once, look up locally. An absent name is UNMEASURED, not bad.",
+          "- [/v0.1/servers](" + BASE + "/v0.1/servers) — full records, byte-compatible with the MCP "
+          "registry shape; measurement under the `sh.tashan/measurement` key in `_meta`.",
+          "- [/skill/SKILL.md](" + BASE + "/skill/SKILL.md) — install tashan as a capability and call it "
+          "when choosing what to install.",
+          "", "## Categories", ""]
     for cat in cats:
         rows = by_cat.get(cat["id"], [])
         if not rows:

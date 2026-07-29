@@ -161,6 +161,41 @@ if _m:
     check(f"classifier accuracy >= 55% (is {_acc:.1f}%)", _acc >= 55.0,
           "measured 62.9% when written; floor set below it to allow noise, not decay")
 
+
+print()
+print("# agent surfaces (the distribution that matters — an endpoint nobody can call is not distribution)")
+V1 = os.path.join(WEB, "v0.1")
+if os.path.exists(os.path.join(V1, "scores")):
+    sc = json.load(open(os.path.join(V1, "scores")))
+    check("/v0.1/scores is valid JSON with a scores map", isinstance(sc.get("scores"), dict))
+    check("/v0.1/scores states how to read it", "format" in sc.get("metadata", {}))
+    # An absent name must mean UNMEASURED. A zero would be read by a machine as "measured, and bad".
+    check("no score is null or zero", all(v[0] for v in sc["scores"].values()))
+    # The collision bug this caught: rows are sorted score-desc and 144 names repeat, so plain dict
+    # assignment resolved chrome-devtools-mcp to 20 instead of 87. Highest score must win.
+    bulk = json.load(open(os.path.join(WEB, "data", "capabilities.json")))["capabilities"]
+    best = {}
+    for c in bulk:
+        if c.get("tashan_score") is not None:
+            n = c.get("registry_name") or c["name"]
+            best[n] = max(best.get(n, 0), c["tashan_score"])
+    wrong = [n for n, v in sc["scores"].items() if best.get(n) and v[0] < best[n]]
+    check("lookup returns the HIGHEST score for a duplicated name", not wrong,
+          f"{len(wrong)} downgraded e.g. {wrong[:3]}")
+    srv = json.load(open(os.path.join(V1, "servers")))
+    check("/v0.1/servers uses the registry shape", isinstance(srv.get("servers"), list)
+          and "server" in srv["servers"][0] and "_meta" in srv["servers"][0])
+    check("measurement is namespaced sh.tashan/*",
+          "sh.tashan/measurement" in srv["servers"][0]["_meta"])
+    check("/v0.1/servers ships its own caveats", "note" in srv.get("metadata", {})
+          and "limits" in srv.get("metadata", {}))
+if os.path.exists(os.path.join(WEB, "skill", "SKILL.md")):
+    sk = read("skill/SKILL.md")
+    check("SKILL.md has YAML frontmatter with a description",
+          sk.startswith("---") and "description:" in sk[:900])
+    check("SKILL.md says a high score is NOT a security audit", "not a security audit" in sk)
+    check("SKILL.md says absent means unmeasured", "UNMEASURED" in sk)
+
 print()
 print("=" * 46)
 print("hubs: %d/%d passed%s" % (ok, ok + fail, " · all green" if not fail else ""))

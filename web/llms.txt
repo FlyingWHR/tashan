@@ -55,6 +55,12 @@ Generated: 2026-07-29. Capabilities tracked: 5791 ranked. Every number below is 
 - [XcodeBuildMCP](https://tashan.sh/capability/pkg-xcodebuildmcp.html) — tashan score 60.0, active. XcodeBuildMCP provides tools for Xcode project management, simulator management, and app utilities.
 - [octo](https://tashan.sh/capability/plugin-nyldn-claude-octopus-octo.html) — tashan score 59.0, active. v9.45.0 - Add Antigravity CLI (agy) provider, generic OpenAI-compatible agent, and tangle routing overrides. 32 personas, 49 commands, 54 skills. Run 
 
+## For agents
+
+- [/v0.1/scores](https://tashan.sh/v0.1/scores) — compact lookup, `name -> [score, vitality, evidence]`, ~50 KB gzipped. Fetch once, look up locally. An absent name is UNMEASURED, not bad.
+- [/v0.1/servers](https://tashan.sh/v0.1/servers) — full records, byte-compatible with the MCP registry shape; measurement under the `sh.tashan/measurement` key in `_meta`.
+- [/skill/SKILL.md](https://tashan.sh/skill/SKILL.md) — install tashan as a capability and call it when choosing what to install.
+
 ## Categories
 
 - [Browser & Web](https://tashan.sh/category/browser.html) — 32 measured. Headless browsers, scraping, page automation, fetch. Top: chrome-devtools, firecrawl, trusty-squire.

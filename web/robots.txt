@@ -33,3 +33,7 @@ Allow: /
 #   https://tashan.sh/data/capabilities.json
 
 Sitemap: https://tashan.sh/sitemap.xml
+
+# agent-facing measurement endpoints (JSON; see llms.txt)
+# /v0.1/scores  — compact name -> [score, vitality, evidence]
+# /v0.1/servers — full records in MCP-registry shape

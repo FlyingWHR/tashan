@@ -48,9 +48,10 @@ STAGES = [
     # unlinked from the dossiers that should point at it.
     ("hubs",            ["pipeline/gen_hubs.py"], "site", "category + task hubs, llms.txt"),
     ("pages",           ["pipeline/prerender.py"], "site", "capability pages + sitemap"),
+    ("registry",        ["pipeline/gen_registry.py"], "site", "agent endpoints (/v0.1/servers, /v0.1/scores)"),
     ("content",         ["pipeline/gen_content.py"], "site", "learn articles"),
 ]
-SITE_ONLY = {"badges", "pages", "content", "hubs"}
+SITE_ONLY = {"badges", "pages", "content", "hubs", "registry"}
 
 
 def run(name, argv, full):
