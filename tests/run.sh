@@ -40,6 +40,10 @@ python3 tests/test_hubs.py || fail=1
 echo; echo "── analytics collector ────────────────────────"
 node functions/api/e.test.mjs 2>/dev/null || fail=1
 
+# 5b. billing webhook — the signature check is a security boundary, it must fail closed
+echo; echo "── polar webhook (signature) ──────────────────"
+node functions/api/polar.test.mjs 2>/dev/null || fail=1
+
 # 3. CLI pure logic
 echo; echo "── cli ────────────────────────────────────────"
 node cli/tashan.test.mjs || fail=1

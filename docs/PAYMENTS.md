@@ -78,3 +78,51 @@ Polar (tashan's first-party): 3.4–5% + 30–50¢ by plan (grandfathered 4% + 4
 
 Sources: Polar MoR/fees/payouts docs · Stripe Connect (`application_fee_amount`, pricing, Managed-Payments-vs-Connect
 limit) · Lemon Squeezy / Paddle / Gumroad / Whop MoR docs · Coinbase x402. (Full URLs in the research transcript.)
+
+---
+
+## Polar webhook — how it is wired (implemented 2026-07-29)
+
+`functions/api/polar.js` is the receiver, `functions/api/polar.test.mjs` is the security test (in the
+suite). Polar follows the [Standard Webhooks](https://standardwebhooks.com) spec.
+
+**In the Polar dashboard** — organization settings → Webhooks → *Add Endpoint*:
+
+| field | value |
+|---|---|
+| URL | `https://tashan.sh/api/polar` |
+| Format | **Raw** (not Discord/Slack) |
+| Secret | generate one, then copy it — this is **not** the API key |
+| Events | `subscription.*` + `order.paid` + `order.refunded` (the set `polar.js` acts on) |
+
+**Then give the Worker the secret** (never commit it — it is not an env var in `wrangler.toml`, it is a
+secret):
+
+```sh
+npx wrangler@3 pages secret put POLAR_WEBHOOK_SECRET --project-name tashan
+# paste the signing secret from the dashboard
+```
+
+To record entitlement, bind a KV namespace as `TASHAN_KV` (Pages → Settings → Bindings). Until it is
+bound the endpoint verifies and 200s but stores nothing, exactly like `TASHAN_AE` in `e.js` — a missing
+binding must not 5xx, because **Polar disables an endpoint after 10 consecutive non-2xx responses.**
+
+### Three things that bite
+
+1. **The secret is base64.** The HMAC key is the *decoded bytes*, not the ASCII of the string you copied.
+   The SDKs hide this; we have no SDK, so `polar.js` decodes explicitly. Getting it wrong fails closed —
+   every delivery 403s, which looks identical to a wrong secret. `polar.test.mjs` pins this case.
+2. **The raw body must be hashed, not re-serialised JSON.** `JSON.parse` → `JSON.stringify` changes key
+   order, whitespace and unicode escapes, and the signature never matches again. `polar.js` reads
+   `await request.text()` once and signs that.
+3. **The route must stay public.** Polar does not follow redirects and never authenticates, so the
+   endpoint cannot sit behind any auth middleware. Its own signature check *is* the auth.
+
+The API key you already hold is for *calling* Polar (creating checkouts, reading subscriptions) and is a
+different credential from the webhook signing secret. It is not needed by this endpoint.
+
+### What this does NOT yet do
+
+Verification and entitlement recording are real. There is still **no auth, no accounts and no session**,
+so nothing on the site reads `ent:<email>` yet — a paid feature cannot be gated until a customer can log
+in and be recognised. That remains the blocking investment (`PROJECT.md`, and §2 of `docs/AUDIT.md`).
