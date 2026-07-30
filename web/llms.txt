@@ -2,7 +2,7 @@
 
 > The intelligence layer for AI capabilities. tashan scores MCP servers and agent skills on public evidence — npm downloads and publish cadence, GitHub activity, registry status, and how often a server appears in real public agent configs. Nobody can pay to change a score, rank, or listing; payment buys depth and tooling only.
 
-Generated: 2026-07-30. Capabilities tracked: 5787 ranked. Every number below is re-derivable from public sources.
+Generated: 2026-07-30. Capabilities tracked: 5788 ranked. Every number below is re-derivable from public sources.
 
 ## How the score works
 
@@ -72,7 +72,7 @@ Generated: 2026-07-30. Capabilities tracked: 5787 ranked. Every number below is 
 - [Data & Analytics](https://tashan.sh/category/data.html) — 336 measured. Pipelines, analytics, spreadsheets, BI. Top: deepeval, qsv-data-wrangling, savvly.
 - [Docs & Knowledge](https://tashan.sh/category/docs.html) — 100 measured. Docs lookup, notes, wikis, context retrieval. Top: @upstash/context7, @notionhq/notion-mcp-server, @suekou/mcp-notion-server.
 - [Communication](https://tashan.sh/category/comms.html) — 132 measured. Slack, email, chat, calendars, meetings. Top: claude-seo, hermes-ops, slack.
-- [Design](https://tashan.sh/category/design.html) — 202 measured. Figma, UI, images, creative & design tooling. Top: figma-developer, figma-console, impeccable.
+- [Design](https://tashan.sh/category/design.html) — 203 measured. Figma, UI, images, creative & design tooling. Top: figma-developer, figma-console, impeccable.
 - [AI & Agents](https://tashan.sh/category/ai.html) — 120 measured. Reasoning, agents, model & LLM orchestration. Top: sequential-thinking, humanize-korean, deepseek-mcp-server.
 - [Finance & Crypto](https://tashan.sh/category/finance.html) — 225 measured. Payments, markets, blockchain, wallets. Top: blockrun, photoplus-downloader, sap.
 - [Productivity](https://tashan.sh/category/productivity.html) — 2316 measured. Tasks, automation, workflows, personal tools. Top: caveman, desktop-commander, ponytail.

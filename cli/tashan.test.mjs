@@ -282,3 +282,25 @@ console.log("ok — suggest (relevance, never a worse or deader replacement)");
     "if we do not know the latest version we say nothing, rather than guessing");
 }
 console.log("ok — version pin vs published latest");
+
+// ---- remote servers resolve by host ------------------------------------------------------------
+{
+  const { identify, resolve } = await import("./doctor.mjs");
+  // The registry keeps a hosted server's endpoint in remotes[].url; ingest read packages[] and threw
+  // remotes away, so 0 of 4,215 remote rows carried a URL and identify()'s {kind:remote,id:host} could
+  // never match anything. Remote is the second-largest kind we track.
+  const lookup = {
+    records: [{ id: "registry:ai.exa/mcp", name: "exa", kind: "remote",
+                remote_host: "mcp.exa.ai", tashan_score: 71 }],
+    keys: { "registry:ai.exa/mcp": 0, "exa": 0, "mcp.exa.ai": 0, "ai.exa/mcp": 0 },
+  };
+  const item = identify({ url: "https://mcp.exa.ai/mcp" });
+  assert.strictEqual(item.kind, "remote");
+  assert.strictEqual(item.id, "mcp.exa.ai", "a URL is reduced to its host");
+  assert.strictEqual(resolve(item, lookup).name, "exa", "and the host is a lookup key");
+  // port and path must not defeat it
+  assert.strictEqual(resolve(identify({ url: "https://mcp.exa.ai/v1/sse?k=1" }), lookup).name, "exa");
+  assert.strictEqual(resolve(identify({ url: "https://other.example.com/mcp" }), lookup), null,
+    "an unknown host is still a clean miss");
+}
+console.log("ok — remote servers resolve by host");

@@ -99,9 +99,13 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # The published `latest` semver. It was fetched on every enrichment pass and discarded twice
            # (here and in enrich_meta), so nothing could answer "is the version I pinned out of date" —
            # npm_versions is a COUNT of releases, not a version.
-           "npm_latest_version TEXT"]
+           "npm_latest_version TEXT",
+           # Host of a remote server's endpoint, from the registry's remotes[].url. Without it a config
+           # entry {url:"https://mcp.exa.ai/mcp"} — which identify() reduces to the HOST — can never
+           # resolve, and remote is the second-largest kind we track (4,215 rows, 0 resolvable before).
+           "remote_host TEXT"]
 
-SCHEMA_VERSION = 6  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 7  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # v5 RENAMED the headline score. "Trust" claimed more than this project measures — there is no CVE scan,
 # no prompt-injection audit, no code review behind it — and the methodology page had to disclaim its own
@@ -267,6 +271,15 @@ def ingest_registry(con, full=False):
                     kind = "python"
                 if rt in ("oci", "docker") and not npm_pkg:
                     kind = "docker"
+            # A remote server has no packages[]; its endpoint lives in remotes[]. We read packages and
+            # threw remotes away, which is the whole reason a hosted MCP server in someone's config
+            # came back "not in the tashan index".
+            rhost = None
+            for rm in (srv.get("remotes") or []):
+                u = rm.get("url") or ""
+                m2 = re.match(r"https?://([^/:?#]+)", u)
+                if m2:
+                    rhost = m2.group(1).lower(); break
             repo = (srv.get("repository") or {}).get("url")
             if repo:
                 m = re.search(r"github\.com[/:]([\w.-]+/[\w.-]+?)(?:\.git|/|$)", repo)
@@ -294,16 +307,17 @@ def ingest_registry(con, full=False):
                 continue
             if status == "deprecated":
                 deprecated += 1
-            con.execute("""INSERT INTO capabilities (id,name,kind,title,description,npm_pkg,source_repo,registry_name,registry_status,registry_updated,in_registry)
-              VALUES (?,?,?,?,?,?,?,?,?,?,1)
+            con.execute("""INSERT INTO capabilities (id,name,kind,title,description,npm_pkg,source_repo,registry_name,registry_status,registry_updated,remote_host,in_registry)
+              VALUES (?,?,?,?,?,?,?,?,?,?,?,1)
               ON CONFLICT(id) DO UPDATE SET title=COALESCE(excluded.title,capabilities.title),
                 description=COALESCE(excluded.description,capabilities.description),
                 source_repo=COALESCE(excluded.source_repo,capabilities.source_repo),
                 registry_name=excluded.registry_name, registry_status=excluded.registry_status,
                 registry_updated=excluded.registry_updated, in_registry=1,
-                npm_pkg=COALESCE(capabilities.npm_pkg,excluded.npm_pkg)""",
+                npm_pkg=COALESCE(capabilities.npm_pkg,excluded.npm_pkg),
+                remote_host=COALESCE(excluded.remote_host,capabilities.remote_host)""",
               (cid, name.split("/")[-1], kind, srv.get("title"), srv.get("description"),
-               npm_pkg, repo, name, meta.get("status"), meta.get("updatedAt")))
+               npm_pkg, repo, name, meta.get("status"), meta.get("updatedAt"), rhost))
             seen += 1
         con.commit()
         cursor = (d.get("metadata") or {}).get("nextCursor")
@@ -830,7 +844,7 @@ def slugify(cid):
 def export(con):
     cols = ["id","name","kind","title","description","npm_pkg","source_repo","registry_status",
             "config_reach","config_repos","stars_median","stars_max","last_seen",
-            "npm_downloads","npm_last_publish","npm_maintainers","npm_versions","npm_deprecated","npm_latest_version",
+            "npm_downloads","npm_last_publish","npm_maintainers","npm_versions","npm_deprecated","npm_latest_version","remote_host",
             "co_used","adoption","freshness","upkeep","tashan_score",
             "expertise","expertise_verdict","expertise_note","retention","retention_note",
             "category","in_registry","in_configs",
@@ -1198,7 +1212,7 @@ def export(con):
     # and has no first-paint budget because nothing renders it — 5,787 rows, ~200 KB gz, fetched by a
     # terminal, once.
     LOOKUP = ["id", "name", "kind", "npm_pkg", "category", "official", "slug", "tashan_score",
-              "npm_latest_version",
+              "npm_latest_version", "remote_host",
               "vitality", "expertise_verdict", "npm_downloads", "gh_stars", "npm_deprecated",
               "gh_archived", "registry_status", "single_maintainer", "similar_official", "rated"]
     # DELISTED ROWS BELONG IN THE LOOKUP, and nowhere else. A capability the registry pulled for
@@ -1216,6 +1230,7 @@ def export(con):
         # cli/doctor.mjs yields an npm package, a python package, a docker image or a remote host, so all
         # four have to be keys — matching on `name` alone is what limited this to npm and skills.
         for k in (c.get("npm_pkg"), c.get("name"), c.get("id"),
+                  c.get("remote_host"),          # a hosted server is named by its host in a config
                   (c.get("id") or "").split(":", 1)[-1] or None):
             if k:
                 by_key.setdefault(str(k).lower(), i)
