@@ -33,10 +33,9 @@
     <header class="phead">
       <p class="hero__eyebrow">Pricing</p>
       <h1 class="phead__h">The Index is free. Always.</h1>
-      <p class="phead__sub">Every score, every capability, the whole methodology — free forever, and we never
-        gate a number. More than <b>300</b> of the capabilities we measure are abandoned or deprecated right now,
-        and over <b>3,000</b> rest on a single maintainer. The free Index tells you that.
-        <strong>Pro tells you whether any of them are yours — and which ones got worse this month.</strong></p>
+      <p class="phead__sub">Every score, every capability, the whole methodology — free forever. More than
+        <b>300</b> of the things we measure are abandoned or deprecated right now.
+        <strong>Pro tells you which of them are yours, and what to use instead.</strong></p>
     </header>
 
     <div class="plans">
@@ -63,20 +62,14 @@
           <span class="plan__name">tashan Pro</span>
           <span class="plan__price">$6<small>/mo</small></span>
         </div>
-        <p class="plan__for">One command tells you if anything you already run is going bad.</p>
-        <div class="callout mono" style="font-size:.8rem;margin:0 0 var(--sp-4)">$ tashan doctor --trend</div>
+        <p class="plan__for">Free tells you what in your stack is broken. Pro tells you what to use instead.</p>
+        <div class="callout mono" style="font-size:.8rem;margin:0 0 var(--sp-4)">$ tashan doctor</div>
         <ul class="plan__feat">
-          <li>Everything in Free — nothing is moved out of it, ever</li>
-          <li><b>Catches decline, not just death.</b> Free <code>doctor</code> tells you what's
-            <em>already</em> dead. By then you've depended on it for months. <code>--trend</code>
-            flags the one that is sliding while it still looks fine
-            <span class="mono">· needs ~30 days of history; we restarted the clock on 30 Jul when the
-            score was recalibrated, and will not compare across that line</span></li>
-          <li><b>Reads your own config</b> — Claude Code, Claude Desktop, Cursor, VS Code, Windsurf.
-            Nothing is uploaded; it checks the files you already have</li>
-          <li><b>The full history behind it</b>, over a keyed API, if you'd rather query it yourself</li>
-          <li class="plan__soon">Email alerts, so you don't have to run it
-            <span class="mono">· not built yet</span></li>
+          <li><b>The replacement, named.</b> Not "this is deprecated" — <em>switch to this one, it
+            scores 65 and is still maintained</em>.</li>
+          <li><b>Every score since we started measuring</b>, so you see what is sliding before it
+            breaks. <span class="plan__soon mono">trend needs ~30 days · clock restarted 30 Jul</span></li>
+          <li><b>Everything free stays free.</b> Warnings are never behind this.</li>
         </ul>
         <a class="btn btn--primary plan__cta" href="https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" rel="noopener"
            data-src="pro-checkout">Subscribe &rsaquo;</a>
@@ -101,16 +94,15 @@
       <div><h3>Is the data really free?</h3><p>Yes, and it stays that way — every score, every capability, no key and
         no quota. It's how the field gets an honest reference, and a number behind a paywall is worth less to everyone
         including us. Pro doesn't unlock scores; it watches <em>your</em> stack and keeps the history.</p></div>
-      <div><h3>What am I actually paying for today?</h3><p><code>tashan doctor --trend</code>, and the score
-        history that makes it possible. One row in the list above is marked <span class="mono">not built yet</span>
-        and you are <em>not</em> paying for it — it's there so you can see where Pro is going, and it arrives at
-        this price. We'd rather show you an honest short list than sell a long one.</p></div>
+      <div><h3>What am I paying for today?</h3><p>Named replacements for anything dead in your config, and
+        the full score history. Trend needs about a month of data before it means anything and we restarted that
+        clock on 30 July when the score was recalibrated — we'd rather say so than let you find out.</p></div>
       <div><h3>Why isn't this free like everything else?</h3><p>Because it's the one thing that can't be
         re-derived from today's public data. Every score on the Index is a snapshot anyone could recompute;
         the <em>series</em> only exists because we recorded it, every day, and a day we miss is gone for good —
         for us too. That's what $6 buys, and it's worth more every month it runs.</p></div>
       <div><h3>How do I use the key?</h3><p><code>export TASHAN_KEY=…</code> then
-        <code>tashan doctor --trend</code>. The key is in your
+        <code>tashan doctor</code>. The key is in your
         <a class="link" href="https://polar.sh/purchases" rel="noopener">Polar portal</a>. Nothing about your
         config is uploaded — the CLI reads your local files and asks us only about capability names.
         Full details on <a class="link" href="/support.html">support</a>.</p></div>
