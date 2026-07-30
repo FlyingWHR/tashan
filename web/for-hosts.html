@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For hosts — serve measured scores by changing one URL</title>
+  <meta name="description" content="tashan's subregistry is byte-compatible with the MCP registry. Point at it and every server arrives with a measurement attached.">
+  <meta name="theme-color" content="#0b0b0a">
+  <link rel="canonical" href="https://tashan.sh/for-hosts.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="For hosts — serve measured scores by changing one URL">
+  <meta property="og:description" content="tashan's subregistry is byte-compatible with the MCP registry. Point at it and every server arrives with a measurement attached.">
+  <meta property="og:url" content="https://tashan.sh/for-hosts.html">
+  <meta property="og:image" content="https://tashan.sh/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="tashan — the index of AI capabilities, ranked by the tashan score">
+  <meta name="twitter:image" content="https://tashan.sh/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css?v=84">
+</head>
+<body>
+  <nav class="nav"><div class="wrap nav__in">
+    <a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>
+    <div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a><a href="/methodology.html">Methodology</a><a href="/learn/">Learn</a><a href="/about.html" aria-current="page">About</a><a href="/pricing.html">Pricing</a></div>
+  </div></nav>
+
+  <main class="wrap"><article class="prose">
+    <h1>Change one URL.</h1>
+    <p class="lede">If your host, IDE or agent already reads the official MCP registry, it can read
+      tashan instead and get the same payload with a measurement attached. No SDK, no integration, no
+      awareness of us beyond a base URL.</p>
+
+    <div class="callout mono" style="font-size:.85rem">registry.modelcontextprotocol.io/v0.1/servers<br>
+      &nbsp;&nbsp;&darr;<br><b>tashan.sh/v0.1/servers</b></div>
+
+    <h2>What you get that you did not have</h2>
+    <p>Every entry keeps its registry shape and gains one namespaced block, so nothing you already parse
+      changes:</p>
+    <div class="callout mono" style="font-size:.78rem">"_meta": {<br>
+      &nbsp;&nbsp;"io.modelcontextprotocol.registry/official": { … unchanged … },<br>
+      &nbsp;&nbsp;"sh.tashan/measurement": { "score": 86, "vitality": "active",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"evidence": "32,517 downloads/wk", "expertise": "solid" }<br>
+      }</div>
+    <p>5,278 measured servers today. Unscored servers are <b>absent</b> rather than zero — we never
+      publish a number we did not measure.</p>
+
+    <h2>One score, one request</h2>
+    <p>If you only need a number at decision time, <span class="mono">/v0.1/scores</span> is a flat
+      map — name to <span class="mono">[score, vitality, evidence]</span> — so you are not pulling the
+      full catalogue to check one package.</p>
+    <div class="callout mono" style="font-size:.85rem">curl -s https://tashan.sh/v0.1/scores | jq '."tavily-mcp"'</div>
+
+    <h2>Terms</h2>
+    <ul>
+      <li><b>Free and unmetered.</b> No key, no quota, CC BY 4.0. We want you calling it — that is the
+        distribution.</li>
+      <li><b>Never pay-to-rank.</b> Nobody can buy a score, a position or a removal. If that ever
+        changed, the number would be worth nothing to you.</li>
+      <li><b>Not a security audit.</b> A tashan score measures adoption and maintenance. It is not a
+        CVE scan or a code review, and it should not be presented to your users as one.</li>
+    </ul>
+
+    <h2>If you need a promise</h2>
+    <p>The static files above carry no uptime or schema-stability commitment, because they are files.
+      If you are shipping tashan inside a product and need a keyed endpoint, versioning guarantees or
+      change webhooks, that is a conversation:
+      <a class="link" href="mailto:hello@tashan.sh?subject=tashan%20in%20our%20product">hello@tashan.sh</a>.</p>
+
+    <p style="margin-top:var(--sp-12)"><a class="btn btn--ghost" href="/methodology.html">How the score is computed &rsaquo;</a></p>
+
+  </article></main>
+
+  <footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__brand">
+      <span class="brand"><span class="brand__mark"></span>tashan</span>
+      <p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p>
+      <p class="footer__meta" id="footMethod">public-signal v2</p>
+    </div>
+    <nav class="footer__col"><p class="footer__h">Explore</p>
+      <a href="/">The Index</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a></nav>
+    <nav class="footer__col"><p class="footer__h">tashan score</p>
+      <a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>
+    <nav class="footer__col"><p class="footer__h">Sources</p>
+      <a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>
+      <a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>
+      <a href="https://github.com/" rel="noopener">GitHub ↗</a></nav>
+    <nav class="footer__col"><p class="footer__h">Legal</p>
+      <a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refunds.html">Refunds</a><a href="/support.html">Support</a></nav>
+  </div>
+  <div class="wrap footer__bar">
+    <span>© 2026 SeroLabs, Inc.</span>
+    <span>Every score re-derivable from public evidence.</span>
+  </div>
+</footer>
+
+  <script src="/js/terminal.js?v=84" defer></script>
+  <script src="/js/site.js?v=84" defer></script>
+</body>
+</html>

@@ -45,7 +45,8 @@ FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         '<nav class="footer__col"><p class="footer__h">Sources</p>'
         '<a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>'
         '<a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>'
-        '<a href="https://github.com/" rel="noopener">GitHub ↗</a></nav>'
+        '<a href="https://github.com/" rel="noopener">GitHub ↗</a>'
+        '<a href="/for-hosts.html">For hosts</a></nav>'
         # Selling on this site means every page needs the legal surfaces, not just the hand-written
         # eleven — these three generators produce ~5,800 of them.
         '<nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a>'
