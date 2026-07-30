@@ -103,9 +103,23 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # Host of a remote server's endpoint, from the registry's remotes[].url. Without it a config
            # entry {url:"https://mcp.exa.ai/mcp"} — which identify() reduces to the HOST — can never
            # resolve, and remote is the second-largest kind we track (4,215 rows, 0 resolvable before).
-           "remote_host TEXT"]
+           "remote_host TEXT",
+           # ---- security audit (pipeline/scan_security.py) ----------------------------------
+           # Public evidence only: OSV.dev advisories for the version you would install TODAY, plus
+           # what the npm packument already tells us and we were throwing away. None of these feed
+           # the score — tests/test_firewall.py still proves the scorer reads only its own columns.
+           "sec_advisories TEXT",        # JSON [{id, severity, summary, fixed}]
+           "sec_advisory_count INTEGER",
+           "sec_max_severity TEXT",      # CRITICAL / HIGH / MODERATE / LOW
+           "sec_install_script TEXT",    # postinstall|preinstall — arbitrary code at install time
+           "sec_provenance INTEGER",     # signed / attested release
+           "sec_permissions TEXT",       # JSON ["shell","network",…] from DECLARED dependencies
+           "sec_remote_content INTEGER", # can carry third-party text into the model's context
+           "sec_dep_count INTEGER",
+           "sec_scanned_at TEXT",
+           "npm_license TEXT"]
 
-SCHEMA_VERSION = 7  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 8  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # v5 RENAMED the headline score. "Trust" claimed more than this project measures — there is no CVE scan,
 # no prompt-injection audit, no code review behind it — and the methodology page had to disclaim its own

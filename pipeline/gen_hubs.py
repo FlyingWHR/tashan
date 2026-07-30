@@ -46,7 +46,7 @@ def clip(text, n):
     return (cut or t[:n]) + "…"
 
 NAV = ('<nav class="nav"><div class="wrap nav__in">'
-       '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
+       '<a class="brand" href="/"><span class="brand__mark"></span>tashan</a>'
        '<div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a>'
        '<a href="/methodology.html">Methodology</a><a href="/learn/">Learn</a>'
        '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a></div></div></nav>')
@@ -429,7 +429,7 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
            ' categories and ', str(len(listable)), ' tasks.</p></header>']
 
     # ---- categories: the domain axis ----
-    out.append('<section id="categories"><h2 class="hubh2">Categories — what it touches</h2>')
+    out.append('<section id="categories"><h2 class="hubh2">Categories</h2>')
     out.append('<div class="browsegrid">')
     for cat in sorted(cats, key=lambda c: -len(by_cat.get(c["id"], []))):
         rows = by_cat.get(cat["id"], [])
@@ -444,7 +444,7 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
     out.append("</div></section>")
 
     # ---- tasks: the job axis, grouped by who does the job ----
-    out.append('<section id="tasks"><h2 class="hubh2">Tasks — what you\'re doing</h2>'
+    out.append('<section id="tasks"><h2 class="hubh2">Tasks</h2>'
                '<p class="hubnote">A dashed tile has fewer than ' + str(TASK_MIN) + ' measured capabilities, '
                'so it has no page of its own yet and opens the filtered Index instead.'
                + ((' ' + str(empty) + ' more tasks we track have nothing measured behind them yet and are not '

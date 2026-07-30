@@ -117,7 +117,7 @@ def jsonld(c):
                      for x in (app, crumbs, faqld))
 
 NAV = ('<nav class="nav"><div class="wrap nav__in">'
-       '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
+       '<a class="brand" href="/"><span class="brand__mark"></span>tashan</a>'
        '<div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a>'
        '<a href="/methodology.html">Methodology</a><a href="/learn/">Learn</a>'
        '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a></div></div></nav>')
