@@ -175,6 +175,32 @@
     state[setName] = new Set([v]);
   }
 
+  // Baymard's filter-truncation testing: ~10 values is the sweet spot, 6 the floor, and past ~15 the
+  // list stops being scannable and hides the OTHER filter types from view. We were rendering 95 rows
+  // across 7 groups. Truncate to SHOWN, with a "+ N more" affordance directly beneath the values.
+  // A value the user has already selected is always rendered, or applying a filter from the expanded
+  // list would make that filter vanish when the list collapsed again.
+  // 8, not 10. Baymard's band is 6-15 with ~10 ideal; at 10 the two lists plus their headings ran
+  // 135px past the viewport and reintroduced a nested scrollbar — the exact thing being removed.
+  var SHOWN = 8;
+  function truncate(items, keyOf, selected, expanded) {
+    if (expanded || items.length <= SHOWN + 1) return { list: items, hidden: 0 };
+    var head = items.slice(0, SHOWN);
+    var seen = {}; head.forEach(function (i) { seen[keyOf(i)] = 1; });
+    items.slice(SHOWN).forEach(function (i) {
+      if (selected.has(keyOf(i)) && !seen[keyOf(i)]) { head.push(i); seen[keyOf(i)] = 1; }
+    });
+    return { list: head, hidden: items.length - head.length };
+  }
+  // Expanding 70 more rows in place just rebuilds the wall we are removing, and the full set is
+  // genuinely a different job from refining — it wants room, counts and the hub links. It gets its
+  // own page, which doubles as the parent index those 68 hub pages never had.
+  function moreRow(kind, hidden) {
+    if (!hidden) return "";
+    return '<a class="crow crow--more" href="/browse.html#' + (kind === "cat" ? "categories" : "tasks") +
+      '">+ ' + hidden + " more &rsaquo;</a>";
+  }
+
   function railRow(attr, id, label, count, on, tip) {
     return '<button class="crow' + (on ? " is-on" : "") + '" data-' + attr + '="' + esc(id) + '"' +
       ' type="button" aria-pressed="' + !!on + '" title="' + esc(tip || label) + '">' +
@@ -215,14 +241,13 @@
     });
     var roleLabel = {};
     data.roles.forEach(function (r) { roleLabel[r.id] = r.label; });
-    var order = Object.keys(byRole).sort(function (a, b) { return byRole[b].length - byRole[a].length; });
-    var html = order.map(function (r) {
-      var items = byRole[r].sort(function (a, b) { return (b.count || 0) - (a.count || 0); });
-      return '<div class="trole"><p class="trole__h mono">' + esc(roleLabel[r] || r) + "</p>" +
-        items.map(function (t) {
-          return railRow("task", t.slug, t.label, t.count || 0, state.task.has(t.slug), t.blurb);
-        }).join("") + "</div>";
-    }).join("");
+    // Collapsed to the ten biggest shelves, the shape Hugging Face uses for its task facet over a
+    // comparably large catalogue. The role headings live on /browse.html, where there is room for them.
+    var flat = live.slice().sort(function (a, b) { return (b.count || 0) - (a.count || 0); });
+    var cut = truncate(flat, function (t) { return t.slug; }, state.task, false);
+    var html = cut.list.map(function (t) {
+      return railRow("task", t.slug, t.label, t.count || 0, state.task.has(t.slug), t.blurb);
+    }).join("") + moreRow("task", cut.hidden);
     rail.innerHTML = html;
     rail.onclick = function (e) {
       var b = e.target.closest("[data-task]");
@@ -249,12 +274,12 @@
       var tip = lead ? label + " — top: " + pretty(lead.name) + " (Trust " + lead.trust + ")" : label;
       return railRow("cat", id, label, count, on, tip);
     }
-    var html = "";
-    data.cats.forEach(function (cat) {
-      var n = counts[cat.id] || 0;
-      if (!n) return;
-      html += row(cat.id, cat.label, n, state.cat.has(cat.id), top[cat.id]);
-    });
+    var live = data.cats.filter(function (cat) { return counts[cat.id]; })
+      .sort(function (a, b) { return counts[b.id] - counts[a.id]; });
+    var cut = truncate(live, function (c) { return c.id; }, state.cat, false);
+    var html = cut.list.map(function (cat) {
+      return row(cat.id, cat.label, counts[cat.id], state.cat.has(cat.id), top[cat.id]);
+    }).join("") + moreRow("cat", cut.hidden);
     rail.innerHTML = html;
     rail.onclick = function (e) {
       var b = e.target.closest("button[data-cat]");

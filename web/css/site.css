@@ -230,7 +230,7 @@ img { max-width: 100%; display: block; }
   padding:.1rem .45rem; cursor:pointer; transition: color .15s var(--ease), border-color .15s var(--ease); }
 .combtog:hover { color: var(--text-dim); border-color: var(--hairline); }
 .combtog.is-on { color: var(--jade); border-color: var(--jade-line); background: var(--jade-dim); }
-.catrail__h--sub { margin-top: var(--sp-8); padding-top: var(--sp-4); border-top:1px solid var(--line); }
+.catrail__h--sub { margin-top: var(--sp-4); padding-top: var(--sp-3); border-top:1px solid var(--line); }
 .trole { margin-bottom: var(--sp-4); }
 .trole__h { font-size:.6rem; letter-spacing:.09em; text-transform:uppercase; color: var(--text-faint);
             margin:0 0 .25rem; padding-left:.3rem; opacity:.75; }
@@ -664,3 +664,31 @@ pre, code, .install__snip { max-width: 100%; }
   font-size: .88rem; color: var(--text-dim); }
 .use-note b { color: var(--text); }
 .legend { max-width: 46rem; }
+
+/* ---------- browse.html: the parent index for every category and task hub ---------- */
+.browsegrid { display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--sp-3);
+  margin: var(--sp-4) 0 var(--sp-8); }
+.browsecard { display:flex; flex-wrap:wrap; align-items:baseline; gap:.5rem; padding: var(--sp-3) var(--sp-4);
+  border:1px solid var(--hairline); border-radius: var(--radius); background: var(--surface);
+  color: var(--text); text-decoration:none; transition: border-color .12s, background .12s; }
+.browsecard:hover { border-color: var(--jade-line); background: var(--surface-2); }
+.browsecard__t { font-weight:500; }
+.browsecard__c { color: var(--jade); font-size:.8rem; margin-left:auto; }
+.browsecard__lead { flex-basis:100%; font-size:.74rem; color: var(--text-faint); }
+.browserole { margin-bottom: var(--sp-6); }
+.browserole__h { font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; color: var(--text-faint);
+  margin:0 0 var(--sp-2); }
+.browsetags { display:flex; flex-wrap:wrap; gap:.4rem; }
+.browsetag { display:inline-flex; align-items:center; gap:.4rem; font-size:.84rem; padding:.28rem .7rem;
+  border:1px solid var(--hairline); border-radius: var(--radius-pill); background:transparent;
+  color: var(--text-dim); text-decoration:none; transition: color .12s, border-color .12s; }
+.browsetag:hover { color: var(--text); border-color: var(--jade-line); }
+.browsetag__c { font-size:.7rem; color: var(--text-faint); }
+/* A task below the publish floor has no page of its own — it links back into the filtered Index
+   instead, and says so by being visibly quieter rather than by looking identical and 404-ing. */
+.browsetag--thin { border-style:dashed; color: var(--text-faint); }
+.hubnote { font-size:.86rem; color: var(--text-faint); max-width: 62ch; margin: 0 0 var(--sp-4); }
+/* the rail's escape hatch to the full list */
+.crow--more { justify-content:flex-start; color: var(--text-faint); font-family: var(--font-mono);
+  font-size:.76rem; text-decoration:none; margin-top:.2rem; }
+.crow--more:hover { color: var(--jade); background: var(--surface); }

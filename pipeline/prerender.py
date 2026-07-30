@@ -120,14 +120,14 @@ NAV = ('<nav class="nav"><div class="wrap nav__in">'
        '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
        '<div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a>'
        '<a href="/methodology.html">Methodology</a><a href="/learn/">Learn</a>'
-       '<a href="/about.html">About</a></div></div></nav>')
+       '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a></div></div></nav>')
 FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         '<div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span>'
         '<p class="footer__tag">The measurement layer for AI capabilities — MCP servers and agent skills, '
         'measured on public evidence.</p>'
         '<p class="footer__meta" id="footMethod">public-signal v2</p></div>'
         '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a>'
-        '<a href="/start.html">Use it</a><a href="/learn/">Learn</a>'
+        '<a href="/start.html">Use it</a><a href="/browse.html">Browse</a><a href="/learn/">Learn</a>'
         '<a href="/for-hosts.html">For hosts</a></nav>'
         '<nav class="footer__col"><p class="footer__h">tashan score</p><a href="/methodology.html">Methodology</a>'
         '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>'
@@ -280,7 +280,8 @@ def sitemap(caps):
     # before paying were the only ones a crawler could not find. welcome.html stays OUT deliberately —
     # it is the post-checkout page and carries noindex.
     urls = ["/", "/start.html", "/methodology.html", "/about.html", "/pricing.html", "/requests.html",
-            "/terms.html", "/privacy.html", "/refunds.html", "/support.html", "/for-hosts.html"]
+            "/terms.html", "/privacy.html", "/refunds.html", "/support.html", "/for-hosts.html",
+            "/browse.html"]
     static = "".join("  <url><loc>" + BASE + u + "</loc></url>\n" for u in urls)
     caps_x = "".join('  <url><loc>' + BASE + "/capability/" + c["slug"] + '.html</loc>'
                      '<changefreq>weekly</changefreq></url>\n' for c in caps)

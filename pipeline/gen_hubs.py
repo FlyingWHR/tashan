@@ -49,13 +49,13 @@ NAV = ('<nav class="nav"><div class="wrap nav__in">'
        '<a class="brand" href="/"><span class="brand__mark"></span>tashan<small>v2 · public-signal</small></a>'
        '<div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a>'
        '<a href="/methodology.html">Methodology</a><a href="/learn/">Learn</a>'
-       '<a href="/about.html">About</a></div></div></nav>')
+       '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a></div></div></nav>')
 FOOT = ('<footer class="footer"><div class="wrap footer__in">'
         '<div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span>'
         '<p class="footer__tag">The measurement layer for AI capabilities — MCP servers and agent skills, '
         'measured on public evidence.</p></div>'
         '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a>'
-        '<a href="/start.html">Use it</a><a href="/learn/">Learn</a>'
+        '<a href="/start.html">Use it</a><a href="/browse.html">Browse</a><a href="/learn/">Learn</a>'
         '<a href="/for-hosts.html">For hosts</a></nav>'
         '<nav class="footer__col"><p class="footer__h">tashan score</p><a href="/methodology.html">Methodology</a>'
         '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>'
@@ -320,6 +320,92 @@ def llms_txt(caps, cats, by_cat, gen):
     return "\n".join(L)
 
 
+def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
+    """One parent for every hub.
+
+    Two problems, one page. The Index sidebar was rendering all 95 facet values at once — Baymard's
+    filter testing puts the readable ceiling around 10, past which the list stops being scannable and
+    hides the other filter types from view. And the 15 category hubs plus 53 task hubs had no index
+    anywhere: nothing on the site linked to the set, so they were orphans only the sitemap knew about.
+    The sidebar now shows the ten biggest of each axis and sends everything else here.
+    """
+    url = BASE + "/browse.html"
+    title = "Browse every category and task · tashan"
+    desc = ("Every category and every job tashan measures MCP servers and agent skills against — "
+            + str(len(cats)) + " categories and " + str(len(tasks)) + " tasks, each ranked on public evidence.")
+    pub_slugs = {t["slug"] for t in pub}
+    by_role = {}
+    for t in tasks:
+        for r in (t.get("roles") or ["other"]):
+            by_role.setdefault(r, []).append(t)
+    role_label = {r["id"]: r["label"] for r in roles}
+
+    lds = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": title, "url": url,
+            "description": desc},
+           {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+               {"@type": "ListItem", "position": 1, "name": "tashan", "item": BASE + "/"},
+               {"@type": "ListItem", "position": 2, "name": "Browse", "item": url}]}]
+
+    out = [head(title, desc, url, lds), '<main class="wrap">',
+           '<header class="hubhead"><h1>Browse</h1>',
+           '<p class="lede">Every category and every job we measure against. ',
+           str(sum(len(v) for v in by_cat.values())), ' capabilities across ', str(len(cats)),
+           ' categories and ', str(len(tasks)), ' tasks.</p></header>']
+
+    # ---- categories: the domain axis ----
+    out.append('<section id="categories"><h2 class="hubh2">Categories — what it touches</h2>')
+    out.append('<div class="browsegrid">')
+    for cat in sorted(cats, key=lambda c: -len(by_cat.get(c["id"], []))):
+        rows = by_cat.get(cat["id"], [])
+        if not rows:
+            continue
+        lead = next((r for r in rows if r.get("tashan_score") is not None), None)
+        out.append('<a class="browsecard" href="/category/' + cat["id"] + '.html">'
+                   '<span class="browsecard__t">' + esc(cat["label"]) + "</span>"
+                   '<span class="browsecard__c mono">' + str(len(rows)) + "</span>"
+                   + ('<span class="browsecard__lead">top: ' + esc(pretty(lead["name"])) + "</span>"
+                      if lead else "") + "</a>")
+    out.append("</div></section>")
+
+    # ---- tasks: the job axis, grouped by who does the job ----
+    out.append('<section id="tasks"><h2 class="hubh2">Tasks — what you\'re doing</h2>'
+               '<p class="hubnote">A task with fewer than ' + str(TASK_MIN) + ' measured capabilities behind it '
+               'is listed here but has no page of its own yet — we would rather say so than publish a shelf '
+               'with nothing on it.</p>')
+    # A heading over one chip is pure overhead — seven roles hold one or two tasks each. They gather
+    # into a single trailing group rather than fragmenting the page into 23 near-empty sections.
+    ROLE_MIN = 3
+    big = [r for r in by_role if len(by_role[r]) >= ROLE_MIN]
+    small = [r for r in by_role if len(by_role[r]) < ROLE_MIN]
+    groups = [(role_label.get(r, r), by_role[r]) for r in sorted(big, key=lambda r: -len(by_role[r]))]
+    if small:
+        seen, rest = set(), []
+        for r in sorted(small, key=lambda r: role_label.get(r, r)):
+            for t in by_role[r]:
+                if t["slug"] not in seen:
+                    seen.add(t["slug"]); rest.append(t)
+        groups.append(("Also", rest))
+
+    for rlabel, ritems in groups:
+        items = sorted(ritems, key=lambda t: -len(by_task.get(t["slug"], [])))
+        out.append('<div class="browserole"><h3 class="browserole__h mono">'
+                   + esc(rlabel) + "</h3><div class=\"browsetags\">")
+        for t in items:
+            n = len(by_task.get(t["slug"], []))
+            if t["slug"] in pub_slugs:
+                out.append('<a class="browsetag" href="/task/' + t["slug"] + '.html">'
+                           + esc(t["label"]) + '<span class="browsetag__c mono">' + str(n) + "</span></a>")
+            else:
+                out.append('<a class="browsetag browsetag--thin" href="/?task=' + t["slug"] + '">'
+                           + esc(t["label"]) + '<span class="browsetag__c mono">' + str(n) + "</span></a>")
+        out.append("</div></div>")
+    out.append("</section>")
+
+    out.append('<p class="hubback"><a class="link" href="/">&lsaquo; Back to the Index</a></p>')
+    out.append("</main>" + FOOT + "</body></html>")
+    return "".join(out)
+
+
 def main():
     d = json.load(open(DATA))
     gen = d.get("generated_at", "")
@@ -367,6 +453,12 @@ def main():
     print("task hubs: %d written, %d below the %d-capability floor (listed, not published)"
           % (len(pub), thin, TASK_MIN))
 
+
+    roles = json.load(open(TASKS)).get("roles", [])
+    open(os.path.join(ROOT, "web", "browse.html"), "w").write(
+        browse_page(cats, by_cat, tasks, pub, by_task, roles, gen))
+    print("browse.html: %d categories + %d tasks indexed (%d hub pages adopted)"
+          % (len(by_cat), len(tasks), len(by_cat) + len(pub)))
 
     open(os.path.join(ROOT, "web", "llms.txt"), "w").write(llms_txt(caps, cats, by_cat, gen))
     print("llms.txt: %d capabilities + %d categories indexed" % (min(40, len(caps)), len(by_cat)))
