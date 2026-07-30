@@ -409,3 +409,22 @@ import { join } from "node:path";
     "an unresolved row has no detail to sell, whatever else is attached to it");
   console.log("ok — the Pro offer is earned per finding, never a standing nag");
 }
+
+// ---- the dossier URL must resolve --------------------------------------------------------------
+// `slug` is not a field in the slim index the CLI loads, so r.slug was undefined on every row and
+// `tashan info` printed http://tashan.sh/capability/undefined.html — on every capability, every
+// time. slugify(id) reproduces the real slug exactly, which is why prerender.py names files that way.
+{
+  const { slugify } = await import("./tashan.mjs");
+  const cases = [
+    ["pkg:@postman/postman-mcp-server", "pkg-postman-postman-mcp-server"],
+    ["pkg:@azure/mcp", "pkg-azure-mcp"],
+    ["registry:io.github.foo/bar", "registry-io-github-foo-bar"],
+    ["skill:anthropics/pdf", "skill-anthropics-pdf"],
+  ];
+  for (const [id, want] of cases) {
+    assert.strictEqual(slugify(id), want, `slugify(${id}) must match the prerendered filename`);
+  }
+  assert.ok(!slugify("pkg:x").includes("undefined"), "a slug can never be the string 'undefined'");
+}
+console.log("ok — the dossier URL resolves from the id, not a missing slug field");

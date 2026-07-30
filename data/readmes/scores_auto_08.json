@@ -1,0 +1,22 @@
+[
+  {"id": "plugin:sonarsource/sonarqube-agent-plugins/sonarqube", "expertise": 78, "verdict": "solid", "note": "Slash commands shown with real rule ids and flags; body is install matrices for seven hosts"},
+  {"id": "plugin:jetbrains/teamcity-cli/teamcity-cli", "expertise": 76, "verdict": "solid", "note": "Five commented real commands; flags the CLI/TeamCity naming mismatch, full reference is off-site"},
+  {"id": "plugin:agenticmail/agenticmail/agenticmail", "expertise": 55, "verdict": "thin", "note": "Body is five releases of changelog; installs cleanly but no tool reference or example call"},
+  {"id": "plugin:romiluz13/cc10x/cc10x-router-owned-harness", "expertise": 58, "verdict": "thin", "note": "Architecture prose and ASCII flow charts; the only usage instruction is 'say set up cc10x for me'"},
+  {"id": "plugin:gwittebolle/claude-carbon/co2-tracker", "expertise": 86, "verdict": "deep", "note": "States it records nothing in the web or desktop app, and that the live status-line number is indicative only"},
+  {"id": "plugin:defanglabs/defang/defang", "expertise": 72, "verdict": "solid", "note": "Shows a real `defang stack new` session with its prompts and output; the MCP surface gets three sentences"},
+  {"id": "plugin:hidai25/eval-view/evalview", "expertise": 79, "verdict": "solid", "note": "Prints real check output with three verdict states and names what it is not (an observability tool)"},
+  {"id": "plugin:vortiago/mcp-outline/mcp-outline", "expertise": 74, "verdict": "solid", "note": "Points readers to Outline's official server up top; tool signatures documented with optional args"},
+  {"id": "plugin:medusajs/medusa-claude-plugins/medusa-dev", "expertise": 45, "verdict": "thin", "note": "Marketplace root README: medusa-dev is one table row and Usage says 'refer to each plugin'"},
+  {"id": "plugin:fabio-rovai/open-ontologies/open-ontologies", "expertise": 77, "verdict": "solid", "note": "Warns `serve` will look like it hangs until a client connects; only the 13 newest tools are documented"},
+  {"id": "plugin:verygoodopensource/very_good_ai_flutter_plugin/very-good-ai-flutter-plugin", "expertise": 78, "verdict": "solid", "note": "Hooks table gives trigger, blocking exit code, and the graceful skip when jq is absent"},
+  {"id": "plugin:degausai/wonda/wonda", "expertise": 74, "verdict": "solid", "note": "Command tables plus two real generate invocations with model and flags; no stated limitation"},
+  {"id": "plugin:bradautomates/claude-video/watch", "expertise": 88, "verdict": "deep", "note": "Measured table from a real 49:08 video: frames, extraction time, token estimates, and the method"},
+  {"id": "plugin:mattgierhart/prd-driven-context-engineering/prd-ce", "expertise": 52, "verdict": "thin", "note": "Manifesto and lifecycle tables plus a star-the-repo appeal; no command or worked example in the body"},
+  {"id": "plugin:hypnguyen1209/offensive-claude/offensive-claude", "expertise": 78, "verdict": "solid", "note": "Commands tabled by kill-chain phase, and a safety table naming each fail-closed guard script"},
+  {"id": "plugin:aytuncyildizli/reprompter/reprompter", "expertise": 84, "verdict": "deep", "note": "Prints the full before/after prompt, labels its own scores self-assessed, and says it won't ship AAA"},
+  {"id": "plugin:treylom/prompt-engineering-skills/prompt-engineering-skills", "expertise": 58, "verdict": "thin", "note": "Asset map and install commands for four platforms; the /prompt command's output is never shown"},
+  {"id": "pkg:@kevinwatt/mcp-server-searxng", "expertise": 70, "verdict": "solid", "note": "Its single web_search tool is documented with defaults; the runnable examples only set up SearXNG itself"},
+  {"id": "pkg:@vaaya/mcp", "expertise": 70, "verdict": "solid", "note": "Proxies a dozen third-party vendors; core tools carry parameter names and a hard max_cost_cents ceiling"},
+  {"id": "pkg:@hovecapital/read-only-mysql-mcp-server", "expertise": 79, "verdict": "solid", "note": "Three tools with parameter tables and an enumerated blocked-operations list, behind five near-identical configs"}
+]

@@ -187,9 +187,25 @@ function infoCard(r) {
   L.push("");
   if (r.npm_pkg) L.push("  npm          " + under("https://www.npmjs.com/package/" + r.npm_pkg));
   if (r.source_repo) L.push("  source       " + under("https://github.com/" + r.source_repo));
-  L.push("  dossier      " + under(SITE + "/capability/" + r.slug + ".html"));
+  // The security audit belongs here too. `info` is what someone runs BEFORE installing — the moment
+  // the findings are most actionable — and it was the one surface still silent about them.
+  const sec = [];
+  if (r.sec_max_severity === "MALICIOUS") sec.push(red("MALICIOUS — listed in OSV's malicious-packages database. Do not install."));
+  else if (r.sec_advisory_count) sec.push(red(`${r.sec_advisory_count} known advisor${r.sec_advisory_count === 1 ? "y" : "ies"}`) + dim(` (${(r.sec_max_severity || "unrated").toLowerCase()}) against the current release`));
+  else if (r.sec_advisory_count === 0) sec.push(jade("no known advisories") + dim(" against the current release"));
+  if (r.sec_install_script) sec.push(C("33")("runs a script at install time"));
+  if (r.sec_permissions) {
+    try { const ps = JSON.parse(r.sec_permissions); if (ps.length) sec.push(dim("can reach: ") + ps.join(", ")); } catch { /* never break info */ }
+  }
+  if (sec.length) {
+    L.push("");
+    L.push("  " + dim("security") + "     " + sec[0]);
+    for (const x of sec.slice(1)) L.push("               " + x);
+    L.push("");                 // separator belongs to the block, not to the line after it
+  }
+  L.push("  dossier      " + under(SITE + "/capability/" + (r.slug || slugify(r.id)) + ".html"));
   L.push("");
-  L.push("  " + dim("install:  ") + jade("tashan add " + (r.slug || pretty(r.name))));
+  L.push("  " + dim("install:  ") + jade("tashan add " + pretty(r.name)));
   L.push("");
   return L.join("\n");
 }
@@ -197,7 +213,7 @@ function infoCard(r) {
 function renderAdd(r, client) {
   const snips = installSnippets(r, client);
   if (!snips.length) return red(`  no install method for client "${client}". try: claude · cursor · desktop · codex · npx`);
-  const out = ["", "  " + bold(pretty(r.name)) + dim("  — " + SITE + "/capability/" + r.slug + ".html"), ""];
+  const out = ["", "  " + bold(pretty(r.name)) + dim("  — " + SITE + "/capability/" + (r.slug || slugify(r.id)) + ".html"), ""];
   for (const s of snips) {
     out.push("  " + dim(s.label));
     out.push(s.cmd.split("\n").map((l) => "    " + jade(l)).join("\n"));

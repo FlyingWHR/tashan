@@ -1,6 +1,6 @@
 [
   {"id": "pkg:@smartergpt/axf", "expertise": 76, "verdict": "solid", "note": "Install for 5 platforms and a 'not a fit when' section; alpha, exposes one MCP tool."},
-  {"id": "pkg:tracepass-mcp-server", "expertise": 81, "verdict": "deep", "note": "6 tools with full action matrices; documents 409 ambiguous_serial and billable create."},
+  {"id": "pkg:tracepass-mcp-server", "expertise": 79, "verdict": "solid", "note": "6 tools with full action matrices, but no example call - only client config blocks."},
   {"id": "pkg:ghost-publisher-mcp", "expertise": 84, "verdict": "deep", "note": "23 tools tabled, 9 in read-only mode; states what it omits (delete, members, newsletter)."},
   {"id": "pkg:@daghis/teamcity-mcp", "expertise": 72, "verdict": "solid", "note": "Note says it is no longer developed and points users to JetBrains' official MCP instead."},
   {"id": "pkg:@dollhousemcp/mcp-server", "expertise": 55, "verdict": "thin", "note": "Says 37 starter elements in one section and 38 shipped elements in another."},

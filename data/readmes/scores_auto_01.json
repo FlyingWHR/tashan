@@ -1,0 +1,22 @@
+[
+  {"id": "plugin:microsoft/azure-skills/azure", "expertise": 68, "verdict": "solid", "note": "Install steps for 7 hosts and sovereign-cloud --cloud; the 20+ skills are names only"},
+  {"id": "plugin:chachamaru127/claude-code-harness/claude-harness", "expertise": 79, "verdict": "solid", "note": "Per-host support tiers; auto-approve marked default-OFF and 'not yet' skipping prompts"},
+  {"id": "plugin:avdlee/swiftui-agent-skill/swiftui-expert", "expertise": 84, "verdict": "deep", "note": "Documents the xctrace toolchain flags and the <25%/>=75% main_running_coverage_pct split"},
+  {"id": "pkg:@trusty-squire/mcp", "expertise": 86, "verdict": "deep", "note": "Documents grant_app_access args, the 429 rate_limited scope, and 3-D Secure human handoff"},
+  {"id": "plugin:atlassian/atlassian-mcp-server/atlassian", "expertise": 50, "verdict": "thin", "note": "Badge and install-button wall; tools and workflows live behind support.atlassian.com"},
+  {"id": "plugin:googlechrome/modern-web-guidance/modern-web-guidance", "expertise": 74, "verdict": "solid", "note": "Runnable search/retrieve examples; the 103 features are links to an external explorer"},
+  {"id": "plugin:codeaholicguy/ai-devkit/ai-devkit", "expertise": 76, "verdict": "solid", "note": "Real `agent send --stdin` and `memory store` invocations plus a You/Agent transcript"},
+  {"id": "plugin:kenryu42/claude-code-safety-net/safety-net", "expertise": 84, "verdict": "deep", "note": "Names allowed-vs-blocked git forms and warns legacy configs now fail closed until migrated"},
+  {"id": "plugin:cocoindex-io/cocoindex-code/cocoindex-code", "expertise": 81, "verdict": "deep", "note": "Full search() signature with defaults; flags the ~1 GB torch cost of the [full] extra"},
+  {"id": "plugin:evanbacon/serve-sim/serve-sim", "expertise": 35, "verdict": "thin", "note": "README is the literal string `packages/serve-sim/README.md`; no documentation at all"},
+  {"id": "plugin:silverstein/minutes/minutes", "expertise": 86, "verdict": "deep", "note": "States the CLI can't do native call capture (BlackHole route) and shows consent frontmatter"},
+  {"id": "pkg:@henkey/postgres-mcp-server", "expertise": 78, "verdict": "solid", "note": "Security modes table with four real --security-mode runs; the 18 tools are never listed"},
+  {"id": "plugin:clickhouse/agent-skills/clickhouse-best-practices", "expertise": 78, "verdict": "solid", "note": "Eight skills each get a real paragraph; the JS skill excludes browser/Web client issues"},
+  {"id": "plugin:figma/mcp-server-guide/figma", "expertise": 78, "verdict": "solid", "note": "States the 6-calls-per-month Starter cap; the tool list lives in Figma's developer docs"},
+  {"id": "plugin:shopify/shopify-ai-toolkit/shopify-ai-toolkit", "expertise": 58, "verdict": "thin", "note": "Installs plus an unusually precise telemetry disclosure; the 18 skills are never documented"},
+  {"id": "plugin:hyhmrright/brooks-lint/brooks-lint", "expertise": 78, "verdict": "solid", "note": "Shows input code and the real 28/100 findings output; states no limitation of its own"},
+  {"id": "plugin:activeloopai/deeplake-claude-code-plugins/deeplake-hivemind", "expertise": 42, "verdict": "thin", "note": "Documented only by a shared repo README (Hivemind's), which never names this capability"},
+  {"id": "plugin:activeloopai/hivemind/hivemind", "expertise": 79, "verdict": "solid", "note": "Alpha footnote names exactly what Cowork can't capture; the memory tools stay undocumented"},
+  {"id": "plugin:mohitagw15856/pm-claude-skills/pm-claude-skills", "expertise": 48, "verdict": "thin", "note": "Badge wall with an explicit 'AEO Answer Capsule'; none of the 822 skills documented here"},
+  {"id": "plugin:nizos/tdd-guard/tdd-guard", "expertise": 56, "verdict": "thin", "note": "Self-declares superseded by Probity; features are 6 one-liners with all detail in docs/"}
+]
