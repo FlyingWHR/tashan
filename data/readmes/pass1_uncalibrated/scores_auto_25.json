@@ -1,0 +1,170 @@
+[
+ {
+  "id": "pkg:@braynexservices/nigeria-mcp-fx-rates",
+  "expertise": 55,
+  "verdict": "thin",
+  "note": "shared 12-server monorepo readme; tool/source table but no usage examples"
+ },
+ {
+  "id": "pkg:@braynexservices/nigeria-mcp-trade-intel",
+  "expertise": 55,
+  "verdict": "thin",
+  "note": "same shared monorepo readme; trade-intel tools listed, no params or examples"
+ },
+ {
+  "id": "pkg:@burtthecoder/mcp-virustotal",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "install for Claude Code/Codex/Gemini/Smithery, env var table, http-stream + docker"
+ },
+ {
+  "id": "pkg:@supstack/cli",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "~20 worked CLI examples, device-code login, tools split read-only vs account"
+ },
+ {
+  "id": "pkg:brokre",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "bastion routing examples, MCP config JSON, IDE auto-setup table, gate policy noted"
+ },
+ {
+  "id": "plugin:gemini-cli-extensions/alloydb-omni/alloydb-omni",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "beta notice, env var config, per-agent install (Antigravity/Claude/Codex), TOC"
+ },
+ {
+  "id": "plugin:aws-samples/sample-claude-code-plugins-for-startups/aws-dev-toolkit",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "34 skills/11 agents mapped to example prompts; 3 MCP servers tabled with packages"
+ },
+ {
+  "id": "plugin:makenotion/claude-code-notion-plugin/notion",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "10 slash commands tabled + 3-step install; auth is one line ('supports OAuth!')"
+ },
+ {
+  "id": "plugin:supabase-community/supabase-plugin/supabase",
+  "expertise": 45,
+  "verdict": "thin",
+  "note": "1.5k readme: vendor support matrix and repo notes, no usage or skill docs"
+ },
+ {
+  "id": "plugin:obra/superpowers/superpowers",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "install paths for 11 harnesses; methodology in prose, no per-skill docs"
+ },
+ {
+  "id": "plugin:alation/alation-plugins/alation",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "install for 5 hosts, OAuth client registration steps, Cowork redirect caveat"
+ },
+ {
+  "id": "plugin:noemuch/bridge/bridge-ds",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "architecture table + 4-artifact output; single one-line usage example"
+ },
+ {
+  "id": "plugin:thewhyman/prompt-engineering-in-action/co-dialectic",
+  "expertise": 58,
+  "verdict": "thin",
+  "note": "mostly install paths and troubleshooting; 45%->91% headline claim unsupported"
+ },
+ {
+  "id": "plugin:doncheli/don-cheli-sdd/don-cheli-sdd-framework",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "one worked /dc:auto run, docker/worktree gate mechanics; 93 commands unlisted"
+ },
+ {
+  "id": "plugin:edwingao28/excalidraw-toolkit/excalidraw-skill",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "transcript example, 6-phase pipeline, self-critique loop, 4 example diagram pairs"
+ },
+ {
+  "id": "plugin:atezer/fmcp/f-mcp-bridge",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "Turkish readme; 5-step install plus explicit Claude Desktop limitation list"
+ },
+ {
+  "id": "plugin:gooseworks-ai/gooseworks/gooseworks",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "per-command reference with sample outputs, install for 3 agents, login flow detail"
+ },
+ {
+  "id": "plugin:ai-screams/howl/howl",
+  "expertise": 58,
+  "verdict": "thin",
+  "note": "~25 badges dominate; feature bullets and TOC only, no install shown"
+ },
+ {
+  "id": "plugin:itential/builder-skills/itential-builder",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "6-stage delivery diagram, version prereqs, two .env auth modes, skills table"
+ },
+ {
+  "id": "plugin:waitdeadai/llm-dark-patterns/llm-dark-patterns",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "phase ship table, real DarkBench/AAAI citations, states its own bypass limits"
+ },
+ {
+  "id": "plugin:praneybehl/llm-wiki-plugin/llm-wiki-plugin",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "v3 changes, pinned runtime deps, install for Claude Code + skills CLI, scope caveat"
+ },
+ {
+  "id": "plugin:hongdangmoo49/oh-my-obsidian/oh-my-obsidian",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "problem/fix table, Claude Code + Codex quick starts, setup walkthrough detail"
+ },
+ {
+  "id": "plugin:nisus74/pencil-skill/pencil-dev-skill",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "unofficial-plugin disclaimer, prerequisites, 3 install paths, pre-release status"
+ },
+ {
+  "id": "plugin:xoai/sage/sage",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "measured evals with N per model tier and a walked-back claim; no install shown"
+ },
+ {
+  "id": "plugin:scylladb/agent-skills/scylladb",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "6 skills tabled with real scope, skill dirs for 5 agents, local validator steps"
+ },
+ {
+  "id": "plugin:olgasafonova/skillcheck-free/skillcheck-free",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "3 install paths, trigger phrases, sample output block, rule-ID check table"
+ },
+ {
+  "id": "plugin:carson-sweet/sweetclaude/sweetclaude",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "honest 'wrong tool if...' section, model-cost guidance, install + design principles"
+ },
+ {
+  "id": "plugin:descope/skills/descope-skills",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "per-skill sections with triggers, frameworks, outputs and explicit read-only scope"
+ }
+]

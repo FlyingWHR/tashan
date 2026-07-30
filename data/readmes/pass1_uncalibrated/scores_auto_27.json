@@ -1,0 +1,170 @@
+[
+ {
+  "id": "pkg:distribea-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "4 CLI examples with dry-run pricing; long TOC promises reference not shown"
+ },
+ {
+  "id": "pkg:@drbaher/sign-cli",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "one-command full-lifecycle demo, audience routing table, per-flag consent gates"
+ },
+ {
+  "id": "pkg:gliana-ai-mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "7-tool table with prices, upload curl, payment-rail env table, wallet safety warning"
+ },
+ {
+  "id": "pkg:@getabrain/mcp-server",
+  "expertise": 80,
+  "verdict": "deep",
+  "note": "all 7 tools documented, test-vs-live key semantics, remote config, example agent flow"
+ },
+ {
+  "id": "plugin:microsoft/azure-sql-database-container/azure-sql-developer",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "private-preview access caveat, docs TOC, skills install via npx, knowledge layers"
+ },
+ {
+  "id": "plugin:get-convex/convex-backend-skill/convex",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "install + 18 example asks across 3 user types, bundled component table with detail"
+ },
+ {
+  "id": "plugin:mark7766/ai-coding-ok/ai-coding-ok",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "Chinese readme: PDCA table, 3-tier memory, install for 5 tools, installed-file tree"
+ },
+ {
+  "id": "plugin:akii-technologies-ltd/akii-seo-ai-search-optimizer/akii-seo-ai-search-optimizer",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "two-step install with paste caveat; states what the visibility score does not query"
+ },
+ {
+  "id": "plugin:archcore-ai/archcore-plugin/archcore",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "7 commands tabled with when-to-use, CLI prereq install, per-host plugin steps"
+ },
+ {
+  "id": "plugin:mmmprod/claude-eta/claude-eta",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "eval numbers with p80/MdAPE and single-user caveat, install/update/uninstall commands"
+ },
+ {
+  "id": "plugin:conductor-oss/conductor-skills/conductor",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "capability list, 4 slash commands, install via plugin/npm/scripts for 3 OSes"
+ },
+ {
+  "id": "plugin:credyt/ai-skills/credyt",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "MCP + skills install steps, 4 skills tabled, 3 slash commands with what each does"
+ },
+ {
+  "id": "plugin:eudaimonic-inc/deepspace-skill/deepspace",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "520-char stub: one install line, no tools, SDK itself described as forthcoming"
+ },
+ {
+  "id": "plugin:tarunccet/pm-skills/guided-ai-product-management",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "quickstart, role and command tables, copy/paste examples; 93-skill claims unverified"
+ },
+ {
+  "id": "plugin:jfrog/claude-plugin/jfrog",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "feature table by component, versioned prerequisites, auth steps, preview disclaimer"
+ },
+ {
+  "id": "plugin:labyrinth-analytics/loredocs/loredocs",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "install per host, on-disk layout, verify step, recommended CLAUDE.md snippet"
+ },
+ {
+  "id": "plugin:drhalto/agentmako/mako-ai",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "install + doctor, happy-path with a real reef_ask invocation, local-only claim"
+ },
+ {
+  "id": "plugin:nxtg-ai/forge-plugin/nxtg-forge",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "component count table and 6 key commands; counts-heavy, no per-skill docs"
+ },
+ {
+  "id": "plugin:fadelabs/phantom/phantom",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "concrete domain output (LUFS targets, 300Hz cut), 4-layer design; no install shown"
+ },
+ {
+  "id": "plugin:sanmak/specops/specops",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "before/after transcript, 3 install paths, problem table with EARS notation"
+ },
+ {
+  "id": "plugin:datit309/supergraph/supergraph",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "evidence-gated workflow, platform table, Windows Git Bash fallback documented"
+ },
+ {
+  "id": "plugin:gigsmart/haiku-method/the-h-ai-k-u-method",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "4-layer hierarchy, 12 studios with stages, command table, single-binary architecture"
+ },
+ {
+  "id": "plugin:thephw/claude-meseeks/mr-meeseeks",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "install, player fallback chain, CLI commands, event->sound table, why not Stop hook"
+ },
+ {
+  "id": "plugin:galando/temper/temper",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "gherkin gap example, gate CLI output, evidence ledger downgrade rule, commit block"
+ },
+ {
+  "id": "plugin:ramboz/jig/jig",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "principles prose with mechanism links; no commands, install, or skill list shown"
+ },
+ {
+  "id": "plugin:furkankoykiran/.claude/fk-eng-agents",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "shared toolkit readme; fk-eng-agents is one table row (0-char listing cost)"
+ },
+ {
+  "id": "plugin:furkankoykiran/.claude/fk-gh-flow",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "shared toolkit readme; fk-gh-flow is one table row, no per-skill usage docs"
+ },
+ {
+  "id": "plugin:furkankoykiran/.claude/fk-manim-video",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "shared toolkit readme; fk-manim-video only a table row, no manim/tts usage docs"
+ }
+]

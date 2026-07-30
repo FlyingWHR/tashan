@@ -117,9 +117,14 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            "sec_remote_content INTEGER", # can carry third-party text into the model's context
            "sec_dep_count INTEGER",
            "sec_scanned_at TEXT",
-           "npm_license TEXT"]
+           "npm_license TEXT",
+           # Is the documentation actually ABOUT this capability? 79 of 836 staged rows ship a README
+           # byte-identical to another capability's, and whole families are never named in the only
+           # document they have. A grader reading that text sees competent docs — for something else.
+           "doc_shared_with INTEGER",   # how many OTHER capabilities ship this exact README
+           "doc_names_self INTEGER"]    # does the text mention this capability at all
 
-SCHEMA_VERSION = 8  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 9  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # v5 RENAMED the headline score. "Trust" claimed more than the SCORE measures: it is upkeep, freshness
 # and adoption, and a number whose name needs walking back is misnamed. That still holds — the security

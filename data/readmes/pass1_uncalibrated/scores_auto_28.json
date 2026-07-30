@@ -1,0 +1,170 @@
+[
+ {
+  "id": "plugin:furkankoykiran/.claude/fk-toolkit-ops",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "shared toolkit readme; fk-toolkit-ops is one table row, no update/MCP-wiring docs"
+ },
+ {
+  "id": "plugin:furkankoykiran/.claude/fk-writing-kit",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "shared toolkit readme; fk-writing-kit is one table row, no writing-skill docs"
+ },
+ {
+  "id": "plugin:superhq-ai/webmotion/webmotion",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "full <w-*> markup example, JS and TS APIs, scaffold command, per-feature spec links"
+ },
+ {
+  "id": "plugin:rvdbreemen/adr-kit/adr-kit",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "separate agent runbook, pre-1.0 warning, audit posture with stated non-goals"
+ },
+ {
+  "id": "plugin:chronoaiproject/consensus-rnd/consensus-rnd",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "two skills tabled, consensus mechanics, risks: autonomous writes, cost, auto-releases"
+ },
+ {
+  "id": "plugin:derekstride/sq/sq",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "install 3 ways, command list, ready/blocked views, 8 flag-level examples incl. rg pipe"
+ },
+ {
+  "id": "plugin:initialneil/project-with-reflect/project-with-reflect",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "feature bullets with core loop, marketplace + skills-CLI + symlink installs per agent"
+ },
+ {
+  "id": "pkg:brewpage-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "limits per content type, curl quick start with real response JSON, use-case table"
+ },
+ {
+  "id": "pkg:spritecook-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "setup command, 7 example prompts, manual configs for Cursor/VS Code; tools not listed"
+ },
+ {
+  "id": "pkg:obra-cto",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "sample scored report with risks, weighted dimensions, evidence grades, one network call"
+ },
+ {
+  "id": "pkg:drawing-converter-mcp",
+  "expertise": 80,
+  "verdict": "deep",
+  "note": "5 tools documented, install for 5 clients, example session, AI step left to the model"
+ },
+ {
+  "id": "pkg:monarch-money-mcp-server",
+  "expertise": 45,
+  "verdict": "thin",
+  "note": "PulseMCP org readme: principles and a server matrix; monarch-money never documented"
+ },
+ {
+  "id": "pkg:onepassword-mcp-server",
+  "expertise": 45,
+  "verdict": "thin",
+  "note": "PulseMCP org readme: principles and a server matrix; the 1Password server undocumented"
+ },
+ {
+  "id": "pkg:vaiz-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "env table, Cursor/Claude configs, debug flag, programmatic example; no tool docs"
+ },
+ {
+  "id": "pkg:@mcpfinder/server",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "4-tool table with when-to-call, agent-skill install, preferred call sequence"
+ },
+ {
+  "id": "pkg:@multimail/mcp-server",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "oversight-mode ladder, per-client config paths, signed identity header, allowlist rules"
+ },
+ {
+  "id": "pkg:@stitchapi/docs-mcp",
+  "expertise": 50,
+  "verdict": "thin",
+  "note": "4k of banners, badges and supply-chain blurb; search_docs/get_doc never documented"
+ },
+ {
+  "id": "pkg:@aiwerk/mcp-server-imap",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "send disabled by default, hosted-vs-local send restriction explained, CLI arg table"
+ },
+ {
+  "id": "pkg:rosetta-mcp-server",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "release-note style but concrete: named tools, spec fixes, worked two-tool example"
+ },
+ {
+  "id": "pkg:minipainter",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "feature list, TUI screenshots, docker compose with endpoints and storage switch"
+ },
+ {
+  "id": "pkg:callimachus-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "mechanism-level features (FTS5+sqlite-vec RRF, file index); download over install steps"
+ },
+ {
+  "id": "pkg:@buzzr/mcp",
+  "expertise": 58,
+  "verdict": "thin",
+  "note": "monorepo package matrix; @buzzr/mcp is one row (11 tools), no config or tool docs"
+ },
+ {
+  "id": "pkg:@chaixueyuan/weapp-agent-mcp",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "CN readme: suitable/unsuitable table, 2 install paths, boundaries + recovery rule"
+ },
+ {
+  "id": "pkg:@chanmeng666/archlang-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "complete worked ArchLang program with rendered output; MCP tool surface not shown"
+ },
+ {
+  "id": "pkg:unreal-engine-mcp-server",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "capability table by category, dual transports, UE caveat (5.7.4 acceptance only)"
+ },
+ {
+  "id": "pkg:@didaai/hotelbooking",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "marketing-heavy CN readme; endpoint + tool names and a working .mcp.json config"
+ },
+ {
+  "id": "pkg:npx-vibe",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "several real commands incl. agent JSON mode, decision table, download counts caveated"
+ },
+ {
+  "id": "pkg:dingdawg-finance-agent",
+  "expertise": 55,
+  "verdict": "thin",
+  "note": "install + tier table; 5 tools one line each, 'governed receipts' claim unexplained"
+ }
+]

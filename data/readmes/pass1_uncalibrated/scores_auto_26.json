@@ -1,0 +1,170 @@
+[
+ {
+  "id": "plugin:hamelsmu/hamel/hamel-tools",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "6 utilities, each with 4-6 real CLI invocations; plugin install for 2 agents"
+ },
+ {
+  "id": "plugin:bo-cao/breaking-coding-chaos/bcc",
+  "expertise": 58,
+  "verdict": "thin",
+  "note": "4k of motivation essay; quick start only linked, no commands or skill docs"
+ },
+ {
+  "id": "plugin:camjac251/tool-gates/tool-gates",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "brew install, per-CLI hooks add commands, doctor check, features link to live docs"
+ },
+ {
+  "id": "plugin:redhat-global-engineering/ge-public-skills/agent-eval-harness",
+  "expertise": 48,
+  "verdict": "thin",
+  "note": "registry-level readme (registry.yaml flow); the eval-harness plugin is undocumented"
+ },
+ {
+  "id": "plugin:raven-scout/scout-plugin/scout",
+  "expertise": 58,
+  "verdict": "thin",
+  "note": "confidence-tagging and self-edit mechanics described; no install, config or examples"
+ },
+ {
+  "id": "plugin:xd4o/praxis/praxis",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "worked gate transcript, test-result table, 18 skills with what/when each fires"
+ },
+ {
+  "id": "pkg:@peng-shawn/mermaid-mcp-server",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "configs for 3 clients, docker/chrome caveats, full param docs for the one tool"
+ },
+ {
+  "id": "pkg:@callmcp/server",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "14-tool contract, doctor/sandbox commands, vendor comparison, spec-vs-pitch honesty"
+ },
+ {
+  "id": "pkg:fodda-mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "quick start for 6 client types, tool table with determinism flags, auth + config"
+ },
+ {
+  "id": "pkg:kaduno-pullpush-mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "60s sandbox curl, stdio and http configs, shadow-mode preview, error shape documented"
+ },
+ {
+  "id": "pkg:@traderouter/trade-router-mcp",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "signing flow steps, 6 env vars with defaults, config paths per OS, dry-run flag"
+ },
+ {
+  "id": "pkg:lovie",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "same npx config repeated for 9 clients; 79 tools summarized only by category"
+ },
+ {
+  "id": "skill:anthropics/brand-guidelines",
+  "expertise": 50,
+  "verdict": "thin",
+  "note": "repo-level readme for anthropics/skills; brand-guidelines itself never documented"
+ },
+ {
+  "id": "pkg:@tradesearcher/mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "15 CLI examples, MCP config, honest free-tier limits and 'source available' caveat"
+ },
+ {
+  "id": "pkg:hemmabo-mcp-server",
+  "expertise": 55,
+  "verdict": "thin",
+  "note": "agent-directed prose with use/don't-use rules; no install config or tool examples"
+ },
+ {
+  "id": "pkg:@hushvert/mcp",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "pdffonts evidence vs pandoc, reproducible demo tape, says when you don't need it"
+ },
+ {
+  "id": "pkg:@instavar/mcp-server",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "two setup modes (free/keyed), env table, tool table, honest about host model billing"
+ },
+ {
+  "id": "pkg:@theneuralledger/mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "package table, stdio/http/CLI/TS/Python quick starts, security bullets, docs index"
+ },
+ {
+  "id": "pkg:@madtaco/mcp",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "tool table with endpoints and per-call credits, tier gating, rate limits, try-it prompts"
+ },
+ {
+  "id": "pkg:@agentage/find-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "3-tool table, says remote clients don't need the package, notes SDK forwarding limit"
+ },
+ {
+  "id": "pkg:alterlab-mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "one-line installs, tier pricing per request, WebFetch comparison table, config JSON"
+ },
+ {
+  "id": "pkg:@otskit/mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "per-agent setup command, CLI table, 8 MCP tools tabled, honest pending-proof note"
+ },
+ {
+  "id": "pkg:@automattic/simplenote-mcp",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "setup/auth detail with per-OS token paths, headless env var, write mode opt-in"
+ },
+ {
+  "id": "pkg:google-health-fitbit-mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "beta + no-affiliation disclaimers, 3-command OAuth setup, local 0600 token storage"
+ },
+ {
+  "id": "pkg:@betterdb/mcp",
+  "expertise": 50,
+  "verdict": "thin",
+  "note": "monorepo readme for a NestJS/React app; @betterdb/mcp is only a table row"
+ },
+ {
+  "id": "pkg:@braynexservices/nigeria-mcp-bank-account",
+  "expertise": 55,
+  "verdict": "thin",
+  "note": "shared 12-server monorepo readme; bank-resolve gets one line, no params or examples"
+ },
+ {
+  "id": "pkg:@braynexservices/nigeria-mcp-electricity",
+  "expertise": 55,
+  "verdict": "thin",
+  "note": "shared 12-server monorepo readme; electricity tools listed, no usage examples"
+ },
+ {
+  "id": "pkg:slac-mcp",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "1.5k but complete: both tools with params, 4 example expressions, inspector command"
+ }
+]

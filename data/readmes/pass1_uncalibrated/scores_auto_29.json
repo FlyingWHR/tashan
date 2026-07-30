@@ -1,0 +1,146 @@
+[
+ {
+  "id": "pkg:dingdawg-healthcare-agent",
+  "expertise": 55,
+  "verdict": "thin",
+  "note": "template readme: install + free/paid tier table, 4 tools one line each, HIPAA claims"
+ },
+ {
+  "id": "pkg:equateit-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "hosted and local paths, key steps, flag/env table, tools generated from OpenAPI"
+ },
+ {
+  "id": "pkg:gopeak",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "checksum-verified install, warns against piping scripts, config + deprecation mapping"
+ },
+ {
+  "id": "pkg:assay-oracle-mcp",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "4 weighted scoring checks, 20-probe publish threshold, Merkle/OTS anchoring, prices"
+ },
+ {
+  "id": "plugin:pixeltable/pixeltable-skill/pixeltable",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "4 install paths with when-to-use, per-reference file map, template scaffold commands"
+ },
+ {
+  "id": "plugin:planetscale/claude-plugin/planetscale",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "install + verify steps, but mostly submodule sync and release mechanics, no skill usage"
+ },
+ {
+  "id": "plugin:villagesql/villagesql-skills/vsql-extension-builder",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "prereqs incl. 'Docker not sufficient', quick + manual installs for 4 agents, layout"
+ },
+ {
+  "id": "plugin:zscole/adversarial-spec/adversarial-spec",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "quick start, 9-step debate flow, provider table with env vars, key-check command"
+ },
+ {
+  "id": "plugin:frane/agented/agented",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "feature list with rationale, 4 install paths, npx setup wizard, per-CLI plugin steps"
+ },
+ {
+  "id": "plugin:ybsbarker/barker-stablecoin-skills/barker-stablecoin-skills",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "3 host configs, curl smoke test, 11 tools with per-call prices, never-broadcast rule"
+ },
+ {
+  "id": "plugin:blaxel-ai/agent-skills/blaxel",
+  "expertise": 45,
+  "verdict": "thin",
+  "note": "internal release-process notes for the onboarder prompt; skill usage never documented"
+ },
+ {
+  "id": "plugin:browser-act/claude-code-browser-act/browser-act",
+  "expertise": 40,
+  "verdict": "thin",
+  "note": "935-char readme: marketplace install and update only, no tools or usage examples"
+ },
+ {
+  "id": "plugin:mcpware/claude-code-organizer/claude-code-organizer",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "badge + 14-language header, rename-for-search paragraph; features described in prose"
+ },
+ {
+  "id": "plugin:laurac8r/claude-damn/claude-damn",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "modifier table, 4 skill families with real command names, harness features, install"
+ },
+ {
+  "id": "plugin:eriknewton/concordia-protocol/concordia-protocol",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "4-message worked negotiation in JSON, install via pipx/pip, python 3.10 macOS caveat"
+ },
+ {
+  "id": "plugin:agent-sh/drift-detect/drift-detect",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "collector architecture, flag table with defaults, data sources with prerequisites"
+ },
+ {
+  "id": "plugin:flexcompute/plugin-marketplace/flexcompute",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "installer for two OSes with client flags, example prompts, per-plugin surface tables"
+ },
+ {
+  "id": "plugin:mohammed-abdelhady/hyperflow/hyperflow",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "layer table and demo gif; most detail deferred to doc links, no command list shown"
+ },
+ {
+  "id": "plugin:suxrobgm/jobpilot/jobpilot",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "feature bullets, 4-step onboarding, per-agent install, honest 'uses your subscription'"
+ },
+ {
+  "id": "plugin:wynelson94/longhand/longhand",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "install/demo commands, token-budget honesty, deprecation window listed name by name"
+ },
+ {
+  "id": "plugin:insideout-ai/make-it-work/make-it-work",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "two commands explained with cross-reference and sync mechanics; no install or examples"
+ },
+ {
+  "id": "plugin:meta-quest/agentic-tools/meta-vr",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "prereqs, install for 5 agents plus 3 skills CLIs, metavr MCP with 40+ tools noted"
+ },
+ {
+  "id": "plugin:noibu/ai-plugin/noibu",
+  "expertise": 58,
+  "verdict": "thin",
+  "note": "half the readme is their release pipeline; 6 example prompts, auth is one line"
+ },
+ {
+  "id": "plugin:anasahmed07/outlook-classic-mcp/outlook",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "unsupported 'new Outlook' stated, 3 install paths, installer menu shown, update cmds"
+ }
+]

@@ -35,6 +35,15 @@ Assign a verdict (one of: deep, solid, thin, wrapper, slop) and an expertise sco
 - wrapper (20-44): a thin shim around an existing API/tool/library with little added value of its own.
 - slop (0-25): AI-generated filler, no real substance, contradictory/hallucinated, or evidently non-functional.
 
+CALIBRATION RULES — these override the band descriptions above, and exist because six graders applied
+the bands alone and returned "deep" anywhere from 1.5% to 22.9% of the time (see docs/GRADING-RUBRIC.md):
+1. deep requires ALL FOUR of: per-tool docs, >=2 worked examples with real arguments, setup/auth
+   covered, and at least one stated limitation. Cannot name all four? It is solid.
+2. If the README never names this capability, cap at thin (42) — it is documented by a shared repo
+   README about something else, and must not borrow credit for it.
+3. Length is not depth. A long README with no worked example is thin.
+4. Internal contradictions (two different tool counts in one file) cap at thin.
+5. A well-documented shim is still a wrapper.
 Also write a `note`: ONE sentence (<=200 chars), specific and evidence-based — cite what IS and ISN'T in the docs, and flag any real risk (e.g. a prompt-injection surface, a dangerous-op tool). No praise, no fluff.
 
 Respond with ONLY this JSON object, nothing else:

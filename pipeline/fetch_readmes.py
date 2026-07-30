@@ -24,7 +24,12 @@ DB = os.path.join(ROOT, "data", "tashan.db")
 OUT = os.path.join(ROOT, "data", "readmes")
 os.makedirs(OUT, exist_ok=True)
 TOP_N = int(os.environ.get("TOP_N", "24"))
-MAXLEN = 4000
+# 4,000 was too little to grade on and it showed: 735 of 836 staged READMEs hit the cap exactly, and
+# the first pass came back 84% "solid" with zero wrapper and zero slop — implausible for an ecosystem
+# whose rubric has a "slop" band because the filler is real. The evidence that separates thin from
+# deep (per-tool docs, caveats, worked examples) mostly lives past 4 KB, so truncating there hides
+# thinness behind a good opening paragraph. 14,000 covers the long tail without blowing up a batch.
+MAXLEN = 14000
 
 def raw(repo, path):
     for ref in ("HEAD", "main", "master"):
