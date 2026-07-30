@@ -12,7 +12,8 @@
 // Reads live public data from https://tashan.sh/data/index.json (no account, no backend, no telemetry).
 // Zero dependencies. The pure functions are exported for cli/tashan.test.mjs.
 
-import { configLocations, skillLocations, collect, match, resolve, assess, summarize, trend, withTrend } from "./doctor.mjs";
+import { configLocations, skillLocations, collect, match, resolve, assess, summarize, trend, withTrend,
+         suggest, tokenFrequency, isDying } from "./doctor.mjs";
 
 const SITE = process.env.TASHAN_SITE || "https://tashan.sh";
 const DATA_URL = SITE + "/data/index.json";
@@ -214,6 +215,7 @@ function parseArgs(argv) {
     else if (t === "--client") a.client = (argv[++i] || "").toLowerCase();
     else if (t.startsWith("--client=")) a.client = t.slice(9).toLowerCase();
     else if (t === "--trend") a.trend = true;
+    else if (t === "--all") a.all = true;
     else if (t === "--key") a.key = argv[++i] || "";
     else if (t.startsWith("--key=")) a.key = t.slice(6);
     else a._.push(t);
@@ -223,21 +225,41 @@ function parseArgs(argv) {
 
 const MARK = { alert: red("!"), warn: C("33")("~"), note: dim("·"), ok: jade("+"), unrated: dim("·"), unknown: dim("?") };
 
-function renderDoctor(results, problems, sum) {
+function renderDoctor(results, problems, sum, pro = false, verbose = false) {
   if (!results.length) {
     return "\n  " + bold("No agent config found.") + "\n" +
       dim("  Looked in ~/.claude.json, ~/.cursor/mcp.json, Claude Desktop, .mcp.json, ~/.claude/skills/ …") + "\n";
   }
   const order = { alert: 0, warn: 1, unrated: 2, unknown: 3, ok: 4 };
-  const rows = results.slice().sort((x, y) => order[x.assessment.level] - order[y.assessment.level]);
+  // ONLY PRINT WHAT NEEDS A DECISION. A real machine has ~113 skills that are catalogued but unrated,
+  // and listing each with an identical "no per-item evidence yet" line buried the ten servers that
+  // actually had findings under a wall of repetition. Rows that need attention are shown in full;
+  // everything else is counted. The detail is one flag away, not gone.
+  const shown = results.filter((r) => r.assessment.level === "alert" || r.assessment.level === "warn"
+                                   || (r.alts && r.alts.length));
+  const quiet = results.length - shown.length;
+  const rows = (verbose ? results.slice() : shown)
+    .sort((x, y) => order[x.assessment.level] - order[y.assessment.level]);
   let out = "\n  " + bold("Your stack") + dim(`  ·  ${sum.servers} server${sum.servers === 1 ? "" : "s"}, ${sum.skills} skill${sum.skills === 1 ? "" : "s"}`) + "\n\n";
-  for (const { item, row, assessment } of rows) {
+  if (!rows.length) out += "  " + jade("+") + " " + dim("nothing deprecated, archived or abandoned.") + "\n";
+  for (const { item, row, assessment, alts } of rows) {
     const t = row && row.tashan_score != null ? String(Math.round(row.tashan_score)) : "—";
     out += "  " + (MARK[assessment.level] || " ") + " " + bold(pretty(item.name).padEnd(28).slice(0, 28)) +
       dim((item.client + " · " + item.scope).padEnd(22)) + dim("score ") + (t === "—" ? dim(t) : jade(t)) + "\n";
     for (const n of assessment.notes) {
       const txt = typeof n === "string" ? n : n.text;
       out += "      " + dim("↳ ") + (n.level === "alert" ? red(txt) : dim(txt)) + "\n";
+    }
+    if (alts && alts.length) {
+      if (pro) {
+        for (const a of alts) {
+          out += "      " + jade("→ ") + bold(pretty(a.cap.name)) +
+            dim(`  ${Math.round(a.score)}/100 · ${a.cap.vitality || "—"}`) + "\n";
+        }
+      } else {
+        out += "      " + jade("→ ") + dim(`${alts.length} alternative${alts.length === 1 ? "" : "s"} measured better · `) +
+          jade("tashan Pro") + dim(" $6/mo — tashan.sh/pricing.html") + "\n";
+      }
     }
   }
   for (const p of problems) out += "  " + red("!") + " " + bold("config unreadable") + dim("  " + p.path) + "\n";
@@ -247,6 +269,7 @@ function renderDoctor(results, problems, sum) {
   if (sum.unrated) bits.push(dim(sum.unrated + " catalogued, unrated"));
   if (sum.unknown) bits.push(dim(sum.unknown + " not in the index"));
   out += "\n  " + (bits.length ? bits.join(dim(" · ")) : jade("nothing flagged")) + "\n";
+  if (quiet && !verbose) out += dim(`  ${quiet} more not flagged — --all lists every row.`) + "\n";
   out += dim("  local only — nothing was uploaded. tashan info <name> for the full dossier.") + "\n";
   return out;
 }
@@ -294,6 +317,16 @@ export async function main(argv) {
     const look = (item) => (lookup ? resolve(item, lookup) : match(item, rows));
     let results = found.map((item) => { const row = look(item); return { item, row, assessment: assess(item, row) }; });
 
+    // GATE THE COLUMN, NOT THE COMMAND. Everything above this line is free and stays free: what you
+    // run, what it is, and every risk verdict. What a key buys is the answer — which replacement.
+    // Free output still shows that an answer EXISTS on the rows that have one, because hiding the
+    // existence of a warning-adjacent fact would be the same mistake as paywalling the warning.
+    const pool = lookup ? lookup.records : rows;
+    const df = tokenFrequency(pool);
+    for (const r of results) {
+      if (r.row && isDying(r.row)) r.alts = suggest(r.row, pool, df);
+    }
+
     // --trend is the whole paid product, and it is the SAME command with one flag. A separate
     // `tashan pro` verb would have been a second thing to learn for no benefit; the question is
     // identical, only the timeframe changes. Without a key it says so and exits 0 — a missing
@@ -310,7 +343,7 @@ export async function main(argv) {
 
     const sum = summarize(results);
     if (a.json) { process.stdout.write(JSON.stringify({ summary: sum, problems, results }, null, 2) + "\n"); return 0; }
-    process.stdout.write(renderDoctor(results, problems, sum) + "\n");
+    process.stdout.write(renderDoctor(results, problems, sum, Boolean(process.env.TASHAN_KEY || a.key), a.all) + "\n");
     return sum.alert > 0 ? 2 : 0;      // nonzero exit when something needs attention, so it can gate CI
   }
   process.stderr.write(red(`  unknown command: ${cmd}`) + "\n" + USAGE + "\n");
