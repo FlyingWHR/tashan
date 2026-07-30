@@ -6,6 +6,10 @@
   <url><loc>https://tashan.sh/about.html</loc></url>
   <url><loc>https://tashan.sh/pricing.html</loc></url>
   <url><loc>https://tashan.sh/requests.html</loc></url>
+  <url><loc>https://tashan.sh/terms.html</loc></url>
+  <url><loc>https://tashan.sh/privacy.html</loc></url>
+  <url><loc>https://tashan.sh/refunds.html</loc></url>
+  <url><loc>https://tashan.sh/support.html</loc></url>
   <url><loc>https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-upstash-context7-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html</loc><changefreq>weekly</changefreq></url>

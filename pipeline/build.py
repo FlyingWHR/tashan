@@ -1130,9 +1130,11 @@ def export(con):
         # nest, one of them mislabelled "quality-measured" when it counted npm enrichment, and none of
         # which answered "what can I actually look at?".
         "measured": len(ranked) + len(catalogued),
-        "note": "V2. Ranked by a transparent Trust score (maintenance + freshness, gated by real adoption). "
-                "Expertise is a separate, LLM-graded read of the actual capability — real depth vs. thin wrapper. "
-                "Retention (added-then-removed from git history) is the next signal.",
+        # This string ships inside capabilities.json and index.json — it is public copy, and it kept
+        # the name the product retired in SCHEMA_VERSION 5. "Trust" claimed an audit we do not perform.
+        "note": "Ranked by the tashan score: maintenance and freshness, gated by real adoption, on public "
+                "evidence only. It is NOT a security audit — no CVE scan, no code review. Expertise is a "
+                "separate LLM-graded read of the capability itself. Method: https://tashan.sh/methodology.html",
         # ONE catalog: ranked first, then catalogued-but-unrated. Both are installable and searchable;
         # only the ranked ones carry a trust number, and `rated` says which is which.
         "capabilities": ranked + catalogued,

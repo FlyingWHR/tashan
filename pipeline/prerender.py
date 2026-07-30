@@ -242,7 +242,12 @@ def inline_data(c, gen):
     return '<script type="application/json" id="cap-data">' + payload + "</script>\n"
 
 def sitemap(caps):
-    urls = ["/", "/start.html", "/methodology.html", "/about.html", "/pricing.html", "/requests.html"]
+    # Every hand-written page that is linked and indexable. terms/privacy/refunds/support were added
+    # to the footer of all ~5,800 pages and never to this list, so the four pages a buyer looks for
+    # before paying were the only ones a crawler could not find. welcome.html stays OUT deliberately —
+    # it is the post-checkout page and carries noindex.
+    urls = ["/", "/start.html", "/methodology.html", "/about.html", "/pricing.html", "/requests.html",
+            "/terms.html", "/privacy.html", "/refunds.html", "/support.html"]
     static = "".join("  <url><loc>" + BASE + u + "</loc></url>\n" for u in urls)
     caps_x = "".join('  <url><loc>' + BASE + "/capability/" + c["slug"] + '.html</loc>'
                      '<changefreq>weekly</changefreq></url>\n' for c in caps)

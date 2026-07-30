@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T02:40:53.521339+00:00",
+  "generated_at": "2026-07-30T02:47:01.415491+00:00",
   "method": "public signal: MCP registry + config-adoption + npm quality + LLM expertise-eval (SQLite pipeline)",
   "total_capabilities": 12108,
   "enriched_npm": 1412,
@@ -7,7 +7,7 @@
   "ranked": 5277,
   "catalogued": 510,
   "measured": 5787,
-  "note": "V2. Ranked by a transparent Trust score (maintenance + freshness, gated by real adoption). Expertise is a separate, LLM-graded read of the actual capability \u2014 real depth vs. thin wrapper. Retention (added-then-removed from git history) is the next signal.",
+  "note": "Ranked by the tashan score: maintenance and freshness, gated by real adoption, on public evidence only. It is NOT a security audit \u2014 no CVE scan, no code review. Expertise is a separate LLM-graded read of the capability itself. Method: https://tashan.sh/methodology.html",
   "capabilities": [
     {
       "id": "pkg:@supabase/mcp-server-supabase",
