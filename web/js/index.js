@@ -361,13 +361,26 @@
       var t = c.tashan_score, bar = (t == null) ? 0 : t;
       var fr = vitalityCell(c);
       var dep = c.npm_deprecated ? ' <span class="fresh fresh--cold">deprecated</span>' : "";
+      // Security is the headline of the product, so a finding belongs where people scan, not only on
+      // the dossier. A chip rather than a column: it costs no width and appears only when there is
+      // something to say, so a clean board stays quiet instead of printing "0 advisories" 5,788 times.
+      var sec = "";
+      if (c.sec_advisory_count) {
+        var sv = (c.sec_max_severity || "").toLowerCase();
+        sec += ' <span class="sev sev--' + (sv === "malicious" ? "mal" : sv === "critical" ? "crit"
+          : sv === "high" ? "high" : sv === "low" ? "low" : "mod") + '" title="' + c.sec_advisory_count +
+          ' known advisor' + (c.sec_advisory_count === 1 ? "y" : "ies") +
+          ' against the current release">' + c.sec_advisory_count + ' advisor' +
+          (c.sec_advisory_count === 1 ? "y" : "ies") + '</span>';
+      }
+      if (c.sec_install_script) sec += ' <span class="sev sev--mod" title="Executes a script when installed">install script</span>';
       var vd = c.expertise_verdict ? ' <span class="vd vd--' + esc(c.expertise_verdict) + '" title="LLM expertise-eval: ' + (c.expertise || "") + '/100">' + esc(c.expertise_verdict) + '</span>' : "";
       var org = officialOrg(c);
       var off = org ? ' <span class="official" title="Official from ' + esc(org) + '">✓ ' + esc(org) + '</span>' : "";
       var catTag = (!singleCat && c.category && data.catMeta[c.category]) ? ' <span class="cattag" title="Category">' + esc(data.catMeta[c.category].label) + '</span>' : "";
       html += '<tr data-href="' + capHref(c) + '">' +
         '<td class="rank">' + (i + 1) + '</td>' +
-        '<td><div class="cap__name"><a class="cap__link" href="' + capHref(c) + '">' + esc(pretty(c.name)) + '</a> <span class="tag">' + esc(KIND_LABEL[c.kind] || c.kind) + '</span>' + off + vd + dep + '</div>' +
+        '<td><div class="cap__name"><a class="cap__link" href="' + capHref(c) + '">' + esc(pretty(c.name)) + '</a> <span class="tag">' + esc(KIND_LABEL[c.kind] || c.kind) + '</span>' + off + vd + dep + sec + '</div>' +
         '<div class="cap__id">' + esc(c.id) + catTag + '</div></td>' +
         // ONE headline, then the evidence it came from, then one health flag. The board used to print
         // Adoption, Maint, Fresh AND Trust — four numbers competing for the same glance, none of which

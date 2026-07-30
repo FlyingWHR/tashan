@@ -1259,7 +1259,11 @@ def export(con):
     SLIM = ["id", "name", "kind", "category", "npm_pkg", "official", "registry_status",
             "config_reach", "npm_downloads", "gh_stars", "adoption", "tashan_score", "upkeep", "vitality",
             "expertise", "expertise_verdict", "npm_deprecated", "gh_archived", "rated",
-            "single_maintainer", "similar_official"]  # NOT description: it is 104 KB gz of the index and the board never reads it
+            "single_maintainer", "similar_official",
+            # Security is the headline of the product, so the board must show it. Only the summary —
+            # a count and a severity — never the advisory list, which is 30x the size and belongs on
+            # the dossier. Emitted sparsely, so the ~76% of rows with no npm package cost nothing.
+            "sec_advisory_count", "sec_max_severity", "sec_install_script"]  # NOT description: it is 104 KB gz of the index and the board never reads it
     slim = {k: payload[k] for k in ("generated_at", "method", "total_capabilities", "enriched_npm",
                                     "expertise_graded", "ranked", "catalogued", "measured", "note")}
     # the board is capped; the bulk export above is not
@@ -1270,7 +1274,16 @@ def export(con):
     # measurements, and `assess()` in cli/doctor.mjs tests `row.rated === false` specifically, so
     # dropping false would silently turn "catalogued but unrated" into "fine". Nothing in the board JS
     # or the CLI compares to null strictly, so an absent key reads identically to a null one.
-    slim["capabilities"] = [{k: c[k] for k in SLIM if c.get(k) is not None} for c in board]
+    def _slim(c):
+        rec = {k: c[k] for k in SLIM if c.get(k) is not None}
+        # The install command can be 300 characters and the board only needs the FACT that one
+        # exists; the dossier reads the full value from the bulk export. Shipping the command here
+        # would be pure weight on the file every visitor downloads.
+        if rec.get("sec_install_script"):
+            rec["sec_install_script"] = 1
+        return rec
+
+    slim["capabilities"] = [_slim(c) for c in board]
     slim["ranked"] = len(ranked[:RANK_CAP])
     # TASK INDEX — the browse axis, kept OUT of the board payload on purpose. index.json is fetched on
     # first paint and sits at 39.8 KB of a 45 KB budget; this map is 3.6 KB gz and is fetched only when
