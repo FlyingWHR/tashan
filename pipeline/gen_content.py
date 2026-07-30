@@ -241,7 +241,7 @@ def index_page(A):
         lang = " · 中文" if a.get("lang") == "zh" else ""
         cards += ('<a class="card" href="/learn/' + a["slug"] + '.html" style="display:block;text-decoration:none">'
                   '<h3 style="margin:0 0 .4rem">' + esc(a["title"]) + '</h3>'
-                  '<p style="margin:0;color:var(--text-dim);font-size:.9rem">' + esc(a["desc"][:120]) + '…<span class="mono" style="color:var(--text-faint)">' + lang + '</span></p></a>')
+                  '<p style="margin:0;color:var(--text-dim);font-size:var(--fs-base)">' + esc(a["desc"][:120]) + '…<span class="mono" style="color:var(--text-faint)">' + lang + '</span></p></a>')
     body = ('<main class="wrap"><article class="prose"><h1>Learn</h1>'
             '<p class="lede">Practical, evidence-backed guides to MCP servers and agent skills — where they live, '
             'how to install them in every client, and which ones are actually worth it.</p>'

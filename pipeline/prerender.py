@@ -164,14 +164,14 @@ def summary(c):
     if c.get("kind") == "skill": clients = ["Claude Code", "Cursor", "Codex CLI"]
     elif c.get("kind") == "remote": clients = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "ChatGPT"]
     else: clients = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "Cline", "Windsurf", "VS Code"]
-    works = '<p class="mono" style="color:var(--text-faint);font-size:.8rem"><b>Works with:</b> ' + esc(", ".join(clients)) + '</p>'
+    works = '<p class="mono" style="color:var(--text-faint);font-size:var(--fs-sm)"><b>Works with:</b> ' + esc(", ".join(clients)) + '</p>'
     links = []
     if c.get("npm_pkg"): links.append('<a class="link" href="https://www.npmjs.com/package/' + esc(c["npm_pkg"]) + '">npm ↗</a>')
     if c.get("source_repo"): links.append('<a class="link" href="https://github.com/' + esc(c["source_repo"]) + '">source ↗</a>')
     if c.get("homepage"): links.append('<a class="link" href="' + esc(c["homepage"]) + '" rel="noopener">homepage ↗</a>')
     # the flywheel edge: every capability points at its category hub, which points back at its siblings.
     # Without this the hubs are orphans that only the sitemap knows about.
-    cat = ('<p class="mono" style="font-size:.8rem"><b>Category:</b> <a class="link" href="/category/'
+    cat = ('<p class="mono" style="font-size:var(--fs-sm)"><b>Category:</b> <a class="link" href="/category/'
            + esc(c["category"]) + '.html">' + esc(CAT.get(c["category"], c["category"]))
            + " — see all ranked &rsaquo;</a></p>") if c.get("category") else ""
     # Same edge for the task axis: what WORK is this for. Category says what it touches; this says what
@@ -179,13 +179,13 @@ def summary(c):
     # status. Only published tasks are linked — TASKS_PUBLISHED holds the ones that cleared gen_hubs'
     # population floor, so a dossier can never point at a page that was never written.
     tsk = [t["t"] for t in (c.get("tasks") or []) if t["t"] in TASKS_PUBLISHED]
-    task = ('<p class="mono" style="font-size:.8rem"><b>Work:</b> '
+    task = ('<p class="mono" style="font-size:var(--fs-sm)"><b>Work:</b> '
             + " · ".join('<a class="link" href="/task/' + esc(s) + '.html">'
                          + esc(TASK_LABEL.get(s, s)) + "</a>" for s in tsk[:4])
             + "</p>") if tsk else ""
     # every dossier offers the next action: check whether YOU are running this, and what else you run.
     # without it a capability page is a dead end — the reader learns about one thing and leaves.
-    audit = ('<p class="mono" style="font-size:.8rem;margin-top:var(--sp-6)"><b>Already running this?</b> '
+    audit = ('<p class="mono" style="font-size:var(--fs-sm);margin-top:var(--sp-6)"><b>Already running this?</b> '
              '<code>npx tashan-cli doctor</code> checks your whole config against the Index — '
              '<a class="link" href="/start.html">how it works &rsaquo;</a></p>')
     # THE ONE PLACE THE PAID FEATURE IS ACTUALLY WANTED. 266 of these pages describe something

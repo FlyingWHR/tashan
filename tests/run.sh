@@ -36,6 +36,10 @@ python3 tests/test_scorer_version.py || fail=1
 echo; echo "── npx package name ───────────────────────────"
 python3 tests/test_pkg_name.py || fail=1
 
+# 3b4. type scale — 42 ad-hoc sizes, six of them under 10px, is how the rail became unreadable
+echo; echo "── type scale (12px floor) ────────────────────"
+python3 tests/test_type_scale.py || fail=1
+
 # 3c. config parser — a wrong capability id invents one row AND loses the real one
 echo; echo "── config parser (capability_id) ──────────────"
 python3 tests/test_scrape.py || fail=1

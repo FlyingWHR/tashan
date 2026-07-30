@@ -180,9 +180,10 @@
   // across 7 groups. Truncate to SHOWN, with a "+ N more" affordance directly beneath the values.
   // A value the user has already selected is always rendered, or applying a filter from the expanded
   // list would make that filter vanish when the list collapsed again.
-  // 8, not 10. Baymard's band is 6-15 with ~10 ideal; at 10 the two lists plus their headings ran
-  // 135px past the viewport and reintroduced a nested scrollbar — the exact thing being removed.
-  var SHOWN = 8;
+  // 7. Baymard's band is 6-15 with ~10 ideal, but the count has to answer to the viewport: at 10 the
+  // two lists ran 135px past it and at 8 (after the type scale raised row height to 33px) still 56px,
+  // each time reintroducing the nested scrollbar this exists to remove. 7 clears it with room.
+  var SHOWN = 7;
   function truncate(items, keyOf, selected, expanded) {
     if (expanded || items.length <= SHOWN + 1) return { list: items, hidden: 0 };
     var head = items.slice(0, SHOWN);
