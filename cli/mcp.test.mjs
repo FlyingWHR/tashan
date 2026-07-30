@@ -84,13 +84,16 @@ console.log("ok — mcp server (protocol / evidence / risk / rendering)");
   assert.deepStrictEqual(inferCategories("search the web").slice(0, 1), ["search"]);
   assert.ok(!taskTokens("I want to work with my PDFs").includes("work"), "noise words are dropped");
 
-  // THE REGRESSION THAT MATTERS: category-top ranking picked the highest-scoring row in the category,
-  // which is a different tool entirely. Relevance must beat score.
+  // These exercise the FALLBACK path — no terms bag, so name matching only. Its contract is narrow
+  // on purpose: it finds a capability NAMED for the task and admits defeat otherwise. The block below
+  // covers the real path, where descriptions are matched and tavily wins "search the web".
   assert.strictEqual(forTask(idx, "send a slack message", 1)[0].name, "slack-mcp",
     "names the Slack tool, not the higher-scoring unrelated top of `comms`");
   assert.strictEqual(forTask(idx, "work with PDFs", 1)[0].name, "pdf-toolkit-mcp",
     "plural 'PDFs' still finds pdf-toolkit, and beats the higher-scoring context7");
-  assert.strictEqual(forTask(idx, "search the web", 1)[0].name, "tavily-mcp");
+  assert.deepStrictEqual(forTask(idx, "search the web", 1), [],
+    "without descriptions it CANNOT find tavily — its name says nothing about searching, which is "
+    + "precisely why lookup.json ships a token bag");
   assert.ok(!forTask(idx, "docs", 9).some((c) => c.tashan_score == null),
     "never recommends an unscored capability — we have no evidence for it");
   assert.deepStrictEqual(forTask(idx, "underwater basket weaving", 3), [],
@@ -125,3 +128,53 @@ console.log("ok — mcp task routing");
   assert.ok(/install \(claude\)/.test(single), "the target client is named, so the agent cannot mispaste");
 }
 console.log("ok — install handoff delivers complete config");
+
+// ---- ranking on what a capability DOES, not what it is called ----------------------------------
+{
+  const { forTask } = await import("./mcp.mjs");
+  // lookup.json ships a token bag per record, parallel to records. tavily's NAME contains none of
+  // "search the web"; its DESCRIPTION contains all of it. That gap is the whole reason this exists.
+  const lookup = {
+    records: [
+      { id: "a", name: "tavily",      category: "search",   tashan_score: 86 },
+      { id: "b", name: "web-search",  category: "search",   tashan_score: 57 },
+      { id: "c", name: "kubernetes",  category: "cloud",    tashan_score: 85 },
+      { id: "d", name: "cpln",        category: "cloud",    tashan_score: 46 },
+      { id: "e", name: "unmeasured",  category: "search",   tashan_score: null },
+    ],
+    terms: [
+      "crawl extract research search tavily web",
+      "search web",
+      "clusters kubernetes pods deploy",
+      "kubernetes control plane manage deploy",
+      "search web crawl",
+    ],
+  };
+  const names = (q, n = 2) => forTask(null, q, n, lookup).map((r) => r.name);
+
+  // THE REGRESSION THAT STARTED THIS: name matching put web-search (57) above tavily (86).
+  assert.strictEqual(names("search the web")[0], "tavily",
+    "matches the description, so the better-measured tool wins over one merely named for the task");
+  // And the measurement has to WEIGH, not just break ties: cpln matched one extra mediocre word.
+  assert.strictEqual(names("manage kubernetes")[0], "kubernetes",
+    "a second weak word match cannot outweigh a large gap in how established the thing is");
+  assert.ok(!names("search the web", 9).includes("unmeasured"),
+    "never recommends something we have not measured");
+  assert.deepStrictEqual(names("underwater basket weaving"), [],
+    "no match returns nothing rather than the highest-scoring unrelated thing");
+
+  // Plural and singular must be the SAME token. Indexing surface forms made a capability whose blurb
+  // used the plural outrank one using the singular, purely because the plural was rarer.
+  const plural = {
+    records: [{ id: "p", name: "pdf-a", tashan_score: 70 }, { id: "q", name: "pdf-b", tashan_score: 70 }],
+    terms: ["pdf merge split", "pdfs merge split"],
+  };
+  assert.strictEqual(forTask(null, "work with PDFs", 2, plural).length, 2,
+    "both the singular and plural bags match a plural query");
+
+  // Without a terms bag the caller still gets name matching rather than an exception.
+  const noTerms = [{ id: "z", name: "slack-mcp", tashan_score: 44 }];
+  assert.strictEqual(forTask(noTerms, "send a slack message", 1)[0].name, "slack-mcp",
+    "falls back to name matching when the lookup has no terms");
+}
+console.log("ok — task ranking uses descriptions, weighted by measurement");

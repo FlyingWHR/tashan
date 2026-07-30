@@ -118,52 +118,66 @@ export function taskTokens(task) {
     .filter((w) => w.length > 1 && !NOISE.has(w));
 }
 
-/** Rank candidates for a described task.
+/** Rank candidates for a described task, on what a capability DOES.
  *
- *  RELEVANCE BEFORE SCORE, which is the opposite of the board. Taking the top-scored row of an
- *  inferred category gave "send a slack message" -> claude-seo (top of `comms`, nothing to do with
- *  Slack) and "work with PDFs" -> context7 (top of `docs`, a docs-fetcher, not a PDF tool). A high
- *  score for the wrong tool is worse than a lower score for the right one: the agent installs it and
- *  the user concludes the recommendation is noise. So a token the user actually said has to appear in
- *  the capability's name before its score is allowed to matter, and the category is only the tie-break
- *  pool. search() is still consulted first for the case where someone names the package outright. */
-export function forTask(all, task, limit) {
+ *  Name matching alone returned web-search (57, 112 downloads/wk) ahead of tavily (86, 32k/wk) for
+ *  "search the web": tavily's name contains none of those words, its description contains all of them.
+ *  lookup.json now ships a token bag per record (built from name + description, with once-seen noise
+ *  and >8%-of-corpus topic words already dropped), so the match is against meaning, not spelling.
+ *
+ *  Scoring is idf-weighted — a rarer shared word is stronger evidence — and the tashan score breaks
+ *  ties rather than driving the order, because a well-measured wrong tool is still the wrong tool.
+ */
+export function forTask(all, task, limit, lookup = null) {
+  const stem = (t) => (t.endsWith("s") && t.length > 3 ? t.slice(0, -1) : t);
   const toks = taskTokens(task);
   const cats = inferCategories(task);
-  // A token that half the corpus contains is a topic word, not an identifier. Without this cut,
-  // "search the web" scored `web-search` (57, 112 downloads/wk) above tavily (86, 32k/wk) purely
-  // because its NAME repeated the user's own words — rewarding a capability for being generically
-  // titled, which is the opposite of measuring.
-  const df = new Map();
-  for (const c of all) for (const t of tokensOf(c)) df.set(t, (df.get(t) || 0) + 1);
-  const DISTINCT = 40;
-  const hit = (c) => {
-    const hay = `${c.name || ""} ${c.npm_pkg || ""} ${c.id || ""}`.toLowerCase();
-    // crude singularisation: "PDFs" must find pdf-toolkit, "issues" must find issue. Cheaper and more
-    // predictable than a stemmer, and a wrong stem only costs a ranking place, never a wrong answer.
-    return toks.filter((t) => {
-      const m = hay.includes(t) || (t.endsWith("s") && t.length > 3 && hay.includes(t.slice(0, -1)));
-      return m && (df.get(t) || 0) <= DISTINCT;     // distinctive matches only
-    }).length;
-  };
-  const scored = all
-    .filter((c) => c.tashan_score != null)
-    .map((c) => ({ c, m: hit(c), inCat: cats.includes(c.category) ? 1 : 0 }))
-    // a name match outranks everything; then being in the inferred category; then the score
-    .filter((x) => x.m > 0 || x.inCat)
-    .sort((a, b) => (b.m - a.m) || (b.inCat - a.inCat) || (b.c.tashan_score - a.c.tashan_score));
 
-  // search() is name-oriented and does NOT filter on score, so it must be filtered here too: an
-  // unscored row means we have no evidence, and handing an agent something we have not measured is
-  // exactly the guessing this server exists to replace.
-  const named = search(all, task).filter((c) => c.tashan_score != null);
-  const seen = new Set(), out = [];
-  for (const c of [...named, ...scored.map((x) => x.c)]) {
-    if (seen.has(c.id)) continue;
-    seen.add(c.id); out.push(c);
-    if (out.length >= limit) break;
+  if (lookup && lookup.terms) {
+    // Index on the STEM, not the surface form. Otherwise "pdfs" and "pdf" are two tokens with two
+    // different rarities, and a capability whose blurb happens to use the plural outranks one using
+    // the singular — which is how "work with PDFs" surfaced brandsystem over opendataloader-pdf.
+    const df = new Map();
+    const bags = lookup.terms.map((b) => new Set(b.split(" ").filter(Boolean).map(stem)));
+    for (const bag of bags) for (const t of bag) df.set(t, (df.get(t) || 0) + 1);
+    const N = bags.length;
+    const scored = [];
+    for (let i = 0; i < lookup.records.length; i++) {
+      const r = lookup.records[i];
+      if (r.tashan_score == null) continue;
+      const bag = bags[i] || new Set();
+      let rel = 0;
+      for (const q of new Set(toks.map(stem))) {
+        // Clamped positive. log(N/(1+df)) goes NEGATIVE once a token is in more than about half the
+        // corpus, which would make a genuine match count AGAINST the capability that has it. The 8%
+        // cut in the pipeline makes that unreachable in production and it is trivially reachable in a
+        // small set, so the arithmetic should not depend on the corpus being large.
+        if (bag.has(q)) rel += Math.max(0.05, Math.log(N / (1 + (df.get(q) || 1))));
+      }
+      if (cats.includes(r.category)) rel += 0.5;      // a nudge, never a substitute for relevance
+      if (rel <= 0) continue;
+      // THE MEASUREMENT HAS TO WEIGH ON THE RANKING, not merely break ties. Pure idf rewards a RARE
+      // shared word, so "work with PDFs" surfaced morosss-sdfsdf and "manage kubernetes" surfaced two
+      // unknown CLIs — junk whose descriptions happened to contain an uncommon token, beating the
+      // obvious well-measured answer by a fraction. Multiplying by the score keeps relevance in
+      // charge (a twice-better match still wins) while making an unmeasured stranger lose to a
+      // comparable match that thousands of people actually run.
+      // Squared, after linear proved too weak: cpln (46) still beat kubernetes (85) by matching
+      // one extra mediocre word. Squaring makes a second weak match stop outweighing a large
+      // gap in how well-established the thing actually is.
+      const w = r.tashan_score / 100;
+      scored.push({ r, rel: rel * w * w });
+    }
+    scored.sort((a, b) => (b.rel - a.rel) || (b.r.tashan_score - a.r.tashan_score));
+    return scored.slice(0, limit).map((x) => x.r);
   }
-  return out;
+
+  // Fallback for a caller without the terms bag: name matching only, the old behaviour.
+  const hay = (c) => `${c.name || ""} ${c.npm_pkg || ""} ${c.id || ""}`.toLowerCase();
+  const out = all.filter((c) => c.tashan_score != null
+      && toks.some((t) => hay(c).includes(t) || hay(c).includes(stem(t))))
+    .sort((a, b) => b.tashan_score - a.tashan_score);
+  return out.slice(0, limit);
 }
 
 const TOOLS = [
@@ -260,8 +274,8 @@ export function renderCheck(c, name) {
 
 async function callTool(name, args) {
   if (name === "find_capability") {
-    const all = await rows();
-    const list = forTask(all, String(args.task || ""), Math.max(1, Math.min(10, args.limit || 3)));
+    const [all, lk] = [await rows(), await lookup().catch(() => null)];
+    const list = forTask(all, String(args.task || ""), Math.max(1, Math.min(10, args.limit || 3)), lk);
     return renderFind(list, args.task, args.client);
   }
   if (name === "check_capability") {

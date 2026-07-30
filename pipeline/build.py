@@ -1234,9 +1234,37 @@ def export(con):
                   (c.get("id") or "").split(":", 1)[-1] or None):
             if k:
                 by_key.setdefault(str(k).lower(), i)
+    # SEARCH TERMS — a token bag per record, parallel to `records`, so find_capability can match what a
+    # capability DOES rather than only what it is called.
+    #
+    # Name matching alone put web-search (57, 112 downloads/wk) above tavily (86, 32k/wk) for "search
+    # the web", because tavily's NAME contains none of those words while its DESCRIPTION contains all
+    # of them. Descriptions are the signal and were dropped from every file the CLI reads, to protect
+    # the board's first-paint budget — a budget the CLI does not share.
+    #
+    # Prose would add ~387 KB gz. The matcher only needs tokens, so tokens are what ships: ~198 KB gz.
+    # Tokens seen once are noise and tokens in more than 8% of the corpus are topic words; both are
+    # dropped, which is what stops a capability winning by echoing the user's own words.
+    STOP = set("""the a an and or of for to in on with your you it is are be this that from as at by
+        not mcp server servers cli api tool tools app agent agents plugin skill skills claude ai using
+        use uses support supports allows enables provides provide via into can will more other any
+        all""".split())
+    bags = []
+    for c in caps + delisted:
+        txt = ((c.get("name") or "") + " " + (c.get("description") or "")).lower()
+        toks = [w for w in re.split(r"[^a-z0-9+]+", txt) if len(w) > 2 and w not in STOP]
+        bags.append(sorted(set(toks))[:24])
+    tdf = {}
+    for b in bags:
+        for t in b:
+            tdf[t] = tdf.get(t, 0) + 1
+    hi = len(bags) * 0.08
+    terms = [" ".join(t for t in b if 2 <= tdf[t] <= hi) for b in bags]
+
     lookup_out = os.path.join(ROOT, "web", "data", "lookup.json")
     json.dump({"generated_at": payload["generated_at"], "scorer": SCORER_VERSION,
-               "records": recs, "keys": by_key}, open(lookup_out, "w"), separators=(",", ":"))
+               "records": recs, "keys": by_key, "terms": terms}, open(lookup_out, "w"),
+              separators=(",", ":"))
     print(f"Lookup ({len(recs)} caps, {len(by_key)} keys) -> web/data/lookup.json")
 
     slim_out = os.path.join(ROOT, "web", "data", "index.json")
