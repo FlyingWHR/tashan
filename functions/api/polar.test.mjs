@@ -79,5 +79,71 @@ ok("unrelated event maps to null (acknowledged, not acted on)",
 ok("event with no customer email maps to null",
    entitlementFrom({ type: "order.paid", data: {} }) === null);
 
-console.log(fail ? "POLAR WEBHOOK FAILED" : "ok — polar webhook verification");
+// ---- the handler, end to end: signed delivery -> entitlement in KV ------------------------------
+// verify() was covered above; onRequestPost was not, and it is the half that actually grants access.
+{
+  const { onRequestPost } = await import("./polar.js");
+  const kv = () => { const m = new Map(); return { m, get: async (k) => m.get(k) ?? null,
+                                                   put: async (k, v) => void m.set(k, v) }; };
+  const SECRET = Buffer.from(new Uint8Array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6])).toString("base64");
+  const deliver = async (env, event, { tamper = false, id = "evt_1" } = {}) => {
+    const body = JSON.stringify(event);
+    const ts = Math.floor(Date.now() / 1000);
+    const key = await crypto.subtle.importKey("raw", Buffer.from(SECRET, "base64"),
+      { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+    const mac = await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(`${id}.${ts}.${body}`));
+    const sig = Buffer.from(new Uint8Array(mac)).toString("base64");
+    return onRequestPost({ env, request: new Request("https://tashan.sh/api/polar", {
+      method: "POST", body: tamper ? body + " " : body,
+      headers: { "webhook-id": id, "webhook-timestamp": String(ts), "webhook-signature": `v1,${sig}` },
+    }) });
+  };
+
+  const sub = (type, email) => ({ type, data: { customer: { email } } });
+
+  let env = { POLAR_WEBHOOK_SECRET: SECRET, TASHAN_KV: kv() };
+  let res = await deliver(env, sub("subscription.active", "Buyer@Example.com"));
+  ok("a signed subscription.active is accepted", res.status === 200);
+  const granted = JSON.parse(env.TASHAN_KV.m.get("ent:buyer@example.com") || "{}");
+  ok("entitlement is written, keyed by lowercased email", granted.state === "active");
+
+  // THE REFUND PATH. Polar can refund on its own within 60 days to head off a chargeback, so this
+  // must revoke without us doing anything — otherwise a refunded customer keeps paid access.
+  res = await deliver(env, sub("order.refunded", "buyer@example.com"), { id: "evt_2" });
+  ok("a refund is accepted", res.status === 200);
+  ok("...and revokes the entitlement",
+     JSON.parse(env.TASHAN_KV.m.get("ent:buyer@example.com")).state === "inactive");
+
+  res = await deliver(env, sub("subscription.revoked", "buyer@example.com"), { id: "evt_3" });
+  ok("a revoked subscription also revokes access",
+     JSON.parse(env.TASHAN_KV.m.get("ent:buyer@example.com")).state === "inactive");
+
+  // A tampered body must never reach the store.
+  const before = env.TASHAN_KV.m.size;
+  res = await deliver(env, sub("subscription.active", "attacker@evil.com"), { tamper: true, id: "evt_4" });
+  ok("a tampered delivery is rejected 403", res.status === 403);
+  ok("...and writes nothing", env.TASHAN_KV.m.size === before);
+
+  // An unknown event type is acknowledged, never 5xx — Polar disables an endpoint after 10 non-2xx.
+  res = await deliver(env, { type: "product.updated", data: {} }, { id: "evt_5" });
+  ok("an unrelated event is acknowledged 2xx", res.status >= 200 && res.status < 300);
+
+  // No KV bound yet must still 2xx, for the same reason.
+  res = await deliver({ POLAR_WEBHOOK_SECRET: SECRET }, sub("order.paid", "x@y.z"), { id: "evt_6" });
+  ok("an unbound KV still acknowledges rather than 5xx-ing the endpoint into being disabled",
+     res.status >= 200 && res.status < 300);
+
+  // Unparseable JSON: acknowledge, since retrying will not make it parse.
+  const ts = Math.floor(Date.now() / 1000);
+  const k2 = await crypto.subtle.importKey("raw", Buffer.from(SECRET, "base64"),
+    { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const m2 = await crypto.subtle.sign("HMAC", k2, new TextEncoder().encode(`evt_7.${ts}.{oops`));
+  res = await onRequestPost({ env, request: new Request("https://tashan.sh/api/polar", {
+    method: "POST", body: "{oops",
+    headers: { "webhook-id": "evt_7", "webhook-timestamp": String(ts),
+               "webhook-signature": `v1,${Buffer.from(new Uint8Array(m2)).toString("base64")}` } }) });
+  ok("malformed JSON is acknowledged, not retried forever", res.status >= 200 && res.status < 300);
+}
+
+console.log(fail ? "POLAR WEBHOOK FAILED" : "ok — polar webhook (verification + handler + refund path)");
 process.exit(fail);
