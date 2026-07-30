@@ -206,6 +206,7 @@ def main():
     import build                                   # reuse db(), schema, migrations
     full = "--full" in sys.argv
     con = build.db()
+    con.execute("PRAGMA busy_timeout = 30000")
     cache = {}
     if os.path.exists(CACHE) and not full:
         try:
@@ -233,10 +234,19 @@ def main():
             fresh += 1
             if fresh % 25 == 0:
                 json.dump(cache, open(CACHE, "w"))         # checkpoint: a long run must be resumable
+                # AND commit, which releases the write lock. Holding one transaction across a
+                # 1,900-package scan locks the database for the whole run — every other pipeline
+                # stage and the test suite fail with "database is locked" until it finishes.
                 print(f"    {fresh} fetched…", flush=True)
         cols = summarize(f)
         con.execute("UPDATE capabilities SET " + ", ".join(f"{k}=?" for k in cols) + " WHERE id=?",
                     list(cols.values()) + [cid])
+        # Commit per row. Batching every 25 held the write lock across ~50 network calls, which is
+        # minutes — longer than build.db()'s 60s busy_timeout, so every other process (the test
+        # suite, any pipeline stage) died with "database is locked" for the whole scan. A SQLite
+        # commit is microseconds; the network is the only slow part here, so there is nothing to
+        # batch for.
+        con.commit()
         scanned += 1
         if cols["sec_advisory_count"] or cols["sec_install_script"] or cols["sec_permissions"]:
             flagged += 1
