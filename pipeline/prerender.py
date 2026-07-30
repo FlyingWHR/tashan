@@ -187,12 +187,23 @@ def summary(c):
     audit = ('<p class="mono" style="font-size:.8rem;margin-top:var(--sp-6)"><b>Already running this?</b> '
              '<code>npx tashan doctor</code> checks your whole config against the Index — '
              '<a class="link" href="/start.html">how it works &rsaquo;</a></p>')
+    # THE ONE PLACE THE PAID FEATURE IS ACTUALLY WANTED. 266 of these pages describe something
+    # archived, deprecated or abandoned, and on every one of them the reader's next thought is "so
+    # what do I use instead". Offering the answer there is not an upsell bolted onto a page; it is the
+    # question the page just raised. Everywhere else Pro stays out of the way — no banner, no modal,
+    # nothing on the 5,521 pages where the reader has no problem to solve.
+    dying = (c.get("gh_archived") or c.get("npm_deprecated")
+             or c.get("registry_status") in ("deprecated", "deleted") or c.get("vitality") == "abandoned")
+    swap = ('<div class="callout" style="margin-top:var(--sp-6)"><b>Looking for a replacement?</b> '
+            '<code>npx tashan doctor</code> is free and tells you everything above about your whole '
+            'config. <a class="link" href="/pricing.html">tashan Pro</a> names the replacement — which '
+            'one, and how it measures. $6/mo.</div>') if dying else ""
     return ('<div class="cap-hd"><a class="back" href="/">&lsaquo; The Index</a>'
             '<h1>' + esc(n) + '</h1>'
             '<div class="cid">' + esc(c["id"]) + ' · <span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
-            + works + cat + task + install + verdict +
+            + works + cat + task + install + verdict + swap +
             ('<ul class="prose" style="max-width:none">' + "".join(rows) + '</ul>' if rows else '') +
             ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else '') + audit)
 

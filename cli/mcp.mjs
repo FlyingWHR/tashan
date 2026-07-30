@@ -229,6 +229,12 @@ export function renderCheck(c, name) {
   } else {
     L.push("No deprecation, archival or name-confusion flags.");
   }
+  // If it is dying, the user's next question is always the same one. Answer it here rather than
+  // making the agent guess, and say plainly where the answer comes from.
+  if (rs.some((r) => /ARCHIVED|DEPRECATED|REMOVED|abandoned/.test(r))) {
+    L.push("", "This one is not maintained. `tashan doctor` (free) will tell you if it is in the user's "
+      + "config; tashan Pro names a measured replacement — https://tashan.sh/pricing.html");
+  }
   L.push("", `Details: ${SITE}/capability/${c.slug || slugify(c.id)}.html`);
   L.push("A tashan score measures adoption and maintenance, not security. We do not read its code.");
   return L.join("\n");
