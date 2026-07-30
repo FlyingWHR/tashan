@@ -49,7 +49,7 @@ If your batch lands far outside that, re-read your `deep` and `solid` calls agai
 good. The range is a prompt to re-check reasoning, never a quota to fill.
 
 **A correction to my own guide.** The first calibrated run carried "`deep` under 10%". Six graders
-came in between 14.3% and 22.1%, every one of them re-checked against rule 5, demoted borderline
+came in between 14.3% and 24.3%, every one of them re-checked against rule 5, demoted borderline
 calls, and declined to grade toward the number — which is exactly the instructed behaviour. They were
 right and the guide was wrong: the staged corpus is ordered by tashan score, so it is the **top ~14%
 of the field**, where vendor-maintained documentation is common. Under 10% is the expectation for the
@@ -59,6 +59,26 @@ carrying it forward.
 One grader proposed a mechanical tightening worth keeping on file: require criterion (b) to show
 **actual output**, not merely "real arguments or output". That would move roughly a third of current
 `deep` calls to `solid` and is objective enough to stay comparable between graders.
+
+## Measured cross-grader agreement
+
+The point of the calibration is comparability, so here is what it actually bought, per grader,
+on 836 READMEs split six ways:
+
+| grader | n | deep | solid | thin |
+|---|---|---|---|---|
+| batches 00-06 | 140 | 14.3% | 44.3% | 41.4% |
+| batches 07-13 | 140 | 20.7% | 56.4% | 20.7% |
+| batches 14-20 | 140 | 17.9% | 57.1% | 19.3% |
+| batches 21-27 | 140 | 24.3% | 53.6% | 19.3% |
+| batches 28-34 | 140 | 22.1% | 35.7% | 35.7% |
+| batches 35-41 | 136 | 19.9% | 54.4% | 24.3% |
+
+**Spread on `deep`: 10.0pp, down from 21.4pp uncalibrated.** Halved, not eliminated. Two graders
+independently reported tightening a criterion mid-run — requiring arguments or constraints in
+per-tool docs, and requiring worked examples to be *invocations* rather than install blocks — which
+is where most of the remaining 10 points live. Fold those into the criteria above before the next
+pass and the spread should close further.
 
 ## Input caveat, now fixed
 
