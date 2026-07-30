@@ -49,9 +49,9 @@ Generated: 2026-07-30. Capabilities tracked: 5787 ranked. Every number below is 
 - [mattpocock-skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) — tashan score 81.0, active. Matt Pocock's agent skills for real engineering — grilling, spec/ticket flows, TDD, code review, domain modelling and more. Plug-and-play, not vibe co
 - [smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) — tashan score 81.0, active. MCP server for AI access to SmartBear tools, including BugSnag, Reflect, API Hub, PactFlow.
 - [atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) — tashan score 80.0, active. MCP server for Atlassian (Confluence and Jira) integration
-- [atomic-agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) — tashan score 80.0, active. Comprehensive development workflow for building AI agents with the Atomic Agents framework. Includes specialized agents for schema design, architectur
 - [claude-hud](https://tashan.sh/capability/plugin-jarrodwatts-claude-hud-claude-hud.html) — tashan score 80.0, active. Real-time statusline HUD for Claude Code - context health, tool activity, agent tracking, and todo progress
 - [playwright-pro](https://tashan.sh/capability/plugin-alirezarezvani-claude-skills-playwright-pro.html) — tashan score 80.0, active. Playwright Pro turns your AI coding agent into a senior test automation engineer. Instead of generating tutorial-quality tests with brittle CSS select
+- [atomic-agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) — tashan score 79.0, active. Comprehensive development workflow for building AI agents with the Atomic Agents framework. Includes specialized agents for schema design, architectur
 - [octo](https://tashan.sh/capability/plugin-nyldn-claude-octopus-octo.html) — tashan score 79.0, active. v9.45.0 - Add Antigravity CLI (agy) provider, generic OpenAI-compatible agent, and tangle routing overrides. 32 personas, 49 commands, 54 skills. Run 
 - [@suekou/mcp-notion-server](https://tashan.sh/capability/pkg-suekou-mcp-notion-server.html) — tashan score 79.0, active. AI-friendly MCP server for the Notion API
 
@@ -65,14 +65,14 @@ Generated: 2026-07-30. Capabilities tracked: 5787 ranked. Every number below is 
 
 - [Browser & Web](https://tashan.sh/category/browser.html) — 32 measured. Headless browsers, scraping, page automation, fetch. Top: chrome-devtools, firecrawl, trusty-squire.
 - [Search](https://tashan.sh/category/search.html) — 90 measured. Web search, retrieval, and answer engines. Top: tavily, exa-mcp-server, exa.
-- [Database](https://tashan.sh/category/database.html) — 45 measured. SQL, NoSQL, vector stores, query & schema tools. Top: @supabase/mcp-server-supabase, whodb, @henkey/postgres-mcp-server.
+- [Database](https://tashan.sh/category/database.html) — 44 measured. SQL, NoSQL, vector stores, query & schema tools. Top: @supabase/mcp-server-supabase, whodb, @henkey/postgres-mcp-server.
 - [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1558 measured. Git, GitHub, code, testing, build & CI. Top: everything, azure, next-ai-drawio.
 - [Cloud & Infra](https://tashan.sh/category/cloud.html) — 76 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: hostinger-api, kubernetes, kubernetes-mcp-server.
 - [Files & Memory](https://tashan.sh/category/files.html) — 30 measured. Filesystem access, memory, knowledge graphs. Top: filesystem, memory, desktop-touch.
 - [Data & Analytics](https://tashan.sh/category/data.html) — 336 measured. Pipelines, analytics, spreadsheets, BI. Top: deepeval, qsv-data-wrangling, savvly.
 - [Docs & Knowledge](https://tashan.sh/category/docs.html) — 100 measured. Docs lookup, notes, wikis, context retrieval. Top: @upstash/context7, @notionhq/notion-mcp-server, @suekou/mcp-notion-server.
 - [Communication](https://tashan.sh/category/comms.html) — 132 measured. Slack, email, chat, calendars, meetings. Top: claude-seo, hermes-ops, slack.
-- [Design](https://tashan.sh/category/design.html) — 201 measured. Figma, UI, images, creative & design tooling. Top: figma-developer, figma-console, impeccable.
+- [Design](https://tashan.sh/category/design.html) — 202 measured. Figma, UI, images, creative & design tooling. Top: figma-developer, figma-console, impeccable.
 - [AI & Agents](https://tashan.sh/category/ai.html) — 120 measured. Reasoning, agents, model & LLM orchestration. Top: sequential-thinking, humanize-korean, deepseek-mcp-server.
 - [Finance & Crypto](https://tashan.sh/category/finance.html) — 225 measured. Payments, markets, blockchain, wallets. Top: blockrun, photoplus-downloader, sap.
 - [Productivity](https://tashan.sh/category/productivity.html) — 2316 measured. Tasks, automation, workflows, personal tools. Top: caveman, desktop-commander, ponytail.

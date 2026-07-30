@@ -159,6 +159,11 @@ export function assess(item, row) {
   if (row.gh_archived) notes.push({ level: "alert", text: "source repository is archived" });
   if (row.npm_deprecated) notes.push({ level: "alert", text: "npm package is marked deprecated" });
   if (row.registry_status === "deprecated") notes.push({ level: "alert", text: "deprecated in the MCP registry" });
+  // The registry's moderation policy says `deleted` typically means spam, malware or illegal content.
+  // It is the single most serious thing we can tell a user about something they are already running,
+  // and it is free, permanently.
+  if (row.registry_status === "deleted") notes.push({ level: "alert",
+    text: "REMOVED from the MCP registry — its policy lists spam, malware or illegal content as the usual reasons. Stop using it and verify the source." });
   if (row.vitality === "abandoned") notes.push({ level: "warn", text: "no recent activity — looks abandoned" });
   if (row.similar_official) notes.push({ level: "alert", text: `an official package with a similar name exists: ${row.similar_official}` });
   if (row.single_maintainer) notes.push({ level: "note", text: "single primary maintainer (bus-factor risk)" });

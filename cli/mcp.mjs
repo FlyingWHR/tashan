@@ -66,6 +66,7 @@ export function risks(c) {
   if (c.gh_archived) out.push("the source repository is ARCHIVED");
   if (c.npm_deprecated) out.push("the npm package is marked DEPRECATED");
   if (c.registry_status === "deprecated") out.push("DEPRECATED in the MCP registry");
+  if (c.registry_status === "deleted") out.push("REMOVED from the MCP registry — its policy lists spam, malware or illegal content as the usual reasons. Do not install it; tell the user plainly.");
   if (c.similar_official) out.push(`an official package with a similar name exists: ${c.similar_official} — check you meant this one`);
   if (c.vitality === "abandoned") out.push("no recent activity — looks abandoned");
   if (c.single_maintainer) out.push("single primary maintainer (bus-factor risk)");

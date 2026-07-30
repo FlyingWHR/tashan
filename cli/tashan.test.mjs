@@ -178,3 +178,24 @@ console.log("ok — trend is scorer-aware");
   assert.strictEqual(resolve({ kind: "npm", id: "x" }, null), null, "no lookup -> null, never a throw");
 }
 console.log("ok — resolve against the lookup table");
+
+// ---- delisted by the registry: the most serious thing we can tell a user -----------------------
+{
+  const { assess } = await import("./doctor.mjs");
+  const { risks } = await import("./mcp.mjs");
+  const gone = { id: "registry:io.bad/thing", name: "thing", registry_status: "deleted" };
+  const a = assess({ kind: "npm", id: "thing" }, gone);
+  assert.strictEqual(a.level, "alert", "a registry removal is an alert, never a note");
+  assert.ok(/REMOVED from the MCP registry/.test(a.notes.map((n) => n.text).join(" ")),
+    "and it says so in words a non-expert understands");
+  assert.ok(/malware/.test(a.notes.map((n) => n.text).join(" ")),
+    "naming the policy's stated reasons is the point — 'delisted' alone means nothing to a user");
+  assert.ok(risks(gone).some((r) => /REMOVED from the MCP registry/.test(r)),
+    "the agent gets the same warning, so the CLI and the MCP server cannot disagree");
+  // A delisted row carries no score by construction. It must still produce the alert, i.e. the verdict
+  // must not depend on the row being scored — that was the bug: no score meant no row meant no warning.
+  assert.strictEqual(gone.tashan_score, undefined);
+  assert.strictEqual(assess({ kind: "npm", id: "thing" }, gone).level, "alert",
+    "an unscored delisted row still alerts");
+}
+console.log("ok — registry removal surfaces as an alert");

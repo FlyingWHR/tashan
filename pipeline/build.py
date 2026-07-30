@@ -221,7 +221,8 @@ def ingest_registry(con, full=False):
         why we held only 1,717 of >=6,000. The delta is seconds, so the cap stops being load-bearing.
       - `status` is honoured. The registry marks servers `deprecated` or `deleted`, and the moderation
         policy says `deleted` typically means spam, malware or illegal content. An index whose product
-        is trust must not be the last place a known-bad server stays listed, so those are removed.
+        is trust must not be the last place a known-bad server stays listed, so those are DELISTED —
+      kept as evidence so `doctor` can warn, but refused a score so they can never rank.
 
     Pass full=True (or REG_FULL=1) to force a complete reconcile — run weekly to catch anything the
     delta feed missed. State lives in sync_state so a run can resume rather than restart.
@@ -269,9 +270,22 @@ def ingest_registry(con, full=False):
             cid = f"pkg:{npm_pkg}" if npm_pkg else f"registry:{name}"
             status = meta.get("status")
             if status == "deleted":
-                # spam / malware / illegal per the registry moderation policy — delist, don't just skip,
-                # or a server that was clean last week stays in our index forever after being pulled.
-                con.execute("DELETE FROM capabilities WHERE id=? AND kind!='skill'", (cid,))
+                # Spam / malware / illegal content, per the registry's own moderation policy.
+                #
+                # This used to DELETE the row, which is right for the board and badly wrong for the
+                # user. `doctor` answers from what it can find, so a deleted row meant a person running
+                # a server the registry had pulled for malware was told "not in the tashan index —
+                # unmeasured, not necessarily bad". That reads as reassurance. Deleting the evidence is
+                # the one thing that turns a warning we could give into silence.
+                #
+                # So the row STAYS, delisted: it keeps registry_status='deleted', compute_scores refuses
+                # it a score so it can never rank or be recommended, and export() puts it in the lookup
+                # table anyway so doctor and the MCP server can raise an alert on it.
+                con.execute("""INSERT INTO capabilities (id,name,kind,registry_name,registry_status,registry_updated,in_registry)
+                  VALUES (?,?,?,?,'deleted',?,1)
+                  ON CONFLICT(id) DO UPDATE SET registry_status='deleted',
+                    registry_updated=excluded.registry_updated, tashan_score=NULL""",
+                  (cid, name.split("/")[-1], kind, name, meta.get("updatedAt")))
                 removed += 1
                 continue
             if status == "deprecated":
@@ -298,7 +312,7 @@ def ingest_registry(con, full=False):
                 "ON CONFLICT(source) DO UPDATE SET last_synced=excluded.last_synced, "
                 "last_cursor=excluded.last_cursor, seen=excluded.seen, note=excluded.note",
                 (SRC, started, cursor, seen,
-                 f"{seen} seen, {deprecated} deprecated, {removed} removed as deleted"))
+                 f"{seen} seen, {deprecated} deprecated, {removed} delisted (registry status=deleted)"))
     con.commit()
     print(f"  registry: {seen} servers ({deprecated} deprecated, {removed} delisted as deleted/spam)",
           flush=True)
@@ -708,6 +722,13 @@ def compute_scores(con):
         # signal_history as it accrues — refine the thresholds then.
         recent = ms is not None and ms <= 6
         vitality = None
+        if rstatus == "deleted":
+            # Delisted by the registry for spam/malware/illegal content. Never scored, so it can never
+            # rank, be recommended, or appear on a hub — but the row survives so doctor can warn.
+            con.execute("UPDATE capabilities SET adoption=?, freshness=?, upkeep=?, tashan_score=NULL, "
+                        "vitality='abandoned', single_maintainer=?, updated_at=? WHERE id=?",
+                        (None, None, None, 0, now_iso, cid))
+            continue
         if gh_arch or dep or rstatus == "deprecated":
             vitality = "abandoned"
         elif recent:
@@ -1171,8 +1192,15 @@ def export(con):
     LOOKUP = ["id", "name", "kind", "npm_pkg", "category", "official", "slug", "tashan_score",
               "vitality", "expertise_verdict", "npm_downloads", "gh_stars", "npm_deprecated",
               "gh_archived", "registry_status", "single_maintainer", "similar_official", "rated"]
+    # DELISTED ROWS BELONG IN THE LOOKUP, and nowhere else. A capability the registry pulled for
+    # spam/malware/illegal content has no score (compute_scores refuses it one), so it is correctly
+    # absent from the board, the bulk export and every hub — we must never recommend it. But `doctor`
+    # answers from what it can find, so if it is missing here too, a user running it is told
+    # "unmeasured, not necessarily bad". The row is the only thing that lets us warn.
+    delisted = [dict(zip(("id", "name", "kind", "registry_status"), r)) for r in con.execute(
+        "SELECT id, name, kind, registry_status FROM capabilities WHERE registry_status='deleted'")]
     by_key, recs = {}, []
-    for c in caps:
+    for c in caps + delisted:
         rec = {k: c[k] for k in LOOKUP if c.get(k) is not None}
         i = len(recs); recs.append(rec)
         # Every way a config entry can name this thing points at the same record. `identify()` in
