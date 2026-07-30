@@ -43,7 +43,13 @@ CREATE TABLE IF NOT EXISTS capabilities (
   updated_at TEXT
 );
 CREATE TABLE IF NOT EXISTS signal_history (
-  cap_id TEXT, metric TEXT, value REAL, at TEXT
+  cap_id TEXT, metric TEXT, value REAL, at TEXT,
+  -- WHICH RULER MEASURED THIS. Without it the series is uninterpretable: the scorer was rewritten four
+  -- times inside the first week of history (gate floor, adoption anchors, calibration curve), so
+  -- pkg:3dstreet-mcp reads 43,43,43,43,42,40 and every one of those steps is US, not the capability.
+  -- A trend that spans two scorer versions measures our own recalibration and reports it to a paying
+  -- customer as decline. Comparisons are only ever made within one version.
+  scorer TEXT
 );
 -- one row per source: where the last incremental sync got to. A catalog is a clock, not a snapshot;
 -- without this every run is a full crawl and coverage stays capped by however long we are willing to wait.
@@ -133,6 +139,13 @@ def db():
     for coldef in MIGRATE:
         if coldef.split()[0] not in have:
             con.execute(f"ALTER TABLE capabilities ADD COLUMN {coldef}")
+    # signal_history is not covered by MIGRATE (which only ALTERs capabilities) and cannot be rebuilt —
+    # it is the un-backfillable series. Add the column in place and label every pre-existing row `s1`,
+    # the mixed pre-calibration era, so it can never be trended against anything.
+    hist_cols = {r[1] for r in con.execute("PRAGMA table_info(signal_history)")}
+    if "scorer" not in hist_cols:
+        con.execute("ALTER TABLE signal_history ADD COLUMN scorer TEXT")
+        con.execute("UPDATE signal_history SET scorer='s1' WHERE scorer IS NULL")
     for idx in INDEXES:
         con.execute(idx)
     con.execute(f"PRAGMA user_version = {SCHEMA_VERSION}")
@@ -545,6 +558,16 @@ STAR_W = float(os.environ.get("TASHAN_STAR_W", "0.8"))
 # Lowering it compresses every score on the site downward; that is correct, not a regression — the old
 # band was 60-100 because 60 was free.
 GATE_FLOOR = float(os.environ.get("TASHAN_GATE_FLOOR", "0.30"))
+# SCORER VERSION — bump this whenever ANY input, weight, gate or calibration below changes, because
+# every stored history point is only comparable to points sharing this string. It is not decoration:
+# trend() in cli/doctor.mjs refuses to compare across versions, so forgetting to bump it publishes a
+# fake trend, and bumping it needlessly only costs a short gap in trend availability. Cheap mistake in
+# one direction, a lie to a customer in the other.
+#   s1  the pre-2026-07-30 era. Four rewrites inside one week (usage rebalance, inversion fixes,
+#       contributor rescore, distribution recalibration) all share this label, which is exactly why
+#       nothing labelled s1 may be trended — it is a mixed bag, not a baseline.
+#   s2  first version under the calibrated scale (absolute adoption anchors + _calibrate).
+SCORER_VERSION = os.environ.get("TASHAN_SCORER_VERSION", "s2")
 # ADOPTION ANCHORS — the value on each evidence channel that reads as fully adopted (axis = 1.0).
 #
 # THE BUG THIS FIXES: these used to be the CORPUS MAX. On power-law data that puts the median at the
@@ -764,11 +787,11 @@ def snapshot_history(con):
     n = 0
     for cid, score, adoption in con.execute(
             "SELECT id, tashan_score, adoption FROM capabilities WHERE tashan_score IS NOT NULL"):
-        con.execute("INSERT INTO signal_history (cap_id, metric, value, at) VALUES (?,?,?,?)",
-                    (cid, "tashan_score", score, today))
+        con.execute("INSERT INTO signal_history (cap_id, metric, value, at, scorer) VALUES (?,?,?,?,?)",
+                    (cid, "tashan_score", score, today, SCORER_VERSION))
         if adoption is not None:
-            con.execute("INSERT INTO signal_history (cap_id, metric, value, at) VALUES (?,?,?,?)",
-                        (cid, "adoption", adoption, today))
+            con.execute("INSERT INTO signal_history (cap_id, metric, value, at, scorer) VALUES (?,?,?,?,?)",
+                        (cid, "adoption", adoption, today, SCORER_VERSION))
         n += 1
     con.commit()
     print(f"  signal_history: snapshotted {n} caps for {today}", flush=True)

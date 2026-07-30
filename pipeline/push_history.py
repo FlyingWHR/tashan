@@ -36,10 +36,20 @@ def bucket_of(cap_id):
 
 
 def shards(con):
-    out = {}
-    for cap_id, metric, value, at in con.execute(
-            "SELECT cap_id, metric, value, at FROM signal_history ORDER BY at"):
+    """One dict per bucket: {cap_id: {metric: {date: value}}} plus a `_scorers` date->version map.
+
+    The scorer version is carried ONCE per date rather than per point, because snapshot_history writes
+    exactly one snapshot per day under one scorer. Per-point would multiply the payload for no
+    information. Without it a reader cannot tell that 43 -> 40 across 2026-07-29/30 is a recalibration
+    rather than a decline, which is the whole reason the column exists.
+    """
+    out, scorers = {}, {}
+    for cap_id, metric, value, at, scorer in con.execute(
+            "SELECT cap_id, metric, value, at, COALESCE(scorer,'s1') FROM signal_history ORDER BY at"):
         out.setdefault(bucket_of(cap_id), {}).setdefault(cap_id, {}).setdefault(metric, {})[at] = value
+        scorers[at] = scorer
+    for b in out:
+        out[b]["_scorers"] = scorers
     return out
 
 

@@ -98,7 +98,7 @@ process.stdout.write("ok — doctor (identity / match / assess / malformed-confi
 {
   const { trend, withTrend } = await import("./doctor.mjs");
   const S = (o) => ({ tashan_score: o });
-  const t = (o) => trend(S(o));
+  const t = (o, sc = null) => trend(S(o), sc);
   assert.strictEqual(t({ "2026-07-20": 58, "2026-07-21": 55, "2026-07-22": 50, "2026-07-23": 41 }).level, "alert", "a 17-point fall is an alert");
   assert.strictEqual(t({ "2026-07-20": 58, "2026-07-21": 55, "2026-07-22": 50, "2026-07-23": 41 }).direction, "falling", "...and names the drop");
   assert.strictEqual(t({ "2026-07-20": 50, "2026-07-21": 48, "2026-07-22": 45 }).level, "warn", "a 5-point slip is a warn");
@@ -117,4 +117,29 @@ process.stdout.write("ok — doctor (identity / match / assess / malformed-confi
   // A recovering score must never quiet an archived repository.
   assert.strictEqual(withTrend({ level: "alert", notes: [] }, rising).level, "alert", "a rise never de-escalates an alert");
   assert.strictEqual(withTrend({ level: "warn", notes: [] }, null).level, "warn", "no trend leaves the assessment untouched");
+
+  // ---- scorer versions: never trend across a change of ruler ----
+  // The real contamination: pkg:3dstreet-mcp read 43,43,43,43,42,40 and every step down was caused by
+  // us rewriting the scorer, not by the capability getting worse.
+  const contaminated = { "2026-07-27": 43, "2026-07-28": 42, "2026-07-29": 40, "2026-07-30": 40 };
+  const mixed = { "2026-07-27": "s1", "2026-07-28": "s1", "2026-07-29": "s1", "2026-07-30": "s2" };
+  assert.strictEqual(t(contaminated, mixed).direction, "new",
+    "one point under the current scorer is not a trend — it must refuse, not reach back across the boundary");
+  assert.ok(/comparable history/.test(t(contaminated, mixed).text),
+    "and it says the history is not comparable, rather than implying none exists");
+
+  // A clean run entirely inside one version trends normally.
+  const clean = { "2026-08-01": 58, "2026-08-02": 50, "2026-08-03": 41 };
+  const same = { "2026-08-01": "s2", "2026-08-02": "s2", "2026-08-03": "s2" };
+  assert.strictEqual(t(clean, same).level, "alert", "within one scorer version a real fall still alerts");
+
+  // Old points are dropped, not blended: the s1 tail must not soften an s2 fall.
+  const spanning = { "2026-07-29": 90, "2026-08-01": 58, "2026-08-02": 50, "2026-08-03": 41 };
+  const span = { "2026-07-29": "s1", "2026-08-01": "s2", "2026-08-02": "s2", "2026-08-03": "s2" };
+  assert.strictEqual(t(spanning, span).days, 3, "only the current version's points are counted");
+  assert.strictEqual(t(spanning, span).delta, -17, "the s1 point does not enter the delta");
+
+  // No map (an older endpoint, or a cache miss) must not silently trend a mixed series.
+  assert.strictEqual(t(clean, {}).level, "alert", "an empty map falls back to trending what it was given");
 }
+console.log("ok — trend is scorer-aware");

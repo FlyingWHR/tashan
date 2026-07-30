@@ -166,12 +166,22 @@ export function summarize(results) {
 // from /api/history, so this is fully testable and the network stays at the edge of the program.
 // series shape: { tashan_score: { "2026-07-23": 61, ... }, adoption: { ... } }
 
-export function trend(series, minDays = 3) {
-  const points = Object.entries((series && series.tashan_score) || {})
-    .sort((a, b) => (a[0] < b[0] ? -1 : 1));
+export function trend(series, scorers = null, minDays = 3) {
+  let entries = Object.entries((series && series.tashan_score) || {});
+  // ONLY COMPARE WITHIN ONE SCORER VERSION. The scorer was rewritten four times inside the first week
+  // of history, so pkg:3dstreet-mcp reads 43,43,43,43,42,40 with every step caused by us, not by the
+  // capability. Trending across that bills a customer to be told our own recalibration was decline.
+  // Keep the newest version's points and drop the rest; if that leaves too few, say so rather than
+  // reaching back across the boundary.
+  if (scorers && Object.keys(scorers).length) {
+    const dates = entries.map(([d]) => d).sort();
+    const newest = scorers[dates[dates.length - 1]];
+    if (newest) entries = entries.filter(([d]) => scorers[d] === newest);
+  }
+  const points = entries.sort((a, b) => (a[0] < b[0] ? -1 : 1));
   if (points.length < minDays) {
     return { level: "note", direction: "new", days: points.length,
-             text: `only ${points.length} day(s) of history — not enough to call a trend yet` };
+             text: `only ${points.length} day(s) of comparable history — not enough to call a trend yet` };
   }
   const first = points[0][1], last = points[points.length - 1][1];
   const delta = Math.round(last - first);

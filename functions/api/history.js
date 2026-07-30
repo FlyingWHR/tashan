@@ -48,12 +48,15 @@ export async function onRequestGet({ request, env }) {
   }
   const shard = await env.TASHAN_KV.get("hist:" + bucketOf(id), "json");
   const series = (shard && shard[id]) || null;
+  // date -> scorer version. A consumer that trends across two versions is measuring OUR recalibration,
+  // so the map ships with every response and cli/doctor.mjs refuses to compare across it.
+  const scorers = (shard && shard._scorers) || {};
   if (!series) {
     return new Response(JSON.stringify({ id, series: null, note: "no history recorded for this id yet" }), {
       status: 404, headers: { "content-type": "application/json" },
     });
   }
-  return new Response(JSON.stringify({ id, series, source: "tashan signal_history", licence: "paid" }), {
+  return new Response(JSON.stringify({ id, series, scorers, source: "tashan signal_history", licence: "paid" }), {
     // Private: this is per-customer paid data, so no shared cache may ever hold it.
     headers: { "content-type": "application/json", "cache-control": "private, max-age=60" },
   });

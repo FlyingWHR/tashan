@@ -165,8 +165,8 @@ async function withTrends(results, key, base = SITE, limit = 40) {
         return results;                       // stop early; every other call would fail the same way
       }
       if (!res.ok) continue;                  // 404 = nothing recorded yet, 503 = validation down
-      const { series } = await res.json();
-      r.assessment = withTrend(r.assessment, trend(series));
+      const { series, scorers } = await res.json();
+      r.assessment = withTrend(r.assessment, trend(series, scorers));
     } catch { /* offline: trend is an enhancement, never a reason doctor fails */ }
   }
   return results;
