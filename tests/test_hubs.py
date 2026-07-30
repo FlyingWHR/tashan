@@ -197,7 +197,32 @@ if os.path.exists(os.path.join(WEB, "skill", "SKILL.md")):
     check("SKILL.md says absent means unmeasured", "UNMEASURED" in sk)
 
 print()
+print("# our own plugin manifest (how a user installs us with one command)")
+# Validated with the SAME parser we point at everyone else's manifest. ingest_plugins.parse() has read
+# thousands of real .claude-plugin/marketplace.json files in the wild, so it is the closest thing to a
+# spec we have — if our own manifest fails it, `/plugin marketplace add tashan-sh/tashan` fails for a
+# user and nothing local would tell us.
+sys.path.insert(0, os.path.join(ROOT, "pipeline"))
+from ingest_plugins import parse as _parse_mkt
+_mkt = os.path.join(ROOT, ".claude-plugin", "marketplace.json")
+check("marketplace.json exists at the repo root", os.path.exists(_mkt))
+_got = _parse_mkt(open(_mkt).read(), "tashan-sh/tashan") if os.path.exists(_mkt) else []
+check("our manifest parses with our own ingester", len(_got) == 1)
+check("the plugin is named tashan", bool(_got) and _got[0]["name"] == "tashan")
+_plug = json.load(open(os.path.join(ROOT, "plugin", ".claude-plugin", "plugin.json")))
+_srv = (_plug.get("mcpServers") or {}).get("tashan") or {}
+# `npx -y tashan-mcp` would resolve a PACKAGE of that name, which does not exist — the bin of that
+# name lives inside the `tashan` package, and npx keys off the package name. Only one string works.
+check("plugin launches the server via `npx -y tashan mcp`",
+      _srv.get("command") == "npx" and _srv.get("args") == ["-y", "tashan", "mcp"])
+_cli = json.load(open(os.path.join(ROOT, "cli", "package.json")))
+check("published package name matches what the plugin npx-es", _cli.get("name") == "tashan")
+check("every file the CLI imports is actually published",
+      {"tashan.mjs", "doctor.mjs", "mcp.mjs"} <= set(_cli.get("files") or []))
+check("the bundled skill ships with the plugin",
+      os.path.exists(os.path.join(ROOT, "plugin", "skills", "tashan", "SKILL.md")))
+
+print()
 print("=" * 46)
 print("hubs: %d/%d passed%s" % (ok, ok + fail, " · all green" if not fail else ""))
 sys.exit(1 if fail else 0)
-

@@ -7,6 +7,7 @@
 //   npx tashan add <name>            the install command for your client   ← the money shot
 //   npx tashan doctor                audit the config you actually have — dead, deprecated, risky
 //   npx tashan doctor --trend        ...and whether any of it is DECLINING   (tashan Pro)
+//   npx tashan mcp                   run as an MCP server, so your AGENT can ask before installing
 //
 // Reads live public data from https://tashan.sh/data/index.json (no account, no backend, no telemetry).
 // Zero dependencies. The pure functions are exported for cli/tashan.test.mjs.
@@ -269,6 +270,13 @@ export async function main(argv) {
     if (!r) { process.stderr.write(red(`  no capability matches "${arg}". try: tashan search ${arg}`) + "\n"); return 1; }
     if (a.json) { process.stdout.write(JSON.stringify(cmd === "add" ? { capability: r, install: installSnippets(r, a.client) } : r, null, 2) + "\n"); return 0; }
     process.stdout.write((cmd === "add" ? renderAdd(r, a.client) : infoCard(r)) + "\n");
+    return 0;
+  }
+  if (cmd === "mcp") {
+    // `npx -y tashan mcp` is the ONE install string: it resolves the published package by name and
+    // then runs the server. `npx -y tashan-mcp` would resolve a PACKAGE called tashan-mcp, which does
+    // not exist — the bin of that name lives inside this package, and npx keys off the package name.
+    await import("./mcp.mjs").then((m) => m.serve());
     return 0;
   }
   if (cmd === "doctor") {

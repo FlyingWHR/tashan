@@ -1,0 +1,21 @@
+{
+  "name": "tashan",
+  "version": "0.1.0",
+  "description": "Ask before you install. Measured evidence on MCP servers and agent skills, and an audit of the config you already have.",
+  "author": {
+    "name": "SeroLabs, Inc.",
+    "url": "https://tashan.sh"
+  },
+  "homepage": "https://tashan.sh",
+  "license": "MIT",
+  "mcpServers": {
+    "tashan": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "tashan",
+        "mcp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "tashan",
+  "description": "The measured layer for AI capabilities. Before your agent recommends or installs an MCP server or skill, it asks tashan whether the thing is actually used, maintained, and not shadowing an official package name.",
+  "owner": {
+    "name": "SeroLabs, Inc.",
+    "url": "https://tashan.sh"
+  },
+  "plugins": [
+    {
+      "name": "tashan",
+      "source": "./plugin",
+      "description": "Ask before you install. Finds an MCP server or agent skill for a task ranked on public evidence, checks one you already named for deprecation, archival and name-confusion, and audits the config already on this machine. Safety findings are never paywalled. A tashan score measures adoption and maintenance \u2014 it is not a security audit.",
+      "version": "0.1.0",
+      "category": "devtools",
+      "tags": [
+        "mcp",
+        "agent-skills",
+        "discovery",
+        "supply-chain",
+        "audit",
+        "measurement"
+      ],
+      "homepage": "https://tashan.sh",
+      "author": {
+        "name": "SeroLabs, Inc.",
+        "url": "https://tashan.sh"
+      }
+    }
+  ]
+}

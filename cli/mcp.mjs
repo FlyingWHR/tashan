@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // tashan as an MCP server — the measured layer, inside the agent's decision loop.
 //
-//   claude mcp add tashan -- npx -y tashan mcp
+//   claude mcp add tashan -- npx -y tashan mcp        <- the one install string
 //
 // WHY THIS EXISTS AND /v0.1/* DOES NOT REPLACE IT
 // /v0.1/servers is byte-compatible with the MCP registry, which is elegant and passive: a host has to
@@ -293,7 +293,7 @@ export async function handle(msg) {
   }
 }
 
-async function main() {
+export async function serve() {
   let buf = "";
   process.stdin.setEncoding("utf8");
   for await (const chunk of process.stdin) {
@@ -312,4 +312,4 @@ async function main() {
 }
 
 import { fileURLToPath } from "node:url";
-if (process.argv[1] === fileURLToPath(import.meta.url)) main();
+if (process.argv[1] === fileURLToPath(import.meta.url)) serve();
