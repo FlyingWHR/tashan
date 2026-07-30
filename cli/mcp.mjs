@@ -21,6 +21,7 @@
 // Zero dependencies, stdio transport, newline-delimited JSON-RPC 2.0.
 
 import { search, find, installSnippets, pretty, slugify } from "./tashan.mjs";
+import { tokensOf } from "./doctor.mjs";
 import { configLocations, skillLocations, collect, resolve, assess, summarize } from "./doctor.mjs";
 
 const SITE = process.env.TASHAN_SITE || "https://tashan.sh";
@@ -129,11 +130,21 @@ export function taskTokens(task) {
 export function forTask(all, task, limit) {
   const toks = taskTokens(task);
   const cats = inferCategories(task);
+  // A token that half the corpus contains is a topic word, not an identifier. Without this cut,
+  // "search the web" scored `web-search` (57, 112 downloads/wk) above tavily (86, 32k/wk) purely
+  // because its NAME repeated the user's own words — rewarding a capability for being generically
+  // titled, which is the opposite of measuring.
+  const df = new Map();
+  for (const c of all) for (const t of tokensOf(c)) df.set(t, (df.get(t) || 0) + 1);
+  const DISTINCT = 40;
   const hit = (c) => {
     const hay = `${c.name || ""} ${c.npm_pkg || ""} ${c.id || ""}`.toLowerCase();
     // crude singularisation: "PDFs" must find pdf-toolkit, "issues" must find issue. Cheaper and more
     // predictable than a stemmer, and a wrong stem only costs a ranking place, never a wrong answer.
-    return toks.filter((t) => hay.includes(t) || (t.endsWith("s") && t.length > 3 && hay.includes(t.slice(0, -1)))).length;
+    return toks.filter((t) => {
+      const m = hay.includes(t) || (t.endsWith("s") && t.length > 3 && hay.includes(t.slice(0, -1)));
+      return m && (df.get(t) || 0) <= DISTINCT;     // distinctive matches only
+    }).length;
   };
   const scored = all
     .filter((c) => c.tashan_score != null)
@@ -207,7 +218,14 @@ export function renderFind(matches, task, client) {
     L.push(`   ${evidence(c)}`);
     for (const r of risks(c)) L.push(`   ⚠ ${r}`);
     const snip = installSnippets(c, client || "claude")[0];
-    if (snip) L.push(`   install: ${snip.cmd.split("\n")[0]}`);
+    if (snip) {
+      // NEVER take just the first line. Cursor/Codex/Desktop snippets are multi-line JSON or TOML
+      // stanzas, and "[mcp_servers.web-search]" on its own is broken config an agent would happily
+      // paste into a user's machine.
+      const lines = String(snip.cmd).split("\n");
+      L.push(`   install (${snip.client}): ${lines[0]}`);
+      for (const l of lines.slice(1)) L.push(`     ${l}`);
+    }
     L.push(`   details: ${SITE}/capability/${c.slug || slugify(c.id)}.html`);
     L.push("");
   });

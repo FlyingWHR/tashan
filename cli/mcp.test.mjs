@@ -55,7 +55,8 @@ assert.ok(!rs.some((r) => /typosquat/i.test(r)),
 
 // ---- find rendering ----
 const out = renderFind([good], "search the web", "claude");
-assert.ok(/tavily/.test(out) && /install:/.test(out), "gives the agent a runnable install command");
+assert.ok(/tavily/.test(out) && /install \(claude\):/.test(out),
+  "gives the agent a runnable install command, naming the target client");
 assert.ok(/NOT a security audit/.test(out), "every find carries the not-an-audit caveat");
 const empty = renderFind([], "underwater basket weaving", "claude");
 assert.ok(/no evidence, not that nothing exists/.test(empty),
@@ -96,3 +97,31 @@ console.log("ok — mcp server (protocol / evidence / risk / rendering)");
     "no match returns nothing rather than the highest-scoring unrelated thing");
 }
 console.log("ok — mcp task routing");
+
+// ---- the install handoff: what the agent is told to run ----------------------------------------
+{
+  const { renderFind } = await import("./mcp.mjs");
+  const { installSnippets } = await import("./tashan.mjs");
+  const cap = { id: "pkg:tavily-mcp", name: "tavily-mcp", npm_pkg: "tavily-mcp",
+                tashan_score: 86, vitality: "active", slug: "tavily-mcp" };
+
+  // A Cursor/Codex/Desktop snippet is a multi-line JSON or TOML stanza. The first version printed
+  // only line one, so an agent following it would have written "[mcp_servers.tavily-mcp]" with no
+  // command and no args into a user's real config file.
+  for (const client of ["cursor", "codex", "desktop"]) {
+    const out = renderFind([cap], "search the web", client);
+    const src = installSnippets(cap, client)[0].cmd.split("\n");
+    for (const line of src) {
+      assert.ok(out.includes(line.trim()),
+        `${client}: the snippet line ${JSON.stringify(line.trim())} must reach the agent`);
+    }
+  }
+  const single = renderFind([cap], "search the web", "claude");
+  // pretty() strips the -mcp suffix for the SERVER NAME while the package keeps it, so the correct
+  // command is "add tavily -- npx -y tavily-mcp". Asserting the raw package name in both positions
+  // would have pinned a command that does not match what the website and CLI emit.
+  assert.ok(/claude mcp add tavily -- npx -y tavily-mcp/.test(single),
+    "the one-line claude form still arrives intact");
+  assert.ok(/install \(claude\)/.test(single), "the target client is named, so the agent cannot mispaste");
+}
+console.log("ok — install handoff delivers complete config");
