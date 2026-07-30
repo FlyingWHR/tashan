@@ -199,3 +199,54 @@ console.log("ok — resolve against the lookup table");
     "an unscored delisted row still alerts");
 }
 console.log("ok — registry removal surfaces as an alert");
+
+// ---- suggest(): what to switch to -------------------------------------------------------------
+{
+  const { suggest, tokenFrequency, tokensOf, isDying } = await import("./doctor.mjs");
+  const pool = [
+    { id: "a", name: "mcp-server-sqlite-npx", tashan_score: 38, npm_deprecated: 1 },
+    { id: "b", name: "mcp-sqlite", tashan_score: 61 },
+    { id: "c", name: "@mokei/mcp-sqlite", npm_pkg: "@mokei/mcp-sqlite", tashan_score: 65 },
+    { id: "d", name: "sqlite-but-dead", tashan_score: 90, gh_archived: 1 },
+    { id: "e", name: "sqlite-but-worse", tashan_score: 12 },
+    { id: "f", name: "totally-unrelated-thing", tashan_score: 99 },
+    { id: "g", name: "unscored-sqlite", tashan_score: null },
+  ];
+  const df = tokenFrequency(pool);
+  const dead = pool[0];
+  const got = suggest(dead, pool, df);
+  assert.deepStrictEqual(got.map((x) => x.cap.id), ["c", "b"],
+    "best-measured comparable first");
+
+  // Each of these was a way to produce a recommendation that is worse than saying nothing.
+  assert.ok(!got.some((x) => x.cap.id === "d"),
+    "never replace a dead thing with another dead thing, however well it scores");
+  assert.ok(!got.some((x) => x.cap.id === "e"),
+    "never suggest something measured WORSE than what they already have");
+  assert.ok(!got.some((x) => x.cap.id === "f"),
+    "a high score is not a reason — an unrelated tool is not an alternative");
+  assert.ok(!got.some((x) => x.cap.id === "g"),
+    "never suggest something we have not measured");
+  assert.ok(!got.some((x) => x.cap.id === dead.id), "never suggest itself");
+
+  // Generic words must not create false matches. `mcp`/`server` are in every other name.
+  assert.ok(!tokensOf({ name: "mcp-server-thing" }).has("mcp"), "stopwords are dropped");
+  assert.ok(!tokensOf({ name: "mcp-server-thing" }).has("server"));
+  const generic = [
+    { id: "x", name: "alpha-tool", tashan_score: 10, npm_deprecated: 1 },
+    ...Array.from({ length: 80 }, (_, i) => ({ id: "g" + i, name: `beta-shared${i}`, tashan_score: 50 })),
+  ];
+  // "shared" appears in 80 rows; with maxDf 60 it is a category word and must not link anything.
+  assert.deepStrictEqual(
+    suggest({ id: "y", name: "shared-dead", tashan_score: 5 }, generic, null, { maxDf: 60 }), [],
+    "a token common across the corpus is not evidence of the same integration");
+
+  assert.deepStrictEqual(suggest(null, pool), [], "no capability -> no suggestion, never a throw");
+  assert.deepStrictEqual(suggest({ id: "z", name: "zzz", tashan_score: 1 }, pool, df), [],
+    "nothing comparable returns nothing — 'no confident alternative' is a real answer");
+
+  assert.ok(isDying({ registry_status: "deleted" }), "a registry removal counts as dying");
+  assert.ok(isDying({ vitality: "abandoned" }) && isDying({ gh_archived: 1 }));
+  assert.ok(!isDying({ vitality: "active" }));
+}
+console.log("ok — suggest (relevance, never a worse or deader replacement)");

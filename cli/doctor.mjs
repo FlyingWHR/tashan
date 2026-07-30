@@ -248,3 +248,60 @@ export function withTrend(assessment, tr) {
   const level = (rank[tr.level] || 0) > (rank[assessment.level] || 0) ? tr.level : assessment.level;
   return { ...assessment, level, notes, trend: tr };
 }
+
+// ---------------------------------------------------------------------------------------------
+// SUGGEST — what to switch to. The paid half's actual value, and the reason history alone was not
+// enough to sell.
+//
+// Category is useless as a partition here: 67% of scored capabilities sit in `productivity` or
+// `devtools`, and ranking by score inside a category proposed a Lark comms server be replaced by an
+// SEO plugin. Co-use is populated on 1% of rows and none of the skills or plugins. Task tags cover
+// none of the npm/remote servers that actually appear in configs.
+//
+// What does work is a SHARED LOW-FREQUENCY TOKEN. If a dead capability and a live one both contain a
+// word that few other capabilities contain — `cloudflare`, `sqlite`, `gmail` — they are almost always
+// the same integration. Measured on the real export, 109 of 267 dead capabilities get a confident
+// suggestion this way, and the ones it declines to answer are better left unanswered: "no confident
+// alternative" is a real answer and the honest default.
+//
+// Pure: the caller supplies the candidate pool. No fetch, no clock.
+const STOPWORDS = new Set(["mcp", "server", "servers", "cli", "api", "tool", "tools", "app", "agent",
+  "plugin", "skill", "skills", "claude", "ai", "the", "for", "and", "with", "sdk", "js", "ts", "node",
+  "python", "py", "lib", "core", "client", "service", "integration", "official", "open", "source"]);
+
+export function tokensOf(cap) {
+  const src = `${cap.npm_pkg || ""} ${cap.name || ""} ${cap.id || ""}`.toLowerCase();
+  return new Set(src.split(/[^a-z0-9]+/).filter((w) => w.length > 2 && !STOPWORDS.has(w)));
+}
+
+/** How many capabilities in the pool contain each token — a token in half the corpus says nothing. */
+export function tokenFrequency(pool) {
+  const df = new Map();
+  for (const c of pool) for (const t of tokensOf(c)) df.set(t, (df.get(t) || 0) + 1);
+  return df;
+}
+
+export function isDying(c) {
+  return Boolean(c && (c.gh_archived || c.npm_deprecated
+    || c.registry_status === "deprecated" || c.registry_status === "deleted"
+    || c.vitality === "abandoned"));
+}
+
+/** Alternatives to `cap`, best first. Empty when nothing is confidently comparable. */
+export function suggest(cap, pool, df = null, opts = {}) {
+  if (!cap) return [];
+  const maxDf = opts.maxDf || 60;      // a token shared by more than this is a category word, not an integration
+  const limit = opts.limit || 2;
+  const freq = df || tokenFrequency(pool);
+  const mine = tokensOf(cap);
+  const out = [];
+  for (const p of pool) {
+    if (!p || p.id === cap.id || p.tashan_score == null) continue;
+    if (isDying(p)) continue;                                  // never replace a dead thing with a dead thing
+    if (p.tashan_score <= (cap.tashan_score || 0)) continue;   // and never with a worse-measured one
+    const shared = [...mine].filter((t) => tokensOf(p).has(t) && (freq.get(t) || 0) <= maxDf);
+    if (shared.length) out.push({ cap: p, shared, score: p.tashan_score });
+  }
+  out.sort((a, b) => (b.shared.length - a.shared.length) || (b.score - a.score));
+  return out.slice(0, limit);
+}
