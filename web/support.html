@@ -49,8 +49,11 @@
 
     <h2>Licence keys</h2>
     <p>Your key is in the <a class="link" href="https://polar.sh/purchases" rel="noopener">Polar
-      portal</a> under your subscription. Pass it to the paid API as a bearer token:</p>
-    <div class="callout mono" style="font-size:.85rem">curl -H "Authorization: Bearer &lt;key&gt;" \<br>
+      portal</a> under your subscription. Almost everyone only needs it in one place:</p>
+    <div class="callout mono" style="font-size:.85rem">export TASHAN_KEY=tashan_…<br>npx tashan doctor</div>
+    <p>Same command as the free one; the rows with an answer now show it. If you would rather query the
+      history yourself, the key is also a bearer token:</p>
+    <div class="callout mono" style="font-size:.8rem">curl -H "Authorization: Bearer &lt;key&gt;" \<br>
       &nbsp;&nbsp;"https://tashan.sh/api/history?id=pkg:tavily-mcp"</div>
     <p>A <span class="mono">403</span> means the key isn't valid or the subscription lapsed; a
       <span class="mono">503</span> means validation is temporarily unavailable — retry rather than
