@@ -193,7 +193,7 @@ def cat_page(cat, rows, all_cats, gen):
     url = BASE + "/category/" + cid + ".html"
     title = "Best " + label + " MCP servers, ranked by the tashan score · tashan"
     desc = ("The " + str(len(rows)) + " " + label.lower() + " MCP servers tashan measures, ranked by tashan score — "
-            "maintenance, freshness and real adoption from public evidence. " + cat["blurb"])
+            "upkeep, freshness and real adoption from public evidence. " + cat["blurb"])
     top = ", ".join(pretty(c["name"]) for c in rows[:5])
     lds = [
         {"@context": "https://schema.org", "@type": "ItemList", "name": label + " MCP servers ranked by trust",
@@ -232,11 +232,11 @@ def cat_page(cat, rows, all_cats, gen):
         '<p class="kicker"><a class="link" href="/">The Index</a> · ' + esc(label) + "</p>\n"
         "<h1>" + esc(label) + " MCP servers, ranked</h1>\n"
         '<p class="lede">' + esc(cat["blurb"]) + " tashan measures <b>" + str(len(rows)) +
-        "</b> capabilities here and ranks them by tashan score — a transparent composite of maintenance, "
+        "</b> capabilities here and ranks them by tashan score — a transparent composite of upkeep, "
         "freshness and real adoption. <a class=\"link\" href=\"/methodology.html\">How we measure &rsaquo;</a></p>\n"
         + board(rows) +
         ('<p class="note">' + str(len(measured)) + " of these have been expertise-graded against their "
-         "documentation; the rest carry adoption and maintenance signal only. We publish what is "
+         "documentation; the rest carry adoption and upkeep signal only. We publish what is "
          "measured and say plainly what isn't.</p>\n" if rows else "")
         + '<h2>Other categories</h2>\n<div class="chips">' + sib + "</div>\n"
         '<p style="margin-top:var(--sp-12)"><a class="btn btn--ghost" href="/">See the full Index &rsaquo;</a></p>\n'
@@ -263,7 +263,7 @@ def task_page(task, rows, all_tasks, gen):
     url = BASE + "/task/" + slug + ".html"
     title = "Best MCP servers and skills for " + label.lower() + ", ranked by the tashan score · tashan"
     desc = ("The " + str(len(rows)) + " capabilities tashan measures for " + label.lower() +
-            ", ranked by tashan score — maintenance, freshness and real adoption, from public evidence only.")
+            ", ranked by tashan score — upkeep, freshness and real adoption, from public evidence only.")
     top = ", ".join(pretty(c["name"]) for c in rows[:5])
     occs = task.get("occupations") or []
     steps = task.get("onet_steps") or []
@@ -321,7 +321,7 @@ def task_page(task, rows, all_tasks, gen):
         "<h1>" + esc(label) + "</h1>\n"
         '<p class="lede">' + esc(task.get("blurb", "")) + " tashan measures <b>" + str(len(rows)) +
         "</b> capabilities for this work and ranks them by tashan score — a transparent composite of "
-        "maintenance, freshness and real adoption. "
+        "upkeep, freshness and real adoption. "
         '<a class="link" href="/methodology.html">How we measure &rsaquo;</a></p>\n'
         + board(rows) + who
         + '<h2>Other work</h2>\n<div class="chips">' + sib + "</div>\n"

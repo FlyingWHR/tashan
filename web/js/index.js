@@ -326,7 +326,10 @@
       case "adoption": return num(b.adoption) - num(a.adoption);
       case "fresh": return recency(b) - recency(a);
       case "expertise": return (num(b.expertise) - num(a.expertise)) || (num(b.tashan_score) - num(a.tashan_score));
-      case "maint": return num(b.maintenance) - num(a.maintenance);
+      // `maintenance` was renamed to `upkeep` in the schema (build.py RENAMES) and this was never
+      // updated, so num(undefined) - num(undefined) === 0 for every pair and choosing "Upkeep"
+      // silently left the board in whatever order it was already in.
+      case "maint": return num(b.upkeep) - num(a.upkeep);
       case "name": return pretty(a.name).toLowerCase() < pretty(b.name).toLowerCase() ? -1 : 1;
       default: return num(b.tashan_score) - num(a.tashan_score);   // trust
     }

@@ -77,7 +77,7 @@ def faq(c):
     if c.get("vitality"): parts.append("it is currently " + c["vitality"])
     if c.get("single_maintainer"): parts.append("note: a single primary maintainer (bus-factor risk)")
     if c.get("gh_archived"): parts.append("warning: the repository is archived")
-    safe += (", ".join(parts) if parts else "see the measured signals") + ". This is a maintenance/adoption read, not a security audit."
+    safe += (", ".join(parts) if parts else "see the measured signals") + ". This is an upkeep/adoption read, not a security audit."
     qa.append(("Is " + n + " safe and trustworthy?", safe))
     # How to install
     if c.get("kind") == "skill":
@@ -150,7 +150,7 @@ def summary(c):
     kv("tashan score", c.get("tashan_score"))
     kv("Expertise", (str(c["expertise"]) + " (" + c["expertise_verdict"] + ")") if c.get("expertise") is not None and c.get("expertise_verdict") else c.get("expertise"))
     kv("Adoption", (compact(c["npm_downloads"]) + "/wk") if c.get("npm_downloads") is not None else (str(c.get("config_reach")) + " repos" if c.get("config_reach") else None))
-    kv("Vitality", c.get("vitality"))
+    kv("Health", c.get("vitality"))
     kv("GitHub stars", fmt(c.get("gh_stars")) if c.get("gh_stars") is not None else None)
     kv("Contributors", c.get("gh_contributors"))
     kv("License", c.get("gh_license"))

@@ -156,7 +156,7 @@ def build_articles(caps):
     A.append({
         "slug": "best-mcp-servers-for-claude-code", "lang": "en",
         "title": "Best MCP servers for Claude Code (2026)",
-        "desc": "The top MCP servers for Claude Code, ranked by tashan's measured score — real adoption and maintenance, not stars or opinion. Auto-updated from public evidence.",
+        "desc": "The top MCP servers for Claude Code, ranked by tashan's measured score — real adoption and upkeep, not stars or opinion. Auto-updated from public evidence.",
         "quick": "The most trustworthy MCP servers for Claude Code right now, by measured tashan score (upkeep + freshness, gated by real adoption): <b>context7</b>, <b>chrome-devtools</b>, and <b>filesystem</b> lead. The full ranked list below updates from public evidence — not stars, not sponsorships.",
         "sections": [
             {"q": "Which MCP servers are most trusted for Claude Code?",
@@ -201,14 +201,14 @@ def build_articles(caps):
                   "Open Settings → MCP and toggle the server on.",
                   "Confirm the server's tools appear; restart Cursor if they don't."],
         "faq": [("Can I scope an MCP server to one project in Cursor?", "Yes — put it in .cursor/mcp.json at the project root; it's committed and shared with the repo."),
-                ("Which MCP servers are worth installing in Cursor?", "See tashan's tashan score-ranked Index — every server is scored on measured adoption and maintenance, not stars.")],
+                ("Which MCP servers are worth installing in Cursor?", "See tashan's tashan score-ranked Index — every server is scored on measured adoption and upkeep, not stars.")],
     })
     # 5. is-X-safe cluster (EN) — the trust wedge
     A.append({
         "slug": "how-to-tell-if-an-mcp-server-is-safe", "lang": "en",
         "title": "How to tell if an MCP server is safe",
-        "desc": "MCP servers run with your agent's permissions. Judge safety by maintainer count, maintenance recency, permission surface (file/shell/network), and whether it's official — not by GitHub stars.",
-        "quick": "An MCP server runs tools your agent invokes, so treat it like installing a CLI. Check five things: a <b>named, active maintainer</b> (not a single anonymous one), <b>recent maintenance</b>, a clear <b>permission surface</b> (does it read/write files, run shells, or reach the network?), <b>no unpatched advisories</b>, and whether it's <b>official</b> from a model company. tashan surfaces these per server so you don't have to dig.",
+        "desc": "MCP servers run with your agent's permissions. Judge safety by maintainer count, upkeep recency, permission surface (file/shell/network), and whether it's official — not by GitHub stars.",
+        "quick": "An MCP server runs tools your agent invokes, so treat it like installing a CLI. Check five things: a <b>named, active maintainer</b> (not a single anonymous one), <b>recent upkeep</b>, a clear <b>permission surface</b> (does it read/write files, run shells, or reach the network?), <b>no unpatched advisories</b>, and whether it's <b>official</b> from a model company. tashan surfaces these per server so you don't have to dig.",
         "sections": [
             {"q": "What are the real security risks of an MCP server?",
              "body": "<p>The named ones: <b>tool-poisoning / prompt-injection</b> via tool descriptions the model sees but you don't; <b>rug-pulls</b> (a server silently changing tool behavior after you approve it); <b>single-maintainer / supply-chain</b> risk; and <b>typosquats</b> (near-identical names). None of these show up in a star count.</p>"},

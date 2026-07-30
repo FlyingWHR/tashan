@@ -1166,7 +1166,7 @@ def export(con):
         if c.get("kind") == "skill" and not per_item:
             c["tashan_score"] = None
             c["rated"] = False
-            c["rating_basis"] = ("Catalogued, not rated. Its only maintenance evidence is the repository "
+            c["rating_basis"] = ("Catalogued, not rated. Its only upkeep evidence is the repository "
                                  "it lives in, which every skill in that repo shares — so a per-skill "
                                  "score would carry no information. A grade of its own SKILL.md is what "
                                  "makes it rankable.")
@@ -1192,7 +1192,7 @@ def export(con):
         "measured": len(ranked) + len(catalogued),
         # This string ships inside capabilities.json and index.json — it is public copy, and it kept
         # the name the product retired in SCHEMA_VERSION 5. "Trust" claimed an audit we do not perform.
-        "note": "Ranked by the tashan score: maintenance and freshness, gated by real adoption, on public "
+        "note": "Ranked by the tashan score: upkeep and freshness, gated by real adoption, on public "
                 "evidence only. It is NOT a security audit — no CVE scan, no code review. Expertise is a "
                 "separate LLM-graded read of the capability itself. Method: https://tashan.sh/methodology.html",
         # ONE catalog: ranked first, then catalogued-but-unrated. Both are installable and searchable;

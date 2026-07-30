@@ -44,6 +44,10 @@ python3 tests/test_type_scale.py || fail=1
 echo; echo "── official badge (endorsement claim) ─────────"
 python3 tests/test_official.py || fail=1
 
+# 3b6. a rename that touches the schema and not the prose — and leaves a sort reading a dead field
+echo; echo "── terminology (retired names) ────────────────"
+python3 tests/test_terminology.py || fail=1
+
 # 3c. config parser — a wrong capability id invents one row AND loses the real one
 echo; echo "── config parser (capability_id) ──────────────"
 python3 tests/test_scrape.py || fail=1

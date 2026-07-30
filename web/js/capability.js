@@ -57,7 +57,7 @@
       worksWith(c) +
       installBlock(c) +
       '<div class="stats">' +
-        stat("tashan score", c.tashan_score == null ? "—" : c.tashan_score, "jade", "maintenance + freshness, gated by adoption") +
+        stat("tashan score", c.tashan_score == null ? "—" : c.tashan_score, "jade", "upkeep + freshness, gated by adoption") +
         stat("Expertise", c.expertise == null ? "—" : c.expertise, "jade", c.expertise_verdict ? "LLM-graded: " + c.expertise_verdict : "not yet graded") +
         stat("Adoption", adoption(c), "", c.npm_downloads != null ? "npm downloads / week" : "distinct public repos") +
         stat("Upkeep", score(c.upkeep), "", "cadence · maintainers · status") +
@@ -74,7 +74,7 @@
       '<div class="callout" style="margin-top:var(--sp-12)"><b>What this means.</b> The tashan score blends how actively the ' +
         'capability is <b>maintained</b> (release cadence, maintainer/contributor count, deprecation, registry status) and how ' +
         '<b>fresh</b> it is, gated by real <b>adoption</b> — npm weekly downloads where published, distinct public ' +
-        'configs otherwise. <b>Vitality</b> reads finished-but-loved (stable) apart from abandoned. It is <b>not</b> an ' +
+        'configs otherwise. <b>Health</b> reads finished-but-loved (stable) apart from abandoned. It is <b>not</b> an ' +
         'outcome eval: does-it-actually-work-well testing and retention are on the ' +
         '<a class="link" href="/methodology.html">roadmap</a>. Measured ' + fdate(d.generated_at) + '.</div>';
 
