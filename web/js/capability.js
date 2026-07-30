@@ -60,7 +60,7 @@
         stat("Trust", c.tashan_score == null ? "—" : c.tashan_score, "jade", "maintenance + freshness, gated by adoption") +
         stat("Expertise", c.expertise == null ? "—" : c.expertise, "jade", c.expertise_verdict ? "LLM-graded: " + c.expertise_verdict : "not yet graded") +
         stat("Adoption", adoption(c), "", c.npm_downloads != null ? "npm downloads / week" : "distinct public repos") +
-        stat("Maintenance", score(c.upkeep), "", "cadence · maintainers · status") +
+        stat("Upkeep", score(c.upkeep), "", "cadence · maintainers · status") +
         stat("Freshness", fr.txt, "", "latest release / push", fr.cls) +
         stat("Bus factor", busFactor(c), "", "distinct contributors", c.single_maintainer ? "fresh--cold" : "") +
       '</div>' +

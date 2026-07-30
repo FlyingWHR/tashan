@@ -3,7 +3,12 @@
   "use strict";
   var el = document.getElementById("rot");
   if (!el) return;
-  var words = ["adoption", "maintenance", "freshness", "expertise", "retention"];
+  // The four axes actually published on every capability page. "retention" was in this list and we
+  // measure NONE of it — the column is empty on all 12,109 rows — so the homepage headline was
+  // advertising a signal that does not exist, which is the one thing this site claims never to do.
+  // "maintenance" was the name retired in SCHEMA_VERSION 5 because it overstated what is measured;
+  // the column and every surface now say upkeep.
+  var words = ["adoption", "upkeep", "freshness", "expertise"];
   var i = 0;
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduce) { el.firstChild.textContent = "everything that matters"; return; }

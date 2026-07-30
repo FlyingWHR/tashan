@@ -122,7 +122,11 @@ img { max-width: 100%; display: block; }
   animation: heroRise .7s cubic-bezier(.2,.7,.2,1) forwards; }
 .hero__title .w:nth-child(1){ animation-delay:.05s } .hero__title .w:nth-child(2){ animation-delay:.13s }
 .hero__title .w:nth-child(3){ animation-delay:.21s } .hero__title .w:nth-child(4){ animation-delay:.29s }
-.hero__title .dot { margin-left:-.12em; animation-delay:.37s; }
+.hero__title .dot { margin-left:-.12em; animation-delay:.37s;
+  /* The period belongs to "works", which is jade — inheriting the body colour left it reading as a
+     stray mark in a different colour from the word it terminates. It is not underlined, because the
+     accent bar is drawn under the WORD; a bar running under a full stop looks like a typo. */
+  color: var(--jade); }
 .hero__title em { position:relative; }
 .hero__title em::after { content:""; position:absolute; left:0; right:0; bottom:-.04em; height:2px;
   background: var(--jade); transform: scaleX(0); transform-origin:left;

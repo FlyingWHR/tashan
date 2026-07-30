@@ -14,7 +14,7 @@
   var VIT_LABEL = { active: "active", stable: "stable", abandoned: "abandoned" };
   var VERDICTS = ["deep", "solid", "thin", "wrapper", "slop"];
   var SORTS = [["tashan_score", "Trust"], ["adoption", "Adoption"], ["fresh", "Freshness"],
-               ["expertise", "Expertise"], ["maint", "Maintenance"], ["name", "Name A–Z"]];
+               ["expertise", "Expertise"], ["maint", "Upkeep"], ["name", "Name A–Z"]];
 
   // reuse terminal.js's session-cached loader (one fetch+parse of the slim index per session, shared)
   var loadIndex = window.tashanIndex || function () { return fetch("/data/index.json").then(function (r) { if (!r.ok) throw 0; return r.json(); }); };
