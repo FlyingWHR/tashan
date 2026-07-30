@@ -50,10 +50,44 @@ Capability `id` convention: `pkg:<npm>` (npm-backed), `registry:<name>` (registr
 
 **Identity is the artifact's own home, never where it was found.** Plugin ids were once keyed by the *marketplace* that listed them, so impeccable existed three times and — because the "is this repo solo?" test counted listings rather than distinct plugins — had its 51,323 stars nulled as "shared repo", dropping it off the board entirely. Ponytail lost 90,263 the same way. If you add a discovery source, key rows by where the thing lives.
 
+### The security audit (`pipeline/scan_security.py`)
+
+**The core paid feature, and the only stage whose staleness is a safety problem** — a stale adoption
+count is out of date; a stale advisory scan tells someone a package is clean when it was reported
+malicious last week. It runs in the daily loop. Four layers, all public evidence, cached in
+`data/security_cache.json` (versioned — bump `CACHE_VERSION` when a finding's meaning changes, or
+stale entries get served under the new rule):
+
+- **L1 advisories** — OSV.dev `/v1/query`, keyless, queried **with the version you would install
+  today** so a finding means the current release is affected. `MAL-*` ids are the malicious-packages
+  database and map to severity `MALICIOUS`, above `CRITICAL`; `junk()` drops those from the board
+  entirely and they survive only in `lookup.json` so `doctor` can warn someone already running one.
+- **L2 supply chain** — `postinstall`/`preinstall`, provenance, dependency and maintainer counts.
+  **`dist.signatures` is NOT provenance**: npm signs every tarball it hosts, so reading it as one
+  marked 266/266 packages "verified". Only `dist.attestations` means the publisher built it in CI.
+- **L3 permission surface** — files/shell/network/browser/credentials/cloud, from DECLARED
+  dependencies. Nothing is executed. It under-reports by design (a server can shell out with Node
+  built-ins and declare nothing), so an empty result means "nothing declared", never "nothing
+  possible" — the UI must keep saying so.
+- **L4 remote content** — whether it can carry third-party text into the model's context.
+
+**The free/paid line, everywhere:** the *existence* of a risk is never hidden. Free names every
+finding; a licence buys which advisory, what the script runs, and the version that fixes it.
+
+Security columns are deliberately **not** inputs to `tashan_score`: "well maintained" and "nothing
+known is wrong" are different claims, and azure is Microsoft-official, scores 86, and runs an install
+script. Folding them would hide exactly that case. `tests/test_firewall.py` still governs the scorer.
+
 ### LLM-in-the-loop (expertise + categories)
 
 Two signals are graded by **Claude Code subagents in-session**, not by a script — the `*_prep`/`merge_*` scripts only stage input and fold results back:
-- **Expertise:** `fetch_readmes.py` → `data/readmes/manifest.json` → grade each README against the rubric → `merge_expertise.py` (merges `scores_*.json` + re-exports). Verdicts: `deep / solid / thin / wrapper / slop`. Grading has two paths: **in-session subagents** (write `scores_*.json`) for hand-curation, or the **automated batch** `grade_expertise.py` (`ANTHROPIC_API_KEY=… python3 pipeline/grade_expertise.py`, same rubric, writes `scores_auto.json`) — the scalable path, since hand-grading only reached ~1% of the corpus. Run `--dry-run` to self-check without a key.
+- **Expertise:** `fetch_readmes.py` → `data/readmes/manifest.json` → grade each README against the rubric → `merge_expertise.py` (merges `scores_*.json` + re-exports). Verdicts: `deep / solid / thin / wrapper / slop`. **Read `docs/GRADING-RUBRIC.md` before grading** —
+the bands alone produced "deep" at anywhere from 1.5% to 22.9% across six graders on the same corpus,
+so the rubric is now conjunctive (deep requires all four of per-tool docs, two worked examples,
+setup/auth, a stated limitation) with override rules. `pipeline/doc_signals.py` measures whether a
+capability's README is even ABOUT it: 79 of 836 share one byte-for-byte with another capability and
+23 are never named in the only document they have — those cap at `thin`, because a grade must not
+borrow credit from a document describing something else. Grading has two paths: **in-session subagents** (write `scores_*.json`) for hand-curation, or the **automated batch** `grade_expertise.py` (`ANTHROPIC_API_KEY=… python3 pipeline/grade_expertise.py`, same rubric, writes `scores_auto.json`) — the scalable path, since hand-grading only reached ~1% of the corpus. Run `--dry-run` to self-check without a key.
 - **Categories:** `classify_prep.py` → `data/classify/manifest.json` → (subagents classify into the 15-cat taxonomy, writing `data/classify/cat_*.json`) → `merge_categories.py` (merges + re-exports; unknown categories coerced to `other`). The 15 valid categories are hardcoded in `merge_categories.py` and mirrored in `web/data/categories.json`.
 
 Both merge scripts `import build` to reuse `db()` + `export()`, so merging a grade automatically re-exports the site JSON.
