@@ -66,7 +66,15 @@ PERMISSIONS = {
 # model's context. That is a fact about its surface, not an accusation about its behaviour.
 REMOTE_CONTENT = {"network", "browser"}
 
-SEVERITY_ORDER = ["LOW", "MODERATE", "MEDIUM", "HIGH", "CRITICAL"]
+# MALICIOUS sits above CRITICAL. OSV's malicious-packages database issues MAL- ids with no CVSS
+# vector, so scoring them by severity field alone labelled confirmed malware "UNKNOWN" — the bottom
+# of the scale. The first two findings in the corpus were MAL-2026-5476 and MAL-2026-5478, the
+# dependency-confusion canaries shadowing @modelcontextprotocol/server-*, reported as unknown-risk.
+SEVERITY_ORDER = ["LOW", "MODERATE", "MEDIUM", "HIGH", "CRITICAL", "MALICIOUS"]
+
+# Bump when the shape or meaning of a cached finding changes, so stale entries are re-fetched
+# instead of silently serving a value computed by the old, wrong rule.
+CACHE_VERSION = 2
 
 
 def _rank(sev):
@@ -104,6 +112,8 @@ def get_json(url, timeout=20):
 
 def severity_of(vuln):
     """OSV puts severity in several places depending on which database supplied the record."""
+    if str(vuln.get("id", "")).startswith("MAL-"):
+        return "MALICIOUS"           # OSV malicious-packages: the package IS the attack
     ds = vuln.get("database_specific") or {}
     if ds.get("severity"):
         return str(ds["severity"]).upper()
@@ -162,7 +172,10 @@ def scan_npm(pkg):
 
     # L2 — install-time code execution is the highest-leverage supply-chain signal there is
     install_script = scripts.get("postinstall") or scripts.get("preinstall") or None
-    provenance = bool(dist.get("attestations")) or bool(dist.get("signatures"))
+    # `signatures` is on EVERY npm package — the registry signs its own tarballs — so treating it as
+    # provenance marked 266 of 266 scanned packages as verified, which is a badge that means nothing.
+    # Only `attestations` records that the publisher built it in public CI.
+    provenance = bool(dist.get("attestations"))
 
     # L3 — declared dependencies only
     perms = sorted(k for k, (_lbl, mods) in PERMISSIONS.items()
@@ -180,6 +193,7 @@ def scan_npm(pkg):
         "permissions": perms,
         "remote_content": bool(set(perms) & REMOTE_CONTENT),
         "scanned_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "v": CACHE_VERSION,
     }
 
 
@@ -226,6 +240,8 @@ def main():
         if build.bad_pkg(pkg):
             continue
         f = cache.get(pkg)
+        if f is not None and f.get("v") != CACHE_VERSION:
+            f = None                 # computed by an older rule — re-fetch rather than trust it
         if f is None:
             f = scan_npm(pkg)
             if f is None:

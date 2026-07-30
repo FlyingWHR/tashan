@@ -898,6 +898,11 @@ def export(con):
             "category","in_registry","in_configs",
             "gh_stars","gh_forks","gh_open_issues","gh_pushed","gh_contributors","gh_last_release",
             "gh_license","gh_topics","gh_has_discussions","gh_archived","vitality","single_maintainer",
+            # security audit — the detail page and the CLI both read these. sec_advisories carries the
+            # full finding list; the page decides what a free reader sees and what needs a licence.
+            "sec_advisory_count","sec_max_severity","sec_install_script","sec_permissions",
+            "sec_provenance","sec_remote_content","sec_dep_count","sec_scanned_at","sec_advisories",
+            "npm_license",
             "discord_url","gh_homepage"]
     # Only trust-ranked caps are ever exported (ranked = trust-not-null, capped below), so fetch just the top
     # slice via idx_score instead of materializing the whole table. LIMIT is a buffer above the 800 board cap
@@ -973,6 +978,14 @@ def export(con):
     def junk(o):
         n = (o["npm_pkg"] or o["id"].split(":", 1)[-1] or "")
         if PATHY.search(n) or PATHY.search(o.get("name") or ""):
+            return True
+        # CONFIRMED MALWARE. OSV's malicious-packages database (MAL-* ids) is authoritative and, unlike
+        # the CANARY rule below it, does not depend on the package DESCRIBING itself as a canary — real
+        # malware will not self-declare. The two shadows of @modelcontextprotocol/server-* that CANARY
+        # catches today are both independently confirmed as MAL-2026-5476 and MAL-2026-5478; this catches
+        # the next one, which will not be so polite. The row survives in the lookup table so `doctor`
+        # can still warn someone who already installed it — it is only refused a place on the board.
+        if o.get("sec_max_severity") == "MALICIOUS":
             return True
         blurb = (o.get("description") or "") + " " + (o.get("title") or "")
         if DEMO.search(blurb) or DEMO_NAME.search(n.split("/")[-1]) or CANARY.search(blurb):
@@ -1274,7 +1287,10 @@ def export(con):
     LOOKUP = ["id", "name", "kind", "npm_pkg", "category", "official", "slug", "tashan_score",
               "npm_latest_version", "remote_host",
               "vitality", "expertise_verdict", "npm_downloads", "gh_stars", "npm_deprecated",
-              "gh_archived", "registry_status", "single_maintainer", "similar_official", "rated"]
+              "gh_archived", "registry_status", "single_maintainer", "similar_official", "rated",
+              # the security audit, so `doctor` can warn about something already installed
+              "sec_advisory_count", "sec_max_severity", "sec_install_script", "sec_permissions",
+              "sec_provenance", "sec_remote_content", "sec_scanned_at"]
     # DELISTED ROWS BELONG IN THE LOOKUP, and nowhere else. A capability the registry pulled for
     # spam/malware/illegal content has no score (compute_scores refuses it one), so it is correctly
     # absent from the board, the bulk export and every hub — we must never recommend it. But `doctor`
@@ -1282,8 +1298,14 @@ def export(con):
     # "unmeasured, not necessarily bad". The row is the only thing that lets us warn.
     delisted = [dict(zip(("id", "name", "kind", "registry_status"), r)) for r in con.execute(
         "SELECT id, name, kind, registry_status FROM capabilities WHERE registry_status='deleted'")]
+    # Same reasoning for confirmed malware: junk() keeps it off the board, but a user who already ran
+    # `npx mcp-server-fetch` needs to be told, and doctor can only tell them if the row is reachable.
+    malicious = [dict(zip(("id", "name", "kind", "sec_max_severity", "sec_advisory_count",
+                           "sec_advisories", "sec_install_script"), r)) for r in con.execute(
+        "SELECT id, name, kind, sec_max_severity, sec_advisory_count, sec_advisories, "
+        "sec_install_script FROM capabilities WHERE sec_max_severity='MALICIOUS'")]
     by_key, recs = {}, []
-    for c in caps + delisted:
+    for c in caps + delisted + malicious:
         rec = {k: c[k] for k in LOOKUP if c.get(k) is not None}
         i = len(recs); recs.append(rec)
         # Every way a config entry can name this thing points at the same record. `identify()` in

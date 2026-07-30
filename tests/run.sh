@@ -52,6 +52,10 @@ python3 tests/test_terminology.py || fail=1
 echo; echo "── product tree (every surface) ───────────────"
 python3 tests/test_product_tree.py || fail=1
 
+# 3b8. the security audit is the paid feature — every rule in it has to be right
+echo; echo "── security scan (the paid feature) ───────────"
+python3 tests/test_security_scan.py || fail=1
+
 # 3c. config parser — a wrong capability id invents one row AND loses the real one
 echo; echo "── config parser (capability_id) ──────────────"
 python3 tests/test_scrape.py || fail=1
