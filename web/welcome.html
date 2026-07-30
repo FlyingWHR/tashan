@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=86">
+  <link rel="stylesheet" href="/css/site.css?v=87">
   <meta name="robots" content="noindex">
 </head>
 <body>
@@ -39,10 +39,17 @@
       <a class="link" href="https://polar.sh/purchases" rel="noopener">customer portal</a> and sign in with the
       email you just paid with — Polar sends a one-time code, there is no password to make.</p>
 
-    <h2>2 · Give it to the CLI</h2>
-    <div class="callout mono" style="font-size:.85rem">export TASHAN_KEY=tashan_…<br>npx tashan doctor</div>
-    <p>That's it. Same command as before; the rows that have an answer now show it. Put the export in your
-      shell profile and you never think about it again.</p>
+    <h2>2 · Activate it, once</h2>
+    <div class="callout mono" style="font-size:.85rem">npx tashan activate tashan_…<br>npx tashan doctor</div>
+    <p><code>activate</code> checks the key and stores it in <code>~/.config/tashan/key</code>. That is once per
+      machine — not once per shell, and nothing to add to your shell profile. Every <code>doctor</code> run after
+      it prints <span class="mono">Pro · licence active</span>, so you can always see it is on.</p>
+
+    <h2>On a second machine</h2>
+    <p>Run <code>npx tashan activate</code> there with the same key — one subscription, all your machines, no
+      seat counting. If you no longer have the key it is in the Polar portal and in your receipt email; you can
+      also read it off the first machine with <code>cat ~/.config/tashan/key</code>. To remove it from a machine
+      you are handing on, <code>npx tashan activate --forget</code>.</p>
 
     <h2>What changed</h2>
     <p>Free <code>doctor</code> told you <em>what is wrong</em>. It still does, for everyone, forever. With the key
@@ -90,7 +97,7 @@
   </div>
 </footer>
 
-  <script src="/js/terminal.js?v=86" defer></script>
-  <script src="/js/site.js?v=86" defer></script>
+  <script src="/js/terminal.js?v=87" defer></script>
+  <script src="/js/site.js?v=87" defer></script>
 </body>
 </html>

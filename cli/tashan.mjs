@@ -6,14 +6,30 @@
 //   npx tashan info <name>           the measured dossier for one capability
 //   npx tashan add <name>            the install command for your client   ← the money shot
 //   npx tashan doctor                audit the config you actually have — dead, deprecated, risky
-//   npx tashan doctor --trend        ...and whether any of it is DECLINING   (tashan Pro)
+//   npx tashan activate <key>        store your Pro licence on this machine (once, not per shell)
 //   npx tashan mcp                   run as an MCP server, so your AGENT can ask before installing
 //
 // Reads live public data from https://tashan.sh/data/index.json (no account, no backend, no telemetry).
 // Zero dependencies. The pure functions are exported for cli/tashan.test.mjs.
 
+import { readFileSync, writeFileSync, mkdirSync, rmSync, chmodSync } from "node:fs";
+import { homedir } from "node:os";
+import { join, dirname } from "node:path";
 import { configLocations, skillLocations, collect, match, resolve, assess, summarize, trend, withTrend,
          suggest, tokenFrequency, isDying } from "./doctor.mjs";
+
+// A licence the user has to re-export in every new shell is a licence they will think is broken.
+// Env var still wins (CI, throwaway checks); the file is the thing that survives closing the terminal.
+export function keyPath() {
+  const base = process.env.XDG_CONFIG_HOME || join(homedir(), ".config");
+  return join(base, "tashan", "key");
+}
+export function storedKey() {
+  try { return readFileSync(keyPath(), "utf8").trim() || null; } catch { return null; }
+}
+export function resolveKey(a = {}) {
+  return a.key || process.env.TASHAN_KEY || storedKey();
+}
 
 const SITE = process.env.TASHAN_SITE || "https://tashan.sh";
 const DATA_URL = SITE + "/data/index.json";
@@ -220,13 +236,14 @@ ${bold("tashan")} — the measured layer for AI capabilities ${dim("· " + SITE)
   ${jade("tashan info")} <name>          the measured dossier for one capability
   ${jade("tashan add")} <name>           the install command  ${dim("(--client claude|cursor|desktop|codex|npx)")}
   ${jade("tashan doctor")}               audit the config you already have — dead, deprecated, risky
-  ${dim("with TASHAN_KEY set, doctor also names the replacement for anything dead — Pro, $6/mo")}
+  ${jade("tashan activate")} <key>       store your Pro licence here — once per machine, not per shell
+  ${dim("Pro names the replacement for anything dead in your config · $6/mo · " + SITE + "/pricing.html")}
 
-  ${dim("flags:")}  --json   --limit <n>   --client <c>
+  ${dim("flags:")}  --json   --limit <n>   --client <c>   --all   --forget
   ${dim("every score is re-derivable from public evidence · no account, no telemetry")}
 `;
 
-function parseArgs(argv) {
+export function parseArgs(argv) {
   const a = { _: [], json: false, limit: 20, client: null };
   for (let i = 0; i < argv.length; i++) {
     const t = argv[i];
@@ -236,6 +253,7 @@ function parseArgs(argv) {
     else if (t.startsWith("--client=")) a.client = t.slice(9).toLowerCase();
     else if (t === "--trend") a.trend = true;
     else if (t === "--all") a.all = true;
+    else if (t === "--forget") a.forget = true;
     else if (t === "--key") a.key = argv[++i] || "";
     else if (t.startsWith("--key=")) a.key = t.slice(6);
     else a._.push(t);
@@ -337,9 +355,54 @@ export async function main(argv) {
     await import("./mcp.mjs").then((m) => m.serve());
     return 0;
   }
+  if (cmd === "activate") {
+    if (a.forget) {
+      try { rmSync(keyPath()); process.stdout.write(dim(`  removed ${keyPath()}\n`)); }
+      catch { process.stdout.write(dim("  no stored licence on this machine\n")); }
+      return 0;
+    }
+    const given = a._[1] || process.env.TASHAN_KEY;
+    if (!given) {
+      const have = storedKey();
+      process.stdout.write("\n  " + (have
+        ? bold("A licence is stored on this machine.") + dim(`\n  ${keyPath()} · ${have.slice(0, 12)}…`) +
+          dim("\n  tashan activate --forget removes it.")
+        : bold("No licence stored.") +
+          dim("\n  tashan activate <key>   — your key is in the Polar portal, and in the receipt email") +
+          dim("\n  https://polar.sh/purchases")) + "\n");
+      return have ? 0 : 1;
+    }
+    // Validate BEFORE writing. Storing a bad key just moves the failure to the next command, when
+    // the user is no longer thinking about activation and has no idea why doctor is quiet.
+    const state = await verifyKey(given);
+    if (state === "invalid") {
+      process.stderr.write("\n  " + red("That key was rejected.") +
+        dim("\n  Copy it again from https://polar.sh/purchases — it starts with tashan_ or polar_.\n"));
+      return 1;
+    }
+    if (state === "unknown") {
+      process.stderr.write("\n  " + red("Could not reach tashan to check that key.") +
+        dim("\n  Nothing was saved. Try again when you are online.\n"));
+      return 1;
+    }
+    try {
+      mkdirSync(dirname(keyPath()), { recursive: true });
+      writeFileSync(keyPath(), given + "\n", { mode: 0o600 });
+      chmodSync(keyPath(), 0o600);   // pre-existing file keeps its old mode without this
+    } catch (e) {
+      process.stderr.write("\n  " + red("Could not write " + keyPath()) + dim("\n  " + e.message +
+        "\n  Fallback: export TASHAN_KEY=" + given.slice(0, 8) + "…\n"));
+      return 1;
+    }
+    process.stdout.write("\n  " + jade("Pro is active on this machine.") +
+      dim(`\n  stored in ${keyPath()} — every shell, every project, no re-export.`) +
+      dim("\n  tashan doctor") + "\n");
+    return 0;
+  }
+
   if (cmd === "doctor") {
     const { found, problems } = collect(configLocations(), skillLocations());
-    const key = process.env.TASHAN_KEY || a.key;
+    const key = resolveKey(a);
     const keyState = key ? await verifyKey(key) : null;
     let lookup = null;
     try { lookup = await loadLookup(); } catch { /* fall back to the board rather than failing */ }
@@ -362,7 +425,7 @@ export async function main(argv) {
     // subscription is not an error, and it must never look like the config is broken.
     if (a.trend) {
       if (!key) {
-        process.stderr.write(red("  --trend needs a licence key: export TASHAN_KEY=... "
+        process.stderr.write(red("  that needs a licence key — run: tashan activate <key> "
           + "(tashan Pro, $6/mo — https://tashan.sh/pricing.html)") + "\n");
         return 0;
       }
