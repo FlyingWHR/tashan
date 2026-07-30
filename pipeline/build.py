@@ -1088,17 +1088,26 @@ def export(con):
     def norm_name(p):
         leaf = (p or "").split("/")[-1].lower()
         return re.sub(r"[^a-z0-9]", "", re.sub(r"\b(mcp|server)\b", "", leaf.replace("-", " ")))
+    # The reference set was two hardcoded npm scopes, which is why this matched 0 rows: it could only
+    # ever catch a shadow of @modelcontextprotocol/* or @anthropic-ai/*. official_of() already resolves
+    # first-party ownership across Anthropic, OpenAI, Google and Microsoft from the namespace, so use
+    # it — a package impersonating @openai/* or @azure/* is the same hazard and was invisible.
     official = {}
     for c in caps:
         p = c.get("npm_pkg") or ""
-        if p.startswith("@modelcontextprotocol/") or p.startswith("@anthropic-ai/"):
+        # An empty normalised name is a landmine, not a match: @azure/mcp reduces to "" because the
+        # normaliser strips "mcp", so every unscoped package that also reduced to "" would be
+        # published as a shadow of it. A name with no distinguishing characters left cannot be
+        # confused with anything.
+        if p.startswith("@") and c.get("official") and norm_name(p):
             official.setdefault(norm_name(p), p)
     shadowed = 0
     for c in caps:
         p = c.get("npm_pkg") or ""
         if not p or p.startswith("@"):
             continue
-        twin = official.get(norm_name(p))
+        key = norm_name(p)
+        twin = official.get(key) if key else None
         if twin and twin != p:
             c["similar_official"] = twin
             shadowed += 1

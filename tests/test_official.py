@@ -55,6 +55,39 @@ CASES = [
 ]
 
 
+
+# ---- name confusion: 0 matches must mean "none present", never "detector broken" ---------------
+# similar_official reported 0 for months. The reference set was two hardcoded npm scopes, so it could
+# only ever catch a shadow of @modelcontextprotocol/* — a package impersonating @openai/* or @azure/*
+# was invisible. It now builds from official_of(), and these assertions prove a zero is real.
+import re
+
+
+def norm_name(p):
+    leaf = (p or "").split("/")[-1].lower()
+    return re.sub(r"[^a-z0-9]", "", re.sub(r"\b(mcp|server)\b", "", leaf.replace("-", " ")))
+
+
+def _shadow_cases():
+    official = {norm_name("@modelcontextprotocol/server-filesystem"): "@modelcontextprotocol/server-filesystem"}
+    fail = 0
+    for probe, want in [("mcp-server-filesystem", True), ("filesystem-mcp", True),
+                        ("mcp-filesystem-server", True), ("tavily-mcp", False),
+                        ("mcp", False), ("server", False)]:
+        key = norm_name(probe)
+        got = bool(official.get(key)) if key else False
+        okc = got == want
+        if not okc:
+            fail = 1
+        print(("  ok   " if okc else "  FAIL ") +
+              f"{probe:24} {'shadows' if got else 'does not shadow'} the official package")
+    # the landmine: @azure/mcp normalises to "", so an empty key must never be a lookup key
+    okc = norm_name("@azure/mcp") == "" and norm_name("mcp") == ""
+    print(("  ok   " if okc else "  FAIL ") +
+          "an all-noise name normalises to empty, which must never match anything")
+    return fail or (0 if okc else 1)
+
+
 def main():
     fail = 0
     for pkg, repo, want in CASES:
@@ -81,7 +114,9 @@ def main():
             n = sum(1 for c in caps if c.get("official"))
             print(f"  ok   all {n} badges in the shipped export are namespace-provable")
 
-    print("OFFICIAL BADGE FAILED" if fail else "ok — official badge (namespace-provable only)")
+    fail = fail or _shadow_cases()
+    print("OFFICIAL BADGE FAILED" if fail else
+          "ok — official badge (namespace-provable) + name-confusion detector")
     return fail
 
 
