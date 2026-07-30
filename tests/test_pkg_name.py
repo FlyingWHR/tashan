@@ -48,9 +48,19 @@ def files():
             for fn in filenames:
                 if fn.endswith(SCAN_EXT):
                     yield os.path.join(dirpath, fn)
-    for fn in sorted(os.listdir(os.path.join(ROOT, "web"))):     # top-level pages only
+    for fn in sorted(os.listdir(os.path.join(ROOT, "web"))):     # top-level pages
         if fn.endswith(".html"):
             yield os.path.join(ROOT, "web", fn)
+    # Hand-written non-HTML we publish — llms.txt, robots.txt, and the installable skill. These
+    # live in SUBdirectories, which the listdir above cannot see; web/skill/SKILL.md sat here with
+    # the dead package name after every other file had been fixed. The thousands of generated
+    # .html pages are deliberately not walked: they come from the generators, already scanned.
+    for dirpath, dirnames, filenames in os.walk(os.path.join(ROOT, "web")):
+        dirnames[:] = [x for x in dirnames if x not in ("data", "assets", "capability",
+                                                        "category", "skills")]
+        for fn in filenames:
+            if fn.endswith((".md", ".txt")):
+                yield os.path.join(dirpath, fn)
 
 
 def main():

@@ -38,7 +38,7 @@ Registry-shaped (byte-compatible with `registry.modelcontextprotocol.io`), with 
 ## Auditing a whole config
 
 ```
-npx tashan doctor
+npx tashan-cli doctor
 ```
 
 Reads local Claude Code / Cursor / Desktop configs and flags what is deprecated, archived, abandoned,
