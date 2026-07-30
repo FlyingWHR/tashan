@@ -77,7 +77,28 @@ def faq(c):
     if c.get("vitality"): parts.append("it is currently " + c["vitality"])
     if c.get("single_maintainer"): parts.append("note: a single primary maintainer (bus-factor risk)")
     if c.get("gh_archived"): parts.append("warning: the repository is archived")
-    safe += (", ".join(parts) if parts else "see the measured signals") + ". This is an upkeep/adoption read, not a security audit."
+    # The security audit is real now, so this answer states its findings rather than disclaiming
+    # them. It is the single most-repeated answer on the site (~5,800 pages) and the one an answer
+    # engine is most likely to quote, so it must be specific about what was checked.
+    n_adv = c.get("sec_advisory_count") or 0
+    if c.get("sec_scanned_at"):
+        if n_adv:
+            parts.append("SECURITY: %d known advisor%s against the current release (%s)"
+                         % (n_adv, "y" if n_adv == 1 else "ies",
+                            (c.get("sec_max_severity") or "unrated").lower()))
+        else:
+            parts.append("no known advisories against the current release")
+        if c.get("sec_install_script"):
+            parts.append("it runs a script at install time")
+        try:
+            perms = json.loads(c.get("sec_permissions") or "[]")
+        except (ValueError, TypeError):
+            perms = []
+        if perms:
+            parts.append("its declared dependencies reach: " + ", ".join(perms))
+    safe += (", ".join(parts) if parts else "see the measured signals") + \
+        ". Audit scope: OSV advisories, install-time scripts, build provenance and declared " \
+        "permission surface. We do not review source code or execute the capability."
     qa.append(("Is " + n + " safe and trustworthy?", safe))
     # How to install
     if c.get("kind") == "skill":

@@ -121,10 +121,11 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
 
 SCHEMA_VERSION = 8  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
-# v5 RENAMED the headline score. "Trust" claimed more than this project measures — there is no CVE scan,
-# no prompt-injection audit, no code review behind it — and the methodology page had to disclaim its own
-# headline ("a maintenance/adoption read, not a security audit"). A number whose name needs walking back
-# is misnamed. `tashan_score` names what it is: our measurement, on public evidence. `maintenance`
+# v5 RENAMED the headline score. "Trust" claimed more than the SCORE measures: it is upkeep, freshness
+# and adoption, and a number whose name needs walking back is misnamed. That still holds — the security
+# audit added in v8 (pipeline/scan_security.py) is a SEPARATE column set, deliberately not folded into
+# the score, so that "well maintained" and "nothing known is wrong with it" stay two different claims a
+# reader can weigh independently. A popular, actively maintained package can still ship a CVE. `tashan_score` names what it is: our measurement, on public evidence. `maintenance`
 # became `upkeep` in the same pass because the board had two words starting "main" in adjacent columns.
 # Existing DBs are renamed in place here rather than rebuilt — signal_history is un-backfillable, so it
 # is re-keyed, never dropped.
@@ -1220,7 +1221,9 @@ def export(con):
         # This string ships inside capabilities.json and index.json — it is public copy, and it kept
         # the name the product retired in SCHEMA_VERSION 5. "Trust" claimed an audit we do not perform.
         "note": "Ranked by the tashan score: upkeep and freshness, gated by real adoption, on public "
-                "evidence only. It is NOT a security audit — no CVE scan, no code review. Expertise is a "
+                "evidence only. Security: OSV advisories for the current release, install-time scripts, "
+                "build provenance and declared permission surface. We do not review source or "
+                "execute the capability. Expertise is a "
                 "separate LLM-graded read of the capability itself. Method: https://tashan.sh/methodology.html",
         # ONE catalog: ranked first, then catalogued-but-unrated. Both are installable and searchable;
         # only the ranked ones carry a trust number, and `rated` says which is which.
