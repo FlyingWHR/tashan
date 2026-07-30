@@ -939,7 +939,27 @@ def export(con):
     # badges) benefits, rather than patching each renderer.
     MD_IMG = re.compile(r"!\[[^\]]*\]\([^)]*\)")
     MD_LINK = re.compile(r"\[([^\]]*)\]\([^)]*\)")
+    # MOJIBAKE. Ten shipped descriptions read "Pare Git \u05d2\u20ac\u201d Structured git operations" — a UTF-8
+    # em-dash that some upstream decoded as a single-byte codepage before we ever saw it. It survives
+    # into the board, the hubs, the agent endpoints and now the search token bag, where it also
+    # produces junk tokens. Repairing is a round trip through the codepage that mangled it, kept ONLY
+    # when the result is valid UTF-8 and contains fewer suspicious characters than the original —
+    # otherwise text that legitimately uses those letters (Hebrew, Cyrillic) would be destroyed.
+    SUSPECT = re.compile(r"[\u00c2-\u00c3\u05d0-\u05ea\u00e2][\u2013\u2014\u20ac\u2122\u201c\u201d]")
+    def demojibake(d):
+        if not d or not SUSPECT.search(d):
+            return d
+        for enc in ("cp1255", "cp1252", "latin-1"):
+            try:
+                fixed = d.encode(enc).decode("utf-8")
+            except (UnicodeEncodeError, UnicodeDecodeError):
+                continue
+            if len(SUSPECT.findall(fixed)) < len(SUSPECT.findall(d)):
+                return fixed
+        return d
+
     def clean_desc(d):
+        d = demojibake(d)
         if not d:
             return d
         d = MD_IMG.sub("", d)                 # images carry no meaning in a one-line summary

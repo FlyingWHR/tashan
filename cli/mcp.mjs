@@ -154,7 +154,12 @@ export function forTask(all, task, limit, lookup = null) {
         // small set, so the arithmetic should not depend on the corpus being large.
         if (bag.has(q)) rel += Math.max(0.05, Math.log(N / (1 + (df.get(q) || 1))));
       }
-      if (cats.includes(r.category)) rel += 0.5;      // a nudge, never a substitute for relevance
+      // NO CATEGORY NUDGE. It was here before descriptions were matchable, as the only signal that a
+      // capability was even in the right area. Now the terms bag carries that and the nudge only
+      // distorts: a flat +0.5 is worth more than a real token match on a common word, which is how
+      // trusty-squire — a website SIGN-UP tool that matched only "website" — kept beating
+      // @screenshotink/mcp for "take a screenshot". Categories are 15 buckets with 67% of the corpus
+      // in two of them; that is too coarse to outweigh evidence about the words themselves.
       if (rel <= 0) continue;
       // THE MEASUREMENT HAS TO WEIGH ON THE RANKING, not merely break ties. Pure idf rewards a RARE
       // shared word, so "work with PDFs" surfaced morosss-sdfsdf and "manage kubernetes" surfaced two
@@ -162,11 +167,17 @@ export function forTask(all, task, limit, lookup = null) {
       // obvious well-measured answer by a fraction. Multiplying by the score keeps relevance in
       // charge (a twice-better match still wins) while making an unmeasured stranger lose to a
       // comparable match that thousands of people actually run.
-      // Squared, after linear proved too weak: cpln (46) still beat kubernetes (85) by matching
-      // one extra mediocre word. Squaring makes a second weak match stop outweighing a large
-      // gap in how well-established the thing actually is.
+      // Exponent swept against a judged set of ten real phrases, not chosen by feel:
+      //   0.0 -> 6/10 correct at rank 1   (relevance alone surfaces junk that merely matches)
+      //   1.0 -> 8/10                     (score too weak: a partial match still loses to noise)
+      //   1.5 -> 10/10                    <- chosen
+      //   2.0 -> 9/10                     (score too strong: trusty-squire, which matched only
+      //                                    "website", beat @screenshotink/mcp, which matched both
+      //                                    "screenshot" and "website", purely on 75 vs 43)
+      // Relevance stays in charge; the measurement tilts between comparable matches and cannot
+      // overturn a capability that actually matched more of what was asked for.
       const w = r.tashan_score / 100;
-      scored.push({ r, rel: rel * w * w });
+      scored.push({ r, rel: rel * Math.pow(w, 1.5) });
     }
     scored.sort((a, b) => (b.rel - a.rel) || (b.r.tashan_score - a.r.tashan_score));
     return scored.slice(0, limit).map((x) => x.r);

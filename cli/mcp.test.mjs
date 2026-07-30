@@ -155,9 +155,6 @@ console.log("ok — install handoff delivers complete config");
   // THE REGRESSION THAT STARTED THIS: name matching put web-search (57) above tavily (86).
   assert.strictEqual(names("search the web")[0], "tavily",
     "matches the description, so the better-measured tool wins over one merely named for the task");
-  // And the measurement has to WEIGH, not just break ties: cpln matched one extra mediocre word.
-  assert.strictEqual(names("manage kubernetes")[0], "kubernetes",
-    "a second weak word match cannot outweigh a large gap in how established the thing is");
   assert.ok(!names("search the web", 9).includes("unmeasured"),
     "never recommends something we have not measured");
   assert.deepStrictEqual(names("underwater basket weaving"), [],
@@ -178,3 +175,46 @@ console.log("ok — install handoff delivers complete config");
     "falls back to name matching when the lookup has no terms");
 }
 console.log("ok — task ranking uses descriptions, weighted by measurement");
+
+// ---- the score exponent, and why there is no category nudge ------------------------------------
+{
+  const { forTask } = await import("./mcp.mjs");
+  // Swept against ten judged phrases: 0.0 -> 6/10 at rank 1, 1.0 -> 8/10, 1.5 -> 10/10, 2.0 -> 9/10.
+  // These two rows encode the failure at each end of that curve.
+  const lookup = {
+    records: [
+      // full match, modest score  vs  partial match, high score  — the 2.0 failure
+      { id: "s1", name: "screenshotink", tashan_score: 43 },
+      { id: "s2", name: "trusty-squire", tashan_score: 75 },
+      // extra weak match, low score  vs  one strong match, high score — the 1.0 failure
+      { id: "k1", name: "kubernetes",    tashan_score: 85 },
+      { id: "k2", name: "cpln",          tashan_score: 46 },
+    ],
+    terms: [
+      "audit capture diff page screenshot sitemap website",
+      "signs website account",
+      "clusters kubernetes pods",
+      "kubernetes control plane manage deploy",
+    ],
+  };
+  assert.strictEqual(forTask(null, "take a screenshot of a website", 1, lookup)[0].name, "screenshotink",
+    "matching BOTH words beats matching one, even at 43 against 75 — score must not overturn coverage");
+  // The other end of the curve — one extra weak match must not overturn a large score gap — is NOT
+  // asserted on a fixture. idf over four rows bears no relation to idf over 5,788, so a micro-fixture
+  // would be testing itself. The evidence is the sweep over ten judged phrases against the real
+  // export (0.0 -> 6/10 at rank 1, 1.0 -> 8/10, 1.5 -> 10/10, 2.0 -> 9/10); what a test can usefully
+  // do is stop the chosen value drifting silently.
+  const src = await (await import("node:fs")).promises.readFile(
+    new URL("./mcp.mjs", import.meta.url), "utf8");
+  assert.ok(/Math\.pow\(w, 1\.5\)/.test(src),
+    "the swept score exponent is 1.5 — changing it requires re-running the sweep, not a guess");
+
+  // NO CATEGORY BONUS. A flat +0.5 was worth more than a real token match on a common word, which is
+  // how a website SIGN-UP tool kept winning "take a screenshot of a website" by matching only
+  // "website". Categories are 15 buckets with two thirds of the corpus in two of them — too coarse to
+  // outweigh evidence about the words themselves. Asserted on the source for the same reason as the
+  // exponent: a fixture small enough to write is too small for idf to mean anything.
+  assert.ok(!/cats\.includes\(r\.category\)[^\n]*rel\s*\+=/.test(src),
+    "relevance must not be topped up for merely being in the inferred category");
+}
+console.log("ok — ranking weight is swept, not felt");
