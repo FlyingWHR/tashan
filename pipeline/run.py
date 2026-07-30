@@ -37,6 +37,13 @@ STAGES = [
      "drop rows that are not capabilities (local paths, shell fragments)"),
     ("categories",       ["pipeline/classify.py", "--all"], "enrich",
      "naive-Bayes categoriser trained on hand + author-declared labels (62.9% held-out)"),
+    # The security audit belongs in the DAILY loop, not in a developer's hands: an advisory published
+    # today is only useful if it reaches the board tomorrow. Cached and incremental, so a re-run costs
+    # almost nothing and a new package is picked up the day it appears.
+    ("security",        ["pipeline/scan_security.py"], "enrich",
+     "OSV advisories for the current release + install scripts, provenance, permission surface"),
+    ("doc-signals",     ["pipeline/doc_signals.py"], "enrich",
+     "is a capability's only documentation actually about that capability"),
     ("badges",          ["pipeline/gen_badges.py"], "site",
      "embeddable SVGs — cast range"),
     # NOT bump_assets here: a daily run must not increment the asset version. The data changes daily,
