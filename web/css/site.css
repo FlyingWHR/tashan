@@ -43,6 +43,7 @@
   --text-lead:    clamp(1.05rem, 1.5vw, 1.2rem);
 
   --sp-1:.25rem; --sp-2:.5rem; --sp-3:.75rem; --sp-4:1rem; --sp-6:1.5rem;
+  --nav-h: 3.7rem;   /* measured height of .nav — every sticky layer offsets by this */
   --sp-8:2rem; --sp-12:3rem; --sp-16:4rem; --sp-24:6rem;
 
   --radius: 12px; --radius-sm: 8px; --radius-pill: 999px;
@@ -210,7 +211,16 @@ img { max-width: 100%; display: block; }
 /* ---------- two-axis Index: category rail (side) + facet toolbar (top) + board (focus) ---------- */
 .index-layout { display:grid; grid-template-columns: 236px 1fr; gap: var(--sp-6); align-items:start; }
 .index-main { min-width:0; }                       /* let the table scroll instead of blowing out the grid */
-.catrail { position:sticky; top: var(--sp-4); }
+/* The rail is ~5x the viewport tall (95 rows across the task and domain axes). A sticky element
+   taller than the screen pins its TOP and puts everything past the fold permanently out of reach —
+   74 of those rows, including the whole tail of the category list, could not be scrolled to or
+   clicked. It needs its own scrollport, and it must start BELOW the nav rather than under it. */
+.catrail {
+  position:sticky; top: calc(var(--nav-h) + var(--sp-3));
+  max-height: calc(100vh - var(--nav-h) - var(--sp-6));
+  overflow-y:auto; overscroll-behavior: contain; scrollbar-width: thin;
+  padding-right: var(--sp-2);
+}
 .catrail__h { font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; color: var(--text-faint); margin:0 0 var(--sp-3); padding-left:.3rem; }
 /* The task rail is the primary browse axis, so the domain rail below it is visibly secondary — one
    heading leads, the other is a fallback for people who think in technologies rather than in jobs. */
@@ -237,7 +247,7 @@ img { max-width: 100%; display: block; }
 .crow.is-on .crow__c { color: var(--jade); }
 @media (max-width: 900px) {
   .index-layout { grid-template-columns: 1fr; gap: var(--sp-4); }
-  .catrail { position:static; }
+  .catrail { position:static; max-height:none; overflow:visible; padding-right:0; }
   .catrail__h { display:none; }
   .catrail #catrail { flex-direction:row; flex-wrap:wrap; gap:.4rem; }
   .crow { border:1px solid var(--hairline); border-radius: var(--radius-pill); padding:.3rem .7rem; }
@@ -251,7 +261,7 @@ img { max-width: 100%; display: block; }
 /* ---------- filter toolbar (faceted: sort-once + refine-many) ---------- */
 .toolbar { display:flex; flex-wrap:wrap; align-items:center; gap: var(--sp-3) var(--sp-6); margin: var(--sp-6) 0 var(--sp-3);
   padding: var(--sp-3) var(--sp-4); border:1px solid var(--hairline); border-radius: var(--radius); background: var(--surface);
-  position:sticky; top:0; z-index:5; }
+  position:sticky; top: var(--nav-h); z-index:5; }
 .tgroup { display:flex; align-items:center; gap:.3rem; flex-wrap:wrap; }
 .tgroup__l { font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; color: var(--text-faint); margin-right:.15rem; }
 .fpill { display:inline-flex; align-items:center; gap:.4rem; font-family: var(--font-mono); font-size:.76rem;
@@ -287,7 +297,10 @@ img { max-width: 100%; display: block; }
 table.board__t { width:100%; border-collapse: collapse; font-size:.92rem; min-width: 720px; }
 .board__t thead th { font-family: var(--font-mono); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase;
   color: var(--text-faint); text-align:left; font-weight:500; padding: .8rem 1rem; border-bottom:1px solid var(--hairline);
-  position:sticky; top:0; background: var(--surface); white-space:nowrap; }
+  background: var(--surface); white-space:nowrap; }
+  /* No position:sticky here. .board__scroll sets overflow-x:auto, which forces overflow-y to auto,
+     making IT the scrollport rather than the viewport — the header never stuck to the top of the
+     screen, it just scrolled away with the table while claiming otherwise. */
 .board__t thead th.num, .board__t td.num { text-align:right; }
 .board__t tbody tr { border-bottom:1px solid var(--hairline-soft); cursor:pointer; transition: background .12s; }
 .board__t tbody tr:last-child { border-bottom:0; }

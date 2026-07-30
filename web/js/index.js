@@ -106,14 +106,14 @@
     tb.innerHTML =
       grp("Type", pillset("kind", kinds, function (k) { return KIND_LABEL[k] || k; }, counts.kind)) +
       grp("Activity", pillset("vitality", ["active", "stable", "abandoned"].filter(function (v) { return counts.vitality[v]; }), function (v) { return VIT_LABEL[v]; }, counts.vitality)) +
+      '<label class="sortsel"><span>Sort</span><select id="sortSel">' +
+        SORTS.map(function (s) { return '<option value="' + s[0] + '"' + (state.sort === s[0] ? " selected" : "") + '>' + s[1] + '</option>'; }).join("") +
+      '</select></label>' +
       grp("Depth", pillset("verdict", VERDICTS.filter(function (v) { return counts.verdict[v]; }), function (v) { return v; }, counts.verdict)) +
       '<div class="tgroup">' +
         toggle("official", "✓ Official", counts.official) +
         toggle("clean", "Hide deprecated/archived", null) +
-      '</div>' +
-      '<label class="sortsel"><span>Sort</span><select id="sortSel">' +
-        SORTS.map(function (s) { return '<option value="' + s[0] + '"' + (state.sort === s[0] ? " selected" : "") + '>' + s[1] + '</option>'; }).join("") +
-      '</select></label>';
+      '</div>';
 
     tb.onclick = function (e) {
       var p = e.target.closest("[data-facet]");
