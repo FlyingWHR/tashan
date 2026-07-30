@@ -719,3 +719,35 @@ h1, h2,
   font-family: var(--font-display);
   letter-spacing: -0.015em;
 }
+
+/* ---------- security audit (capability page) ---------- */
+/* Every finding is legible to a free reader; only the analysis is behind the unlock. A row that
+   hid whether a vulnerability EXISTS would make the product untrustworthy, which is the one thing
+   it is selling. */
+.sec { border:1px solid var(--hairline); border-radius: var(--radius); overflow:hidden; }
+.secrow { display:grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1.1fr); gap: var(--sp-4);
+  align-items:center; padding: var(--sp-3) var(--sp-4); border-bottom:1px solid var(--hairline-soft); }
+.secrow:last-child { border-bottom:0; }
+.secrow--alert { background: color-mix(in srgb, var(--red, #e5484d) 7%, transparent); }
+.secrow--warn  { background: var(--surface); }
+.secrow__l { font-size: var(--fs-sm); color: var(--text); min-width:0; }
+.secrow__v { font-size: var(--fs-micro); color: var(--text-faint); white-space:nowrap; }
+.secrow__d { font-size: var(--fs-micro); color: var(--text-faint); text-align:right; min-width:0; }
+.secrow__ok { color: var(--text-faint); }
+.sev { font-family: var(--font-mono); font-size: var(--fs-micro); letter-spacing:.04em;
+  border-radius:3px; padding:.1em .45em; border:1px solid currentColor; }
+.sev--mal  { color:#ff6b6b; background: color-mix(in srgb, #ff6b6b 14%, transparent); font-weight:600; }
+.sev--crit { color:#ff8a5b; }
+.sev--high { color:#ffb454; }
+.sev--mod  { color:#e0c060; }
+.sev--low  { color: var(--text-dim); }
+.sev--none { color: var(--jade); border-color: var(--jade-line); }
+/* The unlock is a link, not a wall: it sits beside a finding the reader can already see. */
+.unlock { font-family: var(--font-mono); font-size: var(--fs-micro); color: var(--jade);
+  border:1px solid var(--jade-line); background: var(--jade-dim); border-radius: var(--radius-pill);
+  padding:.14em .6em; text-decoration:none; white-space:nowrap; }
+.unlock:hover { background: var(--jade); color:#000; }
+@media (max-width: 640px) {
+  .secrow { grid-template-columns: 1fr auto; }
+  .secrow__d { grid-column: 1 / -1; text-align:left; }
+}

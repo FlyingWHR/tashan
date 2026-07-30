@@ -35,7 +35,13 @@
   el.innerHTML = notfound();
   }
 
+  // Checkout carries the capability that triggered it, so we learn which pages actually convert
+  // rather than guessing. Set per render because unlock() is called from several rows.
+  var PRICING = "/pricing.html";
+  var CAP_ID = "";
+
   function render(c, d) {
+    CAP_ID = c.id || "";
     var fr = fresh(c.npm_last_publish || c.gh_pushed || c.last_seen);
     var co = (c.co_used || []).map(function (x) {
       return '<a href="/capability/' + slug(x.id) + '.html">' + esc(pretty(x.id.split(":").slice(1).join(":"))) + ' <span style="opacity:.5">·' + x.n + '</span></a>';
@@ -64,6 +70,7 @@
         stat("Freshness", fr.txt, "", "latest release / push", fr.cls) +
         stat("Bus factor", busFactor(c), "", "distinct contributors", c.single_maintainer ? "fresh--cold" : "") +
       '</div>' +
+      securityBlock(c) +
       (c.expertise_note ? '<div class="expert-read"><span class="vd vd--' + esc(c.expertise_verdict) + '">' + esc(c.expertise_verdict) + '</span>' +
         '<p>&ldquo;' + esc(c.expertise_note) + '&rdquo;</p><span class="expert-read__by mono">— tashan expertise-eval, read of the actual capability</span></div>' : '') +
       repoHealth(c) +
@@ -305,6 +312,90 @@
   }
 
   // ---------- small helpers ----------
+  // ---------- security audit: the finding is free, the analysis is paid ----------------------
+  // The rule, applied everywhere: a reader is NEVER left unaware that a risk exists. Every finding
+  // is named in full — how many advisories, at what severity, whether it runs code at install, what
+  // it can reach. What a licence buys is the detail needed to act: which advisory, what the script
+  // does, which version fixes it. Hiding the existence of a vulnerability behind a paywall would be
+  // indefensible for a product whose whole claim is that it tells you the truth about what you run.
+  var PERM_LABEL = {
+    filesystem: "Reads and writes files", shell: "Runs shell commands",
+    network: "Makes network requests", browser: "Drives a browser",
+    database: "Connects to databases", credentials: "Handles credentials or secrets",
+    cloud: "Talks to cloud provider APIs"
+  };
+  var SEV_CLS = { MALICIOUS: "sev--mal", CRITICAL: "sev--crit", HIGH: "sev--high",
+                  MODERATE: "sev--mod", MEDIUM: "sev--mod", LOW: "sev--low" };
+
+  function unlock(what) {
+    return '<a class="unlock" href="' + PRICING + '?ref=' + encodeURIComponent(CAP_ID) +
+      '" title="' + esc(what) + '">unlock detail</a>';
+  }
+
+  function secRow(label, value, detail, cls) {
+    return '<div class="secrow' + (cls ? " " + cls : "") + '">' +
+      '<span class="secrow__l">' + label + '</span>' +
+      '<span class="secrow__v mono">' + (value || "") + '</span>' +
+      '<span class="secrow__d">' + (detail || "") + '</span></div>';
+  }
+
+  function securityBlock(c) {
+    if (!c.sec_scanned_at) {
+      // Never imply an audit happened. An unscanned capability says so, and says why.
+      return section("Security audit",
+        '<p class="hubnote">Not scanned yet. We audit npm-published capabilities for known ' +
+        'advisories, install-time scripts and permission surface; this one has no npm package we ' +
+        'can resolve, or has not reached the queue.</p>', "");
+    }
+    var rows = [], perms = [];
+    try { perms = c.sec_permissions ? JSON.parse(c.sec_permissions) : []; } catch (e) { perms = []; }
+
+    var n = c.sec_advisory_count || 0;
+    if (n) {
+      var sev = c.sec_max_severity || "UNKNOWN";
+      rows.push(secRow(
+        '<b>' + n + ' known advisor' + (n === 1 ? "y" : "ies") + '</b>',
+        '<span class="sev ' + (SEV_CLS[sev] || "") + '">' + esc(sev.toLowerCase()) + '</span>',
+        unlock("Which advisory, its severity, the affected range and the version that fixes it"),
+        "secrow--alert"));
+    } else {
+      rows.push(secRow("No known advisories",
+        '<span class="sev sev--none">clear</span>',
+        '<span class="secrow__ok">checked against OSV for ' + esc(c.npm_latest_version || "the current release") + '</span>'));
+    }
+
+    if (c.sec_install_script) {
+      rows.push(secRow("<b>Runs a script at install time</b>", '<span class="sev sev--high">code</span>',
+        unlock("The exact command this package executes when it is installed"), "secrow--alert"));
+    }
+
+    if (perms.length) {
+      var first = PERM_LABEL[perms[0]] || perms[0];
+      rows.push(secRow(first,
+        perms.length > 1 ? "+" + (perms.length - 1) + " more" : "",
+        perms.length > 1 ? unlock("The full permission list, and which dependency pulled each one in")
+                         : '<span class="secrow__ok">from declared dependencies</span>'));
+    } else {
+      rows.push(secRow("No permission surface detected", "",
+        '<span class="secrow__ok">declares no dependency that reaches files, shell or network</span>'));
+    }
+
+    if (c.sec_remote_content) {
+      rows.push(secRow("Can carry remote content into your agent", "",
+        unlock("What it fetches, and why that is the injection-exposure question for agent tools")));
+    }
+    rows.push(secRow(c.sec_provenance ? "Signed build provenance" : "No build provenance",
+      "", '<span class="secrow__ok">' + (c.sec_provenance
+        ? "published from public CI with an attestation"
+        : "no attestation — the published artifact cannot be traced to its source") + "</span>",
+      c.sec_provenance ? "" : "secrow--warn"));
+
+    return section("Security audit", '<div class="sec">' + rows.join("") + '</div>',
+      "Every finding is shown in full. A licence adds the detail needed to act on it — which " +
+      "advisory, what the install script does, the version that fixes it.",
+      "scanned " + fdate(c.sec_scanned_at));
+  }
+
   function section(title, body, sub, aside) {
     return '<section class="capsec"><div class="capsec__hd"><h2>' + esc(title) + '</h2>' +
       (aside ? '<span class="capsec__aside mono">' + aside + '</span>' : "") + '</div>' +
