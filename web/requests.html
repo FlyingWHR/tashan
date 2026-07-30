@@ -34,34 +34,30 @@
     <div class="cap-hd">
       <p class="kicker">The demand board</p>
       <h1>Request a grade — not a placement.</h1>
-      <p class="cap-desc">Other stores let you pay for a placement. Here you request a capability to be
-        <strong>tracked and graded</strong> — the board is ranked by measured demand, and the grade you get is the
-        one the evidence gives, whatever it says. You can buy the measurement; you can't buy the number.</p>
+      <p class="cap-desc">Other stores let you pay for a placement. Here you ask for a capability to be
+        <strong>tracked and graded</strong>, and the grade you get is the one the evidence gives, whatever
+        it says.</p>
     </div>
 
-    <div class="callout preview-banner" role="note">
-      <b>Preview — illustrative data.</b> The backing amounts, backer counts and “funded” states below are
-      <b>example figures</b>, not live ones: no money has been pledged and nothing has been funded. This is
-      what the demand board will look like once grade-bounties exist. “Back” does work — it opens a public
-      GitHub issue registering demand — but it moves no money and buys no position.
-    </div>
-    <div class="callout firewall">
-      <b>The firewall.</b> You fund the <b>grade</b>, never the <b>score</b>. A grade-bounty settles the moment the
-      grade is <b>published</b> — and the payout is identical whether the capability scores 9/10 or 1/10. Money buys
-      <b>priority, depth, and access</b>; it can never touch the number. Funder, grader, and scoring engine are separate.
+    <div class="callout">
+      <b>Nothing is for sale on this page.</b> Requesting is a public GitHub issue, so the demand is
+      itself public evidence — no account, no payment, and no queue you can buy your way up. If paid
+      grade-bounties are ever built, settlement will trigger when the grade is <b>published</b> and never
+      on what it says: a payout identical at 9/10 and 1/10 is the only version that leaves the number
+      worth reading.
     </div>
 
     <section class="capsec">
-      <div class="capsec__hd"><h2>Most wanted</h2><span class="capsec__aside mono">ranked by backing · $0.20 / grade floor</span></div>
-      <p class="capsec__sub">Back a request to move it up the queue and unlock the full evidence dossier when it publishes.
-        Backers become patrons — named on the report, early access to the dossier.</p>
+      <div class="capsec__hd"><h2>Most wanted</h2><span class="capsec__aside mono">ranked by how many people asked</span></div>
+      <p class="capsec__sub">Backing a request is a public +1 on its GitHub issue. It moves nothing but
+        the order we look at them in.</p>
       <div class="board"><div class="board__scroll">
         <table class="board__t reqtable">
           <thead><tr>
             <th class="rank">#</th><th>Capability</th>
-            <th class="num">Backing</th><th class="num">Backers</th><th>Status</th><th></th>
+            <th class="num">Backers</th><th>Status</th><th></th>
           </tr></thead>
-          <tbody id="reqrows"><tr><td colspan="6"><div class="loading">Loading the demand board…</div></td></tr></tbody>
+          <tbody id="reqrows"><tr><td colspan="5"><div class="loading">Loading the demand board…</div></td></tr></tbody>
         </table>
       </div></div>
     </section>
@@ -73,10 +69,10 @@
       <p><a class="btn btn--primary" id="submitBtn" href="https://github.com/tashan-sh/tashan/issues/new?labels=grade-request&amp;title=Grade+request%3A+" rel="noopener">Open a request ↗</a></p>
     </section>
 
-    <div class="callout" style="margin-top:var(--sp-12)"><b>Why this is safe.</b> This mirrors an escrowed bounty
-      board (pump.fun GO), with one change that makes it neutral: settlement triggers on <b>publication</b>, never on
-      the result. Ungradeable within the window? The backing refunds. See the
-      <a class="link" href="/methodology.html">methodology</a> for exactly what a grade measures.</div>
+    <div class="callout"><b>Why the shape matters.</b> A board where money can move a
+      <em>number</em> is worthless, so if backing ever settles it will settle on publication and refund
+      when a capability cannot be graded. See the <a class="link" href="/methodology.html">methodology</a>
+      for exactly what a grade measures.</div>
   </main>
 
   <footer class="footer">
