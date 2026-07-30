@@ -4,15 +4,15 @@ import assert from "node:assert";
 
 const rows = [
   { id: "pkg:context7", slug: "context7", name: "context7", kind: "mcp", category: "docs",
-    npm_pkg: "@upstash/context7-mcp", source_repo: "upstash/context7", trust: 88, maintenance: 90,
+    npm_pkg: "@upstash/context7-mcp", source_repo: "upstash/context7", tashan_score: 88, upkeep: 90,
     vitality: "active", expertise: 82, expertise_verdict: "deep", npm_downloads: 137460 },
   { id: "pkg:firecrawl-mcp", slug: "firecrawl-mcp", name: "firecrawl-mcp", kind: "mcp", category: "web",
-    npm_pkg: "firecrawl-mcp", source_repo: "mendableai/firecrawl", trust: 75, npm_downloads: 79087, expertise_verdict: "solid" },
+    npm_pkg: "firecrawl-mcp", source_repo: "mendableai/firecrawl", tashan_score: 75, npm_downloads: 79087, expertise_verdict: "solid" },
   { id: "skill:anthropics/pdf", slug: "skill-anthropics-pdf", name: "pdf", kind: "skill", category: "docs",
-    trust: 60, npm_pkg: null, source_repo: "anthropics/skills" },
+    tashan_score: 60, npm_pkg: null, source_repo: "anthropics/skills" },
   { id: "pkg:remote-thing", slug: "remote-thing", name: "remote-thing", kind: "remote",
-    trust: 40, npm_pkg: null, source_repo: "acme/remote" },
-  { id: "pkg:untrusted", slug: "untrusted", name: "untrusted", kind: "mcp", trust: null },
+    tashan_score: 40, npm_pkg: null, source_repo: "acme/remote" },
+  { id: "pkg:untrusted", slug: "untrusted", name: "untrusted", kind: "mcp", tashan_score: null },
 ];
 
 // search: exact > prefix > substring; ranked
@@ -27,7 +27,7 @@ assert.strictEqual(search(rows, "zzzznope").length, 0, "no false matches");
 // top: trust-ranked, drops null-trust, category filter
 let t = top(rows);
 assert.strictEqual(t[0].slug, "context7", "highest trust first");
-assert.ok(!t.some((x) => x.trust == null), "null-trust excluded");
+assert.ok(!t.some((x) => x.tashan_score == null), "unscored rows excluded from the leaderboard");
 assert.deepStrictEqual(top(rows, "web").map((x) => x.slug), ["firecrawl-mcp"], "category filter");
 
 // find: by slug, name, pkg, fuzzy
@@ -72,9 +72,9 @@ assertEq(identify({ url: "https://mcp.example.com/sse" }).id, "mcp.example.com",
 assertEq(identify({}), null, "empty entry -> null");
 
 const ROWS = [
-  { name: "tavily", npm_pkg: "tavily-mcp", trust: 82, vitality: "active" },
-  { name: "deadthing", npm_pkg: "dead-mcp", trust: 20, vitality: "abandoned", gh_archived: 1 },
-  { name: "caveman", kind: "skill", trust: null, rated: false },
+  { name: "tavily", npm_pkg: "tavily-mcp", tashan_score: 82, vitality: "active" },
+  { name: "deadthing", npm_pkg: "dead-mcp", tashan_score: 20, vitality: "abandoned", gh_archived: 1 },
+  { name: "caveman", kind: "skill", tashan_score: null, rated: false },
 ];
 assertEq(match({ kind: "npm", id: "tavily-mcp" }, ROWS).name, "tavily", "npm match");
 assertEq(match({ kind: "skill", id: "caveman" }, ROWS).name, "caveman", "skill match");

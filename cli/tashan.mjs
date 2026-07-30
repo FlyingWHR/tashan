@@ -43,14 +43,14 @@ export function search(rows, q) {
     else if (name.includes(q) || pkg.includes(q)) s = 45;
     else if (cat.includes(q)) s = 20;
     if (!s) return null;
-    return { r, s: s + Math.min(30, (r.trust || 0) / 3) };   // quality-weighted: tashan score lifts within a match tier
+    return { r, s: s + Math.min(30, (r.tashan_score || 0) / 3) };   // quality-weighted: tashan score lifts within a match tier
   }).filter(Boolean);
   scored.sort((a, b) => b.s - a.s);
   return scored.map((x) => x.r);
 }
 
 export function top(rows, cat) {
-  let list = rows.filter((r) => r.trust != null);
+  let list = rows.filter((r) => r.tashan_score != null);
   if (cat) { const c = cat.toLowerCase(); list = list.filter((r) => (r.category || "").toLowerCase() === c); }
   return list.sort((a, b) => (b.tashan_score || 0) - (a.tashan_score || 0));
 }
@@ -105,11 +105,11 @@ function row(r) {
   const kind = dim((r.kind || "").padEnd(6));
   const dl = dim(fmtNum(r.npm_downloads).padStart(6));
   const vd = r.expertise_verdict ? dim("· " + verdict(r.expertise_verdict)) : "";
-  return `  ${trustStr(r.trust)}  ${bold(name)} ${kind} ${dl}  ${vd}`;
+  return `  ${trustStr(r.tashan_score)}  ${bold(name)} ${kind} ${dl}  ${vd}`;
 }
 function table(rows, limit) {
   if (!rows.length) return dim("  no matches.");
-  const head = "  " + dim("TRUST".padStart(3)) + "  " + dim("CAPABILITY".padEnd(34)) + " " + dim("KIND".padEnd(6)) + " " + dim("  DL");
+  const head = "  " + dim("SCORE".padStart(3)) + "  " + dim("CAPABILITY".padEnd(34)) + " " + dim("KIND".padEnd(6)) + " " + dim("  DL");
   return head + "\n" + rows.slice(0, limit).map(row).join("\n");
 }
 
@@ -119,7 +119,7 @@ function infoCard(r) {
   L.push("  " + bold(pretty(r.name)) + "  " + dim(r.kind || ""));
   L.push("  " + dim(r.id));
   L.push("");
-  L.push("  tashan score        " + trustStr(r.trust).trim() + dim("/100") + "   " + dim("maintenance " + (r.maintenance ?? "—") + " · vitality " + (r.vitality || "—")));
+  L.push("  tashan score        " + trustStr(r.tashan_score).trim() + dim("/100") + "   " + dim("upkeep " + (r.upkeep ?? "—") + " · vitality " + (r.vitality || "—")));
   if (r.expertise_verdict) L.push("  Expertise    " + jade(verdict(r.expertise_verdict)) + (r.expertise != null ? dim("  (" + r.expertise + "/100)") : ""));
   L.push("  Adoption     " + dim(fmtNum(r.npm_downloads) + " downloads/wk" + (r.config_reach ? " · reach " + r.config_reach : "")));
   if (r.category) L.push("  Category     " + dim(r.category));
@@ -232,9 +232,9 @@ function renderDoctor(results, problems, sum) {
   const rows = results.slice().sort((x, y) => order[x.assessment.level] - order[y.assessment.level]);
   let out = "\n  " + bold("Your stack") + dim(`  ·  ${sum.servers} server${sum.servers === 1 ? "" : "s"}, ${sum.skills} skill${sum.skills === 1 ? "" : "s"}`) + "\n\n";
   for (const { item, row, assessment } of rows) {
-    const t = row && row.trust != null ? String(row.trust) : "—";
+    const t = row && row.tashan_score != null ? String(Math.round(row.tashan_score)) : "—";
     out += "  " + (MARK[assessment.level] || " ") + " " + bold(pretty(item.name).padEnd(28).slice(0, 28)) +
-      dim((item.client + " · " + item.scope).padEnd(22)) + dim("trust ") + (t === "—" ? dim(t) : jade(t)) + "\n";
+      dim((item.client + " · " + item.scope).padEnd(22)) + dim("score ") + (t === "—" ? dim(t) : jade(t)) + "\n";
     for (const n of assessment.notes) {
       const txt = typeof n === "string" ? n : n.text;
       out += "      " + dim("↳ ") + (n.level === "alert" ? red(txt) : dim(txt)) + "\n";

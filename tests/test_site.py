@@ -252,6 +252,29 @@ def live_checks(base):
     check("served capability.js does not fetch the big export",
           b"fetch(\"/data/capabilities.json\"" not in capjs and b"fetch('/data/capabilities.json'" not in capjs)
 
+
+def cli_field_contract():
+    """The `trust` -> `tashan_score` rename (SCHEMA_VERSION 5) updated the DB and the export and missed
+    the CLI entirely: five call sites still read r.trust. `tashan top` returned "no matches" and every
+    score in search/info/doctor rendered as an em-dash. Nothing failed, because the fixtures had been
+    written with the old field name too — the tests agreed with the bug.
+
+    So this asserts the CLI against the REAL published files, which a fixture cannot fake.
+    """
+    print()
+    print("# CLI reads fields the data actually has")
+    idx = json.load(open(os.path.join(WEB, "data", "index.json")))["capabilities"]
+    lk = json.load(open(os.path.join(WEB, "data", "lookup.json")))["records"]
+    check("index.json rows carry `tashan_score`", any("tashan_score" in r for r in idx[:50]))
+    check("lookup.json records carry `tashan_score`", any("tashan_score" in r for r in lk[:50]))
+    check("neither file carries the old `trust` field", not any("trust" in r for r in idx[:50] + lk[:50]))
+    src = ""
+    for f in ("tashan.mjs", "doctor.mjs", "mcp.mjs"):
+        src += open(os.path.join(ROOT, "cli", f)).read()
+    check("no CLI source reads the renamed `.trust`", ".trust" not in src)
+    check("no CLI source reads the renamed `.maintenance`", ".maintenance" not in src)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--url", default="http://127.0.0.1:4173")
@@ -266,6 +289,8 @@ def main():
             live_checks(a.url)
         except Exception:
             print(f"\n# live HTTP — skipped (no server at {a.url}; run `cd web && python3 -m http.server 4173`)")
+
+    cli_field_contract()
 
     failed = [r for r in results if not r[0]]
     print(f"\n{'='*48}\n{len(results)-len(failed)}/{len(results)} checks passed" +
