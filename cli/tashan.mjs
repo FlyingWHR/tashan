@@ -360,6 +360,19 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
   if (sum.unknown) bits.push(dim(sum.unknown + " not in the index"));
   out += "\n  " + (bits.length ? bits.join(dim(" · ")) : jade("nothing flagged")) + "\n";
   if (quiet && !verbose) out += dim(`  ${quiet} more not flagged — --all lists every row.`) + "\n";
+  // The offer appears only where a free reader has just been shown a finding whose DETAIL exists
+  // and is withheld — never on a clean run, never as a recurring nag. If there is nothing to
+  // unlock, saying nothing is the honest behaviour and the one that keeps the tool installed.
+  if (!pro && keyState === null) {
+    const withDetail = rows.filter((r) => r.row &&
+      (r.row.sec_advisory_count || r.row.sec_install_script || (r.alts && r.alts.length))).length;
+    if (withDetail) {
+      out += "\n  " + dim(`${withDetail} finding${withDetail === 1 ? " has" : "s have"} detail behind a licence — `) +
+        dim("which advisory and the version that fixes it, what the install script runs, ") +
+        dim("and the replacement to move to.") + "\n" +
+        "  " + jade("tashan Pro") + dim(" $6/mo · " + SITE + "/pricing.html") + "\n";
+    }
+  }
   // Say the subscription state out loud, every run. Silence is what makes someone wonder.
   if (keyState === "active")
     out += "  " + jade("Pro") + dim(rows.some((r) => r.alts && r.alts.length)

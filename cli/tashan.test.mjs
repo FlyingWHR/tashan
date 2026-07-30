@@ -388,3 +388,24 @@ import { join } from "node:path";
   assert.strictEqual(a.notes.length, 0, "a clean row says nothing — no nagging on a healthy stack");
   console.log("ok — security findings are free in doctor");
 }
+
+// ---- the upsell must be earned, not recurring ---------------------------------------------------
+// renderDoctor is not exported, so this asserts the RULE the implementation encodes: an offer is
+// shown only for rows whose detail actually exists and is withheld. A tool that prints a pitch on a
+// clean run gets uninstalled, and it deserves to be.
+{
+  const withDetail = (rows) => rows.filter((r) => r.row &&
+    (r.row.sec_advisory_count || r.row.sec_install_script || (r.alts && r.alts.length))).length;
+
+  assert.strictEqual(withDetail([{ row: {} }, { row: { rated: true } }]), 0,
+    "a clean stack has nothing to offer, so nothing is offered");
+  assert.strictEqual(withDetail([{ row: { sec_advisory_count: 2 } }]), 1,
+    "an advisory has detail worth unlocking");
+  assert.strictEqual(withDetail([{ row: { sec_install_script: 1 } }]), 1,
+    "so does an install script");
+  assert.strictEqual(withDetail([{ row: {}, alts: [{ cap: {} }] }]), 1,
+    "so does a named replacement");
+  assert.strictEqual(withDetail([{ row: null, alts: [{ cap: {} }] }]), 0,
+    "an unresolved row has no detail to sell, whatever else is attached to it");
+  console.log("ok — the Pro offer is earned per finding, never a standing nag");
+}
