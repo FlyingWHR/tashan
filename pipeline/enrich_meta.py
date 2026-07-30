@@ -55,7 +55,9 @@ def fetch(pkg):
     lic = d.get("license") or ver.get("license") or ""
     if isinstance(lic, dict):
         lic = lic.get("type") or ""
-    return {"description": (d.get("description") or ver.get("description") or "").strip()[:500],
+    return {"latest_version": latest or None,   # fetched here anyway; discarding it is why nothing could
+                                                # tell a user their pin was stale (see build.py MIGRATE)
+            "description": (d.get("description") or ver.get("description") or "").strip()[:500],
             "homepage": home.strip()[:300],
             "source_repo": m.group(1) if m else None,
             "license": lic if isinstance(lic, str) else ""}
@@ -91,13 +93,16 @@ def main():
         nh = meta.get("homepage") or None
         nr = meta.get("source_repo") or None
         nl = meta.get("license") or None
-        # COALESCE semantics: never overwrite something we already measured, only fill blanks
+        # COALESCE semantics: never overwrite something we already measured, only fill blanks.
+        # npm_latest_version is the deliberate exception — COALESCE(?, existing) lets the FRESH value
+        # win, because a version that never updates is worse than no version at all.
         con.execute("UPDATE capabilities SET "
                     "description = COALESCE(NULLIF(description,''), ?), "
                     "homepage    = COALESCE(NULLIF(homepage,''), ?), "
                     "source_repo = COALESCE(NULLIF(source_repo,''), ?), "
-                    "gh_license  = COALESCE(NULLIF(gh_license,''), ?) WHERE id = ?",
-                    (nd, nh, nr, nl, cid))
+                    "gh_license  = COALESCE(NULLIF(gh_license,''), ?), "
+                    "npm_latest_version = COALESCE(?, npm_latest_version) WHERE id = ?",
+                    (nd, nh, nr, nl, (meta or {}).get("latest_version"), cid))
         filled_d += 1 if (nd and not desc) else 0
         filled_h += 1 if (nh and not home) else 0
         filled_r += 1 if (nr and not srepo) else 0

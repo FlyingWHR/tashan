@@ -54,6 +54,16 @@ export function stripVersion(spec) {
   return at > 0 ? spec.slice(0, at) : spec;
 }
 
+/** The pin the user actually wrote, if any: "tavily-mcp@1.2.3" -> "1.2.3", "@scope/x" -> null.
+ *  stripVersion() still discards it for MATCHING; this keeps it for comparison. Both are needed and
+ *  only the first existed, which is why nothing could answer "am I on an old version". */
+export function versionOf(spec) {
+  const at = String(spec || "").lastIndexOf("@");
+  if (at <= 0) return null;
+  const v = spec.slice(at + 1);
+  return v && v !== "latest" ? v : null;      // "@latest" is a tag, not a pin — nothing to compare
+}
+
 /** Pull the npm package (or command identity) out of one MCP server config block. */
 export function identify(entry) {
   if (!entry || typeof entry !== "object") return null;
@@ -65,7 +75,7 @@ export function identify(entry) {
   // npx -y <pkg>  |  npx <pkg>  — the overwhelmingly common shape
   if (/npx$/.test(cmd)) {
     const pkg = args.find((x) => typeof x === "string" && !x.startsWith("-"));
-    if (pkg) return { kind: "npm", id: stripVersion(String(pkg)) };
+    if (pkg) return { kind: "npm", id: stripVersion(String(pkg)), version: versionOf(String(pkg)) };
   }
   if (/^(uvx|uv)$/.test(cmd)) {
     const pkg = args.find((x) => typeof x === "string" && !x.startsWith("-"));
@@ -167,6 +177,11 @@ export function assess(item, row) {
   if (row.vitality === "abandoned") notes.push({ level: "warn", text: "no recent activity — looks abandoned" });
   if (row.similar_official) notes.push({ level: "alert", text: `an official package with a similar name exists: ${row.similar_official}` });
   if (row.single_maintainer) notes.push({ level: "note", text: "single primary maintainer (bus-factor risk)" });
+  // Behind on a pinned version. A NOTE, not a warning: being pinned is often deliberate, and crying
+  // wolf about every minor release is how an audit tool gets uninstalled. We say the fact and stop.
+  if (item && item.version && row.npm_latest_version && item.version !== row.npm_latest_version) {
+    notes.push({ level: "note", text: `pinned at ${item.version}; ${row.npm_latest_version} is published` });
+  }
   if (row.rated === false) notes.push({ level: "note", text: "catalogued but not rated — no per-item evidence yet" });
   // "rated:false" must not render as a green tick. We know the item exists and know nothing about its
   // quality — that is its own state, distinct from both "fine" and "never heard of it".

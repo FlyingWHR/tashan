@@ -250,3 +250,35 @@ console.log("ok — registry removal surfaces as an alert");
   assert.ok(!isDying({ vitality: "active" }));
 }
 console.log("ok — suggest (relevance, never a worse or deader replacement)");
+
+// ---- versionOf(): the pin the user actually wrote -----------------------------------------------
+{
+  const { versionOf, stripVersion, identify, assess } = await import("./doctor.mjs");
+  // stripVersion still discards the version FOR MATCHING; versionOf keeps it for comparison.
+  // Only the first existed, which is why nothing could answer "am I running an old release".
+  assert.strictEqual(versionOf("tavily-mcp@1.2.3"), "1.2.3");
+  assert.strictEqual(versionOf("@playwright/mcp@1.0.0"), "1.0.0", "a scoped package still yields its pin");
+  assert.strictEqual(versionOf("@upstash/context7-mcp"), null, "an unpinned scoped package has no pin");
+  assert.strictEqual(versionOf("@playwright/mcp@latest"), null, "'latest' is a tag, not a pin — nothing to compare");
+  assert.strictEqual(versionOf("plain-package"), null);
+  assert.strictEqual(versionOf(""), null);
+  assert.strictEqual(versionOf(null), null, "never throws on junk");
+  // matching must be unaffected
+  assert.strictEqual(stripVersion("tavily-mcp@1.2.3"), "tavily-mcp");
+  assert.strictEqual(identify({ command: "npx", args: ["-y", "tavily-mcp@1.2.3"] }).id, "tavily-mcp");
+  assert.strictEqual(identify({ command: "npx", args: ["-y", "tavily-mcp@1.2.3"] }).version, "1.2.3");
+
+  const behind = assess({ kind: "npm", id: "x", version: "1.0.0" }, { rated: true, npm_latest_version: "2.1.0" });
+  assert.ok(/pinned at 1\.0\.0; 2\.1\.0 is published/.test(behind.notes.map((n) => n.text).join(" ")));
+  // A NOTE, not a warning. Pinning is often deliberate, and crying wolf over every minor release is
+  // how an audit tool gets uninstalled.
+  assert.strictEqual(behind.level, "ok", "being behind is a fact, not an alert");
+  const current = assess({ kind: "npm", id: "x", version: "2.1.0" }, { rated: true, npm_latest_version: "2.1.0" });
+  assert.ok(!/pinned at/.test(current.notes.map((n) => n.text).join(" ")), "on the latest version, says nothing");
+  const unpinned = assess({ kind: "npm", id: "x" }, { rated: true, npm_latest_version: "2.1.0" });
+  assert.ok(!/pinned at/.test(unpinned.notes.map((n) => n.text).join(" ")), "no pin means nothing to compare");
+  const unknownLatest = assess({ kind: "npm", id: "x", version: "1.0.0" }, { rated: true });
+  assert.ok(!/pinned at/.test(unknownLatest.notes.map((n) => n.text).join(" ")),
+    "if we do not know the latest version we say nothing, rather than guessing");
+}
+console.log("ok — version pin vs published latest");

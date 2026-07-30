@@ -95,9 +95,13 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            "discord_url TEXT", "gh_homepage TEXT",
            # which source(s) asserted this row — provenance is publishable evidence and lets a bad
            # source be retracted wholesale (docs/SOURCING.md §4)
-           "sources TEXT"]
+           "sources TEXT",
+           # The published `latest` semver. It was fetched on every enrichment pass and discarded twice
+           # (here and in enrich_meta), so nothing could answer "is the version I pinned out of date" —
+           # npm_versions is a COUNT of releases, not a version.
+           "npm_latest_version TEXT"]
 
-SCHEMA_VERSION = 5  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 6  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # v5 RENAMED the headline score. "Trust" claimed more than this project measures — there is no CVE scan,
 # no prompt-injection audit, no code review behind it — and the methodology page had to disclaim its own
@@ -351,6 +355,7 @@ def enrich_npm(con):
                 # as evidence: people=0 scores the bus-factor axis at 0/40 AND asserts the axis is
                 # measured, so upkeep collapsed to 0. This file promises unknown inputs stay None and are
                 # never faked to 0; this was the leak.
+                info["latest_version"] = latest or None
                 info["maintainers"] = len(meta["maintainers"]) if meta.get("maintainers") else None
                 info["versions"] = len(meta["versions"]) if meta.get("versions") else None
                 # UNPUBLISHED IS NOT UNKNOWN. npm answers a removed package with a tombstone packument —
@@ -373,10 +378,11 @@ def enrich_npm(con):
             cache[pkg] = info
             time.sleep(0.05)
         con.execute("""UPDATE capabilities SET npm_downloads=?, npm_last_publish=?, npm_created=?,
-              npm_maintainers=?, npm_versions=?, npm_deprecated=?,
+              npm_maintainers=?, npm_versions=?, npm_deprecated=?, npm_latest_version=?,
               source_repo=COALESCE(source_repo,?) WHERE id=?""",
           (info.get("downloads"), info.get("last_publish"), info.get("created"),
-           info.get("maintainers"), info.get("versions"), info.get("deprecated"), info.get("repo"), cid))
+           info.get("maintainers"), info.get("versions"), info.get("deprecated"),
+           info.get("latest_version"), info.get("repo"), cid))
         done += 1
         if done % 200 == 0:
             con.commit(); json.dump(cache, open(NPM_CACHE, "w")); print(f"    npm {done}/{len(rows)}", flush=True)
@@ -824,7 +830,7 @@ def slugify(cid):
 def export(con):
     cols = ["id","name","kind","title","description","npm_pkg","source_repo","registry_status",
             "config_reach","config_repos","stars_median","stars_max","last_seen",
-            "npm_downloads","npm_last_publish","npm_maintainers","npm_versions","npm_deprecated",
+            "npm_downloads","npm_last_publish","npm_maintainers","npm_versions","npm_deprecated","npm_latest_version",
             "co_used","adoption","freshness","upkeep","tashan_score",
             "expertise","expertise_verdict","expertise_note","retention","retention_note",
             "category","in_registry","in_configs",
@@ -1190,6 +1196,7 @@ def export(con):
     # and has no first-paint budget because nothing renders it — 5,787 rows, ~200 KB gz, fetched by a
     # terminal, once.
     LOOKUP = ["id", "name", "kind", "npm_pkg", "category", "official", "slug", "tashan_score",
+              "npm_latest_version",
               "vitality", "expertise_verdict", "npm_downloads", "gh_stars", "npm_deprecated",
               "gh_archived", "registry_status", "single_maintainer", "similar_official", "rated"]
     # DELISTED ROWS BELONG IN THE LOOKUP, and nowhere else. A capability the registry pulled for
