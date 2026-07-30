@@ -10,7 +10,7 @@
 // It is also honest to charge for on day one: the data already exists (25,925 points and growing),
 // unlike watch/alerts, which are still unbuilt and therefore still unsold.
 
-import { keyFrom, validate, deny } from "./_license.js";
+import { keyFrom, validate, activationFrom, deny } from "./_license.js";
 
 // Bucketing must match bucket_of() in pipeline/push_history.py exactly, or every lookup misses
 // silently and a paying customer sees 404. One KV value per capability is ~6,500 writes a night; one
@@ -38,7 +38,7 @@ export async function onRequestGet({ request, env }) {
     });
   }
 
-  const v = await validate(env, keyFrom(request));
+  const v = await validate(env, keyFrom(request), activationFrom(request));
   if (!v.ok) return deny(v);
 
   if (!env.TASHAN_KV) {

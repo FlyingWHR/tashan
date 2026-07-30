@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=88">
+  <link rel="stylesheet" href="/css/site.css?v=89">
 </head>
 <body>
   <nav class="nav"><div class="wrap nav__in">
@@ -73,7 +73,7 @@
         </ul>
         <a class="btn btn--primary plan__cta" href="https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" rel="noopener"
            data-src="pro-checkout">Subscribe &rsaquo;</a>
-        <p class="plan__note mono">cancel any time in the <a class="link" href="https://polar.sh/purchases"
+        <p class="plan__note mono">cancel any time in the <a class="link" href="https://polar.sh/tashan/portal"
           rel="noopener">customer portal</a> · <a class="link" href="/refunds.html">7-day refund</a></p>
       </section>
     </div>
@@ -98,14 +98,19 @@
       <div><h3>How do I use the key?</h3><p><code>tashan activate &lt;key&gt;</code> once per machine, then
         <code>tashan doctor</code> as usual — it is stored in <code>~/.config/tashan/key</code>, so there is no
         export to remember and nothing to re-do in a new terminal. Same key on every machine you use. The key is in your
-        <a class="link" href="https://polar.sh/purchases" rel="noopener">Polar portal</a>. Nothing about your
+        <a class="link" href="https://polar.sh/tashan/portal" rel="noopener">Polar portal</a>. Nothing about your
         config is uploaded — the CLI reads your local files and asks us only about capability names.
         Full details on <a class="link" href="/support.html">support</a>.</p></div>
-      <div><h3>Do I get an account?</h3><p>No — there is nothing to log into here, and the site looks the same
-        paid or not. Your subscription is one environment variable in your terminal, and <code>doctor</code> says
-        <span class="mono">Pro · licence active</span> every run so you can see it working. Billing, your key and
-        the cancel button live in <a class="link" href="https://polar.sh/purchases" rel="noopener">Polar's
-        portal</a>; that sign-in is theirs, not ours.</p></div>
+      <div><h3>Do I get an account?</h3><p>Yes — at
+        <a class="link" href="https://polar.sh/tashan/portal" rel="noopener">polar.sh/tashan/portal</a>. Sign in
+        with the email you paid with (a one-time code, no password) and you get your licence key, invoices,
+        activated devices, payment method and the cancel button. Polar is our merchant of record, so billing is
+        theirs — we never see your card. tashan.sh itself has no separate login and looks the same paid or not;
+        Pro shows up in your terminal, where <code>doctor</code> prints
+        <span class="mono">Pro · licence active</span> on every run.</p></div>
+      <div><h3>How many machines?</h3><p>Activate each one with the same key — <code>tashan activate &lt;key&gt;</code>
+        registers it under its hostname, so the portal lists exactly what is active and lets you release any of
+        them. <code>tashan activate --forget</code> hands a slot back from the machine itself.</p></div>
       <div><h3>Do you sell the capabilities?</h3><p>No. We sell nothing we measure, host nothing, and take no cut of
         anything. Every other index in this field either sells the listings, hosts the servers, or earns when you run
         them — so a low verdict costs them money. It costs us nothing, which is the only reason our verdict is worth
@@ -143,7 +148,7 @@
   </div>
 </footer>
 
-  <script src="/js/terminal.js?v=88" defer></script>
-  <script src="/js/site.js?v=88" defer></script>
+  <script src="/js/terminal.js?v=89" defer></script>
+  <script src="/js/site.js?v=89" defer></script>
 </body>
 </html>

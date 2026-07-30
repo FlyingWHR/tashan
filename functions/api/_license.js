@@ -1,12 +1,12 @@
 // Shared licence gate for every paid endpoint. Not routable itself — the leading underscore keeps
 // Cloudflare Pages from publishing it as /api/_license.
 //
-// THERE IS NO ACCOUNT SYSTEM, DELIBERATELY. Polar validates a licence key from a public
-// customer-portal endpoint that needs no seller token, so the key IS the credential: no passwords, no
-// sessions, no password reset, no account table, and no PII of ours to leak. docs/AUDIT.md called
-// "a backend with accounts and persistence" the single blocking investment for revenue. It isn't one.
-// The customer manages the subscription in Polar's own portal, which already does cancellation,
-// payment-method updates, invoices and receipts.
+// WE DO NOT BUILD THE ACCOUNT SYSTEM — POLAR ALREADY IS ONE. polar.sh/tashan/portal does email-OTP
+// sign-in, subscriptions, invoices, payment methods, cancellation, licence keys and the device list.
+// Validation runs against a PUBLIC customer-portal endpoint needing no seller token, so the licence
+// (plus its activation id) is the whole credential here: no passwords, no sessions, no password
+// reset, no account table, and no PII of ours to leak. docs/AUDIT.md called "a backend with accounts
+// and persistence" the single blocking investment for revenue. It is not one — it is a link.
 
 const POLAR_VALIDATE = "https://api.polar.sh/v1/customer-portal/license-keys/validate";
 const CACHE_TTL_S = 300;   // see caching note below
@@ -28,13 +28,22 @@ export function keyFrom(request) {
   }
 }
 
-export async function validate(env, key) {
+// A licence key may be activated to a limited number of devices. The activation id identifies
+// WHICH device is calling; a key whose seat was released must stop working here too, or the device
+// limit is decorative and one shared key serves everyone.
+export function activationFrom(request) {
+  return (request.headers.get("x-tashan-activation") || "").trim() || null;
+}
+
+export async function validate(env, key, activationId = null) {
   if (!key) return { ok: false, status: 401, why: "no licence key" };
   // FAIL CLOSED. An unconfigured deployment must refuse everyone, never admit everyone — the opposite
   // of e.js, where a missing analytics binding is allowed to no-op because nothing is being protected.
   if (!env.POLAR_ORG_ID) return { ok: false, status: 503, why: "billing not configured" };
 
-  const h = env.TASHAN_KV ? "lic:" + (await keyHash(key)) : null;
+  // The activation is part of the identity being cached. Hashing only the key would let a
+  // released device ride a positive cached under the same key from a still-active one.
+  const h = env.TASHAN_KV ? "lic:" + (await keyHash(key + "|" + (activationId || "-"))) : null;
   if (h) {
     // Cached for 5 minutes, which is the whole tradeoff: it keeps Polar out of the hot path, and it
     // means a revoked or refunded key keeps working for at most that long. Polar can auto-refund to
@@ -49,7 +58,9 @@ export async function validate(env, key) {
     const r = await fetch(POLAR_VALIDATE, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ key, organization_id: env.POLAR_ORG_ID }),
+      body: JSON.stringify(activationId
+        ? { key, organization_id: env.POLAR_ORG_ID, activation_id: activationId }
+        : { key, organization_id: env.POLAR_ORG_ID }),
     });
     if (!r.ok) {
       // A 4xx from Polar means the key is bad; a 5xx means Polar is down. Do not cache the second

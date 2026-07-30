@@ -13,22 +13,64 @@
 // Zero dependencies. The pure functions are exported for cli/tashan.test.mjs.
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync, chmodSync } from "node:fs";
-import { homedir } from "node:os";
+import { homedir, hostname, platform } from "node:os";
 import { join, dirname } from "node:path";
 import { configLocations, skillLocations, collect, match, resolve, assess, summarize, trend, withTrend,
          suggest, tokenFrequency, isDying } from "./doctor.mjs";
 
-// A licence the user has to re-export in every new shell is a licence they will think is broken.
-// Env var still wins (CI, throwaway checks); the file is the thing that survives closing the terminal.
+// ---- licence ---------------------------------------------------------------------------------
+// The account system is Polar's, not ours: polar.sh/tashan/portal does email-OTP sign-in,
+// subscriptions, invoices, cancellation and payment methods. Device handling is Polar's too — the
+// customer-portal license-key endpoints (activate / validate / deactivate) are PUBLIC, needing only
+// the org id, so the CLI talks to them directly. We store no passwords, run no sessions, and hold
+// no customer record. An earlier cut of this file hand-rolled all of it against our own API, which
+// meant no device list, no activation limit, and nothing the customer could see or revoke.
+const POLAR_LK = process.env.TASHAN_POLAR_API || "https://api.polar.sh/v1/customer-portal/license-keys";
+const ORG_ID = process.env.TASHAN_ORG_ID || "caa0fc1b-2f7f-4e52-864a-c71e878d125d";
+export const PORTAL = "https://polar.sh/tashan/portal";
+
 export function keyPath() {
   const base = process.env.XDG_CONFIG_HOME || join(homedir(), ".config");
   return join(base, "tashan", "key");
 }
-export function storedKey() {
-  try { return readFileSync(keyPath(), "utf8").trim() || null; } catch { return null; }
+// Stored as JSON so the activation id rides along with the key. A bare string is still accepted:
+// that is what TASHAN_KEY gives us, and what a user pasting a key into the file by hand will write.
+export function parseLicence(text) {
+  const t = (text || "").trim();
+  if (!t) return null;
+  if (t.startsWith("{")) {
+    try {
+      const o = JSON.parse(t);
+      return o.key ? { key: o.key, activation_id: o.activation_id || null, label: o.label || null } : null;
+    } catch { return null; }
+  }
+  return { key: t, activation_id: null, label: null };
+}
+export function storedLicence() {
+  try { return parseLicence(readFileSync(keyPath(), "utf8")); } catch { return null; }
+}
+export function resolveLicence(a = {}) {
+  if (a.key) return { key: a.key, activation_id: null, label: null };
+  if (process.env.TASHAN_KEY) return { key: process.env.TASHAN_KEY, activation_id: null, label: null };
+  return storedLicence();
 }
 export function resolveKey(a = {}) {
-  return a.key || process.env.TASHAN_KEY || storedKey();
+  const l = resolveLicence(a);
+  return l ? l.key : null;
+}
+
+async function polar(path, body) {
+  try {
+    const r = await fetch(POLAR_LK + path, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ organization_id: ORG_ID, ...body }),
+    });
+    const json = r.status === 204 ? {} : await r.json().catch(() => null);
+    return { status: r.status, json };
+  } catch {
+    return { status: 0, json: null };          // offline / DNS — never "invalid"
+  }
 }
 
 const SITE = process.env.TASHAN_SITE || "https://tashan.sh";
@@ -169,16 +211,21 @@ function renderAdd(r, client) {
 // per capability, capped: a config with 40 servers should not open 40 sockets at once, and the
 // endpoint is per-id by design (a whole-corpus history download is not what anyone wants).
 // ponytail: sequential with a cap; batch the endpoint if a stack of hundreds ever shows up.
-async function withTrends(results, key, base = SITE, limit = 40) {
+async function withTrends(results, lic, base = SITE, limit = 40) {
+  const key = lic && lic.key;
+  // Send the activation too. Without it the device limit only constrains the CLI's own display and
+  // a shared key still buys unlimited access to the paid endpoint, which is the thing being sold.
+  const auth = { authorization: `Bearer ${key}` };
+  if (lic && lic.activation_id) auth["x-tashan-activation"] = lic.activation_id;
   let n = 0;
   for (const r of results) {
     if (!r.row || n >= limit) continue;
     n++;
     try {
       const res = await fetch(`${base}/api/history?id=${encodeURIComponent(r.row.id)}`,
-                              { headers: { authorization: `Bearer ${key}` } });
+                              { headers: auth });
       if (res.status === 403 || res.status === 401) {
-        process.stderr.write(red("  licence key not valid — check https://polar.sh/purchases") + "\n");
+        process.stderr.write(red("  licence not valid for this device — check " + PORTAL) + "\n");
         return results;                       // stop early; every other call would fail the same way
       }
       if (!res.ok) continue;                  // 404 = nothing recorded yet, 503 = validation down
@@ -197,24 +244,29 @@ async function loadLookup() {
   return r.json();
 }
 
-// A paying customer whose stack happens to be healthy saw output identical to a free user's — no
-// confirmation whatsoever that the $6 was doing anything. That is the "did my payment even work"
-// support ticket, and then the cancellation. One cheap call settles it. A 401/403 is the only
-// answer that means the key is bad: 404 means the key was accepted and that capability simply has
-// no history yet, which is a perfectly healthy state.
-async function verifyKey(key) {
-  try {
-    const r = await fetch(`${SITE}/api/history?id=pkg:tavily-mcp`,
-                          { headers: { authorization: `Bearer ${key}` } });
-    if (r.status === 401 || r.status === 403) return "invalid";
-    if (r.status === 503) return "unknown";        // validation down — do not cry wolf
-    // A 404 is ambiguous: our API returns it for "valid key, no history for that id", and a plain
-    // static host returns it for "no such endpoint". Claiming a licence is ACTIVE when we never
-    // reached the licence check is the one wrong answer here, so require a body only our API sends.
-    const body = await r.json().catch(() => null);
-    return body && (body.series !== undefined || body.source === "tashan signal_history")
-      ? "active" : "unknown";
-  } catch { return "unknown"; }
+// A paying customer whose stack happened to be healthy saw output identical to a free user's — no
+// confirmation the $6 was doing anything. That is the "did my payment even work" ticket, then the
+// cancellation. Ask Polar, the actual source of truth, rather than inferring from our own API.
+// Never report "active" on a network failure: a false all-clear is worse than admitting we cannot tell.
+async function verifyLicence(lic) {
+  if (!lic || !lic.key) return null;
+  const { status, json } = await polar("/validate",
+    lic.activation_id ? { key: lic.key, activation_id: lic.activation_id } : { key: lic.key });
+  if (status === 404 || status === 422) {
+    // A 404 here is ambiguous and the two cases need OPPOSITE actions from the user. If the key
+    // still validates on its own, the subscription is fine and only this device was released —
+    // exactly what happens after freeing a seat in the portal. Telling that person their key is
+    // invalid sends them to support over a one-command fix.
+    if (lic.activation_id) {
+      const bare = await polar("/validate", { key: lic.key });
+      if (bare.status === 200 && bare.json && bare.json.status === "granted") return "deactivated";
+    }
+    return "invalid";
+  }
+  if (status !== 200 || !json) return "unknown";               // Polar down, or we are offline
+  if (json.status !== "granted") return "invalid";             // revoked or disabled
+  if (json.expires_at && Date.parse(json.expires_at) <= Date.now()) return "invalid";
+  return "active";
 }
 
 async function loadData() {
@@ -236,11 +288,11 @@ ${bold("tashan")} — the measured layer for AI capabilities ${dim("· " + SITE)
   ${jade("tashan info")} <name>          the measured dossier for one capability
   ${jade("tashan add")} <name>           the install command  ${dim("(--client claude|cursor|desktop|codex|npx)")}
   ${jade("tashan doctor")}               audit the config you already have — dead, deprecated, risky
-  ${jade("tashan activate")} <key>       store your Pro licence here — once per machine, not per shell
+  ${jade("tashan activate")} <key>       register this machine — once, not once per shell
   ${dim("Pro names the replacement for anything dead in your config · $6/mo · " + SITE + "/pricing.html")}
 
   ${dim("flags:")}  --json   --limit <n>   --client <c>   --all   --forget
-  ${dim("every score is re-derivable from public evidence · no account, no telemetry")}
+  ${dim("free tier needs no account · your subscription lives at " + PORTAL)}
 `;
 
 export function parseArgs(argv) {
@@ -313,7 +365,10 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
     out += "  " + jade("Pro") + dim(rows.some((r) => r.alts && r.alts.length)
       ? " · licence active — replacements named above"
       : " · licence active — nothing in your stack needs replacing") + "\n";
-  else if (keyState === "invalid") out += "  " + red("Pro key not valid") + dim(" — check https://polar.sh/purchases") + "\n";
+  else if (keyState === "deactivated")
+    out += "  " + red("This device was deactivated") +
+           dim(" — your subscription is fine; run `tashan activate <key>`") + "\n";
+  else if (keyState === "invalid") out += "  " + red("Pro key not valid") + dim(" — check " + PORTAL) + "\n";
   else if (keyState === "unknown") out += dim("  Pro · could not reach tashan to check your licence") + "\n";
   out += dim("  local only — nothing was uploaded. tashan info <name> for the full dossier.") + "\n";
   return out;
@@ -356,54 +411,85 @@ export async function main(argv) {
     return 0;
   }
   if (cmd === "activate") {
+    // --forget must RELEASE the seat at Polar, not just delete our file. Deleting locally while the
+    // activation stays registered burns a device slot the customer cannot get back without support.
     if (a.forget) {
-      try { rmSync(keyPath()); process.stdout.write(dim(`  removed ${keyPath()}\n`)); }
-      catch { process.stdout.write(dim("  no stored licence on this machine\n")); }
+      const lic = storedLicence();
+      if (lic && lic.activation_id) {
+        const { status } = await polar("/deactivate",
+          { key: lic.key, activation_id: lic.activation_id });
+        if (status === 0) {
+          process.stderr.write("\n  " + red("Offline — the seat was NOT released.") +
+            dim("\n  Nothing removed. Run this again online, or release it at " + PORTAL + "\n"));
+          return 1;                    // refuse the half-done state rather than silently leaking a seat
+        }
+      }
+      try { rmSync(keyPath()); process.stdout.write("\n  " + jade("This machine is deactivated.") +
+        dim(`\n  seat released${lic && lic.activation_id ? "" : " (none was registered)"} · ${keyPath()} removed`) + "\n"); }
+      catch { process.stdout.write(dim("\n  no stored licence on this machine\n")); }
       return 0;
     }
+
     const given = a._[1] || process.env.TASHAN_KEY;
     if (!given) {
-      const have = storedKey();
-      process.stdout.write("\n  " + (have
-        ? bold("A licence is stored on this machine.") + dim(`\n  ${keyPath()} · ${have.slice(0, 12)}…`) +
-          dim("\n  tashan activate --forget removes it.")
-        : bold("No licence stored.") +
-          dim("\n  tashan activate <key>   — your key is in the Polar portal, and in the receipt email") +
-          dim("\n  https://polar.sh/purchases")) + "\n");
-      return have ? 0 : 1;
+      const lic = storedLicence();
+      process.stdout.write("\n  " + (lic
+        ? bold("This machine is activated.") +
+          dim(`\n  ${lic.label || "this device"} · key ${lic.key.slice(0, 12)}…`) +
+          dim(`\n  ${keyPath()}`) +
+          dim("\n  tashan activate --forget releases the seat · " + PORTAL + " lists every device")
+        : bold("This machine is not activated.") +
+          dim("\n  tashan activate <key>") +
+          dim("\n  Your key, invoices and subscription live at " + PORTAL)) + "\n");
+      return lic ? 0 : 1;
     }
-    // Validate BEFORE writing. Storing a bad key just moves the failure to the next command, when
-    // the user is no longer thinking about activation and has no idea why doctor is quiet.
-    const state = await verifyKey(given);
-    if (state === "invalid") {
-      process.stderr.write("\n  " + red("That key was rejected.") +
-        dim("\n  Copy it again from https://polar.sh/purchases — it starts with tashan_ or polar_.\n"));
-      return 1;
-    }
-    if (state === "unknown") {
-      process.stderr.write("\n  " + red("Could not reach tashan to check that key.") +
+
+    // Register the device with Polar BEFORE writing anything locally. Polar owns the device limit,
+    // the labels and the revoke button in the portal; a key stored here that Polar never activated
+    // would look fine to us and fail everywhere else.
+    const label = `${hostname()} · ${platform()}`;
+    const { status, json } = await polar("/activate", { key: given, label });
+    if (status === 0) {
+      process.stderr.write("\n  " + red("Could not reach Polar to activate.") +
         dim("\n  Nothing was saved. Try again when you are online.\n"));
       return 1;
     }
+    if (status === 403) {
+      process.stderr.write("\n  " + red("Every device slot on this licence is in use.") +
+        dim("\n  Release one at " + PORTAL + ", or run `tashan activate --forget` on a machine") +
+        dim("\n  you no longer use.\n"));
+      return 1;
+    }
+    if (status !== 200 || !json || !json.id) {
+      process.stderr.write("\n  " + red("That key was rejected.") +
+        dim("\n  Copy it again from " + PORTAL + " — it is under your subscription's benefits.\n"));
+      return 1;
+    }
+    const rec = { key: given, activation_id: json.id, label };
     try {
       mkdirSync(dirname(keyPath()), { recursive: true });
-      writeFileSync(keyPath(), given + "\n", { mode: 0o600 });
-      chmodSync(keyPath(), 0o600);   // pre-existing file keeps its old mode without this
+      writeFileSync(keyPath(), JSON.stringify(rec, null, 2) + "\n", { mode: 0o600 });
+      chmodSync(keyPath(), 0o600);   // an existing file keeps its old mode without this
     } catch (e) {
+      // The seat is already taken at Polar; leaving it registered with no local record would strand
+      // it. Hand it back before reporting the failure.
+      await polar("/deactivate", { key: given, activation_id: json.id });
       process.stderr.write("\n  " + red("Could not write " + keyPath()) + dim("\n  " + e.message +
-        "\n  Fallback: export TASHAN_KEY=" + given.slice(0, 8) + "…\n"));
+        "\n  The seat was released again. Fallback: export TASHAN_KEY=" + given.slice(0, 8) + "…\n"));
       return 1;
     }
     process.stdout.write("\n  " + jade("Pro is active on this machine.") +
-      dim(`\n  stored in ${keyPath()} — every shell, every project, no re-export.`) +
-      dim("\n  tashan doctor") + "\n");
+      dim(`\n  registered with Polar as "${label}" — see every device at ${PORTAL}`) +
+      dim(`\n  stored in ${keyPath()} · every shell, every project, no re-export`) +
+      dim("\n\n  tashan doctor") + "\n");
     return 0;
   }
 
   if (cmd === "doctor") {
     const { found, problems } = collect(configLocations(), skillLocations());
-    const key = resolveKey(a);
-    const keyState = key ? await verifyKey(key) : null;
+    const lic = resolveLicence(a);
+    const key = lic ? lic.key : null;
+    const keyState = await verifyLicence(lic);
     let lookup = null;
     try { lookup = await loadLookup(); } catch { /* fall back to the board rather than failing */ }
     const look = (item) => (lookup ? resolve(item, lookup) : match(item, rows));
@@ -429,7 +515,7 @@ export async function main(argv) {
           + "(tashan Pro, $6/mo — https://tashan.sh/pricing.html)") + "\n");
         return 0;
       }
-      results = await withTrends(results, key);
+      results = await withTrends(results, lic);
     }
 
     const sum = summarize(results);

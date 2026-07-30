@@ -177,7 +177,7 @@ site keeps updating — the worst possible split.
 ### What a customer's path actually is
 
 Buy on Polar → Polar issues a licence key → they read it from
-[polar.sh/purchases](https://polar.sh/purchases) → they call the API with it:
+[polar.sh/tashan/portal](https://polar.sh/tashan/portal) → they call the API with it:
 
 ```sh
 curl -H "Authorization: Bearer <key>" "https://tashan.sh/api/history?id=pkg:tavily-mcp"

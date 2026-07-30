@@ -111,5 +111,54 @@ ok("every bucket is within range", VECTORS.every(([id]) => {
   return Number.isInteger(n) && n >= 0 && n < 64;
 }));
 
-console.log(fail ? "PAYWALL FAILED" : "ok — licence gate");
+// ---- activation: the device limit must bind HERE, not only in the CLI's display ----------------
+// Polar can cap a licence to N devices, but that cap is decorative if the paid endpoint accepts the
+// key alone: one subscriber shares the key and everyone gets in. The activation id must reach Polar,
+// and it must be part of the cache identity — otherwise a released device rides a positive cached
+// under the same key by a device that is still active.
+{
+  const { activationFrom } = await import("./_license.js");
+  ok("activation is read from the header",
+     activationFrom(req({ "x-tashan-activation": " act_1 " })) === "act_1");
+  ok("a missing activation header is null, not empty string",
+     activationFrom(req({})) === null);
+
+  let sent = [];
+  globalThis.fetch = async (_u, o) => {
+    const b = JSON.parse(o.body); sent.push(b);
+    // the stub Polar: act_live is registered, anything else is gone
+    if (b.activation_id && b.activation_id !== "act_live")
+      return new Response(JSON.stringify({ detail: "not found" }), { status: 404 });
+    return new Response(JSON.stringify({ status: "granted", expires_at: null }), { status: 200 });
+  };
+
+  const envA = { POLAR_ORG_ID: "org_1", TASHAN_KV: kv() };
+  let r = await validate(envA, "shared_key", "act_live");
+  ok("an activated device passes", r.ok === true);
+  ok("...and the activation was actually forwarded to Polar",
+     sent.at(-1).activation_id === "act_live");
+
+  r = await validate(envA, "shared_key", "act_released");
+  ok("a released device is refused even though the KEY is still valid", r.ok === false);
+  ok("...with 403, not 503", r.status === 403);
+
+  // The cache trap: same key, different activation. If the cache keyed on the key alone, this
+  // second call would return the first call's positive without ever asking Polar.
+  const envB = { POLAR_ORG_ID: "org_1", TASHAN_KV: kv() };
+  await validate(envB, "shared_key", "act_live");
+  const before = sent.length;
+  r = await validate(envB, "shared_key", "act_released");
+  ok("a second device does not inherit the first device's cached pass", r.ok === false);
+  ok("...because the cache key includes the activation, so Polar was asked again",
+     sent.length > before);
+
+  // No activation at all (env-var key, or a product with activations switched off) must still work.
+  sent = [];
+  r = await validate({ POLAR_ORG_ID: "org_1", TASHAN_KV: kv() }, "plain_key");
+  ok("a key with no activation still validates", r.ok === true);
+  ok("...and no activation_id is sent when there is none",
+     !("activation_id" in sent.at(-1)));
+}
+
+console.log(fail ? "PAYWALL FAILED" : "ok — licence gate (incl. device activation)");
 process.exit(fail);

@@ -305,34 +305,50 @@ console.log("ok — version pin vs published latest");
 }
 console.log("ok — remote servers resolve by host");
 
-// ---- licence storage: precedence and the --forget trap -----------------------------------------
+// ---- licence storage: precedence, the JSON record, and the --forget trap -----------------------
 // A key that only lives in an env var is re-typed every shell and gone on a new machine, which is
-// the single most likely reason a paying customer concludes the product is broken.
-import { keyPath, storedKey, resolveKey, parseArgs } from "./tashan.mjs";
+// the single most likely reason a paying customer concludes the product is broken. The stored form
+// carries Polar's activation id too — without it, --forget cannot release the device seat.
+import { keyPath, storedLicence, resolveLicence, resolveKey, parseLicence, parseArgs, PORTAL } from "./tashan.mjs";
 import { mkdtempSync, writeFileSync, mkdirSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 {
   const sandbox = mkdtempSync(join(tmpdir(), "tashan-key-"));
   process.env.XDG_CONFIG_HOME = sandbox;
+  delete process.env.TASHAN_KEY;
   assert.ok(keyPath().startsWith(sandbox), "XDG_CONFIG_HOME is honoured");
-  assert.strictEqual(storedKey(), null, "no key stored yet reads as null, never a throw");
+  assert.strictEqual(storedLicence(), null, "nothing stored reads as null, never a throw");
   assert.strictEqual(resolveKey({}), null, "and resolves to nothing");
 
+  // A bare string is what TASHAN_KEY gives, and what someone pasting into the file by hand writes.
+  assert.deepStrictEqual(parseLicence("  raw_key\n"), { key: "raw_key", activation_id: null, label: null },
+    "a bare string parses, trimmed");
+  assert.strictEqual(parseLicence("{ not json"), null, "a broken record is null, not a crash");
+  assert.strictEqual(parseLicence('{"activation_id":"x"}'), null, "a record with no key is worthless");
+  assert.deepStrictEqual(parseLicence('{"key":"k","activation_id":"act_1","label":"box"}'),
+    { key: "k", activation_id: "act_1", label: "box" }, "the full record round-trips");
+
   mkdirSync(join(sandbox, "tashan"), { recursive: true });
-  writeFileSync(keyPath(), "from_disk\n");
-  assert.strictEqual(storedKey(), "from_disk", "trailing newline is trimmed");
+  writeFileSync(keyPath(), JSON.stringify({ key: "from_disk", activation_id: "act_9", label: "box" }));
   assert.strictEqual(resolveKey({}), "from_disk", "the stored key is used with no env var");
+  assert.strictEqual(resolveLicence({}).activation_id, "act_9",
+    "...and carries the activation id, or --forget silently leaks a device seat");
 
   process.env.TASHAN_KEY = "from_env";
   assert.strictEqual(resolveKey({}), "from_env", "env beats the file — CI and one-off checks");
+  assert.strictEqual(resolveLicence({}).activation_id, null,
+    "an env key has no activation — it must not inherit the stored one");
   assert.strictEqual(resolveKey({ key: "from_flag" }), "from_flag", "--key beats everything");
   delete process.env.TASHAN_KEY;
 
   // --forget must be a parsed flag. Unparsed it lands in _ and `activate --forget` would happily
-  // try to store the literal string "--forget" as the licence.
+  // try to register the literal string "--forget" as a licence with Polar.
   const a = parseArgs(["activate", "--forget"]);
   assert.strictEqual(a.forget, true, "--forget parses as a flag");
   assert.deepStrictEqual(a._, ["activate"], "...and never as the key itself");
-  console.log("ok — licence storage (precedence, trimming, --forget)");
+
+  // polar.sh/purchases is a 404. Every link we ship must be the org portal.
+  assert.strictEqual(PORTAL, "https://polar.sh/tashan/portal", "the portal URL is the org portal");
+  console.log("ok — licence record (precedence, activation id, --forget)");
 }

@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=88">
+  <link rel="stylesheet" href="/css/site.css?v=89">
   <meta name="robots" content="noindex">
 </head>
 <body>
@@ -36,7 +36,7 @@
 
     <h2>1 · Copy your licence key</h2>
     <p>Polar issued it with your subscription. Open the
-      <a class="link" href="https://polar.sh/purchases" rel="noopener">customer portal</a> and sign in with the
+      <a class="link" href="https://polar.sh/tashan/portal" rel="noopener">customer portal</a> and sign in with the
       email you just paid with — Polar sends a one-time code, there is no password to make.</p>
 
     <h2>2 · Activate it, once</h2>
@@ -45,24 +45,25 @@
       machine — not once per shell, and nothing to add to your shell profile. Every <code>doctor</code> run after
       it prints <span class="mono">Pro · licence active</span>, so you can always see it is on.</p>
 
-    <h2>On a second machine</h2>
-    <p>Run <code>npx tashan-cli activate</code> there with the same key — one subscription, all your machines, no
-      seat counting. If you no longer have the key it is in the Polar portal and in your receipt email; you can
-      also read it off the first machine with <code>cat ~/.config/tashan/key</code>. To remove it from a machine
-      you are handing on, <code>npx tashan-cli activate --forget</code>.</p>
+    <h2>On another machine</h2>
+    <p>Run <code>npx tashan-cli activate</code> there with the same key. Each machine registers as its own
+      device — named after its hostname — so the portal shows you exactly what is activated, and you can
+      release any of them. On a machine you are done with, <code>npx tashan-cli activate --forget</code> hands
+      the slot back.</p>
+
+    <h2>Your account is at Polar</h2>
+    <p>tashan.sh has no separate sign-in and looks the same whether you pay or not — there is nothing here to
+      log into and nothing you are missing. Everything account-shaped lives in one place:</p>
+    <p><a class="btn btn--ghost" href="https://polar.sh/tashan/portal" rel="noopener">Open your account &rsaquo;</a></p>
+    <p>Sign in with the email you paid with; Polar sends a one-time code, so there is no password to make.
+      That portal holds your licence key, your invoices and receipts, your activated devices, your payment
+      method, and the cancel button. Polar is the merchant of record for the sale, which is why billing is
+      theirs rather than ours — and why we never see or store your card.</p>
 
     <h2>What changed</h2>
-    <p>Free <code>doctor</code> told you <em>what is wrong</em>. It still does, for everyone, forever. With the key
-      it also names the replacement — which one, and how it measures.</p>
-
-    <h2>There is no account to log into</h2>
-    <p>tashan.sh has no sign-in, and it looks exactly the same whether you pay or not — there is nothing to
-      look for and nothing you are missing. Your subscription lives in one place: the <code>TASHAN_KEY</code>
-      in your terminal. <code>doctor</code> prints <span class="mono">Pro · licence active</span> on every run
-      so you never have to wonder whether it took.</p>
-    <p>Polar holds the billing side. Your key, invoices and the cancel button are all in
-      <a class="link" href="https://polar.sh/purchases" rel="noopener">their portal</a> — that sign-in is
-      Polar's, not ours.</p>
+    <p>Free <code>doctor</code> told you <em>what is wrong</em>. It still does, for everyone, forever. With the
+      licence it also names the replacement — which one, and how it measures. Every run prints
+      <span class="mono">Pro · licence active</span>, so you never have to wonder whether it took.</p>
 
     <div class="callout"><b>Nothing about your config is uploaded.</b> The CLI reads your local files and asks us
       only about capability names. That was true before you paid and it is true now.</div>
@@ -97,7 +98,7 @@
   </div>
 </footer>
 
-  <script src="/js/terminal.js?v=88" defer></script>
-  <script src="/js/site.js?v=88" defer></script>
+  <script src="/js/terminal.js?v=89" defer></script>
+  <script src="/js/site.js?v=89" defer></script>
 </body>
 </html>
