@@ -841,6 +841,40 @@ def snapshot_history(con):
 def slugify(cid):
     return re.sub(r"[^a-z0-9]+", "-", cid.lower()).strip("-")
 
+
+# Ownership is a NAMESPACE fact, not a substring one. This matched anywhere in the concatenated
+# package+repo string, so @atomicmail/mcp-modelcontextprotocol was published to the world as
+# "✓ Official from Anthropic" — an endorsement neither we nor Anthropic ever gave, on a package
+# whose only qualification was containing the protocol's name. @perplexity-ai/mcp-server got the
+# same badge via its source_repo. That is the reverse of the typosquat problem we already guard
+# against in similar_official: there we refuse to accuse, here we were happy to vouch.
+#
+# A package is official iff it lives in the organisation's own npm scope, or its repository is
+# owned by the organisation's own GitHub account. Both are checked on the exact namespace
+# segment — the scope before the first "/", and the owner before the first "/".
+OFFICIAL_NS = {
+    "Anthropic": {"npm": ("@modelcontextprotocol", "@anthropic-ai"),
+                  "gh": ("modelcontextprotocol", "anthropics")},
+    "OpenAI":    {"npm": ("@openai",), "gh": ("openai",)},
+    "Google":    {"npm": ("@google-cloud", "@google", "@google-gemini"),
+                  "gh": ("google", "googleapis", "google-gemini", "googlecloudplatform",
+                         "gemini-cli-extensions", "google-labs-code", "googlechrome",
+                         "chromedevtools")},
+    "Microsoft": {"npm": ("@microsoft", "@azure"),
+                  "gh": ("microsoft", "azure", "azure-samples", "azurecosmosdb", "microsoftdocs")},
+}
+
+def official_of(pkg, repo):
+    scope = (pkg or "").lower().split("/")[0] if (pkg or "").startswith("@") else ""
+    owner = (repo or "").lower().split("/")[0]
+    for org, ns in OFFICIAL_NS.items():
+        if scope and scope in ns["npm"]:
+            return org
+        if owner and owner in ns["gh"]:
+            return org
+    return None
+
+
 def export(con):
     cols = ["id","name","kind","title","description","npm_pkg","source_repo","registry_status",
             "config_reach","config_repos","stars_median","stars_max","last_seen",
@@ -993,14 +1027,6 @@ def export(con):
     # Resolve the publisher ONCE here instead of re-deriving it in index.js, prerender.py and the CLI
     # from a source_repo string each of them had to carry. Shipping the answer costs a short token;
     # shipping the input cost 9 KB gzipped in the board index, which is 20% of its whole budget.
-    def official_of(pkg, repo):
-        t = ((pkg or "") + " " + (repo or "")).lower()
-        if re.search(r"modelcontextprotocol|anthropic", t): return "Anthropic"
-        if re.search(r"(^|[/@\s])openai", t): return "OpenAI"
-        if re.search(r"google|googleapis|gemini", t): return "Google"
-        if re.search(r"(^|[/@\s])microsoft|(^|/)azure", t): return "Microsoft"
-        return None
-
     caps = []
     # Task tags, fetched ONCE for the whole export rather than per row — 4,900 single-row lookups inside
     # the loop below is the shape that turns a 2-second export into a minute.

@@ -13,7 +13,7 @@
   var KIND_LABEL = { npm: "npm", pkg: "npm-pkg", docker: "docker", python: "python", remote: "remote", skill: "skill" };
   var VIT_LABEL = { active: "active", stable: "stable", abandoned: "abandoned" };
   var VERDICTS = ["deep", "solid", "thin", "wrapper", "slop"];
-  var SORTS = [["tashan_score", "Trust"], ["adoption", "Adoption"], ["fresh", "Freshness"],
+  var SORTS = [["tashan_score", "tashan score"], ["adoption", "Adoption"], ["fresh", "Freshness"],
                ["expertise", "Expertise"], ["maint", "Upkeep"], ["name", "Name A–Z"]];
 
   // reuse terminal.js's session-cached loader (one fetch+parse of the slim index per session, shared)
@@ -272,7 +272,7 @@
     }
     var counts = data._catAgg.counts, top = data._catAgg.top;
     function row(id, label, count, on, lead) {
-      var tip = lead ? label + " — top: " + pretty(lead.name) + " (Trust " + lead.trust + ")" : label;
+      var tip = lead ? label + " — top: " + pretty(lead.name) + " (" + lead.trust + ")" : label;
       return railRow("cat", id, label, count, on, tip);
     }
     var live = data.cats.filter(function (cat) { return counts[cat.id]; })
@@ -336,11 +336,17 @@
   function render() {
     var bt = document.getElementById("boardTitle");
     var singleCat = state.cat.size === 1 ? Array.from(state.cat)[0] : null;
-    if (bt) bt.textContent = singleCat && data.catMeta[singleCat] ? data.catMeta[singleCat].label : "The field, ranked";
+    if (bt) bt.textContent = singleCat && data.catMeta[singleCat] ? data.catMeta[singleCat].label : "The Index";
+    // Only the category blurb, which says something the page cannot: what is IN this category. The
+    // default text was a paragraph restating the column headers, which already carry the same
+    // explanation in their tooltips — and it still called the score "Trust", a name retired two
+    // renames ago, so the one line most visitors read was also the one that was wrong.
     var bd = document.getElementById("boardDesc");
-    if (bd) bd.innerHTML = singleCat && data.catMeta[singleCat]
-      ? esc(data.catMeta[singleCat].blurb)
-      : 'Trust is a transparent composite of upkeep and freshness, gated by real adoption — never one black box. Tags like <span class="vd vd--deep">deep</span> and <span class="vd vd--thin">thin</span> are our expertise-eval\'s read. Open any row for the full breakdown.';
+    if (bd) {
+      var blurb = singleCat && data.catMeta[singleCat] ? data.catMeta[singleCat].blurb : "";
+      bd.textContent = blurb;
+      bd.hidden = !blurb;
+    }
 
     var list = data.caps.filter(passes).slice().sort(sortComparator);
     renderActiveBar(list.length);

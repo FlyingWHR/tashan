@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T07:11:32.420789+00:00",
+  "generated_at": "2026-07-30T16:45:01.890717+00:00",
   "method": "public signal: MCP registry + config-adoption + npm quality + LLM expertise-eval (SQLite pipeline)",
   "total_capabilities": 12109,
   "enriched_npm": 1412,
@@ -455,7 +455,7 @@
       "discord_url": null,
       "gh_homepage": "https://npmjs.org/package/chrome-devtools-mcp",
       "tasks": [],
-      "official": null,
+      "official": "Google",
       "slug": "pkg-chrome-devtools-mcp",
       "also_via": [
         "plugin"
@@ -3731,7 +3731,7 @@
       "discord_url": null,
       "gh_homepage": "https://docs.perplexity.ai/guides/mcp-server",
       "tasks": [],
-      "official": "Anthropic",
+      "official": null,
       "slug": "pkg-perplexity-ai-mcp-server",
       "rated": true
     },
@@ -20816,7 +20816,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Anthropic",
+      "official": null,
       "slug": "pkg-atomicmail-mcp-modelcontextprotocol",
       "rated": true
     },
@@ -23152,7 +23152,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": null,
+      "official": "Microsoft",
       "slug": "pkg-containerization-assist-mcp",
       "rated": true
     },
@@ -26804,7 +26804,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "pkg-google-surf-mcp",
       "rated": true
     },
@@ -33379,7 +33379,7 @@
           "b": "graded"
         }
       ],
-      "official": "Microsoft",
+      "official": null,
       "slug": "plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator",
       "rated": true
     },
@@ -42133,7 +42133,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "pkg-google-flights-mcp-server",
       "rated": true
     },
@@ -54690,7 +54690,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "pkg-google-health-fitbit-mcp",
       "rated": true
     },
@@ -58635,7 +58635,7 @@
           "b": "graded"
         }
       ],
-      "official": null,
+      "official": "Microsoft",
       "slug": "plugin-azurecosmosdb-cosmosdb-claude-code-plugin-azure-cosmos-db-assistant",
       "rated": true
     },
@@ -65037,7 +65037,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "pkg-jimothy-snicket-gemini-image-mcp",
       "rated": true
     },
@@ -79123,7 +79123,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "pkg-google-calendar-workspace-mcp-server",
       "rated": true
     },
@@ -80024,7 +80024,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "pkg-gcs-google-mcp-server",
       "rated": true
     },
@@ -91216,7 +91216,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "pkg-google-docs-workspace-mcp-server",
       "rated": true
     },
@@ -93046,7 +93046,7 @@
           "b": "graded"
         }
       ],
-      "official": "Google",
+      "official": null,
       "slug": "plugin-adelaidasofia-google-workspace-mcp-google-workspace-mcp",
       "rated": true
     },
@@ -122123,7 +122123,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Microsoft",
+      "official": null,
       "slug": "pkg-microsoft-outlook-mcp",
       "rated": true
     },
@@ -122229,7 +122229,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Microsoft",
+      "official": null,
       "slug": "pkg-ms-sharepoint-mcp",
       "rated": true
     },
@@ -122706,7 +122706,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Microsoft",
+      "official": null,
       "slug": "pkg-ms-calendar-mcp",
       "rated": true
     },
@@ -122918,7 +122918,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "OpenAI",
+      "official": null,
       "slug": "pkg-hypd-ai-openai-ads-mcp",
       "rated": true
     },
@@ -127288,7 +127288,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "plugin-johnisanerd-claude-skill-google-news-api-apify-google-news-api",
       "rated": true
     },
@@ -132075,7 +132075,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Anthropic",
+      "official": null,
       "slug": "plugin-ai-human-andalusia-hrevn-surface-anthropic-hrevn-for-claude-code",
       "rated": true
     },
@@ -138807,7 +138807,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Microsoft",
+      "official": null,
       "slug": "pkg-ms-contacts-mcp",
       "rated": true
     },
@@ -140291,7 +140291,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "plugin-stevegustafson32-google-multi-account-google-multi-account",
       "rated": true
     },
@@ -161064,7 +161064,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "plugin-johnisanerd-claude-skill-google-events-tracking-apify-google-events-tracking",
       "rated": true
     },
@@ -169774,7 +169774,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": null,
+      "official": "Microsoft",
       "slug": "plugin-azure-amg-skills-amg-toolkit",
       "rated": true
     },
@@ -173807,7 +173807,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "plugin-mariomagdy-gemini-as-tool-gemini-as-tool",
       "rated": true
     },
@@ -193188,7 +193188,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Anthropic",
+      "official": null,
       "slug": "plugin-anthropic-plugin-credit-memo-plugin-credit-memo",
       "rated": true
     },
@@ -193665,7 +193665,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "plugin-arescope-gemini-plugin-cc-gemini",
       "rated": true
     },
@@ -200061,7 +200061,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "plugin-shalomeir-gemini-plugin-cc-gemini-plugin-cc",
       "rated": true
     },
@@ -208045,7 +208045,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "plugin-spyrae-gemini-plugin-cc-g-cc",
       "rated": true
     },
@@ -218964,7 +218964,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "plugin-airaise-claude-channel-googlechat-googlechat",
       "rated": true
     },
@@ -237624,7 +237624,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Microsoft",
+      "official": null,
       "slug": "plugin-mohitkale-azure-devkit-azure-devkit",
       "rated": true
     },
@@ -250216,7 +250216,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "plugin-philipvanlewis-gemini-for-claude-gemini-for-claude",
       "rated": true
     },
@@ -260961,7 +260961,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Anthropic",
+      "official": null,
       "slug": "plugin-sandstorm-app-mcp-anthropic-sandstorm",
       "rated": true
     },
@@ -271513,7 +271513,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "registry-ai-smithery-artin0123-gemini-image-mcp-server",
       "rated": true
     },
@@ -277189,7 +277189,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "registry-com-clauxel-geminiomnirights-geminiomnirights-mcp",
       "rated": true
     },
@@ -277248,7 +277248,7 @@
       "discord_url": null,
       "gh_homepage": null,
       "tasks": [],
-      "official": "Google",
+      "official": null,
       "slug": "registry-com-clauxel-geminiupgradeqa-geminiupgradeqa-mcp",
       "rated": true
     },

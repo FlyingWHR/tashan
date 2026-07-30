@@ -97,23 +97,93 @@ def head(title, desc, url, lds):
         + ld + "\n</head>\n<body>\n" + NAV)
 
 
+T_SCORE = 'The tashan score, 0–100: upkeep and freshness, gated by real adoption and discounted where the evidence is thin. Every input is public and re-derivable, and no position can be bought.'
+T_EV = "The raw public signal the score was derived from — npm weekly downloads, or stars on the capability's own repository, or the public configs and marketplaces that reference it"
+T_HEALTH = 'Whether the project is still alive: active (recent work), stable (finished and still used), abandoned (archived or deprecated)'
+
+
+def compact(n):
+    if n is None:
+        return ""
+    n = float(n)
+    if n >= 1e6: return ("%.1f" % (n / 1e6)).rstrip("0").rstrip(".") + "m"
+    if n >= 1e3: return ("%.0f" % (n / 1e3)) + "k"
+    return "%d" % n
+
+
+def evidence(c):
+    """Mirror of evidence() in web/js/index.js — the same evidence, phrased the same way."""
+    if c.get("npm_downloads") is not None:
+        return compact(c["npm_downloads"]) + "/wk"
+    if c.get("gh_stars") is not None:
+        return compact(c["gh_stars"]) + " \u2605"
+    if c.get("config_reach"):
+        return "{:,}".format(c["config_reach"]) + (" marketplaces" if c.get("kind") == "plugin" else " repos")
+    return ""
+
+
+def vitality_cell(c):
+    """Mirror of vitalityCell() in web/js/index.js."""
+    v = c.get("vitality")
+    if v == "active":  return "active", "fresh--hot", ""
+    if v == "stable":  return "stable", "fresh--warm", "Mature & maintained — quiet but still adopted"
+    if v == "abandoned": return "abandoned", "fresh--cold", "Stale under issue pressure, deprecated, or archived"
+    iso = c.get("npm_last_publish") or c.get("gh_pushed") or c.get("last_seen")
+    if not iso:
+        return "\u2014", "fresh--warm", ""
+    try:
+        t = dt.datetime.fromisoformat(str(iso).replace("Z", "+00:00"))
+    except ValueError:
+        return "\u2014", "fresh--warm", ""
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=dt.timezone.utc)
+    months = (dt.datetime.now(dt.timezone.utc) - t).days / 30.44
+    if months < 1.5: return "active", "fresh--hot", ""
+    if months < 12:  return "%dmo" % round(months), "fresh--warm", ""
+    return ("%.1f" % (months / 12)).rstrip("0").rstrip(".") + "y", "fresh--cold", ""
+
+
 def board(rows):
-    """The same ranked-table shape as the index, server-rendered (no JS needed to read it)."""
+    """The ranked table, server-rendered — and structurally IDENTICAL to the one index.js builds.
+
+    These were two different tables showing the same rows. The hub printed a bare score, a plain-text
+    vitality word, an unlabelled Adoption integer and a long description column; the Index printed a
+    score with a bar, a coloured vitality chip, a formatted evidence figure and the expertise verdict.
+    Same data, two anatomies, two visual languages — so every hub looked like a worse version of the
+    board it was supposed to extend. One row shape now, styled by the one set of rules in site.css.
+    """
     out = ['<div class="board"><div class="board__scroll"><table class="board__t"><thead><tr>'
-           '<th class="rank">#</th><th>Capability</th><th class="num">tashan score</th>'
-           '<th>Vitality</th><th class="num">Adoption</th><th>What it does</th></tr></thead><tbody>']
+           '<th class="rank">#</th><th>Capability</th>'
+           '<th class="num" title="' + esc(T_SCORE) + '">tashan</th>'
+           '<th class="num" title="' + esc(T_EV) + '">Evidence</th>'
+           '<th title="' + esc(T_HEALTH) + '">Health</th></tr></thead><tbody>']
     for i, c in enumerate(rows):
         href = "/capability/" + c["slug"] + ".html"
-        d = clip(c.get("description"), 110)
-        kindlbl = {"skill": "skill"}.get(c.get("kind"), "server")
-        out.append('<tr><td class="rank">' + (str(i + 1) if c.get("tashan_score") is not None else "·") + '</td>'
-                   '<td><a class="link" href="' + href + '">' + esc(pretty(c["name"])) + "</a>"
-                   ' <span class="tag tag--' + kindlbl + '">' + kindlbl + "</span></td>"
-                   '<td class="num"><b>' + (str(int(round(c["tashan_score"]))) if c.get("tashan_score") is not None
-                                            else '<span class="unrated">not rated</span>') + "</b></td>"
-                   "<td>" + esc(c.get("vitality") or "—") + "</td>"
-                   '<td class="num">' + (str(int(round(c["adoption"]))) if c.get("adoption") is not None else "—") + "</td>"
-                   "<td>" + esc(d) + "</td></tr>")
+        t = c.get("tashan_score")
+        org = c.get("official")
+        off = (' <span class="official" title="Official from ' + esc(org) + '">\u2713 ' + esc(org) + "</span>") if org else ""
+        vd = (' <span class="vd vd--' + esc(c["expertise_verdict"]) + '">' + esc(c["expertise_verdict"])
+              + "</span>") if c.get("expertise_verdict") else ""
+        dep = ' <span class="fresh fresh--cold">deprecated</span>' if c.get("npm_deprecated") else ""
+        ev = evidence(c)
+        vtxt, vcls, vtitle = vitality_cell(c)
+        score = ('<span class="unrated">not scored yet</span>' if t is None
+                 else '<span class="sig__val">' + str(int(round(t))) + "</span>")
+        out.append(
+            '<tr data-href="' + href + '">'
+            '<td class="rank">' + (str(i + 1) if t is not None else "\u00b7") + "</td>"
+            '<td><div class="cap__name"><a class="cap__link" href="' + href + '">'
+            + esc(pretty(c["name"])) + "</a>"
+            ' <span class="tag">' + esc({"skill": "skill"}.get(c.get("kind"), "server")) + "</span>"
+            + off + vd + dep + "</div>"
+            '<div class="cap__id">' + esc(c["id"]) + "</div></td>"
+            '<td><div class="sig' + ("" if t is not None else " sig--none") + '">' + score
+            + '<span class="bar"><i style="width:' + str(int(round(t or 0))) + '%"></i></span></div></td>'
+            '<td class="num">' + ('<span class="ev">' + esc(ev) + "</span>" if ev
+                                  else '<span class="num--dim">\u2014</span>') + "</td>"
+            '<td><span class="fresh ' + vcls + '"'
+            + (' title="' + esc(vtitle) + '"' if vtitle else "") + ">" + esc(vtxt) + "</span></td>"
+            "</tr>")
     out.append("</tbody></table></div></div>")
     return "".join(out)
 
@@ -334,8 +404,13 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
     desc = ("Every category and every job tashan measures MCP servers and agent skills against — "
             + str(len(cats)) + " categories and " + str(len(tasks)) + " tasks, each ranked on public evidence.")
     pub_slugs = {t["slug"] for t in pub}
+    # A task with nothing measured behind it is not something to browse to — the link lands on an
+    # empty shelf. We track the job (it stays in tasks.json, and the CLI still matches on it); we just
+    # do not offer it as a way in until there is something to find.
+    listable = [t for t in tasks if by_task.get(t["slug"])]
+    empty = len(tasks) - len(listable)
     by_role = {}
-    for t in tasks:
+    for t in listable:
         for r in (t.get("roles") or ["other"]):
             by_role.setdefault(r, []).append(t)
     role_label = {r["id"]: r["label"] for r in roles}
@@ -350,7 +425,7 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
            '<header class="hubhead"><h1>Browse</h1>',
            '<p class="lede">Every category and every job we measure against. ',
            str(sum(len(v) for v in by_cat.values())), ' capabilities across ', str(len(cats)),
-           ' categories and ', str(len(tasks)), ' tasks.</p></header>']
+           ' categories and ', str(len(listable)), ' tasks.</p></header>']
 
     # ---- categories: the domain axis ----
     out.append('<section id="categories"><h2 class="hubh2">Categories — what it touches</h2>')
@@ -369,9 +444,10 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
 
     # ---- tasks: the job axis, grouped by who does the job ----
     out.append('<section id="tasks"><h2 class="hubh2">Tasks — what you\'re doing</h2>'
-               '<p class="hubnote">A task with fewer than ' + str(TASK_MIN) + ' measured capabilities behind it '
-               'is listed here but has no page of its own yet — we would rather say so than publish a shelf '
-               'with nothing on it.</p>')
+               '<p class="hubnote">A dashed tile has fewer than ' + str(TASK_MIN) + ' measured capabilities, '
+               'so it has no page of its own yet and opens the filtered Index instead.'
+               + ((' ' + str(empty) + ' more tasks we track have nothing measured behind them yet and are not '
+                  'listed.') if empty else "") + '</p>')
     # A heading over one chip is pure overhead — seven roles hold one or two tasks each. They gather
     # into a single trailing group rather than fragmenting the page into 23 near-empty sections.
     ROLE_MIN = 3
@@ -389,15 +465,14 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
     for rlabel, ritems in groups:
         items = sorted(ritems, key=lambda t: -len(by_task.get(t["slug"], [])))
         out.append('<div class="browserole"><h3 class="browserole__h mono">'
-                   + esc(rlabel) + "</h3><div class=\"browsetags\">")
+                   + esc(rlabel) + "</h3><div class=\"browsegrid browsegrid--tight\">")
         for t in items:
             n = len(by_task.get(t["slug"], []))
-            if t["slug"] in pub_slugs:
-                out.append('<a class="browsetag" href="/task/' + t["slug"] + '.html">'
-                           + esc(t["label"]) + '<span class="browsetag__c mono">' + str(n) + "</span></a>")
-            else:
-                out.append('<a class="browsetag browsetag--thin" href="/?task=' + t["slug"] + '">'
-                           + esc(t["label"]) + '<span class="browsetag__c mono">' + str(n) + "</span></a>")
+            published = t["slug"] in pub_slugs
+            href = ("/task/" + t["slug"] + ".html") if published else ("/?task=" + t["slug"])
+            out.append('<a class="browsecard' + ("" if published else " browsecard--thin") + '" href="' + href + '">'
+                       '<span class="browsecard__t">' + esc(t["label"]) + "</span>"
+                       '<span class="browsecard__c mono">' + str(n) + "</span></a>")
         out.append("</div></div>")
     out.append("</section>")
 

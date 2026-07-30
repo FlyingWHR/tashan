@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="tashan — measure what actually works">
   <meta name="twitter:description" content="The measurement layer for AI capabilities. We host nothing, sell nothing and run nothing — which is why the number means something.">
-  <link rel="stylesheet" href="/css/site.css?v=101">
+  <link rel="stylesheet" href="/css/site.css?v=105">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"tashan","url":"https://tashan.sh/","description":"The neutral measurement layer for AI capabilities. tashan measures MCP servers and agent skills on public evidence and sells none of them.","slogan":"Measure what actually works."}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"tashan","url":"https://tashan.sh/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://tashan.sh/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does tashan score MCP servers and skills?","acceptedAnswer":{"@type":"Answer","text":"tashan computes a transparent score from upkeep and freshness, gated by real adoption (npm downloads and public config reach). A separate LLM expertise-eval reads the actual capability and grades it deep / solid / thin / wrapper / slop. Every number is re-derivable from public sources."}},{"@type":"Question","name":"Does tashan sell the capabilities it scores?","acceptedAnswer":{"@type":"Answer","text":"No. tashan sells nothing it measures, hosts nothing, and takes no cut. It is not a directory competing with a platform store — Anthropic's own plugin directory tells you what you are allowed to install; tashan tells you what survives contact with real use. A store cannot be a disinterested rater of its own shelves, which is exactly why we sell none of what we score. Nothing you can buy, claim or sign up for moves a tashan score, and the scorer is asserted to read only public-signal columns in tests/test_firewall.py."}},{"@type":"Question","name":"What is the difference between an MCP server and an agent skill?","acceptedAnswer":{"@type":"Answer","text":"An MCP server exposes tools to an AI agent over the Model Context Protocol; an agent skill is a folder with a SKILL.md that the agent loads on demand. tashan tracks and scores both in one unified capability model."}}]}</script>
@@ -91,10 +91,8 @@
     <div class="section__head">
       <div>
         <p class="kicker">The Index</p>
-        <h2 id="boardTitle">The field, ranked</h2>
-        <p id="boardDesc">Every MCP server and skill, filed by domain and ranked on measured evidence — tashan score
-          (upkeep + freshness, gated by adoption) plus an expertise read like <span class="vd vd--deep">deep</span>
-          or <span class="vd vd--thin">thin</span>. Browse a category on the left, refine on top, open any row for the full breakdown.</p>
+        <h2 id="boardTitle">The Index</h2>
+        <p id="boardDesc" hidden></p>
       </div>
     </div>
 
@@ -163,10 +161,10 @@
   </div>
 </footer>
 
-  <script src="/js/ridge.js?v=101" defer></script>
-  <script src="/js/hero.js?v=101" defer></script>
-  <script src="/js/terminal.js?v=101" defer></script>
-  <script src="/js/site.js?v=101" defer></script>
-  <script src="/js/index.js?v=101" defer></script>
+  <script src="/js/ridge.js?v=105" defer></script>
+  <script src="/js/hero.js?v=105" defer></script>
+  <script src="/js/terminal.js?v=105" defer></script>
+  <script src="/js/site.js?v=105" defer></script>
+  <script src="/js/index.js?v=105" defer></script>
 </body>
 </html>

@@ -40,6 +40,10 @@ python3 tests/test_pkg_name.py || fail=1
 echo; echo "── type scale (12px floor) ────────────────────"
 python3 tests/test_type_scale.py || fail=1
 
+# 3b5. the "✓ Official" badge is an endorsement claim — it must be namespace-provable
+echo; echo "── official badge (endorsement claim) ─────────"
+python3 tests/test_official.py || fail=1
+
 # 3c. config parser — a wrong capability id invents one row AND loses the real one
 echo; echo "── config parser (capability_id) ──────────────"
 python3 tests/test_scrape.py || fail=1

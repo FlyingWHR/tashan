@@ -688,15 +688,16 @@ pre, code, .install__snip { max-width: 100%; }
 .browserole { margin-bottom: var(--sp-6); }
 .browserole__h { font-size:var(--fs-micro); letter-spacing:.08em; text-transform:uppercase; color: var(--text-faint);
   margin:0 0 var(--sp-2); }
-.browsetags { display:flex; flex-wrap:wrap; gap:.4rem; }
-.browsetag { display:inline-flex; align-items:center; gap:.4rem; font-size:var(--fs-sm); padding:.28rem .7rem;
-  border:1px solid var(--hairline); border-radius: var(--radius-pill); background:transparent;
-  color: var(--text-dim); text-decoration:none; transition: color .12s, border-color .12s; }
-.browsetag:hover { color: var(--text); border-color: var(--jade-line); }
-.browsetag__c { font-size:var(--fs-xs); color: var(--text-faint); }
+/* One item component for both halves of the page. Categories were aligned grid cards and tasks were
+   wrapping pills, so the two sections read as unrelated and — worse — the task counts never lined up
+   in a column, which is the only thing that makes 97 of them comparable at a glance. */
+.browsegrid--tight { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: var(--sp-2);
+  margin-bottom: var(--sp-2); }
+.browsegrid--tight .browsecard { padding: var(--sp-2) var(--sp-3); }
 /* A task below the publish floor has no page of its own — it links back into the filtered Index
-   instead, and says so by being visibly quieter rather than by looking identical and 404-ing. */
-.browsetag--thin { border-style:dashed; color: var(--text-faint); }
+   instead, and says so by being visibly quieter rather than looking identical and 404-ing. */
+.browsecard--thin { border-style: dashed; }
+.browsecard--thin .browsecard__t { color: var(--text-dim); }
 .hubnote { font-size:var(--fs-base); color: var(--text-faint); max-width: 62ch; margin: 0 0 var(--sp-4); }
 /* the rail's escape hatch to the full list */
 .crow--more { justify-content:flex-start; color: var(--text-faint); font-family: var(--font-mono);
