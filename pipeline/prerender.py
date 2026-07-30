@@ -253,6 +253,27 @@ def inline_data(c, gen):
     payload = json.dumps({"c": c, "at": gen}, ensure_ascii=False).replace("</", "<\\/")
     return '<script type="application/json" id="cap-data">' + payload + "</script>\n"
 
+def bake_hero(caps, total):
+    """Write the real counts into index.html's hero, so it is not em-dashes before JS runs.
+
+    The hero is the first thing a visitor reads and it said "— capabilities measured / of — tracked /
+    measuring…" until index.js fetched and filled it. On a site whose whole claim is that it has
+    measured the field, opening with a dash undersells at exactly the moment it matters, and on a
+    failed fetch it never resolves at all. JS still overwrites these with the live values; this only
+    changes what is true before it does. Regenerated every run, so it cannot go stale the way a
+    hand-typed number would.
+    """
+    idx = os.path.join(ROOT, "web", "index.html")
+    html = open(idx, encoding="utf-8").read()
+    when = datetime.now(timezone.utc).strftime("%b %-d")
+    for pat, val in ((r'(<b class="k" id="sCaps">)[^<]*(</b>)', f"{len(caps):,}"),
+                     (r'(<b id="sRepos">)[^<]*(</b>)', f"{total:,}"),
+                     (r'(<span class="dim" id="sDate">)[^<]*(</span>)', when)):
+        html = re.sub(pat, lambda m: m.group(1) + val + m.group(2), html, count=1)
+    open(idx, "w", encoding="utf-8").write(html)
+    print(f"hero: baked {len(caps):,} measured / {total:,} tracked / {when}")
+
+
 def sitemap(caps):
     # Every hand-written page that is linked and indexable. terms/privacy/refunds/support were added
     # to the footer of all ~5,800 pages and never to this list, so the four pages a buyer looks for
@@ -297,6 +318,7 @@ def main():
     if stale:
         print("removed %d orphaned page(s) no longer in the export" % len(stale))
     sitemap(caps)
+    bake_hero(caps, d.get("total_capabilities") or len(caps))
     print("prerendered %d capability pages -> %s" % (len(caps), OUT))
     print("sitemap: %d capability URLs + core pages" % len(caps))
 
