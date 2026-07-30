@@ -22,7 +22,7 @@
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/SpaceGrotesk-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=116">
+  <link rel="stylesheet" href="/css/site.css?v=117">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Audit and choose AI capabilities with tashan","description":"Check the MCP servers and agent skills already installed on your machine, then find and install measured replacements.","step":[{"@type":"HowToStep","position":1,"name":"Audit what you already have","text":"Run npx tashan-cli doctor. It reads your local agent config and reports what is deprecated, archived, abandoned, or shares a name with an official package. Nothing is uploaded."},{"@type":"HowToStep","position":2,"name":"Find something better","text":"Run npx tashan-cli search <query>, or browse the Index by category. Results are ranked by a tashan score derived from public evidence."},{"@type":"HowToStep","position":3,"name":"Install it","text":"Run npx tashan-cli add <name> to get the exact install command for your client — Claude Code, Cursor, Claude Desktop, Codex or plain npx."}]}</script>
 </head>
 <body>
@@ -97,10 +97,8 @@ npx tashan-cli info context7</code></pre>
       <div class="capsec__hd"><h2>Let your agent ask before it installs</h2></div>
       <p class="capsec__sub">Everything above assumes you are the one typing. If you would rather your
         coding agent check before it recommends or installs anything, install tashan into it once:</p>
-      <pre class="install__snip"><code>/plugin marketplace add tashan-sh/tashan
-/plugin install tashan</code></pre>
-      <p class="capsec__sub">Or wire the MCP server directly:
-        <code>claude mcp add tashan -- npx -y tashan-cli mcp</code>. The agent then gets three tools —
+      <pre class="install__snip"><code>claude mcp add tashan -- npx -y tashan-cli mcp</code></pre>
+      <p class="capsec__sub">The agent then gets three tools —
         find a capability for a job, check one before installing it, and audit the config already on the
         machine. All three are free; nothing about risk is ever behind the paid tier.</p>
 
@@ -145,7 +143,7 @@ npx tashan-cli info context7</code></pre>
   </div>
 </footer>
 
-  <script src="/js/terminal.js?v=116" defer></script>
-  <script src="/js/site.js?v=116" defer></script>
+  <script src="/js/terminal.js?v=117" defer></script>
+  <script src="/js/site.js?v=117" defer></script>
 </body>
 </html>

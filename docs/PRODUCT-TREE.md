@@ -58,6 +58,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `functions/api/polar.test.mjs` — Polar webhook verification — the security boundary. Run: node functions/api/polar.test.mjs
 - `tests/test_firewall.py` — The firewall test — the ranking can never be bought.
 - `tests/test_hubs.py` — tashan — the generated content tier: asset versioning, category hubs, skills, llms.txt.
+- `tests/test_links.py` — Every link and every install instruction must lead somewhere that exists.
 - `tests/test_official.py` — The "✓ Official" badge is an endorsement claim. It must be provable from the namespace.
 - `tests/test_pkg_name.py` — Every `npx …` invocation we publish must name a package that actually resolves to US.
 - `tests/test_product_tree.py` — docs/PRODUCT-TREE.md must describe every surface that exists, and describe none that don't.

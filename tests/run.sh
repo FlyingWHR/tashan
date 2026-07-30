@@ -56,6 +56,10 @@ python3 tests/test_product_tree.py || fail=1
 echo; echo "── security scan (the paid feature) ───────────"
 python3 tests/test_security_scan.py || fail=1
 
+# 3b9. a dead CTA costs the reader their intent — and two shipped
+echo; echo "── links + unpublished targets ────────────────"
+python3 tests/test_links.py || fail=1
+
 # 3c. config parser — a wrong capability id invents one row AND loses the real one
 echo; echo "── config parser (capability_id) ──────────────"
 python3 tests/test_scrape.py || fail=1
