@@ -218,3 +218,34 @@ console.log("ok — task ranking uses descriptions, weighted by measurement");
     "relevance must not be topped up for merely being in the inferred category");
 }
 console.log("ok — ranking weight is swept, not felt");
+
+// ---- the agent is the last checkpoint before something lands on a machine ------------------------
+// risks() is what an agent reads before recommending an install. It must carry the security audit in
+// full and for free: an agent that installs confirmed malware because the finding sat behind a
+// paywall is the worst outcome this product could produce.
+{
+  const { risks } = await import("./mcp.mjs");
+
+  let r = risks({ sec_max_severity: "MALICIOUS", sec_advisory_count: 1 });
+  assert.ok(r.some((x) => /malicious-packages/.test(x)), "malware is reported to the agent");
+  assert.ok(r.some((x) => /Do not install it/.test(x)),
+    "...with an explicit instruction, not a hint it has to interpret");
+
+  r = risks({ sec_advisory_count: 3, sec_max_severity: "HIGH" });
+  assert.ok(r.some((x) => /3 known advisories/.test(x) && /high/.test(x)),
+    "advisory count and severity both reach the agent");
+
+  r = risks({ sec_install_script: "node x.js" });
+  assert.ok(r.some((x) => /install time/.test(x) && /before any tool is called/.test(x)),
+    "install-time execution is reported, with why it matters");
+
+  r = risks({ sec_permissions: JSON.stringify(["shell", "credentials"]) });
+  assert.ok(r.some((x) => /shell, credentials/.test(x)),
+    "the permission surface is reported so the agent can relay it to the user");
+
+  assert.ok(Array.isArray(risks({ sec_permissions: "{oops" })),
+    "a malformed permissions field must never break the risk report");
+  assert.strictEqual(risks({ rated: true }).length, 0,
+    "a clean capability produces no risk lines — an agent must not be given noise to relay");
+}
+console.log("ok — the agent gets the full security audit, free");

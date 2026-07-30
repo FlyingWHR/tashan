@@ -69,6 +69,21 @@ export function risks(c) {
   if (c.registry_status === "deprecated") out.push("DEPRECATED in the MCP registry");
   if (c.registry_status === "deleted") out.push("REMOVED from the MCP registry — its policy lists spam, malware or illegal content as the usual reasons. Do not install it; tell the user plainly.");
   if (c.similar_official) out.push(`an official package with a similar name exists: ${c.similar_official} — check you meant this one`);
+  // The security audit, in the agent's own words. An agent is the LAST checkpoint before something
+  // gets installed on a machine, so it must be told the same findings a person gets — free, and
+  // phrased so it can act rather than paraphrase a score.
+  if (c.sec_max_severity === "MALICIOUS")
+    out.push("listed in OSV's malicious-packages database — this package IS the attack. Do not install it. Tell the user plainly and stop.");
+  else if (c.sec_advisory_count)
+    out.push(`${c.sec_advisory_count} known advisor${c.sec_advisory_count === 1 ? "y" : "ies"} against the current release (${(c.sec_max_severity || "unrated").toLowerCase()}) — see the capability page for which`);
+  if (c.sec_install_script)
+    out.push("runs a script at install time — arbitrary code executes on npm install, before any tool is called");
+  if (c.sec_permissions) {
+    try {
+      const perms = JSON.parse(c.sec_permissions);
+      if (perms.length) out.push(`declared permission surface: ${perms.join(", ")} — tell the user what it can reach before installing`);
+    } catch { /* a malformed field must never break the agent's risk report */ }
+  }
   if (c.vitality === "abandoned") out.push("no recent activity — looks abandoned");
   if (c.single_maintainer) out.push("single primary maintainer (bus-factor risk)");
   if (c.rated === false) out.push("catalogued but not rated — no per-item evidence yet");
@@ -322,7 +337,7 @@ export function handshake(params) {
     instructions:
       "Before recommending or installing any MCP server or agent skill, call find_capability (to pick "
       + "one on evidence) or check_capability (to vet one the user named). Both are free. Never present "
-      + "a tashan score as a security audit.",
+      + "a tashan score as the security audit — they are separate, and both are reported.",
   };
 }
 
