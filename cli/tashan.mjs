@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 // tashan — the measured layer for AI capabilities, in your terminal.
 //
-//   npx tashan search <query>        find MCP servers & skills, ranked by tashan score
-//   npx tashan top [category]        the leaderboard
-//   npx tashan info <name>           the measured dossier for one capability
-//   npx tashan add <name>            the install command for your client   ← the money shot
-//   npx tashan doctor                audit the config you actually have — dead, deprecated, risky
-//   npx tashan activate <key>        store your Pro licence on this machine (once, not per shell)
-//   npx tashan mcp                   run as an MCP server, so your AGENT can ask before installing
+//   npx tashan-cli search <query>        find MCP servers & skills, ranked by tashan score
+//   npx tashan-cli top [category]        the leaderboard
+//   npx tashan-cli info <name>           the measured dossier for one capability
+//   npx tashan-cli add <name>            the install command for your client   ← the money shot
+//   npx tashan-cli doctor                audit the config you actually have — dead, deprecated, risky
+//   npx tashan-cli activate <key>        store your Pro licence on this machine (once, not per shell)
+//   npx tashan-cli mcp                   run as an MCP server, so your AGENT can ask before installing
 //
 // Reads live public data from https://tashan.sh/data/index.json (no account, no backend, no telemetry).
 // Zero dependencies. The pure functions are exported for cli/tashan.test.mjs.
@@ -349,8 +349,8 @@ export async function main(argv) {
     return 0;
   }
   if (cmd === "mcp") {
-    // `npx -y tashan mcp` is the ONE install string: it resolves the published package by name and
-    // then runs the server. `npx -y tashan-mcp` would resolve a PACKAGE called tashan-mcp, which does
+    // `npx -y tashan-cli mcp` is the ONE install string: it resolves the published package by name and
+    // then runs the server. `npx -y tashan-cli mcp` would resolve a PACKAGE called tashan-mcp, which does
     // not exist — the bin of that name lives inside this package, and npx keys off the package name.
     await import("./mcp.mjs").then((m) => m.serve());
     return 0;

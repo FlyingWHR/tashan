@@ -186,7 +186,7 @@ def summary(c):
     # every dossier offers the next action: check whether YOU are running this, and what else you run.
     # without it a capability page is a dead end — the reader learns about one thing and leaves.
     audit = ('<p class="mono" style="font-size:.8rem;margin-top:var(--sp-6)"><b>Already running this?</b> '
-             '<code>npx tashan doctor</code> checks your whole config against the Index — '
+             '<code>npx tashan-cli doctor</code> checks your whole config against the Index — '
              '<a class="link" href="/start.html">how it works &rsaquo;</a></p>')
     # THE ONE PLACE THE PAID FEATURE IS ACTUALLY WANTED. 266 of these pages describe something
     # archived, deprecated or abandoned, and on every one of them the reader's next thought is "so
@@ -196,7 +196,7 @@ def summary(c):
     dying = (c.get("gh_archived") or c.get("npm_deprecated")
              or c.get("registry_status") in ("deprecated", "deleted") or c.get("vitality") == "abandoned")
     swap = ('<div class="callout" style="margin-top:var(--sp-6)"><b>Looking for a replacement?</b> '
-            '<code>npx tashan doctor</code> is free and tells you everything above about your whole '
+            '<code>npx tashan-cli doctor</code> is free and tells you everything above about your whole '
             'config. <a class="link" href="/pricing.html">tashan Pro</a> names the replacement — which '
             'one, and how it measures. $6/mo.</div>') if dying else ""
     return ('<div class="cap-hd"><a class="back" href="/">&lsaquo; The Index</a>'

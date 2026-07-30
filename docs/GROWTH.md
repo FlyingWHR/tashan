@@ -94,8 +94,8 @@ SEO surface that directories (thin listing pages) and stores (sales pages) can't
 depth. **The loop:** more coverage → more indexed pages → more organic search → more traffic →
 more badge installs → more coverage.
 
-### Loop 3 — The CLI / developer touchpoint (`npx tashan`)
-`npx tashan check` reads your `mcp.json` / `claude_desktop_config.json` and prints a Trust +
+### Loop 3 — The CLI / developer touchpoint (`npx tashan-cli`)
+`npx tashan-cli check` reads your `mcp.json` / `claude_desktop_config.json` and prints a Trust +
 Expertise readout for everything you're running — right in the terminal where the audience
 lives. Flags the thin/deprecated ones. This is *distribution inside the workflow*: it runs
 where the decision is made, links back to the site for detail, and is the natural top of the
@@ -121,7 +121,7 @@ depth limit → Pro.
 |---|---|---|
 | GitHub repos / READMEs | Embedded badge | 1 |
 | Google / AI search | Capability & compare pages | 2 |
-| The terminal (dev's home) | `npx tashan` CLI | 3 |
+| The terminal (dev's home) | `npx tashan-cli` CLI | 3 |
 | Email inbox | Watch alerts, weekly "movers" digest | 4 |
 | Social / Slack / X | Shareable capability OG cards | 1,2 |
 | Agent / IDE | tashan score in-context (later: MCP that returns scores) | 3 |
@@ -140,7 +140,7 @@ above adds coverage or data; the moat is the integral of the loops over time.
    primitive; ship it first.
 2. **Next:** Compare pages (loop 2 SEO) + Watch/alerts (loop 4, needs a tiny backend or a
    serverless function + email).
-3. **Then:** `npx tashan` CLI (loop 3) + per-capability OG image generation.
+3. **Then:** `npx tashan-cli` CLI (loop 3) + per-capability OG image generation.
 4. **Later:** Team tier + Data API + in-agent MCP that returns tashan scores.
 
 ---

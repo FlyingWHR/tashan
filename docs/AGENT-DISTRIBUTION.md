@@ -34,7 +34,7 @@ There are three real moments, and only three:
 
 1. **"I have a job and don't know what exists."** → the task hubs (`/task/<slug>`). This is browse, and
    it is why the axis is filed by work rather than by what a tool touches.
-2. **"Is what I'm already running dead?"** → `npx tashan doctor`. No browsing at all; the answer comes
+2. **"Is what I'm already running dead?"** → `npx tashan-cli doctor`. No browsing at all; the answer comes
    to you, and nobody else in the field answers this question.
 3. **"Which of these two?"** → a capability page, arrived at from a search engine or an agent, not from
    our nav.

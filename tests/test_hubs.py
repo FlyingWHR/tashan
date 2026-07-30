@@ -211,12 +211,13 @@ check("our manifest parses with our own ingester", len(_got) == 1)
 check("the plugin is named tashan", bool(_got) and _got[0]["name"] == "tashan")
 _plug = json.load(open(os.path.join(ROOT, "plugin", ".claude-plugin", "plugin.json")))
 _srv = (_plug.get("mcpServers") or {}).get("tashan") or {}
-# `npx -y tashan-mcp` would resolve a PACKAGE of that name, which does not exist — the bin of that
-# name lives inside the `tashan` package, and npx keys off the package name. Only one string works.
-check("plugin launches the server via `npx -y tashan mcp`",
-      _srv.get("command") == "npx" and _srv.get("args") == ["-y", "tashan", "mcp"])
 _cli = json.load(open(os.path.join(ROOT, "cli", "package.json")))
-check("published package name matches what the plugin npx-es", _cli.get("name") == "tashan")
+_pkg = _cli.get("name")
+# npx keys off the PACKAGE name, never a bin. Derive from package.json rather than hardcoding, so
+# renaming the package cannot leave the plugin pointing at a name nobody publishes — which is
+# exactly what happened when the CLI moved off `tashan` (taken on npm since 2020, ships no bin).
+check(f"plugin launches the server via `npx -y {_pkg} mcp`",
+      _srv.get("command") == "npx" and _srv.get("args") == ["-y", _pkg, "mcp"])
 check("every file the CLI imports is actually published",
       {"tashan.mjs", "doctor.mjs", "mcp.mjs"} <= set(_cli.get("files") or []))
 check("the bundled skill ships with the plugin",

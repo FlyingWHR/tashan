@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // tashan as an MCP server — the measured layer, inside the agent's decision loop.
 //
-//   claude mcp add tashan -- npx -y tashan mcp        <- the one install string
+//   claude mcp add tashan -- npx -y tashan-cli mcp        <- the one install string
 //
 // WHY THIS EXISTS AND /v0.1/* DOES NOT REPLACE IT
 // /v0.1/servers is byte-compatible with the MCP registry, which is elegant and passive: a host has to

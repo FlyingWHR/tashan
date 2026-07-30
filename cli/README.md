@@ -4,10 +4,10 @@ The measured layer for AI capabilities — search, rank, and install MCP servers
 terminal. Reads live public data from [tashan.sh](https://tashan.sh). No account, no backend, no telemetry.
 
 ```bash
-npx tashan search database        # find capabilities, ranked by Trust
-npx tashan top browser            # the leaderboard, optionally by category
-npx tashan info context7          # the measured dossier for one capability
-npx tashan add context7           # the install command for your client   ← the money shot
+npx tashan-cli search database        # find capabilities, ranked by Trust
+npx tashan-cli top browser            # the leaderboard, optionally by category
+npx tashan-cli info context7          # the measured dossier for one capability
+npx tashan-cli add context7           # the install command for your client   ← the money shot
 ```
 
 ## Commands

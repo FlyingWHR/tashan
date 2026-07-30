@@ -22,7 +22,7 @@ published as **plugins**:
 and declared in a first-class manifest at `.claude-plugin/marketplace.json`, against a published schema
 (`anthropic.com/claude-code/marketplace.schema.json`).
 
-**The evidence was already in our own tool.** `npx tashan doctor` on a working developer's machine found
+**The evidence was already in our own tool.** `npx tashan-cli doctor` on a working developer's machine found
 123 installed items and could identify only 18. The other 105 arrived through the plugin channel. Every
 skill the founder named by hand resolves to a plugin repo:
 

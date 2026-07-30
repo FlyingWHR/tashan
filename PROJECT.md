@@ -27,7 +27,7 @@ publish `N of ~M known, from these sources, synced T` (see `docs/SOURCING.md` §
 **他山** (*tashan*), from **他山之石，可以攻玉** — *a stone from another mountain can polish your jade.*
 We bring no stone of our own to sell; we judge the field with the field's **own public evidence** (its
 stones — the registry, npm, git history, the READMEs people wrote) and let the jade show itself. Always
-**lowercase** — it's a command you run (`tashan`, `tashan.sh`, `npx tashan`), not a brand you shout.
+**lowercase** — it's a command you run (`tashan`, `tashan.sh`, `npx tashan-cli`), not a brand you shout.
 
 ---
 
@@ -192,7 +192,7 @@ install path, and official tags Agensi lacks.
 - **Payments day 1:** card or USDC (x402); pay-per-use micropayment. Crypto = launch *convenience*
   (instant, global, machine-native), not a rail we operate.
 - **Four compounding PLG loops:** (1) **badges** [built] — maintainers embed → backlinks + brand on their
-  repos; a store can't run this loop. (2) SEO from capability + compare pages. (3) `npx tashan` CLI —
+  repos; a store can't run this loop. (2) SEO from capability + compare pages. (3) `npx tashan-cli` CLI —
   distribution inside the terminal. (4) watch/alerts — retention + the Pro wedge.
 - **Flywheel:** coverage → badges → backlinks → traffic → more data → better scores → more coverage.
   Retention data can't be backfilled — the moat is the integral of the loops over time.
@@ -208,7 +208,7 @@ install path, and official tags Agensi lacks.
    community ones (e.g. **impeccable** for design), unified capability model.
 4. **Full coverage parity+** vs Agensi/mcp.so/Smithery; classify the ~182 tail caps beyond the ranked set.
 5. **Security eval** — CVEs, single-maintainer risk, typosquats, tool-description prompt-injection.
-6. **`npx tashan` CLI** + per-capability OG images + capability-page prerender (for SEO loop 2).
+6. **`npx tashan-cli` CLI** + per-capability OG images + capability-page prerender (for SEO loop 2).
 7. **On-chain (later):** be the **ERC-8004 reputation oracle** payment/escrow rails *read* — NOT a payment
    rail (that would sell what we score). tashan occupies agent trust-stack layers 1 (Discovery), 6
    (Verification), 7 (Reputation); monetize via protocol/enterprise API, never a transaction cut.

@@ -1,7 +1,7 @@
 // tashan doctor — audit the agent config you actually have.
 //
-//   npx tashan doctor            what's installed, what's dead, what's risky
-//   npx tashan doctor --json     machine-readable
+//   npx tashan-cli doctor            what's installed, what's dead, what's risky
+//   npx tashan-cli doctor --json     machine-readable
 //
 // WHY THIS EXISTS, AND WHY IT IS NOT A REVIEW SITE
 // Every other index in this field measures the artifact: is it well-built, well-described, hosted,
