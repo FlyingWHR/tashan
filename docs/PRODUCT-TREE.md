@@ -59,6 +59,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `tests/test_expertise.py` — A published grade must not contradict itself.
 - `tests/test_firewall.py` — The firewall test — the ranking can never be bought.
 - `tests/test_hubs.py` — tashan — the generated content tier: asset versioning, category hubs, skills, llms.txt.
+- `tests/test_icons.py` — Every taxonomy id has an icon, and no icon is invisible at the size it ships.
 - `tests/test_links.py` — Every link and every install instruction must lead somewhere that exists.
 - `tests/test_official.py` — The "✓ Official" badge is an endorsement claim. It must be provable from the namespace.
 - `tests/test_pkg_name.py` — Every `npx …` invocation we publish must name a package that actually resolves to US.

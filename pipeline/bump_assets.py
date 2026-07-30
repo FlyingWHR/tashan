@@ -43,6 +43,33 @@ def check():
     return 1
 
 
+def inline_icons():
+    """Fold web/assets/icons.svg into every page carrying the <!--ICONS--> marker.
+
+    An external <use href="/assets/icons.svg#id"> costs a second request and, in Safari, does not
+    inherit currentColor across documents — which would defeat a stroke-only set whose whole point is
+    taking the colour of the row it sits in. Inlining is 1.3 KB gzipped. Re-running replaces any
+    sprite already inlined, so editing pipeline/icons.py and re-bumping actually lands the change.
+    """
+    sprite_path = os.path.join(ROOT, "web", "assets", "icons.svg")
+    if not os.path.exists(sprite_path):
+        return 0
+    sprite = open(sprite_path, encoding="utf-8").read()
+    n = 0
+    for f in glob.glob(os.path.join(ROOT, "web", "*.html")):
+        src = open(f, encoding="utf-8").read()
+        if "<!--ICONS-->" in src:
+            out = src.replace("<!--ICONS-->", sprite, 1)
+        elif '<svg class="icon-sprite"' in src:
+            out = re.sub(r'<svg class="icon-sprite".*?</svg>', lambda _m: sprite, src, count=1, flags=re.S)
+        else:
+            continue
+        if out != src:
+            open(f, "w", encoding="utf-8").write(out)
+            n += 1
+    return n
+
+
 def bump():
     old, new = assets.V, assets.V + 1
     p = os.path.join(ROOT, "pipeline", "assets.py")
@@ -61,6 +88,8 @@ def bump():
         r = subprocess.run([sys.executable, gp], capture_output=True, text=True)
         tail = (r.stdout or r.stderr).strip().splitlines()
         print(f"  {g}: {tail[-1] if tail else 'ok'}")
+    n = inline_icons()
+    print(f"  icons: sprite inlined into {n} page(s)")
     return 0
 
 

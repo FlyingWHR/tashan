@@ -202,10 +202,19 @@
       '">+ ' + hidden + " more &rsaquo;</a>";
   }
 
-  function railRow(attr, id, label, count, on, tip) {
+  // The icon id is derived, never stored: cat-<category> / role-<role>. The sprite inlined in the
+  // page supplies the geometry, so there is no second copy of the path data to drift from
+  // pipeline/icons.py. A missing symbol renders nothing, which is the right failure — a label with
+  // no icon still reads.
+  function icon(kind, id) {
+    return '<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-' +
+      kind + "-" + esc(String(id)) + '"/></svg>';
+  }
+
+  function railRow(attr, id, label, count, on, tip, iconKind) {
     return '<button class="crow' + (on ? " is-on" : "") + '" data-' + attr + '="' + esc(id) + '"' +
       ' type="button" aria-pressed="' + !!on + '" title="' + esc(tip || label) + '">' +
-      '<span class="crow__l">' + esc(label) + "</span>" +
+      '<span class="crow__l">' + (iconKind ? icon(iconKind, id) : "") + esc(label) + "</span>" +
       '<span class="crow__c mono">' + count + "</span></button>";
   }
 
@@ -273,7 +282,7 @@
     var counts = data._catAgg.counts, top = data._catAgg.top;
     function row(id, label, count, on, lead) {
       var tip = lead ? label + " — top: " + pretty(lead.name) + " (" + lead.trust + ")" : label;
-      return railRow("cat", id, label, count, on, tip);
+      return railRow("cat", id, label, count, on, tip, "cat");
     }
     var live = data.cats.filter(function (cat) { return counts[cat.id]; })
       .sort(function (a, b) { return counts[b.id] - counts[a.id]; });

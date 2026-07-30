@@ -64,6 +64,10 @@ python3 tests/test_links.py || fail=1
 echo; echo "── expertise grades (self-consistency) ────────"
 python3 tests/test_expertise.py || fail=1
 
+# 3c1. four of the first 39 icons rendered as nothing, with no error anywhere
+echo; echo "── icons (visible at ship size) ───────────────"
+python3 tests/test_icons.py || fail=1
+
 # 3c. config parser — a wrong capability id invents one row AND loses the real one
 echo; echo "── config parser (capability_id) ──────────────"
 python3 tests/test_scrape.py || fail=1

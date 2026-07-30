@@ -679,15 +679,23 @@ pre, code, .install__snip { max-width: 100%; }
 .legend { max-width: 46rem; }
 
 /* ---------- browse.html: the parent index for every category and task hub ---------- */
-.browsegrid { display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--sp-3);
+.browsegrid { display:grid; grid-template-columns: repeat(auto-fill, minmax(238px, 1fr)); gap: var(--sp-3);
   margin: var(--sp-4) 0 var(--sp-8); }
-.browsecard { display:flex; flex-wrap:wrap; align-items:baseline; gap:.5rem; padding: var(--sp-3) var(--sp-4);
+/* Grid, not wrapping flex. With flex the row fitted in 183px of a 186px box — three pixels of
+   slack — so any label a hair wider bumped the count onto its own line and the card grew taller
+   than its neighbours. A grid track sizes the label as 1fr and it truncates instead of pushing. */
+.browsecard { display:grid; grid-template-columns: auto minmax(0,1fr) auto; align-items:center;
+  column-gap:.5rem; row-gap:.15rem; padding: var(--sp-3) var(--sp-4);
   border:1px solid var(--hairline); border-radius: var(--radius); background: var(--surface);
   color: var(--text); text-decoration:none; transition: border-color .12s, background .12s; }
+.browsecard:not(:has(.icon)) { grid-template-columns: minmax(0,1fr) auto; }
 .browsecard:hover { border-color: var(--jade-line); background: var(--surface-2); }
-.browsecard__t { font-weight:500; }
-.browsecard__c { color: var(--jade); font-size:var(--fs-sm); margin-left:auto; }
-.browsecard__lead { flex-basis:100%; font-size:var(--fs-xs); color: var(--text-faint); }
+/* The icon costs width, and without min-width:0 a long label refuses to shrink, so the count wraps
+   to a second line and the card grows. Let the label truncate instead — the count is the comparable
+   number and must stay on the label's row. */
+.browsecard__t { font-weight:500; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.browsecard__c { color: var(--jade); font-size:var(--fs-sm); justify-self:end; }
+.browsecard__lead { grid-column:1/-1; font-size:var(--fs-xs); color: var(--text-faint); }
 .browserole { margin-bottom: var(--sp-6); }
 .browserole__h { font-size:var(--fs-micro); letter-spacing:.08em; text-transform:uppercase; color: var(--text-faint);
   margin:0 0 var(--sp-2); }
@@ -751,3 +759,18 @@ h1, h2,
   .secrow { grid-template-columns: 1fr auto; }
   .secrow__d { grid-column: 1 / -1; text-align:left; }
 }
+
+/* ---------- taxonomy icons (pipeline/icons.py -> web/assets/icons.svg) ---------- */
+/* The sprite is inlined once per page and hidden; every reference is a <use>. Stroke-only and
+   currentColor, so one icon serves the rail, a jade chip and a card without needing variants. */
+.icon-sprite { position:absolute; width:0; height:0; overflow:hidden; }
+.icon { width:1.15em; height:1.15em; flex-shrink:0; vertical-align:-0.15em;
+        color: var(--text-dim); transition: color .12s var(--ease); }
+.crow .icon { width:1.2em; height:1.2em; margin-right:.55rem; }
+.crow:hover .icon, .crow.is-on .icon { color: var(--jade); }
+.browsecard .icon { width:1.05em; height:1.05em; margin-right:.1rem; }
+.browsecard:hover .icon { color: var(--jade); }
+.browserole__h .icon { width:1.15em; height:1.15em; margin-right:.45rem; color: var(--text-dim); }
+.hubhead .icon, .cap-hd .icon { width:1em; height:1em; margin-right:.4rem; }
+/* the rail row is a flex button; the icon must not squash the label */
+.crow__l { display:flex; align-items:center; min-width:0; }

@@ -25,6 +25,7 @@ import glob, html, json, os, re, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import assets
+import icons
 AV = str(assets.V)
 DATA = os.path.join(ROOT, "web", "data", "capabilities.json")
 CATS = os.path.join(ROOT, "web", "data", "categories.json")
@@ -434,7 +435,7 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
                {"@type": "ListItem", "position": 1, "name": "tashan", "item": BASE + "/"},
                {"@type": "ListItem", "position": 2, "name": "Browse", "item": url}]}]
 
-    out = [head(title, desc, url, lds), '<main class="wrap">',
+    out = [head(title, desc, url, lds), icons.sprite(), '<main class="wrap">',
            '<header class="hubhead"><h1>Browse</h1>',
            '<p class="lede">Every category and every job we measure against. ',
            str(sum(len(v) for v in by_cat.values())), ' capabilities across ', str(len(cats)),
@@ -449,6 +450,7 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
             continue
         lead = next((r for r in rows if r.get("tashan_score") is not None), None)
         out.append('<a class="browsecard" href="/category/' + cat["id"] + '.html">'
+                   + icons.use("cat-" + cat["id"]) +
                    '<span class="browsecard__t">' + esc(cat["label"]) + "</span>"
                    '<span class="browsecard__c mono">' + str(len(rows)) + "</span>"
                    + ('<span class="browsecard__lead">top: ' + esc(pretty(lead["name"])) + "</span>"
@@ -477,8 +479,12 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
 
     for rlabel, ritems in groups:
         items = sorted(ritems, key=lambda t: -len(by_task.get(t["slug"], [])))
+        # the heading carries the role's icon; the tiles under it are individual tasks, which
+        # have no icon of their own (69 of them, and a per-task mark would be noise not signal)
+        role_id = next((r["id"] for r in roles if r["label"] == rlabel), "Also")
         out.append('<div class="browserole"><h3 class="browserole__h mono">'
-                   + esc(rlabel) + "</h3><div class=\"browsegrid browsegrid--tight\">")
+                   + icons.use("role-" + role_id) + esc(rlabel)
+                   + "</h3><div class=\"browsegrid browsegrid--tight\">")
         for t in items:
             n = len(by_task.get(t["slug"], []))
             published = t["slug"] in pub_slugs
