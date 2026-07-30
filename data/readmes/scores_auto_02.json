@@ -1,0 +1,122 @@
+[
+  {
+    "id": "plugin:actionbook/actionbook/actionbook",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "Subcommands deliberately undocumented — 'your agent discovers the full command set'"
+  },
+  {
+    "id": "pkg:@executeautomation/playwright-mcp-server",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Real playwright_resize({device}) calls and symptom/solution fixes; tool list is external"
+  },
+  {
+    "id": "pkg:@jpisnice/shadcn-ui-mcp-server",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "States the 60/hr vs 5000/hr GitHub rate limits; no tool reference outside docs/ links"
+  },
+  {
+    "id": "pkg:@voyagier/cli",
+    "expertise": 88,
+    "verdict": "deep",
+    "note": "Seven-step booking with real IATA/date args; warns never to retry a successful book"
+  },
+  {
+    "id": "pkg:mcp-aiven",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Warns agents can drop databases; documents the 403-everything EXTRA_PROTECTION failure"
+  },
+  {
+    "id": "pkg:@blockrun/mcp",
+    "expertise": 66,
+    "verdict": "solid",
+    "note": "Profile table and $5-covers cost math; the 20 tools are named but never documented"
+  },
+  {
+    "id": "plugin:oracle/netsuite-suitecloud-sdk/netsuite-suitecloud",
+    "expertise": 40,
+    "verdict": "thin",
+    "note": "Repo index of 5 SuiteCloud packages; the agent skills get one link and no description"
+  },
+  {
+    "id": "plugin:growthxai/output/outputai",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "Documents the Output framework, not the plugin's 5 agents or 40+ skills; real code blocks"
+  },
+  {
+    "id": "plugin:spotify/save-to-spotify/save-to-spotify",
+    "expertise": 90,
+    "verdict": "deep",
+    "note": "Says it does not generate speech; per-flag tables plus timeline JSON and its rules"
+  },
+  {
+    "id": "plugin:cookiy-ai/user-research-skill/cookiy",
+    "expertise": 62,
+    "verdict": "solid",
+    "note": "Flags the Cowork network-egress allowlist step; capabilities are four one-line rows"
+  },
+  {
+    "id": "plugin:aklofas/kicad-happy/kicad-happy",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "Real analysis output (Vout=3.87V, fc=169 Hz) plus the /plugin update bug and fix"
+  },
+  {
+    "id": "plugin:joaoh82/rustunnel/rustunnel",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Deep rustunnel CLI docs with real tunnel output; the MCP server itself gets three lines"
+  },
+  {
+    "id": "plugin:aminforou/mcp-gsc/search-console-mcp",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Tool table names required inputs; changelog records the mcp 2.0 breakage and the pin fix"
+  },
+  {
+    "id": "plugin:quenty/nevermoreengine/nevermore-claude",
+    "expertise": 42,
+    "verdict": "thin",
+    "note": "NevermoreEngine's 278-package index; the strict-typing-luau skill is never mentioned"
+  },
+  {
+    "id": "plugin:flutter/agent-plugins/dart-flutter",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Each of 10 skills gets a description and a concrete example prompt; no stated limitation"
+  },
+  {
+    "id": "plugin:galaxy-dawn/claude-scholar/claude-scholar",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "First 10k is badges, Kimi affiliate links, and a changelog; no install or skill docs"
+  },
+  {
+    "id": "pkg:@localstack/localstack-mcp-server",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Per-tool key-features table with each tool's prerequisites; self-labelled experimental"
+  },
+  {
+    "id": "pkg:mcp-server-scf",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Domain table with tool counts; says plainly there is no hosted default and calls fail"
+  },
+  {
+    "id": "pkg:@savvly/mcp-server",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "Nine tools as one-liners and a precise analytics disclosure; nothing but install config"
+  },
+  {
+    "id": "pkg:emailmd",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Runnable render() example; flags the async v0.3.0 break and pre-1.0 API churn"
+  }
+]

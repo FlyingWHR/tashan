@@ -1,0 +1,22 @@
+[
+  {"id": "pkg:peckish-mcp", "expertise": 79, "verdict": "solid", "note": "Session transcript shows real tool args and fee totals; clients without dialogs cannot order."},
+  {"id": "pkg:@paretools/git", "expertise": 68, "verdict": "solid", "note": "Monorepo README shared with 11 sibling packages; git status is its one worked example."},
+  {"id": "pkg:token-pilot", "expertise": 76, "verdict": "solid", "note": "Client matrix marks subagents unsupported outside Claude Code; 25 tools linked, not listed."},
+  {"id": "pkg:@i4ctime/q-ring", "expertise": 78, "verdict": "solid", "note": "Documents the qring CLI in depth; the 44 MCP tools appear only as a badge count."},
+  {"id": "pkg:steam-local-mcp", "expertise": 83, "verdict": "deep", "note": "Tools split by whether a Web API key is needed; no purchase or uninstall tool exists."},
+  {"id": "pkg:agentic-os-mcp", "expertise": 55, "verdict": "thin", "note": "The npm MCP server gets one paragraph; its tool list is deferred to mcp/README.md."},
+  {"id": "plugin:gemini-cli-extensions/cloud-sql-mysql/cloud-sql-mysql", "expertise": 78, "verdict": "solid", "note": "Beta banner, IAM roles and the private-IP VPC constraint; four skills get one line each."},
+  {"id": "plugin:crowdsecurity/crowdsec-skill/crowdsec", "expertise": 72, "verdict": "solid", "note": "'What it does not do': deploys and debugs CrowdSec but will not author parsers or rules."},
+  {"id": "plugin:growthbook/skills/growthbook", "expertise": 87, "verdict": "deep", "note": "26 skills tabled; a do-not-do list names the 60 rpm limit and unsupported bandit tests."},
+  {"id": "plugin:honeycombio/agent-skill/honeycomb", "expertise": 52, "verdict": "thin", "note": "Nine skills named in one line; the body is install commands for five different hosts."},
+  {"id": "plugin:agenticempire/axint/axint", "expertise": 76, "verdict": "solid", "note": "MCP inventory lists ~36 tool names with no descriptions; the listing claims 13 tools."},
+  {"id": "plugin:linq-team/claude-code-imessage-channel/imessage", "expertise": 86, "verdict": "deep", "note": "Six tools with params and return values; states the API exposes no history or search."},
+  {"id": "plugin:josephschmitt/monocle/monocle", "expertise": 76, "verdict": "solid", "note": "Four MCP tools named in a single line; Pause is noted as Claude Code only."},
+  {"id": "plugin:williamzujkowski/nexus-agents/nexus-agents", "expertise": 58, "verdict": "thin", "note": "Calls its own n=10 bug-catch figures directional, not measured; no install in 10k."},
+  {"id": "plugin:officecli/officecli-skills/officecli", "expertise": 74, "verdict": "solid", "note": "Five worked generate commands; the plugin is an optional section of a CLI README."},
+  {"id": "plugin:7xuanlu/origin/origin", "expertise": 70, "verdict": "solid", "note": "Documents 'Wenlan' throughout though the plugin is named origin; macOS Intel unsupported."},
+  {"id": "plugin:scandit/scandit-sdk-skills/scandit-sdk", "expertise": 82, "verdict": "deep", "note": "Eleven skill rows carry real API names and version deltas; id-bolt marked web-only."},
+  {"id": "plugin:serpapi/serpapi-claude-plugin/serpapi-claude-plugin", "expertise": 74, "verdict": "solid", "note": "One skill covers 107 engines; free tier stated as 250 searches/month."},
+  {"id": "plugin:digital-process-tools/claude-supertool/supertool", "expertise": 77, "verdict": "solid", "note": "Warns Claude Code truncates hook stdout near 7KB; the ~40 ops live in docs/operations."},
+  {"id": "plugin:tinyfish-io/tinyfish-web-agent-integrations/tinyfish", "expertise": 42, "verdict": "thin", "note": "Repo index: six integrations tabled; the Claude plugin is a link, no install or usage."}
+]

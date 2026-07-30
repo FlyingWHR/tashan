@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pkg:vaiz-mcp",
+    "expertise": 55,
+    "verdict": "thin",
+    "note": "Config blocks for three clients and one callTool example; the tools are never listed."
+  },
+  {
+    "id": "pkg:@mcpfinder/server",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Limitations state the hosted endpoint does not exist; one /Users/... path leaked into it."
+  },
+  {
+    "id": "pkg:@multimail/mcp-server",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "50 tools grouped by scope; send+oversight key combos rejected to stop self-approval."
+  },
+  {
+    "id": "pkg:@stitchapi/docs-mcp",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "StitchAPI library README with a 15-badge wall; the docs MCP's two tools never appear."
+  },
+  {
+    "id": "pkg:@aiwerk/mcp-server-imap",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Explains why the hosted tier blocks sending (shared IP); CLI args and exit JSON shown."
+  },
+  {
+    "id": "pkg:rosetta-mcp-server",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "Shows a two-tool call with real JSON output and admits it removed a false capability ad."
+  },
+  {
+    "id": "pkg:minipainter",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Real CLI invocations and the inventory JSON shape; the 7 MCP tools are names only."
+  },
+  {
+    "id": "pkg:callimachus-mcp",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Desktop-app README; the MCP tools appear inline in prose, never as a documented set."
+  },
+  {
+    "id": "pkg:@buzzr/mcp",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Calls PrizePicks partially verified and Underdog unverified; tool docs live elsewhere."
+  },
+  {
+    "id": "pkg:@chaixueyuan/weapp-agent-mcp",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "A boundaries section (serial screenshots, timeouts) and the --port vs --auto-port trap."
+  },
+  {
+    "id": "pkg:@chanmeng666/archlang-mcp",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "A whole .arch program with its rendered plan; the MCP server's tools are not covered."
+  },
+  {
+    "id": "pkg:unreal-engine-mcp-server",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Warns bAllowNonLoopback without a capability token exposes every tool to the LAN."
+  },
+  {
+    "id": "pkg:@didaai/hotelbooking",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Full JSON-RPC curl with the Accept-header gotcha; heavy unverifiable scale claims."
+  },
+  {
+    "id": "pkg:npx-vibe",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "Prints a real scan with evidence lines and says download counts are not a safety proof."
+  },
+  {
+    "id": "pkg:dingdawg-finance-agent",
+    "expertise": 50,
+    "verdict": "thin",
+    "note": "Tool table with per-tier daily quotas; no parameters, no example, no method given."
+  },
+  {
+    "id": "pkg:dingdawg-healthcare-agent",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "Same template as its finance sibling; adds a 45 CFR 164 reference and a no-advice line."
+  },
+  {
+    "id": "pkg:equateit-mcp",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "Tool list deliberately left to the OpenAPI generator; no usage example anywhere."
+  },
+  {
+    "id": "pkg:gopeak",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Marks mutation groups audit-required until fixture evidence exists; checksum install."
+  },
+  {
+    "id": "pkg:assay-oracle-mcp",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Publishes only after 20+ probes and says a fresh deploy starts with an empty corpus."
+  },
+  {
+    "id": "plugin:pixeltable/pixeltable-skill/pixeltable",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "Five install paths and a reference-file map; hooks are Claude Code only."
+  }
+]

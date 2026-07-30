@@ -1,0 +1,22 @@
+[
+  {"id": "pkg:@homespunapps/mcp", "expertise": 50, "verdict": "thin", "note": "Every reference deferred to docs.homespun.dev; states plainly the hosted relay is not open source"},
+  {"id": "pkg:@2sio/mcp", "expertise": 85, "verdict": "deep", "note": "Says the hosted signer sees your private key, and that maxPriceUsd defaults to Infinity with no cap"},
+  {"id": "pkg:@cstart/coldstart", "expertise": 79, "verdict": "solid", "note": "Ships an explicit `unwire` reverse because npm fires no uninstall hook; per-client wiring spelled out"},
+  {"id": "pkg:crypto-quant-signal-mcp", "expertise": 76, "verdict": "solid", "note": "Prints a full get_trade_call JSON response and admits ~99% of evaluations return HOLD"},
+  {"id": "pkg:codebase-memory-mcp", "expertise": 72, "verdict": "solid", "note": "Daemon coordination, conflict logs and Windows gotchas documented; the 15 MCP tools are never listed"},
+  {"id": "pkg:@devds1989/t-rush-mcp", "expertise": 52, "verdict": "thin", "note": "Six tools at one line each and a comment-style table; no example call, argument or output"},
+  {"id": "pkg:tmdb-mcp", "expertise": 79, "verdict": "solid", "note": "Tool table names real gaps: discover_tv can't filter by person, ratings report unconfigured without OMDb"},
+  {"id": "pkg:codecartographer-pi", "expertise": 83, "verdict": "deep", "note": "Marks what drop-in mode cannot do and stops the synthesis run before merge for human confirmation"},
+  {"id": "pkg:@paparats/cli", "expertise": 78, "verdict": "solid", "note": "Labels its dashboard screenshot synthetic and warns Docker-on-macOS loses Metal acceleration"},
+  {"id": "pkg:@witness-ai/opencode", "expertise": 88, "verdict": "deep", "note": "Walks one exchange through all four layers with real content, and states it is a tool, not a coach"},
+  {"id": "plugin:gemini-cli-extensions/bigquery-data-analytics/bigquery-data-analytics", "expertise": 77, "verdict": "solid", "note": "Real queries against bigquery-public-data and a troubleshooting table keyed to exact error strings"},
+  {"id": "plugin:pinecone-io/pinecone-claude-code-plugin/pinecone", "expertise": 78, "verdict": "solid", "note": "States twice that /query only works with integrated indexes using Pinecone-hosted embeddings"},
+  {"id": "plugin:tavily-ai/skills/tavily", "expertise": 70, "verdict": "solid", "note": "Seven skills tabled and a five-step escalation workflow with real tvly flags; no stated limitation"},
+  {"id": "plugin:zscaler/zscaler-mcp-server/zscaler", "expertise": 84, "verdict": "deep", "note": "Shows the wrong and right write-tools invocations with real console output; writes blocked without an allowlist"},
+  {"id": "plugin:armoriq/armorclaude/armorclaude", "expertise": 79, "verdict": "solid", "note": "Documents fail-closed blocking, the one-time npm-install stderr line, and every env var with its default"},
+  {"id": "plugin:jnuyens/gsd-plugin/gsd-plugin", "expertise": 58, "verdict": "thin", "note": "Mostly install troubleshooting and rename history; the 60+ slash commands are never listed"},
+  {"id": "plugin:wrsmith108/linear-claude-skill/linear-claude-skill", "expertise": 80, "verdict": "solid", "note": "Documents the 255-char description vs unlimited content trap and uses real ENG-ids throughout"},
+  {"id": "plugin:cwinvestments/memstack/memstack", "expertise": 48, "verdict": "thin", "note": "86 free skills in the install steps but 85 in the tier table; 17 core skills in one section, 16 in another"},
+  {"id": "plugin:monte-carlo-data/mc-agent-toolkit/monte-carlo-agent-toolkit", "expertise": 78, "verdict": "solid", "note": "Discloses that the install id rides on authenticated MCP requests, correlating usage, and how to disable it"},
+  {"id": "plugin:xiaolai/nlpm-for-claude/nlpm", "expertise": 79, "verdict": "solid", "note": "Says the PostToolUse hook is advisory and will not block writes; scoring bands and overrides documented"}
+]

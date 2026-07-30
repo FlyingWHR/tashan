@@ -1,0 +1,22 @@
+[
+{"id": "plugin:preset-io/agent-skills/preset-cli-skills", "expertise": 58, "verdict": "thin", "note": "Eight clients with per-client quirks; describes the 2 CLI skills but shows no usage example"},
+{"id": "plugin:barnett-studios/cxpak/cxpak", "expertise": 88, "verdict": "deep", "note": "States each MCP instance indexes one repo and that HTTP is not an MCP endpoint"},
+{"id": "plugin:romabeckman/harness-kit/harness-kit", "expertise": 74, "verdict": "solid", "note": "Eight skills and seven agents tabulated with the 0.70 gate default; requires Superpowers"},
+{"id": "plugin:helius-labs/core-ai/helius", "expertise": 82, "verdict": "solid", "note": "Names the exact signup cost (1 USDC + ~0.01 SOL) and disambiguates the separate docs MCP"},
+{"id": "plugin:show-karma/skills/karma", "expertise": 66, "verdict": "solid", "note": "Four skills with six example prompts; no limitation or failure mode anywhere"},
+{"id": "plugin:steve228uk/metro-mcp/metro-mcp", "expertise": 84, "verdict": "solid", "note": "Documents that pressing 'j' in Metro steals the single Hermes CDP connection and kills it"},
+{"id": "plugin:jinning6/noosphere/noosphere", "expertise": 90, "verdict": "deep", "note": "Separates Skill from tool counts; labels its release maintainer-validated, not reproduced"},
+{"id": "plugin:naorsabag/openhop/openhop", "expertise": 80, "verdict": "solid", "note": "CLI and URL-size limits documented; the YAML schema the agent must emit is never shown"},
+{"id": "plugin:temporalio/claude-temporal-plugin/temporal", "expertise": 52, "verdict": "thin", "note": "One skill described in a paragraph; install steps only, no usage example, preview warning"},
+{"id": "plugin:tuo-lei/vibe-replay/vibe-replay", "expertise": 82, "verdict": "solid", "note": "States what syncs to the cloud on login and that disk-opened replays fetch nothing"},
+{"id": "plugin:opendatalab/sciverse-agent-tools/sciverse", "expertise": 84, "verdict": "solid", "note": "Six tools with CLI flags, SDK signatures and framework glue; no limitation or failure mode"},
+{"id": "pkg:@jetbrains/mcp-proxy", "expertise": 30, "verdict": "wrapper", "note": "Marked deprecated: IDEs have shipped this since 2025.2, so the proxy isn't required"},
+{"id": "pkg:@tensorfeed/x402-base-mcp", "expertise": 88, "verdict": "deep", "note": "Example verifies a real tx hash and amount; threat model lists eight concrete properties"},
+{"id": "pkg:@muovi/mcp-server", "expertise": 90, "verdict": "deep", "note": "Admits two of its six tools fail in production until MOB-263 ships the backing endpoints"},
+{"id": "pkg:mason-context", "expertise": 84, "verdict": "solid", "note": "Publishes losing benchmark arms and per-repo map cost ($3.22 to $19.52); 18 tools tabulated"},
+{"id": "pkg:@beacio/mcp", "expertise": 38, "verdict": "thin", "note": "838-char skills stub auto-generated from a private repo; no MCP server or tools documented"},
+{"id": "pkg:@billingserv/mcp-server", "expertise": 88, "verdict": "deep", "note": "Delete and payment capture deliberately unavailable; the full endpoint allowlist is printed"},
+{"id": "pkg:@posteverywhere/mcp", "expertise": 80, "verdict": "solid", "note": "Draft-approval flow shown as three real tool calls; 13-row SEO link table, no limitation"},
+{"id": "pkg:sportwizzard-mcp", "expertise": 78, "verdict": "solid", "note": "20 tools plus a mock mode for building without a key; snapshot tool kept out of context"},
+{"id": "pkg:x402-list-mcp", "expertise": 76, "verdict": "solid", "note": "Honesty note warns not to conflate two volume signals; six tools explained but never called"}
+]

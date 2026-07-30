@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pkg:google-flights-mcp-server",
+    "expertise": 40,
+    "verdict": "thin",
+    "note": "one row in the PulseMCP monorepo README listing 20+ servers; no tool docs for flights"
+  },
+  {
+    "id": "pkg:serpagent-mcp",
+    "expertise": 42,
+    "verdict": "wrapper",
+    "note": "self-describes as a thin stdio bridge proxying to serp-agent.com/mcp via mcp-remote"
+  },
+  {
+    "id": "pkg:@constellationdev/mcp",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "config block and a mermaid flow; Tools Reference is a link to docs.constellationdev.io"
+  },
+  {
+    "id": "pkg:@stocktrends-publications/stocktrends-mcp-server",
+    "expertise": 44,
+    "verdict": "wrapper",
+    "note": "'thin local stdio adapter... no independent analytical authority of its own'"
+  },
+  {
+    "id": "pkg:@translatize/mcp",
+    "expertise": 40,
+    "verdict": "thin",
+    "note": "npm workspace-root README; the MCP package gets one table row, no tools or client config"
+  },
+  {
+    "id": "pkg:@wuniq/mcp",
+    "expertise": 44,
+    "verdict": "wrapper",
+    "note": "launcher piping stdio to the installed desktop app; 'no Wuniq product logic'"
+  },
+  {
+    "id": "pkg:pdfops-mcp",
+    "expertise": 68,
+    "verdict": "solid",
+    "note": "5 tools plus a W-9 fill-and-merge flow; keyless trial capped 100/IP/month"
+  },
+  {
+    "id": "pkg:geomelon-mcp",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "22 tools grouped; keyless mode exposes only search_cities_autocomplete, CORS wide open"
+  },
+  {
+    "id": "pkg:b4n1-web",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "badge wall, SDK matrix and one Python snippet; 33 MCP tools linked out to mcp.so"
+  },
+  {
+    "id": "pkg:@domainintel/mcp",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "8 tools with returns and the shared 'domain' argument convention; no stated limitation"
+  },
+  {
+    "id": "pkg:@boxlab/yandex-webmaster-mcp",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "8 tools with report= values, three auth paths, 'early development (v0.1)' stated"
+  },
+  {
+    "id": "pkg:@braynexservices/nigeria-mcp-health-facility",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "family README for 12 servers; this lane gets one row, tool docs live in lanes/"
+  },
+  {
+    "id": "pkg:@connorbritain/mssql-mcp-reader",
+    "expertise": 44,
+    "verdict": "wrapper",
+    "note": "'a thin wrapper around @connorbritain/mssql-mcp-core' which holds all the logic"
+  },
+  {
+    "id": "pkg:@paretools/docker",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "28-package monorepo README; docker is a catalog link, only git status worked"
+  },
+  {
+    "id": "pkg:@paretools/github",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "shared Pare README; github appears only in the Version Control row of the catalog table"
+  },
+  {
+    "id": "pkg:@paretools/go",
+    "expertise": 42,
+    "verdict": "thin",
+    "note": "documented only by a shared repo README; the Pare text never names the go server"
+  },
+  {
+    "id": "pkg:@paretools/http",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "shared Pare README; http is one Utilities-row link, no tool schemas inline"
+  },
+  {
+    "id": "pkg:@paretools/lint",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "shared Pare README; lint's ESLint/Prettier/Biome coverage is one table cell"
+  },
+  {
+    "id": "pkg:@paretools/make",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "shared Pare README; make/just tools are never documented, only counted in a category row"
+  },
+  {
+    "id": "pkg:@paretools/search",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "shared Pare README; ripgrep/fd tooling appears only as a Utilities catalog entry"
+  }
+]

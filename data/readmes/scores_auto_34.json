@@ -1,0 +1,122 @@
+[
+  {
+    "id": "plugin:latentwill/ideonomy-skill/ideonomy",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "bin/pick output shown; says results are sometimes nonsense, and why no recipes/"
+  },
+  {
+    "id": "plugin:hslee16/archy/archy",
+    "expertise": 88,
+    "verdict": "deep",
+    "note": "retracts its own premise with four measured rates; console shows the violation"
+  },
+  {
+    "id": "plugin:unblocked/skills/unblocked-skills",
+    "expertise": 56,
+    "verdict": "thin",
+    "note": "10 skills each naming their context_* tool; no query is ever demonstrated"
+  },
+  {
+    "id": "plugin:wan-huiyan/agent-review-panel/roundtable",
+    "expertise": 88,
+    "verdict": "deep",
+    "note": "states $3-20 per run and that all reviewers share one base model, so it is self-critique"
+  },
+  {
+    "id": "plugin:ferroxlabs/ferrox-factory/ferrox-core",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "risk-graded fast/full path table and a real model ladder; no install section"
+  },
+  {
+    "id": "plugin:pythoughts-labs/claude-architect/claude-architect",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "skills, agents and MCP tools tabled; known limit: host context leaks into lanes"
+  },
+  {
+    "id": "pkg:bowmark-mcp",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "mostly the ChatGPT-variant build recipe; get_library/run named, not documented"
+  },
+  {
+    "id": "pkg:apprise-rmcp",
+    "expertise": 88,
+    "verdict": "deep",
+    "note": "'Not for' list, per-action params, and REST plus web UI marked as not shipped"
+  },
+  {
+    "id": "pkg:radmail-mcp",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "says the npx line works as-is, then says npx activates 'the moment the npm publish lands'"
+  },
+  {
+    "id": "pkg:@toolprint/hypertool-mcp",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "config swap and persona commands are concrete; '89% more often' has no method behind it"
+  },
+  {
+    "id": "pkg:@scope-bid/scope-aec-mcp",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "three servers share this README; AEC gets one prose line, legal gets the tools"
+  },
+  {
+    "id": "pkg:@scope-bid/scope-claims-mcp",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "shared scope-bid README; the claims tools are a prose list, not named or documented"
+  },
+  {
+    "id": "pkg:@scope-bid/scope-mcp",
+    "expertise": 55,
+    "verdict": "thin",
+    "note": "legal tools including the swp_* primitives are named, but never called"
+  },
+  {
+    "id": "pkg:blackwall-mcp",
+    "expertise": 88,
+    "verdict": "deep",
+    "note": "forecast params and a DELETE-without-WHERE STOP verdict; gate() fails closed"
+  },
+  {
+    "id": "pkg:vk-mcp-server",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "documents that a --login VK ID token answers error 1051 for posting and feeds"
+  },
+  {
+    "id": "pkg:crustapi-mcp",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "seven real calls including linkedin(type='search', enrich=true); no stated limitation"
+  },
+  {
+    "id": "pkg:@datanexusmcp/mcp-server",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "55 tools with source and auth per row plus hard bounds: 8s timeout, top-50 licence bundle"
+  },
+  {
+    "id": "pkg:fiatdock-mcp",
+    "expertise": 38,
+    "verdict": "thin",
+    "note": "landing-page copy with an SEO keyword line; all docs at fiatdock.com/docs"
+  },
+  {
+    "id": "pkg:@getplexa/mcp",
+    "expertise": 44,
+    "verdict": "wrapper",
+    "note": "'a thin client of the public API'; the liquidity engine stays behind that API"
+  },
+  {
+    "id": "pkg:pointsyeah-mcp-server",
+    "expertise": 40,
+    "verdict": "thin",
+    "note": "PulseMCP monorepo README; no award-flight tools, arguments or examples anywhere in it"
+  }
+]

@@ -355,10 +355,22 @@ def llms_txt(caps, cats, by_cat, gen):
          "- **tashan score** — composite of upkeep and freshness, gated by real adoption. 0–100.",
          "- **Adoption** — npm download volume (log) blended with config-adoption reach across public repos.",
          "- **Freshness** — recency of the most recent public activity: npm publish, git push, or release.",
-         "- **Maintenance** — maintainer count, release cadence and freshness, penalised for deprecated/archived.",
+         "- **Upkeep** — maintainer count, release cadence and freshness, penalised for deprecated/archived.",
          "- **Expertise** — an LLM grade of the capability's own documentation against a fixed rubric "
          "(deep / solid / thin / wrapper / slop). Only a subset is graded; ungraded means ungraded, not zero.",
-         "", "## Top capabilities by measured trust", ""]
+
+         "", "## The security audit (separate from the score)", "",
+         "Every npm-published capability is checked against OSV.dev using the version you would "
+         "install today, so a finding means the CURRENT release is affected. We also flag scripts "
+         "that run at install time, whether the release carries a build attestation, and what the "
+         "capability can reach on your machine (files, shell, network, browser, credentials, cloud) "
+         "derived from its declared dependencies.",
+         "",
+         "- Anything OSV lists as malicious is refused a place on the board entirely.",
+         "- We do NOT review source code, execute the capability, or test its output for prompt "
+         "injection. A clean audit means nothing KNOWN is wrong.",
+         "- Permission surface UNDER-reports by design: a server can shell out using Node built-ins "
+         "and declare nothing, so an empty result means 'nothing declared', not 'nothing possible'.",         "", "## Top capabilities by measured trust", ""]
     for c in caps[:40]:
         L.append("- [" + pretty(c["name"]) + "](" + BASE + "/capability/" + c["slug"] + ".html) — tashan score "
                  + str(c.get("tashan_score")) + (", " + c["vitality"] if c.get("vitality") else "")

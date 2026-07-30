@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pkg:@drbaher/sign-cli",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Full multi-signer command sequences; the signing gesture stays gated behind a human."
+  },
+  {
+    "id": "pkg:gliana-ai-mcp",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Says why it won't enumerate utility tools; header claims 90+ models, description says 59."
+  },
+  {
+    "id": "pkg:@getabrain/mcp-server",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Test mode is a DB flag not a key prefix; the agent cannot complete the payment itself."
+  },
+  {
+    "id": "plugin:microsoft/azure-sql-database-container/azure-sql-developer",
+    "expertise": 56,
+    "verdict": "thin",
+    "note": "Private-registry gate stated plainly, but all 16 skills are documented on another page."
+  },
+  {
+    "id": "plugin:get-convex/convex-backend-skill/convex",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Hook mechanics down to exit 2 and a 90s budget; telemetry fields listed one by one."
+  },
+  {
+    "id": "plugin:mark7766/ai-coding-ok/ai-coding-ok",
+    "expertise": 77,
+    "verdict": "solid",
+    "note": "Chinese README with an explicit limits section: ~95% reliability, 30-entry history cap."
+  },
+  {
+    "id": "plugin:akii-technologies-ltd/akii-seo-ai-search-optimizer/akii-seo-ai-search-optimizer",
+    "expertise": 77,
+    "verdict": "solid",
+    "note": "Admits the visibility score never queries ChatGPT or Gemini; 12 skills vs 15 in the desc."
+  },
+  {
+    "id": "plugin:archcore-ai/archcore-plugin/archcore",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Links the upstream Copilot MCP bug that breaks it there, and lists explicit non-goals."
+  },
+  {
+    "id": "plugin:mmmprod/claude-eta/claude-eta",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Publishes MdAPE 70-95% and 30-50ms hook overhead, with a script to reproduce both."
+  },
+  {
+    "id": "plugin:conductor-oss/conductor-skills/conductor",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "~50 real prompts including workflow input JSON; the install section repeats per OS/shell."
+  },
+  {
+    "id": "plugin:credyt/ai-skills/credyt",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "Four skills one line each; notes Claude Desktop needs the SKILL.md pasted in manually."
+  },
+  {
+    "id": "plugin:eudaimonic-inc/deepspace-skill/deepspace",
+    "expertise": 38,
+    "verdict": "thin",
+    "note": "520 bytes: one install line and a paragraph; no tools, examples, or SDK detail."
+  },
+  {
+    "id": "plugin:tarunccet/pm-skills/guided-ai-product-management",
+    "expertise": 55,
+    "verdict": "thin",
+    "note": "Documents 9 differently-named plugins; this capability's own name appears nowhere."
+  },
+  {
+    "id": "plugin:jfrog/claude-plugin/jfrog",
+    "expertise": 85,
+    "verdict": "deep",
+    "note": "Ask-to-result tables with real packages (lodash@4.17.21); secrets never set from chat."
+  },
+  {
+    "id": "plugin:labyrinth-analytics/loredocs/loredocs",
+    "expertise": 82,
+    "verdict": "deep",
+    "note": "46 tools listed by group with real vault_add_doc calls; free tier caps stated exactly."
+  },
+  {
+    "id": "plugin:drhalto/agentmako/mako-ai",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Real `tool call` invocations with JSON payloads; advises --no-db on the first index."
+  },
+  {
+    "id": "plugin:nxtg-ai/forge-plugin/nxtg-forge",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "Component counts with no per-command docs; skills 33 here vs 32 in the description."
+  },
+  {
+    "id": "plugin:fadelabs/phantom/phantom",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Genre profiles carry target LUFS ranges; states Essentia blocks Python 3.14+."
+  },
+  {
+    "id": "plugin:sanmak/specops/specops",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Before/after shows the artifacts produced; the 'only SpecOps does' list is unbacked."
+  },
+  {
+    "id": "plugin:datit309/supergraph/supergraph",
+    "expertise": 77,
+    "verdict": "solid",
+    "note": "Says Antigravity hook env vars are best-effort until verified against a real install."
+  }
+]

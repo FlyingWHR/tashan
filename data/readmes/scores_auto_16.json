@@ -1,0 +1,22 @@
+[
+{"id": "plugin:tweag/tricorder/tricorder", "expertise": 72, "verdict": "solid", "note": "States GHC 9.14 is unsupported and why; feature and config docs deferred to docs/"},
+{"id": "pkg:crew-mcp", "expertise": 79, "verdict": "solid", "note": "Warns agy can't be trusted read-only, so reviews get a disposable snapshot worktree"},
+{"id": "pkg:yarr-mcp", "expertise": 87, "verdict": "deep", "note": "Discloses yarr-mcp@2.1.0 is missing from npm and points at issue #80 until it resolves"},
+{"id": "pkg:@hovecapital/read-only-postgres-mcp-server", "expertise": 80, "verdict": "deep", "note": "All 3 tools have parameter tables and JSON responses; connection strings pasted in chat"},
+{"id": "pkg:tempguru-mcp", "expertise": 76, "verdict": "solid", "note": "Marks check_availability 'not a real-time check' and compliance 'NOT legal advice'"},
+{"id": "pkg:whooshly-mcp", "expertise": 44, "verdict": "wrapper", "note": "Says outright 'the bridge is a transport shim, nothing more' — work happens server-side"},
+{"id": "pkg:@argosvix/mcp-server", "expertise": 78, "verdict": "solid", "note": "Header says 8 resource templates but lists 3; HTTP transport cannot support subscribe"},
+{"id": "pkg:familiar-vtt", "expertise": 50, "verdict": "thin", "note": "Claims 195 tools across 24 domains and documents none of them; no example calls"},
+{"id": "pkg:@azure/mcp-template", "expertise": 40, "verdict": "thin", "note": "Microsoft repo index of other MCP servers and badges; the template itself is undocumented"},
+{"id": "pkg:reflex-browser", "expertise": 76, "verdict": "solid", "note": "'When not to use Reflex' names free alternatives; its 10 tools are listed by name only"},
+{"id": "pkg:aipou-mcp-server", "expertise": 50, "verdict": "thin", "note": "Mostly token/LP/lock detail; the 9 MCP tools are bare names with no parameters"},
+{"id": "pkg:@agentled/mcp-server", "expertise": 62, "verdict": "solid", "note": "Simulated CLI transcript and a 62%-to-89% accuracy curve with no method; no tool list"},
+{"id": "plugin:airtable/skills/airtable", "expertise": 48, "verdict": "thin", "note": "No skill is documented — install commands, a layout tree and the MCP URL only"},
+{"id": "plugin:duckdb/duckdb-skills/duckdb-skills", "expertise": 86, "verdict": "deep", "note": "Every skill shown with real invocations; states Windows is not yet fully supported"},
+{"id": "plugin:gemini-cli-extensions/knowledge-catalog/knowledge-catalog", "expertise": 55, "verdict": "thin", "note": "Prereqs require Antigravity CLI v1.6.0; the install section says v0.5.3, same file"},
+{"id": "plugin:gitroomhq/postiz-agent/postiz", "expertise": 90, "verdict": "deep", "note": "Every command has real flags; documents the 'missing: true' analytics failure and its fix"},
+{"id": "plugin:gemini-cli-extensions/spanner/spanner", "expertise": 55, "verdict": "thin", "note": "Prereqs require Antigravity CLI v1.6.0; the install section says v0.3.2, same file"},
+{"id": "plugin:drolosoft/immich-photo-manager/immich-photo-manager", "expertise": 76, "verdict": "solid", "note": "Real Gemma 4 transcript showing list_albums output; the 50 tools live in doc/ only"},
+{"id": "plugin:inkbox-ai/inkbox/inkbox", "expertise": 89, "verdict": "deep", "note": "SMS limits section gives real caps and error codes (429 sender_rate_limited, 10DLC wait)"},
+{"id": "plugin:insforge/insforge-skills/insforge", "expertise": 68, "verdict": "solid", "note": "Each skill states what it does not cover (debug 'does not provide fix suggestions')"}
+]

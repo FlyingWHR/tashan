@@ -1,0 +1,22 @@
+[
+{"id": "plugin:kube-dc/kube-dc-public/kube-dc", "expertise": 42, "verdict": "thin", "note": "Platform marketing README; the plugin's 11 skills and its install are never mentioned"},
+{"id": "plugin:kenjudy/pdca-framework/pdca-framework", "expertise": 78, "verdict": "solid", "note": "Ships the full .claude/instructions.md and validation.md text; states the skill is Claude-only"},
+{"id": "plugin:seranking/seo-skills/seo-skills", "expertise": 88, "verdict": "deep", "note": "25 dated example runs linked with real numbers; says the 26th skill needs a local clone"},
+{"id": "plugin:zeabur/zeabur-claude-plugin/zeabur", "expertise": 70, "verdict": "solid", "note": "Same README as zeabur/agent-skills; 24 skills tabled with triggers, no worked call"},
+{"id": "plugin:openzeppelin/openzeppelin-skills/openzeppelin-skills", "expertise": 48, "verdict": "thin", "note": "Eleven skills listed with one-line purposes; install only, no example or caveat"},
+{"id": "plugin:danielealbano/android-remote-control-mcp/android-remote-control", "expertise": 79, "verdict": "solid", "note": "22-row permission table and a comparison grid admitting no iOS; 56 tools live in docs/"},
+{"id": "plugin:zeabur/agent-skills/zeabur", "expertise": 70, "verdict": "solid", "note": "Byte-identical to the zeabur-claude-plugin README; 24 skills tabled, no worked call"},
+{"id": "pkg:blackveil-dns", "expertise": 78, "verdict": "solid", "note": "80 tools mapped by group with _meta filtering; operator-only tools marked as degrading"},
+{"id": "pkg:opedd-mcp", "expertise": 80, "verdict": "solid", "note": "17 tools grouped by which key unlocks them; telemetry and a deprecated key disclosed"},
+{"id": "pkg:@openagenda/mcp", "expertise": 35, "verdict": "thin", "note": "Monorepo note about renaming yarn.lock; the MCP server is never mentioned"},
+{"id": "pkg:paysafe-x402", "expertise": 80, "verdict": "solid", "note": "Calls itself advisory and non-custodial; gives thresholds (flag 3x, block 10x)"},
+{"id": "pkg:@avakit/mcp", "expertise": 66, "verdict": "solid", "note": "Monorepo README; @avakit/mcp gets a config block and one prompt, no tool list"},
+{"id": "pkg:@tinify-dev/mcp", "expertise": 88, "verdict": "deep", "note": "Shows real byte counts and an 'already minimal, nothing written' case; args for all 5 tools"},
+{"id": "pkg:@chamade/mcp-server", "expertise": 44, "verdict": "wrapper", "note": "v3+ is a ~160-line shim spawning mcp-remote; says HTTP clients don't need the package"},
+{"id": "pkg:@1claw/mcp", "expertise": 78, "verdict": "solid", "note": "35 tools and every env var tabulated; no client config block or example call"},
+{"id": "pkg:neuromcp", "expertise": 79, "verdict": "solid", "note": "Publishes Wilson CIs and what the benchmark does not prove; MCP tools are never listed"},
+{"id": "pkg:mikromcp", "expertise": 70, "verdict": "solid", "note": "Quick start is an SVG image and the 118 tools live in the wiki; FAQ is SEO-shaped"},
+{"id": "pkg:@agentreadyweb/mcp", "expertise": 86, "verdict": "deep", "note": "Seven tools with signatures and examples; states auth-walled sites cannot be indexed"},
+{"id": "pkg:portkey-admin-mcp", "expertise": 82, "verdict": "solid", "note": "Declares maintenance mode after the Palo Alto acquisition; names all 28 gated tools"},
+{"id": "pkg:google-surf-mcp", "expertise": 80, "verdict": "solid", "note": "Five tools with response fields and 25 env vars; no call-and-output example"}
+]

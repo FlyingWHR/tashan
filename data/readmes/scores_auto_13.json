@@ -1,0 +1,22 @@
+[
+  {"id": "pkg:@agent360/browser-mcp", "expertise": 55, "verdict": "thin", "note": "Says 41 tools in the intro and 34 in the heading; get_cookies and get_local_storage are listed in two tables"},
+  {"id": "pkg:@atomicmail/mcp-modelcontextprotocol", "expertise": 72, "verdict": "solid", "note": "Alpha limits stated up front, but the MCP config block installs @atomicmail/mcp-github, not this package"},
+  {"id": "pkg:aibvf-mcp", "expertise": 86, "verdict": "deep", "note": "Publishes the exact Stop/Accelerate thresholds and shows a real scored result object with applied modules"},
+  {"id": "pkg:kiwoom-mcp-server", "expertise": 90, "verdict": "deep", "note": "Order placement excluded by design, auth mandatory in HTTP mode, every tool mapped to its Kiwoom TR code"},
+  {"id": "pkg:zuckerbot-mcp", "expertise": 85, "verdict": "deep", "note": "Marks three tools temporarily unavailable and explains why two lead metrics are deprecated as double-counting"},
+  {"id": "pkg:packkit-mcp", "expertise": 74, "verdict": "solid", "note": "Thorough scaffolder docs with a generated options table; the MCP server itself is only a badge link"},
+  {"id": "pkg:agent-recall-mcp", "expertise": 90, "verdict": "deep", "note": "Publishes its own failing numbers — 35% capture, 0/3 heed, 0/4 transfer — and labels the flattering one do-not-cite"},
+  {"id": "pkg:mal-mcp", "expertise": 79, "verdict": "solid", "note": "Tools tabled by backend and auth; warns to pick app type 'other' because 'web' forces an unused client secret"},
+  {"id": "plugin:gemini-cli-extensions/cloud-sql-postgresql/cloud-sql-postgresql", "expertise": 79, "verdict": "solid", "note": "IAM roles, the IAM-user default, and the private-IP VPC requirement all stated before install"},
+  {"id": "plugin:crowdstrike/foundry-skills/crowdstrike-falcon-foundry", "expertise": 82, "verdict": "solid", "note": "Labels each non-Claude install experimental and warns its recommended companion actually degrades results"},
+  {"id": "plugin:datarobot-oss/datarobot-agent-skills/datarobot-agent-skills", "expertise": 74, "verdict": "solid", "note": "Twelve skills listed inside a .cursorrules template plus per-agent verification prompts; no stated limitation"},
+  {"id": "plugin:gemini-cli-extensions/firestore-native/firestore-native", "expertise": 55, "verdict": "thin", "note": "Prereqs require Antigravity CLI v1.6.0 and 2.0 v2.0.0; the install section says v0.3.3 for both"},
+  {"id": "plugin:mlflow/skills/mlflow", "expertise": 79, "verdict": "solid", "note": "Hook install shows the exact suggestion line it prints; each example lists the steps the agent will take"},
+  {"id": "plugin:snowflake-labs/snowflake-ai-kit/snowflake-cortex-code", "expertise": 42, "verdict": "wrapper", "note": "A keyword router: it detects Snowflake intent and hands off to the Cortex Code CLI, where the 55 skills live"},
+  {"id": "plugin:noobygains/claude-pulse/claude-pulse", "expertise": 87, "verdict": "deep", "note": "Names four bugs its own earlier versions shipped, including a refresh key Claude Code never had"},
+  {"id": "plugin:mulhamna/jira-commands/jira", "expertise": 72, "verdict": "solid", "note": "CLI README with a feature-by-feature comparison against two rivals; the plugin and MCP server are one row each"},
+  {"id": "plugin:sentioxyz/sentio-ai-kit/sentio-ai-kit", "expertise": 66, "verdict": "solid", "note": "Names the sentio create-to-upload lifecycle and three real prompts; no per-skill docs, no stated limitation"},
+  {"id": "plugin:kanevry/session-orchestrator/session-orchestrator", "expertise": 82, "verdict": "solid", "note": "States hook enforcement is full only on Claude Code and degrades elsewhere; ships a seven-field minimum config"},
+  {"id": "plugin:lgbarn/shipyard/shipyard", "expertise": 82, "verdict": "solid", "note": "Spells out what degrades under Codex — no parallelism, no review isolation — and maps every spec-kit artifact"},
+  {"id": "plugin:wakatime/claude-code-wakatime/claude-code-wakatime", "expertise": 55, "verdict": "thin", "note": "Three install steps and four diagnostic commands; nothing on what it records or how to configure it"}
+]

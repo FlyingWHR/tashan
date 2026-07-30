@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pkg:code-auditor-mcp",
+    "expertise": 59,
+    "verdict": "thin",
+    "note": "Says 'Five kinds' directly above a seven-row rule-kinds table"
+  },
+  {
+    "id": "plugin:adobe/skills/adobe-for-creativity",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "Adobe skills repo index; lists 9 other plugins and never mentions adobe-for-creativity"
+  },
+  {
+    "id": "plugin:gemini-cli-extensions/data-agent-kit-starter-pack/data-agent-kit-starter-pack",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Six exact error strings with causes and per-agent config paths; skills are never listed"
+  },
+  {
+    "id": "plugin:mongodb/agent-skills/mongodb",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "Cleanly scopes atlas vs self-managed plugins, but the bundled skills are one sentence"
+  },
+  {
+    "id": "plugin:digital-process-tools/claude-remember/remember",
+    "expertise": 88,
+    "verdict": "deep",
+    "note": "Names the silent no-hooks failure when enabled mid-session and the v0.5.0 stuck market"
+  },
+  {
+    "id": "plugin:sanity-io/agent-toolkit/sanity",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Per-tool notes like publish-by-draft; ten client configs; only manual installs go stale"
+  },
+  {
+    "id": "plugin:sap/open-ux-tools/sap-fiori-mcp-server",
+    "expertise": 42,
+    "verdict": "thin",
+    "note": "open-ux-tools monorepo README — project vision and pnpm dev setup; no MCP server anywhere"
+  },
+  {
+    "id": "plugin:agent-sh/agnix/agnix",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Real console output with rule IDs and hints; hero names hosts absent from the tools table"
+  },
+  {
+    "id": "plugin:agricidaniel/claude-blog/claude-blog",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "Exact gate thresholds (90+ score, 375/768/1280 widths); no install section in the README"
+  },
+  {
+    "id": "plugin:jordanrendric/claude-video-vision/claude-video-vision",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "Only tested on macOS with whisper.cpp, says so; YouTube transcript precedence is ordered"
+  },
+  {
+    "id": "plugin:lithos-ai/motus/motus",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Two runnable code blocks incl. @agent_task(retries=3, timeout=10.0); leftover TODOs"
+  },
+  {
+    "id": "plugin:borghei/claude-skills/praxis-engineering",
+    "expertise": 50,
+    "verdict": "thin",
+    "note": "Index of 368 skills; praxis-engineering unnamed; carries an AI-generated disclaimer"
+  },
+  {
+    "id": "plugin:aaronontheweb/dotnet-skills/dotnet-skills",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "Header says 30 skills / 5 agents; the generated index lists 35 skills and 6 agents"
+  },
+  {
+    "id": "plugin:cosai-oasis/project-codeguard/codeguard-security",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Coverage bullets and a 3-step download; no rule, skill, or usage example anywhere"
+  },
+  {
+    "id": "pkg:deepseek-mcp-server",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "States which API surfaces it exposes and that it ships no speculative tools"
+  },
+  {
+    "id": "pkg:@certscore/mcp",
+    "expertise": 40,
+    "verdict": "thin",
+    "note": "Internal dev doc with /Users/benmasek absolute paths; the MCP server is never mentioned"
+  },
+  {
+    "id": "pkg:cortex-rmcp",
+    "expertise": 90,
+    "verdict": "deep",
+    "note": "Names which token guards /v1/logs; OTLP traces, metrics, and gRPC are not accepted"
+  },
+  {
+    "id": "pkg:@oobe-protocol-labs/sap-mcp-server",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Real x402 paid-call with --max-usd and --confirm; the tool registry is never enumerated"
+  },
+  {
+    "id": "pkg:@microsoft/powerbi-modeling-mcp",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "WARNING block says plainly it cannot touch report pages or diagram layouts; no tool list"
+  },
+  {
+    "id": "pkg:@socialneuron/mcp-server",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "Explains the hosted-vs-stdio tool split; warns Windows credential files lack NTFS perms"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {"id": "plugin:mergifyio/mergify-cli/mergify", "expertise": 79, "verdict": "solid", "note": "Stable exit-code table and an auth resolution order; warns self-update clobbers the Homebrew-managed binary"},
+  {"id": "plugin:miroapp/miro-ai/miro", "expertise": 78, "verdict": "solid", "note": "Warns two install methods create duplicate MCP connections, and that Enterprise admins must enable the server"},
+  {"id": "plugin:postman-devrel/postman-claude-code-plugin/postman", "expertise": 79, "verdict": "solid", "note": "Documents three MCP server modes with tool counts and what each smaller mode gives up"},
+  {"id": "plugin:sap/mdk-mcp-server/sap-mdk-server", "expertise": 78, "verdict": "solid", "note": "Says its tools are not a stable API; setup covers five clients plus the Mobile Services metadata step"},
+  {"id": "plugin:crisandrews/clawcode/clawcode", "expertise": 79, "verdict": "solid", "note": "Explains why it is a plugin not a harness (subscription billing) and that scope and execution gates default off"},
+  {"id": "plugin:codescene-oss/codescene-mcp-server/codescene-codehealth", "expertise": 76, "verdict": "solid", "note": "FAQ admits IntelliJ's assistant hallucinates the server path and legacy models struggle; tool list is off-site"},
+  {"id": "plugin:avelikiy/great_cto/great-cto", "expertise": 82, "verdict": "solid", "note": "Publishes benchmark ranges and says its own 89 score is a completeness floor, not correctness; not for teams"},
+  {"id": "plugin:magicpathai/agent-skills/magicpath", "expertise": 50, "verdict": "thin", "note": "Four install paths and one paragraph describing the skill; no command, example or limitation"},
+  {"id": "plugin:rileyhilliard/rr/rr", "expertise": 86, "verdict": "deep", "note": "Shows a real parallel run with per-host timings, and splits config into personal vs committed with a commit column"},
+  {"id": "plugin:leeguooooo/cross-request-master/yapi-plugin", "expertise": 66, "verdict": "solid", "note": "Chrome-extension README with real JS examples and a known-limits section; the plugin is three install lines"},
+  {"id": "pkg:@mokei/mcp-sqlite", "expertise": 40, "verdict": "thin", "note": "Toolkit root README; the SQLite server is absent from the package table and never mentioned"},
+  {"id": "pkg:@cueapi/mcp", "expertise": 82, "verdict": "solid", "note": "Changelog names a shipped 404 bug, a premature publish, and a LIMIT-50 starvation bug in the upstream API"},
+  {"id": "pkg:@signal8ai/mcp", "expertise": 88, "verdict": "deep", "note": "States which documented categories are disabled and not registered live, and shows two real quote payloads"},
+  {"id": "pkg:webhound-mcp", "expertise": 80, "verdict": "solid", "note": "Prices research at about $1 per 15 minutes and repeatedly states no shared publisher credential ships in any config"},
+  {"id": "pkg:@neuronsearchlab/mcp", "expertise": 81, "verdict": "solid", "note": "Ships a read-only-first demo prompt and says which tools stay local-only because they return credential material"},
+  {"id": "pkg:serpdive-mcp", "expertise": 86, "verdict": "deep", "note": "Documents why it omits an answer argument, when moby is worth its extra tokens, and links a replayable benchmark"},
+  {"id": "pkg:@pepitahq/mcp", "expertise": 89, "verdict": "deep", "note": "Says which destructive actions are deliberately not exposed and why, and that no image-upload tool exists at all"},
+  {"id": "pkg:@anakin-io/mcp", "expertise": 44, "verdict": "wrapper", "note": "Self-describes as MCP-protocol glue with no scraping logic; the work happens in the Anakin REST API"},
+  {"id": "pkg:carbone-mcp", "expertise": 88, "verdict": "deep", "note": "Spells out the SSRF and shared-key risk of two env defaults, and that Claude Desktop mishandles inline binaries"},
+  {"id": "pkg:touchdesigner-mcp-server", "expertise": 72, "verdict": "solid", "note": "Version-compatibility matrix with five outcomes and a 60s connection-error cache; install is deferred off-site"}
+]

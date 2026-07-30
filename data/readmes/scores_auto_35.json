@@ -1,22 +1,122 @@
 [
-  {"id": "pkg:scrapeunblocker-mcp", "expertise": 61, "verdict": "solid", "note": "3-tool table plus example prompts with real URLs; no limitation or output shown."},
-  {"id": "pkg:@mailkite/mcp", "expertise": 70, "verdict": "solid", "note": "40-tool signature table with required args and access class; no example tool call."},
-  {"id": "pkg:@wealth_api/mcp-server", "expertise": 76, "verdict": "solid", "note": "21 tools each mapped to the REST endpoint it wraps; read-only stated, no output shown."},
-  {"id": "pkg:@braynexservices/nigeria-mcp-fx-rates", "expertise": 50, "verdict": "thin", "note": "Family README for 12 servers; names get_fx_rates but defers tool docs to lanes/."},
-  {"id": "pkg:@braynexservices/nigeria-mcp-trade-intel", "expertise": 50, "verdict": "thin", "note": "Same 12-server family README; two tool names listed, full docs deferred to lanes/."},
-  {"id": "pkg:@burtthecoder/mcp-virustotal", "expertise": 74, "verdict": "solid", "note": "Relationship-type lists match their stated counts (22/40/15); no example hash or output."},
-  {"id": "pkg:@supstack/cli", "expertise": 78, "verdict": "solid", "note": "MCP tools listed by name only; every worked example is a CLI call, not a tool call."},
-  {"id": "pkg:brokre", "expertise": 83, "verdict": "deep", "note": "Documents what MCP does NOT expose (reveal, passwords) plus routed bastion exec examples."},
-  {"id": "plugin:gemini-cli-extensions/alloydb-omni/alloydb-omni", "expertise": 70, "verdict": "solid", "note": "Nine skills one line each, beta caveat stated, examples are prompts without output."},
-  {"id": "plugin:aws-samples/sample-claude-code-plugins-for-startups/aws-dev-toolkit", "expertise": 76, "verdict": "solid", "note": "34 skills with triggers and real slash-command args; AWS credential setup never covered."},
-  {"id": "plugin:makenotion/claude-code-notion-plugin/notion", "expertise": 54, "verdict": "thin", "note": "Ten slash commands listed; auth is one line 'supports OAuth!' and no usage example."},
-  {"id": "plugin:supabase-community/supabase-plugin/supabase", "expertise": 38, "verdict": "thin", "note": "1.5 KB of distribution-repo notes: vendor table and a symlink warning, no user docs."},
-  {"id": "plugin:obra/superpowers/superpowers", "expertise": 72, "verdict": "solid", "note": "Install for 11 harnesses and 7 workflow skills; discloses logo-load telemetry."},
-  {"id": "plugin:alation/alation-plugins/alation", "expertise": 74, "verdict": "solid", "note": "OAuth setup down to the 127.0.0.1:18722 redirect; warns Cowork redirect page won't load."},
-  {"id": "plugin:noemuch/bridge/bridge-ds", "expertise": 70, "verdict": "solid", "note": "Compiler stages and CLI flags documented; 'zero AI hallucinations' claim is unverifiable."},
-  {"id": "plugin:thewhyman/prompt-engineering-in-action/co-dialectic", "expertise": 48, "verdict": "thin", "note": "Prompt-quality percentages (45%->91% in 10 days) presented as measurement, no method."},
-  {"id": "plugin:doncheli/don-cheli-sdd/don-cheli-sdd-framework", "expertise": 63, "verdict": "solid", "note": "README claims 93 commands / 51 skills; the package description says 72+ and 14."},
-  {"id": "plugin:edwingao28/excalidraw-toolkit/excalidraw-skill", "expertise": 82, "verdict": "deep", "note": "Opens with a session transcript; marks which of its 3 layers ship and which are fetched."},
-  {"id": "plugin:atezer/fmcp/f-mcp-bridge", "expertise": 72, "verdict": "solid", "note": "Turkish README; tool list deferred to another file, but Desktop limits stated plainly."},
-  {"id": "plugin:gooseworks-ai/gooseworks/gooseworks", "expertise": 85, "verdict": "deep", "note": "Per-command docs with real output blocks; states the ads flow fails without the MCP server."}
+  {
+    "id": "pkg:scrapeunblocker-mcp",
+    "expertise": 61,
+    "verdict": "solid",
+    "note": "3-tool table plus example prompts with real URLs; no limitation or output shown."
+  },
+  {
+    "id": "pkg:@mailkite/mcp",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "40-tool signature table with required args and access class; no example tool call."
+  },
+  {
+    "id": "pkg:@wealth_api/mcp-server",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "21 tools each mapped to the REST endpoint it wraps; read-only stated, no output shown."
+  },
+  {
+    "id": "pkg:@braynexservices/nigeria-mcp-fx-rates",
+    "expertise": 50,
+    "verdict": "thin",
+    "note": "Family README for 12 servers; names get_fx_rates but defers tool docs to lanes/."
+  },
+  {
+    "id": "pkg:@braynexservices/nigeria-mcp-trade-intel",
+    "expertise": 50,
+    "verdict": "thin",
+    "note": "Same 12-server family README; two tool names listed, full docs deferred to lanes/."
+  },
+  {
+    "id": "pkg:@burtthecoder/mcp-virustotal",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "Relationship-type lists match their stated counts (22/40/15); no example hash or output."
+  },
+  {
+    "id": "pkg:@supstack/cli",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "MCP tools listed by name only; every worked example is a CLI call, not a tool call."
+  },
+  {
+    "id": "pkg:brokre",
+    "expertise": 83,
+    "verdict": "deep",
+    "note": "Documents what MCP does NOT expose (reveal, passwords) plus routed bastion exec examples."
+  },
+  {
+    "id": "plugin:gemini-cli-extensions/alloydb-omni/alloydb-omni",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "Nine skills one line each, beta caveat stated, examples are prompts without output."
+  },
+  {
+    "id": "plugin:aws-samples/sample-claude-code-plugins-for-startups/aws-dev-toolkit",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "34 skills with triggers and real slash-command args; AWS credential setup never covered."
+  },
+  {
+    "id": "plugin:makenotion/claude-code-notion-plugin/notion",
+    "expertise": 54,
+    "verdict": "thin",
+    "note": "Ten slash commands listed; auth is one line 'supports OAuth!' and no usage example."
+  },
+  {
+    "id": "plugin:supabase-community/supabase-plugin/supabase",
+    "expertise": 38,
+    "verdict": "thin",
+    "note": "1.5 KB of distribution-repo notes: vendor table and a symlink warning, no user docs."
+  },
+  {
+    "id": "plugin:obra/superpowers/superpowers",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "Install for 11 harnesses and 7 workflow skills; discloses logo-load telemetry."
+  },
+  {
+    "id": "plugin:alation/alation-plugins/alation",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "OAuth setup down to the 127.0.0.1:18722 redirect; warns Cowork redirect page won't load."
+  },
+  {
+    "id": "plugin:noemuch/bridge/bridge-ds",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "Compiler stages and CLI flags documented; 'zero AI hallucinations' claim is unverifiable."
+  },
+  {
+    "id": "plugin:thewhyman/prompt-engineering-in-action/co-dialectic",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Prompt-quality percentages (45%->91% in 10 days) presented as measurement, no method."
+  },
+  {
+    "id": "plugin:doncheli/don-cheli-sdd/don-cheli-sdd-framework",
+    "expertise": 63,
+    "verdict": "solid",
+    "note": "README claims 93 commands / 51 skills; the package description says 72+ and 14."
+  },
+  {
+    "id": "plugin:edwingao28/excalidraw-toolkit/excalidraw-skill",
+    "expertise": 82,
+    "verdict": "deep",
+    "note": "Opens with a session transcript; marks which of its 3 layers ship and which are fetched."
+  },
+  {
+    "id": "plugin:atezer/fmcp/f-mcp-bridge",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "Turkish README; tool list deferred to another file, but Desktop limits stated plainly."
+  },
+  {
+    "id": "plugin:gooseworks-ai/gooseworks/gooseworks",
+    "expertise": 85,
+    "verdict": "deep",
+    "note": "Per-command docs with real output; states the ads flow fails without the MCP server."
+  }
 ]

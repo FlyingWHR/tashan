@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pkg:@davidfuchs/mcp-uptime-kuma",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "21 tools grouped, filter args with getMonitorSummary({status:'0'}) examples, 3 auth modes"
+  },
+  {
+    "id": "pkg:@hivelore/mcp",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "explains why it ships no behaviour harness; an unrunnable sensor warns and never blocks"
+  },
+  {
+    "id": "pkg:contract-ops-mcp",
+    "expertise": 64,
+    "verdict": "solid",
+    "note": "15 tools with compare exit codes; signing deliberately not exposed here"
+  },
+  {
+    "id": "pkg:gctrl-mcp",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "four modules tabled; warns the default JWT_SECRET lets anyone forge admin tokens"
+  },
+  {
+    "id": "pkg:cartridge-cafe-mcp",
+    "expertise": 36,
+    "verdict": "thin",
+    "note": "1.3 KB site README with a dev Run block; the MCP server is never mentioned"
+  },
+  {
+    "id": "pkg:mcp-bastion",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "control tools with arg shapes and a full bastion.config.json; 15.0/24 vectors"
+  },
+  {
+    "id": "pkg:@grabzit/mcp-server",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "four tools with their supported options and four concrete usage prompts"
+  },
+  {
+    "id": "pkg:@warreandvavasour/workspace-alberta",
+    "expertise": 66,
+    "verdict": "solid",
+    "note": "hosted URL, local run and smoke test; tool reference linked out, photo-essay padding"
+  },
+  {
+    "id": "pkg:@hashlock-tech/mcp",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "16 tools, per-chain login table, testnets only: 'do not send real funds'"
+  },
+  {
+    "id": "pkg:lacuna-mcp",
+    "expertise": 44,
+    "verdict": "thin",
+    "note": "pnpm workspace README about building/releasing; no MCP config or music-generation example"
+  },
+  {
+    "id": "plugin:box/box-for-ai/box",
+    "expertise": 60,
+    "verdict": "solid",
+    "note": "verification runs real box CLI and curl calls; the skills are never documented"
+  },
+  {
+    "id": "plugin:clickhouse/clickhouse-claude-code-plugin/clickhouse",
+    "expertise": 42,
+    "verdict": "thin",
+    "note": "1.4 KB: two install paths and two bullets; skills and MCP tools are links only"
+  },
+  {
+    "id": "plugin:spotify/confidence-ai-plugins/confidence",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "slash commands with argument grammar; says the skills-only install wires no MCP servers"
+  },
+  {
+    "id": "plugin:dash0hq/dash0-agent-plugin/dash0",
+    "expertise": 44,
+    "verdict": "thin",
+    "note": "repo-layout table only; install and usage deferred to four per-runtime READMEs"
+  },
+  {
+    "id": "plugin:sumup/sumup-skills/sumup",
+    "expertise": 56,
+    "verdict": "thin",
+    "note": "six skills and an install matrix for six agents; no worked checkout example anywhere"
+  },
+  {
+    "id": "plugin:val-town/plugins/valtown",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "install for three clients then a skill-authoring guide; no tool docs for the Val Town MCP"
+  },
+  {
+    "id": "plugin:roninforge/budgetclaw/budgetclaw",
+    "expertise": 88,
+    "verdict": "deep",
+    "note": "'What it does NOT do' with four items; limit set shown with real project, cap and action"
+  },
+  {
+    "id": "plugin:cassiiopeia/suh-devops-template/cassiiopeia",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "17 skills and comment commands tabled in Korean; the old integrator is marked EOL"
+  },
+  {
+    "id": "plugin:composiohq/composio-plugin-cc/composio-mcp",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "four cross-app example prompts; admits all tool logic lives in the composio CLI"
+  },
+  {
+    "id": "plugin:mootable/decimal-scaled/decimal-scaled",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "Rust first-use block with assert_eq on 59.97; the skill's own guidance is a link"
+  }
+]

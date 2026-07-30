@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pkg:@hbarefoot/engram",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "says it does not try to out-rank Mem0 or Zep; its 6 tools are counted, not shown"
+  },
+  {
+    "id": "plugin:cockroachdb/claude-plugin/cockroachdb",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "14 tools across two backends; warns Toolbox hangs if the database is unreachable"
+  },
+  {
+    "id": "plugin:datadog-labs/claude-code-plugin/datadog",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "OAuth and key auth both documented, preview status stated; no Datadog tool list at all"
+  },
+  {
+    "id": "plugin:gopigment/ai-plugins/pigment",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "warns the Advanced search tool exposes Block metadata outside access rights"
+  },
+  {
+    "id": "plugin:clear-capabilities/agentic-security/agentic-security",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "sample scan with dollar-cost findings; a patch failing rescan-clean is never written"
+  },
+  {
+    "id": "plugin:altertable-ai/skills/altertable",
+    "expertise": 66,
+    "verdict": "solid",
+    "note": "17 skills plus ask-routing examples; Getting Started is repo dev setup, not install"
+  },
+  {
+    "id": "plugin:robertsfeir/atelier-pipeline/atelier-pipeline",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "brain setup shows the live confirmation block and real cost; 11 agents unlisted"
+  },
+  {
+    "id": "plugin:jshph/enzyme/enzyme",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "petri and catalyze each shown with full JSON output; first vault free, login for refresh"
+  },
+  {
+    "id": "plugin:zauberzeug/game-of-cards/game-of-cards",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "'brand new alpha, no external users yet' and says not to use it alongside Jira or Linear"
+  },
+  {
+    "id": "plugin:ix-infrastructure/ix-claude-plugin/ix-memory",
+    "expertise": 82,
+    "verdict": "deep",
+    "note": "7 skills and 7 hooks tabled; hooks bail silently when ix is not in PATH"
+  },
+  {
+    "id": "plugin:jmcentire/kindex/kindex",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "kin search output shown; no Cursor hook because Cursor exposes no such surface"
+  },
+  {
+    "id": "plugin:legalrabbit-ai/legalrabbit-docx-claude-plugin/legalrabbit-docx",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "four example prompts on named docx files; token claim carries its HTML/DOCX reason"
+  },
+  {
+    "id": "plugin:2389-research/mcp-socialmedia/mcp-agent-social",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "three tools each with a JSON argument block; the README is cut off mid-sentence"
+  },
+  {
+    "id": "plugin:abhisekjha/pith/pith",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "status is 'stable, not actively adding features'; numbers stated as estimates"
+  },
+  {
+    "id": "plugin:roomi-fields/rtfm/retrieve-the-forgotten-memory",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "rtfm search output with scores and the extras' real disk cost; no stated limitation"
+  },
+  {
+    "id": "plugin:strvmarv/total-recall/total-recall",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "exact promotion thresholds; npx documented as broken, migration irreversible"
+  },
+  {
+    "id": "plugin:tray-tecnologia/tray-api-claude-plugin/tray-api",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "35 skills, a real validate.mjs run, and only 8 of 35 skills have that validator"
+  },
+  {
+    "id": "plugin:daveangulo/twining-mcp/twining",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "record/assemble/why with real args; in PATH-limited shells the tools go silent"
+  },
+  {
+    "id": "plugin:dvdsgl/claude-canvas/canvas",
+    "expertise": 40,
+    "verdict": "thin",
+    "note": "628-char README that self-declares a proof of concept and unsupported; no canvas docs"
+  },
+  {
+    "id": "plugin:kishorkukreja/awesome-supply-chain/supply-chain-skills",
+    "expertise": 44,
+    "verdict": "thin",
+    "note": "awesome-list README; 132 skills claimed as a cp -r install, none of them described"
+  }
+]

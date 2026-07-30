@@ -1,0 +1,122 @@
+[
+  {
+    "id": "plugin:chujianyun/skills/copaw-ops",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared capability-map README; copaw-ops is one ops-table row, no worked example"
+  },
+  {
+    "id": "plugin:chujianyun/skills/openclaw-ops",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared capability-map README; openclaw-ops is one ops-table row, no command reference"
+  },
+  {
+    "id": "plugin:chujianyun/skills/openclaw-session-cleaner",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; session-cleaner is one row, sessions.json rebuild not shown"
+  },
+  {
+    "id": "plugin:chujianyun/skills/paper-interpreter",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Shared repo README; paper-interpreter is one row, the arXiv pipeline isn't documented"
+  },
+  {
+    "id": "plugin:chujianyun/skills/article-interpreter",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Shared repo README; article-interpreter is one index row, no worked example"
+  },
+  {
+    "id": "plugin:chujianyun/skills/mermaid",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Shared repo README; mermaid is one row listing diagram types, no example diagram"
+  },
+  {
+    "id": "plugin:chujianyun/skills/claude-config-advisor",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; claude-config-advisor is one review-table row, no worked example"
+  },
+  {
+    "id": "plugin:chujianyun/skills/agent-md-advisor",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; agent-md-advisor is one row, no AGENTS.md example or checklist"
+  },
+  {
+    "id": "plugin:chujianyun/skills/opendataloader-pdf",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Shared repo README; opendataloader-pdf is one row, no PDF-to-Markdown example"
+  },
+  {
+    "id": "plugin:chujianyun/skills/local-audio-transcriber",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Shared repo README; transcriber is one row, no worked transcription command"
+  },
+  {
+    "id": "plugin:chujianyun/skills/agent-optimizer",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; agent-optimizer is one row citing 12-Factor AgentOps, no example"
+  },
+  {
+    "id": "plugin:chujianyun/skills/hermes-ops",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; hermes-ops is one ops-table row, no command or runbook shown"
+  },
+  {
+    "id": "plugin:chujianyun/skills/hermes-qq",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; hermes-qq is one row about QQ-platform support, no steps"
+  },
+  {
+    "id": "plugin:chujianyun/skills/remove-ai-flavor",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Shared repo README; remove-ai-flavor is one row, no before/after rewrite example"
+  },
+  {
+    "id": "plugin:chujianyun/skills/alltuu-downloader",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; alltuu-downloader is one row, no download command example"
+  },
+  {
+    "id": "plugin:chujianyun/skills/photoplus-downloader",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; photoplus-downloader is one row, no download command example"
+  },
+  {
+    "id": "plugin:chujianyun/skills/wechat-official-account-qr",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; wechat-qr is one row, no QR-generation example"
+  },
+  {
+    "id": "plugin:chujianyun/skills/p7-advisor",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; p7-advisor is one career-table row, no rubric or worked assessment"
+  },
+  {
+    "id": "plugin:chujianyun/skills/p8-advisor",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; p8-advisor is one career-table row, no rubric or worked assessment"
+  },
+  {
+    "id": "plugin:chujianyun/skills/p9-advisor",
+    "expertise": 46,
+    "verdict": "thin",
+    "note": "Shared repo README; p9-advisor is one career-table row, no rubric or worked assessment"
+  }
+]

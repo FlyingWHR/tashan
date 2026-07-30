@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pkg:zenoti-mcp-server",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "11 tools with parameters and an error sample; clone URL still says yourusername"
+  },
+  {
+    "id": "pkg:@retrograde-labs/lune-mcp-server",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "claims 16 tools; the table lists 15. Six prompts documented with their arguments"
+  },
+  {
+    "id": "pkg:gmail-workspace-mcp-server",
+    "expertise": 40,
+    "verdict": "thin",
+    "note": "PulseMCP monorepo README; gmail is one experimental-table row, no OAuth setup shown"
+  },
+  {
+    "id": "pkg:playwright-stealth-mcp-server",
+    "expertise": 40,
+    "verdict": "thin",
+    "note": "PulseMCP monorepo README covering 20+ servers; no stealth-mode or browser tool docs"
+  },
+  {
+    "id": "pkg:slack-workspace-mcp-server",
+    "expertise": 42,
+    "verdict": "thin",
+    "note": "documented only by a shared repo README; the PulseMCP text never names a Slack server"
+  },
+  {
+    "id": "pkg:@worldcitisim/mcp-esim",
+    "expertise": 80,
+    "verdict": "deep",
+    "note": "purchase dialogue with real tool args; btc_unavailable fallback on fee spikes"
+  },
+  {
+    "id": "pkg:@useatlas/mcp",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Knowledge Base is descriptive-only and never extends the SQL whitelist; WSL2 bunx caveat"
+  },
+  {
+    "id": "pkg:@braynexservices/nigeria-mcp-admin-divisions",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "family README for 12 servers; admin-divisions is one row, tool docs live in lanes/"
+  },
+  {
+    "id": "pkg:@braynexservices/nigeria-mcp-grid3-boundaries",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "family README for 12 servers; get_boundary/point_in_admin get a table cell each"
+  },
+  {
+    "id": "pkg:@braynexservices/nigeria-mcp-nigsac-sanctions",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "family README; honestly flags screening as not a legal determination, but no tool docs"
+  },
+  {
+    "id": "pkg:@braynexservices/nigeria-mcp-quidax-crypto",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "family README for 12 servers; the crypto lane is one row plus a one-line summary"
+  },
+  {
+    "id": "pkg:@braynexservices/nigeria-mcp-un-sdg",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "family README; get_sdg_indicator named in a table, arguments and examples in lanes/"
+  },
+  {
+    "id": "pkg:@braynexservices/nigeria-mcp-worldbank-macro",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "family README; only trade-intel and fx-rates get a config block, macro does not"
+  },
+  {
+    "id": "pkg:aidex-mcp",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "33 tools by category with six real calls and their output; llm_send_code defaults to off"
+  },
+  {
+    "id": "pkg:vitex-cli",
+    "expertise": 68,
+    "verdict": "solid",
+    "note": "full env-var and deploy docs for the web app; the MCP surface is one bullet"
+  },
+  {
+    "id": "pkg:@peekdev/mcp",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "two-product monorepo README; peek-mcp is one alpha row with a Node 22 caveat"
+  },
+  {
+    "id": "pkg:@didaai/hotelbooking-ai",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "searchHotels params plus a real Shanghai response; superlative-heavy platform claims"
+  },
+  {
+    "id": "pkg:@lucairn/mcp-server",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "tier table says Developer returns placeholders verbatim; Rekor verify not shipped"
+  },
+  {
+    "id": "pkg:ace-context-mcp",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "badge says 145 tests passing, the status line says 120 across 15 packages"
+  },
+  {
+    "id": "pkg:funplay-godot-mcp",
+    "expertise": 44,
+    "verdict": "wrapper",
+    "note": "the npm package is the optional stdio wrapper; the 129 tools live in the Godot addon"
+  }
+]

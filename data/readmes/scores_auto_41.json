@@ -1,0 +1,98 @@
+[
+  {
+    "id": "plugin:planetscale/claude-plugin/planetscale",
+    "expertise": 50,
+    "verdict": "thin",
+    "note": "Mostly git-submodule sync mechanics; the MCP server's tools are only a link."
+  },
+  {
+    "id": "plugin:villagesql/villagesql-skills/vsql-extension-builder",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "Says a Docker install is not enough, and warns the installer symlinks a managed copy."
+  },
+  {
+    "id": "plugin:zscole/adversarial-spec/adversarial-spec",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Model table with env vars per provider; every CLI call needs a find-the-script call."
+  },
+  {
+    "id": "plugin:frane/agented/agented",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "Admits agents drift back to built-in Read/Edit and that it has no clean fix yet."
+  },
+  {
+    "id": "plugin:ybsbarker/barker-stablecoin-skills/barker-stablecoin-skills",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Per-tool x402 prices; warns to fund a dedicated low-balance wallet, never your main one."
+  },
+  {
+    "id": "plugin:blaxel-ai/agent-skills/blaxel",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Mostly onboarder-package maintainer notes; the two shipped skills get one sentence."
+  },
+  {
+    "id": "plugin:browser-act/claude-code-browser-act/browser-act",
+    "expertise": 40,
+    "verdict": "thin",
+    "note": "935 bytes: install, update, versioning. No tools, no examples, no limits."
+  },
+  {
+    "id": "plugin:mcpware/claude-code-organizer/claude-code-organizer",
+    "expertise": 68,
+    "verdict": "solid",
+    "note": "Badge and 14-language wall plus a rename-SEO paragraph; the MCP tools are never listed."
+  },
+  {
+    "id": "plugin:laurac8r/claude-damn/claude-damn",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Notes the marketplace is on v1.12.0 while the tree is v1.12.2; skill table deferred."
+  },
+  {
+    "id": "plugin:eriknewton/concordia-protocol/concordia-protocol",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Four-message negotiation in real JSON; reconciles its own 59-tool count (55+4)."
+  },
+  {
+    "id": "plugin:agent-sh/drift-detect/drift-detect",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Flag table plus a full example report; the README never says how to install it."
+  },
+  {
+    "id": "plugin:flexcompute/plugin-marketplace/flexcompute",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Lists each skill and the exact MCP tool-name suffixes; calls itself a catalog for now."
+  },
+  {
+    "id": "plugin:mohammed-abdelhady/hyperflow/hyperflow",
+    "expertise": 85,
+    "verdict": "deep",
+    "note": "States its Codex slash commands are textual aliases and nothing is certificate-certified."
+  },
+  {
+    "id": "plugin:suxrobgm/jobpilot/jobpilot",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Skill table with both host prefixes; inbox and codes need your own Google OAuth client."
+  },
+  {
+    "id": "plugin:wynelson94/longhand/longhand",
+    "expertise": 87,
+    "verdict": "deep",
+    "note": "Names its own past bugs: a stray 'Intent:' label on 49% of episodes, a Windows kill bug."
+  },
+  {
+    "id": "plugin:insideout-ai/make-it-work/make-it-work",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Five commands each with when-to-use; says it is not for greenfield side projects."
+  }
+]

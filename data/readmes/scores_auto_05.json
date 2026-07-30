@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pkg:@ataraxy-labs/sem",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "Every subcommand has real args; warns of the GNU Parallel `sem` binary collision"
+  },
+  {
+    "id": "pkg:amicus",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Notes the two install channels differ, plugin path puts no CLI on PATH; wizard tabled"
+  },
+  {
+    "id": "plugin:salesforceairesearch/agentforce-adlc/agentforce-adlc",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "7-category safety table, per-skill prompts; warns retired /agentforce-secure won't run"
+  },
+  {
+    "id": "plugin:amd/skills/amd-skills",
+    "expertise": 55,
+    "verdict": "thin",
+    "note": "Catalog where most skills are marked _planned_; in-repo ones are one-line descriptions"
+  },
+  {
+    "id": "plugin:apollographql/skills/apollo-skills",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Each of 11 skills gets use-when, categories, examples, references; no worked output"
+  },
+  {
+    "id": "plugin:coderabbitai/skills/coderabbit",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "35-agent install-path table and two skills with triggers; NL examples, no worked output"
+  },
+  {
+    "id": "plugin:firecrawl/firecrawl-claude-plugin/firecrawl",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "CLI command table and NL usage examples; documents .firecrawl/ output and self-hosting"
+  },
+  {
+    "id": "plugin:neondatabase/agent-skills/neon",
+    "expertise": 64,
+    "verdict": "solid",
+    "note": "Nine skills each a one-line description plus NL prompts; no per-tool worked example"
+  },
+  {
+    "id": "plugin:getsentry/cli/sentry-cli",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Typed SDK examples and the node:sqlite-vs-WASM fallback; documents the CLI, not a skill"
+  },
+  {
+    "id": "plugin:servicenow/sdk/servicenow-sdk",
+    "expertise": 55,
+    "verdict": "thin",
+    "note": "Per-host install steps; the single now-sdk skill is one table row, no worked example"
+  },
+  {
+    "id": "plugin:astro-han/claude-lens/claude-lens",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Names its limit: shows `--` with no stale fallback when rate_limits is absent (2.1.80+)"
+  },
+  {
+    "id": "plugin:ramakay/claude-self-reflect/claude-self-reflect",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "15 MCP tools tabled with safety; honest about the TodoWrite bug and negative results"
+  },
+  {
+    "id": "plugin:interfacex-co-jp/genshijin/genshijin",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "Japanese; before/after per mode, subskills, symlink-rejection security, benchmark table"
+  },
+  {
+    "id": "plugin:freepeak/leankg/lean-kg",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Real leankg impact/path/explain commands and measured floors; Hub tags linux/arm64 only"
+  },
+  {
+    "id": "plugin:jaechang-hits/sciagent-skills/sciagent-skills",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "199-skill table with a BixBench 65->92% claim; five install methods, no worked call"
+  },
+  {
+    "id": "plugin:withwoz/wozcode-plugin/wozcode",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "Agents, commands, settings tables; documents when it replaces Claude's commit attribution"
+  },
+  {
+    "id": "plugin:tanweai/wooyun-legacy/wooyun-legacy",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "Opens with 不维护决定 (declared unmaintained); rich case-backed scenarios follow"
+  },
+  {
+    "id": "plugin:chujianyun/skills/prompt-engineering-skills",
+    "expertise": 42,
+    "verdict": "thin",
+    "note": "documented only by a shared repo README that never names this capability"
+  },
+  {
+    "id": "plugin:chujianyun/skills/qoder-wiki",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Shared capability-map README; qoder-wiki is one row, no usage or worked example"
+  },
+  {
+    "id": "plugin:chujianyun/skills/claudian-installer",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Shared capability-map README; claudian-installer is one row, no usage or worked example"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pkg:@kaeawc/auto-mobile",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "Task table of doc links and a one-line installer; no tool docs or example invocation"
+  },
+  {
+    "id": "plugin:codspeedhq/codspeed/codspeed",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Documents the CodSpeed CLI, not the plugin; warns walltime on hosted runners drifts"
+  },
+  {
+    "id": "plugin:databricks/databricks-agent-skills/databricks",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Names what each hook reads and that the prompt-router can't port to Cursor; 29 skills"
+  },
+  {
+    "id": "plugin:microsoft/dataverse-skills/dataverse",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Verify step states the expected `pac auth list` result; telemetry scope spelled out"
+  },
+  {
+    "id": "plugin:mondaycom/mcp/monday-crm",
+    "expertise": 68,
+    "verdict": "solid",
+    "note": "Documents the monday MCP server generally; the monday-crm skill itself is never named"
+  },
+  {
+    "id": "plugin:railwayapp/railway-skills/railway",
+    "expertise": 55,
+    "verdict": "thin",
+    "note": "Install-only across 4 hosts; the single use-railway skill gets one line and no example"
+  },
+  {
+    "id": "plugin:zapier/zapier-mcp/zapier",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "Distribution pointers only; no actions, tools, or usage examples documented anywhere"
+  },
+  {
+    "id": "plugin:langfuse/skills/langfuse",
+    "expertise": 55,
+    "verdict": "thin",
+    "note": "Env-var prerequisites are exact; the single skill is one table row with no example"
+  },
+  {
+    "id": "plugin:jeffallan/claude-skills/fullstack-dev-skills",
+    "expertise": 55,
+    "verdict": "thin",
+    "note": "66 skills, none listed here; two prompt-to-skill examples and an author/stars wall"
+  },
+  {
+    "id": "plugin:jame581/godotprompter/godot-prompter",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "States subagents never get the SessionStart hook; some host registrations unverified"
+  },
+  {
+    "id": "plugin:manuelschipper/nah/nah",
+    "expertise": 90,
+    "verdict": "deep",
+    "note": "Reproducible benchmark cmd; says its own counts double-count across danger classes"
+  },
+  {
+    "id": "plugin:product-on-purpose/pm-skills/pm-skills",
+    "expertise": 55,
+    "verdict": "thin",
+    "note": "Badge wall and TOC eat the first 10k; MCP server honestly flagged as maintenance mode"
+  },
+  {
+    "id": "plugin:shopify/shopify-ai-toolkit/shopify-plugin",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "Same toolkit README as the sibling plugin; precise telemetry disclosure, no skill docs"
+  },
+  {
+    "id": "plugin:liammorrow/liftlog/liftlog-plan-builder",
+    "expertise": 44,
+    "verdict": "thin",
+    "note": "LiftLog app README; the plan-builder skill and .liftlogplan schema are only a doc link"
+  },
+  {
+    "id": "plugin:firecrawl/cli/firecrawl",
+    "expertise": 88,
+    "verdict": "deep",
+    "note": "Full --flag tables per command and warns `setup defaults` disables native web fetch"
+  },
+  {
+    "id": "plugin:alexgreensh/token-optimizer/token-optimizer",
+    "expertise": 68,
+    "verdict": "solid",
+    "note": "Badge wall eats the top; real Windows EBUSY and CRLF repair steps with exact commands"
+  },
+  {
+    "id": "pkg:mcp-adr-analysis-server",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "Documents the reduced/prompt-only fallbacks precisely; no tool reference in the README"
+  },
+  {
+    "id": "pkg:@fidacy/mcp",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Documents assess_action's kind enum and that it is advisory-only and moves no money"
+  },
+  {
+    "id": "pkg:githits",
+    "expertise": 88,
+    "verdict": "deep",
+    "note": "Twenty real invocations with package specs; names vcpkg/Zig as lacking advisory data"
+  },
+  {
+    "id": "pkg:@vibgrate/cli",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "19 tools listed and real `vg why`/`vg bisect` runs; notes thin local docs fall to hosted"
+  }
+]

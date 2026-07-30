@@ -1,0 +1,22 @@
+[
+  {"id": "plugin:houseofmvps/ultraship/ultraship", "expertise": 55, "verdict": "thin", "note": "Header claims 37 audit tools, the tools section says 40, the plugin listing says 20."},
+  {"id": "plugin:ellipsis-labs/vulcan-cli/vulcan", "expertise": 86, "verdict": "deep", "note": "Warns live commands are irreversible and that both flows write the wallet password to disk."},
+  {"id": "plugin:maslennikov-ig/template-bridge/template-bridge", "expertise": 76, "verdict": "solid", "note": "Nine-step flow with real bd/superpowers commands; the catalog sync script fails loudly."},
+  {"id": "plugin:arjunrajlaboratory/mycelium/mycelium", "expertise": 76, "verdict": "solid", "note": "Five hooks tabled by event; eight slash commands listed with the .living/ layout."},
+  {"id": "plugin:powerofjinbo/phdtaketaketake/phdtaketaketake", "expertise": 85, "verdict": "deep", "note": "Boundary: a relative strength index, not an admission probability, and not calibrated."},
+  {"id": "plugin:marcosnahuel/antigravity-plugin-cc/antigravity", "expertise": 78, "verdict": "solid", "note": "Shows notebook-ask returning a cited answer; 22 commands claimed, about 6 documented."},
+  {"id": "plugin:generous-corp/pulp/pulp", "expertise": 78, "verdict": "solid", "note": "Says what the checksum check does and does not prove; the MCP tool list is not here."},
+  {"id": "plugin:ahmadabdalla/azure-cost-calculator/azure-cost-calculator", "expertise": 79, "verdict": "solid", "note": "Concedes it cannot promise identical results; 110 of 210+ services have reference files."},
+  {"id": "plugin:flagos-ai/skills/flagos-skills", "expertise": 79, "verdict": "solid", "note": "Skill rows carry trigger phrases and 'Do NOT use for'; unbuilt rows are marked Planned."},
+  {"id": "plugin:gaasher/agent-loop-skills/agent-loops", "expertise": 87, "verdict": "deep", "note": "Charts a real 0.734-0.798 run and calls it far from SOTA by design; ledgers committed."},
+  {"id": "plugin:obra/private-journal-mcp/private-journal-mcp", "expertise": 78, "verdict": "solid", "note": "Four tools with parameters and defaults; the entry file format is shown in full."},
+  {"id": "pkg:dreamd-mcp", "expertise": 79, "verdict": "solid", "note": "Says v0.1 recall is deliberately lexical, and answers 'is this the first?' with No."},
+  {"id": "pkg:@matihlabs/mcp", "expertise": 78, "verdict": "solid", "note": "Bridges the hosted Matih endpoint to stdio; 34 stable tools grouped, 1 beta left untyped."},
+  {"id": "pkg:@shipeasy/mcp", "expertise": 50, "verdict": "thin", "note": "Says 17 skills in one section and 11 in another; the MCP server is only a config snippet."},
+  {"id": "pkg:tokonomix-council-mcp", "expertise": 76, "verdict": "solid", "note": "Says its own SWE-bench run showed no measurable uplift; refuses to claim 'more accurate'."},
+  {"id": "pkg:@appfigures/cli", "expertise": 79, "verdict": "solid", "note": "Auto-generated reference for 20+ commands; the MCP server is one section of a CLI README."},
+  {"id": "pkg:miromiro-mcp", "expertise": 83, "verdict": "deep", "note": "Nine tools with credit costs; warns client-rendered pages need render:true (+5 credits)."},
+  {"id": "pkg:@gradusmusic/notation-mcp", "expertise": 82, "verdict": "deep", "note": "Four theory tools shown with real arguments and their returned JSON; input format specced."},
+  {"id": "pkg:@open-and-async/mcp", "expertise": 74, "verdict": "solid", "note": "Eleven tools listed one line each; warns generated output is a template, not the author."},
+  {"id": "pkg:ctxfile", "expertise": 79, "verdict": "solid", "note": "Names each tool and what it returns; the .mcpb bundle is Apple Silicon only for now."}
+]

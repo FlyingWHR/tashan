@@ -1,0 +1,22 @@
+[
+  {"id": "plugin:the01geek/devflow-autopilot/devflow", "expertise": 79, "verdict": "solid", "note": "A NOTE withholds the PR-review workflows and names the open issues (#930, #920) behind it."},
+  {"id": "plugin:reolink/reolink-cli/reolink-cli", "expertise": 88, "verdict": "deep", "note": "Shows a real 'info | jq' session with actual output; states self-update fails on Windows."},
+  {"id": "pkg:buywhere-mcp", "expertise": 62, "verdict": "solid", "note": "Install block names @buywhere/mcp-server, not this package; blog and challenge link farm."},
+  {"id": "pkg:labby-mcp", "expertise": 85, "verdict": "deep", "note": "Lists the 7 registered services and names the four product surfaces it deleted."},
+  {"id": "pkg:@spekoai/mcp", "expertise": 42, "verdict": "wrapper", "note": "Self-describes as a stdio-to-remote bridge that 'does not contain Speko tool logic'."},
+  {"id": "pkg:@voris-ai/mcp", "expertise": 40, "verdict": "wrapper", "note": "Calls itself a thin stdio-HTTPS proxy with no tool logic; not yet published to npm."},
+  {"id": "pkg:@cleanor/mcp", "expertise": 79, "verdict": "solid", "note": "22 tools with per-param types, ranges and defaults; only one worked call (a raw curl)."},
+  {"id": "pkg:@sonarapp/mcp", "expertise": 76, "verdict": "solid", "note": "22 tools grouped by plan and scope; free mode capped at 30 requests/day per IP."},
+  {"id": "pkg:@uplink-code/mcp", "expertise": 48, "verdict": "thin", "note": "1.7 KB: install, login and a 3-step pairing flow; no tool list, all docs offsite."},
+  {"id": "pkg:@aioproductoscom/mcp-studio", "expertise": 77, "verdict": "solid", "note": "13 tools tabled; documents hide_selectors and a storageState path for logged-in areas."},
+  {"id": "pkg:@enconvert/mcp", "expertise": 86, "verdict": "deep", "note": "24 tools plus a real setup transcript; names the webhook-secret endpoints it withholds."},
+  {"id": "pkg:@hauntapi/mcp-server", "expertise": 80, "verdict": "deep", "note": "'Capability boundaries' names the typed failures for login walls, CAPTCHA and paywalls."},
+  {"id": "pkg:@kenwea/mcp", "expertise": 40, "verdict": "wrapper", "note": "README documents the Go adapter; this npm package is described as its stdio-HTTP bridge."},
+  {"id": "pkg:@solinkify/mcp", "expertise": 78, "verdict": "solid", "note": "18 payment tools; two spend caps with defaults, fail-closed, plus an on-chain kill switch."},
+  {"id": "pkg:zerodrop-mcp", "expertise": 77, "verdict": "solid", "note": "Three tools with param tables and a real OTP response; inboxes expire in 30 min on free."},
+  {"id": "pkg:@webclaw/mcp", "expertise": 75, "verdict": "solid", "note": "Worked examples are all CLI; the MCP section is a config block, 3 prompts and a table."},
+  {"id": "pkg:remote-agents", "expertise": 68, "verdict": "solid", "note": "Per-host safety modes (plan/edit/bypass/disabled); the tool table starts at the 10k cut."},
+  {"id": "pkg:@agentskit/doc-bridge", "expertise": 79, "verdict": "solid", "note": "CLI output blocks are gate-checked byte-for-byte in CI; the MCP tool list trails off."},
+  {"id": "pkg:@creedspace/mcp-server", "expertise": 68, "verdict": "solid", "note": "16 tools listed one line each; 'reduces harmful AI outputs' with no method or limits."},
+  {"id": "pkg:@cryptoapis-io/mcp-signer", "expertise": 78, "verdict": "solid", "note": "Six signers with action tables and return shapes; Kaspa noted mainnet-only."}
+]

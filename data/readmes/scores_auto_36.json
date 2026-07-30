@@ -1,22 +1,122 @@
 [
-  {"id": "plugin:ai-screams/howl/howl", "expertise": 64, "verdict": "solid", "note": "25-badge wall, but each metric documented with its rendered string (Out:1K, main*)."},
-  {"id": "plugin:itential/builder-skills/itential-builder", "expertise": 78, "verdict": "solid", "note": "Each skill names its output file (customer-spec.md, feasibility.md); two .env auth modes."},
-  {"id": "plugin:waitdeadai/llm-dark-patterns/llm-dark-patterns", "expertise": 79, "verdict": "solid", "note": "Publishes its own weak F1 scores and calls no-wrap-up 'mostly noise'; no install section."},
-  {"id": "plugin:praneybehl/llm-wiki-plugin/llm-wiki-plugin", "expertise": 84, "verdict": "deep", "note": "Pinned dep versions, real /wiki:ingest calls, and says when to use a database instead."},
-  {"id": "plugin:hongdangmoo49/oh-my-obsidian/oh-my-obsidian", "expertise": 74, "verdict": "solid", "note": "Every sensitive setup step marked approval-gated; commands are one line each."},
-  {"id": "plugin:nisus74/pencil-skill/pencil-dev-skill", "expertise": 74, "verdict": "solid", "note": "Declares itself unaffiliated and pre-release; the 9 tool docs live in references/, not here."},
-  {"id": "plugin:xoai/sage/sage", "expertise": 77, "verdict": "solid", "note": "Reports where it measures no difference vs a bare agent, and the claims it walked back."},
-  {"id": "plugin:scylladb/agent-skills/scylladb", "expertise": 58, "verdict": "thin", "note": "Install commands and a 6-skill catalog; no example of a skill actually being used."},
-  {"id": "plugin:olgasafonova/skillcheck-free/skillcheck-free", "expertise": 79, "verdict": "solid", "note": "Sample findings output with rule IDs; each Free check listed against what Pro adds."},
-  {"id": "plugin:carson-sweet/sweetclaude/sweetclaude", "expertise": 79, "verdict": "solid", "note": "Names when it is the wrong tool and points at a competitor; 100+ skills never enumerated."},
-  {"id": "plugin:descope/skills/descope-skills", "expertise": 79, "verdict": "solid", "note": "auth-review states it does not run the app, probe, modify code, or file issues."},
-  {"id": "plugin:hamelsmu/hamel/hamel-tools", "expertise": 72, "verdict": "solid", "note": "Six CLIs with real flag-level examples in 2.5 KB; API credentials never mentioned."},
-  {"id": "plugin:bo-cao/breaking-coding-chaos/bcc", "expertise": 74, "verdict": "solid", "note": "Long prior-art prose, but real command args (rounds=3, review=off) and a wrong-tool list."},
-  {"id": "plugin:camjac251/tool-gates/tool-gates", "expertise": 74, "verdict": "solid", "note": "Hook-install commands per CLI; feature reference deferred to the external docs site."},
-  {"id": "plugin:redhat-global-engineering/ge-public-skills/agent-eval-harness", "expertise": 40, "verdict": "thin", "note": "Registry README about registry.yaml and nightly SHA pinning; this plugin is never named."},
-  {"id": "plugin:raven-scout/scout-plugin/scout", "expertise": 76, "verdict": "solid", "note": "Session types documented phase by phase; counts are sourced to the author's own vault."},
-  {"id": "plugin:xd4o/praxis/praxis", "expertise": 85, "verdict": "deep", "note": "Opens with a gate-by-gate transcript; 18 skills each with the checks it enforces."},
-  {"id": "pkg:@peng-shawn/mermaid-mcp-server", "expertise": 84, "verdict": "deep", "note": "Four example calls with real Mermaid source; FAQ concedes Desktop renders mermaid already."},
-  {"id": "pkg:@callmcp/server", "expertise": 78, "verdict": "solid", "note": "Competitor table cells marked '(unverified)'; per-tool contract deferred to SPEC.md."},
-  {"id": "pkg:fodda-mcp", "expertise": 56, "verdict": "thin", "note": "Package description claims 31 tools; the README documents 7, with no example call."}
+  {
+    "id": "plugin:ai-screams/howl/howl",
+    "expertise": 64,
+    "verdict": "solid",
+    "note": "25-badge wall, but each metric documented with its rendered string (Out:1K, main*)."
+  },
+  {
+    "id": "plugin:itential/builder-skills/itential-builder",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Each skill names its output file (customer-spec.md, feasibility.md); two .env auth modes."
+  },
+  {
+    "id": "plugin:waitdeadai/llm-dark-patterns/llm-dark-patterns",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Publishes its own weak F1 scores and calls no-wrap-up 'mostly noise'; no install section."
+  },
+  {
+    "id": "plugin:praneybehl/llm-wiki-plugin/llm-wiki-plugin",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Pinned dep versions, real /wiki:ingest calls, and says when to use a database instead."
+  },
+  {
+    "id": "plugin:hongdangmoo49/oh-my-obsidian/oh-my-obsidian",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "Every sensitive setup step marked approval-gated; commands are one line each."
+  },
+  {
+    "id": "plugin:nisus74/pencil-skill/pencil-dev-skill",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "Declares itself unaffiliated and pre-release; the 9 tool docs live in references/."
+  },
+  {
+    "id": "plugin:xoai/sage/sage",
+    "expertise": 77,
+    "verdict": "solid",
+    "note": "Reports where it measures no difference vs a bare agent, and the claims it walked back."
+  },
+  {
+    "id": "plugin:scylladb/agent-skills/scylladb",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "Install commands and a 6-skill catalog; no example of a skill actually being used."
+  },
+  {
+    "id": "plugin:olgasafonova/skillcheck-free/skillcheck-free",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Sample findings output with rule IDs; each Free check listed against what Pro adds."
+  },
+  {
+    "id": "plugin:carson-sweet/sweetclaude/sweetclaude",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Names when it is the wrong tool and points at a competitor; 100+ skills never enumerated."
+  },
+  {
+    "id": "plugin:descope/skills/descope-skills",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "auth-review states it does not run the app, probe, modify code, or file issues."
+  },
+  {
+    "id": "plugin:hamelsmu/hamel/hamel-tools",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "Six CLIs with real flag-level examples in 2.5 KB; API credentials never mentioned."
+  },
+  {
+    "id": "plugin:bo-cao/breaking-coding-chaos/bcc",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "Long prior-art prose, but real command args (rounds=3, review=off) and a wrong-tool list."
+  },
+  {
+    "id": "plugin:camjac251/tool-gates/tool-gates",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "Hook-install commands per CLI; feature reference deferred to the external docs site."
+  },
+  {
+    "id": "plugin:redhat-global-engineering/ge-public-skills/agent-eval-harness",
+    "expertise": 40,
+    "verdict": "thin",
+    "note": "Registry README about registry.yaml and nightly SHA pinning; this plugin is never named."
+  },
+  {
+    "id": "plugin:raven-scout/scout-plugin/scout",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Session types documented phase by phase; counts are sourced to the author's own vault."
+  },
+  {
+    "id": "plugin:xd4o/praxis/praxis",
+    "expertise": 85,
+    "verdict": "deep",
+    "note": "Opens with a gate-by-gate transcript; 18 skills each with the checks it enforces."
+  },
+  {
+    "id": "pkg:@peng-shawn/mermaid-mcp-server",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Four example calls with real Mermaid source; FAQ concedes Desktop renders it already."
+  },
+  {
+    "id": "pkg:@callmcp/server",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Competitor table cells marked '(unverified)'; per-tool contract deferred to SPEC.md."
+  },
+  {
+    "id": "pkg:fodda-mcp",
+    "expertise": 56,
+    "verdict": "thin",
+    "note": "Package description claims 31 tools; the README documents 7, with no example call."
+  }
 ]

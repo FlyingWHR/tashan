@@ -1,0 +1,122 @@
+[
+  {
+    "id": "plugin:verivus-oss/llm-cli-gateway/llm-gateway",
+    "expertise": 72,
+    "verdict": "solid",
+    "note": "control plane over 8 coding-agent CLIs; states worktree and Kit fail-closed limits"
+  },
+  {
+    "id": "plugin:labyrinth-analytics/loreconvo/loreconvo",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "per-surface setup plus create_project/search_sessions calls; 32 tools never listed"
+  },
+  {
+    "id": "plugin:ilang-ai/mem-forever/mem-forever",
+    "expertise": 38,
+    "verdict": "thin",
+    "note": "'use this template, there is no step 2'; grand protocol claims, no tool docs"
+  },
+  {
+    "id": "plugin:scaledown-team/slm_agent/slm-agent",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "4-tool table plus a real scaledown-report.md sample; tool rows are one-liners"
+  },
+  {
+    "id": "plugin:stackhawk/claude-skills/stackhawk-skills-for-claude",
+    "expertise": 70,
+    "verdict": "solid",
+    "note": "four skills documented with install for six agents; no output shown for any scan"
+  },
+  {
+    "id": "plugin:summerengine/summer/summer",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "agent install playbook with doctor check-id table; 'no supported public Linux installer'"
+  },
+  {
+    "id": "plugin:babamba2/superclaude-for-sap/super-claude-for-sap",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "emoji capability table with 150+ tools claimed; install and features deferred to docs/"
+  },
+  {
+    "id": "plugin:kobiton/automate/testing",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "install for six clients, and says end-to-end testing covered only six of them"
+  },
+  {
+    "id": "plugin:versori/cli/versori-skills",
+    "expertise": 48,
+    "verdict": "thin",
+    "note": "CLI install paths and 'versori skills download'; no tool docs, docs/ is a bare link"
+  },
+  {
+    "id": "plugin:infinri/writ/writ",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "writ query shows ranked output; states plugin installs leave the Bash allowlist missing"
+  },
+  {
+    "id": "plugin:tomgranot/hubspot-admin-skills/hubspot-admin",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "37 skills tabled; sandbox self-test hard-refuses non-DEVELOPER_TEST portals, no override"
+  },
+  {
+    "id": "plugin:fedec65/bettercallclaude_italia/bettercallclaude-italia",
+    "expertise": 40,
+    "verdict": "thin",
+    "note": "1.6 KB marketplace stub in Italian; every detail behind a link to the plugin README"
+  },
+  {
+    "id": "plugin:obra/superpowers-lab/superpowers-lab",
+    "expertise": 56,
+    "verdict": "thin",
+    "note": "four skills with use-cases and 'how it works', but every example defers to SKILL.md"
+  },
+  {
+    "id": "pkg:kavel-mcp",
+    "expertise": 34,
+    "verdict": "wrapper",
+    "note": "returns a tuned prompt and a kavel.ai URL; generation happens on the website"
+  },
+  {
+    "id": "pkg:proxyllm-mcp",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "reference-only: 9 tools described in prose, 402 paywall stated, no invocation shown"
+  },
+  {
+    "id": "pkg:@verlon-ai/mcp",
+    "expertise": 64,
+    "verdict": "solid",
+    "note": "tool table with typed inputs; --enable-writes admits no write tools exist yet"
+  },
+  {
+    "id": "pkg:@drantoniou/uploadcheck-mcp",
+    "expertise": 44,
+    "verdict": "wrapper",
+    "note": "self-describes as a thin MCP client over the hosted uploadcheck.app API"
+  },
+  {
+    "id": "pkg:@deeppane/mcp-server",
+    "expertise": 56,
+    "verdict": "thin",
+    "note": "four tools one line each; explicitly lists what it does not expose, but no worked call"
+  },
+  {
+    "id": "pkg:@mnemopay/sdk",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "explicit 'what MnemoPay is NOT' list; stress test cited as both 200K and 1M ops"
+  },
+  {
+    "id": "pkg:@oksigenia/checker-mcp",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "17 checks tabled, three tools with JSON args, exact list of what leaves the machine"
+  }
+]

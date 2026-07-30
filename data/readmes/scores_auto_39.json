@@ -1,0 +1,122 @@
+[
+  {
+    "id": "plugin:gigsmart/haiku-method/the-h-ai-k-u-method",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "12 studios with their stage sequences and a state-file table; no stated limitation."
+  },
+  {
+    "id": "plugin:thephw/claude-meseeks/mr-meeseeks",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Explains why it avoids the Stop hook; go:embed forbids apostrophes in clip filenames."
+  },
+  {
+    "id": "plugin:galando/temper/temper",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "Shows real gate output and admits a bug found in its own eval harness."
+  },
+  {
+    "id": "plugin:ramboz/jig/jig",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "Philosophy-heavy; the 20 skills it ships are counted but never listed."
+  },
+  {
+    "id": "plugin:furkankoykiran/.claude/fk-eng-agents",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "Shared toolkit README; this plugin is one row claiming 0 chars of skill-listing cost."
+  },
+  {
+    "id": "plugin:furkankoykiran/.claude/fk-gh-flow",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "Shared toolkit README; this plugin gets one table row and a 746-char listing cost."
+  },
+  {
+    "id": "plugin:furkankoykiran/.claude/fk-manim-video",
+    "expertise": 50,
+    "verdict": "thin",
+    "note": "Shared toolkit README; one 12-word row, nothing about Manim, edge-tts, or ffmpeg."
+  },
+  {
+    "id": "plugin:furkankoykiran/.claude/fk-toolkit-ops",
+    "expertise": 50,
+    "verdict": "thin",
+    "note": "Shared toolkit README; one row about MCP wiring, with fkt update documented instead."
+  },
+  {
+    "id": "plugin:furkankoykiran/.claude/fk-writing-kit",
+    "expertise": 50,
+    "verdict": "thin",
+    "note": "Shared toolkit README; one row on stripping AI tells, no skill docs or examples."
+  },
+  {
+    "id": "plugin:superhq-ai/webmotion/webmotion",
+    "expertise": 88,
+    "verdict": "deep",
+    "note": "Full <w-composition> markup and a TypeScript renderFrame; export needs Chromium."
+  },
+  {
+    "id": "plugin:rvdbreemen/adr-kit/adr-kit",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Agent contract gives exact bin/adr-context commands; install lives in another file."
+  },
+  {
+    "id": "plugin:chronoaiproject/consensus-rnd/consensus-rnd",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "A Risks section covering autonomous merges and releases; usage matrix left in SKILL.md."
+  },
+  {
+    "id": "plugin:derekstride/sq/sq",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Eight real sq invocations including rg --json piping; FAQ admits there is no queue."
+  },
+  {
+    "id": "plugin:initialneil/project-with-reflect/project-with-reflect",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Exhaustive command syntax per project and connection; teammate mode is iTerm2-only."
+  },
+  {
+    "id": "pkg:brewpage-mcp",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "curl examples with the real JSON response; the 6 MCP tools defer to mcp-server/README."
+  },
+  {
+    "id": "pkg:spritecook-mcp",
+    "expertise": 55,
+    "verdict": "thin",
+    "note": "Setup command and seven example prompts; tool names appear only inside one prose blob."
+  },
+  {
+    "id": "pkg:obra-cto",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Prints a real anonymized score report and names its one network call (src/deps.ts)."
+  },
+  {
+    "id": "pkg:drawing-converter-mcp",
+    "expertise": 84,
+    "verdict": "deep",
+    "note": "Limitations name the text-layer requirement; half the README is parent-product marketing."
+  },
+  {
+    "id": "pkg:monarch-money-mcp-server",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "PulseMCP monorepo index shared by 6 servers; monarch-money is a status-table row."
+  },
+  {
+    "id": "pkg:onepassword-mcp-server",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "PulseMCP monorepo index shared by 6 servers; no install, tools, or 1Password specifics."
+  }
+]

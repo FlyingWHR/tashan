@@ -1,0 +1,22 @@
+[
+  {"id": "pkg:kaduno-pullpush-mcp", "expertise": 76, "verdict": "solid", "note": "45 tools with router actions listed; a curl sandbox returns a real drifted-stock diff."},
+  {"id": "pkg:@traderouter/trade-router-mcp", "expertise": 78, "verdict": "solid", "note": "Documents the local-signing flow step by step and a TRADEROUTER_DRY_RUN env var."},
+  {"id": "pkg:lovie", "expertise": 34, "verdict": "wrapper", "note": "Self-described stdio-to-HTTP bridge; 10 near-identical config blocks, 79 tools unnamed."},
+  {"id": "skill:anthropics/brand-guidelines", "expertise": 45, "verdict": "thin", "note": "Repo-level README for anthropics/skills; the brand-guidelines skill is never documented."},
+  {"id": "pkg:@tradesearcher/mcp-server", "expertise": 72, "verdict": "solid", "note": "Warns 'source available' does not prove complete Pine; MCP tool schemas live in docs/."},
+  {"id": "pkg:hemmabo-mcp-server", "expertise": 74, "verdict": "solid", "note": "Names what it must not be used for (OTA, marketplace, invented availability)."},
+  {"id": "pkg:@hushvert/mcp", "expertise": 88, "verdict": "deep", "note": "Shows pdffonts output for both paths and says not to use it if LibreOffice is installed."},
+  {"id": "pkg:@instavar/mcp-server", "expertise": 79, "verdict": "solid", "note": "Splits free local tools from key-gated hosted ones; documents 409 and 15s timeout rules."},
+  {"id": "pkg:@theneuralledger/mcp", "expertise": 58, "verdict": "thin", "note": "Monorepo README with SDK examples; the MCP server's own tools are never listed."},
+  {"id": "pkg:@madtaco/mcp", "expertise": 79, "verdict": "solid", "note": "Per-tool credit costs and three real test values (RUT, IBAN, ticker); no parameter docs."},
+  {"id": "pkg:@agentage/find-mcp", "expertise": 42, "verdict": "wrapper", "note": "Says it holds no tool logic and that remote clients do not need the package at all."},
+  {"id": "pkg:alterlab-mcp-server", "expertise": 79, "verdict": "solid", "note": "Full parameter tables per tool with defaults; comparison table is competitor-negative."},
+  {"id": "pkg:@otskit/mcp", "expertise": 76, "verdict": "solid", "note": "Opens by stating a pending proof is not a failed one and can take hours to confirm."},
+  {"id": "pkg:@automattic/simplenote-mcp", "expertise": 88, "verdict": "deep", "note": "Documents observed token behaviour, the ~10-min auth lockout, and what telemetry sends."},
+  {"id": "pkg:google-health-fitbit-mcp", "expertise": 87, "verdict": "deep", "note": "Explains the 7-day refresh-token revocation as expected, and disclaims medical use."},
+  {"id": "pkg:@betterdb/mcp", "expertise": 48, "verdict": "thin", "note": "Monorepo README for the monitor app; @betterdb/mcp is one row in a package table."},
+  {"id": "pkg:@braynexservices/nigeria-mcp-bank-account", "expertise": 50, "verdict": "thin", "note": "Family README for 12 servers; names resolve_bank_account but defers docs to lanes/."},
+  {"id": "pkg:@braynexservices/nigeria-mcp-electricity", "expertise": 50, "verdict": "thin", "note": "Same 12-server family README; validate_meter named, full docs deferred to lanes/."},
+  {"id": "pkg:slac-mcp", "expertise": 66, "verdict": "solid", "note": "Two tools with parameters and four real expressions in 1.5 KB; no MCP client config."},
+  {"id": "pkg:distribea-mcp", "expertise": 76, "verdict": "solid", "note": "Real CLI invocations with flags and a --dry-run price preview; no stated limitation."}
+]
