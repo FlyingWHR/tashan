@@ -293,6 +293,20 @@ def main():
     cli_field_contract()
 
     failed = [r for r in results if not r[0]]
+    # ---- titles must say something -------------------------------------------------------------------
+    # Six pages shipped titles that were just their nav label — "About — tashan", "Terms — tashan". A
+    # search result or an answer engine gets one line to decide relevance, and the brand name is the part
+    # it already knows. 25 chars is not a style preference; below it there is no room for a claim.
+    import glob as _glob, re as _re
+    _thin = []
+    for _f in sorted(_glob.glob(os.path.join(ROOT, "web", "*.html"))):
+        _m = _re.search(r"<title>([^<]*)</title>", open(_f, encoding="utf-8").read())
+        if not _m:
+            _thin.append(os.path.basename(_f) + ": no <title> at all")
+        elif len(_m.group(1).strip()) < 25:
+            _thin.append(f"{os.path.basename(_f)}: {_m.group(1).strip()!r} ({len(_m.group(1).strip())} chars)")
+    check("every page title is more than a nav label", not _thin, "; ".join(_thin[:4]))
+
     print(f"\n{'='*48}\n{len(results)-len(failed)}/{len(results)} checks passed" +
           (f" · {len(failed)} FAILED" if failed else " · all green"))
     for ok, name, detail in failed:
@@ -301,3 +315,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

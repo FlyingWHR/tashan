@@ -1,0 +1,22 @@
+[
+  {"id": "plugin:context-engine-ai/context-engine/context-engine", "expertise": 50, "verdict": "thin", "note": "Install blocks for 8 clients; the 30+ MCP tools are deferred to SKILL.md, no worked query"},
+  {"id": "plugin:yucchiy/unicli/unicli", "expertise": 85, "verdict": "deep", "note": "Dozens of exec calls with real JSON args; states Linux skips editor foreground activation"},
+  {"id": "plugin:jtydhr88/comfyui-custom-node-skills/comfyui-custom-nodes", "expertise": 57, "verdict": "thin", "note": "9 skills listed with triggers and verified source commits, but examples are prompt strings only"},
+  {"id": "pkg:synapse-rmcp", "expertise": 88, "verdict": "deep", "note": "Has a Known Parity Gaps section and lists the 18-command exec allowlist with git deliberately excluded"},
+  {"id": "pkg:@tuteliq/mcp", "expertise": 50, "verdict": "thin", "note": "80 tools in one-line tables plus a context-field reference; no example call, 1.7x claim vs unnamed vendors"},
+  {"id": "pkg:@black-duck/mcp-server", "expertise": 72, "verdict": "solid", "note": "Both tools documented with parameters, returns and the git-only constraint on changes scans"},
+  {"id": "pkg:@extentos/mcp-server", "expertise": 58, "verdict": "thin", "note": "38 tools listed one line each and a pre-1.0 caveat, but no call, argument or output anywhere"},
+  {"id": "pkg:@granoflow/mcp-server", "expertise": 40, "verdict": "wrapper", "note": "Self-describes as intentionally thin: forwards to the local Granoflow app, owns no business logic"},
+  {"id": "pkg:@kage-core/kage-graph-mcp", "expertise": 79, "verdict": "solid", "note": "Labels two honest attach limits and a reboot gap; every example is setup, none shows a memory recalled"},
+  {"id": "pkg:run402-mcp", "expertise": 76, "verdict": "solid", "note": "Monorepo README: the MCP is one row in a surface table, deep CLI/SDK examples, no tool list"},
+  {"id": "pkg:nostr-bray", "expertise": 78, "verdict": "solid", "note": "Group counts sum exactly to the claimed 253; auth tiers ranked by key exposure, no per-tool args"},
+  {"id": "pkg:utilia-solana-agent", "expertise": 83, "verdict": "deep", "note": "Prices all 6 tools and states it has no withdrawal, swap or arbitrary-transaction capability"},
+  {"id": "pkg:@frase/mcp-server", "expertise": 52, "verdict": "thin", "note": "Six near-identical client-config blocks and a one-line tool list; example prompts, no arguments"},
+  {"id": "pkg:@frihet/mcp-server", "expertise": 86, "verdict": "deep", "note": "Shows a real invoice total as output and a Does-not-do list: no OCR, no upload, no image processing"},
+  {"id": "pkg:@brandsystem/mcp", "expertise": 78, "verdict": "solid", "note": "brand_start shown with real args and the resulting .brand/ tree; hosted Use-MCP flagged pre-release"},
+  {"id": "pkg:@clipform/mcp-server", "expertise": 64, "verdict": "solid", "note": "Three auth modes explained, incl. anonymous where the form UUID is the only credential; one example"},
+  {"id": "pkg:z-zero-mcp-server", "expertise": 68, "verdict": "solid", "note": "One request_payment_token call with a real cart; rotate-on-connect and one-key-one-machine documented"},
+  {"id": "pkg:@elnora-ai/mcp-server", "expertise": 66, "verdict": "solid", "note": "74 tools given only as per-category counts; troubleshooting table names the 120s generation timeout"},
+  {"id": "plugin:quarkusio/quarkus-agent-mcp/quarkus-agent", "expertise": 76, "verdict": "solid", "note": "Seven client-config blocks, one narrated conversation, and Windows unsupported on the native binary"},
+  {"id": "plugin:slackapi/slack-mcp-plugin/slack", "expertise": 66, "verdict": "solid", "note": "6 skills and 5 slash commands listed; Limitations section names the workspace-admin approval gate"}
+]

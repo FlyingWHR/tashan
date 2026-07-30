@@ -1,0 +1,22 @@
+[
+  {"id": "pkg:@modelcontextprotocol/server-filesystem", "expertise": 50, "verdict": "thin", "note": "Monorepo index README; filesystem is a list entry plus a config snippet, no tool docs"},
+  {"id": "pkg:@suekou/mcp-notion-server", "expertise": 72, "verdict": "solid", "note": "Setup covers integration capabilities and content access; tools deferred to docs/tools.md"},
+  {"id": "pkg:xcodebuildmcp", "expertise": 74, "verdict": "solid", "note": "Real CLI runs with --scheme/--project-path; the tool reference lives off-README"},
+  {"id": "plugin:nyldn/claude-octopus/octo", "expertise": 62, "verdict": "solid", "note": "Changelog and badge wall; only /octo:council gets real invocations of the 50 commands"},
+  {"id": "pkg:@cyanheads/git-mcp-server", "expertise": 76, "verdict": "solid", "note": "28 tools tabled by category with destructive-op confirmation flags; one config example"},
+  {"id": "pkg:obsidian-mcp-server", "expertise": 84, "verdict": "deep", "note": "Documents 14 tools with per-mode params, defaults, and the 50-result Omnisearch cap"},
+  {"id": "pkg:@sveltejs/mcp", "expertise": 40, "verdict": "thin", "note": "Dev-setup only: pnpm dev, inspector, drizzle studio; no tool or client docs"},
+  {"id": "plugin:expo/skills/expo", "expertise": 78, "verdict": "solid", "note": "Marks free-vs-paid EAS skills and telemetry-off default; per-skill docs are one-liners"},
+  {"id": "plugin:nvidia/skills/nvidia-skills", "expertise": 74, "verdict": "solid", "note": "Catalog only, skills live in product repos; flags the v1.5.16 CLI floor that hides them"},
+  {"id": "plugin:revfactory/harness/harness", "expertise": 66, "verdict": "solid", "note": "Shows the generated .claude/agents tree and 8 trigger prompts; states no limitation"},
+  {"id": "plugin:clidey/whodb/whodb", "expertise": 62, "verdict": "solid", "note": "Documents the WhoDB app; the MCP server gets two lines and `whodb-cli mcp serve`"},
+  {"id": "pkg:@perplexity-ai/mcp-server", "expertise": 78, "verdict": "solid", "note": "Four tools described plus the dropped strip_thinking param and the npx -yq stdout fix"},
+  {"id": "pkg:@postman/postman-mcp-server", "expertise": 72, "verdict": "solid", "note": "Auth and the four tool modes are clear; the 100+ tools are only in a Postman collection"},
+  {"id": "plugin:cloudflare/skills/cloudflare", "expertise": 55, "verdict": "thin", "note": "Index of 8 skills and 5 MCP servers; install commands only, no usage example or caveat"},
+  {"id": "plugin:exa-labs/exa-mcp-server/exa", "expertise": 76, "verdict": "solid", "note": "Config wall for 15 clients, but names the filters that 400 with category:'company'"},
+  {"id": "plugin:stripe/ai/stripe", "expertise": 45, "verdict": "thin", "note": "Repo index: SDK links and four one-line plugin installs; no skill or tool docs"},
+  {"id": "plugin:giancarloerra/socraticode/socraticode", "expertise": 52, "verdict": "thin", "note": "First 10k is pitch, stars, sponsor and Cloud upsell; tool docs never arrive"},
+  {"id": "plugin:dathere/qsv/qsv-data-wrangling", "expertise": 62, "verdict": "solid", "note": "Documents 55 qsv commands with real caveats but never names the skill; no invocation"},
+  {"id": "plugin:epoko77-ai/im-not-ai/humanize-korean", "expertise": 86, "verdict": "deep", "note": "Korean; before/after rewrites, 3-route call budgets, hard 50% change-rate abort"},
+  {"id": "plugin:mvanhorn/last30days-skill/last30days", "expertise": 78, "verdict": "solid", "note": "Concrete run outputs with real counts; defers to SKILL.md as the source of truth"}
+]
