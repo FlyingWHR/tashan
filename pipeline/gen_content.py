@@ -93,6 +93,7 @@ def head(a):
         '<meta name="twitter:image" content="https://tashan.sh/assets/og.png">\n'
         '<link rel="icon" href="/assets/favicon.svg">\n'
         '<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">\n'
+        '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/SpaceGrotesk-Variable.woff2" crossorigin>\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>\n'
         '<link rel="stylesheet" href="/css/site.css?v=' + AV + '">\n' + ld + "\n</head>\n<body>\n" + NAV)

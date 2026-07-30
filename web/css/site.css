@@ -35,6 +35,10 @@
   --red:         #f2604a;             /* "stale / churned" */
 
   --font-sans:  "Geist", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  /* Display only. Character where the text is read once and looked at; the workhorse keeps the
+     12-15px table text, where neutral letterforms and tabular figures decide whether 5,788 rows
+     are scannable. Falls back to the workhorse, so a failed font load changes nothing but flavour. */
+  --font-display: "Space Grotesk", "Geist", -apple-system, system-ui, sans-serif;
   --font-mono:  "GeistMono", ui-monospace, "SF Mono", Menlo, monospace;
   --font-serif: ui-serif, "New York", "Iowan Old Style", Georgia, serif;
 
@@ -703,3 +707,16 @@ pre, code, .install__snip { max-width: 100%; }
 .crow--more { justify-content:flex-start; color: var(--text-faint); font-family: var(--font-mono);
   font-size:var(--fs-xs); text-decoration:none; margin-top:.2rem; }
 .crow--more:hover { color: var(--jade); background: var(--surface); }
+
+/* ---------- display typeface ---------- */
+h1, h2,
+.hero h1, .hero__rot,
+.prose h1, .prose h2, .pull,
+.cap-hd h1, .capsec__hd h2,
+.phead__h, .section__head h2,
+.hubhead h1, .hubh2,
+.brand, .plan__price, .plan__name,
+.stat .v, .hstat__v, .take__v {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
