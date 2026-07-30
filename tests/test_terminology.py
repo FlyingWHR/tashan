@@ -80,6 +80,22 @@ def main():
                 ctx = re.sub(r"\s+", " ", text[max(0, m.start() - 45):m.end() + 45]).strip()
                 fail.append(f"{os.path.relpath(path, ROOT)}  \u201c\u2026{ctx}\u2026\u201d  -> say {now!r}")
 
+    # ---- headings must not gloss themselves ------------------------------------------------------
+    # "Tags — what you're doing" over a list of tags, "Categories — what it touches" over categories:
+    # the gloss restates the noun and costs a line in the most-scanned part of the page. Contrast that
+    # earns its place ("Request a grade, not a placement") is a clause, not an em-dash appendix.
+    HEAD = re.compile(r"<(h[1-3])[^>]*>([^<]{3,70})</\1>")
+    LABEL = re.compile(r'class="(?:catrail__h|trole__h|kicker|plan__name|job__k)[^"]*"[^>]*>([^<]{3,70})<')
+    for path in glob.glob(os.path.join(ROOT, "web", "*.html")) + \
+            [os.path.join(ROOT, "pipeline", "gen_hubs.py")]:
+        src = open(path, encoding="utf-8").read()
+        for rx, grp in ((HEAD, 2), (LABEL, 1)):
+            for m in rx.finditer(src):
+                txt = m.group(grp).strip()
+                if " — " in txt or " – " in txt:
+                    fail.append(f"{os.path.relpath(path, ROOT)}  heading glosses itself: {txt!r} "
+                                f"— cut the gloss or make it a clause")
+
     # ---- behaviour: every sort comparator must read a field the export actually has -------------
     idx = os.path.join(ROOT, "web", "data", "index.json")
     if os.path.exists(idx):

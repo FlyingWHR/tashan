@@ -39,7 +39,10 @@ def raw(repo, path):
 
 con = sqlite3.connect(DB)
 SEL = "SELECT id,name,source_repo,npm_pkg,description FROM capabilities"
-WHERE = " WHERE tashan_score IS NOT NULL AND source_repo IS NOT NULL"
+# Already-graded rows were not excluded, so a bigger TOP_N re-fetched and re-staged the same top
+# capabilities every run — the queue looked full while coverage stayed at 2.6%.
+WHERE = (" WHERE tashan_score IS NOT NULL AND source_repo IS NOT NULL"
+         " AND expertise_verdict IS NULL")
 if "--stratified" in sys.argv:
     # Equal draw per band. Skills are excluded: every skill in a monorepo carries the SAME repo
     # signal, so they cluster on one score and would swamp whichever band they land in.
