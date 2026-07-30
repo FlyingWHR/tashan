@@ -1,5 +1,5 @@
 [
-  {"id": "plugin:the01geek/devflow-autopilot/devflow", "expertise": 79, "verdict": "solid", "note": "A NOTE withholds the PR-review workflows and names the open issues (#930, #920) behind it."},
+  {"id": "plugin:the01geek/devflow-autopilot/devflow", "expertise": 79, "verdict": "solid", "note": "A NOTE withholds the PR-review workflows and names the open issues behind it."},
   {"id": "plugin:reolink/reolink-cli/reolink-cli", "expertise": 88, "verdict": "deep", "note": "Shows a real 'info | jq' session with actual output; states self-update fails on Windows."},
   {"id": "pkg:buywhere-mcp", "expertise": 62, "verdict": "solid", "note": "Install block names @buywhere/mcp-server, not this package; blog and challenge link farm."},
   {"id": "pkg:labby-mcp", "expertise": 85, "verdict": "deep", "note": "Lists the 7 registered services and names the four product surfaces it deleted."},
@@ -12,7 +12,7 @@
   {"id": "pkg:@enconvert/mcp", "expertise": 86, "verdict": "deep", "note": "24 tools plus a real setup transcript; names the webhook-secret endpoints it withholds."},
   {"id": "pkg:@hauntapi/mcp-server", "expertise": 80, "verdict": "deep", "note": "'Capability boundaries' names the typed failures for login walls, CAPTCHA and paywalls."},
   {"id": "pkg:@kenwea/mcp", "expertise": 40, "verdict": "wrapper", "note": "README documents the Go adapter; this npm package is described as its stdio-HTTP bridge."},
-  {"id": "pkg:@solinkify/mcp", "expertise": 78, "verdict": "solid", "note": "18 payment tools; two spend caps with defaults, fail-closed, plus an on-chain kill switch."},
+  {"id": "pkg:@solinkify/mcp", "expertise": 78, "verdict": "solid", "note": "18 payment tools; two hard spend caps that fail closed, plus an on-chain kill switch."},
   {"id": "pkg:zerodrop-mcp", "expertise": 77, "verdict": "solid", "note": "Three tools with param tables and a real OTP response; inboxes expire in 30 min on free."},
   {"id": "pkg:@webclaw/mcp", "expertise": 75, "verdict": "solid", "note": "Worked examples are all CLI; the MCP section is a config block, 3 prompts and a table."},
   {"id": "pkg:remote-agents", "expertise": 68, "verdict": "solid", "note": "Per-host safety modes (plan/edit/bypass/disabled); the tool table starts at the 10k cut."},

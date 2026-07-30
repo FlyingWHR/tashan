@@ -1,22 +1,122 @@
 [
-  {"id": "plugin:alpacalabsllc/skills-for-architects/architecture-studio", "expertise": 79, "verdict": "solid", "note": "Says outright that Sheets and XLSX are not in v1.4 and that nothing is created until you approve a local target"},
-  {"id": "plugin:gtapps/claude-code-hermit/claude-code-hermit", "expertise": 78, "verdict": "solid", "note": "Documents the Monitor-unavailable fallback and the Docker hardening baseline; features described, never shown running"},
-  {"id": "plugin:garethmanning/claude-education-skills/claude-education-skills-library", "expertise": 79, "verdict": "solid", "note": "Documents what it excluded and why (learning styles, VAK) and warns against installing all 165 skills at once"},
-  {"id": "plugin:closedloop-ai/claude-plugins/closedloop", "expertise": 66, "verdict": "solid", "note": "Benchmarks section is a bare screenshot; the disclaimer calls it an engineering preview for trusted environments"},
-  {"id": "plugin:larens94/codedna/codedna", "expertise": 83, "verdict": "deep", "note": "States Python is the most-tested language and the others have seen less real use; wiki hook opt-in explained"},
-  {"id": "plugin:githits-com/githits-cli/githits", "expertise": 86, "verdict": "deep", "note": "Names where advisory data is missing (vcpkg, Zig) and documents the SSH port-forward case for OAuth"},
-  {"id": "plugin:nagisanzenin/claude-code-production-grade-plugin/production-grade", "expertise": 58, "verdict": "thin", "note": "Release timeline and ASCII pipelines; the Loop Engine is explained but never shown with a command or output"},
-  {"id": "plugin:brave/brave-search-skills/brave-search-skills", "expertise": 59, "verdict": "thin", "note": "Eight agents times three install methods dominate the page; skills mapped to endpoints, no example query"},
-  {"id": "plugin:yanhua1010/self-media-content-workflow/self-media-suite", "expertise": 79, "verdict": "solid", "note": "Five mandatory human confirmation points, an explicit no-auto-publish boundary, and a no-results disclaimer"},
-  {"id": "pkg:arcane-rmcp", "expertise": 87, "verdict": "deep", "note": "Owns/upstream/out-of-scope table, a real tools/call curl, and repeated warnings never to pass keys as tool arguments"},
-  {"id": "pkg:@ai-dossier/mcp-server", "expertise": 79, "verdict": "solid", "note": "Verification pipeline diagram states exactly when execution is blocked; the MCP server is one of four packages"},
-  {"id": "pkg:cellarion-mcp", "expertise": 50, "verdict": "thin", "note": "Documents the hosted wine app and self-hosting; the MCP server the package ships is never mentioned"},
-  {"id": "pkg:altmetric-mcp", "expertise": 87, "verdict": "deep", "note": "Documents its one non-GET exception, prompt-injection scanning of upstream text, and an egress allowlist"},
-  {"id": "pkg:@microsoft/fabric-mcp", "expertise": 45, "verdict": "thin", "note": "Monorepo catalog README: Fabric is one row of links; no tools, setup or usage for this server"},
-  {"id": "pkg:@antonytm/mcp-sitecore-server", "expertise": 74, "verdict": "solid", "note": "Marks six security tools unimplemented with links to the upstream SPE issues blocking them"},
-  {"id": "pkg:@orcadub/cli", "expertise": 88, "verdict": "deep", "note": "Marks which tool is billed, the 64 MiB chunking threshold, and maps five real error codes to fixes"},
-  {"id": "pkg:thumbgate", "expertise": 76, "verdict": "solid", "note": "Says which classes only warn by default and that compliance templates are roadmap, then pivots to sales copy"},
-  {"id": "pkg:mcp-server-sfmc", "expertise": 79, "verdict": "solid", "note": "States what it does not replace (the VS Code editing extension) and pipes a real diff into sfmc-review-diff"},
-  {"id": "plugin:amplitude/mcp-marketplace/amplitude", "expertise": 59, "verdict": "thin", "note": "27 skills tabled one line each with a suggested chain; no prompt, argument or output shown"},
-  {"id": "plugin:datahub-project/datahub-skills/datahub-skills", "expertise": 80, "verdict": "solid", "note": "Every skill shown with three real invocations; separates Open Source diagnostic from Cloud management"}
+  {
+    "id": "plugin:alpacalabsllc/skills-for-architects/architecture-studio",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Says Sheets and XLSX are not in v1.4, and nothing is created until you approve a path"
+  },
+  {
+    "id": "plugin:gtapps/claude-code-hermit/claude-code-hermit",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Documents the Monitor-unavailable fallback; features described, never shown running"
+  },
+  {
+    "id": "plugin:garethmanning/claude-education-skills/claude-education-skills-library",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Documents what it excluded and why (learning styles, VAK); warns off installing 165"
+  },
+  {
+    "id": "plugin:closedloop-ai/claude-plugins/closedloop",
+    "expertise": 66,
+    "verdict": "solid",
+    "note": "Benchmarks is a bare screenshot; the disclaimer calls it an engineering preview"
+  },
+  {
+    "id": "plugin:larens94/codedna/codedna",
+    "expertise": 83,
+    "verdict": "deep",
+    "note": "Says Python is the most-tested language and the others have seen less real-world use"
+  },
+  {
+    "id": "plugin:githits-com/githits-cli/githits",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "Names where advisory data is missing (vcpkg, Zig); documents SSH port-forward OAuth"
+  },
+  {
+    "id": "plugin:nagisanzenin/claude-code-production-grade-plugin/production-grade",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "Release timeline and ASCII pipelines; the Loop Engine is never shown with a command"
+  },
+  {
+    "id": "plugin:brave/brave-search-skills/brave-search-skills",
+    "expertise": 59,
+    "verdict": "thin",
+    "note": "Eight agents times three install methods dominate; skills mapped to endpoints only"
+  },
+  {
+    "id": "plugin:yanhua1010/self-media-content-workflow/self-media-suite",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Five mandatory human confirmation points and an explicit no-auto-publish boundary"
+  },
+  {
+    "id": "pkg:arcane-rmcp",
+    "expertise": 87,
+    "verdict": "deep",
+    "note": "Owns/upstream/out-of-scope table, a real tools/call curl, keys never in tool arguments"
+  },
+  {
+    "id": "pkg:@ai-dossier/mcp-server",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "The verification pipeline diagram states exactly when execution is blocked"
+  },
+  {
+    "id": "pkg:cellarion-mcp",
+    "expertise": 50,
+    "verdict": "thin",
+    "note": "Documents the hosted wine app and self-hosting; its MCP server is never mentioned"
+  },
+  {
+    "id": "pkg:altmetric-mcp",
+    "expertise": 87,
+    "verdict": "deep",
+    "note": "Documents its one non-GET exception, prompt-injection scanning, and egress advice"
+  },
+  {
+    "id": "pkg:@microsoft/fabric-mcp",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "Monorepo catalog README: Fabric is one row of links; no tools, setup or usage"
+  },
+  {
+    "id": "pkg:@antonytm/mcp-sitecore-server",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "Marks six security tools unimplemented with links to the upstream SPE issues"
+  },
+  {
+    "id": "pkg:@orcadub/cli",
+    "expertise": 88,
+    "verdict": "deep",
+    "note": "Marks which tool is billed, the 64 MiB chunk threshold, five error codes to fixes"
+  },
+  {
+    "id": "pkg:thumbgate",
+    "expertise": 76,
+    "verdict": "solid",
+    "note": "Says which classes only warn by default and that compliance templates are roadmap"
+  },
+  {
+    "id": "pkg:mcp-server-sfmc",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "States what it does not replace, and pipes a real diff into sfmc-review-diff for CI"
+  },
+  {
+    "id": "plugin:amplitude/mcp-marketplace/amplitude",
+    "expertise": 59,
+    "verdict": "thin",
+    "note": "27 skills tabled one line each with a suggested chain; no prompt or output shown"
+  },
+  {
+    "id": "plugin:datahub-project/datahub-skills/datahub-skills",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Every skill shown with three real invocations; Open Source vs Cloud split stated"
+  }
 ]

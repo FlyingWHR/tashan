@@ -1,22 +1,122 @@
 [
-  {"id": "plugin:hacktivist123/agent-session-resume/agent-session-resume", "expertise": 79, "verdict": "solid", "note": "Opens by admitting the skill rebuilds context from transcripts every time; documents the expected response shape"},
-  {"id": "plugin:obra/episodic-memory/episodic-memory", "expertise": 78, "verdict": "solid", "note": "Opens with a model-written testimonial; the command reference itself is complete with flags and fallbacks"},
-  {"id": "pkg:@buywhere/mcp-server", "expertise": 66, "verdict": "solid", "note": "One real register curl with its JSON response, then six near-identical config blocks and five blog links"},
-  {"id": "pkg:@clize/clize", "expertise": 85, "verdict": "deep", "note": "Documents that _redirects/_headers are stored but inert, the 25 MB cap, and why the MCP surface is opt-in"},
-  {"id": "pkg:ytdl-rmcp", "expertise": 79, "verdict": "solid", "note": "Per-parameter and per-response-field tables for youtube_download plus an explicit out-of-scope column"},
-  {"id": "pkg:@aioproductoscom/mcp", "expertise": 79, "verdict": "solid", "note": "Names the tool groups whose writes are visible outside your workspace and the one destructive tool's confirm token"},
-  {"id": "pkg:@gitkraken/gk", "expertise": 68, "verdict": "solid", "note": "The MCP server gets three sentences and an off-site link; the CLI workflow and troubleshooting are concrete"},
-  {"id": "pkg:sexai-mcp", "expertise": 58, "verdict": "thin", "note": "18 tools with real semantics and an honest 'no $SEXAI token has launched yet'; no example call anywhere"},
-  {"id": "pkg:conventions-mcp", "expertise": 86, "verdict": "deep", "note": "Names competing memory servers and when to prefer them; flags that settings.json mcpServers entries are inert"},
-  {"id": "pkg:anilist-mcp-server", "expertise": 79, "verdict": "solid", "note": "Tools tabled by auth requirement, and the headless-login dead page is explained as expected behaviour"},
-  {"id": "pkg:@invaro/opentax", "expertise": 92, "verdict": "deep", "note": "Prints a real proof tree with statute citations and names what it refuses rather than guessing"},
-  {"id": "plugin:auth0/agent-skills/auth0", "expertise": 78, "verdict": "solid", "note": "Admits auto-detection can miss on open-ended questions with small models, and shows how to force the skill"},
-  {"id": "plugin:voxel51/fiftyone-skills/fiftyone", "expertise": 74, "verdict": "solid", "note": "18 skills tabled with an MCP-required column; warns the MCP server must share the same Python env"},
-  {"id": "plugin:gemini-cli-extensions/looker/looker", "expertise": 52, "verdict": "thin", "note": "Prereqs require Antigravity CLI v1.6.0 and 2.0 v2.0.0; the install section says v0.3.8 for both"},
-  {"id": "plugin:mapbox/mapbox-agent-skills/mapbox", "expertise": 59, "verdict": "thin", "note": "Rich per-skill 'use when' sections, but not one code snippet, prompt or example call anywhere"},
-  {"id": "plugin:nimbleway/agent-skills/nimble", "expertise": 74, "verdict": "solid", "note": "CLI table with real flags and a mid-session restart warning; nothing stated about what it cannot do"},
-  {"id": "plugin:qodo-ai/qodo-skills/qodo", "expertise": 78, "verdict": "solid", "note": "URL resolution priority documented with three config shapes; troubleshooting covers Windows PATH cases"},
-  {"id": "plugin:workos/skills/workos", "expertise": 79, "verdict": "solid", "note": "Exports tabled with return types, and an eval harness that prices a full 42-case run at ~$1.70"},
-  {"id": "plugin:thearchitectit/agent-guardrails-template/agent-guardrails-template", "expertise": 45, "verdict": "thin", "note": "Quick start is git clone plus 'see QUICK_SETUP.md'; the body is tables listing 68 other documents"},
-  {"id": "plugin:cronusl-1141/ai-company/ai-team-os", "expertise": 58, "verdict": "thin", "note": "Release-note prose with real stall calibration numbers, but no install step or example call in the body"}
+  {
+    "id": "plugin:hacktivist123/agent-session-resume/agent-session-resume",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Admits it rebuilds context from transcripts every time; documents the response shape"
+  },
+  {
+    "id": "plugin:obra/episodic-memory/episodic-memory",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Opens with a model-written testimonial; the command reference has flags and fallbacks"
+  },
+  {
+    "id": "pkg:@buywhere/mcp-server",
+    "expertise": 66,
+    "verdict": "solid",
+    "note": "One real register curl with its JSON response, then six config blocks and five blogs"
+  },
+  {
+    "id": "pkg:@clize/clize",
+    "expertise": 85,
+    "verdict": "deep",
+    "note": "Documents that _redirects/_headers are stored but inert, and the 25 MB site cap"
+  },
+  {
+    "id": "pkg:ytdl-rmcp",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Per-parameter and per-response-field tables for youtube_download plus out-of-scope"
+  },
+  {
+    "id": "pkg:@aioproductoscom/mcp",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Names the tool groups whose writes are visible outside your workspace"
+  },
+  {
+    "id": "pkg:@gitkraken/gk",
+    "expertise": 68,
+    "verdict": "solid",
+    "note": "The MCP server gets three sentences and a link; the CLI workflow is concrete"
+  },
+  {
+    "id": "pkg:sexai-mcp",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "18 tools with real semantics and an honest 'no token has launched'; no example call"
+  },
+  {
+    "id": "pkg:conventions-mcp",
+    "expertise": 86,
+    "verdict": "deep",
+    "note": "Names competing memory servers; flags that settings.json mcpServers entries are inert"
+  },
+  {
+    "id": "pkg:anilist-mcp-server",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Tools tabled by auth; the headless-login dead page is explained as expected"
+  },
+  {
+    "id": "pkg:@invaro/opentax",
+    "expertise": 92,
+    "verdict": "deep",
+    "note": "Prints a real proof tree with statute citations and names what it refuses to answer"
+  },
+  {
+    "id": "plugin:auth0/agent-skills/auth0",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "Admits detection can miss on open-ended questions with small models; how to force it"
+  },
+  {
+    "id": "plugin:voxel51/fiftyone-skills/fiftyone",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "18 skills tabled with an MCP column; warns the server must share the Python env"
+  },
+  {
+    "id": "plugin:gemini-cli-extensions/looker/looker",
+    "expertise": 52,
+    "verdict": "thin",
+    "note": "Prereqs require Antigravity CLI v1.6.0 and 2.0 v2.0.0; install says v0.3.8 for both"
+  },
+  {
+    "id": "plugin:mapbox/mapbox-agent-skills/mapbox",
+    "expertise": 59,
+    "verdict": "thin",
+    "note": "Rich per-skill 'use when' sections, but not one snippet, prompt or example call"
+  },
+  {
+    "id": "plugin:nimbleway/agent-skills/nimble",
+    "expertise": 74,
+    "verdict": "solid",
+    "note": "CLI table with real flags and a mid-session restart warning; no stated limitation"
+  },
+  {
+    "id": "plugin:qodo-ai/qodo-skills/qodo",
+    "expertise": 78,
+    "verdict": "solid",
+    "note": "URL resolution priority with three config shapes; troubleshooting covers Windows PATH"
+  },
+  {
+    "id": "plugin:workos/skills/workos",
+    "expertise": 79,
+    "verdict": "solid",
+    "note": "Exports tabled with return types; the eval harness prices a 42-case run at ~$1.70"
+  },
+  {
+    "id": "plugin:thearchitectit/agent-guardrails-template/agent-guardrails-template",
+    "expertise": 45,
+    "verdict": "thin",
+    "note": "Quick start is git clone plus 'see QUICK_SETUP.md'; the body lists 68 other docs"
+  },
+  {
+    "id": "plugin:cronusl-1141/ai-company/ai-team-os",
+    "expertise": 58,
+    "verdict": "thin",
+    "note": "Release-note prose with real stall calibration numbers; no install or example call"
+  }
 ]

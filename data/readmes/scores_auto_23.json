@@ -1,7 +1,7 @@
 [
-  {"id": "pkg:peckish-mcp", "expertise": 79, "verdict": "solid", "note": "Session transcript shows real tool args and fee totals; clients without dialogs cannot order."},
+  {"id": "pkg:peckish-mcp", "expertise": 79, "verdict": "solid", "note": "Session transcript shows real tool args and fee totals; non-dialog clients cannot order."},
   {"id": "pkg:@paretools/git", "expertise": 68, "verdict": "solid", "note": "Monorepo README shared with 11 sibling packages; git status is its one worked example."},
-  {"id": "pkg:token-pilot", "expertise": 76, "verdict": "solid", "note": "Client matrix marks subagents unsupported outside Claude Code; 25 tools linked, not listed."},
+  {"id": "pkg:token-pilot", "expertise": 76, "verdict": "solid", "note": "Client matrix marks subagents Claude-Code-only; the 25 tools are linked, not listed."},
   {"id": "pkg:@i4ctime/q-ring", "expertise": 78, "verdict": "solid", "note": "Documents the qring CLI in depth; the 44 MCP tools appear only as a badge count."},
   {"id": "pkg:steam-local-mcp", "expertise": 83, "verdict": "deep", "note": "Tools split by whether a Web API key is needed; no purchase or uninstall tool exists."},
   {"id": "pkg:agentic-os-mcp", "expertise": 55, "verdict": "thin", "note": "The npm MCP server gets one paragraph; its tool list is deferred to mcp/README.md."},

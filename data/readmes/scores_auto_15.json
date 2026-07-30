@@ -1,22 +1,102 @@
 [
-{"id": "plugin:gemini-cli-extensions/alloydb/alloydb", "expertise": 74, "verdict": "solid", "note": "Names the IAM roles and the private-IP VPC constraint; each of 7 skills gets one line"},
-{"id": "plugin:twilio/ai/twilio-developer-kit", "expertise": 72, "verdict": "solid", "note": "Two MCP tools tabled with the endpoint; Public Beta and no-SLA disclaimer stated twice"},
-{"id": "plugin:zytedata/claude-skills/zyte-web-data", "expertise": 76, "verdict": "solid", "note": "13 skills tabulated; FAQ states a Zyte key is needed only for JS rendering or Cloud"},
-{"id": "plugin:adcontextprotocol/adcp-client/adcp-client", "expertise": 87, "verdict": "deep", "note": "Admits the 45k-line type surface crashes tsc at 4GB; webhook + clarification flows worked"},
-{"id": "plugin:javiarmesto/aldc-al-development-collection/aldc-spec-tdd-development-framework-for-al", "expertise": 52, "verdict": "thin", "note": "Repo README for the whole collection; never names this plugin, and shows no worked run"},
-{"id": "plugin:ilang-ai/autocode/autocode", "expertise": 22, "verdict": "slop", "note": "Badge says 47 skills, heading 48; tells users to always grant blanket permissions"},
-{"id": "plugin:dohyun468/claw-hwp/claw-hwp", "expertise": 84, "verdict": "deep", "note": "Feature matrix marks unsupported items with the box glyph (PDF export, memos, borders)"},
-{"id": "plugin:patchorbit/domscribe/domscribe", "expertise": 78, "verdict": "solid", "note": "16 badges and six bundler configs; one MCP tool named, no parameter docs for it"},
-{"id": "plugin:kucherenko/gangsta/gangsta", "expertise": 64, "verdict": "solid", "note": "Six-phase gate table and 7 install paths; every detail deferred to docs/, no limitation"},
-{"id": "plugin:ilang-ai/imprint/imprint", "expertise": 62, "verdict": "solid", "note": "Shows a real .dna.md profile; its 'first protocol' I-Lang claim is unverifiable"},
-{"id": "plugin:ussumant/llm-wiki-compiler/llm-wiki-compiler", "expertise": 79, "verdict": "solid", "note": "Shows a real compiled article; token savings given as ~90% in text, 84% in the diagram"},
-{"id": "plugin:skillpanel/maister/maister", "expertise": 84, "verdict": "deep", "note": "Known Issues admits the orchestrator stalls after compaction; chained runs use real paths"},
-{"id": "plugin:piomin/claude-ai-spring-boot/piomin-spring-boot-template", "expertise": 38, "verdict": "thin", "note": "Directory tree plus a blog link; no usage, no examples, never names this plugin"},
-{"id": "plugin:severity1/claude-code-prompt-improver/prompt-improver", "expertise": 79, "verdict": "solid", "note": "Nine nudges tabulated with fire conditions; shows the actual AskUserQuestion output"},
-{"id": "plugin:probabl-ai/skills/probabl-skills", "expertise": 70, "verdict": "solid", "note": "13 skills tabulated; names the models and harnesses actually tested, one worked prompt"},
-{"id": "plugin:axtonliu/axton-obsidian-visual-skills/obsidian-visual-skills", "expertise": 82, "verdict": "deep", "note": "Status block calls it an unmaintained prototype; CJK font failure documented with a fix"},
-{"id": "plugin:equilateral-ai/equilateral-agents-open-core/equilateral-agents-open-core", "expertise": 70, "verdict": "solid", "note": "StandardsLoader shown in real JS; '87% fewer incidents' and ROI claims have no method"},
-{"id": "plugin:parallel-web/parallel-agent-skills/parallel", "expertise": 76, "verdict": "solid", "note": "Ten worked slash invocations; states the CLI must be installed, authenticated and funded"},
-{"id": "plugin:richkuo/rk-skills/rk-skills", "expertise": 58, "verdict": "thin", "note": "30 skills documented behavior-by-behavior, but no worked invocation and no install shown"},
-{"id": "plugin:darkroomengineering/cc-settings/darkroom", "expertise": 70, "verdict": "solid", "note": "Install and rollback commands are real; every skill's docs are deferred to MANUAL.md"}
+ { "id": "plugin:gemini-cli-extensions/alloydb/alloydb",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "Names the IAM roles and the private-IP VPC constraint; each of 7 skills gets one line"
+ },
+ { "id": "plugin:twilio/ai/twilio-developer-kit",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "Two MCP tools tabled with the endpoint; Public Beta and no-SLA disclaimer stated twice"
+ },
+ { "id": "plugin:zytedata/claude-skills/zyte-web-data",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "13 skills tabulated; FAQ states a Zyte key is needed only for JS rendering or Cloud"
+ },
+ { "id": "plugin:adcontextprotocol/adcp-client/adcp-client",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "Admits the 45k-line type surface crashes tsc at 4GB; webhook + clarification flows worked"
+ },
+ { "id": "plugin:javiarmesto/aldc-al-development-collection/aldc-spec-tdd-development-framework-for-al",
+  "expertise": 52,
+  "verdict": "thin",
+  "note": "Repo README for the whole collection; never names this plugin, and shows no worked run"
+ },
+ { "id": "plugin:ilang-ai/autocode/autocode",
+  "expertise": 22,
+  "verdict": "slop",
+  "note": "Badge says 47 skills, heading 48; tells users to always grant blanket permissions"
+ },
+ { "id": "plugin:dohyun468/claw-hwp/claw-hwp",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "Feature matrix marks unsupported items with the box glyph (PDF export, memos, borders)"
+ },
+ { "id": "plugin:patchorbit/domscribe/domscribe",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "16 badges and six bundler configs; one MCP tool named, no parameter docs for it"
+ },
+ { "id": "plugin:kucherenko/gangsta/gangsta",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "Six-phase gate table and 7 install paths; every detail deferred to docs/, no limitation"
+ },
+ { "id": "plugin:ilang-ai/imprint/imprint",
+  "expertise": 62,
+  "verdict": "solid",
+  "note": "Shows a real .dna.md profile; its 'first protocol' I-Lang claim is unverifiable"
+ },
+ { "id": "plugin:ussumant/llm-wiki-compiler/llm-wiki-compiler",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "Shows a real compiled article; token savings given as ~90% in text, 84% in the diagram"
+ },
+ { "id": "plugin:skillpanel/maister/maister",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "Known Issues admits the orchestrator stalls after compaction; chained runs use real paths"
+ },
+ { "id": "plugin:piomin/claude-ai-spring-boot/piomin-spring-boot-template",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "Directory tree plus a blog link; no usage, no examples, never names this plugin"
+ },
+ { "id": "plugin:severity1/claude-code-prompt-improver/prompt-improver",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "Nine nudges tabulated with fire conditions; shows the actual AskUserQuestion output"
+ },
+ { "id": "plugin:probabl-ai/skills/probabl-skills",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "13 skills tabulated; names the models and harnesses actually tested, one worked prompt"
+ },
+ { "id": "plugin:axtonliu/axton-obsidian-visual-skills/obsidian-visual-skills",
+  "expertise": 82,
+  "verdict": "deep",
+  "note": "Status block calls it an unmaintained prototype; CJK font failure documented with a fix"
+ },
+ { "id": "plugin:equilateral-ai/equilateral-agents-open-core/equilateral-agents-open-core",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "StandardsLoader shown in real JS; '87% fewer incidents' and ROI claims have no method"
+ },
+ { "id": "plugin:parallel-web/parallel-agent-skills/parallel",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "Ten worked slash invocations; states the CLI must be installed, authenticated and funded"
+ },
+ { "id": "plugin:richkuo/rk-skills/rk-skills",
+  "expertise": 58,
+  "verdict": "thin",
+  "note": "30 skills documented behavior-by-behavior, but no worked invocation and no install shown"
+ },
+ { "id": "plugin:darkroomengineering/cc-settings/darkroom",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "Install and rollback commands are real; every skill's docs are deferred to MANUAL.md"
+ }
 ]

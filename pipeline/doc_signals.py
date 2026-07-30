@@ -36,12 +36,21 @@ def names_self(item):
     txt = (item.get("readme") or "").lower()
     if not txt:
         return 0
+    # The FULL scoped package name first. Leafing "@czagents/dd" down to "dd" and then dropping it for
+    # being under three characters made the capability unmatchable — a grader was told its README
+    # never named it, while that README carries a "### @czagents/dd (12 tools)" section. A scoped name
+    # is distinctive enough to match on directly, so the length guard must not apply to it.
+    full = str(item.get("npm_pkg") or "").lower()
+    if full and len(full) > 3 and full in txt:
+        return 1
     cands = {leaf(item.get("name")), leaf(item.get("npm_pkg")),
              leaf(item.get("id", "").split(":", 1)[-1])}
     for c in list(cands):
         if c:
             cands.add(c.replace("-", " "))
             cands.add(c.replace("-mcp", "").replace("mcp-", ""))
+    # The >2 guard stops a two-letter name matching by accident anywhere in the prose. It stays, but
+    # a short name is now reachable via the scoped form above rather than being unmatchable outright.
     return 1 if any(c and len(c) > 2 and c in txt for c in cands) else 0
 
 

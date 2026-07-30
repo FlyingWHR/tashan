@@ -1,6 +1,6 @@
 [
   {"id": "plugin:houseofmvps/ultraship/ultraship", "expertise": 55, "verdict": "thin", "note": "Header claims 37 audit tools, the tools section says 40, the plugin listing says 20."},
-  {"id": "plugin:ellipsis-labs/vulcan-cli/vulcan", "expertise": 86, "verdict": "deep", "note": "Warns live commands are irreversible and that both flows write the wallet password to disk."},
+  {"id": "plugin:ellipsis-labs/vulcan-cli/vulcan", "expertise": 86, "verdict": "deep", "note": "Warns live commands are irreversible; both flows write the wallet password to disk."},
   {"id": "plugin:maslennikov-ig/template-bridge/template-bridge", "expertise": 76, "verdict": "solid", "note": "Nine-step flow with real bd/superpowers commands; the catalog sync script fails loudly."},
   {"id": "plugin:arjunrajlaboratory/mycelium/mycelium", "expertise": 76, "verdict": "solid", "note": "Five hooks tabled by event; eight slash commands listed with the .living/ layout."},
   {"id": "plugin:powerofjinbo/phdtaketaketake/phdtaketaketake", "expertise": 85, "verdict": "deep", "note": "Boundary: a relative strength index, not an admission probability, and not calibrated."},
@@ -16,7 +16,7 @@
   {"id": "pkg:tokonomix-council-mcp", "expertise": 76, "verdict": "solid", "note": "Says its own SWE-bench run showed no measurable uplift; refuses to claim 'more accurate'."},
   {"id": "pkg:@appfigures/cli", "expertise": 79, "verdict": "solid", "note": "Auto-generated reference for 20+ commands; the MCP server is one section of a CLI README."},
   {"id": "pkg:miromiro-mcp", "expertise": 83, "verdict": "deep", "note": "Nine tools with credit costs; warns client-rendered pages need render:true (+5 credits)."},
-  {"id": "pkg:@gradusmusic/notation-mcp", "expertise": 82, "verdict": "deep", "note": "Four theory tools shown with real arguments and their returned JSON; input format specced."},
+  {"id": "pkg:@gradusmusic/notation-mcp", "expertise": 82, "verdict": "deep", "note": "Four theory tools shown with real arguments and their returned JSON; input format spec'd."},
   {"id": "pkg:@open-and-async/mcp", "expertise": 74, "verdict": "solid", "note": "Eleven tools listed one line each; warns generated output is a template, not the author."},
   {"id": "pkg:ctxfile", "expertise": 79, "verdict": "solid", "note": "Names each tool and what it returns; the .mcpb bundle is Apple Silicon only for now."}
 ]

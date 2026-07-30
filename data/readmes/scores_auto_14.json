@@ -1,22 +1,102 @@
 [
-{"id": "plugin:jovancoding/network-ai/network-ai", "expertise": 68, "verdict": "solid", "note": "16 badges and two star pleas; OWASP coverage table is self-graded, ASI-07 partial"},
-{"id": "pkg:obsidian-mcp", "expertise": 55, "verdict": "thin", "note": "Tool list is names only, no worked call; warns its own tools are not thoroughly tested"},
-{"id": "pkg:mcp-relay-client", "expertise": 42, "verdict": "wrapper", "note": "Self-describes as a stdio bridge to a relay host; also asks agents to solicit stars"},
-{"id": "pkg:@bolthub/mcp", "expertise": 40, "verdict": "thin", "note": "Monorepo SDK README; @bolthub/mcp gets one table row, no tools or config shown"},
-{"id": "pkg:@chronary/mcp", "expertise": 72, "verdict": "solid", "note": "50 tools tabulated with read-only/destructive flags; names the Windsurf 100-tool cap"},
-{"id": "pkg:gotify-rmcp", "expertise": 86, "verdict": "deep", "note": "Per-action param tables, a curl tools/call with real body, and a 'Not for' scope list"},
-{"id": "pkg:tailscale-rmcp", "expertise": 84, "verdict": "deep", "note": "Same shape as gotify-rmcp: param tables, curl tools/call, explicit 'Not for' list"},
-{"id": "pkg:justdrop-mcp", "expertise": 74, "verdict": "solid", "note": "States a 2GB per-file cap and a credential blocklist with no override flag"},
-{"id": "pkg:@kawacode/mcp", "expertise": 43, "verdict": "wrapper", "note": "Self-describes as 'a thin MCP-to-IPC adapter'; the work happens in the desktop app"},
-{"id": "pkg:@braincloud/mcp-helper", "expertise": 40, "verdict": "thin", "note": "Workspace README defers all tool details to sub-package READMEs; no example calls"},
-{"id": "pkg:intelthreadlinqs-mcp", "expertise": 74, "verdict": "solid", "note": "Documents 7 of 49 tools with real inputs; states every tool is Purple-tier gated"},
-{"id": "pkg:@smartergpt/lex-mcp", "expertise": 66, "verdict": "solid", "note": "Documents the lex CLI well; the MCP surface is one table row deferred to README.mcp.md"},
-{"id": "pkg:containerization-assist-mcp", "expertise": 77, "verdict": "solid", "note": "SDK example calls analyzeRepo/scanImage with real args; states single-operator scope"},
-{"id": "pkg:nodeflare-mcp", "expertise": 72, "verdict": "solid", "note": "21 tools tabulated with which are heavy/paid; warns to use a throwaway x402 wallet"},
-{"id": "pkg:@coaspe/sap-abap-mcp", "expertise": 78, "verdict": "solid", "note": "Names the one omitted parity tool; says generic program-console execution is absent"},
-{"id": "pkg:rpgmaker-mv-mcp", "expertise": 78, "verdict": "solid", "note": "13-tool table plus analyze_project views with a real 'Switch 12 never set ON' output"},
-{"id": "pkg:@eilodon/calm-mcp", "expertise": 76, "verdict": "solid", "note": "States the fit boundary: 13 call-graph languages, not 40+, and no cross-repo search"},
-{"id": "pkg:agent-comms", "expertise": 79, "verdict": "solid", "note": "Ten worked agent_comms calls; no auth or trust boundary stated for the localhost mesh"},
-{"id": "pkg:@firou91/dyslex.ia", "expertise": 44, "verdict": "thin", "note": "Quickstart links 9 hosts but 8 install sections are commented out as unavailable"},
-{"id": "pkg:@insforge/mcp", "expertise": 40, "verdict": "thin", "note": "Defers tools, config and usage examples to the main repo; only install commands here"}
+ { "id": "plugin:jovancoding/network-ai/network-ai",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "16 badges and two star pleas; OWASP coverage table is self-graded, ASI-07 partial"
+ },
+ { "id": "pkg:obsidian-mcp",
+  "expertise": 55,
+  "verdict": "thin",
+  "note": "Tool list is names only, no worked call; warns its own tools are not thoroughly tested"
+ },
+ { "id": "pkg:mcp-relay-client",
+  "expertise": 42,
+  "verdict": "wrapper",
+  "note": "Self-describes as a stdio bridge to a relay host; also asks agents to solicit stars"
+ },
+ { "id": "pkg:@bolthub/mcp",
+  "expertise": 40,
+  "verdict": "thin",
+  "note": "Monorepo SDK README; @bolthub/mcp gets one table row, no tools or config shown"
+ },
+ { "id": "pkg:@chronary/mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "50 tools tabulated with read-only/destructive flags; names the Windsurf 100-tool cap"
+ },
+ { "id": "pkg:gotify-rmcp",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "Per-action param tables, a curl tools/call with real body, and a 'Not for' scope list"
+ },
+ { "id": "pkg:tailscale-rmcp",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "Same shape as gotify-rmcp: param tables, curl tools/call, explicit 'Not for' list"
+ },
+ { "id": "pkg:justdrop-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "States a 2GB per-file cap and a credential blocklist with no override flag"
+ },
+ { "id": "pkg:@kawacode/mcp",
+  "expertise": 43,
+  "verdict": "wrapper",
+  "note": "Self-describes as 'a thin MCP-to-IPC adapter'; the work happens in the desktop app"
+ },
+ { "id": "pkg:@braincloud/mcp-helper",
+  "expertise": 40,
+  "verdict": "thin",
+  "note": "Workspace README defers all tool details to sub-package READMEs; no example calls"
+ },
+ { "id": "pkg:intelthreadlinqs-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "Documents 7 of 49 tools with real inputs; states every tool is Purple-tier gated"
+ },
+ { "id": "pkg:@smartergpt/lex-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "Documents the lex CLI well; the MCP surface is one table row deferred to README.mcp.md"
+ },
+ { "id": "pkg:containerization-assist-mcp",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "SDK example calls analyzeRepo/scanImage with real args; states single-operator scope"
+ },
+ { "id": "pkg:nodeflare-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "21 tools tabulated with which are heavy/paid; warns to use a throwaway x402 wallet"
+ },
+ { "id": "pkg:@coaspe/sap-abap-mcp",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "Names the one omitted parity tool; says generic program-console execution is absent"
+ },
+ { "id": "pkg:rpgmaker-mv-mcp",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "13-tool table plus analyze_project views with a real 'Switch 12 never set ON' output"
+ },
+ { "id": "pkg:@eilodon/calm-mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "States the fit boundary: 13 call-graph languages, not 40+, and no cross-repo search"
+ },
+ { "id": "pkg:agent-comms",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "Ten worked agent_comms calls; no auth or trust boundary stated for the localhost mesh"
+ },
+ { "id": "pkg:@firou91/dyslex.ia",
+  "expertise": 44,
+  "verdict": "thin",
+  "note": "Quickstart links 9 hosts but 8 install sections are commented out as unavailable"
+ },
+ { "id": "pkg:@insforge/mcp",
+  "expertise": 40,
+  "verdict": "thin",
+  "note": "Defers tools, config and usage examples to the main repo; only install commands here"
+ }
 ]

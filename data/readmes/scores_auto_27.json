@@ -1,0 +1,22 @@
+[
+  {"id": "pkg:@takescake/1password-mcp", "expertise": 88, "verdict": "deep", "note": "15 tools with reveal/returnSecret defaults; a six-step rule for handling secrets safely."},
+  {"id": "pkg:coalesce-transform-mcp", "expertise": 79, "verdict": "solid", "note": "Per-client install notes say which hosts expand ${VAR} and which need a literal token."},
+  {"id": "pkg:@orcadub/mcp", "expertise": 88, "verdict": "deep", "note": "Five tools with billing flagged; troubleshooting maps five real error strings to fixes."},
+  {"id": "pkg:@paretools/build", "expertise": 52, "verdict": "thin", "note": "Monorepo README shared by 11 packages; its worked example is git status, not build."},
+  {"id": "pkg:@paretools/cargo", "expertise": 55, "verdict": "thin", "note": "Monorepo README shared by 11 packages; cargo appears only in a token table and a link."},
+  {"id": "pkg:@paretools/npm", "expertise": 55, "verdict": "thin", "note": "Monorepo README shared by 11 packages; npm appears only in a token table and a link."},
+  {"id": "pkg:@paretools/python", "expertise": 55, "verdict": "thin", "note": "Monorepo README shared by 11 packages; python appears only in a token table and a link."},
+  {"id": "pkg:dingdawg-compliance", "expertise": 82, "verdict": "deep", "note": "Shows real scan output and says what it does not include; installs via pip, not npm."},
+  {"id": "pkg:@edubase/mcp", "expertise": 72, "verdict": "solid", "note": "Tools are only described by naming convention (edubase_get_user_me) plus a docs link."},
+  {"id": "pkg:opencut-controller", "expertise": 76, "verdict": "solid", "note": "161 tools shown as category counts, never named; warns the public OpenCut repo won't work"},
+  {"id": "pkg:skim-mcp", "expertise": 86, "verdict": "deep", "note": "One tool with input and output shown; warns the wallet key sits in plaintext on disk."},
+  {"id": "plugin:boltz-bio/boltz-api-skills/boltz", "expertise": 76, "verdict": "solid", "note": "Eight skills tabled with install and auth for four hosts; no stated limitation."},
+  {"id": "plugin:gemini-cli-extensions/cloud-sql-sqlserver/cloud-sql-sqlserver", "expertise": 78, "verdict": "solid", "note": "Beta banner, IAM roles and the private-IP VPC constraint; skills get one line each."},
+  {"id": "plugin:buldee/ai-craftsman-superpowers/ai-craftsman-superpowers", "expertise": 74, "verdict": "solid", "note": "Ten differentiators with real mechanisms; no command reference or example in 10k."},
+  {"id": "plugin:hmakt99/akf/akf", "expertise": 79, "verdict": "solid", "note": "Console session shows stamp, check and a STALE result with its exit code."},
+  {"id": "plugin:aptos-labs/aptos-agent-skills/aptos-agent-skills", "expertise": 79, "verdict": "solid", "note": "17 skills tabled; community skills flagged as not reviewed by Aptos Labs."},
+  {"id": "plugin:chaingpt-org/chaingpt-claude-skill/chaingpt-developer-kit", "expertise": 70, "verdict": "solid", "note": "README claims 154 MCP tools, the plugin listing says 12; install notes the reload caveat."},
+  {"id": "plugin:innestic/claude-relay/claude-relay", "expertise": 86, "verdict": "deep", "note": "Out-of-scope list: no persistence, no auth, same-host only; 11 error codes tabled."},
+  {"id": "plugin:etr/groundwork/groundwork", "expertise": 79, "verdict": "solid", "note": "Limitations name unportable hooks; the Codex model map errors out instead of falling back"},
+  {"id": "plugin:arslan70/haytham/haytham", "expertise": 84, "verdict": "deep", "note": "Status says it is now a personal tool, no longer seeking users; three real example runs."}
+]

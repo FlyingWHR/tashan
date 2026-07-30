@@ -43,11 +43,22 @@ These exist because they are the cases where graders disagreed most.
 
 ## Sanity check, not a target
 
-Applied honestly to this corpus, expect roughly: `deep` under 10%, `solid` 40-55%, `thin` 30-45%,
-with `wrapper` and `slop` in the low single digits. If your batch lands far outside that, re-read
-your `deep` and `solid` calls against rule 5 — but **do not adjust grades to hit these numbers.**
-A batch of genuinely good packages should come out good. The range is a prompt to re-check your
-reasoning, never a quota to fill.
+Expect roughly: `solid` 40-55%, `thin` 25-45%, with `wrapper` and `slop` in the low single digits.
+If your batch lands far outside that, re-read your `deep` and `solid` calls against rule 5 — but
+**do not adjust grades to hit these numbers.** A batch of genuinely good packages should come out
+good. The range is a prompt to re-check reasoning, never a quota to fill.
+
+**A correction to my own guide.** The first calibrated run carried "`deep` under 10%". Six graders
+came in between 14.3% and 22.1%, every one of them re-checked against rule 5, demoted borderline
+calls, and declined to grade toward the number — which is exactly the instructed behaviour. They were
+right and the guide was wrong: the staged corpus is ordered by tashan score, so it is the **top ~14%
+of the field**, where vendor-maintained documentation is common. Under 10% is the expectation for the
+whole corpus, not for its best slice. Re-derive this figure when the tail is graded rather than
+carrying it forward.
+
+One grader proposed a mechanical tightening worth keeping on file: require criterion (b) to show
+**actual output**, not merely "real arguments or output". That would move roughly a third of current
+`deep` calls to `solid` and is objective enough to stay comparable between graders.
 
 ## Input caveat, now fixed
 

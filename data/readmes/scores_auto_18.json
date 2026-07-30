@@ -1,22 +1,102 @@
 [
-{"id": "plugin:fastly/fastly-agent-toolkit/fastly-agent-toolkit", "expertise": 58, "verdict": "thin", "note": "Seven skills get one line each; install commands only, no usage example anywhere"},
-{"id": "plugin:langfuse/claude-observability-plugin/langfuse-observability", "expertise": 88, "verdict": "deep", "note": "Lists what is not captured (Desktop Chat mode) and ships two runnable Python integrations"},
-{"id": "plugin:spotify/ads-claude-plugin/spotify-ads-api", "expertise": 86, "verdict": "deep", "note": "Six real error strings with fixes; says auto token refresh is macOS-only via Keychain"},
-{"id": "plugin:explorium-ai/vibeprospecting-plugin/vibe-prospecting", "expertise": 76, "verdict": "solid", "note": "Capability table gives example input and output; install is deferred to six docs/ files"},
-{"id": "plugin:fedec65/bettercallclaude/bettercallclaude", "expertise": 55, "verdict": "thin", "note": "Intro and command table say 19 commands; the v4.9.3 notes say 26 twice, same file"},
-{"id": "plugin:adrianosantostreina/delphi-dev/delphi-dev", "expertise": 78, "verdict": "solid", "note": "Concrete prefix rules and banned constructs; roadmap admits it cannot compile or verify yet"},
-{"id": "plugin:mayurpise/draft/draft", "expertise": 80, "verdict": "solid", "note": "Says which structural checks it skips on an un-indexed repo; 28 of 33 commands deferred"},
-{"id": "plugin:orinachum/onboarding-claude-code/guide", "expertise": 68, "verdict": "solid", "note": "Seven skills described and 30+ reference docs indexed; no example run, star plea up top"},
-{"id": "plugin:aks129/healthclawguardrails/healthclaw-guardrails", "expertise": 74, "verdict": "solid", "note": "Demo server is hard-pinned to synthetic data; the 29 tools sit under walls of release notes"},
-{"id": "plugin:lightrun-platform/lightrun-ai/lightrun", "expertise": 48, "verdict": "thin", "note": "Four skills get one line each; install is a pointer and there is no usage example"},
-{"id": "plugin:dwmetz/malchela/malchela", "expertise": 80, "verdict": "solid", "note": "19 tools tabulated; warns binaries must run from project root and env-var keys don't work"},
-{"id": "plugin:anipotts/claude-code-tips/mine", "expertise": 76, "verdict": "solid", "note": "Plugin id is 'mine' but the README documents lore/cc/time; one real command output shown"},
-{"id": "plugin:adityaraj0421/naksha-studio/naksha-studio", "expertise": 72, "verdict": "solid", "note": "Six install paths and 47+ commands described; roles get one word each, no limitation"},
-{"id": "plugin:alibaba-flyai/flyai-skill/travel-search-and-booking-api-and-skills", "expertise": 82, "verdict": "solid", "note": "Every command has a full flag table and worked calls in three surfaces; no limitation"},
-{"id": "plugin:smucclaw/l4-ide/l4-computational-law", "expertise": 70, "verdict": "solid", "note": "Repo README for the L4 compiler; the MCP/plugin surface is a single sentence, no tools"},
-{"id": "plugin:timvw/wt/wt", "expertise": 80, "verdict": "solid", "note": "Every wt command shown with real args; the Claude Code plugin itself gets one section"},
-{"id": "plugin:memi-design/memi/memi", "expertise": 82, "verdict": "solid", "note": "Labels its own headline claim 'not verified' and publishes CIs that span zero"},
-{"id": "plugin:coji/natural-japanese/natural-japanese", "expertise": 86, "verdict": "deep", "note": "Says corpus testing showed readability can't be thresholded; semantic.py marked experimental"},
-{"id": "pkg:mcp-sqlite", "expertise": 76, "verdict": "solid", "note": "Every tool has params and a full tools/call example; no caveat on raw SQL and delete"},
-{"id": "pkg:@fouradata/mcp", "expertise": 88, "verdict": "deep", "note": "Four tools with request bodies and output shapes; notes checkText does not wait or poll"}
+ { "id": "plugin:fastly/fastly-agent-toolkit/fastly-agent-toolkit",
+  "expertise": 58,
+  "verdict": "thin",
+  "note": "Seven skills get one line each; install commands only, no usage example anywhere"
+ },
+ { "id": "plugin:langfuse/claude-observability-plugin/langfuse-observability",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "Lists what is not captured (Desktop Chat mode) and ships two runnable Python integrations"
+ },
+ { "id": "plugin:spotify/ads-claude-plugin/spotify-ads-api",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "Six real error strings with fixes; says auto token refresh is macOS-only via Keychain"
+ },
+ { "id": "plugin:explorium-ai/vibeprospecting-plugin/vibe-prospecting",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "Capability table gives example input and output; install is deferred to six docs/ files"
+ },
+ { "id": "plugin:fedec65/bettercallclaude/bettercallclaude",
+  "expertise": 55,
+  "verdict": "thin",
+  "note": "Intro and command table say 19 commands; the v4.9.3 notes say 26 twice, same file"
+ },
+ { "id": "plugin:adrianosantostreina/delphi-dev/delphi-dev",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "Concrete prefix rules and banned constructs; roadmap admits it cannot yet verify code"
+ },
+ { "id": "plugin:mayurpise/draft/draft",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "Says which structural checks it skips on an un-indexed repo; 28 of 33 commands deferred"
+ },
+ { "id": "plugin:orinachum/onboarding-claude-code/guide",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "Seven skills described and 30+ reference docs indexed; no example run, star plea up top"
+ },
+ { "id": "plugin:aks129/healthclawguardrails/healthclaw-guardrails",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "Demo server is hard-pinned to synthetic data; 29 tools sit under walls of release notes"
+ },
+ { "id": "plugin:lightrun-platform/lightrun-ai/lightrun",
+  "expertise": 48,
+  "verdict": "thin",
+  "note": "Four skills get one line each; install is a pointer and there is no usage example"
+ },
+ { "id": "plugin:dwmetz/malchela/malchela",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "19 tools tabulated; warns binaries must run from project root and env-var keys don't work"
+ },
+ { "id": "plugin:anipotts/claude-code-tips/mine",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "Plugin id is 'mine' but the README documents lore/cc/time; one real command output shown"
+ },
+ { "id": "plugin:adityaraj0421/naksha-studio/naksha-studio",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "Six install paths and 47+ commands described; roles get one word each, no limitation"
+ },
+ { "id": "plugin:alibaba-flyai/flyai-skill/travel-search-and-booking-api-and-skills",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "Every command has a full flag table and worked calls in three surfaces; no limitation"
+ },
+ { "id": "plugin:smucclaw/l4-ide/l4-computational-law",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "Repo README for the L4 compiler; the MCP/plugin surface is a single sentence, no tools"
+ },
+ { "id": "plugin:timvw/wt/wt",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "Every wt command shown with real args; the Claude Code plugin itself gets one section"
+ },
+ { "id": "plugin:memi-design/memi/memi",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "Labels its own headline claim 'not verified' and publishes CIs that span zero"
+ },
+ { "id": "plugin:coji/natural-japanese/natural-japanese",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "Corpus testing showed readability can't be thresholded; semantic.py marked experimental"
+ },
+ { "id": "pkg:mcp-sqlite",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "Every tool has params and a full tools/call example; no caveat on raw SQL and delete"
+ },
+ { "id": "pkg:@fouradata/mcp",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "Four tools with request bodies and output shapes; notes checkText does not wait or poll"
+ }
 ]
