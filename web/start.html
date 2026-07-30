@@ -44,8 +44,11 @@
       <pre class="install__snip"><code>npx tashan doctor</code></pre>
       <p class="capsec__sub">Reads the agent config on this machine — Claude Code, Claude Desktop, Cursor,
         VS Code, Windsurf, and <code>~/.claude/skills/</code> — and matches every entry against the Index.</p>
+      <p class="capsec__sub">It prints only what needs a decision. A real machine has a hundred-odd skills
+        that are simply fine, and listing each one buries the two servers that matter — so those are
+        counted, and <code>--all</code> lists every row.</p>
       <ul class="legend">
-        <li><b class="lv-alert">!</b> &nbsp;deprecated on npm, archived repo, or a name that shadows an official package</li>
+        <li><b class="lv-alert">!</b> &nbsp;deprecated on npm, archived repo, removed from the registry, or a name that shadows an official package</li>
         <li><b class="lv-warn">~</b> &nbsp;no recent activity — looks abandoned</li>
         <li><b class="lv-dim">·</b> &nbsp;catalogued but <a class="link" href="/methodology.html#unrated">not rated</a> — we know it exists and nothing about its quality</li>
         <li><b class="lv-dim">?</b> &nbsp;not in the Index at all — unmeasured, which is not the same as bad</li>
@@ -90,6 +93,16 @@ npx tashan info context7</code></pre>
     </section>
 
     <section class="capsec use-step">
+      <div class="capsec__hd"><h2>Let your agent ask before it installs</h2></div>
+      <p class="capsec__sub">Everything above assumes you are the one typing. If you would rather your
+        coding agent check before it recommends or installs anything, install tashan into it once:</p>
+      <pre class="install__snip"><code>/plugin marketplace add tashan-sh/tashan
+/plugin install tashan</code></pre>
+      <p class="capsec__sub">Or wire the MCP server directly:
+        <code>claude mcp add tashan -- npx -y tashan mcp</code>. The agent then gets three tools —
+        find a capability for a job, check one before installing it, and audit the config already on the
+        machine. All three are free; nothing about risk is ever behind the paid tier.</p>
+
       <div class="capsec__hd"><h2>For agents and machines</h2></div>
       <ul class="prose" style="max-width:none">
         <li><a class="link" href="/llms.txt"><code>/llms.txt</code></a> — the site as plain markdown: how the score
@@ -115,13 +128,13 @@ npx tashan info context7</code></pre>
       <p class="footer__meta" id="footMethod">public-signal v2</p>
     </div>
     <nav class="footer__col"><p class="footer__h">Explore</p>
-      <a href="/">The Index</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a></nav>
+      <a href="/">The Index</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav>
     <nav class="footer__col"><p class="footer__h">tashan score</p>
       <a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>
     <nav class="footer__col"><p class="footer__h">Sources</p>
       <a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>
       <a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>
-      <a href="https://github.com/" rel="noopener">GitHub ↗</a><a href="/for-hosts.html">For hosts</a></nav>
+      <a href="https://github.com/" rel="noopener">GitHub ↗</a></nav>
     <nav class="footer__col"><p class="footer__h">Legal</p>
       <a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refunds.html">Refunds</a><a href="/support.html">Support</a></nav>
   </div>
