@@ -352,3 +352,39 @@ import { join } from "node:path";
   assert.strictEqual(PORTAL, "https://polar.sh/tashan/portal", "the portal URL is the org portal");
   console.log("ok — licence record (precedence, activation id, --forget)");
 }
+
+// ---- the security audit in doctor: every finding is free ---------------------------------------
+// The rule the whole product rests on: a user never learns from us that a risk exists only AFTER
+// paying. assess() must surface every finding with no key present. What a licence adds is which
+// advisory and the version that fixes it — the part you act on, not the part that warns you.
+{
+  const sec = (row) => assess({ name: "x" }, { rated: true, ...row });
+
+  let a = sec({ sec_max_severity: "MALICIOUS", sec_advisory_count: 1 });
+  assert.strictEqual(a.level, "alert", "confirmed malware is an alert");
+  assert.ok(/malicious-packages/.test(a.notes.map((n) => n.text).join(" ")),
+    "...and names the authority, so it is checkable rather than an accusation");
+
+  a = sec({ sec_advisory_count: 2, sec_max_severity: "HIGH" });
+  assert.strictEqual(a.level, "alert", "a high-severity advisory is an alert");
+  assert.ok(/2 known advisories/.test(a.notes.map((n) => n.text).join(" ")), "count is stated free");
+
+  a = sec({ sec_advisory_count: 1, sec_max_severity: "LOW" });
+  assert.strictEqual(a.level, "warn", "a low-severity advisory warns rather than alarms");
+  assert.ok(/1 known advisory/.test(a.notes.map((n) => n.text).join(" ")), "singular reads correctly");
+
+  a = sec({ sec_install_script: "node evil.js" });
+  assert.strictEqual(a.level, "warn", "install-time code execution warns");
+
+  a = sec({ sec_permissions: JSON.stringify(["shell", "network"]) });
+  assert.ok(/can reach: shell, network/.test(a.notes.map((n) => n.text).join(" ")),
+    "permission surface is stated");
+  assert.strictEqual(a.level, "ok", "...but a permission is a fact, not a fault — it must not alarm");
+
+  assert.doesNotThrow(() => sec({ sec_permissions: "{not json" }),
+    "a malformed permissions field must never take the whole audit down");
+
+  a = sec({});
+  assert.strictEqual(a.notes.length, 0, "a clean row says nothing — no nagging on a healthy stack");
+  console.log("ok — security findings are free in doctor");
+}

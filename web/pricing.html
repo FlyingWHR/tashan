@@ -22,7 +22,7 @@
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/SpaceGrotesk-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=112">
+  <link rel="stylesheet" href="/css/site.css?v=114">
 </head>
 <body>
   <nav class="nav"><div class="wrap nav__in">
@@ -45,14 +45,14 @@
           <span class="plan__name">Free</span>
           <span class="plan__price">$0<small>/forever</small></span>
         </div>
-        <p class="plan__for">The instrument. For anyone choosing what to trust. Nothing here moves behind a paywall.</p>
+        <p class="plan__for">Every finding, in full. You will never learn from us that a risk exists
+          only after paying.</p>
         <ul class="plan__feat">
-          <li>The full Index — <b>every</b> tashan score &amp; Expertise score, all of them</li>
-          <li>Command-palette search <kbd>⌘K</kbd> · methodology · expert reads</li>
-          <li>Embeddable badges for any capability</li>
-          <li>Agent endpoints — <code>/v0.1/servers</code>, <code>/v0.1/scores</code> · no key, no quota</li>
-          <li>CLI — <code>search</code>, <code>top</code>, <code>info</code>, <code>add</code>, and
-            <code>doctor</code> to check a config on your own machine</li>
+          <li><b>Every security finding</b> — how many advisories and at what severity, whether it
+            runs a script at install time, what it can reach on your machine</li>
+          <li>The full Index — every tashan score and expertise grade, filed by job function</li>
+          <li><code>doctor</code> audits the config you already have, on your machine, no account</li>
+          <li>Agent endpoints and badges — no key, no quota</li>
         </ul>
         <a class="btn btn--ghost plan__cta" href="/">Browse the Index &rsaquo;</a>
         <p class="plan__note mono">no account · no key · no quota</p>
@@ -63,14 +63,18 @@
           <span class="plan__name">tashan Pro</span>
           <span class="plan__price">$6<small>/mo</small></span>
         </div>
-        <p class="plan__for">Free tells you what in your stack is broken. Pro tells you what to use instead.</p>
+        <p class="plan__for">Free tells you something is wrong. Pro tells you what it is and what to
+          do about it.</p>
         <div class="callout mono" style="font-size:var(--fs-sm);margin:0 0 var(--sp-4)">$ tashan doctor</div>
         <ul class="plan__feat">
+          <li><b>The advisory itself</b> — which CVE or GHSA, its severity, the affected range, and the
+            version that fixes it. Not "2 known advisories".</li>
+          <li><b>What the install script actually runs</b>, and the full permission list with the
+            dependency that pulled each one in.</li>
           <li><b>The replacement, named.</b> Not "this is deprecated" — <em>switch to this one, it
             scores 65 and is still maintained</em>.</li>
-          <li><b>Every score since we started measuring</b>, so you see what is sliding before it
-            breaks. <span class="plan__soon mono">trend needs ~30 days · clock restarted 30 Jul</span></li>
-          <li><b>Everything free stays free.</b> Warnings are never behind this.</li>
+          <li>Every score since we started measuring.
+            <span class="plan__soon mono">trend needs ~30 days · clock restarted 30 Jul</span></li>
         </ul>
         <a class="btn btn--primary plan__cta" href="https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" rel="noopener"
            data-src="pro-checkout">Subscribe &rsaquo;</a>
@@ -149,7 +153,7 @@
   </div>
 </footer>
 
-  <script src="/js/terminal.js?v=112" defer></script>
-  <script src="/js/site.js?v=112" defer></script>
+  <script src="/js/terminal.js?v=114" defer></script>
+  <script src="/js/site.js?v=114" defer></script>
 </body>
 </html>

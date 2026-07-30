@@ -176,6 +176,25 @@ export function assess(item, row) {
     text: "REMOVED from the MCP registry — its policy lists spam, malware or illegal content as the usual reasons. Stop using it and verify the source." });
   if (row.vitality === "abandoned") notes.push({ level: "warn", text: "no recent activity — looks abandoned" });
   if (row.similar_official) notes.push({ level: "alert", text: `an official package with a similar name exists: ${row.similar_official}` });
+  // ---- the security audit ----------------------------------------------------------------------
+  // Free and permanent, all of it. A user running something with a known advisory learns that here,
+  // with no key, because a warning withheld until payment is not a warning. What a licence adds is
+  // WHICH advisory and the version that fixes it — the part you act on.
+  if (row.sec_max_severity === "MALICIOUS") notes.push({ level: "alert",
+    text: "listed in OSV's malicious-packages database — this package IS the attack. Remove it and rotate anything it could read." });
+  else if (row.sec_advisory_count) {
+    const sev = (row.sec_max_severity || "unrated").toLowerCase();
+    notes.push({ level: sev === "critical" || sev === "high" ? "alert" : "warn",
+      text: `${row.sec_advisory_count} known advisor${row.sec_advisory_count === 1 ? "y" : "ies"} against the installed release (${sev})` });
+  }
+  if (row.sec_install_script) notes.push({ level: "warn",
+    text: "runs a script at install time — arbitrary code on npm install" });
+  if (row.sec_permissions) {
+    try {
+      const perms = JSON.parse(row.sec_permissions);
+      if (perms.length) notes.push({ level: "note", text: `can reach: ${perms.join(", ")}` });
+    } catch { /* a malformed field must never take the audit down */ }
+  }
   if (row.single_maintainer) notes.push({ level: "note", text: "single primary maintainer (bus-factor risk)" });
   // Behind on a pinned version. A NOTE, not a warning: being pinned is often deliberate, and crying
   // wolf about every minor release is how an audit tool gets uninstalled. We say the fact and stop.

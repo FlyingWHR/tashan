@@ -64,6 +64,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `tests/test_score.py` — The two score-shape properties everything else rests on.
 - `tests/test_scorer_version.py` — SCORER_VERSION must change whenever the scoring changes.
 - `tests/test_scrape.py` — capability_id() — the config parser that decides what a row IS.
+- `tests/test_security_scan.py` — The security audit is the paid feature. Every rule in it has to be right, or we sell noise.
 - `tests/test_site.py` — tashan site test suite — structure, load budgets, SEO/AEO, CSP.
 - `tests/test_terminology.py` — Retired names must not survive in user-visible copy, and sorts must read fields that exist.
 - `tests/test_type_scale.py` — Type scale: every font-size comes from the scale, and nothing renders under 12px.
