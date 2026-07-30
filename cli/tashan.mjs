@@ -181,6 +181,26 @@ async function loadLookup() {
   return r.json();
 }
 
+// A paying customer whose stack happens to be healthy saw output identical to a free user's — no
+// confirmation whatsoever that the $6 was doing anything. That is the "did my payment even work"
+// support ticket, and then the cancellation. One cheap call settles it. A 401/403 is the only
+// answer that means the key is bad: 404 means the key was accepted and that capability simply has
+// no history yet, which is a perfectly healthy state.
+async function verifyKey(key) {
+  try {
+    const r = await fetch(`${SITE}/api/history?id=pkg:tavily-mcp`,
+                          { headers: { authorization: `Bearer ${key}` } });
+    if (r.status === 401 || r.status === 403) return "invalid";
+    if (r.status === 503) return "unknown";        // validation down — do not cry wolf
+    // A 404 is ambiguous: our API returns it for "valid key, no history for that id", and a plain
+    // static host returns it for "no such endpoint". Claiming a licence is ACTIVE when we never
+    // reached the licence check is the one wrong answer here, so require a body only our API sends.
+    const body = await r.json().catch(() => null);
+    return body && (body.series !== undefined || body.source === "tashan signal_history")
+      ? "active" : "unknown";
+  } catch { return "unknown"; }
+}
+
 async function loadData() {
   if (process.env.TASHAN_DATA) {                       // local dev / tests: point at a file
     const fs = await import("node:fs");
@@ -200,7 +220,7 @@ ${bold("tashan")} — the measured layer for AI capabilities ${dim("· " + SITE)
   ${jade("tashan info")} <name>          the measured dossier for one capability
   ${jade("tashan add")} <name>           the install command  ${dim("(--client claude|cursor|desktop|codex|npx)")}
   ${jade("tashan doctor")}               audit the config you already have — dead, deprecated, risky
-  ${jade("tashan doctor --trend")}       ...and whether any of it is declining  ${dim("(Pro · $6/mo · TASHAN_KEY)")}
+  ${dim("with TASHAN_KEY set, doctor also names the replacement for anything dead — Pro, $6/mo")}
 
   ${dim("flags:")}  --json   --limit <n>   --client <c>
   ${dim("every score is re-derivable from public evidence · no account, no telemetry")}
@@ -225,7 +245,7 @@ function parseArgs(argv) {
 
 const MARK = { alert: red("!"), warn: C("33")("~"), note: dim("·"), ok: jade("+"), unrated: dim("·"), unknown: dim("?") };
 
-function renderDoctor(results, problems, sum, pro = false, verbose = false) {
+function renderDoctor(results, problems, sum, pro = false, verbose = false, keyState = null) {
   if (!results.length) {
     return "\n  " + bold("No agent config found.") + "\n" +
       dim("  Looked in ~/.claude.json, ~/.cursor/mcp.json, Claude Desktop, .mcp.json, ~/.claude/skills/ …") + "\n";
@@ -270,6 +290,13 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false) {
   if (sum.unknown) bits.push(dim(sum.unknown + " not in the index"));
   out += "\n  " + (bits.length ? bits.join(dim(" · ")) : jade("nothing flagged")) + "\n";
   if (quiet && !verbose) out += dim(`  ${quiet} more not flagged — --all lists every row.`) + "\n";
+  // Say the subscription state out loud, every run. Silence is what makes someone wonder.
+  if (keyState === "active")
+    out += "  " + jade("Pro") + dim(rows.some((r) => r.alts && r.alts.length)
+      ? " · licence active — replacements named above"
+      : " · licence active — nothing in your stack needs replacing") + "\n";
+  else if (keyState === "invalid") out += "  " + red("Pro key not valid") + dim(" — check https://polar.sh/purchases") + "\n";
+  else if (keyState === "unknown") out += dim("  Pro · could not reach tashan to check your licence") + "\n";
   out += dim("  local only — nothing was uploaded. tashan info <name> for the full dossier.") + "\n";
   return out;
 }
@@ -312,6 +339,8 @@ export async function main(argv) {
   }
   if (cmd === "doctor") {
     const { found, problems } = collect(configLocations(), skillLocations());
+    const key = process.env.TASHAN_KEY || a.key;
+    const keyState = key ? await verifyKey(key) : null;
     let lookup = null;
     try { lookup = await loadLookup(); } catch { /* fall back to the board rather than failing */ }
     const look = (item) => (lookup ? resolve(item, lookup) : match(item, rows));
@@ -332,7 +361,6 @@ export async function main(argv) {
     // identical, only the timeframe changes. Without a key it says so and exits 0 — a missing
     // subscription is not an error, and it must never look like the config is broken.
     if (a.trend) {
-      const key = process.env.TASHAN_KEY || a.key;
       if (!key) {
         process.stderr.write(red("  --trend needs a licence key: export TASHAN_KEY=... "
           + "(tashan Pro, $6/mo — https://tashan.sh/pricing.html)") + "\n");
@@ -343,7 +371,7 @@ export async function main(argv) {
 
     const sum = summarize(results);
     if (a.json) { process.stdout.write(JSON.stringify({ summary: sum, problems, results }, null, 2) + "\n"); return 0; }
-    process.stdout.write(renderDoctor(results, problems, sum, Boolean(process.env.TASHAN_KEY || a.key), a.all) + "\n");
+    process.stdout.write(renderDoctor(results, problems, sum, keyState === "active", a.all, keyState) + "\n");
     return sum.alert > 0 ? 2 : 0;      // nonzero exit when something needs attention, so it can gate CI
   }
   process.stderr.write(red(`  unknown command: ${cmd}`) + "\n" + USAGE + "\n");
