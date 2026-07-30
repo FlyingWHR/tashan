@@ -124,6 +124,33 @@ export function match(item, rows) {
   }) || null;
 }
 
+/** Resolve a config entry against the LOOKUP table (web/data/lookup.json).
+ *
+ *  match() above searches the ranked board, which is why doctor only ever recognised npm and skills:
+ *  the board carries no remote, docker or python rows at all, and only 522 of 1,380 measured npm
+ *  packages. It answered "not in the tashan index — unmeasured" for things we had scored, which reads
+ *  as reassurance and is the worst way to be wrong.
+ *
+ *  The lookup is keyed by every identity a config can produce — npm package, python package, docker
+ *  image, capability id, and the id with its `kind:` prefix stripped — so one indexed hit replaces the
+ *  scan. Pure: the caller supplies the parsed lookup, nothing fetches here.
+ */
+export function resolve(item, lookup) {
+  if (!item || !lookup || !lookup.keys) return null;
+  const rec = (k) => {
+    if (!k) return null;
+    const i = lookup.keys[String(k).toLowerCase()];
+    return i === undefined ? null : lookup.records[i];
+  };
+  const id = item.id || item.name || "";
+  return rec(id)
+      // a scoped package may be configured bare, and vice versa
+      || rec(String(id).replace(/^@[^/]+\//, ""))
+      // docker images and remote hosts arrive without the `kind:` prefix the id carries
+      || rec(`${item.kind}:${id}`)
+      || null;
+}
+
 /** The verdicts. Deliberately conservative: we flag what the evidence supports and say "unknown"
  *  rather than guessing. An audit tool that cries wolf gets uninstalled. */
 export function assess(item, row) {

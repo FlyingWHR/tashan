@@ -21,7 +21,7 @@
 // Zero dependencies, stdio transport, newline-delimited JSON-RPC 2.0.
 
 import { search, find, installSnippets, pretty, slugify } from "./tashan.mjs";
-import { configLocations, skillLocations, collect, match, assess, summarize } from "./doctor.mjs";
+import { configLocations, skillLocations, collect, resolve, assess, summarize } from "./doctor.mjs";
 
 const SITE = process.env.TASHAN_SITE || "https://tashan.sh";
 const NAME = "tashan";
@@ -31,14 +31,22 @@ const VERSION = "0.1.0";
 // would break against a newer client for no reason. Falls back to a known-good revision.
 const FALLBACK_PROTOCOL = "2025-06-18";
 
-let cache = null;
+let cache = null, lookupCache = null;
+async function get(path) {
+  const r = await fetch(`${SITE}${path}`, { headers: { "user-agent": `${NAME}-mcp/${VERSION}` } });
+  if (!r.ok) throw new Error(`tashan ${path} unavailable (HTTP ${r.status})`);
+  return r.json();
+}
+// The board answers "what is good" (ranked, for find/check); the lookup answers "what is this"
+// (complete and keyed, for audit). Using the board for both is what made audit blind to every remote,
+// docker and python entry and to two thirds of the npm packages we measure.
 async function rows() {
-  if (cache) return cache;
-  const r = await fetch(`${SITE}/data/index.json`, { headers: { "user-agent": `${NAME}-mcp/${VERSION}` } });
-  if (!r.ok) throw new Error(`tashan index unavailable (HTTP ${r.status})`);
-  const d = await r.json();
-  cache = d.capabilities || d;
+  if (!cache) { const d = await get("/data/index.json"); cache = d.capabilities || d; }
   return cache;
+}
+async function lookup() {
+  if (!lookupCache) lookupCache = await get("/data/lookup.json");
+  return lookupCache;
 }
 
 // ---- the evidence line. One string an agent can quote to a human without over-claiming. ----
@@ -236,9 +244,9 @@ async function callTool(name, args) {
     return renderCheck(find(all, String(args.name || "")), args.name);
   }
   if (name === "audit_config") {
-    const all = await rows();
+    const lk = await lookup();
     const { found, problems } = collect(configLocations(), skillLocations());
-    const results = found.map((item) => ({ item, assessment: assess(item, match(item, all)) }));
+    const results = found.map((item) => ({ item, assessment: assess(item, resolve(item, lk)) }));
     const sum = summarize(results);
     const L = [`${sum.total} capabilities installed · ${sum.alert} need attention · ${sum.warn} worth a look`, ""];
     for (const r of results) {

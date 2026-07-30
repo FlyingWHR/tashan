@@ -143,3 +143,38 @@ process.stdout.write("ok — doctor (identity / match / assess / malformed-confi
   assert.strictEqual(t(clean, {}).level, "alert", "an empty map falls back to trending what it was given");
 }
 console.log("ok — trend is scorer-aware");
+
+// ---- resolve(): the lookup table, not the board -------------------------------------------------
+{
+  const { resolve, match, identify } = await import("./doctor.mjs");
+  // Shape of web/data/lookup.json: records + a key->index map covering every identity a config yields.
+  const lookup = {
+    records: [
+      { id: "pkg:tavily-mcp", name: "tavily", npm_pkg: "tavily-mcp", tashan_score: 86 },
+      { id: "docker:mcp/thinking", name: "thinking", kind: "docker", tashan_score: 40 },
+      { id: "py:some-tool", name: "some-tool", kind: "python", tashan_score: 33 },
+      { id: "pkg:@scope/thing", name: "thing", npm_pkg: "@scope/thing", tashan_score: 55 },
+    ],
+    keys: { "tavily-mcp": 0, "tavily": 0, "pkg:tavily-mcp": 0,
+            "docker:mcp/thinking": 1, "mcp/thinking": 1, "thinking": 1,
+            "py:some-tool": 2, "some-tool": 2,
+            "@scope/thing": 3, "thing": 3, "pkg:@scope/thing": 3 },
+  };
+  const board = [{ id: "pkg:tavily-mcp", name: "tavily", npm_pkg: "tavily-mcp", tashan_score: 86 }];
+
+  assert.strictEqual(resolve({ kind: "npm", id: "tavily-mcp" }, lookup).name, "tavily");
+  // THE POINT OF THIS WHOLE CHANGE: kinds the ranked board never carries.
+  assert.strictEqual(resolve(identify({ command: "docker", args: ["run", "mcp/thinking"] }), lookup).name,
+    "thinking", "a docker image resolves — the board holds no docker rows at all");
+  assert.strictEqual(resolve(identify({ command: "uvx", args: ["some-tool"] }), lookup).name,
+    "some-tool", "a python package resolves — the board holds no python rows either");
+  assert.strictEqual(match(identify({ command: "docker", args: ["run", "mcp/thinking"] }), board), null,
+    "...and the board genuinely could not, which is why doctor said 'unmeasured' for measured things");
+  // scoped configured bare, and bare configured scoped
+  assert.strictEqual(resolve({ kind: "npm", id: "thing" }, lookup).npm_pkg, "@scope/thing");
+  assert.strictEqual(resolve({ kind: "npm", id: "@scope/thing" }, lookup).name, "thing");
+  assert.strictEqual(resolve({ kind: "npm", id: "not-a-thing" }, lookup), null, "a real miss is still a miss");
+  assert.strictEqual(resolve(null, lookup), null, "no item -> null, never a throw");
+  assert.strictEqual(resolve({ kind: "npm", id: "x" }, null), null, "no lookup -> null, never a throw");
+}
+console.log("ok — resolve against the lookup table");

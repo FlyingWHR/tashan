@@ -1156,6 +1156,37 @@ def export(con):
               open(os.path.join(ROOT, "web", "data", "tags.json"), "w"))
     print(f"Task index ({len(tag_map)} tasks) -> web/data/tags.json")
 
+    # LOOKUP — the CLI and the MCP server read THIS, not the board.
+    #
+    # index.json is a ranked slice sized for the web's first paint (1,080 + 510 rows, 45 KB gz budget).
+    # The CLI was reading it as if it were a lookup table, and the consequences were invisible: the board
+    # carries ZERO remote, docker or python rows, and only 522 of the 1,380 npm packages we measure. So
+    # `doctor` answered "not in the tashan index — unmeasured" for capabilities we had measured and
+    # scored, which is the worst possible answer: it reads as reassurance.
+    #
+    # A board and a lookup are different shapes and both are needed. This one is keyed by every identity
+    # a config can produce, carries only the fields assess() and the MCP risk lines actually branch on,
+    # and has no first-paint budget because nothing renders it — 5,787 rows, ~200 KB gz, fetched by a
+    # terminal, once.
+    LOOKUP = ["id", "name", "kind", "npm_pkg", "category", "official", "slug", "tashan_score",
+              "vitality", "expertise_verdict", "npm_downloads", "gh_stars", "npm_deprecated",
+              "gh_archived", "registry_status", "single_maintainer", "similar_official", "rated"]
+    by_key, recs = {}, []
+    for c in caps:
+        rec = {k: c[k] for k in LOOKUP if c.get(k) is not None}
+        i = len(recs); recs.append(rec)
+        # Every way a config entry can name this thing points at the same record. `identify()` in
+        # cli/doctor.mjs yields an npm package, a python package, a docker image or a remote host, so all
+        # four have to be keys — matching on `name` alone is what limited this to npm and skills.
+        for k in (c.get("npm_pkg"), c.get("name"), c.get("id"),
+                  (c.get("id") or "").split(":", 1)[-1] or None):
+            if k:
+                by_key.setdefault(str(k).lower(), i)
+    lookup_out = os.path.join(ROOT, "web", "data", "lookup.json")
+    json.dump({"generated_at": payload["generated_at"], "scorer": SCORER_VERSION,
+               "records": recs, "keys": by_key}, open(lookup_out, "w"), separators=(",", ":"))
+    print(f"Lookup ({len(recs)} caps, {len(by_key)} keys) -> web/data/lookup.json")
+
     slim_out = os.path.join(ROOT, "web", "data", "index.json")
     json.dump(slim, open(slim_out, "w"))
     print(f"\nExported {len(ranked)} rated + {len(catalogued)} catalogued / {tot} total "

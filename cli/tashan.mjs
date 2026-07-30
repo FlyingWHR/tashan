@@ -12,7 +12,7 @@
 // Reads live public data from https://tashan.sh/data/index.json (no account, no backend, no telemetry).
 // Zero dependencies. The pure functions are exported for cli/tashan.test.mjs.
 
-import { configLocations, skillLocations, collect, match, assess, summarize, trend, withTrend } from "./doctor.mjs";
+import { configLocations, skillLocations, collect, match, resolve, assess, summarize, trend, withTrend } from "./doctor.mjs";
 
 const SITE = process.env.TASHAN_SITE || "https://tashan.sh";
 const DATA_URL = SITE + "/data/index.json";
@@ -172,6 +172,14 @@ async function withTrends(results, key, base = SITE, limit = 40) {
   return results;
 }
 
+// The CLI reads the LOOKUP for doctor (complete, keyed) and the board for search/top (ranked).
+// Two different questions, two different shapes; conflating them is what broke doctor.
+async function loadLookup() {
+  const r = await fetch(SITE + "/data/lookup.json", { headers: { "user-agent": "tashan-cli" } });
+  if (!r.ok) throw new Error(`lookup unavailable (HTTP ${r.status})`);
+  return r.json();
+}
+
 async function loadData() {
   if (process.env.TASHAN_DATA) {                       // local dev / tests: point at a file
     const fs = await import("node:fs");
@@ -281,7 +289,10 @@ export async function main(argv) {
   }
   if (cmd === "doctor") {
     const { found, problems } = collect(configLocations(), skillLocations());
-    let results = found.map((item) => ({ item, row: match(item, rows), assessment: assess(item, match(item, rows)) }));
+    let lookup = null;
+    try { lookup = await loadLookup(); } catch { /* fall back to the board rather than failing */ }
+    const look = (item) => (lookup ? resolve(item, lookup) : match(item, rows));
+    let results = found.map((item) => { const row = look(item); return { item, row, assessment: assess(item, row) }; });
 
     // --trend is the whole paid product, and it is the SAME command with one flag. A separate
     // `tashan pro` verb would have been a second thing to learn for no benefit; the question is
