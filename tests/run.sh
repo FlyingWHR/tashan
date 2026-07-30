@@ -60,6 +60,10 @@ python3 tests/test_security_scan.py || fail=1
 echo; echo "── links + unpublished targets ────────────────"
 python3 tests/test_links.py || fail=1
 
+# 3c0. a published grade must not contradict itself (four shipped that did)
+echo; echo "── expertise grades (self-consistency) ────────"
+python3 tests/test_expertise.py || fail=1
+
 # 3c. config parser — a wrong capability id invents one row AND loses the real one
 echo; echo "── config parser (capability_id) ──────────────"
 python3 tests/test_scrape.py || fail=1

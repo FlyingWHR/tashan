@@ -56,6 +56,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `functions/api/e.test.mjs` — node functions/api/e.test.mjs  — validates the analytics collector's field shaping (no deps).
 - `functions/api/license.test.mjs` — The paywall. Run: node functions/api/license.test.mjs
 - `functions/api/polar.test.mjs` — Polar webhook verification — the security boundary. Run: node functions/api/polar.test.mjs
+- `tests/test_expertise.py` — A published grade must not contradict itself.
 - `tests/test_firewall.py` — The firewall test — the ranking can never be bought.
 - `tests/test_hubs.py` — tashan — the generated content tier: asset versioning, category hubs, skills, llms.txt.
 - `tests/test_links.py` — Every link and every install instruction must lead somewhere that exists.
