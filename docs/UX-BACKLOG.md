@@ -293,7 +293,7 @@ different thing from being finished. Same rules apply.
       facet toggles, the sign-in forms, the comparison table. Focus order, visible focus rings,
       `aria-pressed` correctness, table header association. One unlabelled control was already found
       and fixed this session by accident — do it deliberately.
-- [ ] **21. Core Web Vitals on a real page.** `tests/test_site.py` holds a TTFB and HTML budget, but
+- [x] **21. Core Web Vitals on a real page.** `tests/test_site.py` holds a TTFB and HTML budget, but
       nothing measures LCP, CLS or INP. The board renders 100 rows client-side after two fetches;
       the hero runs a canvas animation. Measure before assuming either is fine.
 - [ ] **22. Walk the whole funnel as a stranger.** Not component checks — one continuous journey:
@@ -344,3 +344,27 @@ that reasoning still holds; the padding change is vertical only. Deploy `b184454
 covers every control; the two `outline:none` rules both replace it with a visible border, which
 satisfies WCAG rather than defeating it. One `h1` per page. No unlabelled SVG. Heading order clean.
 Role cards are real `<button>`s carrying `aria-pressed`. Deploy `01aa5d92`.
+
+**Iteration 11 — item 21. Measured, not assumed. All three vitals good with room to spare.**
+
+| | homepage | capability dossier | threshold |
+|---|---|---|---|
+| LCP | 720 ms | 540 ms | < 2500 ms |
+| CLS | 0.0225 | 0.0211 | < 0.1 |
+| INP | < 16 ms | — | < 200 ms |
+| long tasks | none | none | — |
+| TTFB | 190 ms | 346 ms | |
+
+INP measured with real interactions, not proxied: picking a job re-ranked the board to 26 rows and
+`/` opened the palette, and **no event entry crossed the 16 ms observer threshold at all**.
+
+*What the small CLS actually is, since a number without a cause is not a measurement.* On the
+homepage, one 0.0225 shift at 719 ms — `#rolegrid` ships empty and JS inserts 23 cards above the
+board. On a dossier, two shifts totalling 0.0211 — `capability.js` replacing the prerendered summary
+with the taller full render. Both are inherent to the hydrate-after-paint design, both are a fifth of
+the "good" threshold, and both fixes (a min-height that would be wrong at some breakpoint, or
+server-rendering the job grid) cost more than 0.02 of CLS is worth. **Left alone deliberately.**
+
+*Locked instead:* a check that the board still opens as a teaser. At 100 rows it was a 7,500px table
+and 75% of page height — that decision is what bought these numbers, and it is the one a future edit
+could quietly undo.

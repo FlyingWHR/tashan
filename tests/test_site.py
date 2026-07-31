@@ -416,6 +416,17 @@ def main():
     check("home declares the corpus as a schema.org Dataset with real distributions",
           '"@type":"Dataset"' in _home and "/data/capabilities.json" in _home and "/v0.1/scores" in _home)
 
+    # ---- keep the numbers that were measured ---------------------------------------------------------
+    # Measured on the live origin: LCP 540-720ms, CLS 0.021-0.023, INP under 16ms, zero long tasks.
+    # The suite has no browser, so it cannot re-measure — it can only protect the decision that bought
+    # those numbers. The board opening as a teaser is that decision: at 100 rows it was a 7,500px
+    # table and 75% of the page height, which is layout work on every load for rows nobody scrolled to.
+    _ijs = open(os.path.join(ROOT, "web", "js", "index.js"), encoding="utf-8").read()
+    _m = _re.search(r"var TEASER = (\d+), PAGE = (\d+)", _ijs)
+    check("the board still opens as a teaser, not a wall of rows",
+          bool(_m) and int(_m.group(1)) <= 25,
+          f"TEASER={_m.group(1) if _m else 'MISSING'} — measured CWV assumed a small first paint")
+
     # A 404.html is what makes Pages return a real 404. Without it Pages falls back to serving
     # index.html with status 200, so every mistyped URL was a soft 404 a crawler would happily index.
     check("404.html exists (else Pages soft-404s every unknown URL as 200 + the homepage)",
