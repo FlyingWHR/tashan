@@ -15,12 +15,12 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json | free | 52 |
 | `/account.html` | Where to sign in, what happens after paying, how to switch Pro on. | account, site, terminal | index.json | post-sale | 50 |
 | `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json | free | 46 |
-| `/about.html` | Why a rater that sells nothing it measures is the only kind worth reading. | site, terminal | index.json | free | 45 |
 | `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | index.json | sells | 44 |
 | `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | index.json | post-sale | 27 |
 | `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | index.json | free | 24 |
 | `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | index.json, requests.json | free | 24 |
 | `/support.html` | How to get help, and what we can see when you ask. | site, terminal | index.json | free | 24 |
+| `/about.html` | Why a rater that sells nothing it measures is the only kind worth reading. | site, terminal | index.json | free | 23 |
 | `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 22 |
 | `/privacy.html` | What we collect, which is close to nothing. | site, terminal | index.json | free | 22 |
 | `/terms.html` | Terms of service. | site, terminal | index.json | free | 22 |

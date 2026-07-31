@@ -20,18 +20,24 @@ a nav or a footer, and tests/test_chrome.py fails if anything does.
 """
 import glob, os, re, sys
 
+import icons
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ---- the information architecture ---------------------------------------------------------------
+# Four, not seven. A header is a claim about what matters, and seven flat links makes none — the
+# product (Index), how to get it (Use it), why the numbers can be trusted (Methodology) and what it
+# costs. About and Learn are supporting reading and live in the footer, where they already were.
 NAV = [
     ("/", "Index"),
     ("/start.html", "Use it"),
     ("/methodology.html", "Methodology"),
-    ("/learn/", "Learn"),
-    ("/about.html", "About"),
     ("/pricing.html", "Pricing"),
-    ("/account.html", "Account"),
 ]
+
+# The account is not a sixth thing to read. It sits apart, as a glyph, in the corner — the position
+# every customer already looks in.
+ACCOUNT = ("/account.html", "Your account")
 
 FOOTER = [
     ("Explore", [("/", "The Index"), ("/browse.html", "Browse"), ("/start.html", "Use it"),
@@ -52,9 +58,14 @@ TAGLINE = ("The measured layer for AI capabilities — MCP servers and agent ski
 def nav_html(current=None):
     links = "".join(
         f'<a href="{h}"{" aria-current=\"page\"" if h == current else ""}>{l}</a>' for h, l in NAV)
+    href, label = ACCOUNT
+    glyph = (f'<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" {icons.STYLE}>'
+             f'<path d="{icons.UI["account"]}"/></svg>')
+    acct = (f'<a class="nav__acct" href="{href}" title="{label}" aria-label="{label}"'
+            f'{" aria-current=\"page\"" if href == current else ""}>{glyph}</a>')
     return ('<nav class="nav"><div class="wrap nav__in">'
             '<a class="brand" href="/"><span class="brand__mark"></span>tashan</a>'
-            f'<div class="nav__links">{links}</div>'
+            f'<div class="nav__links">{links}{acct}</div>'
             "</div></nav>")
 
 

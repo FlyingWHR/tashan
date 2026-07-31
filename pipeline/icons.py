@@ -88,6 +88,13 @@ ROLE = {
     "Also":         "M4.6 12.5a1.4 1.4 0 1 0 2.8 0 1.4 1.4 0 1 0-2.8 0 M10.6 12.5a1.4 1.4 0 1 0 2.8 0 1.4 1.4 0 1 0-2.8 0 M16.6 12.5a1.4 1.4 0 1 0 2.8 0 1.4 1.4 0 1 0-2.8 0",
 }
 
+# UI glyphs, as opposed to taxonomy marks. Rendered inline by chrome.py rather than through the
+# sprite, because the nav appears on pages that do not carry one.
+UI = {
+    "account": "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0",
+}
+
+
 STYLE = ('fill="none" stroke="currentColor" stroke-width="2.25" '
          'stroke-linecap="round" stroke-linejoin="round"')
 
@@ -99,6 +106,7 @@ def paths(prefix, table):
 def all_icons():
     out = paths("cat-", CATEGORY)
     out.update(paths("role-", ROLE))
+    out.update(paths("ui-", UI))
     return out
 
 
