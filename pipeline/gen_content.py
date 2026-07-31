@@ -82,7 +82,7 @@ def article_html(a):
     faq = ""
     if a.get("faq"):
         faq = '<h2>FAQ</h2>\n' + "".join("<h3>" + esc(q) + "</h3><p>" + esc(ans) + "</p>\n" for q, ans in a["faq"])
-    return (head(a) + '<main class="wrap"><article class="prose">\n'
+    return (head(a) + '<main class="wrap" id="main"><article class="prose">\n'
         '<p class="kicker"><a class="link" href="/learn/">Learn</a></p>\n'
         "<h1>" + esc(a["title"]) + "</h1>\n"
         '<div class="callout"><b>Quick answer.</b> ' + a["quick"] + '</div>\n'
@@ -94,7 +94,7 @@ def article_html(a):
 def top_table(caps, kind_filter=None, n=10):
     rows = [c for c in caps if c.get("tashan_score") is not None and (kind_filter is None or kind_filter(c))][:n]
     body = ['<div class="board"><div class="board__scroll"><table class="board__t"><thead><tr>'
-            '<th class="rank">#</th><th>Capability</th><th class="num">tashan score</th><th>Verdict</th><th class="num">Adoption</th></tr></thead><tbody>']
+            '<th class="rank" scope="col">#</th><th scope="col">Capability</th><th class="num" scope="col">tashan score</th><th scope="col">Verdict</th><th class="num" scope="col">Adoption</th></tr></thead><tbody>']
     for i, c in enumerate(rows):
         href = "/capability/" + c["slug"] + ".html" if c.get("slug") else "#"
         vd = ('<span class="vd vd--' + c["expertise_verdict"] + '">' + c["expertise_verdict"] + '</span>') if c.get("expertise_verdict") else "—"
@@ -220,7 +220,7 @@ def index_page(A):
         cards += ('<a class="card card--link" href="/learn/' + a["slug"] + '.html">'
                   '<h3 class="card__h">' + esc(a["title"]) + '</h3>'
                   '<p class="card__desc">' + esc(a["desc"][:120]) + '…<span class="mono faint">' + lang + '</span></p></a>')
-    body = ('<main class="wrap"><article class="prose"><h1>Learn</h1>'
+    body = ('<main class="wrap" id="main"><article class="prose"><h1>Learn</h1>'
             '<p class="lede">Practical, evidence-backed guides to MCP servers and agent skills — where they live, '
             'how to install them in every client, and which ones are actually worth it.</p>'
             '<div class="tashan_score mt-8">' + cards + '</div></article></main>')

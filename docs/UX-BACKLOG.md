@@ -289,7 +289,7 @@ different thing from being finished. Same rules apply.
       The board is a 5-column table, the comparison table is 4 columns, the job grid is 23 cards and
       the nav is 4 links plus a pill. At 390px at least one of those is wrong. Check the real
       breakpoints in a real viewport, not by reading the CSS.
-- [ ] **20. Keyboard and screen-reader pass.** The palette (`/`, ⌘K), the job picker buttons, the
+- [x] **20. Keyboard and screen-reader pass.** The palette (`/`, ⌘K), the job picker buttons, the
       facet toggles, the sign-in forms, the comparison table. Focus order, visible focus rings,
       `aria-pressed` correctness, table header association. One unlabelled control was already found
       and fixed this session by accident — do it deliberately.
@@ -324,3 +324,23 @@ fold and reintroduced the nested scrollbar the truncation exists to remove). Boa
 `display:none` in the mobile header by an existing documented decision — longest label, one tap away
 in the footer, and dropping it keeps brand + three links + glyph on one row down to 375px. Verified
 that reasoning still holds; the padding change is vertical only. Deploy `b184454c`.
+
+**Iteration 10 — item 20. Four real findings, all fixed.**
+
+1. **The homepage was the only page in the site with no `<main>` landmark.** Every other page had
+   one; index.html put its sections straight in `<body>`. A screen-reader user had no way to jump to
+   the content.
+2. **No skip link, anywhere.** Reaching the board on the Index meant tabbing past the brand, four
+   nav links, the account glyph, 28 tag chips, 15 category chips and every facet toggle. Added to
+   `chrome.py` so it lands on all ~5,900 pages, visually hidden until focused. `NAV_RE` was widened
+   to swallow it too — otherwise every chrome re-run would have stacked another copy. Verified
+   idempotent: second run rewrites 0 pages, exactly one skip link on the page.
+3. **Table headers carried no `scope`.** Now `scope="col"` on the board, the hub boards, the learn
+   tables and the comparison table. 5/5 on the Index.
+4. Every `<main>` now carries `id="main"`; prerender's kept its hydration hook by moving the skip
+   target onto the element rather than renaming `#cap`.
+
+*Checked and found already correct:* a global `:focus-visible { outline: 2px solid var(--jade) }`
+covers every control; the two `outline:none` rules both replace it with a visible border, which
+satisfies WCAG rather than defeating it. One `h1` per page. No unlabelled SVG. Heading order clean.
+Role cards are real `<button>`s carrying `aria-pressed`. Deploy `01aa5d92`.

@@ -151,17 +151,17 @@ def page(a, b, cat_label, gen):
                 '<pre class="install__snip"><code>claude mcp add ' + esc(c["slug"].replace("pkg-", ""))
                 + " -- npx -y " + esc(c["npm_pkg"]) + "</code></pre></div>")
 
-    body = ('<main class="wrap"><article class="prose prose--wide">\n'
+    body = ('<main class="wrap" id="main"><article class="prose prose--wide">\n'
         '<p class="kicker"><a class="link" href="/">The Index</a> · '
         '<a class="link" href="/category/' + esc(a["category"]) + '.html">' + esc(cat_label) + "</a></p>\n"
         "<h1>" + esc(na) + " vs " + esc(nb) + "</h1>\n"
         '<p class="lede">' + lead + " Both are measured the same way, on the same day, from public "
         "evidence only — so this is a comparison of two measurements rather than two marketing pages. "
         '<a class="link" href="/methodology.html">How we measure &rsaquo;</a></p>\n'
-        '<div class="cmp"><table class="cmp__t"><thead><tr><th></th>'
-        '<th><a class="link" href="/capability/' + esc(a["slug"]) + '.html">' + esc(na) + "</a></th>"
-        '<th><a class="link" href="/capability/' + esc(b["slug"]) + '.html">' + esc(nb) + "</a></th>"
-        '<th class="cmp__n">what it means</th></tr></thead><tbody>' + rows + "</tbody></table></div>\n"
+        '<div class="cmp"><table class="cmp__t"><thead><tr><th scope="col"></th>'
+        '<th scope="col"><a class="link" href="/capability/' + esc(a["slug"]) + '.html">' + esc(na) + "</a></th>"
+        '<th scope="col"><a class="link" href="/capability/' + esc(b["slug"]) + '.html">' + esc(nb) + "</a></th>"
+        '<th class="cmp__n" scope="col">what it means</th></tr></thead><tbody>' + rows + "</tbody></table></div>\n"
         '<h2>Install either</h2>\n<div class="cmp__insts">' + install(a) + install(b) + "</div>\n"
         '<p class="note">Neither score is a security verdict — "well maintained" and "nothing known '
         "is wrong\" are different claims, which is why the audit is a separate row and never folded "

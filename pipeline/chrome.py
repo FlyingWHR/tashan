@@ -87,7 +87,13 @@ def nav_html(current=None):
     acct = (f'<a class="nav__acct" id="navAcct" href="{href}" title="{label}" aria-label="{label}"'
             f'{" aria-current=\"page\"" if href == current else ""}>{glyph}'
             '<span class="nav__pro mono" id="navPro" hidden>Pro</span></a>')
-    return ('<nav class="nav"><div class="wrap nav__in">'
+    # A keyboard user reaching the board on the Index had to tab past the brand, four links, the
+    # account glyph, 28 tag chips, 15 category chips and every facet toggle first. Every page in this
+    # site has a #main landmark; this is the one control that uses it. Visually hidden until focused,
+    # which is the only correct behaviour — a permanently visible skip link is noise for the 99% and
+    # a permanently hidden one is useless to the 1%.
+    return ('<a class="skip" href="#main">Skip to content</a>'
+            '<nav class="nav"><div class="wrap nav__in">'
             '<a class="brand" href="/"><span class="brand__mark"></span>tashan</a>'
             f'<div class="nav__links">{links}{acct}</div>'
             "</div></nav>")
@@ -109,7 +115,7 @@ def footer_html():
             "<span>Every score re-derivable from public evidence.</span></div></footer>")
 
 
-NAV_RE = re.compile(r"<nav class=\"nav\">.*?</nav>", re.S)
+NAV_RE = re.compile(r"(?:<a class=\"skip\"[^>]*>.*?</a>)?<nav class=\"nav\">.*?</nav>", re.S)
 FOOT_RE = re.compile(r"<footer class=\"footer\">.*?</footer>", re.S)
 
 

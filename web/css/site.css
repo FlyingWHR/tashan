@@ -1034,3 +1034,9 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
    reintroduced the nested scrollbar the truncation exists to remove). */
 .nav__links a { padding-block: .62rem; }
 .brand { padding-block: .5rem; }
+
+/* The skip link: off-screen until it takes focus, then the first thing on the page. Without it a
+   keyboard user reaching the Index board tabs through ~50 controls in the rail first. */
+.skip { position: absolute; left: -9999px; top: 0; z-index: 100; }
+.skip:focus { left: var(--sp-4); top: var(--sp-4); padding: .6rem .9rem; background: var(--jade);
+  color: #08150f; border-radius: var(--radius); font-weight: 600; }

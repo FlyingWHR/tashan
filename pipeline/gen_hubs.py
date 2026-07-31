@@ -155,8 +155,8 @@ def board(rows):
     board it was supposed to extend. One row shape now, styled by the one set of rules in site.css.
     """
     out = ['<div class="board"><div class="board__scroll"><table class="board__t"><thead><tr>'
-           '<th class="rank">#</th><th>Capability</th>'
-           '<th class="num" title="' + esc(T_SCORE) + '">tashan</th>'
+           '<th class="rank" scope="col">#</th><th scope="col">Capability</th>'
+           '<th class="num" scope="col" title="' + esc(T_SCORE) + '">tashan</th>'
            '<th class="num" title="' + esc(T_EV) + '">Evidence</th>'
            '<th title="' + esc(T_HEALTH) + '">Health</th></tr></thead><tbody>']
     for i, c in enumerate(rows):
@@ -234,7 +234,7 @@ def cat_page(cat, rows, all_cats, gen):
     sib = "".join('<a class="chip" href="/category/' + c["id"] + '.html">' + esc(c["label"]) + "</a>"
                   for c in all_cats if c["id"] != cid)
     measured = [c for c in rows if c.get("expertise_verdict")]
-    body = ('<main class="wrap">\n'
+    body = ('<main class="wrap" id="main">\n'
         '<p class="kicker"><a class="link" href="/">The Index</a> · ' + esc(label) + "</p>\n"
         "<h1>" + esc(label) + " MCP servers, ranked</h1>\n"
         '<p class="lede">' + esc(cat["blurb"]) + " tashan measures <b>" + str(len(rows)) +
@@ -327,7 +327,7 @@ def task_page(task, rows, all_tasks, gen):
                "software occupations were surveyed before agentic tooling existed. We list it because the "
                "corpus plainly shows people doing it, and we say so rather than forcing it onto an "
                "unrelated step.</p>\n")
-    body = ('<main class="wrap">\n'
+    body = ('<main class="wrap" id="main">\n'
         '<p class="kicker"><a class="link" href="/">The Index</a> · ' + esc(label) + "</p>\n"
         "<h1>" + esc(label) + "</h1>\n"
         '<p class="lede">' + esc(task.get("blurb", "")) + " tashan measures <b>" + str(len(rows)) +
@@ -452,7 +452,7 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen, published_roles=(
                {"@type": "ListItem", "position": 1, "name": "tashan", "item": BASE + "/"},
                {"@type": "ListItem", "position": 2, "name": "Browse", "item": url}]}]
 
-    out = [head(title, desc, url, lds), icons.sprite(), '<main class="wrap">',
+    out = [head(title, desc, url, lds), icons.sprite(), '<main class="wrap" id="main">',
            '<header class="hubhead"><h1>Browse</h1>',
            '<p class="lede">Every category and every job we measure against. ',
            str(sum(len(v) for v in by_cat.values())), ' capabilities across ', str(len(cats)),
@@ -579,7 +579,7 @@ def role_page(role, rows, tasks, all_roles, gen):
     sib = "".join('<a class="chip" href="/role/' + r["id"] + '.html">' + esc(r["label"]) + "</a>"
                   for r in all_roles if r["id"] != rid)
     graded = [c for c in rows if c.get("expertise_verdict")]
-    body = ('<main class="wrap">\n'
+    body = ('<main class="wrap" id="main">\n'
         '<p class="kicker"><a class="link" href="/">The Index</a> · <a class="link" href="/browse.html">By job</a> · '
         + esc(label) + "</p>\n"
         "<h1>MCP servers for " + esc(label.lower()) + ", ranked</h1>\n"

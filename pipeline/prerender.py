@@ -489,7 +489,7 @@ def page(c, gen):
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>\n'
         '<link rel="stylesheet" href="/css/site.css?v=' + AV + '">\n'
         + jsonld(c) + "\n</head>\n<body>\n" + NAV +
-        '<main class="wrap" id="cap">' + summary(c) + "</main>\n" + FOOT +
+        '<main class="wrap" id="main" tabindex="-1">' + summary(c) + "</main>\n" + FOOT +
         inline_data(c, gen) +                                    # this cap's full data, inline — no 1.2 MB fetch
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n'
         '<script src="/js/capability.js?v=' + AV + '" defer></script>\n</body>\n</html>\n')
