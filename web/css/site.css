@@ -1000,3 +1000,25 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .secoffer__alt { font-size: var(--fs-sm); color: var(--text-dim); }
 .secoffer__alt code { font-size: var(--fs-xs); }
 
+
+
+/* ── head-to-head comparison table ────────────────────────────────────────────────────────
+   Four columns: the row label, both capabilities, and what the row MEANS. That last column is the
+   reason these pages are worth reading — anyone can print two numbers side by side; saying what
+   each measures, and that the score is not a security verdict, is the part that is ours. */
+.cmp { overflow-x: auto; margin: var(--sp-8) 0; }
+.cmp__t { width: 100%; border-collapse: collapse; font-size: var(--fs-base); }
+.cmp__t th, .cmp__t td { text-align: left; padding: .7rem .8rem; border-bottom: 1px solid var(--hairline);
+  vertical-align: top; }
+.cmp__t thead th { color: #fff; font-weight: 600; font-size: var(--fs-md); white-space: nowrap; }
+.cmp__t tbody th { color: var(--text-dim); font-weight: 400; white-space: nowrap; }
+.cmp__v { color: var(--text); }
+.cmp__score { font-family: var(--font-mono); color: var(--jade); font-size: var(--fs-md);
+  margin-right: .5rem; font-feature-settings: "tnum" 1; }
+/* The meaning column is support, not data — it must never out-shout the measurement beside it. */
+.cmp__n { color: var(--text-faint); font-size: var(--fs-xs); max-width: 22ch; }
+.cmp__t .bar { display: inline-block; vertical-align: middle; }
+.cmp__insts { display: grid; gap: var(--sp-4); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.cmp__insth { color: var(--text-faint); font-size: var(--fs-xs); letter-spacing: .1em;
+  text-transform: uppercase; margin: 0 0 .4rem; }
+@media (max-width: 46rem) { .cmp__n { display: none; } }

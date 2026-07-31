@@ -33,6 +33,17 @@ CATS = os.path.join(ROOT, "web", "data", "categories.json")
 BASE = "https://tashan.sh"
 OUT_CAT = os.path.join(ROOT, "web", "category")
 
+# Which head-to-head pages gen_compare actually wrote, read from ITS manifest rather than recomputed.
+# Two copies of the pairing rule would drift, and a hub linking to a comparison that was never
+# written is the orphan-in-reverse of the bug the task-hub floor already guards against.
+def _compare_manifest():
+    try:
+        return json.load(open(os.path.join(ROOT, "web", "data", "compare.json")))["by_category"]
+    except Exception:
+        return {}
+
+COMPARE = _compare_manifest()
+
 def esc(s): return html.escape(str(s), quote=True)
 def disp(c):
     """The human label from build.py's apply_labels, shipped in the export. See prerender.disp."""
@@ -233,6 +244,11 @@ def cat_page(cat, rows, all_cats, gen):
         ('<p class="note">' + str(len(measured)) + " of these have been expertise-graded against their "
          "documentation; the rest carry adoption and upkeep signal only. We publish what is "
          "measured and say plainly what isn't.</p>\n" if rows else "")
+        + (('<h2>Head to head</h2>\n<p class="note">The question people actually ask, answered with '
+            'two measurements taken the same day by the same scorer.</p>\n<div class="chips">'
+            + "".join('<a class="chip" href="/compare/' + p["slug"] + '.html">'
+                      + esc(p["a"]) + " vs " + esc(p["b"]) + "</a>" for p in COMPARE.get(cid, [])[:12])
+            + "</div>\n") if COMPARE.get(cid) else "")
         + '<h2>Other categories</h2>\n<div class="chips">' + sib + "</div>\n"
         '<p class="mt-12"><a class="btn btn--ghost" href="/">See the full Index &rsaquo;</a></p>\n'
         "</main>\n")

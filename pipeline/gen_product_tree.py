@@ -48,6 +48,8 @@ PURPOSE = {
     "/privacy.html":      ("What we collect, which is close to nothing.", "free"),
     "/refunds.html":      ("Cancellation and the 7-day refund.", "post-sale"),
     "/learn/":            ("Answer-engine landing pages for high-intent questions.", "free"),
+    "/compare/":          ("Head-to-head, X vs Y — the highest-intent question in the category, "
+                           "answered with two measurements taken the same day by the same scorer.", "free"),
     "/role/":             ("One ranked hub per job title — the axis the homepage picker is built on.", "free"),
     "/activate.html":     ("Approve a device that ran `tashan login`. noindex; the browser half of "
                            "the RFC 8628 grant, so a licence key is typed once ever, not per machine.", "post-sale"),
@@ -113,6 +115,7 @@ def main():
     gen = []
     for sub, generator in (("capability", "prerender.py"), ("category", "gen_hubs.py"),
                            ("task", "gen_hubs.py"), ("skills", "gen_hubs.py"),
+                           ("role", "gen_hubs.py"), ("compare", "gen_compare.py"),
                            ("learn", "gen_content.py")):
         d = os.path.join(WEB, sub)
         if os.path.isdir(d):

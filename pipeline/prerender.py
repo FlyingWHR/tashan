@@ -548,7 +548,7 @@ def sitemap(caps):
     # generated hubs + learn/agents pages if present. These are real indexable pages; leaving them out
     # of the sitemap is how a whole content tier stays invisible to crawlers.
     extra = ""
-    for sub in ("learn", "agents", "category", "skills", "task", "role"):
+    for sub in ("learn", "agents", "category", "skills", "task", "role", "compare"):
         d = os.path.join(ROOT, "web", sub)
         if os.path.isdir(d):
             for f in sorted(os.listdir(d)):

@@ -15,7 +15,11 @@ sys.path.insert(0, os.path.join(ROOT, "pipeline"))
 import assets
 
 HTML = sorted(glob.glob(os.path.join(ROOT, "web", "*.html")))
-GENERATORS = ["prerender.py", "gen_content.py", "gen_hubs.py"]
+# Order mirrors run.py: gen_compare writes web/data/compare.json, which gen_hubs reads to link
+# the head-to-head pages from each category hub, and prerender walks web/compare/ for the
+# sitemap. A generator missing from this list leaves its pages frozen at the previous ?v= —
+# which is exactly what 212 compare pages did the first time this ran without it.
+GENERATORS = ["gen_compare.py", "gen_hubs.py", "gen_content.py", "prerender.py"]
 
 
 def versions_on_disk():

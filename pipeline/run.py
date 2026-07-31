@@ -53,7 +53,8 @@ STAGES = [
     # sitemap by walking those directories AND links each capability to the task hubs that exist. Run
     # the other way round and every task page added this run is missing from the sitemap (33 were) and
     # unlinked from the dossiers that should point at it.
-    ("hubs",            ["pipeline/gen_hubs.py"], "site", "category + task hubs, llms.txt"),
+    ("compare",         ["pipeline/gen_compare.py"], "site", "head-to-head X vs Y pages"),
+    ("hubs",            ["pipeline/gen_hubs.py"], "site", "category + task + role hubs, llms.txt"),
     ("pages",           ["pipeline/prerender.py"], "site", "capability pages + sitemap"),
     ("registry",        ["pipeline/gen_registry.py"], "site", "agent endpoints (/v0.1/servers, /v0.1/scores)"),
     ("content",         ["pipeline/gen_content.py"], "site", "learn articles"),
@@ -64,7 +65,7 @@ STAGES = [
     ("push-paid",       ["pipeline/push_security.py"], "site",
      "the audit's paid half -> Cloudflare KV, where /api/security serves licence holders"),
 ]
-SITE_ONLY = {"badges", "pages", "content", "hubs", "registry", "push-paid"}
+SITE_ONLY = {"badges", "pages", "content", "hubs", "compare", "registry", "push-paid"}
 
 
 def run(name, argv, full):

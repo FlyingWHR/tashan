@@ -97,7 +97,7 @@ Both must reach Pro without ever being asked to be a database administrator of t
 
 ### P3 — SEO / GEO, alongside
 
-- [ ] **15. Head-to-head `/compare/<a>-vs-<b>`** — 212 pages at top-8-per-category, both sides
+- [x] **15. Head-to-head `/compare/<a>-vs-<b>`** — 212 pages at top-8-per-category, both sides
       measured, free-tier data only. Estimated in-session; gate: same category, scored, ≥1k wk dl.
 - [ ] **16. Per-page OG images** for capability + role + category hubs.
 - [ ] **17. `Dataset` JSON-LD** for the export, so the corpus is citable as a dataset.
@@ -234,3 +234,26 @@ by reading their own header. It now says `tashan — licence expired`, keeps `is
 mark. Verified live through the real paint path for all three states. Deploy `fb101b26`.
 
 **Next: P3.** Item 15 (`/compare`) is going ahead — the instruction was to finish without asking.
+
+**Iteration 7 — item 15. 212 head-to-head pages, sitemap now 6,107 URLs.**
+
+`pipeline/gen_compare.py`. Gate: same category, both scored, both ≥1,000 weekly downloads, top 8 per
+category → 28 pairs each, 212 total. Without a floor this is 5,788² pages of doorway spam, which
+earns a manual action rather than traffic.
+
+**The URL is alphabetical and the content is ranked, deliberately.** A slug ordered by score would
+change the day two capabilities crossed, churning the one asset that takes months to earn.
+Alphabetical is stable for the life of the pair.
+
+**The verdict is derived, never editorial** — ≥10 points is "a real separation rather than noise",
+3–9 is "a narrow lead, read the evidence", <3 says the score does not decide it. Saying so on the
+close ones is what makes the decisive ones worth believing.
+
+Free-tier data only: both scores, the raw evidence, freshness, upkeep, expertise grade and the
+EXISTENCE of findings. Never the paid detail. Each category hub adopts its own comparisons from
+`web/data/compare.json` — one definition of which pairs exist, so a hub can never link to a page
+that was not written.
+
+**Caught by the suite:** `bump_assets.py` had a hardcoded generator list, so all 212 pages froze at
+the previous `?v=`. That list is now ordered to mirror `run.py`, and the `--check` assertion is what
+found it — 24,134 references now agree. Deploy `f993aa79`.
