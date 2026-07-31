@@ -277,6 +277,18 @@ async function withTrends(results, lic, base = SITE, limit = 40) {
       const { series, scorers } = await res.json();
       r.assessment = withTrend(r.assessment, trend(series, scorers));
     } catch { /* offline: trend is an enhancement, never a reason doctor fails */ }
+
+    // The audit's paid half, on the surface that ADVERTISES it. doctor's free output says
+    // "N findings have detail behind a licence — which advisory and the version that fixes it,
+    // what the install script runs"; for a long time nothing printed any of that, on any surface.
+    // Fetching it here is what makes that sentence true in the place a customer reads it.
+    if (r.row.sec_advisory_count || r.row.sec_install_script) {
+      try {
+        const sr = await fetch(`${base}/api/security?id=${encodeURIComponent(r.row.id)}`,
+                               { headers: auth });
+        if (sr.ok) r.secDetail = await sr.json();
+      } catch { /* offline: the free finding is already printed and still correct */ }
+    }
   }
   return results;
 }
@@ -378,13 +390,29 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
     .sort((x, y) => order[x.assessment.level] - order[y.assessment.level]);
   let out = "\n  " + bold("Your stack") + dim(`  ·  ${sum.servers} server${sum.servers === 1 ? "" : "s"}, ${sum.skills} skill${sum.skills === 1 ? "" : "s"}`) + "\n\n";
   if (!rows.length) out += "  " + jade("+") + " " + dim("nothing deprecated, archived or abandoned.") + "\n";
-  for (const { item, row, assessment, alts } of rows) {
+  for (const { item, row, assessment, alts, secDetail } of rows) {
     const t = row && row.tashan_score != null ? String(Math.round(row.tashan_score)) : "—";
     out += "  " + (MARK[assessment.level] || " ") + " " + bold(pretty(item.name).padEnd(28).slice(0, 28)) +
       dim((item.client + " · " + item.scope).padEnd(22)) + dim("score ") + (t === "—" ? dim(t) : jade(t)) + "\n";
     for (const n of assessment.notes) {
       const txt = typeof n === "string" ? n : n.text;
       out += "      " + dim("↳ ") + (n.level === "alert" ? red(txt) : dim(txt)) + "\n";
+    }
+    // The paid half, directly under the finding it explains. doctor's free output promises exactly
+    // this — "which advisory and the version that fixes it, what the install script runs" — and for
+    // a long time no surface printed any of it, which made the upsell a claim about nothing.
+    if (secDetail) {
+      for (const a of secDetail.advisories || []) {
+        out += "      " + jade("→ ") + bold(a.id) +
+          dim(`  ${(a.severity || "").toLowerCase()}`) +
+          (a.fixed ? dim(" · fixed in ") + jade(a.fixed) : dim(" · no fix published")) + "\n";
+      }
+      if (secDetail.install_script) {
+        out += "      " + jade("→ ") + dim("install runs: ") + secDetail.install_script + "\n";
+      }
+      if ((secDetail.permissions || []).length > 1) {
+        out += "      " + jade("→ ") + dim("can reach: ") + secDetail.permissions.join(", ") + "\n";
+      }
     }
     if (alts && alts.length) {
       if (pro) {

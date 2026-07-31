@@ -104,6 +104,14 @@ node functions/api/license.test.mjs 2>/dev/null || fail=1
 echo; echo "── account centre (session + record) ──────────"
 node --test functions/api/account.test.mjs >/dev/null 2>&1 || { node --test functions/api/account.test.mjs; fail=1; }
 
+# 5e. the audit's paid half — a paywall that fails open gives away the one thing $6 buys
+echo; echo "── security detail API (paid) ─────────────────"
+node --test functions/api/security.test.mjs >/dev/null 2>&1 || { node --test functions/api/security.test.mjs; fail=1; }
+
+# 5f. every feature the pricing page sells must have code that delivers it
+echo; echo "── promises (sold == delivered) ───────────────"
+python3 tests/test_promises.py || fail=1
+
 # 3. CLI pure logic
 echo; echo "── cli ────────────────────────────────────────"
 node cli/tashan.test.mjs || fail=1

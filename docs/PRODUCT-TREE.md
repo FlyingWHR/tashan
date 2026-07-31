@@ -59,7 +59,10 @@ Each of these exists because the failure it prevents already shipped once.
 - `functions/api/e.test.mjs` — node functions/api/e.test.mjs  — validates the analytics collector's field shaping (no deps).
 - `functions/api/license.test.mjs` — The paywall. Run: node functions/api/license.test.mjs
 - `functions/api/polar.test.mjs` — Polar webhook verification — the security boundary. Run: node functions/api/polar.test.mjs
+- `functions/api/security.test.mjs` — node --test functions/api/security.test.mjs
 - `tests/test_chrome.py` — The navigation exists once. Every page renders that one definition, byte for byte.
+- `tests/test_classify.py` — The category is a published claim, so its accuracy is a number we hold ourselves to.
+- `tests/test_consistency.py` — One capability, one set of facts, on every surface that renders it.
 - `tests/test_expertise.py` — A published grade must not contradict itself.
 - `tests/test_firewall.py` — The firewall test — the ranking can never be bought.
 - `tests/test_hubs.py` — tashan — the generated content tier: asset versioning, category hubs, skills, llms.txt.
@@ -68,6 +71,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `tests/test_official.py` — The "✓ Official" badge is an endorsement claim. It must be provable from the namespace.
 - `tests/test_pkg_name.py` — Every `npx …` invocation we publish must name a package that actually resolves to US.
 - `tests/test_product_tree.py` — docs/PRODUCT-TREE.md must describe every surface that exists, and describe none that don't.
+- `tests/test_promises.py` — Every feature the pricing page sells must have code that delivers it.
 - `tests/test_score.py` — The two score-shape properties everything else rests on.
 - `tests/test_scorer_version.py` — SCORER_VERSION must change whenever the scoring changes.
 - `tests/test_scrape.py` — capability_id() — the config parser that decides what a row IS.

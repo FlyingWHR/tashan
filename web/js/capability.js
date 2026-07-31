@@ -89,6 +89,9 @@
 
     wireTabs();
     wireCopy();
+    // Ask for the paid half AFTER the free page is on screen, never before: the free rendering is
+    // the correct answer for most readers and must not wait on a request that will 403.
+    fillPaidDetail(c);
   }
 
   // ---------- tashan's read: turn the measured evidence into a one-line DECISION (the whole point) ----------
@@ -329,6 +332,56 @@
   function unlock(what) {
     return '<a class="unlock" href="' + PRICING + '?ref=' + encodeURIComponent(CAP_ID) +
       '" title="' + esc(what) + '">unlock detail</a>';
+  }
+
+  // ---- the paid half, for whoever is signed in ---------------------------------------------------
+  // The website used to differentiate NOTHING: capability.js never checked for a licence, so a
+  // paying customer saw byte-for-byte what a stranger saw, on the same page whose "unlock detail"
+  // link had just taken their money. /api/security is gated by the same _license.js the CLI uses,
+  // and the browser session cookie set by /api/account is a credential keyFrom() already reads —
+  // so being signed in here is enough. A 401/403 is the normal case for most readers, not an error:
+  // we simply leave the free rendering alone.
+  function fillPaidDetail(c) {
+    if (!c.sec_scanned_at) return;                       // nothing was scanned; nothing to unlock
+    fetch("/api/security?id=" + encodeURIComponent(c.id), { credentials: "same-origin" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { if (d) revealPaid(d); })
+      .catch(function () { /* offline or not signed in — the free view is already correct */ });
+  }
+
+  function revealPaid(d) {
+    var host = document.querySelector(".sec");
+    if (!host) return;
+    var rows = host.querySelectorAll(".secrow");
+
+    function swap(match, html) {
+      for (var i = 0; i < rows.length; i++) {
+        var l = rows[i].querySelector(".secrow__l");
+        if (l && match.test(l.textContent)) {
+          var slot = rows[i].querySelector(".secrow__d");
+          if (slot) slot.innerHTML = html;
+          return true;
+        }
+      }
+      return false;
+    }
+
+    (d.advisories || []).length && swap(/known advisor/i,
+      '<span class="paid">' + (d.advisories || []).map(function (a) {
+        return esc(a.id) + (a.fixed ? " — fixed in " + esc(a.fixed) : " — no fix published");
+      }).join("<br>") + "</span>");
+
+    if (d.install_script) {
+      swap(/install time/i, '<code class="paid">' + esc(d.install_script) + "</code>");
+    }
+    if ((d.permissions || []).length > 1) {
+      swap(/^(Reads|Runs|Makes|Drives|Connects|Handles|Talks)/,
+        '<span class="paid">' + esc((d.permissions || []).map(function (p) {
+          return PERM_LABEL[p] || p;
+        }).join(" · ")) + "</span>");
+    }
+    var sub = document.querySelector(".capsec__sub");
+    if (sub) sub.innerHTML = "Full detail shown — your licence is active on this browser.";
   }
 
   function secRow(label, value, detail, cls) {

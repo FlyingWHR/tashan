@@ -863,3 +863,11 @@ h1, h2,
    other machine affordances now, selectable and quiet. */
 .capid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--text-faint);
   user-select:all; word-break:break-all; }
+
+/* Paid detail, revealed in place. Deliberately NOT accented: the accent colour is reserved for
+   measured data, and "which advisory" is the same measurement the free tier already counted — a
+   licence changes how much of it you see, never what it says. */
+.paid { color: var(--text); font-size:var(--fs-sm); }
+code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--jade);
+  background: var(--bg); border:1px solid var(--hairline); border-radius:5px; padding:.1rem .4rem;
+  overflow-wrap:anywhere; }

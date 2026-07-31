@@ -57,8 +57,14 @@ STAGES = [
     ("pages",           ["pipeline/prerender.py"], "site", "capability pages + sitemap"),
     ("registry",        ["pipeline/gen_registry.py"], "site", "agent endpoints (/v0.1/servers, /v0.1/scores)"),
     ("content",         ["pipeline/gen_content.py"], "site", "learn articles"),
+    # THE PAID DELIVERY PATH. redact_paid() strips the audit's detail from every public file, so this
+    # is the only way it reaches the people who bought it. A day this does not run is a day paying
+    # customers see "unlock detail" and get nothing — the exact defect the whole feature audit was
+    # about. No-ops loudly without CF_* credentials rather than failing the run.
+    ("push-paid",       ["pipeline/push_security.py"], "site",
+     "the audit's paid half -> Cloudflare KV, where /api/security serves licence holders"),
 ]
-SITE_ONLY = {"badges", "pages", "content", "hubs", "registry"}
+SITE_ONLY = {"badges", "pages", "content", "hubs", "registry", "push-paid"}
 
 
 def run(name, argv, full):
