@@ -871,3 +871,103 @@ h1, h2,
 code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--jade);
   background: var(--bg); border:1px solid var(--hairline); border-radius:5px; padding:.1rem .4rem;
   overflow-wrap:anywhere; }
+
+
+/* ── CSP-safe presentation classes ────────────────────────────────────────────────────
+   Production sends `Content-Security-Policy: style-src 'self'` (web/_headers), which blocks
+   every inline style ATTRIBUTE. pipeline/serve.py sends no such header, so a blocked
+   declaration renders perfectly in local preview and is dead on tashan.sh — ~33,000 of them
+   were, including every score bar on the board and every hub, which all rendered full.
+   CSSOM assignment (el.style.width = x) is NOT blocked; a style="" attribute always is.
+   So: declarations live here, and tests/test_site.py fails the build if `style="` returns. */
+.fs-xs { font-size: var(--fs-xs); }
+.fs-sm { font-size: var(--fs-sm); }
+.fs-base { font-size: var(--fs-base); }
+.faint { color: var(--text-faint); }
+.mt-3 { margin-top: var(--sp-3); }
+.mt-6 { margin-top: var(--sp-6); }
+.mt-8 { margin-top: var(--sp-8); }
+.mt-12 { margin-top: var(--sp-12); }
+.mb-4 { margin-bottom: var(--sp-4); }
+.ml-3 { margin-left: var(--sp-3); }
+.ml-4 { margin-left: var(--sp-4); }
+.sec-gap { margin: var(--sp-16) 0 var(--sp-12); }
+.ta-r { text-align: right; }
+.o-50 { opacity: .5; }
+.o-55 { opacity: .55; }
+.prose--wide { max-width: none; }
+.card--link { display: block; text-decoration: none; }
+.card__h { margin: 0 0 .4rem; }
+.card__desc { margin: 0; color: var(--text-dim); font-size: var(--fs-base); }
+
+/* Score-bar fill. Data-driven, so one rule per whole percent — the alternative is an inline
+   style attribute, which CSP kills, or 'unsafe-inline', which trades the policy we publish
+   for a bar chart. Scores are integers 0-100, so this set is closed and never grows. */
+.bar > i { width: 0; }
+.bar[data-w="0"]>i{width:0%}.bar[data-w="1"]>i{width:1%}.bar[data-w="2"]>i{width:2%}.bar[data-w="3"]>i{width:3%}.bar[data-w="4"]>i{width:4%}.bar[data-w="5"]>i{width:5%}.bar[data-w="6"]>i{width:6%}.bar[data-w="7"]>i{width:7%}.bar[data-w="8"]>i{width:8%}.bar[data-w="9"]>i{width:9%}
+.bar[data-w="10"]>i{width:10%}.bar[data-w="11"]>i{width:11%}.bar[data-w="12"]>i{width:12%}.bar[data-w="13"]>i{width:13%}.bar[data-w="14"]>i{width:14%}.bar[data-w="15"]>i{width:15%}.bar[data-w="16"]>i{width:16%}.bar[data-w="17"]>i{width:17%}.bar[data-w="18"]>i{width:18%}.bar[data-w="19"]>i{width:19%}
+.bar[data-w="20"]>i{width:20%}.bar[data-w="21"]>i{width:21%}.bar[data-w="22"]>i{width:22%}.bar[data-w="23"]>i{width:23%}.bar[data-w="24"]>i{width:24%}.bar[data-w="25"]>i{width:25%}.bar[data-w="26"]>i{width:26%}.bar[data-w="27"]>i{width:27%}.bar[data-w="28"]>i{width:28%}.bar[data-w="29"]>i{width:29%}
+.bar[data-w="30"]>i{width:30%}.bar[data-w="31"]>i{width:31%}.bar[data-w="32"]>i{width:32%}.bar[data-w="33"]>i{width:33%}.bar[data-w="34"]>i{width:34%}.bar[data-w="35"]>i{width:35%}.bar[data-w="36"]>i{width:36%}.bar[data-w="37"]>i{width:37%}.bar[data-w="38"]>i{width:38%}.bar[data-w="39"]>i{width:39%}
+.bar[data-w="40"]>i{width:40%}.bar[data-w="41"]>i{width:41%}.bar[data-w="42"]>i{width:42%}.bar[data-w="43"]>i{width:43%}.bar[data-w="44"]>i{width:44%}.bar[data-w="45"]>i{width:45%}.bar[data-w="46"]>i{width:46%}.bar[data-w="47"]>i{width:47%}.bar[data-w="48"]>i{width:48%}.bar[data-w="49"]>i{width:49%}
+.bar[data-w="50"]>i{width:50%}.bar[data-w="51"]>i{width:51%}.bar[data-w="52"]>i{width:52%}.bar[data-w="53"]>i{width:53%}.bar[data-w="54"]>i{width:54%}.bar[data-w="55"]>i{width:55%}.bar[data-w="56"]>i{width:56%}.bar[data-w="57"]>i{width:57%}.bar[data-w="58"]>i{width:58%}.bar[data-w="59"]>i{width:59%}
+.bar[data-w="60"]>i{width:60%}.bar[data-w="61"]>i{width:61%}.bar[data-w="62"]>i{width:62%}.bar[data-w="63"]>i{width:63%}.bar[data-w="64"]>i{width:64%}.bar[data-w="65"]>i{width:65%}.bar[data-w="66"]>i{width:66%}.bar[data-w="67"]>i{width:67%}.bar[data-w="68"]>i{width:68%}.bar[data-w="69"]>i{width:69%}
+.bar[data-w="70"]>i{width:70%}.bar[data-w="71"]>i{width:71%}.bar[data-w="72"]>i{width:72%}.bar[data-w="73"]>i{width:73%}.bar[data-w="74"]>i{width:74%}.bar[data-w="75"]>i{width:75%}.bar[data-w="76"]>i{width:76%}.bar[data-w="77"]>i{width:77%}.bar[data-w="78"]>i{width:78%}.bar[data-w="79"]>i{width:79%}
+.bar[data-w="80"]>i{width:80%}.bar[data-w="81"]>i{width:81%}.bar[data-w="82"]>i{width:82%}.bar[data-w="83"]>i{width:83%}.bar[data-w="84"]>i{width:84%}.bar[data-w="85"]>i{width:85%}.bar[data-w="86"]>i{width:86%}.bar[data-w="87"]>i{width:87%}.bar[data-w="88"]>i{width:88%}.bar[data-w="89"]>i{width:89%}
+.bar[data-w="90"]>i{width:90%}.bar[data-w="91"]>i{width:91%}.bar[data-w="92"]>i{width:92%}.bar[data-w="93"]>i{width:93%}.bar[data-w="94"]>i{width:94%}.bar[data-w="95"]>i{width:95%}.bar[data-w="96"]>i{width:96%}.bar[data-w="97"]>i{width:97%}.bar[data-w="98"]>i{width:98%}.bar[data-w="99"]>i{width:99%}
+.bar[data-w="100"]>i{width:100%}
+
+
+/* ── the job picker ───────────────────────────────────────────────────────────────────────
+   The headline sells one axis — the work you actually do — and the only control for it used to be a
+   236px rail of task chips beside a 7,500px table. This is that axis, made the first thing on the
+   page you can touch. Roles come from tasks.json (already loaded for the rail) and the icons are
+   already in the per-page sprite, so the grid adds one stylesheet block and no new request. */
+.section--roles { padding-bottom: 0; }
+.section__lede { color: var(--text-dim); max-width: 62ch; margin: var(--sp-2) 0 0; }
+.rolegrid { display: grid; gap: .5rem; margin-top: var(--sp-6);
+  grid-template-columns: repeat(auto-fill, minmax(186px, 1fr)); grid-auto-rows: 1fr; }
+.rolecard { display: flex; align-items: center; gap: .55rem; width: 100%; text-align: left;
+  padding: .68rem .8rem; border: 1px solid var(--hairline); border-radius: var(--radius);
+  background: var(--bg-soft, transparent); color: var(--text); cursor: pointer;
+  font: inherit; font-size: var(--fs-sm); transition: border-color .12s, background .12s, color .12s; }
+.rolecard:hover { border-color: var(--jade-line); background: var(--jade-dim); }
+.rolecard.is-on { border-color: var(--jade); background: var(--jade-dim); color: #fff; }
+.rolecard__i { width: 17px; height: 17px; flex-shrink: 0; color: var(--text-faint); }
+.rolecard:hover .rolecard__i, .rolecard.is-on .rolecard__i { color: var(--jade); }
+.rolecard__l { flex: 1; line-height: 1.25; }
+/* The count is the honest part of the card: it is what is on the board now, so a job that opens onto
+   seven rows says seven before you click it rather than after. */
+.rolecard__n { color: var(--text-faint); font-size: var(--fs-xs); font-feature-settings: "tnum" 1; }
+.rolecard.is-on .rolecard__n { color: var(--jade); }
+@media (max-width: 560px) { .rolegrid { grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); } }
+
+
+/* ── /activate — the device-authorisation page ────────────────────────────────────────────
+   The one page in the product where a customer is mid-flow between two devices, so it is
+   deliberately sparse: the code, who they are, one button. Everything else is a distraction from
+   a decision that takes two seconds. */
+.actv h1 { margin-bottom: var(--sp-4); }
+.actv__lbl { font-size: var(--fs-xs); letter-spacing: .12em; text-transform: uppercase;
+  color: var(--text-faint); margin: 0 0 .4rem; display: block; }
+/* The code is the thing being compared against another screen, so it is the largest element on the
+   page and spaced for reading a character at a time. */
+.actv__code { font-size: clamp(1.8rem, 6vw, 2.6rem); letter-spacing: .18em; color: var(--jade);
+  margin: 0 0 var(--sp-6); font-feature-settings: "tnum" 1; }
+.actv__form { display: flex; flex-direction: column; gap: .6rem; align-items: flex-start;
+  max-width: 22rem; margin: var(--sp-6) 0; }
+.actv__in { width: 100%; padding: .7rem .8rem; border: 1px solid var(--hairline);
+  border-radius: var(--radius); background: var(--bg); color: var(--text);
+  font-family: var(--font-mono); font-size: var(--fs-md); letter-spacing: .06em; }
+.actv__in:focus { outline: none; border-color: var(--jade); }
+.actv__err { color: var(--red); font-size: var(--fs-sm); margin: .5rem 0 0; }
+.actv__cta { display: flex; gap: .6rem; flex-wrap: wrap; margin: var(--sp-8) 0 0; }
+/* Two doors, never a wizard. Someone arriving here either has a licence or does not, and making
+   them read past the answer that does not apply to them is the cumbersome thing we are removing. */
+.actv__doors { display: grid; gap: var(--sp-4); margin: var(--sp-8) 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.actv__door { padding: var(--sp-6); border: 1px solid var(--hairline); border-radius: var(--radius); }
+.actv__door h2 { font-size: var(--fs-xl); margin: 0 0 var(--sp-3); }
+.actv__door p { color: var(--text-dim); }
+.actv__door form { display: flex; flex-direction: column; gap: .6rem; align-items: flex-start; }
+.actv__k { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .12em;
+  text-transform: uppercase; color: var(--jade); margin: 0 0 .5rem; }

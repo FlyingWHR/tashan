@@ -30,7 +30,7 @@
         '<div class="cap__id">' + esc(r.why || "") + '</div></td>' +
       '<td class="num num--dim">' + (r.backers || 0) + '</td>' +
       '<td>' + st + '</td>' +
-      '<td style="text-align:right">' + back + '</td>' +
+      '<td class="ta-r">' + back + '</td>' +
       '</tr>';
   }
 

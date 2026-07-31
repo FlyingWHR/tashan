@@ -104,6 +104,10 @@ node functions/api/license.test.mjs 2>/dev/null || fail=1
 echo; echo "── account centre (session + record) ──────────"
 node --test functions/api/account.test.mjs >/dev/null 2>&1 || { node --test functions/api/account.test.mjs; fail=1; }
 
+# 5d2. the device grant — a code must never be able to mint an entitlement on its own
+echo; echo "── device login (RFC 8628 grant) ──────────────"
+node functions/api/device.test.mjs 2>/dev/null || { node functions/api/device.test.mjs; fail=1; }
+
 # 5e. the audit's paid half — a paywall that fails open gives away the one thing $6 buys
 echo; echo "── security detail API (paid) ─────────────────"
 node --test functions/api/security.test.mjs >/dev/null 2>&1 || { node --test functions/api/security.test.mjs; fail=1; }

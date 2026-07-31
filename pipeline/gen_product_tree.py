@@ -48,6 +48,11 @@ PURPOSE = {
     "/privacy.html":      ("What we collect, which is close to nothing.", "free"),
     "/refunds.html":      ("Cancellation and the 7-day refund.", "post-sale"),
     "/learn/":            ("Answer-engine landing pages for high-intent questions.", "free"),
+    "/role/":             ("One ranked hub per job title — the axis the homepage picker is built on.", "free"),
+    "/activate.html":     ("Approve a device that ran `tashan login`. noindex; the browser half of "
+                           "the RFC 8628 grant, so a licence key is typed once ever, not per machine.", "post-sale"),
+    "/404.html":          ("Real 404 with a route back in. noindex; without it Pages served the "
+                           "homepage at status 200 for every unknown URL.", "free"),
 }
 
 # Surfaces that are not pages but are product, and get audited the same way.

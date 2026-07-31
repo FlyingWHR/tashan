@@ -52,6 +52,11 @@
     head.innerHTML = '<span class="pal__prompt">tashan&nbsp;❯</span>';
     input = el("input", "pal__input"); input.type = "text"; input.setAttribute("placeholder", "search capabilities…  (try: deep, kubernetes, notion)");
     input.setAttribute("aria-label", "Search capabilities");
+    // id/name so it is a real named field, not an anonymous box: assistive tech and password
+    // managers both key off them, and Chrome files an issue on a form field that has neither.
+    input.id = "palSearch"; input.name = "q"; input.setAttribute("autocomplete", "off");
+    // role=dialog without a name announces as "dialog"; point it at the only thing in the box.
+    pal.setAttribute("aria-label", "Search capabilities");
     head.appendChild(input);
     listEl = el("div", "pal__list");
     var foot = el("div", "pal__foot"); foot.innerHTML = '<span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span><span class="pal__by">measured, not claimed</span>';

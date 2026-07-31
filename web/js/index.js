@@ -5,10 +5,16 @@
   "use strict";
   var rowsEl = document.getElementById("rows");
   // facets are Sets (multi-select); toggles are bool; sort is one key
-  var state = { cat: new Set(), task: new Set(), kind: new Set(), vitality: new Set(), verdict: new Set(),
+  // `role` is single-valued and deliberately not a Set: the page asks "what do you do", and nobody
+  // holds two jobs while answering it. A role is a NAMED UNION OF TASKS, so it filters through the
+  // task index rather than adding a parallel axis to the data.
+  var state = { role: "", cat: new Set(), task: new Set(), kind: new Set(), vitality: new Set(), verdict: new Set(),
                 official: false, clean: false, combine: false, sort: "tashan_score" };
-  var data = { caps: [], cats: [], catMeta: {}, tasks: [], roles: [], taskMeta: {}, taskIds: null };
-  var PAGE = 100, shownCount = PAGE;   // board pagination: show PAGE rows, "show more" reveals the rest
+  var data = { caps: [], cats: [], catMeta: {}, tasks: [], roles: [], taskMeta: {}, taskIds: null, roleIds: {} };
+  // The board opened with 100 rows — a 7,500px table that was 75% of the page height, scrolled past
+  // rather than read. TEASER is the ranked proof you are looking at real measurement; PAGE is the
+  // increment once you have chosen a job and actually want the shelf.
+  var TEASER = 10, PAGE = 25, shownCount = TEASER;
 
   var KIND_LABEL = { npm: "npm", pkg: "npm-pkg", docker: "docker", python: "python", remote: "remote", skill: "skill" };
   var VIT_LABEL = { active: "active", stable: "stable", abandoned: "abandoned" };
@@ -55,8 +61,24 @@
       var ids = raw[t.slug] || [];
       t.count = ids.filter(function (i) { return onBoard[i]; }).length;
     });
+    // role -> the set of capability ids reachable through any of its tasks. Computed once: the grid
+    // prints a count per role and the filter tests membership, and both would otherwise re-walk 69
+    // task lists on every render.
+    data.roles.forEach(function (r) { data.roleIds[r.id] = new Set(); });
+    data.tasks.forEach(function (t) {
+      var ids = raw[t.slug] || [];
+      (t.roles || []).forEach(function (rid) {
+        var into = data.roleIds[rid];
+        if (into) ids.forEach(function (i) { if (onBoard[i]) into.add(i); });
+      });
+    });
     urlToState();
+    // A shared ?role= URL must render what clicking that role renders. commit() sets this on every
+    // interaction, but the first paint reads state from the URL and never went through commit — so a
+    // link to a job opened on the 10-row teaser while the click that produced it opened on 25.
+    shownCount = hasFilters() ? PAGE : TEASER;
     buildToolbar();
+    renderRoles();
     renderTasks();
     renderCatalog();
     render();
@@ -65,11 +87,13 @@
     rowsEl.innerHTML = '<tr><td colspan="5"><div class="empty">Measurement data isn\'t published yet — the pipeline is still running. Check back shortly.</div></td></tr>';
   });
 
-  addEventListener("popstate", function () { shownCount = PAGE; urlToState(); buildToolbar(); renderTasks(); renderCatalog(); render(); });
+  addEventListener("popstate", function () { urlToState(); shownCount = hasFilters() ? PAGE : TEASER;
+    buildToolbar(); renderRoles(); renderTasks(); renderCatalog(); render(); });
 
   // ---- URL state (shareable, back-button-friendly; defaults omitted) ----
   function urlToState() {
     var q = new URLSearchParams(location.search);
+    state.role = q.get("role") || "";
     state.cat = csvSet(q.get("cat"));
     state.task = csvSet(q.get("task"));
     state.kind = csvSet(q.get("kind"));
@@ -82,6 +106,7 @@
   }
   function stateToURL(push) {
     var q = new URLSearchParams();
+    if (state.role) q.set("role", state.role);
     if (state.cat.size) q.set("cat", [].concat.apply([], [Array.from(state.cat)]).join(","));
     if (state.task.size) q.set("task", Array.from(state.task).join(","));
     if (state.kind.size) q.set("kind", Array.from(state.kind).join(","));
@@ -95,7 +120,7 @@
     history[push ? "pushState" : "replaceState"](null, "", url);
   }
   function csvSet(v) { return new Set(v ? v.split(",").filter(Boolean) : []); }
-  function hasFilters() { return state.task.size || state.cat.size || state.kind.size || state.vitality.size || state.verdict.size || state.official || state.clean; }
+  function hasFilters() { return state.role || state.task.size || state.cat.size || state.kind.size || state.vitality.size || state.verdict.size || state.official || state.clean; }
 
   // ---- the toolbar: Type/Activity/Assessment pills + Official/Clean toggles + Sort select ----
   function buildToolbar() {
@@ -235,6 +260,44 @@
     };
   }
 
+  function roleLabel(id) {
+    var r = data.roles.filter(function (x) { return x.id === id; })[0];
+    return r ? r.label : id;
+  }
+
+  // THE JOB PICKER. The headline promises capabilities for the work you actually do, and until now the
+  // only way to express that was a 236px rail of task chips beside a 7,500px table — the promise was a
+  // secondary control. Roles already existed in tasks.json (23 of them, each a set of tasks, each with
+  // an icon already in the inlined sprite); they were used for grouping on /browse.html and nowhere
+  // else. This makes the axis the page is sold on the first thing you can touch.
+  function renderRoles() {
+    var grid = document.getElementById("rolegrid");
+    if (!grid || !data.roles.length) return;
+    var live = data.roles.map(function (r) {
+      return { id: r.id, label: r.label, n: (data.roleIds[r.id] || { size: 0 }).size };
+    }).filter(function (r) { return r.n >= 5; })      // a job with 4 shelves is not a shelf
+      .sort(function (a, b) { return b.n - a.n; });
+    grid.innerHTML = live.map(function (r) {
+      var on = state.role === r.id;
+      return '<button class="rolecard' + (on ? " is-on" : "") + '" type="button" data-role="' + esc(r.id) + '"' +
+        ' aria-pressed="' + on + '">' +
+        '<svg class="rolecard__i" aria-hidden="true"><use href="#i-role-' + esc(r.id) + '"></use></svg>' +
+        '<span class="rolecard__l">' + esc(r.label) + '</span>' +
+        '<span class="rolecard__n mono">' + fmt(r.n) + '</span></button>';
+    }).join("");
+    grid.onclick = function (e) {
+      var b = e.target.closest("[data-role]");
+      if (!b) return;
+      var v = b.getAttribute("data-role");
+      state.role = state.role === v ? "" : v;          // clicking the active job clears it
+      commit();
+      if (state.role) {
+        var a = document.getElementById("board-anchor");
+        if (a) a.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+  }
+
   function renderTasks() {
     renderCombineToggle();
     var rail = document.getElementById("taskrail");
@@ -301,7 +364,10 @@
     };
   }
 
-  function commit() { shownCount = PAGE; stateToURL(true); buildToolbar(); renderTasks(); renderCatalog(); render(); }
+  function commit() {
+    shownCount = hasFilters() ? PAGE : TEASER;   // no filter means the teaser, not a wall of rows
+    stateToURL(true); buildToolbar(); renderRoles(); renderTasks(); renderCatalog(); render();
+  }
 
   function passes(c) {
     // Task filter: OR within the group, AND against every other facet — the same shape as Type and
@@ -312,6 +378,8 @@
       state.task.forEach(function (t) { var s2 = data.taskIds[t]; if (s2 && s2.has(c.id)) hit = true; });
       if (!hit) return false;
     }
+    // A role is the union of its tasks, so it is one membership test, not a second traversal.
+    if (state.role) { var rs = data.roleIds[state.role]; if (!rs || !rs.has(c.id)) return false; }
     if (state.cat.size && !state.cat.has(c.category)) return false;   // OR within group
     if (state.kind.size && !state.kind.has(normKind(c))) return false;
     if (state.vitality.size && !state.vitality.has(c.vitality)) return false;
@@ -348,7 +416,9 @@
   function render() {
     var bt = document.getElementById("boardTitle");
     var singleCat = state.cat.size === 1 ? Array.from(state.cat)[0] : null;
-    if (bt) bt.textContent = singleCat && data.catMeta[singleCat] ? data.catMeta[singleCat].label : "The Index";
+    var roleMeta = state.role && data.roles.filter(function (r) { return r.id === state.role; })[0];
+    if (bt) bt.textContent = roleMeta ? roleMeta.label
+      : (singleCat && data.catMeta[singleCat] ? data.catMeta[singleCat].label : "Ranked by the tashan score");
     // Only the category blurb, which says something the page cannot: what is IN this category. The
     // default text was a paragraph restating the column headers, which already carry the same
     // explanation in their tooltips — and it still called the score "Trust", a name retired two
@@ -400,7 +470,7 @@
         '<td><div class="sig' + (t == null ? ' sig--none' : '') + '">' + (t == null
           ? '<span class="unrated" title="Catalogued, not scored: its only upkeep evidence is the repository it lives in, which every skill in that repo shares. A grade of its own SKILL.md is what makes it scorable.">not scored yet</span>'
           : '<span class="sig__val">' + Math.round(t) + '</span>') +
-        '<span class="bar"><i style="width:' + bar + '%"></i></span></div></td>' +
+        '<span class="bar" data-w="' + bar + '"><i></i></span></div></td>' +
         '<td class="num">' + evidenceCell(c) + '</td>' +
         '<td><span class="fresh ' + fr.cls + '"' + (fr.title ? ' title="' + esc(fr.title) + '"' : '') + '>' + fr.txt + '</span></td>' +
         '</tr>';
@@ -408,7 +478,7 @@
     if (list.length > shown.length) {                      // reveal the rest instead of hard-capping the board
       var more = Math.min(PAGE, list.length - shown.length);
       html += '<tr class="board__more"><td colspan="5"><button class="btn btn--ghost" id="showMore" type="button">' +
-        'Show ' + more + ' more <span class="mono" style="opacity:.55">· ' + shown.length + ' of ' + fmt(list.length) + '</span></button></td></tr>';
+        'Show ' + more + ' more <span class="mono o-55">· ' + shown.length + ' of ' + fmt(list.length) + '</span></button></td></tr>';
     }
     rowsEl.innerHTML = html;
     // whole-row click navigates (the row shows cursor:pointer); real links/buttons inside act normally
@@ -426,6 +496,7 @@
     var bar = document.getElementById("activebar");
     if (!bar) return;
     var chips = [];
+    if (state.role) chips.push(chip("role", state.role, roleLabel(state.role)));
     state.task.forEach(function (v) { chips.push(chip("task", v, data.taskMeta[v] ? data.taskMeta[v].label : v)); });
     state.cat.forEach(function (v) { chips.push(chip("cat", v, data.catMeta[v] ? data.catMeta[v].label : v)); });
     state.kind.forEach(function (v) { chips.push(chip("kind", v, KIND_LABEL[v] || v)); });
@@ -441,7 +512,9 @@
     bar.querySelectorAll("[data-rm]").forEach(function (b) {
       b.onclick = function () {
         var f = b.getAttribute("data-rm"), v = b.getAttribute("data-val");
-        if (f === "official" || f === "clean") state[f] = false; else state[f].delete(v);
+        if (f === "official" || f === "clean") state[f] = false;
+        else if (f === "role") state.role = "";
+        else state[f].delete(v);
         commit();
       };
     });
@@ -451,6 +524,7 @@
     return '<button class="achip" data-rm="' + facet + '" data-val="' + esc(val) + '" type="button">' + esc(label) + ' <span class="achip__x">✕</span></button>';
   }
   function clearAll() {
+    state.role = "";
     state.task.clear(); state.cat.clear(); state.kind.clear(); state.vitality.clear(); state.verdict.clear();
     state.official = false; state.clean = false;   // `combine` is a mode, not a refinement — it survives Clear all
     commit();

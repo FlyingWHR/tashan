@@ -41,6 +41,21 @@ def _published_tasks():
 
 TASKS_PUBLISHED, TASK_LABEL = _published_tasks()
 
+
+def _published_roles():
+    import glob as _g
+    have = {os.path.basename(p)[:-5] for p in _g.glob(os.path.join(ROOT, "web", "role", "*.html"))}
+    labels, t2r = {}, {}
+    try:
+        d = json.load(open(os.path.join(ROOT, "web", "data", "tasks.json")))
+        labels = {r["id"]: r["label"] for r in d.get("roles", [])}
+        t2r = {t["slug"]: (t.get("roles") or []) for t in d["tasks"]}
+    except Exception:
+        pass
+    return have, labels, t2r
+
+ROLES_PUBLISHED, ROLE_LABEL, TASK_ROLES = _published_roles()
+
 CAT = {"browser":"Browser & Web","search":"Search","database":"Database","devtools":"Dev Tools & CI",
        "cloud":"Cloud & Infra","files":"Files & Memory","data":"Data & Analytics","docs":"Docs & Knowledge",
        "comms":"Communication","design":"Design","ai":"AI & Agents","finance":"Finance & Crypto",
@@ -198,9 +213,17 @@ def jsonld(c):
     if c.get("source_repo"): app["codeRepository"] = "https://github.com/" + c["source_repo"]
     if c.get("gh_license"): app["license"] = c["gh_license"]
     if c.get("tashan_score") is not None:
-        app["aggregateRating"] = {"@type":"AggregateRating","ratingValue": c["tashan_score"],
-            "bestRating": 100, "worstRating": 0, "ratingCount": 1,
-            "reviewAspect":"tashan tashan score (upkeep + freshness, gated by adoption)"}
+        # A Review, NOT an aggregateRating. aggregateRating means "the mean of ratings left by
+        # reviewers"; we had one with ratingCount:1 on 6,586 pages, which claims a crowd that does not
+        # exist and is the exact self-serving-rating pattern Google's structured-data policy rejects.
+        # The tashan score is one named party's measurement, so it is modelled as one named party's
+        # review — attributed, dated, and re-derivable. Same number, honest shape.
+        app["review"] = {"@type":"Review",
+            "author": {"@type":"Organization","name":"tashan","url": BASE + "/"},
+            "reviewRating": {"@type":"Rating","ratingValue": c["tashan_score"],
+                             "bestRating": 100, "worstRating": 0},
+            "reviewAspect":"tashan score — upkeep and freshness, gated by adoption",
+            "reviewBody": desc_for(c), "url": url}
     if c.get("npm_pkg"):
         app["offers"] = {"@type":"Offer","price":"0","priceCurrency":"USD"}
     crumbs = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -235,7 +258,7 @@ def summary(c):
     if c.get("kind") == "skill": clients = ["Claude Code", "Cursor", "Codex CLI"]
     elif c.get("kind") == "remote": clients = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "ChatGPT"]
     else: clients = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "Cline", "Windsurf", "VS Code"]
-    works = '<p class="mono" style="color:var(--text-faint);font-size:var(--fs-sm)"><b>Works with:</b> ' + esc(", ".join(clients)) + '</p>'
+    works = '<p class="mono fs-sm faint"><b>Works with:</b> ' + esc(", ".join(clients)) + '</p>'
     links = []
     if c.get("npm_pkg"): links.append('<a class="link" href="https://www.npmjs.com/package/' + esc(c["npm_pkg"]) + '">npm ↗</a>')
     if c.get("source_repo"): links.append('<a class="link" href="https://github.com/' + esc(c["source_repo"]) + '">source ↗</a>')
@@ -243,7 +266,7 @@ def summary(c):
     links.append('<span class="capid" title="the id the CLI and API use">' + esc(c["id"]) + '</span>')
     # the flywheel edge: every capability points at its category hub, which points back at its siblings.
     # Without this the hubs are orphans that only the sitemap knows about.
-    cat = ('<p class="mono" style="font-size:var(--fs-sm)"><b>Category:</b> <a class="link" href="/category/'
+    cat = ('<p class="mono fs-sm"><b>Category:</b> <a class="link" href="/category/'
            + esc(c["category"]) + '.html">' + esc(CAT.get(c["category"], c["category"]))
            + " — see all ranked &rsaquo;</a></p>") if c.get("category") else ""
     # Same edge for the task axis: what WORK is this for. Category says what it touches; this says what
@@ -251,13 +274,22 @@ def summary(c):
     # status. Only published tasks are linked — TASKS_PUBLISHED holds the ones that cleared gen_hubs'
     # population floor, so a dossier can never point at a page that was never written.
     tsk = [t["t"] for t in (c.get("tasks") or []) if t["t"] in TASKS_PUBLISHED]
-    task = ('<p class="mono" style="font-size:var(--fs-sm)"><b>Work:</b> '
+    task = ('<p class="mono fs-sm"><b>Work:</b> '
             + " · ".join('<a class="link" href="/task/' + esc(s) + '.html">'
                          + esc(TASK_LABEL.get(s, s)) + "</a>" for s in tsk[:4])
             + "</p>") if tsk else ""
+    roles_for = []
+    for t in (c.get("tasks") or []):
+        for rid in TASK_ROLES.get(t["t"], []):
+            if rid in ROLES_PUBLISHED and rid not in roles_for:
+                roles_for.append(rid)
+    job = ('<p class="mono fs-sm"><b>Who it is for:</b> '
+           + " · ".join('<a class="link" href="/role/' + esc(r) + '.html">'
+                        + esc(ROLE_LABEL.get(r, r)) + "</a>" for r in roles_for[:3])
+           + "</p>") if roles_for else ""
     # every dossier offers the next action: check whether YOU are running this, and what else you run.
     # without it a capability page is a dead end — the reader learns about one thing and leaves.
-    audit = ('<p class="mono" style="font-size:var(--fs-sm);margin-top:var(--sp-6)"><b>Already running this?</b> '
+    audit = ('<p class="mono fs-sm mt-6"><b>Already running this?</b> '
              '<code>npx tashan-cli doctor</code> checks your whole config against the Index — '
              '<a class="link" href="/start.html">how it works &rsaquo;</a></p>')
     # THE ONE PLACE THE PAID FEATURE IS ACTUALLY WANTED. 266 of these pages describe something
@@ -267,7 +299,7 @@ def summary(c):
     # nothing on the 5,521 pages where the reader has no problem to solve.
     dying = (c.get("gh_archived") or c.get("npm_deprecated")
              or c.get("registry_status") in ("deprecated", "deleted") or c.get("vitality") == "abandoned")
-    swap = ('<div class="callout" style="margin-top:var(--sp-6)"><b>Looking for a replacement?</b> '
+    swap = ('<div class="callout mt-6"><b>Looking for a replacement?</b> '
             '<code>npx tashan-cli doctor</code> is free and tells you everything above about your whole '
             'config. <a class="link" href="/pricing.html">tashan Pro</a> names the replacement — which '
             'one, and how it measures. $6/mo.</div>') if dying else ""
@@ -280,8 +312,8 @@ def summary(c):
             '<div class="cid"><span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
-            + works + cat + task + install + verdict + swap +
-            ('<ul class="prose" style="max-width:none">' + "".join(rows) + '</ul>' if rows else '') +
+            + works + cat + task + job + install + verdict + swap +
+            ('<ul class="prose prose--wide">' + "".join(rows) + '</ul>' if rows else '') +
             # The security audit goes BEFORE the CTA and the link row: it is the measurement the
             # page exists to publish, and it was previously absent from this tier entirely.
             security_block(c)
@@ -456,6 +488,20 @@ def bake_hero(caps, total):
     print(f"hero: baked {len(caps):,} measured / {total:,} tracked / {when}")
 
 
+def lastmod(c):
+    """<lastmod> from the date the described artifact actually last changed — or nothing.
+
+    The dossier is re-derived nightly, so stamping every one of 5,788 URLs with today's date would be
+    both true and useless: a sitemap where everything changed every day carries no priority signal at
+    all, and Google states plainly that it ignores lastmod it finds to be inaccurate. The real signal
+    is upstream — a page's content moves when the package is republished or the repo is pushed. That
+    is a lower bound (a score can drift on downloads alone), and a lower bound is the safe direction:
+    it under-claims freshness rather than over-claiming it. Unknown stays absent, never guessed.
+    """
+    d = max((x[:10] for x in (c.get("gh_pushed"), c.get("npm_last_publish")) if x), default=None)
+    return "<lastmod>" + d + "</lastmod>" if d and re.fullmatch(r"\d{4}-\d\d-\d\d", d) else ""
+
+
 def sitemap(caps):
     # Every hand-written page that is linked and indexable. terms/privacy/refunds/support were added
     # to the footer of all ~5,800 pages and never to this list, so the four pages a buyer looks for
@@ -466,11 +512,11 @@ def sitemap(caps):
             "/browse.html"]
     static = "".join("  <url><loc>" + BASE + chrome.canon(u) + "</loc></url>\n" for u in urls)
     caps_x = "".join('  <url><loc>' + BASE + chrome.canon("/capability/" + c["slug"] + ".html")
-                     + '</loc><changefreq>weekly</changefreq></url>\n' for c in caps)
+                     + '</loc>' + lastmod(c) + '<changefreq>weekly</changefreq></url>\n' for c in caps)
     # generated hubs + learn/agents pages if present. These are real indexable pages; leaving them out
     # of the sitemap is how a whole content tier stays invisible to crawlers.
     extra = ""
-    for sub in ("learn", "agents", "category", "skills", "task"):
+    for sub in ("learn", "agents", "category", "skills", "task", "role"):
         d = os.path.join(ROOT, "web", sub)
         if os.path.isdir(d):
             for f in sorted(os.listdir(d)):

@@ -69,6 +69,31 @@ Every npm-published capability is checked against OSV.dev using the version you 
 - [/v0.1/servers](https://tashan.sh/v0.1/servers) — full records, byte-compatible with the MCP registry shape; measurement under the `sh.tashan/measurement` key in `_meta`.
 - [/skill/SKILL.md](https://tashan.sh/skill/SKILL.md) — install tashan as a capability and call it when choosing what to install.
 
+## By job
+
+One ranked page per job title. These answer "the best MCP server for a <job>" with measured rows rather than an opinion.
+
+- [Agent operator](https://tashan.sh/role/agent-operator.html) — 156 measured. Top: Claude Hud, Nah, Token Optimizer.
+- [AI engineer](https://tashan.sh/role/ai-engineer.html) — 169 measured. Top: Caveman, Mem0, Context Mode.
+- [Creator / video](https://tashan.sh/role/creator.html) — 30 measured. Top: Next AI Drawio, Adobe For Creativity, Claude Video Vision.
+- [Data analyst](https://tashan.sh/role/data-analyst.html) — 74 measured. Top: Qsv Data Wrangling, Monday CRM, Geosql.
+- [Data engineer](https://tashan.sh/role/data-engineer.html) — 76 measured. Top: Daft, Whodb, ClickHouse Best Practices.
+- [Designer](https://tashan.sh/role/designer.html) — 71 measured. Top: Impeccable, Next AI Drawio, Figma.
+- [DevOps / SRE](https://tashan.sh/role/devops.html) — 146 measured. Top: Expo, Cloudflare, Azure · microsoft.
+- [Software engineer](https://tashan.sh/role/engineer.html) — 517 measured. Top: Ponytail, Mattpocock Skills, Next AI Drawio.
+- [Finance / accounting](https://tashan.sh/role/finance.html) — 64 measured. Top: Revolut X, Vulcan, Azure Cost Calculator.
+- [HR / recruiting](https://tashan.sh/role/hr.html) — 19 measured. Top: Claude Education Skills Library, Guide, Claude English Buddy.
+- [Legal / compliance](https://tashan.sh/role/legal.html) — 61 measured. Top: Architecture Studio, Healthclaw Guardrails, L4 Computational Law.
+- [Marketer / growth](https://tashan.sh/role/marketer.html) — 105 measured. Top: Claude SEO, Last30days, Humanize Korean.
+- [Operations](https://tashan.sh/role/ops.html) — 312 measured. Top: Desktop Commander, Claude Mem, Mem0.
+- [Product manager](https://tashan.sh/role/pm.html) — 217 measured. Top: Impeccable, Mattpocock Skills, Last30days.
+- [Researcher](https://tashan.sh/role/researcher.html) — 160 measured. Top: Desktop Commander, Claude Mem, Mem0.
+- [Sales](https://tashan.sh/role/sales.html) — 37 measured. Top: Monday CRM, Opendirectory, Vibe Prospecting.
+- [Scientist](https://tashan.sh/role/scientist.html) — 29 measured. Top: Sciagent Skills, Datarobot Agent Skills, Probabl Skills.
+- [Security engineer](https://tashan.sh/role/security.html) — 113 measured. Top: Codeguard Security, Wooyun Legacy, Sonarqube.
+- [Web / frontend developer](https://tashan.sh/role/web-dev.html) — 70 measured. Top: Impeccable, Stripe, Modern Web Guidance.
+- [Writer / content](https://tashan.sh/role/writer.html) — 126 measured. Top: Humanize Korean, Save To Spotify, Claude Scholar.
+
 ## Categories
 
 - [Browser & Web](https://tashan.sh/category/browser.html) — 50 measured. Headless browsers, scraping, page automation, fetch. Top: Chrome DevTools, Firecrawl, Trusty Squire.

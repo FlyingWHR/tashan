@@ -11,19 +11,21 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
-| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | categories.json, index.json, tags.json, tasks.json | free | 95 |
-| `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, site, terminal | index.json | post-sale | 55 |
-| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json | free | 52 |
-| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json | free | 46 |
-| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | index.json | sells | 44 |
-| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | index.json | post-sale | 26 |
-| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | index.json | free | 24 |
-| `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | index.json, requests.json | free | 24 |
-| `/support.html` | How to get help, and what we can see when you ask. | site, terminal | index.json | free | 24 |
-| `/about.html` | Why a rater that sells nothing it measures is the only kind worth reading. | site, terminal | index.json | free | 23 |
-| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 22 |
-| `/privacy.html` | What we collect, which is close to nothing. | site, terminal | index.json | free | 22 |
-| `/terms.html` | Terms of service. | site, terminal | index.json | free | 22 |
+| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | categories.json, index.json, tags.json, tasks.json | free | 103 |
+| `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, site, terminal | index.json | post-sale | 59 |
+| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json | free | 56 |
+| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json | free | 51 |
+| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | index.json | sells | 48 |
+| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | index.json | post-sale | 28 |
+| `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | index.json, requests.json | free | 27 |
+| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | index.json | free | 26 |
+| `/support.html` | How to get help, and what we can see when you ask. | site, terminal | index.json | free | 26 |
+| `/about.html` | Why a rater that sells nothing it measures is the only kind worth reading. | site, terminal | index.json | free | 25 |
+| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 25 |
+| `/privacy.html` | What we collect, which is close to nothing. | site, terminal | index.json | free | 24 |
+| `/terms.html` | Terms of service. | site, terminal | index.json | free | 24 |
+| `/404.html` *(noindex)* | Real 404 with a route back in. noindex; without it Pages served the homepage at status 200 for every unknown URL. | site, terminal | index.json | free | 0 |
+| `/activate.html` *(noindex)* | Approve a device that ran `tashan login`. noindex; the browser half of the RFC 8628 grant, so a licence key is typed once ever, not per machine. | activate, site, terminal | index.json | post-sale | 0 |
 | `/capability.html` | Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs. | capability, site, terminal | index.json | free | 0 |
 | `/welcome.html` *(noindex)* | Post-checkout: activate the licence. noindex, reached only from Polar. | site, terminal | index.json | post-sale | 0 |
 
@@ -56,6 +58,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `cli/mcp.test.mjs` — node cli/mcp.test.mjs — protocol + rendering for the MCP server. No network.
 - `cli/tashan.test.mjs` — node cli/tashan.test.mjs  — pure-logic tests for the CLI (no network, no deps).
 - `functions/api/account.test.mjs` — node --test functions/api/account.test.mjs
+- `functions/api/device.test.mjs` — The device-authorisation grant. This is a credential path, so the tests are about what MUST NOT
 - `functions/api/e.test.mjs` — node functions/api/e.test.mjs  — validates the analytics collector's field shaping (no deps).
 - `functions/api/license.test.mjs` — The paywall. Run: node functions/api/license.test.mjs
 - `functions/api/polar.test.mjs` — Polar webhook verification — the security boundary. Run: node functions/api/polar.test.mjs

@@ -6,7 +6,9 @@
 //   npx tashan-cli info <name>           the measured dossier for one capability
 //   npx tashan-cli add <name>            the install command for your client   ← the money shot
 //   npx tashan-cli doctor                audit the config you actually have — dead, deprecated, risky
-//   npx tashan-cli activate <key>        store your Pro licence on this machine (once, not per shell)
+//   npx tashan-cli login                 sign in — prints a code, opens the browser, approve, done
+//   npx tashan-cli logout                release this machine's seat
+//   npx tashan-cli activate <key>        non-interactive sign-in for CI, where there is no browser
 //   npx tashan-cli account               open your account in the browser, already signed in
 //   npx tashan-cli mcp                   run as an MCP server, so your AGENT can ask before installing
 //
@@ -95,6 +97,98 @@ function openBrowser(url) {
   } catch {
     return false;            // headless box or no handler — the caller prints the link instead
   }
+}
+
+// ---- device-authorisation login --------------------------------------------------------------
+// `tashan activate <key>` asked every customer to go to their email, find a licence key, and paste
+// it into a terminal — once per machine, forever. That is the worst moment in the product and it
+// lands immediately after someone pays. This is the flow they already know from `gh auth login`,
+// `wrangler login` and `stripe login`: ask for a code, approve it in a browser, the terminal picks
+// up the credential. The key is typed at most once in a lifetime, in a browser, where paste is one
+// keystroke. `activate` stays for scripts and CI, where a browser is not a thing.
+export async function deviceLogin({ open = true, fetchImpl = fetch, sleep = (ms) => new Promise(r => setTimeout(r, ms)) } = {}) {
+  const post = async (body) => {
+    try {
+      const r = await fetchImpl(SITE + "/api/device", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(body || {}),
+      });
+      return { status: r.status, json: await r.json().catch(() => null) };
+    } catch {
+      return { status: 0, json: null };
+    }
+  };
+
+  const started = await post({});
+  if (started.status !== 200 || !started.json || !started.json.device_code) {
+    process.stderr.write("\n  " + red("Could not start sign-in.") +
+      dim("\n  " + (started.status === 503 ? "Sign-in is temporarily unavailable." : "Check your connection.") +
+          "\n  You can still use `tashan activate <key>` with the key from your purchase email.\n"));
+    return 1;
+  }
+  const { device_code, user_code, verify_url_complete, verify_url, interval, expires_in } = started.json;
+  const url = verify_url_complete || verify_url;
+
+  process.stdout.write("\n  " + bold("Your code:  ") + jade(user_code) + "\n" +
+    dim("  Approve it at " + url) + "\n");
+  if (open && openBrowser(url)) process.stdout.write(dim("  (opened in your browser)") + "\n");
+  process.stdout.write(dim("\n  waiting…") + "\n");
+
+  const deadline = Date.now() + (Number(expires_in) || 600) * 1000;
+  let wait = Math.max(2, Number(interval) || 3) * 1000;
+  while (Date.now() < deadline) {
+    await sleep(wait);
+    const r = await post({ device_code });
+    const st = r.json && r.json.status;
+    if (st === "slow_down") { wait += 1000; continue; }   // RFC 8628 §3.5 — back off, do not give up
+    if (st === "pending" || r.status === 0) continue;      // offline blips are not a denial
+    if (st === "denied") {
+      process.stderr.write("\n  " + red("Denied in the browser.") + dim("\n  Nothing was stored.\n"));
+      return 1;
+    }
+    if (st === "ok" && r.json.key) return storeKey(r.json.key);
+    break;
+  }
+  process.stderr.write("\n  " + red("That code expired.") + dim("\n  Run `tashan login` again.\n"));
+  return 1;
+}
+
+// Register with Polar, then write the file — the same order `activate` uses, and for the same
+// reason: Polar owns the device limit, so a key stored locally that Polar never activated looks
+// fine here and fails everywhere else.
+async function storeKey(key) {
+  const label = `${hostname()} \u00b7 ${platform()}`;
+  const { status, json } = await polar("/activate", { key, label });
+  if (status === 0) {
+    process.stderr.write("\n  " + red("Signed in, but could not reach Polar to register this machine.") +
+      dim("\n  Nothing was saved. Try again when you are online.\n"));
+    return 1;
+  }
+  if (status === 403) {
+    process.stderr.write("\n  " + red("Every device slot on this licence is in use.") +
+      dim("\n  Release one at " + PORTAL + ", or run `tashan logout` on a machine you no longer use.\n"));
+    return 1;
+  }
+  if (status !== 200 || !json || !json.id) {
+    process.stderr.write("\n  " + red("The licence was rejected when registering this machine.") +
+      dim("\n  Check your plan at " + PORTAL + "\n"));
+    return 1;
+  }
+  try {
+    mkdirSync(dirname(keyPath()), { recursive: true });
+    writeFileSync(keyPath(), JSON.stringify({ key, activation_id: json.id, label }, null, 2) + "\n", { mode: 0o600 });
+    chmodSync(keyPath(), 0o600);
+  } catch (e) {
+    await polar("/deactivate", { key, activation_id: json.id });
+    process.stderr.write("\n  " + red("Could not write " + keyPath()) + dim("\n  " + e.message + "\n"));
+    return 1;
+  }
+  process.stdout.write("\n  " + jade("Pro is active on this machine.") +
+    dim(`\n  registered as "${label}" \u2014 tashan account shows every device`) +
+    dim(`\n  stored in ${keyPath()} \u00b7 every shell, every project, no re-export`) +
+    dim("\n\n  tashan doctor") + "\n");
+  return 0;
 }
 
 const SITE = process.env.TASHAN_SITE || "https://tashan.sh";
@@ -345,8 +439,10 @@ ${bold("tashan")} — the measured layer for AI capabilities ${dim("· " + SITE)
   ${jade("tashan info")} <name>          the measured dossier for one capability
   ${jade("tashan add")} <name>           the install command  ${dim("(--client claude|cursor|desktop|codex|npx)")}
   ${jade("tashan doctor")}               audit the config you already have — dead, deprecated, risky
-  ${jade("tashan activate")} <key>       register this machine — once, not once per shell
+  ${jade("tashan login")}                sign in — approve a code in the browser, once per machine
+  ${jade("tashan logout")}               release this machine's seat
   ${jade("tashan account")}              open your account in the browser, already signed in
+  ${dim("tashan activate <key>")}       ${dim("non-interactive, for CI — needs the key")}
   ${dim("Pro names the replacement for anything dead in your config · $6/mo · " + SITE + "/pricing")}
 
   ${dim("flags:")}  --json   --limit <n>   --client <c>   --all   --forget
@@ -507,7 +603,13 @@ export async function main(argv) {
     await import("./mcp.mjs").then((m) => m.serve());
     return 0;
   }
-  if (cmd === "activate") {
+  if (cmd === "login") return deviceLogin({ open: !a["no-browser"] });
+
+  // `logout` is what everyone types. It was only ever spelled `activate --forget`, which is a flag
+  // on a different verb — nobody guesses it, so nobody released a seat and device slots leaked.
+  if (cmd === "logout") a.forget = true;
+
+  if (cmd === "activate" || cmd === "logout") {
     // --forget must RELEASE the seat at Polar, not just delete our file. Deleting locally while the
     // activation stays registered burns a device slot the customer cannot get back without support.
     if (a.forget) {
@@ -536,8 +638,8 @@ export async function main(argv) {
           dim(`\n  ${keyPath()}`) +
           dim("\n  tashan activate --forget releases the seat · tashan account lists every device")
         : bold("This machine is not activated.") +
-          dim("\n  tashan activate <key>") +
-          dim("\n  Your key is in your purchase email · tashan account opens your plan and invoices")) + "\n");
+          dim("\n  tashan login") + dim("   approve it in the browser — no key to copy") +
+          dim("\n  tashan activate <key>   if you are in CI and have no browser")) + "\n");
       return lic ? 0 : 1;
     }
 
@@ -586,7 +688,7 @@ export async function main(argv) {
     const lic = resolveLicence(a);
     if (!lic) {
       process.stdout.write("\n  " + bold("No licence on this machine.") +
-        dim("\n  tashan activate <key>   the key is in your purchase email") +
+        dim("\n  tashan login   sign in — no key to copy") +
         dim("\n  " + SITE + "/pricing   what Pro adds · the index stays free") + "\n");
       return 1;
     }

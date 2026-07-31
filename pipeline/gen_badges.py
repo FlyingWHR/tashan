@@ -53,14 +53,25 @@ def badge(trust, verdict):
 </svg>'''
 
 def main():
-    con = sqlite3.connect(DB)
-    rows = con.execute("SELECT id, tashan_score, expertise_verdict FROM capabilities "
-                       "WHERE tashan_score IS NOT NULL").fetchall()
-    n = 0
+    # The EXPORT, not the DB. The DB is the source of truth for what we have measured; the export is
+    # the set we PUBLISH, and export() drops rows the DB still holds — demo servers, the two
+    # dependency-confusion canaries, and MAL-* malicious packages that junk() removes from the board
+    # entirely. Reading the DB here published 408 badges for capabilities no page exists for, which
+    # includes handing a green tashan badge to a package we classified as malicious, embeddable in its
+    # own README. A badge is the highest-cast artifact we ship; it must never outrun the board.
+    caps = json.load(open(os.path.join(ROOT, "web", "data", "capabilities.json")))["capabilities"]
+    rows = [(c["id"], c["tashan_score"], c.get("expertise_verdict"))
+            for c in caps if c.get("tashan_score") is not None]
+    keep = set()
     for cid, trust, verdict in rows:
+        keep.add(slug(cid) + ".svg")
         open(os.path.join(OUT, slug(cid) + ".svg"), "w").write(badge(trust, verdict))
-        n += 1
-    print(f"{n} badges -> {OUT}")
+    # And prune. Badges were only ever written, never removed, so one for a capability that left the
+    # export stayed live and frozen at whatever score it held the day it dropped out.
+    stale = [f for f in os.listdir(OUT) if f.endswith(".svg") and f not in keep]
+    for f in stale:
+        os.remove(os.path.join(OUT, f))
+    print(f"{len(rows)} badges -> {OUT}" + (f" ({len(stale)} stale removed)" if stale else ""))
     # a couple of demo prints so the slug scheme is visible
     for cid, trust, verdict in rows[:3]:
         print(f"  {cid}  ->  /badge/{slug(cid)}.svg   (tashan score {int(trust)}{' · '+verdict if verdict else ''})")

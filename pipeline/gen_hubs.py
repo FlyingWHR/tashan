@@ -173,7 +173,7 @@ def board(rows):
             # divergence (a hub table disagreeing with the board) has shipped here before.
             '<div class="cap__id">' + esc(CAT_LABEL.get(c.get("category") or "", "")) + "</div></td>"
             '<td><div class="sig' + ("" if t is not None else " sig--none") + '">' + score
-            + '<span class="bar"><i style="width:' + str(int(round(t or 0))) + '%"></i></span></div></td>'
+            + '<span class="bar" data-w="' + str(int(round(t or 0))) + '"><i></i></span></div></td>'
             '<td class="num">' + ('<span class="ev">' + esc(ev) + "</span>" if ev
                                   else '<span class="num--dim">\u2014</span>') + "</td>"
             '<td><span class="fresh ' + vcls + '"'
@@ -234,7 +234,7 @@ def cat_page(cat, rows, all_cats, gen):
          "documentation; the rest carry adoption and upkeep signal only. We publish what is "
          "measured and say plainly what isn't.</p>\n" if rows else "")
         + '<h2>Other categories</h2>\n<div class="chips">' + sib + "</div>\n"
-        '<p style="margin-top:var(--sp-12)"><a class="btn btn--ghost" href="/">See the full Index &rsaquo;</a></p>\n'
+        '<p class="mt-12"><a class="btn btn--ghost" href="/">See the full Index &rsaquo;</a></p>\n'
         "</main>\n")
     return head(title, desc, url, lds) + body + FOOT + \
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n' \
@@ -320,13 +320,13 @@ def task_page(task, rows, all_tasks, gen):
         '<a class="link" href="/methodology.html">How we measure &rsaquo;</a></p>\n'
         + board(rows) + who
         + '<h2>Other work</h2>\n<div class="chips">' + sib + "</div>\n"
-        '<p class="note" style="margin-top:var(--sp-8)">Occupational data from the '
+        '<p class="note mt-8">Occupational data from the '
         '<a class="link" rel="nofollow" href="https://www.onetcenter.org/">O*NET 30.3 Database</a> by the '
         "U.S. Department of Labor, Employment and Training Administration, used under "
         '<a class="link" rel="nofollow" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. '
         "tashan consolidated its process steps into the terms practitioners use; O*NET does not endorse "
         "this site.</p>\n"
-        '<p style="margin-top:var(--sp-12)"><a class="btn btn--ghost" href="/">See the full Index &rsaquo;</a></p>\n'
+        '<p class="mt-12"><a class="btn btn--ghost" href="/">See the full Index &rsaquo;</a></p>\n'
         "</main>\n")
     return head(title, desc, url, lds) + body + FOOT + \
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n' \
@@ -336,7 +336,7 @@ def task_page(task, rows, all_tasks, gen):
 def repo_slug(repo): return slugify(repo)
 
 
-def llms_txt(caps, cats, by_cat, gen):
+def llms_txt(caps, cats, by_cat, gen, roles=()):
     """The /llms.txt convention: a plain-markdown map an answer engine can read without running JS."""
     L = ["# tashan", "",
          "> The intelligence layer for AI capabilities. tashan scores MCP servers and agent skills on "
@@ -378,7 +378,15 @@ def llms_txt(caps, cats, by_cat, gen):
           "registry shape; measurement under the `sh.tashan/measurement` key in `_meta`.",
           "- [/skill/SKILL.md](" + BASE + "/skill/SKILL.md) — install tashan as a capability and call it "
           "when choosing what to install.",
-          "", "## Categories", ""]
+          "", "## By job", "",
+          "One ranked page per job title. These answer \"the best MCP server for a <job>\" with "
+          "measured rows rather than an opinion.", ""]
+    for r, rows in roles:
+        scored = [c for c in rows if c.get("tashan_score") is not None]
+        L.append("- [" + r["label"] + "](" + BASE + "/role/" + r["id"] + ".html) — "
+                 + str(len(rows)) + " measured. Top: "
+                 + ", ".join(disp(c) for c in scored[:3]) + ".")
+    L += ["", "## Categories", ""]
     for cat in cats:
         rows = by_cat.get(cat["id"], [])
         if not rows:
@@ -397,7 +405,7 @@ def llms_txt(caps, cats, by_cat, gen):
     return "\n".join(L)
 
 
-def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
+def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen, published_roles=()):
     """One parent for every hub.
 
     Two problems, one page. The Index sidebar was rendering all 95 facet values at once — Baymard's
@@ -475,8 +483,10 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
         # the heading carries the role's icon; the tiles under it are individual tasks, which
         # have no icon of their own (69 of them, and a per-task mark would be noise not signal)
         role_id = next((r["id"] for r in roles if r["label"] == rlabel), "Also")
+        hub = "/role/" + role_id + ".html" if role_id in published_roles else ""
+        heading = (('<a class="link" href="' + hub + '">' + esc(rlabel) + " &rsaquo;</a>") if hub else esc(rlabel))
         out.append('<div class="browserole"><h3 class="browserole__h mono">'
-                   + icons.use("role-" + role_id) + esc(rlabel)
+                   + icons.use("role-" + role_id) + heading
                    + "</h3><div class=\"browsegrid browsegrid--tight\">")
         for t in items:
             n = len(by_task.get(t["slug"], []))
@@ -491,6 +501,88 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
     out.append('<p class="hubback"><a class="link" href="/">&lsaquo; Back to the Index</a></p>')
     out.append("</main>" + FOOT + "</body></html>")
     return "".join(out)
+
+
+ROLE_MIN = 8     # a job page needs a real shelf; below this the role is a filter, never a page
+
+
+def role_page(role, rows, tasks, all_roles, gen):
+    """A page per JOB TITLE — the axis the homepage is sold on, and until now the only one with no URL.
+
+    Categories say what a capability touches and tasks say what you are doing; a role is the union of
+    the tasks one job actually performs, which is how people search ("mcp server for data engineers")
+    and how an answer engine is asked. The union already existed in tasks.json and drove the homepage
+    picker; it had no indexable page, so the one axis with the clearest query intent was invisible to
+    every crawler. Nothing here is new measurement — it is the same ranked rows, filed under the job.
+    """
+    label, rid = role["label"], role["id"]
+    url = BASE + "/role/" + rid + ".html"
+    scored = [c for c in rows if c.get("tashan_score") is not None]
+    title = "Best MCP servers for " + label.lower() + ", ranked · tashan"
+    desc = ("The " + str(len(rows)) + " MCP servers and agent skills tashan measures for " + label.lower() +
+            " work, ranked by tashan score — upkeep, freshness and real adoption, all from public "
+            "evidence, plus what each one can reach on your machine.")
+    top = ", ".join(disp(c) for c in scored[:5])
+    work = ", ".join(t["label"].lower() for t in tasks[:6])
+    lds = [
+        {"@context": "https://schema.org", "@type": "ItemList",
+         "name": "MCP servers for " + label.lower() + ", ranked by the tashan score",
+         "itemListOrder": "https://schema.org/ItemListOrderDescending", "numberOfItems": len(scored),
+         "itemListElement": [
+             {"@type": "ListItem", "position": i + 1,
+              "item": {"@type": "SoftwareApplication", "name": disp(c),
+                       "url": BASE + "/capability/" + c["slug"] + ".html",
+                       "applicationCategory": "DeveloperApplication"}}
+             for i, c in enumerate(scored[:25])]},
+        {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "The Index", "item": BASE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "By job", "item": BASE + "/browse.html"},
+            {"@type": "ListItem", "position": 3, "name": label, "item": url}]},
+        {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": "What is the best MCP server for a " + label.lower() + "?",
+             "acceptedAnswer": {"@type": "Answer", "text":
+                ("By tashan's measured score the highest-ranked for this work are " + top + ". The score "
+                 "combines upkeep and freshness, gated by real adoption; every input is public and "
+                 "re-derivable, and no position on this list can be bought.")}},
+            {"@type": "Question", "name": "What work does this cover?",
+             "acceptedAnswer": {"@type": "Answer", "text":
+                ("A " + label.lower() + " here is the union of the tasks that job performs — " + work +
+                 " — so a capability appears if it is measured against any of them. " + str(len(rows)) +
+                 " capabilities qualify today.")}},
+            {"@type": "Question", "name": "Are these audited for security?",
+             "acceptedAnswer": {"@type": "Answer", "text":
+                ("Every capability tashan measures is checked against the OSV advisory database at the "
+                 "version you would install today, for install-time scripts, for build provenance, and "
+                 "for the permission surface its declared dependencies reach. The existence of a finding "
+                 "is always free to see. The audit reads public evidence only and never executes "
+                 "anything, so an empty result means nothing was declared, never that nothing is "
+                 "possible.")}}]},
+    ]
+    chips = "".join('<a class="chip" href="/task/' + t["slug"] + '.html">' + esc(t["label"]) + "</a>"
+                    for t in tasks if t.get("published"))
+    sib = "".join('<a class="chip" href="/role/' + r["id"] + '.html">' + esc(r["label"]) + "</a>"
+                  for r in all_roles if r["id"] != rid)
+    graded = [c for c in rows if c.get("expertise_verdict")]
+    body = ('<main class="wrap">\n'
+        '<p class="kicker"><a class="link" href="/">The Index</a> · <a class="link" href="/browse.html">By job</a> · '
+        + esc(label) + "</p>\n"
+        "<h1>MCP servers for " + esc(label.lower()) + ", ranked</h1>\n"
+        '<p class="lede">tashan measures <b>' + str(len(rows)) + "</b> capabilities against the work a "
+        + esc(label.lower()) + " actually does" + (" — " + esc(work) if work else "") + " — and ranks them "
+        "on public evidence alone: upkeep, freshness and real adoption. "
+        '<a class="link" href="/methodology.html">How we measure &rsaquo;</a></p>\n'
+        + board(rows) +
+        ('<p class="note">' + str(len(graded)) + " of these have been expertise-graded against their own "
+         "documentation; the rest carry adoption and upkeep signal only. We publish what is measured and "
+         "say plainly what is not.</p>\n" if rows else "")
+        + ('<h2>The work behind this job</h2>\n<div class="chips">' + chips + "</div>\n" if chips else "")
+        + '<h2>Other jobs</h2>\n<div class="chips">' + sib + "</div>\n"
+        '<p class="mt-12"><a class="btn btn--ghost" href="/?role=' + esc(rid) +
+        '">Open this job on the Index &rsaquo;</a></p>\n'
+        "</main>\n")
+    return head(title, desc, url, lds) + body + FOOT + \
+        '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n' \
+        '<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n'
 
 
 def main():
@@ -541,13 +633,41 @@ def main():
           % (len(pub), thin, TASK_MIN))
 
 
+    # ---- role hubs: one page per JOB TITLE, the axis the homepage picker is built on ----
     roles = json.load(open(TASKS)).get("roles", [])
+    pub_slugs = {t["slug"] for t in pub}
+    out_role = os.path.join(ROOT, "web", "role")
+    os.makedirs(out_role, exist_ok=True)
+    role_tasks, by_role = {}, {}
+    for t in tasks:
+        for rid in (t.get("roles") or []):
+            role_tasks.setdefault(rid, []).append(dict(t, published=t["slug"] in pub_slugs))
+    for rid, ts in role_tasks.items():
+        ts.sort(key=lambda t: -len(by_task.get(t["slug"], [])))
+        seen = {}
+        for t in ts:
+            for c in by_task.get(t["slug"], []):
+                seen[c["id"]] = c
+        by_role[rid] = sorted(seen.values(), key=lambda x: -(x.get("tashan_score") or 0))
+    pub_roles = [r for r in roles
+                 if len([c for c in by_role.get(r["id"], []) if c.get("tashan_score") is not None]) >= ROLE_MIN]
+    for stale in glob.glob(os.path.join(out_role, "*.html")):
+        if os.path.basename(stale)[:-5] not in {r["id"] for r in pub_roles}:
+            os.remove(stale)                     # a job can fall below the gate; leave no orphan behind
+    for r in pub_roles:
+        open(os.path.join(out_role, r["id"] + ".html"), "w").write(
+            role_page(r, by_role.get(r["id"], []), role_tasks.get(r["id"], []), pub_roles, gen))
+    print("role hubs: %d written, %d below the %d-capability floor (filter only, no page)"
+          % (len(pub_roles), len(roles) - len(pub_roles), ROLE_MIN))
+
     open(os.path.join(ROOT, "web", "browse.html"), "w").write(
-        browse_page(cats, by_cat, tasks, pub, by_task, roles, gen))
+        browse_page(cats, by_cat, tasks, pub, by_task, roles, gen,
+                    published_roles={r["id"] for r in pub_roles}))
     print("browse.html: %d categories + %d tasks indexed (%d hub pages adopted)"
           % (len(by_cat), len(tasks), len(by_cat) + len(pub)))
 
-    open(os.path.join(ROOT, "web", "llms.txt"), "w").write(llms_txt(caps, cats, by_cat, gen))
+    open(os.path.join(ROOT, "web", "llms.txt"), "w").write(
+        llms_txt(caps, cats, by_cat, gen, [(r, by_role.get(r["id"], [])) for r in pub_roles]))
     print("llms.txt: %d capabilities + %d categories indexed" % (min(40, len(caps)), len(by_cat)))
 
 

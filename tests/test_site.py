@@ -328,7 +328,6 @@ def main():
 
     cli_field_contract()
 
-    failed = [r for r in results if not r[0]]
     # ---- titles must say something -------------------------------------------------------------------
     # Six pages shipped titles that were just their nav label — "About — tashan", "Terms — tashan". A
     # search result or an answer engine gets one line to decide relevance, and the brand name is the part
@@ -349,6 +348,31 @@ def main():
             _thin.append(f"{os.path.basename(_f)}: {_m.group(1).strip()!r} ({len(_m.group(1).strip())} chars)")
     check("every page title is more than a nav label", not _thin, "; ".join(_thin[:4]))
 
+    # ---- no inline style attributes, anywhere --------------------------------------------------------
+    # web/_headers sends `style-src 'self'`, so a style="" attribute is DEAD in production — the browser
+    # drops the declaration and logs a violation. pipeline/serve.py sends no CSP, so every one of these
+    # rendered perfectly in local preview: ~33,000 shipped, including every score bar on the board and on
+    # all 15 category hubs, which therefore rendered full width regardless of score. A capability scoring
+    # 73 drew the same bar as one scoring 99, on the page whose entire purpose is the difference.
+    # Declarations belong in web/css/site.css; data-driven widths use .bar[data-w=N]. In JS, assigning
+    # el.style.x is fine (CSSOM is not governed by style-src) — it is the ATTRIBUTE that is blocked.
+    _inline = []
+    for _f in sorted(_glob.glob(os.path.join(ROOT, "web", "**", "*.html"), recursive=True)
+                     + _glob.glob(os.path.join(ROOT, "web", "js", "*.js"))):
+        _n = open(_f, encoding="utf-8").read().count('style="')
+        if _n:
+            _inline.append(f"{os.path.relpath(_f, ROOT)} ({_n})")
+    check("no inline style attributes (CSP style-src 'self' blocks them in production)",
+          not _inline, f"{len(_inline)} file(s): " + "; ".join(_inline[:4]))
+
+    # A 404.html is what makes Pages return a real 404. Without it Pages falls back to serving
+    # index.html with status 200, so every mistyped URL was a soft 404 a crawler would happily index.
+    check("404.html exists (else Pages soft-404s every unknown URL as 200 + the homepage)",
+          os.path.exists(os.path.join(ROOT, "web", "404.html")))
+
+    # Tallied HERE, after the last check(). It used to be computed before the trailing checks, so those
+    # printed FAIL and then exited 0 — a red line in the log that could not fail the build.
+    failed = [r for r in results if not r[0]]
     print(f"\n{'='*48}\n{len(results)-len(failed)}/{len(results)} checks passed" +
           (f" · {len(failed)} FAILED" if failed else " · all green"))
     for ok, name, detail in failed:

@@ -44,7 +44,7 @@
     CAP_ID = c.id || "";
     var fr = fresh(c.npm_last_publish || c.gh_pushed || c.last_seen);
     var co = (c.co_used || []).map(function (x) {
-      return '<a href="/capability/' + slug(x.id) + '.html">' + esc(pretty(x.id.split(":").slice(1).join(":"))) + ' <span style="opacity:.5">·' + x.n + '</span></a>';
+      return '<a href="/capability/' + slug(x.id) + '.html">' + esc(pretty(x.id.split(":").slice(1).join(":"))) + ' <span class="o-50">·' + x.n + '</span></a>';
     }).join("");
 
     el.innerHTML =
@@ -80,7 +80,7 @@
       (co ? section("Configured alongside", '<div class="colist">' + co + '</div>', "In real public configs, these ship together.") : '') +
       community(c) +
       (c.tashan_score != null ? embedBlock(c) : '') +
-      '<div class="callout" style="margin-top:var(--sp-12)"><b>What this means.</b> The tashan score blends how actively the ' +
+      '<div class="callout mt-12"><b>What this means.</b> The tashan score blends how actively the ' +
         'capability is <b>maintained</b> (release cadence, maintainer/contributor count, deprecation, registry status) and how ' +
         '<b>fresh</b> it is, gated by real <b>adoption</b> — npm weekly downloads where published, distinct public ' +
         'configs otherwise. <b>Health</b> reads finished-but-loved (stable) apart from abandoned. It is <b>not</b> an ' +

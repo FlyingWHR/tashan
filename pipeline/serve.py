@@ -14,17 +14,38 @@ said 4,852. Both times the pipeline was correct and the browser was the bug.
 `no-store` is the fix: not merely "revalidate" but "never write this to disk". One flag, and every
 number on screen is the number in web/data.
 
-ponytail: no _headers parsing, no TLS, no compression — production serves those, this only has to stop
-lying. It is a preview server; if it ever needs more, use the real thing.
+It also sends production's Content-Security-Policy, for the same reason and at the cost of one grep.
+Not sending it lied a third and much larger time: `style-src 'self'` blocks every inline style
+ATTRIBUTE, so ~33,000 of them across the site — including every score bar on the board and on all 15
+category hubs — were dead on tashan.sh while rendering perfectly here. A preview that is permissive
+where production is strict cannot show you the bug; it can only show you the version that works.
+
+ponytail: only the CSP line is read from _headers — the caching rules are deliberately overridden by
+no-store above, and TLS/compression are production's job. If it ever needs more, use the real thing.
 """
-import functools, http.server, os, sys
+import functools, http.server, os, re, sys
 
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "web")
+
+
+def csp():
+    """The one production header whose absence changes what RENDERS, read from the real _headers."""
+    try:
+        src = open(os.path.join(ROOT, "_headers"), encoding="utf-8").read()
+    except OSError:
+        return None
+    m = re.search(r"^\s*Content-Security-Policy:\s*(.+)$", src, re.M)
+    return m.group(1).strip() if m else None
+
+
+CSP = csp()
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header("Cache-Control", "no-store, must-revalidate")
+        if CSP:                                    # production applies it to /* — so does this
+            self.send_header("Content-Security-Policy", CSP)
         super().end_headers()
 
     def log_message(self, fmt, *a):

@@ -87,7 +87,7 @@ def article_html(a):
         "<h1>" + esc(a["title"]) + "</h1>\n"
         '<div class="callout"><b>Quick answer.</b> ' + a["quick"] + '</div>\n'
         + secs + faq +
-        '<p style="margin-top:var(--sp-12)"><a class="btn btn--ghost" href="/">See the ranked Index &rsaquo;</a></p>\n'
+        '<p class="mt-12"><a class="btn btn--ghost" href="/">See the ranked Index &rsaquo;</a></p>\n'
         "</article></main>\n" + FOOT +
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n')
 
@@ -217,13 +217,13 @@ def index_page(A):
     cards = ""
     for a in A:
         lang = " · 中文" if a.get("lang") == "zh" else ""
-        cards += ('<a class="card" href="/learn/' + a["slug"] + '.html" style="display:block;text-decoration:none">'
-                  '<h3 style="margin:0 0 .4rem">' + esc(a["title"]) + '</h3>'
-                  '<p style="margin:0;color:var(--text-dim);font-size:var(--fs-base)">' + esc(a["desc"][:120]) + '…<span class="mono" style="color:var(--text-faint)">' + lang + '</span></p></a>')
+        cards += ('<a class="card card--link" href="/learn/' + a["slug"] + '.html">'
+                  '<h3 class="card__h">' + esc(a["title"]) + '</h3>'
+                  '<p class="card__desc">' + esc(a["desc"][:120]) + '…<span class="mono faint">' + lang + '</span></p></a>')
     body = ('<main class="wrap"><article class="prose"><h1>Learn</h1>'
             '<p class="lede">Practical, evidence-backed guides to MCP servers and agent skills — where they live, '
             'how to install them in every client, and which ones are actually worth it.</p>'
-            '<div class="tashan_score" style="margin-top:var(--sp-8)">' + cards + '</div></article></main>')
+            '<div class="tashan_score mt-8">' + cards + '</div></article></main>')
     a0 = {"slug": "index", "lang": "en", "title": "Learn — MCP & agent-skill guides",
           "desc": "Evidence-backed guides to MCP servers and agent skills — where they're stored, how to install them, and which are worth it."}
     return head(a0) + body + FOOT + '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n'
