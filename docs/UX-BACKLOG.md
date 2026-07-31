@@ -99,9 +99,9 @@ Both must reach Pro without ever being asked to be a database administrator of t
 
 - [x] **15. Head-to-head `/compare/<a>-vs-<b>`** — 212 pages at top-8-per-category, both sides
       measured, free-tier data only. Estimated in-session; gate: same category, scored, ≥1k wk dl.
-- [ ] **16. Per-page OG images** for capability + role + category hubs.
-- [ ] **17. `Dataset` JSON-LD** for the export, so the corpus is citable as a dataset.
-- [ ] **18. Sweep every page** for title/description/heading quality at the standard the homepage now
+- [-] **16. Per-page OG images** — DROPPED, see iteration 8. for capability + role + category hubs.
+- [x] **17. `Dataset` JSON-LD** for the export, so the corpus is citable as a dataset.
+- [x] **18. Sweep every page** for title/description/heading quality at the standard the homepage now
       holds — several were written before the current voice.
 
 ---
@@ -257,3 +257,22 @@ that was not written.
 **Caught by the suite:** `bump_assets.py` had a hardcoded generator list, so all 212 pages froze at
 the previous `?v=`. That list is now ordered to mirror `run.py`, and the `--check` assertion is what
 found it — 24,134 references now agree. Deploy `f993aa79`.
+
+**Iteration 8 — items 17 & 18 shipped, item 16 dropped. Backlog closed.**
+
+*Item 16 dropped.* Social platforms do not accept SVG for `og:image`, so per-page cards need a
+rasteriser — PIL, cairo, or Cloudflare's paid Browser Rendering binding. None is available and
+"stdlib only, no pip deps, no build step" is a stated feature of this project, not an accident. The
+shared card stays. Revisit only if a rendering binding is already being paid for.
+
+*Item 17.* The homepage now declares the corpus as a schema.org `Dataset` — 6 `variableMeasured`
+entries naming what each number means, `measurementTechnique`, licence, and 4 `DataDownload`
+distributions. **Every declared URL was verified to serve 200 with the right content type**, because
+a Dataset pointing at a 404 is worse than no Dataset. This is the entity an answer engine reads to
+learn that the numbers it is about to quote come from a maintained machine-readable source rather
+than from scraped prose.
+
+*Item 18.* Two titles were being truncated mid-phrase in a result (65 and 64 chars) and five
+descriptions were either over 160 or under 70. All rewritten to keep the claim and drop the padding.
+Two new suite checks hold it: titles ≤62, descriptions present and ≤165, noindex pages exempt — and
+the check immediately caught my own replacement homepage description at 166. Deploy `c913ce55`.

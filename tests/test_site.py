@@ -389,6 +389,33 @@ def main():
     check("every offer names a finding the page already showed for free", not _hidden,
           f"{len(_hidden)}: " + ", ".join(_hidden[:3]))
 
+    # ---- titles and descriptions must survive the cut ------------------------------------------------
+    # Both are the one line a searcher — or an answer engine — reads before deciding. Over ~60 and
+    # ~160 characters they are truncated mid-phrase, so the claim has to fit, not trail off. noindex
+    # pages are exempt: they will never be a result.
+    _serp = []
+    for _f in sorted(_glob.glob(os.path.join(ROOT, "web", "*.html"))):
+        _s = open(_f, encoding="utf-8").read()
+        if _re.search(r'<meta name="robots"[^>]*noindex', _s):
+            continue
+        _t = _re.search(r"<title>([^<]*)</title>", _s)
+        _d = _re.search(r'<meta name="description" content="([^"]*)"', _s)
+        _b = os.path.basename(_f)
+        if _t and len(_t.group(1)) > 62:
+            _serp.append(f"{_b}: title {len(_t.group(1))}")
+        if not _d:
+            _serp.append(f"{_b}: no description")
+        elif len(_d.group(1)) > 165:
+            _serp.append(f"{_b}: desc {len(_d.group(1))}")
+    check("every indexable page's title and description fit a search result", not _serp,
+          "; ".join(_serp[:4]))
+
+    # The corpus is declared as a citable Dataset — the entity an answer engine reads to learn that
+    # the numbers it is about to quote come from a maintained machine-readable source.
+    _home = open(os.path.join(ROOT, "web", "index.html"), encoding="utf-8").read()
+    check("home declares the corpus as a schema.org Dataset with real distributions",
+          '"@type":"Dataset"' in _home and "/data/capabilities.json" in _home and "/v0.1/scores" in _home)
+
     # A 404.html is what makes Pages return a real 404. Without it Pages falls back to serving
     # index.html with status 200, so every mistyped URL was a soft 404 a crawler would happily index.
     check("404.html exists (else Pages soft-404s every unknown URL as 200 + the homepage)",

@@ -11,7 +11,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
-| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | categories.json, index.json, tags.json, tasks.json | free | 103 |
+| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 103 |
 | `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | index.json | post-sale | 56 |
 | `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json | free | 56 |
 | `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json | free | 51 |
