@@ -13,17 +13,17 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 |---|---|---|---|---|---|
 | `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | categories.json, index.json, tags.json, tasks.json | free | 95 |
 | `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json | free | 52 |
+| `/account.html` | Where to sign in, what happens after paying, how to switch Pro on. | account, site, terminal | index.json | post-sale | 50 |
+| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json | free | 46 |
 | `/about.html` | Why a rater that sells nothing it measures is the only kind worth reading. | site, terminal | index.json | free | 45 |
-| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json | free | 45 |
 | `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | index.json | sells | 44 |
-| `/account.html` | Where to sign in, what happens after paying, how to switch Pro on. | site, terminal | index.json | post-sale | 29 |
 | `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | index.json | post-sale | 27 |
+| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | index.json | free | 24 |
 | `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | index.json, requests.json | free | 24 |
 | `/support.html` | How to get help, and what we can see when you ask. | site, terminal | index.json | free | 24 |
-| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | index.json | free | 23 |
+| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 22 |
 | `/privacy.html` | What we collect, which is close to nothing. | site, terminal | index.json | free | 22 |
 | `/terms.html` | Terms of service. | site, terminal | index.json | free | 22 |
-| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 21 |
 | `/capability.html` | Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs. | capability, site, terminal | index.json | free | 0 |
 | `/welcome.html` *(noindex)* | Post-checkout: activate the licence. noindex, reached only from Polar. | site, terminal | index.json | post-sale | 0 |
 
@@ -57,6 +57,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `functions/api/e.test.mjs` — node functions/api/e.test.mjs  — validates the analytics collector's field shaping (no deps).
 - `functions/api/license.test.mjs` — The paywall. Run: node functions/api/license.test.mjs
 - `functions/api/polar.test.mjs` — Polar webhook verification — the security boundary. Run: node functions/api/polar.test.mjs
+- `tests/test_chrome.py` — The navigation exists once. Every page renders that one definition, byte for byte.
 - `tests/test_expertise.py` — A published grade must not contradict itself.
 - `tests/test_firewall.py` — The firewall test — the ranking can never be bought.
 - `tests/test_hubs.py` — tashan — the generated content tier: asset versioning, category hubs, skills, llms.txt.

@@ -25,6 +25,7 @@ import glob, html, json, os, re, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import assets
+import chrome
 import icons
 AV = str(assets.V)
 DATA = os.path.join(ROOT, "web", "data", "capabilities.json")
@@ -46,31 +47,8 @@ def clip(text, n):
     cut = t[:n].rsplit(" ", 1)[0].rstrip(" ,.;:—-")
     return (cut or t[:n]) + "…"
 
-NAV = ('<nav class="nav"><div class="wrap nav__in">'
-       '<a class="brand" href="/"><span class="brand__mark"></span>tashan</a>'
-       '<div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a>'
-       '<a href="/methodology.html">Methodology</a><a href="/learn/">Learn</a>'
-       '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/account.html">Account</a></div></div></nav>')
-FOOT = ('<footer class="footer"><div class="wrap footer__in">'
-        '<div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span>'
-        '<p class="footer__tag">The measurement layer for AI capabilities — MCP servers and agent skills, '
-        'measured on public evidence.</p></div>'
-        '<nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a>'
-        '<a href="/start.html">Use it</a><a href="/browse.html">Browse</a><a href="/learn/">Learn</a>'
-        '<a href="/for-hosts.html">For hosts</a></nav>'
-        '<nav class="footer__col"><p class="footer__h">tashan score</p><a href="/methodology.html">Methodology</a>'
-        '<a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav>'
-        '<nav class="footer__col"><p class="footer__h">Sources</p>'
-        '<a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a>'
-        '<a href="https://www.npmjs.com/" rel="noopener">npm ↗</a>'
-        '<a href="https://github.com/" rel="noopener">GitHub ↗</a></nav>'
-        # Selling on this site means every page needs the legal surfaces, not just the hand-written
-        # eleven — these three generators produce ~5,800 of them.
-        '<nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a>'
-        '<a href="/privacy.html">Privacy</a><a href="/refunds.html">Refunds</a>'
-        '<a href="/support.html">Support</a></nav></div>'
-        '<div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span>'
-        '<span>Every score re-derivable from public evidence.</span></div></footer>')
+NAV = chrome.nav_html()
+FOOT = chrome.footer_html()
 
 
 def head(title, desc, url, lds):
