@@ -774,22 +774,3 @@ h1, h2,
 .hubhead .icon, .cap-hd .icon { width:1em; height:1em; margin-right:.4rem; }
 /* the rail row is a flex button; the icon must not squash the label */
 .crow__l { display:flex; align-items:center; min-width:0; }
-
-/* ---------- the account panel: state, not prose ---------- */
-.acct { border:1px solid var(--hairline); border-radius: var(--radius); background: var(--surface);
-  padding: var(--sp-5) var(--sp-6); margin: var(--sp-5) 0 var(--sp-8); }
-.acct--on { border-color: var(--jade-line); background: color-mix(in srgb, var(--jade) 5%, var(--surface)); }
-.acct__lead { color: var(--text-dim); font-size: var(--fs-base); margin:0 0 var(--sp-4); }
-.acct__err { color:#ff6b6b; font-size: var(--fs-sm); margin:0 0 var(--sp-3); }
-.acct__row { display:flex; align-items:center; gap: var(--sp-4); flex-wrap:wrap; }
-.acct__badge { font-family: var(--font-mono); font-size: var(--fs-sm); color:#000; background: var(--jade);
-  border-radius: var(--radius-pill); padding:.2em .8em; font-weight:500; }
-.acct__k { color: var(--text-faint); font-size: var(--fs-sm); }
-.acct__meta { color: var(--text-dim); font-size: var(--fs-sm); margin: var(--sp-3) 0 0; }
-.acct__cta { display:flex; align-items:center; gap: var(--sp-4); flex-wrap:wrap; margin-top: var(--sp-5); }
-.acct__hint { color: var(--text-faint); font-size: var(--fs-sm); margin: var(--sp-4) 0 0; }
-.acct__form { display:flex; gap: var(--sp-3); flex-wrap:wrap; }
-.acct__in { flex:1 1 18rem; min-width:0; font-size: var(--fs-sm); color: var(--text);
-  background: var(--bg); border:1px solid var(--hairline); border-radius: var(--radius-sm);
-  padding:.6rem .8rem; }
-.acct__in:focus { outline:none; border-color: var(--jade-line); }
