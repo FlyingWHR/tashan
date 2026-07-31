@@ -37,9 +37,36 @@ def scale_steps(src):
     return {n: float(v) * 16 for n, v in re.findall(r"--fs-([a-z0-9]+):\s*([\d.]+)rem", src)}
 
 
+def undefined_tokens():
+    """Every var(--x) must resolve, or the browser drops the WHOLE declaration in silence.
+
+    Found the hard way: the spacing scale ran 1,2,3,4,6,8,12,16,24 — no step 5 — while thirteen
+    rules asked for var(--sp-5). All thirteen were discarded, including `.hero__sub`'s and
+    `.hero__rot`'s top margin, so the homepage subtitle sat flush against the headline. Nothing
+    errors, nothing warns, and the CSS reads correctly; the only symptom is spacing that looks a
+    bit off. `--line` was the same story: one border-top that never drew.
+
+    A var() with a fallback — var(--amber, #e0a83b) — is safe by construction and would pass, but
+    it is also three copies of a hex, which is how this repo's other bugs started. Define the token.
+    """
+    src = ""
+    for path in sorted(glob.glob(os.path.join(CSS, "*.css"))):
+        src += open(path, encoding="utf-8").read()
+    defined = {m.group(1) for m in re.finditer(r"(--[a-z0-9-]+)\s*:", src)}
+    bad = []
+    for m in re.finditer(r"var\(\s*(--[a-z0-9-]+)\s*([,)])", src):
+        name, nxt = m.group(1), m.group(2)
+        if name not in defined and nxt == ")":
+            n = len(re.findall(r"var\(\s*" + re.escape(name) + r"\s*\)", src))
+            bad.append(f"var({name}) is never defined — {n} declaration(s) silently dropped")
+    return sorted(set(bad))
+
+
 def main():
     fail = []
     site = open(os.path.join(CSS, "site.css"), encoding="utf-8").read()
+
+    fail.extend(undefined_tokens())
 
     steps = scale_steps(site)
     if not steps:

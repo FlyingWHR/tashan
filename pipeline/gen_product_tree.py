@@ -38,7 +38,7 @@ PURPOSE = {
     "/methodology.html":  ("How every number is derived, so the score is re-checkable.", "free"),
     "/about.html":        ("Why a rater that sells nothing it measures is the only kind worth reading.", "free"),
     "/pricing.html":      ("What Pro costs and exactly what it adds.", "sells"),
-    "/account.html":      ("Where to sign in, what happens after paying, how to switch Pro on.", "post-sale"),
+    "/account.html":      ("Your plan, machines, licence key and invoices — read live from /api/account.", "post-sale"),
     "/requests.html":     ("Ask for a capability to be measured.", "free"),
     "/for-hosts.html":    ("For IDEs and agent hosts: swap one base URL, get the measurement.", "free"),
     "/capability.html":   ("Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs.", "free"),
@@ -54,6 +54,7 @@ PURPOSE = {
 NON_PAGE = [
     ("cli/tashan.mjs",   "CLI", "search / top / info / add / doctor / activate / mcp"),
     ("cli/mcp.mjs",      "MCP server", "find_capability / check_capability / audit_config"),
+    ("functions/api/account.js", "Account", "session + the customer's own record"),
     ("functions/api/history.js", "Paid API", "score history, licence-gated"),
     ("functions/api/polar.js",   "Webhook", "Polar billing events -> entitlement"),
     ("functions/api/_license.js","Gate", "shared licence validation, fails closed"),

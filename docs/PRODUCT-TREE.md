@@ -12,11 +12,11 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
 | `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | categories.json, index.json, tags.json, tasks.json | free | 95 |
+| `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, site, terminal | index.json | post-sale | 55 |
 | `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json | free | 52 |
-| `/account.html` | Where to sign in, what happens after paying, how to switch Pro on. | account, site, terminal | index.json | post-sale | 50 |
 | `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json | free | 46 |
 | `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | index.json | sells | 44 |
-| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | index.json | post-sale | 27 |
+| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | index.json | post-sale | 26 |
 | `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | index.json | free | 24 |
 | `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | index.json, requests.json | free | 24 |
 | `/support.html` | How to get help, and what we can see when you ask. | site, terminal | index.json | free | 24 |
@@ -42,6 +42,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 |---|---|---|
 | `cli/tashan.mjs` | CLI | search / top / info / add / doctor / activate / mcp |
 | `cli/mcp.mjs` | MCP server | find_capability / check_capability / audit_config |
+| `functions/api/account.js` | Account | session + the customer's own record |
 | `functions/api/history.js` | Paid API | score history, licence-gated |
 | `functions/api/polar.js` | Webhook | Polar billing events -> entitlement |
 | `functions/api/_license.js` | Gate | shared licence validation, fails closed |
@@ -54,6 +55,7 @@ Each of these exists because the failure it prevents already shipped once.
 
 - `cli/mcp.test.mjs` — node cli/mcp.test.mjs — protocol + rendering for the MCP server. No network.
 - `cli/tashan.test.mjs` — node cli/tashan.test.mjs  — pure-logic tests for the CLI (no network, no deps).
+- `functions/api/account.test.mjs` — node --test functions/api/account.test.mjs
 - `functions/api/e.test.mjs` — node functions/api/e.test.mjs  — validates the analytics collector's field shaping (no deps).
 - `functions/api/license.test.mjs` — The paywall. Run: node functions/api/license.test.mjs
 - `functions/api/polar.test.mjs` — Polar webhook verification — the security boundary. Run: node functions/api/polar.test.mjs

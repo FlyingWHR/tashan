@@ -428,3 +428,25 @@ import { join } from "node:path";
   assert.ok(!slugify("pkg:x").includes("undefined"), "a slug can never be the string 'undefined'");
 }
 console.log("ok — the dossier URL resolves from the id, not a missing slug field");
+
+// ---- `tashan account` opens a browser --------------------------------------------------------
+// `start` is a cmd.exe builtin whose FIRST argument is consumed as the window title. Passing the
+// URL as argv[0] there opens a blank window and reports success — a silent no-op on the one
+// platform where nobody testing this would notice.
+{
+  const { browserCommand } = await import("./tashan.mjs");
+  const url = "https://tashan.sh/api/account?t=abc";
+
+  assert.deepStrictEqual(browserCommand("darwin", url), { cmd: "open", args: [url], shell: false });
+  assert.deepStrictEqual(browserCommand("linux", url), { cmd: "xdg-open", args: [url], shell: false });
+
+  const win = browserCommand("win32", url);
+  assert.strictEqual(win.args[0], "", "start swallows its first argument as the window title");
+  assert.strictEqual(win.args[1], url);
+  assert.ok(win.shell, "start is a shell builtin, not an executable");
+
+  for (const plat of ["darwin", "linux", "win32"]) {
+    assert.ok(browserCommand(plat, url).args.includes(url), `${plat} must actually receive the URL`);
+  }
+}
+console.log("ok — the browser launch passes the URL on every platform");

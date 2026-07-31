@@ -176,17 +176,32 @@ site keeps updating — the worst possible split.
 
 ### What a customer's path actually is
 
-Buy on Polar → Polar issues a licence key → they read it from
-[polar.sh/tashan/portal](https://polar.sh/tashan/portal) → they call the API with it:
+Buy → the licence key arrives by email → `tashan activate <key>` on each machine → `tashan account`
+opens https://tashan.sh/account.html already signed in.
 
 ```sh
 curl -H "Authorization: Bearer <key>" "https://tashan.sh/api/history?id=pkg:tavily-mcp"
 ```
 
-There is **no account on tashan.sh**, deliberately. Polar's customer portal is the account system: it
-does email one-time-code sign-in, cancellation, payment-method updates, invoices and receipts. So the
-"backend with accounts and persistence" that `docs/AUDIT.md` §2 called the single blocking investment
-for revenue was never actually needed to start charging.
+**The account centre is ours; the billing is not, and neither is the identity store.** `/account.html`
+reads `/api/account`, which reads Polar's PUBLIC customer-portal validate endpoint — no seller token,
+no mail provider, no password, no session table, no customer record of ours. The licence key is the
+credential, exactly as it already is for the CLI and for every gated endpoint behind `_license.js`.
+
+Sign-in has two doors and neither asks anyone to paste a key:
+
+- **`tashan account`** — the terminal proves who you are (it already holds the key), posts it to
+  `/api/account`, gets a single-use 120-second token back and opens the browser on it. Same handoff
+  as `gh auth login` / `stripe login`. The token is not a credential, which is why it may ride in a
+  URL where the key never could; it is deleted on first use.
+- **the billing portal** — for invoices, card changes and cancellation, which stay Polar's.
+
+Being signed in sets an httpOnly session cookie that `keyFrom()` also reads, so a signed-in browser
+sees full Pro detail on capability pages too. That is the answer to "what happens after I pay".
+
+So the "backend with accounts and persistence" that `docs/AUDIT.md` §2 called the single blocking
+investment for revenue was never needed to start charging — and the account centre customers expect
+turned out to be a rendering of a record we can already fetch, not a system we had to build.
 
 ### Still unbuilt, and labelled as such on the page
 

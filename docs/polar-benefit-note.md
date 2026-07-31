@@ -32,7 +32,7 @@ npx tashan-cli activate <your licence key>
 npx tashan-cli doctor
 ```
 
-Your licence key is on this page, in this email, and always in [your account](https://polar.sh/tashan/portal).
+Your licence key is on this page, in this email, and always in [your account](https://tashan.sh/account.html).
 
 `activate` registers this machine and stores the key in `~/.config/tashan/key` — once per machine,
 not once per shell, and nothing to add to your shell profile. Every `doctor` run then prints
@@ -46,10 +46,10 @@ machine you are finished with, `npx tashan-cli activate --forget` hands the slot
 archived, abandoned or shadowing an official package — that stays free, for everyone, permanently.
 Pro names the replacement: which capability to move to, how it measures, and why.
 
-**Your account** — key, invoices, devices, payment method, cancellation — is at
-[polar.sh/tashan/portal](https://polar.sh/tashan/portal). Sign in with the email you paid with; Polar
-sends a one-time code, so there is no password to make. tashan.sh itself has no separate login and
-looks the same whether you pay or not: Pro lives in your terminal.
+**Your account** is at [tashan.sh/account.html](https://tashan.sh/account.html) — your plan, renewal
+date, the machines you have activated, your licence key and your invoices. Run `npx tashan-cli account`
+and it opens already signed in, using the key that machine already holds. There is no password to make
+and nothing to paste.
 
 Nothing about your config is ever uploaded. The CLI reads your local files and asks us only about
 capability names.

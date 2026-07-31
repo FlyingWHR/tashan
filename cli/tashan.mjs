@@ -7,11 +7,13 @@
 //   npx tashan-cli add <name>            the install command for your client   ← the money shot
 //   npx tashan-cli doctor                audit the config you actually have — dead, deprecated, risky
 //   npx tashan-cli activate <key>        store your Pro licence on this machine (once, not per shell)
+//   npx tashan-cli account               open your account in the browser, already signed in
 //   npx tashan-cli mcp                   run as an MCP server, so your AGENT can ask before installing
 //
 // Reads live public data from https://tashan.sh/data/index.json (no account, no backend, no telemetry).
 // Zero dependencies. The pure functions are exported for cli/tashan.test.mjs.
 
+import { spawn } from "node:child_process";
 import { readFileSync, writeFileSync, mkdirSync, rmSync, chmodSync } from "node:fs";
 import { homedir, hostname, platform } from "node:os";
 import { join, dirname } from "node:path";
@@ -19,12 +21,15 @@ import { configLocations, skillLocations, collect, match, resolve, assess, summa
          suggest, tokenFrequency, isDying } from "./doctor.mjs";
 
 // ---- licence ---------------------------------------------------------------------------------
-// The account system is Polar's, not ours: polar.sh/tashan/portal does email-OTP sign-in,
-// subscriptions, invoices, cancellation and payment methods. Device handling is Polar's too — the
-// customer-portal license-key endpoints (activate / validate / deactivate) are PUBLIC, needing only
-// the org id, so the CLI talks to them directly. We store no passwords, run no sessions, and hold
-// no customer record. An earlier cut of this file hand-rolled all of it against our own API, which
-// meant no device list, no activation limit, and nothing the customer could see or revoke.
+// Billing is Polar's; the account centre is ours. The customer-portal license-key endpoints
+// (activate / validate / deactivate) are PUBLIC, needing only the org id, so the CLI talks to them
+// directly — we store no passwords, run no sessions and hold no customer record. An earlier cut of
+// this file hand-rolled all of it against our own API, which meant no device list, no activation
+// limit, and nothing the customer could see or revoke.
+//
+// `tashan account` posts this key to tashan.sh/api/account and opens the browser on the one-time
+// URL it returns, so the customer reaches their plan, machines and invoices without typing anything.
+// PORTAL below is the billing side of that — invoices, card, cancellation — and nothing else.
 const POLAR_LK = process.env.TASHAN_POLAR_API || "https://api.polar.sh/v1/customer-portal/license-keys";
 const ORG_ID = process.env.TASHAN_ORG_ID || "caa0fc1b-2f7f-4e52-864a-c71e878d125d";
 export const PORTAL = "https://polar.sh/tashan/portal";
@@ -70,6 +75,25 @@ async function polar(path, body) {
     return { status: r.status, json };
   } catch {
     return { status: 0, json: null };          // offline / DNS — never "invalid"
+  }
+}
+
+// Opening a browser without a dependency. Exported as a pure function so the argument shape is
+// testable — `start` is a cmd.exe builtin, not an executable, and its first argument is swallowed as
+// the window title, so a URL passed as argv[0] there silently opens nothing.
+export function browserCommand(plat, url) {
+  if (plat === "darwin") return { cmd: "open", args: [url], shell: false };
+  if (plat === "win32") return { cmd: "start", args: ["", url], shell: true };
+  return { cmd: "xdg-open", args: [url], shell: false };
+}
+
+function openBrowser(url) {
+  try {
+    const { cmd, args, shell } = browserCommand(platform(), url);
+    spawn(cmd, args, { detached: true, stdio: "ignore", shell }).unref();
+    return true;
+  } catch {
+    return false;            // headless box or no handler — the caller prints the link instead
   }
 }
 
@@ -305,10 +329,11 @@ ${bold("tashan")} — the measured layer for AI capabilities ${dim("· " + SITE)
   ${jade("tashan add")} <name>           the install command  ${dim("(--client claude|cursor|desktop|codex|npx)")}
   ${jade("tashan doctor")}               audit the config you already have — dead, deprecated, risky
   ${jade("tashan activate")} <key>       register this machine — once, not once per shell
+  ${jade("tashan account")}              open your account in the browser, already signed in
   ${dim("Pro names the replacement for anything dead in your config · $6/mo · " + SITE + "/pricing.html")}
 
   ${dim("flags:")}  --json   --limit <n>   --client <c>   --all   --forget
-  ${dim("free tier needs no account · your subscription lives at " + PORTAL)}
+  ${dim("free tier needs no account · your plan, machines and invoices: tashan account")}
 `;
 
 export function parseArgs(argv) {
@@ -403,14 +428,24 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
   return out;
 }
 
+// The commands that actually read the Index. `doctor` is in the set because it falls back to
+// match(item, rows) when the compact lookup is unavailable.
+export const NEEDS_INDEX = new Set(["search", "top", "info", "add", "doctor"]);
+
 export async function main(argv) {
   const a = parseArgs(argv);
   const cmd = a._[0];
   if (!cmd || cmd === "help" || cmd === "--help" || cmd === "-h") { process.stdout.write(USAGE + "\n"); return 0; }
 
-  let rows;
-  try { rows = rowsOf(await loadData()); }
-  catch (e) { process.stderr.write(red("  " + e.message) + "\n"); return 1; }
+  // Only the commands that read the Index download it. `activate`, `account` and `mcp` do not touch
+  // a single row, and downloading ~1 MB before dispatching meant activating Pro FAILED CLOSED on any
+  // machine that could not reach /data/index.json — with "fetch failed" and no clue which fetch. A
+  // customer whose licence email has just arrived is exactly the person least able to diagnose that.
+  let rows = [];
+  if (NEEDS_INDEX.has(cmd)) {
+    try { rows = rowsOf(await loadData()); }
+    catch (e) { process.stderr.write(red("  " + e.message) + "\n"); return 1; }
+  }
 
   const arg = a._.slice(1).join(" ");
   if (cmd === "search") {
@@ -466,10 +501,10 @@ export async function main(argv) {
         ? bold("This machine is activated.") +
           dim(`\n  ${lic.label || "this device"} · key ${lic.key.slice(0, 12)}…`) +
           dim(`\n  ${keyPath()}`) +
-          dim("\n  tashan activate --forget releases the seat · " + PORTAL + " lists every device")
+          dim("\n  tashan activate --forget releases the seat · tashan account lists every device")
         : bold("This machine is not activated.") +
           dim("\n  tashan activate <key>") +
-          dim("\n  Your key, invoices and subscription live at " + PORTAL)) + "\n");
+          dim("\n  Your key is in your purchase email · tashan account opens your plan and invoices")) + "\n");
       return lic ? 0 : 1;
     }
 
@@ -508,9 +543,48 @@ export async function main(argv) {
       return 1;
     }
     process.stdout.write("\n  " + jade("Pro is active on this machine.") +
-      dim(`\n  registered with Polar as "${label}" — see every device at ${PORTAL}`) +
+      dim(`\n  registered as "${label}" — tashan account shows every device`) +
       dim(`\n  stored in ${keyPath()} · every shell, every project, no re-export`) +
       dim("\n\n  tashan doctor") + "\n");
+    return 0;
+  }
+
+  if (cmd === "account") {
+    const lic = resolveLicence(a);
+    if (!lic) {
+      process.stdout.write("\n  " + bold("No licence on this machine.") +
+        dim("\n  tashan activate <key>   the key is in your purchase email") +
+        dim("\n  " + SITE + "/pricing.html   what Pro adds · the index stays free") + "\n");
+      return 1;
+    }
+    // The terminal already proved who we are, so the browser inherits it — same handoff as
+    // `gh auth login` and `stripe login`. The one-time token is not a credential and expires in two
+    // minutes, which is why it may ride in a URL where the licence key never could.
+    let out;
+    try {
+      const r = await fetch(SITE + "/api/account", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ key: lic.key }),
+      });
+      out = r.ok ? await r.json().catch(() => null) : null;
+      if (!out) {
+        process.stderr.write("\n  " + red(r.status === 403 ? "That licence is not valid." : "Could not sign in.") +
+          dim("\n  Open your account directly: " + PORTAL + "\n"));
+        return 1;
+      }
+    } catch {
+      process.stderr.write("\n  " + red("Offline — could not reach " + SITE + ".") +
+        dim("\n  Your licence still works locally; tashan doctor runs without a network.\n"));
+      return 1;
+    }
+    const url = out.url || SITE + "/account.html";
+    const opened = openBrowser(url);
+    process.stdout.write("\n  " + jade("Opening your account…") +
+      dim(`\n  ${out.email || "signed in"}${out.active ? " · Pro active" : ""}`) +
+      dim(`\n  ${opened ? "" : "Open this link: "}${url}`) +
+      (out.handoff === false ? dim("\n  (one-time sign-in is unavailable, so this opens the page as-is)") : "") +
+      "\n");
     return 0;
   }
 

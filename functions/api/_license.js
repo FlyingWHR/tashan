@@ -17,15 +17,39 @@ async function keyHash(key) {
   return Array.from(new Uint8Array(d)).map(b => b.toString(16).padStart(2, "0")).join("").slice(0, 32);
 }
 
-// A key may arrive as `Authorization: Bearer <key>` or `?key=` (the CLI and curl differ in habit).
+// The browser session. Signing in on the site sets this, and because keyFrom() reads it, being
+// signed in unlocks Pro detail on capability pages too — not just on /account.html. That is the
+// whole point: "what happened after I pay" has to be visible somewhere other than a terminal.
+export const COOKIE = "tashan_s";
+
+export function cookieFrom(request, name = COOKIE) {
+  const raw = request.headers.get("cookie") || "";
+  for (const part of raw.split(";")) {
+    const i = part.indexOf("=");
+    if (i > 0 && part.slice(0, i).trim() === name) return decodeURIComponent(part.slice(i + 1).trim());
+  }
+  return "";
+}
+
+// httpOnly so no script can read the credential, Secure so it never crosses plain http, and Lax
+// rather than Strict because the sign-in arrives as a top-level navigation from the CLI's browser
+// launch — Strict would drop the cookie on exactly that hop and the handoff would silently no-op.
+export function setCookie(key, maxAge = 60 * 60 * 24 * 30) {
+  return `${COOKIE}=${encodeURIComponent(key)}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${maxAge}`;
+}
+
+export const clearCookie = () => setCookie("", 0);
+
+// A key may arrive as `Authorization: Bearer <key>` (the CLI), `?key=` (curl), or the session
+// cookie (the browser). Order matters: an explicit credential always beats an ambient one.
 export function keyFrom(request) {
   const auth = request.headers.get("authorization") || "";
   if (/^Bearer\s+/i.test(auth)) return auth.replace(/^Bearer\s+/i, "").trim();
   try {
-    return new URL(request.url).searchParams.get("key") || "";
-  } catch {
-    return "";
-  }
+    const q = new URL(request.url).searchParams.get("key");
+    if (q) return q;
+  } catch { /* opaque URL — fall through to the cookie */ }
+  return cookieFrom(request);
 }
 
 // A licence key may be activated to a limited number of devices. The activation id identifies
@@ -33,6 +57,26 @@ export function keyFrom(request) {
 // limit is decorative and one shared key serves everyone.
 export function activationFrom(request) {
   return (request.headers.get("x-tashan-activation") || "").trim() || null;
+}
+
+// The one place this codebase talks to Polar about a licence. `validate()` reduces the record to a
+// yes/no for the gate; /api/account renders the same record as the customer's dashboard. Two callers,
+// one request shape — because the last time one concept had two copies here, a hub table and the
+// index board disagreed about what a row was.
+export async function fetchLicence(env, key, activationId = null) {
+  try {
+    const r = await fetch(POLAR_VALIDATE, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(activationId
+        ? { key, organization_id: env.POLAR_ORG_ID, activation_id: activationId }
+        : { key, organization_id: env.POLAR_ORG_ID }),
+    });
+    if (!r.ok) return { error: r.status >= 500 ? "unavailable" : "invalid", status: r.status };
+    return { data: await r.json() };
+  } catch {
+    return { error: "unavailable", status: 0 };      // offline / DNS — never "invalid"
+  }
 }
 
 export async function validate(env, key, activationId = null) {
@@ -53,26 +97,15 @@ export async function validate(env, key, activationId = null) {
     if (hit === "0") return { ok: false, status: 403, why: "licence not valid" };
   }
 
-  let d;
-  try {
-    const r = await fetch(POLAR_VALIDATE, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(activationId
-        ? { key, organization_id: env.POLAR_ORG_ID, activation_id: activationId }
-        : { key, organization_id: env.POLAR_ORG_ID }),
-    });
-    if (!r.ok) {
-      // A 4xx from Polar means the key is bad; a 5xx means Polar is down. Do not cache the second
-      // case as a negative, or a Polar outage would lock out paying customers for five minutes each.
-      if (r.status >= 500) return { ok: false, status: 503, why: "validation unavailable" };
-      if (h) await env.TASHAN_KV.put(h, "0", { expirationTtl: CACHE_TTL_S });
-      return { ok: false, status: 403, why: "licence not valid" };
-    }
-    d = await r.json();
-  } catch {
-    return { ok: false, status: 503, why: "validation unavailable" };
+  const res = await fetchLicence(env, key, activationId);
+  if (res.error) {
+    // A 4xx from Polar means the key is bad; a 5xx means Polar is down. Do not cache the second
+    // case as a negative, or a Polar outage would lock out paying customers for five minutes each.
+    if (res.error === "unavailable") return { ok: false, status: 503, why: "validation unavailable" };
+    if (h) await env.TASHAN_KV.put(h, "0", { expirationTtl: CACHE_TTL_S });
+    return { ok: false, status: 403, why: "licence not valid" };
   }
+  const d = res.data;
 
   const granted = d && d.status === "granted";
   const live = !d.expires_at || Date.parse(d.expires_at) > Date.now();

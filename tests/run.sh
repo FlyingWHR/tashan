@@ -92,6 +92,10 @@ node functions/api/polar.test.mjs 2>/dev/null || fail=1
 echo; echo "── licence gate (paywall) ─────────────────────"
 node functions/api/license.test.mjs 2>/dev/null || fail=1
 
+# 5d. the account centre — who is signed in, and what of their record is safe to send back
+echo; echo "── account centre (session + record) ──────────"
+node --test functions/api/account.test.mjs >/dev/null 2>&1 || { node --test functions/api/account.test.mjs; fail=1; }
+
 # 3. CLI pure logic
 echo; echo "── cli ────────────────────────────────────────"
 node cli/tashan.test.mjs || fail=1
