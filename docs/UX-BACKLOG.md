@@ -300,7 +300,7 @@ different thing from being finished. Same rules apply.
       land from a search result on a capability page, follow the audit, hit the offer, reach pricing,
       come back via `/account` signed out, sign in, and confirm every link on that path resolves and
       says the same thing. The pieces are verified; the *path* is not.
-- [ ] **23. Spot-check the generated tiers at scale.** 5,788 dossiers, 212 comparisons, 20 role hubs
+- [x] **23. Spot-check the generated tiers at scale.** 5,788 dossiers, 212 comparisons, 20 role hubs
       all got template changes tonight. Sample across kinds (npm / registry / plugin / skill, scored
       and unscored, clean and flagged) and confirm none of tonight's edits produced a broken page for
       a shape I did not have in front of me.
@@ -387,3 +387,31 @@ Attribution split in half, silently, on the one measurement that says which doss
 Both encode now, verified byte-identical on the live page. A check asserts no `?ref=` contains a raw
 `:`, `@` or `/` — and it earned itself immediately: my first fix patched only one of the two call
 sites and the check caught the other 183 pages. Deploy `927e50d3`.
+
+**Iteration 13 — item 23. 41 pages, 17 shapes, 3 tiers, zero problems. P4 closed.**
+
+Sampled deliberately across shapes never personally opened: registry-only, plugin, skill, unscored,
+no description, no source repo, deprecated, archived, unscanned, carrying advisories, remote kind,
+single-maintainer, graded deep, graded slop, no tasks — plus 6 comparison pages and 6 role hubs.
+Checked each for literal `None`/`undefined`/`NaN`, empty titles, double-escaped entities, missing
+`h1`, unparseable JSON-LD, missing `#main`, missing skip link, raw `?ref=`, and surviving inline
+styles. **All 41 clean.** Tonight's template edits held on every shape.
+
+---
+
+## ⚠ FOR THE FOUNDER — a live defect I cannot fix from here
+
+**Cloudflare Bot Fight Mode 403s `Python-urllib`, and only `Python-urllib`.** Verified live:
+
+| client | result |
+|---|---|
+| `curl`, `python-requests`, `node-fetch`, `Go-http-client`, GPTBot, ClaudeBot | **200** |
+| `Python-urllib/3.x` | **403** |
+
+That 403 covers `/v0.1/scores`, `/v0.1/servers`, `/data/capabilities.json` and `/llms.txt` — every
+endpoint `llms.txt` advertises and every `DataDownload` the new `Dataset` schema declares. The site
+publishes a machine-readable corpus and blocks the most common zero-dependency way to fetch it from
+Python — an idiom this project's own pipeline is built on.
+
+Same **Security → Bots → Bot Fight Mode** toggle that is still injecting a CSP-blocked script into
+every page. One switch fixes both. I cannot reach the dashboard.
