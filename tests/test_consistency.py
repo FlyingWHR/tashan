@@ -227,5 +227,138 @@ stale = [os.path.basename(b)[:-4] for b in badges if os.path.basename(b)[:-4] no
 ok(f"every one of the {len(badges)} badges belongs to a capability still in the export",
    not stale, f"{len(stale)} badge(s) for capabilities no longer exported, e.g. {stale[:3]}")
 
+# ---- 6. THE NUMBER ITSELF --------------------------------------------------------------------
+# Identity being consistent is table stakes; the SCORE is the claim people act on, and it is printed
+# on six surfaces by four different code paths. The first version of this file checked it only in the
+# JSON payloads and llms.txt — not in the 5,788 rendered dossiers, not in the hub tables, not in the
+# badge someone embeds in their README, and not in the JSON-LD an answer engine parses. Those are
+# precisely the copies a reader quotes back at you.
+DOSSIER_SCORE = re.compile(r"tashan score ([0-9]+(?:\.[0-9]+)?)")
+LD_RATING = re.compile(r'"ratingValue":\s*([0-9.]+)')
+TITLE = re.compile(r"<title>(.*?)</title>", re.S)
+
+num_bad = collections.Counter()
+num_ex = {}
+n_scored = 0
+for p_ in pages:
+    slug = os.path.basename(p_)[:-5]
+    cid = slug_to_id.get(slug)
+    if not cid:
+        continue
+    t = TRUTH[cid]
+    want = t.get("tashan_score")
+    if want is None:
+        continue
+    src = open(p_, encoding="utf-8").read()
+    n_scored += 1
+
+    for rx, key in ((DOSSIER_SCORE, "dossier score"), (LD_RATING, "JSON-LD ratingValue")):
+        for got in rx.findall(src):
+            if abs(float(got) - float(want)) > 0.05:
+                num_bad[key] += 1
+                num_ex.setdefault(key, f"{slug}: page={got} export={want}")
+                break
+
+    m = TITLE.search(src)
+    if m and unesc(t.get("label") or t.get("name")) not in unesc(m.group(1)):
+        num_bad["<title> names the capability"] += 1
+        num_ex.setdefault("<title> names the capability",
+                          f"{slug}: title={unesc(m.group(1))[:44]!r} label={t.get('label')!r}")
+
+ok(f"{n_scored} dossiers print the same tashan score as the export, in body text AND JSON-LD",
+   not num_bad, "; ".join(f"{k} wrong on {v} page(s) — {num_ex[k]}" for k, v in num_bad.most_common(3)))
+
+# hub tables print the score in a <span class="sig__val">, rounded
+HUBROW = re.compile(
+    r'<tr data-href="/capability/([a-z0-9-]+)\.html">.*?<span class="sig__val">([0-9]+)</span>', re.S)
+hub_score_bad = collections.Counter()
+hsx = {}
+n_hub = 0
+for hub in sorted(glob.glob(os.path.join(WEB, "category", "*.html")) +
+                  glob.glob(os.path.join(WEB, "task", "*.html"))):
+    for slug, got in HUBROW.findall(open(hub, encoding="utf-8").read()):
+        cid = slug_to_id.get(slug)
+        if not cid or TRUTH[cid].get("tashan_score") is None:
+            continue
+        n_hub += 1
+        want = round(float(TRUTH[cid]["tashan_score"]))
+        if int(got) != want:
+            hub_score_bad[os.path.basename(hub)] += 1
+            hsx.setdefault("x", f"{slug} on {os.path.basename(hub)}: hub={got} export={want}")
+ok(f"{n_hub} hub rows print the same score as the export",
+   not hub_score_bad, hsx.get("x", ""))
+
+# the badge is the copy that ends up in somebody else's README, where we cannot correct it
+BADGE = re.compile(r'aria-label="tashan:\s*([0-9]+)')
+badge_bad = collections.Counter()
+bx = {}
+n_badge = 0
+for b in sorted(glob.glob(os.path.join(WEB, "badge", "*.svg"))):
+    slug = os.path.basename(b)[:-4]
+    cid = slug_to_id.get(slug)
+    if not cid or TRUTH[cid].get("tashan_score") is None:
+        continue
+    m = BADGE.search(open(b, encoding="utf-8").read())
+    if not m:
+        continue
+    n_badge += 1
+    want = round(float(TRUTH[cid]["tashan_score"]))
+    if int(m.group(1)) != want:
+        badge_bad["score"] += 1
+        bx.setdefault("score", f"{slug}: badge={m.group(1)} export={want}")
+ok(f"{n_badge} badges carry the same score as the export",
+   not badge_bad, bx.get("score", ""))
+
+# ---- 7. the security audit, on the canonical page ------------------------------------------------
+# It lived only in capability.js, which rewrites the dossier client-side — so a person saw the audit
+# and a crawler did not, on the one measurement nobody else publishes. Now prerendered. The
+# trust-critical assertion is the negative one: a capability we did NOT scan must never render a
+# sentence that could be read as "we scanned it and it was clean".
+sec_bad = collections.Counter()
+sec_ex = {}
+n_scanned = n_unscanned = 0
+for p_ in pages:
+    cid = slug_to_id.get(os.path.basename(p_)[:-5])
+    if not cid:
+        continue
+    t = TRUTH[cid]
+    src = open(p_, encoding="utf-8").read()
+    slug = os.path.basename(p_)[:-5]
+
+    if "Security audit" not in src:
+        sec_bad["no security section at all"] += 1
+        sec_ex.setdefault("no security section at all", slug)
+        continue
+
+    if not t.get("sec_scanned_at"):
+        n_unscanned += 1
+        if "Not scanned yet" not in src:
+            sec_bad["unscanned page does not say so"] += 1
+            sec_ex.setdefault("unscanned page does not say so", slug)
+        for claim in ("No known advisories", "checked against OSV", "No permission surface detected"):
+            if claim in src:
+                sec_bad["unscanned page implies a clean scan"] += 1
+                sec_ex.setdefault("unscanned page implies a clean scan", f"{slug}: {claim!r}")
+                break
+        continue
+
+    n_scanned += 1
+    n_adv = t.get("sec_advisory_count") or 0
+    if n_adv and f"{n_adv} known advisor" not in src:
+        sec_bad["advisory count"] += 1
+        sec_ex.setdefault("advisory count", f"{slug}: export says {n_adv}")
+    if not n_adv and "No known advisories" not in src:
+        sec_bad["clear result not stated"] += 1
+        sec_ex.setdefault("clear result not stated", slug)
+    if bool(t.get("sec_install_script")) != ("Runs a script at install time" in src):
+        sec_bad["install script"] += 1
+        sec_ex.setdefault("install script", f"{slug}: export={bool(t.get('sec_install_script'))}")
+    if bool(t.get("sec_provenance")) != ("Signed build provenance" in src):
+        sec_bad["provenance"] += 1
+        sec_ex.setdefault("provenance", f"{slug}: export={bool(t.get('sec_provenance'))}")
+
+ok(f"{n_scanned} scanned + {n_unscanned} unscanned dossiers state their security result truthfully",
+   not sec_bad, "; ".join(f"{k} x{v} — {sec_ex[k]}" for k, v in sec_bad.most_common(3)))
+
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)

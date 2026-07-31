@@ -73,14 +73,74 @@ def official_org(c):
     resolved once at export time, and every surface reads the answer."""
     return c.get("official") or None
 
+MAX_DESC = 300
+
+
+def _clip(d, limit):
+    """Trim to `limit` on a word boundary, ending in a single ellipsis. Never mid-word: the no-score
+    path used a bare slice and shipped "...split view with current sl"."""
+    cut = d[:limit - 1]
+    sp = cut.rfind(" ")
+    return (cut[:sp] if sp > limit * 0.6 else cut).rstrip(" ,;:.-") + "…"
+
+
 def desc_for(c):
+    """The meta description. TRUNCATE THE PROSE, NEVER THE CLAIM.
+
+    This used to append the score and then cut the whole string at 300 characters, so any capability
+    with a long description had its own score chopped in half: six pages shipped `…tashan score 3"`
+    for a capability scoring 37. That string is what a search result and an answer engine quote,
+    which makes a truncated number worse than none — it is a wrong measurement published in the one
+    place we cannot correct after the fact.
+
+    Build the claim first, fit the prose around it, and join on a word boundary with exactly one
+    piece of punctuation.
+    """
     n = disp(c)
-    d = c.get("description") or (n + " — an AI capability (" + (c.get("kind") or "server") + ") tracked and scored by tashan on public evidence.")
+    d = (c.get("description")
+         or n + " — an AI capability (" + (c.get("kind") or "server")
+         + ") tracked and scored by tashan on public evidence.")
+    d = re.sub(r"\s+", " ", d).strip()
+    # build.py's 500-char cap leaves some descriptions ending ".…" already; carrying that through
+    # renders "issue management.… tashan score 34.0/100." Normalise before anything else appends.
+    d = re.sub(r"[.,;:\-]+…", "…", d)
+
+    claim = ""
     if c.get("tashan_score") is not None:
-        d = d.rstrip(".") + ". tashan score " + str(c["tashan_score"]) + "/100"
-        if c.get("expertise_verdict"): d += " · expertise: " + c["expertise_verdict"]
+        claim = "tashan score " + str(c["tashan_score"]) + "/100"
+        if c.get("expertise_verdict"):
+            claim += " · expertise: " + c["expertise_verdict"]
+        claim += "."
+    if not claim:
+        return d if len(d) <= MAX_DESC else _clip(d, MAX_DESC)
+
+    room = MAX_DESC - len(claim) - 1               # -1 for the single separating space
+    d = d.rstrip(" .")
+    if len(d) > room:
+        d = _clip(d, room)
+    elif d and d[-1] not in ".!?…":
+        # Many descriptions arrive ALREADY truncated with an ellipsis by build.py's 500-char cap, and
+        # appending a full stop to those produced "issue management.…. tashan score 34.0/100." on 84
+        # pages. Only punctuate a sentence that has not punctuated itself.
         d += "."
-    return d[:300]
+    return d + " " + claim
+
+
+def _selfcheck():
+    """One runnable check: the score survives intact at every description length."""
+    for n in (0, 50, 240, 299, 300, 500):
+        out = desc_for({"description": "word " * (n // 5) or None, "tashan_score": 37.0,
+                        "name": "x", "label": "X"})
+        assert out.endswith("tashan score 37.0/100."), (n, out[-40:])
+        assert len(out) <= MAX_DESC, (n, len(out))
+        assert ".…" not in out and "…." not in out and ".." not in out, (n, out[-40:])
+    # a description that already ends in an ellipsis must not collect a second full stop
+    pre = desc_for({"description": "Already cut short…", "tashan_score": 5.0, "name": "x", "label": "X"})
+    assert pre == "Already cut short… tashan score 5.0/100.", pre
+    assert desc_for({"description": "Short.", "tashan_score": 12.0, "name": "x", "label": "X"}) \
+        == "Short. tashan score 12.0/100."
+    return True
+
 
 def faq(c):
     n = disp(c); qa = []
@@ -222,7 +282,10 @@ def summary(c):
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
             + works + cat + task + install + verdict + swap +
             ('<ul class="prose" style="max-width:none">' + "".join(rows) + '</ul>' if rows else '') +
-            ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else '') + audit)
+            # The security audit goes BEFORE the CTA and the link row: it is the measurement the
+            # page exists to publish, and it was previously absent from this tier entirely.
+            security_block(c)
+            + ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else '') + audit)
 
 def compact(n):
     n = n or 0
@@ -230,6 +293,107 @@ def compact(n):
     if n >= 1e3: return ("%.0f" if n >= 1e4 else "%.1f") % (n / 1e3) + "k"
     return str(n)
 def fmt(n): return "{:,}".format(n) if isinstance(n, (int, float)) else n
+
+PERM_LABEL = {
+    "filesystem": "Reads and writes files", "shell": "Runs shell commands",
+    "network": "Makes network requests", "browser": "Drives a browser",
+    "database": "Connects to databases", "credentials": "Handles credentials or secrets",
+    "cloud": "Talks to cloud provider APIs",
+}
+SEV_CLS = {"MALICIOUS": "sev--mal", "CRITICAL": "sev--crit", "HIGH": "sev--high",
+           "MODERATE": "sev--mod", "MEDIUM": "sev--mod", "LOW": "sev--low"}
+
+
+def security_block(c):
+    """The security audit, ON THE CANONICAL PAGE.
+
+    It existed only in capability.js, which rewrites the dossier client-side — so a person saw it and
+    a crawler did not. The prerendered tier exists precisely so answer engines and search can read
+    what we measure, and the one measurement nobody else publishes was the one thing missing from it.
+    A reader with JS off saw nothing either.
+
+    Mirrors capability.js::securityBlock row for row, including the free/paid line: the EXISTENCE of
+    every finding is stated in full and only the detail needed to act is gated. Hiding the existence
+    of a vulnerability behind a paywall would be indefensible for a product whose claim is that it
+    tells you the truth about what you run.
+    """
+    def sec_row(label, value="", detail="", cls=""):
+        return ('<div class="secrow' + ((" " + cls) if cls else "") + '">'
+                '<span class="secrow__l">' + label + "</span>"
+                '<span class="secrow__v mono">' + value + "</span>"
+                '<span class="secrow__d">' + detail + "</span></div>")
+
+    def unlock(what):
+        return ('<a class="unlock" href="/pricing.html?ref=' + esc(c["id"]) + '" title="' + esc(what)
+                + '">unlock detail</a>')
+
+    def sec(title, body, sub, aside=""):
+        return ('<section class="capsec"><div class="capsec__hd"><h2>' + title + "</h2>"
+                + ('<span class="capsec__aside">' + esc(aside) + "</span>" if aside else "")
+                + "</div>"
+                + ('<p class="capsec__sub">' + sub + "</p>" if sub else "") + body + "</section>")
+
+    if not c.get("sec_scanned_at"):
+        # NEVER imply an audit happened. Say plainly that it did not, and why.
+        return sec("Security audit",
+                   '<p class="hubnote">Not scanned yet. We audit npm-published capabilities for known '
+                   "advisories, install-time scripts and permission surface; this one has no npm "
+                   "package we can resolve, or has not reached the queue.</p>", "")
+
+    try:
+        perms = json.loads(c["sec_permissions"]) if c.get("sec_permissions") else []
+    except Exception:
+        perms = []
+
+    rows = []
+    n = c.get("sec_advisory_count") or 0
+    if n:
+        sv = c.get("sec_max_severity") or "UNKNOWN"
+        rows.append(sec_row(
+            "<b>" + str(n) + " known advisor" + ("y" if n == 1 else "ies") + "</b>",
+            '<span class="sev ' + SEV_CLS.get(sv, "") + '">' + esc(sv.lower()) + "</span>",
+            unlock("Which advisory, its severity, the affected range and the version that fixes it"),
+            "secrow--alert"))
+    else:
+        rows.append(sec_row("No known advisories", '<span class="sev sev--none">clear</span>',
+                            '<span class="secrow__ok">checked against OSV for '
+                            + esc(c.get("npm_latest_version") or "the current release") + "</span>"))
+
+    if c.get("sec_install_script"):
+        rows.append(sec_row("<b>Runs a script at install time</b>",
+                            '<span class="sev sev--high">code</span>',
+                            unlock("The exact command this package executes when it is installed"),
+                            "secrow--alert"))
+
+    if perms:
+        rows.append(sec_row(
+            esc(PERM_LABEL.get(perms[0], perms[0])),
+            ("+" + str(len(perms) - 1) + " more") if len(perms) > 1 else "",
+            unlock("The full permission list, and which dependency pulled each one in")
+            if len(perms) > 1 else '<span class="secrow__ok">from declared dependencies</span>'))
+    else:
+        rows.append(sec_row("No permission surface detected", "",
+                            '<span class="secrow__ok">declares no dependency that reaches files, '
+                            "shell or network</span>"))
+
+    if c.get("sec_remote_content"):
+        rows.append(sec_row("Can carry remote content into your agent", "",
+                            unlock("What it fetches, and why that is the injection-exposure question "
+                                   "for agent tools")))
+
+    rows.append(sec_row(
+        "Signed build provenance" if c.get("sec_provenance") else "No build provenance", "",
+        '<span class="secrow__ok">' + ("published from public CI with an attestation"
+                                       if c.get("sec_provenance") else
+                                       "no attestation — the published artifact cannot be traced to "
+                                       "its source") + "</span>",
+        "" if c.get("sec_provenance") else "secrow--warn"))
+
+    return sec("Security audit", '<div class="sec">' + "".join(rows) + "</div>",
+               "Every finding is shown in full. A licence adds the detail needed to act on it — "
+               "which advisory, what the install script does, the version that fixes it.",
+               "scanned " + (c.get("sec_scanned_at") or "")[:10])
+
 
 def page(c, gen):
     n = disp(c); url = BASE + "/capability/" + c["slug"] + ".html"
