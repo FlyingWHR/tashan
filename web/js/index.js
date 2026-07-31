@@ -466,14 +466,7 @@
 
   // resolved at export time (build.py) — the board no longer ships source_repo just to re-derive this
   function officialOrg(c) { return c.official || null; }
-  function officialOrgLegacy(c) {
-    var s = ((c.npm_pkg || "") + " " + (c.source_repo || "")).toLowerCase();
-    if (/modelcontextprotocol|anthropic/.test(s)) return "Anthropic";
-    if (/(^|[\/@\s])openai/.test(s)) return "OpenAI";
-    if (/google|googleapis|gemini/.test(s)) return "Google";
-    if (/(^|[\/@\s])microsoft|(^|\/)azure/.test(s)) return "Microsoft";
-    return null;
-  }
+
   // The Adoption cell used to print RAW evidence — "422/wk" on one row, "2 repos" on the next — while
   // Maint and Trust printed 0–100 scores. So the one column you might sort or compare on was the one
   // column whose numbers meant different things per row, and 422 downloads looked bigger than the

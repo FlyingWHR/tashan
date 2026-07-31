@@ -60,12 +60,18 @@ def disp(c):
 
 
 def official_org(c):
-    s = ((c.get("npm_pkg") or "") + " " + (c.get("source_repo") or "")).lower()
-    if re.search(r"modelcontextprotocol|anthropic", s): return "Anthropic"
-    if re.search(r"(^|[/@\s])openai", s): return "OpenAI"
-    if re.search(r"google|googleapis|gemini", s): return "Google"
-    if re.search(r"(^|[/@\s])microsoft|(^|/)azure", s): return "Microsoft"
-    return None
+    """READ the export's answer; never re-derive it.
+
+    This function used to carry its own copy of the rule, and it was the OLD one: a bare substring
+    match that badged @atomicmail/mcp-modelcontextprotocol as Anthropic. build.py's official_of was
+    fixed to anchor on the namespace (165 badges -> 137) and index.js was switched to read the
+    exported field, but this copy and capability.js were missed — so 88 canonical, indexed dossiers
+    were still claiming "✓ Anthropic · official" for packages the board itself showed as unaffiliated.
+    The same page, contradicting the board, about a real company's endorsement.
+
+    An endorsement claim gets exactly one definition. It lives in build.py::official_of, it is
+    resolved once at export time, and every surface reads the answer."""
+    return c.get("official") or None
 
 def desc_for(c):
     n = disp(c)

@@ -39,6 +39,12 @@ def disp(c):
     return c.get("label") or pretty(c.get("name") or "")
 
 
+# id -> "Files & Memory". Read from the same categories.json the site renders, so a hub can never
+# print a category name the rail does not use.
+CAT_LABEL = {c["id"]: c["label"]
+             for c in json.load(open(CATS, encoding="utf-8"))["categories"]}
+
+
 def pretty(name):
     return re.sub(r"^mcp-", "", re.sub(r"^mcp-server-", "", re.sub(r"-mcp$", "",
         re.sub(r"^@modelcontextprotocol/server-", "", str(name)))))
@@ -161,7 +167,11 @@ def board(rows):
             + esc(disp(c)) + "</a>"
             ' <span class="tag">' + esc({"skill": "skill"}.get(c.get("kind"), "server")) + "</span>"
             + off + vd + dep + "</div>"
-            '<div class="cap__id">' + esc(c["id"]) + "</div></td>"
+            # The board and the dossier both stopped printing the raw id — a longer restatement of
+            # the name directly above it. The hub kept printing it, so the same capability had a
+            # different row anatomy depending on which page you reached it from. That exact
+            # divergence (a hub table disagreeing with the board) has shipped here before.
+            '<div class="cap__id">' + esc(CAT_LABEL.get(c.get("category") or "", "")) + "</div></td>"
             '<td><div class="sig' + ("" if t is not None else " sig--none") + '">' + score
             + '<span class="bar"><i style="width:' + str(int(round(t or 0))) + '%"></i></span></div></td>'
             '<td class="num">' + ('<span class="ev">' + esc(ev) + "</span>" if ev
@@ -356,7 +366,7 @@ def llms_txt(caps, cats, by_cat, gen):
          "- Permission surface UNDER-reports by design: a server can shell out using Node built-ins "
          "and declare nothing, so an empty result means 'nothing declared', not 'nothing possible'.",         "", "## Top capabilities by measured trust", ""]
     for c in caps[:40]:
-        L.append("- [" + pretty(c["name"]) + "](" + BASE + "/capability/" + c["slug"] + ".html) — tashan score "
+        L.append("- [" + disp(c) + "](" + BASE + "/capability/" + c["slug"] + ".html) — tashan score "
                  + str(c.get("tashan_score")) + (", " + c["vitality"] if c.get("vitality") else "")
                  + ". " + (c.get("description") or "").replace("\n", " ")[:150])
     # The agent-facing surfaces, announced where a crawler or an agent will actually look. An endpoint
@@ -375,7 +385,7 @@ def llms_txt(caps, cats, by_cat, gen):
             continue
         L.append("- [" + cat["label"] + "](" + BASE + "/category/" + cat["id"] + ".html) — "
                  + str(len(rows)) + " measured. " + cat["blurb"]
-                 + " Top: " + ", ".join(pretty(c["name"]) for c in rows[:3]) + ".")
+                 + " Top: " + ", ".join(disp(c) for c in rows[:3]) + ".")
     L += ["", "## Reference", "",
           "- [Methodology](" + BASE + "/methodology.html) — every input, weight and known limitation.",
           "- [Learn](" + BASE + "/learn/) — install guides and comparisons, backed by the live ranking.",
@@ -436,7 +446,7 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen):
                    + icons.use("cat-" + cat["id"]) +
                    '<span class="browsecard__t">' + esc(cat["label"]) + "</span>"
                    '<span class="browsecard__c mono">' + str(len(rows)) + "</span>"
-                   + ('<span class="browsecard__lead">top: ' + esc(pretty(lead["name"])) + "</span>"
+                   + ('<span class="browsecard__lead">top: ' + esc(disp(lead)) + "</span>"
                       if lead else "") + "</a>")
     out.append("</div></section>")
 

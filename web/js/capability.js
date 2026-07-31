@@ -194,14 +194,10 @@
   }
 
   // model-company official detection (visual tagging) — from npm scope / repo owner
-  function officialOrg(c) {
-    var s = ((c.npm_pkg || "") + " " + (c.source_repo || "")).toLowerCase();
-    if (/modelcontextprotocol|anthropic/.test(s)) return "Anthropic";
-    if (/(^|[\/@\s])openai/.test(s)) return "OpenAI";
-    if (/google|googleapis|gemini/.test(s)) return "Google";
-    if (/(^|[\/@\s])microsoft|(^|\/)azure/.test(s)) return "Microsoft";
-    return null;
-  }
+  // An endorsement claim has ONE definition: build.py::official_of, resolved at export time. This
+  // held a stale copy of the old substring rule and badged @atomicmail/mcp-modelcontextprotocol as
+  // Anthropic — contradicting the board, on the same capability. Read the answer, never re-derive it.
+  function officialOrg(c) { return c.official || null; }
 
   // ---------- Works-with: which agent clients this capability runs in (protocol-derived, honest) ----------
   function worksWith(c) {

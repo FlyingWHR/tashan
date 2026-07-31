@@ -72,6 +72,10 @@ python3 tests/test_icons.py || fail=1
 echo; echo "── classifier (macro recall, no dead class) ───"
 python3 tests/test_classify.py || fail=1
 
+# 3c1c. THE trust test: one capability, one set of facts, on all 8 surfaces that render it
+echo; echo "── cross-surface consistency (trust) ─────────"
+python3 tests/test_consistency.py || fail=1
+
 # 3c2. the nav existed in 18 copies and had drifted into 6 variants — one definition now
 echo; echo "── chrome (one navigation) ────────────────────"
 python3 tests/test_chrome.py || fail=1

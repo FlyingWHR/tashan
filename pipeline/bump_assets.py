@@ -88,6 +88,15 @@ def bump():
         r = subprocess.run([sys.executable, gp], capture_output=True, text=True)
         tail = (r.stdout or r.stderr).strip().splitlines()
         print(f"  {g}: {tail[-1] if tail else 'ok'}")
+        # A GENERATOR THAT CRASHED USED TO PASS SILENTLY. gen_hubs.py died on a NameError, printed a
+        # traceback into a captured pipe nobody read, and this reported success — leaving every
+        # /category/ page at the previous ?v= while the bump claimed to have rewritten them. The
+        # asset-version check caught it two steps later, which is exactly the delayed, confusing
+        # failure this whole mechanism exists to prevent.
+        if r.returncode != 0:
+            print(f"\n  {g} FAILED (exit {r.returncode}) — the bump is incomplete:\n")
+            print((r.stderr or r.stdout).strip()[-1500:])
+            return 1
     n = inline_icons()
     print(f"  icons: sprite inlined into {n} page(s)")
     return 0
