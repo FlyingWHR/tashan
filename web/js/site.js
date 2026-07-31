@@ -37,7 +37,12 @@
     }
     link.classList.add("is-in");
     var who = a.email || a.name;
-    link.title = (a.active ? "tashan Pro" : "Your account") + (who ? " — " + who : "");
+    // An expired or revoked licence is its own state, not a quieter version of "signed in". Saying
+    // "Your account" over a lapsed subscription is how someone discovers it lapsed by having a
+    // command fail instead of by reading their own header.
+    var what = a.active ? "tashan Pro"
+      : (a.status && a.status !== "granted" ? "tashan — licence " + a.status : "Your account");
+    link.title = what + (who ? " — " + who : "");
     link.setAttribute("aria-label", link.title);
     if (a.active && pro) {
       link.classList.add("is-pro");

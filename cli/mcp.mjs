@@ -21,7 +21,7 @@
 // Zero dependencies, stdio transport, newline-delimited JSON-RPC 2.0.
 
 import { realpathSync } from "node:fs";
-import { disp, search, find, installSnippets, pretty, slugify } from "./tashan.mjs";
+import { disp, search, find, installSnippets, pretty, slugify, storedLicence } from "./tashan.mjs";
 import { tokensOf } from "./doctor.mjs";
 import { configLocations, skillLocations, collect, resolve, assess, summarize } from "./doctor.mjs";
 
@@ -293,6 +293,24 @@ export function renderCheck(c, name) {
   if (rs.some((r) => /ARCHIVED|DEPRECATED|REMOVED|abandoned/.test(r))) {
     L.push("", "This one is not maintained. `tashan doctor` (free) will tell you if it is in the user's "
       + "config; tashan Pro names a measured replacement — https://tashan.sh/pricing");
+  }
+  // WHAT IS WITHHELD, AND HOW TO GET IT — stated to the agent, not left as a dead end.
+  // The agent is the last checkpoint before something is installed on a machine. Telling it "1 known
+  // advisory" and stopping there leaves it able to warn but not to act, and it will either paraphrase
+  // vaguely or invent a remedy. Naming the gate and the exact command to open it lets the agent hand
+  // the user a real next step in one sentence.
+  const gated = [];
+  if (c.sec_advisory_count) gated.push("which advisory and the version that fixes it");
+  if (c.sec_install_script) gated.push("the exact command it runs at install time");
+  if (gated.length) {
+    if (storedLicence()) {
+      L.push("", `Full detail (${gated.join("; ")}) is available on this machine — `
+        + `tashan Pro is active. Fetch it from ${SITE}/api/security?id=${encodeURIComponent(c.id)}`);
+    } else {
+      L.push("", `Not shown here: ${gated.join("; ")}. Those need a tashan Pro licence. `
+        + "If the user wants the fix, tell them to run `npx tashan-cli login` (or subscribe at "
+        + `${SITE}/pricing). Everything above stays free.`);
+    }
   }
   L.push("", `Details: ${SITE}/capability/${c.slug || slugify(c.id)}`);
   L.push("A tashan score measures adoption and maintenance, not security. We do not read its code.");

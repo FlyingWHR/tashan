@@ -249,3 +249,18 @@ console.log("ok — ranking weight is swept, not felt");
     "a clean capability produces no risk lines — an agent must not be given noise to relay");
 }
 console.log("ok — the agent gets the full security audit, free");
+
+// The agent is the last checkpoint before an install. It must always learn that a finding EXISTS,
+// and — when detail is withheld — exactly how the user opens it. A gate the agent cannot name is a
+// gate it will paraphrase, or invent a way around.
+{
+  const gatedOut = renderCheck({ id: "pkg:x", name: "x", label: "X", tashan_score: 50,
+    sec_advisory_count: 2, sec_max_severity: "HIGH", sec_install_script: "node y.js", slug: "pkg-x" }, "x");
+  assert.ok(/2 known advisories/.test(gatedOut), "the existence of a finding is always free");
+  assert.ok(/tashan-cli login/.test(gatedOut), "the agent must be able to name how to get the fix");
+  assert.ok(/Everything above stays free/.test(gatedOut), "the free guarantee is restated to the agent");
+
+  const cleanOut = renderCheck({ id: "pkg:y", name: "y", label: "Y", tashan_score: 90, slug: "pkg-y" }, "y");
+  assert.ok(!/tashan-cli login/.test(cleanOut), "nothing withheld, so nothing may be pitched");
+  assert.ok(!/Not shown here/.test(cleanOut));
+}

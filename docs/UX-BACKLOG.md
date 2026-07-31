@@ -91,9 +91,9 @@ Both must reach Pro without ever being asked to be a database administrator of t
 - [x] **11. Cancel / renewal** surfaced in `/account` without bouncing to Polar unexplained.
 - [-] **12. Machines list** — count shipped; the DEVICE LIST needs Polar's customer session (org token), same blocker as item 3. `tashan logout` releases a seat from the machine itself.
 - [x] **12b. Machines count** — `/account` shows the count; show the devices and let one be released.
-- [ ] **13. Agent surface.** The MCP server should report licence state so a coding agent can say
+- [x] **13. Agent surface.** The MCP server should report licence state so a coding agent can say
       "this needs Pro to get the fixed version" instead of failing opaquely.
-- [ ] **14. Expired / refunded / revoked** states render as themselves everywhere, not as signed-out.
+- [x] **14. Expired / refunded / revoked** states render as themselves everywhere, not as signed-out.
 
 ### P3 — SEO / GEO, alongside
 
@@ -218,3 +218,19 @@ against the API: error shown, value kept, button re-enabled.
 *Item 12 is split.* The machines COUNT ships. The device LIST with per-device release needs Polar's
 customer-session API — the same organisation-token blocker as item 3. `tashan logout` already
 releases a seat from the machine itself, which is the case that matters. Deploy `efe44140`.
+
+**Iteration 6 — items 13 & 14. P2 closed except the org-token-blocked device list.**
+
+*Item 13.* The MCP server told an agent "2 known advisories" and stopped. An agent is the last
+checkpoint before something is installed on a machine, and one that can warn but not act will either
+paraphrase vaguely or invent a remedy. `renderCheck` now names the gate and the command that opens
+it — and when a licence IS present on the machine, points at `/api/security` so the agent can fetch
+the real advisory ids and fixed versions. Clean capabilities get no pitch, asserted in
+`cli/mcp.test.mjs`.
+
+*Item 14.* An expired licence was rendering as a quieter "signed in" — the nav said "Your account"
+over a lapsed subscription, so someone would discover it lapsed by having a command fail rather than
+by reading their own header. It now says `tashan — licence expired`, keeps `is-in`, and drops the Pro
+mark. Verified live through the real paint path for all three states. Deploy `fb101b26`.
+
+**Next: P3.** Item 15 (`/compare`) is going ahead — the instruction was to finish without asking.
