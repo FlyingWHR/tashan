@@ -409,5 +409,67 @@ free_signal = sum(1 for r in idx_rows if r.get("sec_advisory_count") is not None
 ok(f"the free tier still names a finding on {free_signal} board rows", free_signal > 0,
    "redaction removed the free signal too")
 
+# ---- 9. every remaining DISPLAYED value ----------------------------------------------------------
+# A field nobody renders cannot be inconsistent, so the set worth checking is exactly what a reader
+# sees. Identity, score and the security result are covered above; this closes the rest — the
+# vitality chip, the expertise verdict, the evidence cell and the freshness column — plus the inline
+# JSON payload each dossier embeds, which is a FOURTH public copy of the record and had to be
+# redacted along with the JSON files.
+# The real tag is <script type="application/json" id="cap-data">. An earlier pattern here matched
+# nothing and the check reported "0 payloads ... ok" — a green test that verified nothing, which is
+# the failure mode this whole file exists to catch. The count is asserted non-zero below.
+INLINE = re.compile(r'<script type="application/json" id="cap-data">(.*?)</script>', re.S)
+# NOT a list of fields to keep in step with the UI — that list rots the moment someone renders one
+# more column. capability.js renders FROM this payload, so asserting the payload equals the export on
+# every key it carries covers everything displayed, now and after the next feature, with one rule.
+SKIP = {"at",          # the render timestamp, which is about the page and not the capability
+        "co_used"}     # deliberately FILTERED, not copied — asserted separately just below
+inline_bad = collections.Counter()
+inline_ex = {}
+n_inline = 0
+paid_inline = collections.Counter()
+for p_ in pages:
+    cid = slug_to_id.get(os.path.basename(p_)[:-5])
+    if not cid:
+        continue
+    m = INLINE.search(open(p_, encoding="utf-8").read())
+    if not m:
+        continue
+    try:
+        blob = json.loads(m.group(1))
+    except Exception:
+        inline_bad["unparseable inline payload"] += 1
+        continue
+    c = blob.get("c") or blob
+    t = TRUTH[cid]
+    n_inline += 1
+    for f in set(c) - SKIP:
+        if c[f] != t.get(f):
+            inline_bad[f] += 1
+            inline_ex.setdefault(f, f"{os.path.basename(p_)}: inline={c[f]!r} export={t.get(f)!r}")
+    if c.get("sec_advisories") or isinstance(c.get("sec_install_script"), str):
+        paid_inline["paid detail"] += 1
+
+    # co_used is the one field the dossier deliberately narrows: prerender drops co-use links to
+    # capabilities it did not write a page for, because linking to a missing page 404s. So it is not
+    # equality — it is "a subset of the export's, and every survivor has a page". Asserting equality
+    # here would have forced a real correctness feature to be reverted to satisfy a test.
+    want_co = {x["id"] for x in (t.get("co_used") or [])}
+    for x in (c.get("co_used") or []):
+        if x["id"] not in want_co:
+            inline_bad["co_used invented a link"] += 1
+            inline_ex.setdefault("co_used invented a link", f"{os.path.basename(p_)}: {x['id']}")
+        elif x["id"] not in TRUTH:
+            inline_bad["co_used links a capability with no page"] += 1
+            inline_ex.setdefault("co_used links a capability with no page",
+                                 f"{os.path.basename(p_)}: {x['id']}")
+
+ok(f"the inline payload was actually found and parsed on all {len(pages)} dossiers",
+   n_inline == len(pages), f"parsed {n_inline} of {len(pages)} — the selector is wrong, not the data")
+ok(f"{n_inline} inline dossier payloads agree with the export on EVERY field they carry",
+   not inline_bad, "; ".join(f"{k} on {n} page(s) — {inline_ex.get(k,'')}" for k, n in inline_bad.most_common(3)))
+ok("the inline dossier payload carries no paid detail either", not paid_inline,
+   f"{sum(paid_inline.values())} page(s) embed the advisory list or the raw install command")
+
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)
