@@ -14,7 +14,7 @@
 // Zero dependencies. The pure functions are exported for cli/tashan.test.mjs.
 
 import { spawn } from "node:child_process";
-import { readFileSync, writeFileSync, mkdirSync, rmSync, chmodSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync, chmodSync, realpathSync } from "node:fs";
 import { homedir, hostname, platform } from "node:os";
 import { join, dirname } from "node:path";
 import { configLocations, skillLocations, collect, match, resolve, assess, summarize, trend, withTrend,
@@ -232,7 +232,7 @@ function infoCard(r) {
     for (const x of sec.slice(1)) L.push("               " + x);
     L.push("");                 // separator belongs to the block, not to the line after it
   }
-  L.push("  dossier      " + under(SITE + "/capability/" + (r.slug || slugify(r.id)) + ".html"));
+  L.push("  dossier      " + under(SITE + "/capability/" + (r.slug || slugify(r.id))));
   L.push("");
   L.push("  " + dim("install:  ") + jade("tashan add " + pretty(r.name)));
   L.push("");
@@ -242,7 +242,7 @@ function infoCard(r) {
 function renderAdd(r, client) {
   const snips = installSnippets(r, client);
   if (!snips.length) return red(`  no install method for client "${client}". try: claude · cursor · desktop · codex · npx`);
-  const out = ["", "  " + bold(disp(r)) + dim("  — " + SITE + "/capability/" + (r.slug || slugify(r.id)) + ".html"), ""];
+  const out = ["", "  " + bold(disp(r)) + dim("  — " + SITE + "/capability/" + (r.slug || slugify(r.id))), ""];
   for (const s of snips) {
     out.push("  " + dim(s.label));
     out.push(s.cmd.split("\n").map((l) => "    " + jade(l)).join("\n"));
@@ -665,6 +665,23 @@ export async function main(argv) {
 
 // entrypoint (skip when imported by the test)
 import { fileURLToPath } from "node:url";
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
+
+// IS THIS FILE THE ENTRY POINT? Compare REAL paths, not the strings.
+//
+// npm installs a bin as a SYMLINK — node_modules/.bin/tashan -> ../tashan-cli/tashan.mjs — so
+// process.argv[1] is the link and import.meta.url resolves to the target. A plain === between them
+// is false for every npm install, which meant main() never ran: `tashan --help` exited 0 and printed
+// NOTHING. Running the file directly by path worked, so every local test passed and the published
+// package would have done nothing at all. Caught only by installing the packed tarball.
+function isEntry(metaUrl) {
+  if (!process.argv[1]) return false;
+  try {
+    return realpathSync(process.argv[1]) === realpathSync(fileURLToPath(metaUrl));
+  } catch {
+    return process.argv[1] === fileURLToPath(metaUrl);
+  }
+}
+
+if (isEntry(import.meta.url)) {
   main(process.argv.slice(2)).then((code) => process.exit(code || 0));
 }

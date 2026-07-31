@@ -20,6 +20,7 @@
 //
 // Zero dependencies, stdio transport, newline-delimited JSON-RPC 2.0.
 
+import { realpathSync } from "node:fs";
 import { disp, search, find, installSnippets, pretty, slugify } from "./tashan.mjs";
 import { tokensOf } from "./doctor.mjs";
 import { configLocations, skillLocations, collect, resolve, assess, summarize } from "./doctor.mjs";
@@ -266,7 +267,7 @@ export function renderFind(matches, task, client) {
       L.push(`   install (${snip.client}): ${lines[0]}`);
       for (const l of lines.slice(1)) L.push(`     ${l}`);
     }
-    L.push(`   details: ${SITE}/capability/${c.slug || slugify(c.id)}.html`);
+    L.push(`   details: ${SITE}/capability/${c.slug || slugify(c.id)}`);
     L.push("");
   });
   L.push("A tashan score measures adoption and maintenance. It is NOT a security audit — "
@@ -293,7 +294,7 @@ export function renderCheck(c, name) {
     L.push("", "This one is not maintained. `tashan doctor` (free) will tell you if it is in the user's "
       + "config; tashan Pro names a measured replacement — https://tashan.sh/pricing");
   }
-  L.push("", `Details: ${SITE}/capability/${c.slug || slugify(c.id)}.html`);
+  L.push("", `Details: ${SITE}/capability/${c.slug || slugify(c.id)}`);
   L.push("A tashan score measures adoption and maintenance, not security. We do not read its code.");
   return L.join("\n");
 }
@@ -385,4 +386,21 @@ export async function serve() {
 }
 
 import { fileURLToPath } from "node:url";
-if (process.argv[1] === fileURLToPath(import.meta.url)) serve();
+
+// IS THIS FILE THE ENTRY POINT? Compare REAL paths, not the strings.
+//
+// npm installs a bin as a SYMLINK — node_modules/.bin/tashan -> ../tashan-cli/tashan.mjs — so
+// process.argv[1] is the link and import.meta.url resolves to the target. A plain === between them
+// is false for every npm install, which meant main() never ran: `tashan --help` exited 0 and printed
+// NOTHING. Running the file directly by path worked, so every local test passed and the published
+// package would have done nothing at all. Caught only by installing the packed tarball.
+function isEntry(metaUrl) {
+  if (!process.argv[1]) return false;
+  try {
+    return realpathSync(process.argv[1]) === realpathSync(fileURLToPath(metaUrl));
+  } catch {
+    return process.argv[1] === fileURLToPath(metaUrl);
+  }
+}
+
+if (isEntry(import.meta.url)) serve();

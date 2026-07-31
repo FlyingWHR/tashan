@@ -450,3 +450,42 @@ console.log("ok — the dossier URL resolves from the id, not a missing slug fie
   }
 }
 console.log("ok — the browser launch passes the URL on every platform");
+
+// ---- the published package must actually RUN --------------------------------------------------
+// npm installs a bin as a SYMLINK (node_modules/.bin/tashan -> ../tashan-cli/tashan.mjs), so
+// process.argv[1] is the link while import.meta.url resolves to the target. The entry check was a
+// plain === between the two, which is false for EVERY npm install — main() never ran, `tashan --help`
+// exited 0 and printed nothing. Running the file directly by path worked, so every local test and
+// every `node cli/tashan.mjs …` in this suite passed while the shippable artifact did nothing.
+// Only installing the packed tarball caught it.
+{
+  const { realpathSync, mkdtempSync, symlinkSync, writeFileSync } = await import("node:fs");
+  const { join } = await import("node:path");
+  const { tmpdir } = await import("node:os");
+  const { fileURLToPath, pathToFileURL } = await import("node:url");
+
+  // Reproduce npm's layout: a real file, and a symlink pointing at it.
+  const dir = mkdtempSync(join(tmpdir(), "tashan-entry-"));
+  const real = join(dir, "real.mjs");
+  const link = join(dir, "link.mjs");
+  writeFileSync(real, "export default 1;\n");
+  symlinkSync(real, link);
+
+  // The check as it is written in tashan.mjs / mcp.mjs.
+  const isEntry = (argv1, metaUrl) => {
+    try { return realpathSync(argv1) === realpathSync(fileURLToPath(metaUrl)); }
+    catch { return argv1 === fileURLToPath(metaUrl); }
+  };
+
+  assert.ok(isEntry(link, pathToFileURL(real).href),
+    "a symlinked bin must still be recognised as the entry point — this is the npm install case");
+  assert.ok(isEntry(real, pathToFileURL(real).href),
+    "running the file directly by path must still work");
+  assert.ok(!isEntry(join(dir, "other.mjs"), pathToFileURL(real).href),
+    "an unrelated argv[1] must not be treated as the entry point (import, not execute)");
+
+  // and the naive check this replaced would have failed the npm case
+  assert.ok(link !== fileURLToPath(pathToFileURL(real).href),
+    "sanity: the symlink path and the real path differ, which is why === was wrong");
+}
+console.log("ok — the entry check survives npm's symlinked bin");

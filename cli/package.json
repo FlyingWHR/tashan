@@ -1,7 +1,7 @@
 {
   "name": "tashan-cli",
   "version": "0.1.0",
-  "description": "The measured layer for AI capabilities \u2014 search, rank, and install MCP servers & agent skills from your terminal.",
+  "description": "The measured layer for AI capabilities — search, rank, and install MCP servers & agent skills from your terminal.",
   "type": "module",
   "bin": {
     "tashan": "tashan.mjs",
@@ -28,5 +28,17 @@
   "license": "MIT",
   "scripts": {
     "test": "node tashan.test.mjs && node mcp.test.mjs"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlyingWHR/tashan.git",
+    "directory": "cli"
+  },
+  "bugs": {
+    "url": "https://tashan.sh/support"
   }
 }
