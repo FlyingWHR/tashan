@@ -276,3 +276,31 @@ than from scraped prose.
 descriptions were either over 160 or under 70. All rewritten to keep the claim and drop the padding.
 Two new suite checks hold it: titles ≤62, descriptions present and ≤165, noindex pages exempt — and
 the check immediately caught my own replacement homepage description at 166. Deploy `c913ce55`.
+
+
+---
+
+## P4 — the polish the first pass never looked at
+
+The original 18 items are closed. These are the surfaces that were never examined at all, which is a
+different thing from being finished. Same rules apply.
+
+- [ ] **19. Mobile and small viewports.** Every verification this session was done at desktop width.
+      The board is a 5-column table, the comparison table is 4 columns, the job grid is 23 cards and
+      the nav is 4 links plus a pill. At 390px at least one of those is wrong. Check the real
+      breakpoints in a real viewport, not by reading the CSS.
+- [ ] **20. Keyboard and screen-reader pass.** The palette (`/`, ⌘K), the job picker buttons, the
+      facet toggles, the sign-in forms, the comparison table. Focus order, visible focus rings,
+      `aria-pressed` correctness, table header association. One unlabelled control was already found
+      and fixed this session by accident — do it deliberately.
+- [ ] **21. Core Web Vitals on a real page.** `tests/test_site.py` holds a TTFB and HTML budget, but
+      nothing measures LCP, CLS or INP. The board renders 100 rows client-side after two fetches;
+      the hero runs a canvas animation. Measure before assuming either is fine.
+- [ ] **22. Walk the whole funnel as a stranger.** Not component checks — one continuous journey:
+      land from a search result on a capability page, follow the audit, hit the offer, reach pricing,
+      come back via `/account` signed out, sign in, and confirm every link on that path resolves and
+      says the same thing. The pieces are verified; the *path* is not.
+- [ ] **23. Spot-check the generated tiers at scale.** 5,788 dossiers, 212 comparisons, 20 role hubs
+      all got template changes tonight. Sample across kinds (npm / registry / plugin / skill, scored
+      and unscored, clean and flagged) and confirm none of tonight's edits produced a broken page for
+      a shape I did not have in front of me.
