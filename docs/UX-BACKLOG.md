@@ -296,7 +296,7 @@ different thing from being finished. Same rules apply.
 - [x] **21. Core Web Vitals on a real page.** `tests/test_site.py` holds a TTFB and HTML budget, but
       nothing measures LCP, CLS or INP. The board renders 100 rows client-side after two fetches;
       the hero runs a canvas animation. Measure before assuming either is fine.
-- [ ] **22. Walk the whole funnel as a stranger.** Not component checks — one continuous journey:
+- [x] **22. Walk the whole funnel as a stranger.** Not component checks — one continuous journey:
       land from a search result on a capability page, follow the audit, hit the offer, reach pricing,
       come back via `/account` signed out, sign in, and confirm every link on that path resolves and
       says the same thing. The pieces are verified; the *path* is not.
@@ -368,3 +368,22 @@ server-rendering the job grid) cost more than 0.02 of CLS is worth. **Left alone
 *Locked instead:* a check that the board still opens as a teaser. At 100 rows it was a 7,500px table
 and 75% of page height — that decision is what bought these numbers, and it is the one a future edit
 could quietly undo.
+
+**Iteration 12 — item 22. The path walks clean; one silent defect found in the middle of it.**
+
+Walked as one continuous session, clicking real links rather than typing URLs:
+1. **Dossier** — all 16 internal links resolve 200, the earned offer is present, nav reads "Sign in".
+2. **Clicked the offer** → `/pricing?ref=…` — `ref` preserved through the navigation, `$6/mo` matches
+   the offer, page says `tashan login`, and says `activate` only in its CI sentence.
+3. **Footer → Account**, arriving cold as someone who closed the tab — two ways in, the key field,
+   both help texts correct, portal and pricing both linked.
+
+**The defect: `?ref=` was unencoded server-side and percent-encoded client-side.** The same
+capability arrived at `/pricing` as `pkg:@ansvar/qatari-law-mcp` from the prerendered page and
+`pkg%3A%40ansvar%2Fqatari-law-mcp` once `capability.js` replaced it — and since capability.js
+replaces the whole dossier, which one a reader clicked depended purely on whether JS had finished.
+Attribution split in half, silently, on the one measurement that says which dossiers earn money.
+
+Both encode now, verified byte-identical on the live page. A check asserts no `?ref=` contains a raw
+`:`, `@` or `/` — and it earned itself immediately: my first fix patched only one of the two call
+sites and the check caught the other 183 pages. Deploy `927e50d3`.

@@ -13,6 +13,7 @@ ponytail: the summary is intentionally a subset of capability.js's render — th
 structured data, so we don't duplicate the whole client template in Python. Keep them loosely in sync.
 """
 import json, os, re, html, sys
+from urllib.parse import quote
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -356,7 +357,7 @@ def security_block(c):
                 '<span class="secrow__d">' + detail + "</span></div>")
 
     def unlock(what):
-        return ('<a class="unlock" href="/pricing.html?ref=' + esc(c["id"]) + '" title="' + esc(what)
+        return ('<a class="unlock" href="/pricing.html?ref=' + quote(c["id"], safe="") + '" title="' + esc(what)
                 + '">unlock detail</a>')
 
     def sec(title, body, sub, aside=""):
@@ -451,7 +452,7 @@ def security_block(c):
                  "You can see " + ("they exist" if many else "it exists") +
                  " above, free, permanently — Pro tells you " + "; ".join(gated) + ".</p>"
                  '<p class="secoffer__cta">'
-                 '<a class="btn btn--primary" href="/pricing.html?ref=' + esc(c["id"]) + '">'
+                 '<a class="btn btn--primary" href="/pricing.html?ref=' + quote(c["id"], safe="") + '">'
                  "Unlock the fix &mdash; $6/mo &rsaquo;</a>"
                  '<a class="link secoffer__alt" href="/start.html">or check your whole config free '
                  "with <code>npx tashan-cli doctor</code></a></p></div>")

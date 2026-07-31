@@ -427,6 +427,17 @@ def main():
           bool(_m) and int(_m.group(1)) <= 25,
           f"TEASER={_m.group(1) if _m else 'MISSING'} — measured CWV assumed a small first paint")
 
+    # The ?ref= on a pricing link is how we learn which dossiers convert. prerender.py and
+    # capability.js both emit it for the same capability, and capability.js REPLACES the prerendered
+    # page — so if they encode differently the same page reports under two keys and attribution
+    # splits in half, silently. Both must percent-encode.
+    _rawref = []
+    for _f in sorted(_glob.glob(os.path.join(ROOT, "web", "capability", "*.html")))[:800]:
+        if _re.search(r'ref=[^"&]*[:@/]', open(_f, encoding="utf-8").read()):
+            _rawref.append(os.path.basename(_f))
+    check("pricing ?ref= is percent-encoded server-side, as it is client-side", not _rawref,
+          f"{len(_rawref)} page(s) e.g. {_rawref[:2]}")
+
     # A 404.html is what makes Pages return a real 404. Without it Pages falls back to serving
     # index.html with status 200, so every mistyped URL was a soft 404 a crawler would happily index.
     check("404.html exists (else Pages soft-404s every unknown URL as 200 + the homepage)",
