@@ -908,6 +908,7 @@ def export(con):
             # full finding list; the page decides what a free reader sees and what needs a licence.
             "sec_advisory_count","sec_max_severity","sec_install_script","sec_permissions",
             "sec_provenance","sec_remote_content","sec_dep_count","sec_scanned_at","sec_advisories",
+            # sec_advisories is fetched so redact_paid() can strip it; it never reaches a public file.
             "npm_license",
             "discord_url","gh_homepage"]
     # Only trust-ranked caps are ever exported (ranked = trust-not-null, capped below), so fetch just the top
@@ -1361,6 +1362,50 @@ def export(con):
         print(f"  official: withheld from {unattributed} plugin(s) vendored in a multi-plugin "
               f"marketplace — a listing is not an authorship claim")
 
+    # ---- what we sell must not be in the file anyone can curl -------------------------------------
+    # The audit's DETAIL is the paid feature. It was being written straight into the public export and
+    # into lookup.json, so /data/capabilities.json served, to anyone, the exact three things the page
+    # offers an "unlock detail" link for:
+    #
+    #   sec_advisories      the GHSA id, severity, summary and fixed version   (1 row today)
+    #   sec_install_script  the literal command a package runs at install time (132 rows)
+    #   sec_permissions     the FULL permission list; free shows only the first (287 rows)
+    #
+    # The paywall was decorative. Nothing was delivering that detail to a paying customer either —
+    # there is no endpoint and no CLI path that reads sec_advisories — so the same curl was both the
+    # leak and the only way to get what Pro advertises.
+    #
+    # Fixed by REMOVAL, not by building a gate: the free tier's copy is unchanged because the free
+    # tier never showed the detail. It names every finding — how many advisories, at what severity,
+    # that an install script exists, that a permission surface exists — which is the firewall this
+    # project promises: the EXISTENCE of a risk is never hidden, only the detail needed to act.
+    # Fields the pipeline needs but no surface renders. They were shipped anyway — 605 KB of a file
+    # that is committed on every nightly run, for data nothing reads. The DB keeps every one of them;
+    # only the public export stops carrying them. (test_firewall.py reads build.py's SCHEMA text, not
+    # this export, so the firewall's list of public-signal columns is unaffected.)
+    UNRENDERED = ("also_via", "retention_note", "in_configs", "npm_versions", "stars_max",
+                  "stars_median", "config_repos", "in_registry", "npm_license", "sec_dep_count")
+
+    def redact_paid(o):
+        for _k in UNRENDERED:
+            o.pop(_k, None)
+        o.pop("sec_advisories", None)
+        # a boolean, not the command. The page only ever asked "does one exist".
+        if o.get("sec_install_script"):
+            o["sec_install_script"] = True
+        perms = o.get("sec_permissions")
+        if perms:
+            try:
+                lst = json.loads(perms) if isinstance(perms, str) else list(perms)
+            except Exception:
+                lst = []
+            o["sec_perm_n"] = len(lst)
+            o["sec_permissions"] = json.dumps(lst[:1])     # the one the free tier already prints
+        return o
+
+    for _c in caps:
+        redact_paid(_c)
+
     # The human label, LAST — after dedup, over the set that actually ships. Run before it, every row
     # collided with the duplicate listing about to be dropped, so survivors were qualified against
     # twins that no longer exist: "Filesystem · modelcontextprotocol", "Memory · modelcontextprotocol".
@@ -1490,7 +1535,7 @@ def export(con):
               "gh_archived", "registry_status", "single_maintainer", "similar_official", "rated",
               # the security audit, so `doctor` can warn about something already installed
               "sec_advisory_count", "sec_max_severity", "sec_install_script", "sec_permissions",
-              "sec_provenance", "sec_remote_content", "sec_scanned_at"]
+              "sec_perm_n", "sec_provenance", "sec_remote_content", "sec_scanned_at"]
     # DELISTED ROWS BELONG IN THE LOOKUP, and nowhere else. A capability the registry pulled for
     # spam/malware/illegal content has no score (compute_scores refuses it one), so it is correctly
     # absent from the board, the bulk export and every hub — we must never recommend it. But `doctor`
@@ -1505,8 +1550,11 @@ def export(con):
         "SELECT id, name, kind, sec_max_severity, sec_advisory_count, sec_advisories, "
         "sec_install_script FROM capabilities WHERE sec_max_severity='MALICIOUS'")]
     by_key, recs = {}, []
+    # `malicious` and `delisted` are fetched fresh from SQL, AFTER caps were redacted — so they
+    # arrived carrying the raw install command and full advisory blob into a public file. Redact on
+    # the way in, where every row passes, rather than at each source.
     for c in caps + delisted + malicious:
-        rec = {k: c[k] for k in LOOKUP if c.get(k) is not None}
+        rec = redact_paid({k: c[k] for k in LOOKUP + ["sec_advisories"] if c.get(k) is not None})
         i = len(recs); recs.append(rec)
         # Every way a config entry can name this thing points at the same record. `identify()` in
         # cli/doctor.mjs yields an npm package, a python package, a docker image or a remote host, so all

@@ -369,11 +369,15 @@
     }
 
     if (perms.length) {
+      // The export ships only the FIRST permission plus sec_perm_n, because the full list is what a
+      // licence buys — it used to ship whole, in a file anyone can curl. perms.length would now
+      // always be 1, so the count comes from the field.
+      var total = c.sec_perm_n || perms.length;
       var first = PERM_LABEL[perms[0]] || perms[0];
       rows.push(secRow(first,
-        perms.length > 1 ? "+" + (perms.length - 1) + " more" : "",
-        perms.length > 1 ? unlock("The full permission list, and which dependency pulled each one in")
-                         : '<span class="secrow__ok">from declared dependencies</span>'));
+        total > 1 ? "+" + (total - 1) + " more" : "",
+        total > 1 ? unlock("The full permission list, and which dependency pulled each one in")
+                  : '<span class="secrow__ok">from declared dependencies</span>'));
     } else {
       rows.push(secRow("No permission surface detected", "",
         '<span class="secrow__ok">declares no dependency that reaches files, shell or network</span>'));

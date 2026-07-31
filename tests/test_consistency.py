@@ -360,5 +360,54 @@ for p_ in pages:
 ok(f"{n_scanned} scanned + {n_unscanned} unscanned dossiers state their security result truthfully",
    not sec_bad, "; ".join(f"{k} x{v} — {sec_ex[k]}" for k, v in sec_bad.most_common(3)))
 
+# ---- 8. what we sell must not be in the file anyone can curl -------------------------------------
+# The audit's DETAIL is the paid feature, and it was being written straight into
+# /data/capabilities.json and /data/lookup.json — so the "unlock detail" link sat next to data a
+# visitor could already read with curl. Worse, nothing DELIVERED it to a paying customer: no endpoint
+# and no CLI path reads sec_advisories, so the leak was also the only way to get what Pro advertises.
+#
+# The free tier is unchanged and must stay that way: every finding's EXISTENCE is stated in full —
+# how many advisories, at what severity, that an install script exists, that a permission surface
+# exists. Only the detail needed to act is withheld. That is this project's stated firewall.
+PAID = {
+    "sec_advisories": "the advisory id, severity and fixed version",
+    "sec_install_script": "the literal command run at install time (a bool is fine, a string is not)",
+}
+for rel in ("data/capabilities.json", "data/index.json", "data/lookup.json"):
+    d = load(rel)
+    if d is None:
+        continue
+    rows = d.get("records") if isinstance(d, dict) and "records" in d else caps_of(d)
+    leaks = collections.Counter()
+    ex = {}
+    for r in rows:
+        if r.get("sec_advisories"):
+            leaks["sec_advisories"] += 1
+            ex.setdefault("sec_advisories", str(r["sec_advisories"])[:60])
+        if isinstance(r.get("sec_install_script"), str):
+            leaks["sec_install_script"] += 1
+            ex.setdefault("sec_install_script", r["sec_install_script"][:60])
+        # free shows the FIRST permission and a count; shipping the whole list gives away the rest
+        p_ = r.get("sec_permissions")
+        if p_:
+            try:
+                lst = json.loads(p_) if isinstance(p_, str) else list(p_)
+            except Exception:
+                lst = []
+            if len(lst) > 1:
+                leaks["sec_permissions"] += 1
+                ex.setdefault("sec_permissions", str(lst)[:60])
+    ok(f"{rel} carries no paid detail",
+       not leaks,
+       "; ".join(f"{k} on {n} row(s) — {ex[k]} ({PAID.get(k, 'the full permission list')})"
+                 for k, n in leaks.most_common()))
+
+# ...and the free claim must still be intact, or the fix above quietly became a downgrade
+idx_rows = caps_of(load("data/index.json"))
+free_signal = sum(1 for r in idx_rows if r.get("sec_advisory_count") is not None
+                  or r.get("sec_install_script") or r.get("sec_permissions"))
+ok(f"the free tier still names a finding on {free_signal} board rows", free_signal > 0,
+   "redaction removed the free signal too")
+
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)
