@@ -1,0 +1,32 @@
+# Cloudflare Pages configuration for tashan.
+#
+# Bindings live HERE, not only in the dashboard, so a deploy is reproducible and reviewable. The
+# paid tier depends entirely on TASHAN_KV: /api/history and /api/security both read from it, and
+# without the binding they return 503 — which is the correct failure (a paywall must fail closed),
+# but it means a customer who has paid gets nothing. Losing this file loses the paid product.
+#
+# WHAT IS A SECRET AND WHAT IS NOT:
+#   POLAR_ORG_ID          NOT a secret. It is the public organisation id, already shipped inside
+#                         cli/tashan.mjs as a default, and Polar's licence-validation endpoint is
+#                         public and keyless by design. It is a var.
+#   POLAR_WEBHOOK_SECRET  A real secret. Set with:
+#                             npx wrangler@3 pages secret put POLAR_WEBHOOK_SECRET --project-name tashan
+#                         functions/api/polar.js fails closed without it, so billing webhooks 403
+#                         until it is set — and Polar disables an endpoint after 10 failures.
+#
+# The Polar ORGANISATION API TOKEN is deliberately absent: nothing in this codebase needs it. Licence
+# validation and the customer portal both run against public endpoints.
+
+name = "tashan"
+pages_build_output_dir = "web"
+compatibility_date = "2026-07-31"
+
+[vars]
+POLAR_ORG_ID = "caa0fc1b-2f7f-4e52-864a-c71e878d125d"
+
+# The only store the paid tier has. `hist:<bucket>` shards are written by pipeline/push_history.py
+# and `sec:<bucket>` by pipeline/push_security.py, both using the same 64-bucket character-sum
+# arithmetic that functions/api/{history,security}.js mirror.
+[[kv_namespaces]]
+binding = "TASHAN_KV"
+id = "1f68077762cc4fdb938d3dcf35774c69"

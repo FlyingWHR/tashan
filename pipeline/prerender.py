@@ -191,7 +191,7 @@ def faq(c):
     return qa
 
 def jsonld(c):
-    n = disp(c); url = BASE + "/capability/" + c["slug"] + ".html"
+    n = disp(c); url = BASE + chrome.canon("/capability/" + c["slug"] + ".html")
     app = {"@context":"https://schema.org","@type":"SoftwareApplication","name": n,
            "description": desc_for(c), "applicationCategory":"DeveloperApplication",
            "operatingSystem":"Cross-platform","url": url}
@@ -397,7 +397,7 @@ def security_block(c):
 
 
 def page(c, gen):
-    n = disp(c); url = BASE + "/capability/" + c["slug"] + ".html"
+    n = disp(c); url = BASE + chrome.canon("/capability/" + c["slug"] + ".html")
     title = n + " — tashan score " + (str(c["tashan_score"]) if c.get("tashan_score") is not None else "—") + " · tashan"
     d = esc(desc_for(c))
     return ("<!doctype html>\n<html lang=\"en\">\n<head>\n"
@@ -464,9 +464,9 @@ def sitemap(caps):
     urls = ["/", "/start.html", "/methodology.html", "/about.html", "/pricing.html", "/requests.html",
             "/terms.html", "/privacy.html", "/refunds.html", "/support.html", "/for-hosts.html",
             "/browse.html"]
-    static = "".join("  <url><loc>" + BASE + u + "</loc></url>\n" for u in urls)
-    caps_x = "".join('  <url><loc>' + BASE + "/capability/" + c["slug"] + '.html</loc>'
-                     '<changefreq>weekly</changefreq></url>\n' for c in caps)
+    static = "".join("  <url><loc>" + BASE + chrome.canon(u) + "</loc></url>\n" for u in urls)
+    caps_x = "".join('  <url><loc>' + BASE + chrome.canon("/capability/" + c["slug"] + ".html")
+                     + '</loc><changefreq>weekly</changefreq></url>\n' for c in caps)
     # generated hubs + learn/agents pages if present. These are real indexable pages; leaving them out
     # of the sitemap is how a whole content tier stays invisible to crawlers.
     extra = ""
@@ -475,7 +475,7 @@ def sitemap(caps):
         if os.path.isdir(d):
             for f in sorted(os.listdir(d)):
                 if f.endswith(".html"):
-                    extra += "  <url><loc>" + BASE + "/" + sub + "/" + f + "</loc></url>\n"
+                    extra += "  <url><loc>" + BASE + chrome.canon("/" + sub + "/" + f) + "</loc></url>\n"
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + static + caps_x + extra + "</urlset>\n")
     open(os.path.join(ROOT, "web", "sitemap.xml"), "w").write(xml)

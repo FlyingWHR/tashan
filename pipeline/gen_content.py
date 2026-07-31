@@ -60,7 +60,7 @@ def head(a):
         '<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
         "<title>" + esc(a["title"]) + " · tashan</title>\n"
         '<meta name="description" content="' + esc(a["desc"]) + '">\n'
-        '<meta name="theme-color" content="#0b0b0a">\n<link rel="canonical" href="' + url + '">\n'
+        '<meta name="theme-color" content="#0b0b0a">\n<link rel="canonical" href="' + chrome.canon(url) + '">\n'
         '<meta property="og:type" content="article">\n<meta property="og:title" content="' + esc(a["title"]) + '">\n'
         '<meta property="og:description" content="' + esc(a["desc"]) + '">\n<meta property="og:url" content="' + url + '">\n'
         '<meta property="og:image" content="https://tashan.sh/assets/og.png">\n'

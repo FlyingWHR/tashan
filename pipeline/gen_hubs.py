@@ -69,11 +69,11 @@ def head(title, desc, url, lds):
         "<title>" + esc(title) + "</title>\n"
         '<meta name="description" content="' + esc(desc) + '">\n'
         '<meta name="theme-color" content="#0b0b0a">\n'
-        '<link rel="canonical" href="' + url + '">\n'
+        '<link rel="canonical" href="' + chrome.canon(url) + '">\n'
         '<meta property="og:type" content="website">\n'
         '<meta property="og:title" content="' + esc(title) + '">\n'
         '<meta property="og:description" content="' + esc(desc) + '">\n'
-        '<meta property="og:url" content="' + url + '">\n'
+        '<meta property="og:url" content="' + chrome.canon(url) + '">\n'
         '<meta property="og:image" content="' + BASE + '/assets/og.png">\n'
         '<meta property="og:image:width" content="1200">\n'
         '<meta property="og:image:height" content="630">\n'

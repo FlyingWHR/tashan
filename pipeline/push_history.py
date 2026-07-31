@@ -63,8 +63,33 @@ def put(bucket, payload):
         return json.load(r).get("success", False)
 
 
+def bulk(data, path):
+    """Write the shards as a wrangler kv:bulk payload instead of calling the REST API.
+
+    push via the REST API needs CF_API_TOKEN, which is a SEPARATE credential from the OAuth token
+    `wrangler login` already stores. Rather than ask for a second secret just to move data we
+    already have, emit the file wrangler can upload with the auth it holds:
+
+        python3 pipeline/push_history.py --bulk /tmp/hist.json
+        npx wrangler@3 kv:bulk put /tmp/hist.json --namespace-id <id>
+    """
+    out = [{"key": "hist:" + b, "value": json.dumps(v, separators=(",", ":"))}
+           for b, v in data.items()]
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(out, fh)
+    kb = os.path.getsize(path) / 1024
+    print(f"  {len(out)} shard(s) -> {path}  ({kb:,.0f} KB)")
+    print(f"  now: npx wrangler@3 kv:bulk put {path} --namespace-id <TASHAN_KV id>")
+    return 0
+
+
 def main():
     dry = "--dry-run" in sys.argv
+    if "--bulk" in sys.argv:
+        con = sqlite3.connect(DB)
+        data = shards(con)
+        con.close()
+        return bulk(data, sys.argv[sys.argv.index("--bulk") + 1])
     if not dry and not (ACCOUNT and NAMESPACE and TOKEN):
         sys.exit("set CF_ACCOUNT_ID, CF_KV_NAMESPACE_ID and CF_API_TOKEN (or pass --dry-run)")
     con = sqlite3.connect(DB)

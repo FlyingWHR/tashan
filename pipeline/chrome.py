@@ -55,6 +55,25 @@ TAGLINE = ("The measured layer for AI capabilities — MCP servers and agent ski
            "ranked on public evidence.")
 
 
+def canon(path):
+    """The URL we DECLARE must be the URL that is SERVED.
+
+    Cloudflare Pages serves an uploaded `foo.html` at `/foo` and 308-redirects `/foo.html` to it.
+    Every canonical tag, og:url and sitemap entry we emitted ended in `.html`, so all 5,874 indexed
+    URLs pointed at a redirect — and a canonical naming a redirecting URL is a conflicting signal to
+    exactly the crawlers this project's whole distribution depends on.
+
+    Internal href="…​.html" links are left alone: they 308 once, browsers cache it, and rewriting
+    every link across four generators and fifteen pages is a far larger change than aligning the
+    three signals that search actually reads.
+    """
+    if path.endswith("/index.html"):
+        return path[: -len("index.html")]
+    if path == "/index.html":
+        return "/"
+    return path[:-5] if path.endswith(".html") else path
+
+
 def nav_html(current=None):
     links = "".join(
         f'<a href="{h}"{" aria-current=\"page\"" if h == current else ""}>{l}</a>' for h, l in NAV)

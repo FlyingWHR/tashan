@@ -31,6 +31,33 @@ PAGE_TTFB_MAX = 0.20            # seconds, local server
 NO_RUNTIME_BIG_EXPORT = "capabilities.json"  # must never be fetched at runtime
 
 results = []  # (ok, name, detail)
+
+# THE URL WE DECLARE MUST BE THE URL THAT IS SERVED. Cloudflare Pages serves an uploaded `foo.html`
+# at `/foo` and 308-redirects `/foo.html`. Every canonical, og:url and sitemap entry we emitted ended
+# in `.html`, so all 5,874 indexed URLs named a redirect — a conflicting signal to exactly the
+# crawlers this project's distribution depends on. Caught only by deploying and curling the result.
+def _check_declared_urls():
+    import glob as _g
+    bad_canon, bad_loc = [], []
+    for f in (_g.glob(os.path.join(WEB, "*.html")) + _g.glob(os.path.join(WEB, "category", "*.html"))
+              + _g.glob(os.path.join(WEB, "capability", "*.html"))[:200]):
+        src = open(f, encoding="utf-8").read()
+        for m in re.finditer(r'(?:rel="canonical" href|property="og:url" content)="([^"]+)"', src):
+            if m.group(1).endswith(".html"):
+                bad_canon.append(os.path.basename(f))
+                break
+    sm = os.path.join(WEB, "sitemap.xml")
+    if os.path.exists(sm):
+        bad_loc = [u for u in re.findall(r"<loc>([^<]+)</loc>", open(sm, encoding="utf-8").read())
+                   if u.endswith(".html")]
+    results.append((not bad_canon,
+                    "no canonical/og:url ends in .html (Pages 308s those to the clean URL)",
+                    f"{len(bad_canon)} page(s), e.g. {bad_canon[:3]}"))
+    results.append((not bad_loc, "no sitemap <loc> ends in .html",
+                    f"{len(bad_loc)} URL(s), e.g. {bad_loc[:2]}"))
+
+
+_check_declared_urls()
 def check(name, ok, detail=""):
     results.append((bool(ok), name, detail))
     print(("  ok  " if ok else " FAIL ") + name + (("  — " + detail) if detail and not ok else ""))
@@ -172,7 +199,9 @@ def static_checks():
     print("\n# sitemap")
     sm = open(os.path.join(WEB, "sitemap.xml"), encoding="utf-8").read()
     locs = set(re.findall(r"<loc>https://tashan\.sh(/capability/[^<]+)</loc>", sm))
-    sm_slugs = {u.rsplit("/", 1)[-1][:-5] for u in locs}
+    # The sitemap now declares CLEAN urls (Pages 308s the .html form), so strip the extension only
+    # if it is still there rather than blindly chopping five characters off every slug.
+    sm_slugs = {u.rsplit("/", 1)[-1].removesuffix(".html") for u in locs}
     check("sitemap lists exactly the prerendered pages", sm_slugs == have,
           f"sitemap {len(sm_slugs)} vs pages {len(have)}")
 

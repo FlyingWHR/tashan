@@ -104,10 +104,13 @@ for sub in ("category", "skills", "task"):
     d = os.path.join(WEB, sub)
     if os.path.isdir(d):
         files = [f for f in os.listdir(d) if f.endswith(".html")]
-        miss = [f for f in files if ("/" + sub + "/" + f) not in sm]
+        # sitemap <loc>s are extensionless; compare on the clean path (index.html -> the directory)
+        def _clean(f):
+            return "/" + sub + "/" + ("" if f == "index.html" else f.removesuffix(".html"))
+        miss = [f for f in files if _clean(f) not in sm]
         check("sitemap lists every /%s/ page" % sub, not miss, "%d missing" % len(miss))
 check("sitemap has no orphan capability URLs",
-      all(("/capability/" + s + ".html") in sm for s in list(slugs)[:50]))
+      all(("/capability/" + s) in sm for s in list(slugs)[:50]))
 
 print()
 print("# robots / AI crawlers")
