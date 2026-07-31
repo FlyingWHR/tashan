@@ -74,10 +74,10 @@ Both must reach Pro without ever being asked to be a database administrator of t
 
 ### P1 — make Pro felt, and sell it where the value is
 
-- [ ] **6. Pro visual identity.** Nav mark, `/account` header, `doctor` output, and the favicon-adjacent
+- [~] **6. Pro visual identity.** (nav mark shipped; `doctor` + `/account` header remain) Nav mark, `/account` header, `doctor` output, and the favicon-adjacent
       brand lockup. Must read as status, not as a badge we award ourselves. Accent colour is reserved
       for measured data — pick a treatment that does not break that rule.
-- [ ] **7. Upsell in the security block** (`prerender.py`) — the one place the reader has a problem we
+- [x] **7. Upsell in the security block** (`prerender.py`) — the one place the reader has a problem we
       solve. Never hide that a finding EXISTS. Offer only the part Pro buys: which advisory, the
       fixed version, what the install script runs. One offer, per page, earned.
 - [ ] **8. Upsell on the Index** — only against a real state (e.g. the board filtered to
@@ -158,3 +158,20 @@ for measured data, so status uses a hairline outline instead.
 Found and fixed while verifying: `.nav__acct` is a fixed 2rem circle, so the new pill squeezed the
 account glyph to `width: 0`. Guarded at the class level with `flex:none` on the glyph rather than
 patching this one instance. Deploys `ecc1290d`, `8264126a`.
+
+**Iteration 3 — item 7 shipped.**
+The security audit now carries an EARNED offer: rendered only where detail is genuinely gated
+(advisory / install script / remote content), naming the withheld part for that specific capability
+and the count. **276 of 5,788 pages carry it; 1,121 scanned-and-clean pages carry none**, and the
+sub-line no longer promises "detail needed to act" on a page where nothing is withheld. Two new
+checks in `tests/test_site.py` hold the rule: no upsell where nothing is gated, and every offer names
+a finding the page already showed for free.
+
+`capability.js::revealPaid` removes the offer entirely once `/api/security` answers — a customer must
+never be shown an ad for the thing they already bought.
+
+**The bug worth remembering:** the offer shipped server-side first and was *invisible in the browser*.
+`capability.js` replaces the whole prerendered dossier via `el.innerHTML`, so anything the server
+renders inside the audit that the client does not render simply disappears for every reader with JS.
+Caught only by looking at the live page — the served HTML contained `.secoffer` while the DOM did
+not. Same one-concept-two-copies failure this codebase keeps finding. Deploys `5b443f3a`, `ab76c793`.

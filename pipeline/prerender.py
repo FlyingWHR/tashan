@@ -422,9 +422,41 @@ def security_block(c):
                                        "its source") + "</span>",
         "" if c.get("sec_provenance") else "secrow--warn"))
 
-    return sec("Security audit", '<div class="sec">' + "".join(rows) + "</div>",
-               "Every finding is shown in full. A licence adds the detail needed to act on it — "
-               "which advisory, what the install script does, the version that fixes it.",
+    # THE OFFER IS EARNED, PER PAGE, OR IT IS NOT MADE. Count only findings whose ACTIONABLE detail
+    # is actually gated on this capability. A clean package has nothing to unlock, so it carries no
+    # pitch at all — a standing banner on all 5,788 pages is the thing readers learn to stop seeing,
+    # and pitching a fix for a package with nothing wrong is a lie about the product.
+    gated = []
+    if n:
+        gated.append("which advisor" + ("y and the version that fixes it" if n == 1
+                                        else "ies, and the versions that fix them"))
+    if c.get("sec_install_script"):
+        gated.append("the exact command it runs at install time")
+    if c.get("sec_remote_content"):
+        gated.append("what third-party content it can pull into your agent")
+
+    sub = ("Every finding is shown in full. A licence adds the detail needed to act on it — "
+           "which advisory, what the install script does, the version that fixes it."
+           if gated else
+           # Nothing is withheld here, so do not imply that something is.
+           "Every finding is shown in full. Nothing on this page is behind a licence — there is no "
+           "advisory to name and no install script to read.")
+
+    offer = ""
+    if gated:
+        many = len(gated) > 1
+        offer = ('<div class="secoffer">'
+                 '<p class="secoffer__h"><b>' + str(len(gated)) + " finding" + ("s" if many else "") +
+                 " here " + ("have" if many else "has") + " detail behind a licence.</b> "
+                 "You can see " + ("they exist" if many else "it exists") +
+                 " above, free, permanently — Pro tells you " + "; ".join(gated) + ".</p>"
+                 '<p class="secoffer__cta">'
+                 '<a class="btn btn--primary" href="/pricing.html?ref=' + esc(c["id"]) + '">'
+                 "Unlock the fix &mdash; $6/mo &rsaquo;</a>"
+                 '<a class="link secoffer__alt" href="/start.html">or check your whole config free '
+                 "with <code>npx tashan-cli doctor</code></a></p></div>")
+
+    return sec("Security audit", '<div class="sec">' + "".join(rows) + "</div>" + offer, sub,
                "scanned " + (c.get("sec_scanned_at") or "")[:10])
 
 

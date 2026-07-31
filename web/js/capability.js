@@ -390,6 +390,8 @@
     if (d.install_script) {
       swap(/install time/i, '<code class="paid">' + esc(d.install_script) + "</code>");
     }
+    var offer = document.querySelector(".secoffer");
+    if (offer) offer.remove();
     var sub = document.querySelector(".capsec__sub");
     if (sub) sub.innerHTML = "Full detail shown — your licence is active on this browser.";
   }
@@ -456,9 +458,36 @@
         : "no attestation — the published artifact cannot be traced to its source") + "</span>",
       c.sec_provenance ? "" : "secrow--warn"));
 
-    return section("Security audit", '<div class="sec">' + rows.join("") + '</div>',
-      "Every finding is shown in full. A licence adds the detail needed to act on it — which " +
-      "advisory, what the install script does, the version that fixes it.",
+    // MIRROR OF prerender.py::security_block's offer, and it has to be — this function REPLACES the
+    // prerendered dossier wholesale via el.innerHTML, so anything the server renders inside the
+    // audit and this does not simply disappears for every reader with JS. The offer shipped
+    // server-side first and was invisible in the browser for exactly that reason.
+    var gated = [];
+    if (n) gated.push(n === 1 ? "which advisory and the version that fixes it"
+                              : "which advisories, and the versions that fix them");
+    if (c.sec_install_script) gated.push("the exact command it runs at install time");
+    if (c.sec_remote_content) gated.push("what third-party content it can pull into your agent");
+
+    var offer = "";
+    if (gated.length) {
+      var many = gated.length > 1;
+      offer = '<div class="secoffer">' +
+        '<p class="secoffer__h"><b>' + gated.length + " finding" + (many ? "s" : "") + " here " +
+        (many ? "have" : "has") + " detail behind a licence.</b> You can see " +
+        (many ? "they exist" : "it exists") + " above, free, permanently — Pro tells you " +
+        gated.join("; ") + ".</p>" +
+        '<p class="secoffer__cta"><a class="btn btn--primary" href="' + PRICING + "?ref=" +
+        encodeURIComponent(CAP_ID) + '">Unlock the fix &mdash; $6/mo &rsaquo;</a>' +
+        '<a class="link secoffer__alt" href="/start.html">or check your whole config free with ' +
+        "<code>npx tashan-cli doctor</code></a></p></div>";
+    }
+
+    return section("Security audit", '<div class="sec">' + rows.join("") + '</div>' + offer,
+      gated.length
+        ? "Every finding is shown in full. A licence adds the detail needed to act on it — which " +
+          "advisory, what the install script does, the version that fixes it."
+        : "Every finding is shown in full. Nothing on this page is behind a licence — there is no " +
+          "advisory to name and no install script to read.",
       "scanned " + fdate(c.sec_scanned_at));
   }
 

@@ -985,3 +985,17 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .nav__acct.is-pro { width: auto; padding: 0 .4rem 0 .5rem; border-radius: 999px;
   border-color: var(--hairline); }
 .nav__acct.is-pro:hover .nav__pro { border-color: var(--text-dim); }
+
+
+/* ── the earned offer inside the security audit ───────────────────────────────────────────
+   Rendered ONLY when this capability actually has gated detail — a clean package carries no pitch,
+   because a standing banner on 5,788 pages is the thing readers train themselves not to see, and
+   offering a fix for something with nothing wrong is a lie about the product. capability.js removes
+   this entirely once /api/security answers, so a customer never sees an ad for what they bought. */
+.secoffer { margin-top: var(--sp-6); padding: var(--sp-5) var(--sp-6);
+  border: 1px solid var(--jade-line); background: var(--jade-dim); border-radius: var(--radius); }
+.secoffer__h { margin: 0 0 var(--sp-4); color: var(--text-dim); font-size: var(--fs-base); }
+.secoffer__h b { color: var(--text); }
+.secoffer__cta { display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; margin: 0; }
+.secoffer__alt { font-size: var(--fs-sm); color: var(--text-dim); }
+.secoffer__alt code { font-size: var(--fs-xs); }

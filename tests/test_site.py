@@ -365,6 +365,30 @@ def main():
     check("no inline style attributes (CSP style-src 'self' blocks them in production)",
           not _inline, f"{len(_inline)} file(s): " + "; ".join(_inline[:4]))
 
+    # ---- the offer must be EARNED, page by page ------------------------------------------------------
+    # A pitch on a page with nothing wrong is a lie about the product, and a standing banner across
+    # 5,788 pages is the thing readers train themselves not to see. The offer may appear ONLY where
+    # detail is genuinely withheld — which the page itself states in its own sub-line.
+    _unearned = []
+    for _f in sorted(_glob.glob(os.path.join(ROOT, "web", "capability", "*.html")))[:1500]:
+        _s = open(_f, encoding="utf-8").read()
+        _clean = "Nothing on this page is behind a licence" in _s or "Not scanned yet" in _s
+        if _clean and "secoffer" in _s:
+            _unearned.append(os.path.basename(_f))
+    check("no upsell on a capability with nothing gated", not _unearned,
+          f"{len(_unearned)} page(s): " + ", ".join(_unearned[:3]))
+
+    # And the existence of a finding is never itself gated — that would make the audit a hostage
+    # situation rather than a measurement.
+    _hidden = [os.path.basename(_f) for _f in
+               sorted(_glob.glob(os.path.join(ROOT, "web", "capability", "*.html")))[:1500]
+               if "secoffer" in open(_f, encoding="utf-8").read()
+               and "known advisor" not in open(_f, encoding="utf-8").read()
+               and "install time" not in open(_f, encoding="utf-8").read()
+               and "remote content" not in open(_f, encoding="utf-8").read().lower()]
+    check("every offer names a finding the page already showed for free", not _hidden,
+          f"{len(_hidden)}: " + ", ".join(_hidden[:3]))
+
     # A 404.html is what makes Pages return a real 404. Without it Pages falls back to serving
     # index.html with status 200, so every mistyped URL was a soft 404 a crawler would happily index.
     check("404.html exists (else Pages soft-404s every unknown URL as 200 + the homepage)",
