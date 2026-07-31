@@ -856,3 +856,10 @@ h1, h2,
   .acct__row { grid-template-columns: 1fr; gap: .15rem; }
   .acct__acts .btn { flex:1; justify-content:center; }
 }
+
+/* The canonical id. It led the dossier's metadata line — one long restatement of the <h1> right
+   above it, with the same string a third time in the install command below. Three copies of one
+   name across the most valuable screen the page has. It is a machine key, so it sits with the
+   other machine affordances now, selectable and quiet. */
+.capid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--text-faint);
+  user-select:all; word-break:break-all; }

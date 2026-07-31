@@ -167,6 +167,7 @@ def summary(c):
     if c.get("npm_pkg"): links.append('<a class="link" href="https://www.npmjs.com/package/' + esc(c["npm_pkg"]) + '">npm ↗</a>')
     if c.get("source_repo"): links.append('<a class="link" href="https://github.com/' + esc(c["source_repo"]) + '">source ↗</a>')
     if c.get("homepage"): links.append('<a class="link" href="' + esc(c["homepage"]) + '" rel="noopener">homepage ↗</a>')
+    links.append('<span class="capid" title="the id the CLI and API use">' + esc(c["id"]) + '</span>')
     # the flywheel edge: every capability points at its category hub, which points back at its siblings.
     # Without this the hubs are orphans that only the sitemap knows about.
     cat = ('<p class="mono" style="font-size:var(--fs-sm)"><b>Category:</b> <a class="link" href="/category/'
@@ -199,7 +200,11 @@ def summary(c):
             'one, and how it measures. $6/mo.</div>') if dying else ""
     return ('<div class="cap-hd"><a class="back" href="/">&lsaquo; The Index</a>'
             '<h1>' + esc(n) + '</h1>'
-            '<div class="cid">' + esc(c["id"]) + ' · <span class="tag">' + esc(c.get("kind") or "") + '</span>' +
+            # The id used to lead this line, one long restatement of the <h1> right above it —
+            # "sequential-thinking" followed by "pkg:@modelcontextprotocol/server-sequential-thinking",
+            # with the same string a third time in the install command below. It is a machine key, so
+            # it moved down to the links row where someone reaching for it is already looking.
+            '<div class="cid"><span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
             + works + cat + task + install + verdict + swap +

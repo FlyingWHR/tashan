@@ -51,7 +51,9 @@
       '<div class="cap-hd">' +
         '<a class="back" href="/">&lsaquo; The Index</a>' +
         '<h1>' + esc(pretty(c.name)) + vitalityChip(c) + '</h1>' +
-        '<div class="cid">' + esc(c.id) + ' &nbsp;·&nbsp; <span class="tag">' + esc(kindLabel(c.kind)) + '</span>' +
+        // The id led this line and was a longer restatement of the <h1> directly above it, with the
+        // same string a third time in the install command. Machine key -> links row; see prerender.py.
+        '<div class="cid"><span class="tag">' + esc(kindLabel(c.kind)) + '</span>' +
           (c.category && CAT[c.category] ? ' <a class="cattag cattag--link" href="/?cat=' + esc(c.category) + '">' + esc(CAT[c.category]) + '</a>' : '') +
           (officialOrg(c) ? ' <span class="official">✓ ' + esc(officialOrg(c)) + ' · official</span>' : '') +
           (c.single_maintainer ? ' <span class="riskflag" title="One primary maintainer — a bus-factor risk">◑ single-maintainer</span>' : '') +
@@ -216,6 +218,7 @@
     var links = [];
     if (c.npm_pkg) links.push('<a class="link" href="https://www.npmjs.com/package/' + encodeURIComponent(c.npm_pkg) + '">npm ↗</a>');
     if (c.source_repo) links.push('<a class="link" href="https://github.com/' + enc(c.source_repo) + '">source ↗</a>');
+    links.push('<span class="capid" title="the id the CLI and API use">' + esc(c.id) + '</span>');
     var linksHTML = links.length ? '<span class="install__links">' + links.join(' &nbsp;·&nbsp; ') + '</span>' : '';
 
     if (c.kind === "skill") {
