@@ -285,7 +285,7 @@ the check immediately caught my own replacement homepage description at 166. Dep
 The original 18 items are closed. These are the surfaces that were never examined at all, which is a
 different thing from being finished. Same rules apply.
 
-- [ ] **19. Mobile and small viewports.** Every verification this session was done at desktop width.
+- [x] **19. Mobile and small viewports.** Every verification this session was done at desktop width.
       The board is a 5-column table, the comparison table is 4 columns, the job grid is 23 cards and
       the nav is 4 links plus a pill. At 390px at least one of those is wrong. Check the real
       breakpoints in a real viewport, not by reading the CSS.
@@ -304,3 +304,23 @@ different thing from being finished. Same rules apply.
       all got template changes tonight. Sample across kinds (npm / registry / plugin / skill, scored
       and unscored, clean and flagged) and confirm none of tonight's edits produced a broken page for
       a shape I did not have in front of me.
+
+**Iteration 9 — item 19. Mobile checked in a real 390px viewport, not by reading CSS.**
+
+*What held.* No horizontal page scroll anywhere. Nothing overflows outside its designated scroller —
+the board table and the comparison table both scroll inside their own containers, which is the
+pattern the rest of the site already uses. Role cards reflow to 2 per row. The comparison table's
+"what it means" column correctly drops out below 46rem.
+
+*What was broken.* **55 tap targets under 32px, including the header links at 22px** — which fails
+WCAG 2.5.8's 24px minimum outright, on the primary navigation, on every page. Fixed with
+`padding-block` rather than type size: the hit area grew to 42px inside a nav bar that was already
+tall enough, so nothing moved visually. Brand likewise.
+
+*What was deliberately left.* Left-rail rows stay at 30px — that clears the 24px minimum, and the
+rail height has already been tuned against the viewport once (at 33px the two lists ran past the
+fold and reintroduced the nested scrollbar the truncation exists to remove). Board row links are
+18px but the whole 64px row is the click target, which is the real affordance. `Methodology` is
+`display:none` in the mobile header by an existing documented decision — longest label, one tap away
+in the footer, and dropping it keeps brand + three links + glyph on one row down to 375px. Verified
+that reasoning still holds; the padding change is vertical only. Deploy `b184454c`.

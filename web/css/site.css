@@ -1022,3 +1022,15 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .cmp__insth { color: var(--text-faint); font-size: var(--fs-xs); letter-spacing: .1em;
   text-transform: uppercase; margin: 0 0 .4rem; }
 @media (max-width: 46rem) { .cmp__n { display: none; } }
+
+
+/* ── touch targets ───────────────────────────────────────────────────────────────────────
+   Measured on a real 390px viewport: the header links were 22px tall, which fails WCAG 2.5.8's
+   24px minimum outright and is roughly half of what a thumb wants. The fix is hit area, NOT type
+   size — padding-block grows the tappable box inside a nav bar that is already 65px tall, so
+   nothing moves visually and the text stays where it was. Same for the brand.
+   The left-rail rows stay at 30px: that clears the 24px minimum, and the rail height was tuned
+   against the viewport once already (at 33px rows the two lists ran past the fold and
+   reintroduced the nested scrollbar the truncation exists to remove). */
+.nav__links a { padding-block: .62rem; }
+.brand { padding-block: .5rem; }
