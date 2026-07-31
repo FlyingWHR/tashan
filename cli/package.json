@@ -1,9 +1,10 @@
 {
   "name": "tashan-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The measured layer for AI capabilities — search, rank, and install MCP servers & agent skills from your terminal.",
   "type": "module",
   "bin": {
+    "tashan-cli": "tashan.mjs",
     "tashan": "tashan.mjs",
     "tashan-mcp": "mcp.mjs"
   },

@@ -489,3 +489,25 @@ console.log("ok — the browser launch passes the URL on every platform");
     "sanity: the symlink path and the real path differ, which is why === was wrong");
 }
 console.log("ok — the entry check survives npm's symlinked bin");
+
+// ---- `npx <package>` must resolve a bin -------------------------------------------------------
+// npx resolves a bin NAMED AFTER THE PACKAGE. tashan-cli@0.1.0 shipped two bins — `tashan` and
+// `tashan-mcp` — and neither matched, so npx exited "could not determine executable to run" for
+// every documented `npx tashan-cli …` invocation: the README, the pricing page, start.html, and the
+// install block on 5,788 capability pages. `npx -p tashan-cli tashan` worked, which is why every
+// local test passed. The package was fine; only the one command anybody would actually type was not.
+{
+  const { readFileSync } = await import("node:fs");
+  const { join, dirname } = await import("node:path");
+  const { fileURLToPath } = await import("node:url");
+  const pkg = JSON.parse(readFileSync(
+    join(dirname(fileURLToPath(import.meta.url)), "package.json"), "utf8"));
+
+  assert.ok(pkg.bin[pkg.name],
+    `package "${pkg.name}" declares no bin of that name — npx ${pkg.name} cannot resolve one ` +
+    `(bins: ${Object.keys(pkg.bin).join(", ")})`);
+  for (const [name, file] of Object.entries(pkg.bin)) {
+    assert.ok(pkg.files.includes(file), `bin ${name} -> ${file}, which is not in "files"`);
+  }
+}
+console.log("ok — npx <package-name> resolves a bin, and every bin ships");
