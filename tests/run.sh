@@ -68,6 +68,10 @@ python3 tests/test_expertise.py || fail=1
 echo; echo "── icons (visible at ship size) ───────────────"
 python3 tests/test_icons.py || fail=1
 
+# 3c1b. the category is a model's guess, not a derivation — measure it, and fail on a dead class
+echo; echo "── classifier (macro recall, no dead class) ───"
+python3 tests/test_classify.py || fail=1
+
 # 3c2. the nav existed in 18 copies and had drifted into 6 variants — one definition now
 echo; echo "── chrome (one navigation) ────────────────────"
 python3 tests/test_chrome.py || fail=1

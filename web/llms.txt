@@ -2,7 +2,7 @@
 
 > The intelligence layer for AI capabilities. tashan scores MCP servers and agent skills on public evidence — npm downloads and publish cadence, GitHub activity, registry status, and how often a server appears in real public agent configs. Nobody can pay to change a score, rank, or listing; payment buys depth and tooling only.
 
-Generated: 2026-07-30. Capabilities tracked: 5788 ranked. Every number below is re-derivable from public sources.
+Generated: 2026-07-31. Capabilities tracked: 5788 ranked. Every number below is re-derivable from public sources.
 
 ## How the score works
 
@@ -71,21 +71,21 @@ Every npm-published capability is checked against OSV.dev using the version you 
 
 ## Categories
 
-- [Browser & Web](https://tashan.sh/category/browser.html) — 32 measured. Headless browsers, scraping, page automation, fetch. Top: chrome-devtools, firecrawl, trusty-squire.
-- [Search](https://tashan.sh/category/search.html) — 90 measured. Web search, retrieval, and answer engines. Top: tavily, exa-mcp-server, exa.
-- [Database](https://tashan.sh/category/database.html) — 44 measured. SQL, NoSQL, vector stores, query & schema tools. Top: @supabase/mcp-server-supabase, whodb, @henkey/postgres-mcp-server.
-- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1558 measured. Git, GitHub, code, testing, build & CI. Top: everything, azure, next-ai-drawio.
-- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 76 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: hostinger-api, kubernetes, kubernetes-mcp-server.
-- [Files & Memory](https://tashan.sh/category/files.html) — 30 measured. Filesystem access, memory, knowledge graphs. Top: filesystem, memory, desktop-touch.
-- [Data & Analytics](https://tashan.sh/category/data.html) — 336 measured. Pipelines, analytics, spreadsheets, BI. Top: deepeval, qsv-data-wrangling, savvly.
-- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 100 measured. Docs lookup, notes, wikis, context retrieval. Top: @upstash/context7, @notionhq/notion-mcp-server, @suekou/mcp-notion-server.
-- [Communication](https://tashan.sh/category/comms.html) — 132 measured. Slack, email, chat, calendars, meetings. Top: claude-seo, hermes-ops, slack.
-- [Design](https://tashan.sh/category/design.html) — 203 measured. Figma, UI, images, creative & design tooling. Top: figma-developer, figma-console, impeccable.
-- [AI & Agents](https://tashan.sh/category/ai.html) — 120 measured. Reasoning, agents, model & LLM orchestration. Top: sequential-thinking, humanize-korean, deepseek-mcp-server.
-- [Finance & Crypto](https://tashan.sh/category/finance.html) — 225 measured. Payments, markets, blockchain, wallets. Top: blockrun, photoplus-downloader, sap.
-- [Productivity](https://tashan.sh/category/productivity.html) — 2316 measured. Tasks, automation, workflows, personal tools. Top: caveman, desktop-commander, ponytail.
-- [Security](https://tashan.sh/category/security.html) — 297 measured. Auth, secrets, scanning, identity. Top: @auth0/auth0-mcp-server, safety-net, actionbook.
-- [Other](https://tashan.sh/category/other.html) — 229 measured. Everything not yet categorized. Top: context-mode, @voyagier/cli, ytdl-rmcp.
+- [Browser & Web](https://tashan.sh/category/browser.html) — 50 measured. Headless browsers, scraping, page automation, fetch. Top: chrome-devtools, firecrawl, trusty-squire.
+- [Search](https://tashan.sh/category/search.html) — 114 measured. Web search, retrieval, and answer engines. Top: tavily, exa-mcp-server, exa.
+- [Database](https://tashan.sh/category/database.html) — 64 measured. SQL, NoSQL, vector stores, query & schema tools. Top: @supabase/mcp-server-supabase, whodb, @henkey/postgres-mcp-server.
+- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1760 measured. Git, GitHub, code, testing, build & CI. Top: everything, azure, context-mode.
+- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 72 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: hostinger-api, kubernetes, kubernetes-mcp-server.
+- [Files & Memory](https://tashan.sh/category/files.html) — 33 measured. Filesystem access, memory, knowledge graphs. Top: filesystem, memory, desktop-commander.
+- [Data & Analytics](https://tashan.sh/category/data.html) — 292 measured. Pipelines, analytics, spreadsheets, BI. Top: huggingface-skills, deepeval, qsv-data-wrangling.
+- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 207 measured. Docs lookup, notes, wikis, context retrieval. Top: @upstash/context7, @notionhq/notion-mcp-server, @suekou/mcp-notion-server.
+- [Communication](https://tashan.sh/category/comms.html) — 209 measured. Slack, email, chat, calendars, meetings. Top: claude-seo, search-console, local.
+- [Design](https://tashan.sh/category/design.html) — 244 measured. Figma, UI, images, creative & design tooling. Top: figma-developer, figma-console, impeccable.
+- [AI & Agents](https://tashan.sh/category/ai.html) — 155 measured. Reasoning, agents, model & LLM orchestration. Top: sequential-thinking, humanize-korean, sap-fiori-mcp-server.
+- [Finance & Crypto](https://tashan.sh/category/finance.html) — 293 measured. Payments, markets, blockchain, wallets. Top: blockrun, savvly, photoplus-downloader.
+- [Productivity](https://tashan.sh/category/productivity.html) — 1778 measured. Tasks, automation, workflows, personal tools. Top: caveman, ponytail, browser-harness.
+- [Security](https://tashan.sh/category/security.html) — 347 measured. Auth, secrets, scanning, identity. Top: @auth0/auth0-mcp-server, safety-net, scf.
+- [Other](https://tashan.sh/category/other.html) — 170 measured. Everything not yet categorized. Top: @voyagier/cli, local-audio-transcriber, ytdl-rmcp.
 
 ## Reference
 
@@ -95,4 +95,4 @@ Every npm-published capability is checked against OSV.dev using the version you 
 
 ## Citing tashan
 
-Scores change as evidence changes; cite the date. Attribute as: tashan (tashan.sh), measured 2026-07-30. Full machine-readable export: https://tashan.sh/data/capabilities.json
+Scores change as evidence changes; cite the date. Attribute as: tashan (tashan.sh), measured 2026-07-31. Full machine-readable export: https://tashan.sh/data/capabilities.json

@@ -36,6 +36,18 @@ your their them then than when where which who what how why also just only very 
 run runs running work works working make makes made create creates creating build builds building
 """.split())
 
+# ...but six of those "generic" words are the ONLY discriminative vocabulary the `ai` category has.
+# `ai`, `agent`, `agents`, `model`, `context` and `protocol` were all stopped, so the one class whose
+# subject IS agents had every feature naming its subject deleted before training — and scored 0/13
+# recall on held-out labels while every other category kept its own name as a feature. A word being
+# common is not a reason to stop it if it is also the thing a category is about; that is precisely
+# the word you need. Boilerplate every MCP server says ("mcp", "server", "protocol" in the sense of
+# "Model Context Protocol") still goes, but not the ones that carry topic.
+KEEP = set("ai agent agents model context memory".split())
+# Two-letter tokens worth keeping — each one names what some category is about.
+SHORT = set("ai ml db bi ci qa s3 3d ui ux vm k8s api".split())
+STOP -= KEEP
+
 TOKEN = re.compile(r"[a-z][a-z0-9+#.]{1,}")
 
 
@@ -50,8 +62,12 @@ def features(name, title, desc, pkg=None, repo=None):
     BINARY collapses repeated words to one occurrence — otherwise a description that says "data" six
     times outvotes a name that says it once."""
     def toks(s):
+        # `len(t) > 2` silently dropped "ai" — two characters — so freeing it from STOP changed
+        # nothing and the ai category still scored 0/16. Short tokens are mostly noise, but a handful
+        # of them are the most discriminative words a category has, and every one of those is a
+        # category's own subject: ai, ml, db, s3, 3d, ci, qa, bi. Keep those, drop the rest.
         return [t for t in TOKEN.findall((s or "").lower().replace("_", "-").replace("/", "-").replace("-", " "))
-                if t not in STOP and len(t) > 2]
+                if t not in STOP and (len(t) > 2 or t in SHORT)]
     body = toks(title) + toks(desc) + toks(pkg) + toks(repo)
     if BINARY:
         body = list(dict.fromkeys(body))
@@ -59,12 +75,17 @@ def features(name, title, desc, pkg=None, repo=None):
 
 
 class NB:
+    # Swept, like NAME_W and BINARY — see fit_complement for why the default flipped.
+    complement = os.environ.get("CLASSIFY_CNB", "1") == "1"
+
     def __init__(self):
         self.logprior = {}
         self.loglik = {}
         self.vocab = set()
 
     def fit(self, samples):
+        if self.complement:
+            return self.fit_complement(samples)
         by_cat = collections.defaultdict(collections.Counter)
         n_cat = collections.Counter()
         for feats, cat in samples:
@@ -85,12 +106,53 @@ class NB:
             self.loglik[cat]["__unseen__"] = math.log(1 / denom)
         return self
 
+    def fit_complement(self, samples):
+        """Complement Naive Bayes (Rennie et al. 2003), because plain multinomial NB collapses here.
+
+        THE MECHANISM, since "try a different model" is not a reason. MNB scores a document as
+        sum(log P(w|c)). A class trained on a BROAD vocabulary has seen some count of nearly any word,
+        so it pays log((n+1)/denom); a narrow class pays the smoothing floor log(1/denom) for the same
+        word. With 757 training docs the vocabulary is far larger than any class's token total, so the
+        broad class wins by a fixed margin on EVERY word it happens to have seen, multiplied by
+        document length. That is why `productivity` and `devtools` took 67% of the corpus while `ai`
+        scored 0/16 recall — not because those documents look like productivity, but because those two
+        classes had seen more words. Uniform priors do not touch this: the bias is in the likelihoods.
+
+        CNB estimates each class's weights from every OTHER class's counts, which inverts the asymmetry
+        (a broad class now makes its COMPLEMENT broad), then normalises the weight vectors so no class
+        can win on magnitude alone. Lowest complement score wins, so scores() negates to keep one
+        "higher is better" convention for predict().
+        """
+        by_cat = collections.defaultdict(collections.Counter)
+        for feats, cat in samples:
+            by_cat[cat].update(feats)
+            self.vocab.update(feats)
+        V = len(self.vocab) or 1
+        total = collections.Counter()
+        for cnt in by_cat.values():
+            total.update(cnt)
+        grand = sum(total.values())
+
+        for cat, cnt in by_cat.items():
+            own = sum(cnt.values())
+            denom = (grand - own) + V              # every token NOT in this class, smoothed
+            w = {t: math.log((total[t] - cnt[t] + 1) / denom) for t in self.vocab}
+            # Weight normalisation (the "WCNB" of the paper). Without it a class whose complement is
+            # large still carries systematically bigger magnitudes and the collapse comes back wearing
+            # the other sign.
+            norm = sum(abs(x) for x in w.values()) or 1.0
+            self.loglik[cat] = {t: x / norm for t, x in w.items()}
+            self.loglik[cat]["__unseen__"] = math.log(1 / denom) / norm
+            self.logprior[cat] = 0.0
+        return self
+
     def scores(self, feats):
         out = {}
         for cat in self.logprior:
             ll = self.loglik[cat]
             unseen = ll["__unseen__"]
-            out[cat] = self.logprior[cat] + sum(ll.get(w, unseen) for w in feats if w in self.vocab)
+            s = self.logprior[cat] + sum(ll.get(w, unseen) for w in feats if w in self.vocab)
+            out[cat] = -s if self.complement else s      # CNB: least complement-like wins
         return out
 
     def predict(self, feats, margin=0.0):
