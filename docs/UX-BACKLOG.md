@@ -61,15 +61,15 @@ Both must reach Pro without ever being asked to be a database administrator of t
 - [x] **2. `/activate` page.** The browser half of the above. Shows the user code for confirmation,
       approves with one click when a session exists, and when it does not offers exactly two doors:
       *buy Pro* or *paste the key from your email once*.
-- [ ] **3. Post-checkout auto sign-in.** Polar success URL → land signed in, not holding homework.
+- [~] **3. Post-checkout auto sign-in.** Polar success URL → land signed in, not holding homework.
       **Verify first** what Polar's success URL can carry (`checkout_id`, customer session token) —
       do not guess at their API. If nothing is verifiable, fall back to: `/welcome` gets one
       "Sign in with your key" field that sets the cookie, and the CLI never needs it again.
-- [ ] **4. Session state in the nav, on every page.** `chrome.py` emits the shell; `site.js` fills it
+- [x] **4. Session state in the nav, on every page.** `chrome.py` emits the shell; `site.js` fills it
       from `/api/account`. Signed out → "Sign in". Signed in → the account glyph, marked. Pro → the
       Pro mark. Must not flash the wrong state on load, and must degrade to signed-out if the API
       is unreachable — never to a false Pro.
-- [ ] **5. Sign out, in both places.** `DELETE /api/account` exists and nothing calls it from the nav.
+- [x] **5. Sign out, in both places.** `DELETE /api/account` exists and nothing calls it from the nav.
       CLI: `tashan logout` (alias of `activate --forget`, which nobody will guess).
 
 ### P1 — make Pro felt, and sell it where the value is
@@ -132,3 +132,29 @@ lookup → **approve without a session returns 401**, and the page renders the s
 state at `?code=`. Deploy `a79a5372`.
 
 Note for item 3: `activate <key>` is retained deliberately for CI, where there is no browser.
+
+**Iteration 2 — item 3 partially, items 4 & 5 shipped.**
+
+*Item 3 is deliberately parked at the fallback, with evidence.* Polar's `success_url` does support
+`?checkout_id={CHECKOUT_ID}`. Exchanging that for a licence key needs
+`customer-portal/license-keys/list`, which needs a customer session, which is created by a
+server-side endpoint requiring the **organisation access token** — a credential that can read every
+customer's record, which `wrangler.toml` says is deliberately absent. Putting it in an edge function
+behind a path keyed only by an id that travels in URLs, history and Referer headers is a bigger trust
+surface than this product has asked for, so it is the founder's call, not a 2am one.
+**Fallback shipped instead:** `/welcome` is now a state page — signed out it is one autofocused key
+field ("One paste, once"), signed in it greets you by email and hands you `tashan login`. The key is
+still typed at most once in a lifetime; this only decides whether that once is here or on machine
+one. *If the org token is ever added, `/welcome` becomes a redirect and nothing else changes.*
+
+*Items 4 & 5.* `chrome.py` now bakes a neutral session shell into all ~5,900 pages and `site.js`
+paints it from `/api/account`: signed out → "Sign in"; signed in → marked glyph; Pro → a hairline
+`PRO` pill. It starts neutral and only ever ADDS, so no page flashes a wrong state, and an
+unreachable API stays signed out — never an optimistic Pro. Cached per tab for 60s so browsing the
+Index does not put a Polar call in the critical path; sign-out drops that cache first, so the mark
+cannot outlive the session. The Pro pill deliberately does **not** use jade — the accent is reserved
+for measured data, so status uses a hairline outline instead.
+
+Found and fixed while verifying: `.nav__acct` is a fixed 2rem circle, so the new pill squeezed the
+account glyph to `width: 0`. Guarded at the class level with `flex:none` on the glyph rather than
+patching this one instance. Deploys `ecc1290d`, `8264126a`.

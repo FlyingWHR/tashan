@@ -10,6 +10,66 @@
     else a.removeAttribute("aria-current");
   });
 
+
+  // ---- session state in the nav, on every page ---------------------------------------------------
+  // The site never showed whether you were signed in. A customer who had paid saw exactly the page a
+  // stranger saw, on all ~5,900 of them, which is why Pro never felt like anything.
+  //
+  // THREE RULES, and the third is the one that matters:
+  //   1. Start neutral. The shell ships signed-out; this only ever ADDS marks, so there is no flash
+  //      of a wrong state on a static page.
+  //   2. Cache per tab, briefly. Every page is a full document load, and one /api/account round trip
+  //      per navigation would put a Polar call in the critical path of browsing the Index.
+  //   3. NEVER be optimistic. An unreachable API, a 503, a malformed body — all render signed out. A
+  //      false Pro mark tells someone their licence is fine when it may have lapsed, and it is the
+  //      one lie a status indicator must never tell.
+  var SKEY = "tashan_acct";
+  var TTL = 60 * 1000;
+
+  function paint(a) {
+    var link = document.getElementById("navAcct");
+    if (!link) return;
+    var pro = document.getElementById("navPro");
+    if (!a || !a.signed_in) {
+      link.title = "Sign in";
+      link.setAttribute("aria-label", "Sign in");
+      return;                                   // signed out is the shipped state; nothing to add
+    }
+    link.classList.add("is-in");
+    var who = a.email || a.name;
+    link.title = (a.active ? "tashan Pro" : "Your account") + (who ? " — " + who : "");
+    link.setAttribute("aria-label", link.title);
+    if (a.active && pro) {
+      link.classList.add("is-pro");
+      pro.hidden = false;
+    }
+  }
+
+  function session() {
+    var cached = null;
+    try {
+      var raw = sessionStorage.getItem(SKEY);
+      if (raw) {
+        var c = JSON.parse(raw);
+        if (c && Date.now() - c.at < TTL) cached = c.a;
+      }
+    } catch (e) { /* private mode, or a value we no longer understand — just refetch */ }
+    if (cached) return paint(cached);
+    fetch("/api/account", { headers: { accept: "application/json" } })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (a) {
+        if (!a) return;                          // 503 / error: stay signed out, never guess
+        try { sessionStorage.setItem(SKEY, JSON.stringify({ at: Date.now(), a: a })); } catch (e) {}
+        paint(a);
+      })
+      .catch(function () { /* offline: the shipped signed-out shell is already correct */ });
+  }
+
+  // Exposed so sign-out can drop the cache immediately rather than leaving a Pro mark on screen for
+  // up to a minute after the session ended.
+  window.tashanSession = { clear: function () { try { sessionStorage.removeItem(SKEY); } catch (e) {} } };
+  session();
+
   // ---- analytics: first-party, cookieless, CSP-clean (same-origin beacon to /api/e) ----
   // No cookies, no localStorage, no fingerprint, no third-party script. Honors Do-Not-Track /
   // Global-Privacy-Control. Session id is a random in-memory value (this tab only) purely to stitch a

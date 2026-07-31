@@ -112,7 +112,7 @@ img { max-width: 100%; display: block; }
 .nav__links .nav__acct { margin-left: var(--sp-2); position:relative; }
 .nav__acct::before { content:""; position:absolute; left:calc(var(--sp-3) * -1); top:20%; bottom:20%;
   width:1px; background: var(--hairline); }
-.nav__acct svg { width:1.15rem; height:1.15rem; display:block; }
+.nav__acct svg { width:1.15rem; height:1.15rem; display:block; flex:none; }
 .nav__acct:hover { color: var(--text); border-color: var(--hairline); background: var(--surface); }
 .nav__acct[aria-current="page"] { color: var(--jade); border-color: var(--jade-line);
   background: var(--jade-dim); }
@@ -971,3 +971,17 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .actv__door form { display: flex; flex-direction: column; gap: .6rem; align-items: flex-start; }
 .actv__k { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .12em;
   text-transform: uppercase; color: var(--jade); margin: 0 0 .5rem; }
+
+
+/* ── signed-in state in the header ────────────────────────────────────────────────────────
+   The site showed a customer exactly what it showed a stranger, on every one of ~5,900 pages, so
+   paying changed nothing you could see. This is the whole visual difference, and it is deliberately
+   quiet: the jade accent is reserved for MEASURED DATA, so status may not borrow it. A hairline
+   pill in plain text reads as a fact about you rather than a badge we hand ourselves. */
+.nav__acct.is-in svg { color: var(--text); }
+.nav__pro { font-size: var(--fs-micro); letter-spacing: .1em; text-transform: uppercase;
+  border: 1px solid var(--hairline); border-radius: 4px; padding: .1rem .32rem; margin-left: .45rem;
+  color: var(--text); line-height: 1; }
+.nav__acct.is-pro { width: auto; padding: 0 .4rem 0 .5rem; border-radius: 999px;
+  border-color: var(--hairline); }
+.nav__acct.is-pro:hover .nav__pro { border-color: var(--text-dim); }

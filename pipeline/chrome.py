@@ -80,8 +80,13 @@ def nav_html(current=None):
     href, label = ACCOUNT
     glyph = (f'<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" {icons.STYLE}>'
              f'<path d="{icons.UI["account"]}"/></svg>')
-    acct = (f'<a class="nav__acct" href="{href}" title="{label}" aria-label="{label}"'
-            f'{" aria-current=\"page\"" if href == current else ""}>{glyph}</a>')
+    # The SHELL of the signed-in state, not the state itself. This HTML is baked into ~5,900 static
+    # pages, so it must be true for a signed-out reader and for a Pro customer both — js/site.js adds
+    # the marks after /api/account answers. It starts neutral and only ever ADDS, so there is no
+    # flash of a wrong state, and an unreachable API leaves it exactly as shipped: signed out.
+    acct = (f'<a class="nav__acct" id="navAcct" href="{href}" title="{label}" aria-label="{label}"'
+            f'{" aria-current=\"page\"" if href == current else ""}>{glyph}'
+            '<span class="nav__pro mono" id="navPro" hidden>Pro</span></a>')
     return ('<nav class="nav"><div class="wrap nav__in">'
             '<a class="brand" href="/"><span class="brand__mark"></span>tashan</a>'
             f'<div class="nav__links">{links}{acct}</div>'

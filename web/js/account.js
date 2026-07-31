@@ -120,6 +120,9 @@
   }
 
   function signOut() {
+    // Drop the nav's per-tab cache first. Without this the header keeps its Pro mark for up to a
+    // minute after the session ended — a status indicator outliving the status it reports.
+    if (window.tashanSession) window.tashanSession.clear();
     fetch("/api/account", { method: "DELETE", credentials: "same-origin" })
       .catch(function () { /* the cookie may already be gone; the reload settles it either way */ })
       .then(function () { location.replace("/account.html"); });
