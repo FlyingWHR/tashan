@@ -15,7 +15,8 @@ WHAT IS PUSHED, AND WHAT IS NOT. Only the three things the copy sells:
 
     a  the advisory list — id, severity, summary, the version that fixes it
     s  the literal command run at install time
-    p  the FULL permission list (the free tier already names the first, and the count)
+    (permissions are NOT here: "what it can reach on your machine" is the free tier's own promise,
+     and gating it sold one fact twice)
 
 Everything a free reader sees stays in the public export and is not duplicated here. If a capability
 has none of the three, it is not written at all — an id missing from KV means "nothing to add",
@@ -50,11 +51,10 @@ def shards(con):
     """
     out = {}
     rows = con.execute(
-        "SELECT id, sec_advisories, sec_install_script, sec_permissions, sec_scanned_at "
+        "SELECT id, sec_advisories, sec_install_script, sec_scanned_at "
         "FROM capabilities WHERE sec_scanned_at IS NOT NULL "
-        "AND (sec_advisories IS NOT NULL OR sec_install_script IS NOT NULL "
-        "     OR sec_permissions IS NOT NULL)")
-    for cap_id, adv, script, perms, at in rows:
+        "AND (sec_advisories IS NOT NULL OR sec_install_script IS NOT NULL)")
+    for cap_id, adv, script, at in rows:
         rec = {}
         if adv:
             try:
@@ -63,14 +63,6 @@ def shards(con):
                 pass
         if script:
             rec["s"] = script
-        if perms:
-            try:
-                p = json.loads(perms)
-            except Exception:
-                p = []
-            # Only worth sending when there is more than the one the free tier already prints.
-            if len(p) > 1:
-                rec["p"] = p
         if not rec:
             continue
         rec["t"] = at
@@ -102,10 +94,9 @@ def main():
     total = sum(len(v) for v in data.values())
     n_adv = sum(1 for b in data.values() for r in b.values() if r.get("a"))
     n_scr = sum(1 for b in data.values() for r in b.values() if r.get("s"))
-    n_prm = sum(1 for b in data.values() for r in b.values() if r.get("p"))
     con.close()
     print(f"{total:,} capabilities with paid detail -> {len(data)} shard(s)")
-    print(f"  {n_adv:,} with advisories · {n_scr:,} with an install script · {n_prm:,} with >1 permission")
+    print(f"  {n_adv:,} with advisories · {n_scr:,} with an install script")
     sent = 0
     for b in sorted(data, key=int):
         payload = json.dumps(data[b], separators=(",", ":"))

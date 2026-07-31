@@ -106,6 +106,22 @@
     if (c.single_maintainer) risks.push("one primary maintainer");
     if (c.gh_archived) risks.push("the repo is archived");
     if (c.npm_deprecated) risks.push("the package is deprecated");
+    // SECURITY FINDINGS BELONG IN THE HEADLINE READ. They are deliberately not inputs to the SCORE —
+    // "well maintained" and "nothing known is wrong" are different claims, and azure is
+    // Microsoft-official, scores 86 and runs an install script — but this line is not the score. It
+    // is the one-sentence decision, and it already carries non-score risks (single maintainer,
+    // archived, deprecated). Leaving security out of it produced pages that read "Worth a look —
+    // deep, real domain work, actively maintained" directly above "Handles credentials or secrets".
+    // That is the summary contradicting the evidence under it. The score is untouched.
+    if (c.sec_advisory_count) {
+      risks.push(c.sec_advisory_count + " known advisor" + (c.sec_advisory_count === 1 ? "y" : "ies"));
+    }
+    if (c.sec_install_script) risks.push("it runs a script at install time");
+    var permList = [];
+    try { permList = c.sec_permissions ? JSON.parse(c.sec_permissions) : []; } catch (e) { permList = []; }
+    // Name the reach that would make someone stop and think, not every declared permission.
+    if (permList.indexOf("credentials") >= 0) risks.push("it handles credentials");
+    else if (permList.indexOf("shell") >= 0) risks.push("it can run shell commands");
     var t = c.tashan_score || 0, verdict, cls;
     if (c.gh_archived || c.npm_deprecated) { verdict = "Proceed with care"; cls = "take--warn"; }
     else if (t >= 80 && (c.expertise_verdict === "deep" || c.expertise_verdict === "solid")) { verdict = "A safe default"; cls = "take--good"; }
@@ -374,12 +390,6 @@
     if (d.install_script) {
       swap(/install time/i, '<code class="paid">' + esc(d.install_script) + "</code>");
     }
-    if ((d.permissions || []).length > 1) {
-      swap(/^(Reads|Runs|Makes|Drives|Connects|Handles|Talks)/,
-        '<span class="paid">' + esc((d.permissions || []).map(function (p) {
-          return PERM_LABEL[p] || p;
-        }).join(" · ")) + "</span>");
-    }
     var sub = document.querySelector(".capsec__sub");
     if (sub) sub.innerHTML = "Full detail shown — your licence is active on this browser.";
   }
@@ -425,12 +435,12 @@
       // The export ships only the FIRST permission plus sec_perm_n, because the full list is what a
       // licence buys — it used to ship whole, in a file anyone can curl. perms.length would now
       // always be 1, so the count comes from the field.
-      var total = c.sec_perm_n || perms.length;
-      var first = PERM_LABEL[perms[0]] || perms[0];
-      rows.push(secRow(first,
-        total > 1 ? "+" + (total - 1) + " more" : "",
-        total > 1 ? unlock("The full permission list, and which dependency pulled each one in")
-                  : '<span class="secrow__ok">from declared dependencies</span>'));
+      // Every permission, named, for free. "What it can reach on your machine" is the free tier's
+      // own promise on the pricing page — gating it sold the same fact twice and left the headline
+      // read unable to warn about credentials.
+      rows.push(secRow(
+        esc(perms.map(function (p) { return PERM_LABEL[p] || p; }).join(" · ")), "",
+        '<span class="secrow__ok">from declared dependencies</span>'));
     } else {
       rows.push(secRow("No permission surface detected", "",
         '<span class="secrow__ok">declares no dependency that reaches files, shell or network</span>'));

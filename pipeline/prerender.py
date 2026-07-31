@@ -368,12 +368,10 @@ def security_block(c):
     if perms:
         # only the first permission is exported now (the full list is the paid detail), so the total
         # comes from sec_perm_n — see build.py::redact_paid.
-        total = c.get("sec_perm_n") or len(perms)
+        # every permission, free — see build.py::redact_paid for why this is not gated
         rows.append(sec_row(
-            esc(PERM_LABEL.get(perms[0], perms[0])),
-            ("+" + str(total - 1) + " more") if total > 1 else "",
-            unlock("The full permission list, and which dependency pulled each one in")
-            if total > 1 else '<span class="secrow__ok">from declared dependencies</span>'))
+            esc(" · ".join(PERM_LABEL.get(x, x) for x in perms)), "",
+            '<span class="secrow__ok">from declared dependencies</span>'))
     else:
         rows.append(sec_row("No permission surface detected", "",
                             '<span class="secrow__ok">declares no dependency that reaches files, '

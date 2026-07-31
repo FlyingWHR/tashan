@@ -18,7 +18,6 @@ const ID = "pkg:mcp-server-taskwarrior";
 const REC = {
   a: [{ id: "GHSA-95hg-3c55-xf9x", severity: "LOW", summary: "command injection", fixed: "1.2.0" }],
   s: "node ./scripts/post-install.js",
-  p: ["credentials", "filesystem", "network"],
   t: "2026-07-30T18:35:34+00:00",
 };
 
@@ -97,8 +96,9 @@ test("a valid licence gets exactly what the pricing page sells", async () => {
     assert.equal(b.advisories[0].fixed, "1.2.0");
     // "what the install script actually runs"
     assert.equal(b.install_script, "node ./scripts/post-install.js");
-    // "the full permission list" — not just the first, which the free tier already prints
-    assert.deepEqual(b.permissions, ["credentials", "filesystem", "network"]);
+    // permissions are NOT here: "what it can reach on your machine" is free, and gating it sold
+    // the same fact twice. The endpoint must not start carrying it again.
+    assert.equal(b.permissions, undefined);
   } finally { un(); }
 });
 

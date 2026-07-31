@@ -1393,6 +1393,13 @@ def export(con):
         # a boolean, not the command. The page only ever asked "does one exist".
         if o.get("sec_install_script"):
             o["sec_install_script"] = True
+        # sec_permissions stays PUBLIC IN FULL. An earlier version of this truncated it to the first
+        # entry, which quietly broke a free-tier promise: the pricing page's free column says "what
+        # it can reach on your machine", and the paid column said "the full permission list" — the
+        # same fact sold twice, once as free and once as paid. It is the safety-relevant one, so it
+        # is free, and the paid claim was cut rather than the data. The visible symptom was a page
+        # reading "Worth a look — deep, real domain work" above "Handles credentials or secrets",
+        # because the summary could no longer see the credentials permission to warn about it.
         perms = o.get("sec_permissions")
         if perms:
             try:
@@ -1400,7 +1407,6 @@ def export(con):
             except Exception:
                 lst = []
             o["sec_perm_n"] = len(lst)
-            o["sec_permissions"] = json.dumps(lst[:1])     # the one the free tier already prints
         return o
 
     for _c in caps:

@@ -62,7 +62,6 @@ export async function onRequestGet({ request, env }) {
     id,
     advisories: rec.a || [],          // [{id, severity, summary, fixed}]
     install_script: rec.s || null,    // the literal command run at install time
-    permissions: rec.p || [],         // the full list, not just the first
     scanned_at: rec.t || null,
     source: "tashan security audit",
     licence: "paid",

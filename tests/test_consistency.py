@@ -373,6 +373,8 @@ PAID = {
     "sec_advisories": "the advisory id, severity and fixed version",
     "sec_install_script": "the literal command run at install time (a bool is fine, a string is not)",
 }
+# The other direction, and the one that is easy to break while "protecting" revenue.
+FREE_FLOOR = ("sec_permissions",)
 for rel in ("data/capabilities.json", "data/index.json", "data/lookup.json"):
     d = load(rel)
     if d is None:
@@ -387,20 +389,24 @@ for rel in ("data/capabilities.json", "data/index.json", "data/lookup.json"):
         if isinstance(r.get("sec_install_script"), str):
             leaks["sec_install_script"] += 1
             ex.setdefault("sec_install_script", r["sec_install_script"][:60])
-        # free shows the FIRST permission and a count; shipping the whole list gives away the rest
-        p_ = r.get("sec_permissions")
-        if p_:
-            try:
-                lst = json.loads(p_) if isinstance(p_, str) else list(p_)
-            except Exception:
-                lst = []
-            if len(lst) > 1:
-                leaks["sec_permissions"] += 1
-                ex.setdefault("sec_permissions", str(lst)[:60])
+        # sec_permissions is deliberately NOT here. "What it can reach on your machine" is the free
+        # column's own promise on the pricing page; it was briefly truncated to one entry to protect
+        # a paid claim that sold the identical fact, which broke the free promise and left the
+        # dossier's headline read unable to warn about credentials. Freeness is asserted below.
     ok(f"{rel} carries no paid detail",
        not leaks,
        "; ".join(f"{k} on {n} row(s) — {ex[k]} ({PAID.get(k, 'the full permission list')})"
                  for k, n in leaks.most_common()))
+
+# The permission surface must stay whole in the public export — the free column sells it.
+_exp = caps_of(load("data/capabilities.json"))
+_withperms = [c for c in _exp if c.get("sec_permissions")]
+_multi = sum(1 for c in _withperms
+             if len((json.loads(c["sec_permissions"]) if isinstance(c["sec_permissions"], str)
+                     else c["sec_permissions"])) > 1)
+ok(f"the full permission surface stays free — {_multi} capabilities publish more than one",
+   _multi > 0, "every permission list was truncated to one entry; the free tier promises "
+               "'what it can reach on your machine' and the headline read needs it to warn")
 
 # ...and the free claim must still be intact, or the fix above quietly became a downgrade
 idx_rows = caps_of(load("data/index.json"))

@@ -98,7 +98,15 @@ FREE_FOREVER = ("tashan score", "expertise", "sec_advisory_count", "sec_max_seve
 idx = read("pipeline/build.py")
 slim = re.search(r"SLIM = \[(.*?)\]", idx, re.S)
 slim_txt = slim.group(1) if slim else ""
-missing_free = [f for f in ("tashan_score", "expertise_verdict", "sec_advisory_count", "sec_max_severity")
+# sec_permissions is a DOSSIER fact, not a board column, so it lives in the export rather than the
+# slim index. Check it where it actually ships.
+exp_cols = re.search(r'"sec_advisory_count","sec_max_severity".*?\]', idx, re.S)
+slim_txt += (exp_cols.group(0) if exp_cols else "")
+# sec_permissions is on this list because the free column promises "what it can reach on your
+# machine". It was briefly truncated to one entry to "protect" a paid claim that sold the same fact,
+# which broke the free promise AND stopped the headline read warning about credentials.
+missing_free = [f for f in ("tashan_score", "expertise_verdict", "sec_advisory_count",
+                            "sec_max_severity", "sec_permissions")
                 if f not in slim_txt]
 ok("the free tier still ships score, grade and the existence of every finding", not missing_free,
    f"missing from the public board index: {missing_free}")
