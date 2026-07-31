@@ -65,6 +65,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `tests/test_consistency.py` — One capability, one set of facts, on every surface that renders it.
 - `tests/test_expertise.py` — A published grade must not contradict itself.
 - `tests/test_firewall.py` — The firewall test — the ranking can never be bought.
+- `tests/test_history_integrity.py` — The paid series must contain the capability's movement, not ours.
 - `tests/test_hubs.py` — tashan — the generated content tier: asset versioning, category hubs, skills, llms.txt.
 - `tests/test_icons.py` — Every taxonomy id has an icon, and no icon is invisible at the size it ships.
 - `tests/test_links.py` — Every link and every install instruction must lead somewhere that exists.
