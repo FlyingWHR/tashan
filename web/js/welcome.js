@@ -65,50 +65,10 @@
       '<p class="lede">Your licence key is in the email that just arrived. Paste it here and this ' +
       "browser stays signed in — after that, every machine you ever work on is approved with a " +
       "click, and you never type it again.</p>" +
-
-      '<form class="actv__form" id="wKeyForm">' +
-        '<label class="actv__lbl mono" for="wKeyIn">Licence key</label>' +
-        '<input class="actv__in mono" id="wKeyIn" name="key" type="password" autocomplete="off" ' +
-        'spellcheck="false" placeholder="tashan_…" required autofocus>' +
-        '<button class="btn btn--primary" type="submit">Sign in &rsaquo;</button>' +
-        '<p class="actv__err" id="wKeyErr" hidden></p>' +
-      "</form>" +
-
-      '<p class="note">Rather not? <code>npx tashan-cli activate &lt;key&gt;</code> does the same thing ' +
-      "from a terminal. Either way it is once, not once per machine.</p>";
-
-    var f = document.getElementById("wKeyForm");
-    f.onsubmit = function (e) {
-      e.preventDefault();
-      var err = document.getElementById("wKeyErr");
-      var btn = f.querySelector("button");
-      err.hidden = true;
-      btn.disabled = true;
-      btn.textContent = "Checking…";
-      fetch("/api/account", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ key: document.getElementById("wKeyIn").value.trim() }),
-      })
-        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
-        .then(function (r) {
-          btn.disabled = false;
-          btn.textContent = "Sign in ›";
-          if (!r.ok || !r.body || !r.body.signed_in) {
-            err.textContent = (r.body && r.body.error) || "That key was not accepted.";
-            err.hidden = false;
-            return;
-          }
-          signedIn(r.body);
-          if (window.t && window.t.track) window.t.track("signin", { from: "welcome" });
-        })
-        .catch(function () {
-          btn.disabled = false;
-          btn.textContent = "Sign in ›";
-          err.textContent = "Could not reach tashan. Check your connection and try again.";
-          err.hidden = false;
-        });
-    };
+      window.tashanSignin.html({ id: "wKey", autofocus: true }) +
+      '<p class="note">In CI, where there is no browser to open, <code>npx tashan-cli activate &lt;key&gt;</code> ' +
+      "does the same thing non-interactively.</p>";
+    window.tashanSignin.wire("wKey", signedIn);
   }
 
   fetch("/api/account")

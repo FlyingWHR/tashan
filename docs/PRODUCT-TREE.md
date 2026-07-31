@@ -12,7 +12,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
 | `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | categories.json, index.json, tags.json, tasks.json | free | 103 |
-| `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, site, terminal | index.json | post-sale | 56 |
+| `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | index.json | post-sale | 56 |
 | `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json | free | 56 |
 | `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json | free | 51 |
 | `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | index.json | sells | 48 |
@@ -25,9 +25,9 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | `/privacy.html` | What we collect, which is close to nothing. | site, terminal | index.json | free | 24 |
 | `/terms.html` | Terms of service. | site, terminal | index.json | free | 24 |
 | `/404.html` *(noindex)* | Real 404 with a route back in. noindex; without it Pages served the homepage at status 200 for every unknown URL. | site, terminal | index.json | free | 0 |
-| `/activate.html` *(noindex)* | Approve a device that ran `tashan login`. noindex; the browser half of the RFC 8628 grant, so a licence key is typed once ever, not per machine. | activate, site, terminal | index.json | post-sale | 0 |
+| `/activate.html` *(noindex)* | Approve a device that ran `tashan login`. noindex; the browser half of the RFC 8628 grant, so a licence key is typed once ever, not per machine. | activate, signin, site, terminal | index.json | post-sale | 0 |
 | `/capability.html` | Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs. | capability, site, terminal | index.json | free | 0 |
-| `/welcome.html` *(noindex)* | Post-checkout: activate the licence. noindex, reached only from Polar. | site, terminal, welcome | index.json | post-sale | 0 |
+| `/welcome.html` *(noindex)* | Post-checkout: activate the licence. noindex, reached only from Polar. | signin, site, terminal, welcome | index.json | post-sale | 0 |
 
 ## Generated trees
 

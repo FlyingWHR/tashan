@@ -22,7 +22,7 @@
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/SpaceGrotesk-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=198">
+  <link rel="stylesheet" href="/css/site.css?v=199">
 </head>
 <body>
   <nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span>tashan</a><div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a><a href="/methodology.html">Methodology</a><a href="/pricing.html" aria-current="page">Pricing</a><a class="nav__acct" id="navAcct" href="/account.html" title="Your account" aria-label="Your account"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span class="nav__pro mono" id="navPro" hidden>Pro</span></a></div></div></nav>
@@ -96,7 +96,7 @@
         re-derived from today's public data. Every score on the Index is a snapshot anyone could recompute;
         the <em>series</em> only exists because we recorded it, every day, and a day we miss is gone for good —
         for us too. That's what $6 buys, and it's worth more every month it runs.</p></div>
-      <div><h3>How do I use the key?</h3><p><code>tashan activate &lt;key&gt;</code> once per machine, then
+      <div><h3>How do I sign in?</h3><p><code>tashan login</code> prints a short code and opens your browser; approve it and the terminal has it — the same flow as <code>gh auth login</code>. There is no key to copy. Then
         <code>tashan doctor</code> as usual — it is stored in <code>~/.config/tashan/key</code>, so there is no
         export to remember and nothing to re-do in a new terminal. Same key on every machine you use. The key is in your
         <a class="link" href="/account.html">account</a>. Nothing about your
@@ -107,9 +107,9 @@
         <code>tashan account</code> and it opens already signed in; there is no password to make. Pro also shows
         up in your terminal, where <code>doctor</code> prints <span class="mono">Pro · licence active</span> on
         every run.</p></div>
-      <div><h3>How many machines?</h3><p>Activate each one with the same key — <code>tashan activate &lt;key&gt;</code>
+      <div><h3>How many machines?</h3><p>Run <code>tashan login</code> on each one — approving is one click because the browser stays signed in
         registers it under its hostname, so <a class="link" href="/account.html">your account</a> lists exactly what
-        is active. <code>tashan activate --forget</code> hands a slot back from the machine itself.</p></div>
+        is active. <code>tashan logout</code> hands a slot back from the machine itself.</p></div>
       <div><h3>Do you sell the capabilities?</h3><p>No. We sell nothing we measure, host nothing, and take no cut of
         anything. Every other index in this field either sells the listings, hosts the servers, or earns when you run
         them — so a low verdict costs them money. It costs us nothing, which is the only reason our verdict is worth
@@ -125,7 +125,7 @@
 
   <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Every score re-derivable from public evidence.</span></div></footer>
 
-  <script src="/js/terminal.js?v=198" defer></script>
-  <script src="/js/site.js?v=198" defer></script>
+  <script src="/js/terminal.js?v=199" defer></script>
+  <script src="/js/site.js?v=199" defer></script>
 </body>
 </html>

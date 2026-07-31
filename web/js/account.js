@@ -80,7 +80,8 @@
       "</div>" +
     "</section>" +
     (a.active ? '<p class="acct__note">Signed in on this browser, so capability pages show the full ' +
-      "security detail. On another machine, <code>npx tashan-cli activate</code> with the same key.</p>"
+      "security detail. On another machine, run <code>npx tashan-cli login</code> and approve it " +
+      "here — one click, no key to copy.</p>"
       : "");
   }
 
@@ -97,10 +98,17 @@
       '<p class="acct__lede">Your plan, the machines you have activated, your licence key and your invoices.</p>' +
       notice +
       '<div class="acct__way">' +
-        '<p class="acct__wayh">From your terminal</p>' +
+        '<p class="acct__wayh">With your licence key</p>' +
+        window.tashanSignin.html({ id: "aKey", cta: "Sign in &rsaquo;" }) +
+        '<p class="acct__wayd">From your purchase email. Once only — after this, every machine is ' +
+          "approved with a click from <code>npx tashan-cli login</code>.</p>" +
+      "</div>" +
+      '<p class="acct__or"><span>or</span></p>' +
+      '<div class="acct__way">' +
+        '<p class="acct__wayh">From a machine that already has it</p>' +
         '<div class="install__cmd"><code>npx tashan-cli account</code>' +
           '<button class="install__copy" type="button" data-copy="npx tashan-cli account">Copy</button></div>' +
-        '<p class="acct__wayd">Opens this page already signed in, using the licence this machine ' +
+        '<p class="acct__wayd">Opens this page already signed in, using the licence that machine ' +
           "already holds. Nothing to type, nothing to paste.</p>" +
       "</div>" +
       '<p class="acct__or"><span>or</span></p>' +
@@ -117,6 +125,7 @@
     el.setAttribute("aria-busy", "false");
     var out = document.getElementById("acctOut");
     if (out) out.addEventListener("click", signOut);
+    if (window.tashanSignin) window.tashanSignin.wire("aKey", function () { location.reload(); });
   }
 
   function signOut() {

@@ -80,13 +80,7 @@
           '<h2>Paste your licence key, once</h2>' +
           '<p>It is in your purchase email. This is the only time you will type it — every machine ' +
           "after this one is approved with a click.</p>" +
-          '<form id="keyForm">' +
-            '<label class="actv__lbl mono" for="keyIn">Licence key</label>' +
-            '<input class="actv__in mono" id="keyIn" name="key" type="password" autocomplete="off" ' +
-            'spellcheck="false" placeholder="tashan_…" required>' +
-            '<button class="btn btn--primary" type="submit">Sign in &rsaquo;</button>' +
-            '<p class="actv__err" id="keyErr" hidden></p>' +
-          "</form>" +
+          window.tashanSignin.html({ id: "keyF", cta: "Sign in &rsaquo;" }) +
         "</div>" +
         '<div class="actv__door">' +
           '<p class="actv__k mono">I do not have Pro</p>' +
@@ -98,31 +92,7 @@
         "</div>" +
       "</div>";
 
-    var kf = document.getElementById("keyForm");
-    kf.onsubmit = function (e) {
-      e.preventDefault();
-      var err = document.getElementById("keyErr");
-      var btn = kf.querySelector("button");
-      var key = document.getElementById("keyIn").value.trim();
-      err.hidden = true;
-      btn.disabled = true;
-      btn.textContent = "Checking…";
-      api("/api/account", { method: "POST", body: JSON.stringify({ key: key }) }).then(function (r) {
-        btn.disabled = false;
-        btn.textContent = "Sign in ›";
-        if (!r.ok || !r.body || !r.body.signed_in) {
-          err.textContent = (r.body && r.body.error) || "That key was not accepted.";
-          err.hidden = false;
-          return;
-        }
-        boot();                      // signed in now — fall through to the approve state
-      }).catch(function () {
-        btn.disabled = false;
-        btn.textContent = "Sign in ›";
-        err.textContent = "Could not reach tashan. Check your connection and try again.";
-        err.hidden = false;
-      });
-    };
+    window.tashanSignin.wire("keyF", function () { boot(); });
   }
 
   function approve(acct) {

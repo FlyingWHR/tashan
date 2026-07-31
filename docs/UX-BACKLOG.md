@@ -74,7 +74,7 @@ Both must reach Pro without ever being asked to be a database administrator of t
 
 ### P1 — make Pro felt, and sell it where the value is
 
-- [~] **6. Pro visual identity.** (nav mark shipped; `doctor` + `/account` header remain) Nav mark, `/account` header, `doctor` output, and the favicon-adjacent
+- [x] **6. Pro visual identity.** nav mark + `doctor` state line + `/account` badge. Nav mark, `/account` header, `doctor` output, and the favicon-adjacent
       brand lockup. Must read as status, not as a badge we award ourselves. Accent colour is reserved
       for measured data — pick a treatment that does not break that rule.
 - [x] **7. Upsell in the security block** (`prerender.py`) — the one place the reader has a problem we
@@ -83,13 +83,14 @@ Both must reach Pro without ever being asked to be a database administrator of t
 - [-] **8. Upsell on the Index** — DROPPED, see iteration 4. — only against a real state (e.g. the board filtered to
       deprecated/archived), never a standing banner.
 - [x] **9. Upsell in `doctor`** — already partly there; make it name the count of actionable findings.
-- [ ] **10. `/welcome` rewritten** as a state page, and reachable: linked from `/account`, from the
+- [x] **10. `/welcome` rewritten** as a state page, and reachable: linked from `/account`, from the
       nav when signed in, and from the CLI's success output.
 
 ### P2 — the rest of the lifecycle
 
-- [ ] **11. Cancel / renewal** surfaced in `/account` without bouncing to Polar unexplained.
-- [ ] **12. Machines list** — `/account` shows the count; show the devices and let one be released.
+- [x] **11. Cancel / renewal** surfaced in `/account` without bouncing to Polar unexplained.
+- [-] **12. Machines list** — count shipped; the DEVICE LIST needs Polar's customer session (org token), same blocker as item 3. `tashan logout` releases a seat from the machine itself.
+- [x] **12b. Machines count** — `/account` shows the count; show the devices and let one be released.
 - [ ] **13. Agent surface.** The MCP server should report licence state so a coding agent can say
       "this needs Pro to get the fixed version" instead of failing opaquely.
 - [ ] **14. Expired / refunded / revoked** states render as themselves everywhere, not as signed-out.
@@ -195,3 +196,25 @@ reader that none of the filters work. It is now gated on a real count, like ever
 clean run, and prints the licence state every run. Added only the missing next step: the offer now
 ends `already bought? tashan login`, because the answer to "I paid, now what" must be a command, not
 a price. Deploys `66766aaa`, `1e0e5e23`.
+
+**Iteration 5 — items 6, 10, 11 closed; the site stopped teaching the old flow.**
+
+Every page still told customers to `tashan activate <key>` — the flow item 1 replaced. Six places
+fixed: `/pricing` FAQ (twice), `/support`, `/account`'s signed-in note, `/welcome`. `activate` now
+appears only where it is still correct: CI, where there is no browser to open. `activate --forget`
+became `tashan logout` in the copy too.
+
+**The signed-out `/account` was a dead end** — it offered only `npx tashan-cli account`, which needs
+a machine that ALREADY holds a licence. For the exact person that page is for (closed the welcome
+tab, came back later, has nothing set up) it could not help. It now leads with the direct way in.
+
+*That would have been the third copy of one credential form* (/activate, /welcome, /account), so it
+is now **`web/js/signin.js`, defined once** — markup, POST, error strings, and the rule that a failed
+submit keeps the value rather than making someone retype a 40-character key over one stray space.
+This codebase has been bitten twice this week by two-copies-that-drift; a credential form is the last
+place to allow a third. Verified live on all three pages, including a real rejection round trip
+against the API: error shown, value kept, button re-enabled.
+
+*Item 12 is split.* The machines COUNT ships. The device LIST with per-device release needs Polar's
+customer-session API — the same organisation-token blocker as item 3. `tashan logout` already
+releases a seat from the machine itself, which is the case that matters. Deploy `efe44140`.
