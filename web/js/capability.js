@@ -17,7 +17,7 @@
     var o = null;
     try { o = JSON.parse(island.textContent); } catch (e) { console.error("cap-data parse failed", e); }
     if (o && o.c) {
-      document.title = pretty(o.c.name) + " — tashan";
+      document.title = disp(o.c) + " — tashan";
       try { render(o.c, { generated_at: o.at }); }
       catch (e) { console.error("render failed", e); el.innerHTML = notfound(); }
     } else {
@@ -50,7 +50,7 @@
     el.innerHTML =
       '<div class="cap-hd">' +
         '<a class="back" href="/">&lsaquo; The Index</a>' +
-        '<h1>' + esc(pretty(c.name)) + vitalityChip(c) + '</h1>' +
+        '<h1>' + esc(disp(c)) + vitalityChip(c) + '</h1>' +
         // The id led this line and was a longer restatement of the <h1> directly above it, with the
         // same string a third time in the install command. Machine key -> links row; see prerender.py.
         '<div class="cid"><span class="tag">' + esc(kindLabel(c.kind)) + '</span>' +
@@ -161,7 +161,7 @@
       direct.push(xlink("GitHub", "https://github.com/" + enc(c.source_repo)));
       direct.push(xlink("Glama", "https://glama.ai/mcp/servers/" + enc(c.source_repo)));
     }
-    var q = encodeURIComponent(pretty(c.name));
+    var q = encodeURIComponent(disp(c));
     search.push(xlink("mcp.so", "https://mcp.so/search?q=" + q));
     search.push(xlink("Smithery", "https://smithery.ai/?q=" + q));
     search.push(xlink("PulseMCP", "https://www.pulsemcp.com/servers?q=" + q));
@@ -190,7 +190,7 @@
     if (!links.length) return "";                                                          // no real community -> no section
     return section("Community & support",
       '<div class="xlinks">' + links.join("") + '</div>',
-      "Where " + esc(pretty(c.name)) + " is actually discussed — its own repo and threads, not a generic forum.");
+      "Where " + esc(disp(c)) + " is actually discussed — its own repo and threads, not a generic forum.");
   }
 
   // model-company official detection (visual tagging) — from npm scope / repo owner
@@ -289,7 +289,7 @@
     return '<div class="embed">' +
       '<h2 class="embed__h">Show your score</h2>' +
       '<p class="embed__p">Measured this well? Put the live badge in your README — it updates as the score does.</p>' +
-      '<img class="embed__badge" src="/badge/' + slug(c.id) + '.svg" alt="tashan badge for ' + esc(pretty(c.name)) + '">' +
+      '<img class="embed__badge" src="/badge/' + slug(c.id) + '.svg" alt="tashan badge for ' + esc(disp(c)) + '">' +
       '<div class="embed__code"><code id="embedCode">' + esc(md) + '</code>' +
       '<button class="embed__copy" id="embedCopy" type="button">copy</button></div></div>';
   }
@@ -434,6 +434,8 @@
     if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 0 : 1) + "k";
     return String(n);
   }
+  // see index.js disp(): the label is derived once in build.py over the whole corpus.
+  function disp(c) { return c.label || pretty(c.name); }
   function pretty(name) { return String(name).replace(/^@modelcontextprotocol\/server-/, "").replace(/-mcp$/, "").replace(/^mcp-server-/, "").replace(/^mcp-/, ""); }
   function enc(repo) { return String(repo).split("/").map(encodeURIComponent).join("/"); }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }

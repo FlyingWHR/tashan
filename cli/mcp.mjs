@@ -20,7 +20,7 @@
 //
 // Zero dependencies, stdio transport, newline-delimited JSON-RPC 2.0.
 
-import { search, find, installSnippets, pretty, slugify } from "./tashan.mjs";
+import { disp, search, find, installSnippets, pretty, slugify } from "./tashan.mjs";
 import { tokensOf } from "./doctor.mjs";
 import { configLocations, skillLocations, collect, resolve, assess, summarize } from "./doctor.mjs";
 
@@ -254,7 +254,7 @@ export function renderFind(matches, task, client) {
   }
   const L = [`Measured candidates for "${task}" (ranked on public evidence):\n`];
   matches.forEach((c, i) => {
-    L.push(`${i + 1}. ${pretty(c.name)}${c.official ? ` — official (${c.official})` : ""}`);
+    L.push(`${i + 1}. ${disp(c)}${c.official ? ` — official (${c.official})` : ""}`);
     L.push(`   ${evidence(c)}`);
     for (const r of risks(c)) L.push(`   ⚠ ${r}`);
     const snip = installSnippets(c, client || "claude")[0];
@@ -280,7 +280,7 @@ export function renderCheck(c, name) {
       + `it may be new, private, or named differently. Do not present absence as a warning.`;
   }
   const rs = risks(c);
-  const L = [`${pretty(c.name)} — ${evidence(c)}`, ""];
+  const L = [`${disp(c)} — ${evidence(c)}`, ""];
   if (rs.length) {
     L.push("Risks found:");
     for (const r of rs) L.push(`  ⚠ ${r}`);

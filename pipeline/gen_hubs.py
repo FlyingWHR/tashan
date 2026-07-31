@@ -34,6 +34,11 @@ BASE = "https://tashan.sh"
 OUT_CAT = os.path.join(ROOT, "web", "category")
 
 def esc(s): return html.escape(str(s), quote=True)
+def disp(c):
+    """The human label from build.py's apply_labels, shipped in the export. See prerender.disp."""
+    return c.get("label") or pretty(c.get("name") or "")
+
+
 def pretty(name):
     return re.sub(r"^mcp-", "", re.sub(r"^mcp-server-", "", re.sub(r"-mcp$", "",
         re.sub(r"^@modelcontextprotocol/server-", "", str(name)))))
@@ -153,7 +158,7 @@ def board(rows):
             '<tr data-href="' + href + '">'
             '<td class="rank">' + (str(i + 1) if t is not None else "\u00b7") + "</td>"
             '<td><div class="cap__name"><a class="cap__link" href="' + href + '">'
-            + esc(pretty(c["name"])) + "</a>"
+            + esc(disp(c)) + "</a>"
             ' <span class="tag">' + esc({"skill": "skill"}.get(c.get("kind"), "server")) + "</span>"
             + off + vd + dep + "</div>"
             '<div class="cap__id">' + esc(c["id"]) + "</div></td>"
@@ -174,13 +179,13 @@ def cat_page(cat, rows, all_cats, gen):
     title = "Best " + label + " MCP servers, ranked by the tashan score · tashan"
     desc = ("The " + str(len(rows)) + " " + label.lower() + " MCP servers tashan measures, ranked by tashan score — "
             "upkeep, freshness and real adoption from public evidence. " + cat["blurb"])
-    top = ", ".join(pretty(c["name"]) for c in rows[:5])
+    top = ", ".join(disp(c) for c in rows[:5])
     lds = [
         {"@context": "https://schema.org", "@type": "ItemList", "name": label + " MCP servers ranked by trust",
          "itemListOrder": "https://schema.org/ItemListOrderDescending", "numberOfItems": len(rows),
          "itemListElement": [
              {"@type": "ListItem", "position": i + 1,
-              "item": {"@type": "SoftwareApplication", "name": pretty(c["name"]),
+              "item": {"@type": "SoftwareApplication", "name": disp(c),
                        "url": BASE + "/capability/" + c["slug"] + ".html",
                        "applicationCategory": "DeveloperApplication",
                        "aggregateRating": {"@type": "AggregateRating", "ratingValue": c["tashan_score"],
@@ -244,7 +249,7 @@ def task_page(task, rows, all_tasks, gen):
     title = "Best MCP servers and skills for " + label.lower() + ", ranked by the tashan score · tashan"
     desc = ("The " + str(len(rows)) + " capabilities tashan measures for " + label.lower() +
             ", ranked by tashan score — upkeep, freshness and real adoption, from public evidence only.")
-    top = ", ".join(pretty(c["name"]) for c in rows[:5])
+    top = ", ".join(disp(c) for c in rows[:5])
     occs = task.get("occupations") or []
     steps = task.get("onet_steps") or []
     lds = [
@@ -253,7 +258,7 @@ def task_page(task, rows, all_tasks, gen):
          "itemListOrder": "https://schema.org/ItemListOrderDescending", "numberOfItems": len(rows),
          "itemListElement": [
              {"@type": "ListItem", "position": i + 1,
-              "item": {"@type": "SoftwareApplication", "name": pretty(c["name"]),
+              "item": {"@type": "SoftwareApplication", "name": disp(c),
                        "url": BASE + "/capability/" + c["slug"] + ".html",
                        "applicationCategory": "DeveloperApplication",
                        "aggregateRating": {"@type": "AggregateRating", "ratingValue": c["tashan_score"],

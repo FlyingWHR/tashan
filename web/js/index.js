@@ -281,7 +281,7 @@
     }
     var counts = data._catAgg.counts, top = data._catAgg.top;
     function row(id, label, count, on, lead) {
-      var tip = lead ? label + " — top: " + pretty(lead.name) + " (" + lead.trust + ")" : label;
+      var tip = lead ? label + " — top: " + disp(lead) + " (" + lead.trust + ")" : label;
       return railRow("cat", id, label, count, on, tip, "cat");
     }
     var live = data.cats.filter(function (cat) { return counts[cat.id]; })
@@ -339,7 +339,7 @@
       // updated, so num(undefined) - num(undefined) === 0 for every pair and choosing "Upkeep"
       // silently left the board in whatever order it was already in.
       case "maint": return num(b.upkeep) - num(a.upkeep);
-      case "name": return pretty(a.name).toLowerCase() < pretty(b.name).toLowerCase() ? -1 : 1;
+      case "name": return disp(a).toLowerCase() < disp(b).toLowerCase() ? -1 : 1;
       default: return num(b.tashan_score) - num(a.tashan_score);   // trust
     }
   }
@@ -389,8 +389,10 @@
       var catTag = (!singleCat && c.category && data.catMeta[c.category]) ? ' <span class="cattag" title="Category">' + esc(data.catMeta[c.category].label) + '</span>' : "";
       html += '<tr data-href="' + capHref(c) + '">' +
         '<td class="rank">' + (i + 1) + '</td>' +
-        '<td><div class="cap__name"><a class="cap__link" href="' + capHref(c) + '">' + esc(pretty(c.name)) + '</a> <span class="tag">' + esc(KIND_LABEL[c.kind] || c.kind) + '</span>' + off + vd + dep + sec + '</div>' +
-        '<div class="cap__id">' + esc(c.id) + catTag + '</div></td>' +
+        '<td><div class="cap__name"><a class="cap__link" href="' + capHref(c) + '">' + esc(disp(c)) + '</a> <span class="tag">' + esc(KIND_LABEL[c.kind] || c.kind) + '</span>' + off + vd + dep + sec + '</div>' +
+        // was: the full id, "pkg:@supabase/mcp-server-supabase" under a row already headed
+        // "@supabase/mcp-server-supabase". The category is the only thing here a reader did not have.
+        '<div class="cap__id">' + catTag + '</div></td>' +
         // ONE headline, then the evidence it came from, then one health flag. The board used to print
         // Adoption, Maint, Fresh AND Trust — four numbers competing for the same glance, none of which
         // is the answer to "should I install this". Components moved to the dossier, which has room to
@@ -501,6 +503,11 @@
   function pretty(name) {
     return String(name).replace(/^@modelcontextprotocol\/server-/, "").replace(/-mcp$/, "").replace(/^mcp-server-/, "").replace(/^mcp-/, "");
   }
+  // The human label, derived ONCE in build.py's apply_labels over the whole corpus — it has to see
+  // every other row to know that 364 skills share the title "claude-community" and that two products
+  // are both called "Notion". pretty() stays for the places that build an IDENTIFIER (an install
+  // command, a folder name), where spaces and "·" would be wrong.
+  function disp(c) { return c.label || pretty(c.name); }
   // prefer the prerendered, indexable pretty URL; fall back to the client route
   // slug is DERIVED, not shipped — it is exactly slugify(id) (build.py), and sending both cost ~9 KB gz
   // of a 45 KB index for a string we can recompute in 40 bytes. Must stay byte-identical to build.py's

@@ -108,6 +108,11 @@ const jade = C("38;5;79"), dim = C("2"), bold = C("1"), red = C("31"), under = C
 // ---- pure logic (exported, tested) ----
 export function slugify(id) { return String(id).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
 // identical to the site's pretty() (web/js/index.js / capability.js) so names + install commands match exactly
+// The human label, derived once in build.py's apply_labels over the whole corpus (it must see every
+// other row to know two products are both "Notion"). pretty() stays for the places that build an
+// IDENTIFIER — an install command, a folder name — and for search matching, where a display label
+// with spaces and "·" would be the wrong thing to match against.
+export function disp(c) { return (c && c.label) || pretty(c && c.name); }
 export function pretty(name) {
   return String(name || "").replace(/^@modelcontextprotocol\/server-/, "").replace(/-mcp$/, "").replace(/^mcp-server-/, "").replace(/^mcp-/, "");
 }
@@ -184,7 +189,7 @@ const trustStr = (t) => t == null ? dim("  —") : (t >= 70 ? jade : t >= 40 ? C
 const verdict = (v) => v ? ({ deep: "deep", solid: "solid", thin: "thin", wrapper: "wrapper", slop: "slop" }[v] || v) : "";
 
 function row(r) {
-  const name = pretty(r.name).slice(0, 34).padEnd(34);
+  const name = disp(r).slice(0, 34).padEnd(34);
   const kind = dim((r.kind || "").padEnd(6));
   const dl = dim(fmtNum(r.npm_downloads).padStart(6));
   const vd = r.expertise_verdict ? dim("· " + verdict(r.expertise_verdict)) : "";
@@ -199,7 +204,7 @@ function table(rows, limit) {
 function infoCard(r) {
   const L = [];
   L.push("");
-  L.push("  " + bold(pretty(r.name)) + "  " + dim(r.kind || ""));
+  L.push("  " + bold(disp(r)) + "  " + dim(r.kind || ""));
   L.push("  " + dim(r.id));
   L.push("");
   L.push("  tashan score        " + trustStr(r.tashan_score).trim() + dim("/100") + "   " + dim("upkeep " + (r.upkeep ?? "—") + " · vitality " + (r.vitality || "—")));
@@ -237,7 +242,7 @@ function infoCard(r) {
 function renderAdd(r, client) {
   const snips = installSnippets(r, client);
   if (!snips.length) return red(`  no install method for client "${client}". try: claude · cursor · desktop · codex · npx`);
-  const out = ["", "  " + bold(pretty(r.name)) + dim("  — " + SITE + "/capability/" + (r.slug || slugify(r.id)) + ".html"), ""];
+  const out = ["", "  " + bold(disp(r)) + dim("  — " + SITE + "/capability/" + (r.slug || slugify(r.id)) + ".html"), ""];
   for (const s of snips) {
     out.push("  " + dim(s.label));
     out.push(s.cmd.split("\n").map((l) => "    " + jade(l)).join("\n"));

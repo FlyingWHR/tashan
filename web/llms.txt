@@ -73,14 +73,14 @@ Every npm-published capability is checked against OSV.dev using the version you 
 
 - [Browser & Web](https://tashan.sh/category/browser.html) — 50 measured. Headless browsers, scraping, page automation, fetch. Top: chrome-devtools, firecrawl, trusty-squire.
 - [Search](https://tashan.sh/category/search.html) — 114 measured. Web search, retrieval, and answer engines. Top: tavily, exa-mcp-server, exa.
-- [Database](https://tashan.sh/category/database.html) — 64 measured. SQL, NoSQL, vector stores, query & schema tools. Top: @supabase/mcp-server-supabase, whodb, @henkey/postgres-mcp-server.
+- [Database](https://tashan.sh/category/database.html) — 63 measured. SQL, NoSQL, vector stores, query & schema tools. Top: @supabase/mcp-server-supabase, whodb, @henkey/postgres-mcp-server.
 - [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1760 measured. Git, GitHub, code, testing, build & CI. Top: everything, azure, context-mode.
 - [Cloud & Infra](https://tashan.sh/category/cloud.html) — 72 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: hostinger-api, kubernetes, kubernetes-mcp-server.
 - [Files & Memory](https://tashan.sh/category/files.html) — 33 measured. Filesystem access, memory, knowledge graphs. Top: filesystem, memory, desktop-commander.
 - [Data & Analytics](https://tashan.sh/category/data.html) — 292 measured. Pipelines, analytics, spreadsheets, BI. Top: huggingface-skills, deepeval, qsv-data-wrangling.
 - [Docs & Knowledge](https://tashan.sh/category/docs.html) — 207 measured. Docs lookup, notes, wikis, context retrieval. Top: @upstash/context7, @notionhq/notion-mcp-server, @suekou/mcp-notion-server.
 - [Communication](https://tashan.sh/category/comms.html) — 209 measured. Slack, email, chat, calendars, meetings. Top: claude-seo, search-console, local.
-- [Design](https://tashan.sh/category/design.html) — 244 measured. Figma, UI, images, creative & design tooling. Top: figma-developer, figma-console, impeccable.
+- [Design](https://tashan.sh/category/design.html) — 245 measured. Figma, UI, images, creative & design tooling. Top: figma-developer, figma-console, impeccable.
 - [AI & Agents](https://tashan.sh/category/ai.html) — 155 measured. Reasoning, agents, model & LLM orchestration. Top: sequential-thinking, humanize-korean, sap-fiori-mcp-server.
 - [Finance & Crypto](https://tashan.sh/category/finance.html) — 293 measured. Payments, markets, blockchain, wallets. Top: blockrun, savvly, photoplus-downloader.
 - [Productivity](https://tashan.sh/category/productivity.html) — 1778 measured. Tasks, automation, workflows, personal tools. Top: caveman, ponytail, browser-harness.

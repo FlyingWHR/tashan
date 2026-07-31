@@ -19,7 +19,14 @@ WEB = os.path.join(ROOT, "web")
 
 # --- budgets (the numbers a "snappy" static store must hold) ---
 CAP_HTML_MAX = 20 * 1024        # a prerendered detail page, gzipped-off
-INDEX_JSON_GZ_MAX = 45 * 1024   # slim board index, gzipped (what prod ships)
+# Slim board index, gzipped (what prod ships). Raised 45 -> 55 KB on 31 Jul 2026 to carry `label`,
+# the human name, because the board was rendering npm coordinates: "@supabase/mcp-server-supabase"
+# headlining a row whose second line was "pkg:@supabase/mcp-server-supabase". Costed the alternatives
+# first — deriving the label client-side saves only 4.5 KB because half the rows need the whole-corpus
+# view anyway, and dropping the raw `name` breaks CLI search for the 1,064 rows with no npm package,
+# where it is the only coordinate they have. +6.5 KB gz is ~50ms on slow 3G for a board a person can
+# read. Do not spend the rest of this headroom without measuring what it buys.
+INDEX_JSON_GZ_MAX = 55 * 1024
 PAGE_TTFB_MAX = 0.20            # seconds, local server
 NO_RUNTIME_BIG_EXPORT = "capabilities.json"  # must never be fetched at runtime
 

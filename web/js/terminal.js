@@ -22,7 +22,7 @@
   function fillTicker(track) {
     var top = caps.slice(0, 26);
     var seg = top.map(function (c) {
-      return '<span class="tk"><span class="tk-n">' + esc(pretty(c.name)) + '</span> '
+      return '<span class="tk"><span class="tk-n">' + esc(disp(c)) + '</span> '
         + '<span class="tk-t">' + (c.tashan_score == null ? "—" : c.tashan_score) + '</span> ' + verdictHTML(c.expertise_verdict) + '</span>';
     }).join('<span class="tk-sep">·</span>');
     var content = '<span class="tk-lead">LIVE ▸ ranked by trust</span>' + seg + '<span class="tk-sep">·</span>';
@@ -84,7 +84,7 @@
         return '<div class="pal__row' + (i === sel ? " is-sel" : "") + '" data-href="' + o.href + '"><span class="pal__go">go</span><span class="pal__nm">' + esc(o.name) + '</span></div>';
       return '<div class="pal__row' + (i === sel ? " is-sel" : "") + '" data-href="' + capHref(o) + '">'
         + '<span class="pal__badge">' + (o.tashan_score == null ? "—" : o.tashan_score) + '</span>'
-        + '<span class="pal__nm">' + esc(pretty(o.name)) + '</span>' + verdictHTML(o.expertise_verdict)
+        + '<span class="pal__nm">' + esc(disp(o)) + '</span>' + verdictHTML(o.expertise_verdict)
         + '<span class="pal__id">' + esc(o.id) + '</span></div>';
     }).join("");
     var s = listEl.querySelector(".is-sel"); if (s) s.scrollIntoView({ block: "nearest" });
@@ -109,6 +109,7 @@
   });
 
   // ---------- helpers ----------
+  function disp(c) { return c.label || pretty(c.name); }
   function pretty(n) { return String(n).replace(/^@modelcontextprotocol\/server-/, "").replace(/-mcp$/, "").replace(/^mcp-server-/, "").replace(/^mcp-/, ""); }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function fmt(n) { return (n == null) ? "—" : String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }

@@ -232,7 +232,6 @@
   <url><loc>https://tashan.sh/capability/pkg-brandsystem-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-marrowid-cli.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-utilia-solana-agent.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-run402-mcp.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-nostr-bray.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-frihet-mcp-server.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-kage-core-kage-graph-mcp.html</loc><changefreq>weekly</changefreq></url>
@@ -5290,6 +5289,7 @@
   <url><loc>https://tashan.sh/capability/plugin-owl-listener-inclusive-design-skills-accessible-content.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-owl-listener-inclusive-design-skills-inclusive-personas.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-owl-listener-inclusive-design-skills-adaptive-interfaces.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/plugin-owl-listener-inclusive-design-skills-accessibility-decisions.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-anthropics-access.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-anthropics-configure.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-anthropics-claude-automation-recommender.html</loc><changefreq>weekly</changefreq></url>

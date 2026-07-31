@@ -15,7 +15,7 @@ Sources, all public / no telemetry:
 Scores are transparent, labelled, and computed here — never a black box.
 Roadmap (next passes, not here yet): GitHub repo-health, git-history retention/churn, LLM expertise eval.
 """
-import json, os, sqlite3, urllib.request, urllib.error, urllib.parse, time, math, re, subprocess
+import collections, json, os, sqlite3, urllib.request, urllib.error, urllib.parse, time, math, re, subprocess
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -1051,6 +1051,140 @@ def export(con):
     # Bad label and not-a-capability are different judgements and need different lists.
     GENERIC_LABEL = DENY | {"api"}
 
+    # ---- the human label -------------------------------------------------------------------------
+    # The board read like a package manager: "@supabase/mcp-server-supabase" over
+    # "pkg:@supabase/mcp-server-supabase" over a category chip — the npm coordinate twice and the
+    # product name nowhere. This derives the name a person would say.
+    #
+    # COMPUTED HERE, ONCE, FOR THE WHOLE CORPUS, for two reasons. First, pretty() existed in FOUR
+    # copies (index.js, capability.js, terminal.js, cli/tashan.mjs) and none of them handled a scope,
+    # so "@upstash/context7-mcp" rendered as "@upstash/context7" on every surface. Second, and the
+    # reason it CANNOT be a per-row function: two of the decisions below need to see every other row.
+    #
+    # THE TRAP THAT MAKES `title` UNUSABLE ALONE. `title` looks like the human name and often is —
+    # but for an agent skill it is the CONTAINING repo's title, so 364 distinct skills on the board
+    # share the title "claude-community". Rendering that would have collapsed a quarter of the board
+    # into one name. It is the same defect as keying a plugin by the marketplace that listed it: the
+    # artifact's name must come from the artifact. So a title is used only when no other capability
+    # claims it.
+    ACRONYM = set("api ai ui ux cli sql aws gcp db sdk http https url id io pdf csv json xml yaml "
+                  "s3 ci cd seo crm erp gui ide os vm k8s ftp ssh dns rss llm npm qa bi 3d rag jwt "
+                  "oauth ocr tts stt sms cms cdn dom ast orm rpc grpc tcp udp ip iot ar vr nlp".split())
+    BRAND = {"devtools": "DevTools", "github": "GitHub", "gitlab": "GitLab", "postgresql": "PostgreSQL",
+             "postgres": "Postgres", "mysql": "MySQL", "mongodb": "MongoDB", "openai": "OpenAI",
+             "youtube": "YouTube", "javascript": "JavaScript", "typescript": "TypeScript",
+             "graphql": "GraphQL", "wordpress": "WordPress", "bigquery": "BigQuery", "notionhq": "Notion",
+             "dynamodb": "DynamoDB", "clickhouse": "ClickHouse", "duckdb": "DuckDB", "paypal": "PayPal",
+             "linkedin": "LinkedIn", "deepseek": "DeepSeek", "huggingface": "HuggingFace",
+             "cloudflare": "Cloudflare", "elevenlabs": "ElevenLabs", "sqlite": "SQLite"}
+    # Only the affixes that mean "this is an MCP server" — never a word that carries meaning.
+    AFFIX_RE = re.compile(r"^(mcp[-_]server|mcp|server)[-_]|[-_](mcp[-_]server|mcp|server)$")
+
+    def _strip_affixes(t):
+        for _ in range(3):
+            nxt = AFFIX_RE.sub("", t)
+            if nxt == t:
+                break
+            t = nxt
+        return t
+
+    def _titlecase(t):
+        out = []
+        for w in re.split(r"[-_\s.]+", t):
+            if not w:
+                continue
+            lw = w.lower()
+            if lw in BRAND:
+                out.append(BRAND[lw])
+            elif lw in ACRONYM:
+                out.append(lw.upper())
+            elif w[:1].isupper() and any(c.isupper() for c in w[1:]):
+                out.append(w)                       # already cased by its author: DevTools, GraphQL
+            else:
+                out.append(w[:1].upper() + w[1:])
+        return " ".join(out)
+
+    def looks_authored(t, o):
+        """A title is only worth preferring over the derived name when a human wrote it as a name.
+
+        Half of them are just the slug again ("impeccable", "ponytail") or the repo path with the
+        owner glued on ("agricidaniel-claude-seo") — using those threw away the title-casing and, in
+        the second case, published a coordinate as a product name. Require a space or an internal
+        capital, and reject anything that is merely the name/repo restated.
+        """
+        if not t or t.lower() in GENERIC_LABEL:
+            return False
+        if not (" " in t or any(c.isupper() for c in t[1:])):
+            return False                                    # slug-shaped: all lowercase, no spaces
+        flat = lambda x: re.sub(r"[^a-z0-9]", "", (x or "").lower())
+        ft = flat(t)
+        return ft and ft != flat(o.get("name")) and ft not in flat(o.get("source_repo"))
+
+    def label_of(o, title_owned):
+        t = (o.get("title") or "").strip()
+        if t and title_owned.get(t.lower()) == o["id"]:
+            t = re.sub(r"\s*[-—:]?\s*MCP(\s+Server)?$", "", t, flags=re.I).strip()
+            if looks_authored(t, o):
+                return t
+        n = (o.get("name") or "").strip()
+        m = re.match(r"^@([^/]+)/(.+)$", n)
+        scope, n = (m.group(1), m.group(2)) if m else ("", n)
+        n = _strip_affixes(n)
+        # "@acme/mcp-server" leaves nothing to say; the scope is the only identity there is.
+        if not n or n.lower() in GENERIC_LABEL:
+            n = _strip_affixes(scope) or n
+        return _titlecase(n) or (o.get("name") or o["id"])
+
+    def apply_labels(objs):
+        """Second pass: a label is only correct in the context of every other label."""
+        owner = {}
+        for o in objs:
+            t = (o.get("title") or "").strip().lower()
+            if t:
+                owner[t] = None if t in owner else o["id"]       # shared title -> owned by nobody
+        for o in objs:
+            o["label"] = label_of(o, owner)
+        # Two real products can share a name — @notionhq/notion-mcp-server and @suekou/mcp-notion-server
+        # are both "Notion", and there are many honest "Filesystem" servers. Showing identical rows is
+        # worse than showing the publisher, so collisions get qualified.
+        #
+        # BUT NOT ALL OF THEM. The same principle the dedup uses: the highest-signal row in a colliding
+        # group keeps the clean name and everyone else is qualified against it. Anthropic's Filesystem
+        # is "Filesystem"; a clone of it is "Filesystem · someone". Qualifying every member produced
+        # "Filesystem · modelcontextprotocol" at rank 3, which reads like the package name we just
+        # removed.
+        def vendor(o):
+            m = re.match(r"^@([^/]+)/", (o.get("npm_pkg") or o.get("name") or ""))
+            if m:
+                return m.group(1)
+            if o.get("source_repo") and "/" in o["source_repo"]:
+                return o["source_repo"].split("/")[0]
+            return ""
+
+        flat = lambda x: re.sub(r"[^a-z0-9]", "", (x or "").lower())
+        groups = collections.defaultdict(list)
+        for o in objs:
+            groups[o["label"]].append(o)
+        for label, group in groups.items():
+            if len(group) < 2:
+                continue
+            # official first, then measured signal, then the id so the choice is deterministic
+            # SCORE FIRST, official only as a tiebreak. Official-first handed "Context7" to a
+            # score-42 marketplace listing over @upstash/context7-mcp, which scores 98 and has 1.1M
+            # weekly downloads — the row anyone typing "Context7" actually means.
+            group.sort(key=lambda o: (-(o.get("tashan_score") or 0),
+                                      0 if o.get("official") else 1, o["id"]))
+            for o in group[1:]:
+                v = vendor(o)
+                # A vendor that merely restates the name ("Tavily · tavily-ai") disambiguates nothing;
+                # fall back to the package or the id, which always differ or they would be one row.
+                if not v or flat(v) in flat(label) or flat(label) in flat(v):
+                    # "Notion · makenotion/claude-code-notion-plugin/notion" is a path, not a name.
+                    tail = (o.get("npm_pkg") or o["id"].split(":", 1)[-1]).split("/")
+                    v = tail[0] if len(tail) > 1 else tail[-1]
+                o["label"] = label + " · " + v
+        return objs
+
     def display_name(o):
         n = (o.get("name") or "").strip()
         if n.lower() not in GENERIC_LABEL:
@@ -1080,6 +1214,7 @@ def export(con):
         o["gh_topics"] = o["gh_topics"].split(",") if o["gh_topics"] else []
         o["slug"] = slugify(o["id"])                     # stable per-cap slug (matches gen_badges + prerender)
         caps.append(o)
+
     # The board is trust-RANKED: only caps with a real trust score belong on it. This is also the exact
     # set prerender turns into pages, so capabilities.json, index.json, and /capability/*.html stay aligned
     # (no board row or co-use link can point at a page that doesn't exist).
@@ -1196,6 +1331,41 @@ def export(con):
     chain = prefix_chain_keys(caps)
     caps = collapse(caps, lambda c: chain.get(c["id"]), "a truncated copy of one description")
     caps = collapse(caps, by_repo, "a name and repo")
+
+    # ---- an endorsement we cannot attribute is not an endorsement ---------------------------------
+    # official_of() reads the namespace of source_repo. For a PLUGIN that repo is often the marketplace
+    # that vendored it, not the author — so 52 plugins carried "✓ ANTHROPIC · OFFICIAL" for the sole
+    # reason of being listed in anthropics/claude-plugins-official. Among them: asana (Asana's own
+    # integration), context7 (Upstash's), testdino (TestDino's) and one that describes itself in its
+    # own text as "the first official TRES Finance plugin". Crediting the curator as the author is a
+    # false claim about two real companies at once, and it is the same defect as keying a plugin by
+    # the marketplace that listed it — the artifact's identity is its own home.
+    #
+    # The manifest DOES carry an `author`, and ingest_plugins.py parses it, but there is no column to
+    # put it in so it is discarded. Persisting that is the real fix and needs a migration plus a
+    # re-ingest. Until then, withhold rather than guess: a repo that is home to several unrelated
+    # plugins is a marketplace, and a listing there attributes nothing.
+    #
+    # COUNT DISTINCT PLUGINS, NOT LISTINGS. Counting listings is what once decided impeccable's repo
+    # was "shared" and nulled its 51,323 stars. This touches ONLY the official badge — never a score,
+    # never stars.
+    MARKETPLACE_MIN = 4
+    homed = collections.Counter(
+        c.get("source_repo") for c in caps if c.get("kind") == "plugin" and c.get("source_repo"))
+    unattributed = 0
+    for c in caps:
+        if c.get("kind") == "plugin" and c.get("official") and homed[c.get("source_repo")] >= MARKETPLACE_MIN:
+            c["official"] = None
+            unattributed += 1
+    if unattributed:
+        print(f"  official: withheld from {unattributed} plugin(s) vendored in a multi-plugin "
+              f"marketplace — a listing is not an authorship claim")
+
+    # The human label, LAST — after dedup, over the set that actually ships. Run before it, every row
+    # collided with the duplicate listing about to be dropped, so survivors were qualified against
+    # twins that no longer exist: "Filesystem · modelcontextprotocol", "Memory · modelcontextprotocol".
+    # A disambiguator is only correct against the rows a reader can actually see.
+    apply_labels(caps)
     # RATED vs CATALOGUED. A skill lives inside a repository, so repo maintenance is shared by every skill
     # in it: measured just now, 854 skills scored 42.0 with a within-repo spread of 42.0-42.0. That number
     # says "the repo is alive", not "this skill is good", and publishing it per-skill would be a claim we
@@ -1261,7 +1431,7 @@ def export(con):
     # similar_official matches 0 rows today (the CANARY description filter removes the two known
     # shadows before the detector runs) and must ship anyway, so the verdict can fire the day a real
     # typosquat appears — which, unlike a canary, will not announce itself.
-    SLIM = ["id", "name", "kind", "category", "npm_pkg", "official", "registry_status",
+    SLIM = ["id", "name", "label", "kind", "category", "npm_pkg", "official", "registry_status",
             "config_reach", "npm_downloads", "gh_stars", "adoption", "tashan_score", "upkeep", "vitality",
             "expertise", "expertise_verdict", "npm_deprecated", "gh_archived", "rated",
             "single_maintainer", "similar_official",
@@ -1314,7 +1484,7 @@ def export(con):
     # a config can produce, carries only the fields assess() and the MCP risk lines actually branch on,
     # and has no first-paint budget because nothing renders it — 5,787 rows, ~200 KB gz, fetched by a
     # terminal, once.
-    LOOKUP = ["id", "name", "kind", "npm_pkg", "category", "official", "slug", "tashan_score",
+    LOOKUP = ["id", "name", "label", "kind", "npm_pkg", "category", "official", "slug", "tashan_score",
               "npm_latest_version", "remote_host",
               "vitality", "expertise_verdict", "npm_downloads", "gh_stars", "npm_deprecated",
               "gh_archived", "registry_status", "single_maintainer", "similar_official", "rated",

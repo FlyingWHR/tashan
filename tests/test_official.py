@@ -114,6 +114,29 @@ def main():
             n = sum(1 for c in caps if c.get("official"))
             print(f"  ok   all {n} badges in the shipped export are namespace-provable")
 
+    # A LISTING IS NOT AN AUTHORSHIP CLAIM. official_of() reads the namespace of source_repo, and for
+    # a plugin that repo is often the marketplace that vendored it. 52 plugins shipped carrying
+    # "✓ ANTHROPIC · OFFICIAL" purely for being listed in anthropics/claude-plugins-official — among
+    # them asana (Asana's), context7 (Upstash's), testdino (TestDino's) and one whose own description
+    # calls it "the first official TRES Finance plugin". That is a false claim about two companies at
+    # once. Withheld in build.py's export until the manifest's `author` is persisted; this keeps it
+    # withheld. Counts DISTINCT plugins, never listings — counting listings is what once nulled
+    # impeccable's 51,323 stars.
+    if os.path.exists(path):
+        import collections
+        homed = collections.Counter(c.get("source_repo") for c in caps
+                                    if c.get("kind") == "plugin" and c.get("source_repo"))
+        vendored = [c for c in caps if c.get("kind") == "plugin" and c.get("official")
+                    and homed[c.get("source_repo")] >= 4]
+        if vendored:
+            fail = 1
+            print(f"  FAIL  {len(vendored)} plugin(s) claim an official badge earned by their "
+                  f"MARKETPLACE, not their author, e.g. "
+                  + ", ".join(f"{c.get('label') or c['name']} (in {c['source_repo']})" for c in vendored[:3]))
+        else:
+            kept = sum(1 for c in caps if c.get("kind") == "plugin" and c.get("official"))
+            print(f"  ok   {kept} plugin badge(s), every one from the plugin's own repo")
+
     fail = fail or _shadow_cases()
     print("OFFICIAL BADGE FAILED" if fail else
           "ok — official badge (namespace-provable) + name-confusion detector")

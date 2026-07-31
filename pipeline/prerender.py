@@ -52,6 +52,13 @@ def pretty(name):
     return re.sub(r"^mcp-", "", re.sub(r"^mcp-server-", "", re.sub(r"-mcp$", "",
         re.sub(r"^@modelcontextprotocol/server-", "", str(name)))))
 
+def disp(c):
+    """The human label, computed once in build.py's apply_labels over the whole corpus and shipped in
+    the export. pretty() stays below for the one place that needs an IDENTIFIER — the `claude mcp add`
+    server name — where a space or a "·" would be wrong."""
+    return c.get("label") or pretty(c.get("name") or "")
+
+
 def official_org(c):
     s = ((c.get("npm_pkg") or "") + " " + (c.get("source_repo") or "")).lower()
     if re.search(r"modelcontextprotocol|anthropic", s): return "Anthropic"
@@ -61,7 +68,7 @@ def official_org(c):
     return None
 
 def desc_for(c):
-    n = pretty(c["name"])
+    n = disp(c)
     d = c.get("description") or (n + " — an AI capability (" + (c.get("kind") or "server") + ") tracked and scored by tashan on public evidence.")
     if c.get("tashan_score") is not None:
         d = d.rstrip(".") + ". tashan score " + str(c["tashan_score"]) + "/100"
@@ -70,7 +77,7 @@ def desc_for(c):
     return d[:300]
 
 def faq(c):
-    n = pretty(c["name"]); qa = []
+    n = disp(c); qa = []
     # Is it safe / trustworthy
     safe = "tashan scores " + n + " on public evidence — "
     parts = []
@@ -118,7 +125,7 @@ def faq(c):
     return qa
 
 def jsonld(c):
-    n = pretty(c["name"]); url = BASE + "/capability/" + c["slug"] + ".html"
+    n = disp(c); url = BASE + "/capability/" + c["slug"] + ".html"
     app = {"@context":"https://schema.org","@type":"SoftwareApplication","name": n,
            "description": desc_for(c), "applicationCategory":"DeveloperApplication",
            "operatingSystem":"Cross-platform","url": url}
@@ -143,7 +150,7 @@ FOOT = chrome.footer_html()
 
 def summary(c):
     """Server-rendered content crawlers see with JS off (capability.js replaces it for humans)."""
-    n = pretty(c["name"]); rows = []
+    n = disp(c); rows = []
     def kv(k, v): rows.append("<li><b>" + esc(k) + ":</b> " + esc(v) + "</li>") if v not in (None, "", "—") else None
     kv("tashan score", c.get("tashan_score"))
     kv("Expertise", (str(c["expertise"]) + " (" + c["expertise_verdict"] + ")") if c.get("expertise") is not None and c.get("expertise_verdict") else c.get("expertise"))
@@ -219,7 +226,7 @@ def compact(n):
 def fmt(n): return "{:,}".format(n) if isinstance(n, (int, float)) else n
 
 def page(c, gen):
-    n = pretty(c["name"]); url = BASE + "/capability/" + c["slug"] + ".html"
+    n = disp(c); url = BASE + "/capability/" + c["slug"] + ".html"
     title = n + " — tashan score " + (str(c["tashan_score"]) if c.get("tashan_score") is not None else "—") + " · tashan"
     d = esc(desc_for(c))
     return ("<!doctype html>\n<html lang=\"en\">\n<head>\n"
