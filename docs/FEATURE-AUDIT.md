@@ -127,3 +127,49 @@ also fails if the free floor is ever reduced.
 The **MCP server** and the **subregistry** remain entirely free — that is the distribution strategy
 in `PROJECT.md`, not an oversight. The board, hubs and badges stay identical for everyone because
 the score and every finding's existence are free forever.
+
+
+---
+
+## Follow-up: is "every score since we started measuring" worth $6? — 31 Jul 2026
+
+Asked directly, and the data says **not today**, for three stacked reasons.
+
+**1. There is almost no comparable history.** `trend()` correctly refuses to compare across scorer
+versions, and only **2 days** sit under the current one. It needs 3, so a paying customer runs
+`doctor --trend` and is told "not enough comparable history yet". Honest, and worth nothing.
+
+**2. The window before it was contaminated, and the guard missed it.** Between 28 and 29 July the
+scale was stretched while both days were still labelled `s1`:
+
+| score on 28 Jul | n | median change overnight |
+|---|---|---|
+| 10–19 | 111 | −1.0 |
+| 30–39 | 1,253 | −1.0 |
+| 50–59 | 511 | +0.0 |
+| 70–79 | 17 | +6.0 |
+| 80–89 | 7 | +7.0 |
+
+supabase went 85 → 99 and firecrawl 75 → 93 overnight. A recalibration moves whole bands in order;
+real churn does not sort itself by score. 29 → 30 July shows a band spread of **0.0**, which proves
+29 and 30 are the same scale and the version bump was simply recorded a day late — so the points were
+relabelled `s2`, on that evidence. `tests/test_scorer_version.py` could not catch this: it
+fingerprints `compute_scores()` source text, so it is blind to a recalibration arriving through data
+or a changed input, and it cannot fire at all if the suite is not run between the change and the
+commit. `tests/test_history_integrity.py` now checks the OUTPUT, where the damage appears.
+
+**3. Even clean, a score series is weakly actionable.** "supabase went 85 → 86" is not a decision.
+Compare it to the security detail, which is: *this advisory, fixed in 1.2.0, upgrade*. Trend is a
+real **moat** — a day not recorded is gone for everyone, including us — but a moat is a barrier to
+competitors, not a reason for a customer to pay this month.
+
+### What to do
+
+- **Now:** stop leading with it. The pricing page already carries `trend needs ~30 days · clock
+  restarted 30 Jul`; that honesty is right but it is selling an IOU. The advisory detail and the
+  named replacement both work today and are what the $6 should rest on.
+- **~30 days:** revisit. With a clean `s2` window the series becomes chartable and the claim becomes
+  true rather than promissory.
+- **The version it should become:** not "here is a chart of a number", but *"something in YOUR stack
+  moved"* — the watch/alerts feature already marked `not built yet`. The series is the input to that
+  product, not the product. Nobody wants a time series; they want to be told when to care.

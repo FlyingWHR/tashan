@@ -108,6 +108,10 @@ node --test functions/api/account.test.mjs >/dev/null 2>&1 || { node --test func
 echo; echo "── security detail API (paid) ─────────────────"
 node --test functions/api/security.test.mjs >/dev/null 2>&1 || { node --test functions/api/security.test.mjs; fail=1; }
 
+# 5e2. the paid series must carry the capability's movement, not our own recalibration
+echo; echo "── history integrity (the moat) ───────────────"
+python3 tests/test_history_integrity.py || fail=1
+
 # 5f. every feature the pricing page sells must have code that delivers it
 echo; echo "── promises (sold == delivered) ───────────────"
 python3 tests/test_promises.py || fail=1
