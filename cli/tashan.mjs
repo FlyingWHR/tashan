@@ -540,7 +540,8 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
       out += "\n  " + dim(`${withDetail} finding${withDetail === 1 ? " has" : "s have"} detail behind a licence — `) +
         dim("which advisory and the version that fixes it, what the install script runs, ") +
         dim("and the replacement to move to.") + "\n" +
-        "  " + jade("tashan Pro") + dim(" $6/mo · " + SITE + "/pricing") + "\n";
+        "  " + jade("tashan Pro") + dim(" $6/mo · " + SITE + "/pricing") +
+        dim("  ·  already bought? ") + jade("tashan login") + "\n";
     }
   }
   // Say the subscription state out loud, every run. Silence is what makes someone wonder.

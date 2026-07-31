@@ -137,7 +137,7 @@
       grp("Depth", pillset("verdict", VERDICTS.filter(function (v) { return counts.verdict[v]; }), function (v) { return v; }, counts.verdict)) +
       '<div class="tgroup">' +
         toggle("official", "✓ Official", counts.official) +
-        toggle("clean", "Hide deprecated/archived", null) +
+        (counts.dirty ? toggle("clean", "Hide deprecated/archived", counts.dirty) : "") +
       '</div>';
 
     tb.onclick = function (e) {
@@ -168,13 +168,17 @@
   // over the full set they're invariant between filter clicks — compute ONCE per load, not per commit().
   function facetCounts() {
     if (data._facets) return data._facets;
-    var out = { kind: {}, vitality: {}, verdict: {}, official: 0 };
+    var out = { kind: {}, vitality: {}, verdict: {}, official: 0, dirty: 0 };
     data.caps.forEach(function (c) {
       var k = normKind(c);
       out.kind[k] = (out.kind[k] || 0) + 1;
       if (c.vitality) out.vitality[c.vitality] = (out.vitality[c.vitality] || 0) + 1;
       if (c.expertise_verdict) out.verdict[c.expertise_verdict] = (out.verdict[c.expertise_verdict] || 0) + 1;
       if (officialOrg(c)) out.official++;
+      // What "Hide deprecated/archived" would actually remove. It was rendered unconditionally on a
+      // board holding zero of them, so the control could only ever do nothing — and a filter that
+      // never changes the result teaches a reader that none of the filters work.
+      if (c.npm_deprecated || c.gh_archived || (c.registry_status && c.registry_status !== "active")) out.dirty++;
     });
     data._facets = out;
     return out;

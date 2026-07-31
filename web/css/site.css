@@ -999,3 +999,4 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .secoffer__cta { display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; margin: 0; }
 .secoffer__alt { font-size: var(--fs-sm); color: var(--text-dim); }
 .secoffer__alt code { font-size: var(--fs-xs); }
+

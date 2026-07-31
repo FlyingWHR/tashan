@@ -80,9 +80,9 @@ Both must reach Pro without ever being asked to be a database administrator of t
 - [x] **7. Upsell in the security block** (`prerender.py`) — the one place the reader has a problem we
       solve. Never hide that a finding EXISTS. Offer only the part Pro buys: which advisory, the
       fixed version, what the install script runs. One offer, per page, earned.
-- [ ] **8. Upsell on the Index** — only against a real state (e.g. the board filtered to
+- [-] **8. Upsell on the Index** — DROPPED, see iteration 4. — only against a real state (e.g. the board filtered to
       deprecated/archived), never a standing banner.
-- [ ] **9. Upsell in `doctor`** — already partly there; make it name the count of actionable findings.
+- [x] **9. Upsell in `doctor`** — already partly there; make it name the count of actionable findings.
 - [ ] **10. `/welcome` rewritten** as a state page, and reachable: linked from `/account`, from the
       nav when signed in, and from the CLI's success output.
 
@@ -175,3 +175,23 @@ never be shown an ad for the thing they already bought.
 renders inside the audit that the client does not render simply disappears for every reader with JS.
 Caught only by looking at the live page — the served HTML contained `.secoffer` while the DOM did
 not. Same one-concept-two-copies failure this codebase keeps finding. Deploys `5b443f3a`, `ab76c793`.
+
+**Iteration 4 — item 9 done, item 8 dropped, and a dead control removed.**
+
+*Item 8 is dropped, not deferred.* The only honest trigger for an Index offer is a reader looking at
+something broken. The board carries **1,590 rows: 0 with advisories, 0 deprecated, 0 archived, 0
+abandoned** — it is the healthy head of the corpus by construction. I built the offer against the
+`abandoned` facet, deployed it, and it correctly never fired, because that facet matches nothing.
+Shipping it would have been dead code wearing the costume of a feature. The alternative — a standing
+banner — is what the backlog forbids and what readers train themselves not to see. So: no offer on
+the Index. The 276 capability pages that *do* have something wrong carry it, which is where the
+reader actually has the problem.
+
+*What that exposed.* "Hide deprecated/archived" was rendered unconditionally on a board holding zero
+of them, so the control could only ever do nothing. A filter that never changes the result teaches a
+reader that none of the filters work. It is now gated on a real count, like every other facet.
+
+*Item 9* was already right — `doctor` counts findings whose detail is withheld, says nothing on a
+clean run, and prints the licence state every run. Added only the missing next step: the offer now
+ends `already bought? tashan login`, because the answer to "I paid, now what" must be a command, not
+a price. Deploys `66766aaa`, `1e0e5e23`.
