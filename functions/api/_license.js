@@ -118,7 +118,7 @@ export async function validate(env, key, activationId = null) {
 
 // One shape for every refusal, so no endpoint invents its own and leaks detail by accident.
 export function deny(v) {
-  return new Response(JSON.stringify({ error: v.why, docs: "https://tashan.sh/pricing.html" }), {
+  return new Response(JSON.stringify({ error: v.why, docs: "https://tashan.sh/pricing" }), {
     status: v.status || 403,
     headers: { "content-type": "application/json", "cache-control": "no-store" },
   });

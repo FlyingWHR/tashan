@@ -83,7 +83,7 @@ async function signIn(env, key, url) {
 
   return json({
     ...dashboard(res.data),
-    url: handoff ? `${url.origin}/api/account?t=${handoff}` : `${url.origin}/account.html`,
+    url: handoff ? `${url.origin}/api/account?t=${handoff}` : `${url.origin}/account`,
     handoff: Boolean(handoff),
   }, 200, headers);
 }
@@ -91,14 +91,14 @@ async function signIn(env, key, url) {
 // Single use: read and delete before honouring it. A handoff link that survives being clicked is a
 // standing grant sitting in shell history and browser history both.
 async function redeem(env, token, url) {
-  const back = (q) => Response.redirect(url.origin + "/account.html" + q, 302);
+  const back = (q) => Response.redirect(url.origin + "/account" + q, 302);
   if (!env.TASHAN_KV) return back("?e=unavailable");
   const key = await env.TASHAN_KV.get("ho:" + token);
   if (!key) return back("?e=expired");
   await env.TASHAN_KV.delete("ho:" + token);
   return new Response(null, {
     status: 302,
-    headers: { location: url.origin + "/account.html", "set-cookie": setCookie(key) },
+    headers: { location: url.origin + "/account", "set-cookie": setCookie(key) },
   });
 }
 

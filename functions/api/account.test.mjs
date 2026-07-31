@@ -235,7 +235,7 @@ test("a handoff token signs the browser in exactly once", async () => {
 
   const first = await onRequest({ request: req({ url: "https://tashan.sh/api/account?t=tok" }), env });
   assert.equal(first.status, 302);
-  assert.equal(first.headers.get("location"), "https://tashan.sh/account.html");
+  assert.equal(first.headers.get("location"), "https://tashan.sh/account");
   assert.match(first.headers.get("set-cookie") || "", new RegExp(COOKIE + "=" + KEY));
 
   // replayed from shell history or the browser's back stack: no session this time

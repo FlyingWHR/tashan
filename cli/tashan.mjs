@@ -347,7 +347,7 @@ ${bold("tashan")} — the measured layer for AI capabilities ${dim("· " + SITE)
   ${jade("tashan doctor")}               audit the config you already have — dead, deprecated, risky
   ${jade("tashan activate")} <key>       register this machine — once, not once per shell
   ${jade("tashan account")}              open your account in the browser, already signed in
-  ${dim("Pro names the replacement for anything dead in your config · $6/mo · " + SITE + "/pricing.html")}
+  ${dim("Pro names the replacement for anything dead in your config · $6/mo · " + SITE + "/pricing")}
 
   ${dim("flags:")}  --json   --limit <n>   --client <c>   --all   --forget
   ${dim("free tier needs no account · your plan, machines and invoices: tashan account")}
@@ -422,7 +422,7 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
         }
       } else {
         out += "      " + jade("→ ") + dim(`${alts.length} alternative${alts.length === 1 ? "" : "s"} measured better · `) +
-          jade("tashan Pro") + dim(" $6/mo — tashan.sh/pricing.html") + "\n";
+          jade("tashan Pro") + dim(" $6/mo — tashan.sh/pricing") + "\n";
       }
     }
   }
@@ -444,7 +444,7 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
       out += "\n  " + dim(`${withDetail} finding${withDetail === 1 ? " has" : "s have"} detail behind a licence — `) +
         dim("which advisory and the version that fixes it, what the install script runs, ") +
         dim("and the replacement to move to.") + "\n" +
-        "  " + jade("tashan Pro") + dim(" $6/mo · " + SITE + "/pricing.html") + "\n";
+        "  " + jade("tashan Pro") + dim(" $6/mo · " + SITE + "/pricing") + "\n";
     }
   }
   // Say the subscription state out loud, every run. Silence is what makes someone wonder.
@@ -587,7 +587,7 @@ export async function main(argv) {
     if (!lic) {
       process.stdout.write("\n  " + bold("No licence on this machine.") +
         dim("\n  tashan activate <key>   the key is in your purchase email") +
-        dim("\n  " + SITE + "/pricing.html   what Pro adds · the index stays free") + "\n");
+        dim("\n  " + SITE + "/pricing   what Pro adds · the index stays free") + "\n");
       return 1;
     }
     // The terminal already proved who we are, so the browser inherits it — same handoff as
@@ -611,7 +611,7 @@ export async function main(argv) {
         dim("\n  Your licence still works locally; tashan doctor runs without a network.\n"));
       return 1;
     }
-    const url = out.url || SITE + "/account.html";
+    const url = out.url || SITE + "/account";
     const opened = openBrowser(url);
     process.stdout.write("\n  " + jade("Opening your account…") +
       dim(`\n  ${out.email || "signed in"}${out.active ? " · Pro active" : ""}`) +
@@ -648,7 +648,7 @@ export async function main(argv) {
     if (a.trend) {
       if (!key) {
         process.stderr.write(red("  that needs a licence key — run: tashan activate <key> "
-          + "(tashan Pro, $6/mo — https://tashan.sh/pricing.html)") + "\n");
+          + "(tashan Pro, $6/mo — https://tashan.sh/pricing)") + "\n");
         return 0;
       }
       results = await withTrends(results, lic);

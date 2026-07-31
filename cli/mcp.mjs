@@ -291,7 +291,7 @@ export function renderCheck(c, name) {
   // making the agent guess, and say plainly where the answer comes from.
   if (rs.some((r) => /ARCHIVED|DEPRECATED|REMOVED|abandoned/.test(r))) {
     L.push("", "This one is not maintained. `tashan doctor` (free) will tell you if it is in the user's "
-      + "config; tashan Pro names a measured replacement — https://tashan.sh/pricing.html");
+      + "config; tashan Pro names a measured replacement — https://tashan.sh/pricing");
   }
   L.push("", `Details: ${SITE}/capability/${c.slug || slugify(c.id)}.html`);
   L.push("A tashan score measures adoption and maintenance, not security. We do not read its code.");

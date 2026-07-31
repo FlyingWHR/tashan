@@ -336,7 +336,13 @@ def main():
     import glob as _glob, re as _re
     _thin = []
     for _f in sorted(_glob.glob(os.path.join(ROOT, "web", "*.html"))):
-        _m = _re.search(r"<title>([^<]*)</title>", open(_f, encoding="utf-8").read())
+        _src = open(_f, encoding="utf-8").read()
+        # A title is a SEARCH RESULT. A page marked noindex will never be one, so holding it to a
+        # length written for snippets means padding a heading nobody will ever read in a SERP —
+        # /account.html is the customer's own dashboard and is deliberately noindex.
+        if _re.search(r'<meta name="robots"[^>]*noindex', _src):
+            continue
+        _m = _re.search(r"<title>([^<]*)</title>", _src)
         if not _m:
             _thin.append(os.path.basename(_f) + ": no <title> at all")
         elif len(_m.group(1).strip()) < 25:
