@@ -38,6 +38,7 @@ PURPOSE = {
     "/methodology.html":  ("How every number is derived, so the score is re-checkable.", "free"),
     "/about.html":        ("Why a rater that sells nothing it measures is the only kind worth reading.", "free"),
     "/pricing.html":      ("What Pro costs and exactly what it adds.", "sells"),
+    "/account.html":      ("Where to sign in, what happens after paying, how to switch Pro on.", "post-sale"),
     "/requests.html":     ("Ask for a capability to be measured.", "free"),
     "/for-hosts.html":    ("For IDEs and agent hosts: swap one base URL, get the measurement.", "free"),
     "/capability.html":   ("Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs.", "free"),

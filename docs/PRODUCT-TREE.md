@@ -11,18 +11,19 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
-| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | categories.json, index.json, tags.json, tasks.json | free | 92 |
-| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json | free | 50 |
-| `/about.html` | Why a rater that sells nothing it measures is the only kind worth reading. | site, terminal | index.json | free | 43 |
-| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json | free | 43 |
-| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | index.json | sells | 42 |
-| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | index.json | post-sale | 25 |
-| `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | index.json, requests.json | free | 23 |
-| `/support.html` | How to get help, and what we can see when you ask. | site, terminal | index.json | free | 23 |
-| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | index.json | free | 22 |
-| `/privacy.html` | What we collect, which is close to nothing. | site, terminal | index.json | free | 21 |
-| `/terms.html` | Terms of service. | site, terminal | index.json | free | 21 |
-| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 20 |
+| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | categories.json, index.json, tags.json, tasks.json | free | 95 |
+| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json | free | 52 |
+| `/about.html` | Why a rater that sells nothing it measures is the only kind worth reading. | site, terminal | index.json | free | 45 |
+| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json | free | 45 |
+| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | index.json | sells | 44 |
+| `/account.html` | Where to sign in, what happens after paying, how to switch Pro on. | site, terminal | index.json | post-sale | 29 |
+| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | index.json | post-sale | 27 |
+| `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | index.json, requests.json | free | 24 |
+| `/support.html` | How to get help, and what we can see when you ask. | site, terminal | index.json | free | 24 |
+| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | index.json | free | 23 |
+| `/privacy.html` | What we collect, which is close to nothing. | site, terminal | index.json | free | 22 |
+| `/terms.html` | Terms of service. | site, terminal | index.json | free | 22 |
+| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 21 |
 | `/capability.html` | Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs. | capability, site, terminal | index.json | free | 0 |
 | `/welcome.html` *(noindex)* | Post-checkout: activate the licence. noindex, reached only from Polar. | site, terminal | index.json | post-sale | 0 |
 

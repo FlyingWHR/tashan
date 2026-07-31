@@ -34,7 +34,7 @@
     set("sRepos", fmt(d.total_capabilities));
     set("sDate", "measured " + fdate(d.generated_at));
     var fm = document.getElementById("footMethod");
-    if (fm) fm.textContent = "public-signal v2 · " + fmt(d.total_capabilities) + " capabilities · " + fdate(d.generated_at);
+    if (fm) fm.textContent = fmt(d.total_capabilities) + " capabilities · measured " + fdate(d.generated_at);
     var bn = document.getElementById("boardNote");
     if (bn) bn.textContent = d.note || "";
 
