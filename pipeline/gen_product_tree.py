@@ -62,6 +62,8 @@ NON_PAGE = [
     ("cli/tashan.mjs",   "CLI", "search / top / info / add / doctor / activate / mcp"),
     ("cli/mcp.mjs",      "MCP server", "find_capability / check_capability / audit_config"),
     ("functions/api/account.js", "Account", "session + the customer's own record"),
+    ("functions/api/checkout.js", "Post-purchase sign-in", "checkout id -> session, single-use"),
+    ("functions/api/device.js",   "Device login", "RFC 8628 grant for `tashan login`"),
     ("functions/api/history.js", "Paid API", "score history, licence-gated"),
     ("functions/api/polar.js",   "Webhook", "Polar billing events -> entitlement"),
     ("functions/api/_license.js","Gate", "shared licence validation, fails closed"),

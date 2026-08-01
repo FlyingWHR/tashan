@@ -100,6 +100,14 @@ if os.path.exists(sprite_path):
        "run python3 pipeline/icons.py")
     ok("the sprite stays small enough to inline on every page", len(raw) < 12000,
        f"{len(raw)} bytes")
+    # The paint has to sit on each <symbol>. <use> resolves inherited properties against the
+    # REFERENCING element, so paint on the sprite root reaches nothing and every icon falls back to
+    # fill:black / stroke:none — invisible on this page, and silent. Hoisting it back to the root
+    # leaves exactly one copy in the file, which is what this count catches.
+    ok("each symbol carries its own paint, not the sprite root",
+       raw.count(icons.STYLE) == len(icons.all_icons()),
+       f"{raw.count(icons.STYLE)} copies for {len(icons.all_icons())} symbols — "
+       "on the root it is inherited by nothing")
 else:
     ok("web/assets/icons.svg exists", False, "run python3 pipeline/icons.py")
 

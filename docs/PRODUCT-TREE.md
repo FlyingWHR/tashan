@@ -47,6 +47,8 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | `cli/tashan.mjs` | CLI | search / top / info / add / doctor / activate / mcp |
 | `cli/mcp.mjs` | MCP server | find_capability / check_capability / audit_config |
 | `functions/api/account.js` | Account | session + the customer's own record |
+| `functions/api/checkout.js` | Post-purchase sign-in | checkout id -> session, single-use |
+| `functions/api/device.js` | Device login | RFC 8628 grant for `tashan login` |
 | `functions/api/history.js` | Paid API | score history, licence-gated |
 | `functions/api/polar.js` | Webhook | Polar billing events -> entitlement |
 | `functions/api/_license.js` | Gate | shared licence validation, fails closed |
@@ -60,6 +62,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `cli/mcp.test.mjs` — node cli/mcp.test.mjs — protocol + rendering for the MCP server. No network.
 - `cli/tashan.test.mjs` — node cli/tashan.test.mjs  — pure-logic tests for the CLI (no network, no deps).
 - `functions/api/account.test.mjs` — node --test functions/api/account.test.mjs
+- `functions/api/checkout.test.mjs` — The post-purchase sign-in. This endpoint turns a checkout id — a value that rides in a redirect
 - `functions/api/device.test.mjs` — The device-authorisation grant. This is a credential path, so the tests are about what MUST NOT
 - `functions/api/e.test.mjs` — node functions/api/e.test.mjs  — validates the analytics collector's field shaping (no deps).
 - `functions/api/license.test.mjs` — The paywall. Run: node functions/api/license.test.mjs

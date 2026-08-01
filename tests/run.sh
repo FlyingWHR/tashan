@@ -108,6 +108,11 @@ node --test functions/api/account.test.mjs >/dev/null 2>&1 || { node --test func
 echo; echo "── device login (RFC 8628 grant) ──────────────"
 node functions/api/device.test.mjs 2>/dev/null || { node functions/api/device.test.mjs; fail=1; }
 
+# 5d3. post-purchase sign-in — turns a checkout id into a session using a token that can read every
+# customer's record. Almost every test here is about what it must refuse.
+echo; echo "── post-purchase sign-in (checkout) ───────────"
+node functions/api/checkout.test.mjs 2>/dev/null || { node functions/api/checkout.test.mjs; fail=1; }
+
 # 5e. the audit's paid half — a paywall that fails open gives away the one thing $6 buys
 echo; echo "── security detail API (paid) ─────────────────"
 node --test functions/api/security.test.mjs >/dev/null 2>&1 || { node --test functions/api/security.test.mjs; fail=1; }

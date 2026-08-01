@@ -112,11 +112,19 @@ def all_icons():
 
 def sprite():
     """One <svg> block of <symbol>s, inlined into a page once and referenced with <use>."""
+    # STYLE GOES ON THE SYMBOL, NEVER ON THE SPRITE ROOT. <use> clones the referenced element into a
+    # shadow tree under the <use>, and inherited properties (fill, stroke, stroke-width) resolve
+    # against the REFERENCING element's ancestors, not the sprite's. With the paint on the root svg,
+    # every icon on the site inherited nothing and fell back to the SVG defaults — fill:black,
+    # stroke:none — so all 39 rendered as a solid black blob on a black page. Nothing errored: the
+    # symbols existed, the refs resolved, the boxes measured 17x17, and the sprite itself looked
+    # correct when opened on its own. tests/test_icons.py asserts the attributes are on the symbols.
+    #
     # One <path> per icon: the d attribute already supports multiple subpaths via M, so splitting
     # them into separate elements would triple the sprite for no rendering difference.
-    syms = [f'<symbol id="i-{name}" viewBox="0 0 24 24"><path d="{d}"/></symbol>'
+    syms = [f'<symbol id="i-{name}" viewBox="0 0 24 24" {STYLE}><path d="{d}"/></symbol>'
             for name, d in all_icons().items()]
-    return ('<svg class="icon-sprite" aria-hidden="true" ' + STYLE + '>' + "".join(syms) + "</svg>")
+    return '<svg class="icon-sprite" aria-hidden="true">' + "".join(syms) + "</svg>"
 
 
 def use(name, cls="icon"):

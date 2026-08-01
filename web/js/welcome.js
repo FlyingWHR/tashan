@@ -58,6 +58,14 @@
       '<a class="btn btn--ghost ml-3" href="/support.html">Get help &rsaquo;</a></p>';
   }
 
+  // /api/checkout redirects here with ?e= when the exchange could not complete. Say which, plainly:
+  // "it did not work" sends someone to support, "that link was already used" does not.
+  var NOTE = {
+    used:   "That sign-in link had already been used. Your key is in your purchase email — paste it once below.",
+    unpaid: "That checkout has not completed. If you have just paid, give it a moment and reload.",
+    stale:  "That sign-in link has expired. Paste your key once below and this browser stays signed in.",
+  }[new URLSearchParams(location.search).get("e")] || "";
+
   function signedOut() {
     host.innerHTML =
       '<p class="kicker">Welcome to tashan Pro</p>' +
@@ -65,6 +73,7 @@
       '<p class="lede">Your licence key is in the email that just arrived. Paste it here and this ' +
       "browser stays signed in — after that, every machine you ever work on is approved with a " +
       "click, and you never type it again.</p>" +
+      (NOTE ? '<div class="callout"><b>' + NOTE + "</b></div>" : "") +
       window.tashanSignin.html({ id: "wKey", autofocus: true }) +
       '<p class="note">In CI, where there is no browser to open, <code>npx tashan-cli activate &lt;key&gt;</code> ' +
       "does the same thing non-interactively.</p>";
