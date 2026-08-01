@@ -39,7 +39,7 @@
   /* Display only. Character where the text is read once and looked at; the workhorse keeps the
      12-15px table text, where neutral letterforms and tabular figures decide whether 5,788 rows
      are scannable. Falls back to the workhorse, so a failed font load changes nothing but flavour. */
-  --font-display: "Space Grotesk", "Geist", -apple-system, system-ui, sans-serif;
+  --font-display: "Geist", -apple-system, system-ui, sans-serif;
   --font-mono:  "GeistMono", ui-monospace, "SF Mono", Menlo, monospace;
   --font-serif: ui-serif, "New York", "Iowan Old Style", Georgia, serif;
 
@@ -167,6 +167,16 @@ img { max-width: 100%; display: block; }
 .rot { display:inline-block; overflow:hidden; height:1.2em; vertical-align:-0.28em; }
 .rot > span { display:inline-block; color: var(--jade); will-change: transform, opacity; }
 .hero__sub { margin: var(--sp-5) 0 0; max-width: 42rem; font-size: var(--text-lead); color: var(--text-dim); line-height:1.5; }
+/* The visible search entry point. Looks like a field, is a button: it opens the ⌘K palette rather
+   than duplicating its logic, so there is exactly one search on the site. */
+.herosearch { margin-top: var(--sp-8); width:100%; max-width: 44rem; display:flex; align-items:center;
+  justify-content:space-between; gap: var(--sp-4); padding: var(--sp-4) var(--sp-5);
+  background: var(--surface); border:1px solid var(--hairline); border-radius: var(--radius);
+  cursor:text; text-align:left; transition: border-color .18s ease, background .18s ease; }
+.herosearch:hover, .herosearch:focus-visible { border-color: var(--jade); background: var(--surface-2); }
+.herosearch__q { color: var(--text-dim); font-size: var(--fs-lg); }
+.herosearch__k { color: var(--text-faint); flex:none; }
+.herosearch__eg { margin-top: var(--sp-3); font-size: var(--fs-sm); color: var(--text-faint); }
 .hero__cta { margin-top: var(--sp-8); display:flex; gap: var(--sp-3); flex-wrap:wrap; }
 .hero__stat { margin-top: var(--sp-8); display:flex; flex-wrap:wrap; gap: var(--sp-8);
   font-family: var(--font-mono); font-size:var(--fs-base); color: var(--text-dim); }

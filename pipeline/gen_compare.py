@@ -148,7 +148,7 @@ def page(a, b, cat_label, gen):
         if not c.get("npm_pkg"):
             return ""
         return ('<div class="cmp__inst"><p class="cmp__insth mono">' + esc(H.disp(c)) + "</p>"
-                '<pre class="install__snip"><code>claude mcp add ' + esc(c["slug"].replace("pkg-", ""))
+                '<pre class="install__snip"><code>claude mcp add ' + esc(chrome.alias(c["name"]))
                 + " -- npx -y " + esc(c["npm_pkg"]) + "</code></pre></div>")
 
     body = ('<main class="wrap" id="main"><article class="prose prose--wide">\n'

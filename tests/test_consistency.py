@@ -360,43 +360,26 @@ for p_ in pages:
 ok(f"{n_scanned} scanned + {n_unscanned} unscanned dossiers state their security result truthfully",
    not sec_bad, "; ".join(f"{k} x{v} — {sec_ex[k]}" for k, v in sec_bad.most_common(3)))
 
-# ---- 8. what we sell must not be in the file anyone can curl -------------------------------------
-# The audit's DETAIL is the paid feature, and it was being written straight into
-# /data/capabilities.json and /data/lookup.json — so the "unlock detail" link sat next to data a
-# visitor could already read with curl. Worse, nothing DELIVERED it to a paying customer: no endpoint
-# and no CLI path reads sec_advisories, so the leak was also the only way to get what Pro advertises.
+# ---- 8. the security audit must be FREE, in full, in every public file ---------------------------
+# This block used to assert the opposite: that sec_advisories and the literal install command were
+# ABSENT from the public files, because they were the paid half. They are now free. Naming a
+# vulnerability and charging for its identity and its fix is the one thing an independent rater
+# cannot do, so the gate was deleted rather than tightened — see build.py::redact_paid.
 #
-# The free tier is unchanged and must stay that way: every finding's EXISTENCE is stated in full —
-# how many advisories, at what severity, that an install script exists, that a permission surface
-# exists. Only the detail needed to act is withheld. That is this project's stated firewall.
-PAID = {
-    "sec_advisories": "the advisory id, severity and fixed version",
-    "sec_install_script": "the literal command run at install time (a bool is fine, a string is not)",
-}
-# The other direction, and the one that is easy to break while "protecting" revenue.
-FREE_FLOOR = ("sec_permissions",)
-for rel in ("data/capabilities.json", "data/index.json", "data/lookup.json"):
+# The assertion is inverted, not dropped, because the failure mode is real in both directions: the
+# detail was once silently truncated to "protect revenue" and the free promise broke without a
+# sound. What must never regress is the WHOLE audit being readable by anyone with curl.
+FREE_FLOOR = ("sec_permissions", "sec_install_script")
+for rel in ("data/capabilities.json",):
     d = load(rel)
     if d is None:
         continue
     rows = d.get("records") if isinstance(d, dict) and "records" in d else caps_of(d)
-    leaks = collections.Counter()
-    ex = {}
-    for r in rows:
-        if r.get("sec_advisories"):
-            leaks["sec_advisories"] += 1
-            ex.setdefault("sec_advisories", str(r["sec_advisories"])[:60])
-        if isinstance(r.get("sec_install_script"), str):
-            leaks["sec_install_script"] += 1
-            ex.setdefault("sec_install_script", r["sec_install_script"][:60])
-        # sec_permissions is deliberately NOT here. "What it can reach on your machine" is the free
-        # column's own promise on the pricing page; it was briefly truncated to one entry to protect
-        # a paid claim that sold the identical fact, which broke the free promise and left the
-        # dossier's headline read unable to warn about credentials. Freeness is asserted below.
-    ok(f"{rel} carries no paid detail",
-       not leaks,
-       "; ".join(f"{k} on {n} row(s) — {ex[k]} ({PAID.get(k, 'the full permission list')})"
-                 for k, n in leaks.most_common()))
+    booleaned = sum(1 for r in rows if r.get("sec_install_script") is True)
+    real = sum(1 for r in rows if isinstance(r.get("sec_install_script"), str))
+    ok(f"{rel} publishes the real install command, not a boolean — {real} capabilities",
+       real > 0 and booleaned == 0,
+       f"{booleaned} row(s) still carry sec_install_script as a bare True; the command is free now")
 
 # The permission surface must stay whole in the public export — the free column sells it.
 _exp = caps_of(load("data/capabilities.json"))
@@ -474,8 +457,11 @@ ok(f"the inline payload was actually found and parsed on all {len(pages)} dossie
    n_inline == len(pages), f"parsed {n_inline} of {len(pages)} — the selector is wrong, not the data")
 ok(f"{n_inline} inline dossier payloads agree with the export on EVERY field they carry",
    not inline_bad, "; ".join(f"{k} on {n} page(s) — {inline_ex.get(k,'')}" for k, n in inline_bad.most_common(3)))
-ok("the inline dossier payload carries no paid detail either", not paid_inline,
-   f"{sum(paid_inline.values())} page(s) embed the advisory list or the raw install command")
+# Inverted with the block above: the island must CARRY the audit detail, because capability.js
+# renders the dossier from it and a reader with JS must not see less than the static page shows.
+ok("the inline dossier payload carries the audit detail, not a redacted copy",
+   n_inline > 0 and sum(paid_inline.values()) > 0,
+   "no dossier island embeds the install command — the client render will show less than the server")
 
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)

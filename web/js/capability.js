@@ -3,7 +3,13 @@
 // and where its community actually is. Rendered from the exported measured data (v2).
 (function () {
   "use strict";
-  var el = document.getElementById("cap");
+  // THE MOUNT IS PART OF THE PRERENDER CONTRACT. This read getElementById("cap"), but prerender.py
+  // emits <main class="wrap" id="main"> and never an id="cap" — so on all 5,788 generated dossiers el
+  // was null, render() threw at el.innerHTML, the catch threw again, and the reader only ever saw the
+  // static server HTML. Everything client-only (the per-client install tabs, Upkeep, Freshness) simply
+  // did not exist. The <main> element is the one thing both halves agree on, so key on it and let the
+  // id go. See [[prerender-and-capability-js-are-one-concept]].
+  var el = document.querySelector("main");
 
   // boot() runs LAST (see the call at the end of this IIFE) so every helper and data constant — CAT,
   // _tabSeq, etc. — is initialized before render() is ever called. (var assignments below only run when
@@ -36,7 +42,7 @@
   }
 
   // Checkout carries the capability that triggered it, so we learn which pages actually convert
-  // rather than guessing. Set per render because unlock() is called from several rows.
+  // rather than guessing. Set per render because several rows read it.
   var PRICING = "/pricing.html";
   var CAP_ID = "";
 
@@ -85,13 +91,15 @@
         '<b>fresh</b> it is, gated by real <b>adoption</b> — npm weekly downloads where published, distinct public ' +
         'configs otherwise. <b>Health</b> reads finished-but-loved (stable) apart from abandoned. It is <b>not</b> an ' +
         'outcome eval: does-it-actually-work-well testing and retention are on the ' +
-        '<a class="link" href="/methodology.html">roadmap</a>. Measured ' + fdate(d.generated_at) + '.</div>';
+        '<a class="link" href="/methodology.html">roadmap</a>. Measured ' + fdate(d.generated_at) + '. ' +
+        // MIRRORS prerender.py::summary. The server render carries this line and this function
+        // REPLACES the server render, so a link that exists only in prerender.py is a link no
+        // reader with JS ever sees. See [[prerender-and-capability-js-are-one-concept]].
+        '<a class="link" href="/support.html?ref=' + encodeURIComponent(CAP_ID) + '#corrections' +
+        '">Something wrong here?</a></div>';
 
     wireTabs();
     wireCopy();
-    // Ask for the paid half AFTER the free page is on screen, never before: the free rendering is
-    // the correct answer for most readers and must not wait on a request that will 403.
-    fillPaidDetail(c);
   }
 
   // ---------- tashan's read: turn the measured evidence into a one-line DECISION (the whole point) ----------
@@ -237,7 +245,8 @@
     var linksHTML = links.length ? '<span class="install__links">' + links.join(' &nbsp;·&nbsp; ') + '</span>' : '';
 
     if (c.kind === "skill") {
-      var folder = pretty(c.name).replace(/[^a-z0-9_-]/gi, "-");
+      // collapse + strip: a leading "-" would make `cp -r -foo …` parse as a flag, not a folder
+      var folder = pretty(c.name).replace(/[^a-z0-9_-]/gi, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
       return '<div class="install"><div class="install__hd"><h2>Install</h2>' + linksHTML + '</div>' +
         tabs(c, [
           ["Claude Code", "Drop the skill folder into your skills directory:", "cp -r " + folder + " ~/.claude/skills/", "sh"],
@@ -330,12 +339,11 @@
   }
 
   // ---------- small helpers ----------
-  // ---------- security audit: the finding is free, the analysis is paid ----------------------
-  // The rule, applied everywhere: a reader is NEVER left unaware that a risk exists. Every finding
-  // is named in full — how many advisories, at what severity, whether it runs code at install, what
-  // it can reach. What a licence buys is the detail needed to act: which advisory, what the script
-  // does, which version fixes it. Hiding the existence of a vulnerability behind a paywall would be
-  // indefensible for a product whose whole claim is that it tells you the truth about what you run.
+  // ---------- security audit: entirely free ---------------------------------------------------
+  // Every finding AND its actionable detail — which advisory, the version that fixes it, the exact
+  // install command — is shown to everyone. The detail used to be the paid half; charging for the
+  // remediation of a vulnerability we just reported is the one move an independent rater does not
+  // get to make. Pro sells time (history, change alerts), never the current state.
   var PERM_LABEL = {
     filesystem: "Reads and writes files", shell: "Runs shell commands",
     network: "Makes network requests", browser: "Drives a browser",
@@ -345,56 +353,20 @@
   var SEV_CLS = { MALICIOUS: "sev--mal", CRITICAL: "sev--crit", HIGH: "sev--high",
                   MODERATE: "sev--mod", MEDIUM: "sev--mod", LOW: "sev--low" };
 
-  function unlock(what) {
-    return '<a class="unlock" href="' + PRICING + '?ref=' + encodeURIComponent(CAP_ID) +
-      '" title="' + esc(what) + '">unlock detail</a>';
+  // Mirror of prerender.py::advisory_detail — both render the same row and must agree.
+  function advisoryDetail(c) {
+    var adv = c.sec_advisories || [];
+    if (typeof adv === "string") { try { adv = JSON.parse(adv); } catch (e) { adv = []; } }
+    if (!adv.length) return '<span class="secrow__ok">see the advisory database for detail</span>';
+    return '<span class="secrow__ok">' + adv.slice(0, 6).map(function (a) {
+      return "<code>" + esc(a.id || "?") + "</code> " +
+        (a.fixed ? "fixed in " + esc(a.fixed) : "no fix published");
+    }).join(" · ") + "</span>";
   }
 
-  // ---- the paid half, for whoever is signed in ---------------------------------------------------
-  // The website used to differentiate NOTHING: capability.js never checked for a licence, so a
-  // paying customer saw byte-for-byte what a stranger saw, on the same page whose "unlock detail"
-  // link had just taken their money. /api/security is gated by the same _license.js the CLI uses,
-  // and the browser session cookie set by /api/account is a credential keyFrom() already reads —
-  // so being signed in here is enough. A 401/403 is the normal case for most readers, not an error:
-  // we simply leave the free rendering alone.
-  function fillPaidDetail(c) {
-    if (!c.sec_scanned_at) return;                       // nothing was scanned; nothing to unlock
-    fetch("/api/security?id=" + encodeURIComponent(c.id), { credentials: "same-origin" })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (d) { if (d) revealPaid(d); })
-      .catch(function () { /* offline or not signed in — the free view is already correct */ });
-  }
-
-  function revealPaid(d) {
-    var host = document.querySelector(".sec");
-    if (!host) return;
-    var rows = host.querySelectorAll(".secrow");
-
-    function swap(match, html) {
-      for (var i = 0; i < rows.length; i++) {
-        var l = rows[i].querySelector(".secrow__l");
-        if (l && match.test(l.textContent)) {
-          var slot = rows[i].querySelector(".secrow__d");
-          if (slot) slot.innerHTML = html;
-          return true;
-        }
-      }
-      return false;
-    }
-
-    (d.advisories || []).length && swap(/known advisor/i,
-      '<span class="paid">' + (d.advisories || []).map(function (a) {
-        return esc(a.id) + (a.fixed ? " — fixed in " + esc(a.fixed) : " — no fix published");
-      }).join("<br>") + "</span>");
-
-    if (d.install_script) {
-      swap(/install time/i, '<code class="paid">' + esc(d.install_script) + "</code>");
-    }
-    var offer = document.querySelector(".secoffer");
-    if (offer) offer.remove();
-    var sub = document.querySelector(".capsec__sub");
-    if (sub) sub.innerHTML = "Full detail shown — your licence is active on this browser.";
-  }
+  // The /api/security round trip that used to live here is GONE. It fetched the advisory list and
+  // the install command for licence holders and swapped them into the free rows; both now ship in
+  // the inline island for every reader, so there is nothing left to reveal. See build.py::redact_paid.
 
   function secRow(label, value, detail, cls) {
     return '<div class="secrow' + (cls ? " " + cls : "") + '">' +
@@ -420,7 +392,7 @@
       rows.push(secRow(
         '<b>' + n + ' known advisor' + (n === 1 ? "y" : "ies") + '</b>',
         '<span class="sev ' + (SEV_CLS[sev] || "") + '">' + esc(sev.toLowerCase()) + '</span>',
-        unlock("Which advisory, its severity, the affected range and the version that fixes it"),
+        advisoryDetail(c),
         "secrow--alert"));
     } else {
       rows.push(secRow("No known advisories",
@@ -430,7 +402,9 @@
 
     if (c.sec_install_script) {
       rows.push(secRow("<b>Runs a script at install time</b>", '<span class="sev sev--high">code</span>',
-        unlock("The exact command this package executes when it is installed"), "secrow--alert"));
+        typeof c.sec_install_script === "string"
+          ? '<code class="secrow__cmd">' + esc(c.sec_install_script) + "</code>"
+          : '<span class="secrow__ok">a script runs on install</span>', "secrow--alert"));
     }
 
     if (perms.length) {
@@ -450,7 +424,8 @@
 
     if (c.sec_remote_content) {
       rows.push(secRow("Can carry remote content into your agent", "",
-        unlock("What it fetches, and why that is the injection-exposure question for agent tools")));
+        '<span class="secrow__ok">it can pull third-party text into the model\'s context — treat ' +
+        "what it returns as untrusted input</span>"));
     }
     rows.push(secRow(c.sec_provenance ? "Signed build provenance" : "No build provenance",
       "", '<span class="secrow__ok">' + (c.sec_provenance
@@ -458,36 +433,12 @@
         : "no attestation — the published artifact cannot be traced to its source") + "</span>",
       c.sec_provenance ? "" : "secrow--warn"));
 
-    // MIRROR OF prerender.py::security_block's offer, and it has to be — this function REPLACES the
-    // prerendered dossier wholesale via el.innerHTML, so anything the server renders inside the
-    // audit and this does not simply disappears for every reader with JS. The offer shipped
-    // server-side first and was invisible in the browser for exactly that reason.
-    var gated = [];
-    if (n) gated.push(n === 1 ? "which advisory and the version that fixes it"
-                              : "which advisories, and the versions that fix them");
-    if (c.sec_install_script) gated.push("the exact command it runs at install time");
-    if (c.sec_remote_content) gated.push("what third-party content it can pull into your agent");
-
-    var offer = "";
-    if (gated.length) {
-      var many = gated.length > 1;
-      offer = '<div class="secoffer">' +
-        '<p class="secoffer__h"><b>' + gated.length + " finding" + (many ? "s" : "") + " here " +
-        (many ? "have" : "has") + " detail behind a licence.</b> You can see " +
-        (many ? "they exist" : "it exists") + " above, free, permanently — Pro tells you " +
-        gated.join("; ") + ".</p>" +
-        '<p class="secoffer__cta"><a class="btn btn--primary" href="' + PRICING + "?ref=" +
-        encodeURIComponent(CAP_ID) + '">Unlock the fix &mdash; $6/mo &rsaquo;</a>' +
-        '<a class="link secoffer__alt" href="/start.html">or check your whole config free with ' +
-        "<code>npx tashan-cli doctor</code></a></p></div>";
-    }
-
-    return section("Security audit", '<div class="sec">' + rows.join("") + '</div>' + offer,
-      gated.length
-        ? "Every finding is shown in full. A licence adds the detail needed to act on it — which " +
-          "advisory, what the install script does, the version that fixes it."
-        : "Every finding is shown in full. Nothing on this page is behind a licence — there is no " +
-          "advisory to name and no install script to read.",
+    // No offer, no "unlock": nothing in this section is gated. Mirrors prerender.py::security_block,
+    // and it has to — this function REPLACES the prerendered dossier via el.innerHTML, so the two
+    // must render the same audit or one of them is a lie about the other.
+    return section("Security audit", '<div class="sec">' + rows.join("") + '</div>',
+      "Every finding is shown in full — which advisory, the version that fixes it, and the exact " +
+      "command run at install time. Nothing in this audit is behind a licence.",
       "scanned " + fdate(c.sec_scanned_at));
   }
 

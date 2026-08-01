@@ -17,13 +17,20 @@ const files = fs.readdirSync(dir).filter((f) => f.endsWith(".html"));
 const step = Math.max(1, Math.floor(files.length / 60));
 const sample = files.filter((_, i) => i % step === 0);
 
-function runRender(islandText, pathname) {
+// THE SHIM MUST MODEL THE PAGE THE GENERATOR ACTUALLY EMITS. This used to answer
+// getElementById("cap") with a live element and querySelector() with null — the exact inverse of
+// reality. prerender.py emits <main class="wrap" id="main"> and has never emitted an id="cap", so on
+// every real dossier el was null and render() threw at el.innerHTML. The suite passed anyway,
+// because the shim invented the mount the page was missing: a test asserting the broken contract is
+// how this shipped to 5,788 pages. The mount now resolves the way a browser resolves it.
+function runRender(islandText, pathname, mountSel) {
   let capHTML = "__SUMMARY__";
   const capEl = { set innerHTML(v) { capHTML = v; }, get innerHTML() { return capHTML; } };
   const g = globalThis;
   g.document = {
-    getElementById: (id) => id === "cap" ? capEl : id === "cap-data" ? { textContent: islandText } : null,
-    querySelector: () => null, querySelectorAll: () => [], addEventListener: () => {}, title: "",
+    getElementById: (id) => id === "cap-data" ? { textContent: islandText } : null,
+    querySelector: (sel) => sel === mountSel ? capEl : null,
+    querySelectorAll: () => [], addEventListener: () => {}, title: "",
   };
   g.location = { search: "", pathname, replace() { throw new Error("REDIRECT (render should never navigate an island page)"); } };
   g.window = {}; g.URLSearchParams = URLSearchParams; g.navigator = { clipboard: { writeText() {} } };
@@ -40,11 +47,13 @@ for (const f of sample) {
   const html = fs.readFileSync(path.join(dir, f), "utf8");
   const m = html.match(/id="cap-data">(.*?)<\/script>/s);
   if (!m) { console.log("FAIL no island:", f); fail++; continue; }
-  const { capHTML, threw, errs } = runRender(m[1], "/capability/" + f);
+  // The mount capability.js keys on must be present in the SHIPPED file, not assumed by the shim.
+  if (!/<main[\s>]/.test(html)) { console.log("FAIL no <main> mount in the prerendered page:", f); fail++; continue; }
+  const { capHTML, threw, errs } = runRender(m[1], "/capability/" + f, "main");
   checked++;
   if (threw) { console.log("FAIL threw:", f, "—", threw.message); fail++; continue; }
   if (errs.length) { console.log("FAIL render logged error:", f, "—", errs[0]); fail++; continue; }
-  if (capHTML === "__SUMMARY__") { console.log("FAIL #cap not replaced:", f); fail++; continue; }
+  if (capHTML === "__SUMMARY__") { console.log("FAIL server render not replaced:", f); fail++; continue; }
   if (!/class="stats"/.test(capHTML)) { console.log("FAIL no stats grid:", f); fail++; continue; }
   if (/install__tab|install__snip/.test(capHTML)) tabs++;
   if (/hstat|repoHealth|Bus factor|stars/.test(capHTML)) health++;

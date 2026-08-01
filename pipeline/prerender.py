@@ -194,7 +194,7 @@ def faq(c):
     if c.get("kind") == "skill":
         inst = "Drop the skill folder into ~/.claude/skills/ (user scope) or .claude/skills/ (project scope)."
     elif c.get("npm_pkg"):
-        inst = "In Claude Code: run `claude mcp add " + re.sub(r'[^a-z0-9_-]', '-', pretty(c['name'])).strip('-') + " -- npx -y " + c["npm_pkg"] + "`. In Cursor / Claude Desktop, add it to mcp.json / claude_desktop_config.json."
+        inst = "In Claude Code: run `claude mcp add " + chrome.alias(c["name"]) + " -- npx -y " + c["npm_pkg"] + "`. In Cursor / Claude Desktop, add it to mcp.json / claude_desktop_config.json."
     else:
         inst = "Configure it from its source repository — it is a remote / registry server."
     qa.append(("How do I install " + n + "?", inst))
@@ -238,7 +238,7 @@ def jsonld(c):
 NAV = chrome.nav_html()
 FOOT = chrome.footer_html()
 
-def summary(c):
+def summary(c, gen=""):
     """Server-rendered content crawlers see with JS off (capability.js replaces it for humans)."""
     n = disp(c); rows = []
     def kv(k, v): rows.append("<li><b>" + esc(k) + ":</b> " + esc(v) + "</li>") if v not in (None, "", "—") else None
@@ -252,7 +252,7 @@ def summary(c):
     install = ""
     if c.get("npm_pkg"):
         install = '<p class="install__lbl mono">Install (Claude Code):</p><pre class="install__snip"><code>claude mcp add ' + \
-            esc(re.sub(r'[^a-z0-9_-]', '-', n).strip('-')) + ' -- npx -y ' + esc(c["npm_pkg"]) + '</code></pre>'
+            esc(chrome.alias(c["name"])) + ' -- npx -y ' + esc(c["npm_pkg"]) + '</code></pre>'
     verdict = ('<div class="expert-read"><span class="vd vd--' + esc(c["expertise_verdict"]) + '">' + esc(c["expertise_verdict"]) +
                '</span><p>&ldquo;' + esc(c["expertise_note"]) + '&rdquo;</p></div>') if c.get("expertise_note") else ""
     # works-with (protocol-derived) — real content for "does X work with Cursor" queries
@@ -318,7 +318,15 @@ def summary(c):
             # The security audit goes BEFORE the CTA and the link row: it is the measurement the
             # page exists to publish, and it was previously absent from this tier entirely.
             security_block(c)
-            + ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else '') + audit)
+            + ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else '') + audit
+            # WHEN THIS WAS MEASURED, in the static file. capability.js prints it in its closing
+            # callout, but that is client-side only — so every crawler and answer engine we court in
+            # llms.txt read 5,788 pages of measurements with no date attached to any of them. A
+            # measurement without an as-of date is not a measurement, it is an assertion.
+            + ('<p class="mono fs-sm faint">Measured ' + esc(gen[:10]) + ' &nbsp;·&nbsp; '
+               '<a class="link" href="/methodology.html">how</a> &nbsp;·&nbsp; '
+               '<a class="link" href="/support.html?ref=' + quote(c["id"], safe="") + '#corrections">'
+               'something wrong here?</a></p>' if gen else ''))
 
 def compact(n):
     n = n or 0
@@ -356,9 +364,24 @@ def security_block(c):
                 '<span class="secrow__v mono">' + value + "</span>"
                 '<span class="secrow__d">' + detail + "</span></div>")
 
-    def unlock(what):
-        return ('<a class="unlock" href="/pricing.html?ref=' + quote(c["id"], safe="") + '" title="' + esc(what)
-                + '">unlock detail</a>')
+    def advisory_detail(cap):
+        """Name every advisory: its id, and the version that fixes it. Free.
+
+        This was an "unlock detail" link to /pricing.html. Telling a reader that their package has a
+        known vulnerability and then charging them to learn WHICH one is the one thing an independent
+        rater cannot do — see build.py::redact_paid."""
+        try:
+            adv = json.loads(cap["sec_advisories"]) if cap.get("sec_advisories") else []
+        except (ValueError, TypeError):
+            adv = []
+        if not adv:
+            return '<span class="secrow__ok">see the advisory database for detail</span>'
+        out = []
+        for a in adv[:6]:
+            fixed = a.get("fixed")
+            out.append('<code>' + esc(a.get("id") or "?") + "</code> "
+                       + ("fixed in " + esc(fixed) if fixed else "no fix published"))
+        return '<span class="secrow__ok">' + " · ".join(out) + "</span>"
 
     def sec(title, body, sub, aside=""):
         return ('<section class="capsec"><div class="capsec__hd"><h2>' + title + "</h2>"
@@ -385,7 +408,7 @@ def security_block(c):
         rows.append(sec_row(
             "<b>" + str(n) + " known advisor" + ("y" if n == 1 else "ies") + "</b>",
             '<span class="sev ' + SEV_CLS.get(sv, "") + '">' + esc(sv.lower()) + "</span>",
-            unlock("Which advisory, its severity, the affected range and the version that fixes it"),
+            advisory_detail(c),
             "secrow--alert"))
     else:
         rows.append(sec_row("No known advisories", '<span class="sev sev--none">clear</span>',
@@ -393,9 +416,12 @@ def security_block(c):
                             + esc(c.get("npm_latest_version") or "the current release") + "</span>"))
 
     if c.get("sec_install_script"):
+        scr = c.get("sec_install_script")
         rows.append(sec_row("<b>Runs a script at install time</b>",
                             '<span class="sev sev--high">code</span>',
-                            unlock("The exact command this package executes when it is installed"),
+                            ('<code class="secrow__cmd">' + esc(scr) + "</code>"
+                             if isinstance(scr, str) else
+                             '<span class="secrow__ok">a script runs on install</span>'),
                             "secrow--alert"))
 
     if perms:
@@ -412,8 +438,8 @@ def security_block(c):
 
     if c.get("sec_remote_content"):
         rows.append(sec_row("Can carry remote content into your agent", "",
-                            unlock("What it fetches, and why that is the injection-exposure question "
-                                   "for agent tools")))
+                            '<span class="secrow__ok">it can pull third-party text into the model\'s '
+                            "context — treat what it returns as untrusted input</span>"))
 
     rows.append(sec_row(
         "Signed build provenance" if c.get("sec_provenance") else "No build provenance", "",
@@ -423,41 +449,18 @@ def security_block(c):
                                        "its source") + "</span>",
         "" if c.get("sec_provenance") else "secrow--warn"))
 
-    # THE OFFER IS EARNED, PER PAGE, OR IT IS NOT MADE. Count only findings whose ACTIONABLE detail
-    # is actually gated on this capability. A clean package has nothing to unlock, so it carries no
-    # pitch at all — a standing banner on all 5,788 pages is the thing readers learn to stop seeing,
-    # and pitching a fix for a package with nothing wrong is a lie about the product.
-    gated = []
-    if n:
-        gated.append("which advisor" + ("y and the version that fixes it" if n == 1
-                                        else "ies, and the versions that fix them"))
-    if c.get("sec_install_script"):
-        gated.append("the exact command it runs at install time")
-    if c.get("sec_remote_content"):
-        gated.append("what third-party content it can pull into your agent")
+    # NOTHING HERE IS GATED, so there is no offer and no "unlock" link anywhere in this section.
+    #
+    # What stood here counted the findings whose detail was paid and pitched $6/mo against them —
+    # which made the pitch loudest exactly where the reader was most exposed. Telling someone their
+    # package has a known vulnerability and charging them to learn WHICH one is the single move an
+    # independent rater does not get to make. Pro sells TIME (history, and being told when this
+    # CHANGES); a section describing the CURRENT state therefore has nothing to advertise.
+    # See build.py::redact_paid.
+    sub = ("Every finding is shown in full — which advisory, the version that fixes it, and the exact "
+           "command run at install time. Nothing in this audit is behind a licence.")
 
-    sub = ("Every finding is shown in full. A licence adds the detail needed to act on it — "
-           "which advisory, what the install script does, the version that fixes it."
-           if gated else
-           # Nothing is withheld here, so do not imply that something is.
-           "Every finding is shown in full. Nothing on this page is behind a licence — there is no "
-           "advisory to name and no install script to read.")
-
-    offer = ""
-    if gated:
-        many = len(gated) > 1
-        offer = ('<div class="secoffer">'
-                 '<p class="secoffer__h"><b>' + str(len(gated)) + " finding" + ("s" if many else "") +
-                 " here " + ("have" if many else "has") + " detail behind a licence.</b> "
-                 "You can see " + ("they exist" if many else "it exists") +
-                 " above, free, permanently — Pro tells you " + "; ".join(gated) + ".</p>"
-                 '<p class="secoffer__cta">'
-                 '<a class="btn btn--primary" href="/pricing.html?ref=' + quote(c["id"], safe="") + '">'
-                 "Unlock the fix &mdash; $6/mo &rsaquo;</a>"
-                 '<a class="link secoffer__alt" href="/start.html">or check your whole config free '
-                 "with <code>npx tashan-cli doctor</code></a></p></div>")
-
-    return sec("Security audit", '<div class="sec">' + "".join(rows) + "</div>" + offer, sub,
+    return sec("Security audit", '<div class="sec">' + "".join(rows) + "</div>", sub,
                "scanned " + (c.get("sec_scanned_at") or "")[:10])
 
 
@@ -485,12 +488,11 @@ def page(c, gen):
         '<meta name="twitter:description" content="' + d + '">\n'
         '<link rel="icon" href="/assets/favicon.svg">\n'
         '<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">\n'
-        '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/SpaceGrotesk-Variable.woff2" crossorigin>\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>\n'
         '<link rel="stylesheet" href="/css/site.css?v=' + AV + '">\n'
         + jsonld(c) + "\n</head>\n<body>\n" + NAV +
-        '<main class="wrap" id="main" tabindex="-1">' + summary(c) + "</main>\n" + FOOT +
+        '<main class="wrap" id="main" tabindex="-1">' + summary(c, gen) + "</main>\n" + FOOT +
         inline_data(c, gen) +                                    # this cap's full data, inline — no 1.2 MB fetch
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n'
         '<script src="/js/capability.js?v=' + AV + '" defer></script>\n</body>\n</html>\n')

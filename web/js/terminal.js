@@ -2,7 +2,7 @@
 // Injected on every page (self-hosted, strict-CSP-safe). Data from the slim /data/index.json.
 (function () {
   "use strict";
-  var caps = [], ticker, statusline, pal, input, listEl, sel = 0, view = [];
+  var caps = [], jobs = [], ticker, statusline, pal, input, listEl, sel = 0, view = [];
 
   // ---------- build chrome ----------
   function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
@@ -25,7 +25,7 @@
       return '<span class="tk"><span class="tk-n">' + esc(disp(c)) + '</span> '
         + '<span class="tk-t">' + (c.tashan_score == null ? "—" : c.tashan_score) + '</span> ' + verdictHTML(c.expertise_verdict) + '</span>';
     }).join('<span class="tk-sep">·</span>');
-    var content = '<span class="tk-lead">LIVE ▸ ranked by trust</span>' + seg + '<span class="tk-sep">·</span>';
+    var content = '<span class="tk-lead">LIVE ▸ ranked by tashan score</span>' + seg + '<span class="tk-sep">·</span>';
     track.innerHTML = content + content; // identical halves → seamless -50% loop
   }
   function fillStatus(d) {
@@ -36,9 +36,24 @@
       + '<span class="sl-sp"></span>'
       + '<span class="sl-k">press <kbd>⌘K</kbd> / <kbd>/</kbd> to search</span>'
       + '<span class="sl-i sl-dim">measured ' + fdate(d.generated_at) + '</span>';
+    // chrome.py emits <p id="footMethod"> into the footer of all 6,113 pages, but only index.js ever
+    // filled it — so every page except the homepage shipped a permanently empty paragraph where the
+    // measurement date was supposed to be. This function already loads everywhere and already holds
+    // the numbers, so fill it here and let index.js keep its own copy for the homepage.
+    var fm = document.getElementById("footMethod");
+    if (fm) fm.textContent = fmt(d.total_capabilities) + " capabilities · measured " + fdate(d.generated_at);
   }
 
   // ---------- command palette ----------
+  // THE SEARCH ANSWERS "what do you need to get done", not only "name the package".
+  // 69 task pages and 23 role pages existed and the search could not reach any of them — it matched
+  // capability names and four static links, so the entire job-oriented tier was reachable only from
+  // a footer link and the sitemap. Tasks carry author-written synonyms ("review a contract", "hooks",
+  // "permissions"), which is exactly the vocabulary someone types when they do not know the name of
+  // the tool they need.
+  // Words that carry no intent — dropping them is what lets a typed sentence match a task label.
+  var STOP = ["the", "for", "with", "and", "how", "help", "need", "want", "find", "best", "using",
+              "from", "into", "that", "this", "your", "our", "get", "can", "any"];
   var PAGES = [
     { name: "The Index", id: "@index", href: "/", kind: "page" },
     { name: "Methodology", id: "@methodology", href: "/methodology.html", kind: "page" },
@@ -50,7 +65,7 @@
     var box = el("div", "pal__box");
     var head = el("div", "pal__head");
     head.innerHTML = '<span class="pal__prompt">tashan&nbsp;❯</span>';
-    input = el("input", "pal__input"); input.type = "text"; input.setAttribute("placeholder", "search capabilities…  (try: deep, kubernetes, notion)");
+    input = el("input", "pal__input"); input.type = "text"; input.setAttribute("placeholder", "What do you need to get done?  (try: review a contract, kubernetes, deep)");
     input.setAttribute("aria-label", "Search capabilities");
     // id/name so it is a real named field, not an anonymous box: assistive tech and password
     // managers both key off them, and Chrome files an issue on a form field that has neither.
@@ -67,17 +82,45 @@
     input.addEventListener("input", function () { clearTimeout(qTimer); qTimer = setTimeout(function () { query(input.value); }, 90); });
     pal.addEventListener("click", function (e) { if (e.target === pal) close(); });
   }
+  window.tashanSearch = function () { open(); };
+  // Any visible control can open the palette — delegated, so a page only has to add the element.
+  document.addEventListener("click", function (e) {
+    if (e.target.closest && e.target.closest("#heroSearch, [data-search]")) open();
+  });
   function open() { if (!pal) return; pal.hidden = false; document.body.classList.add("pal-open"); input.value = ""; query(""); input.focus(); }
   function close() { if (!pal) return; pal.hidden = true; document.body.classList.remove("pal-open"); }
   function query(q) {
     q = q.trim().toLowerCase();
     var pool;
     if (!q) {
-      pool = PAGES.concat(caps.slice(0, 8));
+      pool = PAGES.concat(jobs.slice(0, 6)).concat(caps.slice(0, 6));
     } else if (["deep", "solid", "thin", "wrapper", "slop"].indexOf(q) >= 0) {
       pool = caps.filter(function (c) { return c.expertise_verdict === q; });
     } else {
+      // TOKEN MATCH, because people type sentences. A plain substring test could not answer "review
+      // a contract" even though the contract-review task literally carries "contract review" as a
+      // synonym — the words were in the wrong order with a stopword between them. Score each job by
+      // how many meaningful query words it contains and rank on that.
+      var toks = q.split(/[^a-z0-9]+/).filter(function (t) {
+        return t.length > 2 && STOP.indexOf(t) < 0;
+      });
+      var scored = [];
+      if (toks.length) {
+        jobs.forEach(function (j) {
+          var n = 0;
+          for (var i = 0; i < toks.length; i++) {
+            // Stem longer words to 5 chars so spelling and inflection stop mattering: "analyse"
+            // (and "analysing", "analyzed") all reach "analysis" through "analy". Without this the
+            // British spelling of a word in our own example copy returned nothing.
+            var t = toks[i];
+            if (j._s.indexOf(t) >= 0 || (t.length >= 6 && j._s.indexOf(t.slice(0, 5)) >= 0)) n++;
+          }
+          if (n) scored.push({ n: n, j: j });
+        });
+        scored.sort(function (x, y) { return y.n - x.n; });
+      }
       pool = PAGES.filter(function (p) { return p.name.toLowerCase().indexOf(q) >= 0; })
+        .concat(scored.map(function (x) { return x.j; }))
         .concat(caps.filter(function (c) { return c._s.indexOf(q) >= 0; }));   // _s: lowercased once at load
     }
     view = pool.slice(0, 40); sel = 0; renderList();
@@ -85,8 +128,10 @@
   function renderList() {
     if (!view.length) { listEl.innerHTML = '<div class="pal__empty">no match — try a name, or a verdict like <b>deep</b></div>'; return; }
     listEl.innerHTML = view.map(function (o, i) {
-      if (o.kind === "page")
-        return '<div class="pal__row' + (i === sel ? " is-sel" : "") + '" data-href="' + o.href + '"><span class="pal__go">go</span><span class="pal__nm">' + esc(o.name) + '</span></div>';
+      if (o.kind === "page" || o.kind === "job")
+        return '<div class="pal__row' + (i === sel ? " is-sel" : "") + '" data-href="' + o.href + '">'
+          + '<span class="pal__go">' + (o.kind === "job" ? o.what : "go") + '</span>'
+          + '<span class="pal__nm">' + esc(o.name) + '</span></div>';
       return '<div class="pal__row' + (i === sel ? " is-sel" : "") + '" data-href="' + capHref(o) + '">'
         + '<span class="pal__badge">' + (o.tashan_score == null ? "—" : o.tashan_score) + '</span>'
         + '<span class="pal__nm">' + esc(disp(o)) + '</span>' + verdictHTML(o.expertise_verdict)
@@ -97,7 +142,7 @@
       r.addEventListener("click", function () { location.href = r.getAttribute("data-href"); });
     });
   }
-  function go() { var o = view[sel]; if (!o) return; location.href = o.kind === "page" ? o.href : capHref(o); }
+  function go() { var o = view[sel]; if (!o) return; location.href = o.href || capHref(o); }
   // slug is derived, not shipped — see index.js capHref. Must match build.py slugify() byte for byte.
   function capHref(o) { return "/capability/" + o.id.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") + ".html"; }
 
@@ -155,5 +200,17 @@
     caps = (d.capabilities || []).filter(function (c) { return c.id.indexOf("key:") !== 0; });
     caps.forEach(function (c) { c._s = (c.name + " " + c.id).toLowerCase(); });   // precompute search field once
     fillTicker(track); fillStatus(d);
+  }).then(function () {
+    return fetch("/data/tasks.json").then(function (r) { return r.ok ? r.json() : null; }).then(function (t) {
+      if (!t) return;
+      (t.tasks || []).forEach(function (x) {
+        jobs.push({ kind: "job", what: "task", name: x.label, href: "/task/" + x.slug + ".html",
+                    _s: (x.label + " " + (x.synonyms || []).join(" ") + " " + (x.term || "")).toLowerCase() });
+      });
+      (t.roles || []).forEach(function (r) {
+        jobs.push({ kind: "job", what: "job", name: r.label, href: "/role/" + r.id + ".html",
+                    _s: r.label.toLowerCase() });
+      });
+    }).catch(function () {});
   }).catch(function () { if (statusline) statusline.innerHTML = '<span class="sl-a"><span class="sl-logo"></span>tashan.sh</span><span class="sl-k">press <kbd>⌘K</kbd> to search</span>'; });
 })();

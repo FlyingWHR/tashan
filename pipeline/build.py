@@ -473,6 +473,27 @@ def enrich_github(con):
     rows = con.execute("SELECT id, source_repo FROM capabilities WHERE source_repo IS NOT NULL "
                        "ORDER BY (gh_contributors IS NULL) DESC, config_reach DESC, npm_downloads DESC NULLS LAST "
                        "LIMIT ?", (GH_CAP,)).fetchall()
+
+    # A REPO'S STARS ARE A PER-ITEM SIGNAL ONLY WHERE THE REPO IS THE ITEM.
+    #
+    # ingest_plugins.py is careful about this — it computes `solo` and refuses to attach stars to a
+    # plugin whose repo hosts several. Then THIS function ran afterwards (run.py: plugins →
+    # registry+npm), selected every row with a source_repo, and wrote gh_stars back unconditionally.
+    # The guard was undone minutes after it was applied and nothing restored it, so chujianyun/skills
+    # gave each of its 25 plugins the same 700 stars, the same adoption of 44, and the same score of
+    # 70.0; across the corpus 593 artifacts carried a star count they shared with their siblings, and
+    # 336 skills each displayed one repo's 23,181 as their own evidence.
+    #
+    # Only the star count is per-item. pushed/contributors/licence/archived ARE repo-level facts and
+    # stay shared, which is why this nulls one column rather than skipping the row.
+    shared_star_ids = {r[0] for r in con.execute(
+        """SELECT c.id FROM capabilities c JOIN (
+               SELECT source_repo, kind FROM capabilities
+               WHERE source_repo IS NOT NULL AND kind IN ('plugin','skill','remote')
+               GROUP BY source_repo, kind HAVING COUNT(*) > 1
+           ) m ON m.source_repo = c.source_repo AND m.kind = c.kind""")}
+    if shared_star_ids:
+        print(f"  {len(shared_star_ids):,} plugin/skill rows share a repo — stars are not theirs, held null")
     print(f"  enriching {len(rows)} source repos via gh...", flush=True)
     done = 0
     for cid, repo in rows:
@@ -511,7 +532,8 @@ def enrich_github(con):
         con.execute("""UPDATE capabilities SET gh_stars=?, gh_forks=?, gh_open_issues=?, gh_pushed=?,
               gh_contributors=?, gh_last_release=?, gh_license=?, gh_topics=?,
               gh_has_discussions=?, gh_archived=? WHERE id=?""",
-          (info.get("stars"), info.get("forks"), info.get("open_issues"), info.get("pushed"),
+          (info["stars"] if cid not in shared_star_ids else None,
+           info.get("forks"), info.get("open_issues"), info.get("pushed"),
            info.get("contributors"), info.get("last_release"), info.get("license"), info.get("topics"),
            1 if info.get("has_discussions") else 0, 1 if info.get("archived") else 0, cid))
         done += 1
@@ -1389,10 +1411,19 @@ def export(con):
     def redact_paid(o):
         for _k in UNRENDERED:
             o.pop(_k, None)
-        o.pop("sec_advisories", None)
-        # a boolean, not the command. The page only ever asked "does one exist".
-        if o.get("sec_install_script"):
-            o["sec_install_script"] = True
+        # ADVISORY DETAIL AND THE INSTALL COMMAND ARE FREE, and ship in the public export.
+        #
+        # They used to be stripped here and sold for $6/mo. Three of the four things Pro listed were
+        # the identity of a vulnerability, its fixing version, and the command a package runs on your
+        # machine before you have agreed to anything — i.e. the facts a person needs precisely when
+        # they cannot yet act, withheld until they pay. A rater whose whole claim is independence
+        # cannot make the remediation the upsell; naming a risk and then charging to say which risk
+        # is a worse position than not scanning at all.
+        #
+        # This is the same call already made for sec_permissions two paragraphs down, for the same
+        # reason, and it is now the rule rather than the exception. What stays paid is TIME —
+        # history, monitoring, and being told when any of this CHANGES — never the current state.
+        # Also cheap: 3 rows carry an advisory and 159 an install script, so the export barely moves.
         # sec_permissions stays PUBLIC IN FULL. An earlier version of this truncated it to the first
         # entry, which quietly broke a free-tier promise: the pricing page's free column says "what
         # it can reach on your machine", and the paid column said "the full permission list" — the

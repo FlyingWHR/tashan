@@ -55,6 +55,29 @@ TAGLINE = ("The measured layer for AI capabilities — MCP servers and agent ski
            "ranked on public evidence.")
 
 
+def alias(name):
+    """The server IDENTIFIER for `claude mcp add <alias> -- npx -y <pkg>`. Derived from the npm
+    PACKAGE NAME, never from the display label.
+
+    This existed as three divergent copies and two of them were broken. prerender.py fed the human
+    label ("Context7") through `[^a-z0-9_-]` with no IGNORECASE, so every capital became "-" and a
+    LEADING capital was then stripped: `claude mcp add ontext7`. 1,392 of 1,397 npm-backed pages
+    shipped a command that cannot work — filesystem as `ilesystem`, sequential-thinking as
+    `equential--hinking`, and 13 pages with no alias at all. gen_compare.py had a third spelling
+    (`slug.replace("pkg-","")`), so the comparison page and the dossier told you to install the same
+    package under different names.
+
+    A label is prose and may contain spaces, capitals and "·"; a package name is already a valid
+    identifier. Mirrors web/js/capability.js exactly — the two render the same command and must agree
+    character for character. See [[prerender-and-capability-js-are-one-concept]].
+    """
+    n = re.sub(r"^@modelcontextprotocol/server-", "", str(name))
+    n = re.sub(r"-mcp$", "", n)
+    n = re.sub(r"^mcp-server-", "", n)
+    n = re.sub(r"^mcp-", "", n)
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9_-]", "-", n, flags=re.I)).strip("-")
+
+
 def canon(path):
     """The URL we DECLARE must be the URL that is SERVED.
 

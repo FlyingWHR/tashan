@@ -25,12 +25,27 @@ RETIRED = {
     r"\bTrust\b(?!ed|worthy)": "tashan score",
     r"\bmaintenance\b": "upkeep",
     r"\bVitality\b": "Health",
+    # The capital-T rule missed every lowercase use, and those are the ones that shipped: the ticker
+    # in terminal.js said "LIVE ▸ ranked by trust" on EVERY page, llms.txt headed its list "Top
+    # capabilities by measured trust", and the task hubs' ItemList JSON-LD said "ranked by trust" on
+    # 53 pages. methodology.html devotes a callout to why this number is NOT called a trust score
+    # ("we do not audit it… calling that 'trust' claimed something the arithmetic does not support"),
+    # so the one word the page walks back was still the word the rest of the site used. Matched as a
+    # phrase, not as a bare lowercase word, so ordinary English ("a rater you can trust") is fine.
+    r"\btrust score\b": "tashan score",
+    r"\b(?:ranked|sorted|ordered) by trust\b": "ranked by the tashan score",
+    r"\bmeasured trust\b": "the tashan score",
+    r"\btrust[-\s]ranked\b": "tashan-score-ranked",
 }
 
 # Places where the old word is legitimate English about something else, not our score component.
 EXEMPT = [
     re.compile(r"no further maintenance is expected"),      # a plain fact about an archived repo
     re.compile(r"maintenance/adoption read"),               # historical, inside code comments only
+    # methodology.html's callout NAMES the retired term in order to disown it ("Why it is called the
+    # tashan score, not a trust score"). That paragraph is the reason the rule exists; it must be
+    # allowed to say the word once, in the one place that explains it.
+    re.compile(r"not a trust score"),
 ]
 
 

@@ -19,10 +19,9 @@
   <link rel="canonical" href="https://tashan.sh/pricing">
   <link rel="icon" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/SpaceGrotesk-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=208">
+  <link rel="stylesheet" href="/css/site.css?v=219">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span>tashan</a><div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a><a href="/methodology.html">Methodology</a><a href="/pricing.html" aria-current="page">Pricing</a><a class="nav__acct" id="navAcct" href="/account.html" title="Your account" aria-label="Your account"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span class="nav__pro mono" id="navPro" hidden>Pro</span></a></div></div></nav>
@@ -42,11 +41,12 @@
           <span class="plan__name">Free</span>
           <span class="plan__price">$0<small>/forever</small></span>
         </div>
-        <p class="plan__for">Every finding, in full. You will never learn from us that a risk exists
-          only after paying.</p>
+        <p class="plan__for">The complete audit, free. You will never learn from us that a risk
+          exists — or what fixes it — only after paying.</p>
         <ul class="plan__feat">
-          <li><b>Every security finding</b> — how many advisories and at what severity, whether it
-            runs a script at install time, what it can reach on your machine</li>
+          <li><b>The whole security audit</b> — which CVE or GHSA, its severity and the version that
+            fixes it; the exact command a package runs at install time; and everything it can reach
+            on your machine. The detail, not just the count.</li>
           <li>The full Index — every tashan score and expertise grade, filed by job function</li>
           <li><code>doctor</code> audits the config you already have, on your machine, no account</li>
           <li>Agent endpoints and badges — no key, no quota</li>
@@ -60,18 +60,18 @@
           <span class="plan__name">tashan Pro</span>
           <span class="plan__price">$6<small>/mo</small></span>
         </div>
-        <p class="plan__for">Free tells you something is wrong. Pro tells you what it is and what to
-          do about it.</p>
-        <div class="callout mono fs-sm mb-4">$ tashan doctor</div>
+        <p class="plan__for">Free tells you what is true today. Pro tells you when that changes.</p>
+        <div class="callout mono fs-sm mb-4">$ tashan trend</div>
         <ul class="plan__feat">
-          <li><b>The advisory itself</b> — which CVE or GHSA, its severity, the affected range, and the
-            version that fixes it. Not "2 known advisories".</li>
-          <li><b>What the install script actually runs</b> — the exact command, before you run it.</li>
-          <li><b>The replacement, named.</b> Not "this is deprecated" — <em>switch to this one, it
-            scores 65 and is still maintained</em>.</li>
-          <li>Every score since we started measuring.
+          <li><b>Every score since we started measuring</b> — whether a capability is climbing,
+            decaying, or quietly stopped being maintained.
             <span class="plan__soon mono">trend needs ~30 days · clock restarted 30 Jul</span></li>
+          <li><b>The replacement, named</b> — not "this is deprecated", but <em>switch to this one,
+            it scores 65 and is still maintained</em>.</li>
         </ul>
+        <p class="plan__note mono mb-4">The security audit is <b>not</b> here. It is free, in full,
+          for everyone — naming a risk and charging for the fix is not something an independent
+          rater gets to do.</p>
         <a class="btn btn--primary plan__cta" href="https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" rel="noopener"
            data-src="pro-checkout">Subscribe &rsaquo;</a>
         <p class="plan__note mono">cancel any time in <a class="link" href="/account.html">your account</a>
@@ -125,7 +125,7 @@
 
   <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Every score re-derivable from public evidence.</span></div></footer>
 
-  <script src="/js/terminal.js?v=208" defer></script>
-  <script src="/js/site.js?v=208" defer></script>
+  <script src="/js/terminal.js?v=219" defer></script>
+  <script src="/js/site.js?v=219" defer></script>
 </body>
 </html>

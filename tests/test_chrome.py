@@ -16,7 +16,7 @@ pipeline/chrome.py is now that source. This fails if anything drifts from it.
 
 Run: python3 tests/test_chrome.py
 """
-import glob, os, re, sys
+import glob, json, os, re, sys
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -93,6 +93,29 @@ for g in ("gen_hubs.py", "gen_content.py", "prerender.py"):
     if re.search(r'NAV\s*=\s*\(', src) or re.search(r'FOOT\s*=\s*\(', src):
         hand.append(g)
 ok("no generator hand-writes its own nav or footer", not hand, ", ".join(hand))
+
+# ---- the `claude mcp add <alias>` identifier -------------------------------------------------
+# 1,392 of 1,397 npm-backed dossiers shipped a command that cannot work, because prerender.py fed the
+# DISPLAY LABEL through `[^a-z0-9_-]` with no IGNORECASE: every capital became "-", and a LEADING
+# capital was then stripped by .strip("-"). Context7 -> "ontext7". 13 pages emitted no alias at all.
+for src, want in [("@upstash/context7-mcp", "upstash-context7"),
+                  ("@modelcontextprotocol/server-filesystem", "filesystem"),
+                  ("@modelcontextprotocol/server-sequential-thinking", "sequential-thinking"),
+                  ("chrome-devtools-mcp", "chrome-devtools"),
+                  ("Context7", "Context7"), ("Obsidian", "Obsidian"), ("Docfork", "Docfork")]:
+    ok("alias(%r) == %r" % (src, want), chrome.alias(src) == want, "got %r" % chrome.alias(src))
+
+# and over the real corpus: an alias is a shell argument, so it must be non-empty and must never
+# start with "-" (that would parse as a flag, not a server name).
+try:
+    _caps = json.load(open(os.path.join(ROOT, "web", "data", "capabilities.json"), encoding="utf-8"))
+    _caps = _caps["capabilities"] if isinstance(_caps, dict) else _caps
+except (OSError, ValueError):
+    _caps = []
+_bad = [c["id"] for c in _caps if c.get("npm_pkg")
+        and not re.fullmatch(r"[A-Za-z0-9_][A-Za-z0-9_-]*", chrome.alias(c.get("name") or ""))]
+ok("every npm-backed capability yields a usable install alias",
+   not _bad, "%d broken, e.g. %s" % (len(_bad), ", ".join(_bad[:3])))
 
 print("CHROME FAILED" if fail else "ok — one navigation, rendered everywhere")
 sys.exit(fail)

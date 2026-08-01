@@ -92,7 +92,6 @@ def head(title, desc, url, lds):
         '<meta name="twitter:image" content="' + BASE + '/assets/og.png">\n'
         '<link rel="icon" href="/assets/favicon.svg">\n'
         '<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">\n'
-        '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/SpaceGrotesk-Variable.woff2" crossorigin>\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>\n'
         '<link rel="stylesheet" href="/css/site.css?v=' + AV + '">\n'
@@ -145,6 +144,29 @@ def vitality_cell(c):
     return ("%.1f" % (months / 12)).rstrip("0").rstrip(".") + "y", "fresh--cold", ""
 
 
+def kinds_phrase(rows, amp=False):
+    """Name the artifact types THIS page actually contains, in corpus order.
+
+    A fixed noun is wrong on some page no matter which noun you pick. The role hubs said "MCP servers
+    for <job>, ranked" over a table of 857 plugins and 202 skills and not one server — because task
+    tags only exist for plugins and skills (tag_capabilities.py excludes the rest on purpose: an npm
+    server's registry description is capped at 100 chars upstream, and tagging work-intent from one
+    truncated sentence would manufacture precision). Widening the noun to cover all three just moved
+    the overclaim: it then promised servers that still were not there.
+
+    So read the rows. The heading can only name what the page can show.
+    """
+    have = {c.get("kind") for c in rows}
+    parts = []
+    if have - {"skill", "plugin"}: parts.append("MCP servers")
+    if "plugin" in have: parts.append("plugins")
+    if "skill" in have: parts.append("skills")
+    if not parts: return "capabilities"
+    if len(parts) == 1: return parts[0]
+    joiner = " &amp; " if amp else " and "
+    return ", ".join(parts[:-1]) + joiner + parts[-1]
+
+
 def board(rows):
     """The ranked table, server-rendered — and structurally IDENTICAL to the one index.js builds.
 
@@ -176,7 +198,11 @@ def board(rows):
             '<td class="rank">' + (str(i + 1) if t is not None else "\u00b7") + "</td>"
             '<td><div class="cap__name"><a class="cap__link" href="' + href + '">'
             + esc(disp(c)) + "</a>"
-            ' <span class="tag">' + esc({"skill": "skill"}.get(c.get("kind"), "server")) + "</span>"
+            # The kind, as the dossier states it. This was {"skill":"skill"}.get(kind, "server") — a
+            # one-key map whose DEFAULT relabelled all 3,495 plugins (the largest kind in the corpus)
+            # and every remote/docker/python row as "server", 7,039 tags in total. A reader clicked a
+            # row tagged "server" and landed on a dossier tagged "plugin". Mirrors prerender.py::313.
+            ' <span class="tag">' + esc(c.get("kind") or "") + "</span>"
             + off + vd + dep + "</div>"
             # The board and the dossier both stopped printing the raw id — a longer restatement of
             # the name directly above it. The hub kept printing it, so the same capability had a
@@ -197,12 +223,12 @@ def board(rows):
 def cat_page(cat, rows, all_cats, gen):
     label, cid = cat["label"], cat["id"]
     url = BASE + "/category/" + cid + ".html"
-    title = "Best " + label + " MCP servers, ranked by the tashan score · tashan"
-    desc = ("The " + str(len(rows)) + " " + label.lower() + " MCP servers tashan measures, ranked by tashan score — "
+    title = "Best " + label + " " + kinds_phrase(rows) + ", ranked by the tashan score · tashan"
+    desc = ("The " + str(len(rows)) + " " + label.lower() + " " + kinds_phrase(rows) + " tashan measures, ranked by tashan score — "
             "upkeep, freshness and real adoption from public evidence. " + cat["blurb"])
     top = ", ".join(disp(c) for c in rows[:5])
     lds = [
-        {"@context": "https://schema.org", "@type": "ItemList", "name": label + " MCP servers ranked by trust",
+        {"@context": "https://schema.org", "@type": "ItemList", "name": label + " " + kinds_phrase(rows) + " ranked by the tashan score",
          "itemListOrder": "https://schema.org/ItemListOrderDescending", "numberOfItems": len(rows),
          "itemListElement": [
              {"@type": "ListItem", "position": i + 1,
@@ -236,7 +262,7 @@ def cat_page(cat, rows, all_cats, gen):
     measured = [c for c in rows if c.get("expertise_verdict")]
     body = ('<main class="wrap" id="main">\n'
         '<p class="kicker"><a class="link" href="/">The Index</a> · ' + esc(label) + "</p>\n"
-        "<h1>" + esc(label) + " MCP servers, ranked</h1>\n"
+        "<h1>" + esc(label) + " " + kinds_phrase(rows, amp=True) + ", ranked</h1>\n"
         '<p class="lede">' + esc(cat["blurb"]) + " tashan measures <b>" + str(len(rows)) +
         "</b> capabilities here and ranks them by tashan score — a transparent composite of upkeep, "
         "freshness and real adoption. <a class=\"link\" href=\"/methodology.html\">How we measure &rsaquo;</a></p>\n"
@@ -272,7 +298,7 @@ def task_page(task, rows, all_tasks, gen):
     """
     slug, label = task["slug"], task["label"]
     url = BASE + "/task/" + slug + ".html"
-    title = "Best MCP servers and skills for " + label.lower() + ", ranked by the tashan score · tashan"
+    title = "Best " + kinds_phrase(rows) + " for " + label.lower() + " · tashan"
     desc = ("The " + str(len(rows)) + " capabilities tashan measures for " + label.lower() +
             ", ranked by tashan score — upkeep, freshness and real adoption, from public evidence only.")
     top = ", ".join(disp(c) for c in rows[:5])
@@ -280,7 +306,7 @@ def task_page(task, rows, all_tasks, gen):
     steps = task.get("onet_steps") or []
     lds = [
         {"@context": "https://schema.org", "@type": "ItemList",
-         "name": "Capabilities for " + label + ", ranked by trust",
+         "name": "Capabilities for " + label + ", ranked by the tashan score",
          "itemListOrder": "https://schema.org/ItemListOrderDescending", "numberOfItems": len(rows),
          "itemListElement": [
              {"@type": "ListItem", "position": i + 1,
@@ -294,7 +320,7 @@ def task_page(task, rows, all_tasks, gen):
             {"@type": "ListItem", "position": 1, "name": "The Index", "item": BASE + "/"},
             {"@type": "ListItem", "position": 2, "name": label, "item": url}]},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-            {"@type": "Question", "name": "What is the best MCP server or skill for " + label.lower() + "?",
+            {"@type": "Question", "name": "What is the best " + kinds_phrase(rows).rstrip("s") + " for " + label.lower() + "?",
              "acceptedAnswer": {"@type": "Answer", "text":
                 ("By tashan's measured score: " + top + ". the score combines upkeep and freshness, "
                  "gated by real adoption — every input is public and re-derivable, and no ranking "
@@ -380,7 +406,7 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
          "- We do NOT review source code, execute the capability, or test its output for prompt "
          "injection. A clean audit means nothing KNOWN is wrong.",
          "- Permission surface UNDER-reports by design: a server can shell out using Node built-ins "
-         "and declare nothing, so an empty result means 'nothing declared', not 'nothing possible'.",         "", "## Top capabilities by measured trust", ""]
+         "and declare nothing, so an empty result means 'nothing declared', not 'nothing possible'.",         "", "## Top capabilities by tashan score", ""]
     for c in caps[:40]:
         L.append("- [" + disp(c) + "](" + BASE + "/capability/" + c["slug"] + ".html) — tashan score "
                  + str(c.get("tashan_score")) + (", " + c["vitality"] if c.get("vitality") else "")
@@ -395,7 +421,7 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
           "- [/skill/SKILL.md](" + BASE + "/skill/SKILL.md) — install tashan as a capability and call it "
           "when choosing what to install.",
           "", "## By job", "",
-          "One ranked page per job title. These answer \"the best MCP server for a <job>\" with "
+          "One ranked page per job title. These answer \"what should I install for a <job>\" with "
           "measured rows rather than an opinion.", ""]
     for r, rows in roles:
         scored = [c for c in rows if c.get("tashan_score") is not None]
@@ -534,15 +560,15 @@ def role_page(role, rows, tasks, all_roles, gen):
     label, rid = role["label"], role["id"]
     url = BASE + "/role/" + rid + ".html"
     scored = [c for c in rows if c.get("tashan_score") is not None]
-    title = "Best MCP servers for " + label.lower() + ", ranked · tashan"
-    desc = ("The " + str(len(rows)) + " MCP servers and agent skills tashan measures for " + label.lower() +
+    title = "Best " + kinds_phrase(rows) + " for " + label.lower() + " · tashan"
+    desc = ("The " + str(len(rows)) + " " + kinds_phrase(rows) + " tashan measures for " + label.lower() +
             " work, ranked by tashan score — upkeep, freshness and real adoption, all from public "
             "evidence, plus what each one can reach on your machine.")
     top = ", ".join(disp(c) for c in scored[:5])
     work = ", ".join(t["label"].lower() for t in tasks[:6])
     lds = [
         {"@context": "https://schema.org", "@type": "ItemList",
-         "name": "MCP servers for " + label.lower() + ", ranked by the tashan score",
+         "name": kinds_phrase(rows).capitalize() + " for " + label.lower() + ", ranked by the tashan score",
          "itemListOrder": "https://schema.org/ItemListOrderDescending", "numberOfItems": len(scored),
          "itemListElement": [
              {"@type": "ListItem", "position": i + 1,
@@ -555,7 +581,7 @@ def role_page(role, rows, tasks, all_roles, gen):
             {"@type": "ListItem", "position": 2, "name": "By job", "item": BASE + "/browse.html"},
             {"@type": "ListItem", "position": 3, "name": label, "item": url}]},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-            {"@type": "Question", "name": "What is the best MCP server for a " + label.lower() + "?",
+            {"@type": "Question", "name": "What is the best " + kinds_phrase(rows).rstrip("s") + " for a " + label.lower() + "?",
              "acceptedAnswer": {"@type": "Answer", "text":
                 ("By tashan's measured score the highest-ranked for this work are " + top + ". The score "
                  "combines upkeep and freshness, gated by real adoption; every input is public and "
@@ -582,7 +608,7 @@ def role_page(role, rows, tasks, all_roles, gen):
     body = ('<main class="wrap" id="main">\n'
         '<p class="kicker"><a class="link" href="/">The Index</a> · <a class="link" href="/browse.html">By job</a> · '
         + esc(label) + "</p>\n"
-        "<h1>MCP servers for " + esc(label.lower()) + ", ranked</h1>\n"
+        "<h1>" + kinds_phrase(rows, amp=True).capitalize() + " for " + esc(label.lower()) + ", ranked</h1>\n"
         '<p class="lede">tashan measures <b>' + str(len(rows)) + "</b> capabilities against the work a "
         + esc(label.lower()) + " actually does" + (" — " + esc(work) if work else "") + " — and ranks them "
         "on public evidence alone: upkeep, freshness and real adoption. "
