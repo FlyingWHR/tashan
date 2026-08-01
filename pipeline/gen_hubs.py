@@ -189,6 +189,14 @@ def board(rows):
         vd = (' <span class="vd vd--' + esc(c["expertise_verdict"]) + '">' + esc(c["expertise_verdict"])
               + "</span>") if c.get("expertise_verdict") else ""
         dep = ' <span class="fresh fresh--cold">deprecated</span>' if c.get("npm_deprecated") else ""
+        # THE FIT, SHOWN AND SOURCED. Ordering by fit is worth nothing if the reader cannot see which
+        # rows are here because a grader read the capability against the rubric (primary) and which
+        # are here because the author's own keyword happened to match a task synonym (supporting).
+        # The title carries the evidence string, so "says who?" is answerable on the row itself.
+        fit = c.get("_fit")
+        fitchip = (' <span class="fit fit--' + esc(fit) + '" title="'
+                   + esc(c.get("_fit_why") or "how this capability was matched to this work")
+                   + '">' + esc(fit) + "</span>") if fit else ""
         ev = evidence(c)
         vtxt, vcls, vtitle = vitality_cell(c)
         score = ('<span class="unrated">not scored yet</span>' if t is None
@@ -197,12 +205,12 @@ def board(rows):
             '<tr data-href="' + href + '">'
             '<td class="rank">' + (str(i + 1) if t is not None else "\u00b7") + "</td>"
             '<td><div class="cap__name"><a class="cap__link" href="' + href + '">'
-            + esc(disp(c)) + "</a>"
+            + esc(disp(c)) + "</a>" + fitchip
             # The kind, as the dossier states it. This was {"skill":"skill"}.get(kind, "server") — a
             # one-key map whose DEFAULT relabelled all 3,495 plugins (the largest kind in the corpus)
             # and every remote/docker/python row as "server", 7,039 tags in total. A reader clicked a
             # row tagged "server" and landed on a dossier tagged "plugin". Mirrors prerender.py::313.
-            ' <span class="tag">' + esc(c.get("kind") or "") + "</span>"
+            + ' <span class="tag">' + esc(c.get("kind") or "") + "</span>"
             + off + vd + dep + "</div>"
             # The board and the dossier both stopped printing the raw id — a longer restatement of
             # the name directly above it. The hub kept printing it, so the same capability had a
@@ -653,12 +661,35 @@ def main():
 
     # ---- task hubs: one page per job, gated on having a real shelf behind it ----
     tasks = json.load(open(TASKS))["tasks"]
+    # FIT FIRST, OPERATIONAL SCORE SECOND. These pages answer "what should I use for this work", and
+    # they used to answer it by sorting on tashan_score alone — a number that measures upkeep,
+    # freshness and adoption and says nothing whatsoever about whether a capability does the job. So
+    # a broadly-adopted tool tagged with a task outranked one built for it, and the page that carries
+    # the whole job-oriented positioning was ordered by the axis least related to the job.
+    #
+    # The fit level now leads. Within a level the operational score still decides, because between
+    # two capabilities that are both FOR this work, "which is actually maintained and used" is
+    # exactly the right tiebreak — that is what the score is good at.
+    FIT_RANK = {"primary": 0, "supporting": 1, "incidental": 2}
+    # THEN INSTRUCTION QUALITY, then the operational score. Fit alone still let a capability we had
+    # READ and judged thin head the contract-review shelf over one we judged solid, because the two
+    # were both primary and the thin one had marginally more adoption. Between two capabilities that
+    # are both FOR the work, how well the thing is actually documented beats how many people happened
+    # to install it. Ungraded sits between solid and thin deliberately: not knowing is not the same as
+    # having looked and found it shallow, and it must not be punished as if it were.
+    VERDICT_RANK = {"deep": 0, "solid": 1, None: 2, "thin": 3, "wrapper": 4, "slop": 5}
     by_task = {}
     for c in caps:
         for t in (c.get("tasks") or []):
-            by_task.setdefault(t["t"], []).append(c)
+            # incidental is never a recommendation; it stays out of the shelf entirely
+            if t.get("f") == "incidental":
+                continue
+            by_task.setdefault(t["t"], []).append(dict(c, _fit=t.get("f") or "supporting",
+                                                       _fit_why=t.get("e")))
     for v in by_task.values():
-        v.sort(key=lambda x: -(x.get("tashan_score") or 0))
+        v.sort(key=lambda x: (FIT_RANK.get(x.get("_fit"), 1),
+                              VERDICT_RANK.get(x.get("expertise_verdict"), 2),
+                              -(x.get("tashan_score") or 0)))
     out_task = os.path.join(ROOT, "web", "task")
     os.makedirs(out_task, exist_ok=True)
     # publishable tasks are the sibling set too — a chip must never link to a page that does not exist
@@ -689,8 +720,15 @@ def main():
         seen = {}
         for t in ts:
             for c in by_task.get(t["slug"], []):
-                seen[c["id"]] = c
-        by_role[rid] = sorted(seen.values(), key=lambda x: -(x.get("tashan_score") or 0))
+                prev = seen.get(c["id"])
+                if prev is None or FIT_RANK.get(c.get("_fit"), 1) < FIT_RANK.get(prev.get("_fit"), 1):
+                    seen[c["id"]] = c
+        # Same ordering on the role page. A role is the union of its tasks, so a capability can reach
+        # it through several — keep the STRONGEST fit it earned on any of them.
+        by_role[rid] = sorted(seen.values(),
+                              key=lambda x: (FIT_RANK.get(x.get("_fit"), 1),
+                                             VERDICT_RANK.get(x.get("expertise_verdict"), 2),
+                                             -(x.get("tashan_score") or 0)))
     pub_roles = [r for r in roles
                  if len([c for c in by_role.get(r["id"], []) if c.get("tashan_score") is not None]) >= ROLE_MIN]
     for stale in glob.glob(os.path.join(out_role, "*.html")):

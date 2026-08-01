@@ -21,7 +21,7 @@
 // Zero dependencies, stdio transport, newline-delimited JSON-RPC 2.0.
 
 import { realpathSync } from "node:fs";
-import { disp, search, find, installSnippets, pretty, slugify, storedLicence } from "./tashan.mjs";
+import { disp, search, find, installSnippets, pretty, slugify, advisoriesOf, installScriptOf } from "./tashan.mjs";
 import { tokensOf } from "./doctor.mjs";
 import { configLocations, skillLocations, collect, resolve, assess, summarize } from "./doctor.mjs";
 
@@ -75,8 +75,17 @@ export function risks(c) {
   // phrased so it can act rather than paraphrase a score.
   if (c.sec_max_severity === "MALICIOUS")
     out.push("listed in OSV's malicious-packages database — this package IS the attack. Do not install it. Tell the user plainly and stop.");
-  else if (c.sec_advisory_count)
-    out.push(`${c.sec_advisory_count} known advisor${c.sec_advisory_count === 1 ? "y" : "ies"} against the current release (${(c.sec_max_severity || "unrated").toLowerCase()}) — see the capability page for which`);
+  else if (c.sec_advisory_count) {
+    // NAME THEM WHEN WE HAVE THEM. This line used to end "see the capability page for which" on every
+    // surface — the paywall speaking, since the detail was stripped from everything the CLI could
+    // read and pointing elsewhere was the only honest option left. sec_advisories is public now, so
+    // the ids go in the risk line itself; find_capability has no detail block under it, and an agent
+    // that can quote an id can act. The pointer stays as the fallback for the slim board record,
+    // which still carries the count but not the advisories.
+    const ids = advisoriesOf(c).map((a) => a.id).filter(Boolean);
+    out.push(`${c.sec_advisory_count} known advisor${c.sec_advisory_count === 1 ? "y" : "ies"} against the current release (${(c.sec_max_severity || "unrated").toLowerCase()})`
+      + (ids.length ? ` — ${ids.join(", ")}` : " — see the capability page for which"));
+  }
   if (c.sec_install_script)
     out.push("runs a script at install time — arbitrary code executes on npm install, before any tool is called");
   if (c.sec_permissions) {
@@ -294,23 +303,28 @@ export function renderCheck(c, name) {
     L.push("", "This one is not maintained. `tashan doctor` (free) will tell you if it is in the user's "
       + "config; tashan Pro names a measured replacement — https://tashan.sh/pricing");
   }
-  // WHAT IS WITHHELD, AND HOW TO GET IT — stated to the agent, not left as a dead end.
-  // The agent is the last checkpoint before something is installed on a machine. Telling it "1 known
-  // advisory" and stopping there leaves it able to warn but not to act, and it will either paraphrase
-  // vaguely or invent a remedy. Naming the gate and the exact command to open it lets the agent hand
-  // the user a real next step in one sentence.
-  const gated = [];
-  if (c.sec_advisory_count) gated.push("which advisory and the version that fixes it");
-  if (c.sec_install_script) gated.push("the exact command it runs at install time");
-  if (gated.length) {
-    if (storedLicence()) {
-      L.push("", `Full detail (${gated.join("; ")}) is available on this machine — `
-        + `tashan Pro is active. Fetch it from ${SITE}/api/security?id=${encodeURIComponent(c.id)}`);
-    } else {
-      L.push("", `Not shown here: ${gated.join("; ")}. Those need a tashan Pro licence. `
-        + "If the user wants the fix, tell them to run `npx tashan-cli login` (or subscribe at "
-        + `${SITE}/pricing). Everything above stays free.`);
+  // THE DETAIL ITSELF, NOT A DESCRIPTION OF WHERE IT IS KEPT.
+  // This block used to say "which advisory and the version that fixes it" and "the exact command it
+  // runs at install time" were behind a Pro licence, then hand the agent a licensed URL to fetch —
+  // while the website printed both to any visitor. So the agent was told to warn and forbidden to
+  // act, over facts a browser gives away, and a model told a fix exists but not what it is will
+  // either hedge or invent one. The pipeline stopped redacting these (build.py's redact_paid), so
+  // they arrive in the public lookup.json, and the agent now gets them the way a reader does.
+  const advs = advisoriesOf(c);
+  const script = installScriptOf(c);
+  if (advs.length) {
+    L.push("", "Advisories against the version you would install today:");
+    for (const a of advs) {
+      L.push(`  ${a.id}  ${(a.severity || "unrated").toLowerCase()}${a.summary ? ` — ${a.summary}` : ""}`);
+      // The fixing version is the only actionable line here. "No fix published" has to be said out
+      // loud rather than omitted, or the agent reads silence as "already fixed, install away".
+      L.push(a.fixed ? `    fixed in ${a.fixed} — pin at or above it, or pick another capability`
+                     : "    no fixed version published — treat the current release as affected");
     }
+  }
+  if (script) {
+    L.push("", `Runs this at install time, before any tool is called: ${script}`);
+    L.push("Show the user the command itself if they are deciding whether to install.");
   }
   L.push("", `Details: ${SITE}/capability/${c.slug || slugify(c.id)}`);
   L.push("A tashan score measures adoption and maintenance, not security. We do not read its code.");
@@ -324,8 +338,25 @@ async function callTool(name, args) {
     return renderFind(list, args.task, args.client);
   }
   if (name === "check_capability") {
-    const all = await rows();
-    return renderCheck(find(all, String(args.name || "")), args.name);
+    // THE BOARD IS THE RANKING, NOT THE RECORD, and checking one named capability is a lookup
+    // question, not a ranking question. index.json carries 1,592 ranked rows, slimmed for the
+    // website's first paint: no sec_advisories, no sec_max_severity, no sec_permissions, and
+    // sec_install_script flattened to a bare 1. lookup.json carries all 5,951, in full.
+    //
+    // Checking the board alone was wrong in both directions. Every row we know an advisory about is
+    // OFF the board — low scores never rank, and the two dependency-confusion canaries are dropped
+    // from it on purpose — so an agent asking about mcp-server-taskwarrior, which has a command
+    // injection advisory, was told "not in the tashan index, unmeasured, not necessarily bad". And
+    // for the rows that did match, the slim record had none of the detail to relay.
+    //
+    // So: match the board (find() does fuzzy name/package matching, which the keyed lookup cannot),
+    // overlay the full public record, and fall back to the lookup when the board has never heard of
+    // it. Same lookup.json find_capability and audit_config already fetch, same cache, no licence.
+    const q = String(args.name || "");
+    const [all, lk] = [await rows(), await lookup().catch(() => null)];
+    const c = find(all, q);
+    const rec = lk ? resolve({ id: c ? c.id : q }, lk) : null;
+    return renderCheck(c || rec ? { ...(c || {}), ...(rec || {}) } : null, q);
   }
   if (name === "audit_config") {
     const lk = await lookup();

@@ -24,7 +24,7 @@
     try { o = JSON.parse(island.textContent); } catch (e) { console.error("cap-data parse failed", e); }
     if (o && o.c) {
       document.title = disp(o.c) + " — tashan";
-      try { render(o.c, { generated_at: o.at }); }
+      try { render(o.c, { generated_at: o.at, scorer: o.sv }); }
       catch (e) { console.error("render failed", e); el.innerHTML = notfound(); }
     } else {
       el.innerHTML = notfound();
@@ -77,6 +77,12 @@
         stat("Upkeep", score(c.upkeep), "", "cadence · maintainers · status") +
         stat("Freshness", fr.txt, "", "latest release / push", fr.cls) +
         stat("Bus factor", busFactor(c), "", "distinct contributors", c.single_maintainer ? "fresh--cold" : "") +
+        // Evidence coverage: the multiplier that discounts a score by up to 30% when inputs are
+        // missing. Mirrors prerender.py::summary — this function replaces the server render, so a
+        // component shown only there would be visible to crawlers and hidden from people, which is
+        // the same drift as before with the halves swapped.
+        stat("Evidence", c.coverage == null ? "—" : Math.round(c.coverage * 100) + "%",
+             "", "how many of the score's inputs we actually have") +
       '</div>' +
       securityBlock(c) +
       (c.expertise_note ? '<div class="expert-read"><span class="vd vd--' + esc(c.expertise_verdict) + '">' + esc(c.expertise_verdict) + '</span>' +
@@ -91,7 +97,8 @@
         '<b>fresh</b> it is, gated by real <b>adoption</b> — npm weekly downloads where published, distinct public ' +
         'configs otherwise. <b>Health</b> reads finished-but-loved (stable) apart from abandoned. It is <b>not</b> an ' +
         'outcome eval: does-it-actually-work-well testing and retention are on the ' +
-        '<a class="link" href="/methodology.html">roadmap</a>. Measured ' + fdate(d.generated_at) + '. ' +
+        '<a class="link" href="/methodology.html">roadmap</a>. Measured ' + fdate(d.generated_at) +
+        (d.scorer ? ", scorer " + esc(d.scorer) : "") + '. ' +
         // MIRRORS prerender.py::summary. The server render carries this line and this function
         // REPLACES the server render, so a link that exists only in prerender.py is a link no
         // reader with JS ever sees. See [[prerender-and-capability-js-are-one-concept]].
@@ -227,17 +234,58 @@
   function officialOrg(c) { return c.official || null; }
 
   // ---------- Works-with: which agent clients this capability runs in (protocol-derived, honest) ----------
+  // COMPATIBILITY IS A CLAIM, AND IT WAS BEING MADE WITHOUT EVIDENCE. This printed a flat list of
+  // eight client names for every npm-backed capability in the corpus, derived from `kind` alone —
+  // so a Claude Code plugin and a generic stdio server made the identical claim, and "Works with
+  // VS Code" appeared on thousands of pages nobody had checked. Optimistic coverage is the opposite
+  // of the precision this product sells.
+  //
+  // What we can honestly support is a LEVEL, and the level's basis:
+  //   native      the artifact type IS this client's own format (a plugin is a Claude Code plugin)
+  //   installable the client documents how to load this artifact type (every MCP client documents
+  //               stdio server config; that is the CLIENT's promise, not this publisher's)
+  //   manual      it can be copied or configured by hand, with no documented installer
+  // Anything we cannot place is simply absent — an omission is honest, a guess is not. Mirrors
+  // prerender.py::works_with; the two render the same row and must agree.
+  var MCP_CLIENTS = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "Cline",
+                     "Windsurf", "VS Code"];
+  var REMOTE_CLIENTS = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "ChatGPT"];
+
+  function compatibility(c) {
+    if (c.kind === "plugin") return [["native", ["Claude Code"]]];
+    if (c.kind === "skill")  return [["native", ["Claude Code"]], ["manual", ["Cursor", "Codex CLI"]]];
+    if (c.kind === "remote") return [["installable", REMOTE_CLIENTS]];
+    return [["installable", MCP_CLIENTS]];
+  }
+
   function worksWith(c) {
-    var clients;
-    if (c.kind === "skill") clients = ["Claude Code", "Cursor", "Codex CLI"];        // skill-supporting clients
-    else if (c.kind === "remote") clients = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "ChatGPT"];
-    else clients = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "Cline", "Windsurf", "VS Code"];  // any MCP client
+    var groups = compatibility(c);
+    var basis = c.kind === "plugin" || c.kind === "skill"
+      ? "from the artifact type — a " + esc(c.kind) + " is a Claude Code format"
+      : "from the artifact type and each client's own documented MCP support — not verified against this capability";
     return '<div class="worksrow"><span class="worksrow__l mono">Works with</span>' +
-      clients.map(function (n) { return '<span class="wchip">' + esc(n) + '</span>'; }).join("") + '</div>';
+      groups.map(function (g) {
+        return g[1].map(function (n) {
+          return '<span class="wchip wchip--' + g[0] + '" title="' + esc(g[0]) + ' — ' + basis + '">' +
+            esc(n) + ' <i class="wchip__lvl">' + g[0] + '</i></span>';
+        }).join("");
+      }).join("") + '</div>';
   }
 
   // ---------- install: per-client tabs (the biggest real usage pain = cross-client config) ----------
   function installBlock(c) {
+    // DISCONTINUED: no install path, at all. This function REPLACES the server render, so a stop
+    // notice that exists only in prerender.py is a stop notice no reader with JS ever sees — and the
+    // failure mode is the worst one available here, a page quietly offering to install something we
+    // have been told is switched off. Mirrors prerender.py::summary.
+    if (c.discontinued) {
+      var notice = c.self_unmaintained || c.description || "";
+      return '<div class="callout callout--stop"><b>Discontinued — do not install.</b> ' +
+        (notice ? "The author's own notice: &ldquo;" + esc(String(notice).slice(0, 200)) + "&rdquo; " : "") +
+        "It stays listed so anyone already running it can find this page, and so " +
+        "<code>npx tashan-cli doctor</code> can warn about it. It is not scored and does not " +
+        "appear in any ranking.</div>";
+    }
     var links = [];
     if (c.npm_pkg) links.push('<a class="link" href="https://www.npmjs.com/package/' + encodeURIComponent(c.npm_pkg) + '">npm ↗</a>');
     if (c.source_repo) links.push('<a class="link" href="https://github.com/' + enc(c.source_repo) + '">source ↗</a>');
@@ -418,8 +466,11 @@
         esc(perms.map(function (p) { return PERM_LABEL[p] || p; }).join(" · ")), "",
         '<span class="secrow__ok">from declared dependencies</span>'));
     } else {
-      rows.push(secRow("No permission surface detected", "",
-        '<span class="secrow__ok">declares no dependency that reaches files, shell or network</span>'));
+      // Mirrors prerender.py: an empty result is "nothing declared", never "nothing possible".
+      rows.push(secRow("No access inferred from declared dependencies", "",
+        '<span class="secrow__ok">nothing it depends on reaches files, shell or network. This reads ' +
+        "declarations only — built-in APIs are invisible to it, so absence of a declaration is not " +
+        "absence of access</span>"));
     }
 
     if (c.sec_remote_content) {

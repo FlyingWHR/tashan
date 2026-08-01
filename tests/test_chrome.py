@@ -38,7 +38,12 @@ def norm(s):
 
 
 NAVRE = re.compile(r'<div class="nav__links">(.*?)</div>', re.S)
-FOOTRE = re.compile(r'<div class="wrap footer__in">(.*?)<div class="wrap footer__bar"', re.S)
+# THROUGH THE END OF THE FOOTER, including footer__bar. This used to stop AT the bar, so the one-line
+# tagline that lives inside it was outside the compared region entirely — and when chrome.py's tagline
+# changed, the 5,900 generated pages took the new wording while the 17 hand-written pages kept the old
+# one, and "one footer across all sampled pages" reported green over a site running two different
+# footers. A chrome test that cannot see half the chrome is worse than none: it certifies the drift.
+FOOTRE = re.compile(r'<div class="wrap footer__in">(.*?)</footer>', re.S)
 
 pages = sorted(glob.glob(os.path.join(ROOT, "web", "*.html")))
 gen = [p for p in (os.path.join(ROOT, "web", x) for x in

@@ -122,9 +122,27 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # byte-identical to another capability's, and whole families are never named in the only
            # document they have. A grader reading that text sees competent docs — for something else.
            "doc_shared_with INTEGER",   # how many OTHER capabilities ship this exact README
-           "doc_names_self INTEGER"]    # does the text mention this capability at all
+           "doc_names_self INTEGER",    # does the text mention this capability at all
+           # The author's OWN package.json keywords, comma-joined like gh_topics. Fetched on every
+           # enrichment pass since the beginning and thrown away, which left npm the only kind with
+           # no author vocabulary at all: plugins had manifest tags, skills had frontmatter, and
+           # `pkg:` had nothing — so 0 of 1,398 npm rows carried a task tag and the job axis could
+           # not see the half of the corpus where media, audio and video servers actually live.
+           "npm_keywords TEXT",
+           # The author's OWN statement that they stopped, quoted. NULL means no such statement was
+           # found; a value is the sentence itself, so the site can always answer "says who?".
+           #
+           # The scorer already discounts maintenance by 0.7 when a maintainer declares a thing done —
+           # but it only ever listened to three PLATFORM flags: npm's deprecated field, the registry's
+           # deprecated status, and GitHub's Archive checkbox. wooyun-legacy opens its README with
+           # "# 不维护决定 … 我们决定不维护了" (we have decided not to maintain this), never touched the
+           # Archive checkbox, and so kept vitality=active, upkeep 79 and the #1 slot on the security
+           # shelf. Our own expertise grader had already READ that line and written it into
+           # expertise_note as prose, where nothing could act on it. A declaration in the README is the
+           # same evidence as a checkbox and is now read as such.
+           "self_unmaintained TEXT", "coverage REAL"]
 
-SCHEMA_VERSION = 9  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 11  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # v5 RENAMED the headline score. "Trust" claimed more than the SCORE measures: it is upkeep, freshness
 # and adoption, and a number whose name needs walking back is misnamed. That still holds — the security
@@ -368,15 +386,37 @@ def enrich_npm(con):
     for cid, pkg in rows:
         if bad_pkg(pkg):                                  # skip local-path junk — don't waste an API 404
             continue
-        if pkg in cache:
+        # "keywords" not in the entry means it predates that field, not that the package has none —
+        # an absent key is a cache miss, a present-but-empty one is a measured answer. Without this
+        # the 1,588 already-cached entries would keep serving their keyword-less selves forever and
+        # the new column would populate only for packages nobody had looked at yet.
+        if pkg in cache and "keywords" in cache[pkg]:
             info = cache[pkg]
         else:
             info = {}
+            # A FETCH THAT FAILED IS NOT A MEASUREMENT OF ZERO. This used to write
+            # `info["downloads"] = None` on any exception and then cache the entry, so one bad run
+            # poisoned the package permanently: the cache-miss rule below treats a present "keywords"
+            # key as a hit, so the null was served on every future run and never re-requested.
+            #
+            # A run on 2026-08-01 did exactly that to 1,751 packages. npm download counts in the DB
+            # fell from 1,412 rows to 505, adoption evaporated for most of the npm corpus, and 655
+            # capabilities dropped off the board — from a network failure, not from anything changing
+            # in the world. enrich_github already documents this rule ("DON'T cache a transient
+            # failure — retry next run, never poison"); this is the same rule, here.
+            #
+            # 404 is an answer (the package is gone). Anything else is the network having a bad day.
+            transient = False
             try:
                 dl = get_json(f"https://api.npmjs.org/downloads/point/last-week/{urllib.parse.quote(pkg, safe='@/')}")
                 info["downloads"] = dl.get("downloads")
+            except urllib.error.HTTPError as e:
+                if e.code == 404:
+                    info["downloads"] = None       # really has no downloads / no longer published
+                else:
+                    transient = True
             except Exception:
-                info["downloads"] = None
+                transient = True
             try:
                 meta = get_json(f"https://registry.npmjs.org/{urllib.parse.quote(pkg, safe='@/')}")
                 latest = (meta.get("dist-tags") or {}).get("latest")
@@ -407,16 +447,42 @@ def enrich_npm(con):
                     ru = (meta.get("repository") or {}).get("url") or ""
                     m = re.search(r"github\.com[/:]([\w.-]+/[\w.-]+?)(?:\.git|/|$)", ru)
                     info["repo"] = m.group(1) if m else None
+                # The author's own vocabulary. Packuments carry keywords at the root OR only on the
+                # latest version depending on how the package was published, and reading just the
+                # root misses the second group entirely.
+                kw = meta.get("keywords") or ((meta.get("versions") or {}).get(latest) or {}).get("keywords") or []
+                info["keywords"] = [str(k).strip() for k in kw if str(k).strip()][:30] if isinstance(kw, list) else []
+            except urllib.error.HTTPError as e:
+                if e.code != 404:
+                    transient = True
             except Exception:
-                pass
+                transient = True
+            if transient:
+                # Leave the row exactly as the last good run measured it and try again next time.
+                time.sleep(0.05)
+                continue
+            # record the key even when the package is genuinely gone, so a dead package is not
+            # re-requested on every run for the rest of time by the cache-miss rule above
+            info.setdefault("keywords", [])
             cache[pkg] = info
             time.sleep(0.05)
-        con.execute("""UPDATE capabilities SET npm_downloads=?, npm_last_publish=?, npm_created=?,
-              npm_maintainers=?, npm_versions=?, npm_deprecated=?, npm_latest_version=?,
+        # COALESCE every measured field: a partial answer must never delete a whole one. Belt and
+        # braces with the transient guard above — a stale-but-real download count is strictly better
+        # than a null, because null reads to the scorer as "no adoption evidence".
+        con.execute("""UPDATE capabilities SET
+              npm_downloads=COALESCE(?, npm_downloads),
+              npm_last_publish=COALESCE(?, npm_last_publish),
+              npm_created=COALESCE(?, npm_created),
+              npm_maintainers=COALESCE(?, npm_maintainers),
+              npm_versions=COALESCE(?, npm_versions),
+              npm_deprecated=COALESCE(?, npm_deprecated),
+              npm_latest_version=COALESCE(?, npm_latest_version),
+              npm_keywords=COALESCE(?, npm_keywords),
               source_repo=COALESCE(source_repo,?) WHERE id=?""",
           (info.get("downloads"), info.get("last_publish"), info.get("created"),
            info.get("maintainers"), info.get("versions"), info.get("deprecated"),
-           info.get("latest_version"), info.get("repo"), cid))
+           info.get("latest_version"), ",".join(info.get("keywords") or []) or None,
+           info.get("repo"), cid))
         done += 1
         if done % 200 == 0:
             con.commit(); json.dump(cache, open(NPM_CACHE, "w")); print(f"    npm {done}/{len(rows)}", flush=True)
@@ -643,7 +709,24 @@ GATE_FLOOR = float(os.environ.get("TASHAN_GATE_FLOOR", "0.30"))
 #       contributor rescore, distribution recalibration) all share this label, which is exactly why
 #       nothing labelled s1 may be trended — it is a mixed bag, not a baseline.
 #   s2  first version under the calibrated scale (absolute adoption anchors + _calibrate).
-SCORER_VERSION = os.environ.get("TASHAN_SCORER_VERSION", "s2")
+# s3: a capability whose OWN AUTHOR says it is over is no longer ranked at all — same treatment as a
+# registry-deleted row. It applies to self_unmaintained (the declaration quoted from their README or
+# description, see pipeline/doc_signals.py) alongside npm's deprecated flag and the registry's
+# deprecated status, which previously only cost a 0.3 maintenance discount and still left them on the
+# board. wooyun-legacy is why: it held #1 on the security shelf at Trust 70 with vitality "active",
+# because its README says 不维护决定 in prose and GitHub's Archive box was never ticked.
+#
+# The scale changed, so signal_history has to tell s2 points from s3 ones rather than reading the drop
+# as decay. Safe to redefine in place today: s3 has never been snapshotted (2026-08-01 is s2, and
+# snapshot_history writes a day once), so no stored point carries this label yet.
+# s4: eligibility now overrides score. A capability whose author, npm or the registry has declared
+# it over is refused a score outright rather than scored and ranked low, so the population a score is
+# drawn from changed — pkg:docfork held 55 under s3 and holds nothing under s4. That is a different
+# rule, not a different dataset, which is exactly the boundary this string exists to mark: trend()
+# must not read a capability's removal from the board as its score declining.
+# (The coverage column added alongside is pure persistence and moves no number; it does not need a
+# version of its own, but it rides this one.)
+SCORER_VERSION = os.environ.get("TASHAN_SCORER_VERSION", "s4")
 # ADOPTION ANCHORS — the value on each evidence channel that reads as fully adopted (axis = 1.0).
 #
 # THE BUG THIS FIXES: these used to be the CORPUS MAX. On power-law data that puts the median at the
@@ -742,11 +825,12 @@ def _calibrate(raw):
 def compute_scores(con):
     rows = con.execute("SELECT id, config_reach, npm_downloads, npm_last_publish, npm_maintainers, "
                        "npm_versions, npm_deprecated, registry_status, gh_pushed, gh_last_release, "
-                       "gh_archived, gh_stars, gh_open_issues, gh_contributors, gh_has_discussions, kind "
+                       "gh_archived, gh_stars, gh_open_issues, gh_contributors, gh_has_discussions, kind, "
+                       "self_unmaintained "
                        "FROM capabilities").fetchall()
     now_iso = datetime.now(timezone.utc).isoformat()
     for (cid, reach, dl, lastpub, maint, vers, dep, rstatus, gh_pushed, gh_release,
-         gh_arch, gh_stars, gh_issues, gh_contrib, gh_disc, kind) in rows:
+         gh_arch, gh_stars, gh_issues, gh_contrib, gh_disc, kind, self_unmaint) in rows:
         # ADOPTION: blend real npm downloads (log) + config reach (log), 0-100
         a_dl = _adopt_axis(dl, DL_FULL)
         a_reach = _adopt_axis(reach, REACH_FULL)
@@ -791,8 +875,34 @@ def compute_scores(con):
                         "vitality='abandoned', single_maintainer=?, updated_at=? WHERE id=?",
                         (None, None, None, 0, now_iso, cid))
             continue
-        if gh_arch or dep or rstatus == "deprecated":
+        if gh_arch or dep or rstatus == "deprecated" or self_unmaint:
+            # A README saying "we stopped" outranks a recent push date. The push is a PROXY for whether
+            # anyone is still looking after this; the sentence is the maintainer answering directly.
+            # wooyun-legacy was pushed 18 days ago (freshness 94) BECAUSE the commit that landed was the
+            # one announcing the project was over.
             vitality = "abandoned"
+
+        # ELIGIBILITY OVERRIDES SCORE. Where the AUTHOR or the REGISTRY has declared the thing should
+        # not be used any more, it stops being ranked at all — the same treatment rstatus='deleted'
+        # already gets above, for the same reason: a score is a recommendation, and recommending
+        # something we have been told is over is worse than having no opinion.
+        #
+        # docfork scored 55, sat at rank 19 in Docs & Knowledge, and shipped a working install command
+        # while its own description said "DEPRECATED: Use io.github.docfork/docfork instead" and our
+        # grader's note read "shut down 2026-06-14, endpoints offline, keys dead, setup fails". No
+        # amount of copy elsewhere on the site survives one page telling a reader to install a server
+        # that has been switched off.
+        #
+        # Deliberately NOT gh_archived on its own: an archived repository is a statement about the
+        # repo, not about whether the published package still works, and plenty of finished tools are
+        # archived and fine. This is only the declarations that say "do not use this": the author's
+        # own notice, npm's deprecation flag, and the registry's.
+        discontinued = bool(self_unmaint or dep or rstatus == "deprecated")
+        if discontinued:
+            con.execute("UPDATE capabilities SET adoption=?, freshness=?, upkeep=?, tashan_score=NULL, "
+                        "vitality='abandoned', single_maintainer=?, updated_at=? WHERE id=?",
+                        (adoption, freshness, None, single, now_iso, cid))
+            continue
         elif recent:
             vitality = "active"
         elif ms is not None or gh_stars is not None:
@@ -831,6 +941,7 @@ def compute_scores(con):
         if dep: m *= 0.3
         if rstatus == "deprecated": m *= 0.3
         if gh_arch: m *= 0.3
+        if self_unmaint: m *= 0.3      # the author's own words, same weight as the platform's flag
         # FRESHNESS ALONE IS NOT MAINTENANCE. We already publish recency as its own Freshness column, so
         # a Maintenance built only from freshness is the same signal wearing a second name — and Trust,
         # which averages the two, then counted it twice. Measured: all 2,531 rated plugins had Maint
@@ -856,9 +967,15 @@ def compute_scores(con):
             cov = (w + (ADOPT_W if adoption is not None else 0)) / (100.0 + ADOPT_W)
             # raw decides the ranking; _calibrate only decides the range it is published on (see above)
             score = round(_calibrate(base * gate * (1 - COVERAGE_W * (1 - cov))))
+        # COVERAGE IS PERSISTED, because it is published arithmetic. It is a multiplier on every
+        # score — `base * gate * (1 - COVERAGE_W * (1 - cov))` — and it was computed here, applied,
+        # and then discarded, so the methodology's promise that "every input is shown on the
+        # capability page" was impossible to keep for this one: the number did not survive the
+        # function that produced it. A discount a reader cannot see is a black box the size of 30%.
         con.execute("UPDATE capabilities SET adoption=?, freshness=?, upkeep=?, tashan_score=?, "
-                    "vitality=?, single_maintainer=?, updated_at=? WHERE id=?",
-                    (adoption, freshness, upkeep, score, vitality, single, now_iso, cid))
+                    "vitality=?, single_maintainer=?, coverage=?, updated_at=? WHERE id=?",
+                    (adoption, freshness, upkeep, score, vitality, single,
+                     round(cov, 3) if score is not None else None, now_iso, cid))
     con.commit()
     snapshot_history(con)
 
@@ -926,6 +1043,9 @@ def export(con):
             "category","in_registry","in_configs",
             "gh_stars","gh_forks","gh_open_issues","gh_pushed","gh_contributors","gh_last_release",
             "gh_license","gh_topics","gh_has_discussions","gh_archived","vitality","single_maintainer",
+            # the author's own sentence behind an "abandoned" vitality — exported so the page can
+            # answer "says who?" by quoting them, rather than asserting it on our own authority
+            "self_unmaintained", "coverage",
             # security audit — the detail page and the CLI both read these. sec_advisories carries the
             # full finding list; the page decides what a free reader sees and what needs a licence.
             "sec_advisory_count","sec_max_severity","sec_install_script","sec_permissions",
@@ -977,6 +1097,15 @@ def export(con):
     DESC_OK = "description IS NOT NULL AND description != ''"
     rows += take(f"kind='plugin' AND {DESC_OK}", "gh_stars DESC NULLS LAST", 700)
     rows += take(f"kind='skill'  AND {DESC_OK}", "config_reach DESC, name", 700)
+    # DISCONTINUED: listed, never recommended. compute_scores refuses a score to anything the author,
+    # npm or the registry has declared over, which is what keeps it off the board and out of every
+    # hub. But dropping it from the export entirely is a different mistake: pkg:docfork went from
+    # "ranked 19th with a working install command" to "no page at all", so an indexed URL started
+    # 404ing and anyone who had already installed it learned nothing. A page that says DISCONTINUED,
+    # with the author's own notice and no install command, is the useful answer — the same shape as
+    # the catalogued tier above, which is browsable without being ranked.
+    rows += take(f"(self_unmaintained IS NOT NULL OR npm_deprecated=1 OR registry_status='deprecated') "
+                 f"AND tashan_score IS NULL AND {DESC_OK}", "config_reach DESC NULLS LAST, name", 400)
     # bare single-word generic names carry no identity in a ranking (registry ingest skips the scraper's filter)
     DENY = {"mcp", "server", "mcp-server", "run", "serve", "cli", "app", "main", "index",
             "stdio", "tools", "mcp-serve", "client", "core", "test", "demo"}
@@ -1220,10 +1349,32 @@ def export(con):
     caps = []
     # Task tags, fetched ONCE for the whole export rather than per row — 4,900 single-row lookups inside
     # the loop below is the shape that turns a 2-second export into a minute.
+    #
+    # FIT LEVEL AND ITS EVIDENCE. The job axis is the differentiated half of this product and it was
+    # the only measurement shipping with no evidence attached: the export carried a bare task slug,
+    # so a role page could say a capability is "for" contract review and offer nothing to check that
+    # against — while the score, the least differentiated number here, had a whole methodology page.
+    #
+    # Fit is derived from BASIS, not from confidence. Confidence is bimodal (declared 0.75, graded
+    # 0.90) so a numeric threshold would re-derive basis while looking finer than it is, and ranking
+    # the ties inside a capability would order them arbitrarily and then call the first one "primary".
+    # What the two bases actually mean:
+    #   graded    a model read this capability's full text against the published rubric and assigned
+    #             the task  -> PRIMARY, the capability is for this work
+    #   declared  the AUTHOR's own keyword matched a task synonym exactly -> SUPPORTING, attributable
+    #             to them, but a keyword is a label, not a statement of purpose
+    #   inferred  the rejected lexical pass (37% precision, kept as evidence, never wired) would land
+    #             here as INCIDENTAL if it were ever turned on
+    # Recommendation surfaces should lead with primary and may list supporting; incidental never
+    # belongs in a recommendation.
+    FIT_BY_BASIS = {"graded": "primary", "declared": "supporting", "inferred": "incidental"}
     tags_by_cap = {}
-    for cap_id, tag, basis in con.execute(
-            "SELECT cap_id, tag, basis FROM capability_tags ORDER BY confidence DESC"):
-        tags_by_cap.setdefault(cap_id, []).append({"t": tag, "b": basis})
+    for cap_id, tag, basis, evidence in con.execute(
+            "SELECT cap_id, tag, basis, evidence FROM capability_tags ORDER BY confidence DESC"):
+        tags_by_cap.setdefault(cap_id, []).append({
+            "t": tag, "b": basis,
+            "f": FIT_BY_BASIS.get(basis, "incidental"),
+            "e": (evidence or "")[:160] or None})
 
     for r in rows:
         o = dict(zip(cols, r))
@@ -1466,6 +1617,18 @@ def export(con):
                                  "makes it rankable.")
         else:
             c["rated"] = c.get("tashan_score") is not None
+        # One flag, resolved once here, so no renderer re-derives "is this thing over?" — that rule
+        # already lives in compute_scores and a second copy would drift from it.
+        c["discontinued"] = bool(c.get("self_unmaintained") or c.get("npm_deprecated")
+                                 or c.get("registry_status") == "deprecated")
+        # Every exported row must land in a category — the hubs are built by grouping on it, so an
+        # uncategorised row is a page nothing links to. Discontinued rows can arrive without one
+        # because classify.py only ever ran over scored capabilities, and these lost their score.
+        # "other" is what merge_categories.py already coerces an unknown category to, and it is the
+        # honest label: we never classified it. Dropping the row instead would delete the warning,
+        # which is the only reason it is still exported.
+        if not c.get("category"):
+            c["category"] = "other"
     ranked = [c for c in caps if c.get("tashan_score") is not None]
     catalogued = [c for c in caps if c.get("tashan_score") is None]
     tot = con.execute("SELECT COUNT(*) FROM capabilities").fetchone()[0]
@@ -1477,6 +1640,21 @@ def export(con):
         "total_capabilities": tot,
         "enriched_npm": enriched,
         "expertise_graded": graded,
+        # WHAT WE HAVE ACTUALLY CHECKED, as a fraction of what we rank. The homepage said "Audited
+        # first" over a corpus where 76% of ranked capabilities had never been risk-scanned at all,
+        # and sold "we read the actual expertise" while 84% were ungraded. Coverage is more
+        # persuasive than a claim and it is the one number that cannot flatter us: it moves only when
+        # we do the work. Shipped so the page renders it instead of asserting anything.
+        "risk_scanned": sum(1 for c in ranked if c.get("sec_scanned_at")),
+        "job_mapped": sum(1 for c in ranked if c.get("tasks")),
+        # The denominator, named explicitly. "ranked" cannot be it: the slim index overwrites that key
+        # with the length of its own board slice (1,080), so a percentage taken against it read 119%
+        # risk-scanned. A coverage figure with the wrong denominator is worse than no figure.
+        "coverage_of": len(ranked),
+        # The ruler these numbers were produced with. signal_history already records it per point so
+        # trend() never compares across two of them; the export did not carry it at all, so a reader
+        # holding a number had no way to know which scorer produced it.
+        "scorer": SCORER_VERSION,
         "ranked": len(ranked),
         "catalogued": len(catalogued),
         # ONE number a reader can act on: how many capabilities carry evidence and have a page. The old
@@ -1522,9 +1700,15 @@ def export(con):
             # the dossier. Emitted sparsely, so the ~76% of rows with no npm package cost nothing.
             "sec_advisory_count", "sec_max_severity", "sec_install_script"]  # NOT description: it is 104 KB gz of the index and the board never reads it
     slim = {k: payload[k] for k in ("generated_at", "method", "total_capabilities", "enriched_npm",
-                                    "expertise_graded", "ranked", "catalogued", "measured", "note")}
-    # the board is capped; the bulk export above is not
-    board = ranked[:RANK_CAP] + catalogued
+                                    "expertise_graded", "risk_scanned", "job_mapped", "coverage_of",
+                                    "scorer", "ranked", "catalogued", "measured", "note")}
+    # the board is capped; the bulk export above is not.
+    # DISCONTINUED ROWS ARE NOT ON THE BOARD, so they have no business in the board's payload — this
+    # is the one file every visitor downloads on first paint, and adding 139 rows nobody can see
+    # pushed it from 54 KB to 56 KB gz and broke the budget test_site enforces. They stay in the bulk
+    # export (so their dossier is generated) and in lookup.json (so doctor can warn); the board is
+    # simply not where they belong.
+    board = ranked[:RANK_CAP] + [c for c in catalogued if not c.get("discontinued")]
     # SPARSE: omit keys whose value is None. The index sits at ~90% of its 45 KB gz budget and every
     # new field competes with first paint; dropping nulls buys back ~2 KB, which is how the two CLI
     # fields above fit with room to spare. Only None is dropped — `false` and `0` are real
@@ -1572,7 +1756,9 @@ def export(con):
               "gh_archived", "registry_status", "single_maintainer", "similar_official", "rated",
               # the security audit, so `doctor` can warn about something already installed
               "sec_advisory_count", "sec_max_severity", "sec_install_script", "sec_permissions",
-              "sec_perm_n", "sec_provenance", "sec_remote_content", "sec_scanned_at"]
+              "sec_perm_n", "sec_provenance", "sec_remote_content", "sec_scanned_at",
+              # the author's own "we stopped" sentence — doctor quotes it rather than asserting it
+              "self_unmaintained"]
     # DELISTED ROWS BELONG IN THE LOOKUP, and nowhere else. A capability the registry pulled for
     # spam/malware/illegal content has no score (compute_scores refuses it one), so it is correctly
     # absent from the board, the bulk export and every hub — we must never recommend it. But `doctor`
@@ -1586,6 +1772,12 @@ def export(con):
                            "sec_advisories", "sec_install_script"), r)) for r in con.execute(
         "SELECT id, name, kind, sec_max_severity, sec_advisory_count, sec_advisories, "
         "sec_install_script FROM capabilities WHERE sec_max_severity='MALICIOUS'")]
+    # NO SEPARATE discontinued FETCH HERE. There used to be one, on the same reasoning as `delisted`
+    # and `malicious` above — but those two are absent from `caps` and these are not: the export now
+    # carries discontinued rows so their dossier still gets built. Fetching them again appended a
+    # SECOND copy of all 141 to the lookup, and a name that resolves to two records resolves to
+    # whichever landed first, which is how `chrome-devtools-mcp` started answering with a downgraded
+    # row. They are already in `caps`; that is enough.
     by_key, recs = {}, []
     # `malicious` and `delisted` are fetched fresh from SQL, AFTER caps were redacted — so they
     # arrived carrying the raw install command and full advisory blob into a public file. Redact on

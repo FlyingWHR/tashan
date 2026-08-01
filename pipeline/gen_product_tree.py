@@ -36,7 +36,7 @@ PURPOSE = {
     "/browse.html":       ("Parent index for every category and task hub — the full taxonomy.", "free"),
     "/start.html":        ("How to use it: the CLI, the MCP server, the plugin.", "free"),
     "/methodology.html":  ("How every number is derived, so the score is re-checkable.", "free"),
-    "/about.html":        ("Why a rater that sells nothing it measures is the only kind worth reading.", "free"),
+    "/about.html":        ("What tashan measures, where it is going, and the principles the scoring follows.", "free"),
     "/pricing.html":      ("What Pro costs and exactly what it adds.", "sells"),
     "/account.html":      ("Your plan, machines, licence key and invoices — read live from /api/account.", "post-sale"),
     "/requests.html":     ("Ask for a capability to be measured.", "free"),

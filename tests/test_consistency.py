@@ -80,10 +80,18 @@ for rel, fields in (("data/index.json", ("label", "tashan_score", "category", "o
         # registry-deleted entries and the two dependency-confusion canaries off the board, and they
         # survive here so `tashan doctor` can warn somebody already running one. Silence would be the
         # bug. But each survivor needs a REASON — an orphan with no warning attached is just drift.
+        # DISCONTINUED is the third reason, added when eligibility began overriding score: a
+        # capability whose author, npm or the registry has declared it over loses its score and drops
+        # off the board, and it has to stay reachable here or `doctor` answers silence to the person
+        # already running it. pkg:docfork is the case that forced the rule — it shipped a working
+        # install command while its own description read "DEPRECATED: Use io.github.docfork/docfork
+        # instead". These are not orphans; they are the warning.
         unexplained = [i for i in missing
-                       if not (rowsById[i].get("registry_status") == "deleted"
+                       if not (rowsById[i].get("registry_status") in ("deleted", "deprecated")
                                or rowsById[i].get("sec_advisory_count")
-                               or rowsById[i].get("sec_severity"))]
+                               or rowsById[i].get("sec_severity")
+                               or rowsById[i].get("npm_deprecated")
+                               or rowsById[i].get("self_unmaintained"))]
         ok(f"{rel}: all {len(missing)} board-excluded row(s) are kept deliberately, to warn about",
            not unexplained, f"{len(unexplained)} unexplained orphan(s): {unexplained[:3]}")
     else:
@@ -462,6 +470,134 @@ ok(f"{n_inline} inline dossier payloads agree with the export on EVERY field the
 ok("the inline dossier payload carries the audit detail, not a redacted copy",
    n_inline > 0 and sum(paid_inline.values()) > 0,
    "no dossier island embeds the install command — the client render will show less than the server")
+
+# ---- 10. eligibility beats the score ------------------------------------------------------------
+# pkg:docfork carried tashan score 55, ranked 19th on its category hub, and printed a copy-pasteable
+# `npx -y docfork` install snippet — while the npm description we ourselves published on that page
+# read "Up-to-date docs for AI. DEPRECATED: Use io.github.docfork/docfork instead."
+#
+# Every input to the score was honest: it was published recently, by a live maintainer, with real
+# downloads. That is exactly the problem — upkeep signal keeps looking healthy for months after the
+# author has moved on, so a computed number cannot notice a retirement. self_unmaintained is read off
+# the capability's OWN text, which is the one source that outranks every derived signal. When it is
+# set the answer is not "score it lower", it is "do not rank it at all": a 55 next to a working
+# install command is an instruction to install something its publisher has retired.
+self_dead = [c for c in TRUTH.values() if c.get("self_unmaintained")]
+scored_dead = [f"{c['id']} scores {c['tashan_score']} but says {str(c['self_unmaintained'])[:60]!r}"
+               for c in self_dead if c.get("tashan_score") is not None]
+ok(f"none of the {len(self_dead)} self-declared-discontinued capabilities carries a tashan score",
+   not scored_dead, "; ".join(scored_dead[:3]))
+
+# ---- 11. …and a discontinued capability stays REACHABLE ------------------------------------------
+# The other half of the same fix, and the half that is easy to get wrong: dropping docfork off the
+# board is right, dropping it out of lookup.json is not. lookup.json is what `tashan doctor` reads,
+# and the person who most needs to hear "this is deprecated, here is the replacement" is the person
+# who already has `npx -y docfork` in their config today. If the row vanishes, doctor answers them
+# with silence, which reads as "nothing wrong with it" — the same failure §1 guards for the
+# registry-deleted rows and the two dependency-confusion canaries.
+#
+# lookup.json's `keys` maps a lookup string to an INDEX into `records`, not to an id, so reachability
+# has to be resolved through records[i]["id"] — comparing keys to ids directly finds nothing and the
+# check would pass on an empty set.
+_look = load("data/lookup.json") or {}
+_lrecs = _look.get("records") or []
+_reachable = {_lrecs[i]["id"] for i in _look.get("keys", {}).values() if 0 <= i < len(_lrecs)}
+_dead_ids = ({r["id"] for r in _lrecs if r.get("self_unmaintained")} |
+             {c["id"] for c in self_dead})
+_unreachable = sorted(_dead_ids - _reachable)
+ok(f"all {len(_dead_ids)} self-declared-discontinued capabilities are resolvable in lookup.json",
+   not _unreachable,
+   f"{len(_unreachable)} can never be found by `tashan doctor`, e.g. {_unreachable[:3]}")
+# Named because it is the incident: docfork must resolve from the BARE name a config actually
+# carries ("docfork" in `npx -y docfork`), not only from our internal id.
+_docfork = [k for k, i in _look.get("keys", {}).items()
+            if 0 <= i < len(_lrecs) and _lrecs[i]["id"] == "pkg:docfork"]
+ok("pkg:docfork — dropped off the board as deprecated — is still resolvable by its bare npm name",
+   "docfork" in _docfork and "pkg:docfork" in _docfork,
+   f"lookup keys for pkg:docfork: {_docfork or 'none — doctor answers silence to everyone running it'}")
+
+# ---- 12. no licence language where the thing is free ---------------------------------------------
+# The security audit is free in full — advisory ids, fixed versions, the literal install command. The
+# copy did not all move at once: 218 generated compare pages went on printing "the detail a licence
+# buys is on each dossier" long after the licence stopped buying anything, so a reader was told to pay
+# for a fact sitting one click away, free. Wrong-in-our-favour copy is worse than a stale number; it
+# reads as a bait-and-switch by an outfit whose entire pitch is that it does not sell the answer.
+#
+# "behind a licence" is on the list because it was the phrasing, but the FIX uses the same words in
+# the negative — every dossier now closes with "Nothing in this audit is behind a licence." That one
+# sentence is subtracted before the sweep; any other appearance of the phrase still fails.
+PAYWALL = ("licence buys", "unlock detail", "behind a licence")
+FREE_PROMISE = "Nothing in this audit is behind a licence"
+sweep = []
+for _d in ("compare", "category", "task", "role"):
+    sweep += sorted(glob.glob(os.path.join(WEB, _d, "*.html")))
+# 5,900 dossiers all render from one template, so a stride sample proves the template; the small
+# hand-built page sets above are swept whole.
+sweep += pages[::max(1, len(pages) // 200)]
+sold = collections.Counter()
+sold_ex = {}
+for p_ in sweep:
+    src = open(p_, encoding="utf-8").read().replace(FREE_PROMISE, "")
+    for phrase in PAYWALL:
+        if phrase in src:
+            sold[phrase] += 1
+            sold_ex.setdefault(phrase, os.path.relpath(p_, WEB))
+ok(f"{len(sweep)} sampled generated pages sell nothing that is already free",
+   not sold, "; ".join(f"{k!r} on {n} page(s), e.g. {sold_ex[k]}" for k, n in sold.most_common(3)))
+
+# ---- 13. every job mapping carries its evidence --------------------------------------------------
+# The task mapping is the half of the product nobody else has: "which capability actually does this
+# job". That makes it the half with no external check on it — a registry entry is wrong publicly, a
+# job mapping is only wrong to the person who trusted it. An entry with a fit level but no `e` string
+# is an unsupported claim wearing the same chrome as a supported one, and it renders identically on
+# /task/*.html, so nothing downstream can tell them apart. Fit must also be one of the three we
+# publish and rank on; a fourth value sorts arbitrarily and shows up as a blank column.
+FITS = {"primary", "supporting", "incidental"}
+task_bad = collections.Counter()
+task_ex = {}
+n_task = 0
+for c in TRUTH.values():
+    t = c.get("tasks")
+    if not t:
+        continue
+    if isinstance(t, str):
+        try:
+            t = json.loads(t)
+        except Exception:
+            task_bad["unparseable tasks blob"] += 1
+            task_ex.setdefault("unparseable tasks blob", c["id"])
+            continue
+    for e in t:
+        n_task += 1
+        if not isinstance(e, dict):
+            task_bad["entry is not an object"] += 1
+            task_ex.setdefault("entry is not an object", f"{c['id']}: {e!r}")
+            continue
+        if e.get("f") not in FITS:
+            task_bad["fit level not in {primary,supporting,incidental}"] += 1
+            task_ex.setdefault("fit level not in {primary,supporting,incidental}",
+                               f"{c['id']} -> {e.get('t')!r}: f={e.get('f')!r}")
+        if not str(e.get("e") or "").strip():
+            task_bad["no evidence"] += 1
+            task_ex.setdefault("no evidence", f"{c['id']} -> {e.get('t')!r} claims {e.get('f')!r} "
+                                              "fit with nothing behind it")
+ok(f"all {n_task} task mappings state a fit level AND the evidence for it",
+   not task_bad, "; ".join(f"{k} x{n} — {task_ex[k]}" for k, n in task_bad.most_common(3)))
+
+# ---- 14. coverage is never overstated -------------------------------------------------------------
+# index.json's header is the site's own claim about how much of the corpus it has actually measured,
+# and it is quoted straight onto the homepage. It once printed a percentage over 100 because the
+# denominator was the wrong key — more capabilities "risk scanned" than existed to scan. A ratio
+# above 1.0 is not a rounding artefact, it is proof the two numbers count different populations, and
+# it lands on the one page that has to be credible on first read.
+_idx = load("data/index.json") or {}
+_denom = _idx.get("coverage_of")
+over = [f"{k}={_idx.get(k)} > coverage_of={_denom}"
+        for k in ("risk_scanned", "expertise_graded", "job_mapped")
+        if isinstance(_idx.get(k), int) and isinstance(_denom, int) and _idx[k] > _denom]
+ok(f"index.json: risk_scanned/expertise_graded/job_mapped all fit inside coverage_of={_denom}",
+   isinstance(_denom, int) and _denom > 0 and not over,
+   "; ".join(over) or f"coverage_of is {_denom!r} — the denominator every coverage percentage divides by")
 
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)

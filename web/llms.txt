@@ -2,7 +2,7 @@
 
 > The intelligence layer for AI capabilities. tashan scores MCP servers and agent skills on public evidence — npm downloads and publish cadence, GitHub activity, registry status, and how often a server appears in real public agent configs. Nobody can pay to change a score, rank, or listing; payment buys depth and tooling only.
 
-Generated: 2026-08-01. Capabilities tracked: 5789 ranked. Every number below is re-derivable from public sources.
+Generated: 2026-08-01. Capabilities tracked: 5933 ranked. Every number below is re-derivable from public sources.
 
 ## How the score works
 
@@ -46,7 +46,6 @@ Every npm-published capability is checked against OSV.dev using the version you 
 - [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) — tashan score 81.0, active. Comprehensive SEO analysis plugin for Claude Code. 25 sub-skills and 18 sub-agents, plus 8 optional MCP extensions. v2.2.4 adds a managed cross-platfo
 - [Ponytail](https://tashan.sh/capability/plugin-dietrichgebert-ponytail-ponytail.html) — tashan score 81.0, active. Forces the laziest solution that works. YAGNI, stdlib first, one line over fifty.
 - [Context Mode](https://tashan.sh/capability/plugin-mksglu-context-mode-context-mode.html) — tashan score 81.0, active. MCP is the protocol for tool access. We're the virtualization layer for context.
-- [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) — tashan score 81.0, active. Connect Mem0 to Claude to give your agent persistent memory across sessions. Claude can store user preferences, project context, and conversation hist
 - [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) — tashan score 81.0, active. AI-powered Draw.io diagram generation with real-time browser preview. Create flowcharts, architecture diagrams, and more through natural language.
 - [Promptfoo Evals](https://tashan.sh/capability/plugin-promptfoo-promptfoo-promptfoo-evals.html) — tashan score 81.0, active. Teaches AI coding agents to create and maintain promptfoo eval suites. Encodes best practices like deterministic assertions first, file-based test org
 - [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) — tashan score 81.0, active. Matt Pocock's agent skills for real engineering — grilling, spec/ticket flows, TDD, code review, domain modelling and more. Plug-and-play, not vibe co
@@ -57,6 +56,7 @@ Every npm-published capability is checked against OSV.dev using the version you 
 - [Browser Harness](https://tashan.sh/capability/plugin-browser-use-browser-harness-browser-harness.html) — tashan score 80.0, active. Open-source browser agent driven via CDP — direct browser control, 79K stars, YC W25. browser-harness gives Claude Code direct, low-level control of a
 - [Claude Hud](https://tashan.sh/capability/plugin-jarrodwatts-claude-hud-claude-hud.html) — tashan score 80.0, active. Real-time statusline HUD for Claude Code - context health, tool activity, agent tracking, and todo progress
 - [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) — tashan score 80.0, active. Persistent memory system for Claude Code - seamlessly preserve context across sessions
+- [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) — tashan score 80.0, active. Connect Mem0 to Claude to give your agent persistent memory across sessions. Claude can store user preferences, project context, and conversation hist
 - [Playwright Pro](https://tashan.sh/capability/plugin-alirezarezvani-claude-skills-playwright-pro.html) — tashan score 80.0, active. Playwright Pro turns your AI coding agent into a senior test automation engineer. Instead of generating tutorial-quality tests with brittle CSS select
 - [Understand Anything](https://tashan.sh/capability/plugin-lum1104-understand-anything-understand-anything.html) — tashan score 80.0, active. Understand Anything is a Claude Code plugin that analyzes your project with a multi-agent pipeline, builds a knowledge graph of every file, function, 
 - [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) — tashan score 79.0, active. Comprehensive development workflow for building AI agents with the Atomic Agents framework. Includes specialized agents for schema design, architectur
@@ -73,44 +73,45 @@ Every npm-published capability is checked against OSV.dev using the version you 
 
 One ranked page per job title. These answer "what should I install for a <job>" with measured rows rather than an opinion.
 
-- [Agent operator](https://tashan.sh/role/agent-operator.html) — 156 measured. Top: Claude Hud, Nah, Agnix.
-- [AI engineer](https://tashan.sh/role/ai-engineer.html) — 169 measured. Top: Caveman, Mem0, Context Mode.
-- [Creator / video](https://tashan.sh/role/creator.html) — 30 measured. Top: Next AI Drawio, Claude Video Vision, Adobe For Creativity.
-- [Data analyst](https://tashan.sh/role/data-analyst.html) — 74 measured. Top: Qsv Data Wrangling, Geosql, Monday CRM.
-- [Data engineer](https://tashan.sh/role/data-engineer.html) — 76 measured. Top: Daft, Whodb, ClickHouse Best Practices.
-- [Designer](https://tashan.sh/role/designer.html) — 71 measured. Top: Impeccable, Next AI Drawio, Figma.
-- [DevOps / SRE](https://tashan.sh/role/devops.html) — 147 measured. Top: Cloudflare, Expo, Azure · microsoft.
-- [Software engineer](https://tashan.sh/role/engineer.html) — 518 measured. Top: Ponytail, Mattpocock Skills, Next AI Drawio.
-- [Finance / accounting](https://tashan.sh/role/finance.html) — 64 measured. Top: Revolut X, Vulcan, Azure Cost Calculator.
-- [HR / recruiting](https://tashan.sh/role/hr.html) — 19 measured. Top: Claude Education Skills Library, Guide, Claude English Buddy.
-- [Legal / compliance](https://tashan.sh/role/legal.html) — 61 measured. Top: Architecture Studio, Bettercallclaude, Healthclaw Guardrails.
-- [Marketer / growth](https://tashan.sh/role/marketer.html) — 105 measured. Top: Claude SEO, Last30days, Humanize Korean.
-- [Operations](https://tashan.sh/role/ops.html) — 312 measured. Top: Mem0, Mattpocock Skills, Desktop Commander.
-- [Product manager](https://tashan.sh/role/pm.html) — 217 measured. Top: Impeccable, Mattpocock Skills, Last30days.
-- [Researcher](https://tashan.sh/role/researcher.html) — 160 measured. Top: Mem0, Desktop Commander, Claude Mem.
-- [Sales](https://tashan.sh/role/sales.html) — 37 measured. Top: Monday CRM, Opendirectory, Vibe Prospecting.
-- [Scientist](https://tashan.sh/role/scientist.html) — 29 measured. Top: Sciagent Skills, Datarobot Agent Skills, Probabl Skills.
-- [Security engineer](https://tashan.sh/role/security.html) — 113 measured. Top: Wooyun Legacy, Codeguard Security, Sonarqube.
-- [Web / frontend developer](https://tashan.sh/role/web-dev.html) — 70 measured. Top: Impeccable, Stripe, Figma.
-- [Writer / content](https://tashan.sh/role/writer.html) — 126 measured. Top: Humanize Korean, Claude Scholar, Save To Spotify.
+- [Agent operator](https://tashan.sh/role/agent-operator.html) — 156 measured. Top: Nah, Co2 Tracker, Claude Pulse.
+- [AI engineer](https://tashan.sh/role/ai-engineer.html) — 230 measured. Top: Genshijin, Reprompter, Adcp Client.
+- [Creator / video](https://tashan.sh/role/creator.html) — 44 measured. Top: Claude Video Vision, Watch, Webmotion.
+- [Data analyst](https://tashan.sh/role/data-analyst.html) — 87 measured. Top: DuckDB Skills, Spotify Ads API, Statsclaw.
+- [Data engineer](https://tashan.sh/role/data-engineer.html) — 77 measured. Top: DuckDB Skills, Orchestra, Cockroachdb.
+- [Designer](https://tashan.sh/role/designer.html) — 77 measured. Top: Obsidian Visual Skills, Excalidraw Skill, Webmotion.
+- [DevOps / SRE](https://tashan.sh/role/devops.html) — 153 measured. Top: Zscaler, Rr, Langfuse Observability.
+- [Educator](https://tashan.sh/role/educator.html) — 14 measured. Top: Claude Education Skills Library, Guide, Claude English Buddy.
+- [Software engineer](https://tashan.sh/role/engineer.html) — 567 measured. Top: Cocoindex Code, Safety Net, Firecrawl · firecrawl.
+- [Finance / accounting](https://tashan.sh/role/finance.html) — 82 measured. Top: Vulcan, Barker Stablecoin Skills, Azure Cost Calculator.
+- [HR / recruiting](https://tashan.sh/role/hr.html) — 24 measured. Top: Claude Education Skills Library, Guide, Claude English Buddy.
+- [Legal / compliance](https://tashan.sh/role/legal.html) — 167 measured. Top: Architecture Studio, Healthclaw Guardrails, L4 Computational Law.
+- [Marketer / growth](https://tashan.sh/role/marketer.html) — 120 measured. Top: Humanize Korean, Save To Spotify, Postiz.
+- [Operations](https://tashan.sh/role/ops.html) — 364 measured. Top: Minutes, Safety Net, Firecrawl · firecrawl.
+- [Product manager](https://tashan.sh/role/pm.html) — 218 measured. Top: Maister, Haytham, Specclaw.
+- [Researcher](https://tashan.sh/role/researcher.html) — 187 measured. Top: Minutes, Firecrawl · firecrawl, Remember.
+- [Sales](https://tashan.sh/role/sales.html) — 43 measured. Top: Gooseworks, Monday CRM, Vibe Prospecting.
+- [Scientist](https://tashan.sh/role/scientist.html) — 30 measured. Top: Statsclaw, Growthbook, Agent Loops.
+- [Security engineer](https://tashan.sh/role/security.html) — 233 measured. Top: Zscaler, GitHub Autopilot, Agentic Security.
+- [Web / frontend developer](https://tashan.sh/role/web-dev.html) — 92 measured. Top: Tray API, Figma, Modern Web Guidance.
+- [Writer / content](https://tashan.sh/role/writer.html) — 143 measured. Top: Humanize Korean, Save To Spotify, Codedna.
 
 ## Categories
 
 - [Browser & Web](https://tashan.sh/category/browser.html) — 50 measured. Headless browsers, scraping, page automation, fetch. Top: Chrome DevTools, Firecrawl, Trusty Squire.
-- [Search](https://tashan.sh/category/search.html) — 114 measured. Web search, retrieval, and answer engines. Top: Tavily, Exa, Exa · exa-labs.
-- [Database](https://tashan.sh/category/database.html) — 62 measured. SQL, NoSQL, vector stores, query & schema tools. Top: Supabase, Whodb, Postgres.
-- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1763 measured. Git, GitHub, code, testing, build & CI. Top: Everything, Azure, Context Mode.
-- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 72 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: Hostinger API, Kubernetes, Kubernetes · containers.
+- [Search](https://tashan.sh/category/search.html) — 116 measured. Web search, retrieval, and answer engines. Top: Tavily, Exa, Exa · exa-labs.
+- [Database](https://tashan.sh/category/database.html) — 63 measured. SQL, NoSQL, vector stores, query & schema tools. Top: Supabase, Whodb, Postgres.
+- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1818 measured. Git, GitHub, code, testing, build & CI. Top: Everything, Azure, Context Mode.
+- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 77 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: Hostinger API, Kubernetes, Kubernetes · containers.
 - [Files & Memory](https://tashan.sh/category/files.html) — 33 measured. Filesystem access, memory, knowledge graphs. Top: Filesystem, Memory, Desktop Commander.
-- [Data & Analytics](https://tashan.sh/category/data.html) — 292 measured. Pipelines, analytics, spreadsheets, BI. Top: HuggingFace Skills, Deepeval, Qsv Data Wrangling.
-- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 207 measured. Docs lookup, notes, wikis, context retrieval. Top: Context7, Notion, Notion · suekou.
-- [Communication](https://tashan.sh/category/comms.html) — 206 measured. Slack, email, chat, calendars, meetings. Top: Claude SEO, Search Console, Local.
-- [Design](https://tashan.sh/category/design.html) — 244 measured. Figma, UI, images, creative & design tooling. Top: Figma Developer, Figma Console, Impeccable.
-- [AI & Agents](https://tashan.sh/category/ai.html) — 155 measured. Reasoning, agents, model & LLM orchestration. Top: Sequential Thinking, Humanize Korean, Sap Fiori.
-- [Finance & Crypto](https://tashan.sh/category/finance.html) — 293 measured. Payments, markets, blockchain, wallets. Top: Blockrun, Savvly, Sap.
-- [Productivity](https://tashan.sh/category/productivity.html) — 1779 measured. Tasks, automation, workflows, personal tools. Top: Caveman, Ponytail, Mem0.
-- [Security](https://tashan.sh/category/security.html) — 348 measured. Auth, secrets, scanning, identity. Top: Auth0, Safety Net, Scf.
-- [Other](https://tashan.sh/category/other.html) — 171 measured. Everything not yet categorized. Top: Voyagier, Ytdl Rmcp, Familiar.
+- [Data & Analytics](https://tashan.sh/category/data.html) — 297 measured. Pipelines, analytics, spreadsheets, BI. Top: HuggingFace Skills, Deepeval, Qsv Data Wrangling.
+- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 213 measured. Docs lookup, notes, wikis, context retrieval. Top: Context7, Notion, Notion · suekou.
+- [Communication](https://tashan.sh/category/comms.html) — 207 measured. Slack, email, chat, calendars, meetings. Top: Claude SEO, Search Console, Local.
+- [Design](https://tashan.sh/category/design.html) — 250 measured. Figma, UI, images, creative & design tooling. Top: Figma Developer, Figma Console, Impeccable.
+- [AI & Agents](https://tashan.sh/category/ai.html) — 158 measured. Reasoning, agents, model & LLM orchestration. Top: Sequential Thinking, Humanize Korean, Sap Fiori.
+- [Finance & Crypto](https://tashan.sh/category/finance.html) — 293 measured. Payments, markets, blockchain, wallets. Top: Savvly, Blockrun, Sap.
+- [Productivity](https://tashan.sh/category/productivity.html) — 1830 measured. Tasks, automation, workflows, personal tools. Top: Caveman, Ponytail, Smartbear.
+- [Security](https://tashan.sh/category/security.html) — 352 measured. Auth, secrets, scanning, identity. Top: Auth0, Safety Net, Scf.
+- [Other](https://tashan.sh/category/other.html) — 176 measured. Everything not yet categorized. Top: Voyagier, Ytdl Rmcp, Rubric Protocol.
 
 ## Reference
 

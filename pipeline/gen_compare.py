@@ -5,10 +5,14 @@ WHY THESE EXIST. "X vs Y" is the highest-intent question in this category and th
 placed to answer, because both sides are already measured on the same public evidence by the same
 scorer on the same day. Everyone else answering it is guessing or is paid by one of the two.
 
-WHAT THEY MAY CONTAIN. Free-tier data only: both scores, the raw evidence each was derived from,
-freshness, upkeep, the expertise grade, and the EXISTENCE of security findings. Never the paid
-detail — which advisory, the fixed version, the install command. A comparison page is a better
-shop window for the audit, never a way around its paywall.
+WHAT THEY CONTAIN. Both scores, the raw evidence each was derived from, freshness, upkeep, the
+expertise grade, and a one-line roll-up of what the security audit found. The audit is now FREE IN
+FULL — advisory id, severity, the version that fixes it and the literal install-time command all
+ship to everyone — so the roll-up here is a summary written for a two-column table, never a
+redaction. This paragraph used to read "free-tier data only … never a way around its paywall": that
+was written when the audit was paid, and this file was the one place missed when it went free
+(build.py::redact_paid stopped redacting, prerender.py::security_block went inline, pricing.html
+stopped selling it), so 218 generated pages kept advertising a licence that no longer buys anything.
 
 THE URL IS ALPHABETICAL AND THE CONTENT IS RANKED, deliberately and not by accident. If the slug
 were ordered by score, every page would change URL the day two capabilities crossed — churning the
@@ -49,7 +53,13 @@ def verdict(c):
 
 
 def findings(c):
-    """The EXISTENCE of every finding, which is free everywhere else and stays free here."""
+    """Every finding this capability has, named but not expanded — one line, for a table cell.
+
+    NOT a paywall line, though it was written as one. This used to be the free half of a free/paid
+    split ("the existence is free, the detail is licensed"); the audit is free in full now, id and
+    fix and install-time command included, so the only reason this stays a summary is that a
+    head-to-head table has two narrow columns. The unabridged version is on each dossier, also free.
+    """
     bits = []
     n = c.get("sec_advisory_count") or 0
     bits.append(f"{n} known advisor" + ("y" if n == 1 else "ies") if n else "no known advisories")
@@ -137,8 +147,14 @@ def page(a, b, cat_label, gen):
             "cadence, maintainers, status"),
         row("Expertise grade", cell(a, esc(verdict(a))), cell(b, esc(verdict(b))),
             "an LLM read of its own documentation against a fixed rubric"),
+        # This note sold a licence on all 218 pages after the audit went free — the last survivor of
+        # the free/paid split. It now says why the row is short (table width) instead of implying a
+        # tier gate, because the detail it points at costs nothing.
         row("Security audit", cell(a, esc(findings(a))), cell(b, esc(findings(b))),
-            "existence of findings is always free; the detail a licence buys is on each dossier"),
+            "a summary — the full audit, free, is on each dossier"),
+        # "Licence" here is the OSS licence off GitHub (MIT, Apache-2.0, …), NOT a tashan tier.
+        # Left alone deliberately: a sweep for paywall wording will hit this word, and it is the
+        # one legitimate use of it in the file.
         row("Licence", cell(a, esc(a.get("gh_license") or "—")), cell(b, esc(b.get("gh_license") or "—")), ""),
         row("Maintainers", cell(a, "one primary" if a.get("single_maintainer") else "more than one"),
             cell(b, "one primary" if b.get("single_maintainer") else "more than one"), "bus-factor risk"),
@@ -163,9 +179,13 @@ def page(a, b, cat_label, gen):
         '<th scope="col"><a class="link" href="/capability/' + esc(b["slug"]) + '.html">' + esc(nb) + "</a></th>"
         '<th class="cmp__n" scope="col">what it means</th></tr></thead><tbody>' + rows + "</tbody></table></div>\n"
         '<h2>Install either</h2>\n<div class="cmp__insts">' + install(a) + install(b) + "</div>\n"
+        # The closing note used to read "including what a licence adds" — a pitch for a tier that no
+        # longer exists. What the dossier actually adds over this table is depth, not access: the
+        # advisory ids, the fixed versions, the install-time command. All of it free.
         '<p class="note">Neither score is a security verdict — "well maintained" and "nothing known '
         "is wrong\" are different claims, which is why the audit is a separate row and never folded "
-        "into the number. The full audit for each, including what a licence adds, is on its own page: "
+        "into the number. The full audit for each — the advisory ids, the version that fixes them "
+        "and anything that runs at install time — is free on its own page: "
         '<a class="link" href="/capability/' + esc(a["slug"]) + '.html">' + esc(na) + "</a> · "
         '<a class="link" href="/capability/' + esc(b["slug"]) + '.html">' + esc(nb) + "</a>.</p>\n"
         '<p class="mt-12"><a class="btn btn--ghost" href="/category/' + esc(a["category"]) +

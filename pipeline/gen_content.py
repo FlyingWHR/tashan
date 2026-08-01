@@ -130,35 +130,44 @@ def build_articles(caps):
                 ("What format is a skill?", "A folder with a SKILL.md whose YAML frontmatter has a name and description. See tashan's tracked skills for real examples.")],
     })
     # 2. best-X cluster (EN) — DATA-BACKED ranked table (the differentiator)
+    # Wording: "most trustworthy" / "most trusted" used to head this page and its H2. methodology.html
+    # explicitly refuses that word — the score is upkeep + freshness gated by adoption; there is no CVE
+    # scan, no prompt-injection review, no reading of the code. The overclaim was worst exactly here,
+    # because these are the pages written to be found by search and quoted verbatim by answer engines.
+    # Name the evidence instead: adopted + maintained, which is what the arithmetic actually supports.
     A.append({
         "slug": "best-mcp-servers-for-claude-code", "lang": "en",
         "title": "Best MCP servers for Claude Code (2026)",
         "desc": "The top MCP servers for Claude Code, ranked by tashan's measured score — real adoption and upkeep, not stars or opinion. Auto-updated from public evidence.",
-        "quick": "The most trustworthy MCP servers for Claude Code right now, by measured tashan score (upkeep + freshness, gated by real adoption): <b>context7</b>, <b>chrome-devtools</b>, and <b>filesystem</b> lead. The full ranked list below updates from public evidence — not stars, not sponsorships.",
+        "quick": "The most widely adopted and actively maintained MCP servers for Claude Code right now, by measured tashan score (upkeep + freshness, gated by real adoption): <b>context7</b>, <b>chrome-devtools</b>, and <b>filesystem</b> lead. The full ranked list below updates from public evidence — not stars, not sponsorships.",
         "sections": [
-            {"q": "Which MCP servers are most trusted for Claude Code?",
-             "body": "<p>Ranked by tashan's tashan score — every number is re-derivable from npm downloads, release cadence, and repository health. Open any row for the full dossier.</p>" + top_table(caps, lambda c: c.get("kind") in ("npm","pkg"), 12)},
+            {"q": "Which MCP servers are most widely adopted and actively maintained for Claude Code?",
+             "body": "<p>Ranked by tashan's tashan score — computed from npm downloads, release cadence, and repository health. Open any row for the full dossier.</p>" + top_table(caps, lambda c: c.get("kind") in ("npm","pkg"), 12)},
             {"q": "Why rank by tashan score instead of GitHub stars?",
              "body": "<p>Stars measure visibility, not fitness. A server can be starred and abandoned. tashan's tashan score blends how actively a server is <b>maintained</b> and how <b>fresh</b> it is, gated by real <b>adoption</b> — and flags single-maintainer and archived risks. See the <a class='link' href='/methodology.html'>methodology</a>.</p>"},
         ],
         "faq": [("How do I install one of these?", "Open its page and copy the per-client snippet — Claude Code, Cursor, Claude Desktop, or Codex. Most are `claude mcp add <name> -- npx -y <pkg>`."),
-                ("Is this list sponsored?", "No. tashan sells nothing on the board, so the ranking is evidence, not spend.")],
+                ("Is this list sponsored?", "No. The order is computed from public signal — downloads, release cadence and repository health — and there is no paid placement in it.")],
         "itemlist": [{"name": pretty(c["name"]), "url": BASE + "/capability/" + c["slug"] + ".html", "tashan_score": c["tashan_score"]}
                      for c in [x for x in caps if x.get("tashan_score") is not None and x.get("kind") in ("npm", "pkg")][:12]],
     })
     # 3. 中文 cluster — tutorial-that-curates shell (CN long-tail)
+    # Same fix as the EN best-X page: 「最靠谱」/「靠不靠谱」 reads as a trustworthiness verdict, which is
+    # the claim methodology.html says the arithmetic cannot support. Rewritten to the two things actually
+    # measured — 还在维护 (upkeep/freshness) and 有人在用 (adoption) — in natural Chinese, not a gloss of
+    # the English. Title keeps the 「怎么选」 long-tail; only the promise changes.
     A.append({
         "slug": "mcp-fuwuqi-tuijian", "lang": "zh",
-        "title": "MCP 服务器怎么选？用 tashan score 评分挑最靠谱的",
-        "desc": "面对上千个 MCP 服务器，怎么选到真正靠谱的？tashan 用公开证据打分（tashan score = 维护 + 更新，按真实采用度加权），附带专家评级和安装方法。",
+        "title": "MCP 服务器怎么选？用 tashan score 看维护活跃度和真实采用量",
+        "desc": "面对上千个 MCP 服务器，怎么看出哪些还在维护、真的有人在用？tashan 用公开证据打分（tashan score = 维护 + 更新，按真实采用度加权），附带专家评级和安装方法。",
         "quick": "选 MCP 服务器别只看 star。tashan 用<b>公开证据</b>打 tashan score 分（维护活跃度 + 更新新鲜度，按真实下载量加权），并对每个能力做 <b>deep / solid / thin</b> 专家评级。下面是按 tashan score 排名的榜单，点开任意一行看完整安装方法和仓库健康度。",
         "sections": [
-            {"q": "怎么判断一个 MCP 服务器靠不靠谱？",
+            {"q": "怎么判断一个 MCP 服务器还在维护、有没有人用？",
              "body": "<p>看三件事：是否<b>仍在维护</b>（最近提交/发版）、有多少<b>真实采用</b>（npm 周下载）、以及是否有<b>单一维护者/已归档</b>风险。tashan 把这些合成一个可复现的 tashan score 分。</p>" + top_table(caps, lambda c: c.get("kind") in ("npm","pkg"), 12)},
             {"q": "MCP 服务器和 Agent Skill 有什么区别？",
              "body": "<p>MCP 服务器通过 Model Context Protocol 给 AI 暴露工具；Agent Skill 是一个带 SKILL.md 的文件夹，按需加载。tashan 用同一套模型同时追踪并打分。</p>"},
         ],
-        "faq": [("这个榜单收钱排名吗？", "不收。tashan 不出售榜单上的任何东西，所以排名是证据，不是广告位。"),
+        "faq": [("这个榜单收钱排名吗？", "不收。排名由公开证据算出——下载量、发版节奏和仓库健康度，没有付费位。"),
                 ("怎么安装？", "点开任意能力页，复制对应客户端（Claude Code / Cursor / Claude Desktop / Codex）的安装片段即可。")],
     })
     # 4. how-to-install cluster (EN) — Cursor, HowTo schema, exact path first
@@ -207,7 +216,9 @@ def build_articles(caps):
             {"q": "Is MCP dead now that skills and CLIs exist?",
              "body": "<p>No — they're complementary units of capability. MCP wins for live tools; skills win for on-demand knowledge; CLIs win for simple deterministic commands. The real question per capability is fitness, not format — which is what tashan measures across all of them.</p>"},
         ],
-        "faq": [("Should I build an MCP server or a skill?", "A skill if you're packaging instructions/know-how; an MCP server if you need to expose live tools or state. tashan scores both so you can see which comparable capabilities are trusted."),
+        # "…which comparable capabilities are trusted" was the same overclaim in miniature: the score
+        # ranks upkeep and adoption, so say that. Nothing here audits a capability's trustworthiness.
+        "faq": [("Should I build an MCP server or a skill?", "A skill if you're packaging instructions/know-how; an MCP server if you need to expose live tools or state. tashan scores both so you can see which comparable capabilities are actively maintained and genuinely used."),
                 ("Do skills use less context than MCP?", "Generally yes — skills load on demand and don't hold an open tool connection, which is why some teams prefer them for knowledge-heavy tasks.")],
     })
     return A

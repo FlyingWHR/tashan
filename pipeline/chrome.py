@@ -135,7 +135,7 @@ def footer_html():
             '<p class="footer__meta" id="footMethod"></p></div>'
             f"{cols}</div>"
             '<div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span>'
-            "<span>Every score re-derivable from public evidence.</span></div></footer>")
+            "<span>Measured from public sources, and checkable against them.</span></div></footer>")
 
 
 NAV_RE = re.compile(r"(?:<a class=\"skip\"[^>]*>.*?</a>)?<nav class=\"nav\">.*?</nav>", re.S)

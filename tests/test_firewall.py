@@ -27,6 +27,14 @@ PUBLIC_SIGNAL = {
     # take adoption from their own repo's stars instead. It decides WHICH public signal applies, never
     # whether a capability is favoured.
     "kind",
+    # The maintainer's own published statement that they stopped, quoted from their README
+    # (pipeline/doc_signals.py). This is public signal in the strictest sense — it is the author
+    # speaking on their own page, re-derivable by anyone who opens it — and it feeds the SAME 0.3
+    # maintenance discount the scorer already applies for npm's deprecated flag, the registry's
+    # deprecated status and GitHub's Archive box. Those three are platform flags for exactly this
+    # statement; this is the statement itself. It can only ever LOWER a score, and nobody can pay us
+    # to put words in their README.
+    "self_unmaintained",
 }
 
 # Words that must NEVER appear inside compute_scores(): if commerce ever leaks into scoring, it shows up here.

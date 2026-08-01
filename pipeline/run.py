@@ -44,6 +44,12 @@ STAGES = [
      "OSV advisories for the current release + install scripts, provenance, permission surface"),
     ("doc-signals",     ["pipeline/doc_signals.py"], "enrich",
      "is a capability's only documentation actually about that capability"),
+    # LAST of the enrich stages, deliberately: it diffs the FINAL state of each capability against
+    # the previous run, so anything that still mutates the row has to have run already. This is the
+    # only stage whose output cannot be recomputed later — a change is observable exactly once, on
+    # the day it happens, and a day nobody runs this is a day of alerts nobody can ever get back.
+    ("changes",         ["pipeline/change_events.py"], "enrich",
+     "what changed since the last run — advisories, install scripts, permissions, ownership"),
     ("badges",          ["pipeline/gen_badges.py"], "site",
      "embeddable SVGs — cast range"),
     # NOT bump_assets here: a daily run must not increment the asset version. The data changes daily,

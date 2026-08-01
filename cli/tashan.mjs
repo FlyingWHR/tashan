@@ -211,6 +211,31 @@ export function pretty(name) {
   return String(name || "").replace(/^@modelcontextprotocol\/server-/, "").replace(/-mcp$/, "").replace(/^mcp-server-/, "").replace(/^mcp-/, "");
 }
 
+// ---- the security audit's DETAIL, read off the public row ---------------------------------------
+// Both of these used to arrive from /api/security behind a licence header. build.py's redact_paid()
+// no longer strips sec_advisories and no longer flattens sec_install_script to a boolean, so the
+// detail rides in the public lookup.json the CLI already downloads. Free on the website, free here.
+// Exported (and shared with mcp.mjs) so the terminal, the agent and the page cannot drift apart.
+
+/** The advisories on a row: [{ id, severity, summary, fixed }]. Never throws — a malformed field
+ *  must not take down an audit someone is running precisely because they are already worried. */
+export function advisoriesOf(row) {
+  try {
+    const list = JSON.parse((row && row.sec_advisories) || "[]");
+    return Array.isArray(list) ? list : [];
+  } catch { return []; }
+}
+
+/** The literal command a package runs at install time, or null.
+ *  THE BOARD DOES NOT CARRY IT. index.json slims sec_install_script to the number 1 (build.py's
+ *  _slim) because the board only needs the FACT and the command can be 300 characters; only
+ *  lookup.json has the string. A truthiness test would print "install runs: 1" on every board-sourced
+ *  row — worse than silence — so this checks the type, not the truth. */
+export function installScriptOf(row) {
+  const s = row && row.sec_install_script;
+  return typeof s === "string" && s.trim() && s !== "1" ? s : null;
+}
+
 export function search(rows, q) {
   q = (q || "").toLowerCase().trim();
   if (!q) return [];
@@ -372,17 +397,15 @@ async function withTrends(results, lic, base = SITE, limit = 40) {
       r.assessment = withTrend(r.assessment, trend(series, scorers));
     } catch { /* offline: trend is an enhancement, never a reason doctor fails */ }
 
-    // The audit's paid half, on the surface that ADVERTISES it. doctor's free output says
-    // "N findings have detail behind a licence — which advisory and the version that fixes it,
-    // what the install script runs"; for a long time nothing printed any of that, on any surface.
-    // Fetching it here is what makes that sentence true in the place a customer reads it.
-    if (r.row.sec_advisory_count || r.row.sec_install_script) {
-      try {
-        const sr = await fetch(`${base}/api/security?id=${encodeURIComponent(r.row.id)}`,
-                               { headers: auth });
-        if (sr.ok) r.secDetail = await sr.json();
-      } catch { /* offline: the free finding is already printed and still correct */ }
-    }
+    // THE SECURITY AUDIT USED TO BE FETCHED HERE, from /api/security with the licence header, and it
+    // is gone on purpose. build.py's redact_paid() stopped stripping sec_advisories and stopped
+    // reducing sec_install_script to a boolean, so the advisory id, its severity, the version that
+    // fixes it and the literal install command now ship in the PUBLIC lookup.json — the same file
+    // doctor already downloads, and the same facts the website prints to anyone with a browser.
+    // Keeping the fetch meant the identical fact was free on the web and $6/mo in the terminal: one
+    // product contradicting itself depending on which surface you happened to be standing on.
+    // renderDoctor now reads the detail straight off `row`, with no key, no request and no branch.
+    // What stays behind this function is TIME — /api/history above — never the current state.
   }
   return results;
 }
@@ -486,7 +509,7 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
     .sort((x, y) => order[x.assessment.level] - order[y.assessment.level]);
   let out = "\n  " + bold("Your stack") + dim(`  ·  ${sum.servers} server${sum.servers === 1 ? "" : "s"}, ${sum.skills} skill${sum.skills === 1 ? "" : "s"}`) + "\n\n";
   if (!rows.length) out += "  " + jade("+") + " " + dim("nothing deprecated, archived or abandoned.") + "\n";
-  for (const { item, row, assessment, alts, secDetail } of rows) {
+  for (const { item, row, assessment, alts } of rows) {
     const t = row && row.tashan_score != null ? String(Math.round(row.tashan_score)) : "—";
     out += "  " + (MARK[assessment.level] || " ") + " " + bold(pretty(item.name).padEnd(28).slice(0, 28)) +
       dim((item.client + " · " + item.scope).padEnd(22)) + dim("score ") + (t === "—" ? dim(t) : jade(t)) + "\n";
@@ -494,22 +517,20 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
       const txt = typeof n === "string" ? n : n.text;
       out += "      " + dim("↳ ") + (n.level === "alert" ? red(txt) : dim(txt)) + "\n";
     }
-    // The paid half, directly under the finding it explains. doctor's free output promises exactly
-    // this — "which advisory and the version that fixes it, what the install script runs" — and for
-    // a long time no surface printed any of it, which made the upsell a claim about nothing.
-    if (secDetail) {
-      for (const a of secDetail.advisories || []) {
-        out += "      " + jade("→ ") + bold(a.id) +
-          dim(`  ${(a.severity || "").toLowerCase()}`) +
-          (a.fixed ? dim(" · fixed in ") + jade(a.fixed) : dim(" · no fix published")) + "\n";
-      }
-      if (secDetail.install_script) {
-        out += "      " + jade("→ ") + dim("install runs: ") + secDetail.install_script + "\n";
-      }
-      if ((secDetail.permissions || []).length > 1) {
-        out += "      " + jade("→ ") + dim("can reach: ") + secDetail.permissions.join(", ") + "\n";
-      }
+    // WHICH advisory, and what the install script actually runs — directly under the finding that
+    // names it, for everyone, with no key and no request. This used to come from /api/security with
+    // a licence header while the website printed the identical facts to any visitor: the same
+    // product answering the same question two ways depending on the surface. Now it is read straight
+    // off `row`, which for doctor is the public lookup record.
+    // sec_permissions is deliberately NOT repeated here — assess() already emits "can reach: …" from
+    // the same row, free, and printing it twice would read as two separate findings.
+    for (const adv of advisoriesOf(row)) {
+      out += "      " + jade("→ ") + bold(adv.id) +
+        dim(`  ${(adv.severity || "").toLowerCase()}`) +
+        (adv.fixed ? dim(" · fixed in ") + jade(adv.fixed) : dim(" · no fix published")) + "\n";
     }
+    const script = installScriptOf(row);
+    if (script) out += "      " + jade("→ ") + dim("install runs: ") + script + "\n";
     if (alts && alts.length) {
       if (pro) {
         for (const a of alts) {
@@ -534,12 +555,15 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
   // and is withheld — never on a clean run, never as a recurring nag. If there is nothing to
   // unlock, saying nothing is the honest behaviour and the one that keeps the tool installed.
   if (!pro && keyState === null) {
-    const withDetail = rows.filter((r) => r.row &&
-      (r.row.sec_advisory_count || r.row.sec_install_script || (r.alts && r.alts.length))).length;
-    if (withDetail) {
-      out += "\n  " + dim(`${withDetail} finding${withDetail === 1 ? " has" : "s have"} detail behind a licence — `) +
-        dim("which advisory and the version that fixes it, what the install script runs, ") +
-        dim("and the replacement to move to.") + "\n" +
+    // THE OFFER NAMES ONLY WHAT IS ACTUALLY WITHHELD. It used to count advisories and install scripts
+    // as well, and promise "which advisory and the version that fixes it" behind the licence — copy
+    // that is now false twice over: that detail is printed above, free, and pitching a reader
+    // something already on their screen is the fastest way to lose them. A licence buys the
+    // replacement to move to, and the history that says whether a thing is dying. Nothing else.
+    const replaceable = rows.filter((r) => r.row && r.alts && r.alts.length).length;
+    if (replaceable) {
+      out += "\n  " + dim(`${replaceable} of these ${replaceable === 1 ? "has" : "have"} a measured replacement behind a licence — `) +
+        dim("the one to move to, and whether anything else here is on the way down.") + "\n" +
         "  " + jade("tashan Pro") + dim(" $6/mo · " + SITE + "/pricing") +
         dim("  ·  already bought? ") + jade("tashan login") + "\n";
     }

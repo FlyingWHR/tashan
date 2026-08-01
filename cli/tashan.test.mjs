@@ -391,23 +391,53 @@ import { join } from "node:path";
 
 // ---- the upsell must be earned, not recurring ---------------------------------------------------
 // renderDoctor is not exported, so this asserts the RULE the implementation encodes: an offer is
-// shown only for rows whose detail actually exists and is withheld. A tool that prints a pitch on a
-// clean run gets uninstalled, and it deserves to be.
+// shown only for rows where something is actually withheld. A tool that prints a pitch on a clean
+// run gets uninstalled, and it deserves to be.
+//
+// The rule NARROWED when the security audit went free. Advisories and install scripts used to count
+// as "detail worth unlocking"; they are now printed in full, to everyone, so pitching them would be
+// selling the reader something already on their screen. What is left behind the licence is the
+// replacement to move to — and the trend, which needs history nobody can backfill.
 {
-  const withDetail = (rows) => rows.filter((r) => r.row &&
-    (r.row.sec_advisory_count || r.row.sec_install_script || (r.alts && r.alts.length))).length;
+  const replaceable = (rows) => rows.filter((r) => r.row && r.alts && r.alts.length).length;
 
-  assert.strictEqual(withDetail([{ row: {} }, { row: { rated: true } }]), 0,
+  assert.strictEqual(replaceable([{ row: {} }, { row: { rated: true } }]), 0,
     "a clean stack has nothing to offer, so nothing is offered");
-  assert.strictEqual(withDetail([{ row: { sec_advisory_count: 2 } }]), 1,
-    "an advisory has detail worth unlocking");
-  assert.strictEqual(withDetail([{ row: { sec_install_script: 1 } }]), 1,
-    "so does an install script");
-  assert.strictEqual(withDetail([{ row: {}, alts: [{ cap: {} }] }]), 1,
-    "so does a named replacement");
-  assert.strictEqual(withDetail([{ row: null, alts: [{ cap: {} }] }]), 0,
+  assert.strictEqual(replaceable([{ row: { sec_advisory_count: 2 } }]), 0,
+    "an advisory is free in full — it must not trigger a pitch");
+  assert.strictEqual(replaceable([{ row: { sec_install_script: "node evil.js" } }]), 0,
+    "neither does the install command, which is printed verbatim");
+  assert.strictEqual(replaceable([{ row: {}, alts: [{ cap: {} }] }]), 1,
+    "a named replacement is the thing a licence still buys");
+  assert.strictEqual(replaceable([{ row: null, alts: [{ cap: {} }] }]), 0,
     "an unresolved row has no detail to sell, whatever else is attached to it");
   console.log("ok — the Pro offer is earned per finding, never a standing nag");
+}
+
+// ---- the security audit's DETAIL is free too, and never invented -------------------------------
+// It used to arrive from /api/security behind a licence header while the website printed the same
+// advisory id and install command to any visitor. Both now ride in the public lookup.json, so the
+// two parsers below are the whole of what doctor and the MCP server read.
+{
+  const { advisoriesOf, installScriptOf } = await import("./tashan.mjs");
+
+  const advs = advisoriesOf({ sec_advisories: JSON.stringify([{ id: "GHSA-1", fixed: "2.0.0" }]) });
+  assert.strictEqual(advs[0].id, "GHSA-1", "the advisory id is read straight off the public row");
+  assert.strictEqual(advs[0].fixed, "2.0.0", "so is the version that fixes it");
+  assert.deepStrictEqual(advisoriesOf({ sec_advisories: "{not json" }), [],
+    "a malformed field returns nothing — an audit must not die on the row it is warning about");
+  assert.deepStrictEqual(advisoriesOf({}), [], "and a row with no advisories yields none");
+  assert.deepStrictEqual(advisoriesOf(null), [], "including no row at all");
+
+  assert.strictEqual(installScriptOf({ sec_install_script: "node evil.js" }), "node evil.js",
+    "the literal command is what the reader needs");
+  // index.json flattens the command to a bare 1 for first-paint weight. "install runs: 1" would be
+  // worse than saying nothing, so the type is checked rather than the truthiness.
+  assert.strictEqual(installScriptOf({ sec_install_script: 1 }), null,
+    "the board's boolean is not a command and must never be printed as one");
+  assert.strictEqual(installScriptOf({ sec_install_script: "" }), null, "nor is an empty string");
+  assert.strictEqual(installScriptOf({}), null, "nor an absent field");
+  console.log("ok — advisory detail and the install command are read from public data");
 }
 
 // ---- the dossier URL must resolve --------------------------------------------------------------

@@ -250,17 +250,36 @@ console.log("ok — ranking weight is swept, not felt");
 }
 console.log("ok — the agent gets the full security audit, free");
 
-// The agent is the last checkpoint before an install. It must always learn that a finding EXISTS,
-// and — when detail is withheld — exactly how the user opens it. A gate the agent cannot name is a
-// gate it will paraphrase, or invent a way around.
+// The agent is the last checkpoint before an install, so it gets the finding AND the fix. This block
+// used to assert the opposite — that renderCheck named a Pro gate and a licensed URL — while the
+// website printed the same advisory id and install command to any visitor. One fact, two prices,
+// depending on whether you were holding a browser or a terminal. The detail is public now; what the
+// agent must never be handed is a warning it cannot act on.
 {
-  const gatedOut = renderCheck({ id: "pkg:x", name: "x", label: "X", tashan_score: 50,
-    sec_advisory_count: 2, sec_max_severity: "HIGH", sec_install_script: "node y.js", slug: "pkg-x" }, "x");
-  assert.ok(/2 known advisories/.test(gatedOut), "the existence of a finding is always free");
-  assert.ok(/tashan-cli login/.test(gatedOut), "the agent must be able to name how to get the fix");
-  assert.ok(/Everything above stays free/.test(gatedOut), "the free guarantee is restated to the agent");
+  const detailed = renderCheck({ id: "pkg:x", name: "x", label: "X", tashan_score: 50,
+    sec_advisory_count: 2, sec_max_severity: "HIGH", sec_install_script: "node y.js", slug: "pkg-x",
+    sec_advisories: JSON.stringify([
+      { id: "GHSA-aaaa-bbbb-cccc", severity: "HIGH", summary: "command injection", fixed: "2.1.0" },
+      { id: "GHSA-dddd-eeee-ffff", severity: "LOW", summary: "path traversal", fixed: null },
+    ]) }, "x");
+  assert.ok(/2 known advisories/.test(detailed), "the existence of a finding is always free");
+  assert.ok(/GHSA-aaaa-bbbb-cccc/.test(detailed), "...and so is WHICH advisory it is");
+  assert.ok(/fixed in 2\.1\.0/.test(detailed), "the fixing version is the only actionable line");
+  assert.ok(/no fixed version published/.test(detailed),
+    "an unfixed advisory says so — silence would read as 'already fixed, install away'");
+  assert.ok(/node y\.js/.test(detailed), "the literal install command reaches the agent");
+  assert.ok(!/tashan-cli login/.test(detailed) && !/Not shown here/.test(detailed),
+    "nothing about the audit is sold, so nothing about it is pitched");
+
+  // The board (index.json) flattens sec_install_script to a bare 1 to keep first paint small. That
+  // is a slimmed field, not a command — printing "runs: 1" would be worse than printing nothing.
+  const slim = renderCheck({ id: "pkg:z", name: "z", label: "Z", tashan_score: 50,
+    sec_install_script: 1, slug: "pkg-z" }, "z");
+  assert.ok(/install time/.test(slim), "the fact still reaches the agent from the slim board row");
+  assert.ok(!/Runs this at install time/.test(slim), "but no command is invented from a boolean");
 
   const cleanOut = renderCheck({ id: "pkg:y", name: "y", label: "Y", tashan_score: 90, slug: "pkg-y" }, "y");
   assert.ok(!/tashan-cli login/.test(cleanOut), "nothing withheld, so nothing may be pitched");
   assert.ok(!/Not shown here/.test(cleanOut));
 }
+console.log("ok — the agent gets the advisory id, the fix version and the install command, free");

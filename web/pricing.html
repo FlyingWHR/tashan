@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=220">
+  <link rel="stylesheet" href="/css/site.css?v=227">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span>tashan</a><div class="nav__links"><a href="/">Index</a><a href="/start.html">Use it</a><a href="/methodology.html">Methodology</a><a href="/pricing.html" aria-current="page">Pricing</a><a class="nav__acct" id="navAcct" href="/account.html" title="Your account" aria-label="Your account"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span class="nav__pro mono" id="navPro" hidden>Pro</span></a></div></div></nav>
@@ -60,21 +60,34 @@
           <span class="plan__name">tashan Pro</span>
           <span class="plan__price">$6<small>/mo</small></span>
         </div>
-        <p class="plan__for">Free tells you what is true today. Pro tells you when that changes.</p>
-        <div class="callout mono fs-sm mb-4">$ tashan trend</div>
+        <p class="plan__alt mono">or <b>$49/year</b> &mdash; two months free</p>
+        <p class="plan__for">Free tells you what is true today. Pro tells you the day that changes.</p>
+        <div class="callout mono fs-sm mb-4">$ tashan doctor --watch</div>
         <ul class="plan__feat">
-          <li><b>Every score since we started measuring</b> — whether a capability is climbing,
-            decaying, or quietly stopped being maintained.
-            <span class="plan__soon mono">trend needs ~30 days · clock restarted 30 Jul</span></li>
+          <li><b>A new advisory against something you run</b> — and whether its severity went up.</li>
+          <li><b>An install script that appeared or changed</b> — code that runs on your machine
+            before you have used the tool once, that you did not approve.</li>
+          <li><b>A permission surface that widened</b> — it reaches further into your machine than
+            it did when you installed it.</li>
+          <li><b>A project stopping</b> — the author declaring it unmaintained, an npm deprecation,
+            a repository archived, or upkeep decaying into abandonment.</li>
+          <li><b>The people behind it changing</b> — a maintainer count falling to one.</li>
           <li><b>The replacement, named</b> — not "this is deprecated", but <em>switch to this one,
             it scores 65 and is still maintained</em>.</li>
         </ul>
-        <p class="plan__note mono mb-4">The security audit is <b>not</b> here. It is free, in full,
-          for everyone — naming a risk and charging for the fix is not something an independent
-          rater gets to do.</p>
-        <a class="btn btn--primary plan__cta" href="https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" rel="noopener"
-           data-src="pro-checkout">Subscribe &rsaquo;</a>
-        <p class="plan__note mono">cancel any time in <a class="link" href="/account.html">your account</a>
+        <p class="plan__note mono mb-4">Every alert says what changed, why it matters and what to do
+          about it. A warning that only says "something changed" is one you learn to ignore.</p>
+        <p class="plan__note mono mb-4">The security audit itself is <b>not</b> here. It is free, in
+          full, for everyone — naming a risk and charging for the fix is not something an independent
+          rater gets to do. What Pro sells is <em>time</em>: noticing, on the day, without you looking.</p>
+        <div class="plan__buys">
+          <a class="btn btn--primary plan__cta" href="https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" rel="noopener"
+             data-src="pro-checkout-monthly">$6 monthly &rsaquo;</a>
+          <a class="btn btn--ghost plan__cta" href="https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" rel="noopener"
+             data-src="pro-checkout-annual">$49 yearly &rsaquo;</a>
+        </div>
+        <p class="plan__note mono">cancel any time in
+          <a class="link" href="/account.html">your account</a>
           · <a class="link" href="/refunds.html">7-day refund</a></p>
       </section>
     </div>
@@ -83,19 +96,24 @@
       agents, hosts and IDEs calling them — that <em>is</em> the distribution.
       <a class="link" href="/for-hosts.html">Swap one base URL &rsaquo;</a></div>
 
-    <div class="callout guarantee"><b>The ranking guarantee.</b> You can never buy your way up the board. No sponsored
-      slots, no bought scores, no removed verdicts — the rank is what the evidence says. That's the whole product.
-      Everything above is sold on <em>depth, access and time</em> — never on position.</div>
+    <div class="callout guarantee"><b>The ranking guarantee.</b> Commercial relationships never influence
+      task fit, measurements, findings, rankings or editorial recommendations. It is asserted in code —
+      <span class="mono">tests/test_firewall.py</span> fails the build if the scorer reads anything but
+      public-signal columns. Everything above is sold on <em>time</em>, never on position.</div>
 
     <p class="pfaq-lead kicker">Questions</p>
     <div class="pfaq">
-      <div><h3>What am I paying for today?</h3><p>Named replacements for anything dead in your config, and
-        the full score history. Trend needs about a month of data before it means anything and we restarted that
-        clock on 30 July when the score was recalibrated — we'd rather say so than let you find out.</p></div>
-      <div><h3>Why isn't this free like everything else?</h3><p>Because it's the one thing that can't be
-        re-derived from today's public data. Every score on the Index is a snapshot anyone could recompute;
-        the <em>series</em> only exists because we recorded it, every day, and a day we miss is gone for good —
-        for us too. That's what $6 buys, and it's worth more every month it runs.</p></div>
+      <div><h3>What am I paying for today?</h3><p>Being told, on the day it happens, when something you
+        already run gains an advisory, starts executing code at install time, widens what it can reach,
+        loses its maintainers, or is abandoned by its author — plus the named replacement when it is time to
+        move. The score <em>series</em> is there too, and it needs about a month before a trend means
+        anything; we restarted that clock on 30 July when the score was recalibrated, and we would rather
+        say so than let you find out.</p></div>
+      <div><h3>Why isn't this free like everything else?</h3><p>Because it is the one thing that cannot be
+        re-derived from today's public data. Every measurement on the Index is a snapshot anyone could
+        recompute from public sources; a <em>change</em> is observable exactly once, on the day it happens.
+        It only exists because we recorded yesterday, and a day nobody records is gone for good — for us
+        too. That is what the subscription buys, and it is worth more every month it runs.</p></div>
       <div><h3>How do I sign in?</h3><p><code>tashan login</code> prints a short code and opens your browser; approve it and the terminal has it — the same flow as <code>gh auth login</code>. There is no key to copy. Then
         <code>tashan doctor</code> as usual — it is stored in <code>~/.config/tashan/key</code>, so there is no
         export to remember and nothing to re-do in a new terminal. Same key on every machine you use. The key is in your
@@ -110,10 +128,10 @@
       <div><h3>How many machines?</h3><p>Run <code>tashan login</code> on each one — approving is one click because the browser stays signed in
         registers it under its hostname, so <a class="link" href="/account.html">your account</a> lists exactly what
         is active. <code>tashan logout</code> hands a slot back from the machine itself.</p></div>
-      <div><h3>Do you sell the capabilities?</h3><p>No. We sell nothing we measure, host nothing, and take no cut of
-        anything. Every other index in this field either sells the listings, hosts the servers, or earns when you run
-        them — so a low verdict costs them money. It costs us nothing, which is the only reason our verdict is worth
-        reading (see <a class="link" href="/about.html">About</a>).</p></div>
+      <div><h3>Can a publisher pay to rank higher?</h3><p>No. Commercial relationships never influence task
+        fit, measurements, findings, rankings or editorial recommendations — and that is enforced rather than
+        promised: <span class="mono">tests/test_firewall.py</span> asserts the scorer reads only public-signal
+        columns, so a change that let anything else in fails the build.</p></div>
       <div><h3>Team or company use?</h3><p>The data API is live and free — see
         <a class="link" href="/for-hosts.html">for hosts</a>. Org-wide auditing of your own internal skills and
         servers is not built yet; <a class="link" href="mailto:hello@tashan.sh?subject=tashan%20for%20teams">tell us
@@ -123,9 +141,9 @@
     <p class="sec-gap"><a class="btn btn--ghost" href="/">&lsaquo; Back to the Index</a></p>
   </main>
 
-  <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Every score re-derivable from public evidence.</span></div></footer>
+  <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources, and checkable against them.</span></div></footer>
 
-  <script src="/js/terminal.js?v=220" defer></script>
-  <script src="/js/site.js?v=220" defer></script>
+  <script src="/js/terminal.js?v=227" defer></script>
+  <script src="/js/site.js?v=227" defer></script>
 </body>
 </html>

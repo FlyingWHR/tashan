@@ -21,7 +21,7 @@
     return '<form class="actv__form" id="' + id + 'Form">' +
       '<label class="actv__lbl mono" for="' + id + 'In">' + (o.label || "Licence key") + "</label>" +
       '<input class="actv__in mono" id="' + id + 'In" name="key" type="password" autocomplete="off" ' +
-      'spellcheck="false" placeholder="tashan_…" required' + (o.autofocus ? " autofocus" : "") + ">" +
+      'spellcheck="false" placeholder="TASHAN-XXXXXXXX-…" required' + (o.autofocus ? " autofocus" : "") + ">" +
       '<button class="btn btn--primary" type="submit">' + (o.cta || "Sign in &rsaquo;") + "</button>" +
       '<p class="actv__err" id="' + id + 'Err" hidden></p>' +
       "</form>";
@@ -70,7 +70,16 @@
           btn.innerHTML = label;
           onDone(r.body);
         })
-        .catch(function () { fail("Could not reach tashan. Check your connection and try again."); });
+        // "Check your connection" is wrong on localhost and sends people hunting a network fault
+        // that does not exist: /api/* are Cloudflare Functions and serve.py does not run them, so
+        // every sign-in attempt against a local preview fails no matter how valid the key is.
+        .catch(function () {
+          var local = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+          fail(local
+            ? "Sign-in needs the API, which only runs in production — /api/* are Cloudflare " +
+              "Functions and the local preview does not serve them. Your key is not the problem."
+            : "Could not reach tashan. Check your connection and try again.");
+        });
     };
   }
 

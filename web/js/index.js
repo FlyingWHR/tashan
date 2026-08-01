@@ -41,6 +41,18 @@
     set("sDate", "measured " + fdate(d.generated_at));
     var fm = document.getElementById("footMethod");
     if (fm) fm.textContent = fmt(d.total_capabilities) + " capabilities · measured " + fdate(d.generated_at);
+    // Coverage: what we have actually checked, of what we rank. Hidden until the data arrives so a
+    // reader never sees em-dashes where a number belongs.
+    var cov = document.getElementById("coverage");
+    // coverage_of, never `ranked`: the slim index reuses `ranked` for its own board slice.
+    if (cov && d.coverage_of) {
+      var pct = function (n) { return n ? fmt(n) + " (" + Math.round(100 * n / d.coverage_of) + "%)" : "—"; };
+      set("covRanked", fmt(d.coverage_of));
+      set("covRisk", pct(d.risk_scanned));
+      set("covGraded", pct(d.expertise_graded));
+      set("covJob", pct(d.job_mapped));
+      cov.hidden = false;
+    }
     var bn = document.getElementById("boardNote");
     if (bn) bn.textContent = d.note || "";
 

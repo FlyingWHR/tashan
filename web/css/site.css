@@ -167,6 +167,36 @@ img { max-width: 100%; display: block; }
 .rot { display:inline-block; overflow:hidden; height:1.2em; vertical-align:-0.28em; }
 .rot > span { display:inline-block; color: var(--jade); will-change: transform, opacity; }
 .hero__sub { margin: var(--sp-5) 0 0; max-width: 42rem; font-size: var(--text-lead); color: var(--text-dim); line-height:1.5; }
+/* A capability that should not be installed. The one place on the site that stops you rather than
+   informs you, so it does not look like every other callout. */
+.callout--stop { border-color: var(--red); }
+.callout--stop b { color: var(--red); }
+
+/* Coverage block: numbers that only move when the work is done. Deliberately plain — this is the
+   one place on the page where the figures are supposed to be uncomfortable. */
+.coverage { margin-top: var(--sp-8); padding: var(--sp-6); border: 1px solid var(--hairline);
+  border-radius: var(--radius); background: var(--surface); }
+.coverage__h { color: var(--text-dim); margin-bottom: var(--sp-3); }
+.coverage__list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--sp-2); }
+.coverage__list b { color: var(--jade); font-family: var(--font-mono); }
+.coverage__note { margin-top: var(--sp-4); color: var(--text-faint); font-size: var(--fs-sm); }
+
+/* Both billing periods, side by side — neither is a footnote to the other. */
+.plan__alt { margin-top: calc(-1 * var(--sp-2)); color: var(--text-faint); font-size: var(--fs-sm); }
+.plan__buys { display:flex; gap: var(--sp-2); flex-wrap: wrap; }
+.plan__buys .plan__cta { flex: 1 1 auto; }
+
+/* Compatibility level. native is a fact about the format; installable is the client's own promise. */
+.wchip__lvl { font-style: normal; font-size: var(--fs-micro); color: var(--text-faint); margin-left: .35em; }
+.wchip--native .wchip__lvl { color: var(--jade); }
+
+/* Fit level on a job page: is this capability FOR this work, or does it merely assist with part of
+   it. Primary carries the accent because it is the recommendation; supporting is deliberately quiet. */
+.fit { font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: lowercase;
+  padding: 0.1em 0.5em; border-radius: var(--radius-pill); border: 1px solid var(--hairline);
+  color: var(--text-faint); white-space: nowrap; }
+.fit--primary { color: var(--jade); border-color: var(--jade-line); }
+
 /* The visible search entry point. Looks like a field, is a button: it opens the ⌘K palette rather
    than duplicating its logic, so there is exactly one search on the site. */
 .herosearch { margin-top: var(--sp-8); width:100%; max-width: 44rem; display:flex; align-items:center;

@@ -19,10 +19,18 @@ TWO BASES, never blurred — `capability_tags.basis` records which, so any tag c
   declared : the AUTHOR's own keyword/tag matched a task synonym EXACTLY. Attributable to them, not us.
   graded   : a model read the capability's full text against the rubric below. Our judgement, labelled.
 
-Scope is deliberately skills + plugins. remote/npm/python/docker descriptions are capped at 100 chars by
-the MCP REGISTRY upstream, and only 2% of them contain both a role and a stage word — tagging those from
-one truncated sentence would manufacture precision we do not have. They stay "tool, not workflow-scoped"
+Scope is skills + plugins + npm. remote/python/docker descriptions are capped at 100 chars by the MCP
+REGISTRY upstream, and only 2% of them contain both a role and a stage word — tagging those from one
+truncated sentence would manufacture precision we do not have. They stay "tool, not workflow-scoped"
 until their READMEs are fetched.
+
+npm was in that excluded group and should not have been, because the 100-char problem was never npm's:
+a package.json ships `keywords`, typed by the author, per package. We fetched them on every enrichment
+pass and discarded them, so `pkg:` was the one kind with no author vocabulary — 0 of 1,398 rows tagged,
+against 83% of skills. That is not a measurement of npm servers being unclassifiable, it is the job axis
+being blind to the half of the corpus where media, audio and video servers live: 80 of the 288
+capabilities that read as creator work are `pkg:`/`registry:`, and the Creator/video shelf showed 19.
+The DECLARED pass needs no model and no README to fix that — the author already told us.
 """
 import json, os, re, sys, urllib.request, urllib.error
 import build
@@ -67,16 +75,27 @@ def declared_index(tasks):
 def author_words(con, cap_id):
     """Author-supplied vocabulary: plugin manifest tags land in gh_topics (ingest_plugins writes them
     there), and skills carry repo topics. Repo-level GitHub topics are excluded — one repo publishing
-    200 skills stamps all 200 identically, so they carry zero discriminative power within a repo."""
-    r = con.execute("SELECT gh_topics, sources FROM capabilities WHERE id=?", (cap_id,)).fetchone()
-    if not r or not r[0]:
+    200 skills stamps all 200 identically, so they carry zero discriminative power within a repo.
+
+    npm_keywords is the same thing for `pkg:` rows — package.json keywords, typed by the author, per
+    package rather than per repo. It is included for the same reason plugin manifest tags are, and it
+    is what finally gives npm rows a declared basis: they had none, so 0 of 1,398 carried a tag."""
+    r = con.execute("SELECT gh_topics, sources, npm_keywords FROM capabilities WHERE id=?",
+                    (cap_id,)).fetchone()
+    if not r:
         return []
-    if (r[1] or "").startswith("plugin-marketplace"):     # these are the author's own manifest tags
-        return [w.strip() for w in r[0].split(",") if w.strip()]
-    return []
+    out = []
+    if r[0] and (r[1] or "").startswith("plugin-marketplace"):  # the author's own manifest tags
+        out += [w.strip() for w in r[0].split(",") if w.strip()]
+    if r[2]:
+        out += [w.strip() for w in r[2].split(",") if w.strip()]
+    return out
 
 
-def rows_with_text(con, kinds=("skill", "plugin")):
+# "npm", not "pkg". `pkg:` is the ID PREFIX; the kind column says "npm" — and there is a separate
+# 59-row kind literally called "pkg", so naming it here fails silently by selecting the wrong 59 rows
+# instead of the right 2,107. The declared pass reported "261 rows tagged" and 0 of them were npm.
+def rows_with_text(con, kinds=("skill", "plugin", "npm")):
     q = ("SELECT c.id, c.name, c.description, t.full_description, t.doc_body "
          "FROM capabilities c LEFT JOIN capability_text t ON t.cap_id = c.id "
          "WHERE c.kind IN (%s)" % ",".join("?" * len(kinds)))

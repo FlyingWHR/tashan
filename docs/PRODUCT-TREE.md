@@ -11,7 +11,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
-| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 103 |
+| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 101 |
 | `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json, tasks.json | free | 57 |
 | `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | index.json, tasks.json | post-sale | 56 |
 | `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json, tasks.json | free | 51 |
@@ -20,8 +20,8 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 26 |
 | `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | index.json, tasks.json | free | 26 |
 | `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | index.json, requests.json, tasks.json | free | 26 |
-| `/about.html` | Why a rater that sells nothing it measures is the only kind worth reading. | site, terminal | index.json, tasks.json | free | 25 |
 | `/support.html` | How to get help, and what we can see when you ask. | site, terminal | index.json, tasks.json | free | 25 |
+| `/about.html` | What tashan measures, where it is going, and the principles the scoring follows. | site, terminal | index.json, tasks.json | free | 24 |
 | `/privacy.html` | What we collect, which is close to nothing. | site, terminal | index.json, tasks.json | free | 24 |
 | `/terms.html` | Terms of service. | site, terminal | index.json, tasks.json | free | 24 |
 | `/404.html` *(noindex)* | Real 404 with a route back in. noindex; without it Pages served the homepage at status 200 for every unknown URL. | site, terminal | index.json, tasks.json | free | 0 |
@@ -33,11 +33,11 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route pattern | Pages | Generator |
 |---|---|---|
-| `/capability/*.html` | 5,789 | `pipeline/prerender.py` |
+| `/capability/*.html` | 5,933 | `pipeline/prerender.py` |
 | `/category/*.html` | 15 | `pipeline/gen_hubs.py` |
-| `/task/*.html` | 53 | `pipeline/gen_hubs.py` |
-| `/role/*.html` | 20 | `pipeline/gen_hubs.py` |
-| `/compare/*.html` | 218 | `pipeline/gen_compare.py` |
+| `/task/*.html` | 57 | `pipeline/gen_hubs.py` |
+| `/role/*.html` | 21 | `pipeline/gen_hubs.py` |
+| `/compare/*.html` | 236 | `pipeline/gen_compare.py` |
 | `/learn/*.html` | 7 | `pipeline/gen_content.py` |
 
 ## Non-page surfaces
@@ -71,6 +71,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `tests/test_chrome.py` — The navigation exists once. Every page renders that one definition, byte for byte.
 - `tests/test_classify.py` — The category is a published claim, so its accuracy is a number we hold ourselves to.
 - `tests/test_consistency.py` — One capability, one set of facts, on every surface that renders it.
+- `tests/test_doc_signals.py` — The self-declared-unmaintained detector, which is allowed to cost a capability 70% of its
 - `tests/test_expertise.py` — A published grade must not contradict itself.
 - `tests/test_firewall.py` — The firewall test — the ranking can never be bought.
 - `tests/test_history_integrity.py` — The paid series must contain the capability's movement, not ours.

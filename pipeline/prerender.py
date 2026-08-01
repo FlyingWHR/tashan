@@ -21,6 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import assets
 import chrome
 AV = str(assets.V)   # single source of truth for cache-busting
+SCORER = ""          # which ruler produced these numbers; read from the export in main()
 DATA = os.path.join(ROOT, "web", "data", "capabilities.json")
 OUT = os.path.join(ROOT, "web", "capability")
 BASE = "https://tashan.sh"
@@ -191,7 +192,15 @@ def faq(c):
         "permission surface. We do not review source code or execute the capability."
     qa.append(("Is " + n + " safe and trustworthy?", safe))
     # How to install
-    if c.get("kind") == "skill":
+    # The structured answer must agree with the page. This shipped "In Claude Code: run `claude mcp
+    # add docfork …`" inside the FAQPage JSON-LD of a dossier whose body said DISCONTINUED — DO NOT
+    # INSTALL, which is the worst possible split: the human sees the warning and the answer engine
+    # quoting us reads the install command.
+    if c.get("discontinued"):
+        inst = ("Don't. This capability has been discontinued by its author or publisher and is not "
+                "scored or recommended. If you are already running it, `npx tashan-cli doctor` will "
+                "flag it and name what to move to.")
+    elif c.get("kind") == "skill":
         inst = "Drop the skill folder into ~/.claude/skills/ (user scope) or .claude/skills/ (project scope)."
     elif c.get("npm_pkg"):
         inst = "In Claude Code: run `claude mcp add " + chrome.alias(c["name"]) + " -- npx -y " + c["npm_pkg"] + "`. In Cursor / Claude Desktop, add it to mcp.json / claude_desktop_config.json."
@@ -245,21 +254,65 @@ def summary(c, gen=""):
     kv("tashan score", c.get("tashan_score"))
     kv("Expertise", (str(c["expertise"]) + " (" + c["expertise_verdict"] + ")") if c.get("expertise") is not None and c.get("expertise_verdict") else c.get("expertise"))
     kv("Adoption", (compact(c["npm_downloads"]) + "/wk") if c.get("npm_downloads") is not None else (str(c.get("config_reach")) + " repos" if c.get("config_reach") else None))
+    # EVERY INPUT TO THE SCORE, on the page, in the STATIC tier. methodology.html promises "every
+    # input is shown on the capability page" and this render carried the result and two of its
+    # inputs. capability.js showed Upkeep and Freshness, so a human with JS saw them and every
+    # crawler and answer engine — the readers this tier exists for — saw a bare number with no
+    # working. Coverage is here too, and it is the one that most needed showing: it discounts the
+    # score by up to 30% for thin evidence, and it was computed and discarded without ever being
+    # persisted, so no surface could have displayed it.
+    kv("Upkeep", c.get("upkeep"))
+    kv("Freshness", c.get("freshness"))
+    kv("Evidence coverage", (str(int(round(c["coverage"] * 100))) + "% of the inputs this score can use"
+                             + ("" if c["coverage"] >= 1 else " — the rest are unknown, and the score is "
+                                "discounted for it")) if c.get("coverage") is not None else None)
     kv("Health", c.get("vitality"))
     kv("GitHub stars", fmt(c.get("gh_stars")) if c.get("gh_stars") is not None else None)
     kv("Contributors", c.get("gh_contributors"))
     kv("License", c.get("gh_license"))
-    install = ""
-    if c.get("npm_pkg"):
+    install = ""     # remote/registry rows reach neither branch below and must still be defined
+    # DISCONTINUED: say so, loudly, and offer no way to install it. This page exists so an indexed
+    # URL keeps answering and so someone already running the thing finds out — not to help anyone
+    # start. The notice is the author's own words, quoted rather than paraphrased.
+    if c.get("discontinued"):
+        note = c.get("self_unmaintained") or c.get("description") or ""
+        gone = ('<div class="callout callout--stop"><b>Discontinued — do not install.</b> '
+                + ("The author's own notice: &ldquo;" + esc(clip_notice(note)) + "&rdquo; "
+                   if note else "")
+                + "It stays listed so anyone already running it can find this page, and so "
+                  "<code>npx tashan-cli doctor</code> can warn about it. It is not scored and does "
+                  "not appear in any ranking.</div>")
+        install = gone
+    elif c.get("npm_pkg"):
         install = '<p class="install__lbl mono">Install (Claude Code):</p><pre class="install__snip"><code>claude mcp add ' + \
             esc(chrome.alias(c["name"])) + ' -- npx -y ' + esc(c["npm_pkg"]) + '</code></pre>'
     verdict = ('<div class="expert-read"><span class="vd vd--' + esc(c["expertise_verdict"]) + '">' + esc(c["expertise_verdict"]) +
                '</span><p>&ldquo;' + esc(c["expertise_note"]) + '&rdquo;</p></div>') if c.get("expertise_note") else ""
-    # works-with (protocol-derived) — real content for "does X work with Cursor" queries
-    if c.get("kind") == "skill": clients = ["Claude Code", "Cursor", "Codex CLI"]
-    elif c.get("kind") == "remote": clients = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "ChatGPT"]
-    else: clients = ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI", "Gemini CLI", "Cline", "Windsurf", "VS Code"]
-    works = '<p class="mono fs-sm faint"><b>Works with:</b> ' + esc(", ".join(clients)) + '</p>'
+    # COMPATIBILITY, WITH ITS LEVEL AND ITS BASIS. This printed a flat list of client names derived
+    # from `kind` alone, so every npm-backed capability in the corpus claimed the same eight clients
+    # and "Works with VS Code" shipped on thousands of pages nobody had checked. A level says what is
+    # actually being claimed; the basis says who is promising it. Mirrors capability.js::worksWith —
+    # the client REPLACES this render, so the two must say the same thing.
+    kind = c.get("kind")
+    if kind == "plugin":
+        groups = [("native", ["Claude Code"])]
+    elif kind == "skill":
+        groups = [("native", ["Claude Code"]), ("manual", ["Cursor", "Codex CLI"])]
+    elif kind == "remote":
+        groups = [("installable", ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI",
+                                   "Gemini CLI", "ChatGPT"])]
+    else:
+        groups = [("installable", ["Claude Code", "Cursor", "Claude Desktop", "Codex CLI",
+                                   "Gemini CLI", "Cline", "Windsurf", "VS Code"])]
+    works = ('<p class="mono fs-sm faint"><b>Works with:</b> '
+             + " &nbsp;·&nbsp; ".join(esc(", ".join(names)) + " <i>(" + lvl + ")</i>"
+                                      for lvl, names in groups)
+             + '<br><span class="o-50">'
+             + ("native: this artifact type is that client's own format"
+                if kind in ("plugin", "skill") else
+                "installable: each client documents how to load an MCP server of this type — "
+                "that is the client's promise, not a claim verified against this capability")
+             + "</span></p>")
     links = []
     if c.get("npm_pkg"): links.append('<a class="link" href="https://www.npmjs.com/package/' + esc(c["npm_pkg"]) + '">npm ↗</a>')
     if c.get("source_repo"): links.append('<a class="link" href="https://github.com/' + esc(c["source_repo"]) + '">source ↗</a>')
@@ -323,10 +376,17 @@ def summary(c, gen=""):
             # callout, but that is client-side only — so every crawler and answer engine we court in
             # llms.txt read 5,788 pages of measurements with no date attached to any of them. A
             # measurement without an as-of date is not a measurement, it is an assertion.
-            + ('<p class="mono fs-sm faint">Measured ' + esc(gen[:10]) + ' &nbsp;·&nbsp; '
+            + ('<p class="mono fs-sm faint">Measured ' + esc(gen[:10]) + ' &nbsp;·&nbsp; scorer '
+               + esc(SCORER) + ' &nbsp;·&nbsp; '
                '<a class="link" href="/methodology.html">how</a> &nbsp;·&nbsp; '
                '<a class="link" href="/support.html?ref=' + quote(c["id"], safe="") + '#corrections">'
                'something wrong here?</a></p>' if gen else ''))
+
+def clip_notice(t):
+    """One line of the author's notice — enough to be quoted, not a wall of README."""
+    t = re.sub(r"\s+", " ", str(t or "")).strip()
+    return t if len(t) <= 200 else t[:199].rsplit(" ", 1)[0] + "\u2026"
+
 
 def compact(n):
     n = n or 0
@@ -432,9 +492,16 @@ def security_block(c):
             esc(" · ".join(PERM_LABEL.get(x, x) for x in perms)), "",
             '<span class="secrow__ok">from declared dependencies</span>'))
     else:
-        rows.append(sec_row("No permission surface detected", "",
-                            '<span class="secrow__ok">declares no dependency that reaches files, '
-                            "shell or network</span>"))
+        # "No permission surface detected" was reassurance dressed as a measurement. This layer
+        # reads DECLARED DEPENDENCIES and nothing else — a server can shell out with Node built-ins
+        # and declare nothing at all — so an empty result means we found no declaration, never that
+        # the capability cannot reach anything. The official Supabase server, whose entire purpose is
+        # talking to a remote Supabase project, renders this row: technically correct about its
+        # dependency graph, and read by a person as "this is sandboxed".
+        rows.append(sec_row("No access inferred from declared dependencies", "",
+                            '<span class="secrow__ok">nothing it depends on reaches files, shell or '
+                            "network. This reads declarations only — built-in APIs are invisible to "
+                            "it, so absence of a declaration is not absence of access</span>"))
 
     if c.get("sec_remote_content"):
         rows.append(sec_row("Can carry remote content into your agent", "",
@@ -499,7 +566,10 @@ def page(c, gen):
 
 def inline_data(c, gen):
     # a non-executable JSON island the detail page reads directly (CSP-safe). Escape </ so no early </script>.
-    payload = json.dumps({"c": c, "at": gen}, ensure_ascii=False).replace("</", "<\\/")
+    # `sv` is the scorer version. Without it in the island, capability.js could not print the ruler
+    # the static page prints, and the two halves would disagree about which scorer produced the
+    # number on the very line that states it.
+    payload = json.dumps({"c": c, "at": gen, "sv": SCORER}, ensure_ascii=False).replace("</", "<\\/")
     return '<script type="application/json" id="cap-data">' + payload + "</script>\n"
 
 def bake_hero(caps, total):
@@ -564,6 +634,8 @@ def sitemap(caps):
 def main():
     d = json.load(open(DATA))
     gen = d.get("generated_at", "")
+    global SCORER
+    SCORER = d.get("scorer", "")
     caps = [c for c in d["capabilities"] if c.get("id", "").split(":", 1)[0] != "key"]
     for c in caps:
         c.setdefault("slug", slugify(c["id"]))
