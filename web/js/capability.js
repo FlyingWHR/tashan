@@ -72,7 +72,8 @@
       installBlock(c) +
       '<div class="stats">' +
         stat("tashan score", c.tashan_score == null ? "—" : c.tashan_score, "jade", "upkeep + freshness, gated by adoption") +
-        stat("Expertise", c.expertise == null ? "—" : c.expertise, "jade", c.expertise_verdict ? "LLM-graded: " + c.expertise_verdict : "not yet graded") +
+        stat("Instruction depth", c.expertise == null ? "—" : c.expertise, "jade",
+             c.expertise_verdict ? "graded against the published rubric" : "not yet graded") +
         stat("Adoption", adoption(c), "", c.npm_downloads != null ? "npm downloads / week" : "distinct public repos") +
         stat("Upkeep", score(c.upkeep), "", "cadence · maintainers · status") +
         stat("Freshness", fr.txt, "", "latest release / push", fr.cls) +
@@ -85,7 +86,7 @@
              "", "how many of the score's inputs we actually have") +
       '</div>' +
       securityBlock(c) +
-      (c.expertise_note ? '<div class="expert-read"><span class="vd vd--' + esc(c.expertise_verdict) + '">' + esc(c.expertise_verdict) + '</span>' +
+      (c.expertise_note ? '<div class="expert-read">' + vchip(c.expertise_verdict) +
         '<p>&ldquo;' + esc(c.expertise_note) + '&rdquo;</p><span class="expert-read__by mono">— tashan expertise-eval, read of the actual capability</span></div>' : '') +
       repoHealth(c) +
       alsoOn(c) +
@@ -273,6 +274,16 @@
   }
 
   // ---------- install: per-client tabs (the biggest real usage pain = cross-client config) ----------
+  // terminal.js owns the verdict vocabulary and loads on every page before this one. Guard the call
+  // anyway: a cross-file global is a load-order dependency, and if terminal.js ever fails to arrive
+  // the dossier should render a plain chip rather than throw and show nothing at all. The headless
+  // render test found this by running this file alone, which is exactly the condition being guarded.
+  function vchip(v) {
+    if (!v) return "";
+    return window.tashanVerdict ? window.tashanVerdict(v)
+      : '<span class="vd vd--' + esc(v) + '">' + esc(v) + "</span>";
+  }
+
   function installBlock(c) {
     // DISCONTINUED: no install path, at all. This function REPLACES the server render, so a stop
     // notice that exists only in prerender.py is a stop notice no reader with JS ever sees — and the

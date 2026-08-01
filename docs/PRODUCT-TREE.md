@@ -12,12 +12,12 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
 | `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 101 |
-| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json, tasks.json | free | 57 |
 | `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | index.json, tasks.json | post-sale | 56 |
 | `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json, tasks.json | free | 51 |
+| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 50 |
 | `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | index.json, tasks.json | sells | 48 |
+| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json, tasks.json | free | 33 |
 | `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | index.json, tasks.json | post-sale | 27 |
-| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 26 |
 | `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | index.json, tasks.json | free | 26 |
 | `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | index.json, requests.json, tasks.json | free | 26 |
 | `/support.html` | How to get help, and what we can see when you ask. | site, terminal | index.json, tasks.json | free | 25 |

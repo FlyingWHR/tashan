@@ -3,6 +3,17 @@
 // refinements (AND across facets, OR within). Active refinements show as removable chips + a live count.
 (function () {
   "use strict";
+  // terminal.js owns the verdict vocabulary and loads on every page before this one. Guard the call
+  // anyway: a cross-file global is a load-order dependency, and if terminal.js ever fails to arrive
+  // the dossier should render a plain chip rather than throw and show nothing at all. The headless
+  // render test found this by running this file alone, which is exactly the condition being guarded.
+  function vchip(v) {
+    if (!v) return "";
+    return window.tashanVerdict ? window.tashanVerdict(v)
+      : '<span class="vd vd--' + esc(v) + '">' + esc(v) + "</span>";
+  }
+
+
   var rowsEl = document.getElementById("rows");
   // facets are Sets (multi-select); toggles are bool; sort is one key
   // `role` is single-valued and deliberately not a Set: the page asks "what do you do", and nobody
@@ -20,7 +31,7 @@
   var VIT_LABEL = { active: "active", stable: "stable", abandoned: "abandoned" };
   var VERDICTS = ["deep", "solid", "thin", "wrapper", "slop"];
   var SORTS = [["tashan_score", "tashan score"], ["adoption", "Adoption"], ["fresh", "Freshness"],
-               ["expertise", "Expertise"], ["maint", "Upkeep"], ["name", "Name A–Z"]];
+               ["expertise", "Instruction depth"], ["maint", "Upkeep"], ["name", "Name A–Z"]];
 
   // reuse terminal.js's session-cached loader (one fetch+parse of the slim index per session, shared)
   var loadIndex = window.tashanIndex || function () { return fetch("/data/index.json").then(function (r) { if (!r.ok) throw 0; return r.json(); }); };
@@ -469,7 +480,7 @@
           (c.sec_advisory_count === 1 ? "y" : "ies") + '</span>';
       }
       if (c.sec_install_script) sec += ' <span class="sev sev--mod" title="Executes a script when installed">install script</span>';
-      var vd = c.expertise_verdict ? ' <span class="vd vd--' + esc(c.expertise_verdict) + '" title="LLM expertise-eval: ' + (c.expertise || "") + '/100">' + esc(c.expertise_verdict) + '</span>' : "";
+      var vd = c.expertise_verdict ? " " + vchip(c.expertise_verdict) : "";
       var org = officialOrg(c);
       var off = org ? ' <span class="official" title="Official from ' + esc(org) + '">✓ ' + esc(org) + '</span>' : "";
       var catTag = (!singleCat && c.category && data.catMeta[c.category]) ? ' <span class="cattag" title="Category">' + esc(data.catMeta[c.category].label) + '</span>' : "";

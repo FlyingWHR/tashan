@@ -186,8 +186,7 @@ def board(rows):
         t = c.get("tashan_score")
         org = c.get("official")
         off = (' <span class="official" title="Official from ' + esc(org) + '">\u2713 ' + esc(org) + "</span>") if org else ""
-        vd = (' <span class="vd vd--' + esc(c["expertise_verdict"]) + '">' + esc(c["expertise_verdict"])
-              + "</span>") if c.get("expertise_verdict") else ""
+        vd = (" " + chrome.verdict_chip(c.get("expertise_verdict"))) if c.get("expertise_verdict") else ""
         dep = ' <span class="fresh fresh--cold">deprecated</span>' if c.get("npm_deprecated") else ""
         # THE FIT, SHOWN AND SOURCED. Ordering by fit is worth nothing if the reader cannot see which
         # rows are here because a grader read the capability against the rubric (primary) and which
@@ -400,7 +399,7 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
          "- **Adoption** — npm download volume (log) blended with config-adoption reach across public repos.",
          "- **Freshness** — recency of the most recent public activity: npm publish, git push, or release.",
          "- **Upkeep** — maintainer count, release cadence and freshness, penalised for deprecated/archived.",
-         "- **Expertise** — an LLM grade of the capability's own documentation against a fixed rubric "
+         "- **Instruction depth** — an LLM grade of the capability's own documentation against a fixed rubric "
          "(deep / solid / thin / wrapper / slop). Only a subset is graded; ungraded means ungraded, not zero.",
 
          "", "## The security audit (separate from the score)", "",

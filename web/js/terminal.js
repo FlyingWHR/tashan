@@ -17,7 +17,24 @@
     statusline = el("div", "statusline"); statusline.setAttribute("aria-hidden", "true");
     document.body.appendChild(statusline);
   }
-  function verdictHTML(v) { return v ? '<span class="tk-v tk-v--' + v + '">' + v + '</span>' : ""; }
+  // MIRROR OF pipeline/chrome.py::VERDICT_LABEL / VERDICT_BLURB. Exposed on window because index.js
+  // and capability.js each had their own copy of the chip and neither said what the word meant —
+  // three renderers, one vocabulary, and the same drift this codebase keeps paying for.
+  var VERDICT = {
+    deep:    ["deep",        "documents every tool, with worked examples, setup and a stated limitation"],
+    solid:   ["solid",       "documents the job properly, with examples you could follow"],
+    thin:    ["thin",        "shallow — says what it does, not how to actually use it"],
+    wrapper: ["wrapper",     "a thin wrapper over someone else's API, with little of its own"],
+    slop:    ["low-quality", "low-quality documentation, likely machine-generated"]
+  };
+  window.tashanVerdict = function (v, cls) {
+    if (!v) return "";
+    var d = VERDICT[v] || [v, ""];
+    cls = cls || "vd";
+    return '<span class="' + cls + " " + cls + "--" + v + '" title="Instruction depth: ' +
+      esc(d[1]) + '">' + esc(d[0]) + "</span>";
+  };
+  function verdictHTML(v) { return window.tashanVerdict(v, "tk-v"); }
 
   function fillTicker(track) {
     var top = caps.slice(0, 26);

@@ -28,10 +28,22 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Four, not seven. A header is a claim about what matters, and seven flat links makes none — the
 # product (Index), how to get it (Use it), why the numbers can be trusted (Methodology) and what it
 # costs. About and Learn are supporting reading and live in the footer, where they already were.
+# THE NAV NAMES THE JOBS TO BE DONE, not our internal furniture. "Index" is what we call the data,
+# "Use it" is not a thing anyone is looking for, and Methodology sat in the top four while the
+# job-oriented tier — 69 task pages and 21 role pages, the whole differentiation — was reachable only
+# from a footer link and the search box. A visitor arrives wanting to find something for their work
+# or to check what they already run; those are now the first two items.
+#
+# Methodology moves to the footer, where it already lives under "How it works". It is the page that
+# proves the numbers, not the page that starts a visit.
+#
+# NOT "Compare": there is no /compare/ index page, only the 236 generated pairs, and test_chrome
+# asserts every nav destination exists on disk — correctly, since a nav link to a 404 is worse than
+# no link at all. Add the item when the index page exists.
 NAV = [
-    ("/", "Index"),
-    ("/start.html", "Use it"),
-    ("/methodology.html", "Methodology"),
+    ("/", "Find skills"),
+    ("/browse.html", "Jobs"),
+    ("/start.html", "Doctor"),
     ("/pricing.html", "Pricing"),
 ]
 
@@ -53,6 +65,40 @@ FOOTER = [
 
 TAGLINE = ("The measured layer for AI capabilities — MCP servers and agent skills, "
            "ranked on public evidence.")
+
+
+# WHAT THE GRADE MEANS, defined once for every Python generator. The chips shipped as a bare word —
+# "thin", "wrapper" — with nothing saying what the grader looked for, so a publisher reading their own
+# page could not tell what would move it and a visitor could not tell what it measured.
+#
+# The field is INSTRUCTION DEPTH, not expertise. The rubric reads the capability's own documentation:
+# per-tool docs, worked examples, setup and auth, a stated limitation. That is a real, checkable thing
+# and it is not the same claim as "this team has domain expertise", which we never measured and were
+# nonetheless asserting on every dossier and hub.
+#
+# "slop" renders as "low-quality" for the same reason. The stored value is unchanged — CSS classes,
+# the CLI filter and the badge colours all key off it — but the word on the page was gratuitously
+# hostile to the publishers a marketplace will one day need, and it described the same finding.
+VERDICT_LABEL = {"deep": "deep", "solid": "solid", "thin": "thin",
+                 "wrapper": "wrapper", "slop": "low-quality"}
+VERDICT_BLURB = {
+    "deep": "documents every tool, with worked examples, setup and a stated limitation",
+    "solid": "documents the job properly, with examples you could follow",
+    "thin": "shallow — says what it does, not how to actually use it",
+    "wrapper": "a thin wrapper over someone else's API, with little of its own",
+    "slop": "low-quality documentation, likely machine-generated",
+}
+FIELD_LABEL = "Instruction depth"
+
+
+def verdict_chip(v, cls="vd"):
+    """One chip, one definition. Empty string when the capability has not been graded — an absent
+    grade must never render as a grade of nothing."""
+    if not v:
+        return ""
+    return ('<span class="' + cls + " " + cls + "--" + v + '" title="'
+            + FIELD_LABEL + ": " + VERDICT_BLURB.get(v, v) + '">'
+            + VERDICT_LABEL.get(v, v) + "</span>")
 
 
 def alias(name):

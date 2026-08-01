@@ -96,7 +96,7 @@ def top_table(caps, kind_filter=None, n=10):
             '<th class="rank" scope="col">#</th><th scope="col">Capability</th><th class="num" scope="col">tashan score</th><th scope="col">Verdict</th><th class="num" scope="col">Adoption</th></tr></thead><tbody>']
     for i, c in enumerate(rows):
         href = "/capability/" + c["slug"] + ".html" if c.get("slug") else "#"
-        vd = ('<span class="vd vd--' + c["expertise_verdict"] + '">' + c["expertise_verdict"] + '</span>') if c.get("expertise_verdict") else "—"
+        vd = chrome.verdict_chip(c.get("expertise_verdict")) or "—"
         dl = c.get("npm_downloads")
         adopt = ((("%.1fM" % (dl/1e6)) if dl >= 1e6 else ("%.0fk" % (dl/1e3)) if dl >= 1e3 else str(dl)) + "/wk") if dl else "—"
         body.append('<tr data-href="' + href + '"><td class="rank">' + str(i+1) + '</td>'

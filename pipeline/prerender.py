@@ -252,7 +252,10 @@ def summary(c, gen=""):
     n = disp(c); rows = []
     def kv(k, v): rows.append("<li><b>" + esc(k) + ":</b> " + esc(v) + "</li>") if v not in (None, "", "—") else None
     kv("tashan score", c.get("tashan_score"))
-    kv("Expertise", (str(c["expertise"]) + " (" + c["expertise_verdict"] + ")") if c.get("expertise") is not None and c.get("expertise_verdict") else c.get("expertise"))
+    kv(chrome.FIELD_LABEL,
+       (str(c["expertise"]) + " (" + chrome.VERDICT_LABEL.get(c["expertise_verdict"], c["expertise_verdict"])
+        + " — " + chrome.VERDICT_BLURB.get(c["expertise_verdict"], "") + ")")
+       if c.get("expertise") is not None and c.get("expertise_verdict") else c.get("expertise"))
     kv("Adoption", (compact(c["npm_downloads"]) + "/wk") if c.get("npm_downloads") is not None else (str(c.get("config_reach")) + " repos" if c.get("config_reach") else None))
     # EVERY INPUT TO THE SCORE, on the page, in the STATIC tier. methodology.html promises "every
     # input is shown on the capability page" and this render carried the result and two of its
@@ -286,8 +289,11 @@ def summary(c, gen=""):
     elif c.get("npm_pkg"):
         install = '<p class="install__lbl mono">Install (Claude Code):</p><pre class="install__snip"><code>claude mcp add ' + \
             esc(chrome.alias(c["name"])) + ' -- npx -y ' + esc(c["npm_pkg"]) + '</code></pre>'
-    verdict = ('<div class="expert-read"><span class="vd vd--' + esc(c["expertise_verdict"]) + '">' + esc(c["expertise_verdict"]) +
-               '</span><p>&ldquo;' + esc(c["expertise_note"]) + '&rdquo;</p></div>') if c.get("expertise_note") else ""
+    # The graded read, using the one chip definition — this site was missed when the others moved to
+    # chrome.verdict_chip, so two dossiers still rendered a bare "slop" while every other surface
+    # said "low-quality".
+    verdict = ('<div class="expert-read">' + chrome.verdict_chip(c.get("expertise_verdict"))
+               + '<p>&ldquo;' + esc(c["expertise_note"]) + '&rdquo;</p></div>') if c.get("expertise_note") else ""
     # COMPATIBILITY, WITH ITS LEVEL AND ITS BASIS. This printed a flat list of client names derived
     # from `kind` alone, so every npm-backed capability in the corpus claimed the same eight clients
     # and "Works with VS Code" shipped on thousands of pages nobody had checked. A level says what is
