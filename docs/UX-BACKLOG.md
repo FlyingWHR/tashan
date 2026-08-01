@@ -415,3 +415,26 @@ Python — an idiom this project's own pipeline is built on.
 
 Same **Security → Bots → Bot Fight Mode** toggle that is still injecting a CSP-blocked script into
 every page. One switch fixes both. I cannot reach the dashboard.
+
+---
+
+## ⚠ UNCOMMITTED WORK FROM A PARALLEL SESSION — do not commit until these two clear
+
+The working tree carries an in-progress scoring/tagging change (`npm_keywords`, doc-signals,
+`tag_capabilities`, plus a full regenerate). **It fails two guardrails**, and both are alarms this
+project installed deliberately:
+
+1. **`tests/test_scorer_version.py`** — the scoring changed again AFTER `s2 → s3` was accepted, so
+   the fingerprint no longer matches `pipeline/scorer.lock`. Every stored `signal_history` point
+   would claim comparability with points measured by a different ruler, and `trend()` would report
+   *our* recalibration as a customer's capability declining. That is the exact failure the column
+   exists to prevent (`pkg:3dstreet-mcp` once read 43,43,43,43,42,40 — every step down a rewrite).
+   **Fix:** bump `SCORER_VERSION` to `s4` in `pipeline/build.py`, then
+   `python3 tests/test_scorer_version.py --accept`. Never `--accept` without the bump.
+
+2. **`tests/test_classify.py`** — the two largest categories now hold **65.7%** of the board against
+   a 62% ceiling (devtools + productivity). The taxonomy has stopped sorting.
+
+Whoever owns that change should land it. It is not mine to bump a scorer version for — the version
+string is a claim about comparability of published numbers, and only the author of the change knows
+whether it is one.
