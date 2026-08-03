@@ -104,6 +104,14 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # entry {url:"https://mcp.exa.ai/mcp"} — which identify() reduces to the HOST — can never
            # resolve, and remote is the second-largest kind we track (4,215 rows, 0 resolvable before).
            "remote_host TEXT",
+           # The marketplace REPO a plugin can actually be installed from. `title` already holds the
+           # marketplace NAME, and the two are not derivable from each other — anthropics/
+           # claude-plugins-community publishes under the name "claude-community" — so `/plugin
+           # marketplace add <repo>` + `/plugin install <name>@<market>` needs both halves. Without it
+           # every plugin page fell through to the npm-less branch and told 3,624 readers their Claude
+           # Code plugin was a "Remote / registry server". Identity still keys on the plugin's own
+           # home (see ingest_plugins.plugin_id) — this is a DISTRIBUTION fact, not an identity one.
+           "plugin_market_repo TEXT",
            # ---- security audit (pipeline/scan_security.py) ----------------------------------
            # Public evidence only: OSV.dev advisories for the version you would install TODAY, plus
            # what the npm packument already tells us and we were throwing away. None of these feed
@@ -1044,6 +1052,8 @@ def export(con):
     cols = ["id","name","kind","title","description","npm_pkg","source_repo","registry_status",
             "config_reach","config_repos","stars_median","stars_max","last_seen",
             "npm_downloads","npm_last_publish","npm_maintainers","npm_versions","npm_deprecated","npm_latest_version","remote_host",
+            # with `title` (the marketplace NAME) this is what makes a plugin's install printable
+            "plugin_market_repo",
             "co_used","adoption","freshness","upkeep","tashan_score",
             "expertise","expertise_verdict","expertise_note","retention","retention_note",
             "category","in_registry","in_configs",

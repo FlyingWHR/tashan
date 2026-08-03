@@ -312,6 +312,20 @@
           ["Project", "Or scope it to one project:", "cp -r " + folder + " .claude/skills/", "sh"]
         ]) + '</div>';
     }
+    // A PLUGIN IS NOT A REMOTE SERVER. With no branch of its own, every Claude Code plugin fell into
+    // the npm-less catch-all below and 3,624 pages told the reader to "configure it from its source"
+    // as though it were a hosted endpoint. Two steps, because a marketplace must be registered before
+    // anything in it can be installed — and the marketplace NAME is not its repo (anthropics/
+    // claude-plugins-community publishes as "claude-community"), so both halves are carried.
+    // Mirrors prerender.py::summary — the client REPLACES that render, so the two must agree.
+    if (c.kind === "plugin" && c.plugin_market_repo && c.title) {
+      return '<div class="install"><div class="install__hd"><h2>Install</h2>' + linksHTML + '</div>' +
+        tabs(c, [
+          ["Claude Code", "Register the marketplace, then install from it:",
+           "/plugin marketplace add " + c.plugin_market_repo + "\n/plugin install " + c.name + "@" + c.title,
+           "sh"]
+        ]) + '<p class="install__lbl">Run <code>/reload-plugins</code> to activate it in the current session.</p></div>';
+    }
     if (!c.npm_pkg) {
       return '<div class="install"><div class="install__hd"><h2>Install</h2>' + linksHTML + '</div>' +
         '<p class="install__lbl">Remote / registry server — configure it from its ' +

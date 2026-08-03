@@ -42,7 +42,19 @@ function runRender(islandText, pathname, mountSel) {
   return { capHTML, threw, errs };
 }
 
-let fail = 0, checked = 0, tabs = 0, health = 0;
+// THE DRIFT GUARD. prerender.py and capability.js are one concept implemented twice, and they have
+// now diverged four separate times — most recently with 3,624 plugin pages whose crawled HTML had no
+// install path at all while the client render called the plugin a "Remote / registry server". Both
+// renders are already in hand here, so compare the thing that actually costs a reader something: the
+// command we tell them to run. Answer engines largely do not execute JS, so "the client fills it in"
+// is not a defence.
+const ents = { "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&#39;": "'", "&nbsp;": " " };
+const snip = (s) => {
+  const m = s.match(/class="install__snip"[^>]*>(?:<button[\s\S]*?<\/button>)?\s*<code[^>]*>([\s\S]*?)<\/code>/);
+  return m ? m[1].replace(/&[a-z#0-9]+;/g, (e) => ents[e] ?? e).trim() : null;
+};
+
+let fail = 0, checked = 0, tabs = 0, health = 0, agreed = 0;
 for (const f of sample) {
   const html = fs.readFileSync(path.join(dir, f), "utf8");
   const m = html.match(/id="cap-data">(.*?)<\/script>/s);
@@ -57,7 +69,21 @@ for (const f of sample) {
   if (!/class="stats"/.test(capHTML)) { console.log("FAIL no stats grid:", f); fail++; continue; }
   if (/install__tab|install__snip/.test(capHTML)) tabs++;
   if (/hstat|repoHealth|Bus factor|stars/.test(capHTML)) health++;
+
+  const served = snip(html), shown = snip(capHTML);
+  if (shown && !served) {
+    console.log("FAIL client offers an install command the crawled HTML does not:", f, "—", shown.split("\n")[0]);
+    fail++; continue;
+  }
+  if (served && shown && served !== shown) {
+    console.log("FAIL the two renders disagree on the install command:", f,
+                "\n  prerender.py  :", served.replace(/\n/g, " ⏎ "),
+                "\n  capability.js :", shown.replace(/\n/g, " ⏎ "));
+    fail++; continue;
+  }
+  if (served && shown) agreed++;
 }
 
 assert.strictEqual(fail, 0, `${fail} pages failed to render`);
-console.log(`ok — render() ran clean on ${checked} sampled pages (install blocks: ${tabs}, repo-health: ${health})`);
+console.log(`ok — render() ran clean on ${checked} sampled pages `
+  + `(install blocks: ${tabs}, repo-health: ${health}, install command identical in both renders: ${agreed})`);

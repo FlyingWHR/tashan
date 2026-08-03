@@ -286,9 +286,24 @@ def summary(c, gen=""):
                   "<code>npx tashan-cli doctor</code> can warn about it. It is not scored and does "
                   "not appear in any ranking.</div>")
         install = gone
+    # Same omission as the plugin branch below, found by the same guard: capability.js offers skill
+    # readers `cp -r …` and this render offered nothing, so the command was invisible to anything that
+    # does not run JS. alias() is the shared derivation both sides already use.
+    elif c.get("kind") == "skill":
+        install = ('<p class="install__lbl mono">Install (Claude Code):</p><pre class="install__snip"><code>'
+                   'cp -r ' + esc(chrome.alias(c["name"])) + ' ~/.claude/skills/</code></pre>')
     elif c.get("npm_pkg"):
         install = '<p class="install__lbl mono">Install (Claude Code):</p><pre class="install__snip"><code>claude mcp add ' + \
             esc(chrome.alias(c["name"])) + ' -- npx -y ' + esc(c["npm_pkg"]) + '</code></pre>'
+    # A PLUGIN IS NOT A REMOTE SERVER. There was no branch here at all, so the crawled HTML of 3,624
+    # plugin pages carried no install path — while capability.js, which replaces this render, fell
+    # through to its npm-less catch-all and told the reader to "configure it from its source" as if it
+    # were a hosted endpoint. Answer engines largely do not run JS, so the single most useful line on
+    # the page was missing from the document they actually read. Mirrors capability.js::installBlock.
+    elif c.get("kind") == "plugin" and c.get("plugin_market_repo") and c.get("title"):
+        install = ('<p class="install__lbl mono">Install (Claude Code):</p><pre class="install__snip"><code>'
+                   '/plugin marketplace add ' + esc(c["plugin_market_repo"]) + '\n'
+                   '/plugin install ' + esc(c["name"]) + '@' + esc(c["title"]) + '</code></pre>')
     # The graded read, using the one chip definition — this site was missed when the others moved to
     # chrome.verdict_chip, so two dossiers still rendered a bare "slop" while every other surface
     # said "low-quality".

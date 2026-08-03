@@ -226,6 +226,39 @@ def upsert(con, p, gh_meta, shared, reach):
                    doc_source="marketplace_json")
 
 
+def backfill_market_repo(con, cache):
+    """Record WHICH REPO each plugin's marketplace lives in, so a page can print a real install.
+
+    `title` already carries the marketplace NAME, but a name cannot be turned back into a repo:
+    anthropics/claude-plugins-community publishes as "claude-community". Both halves are needed —
+    `/plugin marketplace add <repo>` then `/plugin install <name>@<market>`.
+
+    Matched on (marketplace name, plugin name) against the manifests already in the cache, so the repo
+    ALWAYS agrees with the title that won the upsert; a row can never advertise adding one marketplace
+    and installing from another. Pure cache read, no network — safe to re-run every ingest.
+    """
+    pairs = {}                                     # (market name, plugin name) -> marketplace repo
+    for key, man in cache.items():
+        if not key.startswith("man:") or not isinstance(man, str):
+            continue
+        repo = key[4:]
+        try:
+            m = json.loads(man)
+        except Exception:
+            continue
+        market = m.get("name") or repo.split("/")[-1]
+        for p in (m.get("plugins") or []):
+            if isinstance(p, dict) and p.get("name"):
+                pairs.setdefault((market, str(p["name"]).strip()), repo)
+
+    rows = con.execute("SELECT id, name, title FROM capabilities WHERE kind='plugin'").fetchall()
+    hits = [(pairs[(t, n)], i) for i, n, t in rows if (t, n) in pairs]
+    con.executemany("UPDATE capabilities SET plugin_market_repo=? WHERE id=?", hits)
+    con.commit()
+    print(f"  marketplace repo resolved for {len(hits)}/{len(rows)} plugins")
+    return len(hits)
+
+
 def main():
     refresh = "--refresh" in sys.argv
     cache = {}
@@ -289,6 +322,7 @@ def main():
         rated += 1 if (is_solo and (meta or {}).get("stars") is not None) else 0
     con.commit()
     json.dump(cache, open(CACHE, "w"))
+    backfill_market_repo(con, cache)
 
     n = con.execute("SELECT COUNT(*) FROM capabilities WHERE kind='plugin'").fetchone()[0]
     top = con.execute("SELECT name, gh_stars, source_repo FROM capabilities WHERE kind='plugin' "
