@@ -38,6 +38,13 @@ import build, classify
 
 # Measured 31 Jul 2026 with complement NB + the two feature fixes: macro 59.8%, micro 60.8%.
 # Before those changes: macro 51.7%, micro 58.7%, with `ai` at 0/16.
+# 3 Aug 2026, adding gh_topics as a feature: macro 62.2%, micro 62.9%. Topics are human-assigned
+# repo labels ("database", "browser-automation"), present on 42% of the training set but only 10% of
+# the corpus — so it lifts held-out accuracy without moving board concentration at all. Biggest
+# movers: data 43.5%->65.2%, security 64.3%->78.6%. `ai` stayed 2/17, still the worst of the fifteen.
+# The floors keep their deliberate slack rather than being ratcheted to the new measurement: the
+# corpus grows daily, and a floor set at today's value fails tomorrow on drift rather than on a
+# regression. CONCENTRATION_CEIL below is the one that sits AT its measured value, on purpose.
 MACRO_FLOOR = 0.55
 MICRO_FLOOR = 0.57
 
@@ -46,6 +53,18 @@ MICRO_FLOOR = 0.57
 # A taxonomy that sorts would be nearer 40%. Getting there is a decision about the taxonomy itself —
 # `productivity` is a residual bucket, and in a corpus where every row is an AI tool `ai` is barely
 # discriminative (11.8% recall, the worst of the fifteen) — not a threshold to tune.
+#
+# 3 Aug 2026 — WHERE THE CONCENTRATION ACTUALLY COMES FROM, measured per artifact kind:
+#     plugin  n=3,627  74.8%      skill  n=518  79.5%
+#     npm     n=1,378  32.3%      remote n=364  29.9%
+# The classifier sorts MCP servers to ~30%, comfortably past the 40% this comment calls "a taxonomy
+# that sorts". Every point of the breach comes from plugins and skills — 70% of the board — which are
+# overwhelmingly "helps you write code" or "helps you work", and the fifteen shelves have nothing
+# that separates them from each other. So this is NOT a classifier defect and cannot be fixed by
+# better features: adding gh_topics lifted held-out accuracy 1.4pp and moved concentration by zero.
+# It is the corpus composition shifting toward plugins faster than the taxonomy was designed for.
+# The runner, whose corpus is fresher than any laptop's, reads 63.0% and is red on this line.
+# Re-basing the ceiling is the owner's call and must come with the shelf change that earns it.
 CONCENTRATION_CEIL = 0.62
 
 fail = 0
@@ -65,7 +84,10 @@ def held_out():
         gt = dict(classify.declared_labels())
         gt.update(classify.load_labels())
         rows = {r[0]: r for r in classify.rows_for(con, list(gt))}
-        data = [(classify.features(*rows[i][1:6]), c) for i, c in gt.items() if i in rows]
+        # [1:] not a hard-coded width: this said [1:6] and silently dropped whatever column was added
+        # last, so a new feature could be added to classify.py and this suite would keep grading the
+        # model WITHOUT it — reporting the old accuracy and calling the change a no-op.
+        data = [(classify.features(*rows[i][1:]), c) for i, c in gt.items() if i in rows]
     finally:
         con.close()
     data.sort(key=lambda d: hashlib.md5(" ".join(d[0][:8]).encode()).hexdigest())

@@ -54,7 +54,7 @@ TOKEN = re.compile(r"[a-z][a-z0-9+#.]{1,}")
 NAME_W = int(os.environ.get("CLASSIFY_NAME_W", "1"))   # swept: 1 beats 3 and 5 on the stable split
 BINARY = os.environ.get("CLASSIFY_BINARY", "1") == "1"  # de-duplicating tokens is worth ~6 points
 
-def features(name, title, desc, pkg=None, repo=None):
+def features(name, title, desc, pkg=None, repo=None, topics=None):
     """Name weighting is swept, not assumed — measured best at 1x. An earlier sweep favoured 3x, but
     that comparison ran on a per-process-salted split and was noise.
     Package scope and repo owner are included because vendor identity is a strong category signal
@@ -68,7 +68,7 @@ def features(name, title, desc, pkg=None, repo=None):
         # category's own subject: ai, ml, db, s3, 3d, ci, qa, bi. Keep those, drop the rest.
         return [t for t in TOKEN.findall((s or "").lower().replace("_", "-").replace("/", "-").replace("-", " "))
                 if t not in STOP and (len(t) > 2 or t in SHORT)]
-    body = toks(title) + toks(desc) + toks(pkg) + toks(repo)
+    body = toks(title) + toks(desc) + toks(pkg) + toks(repo) + toks(topics)
     if BINARY:
         body = list(dict.fromkeys(body))
     return toks(name) * NAME_W + body
@@ -236,7 +236,7 @@ def load_labels():
 
 
 def rows_for(con, ids=None):
-    q = "SELECT id, name, title, description, npm_pkg, source_repo FROM capabilities"
+    q = "SELECT id, name, title, description, npm_pkg, source_repo, gh_topics FROM capabilities"
     if ids:
         q += " WHERE id IN (%s)" % ",".join("?" * len(ids))
         return con.execute(q, list(ids)).fetchall()
@@ -246,7 +246,7 @@ def rows_for(con, ids=None):
 def evaluate(con, margin):
     gt = dict(declared_labels()); gt.update(load_labels())   # hand labels override declared ones
     rows = {r[0]: r for r in rows_for(con, list(gt))}
-    data = [(features(*rows[i][1:6]), c, rows[i][1]) for i, c in gt.items() if i in rows]
+    data = [(features(*rows[i][1:7]), c, rows[i][1]) for i, c in gt.items() if i in rows]
     # STABLE 80/20 split. Python's hash() on str is salted per process (PYTHONHASHSEED), so an earlier
     # version of this line reshuffled the split on every run and the "accuracy deltas" it produced were
     # partly noise. md5 is stable across processes, which is the whole point of a regression suite.
@@ -282,17 +282,17 @@ def main():
         con.close(); return 0
 
     gt = dict(declared_labels()); gt.update(load_labels())
-    train = [(features(*r[1:6]), gt[r[0]])
+    train = [(features(*r[1:7]), gt[r[0]])
              for r in rows_for(con, list(gt)) if r[0] in gt]
     model = NB().fit(train)
     print(f"trained on {len(train)} labelled capabilities")
 
     where = "" if "--all" in sys.argv else " WHERE category IS NULL OR category=''"
-    rows = con.execute("SELECT id, name, title, description, npm_pkg, source_repo FROM capabilities" + where).fetchall()
+    rows = con.execute("SELECT id, name, title, description, npm_pkg, source_repo, gh_topics FROM capabilities" + where).fetchall()
     tally, samples = collections.Counter(), collections.defaultdict(list)
     dry = "--dry-run" in sys.argv
-    for cid, name, title, desc, pkg, repo in rows:
-        cat, _ = model.predict(features(name, title, desc, pkg, repo), margin)
+    for cid, name, title, desc, pkg, repo, topics in rows:
+        cat, _ = model.predict(features(name, title, desc, pkg, repo, topics), margin)
         # hand labels always win over the model
         cat = gt.get(cid, cat)
         tally[cat] += 1

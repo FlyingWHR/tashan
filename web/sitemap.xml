@@ -6050,11 +6050,10 @@
   <url><loc>https://tashan.sh/compare/pkg-2sio-mcp-vs-pkg-oobe-protocol-labs-sap-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-2sio-mcp-vs-pkg-savvly-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-2sio-mcp-vs-pkg-utilia-solana-agent</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-2sio-mcp-vs-pkg-volcengine-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-2sio-mcp-vs-pkg-z-zero-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-adeu-mcp-server-vs-pkg-devds1989-t-rush-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-adeu-mcp-server-vs-pkg-emailmd</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-adeu-mcp-server-vs-pkg-kaeawc-auto-mobile</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-adeu-mcp-server-vs-pkg-local-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-adeu-mcp-server-vs-pkg-mcp-atlassian</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-adeu-mcp-server-vs-pkg-rendobar-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-adeu-mcp-server-vs-pkg-smartbear-mcp</loc></url>
@@ -6071,7 +6070,7 @@
   <url><loc>https://tashan.sh/compare/pkg-auth0-auth0-mcp-server-vs-pkg-orcadub-cli</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-azure-mcp-vs-pkg-codescene-codehealth-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-azure-mcp-vs-pkg-cyanheads-git-mcp-server</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-azure-mcp-vs-pkg-formio-uag</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-azure-mcp-vs-pkg-kaeawc-auto-mobile</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-azure-mcp-vs-pkg-modelcontextprotocol-server-everything</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-azure-mcp-vs-pkg-postman-postman-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-azure-mcp-vs-pkg-vibgrate-cli</loc></url>
@@ -6080,7 +6079,6 @@
   <url><loc>https://tashan.sh/compare/pkg-blockrun-mcp-vs-pkg-oobe-protocol-labs-sap-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-blockrun-mcp-vs-pkg-savvly-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-blockrun-mcp-vs-pkg-utilia-solana-agent</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-blockrun-mcp-vs-pkg-volcengine-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-blockrun-mcp-vs-pkg-z-zero-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-bowmark-mcp-vs-pkg-chrome-devtools-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-bowmark-mcp-vs-pkg-executeautomation-playwright-mcp-server</loc></url>
@@ -6111,28 +6109,32 @@
   <url><loc>https://tashan.sh/compare/pkg-cloudflare-mcp-server-cloudflare-vs-pkg-mcp-server-kubernetes</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-cloudflare-mcp-server-cloudflare-vs-pkg-vercel-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-codescene-codehealth-mcp-vs-pkg-cyanheads-git-mcp-server</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-codescene-codehealth-mcp-vs-pkg-formio-uag</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-codescene-codehealth-mcp-vs-pkg-kaeawc-auto-mobile</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-codescene-codehealth-mcp-vs-pkg-modelcontextprotocol-server-everything</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-codescene-codehealth-mcp-vs-pkg-postman-postman-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-codescene-codehealth-mcp-vs-pkg-vibgrate-cli</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-codescene-codehealth-mcp-vs-pkg-xcodebuildmcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-correctover-mcp-server-vs-pkg-deepseek-mcp-server</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-correctover-mcp-server-vs-pkg-formio-uag</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-correctover-mcp-server-vs-pkg-kage-core-kage-graph-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-correctover-mcp-server-vs-pkg-modelcontextprotocol-server-sequential-thinking</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-cyanheads-git-mcp-server-vs-pkg-formio-uag</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-correctover-mcp-server-vs-pkg-volcengine-mcp</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-cyanheads-git-mcp-server-vs-pkg-kaeawc-auto-mobile</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-cyanheads-git-mcp-server-vs-pkg-modelcontextprotocol-server-everything</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-cyanheads-git-mcp-server-vs-pkg-postman-postman-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-cyanheads-git-mcp-server-vs-pkg-vibgrate-cli</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-cyanheads-git-mcp-server-vs-pkg-xcodebuildmcp</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-deepseek-mcp-server-vs-pkg-formio-uag</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-deepseek-mcp-server-vs-pkg-kage-core-kage-graph-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-deepseek-mcp-server-vs-pkg-modelcontextprotocol-server-sequential-thinking</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-deepseek-mcp-server-vs-pkg-volcengine-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-devds1989-t-rush-mcp-vs-pkg-emailmd</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-devds1989-t-rush-mcp-vs-pkg-kaeawc-auto-mobile</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-devds1989-t-rush-mcp-vs-pkg-local-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-devds1989-t-rush-mcp-vs-pkg-mcp-atlassian</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-devds1989-t-rush-mcp-vs-pkg-rendobar-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-devds1989-t-rush-mcp-vs-pkg-smartbear-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-devds1989-t-rush-mcp-vs-pkg-touchdesigner-mcp-server</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-emailmd-vs-pkg-kaeawc-auto-mobile</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-emailmd-vs-pkg-local-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-emailmd-vs-pkg-mcp-atlassian</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-emailmd-vs-pkg-rendobar-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-emailmd-vs-pkg-smartbear-mcp</loc></url>
@@ -6163,12 +6165,10 @@
   <url><loc>https://tashan.sh/compare/pkg-firecrawl-mcp-vs-pkg-pepitahq-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-firecrawl-mcp-vs-pkg-reflex-browser</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-firecrawl-mcp-vs-pkg-trusty-squire-mcp</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-formio-uag-vs-pkg-modelcontextprotocol-server-everything</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-formio-uag-vs-pkg-postman-postman-mcp-server</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-formio-uag-vs-pkg-vibgrate-cli</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-formio-uag-vs-pkg-xcodebuildmcp</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-formio-uag-vs-pkg-kage-core-kage-graph-mcp</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-formio-uag-vs-pkg-modelcontextprotocol-server-sequential-thinking</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-formio-uag-vs-pkg-volcengine-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-gongrzhe-server-gmail-autoauth-mcp-vs-pkg-larksuiteoapi-lark-mcp</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-gongrzhe-server-gmail-autoauth-mcp-vs-pkg-local-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-gongrzhe-server-gmail-autoauth-mcp-vs-pkg-modelcontextprotocol-server-slack</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-henkey-postgres-mcp-server-vs-pkg-homespunapps-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-henkey-postgres-mcp-server-vs-pkg-mcp-server-sqlite-npx</loc></url>
@@ -6187,7 +6187,6 @@
   <url><loc>https://tashan.sh/compare/pkg-invaro-opentax-vs-pkg-oobe-protocol-labs-sap-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-invaro-opentax-vs-pkg-savvly-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-invaro-opentax-vs-pkg-utilia-solana-agent</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-invaro-opentax-vs-pkg-volcengine-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-invaro-opentax-vs-pkg-z-zero-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-jpisnice-shadcn-ui-mcp-server-vs-pkg-motiffcom-motiff-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-jpisnice-shadcn-ui-mcp-server-vs-pkg-shadcn-ui-mcp-server</loc></url>
@@ -6195,16 +6194,19 @@
   <url><loc>https://tashan.sh/compare/pkg-justdrop-mcp-vs-pkg-modelcontextprotocol-server-filesystem</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-justdrop-mcp-vs-pkg-modelcontextprotocol-server-gdrive</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-justdrop-mcp-vs-pkg-modelcontextprotocol-server-memory</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-kaeawc-auto-mobile-vs-pkg-mcp-atlassian</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-kaeawc-auto-mobile-vs-pkg-rendobar-mcp</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-kaeawc-auto-mobile-vs-pkg-smartbear-mcp</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-kaeawc-auto-mobile-vs-pkg-touchdesigner-mcp-server</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-kaeawc-auto-mobile-vs-pkg-modelcontextprotocol-server-everything</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-kaeawc-auto-mobile-vs-pkg-postman-postman-mcp-server</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-kaeawc-auto-mobile-vs-pkg-vibgrate-cli</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-kaeawc-auto-mobile-vs-pkg-xcodebuildmcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-kage-core-kage-graph-mcp-vs-pkg-modelcontextprotocol-server-sequential-thinking</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-kage-core-kage-graph-mcp-vs-pkg-volcengine-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-kubernetes-mcp-server-vs-pkg-mcp-server-kubernetes</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-kubernetes-mcp-server-vs-pkg-vercel-mcp</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-larksuiteoapi-lark-mcp-vs-pkg-local-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-larksuiteoapi-lark-mcp-vs-pkg-modelcontextprotocol-server-slack</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-local-mcp-vs-pkg-modelcontextprotocol-server-slack</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-local-mcp-vs-pkg-mcp-atlassian</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-local-mcp-vs-pkg-rendobar-mcp</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-local-mcp-vs-pkg-smartbear-mcp</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-local-mcp-vs-pkg-touchdesigner-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-mcp-atlassian-vs-pkg-rendobar-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-mcp-atlassian-vs-pkg-smartbear-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-mcp-atlassian-vs-pkg-touchdesigner-mcp-server</loc></url>
@@ -6234,6 +6236,7 @@
   <url><loc>https://tashan.sh/compare/pkg-modelcontextprotocol-server-puppeteer-vs-pkg-pepitahq-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-modelcontextprotocol-server-puppeteer-vs-pkg-reflex-browser</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-modelcontextprotocol-server-puppeteer-vs-pkg-trusty-squire-mcp</loc></url>
+  <url><loc>https://tashan.sh/compare/pkg-modelcontextprotocol-server-sequential-thinking-vs-pkg-volcengine-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-moltbridge-vs-pkg-notionhq-notion-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-moltbridge-vs-pkg-obsidian-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-moltbridge-vs-pkg-obsidian-mcp</loc></url>
@@ -6253,7 +6256,6 @@
   <url><loc>https://tashan.sh/compare/pkg-obsidian-mcp-vs-pkg-upstash-context7-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-oobe-protocol-labs-sap-mcp-server-vs-pkg-savvly-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-oobe-protocol-labs-sap-mcp-server-vs-pkg-utilia-solana-agent</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-oobe-protocol-labs-sap-mcp-server-vs-pkg-volcengine-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-oobe-protocol-labs-sap-mcp-server-vs-pkg-z-zero-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-openbnb-mcp-server-airbnb-vs-pkg-perplexity-ai-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-openbnb-mcp-server-airbnb-vs-pkg-socialneuron-mcp-server</loc></url>
@@ -6270,15 +6272,12 @@
   <url><loc>https://tashan.sh/compare/pkg-run402-mcp-vs-pkg-supabase-mcp-server-supabase</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-run402-mcp-vs-pkg-tmdb-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-savvly-mcp-server-vs-pkg-utilia-solana-agent</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-savvly-mcp-server-vs-pkg-volcengine-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-savvly-mcp-server-vs-pkg-z-zero-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-shadcn-ui-mcp-server-vs-pkg-sveltejs-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-smartbear-mcp-vs-pkg-touchdesigner-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-socialneuron-mcp-server-vs-pkg-tavily-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-suekou-mcp-notion-server-vs-pkg-upstash-context7-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-supabase-mcp-server-supabase-vs-pkg-tmdb-mcp</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-utilia-solana-agent-vs-pkg-volcengine-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-utilia-solana-agent-vs-pkg-z-zero-mcp-server</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-vibgrate-cli-vs-pkg-xcodebuildmcp</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-volcengine-mcp-vs-pkg-z-zero-mcp-server</loc></url>
 </urlset>
