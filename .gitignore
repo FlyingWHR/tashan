@@ -1,4 +1,11 @@
 data/raw/
+
+# SQLite's write-ahead log and shared-memory index — transient state that belongs to an OPEN
+# connection, never to a commit. They were tracked for 29 commits and cost 8.4 MB of pack before
+# being dropped; a committed stale WAL can also disagree with the .db beside it. The DB itself stays
+# tracked (change_events and the incremental registry cursor read prior state from it on CI).
+data/*.db-wal
+data/*.db-shm
 node_modules/
 .DS_Store
 *.log
