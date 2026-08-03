@@ -1,0 +1,31 @@
+# Cro Review
+
+> /cs:cro-review <plan — Pipeline-paranoid interrogation of revenue, win rate, NRR, and ramp time. Use when the forecast misses pipeline coverage, win rates drop, or before scaling the sales team.
+
+## Facts
+- Page: https://tashan.sh/capability/skill-alirezarezvani-cro-review
+- tashan id: skill:alirezarezvani/cro-review
+- Source: https://github.com/alirezarezvani/claude-skills
+- Type: skill
+- Category: productivity
+- tashan score: not scored (catalogued only — too little public evidence)
+- Adoption: 9.0
+- Upkeep: 97.0
+- Freshness: 94.0
+- Evidence coverage: 84% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- License: MIT
+- Official: no
+
+## Install
+
+```sh
+cp -r cro-review ~/.claude/skills/
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

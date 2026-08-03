@@ -1,0 +1,32 @@
+# Inertia React Plugin
+
+> Inertia.js + React frontend stack provider (priority=175). Pairs with laravel-plugin for full-stack Laravel+Inertia+React projects. Detects @inertiajs/react adapter. Adds inertia-react-architect agent (Sonnet/medium). Beats generic react-plugin (150) for the frontend aspect. Server-driven Inertia pages — no React Router.
+
+## Facts
+- Page: https://tashan.sh/capability/plugin-aratkruglik-claude-sdlc-inertia-react-plugin
+- tashan id: plugin:aratkruglik/claude-sdlc/inertia-react-plugin
+- Source: https://github.com/AratKruglik/claude-sdlc
+- Type: plugin
+- Category: devtools
+- tashan score: 36.0 / 100
+- Adoption: 7.0
+- Upkeep: 63.0
+- Freshness: 97.0
+- Evidence coverage: 84% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- License: MIT
+- Official: no
+
+## Install
+
+```sh
+/plugin marketplace add AratKruglik/claude-sdlc
+/plugin install inertia-react-plugin@sdlc-marketplace
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

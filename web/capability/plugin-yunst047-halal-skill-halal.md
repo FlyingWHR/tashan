@@ -1,0 +1,33 @@
+# Halal
+
+> Opens with Bismillah, keeps output honest and permissible, weaves a fitting ayah into the code, and remembers Allah as the work goes.
+
+## Facts
+- Page: https://tashan.sh/capability/plugin-yunst047-halal-skill-halal
+- tashan id: plugin:yunst047/halal-skill/halal
+- Source: https://github.com/yunst047/halal-skill
+- Type: plugin
+- Category: productivity
+- tashan score: 33.0 / 100
+- Adoption: 7.0
+- Upkeep: 58.0
+- Freshness: 86.0
+- Evidence coverage: 84% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- GitHub stars: 0
+- License: MIT
+- Official: no
+
+## Install
+
+```sh
+/plugin marketplace add yunst047/halal-skill
+/plugin install halal@halal
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

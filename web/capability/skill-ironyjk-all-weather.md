@@ -1,0 +1,30 @@
+# All Weather
+
+> All Weather Portfolio (Ray Dalio, Bridgewater) — diversifies across assets that perform well in each of the four economic quadrants (growth ↑/↓ × inflation ↑/↓) using equal risk contribution. Based on the Risk Parity concept. Prepares for every environment rather than predicting.
+
+## Facts
+- Page: https://tashan.sh/capability/skill-ironyjk-all-weather
+- tashan id: skill:ironyjk/all-weather
+- Source: https://github.com/ironyjk/investment-framework
+- Type: skill
+- Category: other
+- tashan score: not scored (catalogued only — too little public evidence)
+- Adoption: 9.0
+- Upkeep: not measured
+- Freshness: not measured
+- Evidence coverage: not measured
+- Health: not measured
+- Instruction depth: not yet graded
+- Official: no
+
+## Install
+
+```sh
+cp -r all-weather ~/.claude/skills/
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

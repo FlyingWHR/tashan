@@ -1,0 +1,33 @@
+# Spritecook
+
+> Generate game art from Claude. Adds the SpriteCook MCP server for creating pixel art sprites, textures, and animations, plus guided skills for sprite sheets, tilesets, and icon packs.
+
+## Facts
+- Page: https://tashan.sh/capability/plugin-spritecook-spritecook-claude-plugin-spritecook
+- tashan id: plugin:spritecook/spritecook-claude-plugin/spritecook
+- Source: https://github.com/SpriteCook/spritecook-claude-plugin
+- Type: plugin
+- Category: design
+- tashan score: 40.0 / 100
+- Adoption: 20.0
+- Upkeep: 57.0
+- Freshness: 85.0
+- Evidence coverage: 84% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- GitHub stars: 9
+- License: MIT
+- Official: no
+
+## Install
+
+```sh
+/plugin marketplace add anthropics/claude-plugins-community
+/plugin install spritecook@claude-community
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

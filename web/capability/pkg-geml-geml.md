@@ -1,0 +1,32 @@
+# GEML — a plain-text document format built to be edited in place, one section at a time
+
+> Patch a single block of a GEML document by id. Bad writes are refused; any one block rolls back.
+
+## Facts
+- Page: https://tashan.sh/capability/pkg-geml-geml
+- tashan id: pkg:@geml/geml
+- Source: https://github.com/geml-spec/geml
+- npm: https://www.npmjs.com/package/@geml/geml
+- Type: npm
+- Category: productivity
+- tashan score: 66.0 / 100
+- Adoption: 42.0
+- Upkeep: 65.0
+- Freshness: 99.0
+- Evidence coverage: 100% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- npm downloads: 1,064/week
+- Official: no
+
+## Install
+
+```sh
+claude mcp add geml -- npx -y @geml/geml
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

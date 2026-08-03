@@ -160,8 +160,9 @@
     });
   }
   function go() { var o = view[sel]; if (!o) return; location.href = o.href || capHref(o); }
-  // slug is derived, not shipped — see index.js capHref. Must match build.py slugify() byte for byte.
-  function capHref(o) { return "/capability/" + o.id.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") + ".html"; }
+  // slug is derived EXCEPT where the export ships an override — see index.js capHref. The derivation
+  // must match build.py slugify() byte for byte, and `o.slug` wins when a collision made it wrong.
+  function capHref(o) { return "/capability/" + (o.slug || o.id.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")) + ".html"; }
 
   // ---------- keys ----------
   document.addEventListener("keydown", function (e) {

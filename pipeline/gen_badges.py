@@ -60,12 +60,16 @@ def main():
     # includes handing a green tashan badge to a package we classified as malicious, embeddable in its
     # own README. A badge is the highest-cast artifact we ship; it must never outrun the board.
     caps = json.load(open(os.path.join(ROOT, "web", "data", "capabilities.json")))["capabilities"]
-    rows = [(c["id"], c["tashan_score"], c.get("expertise_verdict"))
+    # READ the export's slug, never re-derive it. slug(id) is right for almost every row and WRONG for
+    # any that lost a collision (`@stripe/mcp` vs `stripe-mcp` both derive to pkg-stripe-mcp), which
+    # would hand two capabilities one badge file — the second overwriting the first, so a package
+    # could embed a badge showing a DIFFERENT package's score in its own README.
+    rows = [(c["id"], c.get("slug") or slug(c["id"]), c["tashan_score"], c.get("expertise_verdict"))
             for c in caps if c.get("tashan_score") is not None]
     keep = set()
-    for cid, trust, verdict in rows:
-        keep.add(slug(cid) + ".svg")
-        open(os.path.join(OUT, slug(cid) + ".svg"), "w").write(badge(trust, verdict))
+    for cid, sl, trust, verdict in rows:
+        keep.add(sl + ".svg")
+        open(os.path.join(OUT, sl + ".svg"), "w").write(badge(trust, verdict))
     # And prune. Badges were only ever written, never removed, so one for a capability that left the
     # export stayed live and frozen at whatever score it held the day it dropped out.
     stale = [f for f in os.listdir(OUT) if f.endswith(".svg") and f not in keep]
@@ -73,8 +77,8 @@ def main():
         os.remove(os.path.join(OUT, f))
     print(f"{len(rows)} badges -> {OUT}" + (f" ({len(stale)} stale removed)" if stale else ""))
     # a couple of demo prints so the slug scheme is visible
-    for cid, trust, verdict in rows[:3]:
-        print(f"  {cid}  ->  /badge/{slug(cid)}.svg   (tashan score {int(trust)}{' · '+verdict if verdict else ''})")
+    for cid, sl, trust, verdict in rows[:3]:
+        print(f"  {cid}  ->  /badge/{sl}.svg   (tashan score {int(trust)}{' · '+verdict if verdict else ''})")
 
 if __name__ == "__main__":
     main()

@@ -28,3 +28,10 @@
 # embeddable badges — refresh hourly (GitHub's camo proxy caches longer anyway)
 /badge/*
   Cache-Control: public, max-age=3600
+
+# the plain-markdown dossier — an answer engine that will not run JS gets the same facts as the page,
+# without parsing around the chrome. Extensionless-adjacent: .md would otherwise download, not render.
+/capability/*.md
+  Content-Type: text/markdown; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=900, stale-while-revalidate=86400

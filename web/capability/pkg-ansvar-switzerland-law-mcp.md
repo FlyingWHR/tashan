@@ -1,0 +1,30 @@
+# Switzerland Law
+
+> Swiss law database — nFADP/DSG, information security, telecommunications with full-text search
+
+## Facts
+- Page: https://tashan.sh/capability/pkg-ansvar-switzerland-law-mcp
+- tashan id: pkg:@ansvar/switzerland-law-mcp
+- Source: https://github.com/Ansvar-Systems/switzerland-law-mcp
+- npm: https://www.npmjs.com/package/@ansvar/switzerland-law-mcp
+- Type: npm
+- Category: docs
+- tashan score: not scored (catalogued only — too little public evidence)
+- Adoption: 23.0
+- Upkeep: not measured
+- Freshness: 55.0
+- Evidence coverage: not measured
+- Health: abandoned
+- Instruction depth: not yet graded
+- npm downloads: 44/week
+- Official: no
+
+## Security audit
+- Known advisories: 0
+- Install-time script: `test -d dist || npm run build || true`
+- Build provenance: attested
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

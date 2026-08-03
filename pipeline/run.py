@@ -29,6 +29,13 @@ STAGES = [
     # skills people actually recommend get published. Incremental: manifests are cached by repo.
     ("plugins",         ["pipeline/ingest_plugins.py"], "source",
      "Claude Code plugin marketplaces — the channel good skills are published through"),
+    # BEFORE build.py, so anything discovered here is enriched and scored in the SAME run rather than
+    # sitting unmeasured until tomorrow. Nothing searched npm until now: a package reached the board
+    # only if the official registry listed it or the config scraper found it in someone's mcp.json,
+    # which is how @playwright/mcp (Microsoft's own, 34k stars on its repo) was missing entirely while
+    # a third-party alternative sat at 73. Cached per query+offset, so a re-run is free.
+    ("npm-search",      ["pipeline/ingest_npm.py"], "source",
+     "search npm for published MCP servers — the discovery step that never existed"),
     ("registry+npm",    ["pipeline/build.py"], "source",
      "official registry (incremental) + npm quality + scoring + export"),
     # IMMEDIATELY after scoring, deliberately. run.py keeps going past a failed stage, so putting the

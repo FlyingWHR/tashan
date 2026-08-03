@@ -1,0 +1,32 @@
+# Project Manager Vibes
+
+> PM Vibe is a free skill for Claude Code that adds project management and bug prevention for vibe coders. It builds structured specs before writing code, runs security scans after every build, auto-saves progress, and manages design tokens. All activated with pm on. 12 modules hosted with nuggieai.com
+
+## Facts
+- Page: https://tashan.sh/capability/plugin-christinezhang5-project-manager-nuggieai-vibes-skill-project-manager-vibes
+- tashan id: plugin:christinezhang5/project-manager-nuggieai-vibes-skill/project-manager-vibes
+- Source: https://github.com/christinezhang5/project-manager-nuggieai-vibes-skill
+- Type: plugin
+- Category: productivity
+- tashan score: 27.0 / 100
+- Adoption: 7.0
+- Upkeep: 50.0
+- Freshness: 69.0
+- Evidence coverage: 84% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- GitHub stars: 0
+- Official: no
+
+## Install
+
+```sh
+/plugin marketplace add anthropics/claude-plugins-community
+/plugin install project-manager-vibes@claude-community
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

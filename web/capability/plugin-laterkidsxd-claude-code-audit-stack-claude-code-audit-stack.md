@@ -1,0 +1,33 @@
+# Claude Code Audit Stack
+
+> Adversarial verification primitives: catches silent skipped restarts, probability-stacking errors in reports, and lost-PID daemon spawns on remote hosts.
+
+## Facts
+- Page: https://tashan.sh/capability/plugin-laterkidsxd-claude-code-audit-stack-claude-code-audit-stack
+- tashan id: plugin:laterkidsxd/claude-code-audit-stack/claude-code-audit-stack
+- Source: https://github.com/LaterKidsXD/claude-code-audit-stack
+- Type: plugin
+- Category: devtools
+- tashan score: 32.0 / 100
+- Adoption: 7.0
+- Upkeep: 69.0
+- Freshness: 72.0
+- Evidence coverage: 84% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- GitHub stars: 0
+- License: MIT
+- Official: no
+
+## Install
+
+```sh
+/plugin marketplace add anthropics/claude-plugins-community
+/plugin install claude-code-audit-stack@claude-community
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -26,7 +26,17 @@ CAP_HTML_MAX = 20 * 1024        # a prerendered detail page, gzipped-off
 # view anyway, and dropping the raw `name` breaks CLI search for the 1,064 rows with no npm package,
 # where it is the only coordinate they have. +6.5 KB gz is ~50ms on slow 3G for a board a person can
 # read. Do not spend the rest of this headroom without measuring what it buys.
-INDEX_JSON_GZ_MAX = 55 * 1024
+# Raised 55 -> 60 KB on 4 Aug 2026. The board went 1,590 -> 1,881 rows when npm discovery and skills
+# discovery landed (nothing SEARCHED npm before; skills walked 7 hardcoded repos), which is corpus
+# growth, not bloat. 56.1 KB gz. The cheaper alternatives were MEASURED first, as this comment's
+# predecessor demands, and both were rejected on evidence:
+#   - drop `label` where it equals `name`: 1 row of 1,881 qualifies. Saves 0.0 KB.
+#   - drop `npm_pkg`, derivable as id[4:] for all 737 npm-backed rows: saves 3.1 KB and would fit —
+#     but cli/doctor.mjs matches installed packages on it and cli/tashan.mjs prints the install
+#     command from it, and EVERY ALREADY-INSTALLED CLI reads this same live file. Removing a field
+#     the published client depends on breaks copies in the wild that can never be updated in step.
+# So the honest fix is to pay the 1.1 KB: ~8ms on slow 3G for 291 more capabilities on the board.
+INDEX_JSON_GZ_MAX = 60 * 1024
 PAGE_TTFB_MAX = 0.20            # seconds, local server
 NO_RUNTIME_BIG_EXPORT = "capabilities.json"  # must never be fetched at runtime
 
@@ -105,7 +115,10 @@ def static_checks():
     # HTML has no payload budget, so capping it was throwing away 3,148 scored capabilities that had
     # nowhere to live. The real invariant is pages == bulk export, not pages == board.
     bulk = json.load(open(os.path.join(WEB, "data", "capabilities.json")))
-    want = {slugify(c["id"]) for c in bulk["capabilities"]}
+    # READ the export's slug; deriving it here made this check a FOURTH copy of the rule, and it
+    # reported the three collision-disambiguated pages as orphans — the pages that exist precisely
+    # because deriving is wrong for them.
+    want = {c.get("slug") or slugify(c["id"]) for c in bulk["capabilities"]}
     orphans = have - want
     check("no orphan pages (board == prerendered set)", not orphans,
           f"{len(orphans)} orphans e.g. {sorted(orphans)[:3]}")

@@ -606,7 +606,11 @@
   // slug is DERIVED, not shipped — it is exactly slugify(id) (build.py), and sending both cost ~9 KB gz
   // of a 45 KB index for a string we can recompute in 40 bytes. Must stay byte-identical to build.py's
   // slugify or every listing 404s; tests/test_site.py checks the two agree across the whole export.
-  function capHref(c) { return "/capability/" + c.id.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") + ".html"; }
+  // `c.slug` is present ONLY when the derivation is wrong for that row — i.e. it lost a slug
+  // collision (`@stripe/mcp` and `stripe-mcp` both derive to pkg-stripe-mcp, so one page served two
+  // capabilities). Deriving unconditionally sent the official Stripe row to the unofficial one's
+  // dossier. Prefer the shipped value; derive for the other 6,323.
+  function capHref(c) { return "/capability/" + (c.slug || c.id.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")) + ".html"; }
   function compact(n) {
     if (n >= 1e6) return (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "M";
     if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 0 : 1) + "k";

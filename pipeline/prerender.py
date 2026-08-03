@@ -143,6 +143,35 @@ def desc_for(c):
     return d + " " + claim
 
 
+def _selfcheck_markdown():
+    """The .md dossier must never imply safety it has not established, and must agree with the HTML.
+
+    An answer engine reads these instead of the page. The two failure modes that matter: printing an
+    install command for something discontinued, and OMITTING the security section when nothing was
+    scanned — an absent line reads as "fine" to a summariser, which is the one thing this site must
+    never imply. Both are asserted here rather than eyeballed.
+    """
+    base = {"id": "pkg:x", "slug": "pkg-x", "name": "x", "label": "X", "kind": "npm",
+            "npm_pkg": "x", "tashan_score": 50.0, "coverage": 1.0}
+    md = markdown(dict(base), "2026-08-04T00:00:00Z")
+    assert "claude mcp add x -- npx -y x" in md, md
+    assert "Not scanned." in md, "an unscanned capability must SAY so, not omit the section"
+    assert "not yet graded" in md, "an ungraded capability must say so rather than drop the line"
+
+    # discontinued: no install command anywhere in the document
+    gone = markdown(dict(base, discontinued=True), "2026-08-04T00:00:00Z")
+    assert "npx -y" not in gone and "## Install" not in gone, gone
+
+    # a plugin prints the two-step form, and it must match install_cmd() used by the HTML
+    plug = dict(base, kind="plugin", npm_pkg=None, plugin_market_repo="o/r", title="mkt", name="p")
+    assert "/plugin marketplace add o/r" in markdown(plug, "") and "/plugin install p@mkt" in markdown(plug, "")
+
+    # permissions are a JSON STRING in the export — joining it raw spells them one letter at a time
+    perm = markdown(dict(base, sec_advisory_count=0, sec_permissions='["credentials", "network"]'), "")
+    assert "credentials, network" in perm, perm
+    print("ok — markdown dossier: install matches install_cmd, unknowns stated, permissions parsed")
+
+
 def _selfcheck():
     """One runnable check: the score survives intact at every description length."""
     for n in (0, 50, 240, 299, 300, 500):
@@ -652,6 +681,83 @@ def sitemap(caps):
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + static + caps_x + extra + "</urlset>\n")
     open(os.path.join(ROOT, "web", "sitemap.xml"), "w").write(xml)
 
+def markdown(c, gen):
+    """The same dossier as plain markdown, at <slug>.md.
+
+    WHY THIS EXISTS. An answer engine that will not run JS gets our HTML, parses around the chrome, and
+    hopes. A competing directory ships a .md per listing and it is markedly easier to read — that is a
+    real advantage and it costs almost nothing to match. Structure is deliberate: one labelled Facts
+    block so the numbers are extractable without a parser, the install command exactly as the HTML
+    prints it, and every unknown stated as unknown rather than omitted (an absent line reads as "fine"
+    to a summariser, which is the one thing this site must never imply).
+
+    Derived from the SAME export row as page(), so the two cannot disagree about a number.
+    """
+    L = []
+    L.append("# " + disp(c))
+    if c.get("description"):
+        L.append("\n> " + " ".join(str(c["description"]).split()))
+    L.append("\n## Facts")
+    def fact(k, v):
+        L.append(f"- {k}: {v}")
+    fact("Page", BASE + chrome.canon("/capability/" + c["slug"] + ".html"))
+    fact("tashan id", c["id"])
+    if c.get("source_repo"): fact("Source", "https://github.com/" + c["source_repo"])
+    if c.get("npm_pkg"):     fact("npm", "https://www.npmjs.com/package/" + c["npm_pkg"])
+    fact("Type", c.get("kind") or "unknown")
+    fact("Category", c.get("category") or "uncategorised")
+    # The headline, then what it is made of — and "not measured" wherever that is the truth.
+    fact("tashan score", f'{c["tashan_score"]} / 100' if c.get("tashan_score") is not None
+                         else "not scored (catalogued only — too little public evidence)")
+    for label, key in (("Adoption", "adoption"), ("Upkeep", "upkeep"), ("Freshness", "freshness")):
+        fact(label, c.get(key) if c.get(key) is not None else "not measured")
+    fact("Evidence coverage", f'{round(100 * c["coverage"])}% of the inputs this score can use'
+                              if c.get("coverage") is not None else "not measured")
+    fact("Health", c.get("vitality") or "not measured")
+    fact("Instruction depth", c.get("expertise_verdict") or "not yet graded")
+    if c.get("gh_stars") is not None:   fact("GitHub stars", f'{c["gh_stars"]:,}')
+    if c.get("npm_downloads") is not None: fact("npm downloads", f'{c["npm_downloads"]:,}/week')
+    if c.get("gh_license"):             fact("License", c["gh_license"])
+    fact("Official", "yes" if c.get("official") else "no")
+
+    cmd = install_cmd(c)
+    if cmd:
+        L.append("\n## Install\n\n```sh\n" + cmd + "\n```")
+
+    L.append("\n## Security audit")
+    if c.get("sec_scanned_at") or c.get("sec_advisory_count") is not None:
+        n = c.get("sec_advisory_count") or 0
+        L.append(f"- Known advisories: {n}" + (f" (max severity {c['sec_max_severity']})" if n else ""))
+        L.append("- Install-time script: " + (f"`{c['sec_install_script']}`" if c.get("sec_install_script") else "none declared"))
+        L.append("- Build provenance: " + ("attested" if c.get("sec_provenance") else "not attested"))
+        # JSON string in the export, not a list — joining it directly spells the permission surface
+        # one character at a time. The other two readers in this file already json.loads it.
+        perms = json.loads(c.get("sec_permissions") or "[]")
+        if perms:
+            L.append("- Declared permission surface: " + ", ".join(perms))
+        L.append("\nPermissions are read from DECLARED dependencies only. Nothing is executed, so an "
+                 "empty result means \"nothing declared\", never \"nothing possible\".")
+    else:
+        L.append("Not scanned. We audit npm-published capabilities; this one has no npm package we can "
+                 "resolve, or has not reached the queue. This is not a clean bill of health.")
+    L.append(f"\n---\nMeasured {gen[:10]} by tashan ({BASE}) from public evidence. Scorer {SCORER}.")
+    return "\n".join(L) + "\n"
+
+
+def install_cmd(c):
+    """The install line, ONE definition, shared by page() and markdown(). See capability.js::installBlock."""
+    if c.get("discontinued"):
+        return None
+    if c.get("kind") == "skill":
+        return "cp -r " + chrome.alias(c["name"]) + " ~/.claude/skills/"
+    if c.get("kind") == "plugin" and c.get("plugin_market_repo") and c.get("title"):
+        return ("/plugin marketplace add " + c["plugin_market_repo"]
+                + "\n/plugin install " + c["name"] + "@" + c["title"])
+    if c.get("npm_pkg"):
+        return "claude mcp add " + chrome.alias(c["name"]) + " -- npx -y " + c["npm_pkg"]
+    return None
+
+
 def main():
     d = json.load(open(DATA))
     gen = d.get("generated_at", "")
@@ -666,10 +772,12 @@ def main():
             c["co_used"] = [x for x in c["co_used"] if slugify(x["id"]) in have]
     for c in caps:
         open(os.path.join(OUT, c["slug"] + ".html"), "w").write(page(c, gen))
+        open(os.path.join(OUT, c["slug"] + ".md"), "w").write(markdown(c, gen))
     # Remove pages for capabilities that dropped out of the export (junk-filtered, deprecated, renamed).
     # Without this they linger as orphans: still crawlable, in no sitemap, linked from nothing, and
     # frozen at whatever asset version last wrote them.
-    stale = [f for f in os.listdir(OUT) if f.endswith(".html") and f[:-5] not in have]
+    stale = [f for f in os.listdir(OUT)
+             if (f.endswith(".html") and f[:-5] not in have) or (f.endswith(".md") and f[:-3] not in have)]
     for f in stale:
         os.remove(os.path.join(OUT, f))
     if stale:
@@ -680,4 +788,10 @@ def main():
     print("sitemap: %d capability URLs + core pages" % len(caps))
 
 if __name__ == "__main__":
-    main()
+    # --selftest runs the pure-logic checks (description clipping + the markdown dossier) with no
+    # filesystem or export needed. _selfcheck() existed for weeks and was called from NOWHERE — a
+    # check that never runs is not a check. tests/run.sh invokes this.
+    if "--selftest" in sys.argv:
+        _selfcheck(); _selfcheck_markdown()
+    else:
+        main()

@@ -1,0 +1,36 @@
+# Vp0
+
+> Search & import free iOS app-design starters from VP0 into your AI builder.
+
+## Facts
+- Page: https://tashan.sh/capability/pkg-vp0-mcp
+- tashan id: pkg:vp0-mcp
+- Source: https://github.com/VP0COM/vp0com-official-site-2026
+- npm: https://www.npmjs.com/package/vp0-mcp
+- Type: npm
+- Category: design
+- tashan score: 42.0 / 100
+- Adoption: 27.0
+- Upkeep: 48.0
+- Freshness: 77.0
+- Evidence coverage: 100% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- npm downloads: 85/week
+- Official: no
+
+## Install
+
+```sh
+claude mcp add vp0 -- npx -y vp0-mcp
+```
+
+## Security audit
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: not attested
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

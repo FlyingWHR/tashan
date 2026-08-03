@@ -740,7 +740,12 @@ GATE_FLOOR = float(os.environ.get("TASHAN_GATE_FLOOR", "0.30"))
 # must not read a capability's removal from the board as its score declining.
 # (The coverage column added alongside is pure persistence and moves no number; it does not need a
 # version of its own, but it rides this one.)
-SCORER_VERSION = os.environ.get("TASHAN_SCORER_VERSION", "s4")
+# s5 (3 Aug 2026): an archived repository now KEEPS the 'abandoned' vitality the archive flag gives it.
+# It was being overwritten by the `recent` branch below, and the push that made an archived repo look
+# recent is usually the commit that closed it — 20 archived capabilities read "active" on the board.
+# Vitality feeds the stable-freshness floor and the gate, so scores moved: a new ruler, not a new
+# reading of the old one, which is exactly what trend() must not compare across.
+SCORER_VERSION = os.environ.get("TASHAN_SCORER_VERSION", "s5")
 # ADOPTION ANCHORS — the value on each evidence channel that reads as fully adopted (axis = 1.0).
 #
 # THE BUG THIS FIXES: these used to be the CORPUS MAX. On power-law data that puts the median at the
@@ -917,6 +922,15 @@ def compute_scores(con):
                         "vitality='abandoned', single_maintainer=?, updated_at=? WHERE id=?",
                         (adoption, freshness, None, single, now_iso, cid))
             continue
+        elif vitality == "abandoned":
+            # ALREADY DECIDED, UPSTREAM, BY THE ARCHIVE FLAG — leave it. `discontinued` deliberately
+            # excludes gh_archived (an archived repo is a statement about the repo, not about whether
+            # the package still works), so an archived row falls through to here still carrying the
+            # 'abandoned' set above. Without this branch `recent` overwrote it with "active", and the
+            # push that made it look recent is usually the commit that CLOSED the project — the exact
+            # wooyun-legacy failure this file already documents, back in a second form. 19 archived
+            # capabilities were reading "active" on the board.
+            pass
         elif recent:
             vitality = "active"
         elif ms is not None or gh_stars is not None:
@@ -1051,7 +1065,7 @@ def official_of(pkg, repo):
 def export(con):
     cols = ["id","name","kind","title","description","npm_pkg","source_repo","registry_status",
             "config_reach","config_repos","stars_median","stars_max","last_seen",
-            "npm_downloads","npm_last_publish","npm_maintainers","npm_versions","npm_deprecated","npm_latest_version","remote_host",
+            "npm_downloads","npm_last_publish","npm_created","npm_maintainers","npm_versions","npm_deprecated","npm_latest_version","remote_host",
             # with `title` (the marketplace NAME) this is what makes a plugin's install printable
             "plugin_market_repo",
             "co_used","adoption","freshness","upkeep","tashan_score",
@@ -1405,6 +1419,31 @@ def export(con):
         o["slug"] = slugify(o["id"])                     # stable per-cap slug (matches gen_badges + prerender)
         caps.append(o)
 
+    # TWO CAPABILITIES, ONE PAGE. slugify() maps every non-alphanumeric run to "-", so `@stripe/mcp`
+    # and `stripe-mcp` both become `pkg-stripe-mcp`: prerender writes one file twice, the second wins,
+    # and a reader who clicks the OFFICIAL Stripe row can land on the unofficial package's dossier
+    # wearing the official one's URL. It reported 6,326 pages while 6,324 files existed — the only
+    # visible symptom, and only if you counted.
+    #
+    # The unscoped id keeps the bare slug: it is the one whose natural slug that is, and it is the
+    # incumbent whose URL is already indexed. The scoped twin takes an `-at-<scope>` form. Chosen over
+    # always-encoding "@" because that is the correct long-term rule but moves ~1,400 live URLs, which
+    # is a migration with redirects, not a bug fix.
+    seen = {}
+    for o in caps:
+        seen.setdefault(o["slug"], []).append(o)
+    for s, group in sorted(seen.items()):
+        if len(group) < 2:
+            continue
+        # unscoped first, then by id, so the winner never depends on export ordering
+        group.sort(key=lambda o: (o["id"].startswith("pkg:@"), o["id"]))
+        for o in group[1:]:
+            scope = re.match(r"pkg:@([^/]+)/", o["id"])
+            o["slug"] = slugify(f"pkg-at-{scope.group(1)}-{o['id'].split('/',1)[1]}") if scope \
+                        else slugify(o["id"] + "-" + o["kind"])
+        print("  slug collision: %s -> %s (kept by %s)"
+              % (s, ", ".join(x["slug"] for x in group[1:]), group[0]["id"]), flush=True)
+
     # The board is trust-RANKED: only caps with a real trust score belong on it. This is also the exact
     # set prerender turns into pages, so capabilities.json, index.json, and /capability/*.html stay aligned
     # (no board row or co-use link can point at a page that doesn't exist).
@@ -1430,15 +1469,26 @@ def export(con):
         # published as a shadow of it. A name with no distinguishing characters left cannot be
         # confused with anything.
         if p.startswith("@") and c.get("official") and norm_name(p):
-            official.setdefault(norm_name(p), p)
+            official.setdefault(norm_name(p), (p, c.get("npm_created")))
     shadowed = 0
     for c in caps:
         p = c.get("npm_pkg") or ""
         if not p or p.startswith("@"):
             continue
         key = norm_name(p)
-        twin = official.get(key) if key else None
-        if twin and twin != p:
+        twin, twin_born = (official.get(key) or (None, None)) if key else (None, None)
+        # YOU CANNOT SHADOW SOMETHING THAT DID NOT EXIST YET. The first time this detector ever fired
+        # on live data it flagged fastify-mcp (14,194 downloads/wk, first published 2025-03-03) and
+        # fastify-mcp-server (2025-06-18) as shadows of @modelcontextprotocol/fastify — which was not
+        # published until 2026-04-01, ten and thirteen months LATER. Both are ordinary community
+        # packages that happened to pick the obvious name first; the normaliser strips "mcp", so
+        # `fastify-mcp` collapses to `fastify` and collides.
+        #
+        # Publication order is a fact, not a judgement, and it disqualifies the accusation outright.
+        # Unknown dates do NOT flag: this note is one step from an accusation of typosquatting, which
+        # this file already says is "a claim we cannot support", so absent evidence it stays silent.
+        born = c.get("npm_created")
+        if twin and twin != p and born and twin_born and born > twin_born:
             c["similar_official"] = twin
             shadowed += 1
     if shadowed:
@@ -1707,7 +1757,7 @@ def export(con):
     # similar_official matches 0 rows today (the CANARY description filter removes the two known
     # shadows before the detector runs) and must ship anyway, so the verdict can fire the day a real
     # typosquat appears — which, unlike a canary, will not announce itself.
-    SLIM = ["id", "name", "label", "kind", "category", "npm_pkg", "official", "registry_status",
+    SLIM = ["id", "name", "label", "kind", "category", "npm_pkg", "official", "registry_status", "slug",
             "config_reach", "npm_downloads", "gh_stars", "adoption", "tashan_score", "upkeep", "vitality",
             "expertise", "expertise_verdict", "npm_deprecated", "gh_archived", "rated",
             "single_maintainer", "similar_official",
@@ -1733,6 +1783,13 @@ def export(con):
     # or the CLI compares to null strictly, so an absent key reads identically to a null one.
     def _slim(c):
         rec = {k: c[k] for k in SLIM if c.get(k) is not None}
+        # SLUG: shipped ONLY when it is not derivable. Clients compute slugify(id) themselves (the
+        # comment above SLIM explains why — a full copy costs ~9 KB gz on first paint), which is right
+        # for 6,323 of 6,326 rows and WRONG for the handful that lost a slug collision: the board
+        # would keep linking `@stripe/mcp` to /capability/pkg-stripe-mcp, which is now the UNOFFICIAL
+        # package's dossier. Three exception rows cost nothing; the derivation stays the default.
+        if rec.get("slug") == slugify(c["id"]):
+            rec.pop("slug", None)
         # The install command can be 300 characters and the board only needs the FACT that one
         # exists; the dossier reads the full value from the bulk export. Shipping the command here
         # would be pure weight on the file every visitor downloads.

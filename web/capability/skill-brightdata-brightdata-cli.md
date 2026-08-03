@@ -1,0 +1,30 @@
+# Brightdata CLI
+
+> Guide for using the Bright Data CLI (brightdata / bdata) to scrape websites, search the web, extract structured data from 40+ platforms, manage proxy zones, and check account budget. Use this skill whenever the user wants to scrape a URL, search Google/Bing/Yandex, extract data from Amazon/LinkedIn/Instagram/TikTok/YouTube/Reddit or any other platform, check their Bright Data balance or zones, or do anything involving web data collection from the terminal. Also trigger when the user mentions brightdata, bdata, web scraping CLI, SERP API, or wants to install Bright Data skills into their coding agent.
+
+## Facts
+- Page: https://tashan.sh/capability/skill-brightdata-brightdata-cli
+- tashan id: skill:brightdata/brightdata-cli
+- Source: https://github.com/brightdata/skills
+- Type: skill
+- Category: other
+- tashan score: not scored (catalogued only — too little public evidence)
+- Adoption: 9.0
+- Upkeep: not measured
+- Freshness: not measured
+- Evidence coverage: not measured
+- Health: not measured
+- Instruction depth: not yet graded
+- Official: no
+
+## Install
+
+```sh
+cp -r brightdata-cli ~/.claude/skills/
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

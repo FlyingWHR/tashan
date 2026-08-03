@@ -124,13 +124,56 @@ def upsert(con, cid, name, title, desc, repo, homepage, official, reach, repos):
         config_reach=excluded.config_reach, config_repos=excluded.config_repos, kind='skill'""",
       (cid, name, title, desc, repo, homepage, 1 if official else 0, reach, repos))
 
+REPO_CAP = int(os.environ.get("SKILL_REPO_CAP", "300"))
+
+
+def discovered_repos(con):
+    """Repos to walk BEYOND the seven seeds, taken from sources we have already ingested.
+
+    THE GAP THIS CLOSES. SKILL_REPOS was seven hand-picked repositories, and that was the entire
+    discovery mechanism — so the skills corpus stalled at ~520 while a competing directory published
+    12,634 skill pages. Skills were not being missed because they are hard to find; nothing was
+    looking anywhere else.
+
+    Deliberately NOT a GitHub crawl for `SKILL.md`: that returns ~333,000 files, 39% of them one
+    template with a vendor name swapped (see ingest_plugins.py). These candidates are repos that
+    already earned their way into the corpus by publishing a plugin or a marketplace manifest — a
+    much stronger prior than "contains a file with this name", and it costs no new search API calls.
+
+    Ordered never-scanned-first so REPO_CAP advances coverage across runs instead of re-walking the
+    same head every night, the same way the registry and npm stages already work.
+    """
+    cand = {r[0] for r in con.execute(
+        "SELECT DISTINCT source_repo FROM capabilities "
+        "WHERE source_repo IS NOT NULL AND source_repo != '' AND kind IN ('plugin','skill')")}
+    cand -= {r for r, _ in SKILL_REPOS}
+    seen = {r[0][7:]: r[1] for r in con.execute(
+        "SELECT source, last_synced FROM sync_state WHERE source LIKE 'skills:%'")}
+    # never scanned (no state) first, then least-recently scanned
+    ordered = sorted(cand, key=lambda r: (seen.get(r) is not None, seen.get(r) or ""))
+    return ordered[:REPO_CAP]
+
+
+def mark_scanned(con, repo, n):
+    """Record the walk so the next run moves on. A repo with ZERO SKILL.md still gets a row — that is
+    the whole point: without it 'scanned, empty' is indistinguishable from 'never scanned' and the cap
+    would re-walk the same barren head every night."""
+    from datetime import datetime, timezone
+    con.execute("INSERT INTO sync_state (source,last_synced,last_cursor,seen,note) VALUES (?,?,?,?,?) "
+                "ON CONFLICT(source) DO UPDATE SET last_synced=excluded.last_synced, seen=excluded.seen",
+                ("skills:" + repo, datetime.now(timezone.utc).isoformat(), None, n, "skill walk"))
+
+
 def main():
     con = build.db()
     cache = load_cache()
     found, thin, scanned = {}, 0, 0
+    extra = [(r, False) for r in discovered_repos(con)]
+    print(f"walking {len(SKILL_REPOS)} seed repos + {len(extra)} discovered "
+          f"(cap {REPO_CAP}/run, never-scanned first)", flush=True)
     # PASS 1 — collect every occurrence of every skill across every repo. Duplicates are the point:
     # they are the adoption signal, so nothing is discarded here.
-    for repo, official in SKILL_REPOS:
+    for repo, official in SKILL_REPOS + extra:
         paths = skill_paths(repo)
         taken = 0
         for d, path, sha in paths:
@@ -160,7 +203,13 @@ def main():
                  # (p50 ~2,950 chars vs a 100-char registry blurb) and the task tagger reads it.
                  "body": md})
             taken += 1; scanned += 1
-        print(f"  {repo}: {len(paths)} SKILL.md found, {taken} scanned", flush=True)
+        mark_scanned(con, repo, taken)
+        con.commit()          # per repo, NOT at the end of the walk: a 300-repo pass takes ~40 minutes
+                              # and anything that interrupts it (ctrl-c, a CI timeout, a dropped proxy)
+                              # would otherwise discard every repo already walked and re-walk them all
+                              # next run — the cap would then never advance past the first slow batch.
+        if taken or len(paths):
+            print(f"  {repo}: {len(paths)} SKILL.md found, {taken} scanned", flush=True)
 
     # PASS 1b — drop auto-generated stubs. Measured on this corpus: 339 of 865 skills shared ONE
     # description template ("Automate {vendor} tasks via Rube MCP (Composio). Always search tools first
@@ -207,7 +256,8 @@ def main():
     with open(CACHE, "w") as f:
         json.dump(cache, f)
     n = con.execute("SELECT COUNT(*) FROM capabilities WHERE kind='skill'").fetchone()[0]
-    print(f"scanned {scanned} SKILL.md across {len(SKILL_REPOS)} repos -> {total} distinct skills "
+    print(f"scanned {scanned} SKILL.md across {len(SKILL_REPOS) + len(extra)} repos "
+          f"({len(SKILL_REPOS)} seed + {len(extra)} discovered) -> {total} distinct skills "
           f"({multi} vendored by more than one repo); skipped {thin} without a usable description; "
           f"{n} skills in DB")
     con.close()

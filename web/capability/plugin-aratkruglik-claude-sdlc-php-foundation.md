@@ -1,0 +1,32 @@
+# Php Foundation
+
+> Shared PHP foundation skills for the SDLC marketplace. Contains stack-agnostic PHP conventions (php-conventions — readonly properties, enums, match, constructor promotion, stricttypes, PSR-12), composer-tooling (PSR-4 autoloading, version constraints, scripts, platform requirements), and php-testing (PHPUnit + Pest structure, data providers, test doubles, fixtures, coverage). No agent, no stack profile — pure shared library. Referenced by laravel-plugin and symfony-plugin.
+
+## Facts
+- Page: https://tashan.sh/capability/plugin-aratkruglik-claude-sdlc-php-foundation
+- tashan id: plugin:aratkruglik/claude-sdlc/php-foundation
+- Source: https://github.com/AratKruglik/claude-sdlc
+- Type: plugin
+- Category: devtools
+- tashan score: 36.0 / 100
+- Adoption: 7.0
+- Upkeep: 63.0
+- Freshness: 97.0
+- Evidence coverage: 84% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- License: MIT
+- Official: no
+
+## Install
+
+```sh
+/plugin marketplace add AratKruglik/claude-sdlc
+/plugin install php-foundation@sdlc-marketplace
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -1,0 +1,33 @@
+# Svatebni Planovac
+
+> Asistent pro přípravu svatby: workflow, master checklist, playbook otázek a založení projektové struktury.
+
+## Facts
+- Page: https://tashan.sh/capability/plugin-hankaa-agent-planovani-svatby-svatebni-planovac
+- tashan id: plugin:hankaa/agent-planovani-svatby/svatebni-planovac
+- Source: https://github.com/hankaa/agent-planovani-svatby
+- Type: plugin
+- Category: design
+- tashan score: 33.0 / 100
+- Adoption: 7.0
+- Upkeep: 59.0
+- Freshness: 88.0
+- Evidence coverage: 84% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- GitHub stars: 0
+- License: MIT
+- Official: no
+
+## Install
+
+```sh
+/plugin marketplace add hankaa/agent-planovani-svatby
+/plugin install svatebni-planovac@svatebni-agent
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.
