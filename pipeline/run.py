@@ -73,10 +73,17 @@ STAGES = [
     # is the only way it reaches the people who bought it. A day this does not run is a day paying
     # customers see "unlock detail" and get nothing — the exact defect the whole feature audit was
     # about. No-ops loudly without CF_* credentials rather than failing the run.
+    # AFTER every page generator, because it counts what is ON DISK. It was a developer-run script
+    # whose freshness tests/test_product_tree.py asserts — so the first pipeline run that changed a
+    # page count failed the suite by construction, and the suite is what gates the daily commit. That
+    # is exactly what happened the first time the pipeline got far enough to reach the tests: 5,933
+    # pages recorded, 5,985 on disk. Regenerating a doc is cheaper than a red build nobody caused.
+    ("product-tree",    ["pipeline/gen_product_tree.py"], "site",
+     "docs/PRODUCT-TREE.md — every route, counted from disk"),
     ("push-paid",       ["pipeline/push_security.py"], "site",
      "the audit's paid half -> Cloudflare KV, where /api/security serves licence holders"),
 ]
-SITE_ONLY = {"badges", "pages", "content", "hubs", "compare", "registry", "push-paid"}
+SITE_ONLY = {"badges", "pages", "content", "hubs", "compare", "registry", "product-tree", "push-paid"}
 
 
 def run(name, argv, full):

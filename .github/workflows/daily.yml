@@ -41,22 +41,45 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # scraper + registry ingest use the gh CLI
         run: python3 pipeline/run.py
 
+      # Runs to completion and records its verdict rather than ending the job here. A red suite must
+      # still stop the SITE from changing — but it must not also destroy the day's measurement, and
+      # those had been the same gate. The first run that got this far failed on a taxonomy ratchet
+      # (tests/test_classify.py, deliberately un-tunable) and would have thrown away an irreplaceable
+      # day of retention data over a content-quality regression.
       - name: Verify before publishing anything
+        id: verify
+        continue-on-error: true
         run: bash tests/run.sh
 
       - name: Commit the day's snapshot
         run: |
           git config user.name  "tashan-bot"
           git config user.email "bot@tashan.sh"
-          git add -A
+          # The snapshot count is the headline: it is the thing that cannot be reconstructed later.
+          # Counted from the COMMITTED shards, not the DB — the runner builds a throwaway DB from
+          # scratch every night, so asking it would report "1 day" forever. data/history is the
+          # series; the DB is a cache of it.
+          DAYS=$(ls data/history/*.csv.gz 2>/dev/null | wc -l | tr -d ' ')
+          if [ "${{ steps.verify.outcome }}" = "success" ]; then
+            git add -A
+            MSG="daily: measure ($DAYS days of retention history)"
+          else
+            # ONLY the retention shards. They live outside web/ and are served from nowhere, so this
+            # publishes nothing even if Pages is ever wired to build from git — while everything that
+            # renders stays behind the gate, uncommitted, exactly as a red suite requires.
+            git add data/history
+            MSG="daily: retention only ($DAYS days) — suite red, site artifacts withheld"
+          fi
           if git diff --cached --quiet; then
             echo "no change today"
           else
-            # The snapshot count is the headline: it is the thing that cannot be reconstructed later.
-            # Counted from the COMMITTED shards, not the DB — the runner builds a throwaway DB from
-            # scratch every night, so asking it would report "1 day" forever. data/history is the
-            # series; the DB is a cache of it.
-            DAYS=$(ls data/history/*.csv.gz 2>/dev/null | wc -l | tr -d ' ')
-            git commit -m "daily: measure ($DAYS days of retention history)"
+            git commit -m "$MSG"
             git push
           fi
+
+      - name: Surface the verification result
+        if: steps.verify.outcome != 'success'
+        run: |
+          echo "::error::tests/run.sh failed. The day's retention shards were preserved; every site"
+          echo "::error::artifact was withheld and is NOT committed. Fix the suite, then re-run."
+          exit 1

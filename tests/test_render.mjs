@@ -33,7 +33,15 @@ function runRender(islandText, pathname, mountSel) {
     querySelectorAll: () => [], addEventListener: () => {}, title: "",
   };
   g.location = { search: "", pathname, replace() { throw new Error("REDIRECT (render should never navigate an island page)"); } };
-  g.window = {}; g.URLSearchParams = URLSearchParams; g.navigator = { clipboard: { writeText() {} } };
+  g.window = {}; g.URLSearchParams = URLSearchParams;
+  // Node 21+ ships a real `navigator` global with only a getter, so plain assignment THROWS
+  // ("Cannot set property navigator of #<Object> which has only a getter") and takes the whole file
+  // with it. Local Node 20 has no such global and assignment worked, so this passed here and died on
+  // the runner — where it had never been reached before, because the pipeline step failed first for
+  // seven days. defineProperty overrides the accessor and is correct on both.
+  Object.defineProperty(g, "navigator", {
+    value: { clipboard: { writeText() {} } }, configurable: true, writable: true,
+  });
   let threw = null;
   const spy = console.error; const errs = [];
   console.error = (...a) => errs.push(a.join(" "));
