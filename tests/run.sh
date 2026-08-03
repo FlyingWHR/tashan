@@ -32,6 +32,10 @@ python3 tests/test_score.py || fail=1
 echo; echo "── scorer version lock ────────────────────────"
 python3 tests/test_scorer_version.py || fail=1
 
+# 3b2b. the retention series is the one thing that cannot be rebuilt — its shards must round-trip
+echo; echo "── signal_history shards ──────────────────────"
+python3 pipeline/snapshot_history.py --selftest || fail=1
+
 # 3b3. every published `npx …` must name a package that resolves to us (shipped wrong twice)
 echo; echo "── npx package name ───────────────────────────"
 python3 tests/test_pkg_name.py || fail=1

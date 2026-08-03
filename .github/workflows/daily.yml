@@ -52,8 +52,11 @@ jobs:
           if git diff --cached --quiet; then
             echo "no change today"
           else
-            # the snapshot count is the headline: it is the thing that cannot be reconstructed later
-            DAYS=$(python3 -c "import sqlite3;print(sqlite3.connect('data/tashan.db').execute(\"select count(distinct substr(at,1,10)) from signal_history\").fetchone()[0])")
+            # The snapshot count is the headline: it is the thing that cannot be reconstructed later.
+            # Counted from the COMMITTED shards, not the DB — the runner builds a throwaway DB from
+            # scratch every night, so asking it would report "1 day" forever. data/history is the
+            # series; the DB is a cache of it.
+            DAYS=$(ls data/history/*.csv.gz 2>/dev/null | wc -l | tr -d ' ')
             git commit -m "daily: measure ($DAYS days of retention history)"
             git push
           fi

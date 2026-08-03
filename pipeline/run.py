@@ -31,6 +31,11 @@ STAGES = [
      "Claude Code plugin marketplaces — the channel good skills are published through"),
     ("registry+npm",    ["pipeline/build.py"], "source",
      "official registry (incremental) + npm quality + scoring + export"),
+    # IMMEDIATELY after scoring, deliberately. run.py keeps going past a failed stage, so putting the
+    # snapshot first means a crash anywhere downstream can still never cost a day of the one series
+    # that cannot be recomputed. Cheap, idempotent, reads only.
+    ("history",         ["pipeline/snapshot_history.py"], "enrich",
+     "signal_history -> committed daily shards, the only copy that survives this machine"),
     ("metadata",        ["pipeline/enrich_meta.py"], "enrich",
      "npm description / homepage / license backfill"),
     ("clean",           ["pipeline/clean.py"], "enrich",

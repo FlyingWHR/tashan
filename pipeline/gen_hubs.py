@@ -20,7 +20,7 @@ the same index, carrying `rated=false` when we have no per-skill evidence rather
 Every page emits ItemList + BreadcrumbList JSON-LD, and every list item links to a real prerendered
 page. Stdlib only. Run after build.py's export (reads web/data/capabilities.json).
 """
-import glob, html, json, os, re, sys
+import datetime as dt, glob, html, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -69,7 +69,12 @@ def clip(text, n):
     cut = t[:n].rsplit(" ", 1)[0].rstrip(" ,.;:—-")
     return (cut or t[:n]) + "…"
 
-NAV = chrome.nav_html()
+# Derived per page from the url head() already receives, NOT a module constant. As a constant it was
+# built with current=None, so browse.html — which IS the "Jobs" nav item — shipped without
+# aria-current="page", and every pipeline run silently reverted the hand-fix that put it back. Hub
+# pages are not nav items, so nothing matches and they render exactly as before.
+def nav_for(url):
+    return chrome.nav_html(url[len(BASE):] if url.startswith(BASE) else url)
 FOOT = chrome.footer_html()
 
 
@@ -95,7 +100,7 @@ def head(title, desc, url, lds):
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>\n'
         '<link rel="stylesheet" href="/css/site.css?v=' + AV + '">\n'
-        + ld + "\n</head>\n<body>\n" + NAV)
+        + ld + "\n</head>\n<body>\n" + nav_for(url))
 
 
 T_SCORE = 'The tashan score, 0–100: upkeep and freshness, gated by real adoption and discounted where the evidence is thin. Every input is public and re-derivable, and no position can be bought.'

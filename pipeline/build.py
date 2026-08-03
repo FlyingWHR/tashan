@@ -640,7 +640,13 @@ def enrich_homepage(con):
             continue
         ent = cache.setdefault(repo, {})
         if not ent.get("homepage"):                       # wrap in an object — a bare-string jq isn't valid JSON
-            ent["homepage"] = (gh_api("/repos/" + repo, "{h: .homepage}") or {}).get("h") or None
+            # gh_api returns (status, data). This was the ONE caller that read the tuple as a dict,
+            # and a non-empty tuple is truthy so `or {}` never caught it — .get() on it killed the
+            # whole daily run for 7 days straight, taking phases D and E (scores + export) with it.
+            # A miss stays None, which the `if not ...` above retries next run; nothing is cached as
+            # missing here, so a transient 403 costs one re-query, never a poisoned entry.
+            _st, _r = gh_api("/repos/" + repo, "{h: .homepage}")
+            ent["homepage"] = (_r or {}).get("h") or None
             time.sleep(0.02)
         hp = ent.get("homepage")
         # keep only a real external URL that isn't just a link back to the repo
