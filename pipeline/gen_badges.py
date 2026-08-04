@@ -64,8 +64,19 @@ def main():
     # any that lost a collision (`@stripe/mcp` vs `stripe-mcp` both derive to pkg-stripe-mcp), which
     # would hand two capabilities one badge file — the second overwriting the first, so a package
     # could embed a badge showing a DIFFERENT package's score in its own README.
+    # BADGE_MIN — a hard platform constraint, not a quality judgement. Cloudflare Pages refuses a
+    # deployment over 20,000 files, and the site hit 21,782: 7,403 pages x2 (html + the new .md
+    # dossier) + 6,453 badges. A badge is the ONLY class here that is purely speculative — one is
+    # written for every scored capability on the chance a maintainer embeds it, and almost none are
+    # ever fetched. Pages and dossiers are the product; badges are an option on one.
+    #
+    # 40 is where the count fits with headroom (3,270 badges -> 18,599 files), not a claim that a
+    # capability scoring 39 is unworthy. It is reversible: lower BADGE_MIN and re-run. The permanent
+    # fix is serving /badge/* from a Pages Function so the file count stops scaling with the corpus
+    # at all — the SVG is a pure function of (score, verdict) and the route is already cached 1h.
+    BADGE_MIN = float(os.environ.get("BADGE_MIN", "40"))
     rows = [(c["id"], c.get("slug") or slug(c["id"]), c["tashan_score"], c.get("expertise_verdict"))
-            for c in caps if c.get("tashan_score") is not None]
+            for c in caps if c.get("tashan_score") is not None and c["tashan_score"] >= BADGE_MIN]
     keep = set()
     for cid, sl, trust, verdict in rows:
         keep.add(sl + ".svg")
