@@ -8,7 +8,7 @@
 - Source: https://github.com/stackfiesta/stackfiesta-mcp
 - npm: https://www.npmjs.com/package/@stackfiesta/mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 46.0 / 100
 - Adoption: 25.0
 - Upkeep: 54.0

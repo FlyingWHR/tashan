@@ -7,7 +7,7 @@
 - tashan id: plugin:stanleynguyen/nsync-skill/nsync
 - Source: https://github.com/stanleynguyen/nsync-skill
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

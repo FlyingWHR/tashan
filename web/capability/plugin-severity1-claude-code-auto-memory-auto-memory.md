@@ -7,7 +7,7 @@
 - tashan id: plugin:severity1/claude-code-auto-memory/auto-memory
 - Source: https://github.com/severity1/claude-code-auto-memory
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 35.0
 - Upkeep: 50.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:johnericforte/claude-skill-blog-assistant/claude-blog-assistant
 - Source: https://github.com/johnericforte/claude-skill-blog-assistant
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 52.0

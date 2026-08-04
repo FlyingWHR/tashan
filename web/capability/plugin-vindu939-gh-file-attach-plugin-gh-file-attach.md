@@ -7,7 +7,7 @@
 - tashan id: plugin:vindu939/gh-file-attach-plugin/gh-file-attach
 - Source: https://github.com/vindu939/gh-file-attach-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

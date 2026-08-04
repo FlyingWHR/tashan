@@ -7,7 +7,7 @@
 - tashan id: plugin:namht1st/prepkit-product/prepkit-product
 - Source: https://github.com/namht1st/prepkit-product
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 48.0

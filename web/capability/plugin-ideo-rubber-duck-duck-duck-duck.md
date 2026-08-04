@@ -7,7 +7,7 @@
 - tashan id: plugin:ideo/rubber-duck/duck-duck-duck
 - Source: https://github.com/ideo/Rubber-Duck
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 55.0 / 100
 - Adoption: 25.0
 - Upkeep: 93.0

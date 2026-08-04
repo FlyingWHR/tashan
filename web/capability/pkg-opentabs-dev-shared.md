@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/shared
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 69.0 / 100
 - Adoption: 45.0
 - Upkeep: 72.0

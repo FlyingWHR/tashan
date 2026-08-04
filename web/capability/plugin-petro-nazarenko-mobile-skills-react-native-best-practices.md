@@ -7,7 +7,7 @@
 - tashan id: plugin:petro-nazarenko/mobile-skills/react-native-best-practices
 - Source: https://github.com/petro-nazarenko/mobile-skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 84.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/BitePro/chrome-debugger-mcp
 - npm: https://www.npmjs.com/package/chrome-debugger-mcp
 - Type: npm
-- Category: devtools
+- Category: browser
 - tashan score: 33.0 / 100
 - Adoption: 23.0
 - Upkeep: 46.0

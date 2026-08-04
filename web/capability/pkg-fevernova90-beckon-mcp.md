@@ -7,7 +7,7 @@
 - tashan id: pkg:@fevernova90/beckon-mcp
 - npm: https://www.npmjs.com/package/@fevernova90/beckon-mcp
 - Type: npm
-- Category: other
+- Category: files
 - tashan score: 44.0 / 100
 - Adoption: 18.0
 - Upkeep: 59.0

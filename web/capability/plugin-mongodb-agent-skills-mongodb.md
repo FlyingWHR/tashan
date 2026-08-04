@@ -7,7 +7,7 @@
 - tashan id: plugin:mongodb/agent-skills/mongodb
 - Source: https://github.com/mongodb/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 70.0 / 100
 - Adoption: 40.0
 - Upkeep: 98.0

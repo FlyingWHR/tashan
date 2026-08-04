@@ -7,7 +7,7 @@
 - tashan id: plugin:till-cfo/finance-engineer-course/finance-engineer-course
 - Source: https://github.com/Till-CFO/finance-engineer-course
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 56.0

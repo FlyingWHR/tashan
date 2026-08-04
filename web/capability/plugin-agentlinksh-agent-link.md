@@ -7,7 +7,7 @@
 - tashan id: plugin:agentlinksh/agent/link
 - Source: https://github.com/agentlinksh/agent
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 61.0

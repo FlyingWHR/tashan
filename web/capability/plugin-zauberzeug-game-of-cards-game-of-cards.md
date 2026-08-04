@@ -7,7 +7,7 @@
 - tashan id: plugin:zauberzeug/game-of-cards/game-of-cards
 - Source: https://github.com/zauberzeug/game-of-cards
 - Type: plugin
-- Category: productivity
+- Category: finance
 - tashan score: 54.0 / 100
 - Adoption: 18.0
 - Upkeep: 99.0

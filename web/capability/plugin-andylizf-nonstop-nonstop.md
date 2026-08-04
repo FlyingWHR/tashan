@@ -7,7 +7,7 @@
 - tashan id: plugin:andylizf/nonstop/nonstop
 - Source: https://github.com/andylizf/nonstop
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 41.0 / 100
 - Adoption: 38.0
 - Upkeep: 48.0

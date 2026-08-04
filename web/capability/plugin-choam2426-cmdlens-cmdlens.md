@@ -7,7 +7,7 @@
 - tashan id: plugin:choam2426/cmdlens/cmdlens
 - Source: https://github.com/choam2426/CmdLens
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 21.0
 - Upkeep: 41.0

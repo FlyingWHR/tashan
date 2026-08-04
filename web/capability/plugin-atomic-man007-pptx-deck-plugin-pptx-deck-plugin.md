@@ -7,7 +7,7 @@
 - tashan id: plugin:atomic-man007/pptx-deck-plugin/pptx-deck-plugin
 - Source: https://github.com/Atomic-man007/pptx-deck-plugin
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

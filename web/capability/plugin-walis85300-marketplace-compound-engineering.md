@@ -7,7 +7,7 @@
 - tashan id: plugin:walis85300/marketplace/compound-engineering
 - Source: https://github.com/walis85300/marketplace
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:1tommycheung/hydra-swarm/hydra-swarm
 - Source: https://github.com/1TommyCheung/hydra-swarm
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 44.0 / 100
 - Adoption: 13.0
 - Upkeep: 80.0

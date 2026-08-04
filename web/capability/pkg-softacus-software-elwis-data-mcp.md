@@ -7,7 +7,7 @@
 - tashan id: pkg:@softacus-software/elwis-data-mcp
 - npm: https://www.npmjs.com/package/@softacus-software/elwis-data-mcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 54.0 / 100
 - Adoption: 19.0
 - Upkeep: 89.0

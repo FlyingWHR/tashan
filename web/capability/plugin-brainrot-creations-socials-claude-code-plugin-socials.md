@@ -7,7 +7,7 @@
 - tashan id: plugin:brainrot-creations/socials-claude-code-plugin/socials
 - Source: https://github.com/Brainrot-Creations/socials-claude-code-plugin
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 45.0 / 100
 - Adoption: 25.0
 - Upkeep: 58.0

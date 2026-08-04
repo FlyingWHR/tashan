@@ -8,7 +8,7 @@
 - Source: https://github.com/Swwyymm/averra-extract-mcp
 - npm: https://www.npmjs.com/package/@averra/extract-mcp
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 39.0 / 100
 - Adoption: 28.0
 - Upkeep: 51.0

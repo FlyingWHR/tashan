@@ -7,7 +7,7 @@
 - tashan id: skill:FrankL1u/ls-multi-collector
 - Source: https://github.com/FrankL1u/liusir-skills
 - Type: skill
-- Category: other
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

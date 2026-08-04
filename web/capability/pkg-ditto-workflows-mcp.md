@@ -8,7 +8,7 @@
 - Source: https://github.com/gojenaya/ditto-workflows-mcp
 - npm: https://www.npmjs.com/package/ditto-workflows-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 48.0 / 100
 - Adoption: 22.0
 - Upkeep: 60.0

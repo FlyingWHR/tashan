@@ -7,7 +7,7 @@
 - tashan id: plugin:gemini-cli-extensions/firestore-native/firestore-native
 - Source: https://github.com/gemini-cli-extensions/firestore-native
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 65.0 / 100
 - Adoption: 30.0
 - Upkeep: 99.0

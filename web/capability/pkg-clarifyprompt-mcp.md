@@ -8,7 +8,7 @@
 - Source: https://github.com/LumabyteCo/clarifyprompt-mcp
 - npm: https://www.npmjs.com/package/clarifyprompt-mcp
 - Type: npm
-- Category: data
+- Category: security
 - tashan score: 55.0 / 100
 - Adoption: 28.0
 - Upkeep: 71.0

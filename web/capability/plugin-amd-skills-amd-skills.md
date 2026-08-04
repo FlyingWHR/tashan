@@ -7,7 +7,7 @@
 - tashan id: plugin:amd/skills/amd-skills
 - Source: https://github.com/amd/skills
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 69.0 / 100
 - Adoption: 36.0
 - Upkeep: 99.0

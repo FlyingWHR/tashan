@@ -8,7 +8,7 @@
 - Source: https://github.com/NmediaCloud/stockflow-mcp
 - npm: https://www.npmjs.com/package/stockflow-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 41.0 / 100
 - Adoption: 18.0
 - Upkeep: 50.0

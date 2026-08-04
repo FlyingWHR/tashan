@@ -7,7 +7,7 @@
 - tashan id: plugin:mostlyfine/git-worktree-manager/git-worktree
 - Source: https://github.com/mostlyfine/git-worktree-manager
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

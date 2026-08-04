@@ -8,7 +8,7 @@
 - Source: https://github.com/Oortonaut/mcacp
 - npm: https://www.npmjs.com/package/mcacp
 - Type: npm
-- Category: productivity
+- Category: files
 - tashan score: 32.0 / 100
 - Adoption: 28.0
 - Upkeep: 43.0

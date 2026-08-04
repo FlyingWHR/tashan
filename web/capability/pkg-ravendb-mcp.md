@@ -8,7 +8,7 @@
 - Source: https://github.com/ravendb/ravendb-mcp
 - npm: https://www.npmjs.com/package/@ravendb/mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 58.0 / 100
 - Adoption: 33.0
 - Upkeep: 61.0

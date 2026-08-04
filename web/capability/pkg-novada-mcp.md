@@ -8,7 +8,7 @@
 - Source: https://github.com/NovadaLabs/novada-mcp
 - npm: https://www.npmjs.com/package/novada-mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 64.0 / 100
 - Adoption: 35.0
 - Upkeep: 73.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/ggomes/mcp-local-remote-screenshot
 - npm: https://www.npmjs.com/package/mcp-screenshot-server
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 17.0 / 100
 - Adoption: 20.0
 - Upkeep: 36.0

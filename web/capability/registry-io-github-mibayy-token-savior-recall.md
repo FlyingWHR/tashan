@@ -7,7 +7,7 @@
 - tashan id: registry:io.github.Mibayy/token-savior-recall
 - Source: https://github.com/Mibayy/token-savior
 - Type: python
-- Category: productivity
+- Category: ai
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: not measured
 - Upkeep: not measured

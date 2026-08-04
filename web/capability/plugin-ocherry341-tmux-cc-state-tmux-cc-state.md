@@ -7,7 +7,7 @@
 - tashan id: plugin:ocherry341/tmux-cc-state/tmux-cc-state
 - Source: https://github.com/ocherry341/tmux-cc-state
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 52.0

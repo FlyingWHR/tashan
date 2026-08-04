@@ -217,6 +217,27 @@ def declared_labels():
             if cat and pl.get("name"):
                 cid = "plugin:" + repo.lower() + "/" + _re.sub(r"[^a-z0-9]+", "-", str(pl["name"]).lower()).strip("-")
                 out[cid] = cat
+
+    # CAP PER CLASS. These are the plugin AUTHOR'S OWN category, and authors overwhelmingly write
+    # "development" or "productivity": declared labels alone sit at 69.4% top-2 concentration against
+    # 23.4% for the hand-labelled set. Uncapped they became 1,400 of 2,157 training rows — 65% — so
+    # the model was learning the authors' bias rather than the taxonomy, and it showed exactly where
+    # you would expect: macro recall fell through its floor to 52.8% and board concentration climbed
+    # to 65.4% as plugin ingestion grew.
+    #
+    # They are still worth having: they are free, attributable, and they cover vocabulary the hand set
+    # never sees. Capped, they supplement the balanced set instead of drowning it. DECL_CAP is swept
+    # against held-out macro/micro in --eval, not chosen by feel.
+    cap = int(os.environ.get("DECL_CAP", "80"))
+    if cap > 0:
+        kept, per = {}, collections.Counter()
+        # deterministic: sort by id so a re-run keeps the same subset and the eval is reproducible
+        for cid in sorted(out):
+            c = out[cid]
+            if per[c] < cap:
+                kept[cid] = c
+                per[c] += 1
+        out = kept
     return out
 
 

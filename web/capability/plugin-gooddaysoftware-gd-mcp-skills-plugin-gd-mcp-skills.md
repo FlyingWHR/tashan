@@ -7,7 +7,7 @@
 - tashan id: plugin:gooddaysoftware/gd-mcp-skills-plugin/gd-mcp-skills
 - Source: https://github.com/gooddaysoftware/gd-mcp-skills-plugin
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 57.0

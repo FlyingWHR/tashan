@@ -7,7 +7,7 @@
 - tashan id: plugin:42crunch-ai/claude-plugins/42crunch-api-security-testing
 - Source: https://github.com/42Crunch-AI/claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 49.0 / 100
 - Adoption: 15.0
 - Upkeep: 96.0

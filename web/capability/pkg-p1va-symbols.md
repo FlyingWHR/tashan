@@ -8,7 +8,7 @@
 - Source: https://github.com/p1va/symbols
 - npm: https://www.npmjs.com/package/@p1va/symbols
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 55.0 / 100
 - Adoption: 27.0
 - Upkeep: 68.0

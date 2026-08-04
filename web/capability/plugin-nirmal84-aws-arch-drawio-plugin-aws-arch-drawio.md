@@ -7,7 +7,7 @@
 - tashan id: plugin:nirmal84/aws-arch-drawio-plugin/aws-arch-drawio
 - Source: https://github.com/nirmal84/aws-arch-drawio-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:maiconpavi/claude-code-mac-notify/claude-code-mac-notify
 - Source: https://github.com/maiconpavi/claude-code-mac-notify
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 39.0 / 100
 - Adoption: 11.0
 - Upkeep: 63.0

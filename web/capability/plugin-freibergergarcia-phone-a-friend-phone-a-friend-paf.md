@@ -7,7 +7,7 @@
 - tashan id: plugin:freibergergarcia/phone-a-friend/phone-a-friend-paf
 - Source: https://github.com/freibergergarcia/phone-a-friend
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 96.0

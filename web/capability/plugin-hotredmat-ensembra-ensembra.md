@@ -7,7 +7,7 @@
 - tashan id: plugin:hotredmat/ensembra/ensembra
 - Source: https://github.com/HotRedMat/ensembra
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 29.0 / 100
 - Adoption: 11.0
 - Upkeep: 50.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:exovian-developments/waves-cowork-plugin/waves-exovian
 - Source: https://github.com/exovian-developments/waves-cowork-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 28.0

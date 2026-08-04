@@ -7,7 +7,7 @@
 - tashan id: plugin:strvmarv/total-recall/total-recall
 - Source: https://github.com/strvmarv/total-recall
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 54.0 / 100
 - Adoption: 21.0
 - Upkeep: 96.0

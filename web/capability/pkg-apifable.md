@@ -8,7 +8,7 @@
 - Source: https://github.com/ycs77/apifable
 - npm: https://www.npmjs.com/package/apifable
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 45.0 / 100
 - Adoption: 19.0
 - Upkeep: 66.0

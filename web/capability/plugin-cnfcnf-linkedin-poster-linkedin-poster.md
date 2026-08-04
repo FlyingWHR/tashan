@@ -7,7 +7,7 @@
 - tashan id: plugin:cnfcnf/linkedin-poster/linkedin-poster
 - Source: https://github.com/cnfcnf/linkedin-poster
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 70.0

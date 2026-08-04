@@ -7,7 +7,7 @@
 - tashan id: plugin:knowledgepa3/gia-prospecting-engine/gia-prospecting-engine
 - Source: https://github.com/knowledgepa3/gia-prospecting-engine
 - Type: plugin
-- Category: comms
+- Category: other
 - tashan score: 25.0 / 100
 - Adoption: 11.0
 - Upkeep: 45.0

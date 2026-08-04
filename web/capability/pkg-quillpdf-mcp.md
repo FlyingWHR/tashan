@@ -8,7 +8,7 @@
 - Source: https://github.com/PurpleDirective/quillpdf-mcp
 - npm: https://www.npmjs.com/package/quillpdf-mcp
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 47.0 / 100
 - Adoption: 24.0
 - Upkeep: 54.0

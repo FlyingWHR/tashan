@@ -8,7 +8,7 @@
 - Source: https://github.com/Samarth-23-eng/India-MCP
 - npm: https://www.npmjs.com/package/@samarth-23-eng/india-mcp
 - Type: npm
-- Category: data
+- Category: finance
 - tashan score: 48.0 / 100
 - Adoption: 34.0
 - Upkeep: 59.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:defanglabs/defang/defang
 - Source: https://github.com/DefangLabs/defang
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 69.0 / 100
 - Adoption: 36.0
 - Upkeep: 99.0

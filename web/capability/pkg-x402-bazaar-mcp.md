@@ -8,7 +8,7 @@
 - Source: https://github.com/sukrutkrdg/x402-bazaar-mcp
 - npm: https://www.npmjs.com/package/x402-bazaar-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 51.0 / 100
 - Adoption: 25.0
 - Upkeep: 63.0

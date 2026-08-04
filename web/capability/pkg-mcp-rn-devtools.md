@@ -8,7 +8,7 @@
 - Source: https://github.com/pablonortiz/mcp-rn-devtools
 - npm: https://www.npmjs.com/package/mcp-rn-devtools
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 47.0 / 100
 - Adoption: 22.0
 - Upkeep: 58.0

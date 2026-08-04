@@ -7,7 +7,7 @@
 - tashan id: plugin:jerrymwolf/scriptorium-cowork/scriptorium-cowork
 - Source: https://github.com/Jerrymwolf/Scriptorium-Cowork
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 62.0

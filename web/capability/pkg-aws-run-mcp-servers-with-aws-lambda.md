@@ -8,7 +8,7 @@
 - Source: https://github.com/awslabs/run-model-context-protocol-servers-with-aws-lambda
 - npm: https://www.npmjs.com/package/@aws/run-mcp-servers-with-aws-lambda
 - Type: npm
-- Category: other
+- Category: database
 - tashan score: 72.0 / 100
 - Adoption: 48.0
 - Upkeep: 84.0

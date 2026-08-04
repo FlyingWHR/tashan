@@ -8,7 +8,7 @@
 - Source: https://github.com/theYahia/yandex-direct-mcp
 - npm: https://www.npmjs.com/package/@theyahia/yandex-direct-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 47.0 / 100
 - Adoption: 25.0
 - Upkeep: 61.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/B0ydT/r-packagedev-mcp
 - npm: https://www.npmjs.com/package/r-packagedev-mcp
 - Type: npm
-- Category: devtools
+- Category: browser
 - tashan score: 33.0 / 100
 - Adoption: 23.0
 - Upkeep: 43.0

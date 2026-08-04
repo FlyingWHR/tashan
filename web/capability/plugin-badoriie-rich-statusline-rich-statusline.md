@@ -7,7 +7,7 @@
 - tashan id: plugin:badoriie/rich-statusline/rich-statusline
 - Source: https://github.com/badoriie/rich-statusline
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: 89.0

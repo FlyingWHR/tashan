@@ -7,7 +7,7 @@
 - tashan id: plugin:prajhan26/sculpture-plugin/sculpture
 - Source: https://github.com/Prajhan26/sculpture-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 48.0

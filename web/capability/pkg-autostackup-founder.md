@@ -8,7 +8,7 @@
 - Source: https://github.com/Autostackup/autostackup
 - npm: https://www.npmjs.com/package/@autostackup/founder
 - Type: npm
-- Category: productivity
+- Category: other
 - tashan score: 39.0 / 100
 - Adoption: 19.0
 - Upkeep: 50.0

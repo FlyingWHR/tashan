@@ -7,7 +7,7 @@
 - tashan id: plugin:mattgierhart/prd-driven-context-engineering/prd-ce
 - Source: https://github.com/mattgierhart/PRD-driven-context-engineering
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 68.0 / 100
 - Adoption: 37.0
 - Upkeep: 97.0

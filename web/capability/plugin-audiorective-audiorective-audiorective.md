@@ -7,7 +7,7 @@
 - tashan id: plugin:audiorective/audiorective/audiorective
 - Source: https://github.com/audiorective/audiorective
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 81.0

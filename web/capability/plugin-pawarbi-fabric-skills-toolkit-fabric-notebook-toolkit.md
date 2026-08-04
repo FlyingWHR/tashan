@@ -7,7 +7,7 @@
 - tashan id: plugin:pawarbi/fabric-skills-toolkit/fabric-notebook-toolkit
 - Source: https://github.com/pawarbi/fabric-skills-toolkit
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

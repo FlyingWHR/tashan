@@ -7,7 +7,7 @@
 - tashan id: plugin:igorganapolsky/thumbgate/codex-bridge
 - Source: https://github.com/IgorGanapolsky/ThumbGate
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 99.0

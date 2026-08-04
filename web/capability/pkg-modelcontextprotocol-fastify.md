@@ -8,7 +8,7 @@
 - Source: https://github.com/modelcontextprotocol/typescript-sdk
 - npm: https://www.npmjs.com/package/@modelcontextprotocol/fastify
 - Type: npm
-- Category: other
+- Category: files
 - tashan score: 76.0 / 100
 - Adoption: 52.0
 - Upkeep: 91.0

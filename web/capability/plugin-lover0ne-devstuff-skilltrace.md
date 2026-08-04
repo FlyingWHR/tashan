@@ -7,7 +7,7 @@
 - tashan id: plugin:lover0ne/devstuff/skilltrace
 - Source: https://github.com/Lover0ne/devstuff
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

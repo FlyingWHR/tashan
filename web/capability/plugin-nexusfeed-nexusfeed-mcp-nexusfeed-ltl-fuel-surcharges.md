@@ -7,7 +7,7 @@
 - tashan id: plugin:nexusfeed/nexusfeed-mcp/nexusfeed-ltl-fuel-surcharges
 - Source: https://github.com/NexusFeed/nexusfeed-mcp
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 49.0

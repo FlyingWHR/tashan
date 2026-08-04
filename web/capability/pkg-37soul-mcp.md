@@ -8,7 +8,7 @@
 - Source: https://github.com/xnjiang/37soul-mcp
 - npm: https://www.npmjs.com/package/37soul-mcp
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 53.0 / 100
 - Adoption: 27.0
 - Upkeep: 61.0

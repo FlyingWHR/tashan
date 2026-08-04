@@ -7,7 +7,7 @@
 - tashan id: plugin:datadog-labs/claude-code-plugin/datadog
 - Source: https://github.com/datadog-labs/claude-code-plugin
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 55.0 / 100
 - Adoption: 23.0
 - Upkeep: 95.0

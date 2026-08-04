@@ -7,7 +7,7 @@
 - tashan id: plugin:org028658/thesecondbrain/second-brain
 - Source: https://github.com/ORG028658/TheSecondBrain
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 33.0 / 100
 - Adoption: 11.0
 - Upkeep: 67.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:chrisohalloran/elixir-expert-lsp/elixir-expert-lsp
 - Source: https://github.com/chrisohalloran/elixir-expert-lsp
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

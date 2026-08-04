@@ -7,7 +7,7 @@
 - tashan id: plugin:wazionapps/nexo/nexo-brain
 - Source: https://github.com/wazionapps/nexo
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 37.0 / 100
 - Adoption: 26.0
 - Upkeep: 28.0

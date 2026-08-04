@@ -8,7 +8,7 @@
 - Source: https://github.com/Koneisto/HomeAssistant-Light-MCP
 - npm: https://www.npmjs.com/package/ha-mcp-server
 - Type: npm
-- Category: security
+- Category: design
 - tashan score: 24.0 / 100
 - Adoption: 21.0
 - Upkeep: 36.0

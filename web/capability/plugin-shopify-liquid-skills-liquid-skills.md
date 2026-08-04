@@ -7,7 +7,7 @@
 - tashan id: plugin:shopify/liquid-skills/liquid-skills
 - Source: https://github.com/Shopify/liquid-skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

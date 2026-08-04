@@ -7,7 +7,7 @@
 - tashan id: plugin:haxybaxy/claude-tmux-status/tmux-status
 - Source: https://github.com/haxybaxy/claude-tmux-status
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 16.0
 - Upkeep: 47.0

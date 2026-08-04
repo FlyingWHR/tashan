@@ -8,7 +8,7 @@
 - Source: https://github.com/Odrin/rhizome-mcp
 - npm: https://www.npmjs.com/package/rhizome-mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 55.0 / 100
 - Adoption: 30.0
 - Upkeep: 61.0

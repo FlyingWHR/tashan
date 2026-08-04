@@ -7,7 +7,7 @@
 - tashan id: plugin:danielesassoli/gerrit-skills/gerrit
 - Source: https://github.com/DanieleSassoli/gerrit-skills
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 24.0 / 100
 - Adoption: 11.0
 - Upkeep: 43.0

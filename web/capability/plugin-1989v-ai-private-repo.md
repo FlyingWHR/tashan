@@ -7,7 +7,7 @@
 - tashan id: plugin:1989v/ai/private-repo
 - Source: https://github.com/1989v/ai
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

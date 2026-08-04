@@ -7,7 +7,7 @@
 - tashan id: plugin:homenshum/nodebench-ai/nodebench
 - Source: https://github.com/HomenShum/nodebench-ai
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 57.0 / 100
 - Adoption: 22.0
 - Upkeep: 98.0

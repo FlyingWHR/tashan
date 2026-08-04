@@ -8,7 +8,7 @@
 - Source: https://github.com/bibiibjorn/pbi-webview2
 - npm: https://www.npmjs.com/package/pbi-webview2
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 44.0 / 100
 - Adoption: 19.0
 - Upkeep: 56.0

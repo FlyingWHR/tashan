@@ -8,7 +8,7 @@
 - Source: https://github.com/IngTian/witness
 - npm: https://www.npmjs.com/package/@witness-ai/opencode
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 68.0 / 100
 - Adoption: 38.0
 - Upkeep: 79.0

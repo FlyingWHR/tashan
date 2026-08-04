@@ -7,7 +7,7 @@
 - tashan id: plugin:avesalight/roost/roost
 - Source: https://github.com/AvesAlight/roost
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 44.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

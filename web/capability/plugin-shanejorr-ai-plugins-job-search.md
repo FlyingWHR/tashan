@@ -7,7 +7,7 @@
 - tashan id: plugin:shanejorr/ai-plugins/job-search
 - Source: https://github.com/shanejorr/ai-plugins
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

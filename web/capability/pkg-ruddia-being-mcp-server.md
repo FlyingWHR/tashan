@@ -8,7 +8,7 @@
 - Source: https://github.com/wnbhr/being
 - npm: https://www.npmjs.com/package/@ruddia/being-mcp-server
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 34.0 / 100
 - Adoption: 23.0
 - Upkeep: 42.0

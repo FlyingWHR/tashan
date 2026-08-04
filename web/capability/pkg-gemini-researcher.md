@@ -8,7 +8,7 @@
 - Source: https://github.com/capyBearista/gemini-researcher-mcp
 - npm: https://www.npmjs.com/package/gemini-researcher
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 38.0 / 100
 - Adoption: 24.0
 - Upkeep: 50.0

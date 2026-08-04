@@ -8,7 +8,7 @@
 - Source: https://github.com/thfothijn/opzyai-mcp
 - npm: https://www.npmjs.com/package/@opzyai/mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 47.0 / 100
 - Adoption: 25.0
 - Upkeep: 55.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Tchori-Labs/fusion-mcp
 - npm: https://www.npmjs.com/package/@tchori-labs/fusion-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 48.0 / 100
 - Adoption: 22.0
 - Upkeep: 60.0

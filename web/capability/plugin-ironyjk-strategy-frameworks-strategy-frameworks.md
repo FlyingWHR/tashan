@@ -7,7 +7,7 @@
 - tashan id: plugin:ironyjk/strategy-frameworks/strategy-frameworks
 - Source: https://github.com/ironyjk/strategy-frameworks
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 34.0 / 100
 - Adoption: 20.0
 - Upkeep: 50.0

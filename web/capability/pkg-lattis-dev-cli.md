@@ -8,7 +8,7 @@
 - Source: https://github.com/wastedcode/lattis
 - npm: https://www.npmjs.com/package/@lattis-dev/cli
 - Type: npm
-- Category: browser
+- Category: docs
 - tashan score: 39.0 / 100
 - Adoption: 23.0
 - Upkeep: 53.0

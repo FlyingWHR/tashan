@@ -8,7 +8,7 @@
 - Source: https://github.com/gildara/mcp-server
 - npm: https://www.npmjs.com/package/@gildara/mcp-server
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 35.0
 - Upkeep: not measured

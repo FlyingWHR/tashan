@@ -7,7 +7,7 @@
 - tashan id: plugin:sumin220/govcheck/govcheck
 - Source: https://github.com/sumin220/govcheck
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

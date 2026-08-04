@@ -7,7 +7,7 @@
 - tashan id: plugin:petermalmkjaer/content-analysis-plugin/content-analysis
 - Source: https://github.com/PeterMalmkjaer/content-analysis-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

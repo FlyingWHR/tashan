@@ -7,7 +7,7 @@
 - tashan id: plugin:rjspence3/claude-hooks/the-safety-net
 - Source: https://github.com/rjspence3/claude-hooks
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

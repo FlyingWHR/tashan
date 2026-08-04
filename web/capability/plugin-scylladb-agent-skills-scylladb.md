@@ -7,7 +7,7 @@
 - tashan id: plugin:scylladb/agent-skills/scylladb
 - Source: https://github.com/scylladb/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 54.0 / 100
 - Adoption: 18.0
 - Upkeep: 98.0

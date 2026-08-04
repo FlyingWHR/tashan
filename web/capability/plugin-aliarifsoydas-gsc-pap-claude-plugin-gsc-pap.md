@@ -7,7 +7,7 @@
 - tashan id: plugin:aliarifsoydas/gsc-pap-claude-plugin/gsc-pap
 - Source: https://github.com/aliarifsoydas/gsc-pap-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

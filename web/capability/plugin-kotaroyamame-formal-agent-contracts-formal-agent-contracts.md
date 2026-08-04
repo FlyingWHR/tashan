@@ -7,7 +7,7 @@
 - tashan id: plugin:kotaroyamame/formal-agent-contracts/formal-agent-contracts
 - Source: https://github.com/kotaroyamame/formal-agent-contracts
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 45.0 / 100
 - Adoption: 11.0
 - Upkeep: 95.0

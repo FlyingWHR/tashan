@@ -8,7 +8,7 @@
 - Source: https://github.com/EverMint-app/evermint-mcp
 - npm: https://www.npmjs.com/package/evermint-mcp
 - Type: npm
-- Category: ai
+- Category: data
 - tashan score: 39.0 / 100
 - Adoption: 23.0
 - Upkeep: 54.0

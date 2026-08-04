@@ -7,7 +7,7 @@
 - tashan id: plugin:mhaviv/swift-focusengine-agent-skill/swift-focusengine-pro
 - Source: https://github.com/mhaviv/Swift-FocusEngine-Agent-Skill
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 40.0 / 100
 - Adoption: 23.0
 - Upkeep: 55.0

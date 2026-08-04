@@ -7,7 +7,7 @@
 - tashan id: plugin:dailybothq/dailybot-claude-plugin/dailybot
 - Source: https://github.com/DailyBotHQ/dailybot-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: 76.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:acuris-gmbh/acuris-agent-context/acuris
 - Source: https://github.com/Acuris-GmbH/acuris-agent-context
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 80.0

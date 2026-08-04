@@ -7,7 +7,7 @@
 - tashan id: plugin:zhang-yiqian/mvpify/mvpify
 - Source: https://github.com/Zhang-Yiqian/MVPify
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

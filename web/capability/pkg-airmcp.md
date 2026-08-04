@@ -8,7 +8,7 @@
 - Source: https://github.com/heznpc/AirMCP
 - npm: https://www.npmjs.com/package/airmcp
 - Type: npm
-- Category: comms
+- Category: other
 - tashan score: 68.0 / 100
 - Adoption: 40.0
 - Upkeep: 73.0

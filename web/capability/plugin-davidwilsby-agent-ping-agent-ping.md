@@ -7,7 +7,7 @@
 - tashan id: plugin:davidwilsby/agent-ping/agent-ping
 - Source: https://github.com/DavidWilsby/agent-ping
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 35.0 / 100
 - Adoption: 16.0
 - Upkeep: 66.0

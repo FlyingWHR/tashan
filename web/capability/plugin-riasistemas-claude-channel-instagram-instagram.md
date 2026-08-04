@@ -7,7 +7,7 @@
 - tashan id: plugin:riasistemas/claude-channel-instagram/instagram
 - Source: https://github.com/riasistemas/claude-channel-instagram
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

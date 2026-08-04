@@ -7,7 +7,7 @@
 - tashan id: plugin:ryanxkh/learncc/learncc
 - Source: https://github.com/ryanxkh/learncc
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

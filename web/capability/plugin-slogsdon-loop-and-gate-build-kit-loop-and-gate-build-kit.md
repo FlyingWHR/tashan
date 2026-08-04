@@ -7,7 +7,7 @@
 - tashan id: plugin:slogsdon/loop-and-gate-build-kit/loop-and-gate-build-kit
 - Source: https://github.com/slogsdon/loop-and-gate-build-kit
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

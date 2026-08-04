@@ -7,7 +7,7 @@
 - tashan id: plugin:agenticmail/agenticmail/agenticmail
 - Source: https://github.com/agenticmail/agenticmail
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 69.0 / 100
 - Adoption: 36.0
 - Upkeep: 99.0

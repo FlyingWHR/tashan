@@ -7,7 +7,7 @@
 - tashan id: plugin:databricks/databricks-agent-skills/databricks
 - Source: https://github.com/databricks/databricks-agent-skills
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 72.0 / 100
 - Adoption: 42.0
 - Upkeep: 99.0

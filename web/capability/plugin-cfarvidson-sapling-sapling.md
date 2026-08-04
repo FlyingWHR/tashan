@@ -7,7 +7,7 @@
 - tashan id: plugin:cfarvidson/sapling/sapling
 - Source: https://github.com/cfarvidson/sapling
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

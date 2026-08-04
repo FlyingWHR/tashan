@@ -7,7 +7,7 @@
 - tashan id: plugin:dfkai/xtquantai/qmt-skills
 - Source: https://github.com/dfkai/xtquantai
 - Type: plugin
-- Category: data
+- Category: ai
 - tashan score: 49.0 / 100
 - Adoption: 35.0
 - Upkeep: 56.0

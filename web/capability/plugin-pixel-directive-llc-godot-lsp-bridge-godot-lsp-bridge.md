@@ -7,7 +7,7 @@
 - tashan id: plugin:pixel-directive-llc/godot-lsp-bridge/godot-lsp-bridge
 - Source: https://github.com/Pixel-Directive-LLC/godot-lsp-bridge
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 36.0 / 100
 - Adoption: 16.0
 - Upkeep: 55.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:vinngo/agentmancy/agentmancy
 - Source: https://github.com/vinngo/agentmancy
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

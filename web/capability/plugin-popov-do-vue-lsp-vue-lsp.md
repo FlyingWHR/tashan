@@ -7,7 +7,7 @@
 - tashan id: plugin:popov-do/vue-lsp/vue-lsp
 - Source: https://github.com/popov-do/vue-lsp
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 33.0 / 100
 - Adoption: 11.0
 - Upkeep: 67.0

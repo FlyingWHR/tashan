@@ -7,7 +7,7 @@
 - tashan id: plugin:wasp-lang/claude-plugins/wasp
 - Source: https://github.com/wasp-lang/claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 50.0 / 100
 - Adoption: 21.0
 - Upkeep: 92.0

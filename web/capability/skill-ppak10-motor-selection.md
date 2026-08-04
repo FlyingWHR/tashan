@@ -7,7 +7,7 @@
 - tashan id: skill:ppak10/motor-selection
 - Source: https://github.com/ppak10/RocketSmith
 - Type: skill
-- Category: other
+- Category: docs
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

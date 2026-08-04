@@ -7,7 +7,7 @@
 - tashan id: plugin:worktale/worktale-plugin/worktale-claude-code-plugin
 - Source: https://github.com/worktale/worktale-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:abhisekjha/pith/pith
 - Source: https://github.com/abhisekjha/pith
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 55.0 / 100
 - Adoption: 33.0
 - Upkeep: 87.0

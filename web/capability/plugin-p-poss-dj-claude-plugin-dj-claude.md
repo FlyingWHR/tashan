@@ -7,7 +7,7 @@
 - tashan id: plugin:p-poss/dj-claude-plugin/dj-claude
 - Source: https://github.com/p-poss/dj-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 34.0 / 100
 - Adoption: 13.0
 - Upkeep: 55.0

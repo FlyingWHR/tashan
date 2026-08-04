@@ -8,7 +8,7 @@
 - Source: https://github.com/my-mcp-hub/mcp-kit
 - npm: https://www.npmjs.com/package/create-mcp-kit
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 65.0 / 100
 - Adoption: 37.0
 - Upkeep: 71.0

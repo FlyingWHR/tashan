@@ -7,7 +7,7 @@
 - tashan id: plugin:anthropics/claude-plugins-official/frontend-design
 - Source: https://github.com/anthropics/claude-plugins-official
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 46.0 / 100
 - Adoption: 11.0
 - Upkeep: 100.0

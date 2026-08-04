@@ -8,7 +8,7 @@
 - Source: https://github.com/the-artinet-project/artinet-sdk
 - npm: https://www.npmjs.com/package/@artinet/sdk
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 36.0 / 100
 - Adoption: 24.0
 - Upkeep: 58.0

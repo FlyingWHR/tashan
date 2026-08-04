@@ -7,7 +7,7 @@
 - tashan id: plugin:benedixx/claude-rfc/rfc-generator
 - Source: https://github.com/Benedixx/claude-rfc
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

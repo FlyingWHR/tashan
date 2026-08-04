@@ -7,7 +7,7 @@
 - tashan id: plugin:currenjin/tidy-skills/tidy
 - Source: https://github.com/currenjin/tidy-skills
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 25.0 / 100
 - Adoption: 11.0
 - Upkeep: 45.0

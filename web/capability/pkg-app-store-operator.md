@@ -8,7 +8,7 @@
 - Source: https://github.com/meyusufdemirci/app-store-operator
 - npm: https://www.npmjs.com/package/app-store-operator
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 57.0 / 100
 - Adoption: 29.0
 - Upkeep: 69.0

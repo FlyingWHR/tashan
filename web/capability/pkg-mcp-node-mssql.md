@@ -8,7 +8,7 @@
 - Source: https://github.com/cwilby/mcp-node-mssql
 - npm: https://www.npmjs.com/package/mcp-node-mssql
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 17.0 / 100
 - Adoption: 37.0
 - Upkeep: 28.0

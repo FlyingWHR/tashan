@@ -7,7 +7,7 @@
 - tashan id: plugin:hummer98/using-cmux/using-cmux
 - Source: https://github.com/hummer98/using-cmux
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 39.0 / 100
 - Adoption: 28.0
 - Upkeep: 50.0

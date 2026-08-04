@@ -7,7 +7,7 @@
 - tashan id: plugin:chipkorvyn/strategy-consultant/strategy-consultant
 - Source: https://github.com/Chipkorvyn/strategy-consultant
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 16.0
 - Upkeep: 69.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:latiotech/secure-supply-chain-skills/latio-secure-supply-chain-skills
 - Source: https://github.com/latiotech/secure-supply-chain-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 23.0
 - Upkeep: 47.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/chrischall/artsonia-mcp
 - npm: https://www.npmjs.com/package/artsonia-mcp
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 60.0 / 100
 - Adoption: 34.0
 - Upkeep: 65.0

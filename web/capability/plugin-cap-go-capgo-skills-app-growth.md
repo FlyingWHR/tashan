@@ -7,7 +7,7 @@
 - tashan id: plugin:cap-go/capgo-skills/app-growth
 - Source: https://github.com/Cap-go/capgo-skills
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

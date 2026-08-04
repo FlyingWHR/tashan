@@ -7,7 +7,7 @@
 - tashan id: plugin:kishorkukreja/awesome-supply-chain/supply-chain-skills
 - Source: https://github.com/kishorkukreja/awesome-supply-chain
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 55.0 / 100
 - Adoption: 29.0
 - Upkeep: 90.0

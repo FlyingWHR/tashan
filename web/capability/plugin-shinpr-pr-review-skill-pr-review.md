@@ -7,7 +7,7 @@
 - tashan id: plugin:shinpr/pr-review-skill/pr-review
 - Source: https://github.com/shinpr/pr-review-skill
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:praneybehl/llm-wiki-plugin/llm-wiki-plugin
 - Source: https://github.com/praneybehl/llm-wiki-plugin
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 53.0 / 100
 - Adoption: 31.0
 - Upkeep: 62.0

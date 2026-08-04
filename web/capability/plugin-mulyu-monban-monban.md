@@ -7,7 +7,7 @@
 - tashan id: plugin:mulyu/monban/monban
 - Source: https://github.com/Mulyu/monban
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 48.0 / 100
 - Adoption: 11.0
 - Upkeep: 99.0

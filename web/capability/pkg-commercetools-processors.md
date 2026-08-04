@@ -8,7 +8,7 @@
 - Source: https://github.com/commercetools/commerce-mcp
 - npm: https://www.npmjs.com/package/@commercetools/processors
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 55.0 / 100
 - Adoption: 38.0
 - Upkeep: 70.0

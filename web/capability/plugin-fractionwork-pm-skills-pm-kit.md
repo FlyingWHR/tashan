@@ -7,7 +7,7 @@
 - tashan id: plugin:fractionwork/pm-skills/pm-kit
 - Source: https://github.com/fractionwork/pm-skills
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 81.0

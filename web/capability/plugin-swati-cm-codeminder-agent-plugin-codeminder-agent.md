@@ -7,7 +7,7 @@
 - tashan id: plugin:swati-cm/codeminder-agent-plugin/codeminder-agent
 - Source: https://github.com/swati-cm/codeminder-agent-plugin
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 68.0

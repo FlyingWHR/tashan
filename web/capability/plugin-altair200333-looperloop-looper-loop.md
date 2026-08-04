@@ -7,7 +7,7 @@
 - tashan id: plugin:altair200333/looperloop/looper-loop
 - Source: https://github.com/Altair200333/looperloop
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

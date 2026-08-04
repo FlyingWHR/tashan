@@ -7,7 +7,7 @@
 - tashan id: plugin:vvelikodny/velikodnys-claude-code/velikodnys-claude-code
 - Source: https://github.com/vvelikodny/velikodnys-claude-code
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 27.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

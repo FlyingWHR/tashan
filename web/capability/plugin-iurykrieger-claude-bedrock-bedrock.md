@@ -7,7 +7,7 @@
 - tashan id: plugin:iurykrieger/claude-bedrock/bedrock
 - Source: https://github.com/iurykrieger/claude-bedrock
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 48.0 / 100
 - Adoption: 32.0
 - Upkeep: 69.0

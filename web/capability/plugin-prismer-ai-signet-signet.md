@@ -7,7 +7,7 @@
 - tashan id: plugin:prismer-ai/signet/signet
 - Source: https://github.com/Prismer-AI/signet
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 28.0
 - Upkeep: 54.0

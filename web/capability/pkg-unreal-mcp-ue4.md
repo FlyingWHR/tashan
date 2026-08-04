@@ -8,7 +8,7 @@
 - Source: https://github.com/conaman/unreal-mcp-ue4
 - npm: https://www.npmjs.com/package/unreal-mcp-ue4
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 41.0 / 100
 - Adoption: 24.0
 - Upkeep: 55.0

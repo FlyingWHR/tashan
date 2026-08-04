@@ -7,7 +7,7 @@
 - tashan id: plugin:nexteralabs/ne-claude-plugins/skillforge-autoresearch
 - Source: https://github.com/nexteralabs/ne-claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 82.0

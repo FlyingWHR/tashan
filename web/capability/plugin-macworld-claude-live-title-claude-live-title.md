@@ -7,7 +7,7 @@
 - tashan id: plugin:macworld/claude-live-title/claude-live-title
 - Source: https://github.com/macworld/claude-live-title
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 30.0 / 100
 - Adoption: 11.0
 - Upkeep: 51.0

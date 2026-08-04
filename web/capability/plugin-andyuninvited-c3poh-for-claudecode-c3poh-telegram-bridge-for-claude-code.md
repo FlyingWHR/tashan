@@ -7,7 +7,7 @@
 - tashan id: plugin:andyuninvited/c3poh_for_claudecode/c3poh-telegram-bridge-for-claude-code
 - Source: https://github.com/andyuninvited/c3poh_for_claudecode
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

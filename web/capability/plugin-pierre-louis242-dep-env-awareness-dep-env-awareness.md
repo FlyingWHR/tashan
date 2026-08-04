@@ -7,7 +7,7 @@
 - tashan id: plugin:pierre-louis242/dep-env-awareness/dep-env-awareness
 - Source: https://github.com/Pierre-louis242/dep-env-awareness
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

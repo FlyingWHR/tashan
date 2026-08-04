@@ -7,7 +7,7 @@
 - tashan id: plugin:xuhengzhi75/meta-learn/meta-learn
 - Source: https://github.com/xuhengzhi75/meta-learn
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 49.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:talkstream/ru-text/ru-text
 - Source: https://github.com/talkstream/ru-text
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 57.0 / 100
 - Adoption: 36.0
 - Upkeep: 63.0

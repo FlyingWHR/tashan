@@ -7,7 +7,7 @@
 - tashan id: pkg:@mcp_factory/canva-mcp-server
 - npm: https://www.npmjs.com/package/@mcp_factory/canva-mcp-server
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 35.0 / 100
 - Adoption: 30.0
 - Upkeep: 40.0

@@ -7,7 +7,7 @@
 - tashan id: skill:Threading-Needles/awl-conventional-commits
 - Source: https://github.com/Threading-Needles/awl
 - Type: skill
-- Category: other
+- Category: data
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

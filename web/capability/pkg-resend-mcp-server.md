@@ -8,7 +8,7 @@
 - Source: https://github.com/199-biotechnologies/mcp-send-email
 - npm: https://www.npmjs.com/package/resend-mcp-server
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 16.0 / 100
 - Adoption: 22.0
 - Upkeep: 29.0

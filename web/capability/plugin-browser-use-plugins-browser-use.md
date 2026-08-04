@@ -7,7 +7,7 @@
 - tashan id: plugin:browser-use/plugins/browser-use
 - Source: https://github.com/browser-use/plugins
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 48.0 / 100
 - Adoption: 19.0
 - Upkeep: 79.0

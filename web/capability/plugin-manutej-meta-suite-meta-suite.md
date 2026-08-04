@@ -7,7 +7,7 @@
 - tashan id: plugin:manutej/meta-suite/meta-suite
 - Source: https://github.com/manutej/meta-suite
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 38.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

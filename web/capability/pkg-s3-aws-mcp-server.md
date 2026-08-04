@@ -8,7 +8,7 @@
 - Source: https://github.com/pulsemcp/mcp-servers
 - npm: https://www.npmjs.com/package/s3-aws-mcp-server
 - Type: npm
-- Category: productivity
+- Category: database
 - tashan score: 45.0 / 100
 - Adoption: 26.0
 - Upkeep: 55.0

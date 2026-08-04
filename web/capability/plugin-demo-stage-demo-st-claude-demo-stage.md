@@ -7,7 +7,7 @@
 - tashan id: plugin:demo-stage/demo.st-claude/demo-stage
 - Source: https://github.com/demo-stage/demo.st-Claude
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

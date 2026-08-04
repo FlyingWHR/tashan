@@ -8,7 +8,7 @@
 - Source: https://github.com/jyswee/ainpc-cli
 - npm: https://www.npmjs.com/package/ainpc-cli
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 48.0 / 100
 - Adoption: 22.0
 - Upkeep: 61.0

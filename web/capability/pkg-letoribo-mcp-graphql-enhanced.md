@@ -8,7 +8,7 @@
 - Source: https://github.com/letoribo/mcp-graphql-enhanced
 - npm: https://www.npmjs.com/package/@letoribo/mcp-graphql-enhanced
 - Type: npm
-- Category: productivity
+- Category: cloud
 - tashan score: 69.0 / 100
 - Adoption: 42.0
 - Upkeep: 73.0

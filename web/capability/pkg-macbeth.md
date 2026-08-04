@@ -8,7 +8,7 @@
 - Source: https://github.com/wende/macbeth
 - npm: https://www.npmjs.com/package/macbeth
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 60.0 / 100
 - Adoption: 35.0
 - Upkeep: 62.0

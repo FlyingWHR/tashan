@@ -8,7 +8,7 @@
 - Source: https://github.com/marctorrelles/caliu
 - npm: https://www.npmjs.com/package/@caliu-notes/mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 53.0 / 100
 - Adoption: 26.0
 - Upkeep: 66.0

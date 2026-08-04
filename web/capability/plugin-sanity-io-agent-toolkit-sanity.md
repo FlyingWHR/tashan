@@ -7,7 +7,7 @@
 - tashan id: plugin:sanity-io/agent-toolkit/sanity
 - Source: https://github.com/sanity-io/agent-toolkit
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 71.0 / 100
 - Adoption: 40.0
 - Upkeep: 99.0

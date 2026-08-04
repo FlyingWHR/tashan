@@ -7,7 +7,7 @@
 - tashan id: plugin:thedavidwhiteside/claude-code-tokenbudget/claude-code-tokenbudget
 - Source: https://github.com/thedavidwhiteside/claude-code-tokenbudget
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 52.0

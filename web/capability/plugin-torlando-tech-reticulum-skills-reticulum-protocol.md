@@ -7,7 +7,7 @@
 - tashan id: plugin:torlando-tech/reticulum-skills/reticulum-protocol
 - Source: https://github.com/torlando-tech/reticulum-skills
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

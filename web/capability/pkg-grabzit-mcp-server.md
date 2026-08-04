@@ -8,7 +8,7 @@
 - Source: https://github.com/GrabzIt/GrabzIt.MCP
 - npm: https://www.npmjs.com/package/@grabzit/mcp-server
 - Type: npm
-- Category: devtools
+- Category: browser
 - tashan score: 55.0 / 100
 - Adoption: 34.0
 - Upkeep: 55.0

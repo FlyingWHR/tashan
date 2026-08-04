@@ -7,7 +7,7 @@
 - tashan id: plugin:docpler/docpler-claude-plugin/docpler
 - Source: https://github.com/docpler/docpler-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 31.0 / 100
 - Adoption: 15.0
 - Upkeep: 50.0

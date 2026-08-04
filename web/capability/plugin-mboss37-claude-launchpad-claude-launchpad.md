@@ -7,7 +7,7 @@
 - tashan id: plugin:mboss37/claude-launchpad/claude-launchpad
 - Source: https://github.com/mboss37/claude-launchpad
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 18.0
 - Upkeep: 60.0

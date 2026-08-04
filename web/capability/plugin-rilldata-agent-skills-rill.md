@@ -7,7 +7,7 @@
 - tashan id: plugin:rilldata/agent-skills/rill
 - Source: https://github.com/rilldata/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 98.0

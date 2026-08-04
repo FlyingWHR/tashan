@@ -8,7 +8,7 @@
 - Source: https://github.com/microsoft/mcp
 - npm: https://www.npmjs.com/package/@azure/mcp
 - Type: npm
-- Category: devtools
+- Category: docs
 - tashan score: 85.0 / 100
 - Adoption: 70.0
 - Upkeep: 99.0

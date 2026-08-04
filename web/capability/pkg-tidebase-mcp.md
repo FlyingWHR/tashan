@@ -8,7 +8,7 @@
 - Source: https://github.com/BlueprintLabIO/tidebase
 - npm: https://www.npmjs.com/package/@tidebase/mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 20.0
 - Upkeep: 50.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/derNif/payanagent
 - npm: https://www.npmjs.com/package/@payanagent/mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 58.0 / 100
 - Adoption: 32.0
 - Upkeep: 62.0

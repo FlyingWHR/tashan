@@ -7,7 +7,7 @@
 - tashan id: plugin:nguyenthienthanh/aura-frog/aura-frog
 - Source: https://github.com/nguyenthienthanh/aura-frog
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 59.0 / 100
 - Adoption: 25.0
 - Upkeep: 98.0

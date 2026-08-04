@@ -7,7 +7,7 @@
 - tashan id: plugin:agent-sh/prepare-delivery/prepare-delivery
 - Source: https://github.com/agent-sh/prepare-delivery
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 15.0
 - Upkeep: 50.0

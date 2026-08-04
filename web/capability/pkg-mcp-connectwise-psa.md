@@ -8,7 +8,7 @@
 - Source: https://github.com/mspstack/mcp-connectwise-psa
 - npm: https://www.npmjs.com/package/mcp-connectwise-psa
 - Type: npm
-- Category: comms
+- Category: productivity
 - tashan score: 61.0 / 100
 - Adoption: 36.0
 - Upkeep: 64.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/GT-dinuo/server-ops-mcp
 - npm: https://www.npmjs.com/package/server-ops-mcp
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 51.0 / 100
 - Adoption: 27.0
 - Upkeep: 58.0

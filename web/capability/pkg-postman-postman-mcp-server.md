@@ -8,7 +8,7 @@
 - Source: https://github.com/postmanlabs/postman-mcp-server
 - npm: https://www.npmjs.com/package/@postman/postman-mcp-server
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 76.0 / 100
 - Adoption: 56.0
 - Upkeep: 85.0

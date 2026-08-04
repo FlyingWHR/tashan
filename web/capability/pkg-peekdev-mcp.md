@@ -8,7 +8,7 @@
 - Source: https://github.com/Cubenest/rrweb-stack
 - npm: https://www.npmjs.com/package/@peekdev/mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 55.0 / 100
 - Adoption: 29.0
 - Upkeep: 69.0

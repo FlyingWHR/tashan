@@ -7,7 +7,7 @@
 - tashan id: plugin:srclight/claude-code-plugin/srclight
 - Source: https://github.com/srclight/claude-code-plugin
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 27.0 / 100
 - Adoption: 11.0
 - Upkeep: 47.0

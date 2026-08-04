@@ -7,7 +7,7 @@
 - tashan id: plugin:dimanngo/ai-plugins/slide-deck
 - Source: https://github.com/dimanngo/ai-plugins
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

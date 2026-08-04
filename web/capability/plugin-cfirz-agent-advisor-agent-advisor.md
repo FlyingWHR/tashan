@@ -7,7 +7,7 @@
 - tashan id: plugin:cfirz/agent-advisor/agent-advisor
 - Source: https://github.com/cfirz/agent-advisor
 - Type: plugin
-- Category: productivity
+- Category: finance
 - tashan score: 33.0 / 100
 - Adoption: 13.0
 - Upkeep: 65.0

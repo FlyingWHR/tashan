@@ -7,7 +7,7 @@
 - tashan id: skill:coderabbitai/code-review
 - Source: https://github.com/coderabbitai/skills
 - Type: skill
-- Category: other
+- Category: security
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 14.0
 - Upkeep: not measured

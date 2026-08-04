@@ -7,7 +7,7 @@
 - tashan id: plugin:arturseo-geo/cowork-wordpress-publisher/wordpress-publisher
 - Source: https://github.com/arturseo-geo/cowork-wordpress-publisher
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 47.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Ansvar-Systems/newzealand-law-mcp
 - npm: https://www.npmjs.com/package/@ansvar/newzealand-law-mcp
 - Type: npm
-- Category: docs
+- Category: other
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 22.0
 - Upkeep: not measured

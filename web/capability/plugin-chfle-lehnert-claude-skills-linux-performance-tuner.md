@@ -7,7 +7,7 @@
 - tashan id: plugin:chfle/lehnert-claude-skills/linux-performance-tuner
 - Source: https://github.com/chfle/lehnert-claude-skills
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

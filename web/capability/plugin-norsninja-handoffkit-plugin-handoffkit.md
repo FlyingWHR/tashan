@@ -7,7 +7,7 @@
 - tashan id: plugin:norsninja/handoffkit-plugin/handoffkit
 - Source: https://github.com/Norsninja/handoffkit-plugin
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 29.0 / 100
 - Adoption: 11.0
 - Upkeep: 50.0

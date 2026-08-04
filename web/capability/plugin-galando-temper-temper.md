@@ -7,7 +7,7 @@
 - tashan id: plugin:galando/temper/temper
 - Source: https://github.com/galando/temper
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 52.0 / 100
 - Adoption: 22.0
 - Upkeep: 81.0

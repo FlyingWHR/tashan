@@ -7,7 +7,7 @@
 - tashan id: plugin:codyhxyz/experimental-engineer/experimental-engineer
 - Source: https://github.com/codyhxyz/experimental-engineer
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 58.0

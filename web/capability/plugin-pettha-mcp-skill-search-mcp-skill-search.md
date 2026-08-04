@@ -7,7 +7,7 @@
 - tashan id: plugin:pettha/mcp-skill-search/mcp-skill-search
 - Source: https://github.com/PettHa/mcp-skill-search
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 52.0

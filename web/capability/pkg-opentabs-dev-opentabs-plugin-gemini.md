@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/opentabs-plugin-gemini
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 59.0 / 100
 - Adoption: 33.0
 - Upkeep: 67.0

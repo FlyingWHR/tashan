@@ -7,7 +7,7 @@
 - tashan id: plugin:heleninsights-dot/phd-deepread-workflow/phd-deepread
 - Source: https://github.com/heleninsights-dot/phd-deepread-workflow
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 52.0 / 100
 - Adoption: 34.0
 - Upkeep: 59.0

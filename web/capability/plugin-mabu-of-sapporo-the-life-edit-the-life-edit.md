@@ -7,7 +7,7 @@
 - tashan id: plugin:mabu-of-sapporo/the-life-edit/the-life-edit
 - Source: https://github.com/mabu-of-sapporo/The-Life-Edit
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 34.0 / 100
 - Adoption: 11.0
 - Upkeep: 56.0

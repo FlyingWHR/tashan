@@ -7,7 +7,7 @@
 - tashan id: plugin:shopify/shopify-ai-toolkit/shopify-ai-toolkit
 - Source: https://github.com/Shopify/Shopify-AI-Toolkit
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 73.0 / 100
 - Adoption: 46.0
 - Upkeep: 99.0

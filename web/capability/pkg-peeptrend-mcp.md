@@ -8,7 +8,7 @@
 - Source: https://github.com/PeepTrend/PeepTrend.MCP
 - npm: https://www.npmjs.com/package/peeptrend-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 45.0 / 100
 - Adoption: 25.0
 - Upkeep: 54.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:publicala/bake-claude-md-files/bake-claude-md-files
 - Source: https://github.com/publicala/bake-claude-md-files
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 18.0
 - Upkeep: 58.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/KnockOutEZ/wigolo
 - npm: https://www.npmjs.com/package/wigolo
 - Type: npm
-- Category: devtools
+- Category: search
 - tashan score: 67.0 / 100
 - Adoption: 45.0
 - Upkeep: 65.0

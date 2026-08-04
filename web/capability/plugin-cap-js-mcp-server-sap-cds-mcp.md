@@ -7,7 +7,7 @@
 - tashan id: plugin:cap-js/mcp-server/sap-cds-mcp
 - Source: https://github.com/cap-js/mcp-server
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 38.0 / 100
 - Adoption: 11.0
 - Upkeep: 86.0

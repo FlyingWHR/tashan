@@ -7,7 +7,7 @@
 - tashan id: skill:obra/verification-before-completion
 - Source: https://github.com/obra/superpowers
 - Type: skill
-- Category: productivity
+- Category: ai
 - tashan score: 51.0 / 100
 - Adoption: 14.0
 - Upkeep: 99.0

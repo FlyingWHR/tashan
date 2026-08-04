@@ -7,7 +7,7 @@
 - tashan id: plugin:joaquimscosta/arkhe-claude-plugins/lang
 - Source: https://github.com/joaquimscosta/arkhe-claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:dayuanjiang/next-ai-draw-io/next-ai-drawio
 - Source: https://github.com/DayuanJiang/next-ai-draw-io
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 80.0 / 100
 - Adoption: 63.0
 - Upkeep: 99.0

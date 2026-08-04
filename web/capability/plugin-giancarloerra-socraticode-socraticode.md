@@ -7,7 +7,7 @@
 - tashan id: plugin:giancarloerra/socraticode/socraticode
 - Source: https://github.com/giancarloerra/SocratiCode
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 76.0 / 100
 - Adoption: 52.0
 - Upkeep: 99.0

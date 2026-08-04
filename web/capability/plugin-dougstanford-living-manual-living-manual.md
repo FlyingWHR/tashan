@@ -7,7 +7,7 @@
 - tashan id: plugin:dougstanford/living-manual/living-manual
 - Source: https://github.com/dougstanford/living-manual
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 50.0 / 100
 - Adoption: 13.0
 - Upkeep: 99.0

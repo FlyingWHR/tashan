@@ -7,7 +7,7 @@
 - tashan id: plugin:jerry7991/nova-thesis/nova-thesis
 - Source: https://github.com/jerry7991/nova-thesis
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 44.0 / 100
 - Adoption: 21.0
 - Upkeep: 85.0

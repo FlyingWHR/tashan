@@ -7,7 +7,7 @@
 - tashan id: pkg:agentforge-openapi-lint-mcp
 - npm: https://www.npmjs.com/package/agentforge-openapi-lint-mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 39.0 / 100
 - Adoption: 19.0
 - Upkeep: 48.0

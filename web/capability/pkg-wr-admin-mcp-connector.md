@@ -7,7 +7,7 @@
 - tashan id: pkg:wr-admin-mcp-connector
 - npm: https://www.npmjs.com/package/wr-admin-mcp-connector
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 68.0 / 100
 - Adoption: 44.0
 - Upkeep: 67.0

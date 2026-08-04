@@ -7,7 +7,7 @@
 - tashan id: plugin:agentbuildersapp/eight-eyes/eight-eyes
 - Source: https://github.com/AgentBuildersApp/eight-eyes
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 13.0
 - Upkeep: 65.0

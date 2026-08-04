@@ -7,7 +7,7 @@
 - tashan id: plugin:bradautomates/claude-video/watch
 - Source: https://github.com/bradautomates/claude-video
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 68.0 / 100
 - Adoption: 59.0
 - Upkeep: 59.0

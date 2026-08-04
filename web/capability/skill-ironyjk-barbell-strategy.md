@@ -7,7 +7,7 @@
 - tashan id: skill:ironyjk/barbell-strategy
 - Source: https://github.com/ironyjk/investment-framework
 - Type: skill
-- Category: other
+- Category: design
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:heysamtexas/markdown-viewer/mdview
 - Source: https://github.com/heysamtexas/markdown-viewer
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:kronosderet/nexus/nexus-the-cartographer
 - Source: https://github.com/kronosderet/Nexus
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 32.0 / 100
 - Adoption: 13.0
 - Upkeep: 53.0

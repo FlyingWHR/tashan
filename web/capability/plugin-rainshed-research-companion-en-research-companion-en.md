@@ -7,7 +7,7 @@
 - tashan id: plugin:rainshed/research-companion-en/research-companion-en
 - Source: https://github.com/rainshed/research-companion-en
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:axgord/claude-keep-awake/keep-awake
 - Source: https://github.com/AxGord/claude-keep-awake
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 38.0 / 100
 - Adoption: 11.0
 - Upkeep: 62.0

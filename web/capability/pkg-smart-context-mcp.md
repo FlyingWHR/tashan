@@ -8,7 +8,7 @@
 - Source: https://github.com/Arrayo/smart-context-mcp
 - npm: https://www.npmjs.com/package/smart-context-mcp
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 53.0 / 100
 - Adoption: 32.0
 - Upkeep: 67.0

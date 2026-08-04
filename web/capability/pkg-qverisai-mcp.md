@@ -8,7 +8,7 @@
 - Source: https://github.com/QVerisAI/qveris-agent-toolkit
 - npm: https://www.npmjs.com/package/@qverisai/mcp
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 71.0 / 100
 - Adoption: 43.0
 - Upkeep: 83.0

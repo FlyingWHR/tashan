@@ -7,7 +7,7 @@
 - tashan id: plugin:sirmarkz/staff-engineer-mode/staff-engineer-mode
 - Source: https://github.com/sirmarkz/staff-engineer-mode
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 44.0 / 100
 - Adoption: 20.0
 - Upkeep: 61.0

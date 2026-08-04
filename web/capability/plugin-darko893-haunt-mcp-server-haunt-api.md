@@ -7,7 +7,7 @@
 - tashan id: plugin:darko893/haunt-mcp-server/haunt-api
 - Source: https://github.com/Darko893/haunt-mcp-server
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 50.0 / 100
 - Adoption: 13.0
 - Upkeep: 99.0

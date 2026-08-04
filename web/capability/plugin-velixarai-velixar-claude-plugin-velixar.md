@@ -7,7 +7,7 @@
 - tashan id: plugin:velixarai/velixar-claude-plugin/velixar
 - Source: https://github.com/VelixarAi/velixar-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

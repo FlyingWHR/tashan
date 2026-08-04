@@ -7,7 +7,7 @@
 - tashan id: plugin:cloudflare/skills/cloudflare
 - Source: https://github.com/cloudflare/skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 77.0 / 100
 - Adoption: 55.0
 - Upkeep: 98.0

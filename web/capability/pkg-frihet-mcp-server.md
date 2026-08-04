@@ -8,7 +8,7 @@
 - Source: https://github.com/Frihet-io/frihet-mcp
 - npm: https://www.npmjs.com/package/@frihet/mcp-server
 - Type: npm
-- Category: finance
+- Category: productivity
 - tashan score: 66.0 / 100
 - Adoption: 38.0
 - Upkeep: 73.0

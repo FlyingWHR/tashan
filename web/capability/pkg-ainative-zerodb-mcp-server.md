@@ -8,7 +8,7 @@
 - Source: https://github.com/AINative-Studio/ainative-zerodb-mcp-server
 - npm: https://www.npmjs.com/package/ainative-zerodb-mcp-server
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 48.0 / 100
 - Adoption: 21.0
 - Upkeep: 66.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/OverlayQA/mcp
 - npm: https://www.npmjs.com/package/@overlayqa/mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 48.0 / 100
 - Adoption: 25.0
 - Upkeep: 60.0

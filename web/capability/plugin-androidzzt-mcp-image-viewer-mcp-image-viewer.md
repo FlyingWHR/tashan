@@ -7,7 +7,7 @@
 - tashan id: plugin:androidzzt/mcp-image-viewer/mcp-image-viewer
 - Source: https://github.com/androidZzT/mcp-image-viewer
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

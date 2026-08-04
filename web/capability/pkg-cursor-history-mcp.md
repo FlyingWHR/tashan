@@ -8,7 +8,7 @@
 - Source: https://github.com/S2thend/cursor-history-mcp
 - npm: https://www.npmjs.com/package/cursor-history-mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 32.0 / 100
 - Adoption: 28.0
 - Upkeep: 47.0

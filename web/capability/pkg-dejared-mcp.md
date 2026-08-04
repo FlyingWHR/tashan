@@ -8,7 +8,7 @@
 - Source: https://github.com/HuynhKhanh1402/dejared-mcp
 - npm: https://www.npmjs.com/package/dejared-mcp
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 41.0 / 100
 - Adoption: 28.0
 - Upkeep: 54.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:hir4ta/mumei/mumei
 - Source: https://github.com/hir4ta/mumei
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 50.0 / 100
 - Adoption: 13.0
 - Upkeep: 99.0

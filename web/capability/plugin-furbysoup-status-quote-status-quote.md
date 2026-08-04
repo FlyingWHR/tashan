@@ -7,7 +7,7 @@
 - tashan id: plugin:furbysoup/status-quote/status-quote
 - Source: https://github.com/FurbySoup/status-quote
 - Type: plugin
-- Category: docs
+- Category: devtools
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

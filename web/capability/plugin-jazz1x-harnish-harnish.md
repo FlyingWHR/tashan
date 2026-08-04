@@ -7,7 +7,7 @@
 - tashan id: plugin:jazz1x/harnish/harnish
 - Source: https://github.com/jazz1x/harnish
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 35.0 / 100
 - Adoption: 16.0
 - Upkeep: 54.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/zhensherlock/protocol-launcher
 - npm: https://www.npmjs.com/package/protocol-launcher
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 70.0 / 100
 - Adoption: 44.0
 - Upkeep: 73.0

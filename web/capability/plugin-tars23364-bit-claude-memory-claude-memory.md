@@ -7,7 +7,7 @@
 - tashan id: plugin:tars23364-bit/claude-memory/claude-memory
 - Source: https://github.com/tars23364-bit/claude-memory
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

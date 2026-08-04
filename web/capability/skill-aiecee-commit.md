@@ -7,7 +7,7 @@
 - tashan id: skill:aiecee/commit
 - Source: https://github.com/aiecee/foundary
 - Type: skill
-- Category: other
+- Category: docs
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 17.0
 - Upkeep: not measured

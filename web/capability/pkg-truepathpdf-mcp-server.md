@@ -8,7 +8,7 @@
 - Source: https://github.com/JoyTruepath/truepath-pdf-mcp
 - npm: https://www.npmjs.com/package/@truepathpdf/mcp-server
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 46.0 / 100
 - Adoption: 24.0
 - Upkeep: 53.0

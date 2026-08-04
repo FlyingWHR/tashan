@@ -7,7 +7,7 @@
 - tashan id: plugin:hyunmin625/claude-hwp-plugin/claude-hwp-plugin
 - Source: https://github.com/hyunmin625/claude-hwp-plugin
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

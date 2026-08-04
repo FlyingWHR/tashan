@@ -8,7 +8,7 @@
 - Source: https://github.com/gusdeboer/random-profiles-mcp
 - npm: https://www.npmjs.com/package/random-profiles-mcp
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 40.0 / 100
 - Adoption: 24.0
 - Upkeep: 56.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:jmfullerton96/social-banner-plugin/social-banner
 - Source: https://github.com/jmfullerton96/social-banner-plugin
 - Type: plugin
-- Category: comms
+- Category: design
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

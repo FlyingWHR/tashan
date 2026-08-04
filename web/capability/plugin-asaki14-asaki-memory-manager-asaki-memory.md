@@ -7,7 +7,7 @@
 - tashan id: plugin:asaki14/asaki-memory-manager/asaki-memory
 - Source: https://github.com/Asaki14/asaki-memory-manager
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 98.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/HuginnIndustries/CodeCartographer
 - npm: https://www.npmjs.com/package/codecartographer-pi
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 68.0 / 100
 - Adoption: 44.0
 - Upkeep: 69.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/lism-css/lism-css
 - npm: https://www.npmjs.com/package/@lism-css/mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 48.0 / 100
 - Adoption: 22.0
 - Upkeep: 67.0

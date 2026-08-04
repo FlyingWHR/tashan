@@ -7,7 +7,7 @@
 - tashan id: plugin:nicobailon/visual-explainer/visual-explainer-marketplace
 - Source: https://github.com/nicobailon/visual-explainer
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 41.0 / 100
 - Adoption: 7.0
 - Upkeep: 94.0

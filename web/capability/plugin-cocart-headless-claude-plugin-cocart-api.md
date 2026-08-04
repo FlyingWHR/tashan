@@ -7,7 +7,7 @@
 - tashan id: plugin:cocart-headless/claude-plugin/cocart-api
 - Source: https://github.com/cocart-headless/claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 33.0 / 100
 - Adoption: 11.0
 - Upkeep: 67.0

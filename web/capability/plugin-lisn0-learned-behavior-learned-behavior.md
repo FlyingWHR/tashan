@@ -7,7 +7,7 @@
 - tashan id: plugin:lisn0/learned-behavior/learned-behavior
 - Source: https://github.com/lisn0/learned-behavior
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 33.0 / 100
 - Adoption: 11.0
 - Upkeep: 68.0

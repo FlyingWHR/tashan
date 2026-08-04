@@ -7,7 +7,7 @@
 - tashan id: plugin:laurac8r/claude-damn/claude-damn
 - Source: https://github.com/laurac8r/claude-damn
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 51.0 / 100
 - Adoption: 15.0
 - Upkeep: 99.0

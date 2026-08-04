@@ -8,7 +8,7 @@
 - Source: https://github.com/mouhabmzibra-rgb/mcp-seo-backlinks
 - npm: https://www.npmjs.com/package/seo-backlinks-mcp
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 47.0 / 100
 - Adoption: 23.0
 - Upkeep: 56.0

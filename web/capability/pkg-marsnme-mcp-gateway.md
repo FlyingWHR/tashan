@@ -8,7 +8,7 @@
 - Source: https://github.com/Marsmanleo/MarsNMe
 - npm: https://www.npmjs.com/package/@marsnme/mcp-gateway
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 54.0 / 100
 - Adoption: 30.0
 - Upkeep: 64.0

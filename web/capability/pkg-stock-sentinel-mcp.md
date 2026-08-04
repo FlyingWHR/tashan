@@ -7,7 +7,7 @@
 - tashan id: pkg:stock-sentinel-mcp
 - npm: https://www.npmjs.com/package/stock-sentinel-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 49.0 / 100
 - Adoption: 25.0
 - Upkeep: 58.0

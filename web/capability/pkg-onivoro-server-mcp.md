@@ -8,7 +8,7 @@
 - Source: https://github.com/onivoro/monorepo
 - npm: https://www.npmjs.com/package/@onivoro/server-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 46.0 / 100
 - Adoption: 26.0
 - Upkeep: 65.0

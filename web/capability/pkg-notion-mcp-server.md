@@ -8,7 +8,7 @@
 - Source: https://github.com/awkoy/notion-mcp-server
 - npm: https://www.npmjs.com/package/notion-mcp-server
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 69.0 / 100
 - Adoption: 45.0
 - Upkeep: 70.0

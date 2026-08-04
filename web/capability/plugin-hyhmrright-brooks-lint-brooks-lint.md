@@ -7,7 +7,7 @@
 - tashan id: plugin:hyhmrright/brooks-lint/brooks-lint
 - Source: https://github.com/hyhmrright/brooks-lint
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 73.0 / 100
 - Adoption: 47.0
 - Upkeep: 98.0

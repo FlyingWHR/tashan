@@ -7,7 +7,7 @@
 - tashan id: plugin:straddleio/ai/straddle
 - Source: https://github.com/straddleio/ai
 - Type: plugin
-- Category: security
+- Category: data
 - tashan score: 37.0 / 100
 - Adoption: 17.0
 - Upkeep: not measured

@@ -8,7 +8,7 @@
 - Source: https://github.com/DrBaher/contract-ops-mcp
 - npm: https://www.npmjs.com/package/contract-ops-mcp
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 55.0 / 100
 - Adoption: 31.0
 - Upkeep: 63.0

@@ -7,7 +7,7 @@
 - tashan id: pkg:@tasklite/mcp
 - npm: https://www.npmjs.com/package/@tasklite/mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 58.0 / 100
 - Adoption: 32.0
 - Upkeep: 64.0

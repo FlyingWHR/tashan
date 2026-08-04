@@ -7,7 +7,7 @@
 - tashan id: plugin:twilio/ai/twilio-developer-kit
 - Source: https://github.com/twilio/ai
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 64.0 / 100
 - Adoption: 30.0
 - Upkeep: 98.0

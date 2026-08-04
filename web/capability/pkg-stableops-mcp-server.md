@@ -8,7 +8,7 @@
 - Source: https://github.com/StableOps/stableops-mcp-server
 - npm: https://www.npmjs.com/package/@stableops/mcp-server
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 60.0 / 100
 - Adoption: 32.0
 - Upkeep: 70.0

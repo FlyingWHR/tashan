@@ -8,7 +8,7 @@
 - Source: https://github.com/OilpriceAPI/mcp-server
 - npm: https://www.npmjs.com/package/oilpriceapi-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 57.0 / 100
 - Adoption: 31.0
 - Upkeep: 68.0

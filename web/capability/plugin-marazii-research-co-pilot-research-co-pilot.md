@@ -7,7 +7,7 @@
 - tashan id: plugin:marazii/research-co-pilot/research-co-pilot
 - Source: https://github.com/Marazii/research-co-pilot
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 46.0 / 100
 - Adoption: 17.0
 - Upkeep: 91.0

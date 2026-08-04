@@ -8,7 +8,7 @@
 - Source: https://github.com/TheoBrigitte/mcp-time
 - npm: https://www.npmjs.com/package/@theo.foobar/mcp-time
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 22.0 / 100
 - Adoption: 31.0
 - Upkeep: 30.0

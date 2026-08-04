@@ -7,7 +7,7 @@
 - tashan id: plugin:eze-is/eze-skills/daily-news
 - Source: https://github.com/eze-is/eze-skills
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

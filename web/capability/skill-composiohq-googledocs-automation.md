@@ -7,7 +7,7 @@
 - tashan id: skill:ComposioHQ/googledocs-automation
 - Source: https://github.com/ComposioHQ/awesome-claude-skills
 - Type: skill
-- Category: productivity
+- Category: docs
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: 98.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/omniologynow-rgb/mcp-server
 - npm: https://www.npmjs.com/package/@omniology/mcp-server
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 58.0 / 100
 - Adoption: 32.0
 - Upkeep: 67.0

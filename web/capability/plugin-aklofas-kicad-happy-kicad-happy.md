@@ -7,7 +7,7 @@
 - tashan id: plugin:aklofas/kicad-happy/kicad-happy
 - Source: https://github.com/aklofas/kicad-happy
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 72.0 / 100
 - Adoption: 45.0
 - Upkeep: 98.0

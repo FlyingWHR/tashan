@@ -7,7 +7,7 @@
 - tashan id: plugin:scandit/scandit-sdk-skills/scandit-sdk
 - Source: https://github.com/scandit/scandit-sdk-skills
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 59.0 / 100
 - Adoption: 23.0
 - Upkeep: 99.0

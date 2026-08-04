@@ -7,7 +7,7 @@
 - tashan id: plugin:ia-pierocv/cc_matrix_channel/matrix
 - Source: https://github.com/IA-PieroCV/cc_matrix_channel
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 23.0
 - Upkeep: 47.0

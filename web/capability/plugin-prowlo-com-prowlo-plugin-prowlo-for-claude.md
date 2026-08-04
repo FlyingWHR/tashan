@@ -7,7 +7,7 @@
 - tashan id: plugin:prowlo-com/prowlo-plugin/prowlo-for-claude
 - Source: https://github.com/prowlo-com/prowlo-plugin
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

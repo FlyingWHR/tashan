@@ -7,7 +7,7 @@
 - tashan id: plugin:gemini-cli-extensions/data-agent-kit-starter-pack/data-agent-kit-starter-pack
 - Source: https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 70.0 / 100
 - Adoption: 39.0
 - Upkeep: 99.0

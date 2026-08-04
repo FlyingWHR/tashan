@@ -7,7 +7,7 @@
 - tashan id: plugin:fcs7/whmcs-mcp-plugin/whmcs-mcp
 - Source: https://github.com/fcs7/whmcs-mcp-plugin
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

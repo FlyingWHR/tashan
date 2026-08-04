@@ -8,7 +8,7 @@
 - Source: https://github.com/smijo-geek/scamcheck-mcp-server
 - npm: https://www.npmjs.com/package/scamcheck-mcp-server
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 46.0 / 100
 - Adoption: 22.0
 - Upkeep: 57.0

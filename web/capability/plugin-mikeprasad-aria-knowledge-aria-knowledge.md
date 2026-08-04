@@ -7,7 +7,7 @@
 - tashan id: plugin:mikeprasad/aria-knowledge/aria-knowledge
 - Source: https://github.com/mikeprasad/aria-knowledge
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 48.0 / 100
 - Adoption: 23.0
 - Upkeep: 63.0

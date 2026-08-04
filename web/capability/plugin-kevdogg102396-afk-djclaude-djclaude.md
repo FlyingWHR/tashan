@@ -7,7 +7,7 @@
 - tashan id: plugin:kevdogg102396-afk/djclaude/djclaude
 - Source: https://github.com/kevdogg102396-afk/djclaude
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 33.0 / 100
 - Adoption: 11.0
 - Upkeep: 67.0

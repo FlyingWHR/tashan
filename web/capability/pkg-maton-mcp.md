@@ -8,7 +8,7 @@
 - Source: https://github.com/maton-ai/agent-toolkit
 - npm: https://www.npmjs.com/package/@maton/mcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 55.0 / 100
 - Adoption: 25.0
 - Upkeep: 78.0

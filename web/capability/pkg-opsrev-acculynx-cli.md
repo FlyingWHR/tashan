@@ -8,7 +8,7 @@
 - Source: https://github.com/opsrev/acculynx-cli
 - npm: https://www.npmjs.com/package/@opsrev/acculynx-cli
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 49.0 / 100
 - Adoption: 24.0
 - Upkeep: 66.0

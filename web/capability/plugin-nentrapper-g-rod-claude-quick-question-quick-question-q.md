@@ -7,7 +7,7 @@
 - tashan id: plugin:nentrapper-g-rod/claude-quick-question/quick-question-q
 - Source: https://github.com/nentrapper-g-rod/claude-quick-question
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 65.0

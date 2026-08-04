@@ -7,7 +7,7 @@
 - tashan id: plugin:jame581/godotprompter/godot-prompter
 - Source: https://github.com/jame581/GodotPrompter
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 72.0 / 100
 - Adoption: 42.0
 - Upkeep: 99.0

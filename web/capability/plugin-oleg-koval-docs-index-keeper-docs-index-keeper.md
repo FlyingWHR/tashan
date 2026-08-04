@@ -7,7 +7,7 @@
 - tashan id: plugin:oleg-koval/docs-index-keeper/docs-index-keeper
 - Source: https://github.com/oleg-koval/docs-index-keeper
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 51.0 / 100
 - Adoption: 15.0
 - Upkeep: 98.0

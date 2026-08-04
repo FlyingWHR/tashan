@@ -7,7 +7,7 @@
 - tashan id: plugin:yn01/claude-plugins/mcpa
 - Source: https://github.com/yn01/claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

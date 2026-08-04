@@ -7,7 +7,7 @@
 - tashan id: plugin:v0o0v/web-minigame-claude-plugin/minigames
 - Source: https://github.com/v0o0v/web-minigame-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:adamfeldman/compound-workflows/compound-workflows
 - Source: https://github.com/adamfeldman/compound-workflows
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 48.0

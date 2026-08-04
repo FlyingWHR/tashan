@@ -7,7 +7,7 @@
 - tashan id: plugin:browser-act/claude-code-browser-act/browser-act
 - Source: https://github.com/browser-act/claude-code-browser-act
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 52.0 / 100
 - Adoption: 24.0
 - Upkeep: 79.0

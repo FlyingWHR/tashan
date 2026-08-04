@@ -8,7 +8,7 @@
 - Source: https://github.com/mcccsm/x402-list-mcp
 - npm: https://www.npmjs.com/package/x402-list-mcp
 - Type: npm
-- Category: ai
+- Category: finance
 - tashan score: 63.0 / 100
 - Adoption: 39.0
 - Upkeep: 64.0

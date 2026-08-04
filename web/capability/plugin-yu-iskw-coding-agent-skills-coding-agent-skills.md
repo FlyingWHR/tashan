@@ -7,7 +7,7 @@
 - tashan id: plugin:yu-iskw/coding-agent-skills/coding-agent-skills
 - Source: https://github.com/yu-iskw/coding-agent-skills
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

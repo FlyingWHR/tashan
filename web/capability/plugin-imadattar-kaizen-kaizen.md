@@ -7,7 +7,7 @@
 - tashan id: plugin:imadattar/kaizen/kaizen
 - Source: https://github.com/imadAttar/kaizen
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 46.0 / 100
 - Adoption: 18.0
 - Upkeep: 77.0

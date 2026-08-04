@@ -7,7 +7,7 @@
 - tashan id: skill:a2ngerer/design-setup
 - Source: https://github.com/a2ngerer/claude_onboarding_agent
 - Type: skill
-- Category: other
+- Category: design
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

@@ -8,7 +8,7 @@
 - Source: https://github.com/Ashish-Bansal/playwright-mcp
 - npm: https://www.npmjs.com/package/playwright-mcp
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 46.0 / 100
 - Adoption: 57.0
 - Upkeep: 50.0

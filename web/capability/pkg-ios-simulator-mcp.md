@@ -8,7 +8,7 @@
 - Source: https://github.com/joshuayoes/ios-simulator-mcp
 - npm: https://www.npmjs.com/package/ios-simulator-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 56.0 / 100
 - Adoption: 52.0
 - Upkeep: 57.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/le141k/Portal-23-Telecom
 - npm: https://www.npmjs.com/package/@23telecom/mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 45.0 / 100
 - Adoption: 20.0
 - Upkeep: 56.0

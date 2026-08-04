@@ -7,7 +7,7 @@
 - tashan id: plugin:arjunrajlaboratory/mycelium/mycelium
 - Source: https://github.com/arjunrajlaboratory/mycelium
 - Type: plugin
-- Category: search
+- Category: productivity
 - tashan score: 59.0 / 100
 - Adoption: 30.0
 - Upkeep: 93.0

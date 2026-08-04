@@ -7,7 +7,7 @@
 - tashan id: plugin:eclipseelips/recoil/recoil
 - Source: https://github.com/EclipseElips/recoil
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 43.0 / 100
 - Adoption: 20.0
 - Upkeep: 60.0

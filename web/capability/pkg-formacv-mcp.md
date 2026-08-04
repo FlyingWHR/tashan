@@ -8,7 +8,7 @@
 - Source: https://github.com/Rocketech-Software-Development/formacv-mcp
 - npm: https://www.npmjs.com/package/@formacv/mcp
 - Type: npm
-- Category: devtools
+- Category: other
 - tashan score: 37.0 / 100
 - Adoption: 23.0
 - Upkeep: 47.0

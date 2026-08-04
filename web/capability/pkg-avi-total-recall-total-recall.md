@@ -8,7 +8,7 @@
 - Source: https://github.com/BAS-More/Total-Recall
 - npm: https://www.npmjs.com/package/@avi-total-recall/total-recall
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 37.0 / 100
 - Adoption: 27.0
 - Upkeep: 50.0

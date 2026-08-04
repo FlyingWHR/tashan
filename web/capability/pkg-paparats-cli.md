@@ -8,7 +8,7 @@
 - Source: https://github.com/IBazylchuk/paparats-mcp
 - npm: https://www.npmjs.com/package/@paparats/cli
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 67.0 / 100
 - Adoption: 41.0
 - Upkeep: 72.0

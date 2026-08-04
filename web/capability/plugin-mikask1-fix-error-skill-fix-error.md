@@ -7,7 +7,7 @@
 - tashan id: plugin:mikask1/fix-error-skill/fix-error
 - Source: https://github.com/Mikask1/fix-error-skill
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 30.0 / 100
 - Adoption: 11.0
 - Upkeep: 51.0

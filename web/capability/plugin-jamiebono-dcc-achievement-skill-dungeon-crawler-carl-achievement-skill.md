@@ -7,7 +7,7 @@
 - tashan id: plugin:jamiebono/dcc-achievement-skill/dungeon-crawler-carl-achievement-skill
 - Source: https://github.com/jamiebono/dcc-achievement-skill
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 15.0
 - Upkeep: 47.0

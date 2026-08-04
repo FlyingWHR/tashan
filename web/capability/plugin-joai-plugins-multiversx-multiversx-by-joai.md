@@ -7,7 +7,7 @@
 - tashan id: plugin:joai-plugins/multiversx/multiversx-by-joai
 - Source: https://github.com/joai-plugins/multiversx
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/ParthJadhav/telegram-notify-mcp
 - npm: https://www.npmjs.com/package/@parthj/telegram-notify-mcp
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 31.0 / 100
 - Adoption: 25.0
 - Upkeep: 41.0

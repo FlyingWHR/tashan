@@ -7,7 +7,7 @@
 - tashan id: plugin:anasahmed07/outlook-classic-mcp/outlook
 - Source: https://github.com/anasahmed07/Outlook-Classic-MCP
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 52.0 / 100
 - Adoption: 20.0
 - Upkeep: 94.0

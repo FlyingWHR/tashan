@@ -8,7 +8,7 @@
 - Source: https://github.com/iboughtbed/trpc-to-mcp
 - npm: https://www.npmjs.com/package/trpc-to-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 30.0 / 100
 - Adoption: 51.0
 - Upkeep: 41.0

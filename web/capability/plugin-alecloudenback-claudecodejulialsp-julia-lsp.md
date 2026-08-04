@@ -7,7 +7,7 @@
 - tashan id: plugin:alecloudenback/claudecodejulialsp/julia-lsp
 - Source: https://github.com/alecloudenback/ClaudeCodeJuliaLSP
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 30.0 / 100
 - Adoption: 21.0
 - Upkeep: 45.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:atreep/project-version-workflow/project-version-workflow
 - Source: https://github.com/ATreep/project-version-workflow
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 41.0 / 100
 - Adoption: 7.0
 - Upkeep: 94.0

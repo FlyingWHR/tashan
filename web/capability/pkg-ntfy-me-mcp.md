@@ -8,7 +8,7 @@
 - Source: https://github.com/gitmotion/ntfy-me-mcp
 - npm: https://www.npmjs.com/package/ntfy-me-mcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 45.0 / 100
 - Adoption: 32.0
 - Upkeep: 60.0

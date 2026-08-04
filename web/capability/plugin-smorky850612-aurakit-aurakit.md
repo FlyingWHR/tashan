@@ -7,7 +7,7 @@
 - tashan id: plugin:smorky850612/aurakit/aurakit
 - Source: https://github.com/smorky850612/Aurakit
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 43.0 / 100
 - Adoption: 28.0
 - Upkeep: 67.0

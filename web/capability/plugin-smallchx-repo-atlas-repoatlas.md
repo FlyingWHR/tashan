@@ -7,7 +7,7 @@
 - tashan id: plugin:smallchx/repo-atlas/repoatlas
 - Source: https://github.com/SmallChX/repo-atlas
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 30.0 / 100
 - Adoption: 11.0
 - Upkeep: 51.0

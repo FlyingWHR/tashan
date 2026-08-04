@@ -8,7 +8,7 @@
 - Source: https://github.com/forgeorbital/forge-agent-gate
 - npm: https://www.npmjs.com/package/forge-agent-gate
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 51.0 / 100
 - Adoption: 27.0
 - Upkeep: 61.0

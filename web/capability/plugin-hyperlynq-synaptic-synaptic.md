@@ -7,7 +7,7 @@
 - tashan id: plugin:hyperlynq/synaptic/synaptic
 - Source: https://github.com/HYPERLYNQ/synaptic
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 58.0

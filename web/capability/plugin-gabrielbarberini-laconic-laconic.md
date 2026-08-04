@@ -7,7 +7,7 @@
 - tashan id: plugin:gabrielbarberini/laconic/laconic
 - Source: https://github.com/GabrielBarberini/laconic
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 57.0 / 100
 - Adoption: 24.0
 - Upkeep: 96.0

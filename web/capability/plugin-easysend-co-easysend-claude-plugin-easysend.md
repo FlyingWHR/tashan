@@ -7,7 +7,7 @@
 - tashan id: plugin:easysend-co/easysend-claude-plugin/easysend
 - Source: https://github.com/Easysend-co/easysend-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

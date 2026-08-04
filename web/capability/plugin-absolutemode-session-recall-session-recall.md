@@ -7,7 +7,7 @@
 - tashan id: plugin:absolutemode/session-recall/session-recall
 - Source: https://github.com/AbsoluteMode/session-recall
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 49.0 / 100
 - Adoption: 18.0
 - Upkeep: 81.0

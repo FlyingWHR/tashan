@@ -7,7 +7,7 @@
 - tashan id: plugin:olostep/olostep-claude-code-plugin/olostep
 - Source: https://github.com/olostep/olostep-claude-code-plugin
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 64.0

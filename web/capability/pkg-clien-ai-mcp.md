@@ -8,7 +8,7 @@
 - Source: https://github.com/AlexOmey/clien-ai
 - npm: https://www.npmjs.com/package/@clien-ai/mcp
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 54.0 / 100
 - Adoption: 24.0
 - Upkeep: 69.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:joaquimscosta/arkhe-claude-plugins/roadmap
 - Source: https://github.com/joaquimscosta/arkhe-claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

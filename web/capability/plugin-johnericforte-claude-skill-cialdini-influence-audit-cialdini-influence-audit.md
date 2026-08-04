@@ -7,7 +7,7 @@
 - tashan id: plugin:johnericforte/claude-skill-cialdini-influence-audit/cialdini-influence-audit
 - Source: https://github.com/johnericforte/claude-skill-cialdini-influence-audit
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 52.0

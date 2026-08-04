@@ -7,7 +7,7 @@
 - tashan id: plugin:crystian/crystools-statusline/crystools-statusline
 - Source: https://github.com/crystian/crystools-statusline
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 17.0
 - Upkeep: 69.0

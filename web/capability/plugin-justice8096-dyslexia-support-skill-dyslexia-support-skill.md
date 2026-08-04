@@ -7,7 +7,7 @@
 - tashan id: plugin:justice8096/dyslexia-support-skill/dyslexia-support-skill
 - Source: https://github.com/justice8096/dyslexia-support-skill
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 59.0

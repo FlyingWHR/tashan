@@ -7,7 +7,7 @@
 - tashan id: plugin:brainit-consulting/dreamforgesoftwareagentskills/dreamforge-audit
 - Source: https://github.com/brainit-consulting/DreamForgeSoftwareAgentSkills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 48.0 / 100
 - Adoption: 18.0
 - Upkeep: 79.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:sebastianbreguel/engram/enam
 - Source: https://github.com/sebastianbreguel/engram
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 35.0 / 100
 - Adoption: 13.0
 - Upkeep: 56.0

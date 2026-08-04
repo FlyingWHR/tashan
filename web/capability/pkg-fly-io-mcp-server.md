@@ -8,7 +8,7 @@
 - Source: https://github.com/pulsemcp/mcp-servers
 - npm: https://www.npmjs.com/package/fly-io-mcp-server
 - Type: npm
-- Category: cloud
+- Category: design
 - tashan score: 45.0 / 100
 - Adoption: 25.0
 - Upkeep: 57.0

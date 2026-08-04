@@ -7,7 +7,7 @@
 - tashan id: plugin:nvidia/skills/nvidia-skills
 - Source: https://github.com/NVIDIA/skills
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 77.0 / 100
 - Adoption: 56.0
 - Upkeep: 99.0

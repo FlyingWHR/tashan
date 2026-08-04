@@ -7,7 +7,7 @@
 - tashan id: plugin:usmanmughaltaleemabad/one-shot-plugin/one-shot-prompting
 - Source: https://github.com/usmanmughaltaleemabad/One-Shot-Plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 73.0

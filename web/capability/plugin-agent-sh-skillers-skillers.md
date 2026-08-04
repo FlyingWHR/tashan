@@ -7,7 +7,7 @@
 - tashan id: plugin:agent-sh/skillers/skillers
 - Source: https://github.com/agent-sh/skillers
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 35.0 / 100
 - Adoption: 15.0
 - Upkeep: 55.0

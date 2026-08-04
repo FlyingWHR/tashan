@@ -7,7 +7,7 @@
 - tashan id: plugin:ordinaldragons/ultimate-workflow/project-starter
 - Source: https://github.com/OrdinalDragons/ultimate-workflow
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 19.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

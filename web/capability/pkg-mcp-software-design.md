@@ -8,7 +8,7 @@
 - Source: https://github.com/qwertymuzaffar/mcp-software-design
 - npm: https://www.npmjs.com/package/mcp-software-design
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 61.0 / 100
 - Adoption: 38.0
 - Upkeep: 60.0

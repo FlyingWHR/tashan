@@ -8,7 +8,7 @@
 - Source: https://github.com/pulsemcp/mcp-servers
 - npm: https://www.npmjs.com/package/@pulsemcp/svg-tracer-mcp-server
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 50.0 / 100
 - Adoption: 27.0
 - Upkeep: 67.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:clearclown/claude-code-aida-red/aida
 - Source: https://github.com/clearclown/claude-code-aida-red
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

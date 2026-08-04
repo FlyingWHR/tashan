@@ -7,7 +7,7 @@
 - tashan id: plugin:tirandagan/claude-diagrams/diagrams
 - Source: https://github.com/tirandagan/claude-diagrams
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 27.0 / 100
 - Adoption: 15.0
 - Upkeep: 45.0

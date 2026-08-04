@@ -7,7 +7,7 @@
 - tashan id: plugin:kevin-hs-sohn/hipocampus/hipocampus
 - Source: https://github.com/kevin-hs-sohn/hipocampus
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 49.0 / 100
 - Adoption: 36.0
 - Upkeep: 56.0

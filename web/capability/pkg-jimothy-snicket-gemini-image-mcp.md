@@ -8,7 +8,7 @@
 - Source: https://github.com/JimothySnicket/gemini-image-mcp
 - npm: https://www.npmjs.com/package/@jimothy-snicket/gemini-image-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 49.0 / 100
 - Adoption: 30.0
 - Upkeep: 58.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:cloudplayplus/cloudplayplus-cc-plugin/cloudplayplus
 - Source: https://github.com/CloudPlayPlus/cloudplayplus-cc-plugin
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

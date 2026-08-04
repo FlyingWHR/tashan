@@ -8,7 +8,7 @@
 - Source: https://github.com/LembaGang/headless-oracle-v5
 - npm: https://www.npmjs.com/package/headless-oracle-mcp
 - Type: npm
-- Category: finance
+- Category: security
 - tashan score: 34.0 / 100
 - Adoption: 22.0
 - Upkeep: 47.0

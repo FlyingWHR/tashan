@@ -7,7 +7,7 @@
 - tashan id: plugin:dilee/claude-extensions/gemini-tools
 - Source: https://github.com/dilee/claude-extensions
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

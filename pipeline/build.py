@@ -1913,6 +1913,28 @@ def export(con):
 
     slim_out = os.path.join(ROOT, "web", "data", "index.json")
     json.dump(slim, open(slim_out, "w"))
+
+    # BOARD = THE RANKED SLICE ONLY, and it is what a browser downloads first.
+    #
+    # index.json carries ranked rows PLUS catalogued (unrated) ones, and the published tashan-cli
+    # reads it — so it cannot be trimmed without silently degrading a CLI already installed on
+    # people's machines. But a board that says "ranked by the tashan score" cannot rank a row with no
+    # score, and those 800 rows cost 16.4 KB gz of a 56.8 KB first paint: 29% of the payload for
+    # entries the ranking cannot order.
+    #
+    # The budget has been raised three times in three days (45 -> 55 -> 60 KB) chasing corpus growth,
+    # which is a treadmill, not a fix. Splitting ends it: the board gets the ranked rows, the
+    # catalogued tail loads only when a reader asks for it, and index.json keeps its contract with
+    # every CLI in the wild.
+    board = dict(slim)
+    board["capabilities"] = [c for c in slim["capabilities"] if c.get("tashan_score") is not None]
+    board["catalogued_at"] = "/data/catalogued.json"
+    json.dump(board, open(os.path.join(ROOT, "web", "data", "board.json"), "w"), separators=(",", ":"))
+    tail = dict(slim)
+    tail["capabilities"] = [c for c in slim["capabilities"] if c.get("tashan_score") is None]
+    json.dump(tail, open(os.path.join(ROOT, "web", "data", "catalogued.json"), "w"), separators=(",", ":"))
+    print(f"Board ({len(board['capabilities'])} ranked) + catalogued tail "
+          f"({len(tail['capabilities'])}) -> web/data/board.json + catalogued.json")
     print(f"\nExported {len(ranked)} rated + {len(catalogued)} catalogued / {tot} total "
           f"({enriched} npm-enriched) -> {out}")
     print(f"Slim index ({len(SLIM)} fields/cap) -> {slim_out}")

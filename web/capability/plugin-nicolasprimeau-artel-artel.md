@@ -7,7 +7,7 @@
 - tashan id: plugin:nicolasprimeau/artel/artel
 - Source: https://github.com/NicolasPrimeau/artel
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 50.0 / 100
 - Adoption: 19.0
 - Upkeep: 81.0

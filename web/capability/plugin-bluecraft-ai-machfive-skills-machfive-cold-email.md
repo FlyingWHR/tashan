@@ -7,7 +7,7 @@
 - tashan id: plugin:bluecraft-ai/machfive-skills/machfive-cold-email
 - Source: https://github.com/Bluecraft-AI/machfive-skills
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:theglitchking/aeon-flux/aeon-flux
 - Source: https://github.com/TheGlitchKing/aeon-flux
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 83.0

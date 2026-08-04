@@ -7,7 +7,7 @@
 - tashan id: skill:kingstinct/bun
 - Source: https://github.com/kingstinct/.github
 - Type: skill
-- Category: other
+- Category: productivity
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

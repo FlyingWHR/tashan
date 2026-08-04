@@ -7,7 +7,7 @@
 - tashan id: plugin:juliusbrussee/caveman/caveman
 - Source: https://github.com/JuliusBrussee/caveman
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 82.0 / 100
 - Adoption: 67.0
 - Upkeep: 99.0

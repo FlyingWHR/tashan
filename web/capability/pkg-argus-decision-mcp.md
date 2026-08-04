@@ -8,7 +8,7 @@
 - Source: https://github.com/commet/argus
 - npm: https://www.npmjs.com/package/argus-decision-mcp
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 72.0 / 100
 - Adoption: 50.0
 - Upkeep: 73.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/10iii/air
 - npm: https://www.npmjs.com/package/@10iii/air-mcp-server
 - Type: npm
-- Category: devtools
+- Category: data
 - tashan score: 39.0 / 100
 - Adoption: 29.0
 - Upkeep: 52.0

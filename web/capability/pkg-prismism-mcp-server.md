@@ -8,7 +8,7 @@
 - Source: https://github.com/prismism-dev/mcp-server
 - npm: https://www.npmjs.com/package/@prismism/mcp-server
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 34.0 / 100
 - Adoption: 25.0
 - Upkeep: 46.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:anthropics/claude-plugins-official/plugin-dev
 - Source: https://github.com/anthropics/claude-plugins-official
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

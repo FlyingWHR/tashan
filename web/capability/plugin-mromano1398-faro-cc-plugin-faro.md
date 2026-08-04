@@ -7,7 +7,7 @@
 - tashan id: plugin:mromano1398/faro-cc-plugin/faro
 - Source: https://github.com/mromano1398/faro-cc-plugin
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

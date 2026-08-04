@@ -7,7 +7,7 @@
 - tashan id: plugin:decibelsystems/tools-plugin/decibel-tools-plugin
 - Source: https://github.com/decibelsystems/tools-plugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

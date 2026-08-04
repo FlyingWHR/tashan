@@ -7,7 +7,7 @@
 - tashan id: plugin:mnzralee/claude-multi-agent-architecture/claude-multi-agent-architecture
 - Source: https://github.com/mnzralee/claude-multi-agent-architecture
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 43.0 / 100
 - Adoption: 17.0
 - Upkeep: 63.0

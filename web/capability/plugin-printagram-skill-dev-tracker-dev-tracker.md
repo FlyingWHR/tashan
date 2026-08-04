@@ -7,7 +7,7 @@
 - tashan id: plugin:printagram/skill-dev-tracker/dev-tracker
 - Source: https://github.com/printagram/skill-dev-tracker
 - Type: plugin
-- Category: devtools
+- Category: files
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 56.0

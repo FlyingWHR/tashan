@@ -7,7 +7,7 @@
 - tashan id: plugin:varianter/plugin-template/example-plugin
 - Source: https://github.com/varianter/plugin-template
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 57.0

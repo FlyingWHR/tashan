@@ -8,7 +8,7 @@
 - Source: https://github.com/DmitriyGolub/threejs-devtools-mcp
 - npm: https://www.npmjs.com/package/threejs-devtools-mcp
 - Type: npm
-- Category: productivity
+- Category: browser
 - tashan score: 39.0 / 100
 - Adoption: 30.0
 - Upkeep: 50.0

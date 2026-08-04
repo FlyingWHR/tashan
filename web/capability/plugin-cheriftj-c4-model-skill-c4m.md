@@ -7,7 +7,7 @@
 - tashan id: plugin:cheriftj/c4-model-skill/c4m
 - Source: https://github.com/cheriftj/c4-model-skill
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 38.0 / 100
 - Adoption: 27.0
 - Upkeep: 50.0

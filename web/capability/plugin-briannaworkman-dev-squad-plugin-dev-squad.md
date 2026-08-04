@@ -7,7 +7,7 @@
 - tashan id: plugin:briannaworkman/dev-squad-plugin/dev-squad
 - Source: https://github.com/briannaworkman/dev-squad-plugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

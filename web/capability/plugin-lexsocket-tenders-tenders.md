@@ -7,7 +7,7 @@
 - tashan id: plugin:lexsocket/tenders/tenders
 - Source: https://github.com/lexsocket/tenders
 - Type: plugin
-- Category: docs
+- Category: productivity
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:ybsbarker/barker-stablecoin-skills/barker-stablecoin-skills
 - Source: https://github.com/YBSbarker/barker-stablecoin-skills
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 51.0 / 100
 - Adoption: 15.0
 - Upkeep: 99.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/dan-fetch-studio/tidyports-integrations
 - npm: https://www.npmjs.com/package/@tidyports/mcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 50.0 / 100
 - Adoption: 26.0
 - Upkeep: 55.0

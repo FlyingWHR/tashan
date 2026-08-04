@@ -7,7 +7,7 @@
 - tashan id: plugin:truenorth-lj/adaptive-agent-skill/adaptive-agent
 - Source: https://github.com/truenorth-lj/adaptive-agent-skill
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 13.0
 - Upkeep: 49.0

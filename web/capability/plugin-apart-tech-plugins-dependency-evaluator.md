@@ -7,7 +7,7 @@
 - tashan id: plugin:apart-tech/plugins/dependency-evaluator
 - Source: https://github.com/apart-tech/plugins
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

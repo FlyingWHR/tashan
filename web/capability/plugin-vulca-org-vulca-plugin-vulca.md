@@ -7,7 +7,7 @@
 - tashan id: plugin:vulca-org/vulca-plugin/vulca
 - Source: https://github.com/vulca-org/vulca-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 42.0 / 100
 - Adoption: 11.0
 - Upkeep: 79.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:ololand-ai/ololand-plugins/ololand-forensic-qoe
 - Source: https://github.com/ololand-ai/ololand-plugins
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 81.0

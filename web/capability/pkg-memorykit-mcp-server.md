@@ -8,7 +8,7 @@
 - Source: https://github.com/rapozoantonio/memorykit
 - npm: https://www.npmjs.com/package/memorykit-mcp-server
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 62.0 / 100
 - Adoption: 37.0
 - Upkeep: 65.0

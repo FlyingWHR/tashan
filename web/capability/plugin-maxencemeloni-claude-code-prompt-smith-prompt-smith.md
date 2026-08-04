@@ -7,7 +7,7 @@
 - tashan id: plugin:maxencemeloni/claude-code-prompt-smith/prompt-smith
 - Source: https://github.com/maxencemeloni/claude-code-prompt-smith
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 40.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

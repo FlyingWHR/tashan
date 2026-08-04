@@ -7,7 +7,7 @@
 - tashan id: plugin:avectats7/clever-comebacks/clever-comebacks
 - Source: https://github.com/avectats7/clever-comebacks
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 35.0 / 100
 - Adoption: 11.0
 - Upkeep: 57.0

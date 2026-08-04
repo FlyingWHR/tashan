@@ -8,7 +8,7 @@
 - Source: https://github.com/stripe/ai
 - npm: https://www.npmjs.com/package/@stripe/mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 69.0 / 100
 - Adoption: 59.0
 - Upkeep: 82.0

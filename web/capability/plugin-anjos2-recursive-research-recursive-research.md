@@ -7,7 +7,7 @@
 - tashan id: plugin:anjos2/recursive-research/recursive-research
 - Source: https://github.com/Anjos2/recursive-research
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 38.0 / 100
 - Adoption: 27.0
 - Upkeep: 50.0

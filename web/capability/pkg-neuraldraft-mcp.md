@@ -8,7 +8,7 @@
 - Source: https://github.com/vbalagovic/neuraldraft-mcp
 - npm: https://www.npmjs.com/package/@neuraldraft/mcp
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 40.0 / 100
 - Adoption: 23.0
 - Upkeep: 54.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:pair-systems-inc/goodmem-claude-code-plugin/claude-code-plugin-for-goodmem-a-memory-infra-for-agents
 - Source: https://github.com/PAIR-Systems-Inc/goodmem-claude-code-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

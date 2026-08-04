@@ -7,7 +7,7 @@
 - tashan id: plugin:jay2zxy/open-crab/open-crab
 - Source: https://github.com/jay2zxy/Open-Crab
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

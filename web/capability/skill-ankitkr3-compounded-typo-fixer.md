@@ -7,7 +7,7 @@
 - tashan id: skill:ankitkr3/compounded-typo-fixer
 - Source: https://github.com/ankitkr3/compounded
 - Type: skill
-- Category: other
+- Category: productivity
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

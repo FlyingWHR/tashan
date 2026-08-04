@@ -8,7 +8,7 @@
 - Source: https://github.com/Darko893/haunt-mcp-server
 - npm: https://www.npmjs.com/package/@hauntapi/mcp-server
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 59.0 / 100
 - Adoption: 30.0
 - Upkeep: 72.0

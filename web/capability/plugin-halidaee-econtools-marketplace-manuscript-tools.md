@@ -7,7 +7,7 @@
 - tashan id: plugin:halidaee/econtools_marketplace/manuscript-tools
 - Source: https://github.com/halidaee/econtools_marketplace
 - Type: plugin
-- Category: finance
+- Category: other
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

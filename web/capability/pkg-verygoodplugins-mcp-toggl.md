@@ -8,7 +8,7 @@
 - Source: https://github.com/verygoodplugins/mcp-toggl
 - npm: https://www.npmjs.com/package/@verygoodplugins/mcp-toggl
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 42.0 / 100
 - Adoption: 24.0
 - Upkeep: 60.0

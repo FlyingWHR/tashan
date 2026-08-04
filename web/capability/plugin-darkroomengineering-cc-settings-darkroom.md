@@ -7,7 +7,7 @@
 - tashan id: plugin:darkroomengineering/cc-settings/darkroom
 - Source: https://github.com/darkroomengineering/cc-settings
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 63.0 / 100
 - Adoption: 28.0
 - Upkeep: 99.0

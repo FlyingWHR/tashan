@@ -7,7 +7,7 @@
 - tashan id: plugin:ynishi/seed-scope/seedscope
 - Source: https://github.com/ynishi/seed-scope
 - Type: plugin
-- Category: cloud
+- Category: productivity
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

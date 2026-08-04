@@ -7,7 +7,7 @@
 - tashan id: plugin:sagarr-shellkode/strands-sdk/strands-sdk
 - Source: https://github.com/sagarr-shellkode/strands-sdk
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 52.0

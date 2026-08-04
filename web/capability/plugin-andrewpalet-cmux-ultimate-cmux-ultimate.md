@@ -7,7 +7,7 @@
 - tashan id: plugin:andrewpalet/cmux-ultimate/cmux-ultimate
 - Source: https://github.com/AndrewPalet/cmux-ultimate
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 11.0
 - Upkeep: 50.0

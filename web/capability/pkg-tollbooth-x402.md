@@ -8,7 +8,7 @@
 - Source: https://github.com/SolomonisBlack/tollbooth-x402
 - npm: https://www.npmjs.com/package/tollbooth-x402
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 52.0 / 100
 - Adoption: 28.0
 - Upkeep: 59.0

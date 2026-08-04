@@ -7,7 +7,7 @@
 - tashan id: plugin:zaxardery8011-design/aiwff-claude-plugin/aiwff
 - Source: https://github.com/zaxardery8011-design/aiwff-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 52.0

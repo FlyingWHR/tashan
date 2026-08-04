@@ -8,7 +8,7 @@
 - Source: https://github.com/CoreWeave-Sandbox/kolide-mcp-server
 - npm: https://www.npmjs.com/package/kolide-mcp-server
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 35.0
 - Upkeep: 48.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:tinyfish-io/tinyfish-web-agent-integrations/tinyfish
 - Source: https://github.com/tinyfish-io/tinyfish-web-agent-integrations
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 58.0 / 100
 - Adoption: 22.0
 - Upkeep: 99.0

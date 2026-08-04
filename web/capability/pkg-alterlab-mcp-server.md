@@ -8,7 +8,7 @@
 - Source: https://github.com/RapierCraft/alterlab-mcp-server
 - npm: https://www.npmjs.com/package/alterlab-mcp-server
 - Type: npm
-- Category: browser
+- Category: data
 - tashan score: 54.0 / 100
 - Adoption: 31.0
 - Upkeep: 64.0

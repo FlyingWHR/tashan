@@ -7,7 +7,7 @@
 - tashan id: plugin:wyf7685/cc-milky-mock/milky-mock
 - Source: https://github.com/wyf7685/cc-milky-mock
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 34.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

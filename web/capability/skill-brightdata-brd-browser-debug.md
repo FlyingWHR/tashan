@@ -7,7 +7,7 @@
 - tashan id: skill:brightdata/brd-browser-debug
 - Source: https://github.com/brightdata/skills
 - Type: skill
-- Category: other
+- Category: browser
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

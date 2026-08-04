@@ -7,7 +7,7 @@
 - tashan id: plugin:cassiiopeia/suh-devops-template/cassiiopeia
 - Source: https://github.com/Cassiiopeia/SUH-DEVOPS-TEMPLATE
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 55.0 / 100
 - Adoption: 19.0
 - Upkeep: 99.0

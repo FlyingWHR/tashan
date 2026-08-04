@@ -7,7 +7,7 @@
 - tashan id: plugin:pattern-ai-labs/agentcall/join-meeting
 - Source: https://github.com/pattern-ai-labs/agentcall
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 59.0 / 100
 - Adoption: 34.0
 - Upkeep: 78.0

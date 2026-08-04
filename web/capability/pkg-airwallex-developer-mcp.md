@@ -7,7 +7,7 @@
 - tashan id: pkg:@airwallex/developer-mcp
 - npm: https://www.npmjs.com/package/@airwallex/developer-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 33.0 / 100
 - Adoption: 37.0
 - Upkeep: 42.0

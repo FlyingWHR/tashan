@@ -8,7 +8,7 @@
 - Source: https://github.com/delmas41/gradusnotation
 - npm: https://www.npmjs.com/package/@gradusmusic/notation-mcp
 - Type: npm
-- Category: devtools
+- Category: search
 - tashan score: 57.0 / 100
 - Adoption: 33.0
 - Upkeep: 63.0

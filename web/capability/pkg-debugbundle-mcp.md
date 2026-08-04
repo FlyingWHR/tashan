@@ -8,7 +8,7 @@
 - Source: https://github.com/debugbundle/debugbundle
 - npm: https://www.npmjs.com/package/@debugbundle/mcp
 - Type: npm
-- Category: security
+- Category: devtools
 - tashan score: 60.0 / 100
 - Adoption: 34.0
 - Upkeep: 71.0

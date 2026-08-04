@@ -7,7 +7,7 @@
 - tashan id: plugin:carta/plugins/carta-investors
 - Source: https://github.com/carta/plugins
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 48.0 / 100
 - Adoption: 11.0
 - Upkeep: 99.0

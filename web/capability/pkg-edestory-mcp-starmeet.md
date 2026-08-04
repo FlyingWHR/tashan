@@ -8,7 +8,7 @@
 - Source: https://github.com/edestory/mcp-starmeet
 - npm: https://www.npmjs.com/package/@edestory/mcp-starmeet
 - Type: npm
-- Category: data
+- Category: devtools
 - tashan score: 46.0 / 100
 - Adoption: 23.0
 - Upkeep: 54.0

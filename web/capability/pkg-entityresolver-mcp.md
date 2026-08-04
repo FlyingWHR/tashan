@@ -7,7 +7,7 @@
 - tashan id: pkg:entityresolver-mcp
 - npm: https://www.npmjs.com/package/entityresolver-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 44.0 / 100
 - Adoption: 20.0
 - Upkeep: 54.0

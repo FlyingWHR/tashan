@@ -7,7 +7,7 @@
 - tashan id: pkg:@aputime/mcp
 - npm: https://www.npmjs.com/package/@aputime/mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 50.0 / 100
 - Adoption: 21.0
 - Upkeep: 71.0

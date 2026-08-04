@@ -7,7 +7,7 @@
 - tashan id: plugin:innestic/claude-relay/claude-relay
 - Source: https://github.com/Innestic/claude-relay
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 56.0 / 100
 - Adoption: 30.0
 - Upkeep: 78.0

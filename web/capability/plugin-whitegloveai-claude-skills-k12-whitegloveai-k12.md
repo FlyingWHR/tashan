@@ -7,7 +7,7 @@
 - tashan id: plugin:whitegloveai/claude-skills-k12/whitegloveai-k12
 - Source: https://github.com/whitegloveai/claude-skills-k12
 - Type: plugin
-- Category: other
+- Category: finance
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 71.0

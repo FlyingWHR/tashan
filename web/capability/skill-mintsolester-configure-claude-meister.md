@@ -7,7 +7,7 @@
 - tashan id: skill:Mintsolester/configure-claude-meister
 - Source: https://github.com/Mintsolester/claude-meister
 - Type: skill
-- Category: other
+- Category: comms
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

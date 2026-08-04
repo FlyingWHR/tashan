@@ -8,7 +8,7 @@
 - Source: https://github.com/nvrenshiren/mcp
 - npm: https://www.npmjs.com/package/@dawipong/mcp-iconfont
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 43.0 / 100
 - Adoption: 19.0
 - Upkeep: 55.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/PsYcGoD/sage
 - npm: https://www.npmjs.com/package/psycgod-sage
 - Type: npm
-- Category: data
+- Category: devtools
 - tashan score: 65.0 / 100
 - Adoption: 38.0
 - Upkeep: 70.0

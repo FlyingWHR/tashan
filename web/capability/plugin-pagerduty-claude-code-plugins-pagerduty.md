@@ -7,7 +7,7 @@
 - tashan id: plugin:pagerduty/claude-code-plugins/pagerduty
 - Source: https://github.com/PagerDuty/claude-code-plugins
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 21.0
 - Upkeep: 70.0

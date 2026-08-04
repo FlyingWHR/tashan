@@ -8,7 +8,7 @@
 - Source: https://github.com/nguynvnhai116-collab/hart-future
 - npm: https://www.npmjs.com/package/@hartora/mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 50.0 / 100
 - Adoption: 27.0
 - Upkeep: 56.0

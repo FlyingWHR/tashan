@@ -7,7 +7,7 @@
 - tashan id: plugin:mehmetcakoglu/claude-obsidian-vault-skill/obsidian-vault-for-claude-code
 - Source: https://github.com/mehmetcakoglu/claude-obsidian-vault-skill
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 37.0 / 100
 - Adoption: 11.0
 - Upkeep: 72.0

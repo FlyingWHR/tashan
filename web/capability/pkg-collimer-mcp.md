@@ -8,7 +8,7 @@
 - Source: https://github.com/sandcastlelabs/collimer-mcp
 - npm: https://www.npmjs.com/package/collimer-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 48.0 / 100
 - Adoption: 24.0
 - Upkeep: 58.0

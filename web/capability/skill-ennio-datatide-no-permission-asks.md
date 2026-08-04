@@ -7,7 +7,7 @@
 - tashan id: skill:ennio-datatide/no-permission-asks
 - Source: https://github.com/ennio-datatide/ultrapowers
 - Type: skill
-- Category: other
+- Category: security
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

@@ -8,7 +8,7 @@
 - Source: https://github.com/genaiwithms/twitter-mcp
 - npm: https://www.npmjs.com/package/@muhammadsiddiq/twitter-mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 50.0 / 100
 - Adoption: 25.0
 - Upkeep: 63.0

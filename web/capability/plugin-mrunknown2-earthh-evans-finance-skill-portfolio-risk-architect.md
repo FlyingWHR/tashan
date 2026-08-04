@@ -7,7 +7,7 @@
 - tashan id: plugin:mrunknown2/earthh-evans-finance-skill/portfolio-risk-architect
 - Source: https://github.com/mrunknown2/earthh-evans-finance-skill
 - Type: plugin
-- Category: finance
+- Category: devtools
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

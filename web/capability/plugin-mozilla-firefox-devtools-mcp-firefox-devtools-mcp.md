@@ -7,7 +7,7 @@
 - tashan id: plugin:mozilla/firefox-devtools-mcp/firefox-devtools-mcp
 - Source: https://github.com/mozilla/firefox-devtools-mcp
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 45.0 / 100
 - Adoption: 7.0
 - Upkeep: 99.0

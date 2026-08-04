@@ -8,7 +8,7 @@
 - Source: https://github.com/r-huijts/xcode-mcp-server
 - npm: https://www.npmjs.com/package/xcode-mcp-server
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 17.0 / 100
 - Adoption: 31.0
 - Upkeep: 31.0

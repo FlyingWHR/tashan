@@ -8,7 +8,7 @@
 - Source: https://github.com/Daichi-Kudo/llm-advisor-mcp
 - npm: https://www.npmjs.com/package/llm-advisor-mcp
 - Type: npm
-- Category: productivity
+- Category: finance
 - tashan score: 48.0 / 100
 - Adoption: 27.0
 - Upkeep: 60.0

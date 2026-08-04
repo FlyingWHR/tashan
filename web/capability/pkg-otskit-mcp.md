@@ -8,7 +8,7 @@
 - Source: https://github.com/OTSkit/OTSkit-MCP
 - npm: https://www.npmjs.com/package/@otskit/mcp
 - Type: npm
-- Category: security
+- Category: ai
 - tashan score: 54.0 / 100
 - Adoption: 29.0
 - Upkeep: 69.0

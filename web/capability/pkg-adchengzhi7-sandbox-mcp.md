@@ -7,7 +7,7 @@
 - tashan id: pkg:@adchengzhi7/sandbox-mcp
 - npm: https://www.npmjs.com/package/@adchengzhi7/sandbox-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 57.0 / 100
 - Adoption: 32.0
 - Upkeep: 63.0

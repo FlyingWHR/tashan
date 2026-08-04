@@ -7,7 +7,7 @@
 - tashan id: plugin:eversince-ai/plugin/eversince
 - Source: https://github.com/eversince-ai/plugin
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

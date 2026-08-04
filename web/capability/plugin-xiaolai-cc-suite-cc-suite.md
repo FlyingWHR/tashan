@@ -7,7 +7,7 @@
 - tashan id: plugin:xiaolai/cc-suite/cc-suite
 - Source: https://github.com/xiaolai/cc-suite
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 50.0 / 100
 - Adoption: 26.0
 - Upkeep: 63.0

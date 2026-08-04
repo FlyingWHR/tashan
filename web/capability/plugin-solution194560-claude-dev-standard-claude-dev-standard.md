@@ -7,7 +7,7 @@
 - tashan id: plugin:solution194560/claude-dev-standard/claude-dev-standard
 - Source: https://github.com/solution194560/claude-dev-standard
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 39.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

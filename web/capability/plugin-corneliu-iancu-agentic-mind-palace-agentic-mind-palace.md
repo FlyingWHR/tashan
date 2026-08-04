@@ -7,7 +7,7 @@
 - tashan id: plugin:corneliu-iancu/agentic-mind-palace/agentic-mind-palace
 - Source: https://github.com/corneliu-iancu/agentic-mind-palace
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 38.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

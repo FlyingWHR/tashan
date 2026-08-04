@@ -7,7 +7,7 @@
 - tashan id: pkg:godavaii-mcp-server
 - npm: https://www.npmjs.com/package/godavaii-mcp-server
 - Type: npm
-- Category: docs
+- Category: security
 - tashan score: 31.0 / 100
 - Adoption: 17.0
 - Upkeep: 42.0

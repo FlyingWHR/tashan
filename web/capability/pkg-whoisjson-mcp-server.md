@@ -7,7 +7,7 @@
 - tashan id: pkg:@whoisjson/mcp-server
 - npm: https://www.npmjs.com/package/@whoisjson/mcp-server
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 25.0
 - Upkeep: 48.0

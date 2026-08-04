@@ -8,7 +8,7 @@
 - Source: https://github.com/dropthis-dev/dropthis-mcp
 - npm: https://www.npmjs.com/package/@dropthis/mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 53.0 / 100
 - Adoption: 26.0
 - Upkeep: 71.0

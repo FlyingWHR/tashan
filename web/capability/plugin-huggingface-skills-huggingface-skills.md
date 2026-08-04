@@ -7,7 +7,7 @@
 - tashan id: plugin:huggingface/skills/huggingface-skills
 - Source: https://github.com/huggingface/skills
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 81.0 / 100
 - Adoption: 64.0
 - Upkeep: 99.0

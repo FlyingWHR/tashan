@@ -7,7 +7,7 @@
 - tashan id: plugin:alopez3006/snipara-claude/snipara
 - Source: https://github.com/alopez3006/snipara-claude
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

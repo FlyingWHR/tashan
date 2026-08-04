@@ -7,7 +7,7 @@
 - tashan id: plugin:rjspence3/claude-code-toolkit/claude-code-survival-kit
 - Source: https://github.com/rjspence3/claude-code-toolkit
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 55.0

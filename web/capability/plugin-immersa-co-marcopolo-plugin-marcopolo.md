@@ -7,7 +7,7 @@
 - tashan id: plugin:immersa-co/marcopolo-plugin/marcopolo
 - Source: https://github.com/immersa-co/marcopolo-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 48.0 / 100
 - Adoption: 11.0
 - Upkeep: 99.0

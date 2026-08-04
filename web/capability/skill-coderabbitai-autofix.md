@@ -7,7 +7,7 @@
 - tashan id: skill:coderabbitai/autofix
 - Source: https://github.com/coderabbitai/skills
 - Type: skill
-- Category: other
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

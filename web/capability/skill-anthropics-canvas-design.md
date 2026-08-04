@@ -7,7 +7,7 @@
 - tashan id: skill:anthropics/canvas-design
 - Source: https://github.com/anthropics/skills
 - Type: skill
-- Category: productivity
+- Category: design
 - tashan score: 50.0 / 100
 - Adoption: 14.0
 - Upkeep: 98.0

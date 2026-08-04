@@ -7,7 +7,7 @@
 - tashan id: plugin:umiteknoloji/my-claude-lang/my-claude-lang
 - Source: https://github.com/umiteknoloji/my-claude-lang
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: 88.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:talktoglow/glow-plugins/glow
 - Source: https://github.com/talktoglow/glow-plugins
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

@@ -7,7 +7,7 @@
 - tashan id: skill:ronnnnn/comment
 - Source: https://github.com/ronnnnn/cc
 - Type: skill
-- Category: other
+- Category: productivity
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

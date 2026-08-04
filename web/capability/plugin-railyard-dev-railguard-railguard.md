@@ -7,7 +7,7 @@
 - tashan id: plugin:railyard-dev/railguard/railguard
 - Source: https://github.com/railyard-dev/railguard
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 35.0 / 100
 - Adoption: 28.0
 - Upkeep: 47.0

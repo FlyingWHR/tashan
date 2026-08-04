@@ -7,7 +7,7 @@
 - tashan id: plugin:mehmeteminduran/claude-session-handoff-plugin/session-handoff
 - Source: https://github.com/mehmeteminduran/claude-session-handoff-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

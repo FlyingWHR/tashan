@@ -8,7 +8,7 @@
 - Source: https://github.com/Mickdownunder/SafeInstall
 - npm: https://www.npmjs.com/package/safeinstall-cli
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 51.0 / 100
 - Adoption: 24.0
 - Upkeep: 68.0

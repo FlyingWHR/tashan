@@ -8,7 +8,7 @@
 - Source: https://github.com/Chao-Shiun/claude-consult-mcp
 - npm: https://www.npmjs.com/package/claude-consult-mcp
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 52.0 / 100
 - Adoption: 26.0
 - Upkeep: 66.0

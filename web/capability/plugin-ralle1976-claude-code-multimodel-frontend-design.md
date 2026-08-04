@@ -7,7 +7,7 @@
 - tashan id: plugin:ralle1976/claude-code-multimodel/frontend-design
 - Source: https://github.com/Ralle1976/claude-code-multimodel
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

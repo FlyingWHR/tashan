@@ -7,7 +7,7 @@
 - tashan id: plugin:bigdata-com/bigdata-plugins-marketplace/bigdata-com
 - Source: https://github.com/Bigdata-com/bigdata-plugins-marketplace
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 47.0 / 100
 - Adoption: 17.0
 - Upkeep: 92.0

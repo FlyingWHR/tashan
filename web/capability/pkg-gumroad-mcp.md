@@ -8,7 +8,7 @@
 - Source: https://github.com/rmarescu/gumroad-mcp
 - npm: https://www.npmjs.com/package/gumroad-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 18.0 / 100
 - Adoption: 28.0
 - Upkeep: 36.0

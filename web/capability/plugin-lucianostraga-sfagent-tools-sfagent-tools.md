@@ -7,7 +7,7 @@
 - tashan id: plugin:lucianostraga/sfagent-tools/sfagent-tools
 - Source: https://github.com/lucianostraga/sfagent-tools
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 41.0 / 100
 - Adoption: 25.0
 - Upkeep: 54.0

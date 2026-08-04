@@ -7,7 +7,7 @@
 - tashan id: plugin:nitrographtech/claude-plugins/nitrograph
 - Source: https://github.com/nitrographtech/claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 61.0

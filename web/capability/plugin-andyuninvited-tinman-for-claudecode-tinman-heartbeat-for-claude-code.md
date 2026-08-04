@@ -7,7 +7,7 @@
 - tashan id: plugin:andyuninvited/tinman_for_claudecode/tinman-heartbeat-for-claude-code
 - Source: https://github.com/andyuninvited/tinman_for_claudecode
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 30.0 / 100
 - Adoption: 11.0
 - Upkeep: 64.0

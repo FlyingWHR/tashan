@@ -7,7 +7,7 @@
 - tashan id: plugin:gbasin/stress-test-skill/stress-test
 - Source: https://github.com/gbasin/stress-test-skill
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 35.0 / 100
 - Adoption: 28.0
 - Upkeep: 47.0

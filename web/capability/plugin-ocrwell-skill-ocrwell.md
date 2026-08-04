@@ -7,7 +7,7 @@
 - tashan id: plugin:ocrwell/skill/ocrwell
 - Source: https://github.com/ocrwell/skill
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

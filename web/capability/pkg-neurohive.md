@@ -8,7 +8,7 @@
 - Source: https://github.com/AdelElo13/neurohive
 - npm: https://www.npmjs.com/package/neurohive
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 39.0 / 100
 - Adoption: 24.0
 - Upkeep: 54.0

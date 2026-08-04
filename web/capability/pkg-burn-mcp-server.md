@@ -8,7 +8,7 @@
 - Source: https://github.com/Fisher521/burn-mcp-server
 - npm: https://www.npmjs.com/package/burn-mcp-server
 - Type: npm
-- Category: comms
+- Category: devtools
 - tashan score: 60.0 / 100
 - Adoption: 35.0
 - Upkeep: 67.0

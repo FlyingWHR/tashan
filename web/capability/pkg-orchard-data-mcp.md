@@ -8,7 +8,7 @@
 - Source: https://github.com/letom1176-spec/orchard-data-mcp
 - npm: https://www.npmjs.com/package/orchard-data-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 53.0 / 100
 - Adoption: 28.0
 - Upkeep: 61.0

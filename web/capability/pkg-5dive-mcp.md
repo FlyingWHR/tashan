@@ -8,7 +8,7 @@
 - Source: https://github.com/5dive-ai/5dive-mcp
 - npm: https://www.npmjs.com/package/@5dive/mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 45.0 / 100
 - Adoption: 24.0
 - Upkeep: 52.0

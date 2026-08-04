@@ -8,7 +8,7 @@
 - Source: https://github.com/AutomateLab-tech/seo-performance-mcp
 - npm: https://www.npmjs.com/package/@automatelab/seo-performance-mcp
 - Type: npm
-- Category: devtools
+- Category: comms
 - tashan score: 46.0 / 100
 - Adoption: 28.0
 - Upkeep: 56.0

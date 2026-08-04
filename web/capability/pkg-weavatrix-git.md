@@ -8,7 +8,7 @@
 - Source: https://github.com/sergii-ziborov/weavatrix-git
 - npm: https://www.npmjs.com/package/weavatrix-git
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 53.0 / 100
 - Adoption: 31.0
 - Upkeep: 53.0

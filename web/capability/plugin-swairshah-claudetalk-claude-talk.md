@@ -7,7 +7,7 @@
 - tashan id: plugin:swairshah/claudetalk/claude-talk
 - Source: https://github.com/swairshah/ClaudeTalk
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

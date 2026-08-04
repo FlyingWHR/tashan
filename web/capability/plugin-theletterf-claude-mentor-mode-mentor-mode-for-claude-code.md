@@ -7,7 +7,7 @@
 - tashan id: plugin:theletterf/claude-mentor-mode/mentor-mode-for-claude-code
 - Source: https://github.com/theletterf/claude-mentor-mode
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 27.0 / 100
 - Adoption: 13.0
 - Upkeep: 46.0

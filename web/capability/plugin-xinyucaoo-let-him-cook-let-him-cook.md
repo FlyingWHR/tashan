@@ -7,7 +7,7 @@
 - tashan id: plugin:xinyucaoo/let-him-cook/let-him-cook
 - Source: https://github.com/xinyucaoo/let-him-cook
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

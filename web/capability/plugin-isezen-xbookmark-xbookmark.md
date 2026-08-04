@@ -7,7 +7,7 @@
 - tashan id: plugin:isezen/xbookmark/xbookmark
 - Source: https://github.com/isezen/xbookmark
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 61.0

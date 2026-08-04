@@ -7,7 +7,7 @@
 - tashan id: plugin:derjochenmeyer/claude-code-craft-statusline/craft-statusline
 - Source: https://github.com/derjochenmeyer/claude-code-craft-statusline
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 30.0 / 100
 - Adoption: 13.0
 - Upkeep: 50.0

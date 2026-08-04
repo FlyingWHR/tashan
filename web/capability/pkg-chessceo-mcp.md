@@ -8,7 +8,7 @@
 - Source: https://github.com/chessceo/chessceo-mcp
 - npm: https://www.npmjs.com/package/@chessceo/mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 69.0 / 100
 - Adoption: 43.0
 - Upkeep: 73.0

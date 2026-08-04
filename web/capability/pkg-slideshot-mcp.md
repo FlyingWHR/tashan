@@ -8,7 +8,7 @@
 - Source: https://github.com/06ketan/slideshot
 - npm: https://www.npmjs.com/package/slideshot-mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 42.0 / 100
 - Adoption: 27.0
 - Upkeep: 56.0

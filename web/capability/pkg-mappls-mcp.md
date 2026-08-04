@@ -8,7 +8,7 @@
 - Source: https://github.com/AmanMakesStuff/mappls-mcp
 - npm: https://www.npmjs.com/package/mappls-mcp
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 38.0 / 100
 - Adoption: 24.0
 - Upkeep: 47.0

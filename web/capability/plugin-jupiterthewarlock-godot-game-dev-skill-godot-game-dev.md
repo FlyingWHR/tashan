@@ -7,7 +7,7 @@
 - tashan id: plugin:jupiterthewarlock/godot-game-dev-skill/godot-game-dev
 - Source: https://github.com/JupiterTheWarlock/godot-game-dev-skill
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 33.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:temporalio/claude-temporal-plugin/temporal
 - Source: https://github.com/temporalio/claude-temporal-plugin
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 60.0 / 100
 - Adoption: 25.0
 - Upkeep: 98.0

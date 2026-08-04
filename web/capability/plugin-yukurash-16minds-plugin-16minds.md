@@ -7,7 +7,7 @@
 - tashan id: plugin:yukurash/16minds-plugin/16minds
 - Source: https://github.com/yukurash/16minds-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 34.0 / 100
 - Adoption: 16.0
 - Upkeep: 53.0

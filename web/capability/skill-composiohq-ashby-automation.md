@@ -7,7 +7,7 @@
 - tashan id: skill:ComposioHQ/ashby-automation
 - Source: https://github.com/ComposioHQ/awesome-claude-skills
 - Type: skill
-- Category: productivity
+- Category: comms
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: 98.0

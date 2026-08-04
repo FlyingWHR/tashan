@@ -7,7 +7,7 @@
 - tashan id: plugin:robertomarchioro/goldmarktplace/throwing
 - Source: https://github.com/robertomarchioro/goldmarktplace
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 56.0

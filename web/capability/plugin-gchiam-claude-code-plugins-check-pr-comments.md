@@ -7,7 +7,7 @@
 - tashan id: plugin:gchiam/claude-code-plugins/check-pr-comments
 - Source: https://github.com/gchiam/claude-code-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 98.0

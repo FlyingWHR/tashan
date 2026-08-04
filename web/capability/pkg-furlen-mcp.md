@@ -8,7 +8,7 @@
 - Source: https://github.com/amitsha86/furlen-mcp
 - npm: https://www.npmjs.com/package/furlen-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 58.0 / 100
 - Adoption: 34.0
 - Upkeep: 61.0

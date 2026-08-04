@@ -7,7 +7,7 @@
 - tashan id: pkg:zuora-mcp
 - npm: https://www.npmjs.com/package/zuora-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 53.0 / 100
 - Adoption: 29.0
 - Upkeep: 68.0

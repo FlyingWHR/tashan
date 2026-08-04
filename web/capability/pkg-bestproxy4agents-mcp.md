@@ -8,7 +8,7 @@
 - Source: https://github.com/NovadaLabs/proxy4agent
 - npm: https://www.npmjs.com/package/bestproxy4agents-mcp
 - Type: npm
-- Category: devtools
+- Category: data
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 25.0
 - Upkeep: not measured

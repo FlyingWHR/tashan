@@ -7,7 +7,7 @@
 - tashan id: plugin:austro-intelligence/ai-brainmap/ai-brainmap
 - Source: https://github.com/Austro-Intelligence/ai-brainmap
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 15.0
 - Upkeep: 72.0

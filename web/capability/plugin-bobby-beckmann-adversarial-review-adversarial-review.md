@@ -7,7 +7,7 @@
 - tashan id: plugin:bobby-beckmann/adversarial-review/adversarial-review
 - Source: https://github.com/bobby-beckmann/adversarial-review
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 30.0 / 100
 - Adoption: 18.0
 - Upkeep: 47.0

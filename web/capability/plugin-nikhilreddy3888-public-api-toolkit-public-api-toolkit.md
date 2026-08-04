@@ -7,7 +7,7 @@
 - tashan id: plugin:nikhilreddy3888/public-api-toolkit/public-api-toolkit
 - Source: https://github.com/nikhilreddy3888/public-api-toolkit
 - Type: plugin
-- Category: security
+- Category: finance
 - tashan score: 30.0 / 100
 - Adoption: 13.0
 - Upkeep: 50.0

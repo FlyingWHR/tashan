@@ -7,7 +7,7 @@
 - tashan id: plugin:burnsbert/claude-arcanum/arcanum
 - Source: https://github.com/burnsbert/claude-arcanum
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 49.0

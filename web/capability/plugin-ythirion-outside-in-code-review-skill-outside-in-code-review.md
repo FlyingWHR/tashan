@@ -7,7 +7,7 @@
 - tashan id: plugin:ythirion/outside-in-code-review-skill/outside-in-code-review
 - Source: https://github.com/ythirion/outside-in-code-review-skill
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 34.0 / 100
 - Adoption: 11.0
 - Upkeep: 56.0

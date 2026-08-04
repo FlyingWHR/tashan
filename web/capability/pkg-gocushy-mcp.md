@@ -8,7 +8,7 @@
 - Source: https://github.com/gocushy/mcp
 - npm: https://www.npmjs.com/package/@gocushy/mcp
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 60.0 / 100
 - Adoption: 37.0
 - Upkeep: 63.0

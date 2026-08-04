@@ -8,7 +8,7 @@
 - Source: https://github.com/ARAS-Workspace/claude-kvm
 - npm: https://www.npmjs.com/package/claude-kvm
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 54.0 / 100
 - Adoption: 31.0
 - Upkeep: 64.0

@@ -7,7 +7,7 @@
 - tashan id: skill:test-mesh/action-patterns
 - Source: https://github.com/test-mesh/testmesh
 - Type: skill
-- Category: other
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

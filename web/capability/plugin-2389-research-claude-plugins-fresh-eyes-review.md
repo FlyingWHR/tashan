@@ -7,7 +7,7 @@
 - tashan id: plugin:2389-research/claude-plugins/fresh-eyes-review
 - Source: https://github.com/2389-research/claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

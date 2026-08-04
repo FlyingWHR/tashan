@@ -7,7 +7,7 @@
 - tashan id: plugin:artwist-polyakov/polyakov-claude-skills/x-research
 - Source: https://github.com/artwist-polyakov/polyakov-claude-skills
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 77.0

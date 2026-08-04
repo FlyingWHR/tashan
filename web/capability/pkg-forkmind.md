@@ -8,7 +8,7 @@
 - Source: https://github.com/Medhovarsh/forkmind
 - npm: https://www.npmjs.com/package/forkmind
 - Type: npm
-- Category: productivity
+- Category: finance
 - tashan score: 56.0 / 100
 - Adoption: 31.0
 - Upkeep: 65.0

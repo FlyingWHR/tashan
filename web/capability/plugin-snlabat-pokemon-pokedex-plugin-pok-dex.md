@@ -7,7 +7,7 @@
 - tashan id: plugin:snlabat/pokemon-pokedex-plugin/pok-dex
 - Source: https://github.com/SNLabat/Pokemon-Pokedex-Plugin
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

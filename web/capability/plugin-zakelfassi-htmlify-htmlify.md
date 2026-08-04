@@ -7,7 +7,7 @@
 - tashan id: plugin:zakelfassi/htmlify/htmlify
 - Source: https://github.com/zakelfassi/htmlify
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 46.0 / 100
 - Adoption: 22.0
 - Upkeep: 74.0

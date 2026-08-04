@@ -7,7 +7,7 @@
 - tashan id: plugin:satyamamarpandey/claudetokensap/claudetokensap
 - Source: https://github.com/satyamamarpandey/ClaudeTokenSAP
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 15.0
 - Upkeep: 48.0

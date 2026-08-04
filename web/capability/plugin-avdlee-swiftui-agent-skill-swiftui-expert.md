@@ -7,7 +7,7 @@
 - tashan id: plugin:avdlee/swiftui-agent-skill/swiftui-expert
 - Source: https://github.com/AvdLee/SwiftUI-Agent-Skill
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 76.0 / 100
 - Adoption: 53.0
 - Upkeep: 98.0

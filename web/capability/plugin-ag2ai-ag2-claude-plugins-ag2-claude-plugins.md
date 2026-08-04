@@ -7,7 +7,7 @@
 - tashan id: plugin:ag2ai/ag2-claude-plugins/ag2-claude-plugins
 - Source: https://github.com/ag2ai/ag2-claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 39.0 / 100
 - Adoption: 13.0
 - Upkeep: 85.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:clomia/claude-automata/parallax
 - Source: https://github.com/clomia/claude-automata
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 47.0 / 100
 - Adoption: 22.0
 - Upkeep: 63.0

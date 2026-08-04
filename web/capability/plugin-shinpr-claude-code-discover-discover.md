@@ -7,7 +7,7 @@
 - tashan id: plugin:shinpr/claude-code-discover/discover
 - Source: https://github.com/shinpr/claude-code-discover
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 34.0 / 100
 - Adoption: 19.0
 - Upkeep: not measured

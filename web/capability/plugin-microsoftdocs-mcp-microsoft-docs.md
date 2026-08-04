@@ -7,7 +7,7 @@
 - tashan id: plugin:microsoftdocs/mcp/microsoft-docs
 - Source: https://github.com/MicrosoftDocs/mcp
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

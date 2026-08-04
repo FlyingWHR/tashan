@@ -7,7 +7,7 @@
 - tashan id: plugin:firecrawl/firecrawl-workflows/firecrawl-workflows
 - Source: https://github.com/firecrawl/firecrawl-workflows
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 55.0 / 100
 - Adoption: 33.0
 - Upkeep: 75.0

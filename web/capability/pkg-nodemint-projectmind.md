@@ -8,7 +8,7 @@
 - Source: https://github.com/Nodemint-dev/projectmind
 - npm: https://www.npmjs.com/package/@nodemint/projectmind
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 52.0 / 100
 - Adoption: 29.0
 - Upkeep: 62.0

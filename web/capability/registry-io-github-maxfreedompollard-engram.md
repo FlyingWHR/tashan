@@ -7,7 +7,7 @@
 - tashan id: registry:io.github.MaxFreedomPollard/engram
 - Source: https://github.com/MaxFreedomPollard/engRAM
 - Type: python
-- Category: productivity
+- Category: files
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: not measured
 - Upkeep: not measured

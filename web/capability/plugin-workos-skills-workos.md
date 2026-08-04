@@ -7,7 +7,7 @@
 - tashan id: plugin:workos/skills/workos
 - Source: https://github.com/workos/skills
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 66.0 / 100
 - Adoption: 32.0
 - Upkeep: 98.0

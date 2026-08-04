@@ -7,7 +7,7 @@
 - tashan id: plugin:mateon01/aidlc-for-claude/aidlc-for-claude
 - Source: https://github.com/mateon01/aidlc-for-claude
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

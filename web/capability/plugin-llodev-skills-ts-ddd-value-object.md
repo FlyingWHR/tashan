@@ -7,7 +7,7 @@
 - tashan id: plugin:llodev/skills/ts-ddd-value-object
 - Source: https://github.com/llodev/skills
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 43.0 / 100
 - Adoption: 7.0
 - Upkeep: 97.0

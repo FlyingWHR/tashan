@@ -7,7 +7,7 @@
 - tashan id: plugin:sunrisesillneversee/moses-governance/mo-es-governance
 - Source: https://github.com/SunrisesIllNeverSee/moses-governance
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

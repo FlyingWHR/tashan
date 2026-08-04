@@ -7,7 +7,7 @@
 - tashan id: plugin:yunst047/halal-skill/halal
 - Source: https://github.com/yunst047/halal-skill
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 58.0

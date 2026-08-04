@@ -7,7 +7,7 @@
 - tashan id: plugin:activeloopai/deeplake-claude-code-plugins/deeplake-hivemind
 - Source: https://github.com/activeloopai/deeplake-claude-code-plugins
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 74.0 / 100
 - Adoption: 48.0
 - Upkeep: 98.0

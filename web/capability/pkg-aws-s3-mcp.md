@@ -8,7 +8,7 @@
 - Source: https://github.com/samuraikun/aws-s3-mcp
 - npm: https://www.npmjs.com/package/aws-s3-mcp
 - Type: npm
-- Category: other
+- Category: database
 - tashan score: 24.0 / 100
 - Adoption: 43.0
 - Upkeep: 37.0

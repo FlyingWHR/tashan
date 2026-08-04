@@ -7,7 +7,7 @@
 - tashan id: plugin:siddharthkandan/universal-remote-control/urc
 - Source: https://github.com/siddharthkandan/universal-remote-control
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 31.0 / 100
 - Adoption: 22.0
 - Upkeep: 45.0

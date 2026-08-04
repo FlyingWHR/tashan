@@ -8,7 +8,7 @@
 - Source: https://github.com/alltomatos/izapia
 - npm: https://www.npmjs.com/package/@alltomatos/izapia-mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 56.0 / 100
 - Adoption: 32.0
 - Upkeep: 59.0

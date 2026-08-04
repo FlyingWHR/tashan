@@ -8,7 +8,7 @@
 - Source: https://github.com/shipmail-to/shipmail-mcp
 - npm: https://www.npmjs.com/package/shipmail-mcp
 - Type: npm
-- Category: productivity
+- Category: cloud
 - tashan score: 71.0 / 100
 - Adoption: 47.0
 - Upkeep: 73.0

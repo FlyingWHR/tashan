@@ -7,7 +7,7 @@
 - tashan id: plugin:smartrickpicks/substrate-bk-airlock-skills-library/agent-otto-alpha
 - Source: https://github.com/smartrickpicks/substrate-bk-airlock-skills-library
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

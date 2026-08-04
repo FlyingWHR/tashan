@@ -8,7 +8,7 @@
 - Source: https://github.com/GeiserX/telegram-archive-mcp
 - npm: https://www.npmjs.com/package/telegram-archive-mcp
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 39.0 / 100
 - Adoption: 25.0
 - Upkeep: 50.0

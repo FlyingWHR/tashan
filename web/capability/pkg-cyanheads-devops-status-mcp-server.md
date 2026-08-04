@@ -8,7 +8,7 @@
 - Source: https://github.com/cyanheads/devops-status-mcp-server
 - npm: https://www.npmjs.com/package/@cyanheads/devops-status-mcp-server
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 68.0 / 100
 - Adoption: 42.0
 - Upkeep: 71.0

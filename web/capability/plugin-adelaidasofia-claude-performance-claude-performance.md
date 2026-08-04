@@ -7,7 +7,7 @@
 - tashan id: plugin:adelaidasofia/claude-performance/claude-performance
 - Source: https://github.com/adelaidasofia/claude-performance
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 43.0 / 100
 - Adoption: 11.0
 - Upkeep: 80.0

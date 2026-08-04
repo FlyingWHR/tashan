@@ -7,7 +7,7 @@
 - tashan id: plugin:d4rkninja/code-guardian/infynon-pkg
 - Source: https://github.com/d4rkNinja/code-guardian
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 32.0 / 100
 - Adoption: 17.0
 - Upkeep: 50.0

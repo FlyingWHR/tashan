@@ -8,7 +8,7 @@
 - Source: https://github.com/Hovsteder/merx-mcp
 - npm: https://www.npmjs.com/package/merx-mcp
 - Type: npm
-- Category: finance
+- Category: devtools
 - tashan score: 39.0 / 100
 - Adoption: 27.0
 - Upkeep: 51.0

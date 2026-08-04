@@ -7,7 +7,7 @@
 - tashan id: plugin:yogsma/excalidraw-plugin/excalidraw-plugin
 - Source: https://github.com/yogsma/excalidraw-plugin
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

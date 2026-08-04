@@ -7,7 +7,7 @@
 - tashan id: plugin:raveeshbhalla/dspy-gepa-logger/gepa-observable-migration
 - Source: https://github.com/raveeshbhalla/dspy-gepa-logger
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 30.0
 - Upkeep: not measured

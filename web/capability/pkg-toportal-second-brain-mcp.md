@@ -8,7 +8,7 @@
 - Source: https://github.com/Portaltocoding/second-brain-mcp
 - npm: https://www.npmjs.com/package/@toportal/second-brain-mcp
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 46.0 / 100
 - Adoption: 24.0
 - Upkeep: 54.0

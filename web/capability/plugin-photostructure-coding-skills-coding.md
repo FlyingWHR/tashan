@@ -7,7 +7,7 @@
 - tashan id: plugin:photostructure/coding-skills/coding
 - Source: https://github.com/photostructure/coding-skills
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

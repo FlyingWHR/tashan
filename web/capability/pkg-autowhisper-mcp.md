@@ -8,7 +8,7 @@
 - Source: https://github.com/xnjiang/autowhisper-mcp
 - npm: https://www.npmjs.com/package/autowhisper-mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 60.0 / 100
 - Adoption: 36.0
 - Upkeep: 62.0

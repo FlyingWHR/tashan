@@ -7,7 +7,7 @@
 - tashan id: plugin:appsvortex/arness/arn-infra
 - Source: https://github.com/AppsVortex/arness
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 38.0 / 100
 - Adoption: 7.0
 - Upkeep: 78.0

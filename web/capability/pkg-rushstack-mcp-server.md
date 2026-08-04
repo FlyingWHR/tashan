@@ -8,7 +8,7 @@
 - Source: https://github.com/microsoft/rushstack
 - npm: https://www.npmjs.com/package/@rushstack/mcp-server
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 65.0 / 100
 - Adoption: 28.0
 - Upkeep: 98.0

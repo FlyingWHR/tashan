@@ -8,7 +8,7 @@
 - Source: https://github.com/Autostackup/autostackup
 - npm: https://www.npmjs.com/package/@autostackup/sales
 - Type: npm
-- Category: comms
+- Category: ai
 - tashan score: 44.0 / 100
 - Adoption: 23.0
 - Upkeep: 58.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:hanazonoarchive/psep/psep
 - Source: https://github.com/HanazonoArchive/psep
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 57.0

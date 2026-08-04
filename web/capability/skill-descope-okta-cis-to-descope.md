@@ -7,7 +7,7 @@
 - tashan id: skill:descope/okta-cis-to-descope
 - Source: https://github.com/descope/skills
 - Type: skill
-- Category: other
+- Category: security
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

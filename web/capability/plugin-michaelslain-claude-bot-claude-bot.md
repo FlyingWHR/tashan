@@ -7,7 +7,7 @@
 - tashan id: plugin:michaelslain/claude-bot/claude-bot
 - Source: https://github.com/michaelslain/claude-bot
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 34.0 / 100
 - Adoption: 11.0
 - Upkeep: 56.0

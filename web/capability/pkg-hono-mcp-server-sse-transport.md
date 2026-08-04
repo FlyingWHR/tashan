@@ -8,7 +8,7 @@
 - Source: https://github.com/NikaBuligini/hono-mcp-server-sse-transport
 - npm: https://www.npmjs.com/package/hono-mcp-server-sse-transport
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 60.0
 - Upkeep: 34.0

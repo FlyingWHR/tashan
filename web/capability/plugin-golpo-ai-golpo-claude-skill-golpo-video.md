@@ -7,7 +7,7 @@
 - tashan id: plugin:golpo-ai/golpo-claude-skill/golpo-video
 - Source: https://github.com/Golpo-AI/golpo-claude-skill
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 55.0

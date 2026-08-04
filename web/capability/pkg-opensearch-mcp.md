@@ -8,7 +8,7 @@
 - Source: https://github.com/minpeter/opensearch
 - npm: https://www.npmjs.com/package/opensearch-mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 51.0 / 100
 - Adoption: 22.0
 - Upkeep: 69.0

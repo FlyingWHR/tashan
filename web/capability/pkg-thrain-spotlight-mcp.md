@@ -8,7 +8,7 @@
 - Source: https://github.com/thrain-ai/spotlight-pdf
 - npm: https://www.npmjs.com/package/@thrain/spotlight-mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: not measured
 - Upkeep: 55.0

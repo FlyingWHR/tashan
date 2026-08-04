@@ -7,7 +7,7 @@
 - tashan id: plugin:sym1000/claude-statusbar/statusbar
 - Source: https://github.com/SYM1000/claude-statusbar
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 31.0 / 100
 - Adoption: 19.0
 - Upkeep: 47.0

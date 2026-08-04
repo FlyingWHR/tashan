@@ -7,7 +7,7 @@
 - tashan id: plugin:keplerbrowser/plugin/kepler
 - Source: https://github.com/KeplerBrowser/Plugin
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

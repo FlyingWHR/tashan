@@ -8,7 +8,7 @@
 - Source: https://github.com/olivergrabner/composer-mcp
 - npm: https://www.npmjs.com/package/@usecomposer/mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 37.0 / 100
 - Adoption: 24.0
 - Upkeep: 52.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/VP0COM/vp0com-official-site-2026
 - npm: https://www.npmjs.com/package/vp0-mcp
 - Type: npm
-- Category: design
+- Category: data
 - tashan score: 42.0 / 100
 - Adoption: 27.0
 - Upkeep: 48.0

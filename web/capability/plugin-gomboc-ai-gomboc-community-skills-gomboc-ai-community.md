@@ -7,7 +7,7 @@
 - tashan id: plugin:gomboc-ai/gomboc-community-skills/gomboc-ai-community
 - Source: https://github.com/Gomboc-AI/gomboc-community-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 49.0 / 100
 - Adoption: 18.0
 - Upkeep: 80.0

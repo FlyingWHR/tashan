@@ -8,7 +8,7 @@
 - Source: https://github.com/bighub-io/bighub
 - npm: https://www.npmjs.com/package/@bighub/bighub-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 38.0 / 100
 - Adoption: 27.0
 - Upkeep: 51.0

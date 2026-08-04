@@ -8,7 +8,7 @@
 - Source: https://github.com/Kind-ling/twig
 - npm: https://www.npmjs.com/package/@kind-ling/twig
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 28.0
 - Upkeep: 50.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/runapi-ai/midjourney-mcp
 - npm: https://www.npmjs.com/package/@runapi.ai/midjourney-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 57.0 / 100
 - Adoption: 32.0
 - Upkeep: 60.0

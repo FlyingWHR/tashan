@@ -7,7 +7,7 @@
 - tashan id: plugin:superglue-ai/cli/superglue
 - Source: https://github.com/superglue-ai/cli
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 48.0 / 100
 - Adoption: 11.0
 - Upkeep: 99.0

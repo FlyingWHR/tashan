@@ -7,7 +7,7 @@
 - tashan id: plugin:nimbleway/agent-skills/nimble
 - Source: https://github.com/Nimbleway/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 67.0 / 100
 - Adoption: 33.0
 - Upkeep: 98.0

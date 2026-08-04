@@ -7,7 +7,7 @@
 - tashan id: plugin:kamioj/spec-workflow/spec
 - Source: https://github.com/kamioj/spec-workflow
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 46.0 / 100
 - Adoption: 20.0
 - Upkeep: 63.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/sxaidev/sxai-mcp
 - npm: https://www.npmjs.com/package/sexai-mcp
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 63.0 / 100
 - Adoption: 36.0
 - Upkeep: 72.0

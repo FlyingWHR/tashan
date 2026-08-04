@@ -8,7 +8,7 @@
 - Source: https://github.com/commercetools/commerce-mcp
 - npm: https://www.npmjs.com/package/@commercetools/commerce-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 71.0 / 100
 - Adoption: 39.0
 - Upkeep: 92.0

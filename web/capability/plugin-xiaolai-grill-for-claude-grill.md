@@ -7,7 +7,7 @@
 - tashan id: plugin:xiaolai/grill-for-claude/grill
 - Source: https://github.com/xiaolai/grill-for-claude
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 17.0
 - Upkeep: 54.0

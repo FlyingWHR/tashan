@@ -8,7 +8,7 @@
 - Source: https://github.com/LockSpec/lockspec
 - npm: https://www.npmjs.com/package/lockspec
 - Type: npm
-- Category: devtools
+- Category: search
 - tashan score: 41.0 / 100
 - Adoption: 22.0
 - Upkeep: 52.0

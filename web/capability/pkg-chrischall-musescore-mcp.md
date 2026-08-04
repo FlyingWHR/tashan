@@ -8,7 +8,7 @@
 - Source: https://github.com/chrischall/musescore-mcp
 - npm: https://www.npmjs.com/package/@chrischall/musescore-mcp
 - Type: npm
-- Category: design
+- Category: browser
 - tashan score: 67.0 / 100
 - Adoption: 39.0
 - Upkeep: 73.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:jobrien874/why-plugin/why
 - Source: https://github.com/jobrien874/why-plugin
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

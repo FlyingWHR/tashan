@@ -7,7 +7,7 @@
 - tashan id: plugin:cartapenabark/dotnetanalyzer/dotnet-analyzer
 - Source: https://github.com/CartapenaBark/DotNetAnalyzer
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 32.0 / 100
 - Adoption: 17.0
 - Upkeep: 50.0

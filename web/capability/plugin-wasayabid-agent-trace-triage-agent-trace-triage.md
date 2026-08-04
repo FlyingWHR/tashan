@@ -7,7 +7,7 @@
 - tashan id: plugin:wasayabid/agent-trace-triage/agent-trace-triage
 - Source: https://github.com/WasayAbid/agent-trace-triage
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 60.0

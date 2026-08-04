@@ -8,7 +8,7 @@
 - Source: https://github.com/vibhasdutta/context-mcp
 - npm: https://www.npmjs.com/package/context-mcp-server
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 51.0 / 100
 - Adoption: 23.0
 - Upkeep: 67.0

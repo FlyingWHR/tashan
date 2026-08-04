@@ -7,7 +7,7 @@
 - tashan id: plugin:omarvii/open-source-launch-skill/open-source-launch
 - Source: https://github.com/OMARVII/open-source-launch-skill
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 30.0 / 100
 - Adoption: 11.0
 - Upkeep: 51.0

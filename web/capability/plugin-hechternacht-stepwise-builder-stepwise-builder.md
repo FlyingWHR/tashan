@@ -7,7 +7,7 @@
 - tashan id: plugin:hechternacht/stepwise-builder/stepwise-builder
 - Source: https://github.com/HEchternacht/stepwise-builder
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

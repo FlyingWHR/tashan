@@ -7,7 +7,7 @@
 - tashan id: plugin:karinje/code-hardening/code-hardening
 - Source: https://github.com/karinje/code-hardening
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

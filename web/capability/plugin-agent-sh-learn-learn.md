@@ -7,7 +7,7 @@
 - tashan id: plugin:agent-sh/learn/learn
 - Source: https://github.com/agent-sh/learn
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 45.0 / 100
 - Adoption: 13.0
 - Upkeep: 80.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:justinedavemagnaye/the-courtroom/the-courtroom
 - Source: https://github.com/JustineDaveMagnaye/the-courtroom
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 32.0 / 100
 - Adoption: 20.0
 - Upkeep: 48.0

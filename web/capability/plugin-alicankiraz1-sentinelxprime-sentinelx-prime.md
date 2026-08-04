@@ -7,7 +7,7 @@
 - tashan id: plugin:alicankiraz1/sentinelxprime/sentinelx-prime
 - Source: https://github.com/alicankiraz1/SentinelXPrime
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 35.0 / 100
 - Adoption: 27.0
 - Upkeep: 48.0

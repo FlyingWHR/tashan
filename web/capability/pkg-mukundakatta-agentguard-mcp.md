@@ -8,7 +8,7 @@
 - Source: https://github.com/MukundaKatta/agentguard-mcp
 - npm: https://www.npmjs.com/package/@mukundakatta/agentguard-mcp
 - Type: npm
-- Category: devtools
+- Category: search
 - tashan score: 35.0 / 100
 - Adoption: 22.0
 - Upkeep: 43.0

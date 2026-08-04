@@ -7,7 +7,7 @@
 - tashan id: plugin:misfitdev/claude-plugins/frank-grimes
 - Source: https://github.com/misfitdev/claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 48.0 / 100
 - Adoption: 13.0
 - Upkeep: 97.0

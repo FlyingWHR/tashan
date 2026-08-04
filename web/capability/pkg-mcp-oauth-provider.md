@@ -7,7 +7,7 @@
 - tashan id: pkg:mcp-oauth-provider
 - npm: https://www.npmjs.com/package/mcp-oauth-provider
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: 34.0
 - Upkeep: 41.0

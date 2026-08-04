@@ -7,7 +7,7 @@
 - tashan id: plugin:smaugho/mempalace/mempalace
 - Source: https://github.com/smaugho/mempalace
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

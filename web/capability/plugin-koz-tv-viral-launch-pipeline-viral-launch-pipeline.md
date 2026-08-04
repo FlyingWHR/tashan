@@ -7,7 +7,7 @@
 - tashan id: plugin:koz-tv/viral-launch-pipeline/viral-launch-pipeline
 - Source: https://github.com/Koz-TV/viral-launch-pipeline
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

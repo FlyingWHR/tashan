@@ -7,7 +7,7 @@
 - tashan id: plugin:mjbae/novel-studio/novel-studio
 - Source: https://github.com/MJbae/novel-studio
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 41.0 / 100
 - Adoption: 35.0
 - Upkeep: 49.0

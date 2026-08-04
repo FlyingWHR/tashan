@@ -8,7 +8,7 @@
 - Source: https://github.com/runapi-ai/happyhorse-mcp
 - npm: https://www.npmjs.com/package/@runapi.ai/happyhorse-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 58.0 / 100
 - Adoption: 32.0
 - Upkeep: 65.0

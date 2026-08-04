@@ -7,7 +7,7 @@
 - tashan id: plugin:gwittebolle/claude-carbon/co2-tracker
 - Source: https://github.com/gwittebolle/claude-carbon
 - Type: plugin
-- Category: productivity
+- Category: database
 - tashan score: 69.0 / 100
 - Adoption: 35.0
 - Upkeep: 99.0

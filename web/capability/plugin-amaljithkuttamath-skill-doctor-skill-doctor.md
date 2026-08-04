@@ -7,7 +7,7 @@
 - tashan id: plugin:amaljithkuttamath/skill-doctor/skill-doctor
 - Source: https://github.com/amaljithkuttamath/skill-doctor
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

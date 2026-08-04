@@ -7,7 +7,7 @@
 - tashan id: plugin:obra/episodic-memory/episodic-memory
 - Source: https://github.com/obra/episodic-memory
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 67.0 / 100
 - Adoption: 46.0
 - Upkeep: 89.0

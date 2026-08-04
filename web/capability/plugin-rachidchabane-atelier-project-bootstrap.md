@@ -7,7 +7,7 @@
 - tashan id: plugin:rachidchabane/atelier/project-bootstrap
 - Source: https://github.com/RachidChabane/atelier
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 55.0

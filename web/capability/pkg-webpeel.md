@@ -8,7 +8,7 @@
 - Source: https://github.com/JakeLiuMe/webpeel
 - npm: https://www.npmjs.com/package/webpeel
 - Type: npm
-- Category: productivity
+- Category: browser
 - tashan score: 42.0 / 100
 - Adoption: 29.0
 - Upkeep: 60.0

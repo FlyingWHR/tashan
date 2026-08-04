@@ -7,7 +7,7 @@
 - tashan id: plugin:seob717/redash-mcp/redash-mcp
 - Source: https://github.com/seob717/redash-mcp
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 37.0 / 100
 - Adoption: 11.0
 - Upkeep: 60.0

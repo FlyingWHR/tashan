@@ -7,7 +7,7 @@
 - tashan id: plugin:libukai/awesome-agent-skills/vscode-extensions-toolkit
 - Source: https://github.com/libukai/awesome-agent-skills
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

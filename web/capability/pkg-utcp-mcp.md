@@ -8,7 +8,7 @@
 - Source: https://github.com/universal-tool-calling-protocol/typescript-utcp
 - npm: https://www.npmjs.com/package/@utcp/mcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 64.0 / 100
 - Adoption: 49.0
 - Upkeep: 63.0

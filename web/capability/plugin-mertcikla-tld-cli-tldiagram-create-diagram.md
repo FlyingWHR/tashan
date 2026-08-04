@@ -7,7 +7,7 @@
 - tashan id: plugin:mertcikla/tld-cli/tldiagram-create-diagram
 - Source: https://github.com/Mertcikla/tld-cli
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 23.0 / 100
 - Adoption: 11.0
 - Upkeep: 26.0

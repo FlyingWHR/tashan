@@ -7,7 +7,7 @@
 - tashan id: plugin:epicsagas/llm-transpile/llm-transpile
 - Source: https://github.com/epicsagas/llm-transpile
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 48.0 / 100
 - Adoption: 17.0
 - Upkeep: 80.0

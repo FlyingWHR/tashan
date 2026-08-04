@@ -7,7 +7,7 @@
 - tashan id: plugin:theqtcompanyrnd/agent-skills/qt-development
 - Source: https://github.com/TheQtCompanyRnD/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

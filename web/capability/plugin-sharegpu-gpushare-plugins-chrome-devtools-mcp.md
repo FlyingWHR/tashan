@@ -7,7 +7,7 @@
 - tashan id: plugin:sharegpu/gpushare-plugins/chrome-devtools-mcp
 - Source: https://github.com/sharegpu/gpushare-plugins
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

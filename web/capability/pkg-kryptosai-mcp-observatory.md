@@ -8,7 +8,7 @@
 - Source: https://github.com/KryptosAI/mcp-observatory
 - npm: https://www.npmjs.com/package/@kryptosai/mcp-observatory
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 69.0 / 100
 - Adoption: 44.0
 - Upkeep: 73.0

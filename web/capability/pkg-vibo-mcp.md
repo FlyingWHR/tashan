@@ -8,7 +8,7 @@
 - Source: https://github.com/chrischall/vibo-mcp
 - npm: https://www.npmjs.com/package/vibo-mcp
 - Type: npm
-- Category: design
+- Category: productivity
 - tashan score: 65.0 / 100
 - Adoption: 39.0
 - Upkeep: 67.0

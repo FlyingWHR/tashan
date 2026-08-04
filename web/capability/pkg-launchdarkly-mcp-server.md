@@ -8,7 +8,7 @@
 - Source: https://github.com/launchdarkly/mcp-server
 - npm: https://www.npmjs.com/package/@launchdarkly/mcp-server
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 65.0 / 100
 - Adoption: 61.0
 - Upkeep: 59.0

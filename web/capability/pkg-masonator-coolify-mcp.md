@@ -8,7 +8,7 @@
 - Source: https://github.com/StuMason/coolify-mcp
 - npm: https://www.npmjs.com/package/@masonator/coolify-mcp
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 74.0 / 100
 - Adoption: 55.0
 - Upkeep: 73.0

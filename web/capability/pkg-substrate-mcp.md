@@ -8,7 +8,7 @@
 - Source: https://github.com/PKaldone/substrate-mcp
 - npm: https://www.npmjs.com/package/substrate-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 34.0 / 100
 - Adoption: 24.0
 - Upkeep: 43.0

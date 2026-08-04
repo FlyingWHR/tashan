@@ -7,7 +7,7 @@
 - tashan id: plugin:teese999/dopamine/dopamine
 - Source: https://github.com/Teese999/Dopamine
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

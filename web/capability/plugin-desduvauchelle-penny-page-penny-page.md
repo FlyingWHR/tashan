@@ -7,7 +7,7 @@
 - tashan id: plugin:desduvauchelle/penny-page/penny-page
 - Source: https://github.com/desduvauchelle/penny-page
 - Type: plugin
-- Category: design
+- Category: comms
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

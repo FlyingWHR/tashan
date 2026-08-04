@@ -7,7 +7,7 @@
 - tashan id: skill:heygen-com/embedded-captions
 - Source: https://github.com/heygen-com/hyperframes
 - Type: skill
-- Category: other
+- Category: security
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

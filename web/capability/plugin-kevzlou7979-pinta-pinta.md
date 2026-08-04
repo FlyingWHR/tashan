@@ -7,7 +7,7 @@
 - tashan id: plugin:kevzlou7979/pinta/pinta
 - Source: https://github.com/kevzlou7979/pinta
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 39.0 / 100
 - Adoption: 11.0
 - Upkeep: 63.0

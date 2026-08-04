@@ -8,7 +8,7 @@
 - Source: https://github.com/Aimino-Tech/fast-html-mcp-server
 - npm: https://www.npmjs.com/package/@aimino/fast-html-mcp-server
 - Type: npm
-- Category: finance
+- Category: design
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 23.0
 - Upkeep: not measured

@@ -8,7 +8,7 @@
 - Source: https://github.com/john-zhang-dev/xero-mcp
 - npm: https://www.npmjs.com/package/xero-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 63.0 / 100
 - Adoption: 35.0
 - Upkeep: 71.0

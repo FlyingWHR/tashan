@@ -7,7 +7,7 @@
 - tashan id: plugin:danutmitrut/claude-chat-search/claude-chat-search
 - Source: https://github.com/danutmitrut/claude-chat-search
 - Type: plugin
-- Category: comms
+- Category: productivity
 - tashan score: 31.0 / 100
 - Adoption: 20.0
 - Upkeep: 46.0

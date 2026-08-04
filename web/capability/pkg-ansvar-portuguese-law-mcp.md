@@ -8,7 +8,7 @@
 - Source: https://github.com/Ansvar-Systems/portuguese-law-mcp
 - npm: https://www.npmjs.com/package/@ansvar/portuguese-law-mcp
 - Type: npm
-- Category: docs
+- Category: other
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 23.0
 - Upkeep: not measured

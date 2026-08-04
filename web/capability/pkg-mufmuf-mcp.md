@@ -8,7 +8,7 @@
 - Source: https://github.com/IzikLisbon/mufmuf
 - npm: https://www.npmjs.com/package/mufmuf-mcp
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 44.0 / 100
 - Adoption: 23.0
 - Upkeep: 52.0

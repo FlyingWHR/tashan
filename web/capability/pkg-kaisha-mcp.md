@@ -8,7 +8,7 @@
 - Source: https://github.com/vladic-corp/kaisha-api
 - npm: https://www.npmjs.com/package/kaisha-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 44.0 / 100
 - Adoption: 18.0
 - Upkeep: 57.0

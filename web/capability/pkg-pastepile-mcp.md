@@ -8,7 +8,7 @@
 - Source: https://github.com/asterismos-v1/pastepile
 - npm: https://www.npmjs.com/package/@pastepile/mcp
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 60.0 / 100
 - Adoption: 36.0
 - Upkeep: 60.0

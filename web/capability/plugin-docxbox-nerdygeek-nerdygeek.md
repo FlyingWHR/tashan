@@ -7,7 +7,7 @@
 - tashan id: plugin:docxbox/nerdygeek/nerdygeek
 - Source: https://github.com/docxbox/NerdyGeek
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 30.0 / 100
 - Adoption: 11.0
 - Upkeep: 51.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:mironmax/claudecode-plugins/knowledge-graph
 - Source: https://github.com/mironmax/claudecode-plugins
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 48.0 / 100
 - Adoption: 16.0
 - Upkeep: not measured

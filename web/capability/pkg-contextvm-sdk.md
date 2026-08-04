@@ -8,7 +8,7 @@
 - Source: https://github.com/ContextVM/sdk
 - npm: https://www.npmjs.com/package/@contextvm/sdk
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 63.0 / 100
 - Adoption: 36.0
 - Upkeep: 72.0

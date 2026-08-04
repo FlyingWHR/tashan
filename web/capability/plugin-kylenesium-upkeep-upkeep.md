@@ -7,7 +7,7 @@
 - tashan id: plugin:kylenesium/upkeep/upkeep
 - Source: https://github.com/KyleNesium/upkeep
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 59.0

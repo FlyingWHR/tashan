@@ -8,7 +8,7 @@
 - Source: https://github.com/SAIHM-Admin/saihm-mcp
 - npm: https://www.npmjs.com/package/@saihm/mcp-server
 - Type: npm
-- Category: security
+- Category: files
 - tashan score: 63.0 / 100
 - Adoption: 37.0
 - Upkeep: 68.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:steve228uk/metro-mcp/metro-mcp
 - Source: https://github.com/steve228uk/metro-mcp
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 60.0 / 100
 - Adoption: 31.0
 - Upkeep: 93.0

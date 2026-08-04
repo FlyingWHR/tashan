@@ -7,7 +7,7 @@
 - tashan id: plugin:vumichien/manim-skill/manim-skill
 - Source: https://github.com/vumichien/manim-skill
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 44.0 / 100
 - Adoption: 15.0
 - Upkeep: not measured

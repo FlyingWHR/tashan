@@ -8,7 +8,7 @@
 - Source: https://github.com/fv-forgevision/fv-ai-tool-hub
 - npm: https://www.npmjs.com/package/@fyosimi/fvhub-mcp
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 59.0 / 100
 - Adoption: 34.0
 - Upkeep: 61.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:penguinmiaou/claude-channel-whatsapp/claude-channel-whatsapp
 - Source: https://github.com/PenguinMiaou/claude-channel-whatsapp
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 29.0 / 100
 - Adoption: 13.0
 - Upkeep: 48.0

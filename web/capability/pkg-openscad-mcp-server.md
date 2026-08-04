@@ -8,7 +8,7 @@
 - Source: https://github.com/fboldo/openscad-mcp-server
 - npm: https://www.npmjs.com/package/openscad-mcp-server
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 33.0 / 100
 - Adoption: 26.0
 - Upkeep: 46.0

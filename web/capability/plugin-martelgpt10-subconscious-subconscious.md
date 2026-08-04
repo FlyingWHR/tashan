@@ -7,7 +7,7 @@
 - tashan id: plugin:martelgpt10/subconscious/subconscious
 - Source: https://github.com/MartelGPT10/subconscious
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

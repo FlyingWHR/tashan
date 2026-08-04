@@ -8,7 +8,7 @@
 - Source: https://github.com/BetaBots-LLC/callimachus
 - npm: https://www.npmjs.com/package/callimachus-mcp
 - Type: npm
-- Category: files
+- Category: comms
 - tashan score: 53.0 / 100
 - Adoption: 29.0
 - Upkeep: 62.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:jorgsowa/claude-php-lsp-plugin/php-lsp-claude-code-plugin
 - Source: https://github.com/jorgsowa/claude-php-lsp-plugin
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 29.0 / 100
 - Adoption: 15.0
 - Upkeep: 48.0

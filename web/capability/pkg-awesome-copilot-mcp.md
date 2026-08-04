@@ -8,7 +8,7 @@
 - Source: https://github.com/RbBtSn0w/awesome-copilot-mcp
 - npm: https://www.npmjs.com/package/awesome-copilot-mcp
 - Type: npm
-- Category: devtools
+- Category: docs
 - tashan score: 55.0 / 100
 - Adoption: 35.0
 - Upkeep: 67.0

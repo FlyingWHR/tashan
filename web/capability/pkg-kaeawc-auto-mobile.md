@@ -8,7 +8,7 @@
 - Source: https://github.com/kaeawc/auto-mobile
 - npm: https://www.npmjs.com/package/@kaeawc/auto-mobile
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 73.0 / 100
 - Adoption: 52.0
 - Upkeep: 73.0

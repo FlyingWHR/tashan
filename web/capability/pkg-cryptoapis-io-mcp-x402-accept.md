@@ -8,7 +8,7 @@
 - Source: https://github.com/CryptoAPIs-io/cryptoapis-mcp-x402-accept
 - npm: https://www.npmjs.com/package/@cryptoapis-io/mcp-x402-accept
 - Type: npm
-- Category: finance
+- Category: cloud
 - tashan score: 56.0 / 100
 - Adoption: 34.0
 - Upkeep: 56.0

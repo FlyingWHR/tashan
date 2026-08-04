@@ -8,7 +8,7 @@
 - Source: https://github.com/apeirontrade/provenance-mcp
 - npm: https://www.npmjs.com/package/provenance-mcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 45.0 / 100
 - Adoption: 24.0
 - Upkeep: 50.0

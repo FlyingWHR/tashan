@@ -7,7 +7,7 @@
 - tashan id: plugin:drhalto/agentmako/mako-ai
 - Source: https://github.com/drhalto/agentmako
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 52.0 / 100
 - Adoption: 29.0
 - Upkeep: 63.0

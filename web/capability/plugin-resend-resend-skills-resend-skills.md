@@ -7,7 +7,7 @@
 - tashan id: plugin:resend/resend-skills/resend-skills
 - Source: https://github.com/resend/resend-skills
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

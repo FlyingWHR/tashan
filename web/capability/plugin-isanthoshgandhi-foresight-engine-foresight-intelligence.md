@@ -7,7 +7,7 @@
 - tashan id: plugin:isanthoshgandhi/foresight-engine/foresight-intelligence
 - Source: https://github.com/isanthoshgandhi/foresight-engine
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

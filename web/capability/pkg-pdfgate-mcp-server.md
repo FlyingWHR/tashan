@@ -8,7 +8,7 @@
 - Source: https://github.com/pdfgate/pdfgate-mcp-server
 - npm: https://www.npmjs.com/package/@pdfgate/mcp-server
 - Type: npm
-- Category: productivity
+- Category: other
 - tashan score: 43.0 / 100
 - Adoption: 25.0
 - Upkeep: 50.0

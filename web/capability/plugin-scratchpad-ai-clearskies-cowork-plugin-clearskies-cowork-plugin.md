@@ -7,7 +7,7 @@
 - tashan id: plugin:scratchpad-ai/clearskies-cowork-plugin/clearskies-cowork-plugin
 - Source: https://github.com/scratchpad-ai/clearskies-cowork-plugin
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 98.0

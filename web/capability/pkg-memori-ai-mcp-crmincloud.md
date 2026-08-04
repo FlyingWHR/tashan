@@ -7,7 +7,7 @@
 - tashan id: pkg:@memori.ai/mcp-crmincloud
 - npm: https://www.npmjs.com/package/@memori.ai/mcp-crmincloud
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 70.0 / 100
 - Adoption: 38.0
 - Upkeep: 86.0

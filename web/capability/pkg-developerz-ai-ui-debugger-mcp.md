@@ -8,7 +8,7 @@
 - Source: https://github.com/developerz-ai/ui-debugger-mcp
 - npm: https://www.npmjs.com/package/@developerz.ai/ui-debugger-mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 70.0 / 100
 - Adoption: 42.0
 - Upkeep: 82.0

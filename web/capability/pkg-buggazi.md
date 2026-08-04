@@ -8,7 +8,7 @@
 - Source: https://github.com/jyswee/buggazi
 - npm: https://www.npmjs.com/package/buggazi
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 67.0 / 100
 - Adoption: 39.0
 - Upkeep: 73.0

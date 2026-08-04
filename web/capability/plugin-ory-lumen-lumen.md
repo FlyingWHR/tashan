@@ -7,7 +7,7 @@
 - tashan id: plugin:ory/lumen/lumen
 - Source: https://github.com/ory/lumen
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: 89.0

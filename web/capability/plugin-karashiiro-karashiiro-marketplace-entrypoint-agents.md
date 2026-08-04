@@ -7,7 +7,7 @@
 - tashan id: plugin:karashiiro/karashiiro-marketplace/entrypoint-agents
 - Source: https://github.com/karashiiro/karashiiro-marketplace
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

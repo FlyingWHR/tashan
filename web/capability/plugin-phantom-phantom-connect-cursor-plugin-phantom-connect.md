@@ -7,7 +7,7 @@
 - tashan id: plugin:phantom/phantom-connect-cursor-plugin/phantom-connect
 - Source: https://github.com/phantom/phantom-connect-cursor-plugin
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 34.0 / 100
 - Adoption: 19.0
 - Upkeep: 63.0

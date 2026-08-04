@@ -7,7 +7,7 @@
 - tashan id: plugin:akram012388/cc-dm/cc-dm
 - Source: https://github.com/Akram012388/cc-dm
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 39.0 / 100
 - Adoption: 24.0
 - Upkeep: 65.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/New1Direction/korg
 - npm: https://www.npmjs.com/package/@korgg/recall-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 40.0 / 100
 - Adoption: 22.0
 - Upkeep: 49.0

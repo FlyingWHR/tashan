@@ -8,7 +8,7 @@
 - Source: https://github.com/theYahia/yandex-metrika-mcp
 - npm: https://www.npmjs.com/package/@theyahia/yandex-metrika-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 38.0 / 100
 - Adoption: 26.0
 - Upkeep: 52.0

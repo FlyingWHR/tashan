@@ -7,7 +7,7 @@
 - tashan id: plugin:digital-flowers/claude-code-inspect/claude-code-inspect
 - Source: https://github.com/digital-flowers/claude-code-inspect
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 33.0 / 100
 - Adoption: 13.0
 - Upkeep: 54.0

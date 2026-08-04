@@ -8,7 +8,7 @@
 - Source: https://github.com/Marysbrain/x402-gateway-mcp
 - npm: https://www.npmjs.com/package/x402-gateway-mcp
 - Type: npm
-- Category: data
+- Category: finance
 - tashan score: 47.0 / 100
 - Adoption: 25.0
 - Upkeep: 55.0

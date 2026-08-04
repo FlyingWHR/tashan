@@ -7,7 +7,7 @@
 - tashan id: plugin:arturnbull/designer-notes/designer-notes
 - Source: https://github.com/arturnbull/designer-notes
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 34.0 / 100
 - Adoption: 19.0
 - Upkeep: 50.0

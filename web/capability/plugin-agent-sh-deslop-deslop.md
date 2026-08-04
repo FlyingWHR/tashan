@@ -7,7 +7,7 @@
 - tashan id: plugin:agent-sh/deslop/deslop
 - Source: https://github.com/agent-sh/deslop
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 46.0 / 100
 - Adoption: 15.0
 - Upkeep: 80.0

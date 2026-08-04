@@ -7,7 +7,7 @@
 - tashan id: plugin:fol2/james-dev-skills/sdlc-deliver
 - Source: https://github.com/fol2/james-dev-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

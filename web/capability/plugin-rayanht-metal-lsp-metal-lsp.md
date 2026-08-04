@@ -7,7 +7,7 @@
 - tashan id: plugin:rayanht/metal-lsp/metal-lsp
 - Source: https://github.com/rayanht/metal-lsp
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 28.0 / 100
 - Adoption: 16.0
 - Upkeep: 45.0

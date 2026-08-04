@@ -7,7 +7,7 @@
 - tashan id: plugin:bledden/claude-recall-plugin/recall
 - Source: https://github.com/bledden/claude-recall-plugin
 - Type: plugin
-- Category: productivity
+- Category: database
 - tashan score: 48.0 / 100
 - Adoption: 25.0
 - Upkeep: 62.0

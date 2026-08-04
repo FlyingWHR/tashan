@@ -7,7 +7,7 @@
 - tashan id: plugin:juliuszfedyk/dev-journal/dev-journal
 - Source: https://github.com/juliuszfedyk/dev-journal
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 32.0 / 100
 - Adoption: 11.0
 - Upkeep: 65.0

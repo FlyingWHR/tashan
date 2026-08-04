@@ -8,7 +8,7 @@
 - Source: https://github.com/KryptosAI/agent-observability
 - npm: https://www.npmjs.com/package/agent-obs
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 55.0 / 100
 - Adoption: 29.0
 - Upkeep: 64.0

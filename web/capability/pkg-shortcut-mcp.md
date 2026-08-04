@@ -8,7 +8,7 @@
 - Source: https://github.com/useshortcut/mcp-server-shortcut
 - npm: https://www.npmjs.com/package/@shortcut/mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 74.0 / 100
 - Adoption: 59.0
 - Upkeep: 82.0

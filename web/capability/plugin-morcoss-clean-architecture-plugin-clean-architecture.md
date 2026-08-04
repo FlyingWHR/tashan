@@ -7,7 +7,7 @@
 - tashan id: plugin:morcoss/clean-architecture-plugin/clean-architecture
 - Source: https://github.com/MorcosS/clean-architecture-plugin
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 65.0

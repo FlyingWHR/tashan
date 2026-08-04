@@ -7,7 +7,7 @@
 - tashan id: plugin:wan-huiyan/agent-review-panel/roundtable
 - Source: https://github.com/wan-huiyan/agent-review-panel
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 54.0 / 100
 - Adoption: 26.0
 - Upkeep: not measured

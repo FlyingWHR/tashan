@@ -7,7 +7,7 @@
 - tashan id: plugin:jdsoliveiraa/stream-deck-skill-cc/stream-deck
 - Source: https://github.com/jdsoliveiraa/stream-deck-skill-cc
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 27.0 / 100
 - Adoption: 11.0
 - Upkeep: 47.0

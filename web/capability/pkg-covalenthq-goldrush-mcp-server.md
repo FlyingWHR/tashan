@@ -8,7 +8,7 @@
 - Source: https://github.com/covalenthq/goldrush-services-monorepo
 - npm: https://www.npmjs.com/package/@covalenthq/goldrush-mcp-server
 - Type: npm
-- Category: other
+- Category: database
 - tashan score: 46.0 / 100
 - Adoption: 34.0
 - Upkeep: 66.0

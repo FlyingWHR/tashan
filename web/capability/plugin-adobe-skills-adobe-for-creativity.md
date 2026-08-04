@@ -7,7 +7,7 @@
 - tashan id: plugin:adobe/skills/adobe-for-creativity
 - Source: https://github.com/adobe/skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 70.0 / 100
 - Adoption: 39.0
 - Upkeep: 99.0

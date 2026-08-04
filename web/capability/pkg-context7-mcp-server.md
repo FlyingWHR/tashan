@@ -8,7 +8,7 @@
 - Source: https://github.com/upstash/context7
 - npm: https://www.npmjs.com/package/context7-mcp-server
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 16.0 / 100
 - Adoption: 25.0
 - Upkeep: 26.0

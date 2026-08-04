@@ -7,7 +7,7 @@
 - tashan id: plugin:silverstein/minutes/minutes
 - Source: https://github.com/silverstein/minutes
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 74.0 / 100
 - Adoption: 48.0
 - Upkeep: 99.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:lorhard/lorkinsey/lorkinsey
 - Source: https://github.com/Lorhard/lorkinsey
 - Type: plugin
-- Category: devtools
+- Category: files
 - tashan score: 42.0 / 100
 - Adoption: 11.0
 - Upkeep: 79.0

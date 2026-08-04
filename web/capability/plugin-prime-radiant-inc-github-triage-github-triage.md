@@ -7,7 +7,7 @@
 - tashan id: plugin:prime-radiant-inc/github-triage/github-triage
 - Source: https://github.com/prime-radiant-inc/github-triage
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 16.0
 - Upkeep: 56.0

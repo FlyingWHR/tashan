@@ -7,7 +7,7 @@
 - tashan id: plugin:jerrod/agent-plugins/axr
 - Source: https://github.com/jerrod/agent-plugins
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

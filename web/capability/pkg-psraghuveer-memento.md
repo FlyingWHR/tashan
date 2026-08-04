@@ -8,7 +8,7 @@
 - Source: https://github.com/veerps57/memento
 - npm: https://www.npmjs.com/package/@psraghuveer/memento
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 50.0 / 100
 - Adoption: 33.0
 - Upkeep: 64.0

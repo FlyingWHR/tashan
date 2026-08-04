@@ -7,7 +7,7 @@
 - tashan id: plugin:em-jones/ems-harness/ems
 - Source: https://github.com/em-jones/ems-harness
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 58.0

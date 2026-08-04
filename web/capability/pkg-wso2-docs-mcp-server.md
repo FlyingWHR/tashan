@@ -8,7 +8,7 @@
 - Source: https://github.com/iamvirul/wso2-docs-mcp-server
 - npm: https://www.npmjs.com/package/wso2-docs-mcp-server
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 60.0 / 100
 - Adoption: 33.0
 - Upkeep: 66.0

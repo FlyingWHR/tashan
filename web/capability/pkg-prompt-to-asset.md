@@ -8,7 +8,7 @@
 - Source: https://github.com/MohamedAbdallah-14/prompt-to-asset
 - npm: https://www.npmjs.com/package/prompt-to-asset
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 43.0 / 100
 - Adoption: 30.0
 - Upkeep: 53.0

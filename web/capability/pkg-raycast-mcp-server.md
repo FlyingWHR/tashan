@@ -8,7 +8,7 @@
 - Source: https://github.com/ExpertVagabond/raycast-mcp-server
 - npm: https://www.npmjs.com/package/raycast-mcp-server
 - Type: npm
-- Category: productivity
+- Category: browser
 - tashan score: 29.0 / 100
 - Adoption: 23.0
 - Upkeep: 37.0

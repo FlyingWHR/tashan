@@ -7,7 +7,7 @@
 - tashan id: plugin:estevanhernandez-stack-ed/vibe-cartographer/vibe-cartographer
 - Source: https://github.com/estevanhernandez-stack-ed/vibe-cartographer
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 45.0 / 100
 - Adoption: 15.0
 - Upkeep: 78.0

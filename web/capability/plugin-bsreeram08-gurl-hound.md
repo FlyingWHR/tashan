@@ -7,7 +7,7 @@
 - tashan id: plugin:bsreeram08/gurl/hound
 - Source: https://github.com/bsreeram08/gurl
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 35.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

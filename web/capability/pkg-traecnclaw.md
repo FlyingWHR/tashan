@@ -8,7 +8,7 @@
 - Source: https://github.com/Luckycat133/traecnclaw-mcp-skill
 - npm: https://www.npmjs.com/package/traecnclaw
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 47.0 / 100
 - Adoption: 23.0
 - Upkeep: 55.0

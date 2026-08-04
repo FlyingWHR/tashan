@@ -7,7 +7,7 @@
 - tashan id: plugin:v0latix/claude-code-architecture/volatixclaudesetup
 - Source: https://github.com/V0latix/claude-code-architecture
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/FGC-Shreyansh-Chachaundiya/CodeSherlock-MCP-Server
 - npm: https://www.npmjs.com/package/@codesherlock/codesherlock-mcp-server
 - Type: npm
-- Category: devtools
+- Category: data
 - tashan score: 62.0 / 100
 - Adoption: 27.0
 - Upkeep: 93.0

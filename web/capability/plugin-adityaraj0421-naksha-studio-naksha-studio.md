@@ -7,7 +7,7 @@
 - tashan id: plugin:adityaraj0421/naksha-studio/naksha-studio
 - Source: https://github.com/Adityaraj0421/naksha-studio
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 61.0 / 100
 - Adoption: 39.0
 - Upkeep: 77.0

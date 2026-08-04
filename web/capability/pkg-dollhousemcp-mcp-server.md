@@ -8,7 +8,7 @@
 - Source: https://github.com/DollhouseMCP/mcp-server
 - npm: https://www.npmjs.com/package/@dollhousemcp/mcp-server
 - Type: npm
-- Category: design
+- Category: devtools
 - tashan score: 59.0 / 100
 - Adoption: 35.0
 - Upkeep: 70.0

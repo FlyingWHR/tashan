@@ -7,7 +7,7 @@
 - tashan id: plugin:keitashimoda24-maker/slash-commands-jp/slash-commands-jp
 - Source: https://github.com/keitashimoda24-maker/slash-commands-jp
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 54.0

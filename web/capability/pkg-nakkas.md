@@ -8,7 +8,7 @@
 - Source: https://github.com/arikusi/nakkas
 - npm: https://www.npmjs.com/package/nakkas
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 56.0 / 100
 - Adoption: 32.0
 - Upkeep: 65.0

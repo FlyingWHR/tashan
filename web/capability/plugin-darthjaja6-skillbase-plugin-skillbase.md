@@ -7,7 +7,7 @@
 - tashan id: plugin:darthjaja6/skillbase-plugin/skillbase
 - Source: https://github.com/darthjaja6/skillbase-plugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

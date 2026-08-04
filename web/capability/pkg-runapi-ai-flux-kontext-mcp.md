@@ -8,7 +8,7 @@
 - Source: https://github.com/runapi-ai/flux-kontext-mcp
 - npm: https://www.npmjs.com/package/@runapi.ai/flux-kontext-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 64.0 / 100
 - Adoption: 38.0
 - Upkeep: 67.0

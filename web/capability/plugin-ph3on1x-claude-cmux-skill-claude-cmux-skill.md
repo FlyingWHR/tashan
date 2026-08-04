@@ -7,7 +7,7 @@
 - tashan id: plugin:ph3on1x/claude-cmux-skill/claude-cmux-skill
 - Source: https://github.com/ph3on1x/claude-cmux-skill
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 31.0 / 100
 - Adoption: 20.0
 - Upkeep: 47.0

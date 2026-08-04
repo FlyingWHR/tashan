@@ -7,7 +7,7 @@
 - tashan id: plugin:zhuxiangyi/slopstop/slopstop
 - Source: https://github.com/zhuxiangyi/slopstop
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 36.0 / 100
 - Adoption: 13.0
 - Upkeep: 69.0

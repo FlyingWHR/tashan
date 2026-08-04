@@ -7,7 +7,7 @@
 - tashan id: plugin:perilevy/lsp-intelligence/lsp-intelligence
 - Source: https://github.com/perilevy/lsp-intelligence
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 48.0

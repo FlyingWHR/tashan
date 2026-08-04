@@ -7,7 +7,7 @@
 - tashan id: plugin:ejwisner/ghost-architect-plugin/ghost-architect
 - Source: https://github.com/EJWisner/ghost-architect-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:yeewangcn/tianluo/tianluo
 - Source: https://github.com/yeewangcn/tianluo
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 11.0
 - Upkeep: 50.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Perufitlife/deep-research-mcp-server
 - npm: https://www.npmjs.com/package/deep-research-mcp-server
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 45.0 / 100
 - Adoption: 26.0
 - Upkeep: 53.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:karellen/karellen-lsp-mcp/karellen-lsp-mcp
 - Source: https://github.com/karellen/karellen-lsp-mcp
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 66.0

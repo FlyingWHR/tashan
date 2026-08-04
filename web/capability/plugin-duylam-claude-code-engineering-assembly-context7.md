@@ -7,7 +7,7 @@
 - tashan id: plugin:duylam/claude-code-engineering-assembly/context7
 - Source: https://github.com/duylam/claude-code-engineering-assembly
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

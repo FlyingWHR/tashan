@@ -7,7 +7,7 @@
 - tashan id: plugin:seunggyuyoon-rgb/git-weekly-changelog/git-weekly-changelog
 - Source: https://github.com/seunggyuyoon-rgb/git-weekly-changelog
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

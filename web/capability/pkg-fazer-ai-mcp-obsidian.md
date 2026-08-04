@@ -6,7 +6,7 @@
 - Source: https://github.com/fazer-ai/mcp-obsidian
 - npm: https://www.npmjs.com/package/@fazer-ai/mcp-obsidian
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 33.0 / 100
 - Adoption: 28.0
 - Upkeep: 52.0

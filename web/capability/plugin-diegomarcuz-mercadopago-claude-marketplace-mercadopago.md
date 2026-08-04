@@ -7,7 +7,7 @@
 - tashan id: plugin:diegomarcuz/mercadopago-claude-marketplace/mercadopago
 - Source: https://github.com/diegomarcuz/mercadopago-claude-marketplace
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 86.0

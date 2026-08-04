@@ -7,7 +7,7 @@
 - tashan id: plugin:msishariful/claude-token-inspector/token-inspector
 - Source: https://github.com/msiShariful/claude-token-inspector
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 34.0 / 100
 - Adoption: 16.0
 - Upkeep: 52.0

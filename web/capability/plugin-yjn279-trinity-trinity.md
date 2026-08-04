@@ -7,7 +7,7 @@
 - tashan id: plugin:yjn279/trinity/trinity
 - Source: https://github.com/yjn279/trinity
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 81.0

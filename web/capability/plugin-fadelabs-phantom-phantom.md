@@ -7,7 +7,7 @@
 - tashan id: plugin:fadelabs/phantom/phantom
 - Source: https://github.com/fadelabs/phantom
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 52.0 / 100
 - Adoption: 24.0
 - Upkeep: 79.0

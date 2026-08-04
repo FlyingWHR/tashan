@@ -7,7 +7,7 @@
 - tashan id: plugin:revfactory/harness/harness
 - Source: https://github.com/revfactory/harness
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 78.0 / 100
 - Adoption: 58.0
 - Upkeep: 98.0

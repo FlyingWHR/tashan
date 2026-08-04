@@ -8,7 +8,7 @@
 - Source: https://github.com/opendata-kr/narajangteo-prespec-mcp
 - npm: https://www.npmjs.com/package/@opendata-kr/narajangteo-prespec-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 54.0 / 100
 - Adoption: 26.0
 - Upkeep: 72.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:siftystudio/viv/viv
 - Source: https://github.com/siftystudio/viv
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 47.0 / 100
 - Adoption: 27.0
 - Upkeep: 59.0

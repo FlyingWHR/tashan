@@ -7,7 +7,7 @@
 - tashan id: plugin:eze-is/eze-skills/web-access
 - Source: https://github.com/eze-is/eze-skills
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/inistate/inistate-mcp
 - npm: https://www.npmjs.com/package/inistate-mcp
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 50.0 / 100
 - Adoption: 24.0
 - Upkeep: 70.0

@@ -7,7 +7,7 @@
 - tashan id: pkg:@directus/content-mcp
 - npm: https://www.npmjs.com/package/@directus/content-mcp
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 16.0 / 100
 - Adoption: 32.0
 - Upkeep: 25.0

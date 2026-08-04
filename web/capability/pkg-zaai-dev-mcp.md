@@ -8,7 +8,7 @@
 - Source: https://github.com/POLONIBOI/ZAAI_dev_mcp
 - npm: https://www.npmjs.com/package/@zaai-dev/mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 44.0 / 100
 - Adoption: 25.0
 - Upkeep: 56.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/lennney/mcp-slim-guard
 - npm: https://www.npmjs.com/package/mcp-slim-guard
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 53.0 / 100
 - Adoption: 31.0
 - Upkeep: 55.0

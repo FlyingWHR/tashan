@@ -8,7 +8,7 @@
 - Source: https://github.com/Churman1113/pingcheck
 - npm: https://www.npmjs.com/package/pingcheck-mcp
 - Type: npm
-- Category: cloud
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: not measured
 - Upkeep: 57.0

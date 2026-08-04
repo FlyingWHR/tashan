@@ -8,7 +8,7 @@
 - Source: https://github.com/aipm-engine/AIPM
 - npm: https://www.npmjs.com/package/aipm-mcp-server
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 53.0 / 100
 - Adoption: 32.0
 - Upkeep: 52.0

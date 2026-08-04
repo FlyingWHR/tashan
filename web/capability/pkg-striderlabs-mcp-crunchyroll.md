@@ -7,7 +7,7 @@
 - tashan id: pkg:@striderlabs/mcp-crunchyroll
 - npm: https://www.npmjs.com/package/@striderlabs/mcp-crunchyroll
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 23.0
 - Upkeep: 43.0

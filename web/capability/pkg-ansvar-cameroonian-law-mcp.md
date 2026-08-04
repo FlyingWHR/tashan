@@ -8,7 +8,7 @@
 - Source: https://github.com/Ansvar-Systems/cameroonian-law-mcp
 - npm: https://www.npmjs.com/package/@ansvar/cameroonian-law-mcp
 - Type: npm
-- Category: docs
+- Category: other
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 23.0
 - Upkeep: not measured

@@ -35,14 +35,25 @@
                ["expertise", "Instruction depth"], ["maint", "Upkeep"], ["name", "Name A–Z"]];
 
   // reuse terminal.js's session-cached loader (one fetch+parse of the slim index per session, shared)
-  var loadIndex = window.tashanIndex || function () { return fetch("/data/index.json").then(function (r) { if (!r.ok) throw 0; return r.json(); }); };
+  // BOARD FIRST, CATALOGUED TAIL AFTER. index.json holds ranked + catalogued rows and is the contract
+  // the published CLI reads, so it stays as it is. The browser does not need the unrated tail to paint
+  // a RANKING: those 800 rows were 16.4 KB gz of a 56.8 KB first paint, 29% of the payload for entries
+  // the ranking cannot order. board.json is 40.4 KB; catalogued.json arrives when the page is idle, so
+  // filtering to unrated rows still works — it just stops being on the critical path.
+  // Falls back to index.json if board.json is missing, so an older deploy cannot blank the page.
+  var loadIndex = window.tashanIndex || function () {
+    return fetch("/data/board.json").then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .catch(function () { return fetch("/data/index.json").then(function (r) { if (!r.ok) throw 0; return r.json(); }); });
+  };
   Promise.all([
     loadIndex(),
     fetch("/data/categories.json").then(function (r) { return r.ok ? r.json() : { categories: [] }; }).catch(function () { return { categories: [] }; }),
     // The task taxonomy (labels, roles) and the tag->capability map. The map is 3.6 KB gz against a
     // 39.8 KB index, so it is fetched up front: a lazy path for that saves nothing measurable and costs
     // a loading state, a race on first click, and a filter that silently does nothing until it lands.
-    fetch("/data/tasks.json").then(function (r) { return r.ok ? r.json() : { tasks: [], roles: [] }; }).catch(function () { return { tasks: [], roles: [] }; }),
+    // shared with terminal.js — see window.tashanTasks. Fetching it here too cost 68 KB twice.
+    (window.tashanTasks ? window.tashanTasks() : fetch("/data/tasks.json").then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }))
+      .then(function (t) { return t || { tasks: [], roles: [] }; }),
     fetch("/data/tags.json").then(function (r) { return r.ok ? r.json() : { tasks: {} }; }).catch(function () { return { tasks: {} }; })
   ]).then(function (res) {
     var d = res[0];
@@ -69,6 +80,19 @@
     if (bn) bn.textContent = d.note || "";
 
     data.caps = (d.capabilities || []).filter(function (c) { return c.id.indexOf("key:") !== 0; });
+    // The tail is merged by terminal.js's shared loader (the ONE place that fetches). It fires this
+    // event when the extra rows land, so facet counts and the unrated filter refresh once instead of
+    // being computed twice on first paint.
+    if (!window.__tashanTailWired) {
+      window.__tashanTailWired = 1;
+      window.addEventListener("tashan:catalogued", function () {
+        window.tashanIndex().then(function (d) {
+          data.caps = (d.capabilities || []).filter(function (c) { return c.id.indexOf("key:") !== 0; });
+          data._facets = null;
+          commit();
+        });
+      });
+    }
     (res[1].categories || []).forEach(function (c) { data.catMeta[c.id] = c; });
     data.cats = res[1].categories || [];
     data.tasks = (res[2] && res[2].tasks) || [];

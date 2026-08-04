@@ -8,7 +8,7 @@
 - Source: https://github.com/lHyperionl/WG-Console-MCP-server
 - npm: https://www.npmjs.com/package/wargaming-mcp-server
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 45.0 / 100
 - Adoption: 21.0
 - Upkeep: 54.0

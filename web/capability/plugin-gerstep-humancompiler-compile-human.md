@@ -7,7 +7,7 @@
 - tashan id: plugin:gerstep/humancompiler/compile-human
 - Source: https://github.com/Gerstep/HumanCompiler
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 34.0 / 100
 - Adoption: 35.0
 - Upkeep: 43.0

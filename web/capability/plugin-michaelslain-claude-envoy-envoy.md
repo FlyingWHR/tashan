@@ -7,7 +7,7 @@
 - tashan id: plugin:michaelslain/claude-envoy/envoy
 - Source: https://github.com/michaelslain/claude-envoy
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

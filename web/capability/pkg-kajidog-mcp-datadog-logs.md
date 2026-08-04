@@ -8,7 +8,7 @@
 - Source: https://github.com/kajidog/mcp-datadog-logs
 - npm: https://www.npmjs.com/package/@kajidog/mcp-datadog-logs
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 46.0 / 100
 - Adoption: 21.0
 - Upkeep: 59.0

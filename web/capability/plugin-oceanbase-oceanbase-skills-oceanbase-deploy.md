@@ -7,7 +7,7 @@
 - tashan id: plugin:oceanbase/oceanbase-skills/oceanbase-deploy
 - Source: https://github.com/oceanbase/oceanbase-skills
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

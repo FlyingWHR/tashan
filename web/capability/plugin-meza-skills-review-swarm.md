@@ -7,7 +7,7 @@
 - tashan id: plugin:meza/skills/review-swarm
 - Source: https://github.com/meza/skills
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

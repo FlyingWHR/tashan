@@ -7,7 +7,7 @@
 - tashan id: plugin:eudaimonic-inc/deepspace-skill/deepspace
 - Source: https://github.com/Eudaimonic-Inc/deepspace-skill
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 53.0 / 100
 - Adoption: 17.0
 - Upkeep: 99.0

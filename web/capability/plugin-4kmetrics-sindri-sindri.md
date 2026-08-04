@@ -7,7 +7,7 @@
 - tashan id: plugin:4kmetrics/sindri/sindri
 - Source: https://github.com/4KMetrics/sindri
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: 76.0

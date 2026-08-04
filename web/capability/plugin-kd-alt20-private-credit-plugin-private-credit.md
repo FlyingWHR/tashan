@@ -7,7 +7,7 @@
 - tashan id: plugin:kd-alt20/private-credit-plugin/private-credit
 - Source: https://github.com/KD-alt20/private-credit-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 17.0
 - Upkeep: 44.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:yn01/claude-plugins/mcpd
 - Source: https://github.com/yn01/claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

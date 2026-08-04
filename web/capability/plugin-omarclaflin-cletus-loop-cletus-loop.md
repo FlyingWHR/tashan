@@ -7,7 +7,7 @@
 - tashan id: plugin:omarclaflin/cletus-loop/cletus-loop
 - Source: https://github.com/omarclaflin/cletus-loop
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

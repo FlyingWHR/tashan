@@ -8,7 +8,7 @@
 - Source: https://github.com/Microbiosis/sensenova-u1-mcp
 - npm: https://www.npmjs.com/package/sensenova-u1-mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 45.0 / 100
 - Adoption: 20.0
 - Upkeep: 59.0

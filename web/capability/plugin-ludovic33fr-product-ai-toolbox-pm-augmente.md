@@ -7,7 +7,7 @@
 - tashan id: plugin:ludovic33fr/product-ai-toolbox/pm-augmente
 - Source: https://github.com/Ludovic33Fr/product-ai-toolbox
 - Type: plugin
-- Category: search
+- Category: docs
 - tashan score: 34.0 / 100
 - Adoption: 11.0
 - Upkeep: 56.0

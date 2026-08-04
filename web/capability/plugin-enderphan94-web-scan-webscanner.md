@@ -7,7 +7,7 @@
 - tashan id: plugin:enderphan94/web_scan/webscanner
 - Source: https://github.com/enderphan94/web_scan
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

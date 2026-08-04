@@ -7,7 +7,7 @@
 - tashan id: plugin:cyvnrs/smdd-toolkit/smdd-toolkit
 - Source: https://github.com/cyvnrs/smdd-toolkit
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

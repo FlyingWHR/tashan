@@ -7,7 +7,7 @@
 - tashan id: plugin:eranshir/rehydrate/rehydrate
 - Source: https://github.com/eranshir/rehydrate
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 34.0 / 100
 - Adoption: 13.0
 - Upkeep: 55.0

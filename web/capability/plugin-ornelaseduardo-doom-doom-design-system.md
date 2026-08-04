@@ -7,7 +7,7 @@
 - tashan id: plugin:ornelaseduardo/doom/doom-design-system
 - Source: https://github.com/ornelasEduardo/doom
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 35.0 / 100
 - Adoption: 13.0
 - Upkeep: 69.0

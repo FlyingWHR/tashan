@@ -8,7 +8,7 @@
 - Source: https://github.com/Pollamin/opendock-mcp
 - npm: https://www.npmjs.com/package/opendock-mcp
 - Type: npm
-- Category: productivity
+- Category: browser
 - tashan score: 39.0 / 100
 - Adoption: 31.0
 - Upkeep: 56.0

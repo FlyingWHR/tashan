@@ -7,7 +7,7 @@
 - tashan id: plugin:dnvriend/aws-bedrock-cost-tool/aws-bedrock-cost-tool
 - Source: https://github.com/dnvriend/aws-bedrock-cost-tool
 - Type: plugin
-- Category: database
+- Category: ai
 - tashan score: 18.0 / 100
 - Adoption: 7.0
 - Upkeep: 38.0

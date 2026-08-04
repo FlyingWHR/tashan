@@ -7,7 +7,7 @@
 - tashan id: plugin:jnuyens/gsd-plugin/gsd-plugin
 - Source: https://github.com/jnuyens/gsd-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 67.0 / 100
 - Adoption: 32.0
 - Upkeep: 99.0

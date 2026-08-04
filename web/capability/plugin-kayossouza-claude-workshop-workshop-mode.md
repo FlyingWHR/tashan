@@ -7,7 +7,7 @@
 - tashan id: plugin:kayossouza/claude-workshop/workshop-mode
 - Source: https://github.com/kayossouza/claude-workshop
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 57.0

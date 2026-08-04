@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/opentabs-plugin-priceline
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 60.0 / 100
 - Adoption: 32.0
 - Upkeep: 70.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:circlefin/skills/circle-skills
 - Source: https://github.com/circlefin/skills
 - Type: plugin
-- Category: finance
+- Category: other
 - tashan score: 46.0 / 100
 - Adoption: 11.0
 - Upkeep: 100.0

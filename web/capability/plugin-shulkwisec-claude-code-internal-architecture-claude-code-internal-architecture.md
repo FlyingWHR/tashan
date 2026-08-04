@@ -7,7 +7,7 @@
 - tashan id: plugin:shulkwisec/claude-code-internal-architecture/claude-code-internal-architecture
 - Source: https://github.com/ShulkwiSEC/claude-code-internal-architecture
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 62.0

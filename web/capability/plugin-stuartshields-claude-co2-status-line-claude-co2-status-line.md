@@ -7,7 +7,7 @@
 - tashan id: plugin:stuartshields/claude-co2-status-line/claude-co2-status-line
 - Source: https://github.com/stuartshields/claude-co2-status-line
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

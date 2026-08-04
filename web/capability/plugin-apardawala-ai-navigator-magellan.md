@@ -7,7 +7,7 @@
 - tashan id: plugin:apardawala/ai-navigator/magellan
 - Source: https://github.com/apardawala/ai-navigator
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:wrsmith108/varlock-claude-skill/varlock-skill
 - Source: https://github.com/wrsmith108/varlock-claude-skill
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:obra/double-shot-latte/double-shot-latte
 - Source: https://github.com/obra/double-shot-latte
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 43.0 / 100
 - Adoption: 38.0
 - Upkeep: 62.0

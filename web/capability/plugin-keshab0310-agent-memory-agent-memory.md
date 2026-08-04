@@ -7,7 +7,7 @@
 - tashan id: plugin:keshab0310/agent-memory/agent-memory
 - Source: https://github.com/Keshab0310/agent-memory
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 48.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:sylmarien/agents-orchestration-pipeline/agent-pipeline
 - Source: https://github.com/sylmarien/agents-orchestration-pipeline
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 62.0

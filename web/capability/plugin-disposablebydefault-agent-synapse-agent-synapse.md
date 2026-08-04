@@ -7,7 +7,7 @@
 - tashan id: plugin:disposablebydefault/agent-synapse/agent-synapse
 - Source: https://github.com/DisposableByDefault/agent-synapse
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 55.0

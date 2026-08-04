@@ -7,7 +7,7 @@
 - tashan id: plugin:guohaonan-shy/excalidrawer/excalidrawer
 - Source: https://github.com/guohaonan-shy/excalidrawer
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 44.0 / 100
 - Adoption: 15.0
 - Upkeep: 78.0

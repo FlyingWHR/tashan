@@ -7,7 +7,7 @@
 - tashan id: plugin:digital-process-tools/claude-supertool/supertool
 - Source: https://github.com/Digital-Process-Tools/claude-supertool
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 58.0 / 100
 - Adoption: 22.0
 - Upkeep: 99.0

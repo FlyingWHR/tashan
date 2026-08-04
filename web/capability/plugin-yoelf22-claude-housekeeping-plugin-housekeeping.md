@@ -7,7 +7,7 @@
 - tashan id: plugin:yoelf22/claude-housekeeping-plugin/housekeeping
 - Source: https://github.com/yoelf22/claude-housekeeping-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 17.0 / 100
 - Adoption: 7.0
 - Upkeep: 14.0

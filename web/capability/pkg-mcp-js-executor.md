@@ -7,7 +7,7 @@
 - tashan id: pkg:mcp-js-executor
 - npm: https://www.npmjs.com/package/mcp-js-executor
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 23.0 / 100
 - Adoption: 23.0
 - Upkeep: 39.0

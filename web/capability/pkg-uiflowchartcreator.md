@@ -8,7 +8,7 @@
 - Source: https://github.com/umshere/uiflowchartcreator
 - npm: https://www.npmjs.com/package/uiflowchartcreator
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 18.0 / 100
 - Adoption: 51.0
 - Upkeep: 28.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/humanforai/humanforai-mcp
 - npm: https://www.npmjs.com/package/humanforai
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 49.0 / 100
 - Adoption: 26.0
 - Upkeep: 56.0

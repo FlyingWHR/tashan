@@ -8,7 +8,7 @@
 - Source: https://github.com/bayway/janusmcp
 - npm: https://www.npmjs.com/package/@bayway/janusmcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 52.0 / 100
 - Adoption: 29.0
 - Upkeep: 61.0

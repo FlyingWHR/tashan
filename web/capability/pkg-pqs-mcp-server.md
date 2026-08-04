@@ -8,7 +8,7 @@
 - Source: https://github.com/OnChainAIIntel/pqs-mcp-server
 - npm: https://www.npmjs.com/package/pqs-mcp-server
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 46.0 / 100
 - Adoption: 26.0
 - Upkeep: 62.0

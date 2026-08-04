@@ -7,7 +7,7 @@
 - tashan id: plugin:kivancserefoglu/resume-optimizer/resume-optimizer
 - Source: https://github.com/KivancSerefoglu/resume-optimizer
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

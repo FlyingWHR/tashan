@@ -7,7 +7,7 @@
 - tashan id: plugin:skysoo1111/claude-marketplace/team-mode
 - Source: https://github.com/skysoo1111/claude-marketplace
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

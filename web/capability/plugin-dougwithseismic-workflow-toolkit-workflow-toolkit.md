@@ -7,7 +7,7 @@
 - tashan id: plugin:dougwithseismic/workflow-toolkit/workflow-toolkit
 - Source: https://github.com/dougwithseismic/workflow-toolkit
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 23.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

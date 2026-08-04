@@ -8,7 +8,7 @@
 - Source: https://github.com/heltonteixeira/openrouterai
 - npm: https://www.npmjs.com/package/@mcpservers/openrouterai
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 22.0 / 100
 - Adoption: 37.0
 - Upkeep: 36.0

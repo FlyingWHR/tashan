@@ -7,7 +7,7 @@
 - tashan id: plugin:lithos-ai/motus/motus
 - Source: https://github.com/lithos-ai/motus
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 71.0 / 100
 - Adoption: 42.0
 - Upkeep: 97.0

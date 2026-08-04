@@ -8,7 +8,7 @@
 - Source: https://github.com/CallMarcus/security-scorecard-mcp
 - npm: https://www.npmjs.com/package/@callmarcus/securityscorecard-mcp
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 43.0 / 100
 - Adoption: 24.0
 - Upkeep: 55.0

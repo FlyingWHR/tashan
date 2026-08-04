@@ -7,7 +7,7 @@
 - tashan id: plugin:codecoincognition/enuff-is-enuff-unsubscribe/enuff-is-enuff-unsubscribe
 - Source: https://github.com/codecoincognition/enuff-is-enuff-unsubscribe
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 69.0

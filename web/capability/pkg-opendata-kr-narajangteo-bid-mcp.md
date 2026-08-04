@@ -8,7 +8,7 @@
 - Source: https://github.com/opendata-kr/narajangteo-bid-mcp
 - npm: https://www.npmjs.com/package/@opendata-kr/narajangteo-bid-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 56.0 / 100
 - Adoption: 27.0
 - Upkeep: 76.0

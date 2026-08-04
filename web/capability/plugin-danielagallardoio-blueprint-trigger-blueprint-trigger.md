@@ -7,7 +7,7 @@
 - tashan id: plugin:danielagallardoio/blueprint-trigger/blueprint-trigger
 - Source: https://github.com/DanielaGallardoio/blueprint-trigger
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

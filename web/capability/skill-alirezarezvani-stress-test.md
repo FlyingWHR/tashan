@@ -7,7 +7,7 @@
 - tashan id: skill:alirezarezvani/stress-test
 - Source: https://github.com/alirezarezvani/claude-skills
 - Type: skill
-- Category: devtools
+- Category: ai
 - tashan score: 49.0 / 100
 - Adoption: 14.0
 - Upkeep: 97.0

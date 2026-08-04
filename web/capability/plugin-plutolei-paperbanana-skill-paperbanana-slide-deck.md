@@ -7,7 +7,7 @@
 - tashan id: plugin:plutolei/paperbanana-skill/paperbanana-slide-deck
 - Source: https://github.com/PlutoLei/paperbanana-skill
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

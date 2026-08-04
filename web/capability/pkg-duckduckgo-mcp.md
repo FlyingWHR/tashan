@@ -8,7 +8,7 @@
 - Source: https://github.com/T1ckbase/duckduckgo-mcp
 - npm: https://www.npmjs.com/package/duckduckgo-mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 35.0 / 100
 - Adoption: 32.0
 - Upkeep: 43.0

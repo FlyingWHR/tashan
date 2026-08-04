@@ -8,7 +8,7 @@
 - Source: https://github.com/UModeler/picoberry-mcp
 - npm: https://www.npmjs.com/package/@picoberry/mcp-server
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 52.0 / 100
 - Adoption: 28.0
 - Upkeep: 58.0

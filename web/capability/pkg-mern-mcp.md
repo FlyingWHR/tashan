@@ -8,7 +8,7 @@
 - Source: https://github.com/IrtezaAsadRizvi/mern-mcp
 - npm: https://www.npmjs.com/package/mern-mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 31.0 / 100
 - Adoption: 20.0
 - Upkeep: 40.0

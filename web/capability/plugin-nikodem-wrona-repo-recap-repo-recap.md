@@ -7,7 +7,7 @@
 - tashan id: plugin:nikodem-wrona/repo-recap/repo-recap
 - Source: https://github.com/nikodem-wrona/repo-recap
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

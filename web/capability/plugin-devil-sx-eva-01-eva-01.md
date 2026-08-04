@@ -7,7 +7,7 @@
 - tashan id: plugin:devil-sx/eva-01/eva-01
 - Source: https://github.com/Devil-SX/EVA-01
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 23.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

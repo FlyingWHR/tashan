@@ -7,7 +7,7 @@
 - tashan id: plugin:dominodatalab/domino-claude-plugin/dominodatalab
 - Source: https://github.com/dominodatalab/domino-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 55.0 / 100
 - Adoption: 22.0
 - Upkeep: 96.0

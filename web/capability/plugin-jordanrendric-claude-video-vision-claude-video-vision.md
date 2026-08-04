@@ -7,7 +7,7 @@
 - tashan id: plugin:jordanrendric/claude-video-vision/claude-video-vision
 - Source: https://github.com/jordanrendric/claude-video-vision
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 71.0 / 100
 - Adoption: 46.0
 - Upkeep: 95.0

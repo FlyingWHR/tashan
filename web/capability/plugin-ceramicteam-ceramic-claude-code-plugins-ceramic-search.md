@@ -7,7 +7,7 @@
 - tashan id: plugin:ceramicteam/ceramic-claude-code-plugins/ceramic-search
 - Source: https://github.com/CeramicTeam/ceramic-claude-code-plugins
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 72.0

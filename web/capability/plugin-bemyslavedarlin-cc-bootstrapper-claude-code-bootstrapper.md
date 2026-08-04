@@ -7,7 +7,7 @@
 - tashan id: plugin:bemyslavedarlin/cc-bootstrapper/claude-code-bootstrapper
 - Source: https://github.com/BeMySlaveDarlin/cc-bootstrapper
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 34.0 / 100
 - Adoption: 23.0
 - Upkeep: 49.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:duckroverload/duckr-plugins/orchestrator-workflow-plugin
 - Source: https://github.com/DuckrOverload/duckr-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

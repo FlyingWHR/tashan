@@ -7,7 +7,7 @@
 - tashan id: plugin:1989v/ai/claude-md-analyzer
 - Source: https://github.com/1989v/ai
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

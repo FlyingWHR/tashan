@@ -7,7 +7,7 @@
 - tashan id: registry:io.github.KVANTRA-dev/NOUZ-MCP
 - Source: https://github.com/KVANTRA-dev/NOUZ-MCP
 - Type: python
-- Category: devtools
+- Category: docs
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: not measured
 - Upkeep: not measured

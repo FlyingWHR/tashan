@@ -7,7 +7,7 @@
 - tashan id: plugin:narutorabby/shopify-polaris-claude-plugin/shopify-polaris
 - Source: https://github.com/narutorabby/shopify-polaris-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:christancho/chat-autoexporter/chat-auto-exporter
 - Source: https://github.com/christancho/chat-autoexporter
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 48.0

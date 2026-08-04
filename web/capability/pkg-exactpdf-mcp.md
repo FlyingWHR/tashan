@@ -8,7 +8,7 @@
 - Source: https://github.com/smmallya/ExactPDF
 - npm: https://www.npmjs.com/package/@exactpdf/mcp
 - Type: npm
-- Category: productivity
+- Category: other
 - tashan score: 51.0 / 100
 - Adoption: 26.0
 - Upkeep: 65.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/instavar/mcp-server
 - npm: https://www.npmjs.com/package/@instavar/mcp-server
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 53.0 / 100
 - Adoption: 30.0
 - Upkeep: 61.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:shadiazzeh11/claude-meta-skills/claude-meta-skills
 - Source: https://github.com/shadiazzeh11/claude-meta-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 53.0

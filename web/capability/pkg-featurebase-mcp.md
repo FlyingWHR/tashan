@@ -8,7 +8,7 @@
 - Source: https://github.com/yourusername/featurebase-mcp
 - npm: https://www.npmjs.com/package/featurebase-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 20.0 / 100
 - Adoption: 38.0
 - Upkeep: 29.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/getdatanaut/openmcp
 - npm: https://www.npmjs.com/package/openmcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 26.0 / 100
 - Adoption: 23.0
 - Upkeep: 57.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:cemde/scientific-coding-skill/scientific-coding
 - Source: https://github.com/cemde/Scientific-Coding-Skill
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

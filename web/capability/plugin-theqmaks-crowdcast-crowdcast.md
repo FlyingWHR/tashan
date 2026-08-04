@@ -7,7 +7,7 @@
 - tashan id: plugin:theqmaks/crowdcast/crowdcast
 - Source: https://github.com/TheQmaks/crowdcast
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 20.0
 - Upkeep: 52.0

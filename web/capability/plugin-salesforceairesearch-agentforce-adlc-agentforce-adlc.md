@@ -7,7 +7,7 @@
 - tashan id: plugin:salesforceairesearch/agentforce-adlc/agentforce-adlc
 - Source: https://github.com/SalesforceAIResearch/agentforce-adlc
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 70.0 / 100
 - Adoption: 37.0
 - Upkeep: 99.0

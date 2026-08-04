@@ -8,7 +8,7 @@
 - Source: https://github.com/gabrielmayers/storeshots
 - npm: https://www.npmjs.com/package/shotly-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 49.0 / 100
 - Adoption: 24.0
 - Upkeep: 57.0

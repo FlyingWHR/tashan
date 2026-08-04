@@ -8,7 +8,7 @@
 - Source: https://github.com/IgniteUI/igniteui-cli
 - npm: https://www.npmjs.com/package/@igniteui/mcp-server
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 59.0 / 100
 - Adoption: 33.0
 - Upkeep: 70.0

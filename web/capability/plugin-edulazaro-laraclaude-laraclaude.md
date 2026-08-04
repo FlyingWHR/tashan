@@ -7,7 +7,7 @@
 - tashan id: plugin:edulazaro/laraclaude/laraclaude
 - Source: https://github.com/edulazaro/laraclaude
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 41.0 / 100
 - Adoption: 21.0
 - Upkeep: 57.0

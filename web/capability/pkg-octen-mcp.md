@@ -8,7 +8,7 @@
 - Source: https://github.com/Octen-Team/octen-mcp
 - npm: https://www.npmjs.com/package/octen-mcp
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 65.0 / 100
 - Adoption: 39.0
 - Upkeep: 69.0

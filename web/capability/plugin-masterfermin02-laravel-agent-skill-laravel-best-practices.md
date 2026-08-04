@@ -7,7 +7,7 @@
 - tashan id: plugin:masterfermin02/laravel-agent-skill/laravel-best-practices
 - Source: https://github.com/masterfermin02/laravel-agent-skill
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 26.0 / 100
 - Adoption: 11.0
 - Upkeep: 46.0

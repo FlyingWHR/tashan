@@ -8,7 +8,7 @@
 - Source: https://github.com/IzumiSy/mcp-universal-db-client
 - npm: https://www.npmjs.com/package/@izumisy/mcp-universal-db-client
 - Type: npm
-- Category: other
+- Category: database
 - tashan score: 32.0 / 100
 - Adoption: 18.0
 - Upkeep: 51.0

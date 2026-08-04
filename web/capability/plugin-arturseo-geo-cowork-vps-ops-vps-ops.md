@@ -7,7 +7,7 @@
 - tashan id: plugin:arturseo-geo/cowork-vps-ops/vps-ops
 - Source: https://github.com/arturseo-geo/cowork-vps-ops
 - Type: plugin
-- Category: cloud
+- Category: data
 - tashan score: 30.0 / 100
 - Adoption: 17.0
 - Upkeep: 47.0

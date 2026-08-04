@@ -7,7 +7,7 @@
 - tashan id: plugin:yeheskieltame/claudelance/claudelance-worker
 - Source: https://github.com/yeheskieltame/claudelance
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 52.0 / 100
 - Adoption: 16.0
 - Upkeep: 98.0

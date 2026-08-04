@@ -7,7 +7,7 @@
 - tashan id: plugin:atreep/ai-pm-frame/ai-pm
 - Source: https://github.com/ATreep/ai-pm-frame
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 70.0

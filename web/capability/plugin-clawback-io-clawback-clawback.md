@@ -7,7 +7,7 @@
 - tashan id: plugin:clawback-io/clawback/clawback
 - Source: https://github.com/clawback-io/clawback
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

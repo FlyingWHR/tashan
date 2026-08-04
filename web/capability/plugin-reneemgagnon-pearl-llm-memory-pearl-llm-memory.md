@@ -7,7 +7,7 @@
 - tashan id: plugin:reneemgagnon/pearl_llm_memory/pearl-llm-memory
 - Source: https://github.com/reneemgagnon/Pearl_LLM_Memory
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

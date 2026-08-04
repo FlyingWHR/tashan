@@ -8,7 +8,7 @@
 - Source: https://github.com/GuafterCW/CTXAI
 - npm: https://www.npmjs.com/package/@ctxai/mcp
 - Type: npm
-- Category: other
+- Category: files
 - tashan score: 40.0 / 100
 - Adoption: 15.0
 - Upkeep: 53.0

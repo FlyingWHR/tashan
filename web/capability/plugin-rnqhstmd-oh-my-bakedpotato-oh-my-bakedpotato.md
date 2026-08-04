@@ -7,7 +7,7 @@
 - tashan id: plugin:rnqhstmd/oh-my-bakedpotato/oh-my-bakedpotato
 - Source: https://github.com/rnqhstmd/oh-my-bakedpotato
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 62.0

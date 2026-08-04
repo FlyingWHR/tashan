@@ -7,7 +7,7 @@
 - tashan id: plugin:orion-gz/claude-trinity/claude-trinity
 - Source: https://github.com/orion-gz/Claude-Trinity
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

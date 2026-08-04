@@ -7,7 +7,7 @@
 - tashan id: plugin:ivannovosad/codehog/codehog
 - Source: https://github.com/ivannovosad/codehog
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 49.0

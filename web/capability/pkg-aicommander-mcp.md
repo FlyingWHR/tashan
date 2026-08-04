@@ -8,7 +8,7 @@
 - Source: https://github.com/lksrz/aicommander
 - npm: https://www.npmjs.com/package/@aicommander/mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 56.0 / 100
 - Adoption: 30.0
 - Upkeep: 66.0

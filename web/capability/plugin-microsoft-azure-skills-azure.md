@@ -7,7 +7,7 @@
 - tashan id: plugin:microsoft/azure-skills/azure
 - Source: https://github.com/microsoft/azure-skills
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 76.0 / 100
 - Adoption: 52.0
 - Upkeep: 99.0

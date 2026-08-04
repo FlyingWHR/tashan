@@ -7,7 +7,7 @@
 - tashan id: plugin:vincentboillotdevalliere/sofware-engineer-skills/pr-review-fix
 - Source: https://github.com/VincentBoillotDevalliere/sofware-engineer-skills
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

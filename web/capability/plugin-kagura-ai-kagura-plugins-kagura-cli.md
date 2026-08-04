@@ -7,7 +7,7 @@
 - tashan id: plugin:kagura-ai/kagura-plugins/kagura-cli
 - Source: https://github.com/kagura-ai/kagura-plugins
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

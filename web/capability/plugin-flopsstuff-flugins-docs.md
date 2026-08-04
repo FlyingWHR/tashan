@@ -7,7 +7,7 @@
 - tashan id: plugin:flopsstuff/flugins/docs
 - Source: https://github.com/Flopsstuff/flugins
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

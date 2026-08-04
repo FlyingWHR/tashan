@@ -8,7 +8,7 @@
 - Source: https://github.com/theYahia/amocrm-mcp
 - npm: https://www.npmjs.com/package/@theyahia/amocrm-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 36.0 / 100
 - Adoption: 22.0
 - Upkeep: 51.0

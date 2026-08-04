@@ -8,7 +8,7 @@
 - Source: https://github.com/antics-gg/antics-mcp
 - npm: https://www.npmjs.com/package/antics-mcp
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 63.0 / 100
 - Adoption: 36.0
 - Upkeep: 69.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:bo-cao/breaking-coding-chaos/bcc
 - Source: https://github.com/bo-cao/breaking-coding-chaos
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 54.0 / 100
 - Adoption: 24.0
 - Upkeep: 81.0

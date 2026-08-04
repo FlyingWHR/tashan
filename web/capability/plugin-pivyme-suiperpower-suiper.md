@@ -7,7 +7,7 @@
 - tashan id: plugin:pivyme/suiperpower/suiper
 - Source: https://github.com/pivyme/suiperpower
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 57.0 / 100
 - Adoption: 21.0
 - Upkeep: 99.0

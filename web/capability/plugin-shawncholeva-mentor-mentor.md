@@ -7,7 +7,7 @@
 - tashan id: plugin:shawncholeva/mentor/mentor
 - Source: https://github.com/ShawnCholeva/mentor
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 49.0

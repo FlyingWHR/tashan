@@ -7,7 +7,7 @@
 - tashan id: plugin:irl-dan/multiverse/multiverse
 - Source: https://github.com/irl-dan/multiverse
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 24.0 / 100
 - Adoption: 15.0
 - Upkeep: 41.0

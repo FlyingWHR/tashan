@@ -7,7 +7,7 @@
 - tashan id: plugin:culminationai/claude-sounds/claude-sounds
 - Source: https://github.com/culminationAI/claude-sounds
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

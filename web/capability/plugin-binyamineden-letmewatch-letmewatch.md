@@ -7,7 +7,7 @@
 - tashan id: plugin:binyamineden/letmewatch/letmewatch
 - Source: https://github.com/BinyaminEden/letmewatch
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 50.0 / 100
 - Adoption: 20.0
 - Upkeep: 92.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/meertrack/meertrack-mcp
 - npm: https://www.npmjs.com/package/@meertrack/mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 50.0 / 100
 - Adoption: 28.0
 - Upkeep: 59.0

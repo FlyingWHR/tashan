@@ -8,7 +8,7 @@
 - Source: https://github.com/modelcontextprotocol/typescript-sdk
 - npm: https://www.npmjs.com/package/@modelcontextprotocol/server
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 84.0 / 100
 - Adoption: 70.0
 - Upkeep: 91.0

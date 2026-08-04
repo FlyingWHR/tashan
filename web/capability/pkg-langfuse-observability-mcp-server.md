@@ -8,7 +8,7 @@
 - Source: https://github.com/pulsemcp/mcp-servers
 - npm: https://www.npmjs.com/package/langfuse-observability-mcp-server
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 48.0 / 100
 - Adoption: 30.0
 - Upkeep: 54.0

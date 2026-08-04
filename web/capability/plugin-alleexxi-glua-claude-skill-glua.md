@@ -7,7 +7,7 @@
 - tashan id: plugin:alleexxi/glua-claude-skill/glua
 - Source: https://github.com/Alleexxi/glua-claude-skill
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 33.0 / 100
 - Adoption: 11.0
 - Upkeep: 55.0

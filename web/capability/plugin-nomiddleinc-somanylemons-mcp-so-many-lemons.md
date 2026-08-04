@@ -7,7 +7,7 @@
 - tashan id: plugin:nomiddleinc/somanylemons-mcp/so-many-lemons
 - Source: https://github.com/NoMiddleInc/somanylemons-mcp
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 39.0 / 100
 - Adoption: 11.0
 - Upkeep: 75.0

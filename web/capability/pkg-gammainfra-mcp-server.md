@@ -8,7 +8,7 @@
 - Source: https://github.com/yuz0101/gammainfra-mcp-server
 - npm: https://www.npmjs.com/package/@gammainfra/mcp-server
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 39.0 / 100
 - Adoption: 24.0
 - Upkeep: 48.0

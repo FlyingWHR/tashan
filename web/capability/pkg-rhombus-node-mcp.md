@@ -8,7 +8,7 @@
 - Source: https://github.com/RhombusSystems/rhombus-node-mcp
 - npm: https://www.npmjs.com/package/rhombus-node-mcp
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 60.0 / 100
 - Adoption: 26.0
 - Upkeep: 96.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:dding-g/ddingg-claude-marketplace/common-skills
 - Source: https://github.com/dding-g/ddingg-claude-marketplace
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

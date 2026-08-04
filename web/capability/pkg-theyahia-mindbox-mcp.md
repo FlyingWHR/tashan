@@ -8,7 +8,7 @@
 - Source: https://github.com/theYahia/mindbox-mcp
 - npm: https://www.npmjs.com/package/@theyahia/mindbox-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 44.0 / 100
 - Adoption: 21.0
 - Upkeep: 58.0

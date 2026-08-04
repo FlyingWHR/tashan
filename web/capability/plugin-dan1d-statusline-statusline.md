@@ -7,7 +7,7 @@
 - tashan id: plugin:dan1d/statusline/statusline
 - Source: https://github.com/dan1d/statusline
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

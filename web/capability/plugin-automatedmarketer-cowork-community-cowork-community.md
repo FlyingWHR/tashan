@@ -7,7 +7,7 @@
 - tashan id: plugin:automatedmarketer/cowork-community/cowork-community
 - Source: https://github.com/AutomatedMarketer/cowork-community
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 93.0

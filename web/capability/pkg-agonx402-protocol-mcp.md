@@ -8,7 +8,7 @@
 - Source: https://github.com/Agonx402/agon-gateway-agentic
 - npm: https://www.npmjs.com/package/@agonx402/protocol-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 44.0 / 100
 - Adoption: 31.0
 - Upkeep: 54.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:civitas-cerebrum/jarvis-plugin/jarvis
 - Source: https://github.com/civitas-cerebrum/jarvis-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

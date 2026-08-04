@@ -7,7 +7,7 @@
 - tashan id: plugin:hangox/thunderbird-skill-cli/thunderbird
 - Source: https://github.com/hangox/thunderbird-skill-cli
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 41.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

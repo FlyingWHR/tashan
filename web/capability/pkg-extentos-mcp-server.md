@@ -8,7 +8,7 @@
 - Source: https://github.com/extentos/mcp-server
 - npm: https://www.npmjs.com/package/@extentos/mcp-server
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 69.0 / 100
 - Adoption: 43.0
 - Upkeep: 72.0

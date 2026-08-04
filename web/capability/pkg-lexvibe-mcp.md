@@ -8,7 +8,7 @@
 - Source: https://github.com/marcosnovo/lexvibe-mcp
 - npm: https://www.npmjs.com/package/@lexvibe/mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 67.0 / 100
 - Adoption: 42.0
 - Upkeep: 67.0

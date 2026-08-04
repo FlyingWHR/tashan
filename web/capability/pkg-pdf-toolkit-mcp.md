@@ -8,7 +8,7 @@
 - Source: https://github.com/EigenCharlie/pdf-toolkit-mcp
 - npm: https://www.npmjs.com/package/pdf-toolkit-mcp
 - Type: npm
-- Category: productivity
+- Category: other
 - tashan score: 37.0 / 100
 - Adoption: 24.0
 - Upkeep: 47.0

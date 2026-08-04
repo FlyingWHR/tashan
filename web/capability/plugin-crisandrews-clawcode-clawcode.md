@@ -7,7 +7,7 @@
 - tashan id: plugin:crisandrews/clawcode/clawcode
 - Source: https://github.com/crisandrews/ClawCode
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 65.0 / 100
 - Adoption: 30.0
 - Upkeep: 99.0

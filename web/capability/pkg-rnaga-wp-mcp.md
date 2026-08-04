@@ -8,7 +8,7 @@
 - Source: https://github.com/rnaga/wp-mcp
 - npm: https://www.npmjs.com/package/@rnaga/wp-mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 51.0 / 100
 - Adoption: 24.0
 - Upkeep: 63.0

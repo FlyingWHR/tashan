@@ -8,7 +8,7 @@
 - Source: https://github.com/theYahia/tkassa-mcp
 - npm: https://www.npmjs.com/package/@theyahia/tkassa-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 36.0 / 100
 - Adoption: 23.0
 - Upkeep: 50.0

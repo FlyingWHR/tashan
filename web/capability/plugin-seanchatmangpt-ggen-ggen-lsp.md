@@ -7,7 +7,7 @@
 - tashan id: plugin:seanchatmangpt/ggen/ggen-lsp
 - Source: https://github.com/seanchatmangpt/ggen
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 47.0 / 100
 - Adoption: 15.0
 - Upkeep: not measured

@@ -8,7 +8,7 @@
 - Source: https://github.com/altendky/onshape-mcp
 - npm: https://www.npmjs.com/package/onshape-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 50.0 / 100
 - Adoption: 25.0
 - Upkeep: 59.0

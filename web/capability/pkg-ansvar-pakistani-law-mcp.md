@@ -8,7 +8,7 @@
 - Source: https://github.com/Ansvar-Systems/Pakistani-law-mcp
 - npm: https://www.npmjs.com/package/@ansvar/pakistani-law-mcp
 - Type: npm
-- Category: docs
+- Category: other
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 24.0
 - Upkeep: not measured

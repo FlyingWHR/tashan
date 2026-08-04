@@ -7,7 +7,7 @@
 - tashan id: plugin:ezrover/esp32-ai-agent-skill/esp32-ai-agent-skill
 - Source: https://github.com/ezrover/ESP32-AI-Agent-Skill
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 36.0 / 100
 - Adoption: 25.0
 - Upkeep: 49.0

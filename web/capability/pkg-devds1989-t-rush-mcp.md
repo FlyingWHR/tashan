@@ -8,7 +8,7 @@
 - Source: https://github.com/DevDs1989/trush-mcp
 - npm: https://www.npmjs.com/package/@devds1989/t-rush-mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 68.0 / 100
 - Adoption: 45.0
 - Upkeep: 68.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:meta-quest/agentic-tools/meta-vr
 - Source: https://github.com/meta-quest/agentic-tools
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 50.0 / 100
 - Adoption: 36.0
 - Upkeep: 57.0

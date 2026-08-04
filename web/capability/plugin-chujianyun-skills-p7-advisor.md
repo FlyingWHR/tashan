@@ -7,7 +7,7 @@
 - tashan id: plugin:chujianyun/skills/p7-advisor
 - Source: https://github.com/chujianyun/skills
 - Type: plugin
-- Category: productivity
+- Category: finance
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 81.0

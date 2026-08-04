@@ -7,7 +7,7 @@
 - tashan id: plugin:aight-cool/aight-channel-plugin/aight
 - Source: https://github.com/aight-cool/aight-channel-plugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 43.0 / 100
 - Adoption: 11.0
 - Upkeep: 81.0

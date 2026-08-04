@@ -7,7 +7,7 @@
 - tashan id: plugin:arvaer/gopigeon-mcp/gopigeon
 - Source: https://github.com/arvaer/gopigeon-mcp
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 58.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:necromunger/qkconvert-plugin/qkconvert
 - Source: https://github.com/Necromunger/qkconvert-plugin
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

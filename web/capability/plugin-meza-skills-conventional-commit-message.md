@@ -7,7 +7,7 @@
 - tashan id: plugin:meza/skills/conventional-commit-message
 - Source: https://github.com/meza/skills
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

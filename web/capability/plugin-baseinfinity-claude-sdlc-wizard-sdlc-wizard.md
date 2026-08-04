@@ -7,7 +7,7 @@
 - tashan id: plugin:baseinfinity/claude-sdlc-wizard/sdlc-wizard
 - Source: https://github.com/BaseInfinity/claude-sdlc-wizard
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 99.0

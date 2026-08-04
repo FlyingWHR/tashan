@@ -8,7 +8,7 @@
 - Source: https://github.com/ExaDev/agent-comms
 - npm: https://www.npmjs.com/package/agent-comms
 - Type: npm
-- Category: comms
+- Category: security
 - tashan score: 64.0 / 100
 - Adoption: 37.0
 - Upkeep: 72.0

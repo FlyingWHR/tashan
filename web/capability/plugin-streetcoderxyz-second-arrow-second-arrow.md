@@ -7,7 +7,7 @@
 - tashan id: plugin:streetcoderxyz/second-arrow/second-arrow
 - Source: https://github.com/streetcoderxyz/second-arrow
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 34.0 / 100
 - Adoption: 11.0
 - Upkeep: 57.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:rooterkyberian/rt-claude-plugins/rules-loader
 - Source: https://github.com/rooterkyberian/rt-claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

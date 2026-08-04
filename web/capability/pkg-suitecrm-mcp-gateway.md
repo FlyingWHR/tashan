@@ -8,7 +8,7 @@
 - Source: https://github.com/Anirudhx7/suitecrm-mcp
 - npm: https://www.npmjs.com/package/suitecrm-mcp-gateway
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 47.0 / 100
 - Adoption: 27.0
 - Upkeep: 55.0

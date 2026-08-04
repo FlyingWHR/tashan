@@ -7,7 +7,7 @@
 - tashan id: plugin:dash0hq/dash0-agent-plugin/dash0
 - Source: https://github.com/dash0hq/dash0-agent-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 55.0 / 100
 - Adoption: 20.0
 - Upkeep: 98.0

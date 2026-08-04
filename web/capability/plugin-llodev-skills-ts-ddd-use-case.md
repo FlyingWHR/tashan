@@ -7,7 +7,7 @@
 - tashan id: plugin:llodev/skills/ts-ddd-use-case
 - Source: https://github.com/llodev/skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 43.0 / 100
 - Adoption: 7.0
 - Upkeep: 97.0

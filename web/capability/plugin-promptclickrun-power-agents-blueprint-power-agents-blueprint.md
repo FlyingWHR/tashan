@@ -7,7 +7,7 @@
 - tashan id: plugin:promptclickrun/power-agents-blueprint/power-agents-blueprint
 - Source: https://github.com/promptclickrun/power-agents-blueprint
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 32.0 / 100
 - Adoption: 20.0
 - Upkeep: not measured

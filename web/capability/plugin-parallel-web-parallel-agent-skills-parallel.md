@@ -7,7 +7,7 @@
 - tashan id: plugin:parallel-web/parallel-agent-skills/parallel
 - Source: https://github.com/parallel-web/parallel-agent-skills
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 63.0 / 100
 - Adoption: 30.0
 - Upkeep: 97.0

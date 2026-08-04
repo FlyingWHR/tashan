@@ -8,7 +8,7 @@
 - Source: https://github.com/Hustada/collective-memory
 - npm: https://www.npmjs.com/package/collective-memory
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 40.0 / 100
 - Adoption: 21.0
 - Upkeep: 51.0

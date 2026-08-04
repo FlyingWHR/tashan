@@ -8,7 +8,7 @@
 - Source: https://github.com/RapierCraft/perplexity-comet-mcp
 - npm: https://www.npmjs.com/package/perplexity-comet-mcp
 - Type: npm
-- Category: design
+- Category: search
 - tashan score: 33.0 / 100
 - Adoption: 30.0
 - Upkeep: 47.0

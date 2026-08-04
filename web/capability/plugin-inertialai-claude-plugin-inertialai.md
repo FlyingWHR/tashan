@@ -7,7 +7,7 @@
 - tashan id: plugin:inertialai/claude-plugin/inertialai
 - Source: https://github.com/InertialAI/claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 54.0

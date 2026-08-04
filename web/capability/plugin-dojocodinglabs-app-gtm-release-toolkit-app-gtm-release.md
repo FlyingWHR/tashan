@@ -7,7 +7,7 @@
 - tashan id: plugin:dojocodinglabs/app-gtm-release-toolkit/app-gtm-release
 - Source: https://github.com/DojoCodingLabs/app-gtm-release-toolkit
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

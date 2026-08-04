@@ -7,7 +7,7 @@
 - tashan id: plugin:mykpono/ultimate-seo-geo/ultimate-seo-geo
 - Source: https://github.com/mykpono/ultimate-seo-geo
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 46.0 / 100
 - Adoption: 34.0
 - Upkeep: 54.0

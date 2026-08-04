@@ -8,7 +8,7 @@
 - Source: https://github.com/Mogacode-ma/elementor-mcp-agent
 - npm: https://www.npmjs.com/package/elementor-mcp-agent
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 45.0 / 100
 - Adoption: 27.0
 - Upkeep: 55.0

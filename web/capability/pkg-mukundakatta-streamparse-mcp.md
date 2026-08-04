@@ -8,7 +8,7 @@
 - Source: https://github.com/MukundaKatta/streamparse-mcp
 - npm: https://www.npmjs.com/package/@mukundakatta/streamparse-mcp
 - Type: npm
-- Category: search
+- Category: devtools
 - tashan score: 36.0 / 100
 - Adoption: 23.0
 - Upkeep: 45.0

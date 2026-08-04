@@ -7,7 +7,7 @@
 - tashan id: plugin:redhuntlabs/wizard/wizard
 - Source: https://github.com/redhuntlabs/wizard
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 33.0 / 100
 - Adoption: 19.0
 - Upkeep: 50.0

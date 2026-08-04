@@ -7,7 +7,7 @@
 - tashan id: pkg:@yoryoboy/gtm-mcp
 - npm: https://www.npmjs.com/package/@yoryoboy/gtm-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 45.0 / 100
 - Adoption: 20.0
 - Upkeep: 56.0

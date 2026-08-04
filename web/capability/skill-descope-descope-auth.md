@@ -7,7 +7,7 @@
 - tashan id: skill:descope/descope-auth
 - Source: https://github.com/descope/skills
 - Type: skill
-- Category: other
+- Category: ai
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

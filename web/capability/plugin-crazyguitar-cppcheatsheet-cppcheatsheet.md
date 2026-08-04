@@ -7,7 +7,7 @@
 - tashan id: plugin:crazyguitar/cppcheatsheet/cppcheatsheet
 - Source: https://github.com/crazyguitar/cppcheatsheet
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 70.0 / 100
 - Adoption: 39.0
 - Upkeep: 98.0

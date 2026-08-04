@@ -7,7 +7,7 @@
 - tashan id: plugin:daegweon/cmux-mcp/cmux-mcp
 - Source: https://github.com/daegweon/cmux-mcp
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 40.0 / 100
 - Adoption: 17.0
 - Upkeep: 83.0

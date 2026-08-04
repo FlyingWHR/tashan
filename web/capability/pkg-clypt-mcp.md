@@ -8,7 +8,7 @@
 - Source: https://github.com/Bonsai-Tech-LLC/clypt-mcp
 - npm: https://www.npmjs.com/package/clypt-mcp
 - Type: npm
-- Category: files
+- Category: productivity
 - tashan score: 41.0 / 100
 - Adoption: 23.0
 - Upkeep: 54.0

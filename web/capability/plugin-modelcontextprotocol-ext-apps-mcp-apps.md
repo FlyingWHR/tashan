@@ -7,7 +7,7 @@
 - tashan id: plugin:modelcontextprotocol/ext-apps/mcp-apps
 - Source: https://github.com/modelcontextprotocol/ext-apps
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 47.0 / 100
 - Adoption: 11.0
 - Upkeep: 98.0

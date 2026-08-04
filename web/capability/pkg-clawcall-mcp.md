@@ -8,7 +8,7 @@
 - Source: https://github.com/ClawCall-Dev/clawcall
 - npm: https://www.npmjs.com/package/@clawcall/mcp
 - Type: npm
-- Category: devtools
+- Category: comms
 - tashan score: 39.0 / 100
 - Adoption: 21.0
 - Upkeep: 47.0

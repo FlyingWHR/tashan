@@ -7,7 +7,7 @@
 - tashan id: plugin:moverlyltd/conveyancing-toolkit/conveyancing-toolkit
 - Source: https://github.com/MoverlyLtd/conveyancing-toolkit
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 35.0 / 100
 - Adoption: 13.0
 - Upkeep: 68.0

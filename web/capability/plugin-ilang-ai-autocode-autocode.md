@@ -7,7 +7,7 @@
 - tashan id: plugin:ilang-ai/autocode/autocode
 - Source: https://github.com/ilang-ai/autocode
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 62.0 / 100
 - Adoption: 32.0
 - Upkeep: 95.0

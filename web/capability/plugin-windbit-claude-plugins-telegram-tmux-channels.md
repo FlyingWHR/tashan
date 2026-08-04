@@ -7,7 +7,7 @@
 - tashan id: plugin:windbit/claude-plugins/telegram-tmux-channels
 - Source: https://github.com/windbit/claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 98.0

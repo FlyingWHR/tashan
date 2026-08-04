@@ -7,7 +7,7 @@
 - tashan id: plugin:pythoughts-labs/claude-architect/claude-architect
 - Source: https://github.com/Pythoughts-labs/claude-architect
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 55.0 / 100
 - Adoption: 24.0
 - Upkeep: not measured

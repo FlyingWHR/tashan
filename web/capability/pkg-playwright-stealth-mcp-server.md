@@ -8,7 +8,7 @@
 - Source: https://github.com/pulsemcp/mcp-servers
 - npm: https://www.npmjs.com/package/playwright-stealth-mcp-server
 - Type: npm
-- Category: devtools
+- Category: browser
 - tashan score: 54.0 / 100
 - Adoption: 35.0
 - Upkeep: 62.0

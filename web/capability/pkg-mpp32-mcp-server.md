@@ -8,7 +8,7 @@
 - Source: https://github.com/MPP32/MPP32
 - npm: https://www.npmjs.com/package/mpp32-mcp-server
 - Type: npm
-- Category: data
+- Category: other
 - tashan score: 54.0 / 100
 - Adoption: 27.0
 - Upkeep: 68.0

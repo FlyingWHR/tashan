@@ -7,7 +7,7 @@
 - tashan id: plugin:nikhilenmudi/comprendo/comprendo
 - Source: https://github.com/nikhilenmudi/comprendo
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 13.0
 - Upkeep: 49.0

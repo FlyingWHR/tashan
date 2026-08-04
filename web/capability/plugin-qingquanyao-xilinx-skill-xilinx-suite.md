@@ -7,7 +7,7 @@
 - tashan id: plugin:qingquanyao/xilinx-skill/xilinx-suite
 - Source: https://github.com/QingquanYao/xilinx-skill
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 45.0 / 100
 - Adoption: 40.0
 - Upkeep: 50.0

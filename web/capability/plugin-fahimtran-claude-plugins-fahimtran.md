@@ -7,7 +7,7 @@
 - tashan id: plugin:fahimtran/claude-plugins/fahimtran
 - Source: https://github.com/fahimtran/claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

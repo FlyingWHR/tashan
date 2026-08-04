@@ -7,7 +7,7 @@
 - tashan id: plugin:aliksir/neko-gundan/neko-gundan
 - Source: https://github.com/aliksir/neko-gundan
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 39.0 / 100
 - Adoption: 11.0
 - Upkeep: 63.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:shdowofdeath/claude-code-music/claude-code-music
 - Source: https://github.com/shdowofdeath/claude-code-music
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 85.0

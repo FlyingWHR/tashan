@@ -7,7 +7,7 @@
 - tashan id: pkg:@sitelint/auditor-mcp
 - npm: https://www.npmjs.com/package/@sitelint/auditor-mcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 65.0 / 100
 - Adoption: 41.0
 - Upkeep: 63.0

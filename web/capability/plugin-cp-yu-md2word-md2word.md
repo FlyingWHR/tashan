@@ -7,7 +7,7 @@
 - tashan id: plugin:cp-yu/md2word/md2word
 - Source: https://github.com/cp-yu/md2word
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 42.0 / 100
 - Adoption: 22.0
 - Upkeep: 58.0

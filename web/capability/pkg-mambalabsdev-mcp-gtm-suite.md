@@ -8,7 +8,7 @@
 - Source: https://github.com/mambalabsdev/mcp-gtm-suite
 - npm: https://www.npmjs.com/package/@mambalabsdev/mcp-gtm-suite
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 47.0 / 100
 - Adoption: 25.0
 - Upkeep: 59.0

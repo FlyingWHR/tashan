@@ -8,7 +8,7 @@
 - Source: https://github.com/PV-Bhat/vibe-check-mcp-server
 - npm: https://www.npmjs.com/package/@pv-bhat/vibe-check-mcp
 - Type: npm
-- Category: docs
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 33.0
 - Upkeep: 41.0

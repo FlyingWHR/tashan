@@ -7,7 +7,7 @@
 - tashan id: skill:InsForge/insforge-cli
 - Source: https://github.com/InsForge/insforge-skills
 - Type: skill
-- Category: other
+- Category: browser
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

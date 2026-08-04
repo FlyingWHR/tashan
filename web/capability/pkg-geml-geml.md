@@ -8,7 +8,7 @@
 - Source: https://github.com/geml-spec/geml
 - npm: https://www.npmjs.com/package/@geml/geml
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 66.0 / 100
 - Adoption: 42.0
 - Upkeep: 65.0

@@ -7,7 +7,7 @@
 - tashan id: skill:slogsdon/loop-and-gate
 - Source: https://github.com/slogsdon/loop-and-gate-build-kit
 - Type: skill
-- Category: other
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

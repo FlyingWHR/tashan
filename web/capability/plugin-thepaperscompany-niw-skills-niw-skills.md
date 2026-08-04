@@ -7,7 +7,7 @@
 - tashan id: plugin:thepaperscompany/niw-skills/niw-skills
 - Source: https://github.com/thepaperscompany/niw-skills
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 34.0 / 100
 - Adoption: 16.0
 - Upkeep: 53.0

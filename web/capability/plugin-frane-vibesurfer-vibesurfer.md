@@ -7,7 +7,7 @@
 - tashan id: plugin:frane/vibesurfer/vibesurfer
 - Source: https://github.com/frane/vibesurfer
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 48.0 / 100
 - Adoption: 23.0
 - Upkeep: 63.0

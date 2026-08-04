@@ -8,7 +8,7 @@
 - Source: https://github.com/Braynexservices/nigeria-mcp
 - npm: https://www.npmjs.com/package/@braynexservices/nigeria-mcp-bank-account
 - Type: npm
-- Category: productivity
+- Category: finance
 - tashan score: 52.0 / 100
 - Adoption: 28.0
 - Upkeep: 62.0

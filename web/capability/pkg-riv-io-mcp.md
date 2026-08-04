@@ -8,7 +8,7 @@
 - Source: https://github.com/Christopher-AS/Riv.IO
 - npm: https://www.npmjs.com/package/@riv-io/mcp
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 53.0 / 100
 - Adoption: 31.0
 - Upkeep: 55.0

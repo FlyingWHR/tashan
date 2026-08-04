@@ -6,7 +6,7 @@
 - Source: https://github.com/haroldadmin/fastify-mcp
 - npm: https://www.npmjs.com/package/fastify-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 65.0 / 100
 - Adoption: 58.0
 - Upkeep: 61.0

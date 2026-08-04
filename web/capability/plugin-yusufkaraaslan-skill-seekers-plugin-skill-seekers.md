@@ -7,7 +7,7 @@
 - tashan id: plugin:yusufkaraaslan/skill-seekers-plugin/skill-seekers
 - Source: https://github.com/yusufkaraaslan/skill-seekers-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 22.0
 - Upkeep: 46.0

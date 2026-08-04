@@ -7,7 +7,7 @@
 - tashan id: plugin:cintellilabs/bland-plugins/norm
 - Source: https://github.com/CINTELLILABS/bland-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

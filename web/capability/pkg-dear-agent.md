@@ -8,7 +8,7 @@
 - Source: https://github.com/BitmapAsset/dear-agent
 - npm: https://www.npmjs.com/package/dear-agent
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 47.0 / 100
 - Adoption: 25.0
 - Upkeep: 57.0

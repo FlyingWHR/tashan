@@ -8,7 +8,7 @@
 - Source: https://github.com/zombopanda/agent-crossbar
 - npm: https://www.npmjs.com/package/agent-crossbar
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 61.0 / 100
 - Adoption: 36.0
 - Upkeep: 64.0

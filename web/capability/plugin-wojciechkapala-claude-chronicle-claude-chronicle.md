@@ -7,7 +7,7 @@
 - tashan id: plugin:wojciechkapala/claude-chronicle/claude-chronicle
 - Source: https://github.com/wojciechkapala/claude-chronicle
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 11.0
 - Upkeep: 50.0

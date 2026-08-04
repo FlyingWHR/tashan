@@ -7,7 +7,7 @@
 - tashan id: plugin:semgrep/mcp-marketplace/semgrep
 - Source: https://github.com/semgrep/mcp-marketplace
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 60.0 / 100
 - Adoption: 25.0
 - Upkeep: 98.0

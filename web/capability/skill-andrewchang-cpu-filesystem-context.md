@@ -7,7 +7,7 @@
 - tashan id: skill:AndrewChang-cpu/filesystem-context
 - Source: https://github.com/AndrewChang-cpu/vibe-coding-configuration
 - Type: skill
-- Category: other
+- Category: files
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

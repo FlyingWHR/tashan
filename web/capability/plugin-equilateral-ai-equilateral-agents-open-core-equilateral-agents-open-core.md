@@ -7,7 +7,7 @@
 - tashan id: plugin:equilateral-ai/equilateral-agents-open-core/equilateral-agents-open-core
 - Source: https://github.com/Equilateral-AI/equilateral-agents-open-core
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 63.0 / 100
 - Adoption: 30.0
 - Upkeep: 97.0

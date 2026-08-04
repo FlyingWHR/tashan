@@ -7,7 +7,7 @@
 - tashan id: plugin:battlelamb/claude-code-conversation-titler/titlewise
 - Source: https://github.com/Battlelamb/claude-code-conversation-titler
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 61.0

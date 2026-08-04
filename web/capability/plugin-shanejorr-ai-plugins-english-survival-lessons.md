@@ -7,7 +7,7 @@
 - tashan id: plugin:shanejorr/ai-plugins/english-survival-lessons
 - Source: https://github.com/shanejorr/ai-plugins
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

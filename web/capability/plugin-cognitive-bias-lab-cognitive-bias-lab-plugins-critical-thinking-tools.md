@@ -7,7 +7,7 @@
 - tashan id: plugin:cognitive-bias-lab/cognitive-bias-lab-plugins/critical-thinking-tools
 - Source: https://github.com/cognitive-bias-lab/cognitive-bias-lab-plugins
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

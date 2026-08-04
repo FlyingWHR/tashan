@@ -8,7 +8,7 @@
 - Source: https://github.com/drawdb-io/drawdb-mcp
 - npm: https://www.npmjs.com/package/@drawdb/mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 48.0 / 100
 - Adoption: 23.0
 - Upkeep: 57.0

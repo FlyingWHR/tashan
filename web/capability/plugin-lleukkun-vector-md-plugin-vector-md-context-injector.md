@@ -7,7 +7,7 @@
 - tashan id: plugin:lleukkun/vector-md-plugin/vector-md-context-injector
 - Source: https://github.com/lleukkun/vector-md-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

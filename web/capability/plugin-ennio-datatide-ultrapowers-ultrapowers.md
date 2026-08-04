@@ -7,7 +7,7 @@
 - tashan id: plugin:ennio-datatide/ultrapowers/ultrapowers
 - Source: https://github.com/ennio-datatide/ultrapowers
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 42.0 / 100
 - Adoption: 15.0
 - Upkeep: 87.0

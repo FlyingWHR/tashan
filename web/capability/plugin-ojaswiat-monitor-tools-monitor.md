@@ -7,7 +7,7 @@
 - tashan id: plugin:ojaswiat/monitor-tools/monitor
 - Source: https://github.com/ojaswiat/monitor-tools
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

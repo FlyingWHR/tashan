@@ -7,7 +7,7 @@
 - tashan id: plugin:langfuse/claude-observability-plugin/langfuse-observability
 - Source: https://github.com/langfuse/claude-observability-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 61.0 / 100
 - Adoption: 27.0
 - Upkeep: 98.0

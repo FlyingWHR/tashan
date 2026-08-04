@@ -7,7 +7,7 @@
 - tashan id: plugin:subinium/claude-code-achievements/claude-code-achievements
 - Source: https://github.com/subinium/claude-code-achievements
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 33.0 / 100
 - Adoption: 32.0
 - Upkeep: 43.0

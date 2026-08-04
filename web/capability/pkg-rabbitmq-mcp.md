@@ -8,7 +8,7 @@
 - Source: https://github.com/kmitchell/rabbitmq-mcp
 - npm: https://www.npmjs.com/package/rabbitmq-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 17.0 / 100
 - Adoption: 32.0
 - Upkeep: 28.0

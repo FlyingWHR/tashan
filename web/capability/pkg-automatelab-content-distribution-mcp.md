@@ -8,7 +8,7 @@
 - Source: https://github.com/AutomateLab-tech/content-distribution-mcp
 - npm: https://www.npmjs.com/package/@automatelab/content-distribution-mcp
 - Type: npm
-- Category: devtools
+- Category: docs
 - tashan score: 44.0 / 100
 - Adoption: 24.0
 - Upkeep: 57.0

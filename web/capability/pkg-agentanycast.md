@@ -8,7 +8,7 @@
 - Source: https://github.com/AgentAnycast/agentanycast-node
 - npm: https://www.npmjs.com/package/agentanycast
 - Type: npm
-- Category: files
+- Category: cloud
 - tashan score: 33.0 / 100
 - Adoption: 21.0
 - Upkeep: 48.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:amirlehmam/wmux-orchestrator/wmux-orchestrator
 - Source: https://github.com/amirlehmam/wmux-orchestrator
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 20.0
 - Upkeep: 62.0

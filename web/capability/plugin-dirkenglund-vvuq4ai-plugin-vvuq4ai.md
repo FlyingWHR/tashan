@@ -7,7 +7,7 @@
 - tashan id: plugin:dirkenglund/vvuq4ai-plugin/vvuq4ai
 - Source: https://github.com/dirkenglund/vvuq4ai-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

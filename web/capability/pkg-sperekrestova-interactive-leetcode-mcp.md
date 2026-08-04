@@ -8,7 +8,7 @@
 - Source: https://github.com/SPerekrestova/interactive-leetcode-mcp
 - npm: https://www.npmjs.com/package/@sperekrestova/interactive-leetcode-mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 51.0 / 100
 - Adoption: 31.0
 - Upkeep: 60.0

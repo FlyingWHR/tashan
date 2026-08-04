@@ -7,7 +7,7 @@
 - tashan id: plugin:redhuntlabs/superpower-builder/superpower-builder
 - Source: https://github.com/redhuntlabs/superpower-builder
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 33.0 / 100
 - Adoption: 19.0
 - Upkeep: 50.0

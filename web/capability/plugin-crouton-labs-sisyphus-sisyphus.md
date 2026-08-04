@@ -7,7 +7,7 @@
 - tashan id: plugin:crouton-labs/sisyphus/sisyphus
 - Source: https://github.com/crouton-labs/sisyphus
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 47.0 / 100
 - Adoption: 16.0
 - Upkeep: not measured

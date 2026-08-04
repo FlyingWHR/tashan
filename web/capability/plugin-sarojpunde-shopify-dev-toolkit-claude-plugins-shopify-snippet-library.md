@@ -7,7 +7,7 @@
 - tashan id: plugin:sarojpunde/shopify-dev-toolkit-claude-plugins/shopify-snippet-library
 - Source: https://github.com/sarojpunde/shopify-dev-toolkit-claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:gitroomhq/postiz-agent/postiz
 - Source: https://github.com/gitroomhq/postiz-agent
 - Type: plugin
-- Category: data
+- Category: productivity
 - tashan score: 63.0 / 100
 - Adoption: 45.0
 - Upkeep: 62.0

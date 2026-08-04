@@ -7,7 +7,7 @@
 - tashan id: plugin:jsperger/claude-ty-lsp/ty-lsp
 - Source: https://github.com/jsperger/claude-ty-lsp
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 60.0

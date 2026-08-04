@@ -7,7 +7,7 @@
 - tashan id: plugin:mnardit/agent-recall/agent-recall
 - Source: https://github.com/mnardit/agent-recall
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 22.0
 - Upkeep: 48.0

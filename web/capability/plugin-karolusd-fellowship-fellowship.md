@@ -7,7 +7,7 @@
 - tashan id: plugin:karolusd/fellowship/fellowship
 - Source: https://github.com/KarolusD/fellowship
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 34.0 / 100
 - Adoption: 11.0
 - Upkeep: 57.0

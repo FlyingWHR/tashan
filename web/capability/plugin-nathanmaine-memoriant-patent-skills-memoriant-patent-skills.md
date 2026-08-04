@@ -7,7 +7,7 @@
 - tashan id: plugin:nathanmaine/memoriant-patent-skills/memoriant-patent-skills
 - Source: https://github.com/NathanMaine/memoriant-patent-skills
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 47.0

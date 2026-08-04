@@ -7,7 +7,7 @@
 - tashan id: plugin:airaise/claude-channel-googlechat/googlechat
 - Source: https://github.com/AiRaise/claude-channel-googlechat
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:grazianoguiducci/d-nd-seed/godel
 - Source: https://github.com/GrazianoGuiducci/d-nd-seed
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 92.0

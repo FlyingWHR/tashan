@@ -8,7 +8,7 @@
 - Source: https://github.com/cyanheads/openstates-mcp-server
 - npm: https://www.npmjs.com/package/@cyanheads/openstates-mcp-server
 - Type: npm
-- Category: search
+- Category: devtools
 - tashan score: 67.0 / 100
 - Adoption: 41.0
 - Upkeep: 70.0

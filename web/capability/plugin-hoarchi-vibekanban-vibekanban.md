@@ -7,7 +7,7 @@
 - tashan id: plugin:hoarchi/vibekanban/vibekanban
 - Source: https://github.com/hoarchi/vibekanban
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 15.0
 - Upkeep: 63.0

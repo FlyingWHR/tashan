@@ -7,7 +7,7 @@
 - tashan id: plugin:papachong1229/cc-xp/cc-xp
 - Source: https://github.com/papaChong1229/cc-xp
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 34.0 / 100
 - Adoption: 13.0
 - Upkeep: 55.0

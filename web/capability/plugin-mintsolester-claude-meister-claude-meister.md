@@ -7,7 +7,7 @@
 - tashan id: plugin:mintsolester/claude-meister/claude-meister
 - Source: https://github.com/Mintsolester/claude-meister
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 54.0

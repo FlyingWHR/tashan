@@ -7,7 +7,7 @@
 - tashan id: plugin:flutter/agent-plugins/dart-flutter
 - Source: https://github.com/flutter/agent-plugins
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 72.0 / 100
 - Adoption: 52.0
 - Upkeep: not measured

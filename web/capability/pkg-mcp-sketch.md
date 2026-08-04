@@ -8,7 +8,7 @@
 - Source: https://github.com/YamadaAoi/mcp-sketch
 - npm: https://www.npmjs.com/package/mcp-sketch
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 61.0 / 100
 - Adoption: 33.0
 - Upkeep: 72.0

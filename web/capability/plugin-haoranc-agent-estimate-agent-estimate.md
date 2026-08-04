@@ -7,7 +7,7 @@
 - tashan id: plugin:haoranc/agent-estimate/agent-estimate
 - Source: https://github.com/haoranc/agent-estimate
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 49.0 / 100
 - Adoption: 15.0
 - Upkeep: 96.0

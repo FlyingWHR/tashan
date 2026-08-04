@@ -7,7 +7,7 @@
 - tashan id: plugin:prajwalb0208/akoma-ntoso-legal-document-extractor/meta-plugin
 - Source: https://github.com/Prajwalb0208/Akoma-Ntoso-Legal-Document-Extractor
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 16.0 / 100
 - Adoption: 7.0
 - Upkeep: 34.0

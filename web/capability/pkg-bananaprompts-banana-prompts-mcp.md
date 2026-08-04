@@ -8,7 +8,7 @@
 - Source: https://github.com/Banana-Prompts/banana-prompts-mcp
 - npm: https://www.npmjs.com/package/@bananaprompts/banana-prompts-mcp
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 27.0 / 100
 - Adoption: 23.0
 - Upkeep: 40.0

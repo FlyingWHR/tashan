@@ -7,7 +7,7 @@
 - tashan id: plugin:sirayhancse/snap-browser/snap-browser
 - Source: https://github.com/sirayhancse/snap-browser
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

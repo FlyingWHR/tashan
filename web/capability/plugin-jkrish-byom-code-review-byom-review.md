@@ -7,7 +7,7 @@
 - tashan id: plugin:jkrish/byom-code-review/byom-review
 - Source: https://github.com/jkrish/byom-code-review
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 83.0

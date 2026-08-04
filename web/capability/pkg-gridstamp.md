@@ -8,7 +8,7 @@
 - Source: https://github.com/mnemopay/gridstamp
 - npm: https://www.npmjs.com/package/gridstamp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 47.0 / 100
 - Adoption: 25.0
 - Upkeep: 61.0

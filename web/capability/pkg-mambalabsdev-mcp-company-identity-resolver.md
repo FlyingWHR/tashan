@@ -8,7 +8,7 @@
 - Source: https://github.com/mambalabsdev/mcp-company-identity-resolver
 - npm: https://www.npmjs.com/package/@mambalabsdev/mcp-company-identity-resolver
 - Type: npm
-- Category: productivity
+- Category: finance
 - tashan score: 42.0 / 100
 - Adoption: 23.0
 - Upkeep: 48.0

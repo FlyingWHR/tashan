@@ -7,7 +7,7 @@
 - tashan id: plugin:walis85300/marketplace/code-review
 - Source: https://github.com/walis85300/marketplace
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

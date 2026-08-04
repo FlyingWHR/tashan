@@ -7,7 +7,7 @@
 - tashan id: plugin:agentpowers-ai/agentpowers-plugin/agentpowers
 - Source: https://github.com/AgentPowers-AI/agentpowers-plugin
 - Type: plugin
-- Category: search
+- Category: cloud
 - tashan score: 32.0 / 100
 - Adoption: 11.0
 - Upkeep: 53.0

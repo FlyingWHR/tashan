@@ -7,7 +7,7 @@
 - tashan id: plugin:mshahiddigital/local-seo-audit/local-seo-audit-system
 - Source: https://github.com/mshahiddigital/local-seo-audit
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 42.0 / 100
 - Adoption: 22.0
 - Upkeep: 82.0

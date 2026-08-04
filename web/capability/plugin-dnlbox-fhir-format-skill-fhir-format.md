@@ -7,7 +7,7 @@
 - tashan id: plugin:dnlbox/fhir-format-skill/fhir-format
 - Source: https://github.com/dnlbox/fhir-format-skill
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

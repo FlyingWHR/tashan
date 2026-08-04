@@ -8,7 +8,7 @@
 - Source: https://github.com/CrumbtrailDev/crumbtrail
 - npm: https://www.npmjs.com/package/crumbtrail-node
 - Type: npm
-- Category: devtools
+- Category: database
 - tashan score: 69.0 / 100
 - Adoption: 46.0
 - Upkeep: 69.0

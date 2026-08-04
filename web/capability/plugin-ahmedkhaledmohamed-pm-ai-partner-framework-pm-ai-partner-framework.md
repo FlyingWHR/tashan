@@ -7,7 +7,7 @@
 - tashan id: plugin:ahmedkhaledmohamed/pm-ai-partner-framework/pm-ai-partner-framework
 - Source: https://github.com/ahmedkhaledmohamed/PM-AI-Partner-Framework
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 47.0 / 100
 - Adoption: 17.0
 - Upkeep: 79.0

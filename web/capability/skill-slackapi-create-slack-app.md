@@ -7,7 +7,7 @@
 - tashan id: skill:slackapi/create-slack-app
 - Source: https://github.com/slackapi/slack-mcp-plugin
 - Type: skill
-- Category: other
+- Category: comms
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

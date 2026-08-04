@@ -8,7 +8,7 @@
 - Source: https://github.com/RichardLemmon/AgentTeam
 - npm: https://www.npmjs.com/package/agent-team-mcp
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 35.0 / 100
 - Adoption: 22.0
 - Upkeep: 51.0

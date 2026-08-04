@@ -7,7 +7,7 @@
 - tashan id: plugin:buildinternet/releases-cli/releases
 - Source: https://github.com/buildinternet/releases-cli
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 50.0 / 100
 - Adoption: 15.0
 - Upkeep: 97.0

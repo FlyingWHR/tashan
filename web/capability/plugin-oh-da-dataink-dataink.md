@@ -7,7 +7,7 @@
 - tashan id: plugin:oh-da/dataink/dataink
 - Source: https://github.com/oh-da/dataink
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 60.0

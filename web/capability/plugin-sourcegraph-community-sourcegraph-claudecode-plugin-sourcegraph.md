@@ -7,7 +7,7 @@
 - tashan id: plugin:sourcegraph-community/sourcegraph-claudecode-plugin/sourcegraph
 - Source: https://github.com/sourcegraph-community/sourcegraph-claudecode-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 20.0
 - Upkeep: 81.0

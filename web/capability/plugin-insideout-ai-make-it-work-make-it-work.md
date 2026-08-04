@@ -7,7 +7,7 @@
 - tashan id: plugin:insideout-ai/make-it-work/make-it-work
 - Source: https://github.com/insideout-ai/make-it-work
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 51.0 / 100
 - Adoption: 21.0
 - Upkeep: 80.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:omar-hanafy/dart_helper_utils/dart-helper-utils
 - Source: https://github.com/omar-hanafy/dart_helper_utils
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 45.0 / 100
 - Adoption: 19.0
 - Upkeep: 63.0

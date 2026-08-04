@@ -7,7 +7,7 @@
 - tashan id: plugin:montgomerybohde/pylipidparse/pylipidparse
 - Source: https://github.com/MontgomeryBohde/PyLipidParse
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 34.0 / 100
 - Adoption: 24.0
 - Upkeep: 48.0

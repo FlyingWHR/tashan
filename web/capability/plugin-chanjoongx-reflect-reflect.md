@@ -7,7 +7,7 @@
 - tashan id: plugin:chanjoongx/reflect/reflect
 - Source: https://github.com/chanjoongx/reflect
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

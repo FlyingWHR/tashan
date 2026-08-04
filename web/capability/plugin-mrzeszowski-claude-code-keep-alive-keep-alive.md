@@ -7,7 +7,7 @@
 - tashan id: plugin:mrzeszowski/claude-code-keep-alive/keep-alive
 - Source: https://github.com/mrzeszowski/claude-code-keep-alive
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 11.0
 - Upkeep: 93.0

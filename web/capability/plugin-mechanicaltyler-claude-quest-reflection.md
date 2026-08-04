@@ -7,7 +7,7 @@
 - tashan id: plugin:mechanicaltyler/claude-quest/reflection
 - Source: https://github.com/MechanicalTyler/claude-quest
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

@@ -7,7 +7,7 @@
 - tashan id: pkg:@getzulu/mcp
 - npm: https://www.npmjs.com/package/@getzulu/mcp
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 45.0 / 100
 - Adoption: 19.0
 - Upkeep: 58.0

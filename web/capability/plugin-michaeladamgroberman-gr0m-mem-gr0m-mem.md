@@ -7,7 +7,7 @@
 - tashan id: plugin:michaeladamgroberman/gr0m_mem/gr0m-mem
 - Source: https://github.com/MichaelAdamGroberman/gr0m_mem
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 36.0 / 100
 - Adoption: 13.0
 - Upkeep: 58.0

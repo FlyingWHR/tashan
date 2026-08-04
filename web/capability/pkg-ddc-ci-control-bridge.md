@@ -8,7 +8,7 @@
 - Source: https://github.com/Defozo/ddc-ci-control-bridge
 - npm: https://www.npmjs.com/package/ddc-ci-control-bridge
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 25.0 / 100
 - Adoption: 30.0
 - Upkeep: 39.0

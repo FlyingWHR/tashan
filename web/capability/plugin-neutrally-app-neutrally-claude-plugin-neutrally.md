@@ -7,7 +7,7 @@
 - tashan id: plugin:neutrally-app/neutrally-claude-plugin/neutrally
 - Source: https://github.com/Neutrally-app/neutrally-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

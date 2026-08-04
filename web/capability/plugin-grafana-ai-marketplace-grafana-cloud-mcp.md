@@ -7,7 +7,7 @@
 - tashan id: plugin:grafana/ai-marketplace/grafana-cloud-mcp
 - Source: https://github.com/grafana/ai-marketplace
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

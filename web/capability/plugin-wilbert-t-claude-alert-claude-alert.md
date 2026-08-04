@@ -7,7 +7,7 @@
 - tashan id: plugin:wilbert-t/claude-alert/claude-alert
 - Source: https://github.com/wilbert-t/claude-alert
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

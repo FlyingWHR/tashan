@@ -7,7 +7,7 @@
 - tashan id: skill:ankitkr3/compounded-trust-tracker
 - Source: https://github.com/ankitkr3/compounded
 - Type: skill
-- Category: other
+- Category: security
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

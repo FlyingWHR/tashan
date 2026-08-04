@@ -7,7 +7,7 @@
 - tashan id: plugin:cap-go/capgo-skills/capacitor-features
 - Source: https://github.com/Cap-go/capgo-skills
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

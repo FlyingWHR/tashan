@@ -7,7 +7,7 @@
 - tashan id: plugin:spyrae/gemini-plugin-cc/g-cc
 - Source: https://github.com/spyrae/gemini-plugin-cc
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 13.0
 - Upkeep: 48.0

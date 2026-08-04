@@ -8,7 +8,7 @@
 - Source: https://github.com/1clawAI/1claw-mcp
 - npm: https://www.npmjs.com/package/@1claw/mcp
 - Type: npm
-- Category: ai
+- Category: security
 - tashan score: 63.0 / 100
 - Adoption: 37.0
 - Upkeep: 71.0

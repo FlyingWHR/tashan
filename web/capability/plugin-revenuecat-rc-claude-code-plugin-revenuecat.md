@@ -7,7 +7,7 @@
 - tashan id: plugin:revenuecat/rc-claude-code-plugin/revenuecat
 - Source: https://github.com/RevenueCat/rc-claude-code-plugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 42.0 / 100
 - Adoption: 11.0
 - Upkeep: 91.0

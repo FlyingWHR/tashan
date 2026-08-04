@@ -8,7 +8,7 @@
 - Source: https://github.com/Craig-Horton/ai-bvf
 - npm: https://www.npmjs.com/package/aibvf-mcp
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 65.0 / 100
 - Adoption: 36.0
 - Upkeep: 73.0

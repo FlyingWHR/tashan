@@ -7,7 +7,7 @@
 - tashan id: plugin:authzed/authzed-marketplace/spicedb-dev
 - Source: https://github.com/authzed/authzed-marketplace
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 30.0 / 100
 - Adoption: 13.0
 - Upkeep: not measured

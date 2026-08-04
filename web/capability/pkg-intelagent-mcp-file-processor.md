@@ -8,7 +8,7 @@
 - Source: https://github.com/IntelagentStudios/Intelagent-MCPs
 - npm: https://www.npmjs.com/package/@intelagent/mcp-file-processor
 - Type: npm
-- Category: productivity
+- Category: files
 - tashan score: 32.0 / 100
 - Adoption: 23.0
 - Upkeep: 42.0

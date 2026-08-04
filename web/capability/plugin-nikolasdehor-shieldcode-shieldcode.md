@@ -7,7 +7,7 @@
 - tashan id: plugin:nikolasdehor/shieldcode/shieldcode
 - Source: https://github.com/nikolasdehor/shieldcode
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 43.0 / 100
 - Adoption: 11.0
 - Upkeep: 80.0

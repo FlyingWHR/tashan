@@ -7,7 +7,7 @@
 - tashan id: plugin:furic/extract-alpha/extract-alpha
 - Source: https://github.com/furic/extract-alpha
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 48.0

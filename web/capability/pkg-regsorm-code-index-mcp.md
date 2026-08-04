@@ -8,7 +8,7 @@
 - Source: https://github.com/Regsorm/code-index-mcp
 - npm: https://www.npmjs.com/package/@regsorm/code-index-mcp
 - Type: npm
-- Category: devtools
+- Category: other
 - tashan score: 68.0 / 100
 - Adoption: 41.0
 - Upkeep: 73.0

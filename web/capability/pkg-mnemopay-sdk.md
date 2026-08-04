@@ -8,7 +8,7 @@
 - Source: https://github.com/mnemopay/mnemopay-sdk
 - npm: https://www.npmjs.com/package/@mnemopay/sdk
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 55.0 / 100
 - Adoption: 32.0
 - Upkeep: 68.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:axmeai/axme-code-plugin/axme-code
 - Source: https://github.com/AxmeAI/axme-code-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 58.0

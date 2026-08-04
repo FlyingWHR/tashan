@@ -8,7 +8,7 @@
 - Source: https://github.com/seanGSISG/onenote-mcp
 - npm: https://www.npmjs.com/package/@seangsisg/onenote-mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 47.0 / 100
 - Adoption: 21.0
 - Upkeep: 57.0

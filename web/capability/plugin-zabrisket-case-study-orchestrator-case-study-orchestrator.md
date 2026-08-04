@@ -7,7 +7,7 @@
 - tashan id: plugin:zabrisket/case-study-orchestrator/case-study-orchestrator
 - Source: https://github.com/ZaBrisket/case-study-orchestrator
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 71.0

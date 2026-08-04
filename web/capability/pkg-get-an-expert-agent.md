@@ -8,7 +8,7 @@
 - Source: https://github.com/RohitJain1103/Get-An-Expert
 - npm: https://www.npmjs.com/package/get-an-expert-agent
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 55.0 / 100
 - Adoption: 28.0
 - Upkeep: 67.0

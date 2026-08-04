@@ -7,7 +7,7 @@
 - tashan id: plugin:dawsonblock/skill-md/andrej-karpathy-skills
 - Source: https://github.com/dawsonblock/SKILL-MD
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 54.0

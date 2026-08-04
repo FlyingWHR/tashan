@@ -7,7 +7,7 @@
 - tashan id: plugin:sadeem-cloud/claude_odoo_timesheet_plugin/auto-log-your-claude-code-sessions-as-odoo-timesheets
 - Source: https://github.com/sadeem-cloud/claude_odoo_timesheet_plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

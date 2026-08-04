@@ -7,7 +7,7 @@
 - tashan id: plugin:tigrisdata/tigris-agents-plugins/tigris-storage
 - Source: https://github.com/tigrisdata/tigris-agents-plugins
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 27.0 / 100
 - Adoption: 11.0
 - Upkeep: 47.0

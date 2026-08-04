@@ -8,7 +8,7 @@
 - Source: https://github.com/idachev/mcp-javadc
 - npm: https://www.npmjs.com/package/@idachev/mcp-javadc
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 19.0 / 100
 - Adoption: 27.0
 - Upkeep: 38.0

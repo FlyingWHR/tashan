@@ -8,7 +8,7 @@
 - Source: https://github.com/STiFLeR7/memex
 - npm: https://www.npmjs.com/package/stifler-memex-mcp
 - Type: npm
-- Category: devtools
+- Category: docs
 - tashan score: 53.0 / 100
 - Adoption: 27.0
 - Upkeep: 67.0

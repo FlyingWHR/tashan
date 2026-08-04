@@ -7,7 +7,7 @@
 - tashan id: plugin:catalystbyzoho/claude-plugin/catalyst-by-zoho
 - Source: https://github.com/catalystbyzoho/claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 39.0 / 100
 - Adoption: 11.0
 - Upkeep: 63.0

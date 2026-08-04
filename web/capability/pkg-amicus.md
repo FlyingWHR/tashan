@@ -8,7 +8,7 @@
 - Source: https://github.com/BourbonDog/amicus
 - npm: https://www.npmjs.com/package/amicus
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 70.0 / 100
 - Adoption: 46.0
 - Upkeep: 72.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Ansvar-Systems/norwegian-law-mcp
 - npm: https://www.npmjs.com/package/@ansvar/norwegian-law-mcp
 - Type: npm
-- Category: docs
+- Category: other
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 23.0
 - Upkeep: not measured

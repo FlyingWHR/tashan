@@ -7,7 +7,7 @@
 - tashan id: plugin:dsifry/metareview/metareview
 - Source: https://github.com/dsifry/metareview
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 41.0 / 100
 - Adoption: 18.0
 - Upkeep: 60.0

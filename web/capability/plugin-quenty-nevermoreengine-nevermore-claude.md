@@ -7,7 +7,7 @@
 - tashan id: plugin:quenty/nevermoreengine/nevermore-claude
 - Source: https://github.com/Quenty/NevermoreEngine
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 72.0 / 100
 - Adoption: 43.0
 - Upkeep: 99.0

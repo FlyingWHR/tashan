@@ -7,7 +7,7 @@
 - tashan id: plugin:igor-holt/sear/sear
 - Source: https://github.com/igor-holt/sear
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

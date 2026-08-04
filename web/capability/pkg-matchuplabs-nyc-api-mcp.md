@@ -8,7 +8,7 @@
 - Source: https://github.com/MATCHUP-LABS/nycapi
 - npm: https://www.npmjs.com/package/@matchuplabs/nyc-api-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 37.0 / 100
 - Adoption: 25.0
 - Upkeep: 50.0

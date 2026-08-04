@@ -7,7 +7,7 @@
 - tashan id: plugin:chanjoongx/mdbrain/mdbrain
 - Source: https://github.com/chanjoongx/mdbrain
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

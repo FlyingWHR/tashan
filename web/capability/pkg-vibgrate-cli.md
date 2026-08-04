@@ -8,7 +8,7 @@
 - Source: https://github.com/vibgrate/cli
 - npm: https://www.npmjs.com/package/@vibgrate/cli
 - Type: npm
-- Category: devtools
+- Category: other
 - tashan score: 71.0 / 100
 - Adoption: 49.0
 - Upkeep: 73.0

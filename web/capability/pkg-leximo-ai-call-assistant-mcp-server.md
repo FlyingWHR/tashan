@@ -8,7 +8,7 @@
 - Source: https://github.com/Leximo-AI/leximo-ai-call-assistant-mcp-server
 - npm: https://www.npmjs.com/package/leximo-ai-call-assistant-mcp-server
 - Type: npm
-- Category: comms
+- Category: productivity
 - tashan score: 31.0 / 100
 - Adoption: 24.0
 - Upkeep: 41.0

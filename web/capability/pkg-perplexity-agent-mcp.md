@@ -8,7 +8,7 @@
 - Source: https://github.com/Jercik/perplexity-agent-mcp
 - npm: https://www.npmjs.com/package/perplexity-agent-mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 46.0 / 100
 - Adoption: 21.0
 - Upkeep: 63.0

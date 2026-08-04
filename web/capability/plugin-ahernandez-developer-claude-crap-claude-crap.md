@@ -7,7 +7,7 @@
 - tashan id: plugin:ahernandez-developer/claude-crap/claude-crap
 - Source: https://github.com/ahernandez-developer/claude-crap
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 19.0
 - Upkeep: 50.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:dnakode/vbnet-lsp-claude-plugin/vbnet-lsp-claude-plugin
 - Source: https://github.com/DNAKode/vbnet-lsp-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 24.0 / 100
 - Adoption: 13.0
 - Upkeep: 43.0

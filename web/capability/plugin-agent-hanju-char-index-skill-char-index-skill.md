@@ -7,7 +7,7 @@
 - tashan id: plugin:agent-hanju/char-index-skill/char-index-skill
 - Source: https://github.com/agent-hanju/char-index-skill
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

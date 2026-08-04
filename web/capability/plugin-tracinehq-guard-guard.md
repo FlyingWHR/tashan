@@ -7,7 +7,7 @@
 - tashan id: plugin:tracinehq/guard/guard
 - Source: https://github.com/TracineHQ/guard
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 41.0 / 100
 - Adoption: 7.0
 - Upkeep: 94.0

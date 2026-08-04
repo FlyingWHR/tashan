@@ -7,7 +7,7 @@
 - tashan id: plugin:nyldn/img/img
 - Source: https://github.com/nyldn/img
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

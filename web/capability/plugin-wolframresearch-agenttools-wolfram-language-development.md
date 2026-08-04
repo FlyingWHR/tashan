@@ -7,7 +7,7 @@
 - tashan id: plugin:wolframresearch/agenttools/wolfram-language-development
 - Source: https://github.com/WolframResearch/AgentTools
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 85.0

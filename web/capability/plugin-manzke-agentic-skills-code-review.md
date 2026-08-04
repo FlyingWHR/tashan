@@ -7,7 +7,7 @@
 - tashan id: plugin:manzke/agentic-skills/code-review
 - Source: https://github.com/manzke/agentic-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

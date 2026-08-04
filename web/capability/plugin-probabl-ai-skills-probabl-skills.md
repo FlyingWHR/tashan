@@ -7,7 +7,7 @@
 - tashan id: plugin:probabl-ai/skills/probabl-skills
 - Source: https://github.com/probabl-ai/skills
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 63.0 / 100
 - Adoption: 31.0
 - Upkeep: 96.0

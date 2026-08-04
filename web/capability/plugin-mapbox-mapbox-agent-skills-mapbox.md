@@ -7,7 +7,7 @@
 - tashan id: plugin:mapbox/mapbox-agent-skills/mapbox
 - Source: https://github.com/mapbox/mapbox-agent-skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 67.0 / 100
 - Adoption: 35.0
 - Upkeep: 97.0

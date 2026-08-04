@@ -7,7 +7,7 @@
 - tashan id: skill:obra/using-git-worktrees
 - Source: https://github.com/obra/superpowers
 - Type: skill
-- Category: productivity
+- Category: devtools
 - tashan score: 53.0 / 100
 - Adoption: 17.0
 - Upkeep: 99.0

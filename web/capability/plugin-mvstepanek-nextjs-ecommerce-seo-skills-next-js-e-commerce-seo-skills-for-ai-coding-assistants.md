@@ -7,7 +7,7 @@
 - tashan id: plugin:mvstepanek/nextjs-ecommerce-seo-skills/next-js-e-commerce-seo-skills-for-ai-coding-assistants
 - Source: https://github.com/mvstepanek/nextjs-ecommerce-seo-skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 29.0 / 100
 - Adoption: 11.0
 - Upkeep: 50.0

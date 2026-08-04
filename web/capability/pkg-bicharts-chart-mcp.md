@@ -7,7 +7,7 @@
 - tashan id: pkg:@bicharts/chart-mcp
 - npm: https://www.npmjs.com/package/@bicharts/chart-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 68.0 / 100
 - Adoption: 44.0
 - Upkeep: 65.0

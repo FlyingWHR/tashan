@@ -8,7 +8,7 @@
 - Source: https://github.com/wille/mcp-oauth-server
 - npm: https://www.npmjs.com/package/mcp-oauth-server
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 51.0 / 100
 - Adoption: 27.0
 - Upkeep: 60.0

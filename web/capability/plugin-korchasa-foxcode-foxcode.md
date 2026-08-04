@@ -7,7 +7,7 @@
 - tashan id: plugin:korchasa/foxcode/foxcode
 - Source: https://github.com/korchasa/foxcode
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 99.0

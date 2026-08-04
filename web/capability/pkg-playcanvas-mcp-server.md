@@ -8,7 +8,7 @@
 - Source: https://github.com/MetaHumanREAL/OnRush-Plugins
 - npm: https://www.npmjs.com/package/playcanvas-mcp-server
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 45.0 / 100
 - Adoption: 19.0
 - Upkeep: 62.0

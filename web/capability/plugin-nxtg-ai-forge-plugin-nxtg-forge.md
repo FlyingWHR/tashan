@@ -7,7 +7,7 @@
 - tashan id: plugin:nxtg-ai/forge-plugin/nxtg-forge
 - Source: https://github.com/nxtg-ai/forge-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 53.0 / 100
 - Adoption: 17.0
 - Upkeep: 99.0

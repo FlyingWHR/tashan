@@ -7,7 +7,7 @@
 - tashan id: plugin:guoxiaowen/wechat-audio-toolkit/wechat-audio-toolkit
 - Source: https://github.com/guoxiaowen/wechat-audio-toolkit
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/marcopesani/mcp-server-serper
 - npm: https://www.npmjs.com/package/serper-search-scrape-mcp-server
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 20.0 / 100
 - Adoption: 57.0
 - Upkeep: 28.0

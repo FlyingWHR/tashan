@@ -7,7 +7,7 @@
 - tashan id: plugin:haenara-shin/codex-hud/codex-hud
 - Source: https://github.com/haenara-shin/codex-hud
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 40.0 / 100
 - Adoption: 19.0
 - Upkeep: 58.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:wix/skills/wix
 - Source: https://github.com/wix/skills
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 64.0 / 100
 - Adoption: 29.0
 - Upkeep: 99.0

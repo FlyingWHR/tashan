@@ -8,7 +8,7 @@
 - Source: https://github.com/runapi-ai/flux-2-mcp
 - npm: https://www.npmjs.com/package/@runapi.ai/flux-2-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 62.0 / 100
 - Adoption: 36.0
 - Upkeep: 65.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:gemini-cli-extensions/alloydb-omni/alloydb-omni
 - Source: https://github.com/gemini-cli-extensions/alloydb-omni
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 54.0 / 100
 - Adoption: 20.0
 - Upkeep: 96.0

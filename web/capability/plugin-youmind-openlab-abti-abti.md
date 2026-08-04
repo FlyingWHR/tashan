@@ -7,7 +7,7 @@
 - tashan id: plugin:youmind-openlab/abti/abti
 - Source: https://github.com/YouMind-OpenLab/abti
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 20.0
 - Upkeep: 67.0

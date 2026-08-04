@@ -7,7 +7,7 @@
 - tashan id: plugin:snowflake-labs/snowflake-ai-kit/snowflake-cortex-code
 - Source: https://github.com/Snowflake-Labs/snowflake-ai-kit
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 64.0 / 100
 - Adoption: 31.0
 - Upkeep: 97.0

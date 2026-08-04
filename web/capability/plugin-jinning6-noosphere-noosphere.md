@@ -7,7 +7,7 @@
 - tashan id: plugin:jinning6/noosphere/noosphere
 - Source: https://github.com/JinNing6/Noosphere
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 60.0 / 100
 - Adoption: 24.0
 - Upkeep: 99.0

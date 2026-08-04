@@ -7,7 +7,7 @@
 - tashan id: plugin:skillbench-ai/skillmeter-claude-code-marketplace/skillmeter
 - Source: https://github.com/SkillBench-AI/skillmeter-claude-code-marketplace
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 50.0 / 100
 - Adoption: 13.0
 - Upkeep: 99.0

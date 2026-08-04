@@ -7,7 +7,7 @@
 - tashan id: plugin:into-the-intraverse/claude-money-burn/burn
 - Source: https://github.com/into-the-intraverse/claude-money-burn
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 27.0 / 100
 - Adoption: 11.0
 - Upkeep: 48.0

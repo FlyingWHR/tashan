@@ -7,7 +7,7 @@
 - tashan id: plugin:agustincbajo/coral/coral
 - Source: https://github.com/agustincbajo/Coral
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: 88.0

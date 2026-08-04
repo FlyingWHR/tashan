@@ -8,7 +8,7 @@
 - Source: https://github.com/jack1590/RokuMCP
 - npm: https://www.npmjs.com/package/roku-mcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 22.0
 - Upkeep: 62.0

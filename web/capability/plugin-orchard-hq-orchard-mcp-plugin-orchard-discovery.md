@@ -7,7 +7,7 @@
 - tashan id: plugin:orchard-hq/orchard-mcp-plugin/orchard-discovery
 - Source: https://github.com/Orchard-HQ/orchard-mcp-plugin
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

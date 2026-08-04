@@ -7,7 +7,7 @@
 - tashan id: plugin:myeolinmalchi/mcp2cli/mcp2cli
 - Source: https://github.com/myeolinmalchi/mcp2cli
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 28.0 / 100
 - Adoption: 16.0
 - Upkeep: 45.0

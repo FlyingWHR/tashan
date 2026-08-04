@@ -7,7 +7,7 @@
 - tashan id: plugin:crowdsecurity/crowdsec-skill/crowdsec
 - Source: https://github.com/crowdsecurity/crowdsec-skill
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 58.0 / 100
 - Adoption: 24.0
 - Upkeep: 97.0

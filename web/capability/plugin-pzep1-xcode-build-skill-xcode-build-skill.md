@@ -7,7 +7,7 @@
 - tashan id: plugin:pzep1/xcode-build-skill/xcode-build-skill
 - Source: https://github.com/pzep1/xcode-build-skill
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 33.0 / 100
 - Adoption: 35.0
 - Upkeep: 42.0

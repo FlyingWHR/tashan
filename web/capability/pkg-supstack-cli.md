@@ -8,7 +8,7 @@
 - Source: https://github.com/DrBaher/supstack-cli
 - npm: https://www.npmjs.com/package/@supstack/cli
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 54.0 / 100
 - Adoption: 28.0
 - Upkeep: 69.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/pulsemcp/mcp-servers
 - npm: https://www.npmjs.com/package/fetchpet-mcp-server
 - Type: npm
-- Category: productivity
+- Category: browser
 - tashan score: 45.0 / 100
 - Adoption: 24.0
 - Upkeep: 59.0

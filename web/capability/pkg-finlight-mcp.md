@@ -8,7 +8,7 @@
 - Source: https://github.com/callbk/finlight-mcp
 - npm: https://www.npmjs.com/package/finlight-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 46.0 / 100
 - Adoption: 22.0
 - Upkeep: 56.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/verygoodplugins/mcp-automem
 - npm: https://www.npmjs.com/package/@verygoodplugins/mcp-automem
 - Type: npm
-- Category: other
+- Category: files
 - tashan score: 56.0 / 100
 - Adoption: 28.0
 - Upkeep: 78.0

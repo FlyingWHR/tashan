@@ -8,7 +8,7 @@
 - Source: https://github.com/FixtureForge/seedweaver-mcp
 - npm: https://www.npmjs.com/package/seedweaver-mcp
 - Type: npm
-- Category: data
+- Category: other
 - tashan score: 40.0 / 100
 - Adoption: 21.0
 - Upkeep: 51.0

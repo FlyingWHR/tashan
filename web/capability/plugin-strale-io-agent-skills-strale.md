@@ -7,7 +7,7 @@
 - tashan id: plugin:strale-io/agent-skills/strale
 - Source: https://github.com/strale-io/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

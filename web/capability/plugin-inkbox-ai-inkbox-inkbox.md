@@ -7,7 +7,7 @@
 - tashan id: plugin:inkbox-ai/inkbox/inkbox
 - Source: https://github.com/inkbox-ai/inkbox
 - Type: plugin
-- Category: comms
+- Category: ai
 - tashan score: 62.0 / 100
 - Adoption: 27.0
 - Upkeep: 99.0

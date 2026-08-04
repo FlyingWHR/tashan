@@ -7,7 +7,7 @@
 - tashan id: plugin:boltz-bio/boltz-api-skills/boltz
 - Source: https://github.com/boltz-bio/boltz-api-skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 56.0 / 100
 - Adoption: 20.0
 - Upkeep: 99.0

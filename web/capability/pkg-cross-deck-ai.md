@@ -8,7 +8,7 @@
 - Source: https://github.com/CrossDeckHQ/crossdeck-prism
 - npm: https://www.npmjs.com/package/@cross-deck/ai
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 50.0 / 100
 - Adoption: 27.0
 - Upkeep: 60.0

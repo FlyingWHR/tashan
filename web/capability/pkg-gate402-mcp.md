@@ -8,7 +8,7 @@
 - Source: https://github.com/pgalyen1987/gate402-mcp
 - npm: https://www.npmjs.com/package/gate402-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 55.0 / 100
 - Adoption: 27.0
 - Upkeep: 66.0

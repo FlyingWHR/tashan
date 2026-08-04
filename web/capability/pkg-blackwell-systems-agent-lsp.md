@@ -8,7 +8,7 @@
 - Source: https://github.com/blackwell-systems/agent-lsp
 - npm: https://www.npmjs.com/package/@blackwell-systems/agent-lsp
 - Type: npm
-- Category: devtools
+- Category: data
 - tashan score: 67.0 / 100
 - Adoption: 39.0
 - Upkeep: 72.0

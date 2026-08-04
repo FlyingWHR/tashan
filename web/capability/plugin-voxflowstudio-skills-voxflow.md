@@ -7,7 +7,7 @@
 - tashan id: plugin:voxflowstudio/skills/voxflow
 - Source: https://github.com/VoxFlowStudio/skills
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 37.0 / 100
 - Adoption: 19.0
 - Upkeep: 54.0

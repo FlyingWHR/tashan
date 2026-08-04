@@ -7,7 +7,7 @@
 - tashan id: plugin:giskard-ai/giskard-skills/giskard-skills
 - Source: https://github.com/Giskard-AI/giskard-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 38.0 / 100
 - Adoption: 17.0
 - Upkeep: 57.0

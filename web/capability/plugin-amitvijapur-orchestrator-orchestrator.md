@@ -7,7 +7,7 @@
 - tashan id: plugin:amitvijapur/orchestrator/orchestrator
 - Source: https://github.com/amitvijapur/orchestrator
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

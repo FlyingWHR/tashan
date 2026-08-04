@@ -7,7 +7,7 @@
 - tashan id: plugin:unstructured-io/unstructured-foundation-marketplace/foundation
 - Source: https://github.com/Unstructured-IO/unstructured-foundation-marketplace
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 95.0

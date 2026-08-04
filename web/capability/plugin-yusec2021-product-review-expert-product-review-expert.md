@@ -7,7 +7,7 @@
 - tashan id: plugin:yusec2021/product-review-expert/product-review-expert
 - Source: https://github.com/YuSec2021/product-review-expert
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 73.0

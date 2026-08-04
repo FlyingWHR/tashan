@@ -7,7 +7,7 @@
 - tashan id: plugin:itsuzef/goalkeeper/goalkeeper
 - Source: https://github.com/itsuzef/goalkeeper
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 42.0 / 100
 - Adoption: 21.0
 - Upkeep: 58.0

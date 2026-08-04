@@ -7,7 +7,7 @@
 - tashan id: plugin:maxencemeloni/claude-code-agent-smith/agent-smith
 - Source: https://github.com/maxencemeloni/claude-code-agent-smith
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 38.0 / 100
 - Adoption: 18.0
 - Upkeep: 68.0

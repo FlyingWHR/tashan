@@ -8,7 +8,7 @@
 - Source: https://github.com/JXUE0/opencut-controller
 - npm: https://www.npmjs.com/package/opencut-controller
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 57.0 / 100
 - Adoption: 34.0
 - Upkeep: 60.0

@@ -7,7 +7,7 @@
 - tashan id: skill:teren-papercutlabs/jaz-api
 - Source: https://github.com/teren-papercutlabs/jaz-ai
 - Type: skill
-- Category: other
+- Category: productivity
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

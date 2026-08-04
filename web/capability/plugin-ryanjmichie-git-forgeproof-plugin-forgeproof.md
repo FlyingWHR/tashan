@@ -7,7 +7,7 @@
 - tashan id: plugin:ryanjmichie-git/forgeproof-plugin/forgeproof
 - Source: https://github.com/ryanjmichie-git/forgeproof-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 13.0
 - Upkeep: 62.0

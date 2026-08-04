@@ -7,7 +7,7 @@
 - tashan id: skill:brightdata/data-feeds
 - Source: https://github.com/brightdata/skills
 - Type: skill
-- Category: other
+- Category: search
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

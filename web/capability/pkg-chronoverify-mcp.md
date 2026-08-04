@@ -8,7 +8,7 @@
 - Source: https://github.com/beeswaxpat/chronoverify-mcp
 - npm: https://www.npmjs.com/package/chronoverify-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 60.0 / 100
 - Adoption: 35.0
 - Upkeep: 64.0

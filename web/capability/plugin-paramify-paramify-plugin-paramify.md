@@ -7,7 +7,7 @@
 - tashan id: plugin:paramify/paramify-plugin/paramify
 - Source: https://github.com/paramify/paramify-plugin
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

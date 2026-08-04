@@ -7,7 +7,7 @@
 - tashan id: plugin:gemini-cli-extensions/spanner/spanner
 - Source: https://github.com/gemini-cli-extensions/spanner
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 62.0 / 100
 - Adoption: 28.0
 - Upkeep: 98.0

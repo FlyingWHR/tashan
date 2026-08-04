@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/opentabs-plugin-slack
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 60.0 / 100
 - Adoption: 33.0
 - Upkeep: 69.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:cooperbench/cooperator-plugin/cooperator
 - Source: https://github.com/cooperbench/cooperator-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 64.0

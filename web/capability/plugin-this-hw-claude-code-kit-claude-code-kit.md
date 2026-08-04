@@ -7,7 +7,7 @@
 - tashan id: plugin:this-hw/claude-code-kit/claude-code-kit
 - Source: https://github.com/This-HW/claude-code-kit
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 16.0
 - Upkeep: 62.0

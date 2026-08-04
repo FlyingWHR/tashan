@@ -7,7 +7,7 @@
 - tashan id: plugin:coderabbitai/skills/coderabbit
 - Source: https://github.com/coderabbitai/skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 70.0 / 100
 - Adoption: 39.0
 - Upkeep: 98.0

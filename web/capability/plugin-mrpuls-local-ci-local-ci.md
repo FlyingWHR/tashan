@@ -7,7 +7,7 @@
 - tashan id: plugin:mrpuls/local-ci/local-ci
 - Source: https://github.com/MrPuls/local-ci
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 46.0 / 100
 - Adoption: 15.0
 - Upkeep: 92.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:jetbrains/teamcity-cli/teamcity-cli
 - Source: https://github.com/JetBrains/teamcity-cli
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 69.0 / 100
 - Adoption: 38.0
 - Upkeep: 97.0

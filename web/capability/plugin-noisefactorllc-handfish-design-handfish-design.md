@@ -7,7 +7,7 @@
 - tashan id: plugin:noisefactorllc/handfish-design/handfish-design
 - Source: https://github.com/noisefactorllc/handfish-design
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

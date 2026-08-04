@@ -8,7 +8,7 @@
 - Source: https://github.com/antfu/nuxt-mcp-dev
 - npm: https://www.npmjs.com/package/vite-plugin-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 45.0 / 100
 - Adoption: 54.0
 - Upkeep: 51.0

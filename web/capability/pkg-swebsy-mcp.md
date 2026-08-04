@@ -7,7 +7,7 @@
 - tashan id: pkg:@swebsy/mcp
 - npm: https://www.npmjs.com/package/@swebsy/mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 63.0 / 100
 - Adoption: 36.0
 - Upkeep: 69.0

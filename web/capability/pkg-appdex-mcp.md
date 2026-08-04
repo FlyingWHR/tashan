@@ -7,7 +7,7 @@
 - tashan id: pkg:appdex-mcp
 - npm: https://www.npmjs.com/package/appdex-mcp
 - Type: npm
-- Category: comms
+- Category: data
 - tashan score: 29.0 / 100
 - Adoption: not measured
 - Upkeep: 61.0

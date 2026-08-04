@@ -8,7 +8,7 @@
 - Source: https://github.com/SimplyLiz/CodeMCP
 - npm: https://www.npmjs.com/package/@tastehub/ckb
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 55.0 / 100
 - Adoption: 28.0
 - Upkeep: 68.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Rckl88/seracade
 - npm: https://www.npmjs.com/package/seracade
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 43.0 / 100
 - Adoption: 24.0
 - Upkeep: 59.0

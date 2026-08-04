@@ -7,7 +7,7 @@
 - tashan id: plugin:ankshvayt/compress-gif/compress-gif
 - Source: https://github.com/ankshvayt/compress-gif
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 52.0

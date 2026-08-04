@@ -7,7 +7,7 @@
 - tashan id: plugin:shawnzam/keynot/keynot
 - Source: https://github.com/shawnzam/keynot
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 36.0 / 100
 - Adoption: 23.0
 - Upkeep: 51.0

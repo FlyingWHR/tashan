@@ -8,7 +8,7 @@
 - Source: https://github.com/waxberry-dev/live-translate-mcp
 - npm: https://www.npmjs.com/package/live-translate-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 47.0 / 100
 - Adoption: 29.0
 - Upkeep: 57.0

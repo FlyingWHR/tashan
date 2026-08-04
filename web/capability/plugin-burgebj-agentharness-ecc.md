@@ -7,7 +7,7 @@
 - tashan id: plugin:burgebj/agentharness/ecc
 - Source: https://github.com/burgebj/agentharness
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 92.0

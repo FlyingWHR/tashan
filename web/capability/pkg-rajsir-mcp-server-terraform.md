@@ -8,7 +8,7 @@
 - Source: https://github.com/RajeevSirohi/mcp-server-terraform
 - npm: https://www.npmjs.com/package/@rajsir/mcp-server-terraform
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 45.0 / 100
 - Adoption: 23.0
 - Upkeep: 53.0

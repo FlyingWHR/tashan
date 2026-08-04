@@ -8,7 +8,7 @@
 - Source: https://github.com/Primate-Intelligence/primate-intelligence-api
 - npm: https://www.npmjs.com/package/@primate-intelligence/mcp
 - Type: npm
-- Category: design
+- Category: data
 - tashan score: 57.0 / 100
 - Adoption: 35.0
 - Upkeep: 59.0

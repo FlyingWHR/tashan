@@ -7,7 +7,7 @@
 - tashan id: plugin:reodotdev/claude-plugin/reo-dev-your-developer-gtm-copilot
 - Source: https://github.com/reodotdev/claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

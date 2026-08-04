@@ -8,7 +8,7 @@
 - Source: https://github.com/getsentry/XcodeBuildMCP
 - npm: https://www.npmjs.com/package/xcodebuildmcp
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 78.0 / 100
 - Adoption: 69.0
 - Upkeep: 72.0

@@ -6,7 +6,7 @@
 - Source: https://github.com/putervision/state-memory-mcp
 - npm: https://www.npmjs.com/package/state-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 59.0 / 100
 - Adoption: 40.0
 - Upkeep: 52.0

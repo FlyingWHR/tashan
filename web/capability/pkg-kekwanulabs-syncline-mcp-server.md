@@ -8,7 +8,7 @@
 - Source: https://github.com/KekwanuLabs/syncline
 - npm: https://www.npmjs.com/package/@kekwanulabs/syncline-mcp-server
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 43.0 / 100
 - Adoption: 27.0
 - Upkeep: 62.0

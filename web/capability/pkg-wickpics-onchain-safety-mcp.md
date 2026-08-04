@@ -8,7 +8,7 @@
 - Source: https://github.com/aitools420/onchain-safety-mcp
 - npm: https://www.npmjs.com/package/@wickpics/onchain-safety-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 46.0 / 100
 - Adoption: 25.0
 - Upkeep: 53.0

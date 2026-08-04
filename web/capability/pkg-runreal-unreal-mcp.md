@@ -7,7 +7,7 @@
 - tashan id: pkg:@runreal/unreal-mcp
 - npm: https://www.npmjs.com/package/@runreal/unreal-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 24.0 / 100
 - Adoption: 32.0
 - Upkeep: 47.0

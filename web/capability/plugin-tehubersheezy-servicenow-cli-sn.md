@@ -7,7 +7,7 @@
 - tashan id: plugin:tehubersheezy/servicenow-cli/sn
 - Source: https://github.com/tehubersheezy/servicenow-cli
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 46.0 / 100
 - Adoption: 15.0
 - Upkeep: not measured

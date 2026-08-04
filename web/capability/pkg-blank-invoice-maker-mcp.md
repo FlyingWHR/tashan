@@ -8,7 +8,7 @@
 - Source: https://github.com/InnarM/blank-invoice-maker-mcp
 - npm: https://www.npmjs.com/package/blank-invoice-maker-mcp
 - Type: npm
-- Category: productivity
+- Category: finance
 - tashan score: 44.0 / 100
 - Adoption: 24.0
 - Upkeep: 53.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/RidioDevelopment/socialcrawl-mcp
 - npm: https://www.npmjs.com/package/socialcrawl-mcp
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 53.0 / 100
 - Adoption: 29.0
 - Upkeep: 63.0

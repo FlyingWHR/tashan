@@ -7,7 +7,7 @@
 - tashan id: plugin:ironyjk/counsel-frameworks/counsel-frameworks
 - Source: https://github.com/ironyjk/counsel-frameworks
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 29.0 / 100
 - Adoption: 11.0
 - Upkeep: 50.0

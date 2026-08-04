@@ -8,7 +8,7 @@
 - Source: https://github.com/1genadam/pilotgentic
 - npm: https://www.npmjs.com/package/@pilotgentic/mcp-server
 - Type: npm
-- Category: devtools
+- Category: search
 - tashan score: 32.0 / 100
 - Adoption: 19.0
 - Upkeep: 41.0

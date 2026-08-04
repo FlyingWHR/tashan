@@ -8,7 +8,7 @@
 - Source: https://github.com/RoninForge/ai-price-index-mcp
 - npm: https://www.npmjs.com/package/ai-price-index-mcp
 - Type: npm
-- Category: finance
+- Category: other
 - tashan score: 44.0 / 100
 - Adoption: 23.0
 - Upkeep: 54.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/amitesh-m/wealthville-integrations
 - npm: https://www.npmjs.com/package/@wealthville/mcp-server
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 60.0 / 100
 - Adoption: 37.0
 - Upkeep: 61.0

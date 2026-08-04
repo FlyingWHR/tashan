@@ -7,7 +7,7 @@
 - tashan id: plugin:neonpanel/claude-plugin/neonpanel
 - Source: https://github.com/neonpanel/claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 75.0

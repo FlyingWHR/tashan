@@ -8,7 +8,7 @@
 - Source: https://github.com/NOTTIBOY137/mcp-update-hijack-poc
 - npm: https://www.npmjs.com/package/@nottiboy1337/mcp-update-hijack-poc
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 22.0
 - Upkeep: 37.0

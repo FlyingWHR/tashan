@@ -8,7 +8,7 @@
 - Source: https://github.com/Doc-API-LLC/docapi-mcp
 - npm: https://www.npmjs.com/package/@docapi/mcp
 - Type: npm
-- Category: productivity
+- Category: files
 - tashan score: 31.0 / 100
 - Adoption: 23.0
 - Upkeep: 39.0

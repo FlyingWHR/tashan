@@ -8,7 +8,7 @@
 - Source: https://github.com/qwertymuzaffar/mcp-udacity-commit
 - npm: https://www.npmjs.com/package/mcp-udacity-commit
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 64.0 / 100
 - Adoption: 41.0
 - Upkeep: 62.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:kikuchiyo1221/claude-shopee-review-plugin/shopee-review
 - Source: https://github.com/kikuchiyo1221/claude-shopee-review-plugin
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 25.0 / 100
 - Adoption: 11.0
 - Upkeep: 44.0

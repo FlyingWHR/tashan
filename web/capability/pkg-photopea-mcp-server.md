@@ -8,7 +8,7 @@
 - Source: https://github.com/attalla1/photopea-mcp-server
 - npm: https://www.npmjs.com/package/photopea-mcp-server
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 29.0
 - Upkeep: 44.0

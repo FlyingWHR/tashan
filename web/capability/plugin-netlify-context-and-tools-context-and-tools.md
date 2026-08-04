@@ -7,7 +7,7 @@
 - tashan id: plugin:netlify/context-and-tools/context-and-tools
 - Source: https://github.com/netlify/context-and-tools
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 99.0

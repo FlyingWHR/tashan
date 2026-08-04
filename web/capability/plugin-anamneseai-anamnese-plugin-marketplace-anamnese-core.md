@@ -7,7 +7,7 @@
 - tashan id: plugin:anamneseai/anamnese-plugin-marketplace/anamnese-core
 - Source: https://github.com/AnamneseAI/anamnese-plugin-marketplace
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

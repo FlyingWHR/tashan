@@ -8,7 +8,7 @@
 - Source: https://github.com/CryptoAPIs-io/cryptoapis-mcp-utils
 - npm: https://www.npmjs.com/package/@cryptoapis-io/mcp-utils
 - Type: npm
-- Category: devtools
+- Category: finance
 - tashan score: 35.0 / 100
 - Adoption: 25.0
 - Upkeep: 48.0

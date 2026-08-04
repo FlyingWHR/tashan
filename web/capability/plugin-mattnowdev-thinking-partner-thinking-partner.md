@@ -7,7 +7,7 @@
 - tashan id: plugin:mattnowdev/thinking-partner/thinking-partner
 - Source: https://github.com/mattnowdev/thinking-partner
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 39.0 / 100
 - Adoption: 36.0
 - Upkeep: 47.0

@@ -6,7 +6,7 @@
 - Page: https://tashan.sh/capability/registry-com-thenextgennexus-environmental-esg-mcp
 - tashan id: registry:com.thenextgennexus/environmental-esg-mcp
 - Type: remote
-- Category: security
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: not measured
 - Upkeep: not measured

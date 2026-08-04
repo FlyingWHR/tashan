@@ -8,7 +8,7 @@
 - Source: https://github.com/SalesforgeAI/forge-mcp
 - npm: https://www.npmjs.com/package/@salesforge/forge-mcp
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 36.0 / 100
 - Adoption: 24.0
 - Upkeep: 43.0

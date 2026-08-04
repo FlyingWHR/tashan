@@ -8,7 +8,7 @@
 - Source: https://github.com/DuhoKim/NebulaMind
 - npm: https://www.npmjs.com/package/@kuntori/nebulamind-mcp
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 35.0 / 100
 - Adoption: 20.0
 - Upkeep: 44.0

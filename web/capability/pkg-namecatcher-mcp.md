@@ -8,7 +8,7 @@
 - Source: https://github.com/productmap/namecatcher-skills
 - npm: https://www.npmjs.com/package/namecatcher-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 47.0 / 100
 - Adoption: 24.0
 - Upkeep: 54.0

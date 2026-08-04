@@ -7,7 +7,7 @@
 - tashan id: plugin:reneemgagnon/prompt_sentinel/prompt-sentinel-v1
 - Source: https://github.com/reneemgagnon/Prompt_Sentinel
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 11.0
 - Upkeep: 59.0

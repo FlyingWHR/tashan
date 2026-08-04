@@ -7,7 +7,7 @@
 - tashan id: skill:obra/using-superpowers
 - Source: https://github.com/obra/superpowers
 - Type: skill
-- Category: productivity
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: 99.0

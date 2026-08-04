@@ -8,7 +8,7 @@
 - Source: https://github.com/Base-Station-Inc/pdfkit-mcp
 - npm: https://www.npmjs.com/package/pdfkit-mcp
 - Type: npm
-- Category: devtools
+- Category: browser
 - tashan score: 27.0 / 100
 - Adoption: 26.0
 - Upkeep: 43.0

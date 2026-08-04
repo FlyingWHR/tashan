@@ -7,7 +7,7 @@
 - tashan id: plugin:tryrendition/kopi-email-marketing-plugin/kopi-email-marketing
 - Source: https://github.com/tryrendition/kopi-email-marketing-plugin
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 68.0

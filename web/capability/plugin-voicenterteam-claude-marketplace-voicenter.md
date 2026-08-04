@@ -7,7 +7,7 @@
 - tashan id: plugin:voicenterteam/claude-marketplace/voicenter
 - Source: https://github.com/VoicenterTeam/claude-marketplace
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 49.0 / 100
 - Adoption: 13.0
 - Upkeep: 98.0

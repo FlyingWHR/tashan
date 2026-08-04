@@ -7,7 +7,7 @@
 - tashan id: plugin:miltonian/vibecircle/vibecircle
 - Source: https://github.com/miltonian/vibecircle
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 47.0 / 100
 - Adoption: 15.0
 - Upkeep: 93.0

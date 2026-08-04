@@ -8,7 +8,7 @@
 - Source: https://github.com/nesgarbo/feathers-mcp
 - npm: https://www.npmjs.com/package/feathers-mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 58.0 / 100
 - Adoption: 31.0
 - Upkeep: 66.0

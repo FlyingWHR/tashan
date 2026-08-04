@@ -8,7 +8,7 @@
 - Source: https://github.com/EthanAckerman-git/Preflight
 - npm: https://www.npmjs.com/package/preflight-ios-mcp
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 34.0 / 100
 - Adoption: 23.0
 - Upkeep: 45.0

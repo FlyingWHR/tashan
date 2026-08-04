@@ -7,7 +7,7 @@
 - tashan id: plugin:zscole/adversarial-spec/adversarial-spec
 - Source: https://github.com/zscole/adversarial-spec
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 52.0 / 100
 - Adoption: 43.0
 - Upkeep: 79.0

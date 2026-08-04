@@ -7,7 +7,7 @@
 - tashan id: plugin:datoga/chess-coach-ai/chess-coach-ai
 - Source: https://github.com/datoga/chess-coach-ai
 - Type: plugin
-- Category: finance
+- Category: docs
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

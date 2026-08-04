@@ -8,7 +8,7 @@
 - Source: https://github.com/jyswee/taufunctions
 - npm: https://www.npmjs.com/package/taufunctions
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 64.0 / 100
 - Adoption: 39.0
 - Upkeep: 64.0

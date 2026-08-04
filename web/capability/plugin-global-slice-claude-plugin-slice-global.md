@@ -7,7 +7,7 @@
 - tashan id: plugin:global-slice/claude-plugin/slice-global
 - Source: https://github.com/Global-Slice/claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 49.0 / 100
 - Adoption: 20.0
 - Upkeep: 79.0

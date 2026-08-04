@@ -7,7 +7,7 @@
 - tashan id: plugin:voltairehq/voltaire-plugin/voltaire
 - Source: https://github.com/voltairehq/voltaire-plugin
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

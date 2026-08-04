@@ -8,7 +8,7 @@
 - Source: https://github.com/OsamaHassouna/docs-hub
 - npm: https://www.npmjs.com/package/email-playbook-mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 44.0 / 100
 - Adoption: 25.0
 - Upkeep: 57.0

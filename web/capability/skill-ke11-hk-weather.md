@@ -7,7 +7,7 @@
 - tashan id: skill:ke11/hk-weather
 - Source: https://github.com/ke11/skills
 - Type: skill
-- Category: other
+- Category: finance
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

@@ -8,7 +8,7 @@
 - Source: https://github.com/Goingparabolic/painprep-mcp-server
 - npm: https://www.npmjs.com/package/painprep-mcp-server
 - Type: npm
-- Category: security
+- Category: search
 - tashan score: 42.0 / 100
 - Adoption: 23.0
 - Upkeep: 53.0

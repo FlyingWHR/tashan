@@ -8,7 +8,7 @@
 - Source: https://github.com/AgentSEO-dev/agentseo-clients
 - npm: https://www.npmjs.com/package/@agentseo/mcp-server
 - Type: npm
-- Category: devtools
+- Category: comms
 - tashan score: 48.0 / 100
 - Adoption: 23.0
 - Upkeep: 58.0

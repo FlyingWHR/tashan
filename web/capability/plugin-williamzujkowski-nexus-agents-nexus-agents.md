@@ -7,7 +7,7 @@
 - tashan id: plugin:williamzujkowski/nexus-agents/nexus-agents
 - Source: https://github.com/williamzujkowski/nexus-agents
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 59.0 / 100
 - Adoption: 23.0
 - Upkeep: 99.0

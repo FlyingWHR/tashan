@@ -7,7 +7,7 @@
 - tashan id: plugin:datarails/dr-claude-code-plugins-re/datarails-financeos
 - Source: https://github.com/Datarails/dr-claude-code-plugins-re
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 51.0 / 100
 - Adoption: 15.0
 - Upkeep: 98.0

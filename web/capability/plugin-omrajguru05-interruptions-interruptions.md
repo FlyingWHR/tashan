@@ -7,7 +7,7 @@
 - tashan id: plugin:omrajguru05/interruptions/interruptions
 - Source: https://github.com/omrajguru05/interruptions
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

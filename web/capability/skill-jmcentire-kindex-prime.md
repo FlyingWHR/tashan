@@ -7,7 +7,7 @@
 - tashan id: skill:jmcentire/kindex-prime
 - Source: https://github.com/jmcentire/kindex
 - Type: skill
-- Category: other
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:shauigewhite/learning-tutor/learning-tutor
 - Source: https://github.com/shauigewhite/learning-tutor
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 55.0

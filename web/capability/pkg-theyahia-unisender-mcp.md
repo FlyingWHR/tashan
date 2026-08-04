@@ -8,7 +8,7 @@
 - Source: https://github.com/theYahia/unisender-mcp
 - npm: https://www.npmjs.com/package/@theyahia/unisender-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 36.0 / 100
 - Adoption: 23.0
 - Upkeep: 50.0

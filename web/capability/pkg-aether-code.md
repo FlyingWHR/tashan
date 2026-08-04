@@ -8,7 +8,7 @@
 - Source: https://github.com/dannyphantomx64/aether-code
 - npm: https://www.npmjs.com/package/aether-code
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 67.0 / 100
 - Adoption: 40.0
 - Upkeep: 73.0

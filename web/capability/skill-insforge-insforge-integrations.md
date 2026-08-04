@@ -7,7 +7,7 @@
 - tashan id: skill:InsForge/insforge-integrations
 - Source: https://github.com/InsForge/insforge-skills
 - Type: skill
-- Category: other
+- Category: security
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:wonjyou/portfolio-review-skill/portfolio-review
 - Source: https://github.com/wonjyou/portfolio-review-skill
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 31.0 / 100
 - Adoption: 17.0
 - Upkeep: 49.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:clankercode/claude-inject-idle-time/idle-timing
 - Source: https://github.com/clankercode/claude-inject-idle-time
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 16.0
 - Upkeep: 74.0

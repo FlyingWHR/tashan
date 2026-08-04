@@ -8,7 +8,7 @@
 - Source: https://github.com/MAIAS-project/maias
 - npm: https://www.npmjs.com/package/@maias/mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 54.0 / 100
 - Adoption: 29.0
 - Upkeep: 61.0

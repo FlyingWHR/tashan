@@ -7,7 +7,7 @@
 - tashan id: plugin:joshua-burnell-1/prompt-squeeze/prompt-squeeze
 - Source: https://github.com/joshua-burnell-1/prompt-squeeze
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 30.0 / 100
 - Adoption: 11.0
 - Upkeep: 51.0

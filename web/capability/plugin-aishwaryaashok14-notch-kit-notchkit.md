@@ -7,7 +7,7 @@
 - tashan id: plugin:aishwaryaashok14/notch-kit/notchkit
 - Source: https://github.com/aishwaryaashok14/notch-kit
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 47.0

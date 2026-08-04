@@ -7,7 +7,7 @@
 - tashan id: plugin:chikeka/competition-checker/competition-checker
 - Source: https://github.com/chiKeka/competition-checker
 - Type: plugin
-- Category: other
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

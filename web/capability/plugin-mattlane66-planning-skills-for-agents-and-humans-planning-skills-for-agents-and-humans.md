@@ -7,7 +7,7 @@
 - tashan id: plugin:mattlane66/planning-skills-for-agents-and-humans/planning-skills-for-agents-and-humans
 - Source: https://github.com/mattlane66/planning-skills-for-agents-and-humans
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 42.0 / 100
 - Adoption: 15.0
 - Upkeep: 63.0

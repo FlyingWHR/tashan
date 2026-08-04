@@ -7,7 +7,7 @@
 - tashan id: skill:alirezarezvani/status
 - Source: https://github.com/alirezarezvani/claude-skills
 - Type: skill
-- Category: productivity
+- Category: devtools
 - tashan score: 52.0 / 100
 - Adoption: 17.0
 - Upkeep: 97.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:shalomeir/gemini-plugin-cc/gemini-plugin-cc
 - Source: https://github.com/shalomeir/gemini-plugin-cc
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 30.0 / 100
 - Adoption: 16.0
 - Upkeep: 48.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:avantsoftware/sheepdog/sheepdog
 - Source: https://github.com/avantsoftware/sheepdog
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 45.0 / 100
 - Adoption: 21.0
 - Upkeep: 62.0

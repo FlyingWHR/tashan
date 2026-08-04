@@ -7,7 +7,7 @@
 - tashan id: plugin:smoldrago/kroki-diagrams/kroki-diagrams
 - Source: https://github.com/smoldrago/kroki-diagrams
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 45.0 / 100
 - Adoption: 17.0
 - Upkeep: not measured

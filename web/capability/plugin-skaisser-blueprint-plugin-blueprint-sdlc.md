@@ -7,7 +7,7 @@
 - tashan id: plugin:skaisser/blueprint-plugin/blueprint-sdlc
 - Source: https://github.com/skaisser/blueprint-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

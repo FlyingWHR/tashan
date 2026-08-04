@@ -7,7 +7,7 @@
 - tashan id: plugin:gyanesh-m/retro-daily/retro-daily
 - Source: https://github.com/gyanesh-m/retro-daily
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 56.0

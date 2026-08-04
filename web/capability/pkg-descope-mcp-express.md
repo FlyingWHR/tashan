@@ -7,7 +7,7 @@
 - tashan id: pkg:@descope/mcp-express
 - npm: https://www.npmjs.com/package/@descope/mcp-express
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 73.0 / 100
 - Adoption: 54.0
 - Upkeep: 90.0

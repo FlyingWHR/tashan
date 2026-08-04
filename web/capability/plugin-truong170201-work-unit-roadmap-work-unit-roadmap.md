@@ -7,7 +7,7 @@
 - tashan id: plugin:truong170201/work-unit-roadmap/work-unit-roadmap
 - Source: https://github.com/truong170201/work-unit-roadmap
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 52.0

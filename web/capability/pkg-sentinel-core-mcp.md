@@ -8,7 +8,7 @@
 - Source: https://github.com/firatorhan/sentinel
 - npm: https://www.npmjs.com/package/@sentinel-core/mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 41.0 / 100
 - Adoption: 15.0
 - Upkeep: 57.0

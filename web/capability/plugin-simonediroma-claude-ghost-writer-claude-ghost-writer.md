@@ -7,7 +7,7 @@
 - tashan id: plugin:simonediroma/claude-ghost-writer/claude-ghost-writer
 - Source: https://github.com/simonediroma/claude-ghost-writer
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 39.0 / 100
 - Adoption: 7.0
 - Upkeep: 91.0

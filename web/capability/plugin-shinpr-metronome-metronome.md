@@ -7,7 +7,7 @@
 - tashan id: plugin:shinpr/metronome/metronome
 - Source: https://github.com/shinpr/metronome
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 33.0 / 100
 - Adoption: 19.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:markswendsen-code/mcp-opentable/striderlabs-opentable
 - Source: https://github.com/markswendsen-code/mcp-opentable
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 37.0 / 100
 - Adoption: 11.0
 - Upkeep: 85.0

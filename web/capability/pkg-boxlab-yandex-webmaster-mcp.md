@@ -8,7 +8,7 @@
 - Source: https://github.com/BoxLab-Ltd/yandex-webmaster-mcp
 - npm: https://www.npmjs.com/package/@boxlab/yandex-webmaster-mcp
 - Type: npm
-- Category: productivity
+- Category: database
 - tashan score: 55.0 / 100
 - Adoption: 34.0
 - Upkeep: 55.0

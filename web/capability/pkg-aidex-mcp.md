@@ -8,7 +8,7 @@
 - Source: https://github.com/CSCSoftware/AiDex
 - npm: https://www.npmjs.com/package/aidex-mcp
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 54.0 / 100
 - Adoption: 29.0
 - Upkeep: 69.0

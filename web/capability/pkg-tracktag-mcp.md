@@ -8,7 +8,7 @@
 - Source: https://github.com/adigold/tracktag-mcp
 - npm: https://www.npmjs.com/package/tracktag-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 50.0 / 100
 - Adoption: 26.0
 - Upkeep: 57.0

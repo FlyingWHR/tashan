@@ -7,7 +7,7 @@
 - tashan id: plugin:libukai/awesome-agent-skills/agent-skills-toolkit
 - Source: https://github.com/libukai/awesome-agent-skills
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:raychao-oao/pty-mcp/pty-mcp
 - Source: https://github.com/raychao-oao/pty-mcp
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 39.0 / 100
 - Adoption: 22.0
 - Upkeep: 54.0

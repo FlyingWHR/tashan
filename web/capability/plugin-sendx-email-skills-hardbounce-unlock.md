@@ -7,7 +7,7 @@
 - tashan id: plugin:sendx/email-skills/hardbounce-unlock
 - Source: https://github.com/sendx/email-skills
 - Type: plugin
-- Category: security
+- Category: comms
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 80.0

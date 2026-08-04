@@ -7,7 +7,7 @@
 - tashan id: plugin:coji/natural-japanese/natural-japanese
 - Source: https://github.com/coji/natural-japanese
 - Type: plugin
-- Category: data
+- Category: productivity
 - tashan score: 62.0 / 100
 - Adoption: 34.0
 - Upkeep: not measured

@@ -8,7 +8,7 @@
 - Source: https://github.com/Prudai/rechtspraak-mcp
 - npm: https://www.npmjs.com/package/rechtspraak-mcp
 - Type: npm
-- Category: finance
+- Category: other
 - tashan score: 41.0 / 100
 - Adoption: 24.0
 - Upkeep: 49.0

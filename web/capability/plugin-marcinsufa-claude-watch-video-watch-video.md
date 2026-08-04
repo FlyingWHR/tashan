@@ -7,7 +7,7 @@
 - tashan id: plugin:marcinsufa/claude-watch-video/watch-video
 - Source: https://github.com/MarcinSufa/claude-watch-video
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 39.0 / 100
 - Adoption: 18.0
 - Upkeep: not measured

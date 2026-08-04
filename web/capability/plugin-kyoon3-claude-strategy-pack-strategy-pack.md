@@ -7,7 +7,7 @@
 - tashan id: plugin:kyoon3/claude-strategy-pack/strategy-pack
 - Source: https://github.com/kyoon3/claude-strategy-pack
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 72.0

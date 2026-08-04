@@ -7,7 +7,7 @@
 - tashan id: plugin:plausibleba/ba-skills/plausible-ba
 - Source: https://github.com/plausibleba/ba-skills
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

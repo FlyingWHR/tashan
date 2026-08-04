@@ -7,7 +7,7 @@
 - tashan id: plugin:zhijiang-li1111/ironflow/ironflow
 - Source: https://github.com/Zhijiang-Li1111/ironflow
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 20.0
 - Upkeep: 86.0

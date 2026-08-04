@@ -7,7 +7,7 @@
 - tashan id: pkg:@volcanic-dev/tephra
 - npm: https://www.npmjs.com/package/@volcanic-dev/tephra
 - Type: npm
-- Category: other
+- Category: files
 - tashan score: 38.0 / 100
 - Adoption: 10.0
 - Upkeep: 61.0

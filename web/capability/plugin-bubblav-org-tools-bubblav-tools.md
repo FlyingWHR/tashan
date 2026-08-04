@@ -7,7 +7,7 @@
 - tashan id: plugin:bubblav-org/tools/bubblav-tools
 - Source: https://github.com/bubblav-org/tools
 - Type: plugin
-- Category: comms
+- Category: browser
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

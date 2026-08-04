@@ -7,7 +7,7 @@
 - tashan id: plugin:agent-sh/perf/perf
 - Source: https://github.com/agent-sh/perf
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 45.0 / 100
 - Adoption: 13.0
 - Upkeep: 80.0

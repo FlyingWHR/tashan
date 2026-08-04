@@ -7,7 +7,7 @@
 - tashan id: plugin:lewispb/rails-query-skill/rails-query
 - Source: https://github.com/lewispb/rails-query-skill
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 37.0 / 100
 - Adoption: 25.0
 - Upkeep: 50.0

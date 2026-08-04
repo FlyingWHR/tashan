@@ -8,7 +8,7 @@
 - Source: https://github.com/Pact-Community-Organization/pact-mcp
 - npm: https://www.npmjs.com/package/@pact-community/mcp-pact
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 56.0 / 100
 - Adoption: 32.0
 - Upkeep: 59.0

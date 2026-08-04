@@ -7,7 +7,7 @@
 - tashan id: plugin:worldbrain/memex-claude/memex-bookmarking-2nd-brain
 - Source: https://github.com/WorldBrain/memex-claude
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 99.0

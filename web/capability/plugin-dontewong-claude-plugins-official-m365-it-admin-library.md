@@ -7,7 +7,7 @@
 - tashan id: plugin:dontewong/claude-plugins-official/m365-it-admin-library
 - Source: https://github.com/DonteWong/claude-plugins-official
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

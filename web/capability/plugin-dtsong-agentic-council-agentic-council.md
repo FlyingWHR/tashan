@@ -7,7 +7,7 @@
 - tashan id: plugin:dtsong/agentic-council/agentic-council
 - Source: https://github.com/dtsong/agentic-council
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 39.0 / 100
 - Adoption: 7.0
 - Upkeep: 79.0

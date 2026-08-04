@@ -7,7 +7,7 @@
 - tashan id: plugin:luciqai/agent-skills/luciq
 - Source: https://github.com/luciqai/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 99.0

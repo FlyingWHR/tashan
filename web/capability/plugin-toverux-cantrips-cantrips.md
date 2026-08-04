@@ -7,7 +7,7 @@
 - tashan id: plugin:toverux/cantrips/cantrips
 - Source: https://github.com/toverux/cantrips
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

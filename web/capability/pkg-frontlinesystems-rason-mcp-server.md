@@ -7,7 +7,7 @@
 - tashan id: pkg:@frontlinesystems/rason-mcp-server
 - npm: https://www.npmjs.com/package/@frontlinesystems/rason-mcp-server
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 44.0 / 100
 - Adoption: 26.0
 - Upkeep: 55.0

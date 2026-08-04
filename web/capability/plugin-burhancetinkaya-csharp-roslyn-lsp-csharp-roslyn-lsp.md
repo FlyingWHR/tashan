@@ -7,7 +7,7 @@
 - tashan id: plugin:burhancetinkaya/csharp-roslyn-lsp/csharp-roslyn-lsp
 - Source: https://github.com/burhancetinkaya/csharp-roslyn-lsp
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 47.0

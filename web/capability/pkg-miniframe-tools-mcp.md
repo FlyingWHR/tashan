@@ -8,7 +8,7 @@
 - Source: https://github.com/edsonvmendes/miniframe-tools-mcp
 - npm: https://www.npmjs.com/package/miniframe-tools-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 51.0 / 100
 - Adoption: 26.0
 - Upkeep: 59.0

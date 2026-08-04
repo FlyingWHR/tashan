@@ -8,7 +8,7 @@
 - Source: https://github.com/hushvert/mcp
 - npm: https://www.npmjs.com/package/@hushvert/mcp
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 53.0 / 100
 - Adoption: 30.0
 - Upkeep: 58.0

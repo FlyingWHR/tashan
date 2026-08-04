@@ -8,7 +8,7 @@
 - Source: https://github.com/livetennisapi/livetennisapi-mcp
 - npm: https://www.npmjs.com/package/livetennisapi-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 60.0 / 100
 - Adoption: 33.0
 - Upkeep: 66.0

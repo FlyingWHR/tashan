@@ -8,7 +8,7 @@
 - Source: https://github.com/Shien-Inc/mdgen-mcp
 - npm: https://www.npmjs.com/package/mdgen-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 40.0 / 100
 - Adoption: 14.0
 - Upkeep: 57.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/420247jake/session-forge
 - npm: https://www.npmjs.com/package/session-forge
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 34.0 / 100
 - Adoption: 24.0
 - Upkeep: 50.0

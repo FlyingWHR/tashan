@@ -7,7 +7,7 @@
 - tashan id: plugin:ajbarea/techne/techne
 - Source: https://github.com/ajbarea/techne
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 99.0

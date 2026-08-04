@@ -7,7 +7,7 @@
 - tashan id: plugin:ksegit/version-sentinel/version-sentinel
 - Source: https://github.com/KSEGIT/Version-Sentinel
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 51.0 / 100
 - Adoption: 15.0
 - Upkeep: 99.0

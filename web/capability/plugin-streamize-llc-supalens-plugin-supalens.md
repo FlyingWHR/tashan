@@ -7,7 +7,7 @@
 - tashan id: plugin:streamize-llc/supalens-plugin/supalens
 - Source: https://github.com/Streamize-llc/supalens-plugin
 - Type: plugin
-- Category: data
+- Category: database
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

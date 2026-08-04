@@ -8,7 +8,7 @@
 - Source: https://github.com/open-and-async/mcp
 - npm: https://www.npmjs.com/package/@open-and-async/mcp
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 57.0 / 100
 - Adoption: 36.0
 - Upkeep: 58.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:mementoagi/memento-claude-code-plugin/memento
 - Source: https://github.com/mementoagi/memento-claude-code-plugin
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

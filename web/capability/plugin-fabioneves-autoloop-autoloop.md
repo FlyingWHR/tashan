@@ -7,7 +7,7 @@
 - tashan id: plugin:fabioneves/autoloop/autoloop
 - Source: https://github.com/fabioneves/autoloop
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

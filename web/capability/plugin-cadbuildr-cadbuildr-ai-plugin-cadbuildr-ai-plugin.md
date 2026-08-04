@@ -7,7 +7,7 @@
 - tashan id: plugin:cadbuildr/cadbuildr-ai-plugin/cadbuildr-ai-plugin
 - Source: https://github.com/cadbuildr/cadbuildr-ai-plugin
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

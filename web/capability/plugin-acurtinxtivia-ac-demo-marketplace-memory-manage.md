@@ -7,7 +7,7 @@
 - tashan id: plugin:acurtinxtivia/ac-demo-marketplace/memory-manage
 - Source: https://github.com/acurtinxtivia/ac-demo-marketplace
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:carloshpdoc/memorydetective-plugin/memorydetective
 - Source: https://github.com/carloshpdoc/memorydetective-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 53.0

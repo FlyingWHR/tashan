@@ -7,7 +7,7 @@
 - tashan id: pkg:achatbot-mcp
 - npm: https://www.npmjs.com/package/achatbot-mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 55.0 / 100
 - Adoption: 28.0
 - Upkeep: 67.0

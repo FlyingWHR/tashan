@@ -8,7 +8,7 @@
 - Source: https://github.com/smartpolicy-protocol/smartpolicy
 - npm: https://www.npmjs.com/package/@smartpolicy/mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 47.0 / 100
 - Adoption: 23.0
 - Upkeep: 57.0

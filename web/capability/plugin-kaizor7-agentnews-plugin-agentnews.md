@@ -7,7 +7,7 @@
 - tashan id: plugin:kaizor7/agentnews-plugin/agentnews
 - Source: https://github.com/Kaizor7/agentnews-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

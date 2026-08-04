@@ -8,7 +8,7 @@
 - Source: https://github.com/pixelhop/pixelhooks
 - npm: https://www.npmjs.com/package/@pixelhooks/mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 46.0 / 100
 - Adoption: 19.0
 - Upkeep: 59.0

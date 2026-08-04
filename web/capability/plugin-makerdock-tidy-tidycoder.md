@@ -7,7 +7,7 @@
 - tashan id: plugin:makerdock/tidy/tidycoder
 - Source: https://github.com/makerdock/tidy
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 49.0

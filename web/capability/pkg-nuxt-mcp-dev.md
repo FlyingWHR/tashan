@@ -8,7 +8,7 @@
 - Source: https://github.com/antfu/nuxt-mcp-dev
 - npm: https://www.npmjs.com/package/nuxt-mcp-dev
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 38.0 / 100
 - Adoption: 49.0
 - Upkeep: 41.0

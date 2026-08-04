@@ -7,7 +7,7 @@
 - tashan id: plugin:civicteam/civic-mcp-gateway/civic
 - Source: https://github.com/civicteam/civic-mcp-gateway
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

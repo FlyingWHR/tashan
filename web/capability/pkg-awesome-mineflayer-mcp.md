@@ -8,7 +8,7 @@
 - Source: https://github.com/G0Osey99/awesome-mineflayer-mcp
 - npm: https://www.npmjs.com/package/awesome-mineflayer-mcp
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 48.0 / 100
 - Adoption: 26.0
 - Upkeep: 58.0

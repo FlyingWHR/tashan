@@ -7,7 +7,7 @@
 - tashan id: plugin:ykotik/cli-power-skills/cli-power-skills
 - Source: https://github.com/ykotik/cli-power-skills
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 49.0

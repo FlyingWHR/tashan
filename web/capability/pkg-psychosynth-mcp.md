@@ -8,7 +8,7 @@
 - Source: https://github.com/3esign/psychosynth
 - npm: https://www.npmjs.com/package/psychosynth-mcp
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 51.0 / 100
 - Adoption: 26.0
 - Upkeep: 59.0

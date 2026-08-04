@@ -7,7 +7,7 @@
 - tashan id: plugin:legalrabbit-ai/legalrabbit-docx-claude-plugin/legalrabbit-docx
 - Source: https://github.com/LegalRabbit-AI/legalrabbit-docx-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 54.0 / 100
 - Adoption: 29.0
 - Upkeep: 77.0

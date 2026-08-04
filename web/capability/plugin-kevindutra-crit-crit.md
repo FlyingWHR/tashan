@@ -7,7 +7,7 @@
 - tashan id: plugin:kevindutra/crit/crit
 - Source: https://github.com/kevindutra/crit
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 42.0 / 100
 - Adoption: 31.0
 - Upkeep: 64.0

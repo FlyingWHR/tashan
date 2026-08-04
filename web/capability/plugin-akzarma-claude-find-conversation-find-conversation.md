@@ -7,7 +7,7 @@
 - tashan id: plugin:akzarma/claude-find-conversation/find-conversation
 - Source: https://github.com/akzarma/claude-find-conversation
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

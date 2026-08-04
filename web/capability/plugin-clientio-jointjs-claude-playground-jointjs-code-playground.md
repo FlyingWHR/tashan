@@ -7,7 +7,7 @@
 - tashan id: plugin:clientio/jointjs-claude-playground/jointjs-code-playground
 - Source: https://github.com/clientIO/jointjs-claude-playground
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 36.0 / 100
 - Adoption: 18.0
 - Upkeep: 66.0

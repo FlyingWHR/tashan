@@ -8,7 +8,7 @@
 - Source: https://github.com/VibeVO-io/VibeVO
 - npm: https://www.npmjs.com/package/@vibevo/mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 51.0 / 100
 - Adoption: 22.0
 - Upkeep: 70.0

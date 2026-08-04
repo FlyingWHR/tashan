@@ -7,7 +7,7 @@
 - tashan id: plugin:ibarapascal/compact-guardian/compact-guardian
 - Source: https://github.com/ibarapascal/compact-guardian
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 15.0 / 100
 - Adoption: 7.0
 - Upkeep: 13.0

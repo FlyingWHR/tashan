@@ -7,7 +7,7 @@
 - tashan id: plugin:factorshin/mosaic/mosaic
 - Source: https://github.com/factorshin/mosaic
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 13.0
 - Upkeep: 48.0

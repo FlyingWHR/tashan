@@ -7,7 +7,7 @@
 - tashan id: pkg:tts-fast-mcp
 - npm: https://www.npmjs.com/package/tts-fast-mcp
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 26.0 / 100
 - Adoption: 30.0
 - Upkeep: 35.0

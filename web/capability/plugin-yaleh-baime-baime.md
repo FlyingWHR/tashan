@@ -7,7 +7,7 @@
 - tashan id: plugin:yaleh/baime/baime
 - Source: https://github.com/yaleh/baime
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 40.0 / 100
 - Adoption: 18.0
 - Upkeep: 58.0

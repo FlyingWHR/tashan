@@ -7,7 +7,7 @@
 - tashan id: plugin:sharooncs/claude-memory-compactor/memory-compactor
 - Source: https://github.com/sharooncs/claude-memory-compactor
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

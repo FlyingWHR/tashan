@@ -7,7 +7,7 @@
 - tashan id: plugin:estevanhernandez-stack-ed/vibe-walk/vibe-walk
 - Source: https://github.com/estevanhernandez-stack-ed/Vibe-Walk
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:wrsmith108/governance-claude-skill/governance
 - Source: https://github.com/wrsmith108/governance-claude-skill
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

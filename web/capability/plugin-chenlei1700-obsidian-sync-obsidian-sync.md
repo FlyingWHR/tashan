@@ -7,7 +7,7 @@
 - tashan id: plugin:chenlei1700/obsidian-sync/obsidian-sync
 - Source: https://github.com/chenlei1700/obsidian-sync
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

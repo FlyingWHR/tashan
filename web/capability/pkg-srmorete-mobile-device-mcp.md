@@ -8,7 +8,7 @@
 - Source: https://github.com/srmorete/mobile-device-mcp
 - npm: https://www.npmjs.com/package/@srmorete/mobile-device-mcp
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 64.0 / 100
 - Adoption: 38.0
 - Upkeep: 66.0

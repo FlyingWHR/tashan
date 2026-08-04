@@ -8,7 +8,7 @@
 - Source: https://github.com/simieco/simie
 - npm: https://www.npmjs.com/package/@simie/mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 59.0 / 100
 - Adoption: 34.0
 - Upkeep: 62.0

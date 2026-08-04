@@ -7,7 +7,7 @@
 - tashan id: plugin:apollographql/skills/apollo-skills
 - Source: https://github.com/apollographql/skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 69.0 / 100
 - Adoption: 37.0
 - Upkeep: 99.0

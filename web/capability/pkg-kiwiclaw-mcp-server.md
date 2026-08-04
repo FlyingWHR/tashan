@@ -8,7 +8,7 @@
 - Source: https://github.com/AmoghReddy45/openclaw-marketplace-skill
 - npm: https://www.npmjs.com/package/@kiwiclaw/mcp-server
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 31.0 / 100
 - Adoption: 23.0
 - Upkeep: 41.0

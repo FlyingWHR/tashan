@@ -7,7 +7,7 @@
 - tashan id: plugin:garethdaine/agentops/agentops
 - Source: https://github.com/garethdaine/agentops
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 15.0
 - Upkeep: 47.0

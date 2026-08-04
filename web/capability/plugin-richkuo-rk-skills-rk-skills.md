@@ -7,7 +7,7 @@
 - tashan id: plugin:richkuo/rk-skills/rk-skills
 - Source: https://github.com/richkuo/rk-skills
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 63.0 / 100
 - Adoption: 28.0
 - Upkeep: 99.0

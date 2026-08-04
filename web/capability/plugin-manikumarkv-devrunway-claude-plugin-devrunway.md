@@ -7,7 +7,7 @@
 - tashan id: plugin:manikumarkv/devrunway-claude-plugin/devrunway
 - Source: https://github.com/manikumarkv/devrunway-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

@@ -66,21 +66,27 @@ MICRO_FLOOR = 0.57
 # The runner, whose corpus is fresher than any laptop's, reads 63.0% and is red on this line.
 # Re-basing the ceiling is the owner's call and must come with the shelf change that earns it.
 #
-# 4 Aug 2026 — NOW 53.0%, AND THAT IS NOT A WIN. Nothing about the taxonomy changed. npm discovery
-# added ~5,000 packages the classifier does not recognise, so it ABSTAINED on them: `other` went from
-# 3.0% of the board (176 rows) to 13.3% (981). Diluting two big shelves with a third big shelf called
-# "we don't know" lowers this number without sorting anything, which is precisely the weakness noted
-# in the competing directory studied on 3 Aug — its MCP top-2 is 34.6% and its LARGEST single shelf
-# is "Other" at 18.2%.
+# 5 Aug 2026 — 65.4% -> 32.8%, AND THIS ONE IS REAL. The cause was never the taxonomy. Training data
+# is hand-labelled rows PLUS the plugin author's own declared category, and the declared half had
+# grown to 1,400 of 2,157 rows (65%) as plugin ingestion scaled. Authors overwhelmingly write
+# "development" or "productivity": declared labels alone sit at 69.4% top-2 concentration against
+# 23.4% for the hand set. The model was learning the authors' bias, not the taxonomy — macro recall
+# fell through its floor to 52.8% and board concentration hit 65.4%.
 #
-# Per-kind, unchanged where it matters: plugin 74.8%, skill 67.9%, npm 38.7%, remote 30.1%. Plugins
-# are still the problem and still have no shelves that separate them.
+# classify.DECL_CAP now caps declared labels at 80 per class. Swept against a FIXED held-out set of
+# 152 hand-labelled rows (the earlier sweep was meaningless: varying the cap changed the test set too):
+#     uncapped  macro 57.9%  micro 53.9%   655 declared rows
+#     cap 80    macro 62.4%  micro 57.2%   207 declared rows   <- chosen
+#     cap 300   macro 59.1%  micro 54.6%   460 declared rows
+# +4.5pp macro recall from using LESS data. On the full corpus: macro 65.0%, and `other` FELL from
+# 13.3% to 5.5%, so this is sorting rather than the abstention that flattered the number yesterday.
+# Per kind, the actual problem halved: plugin 74.8% -> 40.5%, skill 67.9% -> 40.8%.
 #
-# DELIBERATELY NOT RATCHETED to 53%. 4,684 discovered npm packages are still unenriched; each gets
-# real signal — and a real category — as enrichment reaches it, so `other` will shrink and this number
-# will climb again. Ratcheting a transient mid-flight value would guarantee a red build for a change
-# nobody made. Re-measure once enrichment has caught up, then set it at whatever it honestly is.
-CONCENTRATION_CEIL = 0.62
+# Ratcheted 62% -> 45%, not to the measured 32.8%. The cap makes this stable against corpus growth
+# (declared labels can no longer swamp anything), but 4,684 npm packages are still unenriched and will
+# land real categories as they go; 45% locks in most of the gain without failing on ordinary drift.
+# Tighten it once enrichment has settled.
+CONCENTRATION_CEIL = 0.45
 
 fail = 0
 

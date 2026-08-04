@@ -7,7 +7,7 @@
 - tashan id: plugin:icxcnikaanon/claude-vitals/claude-vitals
 - Source: https://github.com/ICXCNIKAanon/claude-vitals
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

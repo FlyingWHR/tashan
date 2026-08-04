@@ -7,7 +7,7 @@
 - tashan id: plugin:photostructure/coding-skills/rust
 - Source: https://github.com/photostructure/coding-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

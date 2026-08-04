@@ -7,7 +7,7 @@
 - tashan id: plugin:gustavo-santos-swe/skills/gustavo-santos-skills
 - Source: https://github.com/gustavo-santos-swe/skills
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

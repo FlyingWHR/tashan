@@ -8,7 +8,7 @@
 - Source: https://github.com/finmap-org/mcp-server
 - npm: https://www.npmjs.com/package/finmap-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 65.0 / 100
 - Adoption: 36.0
 - Upkeep: 73.0

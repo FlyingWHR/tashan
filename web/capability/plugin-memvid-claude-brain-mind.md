@@ -7,7 +7,7 @@
 - tashan id: plugin:memvid/claude-brain/mind
 - Source: https://github.com/memvid/claude-brain
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 52.0 / 100
 - Adoption: 42.0
 - Upkeep: 79.0

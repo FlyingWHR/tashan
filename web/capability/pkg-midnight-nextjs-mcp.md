@@ -8,7 +8,7 @@
 - Source: https://github.com/FractionEstate/midnight-nextjs-mcp
 - npm: https://www.npmjs.com/package/midnight-nextjs-mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 29.0 / 100
 - Adoption: 23.0
 - Upkeep: 44.0

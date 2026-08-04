@@ -8,7 +8,7 @@
 - Source: https://github.com/Inferensys/contextful
 - npm: https://www.npmjs.com/package/@inferensys/contextful
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 36.0 / 100
 - Adoption: 21.0
 - Upkeep: 45.0

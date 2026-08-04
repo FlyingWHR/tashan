@@ -8,7 +8,7 @@
 - Source: https://github.com/mcpfinder/mcpfinder
 - npm: https://www.npmjs.com/package/@mcpfinder/server
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 55.0 / 100
 - Adoption: 33.0
 - Upkeep: 68.0

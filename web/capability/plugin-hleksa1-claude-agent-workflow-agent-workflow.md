@@ -7,7 +7,7 @@
 - tashan id: plugin:hleksa1/claude-agent-workflow/agent-workflow
 - Source: https://github.com/hleksa1/claude-agent-workflow
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

@@ -8,7 +8,7 @@
 - Source: https://github.com/Wuniq/wuniq-mcp
 - npm: https://www.npmjs.com/package/@wuniq/mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 59.0 / 100
 - Adoption: 36.0
 - Upkeep: 59.0

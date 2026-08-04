@@ -8,7 +8,7 @@
 - Source: https://github.com/Abhishekkumar2021/mcp-suite
 - npm: https://www.npmjs.com/package/@abhishekmcp/notes
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 50.0 / 100
 - Adoption: 29.0
 - Upkeep: 58.0

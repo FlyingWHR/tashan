@@ -7,7 +7,7 @@
 - tashan id: plugin:nagisanzenin/idiolect/idiolect
 - Source: https://github.com/nagisanzenin/idiolect
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 51.0 / 100
 - Adoption: 24.0
 - Upkeep: not measured

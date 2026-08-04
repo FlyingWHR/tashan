@@ -8,7 +8,7 @@
 - Source: https://github.com/moinfra/mcp-client-sdk
 - npm: https://www.npmjs.com/package/@moinfra/mcp-client-sdk
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 19.0 / 100
 - Adoption: 42.0
 - Upkeep: 28.0

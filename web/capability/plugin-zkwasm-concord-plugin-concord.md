@@ -7,7 +7,7 @@
 - tashan id: plugin:zkwasm/concord-plugin/concord
 - Source: https://github.com/zkwasm/concord-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 13.0
 - Upkeep: 58.0

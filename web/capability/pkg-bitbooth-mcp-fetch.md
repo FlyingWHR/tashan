@@ -8,7 +8,7 @@
 - Source: https://github.com/Drock91/bitbooth-docs
 - npm: https://www.npmjs.com/package/@bitbooth/mcp-fetch
 - Type: npm
-- Category: docs
+- Category: search
 - tashan score: 42.0 / 100
 - Adoption: 26.0
 - Upkeep: 52.0

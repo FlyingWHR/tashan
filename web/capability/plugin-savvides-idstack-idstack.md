@@ -7,7 +7,7 @@
 - tashan id: plugin:savvides/idstack/idstack
 - Source: https://github.com/savvides/idstack
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 43.0 / 100
 - Adoption: 25.0
 - Upkeep: 57.0

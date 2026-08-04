@@ -7,7 +7,7 @@
 - tashan id: plugin:sbom-tool/gh-guard/gh-guard
 - Source: https://github.com/sbom-tool/gh-guard
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 37.0 / 100
 - Adoption: 23.0
 - Upkeep: 64.0

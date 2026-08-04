@@ -8,7 +8,7 @@
 - Source: https://github.com/pulsemcp/mcp-servers
 - npm: https://www.npmjs.com/package/appsignal-mcp-server
 - Type: npm
-- Category: search
+- Category: devtools
 - tashan score: 49.0 / 100
 - Adoption: 26.0
 - Upkeep: 65.0

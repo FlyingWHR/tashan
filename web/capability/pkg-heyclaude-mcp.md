@@ -8,7 +8,7 @@
 - Source: https://github.com/JSONbored/awesome-claude
 - npm: https://www.npmjs.com/package/@heyclaude/mcp
 - Type: npm
-- Category: data
+- Category: docs
 - tashan score: 47.0 / 100
 - Adoption: 24.0
 - Upkeep: 62.0

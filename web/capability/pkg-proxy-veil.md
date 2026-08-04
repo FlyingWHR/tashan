@@ -8,7 +8,7 @@
 - Source: https://github.com/Goldentrii/proxy-veil
 - npm: https://www.npmjs.com/package/proxy-veil
 - Type: npm
-- Category: devtools
+- Category: data
 - tashan score: 40.0 / 100
 - Adoption: 26.0
 - Upkeep: 56.0

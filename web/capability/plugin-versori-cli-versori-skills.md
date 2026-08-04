@@ -7,7 +7,7 @@
 - tashan id: plugin:versori/cli/versori-skills
 - Source: https://github.com/versori/cli
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 56.0 / 100
 - Adoption: 21.0
 - Upkeep: 98.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/itsnevu/mcp
 - npm: https://www.npmjs.com/package/bugglo-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 51.0 / 100
 - Adoption: 25.0
 - Upkeep: 60.0

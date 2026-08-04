@@ -8,7 +8,7 @@
 - Source: https://github.com/ElliotPadfield/hatchet-mcp
 - npm: https://www.npmjs.com/package/hatchet-mcp
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 41.0 / 100
 - Adoption: 24.0
 - Upkeep: 49.0

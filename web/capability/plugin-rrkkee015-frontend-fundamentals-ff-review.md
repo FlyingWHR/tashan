@@ -7,7 +7,7 @@
 - tashan id: plugin:rrkkee015/frontend-fundamentals/ff-review
 - Source: https://github.com/rrkkee015/frontend-fundamentals
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 84.0

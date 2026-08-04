@@ -7,7 +7,7 @@
 - tashan id: plugin:mannejan89/genesis-ai/genesis
 - Source: https://github.com/manneJan89/genesis-ai
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

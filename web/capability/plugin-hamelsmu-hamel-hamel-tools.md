@@ -7,7 +7,7 @@
 - tashan id: plugin:hamelsmu/hamel/hamel-tools
 - Source: https://github.com/hamelsmu/hamel
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 53.0 / 100
 - Adoption: 30.0
 - Upkeep: 75.0

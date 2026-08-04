@@ -7,7 +7,7 @@
 - tashan id: plugin:thedotmack/claude-mem/claude-mem
 - Source: https://github.com/thedotmack/claude-mem
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 80.0 / 100
 - Adoption: 63.0
 - Upkeep: 98.0

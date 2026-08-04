@@ -8,7 +8,7 @@
 - Source: https://github.com/FunplayAI/funplay-cocos-mcp
 - npm: https://www.npmjs.com/package/funplay-cocos-mcp
 - Type: npm
-- Category: docs
+- Category: comms
 - tashan score: 60.0 / 100
 - Adoption: 36.0
 - Upkeep: 63.0

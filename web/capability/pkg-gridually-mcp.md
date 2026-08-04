@@ -8,7 +8,7 @@
 - Source: https://github.com/FSHolmberg/gridually-mcp
 - npm: https://www.npmjs.com/package/gridually-mcp
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 33.0 / 100
 - Adoption: 20.0
 - Upkeep: 46.0

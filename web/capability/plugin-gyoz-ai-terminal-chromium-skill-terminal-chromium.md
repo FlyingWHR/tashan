@@ -7,7 +7,7 @@
 - tashan id: plugin:gyoz-ai/terminal-chromium-skill/terminal-chromium
 - Source: https://github.com/gyoz-ai/terminal-chromium-skill
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 29.0 / 100
 - Adoption: 15.0
 - Upkeep: 47.0

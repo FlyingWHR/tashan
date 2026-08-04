@@ -8,7 +8,7 @@
 - Source: https://github.com/Nishant-Chaudhary5338/mcp-toolkit
 - npm: https://www.npmjs.com/package/mcp-react-toolkit
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 49.0 / 100
 - Adoption: 26.0
 - Upkeep: 60.0

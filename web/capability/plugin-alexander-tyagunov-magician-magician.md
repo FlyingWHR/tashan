@@ -7,7 +7,7 @@
 - tashan id: plugin:alexander-tyagunov/magician/magician
 - Source: https://github.com/Alexander-Tyagunov/magician
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 45.0 / 100
 - Adoption: 21.0
 - Upkeep: 61.0

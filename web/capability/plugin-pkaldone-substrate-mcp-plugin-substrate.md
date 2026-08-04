@@ -7,7 +7,7 @@
 - tashan id: plugin:pkaldone/substrate-mcp-plugin/substrate
 - Source: https://github.com/PKaldone/substrate-mcp-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

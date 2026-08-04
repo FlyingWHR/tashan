@@ -7,7 +7,7 @@
 - tashan id: plugin:clover-security/clover-claude-plugin/clover
 - Source: https://github.com/clover-security/clover-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 99.0

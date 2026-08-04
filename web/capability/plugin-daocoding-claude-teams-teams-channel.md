@@ -7,7 +7,7 @@
 - tashan id: plugin:daocoding/claude-teams/teams-channel
 - Source: https://github.com/daocoding/claude-teams
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 34.0 / 100
 - Adoption: 15.0
 - Upkeep: 66.0

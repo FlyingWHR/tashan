@@ -8,7 +8,7 @@
 - Source: https://github.com/HayoDev/safari-devtools-mcp
 - npm: https://www.npmjs.com/package/safari-devtools-mcp
 - Type: npm
-- Category: devtools
+- Category: browser
 - tashan score: 45.0 / 100
 - Adoption: 25.0
 - Upkeep: 72.0

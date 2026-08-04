@@ -7,7 +7,7 @@
 - tashan id: plugin:llqqssttyy/website-quality-checker/website-quality-checker
 - Source: https://github.com/llqqssttyy/website-quality-checker
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 27.0 / 100
 - Adoption: 11.0
 - Upkeep: 47.0

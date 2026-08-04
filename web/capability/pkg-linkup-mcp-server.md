@@ -8,7 +8,7 @@
 - Source: https://github.com/LinkupPlatform/linkup-mcp-server
 - npm: https://www.npmjs.com/package/linkup-mcp-server
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 66.0 / 100
 - Adoption: 39.0
 - Upkeep: 88.0

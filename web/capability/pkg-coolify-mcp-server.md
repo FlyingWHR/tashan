@@ -8,7 +8,7 @@
 - Source: https://github.com/wrediam/coolify-mcp-server
 - npm: https://www.npmjs.com/package/coolify-mcp-server
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 49.0 / 100
 - Adoption: 31.0
 - Upkeep: 60.0

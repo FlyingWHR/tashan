@@ -7,7 +7,7 @@
 - tashan id: plugin:coltonhyer/black-belt/black-belt
 - Source: https://github.com/coltonhyer/black-belt
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

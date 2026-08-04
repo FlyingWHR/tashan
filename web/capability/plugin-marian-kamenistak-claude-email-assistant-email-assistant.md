@@ -7,7 +7,7 @@
 - tashan id: plugin:marian-kamenistak/claude-email-assistant/email-assistant
 - Source: https://github.com/marian-kamenistak/claude-email-assistant
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 27.0 / 100
 - Adoption: 13.0
 - Upkeep: 46.0

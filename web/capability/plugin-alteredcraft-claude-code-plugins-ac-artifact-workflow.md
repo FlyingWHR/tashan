@@ -7,7 +7,7 @@
 - tashan id: plugin:alteredcraft/claude-code-plugins/ac-artifact-workflow
 - Source: https://github.com/AlteredCraft/claude-code-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 22.0
 - Upkeep: 53.0

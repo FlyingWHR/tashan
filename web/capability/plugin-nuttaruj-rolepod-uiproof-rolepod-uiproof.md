@@ -7,7 +7,7 @@
 - tashan id: plugin:nuttaruj/rolepod-uiproof/rolepod-uiproof
 - Source: https://github.com/nuttaruj/rolepod-uiproof
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 40.0 / 100
 - Adoption: 13.0
 - Upkeep: 62.0

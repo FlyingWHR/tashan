@@ -7,7 +7,7 @@
 - tashan id: plugin:darkknight4563/gatekeeper-ai-procurement/gatekeeper-ai
 - Source: https://github.com/darkknight4563/gatekeeper-ai-procurement
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 65.0

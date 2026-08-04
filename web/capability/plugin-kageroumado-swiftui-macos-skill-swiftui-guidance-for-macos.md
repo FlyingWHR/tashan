@@ -7,7 +7,7 @@
 - tashan id: plugin:kageroumado/swiftui-macos-skill/swiftui-guidance-for-macos
 - Source: https://github.com/kageroumado/swiftui-macos-skill
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

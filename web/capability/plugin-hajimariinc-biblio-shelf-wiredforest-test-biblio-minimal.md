@@ -7,7 +7,7 @@
 - tashan id: plugin:hajimariinc/biblio-shelf/wiredforest-test-biblio-minimal
 - Source: https://github.com/HajimariInc/biblio-shelf
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

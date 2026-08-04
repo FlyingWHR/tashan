@@ -7,7 +7,7 @@
 - tashan id: plugin:appcharge/appcharge-skills/appcharge-skills
 - Source: https://github.com/Appcharge/appcharge-skills
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

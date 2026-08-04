@@ -8,7 +8,7 @@
 - Source: https://github.com/Patrizzos/stylesafe
 - npm: https://www.npmjs.com/package/@patrizzos/stylesafe
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 46.0 / 100
 - Adoption: 23.0
 - Upkeep: 57.0

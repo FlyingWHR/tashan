@@ -7,7 +7,7 @@
 - tashan id: plugin:mvanhorn/last30days-skill/last30days
 - Source: https://github.com/mvanhorn/last30days-skill
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 76.0 / 100
 - Adoption: 63.0
 - Upkeep: not measured

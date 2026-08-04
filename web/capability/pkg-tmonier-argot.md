@@ -8,7 +8,7 @@
 - Source: https://github.com/get-tmonier/argot
 - npm: https://www.npmjs.com/package/@tmonier/argot
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 72.0 / 100
 - Adoption: 49.0
 - Upkeep: 73.0

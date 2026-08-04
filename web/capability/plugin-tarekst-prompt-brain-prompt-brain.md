@@ -7,7 +7,7 @@
 - tashan id: plugin:tarekst/prompt-brain/prompt-brain
 - Source: https://github.com/tarekst/prompt-brain
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 57.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:shopify/liquid-skills/liquid-lsp
 - Source: https://github.com/Shopify/liquid-skills
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 30.0 / 100
 - Adoption: 11.0
 - Upkeep: 67.0

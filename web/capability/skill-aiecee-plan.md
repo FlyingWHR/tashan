@@ -7,7 +7,7 @@
 - tashan id: skill:aiecee/plan
 - Source: https://github.com/aiecee/foundary
 - Type: skill
-- Category: other
+- Category: docs
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 20.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:narrateai-app/demomaker-plugin/narrateai-demomaker
 - Source: https://github.com/narrateai-app/demomaker-plugin
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

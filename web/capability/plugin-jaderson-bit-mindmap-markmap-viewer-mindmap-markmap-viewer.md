@@ -7,7 +7,7 @@
 - tashan id: plugin:jaderson-bit/mindmap-markmap-viewer/mindmap-markmap-viewer
 - Source: https://github.com/Jaderson-bit/mindmap-markmap-viewer
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 46.0 / 100
 - Adoption: 31.0
 - Upkeep: 56.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:utterodev/uttero-plugins/uttero
 - Source: https://github.com/utterodev/uttero-plugins
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

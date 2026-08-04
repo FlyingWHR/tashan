@@ -7,7 +7,7 @@
 - tashan id: pkg:@paypal/mcp
 - npm: https://www.npmjs.com/package/@paypal/mcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 40.0 / 100
 - Adoption: 34.0
 - Upkeep: 72.0

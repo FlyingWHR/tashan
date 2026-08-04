@@ -8,7 +8,7 @@
 - Source: https://github.com/waldzellai/clear-thought-onepointfive
 - npm: https://www.npmjs.com/package/@waldzellai/clear-thought-onepointfive
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 20.0 / 100
 - Adoption: 30.0
 - Upkeep: 31.0

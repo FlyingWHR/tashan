@@ -8,7 +8,7 @@
 - Source: https://github.com/yannmenec/inspectrum
 - npm: https://www.npmjs.com/package/inspectrum
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 61.0 / 100
 - Adoption: 35.0
 - Upkeep: 65.0

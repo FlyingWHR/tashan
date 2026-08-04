@@ -7,7 +7,7 @@
 - tashan id: plugin:kagura-ai/memory-cloud/kagura-memory
 - Source: https://github.com/kagura-ai/memory-cloud
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 55.0 / 100
 - Adoption: 19.0
 - Upkeep: 99.0

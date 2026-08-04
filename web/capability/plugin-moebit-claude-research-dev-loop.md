@@ -7,7 +7,7 @@
 - tashan id: plugin:moebit/claude/research-dev-loop
 - Source: https://github.com/moebit/claude
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

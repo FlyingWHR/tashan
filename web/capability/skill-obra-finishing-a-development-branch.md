@@ -7,7 +7,7 @@
 - tashan id: skill:obra/finishing-a-development-branch
 - Source: https://github.com/obra/superpowers
 - Type: skill
-- Category: productivity
+- Category: devtools
 - tashan score: 51.0 / 100
 - Adoption: 14.0
 - Upkeep: 99.0

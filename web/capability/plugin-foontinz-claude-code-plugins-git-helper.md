@@ -7,7 +7,7 @@
 - tashan id: plugin:foontinz/claude-code-plugins/git-helper
 - Source: https://github.com/foontinz/claude-code-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 18.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

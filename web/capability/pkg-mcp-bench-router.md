@@ -8,7 +8,7 @@
 - Source: https://github.com/K1ta141k/mcp-bench-router
 - npm: https://www.npmjs.com/package/mcp-bench-router
 - Type: npm
-- Category: docs
+- Category: finance
 - tashan score: 31.0 / 100
 - Adoption: 27.0
 - Upkeep: 40.0

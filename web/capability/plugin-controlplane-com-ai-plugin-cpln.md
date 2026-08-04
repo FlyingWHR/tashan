@@ -7,7 +7,7 @@
 - tashan id: plugin:controlplane-com/ai-plugin/cpln
 - Source: https://github.com/controlplane-com/ai-plugin
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 45.0 / 100
 - Adoption: 20.0
 - Upkeep: 62.0

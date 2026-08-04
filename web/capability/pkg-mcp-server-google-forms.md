@@ -8,7 +8,7 @@
 - Source: https://github.com/claude-book/mcp-server-google-forms
 - npm: https://www.npmjs.com/package/mcp-server-google-forms
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 51.0 / 100
 - Adoption: 26.0
 - Upkeep: 59.0

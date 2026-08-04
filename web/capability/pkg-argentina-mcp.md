@@ -8,7 +8,7 @@
 - Source: https://github.com/NicolasIppoliti/argentina-mcp
 - npm: https://www.npmjs.com/package/argentina-mcp
 - Type: npm
-- Category: finance
+- Category: productivity
 - tashan score: 49.0 / 100
 - Adoption: 26.0
 - Upkeep: 55.0

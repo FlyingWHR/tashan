@@ -8,7 +8,7 @@
 - Source: https://github.com/apexapi/apexapi-mcp
 - npm: https://www.npmjs.com/package/apexapi-mcp
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 57.0 / 100
 - Adoption: 32.0
 - Upkeep: 61.0

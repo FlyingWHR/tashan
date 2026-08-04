@@ -7,7 +7,7 @@
 - tashan id: pkg:@heyoden/mcp
 - npm: https://www.npmjs.com/package/@heyoden/mcp
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 41.0 / 100
 - Adoption: 21.0
 - Upkeep: 53.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:stifler7/claude-plugins/memex-mcp
 - Source: https://github.com/STiFLeR7/claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 99.0

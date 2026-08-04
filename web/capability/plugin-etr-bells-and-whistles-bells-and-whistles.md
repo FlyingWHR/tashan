@@ -7,7 +7,7 @@
 - tashan id: plugin:etr/bells-and-whistles/bells-and-whistles
 - Source: https://github.com/etr/bells-and-whistles
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 31.0 / 100
 - Adoption: 19.0
 - Upkeep: 47.0

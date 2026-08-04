@@ -8,7 +8,7 @@
 - Source: https://github.com/Mintii-Labs/ozor-MCP
 - npm: https://www.npmjs.com/package/ozor-mcp-server
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 39.0 / 100
 - Adoption: 22.0
 - Upkeep: 49.0

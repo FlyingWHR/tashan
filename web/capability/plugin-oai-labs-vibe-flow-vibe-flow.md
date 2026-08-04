@@ -7,7 +7,7 @@
 - tashan id: plugin:oai-labs/vibe-flow/vibe-flow
 - Source: https://github.com/OAI-Labs/vibe-flow
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 39.0 / 100
 - Adoption: 11.0
 - Upkeep: 63.0

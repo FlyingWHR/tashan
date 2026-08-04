@@ -8,7 +8,7 @@
 - Source: https://github.com/AtlasDevHQ/atlas
 - npm: https://www.npmjs.com/package/@useatlas/mcp
 - Type: npm
-- Category: security
+- Category: data
 - tashan score: 48.0 / 100
 - Adoption: 23.0
 - Upkeep: 57.0

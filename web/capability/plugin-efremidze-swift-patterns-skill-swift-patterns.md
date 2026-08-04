@@ -7,7 +7,7 @@
 - tashan id: plugin:efremidze/swift-patterns-skill/swift-patterns
 - Source: https://github.com/efremidze/swift-patterns-skill
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 35.0 / 100
 - Adoption: 19.0
 - Upkeep: 64.0

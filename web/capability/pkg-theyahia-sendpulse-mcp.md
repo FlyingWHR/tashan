@@ -8,7 +8,7 @@
 - Source: https://github.com/theYahia/sendpulse-mcp
 - npm: https://www.npmjs.com/package/@theyahia/sendpulse-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 35.0 / 100
 - Adoption: 21.0
 - Upkeep: 50.0

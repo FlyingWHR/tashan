@@ -8,7 +8,7 @@
 - Source: https://github.com/Indirecttek/elixium.ai
 - npm: https://www.npmjs.com/package/@elixium.ai/mcp-server
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 64.0 / 100
 - Adoption: 38.0
 - Upkeep: 72.0

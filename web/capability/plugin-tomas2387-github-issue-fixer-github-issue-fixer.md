@@ -7,7 +7,7 @@
 - tashan id: plugin:tomas2387/github-issue-fixer/github-issue-fixer
 - Source: https://github.com/tomas2387/github-issue-fixer
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 54.0

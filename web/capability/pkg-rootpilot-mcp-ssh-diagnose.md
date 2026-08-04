@@ -8,7 +8,7 @@
 - Source: https://github.com/Easton-OU/rootpilot-mcp
 - npm: https://www.npmjs.com/package/@rootpilot/mcp-ssh-diagnose
 - Type: npm
-- Category: productivity
+- Category: cloud
 - tashan score: 48.0 / 100
 - Adoption: 25.0
 - Upkeep: 56.0

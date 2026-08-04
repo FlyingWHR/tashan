@@ -7,7 +7,7 @@
 - tashan id: plugin:warrenronsiek/tasktracemcpplugin/tasktrace-mcp-plugin
 - Source: https://github.com/warrenronsiek/TaskTraceMCPPlugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 34.0 / 100
 - Adoption: 13.0
 - Upkeep: 67.0

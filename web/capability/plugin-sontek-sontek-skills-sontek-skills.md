@@ -7,7 +7,7 @@
 - tashan id: plugin:sontek/sontek-skills/sontek-skills
 - Source: https://github.com/sontek/sontek-skills
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 38.0 / 100
 - Adoption: 11.0
 - Upkeep: 61.0

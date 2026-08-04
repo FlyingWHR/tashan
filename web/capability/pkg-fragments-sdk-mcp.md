@@ -8,7 +8,7 @@
 - Source: https://github.com/ConanMcN/fragments
 - npm: https://www.npmjs.com/package/@fragments-sdk/mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 56.0 / 100
 - Adoption: 30.0
 - Upkeep: 70.0

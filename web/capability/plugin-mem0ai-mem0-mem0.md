@@ -7,7 +7,7 @@
 - tashan id: plugin:mem0ai/mem0/mem0
 - Source: https://github.com/mem0ai/mem0
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 80.0 / 100
 - Adoption: 63.0
 - Upkeep: 99.0

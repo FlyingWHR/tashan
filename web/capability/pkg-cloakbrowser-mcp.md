@@ -8,7 +8,7 @@
 - Source: https://github.com/swimmwatch/cloakbrowser-mcp
 - npm: https://www.npmjs.com/package/cloakbrowser-mcp
 - Type: npm
-- Category: productivity
+- Category: browser
 - tashan score: 66.0 / 100
 - Adoption: 39.0
 - Upkeep: 70.0

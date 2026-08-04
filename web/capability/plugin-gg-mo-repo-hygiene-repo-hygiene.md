@@ -7,7 +7,7 @@
 - tashan id: plugin:gg-mo/repo-hygiene/repo-hygiene
 - Source: https://github.com/gg-mo/repo-hygiene
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 32.0 / 100
 - Adoption: 13.0
 - Upkeep: 52.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:marfoerst/the-pragmatic-pm/the-pragmatic-pm-toolkit
 - Source: https://github.com/marfoerst/the-pragmatic-pm
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 42.0 / 100
 - Adoption: 19.0
 - Upkeep: 60.0

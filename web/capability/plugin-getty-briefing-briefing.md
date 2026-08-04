@@ -7,7 +7,7 @@
 - tashan id: plugin:getty/briefing/briefing
 - Source: https://github.com/Getty/briefing
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 32.0 / 100
 - Adoption: 16.0
 - Upkeep: 50.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:llodev/skills/pm-tasks-core
 - Source: https://github.com/llodev/skills
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 43.0 / 100
 - Adoption: 7.0
 - Upkeep: 97.0

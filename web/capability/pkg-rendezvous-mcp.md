@@ -8,7 +8,7 @@
 - Source: https://github.com/forgesworn/rendezvous-mcp
 - npm: https://www.npmjs.com/package/rendezvous-mcp
 - Type: npm
-- Category: productivity
+- Category: other
 - tashan score: 38.0 / 100
 - Adoption: 24.0
 - Upkeep: 52.0

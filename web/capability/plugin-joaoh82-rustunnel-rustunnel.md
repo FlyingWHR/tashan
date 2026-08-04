@@ -7,7 +7,7 @@
 - tashan id: plugin:joaoh82/rustunnel/rustunnel
 - Source: https://github.com/joaoh82/rustunnel
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 72.0 / 100
 - Adoption: 44.0
 - Upkeep: 99.0

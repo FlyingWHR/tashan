@@ -8,7 +8,7 @@
 - Source: https://github.com/Azure/containerization-assist
 - npm: https://www.npmjs.com/package/containerization-assist-mcp
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 66.0 / 100
 - Adoption: 38.0
 - Upkeep: 83.0

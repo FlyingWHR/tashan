@@ -7,7 +7,7 @@
 - tashan id: plugin:slicervm/agent-skills/use-slicer-proxy
 - Source: https://github.com/slicervm/agent-skills
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

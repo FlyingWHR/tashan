@@ -8,7 +8,7 @@
 - Source: https://github.com/wh1teee/mcp-server-perplexity
 - npm: https://www.npmjs.com/package/mcp-server-perplexity
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 21.0 / 100
 - Adoption: 35.0
 - Upkeep: 34.0

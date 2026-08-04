@@ -8,7 +8,7 @@
 - Source: https://github.com/zekebuilds-lab/mcp-l402-gate
 - npm: https://www.npmjs.com/package/@powforge/mcp-l402-gate
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 43.0 / 100
 - Adoption: 27.0
 - Upkeep: 54.0

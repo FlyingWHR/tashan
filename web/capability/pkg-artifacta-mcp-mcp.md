@@ -8,7 +8,7 @@
 - Source: https://github.com/SagaPeak/artifacta-mcp
 - npm: https://www.npmjs.com/package/@artifacta-mcp/mcp
 - Type: npm
-- Category: cloud
+- Category: data
 - tashan score: 49.0 / 100
 - Adoption: 28.0
 - Upkeep: 58.0

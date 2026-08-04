@@ -7,7 +7,7 @@
 - tashan id: plugin:flexcompute/plugin-marketplace/flexcompute
 - Source: https://github.com/flexcompute/plugin-marketplace
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 52.0 / 100
 - Adoption: 17.0
 - Upkeep: 97.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/confluentinc/mcp-confluent
 - npm: https://www.npmjs.com/package/@confluentinc/mcp-confluent
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 65.0 / 100
 - Adoption: 38.0
 - Upkeep: 78.0

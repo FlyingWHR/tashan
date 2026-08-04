@@ -7,7 +7,7 @@
 - tashan id: plugin:dolphinsue319/mcp2plugin/docs-crawler
 - Source: https://github.com/dolphinsue319/mcp2plugin
 - Type: plugin
-- Category: data
+- Category: docs
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

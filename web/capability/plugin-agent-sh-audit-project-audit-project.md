@@ -7,7 +7,7 @@
 - tashan id: plugin:agent-sh/audit-project/audit-project
 - Source: https://github.com/agent-sh/audit-project
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 46.0 / 100
 - Adoption: 15.0
 - Upkeep: 80.0

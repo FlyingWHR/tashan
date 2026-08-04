@@ -7,7 +7,7 @@
 - tashan id: plugin:carboneio/carbone-skill/carbone-skill
 - Source: https://github.com/carboneio/carbone-skill
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 44.0 / 100
 - Adoption: 16.0
 - Upkeep: 77.0

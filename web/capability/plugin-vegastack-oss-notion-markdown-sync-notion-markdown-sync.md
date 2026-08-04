@@ -7,7 +7,7 @@
 - tashan id: plugin:vegastack/oss-notion-markdown-sync/notion-markdown-sync
 - Source: https://github.com/VegaStack/oss-notion-markdown-sync
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

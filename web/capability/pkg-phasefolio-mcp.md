@@ -8,7 +8,7 @@
 - Source: https://github.com/TamalAdebisi/Phasefolio_v1
 - npm: https://www.npmjs.com/package/@phasefolio/mcp
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 39.0 / 100
 - Adoption: 25.0
 - Upkeep: 51.0

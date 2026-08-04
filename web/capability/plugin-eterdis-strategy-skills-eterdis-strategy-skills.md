@@ -7,7 +7,7 @@
 - tashan id: plugin:eterdis/strategy-skills/eterdis-strategy-skills
 - Source: https://github.com/eterdis/strategy-skills
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 31.0 / 100
 - Adoption: 17.0
 - Upkeep: 48.0

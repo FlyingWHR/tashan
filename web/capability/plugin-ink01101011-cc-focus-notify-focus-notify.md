@@ -7,7 +7,7 @@
 - tashan id: plugin:ink01101011/cc-focus-notify/focus-notify
 - Source: https://github.com/Ink01101011/cc-focus-notify
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

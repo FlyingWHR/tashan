@@ -8,7 +8,7 @@
 - Source: https://github.com/fentz26/EnvCP
 - npm: https://www.npmjs.com/package/@fentz26/envcp
 - Type: npm
-- Category: productivity
+- Category: files
 - tashan score: 47.0 / 100
 - Adoption: 33.0
 - Upkeep: 62.0

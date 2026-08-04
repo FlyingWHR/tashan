@@ -7,7 +7,7 @@
 - tashan id: plugin:poulrohan23/mypowers/mypowers
 - Source: https://github.com/poulrohan23/mypowers
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 58.0

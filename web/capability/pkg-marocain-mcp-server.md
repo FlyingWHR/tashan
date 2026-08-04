@@ -8,7 +8,7 @@
 - Source: https://github.com/Hei33enberg/marocain-mcp-server
 - npm: https://www.npmjs.com/package/@marocain/mcp-server
 - Type: npm
-- Category: finance
+- Category: data
 - tashan score: 50.0 / 100
 - Adoption: 26.0
 - Upkeep: 62.0

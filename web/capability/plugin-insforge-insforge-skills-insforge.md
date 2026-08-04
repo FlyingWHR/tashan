@@ -7,7 +7,7 @@
 - tashan id: plugin:insforge/insforge-skills/insforge
 - Source: https://github.com/InsForge/insforge-skills
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 62.0 / 100
 - Adoption: 27.0
 - Upkeep: 99.0

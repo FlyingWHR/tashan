@@ -7,7 +7,7 @@
 - tashan id: plugin:maj0rr/laravel-ai-starter/laravel-ai-starter
 - Source: https://github.com/maj0rr/laravel-ai-starter
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 49.0

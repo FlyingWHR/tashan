@@ -8,7 +8,7 @@
 - Source: https://github.com/bitcompare/services
 - npm: https://www.npmjs.com/package/@bitcompare/mcp-server
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 48.0 / 100
 - Adoption: 28.0
 - Upkeep: 59.0

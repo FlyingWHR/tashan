@@ -8,7 +8,7 @@
 - Source: https://github.com/AaronVick/ECHO_RIFT_MCP
 - npm: https://www.npmjs.com/package/@echorift/mcp
 - Type: npm
-- Category: docs
+- Category: ai
 - tashan score: 24.0 / 100
 - Adoption: 23.0
 - Upkeep: 33.0

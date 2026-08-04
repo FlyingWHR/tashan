@@ -7,7 +7,7 @@
 - tashan id: plugin:miltonian/cartographer/cartographer
 - Source: https://github.com/miltonian/cartographer
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 35.0 / 100
 - Adoption: 11.0
 - Upkeep: 58.0

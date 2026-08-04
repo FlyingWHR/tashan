@@ -8,7 +8,7 @@
 - Source: https://github.com/IndigoProtocol/cardano-mcp
 - npm: https://www.npmjs.com/package/@indigoprotocol/cardano-mcp
 - Type: npm
-- Category: productivity
+- Category: finance
 - tashan score: 45.0 / 100
 - Adoption: 24.0
 - Upkeep: 80.0

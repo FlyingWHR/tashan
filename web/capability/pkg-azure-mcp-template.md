@@ -8,7 +8,7 @@
 - Source: https://github.com/microsoft/mcp
 - npm: https://www.npmjs.com/package/@azure/mcp-template
 - Type: npm
-- Category: devtools
+- Category: other
 - tashan score: 63.0 / 100
 - Adoption: 30.0
 - Upkeep: 95.0

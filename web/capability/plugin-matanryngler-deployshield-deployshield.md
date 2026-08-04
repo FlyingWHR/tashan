@@ -7,7 +7,7 @@
 - tashan id: plugin:matanryngler/deployshield/deployshield
 - Source: https://github.com/matanryngler/deployshield
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 38.0 / 100
 - Adoption: 15.0
 - Upkeep: 83.0

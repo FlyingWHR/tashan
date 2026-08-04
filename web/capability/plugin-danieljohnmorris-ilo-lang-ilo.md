@@ -7,7 +7,7 @@
 - tashan id: plugin:danieljohnmorris/ilo-lang/ilo
 - Source: https://github.com/danieljohnmorris/ilo-lang
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 44.0 / 100
 - Adoption: 16.0
 - Upkeep: 89.0

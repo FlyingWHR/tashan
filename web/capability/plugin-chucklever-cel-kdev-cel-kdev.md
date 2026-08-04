@@ -7,7 +7,7 @@
 - tashan id: plugin:chucklever/cel-kdev/cel-kdev
 - Source: https://github.com/chucklever/cel-kdev
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 41.0 / 100
 - Adoption: 13.0
 - Upkeep: 63.0

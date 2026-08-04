@@ -8,7 +8,7 @@
 - Source: https://github.com/mambalabsdev/mcp-gtm-tech-stack-signal-scraper
 - npm: https://www.npmjs.com/package/@mambalabsdev/mcp-gtm-tech-stack-signal-scraper
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 46.0 / 100
 - Adoption: 25.0
 - Upkeep: 57.0

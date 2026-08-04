@@ -7,7 +7,7 @@
 - tashan id: plugin:seanedwards/ai-dotfiles/themes
 - Source: https://github.com/seanedwards/ai-dotfiles
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:zunosmartlabs/zsl-superpowers/zsl-superpowers
 - Source: https://github.com/ZunoSmartLabs/zsl-superpowers
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 11.0
 - Upkeep: 94.0

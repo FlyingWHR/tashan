@@ -8,7 +8,7 @@
 - Source: https://github.com/MemoriLabs/memori-mcp
 - npm: https://www.npmjs.com/package/@memorilabs/memori-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 24.0
 - Upkeep: 43.0

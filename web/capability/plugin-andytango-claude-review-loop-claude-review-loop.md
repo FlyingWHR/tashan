@@ -7,7 +7,7 @@
 - tashan id: plugin:andytango/claude-review-loop/claude-review-loop
 - Source: https://github.com/andytango/claude-review-loop
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

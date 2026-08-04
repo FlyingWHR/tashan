@@ -8,7 +8,7 @@
 - Source: https://github.com/BirajMainali/fixture_mcp
 - npm: https://www.npmjs.com/package/fixture-mcp
 - Type: npm
-- Category: other
+- Category: database
 - tashan score: 49.0 / 100
 - Adoption: 23.0
 - Upkeep: 61.0

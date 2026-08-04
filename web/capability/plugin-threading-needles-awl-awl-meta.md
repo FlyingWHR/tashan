@@ -7,7 +7,7 @@
 - tashan id: plugin:threading-needles/awl/awl-meta
 - Source: https://github.com/Threading-Needles/awl
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/GPTHuman-ai/mcp-server
 - npm: https://www.npmjs.com/package/@gpthuman/mcp-server
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 50.0 / 100
 - Adoption: 24.0
 - Upkeep: 70.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:nickmerrett/personality/personality
 - Source: https://github.com/nickmerrett/personality
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

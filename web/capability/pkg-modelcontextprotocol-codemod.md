@@ -8,7 +8,7 @@
 - Source: https://github.com/modelcontextprotocol/typescript-sdk
 - npm: https://www.npmjs.com/package/@modelcontextprotocol/codemod
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 71.0 / 100
 - Adoption: 41.0
 - Upkeep: 91.0

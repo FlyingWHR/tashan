@@ -7,7 +7,7 @@
 - tashan id: plugin:tiga-labs/tiga-gtm/tiga-gtm
 - Source: https://github.com/tiga-labs/tiga-gtm
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 43.0 / 100
 - Adoption: 11.0
 - Upkeep: 80.0

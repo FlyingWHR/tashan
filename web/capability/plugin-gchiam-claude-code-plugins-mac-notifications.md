@@ -7,7 +7,7 @@
 - tashan id: plugin:gchiam/claude-code-plugins/mac-notifications
 - Source: https://github.com/gchiam/claude-code-plugins
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 98.0

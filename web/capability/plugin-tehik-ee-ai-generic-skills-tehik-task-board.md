@@ -7,7 +7,7 @@
 - tashan id: plugin:tehik-ee/ai-generic-skills/tehik-task-board
 - Source: https://github.com/TEHIK-EE/ai-generic-skills
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

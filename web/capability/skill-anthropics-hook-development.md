@@ -7,7 +7,7 @@
 - tashan id: skill:anthropics/hook-development
 - Source: https://github.com/anthropics/claude-plugins-official
 - Type: skill
-- Category: devtools
+- Category: security
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: 99.0

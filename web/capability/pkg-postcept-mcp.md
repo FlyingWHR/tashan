@@ -8,7 +8,7 @@
 - Source: https://github.com/Postcept/mcp
 - npm: https://www.npmjs.com/package/@postcept/mcp
 - Type: npm
-- Category: security
+- Category: ai
 - tashan score: 50.0 / 100
 - Adoption: 26.0
 - Upkeep: 61.0

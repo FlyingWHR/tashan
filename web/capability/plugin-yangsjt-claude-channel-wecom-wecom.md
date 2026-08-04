@@ -7,7 +7,7 @@
 - tashan id: plugin:yangsjt/claude-channel-wecom/wecom
 - Source: https://github.com/yangsjt/claude-channel-wecom
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 47.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:grodowski/undercover-claude/undercover
 - Source: https://github.com/grodowski/undercover-claude
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 35.0 / 100
 - Adoption: 13.0
 - Upkeep: 57.0

@@ -7,7 +7,7 @@
 - tashan id: pkg:@memori.ai/mcp-sharepoint
 - npm: https://www.npmjs.com/package/@memori.ai/mcp-sharepoint
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 55.0 / 100
 - Adoption: 26.0
 - Upkeep: 85.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:ej-technologies/jprofiler-mcp/jprofiler
 - Source: https://github.com/ej-technologies/jprofiler-mcp
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 44.0 / 100
 - Adoption: 13.0
 - Upkeep: 79.0

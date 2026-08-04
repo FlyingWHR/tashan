@@ -7,7 +7,7 @@
 - tashan id: plugin:johannesdwicahyo/wokku-plugin/wokku
 - Source: https://github.com/johannesdwicahyo/wokku-plugin
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 61.0

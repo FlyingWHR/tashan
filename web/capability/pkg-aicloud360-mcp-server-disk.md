@@ -8,7 +8,7 @@
 - Source: https://github.com/Qihoo360/ecs_mcp_server
 - npm: https://www.npmjs.com/package/@aicloud360/mcp-server-disk
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 47.0 / 100
 - Adoption: 29.0
 - Upkeep: 72.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:ice-ice-bear/log-blog/logblog
 - Source: https://github.com/ice-ice-bear/log-blog
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 35.0 / 100
 - Adoption: 15.0
 - Upkeep: 54.0

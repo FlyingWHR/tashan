@@ -7,7 +7,7 @@
 - tashan id: plugin:gzleeon/claude-train-prep/claude-train-prep
 - Source: https://github.com/gzleeon/claude-train-prep
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

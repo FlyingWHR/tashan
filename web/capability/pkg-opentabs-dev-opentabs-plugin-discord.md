@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/opentabs-plugin-discord
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 58.0 / 100
 - Adoption: 31.0
 - Upkeep: 68.0

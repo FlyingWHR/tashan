@@ -7,7 +7,7 @@
 - tashan id: plugin:franmastromarino/claude-prompt-library/claude-prompt-library
 - Source: https://github.com/franmastromarino/claude-prompt-library
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 34.0 / 100
 - Adoption: 15.0
 - Upkeep: 54.0

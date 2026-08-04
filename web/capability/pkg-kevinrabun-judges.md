@@ -8,7 +8,7 @@
 - Source: https://github.com/kevinrabun/judges
 - npm: https://www.npmjs.com/package/@kevinrabun/judges
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 53.0 / 100
 - Adoption: 46.0
 - Upkeep: 61.0

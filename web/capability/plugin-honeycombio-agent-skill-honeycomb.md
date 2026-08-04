@@ -7,7 +7,7 @@
 - tashan id: plugin:honeycombio/agent-skill/honeycomb
 - Source: https://github.com/honeycombio/agent-skill
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 58.0 / 100
 - Adoption: 24.0
 - Upkeep: 97.0

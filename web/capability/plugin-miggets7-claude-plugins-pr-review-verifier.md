@@ -7,7 +7,7 @@
 - tashan id: plugin:miggets7/claude-plugins/pr-review-verifier
 - Source: https://github.com/Miggets7/claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

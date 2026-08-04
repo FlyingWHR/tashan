@@ -8,7 +8,7 @@
 - Source: https://github.com/mcpland/jenkins-mcp
 - npm: https://www.npmjs.com/package/jenkins-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 41.0 / 100
 - Adoption: 39.0
 - Upkeep: 46.0

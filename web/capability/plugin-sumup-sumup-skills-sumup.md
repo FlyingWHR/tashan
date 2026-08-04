@@ -7,7 +7,7 @@
 - tashan id: plugin:sumup/sumup-skills/sumup
 - Source: https://github.com/sumup/sumup-skills
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 56.0 / 100
 - Adoption: 20.0
 - Upkeep: 99.0

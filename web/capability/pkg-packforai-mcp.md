@@ -8,7 +8,7 @@
 - Source: https://github.com/zymsj8j9z9-ship-it/packforai-mcp
 - npm: https://www.npmjs.com/package/packforai-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 44.0 / 100
 - Adoption: 22.0
 - Upkeep: 53.0

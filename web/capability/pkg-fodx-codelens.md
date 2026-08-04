@@ -8,7 +8,7 @@
 - Source: https://github.com/ex-git/codeLens
 - npm: https://www.npmjs.com/package/@fodx/codelens
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 53.0 / 100
 - Adoption: 26.0
 - Upkeep: 67.0

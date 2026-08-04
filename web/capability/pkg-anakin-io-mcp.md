@@ -8,7 +8,7 @@
 - Source: https://github.com/Anakin-Inc/anakin-mcp
 - npm: https://www.npmjs.com/package/@anakin-io/mcp
 - Type: npm
-- Category: browser
+- Category: data
 - tashan score: 56.0 / 100
 - Adoption: 26.0
 - Upkeep: 76.0

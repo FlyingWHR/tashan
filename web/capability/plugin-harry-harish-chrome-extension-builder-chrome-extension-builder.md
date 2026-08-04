@@ -7,7 +7,7 @@
 - tashan id: plugin:harry-harish/chrome-extension-builder/chrome-extension-builder
 - Source: https://github.com/harry-harish/chrome-extension-builder
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 36.0 / 100
 - Adoption: 11.0
 - Upkeep: 59.0

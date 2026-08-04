@@ -8,7 +8,7 @@
 - Source: https://github.com/JustinBeckwith/gongio-mcp
 - npm: https://www.npmjs.com/package/gongio-mcp
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 67.0 / 100
 - Adoption: 42.0
 - Upkeep: 65.0

@@ -7,7 +7,7 @@
 - tashan id: pkg:@iwed/mcp
 - npm: https://www.npmjs.com/package/@iwed/mcp
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 40.0 / 100
 - Adoption: 15.0
 - Upkeep: 55.0

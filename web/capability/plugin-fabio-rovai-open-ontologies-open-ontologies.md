@@ -7,7 +7,7 @@
 - tashan id: plugin:fabio-rovai/open-ontologies/open-ontologies
 - Source: https://github.com/fabio-rovai/open-ontologies
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 69.0 / 100
 - Adoption: 37.0
 - Upkeep: 98.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:qodo-ai/qodo-skills/qodo
 - Source: https://github.com/qodo-ai/qodo-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 67.0 / 100
 - Adoption: 33.0
 - Upkeep: 98.0

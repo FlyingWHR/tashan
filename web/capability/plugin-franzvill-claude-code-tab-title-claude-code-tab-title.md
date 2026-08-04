@@ -7,7 +7,7 @@
 - tashan id: plugin:franzvill/claude-code-tab-title/claude-code-tab-title
 - Source: https://github.com/franzvill/claude-code-tab-title
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 45.0 / 100
 - Adoption: 15.0
 - Upkeep: 91.0

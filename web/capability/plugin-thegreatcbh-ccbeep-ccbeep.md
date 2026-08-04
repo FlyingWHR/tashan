@@ -7,7 +7,7 @@
 - tashan id: plugin:thegreatcbh/ccbeep/ccbeep
 - Source: https://github.com/TheGreatCBH/CCBeep
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 53.0

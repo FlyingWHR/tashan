@@ -8,7 +8,7 @@
 - Source: https://github.com/Godalo-ai/godalo-mcp
 - npm: https://www.npmjs.com/package/godalo
 - Type: npm
-- Category: finance
+- Category: search
 - tashan score: 36.0 / 100
 - Adoption: 19.0
 - Upkeep: 49.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Rumblingb/Agentpay
 - npm: https://www.npmjs.com/package/@agentpayxyz/mcp-server
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 37.0 / 100
 - Adoption: 25.0
 - Upkeep: 47.0

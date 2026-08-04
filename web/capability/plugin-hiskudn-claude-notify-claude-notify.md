@@ -7,7 +7,7 @@
 - tashan id: plugin:hiskudn/claude-notify/claude-notify
 - Source: https://github.com/hiskuDN/claude-notify
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 31.0 / 100
 - Adoption: 15.0
 - Upkeep: 50.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Evanciel/stellavault
 - npm: https://www.npmjs.com/package/stellavault
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 50.0 / 100
 - Adoption: 25.0
 - Upkeep: 68.0

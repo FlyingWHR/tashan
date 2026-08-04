@@ -7,7 +7,7 @@
 - tashan id: plugin:likeahuman-ai/coding-standards/coding-standards-interview
 - Source: https://github.com/likeahuman-ai/coding-standards
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 38.0 / 100
 - Adoption: 11.0
 - Upkeep: 86.0

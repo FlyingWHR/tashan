@@ -8,7 +8,7 @@
 - Source: https://github.com/ChiragBachani/context-autopilot
 - npm: https://www.npmjs.com/package/context-autopilot
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 51.0 / 100
 - Adoption: 27.0
 - Upkeep: 62.0

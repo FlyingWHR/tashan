@@ -8,7 +8,7 @@
 - Source: https://github.com/Humanleap/toolrouter-mcp
 - npm: https://www.npmjs.com/package/toolrouter-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 46.0 / 100
 - Adoption: 19.0
 - Upkeep: 64.0

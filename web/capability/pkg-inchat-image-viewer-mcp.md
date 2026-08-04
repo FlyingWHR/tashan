@@ -8,7 +8,7 @@
 - Source: https://github.com/OguntolaIbrahim/inchat-image-viewer-mcp
 - npm: https://www.npmjs.com/package/inchat-image-viewer-mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 29.0 / 100
 - Adoption: 27.0
 - Upkeep: 38.0

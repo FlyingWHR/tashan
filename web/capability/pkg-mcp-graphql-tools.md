@@ -8,7 +8,7 @@
 - Source: https://github.com/saewoohan/mcp-server-graphql
 - npm: https://www.npmjs.com/package/mcp-graphql-tools
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 14.0 / 100
 - Adoption: 32.0
 - Upkeep: 24.0

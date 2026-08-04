@@ -7,7 +7,7 @@
 - tashan id: plugin:ricccrd/software-design/software-design
 - Source: https://github.com/ricccrd/software-design
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

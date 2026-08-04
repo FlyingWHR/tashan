@@ -7,7 +7,7 @@
 - tashan id: plugin:barkain/claude-code-workflow-orchestration/madrox
 - Source: https://github.com/barkain/claude-code-workflow-orchestration
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 71.0

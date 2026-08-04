@@ -7,7 +7,7 @@
 - tashan id: plugin:high5-ventures/apple-reminders-for-claude/reminders-for-macos
 - Source: https://github.com/high5-ventures/apple-reminders-for-claude
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 35.0 / 100
 - Adoption: 13.0
 - Upkeep: 68.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/grazomarin/redlib-mcp
 - npm: https://www.npmjs.com/package/redlib-mcp
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 42.0 / 100
 - Adoption: 17.0
 - Upkeep: 56.0

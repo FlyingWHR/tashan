@@ -7,7 +7,7 @@
 - tashan id: plugin:smelter-labs/skills/smelter-skills
 - Source: https://github.com/smelter-labs/skills
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 38.0 / 100
 - Adoption: 7.0
 - Upkeep: 78.0

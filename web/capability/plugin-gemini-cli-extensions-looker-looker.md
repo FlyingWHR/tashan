@@ -7,7 +7,7 @@
 - tashan id: plugin:gemini-cli-extensions/looker/looker
 - Source: https://github.com/gemini-cli-extensions/looker
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 66.0 / 100
 - Adoption: 33.0
 - Upkeep: 98.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:icestone1990/ai-berkshire-plugin/ai-berkshire
 - Source: https://github.com/icestone1990/ai-berkshire-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 58.0

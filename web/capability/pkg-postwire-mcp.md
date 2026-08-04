@@ -8,7 +8,7 @@
 - Source: https://github.com/Perufitlife/postwire-mcp
 - npm: https://www.npmjs.com/package/postwire-mcp
 - Type: npm
-- Category: productivity
+- Category: cloud
 - tashan score: 49.0 / 100
 - Adoption: 28.0
 - Upkeep: 58.0

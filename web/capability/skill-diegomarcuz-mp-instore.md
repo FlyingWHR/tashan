@@ -7,7 +7,7 @@
 - tashan id: skill:diegomarcuz/mp-instore
 - Source: https://github.com/diegomarcuz/mercadopago-claude-marketplace
 - Type: skill
-- Category: other
+- Category: data
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

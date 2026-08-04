@@ -7,7 +7,7 @@
 - tashan id: plugin:chenquan/ai-plugins/common
 - Source: https://github.com/chenquan/ai-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

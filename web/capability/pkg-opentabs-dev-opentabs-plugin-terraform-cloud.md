@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/opentabs-plugin-terraform-cloud
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 58.0 / 100
 - Adoption: 31.0
 - Upkeep: 67.0

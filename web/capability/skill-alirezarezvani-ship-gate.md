@@ -7,7 +7,7 @@
 - tashan id: skill:alirezarezvani/ship-gate
 - Source: https://github.com/alirezarezvani/claude-skills
 - Type: skill
-- Category: devtools
+- Category: security
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: 97.0

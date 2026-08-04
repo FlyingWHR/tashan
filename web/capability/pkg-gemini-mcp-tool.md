@@ -8,7 +8,7 @@
 - Source: https://github.com/jamubc/gemini-mcp-tool
 - npm: https://www.npmjs.com/package/gemini-mcp-tool
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 59.0 / 100
 - Adoption: 42.0
 - Upkeep: 62.0

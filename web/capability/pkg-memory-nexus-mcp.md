@@ -8,7 +8,7 @@
 - Source: https://github.com/KairosMobius/memory-nexus-mcp
 - npm: https://www.npmjs.com/package/@memory-nexus/mcp
 - Type: npm
-- Category: finance
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 24.0
 - Upkeep: 43.0

@@ -7,7 +7,7 @@
 - tashan id: skill:Moksa1123/line-configure
 - Source: https://github.com/Moksa1123/claude-channel-line
 - Type: skill
-- Category: other
+- Category: comms
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

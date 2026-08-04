@@ -8,7 +8,7 @@
 - Source: https://github.com/RyanCardin15/Perigee-Tides
 - npm: https://www.npmjs.com/package/@ryancardin/noaa-tides-currents-mcp-server
 - Type: npm
-- Category: data
+- Category: design
 - tashan score: 50.0 / 100
 - Adoption: 29.0
 - Upkeep: 55.0

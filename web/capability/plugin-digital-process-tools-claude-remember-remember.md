@@ -7,7 +7,7 @@
 - tashan id: plugin:digital-process-tools/claude-remember/remember
 - Source: https://github.com/Digital-Process-Tools/claude-remember
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 70.0 / 100
 - Adoption: 39.0
 - Upkeep: 99.0

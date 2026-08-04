@@ -7,7 +7,7 @@
 - tashan id: pkg:@mastercard/developers-agent-toolkit
 - npm: https://www.npmjs.com/package/@mastercard/developers-agent-toolkit
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 46.0 / 100
 - Adoption: 34.0
 - Upkeep: 54.0

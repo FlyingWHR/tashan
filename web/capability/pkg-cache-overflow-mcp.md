@@ -8,7 +8,7 @@
 - Source: https://github.com/GetCacheOverflow/CacheOverflow
 - npm: https://www.npmjs.com/package/cache-overflow-mcp
 - Type: npm
-- Category: ai
+- Category: docs
 - tashan score: 36.0 / 100
 - Adoption: 24.0
 - Upkeep: 57.0

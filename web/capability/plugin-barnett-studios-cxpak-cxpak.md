@@ -7,7 +7,7 @@
 - tashan id: plugin:barnett-studios/cxpak/cxpak
 - Source: https://github.com/Barnett-Studios/cxpak
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 60.0 / 100
 - Adoption: 24.0
 - Upkeep: 99.0

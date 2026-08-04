@@ -7,7 +7,7 @@
 - tashan id: plugin:se-uhd/ai-slop-skill/ai-slop
 - Source: https://github.com/se-uhd/ai-slop-skill
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 50.0 / 100
 - Adoption: 19.0
 - Upkeep: not measured

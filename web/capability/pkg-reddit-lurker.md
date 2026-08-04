@@ -8,7 +8,7 @@
 - Source: https://github.com/ProgenyAlpha/reddit-lurker
 - npm: https://www.npmjs.com/package/reddit-lurker
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 33.0 / 100
 - Adoption: 21.0
 - Upkeep: 45.0

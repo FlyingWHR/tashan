@@ -8,7 +8,7 @@
 - Source: https://github.com/MK3Core/flickr-mcp
 - npm: https://www.npmjs.com/package/flickr-mcp
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 42.0 / 100
 - Adoption: 24.0
 - Upkeep: 52.0

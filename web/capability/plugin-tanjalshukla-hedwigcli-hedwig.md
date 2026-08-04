@@ -7,7 +7,7 @@
 - tashan id: plugin:tanjalshukla/hedwigcli/hedwig
 - Source: https://github.com/tanjalshukla/HedwigCLI
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 39.0 / 100
 - Adoption: 16.0
 - Upkeep: 59.0

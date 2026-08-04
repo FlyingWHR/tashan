@@ -7,7 +7,7 @@
 - tashan id: plugin:chopratejas/vitals/vitals
 - Source: https://github.com/chopratejas/vitals
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 32.0 / 100
 - Adoption: 28.0
 - Upkeep: 44.0

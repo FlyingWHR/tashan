@@ -8,7 +8,7 @@
 - Source: https://github.com/NicolasMartalog/medium-rare
 - npm: https://www.npmjs.com/package/@docweave/mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 52.0 / 100
 - Adoption: 29.0
 - Upkeep: 59.0

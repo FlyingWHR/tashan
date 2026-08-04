@@ -7,7 +7,7 @@
 - tashan id: skill:anthropics/math-olympiad
 - Source: https://github.com/anthropics/claude-plugins-official
 - Type: skill
-- Category: devtools
+- Category: ai
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: 99.0

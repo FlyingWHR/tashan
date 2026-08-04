@@ -8,7 +8,7 @@
 - Source: https://github.com/hideya/langchain-mcp-tools-ts
 - npm: https://www.npmjs.com/package/@h1deya/langchain-mcp-tools
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 46.0 / 100
 - Adoption: 35.0
 - Upkeep: 60.0

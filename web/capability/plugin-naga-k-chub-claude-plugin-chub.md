@@ -7,7 +7,7 @@
 - tashan id: plugin:naga-k/chub-claude-plugin/chub
 - Source: https://github.com/naga-k/chub-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 47.0

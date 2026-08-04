@@ -8,7 +8,7 @@
 - Source: https://github.com/shrkcrft/sharkcraft
 - npm: https://www.npmjs.com/package/@shrkcrft/mcp-server
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 53.0 / 100
 - Adoption: 28.0
 - Upkeep: 68.0

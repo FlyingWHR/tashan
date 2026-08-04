@@ -7,7 +7,7 @@
 - tashan id: plugin:powerofjinbo/phdtaketaketake/phdtaketaketake
 - Source: https://github.com/powerofjinbo/phdtaketaketake
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 59.0 / 100
 - Adoption: 27.0
 - Upkeep: 95.0

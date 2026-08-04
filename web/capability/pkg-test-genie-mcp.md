@@ -8,7 +8,7 @@
 - Source: https://github.com/MUSE-CODE-SPACE/test-genie-mcp
 - npm: https://www.npmjs.com/package/test-genie-mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 49.0 / 100
 - Adoption: 26.0
 - Upkeep: 58.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/dataforseo/mcp-server-typescript
 - npm: https://www.npmjs.com/package/dataforseo-mcp-server
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 69.0 / 100
 - Adoption: 51.0
 - Upkeep: 69.0

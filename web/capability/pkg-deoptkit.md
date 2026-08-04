@@ -8,7 +8,7 @@
 - Source: https://github.com/Saeris/deoptkit
 - npm: https://www.npmjs.com/package/deoptkit
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 37.0 / 100
 - Adoption: 13.0
 - Upkeep: 52.0

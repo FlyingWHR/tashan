@@ -7,7 +7,7 @@
 - tashan id: plugin:simplyprint/simplyprint-claude-plugin/simplyprint-3d-printing
 - Source: https://github.com/SimplyPrint/simplyprint-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 11.0
 - Upkeep: 50.0

@@ -7,7 +7,7 @@
 - tashan id: skill:Jeffallan/game-developer
 - Source: https://github.com/Jeffallan/claude-skills
 - Type: skill
-- Category: devtools
+- Category: design
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: 89.0

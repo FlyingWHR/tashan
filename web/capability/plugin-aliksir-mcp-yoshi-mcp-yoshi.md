@@ -7,7 +7,7 @@
 - tashan id: plugin:aliksir/mcp-yoshi/mcp-yoshi
 - Source: https://github.com/aliksir/mcp-yoshi
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 35.0 / 100
 - Adoption: 11.0
 - Upkeep: 58.0

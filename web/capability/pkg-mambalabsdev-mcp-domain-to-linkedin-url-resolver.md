@@ -8,7 +8,7 @@
 - Source: https://github.com/mambalabsdev/mcp-domain-to-linkedin-url-resolver
 - npm: https://www.npmjs.com/package/@mambalabsdev/mcp-domain-to-linkedin-url-resolver
 - Type: npm
-- Category: cloud
+- Category: search
 - tashan score: 47.0 / 100
 - Adoption: 26.0
 - Upkeep: 57.0

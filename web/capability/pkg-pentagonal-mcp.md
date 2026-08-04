@@ -8,7 +8,7 @@
 - Source: https://github.com/Pentagonal-ai/pentagonal
 - npm: https://www.npmjs.com/package/pentagonal-mcp
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 35.0 / 100
 - Adoption: 23.0
 - Upkeep: 47.0

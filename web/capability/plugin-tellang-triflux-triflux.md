@@ -7,7 +7,7 @@
 - tashan id: plugin:tellang/triflux/triflux
 - Source: https://github.com/tellang/triflux
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 50.0 / 100
 - Adoption: 19.0
 - Upkeep: not measured

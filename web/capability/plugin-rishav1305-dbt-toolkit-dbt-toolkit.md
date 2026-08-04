@@ -7,7 +7,7 @@
 - tashan id: plugin:rishav1305/dbt-toolkit/dbt-toolkit
 - Source: https://github.com/rishav1305/dbt-toolkit
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 64.0

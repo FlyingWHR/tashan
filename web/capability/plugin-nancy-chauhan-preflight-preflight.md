@@ -7,7 +7,7 @@
 - tashan id: plugin:nancy-chauhan/preflight/preflight
 - Source: https://github.com/Nancy-Chauhan/preflight
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 22.0
 - Upkeep: 44.0

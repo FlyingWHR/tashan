@@ -7,7 +7,7 @@
 - tashan id: plugin:letherdo/skill/letherdo
 - Source: https://github.com/letherdo/skill
 - Type: plugin
-- Category: security
+- Category: productivity
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 52.0

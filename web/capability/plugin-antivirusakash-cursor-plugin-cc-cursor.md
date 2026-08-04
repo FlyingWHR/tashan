@@ -7,7 +7,7 @@
 - tashan id: plugin:antivirusakash/cursor-plugin-cc/cursor
 - Source: https://github.com/antivirusakash/cursor-plugin-cc
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 39.0 / 100
 - Adoption: 11.0
 - Upkeep: 75.0

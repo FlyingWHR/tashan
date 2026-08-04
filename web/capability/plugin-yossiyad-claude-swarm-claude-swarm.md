@@ -7,7 +7,7 @@
 - tashan id: plugin:yossiyad/claude-swarm/claude-swarm
 - Source: https://github.com/YossiYad/claude-swarm
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 60.0

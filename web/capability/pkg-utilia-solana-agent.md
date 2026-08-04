@@ -8,7 +8,7 @@
 - Source: https://github.com/mohamedkuch/utilia-solana-agent
 - npm: https://www.npmjs.com/package/utilia-solana-agent
 - Type: npm
-- Category: finance
+- Category: security
 - tashan score: 67.0 / 100
 - Adoption: 42.0
 - Upkeep: 68.0

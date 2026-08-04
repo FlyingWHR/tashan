@@ -8,7 +8,7 @@
 - Source: https://github.com/Able-rip/agent-mosaic-skill
 - npm: https://www.npmjs.com/package/@bmbrick/agent-mosaic-skill
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 24.0
 - Upkeep: not measured

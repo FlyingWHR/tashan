@@ -8,7 +8,7 @@
 - Source: https://github.com/CorgiCorner/bisibility-mcp
 - npm: https://www.npmjs.com/package/@bisibility/mcp
 - Type: npm
-- Category: comms
+- Category: productivity
 - tashan score: 67.0 / 100
 - Adoption: 42.0
 - Upkeep: 66.0

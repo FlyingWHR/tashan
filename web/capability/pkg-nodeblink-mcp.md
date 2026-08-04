@@ -7,7 +7,7 @@
 - tashan id: pkg:nodeblink-mcp
 - npm: https://www.npmjs.com/package/nodeblink-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 38.0 / 100
 - Adoption: 13.0
 - Upkeep: 53.0

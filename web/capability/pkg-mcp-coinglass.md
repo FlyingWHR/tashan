@@ -8,7 +8,7 @@
 - Source: https://github.com/GPSxtreme/mcp-coinglass
 - npm: https://www.npmjs.com/package/mcp-coinglass
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 22.0 / 100
 - Adoption: 34.0
 - Upkeep: 33.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Indie-Author-Academy-LLC/mira
 - npm: https://www.npmjs.com/package/mira-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 48.0 / 100
 - Adoption: 19.0
 - Upkeep: 62.0

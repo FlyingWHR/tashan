@@ -8,7 +8,7 @@
 - Source: https://github.com/elchin92/avito-mcp
 - npm: https://www.npmjs.com/package/avito-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 63.0 / 100
 - Adoption: 34.0
 - Upkeep: 73.0

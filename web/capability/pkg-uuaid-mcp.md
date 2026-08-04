@@ -8,7 +8,7 @@
 - Source: https://github.com/uuaid/uuaid
 - npm: https://www.npmjs.com/package/@uuaid/mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 19.0
 - Upkeep: 53.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:keshrath/agent-comm/agent-comm
 - Source: https://github.com/keshrath/agent-comm
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 36.0 / 100
 - Adoption: 16.0
 - Upkeep: 67.0

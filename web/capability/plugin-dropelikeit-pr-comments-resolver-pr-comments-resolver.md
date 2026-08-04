@@ -7,7 +7,7 @@
 - tashan id: plugin:dropelikeit/pr-comments-resolver/pr-comments-resolver
 - Source: https://github.com/Dropelikeit/pr-comments-resolver
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 50.0 / 100
 - Adoption: 13.0
 - Upkeep: 99.0

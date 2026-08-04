@@ -8,7 +8,7 @@
 - Source: https://github.com/NotHarshhaa/mainframe-mcp-server
 - npm: https://www.npmjs.com/package/@notharshhaa/mainframe-mcp-server
 - Type: npm
-- Category: devtools
+- Category: data
 - tashan score: 46.0 / 100
 - Adoption: 28.0
 - Upkeep: 55.0

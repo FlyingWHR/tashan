@@ -7,7 +7,7 @@
 - tashan id: plugin:surajsfdc/agentic-swe/agentic-swe
 - Source: https://github.com/surajSFDC/agentic-swe
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 34.0 / 100
 - Adoption: 15.0
 - Upkeep: 53.0

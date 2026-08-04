@@ -8,7 +8,7 @@
 - Source: https://github.com/IbrahimKhaled19/BackGen
 - npm: https://www.npmjs.com/package/@ibrahimkhaled19/backgen
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 50.0 / 100
 - Adoption: 27.0
 - Upkeep: 64.0

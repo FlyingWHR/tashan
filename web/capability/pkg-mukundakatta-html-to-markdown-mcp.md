@@ -8,7 +8,7 @@
 - Source: https://github.com/MukundaKatta/mcp-stack
 - npm: https://www.npmjs.com/package/@mukundakatta/html-to-markdown-mcp
 - Type: npm
-- Category: productivity
+- Category: browser
 - tashan score: 36.0 / 100
 - Adoption: 21.0
 - Upkeep: 44.0

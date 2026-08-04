@@ -7,7 +7,7 @@
 - tashan id: plugin:pasie15/remotion-skills-marketplace/remotion-skills-marketplace
 - Source: https://github.com/pasie15/remotion-skills-marketplace
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

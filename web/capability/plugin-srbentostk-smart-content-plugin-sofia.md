@@ -7,7 +7,7 @@
 - tashan id: plugin:srbentostk/smart-content-plugin/sofia
 - Source: https://github.com/srbentostk/smart-content-plugin
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 71.0

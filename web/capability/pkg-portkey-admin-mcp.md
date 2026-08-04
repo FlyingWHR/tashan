@@ -8,7 +8,7 @@
 - Source: https://github.com/CodesWhat/portkey-admin-mcp
 - npm: https://www.npmjs.com/package/portkey-admin-mcp
 - Type: npm
-- Category: data
+- Category: productivity
 - tashan score: 61.0 / 100
 - Adoption: 36.0
 - Upkeep: 68.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Omodaka9375/wake
 - npm: https://www.npmjs.com/package/wake-mcp-server
 - Type: npm
-- Category: devtools
+- Category: docs
 - tashan score: 37.0 / 100
 - Adoption: 22.0
 - Upkeep: 51.0

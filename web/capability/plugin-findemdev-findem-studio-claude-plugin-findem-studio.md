@@ -7,7 +7,7 @@
 - tashan id: plugin:findemdev/findem-studio-claude-plugin/findem-studio
 - Source: https://github.com/findemdev/findem-studio-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

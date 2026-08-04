@@ -7,7 +7,7 @@
 - tashan id: plugin:petarstoev02/shipnote/shipnote
 - Source: https://github.com/PetarStoev02/shipnote
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

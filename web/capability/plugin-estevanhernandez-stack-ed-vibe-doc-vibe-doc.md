@@ -7,7 +7,7 @@
 - tashan id: plugin:estevanhernandez-stack-ed/vibe-doc/vibe-doc
 - Source: https://github.com/estevanhernandez-stack-ed/Vibe-Doc
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 45.0 / 100
 - Adoption: 15.0
 - Upkeep: 78.0

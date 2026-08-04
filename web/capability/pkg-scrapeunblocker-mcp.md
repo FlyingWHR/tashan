@@ -8,7 +8,7 @@
 - Source: https://github.com/ScrapeUnblocker/scrapeunblocker-mcp
 - npm: https://www.npmjs.com/package/scrapeunblocker-mcp
 - Type: npm
-- Category: productivity
+- Category: browser
 - tashan score: 56.0 / 100
 - Adoption: 33.0
 - Upkeep: 59.0

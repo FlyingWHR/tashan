@@ -7,7 +7,7 @@
 - tashan id: plugin:agent-sh/debate/debate
 - Source: https://github.com/agent-sh/debate
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 51.0 / 100
 - Adoption: 15.0
 - Upkeep: 98.0

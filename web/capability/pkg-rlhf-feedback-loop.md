@@ -8,7 +8,7 @@
 - Source: https://github.com/IgorGanapolsky/rlhf-feedback-loop
 - npm: https://www.npmjs.com/package/rlhf-feedback-loop
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 35.0 / 100
 - Adoption: 23.0
 - Upkeep: 54.0

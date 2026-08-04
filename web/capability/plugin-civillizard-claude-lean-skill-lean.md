@@ -7,7 +7,7 @@
 - tashan id: plugin:civillizard/claude-lean-skill/lean
 - Source: https://github.com/civillizard/claude-lean-skill
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 34.0 / 100
 - Adoption: 11.0
 - Upkeep: 56.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:yuji-hatakeyama/claude-code-perlnavigator/perlnavigator
 - Source: https://github.com/yuji-hatakeyama/claude-code-perlnavigator
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 26.0 / 100
 - Adoption: 19.0
 - Upkeep: 42.0

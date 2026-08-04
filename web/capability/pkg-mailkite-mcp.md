@@ -8,7 +8,7 @@
 - Source: https://github.com/mailkite/mailkite-mcp
 - npm: https://www.npmjs.com/package/@mailkite/mcp
 - Type: npm
-- Category: security
+- Category: comms
 - tashan score: 61.0 / 100
 - Adoption: 33.0
 - Upkeep: 69.0

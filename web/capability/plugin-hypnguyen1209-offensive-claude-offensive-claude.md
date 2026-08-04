@@ -7,7 +7,7 @@
 - tashan id: plugin:hypnguyen1209/offensive-claude/offensive-claude
 - Source: https://github.com/hypnguyen1209/offensive-claude
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 69.0 / 100
 - Adoption: 40.0
 - Upkeep: 95.0

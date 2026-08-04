@@ -7,7 +7,7 @@
 - tashan id: plugin:jayteealao/agent-skills/sdlc-workflow
 - Source: https://github.com/jayteealao/agent-skills
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

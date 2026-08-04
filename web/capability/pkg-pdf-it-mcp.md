@@ -8,7 +8,7 @@
 - Source: https://github.com/mrslbt/pdf-it
 - npm: https://www.npmjs.com/package/pdf-it-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 47.0 / 100
 - Adoption: 22.0
 - Upkeep: 59.0

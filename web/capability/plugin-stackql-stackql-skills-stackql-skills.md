@@ -7,7 +7,7 @@
 - tashan id: plugin:stackql/stackql-skills/stackql-skills
 - Source: https://github.com/stackql/stackql-skills
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

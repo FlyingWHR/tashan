@@ -7,7 +7,7 @@
 - tashan id: plugin:psyduckler/veracityapi/veracityapi
 - Source: https://github.com/psyduckler/veracityapi
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 38.0 / 100
 - Adoption: 7.0
 - Upkeep: 90.0

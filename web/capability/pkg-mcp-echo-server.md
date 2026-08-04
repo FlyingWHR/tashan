@@ -7,7 +7,7 @@
 - tashan id: pkg:mcp-echo-server
 - npm: https://www.npmjs.com/package/mcp-echo-server
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 21.0 / 100
 - Adoption: 50.0
 - Upkeep: 26.0

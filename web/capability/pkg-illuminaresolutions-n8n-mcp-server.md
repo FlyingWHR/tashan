@@ -8,7 +8,7 @@
 - Source: https://github.com/illuminaresolutions/n8n-mcp-server
 - npm: https://www.npmjs.com/package/@illuminaresolutions/n8n-mcp-server
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 14.0 / 100
 - Adoption: 29.0
 - Upkeep: 26.0

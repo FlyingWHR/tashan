@@ -7,7 +7,7 @@
 - tashan id: skill:ennio-datatide/autonomous-decision
 - Source: https://github.com/ennio-datatide/ultrapowers
 - Type: skill
-- Category: other
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

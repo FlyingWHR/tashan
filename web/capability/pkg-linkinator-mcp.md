@@ -8,7 +8,7 @@
 - Source: https://github.com/JustinBeckwith/linkinator-mcp
 - npm: https://www.npmjs.com/package/linkinator-mcp
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 61.0 / 100
 - Adoption: 34.0
 - Upkeep: 66.0

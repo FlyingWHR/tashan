@@ -7,7 +7,7 @@
 - tashan id: plugin:sortlist/overloop-cli/overloop
 - Source: https://github.com/sortlist/overloop-cli
 - Type: plugin
-- Category: data
+- Category: comms
 - tashan score: 36.0 / 100
 - Adoption: 18.0
 - Upkeep: 66.0

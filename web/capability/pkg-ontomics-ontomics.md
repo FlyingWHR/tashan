@@ -8,7 +8,7 @@
 - Source: https://github.com/EtienneChollet/ontomics
 - npm: https://www.npmjs.com/package/@ontomics/ontomics
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 43.0 / 100
 - Adoption: 29.0
 - Upkeep: 60.0

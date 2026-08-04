@@ -7,7 +7,7 @@
 - tashan id: plugin:keshrath/agent-discover/agent-discover
 - Source: https://github.com/keshrath/agent-discover
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 36.0 / 100
 - Adoption: 16.0
 - Upkeep: 67.0

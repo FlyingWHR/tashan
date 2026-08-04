@@ -8,7 +8,7 @@
 - Source: https://github.com/runapi-ai/nano-banana-mcp
 - npm: https://www.npmjs.com/package/@runapi.ai/nano-banana-mcp
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 60.0 / 100
 - Adoption: 33.0
 - Upkeep: 67.0

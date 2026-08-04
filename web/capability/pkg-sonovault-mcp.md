@@ -8,7 +8,7 @@
 - Source: https://github.com/rekordcloud/sonovault-mcp
 - npm: https://www.npmjs.com/package/sonovault-mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 46.0 / 100
 - Adoption: 22.0
 - Upkeep: 56.0

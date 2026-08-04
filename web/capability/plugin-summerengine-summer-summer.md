@@ -7,7 +7,7 @@
 - tashan id: plugin:summerengine/summer/summer
 - Source: https://github.com/SummerEngine/summer
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 56.0 / 100
 - Adoption: 27.0
 - Upkeep: 80.0

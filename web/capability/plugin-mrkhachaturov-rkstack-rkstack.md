@@ -7,7 +7,7 @@
 - tashan id: plugin:mrkhachaturov/rkstack/rkstack
 - Source: https://github.com/mrkhachaturov/rkstack
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:darmikon/skills/skills
 - Source: https://github.com/Darmikon/skills
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

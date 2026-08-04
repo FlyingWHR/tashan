@@ -7,7 +7,7 @@
 - tashan id: plugin:gitkb/gitkb-claude-plugin/gitkb
 - Source: https://github.com/gitkb/gitkb-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: 89.0

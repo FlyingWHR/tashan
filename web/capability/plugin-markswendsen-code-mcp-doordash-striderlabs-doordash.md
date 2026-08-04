@@ -7,7 +7,7 @@
 - tashan id: plugin:markswendsen-code/mcp-doordash/striderlabs-doordash
 - Source: https://github.com/markswendsen-code/mcp-doordash
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 42.0 / 100
 - Adoption: 18.0
 - Upkeep: 85.0

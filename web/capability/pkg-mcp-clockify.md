@@ -8,7 +8,7 @@
 - Source: https://github.com/aslamanver/mcp_clockify
 - npm: https://www.npmjs.com/package/mcp_clockify
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 39.0 / 100
 - Adoption: 32.0
 - Upkeep: 56.0

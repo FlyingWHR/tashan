@@ -7,7 +7,7 @@
 - tashan id: plugin:ice-ice-bear/harnesskit/harnesskit
 - Source: https://github.com/ice-ice-bear/harnesskit
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 13.0
 - Upkeep: 54.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/morinokami/astro-mcp
 - npm: https://www.npmjs.com/package/astro-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 29.0 / 100
 - Adoption: 41.0
 - Upkeep: 42.0

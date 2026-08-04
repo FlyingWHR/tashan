@@ -7,7 +7,7 @@
 - tashan id: pkg:youtube-data-mcp-server
 - npm: https://www.npmjs.com/package/youtube-data-mcp-server
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 22.0 / 100
 - Adoption: 40.0
 - Upkeep: 40.0

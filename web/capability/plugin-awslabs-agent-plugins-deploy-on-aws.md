@@ -7,7 +7,7 @@
 - tashan id: plugin:awslabs/agent-plugins/deploy-on-aws
 - Source: https://github.com/awslabs/agent-plugins
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 33.0 / 100
 - Adoption: 11.0
 - Upkeep: 79.0

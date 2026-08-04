@@ -8,7 +8,7 @@
 - Source: https://github.com/syntaxpriest/openvisio-oss
 - npm: https://www.npmjs.com/package/openvisio
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 60.0 / 100
 - Adoption: 36.0
 - Upkeep: 66.0

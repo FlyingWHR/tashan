@@ -7,7 +7,7 @@
 - tashan id: plugin:ameya85/curiosity-stack/curiosity-stack
 - Source: https://github.com/ameya85/curiosity-stack
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 22.0
 - Upkeep: 51.0

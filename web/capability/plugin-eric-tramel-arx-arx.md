@@ -7,7 +7,7 @@
 - tashan id: plugin:eric-tramel/arx/arx
 - Source: https://github.com/eric-tramel/arx
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 46.0 / 100
 - Adoption: 19.0
 - Upkeep: not measured

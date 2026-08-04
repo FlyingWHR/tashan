@@ -7,7 +7,7 @@
 - tashan id: plugin:littleblakew/msds-chain-mcp/msds-chain
 - Source: https://github.com/littleblakew/msds-chain-mcp
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

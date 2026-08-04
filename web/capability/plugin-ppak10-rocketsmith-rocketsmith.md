@@ -7,7 +7,7 @@
 - tashan id: plugin:ppak10/rocketsmith/rocketsmith
 - Source: https://github.com/ppak10/RocketSmith
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 47.0 / 100
 - Adoption: 24.0
 - Upkeep: 86.0

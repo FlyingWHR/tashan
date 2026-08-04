@@ -7,7 +7,7 @@
 - tashan id: plugin:leee880619-commits/claudecode-harness-setup-assistant/harness-architect
 - Source: https://github.com/leee880619-commits/ClaudeCode-Harness-Setup-Assistant
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 39.0 / 100
 - Adoption: 13.0
 - Upkeep: 61.0

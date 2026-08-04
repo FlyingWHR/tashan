@@ -7,7 +7,7 @@
 - tashan id: plugin:furkankoykiran/.claude/fk-eng-agents
 - Source: https://github.com/furkankoykiran/.claude
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 45.0 / 100
 - Adoption: 7.0
 - Upkeep: 99.0

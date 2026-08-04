@@ -7,7 +7,7 @@
 - tashan id: plugin:kosiakmd/artillery-mcp-plugin/artillery-mcp
 - Source: https://github.com/kosiakMD/artillery-mcp-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

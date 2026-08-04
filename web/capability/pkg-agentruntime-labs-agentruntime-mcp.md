@@ -7,7 +7,7 @@
 - tashan id: pkg:@agentruntime-labs/agentruntime-mcp
 - npm: https://www.npmjs.com/package/@agentruntime-labs/agentruntime-mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 51.0 / 100
 - Adoption: 26.0
 - Upkeep: 61.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:patchorbit/domscribe/domscribe
 - Source: https://github.com/patchorbit/domscribe
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 64.0 / 100
 - Adoption: 36.0
 - Upkeep: 93.0

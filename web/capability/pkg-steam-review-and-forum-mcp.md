@@ -8,7 +8,7 @@
 - Source: https://github.com/icue/SteamReviewAndForumMcp
 - npm: https://www.npmjs.com/package/steam-review-and-forum-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 43.0 / 100
 - Adoption: 18.0
 - Upkeep: 58.0

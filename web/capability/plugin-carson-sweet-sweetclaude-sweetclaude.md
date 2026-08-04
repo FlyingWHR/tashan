@@ -7,7 +7,7 @@
 - tashan id: plugin:carson-sweet/sweetclaude/sweetclaude
 - Source: https://github.com/carson-sweet/sweetclaude
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 54.0 / 100
 - Adoption: 18.0
 - Upkeep: 99.0

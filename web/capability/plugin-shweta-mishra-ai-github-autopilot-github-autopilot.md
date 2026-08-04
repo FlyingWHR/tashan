@@ -7,7 +7,7 @@
 - tashan id: plugin:shweta-mishra-ai/github-autopilot/github-autopilot
 - Source: https://github.com/Shweta-Mishra-ai/github-autopilot
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 56.0 / 100
 - Adoption: 25.0
 - Upkeep: not measured

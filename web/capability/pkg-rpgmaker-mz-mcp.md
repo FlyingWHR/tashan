@@ -8,7 +8,7 @@
 - Source: https://github.com/Redseb/rpgmaker-mz-mcp
 - npm: https://www.npmjs.com/package/rpgmaker-mz-mcp
 - Type: npm
-- Category: database
+- Category: productivity
 - tashan score: 61.0 / 100
 - Adoption: 37.0
 - Upkeep: 61.0

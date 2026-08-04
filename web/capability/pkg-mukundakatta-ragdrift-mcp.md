@@ -8,7 +8,7 @@
 - Source: https://github.com/MukundaKatta/mcp-stack
 - npm: https://www.npmjs.com/package/@mukundakatta/ragdrift-mcp
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 37.0 / 100
 - Adoption: 22.0
 - Upkeep: 47.0

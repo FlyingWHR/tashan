@@ -7,7 +7,7 @@
 - tashan id: plugin:trillium/penguin/beads
 - Source: https://github.com/trillium/penguin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 85.0

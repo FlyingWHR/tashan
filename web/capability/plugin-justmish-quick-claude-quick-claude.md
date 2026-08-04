@@ -7,7 +7,7 @@
 - tashan id: plugin:justmish/quick-claude/quick-claude
 - Source: https://github.com/JustMish/quick-claude
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

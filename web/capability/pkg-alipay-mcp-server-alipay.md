@@ -7,7 +7,7 @@
 - tashan id: pkg:@alipay/mcp-server-alipay
 - npm: https://www.npmjs.com/package/@alipay/mcp-server-alipay
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 59.0 / 100
 - Adoption: 58.0
 - Upkeep: 75.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/AIWerk/mcp-server-cal
 - npm: https://www.npmjs.com/package/@aiwerk/mcp-server-cal
 - Type: npm
-- Category: browser
+- Category: productivity
 - tashan score: 48.0 / 100
 - Adoption: 26.0
 - Upkeep: 59.0

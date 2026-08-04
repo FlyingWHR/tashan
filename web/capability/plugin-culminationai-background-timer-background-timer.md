@@ -7,7 +7,7 @@
 - tashan id: plugin:culminationai/background-timer/background-timer
 - Source: https://github.com/culminationAI/background-timer
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

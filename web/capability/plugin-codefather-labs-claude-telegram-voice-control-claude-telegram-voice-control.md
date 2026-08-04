@@ -7,7 +7,7 @@
 - tashan id: plugin:codefather-labs/claude-telegram-voice-control/claude-telegram-voice-control
 - Source: https://github.com/codefather-labs/claude-telegram-voice-control
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

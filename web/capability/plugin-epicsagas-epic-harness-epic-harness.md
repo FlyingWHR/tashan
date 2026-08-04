@@ -7,7 +7,7 @@
 - tashan id: plugin:epicsagas/epic-harness/epic-harness
 - Source: https://github.com/epicsagas/epic-harness
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 57.0 / 100
 - Adoption: 22.0
 - Upkeep: 98.0

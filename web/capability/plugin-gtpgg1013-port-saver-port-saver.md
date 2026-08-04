@@ -7,7 +7,7 @@
 - tashan id: plugin:gtpgg1013/port-saver/port-saver
 - Source: https://github.com/gtpgg1013/port-saver
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

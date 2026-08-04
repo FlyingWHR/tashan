@@ -7,7 +7,7 @@
 - tashan id: plugin:encorekit/claude/integrate-encore
 - Source: https://github.com/EncoreKit/claude
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

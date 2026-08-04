@@ -7,7 +7,7 @@
 - tashan id: plugin:daanielcruz/gsearch-mcp/gsearch
 - Source: https://github.com/daanielcruz/gsearch-mcp
 - Type: plugin
-- Category: finance
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 16.0
 - Upkeep: 51.0

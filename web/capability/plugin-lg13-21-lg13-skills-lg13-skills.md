@@ -7,7 +7,7 @@
 - tashan id: plugin:lg13-21/lg13-skills/lg13-skills
 - Source: https://github.com/LG13-21/lg13-skills
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 55.0

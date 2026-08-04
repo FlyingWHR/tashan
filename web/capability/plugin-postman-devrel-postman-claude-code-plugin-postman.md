@@ -7,7 +7,7 @@
 - tashan id: plugin:postman-devrel/postman-claude-code-plugin/postman
 - Source: https://github.com/Postman-Devrel/postman-claude-code-plugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 65.0 / 100
 - Adoption: 31.0
 - Upkeep: 98.0

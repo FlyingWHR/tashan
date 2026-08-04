@@ -7,7 +7,7 @@
 - tashan id: plugin:lyzr-cognis/claude-cognis/claude-cognis
 - Source: https://github.com/Lyzr-Cognis/claude-cognis
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 34.0 / 100
 - Adoption: 24.0
 - Upkeep: 48.0

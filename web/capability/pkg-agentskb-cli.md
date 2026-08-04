@@ -8,7 +8,7 @@
 - Source: https://github.com/Cranot/agentskb-mcp
 - npm: https://www.npmjs.com/package/@agentskb/cli
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 26.0 / 100
 - Adoption: 23.0
 - Upkeep: 43.0

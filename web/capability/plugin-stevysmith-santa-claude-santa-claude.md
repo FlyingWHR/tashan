@@ -7,7 +7,7 @@
 - tashan id: plugin:stevysmith/santa-claude/santa-claude
 - Source: https://github.com/stevysmith/santa-claude
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 18.0 / 100
 - Adoption: 7.0
 - Upkeep: 38.0

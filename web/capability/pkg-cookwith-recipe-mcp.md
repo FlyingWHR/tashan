@@ -8,7 +8,7 @@
 - Source: https://github.com/blaideinc/recipe-mcp
 - npm: https://www.npmjs.com/package/@cookwith/recipe-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 21.0 / 100
 - Adoption: 22.0
 - Upkeep: 37.0

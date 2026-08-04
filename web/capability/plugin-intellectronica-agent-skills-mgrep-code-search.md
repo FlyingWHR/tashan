@@ -7,7 +7,7 @@
 - tashan id: plugin:intellectronica/agent-skills/mgrep-code-search
 - Source: https://github.com/intellectronica/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:histai/skillsets/cohort-builder
 - Source: https://github.com/histai/skillsets
 - Type: plugin
-- Category: other
+- Category: search
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

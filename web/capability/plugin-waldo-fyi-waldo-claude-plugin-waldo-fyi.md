@@ -7,7 +7,7 @@
 - tashan id: plugin:waldo-fyi/waldo-claude-plugin/waldo-fyi
 - Source: https://github.com/waldo-fyi/waldo-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 80.0

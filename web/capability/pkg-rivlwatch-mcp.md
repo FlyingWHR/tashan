@@ -7,7 +7,7 @@
 - tashan id: pkg:rivlwatch-mcp
 - npm: https://www.npmjs.com/package/rivlwatch-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 55.0 / 100
 - Adoption: 31.0
 - Upkeep: 59.0

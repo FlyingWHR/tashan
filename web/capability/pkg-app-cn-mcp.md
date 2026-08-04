@@ -8,7 +8,7 @@
 - Source: https://github.com/Salah-XD/appCN
 - npm: https://www.npmjs.com/package/@app-cn/mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 41.0 / 100
 - Adoption: 24.0
 - Upkeep: 51.0

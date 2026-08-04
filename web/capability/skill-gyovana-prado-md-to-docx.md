@@ -7,7 +7,7 @@
 - tashan id: skill:gyovana-prado/md-to-docx
 - Source: https://github.com/gyovana-prado/claude-skills
 - Type: skill
-- Category: other
+- Category: productivity
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

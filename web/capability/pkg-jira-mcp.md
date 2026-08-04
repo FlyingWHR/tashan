@@ -5,7 +5,7 @@
 - tashan id: pkg:jira-mcp
 - npm: https://www.npmjs.com/package/jira-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 17.0 / 100
 - Adoption: 40.0
 - Upkeep: 27.0

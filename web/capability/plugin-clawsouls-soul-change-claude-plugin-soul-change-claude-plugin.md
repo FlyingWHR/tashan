@@ -7,7 +7,7 @@
 - tashan id: plugin:clawsouls/soul-change-claude-plugin/soul-change-claude-plugin
 - Source: https://github.com/clawsouls/soul-change-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 11.0
 - Upkeep: 44.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:jshph/enzyme/enzyme
 - Source: https://github.com/jshph/enzyme
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 55.0 / 100
 - Adoption: 29.0
 - Upkeep: 78.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/ExpertVagabond/ibmcloud-mcp-server
 - npm: https://www.npmjs.com/package/ibmcloud-mcp-server
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 29.0 / 100
 - Adoption: 23.0
 - Upkeep: 37.0

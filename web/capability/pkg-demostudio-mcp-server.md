@@ -8,7 +8,7 @@
 - Source: https://github.com/32bitsret/demostudio-mcp-server
 - npm: https://www.npmjs.com/package/@demostudio/mcp-server
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 37.0 / 100
 - Adoption: 27.0
 - Upkeep: 48.0

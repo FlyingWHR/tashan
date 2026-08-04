@@ -7,7 +7,7 @@
 - tashan id: skill:camilooscargbaptista/one-on-one
 - Source: https://github.com/camilooscargbaptista/cto-toolkit
 - Type: skill
-- Category: other
+- Category: productivity
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

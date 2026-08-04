@@ -8,7 +8,7 @@
 - Source: https://github.com/sumup/sumup-ai
 - npm: https://www.npmjs.com/package/@sumup/mcp
 - Type: npm
-- Category: other
+- Category: database
 - tashan score: 64.0 / 100
 - Adoption: 30.0
 - Upkeep: 92.0

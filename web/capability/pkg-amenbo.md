@@ -8,7 +8,7 @@
 - Source: https://github.com/Rererr/amenbo
 - npm: https://www.npmjs.com/package/amenbo
 - Type: npm
-- Category: devtools
+- Category: docs
 - tashan score: 63.0 / 100
 - Adoption: 37.0
 - Upkeep: 67.0

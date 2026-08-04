@@ -7,7 +7,7 @@
 - tashan id: plugin:tornado-doc/tdoc/tdoc
 - Source: https://github.com/tornado-doc/tdoc
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 43.0 / 100
 - Adoption: 7.0
 - Upkeep: 97.0

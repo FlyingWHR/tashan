@@ -7,7 +7,7 @@
 - tashan id: plugin:derekstride/sq/sq
 - Source: https://github.com/DerekStride/sq
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 52.0 / 100
 - Adoption: 22.0
 - Upkeep: not measured

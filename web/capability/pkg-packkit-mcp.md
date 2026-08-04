@@ -8,7 +8,7 @@
 - Source: https://github.com/DanMat/create-packkit
 - npm: https://www.npmjs.com/package/packkit-mcp
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 63.0 / 100
 - Adoption: 41.0
 - Upkeep: 62.0

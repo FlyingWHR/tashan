@@ -8,7 +8,7 @@
 - Source: https://github.com/BrowseAI-HQ/BrowseAI-Dev
 - npm: https://www.npmjs.com/package/browseai-dev
 - Type: npm
-- Category: devtools
+- Category: search
 - tashan score: 41.0 / 100
 - Adoption: 30.0
 - Upkeep: 54.0

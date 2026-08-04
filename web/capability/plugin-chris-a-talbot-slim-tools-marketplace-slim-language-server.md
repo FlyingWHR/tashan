@@ -7,7 +7,7 @@
 - tashan id: plugin:chris-a-talbot/slim-tools-marketplace/slim-language-server
 - Source: https://github.com/chris-a-talbot/slim-tools-marketplace
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 20.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

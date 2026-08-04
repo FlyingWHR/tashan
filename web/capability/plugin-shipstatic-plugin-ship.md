@@ -7,7 +7,7 @@
 - tashan id: plugin:shipstatic/plugin/ship
 - Source: https://github.com/shipstatic/plugin
 - Type: plugin
-- Category: security
+- Category: cloud
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 80.0

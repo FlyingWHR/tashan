@@ -7,7 +7,7 @@
 - tashan id: plugin:chikeka/csitrep-generator/csitrep-generator
 - Source: https://github.com/chiKeka/csitrep-generator
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 57.0

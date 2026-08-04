@@ -7,7 +7,7 @@
 - tashan id: plugin:urav06/dialectic/dialectic
 - Source: https://github.com/urav06/dialectic
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 18.0
 - Upkeep: 55.0

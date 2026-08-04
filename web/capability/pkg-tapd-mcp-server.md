@@ -8,7 +8,7 @@
 - Source: https://github.com/sun-jingtao/tapd-mcp-server
 - npm: https://www.npmjs.com/package/tapd-mcp-server
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 58.0 / 100
 - Adoption: 32.0
 - Upkeep: 69.0

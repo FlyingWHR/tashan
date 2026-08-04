@@ -7,7 +7,7 @@
 - tashan id: plugin:realgarit/fable-baton/fable-baton
 - Source: https://github.com/realgarit/fable-baton
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 49.0 / 100
 - Adoption: 24.0
 - Upkeep: 63.0

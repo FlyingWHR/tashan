@@ -7,7 +7,7 @@
 - tashan id: plugin:post-bridge-hq/agent-mode/post-bridge
 - Source: https://github.com/post-bridge-hq/agent-mode
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 46.0 / 100
 - Adoption: 22.0
 - Upkeep: 62.0

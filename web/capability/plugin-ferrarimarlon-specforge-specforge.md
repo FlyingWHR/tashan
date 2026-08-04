@@ -7,7 +7,7 @@
 - tashan id: plugin:ferrarimarlon/specforge/specforge
 - Source: https://github.com/ferrarimarlon/specforge
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 34.0 / 100
 - Adoption: 19.0
 - Upkeep: 51.0

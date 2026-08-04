@@ -7,7 +7,7 @@
 - tashan id: plugin:meleantonio/frontier-math-prover/frontier-math-prover
 - Source: https://github.com/meleantonio/frontier-math-prover
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

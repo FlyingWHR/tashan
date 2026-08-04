@@ -7,7 +7,7 @@
 - tashan id: plugin:composiohq/composio-plugin-cc/composio-mcp
 - Source: https://github.com/ComposioHQ/composio-plugin-cc
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 55.0 / 100
 - Adoption: 19.0
 - Upkeep: 99.0

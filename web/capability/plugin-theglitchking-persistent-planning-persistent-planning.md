@@ -7,7 +7,7 @@
 - tashan id: plugin:theglitchking/persistent-planning/persistent-planning
 - Source: https://github.com/TheGlitchKing/persistent-planning
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 38.0 / 100
 - Adoption: 11.0
 - Upkeep: 74.0

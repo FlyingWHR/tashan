@@ -8,7 +8,7 @@
 - Source: https://github.com/marcoguillermaz/tierward
 - npm: https://www.npmjs.com/package/tierward
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 48.0 / 100
 - Adoption: 22.0
 - Upkeep: 65.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:deployhq/deployhq-cli/deployhq-cli
 - Source: https://github.com/deployhq/deployhq-cli
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 98.0

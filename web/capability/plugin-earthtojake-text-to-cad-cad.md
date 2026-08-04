@@ -7,7 +7,7 @@
 - tashan id: plugin:earthtojake/text-to-cad/cad
 - Source: https://github.com/earthtojake/text-to-cad
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 73.0 / 100
 - Adoption: 59.0
 - Upkeep: not measured

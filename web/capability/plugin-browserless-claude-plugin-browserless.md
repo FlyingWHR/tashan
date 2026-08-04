@@ -7,7 +7,7 @@
 - tashan id: plugin:browserless/claude-plugin/browserless
 - Source: https://github.com/browserless/claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 40.0 / 100
 - Adoption: 11.0
 - Upkeep: 76.0

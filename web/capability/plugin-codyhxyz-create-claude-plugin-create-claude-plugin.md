@@ -7,7 +7,7 @@
 - tashan id: plugin:codyhxyz/create-claude-plugin/create-claude-plugin
 - Source: https://github.com/codyhxyz/create-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 36.0 / 100
 - Adoption: 13.0
 - Upkeep: 58.0

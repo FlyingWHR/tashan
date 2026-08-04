@@ -7,7 +7,7 @@
 - tashan id: plugin:vivek-cactus/token-wise/token-wise
 - Source: https://github.com/vivek-cactus/token-wise
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 31.0 / 100
 - Adoption: 11.0
 - Upkeep: 52.0

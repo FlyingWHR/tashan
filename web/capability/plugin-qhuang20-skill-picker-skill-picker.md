@@ -7,7 +7,7 @@
 - tashan id: plugin:qhuang20/skill-picker/skill-picker
 - Source: https://github.com/qhuang20/skill-picker
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 30.0 / 100
 - Adoption: 15.0
 - Upkeep: 48.0

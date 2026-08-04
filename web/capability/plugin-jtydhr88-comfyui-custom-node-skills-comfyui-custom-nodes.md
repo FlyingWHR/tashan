@@ -7,7 +7,7 @@
 - tashan id: plugin:jtydhr88/comfyui-custom-node-skills/comfyui-custom-nodes
 - Source: https://github.com/jtydhr88/comfyui-custom-node-skills
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 70.0 / 100
 - Adoption: 38.0
 - Upkeep: 99.0

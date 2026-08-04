@@ -8,7 +8,7 @@
 - Source: https://github.com/tide-foundation/raziel-mcp
 - npm: https://www.npmjs.com/package/@tideorg/mcp
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 61.0 / 100
 - Adoption: 36.0
 - Upkeep: 64.0

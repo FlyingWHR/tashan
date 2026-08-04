@@ -7,7 +7,7 @@
 - tashan id: plugin:mbwsims/claude-universe/claude-universe
 - Source: https://github.com/mbwsims/claude-universe
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 46.0 / 100
 - Adoption: 31.0
 - Upkeep: 68.0

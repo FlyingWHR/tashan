@@ -8,7 +8,7 @@
 - Source: https://github.com/runapi-ai/suno-mcp
 - npm: https://www.npmjs.com/package/@runapi.ai/suno-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 65.0 / 100
 - Adoption: 38.0
 - Upkeep: 69.0

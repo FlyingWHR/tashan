@@ -8,7 +8,7 @@
 - Source: https://github.com/Abhishekkumar2021/mcp-suite
 - npm: https://www.npmjs.com/package/@abhishekmcp/http
 - Type: npm
-- Category: productivity
+- Category: cloud
 - tashan score: 43.0 / 100
 - Adoption: 22.0
 - Upkeep: 50.0

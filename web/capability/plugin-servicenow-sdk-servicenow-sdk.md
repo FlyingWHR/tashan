@@ -7,7 +7,7 @@
 - tashan id: plugin:servicenow/sdk/servicenow-sdk
 - Source: https://github.com/ServiceNow/sdk
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 69.0 / 100
 - Adoption: 37.0
 - Upkeep: 98.0

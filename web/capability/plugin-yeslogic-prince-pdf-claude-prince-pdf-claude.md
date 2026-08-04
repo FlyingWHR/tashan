@@ -7,7 +7,7 @@
 - tashan id: plugin:yeslogic/prince-pdf-claude/prince-pdf-claude
 - Source: https://github.com/yeslogic/prince-pdf-claude
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 23.0 / 100
 - Adoption: 7.0
 - Upkeep: 44.0

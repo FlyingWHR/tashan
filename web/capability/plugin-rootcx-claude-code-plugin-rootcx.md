@@ -7,7 +7,7 @@
 - tashan id: plugin:rootcx/claude-code-plugin/rootcx
 - Source: https://github.com/RootCX/claude-code-plugin
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

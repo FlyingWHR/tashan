@@ -7,7 +7,7 @@
 - tashan id: plugin:eventual-inc/daft/daft
 - Source: https://github.com/Eventual-Inc/Daft
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 77.0 / 100
 - Adoption: 56.0
 - Upkeep: 98.0

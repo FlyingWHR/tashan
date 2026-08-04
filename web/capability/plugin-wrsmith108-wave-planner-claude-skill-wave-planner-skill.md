@@ -7,7 +7,7 @@
 - tashan id: plugin:wrsmith108/wave-planner-claude-skill/wave-planner-skill
 - Source: https://github.com/wrsmith108/wave-planner-claude-skill
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

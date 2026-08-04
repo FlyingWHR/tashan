@@ -7,7 +7,7 @@
 - tashan id: plugin:msapps-mobile/claude-plugins/rtl-chat-fixer
 - Source: https://github.com/MSApps-Mobile/claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 39.0 / 100
 - Adoption: 7.0
 - Upkeep: 92.0

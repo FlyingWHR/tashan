@@ -8,7 +8,7 @@
 - Source: https://github.com/sqemo/sqemo-mcp
 - npm: https://www.npmjs.com/package/sqemo-mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 63.0 / 100
 - Adoption: 38.0
 - Upkeep: 65.0

@@ -7,7 +7,7 @@
 - tashan id: skill:ironyjk/kelly-criterion
 - Source: https://github.com/ironyjk/investment-framework
 - Type: skill
-- Category: other
+- Category: finance
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

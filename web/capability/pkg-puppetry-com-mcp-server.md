@@ -7,7 +7,7 @@
 - tashan id: pkg:@puppetry.com/mcp-server
 - npm: https://www.npmjs.com/package/@puppetry.com/mcp-server
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 46.0 / 100
 - Adoption: 23.0
 - Upkeep: 54.0

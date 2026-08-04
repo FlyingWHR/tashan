@@ -7,7 +7,7 @@
 - tashan id: skill:dropbox/collect-files-with-request
 - Source: https://github.com/dropbox/dropbox-ai-plugins
 - Type: skill
-- Category: other
+- Category: productivity
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

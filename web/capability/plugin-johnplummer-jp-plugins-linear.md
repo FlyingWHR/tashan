@@ -7,7 +7,7 @@
 - tashan id: plugin:johnplummer/jp-plugins/linear
 - Source: https://github.com/JohnPlummer/jp-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

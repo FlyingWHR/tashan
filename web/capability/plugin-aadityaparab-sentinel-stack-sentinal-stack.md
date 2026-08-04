@@ -7,7 +7,7 @@
 - tashan id: plugin:aadityaparab/sentinel-stack/sentinal-stack
 - Source: https://github.com/aadityaparab/sentinel-stack
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 41.0 / 100
 - Adoption: 15.0
 - Upkeep: 62.0

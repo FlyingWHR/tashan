@@ -7,7 +7,7 @@
 - tashan id: skill:anthropics/pptx
 - Source: https://github.com/anthropics/skills
 - Type: skill
-- Category: productivity
+- Category: design
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: 98.0

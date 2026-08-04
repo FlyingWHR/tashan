@@ -8,7 +8,7 @@
 - Source: https://github.com/modelcontextprotocol/typescript-sdk
 - npm: https://www.npmjs.com/package/@modelcontextprotocol/express
 - Type: npm
-- Category: other
+- Category: files
 - tashan score: 80.0 / 100
 - Adoption: 62.0
 - Upkeep: 91.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/WebhoundAI/webhound-mcp
 - npm: https://www.npmjs.com/package/webhound-mcp
 - Type: npm
-- Category: ai
+- Category: design
 - tashan score: 64.0 / 100
 - Adoption: 38.0
 - Upkeep: 69.0

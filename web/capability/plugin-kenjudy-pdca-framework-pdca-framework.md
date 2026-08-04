@@ -7,7 +7,7 @@
 - tashan id: plugin:kenjudy/pdca-framework/pdca-framework
 - Source: https://github.com/kenjudy/pdca-framework
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 62.0 / 100
 - Adoption: 28.0
 - Upkeep: 98.0

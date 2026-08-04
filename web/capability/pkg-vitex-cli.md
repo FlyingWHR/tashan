@@ -8,7 +8,7 @@
 - Source: https://github.com/ChanMeng666/easy-resume
 - npm: https://www.npmjs.com/package/vitex-cli
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 54.0 / 100
 - Adoption: 32.0
 - Upkeep: 57.0

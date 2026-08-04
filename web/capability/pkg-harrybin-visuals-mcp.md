@@ -8,7 +8,7 @@
 - Source: https://github.com/harrybin/visuals-mcp
 - npm: https://www.npmjs.com/package/@harrybin/visuals-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 37.0 / 100
 - Adoption: 23.0
 - Upkeep: 54.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Sahib-Sawhney-WH/LookingGlass
 - npm: https://www.npmjs.com/package/looking-glass-mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 25.0
 - Upkeep: not measured

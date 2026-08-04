@@ -7,7 +7,7 @@
 - tashan id: plugin:herrhelms/cognito-plugin/cognito
 - Source: https://github.com/herrhelms/cognito-plugin
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

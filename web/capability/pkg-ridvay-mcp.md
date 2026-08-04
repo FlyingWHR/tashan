@@ -8,7 +8,7 @@
 - Source: https://github.com/tom-tgr/ridvay-mcp
 - npm: https://www.npmjs.com/package/ridvay-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 58.0 / 100
 - Adoption: 31.0
 - Upkeep: 65.0

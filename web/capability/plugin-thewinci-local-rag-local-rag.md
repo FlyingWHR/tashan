@@ -7,7 +7,7 @@
 - tashan id: plugin:thewinci/local-rag/local-rag
 - Source: https://github.com/TheWinci/local-rag
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 50.0 / 100
 - Adoption: 26.0
 - Upkeep: 63.0

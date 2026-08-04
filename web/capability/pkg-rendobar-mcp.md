@@ -8,7 +8,7 @@
 - Source: https://github.com/rendobar/mcp
 - npm: https://www.npmjs.com/package/@rendobar/mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 69.0 / 100
 - Adoption: 45.0
 - Upkeep: 71.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/opentabs-plugin-stripe
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 58.0 / 100
 - Adoption: 32.0
 - Upkeep: 67.0

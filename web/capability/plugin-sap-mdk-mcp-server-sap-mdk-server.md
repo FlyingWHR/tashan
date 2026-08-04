@@ -7,7 +7,7 @@
 - tashan id: plugin:sap/mdk-mcp-server/sap-mdk-server
 - Source: https://github.com/SAP/mdk-mcp-server
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 65.0 / 100
 - Adoption: 31.0
 - Upkeep: 98.0

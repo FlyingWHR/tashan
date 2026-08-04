@@ -7,7 +7,7 @@
 - tashan id: plugin:hunter-io/claude-plugin/hunter
 - Source: https://github.com/hunter-io/claude-plugin
 - Type: plugin
-- Category: data
+- Category: finance
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

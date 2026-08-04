@@ -8,7 +8,7 @@
 - Source: https://github.com/Digital-Defiance/mcp-screenshot
 - npm: https://www.npmjs.com/package/@ai-capabilities-suite/mcp-screenshot
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 29.0 / 100
 - Adoption: 25.0
 - Upkeep: 48.0

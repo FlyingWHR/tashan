@@ -7,7 +7,7 @@
 - tashan id: plugin:dekart-xyz/geosql/geosql
 - Source: https://github.com/dekart-xyz/geosql
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 72.0 / 100
 - Adoption: 43.0
 - Upkeep: 99.0

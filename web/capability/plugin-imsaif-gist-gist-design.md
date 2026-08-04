@@ -7,7 +7,7 @@
 - tashan id: plugin:imsaif/gist/gist-design
 - Source: https://github.com/imsaif/gist
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 73.0

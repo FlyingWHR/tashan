@@ -7,7 +7,7 @@
 - tashan id: skill:anthropics/example-command
 - Source: https://github.com/anthropics/claude-plugins-official
 - Type: skill
-- Category: productivity
+- Category: other
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: 99.0

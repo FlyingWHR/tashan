@@ -7,7 +7,7 @@
 - tashan id: plugin:esot321c/opinionated-prisma/opinionated-prisma-skills
 - Source: https://github.com/esot321c/opinionated-prisma
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 32.0 / 100
 - Adoption: 13.0
 - Upkeep: 53.0

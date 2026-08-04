@@ -8,7 +8,7 @@
 - Source: https://github.com/HeshamFS/mcp-tool-factory-ts
 - npm: https://www.npmjs.com/package/@heshamfsalama/mcp-tool-factory
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 30.0 / 100
 - Adoption: 25.0
 - Upkeep: 40.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:axgord/claude-notify-sounds/notify-sounds
 - Source: https://github.com/AxGord/claude-notify-sounds
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 38.0 / 100
 - Adoption: 11.0
 - Upkeep: 62.0

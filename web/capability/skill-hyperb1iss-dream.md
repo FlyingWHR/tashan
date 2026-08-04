@@ -7,7 +7,7 @@
 - tashan id: skill:hyperb1iss/dream
 - Source: https://github.com/hyperb1iss/hyperskills
 - Type: skill
-- Category: other
+- Category: productivity
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

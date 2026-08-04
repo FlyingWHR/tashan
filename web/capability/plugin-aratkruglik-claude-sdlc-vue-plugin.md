@@ -7,7 +7,7 @@
 - tashan id: plugin:aratkruglik/claude-sdlc/vue-plugin
 - Source: https://github.com/AratKruglik/claude-sdlc
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:dzianisv/opencode-plugins/reflection-cc
 - Source: https://github.com/dzianisv/opencode-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 51.0 / 100
 - Adoption: 20.0
 - Upkeep: 93.0

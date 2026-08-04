@@ -7,7 +7,7 @@
 - tashan id: plugin:rileyhilliard/rr/rr
 - Source: https://github.com/rileyhilliard/rr
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 64.0 / 100
 - Adoption: 37.0
 - Upkeep: 81.0

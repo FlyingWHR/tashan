@@ -7,7 +7,7 @@
 - tashan id: plugin:carolinacherry/github-talent-mcp/github-talent-mcp
 - Source: https://github.com/carolinacherry/github-talent-mcp
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 39.0 / 100
 - Adoption: 16.0
 - Upkeep: 59.0

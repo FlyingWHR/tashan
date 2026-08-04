@@ -8,7 +8,7 @@
 - Source: https://github.com/RayAKaan/OcularAudio-MCP
 - npm: https://www.npmjs.com/package/ocular-audio-mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 50.0 / 100
 - Adoption: 26.0
 - Upkeep: 61.0

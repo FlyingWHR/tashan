@@ -7,7 +7,7 @@
 - tashan id: plugin:tornikegomareli/uikit-agent-skill/uikit-max
 - Source: https://github.com/tornikegomareli/UIKit-Agent-Skill
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 48.0 / 100
 - Adoption: 27.0
 - Upkeep: 60.0

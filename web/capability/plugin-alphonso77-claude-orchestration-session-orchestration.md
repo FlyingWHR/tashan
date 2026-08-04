@@ -7,7 +7,7 @@
 - tashan id: plugin:alphonso77/claude-orchestration/session-orchestration
 - Source: https://github.com/alphonso77/claude-orchestration
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

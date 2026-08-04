@@ -8,7 +8,7 @@
 - Source: https://github.com/LightSpeedPlusOne/invovate-mcp-server
 - npm: https://www.npmjs.com/package/invovate-mcp-server
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 43.0 / 100
 - Adoption: 25.0
 - Upkeep: 53.0

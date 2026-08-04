@@ -7,7 +7,7 @@
 - tashan id: plugin:thierryn/fire-flow/dominion-flow
 - Source: https://github.com/ThierryN/fire-flow
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 48.0 / 100
 - Adoption: 32.0
 - Upkeep: 57.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/agentfront/frontmcp
 - npm: https://www.npmjs.com/package/@frontmcp/protocol
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 69.0 / 100
 - Adoption: 43.0
 - Upkeep: 73.0

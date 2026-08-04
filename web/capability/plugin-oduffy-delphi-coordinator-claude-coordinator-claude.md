@@ -7,7 +7,7 @@
 - tashan id: plugin:oduffy-delphi/coordinator-claude/coordinator-claude
 - Source: https://github.com/oduffy-delphi/coordinator-claude
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 47.0 / 100
 - Adoption: 17.0
 - Upkeep: 79.0

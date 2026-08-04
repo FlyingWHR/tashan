@@ -8,7 +8,7 @@
 - Source: https://github.com/webfansplz/vite-plugin-vue-mcp
 - npm: https://www.npmjs.com/package/vite-plugin-vue-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 24.0 / 100
 - Adoption: 48.0
 - Upkeep: 38.0

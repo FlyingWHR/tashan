@@ -8,7 +8,7 @@
 - Source: https://github.com/imnoo-team/drawing-converter-mcp
 - npm: https://www.npmjs.com/package/drawing-converter-mcp
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 52.0 / 100
 - Adoption: 31.0
 - Upkeep: 52.0

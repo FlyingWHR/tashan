@@ -8,7 +8,7 @@
 - Source: https://github.com/Bishop81/imagedimensions-mcp
 - npm: https://www.npmjs.com/package/imagedimensions-mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 44.0 / 100
 - Adoption: 23.0
 - Upkeep: 52.0

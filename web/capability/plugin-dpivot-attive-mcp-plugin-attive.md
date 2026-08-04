@@ -7,7 +7,7 @@
 - tashan id: plugin:dpivot/attive-mcp-plugin/attive
 - Source: https://github.com/dpivot/attive-mcp-plugin
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

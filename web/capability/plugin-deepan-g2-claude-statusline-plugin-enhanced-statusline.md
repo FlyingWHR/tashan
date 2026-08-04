@@ -7,7 +7,7 @@
 - tashan id: plugin:deepan-g2/claude-statusline-plugin/enhanced-statusline
 - Source: https://github.com/deepan-g2/claude-statusline-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 20.0 / 100
 - Adoption: 7.0
 - Upkeep: 40.0

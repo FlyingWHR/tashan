@@ -7,7 +7,7 @@
 - tashan id: plugin:oryband/claude-code-auto-approve/auto-approve-compound-bash
 - Source: https://github.com/oryband/claude-code-auto-approve
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 31.0 / 100
 - Adoption: 24.0
 - Upkeep: 45.0

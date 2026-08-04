@@ -8,7 +8,7 @@
 - Source: https://github.com/ainote-dev/ainote-mcp
 - npm: https://www.npmjs.com/package/@ainote/mcp
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 44.0 / 100
 - Adoption: 27.0
 - Upkeep: 57.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/webberdesign/webbersites-x402-mcp
 - npm: https://www.npmjs.com/package/webbersites-x402-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 46.0 / 100
 - Adoption: 22.0
 - Upkeep: 59.0

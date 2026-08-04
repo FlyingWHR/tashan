@@ -8,7 +8,7 @@
 - Source: https://github.com/Oratorian/discord-node-mcp
 - npm: https://www.npmjs.com/package/@mahesvara/discord-mcpserver
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 32.0 / 100
 - Adoption: 26.0
 - Upkeep: 46.0

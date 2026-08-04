@@ -8,7 +8,7 @@
 - Source: https://github.com/RobithYusuf/mcp-camoufox
 - npm: https://www.npmjs.com/package/mcp-camoufox
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 49.0 / 100
 - Adoption: 24.0
 - Upkeep: 68.0

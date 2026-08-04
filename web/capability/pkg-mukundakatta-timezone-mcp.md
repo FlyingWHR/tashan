@@ -8,7 +8,7 @@
 - Source: https://github.com/MukundaKatta/mcp-stack
 - npm: https://www.npmjs.com/package/@mukundakatta/timezone-mcp
 - Type: npm
-- Category: security
+- Category: productivity
 - tashan score: 37.0 / 100
 - Adoption: 21.0
 - Upkeep: 48.0

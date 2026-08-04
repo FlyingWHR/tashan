@@ -7,7 +7,7 @@
 - tashan id: plugin:cybrixcc/cybrix-skills/cybrix-deploy
 - Source: https://github.com/cybrixcc/cybrix-skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 42.0 / 100
 - Adoption: 32.0
 - Upkeep: 51.0

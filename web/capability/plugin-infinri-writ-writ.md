@@ -7,7 +7,7 @@
 - tashan id: plugin:infinri/writ/writ
 - Source: https://github.com/infinri/Writ
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 57.0 / 100
 - Adoption: 36.0
 - Upkeep: 63.0

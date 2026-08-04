@@ -8,7 +8,7 @@
 - Source: https://github.com/Runware/mcp
 - npm: https://www.npmjs.com/package/@runware/mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 70.0 / 100
 - Adoption: 35.0
 - Upkeep: 96.0

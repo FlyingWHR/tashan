@@ -7,7 +7,7 @@
 - tashan id: plugin:orinachum/onboarding-claude-code/guide
 - Source: https://github.com/OriNachum/onboarding-claude-code
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 62.0 / 100
 - Adoption: 34.0
 - Upkeep: 93.0

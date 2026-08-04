@@ -8,7 +8,7 @@
 - Source: https://github.com/RCOLKITT/VasperaMemory
 - npm: https://www.npmjs.com/package/vasperamemory
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 58.0 / 100
 - Adoption: 32.0
 - Upkeep: 71.0

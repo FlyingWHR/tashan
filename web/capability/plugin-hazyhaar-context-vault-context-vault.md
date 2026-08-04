@@ -7,7 +7,7 @@
 - tashan id: plugin:hazyhaar/context-vault/context-vault
 - Source: https://github.com/hazyhaar/context-vault
 - Type: plugin
-- Category: productivity
+- Category: database
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

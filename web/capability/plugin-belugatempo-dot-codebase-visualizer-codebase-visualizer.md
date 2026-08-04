@@ -7,7 +7,7 @@
 - tashan id: plugin:belugatempo-dot/codebase-visualizer/codebase-visualizer
 - Source: https://github.com/belugatempo-dot/codebase-visualizer
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 26.0 / 100
 - Adoption: 13.0
 - Upkeep: 44.0

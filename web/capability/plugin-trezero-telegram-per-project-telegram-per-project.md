@@ -7,7 +7,7 @@
 - tashan id: plugin:trezero/telegram-per-project/telegram-per-project
 - Source: https://github.com/trezero/telegram-per-project
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 58.0

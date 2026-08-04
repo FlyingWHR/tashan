@@ -7,7 +7,7 @@
 - tashan id: plugin:dacrypt/xiao/xiao
 - Source: https://github.com/dacrypt/xiao
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 13.0
 - Upkeep: 72.0

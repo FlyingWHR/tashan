@@ -8,7 +8,7 @@
 - Source: https://github.com/Ansvar-Systems/Costa-Rican-law-mcp
 - npm: https://www.npmjs.com/package/@ansvar/costa-rican-law-mcp
 - Type: npm
-- Category: docs
+- Category: other
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 25.0
 - Upkeep: not measured

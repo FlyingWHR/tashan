@@ -8,7 +8,7 @@
 - Source: https://github.com/AIAppsAPI/adaptive-recall
 - npm: https://www.npmjs.com/package/adaptive-recall
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 37.0 / 100
 - Adoption: 21.0
 - Upkeep: 47.0

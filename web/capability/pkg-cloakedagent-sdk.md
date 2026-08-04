@@ -8,7 +8,7 @@
 - Source: https://github.com/CloakedAgent/cloaked
 - npm: https://www.npmjs.com/package/@cloakedagent/sdk
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 31.0 / 100
 - Adoption: 21.0
 - Upkeep: 46.0

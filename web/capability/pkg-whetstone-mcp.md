@@ -8,7 +8,7 @@
 - Source: https://github.com/whetstone-tools/whetstone-mcp
 - npm: https://www.npmjs.com/package/whetstone-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 46.0 / 100
 - Adoption: 22.0
 - Upkeep: 57.0

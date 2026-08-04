@@ -8,7 +8,7 @@
 - Source: https://github.com/Atomic-Mail/atomic-mail-agentic
 - npm: https://www.npmjs.com/package/@atomicmail/agent-skill-modelcontextprotocol
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 70.0 / 100
 - Adoption: 35.0
 - Upkeep: 96.0

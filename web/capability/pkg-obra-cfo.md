@@ -8,7 +8,7 @@
 - Source: https://github.com/lilycip/obra-cfo
 - npm: https://www.npmjs.com/package/obra-cfo
 - Type: npm
-- Category: finance
+- Category: data
 - tashan score: 48.0 / 100
 - Adoption: 29.0
 - Upkeep: 52.0

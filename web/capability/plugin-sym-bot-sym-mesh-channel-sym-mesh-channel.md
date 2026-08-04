@@ -7,7 +7,7 @@
 - tashan id: plugin:sym-bot/sym-mesh-channel/sym-mesh-channel
 - Source: https://github.com/sym-bot/sym-mesh-channel
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 48.0 / 100
 - Adoption: 11.0
 - Upkeep: 99.0

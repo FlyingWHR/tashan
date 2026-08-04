@@ -7,7 +7,7 @@
 - tashan id: plugin:edp43273-glitch/181-skills/ecc
 - Source: https://github.com/edp43273-glitch/181-skills
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 93.0

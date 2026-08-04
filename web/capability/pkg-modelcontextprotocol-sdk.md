@@ -8,7 +8,7 @@
 - Source: https://github.com/modelcontextprotocol/typescript-sdk
 - npm: https://www.npmjs.com/package/@modelcontextprotocol/sdk
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 86.0 / 100
 - Adoption: 70.0
 - Upkeep: 99.0

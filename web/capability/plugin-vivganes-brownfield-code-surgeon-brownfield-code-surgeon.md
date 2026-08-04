@@ -7,7 +7,7 @@
 - tashan id: plugin:vivganes/brownfield-code-surgeon/brownfield-code-surgeon
 - Source: https://github.com/vivganes/brownfield-code-surgeon
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

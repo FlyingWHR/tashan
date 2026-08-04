@@ -7,7 +7,7 @@
 - tashan id: plugin:lemonbuzzer123/tenderb_claude_plugin/tenderb-claude
 - Source: https://github.com/LemonBuzzer123/tenderb_claude_plugin
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:taosdata/agent-skills/idmp-plugin
 - Source: https://github.com/taosdata/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 43.0 / 100
 - Adoption: 13.0
 - Upkeep: 91.0

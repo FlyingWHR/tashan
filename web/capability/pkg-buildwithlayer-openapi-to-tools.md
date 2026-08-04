@@ -8,7 +8,7 @@
 - Source: https://github.com/buildwithlayer/openapi-to-tools
 - npm: https://www.npmjs.com/package/@buildwithlayer/openapi-to-tools
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 41.0 / 100
 - Adoption: 55.0
 - Upkeep: 67.0

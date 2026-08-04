@@ -8,7 +8,7 @@
 - Source: https://github.com/Braynexservices/nigeria-mcp
 - npm: https://www.npmjs.com/package/@braynexservices/nigeria-mcp-health-facility
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 56.0 / 100
 - Adoption: 35.0
 - Upkeep: 55.0

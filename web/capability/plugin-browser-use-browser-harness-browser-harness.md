@@ -7,7 +7,7 @@
 - tashan id: plugin:browser-use/browser-harness/browser-harness
 - Source: https://github.com/browser-use/browser-harness
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 80.0 / 100
 - Adoption: 62.0
 - Upkeep: 99.0

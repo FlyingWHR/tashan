@@ -7,7 +7,7 @@
 - tashan id: plugin:intellectronica/agent-skills/gpt-image-1-5
 - Source: https://github.com/intellectronica/agent-skills
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

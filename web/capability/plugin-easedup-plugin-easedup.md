@@ -7,7 +7,7 @@
 - tashan id: plugin:easedup/plugin/easedup
 - Source: https://github.com/easedup/plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

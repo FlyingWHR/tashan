@@ -8,7 +8,7 @@
 - Source: https://github.com/MLTCorp/conversor-pdf
 - npm: https://www.npmjs.com/package/convertfilefast-mcp
 - Type: npm
-- Category: productivity
+- Category: cloud
 - tashan score: 46.0 / 100
 - Adoption: 25.0
 - Upkeep: 54.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:estevanhernandez-stack-ed/vibe-iterate/vibe-iterate
 - Source: https://github.com/estevanhernandez-stack-ed/vibe-iterate
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 11.0
 - Upkeep: 61.0

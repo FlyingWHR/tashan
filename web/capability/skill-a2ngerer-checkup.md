@@ -7,7 +7,7 @@
 - tashan id: skill:a2ngerer/checkup
 - Source: https://github.com/a2ngerer/claude_onboarding_agent
 - Type: skill
-- Category: other
+- Category: security
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

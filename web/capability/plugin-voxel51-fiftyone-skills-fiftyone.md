@@ -7,7 +7,7 @@
 - tashan id: plugin:voxel51/fiftyone-skills/fiftyone
 - Source: https://github.com/voxel51/fiftyone-skills
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 66.0 / 100
 - Adoption: 32.0
 - Upkeep: 98.0

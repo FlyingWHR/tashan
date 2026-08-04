@@ -7,7 +7,7 @@
 - tashan id: plugin:swih/mistral-mcp/mistral-mcp
 - Source: https://github.com/Swih/mistral-mcp
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 49.0 / 100
 - Adoption: 22.0
 - Upkeep: 77.0

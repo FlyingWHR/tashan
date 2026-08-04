@@ -7,7 +7,7 @@
 - tashan id: plugin:wildblue-ai/llm-secure-patterns/llm-secure-patterns
 - Source: https://github.com/wildblue-ai/llm-secure-patterns
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 32.0 / 100
 - Adoption: 11.0
 - Upkeep: 53.0

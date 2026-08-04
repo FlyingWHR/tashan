@@ -7,7 +7,7 @@
 - tashan id: plugin:jiackylee/marketing-advisor-plugin/marketing-advisor
 - Source: https://github.com/jiackylee/marketing-advisor-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

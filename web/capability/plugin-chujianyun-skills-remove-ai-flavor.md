@@ -7,7 +7,7 @@
 - tashan id: plugin:chujianyun/skills/remove-ai-flavor
 - Source: https://github.com/chujianyun/skills
 - Type: plugin
-- Category: data
+- Category: ai
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 81.0

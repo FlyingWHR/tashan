@@ -7,7 +7,7 @@
 - tashan id: plugin:bigkan8/verifiedx-agent-skills/verifiedx
 - Source: https://github.com/bigkan8/verifiedx-agent-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:dding-g/ddingg-claude-marketplace/pr-agents
 - Source: https://github.com/dding-g/ddingg-claude-marketplace
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

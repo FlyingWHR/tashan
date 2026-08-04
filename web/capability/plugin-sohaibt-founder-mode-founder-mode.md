@@ -7,7 +7,7 @@
 - tashan id: plugin:sohaibt/founder-mode/founder-mode
 - Source: https://github.com/sohaibt/founder-mode
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 15.0
 - Upkeep: 50.0

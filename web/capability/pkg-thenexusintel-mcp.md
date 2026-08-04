@@ -8,7 +8,7 @@
 - Source: https://github.com/TheNexusIntel/nexus-mcp
 - npm: https://www.npmjs.com/package/@thenexusintel/mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 45.0 / 100
 - Adoption: 24.0
 - Upkeep: 56.0

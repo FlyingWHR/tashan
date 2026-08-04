@@ -7,7 +7,7 @@
 - tashan id: plugin:sap/open-ux-tools/sap-fiori-mcp-server
 - Source: https://github.com/SAP/open-ux-tools
 - Type: plugin
-- Category: ai
+- Category: design
 - tashan score: 70.0 / 100
 - Adoption: 39.0
 - Upkeep: 99.0

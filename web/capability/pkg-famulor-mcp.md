@@ -8,7 +8,7 @@
 - Source: https://github.com/bekservice/Famulor-MCP
 - npm: https://www.npmjs.com/package/famulor-mcp
 - Type: npm
-- Category: data
+- Category: comms
 - tashan score: 42.0 / 100
 - Adoption: 22.0
 - Upkeep: 52.0

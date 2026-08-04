@@ -7,7 +7,7 @@
 - tashan id: plugin:olapietka/easy-tiger/easy-tiger
 - Source: https://github.com/OlaPietka/easy-tiger
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 49.0

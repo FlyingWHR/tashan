@@ -7,7 +7,7 @@
 - tashan id: plugin:builtform/launchpad/launchpad
 - Source: https://github.com/builtform/launchpad
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 48.0 / 100
 - Adoption: 11.0
 - Upkeep: 99.0

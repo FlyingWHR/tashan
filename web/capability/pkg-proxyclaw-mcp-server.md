@@ -8,7 +8,7 @@
 - Source: https://github.com/Iploop/proxyclaw-mcp
 - npm: https://www.npmjs.com/package/proxyclaw-mcp-server
 - Type: npm
-- Category: devtools
+- Category: data
 - tashan score: 38.0 / 100
 - Adoption: 24.0
 - Upkeep: 51.0

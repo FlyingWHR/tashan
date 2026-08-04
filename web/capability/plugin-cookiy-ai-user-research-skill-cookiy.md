@@ -7,7 +7,7 @@
 - tashan id: plugin:cookiy-ai/user-research-skill/cookiy
 - Source: https://github.com/cookiy-ai/user-research-skill
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 73.0 / 100
 - Adoption: 48.0
 - Upkeep: 97.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:opentrace/opentrace/opentrace-oss
 - Source: https://github.com/opentrace/opentrace
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 66.0 / 100
 - Adoption: 33.0
 - Upkeep: 98.0

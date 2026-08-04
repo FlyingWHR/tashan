@@ -7,7 +7,7 @@
 - tashan id: plugin:animeshpatni94/parrot/parrot
 - Source: https://github.com/animeshpatni94/parrot
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

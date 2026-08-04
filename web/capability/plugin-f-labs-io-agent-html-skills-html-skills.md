@@ -7,7 +7,7 @@
 - tashan id: plugin:f-labs-io/agent-html-skills/html-skills
 - Source: https://github.com/f-labs-io/agent-html-skills
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 50.0 / 100
 - Adoption: 28.0
 - Upkeep: 61.0

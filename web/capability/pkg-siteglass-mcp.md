@@ -8,7 +8,7 @@
 - Source: https://github.com/siteglassio/siteglass-mcp
 - npm: https://www.npmjs.com/package/siteglass-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 45.0 / 100
 - Adoption: 21.0
 - Upkeep: 57.0

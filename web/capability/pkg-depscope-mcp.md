@@ -8,7 +8,7 @@
 - Source: https://github.com/cuttalo/depscope-mcp
 - npm: https://www.npmjs.com/package/depscope-mcp
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 43.0 / 100
 - Adoption: 27.0
 - Upkeep: 58.0

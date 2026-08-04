@@ -8,7 +8,7 @@
 - Source: https://github.com/Ansvar-Systems/Russian-Law-MCP
 - npm: https://www.npmjs.com/package/@ansvar/russian-law-mcp
 - Type: npm
-- Category: docs
+- Category: other
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 28.0
 - Upkeep: not measured

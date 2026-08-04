@@ -8,7 +8,7 @@
 - Source: https://github.com/DHEBP/dero-mcp-server
 - npm: https://www.npmjs.com/package/dero-mcp-server
 - Type: npm
-- Category: search
+- Category: comms
 - tashan score: 49.0 / 100
 - Adoption: 28.0
 - Upkeep: 62.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:a-pavithraa/aws-serverless-skill/aws-infrastructure-skills
 - Source: https://github.com/a-pavithraa/aws-serverless-skill
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 28.0 / 100
 - Adoption: 19.0
 - Upkeep: 44.0

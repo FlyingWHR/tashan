@@ -8,7 +8,7 @@
 - Source: https://github.com/okx-wallet-H/hvip-mcp
 - npm: https://www.npmjs.com/package/hvip-mcp-server
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 53.0 / 100
 - Adoption: 28.0
 - Upkeep: 69.0

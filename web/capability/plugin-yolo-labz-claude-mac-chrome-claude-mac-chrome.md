@@ -7,7 +7,7 @@
 - tashan id: plugin:yolo-labz/claude-mac-chrome/claude-mac-chrome
 - Source: https://github.com/yolo-labz/claude-mac-chrome
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 43.0 / 100
 - Adoption: 11.0
 - Upkeep: 81.0

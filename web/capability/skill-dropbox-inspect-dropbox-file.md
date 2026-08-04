@@ -7,7 +7,7 @@
 - tashan id: skill:dropbox/inspect-dropbox-file
 - Source: https://github.com/dropbox/dropbox-ai-plugins
 - Type: skill
-- Category: other
+- Category: files
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

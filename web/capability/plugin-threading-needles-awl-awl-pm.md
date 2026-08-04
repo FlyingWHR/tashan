@@ -7,7 +7,7 @@
 - tashan id: plugin:threading-needles/awl/awl-pm
 - Source: https://github.com/Threading-Needles/awl
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

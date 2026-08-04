@@ -8,7 +8,7 @@
 - Source: https://github.com/verygoodplugins/mcp-local-wp
 - npm: https://www.npmjs.com/package/@verygoodplugins/mcp-local-wp
 - Type: npm
-- Category: other
+- Category: database
 - tashan score: 30.0 / 100
 - Adoption: 21.0
 - Upkeep: 53.0

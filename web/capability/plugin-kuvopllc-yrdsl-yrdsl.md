@@ -7,7 +7,7 @@
 - tashan id: plugin:kuvopllc/yrdsl/yrdsl
 - Source: https://github.com/KuvopLLC/yrdsl
 - Type: plugin
-- Category: finance
+- Category: other
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 71.0

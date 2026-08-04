@@ -7,7 +7,7 @@
 - tashan id: plugin:paulieb14/subgraph-mcp-skills/subgraph-mcp
 - Source: https://github.com/PaulieB14/subgraph-mcp-skills
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

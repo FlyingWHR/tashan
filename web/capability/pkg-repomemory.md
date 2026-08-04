@@ -8,7 +8,7 @@
 - Source: https://github.com/DanielGuru/repomemory
 - npm: https://www.npmjs.com/package/repomemory
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 41.0 / 100
 - Adoption: 26.0
 - Upkeep: 60.0

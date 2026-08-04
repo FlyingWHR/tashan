@@ -8,7 +8,7 @@
 - Source: https://github.com/78degrees/ghosthunt
 - npm: https://www.npmjs.com/package/ghosthunt
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 44.0 / 100
 - Adoption: 25.0
 - Upkeep: 57.0

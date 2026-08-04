@@ -8,7 +8,7 @@
 - Source: https://github.com/FadingLight9291117/mcp-harmonyos
 - npm: https://www.npmjs.com/package/mcp-harmonyos
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 45.0 / 100
 - Adoption: 25.0
 - Upkeep: 56.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/pshivapr/selenium-mcp
 - npm: https://www.npmjs.com/package/selenium-webdriver-mcp
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 28.0 / 100
 - Adoption: 28.0
 - Upkeep: 50.0

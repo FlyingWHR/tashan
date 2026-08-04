@@ -7,7 +7,7 @@
 - tashan id: plugin:estevanhernandez-stack-ed/vibe-lingual/vibe-lingual
 - Source: https://github.com/estevanhernandez-stack-ed/Vibe-Lingual
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

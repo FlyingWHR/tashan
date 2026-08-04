@@ -7,7 +7,7 @@
 - tashan id: plugin:wrsmith108/plan-review-skill/plan-review
 - Source: https://github.com/wrsmith108/plan-review-skill
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

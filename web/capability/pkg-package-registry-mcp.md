@@ -8,7 +8,7 @@
 - Source: https://github.com/artmann/package-registry-mcp
 - npm: https://www.npmjs.com/package/package-registry-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 31.0 / 100
 - Adoption: 39.0
 - Upkeep: 39.0

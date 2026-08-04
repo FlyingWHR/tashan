@@ -7,7 +7,7 @@
 - tashan id: plugin:eunji-jessi-jung/reef/reef
 - Source: https://github.com/eunji-jessi-jung/reef
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 30.0 / 100
 - Adoption: 15.0
 - Upkeep: 49.0

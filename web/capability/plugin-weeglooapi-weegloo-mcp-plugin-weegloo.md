@@ -7,7 +7,7 @@
 - tashan id: plugin:weeglooapi/weegloo-mcp-plugin/weegloo
 - Source: https://github.com/weeglooapi/weegloo-mcp-plugin
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 47.0 / 100
 - Adoption: 11.0
 - Upkeep: 98.0

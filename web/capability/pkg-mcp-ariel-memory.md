@@ -8,7 +8,7 @@
 - Source: https://github.com/Cipher208/mcp-ariel-memory
 - npm: https://www.npmjs.com/package/mcp-ariel-memory
 - Type: npm
-- Category: docs
+- Category: ai
 - tashan score: 43.0 / 100
 - Adoption: 23.0
 - Upkeep: 49.0

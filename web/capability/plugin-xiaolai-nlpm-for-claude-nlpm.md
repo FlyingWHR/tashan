@@ -7,7 +7,7 @@
 - tashan id: plugin:xiaolai/nlpm-for-claude/nlpm
 - Source: https://github.com/xiaolai/nlpm-for-claude
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 67.0 / 100
 - Adoption: 33.0
 - Upkeep: 99.0

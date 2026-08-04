@@ -8,7 +8,7 @@
 - Source: https://github.com/andradelima2/pulsecloud-mcp
 - npm: https://www.npmjs.com/package/pulsecloud-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 51.0 / 100
 - Adoption: 26.0
 - Upkeep: 69.0

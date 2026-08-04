@@ -7,7 +7,7 @@
 - tashan id: plugin:tjboudreaux/cc-plugin-perforce/perforce
 - Source: https://github.com/tjboudreaux/cc-plugin-perforce
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 26.0 / 100
 - Adoption: 19.0
 - Upkeep: 42.0

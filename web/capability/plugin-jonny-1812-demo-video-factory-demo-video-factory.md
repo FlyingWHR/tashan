@@ -7,7 +7,7 @@
 - tashan id: plugin:jonny-1812/demo-video-factory/demo-video-factory
 - Source: https://github.com/jonny-1812/demo-video-factory
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 40.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

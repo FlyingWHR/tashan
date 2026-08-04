@@ -7,7 +7,7 @@
 - tashan id: plugin:codspeedhq/codspeed/codspeed
 - Source: https://github.com/CodSpeedHQ/codspeed
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 72.0 / 100
 - Adoption: 42.0
 - Upkeep: 99.0

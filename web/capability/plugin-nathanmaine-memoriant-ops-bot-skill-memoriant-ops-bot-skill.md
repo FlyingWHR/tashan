@@ -7,7 +7,7 @@
 - tashan id: plugin:nathanmaine/memoriant-ops-bot-skill/memoriant-ops-bot-skill
 - Source: https://github.com/NathanMaine/memoriant-ops-bot-skill
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

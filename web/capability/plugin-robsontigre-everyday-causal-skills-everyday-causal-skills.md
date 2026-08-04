@@ -7,7 +7,7 @@
 - tashan id: plugin:robsontigre/everyday-causal-skills/everyday-causal-skills
 - Source: https://github.com/RobsonTigre/everyday-causal-skills
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 52.0 / 100
 - Adoption: 30.0
 - Upkeep: 62.0

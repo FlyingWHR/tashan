@@ -7,7 +7,7 @@
 - tashan id: pkg:@planymind/mcp
 - npm: https://www.npmjs.com/package/@planymind/mcp
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 45.0 / 100
 - Adoption: 19.0
 - Upkeep: 57.0

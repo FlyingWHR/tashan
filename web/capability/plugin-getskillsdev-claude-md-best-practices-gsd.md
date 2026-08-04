@@ -7,7 +7,7 @@
 - tashan id: plugin:getskillsdev/claude-md-best-practices/gsd
 - Source: https://github.com/getskillsdev/claude-md-best-practices
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 22.0 / 100
 - Adoption: 11.0
 - Upkeep: 41.0

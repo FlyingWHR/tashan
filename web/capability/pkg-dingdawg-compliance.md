@@ -8,7 +8,7 @@
 - Source: https://github.com/DingDawg-dev/dingdawg-compliance
 - npm: https://www.npmjs.com/package/dingdawg-compliance
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 56.0 / 100
 - Adoption: 30.0
 - Upkeep: 68.0

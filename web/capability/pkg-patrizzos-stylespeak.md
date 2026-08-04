@@ -8,7 +8,7 @@
 - Source: https://github.com/patrizzos/stylescope
 - npm: https://www.npmjs.com/package/@patrizzos/stylespeak
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 62.0 / 100
 - Adoption: 38.0
 - Upkeep: 62.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:vigneshbarani24/sap-superpowers/sap-superpowers
 - Source: https://github.com/vigneshbarani24/sap-superpowers
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 42.0 / 100
 - Adoption: 17.0
 - Upkeep: 86.0

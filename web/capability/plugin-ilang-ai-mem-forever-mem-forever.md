@@ -7,7 +7,7 @@
 - tashan id: plugin:ilang-ai/mem-forever/mem-forever
 - Source: https://github.com/ilang-ai/Mem-Forever
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 56.0 / 100
 - Adoption: 24.0
 - Upkeep: 95.0

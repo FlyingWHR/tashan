@@ -8,7 +8,7 @@
 - Source: https://github.com/xuy/whileaway
 - npm: https://www.npmjs.com/package/whileaway-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 41.0 / 100
 - Adoption: 16.0
 - Upkeep: 55.0

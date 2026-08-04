@@ -7,7 +7,7 @@
 - tashan id: plugin:mslugga35/claude-plugin-cf-crawl/cf-crawl
 - Source: https://github.com/mslugga35/claude-plugin-cf-crawl
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

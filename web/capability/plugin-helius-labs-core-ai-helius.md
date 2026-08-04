@@ -7,7 +7,7 @@
 - tashan id: plugin:helius-labs/core-ai/helius
 - Source: https://github.com/helius-labs/core-ai
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 60.0 / 100
 - Adoption: 25.0
 - Upkeep: 99.0

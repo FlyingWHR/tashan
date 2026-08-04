@@ -8,7 +8,7 @@
 - Source: https://github.com/vojtisprime11/mcp-server-web-fetcher
 - npm: https://www.npmjs.com/package/mcp-server-web-fetcher
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 53.0 / 100
 - Adoption: 30.0
 - Upkeep: 53.0

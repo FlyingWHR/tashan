@@ -8,7 +8,7 @@
 - Source: https://github.com/FedgeNo/conventions-mcp
 - npm: https://www.npmjs.com/package/conventions-mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 66.0 / 100
 - Adoption: 44.0
 - Upkeep: 64.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/mdanassaif/iconsroom
 - npm: https://www.npmjs.com/package/@iconsroom/mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 47.0 / 100
 - Adoption: 24.0
 - Upkeep: 56.0

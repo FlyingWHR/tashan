@@ -7,7 +7,7 @@
 - tashan id: pkg:agentforge-url-check-mcp
 - npm: https://www.npmjs.com/package/agentforge-url-check-mcp
 - Type: npm
-- Category: ai
+- Category: search
 - tashan score: 39.0 / 100
 - Adoption: 20.0
 - Upkeep: 48.0

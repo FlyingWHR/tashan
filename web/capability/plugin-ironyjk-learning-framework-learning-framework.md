@@ -7,7 +7,7 @@
 - tashan id: plugin:ironyjk/learning-framework/learning-framework
 - Source: https://github.com/ironyjk/learning-framework
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

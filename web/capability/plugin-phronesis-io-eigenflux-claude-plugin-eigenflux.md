@@ -7,7 +7,7 @@
 - tashan id: plugin:phronesis-io/eigenflux-claude-plugin/eigenflux
 - Source: https://github.com/phronesis-io/eigenflux-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 80.0

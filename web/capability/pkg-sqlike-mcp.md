@@ -8,7 +8,7 @@
 - Source: https://github.com/orifisher2/sqlike
 - npm: https://www.npmjs.com/package/@sqlike/mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 46.0 / 100
 - Adoption: 22.0
 - Upkeep: 56.0

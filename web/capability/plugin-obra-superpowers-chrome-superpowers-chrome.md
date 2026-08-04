@@ -7,7 +7,7 @@
 - tashan id: plugin:obra/superpowers-chrome/superpowers-chrome
 - Source: https://github.com/obra/superpowers-chrome
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 55.0 / 100
 - Adoption: 40.0
 - Upkeep: not measured

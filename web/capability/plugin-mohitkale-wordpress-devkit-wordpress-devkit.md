@@ -7,7 +7,7 @@
 - tashan id: plugin:mohitkale/wordpress-devkit/wordpress-devkit
 - Source: https://github.com/mohitkale/wordpress-devkit
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

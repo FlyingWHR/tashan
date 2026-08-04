@@ -8,7 +8,7 @@
 - Source: https://github.com/DMontgomery40/mcp-canvas-lms
 - npm: https://www.npmjs.com/package/canvas-mcp-server
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 22.0 / 100
 - Adoption: 28.0
 - Upkeep: 43.0

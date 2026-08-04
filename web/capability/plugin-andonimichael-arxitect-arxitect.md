@@ -7,7 +7,7 @@
 - tashan id: plugin:andonimichael/arxitect/arxitect
 - Source: https://github.com/andonimichael/arxitect
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 43.0 / 100
 - Adoption: 30.0
 - Upkeep: 65.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:arnaudovproject/mutter/mutter
 - Source: https://github.com/arnaudovproject/mutter
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 39.0 / 100
 - Adoption: 15.0
 - Upkeep: 71.0

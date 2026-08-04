@@ -7,7 +7,7 @@
 - tashan id: plugin:yofine/mexus-agent-team/mexus-agent-team
 - Source: https://github.com/yofine/mexus-agent-team
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 39.0 / 100
 - Adoption: 21.0
 - Upkeep: 55.0

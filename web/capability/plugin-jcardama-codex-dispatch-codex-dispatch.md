@@ -7,7 +7,7 @@
 - tashan id: plugin:jcardama/codex-dispatch/codex-dispatch
 - Source: https://github.com/jcardama/codex-dispatch
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

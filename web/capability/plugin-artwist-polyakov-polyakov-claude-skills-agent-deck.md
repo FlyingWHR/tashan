@@ -7,7 +7,7 @@
 - tashan id: plugin:artwist-polyakov/polyakov-claude-skills/agent-deck
 - Source: https://github.com/artwist-polyakov/polyakov-claude-skills
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 77.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/AVIDS2/memorix
 - npm: https://www.npmjs.com/package/memorix
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 70.0 / 100
 - Adoption: 46.0
 - Upkeep: 73.0

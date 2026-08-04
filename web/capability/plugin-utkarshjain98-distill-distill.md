@@ -7,7 +7,7 @@
 - tashan id: plugin:utkarshjain98/distill/distill
 - Source: https://github.com/UtkarshJain98/distill
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

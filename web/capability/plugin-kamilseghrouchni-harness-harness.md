@@ -7,7 +7,7 @@
 - tashan id: plugin:kamilseghrouchni/harness/harness
 - Source: https://github.com/kamilseghrouchni/harness
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 55.0

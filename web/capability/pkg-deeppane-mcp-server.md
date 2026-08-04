@@ -8,7 +8,7 @@
 - Source: https://github.com/AntMesh/deeppane-mcp-server
 - npm: https://www.npmjs.com/package/@deeppane/mcp-server
 - Type: npm
-- Category: productivity
+- Category: finance
 - tashan score: 56.0 / 100
 - Adoption: 35.0
 - Upkeep: 55.0

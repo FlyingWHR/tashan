@@ -7,7 +7,7 @@
 - tashan id: plugin:dev-gyus/claude-code-sync/cync
 - Source: https://github.com/dev-gyus/claude-code-sync
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 66.0

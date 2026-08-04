@@ -8,7 +8,7 @@
 - Source: https://github.com/decano/icon-mcp
 - npm: https://www.npmjs.com/package/icon-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 21.0 / 100
 - Adoption: 42.0
 - Upkeep: 27.0

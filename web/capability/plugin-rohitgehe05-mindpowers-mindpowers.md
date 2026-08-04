@@ -7,7 +7,7 @@
 - tashan id: plugin:rohitgehe05/mindpowers/mindpowers
 - Source: https://github.com/rohitgehe05/mindpowers
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 44.0 / 100
 - Adoption: 19.0
 - Upkeep: 62.0

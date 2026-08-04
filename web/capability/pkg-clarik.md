@@ -8,7 +8,7 @@
 - Source: https://github.com/Mikerichardmail/clarik-mcp-server
 - npm: https://www.npmjs.com/package/clarik
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 40.0 / 100
 - Adoption: 22.0
 - Upkeep: 49.0

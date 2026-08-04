@@ -8,7 +8,7 @@
 - Source: https://github.com/digital-defiance/ai-capabilities-suite
 - npm: https://www.npmjs.com/package/@ai-capabilities-suite/mcp-process
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 23.0
 - Upkeep: 45.0

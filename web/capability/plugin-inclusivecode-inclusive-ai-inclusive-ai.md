@@ -7,7 +7,7 @@
 - tashan id: plugin:inclusivecode/inclusive-ai/inclusive-ai
 - Source: https://github.com/InclusiveCode/inclusive-ai
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

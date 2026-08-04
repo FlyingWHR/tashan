@@ -7,7 +7,7 @@
 - tashan id: plugin:gemini-cli-extensions/dataproc/dataproc
 - Source: https://github.com/gemini-cli-extensions/dataproc
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 49.0 / 100
 - Adoption: 15.0
 - Upkeep: 96.0

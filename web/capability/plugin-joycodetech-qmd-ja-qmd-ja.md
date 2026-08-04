@@ -7,7 +7,7 @@
 - tashan id: plugin:joycodetech/qmd-ja/qmd-ja
 - Source: https://github.com/joycodetech/qmd-ja
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 51.0 / 100
 - Adoption: 15.0
 - Upkeep: 98.0

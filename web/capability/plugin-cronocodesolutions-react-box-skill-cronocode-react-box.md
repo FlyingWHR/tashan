@@ -7,7 +7,7 @@
 - tashan id: plugin:cronocodesolutions/react-box-skill/cronocode-react-box
 - Source: https://github.com/cronocodesolutions/react-box-skill
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

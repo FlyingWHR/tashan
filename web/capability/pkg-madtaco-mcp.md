@@ -8,7 +8,7 @@
 - Source: https://github.com/madtaco-dev/mcp
 - npm: https://www.npmjs.com/package/@madtaco/mcp
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 52.0 / 100
 - Adoption: 28.0
 - Upkeep: 62.0

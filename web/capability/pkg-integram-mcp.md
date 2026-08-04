@@ -8,7 +8,7 @@
 - Source: https://github.com/judas-priest/integram-mcp
 - npm: https://www.npmjs.com/package/integram-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 56.0 / 100
 - Adoption: 32.0
 - Upkeep: 59.0

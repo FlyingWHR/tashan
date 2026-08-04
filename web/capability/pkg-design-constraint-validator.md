@@ -8,7 +8,7 @@
 - Source: https://github.com/CseperkePapp/design-constraint-validator
 - npm: https://www.npmjs.com/package/design-constraint-validator
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 43.0 / 100
 - Adoption: 21.0
 - Upkeep: 58.0

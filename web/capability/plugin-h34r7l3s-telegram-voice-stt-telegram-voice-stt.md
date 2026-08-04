@@ -7,7 +7,7 @@
 - tashan id: plugin:h34r7l3s/telegram-voice-stt/telegram-voice-stt
 - Source: https://github.com/H34R7L3s/telegram-voice-stt
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

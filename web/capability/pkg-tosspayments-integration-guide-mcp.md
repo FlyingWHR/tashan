@@ -7,7 +7,7 @@
 - tashan id: pkg:@tosspayments/integration-guide-mcp
 - npm: https://www.npmjs.com/package/@tosspayments/integration-guide-mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 70.0 / 100
 - Adoption: 41.0
 - Upkeep: 94.0

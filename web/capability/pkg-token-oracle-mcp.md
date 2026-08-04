@@ -8,7 +8,7 @@
 - Source: https://github.com/VictoryInTech/TokenOracle-MCP
 - npm: https://www.npmjs.com/package/token-oracle-mcp
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 22.0
 - Upkeep: 48.0

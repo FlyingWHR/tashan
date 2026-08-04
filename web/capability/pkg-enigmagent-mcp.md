@@ -8,7 +8,7 @@
 - Source: https://github.com/Agnuxo1/enigmagent-mcp
 - npm: https://www.npmjs.com/package/enigmagent-mcp
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 39.0 / 100
 - Adoption: 25.0
 - Upkeep: 51.0

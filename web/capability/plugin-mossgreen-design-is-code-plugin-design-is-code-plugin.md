@@ -7,7 +7,7 @@
 - tashan id: plugin:mossgreen/design-is-code-plugin/design-is-code-plugin
 - Source: https://github.com/mossgreen/design-is-code-plugin
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 37.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

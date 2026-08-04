@@ -7,7 +7,7 @@
 - tashan id: plugin:aliksir/neko-harness-doctor/neko-harness-doctor
 - Source: https://github.com/aliksir/neko-harness-doctor
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 11.0
 - Upkeep: 59.0

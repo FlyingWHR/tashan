@@ -8,7 +8,7 @@
 - Source: https://github.com/fixyourdocs/fixyourdocs
 - npm: https://www.npmjs.com/package/@fixyourdocs/mcp-server
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 44.0 / 100
 - Adoption: 26.0
 - Upkeep: 52.0

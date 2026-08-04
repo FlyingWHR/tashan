@@ -7,7 +7,7 @@
 - tashan id: plugin:aimfeld/claude-plugins/codebase-audit
 - Source: https://github.com/aimfeld/claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 52.0

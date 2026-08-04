@@ -7,7 +7,7 @@
 - tashan id: plugin:karellen/karellen-rr-mcp/karellen-rr-mcp
 - Source: https://github.com/karellen/karellen-rr-mcp
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 15.0
 - Upkeep: 68.0

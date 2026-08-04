@@ -8,7 +8,7 @@
 - Source: https://github.com/ai-supply-store/ai-supply-plugin
 - npm: https://www.npmjs.com/package/ai-supply-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 49.0 / 100
 - Adoption: 27.0
 - Upkeep: 57.0

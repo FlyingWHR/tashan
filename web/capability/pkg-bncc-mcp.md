@@ -8,7 +8,7 @@
 - Source: https://github.com/bncc-dev/bncc-pacotes
 - npm: https://www.npmjs.com/package/@bncc/mcp
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 53.0 / 100
 - Adoption: 30.0
 - Upkeep: 57.0

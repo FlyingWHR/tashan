@@ -8,7 +8,7 @@
 - Source: https://github.com/dann26parr69/auravms-mcp
 - npm: https://www.npmjs.com/package/auravms-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 46.0 / 100
 - Adoption: 23.0
 - Upkeep: 55.0

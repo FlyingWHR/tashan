@@ -7,7 +7,7 @@
 - tashan id: plugin:spiceai/skills/spiceai-skills
 - Source: https://github.com/spiceai/skills
 - Type: plugin
-- Category: finance
+- Category: browser
 - tashan score: 47.0 / 100
 - Adoption: 15.0
 - Upkeep: 81.0

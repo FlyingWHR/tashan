@@ -7,7 +7,7 @@
 - tashan id: plugin:managelm/claude-extension/managelm
 - Source: https://github.com/managelm/claude-extension
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 35.0 / 100
 - Adoption: 19.0
 - Upkeep: 52.0

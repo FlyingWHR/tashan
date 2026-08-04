@@ -7,7 +7,7 @@
 - tashan id: plugin:enrichlayer/claude-plugins/enrichlayer
 - Source: https://github.com/enrichlayer/claude-plugins
 - Type: plugin
-- Category: comms
+- Category: finance
 - tashan score: 29.0 / 100
 - Adoption: 11.0
 - Upkeep: 50.0

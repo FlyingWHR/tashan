@@ -7,7 +7,7 @@
 - tashan id: plugin:renyunli0116/agent-memory-galaxy/agent-memory-galaxy
 - Source: https://github.com/RenyunLi0116/agent-memory-galaxy
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 43.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

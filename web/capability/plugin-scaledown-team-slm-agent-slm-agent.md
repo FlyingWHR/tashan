@@ -7,7 +7,7 @@
 - tashan id: plugin:scaledown-team/slm_agent/slm-agent
 - Source: https://github.com/scaledown-team/SLM_Agent
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 57.0 / 100
 - Adoption: 22.0
 - Upkeep: 98.0

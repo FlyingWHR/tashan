@@ -8,7 +8,7 @@
 - Source: https://github.com/ContextVM/mcp-sdk
 - npm: https://www.npmjs.com/package/@contextvm/mcp-sdk
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 49.0 / 100
 - Adoption: 28.0
 - Upkeep: 61.0

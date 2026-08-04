@@ -7,7 +7,7 @@
 - tashan id: plugin:lujiafa/houtu-project-skills/docs-context
 - Source: https://github.com/lujiafa/houtu-project-skills
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 45.0 / 100
 - Adoption: 26.0
 - Upkeep: 70.0

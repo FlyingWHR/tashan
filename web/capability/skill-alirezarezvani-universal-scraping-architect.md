@@ -7,7 +7,7 @@
 - tashan id: skill:alirezarezvani/universal-scraping-architect
 - Source: https://github.com/alirezarezvani/claude-skills
 - Type: skill
-- Category: productivity
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: 97.0

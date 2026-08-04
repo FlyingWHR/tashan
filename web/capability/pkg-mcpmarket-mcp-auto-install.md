@@ -7,7 +7,7 @@
 - tashan id: pkg:@mcpmarket/mcp-auto-install
 - npm: https://www.npmjs.com/package/@mcpmarket/mcp-auto-install
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: 43.0
 - Upkeep: 52.0

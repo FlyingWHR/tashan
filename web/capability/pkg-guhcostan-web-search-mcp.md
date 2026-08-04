@@ -8,7 +8,7 @@
 - Source: https://github.com/guhcostan/web-search-mcp
 - npm: https://www.npmjs.com/package/@guhcostan/web-search-mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 23.0 / 100
 - Adoption: 34.0
 - Upkeep: 35.0

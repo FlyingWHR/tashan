@@ -8,7 +8,7 @@
 - Source: https://github.com/IPGeolocation/ipgeolocation-io-mcp
 - npm: https://www.npmjs.com/package/ipgeolocation-io-mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 60.0 / 100
 - Adoption: 34.0
 - Upkeep: 69.0

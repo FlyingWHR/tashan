@@ -7,7 +7,7 @@
 - tashan id: pkg:@ascendkit/cli
 - npm: https://www.npmjs.com/package/@ascendkit/cli
 - Type: npm
-- Category: data
+- Category: comms
 - tashan score: 50.0 / 100
 - Adoption: 27.0
 - Upkeep: 66.0

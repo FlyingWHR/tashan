@@ -7,7 +7,7 @@
 - tashan id: plugin:emgiezet/braindrain/braindrain
 - Source: https://github.com/emgiezet/braindrain
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 52.0

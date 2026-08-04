@@ -7,7 +7,7 @@
 - tashan id: plugin:intercom/claude-plugin-external/intercom
 - Source: https://github.com/intercom/claude-plugin-external
 - Type: plugin
-- Category: data
+- Category: comms
 - tashan score: 43.0 / 100
 - Adoption: 17.0
 - Upkeep: 86.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:oalders/talk-about-us/talk-about-us
 - Source: https://github.com/oalders/talk-about-us
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 15.0
 - Upkeep: 41.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Malnati/vaults-diagram-tools
 - npm: https://www.npmjs.com/package/vaults-diagram-tools
 - Type: npm
-- Category: docs
+- Category: design
 - tashan score: 40.0 / 100
 - Adoption: 25.0
 - Upkeep: 52.0

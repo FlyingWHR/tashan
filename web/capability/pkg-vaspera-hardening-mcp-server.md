@@ -8,7 +8,7 @@
 - Source: https://github.com/RCOLKITT/hardening-mcp
 - npm: https://www.npmjs.com/package/vaspera-hardening-mcp-server
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 41.0 / 100
 - Adoption: 29.0
 - Upkeep: 53.0

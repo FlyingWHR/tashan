@@ -7,7 +7,7 @@
 - tashan id: plugin:glincker/featuredrop/featuredrop
 - Source: https://github.com/GLINCKER/featuredrop
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 34.0 / 100
 - Adoption: 21.0
 - Upkeep: 62.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:tstockham96/engram-plugin/engram
 - Source: https://github.com/tstockham96/engram-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

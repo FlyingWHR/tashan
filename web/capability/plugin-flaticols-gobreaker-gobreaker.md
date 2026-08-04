@@ -7,7 +7,7 @@
 - tashan id: plugin:flaticols/gobreaker/gobreaker
 - Source: https://github.com/flaticols/gobreaker
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

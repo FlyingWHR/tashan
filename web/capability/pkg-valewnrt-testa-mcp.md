@@ -8,7 +8,7 @@
 - Source: https://github.com/valewnrt/testa
 - npm: https://www.npmjs.com/package/@valewnrt/testa-mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 57.0 / 100
 - Adoption: 34.0
 - Upkeep: 56.0

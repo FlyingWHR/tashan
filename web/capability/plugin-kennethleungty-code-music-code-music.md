@@ -7,7 +7,7 @@
 - tashan id: plugin:kennethleungty/code-music/code-music
 - Source: https://github.com/kennethleungty/code-music
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 40.0 / 100
 - Adoption: 24.0
 - Upkeep: 66.0

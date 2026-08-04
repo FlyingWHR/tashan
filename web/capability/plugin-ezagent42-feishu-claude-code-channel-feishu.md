@@ -7,7 +7,7 @@
 - tashan id: plugin:ezagent42/feishu-claude-code-channel/feishu
 - Source: https://github.com/ezagent42/feishu-claude-code-channel
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

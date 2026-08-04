@@ -7,7 +7,7 @@
 - tashan id: plugin:cocoindex-io/cocoindex-code/cocoindex-code
 - Source: https://github.com/cocoindex-io/cocoindex-code
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 75.0 / 100
 - Adoption: 51.0
 - Upkeep: 98.0

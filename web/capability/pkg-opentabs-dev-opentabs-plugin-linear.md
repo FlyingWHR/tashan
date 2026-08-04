@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/opentabs-plugin-linear
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 59.0 / 100
 - Adoption: 32.0
 - Upkeep: 69.0

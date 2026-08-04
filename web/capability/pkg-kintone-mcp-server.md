@@ -8,7 +8,7 @@
 - Source: https://github.com/kintone/mcp-server
 - npm: https://www.npmjs.com/package/@kintone/mcp-server
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 66.0 / 100
 - Adoption: 40.0
 - Upkeep: 72.0

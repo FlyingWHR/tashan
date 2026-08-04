@@ -8,7 +8,7 @@
 - Source: https://github.com/Guitarmaniac24/getabrain-mcp-server
 - npm: https://www.npmjs.com/package/@getabrain/mcp-server
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 53.0 / 100
 - Adoption: 28.0
 - Upkeep: 62.0

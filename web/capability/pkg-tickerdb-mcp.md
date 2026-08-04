@@ -8,7 +8,7 @@
 - Source: https://github.com/tickerdb/tickerdb-mcp
 - npm: https://www.npmjs.com/package/tickerdb-mcp
 - Type: npm
-- Category: finance
+- Category: ai
 - tashan score: 64.0 / 100
 - Adoption: 34.0
 - Upkeep: 84.0

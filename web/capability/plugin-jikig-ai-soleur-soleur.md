@@ -7,7 +7,7 @@
 - tashan id: plugin:jikig-ai/soleur/soleur
 - Source: https://github.com/jikig-ai/soleur
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 57.0 / 100
 - Adoption: 21.0
 - Upkeep: 99.0

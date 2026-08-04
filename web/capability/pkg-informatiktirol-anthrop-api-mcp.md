@@ -8,7 +8,7 @@
 - Source: https://github.com/informatikTirol/anthrop.api_mcp
 - npm: https://www.npmjs.com/package/@informatiktirol/anthrop-api-mcp
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 52.0 / 100
 - Adoption: 25.0
 - Upkeep: 67.0

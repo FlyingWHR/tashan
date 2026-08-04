@@ -7,7 +7,7 @@
 - tashan id: plugin:ashmanroonz/fractal_reality/circumpunct-ethics-virtues-plugin
 - Source: https://github.com/AshmanRoonz/Fractal_Reality
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 48.0 / 100
 - Adoption: 16.0
 - Upkeep: 81.0

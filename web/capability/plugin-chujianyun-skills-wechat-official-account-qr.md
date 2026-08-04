@@ -7,7 +7,7 @@
 - tashan id: plugin:chujianyun/skills/wechat-official-account-qr
 - Source: https://github.com/chujianyun/skills
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 81.0

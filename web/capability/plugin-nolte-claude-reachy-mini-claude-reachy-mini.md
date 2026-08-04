@@ -7,7 +7,7 @@
 - tashan id: plugin:nolte/claude-reachy-mini/claude-reachy-mini
 - Source: https://github.com/nolte/claude-reachy-mini
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

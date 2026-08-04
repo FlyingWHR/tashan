@@ -7,7 +7,7 @@
 - tashan id: plugin:annondeveloper/ui-kit/ui-kit
 - Source: https://github.com/annondeveloper/ui-kit
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 73.0

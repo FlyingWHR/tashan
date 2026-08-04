@@ -7,7 +7,7 @@
 - tashan id: plugin:aptos-labs/aptos-agent-skills/aptos-agent-skills
 - Source: https://github.com/aptos-labs/aptos-agent-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 57.0 / 100
 - Adoption: 24.0
 - Upkeep: 96.0

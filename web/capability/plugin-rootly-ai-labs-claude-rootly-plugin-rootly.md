@@ -7,7 +7,7 @@
 - tashan id: plugin:rootly-ai-labs/claude-rootly-plugin/rootly
 - Source: https://github.com/Rootly-AI-Labs/claude-rootly-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 11.0
 - Upkeep: 89.0

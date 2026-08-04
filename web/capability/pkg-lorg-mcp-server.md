@@ -8,7 +8,7 @@
 - Source: https://github.com/LorgAI/lorg-mcp-server
 - npm: https://www.npmjs.com/package/lorg-mcp-server
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 50.0 / 100
 - Adoption: 28.0
 - Upkeep: 62.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Muse-Nexus/social-publisher-api
 - npm: https://www.npmjs.com/package/socialfanout-mcp
 - Type: npm
-- Category: productivity
+- Category: cloud
 - tashan score: 41.0 / 100
 - Adoption: 21.0
 - Upkeep: 51.0

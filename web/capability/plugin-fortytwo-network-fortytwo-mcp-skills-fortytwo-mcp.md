@@ -7,7 +7,7 @@
 - tashan id: plugin:fortytwo-network/fortytwo-mcp-skills/fortytwo-mcp
 - Source: https://github.com/Fortytwo-Network/fortytwo-mcp-skills
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 31.0 / 100
 - Adoption: 17.0
 - Upkeep: 48.0

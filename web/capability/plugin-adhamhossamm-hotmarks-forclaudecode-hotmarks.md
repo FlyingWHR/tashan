@@ -7,7 +7,7 @@
 - tashan id: plugin:adhamhossamm/hotmarks-forclaudecode/hotmarks
 - Source: https://github.com/AdhamHossamm/HotMarks-forClaudeCode
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 62.0

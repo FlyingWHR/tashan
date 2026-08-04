@@ -7,7 +7,7 @@
 - tashan id: plugin:bernakilljos/orchestration/design-video
 - Source: https://github.com/bernakilljos/orchestration
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

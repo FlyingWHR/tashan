@@ -8,7 +8,7 @@
 - Source: https://github.com/Abhishekkumar2021/mcp-suite
 - npm: https://www.npmjs.com/package/@abhishekmcp/github
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 47.0 / 100
 - Adoption: 27.0
 - Upkeep: 52.0

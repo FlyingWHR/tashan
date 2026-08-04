@@ -7,7 +7,7 @@
 - tashan id: plugin:sombra-hq/sombra-skills/sombra
 - Source: https://github.com/sombra-hq/sombra-skills
 - Type: plugin
-- Category: data
+- Category: docs
 - tashan score: 41.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

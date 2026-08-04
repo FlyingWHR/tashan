@@ -7,7 +7,7 @@
 - tashan id: plugin:manthanmk66/review-ready/review-ready
 - Source: https://github.com/manthanmk66/review-ready
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 39.0 / 100
 - Adoption: 17.0
 - Upkeep: 57.0

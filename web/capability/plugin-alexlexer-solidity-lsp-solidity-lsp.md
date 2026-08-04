@@ -7,7 +7,7 @@
 - tashan id: plugin:alexlexer/solidity-lsp/solidity-lsp
 - Source: https://github.com/Alexlexer/solidity-lsp
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

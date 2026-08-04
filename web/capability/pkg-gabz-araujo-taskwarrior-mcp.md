@@ -8,7 +8,7 @@
 - Source: https://github.com/Gabz-Araujo/taskwarrior-mcp
 - npm: https://www.npmjs.com/package/@gabz-araujo/taskwarrior-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 45.0 / 100
 - Adoption: 20.0
 - Upkeep: 55.0

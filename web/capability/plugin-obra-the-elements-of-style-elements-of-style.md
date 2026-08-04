@@ -7,7 +7,7 @@
 - tashan id: plugin:obra/the-elements-of-style/elements-of-style
 - Source: https://github.com/obra/the-elements-of-style
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 40.0 / 100
 - Adoption: 46.0
 - Upkeep: 43.0

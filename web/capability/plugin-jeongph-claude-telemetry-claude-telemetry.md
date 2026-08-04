@@ -7,7 +7,7 @@
 - tashan id: plugin:jeongph/claude-telemetry/claude-telemetry
 - Source: https://github.com/jeongph/claude-telemetry
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 47.0 / 100
 - Adoption: 17.0
 - Upkeep: 79.0

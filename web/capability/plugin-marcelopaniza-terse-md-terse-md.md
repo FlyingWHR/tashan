@@ -7,7 +7,7 @@
 - tashan id: plugin:marcelopaniza/terse-md/terse-md
 - Source: https://github.com/marcelopaniza/terse-md
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 11.0
 - Upkeep: 50.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Influship/influship-mcp
 - npm: https://www.npmjs.com/package/@influship/mcp
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 42.0 / 100
 - Adoption: 24.0
 - Upkeep: 52.0

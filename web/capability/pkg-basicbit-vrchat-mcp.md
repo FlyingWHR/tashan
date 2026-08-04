@@ -8,7 +8,7 @@
 - Source: https://github.com/BASIC-BIT/vrchat-mcp
 - npm: https://www.npmjs.com/package/@basicbit/vrchat-mcp
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 59.0 / 100
 - Adoption: 33.0
 - Upkeep: 65.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/runapi-ai/wan-mcp
 - npm: https://www.npmjs.com/package/@runapi.ai/wan-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 61.0 / 100
 - Adoption: 35.0
 - Upkeep: 65.0

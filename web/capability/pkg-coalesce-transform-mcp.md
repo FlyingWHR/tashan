@@ -8,7 +8,7 @@
 - Source: https://github.com/Coalesce-Software-Inc/coalesce-transform-mcp
 - npm: https://www.npmjs.com/package/coalesce-transform-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 56.0 / 100
 - Adoption: 32.0
 - Upkeep: 69.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/theYahia/cbr-mcp
 - npm: https://www.npmjs.com/package/@theyahia/cbr-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 45.0 / 100
 - Adoption: 23.0
 - Upkeep: 58.0

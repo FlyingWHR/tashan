@@ -7,7 +7,7 @@
 - tashan id: plugin:idiomaticrefactoring/lintconfig/lintconfig
 - Source: https://github.com/idiomaticrefactoring/LintConfig
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 37.0 / 100
 - Adoption: 19.0
 - Upkeep: 79.0

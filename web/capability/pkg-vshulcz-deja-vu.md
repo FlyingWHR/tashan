@@ -8,7 +8,7 @@
 - Source: https://github.com/vshulcz/deja-vu
 - npm: https://www.npmjs.com/package/@vshulcz/deja-vu
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 69.0 / 100
 - Adoption: 43.0
 - Upkeep: 73.0

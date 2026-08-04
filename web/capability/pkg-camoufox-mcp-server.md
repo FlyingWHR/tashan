@@ -8,7 +8,7 @@
 - Source: https://github.com/whit3rabbit/camoufox-mcp
 - npm: https://www.npmjs.com/package/camoufox-mcp-server
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 55.0 / 100
 - Adoption: 32.0
 - Upkeep: 65.0

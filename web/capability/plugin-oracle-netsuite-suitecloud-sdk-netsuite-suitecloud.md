@@ -7,7 +7,7 @@
 - tashan id: plugin:oracle/netsuite-suitecloud-sdk/netsuite-suitecloud
 - Source: https://github.com/oracle/netsuite-suitecloud-sdk
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 72.0 / 100
 - Adoption: 44.0
 - Upkeep: 99.0

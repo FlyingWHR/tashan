@@ -8,7 +8,7 @@
 - Source: https://github.com/Alcyone-Labs/mcp-typescript-sdk
 - npm: https://www.npmjs.com/package/@alcyone-labs/modelcontextprotocol-sdk
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 24.0 / 100
 - Adoption: 54.0
 - Upkeep: 27.0

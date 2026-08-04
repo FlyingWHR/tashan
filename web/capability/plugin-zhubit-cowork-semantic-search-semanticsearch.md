@@ -7,7 +7,7 @@
 - tashan id: plugin:zhubit/cowork-semantic-search/semanticsearch
 - Source: https://github.com/ZhuBit/cowork-semantic-search
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 34.0 / 100
 - Adoption: 26.0
 - Upkeep: 47.0

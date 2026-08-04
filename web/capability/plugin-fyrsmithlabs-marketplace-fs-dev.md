@@ -7,7 +7,7 @@
 - tashan id: plugin:fyrsmithlabs/marketplace/fs-dev
 - Source: https://github.com/fyrsmithlabs/marketplace
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 84.0

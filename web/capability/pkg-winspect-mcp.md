@@ -8,7 +8,7 @@
 - Source: https://github.com/abehan7/winspect
 - npm: https://www.npmjs.com/package/winspect-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 68.0 / 100
 - Adoption: 45.0
 - Upkeep: 66.0

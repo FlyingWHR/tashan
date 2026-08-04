@@ -7,7 +7,7 @@
 - tashan id: plugin:willdma95/castellano-rae-skill/castellano-rae
 - Source: https://github.com/willdma95/castellano-rae-skill
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

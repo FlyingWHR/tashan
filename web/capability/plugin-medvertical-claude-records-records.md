@@ -7,7 +7,7 @@
 - tashan id: plugin:medvertical/claude-records/records
 - Source: https://github.com/medvertical/claude-records
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 43.0 / 100
 - Adoption: 11.0
 - Upkeep: 80.0

@@ -7,7 +7,7 @@
 - tashan id: pkg:bach-snowflake-mcp
 - npm: https://www.npmjs.com/package/bach-snowflake-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 44.0 / 100
 - Adoption: 21.0
 - Upkeep: 58.0

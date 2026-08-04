@@ -7,7 +7,7 @@
 - tashan id: plugin:oldyade/animated-sketch-diagram/animated-sketch-diagram
 - Source: https://github.com/OLDyade/animated-sketch-diagram
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 45.0 / 100
 - Adoption: 21.0
 - Upkeep: 61.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:cssmith615/chuck-plugin/chuck
 - Source: https://github.com/cssmith615/chuck-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/LunarPerovskite/docalyze-mcp-server
 - npm: https://www.npmjs.com/package/docalyze-mcp-server
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 36.0 / 100
 - Adoption: 25.0
 - Upkeep: 46.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:quartzunit/markgrab-plugin/markgrab
 - Source: https://github.com/QuartzUnit/markgrab-plugin
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

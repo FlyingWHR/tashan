@@ -7,7 +7,7 @@
 - tashan id: plugin:clawpage/clawpage-skill/clawpage
 - Source: https://github.com/clawpage/clawpage-skill
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 35.0 / 100
 - Adoption: 11.0
 - Upkeep: 70.0

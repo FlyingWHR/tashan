@@ -8,7 +8,7 @@
 - Source: https://github.com/mlava/agent-ready-mcp
 - npm: https://www.npmjs.com/package/agent-ready-mcp
 - Type: npm
-- Category: security
+- Category: devtools
 - tashan score: 65.0 / 100
 - Adoption: 38.0
 - Upkeep: 70.0

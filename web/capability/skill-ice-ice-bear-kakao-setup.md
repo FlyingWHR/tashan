@@ -7,7 +7,7 @@
 - tashan id: skill:ice-ice-bear/kakao-setup
 - Source: https://github.com/ice-ice-bear/log-blog
 - Type: skill
-- Category: other
+- Category: security
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

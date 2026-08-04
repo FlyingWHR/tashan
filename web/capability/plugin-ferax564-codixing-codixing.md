@@ -7,7 +7,7 @@
 - tashan id: plugin:ferax564/codixing/codixing
 - Source: https://github.com/ferax564/codixing
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 49.0 / 100
 - Adoption: 13.0
 - Upkeep: 98.0

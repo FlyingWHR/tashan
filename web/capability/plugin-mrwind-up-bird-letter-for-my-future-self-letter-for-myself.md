@@ -7,7 +7,7 @@
 - tashan id: plugin:mrwind-up-bird/letter-for-my-future-self/letter-for-myself
 - Source: https://github.com/mrwind-up-bird/letter-for-my-future-self
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 47.0 / 100
 - Adoption: 16.0
 - Upkeep: 80.0

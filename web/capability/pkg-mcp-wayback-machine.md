@@ -8,7 +8,7 @@
 - Source: https://github.com/Mearman/mcp-wayback-machine
 - npm: https://www.npmjs.com/package/mcp-wayback-machine
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 54.0 / 100
 - Adoption: 36.0
 - Upkeep: 66.0

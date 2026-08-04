@@ -7,7 +7,7 @@
 - tashan id: plugin:shinhyukahn/cck/cck
 - Source: https://github.com/shinhyukahn/cck
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 21.0
 - Upkeep: 48.0

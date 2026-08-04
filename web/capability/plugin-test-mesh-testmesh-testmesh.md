@@ -7,7 +7,7 @@
 - tashan id: plugin:test-mesh/testmesh/testmesh
 - Source: https://github.com/test-mesh/testmesh
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 33.0 / 100
 - Adoption: 13.0
 - Upkeep: 54.0

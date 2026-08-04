@@ -8,7 +8,7 @@
 - Source: https://github.com/FileToPDF/filetopdf-mcp
 - npm: https://www.npmjs.com/package/filetopdf-mcp
 - Type: npm
-- Category: productivity
+- Category: cloud
 - tashan score: 41.0 / 100
 - Adoption: 23.0
 - Upkeep: 50.0

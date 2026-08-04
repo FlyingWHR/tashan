@@ -8,7 +8,7 @@
 - Source: https://github.com/S2TConsulting/accelerators-mcp
 - npm: https://www.npmjs.com/package/s2t-mcp-accelerators
 - Type: npm
-- Category: finance
+- Category: security
 - tashan score: 34.0 / 100
 - Adoption: 25.0
 - Upkeep: 51.0

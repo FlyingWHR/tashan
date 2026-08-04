@@ -8,7 +8,7 @@
 - Source: https://github.com/mileszim/seekrit
 - npm: https://www.npmjs.com/package/@seekrit/mcp
 - Type: npm
-- Category: productivity
+- Category: finance
 - tashan score: 58.0 / 100
 - Adoption: 34.0
 - Upkeep: 61.0

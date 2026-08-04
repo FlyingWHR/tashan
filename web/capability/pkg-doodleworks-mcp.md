@@ -8,7 +8,7 @@
 - Source: https://github.com/SalZaki/doodleworks-mcp
 - npm: https://www.npmjs.com/package/doodleworks-mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 45.0 / 100
 - Adoption: 24.0
 - Upkeep: 54.0

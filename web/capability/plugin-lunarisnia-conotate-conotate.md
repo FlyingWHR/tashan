@@ -7,7 +7,7 @@
 - tashan id: plugin:lunarisnia/conotate/conotate
 - Source: https://github.com/Lunarisnia/conotate
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/EmperorMew/aegisvpn
 - npm: https://www.npmjs.com/package/@voidly/mcp-server
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 44.0 / 100
 - Adoption: 26.0
 - Upkeep: 63.0

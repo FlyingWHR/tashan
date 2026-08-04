@@ -8,7 +8,7 @@
 - Source: https://github.com/0nork/0nMCP
 - npm: https://www.npmjs.com/package/0nmcp
 - Type: npm
-- Category: productivity
+- Category: cloud
 - tashan score: 60.0 / 100
 - Adoption: 35.0
 - Upkeep: 71.0

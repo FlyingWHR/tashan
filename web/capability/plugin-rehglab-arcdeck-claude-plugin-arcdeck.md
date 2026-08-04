@@ -7,7 +7,7 @@
 - tashan id: plugin:rehglab/arcdeck-claude-plugin/arcdeck
 - Source: https://github.com/RehgLab/ArcDeck-Claude-Plugin
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

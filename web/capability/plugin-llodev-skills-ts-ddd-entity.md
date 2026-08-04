@@ -7,7 +7,7 @@
 - tashan id: plugin:llodev/skills/ts-ddd-entity
 - Source: https://github.com/llodev/skills
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 43.0 / 100
 - Adoption: 7.0
 - Upkeep: 97.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Dave-London/Pare
 - npm: https://www.npmjs.com/package/@paretools/git
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 58.0 / 100
 - Adoption: 32.0
 - Upkeep: 71.0

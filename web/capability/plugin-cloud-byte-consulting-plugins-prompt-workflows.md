@@ -7,7 +7,7 @@
 - tashan id: plugin:cloud-byte-consulting/plugins/prompt-workflows
 - Source: https://github.com/Cloud-Byte-Consulting/plugins
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

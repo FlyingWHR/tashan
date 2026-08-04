@@ -7,7 +7,7 @@
 - tashan id: skill:xoai/learn
 - Source: https://github.com/xoai/sage
 - Type: skill
-- Category: other
+- Category: ai
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 17.0
 - Upkeep: not measured

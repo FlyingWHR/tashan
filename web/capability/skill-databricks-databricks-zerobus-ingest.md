@@ -7,7 +7,7 @@
 - tashan id: skill:databricks/databricks-zerobus-ingest
 - Source: https://github.com/databricks/databricks-agent-skills
 - Type: skill
-- Category: other
+- Category: productivity
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

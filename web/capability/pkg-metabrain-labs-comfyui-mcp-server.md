@@ -8,7 +8,7 @@
 - Source: https://github.com/MetaBrain-Labs/ComfyUI-MCP-Server-TypeScript
 - npm: https://www.npmjs.com/package/@metabrain-labs/comfyui-mcp-server
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 35.0 / 100
 - Adoption: 25.0
 - Upkeep: 44.0

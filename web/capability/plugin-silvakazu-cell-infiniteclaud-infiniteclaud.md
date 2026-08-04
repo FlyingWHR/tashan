@@ -7,7 +7,7 @@
 - tashan id: plugin:silvakazu-cell/infiniteclaud/infiniteclaud
 - Source: https://github.com/Silvakazu-cell/infiniteclaud
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 13.0
 - Upkeep: 66.0

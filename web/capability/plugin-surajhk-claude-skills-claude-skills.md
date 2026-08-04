@@ -7,7 +7,7 @@
 - tashan id: plugin:surajhk/claude-skills/claude-skills
 - Source: https://github.com/surajhk/claude-skills
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 32.0 / 100
 - Adoption: 19.0
 - Upkeep: 49.0

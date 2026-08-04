@@ -8,7 +8,7 @@
 - Source: https://github.com/ai-hub-open/yandex-direct-mcp
 - npm: https://www.npmjs.com/package/@ai-hub-open/yandex-direct-mcp
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 65.0 / 100
 - Adoption: 37.0
 - Upkeep: 73.0

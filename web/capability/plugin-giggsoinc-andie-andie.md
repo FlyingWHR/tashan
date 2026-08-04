@@ -7,7 +7,7 @@
 - tashan id: plugin:giggsoinc/andie/andie
 - Source: https://github.com/giggsoinc/andie
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 44.0 / 100
 - Adoption: 16.0
 - Upkeep: 76.0

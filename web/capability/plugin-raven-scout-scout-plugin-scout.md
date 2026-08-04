@@ -7,7 +7,7 @@
 - tashan id: plugin:raven-scout/scout-plugin/scout
 - Source: https://github.com/Raven-Scout/scout-plugin
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 54.0 / 100
 - Adoption: 19.0
 - Upkeep: 98.0

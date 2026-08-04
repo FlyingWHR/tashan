@@ -7,7 +7,7 @@
 - tashan id: plugin:sankalpgunturi/collab-claw-spike-a/collab-claw-spike-a
 - Source: https://github.com/sankalpgunturi/collab-claw-spike-a
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

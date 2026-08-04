@@ -8,7 +8,7 @@
 - Source: https://github.com/micbwilliam/socialmate-mcp
 - npm: https://www.npmjs.com/package/socialmate-mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 52.0 / 100
 - Adoption: 28.0
 - Upkeep: 61.0

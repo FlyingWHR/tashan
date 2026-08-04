@@ -7,7 +7,7 @@
 - tashan id: plugin:t0mtaylor/peepshow/peepshow
 - Source: https://github.com/t0mtaylor/peepshow
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 51.0 / 100
 - Adoption: 31.0
 - Upkeep: 73.0

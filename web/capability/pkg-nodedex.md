@@ -8,7 +8,7 @@
 - Source: https://github.com/NodeDex/NodeDex-v0.1
 - npm: https://www.npmjs.com/package/nodedex
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 57.0 / 100
 - Adoption: 30.0
 - Upkeep: 70.0

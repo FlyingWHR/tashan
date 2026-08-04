@@ -8,7 +8,7 @@
 - Source: https://github.com/adeze/raindrop-mcp
 - npm: https://www.npmjs.com/package/@adeze/raindrop-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 40.0 / 100
 - Adoption: 28.0
 - Upkeep: 59.0

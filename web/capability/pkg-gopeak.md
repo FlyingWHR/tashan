@@ -8,7 +8,7 @@
 - Source: https://github.com/HaD0Yun/godot-mcp
 - npm: https://www.npmjs.com/package/gopeak
 - Type: npm
-- Category: devtools
+- Category: docs
 - tashan score: 51.0 / 100
 - Adoption: 30.0
 - Upkeep: 64.0

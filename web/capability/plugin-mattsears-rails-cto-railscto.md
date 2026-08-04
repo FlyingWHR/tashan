@@ -7,7 +7,7 @@
 - tashan id: plugin:mattsears/rails-cto/railscto
 - Source: https://github.com/mattsears/rails-cto
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 34.0 / 100
 - Adoption: 21.0
 - Upkeep: 50.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:tabers77/claude_experiments/claude-library
 - Source: https://github.com/tabers77/claude_experiments
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 80.0

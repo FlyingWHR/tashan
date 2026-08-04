@@ -7,7 +7,7 @@
 - tashan id: pkg:@merchinary/docs-mcp
 - npm: https://www.npmjs.com/package/@merchinary/docs-mcp
 - Type: npm
-- Category: data
+- Category: docs
 - tashan score: 41.0 / 100
 - Adoption: 21.0
 - Upkeep: 51.0

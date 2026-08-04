@@ -7,7 +7,7 @@
 - tashan id: plugin:cwstedctw/balance-sheet-analyzer/balance-sheet-analyzer
 - Source: https://github.com/cwstedctw/balance-sheet-analyzer
 - Type: plugin
-- Category: ai
+- Category: security
 - tashan score: 21.0 / 100
 - Adoption: 7.0
 - Upkeep: 29.0

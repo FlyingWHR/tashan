@@ -8,7 +8,7 @@
 - Source: https://github.com/przemekzur/hosting
 - npm: https://www.npmjs.com/package/breezedeploy-mcp
 - Type: npm
-- Category: other
+- Category: database
 - tashan score: 46.0 / 100
 - Adoption: 21.0
 - Upkeep: 59.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Royalti-io/ikenga-pkg-mcp-iyke
 - npm: https://www.npmjs.com/package/@ikenga/mcp-iyke
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 43.0 / 100
 - Adoption: 23.0
 - Upkeep: 56.0

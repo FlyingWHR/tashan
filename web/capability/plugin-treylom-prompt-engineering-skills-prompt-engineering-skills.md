@@ -7,7 +7,7 @@
 - tashan id: plugin:treylom/prompt-engineering-skills/prompt-engineering-skills
 - Source: https://github.com/treylom/prompt-engineering-skills
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 68.0 / 100
 - Adoption: 36.0
 - Upkeep: 98.0

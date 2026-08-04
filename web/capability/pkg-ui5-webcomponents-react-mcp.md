@@ -8,7 +8,7 @@
 - Source: https://github.com/UI5/webcomponents-react
 - npm: https://www.npmjs.com/package/@ui5/webcomponents-react-mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 65.0 / 100
 - Adoption: 39.0
 - Upkeep: 67.0

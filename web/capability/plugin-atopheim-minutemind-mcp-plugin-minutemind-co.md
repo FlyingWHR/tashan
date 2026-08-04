@@ -7,7 +7,7 @@
 - tashan id: plugin:atopheim/minutemind-mcp-plugin/minutemind-co
 - Source: https://github.com/atopheim/minutemind-mcp-plugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

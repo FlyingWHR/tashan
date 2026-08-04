@@ -7,7 +7,7 @@
 - tashan id: plugin:rilwan99/scaffold-slack-app/scaffold-slack-app
 - Source: https://github.com/rilwan99/scaffold-slack-app
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

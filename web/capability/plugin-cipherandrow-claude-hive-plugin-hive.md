@@ -7,7 +7,7 @@
 - tashan id: plugin:cipherandrow/claude-hive-plugin/hive
 - Source: https://github.com/CipherandRow/claude-hive-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

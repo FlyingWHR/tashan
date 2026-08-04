@@ -8,7 +8,7 @@
 - Source: https://github.com/socialneuron/mcp-server
 - npm: https://www.npmjs.com/package/@socialneuron/mcp-server
 - Type: npm
-- Category: search
+- Category: comms
 - tashan score: 69.0 / 100
 - Adoption: 44.0
 - Upkeep: 72.0

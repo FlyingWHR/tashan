@@ -7,7 +7,7 @@
 - tashan id: registry:io.github.Buggy1111/wrapper-mcp
 - Source: https://github.com/Buggy1111/wrapper-mcp
 - Type: python
-- Category: security
+- Category: data
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: not measured
 - Upkeep: not measured

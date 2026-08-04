@@ -7,7 +7,7 @@
 - tashan id: plugin:robzolkos/replicate-images/replicate-images
 - Source: https://github.com/robzolkos/replicate-images
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 23.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

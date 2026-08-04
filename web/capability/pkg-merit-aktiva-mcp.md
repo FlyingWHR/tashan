@@ -8,7 +8,7 @@
 - Source: https://github.com/roosa-dev/merit-aktiva-mcp
 - npm: https://www.npmjs.com/package/merit-aktiva-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 44.0 / 100
 - Adoption: 19.0
 - Upkeep: 55.0

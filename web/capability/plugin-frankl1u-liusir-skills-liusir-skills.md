@@ -7,7 +7,7 @@
 - tashan id: plugin:frankl1u/liusir-skills/liusir-skills
 - Source: https://github.com/FrankL1u/liusir-skills
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 35.0 / 100
 - Adoption: 13.0
 - Upkeep: 68.0

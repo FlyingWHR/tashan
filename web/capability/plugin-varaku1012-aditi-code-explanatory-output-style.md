@@ -7,7 +7,7 @@
 - tashan id: plugin:varaku1012/aditi.code/explanatory-output-style
 - Source: https://github.com/varaku1012/aditi.code
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

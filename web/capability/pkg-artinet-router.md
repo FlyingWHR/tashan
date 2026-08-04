@@ -8,7 +8,7 @@
 - Source: https://github.com/the-artinet-project/router
 - npm: https://www.npmjs.com/package/@artinet/router
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 22.0 / 100
 - Adoption: 8.0
 - Upkeep: 49.0

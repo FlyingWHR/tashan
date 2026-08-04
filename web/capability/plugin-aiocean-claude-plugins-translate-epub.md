@@ -7,7 +7,7 @@
 - tashan id: plugin:aiocean/claude-plugins/translate-epub
 - Source: https://github.com/aiocean/claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 7.0
 - Upkeep: 90.0

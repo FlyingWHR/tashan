@@ -7,7 +7,7 @@
 - tashan id: plugin:garethmanning/claude-education-skills/claude-education-skills-library
 - Source: https://github.com/GarethManning/claude-education-skills
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 66.0 / 100
 - Adoption: 42.0
 - Upkeep: 79.0

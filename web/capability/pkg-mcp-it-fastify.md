@@ -8,7 +8,7 @@
 - Source: https://github.com/AdirAmsalem/mcp-it
 - npm: https://www.npmjs.com/package/@mcp-it/fastify
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 17.0 / 100
 - Adoption: 38.0
 - Upkeep: 25.0

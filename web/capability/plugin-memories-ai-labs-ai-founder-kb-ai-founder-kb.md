@@ -7,7 +7,7 @@
 - tashan id: plugin:memories-ai-labs/ai-founder-kb/ai-founder-kb
 - Source: https://github.com/Memories-ai-labs/ai-founder-kb
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

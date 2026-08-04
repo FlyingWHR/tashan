@@ -7,7 +7,7 @@
 - tashan id: plugin:crate/agent-skills/cratedb
 - Source: https://github.com/crate/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 60.0

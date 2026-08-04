@@ -8,7 +8,7 @@
 - Source: https://github.com/letta-ai/memory-mcp
 - npm: https://www.npmjs.com/package/@letta-ai/memory-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 29.0 / 100
 - Adoption: 23.0
 - Upkeep: 61.0

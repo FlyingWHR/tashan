@@ -7,7 +7,7 @@
 - tashan id: pkg:agentforge-facturx-mcp
 - npm: https://www.npmjs.com/package/agentforge-facturx-mcp
 - Type: npm
-- Category: finance
+- Category: productivity
 - tashan score: 39.0 / 100
 - Adoption: 19.0
 - Upkeep: 48.0

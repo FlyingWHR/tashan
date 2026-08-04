@@ -8,7 +8,7 @@
 - Source: https://github.com/keesfluitman/vikunja-mcp
 - npm: https://www.npmjs.com/package/@simpelekees/vikunja-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 48.0 / 100
 - Adoption: 22.0
 - Upkeep: 62.0

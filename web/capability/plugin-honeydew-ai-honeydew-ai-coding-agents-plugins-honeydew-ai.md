@@ -7,7 +7,7 @@
 - tashan id: plugin:honeydew-ai/honeydew-ai-coding-agents-plugins/honeydew-ai
 - Source: https://github.com/honeydew-ai/honeydew-ai-coding-agents-plugins
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 43.0 / 100
 - Adoption: 7.0
 - Upkeep: 97.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:apurvbazari/claude-plugins/notify
 - Source: https://github.com/ApurvBazari/claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

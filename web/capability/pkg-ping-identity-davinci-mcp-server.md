@@ -8,7 +8,7 @@
 - Source: https://github.com/pingidentity/davinci-mcp-server
 - npm: https://www.npmjs.com/package/@ping-identity/davinci-mcp-server
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 54.0 / 100
 - Adoption: 31.0
 - Upkeep: 81.0

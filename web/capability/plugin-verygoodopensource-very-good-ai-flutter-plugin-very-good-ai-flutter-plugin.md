@@ -7,7 +7,7 @@
 - tashan id: plugin:verygoodopensource/very_good_ai_flutter_plugin/very-good-ai-flutter-plugin
 - Source: https://github.com/VeryGoodOpenSource/very_good_ai_flutter_plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 68.0 / 100
 - Adoption: 35.0
 - Upkeep: 98.0

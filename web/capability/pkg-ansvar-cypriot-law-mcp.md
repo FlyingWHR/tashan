@@ -8,7 +8,7 @@
 - Source: https://github.com/Ansvar-Systems/Cypriot-law-mcp
 - npm: https://www.npmjs.com/package/@ansvar/cypriot-law-mcp
 - Type: npm
-- Category: docs
+- Category: other
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 24.0
 - Upkeep: not measured

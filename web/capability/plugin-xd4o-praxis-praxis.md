@@ -7,7 +7,7 @@
 - tashan id: plugin:xd4o/praxis/praxis
 - Source: https://github.com/xD4O/praxis
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 54.0 / 100
 - Adoption: 26.0
 - Upkeep: not measured

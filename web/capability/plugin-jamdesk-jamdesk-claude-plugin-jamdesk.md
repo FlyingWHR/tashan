@@ -7,7 +7,7 @@
 - tashan id: plugin:jamdesk/jamdesk-claude-plugin/jamdesk
 - Source: https://github.com/jamdesk/jamdesk-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 50.0 / 100
 - Adoption: 15.0
 - Upkeep: 97.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:crowdstrike/foundry-skills/crowdstrike-falcon-foundry
 - Source: https://github.com/CrowdStrike/foundry-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 64.0 / 100
 - Adoption: 29.0
 - Upkeep: 99.0

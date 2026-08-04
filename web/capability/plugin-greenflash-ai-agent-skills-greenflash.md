@@ -7,7 +7,7 @@
 - tashan id: plugin:greenflash-ai/agent-skills/greenflash
 - Source: https://github.com/greenflash-ai/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 75.0

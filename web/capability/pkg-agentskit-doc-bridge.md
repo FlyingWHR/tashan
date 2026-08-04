@@ -8,7 +8,7 @@
 - Source: https://github.com/AgentsKit-io/doc-bridge
 - npm: https://www.npmjs.com/package/@agentskit/doc-bridge
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 60.0 / 100
 - Adoption: 34.0
 - Upkeep: 66.0

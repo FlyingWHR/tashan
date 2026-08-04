@@ -7,7 +7,7 @@
 - tashan id: plugin:zoom/zoom-plugin/zoom-plugin
 - Source: https://github.com/zoom/zoom-plugin
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 46.0 / 100
 - Adoption: 21.0
 - Upkeep: 63.0

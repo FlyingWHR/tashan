@@ -7,7 +7,7 @@
 - tashan id: plugin:samuelserraceo/sam-serra-plugins/agent-plumb-brief
 - Source: https://github.com/samuelserraceo/sam-serra-plugins
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

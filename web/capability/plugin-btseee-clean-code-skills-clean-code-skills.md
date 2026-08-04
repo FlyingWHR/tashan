@@ -7,7 +7,7 @@
 - tashan id: plugin:btseee/clean-code-skills/clean-code-skills
 - Source: https://github.com/btseee/clean-code-skills
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 11.0
 - Upkeep: 60.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/lyrenth/lyrenth-mcp
 - npm: https://www.npmjs.com/package/lyrenth-mcp
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 44.0 / 100
 - Adoption: 25.0
 - Upkeep: 54.0

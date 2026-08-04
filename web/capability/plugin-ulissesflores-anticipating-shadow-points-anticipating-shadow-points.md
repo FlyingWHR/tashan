@@ -7,7 +7,7 @@
 - tashan id: plugin:ulissesflores/anticipating-shadow-points/anticipating-shadow-points
 - Source: https://github.com/ulissesflores/anticipating-shadow-points
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

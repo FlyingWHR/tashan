@@ -8,7 +8,7 @@
 - Source: https://github.com/BoxLab-Ltd/yandex-metrica-mcp
 - npm: https://www.npmjs.com/package/yandex-metrica-mcp
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 57.0 / 100
 - Adoption: 34.0
 - Upkeep: 61.0

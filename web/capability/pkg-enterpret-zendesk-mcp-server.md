@@ -8,7 +8,7 @@
 - Source: https://github.com/aavaz-ai/zendesk-mcp-server
 - npm: https://www.npmjs.com/package/@enterpret/zendesk-mcp-server
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 56.0 / 100
 - Adoption: 33.0
 - Upkeep: 76.0

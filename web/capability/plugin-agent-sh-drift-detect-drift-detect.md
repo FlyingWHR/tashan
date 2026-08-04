@@ -7,7 +7,7 @@
 - tashan id: plugin:agent-sh/drift-detect/drift-detect
 - Source: https://github.com/agent-sh/drift-detect
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 52.0 / 100
 - Adoption: 16.0
 - Upkeep: 98.0

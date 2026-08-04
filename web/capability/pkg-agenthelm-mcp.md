@@ -8,7 +8,7 @@
 - Source: https://github.com/jayasukuv11-beep/agenthelm
 - npm: https://www.npmjs.com/package/agenthelm-mcp
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 47.0 / 100
 - Adoption: 21.0
 - Upkeep: 57.0

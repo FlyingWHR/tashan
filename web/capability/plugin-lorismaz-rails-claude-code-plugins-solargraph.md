@@ -7,7 +7,7 @@
 - tashan id: plugin:lorismaz/rails-claude-code-plugins/solargraph
 - Source: https://github.com/lorismaz/rails-claude-code-plugins
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

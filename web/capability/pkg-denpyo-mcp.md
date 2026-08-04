@@ -8,7 +8,7 @@
 - Source: https://github.com/vladic-corp/denpyo-api
 - npm: https://www.npmjs.com/package/denpyo-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 46.0 / 100
 - Adoption: 21.0
 - Upkeep: 55.0

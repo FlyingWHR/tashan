@@ -7,7 +7,7 @@
 - tashan id: plugin:califio/skills/php-unserialize-audit
 - Source: https://github.com/califio/skills
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 40.0 / 100
 - Adoption: 30.0
 - Upkeep: 51.0

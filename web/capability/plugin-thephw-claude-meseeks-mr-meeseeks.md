@@ -7,7 +7,7 @@
 - tashan id: plugin:thephw/claude-meseeks/mr-meeseeks
 - Source: https://github.com/thephw/claude-meseeks
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 52.0 / 100
 - Adoption: 32.0
 - Upkeep: 61.0

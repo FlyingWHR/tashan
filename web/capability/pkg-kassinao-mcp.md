@@ -8,7 +8,7 @@
 - Source: https://github.com/resolvicomai/kassinao
 - npm: https://www.npmjs.com/package/kassinao-mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 51.0 / 100
 - Adoption: 24.0
 - Upkeep: 65.0

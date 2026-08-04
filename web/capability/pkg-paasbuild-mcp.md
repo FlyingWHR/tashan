@@ -8,7 +8,7 @@
 - Source: https://github.com/UNIPaaS/paas-build-mcp
 - npm: https://www.npmjs.com/package/@paasbuild/mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 55.0 / 100
 - Adoption: 30.0
 - Upkeep: 63.0

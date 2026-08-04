@@ -7,7 +7,7 @@
 - tashan id: plugin:pluginagentmarketplace/custom-plugin-sql/custom-plugin-sql
 - Source: https://github.com/pluginagentmarketplace/custom-plugin-sql
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 25.0 / 100
 - Adoption: 11.0
 - Upkeep: 57.0

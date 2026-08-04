@@ -7,7 +7,7 @@
 - tashan id: pkg:@zeroheight/mcp-server
 - npm: https://www.npmjs.com/package/@zeroheight/mcp-server
 - Type: npm
-- Category: files
+- Category: productivity
 - tashan score: 53.0 / 100
 - Adoption: 32.0
 - Upkeep: 65.0

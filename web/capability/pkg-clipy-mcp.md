@@ -8,7 +8,7 @@
 - Source: https://github.com/manovagyanik1/clipy-mcp
 - npm: https://www.npmjs.com/package/@clipy/mcp
 - Type: npm
-- Category: productivity
+- Category: finance
 - tashan score: 68.0 / 100
 - Adoption: 41.0
 - Upkeep: 71.0

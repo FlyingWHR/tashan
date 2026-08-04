@@ -7,7 +7,7 @@
 - tashan id: plugin:fenian32/memory-bank/memorybank
 - Source: https://github.com/fenian32/memory-bank
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 38.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

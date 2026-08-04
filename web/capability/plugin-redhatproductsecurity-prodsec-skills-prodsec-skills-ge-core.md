@@ -7,7 +7,7 @@
 - tashan id: plugin:redhatproductsecurity/prodsec-skills/prodsec-skills-ge-core
 - Source: https://github.com/RedHatProductSecurity/prodsec-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 61.0 / 100
 - Adoption: 28.0
 - Upkeep: 97.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:zuttam/business-growth-mp/opportunity-master
 - Source: https://github.com/Zuttam/business-growth-mp
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

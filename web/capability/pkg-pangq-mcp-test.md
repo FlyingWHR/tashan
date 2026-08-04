@@ -8,7 +8,7 @@
 - Source: https://github.com/GstXu/mcp_test
 - npm: https://www.npmjs.com/package/@pangq/mcp_test
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 40.0 / 100
 - Adoption: 22.0
 - Upkeep: 49.0

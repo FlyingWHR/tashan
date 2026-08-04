@@ -7,7 +7,7 @@
 - tashan id: plugin:iopass4/fable-long-task/long-task
 - Source: https://github.com/iopass4/fable-long-task
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

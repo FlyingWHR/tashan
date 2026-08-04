@@ -7,7 +7,7 @@
 - tashan id: plugin:flagos-ai/skills/flagos-skills
 - Source: https://github.com/flagos-ai/skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 58.0 / 100
 - Adoption: 24.0
 - Upkeep: 97.0

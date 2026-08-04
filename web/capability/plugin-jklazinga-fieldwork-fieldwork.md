@@ -7,7 +7,7 @@
 - tashan id: plugin:jklazinga/fieldwork/fieldwork
 - Source: https://github.com/jklazinga/fieldwork
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

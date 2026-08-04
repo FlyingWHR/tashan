@@ -8,7 +8,7 @@
 - Source: https://github.com/AIStorageDepot/aistoragedepot-mcp
 - npm: https://www.npmjs.com/package/@aistoragedepot/mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 57.0 / 100
 - Adoption: 34.0
 - Upkeep: 60.0

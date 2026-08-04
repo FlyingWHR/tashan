@@ -7,7 +7,7 @@
 - tashan id: plugin:msapps-mobile/claude-plugins/linkedin-scraper
 - Source: https://github.com/MSApps-Mobile/claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 39.0 / 100
 - Adoption: 7.0
 - Upkeep: 92.0

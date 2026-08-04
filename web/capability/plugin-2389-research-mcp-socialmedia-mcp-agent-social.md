@@ -7,7 +7,7 @@
 - tashan id: plugin:2389-research/mcp-socialmedia/mcp-agent-social
 - Source: https://github.com/2389-research/mcp-socialmedia
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 55.0 / 100
 - Adoption: 22.0
 - Upkeep: 96.0

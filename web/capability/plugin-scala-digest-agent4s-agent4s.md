@@ -7,7 +7,7 @@
 - tashan id: plugin:scala-digest/agent4s/agent4s
 - Source: https://github.com/scala-digest/agent4s
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 39.0 / 100
 - Adoption: 22.0
 - Upkeep: 66.0

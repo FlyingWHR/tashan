@@ -7,7 +7,7 @@
 - tashan id: plugin:samacs/closedrings-mcp/closed-rings
 - Source: https://github.com/samacs/closedrings-mcp
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

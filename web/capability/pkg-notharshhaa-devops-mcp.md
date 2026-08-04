@@ -8,7 +8,7 @@
 - Source: https://github.com/NotHarshhaa/devops-mcp
 - npm: https://www.npmjs.com/package/@notharshhaa/devops-mcp
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 45.0 / 100
 - Adoption: 27.0
 - Upkeep: 56.0

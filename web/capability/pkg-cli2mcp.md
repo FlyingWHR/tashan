@@ -8,7 +8,7 @@
 - Source: https://github.com/RonieNeubauer/cli2mcp
 - npm: https://www.npmjs.com/package/cli2mcp
 - Type: npm
-- Category: docs
+- Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 24.0
 - Upkeep: 49.0

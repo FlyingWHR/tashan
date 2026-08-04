@@ -8,7 +8,7 @@
 - Source: https://github.com/modelcontextprotocol/typescript-sdk
 - npm: https://www.npmjs.com/package/@modelcontextprotocol/hono
 - Type: npm
-- Category: other
+- Category: files
 - tashan score: 78.0 / 100
 - Adoption: 56.0
 - Upkeep: 91.0

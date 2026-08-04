@@ -8,7 +8,7 @@
 - Source: https://github.com/Backspace-me/sportscore-mcp
 - npm: https://www.npmjs.com/package/sportscore-mcp
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 36.0 / 100
 - Adoption: 24.0
 - Upkeep: 45.0

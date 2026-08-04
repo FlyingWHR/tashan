@@ -7,7 +7,7 @@
 - tashan id: plugin:melanke/defi-builder-skills/defi-spec-driven
 - Source: https://github.com/melanke/defi-builder-skills
 - Type: plugin
-- Category: finance
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

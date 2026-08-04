@@ -7,7 +7,7 @@
 - tashan id: plugin:estevanhernandez-stack-ed/thesis-engine/thesis-engine
 - Source: https://github.com/estevanhernandez-stack-ed/Thesis-Engine
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 37.0 / 100
 - Adoption: 11.0
 - Upkeep: 61.0

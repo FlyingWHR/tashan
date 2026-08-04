@@ -7,7 +7,7 @@
 - tashan id: plugin:piotr1215/aiverse/ai-coreutils
 - Source: https://github.com/Piotr1215/aiverse
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

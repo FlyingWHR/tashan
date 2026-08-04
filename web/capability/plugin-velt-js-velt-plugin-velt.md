@@ -7,7 +7,7 @@
 - tashan id: plugin:velt-js/velt-plugin/velt
 - Source: https://github.com/velt-js/velt-plugin
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 93.0

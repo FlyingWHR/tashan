@@ -8,7 +8,7 @@
 - Source: https://github.com/FormatixAI/mcp-server
 - npm: https://www.npmjs.com/package/@formatix-ai/mcp
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 44.0 / 100
 - Adoption: 25.0
 - Upkeep: 51.0

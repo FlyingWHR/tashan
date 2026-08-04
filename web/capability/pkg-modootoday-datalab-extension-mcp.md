@@ -8,7 +8,7 @@
 - Source: https://github.com/modootoday/datalab-extension-mcp
 - npm: https://www.npmjs.com/package/@modootoday/datalab-extension-mcp
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 63.0 / 100
 - Adoption: 44.0
 - Upkeep: 53.0

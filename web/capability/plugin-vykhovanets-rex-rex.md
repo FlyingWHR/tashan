@@ -7,7 +7,7 @@
 - tashan id: plugin:vykhovanets/rex/rex
 - Source: https://github.com/vykhovanets/rex
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 24.0 / 100
 - Adoption: 11.0
 - Upkeep: 43.0

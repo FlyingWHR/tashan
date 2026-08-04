@@ -7,7 +7,7 @@
 - tashan id: plugin:grainulation/grainulator/grainulator
 - Source: https://github.com/grainulation/grainulator
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 32.0
 - Upkeep: 50.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:aneja5/forge-skills/forge-skills
 - Source: https://github.com/aneja5/forge-skills
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 34.0 / 100
 - Adoption: 15.0
 - Upkeep: 53.0

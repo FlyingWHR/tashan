@@ -8,7 +8,7 @@
 - Source: https://github.com/RefugeSwordPublishing/taskboard
 - npm: https://www.npmjs.com/package/@refugeandsword/taskboard-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 45.0 / 100
 - Adoption: 22.0
 - Upkeep: 54.0

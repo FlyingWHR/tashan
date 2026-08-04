@@ -7,7 +7,7 @@
 - tashan id: plugin:ohong/agent-skills/mission
 - Source: https://github.com/ohong/agent-skills
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 39.0 / 100
 - Adoption: 11.0
 - Upkeep: 63.0

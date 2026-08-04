@@ -7,7 +7,7 @@
 - tashan id: plugin:a-abdellatif98/db-migration-guard/db-migration-guard
 - Source: https://github.com/a-abdellatif98/db-migration-guard
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

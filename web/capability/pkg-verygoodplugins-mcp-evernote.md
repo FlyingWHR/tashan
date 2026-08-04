@@ -8,7 +8,7 @@
 - Source: https://github.com/verygoodplugins/mcp-evernote
 - npm: https://www.npmjs.com/package/@verygoodplugins/mcp-evernote
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 34.0 / 100
 - Adoption: 25.0
 - Upkeep: 57.0

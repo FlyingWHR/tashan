@@ -7,7 +7,7 @@
 - tashan id: plugin:medusajs/medusa-claude-plugins/medusa-dev
 - Source: https://github.com/medusajs/medusa-claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 69.0 / 100
 - Adoption: 37.0
 - Upkeep: 97.0

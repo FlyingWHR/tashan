@@ -7,7 +7,7 @@
 - tashan id: skill:ido4-dev/dependency-analysis
 - Source: https://github.com/ido4-dev/ido4shape
 - Type: skill
-- Category: other
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

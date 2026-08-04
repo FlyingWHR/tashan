@@ -7,7 +7,7 @@
 - tashan id: plugin:docusealco/docuseal-agent-skills/docuseal
 - Source: https://github.com/docusealco/docuseal-agent-skills
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 49.0 / 100
 - Adoption: 19.0
 - Upkeep: 80.0

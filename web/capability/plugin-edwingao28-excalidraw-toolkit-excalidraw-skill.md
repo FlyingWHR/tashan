@@ -7,7 +7,7 @@
 - tashan id: plugin:edwingao28/excalidraw-toolkit/excalidraw-skill
 - Source: https://github.com/edwingao28/excalidraw-toolkit
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 53.0 / 100
 - Adoption: 36.0
 - Upkeep: 71.0

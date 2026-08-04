@@ -7,7 +7,7 @@
 - tashan id: plugin:initialneil/project-with-reflect/project-with-reflect
 - Source: https://github.com/initialneil/project-with-reflect
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 52.0 / 100
 - Adoption: 22.0
 - Upkeep: not measured

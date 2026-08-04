@@ -8,7 +8,7 @@
 - Source: https://github.com/ArcedeDev/air-sdk
 - npm: https://www.npmjs.com/package/@arcede/air-sdk
 - Type: npm
-- Category: devtools
+- Category: data
 - tashan score: 42.0 / 100
 - Adoption: 26.0
 - Upkeep: 61.0

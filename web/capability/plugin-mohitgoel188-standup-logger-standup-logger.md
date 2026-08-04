@@ -7,7 +7,7 @@
 - tashan id: plugin:mohitgoel188/standup-logger/standup-logger
 - Source: https://github.com/mohitgoel188/standup-logger
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

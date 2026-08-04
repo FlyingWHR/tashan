@@ -8,7 +8,7 @@
 - Source: https://github.com/DavidSirota/rollin-mcp-server
 - npm: https://www.npmjs.com/package/rollin-mcp-server
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 38.0 / 100
 - Adoption: 23.0
 - Upkeep: 53.0

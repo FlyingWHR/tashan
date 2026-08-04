@@ -7,7 +7,7 @@
 - tashan id: plugin:opensearch-project/opensearch-agent-skills/opensearch
 - Source: https://github.com/opensearch-project/opensearch-agent-skills
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

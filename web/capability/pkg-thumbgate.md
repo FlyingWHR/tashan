@@ -8,7 +8,7 @@
 - Source: https://github.com/IgorGanapolsky/ThumbGate
 - npm: https://www.npmjs.com/package/thumbgate
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 65.0 / 100
 - Adoption: 38.0
 - Upkeep: 72.0

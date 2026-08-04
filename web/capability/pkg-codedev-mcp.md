@@ -8,7 +8,7 @@
 - Source: https://github.com/Kranthithota/codedev-mcp
 - npm: https://www.npmjs.com/package/codedev-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 29.0
 - Upkeep: 45.0

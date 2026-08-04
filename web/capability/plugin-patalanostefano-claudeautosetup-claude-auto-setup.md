@@ -7,7 +7,7 @@
 - tashan id: plugin:patalanostefano/claudeautosetup/claude-auto-setup
 - Source: https://github.com/patalanostefano/claudeautosetup
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

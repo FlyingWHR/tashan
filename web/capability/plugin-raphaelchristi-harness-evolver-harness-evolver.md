@@ -7,7 +7,7 @@
 - tashan id: plugin:raphaelchristi/harness-evolver/harness-evolver
 - Source: https://github.com/raphaelchristi/harness-evolver
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 28.0
 - Upkeep: 50.0

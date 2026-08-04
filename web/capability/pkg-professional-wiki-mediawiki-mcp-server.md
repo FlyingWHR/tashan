@@ -8,7 +8,7 @@
 - Source: https://github.com/ProfessionalWiki/MediaWiki-MCP-Server
 - npm: https://www.npmjs.com/package/@professional-wiki/mediawiki-mcp-server
 - Type: npm
-- Category: docs
+- Category: productivity
 - tashan score: 75.0 / 100
 - Adoption: 45.0
 - Upkeep: 99.0

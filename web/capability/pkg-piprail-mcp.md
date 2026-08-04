@@ -8,7 +8,7 @@
 - Source: https://github.com/piprail/piprail
 - npm: https://www.npmjs.com/package/@piprail/mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 51.0 / 100
 - Adoption: 27.0
 - Upkeep: 67.0

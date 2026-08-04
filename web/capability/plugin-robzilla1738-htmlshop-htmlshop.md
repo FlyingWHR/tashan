@@ -7,7 +7,7 @@
 - tashan id: plugin:robzilla1738/htmlshop/htmlshop
 - Source: https://github.com/robzilla1738/htmlshop
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 33.0 / 100
 - Adoption: 18.0
 - Upkeep: 50.0

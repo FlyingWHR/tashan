@@ -7,7 +7,7 @@
 - tashan id: plugin:varnan-tech/opendirectory/opendirectory
 - Source: https://github.com/Varnan-Tech/opendirectory
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 70.0 / 100
 - Adoption: 43.0
 - Upkeep: 95.0

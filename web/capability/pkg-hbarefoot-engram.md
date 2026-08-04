@@ -8,7 +8,7 @@
 - Source: https://github.com/HBarefoot/engram
 - npm: https://www.npmjs.com/package/@hbarefoot/engram
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 54.0 / 100
 - Adoption: 29.0
 - Upkeep: 68.0

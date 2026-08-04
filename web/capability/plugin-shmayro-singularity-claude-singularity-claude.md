@@ -7,7 +7,7 @@
 - tashan id: plugin:shmayro/singularity-claude/singularity-claude
 - Source: https://github.com/Shmayro/singularity-claude
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 35.0 / 100
 - Adoption: 26.0
 - Upkeep: 48.0

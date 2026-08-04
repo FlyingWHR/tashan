@@ -7,7 +7,7 @@
 - tashan id: plugin:project-white-rabbit/peek-claude-plugin/peek
 - Source: https://github.com/Project-White-Rabbit/peek-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 41.0 / 100
 - Adoption: 7.0
 - Upkeep: 94.0

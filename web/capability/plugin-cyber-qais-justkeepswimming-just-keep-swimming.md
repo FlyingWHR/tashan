@@ -7,7 +7,7 @@
 - tashan id: plugin:cyber-qais/justkeepswimming/just-keep-swimming
 - Source: https://github.com/cyber-qais/justkeepswimming
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 29.0 / 100
 - Adoption: 16.0
 - Upkeep: 47.0

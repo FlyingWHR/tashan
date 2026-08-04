@@ -7,7 +7,7 @@
 - tashan id: plugin:willowryu/agent-handoff/agent-handoff
 - Source: https://github.com/WillowRyu/agent-handoff
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 54.0

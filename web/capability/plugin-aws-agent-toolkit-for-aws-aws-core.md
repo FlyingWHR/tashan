@@ -7,7 +7,7 @@
 - tashan id: plugin:aws/agent-toolkit-for-aws/aws-core
 - Source: https://github.com/aws/agent-toolkit-for-aws
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 46.0 / 100
 - Adoption: 11.0
 - Upkeep: 100.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:urbanairship/agent-tools/airship-agent-tools
 - Source: https://github.com/urbanairship/agent-tools
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 93.0

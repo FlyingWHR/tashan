@@ -8,7 +8,7 @@
 - Source: https://github.com/Samik081/mcp-adguard-home
 - npm: https://www.npmjs.com/package/@samik081/mcp-adguard-home
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 50.0 / 100
 - Adoption: 31.0
 - Upkeep: 64.0

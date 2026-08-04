@@ -7,7 +7,7 @@
 - tashan id: plugin:asaferdman23/career-brand-plugin/career-brand
 - Source: https://github.com/asaferdman23/career-brand-plugin
 - Type: plugin
-- Category: security
+- Category: productivity
 - tashan score: 30.0 / 100
 - Adoption: 17.0
 - Upkeep: 47.0

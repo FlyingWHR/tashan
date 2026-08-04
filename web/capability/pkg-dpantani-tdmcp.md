@@ -8,7 +8,7 @@
 - Source: https://github.com/Pantani/tdmcp
 - npm: https://www.npmjs.com/package/@dpantani/tdmcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 56.0 / 100
 - Adoption: 32.0
 - Upkeep: 67.0

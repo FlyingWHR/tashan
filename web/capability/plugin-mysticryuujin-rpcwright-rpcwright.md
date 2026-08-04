@@ -7,7 +7,7 @@
 - tashan id: plugin:mysticryuujin/rpcwright/rpcwright
 - Source: https://github.com/MysticRyuujin/rpcwright
 - Type: plugin
-- Category: productivity
+- Category: finance
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 61.0

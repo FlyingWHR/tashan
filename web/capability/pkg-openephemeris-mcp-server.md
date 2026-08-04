@@ -8,7 +8,7 @@
 - Source: https://github.com/openephemeris/openephemeris-MCP
 - npm: https://www.npmjs.com/package/@openephemeris/mcp-server
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 70.0 / 100
 - Adoption: 44.0
 - Upkeep: 73.0

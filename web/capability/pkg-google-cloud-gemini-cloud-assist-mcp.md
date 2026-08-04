@@ -8,7 +8,7 @@
 - Source: https://github.com/GoogleCloudPlatform/gemini-cloud-assist-mcp
 - npm: https://www.npmjs.com/package/@google-cloud/gemini-cloud-assist-mcp
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 32.0 / 100
 - Adoption: 35.0
 - Upkeep: 49.0

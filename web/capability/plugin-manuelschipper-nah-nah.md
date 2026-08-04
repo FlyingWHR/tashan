@@ -7,7 +7,7 @@
 - tashan id: plugin:manuelschipper/nah/nah
 - Source: https://github.com/manuelschipper/nah
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 71.0 / 100
 - Adoption: 42.0
 - Upkeep: 98.0

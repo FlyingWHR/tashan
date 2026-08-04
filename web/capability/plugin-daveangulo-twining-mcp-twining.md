@@ -7,7 +7,7 @@
 - tashan id: plugin:daveangulo/twining-mcp/twining
 - Source: https://github.com/daveangulo/twining-mcp
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 54.0 / 100
 - Adoption: 19.0
 - Upkeep: 98.0

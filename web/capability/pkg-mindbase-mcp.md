@@ -8,7 +8,7 @@
 - Source: https://github.com/frankchu91/mindbase
 - npm: https://www.npmjs.com/package/mindbase-mcp
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 51.0 / 100
 - Adoption: 27.0
 - Upkeep: 57.0

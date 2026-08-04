@@ -8,7 +8,7 @@
 - Source: https://github.com/dvd90/chassis
 - npm: https://www.npmjs.com/package/chassis-mcp
 - Type: npm
-- Category: devtools
+- Category: database
 - tashan score: 60.0 / 100
 - Adoption: 37.0
 - Upkeep: 58.0

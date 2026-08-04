@@ -8,7 +8,7 @@
 - Source: https://github.com/victorlee917/backlog
 - npm: https://www.npmjs.com/package/backlog-pay-proxy
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 39.0 / 100
 - Adoption: 13.0
 - Upkeep: 57.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:noahdunnagan/cafe/tech-stack
 - Source: https://github.com/noahdunnagan/cafe
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

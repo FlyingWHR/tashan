@@ -7,7 +7,7 @@
 - tashan id: plugin:stoating/clojure-clojure-mcp-skill/clojure-mcp
 - Source: https://github.com/stoating/clojure-clojure-mcp-skill
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

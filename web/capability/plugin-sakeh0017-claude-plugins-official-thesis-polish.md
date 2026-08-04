@@ -7,7 +7,7 @@
 - tashan id: plugin:sakeh0017/claude-plugins-official/thesis-polish
 - Source: https://github.com/SAKEH0017/claude-plugins-official
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 87.0

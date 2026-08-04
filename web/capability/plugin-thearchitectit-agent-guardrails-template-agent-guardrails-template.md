@@ -7,7 +7,7 @@
 - tashan id: plugin:thearchitectit/agent-guardrails-template/agent-guardrails-template
 - Source: https://github.com/TheArchitectit/agent-guardrails-template
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 66.0 / 100
 - Adoption: 31.0
 - Upkeep: 99.0

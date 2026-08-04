@@ -8,7 +8,7 @@
 - Source: https://github.com/Massed-Compute/massed-compute-mcp
 - npm: https://www.npmjs.com/package/massed-compute-mcp
 - Type: npm
-- Category: comms
+- Category: search
 - tashan score: 51.0 / 100
 - Adoption: 26.0
 - Upkeep: 60.0

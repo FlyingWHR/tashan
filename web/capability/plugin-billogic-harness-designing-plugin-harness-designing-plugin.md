@@ -7,7 +7,7 @@
 - tashan id: plugin:billogic/harness-designing-plugin/harness-designing-plugin
 - Source: https://github.com/BilLogic/harness-designing-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 51.0 / 100
 - Adoption: 17.0
 - Upkeep: 96.0

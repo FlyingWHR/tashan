@@ -7,7 +7,7 @@
 - tashan id: plugin:philipvanlewis/gemini-for-claude/gemini-for-claude
 - Source: https://github.com/philipvanlewis/gemini-for-claude
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

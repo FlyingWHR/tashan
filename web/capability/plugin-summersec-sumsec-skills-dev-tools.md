@@ -7,7 +7,7 @@
 - tashan id: plugin:summersec/sumsec-skills/dev-tools
 - Source: https://github.com/SummerSec/SumSec-Skills
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

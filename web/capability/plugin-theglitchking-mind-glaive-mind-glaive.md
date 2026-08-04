@@ -7,7 +7,7 @@
 - tashan id: plugin:theglitchking/mind-glaive/mind-glaive
 - Source: https://github.com/TheGlitchKing/mind-glaive
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 85.0

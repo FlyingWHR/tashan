@@ -7,7 +7,7 @@
 - tashan id: plugin:chujianyun/skills/openclaw-ops
 - Source: https://github.com/chujianyun/skills
 - Type: plugin
-- Category: security
+- Category: design
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 81.0

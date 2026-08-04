@@ -7,7 +7,7 @@
 - tashan id: plugin:chikeka/mmpm-cos/mmpm-cognitive-os
 - Source: https://github.com/chiKeka/mmpm-cos
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

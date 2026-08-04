@@ -8,7 +8,7 @@
 - Source: https://github.com/maxkle1nz/m1nd
 - npm: https://www.npmjs.com/package/@maxkle1nz/m1nd
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 63.0 / 100
 - Adoption: 35.0
 - Upkeep: 70.0

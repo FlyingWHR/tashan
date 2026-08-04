@@ -7,7 +7,7 @@
 - tashan id: plugin:gxfrighting/galeharnesscodingcli/coding-tutor
 - Source: https://github.com/GXFrighting/GaleHarnessCodingCLI
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

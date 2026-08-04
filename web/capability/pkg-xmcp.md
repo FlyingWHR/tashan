@@ -8,7 +8,7 @@
 - Source: https://github.com/basementstudio/xmcp
 - npm: https://www.npmjs.com/package/xmcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 74.0 / 100
 - Adoption: 59.0
 - Upkeep: 82.0

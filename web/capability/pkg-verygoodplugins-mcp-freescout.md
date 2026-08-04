@@ -8,7 +8,7 @@
 - Source: https://github.com/verygoodplugins/mcp-freescout
 - npm: https://www.npmjs.com/package/@verygoodplugins/mcp-freescout
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 51.0 / 100
 - Adoption: 33.0
 - Upkeep: 71.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:logrocket/logrocket-claude-plugin/logrocket
 - Source: https://github.com/LogRocket/logrocket-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 36.0 / 100
 - Adoption: 13.0
 - Upkeep: 57.0

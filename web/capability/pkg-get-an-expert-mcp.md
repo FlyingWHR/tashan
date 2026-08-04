@@ -8,7 +8,7 @@
 - Source: https://github.com/RohitJain1103/Get-An-Expert
 - npm: https://www.npmjs.com/package/get-an-expert-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 47.0 / 100
 - Adoption: 21.0
 - Upkeep: 62.0

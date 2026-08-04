@@ -8,7 +8,7 @@
 - Source: https://github.com/jibaoproxyofficial-pixel/serpjet-mcp
 - npm: https://www.npmjs.com/package/serpjet-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 44.0 / 100
 - Adoption: 21.0
 - Upkeep: 54.0

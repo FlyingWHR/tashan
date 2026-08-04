@@ -7,7 +7,7 @@
 - tashan id: plugin:credyt/ai-skills/credyt
 - Source: https://github.com/credyt/ai-skills
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 53.0 / 100
 - Adoption: 29.0
 - Upkeep: 88.0

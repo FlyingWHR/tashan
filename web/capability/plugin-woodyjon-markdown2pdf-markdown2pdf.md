@@ -7,7 +7,7 @@
 - tashan id: plugin:woodyjon/markdown2pdf/markdown2pdf
 - Source: https://github.com/woodyjon/markdown2pdf
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 15.0
 - Upkeep: not measured

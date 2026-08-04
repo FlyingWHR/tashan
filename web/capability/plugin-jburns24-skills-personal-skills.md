@@ -7,7 +7,7 @@
 - tashan id: plugin:jburns24/skills/personal-skills
 - Source: https://github.com/jburns24/skills
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

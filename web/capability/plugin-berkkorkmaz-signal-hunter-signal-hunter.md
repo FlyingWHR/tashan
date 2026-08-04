@@ -7,7 +7,7 @@
 - tashan id: plugin:berkkorkmaz/signal-hunter/signal-hunter
 - Source: https://github.com/berkkorkmaz/signal-hunter
 - Type: plugin
-- Category: comms
+- Category: data
 - tashan score: 31.0 / 100
 - Adoption: 18.0
 - Upkeep: 48.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:remylespagnol/haiku-scribe/haiku-scribe
 - Source: https://github.com/RemyLespagnol/haiku-scribe
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 60.0

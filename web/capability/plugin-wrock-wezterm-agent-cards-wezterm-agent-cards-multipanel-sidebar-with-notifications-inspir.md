@@ -7,7 +7,7 @@
 - tashan id: plugin:wrock/wezterm-agent-cards/wezterm-agent-cards-multipanel-sidebar-with-notifications-inspir
 - Source: https://github.com/wrock/wezterm-agent-cards
 - Type: plugin
-- Category: productivity
+- Category: finance
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

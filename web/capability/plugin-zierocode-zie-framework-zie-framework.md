@@ -7,7 +7,7 @@
 - tashan id: plugin:zierocode/zie-framework/zie-framework
 - Source: https://github.com/zierocode/zie-framework
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

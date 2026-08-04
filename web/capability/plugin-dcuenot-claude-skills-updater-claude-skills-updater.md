@@ -7,7 +7,7 @@
 - tashan id: plugin:dcuenot/claude-skills-updater/claude-skills-updater
 - Source: https://github.com/dcuenot/claude-skills-updater
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

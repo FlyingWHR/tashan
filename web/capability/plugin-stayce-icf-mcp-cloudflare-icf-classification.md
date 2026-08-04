@@ -7,7 +7,7 @@
 - tashan id: plugin:stayce/icf-mcp-cloudflare/icf-classification
 - Source: https://github.com/stayce/icf-mcp-cloudflare
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 37.0 / 100
 - Adoption: 11.0
 - Upkeep: 60.0

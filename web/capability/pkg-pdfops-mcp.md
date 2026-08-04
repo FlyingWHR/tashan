@@ -8,7 +8,7 @@
 - Source: https://github.com/pdfops/pdfops-mcp
 - npm: https://www.npmjs.com/package/pdfops-mcp
 - Type: npm
-- Category: productivity
+- Category: browser
 - tashan score: 47.0 / 100
 - Adoption: 23.0
 - Upkeep: 55.0

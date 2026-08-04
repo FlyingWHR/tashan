@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/cli
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 65.0 / 100
 - Adoption: 38.0
 - Upkeep: 72.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/wuzenghai616-lang/goldbean
 - npm: https://www.npmjs.com/package/goldbean-mcp
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 60.0 / 100
 - Adoption: 33.0
 - Upkeep: 69.0

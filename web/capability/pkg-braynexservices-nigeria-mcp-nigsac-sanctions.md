@@ -8,7 +8,7 @@
 - Source: https://github.com/Braynexservices/nigeria-mcp
 - npm: https://www.npmjs.com/package/@braynexservices/nigeria-mcp-nigsac-sanctions
 - Type: npm
-- Category: data
+- Category: security
 - tashan score: 55.0 / 100
 - Adoption: 34.0
 - Upkeep: 55.0

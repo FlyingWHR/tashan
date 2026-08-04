@@ -8,7 +8,7 @@
 - Source: https://github.com/Kevinx702/agentcite
 - npm: https://www.npmjs.com/package/agentcite-mcp
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 44.0 / 100
 - Adoption: 23.0
 - Upkeep: 52.0

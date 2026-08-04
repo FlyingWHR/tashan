@@ -7,7 +7,7 @@
 - tashan id: plugin:nessos666/context-bench/context-bench
 - Source: https://github.com/nessos666/context-bench
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 40.0 / 100
 - Adoption: 13.0
 - Upkeep: 74.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/formio/uag
 - npm: https://www.npmjs.com/package/@formio/uag
 - Type: npm
-- Category: ai
+- Category: comms
 - tashan score: 74.0 / 100
 - Adoption: 43.0
 - Upkeep: 99.0

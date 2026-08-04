@@ -7,7 +7,7 @@
 - tashan id: plugin:remotivated/job-hunt-skills/job-hunt-skills
 - Source: https://github.com/Remotivated/job-hunt-skills
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 46.0 / 100
 - Adoption: 15.0
 - Upkeep: 80.0

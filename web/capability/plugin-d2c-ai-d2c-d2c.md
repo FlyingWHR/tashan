@@ -7,7 +7,7 @@
 - tashan id: plugin:d2c-ai/d2c/d2c
 - Source: https://github.com/d2c-ai/d2c
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 40.0 / 100
 - Adoption: 19.0
 - Upkeep: 58.0

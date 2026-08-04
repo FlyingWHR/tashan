@@ -7,7 +7,7 @@
 - tashan id: plugin:mobazha/mobazha-skills/mobazha
 - Source: https://github.com/mobazha/mobazha-skills
 - Type: plugin
-- Category: finance
+- Category: cloud
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

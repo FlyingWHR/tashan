@@ -7,7 +7,7 @@
 - tashan id: plugin:dietrichgebert/ponytail/ponytail
 - Source: https://github.com/DietrichGebert/ponytail
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 81.0 / 100
 - Adoption: 67.0
 - Upkeep: 97.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:zhanghandong/makepad-skills/makepad-skills
 - Source: https://github.com/ZhangHanDong/makepad-skills
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 45.0 / 100
 - Adoption: 44.0
 - Upkeep: 48.0

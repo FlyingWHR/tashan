@@ -7,7 +7,7 @@
 - tashan id: plugin:alexxenn/scaffold/scaffold
 - Source: https://github.com/alexxenn/scaffold
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

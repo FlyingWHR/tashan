@@ -7,7 +7,7 @@
 - tashan id: plugin:btachinardi/church/church
 - Source: https://github.com/btachinardi/church
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 43.0 / 100
 - Adoption: 30.0
 - Upkeep: 66.0

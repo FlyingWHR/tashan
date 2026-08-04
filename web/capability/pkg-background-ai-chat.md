@@ -8,7 +8,7 @@
 - Source: https://github.com/misternay/mcp-sakana-chat
 - npm: https://www.npmjs.com/package/background-ai-chat
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 46.0 / 100
 - Adoption: 24.0
 - Upkeep: 53.0

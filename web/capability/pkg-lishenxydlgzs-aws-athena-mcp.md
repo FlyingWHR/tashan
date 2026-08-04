@@ -8,7 +8,7 @@
 - Source: https://github.com/lishenxydlgzs/aws-athena-mcp
 - npm: https://www.npmjs.com/package/@lishenxydlgzs/aws-athena-mcp
 - Type: npm
-- Category: other
+- Category: database
 - tashan score: 19.0 / 100
 - Adoption: 41.0
 - Upkeep: 28.0

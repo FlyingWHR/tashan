@@ -7,7 +7,7 @@
 - tashan id: plugin:gemini-cli-extensions/oracledb/oracledb
 - Source: https://github.com/gemini-cli-extensions/oracledb
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 60.0 / 100
 - Adoption: 25.0
 - Upkeep: 99.0

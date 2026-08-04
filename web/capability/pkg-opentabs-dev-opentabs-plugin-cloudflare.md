@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/opentabs-plugin-cloudflare
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 59.0 / 100
 - Adoption: 32.0
 - Upkeep: 68.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:adelaidasofia/claude-meeting-todos/claude-meeting-todos
 - Source: https://github.com/adelaidasofia/claude-meeting-todos
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 81.0

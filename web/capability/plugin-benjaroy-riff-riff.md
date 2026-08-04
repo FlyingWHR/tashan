@@ -7,7 +7,7 @@
 - tashan id: plugin:benjaroy/riff/riff
 - Source: https://github.com/benjaroy/riff
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 41.0 / 100
 - Adoption: 26.0
 - Upkeep: 66.0

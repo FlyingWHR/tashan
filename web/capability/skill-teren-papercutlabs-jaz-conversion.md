@@ -7,7 +7,7 @@
 - tashan id: skill:teren-papercutlabs/jaz-conversion
 - Source: https://github.com/teren-papercutlabs/jaz-ai
 - Type: skill
-- Category: other
+- Category: data
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

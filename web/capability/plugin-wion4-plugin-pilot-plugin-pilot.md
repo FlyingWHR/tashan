@@ -7,7 +7,7 @@
 - tashan id: plugin:wion4/plugin-pilot/plugin-pilot
 - Source: https://github.com/wion4/plugin-pilot
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

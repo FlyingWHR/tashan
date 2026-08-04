@@ -7,7 +7,7 @@
 - tashan id: plugin:jucor/clojure-lsp-plugin/clojure-lsp
 - Source: https://github.com/jucor/clojure-lsp-plugin
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 23.0 / 100
 - Adoption: 7.0
 - Upkeep: 44.0

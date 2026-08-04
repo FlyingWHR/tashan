@@ -8,7 +8,7 @@
 - Source: https://github.com/minhoyoo-iotrust/WAIaaS
 - npm: https://www.npmjs.com/package/@waiaas/mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 45.0 / 100
 - Adoption: 30.0
 - Upkeep: 62.0

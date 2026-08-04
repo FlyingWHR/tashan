@@ -7,7 +7,7 @@
 - tashan id: plugin:codeaholicguy/ai-devkit/ai-devkit
 - Source: https://github.com/codeaholicguy/ai-devkit
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 74.0 / 100
 - Adoption: 49.0
 - Upkeep: 99.0

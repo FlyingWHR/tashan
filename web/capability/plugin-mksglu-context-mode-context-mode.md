@@ -7,7 +7,7 @@
 - tashan id: plugin:mksglu/context-mode/context-mode
 - Source: https://github.com/mksglu/context-mode
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 80.0 / 100
 - Adoption: 63.0
 - Upkeep: 99.0

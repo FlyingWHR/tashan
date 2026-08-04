@@ -7,7 +7,7 @@
 - tashan id: plugin:jpvt1977/n360-marketplace/n360-app-release
 - Source: https://github.com/JPVT1977/n360-marketplace
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

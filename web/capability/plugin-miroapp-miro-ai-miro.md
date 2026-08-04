@@ -7,7 +7,7 @@
 - tashan id: plugin:miroapp/miro-ai/miro
 - Source: https://github.com/miroapp/miro-ai
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 66.0 / 100
 - Adoption: 39.0
 - Upkeep: 93.0

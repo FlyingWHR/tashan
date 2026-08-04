@@ -7,7 +7,7 @@
 - tashan id: plugin:anipotts/cc/cc
 - Source: https://github.com/anipotts/cc
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 20.0 / 100
 - Adoption: 13.0
 - Upkeep: 14.0

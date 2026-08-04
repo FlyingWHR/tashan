@@ -7,7 +7,7 @@
 - tashan id: plugin:sworddut/cc-boost/cc-boost
 - Source: https://github.com/sworddut/cc-boost
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

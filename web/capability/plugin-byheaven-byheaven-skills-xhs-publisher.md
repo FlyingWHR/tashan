@@ -7,7 +7,7 @@
 - tashan id: plugin:byheaven/byheaven-skills/xhs-publisher
 - Source: https://github.com/byheaven/byheaven-skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 82.0

@@ -7,7 +7,7 @@
 - tashan id: skill:hyperb1iss/codex-imagegen
 - Source: https://github.com/hyperb1iss/hyperskills
 - Type: skill
-- Category: other
+- Category: design
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

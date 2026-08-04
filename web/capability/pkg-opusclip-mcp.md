@@ -8,7 +8,7 @@
 - Source: https://github.com/opus-pro/opusclip-mcp
 - npm: https://www.npmjs.com/package/@opusclip/mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 44.0 / 100
 - Adoption: 24.0
 - Upkeep: 50.0

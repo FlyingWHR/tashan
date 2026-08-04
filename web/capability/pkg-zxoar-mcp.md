@@ -8,7 +8,7 @@
 - Source: https://github.com/lockwood-launch/lockwood-protocol
 - npm: https://www.npmjs.com/package/zxoar-mcp
 - Type: npm
-- Category: finance
+- Category: search
 - tashan score: 53.0 / 100
 - Adoption: 28.0
 - Upkeep: 59.0

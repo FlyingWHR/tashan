@@ -7,7 +7,7 @@
 - tashan id: plugin:ndjordjevic/pinrag-plugin/pinrag
 - Source: https://github.com/ndjordjevic/pinrag-plugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

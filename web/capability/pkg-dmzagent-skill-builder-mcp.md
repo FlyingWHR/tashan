@@ -8,7 +8,7 @@
 - Source: https://github.com/praeceptor-thesis/skill-builder-landing
 - npm: https://www.npmjs.com/package/@dmzagent/skill-builder-mcp
 - Type: npm
-- Category: comms
+- Category: devtools
 - tashan score: 46.0 / 100
 - Adoption: 28.0
 - Upkeep: 51.0

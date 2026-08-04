@@ -7,7 +7,7 @@
 - tashan id: plugin:d0gesec/pownie/pownie
 - Source: https://github.com/d0gesec/pownie
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 25.0
 - Upkeep: 46.0

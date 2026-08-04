@@ -8,7 +8,7 @@
 - Source: https://github.com/PhilflowIO/dav-mcp
 - npm: https://www.npmjs.com/package/dav-mcp
 - Type: npm
-- Category: comms
+- Category: productivity
 - tashan score: 39.0 / 100
 - Adoption: 28.0
 - Upkeep: 52.0

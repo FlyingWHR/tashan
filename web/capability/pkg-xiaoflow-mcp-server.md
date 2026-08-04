@@ -8,7 +8,7 @@
 - Source: https://github.com/xiaoq-in/xiaoflow-mcp
 - npm: https://www.npmjs.com/package/xiaoflow-mcp-server
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 48.0 / 100
 - Adoption: 22.0
 - Upkeep: 59.0

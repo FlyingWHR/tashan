@@ -7,7 +7,7 @@
 - tashan id: plugin:livlign/claude-skills/repo-visuals
 - Source: https://github.com/livlign/claude-skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

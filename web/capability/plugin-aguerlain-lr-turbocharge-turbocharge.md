@@ -7,7 +7,7 @@
 - tashan id: plugin:aguerlain-lr/turbocharge/turbocharge
 - Source: https://github.com/aguerlain-lr/turbocharge
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 32.0 / 100
 - Adoption: 13.0
 - Upkeep: 53.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/AJSMonty/adobe-mcp
 - npm: https://www.npmjs.com/package/@ajsmonty/adobe-mcp
 - Type: npm
-- Category: other
+- Category: files
 - tashan score: 49.0 / 100
 - Adoption: 26.0
 - Upkeep: 56.0

@@ -7,7 +7,7 @@
 - tashan id: skill:Marazii/citation-formatter
 - Source: https://github.com/Marazii/research-co-pilot
 - Type: skill
-- Category: other
+- Category: docs
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

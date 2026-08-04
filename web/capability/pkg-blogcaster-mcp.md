@@ -8,7 +8,7 @@
 - Source: https://github.com/BamaCharanChhandogi/BlogCaster-MCP
 - npm: https://www.npmjs.com/package/blogcaster-mcp
 - Type: npm
-- Category: productivity
+- Category: browser
 - tashan score: 26.0 / 100
 - Adoption: 24.0
 - Upkeep: 37.0

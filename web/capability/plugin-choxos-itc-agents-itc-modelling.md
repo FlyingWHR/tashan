@@ -7,7 +7,7 @@
 - tashan id: plugin:choxos/itc-agents/itc-modelling
 - Source: https://github.com/choxos/ITC-agents
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 18.0 / 100
 - Adoption: 7.0
 - Upkeep: 37.0

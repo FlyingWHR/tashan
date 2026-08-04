@@ -7,7 +7,7 @@
 - tashan id: plugin:nathanmaine/memoriant-temporal-planner-skill/memoriant-temporal-planner-skill
 - Source: https://github.com/NathanMaine/memoriant-temporal-planner-skill
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 11.0
 - Upkeep: 47.0

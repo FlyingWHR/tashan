@@ -7,7 +7,7 @@
 - tashan id: plugin:superscript/mvps/mvps
 - Source: https://github.com/superscript/mvps
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:kaademos/secure-sdlc-agents/secure-sdlc-agents
 - Source: https://github.com/Kaademos/secure-sdlc-agents
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 46.0 / 100
 - Adoption: 21.0
 - Upkeep: 63.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:revathikbose/business-card-generator/business-card-generator
 - Source: https://github.com/revathikbose/business-card-generator
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 22.0 / 100
 - Adoption: 7.0
 - Upkeep: 43.0

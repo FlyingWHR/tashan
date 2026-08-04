@@ -7,7 +7,7 @@
 - tashan id: plugin:googlechrome/modern-web-guidance/modern-web-guidance
 - Source: https://github.com/GoogleChrome/modern-web-guidance
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 74.0 / 100
 - Adoption: 49.0
 - Upkeep: 98.0

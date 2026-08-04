@@ -7,7 +7,7 @@
 - tashan id: plugin:val-town/plugins/valtown
 - Source: https://github.com/val-town/plugins
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 55.0 / 100
 - Adoption: 20.0
 - Upkeep: 98.0

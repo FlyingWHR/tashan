@@ -8,7 +8,7 @@
 - Source: https://github.com/basementstudio/xmcp
 - npm: https://www.npmjs.com/package/init-xmcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 50.0 / 100
 - Adoption: 20.0
 - Upkeep: 82.0

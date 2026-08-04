@@ -8,7 +8,7 @@
 - Source: https://github.com/fstamatelopoulos/cerefox
 - npm: https://www.npmjs.com/package/@cerefox/memory
 - Type: npm
-- Category: other
+- Category: files
 - tashan score: 61.0 / 100
 - Adoption: 31.0
 - Upkeep: 73.0

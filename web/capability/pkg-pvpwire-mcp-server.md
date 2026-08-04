@@ -7,7 +7,7 @@
 - tashan id: pkg:@pvpwire/mcp-server
 - npm: https://www.npmjs.com/package/@pvpwire/mcp-server
 - Type: npm
-- Category: devtools
+- Category: search
 - tashan score: 57.0 / 100
 - Adoption: 32.0
 - Upkeep: 64.0

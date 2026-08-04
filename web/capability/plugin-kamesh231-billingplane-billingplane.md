@@ -7,7 +7,7 @@
 - tashan id: plugin:kamesh231/billingplane/billingplane
 - Source: https://github.com/kamesh231/billingplane
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

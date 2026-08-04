@@ -7,7 +7,7 @@
 - tashan id: plugin:davidkc0/roomie-kit-plugins/roomie-kit
 - Source: https://github.com/davidkc0/roomie-kit-plugins
 - Type: plugin
-- Category: database
+- Category: cloud
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 52.0

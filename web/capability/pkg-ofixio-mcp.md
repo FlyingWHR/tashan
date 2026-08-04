@@ -8,7 +8,7 @@
 - Source: https://github.com/AllTerrainDeveloper/ofixio-mcp
 - npm: https://www.npmjs.com/package/ofixio-mcp
 - Type: npm
-- Category: search
+- Category: productivity
 - tashan score: 34.0 / 100
 - Adoption: 23.0
 - Upkeep: 45.0

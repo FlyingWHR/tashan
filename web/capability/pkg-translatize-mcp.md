@@ -8,7 +8,7 @@
 - Source: https://github.com/Translatize/integrations
 - npm: https://www.npmjs.com/package/@translatize/mcp
 - Type: npm
-- Category: comms
+- Category: devtools
 - tashan score: 49.0 / 100
 - Adoption: 26.0
 - Upkeep: 55.0

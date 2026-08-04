@@ -7,7 +7,7 @@
 - tashan id: plugin:mnemox-ai/tradememory-plugin/tradememory
 - Source: https://github.com/mnemox-ai/tradememory-plugin
 - Type: plugin
-- Category: finance
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 11.0
 - Upkeep: 46.0

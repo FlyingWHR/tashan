@@ -8,7 +8,7 @@
 - Source: https://github.com/urlsnapdev/urlsnap-mcp
 - npm: https://www.npmjs.com/package/urlsnap-mcp
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 35.0 / 100
 - Adoption: 22.0
 - Upkeep: 47.0

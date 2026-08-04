@@ -7,7 +7,7 @@
 - tashan id: plugin:nathankim0/clean-architecture-skills/kent-beck-style
 - Source: https://github.com/nathankim0/clean-architecture-skills
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 21.0 / 100
 - Adoption: 7.0
 - Upkeep: 41.0

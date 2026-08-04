@@ -8,7 +8,7 @@
 - Source: https://github.com/runapi-ai/hailuo-mcp
 - npm: https://www.npmjs.com/package/@runapi.ai/hailuo-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 58.0 / 100
 - Adoption: 32.0
 - Upkeep: 64.0

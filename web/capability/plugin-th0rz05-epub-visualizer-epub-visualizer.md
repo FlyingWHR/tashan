@@ -7,7 +7,7 @@
 - tashan id: plugin:th0rz05/epub-visualizer/epub-visualizer
 - Source: https://github.com/th0rz05/epub-visualizer
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 36.0 / 100
 - Adoption: 13.0
 - Upkeep: 58.0

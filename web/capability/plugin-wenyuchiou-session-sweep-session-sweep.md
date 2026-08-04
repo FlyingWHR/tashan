@@ -7,7 +7,7 @@
 - tashan id: plugin:wenyuchiou/session-sweep/session-sweep
 - Source: https://github.com/WenyuChiou/session-sweep
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 32.0 / 100
 - Adoption: 13.0
 - Upkeep: 64.0

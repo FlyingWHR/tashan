@@ -7,7 +7,7 @@
 - tashan id: plugin:elgo34/pmm-opportunity/pmm-opportunity
 - Source: https://github.com/elgo34/pmm-opportunity
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

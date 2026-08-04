@@ -7,7 +7,7 @@
 - tashan id: plugin:agent-sh/repo-intel/repo-intel
 - Source: https://github.com/agent-sh/repo-intel
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 15.0
 - Upkeep: 63.0

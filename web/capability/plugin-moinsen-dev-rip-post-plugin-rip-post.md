@@ -7,7 +7,7 @@
 - tashan id: plugin:moinsen-dev/rip-post-plugin/rip-post
 - Source: https://github.com/moinsen-dev/rip-post-plugin
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

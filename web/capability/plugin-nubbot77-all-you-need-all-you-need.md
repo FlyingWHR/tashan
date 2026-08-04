@@ -7,7 +7,7 @@
 - tashan id: plugin:nubbot77/all-you-need/all-you-need
 - Source: https://github.com/nubbot77/all-you-need
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 62.0

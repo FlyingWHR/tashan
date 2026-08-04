@@ -7,7 +7,7 @@
 - tashan id: plugin:sonarsource/sonarqube-agent-plugins/sonarqube
 - Source: https://github.com/SonarSource/sonarqube-agent-plugins
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 69.0 / 100
 - Adoption: 37.0
 - Upkeep: 97.0

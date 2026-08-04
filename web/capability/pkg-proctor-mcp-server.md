@@ -8,7 +8,7 @@
 - Source: https://github.com/pulsemcp/mcp-servers
 - npm: https://www.npmjs.com/package/proctor-mcp-server
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 45.0 / 100
 - Adoption: 23.0
 - Upkeep: 60.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:tellang/claude-buddy-reroll/buddy-reroll
 - Source: https://github.com/tellang/claude-buddy-reroll
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 35.0 / 100
 - Adoption: 15.0
 - Upkeep: 66.0

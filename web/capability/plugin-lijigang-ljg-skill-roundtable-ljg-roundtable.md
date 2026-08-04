@@ -7,7 +7,7 @@
 - tashan id: plugin:lijigang/ljg-skill-roundtable/ljg-roundtable
 - Source: https://github.com/lijigang/ljg-skill-roundtable
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 40.0 / 100
 - Adoption: 38.0
 - Upkeep: 47.0

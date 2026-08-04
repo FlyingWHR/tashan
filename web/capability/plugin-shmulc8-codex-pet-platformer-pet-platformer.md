@@ -7,7 +7,7 @@
 - tashan id: plugin:shmulc8/codex-pet-platformer/pet-platformer
 - Source: https://github.com/shmulc8/codex-pet-platformer
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 55.0

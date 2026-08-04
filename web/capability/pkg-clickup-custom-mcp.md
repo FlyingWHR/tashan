@@ -7,7 +7,7 @@
 - tashan id: pkg:clickup-custom-mcp
 - npm: https://www.npmjs.com/package/clickup-custom-mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 62.0 / 100
 - Adoption: 38.0
 - Upkeep: 61.0

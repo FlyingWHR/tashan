@@ -8,7 +8,7 @@
 - Source: https://github.com/stellayazilim/mcp-starlight
 - npm: https://www.npmjs.com/package/@stellayazilim/mcp-starlight
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 48.0 / 100
 - Adoption: 23.0
 - Upkeep: 57.0

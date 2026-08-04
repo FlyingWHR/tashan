@@ -8,7 +8,7 @@
 - Source: https://github.com/Merit-Systems/agentcash
 - npm: https://www.npmjs.com/package/agentcash
 - Type: npm
-- Category: security
+- Category: design
 - tashan score: 70.0 / 100
 - Adoption: 47.0
 - Upkeep: 73.0

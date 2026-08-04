@@ -7,7 +7,7 @@
 - tashan id: plugin:nyldn/claude-octopus/octo
 - Source: https://github.com/nyldn/claude-octopus
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 78.0 / 100
 - Adoption: 58.0
 - Upkeep: 99.0

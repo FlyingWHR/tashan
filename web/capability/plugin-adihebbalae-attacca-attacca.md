@@ -7,7 +7,7 @@
 - tashan id: plugin:adihebbalae/attacca/attacca
 - Source: https://github.com/adihebbalae/Attacca
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 38.0 / 100
 - Adoption: 13.0
 - Upkeep: 60.0

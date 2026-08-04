@@ -7,7 +7,7 @@
 - tashan id: plugin:logospatrum/patristic-plugin/patristic
 - Source: https://github.com/logospatrum/patristic-plugin
 - Type: plugin
-- Category: productivity
+- Category: database
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

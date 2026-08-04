@@ -8,7 +8,7 @@
 - Source: https://github.com/MukundaKatta/agentfit-mcp
 - npm: https://www.npmjs.com/package/@mukundakatta/agentfit-mcp
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 36.0 / 100
 - Adoption: 24.0
 - Upkeep: 43.0

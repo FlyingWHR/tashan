@@ -7,7 +7,7 @@
 - tashan id: pkg:@tilfin/mcp-serverless
 - npm: https://www.npmjs.com/package/@tilfin/mcp-serverless
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 14.0 / 100
 - Adoption: 26.0
 - Upkeep: 27.0

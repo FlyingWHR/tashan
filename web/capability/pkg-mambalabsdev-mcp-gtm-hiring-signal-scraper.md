@@ -8,7 +8,7 @@
 - Source: https://github.com/mambalabsdev/mcp-gtm-hiring-signal-scraper
 - npm: https://www.npmjs.com/package/@mambalabsdev/mcp-gtm-hiring-signal-scraper
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 48.0 / 100
 - Adoption: 27.0
 - Upkeep: 58.0

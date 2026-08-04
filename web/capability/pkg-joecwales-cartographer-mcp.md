@@ -8,7 +8,7 @@
 - Source: https://github.com/Metatronsdoob369/cartographer-mcp
 - npm: https://www.npmjs.com/package/@joecwales/cartographer-mcp
 - Type: npm
-- Category: devtools
+- Category: database
 - tashan score: 40.0 / 100
 - Adoption: 24.0
 - Upkeep: 50.0

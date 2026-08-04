@@ -7,7 +7,7 @@
 - tashan id: plugin:opentrace/opentrace-cli/opentrace
 - Source: https://github.com/opentrace/opentrace-cli
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 80.0

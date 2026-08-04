@@ -8,7 +8,7 @@
 - Source: https://github.com/NaNMesh/nan-forget
 - npm: https://www.npmjs.com/package/nan-forget
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 42.0 / 100
 - Adoption: 29.0
 - Upkeep: 58.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Ship-With-AI/stackmap-mcp
 - npm: https://www.npmjs.com/package/@ship-with-ai/stackmap-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 48.0 / 100
 - Adoption: 24.0
 - Upkeep: 55.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/BasilSkyWalk/parecode
 - npm: https://www.npmjs.com/package/parecode
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 55.0 / 100
 - Adoption: 33.0
 - Upkeep: 67.0

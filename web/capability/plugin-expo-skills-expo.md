@@ -7,7 +7,7 @@
 - tashan id: plugin:expo/skills/expo
 - Source: https://github.com/expo/skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 77.0 / 100
 - Adoption: 55.0
 - Upkeep: 99.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:avinashp/agentsatlas/agentsatlas
 - Source: https://github.com/AvinashP/AgentsAtlas
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 35.0 / 100
 - Adoption: 19.0
 - Upkeep: 52.0

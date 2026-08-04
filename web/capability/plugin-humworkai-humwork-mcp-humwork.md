@@ -7,7 +7,7 @@
 - tashan id: plugin:humworkai/humwork-mcp/humwork
 - Source: https://github.com/humworkai/humwork-mcp
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 43.0 / 100
 - Adoption: 11.0
 - Upkeep: 92.0

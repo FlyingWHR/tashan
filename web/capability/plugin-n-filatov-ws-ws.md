@@ -7,7 +7,7 @@
 - tashan id: plugin:n-filatov/ws/ws
 - Source: https://github.com/n-filatov/ws
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 15.0
 - Upkeep: 62.0

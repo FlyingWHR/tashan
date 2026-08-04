@@ -8,7 +8,7 @@
 - Source: https://github.com/AgentValet/AgentValet
 - npm: https://www.npmjs.com/package/@agentvalet/mcp-broker
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 16.0
 - Upkeep: 53.0

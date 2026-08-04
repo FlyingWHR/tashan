@@ -7,7 +7,7 @@
 - tashan id: plugin:duylam/claude-code-engineering-assembly/atlassian-sso
 - Source: https://github.com/duylam/claude-code-engineering-assembly
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

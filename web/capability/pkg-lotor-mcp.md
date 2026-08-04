@@ -8,7 +8,7 @@
 - Source: https://github.com/githubscum/lotor
 - npm: https://www.npmjs.com/package/lotor-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 50.0 / 100
 - Adoption: 25.0
 - Upkeep: 57.0

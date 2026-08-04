@@ -7,7 +7,7 @@
 - tashan id: plugin:getaero-io/deepline-plugins/deepline
 - Source: https://github.com/getaero-io/deepline-plugins
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 44.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

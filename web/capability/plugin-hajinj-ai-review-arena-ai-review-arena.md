@@ -7,7 +7,7 @@
 - tashan id: plugin:hajinj/ai-review-arena/ai-review-arena
 - Source: https://github.com/HajinJ/ai-review-arena
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 33.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

@@ -8,7 +8,7 @@
 - Source: https://github.com/Jrigada/foundry-zksync-mcp
 - npm: https://www.npmjs.com/package/foundry-zksync-mcp
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 32.0 / 100
 - Adoption: 24.0
 - Upkeep: 45.0

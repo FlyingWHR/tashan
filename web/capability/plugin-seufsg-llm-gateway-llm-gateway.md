@@ -7,7 +7,7 @@
 - tashan id: plugin:seufsg/llm-gateway/llm-gateway
 - Source: https://github.com/SEUFSG/llm-gateway
 - Type: plugin
-- Category: ai
+- Category: devtools
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

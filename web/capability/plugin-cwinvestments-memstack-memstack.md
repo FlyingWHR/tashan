@@ -7,7 +7,7 @@
 - tashan id: plugin:cwinvestments/memstack/memstack
 - Source: https://github.com/cwinvestments/memstack
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 67.0 / 100
 - Adoption: 41.0
 - Upkeep: 80.0

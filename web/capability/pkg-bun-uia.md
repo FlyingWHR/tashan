@@ -8,7 +8,7 @@
 - Source: https://github.com/ObscuritySRL/bun-win32
 - npm: https://www.npmjs.com/package/bun-uia
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 51.0 / 100
 - Adoption: 30.0
 - Upkeep: 63.0

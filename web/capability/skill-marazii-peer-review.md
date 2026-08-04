@@ -7,7 +7,7 @@
 - tashan id: skill:Marazii/peer-review
 - Source: https://github.com/Marazii/research-co-pilot
 - Type: skill
-- Category: other
+- Category: ai
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

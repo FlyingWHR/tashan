@@ -8,7 +8,7 @@
 - Source: https://github.com/sowonlabs/nestjs-mcp-adapter
 - npm: https://www.npmjs.com/package/@sowonai/nestjs-mcp-adapter
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 18.0 / 100
 - Adoption: 29.0
 - Upkeep: 32.0

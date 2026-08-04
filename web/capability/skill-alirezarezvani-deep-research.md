@@ -7,7 +7,7 @@
 - tashan id: skill:alirezarezvani/deep-research
 - Source: https://github.com/alirezarezvani/claude-skills
 - Type: skill
-- Category: productivity
+- Category: ai
 - tashan score: 49.0 / 100
 - Adoption: 14.0
 - Upkeep: 97.0

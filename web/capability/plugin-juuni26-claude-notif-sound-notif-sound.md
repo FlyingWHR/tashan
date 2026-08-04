@@ -7,7 +7,7 @@
 - tashan id: plugin:juuni26/claude-notif-sound/notif-sound
 - Source: https://github.com/juuni26/claude-notif-sound
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 13.0
 - Upkeep: 48.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:bighaeil/claude-todo-mirror/claude-todo-mirror
 - Source: https://github.com/bighaeil/claude-todo-mirror
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

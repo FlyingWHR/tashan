@@ -7,7 +7,7 @@
 - tashan id: plugin:geoff-lew/numeric-toolkit/numeric-mcp-toolkit
 - Source: https://github.com/geoff-lew/numeric-toolkit
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 37.0 / 100
 - Adoption: 11.0
 - Upkeep: 72.0

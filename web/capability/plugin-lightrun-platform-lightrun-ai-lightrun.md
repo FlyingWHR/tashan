@@ -7,7 +7,7 @@
 - tashan id: plugin:lightrun-platform/lightrun-ai/lightrun
 - Source: https://github.com/lightrun-platform/lightrun-ai
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 61.0 / 100
 - Adoption: 26.0
 - Upkeep: 99.0

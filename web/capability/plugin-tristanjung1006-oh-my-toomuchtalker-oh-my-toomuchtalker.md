@@ -7,7 +7,7 @@
 - tashan id: plugin:tristanjung1006/oh-my-toomuchtalker/oh-my-toomuchtalker
 - Source: https://github.com/tristanjung1006/oh-my-toomuchtalker
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 23.0 / 100
 - Adoption: 7.0
 - Upkeep: 45.0

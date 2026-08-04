@@ -8,7 +8,7 @@
 - Source: https://github.com/eztexting/mcp-server
 - npm: https://www.npmjs.com/package/@eztexting/mcp-server
 - Type: npm
-- Category: comms
+- Category: productivity
 - tashan score: 45.0 / 100
 - Adoption: 32.0
 - Upkeep: 53.0

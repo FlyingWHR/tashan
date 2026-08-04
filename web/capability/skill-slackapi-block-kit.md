@@ -7,7 +7,7 @@
 - tashan id: skill:slackapi/block-kit
 - Source: https://github.com/slackapi/slack-mcp-plugin
 - Type: skill
-- Category: other
+- Category: design
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

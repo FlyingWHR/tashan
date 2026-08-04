@@ -8,7 +8,7 @@
 - Source: https://github.com/sator-imaging/suggest-skills
 - npm: https://www.npmjs.com/package/suggest-skills
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 50.0 / 100
 - Adoption: 22.0
 - Upkeep: 70.0

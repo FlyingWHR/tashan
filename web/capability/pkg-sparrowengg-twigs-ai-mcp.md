@@ -7,7 +7,7 @@
 - tashan id: pkg:@sparrowengg/twigs-ai-mcp
 - npm: https://www.npmjs.com/package/@sparrowengg/twigs-ai-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 39.0 / 100
 - Adoption: 35.0
 - Upkeep: 69.0

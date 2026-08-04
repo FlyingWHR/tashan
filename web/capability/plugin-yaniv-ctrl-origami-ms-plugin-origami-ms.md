@@ -7,7 +7,7 @@
 - tashan id: plugin:yaniv-ctrl/origami-ms-plugin/origami-ms
 - Source: https://github.com/yaniv-ctrl/origami-ms-plugin
 - Type: plugin
-- Category: data
+- Category: productivity
 - tashan score: 27.0 / 100
 - Adoption: 11.0
 - Upkeep: 47.0

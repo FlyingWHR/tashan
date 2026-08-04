@@ -8,7 +8,7 @@
 - Source: https://github.com/MrRefactoring/atlassian-dc-mcp
 - npm: https://www.npmjs.com/package/bitbucket-datacenter-mcp
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 59.0 / 100
 - Adoption: 34.0
 - Upkeep: 63.0

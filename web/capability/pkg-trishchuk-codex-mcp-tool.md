@@ -8,7 +8,7 @@
 - Source: https://github.com/x51xxx/codex-mcp-tool
 - npm: https://www.npmjs.com/package/@trishchuk/codex-mcp-tool
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 57.0 / 100
 - Adoption: 32.0
 - Upkeep: 68.0

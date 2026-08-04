@@ -8,7 +8,7 @@
 - Source: https://github.com/GCTRL-TECH/platform
 - npm: https://www.npmjs.com/package/gctrl-mcp
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 56.0 / 100
 - Adoption: 35.0
 - Upkeep: 55.0

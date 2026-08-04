@@ -7,7 +7,7 @@
 - tashan id: plugin:sujithkrishnan-dev/prodmaster-ai/prodmaster-ai
 - Source: https://github.com/sujithkrishnan-dev/prodmaster-ai
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

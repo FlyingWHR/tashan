@@ -7,7 +7,7 @@
 - tashan id: plugin:nathanmaine/memoriant-mcp-data-skill/memoriant-mcp-data-skill
 - Source: https://github.com/NathanMaine/memoriant-mcp-data-skill
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

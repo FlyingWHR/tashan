@@ -7,7 +7,7 @@
 - tashan id: plugin:aks129/smarthealthconnect/smarthealthconnect
 - Source: https://github.com/aks129/SmartHealthConnect
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 30.0 / 100
 - Adoption: 11.0
 - Upkeep: 29.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/moekoelueker/namingsignal
 - npm: https://www.npmjs.com/package/@namingsignal/mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 44.0 / 100
 - Adoption: 21.0
 - Upkeep: 51.0

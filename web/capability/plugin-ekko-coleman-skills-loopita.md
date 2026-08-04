@@ -7,7 +7,7 @@
 - tashan id: plugin:ekko-coleman/skills/loopita
 - Source: https://github.com/Ekko-Coleman/skills
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

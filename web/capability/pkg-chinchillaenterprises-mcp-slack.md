@@ -8,7 +8,7 @@
 - Source: https://github.com/ChinchillaEnterprises/ChillMCP
 - npm: https://www.npmjs.com/package/@chinchillaenterprises/mcp-slack
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 55.0 / 100
 - Adoption: 27.0
 - Upkeep: 70.0

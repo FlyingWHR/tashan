@@ -8,7 +8,7 @@
 - Source: https://github.com/AlexikM/gibil
 - npm: https://www.npmjs.com/package/gibil
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 51.0 / 100
 - Adoption: 25.0
 - Upkeep: 68.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:box/box-for-ai/box
 - Source: https://github.com/box/box-for-ai
 - Type: plugin
-- Category: docs
+- Category: productivity
 - tashan score: 55.0 / 100
 - Adoption: 21.0
 - Upkeep: 97.0

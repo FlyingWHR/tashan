@@ -7,7 +7,7 @@
 - tashan id: plugin:lud1161/codex-review-skill/codex-review
 - Source: https://github.com/LuD1161/codex-review-skill
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 37.0 / 100
 - Adoption: 19.0
 - Upkeep: 54.0

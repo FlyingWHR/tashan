@@ -7,7 +7,7 @@
 - tashan id: plugin:dangogit/saas-toolkit/saas-toolkit
 - Source: https://github.com/dangogit/saas-toolkit
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 61.0

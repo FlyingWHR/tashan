@@ -7,7 +7,7 @@
 - tashan id: plugin:lenar-amirov/product-pipeline-public/product-discovery
 - Source: https://github.com/lenar-amirov/product-pipeline-public
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 57.0 / 100
 - Adoption: 22.0
 - Upkeep: 98.0

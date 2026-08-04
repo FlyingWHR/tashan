@@ -8,7 +8,7 @@
 - Source: https://github.com/GeiserX/lynxprompt-mcp
 - npm: https://www.npmjs.com/package/lynxprompt-mcp
 - Type: npm
-- Category: search
+- Category: productivity
 - tashan score: 35.0 / 100
 - Adoption: 24.0
 - Upkeep: 46.0

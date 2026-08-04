@@ -7,7 +7,7 @@
 - tashan id: plugin:andreafusar/https-github.com-secondsky-sap-skills/sap-sac-scripting
 - Source: https://github.com/AndreaFusar/https-github.com-secondsky-sap-skills
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:aomi-labs/skills/aomi-build
 - Source: https://github.com/aomi-labs/skills
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

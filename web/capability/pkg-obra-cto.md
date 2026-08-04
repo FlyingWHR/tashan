@@ -8,7 +8,7 @@
 - Source: https://github.com/lilycip/obra-cto
 - npm: https://www.npmjs.com/package/obra-cto
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 51.0 / 100
 - Adoption: 30.0
 - Upkeep: 58.0

@@ -7,7 +7,7 @@
 - tashan id: skill:ComposioHQ/competitive-ads-extractor
 - Source: https://github.com/ComposioHQ/awesome-claude-skills
 - Type: skill
-- Category: data
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: 98.0

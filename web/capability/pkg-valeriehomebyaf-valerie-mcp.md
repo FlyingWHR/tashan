@@ -8,7 +8,7 @@
 - Source: https://github.com/Arenafriends/valerie-mcp
 - npm: https://www.npmjs.com/package/@valeriehomebyaf/valerie-mcp
 - Type: npm
-- Category: finance
+- Category: data
 - tashan score: 37.0 / 100
 - Adoption: 23.0
 - Upkeep: 47.0

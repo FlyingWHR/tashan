@@ -8,7 +8,7 @@
 - Source: https://github.com/PaulBenchea/codelore
 - npm: https://www.npmjs.com/package/codelore-mcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 19.0
 - Upkeep: 56.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:promptarc/promptarc-plugin/promptarc
 - Source: https://github.com/promptarc/promptarc-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:dutstech/ceoralph/ceo-ralph
 - Source: https://github.com/DUTSTECH/ceoralph
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 78.0

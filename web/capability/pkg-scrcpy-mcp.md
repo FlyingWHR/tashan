@@ -8,7 +8,7 @@
 - Source: https://github.com/JuanCF/scrcpy-mcp
 - npm: https://www.npmjs.com/package/scrcpy-mcp
 - Type: npm
-- Category: devtools
+- Category: browser
 - tashan score: 55.0 / 100
 - Adoption: 33.0
 - Upkeep: 63.0

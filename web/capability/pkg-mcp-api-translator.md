@@ -8,7 +8,7 @@
 - Source: https://github.com/krishgok/mcp-api-translator
 - npm: https://www.npmjs.com/package/mcp-api-translator
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 43.0 / 100
 - Adoption: 18.0
 - Upkeep: 58.0

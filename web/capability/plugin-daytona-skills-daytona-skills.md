@@ -7,7 +7,7 @@
 - tashan id: plugin:daytona/skills/daytona-skills
 - Source: https://github.com/daytona/skills
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

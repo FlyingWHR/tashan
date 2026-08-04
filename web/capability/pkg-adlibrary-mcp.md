@@ -7,7 +7,7 @@
 - tashan id: pkg:@adlibrary/mcp
 - npm: https://www.npmjs.com/package/@adlibrary/mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 35.0 / 100
 - Adoption: 10.0
 - Upkeep: 52.0

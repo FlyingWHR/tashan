@@ -8,7 +8,7 @@
 - Source: https://github.com/w1ne/kernelCAD-web
 - npm: https://www.npmjs.com/package/kernelcad
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 47.0 / 100
 - Adoption: 24.0
 - Upkeep: 62.0

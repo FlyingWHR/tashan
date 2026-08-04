@@ -8,7 +8,7 @@
 - Source: https://github.com/bounded-sh/skill
 - npm: https://www.npmjs.com/package/@bounded-sh/observe-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 50.0 / 100
 - Adoption: 18.0
 - Upkeep: 80.0

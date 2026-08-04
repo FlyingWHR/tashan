@@ -7,7 +7,7 @@
 - tashan id: plugin:superscript/scrip-programming/scrip-programming
 - Source: https://github.com/superscript/scrip-programming
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

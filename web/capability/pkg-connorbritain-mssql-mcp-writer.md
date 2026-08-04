@@ -8,7 +8,7 @@
 - Source: https://github.com/ConnorBritain/mssql-mcp-writer
 - npm: https://www.npmjs.com/package/@connorbritain/mssql-mcp-writer
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 49.0 / 100
 - Adoption: 26.0
 - Upkeep: 60.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Continuum-AI-Corp/orcadub-mcp-server
 - npm: https://www.npmjs.com/package/@orcadub/cli
 - Type: npm
-- Category: security
+- Category: productivity
 - tashan score: 65.0 / 100
 - Adoption: 43.0
 - Upkeep: 63.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Autostackup/autostackup
 - npm: https://www.npmjs.com/package/@autostackup/hr
 - Type: npm
-- Category: devtools
+- Category: other
 - tashan score: 40.0 / 100
 - Adoption: 21.0
 - Upkeep: 52.0

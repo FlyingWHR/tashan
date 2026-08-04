@@ -7,7 +7,7 @@
 - tashan id: plugin:allanharlen/cc-orchestrador-subagents/cc-orchestrador-subagents
 - Source: https://github.com/AllanHarlen/cc-orchestrador-subagents
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 43.0 / 100
 - Adoption: 7.0
 - Upkeep: 97.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:stevehobbsdev/claude-skills/stevehobbsdev
 - Source: https://github.com/stevehobbsdev/claude-skills
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:sneat-co/sneat-ai/wb
 - Source: https://github.com/sneat-co/sneat-ai
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

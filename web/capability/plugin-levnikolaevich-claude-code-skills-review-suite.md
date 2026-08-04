@@ -7,7 +7,7 @@
 - tashan id: plugin:levnikolaevich/claude-code-skills/review-suite
 - Source: https://github.com/levnikolaevich/claude-code-skills
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 39.0 / 100
 - Adoption: 7.0
 - Upkeep: 79.0

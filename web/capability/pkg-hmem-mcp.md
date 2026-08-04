@@ -8,7 +8,7 @@
 - Source: https://github.com/Bumblebiber/hmem
 - npm: https://www.npmjs.com/package/hmem-mcp
 - Type: npm
-- Category: database
+- Category: ai
 - tashan score: 57.0 / 100
 - Adoption: 31.0
 - Upkeep: 70.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:mturac/skill-hunter/skill-hunter
 - Source: https://github.com/mturac/skill-hunter
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 37.0 / 100
 - Adoption: 13.0
 - Upkeep: 71.0

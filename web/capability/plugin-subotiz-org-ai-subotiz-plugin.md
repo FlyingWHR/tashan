@@ -7,7 +7,7 @@
 - tashan id: plugin:subotiz-org/ai/subotiz-plugin
 - Source: https://github.com/subotiz-org/AI
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

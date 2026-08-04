@@ -7,7 +7,7 @@
 - tashan id: plugin:mikaelfangel/claude-elixir-ls-lsp/elixirls-lsp
 - Source: https://github.com/MikaelFangel/claude-elixir-ls-lsp
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

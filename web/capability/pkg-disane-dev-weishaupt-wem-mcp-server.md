@@ -8,7 +8,7 @@
 - Source: https://github.com/Disane87/weishaupt-wem-mcp-server
 - npm: https://www.npmjs.com/package/@disane-dev/weishaupt-wem-mcp-server
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 33.0 / 100
 - Adoption: 23.0
 - Upkeep: 45.0

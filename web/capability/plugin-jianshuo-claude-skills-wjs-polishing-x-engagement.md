@@ -7,7 +7,7 @@
 - tashan id: plugin:jianshuo/claude-skills/wjs-polishing-x-engagement
 - Source: https://github.com/jianshuo/claude-skills
 - Type: plugin
-- Category: docs
+- Category: finance
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

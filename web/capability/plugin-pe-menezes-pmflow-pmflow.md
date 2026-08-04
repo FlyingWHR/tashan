@@ -7,7 +7,7 @@
 - tashan id: plugin:pe-menezes/pmflow/pmflow
 - Source: https://github.com/pe-menezes/pmflow
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

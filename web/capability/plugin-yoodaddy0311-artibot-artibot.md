@@ -7,7 +7,7 @@
 - tashan id: plugin:yoodaddy0311/artibot/artibot
 - Source: https://github.com/Yoodaddy0311/artibot
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 47.0 / 100
 - Adoption: 15.0
 - Upkeep: 81.0

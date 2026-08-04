@@ -7,7 +7,7 @@
 - tashan id: plugin:cymcymcymcym/notes-to-video/notes-to-video
 - Source: https://github.com/cymcymcymcym/notes-to-video
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 30.0 / 100
 - Adoption: 13.0
 - Upkeep: 50.0

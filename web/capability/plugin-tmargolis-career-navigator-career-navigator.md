@@ -7,7 +7,7 @@
 - tashan id: plugin:tmargolis/career-navigator/career-navigator
 - Source: https://github.com/tmargolis/career-navigator
 - Type: plugin
-- Category: comms
+- Category: other
 - tashan score: 39.0 / 100
 - Adoption: 22.0
 - Upkeep: 54.0

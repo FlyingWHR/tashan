@@ -8,7 +8,7 @@
 - Source: https://github.com/ethbak/icon-composer-mcp
 - npm: https://www.npmjs.com/package/icon-composer-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 39.0 / 100
 - Adoption: 31.0
 - Upkeep: 46.0

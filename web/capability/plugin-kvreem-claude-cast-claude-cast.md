@@ -7,7 +7,7 @@
 - tashan id: plugin:kvreem/claude-cast/claude-cast
 - Source: https://github.com/kvreem/claude-cast
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 18.0
 - Upkeep: 48.0

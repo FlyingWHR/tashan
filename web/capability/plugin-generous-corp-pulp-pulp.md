@@ -7,7 +7,7 @@
 - tashan id: plugin:generous-corp/pulp/pulp
 - Source: https://github.com/Generous-Corp/pulp
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 58.0 / 100
 - Adoption: 22.0
 - Upkeep: 99.0

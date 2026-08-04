@@ -7,7 +7,7 @@
 - tashan id: plugin:anitasrinivasan/cite2fn/cite2fn
 - Source: https://github.com/anitasrinivasan/cite2fn
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

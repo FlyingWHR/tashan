@@ -7,7 +7,7 @@
 - tashan id: plugin:severity1/claude-code-prompt-improver/prompt-improver
 - Source: https://github.com/severity1/claude-code-prompt-improver
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 64.0 / 100
 - Adoption: 49.0
 - Upkeep: 73.0

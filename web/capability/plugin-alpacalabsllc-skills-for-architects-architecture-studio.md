@@ -7,7 +7,7 @@
 - tashan id: plugin:alpacalabsllc/skills-for-architects/architecture-studio
 - Source: https://github.com/AlpacaLabsLLC/skills-for-architects
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 66.0 / 100
 - Adoption: 39.0
 - Upkeep: 81.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:mohitkale/docker-kubernetes/docker-and-kubernetes-devkit
 - Source: https://github.com/mohitkale/docker-kubernetes
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

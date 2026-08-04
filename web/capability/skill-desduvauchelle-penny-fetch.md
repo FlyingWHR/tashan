@@ -7,7 +7,7 @@
 - tashan id: skill:desduvauchelle/penny-fetch
 - Source: https://github.com/desduvauchelle/penny-page
 - Type: skill
-- Category: other
+- Category: data
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

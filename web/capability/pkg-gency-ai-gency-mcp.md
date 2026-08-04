@@ -8,7 +8,7 @@
 - Source: https://github.com/studiolab-dev/gency-mcp
 - npm: https://www.npmjs.com/package/@gency-ai/gency-mcp
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 65.0 / 100
 - Adoption: 40.0
 - Upkeep: 65.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/vegelate/agent-only-mcp
 - npm: https://www.npmjs.com/package/agent-only-mcp
 - Type: npm
-- Category: finance
+- Category: ai
 - tashan score: 62.0 / 100
 - Adoption: 39.0
 - Upkeep: 61.0

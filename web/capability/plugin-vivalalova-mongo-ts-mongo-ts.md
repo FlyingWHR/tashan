@@ -7,7 +7,7 @@
 - tashan id: plugin:vivalalova/mongo-ts/mongo-ts
 - Source: https://github.com/vivalalova/mongo-ts
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 22.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

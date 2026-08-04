@@ -8,7 +8,7 @@
 - Source: https://github.com/cameronapak/mcp-registry-sdk
 - npm: https://www.npmjs.com/package/mcp-registry-spec-sdk
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 49.0 / 100
 - Adoption: 40.0
 - Upkeep: 53.0

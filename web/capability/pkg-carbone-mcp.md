@@ -8,7 +8,7 @@
 - Source: https://github.com/carboneio/carbone-mcp
 - npm: https://www.npmjs.com/package/carbone-mcp
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 68.0 / 100
 - Adoption: 34.0
 - Upkeep: 92.0

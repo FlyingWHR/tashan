@@ -8,7 +8,7 @@
 - Source: https://github.com/MobileReality/mdma
 - npm: https://www.npmjs.com/package/@mobile-reality/mdma-mcp
 - Type: npm
-- Category: design
+- Category: productivity
 - tashan score: 60.0 / 100
 - Adoption: 25.0
 - Upkeep: 92.0

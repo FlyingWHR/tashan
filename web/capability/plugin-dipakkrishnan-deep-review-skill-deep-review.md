@@ -7,7 +7,7 @@
 - tashan id: plugin:dipakkrishnan/deep-review-skill/deep-review
 - Source: https://github.com/dipakkrishnan/deep-review-skill
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 98.0

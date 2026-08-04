@@ -7,7 +7,7 @@
 - tashan id: plugin:z80020100/claude-code-statusline/claude-code-statusline
 - Source: https://github.com/z80020100/claude-code-statusline
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 45.0 / 100
 - Adoption: 13.0
 - Upkeep: not measured

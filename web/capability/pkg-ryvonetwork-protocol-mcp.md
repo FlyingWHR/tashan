@@ -8,7 +8,7 @@
 - Source: https://github.com/Ryvonetwork/ryvo-agentic
 - npm: https://www.npmjs.com/package/@ryvonetwork/protocol-mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 25.0
 - Upkeep: 49.0

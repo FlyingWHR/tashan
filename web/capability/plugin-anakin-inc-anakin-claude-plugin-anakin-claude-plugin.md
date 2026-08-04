@@ -7,7 +7,7 @@
 - tashan id: plugin:anakin-inc/anakin-claude-plugin/anakin-claude-plugin
 - Source: https://github.com/Anakin-Inc/anakin-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 80.0

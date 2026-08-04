@@ -7,7 +7,7 @@
 - tashan id: plugin:ckeditor/skills/ckeditor
 - Source: https://github.com/ckeditor/skills
 - Type: plugin
-- Category: productivity
+- Category: browser
 - tashan score: 51.0 / 100
 - Adoption: 15.0
 - Upkeep: 98.0

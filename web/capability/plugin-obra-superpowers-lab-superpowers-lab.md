@@ -7,7 +7,7 @@
 - tashan id: plugin:obra/superpowers-lab/superpowers-lab
 - Source: https://github.com/obra/superpowers-lab
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 55.0 / 100
 - Adoption: 41.0
 - Upkeep: not measured

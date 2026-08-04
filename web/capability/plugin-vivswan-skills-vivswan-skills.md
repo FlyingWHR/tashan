@@ -7,7 +7,7 @@
 - tashan id: plugin:vivswan/skills/vivswan-skills
 - Source: https://github.com/Vivswan/skills
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 50.0 / 100
 - Adoption: 13.0
 - Upkeep: 99.0

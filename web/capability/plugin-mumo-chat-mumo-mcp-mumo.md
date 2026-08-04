@@ -7,7 +7,7 @@
 - tashan id: plugin:mumo-chat/mumo-mcp/mumo
 - Source: https://github.com/mumo-chat/mumo-mcp
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 61.0

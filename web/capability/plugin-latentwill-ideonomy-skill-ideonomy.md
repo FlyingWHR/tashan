@@ -7,7 +7,7 @@
 - tashan id: plugin:latentwill/ideonomy-skill/ideonomy
 - Source: https://github.com/latentwill/ideonomy-skill
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 55.0 / 100
 - Adoption: 28.0
 - Upkeep: 91.0

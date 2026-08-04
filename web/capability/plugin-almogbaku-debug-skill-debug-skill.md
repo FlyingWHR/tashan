@@ -7,7 +7,7 @@
 - tashan id: plugin:almogbaku/debug-skill/debug-skill
 - Source: https://github.com/AlmogBaku/debug-skill
 - Type: plugin
-- Category: devtools
+- Category: browser
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 85.0

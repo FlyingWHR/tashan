@@ -8,7 +8,7 @@
 - Source: https://github.com/ZebraRoy/read-docs-mcp
 - npm: https://www.npmjs.com/package/read-docs-mcp
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 23.0 / 100
 - Adoption: 35.0
 - Upkeep: 39.0

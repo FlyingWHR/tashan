@@ -7,7 +7,7 @@
 - tashan id: plugin:chachamaru127/claude-code-harness/claude-harness
 - Source: https://github.com/Chachamaru127/claude-code-harness
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 76.0 / 100
 - Adoption: 52.0
 - Upkeep: 99.0

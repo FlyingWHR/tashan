@@ -8,7 +8,7 @@
 - Source: https://github.com/iinniitt/defi-guard-mcp
 - npm: https://www.npmjs.com/package/@iniit/defi-guard-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 47.0 / 100
 - Adoption: 24.0
 - Upkeep: 57.0

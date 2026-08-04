@@ -7,7 +7,7 @@
 - tashan id: plugin:esxr/llm-wiki/llm-wiki
 - Source: https://github.com/esxr/llm-wiki
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

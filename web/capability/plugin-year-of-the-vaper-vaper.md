@@ -7,7 +7,7 @@
 - tashan id: plugin:year-of-the/vaper/vaper
 - Source: https://github.com/year-of-the/vaper
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

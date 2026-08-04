@@ -7,7 +7,7 @@
 - tashan id: plugin:bryantchi/claude-sustain/claude-sustain
 - Source: https://github.com/BryantChi/claude-sustain
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

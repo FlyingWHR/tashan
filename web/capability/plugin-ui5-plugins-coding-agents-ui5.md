@@ -7,7 +7,7 @@
 - tashan id: plugin:ui5/plugins-coding-agents/ui5
 - Source: https://github.com/UI5/plugins-coding-agents
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 47.0 / 100
 - Adoption: 11.0
 - Upkeep: 98.0

@@ -7,7 +7,7 @@
 - tashan id: pkg:@surecore/tasks-mcp
 - npm: https://www.npmjs.com/package/@surecore/tasks-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 56.0 / 100
 - Adoption: 32.0
 - Upkeep: 59.0

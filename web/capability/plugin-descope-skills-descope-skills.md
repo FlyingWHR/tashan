@@ -7,7 +7,7 @@
 - tashan id: plugin:descope/skills/descope-skills
 - Source: https://github.com/descope/skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 54.0 / 100
 - Adoption: 21.0
 - Upkeep: 96.0

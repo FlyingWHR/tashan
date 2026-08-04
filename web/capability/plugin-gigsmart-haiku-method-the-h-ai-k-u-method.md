@@ -7,7 +7,7 @@
 - tashan id: plugin:gigsmart/haiku-method/the-h-ai-k-u-method
 - Source: https://github.com/gigsmart/haiku-method
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 52.0 / 100
 - Adoption: 25.0
 - Upkeep: 90.0

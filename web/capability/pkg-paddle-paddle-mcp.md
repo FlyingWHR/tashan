@@ -8,7 +8,7 @@
 - Source: https://github.com/PaddleHQ/paddle-mcp-server
 - npm: https://www.npmjs.com/package/@paddle/paddle-mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 54.0 / 100
 - Adoption: 41.0
 - Upkeep: 69.0

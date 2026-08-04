@@ -7,7 +7,7 @@
 - tashan id: plugin:xz1220/easy-git-zh/easy-git-zh
 - Source: https://github.com/xz1220/easy-git-zh
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 70.0

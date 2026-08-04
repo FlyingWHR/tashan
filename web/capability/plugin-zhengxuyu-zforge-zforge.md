@@ -7,7 +7,7 @@
 - tashan id: plugin:zhengxuyu/zforge/zforge
 - Source: https://github.com/zhengxuyu/zforge
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 31.0 / 100
 - Adoption: 13.0
 - Upkeep: 51.0

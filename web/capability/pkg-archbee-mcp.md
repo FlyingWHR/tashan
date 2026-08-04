@@ -7,7 +7,7 @@
 - tashan id: pkg:archbee-mcp
 - npm: https://www.npmjs.com/package/archbee-mcp
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 24.0 / 100
 - Adoption: 40.0
 - Upkeep: 40.0

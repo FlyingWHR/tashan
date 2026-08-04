@@ -7,7 +7,7 @@
 - tashan id: pkg:@shopify/dev-mcp
 - npm: https://www.npmjs.com/package/@shopify/dev-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 83.0 / 100
 - Adoption: 64.0
 - Upkeep: 99.0

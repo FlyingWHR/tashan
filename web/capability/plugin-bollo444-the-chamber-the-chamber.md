@@ -7,7 +7,7 @@
 - tashan id: plugin:bollo444/the-chamber/the-chamber
 - Source: https://github.com/Bollo444/the-chamber
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

@@ -8,7 +8,7 @@
 - Source: https://github.com/LuiggiVal08/toon-memory
 - npm: https://www.npmjs.com/package/toon-memory
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 72.0 / 100
 - Adoption: 50.0
 - Upkeep: 73.0

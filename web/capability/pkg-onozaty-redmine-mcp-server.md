@@ -8,7 +8,7 @@
 - Source: https://github.com/onozaty/redmine-mcp-server
 - npm: https://www.npmjs.com/package/@onozaty/redmine-mcp-server
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 43.0 / 100
 - Adoption: 38.0
 - Upkeep: 49.0

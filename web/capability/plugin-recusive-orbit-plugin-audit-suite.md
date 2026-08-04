@@ -7,7 +7,7 @@
 - tashan id: plugin:recusive/orbit-plugin/audit-suite
 - Source: https://github.com/Recusive/Orbit-plugin
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 27.0 / 100
 - Adoption: 11.0
 - Upkeep: 47.0

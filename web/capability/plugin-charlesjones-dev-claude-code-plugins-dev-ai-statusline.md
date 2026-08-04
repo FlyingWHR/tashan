@@ -7,7 +7,7 @@
 - tashan id: plugin:charlesjones-dev/claude-code-plugins-dev/ai-statusline
 - Source: https://github.com/charlesjones-dev/claude-code-plugins-dev
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 49.0 / 100
 - Adoption: 27.0
 - Upkeep: 62.0

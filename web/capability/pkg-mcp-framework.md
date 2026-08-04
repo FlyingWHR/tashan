@@ -8,7 +8,7 @@
 - Source: https://github.com/QuantGeekDev/mcp-framework
 - npm: https://www.npmjs.com/package/mcp-framework
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 67.0 / 100
 - Adoption: 67.0
 - Upkeep: 62.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/lgazo/drawio-mcp-server
 - npm: https://www.npmjs.com/package/drawio-mcp-server
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 64.0 / 100
 - Adoption: 43.0
 - Upkeep: 67.0

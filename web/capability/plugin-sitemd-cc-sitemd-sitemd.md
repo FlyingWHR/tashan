@@ -7,7 +7,7 @@
 - tashan id: plugin:sitemd-cc/sitemd/sitemd
 - Source: https://github.com/sitemd-cc/sitemd
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 41.0 / 100
 - Adoption: 20.0
 - Upkeep: 58.0

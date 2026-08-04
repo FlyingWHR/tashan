@@ -7,7 +7,7 @@
 - tashan id: plugin:sonatype/sonatype-guide-claude-plugin/sonatype-guide
 - Source: https://github.com/sonatype/sonatype-guide-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 36.0 / 100
 - Adoption: 19.0
 - Upkeep: 65.0

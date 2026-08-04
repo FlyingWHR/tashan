@@ -8,7 +8,7 @@
 - Source: https://github.com/Nikoble1926/agent-trust-oracle
 - npm: https://www.npmjs.com/package/@nikosble1926/agent-trust-mcp
 - Type: npm
-- Category: security
+- Category: finance
 - tashan score: 44.0 / 100
 - Adoption: 23.0
 - Upkeep: 50.0

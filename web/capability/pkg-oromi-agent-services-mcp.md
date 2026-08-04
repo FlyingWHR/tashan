@@ -7,7 +7,7 @@
 - tashan id: pkg:oromi-agent-services-mcp
 - npm: https://www.npmjs.com/package/oromi-agent-services-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 50.0 / 100
 - Adoption: 25.0
 - Upkeep: 60.0

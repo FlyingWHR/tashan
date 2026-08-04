@@ -7,7 +7,7 @@
 - tashan id: plugin:techknowmad-labs/techknowmad-ai-skills/techknowmad-ai-skills
 - Source: https://github.com/TECHKNOWMAD-LABS/techknowmad-ai-skills
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 17.0 / 100
 - Adoption: 7.0
 - Upkeep: 14.0

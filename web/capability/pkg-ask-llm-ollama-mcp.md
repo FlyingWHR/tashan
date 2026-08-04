@@ -8,7 +8,7 @@
 - Source: https://github.com/Lykhoyda/ask-llm
 - npm: https://www.npmjs.com/package/@ask-llm/ollama-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 54.0 / 100
 - Adoption: 30.0
 - Upkeep: 59.0

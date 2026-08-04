@@ -7,7 +7,7 @@
 - tashan id: plugin:lifecycle-innovations-limited/claude-ops/claude-ops
 - Source: https://github.com/Lifecycle-Innovations-Limited/claude-ops
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 59.0 / 100
 - Adoption: 24.0
 - Upkeep: 99.0

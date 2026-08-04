@@ -7,7 +7,7 @@
 - tashan id: plugin:parcha-ai/grep-research-skills/grep-research-skills
 - Source: https://github.com/Parcha-ai/grep-research-skills
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 44.0 / 100
 - Adoption: 11.0
 - Upkeep: not measured

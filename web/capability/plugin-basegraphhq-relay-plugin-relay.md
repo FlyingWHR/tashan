@@ -7,7 +7,7 @@
 - tashan id: plugin:basegraphhq/relay-plugin/relay
 - Source: https://github.com/basegraphhq/relay-plugin
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 37.0 / 100
 - Adoption: 15.0
 - Upkeep: 57.0

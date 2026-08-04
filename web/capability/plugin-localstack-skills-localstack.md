@@ -7,7 +7,7 @@
 - tashan id: plugin:localstack/skills/localstack
 - Source: https://github.com/localstack/skills
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 50.0 / 100
 - Adoption: 21.0
 - Upkeep: 79.0

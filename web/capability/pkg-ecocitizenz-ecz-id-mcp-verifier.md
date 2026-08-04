@@ -8,7 +8,7 @@
 - Source: https://github.com/Ecocitizenz/ecz-id-mcp-verifier
 - npm: https://www.npmjs.com/package/@ecocitizenz/ecz-id-mcp-verifier
 - Type: npm
-- Category: data
+- Category: productivity
 - tashan score: 46.0 / 100
 - Adoption: 24.0
 - Upkeep: 56.0

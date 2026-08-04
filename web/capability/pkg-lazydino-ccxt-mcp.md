@@ -8,7 +8,7 @@
 - Source: https://github.com/lazy-dinosaur/ccxt-mcp
 - npm: https://www.npmjs.com/package/@lazydino/ccxt-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 18.0 / 100
 - Adoption: 29.0
 - Upkeep: 36.0

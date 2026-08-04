@@ -7,7 +7,7 @@
 - tashan id: plugin:klausfreiberufler/devflow-mcp/devflow
 - Source: https://github.com/KlausFreiberufler/devflow-mcp
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 44.0 / 100
 - Adoption: 11.0
 - Upkeep: 81.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:echoo19/decision-simulator/decision-simulator
 - Source: https://github.com/echoo19/decision-simulator
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 34.0 / 100
 - Adoption: 16.0
 - Upkeep: 53.0

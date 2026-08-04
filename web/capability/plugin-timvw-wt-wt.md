@@ -7,7 +7,7 @@
 - tashan id: plugin:timvw/wt/wt
 - Source: https://github.com/timvw/wt
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 61.0 / 100
 - Adoption: 28.0
 - Upkeep: 97.0

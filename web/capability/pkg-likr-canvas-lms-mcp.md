@@ -8,7 +8,7 @@
 - Source: https://github.com/likr/canvas-lms-agent
 - npm: https://www.npmjs.com/package/@likr/canvas-lms-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 40.0 / 100
 - Adoption: 15.0
 - Upkeep: 55.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:jenson500/truinorva-triz/truinorva-triz
 - Source: https://github.com/jenson500/truinorva-triz
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 52.0

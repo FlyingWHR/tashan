@@ -7,7 +7,7 @@
 - tashan id: skill:databricks/databricks-execution-compute
 - Source: https://github.com/databricks/databricks-agent-skills
 - Type: skill
-- Category: other
+- Category: productivity
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

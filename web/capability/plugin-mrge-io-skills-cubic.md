@@ -7,7 +7,7 @@
 - tashan id: plugin:mrge-io/skills/cubic
 - Source: https://github.com/mrge-io/skills
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 50.0 / 100
 - Adoption: 13.0
 - Upkeep: 99.0

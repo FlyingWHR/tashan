@@ -8,7 +8,7 @@
 - Source: https://github.com/New1Direction/korg
 - npm: https://www.npmjs.com/package/@korgg/introspect-mcp
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 40.0 / 100
 - Adoption: 23.0
 - Upkeep: 49.0

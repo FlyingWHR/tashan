@@ -8,7 +8,7 @@
 - Source: https://github.com/MCP-Hive/mcp-hive-proxy
 - npm: https://www.npmjs.com/package/@mcp-hive-utils/proxy
 - Type: npm
-- Category: devtools
+- Category: files
 - tashan score: 50.0 / 100
 - Adoption: 23.0
 - Upkeep: 67.0

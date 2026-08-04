@@ -8,7 +8,7 @@
 - Source: https://github.com/PramodDutta/browserbash
 - npm: https://www.npmjs.com/package/browserbash-cli
 - Type: npm
-- Category: finance
+- Category: browser
 - tashan score: 52.0 / 100
 - Adoption: 29.0
 - Upkeep: 62.0

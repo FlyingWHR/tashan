@@ -7,7 +7,7 @@
 - tashan id: plugin:dev-mahmoud-elshenawy/optikit/optikit
 - Source: https://github.com/dev-mahmoud-elshenawy/optikit
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 38.0 / 100
 - Adoption: 17.0
 - Upkeep: 69.0

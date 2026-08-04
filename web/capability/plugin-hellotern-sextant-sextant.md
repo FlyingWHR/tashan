@@ -7,7 +7,7 @@
 - tashan id: plugin:hellotern/sextant/sextant
 - Source: https://github.com/hellotern/Sextant
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 34.0 / 100
 - Adoption: 23.0
 - Upkeep: 48.0

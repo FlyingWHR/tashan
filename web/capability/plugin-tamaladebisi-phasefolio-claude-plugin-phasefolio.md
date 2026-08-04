@@ -7,7 +7,7 @@
 - tashan id: plugin:tamaladebisi/phasefolio-claude-plugin/phasefolio
 - Source: https://github.com/TamalAdebisi/phasefolio-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:martelgpt10/founderfocus/founderfocus
 - Source: https://github.com/MartelGPT10/founderfocus
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

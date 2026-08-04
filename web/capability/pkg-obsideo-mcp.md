@@ -8,7 +8,7 @@
 - Source: https://github.com/Regan-Milne/obsideo-mcp
 - npm: https://www.npmjs.com/package/obsideo-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 49.0 / 100
 - Adoption: 25.0
 - Upkeep: 55.0

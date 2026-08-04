@@ -8,7 +8,7 @@
 - Source: https://github.com/chrischall/gemini-mcp
 - npm: https://www.npmjs.com/package/@chrischall/gemini-mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 69.0 / 100
 - Adoption: 44.0
 - Upkeep: 71.0

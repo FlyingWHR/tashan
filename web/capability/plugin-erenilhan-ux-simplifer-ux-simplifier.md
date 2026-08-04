@@ -7,7 +7,7 @@
 - tashan id: plugin:erenilhan/ux-simplifer/ux-simplifier
 - Source: https://github.com/erenilhan/ux-simplifer
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

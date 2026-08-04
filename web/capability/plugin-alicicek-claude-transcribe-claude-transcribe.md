@@ -7,7 +7,7 @@
 - tashan id: plugin:alicicek/claude-transcribe/claude-transcribe
 - Source: https://github.com/alicicek/claude-transcribe
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

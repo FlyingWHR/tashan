@@ -7,7 +7,7 @@
 - tashan id: plugin:mvnpm/mvnpm-claude-plugin/mvnpm
 - Source: https://github.com/mvnpm/mvnpm-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

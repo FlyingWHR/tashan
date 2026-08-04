@@ -7,7 +7,7 @@
 - tashan id: plugin:joai-plugins/joai/joai
 - Source: https://github.com/joai-plugins/joai
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

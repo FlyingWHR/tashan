@@ -7,7 +7,7 @@
 - tashan id: plugin:frane/agented/agented
 - Source: https://github.com/frane/agented
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 51.0 / 100
 - Adoption: 21.0
 - Upkeep: 80.0

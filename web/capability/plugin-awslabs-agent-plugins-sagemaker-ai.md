@@ -7,7 +7,7 @@
 - tashan id: plugin:awslabs/agent-plugins/sagemaker-ai
 - Source: https://github.com/awslabs/agent-plugins
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 79.0

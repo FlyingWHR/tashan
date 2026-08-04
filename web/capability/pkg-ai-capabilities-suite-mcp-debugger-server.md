@@ -8,7 +8,7 @@
 - Source: https://github.com/digitaldefiance/ai-capabilities-suite
 - npm: https://www.npmjs.com/package/@ai-capabilities-suite/mcp-debugger-server
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 30.0
 - Upkeep: 51.0

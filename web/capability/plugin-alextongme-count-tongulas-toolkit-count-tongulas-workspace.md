@@ -7,7 +7,7 @@
 - tashan id: plugin:alextongme/count-tongulas-toolkit/count-tongulas-workspace
 - Source: https://github.com/alextongme/count-tongulas-toolkit
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 58.0

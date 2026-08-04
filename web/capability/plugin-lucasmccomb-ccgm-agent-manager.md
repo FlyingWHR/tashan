@@ -7,7 +7,7 @@
 - tashan id: plugin:lucasmccomb/ccgm/agent-manager
 - Source: https://github.com/lucasmccomb/ccgm
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 7.0
 - Upkeep: not measured

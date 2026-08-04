@@ -7,7 +7,7 @@
 - tashan id: plugin:jaisenbe58r/promptops-plugin/promptops
 - Source: https://github.com/jaisenbe58r/promptops-plugin
 - Type: plugin
-- Category: design
+- Category: docs
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:arch1904/e2e-visual-audit/e2e-visual-audit
 - Source: https://github.com/arch1904/e2e-visual-audit
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 23.0 / 100
 - Adoption: 7.0
 - Upkeep: 44.0

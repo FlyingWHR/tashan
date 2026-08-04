@@ -7,7 +7,7 @@
 - tashan id: plugin:watzon/semantouch/semantouch
 - Source: https://github.com/watzon/semantouch
 - Type: plugin
-- Category: devtools
+- Category: files
 - tashan score: 42.0 / 100
 - Adoption: 17.0
 - Upkeep: 61.0

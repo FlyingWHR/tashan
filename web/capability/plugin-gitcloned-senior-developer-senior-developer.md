@@ -7,7 +7,7 @@
 - tashan id: plugin:gitcloned/senior-developer/senior-developer
 - Source: https://github.com/gitcloned/senior-developer
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

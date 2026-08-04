@@ -7,7 +7,7 @@
 - tashan id: plugin:michaelzajer/job-application-toolkit/resume-application-toolkit
 - Source: https://github.com/michaelzajer/job-application-toolkit
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 27.0 / 100
 - Adoption: 11.0
 - Upkeep: 47.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:dljw/singcompress/singcompress
 - Source: https://github.com/dljw/singcompress
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 36.0 / 100
 - Adoption: 23.0
 - Upkeep: not measured

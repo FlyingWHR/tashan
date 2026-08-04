@@ -8,7 +8,7 @@
 - Source: https://github.com/truss44/mcp-crypto-price
 - npm: https://www.npmjs.com/package/mcp-crypto-price
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 59.0 / 100
 - Adoption: 35.0
 - Upkeep: 69.0

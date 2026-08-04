@@ -7,7 +7,7 @@
 - tashan id: plugin:shanejorr/ai-plugins/reading-pipeline
 - Source: https://github.com/shanejorr/ai-plugins
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:barnburner121/claude-plugin-marketplace/access-review
 - Source: https://github.com/barnburner121/claude-plugin-marketplace
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:andrewlau624/mimic/mimic
 - Source: https://github.com/andrewlau624/mimic
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 38.0 / 100
 - Adoption: 11.0
 - Upkeep: 62.0

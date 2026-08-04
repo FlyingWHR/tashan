@@ -7,7 +7,7 @@
 - tashan id: skill:teren-papercutlabs/jaz-jobs
 - Source: https://github.com/teren-papercutlabs/jaz-ai
 - Type: skill
-- Category: other
+- Category: finance
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

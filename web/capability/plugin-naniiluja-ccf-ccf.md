@@ -7,7 +7,7 @@
 - tashan id: plugin:naniiluja/ccf/ccf
 - Source: https://github.com/naniiluja/ccf
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 48.0 / 100
 - Adoption: 19.0
 - Upkeep: not measured

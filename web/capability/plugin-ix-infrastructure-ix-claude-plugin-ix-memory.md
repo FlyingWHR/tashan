@@ -7,7 +7,7 @@
 - tashan id: plugin:ix-infrastructure/ix-claude-plugin/ix-memory
 - Source: https://github.com/ix-infrastructure/ix-claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 54.0 / 100
 - Adoption: 19.0
 - Upkeep: 98.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:akii-technologies-ltd/akii-seo-ai-search-optimizer/akii-seo-ai-search-optimizer
 - Source: https://github.com/akii-technologies-ltd/akii-seo-ai-search-optimizer
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 52.0 / 100
 - Adoption: 31.0
 - Upkeep: 74.0

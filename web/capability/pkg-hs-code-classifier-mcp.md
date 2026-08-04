@@ -8,7 +8,7 @@
 - Source: https://github.com/OjasKord/hs-code-classifier-mcp-server
 - npm: https://www.npmjs.com/package/hs-code-classifier-mcp
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 64.0 / 100
 - Adoption: 35.0
 - Upkeep: 73.0

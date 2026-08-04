@@ -8,7 +8,7 @@
 - Source: https://github.com/Aimino-Tech/OpenTalk2HTML-NotMD
 - npm: https://www.npmjs.com/package/@aimino/opentalk2html-notmd
 - Type: npm
-- Category: productivity
+- Category: comms
 - tashan score: 38.0 / 100
 - Adoption: 21.0
 - Upkeep: 46.0

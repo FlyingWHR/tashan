@@ -8,7 +8,7 @@
 - Source: https://github.com/mrslbt/tabedata-mcp
 - npm: https://www.npmjs.com/package/tabedata-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 58.0 / 100
 - Adoption: 31.0
 - Upkeep: 65.0

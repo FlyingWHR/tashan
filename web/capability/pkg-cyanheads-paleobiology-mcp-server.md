@@ -8,7 +8,7 @@
 - Source: https://github.com/cyanheads/paleobiology-mcp-server
 - npm: https://www.npmjs.com/package/@cyanheads/paleobiology-mcp-server
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 63.0 / 100
 - Adoption: 39.0
 - Upkeep: 62.0

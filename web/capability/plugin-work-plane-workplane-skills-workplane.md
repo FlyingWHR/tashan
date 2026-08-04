@@ -7,7 +7,7 @@
 - tashan id: plugin:work-plane/workplane-skills/workplane
 - Source: https://github.com/work-plane/workplane-skills
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 41.0 / 100
 - Adoption: 22.0
 - Upkeep: not measured

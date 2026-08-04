@@ -7,7 +7,7 @@
 - tashan id: plugin:avyanshkatiyar/mirror/mirror
 - Source: https://github.com/AvyanshKatiyar/mirror
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 69.0

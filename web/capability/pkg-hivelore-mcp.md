@@ -8,7 +8,7 @@
 - Source: https://github.com/Doucs91/hivelore
 - npm: https://www.npmjs.com/package/@hivelore/mcp
 - Type: npm
-- Category: devtools
+- Category: security
 - tashan score: 55.0 / 100
 - Adoption: 30.0
 - Upkeep: 69.0

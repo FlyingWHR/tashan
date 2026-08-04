@@ -8,7 +8,7 @@
 - Source: https://github.com/tyler-technologies-oss/forge-mcp
 - npm: https://www.npmjs.com/package/@tylertech/forge-mcp
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 29.0
 - Upkeep: 72.0

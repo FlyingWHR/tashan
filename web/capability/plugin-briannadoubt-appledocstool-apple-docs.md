@@ -7,7 +7,7 @@
 - tashan id: plugin:briannadoubt/appledocstool/apple-docs
 - Source: https://github.com/briannadoubt/AppleDocsTool
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 22.0 / 100
 - Adoption: 7.0
 - Upkeep: 43.0

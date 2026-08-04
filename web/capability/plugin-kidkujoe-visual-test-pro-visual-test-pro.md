@@ -7,7 +7,7 @@
 - tashan id: plugin:kidkujoe/visual-test-pro/visual-test-pro
 - Source: https://github.com/Kidkujoe/Visual-Test-Pro
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: 60.0

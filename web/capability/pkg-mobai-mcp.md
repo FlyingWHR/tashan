@@ -8,7 +8,7 @@
 - Source: https://github.com/MobAI-App/mobai-mcp
 - npm: https://www.npmjs.com/package/mobai-mcp
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 63.0 / 100
 - Adoption: 35.0
 - Upkeep: 71.0

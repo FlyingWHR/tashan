@@ -8,7 +8,7 @@
 - Source: https://github.com/cloudbring/newrelic-mcp
 - npm: https://www.npmjs.com/package/newrelic-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 62.0 / 100
 - Adoption: 44.0
 - Upkeep: 57.0

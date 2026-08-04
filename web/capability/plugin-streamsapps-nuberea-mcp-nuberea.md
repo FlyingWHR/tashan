@@ -7,7 +7,7 @@
 - tashan id: plugin:streamsapps/nuberea-mcp/nuberea
 - Source: https://github.com/streamsapps/nuberea-mcp
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 45.0 / 100
 - Adoption: 13.0
 - Upkeep: 93.0

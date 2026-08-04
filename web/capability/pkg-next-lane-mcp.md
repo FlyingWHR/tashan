@@ -8,7 +8,7 @@
 - Source: https://github.com/Overcastly-AI/Next-Lane
 - npm: https://www.npmjs.com/package/@next-lane/mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 69.0 / 100
 - Adoption: 46.0
 - Upkeep: 68.0

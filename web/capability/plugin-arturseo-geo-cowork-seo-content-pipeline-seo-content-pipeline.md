@@ -7,7 +7,7 @@
 - tashan id: plugin:arturseo-geo/cowork-seo-content-pipeline/seo-content-pipeline
 - Source: https://github.com/arturseo-geo/cowork-seo-content-pipeline
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 29.0 / 100
 - Adoption: 15.0
 - Upkeep: 47.0

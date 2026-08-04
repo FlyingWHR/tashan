@@ -8,7 +8,7 @@
 - Source: https://github.com/drewburchfield/help-scout-mcp-server
 - npm: https://www.npmjs.com/package/help-scout-mcp-server
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 68.0 / 100
 - Adoption: 42.0
 - Upkeep: 69.0

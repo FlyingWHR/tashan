@@ -8,7 +8,7 @@
 - Source: https://github.com/destakesk/humanaizer-mcp
 - npm: https://www.npmjs.com/package/humanaizer-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 44.0 / 100
 - Adoption: 20.0
 - Upkeep: 59.0

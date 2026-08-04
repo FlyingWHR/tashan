@@ -7,7 +7,7 @@
 - tashan id: plugin:tray-tecnologia/tray-api-claude-plugin/tray-api
 - Source: https://github.com/tray-tecnologia/tray-api-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 55.0 / 100
 - Adoption: 22.0
 - Upkeep: 96.0

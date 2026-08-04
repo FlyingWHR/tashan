@@ -7,7 +7,7 @@
 - tashan id: pkg:@maxlmgc/mysql-mcp
 - npm: https://www.npmjs.com/package/@maxlmgc/mysql-mcp
 - Type: npm
-- Category: other
+- Category: database
 - tashan score: 47.0 / 100
 - Adoption: 21.0
 - Upkeep: 59.0

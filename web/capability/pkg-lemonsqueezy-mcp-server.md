@@ -8,7 +8,7 @@
 - Source: https://github.com/IntrepidServicesLLC/lemonsqueezy-mcp-server
 - npm: https://www.npmjs.com/package/lemonsqueezy-mcp-server
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 29.0 / 100
 - Adoption: 23.0
 - Upkeep: 43.0

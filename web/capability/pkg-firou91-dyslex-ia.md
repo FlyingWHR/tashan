@@ -8,7 +8,7 @@
 - Source: https://github.com/Firou91/dyslex.ia
 - npm: https://www.npmjs.com/package/@firou91/dyslex.ia
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 63.0 / 100
 - Adoption: 41.0
 - Upkeep: 62.0

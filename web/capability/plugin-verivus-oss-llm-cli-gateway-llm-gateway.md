@@ -7,7 +7,7 @@
 - tashan id: plugin:verivus-oss/llm-cli-gateway/llm-gateway
 - Source: https://github.com/verivus-oss/llm-cli-gateway
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 56.0 / 100
 - Adoption: 20.0
 - Upkeep: 99.0

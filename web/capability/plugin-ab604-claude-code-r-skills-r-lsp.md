@@ -7,7 +7,7 @@
 - tashan id: plugin:ab604/claude-code-r-skills/r-lsp
 - Source: https://github.com/ab604/claude-code-r-skills
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

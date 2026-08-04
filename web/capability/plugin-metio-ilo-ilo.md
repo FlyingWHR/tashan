@@ -7,7 +7,7 @@
 - tashan id: plugin:metio/ilo/ilo
 - Source: https://github.com/metio/ilo
 - Type: plugin
-- Category: security
+- Category: devtools
 - tashan score: 59.0 / 100
 - Adoption: 24.0
 - Upkeep: 99.0

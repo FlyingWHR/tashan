@@ -8,7 +8,7 @@
 - Source: https://github.com/cosmicjs/mcp
 - npm: https://www.npmjs.com/package/@cosmicjs/mcp
 - Type: npm
-- Category: devtools
+- Category: comms
 - tashan score: 58.0 / 100
 - Adoption: 32.0
 - Upkeep: 64.0

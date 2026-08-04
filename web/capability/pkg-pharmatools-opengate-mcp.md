@@ -8,7 +8,7 @@
 - Source: https://github.com/nickjlamb/opengate
 - npm: https://www.npmjs.com/package/@pharmatools/opengate-mcp
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 46.0 / 100
 - Adoption: 23.0
 - Upkeep: 58.0

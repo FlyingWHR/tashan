@@ -7,7 +7,7 @@
 - tashan id: plugin:kwag93/spot-orbit-plugin/spot-orbit
 - Source: https://github.com/kwag93/spot-orbit-plugin
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 81.0

@@ -7,7 +7,7 @@
 - tashan id: pkg:@loopmein-ai/mcp
 - npm: https://www.npmjs.com/package/@loopmein-ai/mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 49.0 / 100
 - Adoption: 21.0
 - Upkeep: 60.0

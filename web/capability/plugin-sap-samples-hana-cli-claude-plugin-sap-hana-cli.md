@@ -7,7 +7,7 @@
 - tashan id: plugin:sap-samples/hana-cli-claude-plugin/sap-hana-cli
 - Source: https://github.com/SAP-samples/hana-cli-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 42.0 / 100
 - Adoption: 19.0
 - Upkeep: 72.0

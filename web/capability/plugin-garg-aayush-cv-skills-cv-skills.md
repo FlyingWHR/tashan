@@ -7,7 +7,7 @@
 - tashan id: plugin:garg-aayush/cv-skills/cv-skills
 - Source: https://github.com/garg-aayush/cv-skills
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

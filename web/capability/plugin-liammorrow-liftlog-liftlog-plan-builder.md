@@ -7,7 +7,7 @@
 - tashan id: plugin:liammorrow/liftlog/liftlog-plan-builder
 - Source: https://github.com/LiamMorrow/LiftLog
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 72.0 / 100
 - Adoption: 42.0
 - Upkeep: 99.0

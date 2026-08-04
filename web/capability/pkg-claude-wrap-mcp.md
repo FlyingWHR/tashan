@@ -8,7 +8,7 @@
 - Source: https://github.com/Alex-Kaff/claude-wrap-mcp
 - npm: https://www.npmjs.com/package/claude-wrap-mcp
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 43.0 / 100
 - Adoption: 22.0
 - Upkeep: 54.0

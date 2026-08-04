@@ -8,7 +8,7 @@
 - Source: https://github.com/MatanYemini/bitbucket-mcp
 - npm: https://www.npmjs.com/package/bitbucket-mcp
 - Type: npm
-- Category: devtools
+- Category: productivity
 - tashan score: 42.0 / 100
 - Adoption: 52.0
 - Upkeep: 50.0

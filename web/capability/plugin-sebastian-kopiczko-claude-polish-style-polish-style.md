@@ -7,7 +7,7 @@
 - tashan id: plugin:sebastian-kopiczko/claude-polish-style/polish-style
 - Source: https://github.com/sebastian-kopiczko/claude-polish-style
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 57.0

@@ -7,7 +7,7 @@
 - tashan id: skill:Jeffallan/code-reviewer
 - Source: https://github.com/Jeffallan/claude-skills
 - Type: skill
-- Category: devtools
+- Category: security
 - tashan score: 43.0 / 100
 - Adoption: 14.0
 - Upkeep: 89.0

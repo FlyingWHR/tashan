@@ -7,7 +7,7 @@
 - tashan id: plugin:siliconbrokers/genesis-governance-claude/genesis-governance-claude
 - Source: https://github.com/siliconbrokers/genesis-governance-claude
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

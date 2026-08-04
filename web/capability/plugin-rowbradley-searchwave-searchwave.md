@@ -7,7 +7,7 @@
 - tashan id: plugin:rowbradley/searchwave/searchwave
 - Source: https://github.com/rowbradley/searchwave
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 26.0 / 100
 - Adoption: 17.0
 - Upkeep: 43.0

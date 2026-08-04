@@ -7,7 +7,7 @@
 - tashan id: plugin:akoserwal/export-conversation-skill/export-conversation
 - Source: https://github.com/akoserwal/export-conversation-skill
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

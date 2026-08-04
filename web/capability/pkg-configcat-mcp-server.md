@@ -8,7 +8,7 @@
 - Source: https://github.com/configcat/mcp-server
 - npm: https://www.npmjs.com/package/@configcat/mcp-server
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 64.0 / 100
 - Adoption: 37.0
 - Upkeep: 85.0

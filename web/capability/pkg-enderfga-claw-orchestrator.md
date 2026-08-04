@@ -8,7 +8,7 @@
 - Source: https://github.com/Enderfga/claw-orchestrator
 - npm: https://www.npmjs.com/package/@enderfga/claw-orchestrator
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 63.0 / 100
 - Adoption: 34.0
 - Upkeep: 73.0

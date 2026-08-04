@@ -8,7 +8,7 @@
 - Source: https://github.com/Ryanjansen92/familiar-releases
 - npm: https://www.npmjs.com/package/familiar-vtt
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 63.0 / 100
 - Adoption: 36.0
 - Upkeep: 71.0

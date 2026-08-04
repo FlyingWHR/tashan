@@ -7,7 +7,7 @@
 - tashan id: plugin:3d-era/munin-for-agents/munin-memory
 - Source: https://github.com/3d-era/munin-for-agents
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 48.0 / 100
 - Adoption: 15.0
 - Upkeep: 94.0

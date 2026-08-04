@@ -7,7 +7,7 @@
 - tashan id: plugin:owenleezy/happy-trip-site/happy-trip-site
 - Source: https://github.com/OWENLEEzy/happy-trip-site
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

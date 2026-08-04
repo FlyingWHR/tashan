@@ -8,7 +8,7 @@
 - Source: https://github.com/Stianlars1/tinify-mcp
 - npm: https://www.npmjs.com/package/@tinify-dev/mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 59.0 / 100
 - Adoption: 35.0
 - Upkeep: 61.0

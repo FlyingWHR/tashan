@@ -7,7 +7,7 @@
 - tashan id: plugin:stemado/visualizer-marketplace/visualizer
 - Source: https://github.com/stemado/visualizer-marketplace
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 24.0 / 100
 - Adoption: 7.0
 - Upkeep: 46.0

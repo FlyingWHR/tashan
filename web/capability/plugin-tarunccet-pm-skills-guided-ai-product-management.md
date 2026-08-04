@@ -7,7 +7,7 @@
 - tashan id: plugin:tarunccet/pm-skills/guided-ai-product-management
 - Source: https://github.com/tarunccet/pm-skills
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 53.0 / 100
 - Adoption: 17.0
 - Upkeep: 99.0

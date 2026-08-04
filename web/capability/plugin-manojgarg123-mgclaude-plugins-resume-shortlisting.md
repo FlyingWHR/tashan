@@ -7,7 +7,7 @@
 - tashan id: plugin:manojgarg123/mgclaude-plugins/resume-shortlisting
 - Source: https://github.com/manojgarg123/MGClaude-plugins
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

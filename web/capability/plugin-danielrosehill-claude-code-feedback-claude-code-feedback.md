@@ -7,7 +7,7 @@
 - tashan id: plugin:danielrosehill/claude-code-feedback/claude-code-feedback
 - Source: https://github.com/danielrosehill/Claude-Code-Feedback
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 29.0 / 100
 - Adoption: 11.0
 - Upkeep: 50.0

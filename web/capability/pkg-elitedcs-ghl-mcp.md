@@ -8,7 +8,7 @@
 - Source: https://github.com/drjerryrelth/ghl-command-feedback
 - npm: https://www.npmjs.com/package/@elitedcs/ghl-mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 69.0 / 100
 - Adoption: 44.0
 - Upkeep: 73.0

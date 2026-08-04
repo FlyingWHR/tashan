@@ -7,7 +7,7 @@
 - tashan id: plugin:run-llama/llamaparse-agent-plugins/llamaparse
 - Source: https://github.com/run-llama/llamaparse-agent-plugins
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 42.0 / 100
 - Adoption: 13.0
 - Upkeep: 77.0

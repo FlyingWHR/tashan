@@ -7,7 +7,7 @@
 - tashan id: plugin:jianshuo/claude-skills/wjs-promoting-skills
 - Source: https://github.com/jianshuo/claude-skills
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

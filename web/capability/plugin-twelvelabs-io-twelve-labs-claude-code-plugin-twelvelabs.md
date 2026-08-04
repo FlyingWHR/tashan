@@ -7,7 +7,7 @@
 - tashan id: plugin:twelvelabs-io/twelve-labs-claude-code-plugin/twelvelabs
 - Source: https://github.com/twelvelabs-io/twelve-labs-claude-code-plugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 49.0 / 100
 - Adoption: 24.0
 - Upkeep: 88.0

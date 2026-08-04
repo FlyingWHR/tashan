@@ -7,7 +7,7 @@
 - tashan id: plugin:pair-systems-inc/goodmem-claude-code-plugin/goodmem
 - Source: https://github.com/PAIR-Systems-Inc/goodmem-claude-code-plugin
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

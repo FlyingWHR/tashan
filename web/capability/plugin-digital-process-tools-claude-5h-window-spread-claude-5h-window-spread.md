@@ -7,7 +7,7 @@
 - tashan id: plugin:digital-process-tools/claude-5h-window-spread/claude-5h-window-spread
 - Source: https://github.com/Digital-Process-Tools/claude-5h-window-spread
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 38.0 / 100
 - Adoption: 17.0
 - Upkeep: 69.0

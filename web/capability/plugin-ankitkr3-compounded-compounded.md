@@ -7,7 +7,7 @@
 - tashan id: plugin:ankitkr3/compounded/compounded
 - Source: https://github.com/ankitkr3/compounded
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 44.0 / 100
 - Adoption: 17.0
 - Upkeep: 76.0

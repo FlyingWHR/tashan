@@ -7,7 +7,7 @@
 - tashan id: plugin:dilee/claude-extensions/dev-workflow
 - Source: https://github.com/dilee/claude-extensions
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

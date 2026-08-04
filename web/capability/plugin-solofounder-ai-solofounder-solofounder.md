@@ -7,7 +7,7 @@
 - tashan id: plugin:solofounder-ai/solofounder/solofounder
 - Source: https://github.com/solofounder-ai/solofounder
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 30.0 / 100
 - Adoption: 15.0
 - Upkeep: 48.0

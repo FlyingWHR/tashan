@@ -7,7 +7,7 @@
 - tashan id: plugin:gemini-cli-extensions/cloud-sql-sqlserver/cloud-sql-sqlserver
 - Source: https://github.com/gemini-cli-extensions/cloud-sql-sqlserver
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 56.0 / 100
 - Adoption: 23.0
 - Upkeep: 96.0

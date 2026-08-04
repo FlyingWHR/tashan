@@ -8,7 +8,7 @@
 - Source: https://github.com/uania/jira-mcp
 - npm: https://www.npmjs.com/package/@uania/jira-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 42.0 / 100
 - Adoption: 23.0
 - Upkeep: 51.0

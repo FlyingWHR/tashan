@@ -8,7 +8,7 @@
 - Source: https://github.com/theYahia/yookassa-mcp
 - npm: https://www.npmjs.com/package/@theyahia/yookassa-mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 45.0 / 100
 - Adoption: 23.0
 - Upkeep: 59.0

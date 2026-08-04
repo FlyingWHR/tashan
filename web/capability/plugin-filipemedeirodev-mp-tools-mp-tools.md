@@ -7,7 +7,7 @@
 - tashan id: plugin:filipemedeirodev/mp-tools/mp-tools
 - Source: https://github.com/FilipemedeiroDev/mp-tools
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

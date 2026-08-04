@@ -8,7 +8,7 @@
 - Source: https://github.com/Harusame64/desktop-touch-mcp
 - npm: https://www.npmjs.com/package/@harusame64/desktop-touch-mcp
 - Type: npm
-- Category: files
+- Category: browser
 - tashan score: 66.0 / 100
 - Adoption: 39.0
 - Upkeep: 72.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/LeassTaTT/servicenow-mcp-ai
 - npm: https://www.npmjs.com/package/servicenow-mcp-ai
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 49.0 / 100
 - Adoption: 28.0
 - Upkeep: 57.0

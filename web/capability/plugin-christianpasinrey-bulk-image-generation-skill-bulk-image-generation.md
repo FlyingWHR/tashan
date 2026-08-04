@@ -7,7 +7,7 @@
 - tashan id: plugin:christianpasinrey/bulk-image-generation-skill/bulk-image-generation
 - Source: https://github.com/christianpasinrey/bulk-image-generation-skill
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

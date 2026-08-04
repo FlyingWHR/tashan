@@ -7,7 +7,7 @@
 - tashan id: plugin:marcelopaniza/mempenny/mempenny
 - Source: https://github.com/marcelopaniza/mempenny
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 38.0 / 100
 - Adoption: 13.0
 - Upkeep: 60.0

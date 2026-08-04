@@ -7,7 +7,7 @@
 - tashan id: plugin:nathanmaine/memoriant-screen-recorder-skill/memoriant-screen-recorder
 - Source: https://github.com/NathanMaine/memoriant-screen-recorder-skill
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:karl-cta/meeting-bots/meeting-bots
 - Source: https://github.com/karl-cta/meeting-bots
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 32.0 / 100
 - Adoption: 16.0
 - Upkeep: 50.0

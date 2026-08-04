@@ -7,7 +7,7 @@
 - tashan id: plugin:bidah/react-native-hifi/react-native-hifi
 - Source: https://github.com/bidah/react-native-hifi
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 47.0 / 100
 - Adoption: 26.0
 - Upkeep: 84.0

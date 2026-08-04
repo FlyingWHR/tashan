@@ -7,7 +7,7 @@
 - tashan id: plugin:egnyte/egnyte-for-ai/egnyte
 - Source: https://github.com/egnyte/egnyte-for-ai
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 46.0 / 100
 - Adoption: 13.0
 - Upkeep: 94.0

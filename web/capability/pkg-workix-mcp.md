@@ -8,7 +8,7 @@
 - Source: https://github.com/facetoplace/Workix
 - npm: https://www.npmjs.com/package/@workix/mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 28.0 / 100
 - Adoption: not measured
 - Upkeep: 59.0

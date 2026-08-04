@@ -7,7 +7,7 @@
 - tashan id: plugin:merge-api/ah-plugins/merge-agent-handler
 - Source: https://github.com/merge-api/ah-plugins
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

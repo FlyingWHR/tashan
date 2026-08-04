@@ -7,7 +7,7 @@
 - tashan id: plugin:zeabur/agent-skills/zeabur
 - Source: https://github.com/zeabur/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 62.0 / 100
 - Adoption: 28.0
 - Upkeep: 98.0

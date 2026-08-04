@@ -7,7 +7,7 @@
 - tashan id: plugin:oduffy-delphi/deep-research-claude/deep-research
 - Source: https://github.com/oduffy-delphi/deep-research-claude
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 71.0

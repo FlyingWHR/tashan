@@ -7,7 +7,7 @@
 - tashan id: plugin:memi-design/memi/memi
 - Source: https://github.com/memi-design/memi
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 62.0 / 100
 - Adoption: 26.0
 - Upkeep: 99.0

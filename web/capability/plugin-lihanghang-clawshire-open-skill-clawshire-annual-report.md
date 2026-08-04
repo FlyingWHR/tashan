@@ -7,7 +7,7 @@
 - tashan id: plugin:lihanghang/clawshire-open-skill/clawshire-annual-report
 - Source: https://github.com/lihanghang/clawshire-open-skill
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 64.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:editorialos/pinterest-marketing-strategist/pinterest-marketing-strategist
 - Source: https://github.com/EditorialOS/pinterest-marketing-strategist
 - Type: plugin
-- Category: design
+- Category: security
 - tashan score: 41.0 / 100
 - Adoption: 11.0
 - Upkeep: 78.0

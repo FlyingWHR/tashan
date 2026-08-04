@@ -8,7 +8,7 @@
 - Source: https://github.com/A7OM-AI/atom-mcp-server
 - npm: https://www.npmjs.com/package/atom-mcp-server
 - Type: npm
-- Category: finance
+- Category: cloud
 - tashan score: 33.0 / 100
 - Adoption: 26.0
 - Upkeep: 44.0

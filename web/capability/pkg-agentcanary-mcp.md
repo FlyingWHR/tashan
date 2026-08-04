@@ -8,7 +8,7 @@
 - Source: https://github.com/MrCerq/agentcanary-mcp
 - npm: https://www.npmjs.com/package/agentcanary-mcp
 - Type: npm
-- Category: docs
+- Category: data
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 31.0
 - Upkeep: not measured

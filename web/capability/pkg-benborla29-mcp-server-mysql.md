@@ -8,7 +8,7 @@
 - Source: https://github.com/benborla/mcp-server-mysql
 - npm: https://www.npmjs.com/package/@benborla29/mcp-server-mysql
 - Type: npm
-- Category: other
+- Category: database
 - tashan score: 70.0 / 100
 - Adoption: 57.0
 - Upkeep: 68.0

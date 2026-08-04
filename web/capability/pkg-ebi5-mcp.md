@@ -7,7 +7,7 @@
 - tashan id: pkg:@ebi5/mcp
 - npm: https://www.npmjs.com/package/@ebi5/mcp
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 45.0 / 100
 - Adoption: 20.0
 - Upkeep: 59.0

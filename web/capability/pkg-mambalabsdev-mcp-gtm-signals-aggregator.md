@@ -8,7 +8,7 @@
 - Source: https://github.com/mambalabsdev/mcp-gtm-signals-aggregator
 - npm: https://www.npmjs.com/package/@mambalabsdev/mcp-gtm-signals-aggregator
 - Type: npm
-- Category: productivity
+- Category: finance
 - tashan score: 46.0 / 100
 - Adoption: 26.0
 - Upkeep: 57.0

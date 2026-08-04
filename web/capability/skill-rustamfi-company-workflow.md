@@ -7,7 +7,7 @@
 - tashan id: skill:rustamfi/company-workflow
 - Source: https://github.com/rustamfi/agentic-teams
 - Type: skill
-- Category: other
+- Category: finance
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

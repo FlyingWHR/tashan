@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/create-plugin
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 63.0 / 100
 - Adoption: 36.0
 - Upkeep: 72.0

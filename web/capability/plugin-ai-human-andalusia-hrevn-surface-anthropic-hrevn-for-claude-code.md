@@ -7,7 +7,7 @@
 - tashan id: plugin:ai-human-andalusia/hrevn-surface-anthropic/hrevn-for-claude-code
 - Source: https://github.com/ai-human-andalusia/hrevn-surface-anthropic
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 39.0 / 100
 - Adoption: 7.0
 - Upkeep: 79.0

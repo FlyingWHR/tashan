@@ -8,7 +8,7 @@
 - Source: https://github.com/IamNishant51/atlas-mcp-server
 - npm: https://www.npmjs.com/package/atlas-pipeline-mcp
 - Type: npm
-- Category: security
+- Category: design
 - tashan score: 34.0 / 100
 - Adoption: 23.0
 - Upkeep: 56.0

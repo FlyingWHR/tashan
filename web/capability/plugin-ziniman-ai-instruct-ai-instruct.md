@@ -7,7 +7,7 @@
 - tashan id: plugin:ziniman/ai-instruct/ai-instruct
 - Source: https://github.com/ziniman/ai-instruct
 - Type: plugin
-- Category: productivity
+- Category: cloud
 - tashan score: 41.0 / 100
 - Adoption: 26.0
 - Upkeep: 54.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Dw-Dwain/Ace-Context-MCP
 - npm: https://www.npmjs.com/package/ace-context-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 55.0 / 100
 - Adoption: 34.0
 - Upkeep: 55.0

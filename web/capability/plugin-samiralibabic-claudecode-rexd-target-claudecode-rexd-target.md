@@ -7,7 +7,7 @@
 - tashan id: plugin:samiralibabic/claudecode-rexd-target/claudecode-rexd-target
 - Source: https://github.com/samiralibabic/claudecode-rexd-target
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 39.0 / 100
 - Adoption: 11.0
 - Upkeep: 63.0

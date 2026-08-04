@@ -8,7 +8,7 @@
 - Source: https://github.com/Prohect/BindAliasPlus-MCP
 - npm: https://www.npmjs.com/package/bind-alias-plus-mcp
 - Type: npm
-- Category: devtools
+- Category: other
 - tashan score: 49.0 / 100
 - Adoption: 25.0
 - Upkeep: 57.0

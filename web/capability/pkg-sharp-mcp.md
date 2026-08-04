@@ -8,7 +8,7 @@
 - Source: https://github.com/choesumin/sharp-mcp
 - npm: https://www.npmjs.com/package/sharp-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 29.0 / 100
 - Adoption: 32.0
 - Upkeep: 42.0

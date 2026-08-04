@@ -7,7 +7,7 @@
 - tashan id: plugin:base44/skills/base44
 - Source: https://github.com/base44/skills
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 48.0 / 100
 - Adoption: 14.0
 - Upkeep: 100.0

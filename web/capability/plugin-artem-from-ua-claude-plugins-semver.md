@@ -7,7 +7,7 @@
 - tashan id: plugin:artem-from-ua/claude-plugins/semver
 - Source: https://github.com/artem-from-ua/claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

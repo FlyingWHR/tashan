@@ -7,7 +7,7 @@
 - tashan id: plugin:stripe/ai/stripe
 - Source: https://github.com/stripe/ai
 - Type: plugin
-- Category: devtools
+- Category: finance
 - tashan score: 76.0 / 100
 - Adoption: 53.0
 - Upkeep: 99.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:sapdev-ai/sap-dev/sap-tcd
 - Source: https://github.com/sapdev-ai/sap-dev
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 70.0

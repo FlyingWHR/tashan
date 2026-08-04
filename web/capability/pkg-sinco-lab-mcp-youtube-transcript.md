@@ -8,7 +8,7 @@
 - Source: https://github.com/sinco-lab/mcp-youtube-transcript
 - npm: https://www.npmjs.com/package/@sinco-lab/mcp-youtube-transcript
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 51.0 / 100
 - Adoption: 39.0
 - Upkeep: 56.0

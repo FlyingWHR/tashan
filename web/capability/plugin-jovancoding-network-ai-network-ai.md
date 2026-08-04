@@ -7,7 +7,7 @@
 - tashan id: plugin:jovancoding/network-ai/network-ai
 - Source: https://github.com/Jovancoding/Network-AI
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 65.0 / 100
 - Adoption: 31.0
 - Upkeep: 98.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:bitcraft-apps/spec-first/spec-first
 - Source: https://github.com/bitcraft-apps/spec-first
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 16.0
 - Upkeep: 77.0

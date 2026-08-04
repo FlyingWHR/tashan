@@ -8,7 +8,7 @@
 - Source: https://github.com/TheBackers/pplz-agent
 - npm: https://www.npmjs.com/package/pplz-agent
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 39.0 / 100
 - Adoption: 28.0
 - Upkeep: 50.0

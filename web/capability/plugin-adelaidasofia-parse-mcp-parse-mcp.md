@@ -7,7 +7,7 @@
 - tashan id: plugin:adelaidasofia/parse-mcp/parse-mcp
 - Source: https://github.com/adelaidasofia/parse-mcp
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: 81.0

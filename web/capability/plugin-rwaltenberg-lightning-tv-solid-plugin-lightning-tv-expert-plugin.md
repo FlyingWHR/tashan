@@ -7,7 +7,7 @@
 - tashan id: plugin:rwaltenberg/lightning-tv-solid-plugin/lightning-tv-expert-plugin
 - Source: https://github.com/rwaltenberg/lightning-tv-solid-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 34.0 / 100
 - Adoption: 15.0
 - Upkeep: 66.0

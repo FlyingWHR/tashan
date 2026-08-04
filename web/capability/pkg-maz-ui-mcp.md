@@ -8,7 +8,7 @@
 - Source: https://github.com/LouisMazel/maz-ui
 - npm: https://www.npmjs.com/package/@maz-ui/mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 48.0 / 100
 - Adoption: 34.0
 - Upkeep: 62.0

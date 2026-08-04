@@ -8,7 +8,7 @@
 - Source: https://github.com/OrangeproAI/orangepro-mcp
 - npm: https://www.npmjs.com/package/@orangepro/mcp-server
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 67.0 / 100
 - Adoption: 41.0
 - Upkeep: 69.0

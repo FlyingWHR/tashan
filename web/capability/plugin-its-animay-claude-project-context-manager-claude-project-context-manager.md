@@ -7,7 +7,7 @@
 - tashan id: plugin:its-animay/claude-project-context-manager/claude-project-context-manager
 - Source: https://github.com/its-animay/claude-project-context-manager
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 15.0
 - Upkeep: 43.0

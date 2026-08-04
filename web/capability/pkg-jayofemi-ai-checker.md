@@ -8,7 +8,7 @@
 - Source: https://github.com/JayOfemi/byakugan
 - npm: https://www.npmjs.com/package/@jayofemi/ai-checker
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 42.0 / 100
 - Adoption: 22.0
 - Upkeep: 49.0

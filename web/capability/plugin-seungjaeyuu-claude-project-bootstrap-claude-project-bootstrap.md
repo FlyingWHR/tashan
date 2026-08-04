@@ -7,7 +7,7 @@
 - tashan id: plugin:seungjaeyuu/claude-project-bootstrap/claude-project-bootstrap
 - Source: https://github.com/seungjaeyuu/claude-project-bootstrap
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 55.0

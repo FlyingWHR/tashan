@@ -7,7 +7,7 @@
 - tashan id: pkg:@marrowid/cli
 - npm: https://www.npmjs.com/package/@marrowid/cli
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 57.0 / 100
 - Adoption: 30.0
 - Upkeep: 67.0

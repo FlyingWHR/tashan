@@ -7,7 +7,7 @@
 - tashan id: plugin:roxabi/roxabi-plugins/gitnexus
 - Source: https://github.com/Roxabi/roxabi-plugins
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 98.0

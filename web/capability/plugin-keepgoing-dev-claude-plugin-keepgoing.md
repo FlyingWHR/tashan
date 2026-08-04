@@ -7,7 +7,7 @@
 - tashan id: plugin:keepgoing-dev/claude-plugin/keepgoing
 - Source: https://github.com/keepgoing-dev/claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: 70.0

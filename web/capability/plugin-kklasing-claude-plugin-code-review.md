@@ -7,7 +7,7 @@
 - tashan id: plugin:kklasing/claude-plugin/code-review
 - Source: https://github.com/kklasing/claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: comms
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:chronoaiproject/consensus-rnd/consensus-rnd
 - Source: https://github.com/ChronoAIProject/consensus-rnd
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 52.0 / 100
 - Adoption: 25.0
 - Upkeep: not measured

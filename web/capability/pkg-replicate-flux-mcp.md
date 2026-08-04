@@ -8,7 +8,7 @@
 - Source: https://github.com/awkoy/replicate-flux-mcp
 - npm: https://www.npmjs.com/package/replicate-flux-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 43.0 / 100
 - Adoption: 31.0
 - Upkeep: 55.0

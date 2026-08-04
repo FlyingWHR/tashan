@@ -7,7 +7,7 @@
 - tashan id: plugin:haandol/alps-writer-mcp/alps-writer
 - Source: https://github.com/haandol/alps-writer-mcp
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

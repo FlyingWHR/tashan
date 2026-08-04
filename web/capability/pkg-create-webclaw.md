@@ -8,7 +8,7 @@
 - Source: https://github.com/0xMassi/webclaw
 - npm: https://www.npmjs.com/package/create-webclaw
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 56.0 / 100
 - Adoption: 31.0
 - Upkeep: 63.0

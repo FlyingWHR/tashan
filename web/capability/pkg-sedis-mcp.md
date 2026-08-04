@@ -8,7 +8,7 @@
 - Source: https://github.com/sedis-ab/sedis-mcp
 - npm: https://www.npmjs.com/package/@sedis/mcp
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 49.0 / 100
 - Adoption: 23.0
 - Upkeep: 61.0

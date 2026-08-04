@@ -7,7 +7,7 @@
 - tashan id: plugin:smartlink-basics/claude-cowork-plugin/smartlink-basics
 - Source: https://github.com/smartlink-basics/claude-cowork-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

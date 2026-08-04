@@ -8,7 +8,7 @@
 - Source: https://github.com/Arielbs/rosetta-mcp-server
 - npm: https://www.npmjs.com/package/rosetta-mcp-server
 - Type: npm
-- Category: devtools
+- Category: finance
 - tashan score: 43.0 / 100
 - Adoption: 30.0
 - Upkeep: 59.0

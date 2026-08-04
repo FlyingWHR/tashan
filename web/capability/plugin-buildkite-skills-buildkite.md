@@ -7,7 +7,7 @@
 - tashan id: plugin:buildkite/skills/buildkite
 - Source: https://github.com/buildkite/skills
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 61.0 / 100
 - Adoption: 26.0
 - Upkeep: 98.0

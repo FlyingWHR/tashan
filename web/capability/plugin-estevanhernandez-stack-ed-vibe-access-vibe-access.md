@@ -7,7 +7,7 @@
 - tashan id: plugin:estevanhernandez-stack-ed/vibe-access/vibe-access
 - Source: https://github.com/estevanhernandez-stack-ed/vibe-access
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 40.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

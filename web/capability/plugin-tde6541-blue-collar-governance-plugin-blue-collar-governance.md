@@ -7,7 +7,7 @@
 - tashan id: plugin:tde6541/blue-collar-governance-plugin/blue-collar-governance
 - Source: https://github.com/TDE6541/blue-collar-governance-plugin
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 49.0

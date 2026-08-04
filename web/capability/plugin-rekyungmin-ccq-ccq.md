@@ -7,7 +7,7 @@
 - tashan id: plugin:rekyungmin/ccq/ccq
 - Source: https://github.com/rekyungmin/ccq
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 34.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:abexiong/govafy-unsolicited-proposal-kit/govafy-unsolicited-proposal-kit
 - Source: https://github.com/abexiong/govafy-unsolicited-proposal-kit
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 29.0 / 100
 - Adoption: 13.0
 - Upkeep: 49.0

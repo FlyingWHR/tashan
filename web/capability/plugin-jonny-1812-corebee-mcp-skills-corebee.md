@@ -7,7 +7,7 @@
 - tashan id: plugin:jonny-1812/corebee-mcp-skills/corebee
 - Source: https://github.com/jonny-1812/corebee-mcp-skills
 - Type: plugin
-- Category: data
+- Category: comms
 - tashan score: 44.0 / 100
 - Adoption: 7.0
 - Upkeep: 98.0

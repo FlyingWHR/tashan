@@ -7,7 +7,7 @@
 - tashan id: plugin:fullstorydev/subtext/subtext
 - Source: https://github.com/fullstorydev/subtext
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 65.0 / 100
 - Adoption: 31.0
 - Upkeep: 98.0

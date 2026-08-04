@@ -7,7 +7,7 @@
 - tashan id: plugin:artwist-polyakov/polyakov-claude-skills/ssh-remote-connection
 - Source: https://github.com/artwist-polyakov/polyakov-claude-skills
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 77.0

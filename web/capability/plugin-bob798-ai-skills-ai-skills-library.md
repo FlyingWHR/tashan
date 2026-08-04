@@ -7,7 +7,7 @@
 - tashan id: plugin:bob798/ai-skills/ai-skills-library
 - Source: https://github.com/bob798/ai-skills
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 39.0 / 100
 - Adoption: 11.0
 - Upkeep: 75.0

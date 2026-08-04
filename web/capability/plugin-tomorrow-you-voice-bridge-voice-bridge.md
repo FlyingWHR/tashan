@@ -7,7 +7,7 @@
 - tashan id: plugin:tomorrow-you/voice-bridge/voice-bridge
 - Source: https://github.com/Tomorrow-You/voice-bridge
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

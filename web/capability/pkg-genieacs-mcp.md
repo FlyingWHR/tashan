@@ -8,7 +8,7 @@
 - Source: https://github.com/GeiserX/genieacs-mcp
 - npm: https://www.npmjs.com/package/genieacs-mcp
 - Type: npm
-- Category: productivity
+- Category: database
 - tashan score: 47.0 / 100
 - Adoption: 26.0
 - Upkeep: 59.0

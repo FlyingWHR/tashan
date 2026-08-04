@@ -8,7 +8,7 @@
 - Source: https://github.com/AlexanderKaan/uicockpit
 - npm: https://www.npmjs.com/package/uicockpit-mcp
 - Type: npm
-- Category: productivity
+- Category: design
 - tashan score: 51.0 / 100
 - Adoption: 26.0
 - Upkeep: 61.0

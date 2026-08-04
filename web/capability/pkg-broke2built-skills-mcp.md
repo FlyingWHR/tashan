@@ -8,7 +8,7 @@
 - Source: https://github.com/lordbasilaiassistant-sudo/broke2built-skills-mcp
 - npm: https://www.npmjs.com/package/broke2built-skills-mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 48.0 / 100
 - Adoption: 24.0
 - Upkeep: 56.0

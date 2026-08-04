@@ -7,7 +7,7 @@
 - tashan id: pkg:ecp-bridge
 - npm: https://www.npmjs.com/package/ecp-bridge
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 49.0 / 100
 - Adoption: 23.0
 - Upkeep: 61.0

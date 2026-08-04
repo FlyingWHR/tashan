@@ -7,7 +7,7 @@
 - tashan id: plugin:adelaidasofia/claude-daily-journal/daily-journal
 - Source: https://github.com/adelaidasofia/claude-daily-journal
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 39.0 / 100
 - Adoption: 7.0
 - Upkeep: 79.0

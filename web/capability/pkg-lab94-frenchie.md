@@ -8,7 +8,7 @@
 - Source: https://github.com/Lab94/frenchie-skill
 - npm: https://www.npmjs.com/package/@lab94/frenchie
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 43.0 / 100
 - Adoption: 27.0
 - Upkeep: 58.0

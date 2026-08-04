@@ -7,7 +7,7 @@
 - tashan id: plugin:vellus-ai/sdlc-kit/sdlc-kit-extended
 - Source: https://github.com/vellus-ai/sdlc-kit
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 31.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

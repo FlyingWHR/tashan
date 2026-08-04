@@ -8,7 +8,7 @@
 - Source: https://github.com/AIWerk/mcp-server-wheel-size
 - npm: https://www.npmjs.com/package/@aiwerk/mcp-server-wheel-size
 - Type: npm
-- Category: data
+- Category: devtools
 - tashan score: 46.0 / 100
 - Adoption: 25.0
 - Upkeep: 56.0

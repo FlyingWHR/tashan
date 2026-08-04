@@ -7,7 +7,7 @@
 - tashan id: plugin:yannabadie/meta-harness-ygn/meta-harness-ygn
 - Source: https://github.com/yannabadie/Meta-Harness-YGN
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 26.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

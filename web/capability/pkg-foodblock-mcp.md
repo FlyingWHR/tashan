@@ -8,7 +8,7 @@
 - Source: https://github.com/FoodXDevelopment/foodblock
 - npm: https://www.npmjs.com/package/foodblock-mcp
 - Type: npm
-- Category: ai
+- Category: devtools
 - tashan score: 29.0 / 100
 - Adoption: 20.0
 - Upkeep: 42.0

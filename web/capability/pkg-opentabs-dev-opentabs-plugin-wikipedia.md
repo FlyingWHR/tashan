@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/opentabs-plugin-wikipedia
 - Type: npm
-- Category: other
+- Category: docs
 - tashan score: 60.0 / 100
 - Adoption: 33.0
 - Upkeep: 68.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:marcosnahuel/antigravity-plugin-cc/antigravity
 - Source: https://github.com/MarcosNahuel/antigravity-plugin-cc
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 59.0 / 100
 - Adoption: 24.0
 - Upkeep: 98.0

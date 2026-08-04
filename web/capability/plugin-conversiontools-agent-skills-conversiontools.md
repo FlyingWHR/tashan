@@ -7,7 +7,7 @@
 - tashan id: plugin:conversiontools/agent-skills/conversiontools
 - Source: https://github.com/conversiontools/agent-skills
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 48.0 / 100
 - Adoption: 17.0
 - Upkeep: 81.0

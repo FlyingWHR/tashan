@@ -8,7 +8,7 @@
 - Source: https://github.com/Cail726/chinese-text-tools
 - npm: https://www.npmjs.com/package/chinese-text-tools
 - Type: npm
-- Category: finance
+- Category: data
 - tashan score: 51.0 / 100
 - Adoption: 27.0
 - Upkeep: 58.0

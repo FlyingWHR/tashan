@@ -7,7 +7,7 @@
 - tashan id: plugin:laoitdevopen/laoitdev-skills/laoitdev-skills
 - Source: https://github.com/LaoitdevOpen/laoitdev-skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 95.0

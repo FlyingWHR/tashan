@@ -7,7 +7,7 @@
 - tashan id: plugin:liatrio-labs/claude-deep-review/claude-deep-review
 - Source: https://github.com/liatrio-labs/claude-deep-review
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 57.0 / 100
 - Adoption: 21.0
 - Upkeep: 99.0

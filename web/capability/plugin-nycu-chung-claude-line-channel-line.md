@@ -7,7 +7,7 @@
 - tashan id: plugin:nycu-chung/claude-line-channel/line
 - Source: https://github.com/NYCU-Chung/claude-line-channel
 - Type: plugin
-- Category: devtools
+- Category: data
 - tashan score: 43.0 / 100
 - Adoption: 29.0
 - Upkeep: 66.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Ataraxy-Labs/sem
 - npm: https://www.npmjs.com/package/@ataraxy-labs/sem
 - Type: npm
-- Category: devtools
+- Category: search
 - tashan score: 70.0 / 100
 - Adoption: 50.0
 - Upkeep: 71.0

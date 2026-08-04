@@ -7,7 +7,7 @@
 - tashan id: plugin:ricky-stevens/context-guardian/context-guardian
 - Source: https://github.com/Ricky-Stevens/context-guardian
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 39.0 / 100
 - Adoption: 17.0
 - Upkeep: 58.0

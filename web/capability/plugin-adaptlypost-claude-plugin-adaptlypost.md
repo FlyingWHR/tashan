@@ -7,7 +7,7 @@
 - tashan id: plugin:adaptlypost/claude-plugin/adaptlypost
 - Source: https://github.com/adaptlypost/claude-plugin
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 62.0

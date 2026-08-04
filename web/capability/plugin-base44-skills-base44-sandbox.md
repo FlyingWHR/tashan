@@ -7,7 +7,7 @@
 - tashan id: plugin:base44/skills/base44-sandbox
 - Source: https://github.com/base44/skills
 - Type: plugin
-- Category: devtools
+- Category: database
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

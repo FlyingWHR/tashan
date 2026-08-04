@@ -8,7 +8,7 @@
 - Source: https://github.com/acunningham-ship-it/veilbrowser
 - npm: https://www.npmjs.com/package/@achamm/veilbrowser
 - Type: npm
-- Category: other
+- Category: browser
 - tashan score: 60.0 / 100
 - Adoption: 36.0
 - Upkeep: 64.0

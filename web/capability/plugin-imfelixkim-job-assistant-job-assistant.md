@@ -7,7 +7,7 @@
 - tashan id: plugin:imfelixkim/job_assistant/job-assistant
 - Source: https://github.com/imfelixkim/job_assistant
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 65.0

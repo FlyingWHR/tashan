@@ -197,17 +197,62 @@
   // while bounding how wrong it can be. Entries written by the old format lack `t`, so they fail this
   // check and re-fetch — existing sessions heal themselves with no migration.
   var INDEX_TTL_MS = 5 * 60 * 1000;
+  // THE ONE LOADER. Both the palette here and the board in index.js call this — index.js does
+  // `window.tashanIndex || fetch(...)`, so whatever this returns is what the page renders. Changing
+  // the fetch in index.js alone is dead code; that was tried and never fired once.
+  //
+  // BOARD FIRST, CATALOGUED TAIL ON IDLE. board.json is the RANKED slice (1,080 rows, 40 KB gz);
+  // catalogued.json is the 800 unrated rows (17 KB gz) that a ranking cannot order anyway. Splitting
+  // them ended a first-paint budget that had been raised three times in three days chasing corpus
+  // growth. index.json still carries both and is untouched, because the published CLI reads it and
+  // trimming it would degrade copies already installed on people's machines.
+  //
+  // The cache KEY carries the shape. An old session holding the previous single-payload value under
+  // the same key would keep serving it for the whole TTL, so a shape change needs a new key or it
+  // heals only after the tab is closed.
+  var CACHE_KEY = "tashan_index_v2";
+  function mergeTail(d) {
+    if (!d || !d.catalogued_at) return d;
+    var pull = function () {
+      fetch(d.catalogued_at).then(function (r) { return r.ok ? r.json() : null; }).then(function (t) {
+        if (!t || !t.capabilities || !t.capabilities.length) return;
+        var seen = {};
+        (d.capabilities || []).forEach(function (c) { seen[c.id] = 1; });
+        var add = t.capabilities.filter(function (c) { return !seen[c.id]; });
+        if (!add.length) return;
+        d.capabilities = (d.capabilities || []).concat(add);
+        try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), d: d })); } catch (e) {}
+        window.dispatchEvent(new CustomEvent("tashan:catalogued"));
+      }).catch(function () {});
+    };
+    if (window.requestIdleCallback) requestIdleCallback(pull, { timeout: 4000 }); else setTimeout(pull, 1200);
+    return d;
+  }
+  // tasks.json is 68 KB and BOTH terminal.js and index.js were fetching it on every homepage load —
+  // 136 KB for one file, because each had its own copy of the call. Same shape of bug as the index
+  // loader, one file over. Shared promise: whoever asks first pays, everyone else waits on it.
+  window.tashanTasks = function () {
+    if (!window.__tashanTasksP) {
+      window.__tashanTasksP = fetch("/data/tasks.json")
+        .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+    }
+    return window.__tashanTasksP;
+  };
   window.tashanIndex = function () {
     if (window.__tashanIndexP) return window.__tashanIndexP;
     var p;
     try {
-      var box = JSON.parse(sessionStorage.getItem("tashan_index"));
+      var box = JSON.parse(sessionStorage.getItem(CACHE_KEY));
       if (box && box.d && box.t && (Date.now() - box.t) < INDEX_TTL_MS) p = Promise.resolve(box.d);
     } catch (e) {}
-    if (!p) p = fetch("/data/index.json").then(function (r) { return r.json(); }).then(function (d) {
-      try { sessionStorage.setItem("tashan_index", JSON.stringify({ t: Date.now(), d: d })); } catch (e) {}
-      return d;
-    });
+    // Falls back to index.json so a browser that reaches a deploy without board.json still renders.
+    if (!p) p = fetch("/data/board.json")
+      .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .catch(function () { return fetch("/data/index.json").then(function (r) { return r.json(); }); })
+      .then(function (d) {
+        try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), d: d })); } catch (e) {}
+        return mergeTail(d);
+      });
     window.__tashanIndexP = p;
     return p;
   };
@@ -219,7 +264,7 @@
     caps.forEach(function (c) { c._s = (c.name + " " + c.id).toLowerCase(); });   // precompute search field once
     fillTicker(track); fillStatus(d);
   }).then(function () {
-    return fetch("/data/tasks.json").then(function (r) { return r.ok ? r.json() : null; }).then(function (t) {
+    return window.tashanTasks().then(function (t) {
       if (!t) return;
       (t.tasks || []).forEach(function (x) {
         jobs.push({ kind: "job", what: "task", name: x.label, href: "/task/" + x.slug + ".html",

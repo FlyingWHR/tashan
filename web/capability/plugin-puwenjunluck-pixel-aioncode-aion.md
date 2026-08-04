@@ -7,7 +7,7 @@
 - tashan id: plugin:puwenjunluck-pixel/aioncode/aion
 - Source: https://github.com/puwenjunluck-pixel/aioncode
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 74.0

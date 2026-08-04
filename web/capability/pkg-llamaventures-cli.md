@@ -8,7 +8,7 @@
 - Source: https://github.com/Llama-Ventures/llama-cli
 - npm: https://www.npmjs.com/package/@llamaventures/cli
 - Type: npm
-- Category: other
+- Category: ai
 - tashan score: 63.0 / 100
 - Adoption: 34.0
 - Upkeep: 73.0

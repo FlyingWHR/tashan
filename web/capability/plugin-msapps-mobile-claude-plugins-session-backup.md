@@ -7,7 +7,7 @@
 - tashan id: plugin:msapps-mobile/claude-plugins/session-backup
 - Source: https://github.com/MSApps-Mobile/claude-plugins
 - Type: plugin
-- Category: productivity
+- Category: files
 - tashan score: 39.0 / 100
 - Adoption: 7.0
 - Upkeep: 92.0

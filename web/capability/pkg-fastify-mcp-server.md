@@ -8,7 +8,7 @@
 - Source: https://github.com/flaviodelgrosso/fastify-mcp-server
 - npm: https://www.npmjs.com/package/fastify-mcp-server
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 41.0 / 100
 - Adoption: 50.0
 - Upkeep: 47.0

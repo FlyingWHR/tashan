@@ -7,7 +7,7 @@
 - tashan id: plugin:evanklem/evanflow/evanflow
 - Source: https://github.com/evanklem/evanflow
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 55.0 / 100
 - Adoption: 41.0
 - Upkeep: 70.0

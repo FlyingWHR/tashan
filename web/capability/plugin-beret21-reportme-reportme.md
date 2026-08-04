@@ -7,7 +7,7 @@
 - tashan id: plugin:beret21/reportme/reportme
 - Source: https://github.com/beret21/reportme
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 38.0 / 100
 - Adoption: 11.0
 - Upkeep: 62.0

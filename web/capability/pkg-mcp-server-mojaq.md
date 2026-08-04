@@ -8,7 +8,7 @@
 - Source: https://github.com/mojaqhq/mcp-server-mojaq
 - npm: https://www.npmjs.com/package/mcp-server-mojaq
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 41.0 / 100
 - Adoption: 18.0
 - Upkeep: 53.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:roninforge/budgetclaw/budgetclaw
 - Source: https://github.com/RoninForge/budgetclaw
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 55.0 / 100
 - Adoption: 19.0
 - Upkeep: 99.0

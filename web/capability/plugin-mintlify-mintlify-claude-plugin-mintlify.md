@@ -7,7 +7,7 @@
 - tashan id: plugin:mintlify/mintlify-claude-plugin/mintlify
 - Source: https://github.com/mintlify/mintlify-claude-plugin
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 48.0 / 100
 - Adoption: 17.0
 - Upkeep: 81.0

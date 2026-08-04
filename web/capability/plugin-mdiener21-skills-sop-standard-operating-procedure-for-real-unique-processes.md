@@ -7,7 +7,7 @@
 - tashan id: plugin:mdiener21/skills/sop-standard-operating-procedure-for-real-unique-processes
 - Source: https://github.com/mdiener21/skills
 - Type: plugin
-- Category: devtools
+- Category: other
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 53.0

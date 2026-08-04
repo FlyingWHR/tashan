@@ -7,7 +7,7 @@
 - tashan id: plugin:ncoevoet/claude-review-all/review-all
 - Source: https://github.com/ncoevoet/claude-review-all
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 43.0 / 100
 - Adoption: 23.0
 - Upkeep: 58.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:finaegis/defluff/defluff
 - Source: https://github.com/FinAegis/defluff
 - Type: plugin
-- Category: comms
+- Category: security
 - tashan score: 30.0 / 100
 - Adoption: 7.0
 - Upkeep: 54.0

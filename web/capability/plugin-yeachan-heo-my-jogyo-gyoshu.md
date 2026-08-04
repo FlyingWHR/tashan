@@ -7,7 +7,7 @@
 - tashan id: plugin:yeachan-heo/my-jogyo/gyoshu
 - Source: https://github.com/Yeachan-Heo/My-Jogyo
 - Type: plugin
-- Category: productivity
+- Category: search
 - tashan score: 49.0 / 100
 - Adoption: 38.0
 - Upkeep: 79.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/muxinc/mux-node-sdk
 - npm: https://www.npmjs.com/package/@mux/mcp
 - Type: npm
-- Category: devtools
+- Category: cloud
 - tashan score: 60.0 / 100
 - Adoption: 34.0
 - Upkeep: 87.0

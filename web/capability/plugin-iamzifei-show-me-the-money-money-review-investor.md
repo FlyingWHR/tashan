@@ -7,7 +7,7 @@
 - tashan id: plugin:iamzifei/show-me-the-money/money-review-investor
 - Source: https://github.com/iamzifei/show-me-the-money
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 52.0

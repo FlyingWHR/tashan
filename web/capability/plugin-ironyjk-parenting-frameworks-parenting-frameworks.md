@@ -7,7 +7,7 @@
 - tashan id: plugin:ironyjk/parenting-frameworks/parenting-frameworks
 - Source: https://github.com/ironyjk/parenting-frameworks
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

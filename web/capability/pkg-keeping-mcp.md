@@ -8,7 +8,7 @@
 - Source: https://github.com/red-square-software/keeping-mcp
 - npm: https://www.npmjs.com/package/keeping-mcp
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 42.0 / 100
 - Adoption: 24.0
 - Upkeep: 50.0

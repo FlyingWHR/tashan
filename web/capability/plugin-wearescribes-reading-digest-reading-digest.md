@@ -7,7 +7,7 @@
 - tashan id: plugin:wearescribes/reading-digest/reading-digest
 - Source: https://github.com/wearescribes/reading-digest
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 62.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:curlymolelabs/supericons/supericons
 - Source: https://github.com/curlymolelabs/supericons
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

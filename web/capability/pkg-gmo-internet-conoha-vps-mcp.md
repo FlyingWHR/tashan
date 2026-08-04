@@ -8,7 +8,7 @@
 - Source: https://github.com/gmo-internet/conoha_vps_mcp
 - npm: https://www.npmjs.com/package/@gmo-internet/conoha-vps-mcp
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 53.0 / 100
 - Adoption: 19.0
 - Upkeep: 89.0

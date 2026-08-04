@@ -7,7 +7,7 @@
 - tashan id: plugin:machine-intelligence/claude-code-plugins/video-tools
 - Source: https://github.com/machine-intelligence/claude-code-plugins
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 28.0 / 100
 - Adoption: 11.0
 - Upkeep: 61.0

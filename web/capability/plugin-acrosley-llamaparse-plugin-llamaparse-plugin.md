@@ -7,7 +7,7 @@
 - tashan id: plugin:acrosley/llamaparse-plugin/llamaparse-plugin
 - Source: https://github.com/acrosley/llamaparse-plugin
 - Type: plugin
-- Category: productivity
+- Category: other
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 74.0

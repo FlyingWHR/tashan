@@ -7,7 +7,7 @@
 - tashan id: plugin:windmill-dev/windmill-plugin/windmill-hr
 - Source: https://github.com/windmill-dev/windmill-plugin
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 47.0 / 100
 - Adoption: 11.0
 - Upkeep: 98.0

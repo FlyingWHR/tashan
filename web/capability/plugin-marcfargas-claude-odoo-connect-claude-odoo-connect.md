@@ -7,7 +7,7 @@
 - tashan id: plugin:marcfargas/claude-odoo-connect/claude-odoo-connect
 - Source: https://github.com/marcfargas/claude-odoo-connect
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 34.0 / 100
 - Adoption: 11.0
 - Upkeep: 69.0

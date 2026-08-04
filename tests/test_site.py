@@ -36,7 +36,12 @@ CAP_HTML_MAX = 20 * 1024        # a prerendered detail page, gzipped-off
 #     command from it, and EVERY ALREADY-INSTALLED CLI reads this same live file. Removing a field
 #     the published client depends on breaks copies in the wild that can never be updated in step.
 # So the honest fix is to pay the 1.1 KB: ~8ms on slow 3G for 291 more capabilities on the board.
-INDEX_JSON_GZ_MAX = 60 * 1024
+# 5 Aug 2026 — this now measures board.json, the file the BROWSER fetches. index.json still holds
+# ranked + catalogued rows because the published CLI reads it, but the board only needs the ranked
+# slice to paint a ranking: splitting them took first paint from 56.8 KB to 40.4 KB and ended a
+# budget that had been raised three times in three days (45 -> 55 -> 60) chasing corpus growth.
+# Back to 45 KB, which is where it started, with the tail loading on idle.
+INDEX_JSON_GZ_MAX = 45 * 1024
 PAGE_TTFB_MAX = 0.20            # seconds, local server
 NO_RUNTIME_BIG_EXPORT = "capabilities.json"  # must never be fetched at runtime
 
@@ -78,7 +83,7 @@ def slugify(cid):
 
 # ---------------------------------------------------------------- static checks
 def load_board():
-    d = json.load(open(os.path.join(WEB, "data", "index.json")))
+    d = json.load(open(os.path.join(WEB, "data", "board.json")))
     return d["capabilities"] if isinstance(d, dict) else d
 
 def page_slugs():
@@ -170,7 +175,7 @@ def static_checks():
           f"{biggest[0]//1024} KB — {os.path.basename(biggest[1])}")
 
     # 8. slim index gzipped weight (what prod actually ships)
-    raw = open(os.path.join(WEB, "data", "index.json"), "rb").read()
+    raw = open(os.path.join(WEB, "data", "board.json"), "rb").read()
     gz = len(gzip.compress(raw))
     check(f"index.json <= {INDEX_JSON_GZ_MAX//1024} KB gzipped",
           gz <= INDEX_JSON_GZ_MAX, f"{gz//1024} KB gz / {len(raw)//1024} KB raw")
@@ -312,7 +317,7 @@ def cli_field_contract():
     """
     print()
     print("# CLI reads fields the data actually has")
-    idx = json.load(open(os.path.join(WEB, "data", "index.json")))["capabilities"]
+    idx = json.load(open(os.path.join(WEB, "data", "board.json")))["capabilities"]
     lk = json.load(open(os.path.join(WEB, "data", "lookup.json")))["records"]
     check("index.json rows carry `tashan_score`", any("tashan_score" in r for r in idx[:50]))
     check("lookup.json records carry `tashan_score`", any("tashan_score" in r for r in lk[:50]))

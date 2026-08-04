@@ -7,7 +7,7 @@
 - tashan id: plugin:avectats7/anti-ai-writing/anti-ai-writing
 - Source: https://github.com/avectats7/anti-ai-writing
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 40.0 / 100
 - Adoption: 13.0
 - Upkeep: 62.0

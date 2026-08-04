@@ -8,7 +8,7 @@
 - Source: https://github.com/CodyWatters/riveter-mcp-server
 - npm: https://www.npmjs.com/package/riveter-mcp-server
 - Type: npm
-- Category: data
+- Category: browser
 - tashan score: 59.0 / 100
 - Adoption: 37.0
 - Upkeep: 60.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/MAG-Cie/mcp-microsoft-todo
 - npm: https://www.npmjs.com/package/@mag-cie/mcp-microsoft-todo
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 44.0 / 100
 - Adoption: 28.0
 - Upkeep: 59.0

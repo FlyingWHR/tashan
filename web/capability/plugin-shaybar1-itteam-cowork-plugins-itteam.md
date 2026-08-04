@@ -7,7 +7,7 @@
 - tashan id: plugin:shaybar1/itteam-cowork-plugins/itteam
 - Source: https://github.com/ShayBar1/itteam-cowork-plugins
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

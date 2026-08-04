@@ -8,7 +8,7 @@
 - Source: https://github.com/OndrejLapes/GretlMCP
 - npm: https://www.npmjs.com/package/gretl-mcp
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 39.0 / 100
 - Adoption: 23.0
 - Upkeep: 48.0

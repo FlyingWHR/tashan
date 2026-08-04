@@ -8,7 +8,7 @@
 - Source: https://github.com/theYahia/roistat-mcp
 - npm: https://www.npmjs.com/package/@theyahia/roistat-mcp
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 35.0 / 100
 - Adoption: 23.0
 - Upkeep: 49.0

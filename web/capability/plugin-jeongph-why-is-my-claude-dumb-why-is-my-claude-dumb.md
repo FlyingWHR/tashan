@@ -7,7 +7,7 @@
 - tashan id: plugin:jeongph/why-is-my-claude-dumb/why-is-my-claude-dumb
 - Source: https://github.com/jeongph/why-is-my-claude-dumb
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 38.0 / 100
 - Adoption: 11.0
 - Upkeep: 62.0

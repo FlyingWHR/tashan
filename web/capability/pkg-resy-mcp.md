@@ -8,7 +8,7 @@
 - Source: https://github.com/chrischall/resy-mcp
 - npm: https://www.npmjs.com/package/resy-mcp
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 63.0 / 100
 - Adoption: 36.0
 - Upkeep: 69.0

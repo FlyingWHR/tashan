@@ -7,7 +7,7 @@
 - tashan id: plugin:waitdeadai/llm-dark-patterns/llm-dark-patterns
 - Source: https://github.com/waitdeadai/llm-dark-patterns
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 53.0 / 100
 - Adoption: 23.0
 - Upkeep: 81.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:tommaone/claude-skills/michelangelo
 - Source: https://github.com/tommaone/claude-skills
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

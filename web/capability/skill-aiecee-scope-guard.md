@@ -7,7 +7,7 @@
 - tashan id: skill:aiecee/scope-guard
 - Source: https://github.com/aiecee/foundary
 - Type: skill
-- Category: other
+- Category: security
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 14.0
 - Upkeep: not measured

@@ -7,7 +7,7 @@
 - tashan id: plugin:sabahkemalcansu/claude-token-stats/claude-token-stats
 - Source: https://github.com/sabahkemalcansu/claude-token-stats
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 29.0 / 100
 - Adoption: 7.0
 - Upkeep: 52.0

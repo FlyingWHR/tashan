@@ -7,7 +7,7 @@
 - tashan id: plugin:thesortdapp/albo/albo
 - Source: https://github.com/thesortdapp/albo
 - Type: plugin
-- Category: productivity
+- Category: data
 - tashan score: 33.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

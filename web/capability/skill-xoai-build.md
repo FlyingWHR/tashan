@@ -7,7 +7,7 @@
 - tashan id: skill:xoai/build
 - Source: https://github.com/xoai/sage
 - Type: skill
-- Category: other
+- Category: productivity
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

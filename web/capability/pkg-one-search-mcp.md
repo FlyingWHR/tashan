@@ -8,7 +8,7 @@
 - Source: https://github.com/yokingma/one-search-mcp
 - npm: https://www.npmjs.com/package/one-search-mcp
 - Type: npm
-- Category: search
+- Category: browser
 - tashan score: 66.0 / 100
 - Adoption: 39.0
 - Upkeep: 70.0

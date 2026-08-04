@@ -8,7 +8,7 @@
 - Source: https://github.com/toolshedlabs-hash/pagewatch-mcp
 - npm: https://www.npmjs.com/package/pagewatch-mcp
 - Type: npm
-- Category: productivity
+- Category: search
 - tashan score: 53.0 / 100
 - Adoption: 32.0
 - Upkeep: 52.0

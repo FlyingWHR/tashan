@@ -8,7 +8,7 @@
 - Source: https://github.com/agentproto/ts
 - npm: https://www.npmjs.com/package/@agentproto/mcp-server
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 56.0 / 100
 - Adoption: 32.0
 - Upkeep: 61.0

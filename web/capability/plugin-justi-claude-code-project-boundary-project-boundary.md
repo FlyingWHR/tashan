@@ -7,7 +7,7 @@
 - tashan id: plugin:justi/claude-code-project-boundary/project-boundary
 - Source: https://github.com/justi/claude-code-project-boundary
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 50.0 / 100
 - Adoption: 32.0
 - Upkeep: 71.0

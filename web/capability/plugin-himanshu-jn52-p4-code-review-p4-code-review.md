@@ -7,7 +7,7 @@
 - tashan id: plugin:himanshu-jn52/p4-code-review/p4-code-review
 - Source: https://github.com/Himanshu-jn52/p4-code-review
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 36.0 / 100
 - Adoption: 7.0
 - Upkeep: 63.0

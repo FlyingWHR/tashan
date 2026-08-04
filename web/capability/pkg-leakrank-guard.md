@@ -7,7 +7,7 @@
 - tashan id: pkg:leakrank-guard
 - npm: https://www.npmjs.com/package/leakrank-guard
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 62.0 / 100
 - Adoption: 39.0
 - Upkeep: 61.0

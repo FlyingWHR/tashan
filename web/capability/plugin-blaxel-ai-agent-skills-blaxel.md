@@ -7,7 +7,7 @@
 - tashan id: plugin:blaxel-ai/agent-skills/blaxel
 - Source: https://github.com/blaxel-ai/agent-skills
 - Type: plugin
-- Category: productivity
+- Category: finance
 - tashan score: 51.0 / 100
 - Adoption: 15.0
 - Upkeep: 99.0

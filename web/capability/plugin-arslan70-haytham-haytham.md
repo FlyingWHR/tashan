@@ -7,7 +7,7 @@
 - tashan id: plugin:arslan70/haytham/haytham
 - Source: https://github.com/arslan70/haytham
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 57.0 / 100
 - Adoption: 22.0
 - Upkeep: 98.0

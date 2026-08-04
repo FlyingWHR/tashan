@@ -8,7 +8,7 @@
 - Source: https://github.com/NicoHern/abapilot-mcp
 - npm: https://www.npmjs.com/package/abapilot
 - Type: npm
-- Category: devtools
+- Category: comms
 - tashan score: 49.0 / 100
 - Adoption: 25.0
 - Upkeep: 57.0

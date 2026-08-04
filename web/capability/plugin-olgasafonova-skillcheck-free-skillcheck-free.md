@@ -7,7 +7,7 @@
 - tashan id: plugin:olgasafonova/skillcheck-free/skillcheck-free
 - Source: https://github.com/olgasafonova/SkillCheck-Free
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 53.0 / 100
 - Adoption: 27.0
 - Upkeep: 78.0

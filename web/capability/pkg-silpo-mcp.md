@@ -8,7 +8,7 @@
 - Source: https://github.com/MIt9/silpo-mcp
 - npm: https://www.npmjs.com/package/silpo-mcp
 - Type: npm
-- Category: other
+- Category: comms
 - tashan score: 43.0 / 100
 - Adoption: 20.0
 - Upkeep: 51.0

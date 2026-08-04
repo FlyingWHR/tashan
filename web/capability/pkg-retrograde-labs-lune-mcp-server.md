@@ -8,7 +8,7 @@
 - Source: https://github.com/RetrogradeLabs/lune-mcp-server
 - npm: https://www.npmjs.com/package/@retrograde-labs/lune-mcp-server
 - Type: npm
-- Category: productivity
+- Category: docs
 - tashan score: 55.0 / 100
 - Adoption: 29.0
 - Upkeep: 67.0

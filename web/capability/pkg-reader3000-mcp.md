@@ -8,7 +8,7 @@
 - Source: https://github.com/angelux/reader3000-mcp
 - npm: https://www.npmjs.com/package/reader3000-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 43.0 / 100
 - Adoption: 18.0
 - Upkeep: 58.0

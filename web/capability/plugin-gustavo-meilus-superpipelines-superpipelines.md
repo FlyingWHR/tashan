@@ -7,7 +7,7 @@
 - tashan id: plugin:gustavo-meilus/superpipelines/superpipelines
 - Source: https://github.com/gustavo-meilus/superpipelines
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 46.0 / 100
 - Adoption: 16.0
 - Upkeep: 79.0

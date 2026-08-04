@@ -8,7 +8,7 @@
 - Source: https://github.com/clarvia-project/scanner
 - npm: https://www.npmjs.com/package/clarvia-mcp-server
 - Type: npm
-- Category: other
+- Category: data
 - tashan score: 39.0 / 100
 - Adoption: 25.0
 - Upkeep: 58.0

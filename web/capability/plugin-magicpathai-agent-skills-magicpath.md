@@ -7,7 +7,7 @@
 - tashan id: plugin:magicpathai/agent-skills/magicpath
 - Source: https://github.com/MagicPathAI/agent-skills
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 65.0 / 100
 - Adoption: 32.0
 - Upkeep: 97.0

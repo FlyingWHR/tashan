@@ -8,7 +8,7 @@
 - Source: https://github.com/aissablk1/mcp-roadmapsh
 - npm: https://www.npmjs.com/package/mcp-roadmapsh
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 42.0 / 100
 - Adoption: 25.0
 - Upkeep: 49.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:preset-io/agent-skills/preset-cli-skills
 - Source: https://github.com/preset-io/agent-skills
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 60.0 / 100
 - Adoption: 25.0
 - Upkeep: 99.0

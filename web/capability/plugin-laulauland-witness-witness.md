@@ -7,7 +7,7 @@
 - tashan id: plugin:laulauland/witness/witness
 - Source: https://github.com/laulauland/witness
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 23.0 / 100
 - Adoption: 7.0
 - Upkeep: not measured

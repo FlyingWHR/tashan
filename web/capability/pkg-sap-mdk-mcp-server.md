@@ -8,7 +8,7 @@
 - Source: https://github.com/sap/mdk-mcp-server
 - npm: https://www.npmjs.com/package/@sap/mdk-mcp-server
 - Type: npm
-- Category: devtools
+- Category: ai
 - tashan score: 76.0 / 100
 - Adoption: 58.0
 - Upkeep: 80.0

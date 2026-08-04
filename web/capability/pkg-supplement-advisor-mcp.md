@@ -8,7 +8,7 @@
 - Source: https://github.com/erinheit451/supplement-advisor-mcp
 - npm: https://www.npmjs.com/package/supplement-advisor-mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 47.0 / 100
 - Adoption: 26.0
 - Upkeep: 53.0

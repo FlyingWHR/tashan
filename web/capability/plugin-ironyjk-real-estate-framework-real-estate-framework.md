@@ -7,7 +7,7 @@
 - tashan id: plugin:ironyjk/real-estate-framework/real-estate-framework
 - Source: https://github.com/ironyjk/real-estate-framework
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

@@ -7,7 +7,7 @@
 - tashan id: plugin:conduit-technologies/conduitai-claude-plugins/conduitai
 - Source: https://github.com/conduit-technologies/conduitai-claude-plugins
 - Type: plugin
-- Category: devtools
+- Category: search
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/runapi-ai/seedream-mcp
 - npm: https://www.npmjs.com/package/@runapi.ai/seedream-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 58.0 / 100
 - Adoption: 31.0
 - Upkeep: 65.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/Jiangw2718i/frisk
 - npm: https://www.npmjs.com/package/frisk-mcp
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 53.0 / 100
 - Adoption: 31.0
 - Upkeep: 53.0

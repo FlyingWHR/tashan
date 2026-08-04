@@ -7,7 +7,7 @@
 - tashan id: plugin:aytuncyildizli/reprompter/reprompter
 - Source: https://github.com/AytuncYildizli/reprompter
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 68.0 / 100
 - Adoption: 34.0
 - Upkeep: 99.0

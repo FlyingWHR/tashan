@@ -8,7 +8,7 @@
 - Source: https://github.com/AliKarami/MikroMCP
 - npm: https://www.npmjs.com/package/mikromcp
 - Type: npm
-- Category: productivity
+- Category: devtools
 - tashan score: 59.0 / 100
 - Adoption: 33.0
 - Upkeep: 69.0

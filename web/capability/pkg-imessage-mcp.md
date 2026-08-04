@@ -8,7 +8,7 @@
 - Source: https://github.com/anipotts/imessage-mcp
 - npm: https://www.npmjs.com/package/imessage-mcp
 - Type: npm
-- Category: other
+- Category: productivity
 - tashan score: 33.0 / 100
 - Adoption: 28.0
 - Upkeep: 43.0

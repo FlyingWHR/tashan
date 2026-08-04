@@ -7,7 +7,7 @@
 - tashan id: plugin:jakozloski/claude-code-gh-dash/gh-dash
 - Source: https://github.com/jakozloski/claude-code-gh-dash
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 27.0 / 100
 - Adoption: 25.0
 - Upkeep: 40.0

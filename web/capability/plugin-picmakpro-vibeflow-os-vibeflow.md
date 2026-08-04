@@ -7,7 +7,7 @@
 - tashan id: plugin:picmakpro/vibeflow-os/vibeflow
 - Source: https://github.com/picmakpro/vibeflow-os
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: 51.0 / 100
 - Adoption: 19.0
 - Upkeep: not measured

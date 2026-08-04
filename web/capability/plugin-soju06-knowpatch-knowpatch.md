@@ -7,7 +7,7 @@
 - tashan id: plugin:soju06/knowpatch/knowpatch
 - Source: https://github.com/Soju06/knowpatch
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 26.0 / 100
 - Adoption: 13.0
 - Upkeep: 45.0

@@ -7,7 +7,7 @@
 - tashan id: skill:diegomarcuz/mp-money-out
 - Source: https://github.com/diegomarcuz/mercadopago-claude-marketplace
 - Type: skill
-- Category: other
+- Category: comms
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

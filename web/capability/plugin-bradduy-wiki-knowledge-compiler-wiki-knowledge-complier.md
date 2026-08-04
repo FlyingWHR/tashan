@@ -7,7 +7,7 @@
 - tashan id: plugin:bradduy/wiki-knowledge-compiler/wiki-knowledge-complier
 - Source: https://github.com/bradduy/wiki-knowledge-compiler
 - Type: plugin
-- Category: productivity
+- Category: docs
 - tashan score: 33.0 / 100
 - Adoption: 21.0
 - Upkeep: 49.0

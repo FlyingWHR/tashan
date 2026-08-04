@@ -7,7 +7,7 @@
 - tashan id: plugin:moco99/claude-usage-bars/claude-usage-bars
 - Source: https://github.com/Moco99/claude-usage-bars
 - Type: plugin
-- Category: finance
+- Category: devtools
 - tashan score: 32.0 / 100
 - Adoption: 7.0
 - Upkeep: 57.0

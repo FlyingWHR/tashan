@@ -8,7 +8,7 @@
 - Source: https://github.com/As-The-Geek-Learns/content-repurposer
 - npm: https://www.npmjs.com/package/content-repurposer-mcp
 - Type: npm
-- Category: docs
+- Category: comms
 - tashan score: 34.0 / 100
 - Adoption: 23.0
 - Upkeep: 46.0

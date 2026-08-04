@@ -7,7 +7,7 @@
 - tashan id: plugin:naokami3/ai_dotfiles/doc-authoring-skills-ja
 - Source: https://github.com/naokami3/ai_dotfiles
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 14.0 / 100
 - Adoption: 7.0
 - Upkeep: 33.0

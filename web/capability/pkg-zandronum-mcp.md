@@ -8,7 +8,7 @@
 - Source: https://github.com/rc4l/ZandronumMCP
 - npm: https://www.npmjs.com/package/zandronum-mcp
 - Type: npm
-- Category: other
+- Category: search
 - tashan score: 53.0 / 100
 - Adoption: 23.0
 - Upkeep: 68.0

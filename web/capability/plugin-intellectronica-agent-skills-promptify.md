@@ -7,7 +7,7 @@
 - tashan id: plugin:intellectronica/agent-skills/promptify
 - Source: https://github.com/intellectronica/agent-skills
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

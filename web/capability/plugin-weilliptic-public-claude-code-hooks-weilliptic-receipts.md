@@ -7,7 +7,7 @@
 - tashan id: plugin:weilliptic-public/claude-code-hooks/weilliptic-receipts
 - Source: https://github.com/weilliptic-public/claude-code-hooks
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 39.0 / 100
 - Adoption: 7.0
 - Upkeep: 79.0

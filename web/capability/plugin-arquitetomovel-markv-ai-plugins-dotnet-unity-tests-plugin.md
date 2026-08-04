@@ -7,7 +7,7 @@
 - tashan id: plugin:arquitetomovel/markv-ai-plugins/dotnet-unity-tests-plugin
 - Source: https://github.com/ArquitetoMovel/markv-ai-plugins
 - Type: plugin
-- Category: devtools
+- Category: docs
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 67.0

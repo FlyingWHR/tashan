@@ -7,7 +7,7 @@
 - tashan id: plugin:danielealbano/android-remote-control-mcp/android-remote-control
 - Source: https://github.com/danielealbano/android-remote-control-mcp
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 62.0 / 100
 - Adoption: 36.0
 - Upkeep: 79.0

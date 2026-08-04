@@ -7,7 +7,7 @@
 - tashan id: plugin:awslabs/startups/aws-startup-advisor
 - Source: https://github.com/awslabs/startups
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 46.0 / 100
 - Adoption: 11.0
 - Upkeep: 100.0

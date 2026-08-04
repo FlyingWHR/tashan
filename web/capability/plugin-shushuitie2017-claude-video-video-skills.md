@@ -7,7 +7,7 @@
 - tashan id: plugin:shushuitie2017/claude-video/video-skills
 - Source: https://github.com/shushuitie2017/claude-video
 - Type: plugin
-- Category: productivity
+- Category: design
 - tashan score: 35.0 / 100
 - Adoption: 7.0
 - Upkeep: 61.0

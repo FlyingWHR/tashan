@@ -7,7 +7,7 @@
 - tashan id: plugin:teren-papercutlabs/jaz-ai/jaz-ai
 - Source: https://github.com/teren-papercutlabs/jaz-ai
 - Type: plugin
-- Category: productivity
+- Category: finance
 - tashan score: 23.0 / 100
 - Adoption: 7.0
 - Upkeep: 44.0

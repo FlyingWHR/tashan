@@ -7,7 +7,7 @@
 - tashan id: plugin:repozy/superpowers-optimized/superpowers-optimized
 - Source: https://github.com/REPOZY/superpowers-optimized
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 56.0 / 100
 - Adoption: 34.0
 - Upkeep: 87.0

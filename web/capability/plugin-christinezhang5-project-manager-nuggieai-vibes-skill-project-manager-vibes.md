@@ -7,7 +7,7 @@
 - tashan id: plugin:christinezhang5/project-manager-nuggieai-vibes-skill/project-manager-vibes
 - Source: https://github.com/christinezhang5/project-manager-nuggieai-vibes-skill
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

@@ -8,7 +8,7 @@
 - Source: https://github.com/johannesPettersson80/codesys-mcp-toolkit
 - npm: https://www.npmjs.com/package/@codesys/mcp-toolkit
 - Type: npm
-- Category: other
+- Category: cloud
 - tashan score: 22.0 / 100
 - Adoption: 30.0
 - Upkeep: 45.0

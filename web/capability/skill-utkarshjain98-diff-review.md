@@ -7,7 +7,7 @@
 - tashan id: skill:UtkarshJain98/diff-review
 - Source: https://github.com/UtkarshJain98/claude-code-workflow
 - Type: skill
-- Category: other
+- Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 9.0
 - Upkeep: not measured

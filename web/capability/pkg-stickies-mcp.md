@@ -8,7 +8,7 @@
 - Source: https://github.com/dumbspacecookie/stickies
 - npm: https://www.npmjs.com/package/stickies-mcp
 - Type: npm
-- Category: productivity
+- Category: ai
 - tashan score: 65.0 / 100
 - Adoption: 40.0
 - Upkeep: 66.0

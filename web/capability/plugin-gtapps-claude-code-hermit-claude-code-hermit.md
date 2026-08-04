@@ -7,7 +7,7 @@
 - tashan id: plugin:gtapps/claude-code-hermit/claude-code-hermit
 - Source: https://github.com/gtapps/claude-code-hermit
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 66.0 / 100
 - Adoption: 31.0
 - Upkeep: 99.0

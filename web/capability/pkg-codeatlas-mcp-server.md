@@ -8,7 +8,7 @@
 - Source: https://github.com/giauphan/codeatlas-mcp-server
 - npm: https://www.npmjs.com/package/codeatlas-mcp-server
 - Type: npm
-- Category: other
+- Category: devtools
 - tashan score: 48.0 / 100
 - Adoption: 21.0
 - Upkeep: 65.0

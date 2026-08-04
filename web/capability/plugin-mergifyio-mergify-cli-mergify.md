@@ -7,7 +7,7 @@
 - tashan id: plugin:mergifyio/mergify-cli/mergify
 - Source: https://github.com/mergifyio/mergify-cli
 - Type: plugin
-- Category: productivity
+- Category: devtools
 - tashan score: 65.0 / 100
 - Adoption: 30.0
 - Upkeep: 99.0

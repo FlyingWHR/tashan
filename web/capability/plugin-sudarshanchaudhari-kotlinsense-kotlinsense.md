@@ -7,7 +7,7 @@
 - tashan id: plugin:sudarshanchaudhari/kotlinsense/kotlinsense
 - Source: https://github.com/SUDARSHANCHAUDHARI/KotlinSense
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 32.0 / 100
 - Adoption: 11.0
 - Upkeep: 54.0

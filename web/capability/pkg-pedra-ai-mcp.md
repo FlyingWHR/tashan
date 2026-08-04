@@ -8,7 +8,7 @@
 - Source: https://github.com/pedra-ai/pedra-mcp
 - npm: https://www.npmjs.com/package/@pedra-ai/mcp
 - Type: npm
-- Category: other
+- Category: design
 - tashan score: 47.0 / 100
 - Adoption: 25.0
 - Upkeep: 59.0

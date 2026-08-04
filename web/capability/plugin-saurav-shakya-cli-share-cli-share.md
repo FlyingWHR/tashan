@@ -7,7 +7,7 @@
 - tashan id: plugin:saurav-shakya/cli-share/cli-share
 - Source: https://github.com/saurav-shakya/cli-share
 - Type: plugin
-- Category: devtools
+- Category: cloud
 - tashan score: 32.0 / 100
 - Adoption: 16.0
 - Upkeep: 50.0

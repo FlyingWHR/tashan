@@ -7,7 +7,7 @@
 - tashan id: plugin:maartenderammelaere1/php-symfony-toolkit/php-harmony
 - Source: https://github.com/MaartenDeRammelaere1/php-symfony-toolkit
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 48.0

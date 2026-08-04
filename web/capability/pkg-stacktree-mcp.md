@@ -8,7 +8,7 @@
 - Source: https://github.com/stevysmith/stacktree-mcp
 - npm: https://www.npmjs.com/package/stacktree-mcp
 - Type: npm
-- Category: productivity
+- Category: cloud
 - tashan score: 47.0 / 100
 - Adoption: 25.0
 - Upkeep: 59.0

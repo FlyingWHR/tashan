@@ -7,7 +7,7 @@
 - tashan id: plugin:felixrivasuxdesigner/video-library-classifier/video-library-classifier
 - Source: https://github.com/felixrivasuxdesigner/video-library-classifier
 - Type: plugin
-- Category: productivity
+- Category: security
 - tashan score: 28.0 / 100
 - Adoption: 7.0
 - Upkeep: 51.0

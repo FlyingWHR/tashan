@@ -8,7 +8,7 @@
 - Source: https://github.com/ExpertVagabond/ibmz-mcp-server
 - npm: https://www.npmjs.com/package/ibmz-mcp-server
 - Type: npm
-- Category: productivity
+- Category: other
 - tashan score: 28.0 / 100
 - Adoption: 22.0
 - Upkeep: 37.0

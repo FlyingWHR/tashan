@@ -7,7 +7,7 @@
 - tashan id: plugin:kunsanglee/sync-my-skills/sync-my-skills
 - Source: https://github.com/kunsanglee/sync-my-skills
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 27.0 / 100
 - Adoption: 11.0
 - Upkeep: 48.0

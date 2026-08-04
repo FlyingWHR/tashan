@@ -7,7 +7,7 @@
 - tashan id: plugin:larens94/codedna/codedna
 - Source: https://github.com/Larens94/codedna
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 66.0 / 100
 - Adoption: 35.0
 - Upkeep: 96.0

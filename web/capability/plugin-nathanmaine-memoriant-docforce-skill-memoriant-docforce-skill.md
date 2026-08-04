@@ -7,7 +7,7 @@
 - tashan id: plugin:nathanmaine/memoriant-docforce-skill/memoriant-docforce-skill
 - Source: https://github.com/NathanMaine/memoriant-docforce-skill
 - Type: plugin
-- Category: devtools
+- Category: security
 - tashan score: 25.0 / 100
 - Adoption: 7.0
 - Upkeep: 47.0

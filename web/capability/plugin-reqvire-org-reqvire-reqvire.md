@@ -7,7 +7,7 @@
 - tashan id: plugin:reqvire-org/reqvire/reqvire
 - Source: https://github.com/reqvire-org/reqvire
 - Type: plugin
-- Category: devtools
+- Category: ai
 - tashan score: 55.0 / 100
 - Adoption: 23.0
 - Upkeep: 95.0

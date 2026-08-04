@@ -8,7 +8,7 @@
 - Source: https://github.com/mrslbt/paypay-mcp
 - npm: https://www.npmjs.com/package/paypay-mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 47.0 / 100
 - Adoption: 22.0
 - Upkeep: 59.0

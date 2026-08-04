@@ -7,7 +7,7 @@
 - tashan id: plugin:atlassian/forge-skills/forge-skills
 - Source: https://github.com/atlassian/forge-skills
 - Type: plugin
-- Category: devtools
+- Category: productivity
 - tashan score: 42.0 / 100
 - Adoption: 7.0
 - Upkeep: 100.0

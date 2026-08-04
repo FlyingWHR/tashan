@@ -8,7 +8,7 @@
 - Source: https://github.com/pulsemcp/mcp-servers
 - npm: https://www.npmjs.com/package/@pulsemcp/image-diff-mcp-server
 - Type: npm
-- Category: devtools
+- Category: design
 - tashan score: 48.0 / 100
 - Adoption: 24.0
 - Upkeep: 67.0

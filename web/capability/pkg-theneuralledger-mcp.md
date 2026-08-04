@@ -8,7 +8,7 @@
 - Source: https://github.com/bekirdag/tnl-intelligence
 - npm: https://www.npmjs.com/package/@theneuralledger/mcp
 - Type: npm
-- Category: design
+- Category: data
 - tashan score: 45.0 / 100
 - Adoption: 22.0
 - Upkeep: 52.0

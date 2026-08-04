@@ -7,7 +7,7 @@
 - tashan id: pkg:@utdk/mcp
 - npm: https://www.npmjs.com/package/@utdk/mcp
 - Type: npm
-- Category: other
+- Category: security
 - tashan score: 43.0 / 100
 - Adoption: 20.0
 - Upkeep: 63.0

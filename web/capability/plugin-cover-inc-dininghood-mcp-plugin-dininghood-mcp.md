@@ -7,7 +7,7 @@
 - tashan id: plugin:cover-inc/dininghood-mcp-plugin/dininghood-mcp
 - Source: https://github.com/Cover-Inc/dininghood-mcp-plugin
 - Type: plugin
-- Category: productivity
+- Category: comms
 - tashan score: 27.0 / 100
 - Adoption: 7.0
 - Upkeep: 50.0

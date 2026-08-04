@@ -7,7 +7,7 @@
 - tashan id: plugin:labyrinth-analytics/loreconvo/loreconvo
 - Source: https://github.com/labyrinth-analytics/loreconvo
 - Type: plugin
-- Category: productivity
+- Category: ai
 - tashan score: 56.0 / 100
 - Adoption: 20.0
 - Upkeep: 99.0
