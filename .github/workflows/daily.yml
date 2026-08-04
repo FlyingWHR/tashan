@@ -45,6 +45,18 @@ jobs:
       - name: Run the pipeline (incremental)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # scraper + registry ingest use the gh CLI
+          # THE PAID PRODUCT'S DELIVERY PATH. push_security and push_history upload the licensed half
+          # to Cloudflare KV, and they were never given credentials — so they printed SKIPPED every
+          # night and the store stayed empty. The gate worked, the licence validated, and behind it
+          # /api/security returned `{"detail": null, "note": "no audit detail recorded for this id"}`
+          # for EVERY capability. A subscriber was paying for a store nothing had ever written to.
+          #
+          # Reuses the deploy credentials; the namespace id is not a secret, it is committed in
+          # wrangler.toml. The token needs Workers KV Storage:Edit, which the "Edit Cloudflare
+          # Workers" template already grants.
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_KV_NAMESPACE_ID: "1f68077762cc4fdb938d3dcf35774c69"
         run: python3 pipeline/run.py
 
       # Runs to completion and records its verdict rather than ending the job here. A red suite must

@@ -89,8 +89,14 @@ STAGES = [
      "docs/PRODUCT-TREE.md — every route, counted from disk"),
     ("push-paid",       ["pipeline/push_security.py"], "site",
      "the audit's paid half -> Cloudflare KV, where /api/security serves licence holders"),
+    # /api/history is the OTHER paid endpoint and had no stage at all — Pro's headline promise is
+    # "Free tells you what is true today, Pro tells you the day that changes", and nothing ever
+    # uploaded the series that sentence sells. A licence holder got an empty store.
+    ("push-history",    ["pipeline/push_history.py"], "site",
+     "the retention series -> Cloudflare KV, where /api/history serves licence holders"),
 ]
-SITE_ONLY = {"badges", "pages", "content", "hubs", "compare", "registry", "product-tree", "push-paid"}
+SITE_ONLY = {"badges", "pages", "content", "hubs", "compare", "registry", "product-tree",
+             "push-paid", "push-history"}
 
 
 def run(name, argv, full):

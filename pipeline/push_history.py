@@ -43,9 +43,26 @@ def shards(con):
     information. Without it a reader cannot tell that 43 -> 40 across 2026-07-29/30 is a recalibration
     rather than a decline, which is the whole reason the column exists.
     """
+    # THE SHARDS ARE THE SERIES, not the DB. data/history/<day>.csv.gz is the committed record and it
+    # holds every day ever measured; data/tashan.db is a cache that a CI runner rebuilds from scratch
+    # each night and therefore holds exactly ONE day. Reading only the DB here would have uploaded a
+    # one-day history over a ten-day one the first time this ran in CI — silently amputating the
+    # single asset that cannot be rebuilt, in the act of shipping it to the customers who pay for it.
+    #
+    # Union of both: shards first (the durable record), then the DB (which carries today, before
+    # snapshot_history has written today's shard).
+    rows = []
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import snapshot_history
+        rows.extend(snapshot_history.load())
+    except Exception as e:
+        print(f"  (no shards read: {e})", flush=True)
+    rows.extend(con.execute(
+        "SELECT cap_id, metric, value, at, COALESCE(scorer,'s1') FROM signal_history ORDER BY at"))
+
     out, scorers = {}, {}
-    for cap_id, metric, value, at, scorer in con.execute(
-            "SELECT cap_id, metric, value, at, COALESCE(scorer,'s1') FROM signal_history ORDER BY at"):
+    for cap_id, metric, value, at, scorer in rows:
         out.setdefault(bucket_of(cap_id), {}).setdefault(cap_id, {}).setdefault(metric, {})[at] = value
         scorers[at] = scorer
     for b in out:
@@ -94,7 +111,12 @@ def main():
         sys.exit("set CF_ACCOUNT_ID, CF_KV_NAMESPACE_ID and CF_API_TOKEN (or pass --dry-run)")
     con = sqlite3.connect(DB)
     data = shards(con)
-    days = con.execute("SELECT COUNT(DISTINCT at) FROM signal_history").fetchone()[0]
+    # Count the days ACTUALLY BEING PUSHED, not the days the DB happens to hold. Asking the DB
+    # reported 9 while 10 were uploaded — and on a CI runner, whose DB is rebuilt from scratch every
+    # night, it would have reported 1 for a full ten-day series. The number a paying customer's value
+    # rests on must be read from the payload, not from a cache that no longer defines it.
+    days = len({d for b in data.values() for cap, metrics in b.items() if cap != "_scorers"
+                for m in metrics.values() for d in m})
     total = sum(len(v) for v in data.values())
     print(f"{total:,} capabilities over {days} day(s) -> {len(data)} shard(s)")
     sent = 0
