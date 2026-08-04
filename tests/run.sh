@@ -32,6 +32,10 @@ python3 tests/test_score.py || fail=1
 echo; echo "── scorer version lock ────────────────────────"
 python3 tests/test_scorer_version.py || fail=1
 
+# 3b1x. contrast is arithmetic — an audit found body text at 2.67:1 and it needed an eye to notice
+echo; echo "── text contrast (WCAG AA) ───────────────────"
+python3 tests/test_a11y_contrast.py || fail=1
+
 # 3b1y. every claim a page makes about itself must be true of that page — an external audit found
 # five simultaneous contradictions, all prose asserting what the code did differently
 echo; echo "── page claims match page behaviour ───────────"
