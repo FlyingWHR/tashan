@@ -72,19 +72,37 @@
     mist = [];
     // more, SMALLER wisps: a big soft blob brightens a whole region at once (a flash); small ones read as
     // something travelling across the slope.
-    for (var i = 0; i < 7; i++) mist.push({ x: Math.random(), y: 0.74 + Math.random() * 0.16, r: 0.045 + Math.random() * 0.06, ph: Math.random() * 6.28, sp: 0.5 + Math.random() * 0.9 });
+    // `pos` is INTEGRATED per frame (see paintField), not derived from absolute time — see windAt.
+    // `wph` gives each wisp its own place in the breeze so they never surge in unison: seven wisps
+    // sharing one wind read as a single sheet sliding, which is the thing that looks mechanical.
+    for (var i = 0; i < 7; i++) mist.push({ x: Math.random(), pos: Math.random(), y: 0.74 + Math.random() * 0.16, r: 0.045 + Math.random() * 0.06, ph: Math.random() * 6.28, wph: Math.random() * 6.28, sp: 0.5 + Math.random() * 0.9 });
     var hr = new Date().getHours() + new Date().getMinutes() / 60;    // grounded in the visitor's real time-of-day
     dayStart = ((hr - 6 + 24) % 24) / 24;
   }
-  function windAt(now) {   // slow, organic breeze (drives the mist drift)
-    // All terms are slow on purpose. The old 0.00025 term gusted on a ~25s cycle, which accelerated the
-    // mist hard enough to read as a pulse rather than a breeze.
-    var w = 0.5 + 0.30 * Math.sin(now * 0.00003) + 0.17 * Math.sin(now * 0.00007 + 1.3) + 0.09 * Math.sin(now * 0.00011 + 2.1);
-    return w < 0.05 ? 0.05 : w;
+  // Slow, organic breeze. This is a SPEED, and it must only ever be used to advance position by a
+  // frame's worth of time — never multiplied by absolute elapsed time.
+  //
+  // THE BUG THIS DOCUMENTS. The mist x was `now * rate * (0.5 + windAt(now))`, i.e. total-elapsed-time
+  // times the CURRENT wind. That is not integration: differentiating it leaves a `now * wind'(now)`
+  // term, so every wobble in the breeze got multiplied by how long the tab had been open. Measured
+  // against the intended 0.0037 screen-widths/s (a wisp crosses in ~4.5 min):
+  //     0 min  1.0x      10 min  10.3x      60 min  20.7x      120 min  140x      240 min  193x
+  // Leave a page open over lunch and the mist is not drifting, it is being fired across the screen.
+  // `ph` shifts a wisp's own place in the breeze so the seven don't gust as one sheet.
+  // ENVELOPE: mean 1.0, total amplitude 0.34 → the breeze lives in 0.66..1.34, about a 2x swing
+  // between its laziest and briskest. The old envelope was mean 0.5 with amplitude 0.56, so it could
+  // reach the 0.05 floor: a 21x spread that made the mist visibly STALL and then hurry. Varying, not
+  // lurching, is the whole ask — the randomness should read as weather, not as a stutter.
+  // The three periods (~35s / ~15s / ~9.5s at these rates, deliberately incommensurate) keep it from
+  // ever repeating a pattern the eye can learn.
+  function windAt(now, ph) {
+    return 1.0 + 0.19 * Math.sin(now * 0.00003 + ph)
+               + 0.10 * Math.sin(now * 0.00007 + 1.3 + ph)
+               + 0.05 * Math.sin(now * 0.00011 + 2.1 + ph);
   }
 
   // ---------- paint the smooth grayscale FIELD, return its pixels ----------
-  function paintField(now, sky, dp, wind) {
+  function paintField(now, sky, dp, dt) {
     var fw = cols, fh = rows;
     fctx.globalCompositeOperation = "source-over";
     fctx.fillStyle = "#000"; fctx.fillRect(0, 0, fw, fh);
@@ -133,7 +151,10 @@
     fctx.globalCompositeOperation = "lighter";
     for (var i = 0; i < mist.length; i++) {
       var m = mist[i];
-      var mx = (((m.x + now * 0.0000030 * m.sp * (0.5 + wind)) % 1.16) - 0.08) * fw;
+      // INTEGRATE: advance by this frame's elapsed time only. dt is clamped upstream, so a tab
+      // resuming after an hour steps once, not an hour's worth.
+      m.pos = (m.pos + dt * 0.0000030 * m.sp * windAt(now, m.wph)) % 1.16;
+      var mx = (m.pos - 0.08) * fw;
       var my = (m.y + 0.014 * Math.sin(now * 0.00003 * m.sp + m.ph)) * fh;
       var mr = m.r * fw;
       var mg = fctx.createRadialGradient(mx, my, 0, mx, my, mr);
@@ -152,12 +173,12 @@
     return "rgb(" + Math.round(base[0] + (lit[0] - base[0]) * t) + "," + Math.round(base[1] + (lit[1] - base[1]) * t) + "," + Math.round(base[2] + (lit[2] - base[2]) * t) + ")";
   }
 
-  function frame(now, ease) {
+  function frame(now, ease, dt) {
     var dp = ((now - t0) / DAY_MS + dayStart) % 1;
     var sky = daySample(dp);
-    var wind = curWind = windAt(now);
+    curWind = windAt(now, 0);
     ctx.clearRect(0, 0, W, H);
-    var data = paintField(now, sky, dp, wind);
+    var data = paintField(now, sky, dp, dt);
     ctx.textBaseline = "top";
     var lastW = -1;
     for (var r = Math.floor(rows * SKY) - 2; r < rows; r++) {   // skip the clear upper band entirely
@@ -222,17 +243,22 @@
     if (!running) return;
     requestAnimationFrame(render);
     if (now - prev < 55) return;            // ~18fps — enough for the sweep to read as continuous motion
+    // CLAMP. prev is reset to 0 when the tab regains focus, and a backgrounded tab can be away for
+    // hours; an unclamped dt would advance the mist by every one of those milliseconds in a single
+    // step and teleport it. 250ms is ~4 dropped frames — enough to stay smooth through a hiccup,
+    // small enough that a resume is invisible.
+    var dt = prev ? Math.min(now - prev, 250) : 55;
     prev = now;
     if (!t0) t0 = now;
     if (!resolveStart) resolveStart = now;
     var res = Math.min(1, (now - resolveStart) / 1900);
-    frame(now, res >= 1 ? 1 : 1 - Math.pow(1 - res, 3));   // resolve-from-nothing flourish on first paint
+    frame(now, res >= 1 ? 1 : 1 - Math.pow(1 - res, 3), dt);   // resolve-from-nothing flourish on first paint
   }
 
   function init() {
     if (pre) pre.style.display = "none";
     reseed(); resize();
-    if (reduce) { t0 = 0; frame(0.25 * DAY_MS, 1); return; }   // one bright static frame
+    if (reduce) { t0 = 0; frame(0.25 * DAY_MS, 1, 0); return; }   // dt=0: one static frame, nothing advances   // one bright static frame
     requestAnimationFrame(render);
   }
 

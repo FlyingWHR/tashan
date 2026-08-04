@@ -36,4 +36,4 @@ claude mcp add shadcn-ui-mcp-server -- npx -y shadcn-ui-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-03 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.

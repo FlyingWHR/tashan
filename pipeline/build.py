@@ -1105,11 +1105,23 @@ def export(con):
     #         is the public export. Size here costs a user nothing.
     #   SLIM  (index.json)        — the interactive board only. Stays capped, because this one IS
     #         downloaded on first paint.
-    BULK_CAP = 6000   # every scored capability gets a page and a place on its category hub
+    # Every scored capability gets a page and a place on its category hub — that is the INTENT, and
+    # a bare LIMIT quietly stopped honouring it. npm discovery took the scored population from ~5,900
+    # to 7,175 overnight, so 1,175 capabilities were cut lowest-score-first with nothing said: plugins
+    # thinned from 3,627 to 2,969 and the only way to notice was to count them. The population is
+    # still growing (4,684 npm packages are discovered but not yet enriched, and each one scores once
+    # it is), so this will keep biting. Raised to fit, and it now REPORTS when it truncates — the file
+    # already warns about silent tier deletion twenty lines below, in a comment about the same bug one
+    # layer down.
+    BULK_CAP = int(os.environ.get("BULK_CAP", "12000"))
     RANK_CAP = 1080   # board only: the largest that fits the 45 KB gz index budget (test_site asserts it)
     rows = con.execute(f"SELECT {','.join(cols)} FROM capabilities WHERE tashan_score IS NOT NULL "
                        "ORDER BY tashan_score DESC, config_reach DESC, npm_downloads DESC "
                        f"LIMIT {BULK_CAP}").fetchall()
+    scored_total = con.execute("SELECT COUNT(*) FROM capabilities WHERE tashan_score IS NOT NULL").fetchone()[0]
+    if scored_total > len(rows):
+        print(f"  !! BULK_CAP {BULK_CAP}: {scored_total - len(rows)} scored capabilities got NO page "
+              f"(cut lowest-score-first of {scored_total}). Raise BULK_CAP or say so on the site.", flush=True)
     # Catalogued: things we deliberately list without a score (skills and plugins with no per-item
     # evidence). They are browsable and installable; they simply are not ranked.
     # Each tier gets its OWN quota. Ordering one combined query by stars filled all 1400 slots with

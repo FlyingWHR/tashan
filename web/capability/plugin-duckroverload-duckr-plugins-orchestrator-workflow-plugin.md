@@ -1,0 +1,32 @@
+# Orchestrator Workflow Plugin
+
+> A multi-agent development framework that splits project builds into phases using three specialized roles: an Orchestrator (plans and coordinates), Workers (implement code), and Reviewers (validate quality). Keeps your main agent focused on architecture while sub-agents handle implementation and code review through a structured delegation loop.
+
+## Facts
+- Page: https://tashan.sh/capability/plugin-duckroverload-duckr-plugins-orchestrator-workflow-plugin
+- tashan id: plugin:duckroverload/duckr-plugins/orchestrator-workflow-plugin
+- Source: https://github.com/DuckrOverload/duckr-plugins
+- Type: plugin
+- Category: productivity
+- tashan score: 25.0 / 100
+- Adoption: 7.0
+- Upkeep: 48.0
+- Freshness: 64.0
+- Evidence coverage: 84% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- GitHub stars: 0
+- Official: no
+
+## Install
+
+```sh
+/plugin marketplace add anthropics/claude-plugins-community
+/plugin install orchestrator-workflow-plugin@claude-community
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.

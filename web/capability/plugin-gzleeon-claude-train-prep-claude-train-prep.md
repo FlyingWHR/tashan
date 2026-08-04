@@ -1,0 +1,32 @@
+# Claude Train Prep
+
+> Claude Code plugin: AI consulting training material workflow (Word report + HTML slides) with multi-agent parallelism
+
+## Facts
+- Page: https://tashan.sh/capability/plugin-gzleeon-claude-train-prep-claude-train-prep
+- tashan id: plugin:gzleeon/claude-train-prep/claude-train-prep
+- Source: https://github.com/gzleeon/claude-train-prep
+- Type: plugin
+- Category: productivity
+- tashan score: 24.0 / 100
+- Adoption: 7.0
+- Upkeep: 46.0
+- Freshness: 61.0
+- Evidence coverage: 84% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- License: MIT
+- Official: no
+
+## Install
+
+```sh
+/plugin marketplace add anthropics/claude-plugins-community
+/plugin install claude-train-prep@claude-community
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.

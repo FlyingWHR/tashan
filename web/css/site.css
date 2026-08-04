@@ -327,11 +327,20 @@ img { max-width: 100%; display: block; }
 .clearcat:hover { background: var(--jade); color:#000; }
 
 /* ---------- filter toolbar (faceted: sort-once + refine-many) ---------- */
-.toolbar { display:flex; flex-wrap:wrap; align-items:center; gap: var(--sp-3) var(--sp-6); margin: var(--sp-6) 0 var(--sp-3);
+/* ONE ROW PER FACET, label in its own column. This was a single wrapping flex line holding every
+   group, so as the corpus grew the groups wrapped INTO each other: TYPE started at the left edge,
+   ACTIVITY sat mid-line, the Sort <select> landed at an arbitrary indent on row two and DEPTH after
+   it, and "Official" was orphaned on row three. Four labels, four different x-positions, nothing to
+   scan down. A wrapping flex row cannot keep a label attached to its own values once the values
+   outgrow the line — the grid can. */
+.toolbar { display:grid; gap: var(--sp-2); margin: var(--sp-6) 0 var(--sp-3);
   padding: var(--sp-3) var(--sp-4); border:1px solid var(--hairline); border-radius: var(--radius); background: var(--surface);
   position:sticky; top: var(--nav-h); z-index:5; }
-.tgroup { display:flex; align-items:center; gap:.3rem; flex-wrap:wrap; }
-.tgroup__l { font-size:var(--fs-micro); letter-spacing:.08em; text-transform:uppercase; color: var(--text-faint); margin-right:.15rem; }
+.tgroup { display:grid; grid-template-columns: 4.75rem 1fr; align-items:start; gap:.3rem .6rem; }
+/* padding-top nudges the label onto the optical baseline of the first pill rather than the top of
+   its box — align-items:start alone leaves it floating a couple of px high. */
+.tgroup__l { font-size:var(--fs-micro); letter-spacing:.08em; text-transform:uppercase; color: var(--text-faint); padding-top:.42rem; }
+.tgroup__v { display:flex; flex-wrap:wrap; align-items:center; gap:.3rem; min-width:0; }
 .fpill { display:inline-flex; align-items:center; gap:.4rem; font-family: var(--font-mono); font-size:var(--fs-xs);
   padding:.26rem .6rem; border-radius: var(--radius-pill); border:1px solid var(--hairline); color: var(--text-dim);
   background:transparent; cursor:pointer; transition: color .12s, border-color .12s, background .12s; }
@@ -340,7 +349,7 @@ img { max-width: 100%; display: block; }
 .fpill__c { font-size:var(--fs-micro); opacity:.6; }
 .fpill.is-on .fpill__c { opacity:.8; }
 .fpill--toggle { border-style:dashed; }
-.sortsel { display:inline-flex; align-items:center; gap:.4rem; margin-left:auto; font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--text-faint); }
+.sortsel { display:inline-flex; align-items:center; gap:.4rem; font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--text-faint); }
 .sortsel select { font-family: var(--font-mono); font-size:var(--fs-sm); color: var(--text); background: var(--surface-2);
   border:1px solid var(--hairline); border-radius: var(--radius-sm); padding:.28rem .5rem; cursor:pointer; }
 /* active-refinements bar */
@@ -357,7 +366,9 @@ img { max-width: 100%; display: block; }
 .activebar__clear:hover { color: var(--text); }
 .activebar__count { font-size:var(--fs-xs); color: var(--text-faint); white-space:nowrap; }
 .linkbtn { font-family: var(--font-mono); color: var(--jade); background:none; border:0; cursor:pointer; text-decoration:underline; }
-@media (max-width: 640px) { .toolbar { position:static; } .tgroup__l { width:100%; } }
+@media (max-width: 640px) { .toolbar { position:static; }
+  .tgroup { grid-template-columns: 1fr; gap:.25rem; }
+  .tgroup__l { padding-top:0; } }
 
 /* ---------- the Index (leaderboard) ---------- */
 .board { border:1px solid var(--hairline); border-radius: var(--radius); overflow: hidden; background: var(--surface); }

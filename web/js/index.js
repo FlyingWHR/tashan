@@ -27,7 +27,8 @@
   // increment once you have chosen a job and actually want the shelf.
   var TEASER = 10, PAGE = 25, shownCount = TEASER;
 
-  var KIND_LABEL = { npm: "npm", pkg: "npm-pkg", docker: "docker", python: "python", remote: "remote", skill: "skill" };
+  var KIND_LABEL = { npm: "npm", pkg: "npm-pkg", docker: "docker", python: "python", remote: "remote",
+                     skill: "skill", plugin: "plugin" };
   var VIT_LABEL = { active: "active", stable: "stable", abandoned: "abandoned" };
   var VERDICTS = ["deep", "solid", "thin", "wrapper", "slop"];
   var SORTS = [["tashan_score", "tashan score"], ["adoption", "Adoption"], ["fresh", "Freshness"],
@@ -150,18 +151,27 @@
     var tb = document.getElementById("toolbar");
     if (!tb) return;
     var counts = facetCounts();
-    var kinds = ["npm", "pkg", "docker", "python", "remote", "skill"].filter(function (k) { return counts.kind[k]; });
+    // DERIVED from the data, never a hand-kept list. The literal here was
+    // ["npm","pkg","docker","python","remote","skill"] — no "plugin" — so 343 plugins sat on the board
+    // with no way to filter for them and no pill acknowledging they existed. A hardcoded facet list
+    // silently deletes any type someone adds later, which is exactly how that happened.
+    // Ordered by population so the common types read first; unknown keys fall back to their raw name.
+    var kinds = Object.keys(counts.kind).filter(function (k) { return counts.kind[k]; })
+      .sort(function (a, b) { return counts.kind[b] - counts.kind[a]; });
     tb.innerHTML =
       grp("Type", pillset("kind", kinds, function (k) { return KIND_LABEL[k] || k; }, counts.kind)) +
       grp("Activity", pillset("vitality", ["active", "stable", "abandoned"].filter(function (v) { return counts.vitality[v]; }), function (v) { return VIT_LABEL[v]; }, counts.vitality)) +
-      '<label class="sortsel"><span>Sort</span><select id="sortSel">' +
-        SORTS.map(function (s) { return '<option value="' + s[0] + '"' + (state.sort === s[0] ? " selected" : "") + '>' + s[1] + '</option>'; }).join("") +
-      '</select></label>' +
       grp("Depth", pillset("verdict", VERDICTS.filter(function (v) { return counts.verdict[v]; }), function (v) { return v; }, counts.verdict)) +
-      '<div class="tgroup">' +
+      // Sort and the toggles share ONE row, last. The <select> used to sit between Activity and Depth,
+      // where it broke the facet flow mid-stream: a tall native control wedged between pill groups,
+      // pushing Depth onto a new line at an arbitrary indent so no two labels lined up. It is a
+      // different KIND of control from a facet and now reads as one.
+      grp("Sort",
+        '<label class="sortsel"><select id="sortSel">' +
+          SORTS.map(function (s) { return '<option value="' + s[0] + '"' + (state.sort === s[0] ? " selected" : "") + '>' + s[1] + '</option>'; }).join("") +
+        '</select></label>' +
         toggle("official", "✓ Official", counts.official) +
-        (counts.dirty ? toggle("clean", "Hide deprecated/archived", counts.dirty) : "") +
-      '</div>';
+        (counts.dirty ? toggle("clean", "Hide deprecated/archived", counts.dirty) : ""));
 
     tb.onclick = function (e) {
       var p = e.target.closest("[data-facet]");
@@ -174,7 +184,12 @@
     var sel = document.getElementById("sortSel");
     if (sel) sel.onchange = function () { state.sort = sel.value; commit(); };
   }
-  function grp(label, inner) { return '<div class="tgroup"><span class="tgroup__l mono">' + label + '</span>' + inner + '</div>'; }
+  // Pills go in their OWN wrapper so the group can be a two-column grid (label | values). Without the
+  // wrapper every pill is a direct grid child and lands in its own column.
+  function grp(label, inner) {
+    return '<div class="tgroup"><span class="tgroup__l mono">' + label + '</span>'
+         + '<div class="tgroup__v">' + inner + '</div></div>';
+  }
   function pillset(facet, vals, labelFn, counts) {
     return vals.map(function (v) {
       var on = state[facet].has(v);
