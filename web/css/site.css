@@ -1105,3 +1105,9 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .skip { position: absolute; left: -9999px; top: 0; z-index: 100; }
 .skip:focus { left: var(--sp-4); top: var(--sp-4); padding: .6rem .9rem; background: var(--jade);
   color: #08150f; border-radius: var(--radius); font-weight: 600; }
+
+/* Category pagination. The shelves outgrew a page — devtools reached 1,492 rows, ~30,000 DOM nodes,
+   which a phone renders slowly and nobody scrolls anyway. The range readout is not decoration: a
+   reader arriving on page 4 from search has to be able to tell they are inside a large shelf. */
+.pager { display:flex; align-items:center; gap: var(--sp-3); margin: var(--sp-6) 0 var(--sp-4); flex-wrap:wrap; }
+.pager__at { font-size:var(--fs-xs); color: var(--text-dim); }

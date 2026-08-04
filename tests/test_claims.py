@@ -52,6 +52,7 @@ def scores_in_order(path):
 
 
 print("# a page that states its ordering must use it")
+checked_any = False
 # Category hubs claim "ranked by tashan score" and must therefore be descending by score.
 for p in sorted(glob.glob(os.path.join(WEB, "category", "*.html"))):
     # RAW, not the tag-stripped body: the claim lives in <meta name="description"> and og:description,
@@ -63,9 +64,14 @@ for p in sorted(glob.glob(os.path.join(WEB, "category", "*.html"))):
         continue
     # A guard that silently skips when the selector stops matching is not a guard. This check exists
     # because a page lied about its own ordering; if it cannot read the order, that is a failure.
+    if len(sc) < 2:
+        continue                      # a tail page of unrated rows has nothing to order
+    checked_any = True
     ok(f"{os.path.basename(p)} says 'ranked by tashan score' and is",
-       bool(sc) and all(a >= b for a, b in zip(sc, sc[1:])),
+       all(a >= b for a, b in zip(sc, sc[1:])),
        f"parsed {len(sc)} scores: {sc[:12]}")
+
+ok("at least one category page had scores to check (guard is not vacuous)", checked_any)
 
 # Task and role hubs sort by (fit, depth, score) and must NOT claim to rank by score.
 for d in ("task", "role"):

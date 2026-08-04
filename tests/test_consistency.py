@@ -181,7 +181,7 @@ hub_rows = 0
 for hub in sorted(glob.glob(os.path.join(WEB, "category", "*.html")) +
                   glob.glob(os.path.join(WEB, "task", "*.html"))):
     src = open(hub, encoding="utf-8").read()
-    cat = os.path.basename(hub)[:-5]
+    cat = re.sub(r"-\d+$", "", os.path.basename(hub)[:-5])
     is_cat = os.path.dirname(hub).endswith("category")
     for slug, inner in ROW.findall(src):
         cid = slug_to_id.get(slug)

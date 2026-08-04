@@ -78,7 +78,7 @@ def nav_for(url):
 FOOT = chrome.footer_html()
 
 
-def head(title, desc, url, lds):
+def head(title, desc, url, lds, extra=""):
     ld = "\n".join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False) + "</script>" for x in lds)
     return ("<!doctype html>\n<html lang=\"en\">\n<head>\n"
         '<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
@@ -100,7 +100,7 @@ def head(title, desc, url, lds):
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>\n'
         '<link rel="stylesheet" href="/css/site.css?v=' + AV + '">\n'
-        + ld + "\n</head>\n<body>\n" + nav_for(url))
+        + extra + ld + "\n</head>\n<body>\n" + nav_for(url))
 
 
 T_SCORE = 'The tashan score, 0–100: upkeep and freshness, gated by real adoption and discounted where the evidence is thin. Every input is public and linked to its source.'
@@ -232,12 +232,39 @@ def board(rows):
     return "".join(out)
 
 
-def cat_page(cat, rows, all_cats, gen):
+CAT_PER_PAGE = int(os.environ.get("CAT_PER_PAGE", "120"))
+
+
+def cat_page(cat, rows, all_cats, gen, page=1, pages=1, total=None):
+    """One page of a category shelf.
+
+    PAGINATED because these shelves outgrew a page. devtools reached 1,492 rows — 827 KB of HTML and
+    roughly 30,000 DOM nodes, which a phone renders slowly and a reader cannot use: nobody scrolls
+    1,492 rows to choose one tool. The audit measured it at 1,990 rows before the classifier fix
+    redistributed them, so this is not a one-category problem, it is what every shelf does as the
+    corpus grows.
+
+    Page 1 keeps the bare /category/<id>.html URL — it is what is indexed and linked — and later
+    pages take -2, -3. rel=prev/next declares the sequence so a crawler reads them as one shelf
+    rather than as near-duplicates, and every page carries the full count so neither a reader nor an
+    answer engine mistakes page 1 for the whole set.
+    """
     label, cid = cat["label"], cat["id"]
-    url = BASE + "/category/" + cid + ".html"
-    title = "Best " + label + " " + kinds_phrase(rows) + ", ranked by the tashan score · tashan"
-    desc = ("The " + str(len(rows)) + " " + label.lower() + " " + kinds_phrase(rows) + " tashan measures, ranked by tashan score — "
-            "upkeep, freshness and real adoption from public evidence. " + cat["blurb"])
+    total = len(rows) if total is None else total
+    slug_page = cid if page == 1 else f"{cid}-{page}"
+    url = BASE + "/category/" + slug_page + ".html"
+    pg_sfx = "" if pages == 1 else f" (page {page} of {pages})"
+    title = "Best " + label + " " + kinds_phrase(rows) + ", ranked by the tashan score" + pg_sfx + " · tashan"
+    desc = ("The " + str(total) + " " + label.lower() + " " + kinds_phrase(rows) + " tashan measures, ranked by tashan score — "
+            "upkeep, freshness and real adoption from public evidence." + pg_sfx + " " + cat["blurb"])
+    # rel=prev/next declares the sequence, so a crawler reads 13 devtools pages as one shelf instead
+    # of as near-duplicate competitors to each other.
+    rel = ""
+    if page > 1:
+        prev = cid if page == 2 else f"{cid}-{page-1}"
+        rel += '<link rel="prev" href="' + BASE + "/category/" + prev + '.html">\n'
+    if page < pages:
+        rel += '<link rel="next" href="' + BASE + "/category/" + cid + f"-{page+1}" + '.html">\n' 
     top = ", ".join(disp(c) for c in rows[:5])
     lds = [
         {"@context": "https://schema.org", "@type": "ItemList", "name": label + " " + kinds_phrase(rows) + " ranked by the tashan score",
@@ -287,10 +314,18 @@ def cat_page(cat, rows, all_cats, gen):
             + "".join('<a class="chip" href="/compare/' + p["slug"] + '.html">'
                       + esc(p["a"]) + " vs " + esc(p["b"]) + "</a>" for p in COMPARE.get(cid, [])[:12])
             + "</div>\n") if COMPARE.get(cid) else "")
+        + (('<nav class="pager mono" aria-label="Category pages">'
+            + ('<a class="btn btn--ghost" href="/category/'
+               + (cid if page == 2 else cid + "-" + str(page - 1)) + '.html">&lsaquo; previous</a>' if page > 1 else "")
+            + '<span class="pager__at">' + str((page - 1) * CAT_PER_PAGE + 1) + "&ndash;"
+            + str(min(page * CAT_PER_PAGE, total)) + " of " + f"{total:,}" + "</span>"
+            + ('<a class="btn btn--ghost" href="/category/' + cid + "-" + str(page + 1)
+               + '.html">next &rsaquo;</a>' if page < pages else "")
+            + "</nav>\n") if pages > 1 else "")
         + '<h2>Other categories</h2>\n<div class="chips">' + sib + "</div>\n"
         '<p class="mt-12"><a class="btn btn--ghost" href="/">See the full Index &rsaquo;</a></p>\n'
         "</main>\n")
-    return head(title, desc, url, lds) + body + FOOT + \
+    return head(title, desc, url, lds, extra=rel) + body + FOOT + \
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n' \
         '<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n'
 
@@ -676,8 +711,13 @@ def main():
         rows = by_cat.get(cat["id"], [])
         if not rows:
             continue
-        open(os.path.join(OUT_CAT, cat["id"] + ".html"), "w").write(cat_page(cat, rows, cats, gen))
-        written += 1
+        pages = max(1, -(-len(rows) // CAT_PER_PAGE))
+        for pg in range(1, pages + 1):
+            chunk = rows[(pg - 1) * CAT_PER_PAGE: pg * CAT_PER_PAGE]
+            name = cat["id"] if pg == 1 else f'{cat["id"]}-{pg}'
+            open(os.path.join(OUT_CAT, name + ".html"), "w").write(
+                cat_page(cat, chunk, cats, gen, page=pg, pages=pages, total=len(rows)))
+            written += 1
     print("category hubs: %d written (%d categorised capabilities)" % (written, sum(len(v) for v in by_cat.values())))
 
     # ---- task hubs: one page per job, gated on having a real shelf behind it ----
