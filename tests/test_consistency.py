@@ -230,9 +230,13 @@ if os.path.exists(llms):
 
 # ---- 5. badges -----------------------------------------------------------------------------------
 # 8,394 badge files against 5,788 pages was the smell that started this check.
-badges = glob.glob(os.path.join(WEB, "badge", "*.svg"))
-stale = [os.path.basename(b)[:-4] for b in badges if os.path.basename(b)[:-4] not in slug_to_id]
-ok(f"every one of the {len(badges)} badges belongs to a capability still in the export",
+# Badges are no longer files — functions/badge/ renders them from web/data/badges.json, because one
+# .svg per capability put the site over Cloudflare's 20,000-file deployment limit. Same invariants,
+# new storage: globbing the (now empty) directory would have passed vacuously, which is worse than
+# failing.
+BADGE_MAP = json.load(open(os.path.join(WEB, "data", "badges.json"), encoding="utf-8"))
+stale = [s for s in BADGE_MAP if s not in slug_to_id]
+ok(f"every one of the {len(BADGE_MAP)} badges belongs to a capability still in the export",
    not stale, f"{len(stale)} badge(s) for capabilities no longer exported, e.g. {stale[:3]}")
 
 # ---- 6. THE NUMBER ITSELF --------------------------------------------------------------------
@@ -297,23 +301,20 @@ ok(f"{n_hub} hub rows print the same score as the export",
    not hub_score_bad, hsx.get("x", ""))
 
 # the badge is the copy that ends up in somebody else's README, where we cannot correct it
-BADGE = re.compile(r'aria-label="tashan:\s*([0-9]+)')
 badge_bad = collections.Counter()
 bx = {}
 n_badge = 0
-for b in sorted(glob.glob(os.path.join(WEB, "badge", "*.svg"))):
-    slug = os.path.basename(b)[:-4]
+for slug, row in sorted(BADGE_MAP.items()):
     cid = slug_to_id.get(slug)
     if not cid or TRUTH[cid].get("tashan_score") is None:
         continue
-    m = BADGE.search(open(b, encoding="utf-8").read())
-    if not m:
-        continue
     n_badge += 1
-    want = round(float(TRUTH[cid]["tashan_score"]))
-    if int(m.group(1)) != want:
+    # The map holds what the Function will render, so checking it checks the badge. int() not round():
+    # gen_badges writes int(trust) and the renderer prints it verbatim.
+    want = int(float(TRUTH[cid]["tashan_score"]))
+    if int(row[0]) != want:
         badge_bad["score"] += 1
-        bx.setdefault("score", f"{slug}: badge={m.group(1)} export={want}")
+        bx.setdefault("score", f"{slug}: badge={row[0]} export={want}")
 ok(f"{n_badge} badges carry the same score as the export",
    not badge_bad, bx.get("score", ""))
 

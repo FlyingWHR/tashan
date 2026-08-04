@@ -25,7 +25,10 @@
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=900, stale-while-revalidate=86400
 
-# embeddable badges — refresh hourly (GitHub's camo proxy caches longer anyway)
+# embeddable badges — now rendered by functions/badge/, which sets its own Content-Type and
+# Cache-Control per response (a 404 for an unranked capability must NOT be cached for an hour the way
+# a real badge is). _headers does not apply to Function responses, so this rule is kept only as the
+# documented intent for the route; the Function is the authority.
 /badge/*
   Cache-Control: public, max-age=3600
 

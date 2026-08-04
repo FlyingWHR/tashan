@@ -65,6 +65,21 @@ MICRO_FLOOR = 0.57
 # It is the corpus composition shifting toward plugins faster than the taxonomy was designed for.
 # The runner, whose corpus is fresher than any laptop's, reads 63.0% and is red on this line.
 # Re-basing the ceiling is the owner's call and must come with the shelf change that earns it.
+#
+# 4 Aug 2026 — NOW 53.0%, AND THAT IS NOT A WIN. Nothing about the taxonomy changed. npm discovery
+# added ~5,000 packages the classifier does not recognise, so it ABSTAINED on them: `other` went from
+# 3.0% of the board (176 rows) to 13.3% (981). Diluting two big shelves with a third big shelf called
+# "we don't know" lowers this number without sorting anything, which is precisely the weakness noted
+# in the competing directory studied on 3 Aug — its MCP top-2 is 34.6% and its LARGEST single shelf
+# is "Other" at 18.2%.
+#
+# Per-kind, unchanged where it matters: plugin 74.8%, skill 67.9%, npm 38.7%, remote 30.1%. Plugins
+# are still the problem and still have no shelves that separate them.
+#
+# DELIBERATELY NOT RATCHETED to 53%. 4,684 discovered npm packages are still unenriched; each gets
+# real signal — and a real category — as enrichment reaches it, so `other` will shrink and this number
+# will climb again. Ratcheting a transient mid-flight value would guarantee a red build for a change
+# nobody made. Re-measure once enrichment has caught up, then set it at whatever it honestly is.
 CONCENTRATION_CEIL = 0.62
 
 fail = 0

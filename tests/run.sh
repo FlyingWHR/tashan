@@ -32,6 +32,11 @@ python3 tests/test_score.py || fail=1
 echo; echo "── scorer version lock ────────────────────────"
 python3 tests/test_scorer_version.py || fail=1
 
+# 3b1z. the badge moved from 6,453 static files to a Function; two renderers, one artifact, and the
+# blast radius is other people's READMEs
+echo; echo "── badge parity (python == js) ────────────────"
+node tests/test_badge_parity.mjs 2>/dev/null || fail=1
+
 # 3b2a. prerender pure logic: description clipping + the .md dossier an answer engine reads
 echo; echo "── prerender + markdown dossier ───────────────"
 python3 pipeline/prerender.py --selftest || fail=1

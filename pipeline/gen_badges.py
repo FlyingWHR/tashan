@@ -64,30 +64,31 @@ def main():
     # any that lost a collision (`@stripe/mcp` vs `stripe-mcp` both derive to pkg-stripe-mcp), which
     # would hand two capabilities one badge file — the second overwriting the first, so a package
     # could embed a badge showing a DIFFERENT package's score in its own README.
-    # BADGE_MIN — a hard platform constraint, not a quality judgement. Cloudflare Pages refuses a
-    # deployment over 20,000 files, and the site hit 21,782: 7,403 pages x2 (html + the new .md
-    # dossier) + 6,453 badges. A badge is the ONLY class here that is purely speculative — one is
-    # written for every scored capability on the chance a maintainer embeds it, and almost none are
-    # ever fetched. Pages and dossiers are the product; badges are an option on one.
+    # NO STATIC .svg FILES. This wrote one badge per scored capability, and that is a file count
+    # that grows with the corpus forever: at 6,453 badges the site hit 21,782 files and Cloudflare
+    # Pages — which refuses any deployment over 20,000 — would not publish AT ALL. Capping by score
+    # bought one release and no more; 4,684 discovered npm packages are still unenriched and each
+    # scores once it is.
     #
-    # 40 is where the count fits with headroom (3,270 badges -> 18,599 files), not a claim that a
-    # capability scoring 39 is unworthy. It is reversible: lower BADGE_MIN and re-run. The permanent
-    # fix is serving /badge/* from a Pages Function so the file count stops scaling with the corpus
-    # at all — the SVG is a pure function of (score, verdict) and the route is already cached 1h.
-    BADGE_MIN = float(os.environ.get("BADGE_MIN", "40"))
+    # A badge is a pure function of (score, verdict). It does not need to be a file. functions/badge/
+    # renders it on demand from the map written here — ONE file instead of thousands, and the route
+    # already carries a 1h edge cache so origin hits are rare. Existing embeds keep working: same
+    # URLs, same bytes (tests/test_badge_parity.mjs pins the two renderers together).
     rows = [(c["id"], c.get("slug") or slug(c["id"]), c["tashan_score"], c.get("expertise_verdict"))
-            for c in caps if c.get("tashan_score") is not None and c["tashan_score"] >= BADGE_MIN]
-    keep = set()
+            for c in caps if c.get("tashan_score") is not None]
+    # Compact on purpose: [score, verdict] per slug, verdict omitted when absent. The Function fetches
+    # this once per isolate, so its size is a cold-start cost, not a per-request one.
+    m = {}
     for cid, sl, trust, verdict in rows:
-        keep.add(sl + ".svg")
-        open(os.path.join(OUT, sl + ".svg"), "w").write(badge(trust, verdict))
-    # And prune. Badges were only ever written, never removed, so one for a capability that left the
-    # export stayed live and frozen at whatever score it held the day it dropped out.
-    stale = [f for f in os.listdir(OUT) if f.endswith(".svg") and f not in keep]
+        m[sl] = [int(trust), verdict] if verdict else [int(trust)]
+    out = os.path.join(ROOT, "web", "data", "badges.json")
+    json.dump(m, open(out, "w"), separators=(",", ":"), sort_keys=True)
+    # Remove any .svg left from the static era, or Pages serves the stale file and the Function never
+    # runs — static assets win over Functions on the same path.
+    stale = [f for f in os.listdir(OUT) if f.endswith(".svg")] if os.path.isdir(OUT) else []
     for f in stale:
         os.remove(os.path.join(OUT, f))
-    print(f"{len(rows)} badges -> {OUT}" + (f" ({len(stale)} stale removed)" if stale else ""))
-    # a couple of demo prints so the slug scheme is visible
+    print(f"{len(m)} badges -> {out} (served by functions/badge, {len(stale)} static .svg removed)")
     for cid, sl, trust, verdict in rows[:3]:
         print(f"  {cid}  ->  /badge/{sl}.svg   (tashan score {int(trust)}{' · '+verdict if verdict else ''})")
 

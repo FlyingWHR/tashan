@@ -29,6 +29,12 @@ jobs:
   measure:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    # JOB level, deliberately. A step's own `env:` block is NOT in scope for that step's `if:`, so
+    # gating the deploy on `env.CLOUDFLARE_API_TOKEN` declared beside it would read empty every time
+    # and silently never deploy — a skipped step looks identical to a passing one in the UI.
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
       - uses: actions/checkout@v4
 
@@ -77,9 +83,33 @@ jobs:
             git push
           fi
 
+      # PUBLISH — only when the suite was green. Measuring nightly and publishing by hand meant the
+      # live site drifted behind the data by however long it took someone to remember: the pipeline
+      # ran daily for weeks while tashan.sh served whatever build was last uploaded manually, and a
+      # full upload is ~18,000 files and 20+ minutes of somebody's evening.
+      #
+      # Gated on the secret, not just the verdict, so a fork or a repo without Cloudflare credentials
+      # runs the whole pipeline and simply skips this step instead of failing red for a reason that
+      # has nothing to do with the measurement.
+      - name: Deploy to Cloudflare Pages
+        if: steps.verify.outcome == 'success' && env.CLOUDFLARE_API_TOKEN != ''
+        run: |
+          # Pages refuses any deployment over 20,000 files. Check BEFORE uploading: the failure
+          # arrives after wrangler has walked the whole tree, and the site is then unpublishable with
+          # no warning anywhere earlier in the pipeline. This is how it was found the first time.
+          FILES=$(find web -type f | wc -l | tr -d ' ')
+          echo "web/ holds $FILES files (Cloudflare Pages hard limit: 20,000)"
+          if [ "$FILES" -ge 20000 ]; then
+            echo "::error::$FILES files exceeds the Pages limit — deployment would be REFUSED outright."
+            echo "::error::Badges are already served by functions/badge; the next lever is pages per capability."
+            exit 1
+          fi
+          npx wrangler@3 pages deploy web --project-name tashan --commit-dirty=true
+
       - name: Surface the verification result
         if: steps.verify.outcome != 'success'
         run: |
           echo "::error::tests/run.sh failed. The day's retention shards were preserved; every site"
-          echo "::error::artifact was withheld and is NOT committed. Fix the suite, then re-run."
+          echo "::error::artifact was withheld and is NOT committed, and NOTHING was deployed."
+          echo "::error::Fix the suite, then re-run."
           exit 1
