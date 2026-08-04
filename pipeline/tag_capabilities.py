@@ -378,7 +378,7 @@ def run_batch(con, tasks, size, offset=0):
            FROM capabilities c LEFT JOIN capability_text t ON t.cap_id = c.id
            WHERE c.kind IN ('skill','plugin') AND c.tashan_score IS NOT NULL
              AND COALESCE(t.full_description, c.description) IS NOT NULL
-           ORDER BY c.tashan_score DESC, c.id""").fetchall()
+           ORDER BY c.npm_downloads DESC NULLS LAST, c.config_reach DESC, c.tashan_score DESC, c.id""").fetchall()
     todo = [r for r in rows if r[0] not in done][offset:offset + size]
     print(f"# {len(done)} already labelled, {len(rows) - len(done)} remaining; showing {len(todo)}")
     for cid, kind, name, desc, trust in todo:

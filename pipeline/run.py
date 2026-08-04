@@ -54,6 +54,25 @@ STAGES = [
     # almost nothing and a new package is picked up the day it appears.
     ("security",        ["pipeline/scan_security.py"], "enrich",
      "OSV advisories for the current release + install scripts, provenance, permission surface"),
+    # COVERAGE MUST COMPOUND NIGHTLY, not wait for someone to remember. Task mapping was a
+    # developer-run script and never ran in the loop, so the axis that makes job and role pages
+    # work simply stopped advancing as the corpus tripled. --declared is free and deterministic —
+    # it matches the AUTHOR'S OWN keywords to a task synonym, so every tag it writes is attributable
+    # to them rather than to us. One run recovered 575 mappings (1,749 -> 2,324).
+    ("task-tags",       ["pipeline/tag_capabilities.py", "--declared"], "enrich",
+     "map capabilities to the work they are for, from the author's own keywords"),
+    # THE TWO AXES AN AGENT NOTICES MISSING. Measured 5 Aug on the top 20 capabilities by weekly
+    # downloads — the ones anyone actually asks about: 18/20 had no expertise grade and 20/20 no task
+    # mapping. Aggregate coverage read 41%, but coverage was not demand-weighted, so the absence rate
+    # on POPULAR packages was far worse than the headline. "An agent hitting absences on popular
+    # packages learns to stop querying" is the whole risk, and neither pass ran in the nightly loop.
+    #
+    # Both need ANTHROPIC_API_KEY and both no-op loudly without it, like the CF_* push stages — a
+    # missing credential must never take down the measurement, and must never be silent either.
+    ("expertise",       ["pipeline/grade_expertise.py"], "enrich",
+     "grade how well each capability documents itself, against the published rubric (needs a key)"),
+    ("task-grade",      ["pipeline/tag_capabilities.py", "--grade", "--limit", "150"], "enrich",
+     "map the most-used capabilities to the work they are for (needs a key)"),
     ("doc-signals",     ["pipeline/doc_signals.py"], "enrich",
      "is a capability's only documentation actually about that capability"),
     # LAST of the enrich stages, deliberately: it diffs the FINAL state of each capability against

@@ -371,6 +371,15 @@ img { max-width: 100%; display: block; }
 .activebar__clear:hover { color: var(--text); }
 .activebar__count { font-size:var(--fs-xs); color: var(--text-faint); white-space:nowrap; }
 .linkbtn { font-family: var(--font-mono); color: var(--jade); background:none; border:0; cursor:pointer; text-decoration:underline; }
+/* 44px hit targets, but ONLY where there is a thumb. WCAG 2.5.5 asks for 44px; applying it
+   unconditionally would make every filter pill 44px tall on desktop and undo the compact facet grid.
+   `pointer: coarse` is the honest test — it asks about the input device rather than guessing from
+   viewport width, so a touch laptop gets the bigger target and a narrow desktop window does not. */
+@media (pointer: coarse) {
+  .fpill, .chip { min-height:2.75rem; padding-top:.55rem; padding-bottom:.55rem; }
+  .nav__links a, .cap__link { display:inline-flex; align-items:center; min-height:2.75rem; }
+}
+
 @media (max-width: 640px) { .toolbar { position:static; }
   .tgroup { grid-template-columns: 1fr; gap:.25rem; }
   .tgroup__l { padding-top:0; } }

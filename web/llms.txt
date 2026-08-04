@@ -85,27 +85,29 @@ Every npm-published capability is checked against OSV.dev using the version you 
 
 One ranked page per job title. These answer "what should I install for a <job>" with measured rows rather than an opinion.
 
-- [Agent operator](https://tashan.sh/role/agent-operator.html) — 156 measured. Top: Nah, Co2 Tracker, Claude Pulse.
-- [AI engineer](https://tashan.sh/role/ai-engineer.html) — 230 measured. Top: Genshijin, Reprompter, Adcp Client.
-- [Creator / video](https://tashan.sh/role/creator.html) — 44 measured. Top: Claude Video Vision, Watch, Webmotion.
-- [Data analyst](https://tashan.sh/role/data-analyst.html) — 87 measured. Top: DuckDB Skills, Spotify Ads API, Statsclaw.
-- [Data engineer](https://tashan.sh/role/data-engineer.html) — 77 measured. Top: DuckDB Skills, Orchestra, Cockroachdb.
-- [Designer](https://tashan.sh/role/designer.html) — 77 measured. Top: Obsidian Visual Skills, Excalidraw Skill, Webmotion.
-- [DevOps / SRE](https://tashan.sh/role/devops.html) — 153 measured. Top: Zscaler, Rr, Langfuse Observability.
-- [Educator](https://tashan.sh/role/educator.html) — 14 measured. Top: Claude Education Skills Library, Guide, Claude English Buddy.
-- [Software engineer](https://tashan.sh/role/engineer.html) — 567 measured. Top: Cocoindex Code, Safety Net, Firecrawl · firecrawl.
-- [Finance / accounting](https://tashan.sh/role/finance.html) — 82 measured. Top: Vulcan, Barker Stablecoin Skills, Azure Cost Calculator.
-- [HR / recruiting](https://tashan.sh/role/hr.html) — 24 measured. Top: Claude Education Skills Library, Guide, Claude English Buddy.
-- [Legal / compliance](https://tashan.sh/role/legal.html) — 167 measured. Top: Architecture Studio, Healthclaw Guardrails, L4 Computational Law.
-- [Marketer / growth](https://tashan.sh/role/marketer.html) — 120 measured. Top: Humanize Korean, Save To Spotify, Postiz.
-- [Operations](https://tashan.sh/role/ops.html) — 364 measured. Top: Minutes, Safety Net, Firecrawl · firecrawl.
-- [Product manager](https://tashan.sh/role/pm.html) — 218 measured. Top: Maister, Haytham, Specclaw.
-- [Researcher](https://tashan.sh/role/researcher.html) — 187 measured. Top: Minutes, Firecrawl · firecrawl, Remember.
-- [Sales](https://tashan.sh/role/sales.html) — 43 measured. Top: Gooseworks, Monday CRM, Vibe Prospecting.
+- [Agent operator](https://tashan.sh/role/agent-operator.html) — 159 measured. Top: Nah, Co2 Tracker, Claude Pulse.
+- [AI engineer](https://tashan.sh/role/ai-engineer.html) — 381 measured. Top: Genshijin, Reprompter, Adcp Client.
+- [Creator / video](https://tashan.sh/role/creator.html) — 99 measured. Top: Claude Video Vision, Watch, Webmotion.
+- [Data analyst](https://tashan.sh/role/data-analyst.html) — 115 measured. Top: DuckDB Skills, Spotify Ads API, Statsclaw.
+- [Data engineer](https://tashan.sh/role/data-engineer.html) — 80 measured. Top: DuckDB Skills, Orchestra, Cockroachdb.
+- [Designer](https://tashan.sh/role/designer.html) — 130 measured. Top: Obsidian Visual Skills, Webmotion, Excalidraw Skill.
+- [DevOps / SRE](https://tashan.sh/role/devops.html) — 181 measured. Top: Zscaler, Rr, Langfuse Observability.
+- [Educator](https://tashan.sh/role/educator.html) — 19 measured. Top: Claude Education Skills Library, Guide, Claude English Buddy.
+- [Software engineer](https://tashan.sh/role/engineer.html) — 762 measured. Top: Cocoindex Code, Safety Net, Firecrawl · firecrawl.
+- [Finance / accounting](https://tashan.sh/role/finance.html) — 134 measured. Top: Vulcan, Barker Stablecoin Skills, Azure Cost Calculator.
+- [Hardware / electronics](https://tashan.sh/role/hardware.html) — 10 measured. Top: Kicad Happy, Architecture Studio, Flexcompute.
+- [HR / recruiting](https://tashan.sh/role/hr.html) — 33 measured. Top: Claude Education Skills Library, Guide, Claude English Buddy.
+- [Legal / compliance](https://tashan.sh/role/legal.html) — 205 measured. Top: Architecture Studio, Healthclaw Guardrails, L4 Computational Law.
+- [Marketer / growth](https://tashan.sh/role/marketer.html) — 153 measured. Top: Humanize Korean, Save To Spotify, Postiz.
+- [Operations](https://tashan.sh/role/ops.html) — 522 measured. Top: Minutes, Safety Net, Firecrawl · firecrawl.
+- [Product manager](https://tashan.sh/role/pm.html) — 237 measured. Top: Maister, Haytham, Specclaw.
+- [Researcher](https://tashan.sh/role/researcher.html) — 243 measured. Top: Minutes, Firecrawl · firecrawl, Remember.
+- [Sales](https://tashan.sh/role/sales.html) — 53 measured. Top: Gooseworks, Monday CRM, Vibe Prospecting.
 - [Scientist](https://tashan.sh/role/scientist.html) — 30 measured. Top: Statsclaw, Growthbook · growthbook, Agent Loops.
-- [Security engineer](https://tashan.sh/role/security.html) — 233 measured. Top: Zscaler, GitHub Autopilot, Agentic Security.
-- [Web / frontend developer](https://tashan.sh/role/web-dev.html) — 92 measured. Top: Tray API, Figma, Modern Web Guidance.
-- [Writer / content](https://tashan.sh/role/writer.html) — 143 measured. Top: Humanize Korean, Save To Spotify, Codedna.
+- [Security engineer](https://tashan.sh/role/security.html) — 292 measured. Top: Zscaler, GitHub Autopilot, Agentic Security.
+- [Customer support](https://tashan.sh/role/support.html) — 16 measured. Top: Voicenter, Corebee, Zendesk.
+- [Web / frontend developer](https://tashan.sh/role/web-dev.html) — 110 measured. Top: Tray API, Figma, Modern Web Guidance.
+- [Writer / content](https://tashan.sh/role/writer.html) — 181 measured. Top: Humanize Korean, Save To Spotify, Codedna.
 
 ## Categories
 

@@ -57,6 +57,10 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CF_KV_NAMESPACE_ID: "1f68077762cc4fdb938d3dcf35774c69"
+          # The two coverage axes an agent notices missing — expertise grade and task mapping — both
+          # need this and neither ran in the loop. Without it both stages skip loudly and coverage
+          # simply stops advancing, which is how 18 of the top 20 by downloads ended up ungraded.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 pipeline/run.py
 
       # Runs to completion and records its verdict rather than ending the job here. A red suite must

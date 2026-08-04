@@ -26,7 +26,27 @@ it stays dormant until the credentials exist.
 Verify: run the workflow by hand and confirm the *Deploy to Cloudflare Pages* step runs rather than
 skips. It is gated on a green suite **and** on the secret existing, so today it skips silently.
 
-### 1.2 One host integration conversation (this week)
+### 1.2 Turn off Bot Fight Mode (2 minutes) — agents are being refused at the door
+
+Measured 5 Aug: Cloudflare returns **403 to any request whose User-Agent is `Python-urllib/3.x`** —
+the default of `urllib.request.urlopen(url)`, the most common way to fetch a URL in Python. It
+affects every surface, including the ones we advertise as keyless and agent-ready:
+
+    /  ·  /llms.txt  ·  /v0.1/scores  ·  /v0.1/servers  ·  /data/index.json  ·  /capability/*.md
+
+curl, node-fetch, Go and ChatGPT-User are fine, so this is invisible from a browser and from most
+manual testing. But an agent that gets 403 on its first request does not retry with a nicer header —
+it concludes the service is down and stops asking. We are inviting integrations and refusing them at
+the door.
+
+dash.cloudflare.com -> tashan.sh -> Security -> Bots -> **Bot Fight Mode off**. Free-tier Bot Fight
+Mode cannot be scoped by path; Super Bot Fight Mode allows an exception for `/v0.1/*` and `/data/*`
+if protection is wanted elsewhere. The deploy token carries `zone:read`, not `zone:write`, so this
+cannot be automated from the repo.
+
+Verify: `python3 tests/test_agent_access.py` — it runs advisory in the suite and never blocks a deploy.
+
+### 1.3 One host integration conversation (this week)
 
 This is the whole ballgame. Distribution scored 10/100 at 20% weight — the heaviest axis and the
 emptiest. One integration moves it to ~50 and revenue reality 30 → 55: about 15 composite points from
@@ -45,7 +65,7 @@ dependencies and has no answer for MCP servers.
 
 The ask is not a partnership. It is: *"here is a free endpoint, show a score next to each server."*
 
-### 1.3 Decide whether tashan is priority one
+### 1.4 Decide whether tashan is priority one
 
 The Fable review puts this third behind FaceTell and Trade Clash, in a business that runs on
 accumulated credibility. Three consecutive sprints went to product polish over distribution; this

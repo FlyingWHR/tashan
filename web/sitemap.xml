@@ -7446,11 +7446,14 @@
   <url><loc>https://tashan.sh/task/audit</loc></url>
   <url><loc>https://tashan.sh/task/bookkeeping</loc></url>
   <url><loc>https://tashan.sh/task/browser-automation</loc></url>
+  <url><loc>https://tashan.sh/task/cad-modeling</loc></url>
+  <url><loc>https://tashan.sh/task/career-development</loc></url>
   <url><loc>https://tashan.sh/task/code-review</loc></url>
   <url><loc>https://tashan.sh/task/content-marketing</loc></url>
   <url><loc>https://tashan.sh/task/contract-review</loc></url>
   <url><loc>https://tashan.sh/task/copy-editing</loc></url>
   <url><loc>https://tashan.sh/task/copywriting</loc></url>
+  <url><loc>https://tashan.sh/task/customer-support</loc></url>
   <url><loc>https://tashan.sh/task/dashboards-and-reporting</loc></url>
   <url><loc>https://tashan.sh/task/data-pipelines</loc></url>
   <url><loc>https://tashan.sh/task/data-quality</loc></url>
@@ -7467,8 +7470,10 @@
   <url><loc>https://tashan.sh/task/logistics-and-fulfilment</loc></url>
   <url><loc>https://tashan.sh/task/market-analysis</loc></url>
   <url><loc>https://tashan.sh/task/messaging-and-email</loc></url>
+  <url><loc>https://tashan.sh/task/ml-engineering</loc></url>
   <url><loc>https://tashan.sh/task/model-evaluation</loc></url>
   <url><loc>https://tashan.sh/task/observability</loc></url>
+  <url><loc>https://tashan.sh/task/performance-optimization</loc></url>
   <url><loc>https://tashan.sh/task/prd-and-specs</loc></url>
   <url><loc>https://tashan.sh/task/process-automation</loc></url>
   <url><loc>https://tashan.sh/task/product-strategy</loc></url>
@@ -7504,6 +7509,7 @@
   <url><loc>https://tashan.sh/role/educator</loc></url>
   <url><loc>https://tashan.sh/role/engineer</loc></url>
   <url><loc>https://tashan.sh/role/finance</loc></url>
+  <url><loc>https://tashan.sh/role/hardware</loc></url>
   <url><loc>https://tashan.sh/role/hr</loc></url>
   <url><loc>https://tashan.sh/role/legal</loc></url>
   <url><loc>https://tashan.sh/role/marketer</loc></url>
@@ -7513,6 +7519,7 @@
   <url><loc>https://tashan.sh/role/sales</loc></url>
   <url><loc>https://tashan.sh/role/scientist</loc></url>
   <url><loc>https://tashan.sh/role/security</loc></url>
+  <url><loc>https://tashan.sh/role/support</loc></url>
   <url><loc>https://tashan.sh/role/web-dev</loc></url>
   <url><loc>https://tashan.sh/role/writer</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-2sio-mcp-vs-pkg-alphacouncil-agent</loc></url>

@@ -119,7 +119,11 @@ def main():
         print("  ✓ parser + rubric self-check passed")
         return
     if not API_KEY:
-        sys.exit("ANTHROPIC_API_KEY is not set — export it, or use --dry-run.")
+        # SKIP, NOT FAIL: this runs in the nightly loop now. Loud, because 18 of the top 20
+        # capabilities by downloads carry no grade, and silence here is why nobody noticed.
+        print("SKIPPED — ANTHROPIC_API_KEY is not set, so no capability gets an expertise grade "
+              "tonight. Coverage stays where it is: the axis an agent notices missing first.")
+        return 0
 
     scores, fails = [], 0
     for i, c in enumerate(caps, 1):

@@ -32,6 +32,12 @@ python3 tests/test_score.py || fail=1
 echo; echo "── scorer version lock ────────────────────────"
 python3 tests/test_scorer_version.py || fail=1
 
+# 3b1v. ADVISORY, not gating: the endpoints we advertise to agents must answer agents. The fix is a
+# Cloudflare zone setting (Bot Fight Mode), which this repo cannot change and the deploy token cannot
+# either — so it must never block publishing. It prints loudly and does not set `fail`.
+echo; echo "── agent access (advisory) ────────────────────"
+python3 tests/test_agent_access.py || echo "  ^^ NOT gating: fix at dash.cloudflare.com -> tashan.sh -> Security -> Bots"
+
 # 3b1w. pricing, terms and refunds must describe the same product — they described three
 echo; echo "── entitlements (one product, one story) ──────"
 python3 tests/test_entitlements.py || fail=1
