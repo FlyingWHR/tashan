@@ -256,7 +256,7 @@ def jsonld(c):
         # reviewers"; we had one with ratingCount:1 on 6,586 pages, which claims a crowd that does not
         # exist and is the exact self-serving-rating pattern Google's structured-data policy rejects.
         # The tashan score is one named party's measurement, so it is modelled as one named party's
-        # review — attributed, dated, and re-derivable. Same number, honest shape.
+        # review — attributed, dated, and traceable to its sources. Same number, honest shape.
         app["review"] = {"@type":"Review",
             "author": {"@type":"Organization","name":"tashan","url": BASE + "/"},
             "reviewRating": {"@type":"Rating","ratingValue": c["tashan_score"],
@@ -643,6 +643,34 @@ def bake_hero(caps, total):
     print(f"hero: baked {len(caps):,} measured / {total:,} tracked / {when}")
 
 
+def bake_methodology(gen):
+    """Write the LIVE scorer version into methodology.html.
+
+    It was typed by hand and read "s2, from 30 July 2026" while production served s5 — two bumps had
+    shipped without anyone editing the prose. For a site whose product is measurement, a methodology
+    page describing a scorer that has not run in weeks is not a stale docs page; it is the one
+    document a sceptical reader opens to check whether the numbers mean anything, and it was wrong.
+    Baked from the same export the scores come from, so it cannot drift again.
+    """
+    p = os.path.join(ROOT, "web", "methodology.html")
+    if not os.path.exists(p):
+        return
+    html = open(p, encoding="utf-8").read()
+    when = (gen or "")[:10] or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    subs = 0
+    for pat, val in ((r'(<span class="mono" id="mScorer">)[^<]*(</span>)', SCORER or "?"),
+                     (r'(<span id="mScorerDate">)[^<]*(</span>)', when)):
+        html, n = re.subn(pat, lambda m: m.group(1) + val + m.group(2), html, count=1)
+        subs += n
+    # A baker that silently matches nothing is worse than no baker: it prints success while the page
+    # keeps whatever a human last typed, which is exactly how "s2" survived two scorer bumps.
+    if subs != 2:
+        raise SystemExit(f"methodology bake matched {subs}/2 targets — the markers moved or were "
+                         f"edited away. Fix web/methodology.html, do not let this pass silently.")
+    open(p, "w", encoding="utf-8").write(html)
+    print(f"methodology: baked scorer {SCORER} / {when}")
+
+
 def lastmod(c):
     """<lastmod> from the date the described artifact actually last changed — or nothing.
 
@@ -784,6 +812,7 @@ def main():
         print("removed %d orphaned page(s) no longer in the export" % len(stale))
     sitemap(caps)
     bake_hero(caps, d.get("total_capabilities") or len(caps))
+    bake_methodology(gen)
     print("prerendered %d capability pages -> %s" % (len(caps), OUT))
     print("sitemap: %d capability URLs + core pages" % len(caps))
 

@@ -114,8 +114,7 @@ def main():
             "note": ("tashan is a measurement subregistry: it scores capabilities on public evidence and "
                      "sells, hosts and runs none of them. Only measured capabilities appear here — an "
                      "unscored capability is absent rather than scored zero. Scores live under "
-                     "_meta['sh.tashan/measurement']; every input is public and re-derivable, and no "
-                     "ranking position can be purchased. For install metadata (packages, remotes, "
+                     "_meta['sh.tashan/measurement']; every input is public and linked to its source. For install metadata (packages, remotes, "
                      "environment variables) read the upstream registry at "
                      "registry.modelcontextprotocol.io — we do not restate what we did not measure."),
             "limits": ("Static snapshot, single page, no cursor. Regenerated whenever the pipeline runs. "

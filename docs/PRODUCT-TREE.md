@@ -69,6 +69,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `functions/api/polar.test.mjs` — Polar webhook verification — the security boundary. Run: node functions/api/polar.test.mjs
 - `functions/api/security.test.mjs` — node --test functions/api/security.test.mjs
 - `tests/test_chrome.py` — The navigation exists once. Every page renders that one definition, byte for byte.
+- `tests/test_claims.py` — Every claim a page makes about itself must be true of that page.
 - `tests/test_classify.py` — The category is a published claim, so its accuracy is a number we hold ourselves to.
 - `tests/test_consistency.py` — One capability, one set of facts, on every surface that renders it.
 - `tests/test_doc_signals.py` — The self-declared-unmaintained detector, which is allowed to cost a capability 70% of its

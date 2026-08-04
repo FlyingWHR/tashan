@@ -103,7 +103,7 @@ def head(title, desc, url, lds):
         + ld + "\n</head>\n<body>\n" + nav_for(url))
 
 
-T_SCORE = 'The tashan score, 0–100: upkeep and freshness, gated by real adoption and discounted where the evidence is thin. Every input is public and re-derivable, and no position can be bought.'
+T_SCORE = 'The tashan score, 0–100: upkeep and freshness, gated by real adoption and discounted where the evidence is thin. Every input is public and linked to its source.'
 T_EV = "The raw public signal the score was derived from — npm weekly downloads, or stars on the capability's own repository, or the public configs and marketplaces that reference it"
 T_HEALTH = 'Whether the project is still alive: active (recent work), stable (finished and still used), abandoned (archived or deprecated)'
 
@@ -258,7 +258,7 @@ def cat_page(cat, rows, all_cats, gen):
              "acceptedAnswer": {"@type": "Answer", "text":
                 ("By tashan's measured score, the highest-ranked are " + top + ". the score combines "
                  "upkeep and freshness, gated by real adoption — every input is public and "
-                 "re-derivable, and no ranking position can be purchased.")}},
+                 "linked to its source.")}},
             {"@type": "Question", "name": "How many " + label.lower() + " MCP servers are there?",
              "acceptedAnswer": {"@type": "Answer", "text":
                 ("tashan currently measures " + str(len(rows)) + " capabilities in this category out of "
@@ -311,8 +311,13 @@ def task_page(task, rows, all_tasks, gen):
     slug, label = task["slug"], task["label"]
     url = BASE + "/task/" + slug + ".html"
     title = "Best " + kinds_phrase(rows) + " for " + label.lower() + " · tashan"
+    # ORDERED AS IT IS ACTUALLY SORTED. This said "ranked by tashan score" while the sort below is
+    # (fit, instruction depth, score) — three levels, lexicographic. The rendered order restarted at 71
+    # after descending to 51, so the page contradicted its own first sentence in plain sight. The sort
+    # is right for a recommendation; the sentence was describing a different one.
     desc = ("The " + str(len(rows)) + " capabilities tashan measures for " + label.lower() +
-            ", ranked by tashan score — upkeep, freshness and real adoption, from public evidence only.")
+            " — ordered by how directly each one does this work, then by how well it documents itself, "
+            "then by the tashan score. All from public evidence.")
     top = ", ".join(disp(c) for c in rows[:5])
     occs = task.get("occupations") or []
     steps = task.get("onet_steps") or []
@@ -335,8 +340,7 @@ def task_page(task, rows, all_tasks, gen):
             {"@type": "Question", "name": "What is the best " + kinds_phrase(rows).rstrip("s") + " for " + label.lower() + "?",
              "acceptedAnswer": {"@type": "Answer", "text":
                 ("By tashan's measured score: " + top + ". the score combines upkeep and freshness, "
-                 "gated by real adoption — every input is public and re-derivable, and no ranking "
-                 "position can be purchased.")}},
+                 "gated by real adoption — every input is public and linked to its source.")}},
             {"@type": "Question", "name": "Who does " + label.lower() + " as part of their job?",
              "acceptedAnswer": {"@type": "Answer", "text":
                 (("This is a process step performed by " + ", ".join(occs[:8]) +
@@ -398,7 +402,7 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
          "often a server appears in real public agent configs. Nobody can pay to change a score, rank, or "
          "listing; payment buys depth and tooling only.", "",
          "Generated: " + (gen or "")[:10] + ". Capabilities tracked: " + str(len(caps)) +
-         " ranked. Every number below is re-derivable from public sources.", "",
+         " ranked. Every number below links to the public source it came from.", "",
          "## How the score works", "",
          "- **tashan score** — composite of upkeep and freshness, gated by real adoption. 0–100.",
          "- **Adoption** — npm download volume (log) blended with config-adoption reach across public repos.",
@@ -574,8 +578,9 @@ def role_page(role, rows, tasks, all_roles, gen):
     scored = [c for c in rows if c.get("tashan_score") is not None]
     title = "Best " + kinds_phrase(rows) + " for " + label.lower() + " · tashan"
     desc = ("The " + str(len(rows)) + " " + kinds_phrase(rows) + " tashan measures for " + label.lower() +
-            " work, ranked by tashan score — upkeep, freshness and real adoption, all from public "
-            "evidence, plus what each one can reach on your machine.")
+            " work — ordered by how directly each one does the job, then by how well it documents "
+            "itself, then by the tashan score. All from public evidence, plus what each one can reach "
+            "on your machine.")
     top = ", ".join(disp(c) for c in scored[:5])
     work = ", ".join(t["label"].lower() for t in tasks[:6])
     lds = [
@@ -597,7 +602,7 @@ def role_page(role, rows, tasks, all_roles, gen):
              "acceptedAnswer": {"@type": "Answer", "text":
                 ("By tashan's measured score the highest-ranked for this work are " + top + ". The score "
                  "combines upkeep and freshness, gated by real adoption; every input is public and "
-                 "re-derivable, and no position on this list can be bought.")}},
+                 "linked to its source.")}},
             {"@type": "Question", "name": "What work does this cover?",
              "acceptedAnswer": {"@type": "Answer", "text":
                 ("A " + label.lower() + " here is the union of the tasks that job performs — " + work +

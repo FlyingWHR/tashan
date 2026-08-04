@@ -18,7 +18,7 @@ Four layers, in the order a person installing an agent tool actually cares about
   L4  REMOTE CONTENT          whether it pulls remote content back into the agent's context, which is
                               the injection-exposure question specific to this ecosystem.
 
-Every input is public and re-derivable: the npm packument we already fetch, and OSV.dev's free
+Every input is public and linked to its source: the npm packument we already fetch, and OSV.dev's free
 keyless API. Nothing here executes package code, and nothing here can be bought — the firewall in
 tests/test_firewall.py still governs the score, and none of these columns feed it.
 """

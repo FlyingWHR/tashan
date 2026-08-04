@@ -32,6 +32,11 @@ python3 tests/test_score.py || fail=1
 echo; echo "── scorer version lock ────────────────────────"
 python3 tests/test_scorer_version.py || fail=1
 
+# 3b1y. every claim a page makes about itself must be true of that page — an external audit found
+# five simultaneous contradictions, all prose asserting what the code did differently
+echo; echo "── page claims match page behaviour ───────────"
+python3 tests/test_claims.py || fail=1
+
 # 3b1z. the badge moved from 6,453 static files to a Function; two renderers, one artifact, and the
 # blast radius is other people's READMEs
 echo; echo "── badge parity (python == js) ────────────────"

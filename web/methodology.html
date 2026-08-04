@@ -35,7 +35,7 @@
 
     <div class="callout"><b>No user tracking.</b> tashan installs nothing, instruments no one, and reads no
       private data. Every number here is derived from <b>public sources</b> — the MCP registry, npm, and public
-      GitHub configs — and is re-derivable by anyone.</div>
+      GitHub configs — and every signal links to the source it came from.</div>
 
     <h2>Coverage</h2>
     <p>We ingest the <b>official MCP registry</b> as the spine of coverage: thousands of capabilities with their
@@ -63,7 +63,7 @@
     <p>The single Index number is a <strong>transparent composite</strong> — and every input is shown on the
       capability's page, never hidden:</p>
     <div class="callout mono fs-base">raw = mean(<b>Upkeep</b>, <b>Freshness</b>) &times; gate(<b>Adoption</b>) &times; coverage<br>tashan score = calibrate(raw)<br><span class="fs-sm">gate = 0.30 + 0.70 &times; Adoption&frasl;100 &nbsp;·&nbsp; coverage discounts a score built on thin evidence<br>calibrate = piecewise-linear, raw 50 &rarr; 68; strictly order-preserving</span></div>
-    <p class="callout"><b>Why it is called the tashan score, not a trust score.</b> We measure whether people use a capability and whether it is kept alive. We do not audit it: there is no CVE scan, no prompt-injection review, no reading of its code. Calling that "trust" claimed something the arithmetic does not support, and this page had to walk it back a paragraph later. The number is our measurement, on public evidence, and it is named accordingly.</p>
+    <p class="callout"><b>Why it is called the tashan score, not a trust score.</b> We measure whether people use a capability and whether it is kept alive. That is all the number is. The risk scan is a separate reading, it does not feed this score, and it does not read the capability&rsquo;s code or test it for prompt injection. Calling that "trust" claimed something the arithmetic does not support, and this page had to walk it back a paragraph later. The number is our measurement, on public evidence, and it is named accordingly.</p>
     <p>Upkeep and freshness set the ceiling; <b>adoption decides most of what a capability actually scores</b>.
       That balance is deliberate and it was wrong before: upkeep and recency both saturate near 100 for any repo
       that was pushed recently, so when the gate floor sat at 0.6 a well-kept capability nobody used still kept 60%
@@ -99,7 +99,7 @@
       reads 43, 43, 43, 42, 40 across those days and every step down was <em>us</em>, not the capability.
       Comparing across that line would report our own recalibration as something declining, so we do not
       do it — a trend is only ever computed within a single scorer version, and a version change starts
-      the clock again. The current version is <span class="mono">s2</span>, from 30 July 2026.</p>
+      the clock again. The current version is <span class="mono" id="mScorer">s5</span>, measured <span id="mScorerDate">2026-08-04</span>.</p>
 
     <p><b>A capability the registry removes stays visible to you.</b> The MCP registry marks servers
       <span class="mono">deleted</span>, and its moderation policy names spam, malware and illegal content
