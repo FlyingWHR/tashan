@@ -60,9 +60,8 @@
           <span class="plan__name">tashan Pro</span>
           <span class="plan__price">$6<small>/mo</small></span>
         </div>
-        <p class="plan__alt mono">or <b>$49/year</b> &mdash; two months free</p>
-        <p class="plan__for">Free tells you what is true today. Pro tells you the day that changes.</p>
-        <div class="callout mono fs-sm mb-4">$ tashan doctor --watch</div>
+                <p class="plan__for">Free tells you what is true today. Pro tells you the day that changes.</p>
+        <div class="callout mono fs-sm mb-4">$ tashan doctor <span class="o-50"># with Pro: history, advisory detail, replacements</span></div>
         <ul class="plan__feat">
           <li><b>A new advisory against something you run</b> — and whether its severity went up.</li>
           <li><b>An install script that appeared or changed</b> — code that runs on your machine
@@ -82,8 +81,7 @@
         <div class="plan__buys">
           <a class="btn btn--primary plan__cta" href="https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" rel="noopener"
              data-src="pro-checkout-monthly">$6 monthly &rsaquo;</a>
-          <a class="btn btn--ghost plan__cta" href="https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" rel="noopener"
-             data-src="pro-checkout-annual">$49 yearly &rsaquo;</a>
+          <span class="plan__note mono">annual billing is not available yet &mdash; monthly only</span>
         </div>
         <p class="plan__note mono">cancel any time in
           <a class="link" href="/account.html">your account</a>
@@ -113,7 +111,7 @@
         recompute from public sources; a <em>change</em> is observable exactly once, on the day it happens.
         It only exists because we recorded yesterday, and a day nobody records is gone for good — for us
         too. That is what the subscription buys, and it is worth more every month it runs.</p></div>
-      <div><h3>How do I sign in?</h3><p><code>tashan login</code> prints a short code and opens your browser; approve it and the terminal has it — the same flow as <code>gh auth login</code>. There is no key to copy. Then
+      <div><h3>How do I sign in?</h3><p><code>tashan activate &lt;key&gt;</code> stores the licence key from your account page on this machine. There is no key to copy. Then
         <code>tashan doctor</code> as usual — it is stored in <code>~/.config/tashan/key</code>, so there is no
         export to remember and nothing to re-do in a new terminal. Same key on every machine you use. The key is in your
         <a class="link" href="/account.html">account</a>. Nothing about your
@@ -124,7 +122,7 @@
         <code>tashan account</code> and it opens already signed in; there is no password to make. Pro also shows
         up in your terminal, where <code>doctor</code> prints <span class="mono">Pro · licence active</span> on
         every run.</p></div>
-      <div><h3>How many machines?</h3><p>Run <code>tashan login</code> on each one — approving is one click because the browser stays signed in
+      <div><h3>How many machines?</h3><p>Run <code>tashan activate &lt;key&gt;</code> on each one — the same key works on every machine you own, and each
         registers it under its hostname, so <a class="link" href="/account.html">your account</a> lists exactly what
         is active. <code>tashan logout</code> hands a slot back from the machine itself.</p></div>
       <div><h3>Can a publisher pay to rank higher?</h3><p>No. Commercial relationships never influence task

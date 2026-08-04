@@ -119,5 +119,42 @@ for pg in ("index.html", "terms.html", "methodology.html"):
        not re.search(r"re-?derivable", t, re.I))
 
 print()
+print("# a price we advertise must be a price we can charge")
+pricing = open(os.path.join(WEB, "pricing.html"), encoding="utf-8").read()
+links = re.findall(r'href="(https://buy\.polar\.sh/[^"]+)"[^>]*data-src="([^"]+)"', pricing)
+by_url = {}
+for url, src in links:
+    by_url.setdefault(url, []).append(src)
+# THE BUG THIS CATCHES. "$6 monthly" and "$49 yearly" pointed at the SAME Polar checkout — a $6/month
+# subscription. Anyone choosing annual was charged monthly, and data-src recorded it as an annual
+# conversion, so neither the customer nor the funnel could see the mismatch. Two CTAs offering
+# different cadences must never share one price object.
+shared = {u: s for u, s in by_url.items() if len(set(s)) > 1}
+ok("no two checkout CTAs with different cadences share a price link",
+   not shared, f"{shared}")
+
+body = text(os.path.join(WEB, "pricing.html"))
+# NORMALISE before counting, or "$6/mo", "$6 mo" and "$6 /mo" read as three different prices — which
+# is the check being wrong, not the page. What matters is distinct (amount, cadence) pairs.
+raw = re.findall(r"\$(\d+)\s*(?:/|per\s)?\s*(mo|month|yr|year)", body, re.I)
+prices = {(amt, "yr" if c.lower().startswith("y") else "mo") for amt, c in raw}
+ok(f"pricing advertises one cadence per live checkout link ({len(by_url)} link, offers: {sorted(prices) or 'none'})",
+   len(prices) <= len(by_url), f"{sorted(prices)} advertised, {len(by_url)} checkout link(s)")
+
+print()
+print("# do not sell a command the published CLI does not have")
+# tashan-cli@0.1.1 on npm has `activate` and `doctor`; it has no `login` and no `--watch`. The site
+# sold both. A sign-in instruction that does not exist is a conversion dead end for someone who has
+# already decided to pay.
+UNSHIPPED = ("--watch", "doctor --watch", "tashan login", "tashan-cli login")
+for pg in ("pricing.html", "support.html", "start.html", "account.html"):
+    fp = os.path.join(WEB, pg)
+    if not os.path.exists(fp):
+        continue
+    t = text(fp)
+    bad = [c for c in UNSHIPPED if c in t]
+    ok(f"{pg} names no unpublished CLI command", not bad, f"found: {bad}")
+
+print()
 print(("CLAIMS OK" if not fail else "CLAIMS FAILED"))
 sys.exit(fail)
