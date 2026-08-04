@@ -1,0 +1,73 @@
+{
+  "_why": "ONE definition of what Free and Pro include. Pricing, Terms and Refunds each described a different product: pricing sold advisory detail, install-script contents and permissions; terms committed only to 'the named replacement and the score-history API'; refunds said the same as terms. A customer reading the legal page could not learn that the thing they were sold on the pricing page was included. Every surface is generated from this file, and tests/test_entitlements.py fails the build if any of them disagrees.",
+  "_status": "live = shipped and reachable today · beta = shipped, may change · planned = NOT built, must never appear as a feature",
+  "_delivered_by": "the concrete thing a buyer runs or calls. A feature with no delivery path is not a feature.",
+  "tiers": {
+    "free": { "label": "Free", "price": "$0", "cadence": "forever" },
+    "pro": { "label": "tashan Pro", "price": "$6", "cadence": "month" }
+  },
+  "features": [
+    {
+      "id": "index",
+      "label": "The full Index — every tashan score and expertise grade",
+      "free": true, "pro": true, "status": "live",
+      "delivered_by": "/data/index.json · the board · npx tashan-cli search"
+    },
+    {
+      "id": "finding-exists",
+      "label": "Every risk finding, named — how many advisories, at what severity, that an install script exists, that a permission surface exists",
+      "free": true, "pro": true, "status": "live",
+      "delivered_by": "every capability page · /data/capabilities.json",
+      "note": "The EXISTENCE of a risk is never paywalled. Charging to learn that something is wrong is the one thing an independent rater does not get to do."
+    },
+    {
+      "id": "doctor",
+      "label": "Audit the config already on this machine",
+      "free": true, "pro": true, "status": "live",
+      "delivered_by": "npx tashan-cli doctor"
+    },
+    {
+      "id": "agent-endpoints",
+      "label": "Agent endpoints, badges and the MCP server — no key, no signup",
+      "free": true, "pro": true, "status": "live",
+      "delivered_by": "/v0.1/scores · /v0.1/servers · /badge/*.svg · npx tashan-mcp"
+    },
+    {
+      "id": "advisory-detail",
+      "label": "Which CVE or GHSA, its severity, and the version that fixes it",
+      "free": false, "pro": true, "status": "live",
+      "delivered_by": "GET /api/security · npx tashan-cli doctor"
+    },
+    {
+      "id": "install-script",
+      "label": "The exact command a package runs at install time",
+      "free": false, "pro": true, "status": "live",
+      "delivered_by": "GET /api/security"
+    },
+    {
+      "id": "permissions",
+      "label": "The full declared permission surface, not just the first entry",
+      "free": false, "pro": true, "status": "live",
+      "delivered_by": "GET /api/security"
+    },
+    {
+      "id": "history",
+      "label": "Every score and signal since we started measuring, with the scorer version behind each point",
+      "free": false, "pro": true, "status": "live",
+      "delivered_by": "GET /api/history · npx tashan-cli trend"
+    },
+    {
+      "id": "replacement",
+      "label": "A named replacement for anything dead, deprecated or abandoned in your config",
+      "free": false, "pro": true, "status": "live",
+      "delivered_by": "npx tashan-cli doctor"
+    },
+    {
+      "id": "watch",
+      "label": "Proactive notification on the day something in your stack changes",
+      "free": false, "pro": false, "status": "planned",
+      "delivered_by": null,
+      "note": "NOT BUILT. There is no scheduler and no notification path. It was printed as the headline of the paid plan while the published CLI had no watch command at all. It stays here as planned so nothing can quietly start selling it again — the generator refuses to render a planned feature as included."
+    }
+  ]
+}

@@ -11,23 +11,23 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
-| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 101 |
-| `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | index.json, tasks.json | post-sale | 56 |
-| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | capabilities.json, index.json, tasks.json | free | 51 |
+| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | board.json, capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 101 |
+| `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 56 |
+| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | board.json, capabilities.json, index.json, tasks.json | free | 51 |
 | `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 50 |
-| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | index.json, tasks.json | sells | 48 |
-| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | index.json, tasks.json | free | 33 |
-| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | index.json, tasks.json | post-sale | 27 |
-| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | index.json, tasks.json | free | 26 |
-| `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | index.json, requests.json, tasks.json | free | 26 |
-| `/support.html` | How to get help, and what we can see when you ask. | site, terminal | index.json, tasks.json | free | 25 |
-| `/about.html` | What tashan measures, where it is going, and the principles the scoring follows. | site, terminal | index.json, tasks.json | free | 24 |
-| `/privacy.html` | What we collect, which is close to nothing. | site, terminal | index.json, tasks.json | free | 24 |
-| `/terms.html` | Terms of service. | site, terminal | index.json, tasks.json | free | 24 |
-| `/404.html` *(noindex)* | Real 404 with a route back in. noindex; without it Pages served the homepage at status 200 for every unknown URL. | site, terminal | index.json, tasks.json | free | 0 |
-| `/activate.html` *(noindex)* | Approve a device that ran `tashan login`. noindex; the browser half of the RFC 8628 grant, so a licence key is typed once ever, not per machine. | activate, signin, site, terminal | index.json, tasks.json | post-sale | 0 |
-| `/capability.html` | Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs. | capability, site, terminal | index.json, tasks.json | free | 0 |
-| `/welcome.html` *(noindex)* | Post-checkout: activate the licence. noindex, reached only from Polar. | signin, site, terminal, welcome | index.json, tasks.json | post-sale | 0 |
+| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 48 |
+| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | board.json, index.json, tasks.json | free | 33 |
+| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | board.json, index.json, tasks.json | post-sale | 27 |
+| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | board.json, index.json, tasks.json | free | 26 |
+| `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | board.json, index.json, requests.json, tasks.json | free | 26 |
+| `/support.html` | How to get help, and what we can see when you ask. | site, terminal | board.json, index.json, tasks.json | free | 25 |
+| `/about.html` | What tashan measures, where it is going, and the principles the scoring follows. | site, terminal | board.json, index.json, tasks.json | free | 24 |
+| `/privacy.html` | What we collect, which is close to nothing. | site, terminal | board.json, index.json, tasks.json | free | 24 |
+| `/terms.html` | Terms of service. | site, terminal | board.json, index.json, tasks.json | free | 24 |
+| `/404.html` *(noindex)* | Real 404 with a route back in. noindex; without it Pages served the homepage at status 200 for every unknown URL. | site, terminal | board.json, index.json, tasks.json | free | 0 |
+| `/activate.html` *(noindex)* | Approve a device that ran `tashan login`. noindex; the browser half of the RFC 8628 grant, so a licence key is typed once ever, not per machine. | activate, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 0 |
+| `/capability.html` | Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs. | capability, site, terminal | board.json, index.json, tasks.json | free | 0 |
+| `/welcome.html` *(noindex)* | Post-checkout: activate the licence. noindex, reached only from Polar. | signin, site, terminal, welcome | board.json, index.json, tasks.json | post-sale | 0 |
 
 ## Generated trees
 
@@ -68,11 +68,13 @@ Each of these exists because the failure it prevents already shipped once.
 - `functions/api/license.test.mjs` — The paywall. Run: node functions/api/license.test.mjs
 - `functions/api/polar.test.mjs` — Polar webhook verification — the security boundary. Run: node functions/api/polar.test.mjs
 - `functions/api/security.test.mjs` — node --test functions/api/security.test.mjs
+- `tests/test_a11y_contrast.py` — Every text colour token must be readable on the background it is used against.
 - `tests/test_chrome.py` — The navigation exists once. Every page renders that one definition, byte for byte.
 - `tests/test_claims.py` — Every claim a page makes about itself must be true of that page.
 - `tests/test_classify.py` — The category is a published claim, so its accuracy is a number we hold ourselves to.
 - `tests/test_consistency.py` — One capability, one set of facts, on every surface that renders it.
 - `tests/test_doc_signals.py` — The self-declared-unmaintained detector, which is allowed to cost a capability 70% of its
+- `tests/test_entitlements.py` — Pricing, Terms and Refunds must describe the same product.
 - `tests/test_expertise.py` — A published grade must not contradict itself.
 - `tests/test_firewall.py` — The firewall test — the ranking can never be bought.
 - `tests/test_history_integrity.py` — The paid series must contain the capability's movement, not ours.

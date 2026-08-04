@@ -592,6 +592,8 @@ def page(c, gen):
         '<meta name="cap-id" content="' + esc(c["id"]) + '">\n'
         '<meta name="theme-color" content="#0b0b0a">\n'
         '<link rel="canonical" href="' + url + '">\n'
+        '<link rel="alternate" type="text/markdown" href="'
+        + BASE + '/capability/' + c["slug"] + '.md" title="Plain-markdown dossier">\n'
         '<meta property="og:type" content="website">\n'
         '<meta property="og:title" content="' + esc(title) + '">\n'
         '<meta property="og:description" content="' + d + '">\n'

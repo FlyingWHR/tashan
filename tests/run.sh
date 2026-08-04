@@ -32,6 +32,10 @@ python3 tests/test_score.py || fail=1
 echo; echo "── scorer version lock ────────────────────────"
 python3 tests/test_scorer_version.py || fail=1
 
+# 3b1w. pricing, terms and refunds must describe the same product — they described three
+echo; echo "── entitlements (one product, one story) ──────"
+python3 tests/test_entitlements.py || fail=1
+
 # 3b1x. contrast is arithmetic — an audit found body text at 2.67:1 and it needed an eye to notice
 echo; echo "── text contrast (WCAG AA) ───────────────────"
 python3 tests/test_a11y_contrast.py || fail=1

@@ -108,7 +108,10 @@ def main():
         con.close()
         return bulk(data, sys.argv[sys.argv.index("--bulk") + 1])
     if not dry and not (ACCOUNT and NAMESPACE and TOKEN):
-        sys.exit("set CF_ACCOUNT_ID, CF_KV_NAMESPACE_ID and CF_API_TOKEN (or pass --dry-run)")
+        print("SKIPPED — set CF_ACCOUNT_ID, CF_KV_NAMESPACE_ID and CF_API_TOKEN to deliver the "
+              "retention series. Until then /api/history has no data and Pro's headline promise "
+              "— 'we tell you the day it changes' — resolves to an empty store.")
+        return 0
     con = sqlite3.connect(DB)
     data = shards(con)
     # Count the days ACTUALLY BEING PUSHED, not the days the DB happens to hold. Asking the DB

@@ -4,6 +4,18 @@
 
 Generated: 2026-08-04. Capabilities tracked: 7403 ranked. Every number below links to the public source it came from.
 
+## Read any capability as plain markdown
+
+Every capability page has a markdown twin at the same path plus `.md` — no JavaScript, no
+navigation, the same measurements. Fetch these instead of parsing HTML:
+
+    https://tashan.sh/capability/<slug>.md
+    e.g. https://tashan.sh/capability/pkg-tavily-mcp.md
+
+Each one carries a labelled Facts block (score, adoption, upkeep, freshness, evidence
+coverage, instruction depth), the install command, and the risk scan — with every unknown
+stated as unknown rather than omitted. An absent line never means "fine".
+
 ## How the score works
 
 - **tashan score** — composite of upkeep and freshness, gated by real adoption. 0–100.

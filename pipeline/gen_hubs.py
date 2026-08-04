@@ -403,6 +403,18 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
          "listing; payment buys depth and tooling only.", "",
          "Generated: " + (gen or "")[:10] + ". Capabilities tracked: " + str(len(caps)) +
          " ranked. Every number below links to the public source it came from.", "",
+         # THE MARKDOWN CONVENTION, ANNOUNCED. Every capability has a plain-markdown twin at
+         # <page>.md — no JS, no chrome, the same facts. They were generated and then mentioned
+         # nowhere: not the sitemap, not a link, not here. An answer engine cannot use a convention
+         # it has not been told about, and this file is the one place it looks.
+         "## Read any capability as plain markdown", "",
+         "Every capability page has a markdown twin at the same path plus `.md` — no JavaScript, no",
+         "navigation, the same measurements. Fetch these instead of parsing HTML:", "",
+         "    https://tashan.sh/capability/<slug>.md",
+         "    e.g. https://tashan.sh/capability/pkg-tavily-mcp.md", "",
+         "Each one carries a labelled Facts block (score, adoption, upkeep, freshness, evidence",
+         "coverage, instruction depth), the install command, and the risk scan — with every unknown",
+         "stated as unknown rather than omitted. An absent line never means \"fine\".", "",
          "## How the score works", "",
          "- **tashan score** — composite of upkeep and freshness, gated by real adoption. 0–100.",
          "- **Adoption** — npm download volume (log) blended with config-adoption reach across public repos.",
