@@ -146,7 +146,11 @@ print("# do not sell a command the published CLI does not have")
 # tashan-cli@0.1.1 on npm has `activate` and `doctor`; it has no `login` and no `--watch`. The site
 # sold both. A sign-in instruction that does not exist is a conversion dead end for someone who has
 # already decided to pay.
-UNSHIPPED = ("--watch", "doctor --watch", "tashan login", "tashan-cli login")
+# Checked against the tarball actually on npm, not the repo — 0.1.1 shipped WITHOUT `login` while the
+# repo had it under the same version number, so the site told readers to run a command their installed
+# package did not contain. 0.1.2 ships login/activate/doctor; `watch` is still sold nowhere because it
+# is still not implemented.
+UNSHIPPED = ("--watch", "doctor --watch")
 for pg in ("pricing.html", "support.html", "start.html", "account.html"):
     fp = os.path.join(WEB, pg)
     if not os.path.exists(fp):
