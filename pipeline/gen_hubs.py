@@ -611,6 +611,57 @@ def browse_page(cats, by_cat, tasks, pub, by_task, roles, gen, published_roles=(
 ROLE_MIN = 8     # a job page needs a real shelf; below this the role is a filter, never a page
 
 
+ROLE_BOARD_MAX = int(os.environ.get("ROLE_BOARD_MAX", "150"))
+# The bar a capability must clear to be HEADLINED as the pick for a job.
+STACK_MIN = float(os.environ.get("STACK_MIN", "65"))
+
+
+def stack_for(role, rows, tasks):
+    """One recommendation per job the role actually does — the decisional half of the page.
+
+    A role page printed every capability that touched the job: 763 rows and 511 KB for
+    "Software engineer". That is a catalogue, and nobody scrolls 763 heterogeneous artefacts to
+    choose one. The question a reader arrives with is "what should I install for this work", and the
+    answer is one item per task, not a ranking of everything.
+
+    The rows are ALREADY sorted (fit, then instruction depth, then score), so the first row carrying
+    a task is the best-fitting thing we measure for it — no new judgement, just the existing ordering
+    read per task instead of globally. A task with nothing measured is omitted rather than filled
+    with the least-bad option; an empty shelf is a truthful answer and a wrong recommendation is not.
+    """
+    if not tasks:
+        return ""
+    seen, picks = set(), []
+    for t in tasks:
+        slug = t.get("slug")
+        if not slug:
+            continue
+        for c in rows:
+            if (c.get("tashan_score") or 0) < STACK_MIN:
+                continue
+            if any(x.get("t") == slug and x.get("f") == "primary" for x in (c.get("tasks") or [])) \
+                    and c["id"] not in seen:
+                seen.add(c["id"])
+                picks.append((t, c))
+                break
+        if len(picks) >= 6:
+            break
+    if len(picks) < 2:
+        return ""            # two rows is not a stack; fall through to the table alone
+    out = ['<h2>The stack for this job</h2>',
+           '<p class="lede">One pick per task, taken from the ranking below — best fit first, then how '
+           'well it documents itself, then the tashan score.</p>',
+           '<div class="stack">']
+    for t, c in picks:
+        sc = c.get("tashan_score")
+        out.append('<a class="stack__row" href="/capability/' + (c.get("slug") or slugify(c["id"])) + '.html">'
+                   + '<span class="stack__job">' + esc(t["label"]) + "</span>"
+                   + '<span class="stack__cap">' + esc(disp(c)) + "</span>"
+                   + '<span class="stack__sc mono">' + ("—" if sc is None else str(int(sc))) + "</span></a>")
+    out.append("</div>")
+    return "\n".join(out) + "\n"
+
+
 def role_page(role, rows, tasks, all_roles, gen):
     """A page per JOB TITLE — the axis the homepage is sold on, and until now the only one with no URL.
 
@@ -677,8 +728,12 @@ def role_page(role, rows, tasks, all_roles, gen):
         + esc(label.lower()) + " actually does" + (" — " + esc(work) if work else "") + " — and ranks them "
         "on public evidence alone: upkeep, freshness and real adoption. "
         '<a class="link" href="/methodology.html">How we measure &rsaquo;</a></p>\n'
-        + board(rows) +
-        ('<p class="note">' + str(len(graded)) + " of these have been expertise-graded against their own "
+        + stack_for(role, rows, tasks)
+        + board(rows[:ROLE_BOARD_MAX]) +
+        (('<p class="note">Showing the top ' + f"{ROLE_BOARD_MAX:,}" + " of " + f"{len(rows):,}"
+          + ' — the rest are on the <a class="link" href="/">Index</a>, filterable by this job.</p>\n')
+         if len(rows) > ROLE_BOARD_MAX else "")
+        + ('<p class="note">' + str(len(graded)) + " of these have been expertise-graded against their own "
          "documentation; the rest carry adoption and upkeep signal only. We publish what is measured and "
          "say plainly what is not.</p>\n" if rows else "")
         + ('<h2>The work behind this job</h2>\n<div class="chips">' + chips + "</div>\n" if chips else "")
