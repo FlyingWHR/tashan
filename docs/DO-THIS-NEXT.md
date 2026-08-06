@@ -69,9 +69,12 @@ tests, packs, and verifies without publishing. If green, run it again with `dry_
 
 **Verify:** the last step prints `tashan-cli@0.1.3 attestations: true`.
 
-*The workflow already handles the trap: trusted publishing needs **npm ≥ 11.5.1** and Node 22 ships
-npm 10.8.2, so it upgrades npm explicitly and fails loudly if the version is short — an older CLI
-otherwise falls back to looking for a token that does not exist.*
+*One thing the workflow settles for you: trusted publishing needs **npm ≥ 11.5.1**, and no Node 22
+release ever ships it — the whole 22.x line tops out at npm 10.9.x. The first Node bundling a new
+enough npm is **24.5.0**, so the publish job runs on Node 24 (current LTS "Krypton", npm 11.17.0)
+rather than installing npm globally over the top of the wrong runtime. The CLI is still tested on
+Node 18, 22 and 24, because `engines: ">=18"` is a promise to whoever runs `npx tashan-cli` on an
+older machine.*
 
 ---
 

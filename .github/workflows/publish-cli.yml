@@ -44,41 +44,58 @@ permissions:
   id-token: write        # REQUIRED: this is the OIDC token npm exchanges for publish rights
 
 jobs:
+  # TEST THE RANGE WE CLAIM, not the one we publish from. cli/package.json declares
+  # `engines: {"node": ">=18"}`, and that is a promise to anyone running `npx tashan-cli` on an older
+  # runtime. Testing only on the newest Node would let syntax past the floor we advertise and break a
+  # user we told we supported — the same class of defect as any other claim the code does not keep.
+  # 18 is the declared floor, 22 is LTS Jod, 24 is LTS Krypton and what we publish from.
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false          # a break on 18 and a break on 24 are different bugs; see both
+      matrix:
+        node: ["18", "22", "24"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      # The published package is the artifact, not the repo. npm's `bin` entries are SYMLINKS on
+      # install, so argv[1] never equals import.meta.url on a real machine — a bug that only appears
+      # in the installed tarball and passed every in-repo run. Test what ships.
+      - name: test on Node ${{ matrix.node }}
+        working-directory: cli
+        run: node -v && npm test
+
   publish:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      # >= 22.14.0 is npm's documented floor for trusted publishing.
+      # NODE 24, AND THE REASON IS npm. Trusted publishing needs npm >= 11.5.1, and no Node 22
+      # release ever ships it — the whole 22.x line tops out at npm 10.9.x (checked against
+      # nodejs.org/dist/index.json, latest 22.23.2 = npm 10.9.8). The first Node bundling a new
+      # enough npm is 24.5.0 (npm 11.5.1); 24 is current LTS "Krypton" and ships npm 11.17.0.
+      # Using it removes a global `npm install -g npm@latest` step that existed only to paper over
+      # the wrong runtime. The version gate below stays as the assertion, not as the fix.
       - uses: actions/setup-node@v4
         with:
-          node-version: "22.14"
+          node-version: "24"
           registry-url: https://registry.npmjs.org/
 
-      # THE TRAP: trusted publishing needs npm >= 11.5.1, and Node 22 ships npm 10.x. Without this
-      # the publish fails on a version check, or — worse on an older CLI — silently falls back to
-      # looking for a token that does not exist. Upgrade explicitly and print what we got, so the
-      # log says which npm actually ran rather than which one we assumed.
-      - name: npm >= 11.5.1 (trusted publishing requirement)
+      - name: npm satisfies trusted publishing (>= 11.5.1)
         run: |
-          npm install -g npm@latest
           node -v
           NPM_V="$(npm -v)"; MIN=11.5.1
-          # sort -V, not a hand-rolled semver compare: the first draft of this step built the version
-          # in an `env:` block that resolved to the empty string, so the gate could only ever fail.
-          # Comparing in the shell keeps the value and the check in one place where both are visible.
+          # sort -V, not a hand-rolled semver compare: an earlier draft of this step built the
+          # version in an `env:` block that resolved to the empty string, so the gate could only
+          # ever fail. Comparing in the shell keeps the value and the check visible together.
           if [ "$(printf '%s\n%s\n' "$MIN" "$NPM_V" | sort -V | head -1)" != "$MIN" ]; then
-            echo "npm $NPM_V is below $MIN — trusted publishing will fail, or an older CLI will"
-            echo "silently look for a token that does not exist."; exit 1
+            echo "npm $NPM_V is below $MIN. Node $(node -v) does not bundle a new enough npm —"
+            echo "raise node-version rather than installing npm globally over the top."; exit 1
           fi
           echo "npm $NPM_V supports trusted publishing"
-
-      # The published package is the artifact, not the repo. npm's `bin` entries are SYMLINKS on
-      # install, so argv[1] never equals import.meta.url on a real machine — a bug that only appears
-      # in the installed tarball and passed every in-repo run. Test what ships.
-      - name: test
-        working-directory: cli
-        run: npm test
 
       # ESM, and --input-type=module rather than a bare `node -e`: cli/package.json declares
       # "type": "module", so which module system `-e` gets depends on the Node version. Pinning it
