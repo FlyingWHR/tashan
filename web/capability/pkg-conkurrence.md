@@ -11,12 +11,13 @@
 - Category: data
 - tashan score: 35.0 / 100
 - Adoption: 23.0
-- Upkeep: 48.0
-- Freshness: 65.0
+- Upkeep: 47.0
+- Freshness: 64.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - npm downloads: 40/week
+- License: BUSL-1.1
 - Official: no
 
 ## Install
@@ -34,4 +35,4 @@ claude mcp add conkurrence -- npx -y conkurrence
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

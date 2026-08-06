@@ -44,6 +44,12 @@ Mode cannot be scoped by path; Super Bot Fight Mode allows an exception for `/v0
 if protection is wanted elsewhere. The deploy token carries `zone:read`, not `zone:write`, so this
 cannot be automated from the repo.
 
+**Re-measured 6 Aug 2026, 02:17 — still 403 on all five surfaces.** And there is no code workaround:
+serving them from a Pages Function instead of as static assets does not help, because the block is
+zone-wide and runs before Workers. `/badge/*.svg` and `/api/security` are Functions and are refused
+identically. This is one toggle, and every draft in `docs/OUTREACH.md` ends with someone pasting one
+of these URLs into a script.
+
 Verify: `python3 tests/test_agent_access.py` — it runs advisory in the suite and never blocks a deploy.
 
 ### 1.3 One host integration conversation (this week)
@@ -147,20 +153,46 @@ any of them returning.
 
 Still open, in value order:
 
-1. **Entitlement matrix.** Pricing describes a watch product; Terms and Refunds describe named
-   replacements and score history. Generate one matrix and feed pricing, CLI help, account, terms,
-   refunds and checkout from it. Mark each line *available / beta / planned*.
-2. **Job pages are catalogues, not recommendations.** "Software engineer" lists hundreds of
-   heterogeneous artefacts. It should open with a five-item stack — best docs lookup, best browser
-   automation, best code review, best database, best testing — then expand by task.
-3. **Comparison as a first-class surface.** 364 head-to-head pages exist; a side-by-side table across
-   fit, depth, adoption, maintenance, advisories, install scripts, provenance and expected access is
-   worth more than thousands of thin profiles.
-4. **The CLI's own dossier should be the best on the site.** You ask people to `npx` an unfamiliar
-   package in order to find risky packages. Show source, provenance, version, exactly which files are
-   read, exactly what leaves the machine, and that it writes nothing.
-5. **Requests board.** `requests.json` is empty by design. An empty demand board reads as no demand.
-   Hide it, or replace it with a public coverage queue showing what is measured next.
+**Closed since:** the entitlement matrix (`data/entitlements.json`, enforced by
+`tests/test_entitlements.py`), job pages opening with a stack (`gen_hubs.py:stack_for`), the requests
+board (now renders the live measurement queue from `coverage.json` when nobody has asked), and the
+CLI's own dossier — `tashan-cli` is seeded into the corpus and measured by the same rules, with the
+unflattering half stated on `/start.html`.
+
+Still open, in value order:
+
+1. **Comparison as a first-class surface.** 398 head-to-head pages exist and a reader can only reach
+   the pairs we pre-generated. A picker plus a side-by-side across fit, depth, adoption, maintenance,
+   advisories, install scripts, provenance and expected access is worth more than thousands of thin
+   profiles.
+2. **Mobile chrome.** At 390px the ticker, nav and fixed status strip take most of the first screen
+   before any content.
+3. **Original research as content.** The corpus can answer questions nobody else can — how long an
+   MCP server stays maintained, what share of them a single maintainer carries, which categories are
+   consolidating. Right now every number lives on a page nobody has a reason to visit.
+
+---
+
+## §3b — From the 6 Aug audit
+
+The composite moved 55 → 57. The diagnosis in that audit is worth repeating verbatim, because it is
+the same one as last time: *moving trust engineering 93→95 moved the composite +0.2; moving
+distribution 10→50 would move it +8.* Four consecutive sprints have gone to the axis that responds to
+a keyboard.
+
+**Done this session:**
+
+- **The ruler is frozen.** s5 is published as stable through **2026-11-01** and
+  `tests/test_scorer_version.py` now refuses a scoring change inside the window unless
+  `TASHAN_SCORER_BREAK_GLASS` is set with a reason. Pro sells score history, and history only accrues
+  while the ruler holds still — a scorer rewritten four times in a week sells a series two days long.
+- **Coverage restated as demand-weighted.** `pipeline/coverage.py` publishes coverage over the top
+  100 / top 1,000 by adoption evidence rather than the aggregate ratio, which fell 47%→41% purely
+  because discovery worked. Baked onto the methodology page and guarded by `tests/test_claims.py`.
+- **The outreach pack exists** — `docs/OUTREACH.md`, four drafts ready to send, each leading with a
+  measured fact about the recipient's own users.
+
+**Not done, and only you can:** send one. `docs/OUTREACH.md` §1 is three emails long.
 
 ---
 

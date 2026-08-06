@@ -22,6 +22,7 @@ import assets
 import chrome
 AV = str(assets.V)   # single source of truth for cache-busting
 SCORER = ""          # which ruler produced these numbers; read from the export in main()
+GEN_DATE = ""        # the day these numbers were measured — a citation signal, same source
 DATA = os.path.join(ROOT, "web", "data", "capabilities.json")
 OUT = os.path.join(ROOT, "web", "capability")
 BASE = "https://tashan.sh"
@@ -263,6 +264,13 @@ def jsonld(c):
                              "bestRating": 100, "worstRating": 0},
             "reviewAspect":"tashan score — upkeep and freshness, gated by adoption",
             "reviewBody": desc_for(c), "url": url}
+        # WHEN we measured it. An answer engine weighs recency when it decides whether to quote a
+        # claim, and a rating with no date is a rating it has to treat as undated — the markdown twin
+        # has carried "Measured <date> … Scorer s5" from the start and the structured data did not.
+        if SCORER:
+            app["review"]["reviewAspect"] += f" (scorer {SCORER})"
+        if GEN_DATE:
+            app["review"]["datePublished"] = GEN_DATE
     if c.get("npm_pkg"):
         app["offers"] = {"@type":"Offer","price":"0","priceCurrency":"USD"}
     crumbs = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -641,8 +649,161 @@ def bake_hero(caps, total):
                      (r'(<b id="sRepos">)[^<]*(</b>)', f"{total:,}"),
                      (r'(<span class="dim" id="sDate">)[^<]*(</span>)', when)):
         html = re.sub(pat, lambda m: m.group(1) + val + m.group(2), html, count=1)
+    html = bake_board(html, caps)
     open(idx, "w", encoding="utf-8").write(html)
-    print(f"hero: baked {len(caps):,} measured / {total:,} tracked / {when}")
+    print(f"hero: baked {len(caps):,} measured / {total:,} tracked / {when} "
+          f"+ top {min(BOARD_BAKE_N, len(caps))} rows and an ItemList")
+
+
+BOARD_BAKE_N = int(os.environ.get("BOARD_BAKE_N", "25"))
+# Mirrors KIND_LABEL in web/js/index.js. Two copies of a display map is a smell, but the alternative
+# is shipping it in the export and paying for it on every board row; the pre-JS table is replaced by
+# the client anyway, so a drift here shows for one paint and never contradicts the live board.
+KIND_LABEL = {"npm": "npm", "pkg": "npm-pkg", "docker": "docker", "python": "python",
+              "remote": "remote", "skill": "skill", "plugin": "plugin"}
+
+
+def bake_board(html, caps):
+    """Put the top of the Index into index.html as HTML, for readers that do not run JavaScript.
+
+    THE SITE'S MOST-CRAWLED URL PUBLISHED NO MEASUREMENTS. `<tbody id="rows">` shipped a "Loading
+    measured data…" spinner and index.js filled it on boot, so a crawler, an answer engine or an
+    agent fetching https://tashan.sh/ saw 3,137 characters of navigation, hero copy and footer — and
+    not one capability, score or rank. Every category and task hub was server-rendered; the board
+    itself, the thing the whole product is, was the one page that needed a browser.
+
+    Deliberately SIMPLER than index.js's row: rank, name, score, evidence, health. No verdict chips,
+    no security flags, no category tags. This is the pre-JS state of a table the client fully
+    replaces on its first render (`rowsEl.innerHTML = …`), so the two cannot drift into disagreement
+    the way prerender and capability.js did — there is no merge, only a replacement. Keeping it thin
+    is the point: it must stay obviously subordinate to the live board rather than become a second
+    implementation of it.
+    """
+    rows, items = [], []
+    for i, c in enumerate(caps[:BOARD_BAKE_N], 1):
+        t = c.get("tashan_score")
+        href = "/capability/" + (c.get("slug") or slugify(c["id"])) + ".html"
+        name, kind = disp(c), KIND_LABEL.get(c.get("kind"), c.get("kind") or "")
+        score = f'<span class="sig__val">{int(round(t))}</span>' if t is not None else \
+            '<span class="unrated">not scored yet</span>'
+        vit = c.get("vitality") or "—"
+        rows.append(
+            f'<tr><td class="rank">{i}</td>'
+            f'<td><div class="cap__name"><a class="cap__link" href="{esc(href)}">{esc(name)}</a>'
+            f' <span class="tag">{esc(kind)}</span></div></td>'
+            f'<td><div class="sig">{score}</div></td>'
+            f'<td class="num">{esc(board_evidence(c))}</td>'
+            f'<td><span class="fresh">{esc(vit)}</span></td></tr>')
+        # The part an answer engine actually parses. Category hubs have carried an ItemList since
+        # they were built; the Index never did, so the ranked list we exist to publish was the one
+        # ranked list with no structured form.
+        item = {"@type": "ListItem", "position": i, "url": BASE + href, "name": name}
+        if t is not None:
+            # A Review, NOT an aggregateRating — the same call jsonld() makes, and for the same
+            # reason. aggregateRating means "the mean of ratings left by reviewers"; one with
+            # ratingCount:1 claims a crowd that does not exist, and it was deliberately removed from
+            # 6,586 capability pages for exactly that. The tashan score is ONE named party's
+            # measurement, so it is modelled as one named party's review: attributed and dated.
+            # Writing it the other way here would have quietly reinstated the pattern on the most
+            # crawled page on the site.
+            item["item"] = {"@type": "SoftwareApplication", "name": name,
+                            "applicationCategory": "DeveloperApplication",
+                            "url": BASE + href,
+                            "review": {"@type": "Review",
+                                       "author": {"@type": "Organization", "name": "tashan",
+                                                  "url": BASE + "/"},
+                                       "reviewRating": {"@type": "Rating", "ratingValue": round(t),
+                                                        "bestRating": 100, "worstRating": 0},
+                                       "reviewAspect": "tashan score — upkeep and freshness, "
+                                                       "gated by adoption"}}
+        items.append(item)
+
+    body = "\n".join(rows)
+    new, n = re.subn(r'(<tbody id="rows">)[\s\S]*?(</tbody>)',
+                     lambda m: m.group(1) + "\n" + body + "\n            " + m.group(2), html, count=1)
+    if n != 1:
+        raise SystemExit("index.html has no <tbody id=\"rows\"> to bake into — the board markup moved.")
+
+    # On `new`, not `html`: the tbody substitution above already forked the string, so writing back
+    # to `html` here edits a copy this function then throws away. It printed success and changed
+    # nothing — caught only because the assertion after it read the file rather than the return value.
+    new = bake_dataset(new)
+    ld = {"@context": "https://schema.org", "@type": "ItemList",
+          "name": "The tashan Index — AI capabilities ranked on public evidence",
+          "description": f"The {len(items)} highest-scoring MCP servers and agent skills by the "
+                         "tashan score: upkeep and freshness, gated by real adoption. Public "
+                         "evidence only; nothing paid can change a rank.",
+          "url": BASE + "/", "numberOfItems": len(items), "itemListOrder": "Descending",
+          "itemListElement": items}
+    tag = '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>"
+    # Replace our own previous block rather than appending one per run, or the head grows every night.
+    marked = '<!--BOARD-LD-->'
+    if marked in new:
+        new = re.sub(re.escape(marked) + r"[\s\S]*?" + re.escape('<!--/BOARD-LD-->'),
+                     marked + tag + '<!--/BOARD-LD-->', new, count=1)
+    else:
+        new = new.replace("</head>", "  " + marked + tag + "<!--/BOARD-LD-->\n</head>", 1)
+    return new
+
+
+def bake_dataset(html):
+    """Keep the homepage's Dataset block current, in the two ways it was not.
+
+    The block itself was already the strongest structured data on the site — measurementTechnique,
+    a variableMeasured per axis, a distribution listing the bulk feeds. Two things were missing and
+    both matter specifically to a machine reader:
+
+    `dateModified` — a dataset with no date is one an answer engine has to treat as undated, and
+    "measured today" is most of why anyone would prefer our number to a directory's. It was the only
+    date on the page a human could see (the hero says "measured Aug 6") and the only one a parser
+    could not.
+
+    The per-question endpoints — `distribution` listed only the multi-hundred-KB and multi-MB bulk files and nothing
+    else, so a crawler that correctly understood this as a dataset was pointed only at the expensive
+    way to read it.
+
+    Rewritten in place from the live values rather than hand-edited, so it cannot drift the way the
+    scorer version did.
+    """
+    # WHITESPACE-TOLERANT, and the write-back below is compact — because the first version of this
+    # was neither, and broke its own idempotency on the very next run. It matched the hand-written
+    # compact JSON, rewrote it with json.dumps' default `", "` separators, and could then never match
+    # again: one successful bake, then `pages` failed every night. The raise is what caught it, which
+    # is the argument for raising rather than skipping quietly.
+    m = re.search(r'<script type="application/ld\+json">(\{\s*"@context"\s*:\s*"https://schema\.org"\s*,'
+                  r'\s*"@type"\s*:\s*"Dataset".*?)</script>', html, re.S)
+    if not m:
+        raise SystemExit("index.html has no Dataset JSON-LD to bake — the block moved or was removed.")
+    d = json.loads(m.group(1))
+    d["dateModified"] = GEN_DATE or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    dist = [x for x in (d.get("distribution") or [])
+            if "/v0.1/lookup" not in x.get("contentUrl", "") and "/v0.1/search" not in x.get("contentUrl", "")]
+    # Listed FIRST, because the order is the recommendation: a reader answering one question should
+    # not be pointed at 5.6 MB because it happened to be declared earlier.
+    d["distribution"] = [
+        {"@type": "DataDownload", "encodingFormat": "application/json",
+         "name": "One measurement by name — the cheapest complete answer",
+         "contentUrl": BASE + "/v0.1/lookup?name={package}"},
+        {"@type": "DataDownload", "encodingFormat": "application/json",
+         "name": "Ranked search across the measured corpus",
+         "contentUrl": BASE + "/v0.1/search?q={query}"},
+    ] + dist
+    # Compact separators: the same shape every other JSON-LD block on the page uses, so a re-run
+    # reads back exactly what it wrote and the file does not churn on formatting alone.
+    return (html[:m.start(1)]
+            + json.dumps(d, ensure_ascii=False, separators=(",", ":"))
+            + html[m.end(1):])
+
+
+def board_evidence(c):
+    """The raw public signal, worded exactly as the board's own Evidence column words it."""
+    if c.get("npm_downloads") is not None:
+        return compact(c["npm_downloads"]) + "/wk"
+    if c.get("gh_stars") is not None:
+        return compact(c["gh_stars"]) + " ★"
+    if c.get("config_reach"):
+        return fmt(c["config_reach"]) + (" marketplaces" if c.get("kind") == "plugin" else " repos")
+    return "—"
 
 
 def bake_methodology(gen):
@@ -659,18 +820,96 @@ def bake_methodology(gen):
         return
     html = open(p, encoding="utf-8").read()
     when = (gen or "")[:10] or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    # The freeze date is the lock file's, not a typed one. A published stability promise that
+    # disagrees with the guard enforcing it is worse than no promise: the page would keep claiming a
+    # window the build had already let go of.
+    stable = "—"
+    try:
+        parts = open(os.path.join(ROOT, "pipeline", "scorer.lock"), encoding="utf-8").read().split()
+        stable = parts[3] if len(parts) > 3 else "—"
+    except OSError:
+        pass
+    # RAISE rather than degrade. Without this the page renders "top 0 … tashan score —%" — a
+    # coverage section, on the methodology page, made of placeholders. Same rule as the marker guard
+    # below: for a document whose only job is to be checkable, publishing a blank is worse than
+    # failing the build. pipeline/run.py runs `coverage` immediately before `pages` for this reason.
+    covp = os.path.join(ROOT, "web", "data", "coverage.json")
+    try:
+        cov = json.load(open(covp, encoding="utf-8"))
+        t, a = cov["tiers"]["top1000"], cov["all"]
+        if not (t.get("n") and a.get("n")):
+            raise ValueError("empty tiers")
+    except (OSError, ValueError, KeyError) as e:
+        raise SystemExit(f"methodology bake needs {os.path.relpath(covp, ROOT)} ({e}). "
+                         f"Run: python3 pipeline/coverage.py")
+
+    def cpct(d, k):
+        return str(round(100.0 * d[k] / d["n"]))
+
+    targets = [
+        (r'(<span class="mono" id="mScorer">)[^<]*(</span>)', SCORER or "?"),
+        (r'(<span class="mono" id="mScorer2">)[^<]*(</span>)', SCORER or "?"),
+        (r'(<span id="mScorerDate">)[^<]*(</span>)', when),
+        (r'(<span id="mScorerStable">)[^<]*(</span>)', stable),
+        (r'(<span class="mono" id="cvTierN">)[^<]*(</span>)', f"{t.get('n', 0):,}"),
+        (r'(<span class="mono" id="cvAll">)[^<]*(</span>)', f"{a.get('n', 0):,}"),
+        (r'(<span id="cvAll2">)[^<]*(</span>)', f"{a.get('n', 0):,}"),
+        (r'(<span id="cvScore">)[^<]*(</span>)', cpct(t, "score")),
+        (r'(<span id="cvScan">)[^<]*(</span>)', cpct(t, "scan")),
+        (r'(<span id="cvGrade">)[^<]*(</span>)', cpct(t, "grade")),
+        (r'(<span id="cvTask">)[^<]*(</span>)', cpct(t, "task")),
+        (r'(<span id="cvFull">)[^<]*(</span>)', cpct(t, "full")),
+        (r'(<span id="cvAllFull">)[^<]*(</span>)', cpct(a, "full")),
+    ]
     subs = 0
-    for pat, val in ((r'(<span class="mono" id="mScorer">)[^<]*(</span>)', SCORER or "?"),
-                     (r'(<span id="mScorerDate">)[^<]*(</span>)', when)):
+    for pat, val in targets:
         html, n = re.subn(pat, lambda m: m.group(1) + val + m.group(2), html, count=1)
         subs += n
+
+    # STRUCTURED DATA ON THE PAGE MOST WORTH CITING. methodology.html carried none — zero JSON-LD on
+    # the one document that answers "how does tashan score anything", which is precisely the question
+    # an answer engine needs sourced before it will quote a number. Every hub had an ItemList and
+    # every dossier a Review; the explanation behind all of them was unstructured.
+    #
+    # TechArticle rather than Article: it is documentation of a method, and `about` points at the
+    # Dataset those numbers live in so the two are linked rather than merely adjacent. The dates are
+    # the export's, not today's — the method is described as of the run that produced the numbers.
+    lda = {"@context": "https://schema.org", "@type": "TechArticle",
+           "headline": "How the tashan score is derived",
+           "description": "The exact arithmetic behind the tashan score, the evidence each input "
+                          "comes from, how much of the corpus is measured, and what the score "
+                          "deliberately does not claim.",
+           "url": BASE + "/methodology.html",
+           "mainEntityOfPage": BASE + "/methodology.html",
+           "author": {"@type": "Organization", "name": "tashan", "url": BASE + "/"},
+           "publisher": {"@type": "Organization", "name": "tashan", "url": BASE + "/"},
+           "datePublished": when, "dateModified": when,
+           "inLanguage": "en",
+           "about": {"@type": "Dataset", "name": "The tashan Index — measured AI capabilities",
+                     "url": BASE + "/"},
+           # The version and the window it is promised to hold. A method article that does not say
+           # which ruler it describes is one a reader cannot check a stored number against.
+           "version": SCORER or "unversioned",
+           "creativeWorkStatus": f"Scorer {SCORER} frozen through {stable}" if stable != "—" else "Active",
+           "license": BASE + "/terms.html"}
+    tag = '<script type="application/ld+json">' + json.dumps(lda, ensure_ascii=False,
+                                                             separators=(",", ":")) + "</script>"
+    mark, endmark = "<!--METHOD-LD-->", "<!--/METHOD-LD-->"
+    if mark in html:
+        html = re.sub(re.escape(mark) + r"[\s\S]*?" + re.escape(endmark), mark + tag + endmark,
+                      html, count=1)
+    elif "</head>" in html:
+        html = html.replace("</head>", "  " + mark + tag + endmark + "\n</head>", 1)
+    else:
+        raise SystemExit("methodology.html has no </head> to attach structured data to.")
     # A baker that silently matches nothing is worse than no baker: it prints success while the page
     # keeps whatever a human last typed, which is exactly how "s2" survived two scorer bumps.
-    if subs != 2:
-        raise SystemExit(f"methodology bake matched {subs}/2 targets — the markers moved or were "
-                         f"edited away. Fix web/methodology.html, do not let this pass silently.")
+    if subs != len(targets):
+        raise SystemExit(f"methodology bake matched {subs}/{len(targets)} targets — the markers moved "
+                         f"or were edited away. Fix web/methodology.html, do not let this pass silently.")
     open(p, "w", encoding="utf-8").write(html)
-    print(f"methodology: baked scorer {SCORER} / {when}")
+    print(f"methodology: baked scorer {SCORER} (stable to {stable}) / {when} / coverage top1000 "
+          f"{cpct(t, 'full')}% full")
 
 
 def lastmod(c):
@@ -694,7 +933,7 @@ def sitemap(caps):
     # it is the post-checkout page and carries noindex.
     urls = ["/", "/start.html", "/methodology.html", "/about.html", "/pricing.html", "/requests.html",
             "/terms.html", "/privacy.html", "/refunds.html", "/support.html", "/for-hosts.html",
-            "/browse.html"]
+            "/browse.html", "/compare.html"]
     static = "".join("  <url><loc>" + BASE + chrome.canon(u) + "</loc></url>\n" for u in urls)
     caps_x = "".join('  <url><loc>' + BASE + chrome.canon("/capability/" + c["slug"] + ".html")
                      + '</loc>' + lastmod(c) + '<changefreq>weekly</changefreq></url>\n' for c in caps)
@@ -791,8 +1030,9 @@ def install_cmd(c):
 def main():
     d = json.load(open(DATA))
     gen = d.get("generated_at", "")
-    global SCORER
+    global SCORER, GEN_DATE
     SCORER = d.get("scorer", "")
+    GEN_DATE = (gen or "")[:10]
     caps = [c for c in d["capabilities"] if c.get("id", "").split(":", 1)[0] != "key"]
     for c in caps:
         c.setdefault("slug", slugify(c["id"]))

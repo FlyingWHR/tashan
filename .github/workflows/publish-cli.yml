@@ -1,0 +1,93 @@
+# Publish tashan-cli to npm WITH BUILD PROVENANCE.
+#
+# The strongest line in our own outreach is that ~77% of scanned MCP servers ship with no build
+# provenance — nothing tying the published tarball to the source repo it points at. tashan-cli 0.1.2
+# was published from a laptop and is in that 77%. Telling people to check provenance while having
+# none is the kind of thing an independent rater gets exactly one chance to be caught doing.
+#
+# `--provenance` makes npm record, in a public transparency log, which workflow in which repo at
+# which commit produced the tarball. It requires `id-token: write` and an npm token; it cannot be
+# faked from a laptop, which is the entire point.
+#
+# ONE-TIME SETUP (must be done by a human — this workflow cannot grant itself the token):
+#   1. npmjs.com -> Access Tokens -> Generate -> **Granular Access**, read+write on `tashan-cli`.
+#      A "Classic/Automation" token also works; granular is narrower, so prefer it.
+#   2. GitHub -> repo -> Settings -> Secrets and variables -> Actions -> New repository secret:
+#        NPM_TOKEN = the token
+#   3. Bump `version` in cli/package.json, then run this workflow from the Actions tab.
+#
+# Deliberately manual (`workflow_dispatch`), not on push: publishing is outward-facing and
+# irreversible — npm unpublish is restricted after 72 hours — so it happens when a human says so.
+name: publish cli
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Pack and verify only — do not publish"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  id-token: write        # REQUIRED for --provenance; without it npm publishes unattested and silent
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org/
+
+      # The published package is the artifact, not the repo. npm's `bin` entries are SYMLINKS on
+      # install, so argv[1] never equals import.meta.url on a real machine — a bug that only appears
+      # in the installed tarball and passed every in-repo run. Test what ships.
+      - name: test
+        working-directory: cli
+        run: npm test
+
+      # ESM, and --input-type=module rather than a bare `node -e`: cli/package.json declares
+      # "type": "module", so which module system `-e` gets depends on the Node version. Pinning it
+      # means this step cannot start failing on a runner image bump for a reason unrelated to us.
+      - name: pack and inspect what would ship
+        working-directory: cli
+        run: |
+          npm pack --dry-run
+          node --input-type=module -e "
+            import { readFileSync } from 'node:fs';
+            const p = JSON.parse(readFileSync('./package.json', 'utf8'));
+            for (const [name, rel] of Object.entries(p.bin || {})) {
+              if (!(p.files || []).includes(rel)) {
+                console.error('bin ' + name + ' -> ' + rel + ' is not in files[]; it would not ship');
+                process.exit(1);
+              }
+            }
+            console.log('bin entries all present in files[]:', Object.keys(p.bin).join(', '));
+          "
+
+      - name: publish with provenance
+        if: ${{ !inputs.dry_run }}
+        working-directory: cli
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Reads back what npm actually recorded. A publish that silently lost provenance — the usual
+      # cause is a missing id-token permission — would otherwise look identical to a good one, and we
+      # would go on citing a number we had quietly stopped meeting.
+      - name: verify provenance landed
+        if: ${{ !inputs.dry_run }}
+        run: |
+          sleep 15
+          node --input-type=module -e "
+            import { readFileSync } from 'node:fs';
+            const v = JSON.parse(readFileSync('./cli/package.json', 'utf8')).version;
+            const d = await fetch('https://registry.npmjs.org/tashan-cli').then(r => r.json());
+            const att = !!d.versions?.[v]?.dist?.attestations;
+            console.log('tashan-cli@' + v + ' attestations:', att);
+            if (!att) { console.error('published WITHOUT provenance — check id-token: write'); process.exit(1); }
+          "

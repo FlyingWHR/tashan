@@ -8,15 +8,15 @@
 - Source: https://github.com/Overcastly-AI/Next-Lane
 - npm: https://www.npmjs.com/package/@next-lane/mcp
 - Type: npm
-- Category: security
-- tashan score: 69.0 / 100
-- Adoption: 46.0
-- Upkeep: 68.0
-- Freshness: 99.0
+- Category: productivity
+- tashan score: 71.0 / 100
+- Adoption: 47.0
+- Upkeep: 72.0
+- Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 1,939/week
+- npm downloads: 2,170/week
 - Official: no
 
 ## Install
@@ -26,7 +26,11 @@ claude mcp add next-lane-mcp -- npx -y @next-lane/mcp
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: attested
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

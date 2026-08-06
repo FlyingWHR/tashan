@@ -8,15 +8,16 @@
 - Source: https://github.com/instavar/mcp-server
 - npm: https://www.npmjs.com/package/@instavar/mcp-server
 - Type: npm
-- Category: design
-- tashan score: 53.0 / 100
+- Category: data
+- tashan score: 52.0 / 100
 - Adoption: 30.0
 - Upkeep: 61.0
-- Freshness: 91.0
+- Freshness: 90.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
 - npm downloads: 138/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add instavar-mcp-server -- npx -y @instavar/mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

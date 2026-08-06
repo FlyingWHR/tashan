@@ -9,10 +9,10 @@
 - npm: https://www.npmjs.com/package/gliana-ai-mcp
 - Type: npm
 - Category: ai
-- tashan score: 53.0 / 100
+- tashan score: 52.0 / 100
 - Adoption: 28.0
 - Upkeep: 65.0
-- Freshness: 91.0
+- Freshness: 90.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
@@ -33,4 +33,4 @@ claude mcp add gliana-ai -- npx -y gliana-ai-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

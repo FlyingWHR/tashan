@@ -1,6 +1,6 @@
 # Paypay
 
-> MCP server for PayPay (Japan's largest QR wallet). Bilingual (JP/EN) tools for creating QR codes, accepting payments, refunds, and cancellations via the PayPay Open Payment API.
+> PayPay QR payments for AI agents: QR codes, status, refunds, cancels. Bilingual JP/EN.
 
 ## Facts
 - Page: https://tashan.sh/capability/pkg-paypay-mcp
@@ -9,10 +9,10 @@
 - npm: https://www.npmjs.com/package/paypay-mcp
 - Type: npm
 - Category: finance
-- tashan score: 47.0 / 100
+- tashan score: 46.0 / 100
 - Adoption: 22.0
-- Upkeep: 59.0
-- Freshness: 92.0
+- Upkeep: 58.0
+- Freshness: 91.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -29,4 +29,4 @@ claude mcp add paypay -- npx -y paypay-mcp
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

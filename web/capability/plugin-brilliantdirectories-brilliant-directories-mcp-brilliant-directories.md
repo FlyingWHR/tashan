@@ -1,4 +1,4 @@
-# Brilliant Directories
+# Brilliant Directories · brilliantdirectories
 
 > Official plugin for Brilliant Directories — the membership and directory website platform powering 50,000+ sites. Manage members, posts, leads, reviews, pages, email templates, forms, menus, tags, and redirects directly from Claude. Works on any BD-powered site by providing your site URL and API key.
 
@@ -30,4 +30,4 @@
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

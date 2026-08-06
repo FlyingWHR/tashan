@@ -9,14 +9,15 @@
 - npm: https://www.npmjs.com/package/drengr
 - Type: npm
 - Category: devtools
-- tashan score: 67.0 / 100
-- Adoption: 39.0
+- tashan score: 69.0 / 100
+- Adoption: 42.0
 - Upkeep: 73.0
 - Freshness: 99.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 565/week
+- npm downloads: 974/week
+- License: SEE LICENSE IN LICENSE
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add drengr -- npx -y drengr
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -1,0 +1,31 @@
+# Kysely SQL
+
+> SQL database guidelines using Kysely query builder with expo-sqlite or bun:sqlite drivers.
+
+## Facts
+- Page: https://tashan.sh/capability/plugin-kingstinct-github-kysely-sql
+- tashan id: plugin:kingstinct/.github/kysely-sql
+- Source: https://github.com/kingstinct/.github
+- Type: plugin
+- Category: database
+- tashan score: 45.0 / 100
+- Adoption: 7.0
+- Upkeep: 100.0
+- Freshness: 100.0
+- Evidence coverage: 84% of the inputs this score can use
+- Health: active
+- Instruction depth: not yet graded
+- Official: no
+
+## Install
+
+```sh
+/plugin marketplace add kingstinct/.github
+/plugin install kysely-sql@kingstinct-skills
+```
+
+## Security audit
+Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+
+---
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

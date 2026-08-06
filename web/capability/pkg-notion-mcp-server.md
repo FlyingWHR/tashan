@@ -1,6 +1,6 @@
 # Notion · awkoy
 
-> Notion MCP server for Claude, Cursor, ChatGPT, and Claude Desktop — connect AI agents to Notion via the Model Context Protocol. Create pages, query databases, append blocks, upload files, and more in natural language.
+> Token-auth Notion MCP: pages, databases, blocks, comments, files. Runs headless in CI and agents.
 
 ## Facts
 - Page: https://tashan.sh/capability/pkg-notion-mcp-server
@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/notion-mcp-server
 - Type: npm
 - Category: docs
-- tashan score: 69.0 / 100
-- Adoption: 45.0
+- tashan score: 70.0 / 100
+- Adoption: 46.0
 - Upkeep: 70.0
-- Freshness: 100.0
+- Freshness: 99.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 1,719/week
+- npm downloads: 1,989/week
 - Official: no
 
 ## Install
@@ -26,7 +26,12 @@ claude mcp add notion-mcp-server -- npx -y notion-mcp-server
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: attested
+- Declared permission surface: network
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

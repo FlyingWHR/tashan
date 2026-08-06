@@ -24,6 +24,11 @@ NPM_CACHE = os.path.join(ROOT, "data", "npm_cache.json")
 GH_CACHE = os.path.join(ROOT, "data", "github_cache.json")
 REG_CAP = int(os.environ.get("REG_CAP", "4000"))     # max registry servers to ingest
 NPM_CAP = int(os.environ.get("NPM_CAP", "1200"))      # max npm packages to enrich this run
+# How long a cached npm reading stays good. There was no expiry at all, so a package's weekly
+# download count froze at whenever it was first enriched — and downloads are the heaviest input to
+# Adoption, which gates every score. 14 days keeps the whole npm corpus current at roughly
+# 7,200/14 ≈ 515 refreshes a day, which fits inside NPM_CAP beside new discovery.
+NPM_TTL_DAYS = int(os.environ.get("NPM_TTL_DAYS", "14"))
 GH_CAP = int(os.environ.get("GH_CAP", "1200"))        # max capability source-repos to enrich this run
 
 SCHEMA = """
@@ -148,9 +153,15 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # shelf. Our own expertise grader had already READ that line and written it into
            # expertise_note as prose, where nothing could act on it. A declaration in the README is the
            # same evidence as a checkbox and is now read as such.
-           "self_unmaintained TEXT", "coverage REAL"]
+           "self_unmaintained TEXT", "coverage REAL",
+           # Does the package declare a `bin`? An MCP server is launched by the host as a command, so
+           # one that declares no executable cannot be launched — it is a library you build servers
+           # with, not a capability you install. Written by scan_security.py, which already holds the
+           # version manifest. 1 = runnable, 0 = positively no bin, NULL = not yet scanned, which the
+           # board gate treats as unknown rather than as absent.
+           "npm_runnable INTEGER"]
 
-SCHEMA_VERSION = 11  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 12  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # v5 RENAMED the headline score. "Trust" claimed more than the SCORE measures: it is upkeep, freshness
 # and adoption, and a number whose name needs walking back is misnamed. That still holds — the security
@@ -385,11 +396,50 @@ def ingest_registry(con, full=False):
 # ---------- phase C: npm enrichment (quality) ----------
 def enrich_npm(con):
     cache = json.load(open(NPM_CACHE)) if os.path.exists(NPM_CACHE) else {}
-    # never-enriched first (advance coverage past the cap over runs), then by adoption proxy
-    rows = con.execute("SELECT id, npm_pkg FROM capabilities WHERE npm_pkg IS NOT NULL "
-                       "ORDER BY (npm_downloads IS NULL) DESC, config_reach DESC, in_registry DESC "
-                       "LIMIT ?", (NPM_CAP,)).fetchall()
-    print(f"  enriching {len(rows)} npm packages...", flush=True)
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    def stale(pkg):
+        """Has this entry aged out? An entry with no `at` predates the stamp, so it is stale.
+
+        THE CACHE HAD NO EXPIRY AT ALL. Once a package was enriched its download count was frozen
+        for good — and downloads are the heaviest input to Adoption, which gates every score. A
+        package enriched in July kept July's number indefinitely while its page claimed to be
+        measured today. Nothing about that was visible: the run printed a full count every night.
+        """
+        e = cache.get(pkg)
+        if not e or "keywords" not in e:
+            return True                                    # miss, or predates the keywords field
+        at = e.get("at")
+        if not at:
+            return True
+        try:
+            return (datetime.now(timezone.utc).date()
+                    - datetime.strptime(at, "%Y-%m-%d").date()).days >= NPM_TTL_DAYS
+        except ValueError:
+            return True
+
+    # TWO QUEUES, ONE BUDGET, SPLIT EXPLICITLY — because the two jobs compete and one of them used
+    # to win permanently. A single `ORDER BY (npm_downloads IS NULL) DESC ... LIMIT` puts every
+    # never-enriched row ahead of every refresh, so while a backlog exists (4,685 rows today) the
+    # most-used packages on the board are never re-read. Half the budget goes to breadth, half to
+    # keeping the rows people actually look at current; whichever half runs short lends to the other.
+    fresh_q = con.execute(
+        "SELECT id, npm_pkg FROM capabilities WHERE npm_pkg IS NOT NULL AND npm_downloads IS NULL "
+        "ORDER BY config_reach DESC, in_registry DESC LIMIT ?", (NPM_CAP,)).fetchall()
+    # NO `LIMIT` before the staleness filter. Taking the top NPM_CAP by downloads and then keeping
+    # the stale ones sounds equivalent and is not: on a day when few of the top rows have aged out,
+    # the query returns a short list and everything below rank NPM_CAP is never considered at all —
+    # so those rows re-freeze permanently, which is the exact defect the TTL exists to remove. The
+    # walk is over 7,219 rows of two columns; the budget is applied after, where it belongs.
+    refresh_q = [r for r in con.execute(
+        "SELECT id, npm_pkg FROM capabilities WHERE npm_pkg IS NOT NULL AND npm_downloads IS NOT NULL "
+        "ORDER BY npm_downloads DESC").fetchall() if stale(r[1])]
+    half = NPM_CAP // 2
+    take_new = min(len(fresh_q), max(half, NPM_CAP - len(refresh_q)))
+    rows = fresh_q[:take_new] + refresh_q[:NPM_CAP - take_new]
+    print(f"  enriching {len(rows)} npm packages "
+          f"({take_new} never enriched, {len(rows) - take_new} refreshed of {len(refresh_q)} stale, "
+          f"TTL {NPM_TTL_DAYS}d)...", flush=True)
     done = 0
     for cid, pkg in rows:
         if bad_pkg(pkg):                                  # skip local-path junk — don't waste an API 404
@@ -398,7 +448,7 @@ def enrich_npm(con):
         # an absent key is a cache miss, a present-but-empty one is a measured answer. Without this
         # the 1,588 already-cached entries would keep serving their keyword-less selves forever and
         # the new column would populate only for packages nobody had looked at yet.
-        if pkg in cache and "keywords" in cache[pkg]:
+        if not stale(pkg):
             info = cache[pkg]
         else:
             info = {}
@@ -472,6 +522,9 @@ def enrich_npm(con):
             # record the key even when the package is genuinely gone, so a dead package is not
             # re-requested on every run for the rest of time by the cache-miss rule above
             info.setdefault("keywords", [])
+            # WHEN, so the next run can tell a measurement from a memory. Only stamped on a
+            # successful fetch — a transient failure `continue`s above and must not look fresh.
+            info["at"] = today
             cache[pkg] = info
             time.sleep(0.05)
         # COALESCE every measured field: a partial answer must never delete a whole one. Belt and
@@ -1081,7 +1134,9 @@ def export(con):
             "sec_advisory_count","sec_max_severity","sec_install_script","sec_permissions",
             "sec_provenance","sec_remote_content","sec_dep_count","sec_scanned_at","sec_advisories",
             # sec_advisories is fetched so redact_paid() can strip it; it never reaches a public file.
-            "npm_license",
+            # npm_runnable is fetched for junk(): a package with no `bin` cannot be launched as a
+            # server. Not exported to any public file — it decides membership, it is not a finding.
+            "npm_license","npm_runnable",
             "discord_url","gh_homepage"]
     # Only trust-ranked caps are ever exported (ranked = trust-not-null, capped below), so fetch just the top
     # slice via idx_score instead of materializing the whole table. LIMIT is a buffer above the 800 board cap
@@ -1189,6 +1244,16 @@ def export(con):
             return True
         blurb = (o.get("description") or "") + " " + (o.get("title") or "")
         if DEMO.search(blurb) or DEMO_NAME.search(n.split("/")[-1]) or CANARY.search(blurb):
+            return True
+        # A LIBRARY IS NOT A CAPABILITY. A host starts an MCP server by running a command; a package
+        # that declares no `bin` cannot be started, so it is something you build servers WITH.
+        # @modelcontextprotocol/sdk sat at the top of the board on 53M weekly downloads — the single
+        # highest-adoption row we publish — beside /core, /client, /node, /express, /hono and
+        # /fastify, all of them build-time dependencies presented as things to install. Adoption was
+        # measuring their popularity correctly; the category was wrong.
+        # STRICTLY 0, never falsy: NULL means not yet scanned, and dropping unscanned rows would
+        # silently empty the board of everything the security stage has not reached.
+        if o.get("npm_runnable") == 0 and not o.get("remote_host"):
             return True
         if n.startswith("@"):
             return False  # scoped = real identity
@@ -1426,6 +1491,7 @@ def export(con):
         o["name"] = display_name(o)          # see display_name: a generic config key is not a name
         if junk(o):
             continue
+        o.pop("npm_runnable", None)   # a membership test, not a published finding
         o["co_used"] = json.loads(o["co_used"]) if o["co_used"] else []
         o["gh_topics"] = o["gh_topics"].split(",") if o["gh_topics"] else []
         o["slug"] = slugify(o["id"])                     # stable per-cap slug (matches gen_badges + prerender)

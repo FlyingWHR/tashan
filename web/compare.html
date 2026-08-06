@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compare any two MCP servers, side by side · tashan</title>
+  <meta name="description" content="Pick any two MCP servers or agent skills and see them measured side by side on public evidence — score, adoption, upkeep, activity and advisories.">
+  <meta name="theme-color" content="#0b0b0a">
+  <link rel="canonical" href="https://tashan.sh/compare">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Compare any two MCP servers, side by side · tashan">
+  <meta property="og:description" content="Pick any two MCP servers or agent skills and see them measured side by side on public evidence — score, adoption, upkeep, activity and advisories.">
+  <meta property="og:url" content="https://tashan.sh/compare">
+  <meta property="og:image" content="https://tashan.sh/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="tashan — the index of AI capabilities, ranked by the tashan score">
+  <meta name="twitter:image" content="https://tashan.sh/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css?v=242">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you decide which of two MCP servers is better?","acceptedAnswer":{"@type":"Answer","text":"We do not decide it — we show the same public evidence for both and say how far apart they are. The tashan score is upkeep and freshness gated by real adoption. Where the gap is under 3 points we say plainly that the score does not decide it, because a narrow gap on a composite is noise, not a recommendation."}},{"@type":"Question","name":"Can a vendor pay to win a comparison?","acceptedAnswer":{"@type":"Answer","text":"No. Nobody can pay to change a score, a rank or a listing. There is no promoted slot in any comparison on this site, and both sides of every pair are measured the same day by the same scorer."}},{"@type":"Question","name":"Is a higher tashan score the same as being more secure?","acceptedAnswer":{"@type":"Answer","text":"No. Well maintained and nothing known is wrong are different claims. The security audit — OSV advisories at the version you would install today, install-time scripts, build provenance and declared permission surface — is a separate row and is never folded into the score."}}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span>tashan</a><div class="nav__links"><a href="/">Find skills</a><a href="/browse.html">Jobs</a><a href="/start.html">Doctor</a><a href="/pricing.html">Pricing</a><a class="nav__acct" id="navAcct" href="/account.html" title="Your account" aria-label="Your account"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span class="nav__pro mono" id="navPro" hidden>Pro</span></a></div></div></nav>
+
+  <main class="wrap" id="main">
+    <div class="cap-hd">
+      <p class="kicker">Head to head</p>
+      <h1>Compare any two</h1>
+      <p class="lede">There are pre-written comparisons for the pairs people search for most, but the
+        comparison you actually have is usually between the thing you already run and the thing
+        someone just recommended. Pick both.</p>
+    </div>
+
+    <section class="capsec">
+      <div class="tgroup cmp__pick">
+        <label class="field">
+          <span class="field__l">First</span>
+          <input id="cmpA" class="field__i" list="cmpList" autocomplete="off" spellcheck="false"
+                 placeholder="e.g. context7" aria-label="First capability to compare">
+        </label>
+        <label class="field">
+          <span class="field__l">Second</span>
+          <input id="cmpB" class="field__i" list="cmpList" autocomplete="off" spellcheck="false"
+                 placeholder="e.g. firecrawl-mcp" aria-label="Second capability to compare">
+        </label>
+      </div>
+      <datalist id="cmpList"></datalist>
+
+      <div id="cmpOut" aria-live="polite"></div>
+      <p class="note" id="cmpNote"></p>
+    </section>
+
+    <div class="callout"><b>Both sides, same day, same scorer.</b> A comparison is only worth reading
+      if neither side got a different treatment, so both rows come from the same nightly measurement
+      and neither can be bought. Where a pair is close, this page says so rather than manufacturing a
+      winner — see the <a class="link" href="/methodology.html">methodology</a> for what the number
+      is and what it deliberately is not.</div>
+  </main>
+
+  <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources, and checkable against them.</span></div></footer>
+
+  <script src="/js/terminal.js?v=242" defer></script>
+  <script src="/js/site.js?v=242" defer></script>
+  <script src="/js/compare.js?v=242" defer></script>
+</body>
+</html>

@@ -8,11 +8,11 @@
 - Source: https://github.com/Inferensys/dr-mcp
 - npm: https://www.npmjs.com/package/@inferensys/dr-mcp
 - Type: npm
-- Category: security
+- Category: data
 - tashan score: 39.0 / 100
 - Adoption: 26.0
-- Upkeep: 45.0
-- Freshness: 75.0
+- Upkeep: 44.0
+- Freshness: 74.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -33,4 +33,4 @@ claude mcp add dr -- npx -y @inferensys/dr-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -5,7 +5,7 @@
 ## Facts
 - Page: https://tashan.sh/capability/pkg-policyforge-mcp
 - tashan id: pkg:@policyforge/mcp
-- Source: https://github.com/Ekirapapaul/legal-policy-pilot
+- Source: https://github.com/PolicyForge/mcp
 - npm: https://www.npmjs.com/package/@policyforge/mcp
 - Type: npm
 - Category: productivity
@@ -34,4 +34,4 @@ claude mcp add policyforge-mcp -- npx -y @policyforge/mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

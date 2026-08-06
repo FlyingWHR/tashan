@@ -52,6 +52,28 @@ The `signal_history` retention series (the un-backfillable moat, written daily b
 
 Capability `id` convention: `pkg:<npm>` (npm-backed), `registry:<name>` (registry-only), `plugin:<home-repo>/<name>`, `skill:<owner>/<name>`, `key:*` (skipped). The export's `junk()` filter drops bare generic leaf names (`mcp`, `server`, `cli`, …) that carry no identity.
 
+### The scorer is frozen, and that is a product promise
+
+`SCORER_VERSION` is stamped on every stored history point and `trend()` only compares within one
+version — but honest labelling was only half the problem. **A version boundary restarts every trend**,
+so a scorer rewritten four times in a week sells Pro a series that is never more than two days long.
+
+`pipeline/scorer.lock` therefore carries four fields: `<version> <fingerprint> <effective>
+<stable_until>`. **s5 is published as stable through 2026-11-01** on `web/methodology.html`, baked
+from the lock by `prerender.py` so the page cannot promise a window the guard has let go of.
+`tests/test_scorer_version.py` refuses any scoring change inside the window unless
+`TASHAN_SCORER_BREAK_GLASS='<reason>'` is set — a correctness fix can still ship, but it has to be
+written down. `--accept` re-derives the window from `WINDOW_DAYS` (90).
+
+### Coverage is measured by demand, not by row count
+
+`pipeline/coverage.py` (site phase, before `prerender`) writes `web/data/coverage.json`. The
+aggregate measured/tracked ratio **falls every time discovery succeeds** — it went 47%→41% in two
+days with nothing getting worse — so it is reported and never targeted. The commitment is over the
+**top 100 and top 1,000 by adoption evidence**, because what costs a reader is an absence on the
+thing they looked up, not a gap in the tail. The same file publishes the next 40 in the measurement
+queue, which is what `/requests.html` renders when nobody has requested anything.
+
 **Identity is the artifact's own home, never where it was found.** Plugin ids were once keyed by the *marketplace* that listed them, so impeccable existed three times and — because the "is this repo solo?" test counted listings rather than distinct plugins — had its 51,323 stars nulled as "shared repo", dropping it off the board entirely. Ponytail lost 90,263 the same way. If you add a discovery source, key rows by where the thing lives.
 
 ### The security audit (`pipeline/scan_security.py`)
@@ -74,6 +96,27 @@ stale entries get served under the new rule):
   built-ins and declare nothing), so an empty result means "nothing declared", never "nothing
   possible" — the UI must keep saying so.
 - **L4 remote content** — whether it can carry third-party text into the model's context.
+
+It also records `npm_runnable` — whether the package declares a `bin` — because this is the only
+stage that already holds the version manifest. **A package with no `bin` cannot be launched by a
+host, so it is a library you build servers with, not a capability.** `junk()` drops those:
+`@modelcontextprotocol/sdk` led the board at 53M weekly downloads, beside `/core`, `/client`,
+`/node`, `/express`, `/hono` and `/fastify`. The test is **strictly `== 0`** — `NULL` means not yet
+scanned, and treating unknown as "no bin" would empty the board of everything the scan hasn't reached.
+
+**The scan budget counts FETCHES, not rows,** and the walk goes down the demand order (most-used
+first, never-scanned only as the tie-break). It used to be a `LIMIT` on the query with never-scanned
+rows first, which made the cache work against us — a cached row consumed a slot, so a run could spend
+its whole budget on rows it already knew and never reach the ones that needed fetching. Staleness
+here is the safety problem, so re-verifying a package with 53M installs outranks first-scanning one
+with 200; breadth still advances every night, because a current cached row now costs nothing.
+
+**Findings expire (`SEC_TTL_DAYS`, 7).** The cache had no expiry, so once the version sweep finished
+every finding would have frozen — scanned once, correct that day, served forever. Everything this
+stage reads moves: a CVE lands against the version already installed, a maintainer adds a
+`postinstall` in a patch release, a package is added to the malicious database. The **npm metadata**
+cache had the identical defect and no timestamp at all (`NPM_TTL_DAYS`, 14, in `build.py`) — download
+counts were frozen at first enrichment while feeding Adoption, which gates every score.
 
 **The free/paid line, everywhere:** the *existence* of a risk is never hidden. Free names every
 finding; a licence buys which advisory, what the script runs, and the version that fixes it.

@@ -9,23 +9,17 @@
 - npm: https://www.npmjs.com/package/synapse-rmcp
 - Type: npm
 - Category: cloud
-- tashan score: 68.0 / 100
-- Adoption: 37.0
-- Upkeep: 86.0
-- Freshness: 95.0
+- tashan score: not scored (catalogued only — too little public evidence)
+- Adoption: 27.0
+- Upkeep: not measured
+- Freshness: 94.0
 - Evidence coverage: 100% of the inputs this score can use
-- Health: active
+- Health: abandoned
 - Instruction depth: deep
 - GitHub stars: 1
-- npm downloads: 461/week
+- npm downloads: 91/week
 - License: MIT
 - Official: no
-
-## Install
-
-```sh
-claude mcp add synapse-rmcp -- npx -y synapse-rmcp
-```
 
 ## Security audit
 - Known advisories: 0
@@ -35,4 +29,4 @@ claude mcp add synapse-rmcp -- npx -y synapse-rmcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

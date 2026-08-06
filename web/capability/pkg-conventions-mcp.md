@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/conventions-mcp
 - Type: npm
 - Category: design
-- tashan score: 66.0 / 100
-- Adoption: 44.0
+- tashan score: 56.0 / 100
+- Adoption: 31.0
 - Upkeep: 64.0
 - Freshness: 96.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: deep
-- npm downloads: 1,431/week
+- npm downloads: 159/week
 - Official: no
 
 ## Install
@@ -34,4 +34,4 @@ claude mcp add conventions -- npx -y conventions-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -118,7 +118,9 @@ def main():
                      "environment variables) read the upstream registry at "
                      "registry.modelcontextprotocol.io — we do not restate what we did not measure."),
             "limits": ("Static snapshot, single page, no cursor. Regenerated whenever the pipeline runs. "
-                       "If you need filtering or pagination, fetch once and filter locally."),
+                       "This file is the BULK mirror and is 5.6 MB — if you are answering one question, "
+                       "do not fetch it: GET /v0.1/lookup?name=<pkg> returns one record and "
+                       "GET /v0.1/search?q=<query> returns ranked matches, both in a few hundred bytes."),
             "method": BASE + "/methodology.html",
             "license": "Scores CC BY 4.0 — attribute tashan (https://tashan.sh) and link the methodology.",
         },
@@ -141,13 +143,22 @@ def main():
     compact = {}
     for r in rows:
         m = r["_meta"]["sh.tashan/measurement"]
-        compact.setdefault(r["server"]["name"], [m["score"], m["vitality"], m["evidence"]])
+        # A FOURTH ELEMENT, APPENDED — never inserted. Every consumer reads [0], [1], [2]; adding to
+        # the end cannot break one, and the slug is what turns a hit into a URL. Without it a caller
+        # holding a name could not build a link, because the id it derives from is `pkg:`/`registry:`/
+        # `plugin:`/`skill:`-prefixed and unrecoverable from the name alone. /v0.1/search returns it
+        # so an agent can cite the page it got the number from.
+        # Taken from the url _meta already carries, not stored twice: the slug is the short half and
+        # repeating the whole URL 6,296 times would be most of the file.
+        compact.setdefault(r["server"]["name"],
+                           [m["score"], m["vitality"], m["evidence"],
+                            m["url"].rsplit("/", 1)[-1][:-5]])
     small = {
         "scores": compact,
         "metadata": {
             "count": len(compact),
             "generated_at": gen,
-            "format": "name -> [tashan_score 0-100, vitality, evidence]",
+            "format": "name -> [tashan_score 0-100, vitality, evidence, page slug]",
             "note": ("Quick lookup for 'should I install this'. Absence means unmeasured, never bad. "
                      "Full records with adoption/upkeep/freshness and task tags: /v0.1/servers. "
                      "Method: " + BASE + "/methodology.html — nothing purchasable moves a score."),

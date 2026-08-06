@@ -7,15 +7,15 @@
 - tashan id: plugin:obra/superpowers-lab/superpowers-lab
 - Source: https://github.com/obra/superpowers-lab
 - Type: plugin
-- Category: search
-- tashan score: 55.0 / 100
+- Category: cloud
+- tashan score: 57.0 / 100
 - Adoption: 41.0
-- Upkeep: not measured
+- Upkeep: 72.0
 - Freshness: 79.0
-- Evidence coverage: 59% of the inputs this score can use
+- Evidence coverage: 84% of the inputs this score can use
 - Health: active
 - Instruction depth: thin
-- GitHub stars: 401
+- GitHub stars: 409
 - License: MIT
 - Official: no
 
@@ -30,4 +30,4 @@
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

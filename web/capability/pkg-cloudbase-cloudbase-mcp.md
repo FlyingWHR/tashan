@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/@cloudbase/cloudbase-mcp
 - Type: npm
 - Category: cloud
-- tashan score: 83.0 / 100
-- Adoption: 65.0
-- Upkeep: 99.0
-- Freshness: 96.0
+- tashan score: 85.0 / 100
+- Adoption: 67.0
+- Upkeep: 100.0
+- Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - GitHub stars: 1,065
-- npm downloads: 10,087/week
+- npm downloads: 13,728/week
 - License: MIT
 - Official: no
 
@@ -35,4 +35,4 @@ claude mcp add cloudbase-cloudbase -- npx -y @cloudbase/cloudbase-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

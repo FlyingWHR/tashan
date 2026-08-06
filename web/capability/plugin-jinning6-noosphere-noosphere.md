@@ -1,17 +1,17 @@
 # Noosphere
 
-> Shared Debug Memory for Claude Code Agents. Noosphere helps Claude Code consult reusable debugging knowledge, publish verified fixes, and avoid repeating the same bug.
+> Shared debug memory and verified dynamic Skills for Claude Code agents.
 
 ## Facts
 - Page: https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere
 - tashan id: plugin:jinning6/noosphere/noosphere
 - Source: https://github.com/JinNing6/Noosphere
 - Type: plugin
-- Category: ai
-- tashan score: 60.0 / 100
-- Adoption: 24.0
+- Category: browser
+- tashan score: 63.0 / 100
+- Adoption: 28.0
 - Upkeep: 99.0
-- Freshness: 98.0
+- Freshness: 97.0
 - Evidence coverage: 84% of the inputs this score can use
 - Health: active
 - Instruction depth: deep
@@ -22,12 +22,12 @@
 ## Install
 
 ```sh
-/plugin marketplace add anthropics/claude-plugins-community
-/plugin install noosphere@claude-community
+/plugin marketplace add JinNing6/Noosphere
+/plugin install noosphere@noosphere-agent-memory
 ```
 
 ## Security audit
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -9,14 +9,15 @@
 - npm: https://www.npmjs.com/package/@pilotgentic/mcp-server
 - Type: npm
 - Category: search
-- tashan score: 32.0 / 100
+- tashan score: 31.0 / 100
 - Adoption: 19.0
 - Upkeep: 41.0
-- Freshness: 66.0
+- Freshness: 65.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - npm downloads: 21/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -34,4 +35,4 @@ claude mcp add pilotgentic-mcp-server -- npx -y @pilotgentic/mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

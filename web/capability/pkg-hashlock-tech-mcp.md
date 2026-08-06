@@ -1,6 +1,6 @@
 # Hashlock Markets
 
-> Sealed-bid OTC trading with HTLC atomic settlement. ETH, BTC, SUI. Built for AI agents.
+> Non-custodial cross-chain OTC for AI agents: sealed RFQ, negotiation, HTLC atomic swaps. Testnet.
 
 ## Facts
 - Page: https://tashan.sh/capability/pkg-hashlock-tech-mcp
@@ -8,11 +8,11 @@
 - Source: https://github.com/Hashlock-Tech/hashlock-mcp
 - npm: https://www.npmjs.com/package/@hashlock-tech/mcp
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 55.0 / 100
 - Adoption: 29.0
-- Upkeep: 77.0
-- Freshness: 85.0
+- Upkeep: 76.0
+- Freshness: 84.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: deep
@@ -33,4 +33,4 @@ claude mcp add hashlock -- npx -y @hashlock-tech/mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

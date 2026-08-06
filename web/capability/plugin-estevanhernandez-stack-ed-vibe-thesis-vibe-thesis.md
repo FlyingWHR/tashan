@@ -1,6 +1,6 @@
 # Vibe Thesis
 
-> Beta — scaffold and co-author thesis-shaped artifacts (academic dissertations, master's theses, long-form research articles, position essays) with Claude Code. Works standalone with bundled templates; pairs with thesis-engine (optional research feeder) and the ThesisStudio template (optional richer styling) but neither is required. Say 'scaffold a vibe thesis project,' get a styled PDF skeleton plus a working render pipeline in roughly 30 minutes. Includes the author-voice pipeline — voice synth
+> Academic thesis authoring in Claude Code. vibe-thesis scaffolds and co-authors thesis-shaped artifacts — dissertations, master's theses, long-form research articles, position essays — with a rendered PDF skeleton in about 30 minutes. Its voice pipeline captures whose prose anchors your writing and applies it to drafts without changing your claims, while a tone lint catches the inflationary, self-praising patterns LLM-assisted academic writing tends to accumulate. Six commands: render, status, vo
 
 ## Facts
 - Page: https://tashan.sh/capability/plugin-estevanhernandez-stack-ed-vibe-thesis-vibe-thesis
@@ -10,8 +10,8 @@
 - Category: devtools
 - tashan score: 37.0 / 100
 - Adoption: 11.0
-- Upkeep: 61.0
-- Freshness: 92.0
+- Upkeep: 60.0
+- Freshness: 91.0
 - Evidence coverage: 84% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -22,12 +22,12 @@
 ## Install
 
 ```sh
-/plugin marketplace add estevanhernandez-stack-ed/vibe-plugins
-/plugin install vibe-thesis@vibe-plugins
+/plugin marketplace add anthropics/claude-plugins-community
+/plugin install vibe-thesis@claude-community
 ```
 
 ## Security audit
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

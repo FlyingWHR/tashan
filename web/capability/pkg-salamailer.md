@@ -7,7 +7,7 @@
 - tashan id: pkg:salamailer
 - npm: https://www.npmjs.com/package/salamailer
 - Type: npm
-- Category: files
+- Category: comms
 - tashan score: 52.0 / 100
 - Adoption: 31.0
 - Upkeep: 52.0
@@ -16,6 +16,7 @@
 - Health: active
 - Instruction depth: not yet graded
 - npm downloads: 174/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -32,4 +33,4 @@ claude mcp add salamailer -- npx -y salamailer
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

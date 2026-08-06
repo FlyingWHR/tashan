@@ -20,6 +20,18 @@ carries zone:read, not zone:write. Turn it off at dash.cloudflare.com -> tashan.
 Bots. Free-tier Bot Fight Mode cannot be scoped by path, so it is on or off; Super Bot Fight Mode
 allows an exception for /v0.1/* and /data/* if the protection is wanted elsewhere.
 
+AND THERE IS NO CODE WORKAROUND — measured 6 Aug 2026, so nobody spends an evening looking for one.
+The obvious idea is to serve the agent surfaces from a Pages Function instead of as static assets,
+on the theory that the challenge applies to the asset path. It does not: the block is zone-wide and
+runs BEFORE Workers, so a Function is refused identically.
+
+    default urllib UA          curl UA
+    /v0.1/scores       403        200
+    /badge/*.svg       403        200     <- Function
+    /api/security      403        401     <- Function; 401 is the correct no-licence answer
+
+Nothing in `_headers`, `functions/`, or the deploy reaches this. It is one toggle in the dashboard.
+
 Network test. Skips (does not fail) when the site is unreachable, so it never breaks an offline run.
 
 Run: python3 tests/test_agent_access.py
@@ -75,6 +87,28 @@ print("# and the same surfaces answer the other clients agents actually use")
 for ua in ("curl/8.4.0", "node-fetch/3.3.2", "Go-http-client/2.0", "ChatGPT-User/1.0"):
     code = status("/v0.1/scores", ua=ua)
     ok(f"/v0.1/scores answers {ua}", code == 200, f"HTTP {code}")
+
+print()
+print("# the answer engines can read us — this is the citation path, and it is separate")
+# MEASURED 6 Aug 2026: every named crawler gets 200 and only the generic Python UA is refused. The
+# distinction decides what to worry about. A blanket "agents are blocked" reading of the failures
+# above is wrong and was briefly published in docs/AGENT-TRAFFIC.md: GEO is unobstructed, and what
+# Bot Fight Mode costs us is the decision-time path — a tool call, a CI script, an integration
+# someone writes after reading the outreach email. If one of these ever flips to 403, that IS the
+# emergency, because it is the whole distribution thesis.
+CRAWLERS = {
+    "Googlebot": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+    "Google-Extended": "Mozilla/5.0 (compatible; Google-Extended/1.0)",
+    "GPTBot": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.1; +https://openai.com/gptbot",
+    "OAI-SearchBot": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot",
+    "ClaudeBot": "Mozilla/5.0 (compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",
+    "PerplexityBot": "Mozilla/5.0 (compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)",
+    "Bingbot": "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",
+}
+for name, ua in CRAWLERS.items():
+    codes = {p: status(p, ua=ua) for p in ("/", "/methodology.html", "/llms.txt")}
+    ok(f"{name} can read the pages it would cite", set(codes.values()) == {200},
+       ", ".join(f"{p} {c}" for p, c in codes.items() if c != 200))
 
 print()
 print("AGENT ACCESS OK" if not fail else "AGENT ACCESS FAILED")

@@ -9,14 +9,15 @@
 - npm: https://www.npmjs.com/package/@gadgethumans/x402
 - Type: npm
 - Category: finance
-- tashan score: 62.0 / 100
-- Adoption: 37.0
-- Upkeep: 66.0
-- Freshness: 96.0
+- tashan score: 56.0 / 100
+- Adoption: 29.0
+- Upkeep: 67.0
+- Freshness: 97.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 425/week
+- npm downloads: 117/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add x402-middleware -- npx -y @gadgethumans/x402
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

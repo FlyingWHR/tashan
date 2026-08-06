@@ -8,14 +8,14 @@
 - npm: https://www.npmjs.com/package/@mtop-devtools/mcp-server
 - Type: npm
 - Category: browser
-- tashan score: 70.0 / 100
-- Adoption: 39.0
+- tashan score: 61.0 / 100
+- Adoption: 27.0
 - Upkeep: 86.0
 - Freshness: 97.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 654/week
+- npm downloads: 91/week
 - Official: no
 
 ## Install
@@ -32,4 +32,4 @@ claude mcp add mtop-devtools -- npx -y @mtop-devtools/mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

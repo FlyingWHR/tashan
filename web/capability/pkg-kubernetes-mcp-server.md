@@ -1,6 +1,6 @@
-# Kubernetes · containers
+# Kubernetes
 
-> Model Context Protocol (MCP) server for Kubernetes and OpenShift
+> A Model Context Protocol (MCP) server for Kubernetes and OpenShift
 
 ## Facts
 - Page: https://tashan.sh/capability/pkg-kubernetes-mcp-server
@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/kubernetes-mcp-server
 - Type: npm
 - Category: cloud
-- tashan score: 84.0 / 100
-- Adoption: 67.0
+- tashan score: 85.0 / 100
+- Adoption: 68.0
 - Upkeep: 99.0
-- Freshness: 96.0
+- Freshness: 98.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - GitHub stars: 1,844
-- npm downloads: 14,657/week
+- npm downloads: 17,941/week
 - License: Apache-2.0
 - Official: no
 
@@ -35,4 +35,4 @@ claude mcp add kubernetes-mcp-server -- npx -y kubernetes-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

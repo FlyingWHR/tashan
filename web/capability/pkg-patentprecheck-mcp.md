@@ -12,7 +12,7 @@
 - tashan score: 48.0 / 100
 - Adoption: 28.0
 - Upkeep: 57.0
-- Freshness: 85.0
+- Freshness: 84.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -33,4 +33,4 @@ claude mcp add patent-precheck -- npx -y @patentprecheck/mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -1,13 +1,13 @@
 # Mindpowers
 
-> One loop for knowledge work: optionally validate the problem, then shape, draft, review, remember. Validating-problems tests customer or business problems against evidence; Mindstorming (formerly brainstorming) refines rough ideas into locked specs through Socratic dialogue and produces adaptive, traceable PRD contracts; drafting turns locked specs into deliverables; reviewing-docs checks any doc against the template's standards; calibrating remembers what you like for next time. Templates cover
+> Disciplined brainstorming for knowledge work. Refines rough ideas into locked specs through Socratic dialogue, with templates for business reviews, decision docs, PRDs, briefing docs, comms drafts, frameworks, and talking points. Two approval gates (verbal then written) prevent unexamined assumptions in your deliverables.
 
 ## Facts
 - Page: https://tashan.sh/capability/plugin-rohitgehe05-mindpowers-mindpowers
 - tashan id: plugin:rohitgehe05/mindpowers/mindpowers
 - Source: https://github.com/rohitgehe05/mindpowers
 - Type: plugin
-- Category: docs
+- Category: devtools
 - tashan score: 44.0 / 100
 - Adoption: 19.0
 - Upkeep: 62.0
@@ -22,12 +22,12 @@
 ## Install
 
 ```sh
-/plugin marketplace add rohitgehe05/mindpowers
-/plugin install mindpowers@mindpowers
+/plugin marketplace add anthropics/claude-plugins-community
+/plugin install mindpowers@claude-community
 ```
 
 ## Security audit
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -7,15 +7,16 @@
 - tashan id: pkg:@ascendkit/cli
 - npm: https://www.npmjs.com/package/@ascendkit/cli
 - Type: npm
-- Category: comms
+- Category: data
 - tashan score: 50.0 / 100
 - Adoption: 27.0
-- Upkeep: 66.0
-- Freshness: 85.0
+- Upkeep: 65.0
+- Freshness: 84.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - npm downloads: 84/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -32,4 +33,4 @@ claude mcp add ascendkit -- npx -y @ascendkit/cli
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

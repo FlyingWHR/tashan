@@ -8,22 +8,16 @@
 - npm: https://www.npmjs.com/package/@modelcontextprotocol/server-gdrive
 - Type: npm
 - Category: files
-- tashan score: 36.0 / 100
-- Adoption: 61.0
-- Upkeep: 60.0
+- tashan score: not scored (catalogued only — too little public evidence)
+- Adoption: 62.0
+- Upkeep: not measured
 - Freshness: 13.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: abandoned
 - Instruction depth: not yet graded
-- npm downloads: 5,569/week
+- npm downloads: 5,996/week
 - License: MIT
 - Official: yes
-
-## Install
-
-```sh
-claude mcp add gdrive -- npx -y @modelcontextprotocol/server-gdrive
-```
 
 ## Security audit
 - Known advisories: 0
@@ -34,4 +28,4 @@ claude mcp add gdrive -- npx -y @modelcontextprotocol/server-gdrive
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

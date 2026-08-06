@@ -8,15 +8,16 @@
 - Source: https://github.com/Ecocitizenz/ecz-id-mcp-verifier
 - npm: https://www.npmjs.com/package/@ecocitizenz/ecz-id-mcp-verifier
 - Type: npm
-- Category: productivity
+- Category: data
 - tashan score: 46.0 / 100
 - Adoption: 24.0
 - Upkeep: 56.0
-- Freshness: 89.0
+- Freshness: 88.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - npm downloads: 54/week
+- License: SEE LICENSE IN LICENSE.md
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add ecz-id-mcp-verifier -- npx -y @ecocitizenz/ecz-id-mcp-verifier
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

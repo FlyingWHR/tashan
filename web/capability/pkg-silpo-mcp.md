@@ -8,7 +8,7 @@
 - Source: https://github.com/MIt9/silpo-mcp
 - npm: https://www.npmjs.com/package/silpo-mcp
 - Type: npm
-- Category: comms
+- Category: other
 - tashan score: 43.0 / 100
 - Adoption: 20.0
 - Upkeep: 51.0
@@ -33,4 +33,4 @@ claude mcp add silpo -- npx -y silpo-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

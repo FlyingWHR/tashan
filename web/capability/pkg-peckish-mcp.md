@@ -9,14 +9,15 @@
 - npm: https://www.npmjs.com/package/peckish-mcp
 - Type: npm
 - Category: devtools
-- tashan score: 58.0 / 100
-- Adoption: 37.0
-- Upkeep: 57.0
-- Freshness: 96.0
+- tashan score: 54.0 / 100
+- Adoption: 30.0
+- Upkeep: 59.0
+- Freshness: 97.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
-- npm downloads: 459/week
+- npm downloads: 127/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add peckish -- npx -y peckish-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

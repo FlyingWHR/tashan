@@ -10,13 +10,13 @@
 - Type: npm
 - Category: design
 - tashan score: 74.0 / 100
-- Adoption: 59.0
+- Adoption: 58.0
 - Upkeep: 82.0
 - Freshness: 86.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 15,988/week
+- npm downloads: 13,495/week
 - Official: no
 
 ## Install
@@ -26,7 +26,12 @@ claude mcp add shortcut-mcp -- npx -y @shortcut/mcp
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: attested
+- Declared permission surface: credentials
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

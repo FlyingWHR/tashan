@@ -8,14 +8,14 @@
 - npm: https://www.npmjs.com/package/wr-admin-mcp-connector
 - Type: npm
 - Category: productivity
-- tashan score: 68.0 / 100
-- Adoption: 44.0
-- Upkeep: 67.0
-- Freshness: 99.0
+- tashan score: 66.0 / 100
+- Adoption: 42.0
+- Upkeep: 66.0
+- Freshness: 98.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 1,366/week
+- npm downloads: 992/week
 - Official: no
 
 ## Install
@@ -25,7 +25,11 @@ claude mcp add wr-admin-mcp-connector -- npx -y wr-admin-mcp-connector
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: not attested
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

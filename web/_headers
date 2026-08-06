@@ -38,3 +38,20 @@
   Content-Type: text/markdown; charset=utf-8
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=900, stale-while-revalidate=86400
+
+# THE HUBS GOT THE SAME TIER. /capability/*.md answered "what is this thing"; these answer "what
+# should I use for X" and "what does this job install", which are the questions actually asked of an
+# answer engine. They shipped for weeks with no markdown twin while every individual capability had
+# one — the easy tier was covered and the high-intent one was not.
+/category/*.md
+  Content-Type: text/markdown; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=900, stale-while-revalidate=86400
+/task/*.md
+  Content-Type: text/markdown; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=900, stale-while-revalidate=86400
+/role/*.md
+  Content-Type: text/markdown; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=900, stale-while-revalidate=86400

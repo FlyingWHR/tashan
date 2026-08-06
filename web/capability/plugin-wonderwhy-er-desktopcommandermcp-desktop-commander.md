@@ -1,4 +1,4 @@
-# Desktop Commander
+# Desktop Commander · wonderwhy-er
 
 > Desktop Commander gives Claude Code access to a local MCP server for terminal sessions, filesystem work, structured documents, search, process management, and SSH workflows. What it enables: - Persistent shell sessions: keep working directory, environment variables, virtualenvs, and running processes alive across tool calls. - Long-running processes: start a dev server, watcher, or build in the background and continue working while checking logs or interacting with the process later. - Precise
 
@@ -30,4 +30,4 @@
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/@perplexity-ai/mcp-server
 - Type: npm
 - Category: search
-- tashan score: 76.0 / 100
-- Adoption: 59.0
-- Upkeep: 93.0
-- Freshness: 84.0
+- tashan score: 83.0 / 100
+- Adoption: 64.0
+- Upkeep: 98.0
+- Freshness: 97.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
 - GitHub stars: 2,403
-- npm downloads: 17,116/week
+- npm downloads: 36,519/week
 - License: MIT
 - Official: no
 
@@ -36,4 +36,4 @@ claude mcp add perplexity-ai-mcp-server -- npx -y @perplexity-ai/mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

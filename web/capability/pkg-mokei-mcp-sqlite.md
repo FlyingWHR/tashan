@@ -9,10 +9,10 @@
 - npm: https://www.npmjs.com/package/@mokei/mcp-sqlite
 - Type: npm
 - Category: database
-- tashan score: 65.0 / 100
+- tashan score: 64.0 / 100
 - Adoption: 41.0
-- Upkeep: 66.0
-- Freshness: 96.0
+- Upkeep: 65.0
+- Freshness: 95.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: thin
@@ -35,4 +35,4 @@ claude mcp add mokei-mcp-sqlite -- npx -y @mokei/mcp-sqlite
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

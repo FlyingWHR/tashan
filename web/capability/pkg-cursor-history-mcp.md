@@ -8,7 +8,7 @@
 - Source: https://github.com/S2thend/cursor-history-mcp
 - npm: https://www.npmjs.com/package/cursor-history-mcp
 - Type: npm
-- Category: design
+- Category: productivity
 - tashan score: 32.0 / 100
 - Adoption: 28.0
 - Upkeep: 47.0
@@ -33,4 +33,4 @@ claude mcp add cursor-history -- npx -y cursor-history-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

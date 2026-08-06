@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/@oobe-protocol-labs/sap-mcp-server
 - Type: npm
 - Category: finance
-- tashan score: 69.0 / 100
-- Adoption: 47.0
-- Upkeep: 70.0
-- Freshness: 96.0
+- tashan score: 70.0 / 100
+- Adoption: 45.0
+- Upkeep: 73.0
+- Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
 - GitHub stars: 3
-- npm downloads: 2,291/week
+- npm downloads: 1,703/week
 - License: MIT
 - Official: no
 
@@ -36,4 +36,4 @@ claude mcp add sap -- npx -y @oobe-protocol-labs/sap-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

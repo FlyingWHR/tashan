@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/@billingserv/mcp-server
 - Type: npm
 - Category: finance
-- tashan score: 59.0 / 100
-- Adoption: 36.0
+- tashan score: 57.0 / 100
+- Adoption: 33.0
 - Upkeep: 64.0
 - Freshness: 94.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: deep
 - GitHub stars: 0
-- npm downloads: 345/week
+- npm downloads: 224/week
 - License: MIT
 - Official: no
 
@@ -35,4 +35,4 @@ claude mcp add billingserv-mcp-server -- npx -y @billingserv/mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

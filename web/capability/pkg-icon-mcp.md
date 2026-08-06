@@ -8,15 +8,15 @@
 - Source: https://github.com/decano/icon-mcp
 - npm: https://www.npmjs.com/package/icon-mcp
 - Type: npm
-- Category: productivity
+- Category: security
 - tashan score: 21.0 / 100
-- Adoption: 42.0
+- Adoption: 41.0
 - Upkeep: 27.0
 - Freshness: 26.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: abandoned
 - Instruction depth: not yet graded
-- npm downloads: 958/week
+- npm downloads: 886/week
 - Official: no
 
 ## Install
@@ -26,7 +26,12 @@ claude mcp add icon -- npx -y icon-mcp
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: `npm run build-icons`
+- Build provenance: not attested
+- Declared permission surface: network
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

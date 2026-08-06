@@ -12,7 +12,7 @@
 - tashan score: 30.0 / 100
 - Adoption: 22.0
 - Upkeep: 48.0
-- Freshness: 50.0
+- Freshness: 49.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: abandoned
 - Instruction depth: not yet graded
@@ -33,4 +33,4 @@ claude mcp add ohm -- npx -y ohm-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

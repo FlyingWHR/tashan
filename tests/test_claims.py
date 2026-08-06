@@ -166,5 +166,75 @@ for pg in ("pricing.html", "support.html", "start.html", "account.html"):
     ok(f"{pg} names no unpublished CLI command", not bad, f"found: {bad}")
 
 print()
+print("# a published stability promise must be the one the build enforces")
+# The freeze date is a commitment to customers who buy score history: inside the window we do not
+# change the scoring. It lives in pipeline/scorer.lock, is enforced by tests/test_scorer_version.py,
+# and is BAKED into methodology.html by prerender. A date typed on the page that the lock has already
+# moved past is the same class of defect as "the current version is s2" — a promise the code stopped
+# keeping, still on display.
+lock = os.path.join(ROOT, "pipeline", "scorer.lock")
+mt = text(os.path.join(WEB, "methodology.html"))
+parts = open(lock, encoding="utf-8").read().split() if os.path.exists(lock) else []
+ok("scorer.lock declares a stability window", len(parts) >= 4,
+   f"expected '<version> <fingerprint> <effective> <stable_until>', got {parts}")
+if len(parts) >= 4:
+    ok(f"methodology publishes the locked freeze date ({parts[3]})", parts[3] in mt,
+       "the page promises a different date than the guard enforces")
+
+print()
+print("# the coverage the page states must be the coverage we measured")
+# Published as a headline because it is the honest weak spot; a hand-typed number here would drift
+# the moment a night's enrichment landed, and drift in the direction that flatters us.
+cov_path = os.path.join(WEB, "data", "coverage.json")
+if not os.path.exists(cov_path):
+    ok("web/data/coverage.json exists", False, "run python3 pipeline/coverage.py")
+else:
+    cov = json.load(open(cov_path, encoding="utf-8"))
+    t1k = cov["tiers"]["top1000"]
+    ok(f"methodology states the measured tier size ({t1k['n']:,})", f"{t1k['n']:,}" in mt)
+    for key, label in (("score", "tashan score"), ("scan", "security scan"),
+                       ("grade", "expertise grade"), ("task", "task mapping")):
+        pct = round(100.0 * t1k[key] / t1k["n"])
+        # The number must appear next to its own label, not merely somewhere on a long page — a bare
+        # digit match would pass on any page containing that percentage for anything at all.
+        # \s* on both sides: text() replaces each tag with a space, so the baked
+        # `<span id="cvScan">98</span>%` reaches here as "security scan 98 %".
+        near = re.search(re.escape(label) + r"\s*" + str(pct) + r"\s*%", mt)
+        ok(f"methodology states {label} coverage as {pct}%", bool(near),
+           f"page does not say '{label} {pct}%' — re-run pipeline/coverage.py then prerender.py")
+
+print()
+print("# the bundled skill must not contradict the site")
+# The skill is what an agent LOADS — it is read instead of the pages, by a reader that cannot check.
+# It said "It is not a security audit. No CVE scan" on a product whose paid tier is built around an
+# OSV scan: the identical sentence this file already fails the build for on methodology.html, missed
+# here because a Markdown file in plugin/ was not part of "the site".
+skill = os.path.join(ROOT, "plugin", "skills", "tashan", "SKILL.md")
+if not os.path.exists(skill):
+    ok("the bundled skill exists", False, skill)
+else:
+    st = re.sub(r"\s+", " ", open(skill, encoding="utf-8").read())
+    ok("the skill does not deny the security scan it documents elsewhere",
+       not re.search(r"no cve scan|not a security audit\b", st, re.I),
+       "the scan is real — say what it does and does not cover, do not deny it")
+    ok("the skill still refuses to equate a high score with safety",
+       re.search(r"never present a high score as .safe.", st, re.I) is not None)
+    # A hardcoded score in a document an agent quotes is a wrong measurement with a long half-life:
+    # context7 was written as 90 and had been 97 for days.
+    ok("the skill quotes no capability score that could go stale",
+       not re.search(r'"[^"]+"\s*->\s*\[\s*\d+', st),
+       "drop the literal numbers — point at the endpoint instead")
+    # .find(), not .index(): if the skill stops mentioning /v0.1/lookup at all, index() raises and the
+    # guard dies with a traceback instead of reporting a failure — which reads as a broken test rather
+    # than a broken document, and is exactly how a check gets deleted instead of heeded.
+    i_lookup, i_bulk = st.find("/v0.1/lookup"), st.find("/v0.1/scores")
+    ok("the skill leads with the per-question endpoint, not a bulk download",
+       i_lookup >= 0 and (i_bulk < 0 or i_lookup < i_bulk),
+       "an agent following this in order should not download 420 KB to check one package"
+       if i_lookup >= 0 else "the skill no longer mentions /v0.1/lookup at all")
+    ok("the skill tells the agent what a MALICIOUS verdict means",
+       "DO NOT INSTALL" in st)
+
+print()
 print(("CLAIMS OK" if not fail else "CLAIMS FAILED"))
 sys.exit(fail)

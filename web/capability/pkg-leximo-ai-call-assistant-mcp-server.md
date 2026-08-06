@@ -9,10 +9,10 @@
 - npm: https://www.npmjs.com/package/leximo-ai-call-assistant-mcp-server
 - Type: npm
 - Category: productivity
-- tashan score: 31.0 / 100
+- tashan score: 30.0 / 100
 - Adoption: 24.0
-- Upkeep: 41.0
-- Freshness: 55.0
+- Upkeep: 40.0
+- Freshness: 54.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -33,4 +33,4 @@ claude mcp add leximo-ai-call-assistant-mcp-server -- npx -y leximo-ai-call-assi
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

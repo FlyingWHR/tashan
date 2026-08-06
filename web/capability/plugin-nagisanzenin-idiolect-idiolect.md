@@ -7,15 +7,15 @@
 - tashan id: plugin:nagisanzenin/idiolect/idiolect
 - Source: https://github.com/nagisanzenin/idiolect
 - Type: plugin
-- Category: docs
-- tashan score: 51.0 / 100
+- Category: comms
+- tashan score: 45.0 / 100
 - Adoption: 24.0
-- Upkeep: not measured
-- Freshness: 91.0
-- Evidence coverage: 59% of the inputs this score can use
+- Upkeep: 60.0
+- Freshness: 90.0
+- Evidence coverage: 84% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- GitHub stars: 19
+- GitHub stars: 21
 - License: MIT
 - Official: no
 
@@ -30,4 +30,4 @@
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

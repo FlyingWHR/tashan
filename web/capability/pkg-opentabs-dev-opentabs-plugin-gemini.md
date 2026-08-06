@@ -8,7 +8,7 @@
 - Source: https://github.com/opentabs-dev/opentabs
 - npm: https://www.npmjs.com/package/@opentabs-dev/opentabs-plugin-gemini
 - Type: npm
-- Category: cloud
+- Category: ai
 - tashan score: 59.0 / 100
 - Adoption: 33.0
 - Upkeep: 67.0
@@ -26,7 +26,11 @@ claude mcp add opentabs-dev-opentabs-plugin-gemini -- npx -y @opentabs-dev/opent
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: not attested
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

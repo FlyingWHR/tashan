@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/mcp-searxng
 - Type: npm
 - Category: search
-- tashan score: 76.0 / 100
-- Adoption: 62.0
+- tashan score: 77.0 / 100
+- Adoption: 63.0
 - Upkeep: 73.0
 - Freshness: 99.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 27,926/week
+- npm downloads: 29,879/week
 - Official: no
 
 ## Install
@@ -26,7 +26,12 @@ claude mcp add searxng -- npx -y mcp-searxng
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: attested
+- Declared permission surface: network
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

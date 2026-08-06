@@ -52,8 +52,8 @@ NAV = [
 ACCOUNT = ("/account.html", "Your account")
 
 FOOTER = [
-    ("Explore", [("/", "The Index"), ("/browse.html", "Browse"), ("/start.html", "Use it"),
-                 ("/learn/", "Learn"), ("/for-hosts.html", "For hosts")]),
+    ("Explore", [("/", "The Index"), ("/browse.html", "Browse"), ("/compare.html", "Compare"),
+                 ("/start.html", "Use it"), ("/learn/", "Learn"), ("/for-hosts.html", "For hosts")]),
     ("How it works", [("/methodology.html", "Methodology"), ("/about.html", "About"),
                       ("/pricing.html", "Pricing"), ("/requests.html", "Requests")]),
     ("Your account", [("/account.html", "Account"), ("/support.html", "Support"),

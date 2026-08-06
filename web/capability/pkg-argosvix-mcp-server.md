@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/@argosvix/mcp-server
 - Type: npm
 - Category: ai
-- tashan score: 62.0 / 100
-- Adoption: 36.0
-- Upkeep: 71.0
-- Freshness: 94.0
+- tashan score: 67.0 / 100
+- Adoption: 38.0
+- Upkeep: 73.0
+- Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
 - GitHub stars: 0
-- npm downloads: 372/week
+- npm downloads: 484/week
 - License: MIT
 - Official: no
 
@@ -35,4 +35,4 @@ claude mcp add argosvix-mcp-server -- npx -y @argosvix/mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

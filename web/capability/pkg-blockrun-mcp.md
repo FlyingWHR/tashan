@@ -1,6 +1,6 @@
 # Blockrun
 
-> Live data for AI agents: search, research, markets, crypto, X/Twitter. Pay per call.
+> Web search, deep research, prediction markets & crypto data for AI agents. Pay per call via x402.
 
 ## Facts
 - Page: https://tashan.sh/capability/pkg-blockrun-mcp
@@ -10,13 +10,14 @@
 - Type: npm
 - Category: finance
 - tashan score: 72.0 / 100
-- Adoption: 47.0
-- Upkeep: 85.0
-- Freshness: 95.0
+- Adoption: 44.0
+- Upkeep: 87.0
+- Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
-- npm downloads: 2,243/week
+- npm downloads: 1,289/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -34,4 +35,4 @@ claude mcp add blockrun -- npx -y @blockrun/mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

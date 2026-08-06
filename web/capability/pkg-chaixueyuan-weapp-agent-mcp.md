@@ -8,15 +8,16 @@
 - Source: https://github.com/Chaixueyuan/weapp-agent-mcp
 - npm: https://www.npmjs.com/package/@chaixueyuan/weapp-agent-mcp
 - Type: npm
-- Category: devtools
-- tashan score: 52.0 / 100
+- Category: docs
+- tashan score: 51.0 / 100
 - Adoption: 29.0
-- Upkeep: 63.0
-- Freshness: 89.0
+- Upkeep: 62.0
+- Freshness: 88.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
 - npm downloads: 116/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add weapp-agent -- npx -y @chaixueyuan/weapp-agent-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

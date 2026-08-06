@@ -101,6 +101,30 @@ def search(query, cache, refresh):
     return out
 
 
+SEED = ["tashan-cli"]
+
+
+def fetch_pkg(name):
+    """One package by exact name, shaped like a search hit so the caller treats it identically.
+
+    Search cannot reach a package with no downloads, and this bypasses ranking rather than relevance:
+    the row still has to survive looks_like_mcp() and every export gate like any other.
+    """
+    doc = fetch(f"https://registry.npmjs.org/{urllib.parse.quote(name, safe='@/')}")
+    if not doc or "dist-tags" not in doc:
+        print(f"  seed: {name} not on npm — skipped", flush=True)
+        return None
+    latest = (doc.get("dist-tags") or {}).get("latest")
+    v = (doc.get("versions") or {}).get(latest) or {}
+    repo = (v.get("repository") or {}).get("url") if isinstance(v.get("repository"), dict) else None
+    p = {"name": name, "description": doc.get("description") or v.get("description"),
+         "keywords": v.get("keywords") or [], "links": {"repository": repo or ""}}
+    if not looks_like_mcp(p):
+        print(f"  seed: {name} does not describe itself as an MCP capability — skipped", flush=True)
+        return None
+    return p
+
+
 def repo_of(pkg):
     """owner/repo from links.repository, when it is a plain GitHub URL."""
     link = ((pkg.get("links") or {}).get("repository") or "")
@@ -117,6 +141,18 @@ def main():
         except Exception: cache = {}
 
     found = {}
+    # WE MEASURE OURSELVES BY THE SAME RULES. npm search ranks by popularity, so a new package is
+    # invisible to it — `keywords:mcp` alone matches 32,000 packages and returns the top 1,500. Our
+    # own CLI was therefore absent from the corpus while every page on the site asked people to run
+    # it, which is the one omission an independent rater cannot afford: we ask you to npx an
+    # unfamiliar package in order to find risky packages, and published no reading of our own.
+    # It gets whatever the evidence gives, including the unflattering parts — 1 maintainer, and no
+    # build provenance, which puts us squarely inside the ~77% we point at.
+    for name in SEED:
+        p = fetch_pkg(name)
+        if p:
+            found[name] = p
+            print(f"  seed: {name} — tracked because it is ours, scored like anything else", flush=True)
     for q in QUERIES:
         hits = search(q, cache, refresh)
         kept = [p for p in hits if p.get("name") and looks_like_mcp(p) and not build.bad_pkg(p["name"])]

@@ -7,7 +7,7 @@
 - tashan id: skill:anthropics/skill-creator
 - Source: https://github.com/anthropics/skills
 - Type: skill
-- Category: devtools
+- Category: comms
 - tashan score: 53.0 / 100
 - Adoption: 17.0
 - Upkeep: 98.0
@@ -27,4 +27,4 @@ cp -r skill-creator ~/.claude/skills/
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

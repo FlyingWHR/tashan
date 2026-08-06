@@ -8,15 +8,16 @@
 - Source: https://github.com/debugbundle/debugbundle
 - npm: https://www.npmjs.com/package/@debugbundle/mcp
 - Type: npm
-- Category: devtools
+- Category: data
 - tashan score: 60.0 / 100
 - Adoption: 34.0
-- Upkeep: 71.0
-- Freshness: 94.0
+- Upkeep: 70.0
+- Freshness: 93.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
 - npm downloads: 278/week
+- License: AGPL-3.0-only
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add debugbundle-mcp -- npx -y @debugbundle/mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

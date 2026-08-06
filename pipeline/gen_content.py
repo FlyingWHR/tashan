@@ -31,13 +31,27 @@ def pretty(name):
 
 NAV = chrome.nav_html()
 FOOT = chrome.footer_html()
+# The day the measurements behind these articles were taken — read from the same export the ranked
+# tables come from, never datetime.now(), so the date on the page is the date of the DATA.
+try:
+    GEN_DATE = (json.load(open(DATA)).get("generated_at") or "")[:10]
+except (OSError, ValueError):
+    GEN_DATE = ""
 
 def head(a):
     url = BASE + "/learn/" + a["slug"] + ".html"
     lds = [
+        # dateModified, because these articles are NOT static prose: each one is rebuilt from the
+        # export every run, and the ranked tables inside them change when the measurements change.
+        # An Article with no date is one an answer engine has to treat as undated, which is the
+        # opposite of the claim — that the list is current — that makes it worth citing at all.
+        # datePublished carries the same value deliberately: the article as published today IS
+        # today's data, and inventing an original authoring date would be a fact we do not have.
         {"@context":"https://schema.org","@type":"Article","headline": a["title"],
          "description": a["desc"], "inLanguage": a.get("lang","en"), "author":{"@type":"Organization","name":"tashan"},
-         "publisher":{"@type":"Organization","name":"tashan"}, "mainEntityOfPage": url},
+         "publisher":{"@type":"Organization","name":"tashan"}, "mainEntityOfPage": url,
+         "datePublished": GEN_DATE, "dateModified": GEN_DATE,
+         "isBasedOn": BASE + "/methodology.html"},
         {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
             {"@type":"ListItem","position":1,"name":"Learn","item": BASE + "/learn/"},
             {"@type":"ListItem","position":2,"name": a["title"], "item": url}]},
@@ -51,9 +65,19 @@ def head(a):
     if a.get("itemlist"):   # numbers-in-schema — the data-backed ranking as an ItemList of rated apps (Agensi omits this)
         lds.append({"@context":"https://schema.org","@type":"ItemList","itemListOrder":"https://schema.org/ItemListOrderDescending",
             "numberOfItems": len(a["itemlist"]), "itemListElement":[
+            # A Review, NOT an aggregateRating — the third place this had to be fixed. An
+            # aggregateRating with ratingCount:1 asserts the mean of a crowd of reviewers that does
+            # not exist; it was removed from 6,586 capability pages as the self-serving-rating
+            # pattern Google's policy rejects, and survived here and on the Index. The tashan score
+            # is ONE named party's measurement, so it is modelled as one named party's review.
             {"@type":"ListItem","position": i+1, "item":{"@type":"SoftwareApplication","name": it["name"], "url": it["url"],
              "applicationCategory":"DeveloperApplication",
-             "aggregateRating":{"@type":"AggregateRating","ratingValue": it["tashan_score"], "bestRating": 100, "worstRating": 0, "ratingCount": 1}}}
+             "review":{"@type":"Review",
+                       "author":{"@type":"Organization","name":"tashan","url": BASE + "/"},
+                       "reviewRating":{"@type":"Rating","ratingValue": it["tashan_score"],
+                                       "bestRating": 100, "worstRating": 0},
+                       "reviewAspect":"tashan score — upkeep and freshness, gated by adoption",
+                       "datePublished": GEN_DATE}}}
             for i, it in enumerate(a["itemlist"])]})
     ld = "\n".join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False) + "</script>" for x in lds)
     return ("<!doctype html>\n<html lang=\"" + a.get("lang","en") + "\">\n<head>\n"

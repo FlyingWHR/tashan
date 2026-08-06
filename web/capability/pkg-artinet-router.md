@@ -9,10 +9,10 @@
 - npm: https://www.npmjs.com/package/@artinet/router
 - Type: npm
 - Category: security
-- tashan score: 22.0 / 100
+- tashan score: 21.0 / 100
 - Adoption: 8.0
 - Upkeep: 49.0
-- Freshness: 40.0
+- Freshness: 39.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: abandoned
 - Instruction depth: not yet graded
@@ -29,4 +29,4 @@ claude mcp add artinet-router -- npx -y @artinet/router
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

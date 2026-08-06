@@ -9,10 +9,10 @@
 - npm: https://www.npmjs.com/package/@agenttrust/mcp-server
 - Type: npm
 - Category: security
-- tashan score: 44.0 / 100
+- tashan score: 43.0 / 100
 - Adoption: 28.0
-- Upkeep: 63.0
-- Freshness: 66.0
+- Upkeep: 62.0
+- Freshness: 65.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -36,4 +36,4 @@ claude mcp add agenttrust-mcp-server -- npx -y @agenttrust/mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

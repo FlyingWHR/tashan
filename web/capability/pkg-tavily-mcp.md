@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/tavily-mcp
 - Type: npm
 - Category: search
-- tashan score: 86.0 / 100
-- Adoption: 72.0
-- Upkeep: 98.0
-- Freshness: 96.0
+- tashan score: 87.0 / 100
+- Adoption: 70.0
+- Upkeep: 100.0
+- Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - GitHub stars: 2,248
-- npm downloads: 32,517/week
+- npm downloads: 22,696/week
 - License: MIT
 - Official: no
 
@@ -36,4 +36,4 @@ claude mcp add tavily -- npx -y tavily-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

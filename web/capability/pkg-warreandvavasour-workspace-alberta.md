@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/@warreandvavasour/workspace-alberta
 - Type: npm
 - Category: finance
-- tashan score: 56.0 / 100
-- Adoption: 35.0
-- Upkeep: 55.0
-- Freshness: 95.0
+- tashan score: 46.0 / 100
+- Adoption: 22.0
+- Upkeep: 54.0
+- Freshness: 94.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
-- npm downloads: 325/week
+- npm downloads: 34/week
 - Official: no
 
 ## Install
@@ -33,4 +33,4 @@ claude mcp add workspace-alberta -- npx -y @warreandvavasour/workspace-alberta
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

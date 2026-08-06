@@ -8,15 +8,16 @@
 - Source: https://github.com/madtaco-dev/mcp
 - npm: https://www.npmjs.com/package/@madtaco/mcp
 - Type: npm
-- Category: security
+- Category: design
 - tashan score: 52.0 / 100
 - Adoption: 28.0
 - Upkeep: 62.0
-- Freshness: 92.0
+- Freshness: 91.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
 - npm downloads: 100/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add madtaco-mcp -- npx -y @madtaco/mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

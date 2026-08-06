@@ -1,4 +1,4 @@
-# Discord
+# Discord · pasympa
 
 > A lightweight, multi-guild Discord MCP server with 95+ tools
 
@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/@pasympa/discord-mcp
 - Type: npm
 - Category: productivity
-- tashan score: 59.0 / 100
-- Adoption: 35.0
-- Upkeep: 67.0
-- Freshness: 93.0
+- tashan score: 65.0 / 100
+- Adoption: 38.0
+- Upkeep: 69.0
+- Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 330/week
+- npm downloads: 505/week
 - Official: no
 
 ## Install
@@ -34,4 +34,4 @@ claude mcp add discord -- npx -y @pasympa/discord-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

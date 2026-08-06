@@ -9,14 +9,15 @@
 - npm: https://www.npmjs.com/package/@antonytm/mcp-sitecore-server
 - Type: npm
 - Category: data
-- tashan score: 65.0 / 100
-- Adoption: 37.0
+- tashan score: 64.0 / 100
+- Adoption: 36.0
 - Upkeep: 73.0
-- Freshness: 99.0
+- Freshness: 98.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
-- npm downloads: 461/week
+- npm downloads: 402/week
+- License: Apache-2.0
 - Official: no
 
 ## Install
@@ -34,4 +35,4 @@ claude mcp add sitecore-server -- npx -y @antonytm/mcp-sitecore-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

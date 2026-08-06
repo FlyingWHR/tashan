@@ -8,7 +8,7 @@
 - Source: https://github.com/EOX-A/EOxElements
 - npm: https://www.npmjs.com/package/@eox/elements-mcp-server
 - Type: npm
-- Category: security
+- Category: browser
 - tashan score: 50.0 / 100
 - Adoption: 24.0
 - Upkeep: 80.0
@@ -33,4 +33,4 @@ claude mcp add EOxElements -- npx -y @eox/elements-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/@agentutility/mcp-compose
 - Type: npm
 - Category: productivity
-- tashan score: 64.0 / 100
-- Adoption: 39.0
-- Upkeep: 67.0
-- Freshness: 96.0
+- tashan score: 57.0 / 100
+- Adoption: 30.0
+- Upkeep: 68.0
+- Freshness: 97.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 577/week
+- npm downloads: 139/week
 - License: MIT
 - Official: no
 
@@ -34,4 +34,4 @@ claude mcp add compose -- npx -y @agentutility/mcp-compose
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -8,7 +8,7 @@
 - Source: https://github.com/RPGMais/mcp-n8n
 - npm: https://www.npmjs.com/package/@nextoolsolutions/mcp-n8n
 - Type: npm
-- Category: database
+- Category: data
 - tashan score: 33.0 / 100
 - Adoption: 25.0
 - Upkeep: 44.0
@@ -33,4 +33,4 @@ claude mcp add n8n -- npx -y @nextoolsolutions/mcp-n8n
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/vercel-mcp
 - Type: npm
 - Category: cloud
-- tashan score: 22.0 / 100
-- Adoption: 52.0
+- tashan score: 23.0 / 100
+- Adoption: 56.0
 - Upkeep: 34.0
 - Freshness: 15.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: abandoned
 - Instruction depth: not yet graded
-- npm downloads: 1,167/week
+- npm downloads: 2,267/week
 - License: MIT
 - Official: no
 
@@ -34,4 +34,4 @@ claude mcp add vercel -- npx -y vercel-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

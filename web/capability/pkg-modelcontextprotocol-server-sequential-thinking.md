@@ -12,12 +12,12 @@
 - tashan score: 92.0 / 100
 - Adoption: 97.0
 - Upkeep: 88.0
-- Freshness: 92.0
+- Freshness: 91.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - GitHub stars: 88,810
-- npm downloads: 149,382/week
+- npm downloads: 133,382/week
 - License: NOASSERTION
 - Official: yes
 
@@ -35,4 +35,4 @@ claude mcp add sequential-thinking -- npx -y @modelcontextprotocol/server-sequen
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

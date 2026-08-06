@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/tmdb-mcp
 - Type: npm
 - Category: database
-- tashan score: 68.0 / 100
-- Adoption: 45.0
-- Upkeep: 67.0
-- Freshness: 96.0
+- tashan score: 66.0 / 100
+- Adoption: 40.0
+- Upkeep: 69.0
+- Freshness: 98.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
-- npm downloads: 1,598/week
+- npm downloads: 665/week
 - Official: no
 
 ## Install
@@ -33,4 +33,4 @@ claude mcp add tmdb -- npx -y tmdb-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

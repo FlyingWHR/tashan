@@ -8,7 +8,7 @@
 - Source: https://github.com/Medhovarsh/forkmind
 - npm: https://www.npmjs.com/package/forkmind
 - Type: npm
-- Category: finance
+- Category: productivity
 - tashan score: 56.0 / 100
 - Adoption: 31.0
 - Upkeep: 65.0
@@ -34,4 +34,4 @@ claude mcp add forkmind -- npx -y forkmind
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -1,4 +1,4 @@
-# Preflight
+# Preflight · Nancy-Chauhan
 
 > Know exactly where your system breaks before you ship. Scans codebases, traces service calls, and simulates what happens when real users hit your system. Finds bottlenecks, cost cliffs, rate limits, and breaking points.
 
@@ -30,4 +30,4 @@
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -8,7 +8,7 @@
 - Source: https://github.com/pulsemcp/mcp-servers
 - npm: https://www.npmjs.com/package/monarch-money-mcp-server
 - Type: npm
-- Category: comms
+- Category: cloud
 - tashan score: 51.0 / 100
 - Adoption: 28.0
 - Upkeep: 60.0
@@ -17,6 +17,7 @@
 - Health: active
 - Instruction depth: thin
 - npm downloads: 93/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add monarch-money -- npx -y monarch-money-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

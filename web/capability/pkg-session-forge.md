@@ -8,7 +8,7 @@
 - Source: https://github.com/420247jake/session-forge
 - npm: https://www.npmjs.com/package/session-forge
 - Type: npm
-- Category: ai
+- Category: cloud
 - tashan score: 34.0 / 100
 - Adoption: 24.0
 - Upkeep: 50.0
@@ -17,6 +17,7 @@
 - Health: active
 - Instruction depth: not yet graded
 - npm downloads: 55/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add session-forge -- npx -y session-forge
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

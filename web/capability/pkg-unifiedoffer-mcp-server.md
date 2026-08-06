@@ -8,7 +8,7 @@
 - Source: https://github.com/Chris85appding/unified-offer-protocol-front
 - npm: https://www.npmjs.com/package/@unifiedoffer/mcp-server
 - Type: npm
-- Category: other
+- Category: finance
 - tashan score: 24.0 / 100
 - Adoption: 24.0
 - Upkeep: 39.0
@@ -17,6 +17,7 @@
 - Health: abandoned
 - Instruction depth: not yet graded
 - npm downloads: 54/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add unifiedoffer-mcp-server -- npx -y @unifiedoffer/mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

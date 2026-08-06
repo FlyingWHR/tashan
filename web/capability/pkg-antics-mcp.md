@@ -1,6 +1,6 @@
 # Antics
 
-> Multiplayer for your game, in one prompt — an MCP server that lets an AI agent deploy a web game to a playable multiplayer URL (rooms, state sync, leaderboards).
+> Deploy a web game to a playable multiplayer URL with rooms, state sync, and leaderboards.
 
 ## Facts
 - Page: https://tashan.sh/capability/pkg-antics-mcp
@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/antics-mcp
 - Type: npm
 - Category: cloud
-- tashan score: 63.0 / 100
-- Adoption: 36.0
-- Upkeep: 69.0
+- tashan score: 68.0 / 100
+- Adoption: 41.0
+- Upkeep: 70.0
 - Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 362/week
+- npm downloads: 852/week
 - Official: no
 
 ## Install
@@ -26,7 +26,11 @@ claude mcp add antics -- npx -y antics-mcp
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: not attested
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

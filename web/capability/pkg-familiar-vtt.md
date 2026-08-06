@@ -9,14 +9,15 @@
 - npm: https://www.npmjs.com/package/familiar-vtt
 - Type: npm
 - Category: cloud
-- tashan score: 63.0 / 100
-- Adoption: 36.0
-- Upkeep: 71.0
-- Freshness: 96.0
+- tashan score: 66.0 / 100
+- Adoption: 38.0
+- Upkeep: 72.0
+- Freshness: 99.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: thin
-- npm downloads: 393/week
+- npm downloads: 504/week
+- License: SEE LICENSE IN LICENSE
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add familiar -- npx -y familiar-vtt
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

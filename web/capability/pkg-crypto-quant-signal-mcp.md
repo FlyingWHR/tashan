@@ -1,6 +1,6 @@
 # AlgoVault — Crypto Quant Trade Calls
 
-> Quant trading signals, funding rate arb scanning, and market regime detection for crypto perps.
+> The Brain Layer for AI Trading Agents — quant calls + cross-venue arb across perp venues via MCP.
 
 ## Facts
 - Page: https://tashan.sh/capability/pkg-crypto-quant-signal-mcp
@@ -9,14 +9,15 @@
 - npm: https://www.npmjs.com/package/crypto-quant-signal-mcp
 - Type: npm
 - Category: finance
-- tashan score: 65.0 / 100
-- Adoption: 38.0
-- Upkeep: 72.0
-- Freshness: 97.0
+- tashan score: 68.0 / 100
+- Adoption: 40.0
+- Upkeep: 73.0
+- Freshness: 99.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
-- npm downloads: 498/week
+- npm downloads: 681/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -34,4 +35,4 @@ claude mcp add crypto-quant-signal -- npx -y crypto-quant-signal-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

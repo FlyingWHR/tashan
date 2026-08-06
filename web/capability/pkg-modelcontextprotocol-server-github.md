@@ -1,4 +1,4 @@
-# GitHub
+# GitHub · modelcontextprotocol
 
 > MCP server for using the GitHub API
 
@@ -8,22 +8,16 @@
 - npm: https://www.npmjs.com/package/@modelcontextprotocol/server-github
 - Type: npm
 - Category: devtools
-- tashan score: 56.0 / 100
+- tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 100.0
-- Upkeep: 65.0
+- Upkeep: not measured
 - Freshness: 17.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: abandoned
 - Instruction depth: not yet graded
-- npm downloads: 130,940/week
+- npm downloads: 129,586/week
 - License: MIT
 - Official: yes
-
-## Install
-
-```sh
-claude mcp add github -- npx -y @modelcontextprotocol/server-github
-```
 
 ## Security audit
 - Known advisories: 0
@@ -34,4 +28,4 @@ claude mcp add github -- npx -y @modelcontextprotocol/server-github
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

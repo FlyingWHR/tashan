@@ -8,11 +8,11 @@
 - Source: https://github.com/aavaz-ai/zendesk-mcp-server
 - npm: https://www.npmjs.com/package/@enterpret/zendesk-mcp-server
 - Type: npm
-- Category: comms
+- Category: cloud
 - tashan score: 56.0 / 100
 - Adoption: 33.0
 - Upkeep: 76.0
-- Freshness: 80.0
+- Freshness: 79.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -26,7 +26,11 @@ claude mcp add enterpret-zendesk-mcp-server -- npx -y @enterpret/zendesk-mcp-ser
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: not attested
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

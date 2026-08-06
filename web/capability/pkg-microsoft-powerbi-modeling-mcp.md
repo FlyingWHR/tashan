@@ -8,15 +8,16 @@
 - Source: https://github.com/microsoft/powerbi-modeling-mcp
 - npm: https://www.npmjs.com/package/@microsoft/powerbi-modeling-mcp
 - Type: npm
-- Category: devtools
-- tashan score: 70.0 / 100
-- Adoption: 51.0
-- Upkeep: 75.0
-- Freshness: 87.0
+- Category: data
+- tashan score: 76.0 / 100
+- Adoption: 58.0
+- Upkeep: 79.0
+- Freshness: 98.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
-- npm downloads: 4,256/week
+- npm downloads: 13,028/week
+- License: Microsoft
 - Official: yes
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add powerbi-modeling -- npx -y @microsoft/powerbi-modeling-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

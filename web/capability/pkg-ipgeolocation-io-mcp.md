@@ -8,7 +8,7 @@
 - Source: https://github.com/IPGeolocation/ipgeolocation-io-mcp
 - npm: https://www.npmjs.com/package/ipgeolocation-io-mcp
 - Type: npm
-- Category: security
+- Category: productivity
 - tashan score: 60.0 / 100
 - Adoption: 34.0
 - Upkeep: 69.0
@@ -33,4 +33,4 @@ claude mcp add ipgeolocation-io -- npx -y ipgeolocation-io-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

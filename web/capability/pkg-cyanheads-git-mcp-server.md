@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/@cyanheads/git-mcp-server
 - Type: pkg
 - Category: devtools
-- tashan score: 77.0 / 100
-- Adoption: 64.0
+- tashan score: 78.0 / 100
+- Adoption: 65.0
 - Upkeep: 83.0
 - Freshness: 89.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
 - GitHub stars: 230
-- npm downloads: 4,116/week
+- npm downloads: 4,754/week
 - License: Apache-2.0
 - Official: no
 
@@ -36,4 +36,4 @@ claude mcp add cyanheads-git-mcp-server -- npx -y @cyanheads/git-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

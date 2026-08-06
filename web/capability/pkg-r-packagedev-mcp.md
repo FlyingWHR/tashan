@@ -8,7 +8,7 @@
 - Source: https://github.com/B0ydT/r-packagedev-mcp
 - npm: https://www.npmjs.com/package/r-packagedev-mcp
 - Type: npm
-- Category: browser
+- Category: devtools
 - tashan score: 33.0 / 100
 - Adoption: 23.0
 - Upkeep: 43.0
@@ -17,6 +17,7 @@
 - Health: active
 - Instruction depth: not yet graded
 - npm downloads: 43/week
+- License: CC-BY-4.0
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add r-packagedev -- npx -y r-packagedev-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

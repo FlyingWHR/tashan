@@ -9,10 +9,10 @@
 - npm: https://www.npmjs.com/package/vasperamemory
 - Type: npm
 - Category: ai
-- tashan score: 58.0 / 100
+- tashan score: 57.0 / 100
 - Adoption: 32.0
-- Upkeep: 71.0
-- Freshness: 92.0
+- Upkeep: 70.0
+- Freshness: 91.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -34,4 +34,4 @@ claude mcp add vasperamemory -- npx -y vasperamemory
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

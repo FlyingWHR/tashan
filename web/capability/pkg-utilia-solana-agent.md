@@ -8,15 +8,16 @@
 - Source: https://github.com/mohamedkuch/utilia-solana-agent
 - npm: https://www.npmjs.com/package/utilia-solana-agent
 - Type: npm
-- Category: security
-- tashan score: 67.0 / 100
-- Adoption: 42.0
+- Category: finance
+- tashan score: 60.0 / 100
+- Adoption: 34.0
 - Upkeep: 68.0
-- Freshness: 97.0
+- Freshness: 96.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: deep
-- npm downloads: 1,021/week
+- npm downloads: 258/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add solana-preflight -- npx -y utilia-solana-agent
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/winspect-mcp
 - Type: npm
 - Category: design
-- tashan score: 68.0 / 100
-- Adoption: 45.0
-- Upkeep: 66.0
-- Freshness: 98.0
+- tashan score: 62.0 / 100
+- Adoption: 37.0
+- Upkeep: 65.0
+- Freshness: 97.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 1,566/week
+- npm downloads: 460/week
 - Official: no
 
 ## Install
@@ -26,7 +26,11 @@ claude mcp add winspect -- npx -y winspect-mcp
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: not attested
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

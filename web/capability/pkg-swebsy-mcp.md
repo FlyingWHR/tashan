@@ -8,14 +8,14 @@
 - npm: https://www.npmjs.com/package/@swebsy/mcp
 - Type: npm
 - Category: design
-- tashan score: 63.0 / 100
-- Adoption: 36.0
+- tashan score: 65.0 / 100
+- Adoption: 38.0
 - Upkeep: 69.0
 - Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 366/week
+- npm downloads: 481/week
 - Official: no
 
 ## Install
@@ -25,7 +25,11 @@ claude mcp add swebsy-mcp -- npx -y @swebsy/mcp
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: not attested
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

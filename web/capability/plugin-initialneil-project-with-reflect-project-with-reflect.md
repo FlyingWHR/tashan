@@ -7,12 +7,12 @@
 - tashan id: plugin:initialneil/project-with-reflect/project-with-reflect
 - Source: https://github.com/initialneil/project-with-reflect
 - Type: plugin
-- Category: devtools
-- tashan score: 52.0 / 100
+- Category: productivity
+- tashan score: 48.0 / 100
 - Adoption: 22.0
-- Upkeep: not measured
-- Freshness: 96.0
-- Evidence coverage: 59% of the inputs this score can use
+- Upkeep: 64.0
+- Freshness: 100.0
+- Evidence coverage: 84% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
 - GitHub stars: 13
@@ -30,4 +30,4 @@
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -8,7 +8,7 @@
 - Source: https://github.com/LorgAI/lorg-mcp-server
 - npm: https://www.npmjs.com/package/lorg-mcp-server
 - Type: npm
-- Category: docs
+- Category: ai
 - tashan score: 50.0 / 100
 - Adoption: 28.0
 - Upkeep: 62.0
@@ -33,4 +33,4 @@ claude mcp add lorg-mcp-server -- npx -y lorg-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

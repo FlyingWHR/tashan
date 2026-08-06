@@ -8,22 +8,16 @@
 - npm: https://www.npmjs.com/package/@modelcontextprotocol/server-brave-search
 - Type: npm
 - Category: search
-- tashan score: 43.0 / 100
+- tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 85.0
-- Upkeep: 60.0
+- Upkeep: not measured
 - Freshness: 11.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: abandoned
 - Instruction depth: not yet graded
-- npm downloads: 30,334/week
+- npm downloads: 28,903/week
 - License: MIT
 - Official: yes
-
-## Install
-
-```sh
-claude mcp add brave-search -- npx -y @modelcontextprotocol/server-brave-search
-```
 
 ## Security audit
 - Known advisories: 0
@@ -33,4 +27,4 @@ claude mcp add brave-search -- npx -y @modelcontextprotocol/server-brave-search
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

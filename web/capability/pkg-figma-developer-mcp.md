@@ -17,7 +17,7 @@
 - Health: active
 - Instruction depth: not yet graded
 - GitHub stars: 15,481
-- npm downloads: 86,983/week
+- npm downloads: 81,824/week
 - License: MIT
 - Official: no
 
@@ -36,4 +36,4 @@ claude mcp add figma-developer -- npx -y figma-developer-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

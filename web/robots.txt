@@ -34,10 +34,17 @@ Allow: /
 
 Sitemap: https://tashan.sh/sitemap.xml
 
-# agent-facing measurement endpoints (JSON; see llms.txt)
-# /v0.1/scores  — compact name -> [score, vitality, evidence]
-# /v0.1/servers — full records in MCP-registry shape
+# agent-facing measurement endpoints (JSON, keyless, CORS-open; see llms.txt)
+# /v0.1/lookup?name=<pkg>   — ONE measurement. Use this to check one package, not the bulk feeds.
+# /v0.1/search?q=<query>    — ranked matches, exact name first
+# /v0.1/scores              — bulk: name -> [score, vitality, evidence, page slug]
+# /v0.1/servers             — bulk: full records in MCP-registry shape
 
-# Plain-markdown dossiers — one per capability, the same facts without the chrome.
-# Declared per page as <link rel="alternate" type="text/markdown"> and documented in llms.txt.
+# Plain-markdown twins — the same facts without the chrome, one per capability AND one per hub.
+# The hubs are the high-intent tier: "best MCP server for <category>", "what to use for <task>",
+# "what a <role> should install". Declared per page as <link rel="alternate" type="text/markdown">
+# and documented in llms.txt.
 Allow: /capability/*.md
+Allow: /category/*.md
+Allow: /task/*.md
+Allow: /role/*.md

@@ -9,14 +9,15 @@
 - npm: https://www.npmjs.com/package/paysafe-x402
 - Type: npm
 - Category: security
-- tashan score: 62.0 / 100
-- Adoption: 38.0
-- Upkeep: 64.0
-- Freshness: 96.0
+- tashan score: 51.0 / 100
+- Adoption: 25.0
+- Upkeep: 63.0
+- Freshness: 95.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
-- npm downloads: 539/week
+- npm downloads: 63/week
+- License: BUSL-1.1
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add paysafe -- npx -y paysafe-x402
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

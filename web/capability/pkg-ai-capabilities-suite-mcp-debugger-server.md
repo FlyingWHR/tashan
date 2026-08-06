@@ -8,15 +8,16 @@
 - Source: https://github.com/digitaldefiance/ai-capabilities-suite
 - npm: https://www.npmjs.com/package/@ai-capabilities-suite/mcp-debugger-server
 - Type: npm
-- Category: ai
-- tashan score: 33.0 / 100
+- Category: docs
+- tashan score: 32.0 / 100
 - Adoption: 30.0
-- Upkeep: 51.0
-- Freshness: 43.0
+- Upkeep: 50.0
+- Freshness: 42.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: abandoned
 - Instruction depth: not yet graded
 - npm downloads: 135/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add debugger -- npx -y @ai-capabilities-suite/mcp-debugger-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

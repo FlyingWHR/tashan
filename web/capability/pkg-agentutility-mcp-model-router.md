@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/@agentutility/mcp-model-router
 - Type: npm
 - Category: ai
-- tashan score: 60.0 / 100
-- Adoption: 36.0
-- Upkeep: 62.0
-- Freshness: 98.0
+- tashan score: 58.0 / 100
+- Adoption: 34.0
+- Upkeep: 61.0
+- Freshness: 97.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 376/week
+- npm downloads: 255/week
 - License: MIT
 - Official: no
 
@@ -34,4 +34,4 @@ claude mcp add model-router -- npx -y @agentutility/mcp-model-router
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

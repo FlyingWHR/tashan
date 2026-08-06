@@ -1,6 +1,6 @@
 # Security Guidance
 
-> Optional external dependency (official Anthropic). Hooks-based in-session security review: per-edit pattern match, end-of-turn diff review, commit review. Pipeline runs without it; the security phase still does full OWASP.
+> Security review for Claude-generated code. Pattern-based warnings on edits, LLM-powered diff review on Stop, and an agentic commit reviewer that catches injection, XSS, SSRF, hardcoded secrets, and 25+ other vulnerability classes.
 
 ## Facts
 - Page: https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-security-guidance
@@ -21,12 +21,12 @@
 ## Install
 
 ```sh
-/plugin marketplace add AratKruglik/claude-sdlc
-/plugin install security-guidance@sdlc-marketplace
+/plugin marketplace add anthropics/claude-plugins-official
+/plugin install security-guidance@claude-plugins-official
 ```
 
 ## Security audit
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

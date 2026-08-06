@@ -31,7 +31,27 @@ sys.path.insert(0, os.path.join(ROOT, "pipeline"))
 CACHE = os.path.join(ROOT, "data", "security_cache.json")
 OSV = "https://api.osv.dev/v1/query"
 NPM = "https://registry.npmjs.org/"
+# A budget of NETWORK FETCHES, not of rows. It used to be a `LIMIT` on the query, which quietly made
+# the two things the same and let the cache work against us: a cached row still consumed a slot, so
+# once the top of the queue was cached the run spent its whole budget doing nothing and never reached
+# the packages that needed fetching. Counting fetches lets the walk go all the way down the demand
+# order every night and spend the budget only where there is something to learn.
 SEC_CAP = int(os.environ.get("SEC_CAP", "1500"))
+# How long a finding stays good. Tighter than the npm metadata TTL because the things it reads move
+# under us: a CVE is published against a version that is already installed everywhere, a maintainer
+# adds a postinstall in a patch release, a package is added to the malicious database. At ~2,300
+# scanned that is ~330 re-fetches a day, well inside SEC_CAP with room for new discovery.
+SEC_TTL_DAYS = int(os.environ.get("SEC_TTL_DAYS", "7"))
+
+
+def expired(at):
+    """True when a finding is older than the TTL, or carries no timestamp to judge it by."""
+    if not at:
+        return True
+    try:
+        return (datetime.now(timezone.utc) - datetime.fromisoformat(at)).days >= SEC_TTL_DAYS
+    except ValueError:
+        return True
 
 # ---- L3: permission surface --------------------------------------------------------------------
 # A declared dependency is a commitment: you cannot drive a browser without shipping a browser
@@ -74,7 +94,10 @@ SEVERITY_ORDER = ["LOW", "MODERATE", "MEDIUM", "HIGH", "CRITICAL", "MALICIOUS"]
 
 # Bump when the shape or meaning of a cached finding changes, so stale entries are re-fetched
 # instead of silently serving a value computed by the old, wrong rule.
-CACHE_VERSION = 2
+# 3: records whether the package declares a `bin`. Nothing about an existing finding's meaning
+#    changed, but the field cannot be back-filled from a cached entry, and "absent" must not be read
+#    as "no bin" — the board gate below treats unknown and false very differently.
+CACHE_VERSION = 3
 
 
 def _rank(sev):
@@ -181,12 +204,21 @@ def scan_npm(pkg):
     perms = sorted(k for k, (_lbl, mods) in PERMISSIONS.items()
                    if any(d in mods for d in deps))
 
+    # NOT a security signal — an identity one, recorded here because this is the only stage that
+    # already holds the version manifest. A host launches an MCP server by running a command, so a
+    # package with no `bin` cannot be one: it is a library you build servers WITH. The board was
+    # ranking @modelcontextprotocol/sdk at #1 by adoption on 53M weekly downloads, plus /core,
+    # /client, /node, /express, /hono and /fastify — every one of them a build-time dependency
+    # presented to a reader as something to install.
+    runnable = bool(v.get("bin"))
+
     return {
         "pkg": pkg,
         "version": latest,
         "advisories": advisories,
         "install_script": install_script[:300] if install_script else None,
         "provenance": provenance,
+        "runnable": runnable,
         "license": v.get("license") if isinstance(v.get("license"), str) else None,
         "deps": len(deps),
         "maintainers": len(doc.get("maintainers") or []),
@@ -207,6 +239,10 @@ def summarize(f):
         "sec_max_severity": worst,
         "sec_install_script": f.get("install_script"),
         "sec_provenance": 1 if f.get("provenance") else 0,
+        # NULL, not 0, when the cached finding predates the field. `.get()` returning None here and
+        # being written as 0 would assert "this package declares no bin" about every package scanned
+        # before today — and that assertion takes a capability off the board.
+        "npm_runnable": None if "runnable" not in f else (1 if f["runnable"] else 0),
         "sec_permissions": json.dumps(f["permissions"]) if f.get("permissions") else None,
         "sec_remote_content": 1 if f.get("remote_content") else 0,
         "sec_dep_count": f.get("deps"),
@@ -228,11 +264,17 @@ def main():
         except (ValueError, OSError):
             cache = {}
 
+    # BY DEMAND FIRST, never-scanned only as the tie-break. The old order put every never-scanned row
+    # ahead of every scanned one, which reads as fairness and is the wrong risk model for this stage:
+    # a stale advisory scan on a package with 53M weekly installs is a worse thing to publish than a
+    # missing one on a package with 200. Staleness here is the safety problem, so re-verification of
+    # the most-used has to outrank breadth. Breadth still advances every night — the fetch budget is
+    # spent on whatever is stale or new as the walk goes down, and a cached, current row costs nothing.
     rows = con.execute(
         "SELECT id, npm_pkg FROM capabilities WHERE npm_pkg IS NOT NULL "
-        "ORDER BY (sec_scanned_at IS NULL) DESC, npm_downloads DESC NULLS LAST, config_reach DESC "
-        "LIMIT ?", (SEC_CAP,)).fetchall()
-    print(f"  scanning {len(rows)} npm-backed capabilities "
+        "ORDER BY npm_downloads DESC NULLS LAST, (sec_scanned_at IS NULL) DESC, config_reach DESC"
+    ).fetchall()
+    print(f"  walking {len(rows):,} npm-backed capabilities, budget {SEC_CAP:,} fetches "
           f"({len(cache)} cached)...", flush=True)
 
     scanned = fresh = flagged = 0
@@ -242,7 +284,17 @@ def main():
         f = cache.get(pkg)
         if f is not None and f.get("v") != CACHE_VERSION:
             f = None                 # computed by an older rule — re-fetch rather than trust it
+        elif f is not None and expired(f.get("scanned_at")):
+            # AND AN ADVISORY SCAN GOES OFF. A version bump alone would have frozen this cache the
+            # moment the sweep finished: scanned once, correct that day, served for ever. Everything
+            # this stage reads is a moving target — a new CVE lands against the version already
+            # published, a maintainer adds a postinstall, a package is flagged malicious. This is the
+            # one stage where serving a memory as a measurement is a safety problem, not a staleness
+            # one, and the whole point of the demand-first walk is that the answer stays true.
+            f = None
         if f is None:
+            if fresh >= SEC_CAP:
+                continue             # budget spent; the rest of the walk still syncs from cache
             f = scan_npm(pkg)
             if f is None:
                 continue

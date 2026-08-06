@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/shadcn-ui-mcp-server
 - Type: npm
 - Category: design
-- tashan score: 45.0 / 100
-- Adoption: 54.0
+- tashan score: 44.0 / 100
+- Adoption: 51.0
 - Upkeep: 43.0
 - Freshness: 55.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: stable
 - Instruction depth: not yet graded
 - GitHub stars: 60
-- npm downloads: 1,624/week
+- npm downloads: 1,047/week
 - License: MIT
 - Official: no
 
@@ -36,4 +36,4 @@ claude mcp add shadcn-ui-mcp-server -- npx -y shadcn-ui-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

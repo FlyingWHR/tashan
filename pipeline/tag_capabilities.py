@@ -293,9 +293,16 @@ def run_grade(con, tasks, limit, dry=False):
         print(f"\ndry run — nothing called. {len(todo)} would be graded.")
         return 0
     if not API_KEY:
-        print("ANTHROPIC_API_KEY not set — cannot grade. Run --declared for the free pass, or "
-              "--dry-run to inspect prompts.")
-        return 1
+        # SKIP, NOT FAIL — the same rule grade_expertise.py already follows and the same rule the
+        # CF_* push stages follow. This became a nightly pipeline stage, and returning 1 painted the
+        # whole run red for a credential that is optional by design: `run.py` reports the failure,
+        # the daily workflow gates its commit on a green suite, and one absent key would have stopped
+        # the measurement it has nothing to do with. A missing credential must never take down the
+        # measurement, and must never be silent either.
+        print("SKIPPED — ANTHROPIC_API_KEY is not set, so no capability is task-graded tonight. "
+              "The free --declared pass has already run; task coverage stays where it is, which is "
+              "the axis that makes the job and role pages work.")
+        return 0
     for i, (cap_id, name, desc, full, body) in enumerate(todo, 1):
         try:
             raw = call_api(sysmsg, prompt_for(name, desc, full, body))

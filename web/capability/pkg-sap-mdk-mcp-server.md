@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/@sap/mdk-mcp-server
 - Type: npm
 - Category: ai
-- tashan score: 76.0 / 100
-- Adoption: 58.0
-- Upkeep: 80.0
-- Freshness: 98.0
+- tashan score: 75.0 / 100
+- Adoption: 57.0
+- Upkeep: 79.0
+- Freshness: 97.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 13,334/week
+- npm downloads: 12,679/week
 - Official: no
 
 ## Install
@@ -34,4 +34,4 @@ claude mcp add mdk-mcp-server -- npx -y @sap/mdk-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

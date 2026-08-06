@@ -9,14 +9,15 @@
 - npm: https://www.npmjs.com/package/blogcaster-mcp
 - Type: npm
 - Category: browser
-- tashan score: 26.0 / 100
+- tashan score: 25.0 / 100
 - Adoption: 24.0
-- Upkeep: 37.0
-- Freshness: 44.0
+- Upkeep: 36.0
+- Freshness: 43.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: abandoned
 - Instruction depth: not yet graded
 - npm downloads: 55/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add blogcaster -- npx -y blogcaster-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

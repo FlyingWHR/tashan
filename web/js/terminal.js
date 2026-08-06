@@ -163,6 +163,12 @@
   // slug is derived EXCEPT where the export ships an override — see index.js capHref. The derivation
   // must match build.py slugify() byte for byte, and `o.slug` wins when a collision made it wrong.
   function capHref(o) { return "/capability/" + (o.slug || o.id.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")) + ".html"; }
+  // EXPORTED so a new page cannot invent a 16th slugify. compare.js wrote its own, dropped the
+  // `o.slug` override, and sent the official pkg:@stripe/mcp (score 69) to /capability/
+  // pkg-stripe-mcp.html — a page that exists and belongs to a DIFFERENT package, third-party
+  // stripe-mcp at 45, shown under the same name. It never 404s, so nothing would have caught it.
+  // One wrong row in 1,080 is the shape this bug always takes: invisible in every spot-check.
+  window.tashanCapHref = capHref;
 
   // ---------- keys ----------
   document.addEventListener("keydown", function (e) {

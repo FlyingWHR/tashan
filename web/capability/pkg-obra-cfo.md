@@ -8,15 +8,16 @@
 - Source: https://github.com/lilycip/obra-cfo
 - npm: https://www.npmjs.com/package/obra-cfo
 - Type: npm
-- Category: data
+- Category: comms
 - tashan score: 48.0 / 100
 - Adoption: 29.0
 - Upkeep: 52.0
-- Freshness: 89.0
+- Freshness: 88.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - npm downloads: 109/week
+- License: Apache-2.0
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add obra-cfo -- npx -y obra-cfo
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

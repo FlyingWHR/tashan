@@ -1,4 +1,4 @@
-# Cortex
+# Cortex · danielblomma
 
 > Local repo context for coding assistants with semantic search and graph relationships.
 
@@ -9,14 +9,15 @@
 - npm: https://www.npmjs.com/package/@danielblomma/cortex-mcp
 - Type: npm
 - Category: cloud
-- tashan score: 58.0 / 100
+- tashan score: 57.0 / 100
 - Adoption: 31.0
 - Upkeep: 71.0
-- Freshness: 93.0
+- Freshness: 92.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
 - npm downloads: 161/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add cortex -- npx -y @danielblomma/cortex-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

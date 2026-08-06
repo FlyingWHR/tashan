@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/rive-mcp-server
 - Type: npm
 - Category: design
-- tashan score: 61.0 / 100
+- tashan score: 60.0 / 100
 - Adoption: 36.0
 - Upkeep: 63.0
-- Freshness: 99.0
+- Freshness: 98.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 358/week
+- npm downloads: 381/week
 - Official: no
 
 ## Install
@@ -34,4 +34,4 @@ claude mcp add rive -- npx -y rive-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

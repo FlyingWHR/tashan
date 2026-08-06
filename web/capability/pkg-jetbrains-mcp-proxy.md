@@ -10,14 +10,14 @@
 - Type: npm
 - Category: devtools
 - tashan score: not scored (catalogued only — too little public evidence)
-- Adoption: 53.0
+- Adoption: 52.0
 - Upkeep: not measured
-- Freshness: 47.0
+- Freshness: 46.0
 - Evidence coverage: not measured
 - Health: abandoned
 - Instruction depth: wrapper
 - GitHub stars: 963
-- npm downloads: 1,445/week
+- npm downloads: 1,286/week
 - License: Apache-2.0
 - Official: no
 
@@ -30,4 +30,4 @@
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

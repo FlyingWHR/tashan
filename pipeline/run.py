@@ -69,6 +69,13 @@ STAGES = [
     #
     # Both need ANTHROPIC_API_KEY and both no-op loudly without it, like the CF_* push stages — a
     # missing credential must never take down the measurement, and must never be silent either.
+    # STAGING WAS NOT IN THE LOOP, so the grader ran nightly against a manifest only a human ever
+    # refreshed. grade_expertise.py reads data/readmes/manifest.json and nothing wrote it on a
+    # schedule — graded coverage could not advance past whatever was last staged by hand, however
+    # many nights the grader ran. Cheap and self-limiting: the query excludes already-graded rows, so
+    # each run stages the next TOP_N ungraded capabilities, in demand order.
+    ("readmes",         ["pipeline/fetch_readmes.py"], "enrich",
+     "stage the next ungraded READMEs, most-used first — the grader's input queue"),
     ("expertise",       ["pipeline/grade_expertise.py"], "enrich",
      "grade how well each capability documents itself, against the published rubric (needs a key)"),
     ("task-grade",      ["pipeline/tag_capabilities.py", "--grade", "--limit", "150"], "enrich",
@@ -90,6 +97,10 @@ STAGES = [
     # sitemap by walking those directories AND links each capability to the task hubs that exist. Run
     # the other way round and every task page added this run is missing from the sitemap (33 were) and
     # unlinked from the dossiers that should point at it.
+    # FIRST in the site phase: prerender bakes the headline into methodology.html, so the measurement
+    # has to exist before any page that quotes it. Reads only, no network.
+    ("coverage",        ["pipeline/coverage.py"], "site",
+     "coverage weighted by demand — the tiers we commit to, not the ratio that falls as we discover"),
     ("compare",         ["pipeline/gen_compare.py"], "site", "head-to-head X vs Y pages"),
     ("hubs",            ["pipeline/gen_hubs.py"], "site", "category + task + role hubs, llms.txt"),
     ("pages",           ["pipeline/prerender.py"], "site", "capability pages + sitemap"),
@@ -114,7 +125,7 @@ STAGES = [
     ("push-history",    ["pipeline/push_history.py"], "site",
      "the retention series -> Cloudflare KV, where /api/history serves licence holders"),
 ]
-SITE_ONLY = {"badges", "pages", "content", "hubs", "compare", "registry", "product-tree",
+SITE_ONLY = {"badges", "pages", "content", "hubs", "compare", "coverage", "registry", "product-tree",
              "push-paid", "push-history"}
 
 

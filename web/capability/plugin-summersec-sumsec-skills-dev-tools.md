@@ -1,4 +1,4 @@
-# Dev Tools
+# Dev Tools · SummerSec
 
 > Developer tools: git-commit-pr, agent-chat-history, context7-cli/mcp/find-docs, Ponytail minimal-solution skills, frontend-design, and baoyu-design.
 
@@ -29,4 +29,4 @@
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

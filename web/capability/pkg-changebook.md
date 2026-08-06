@@ -1,21 +1,21 @@
 # Changebook
 
-> Query your product's living memory: module map + analyzed change history. Read-only MCP tools.
+> Your agent already broke this three times. ChangeBook tells it before the fourth.
 
 ## Facts
 - Page: https://tashan.sh/capability/pkg-changebook
 - tashan id: pkg:changebook
 - npm: https://www.npmjs.com/package/changebook
 - Type: npm
-- Category: data
-- tashan score: 65.0 / 100
-- Adoption: 39.0
-- Upkeep: 69.0
-- Freshness: 99.0
+- Category: search
+- tashan score: 67.0 / 100
+- Adoption: 40.0
+- Upkeep: 70.0
+- Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 604/week
+- npm downloads: 748/week
 - Official: no
 
 ## Install
@@ -25,7 +25,11 @@ claude mcp add changebook -- npx -y changebook
 ```
 
 ## Security audit
-Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
+- Known advisories: 0
+- Install-time script: none declared
+- Build provenance: not attested
+
+Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

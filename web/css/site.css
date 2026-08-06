@@ -634,6 +634,13 @@ kbd { font-family: var(--font-mono); border:1px solid var(--hairline); border-bo
 /* The ⌘K hint survived the 720px rule and overflowed the fixed status bar on phones — where it is also
    pointless, since there is no keyboard shortcut to press. Measured at 390px before removing. */
 @media (max-width:560px){ .sl-k { display:none; } .statusline { font-size:var(--fs-xs); } }
+/* THE TICKER IS DESKTOP FURNITURE. At 390px the ticker, nav and fixed status strip take 137px —
+   16% of the screen — before a single measured row, and the ticker is the one of the three that
+   does no work there: it scrolls past at a fixed speed, cannot be paused without a hover, and
+   every name in it is one tap away in the board underneath. Removed rather than shrunk; a smaller
+   version of something not worth reading is still not worth reading. `body`'s bottom padding is
+   for the fixed statusline and stays. */
+@media (max-width:560px){ .ticker { display:none; } }
 /* command palette */
 .pal { position:fixed; inset:0; z-index:100; background: rgba(6,6,8,.72);
   backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
@@ -1087,6 +1094,20 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .cmp__insth { color: var(--text-faint); font-size: var(--fs-xs); letter-spacing: .1em;
   text-transform: uppercase; margin: 0 0 .4rem; }
 @media (max-width: 46rem) { .cmp__n { display: none; } }
+
+/* The two pickers on /compare.html. A native <input list> + <datalist> rather than a combobox
+   widget: the browser already does type-ahead, keyboard navigation and screen-reader announcement,
+   and the CSP forbids the script a library would need. Overrides .tgroup's label/field grid, which
+   is built for the board toolbar's 4.75rem label column. */
+.cmp__pick { grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: var(--sp-4); }
+.field { display: block; }
+.field__l { display: block; color: var(--text-faint); font-family: var(--font-mono);
+  font-size: var(--fs-micro); letter-spacing: .1em; text-transform: uppercase; margin-bottom: .35rem; }
+.field__i { width: 100%; box-sizing: border-box; background: var(--surface); color: var(--text);
+  border: 1px solid var(--hairline); border-radius: 8px; padding: .6rem .7rem;
+  font-family: var(--font-mono); font-size: var(--fs-base); min-height: 2.75rem; }
+.field__i:focus { outline: none; border-color: var(--jade-line); background: var(--surface-2); }
+.field__i::placeholder { color: var(--text-faint); }
 
 
 /* ── touch targets ───────────────────────────────────────────────────────────────────────

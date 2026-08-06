@@ -7,7 +7,7 @@
 - tashan id: registry:io.github.AION-Analytics/aion-news-to-signal
 - Source: https://github.com/AION-Analytics/aion-news-to-signal
 - Type: python
-- Category: finance
+- Category: search
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: not measured
 - Upkeep: not measured
@@ -21,4 +21,4 @@
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

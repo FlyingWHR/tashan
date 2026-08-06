@@ -9,13 +9,13 @@
 - Type: npm
 - Category: cloud
 - tashan score: 46.0 / 100
-- Adoption: 73.0
+- Adoption: 74.0
 - Upkeep: 67.0
 - Freshness: 16.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: abandoned
 - Instruction depth: not yet graded
-- npm downloads: 40,110/week
+- npm downloads: 43,488/week
 - License: Apache-2.0
 - Official: no
 
@@ -34,4 +34,4 @@ claude mcp add cloudflare-mcp-server-cloudflare -- npx -y @cloudflare/mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

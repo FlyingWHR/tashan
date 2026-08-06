@@ -7,11 +7,11 @@
 - tashan id: plugin:unstructured-io/unstructured-foundation-marketplace/foundation
 - Source: https://github.com/Unstructured-IO/unstructured-foundation-marketplace
 - Type: plugin
-- Category: ai
-- tashan score: 42.0 / 100
-- Adoption: 7.0
-- Upkeep: 95.0
-- Freshness: 89.0
+- Category: other
+- tashan score: 44.0 / 100
+- Adoption: 11.0
+- Upkeep: 94.0
+- Freshness: 88.0
 - Evidence coverage: 84% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -22,12 +22,12 @@
 ## Install
 
 ```sh
-/plugin marketplace add anthropics/claude-plugins-community
-/plugin install foundation@claude-community
+/plugin marketplace add Unstructured-IO/unstructured-foundation-marketplace
+/plugin install foundation@unstructured-foundation
 ```
 
 ## Security audit
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

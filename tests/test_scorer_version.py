@@ -15,11 +15,29 @@ instead of silently, the same way pipeline/bump_assets.py --check does for the ?
 Run --accept ONLY together with a SCORER_VERSION bump. Accepting without bumping is precisely the
 mistake this exists to catch.
 """
-import hashlib, os, re, sys
+import datetime, hashlib, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "pipeline"))
 BASELINE = os.path.join(ROOT, "pipeline", "scorer.lock")
+# How long a scorer version is promised to hold. 90 days is a quarter — long enough that a Pro
+# customer's trend line is worth buying, short enough that a real calibration error is not frozen in
+# for a year. It is published on methodology.html; changing it here without changing it there is the
+# kind of drift tests/test_claims.py exists to catch.
+WINDOW_DAYS = 90
+
+
+def today():
+    return datetime.date.today().isoformat()
+
+
+def days_left(until):
+    if not until:
+        return None
+    try:
+        return (datetime.date.fromisoformat(until) - datetime.date.today()).days
+    except ValueError:
+        return None
 
 # Every knob and every line of arithmetic that can move a published score.
 CONSTANTS = ["COVERAGE_W", "ADOPT_W", "STAR_W", "GATE_FLOOR", "DL_FULL", "REACH_FULL", "STAR_FULL",
@@ -55,22 +73,54 @@ def fingerprint():
     return hashlib.sha256("\n".join(parts).encode()).hexdigest()[:16], mv.group(1)
 
 
+def read_baseline():
+    """`<version> <fingerprint> [effective] [stable_until]`.
+
+    The last two are the stability commitment and were added later, so a two-field lock still parses
+    — an old lock means "no window declared", not a crash.
+    """
+    parts = open(BASELINE).read().split()
+    return (parts + [None, None])[:4]
+
+
 def main():
     fp, version = fingerprint()
     if "--accept" in sys.argv:
+        _, _, eff, until = read_baseline() if os.path.exists(BASELINE) else (None, None, None, None)
+        eff = today()
+        until = (datetime.date.fromisoformat(eff) + datetime.timedelta(days=WINDOW_DAYS)).isoformat()
         with open(BASELINE, "w") as f:
-            f.write(f"{version} {fp}\n")
+            f.write(f"{version} {fp} {eff} {until}\n")
         print(f"recorded baseline: SCORER_VERSION={version} fingerprint={fp}")
+        print(f"stability window: {eff} -> {until} ({WINDOW_DAYS} days). Publish it on methodology.html.")
         return 0
 
     if not os.path.exists(BASELINE):
         print(f"  FAIL  no {os.path.relpath(BASELINE, ROOT)} — run with --accept to record the baseline")
         return 1
 
-    want_version, want_fp = open(BASELINE).read().split()
+    want_version, want_fp, eff, until = read_baseline()
     if fp == want_fp and version == want_version:
-        print(f"  ok    scoring unchanged (SCORER_VERSION={version})")
+        left = days_left(until)
+        note = f", stable through {until}" + (f" ({left}d left)" if left is not None else "") if until else ""
+        print(f"  ok    scoring unchanged (SCORER_VERSION={version}{note})")
         return 0
+
+    # THE STABILITY COMMITMENT. Pro sells score history, and history only accrues while the ruler
+    # holds still: every version boundary restarts trend() from zero, so a scorer rewritten four
+    # times in a week sells a series that is never more than two days long. The technical guard
+    # below already stops us mislabelling a change; it does nothing to stop us MAKING one. This is
+    # the part that costs something — inside the published window a scoring change is refused, and
+    # shipping one anyway requires writing down why, in a variable, where a reviewer sees it.
+    left = days_left(until)
+    if fp != want_fp and left and left > 0 and not os.environ.get("TASHAN_SCORER_BREAK_GLASS"):
+        print(f"  FAIL  the scoring changed inside the declared stability window.")
+        print(f"        {want_version} is published as stable through {until} — {left} days left.")
+        print("        Every capability's trend restarts at the boundary, and a customer paying for")
+        print("        score history gets a series that begins the day we changed our minds.")
+        print("        A correctness fix can still ship. Say so, so it is on the record:")
+        print("            TASHAN_SCORER_BREAK_GLASS='malicious-severity fix' python3 tests/run.sh")
+        return 1
     if fp != want_fp and version == want_version:
         print(f"  FAIL  the scoring changed but SCORER_VERSION is still {version!r}.")
         print("        Every stored history point claims to be comparable to the new ones, and trend()")

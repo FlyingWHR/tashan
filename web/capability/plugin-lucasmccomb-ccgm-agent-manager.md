@@ -7,18 +7,19 @@
 - tashan id: plugin:lucasmccomb/ccgm/agent-manager
 - Source: https://github.com/lucasmccomb/ccgm
 - Type: plugin
-- Category: devtools
+- Category: design
 - tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 7.0
 - Upkeep: not measured
-- Freshness: not measured
+- Freshness: 100.0
 - Evidence coverage: not measured
 - Health: abandoned
 - Instruction depth: not yet graded
+- License: MIT
 - Official: no
 
 ## Security audit
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

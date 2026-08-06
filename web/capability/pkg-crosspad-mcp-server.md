@@ -9,14 +9,15 @@
 - npm: https://www.npmjs.com/package/crosspad-mcp-server
 - Type: npm
 - Category: devtools
-- tashan score: 49.0 / 100
+- tashan score: 48.0 / 100
 - Adoption: 24.0
-- Upkeep: 64.0
-- Freshness: 89.0
+- Upkeep: 63.0
+- Freshness: 88.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - npm downloads: 51/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add crosspad -- npx -y crosspad-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

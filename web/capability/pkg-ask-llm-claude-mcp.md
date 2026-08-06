@@ -8,7 +8,7 @@
 - Source: https://github.com/Lykhoyda/ask-llm
 - npm: https://www.npmjs.com/package/@ask-llm/claude-mcp
 - Type: npm
-- Category: docs
+- Category: ai
 - tashan score: 54.0 / 100
 - Adoption: 31.0
 - Upkeep: 59.0
@@ -33,4 +33,4 @@ claude mcp add ask-claude -- npx -y @ask-llm/claude-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

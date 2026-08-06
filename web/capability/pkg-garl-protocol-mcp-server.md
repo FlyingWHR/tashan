@@ -1,4 +1,4 @@
-# Agent Trust
+# Agent Trust · garl-protocol
 
 > 18 trust tools for AI agents — verify, score, route, compare, and delegate with confidence.
 
@@ -9,21 +9,15 @@
 - npm: https://www.npmjs.com/package/@garl-protocol/mcp-server
 - Type: npm
 - Category: security
-- tashan score: 46.0 / 100
+- tashan score: not scored (catalogued only — too little public evidence)
 - Adoption: 26.0
-- Upkeep: 58.0
+- Upkeep: not measured
 - Freshness: 81.0
 - Evidence coverage: 100% of the inputs this score can use
-- Health: active
+- Health: abandoned
 - Instruction depth: not yet graded
 - npm downloads: 72/week
 - Official: no
-
-## Install
-
-```sh
-claude mcp add agent-trust -- npx -y @garl-protocol/mcp-server
-```
 
 ## Security audit
 - Known advisories: 0
@@ -33,4 +27,4 @@ claude mcp add agent-trust -- npx -y @garl-protocol/mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

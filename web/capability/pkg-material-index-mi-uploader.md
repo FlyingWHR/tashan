@@ -8,10 +8,10 @@
 - npm: https://www.npmjs.com/package/@material-index/mi-uploader
 - Type: npm
 - Category: other
-- tashan score: 45.0 / 100
+- tashan score: 44.0 / 100
 - Adoption: 19.0
 - Upkeep: 58.0
-- Freshness: 94.0
+- Freshness: 93.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -28,4 +28,4 @@ claude mcp add material-index-mi-uploader -- npx -y @material-index/mi-uploader
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

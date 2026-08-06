@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "sh.tashan/tashan",
+  "title": "tashan",
+  "description": "Score MCP servers and agent skills on public evidence before installing them: upkeep, freshness, real adoption, plus OSV advisories checked against the version you would install today.",
+  "version": "0.1.2",
+  "websiteUrl": "https://tashan.sh",
+  "repository": {
+    "url": "https://github.com/FlyingWHR/tashan",
+    "source": "github",
+    "subfolder": "cli"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "tashan-cli",
+      "version": "0.1.2",
+      "transport": { "type": "stdio" },
+      "runtimeHint": "npx",
+      "runtimeArguments": [
+        { "type": "positional", "value": "mcp", "isRequired": true, "format": "string" }
+      ]
+    }
+  ]
+}

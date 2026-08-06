@@ -8,7 +8,7 @@
 - Source: https://github.com/IncodeTechnologies/incode-idv-mcp
 - npm: https://www.npmjs.com/package/@incodetech/incode-idv-mcp
 - Type: npm
-- Category: design
+- Category: security
 - tashan score: 23.0 / 100
 - Adoption: 24.0
 - Upkeep: 36.0
@@ -34,4 +34,4 @@ claude mcp add incode-idv -- npx -y @incodetech/incode-idv-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

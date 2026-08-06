@@ -226,6 +226,49 @@ check("every file the CLI imports is actually published",
 check("the bundled skill ships with the plugin",
       os.path.exists(os.path.join(ROOT, "plugin", "skills", "tashan", "SKILL.md")))
 
+
+# ---- the markdown tier for hubs -------------------------------------------------------------
+# The hubs answer the questions an answer engine is actually asked ("best MCP server for X", "what
+# should a data engineer install") and had no machine-readable twin for weeks while every individual
+# capability had one. Two ways that breaks, both checked here: a hub with no twin (the tier silently
+# stops covering new pages), and a rel=alternate pointing at a twin that was never written — which is
+# worse than no declaration, because a crawler follows it into a 404.
+print()
+_hub_html = sorted(glob.glob(os.path.join(WEB, "category", "*.html"))
+                   + glob.glob(os.path.join(WEB, "task", "*.html"))
+                   + glob.glob(os.path.join(WEB, "role", "*.html")))
+_missing, _dangling, _declared = [], [], 0
+for p in _hub_html:
+    src = open(p, encoding="utf-8").read()
+    m = re.search(r'<link rel="alternate" type="text/markdown" href="([^"]+)"', src)
+    # Page 2+ of a paginated category deliberately has no twin: the twin on page 1 carries the top of
+    # the whole shelf and says how many rows are below it.
+    tail = re.match(r"^[a-z0-9-]+-\d+$", os.path.basename(p)[:-5]) and "/category/" in p
+    if m:
+        _declared += 1
+        if not os.path.exists(os.path.join(WEB, m.group(1).lstrip("/"))):
+            _dangling.append(m.group(1))
+    elif not tail:
+        _missing.append(os.path.relpath(p, WEB))
+check(f"every published hub declares a markdown twin ({_declared} of {len(_hub_html)} pages)",
+      not _missing, f"{len(_missing)} without one, e.g. {_missing[:3]}")
+check("no rel=alternate points at a markdown twin that was never written",
+      not _dangling, f"{len(_dangling)} dangling, e.g. {_dangling[:3]}")
+
+_twins = glob.glob(os.path.join(WEB, "category", "*.md")) + \
+         glob.glob(os.path.join(WEB, "task", "*.md")) + glob.glob(os.path.join(WEB, "role", "*.md"))
+_orphans = [os.path.relpath(t, WEB) for t in _twins if not os.path.exists(t[:-3] + ".html")]
+check(f"no orphan twin outlives its page ({len(_twins)} twins)",
+      not _orphans, f"e.g. {_orphans[:3]}")
+# A twin that shipped without its ranking would be a blank page an answer engine quotes as an answer.
+_thin = [os.path.relpath(t, WEB) for t in _twins
+         if open(t, encoding="utf-8").read().count("\n| ") < 2]
+check("every twin carries at least two ranked rows", not _thin, f"e.g. {_thin[:3]}")
+# llms.txt is the one place a crawler learns the convention exists at all.
+_llms = open(os.path.join(WEB, "llms.txt"), encoding="utf-8").read()
+check("llms.txt announces the hub markdown convention",
+      all(s in _llms for s in ("/category/<id>.md", "/task/<slug>.md", "/role/<id>.md")))
+
 print()
 print("=" * 46)
 print("hubs: %d/%d passed%s" % (ok, ok + fail, " · all green" if not fail else ""))

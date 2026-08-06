@@ -8,7 +8,7 @@
 - Source: https://github.com/SPerekrestova/interactive-leetcode-mcp
 - npm: https://www.npmjs.com/package/@sperekrestova/interactive-leetcode-mcp
 - Type: npm
-- Category: design
+- Category: cloud
 - tashan score: 51.0 / 100
 - Adoption: 31.0
 - Upkeep: 60.0
@@ -34,4 +34,4 @@ claude mcp add interactive-leetcode -- npx -y @sperekrestova/interactive-leetcod
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

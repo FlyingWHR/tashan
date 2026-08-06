@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/feishu-user-plugin
 - Type: npm
 - Category: comms
-- tashan score: 60.0 / 100
-- Adoption: 37.0
+- tashan score: 59.0 / 100
+- Adoption: 36.0
 - Upkeep: 69.0
-- Freshness: 89.0
+- Freshness: 88.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
-- npm downloads: 441/week
+- npm downloads: 376/week
 - Official: no
 
 ## Install
@@ -34,4 +34,4 @@ claude mcp add feishu-user-plugin -- npx -y feishu-user-plugin
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

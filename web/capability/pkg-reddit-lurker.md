@@ -8,7 +8,7 @@
 - Source: https://github.com/ProgenyAlpha/reddit-lurker
 - npm: https://www.npmjs.com/package/reddit-lurker
 - Type: npm
-- Category: search
+- Category: productivity
 - tashan score: 33.0 / 100
 - Adoption: 21.0
 - Upkeep: 45.0
@@ -33,4 +33,4 @@ claude mcp add lurk -- npx -y reddit-lurker
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

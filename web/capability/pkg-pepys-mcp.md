@@ -8,10 +8,10 @@
 - npm: https://www.npmjs.com/package/pepys-mcp
 - Type: npm
 - Category: other
-- tashan score: 48.0 / 100
+- tashan score: 47.0 / 100
 - Adoption: 27.0
-- Upkeep: 53.0
-- Freshness: 90.0
+- Upkeep: 52.0
+- Freshness: 89.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -33,4 +33,4 @@ claude mcp add pepys -- npx -y pepys-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

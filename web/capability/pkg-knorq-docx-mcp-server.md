@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/@knorq/docx-mcp-server
 - Type: npm
 - Category: productivity
-- tashan score: 55.0 / 100
-- Adoption: 44.0
+- tashan score: 54.0 / 100
+- Adoption: 43.0
 - Upkeep: 52.0
-- Freshness: 82.0
+- Freshness: 81.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
 - GitHub stars: 2
-- npm downloads: 337/week
+- npm downloads: 297/week
 - License: MIT
 - Official: no
 
@@ -35,4 +35,4 @@ claude mcp add knorq-docx-mcp-server -- npx -y @knorq/docx-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

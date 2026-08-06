@@ -5,7 +5,7 @@
 ## Facts
 - Page: https://tashan.sh/capability/pkg-i4ctime-q-ring
 - tashan id: pkg:@i4ctime/q-ring
-- Source: https://github.com/I4cTime/quantum_ring
+- Source: https://github.com/I4cTime/q-ring
 - npm: https://www.npmjs.com/package/@i4ctime/q-ring
 - Type: npm
 - Category: devtools
@@ -33,4 +33,4 @@ claude mcp add q-ring -- npx -y @i4ctime/q-ring
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

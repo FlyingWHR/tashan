@@ -8,11 +8,11 @@
 - Source: https://github.com/jibaoproxyofficial-pixel/serpjet-mcp
 - npm: https://www.npmjs.com/package/serpjet-mcp
 - Type: npm
-- Category: design
+- Category: files
 - tashan score: 44.0 / 100
 - Adoption: 21.0
-- Upkeep: 54.0
-- Freshness: 92.0
+- Upkeep: 53.0
+- Freshness: 91.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -29,4 +29,4 @@ claude mcp add serpjet -- npx -y serpjet-mcp
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -9,14 +9,14 @@
 - npm: https://www.npmjs.com/package/wigolo
 - Type: npm
 - Category: search
-- tashan score: 67.0 / 100
+- tashan score: 66.0 / 100
 - Adoption: 45.0
-- Upkeep: 65.0
-- Freshness: 95.0
+- Upkeep: 64.0
+- Freshness: 94.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 1,643/week
+- npm downloads: 1,516/week
 - Official: no
 
 ## Install
@@ -34,4 +34,4 @@ claude mcp add wigolo -- npx -y wigolo
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

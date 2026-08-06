@@ -23,7 +23,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "tashan.db")
 OUT = os.path.join(ROOT, "data", "readmes")
 os.makedirs(OUT, exist_ok=True)
-TOP_N = int(os.environ.get("TOP_N", "24"))
+# 24 was a hand-grading batch size, from when a human read every README in the manifest. This is a
+# nightly queue now (pipeline/run.py, stage `readmes`), and the grader takes whatever is staged, so
+# the default is the size of a night's work rather than an afternoon's.
+TOP_N = int(os.environ.get("TOP_N", "120"))
 # 4,000 was too little to grade on and it showed: 735 of 836 staged READMEs hit the cap exactly, and
 # the first pass came back 84% "solid" with zero wrapper and zero slop — implausible for an ecosystem
 # whose rubric has a "slop" band because the filler is real. The evidence that separates thin from
@@ -66,7 +69,13 @@ if "--stratified" in sys.argv:
                 seen.add(r[0]); rows.append(r)
         print(f"  band {lo:>3}-{hi:<3} {len(band):5,} eligible -> sampled {len(pick)}")
 else:
-    rows = con.execute(SEL + WHERE + " ORDER BY tashan_score DESC LIMIT ?", (TOP_N,)).fetchall()
+    # BY DEMAND, NOT BY SCORE. The default queue took the highest-scoring ungraded rows, which is the
+    # wrong axis: nobody asks us about a well-kept package nobody uses. Measured 5 Aug on the top 20
+    # by weekly downloads, 18 had no grade — chrome-devtools-mcp at 2.28M/wk among them — while the
+    # queue was busy grading things further down the board. Score answers "is this good"; the queue
+    # has to answer "will someone look this up". Same fix as the scan and task queues already carry.
+    rows = con.execute(SEL + WHERE + " ORDER BY npm_downloads DESC NULLS LAST, adoption DESC NULLS LAST,"
+                       " tashan_score DESC LIMIT ?", (TOP_N,)).fetchall()
 man = []
 for cid, name, repo, pkg, desc in rows:
     # try common README locations

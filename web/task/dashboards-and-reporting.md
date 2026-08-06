@@ -1,0 +1,59 @@
+# What to use for dashboards and reporting
+
+> 'Reporting' and 'dashboards' — the recurring numbers leadership reads. 'analytics' scored higher (115) but names a field, not a step.
+
+Source: https://tashan.sh/task/dashboards-and-reporting.html
+Ranked by fit for the task, then how well it documents itself, then the tashan score
+  (upkeep and freshness, gated by real adoption). Public evidence only — nothing paid can
+  change a rank. Method: https://tashan.sh/methodology.html
+
+## Ranked
+
+| # | Capability | tashan score | Adoption evidence | Activity |
+|---|---|---|---|---|
+| 1 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 76 | 4k ★ | active |
+| 2 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
+| 3 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 64 | 100 ★ | active |
+| 4 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 54 | 12 ★ | active |
+| 5 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 54 | 7 ★ | active |
+| 6 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 69 | 64 ★ | active |
+| 7 | [Session Report](https://tashan.sh/capability/skill-anthropics-session-report.html) | 50 | 2 repos | active |
+| 8 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 50 | 2 ★ | active |
+| 9 | [Campaign Analytics](https://tashan.sh/capability/skill-alirezarezvani-campaign-analytics.html) | 49 | 2 repos | active |
+| 10 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 47 | 0 ★ | active |
+| 11 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
+| 12 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
+| 13 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 45 | 1 ★ | active |
+| 14 | [Rill](https://tashan.sh/capability/plugin-rilldata-agent-skills-rill.html) | 44 | 0 ★ | active |
+| 15 | [Holistics Development](https://tashan.sh/capability/plugin-holistics-skills-holistics-development.html) | 43 | 1 marketplaces | active |
+| 16 | [Holistics Reporting](https://tashan.sh/capability/plugin-holistics-skills-holistics-reporting.html) | 43 | 1 marketplaces | active |
+| 17 | [Sap Sac Custom Widget](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-custom-widget.html) | 42 | 1 marketplaces | — |
+| 18 | [Sap Sac Planning](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-planning.html) | 42 | 1 marketplaces | — |
+| 19 | [Sap Sac Scripting](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-scripting.html) | 42 | 1 marketplaces | — |
+| 20 | [Pptx](https://tashan.sh/capability/skill-anthropics-pptx.html) | not scored | 1 repos | active |
+| 21 | [Xlsx · anthropics](https://tashan.sh/capability/skill-anthropics-xlsx.html) | not scored | 1 repos | active |
+| 22 | [Receipts](https://tashan.sh/capability/skill-anthropics-receipts.html) | not scored | 1 repos | active |
+| 23 | [Excel Automation](https://tashan.sh/capability/skill-composiohq-excel-automation.html) | not scored | 1 repos | active |
+| 24 | [Googleads Automation](https://tashan.sh/capability/skill-composiohq-googleads-automation.html) | not scored | 1 repos | active |
+| 25 | [Social Media Analyzer](https://tashan.sh/capability/skill-alirezarezvani-social-media-analyzer.html) | not scored | 1 repos | active |
+| 26 | [Product Analytics](https://tashan.sh/capability/skill-alirezarezvani-product-analytics.html) | not scored | 1 repos | active |
+| 27 | [Looker](https://tashan.sh/capability/plugin-gemini-cli-extensions-looker-looker.html) | 66 | 52 ★ | active |
+| 28 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 65 | 30 ★ | active |
+| 29 | [Preset CLI Skills](https://tashan.sh/capability/plugin-preset-io-agent-skills-preset-cli-skills.html) | 60 | 10 ★ | active |
+| 30 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 63 | 334/wk | active |
+| 31 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 60 | 40 ★ | active |
+| 32 | [Dashboards](https://tashan.sh/capability/pkg-mcp-dashboards.html) | 52 | 142/wk | active |
+| 33 | [Tabler](https://tashan.sh/capability/pkg-tabler-mcp-server.html) | 46 | 45/wk | active |
+| 34 | [Data Visualisation And Publishing](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-data-visualisation-and-publishing.html) | 41 | 1 marketplaces | active |
+| 35 | [Toggl](https://tashan.sh/capability/pkg-verygoodplugins-mcp-toggl.html) | 41 | 48/wk | active |
+| 36 | [Email Analytics](https://tashan.sh/capability/plugin-sendx-email-skills-email-analytics.html) | 39 | 1 marketplaces | active |
+| 37 | [Ship Readiness](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-ship-readiness.html) | 37 | 1 marketplaces | active |
+| 38 | [Startup Dashboard](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-startup-dashboard.html) | 37 | 1 marketplaces | active |
+| 39 | [Visuals](https://tashan.sh/capability/pkg-harrybin-visuals-mcp.html) | 37 | 44/wk | active |
+
+## What these numbers are not
+
+- The tashan score measures upkeep, freshness and adoption. It is **not** a security
+  verdict and **not** a measure of whether the capability works well.
+- `not scored` means too little public evidence to rank, never that something is bad.
+- The security audit is separate and free per capability, on each page above.

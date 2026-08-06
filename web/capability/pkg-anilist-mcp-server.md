@@ -10,13 +10,13 @@
 - Type: npm
 - Category: data
 - tashan score: 66.0 / 100
-- Adoption: 43.0
-- Upkeep: 64.0
-- Freshness: 97.0
+- Adoption: 41.0
+- Upkeep: 67.0
+- Freshness: 98.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: solid
-- npm downloads: 1,229/week
+- npm downloads: 817/week
 - Official: no
 
 ## Install
@@ -33,4 +33,4 @@ claude mcp add anilist-mcp-server -- npx -y anilist-mcp-server
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

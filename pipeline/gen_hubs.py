@@ -100,7 +100,25 @@ def head(title, desc, url, lds, extra=""):
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>\n'
         '<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>\n'
         '<link rel="stylesheet" href="/css/site.css?v=' + AV + '">\n'
+        # THE MARKDOWN TWIN, DECLARED. Capability pages have announced theirs since the tier was
+        # built; the hubs generated one and told nobody, which is the same orphan problem the module
+        # docstring warns about for the hubs themselves. An answer engine cannot use a convention it
+        # has to guess at. Emitted only where a twin is actually written — page 2+ of a paginated
+        # category has none, and a rel=alternate to a 404 is worse than no declaration.
+        + (('<link rel="alternate" type="text/markdown" href="'
+            + esc(md_href(url)) + '" title="Plain-markdown version">\n') if md_href(url) else "")
         + extra + ld + "\n</head>\n<body>\n" + nav_for(url))
+
+
+def md_href(url):
+    """The .md twin's path for a hub URL, or "" where no twin is written."""
+    p = url[len(BASE):] if url.startswith(BASE) else url
+    if not p.endswith(".html"):
+        return ""
+    stem = p[:-5]
+    if re.match(r"^/category/[a-z0-9-]+-\d+$", stem):   # paginated tail: twin lives on page 1
+        return ""
+    return stem + ".md" if stem.split("/")[1:2] and stem.split("/")[1] in ("category", "task", "role") else ""
 
 
 T_SCORE = 'The tashan score, 0–100: upkeep and freshness, gated by real adoption and discounted where the evidence is thin. Every input is public and linked to its source.'
@@ -429,6 +447,83 @@ def task_page(task, rows, all_tasks, gen):
 def repo_slug(repo): return slugify(repo)
 
 
+MD_ROWS = int(os.environ.get("HUB_MD_ROWS", "40"))
+
+
+def hub_markdown(kind, title, url, intro, rows, total=None, stack=None):
+    """A hub as plain markdown, at the same path with .md.
+
+    WHY. Every capability has had a markdown twin for weeks and the HUBS did not — and the hubs are
+    where the questions live. "Best MCP server for X", "what should a data engineer install" are
+    answered by /category/, /task/ and /role/, and an answer engine that will not run JS had to parse
+    those out of a full page of chrome, filters and JSON-LD. The capability tier got the easy path;
+    the pages people actually ask for did not.
+
+    Derived from the SAME rows the HTML table renders, in the same order, so the two cannot disagree
+    about a ranking. Ranking IS the claim here, so the order is stated rather than left implied, and
+    a truncated shelf says how much it left out — a list that quietly stops at 40 reads as complete.
+    """
+    L = ["# " + title, "", "> " + intro, "",
+         f"Source: {url}",
+         "Ranked by " + ("fit for the task, then how well it documents itself, then the tashan score"
+                         if kind in ("task", "role") else "the tashan score"),
+         "  (upkeep and freshness, gated by real adoption). Public evidence only — nothing paid can",
+         "  change a rank. Method: " + BASE + "/methodology.html", ""]
+    if stack:
+        L += ["## The short answer", ""]
+        for s in stack:
+            L.append(f"- **{s['label']}** — [{disp(s['cap'])}]({BASE}/capability/{s['cap']['slug']}.html)"
+                     f" · tashan score {int(round(s['cap'].get('tashan_score') or 0))}")
+        L.append("")
+    shown = rows[:MD_ROWS]
+    L += ["## Ranked", "",
+          "| # | Capability | tashan score | Adoption evidence | Activity |",
+          "|---|---|---|---|---|"]
+    for i, c in enumerate(shown, 1):
+        t = c.get("tashan_score")
+        L.append(f"| {i} | [{disp(c)}]({BASE}/capability/{c['slug']}.html) "
+                 f"| {int(round(t)) if t is not None else 'not scored'} "
+                 f"| {evidence(c) or '—'} | {vitality_cell(c)[0]} |")
+    n = total if total is not None else len(rows)
+    if n > len(shown):
+        L += ["", f"Showing the top {len(shown)} of {n:,}. The full ranked shelf is at {url}."]
+    L += ["",
+          "## What these numbers are not", "",
+          "- The tashan score measures upkeep, freshness and adoption. It is **not** a security",
+          "  verdict and **not** a measure of whether the capability works well.",
+          "- `not scored` means too little public evidence to rank, never that something is bad.",
+          "- The security audit is separate and free per capability, on each page above.", ""]
+    return "\n".join(L)
+
+
+def write_hub_md(path_html, text):
+    """Write <page>.md beside <page>.html. Same convention as /capability/*.md."""
+    with open(path_html[:-5] + ".md", "w", encoding="utf-8") as f:
+        f.write(text)
+
+
+def coverage_lines():
+    """The measured-coverage block for llms.txt, from pipeline/coverage.py's own output.
+
+    Returns a note rather than nothing when the file is missing: silence here would read as "fully
+    covered", which is the one thing this block exists to prevent.
+    """
+    try:
+        cov = json.load(open(os.path.join(ROOT, "web", "data", "coverage.json"), encoding="utf-8"))
+        t, a = cov["tiers"]["top1000"], cov["all"]
+    except (OSError, ValueError, KeyError):
+        return ["", "Coverage figures unavailable in this build — treat every absence as unmeasured."]
+    pct = lambda d, k: round(100.0 * d[k] / d["n"])
+    return ["",
+            f"- tashan score: {pct(t, 'score')}% of the top 1,000 ({pct(a, 'score')}% of all {a['n']:,} tracked)",
+            f"- Security scan: {pct(t, 'scan')}% of the top 1,000 ({pct(a, 'scan')}% of all)",
+            f"- Instruction-depth grade: {pct(t, 'grade')}% of the top 1,000 ({pct(a, 'grade')}% of all)",
+            f"- Task mapping: {pct(t, 'task')}% of the top 1,000 ({pct(a, 'task')}% of all)",
+            f"- All four on the same capability: {pct(t, 'full')}% of the top 1,000",
+            "",
+            "An absent value means UNMEASURED and never means zero, absent risk, or poor quality."]
+
+
 def llms_txt(caps, cats, by_cat, gen, roles=()):
     """The /llms.txt convention: a plain-markdown map an answer engine can read without running JS."""
     L = ["# tashan", "",
@@ -447,6 +542,22 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
          "navigation, the same measurements. Fetch these instead of parsing HTML:", "",
          "    https://tashan.sh/capability/<slug>.md",
          "    e.g. https://tashan.sh/capability/pkg-tavily-mcp.md", "",
+         "## Answering one question, cheaply", "",
+         "Do not fetch a whole feed to check one package. Both of these are keyless, CORS-open and",
+         "answer in a few hundred bytes:", "",
+         "    GET /v0.1/lookup?name=<package>     one measurement, or measured:false if we have none",
+         "    GET /v0.1/search?q=<query>&limit=10 ranked matches, exact name first", "",
+         "Each response carries the score, what the score is NOT, the licence terms for quoting it,",
+         "and a link to both the HTML page and its markdown twin. `measured:false` answers 200, not",
+         "404 — we have no evidence for that package, which is not a finding about the package.", "",
+         "The RANKED SHELVES have twins too, and these are the ones that answer a question rather",
+         "than describe a thing — each carries the ranking, the ordering rule it used, and how many",
+         "rows it left out:", "",
+         "    https://tashan.sh/category/<id>.md    e.g. /category/database.md      — best in a category",
+         "    https://tashan.sh/task/<slug>.md      e.g. /task/code-review.md       — best for a job to be done",
+         "    https://tashan.sh/role/<id>.md        e.g. /role/data-engineer.md     — what a role installs,",
+         "                                                                            opening with one pick per task",
+         "",
          "Each one carries a labelled Facts block (score, adoption, upkeep, freshness, evidence",
          "coverage, instruction depth), the install command, and the risk scan — with every unknown",
          "stated as unknown rather than omitted. An absent line never means \"fine\".", "",
@@ -469,7 +580,16 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
          "- We do NOT review source code, execute the capability, or test its output for prompt "
          "injection. A clean audit means nothing KNOWN is wrong.",
          "- Permission surface UNDER-reports by design: a server can shell out using Node built-ins "
-         "and declare nothing, so an empty result means 'nothing declared', not 'nothing possible'.",         "", "## Top capabilities by tashan score", ""]
+         "and declare nothing, so an empty result means 'nothing declared', not 'nothing possible'.",
+         # WHAT WE HAVE NOT MEASURED, TOLD TO THE READER MOST AFFECTED BY IT. An agent that hits an
+         # absence has to decide whether it means "unmeasured" or "nothing there", and it cannot ask.
+         # Stating the coverage rate per axis lets it weigh an absence instead of guessing at one —
+         # and it is the number this project is most tempted to leave out, which is why it is here.
+         "", "## How much of this is measured", "",
+         "Coverage is stated over the top 1,000 capabilities by adoption evidence, because an "
+         "absence on something you looked up is what costs you — not a gap in the tail. Machine-"
+         "readable at https://tashan.sh/data/coverage.json, re-measured on every run."] + coverage_lines() + [
+         "", "## Top capabilities by tashan score", ""]
     for c in caps[:40]:
         L.append("- [" + disp(c) + "](" + BASE + "/capability/" + c["slug"] + ".html) — tashan score "
                  + str(c.get("tashan_score")) + (", " + c["vitality"] if c.get("vitality") else "")
@@ -478,7 +598,8 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
     # nobody can discover is not distribution.
     L += ["", "## For agents", "",
           "- [/v0.1/scores](" + BASE + "/v0.1/scores) — compact lookup, `name -> [score, vitality, "
-          "evidence]`, ~50 KB gzipped. Fetch once, look up locally. An absent name is UNMEASURED, not bad.",
+          "evidence, slug]`. This is the BULK feed — to check ONE package use /v0.1/lookup instead. "
+          "An absent name is UNMEASURED, not bad.",
           "- [/v0.1/servers](" + BASE + "/v0.1/servers) — full records, byte-compatible with the MCP "
           "registry shape; measurement under the `sh.tashan/measurement` key in `_meta`.",
           "- [/skill/SKILL.md](" + BASE + "/skill/SKILL.md) — install tashan as a capability and call it "
@@ -616,21 +737,12 @@ ROLE_BOARD_MAX = int(os.environ.get("ROLE_BOARD_MAX", "150"))
 STACK_MIN = float(os.environ.get("STACK_MIN", "65"))
 
 
-def stack_for(role, rows, tasks):
-    """One recommendation per job the role actually does — the decisional half of the page.
-
-    A role page printed every capability that touched the job: 763 rows and 511 KB for
-    "Software engineer". That is a catalogue, and nobody scrolls 763 heterogeneous artefacts to
-    choose one. The question a reader arrives with is "what should I install for this work", and the
-    answer is one item per task, not a ranking of everything.
-
-    The rows are ALREADY sorted (fit, then instruction depth, then score), so the first row carrying
-    a task is the best-fitting thing we measure for it — no new judgement, just the existing ordering
-    read per task instead of globally. A task with nothing measured is omitted rather than filled
-    with the least-bad option; an empty shelf is a truthful answer and a wrong recommendation is not.
-    """
+def stack_picks(rows, tasks):
+    """The picks themselves — [(task, capability)] — so the HTML and the markdown twin recommend the
+    same things. Extracted from stack_for() when the .md tier arrived: two renderers choosing their
+    own picks is exactly how a page and its machine-readable twin start disagreeing."""
     if not tasks:
-        return ""
+        return []
     seen, picks = set(), []
     for t in tasks:
         slug = t.get("slug")
@@ -646,8 +758,25 @@ def stack_for(role, rows, tasks):
                 break
         if len(picks) >= 6:
             break
-    if len(picks) < 2:
-        return ""            # two rows is not a stack; fall through to the table alone
+    return picks if len(picks) >= 2 else []     # two rows is not a stack
+
+
+def stack_for(role, rows, tasks):
+    """One recommendation per job the role actually does — the decisional half of the page.
+
+    A role page printed every capability that touched the job: 763 rows and 511 KB for
+    "Software engineer". That is a catalogue, and nobody scrolls 763 heterogeneous artefacts to
+    choose one. The question a reader arrives with is "what should I install for this work", and the
+    answer is one item per task, not a ranking of everything.
+
+    The rows are ALREADY sorted (fit, then instruction depth, then score), so the first row carrying
+    a task is the best-fitting thing we measure for it — no new judgement, just the existing ordering
+    read per task instead of globally. A task with nothing measured is omitted rather than filled
+    with the least-bad option; an empty shelf is a truthful answer and a wrong recommendation is not.
+    """
+    picks = stack_picks(rows, tasks)
+    if not picks:
+        return ""
     out = ['<h2>The stack for this job</h2>',
            '<p class="lede">One pick per task, taken from the ranking below — best fit first, then how '
            'well it documents itself, then the tashan score.</p>',
@@ -770,8 +899,17 @@ def main():
         for pg in range(1, pages + 1):
             chunk = rows[(pg - 1) * CAT_PER_PAGE: pg * CAT_PER_PAGE]
             name = cat["id"] if pg == 1 else f'{cat["id"]}-{pg}'
-            open(os.path.join(OUT_CAT, name + ".html"), "w").write(
-                cat_page(cat, chunk, cats, gen, page=pg, pages=pages, total=len(rows)))
+            p = os.path.join(OUT_CAT, name + ".html")
+            open(p, "w").write(cat_page(cat, chunk, cats, gen, page=pg, pages=pages, total=len(rows)))
+            # Page 1 only. A markdown twin per pagination page would publish 13 near-identical files
+            # for devtools and teach a summariser that the shelf is 120 long; the twin carries the
+            # top of the whole shelf and says how much is below it.
+            if pg == 1:
+                write_hub_md(p, hub_markdown(
+                    "category", cat["label"] + " — MCP servers and agent skills, ranked",
+                    BASE + "/category/" + cat["id"] + ".html",
+                    f'Every {cat["label"].lower()} capability tashan measures, ranked on public evidence.',
+                    rows, total=len(rows)))
             written += 1
     print("category hubs: %d written (%d categorised capabilities)" % (written, sum(len(v) for v in by_cat.values())))
 
@@ -816,7 +954,13 @@ def main():
             os.remove(stale)                     # a task can fall below the gate; leave no orphan behind
     for t in pub:
         rows = by_task.get(t["slug"], [])
-        open(os.path.join(out_task, t["slug"] + ".html"), "w").write(task_page(t, rows, pub, gen))
+        p = os.path.join(out_task, t["slug"] + ".html")
+        open(p, "w").write(task_page(t, rows, pub, gen))
+        write_hub_md(p, hub_markdown(
+            "task", "What to use for " + t["label"].lower(),
+            BASE + "/task/" + t["slug"] + ".html",
+            t.get("blurb") or f'Capabilities measured for {t["label"].lower()}, best fit first.',
+            rows))
     thin = len(tasks) - len(pub)
     print("task hubs: %d written, %d below the %d-capability floor (listed, not published)"
           % (len(pub), thin, TASK_MIN))
@@ -851,8 +995,15 @@ def main():
         if os.path.basename(stale)[:-5] not in {r["id"] for r in pub_roles}:
             os.remove(stale)                     # a job can fall below the gate; leave no orphan behind
     for r in pub_roles:
-        open(os.path.join(out_role, r["id"] + ".html"), "w").write(
-            role_page(r, by_role.get(r["id"], []), role_tasks.get(r["id"], []), pub_roles, gen))
+        rrows, rtasks = by_role.get(r["id"], []), role_tasks.get(r["id"], [])
+        p = os.path.join(out_role, r["id"] + ".html")
+        open(p, "w").write(role_page(r, rrows, rtasks, pub_roles, gen))
+        write_hub_md(p, hub_markdown(
+            "role", "What a " + r["label"].lower() + " should install",
+            BASE + "/role/" + r["id"] + ".html",
+            r.get("blurb") or f'Capabilities measured for the work a {r["label"].lower()} does.',
+            rrows,
+            stack=[{"label": t["label"], "cap": c} for t, c in stack_picks(rrows, rtasks)]))
     print("role hubs: %d written, %d below the %d-capability floor (filter only, no page)"
           % (len(pub_roles), len(roles) - len(pub_roles), ROLE_MIN))
 

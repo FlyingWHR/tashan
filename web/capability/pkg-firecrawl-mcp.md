@@ -1,6 +1,6 @@
 # Firecrawl
 
-> MCP server for Firecrawl — search, scrape, and interact with the web. Supports both cloud and self-hosted instances. Features include web search, scraping, page interaction, batch processing, and LLM-powered content analysis.
+> MCP server for Firecrawl — search, scrape, and interact with the web.
 
 ## Facts
 - Page: https://tashan.sh/capability/pkg-firecrawl-mcp
@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/firecrawl-mcp
 - Type: npm
 - Category: browser
-- tashan score: 92.0 / 100
-- Adoption: 86.0
-- Upkeep: 99.0
-- Freshness: 96.0
+- tashan score: 94.0 / 100
+- Adoption: 87.0
+- Upkeep: 100.0
+- Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - GitHub stars: 7,028
-- npm downloads: 79,087/week
+- npm downloads: 130,105/week
 - License: MIT
 - Official: no
 
@@ -36,4 +36,4 @@ claude mcp add firecrawl -- npx -y firecrawl-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

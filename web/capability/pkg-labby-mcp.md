@@ -1,4 +1,4 @@
-# Labby
+# Labby · jmagar
 
 > Local-first MCP gateway and homelab control plane with CLI, HTTP API, and web UI.
 
@@ -35,4 +35,4 @@ claude mcp add labby -- npx -y labby-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

@@ -9,10 +9,10 @@
 - npm: https://www.npmjs.com/package/@nl4ever/sshmcp
 - Type: npm
 - Category: files
-- tashan score: 46.0 / 100
+- tashan score: 45.0 / 100
 - Adoption: 26.0
 - Upkeep: 61.0
-- Freshness: 78.0
+- Freshness: 77.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -33,4 +33,4 @@ claude mcp add sshmcp -- npx -y @nl4ever/sshmcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

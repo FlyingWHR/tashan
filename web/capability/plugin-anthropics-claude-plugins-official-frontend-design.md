@@ -1,6 +1,6 @@
 # Frontend Design · anthropics
 
-> Optional external dependency (official Anthropic). Design guidance for the frontend architects (react, vue, angular, react-native, inertia-). Raw generation converges on generic AI aesthetics regardless of model tier — this is the fix for that, not a bigger model. Pipeline runs without it.
+> Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics.
 
 ## Facts
 - Page: https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design
@@ -21,12 +21,12 @@
 ## Install
 
 ```sh
-/plugin marketplace add AratKruglik/claude-sdlc
-/plugin install frontend-design@sdlc-marketplace
+/plugin marketplace add anthropics/claude-plugins-official
+/plugin install frontend-design@claude-plugins-official
 ```
 
 ## Security audit
 Not scanned. We audit npm-published capabilities; this one has no npm package we can resolve, or has not reached the queue. This is not a clean bill of health.
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

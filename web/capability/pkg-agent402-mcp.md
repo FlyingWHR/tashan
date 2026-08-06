@@ -1,6 +1,6 @@
 # Agent402.Tools — pay-per-call web tools
 
-> 400+ pay-per-call tools + 100 skill packs. USDC + USDG on 10 chains, or free via PoW.
+> 500+ pay-per-call tools + skill packs. USDC + USDG on 12 chains, or free via proof-of-work.
 
 ## Facts
 - Page: https://tashan.sh/capability/pkg-agent402-mcp
@@ -8,15 +8,15 @@
 - Source: https://github.com/MikeyPetrillo/Agent402
 - npm: https://www.npmjs.com/package/agent402-mcp
 - Type: npm
-- Category: finance
-- tashan score: 68.0 / 100
-- Adoption: 40.0
-- Upkeep: 73.0
-- Freshness: 99.0
+- Category: productivity
+- tashan score: 66.0 / 100
+- Adoption: 39.0
+- Upkeep: 72.0
+- Freshness: 98.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
-- npm downloads: 705/week
+- npm downloads: 641/week
 - Official: no
 
 ## Install
@@ -33,4 +33,4 @@ claude mcp add agent402 -- npx -y agent402-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

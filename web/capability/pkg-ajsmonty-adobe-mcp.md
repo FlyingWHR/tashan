@@ -8,7 +8,7 @@
 - Source: https://github.com/AJSMonty/adobe-mcp
 - npm: https://www.npmjs.com/package/@ajsmonty/adobe-mcp
 - Type: npm
-- Category: files
+- Category: other
 - tashan score: 49.0 / 100
 - Adoption: 26.0
 - Upkeep: 56.0
@@ -17,6 +17,7 @@
 - Health: active
 - Instruction depth: not yet graded
 - npm downloads: 68/week
+- License: MIT
 - Official: no
 
 ## Install
@@ -33,4 +34,4 @@ claude mcp add adobe -- npx -y @ajsmonty/adobe-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

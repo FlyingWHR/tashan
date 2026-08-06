@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/figma-console-mcp
 - Type: npm
 - Category: design
-- tashan score: 85.0 / 100
-- Adoption: 69.0
-- Upkeep: 99.0
-- Freshness: 96.0
+- tashan score: 87.0 / 100
+- Adoption: 71.0
+- Upkeep: 100.0
+- Freshness: 99.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - GitHub stars: 2,054
-- npm downloads: 20,601/week
+- npm downloads: 30,702/week
 - License: MIT
 - Official: no
 
@@ -30,9 +30,9 @@ claude mcp add figma-console -- npx -y figma-console-mcp
 ## Security audit
 - Known advisories: 0
 - Install-time script: none declared
-- Build provenance: not attested
+- Build provenance: attested
 
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

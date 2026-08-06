@@ -9,15 +9,15 @@
 - npm: https://www.npmjs.com/package/@codescene/codehealth-mcp
 - Type: npm
 - Category: devtools
-- tashan score: 74.0 / 100
-- Adoption: 46.0
-- Upkeep: 98.0
-- Freshness: 95.0
+- tashan score: 78.0 / 100
+- Adoption: 50.0
+- Upkeep: 100.0
+- Freshness: 100.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
 - GitHub stars: 57
-- npm downloads: 2,077/week
+- npm downloads: 3,842/week
 - License: NOASSERTION
 - Official: no
 
@@ -35,4 +35,4 @@ claude mcp add codescene-mcp-server -- npx -y @codescene/codehealth-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

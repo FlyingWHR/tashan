@@ -115,6 +115,25 @@ def static_checks():
         check(f"js/{f} derives the slug exactly as build.py slugify()", JS_SLUG in src,
               "capHref no longer matches — listings would 404")
 
+    # 1c. AND NO THIRD PLACE. The two above are audited copies; a new page adding its own is the bug
+    # that keeps happening — slugify has lived in fifteen places in this repo. compare.js wrote one,
+    # dropped the export's `slug` override, and sent pkg:@stripe/mcp (official, 69) to
+    # pkg-stripe-mcp.html — a page that EXISTS and belongs to third-party stripe-mcp at 45, under the
+    # same displayed name. It never 404s, so check 1a above sails past it. terminal.js loads on every
+    # page and exports window.tashanCapHref; there is no reason for a third derivation.
+    rogue = []
+    for f in sorted(os.listdir(os.path.join(WEB, "js"))):
+        if not f.endswith(".js") or f in ("index.js", "terminal.js"):
+            continue
+        src = open(os.path.join(WEB, "js", f), encoding="utf-8").read()
+        # The fallback in compare.js reads `c.slug || <derivation>` and is correct; a derivation with
+        # no override in front of it is not.
+        for m in re.finditer(r".{0,40}" + re.escape(JS_SLUG), src):
+            if "slug ||" not in m.group(0):
+                rogue.append(f"{f}: {m.group(0).strip()[:60]}")
+    check("no other js/ file derives a capability slug without the export's override",
+          not rogue, "; ".join(rogue[:3]) + " — use window.tashanCapHref(c)")
+
     # 2. no orphan pages. NOTE: "board" here is the SLIM index (the interactive leaderboard, capped for
     # download weight). Pages are generated from the BULK export, which is deliberately larger — static
     # HTML has no payload budget, so capping it was throwing away 3,148 scored capabilities that had

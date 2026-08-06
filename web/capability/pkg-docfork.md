@@ -10,13 +10,14 @@
 - Type: npm
 - Category: docs
 - tashan score: not scored (catalogued only — too little public evidence)
-- Adoption: 37.0
+- Adoption: 35.0
 - Upkeep: not measured
 - Freshness: 77.0
 - Evidence coverage: not measured
 - Health: abandoned
 - Instruction depth: slop
-- npm downloads: 458/week
+- npm downloads: 323/week
+- License: MIT
 - Official: no
 
 ## Security audit
@@ -28,4 +29,4 @@
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.

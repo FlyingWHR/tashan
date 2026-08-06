@@ -51,6 +51,11 @@ python3 tests/test_a11y_contrast.py || fail=1
 echo; echo "── page claims match page behaviour ───────────"
 python3 tests/test_claims.py || fail=1
 
+# 1c. the outreach drafts. The only content in this repo written to leave the building — its own
+# opening rule is that a stale number in an outreach email is the sin the product exists to point at,
+# and it went stale within four hours of being written.
+python3 tests/test_outreach_numbers.py || fail=1
+
 # 3b1z. the badge moved from 6,453 static files to a Function; two renderers, one artifact, and the
 # blast radius is other people's READMEs
 echo; echo "── badge parity (python == js) ────────────────"
@@ -120,6 +125,13 @@ python3 tests/test_scrape.py || fail=1
 echo; echo "── hubs / SEO+GEO tier ────────────────────────"
 python3 tests/test_hubs.py || fail=1
 
+# 4b. the agent-readable surface. Agents are the audience this product is FOR, so what they can read
+# without a browser gets the same guard as the human pages: the Index's server-rendered rows and
+# ItemList, the markdown twins for every ranked shelf, the robots/_headers declarations that make
+# them fetchable, and the MCP registry manifest staying in step with the package we publish.
+echo; echo "── agent surface (no-JS, .md tier, registry) ──"
+python3 tests/test_agent_surface.py || fail=1
+
 # 5. analytics collector field-shaping
 echo; echo "── analytics collector ────────────────────────"
 node functions/api/e.test.mjs 2>/dev/null || fail=1
@@ -127,6 +139,12 @@ node functions/api/e.test.mjs 2>/dev/null || fail=1
 # 5b. billing webhook — the signature check is a security boundary, it must fail closed
 echo; echo "── polar webhook (signature) ──────────────────"
 node functions/api/polar.test.mjs 2>/dev/null || fail=1
+
+# 5c. the per-question agent endpoints. This Function mounts on /v0.1/* and a Pages Function WINS the
+# route over a static asset, so a fall-through mistake here does not degrade the new endpoints — it
+# takes /v0.1/scores and /v0.1/servers, both published and linked from llms.txt, off the air.
+echo; echo "── /v0.1 lookup + search ──────────────────────"
+node functions/v0.1/route.test.mjs 2>/dev/null || fail=1
 
 # 5c. the paywall — every way of getting paid data without paying must be closed
 echo; echo "── licence gate (paywall) ─────────────────────"

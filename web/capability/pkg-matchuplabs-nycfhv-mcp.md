@@ -9,10 +9,10 @@
 - npm: https://www.npmjs.com/package/@matchuplabs/nycfhv-mcp
 - Type: npm
 - Category: data
-- tashan score: 39.0 / 100
+- tashan score: 38.0 / 100
 - Adoption: 24.0
 - Upkeep: 47.0
-- Freshness: 74.0
+- Freshness: 73.0
 - Evidence coverage: 100% of the inputs this score can use
 - Health: active
 - Instruction depth: not yet graded
@@ -33,4 +33,4 @@ claude mcp add nycfhv -- npx -y @matchuplabs/nycfhv-mcp
 Permissions are read from DECLARED dependencies only. Nothing is executed, so an empty result means "nothing declared", never "nothing possible".
 
 ---
-Measured 2026-08-04 by tashan (https://tashan.sh) from public evidence. Scorer s5.
+Measured 2026-08-05 by tashan (https://tashan.sh) from public evidence. Scorer s5.
