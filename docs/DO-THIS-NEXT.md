@@ -34,25 +34,44 @@ python3 tests/test_agent_access.py     # every line should read ok
 
 ---
 
-## 2 · Add the npm token so the CLI publishes with provenance — 3 minutes
+## 2 · Configure npm Trusted Publishing — 3 minutes, and **no token at all**
 
 **What it costs today:** `tashan-cli@0.1.2` was published from a laptop and has **no build
 provenance** — it is inside the 75% we point at in every outreach message. Fixing it is the
 difference between "75% of packages have this problem" and "…and here's how we got out of it."
 
-**Already prepared:** `.github/workflows/publish-cli.yml` — tests, packs, verifies every `bin` ships,
-publishes with `--provenance`, then reads npm back and **fails if the attestation did not land**
-(the usual cause is a missing `id-token` permission, which otherwise looks identical to success).
+**Use trusted publishing, not a token.** It is better on three counts:
 
-**Do:**
-1. [npmjs.com](https://www.npmjs.com) → Access Tokens → Generate → **Granular Access**,
-   read+write on `tashan-cli` only.
-2. GitHub → tashan → Settings → Secrets and variables → Actions → **New repository secret**
-   `NPM_TOKEN` = the token.
-3. Actions → **publish cli** → Run workflow. Leave `dry_run` **checked** the first time — it packs
-   and verifies without publishing. If green, run it again with `dry_run` unchecked.
+- **No long-lived credential.** npm trusts this repo and this workflow file over OIDC, so there is
+  no secret to leak, rotate, or scope wrong.
+- **Provenance is automatic** — no `--provenance` flag, and no way to publish unattested by
+  forgetting one.
+- **It survives 2FA enforcement.** npm's *"Require two-factor authentication and disallow tokens"*
+  blocks token auth and leaves OIDC working, so you can lock the account down without breaking
+  releases.
 
-**Verify:** the workflow's last step prints `tashan-cli@0.1.3 attestations: true`.
+**Do** — npmjs.com → the `tashan-cli` package → Settings → **Trusted Publisher** → Select your
+publisher:
+
+| Field | Value |
+|---|---|
+| Publisher | GitHub Actions |
+| Organization or user | `FlyingWHR` |
+| Repository | `tashan` |
+| **Workflow filename** | `publish-cli.yml` — filename only, case-sensitive, keep the `.yml` |
+| Environment name | *(leave blank)* |
+| Allowed actions | `npm publish` |
+
+Every field is matched exactly; `publish-cli` or `.github/workflows/publish-cli.yml` both fail.
+
+Then: Actions → **publish cli** → Run workflow. Leave `dry_run` **checked** the first time — it
+tests, packs, and verifies without publishing. If green, run it again with `dry_run` unchecked.
+
+**Verify:** the last step prints `tashan-cli@0.1.3 attestations: true`.
+
+*The workflow already handles the trap: trusted publishing needs **npm ≥ 11.5.1** and Node 22 ships
+npm 10.8.2, so it upgrades npm explicitly and fails loudly if the version is short — an older CLI
+otherwise falls back to looking for a token that does not exist.*
 
 ---
 

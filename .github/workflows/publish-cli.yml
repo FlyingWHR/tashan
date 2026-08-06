@@ -1,23 +1,34 @@
-# Publish tashan-cli to npm WITH BUILD PROVENANCE.
+# Publish tashan-cli to npm via TRUSTED PUBLISHING (OIDC) — no token, provenance automatic.
 #
-# The strongest line in our own outreach is that ~77% of scanned MCP servers ship with no build
+# The strongest line in our own outreach is that ~75% of scanned MCP servers ship with no build
 # provenance — nothing tying the published tarball to the source repo it points at. tashan-cli 0.1.2
-# was published from a laptop and is in that 77%. Telling people to check provenance while having
+# was published from a laptop and is in that 75%. Telling people to check provenance while having
 # none is the kind of thing an independent rater gets exactly one chance to be caught doing.
 #
-# `--provenance` makes npm record, in a public transparency log, which workflow in which repo at
-# which commit produced the tarball. It requires `id-token: write` and an npm token; it cannot be
-# faked from a laptop, which is the entire point.
+# WHY OIDC AND NOT AN NPM TOKEN. The first version of this workflow used `--provenance` with an
+# NPM_TOKEN secret. Trusted publishing is strictly better on three counts:
+#   - There is no long-lived credential. npm trusts THIS repo and THIS workflow file directly, so
+#     there is no secret to leak, rotate, or scope wrong.
+#   - Provenance is generated automatically. No `--provenance` flag, and no way to publish
+#     unattested by forgetting one.
+#   - It survives 2FA enforcement. npm's "require 2FA and disallow tokens" setting blocks token
+#     auth and leaves OIDC working, so the account can be locked down without breaking releases.
 #
-# ONE-TIME SETUP (must be done by a human — this workflow cannot grant itself the token):
-#   1. npmjs.com -> Access Tokens -> Generate -> **Granular Access**, read+write on `tashan-cli`.
-#      A "Classic/Automation" token also works; granular is narrower, so prefer it.
-#   2. GitHub -> repo -> Settings -> Secrets and variables -> Actions -> New repository secret:
-#        NPM_TOKEN = the token
-#   3. Bump `version` in cli/package.json, then run this workflow from the Actions tab.
+# ONE-TIME SETUP (a human must do this once — the workflow cannot grant itself trust):
+#   npmjs.com -> the `tashan-cli` package -> Settings -> Trusted Publisher -> Select your publisher
+#     Publisher:          GitHub Actions
+#     Organization/user:  FlyingWHR
+#     Repository:         tashan
+#     Workflow filename:  publish-cli.yml        <- FILENAME ONLY, case-sensitive, with .yml
+#     Environment:        (leave blank)
+#     Allowed actions:    npm publish
+#   Every field is matched exactly. "publish-cli" or ".github/workflows/publish-cli.yml" both fail.
+#   RENAMING THIS FILE BREAKS PUBLISHING until the setting is updated to match.
 #
 # Deliberately manual (`workflow_dispatch`), not on push: publishing is outward-facing and
 # irreversible — npm unpublish is restricted after 72 hours — so it happens when a human says so.
+# This workflow both dispatches AND publishes; do not split the publish into a reusable workflow,
+# because npm validates the name of the CALLING workflow, not the one running `npm publish`.
 name: publish cli
 
 on:
@@ -30,7 +41,7 @@ on:
 
 permissions:
   contents: read
-  id-token: write        # REQUIRED for --provenance; without it npm publishes unattested and silent
+  id-token: write        # REQUIRED: this is the OIDC token npm exchanges for publish rights
 
 jobs:
   publish:
@@ -38,10 +49,29 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # >= 22.14.0 is npm's documented floor for trusted publishing.
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: "22.14"
           registry-url: https://registry.npmjs.org/
+
+      # THE TRAP: trusted publishing needs npm >= 11.5.1, and Node 22 ships npm 10.x. Without this
+      # the publish fails on a version check, or — worse on an older CLI — silently falls back to
+      # looking for a token that does not exist. Upgrade explicitly and print what we got, so the
+      # log says which npm actually ran rather than which one we assumed.
+      - name: npm >= 11.5.1 (trusted publishing requirement)
+        run: |
+          npm install -g npm@latest
+          node -v
+          NPM_V="$(npm -v)"; MIN=11.5.1
+          # sort -V, not a hand-rolled semver compare: the first draft of this step built the version
+          # in an `env:` block that resolved to the empty string, so the gate could only ever fail.
+          # Comparing in the shell keeps the value and the check in one place where both are visible.
+          if [ "$(printf '%s\n%s\n' "$MIN" "$NPM_V" | sort -V | head -1)" != "$MIN" ]; then
+            echo "npm $NPM_V is below $MIN — trusted publishing will fail, or an older CLI will"
+            echo "silently look for a token that does not exist."; exit 1
+          fi
+          echo "npm $NPM_V supports trusted publishing"
 
       # The published package is the artifact, not the repo. npm's `bin` entries are SYMLINKS on
       # install, so argv[1] never equals import.meta.url on a real machine — a bug that only appears
@@ -66,19 +96,32 @@ jobs:
                 process.exit(1);
               }
             }
-            console.log('bin entries all present in files[]:', Object.keys(p.bin).join(', '));
+            // The MCP registry rejects a publish whose package.json mcpName does not match
+            // server.json's name. Both files are individually valid, so this is invisible until the
+            // registry publish fails — after the DNS record and signing key are already set up.
+            const s = JSON.parse(readFileSync('../server.json', 'utf8'));
+            if (p.mcpName !== s.name) {
+              console.error('mcpName ' + p.mcpName + ' != server.json name ' + s.name);
+              process.exit(1);
+            }
+            if (p.version !== s.version) {
+              console.error('version ' + p.version + ' != server.json version ' + s.version);
+              process.exit(1);
+            }
+            console.log('bin entries ship:', Object.keys(p.bin).join(', '));
+            console.log('mcpName agrees with server.json:', p.mcpName, '@', p.version);
           "
 
-      - name: publish with provenance
+      # No NODE_AUTH_TOKEN and no --provenance: OIDC supplies the credential and npm attaches the
+      # attestation itself. If this fails with an auth error, the trusted publisher above has not
+      # been configured yet, or one of its fields does not match this repo exactly.
+      - name: publish
         if: ${{ !inputs.dry_run }}
         working-directory: cli
-        run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public
 
-      # Reads back what npm actually recorded. A publish that silently lost provenance — the usual
-      # cause is a missing id-token permission — would otherwise look identical to a good one, and we
-      # would go on citing a number we had quietly stopped meeting.
+      # Reads back what npm actually recorded. A publish that lost provenance would otherwise look
+      # identical to a good one, and we would go on citing a number we had quietly stopped meeting.
       - name: verify provenance landed
         if: ${{ !inputs.dry_run }}
         run: |
@@ -89,5 +132,9 @@ jobs:
             const d = await fetch('https://registry.npmjs.org/tashan-cli').then(r => r.json());
             const att = !!d.versions?.[v]?.dist?.attestations;
             console.log('tashan-cli@' + v + ' attestations:', att);
-            if (!att) { console.error('published WITHOUT provenance — check id-token: write'); process.exit(1); }
+            if (!att) {
+              console.error('published WITHOUT provenance — check id-token: write and that the');
+              console.error('trusted publisher names this exact workflow file.');
+              process.exit(1);
+            }
           "
