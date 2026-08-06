@@ -15,10 +15,18 @@ An agent that gets a 403 on its first request does not retry with a nicer header
 service is unavailable and stops asking — which is the exact failure the distribution thesis cannot
 survive, and it is invisible from a browser.
 
-THE FIX IS NOT IN THIS REPO. Bot Fight Mode is a zone-level Cloudflare setting; the deploy token
-carries zone:read, not zone:write. Turn it off at dash.cloudflare.com -> tashan.sh -> Security ->
-Bots. Free-tier Bot Fight Mode cannot be scoped by path, so it is on or off; Super Bot Fight Mode
-allows an exception for /v0.1/* and /data/* if the protection is wanted elsewhere.
+THE SETTING IS *BROWSER INTEGRITY CHECK*, NOT BOT FIGHT MODE. Measured 6 Aug 2026 by reading the
+403 body rather than assuming: it returns `error code: 1010`, which is Cloudflare's
+"banned based on your browser's signature" — the Browser Integrity Check, a separate toggle. Bot
+Fight Mode was turned off first, on this file's own earlier advice, and the 403s did not move. BIC
+inspects headers and refuses clients whose User-Agent does not look like a browser, which is exactly
+what a stdlib Python client is.
+
+    dash.cloudflare.com -> tashan.sh -> Security -> Settings -> Browser Integrity Check -> off
+
+THE FIX IS NOT IN THIS REPO either way: it is zone-level and the deploy token carries zone:read, not
+zone:write. If a 403 ever returns with a different error code, read the body again before acting —
+1010 is BIC, 1020 is a WAF/firewall rule, and 1015 is rate limiting. They are different settings.
 
 AND THERE IS NO CODE WORKAROUND — measured 6 Aug 2026, so nobody spends an evening looking for one.
 The obvious idea is to serve the agent surfaces from a Pages Function instead of as static assets,

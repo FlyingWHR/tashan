@@ -19,11 +19,18 @@ points at is refused to anyone who tries it from a Python script.
 200). So AI citation is unobstructed. What is blocked is the **decision-time** path — a tool call, a
 CI check, the integration someone writes after reading step 3.
 
+**It is Browser Integrity Check, not Bot Fight Mode.** Diagnosed by reading the 403 body instead of
+assuming: it returns `error code: 1010`, which is Cloudflare's "banned based on your browser's
+signature" — BIC, a separate toggle. Turning Bot Fight Mode off (this file's earlier advice) did not
+move the 403s.
+
 **Do:**
-1. [dash.cloudflare.com](https://dash.cloudflare.com) → **tashan.sh** → Security → Bots
-2. Turn **Bot Fight Mode** off.
-   (Free-tier Bot Fight Mode cannot be scoped by path. Super Bot Fight Mode can, if you want
-   protection elsewhere — allow `/v0.1/*` and `/data/*`.)
+1. [dash.cloudflare.com](https://dash.cloudflare.com) → **tashan.sh** → Security → **Settings**
+2. Turn **Browser Integrity Check** off.
+3. Bot Fight Mode can stay off too; it is under Security → Bots and is a different control.
+
+*If a 403 comes back later, read the body first: 1010 is BIC, 1020 is a WAF rule, 1015 is rate
+limiting. Different settings, and guessing costs a round trip each time.*
 
 **Verify:**
 ```sh
