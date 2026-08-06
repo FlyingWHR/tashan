@@ -22,7 +22,7 @@ TIERS ARE CUMULATIVE AND ORDERED BY EVIDENCE, NOT BY SCORE. Score is the wrong p
 will ask about: a badly-kept package with two million downloads a week is asked about constantly and
 scores 43.
 """
-import json, os, sqlite3, sys
+import json, os, re, sqlite3, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "tashan.db")
@@ -69,6 +69,79 @@ def tally(pool, tagged):
         out[key] = sum(1 for r in pool if measured(r, tagged)[key])
     out["full"] = sum(1 for r in pool if all(measured(r, tagged).values()))
     return out
+
+
+OUTREACH = os.path.join(ROOT, "docs", "OUTREACH.md")
+
+
+def bake_outreach(con):
+    """Rewrite the numbers in docs/OUTREACH.md from the database.
+
+    THIS IS A BUG FIX, AND THE BUG WAS A TEST. The facts table was hand-written and
+    tests/test_outreach_numbers.py checked it against live SQL — which sounds right and is not: the
+    numbers move every time the pipeline runs, so the check went red every night BY CONSTRUCTION and
+    blocked the nightly publish. It had already drifted 2,771 -> 3,564 scanned and 75% -> 78%
+    provenance within one run. A gate that fails on a schedule is worse than no gate; it teaches
+    everyone to ignore a red suite.
+
+    So the numbers are generated, like every other number on this site — the methodology page, the
+    hero counts, the product tree. The test stays, and now catches the thing worth catching: someone
+    hand-editing a figure, or the bake not having run before the drafts were sent.
+    """
+    if not os.path.exists(OUTREACH):
+        return
+    q = lambda s: con.execute(s).fetchone()[0]
+    scanned = q("SELECT count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL")
+    attested = q("SELECT count(*) FROM capabilities WHERE sec_provenance=1")
+    gap = scanned - attested
+    pct = round(100.0 * gap / scanned) if scanned else 0
+    # The row label fragment -> the query behind it. Kept as plain strings rather than inlined into
+    # f-strings: the first version fought the quoting of `!= ''` and came out unreadable, which is
+    # the wrong trade in a function whose entire job is that a number is checkable.
+    SQL = {
+        "install-time script":
+            "SELECT count(*) FROM capabilities "
+            "WHERE sec_install_script IS NOT NULL AND sec_install_script != ''",
+        "Confirmed-malicious":
+            "SELECT count(*) FROM capabilities WHERE sec_max_severity = 'MALICIOUS'",
+        "maintainer has **stopped**":
+            "SELECT count(*) FROM capabilities "
+            "WHERE tashan_score IS NOT NULL AND vitality = 'abandoned'",
+        "can't be launched":
+            "SELECT count(*) FROM capabilities WHERE npm_runnable = 0",
+    }
+    vals = {
+        "scanned for advisories": f"{scanned:,}",
+        "no build provenance": f"**{pct}%** ({gap:,})",
+    }
+    for frag, sql in SQL.items():
+        vals[frag] = f"{q(sql):,}"
+    src = open(OUTREACH, encoding="utf-8").read()
+    out, hits = [], 0
+    for line in src.split("\n"):
+        m = re.match(r"^\|\s*(.+?)\s*\|\s*[^|]*\|\s*(.*)\|\s*$", line)
+        if m and not line.startswith("| Fact") and not set(line) <= set("|- "):
+            for frag, v in vals.items():
+                if frag in m.group(1):
+                    out.append(f"| {m.group(1)} | {v} | {m.group(2)}|")
+                    hits += 1
+                    break
+            else:
+                out.append(line)
+        else:
+            out.append(line)
+    s = "\n".join(out)
+    # The drafts quote the headline figure in prose too. A table that agrees with the database while
+    # the email body carries last week's number is the same defect one layer down.
+    s, n1 = re.subn(r"(~|about )\d\d(% (?:ship with no|of scanned packages have))", rf"\g<1>{pct}\g<2>", s)
+    s, n2 = re.subn(r"(build provenance \(~)\d\d(% don't\))", rf"\g<1>{pct}\g<2>", s)
+    s, n3 = re.subn(r"(and )\d\d(% have no build provenance)", rf"\g<1>{pct}\g<2>", s)
+    s, n4 = re.subn(r"(The )\d\d(% is the strongest single line)", rf"\g<1>{pct}\g<2>", s)
+    if hits < len(vals):
+        raise SystemExit(f"outreach bake matched {hits}/{len(vals)} table rows — the table shape "
+                         f"changed. Fix docs/OUTREACH.md, do not let stale numbers ship to strangers.")
+    open(OUTREACH, "w", encoding="utf-8").write(s)
+    print(f"outreach: baked {hits} facts + {n1 + n2 + n3 + n4} prose mentions ({pct}% no provenance)")
 
 
 def main():
@@ -123,6 +196,7 @@ def main():
         "graded_pct": round(100.0 * t["grade"] / t["n"]),
         "tasked_pct": round(100.0 * t["task"] / t["n"]),
     }
+    bake_outreach(con)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=1, sort_keys=True)
