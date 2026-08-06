@@ -142,16 +142,38 @@ function detail(r, origin) {
   return out;
 }
 
-// Ranked, not merely filtered. An exact name beats a prefix beats a substring; ties break on the
-// score, so "postgres" surfaces the most-used matching server rather than the first alphabetically.
-function rank(q, name) {
+// Ranked, not merely filtered — and the SCORE has to be part of the ranking, not just a tiebreak.
+//
+// The first version sorted by match tier alone (exact > prefix > substring) and broke ties on the
+// score. Shipped, it answered `?q=postgres` by leading with a capability literally named "postgres"
+// scoring 11, ahead of @henkey/postgres-mcp-server at 74. An agent asking search for a
+// recommendation got the worst option first, which is the same defect as a role stack recommending
+// a 55 over a 93.
+//
+// `lookup` is the endpoint for "I know the exact name, tell me about it". `search` answers "what
+// should I use for this", so it must rank on fitness to recommend. Weighting is the pattern already
+// swept in cli/mcp.mjs against ten judged phrases — relevance stays in charge (a strictly better
+// match still wins) while the measurement decides between comparable matches, and an exponent of
+// 1.5 was the sweep's answer there.
+const TIER = { exact: 4, bareExact: 3, prefix: 2, substring: 1 };
+
+function tier(q, name) {
   const n = name.toLowerCase();
-  if (n === q) return 0;
+  if (n === q) return TIER.exact;
   const bare = n.replace(/^@[^/]+\//, "");            // @scope/name — people search the bare name
-  if (bare === q) return 1;
-  if (n.startsWith(q) || bare.startsWith(q)) return 2;
-  if (n.includes(q)) return 3;
-  return -1;
+  if (bare === q) return TIER.bareExact;
+  if (n.startsWith(q) || bare.startsWith(q)) return TIER.prefix;
+  if (n.includes(q)) return TIER.substring;
+  return 0;
+}
+
+function relevance(q, name, score) {
+  const t = tier(q, name);
+  if (!t) return 0;
+  // An unrated capability is not scored 0 — that would bury it below everything. It sits where a
+  // middling measured one would, because "we have not measured this" is not "this is bad".
+  const s = (score == null ? 45 : score) / 100;
+  return t * Math.pow(s, 1.5);
 }
 
 export async function onRequestGet({ request, params, next }) {
@@ -226,9 +248,12 @@ export async function onRequestGet({ request, params, next }) {
 
   const hits = [];
   for (const name in map) {
-    const r = rank(q, name);
-    if (r >= 0) hits.push([r, -(map[name][0] || 0), name]);
+    const rel = relevance(q, name, map[name][0]);
+    if (rel > 0) hits.push([-rel, -(map[name][0] || 0), name]);
   }
+  // Descending relevance, then descending score, then name — so the order is total and identical
+  // between runs. An unstable ordering on a recommendation endpoint means two agents asking the
+  // same question get different first answers.
   hits.sort((a, b) => a[0] - b[0] || a[1] - b[1] || (a[2] < b[2] ? -1 : 1));
   const shown = hits.slice(0, limit);
   return json({

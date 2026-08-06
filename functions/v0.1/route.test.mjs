@@ -42,6 +42,10 @@ const SCORES = {
     "@modelcontextprotocol/server-postgres": [43, "abandoned", "126,507 npm downloads/week",
                                               "pkg-at-modelcontextprotocol-server-postgres"],
     "tavily-mcp": [86, "active", "32,517 npm downloads/week", "pkg-tavily-mcp"],
+    // SHIPPED AND WRONG: an exact name match at score 11 led ?q=postgres ahead of a 74, because the
+    // first ranking sorted by match tier alone. search answers "what should I use", so the
+    // measurement has to be part of the rank, not a tiebreak.
+    "postgres": [11, "abandoned", "88 npm downloads/week", "pkg-postgres"],
   },
   metadata: { generated_at: "2026-08-06T00:00:00Z", license: "CC BY 4.0 — attribute tashan" },
 };
@@ -198,11 +202,18 @@ const ok = (name, cond, extra = "") => {
 // ---- search -------------------------------------------------------------------------------
 {
   const d = await body(await onRequestGet(ctx("/v0.1/search?q=postgres")));
-  ok("search finds every match", d.count === 2);
-  // Exact name beats substring. Without this "postgres" leads with the abandoned 43 simply because
-  // it sorts earlier, and the first thing an agent reads is the worst option.
-  ok("an exact name outranks a substring match", d.results[0].name === "postgres-mcp",
+  ok("search finds every match", d.count === 3);
+  // The exact-name row scores 11 and must NOT lead: a recommendation endpoint whose first answer is
+  // the worst option is the same defect as a role stack recommending a 55 over a 93.
+  ok("a badly-scoring exact match does not lead a recommendation",
+     d.results[0].name === "postgres-mcp",
+     JSON.stringify(d.results.map((r) => [r.name, r.tashan_score])));
+  // …but relevance still leads: postgres-mcp (71, exact-ish) beats the 43 substring match.
+  ok("relevance still outranks raw score",
+     d.results[1].name === "@modelcontextprotocol/server-postgres" || d.results[1].name === "postgres",
      JSON.stringify(d.results.map((r) => r.name)));
+  ok("the weak match is still returned, not hidden",
+     d.results.some((r) => r.name === "postgres"));
   ok("search results carry urls", d.results.every((r) => r.url && r.markdown));
 }
 {
