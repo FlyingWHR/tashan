@@ -950,6 +950,59 @@ def sitemap(caps):
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + static + caps_x + extra + "</urlset>\n")
     open(os.path.join(ROOT, "web", "sitemap.xml"), "w").write(xml)
 
+MD_SHARDS = 64
+MD_DIR = os.path.join(ROOT, "web", "data", "md")
+
+
+def md_shard(slug, n=MD_SHARDS):
+    """Which shard a slug's markdown lives in.
+
+    MUST stay identical to shard() in functions/capability/[[path]].js — the Function computes this
+    to know which file to fetch, so a divergence 404s every dossier at once. tests/test_agent_surface
+    checks a sample of real slugs against the JS. Slugs are [a-z0-9-] by construction (slugify), so
+    per-character iteration is ASCII-safe on both sides.
+    """
+    h = 0
+    for ch in slug:
+        h = (h * 31 + ord(ch)) & 0xFFFFFFFF
+    return h % n
+
+
+def write_md_shards(by_slug):
+    """The markdown dossiers, as sharded data instead of one file each.
+
+    CLOUDFLARE PAGES REFUSES ANY DEPLOYMENT OVER 20,000 FILES. Not degrades — refuses. Writing one
+    .md beside each .html made every capability cost two files, and the corpus went 7,365 -> 9,013 in
+    a single run: at 18,759 files there were 620 capabilities of runway left and the next full run
+    would have taken the site past the point where it could be published at all. It has happened
+    before, when one .svg per capability hit 21,782 and badges had to move behind a Function.
+
+    So the dossiers become 64 data files and a Function, which is the same move badges made. What
+    they do NOT become is a second renderer: the markdown is still produced by markdown() above, in
+    Python, at build time — the Function only looks a string up and returns it. That matters more
+    than the file count here, because a JS reimplementation of the dossier is exactly the "one
+    concept, many implementations" defect this codebase has paid for six times.
+
+    64 shards keeps each one around 150 KB, small enough that a Worker parses it in milliseconds and
+    the edge cache holds all of them comfortably.
+    """
+    os.makedirs(MD_DIR, exist_ok=True)
+    shards = [{} for _ in range(MD_SHARDS)]
+    for slug, text in by_slug.items():
+        shards[md_shard(slug)][slug] = text
+    for i, s in enumerate(shards):
+        with open(os.path.join(MD_DIR, f"{i:02d}.json"), "w", encoding="utf-8") as f:
+            json.dump(s, f, ensure_ascii=False, separators=(",", ":"))
+    # A shard that vanished from the map would silently 404 its slugs, so every index is written even
+    # when empty rather than skipped.
+    for f in os.listdir(MD_DIR):
+        if f.endswith(".json") and not (f[:-5].isdigit() and int(f[:-5]) < MD_SHARDS):
+            os.remove(os.path.join(MD_DIR, f))
+    sizes = [os.path.getsize(os.path.join(MD_DIR, f"{i:02d}.json")) for i in range(MD_SHARDS)]
+    print(f"markdown dossiers: {len(by_slug):,} in {MD_SHARDS} shards "
+          f"(largest {max(sizes) // 1024} KB) -> web/data/md/")
+
+
 def markdown(c, gen):
     """The same dossier as plain markdown, at <slug>.md.
 
@@ -1042,16 +1095,17 @@ def main():
             c["co_used"] = [x for x in c["co_used"] if slugify(x["id"]) in have]
     for c in caps:
         open(os.path.join(OUT, c["slug"] + ".html"), "w").write(page(c, gen))
-        open(os.path.join(OUT, c["slug"] + ".md"), "w").write(markdown(c, gen))
+    write_md_shards({c["slug"]: markdown(c, gen) for c in caps})
     # Remove pages for capabilities that dropped out of the export (junk-filtered, deprecated, renamed).
     # Without this they linger as orphans: still crawlable, in no sitemap, linked from nothing, and
-    # frozen at whatever asset version last wrote them.
+    # frozen at whatever asset version last wrote them. `.md` is included because 9,013 of them were
+    # files until the shard move below, and a tree that has been through both must end up clean.
     stale = [f for f in os.listdir(OUT)
-             if (f.endswith(".html") and f[:-5] not in have) or (f.endswith(".md") and f[:-3] not in have)]
+             if (f.endswith(".html") and f[:-5] not in have) or f.endswith(".md")]
     for f in stale:
         os.remove(os.path.join(OUT, f))
     if stale:
-        print("removed %d orphaned page(s) no longer in the export" % len(stale))
+        print("removed %d orphaned/superseded page file(s)" % len(stale))
     sitemap(caps)
     bake_hero(caps, d.get("total_capabilities") or len(caps))
     bake_methodology(gen)

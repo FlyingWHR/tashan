@@ -146,6 +146,13 @@ node functions/api/polar.test.mjs 2>/dev/null || fail=1
 echo; echo "── /v0.1 lookup + search ──────────────────────"
 node functions/v0.1/route.test.mjs 2>/dev/null || fail=1
 
+# 5d. the markdown dossier route. This Function mounts on /capability/*, where 9,013 real .html
+# files live, so a fall-through mistake takes every capability page off the air — not just the .md
+# tier. It also carries the JS half of the shard hash; if that drifts from prerender.py, every
+# dossier 404s at once.
+echo; echo "── /capability/*.md (sharded dossiers) ────────"
+node functions/capability/path.test.mjs 2>/dev/null || fail=1
+
 # 5c. the paywall — every way of getting paid data without paying must be closed
 echo; echo "── licence gate (paywall) ─────────────────────"
 node functions/api/license.test.mjs 2>/dev/null || fail=1

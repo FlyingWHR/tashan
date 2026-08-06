@@ -33,10 +33,20 @@
   Cache-Control: public, max-age=3600
 
 # the plain-markdown dossier — an answer engine that will not run JS gets the same facts as the page,
-# without parsing around the chrome. Extensionless-adjacent: .md would otherwise download, not render.
+# without parsing around the chrome. NO LONGER FILES: 9,013 of them took the site to 18,759 against
+# Cloudflare's 20,000-file deployment ceiling, so they are 64 shards under /data/md/ plus
+# functions/capability/, which sets these same headers on its own responses (_headers does not apply
+# to a Function). The rule is kept as documented intent for the route, like /badge/*; the Function is
+# the authority.
 /capability/*.md
   Content-Type: text/markdown; charset=utf-8
   Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=900, stale-while-revalidate=86400
+
+# the dossier shards the Function reads. Long edge cache, revalidated: they change once per run, and
+# a Worker fetching its own origin per request is the thing the module-level cache exists to avoid.
+/data/md/*
+  Content-Type: application/json; charset=utf-8
   Cache-Control: public, max-age=900, stale-while-revalidate=86400
 
 # THE HUBS GOT THE SAME TIER. /capability/*.md answered "what is this thing"; these answer "what

@@ -21,7 +21,7 @@ WHAT THIS CAUGHT WHEN IT WAS WRITTEN (6 Aug 2026):
 
 Run: python3 tests/test_agent_surface.py
 """
-import glob, json, os, re, sys
+import glob, json, os, re, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WEB = os.path.join(ROOT, "web")
@@ -183,6 +183,61 @@ for p in ("/capability/*.md", "/category/*.md", "/task/*.md", "/role/*.md"):
     blk = re.search(re.escape(p) + r"\n((?:  .*\n)+)", hdrs)
     check(f"_headers serves {p} as text/markdown",
           bool(blk) and "text/markdown" in blk.group(1))
+
+print()
+print("# the markdown dossiers survived the move off the filesystem")
+# 9,013 .md files became 64 shards + a Function so the site could keep being deployable at all. The
+# risk that move introduced is a hash that disagrees across languages: the Function computes which
+# shard to fetch, so a divergence 404s EVERY dossier at once rather than one. Checked against real
+# slugs, in both languages, not by inspection.
+sys.path.insert(0, os.path.join(ROOT, "pipeline"))
+import prerender as _P
+
+shards = sorted(glob.glob(os.path.join(WEB, "data", "md", "*.json")))
+check(f"the dossier shards exist ({len(shards)} of {_P.MD_SHARDS})", len(shards) == _P.MD_SHARDS,
+      "run pipeline/prerender.py")
+pages = [os.path.basename(f)[:-5] for f in glob.glob(os.path.join(WEB, "capability", "*.html"))]
+check("no per-capability .md files remain (they are what blew the file budget)",
+      not glob.glob(os.path.join(WEB, "capability", "*.md")))
+if shards and pages:
+    loaded, placed = {}, 0
+    for f in shards:
+        loaded[int(os.path.basename(f)[:-5])] = json.load(open(f, encoding="utf-8"))
+    missing, misplaced = [], []
+    for slug in pages:
+        i = _P.md_shard(slug)
+        if slug not in loaded.get(i, {}):
+            # in the wrong shard, or absent entirely — distinguish, because the causes differ
+            (misplaced if any(slug in m for m in loaded.values()) else missing).append(slug)
+        else:
+            placed += 1
+    check(f"every prerendered page has a dossier in the shard its hash names ({placed:,})",
+          not missing and not misplaced,
+          f"{len(missing)} absent e.g. {missing[:2]}; {len(misplaced)} in the wrong shard e.g. {misplaced[:2]}")
+    empty = [s for s, t in ((s, m.get(s)) for m in loaded.values() for s in m) if not t or len(t) < 50]
+    check("no dossier is empty or a stub", not empty, f"{len(empty)} e.g. {empty[:3]}")
+
+# The JS half of the hash, run for real rather than eyeballed.
+js = subprocess.run(
+    ["node", "--input-type=module", "-e",
+     "import {shard} from './functions/capability/[[path]].js';"
+     "const s=JSON.parse(process.argv[1]);"
+     "console.log(JSON.stringify(s.map(x=>shard(x))));"],
+    input="", capture_output=True, text=True, cwd=ROOT,
+    args=None) if False else subprocess.run(
+    ["node", "--input-type=module", "-e",
+     "import {shard} from './functions/capability/[[path]].js';"
+     "const s=JSON.parse(process.argv[1]);console.log(JSON.stringify(s.map(x=>shard(x))));",
+     json.dumps(sorted(pages)[:300])],
+    capture_output=True, text=True, cwd=ROOT)
+if js.returncode != 0:
+    check("the JS shard function is importable", False, (js.stderr or "")[-160:])
+else:
+    got = json.loads(js.stdout.strip().split("\n")[-1])
+    want = [_P.md_shard(s) for s in sorted(pages)[:300]]
+    check(f"python and js agree on the shard for {len(want)} real slugs", got == want,
+          "a divergence 404s every dossier at once — "
+          f"first mismatch at {next((i for i, (a, b) in enumerate(zip(got, want)) if a != b), None)}")
 
 print()
 print("# the deployment still fits")
