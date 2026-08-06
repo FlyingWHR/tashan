@@ -13,3 +13,9 @@ __pycache__/
 
 # O*NET source database — 13 MB, redownloadable, CC BY 4.0 (onetcenter.org/database.html)
 data/onet/db_30_3_text/
+
+# MCP registry DNS auth signing key. `mcp-publisher login dns` generates key.pem at the repo root,
+# and it is the private half of the key whose public half proves we control tashan.sh — anyone
+# holding it can publish under the sh.tashan/* namespace. Never committed.
+key.pem
+*.pem

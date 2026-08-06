@@ -214,6 +214,20 @@ if os.path.exists(sj):
     check("the manifest points at the package we actually publish",
           pkg.get("identifier") == cli.get("name"),
           f"server.json says {pkg.get('identifier')!r}, cli/package.json says {cli.get('name')!r}")
+    # THE BLOCKER THAT WOULD HAVE FAILED THE PUBLISH. The registry verifies that the npm package and
+    # the registry entry are the same thing by requiring an `mcpName` in package.json equal to
+    # server.json's `name`. Without it the publish is rejected — and it is invisible until you try,
+    # because both files are individually valid. Found by reading the registry's own quickstart.
+    check("cli/package.json carries the mcpName the registry verifies against",
+          cli.get("mcpName") == m.get("name"),
+          f"package.json mcpName={cli.get('mcpName')!r}, server.json name={m.get('name')!r} — "
+          f"the registry rejects a publish where these differ")
+    # A domain namespace is only claimable with DNS auth on that apex. `sh.tashan/*` requires a TXT
+    # record on tashan.sh; switching to GitHub auth means renaming to io.github.<user>/*.
+    ns = str(m.get("name", "")).split("/")[0]
+    check(f"the namespace {ns!r} matches a domain we control",
+          ns == "sh.tashan" or ns.startswith("io.github."),
+          "a namespace we cannot authenticate for will be refused at publish time")
     # A registry entry pinned to a version nobody can install is worse than no entry — the client
     # resolves it, fails, and the user concludes the server is broken.
     check("the manifest version matches the published CLI version",

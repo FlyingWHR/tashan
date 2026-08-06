@@ -39,37 +39,50 @@ servers your users install, **nobody can show that the tarball came from the sou
 
 ---
 
-## 1. MCP client authors — Cursor, Cline, Windsurf, Zed, Continue
+## 1. MCP client authors — Cline, Continue, Cursor, Windsurf, Zed
 
 *Best fit. They own the install moment, which is the only moment a score changes a decision.*
 
-**Subject:** 77% of the MCP servers your users install have no build provenance
+**Post a Discussion, do not send an email.** Checked 6 Aug 2026: Cline and Continue both set
+`blank_issues_enabled: false` and route every non-bug message to GitHub Discussions. That is the
+channel they asked for, it is public — which suits a company whose whole claim is public evidence
+better than a private pitch does — and it is one form, not a cold address you have to find.
 
-> Hi — I run tashan (tashan.sh), an independent measurement of MCP servers built on public evidence
-> only. No listings, no promoted slots, nothing paid can change a score.
+| Project | Where | Notes |
+|---|---|---|
+| **Cline** (65.7k ★) | [Discussions → Feature Requests](https://github.com/cline/cline/discussions/new?category=feature-requests) | also [discord.gg/cline](https://discord.gg/cline) |
+| **Continue** (35.3k ★) | [Discussions](https://github.com/continuedev/continue/discussions/new) | no separate category |
+| **Goose** (52.4k ★) | [Discussions](https://github.com/aaif-goose/goose/discussions/new) | Block's client |
+
+No existing MCP-trust thread to reply to — searched, nothing close — so a new post is correct.
+
+**Title:** Show a maintenance + advisory score next to each MCP server (free, keyless endpoint)
+
+> Cline/Continue users add MCP servers from a list that shows a name and a description. Nothing at
+> that moment says whether the server is still maintained, whether its current release has an open
+> advisory, or whether it runs a script at install time.
 >
-> One number from this week's scan, since it's about your users rather than about us: of the npm-
-> published MCP servers we've audited, **about 75% ship with no build provenance** — no attestation
-> tying the tarball to the source repo it points at. 199 run a script at install time. Two turned out
-> to be in OSV's malicious-packages database.
+> I measure that publicly at [tashan.sh](https://tashan.sh) — public evidence only, nothing paid can
+> change a score, no listings and no promoted slots. Of the npm-published MCP servers audited so far,
+> about **75% ship with no build provenance** (no attestation tying the tarball to the repo it points
+> at), **199 run a script at install time**, and **two turned out to be in OSV's malicious-packages
+> database**.
 >
-> None of that is visible at the moment someone adds a server to [Cursor / Cline / …].
+> There is a free, keyless, CORS-open endpoint if this is useful:
 >
-> There's a free, keyless endpoint if you want to show a score next to each server:
+>     GET https://tashan.sh/v0.1/lookup?name=<package>   # one package, a few hundred bytes
+>     GET https://tashan.sh/v0.1/search?q=<query>        # ranked matches
 >
->     GET https://tashan.sh/v0.1/lookup?name=<pkg>   # ONE package, a few hundred bytes
->     GET https://tashan.sh/v0.1/scores            # the whole ranked corpus in one file
->     GET https://tashan.sh/v0.1/servers            # every record, official-registry shape
+> The response carries the score, what the score is **not** (it is not a security verdict), the
+> advisory ids, and the licence terms for quoting it. An unmeasured package answers `measured:false`
+> rather than 404, because "we have no evidence" is a real answer and shouldn't look like an outage.
 >
 > No account, no key, no rate limit to negotiate, and no ask on my side — attribution if you feel
-> like it. If it's useful, use it; if the shape is wrong for you, tell me what shape you'd want.
->
-> — [name]
+> like it. If the shape is wrong for you, tell me what shape you'd want and I'll add it.
 
-**Why this one is first:** it costs them one fetch and a column. There's no partnership, no contract,
-no integration review. The whole ask fits in an afternoon.
-
----
+**Why this one is first:** it costs them one fetch and a column. No partnership, no contract, no
+integration review. And a public thread other users can upvote is worth more than a reply in a
+founder's inbox.
 
 ## 2. Registry and directory operators — Smithery, Glama, PulseMCP, mcp.so
 
