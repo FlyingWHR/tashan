@@ -236,5 +236,37 @@ else:
        "DO NOT INSTALL" in st)
 
 print()
+print("# we may not claim a provenance we do not have")
+# tashan-cli published from CI on 7 Aug 2026 and came back with `attestations: None` — npm signs
+# every tarball it hosts, but an ATTESTATION needs a public source repository and ours is private.
+# start.html had been saying the gap "is being fixed: publishing moves to a CI workflow that attests
+# the build". The workflow shipped, the attestation did not, and the sentence became exactly the
+# overclaim this file exists to stop — on the page that asks people to trust running our code.
+try:
+    import urllib.request as _u
+    with _u.urlopen("https://registry.npmjs.org/tashan-cli", timeout=15) as r:
+        _d = json.load(r)
+    _v = _d["versions"][_d["dist-tags"]["latest"]]
+    attested = bool((_v.get("dist") or {}).get("attestations"))
+except Exception as e:
+    # Skip rather than fail an offline run — but SAY WHY. A bare skip turns a transient blip into a
+    # silent pass on a check about whether we are overclaiming, and this one already skipped once on
+    # a network hiccup and looked identical to being offline.
+    attested, why = None, f"{type(e).__name__}: {e}"[:80]
+st = text(os.path.join(WEB, "start.html"))
+if attested is None:
+    print(f"  --   npm unreachable ({why}), skipping the provenance-claim check")
+else:
+    ok(f"npm reports attestations={attested} for the published CLI", True)
+    if not attested:
+        ok("start.html does not claim the provenance gap is fixed or being fixed",
+           not re.search(r"provenance[^.]{0,120}(is being fixed|now attests|we fixed)", st),
+           "we publish no attestation; saying otherwise on the page that asks for trust is the "
+           "exact overclaim this file exists to stop")
+        ok("start.html says WHY there is no attestation, rather than omitting it",
+           "public source repository" in st or "public repository" in st,
+           "an absent explanation reads as an oversight; it is a consequence of a private repo")
+
+print()
 print(("CLAIMS OK" if not fail else "CLAIMS FAILED"))
 sys.exit(fail)

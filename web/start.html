@@ -64,10 +64,15 @@
         the same scanner and scored by the same rules — including the parts that do not flatter us.
         Today: <b>no install script</b>, <b>zero dependencies</b> (so nothing is pulled in behind it),
         <b>one maintainer</b> — which our own scorer counts against it — and <b>no build
-        provenance</b>, which puts it inside the ~77% of scanned packages we point at for exactly
-        that. That last one is ours to fix and is being fixed: publishing moves to a CI workflow that
-        attests the build (<code>.github/workflows/publish-cli.yml</code>). Read the dossier:
-        <a href="/capability.html?id=pkg%3Atashan-cli">tashan-cli &rsaquo;</a></div>
+        provenance</b>, which puts it in the same majority we point at for exactly that.
+        <b>That last one we have not fixed, and the reason is worth stating.</b> npm generates a
+        provenance attestation from a public source repository; ours is private, so publishing from
+        CI signs the release but cannot attest it. Publishing does now run from a workflow
+        (<code>.github/workflows/publish-cli.yml</code>) with no long-lived token, and that workflow
+        fails the release if it ever claims an attestation it did not get — which is how we found
+        this. Making the CLI attestable means publishing it from a public repository, and that is a
+        decision we have not taken rather than a task we have finished.
+        Read the dossier: <a href="/capability.html?id=pkg%3Atashan-cli">tashan-cli &rsaquo;</a></div>
     </section>
 
     <section class="capsec use-step">
