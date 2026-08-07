@@ -165,6 +165,13 @@
     });
     cta.setAttribute("href", url[cad]);
     cta.textContent = label[cad] + " ›";
+    // The headline price moves with the button. Leaving it behind showed "$6 /mo" above a "$50
+    // annually" CTA — two prices for one plan, on the page whose whole job is that the number you
+    // see is the number you are charged.
+    var pr = document.getElementById("proPrice");
+    var amt = cta.getAttribute("data-" + (cad === "year" ? "annual" : "monthly") + "-price");
+    var per = cta.getAttribute("data-" + (cad === "year" ? "annual" : "monthly") + "-cad");
+    if (pr && amt && per) { pr.textContent = amt; pr.insertAdjacentHTML("beforeend", "<small>" + per + "</small>"); }
     // the analytics tag has to move with the cadence, or every annual sale is recorded as monthly —
     // which is exactly how the charging bug stayed invisible
     cta.setAttribute("data-src", "pricing-pro-" + (cad === "year" ? "annual" : "monthly"));

@@ -17,8 +17,8 @@
       "annual": {
         "price": "$50",
         "cadence": "year",
-        "_url": "PASTE THE POLAR ANNUAL CHECKOUT LINK HERE, then run: python3 pipeline/run.py --site. It MUST be a different link from `checkout` above — the same link under two cadences is the bug that billed annual buyers $6/month (f8628ff41f), and both the baker and tests/test_claims.py refuse it.",
-        "url": null
+        "url": "https://buy.polar.sh/polar_cl_ESzG71NaofNkWbLp6wBSpLtuAfuv13XDYE6121Rd2jl",
+        "_verified": "Checked live 8 Aug 2026: resolves to 'Tashan | tashan Pro (annual)' at $50/yr, a different checkout from the monthly one. A product UUID here would 302 to polar.sh/ and sell nothing, so bake_pricing() refuses anything but a polar_cl_ link."
       }
     }
   },

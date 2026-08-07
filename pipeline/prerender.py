@@ -853,7 +853,12 @@ def bake_pricing():
             f'<button type="button" class="ptoggle__b" data-cad="year" aria-pressed="false">Annual{esc(save)}</button>'
             "</div>")
         data = (f' data-monthly-url="{esc(monthly_url)}" data-monthly-label="{esc(price)} monthly"'
-                f' data-annual-url="{esc(ann["url"])}" data-annual-label="{esc(ann["price"])} annually"')
+                f' data-annual-url="{esc(ann["url"])}" data-annual-label="{esc(ann["price"])} annually"'
+                # THE HEADLINE PRICE HAS TO MOVE TOO. Without this the card read "$6 /mo" while the
+                # button under it read "$50 annually" — two prices for one plan, on the page whose
+                # entire job is that the number you see is the number you are charged.
+                f' data-monthly-price="{esc(price)}" data-monthly-cad="/mo"'
+                f' data-annual-price="{esc(ann["price"])}" data-annual-cad="/yr"')
         note = ""
     else:
         toggle, data = "", ""
