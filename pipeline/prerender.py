@@ -828,6 +828,16 @@ def bake_pricing():
     ann = pro.get("annual") or None
     monthly_url, price = pro.get("checkout", ""), pro.get("price", "")
 
+    # A PRODUCT ID IS NOT A CHECKOUT LINK. buy.polar.sh/<product-uuid> answers 302 -> polar.sh/ —
+    # Polar's own marketing homepage, with a 200 at the end of the redirect. So a pasted product id
+    # produces a working-looking "Annual" button that lands the buyer on someone else's landing page
+    # and sells nothing: the same shape as the bug that billed annual buyers monthly, where the
+    # control looked right and the money went wrong. Only accept the checkout-link form.
+    if ann and ann.get("url") and not re.match(r"^https://buy\.polar\.sh/polar_cl_[A-Za-z0-9]+$", ann["url"]):
+        raise SystemExit(
+            f"pricing: tiers.pro.annual.url is {ann['url']!r}, which is not a Polar checkout link.\n"
+            f"  Expected https://buy.polar.sh/polar_cl_...  — a product UUID redirects to polar.sh/\n"
+            f"  and sells nothing. Create a Checkout Link on the annual product and paste that.")
     if ann and ann.get("url") and ann["url"] != monthly_url:
         # Savings stated as a number, computed, never typed: "save 30%" that does not match the two
         # prices on the same page is the kind of arithmetic a buyer checks.
