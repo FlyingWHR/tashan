@@ -19,7 +19,9 @@
         "cadence": "year",
         "url": "https://buy.polar.sh/polar_cl_ESzG71NaofNkWbLp6wBSpLtuAfuv13XDYE6121Rd2jl",
         "_verified": "Checked live 8 Aug 2026: resolves to 'Tashan | tashan Pro (annual)' at $50/yr, a different checkout from the monthly one. A product UUID here would 302 to polar.sh/ and sell nothing, so bake_pricing() refuses anything but a polar_cl_ link."
-      }
+      },
+      "trial_days": 0,
+      "_trial_days": "Days of free trial, 0 = none. THIS MUST MATCH POLAR. Checked 8 Aug 2026: both checkouts read 'Subtotal $6 / mo' with no trial, so it is 0. Setting a number here without configuring the trial on the Polar product would advertise a free period the checkout then charges for — the same class of defect as the annual button that billed monthly. Configure it in Polar first (product -> subscription settings -> trial period), verify on the checkout page, then set it."
     }
   },
   "features": [

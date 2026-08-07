@@ -874,6 +874,22 @@ def bake_pricing():
                             + m.group(2) + f"{price} monthly &rsaquo;" + m.group(4)), out, count=1)
     out = re.sub(r'(<span class="plan__note mono" id="proCadence">)[^<]*(</span>)',
                  lambda m: m.group(1) + note + m.group(2), out, count=1)
+
+    # THE TRIAL, IF THERE IS ONE. "7-day refund" was the reassurance under the buy button, and a
+    # refund is a weak thing to lead with: it asks someone to pay, be disappointed, and then chase
+    # their money. A trial is the same reassurance without any of that. But it is only true if Polar
+    # is configured for it — advertising a free period the checkout then charges for is the annual
+    # button billing monthly again, so this renders from `trial_days` and 0 renders nothing.
+    # The refund policy itself is unchanged and still linked from the footer, where it belongs.
+    days = pro.get("trial_days") or 0
+    terms = "cancel any time in <a class=\"link\" href=\"/account.html\">your account</a>"
+    if days:
+        terms = (f"{int(days)} days free, then {esc(price)}/{'yr' if False else 'mo'} &middot; " + terms)
+    out2, n2 = re.subn(r'(<p class="plan__note mono" id="proTerms">)[\s\S]*?(</p>)',
+                       lambda m: m.group(1) + terms + m.group(2), out, count=1)
+    if n2 != 1:
+        raise SystemExit("pricing.html has no #proTerms line to bake — it moved or was edited away.")
+    out = out2
     open(pg, "w", encoding="utf-8").write(out)
     print(f"pricing: {'monthly + annual toggle' if toggle else 'monthly only (no annual price configured)'}")
 
