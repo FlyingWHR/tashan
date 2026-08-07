@@ -54,11 +54,14 @@ export async function onRequest({ request, env }) {
   const id = (url.searchParams.get("id") || "").trim();
 
   if (!id) return back(url.origin);
-  // No token means this whole path is not configured; /welcome's key form is the correct fallback
-  // and says so in its own words.
-  if (!env.POLAR_ORG_TOKEN) return back(url.origin);
+  // NOT CONFIGURED IS ITS OWN ANSWER. These two used to redirect to a bare /welcome, identical to a
+  // checkout id that simply did not resolve — so a missing binding and a bad id looked the same from
+  // outside, and the only way to discover that auto-sign-in was off was a paying customer landing on
+  // a paste form. Saying which lets it be checked before someone buys. It leaks nothing: that the
+  // site is not set up is evident to anyone who completes a purchase, and no value is disclosed.
+  if (!env.POLAR_ORG_TOKEN) return back(url.origin, "?e=unconfigured");
   // No KV means no single-use guarantee. Refuse rather than issue a session from a replayable URL.
-  if (!env.TASHAN_KV) return back(url.origin);
+  if (!env.TASHAN_KV) return back(url.origin, "?e=unconfigured");
 
   // 1. Burn the id FIRST. Doing this after the exchange would leave a window where two concurrent
   //    requests with the same id both succeed.

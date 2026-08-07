@@ -88,18 +88,28 @@ await ok("a STALE checkout is refused", async () => {
   assert.match(locOf(r), /e=stale/);
 });
 
+await ok("a configured site with an unresolvable id does not blame its own config", async () => {
+  polarStub({ co: null });                       // Polar 404s the checkout
+  const r = await call({ POLAR_ORG_TOKEN: "oat", TASHAN_KV: kv() });
+  assert.ok(!locOf(r).includes("unconfigured"),
+            "that would send the operator hunting a binding that is fine");
+});
+
 await ok("without KV it refuses rather than issue a replayable session", async () => {
   polarStub({ co: PAID });
   const r = await call({ POLAR_ORG_TOKEN: "oat" });
   assert.equal(cookieOf(r), "", "no single-use store means no session");
-  assert.match(locOf(r), /\/welcome/);
+  // ?e=unconfigured, not a bare /welcome. A missing binding used to be indistinguishable from a
+  // checkout id that simply did not resolve, so the only way to discover that auto-sign-in was off
+  // was a paying customer landing on a paste form — and nothing outside the site could tell.
+  assert.match(locOf(r), /\/welcome\?e=unconfigured$/);
 });
 
 await ok("without the org token it falls back to /welcome, not an error page", async () => {
   polarStub({ co: PAID });
   const r = await call({ TASHAN_KV: kv() });
   assert.equal(r.status, 302);
-  assert.match(locOf(r), /\/welcome/, "the paste-your-key form is the fallback");
+  assert.match(locOf(r), /\/welcome\?e=unconfigured$/, "say it is us, not a bad link");
   assert.equal(cookieOf(r), "");
 });
 

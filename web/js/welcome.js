@@ -64,6 +64,10 @@
     used:   "That sign-in link had already been used. Your key is in your purchase email — paste it once below.",
     unpaid: "That checkout has not completed. If you have just paid, give it a moment and reload.",
     stale:  "That sign-in link has expired. Paste your key once below and this browser stays signed in.",
+    // Not the buyer's fault and not their problem to solve — say so, and do not imply they did
+    // something wrong. Their key is real and the paste form below works.
+    unconfigured: "Automatic sign-in is not switched on for this site yet — that is on us, not you. " +
+                  "Your key is in your purchase email; paste it once below and this browser stays signed in.",
   }[new URLSearchParams(location.search).get("e")] || "";
 
   function signedOut() {
