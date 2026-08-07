@@ -121,11 +121,18 @@ Add that TXT record in Cloudflare DNS. **It must sit on the apex (`tashan.sh`), 
 like `_mcp-auth`** — the registry follows SPF-style placement, and a record under a selector fails
 with a generic signature error that tells you nothing.
 
+The registry JWT from `login` is short-lived, so run the login and the publish as one chain rather
+than as two steps you come back to — a pause between them returns
+`401 … Registry JWT token … token is expired`, which reads like an auth problem and is only a clock.
+
 ```sh
-PRIVATE_KEY="$(openssl pkey -in key.pem -noout -text | grep -A3 "priv:" | tail -n +2 | tr -d ' :\n')"
-mcp-publisher login dns --domain tashan.sh --private-key "${PRIVATE_KEY}"
-mcp-publisher publish
+PRIVATE_KEY="$(openssl pkey -in key.pem -noout -text | grep -A3 "priv:" | tail -n +2 | tr -d ' :\n')" \
+  && mcp-publisher login dns --domain tashan.sh --private-key "$PRIVATE_KEY" \
+  && mcp-publisher publish
 ```
+
+If it does expire, only the two commands above need repeating — `key.pem` and the TXT record stay
+valid, so there is nothing to regenerate and no DNS to touch.
 
 `key.pem` is the private half of the key that proves we own the namespace — anyone holding it can
 publish as `sh.tashan/*`. It is in `.gitignore` (`*.pem`); keep it out of the repo and out of chat.
