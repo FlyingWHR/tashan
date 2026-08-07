@@ -140,6 +140,17 @@ def bake_outreach(con):
     if hits < len(vals):
         raise SystemExit(f"outreach bake matched {hits}/{len(vals)} table rows — the table shape "
                          f"changed. Fix docs/OUTREACH.md, do not let stale numbers ship to strangers.")
+    # A BAKE MUST NEVER SHRINK ITS TARGET. docs/OUTREACH.md was found at ZERO BYTES — the whole file,
+    # not just the table — and committed that way, because a rewrite-in-place that produces nothing
+    # still writes nothing perfectly happily. The row-count check above cannot catch it: a file with
+    # no rows to match dies at the raise only if it was ALREADY parsed, and an empty `s` never gets
+    # that far. `open(..., "w")` truncates the moment it is called, so the file is destroyed even if
+    # the write then fails. Compare before opening, and treat any large shrink as a bug in this
+    # function rather than an edit to honour.
+    if len(s) < len(src) * 0.9:
+        raise SystemExit(f"outreach bake would shrink {os.path.relpath(OUTREACH, ROOT)} from "
+                         f"{len(src):,} to {len(s):,} bytes. Refusing — that is a bug here, not an "
+                         f"edit. Restore with: git checkout HEAD -- docs/OUTREACH.md")
     open(OUTREACH, "w", encoding="utf-8").write(s)
     print(f"outreach: baked {hits} facts + {n1 + n2 + n3 + n4} prose mentions ({pct}% no provenance)")
 
