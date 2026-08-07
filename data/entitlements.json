@@ -3,69 +3,100 @@
   "_status": "live = shipped and reachable today · beta = shipped, may change · planned = NOT built, must never appear as a feature",
   "_delivered_by": "the concrete thing a buyer runs or calls. A feature with no delivery path is not a feature.",
   "tiers": {
-    "free": { "label": "Free", "price": "$0", "cadence": "forever" },
-    "pro": { "label": "tashan Pro", "price": "$6", "cadence": "month" }
+    "free": {
+      "label": "Free",
+      "price": "$0",
+      "cadence": "forever"
+    },
+    "pro": {
+      "label": "tashan Pro",
+      "price": "$6",
+      "cadence": "month",
+      "checkout": "https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d",
+      "_annual": "Set `annual` to activate the monthly/annual toggle on pricing.html. It stays null until a REAL annual price object exists in Polar: the annual button once pointed at the monthly checkout, so anyone choosing annual was billed $6/month and the funnel recorded it as an annual conversion. It was removed rather than left lying (commit f8628ff41f). url must be a DIFFERENT Polar link from the monthly one.",
+      "annual": null
+    }
   },
   "features": [
     {
       "id": "index",
       "label": "The full Index — every tashan score and expertise grade",
-      "free": true, "pro": true, "status": "live",
+      "free": true,
+      "pro": true,
+      "status": "live",
       "delivered_by": "/data/index.json · the board · npx tashan-cli search"
     },
     {
       "id": "finding-exists",
       "label": "Every risk finding, named — how many advisories, at what severity, that an install script exists, that a permission surface exists",
-      "free": true, "pro": true, "status": "live",
+      "free": true,
+      "pro": true,
+      "status": "live",
       "delivered_by": "every capability page · /data/capabilities.json",
       "note": "The EXISTENCE of a risk is never paywalled. Charging to learn that something is wrong is the one thing an independent rater does not get to do."
     },
     {
       "id": "doctor",
       "label": "Audit the config already on this machine",
-      "free": true, "pro": true, "status": "live",
+      "free": true,
+      "pro": true,
+      "status": "live",
       "delivered_by": "npx tashan-cli doctor"
     },
     {
       "id": "agent-endpoints",
       "label": "Agent endpoints, badges and the MCP server — no key, no signup",
-      "free": true, "pro": true, "status": "live",
+      "free": true,
+      "pro": true,
+      "status": "live",
       "delivered_by": "/v0.1/scores · /v0.1/servers · /badge/*.svg · npx tashan-mcp"
     },
     {
       "id": "advisory-detail",
       "label": "Which CVE or GHSA, its severity, and the version that fixes it",
-      "free": false, "pro": true, "status": "live",
+      "free": false,
+      "pro": true,
+      "status": "live",
       "delivered_by": "GET /api/security · npx tashan-cli doctor"
     },
     {
       "id": "install-script",
       "label": "The exact command a package runs at install time",
-      "free": false, "pro": true, "status": "live",
+      "free": false,
+      "pro": true,
+      "status": "live",
       "delivered_by": "GET /api/security"
     },
     {
       "id": "permissions",
       "label": "The full declared permission surface, not just the first entry",
-      "free": false, "pro": true, "status": "live",
+      "free": false,
+      "pro": true,
+      "status": "live",
       "delivered_by": "GET /api/security"
     },
     {
       "id": "history",
       "label": "Every score and signal since we started measuring, with the scorer version behind each point",
-      "free": false, "pro": true, "status": "live",
+      "free": false,
+      "pro": true,
+      "status": "live",
       "delivered_by": "GET /api/history · npx tashan-cli trend"
     },
     {
       "id": "replacement",
       "label": "A named replacement for anything dead, deprecated or abandoned in your config",
-      "free": false, "pro": true, "status": "live",
+      "free": false,
+      "pro": true,
+      "status": "live",
       "delivered_by": "npx tashan-cli doctor"
     },
     {
       "id": "watch",
       "label": "Proactive notification on the day something in your stack changes",
-      "free": false, "pro": false, "status": "planned",
+      "free": false,
+      "pro": false,
+      "status": "planned",
       "delivered_by": null,
       "note": "NOT BUILT. There is no scheduler and no notification path. It was printed as the headline of the paid plan while the published CLI had no watch command at all. It stays here as planned so nothing can quietly start selling it again — the generator refuses to render a planned feature as included."
     }

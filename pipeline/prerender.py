@@ -806,6 +806,63 @@ def board_evidence(c):
     return "—"
 
 
+def bake_pricing():
+    """Render the price block on pricing.html from data/entitlements.json.
+
+    THE ANNUAL BUTTON ONCE CHARGED MONTHLY. Two CTAs offering different cadences pointed at the same
+    Polar checkout, so anyone choosing annual was billed $6/month and the funnel recorded it as an
+    annual conversion — neither the customer nor the dashboard could see the mismatch. It was removed
+    rather than left lying (f8628ff41f), and tests/test_claims.py now fails the build if two cadences
+    ever share one price link again.
+
+    This is how it comes back safely: the toggle renders ONLY when `tiers.pro.annual.url` is set to a
+    real, DIFFERENT Polar link. Until then the page shows the monthly price and says plainly that
+    annual is not available — which is what it says today. One config edit turns it on; no HTML
+    changes, and no way to ship a toggle whose second option bills the first option's price.
+    """
+    pg = os.path.join(ROOT, "web", "pricing.html")
+    ent = os.path.join(ROOT, "data", "entitlements.json")
+    if not (os.path.exists(pg) and os.path.exists(ent)):
+        return
+    pro = json.load(open(ent, encoding="utf-8"))["tiers"]["pro"]
+    ann = pro.get("annual") or None
+    monthly_url, price = pro.get("checkout", ""), pro.get("price", "")
+
+    if ann and ann.get("url") and ann["url"] != monthly_url:
+        # Savings stated as a number, computed, never typed: "save 30%" that does not match the two
+        # prices on the same page is the kind of arithmetic a buyer checks.
+        try:
+            m = float(str(price).lstrip("$")) * 12
+            a = float(str(ann["price"]).lstrip("$"))
+            save = f" · save {round(100 * (m - a) / m)}%" if m > a else ""
+        except (TypeError, ValueError):
+            save = ""
+        toggle = (
+            '<div class="ptoggle" role="group" aria-label="Billing period">'
+            '<button type="button" class="ptoggle__b is-on" data-cad="month" aria-pressed="true">Monthly</button>'
+            f'<button type="button" class="ptoggle__b" data-cad="year" aria-pressed="false">Annual{esc(save)}</button>'
+            "</div>")
+        data = (f' data-monthly-url="{esc(monthly_url)}" data-monthly-label="{esc(price)} monthly"'
+                f' data-annual-url="{esc(ann["url"])}" data-annual-label="{esc(ann["price"])} annually"')
+        note = ""
+    else:
+        toggle, data = "", ""
+        note = "annual billing is not available yet &mdash; monthly only"
+
+    out, n = re.subn(r"<!--PRICE-TOGGLE-->[\s\S]*?<!--/PRICE-TOGGLE-->",
+                     "<!--PRICE-TOGGLE-->" + toggle + "<!--/PRICE-TOGGLE-->",
+                     open(pg, encoding="utf-8").read(), count=1)
+    if n != 1:
+        raise SystemExit("pricing.html has no <!--PRICE-TOGGLE--> slot — the block moved or was edited away.")
+    out = re.sub(r'(<a class="btn btn--primary plan__cta" id="proCta")[^>]*?(\s+rel="noopener">)([^<]*)(</a>)',
+                 lambda m: (m.group(1) + f' data-src="pricing-pro-monthly" href="{monthly_url}"' + data
+                            + m.group(2) + f"{price} monthly &rsaquo;" + m.group(4)), out, count=1)
+    out = re.sub(r'(<span class="plan__note mono" id="proCadence">)[^<]*(</span>)',
+                 lambda m: m.group(1) + note + m.group(2), out, count=1)
+    open(pg, "w", encoding="utf-8").write(out)
+    print(f"pricing: {'monthly + annual toggle' if toggle else 'monthly only (no annual price configured)'}")
+
+
 def bake_methodology(gen):
     """Write the LIVE scorer version into methodology.html.
 
@@ -1109,6 +1166,7 @@ def main():
     sitemap(caps)
     bake_hero(caps, d.get("total_capabilities") or len(caps))
     bake_methodology(gen)
+    bake_pricing()
     print("prerendered %d capability pages -> %s" % (len(caps), OUT))
     print("sitemap: %d capability URLs + core pages" % len(caps))
 

@@ -137,3 +137,36 @@
     }
   }, true);
 })();
+
+// ---- pricing: the monthly/annual toggle -------------------------------------------------------
+// Present only when pipeline/prerender.py::bake_pricing() found a real annual price in
+// data/entitlements.json. THE ANNUAL BUTTON ONCE CHARGED MONTHLY — two cadences pointed at one
+// Polar checkout, so the buyer was billed $6/month and the funnel logged an annual conversion. This
+// reads both URLs off the CTA rather than holding its own copy, so there is no second place for a
+// link to be wrong, and it refuses to switch if the two URLs are identical.
+(function () {
+  "use strict";
+  var wrap = document.querySelector(".ptoggle");
+  var cta = document.getElementById("proCta");
+  if (!wrap || !cta) return;
+  var url = { month: cta.getAttribute("data-monthly-url"), year: cta.getAttribute("data-annual-url") };
+  var label = { month: cta.getAttribute("data-monthly-label"), year: cta.getAttribute("data-annual-label") };
+  if (!url.month || !url.year || url.month === url.year) return;   // never offer a cadence that bills another
+
+  wrap.addEventListener("click", function (e) {
+    var b = e.target.closest(".ptoggle__b");
+    if (!b) return;
+    var cad = b.getAttribute("data-cad");
+    if (!url[cad]) return;
+    wrap.querySelectorAll(".ptoggle__b").forEach(function (x) {
+      var on = x === b;
+      x.classList.toggle("is-on", on);
+      x.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    cta.setAttribute("href", url[cad]);
+    cta.textContent = label[cad] + " ›";
+    // the analytics tag has to move with the cadence, or every annual sale is recorded as monthly —
+    // which is exactly how the charging bug stayed invisible
+    cta.setAttribute("data-src", "pricing-pro-" + (cad === "year" ? "annual" : "monthly"));
+  });
+})();

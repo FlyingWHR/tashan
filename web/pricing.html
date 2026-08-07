@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=243">
+  <link rel="stylesheet" href="/css/site.css?v=244">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span>tashan</a><div class="nav__links"><a href="/">Find skills</a><a href="/browse.html">Jobs</a><a href="/start.html">Doctor</a><a href="/pricing.html" aria-current="page">Pricing</a><a class="nav__acct" id="navAcct" href="/account.html" title="Your account" aria-label="Your account"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span class="nav__pro mono" id="navPro" hidden>Pro</span></a></div></div></nav>
@@ -63,31 +63,37 @@
                 <p class="plan__for">Free tells you what is true today. Pro tells you the day that changes.</p>
         <div class="callout mono fs-sm mb-4">$ tashan doctor <span class="o-50"># with Pro: history, advisory detail, replacements</span></div>
         <ul class="plan__feat">
-          <li><b>A new advisory against something you run</b> — and whether its severity went up.</li>
-          <li><b>An install script that appeared or changed</b> — code that runs on your machine
-            before you have used the tool once, that you did not approve.</li>
-          <li><b>A permission surface that widened</b> — it reaches further into your machine than
-            it did when you installed it.</li>
-          <li><b>A project stopping</b> — the author declaring it unmaintained, an npm deprecation,
-            a repository archived, or upkeep decaying into abandonment.</li>
-          <li><b>The people behind it changing</b> — a maintainer count falling to one.</li>
-          <li><b>The replacement, named</b> — not "this is deprecated", but <em>switch to this one,
-            it scores 65 and is still maintained</em>.</li>
-        </ul>
-        <p class="plan__note mono mb-4">Every alert says what changed, why it matters and what to do
-          about it. A warning that only says "something changed" is one you learn to ignore.</p>
-        <p class="plan__note mono mb-4">The risk scan itself is <b>not</b> here. It is free, in full, for
-          everyone. What Pro sells is <em>time</em>: noticing, on the day, without you looking.</p>
+            <li>A new advisory against something you run</li>
+            <li>An install script that appeared or changed</li>
+            <li>A permission surface that widened</li>
+            <li>A project stopping — deprecated, archived, abandoned</li>
+            <li>A maintainer count falling to one</li>
+            <li><b>The replacement, named</b> — not just "this is dead"</li>
+          </ul>
         <div class="plan__buys">
-          <a class="btn btn--primary plan__cta" href="https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" rel="noopener"
-             data-src="pro-checkout-monthly">$6 monthly &rsaquo;</a>
-          <span class="plan__note mono">annual billing is not available yet &mdash; monthly only</span>
-        </div>
+            <!--PRICE-TOGGLE--><!--/PRICE-TOGGLE-->
+            <a class="btn btn--primary plan__cta" id="proCta" data-src="pricing-pro-monthly" href="https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d"
+               rel="noopener">$6 monthly &rsaquo;</a>
+            <span class="plan__note mono" id="proCadence">annual billing is not available yet &mdash; monthly only</span>
         <p class="plan__note mono">cancel any time in
           <a class="link" href="/account.html">your account</a>
           · <a class="link" href="/refunds.html">7-day refund</a></p>
       </section>
     </div>
+
+    <section class="capsec pricing-detail">
+      <div class="capsec__hd"><h2>What an alert actually says</h2></div>
+      <p class="capsec__sub">Every one names what changed, why it matters and what to do about it. A
+        warning that only says "something changed" is one you learn to ignore, so we do not send those.</p>
+      <div class="callout mono fs-sm">! @acme/db-mcp — install script added in 2.1.0<br>
+        &nbsp;&nbsp;runs: <span class="o-50">node ./scripts/post.js</span> — it did not in 2.0.4, which is
+        what you installed<br>
+        &nbsp;&nbsp;→ pin 2.0.4, or switch to pg-mcp (scores 78, no install script)</div>
+      <p class="capsec__sub"><b>The risk scan itself is not what Pro sells.</b> Every finding — which
+        CVE, its severity, the version that fixes it, the exact install-time command — is free, in
+        full, for everyone. What Pro sells is <em>time</em>: noticing on the day it changes, without
+        you looking.</p>
+    </section>
 
     <div class="callout"><b>Building on tashan?</b> The endpoints are free and unmetered because we want
       agents, hosts and IDEs calling them — that <em>is</em> the distribution.
@@ -140,7 +146,7 @@
 
   <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources, and checkable against them.</span></div></footer>
 
-  <script src="/js/terminal.js?v=243" defer></script>
-  <script src="/js/site.js?v=243" defer></script>
+  <script src="/js/terminal.js?v=244" defer></script>
+  <script src="/js/site.js?v=244" defer></script>
 </body>
 </html>

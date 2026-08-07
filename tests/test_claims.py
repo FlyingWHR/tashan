@@ -127,7 +127,16 @@ for pg in ("index.html", "terms.html", "methodology.html"):
 print()
 print("# a price we advertise must be a price we can charge")
 pricing = open(os.path.join(WEB, "pricing.html"), encoding="utf-8").read()
-links = re.findall(r'href="(https://buy\.polar\.sh/[^"]+)"[^>]*data-src="([^"]+)"', pricing)
+# ORDER-INDEPENDENT. This used to require href="…" to appear BEFORE data-src="…" in the tag, so a
+# generator that emitted the attributes the other way round made the check find zero links and pass
+# vacuously on the page whose whole job is not charging the wrong amount. Parse each <a> once, then
+# read its attributes.
+links = []
+for tag in re.findall(r"<a\b[^>]*>", pricing):
+    href = re.search(r'href="(https://buy\.polar\.sh/[^"]+)"', tag)
+    src = re.search(r'data-src="([^"]+)"', tag)
+    if href:
+        links.append((href.group(1), src.group(1) if src else ""))
 by_url = {}
 for url, src in links:
     by_url.setdefault(url, []).append(src)
