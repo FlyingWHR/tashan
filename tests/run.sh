@@ -140,6 +140,12 @@ node functions/api/e.test.mjs 2>/dev/null || fail=1
 echo; echo "── polar webhook (signature) ──────────────────"
 node functions/api/polar.test.mjs 2>/dev/null || fail=1
 
+# 5b2. server.json against the MCP registry's real schema — constraints, not just field names. The
+# shallow check in test_agent_surface passed a manifest the registry rejected with a 422 for a
+# description 84 characters over a documented limit.
+echo; echo "── server.json (registry schema) ──────────────"
+python3 tests/test_server_json.py || fail=1
+
 # 5c. the per-question agent endpoints. This Function mounts on /v0.1/* and a Pages Function WINS the
 # route over a static asset, so a fall-through mistake here does not degrade the new endpoints — it
 # takes /v0.1/scores and /v0.1/servers, both published and linked from llms.txt, off the air.
