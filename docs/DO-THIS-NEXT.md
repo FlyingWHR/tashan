@@ -4,7 +4,7 @@
 identity, a dashboard, or a human on the other end. They are ordered by effect, and each one states
 exactly what is already prepared so the step is short.*
 
-Time: **~25 minutes total.** Steps 1 and 2 are two minutes each.
+**Three of four are done.** Only §1 is left — one toggle in the Cloudflare dashboard.
 
 ---
 
@@ -41,7 +41,14 @@ python3 tests/test_agent_access.py     # every line should read ok
 
 ---
 
-## 2 · Configure npm Trusted Publishing — 3 minutes, and **no token at all**
+## 2 · npm Trusted Publishing — ✅ DONE 7 Aug 2026 (`tashan-cli@0.1.3`)
+
+*Published over OIDC with no token. Provenance did NOT land and cannot: npm builds the
+attestation from a public source repo and this one is private. `start.html` says so
+plainly rather than claiming a fix; making the CLI attestable means publishing it from a
+public repository, which is a decision, not a task.*
+
+<details><summary>original instructions</summary>
 
 **What it costs today:** `tashan-cli@0.1.2` was published from a laptop and has **no build
 provenance** — it is inside the 75% we point at in every outreach message. Fixing it is the
@@ -85,7 +92,7 @@ older machine.*
 
 ---
 
-## 3 · Publish to the MCP registry — 10 minutes
+## 3 · Publish to the MCP registry — ✅ DONE 7 Aug 2026 (`sh.tashan/tashan@0.1.3`, active)
 
 **What it costs today:** we ingest `registry.modelcontextprotocol.io` as the spine of our coverage
 and are absent from it. It is where every MCP client with a "browse servers" view looks.
@@ -145,7 +152,16 @@ immediately, but the namespace must become `io.github.FlyingWHR/tashan` — chan
 
 ---
 
-## 4 · Post one Discussion — 10 minutes, and the only one that moves the number
+</details>
+
+## 4 · Post one Discussion — ✅ DONE 7 Aug 2026
+
+*Posted to [Cline](https://github.com/cline/cline/discussions/13027) and
+[Goose](https://github.com/aaif-goose/goose/discussions/11029). Continue was not found in
+a search — worth checking, since three beats two for the reason one non-reply is not a
+signal.*
+
+<details><summary>original instructions</summary>
 
 Distribution has scored **10/100 at the heaviest weight** across five consecutive audits. Nothing
 engineering-side moves it. This is the whole gap.
@@ -172,6 +188,8 @@ python3 tests/test_outreach_numbers.py
 ```
 
 ---
+
+</details>
 
 ## What I will do while you do that
 

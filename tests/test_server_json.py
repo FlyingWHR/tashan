@@ -129,5 +129,31 @@ unknown = [k for k in doc if k not in (root.get("properties") or {})]
 ok("no unknown top-level field", not unknown, str(unknown))
 
 print()
+print("# and the entry is actually live under our namespace")
+# MATCH THE NAMESPACE, NEVER A SUBSTRING. A check that read `count != 0` from
+# /v0.1/servers?search=tashan reported us listed when we were not: the registry's search is a
+# substring match and "AnkitaShanbhag30" contains "tashan". Two different published servers, and a
+# green tick for something that had never been published.
+try:
+    with urllib.request.urlopen(
+            "https://registry.modelcontextprotocol.io/v0/servers?search=tashan&limit=100",
+            timeout=20) as r:
+        reg = json.load(r)
+    ns = doc["name"].split("/")[0] + "/"
+    live = [x["server"] for x in reg.get("servers", []) if x["server"]["name"].startswith(ns)]
+except Exception as e:
+    live = None
+    print(f"  --   registry unreachable ({type(e).__name__}), skipping")
+if live is not None:
+    ok(f"{doc['name']} is published in the MCP registry", bool(live),
+       "not listed — run mcp-publisher publish (see docs/DO-THIS-NEXT.md §3)")
+    if live:
+        newest = max(live, key=lambda x: x["version"])
+        # A registry entry pinned to a version nobody can install resolves, fails, and reads to the
+        # user as a broken server.
+        ok(f"the listed version {newest['version']} is the one we ship ({doc['version']})",
+           any(x["version"] == doc["version"] for x in live))
+
+print()
 print("SERVER.JSON OK" if not fail else "SERVER.JSON FAILED")
 sys.exit(fail)
