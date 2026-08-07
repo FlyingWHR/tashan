@@ -52,27 +52,22 @@ export async function onRequestGet({ request, env }) {
   const shard = await env.TASHAN_KV.get("sec:" + bucketOf(id), "json");
   const rec = (shard && shard[id]) || null;
   if (!rec) {
-    // AN EMPTY STORE IS NOT A CAPABILITY WE HAVE NOTHING ON, and conflating them is the most
-    // expensive bug this codebase can have. pipeline/push_security.py skips without CF credentials,
-    // so the paid store can be entirely unpopulated while every request answers the same innocuous
-    // "no audit detail recorded for this id" — which reads as thin coverage. A customer paying $6
-    // would see it for EVERY package, conclude the product is useless, and refund. It does not look
-    // broken. It looks bad, which is worse, and nothing surfaces it.
+    // NO CUSTOMER-FACING ALARM, because emptiness cannot be proved cheaply and a false one is
+    // worse than the bug it guards. The concern was real — push_security.py skips without CF
+    // credentials, and an unpopulated store would answer every request with the same innocuous
+    // "no audit detail recorded", reading as thin coverage rather than an undelivered product. But
+    // the store IS populated (CI pushes 61 shards nightly; a local run without the credentials is
+    // not evidence), and a 503 here would tell a paying customer their product is broken when it
+    // is not. An absent shard means this bucket has nothing, which is ordinary.
+    //
+    // So the manifest is a DIAGNOSTIC, not a verdict: `store_published_at` lets an operator see
+    // whether the store was ever pushed, and nobody is alarmed on the strength of an inference.
     const meta = await env.TASHAN_KV.get("sec:meta", "json");
-    if (!meta) {
-      return json({
-        id, detail: null, error: "paid detail has not been published yet",
-        note: "This is a delivery fault on our side, not a finding about this capability. The audit " +
-              "is free and complete on the capability's own page; your licence is unaffected.",
-        free: "https://tashan.sh/capability.html?id=" + encodeURIComponent(id),
-        support: "https://tashan.sh/support.html",
-      }, 503);
-    }
     // A capability with no npm package is not scannable, and one with nothing found has nothing to
     // add beyond what the page already says for free. Neither is an error, and neither may be
     // reported in a way that reads as "we scanned it and it was clean".
     return json({ id, detail: null, note: "no audit detail recorded for this id",
-                  published_at: meta.pushed_at || null }, 404);
+                  store_published_at: (meta && meta.pushed_at) || null }, 404);
   }
 
   return json({

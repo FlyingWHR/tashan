@@ -166,30 +166,20 @@ test("bucketOf matches pipeline/push_security.py::bucket_of", () => {
 // push_security.py skips without CF credentials, so the store can be entirely empty while every
 // request a paying customer makes reads as thin coverage rather than an undelivered product. They
 // would conclude tashan is useless and refund, and nothing anywhere would say otherwise.
-test("an unpublished store says so, and never reads as thin coverage", async () => {
-  const un = stubPolar(granted);
-  try {
-    const r = await onRequestGet({
-      request: req("?id=pkg:anything", withKey()),
-      env: ENV({ TASHAN_KV: kv() }),            // no shards, and no sec:meta
-    });
-    assert.equal(r.status, 503, "503, not the 404 used for a capability we have nothing on");
-    const b = await r.json();
-    assert.match(b.error, /not been published/);
-    assert.match(b.note, /not a finding about this capability/, "never blame the capability");
-    assert.ok(b.free, "point at the free audit, which is complete and unaffected");
-  } finally { un(); }
-});
 
-test("a published store still 404s a capability it has no record for", async () => {
+
+// THE REGRESSION THIS PREVENTS, shipped and caught within the hour: sec:meta was introduced after
+// 61 shards were already in KV, so "no manifest" was true of a perfectly healthy store. Reading it
+// as "never published" told paying customers their product was undelivered when it was not.
+test("a loaded store with no manifest yet is not called unpublished", async () => {
   const un = stubPolar(granted);
   try {
     const r = await onRequestGet({
       request: req("?id=pkg:nothing-here", withKey()),
-      env: ENV({ TASHAN_KV: kv({ "sec:meta": { pushed_at: "2026-08-08T00:00:00Z" } }) }),
+      // shards present (this bucket has data), manifest absent — the state on the night sec:meta shipped
+      env: ENV({ TASHAN_KV: kv({ ["sec:" + bucketOf(ID)]: { [ID]: REC } }) }),
     });
-    // A 503 here would send the operator chasing a push that ran perfectly well.
-    assert.equal(r.status, 404);
-    assert.equal((await r.json()).published_at, "2026-08-08T00:00:00Z");
+    assert.equal(r.status, 404, "an absent manifest is not evidence of an empty store");
+    assert.equal((await r.json()).store_published_at, null, "diagnostic, not a verdict");
   } finally { un(); }
 });
