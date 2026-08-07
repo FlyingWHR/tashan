@@ -153,9 +153,23 @@ export function resolve(item, lookup) {
     return i === undefined ? null : lookup.records[i];
   };
   const id = item.id || item.name || "";
+  const bare = String(id).replace(/^@[^/]+\//, "");
+  // NEVER STRIP A SCOPE DOWN TO A GENERIC LEAF. `@playwright/mcp` — Microsoft's official server —
+  // stripped to `mcp` and matched `@rendobar/mcp`, a different package that IS deleted from the
+  // registry. Every user with Playwright configured was told their install had been REMOVED for
+  // spam, malware or illegal content: the most serious claim this tool can make, about the wrong
+  // package, on the strength of a shared last path segment. Same defect as the slug collision that
+  // sent @stripe/mcp to a third-party stripe-mcp's page — a scoped name's identity is the WHOLE
+  // name, and its leaf is frequently a word like `mcp`, `server` or `cli` that dozens share.
+  //
+  // The fallback still exists, because a package genuinely is configured both ways — but only when
+  // the leaf is distinctive enough to be an identity on its own.
+  const GENERIC = new Set(["mcp", "server", "cli", "core", "client", "sdk", "api", "app", "tools",
+                           "mcp-server", "server-mcp", "index", "main", "lib"]);
+  const leafOk = bare !== id && bare.length >= 4 && !GENERIC.has(bare.toLowerCase());
   return rec(id)
-      // a scoped package may be configured bare, and vice versa
-      || rec(String(id).replace(/^@[^/]+\//, ""))
+      // a scoped package may be configured bare, and vice versa — but see GENERIC above
+      || (leafOk ? rec(bare) : null)
       // docker images and remote hosts arrive without the `kind:` prefix the id carries
       || rec(`${item.kind}:${id}`)
       || null;

@@ -163,6 +163,29 @@ console.log("ok — trend is scorer-aware");
   const board = [{ id: "pkg:tavily-mcp", name: "tavily", npm_pkg: "tavily-mcp", tashan_score: 86 }];
 
   assert.strictEqual(resolve({ kind: "npm", id: "tavily-mcp" }, lookup).name, "tavily");
+
+  // THE WORST FALSE POSITIVE THIS TOOL HAS PRODUCED — found by installing the published CLI and
+  // running it on a real machine. A config entry for `@playwright/mcp`, Microsoft's official server,
+  // was stripped to its leaf `mcp` and matched an unrelated `@rendobar/mcp` that IS deleted from the
+  // registry. Every Playwright user was told their install had been REMOVED for spam, malware or
+  // illegal content: the gravest claim this tool can make, about the wrong package, on the strength
+  // of a shared last path segment. Same defect as the slug collision that sent @stripe/mcp to a
+  // third-party page — a scoped name's identity is the WHOLE name.
+  lookup.records.push({ id: "pkg:@rendobar/mcp", name: "mcp", registry_status: "deleted" });
+  lookup.keys["@rendobar/mcp"] = 4;
+  lookup.keys["mcp"] = 4;
+  assert.strictEqual(resolve({ kind: "npm", id: "@playwright/mcp" }, lookup), null,
+    "unmeasured is the honest answer; a deleted stranger that shares a leaf is a libel");
+  for (const leaf of ["server", "cli", "core", "client", "sdk"]) {
+    lookup.keys[leaf] = 4;
+    assert.strictEqual(resolve({ kind: "npm", id: `@someone/${leaf}` }, lookup), null,
+      `@someone/${leaf} must not match a stranger sharing the leaf "${leaf}"`);
+  }
+  // …and the bare-name fallback still works where the leaf is a real identity, not a generic word.
+  assert.strictEqual(resolve({ kind: "npm", id: "@other/tavily-mcp" }, lookup).name, "tavily",
+    "a distinctive leaf is still a legitimate identity");
+  assert.strictEqual(resolve({ kind: "npm", id: "@rendobar/mcp" }, lookup).id, "pkg:@rendobar/mcp",
+    "an exact scoped match is untouched");
   // THE POINT OF THIS WHOLE CHANGE: kinds the ranked board never carries.
   assert.strictEqual(resolve(identify({ command: "docker", args: ["run", "mcp/thinking"] }), lookup).name,
     "thinking", "a docker image resolves — the board holds no docker rows at all");
