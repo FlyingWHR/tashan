@@ -149,10 +149,28 @@ if live is not None:
        "not listed — run mcp-publisher publish (see docs/DO-THIS-NEXT.md §3)")
     if live:
         newest = max(live, key=lambda x: x["version"])
-        # A registry entry pinned to a version nobody can install resolves, fails, and reads to the
-        # user as a broken server.
-        ok(f"the listed version {newest['version']} is the one we ship ({doc['version']})",
-           any(x["version"] == doc["version"] for x in live))
+        # WHAT MATTERS IS INSTALLABILITY, NOT BEING IN STEP WITH THE REPO. The first version of this
+        # asserted the registry listed exactly the version in server.json, which is false for the
+        # entire normal window between bumping the CLI and publishing it — it turned a routine state
+        # into a red suite, which is how a gate gets ignored. A registry entry is broken when it
+        # points at something nobody can install; being a release behind is not that.
+        try:
+            with urllib.request.urlopen("https://registry.npmjs.org/"
+                                        + (doc.get("packages") or [{}])[0].get("identifier", ""),
+                                        timeout=20) as r:
+                on_npm = set(json.load(r).get("versions") or {})
+        except Exception:
+            on_npm = None
+        if on_npm is None:
+            print("  --   npm unreachable, skipping the installability check")
+        else:
+            ok(f"the listed version {newest['version']} is installable from npm",
+               newest["version"] in on_npm,
+               "the registry points at a version npm does not have — a client resolves it, fails, "
+               "and reads that as a broken server")
+            if newest["version"] != doc["version"]:
+                print(f"  --   registry has {newest['version']}, repo is at {doc['version']} — "
+                      f"publish with `mcp-publisher publish` when the npm release lands")
 
 print()
 print("SERVER.JSON OK" if not fail else "SERVER.JSON FAILED")
