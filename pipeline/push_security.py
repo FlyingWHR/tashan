@@ -27,6 +27,7 @@ arithmetic, so the two paid paths cannot drift. bucket_of() MUST stay byte-for-b
 bucketOf() in functions/api/security.js or every lookup misses silently and paying customers see
 404s — functions/api/security.test.mjs pins the JS side against vectors computed from this file.
 """
+from datetime import datetime, timezone
 import json, os, sqlite3, sys, urllib.request, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -136,7 +137,15 @@ def main():
         else:
             print(f"  {b:>3} FAILED")
     if not dry:
-        print(f"pushed {sent}/{len(data)} shards")
+        # A MANIFEST, so an empty store is distinguishable from a capability we have nothing on.
+        # Without it both answer 404 "no audit detail recorded for this id" — which reads as thin
+        # coverage rather than as a product that was never loaded. A customer paying $6 would see
+        # that for EVERY package, conclude tashan is useless, and refund. It does not look broken;
+        # it looks bad, which is worse.
+        put("meta", json.dumps({"shards": sent, "capabilities": total,
+                                "pushed_at": datetime.now(timezone.utc).isoformat(timespec="seconds")},
+                               separators=(",", ":")))
+        print(f"pushed {sent}/{len(data)} shards + manifest")
     return 0
 
 

@@ -34,7 +34,11 @@ function kv(seed = {}) {
 
 const ENV = (over = {}) => ({
   POLAR_ORG_ID: "org_1",
-  TASHAN_KV: kv({ ["sec:" + bucketOf(ID)]: { [ID]: REC } }),
+  // sec:meta is what push_security writes last. Its presence is the difference between "we have no
+  // record for this id" and "the paid store was never published" — every test below assumes a store
+  // that HAS been published, which is the state a paying customer is entitled to.
+  TASHAN_KV: kv({ ["sec:" + bucketOf(ID)]: { [ID]: REC },
+                  "sec:meta": { shards: 1, capabilities: 1, pushed_at: "2026-08-08T00:00:00Z" } }),
   ...over,
 });
 
@@ -155,4 +159,37 @@ test("bucketOf matches pipeline/push_security.py::bucket_of", () => {
   for (const [id, want] of Object.entries(cases)) {
     assert.equal(bucketOf(id), String(want), `bucketOf(${id})`);
   }
+});
+
+// THE MOST EXPENSIVE BUG THIS CODEBASE CAN HAVE: an unpublished paid store answering the same
+// innocuous "no audit detail recorded for this id" as a capability we genuinely have nothing on.
+// push_security.py skips without CF credentials, so the store can be entirely empty while every
+// request a paying customer makes reads as thin coverage rather than an undelivered product. They
+// would conclude tashan is useless and refund, and nothing anywhere would say otherwise.
+test("an unpublished store says so, and never reads as thin coverage", async () => {
+  const un = stubPolar(granted);
+  try {
+    const r = await onRequestGet({
+      request: req("?id=pkg:anything", withKey()),
+      env: ENV({ TASHAN_KV: kv() }),            // no shards, and no sec:meta
+    });
+    assert.equal(r.status, 503, "503, not the 404 used for a capability we have nothing on");
+    const b = await r.json();
+    assert.match(b.error, /not been published/);
+    assert.match(b.note, /not a finding about this capability/, "never blame the capability");
+    assert.ok(b.free, "point at the free audit, which is complete and unaffected");
+  } finally { un(); }
+});
+
+test("a published store still 404s a capability it has no record for", async () => {
+  const un = stubPolar(granted);
+  try {
+    const r = await onRequestGet({
+      request: req("?id=pkg:nothing-here", withKey()),
+      env: ENV({ TASHAN_KV: kv({ "sec:meta": { pushed_at: "2026-08-08T00:00:00Z" } }) }),
+    });
+    // A 503 here would send the operator chasing a push that ran perfectly well.
+    assert.equal(r.status, 404);
+    assert.equal((await r.json()).published_at, "2026-08-08T00:00:00Z");
+  } finally { un(); }
 });
