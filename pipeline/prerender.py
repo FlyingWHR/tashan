@@ -869,6 +869,22 @@ def bake_pricing():
                      open(pg, encoding="utf-8").read(), count=1)
     if n != 1:
         raise SystemExit("pricing.html has no <!--PRICE-TOGGLE--> slot — the block moved or was edited away.")
+    days = pro.get("trial_days") or 0
+    cancel = "cancel any time in <a class=\"link\" href=\"/account.html\">your account</a>"
+    # BOTH CADENCES, because this line moves with the toggle. A first draft hardcoded "/mo" here, so
+    # switching to Annual left "7 days free, then $6/mo" under a $50/yr button — the same defect as
+    # the headline price that did not move, on the same page, in the same hour.
+    def terms_for(amount, per):
+        return (f"{int(days)} days free, then {esc(amount)}/{per} &middot; " + cancel) if days else cancel
+    terms = terms_for(price, "mo")
+    if days:
+        # Built outside the f-string: the nested double quotes in terms_for(price, "mo") inside an
+        # f' ... ' literal is exactly the quoting that produced an unterminated string a moment ago.
+        m_terms = esc(terms_for(price, "mo"))
+        data += ' data-monthly-terms="' + m_terms + '"'
+        if ann and ann.get("url"):
+            data += ' data-annual-terms="' + esc(terms_for(ann["price"], "yr")) + '"'
+
     out = re.sub(r'(<a class="btn btn--primary plan__cta" id="proCta")[^>]*?(\s+rel="noopener">)([^<]*)(</a>)',
                  lambda m: (m.group(1) + f' data-src="pricing-pro-monthly" href="{monthly_url}"' + data
                             + m.group(2) + f"{price} monthly &rsaquo;" + m.group(4)), out, count=1)
@@ -881,10 +897,6 @@ def bake_pricing():
     # is configured for it — advertising a free period the checkout then charges for is the annual
     # button billing monthly again, so this renders from `trial_days` and 0 renders nothing.
     # The refund policy itself is unchanged and still linked from the footer, where it belongs.
-    days = pro.get("trial_days") or 0
-    terms = "cancel any time in <a class=\"link\" href=\"/account.html\">your account</a>"
-    if days:
-        terms = (f"{int(days)} days free, then {esc(price)}/{'yr' if False else 'mo'} &middot; " + terms)
     out2, n2 = re.subn(r'(<p class="plan__note mono" id="proTerms">)[\s\S]*?(</p>)',
                        lambda m: m.group(1) + terms + m.group(2), out, count=1)
     if n2 != 1:

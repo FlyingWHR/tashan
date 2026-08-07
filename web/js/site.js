@@ -172,6 +172,11 @@
     var amt = cta.getAttribute("data-" + (cad === "year" ? "annual" : "monthly") + "-price");
     var per = cta.getAttribute("data-" + (cad === "year" ? "annual" : "monthly") + "-cad");
     if (pr && amt && per) { pr.textContent = amt; pr.insertAdjacentHTML("beforeend", "<small>" + per + "</small>"); }
+    // The trial line carries a price too ("7 days free, then $6/mo"), so it moves as well or it
+    // contradicts the button directly above it.
+    var tm = document.getElementById("proTerms");
+    var tt = cta.getAttribute("data-" + (cad === "year" ? "annual" : "monthly") + "-terms");
+    if (tm && tt) tm.innerHTML = tt;
     // the analytics tag has to move with the cadence, or every annual sale is recorded as monthly —
     // which is exactly how the charging bug stayed invisible
     cta.setAttribute("data-src", "pricing-pro-" + (cad === "year" ? "annual" : "monthly"));
