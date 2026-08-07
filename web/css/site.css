@@ -762,6 +762,20 @@ pre, code, .install__snip { max-width: 100%; }
    at ~62ch while code blocks and callouts spanned the full 1130px, so the eye had two different column
    widths on one page; and the privacy callout was visually louder than the instruction it annotates. */
 .phead__sub { margin-top: var(--sp-5); }
+/* START.HTML IS A DOCUMENT, NOT A DASHBOARD, and it was laid out as neither. Every child of its
+   <main> is measure-limited — .phead at 46rem, .use-step at 60rem — inside the standard 76rem page
+   wrap, and none of them carried `margin-inline: auto`. So on a 1720px viewport the wrap centred at
+   1216px and then every block pinned to ITS left edge, leaving 480px of dead space down the right
+   and a ragged left column that reads as a broken page. .prose has solved this since it was written
+   (`margin-inline: auto`); these classes never had it.
+   Fixed by giving the page ONE centred column and letting its children fill it, rather than
+   centring each block separately — three different max-widths centred independently would line up
+   on nothing. Deliberately scoped to this layout: on pricing.html the same .phead sits above a
+   full-width grid, where left alignment is correct. */
+.wrap--doc { max-width: 60rem; }
+.wrap--doc .phead,
+.wrap--doc .use-step { max-width: none; }
+
 .use-step { max-width: 60rem; }
 .use-step .install__snip { max-width: 46rem; }
 .use-step .capsec__sub { max-width: 46rem; }
