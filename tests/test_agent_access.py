@@ -15,28 +15,24 @@ An agent that gets a 403 on its first request does not retry with a nicer header
 service is unavailable and stops asking — which is the exact failure the distribution thesis cannot
 survive, and it is invisible from a browser.
 
-THE SETTING IS *BROWSER INTEGRITY CHECK*, NOT BOT FIGHT MODE. Measured 6 Aug 2026 by reading the
-403 body rather than assuming: it returns `error code: 1010`, which is Cloudflare's
-"banned based on your browser's signature" — the Browser Integrity Check, a separate toggle. Bot
-Fight Mode was turned off first, on this file's own earlier advice, and the 403s did not move. BIC
-inspects headers and refuses clients whose User-Agent does not look like a browser, which is exactly
-what a stdlib Python client is.
+IT IS NOT OUR SETTING. IT IS CLOUDFLARE, NETWORK-WIDE. Measured 8 Aug 2026 against third-party
+sites, which is the test that should have been run first:
 
-    dash.cloudflare.com -> tashan.sh -> Security -> Settings -> Browser Integrity Check -> off
+    UA                     tashan.sh   pages.dev   cloudflare.com   discord.com
+    Python-urllib/3.14     403 1010    403 1010    403 1010         403 1010
+    python-requests/2.31   200         200         -                -
+    curl/8.4.0             200         200         200              200
 
-THE FIX IS NOT IN THIS REPO either way: it is zone-level and the deploy token carries zone:read, not
-zone:write. If a 403 ever returns with a different error code, read the body again before acting —
-1010 is BIC, 1020 is a WAF/firewall rule, and 1015 is rate limiting. They are different settings.
+Cloudflare refuses the literal string "Python-urllib" everywhere it sits in front of. Bot Fight Mode
+and Browser Integrity Check were both turned off here and the 403s did not move, because neither was
+ever the cause — error 1010 was read as "Browser Integrity Check" from the code alone and cost two
+days of dashboard hunting. Nothing on this account, and nothing in this repo, can change it.
 
-AND THERE IS NO CODE WORKAROUND — measured 6 Aug 2026, so nobody spends an evening looking for one.
-The obvious idea is to serve the agent surfaces from a Pages Function instead of as static assets,
-on the theory that the challenge applies to the asset path. It does not: the block is zone-wide and
-runs BEFORE Workers, so a Function is refused identically.
-
-    default urllib UA          curl UA
-    /v0.1/scores       403        200
-    /badge/*.svg       403        200     <- Function
-    /api/security      403        401     <- Function; 401 is the correct no-licence answer
+WHICH NARROWS THE PROBLEM TO ALMOST NOTHING. Only `urllib.request.urlopen()` WITH ITS DEFAULT HEADER
+is refused. `requests` — what nearly every Python integration actually uses — gets 200, as do curl,
+node-fetch, Go and every named AI crawler. So the fix is not a setting, it is to stop publishing a
+snippet nobody should ship anyway: a one-line User-Agent makes urllib work, and any client that
+identifies itself is fine.
 
 Nothing in `_headers`, `functions/`, or the deploy reaches this. It is one toggle in the dashboard.
 
@@ -84,11 +80,14 @@ if probe is None:
     print("  -- site unreachable, skipping agent-access checks (offline run)")
     sys.exit(0)
 
-print("# every advertised agent surface answers a stdlib Python client")
+print("# every advertised agent surface answers a client that identifies itself")
+# `requests` rather than bare urllib: Cloudflare refuses the literal "Python-urllib" UA across its
+# whole network, on cloudflare.com and discord.com too, so asserting it here would fail forever on
+# something no setting of ours controls. What matters is that a normal Python client works.
 for path, why in PATHS:
-    code = status(path)                       # deliberately the DEFAULT urllib User-Agent
+    code = status(path, ua="python-requests/2.31.0")
     ok(f"{path} — {why}", code == 200,
-       f"HTTP {code} to a default urllib client. Bot Fight Mode is refusing the agents we invite.")
+       f"HTTP {code} to a self-identifying Python client. THIS one is ours to fix.")
 
 print()
 print("# and the same surfaces answer the other clients agents actually use")

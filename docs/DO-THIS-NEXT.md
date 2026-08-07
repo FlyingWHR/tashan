@@ -8,38 +8,27 @@ exactly what is already prepared so the step is short.*
 
 ---
 
-## 1 · Turn off Bot Fight Mode — 2 minutes
+## 1 · Nothing to do — it was never our setting ✅ resolved 8 Aug 2026
 
-**What it costs today:** Cloudflare returns **403** to any request whose User-Agent is
-`Python-urllib/3.x` — the default of `urllib.request.urlopen(url)`. Every endpoint the outreach post
-points at is refused to anyone who tries it from a Python script.
+Two days were spent turning off Bot Fight Mode and Browser Integrity Check because `/llms.txt` and
+`/v0.1/*` answered `403 error 1010` to a stdlib Python client. Neither was the cause. Measured
+against third parties, which is the test that should have been run first:
 
-**Narrower than it sounds, and worth knowing which half:** every named crawler reads the site fine
-(Googlebot, Google-Extended, GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Bingbot all return
-200). So AI citation is unobstructed. What is blocked is the **decision-time** path — a tool call, a
-CI check, the integration someone writes after reading step 3.
+| user-agent | tashan.sh | pages.dev | cloudflare.com | discord.com |
+|---|---|---|---|---|
+| `Python-urllib/3.14` | 403 | 403 | **403** | **403** |
+| `python-requests/2.31` | 200 | 200 | — | — |
+| `curl/8.4.0` | 200 | 200 | 200 | 200 |
 
-**It is Browser Integrity Check, not Bot Fight Mode.** Diagnosed by reading the 403 body instead of
-assuming: it returns `error code: 1010`, which is Cloudflare's "banned based on your browser's
-signature" — BIC, a separate toggle. Turning Bot Fight Mode off (this file's earlier advice) did not
-move the 403s.
+Cloudflare refuses the literal string `Python-urllib` everywhere it sits in front of. No setting on
+this account changes it, and `error 1010` was diagnosed as Browser Integrity Check from the code
+alone — wrongly.
 
-**Do:**
-1. [dash.cloudflare.com](https://dash.cloudflare.com) → **tashan.sh** → Security → **Settings**
-2. Turn **Browser Integrity Check** off.
-3. Bot Fight Mode can stay off too; it is under Security → Bots and is a different control.
+**The real scope is tiny:** only `urllib.request.urlopen()` with its default header. `requests` —
+what nearly every Python integration uses — works, as do curl, node-fetch, Go and every named AI
+crawler. `llms.txt` now tells callers to send a User-Agent, which is the actual fix and is one line.
 
-*If a 403 comes back later, read the body first: 1010 is BIC, 1020 is a WAF rule, 1015 is rate
-limiting. Different settings, and guessing costs a round trip each time.*
-
-**Verify:**
-```sh
-python3 tests/test_agent_access.py     # every line should read ok
-```
-
-*Not automatable: the deploy token carries `zone:read`, not `zone:write`.*
-
----
+Verify: `python3 tests/test_agent_access.py` → AGENT ACCESS OK.
 
 ## 2 · npm Trusted Publishing — ✅ DONE 7 Aug 2026 (`tashan-cli@0.1.3`)
 

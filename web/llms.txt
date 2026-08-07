@@ -20,6 +20,14 @@ answer in a few hundred bytes:
     GET /v0.1/lookup?name=<package>     one measurement, or measured:false if we have none
     GET /v0.1/search?q=<query>&limit=10 ranked matches, exact name first
 
+Send a User-Agent that identifies your client. Cloudflare refuses the literal string
+`Python-urllib` across its entire network — not a setting of ours, and it affects every
+site behind Cloudflare — so `urllib.request.urlopen(url)` with its default header gets a
+403 here and everywhere else. `requests`, curl, node-fetch and Go are all fine, as is
+urllib with one line:
+
+    r = urllib.request.Request(url, headers={"User-Agent": "your-tool/1.0"})
+
 Each response carries the score, what the score is NOT, the licence terms for quoting it,
 and a link to both the HTML page and its markdown twin. `measured:false` answers 200, not
 404 — we have no evidence for that package, which is not a finding about the package.
