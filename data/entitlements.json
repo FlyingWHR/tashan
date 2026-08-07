@@ -14,7 +14,12 @@
       "cadence": "month",
       "checkout": "https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d",
       "_annual": "Set `annual` to activate the monthly/annual toggle on pricing.html. It stays null until a REAL annual price object exists in Polar: the annual button once pointed at the monthly checkout, so anyone choosing annual was billed $6/month and the funnel recorded it as an annual conversion. It was removed rather than left lying (commit f8628ff41f). url must be a DIFFERENT Polar link from the monthly one.",
-      "annual": null
+      "annual": {
+        "price": "$50",
+        "cadence": "year",
+        "_url": "PASTE THE POLAR ANNUAL CHECKOUT LINK HERE, then run: python3 pipeline/run.py --site. It MUST be a different link from `checkout` above — the same link under two cadences is the bug that billed annual buyers $6/month (f8628ff41f), and both the baker and tests/test_claims.py refuse it.",
+        "url": null
+      }
     }
   },
   "features": [
