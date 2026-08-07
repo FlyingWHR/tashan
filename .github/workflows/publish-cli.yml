@@ -56,8 +56,8 @@ jobs:
       matrix:
         node: ["18", "22", "24"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node }}
       # The published package is the artifact, not the repo. npm's `bin` entries are SYMLINKS on
@@ -71,7 +71,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # NODE 24, AND THE REASON IS npm. Trusted publishing needs npm >= 11.5.1, and no Node 22
       # release ever ships it — the whole 22.x line tops out at npm 10.9.x (checked against
@@ -79,7 +79,7 @@ jobs:
       # enough npm is 24.5.0 (npm 11.5.1); 24 is current LTS "Krypton" and ships npm 11.17.0.
       # Using it removes a global `npm install -g npm@latest` step that existed only to paper over
       # the wrong runtime. The version gate below stays as the assertion, not as the fix.
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: "24"
           registry-url: https://registry.npmjs.org/
