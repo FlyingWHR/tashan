@@ -368,9 +368,14 @@ def summary(c, gen=""):
     # Silence there reads as "not looked at yet" when we have looked and found the docs belong to a
     # different project — which is the more useful thing for a reader deciding whether to adopt it.
     if not verdict and c.get("doc_status"):
+        # The "another project's document" clause explains the BORROWED-DOC case and only that one.
+        # Appended to every reason it became a non-sequitur: "no documentation was published with
+        # it. A grade read off another project's document would borrow its credit, or its blame."
+        why = c["doc_status"]
+        because = (" A grade read off another project&rsquo;s document would borrow its credit, "
+                   "or its blame." if "documentation with" in why or "never names it" in why else "")
         verdict = ('<div class="expert-read"><p class="mono fs-sm">Not graded: '
-                   + esc(c["doc_status"]) + '. A grade read off another project\'s document would '
-                   'borrow its credit, or its blame.</p></div>')
+                   + esc(why) + '.' + because + '</p></div>')
     # COMPATIBILITY, WITH ITS LEVEL AND ITS BASIS. This printed a flat list of client names derived
     # from `kind` alone, so every npm-backed capability in the corpus claimed the same eight clients
     # and "Works with VS Code" shipped on thousands of pages nobody had checked. A level says what is

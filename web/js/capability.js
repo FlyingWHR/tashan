@@ -96,8 +96,9 @@
        // has happened here. Silence reads as "nobody looked" when the truth is that we looked and
        // refused to grade a document about something else, and that distinction is the product.
        c.doc_status ? '<div class="expert-read"><p class="mono fs-sm">Not graded: ' +
-        esc(c.doc_status) + '. A grade read off another project\'s document would borrow its ' +
-        'credit, or its blame.</p></div>' : '') +
+        esc(c.doc_status) + '.' + (/documentation with|never names it/.test(c.doc_status) ?
+          ' A grade read off another project\u2019s document would borrow its credit, or its blame.'
+          : '') + '</p></div>' : '') +
       repoHealth(c) +
       alsoOn(c) +
       (co ? section("Configured alongside", '<div class="colist">' + co + '</div>', "In real public configs, these ship together.") : '') +
