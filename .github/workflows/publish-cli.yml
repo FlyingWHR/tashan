@@ -35,7 +35,13 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Pack and verify only — do not publish"
+        # UNCHECK THIS TO ACTUALLY PUBLISH. It stays defaulted to true — a publish is irreversible
+        # after 72 hours and the safe default is the one that does nothing — but a dry run used to
+        # be INDISTINGUISHABLE from a real one: `publish` and its verification were both skipped and
+        # the run still reported green. Run 31254211591 looked exactly like a success and shipped
+        # nothing, which is why 0.1.4 was still not on npm after two attempts. The final step now
+        # writes what actually happened to the run summary.
+        description: "DRY RUN — pack and verify only. UNCHECK to publish for real."
         type: boolean
         default: true
 
@@ -178,3 +184,27 @@ jobs:
             console.error('that the trusted publisher names this exact workflow file.');
             process.exit(1);
           "
+
+      # SAY WHICH OF THE TWO THINGS HAPPENED, at the top of the run page. A skipped publish and a
+      # completed publish both leave a green tick, and the difference is the entire point of the
+      # workflow.
+      - name: What this run did
+        if: always()
+        run: |
+          V=$(node -p "require('./cli/package.json').version")
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            {
+              echo "## ⚠️ DRY RUN — nothing was published"
+              echo ""
+              echo "\`tashan-cli@$V\` was packed and tested. **npm was not touched.**"
+              echo ""
+              echo "To publish for real: **Run workflow** → **uncheck \`DRY RUN\`** → Run workflow."
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::warning::DRY RUN — nothing was published. Re-run with dry_run unchecked."
+          else
+            {
+              echo "## ✅ Published \`tashan-cli@$V\`"
+              echo ""
+              echo "Verify: \`npx tashan-cli@latest --version\`"
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
