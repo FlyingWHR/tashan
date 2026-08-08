@@ -69,6 +69,10 @@ python3 pipeline/prerender.py --selftest || fail=1
 echo; echo "── signal_history shards ──────────────────────"
 python3 pipeline/snapshot_history.py --selftest || fail=1
 
+# 3b2c. the DB is a cache in R2 now, not a blob in git — a truncated fetch must never look like a run
+echo; echo "── db cache store ─────────────────────────────"
+python3 pipeline/db_store.py --selftest || fail=1
+
 # 3b3. every published `npx …` must name a package that resolves to us (shipped wrong twice)
 echo; echo "── npx package name ───────────────────────────"
 python3 tests/test_pkg_name.py || fail=1

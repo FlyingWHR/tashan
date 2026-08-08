@@ -1,10 +1,52 @@
-# Do this next — the four things only you can do
+# Do this next — the things only you can do
 
-*Written 6 Aug 2026. Everything that could be done from a keyboard has been. These four need an
-identity, a dashboard, or a human on the other end. They are ordered by effect, and each one states
-exactly what is already prepared so the step is short.*
+*Written 6 Aug 2026, revised 8 Aug. Everything that could be done from a keyboard has been. What is
+left needs an identity, a dashboard, or a human on the other end. Ordered by effect, and each one
+states exactly what is already prepared so the step is short.*
 
-**All four are done.** One new item has taken their place, and it is the one that matters most.
+**The original four are all done** (§1–§4, kept below for their reasoning). **Two open items:**
+publishing `tashan-cli@0.1.4`, which stops the live CLI calling Microsoft's Playwright server
+malware, and enabling R2, which stops the git push being refused. Both are one action each.
+
+---
+
+## 0b · Enable R2 — the git push is 1.2 MiB from being refused
+
+`data/tashan.db` is **98.8 MiB**. GitHub rejects any blob at 100 MiB, and the daily workflow commits
+the database every night, so the failure lands on `git push` *after* the pipeline has run — and a
+rejected push means that day's history shard never lands. That is the one loss the daily workflow
+exists to prevent.
+
+Everything is built and tested; it needs one dashboard click, because Cloudflare requires R2 to be
+switched on per account:
+
+**Do** — dash.cloudflare.com → **R2 Object Storage** → *Enable*. (Free tier: 10 GB storage, 1M
+writes/month, zero egress. This pipeline uses ~0.1 GB, 30 writes and 30 reads a month.)
+
+Then, from the repo:
+
+```sh
+npx wrangler@3 r2 bucket create tashan-state
+python3 pipeline/db_store.py push        # ~99 MiB, one time
+python3 pipeline/db_store.py pull        # prove the round trip
+```
+
+Once that round trip works, take the DB out of git for good:
+
+```sh
+git rm --cached data/tashan.db
+echo "data/tashan.db" >> .gitignore
+git commit -m "The database is a cache; caches do not belong in git"
+```
+
+The daily workflow already calls `db_store.py pull` before the pipeline and `push` after, both
+`continue-on-error` so nothing breaks while R2 is off. Losing the bucket later costs one night of
+change events and a slow re-fetch — never the series, which is sharded to `data/history/` and
+restored on every run.
+
+*Why not LFS: it keeps every version, so a 98 MiB nightly commit accrues ~2.9 GiB/month against a
+10 GB allowance — free for about three months, then a bill that only grows. Why not Postgres or D1:
+nothing serves a request from this database, so there is no concurrency to solve.*
 
 ---
 

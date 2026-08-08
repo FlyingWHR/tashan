@@ -42,6 +42,18 @@ jobs:
         with:
           python-version: "3.12"
 
+      # THE DATABASE IS A CACHE, AND IT LIVES IN R2 RATHER THAN IN GIT. It reached 98.8 MiB against
+      # GitHub's hard 100 MiB blob limit, so the push — not the pipeline — was days from failing,
+      # and a rejected push means the day's history shard never lands. See pipeline/db_store.py for
+      # why the answer is object storage and not Postgres: nothing serves a request from SQLite.
+      #
+      # continue-on-error while R2 is being switched on. A failed pull keeps whatever database the
+      # checkout provided and says so; it never blocks the measurement.
+      - name: Fetch the database cache
+        id: dbpull
+        continue-on-error: true
+        run: python3 pipeline/db_store.py pull
+
       - name: Run the pipeline (incremental)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # scraper + registry ingest use the gh CLI
@@ -77,6 +89,14 @@ jobs:
       - name: Snapshot the series, whatever else happened
         if: always()
         run: python3 pipeline/snapshot_history.py
+
+      # Store the cache before the suite runs, not after: the suite is allowed to be red and the
+      # cache is still the correct output of the measurement. Losing it costs the next run its
+      # incremental cursors for no reason.
+      - name: Store the database cache
+        if: always()
+        continue-on-error: true
+        run: python3 pipeline/db_store.py push
 
       # Runs to completion and records its verdict rather than ending the job here. A red suite must
       # still stop the SITE from changing — but it must not also destroy the day's measurement, and
