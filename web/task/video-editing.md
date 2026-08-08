@@ -29,23 +29,28 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Local Audio Transcriber](https://tashan.sh/capability/plugin-chujianyun-skills-local-audio-transcriber.html) | 40 | 1 marketplaces | active |
 | 17 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
 | 18 | [ElevenLabs Automation](https://tashan.sh/capability/skill-composiohq-elevenlabs-automation.html) | not scored | 1 repos | active |
-| 19 | [Primate Intelligence](https://tashan.sh/capability/pkg-primate-intelligence-mcp.html) | 60 | 467/wk | active |
-| 20 | [Yutu](https://tashan.sh/capability/pkg-eat-pray-ai-yutu.html) | 58 | 222/wk | active |
-| 21 | [Orcadub](https://tashan.sh/capability/pkg-orcadub-cli.html) | 55 | 139/wk | active |
-| 22 | [Furlen](https://tashan.sh/capability/pkg-furlen-mcp.html) | 53 | 97/wk | active |
-| 23 | [YouTube Transcript](https://tashan.sh/capability/pkg-sinco-lab-mcp-youtube-transcript.html) | 50 | 487/wk | active |
-| 24 | [Vidin](https://tashan.sh/capability/pkg-teunlao-vidin.html) | 50 | 102/wk | active |
-| 25 | [Botverse](https://tashan.sh/capability/pkg-botverse-mcp.html) | 50 | 84/wk | active |
-| 26 | [Puppetry Com](https://tashan.sh/capability/pkg-puppetry-com-mcp-server.html) | 45 | 43/wk | active |
-| 27 | [Transcription](https://tashan.sh/capability/pkg-scriptivox-mcp-server.html) | 44 | 90/wk | active |
-| 28 | [Manim Skill](https://tashan.sh/capability/plugin-vumichien-manim-skill-manim-skill.html) | 43 | 3 ★ | active |
-| 29 | [Frenchie Skill](https://tashan.sh/capability/pkg-lab94-frenchie.html) | 43 | 80/wk | active |
-| 30 | [Opusclip](https://tashan.sh/capability/pkg-opusclip-mcp.html) | 43 | 51/wk | active |
-| 31 | [Video Editing](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-video-editing.html) | 41 | 1 marketplaces | active |
-| 32 | [AI Video Producer](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-ai-video-producer.html) | 41 | 1 marketplaces | active |
-| 33 | [Ssemble AI Clipping](https://tashan.sh/capability/pkg-ssemble-mcp-server.html) | 41 | 110/wk | active |
-| 34 | [Zype Com](https://tashan.sh/capability/pkg-zype-com-mcp.html) | 41 | 64/wk | active |
-| 35 | [Demostudio](https://tashan.sh/capability/pkg-demostudio-mcp-server.html) | 37 | 96/wk | active |
+| 19 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
+| 20 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
+| 21 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 70 | 2k/wk | active |
+| 22 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 67 | 988/wk | active |
+| 23 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 67 | 784/wk | active |
+| 24 | [Aleph Siliconflow](https://tashan.sh/capability/pkg-aleph-siliconflow-mcp.html) | 60 | 3k/wk | active |
+| 25 | [Primate Intelligence](https://tashan.sh/capability/pkg-primate-intelligence-mcp.html) | 60 | 467/wk | active |
+| 26 | [Claude Skills Library](https://tashan.sh/capability/pkg-claude-skills-library.html) | 55 | 2k/wk | active |
+| 27 | [Orcadub](https://tashan.sh/capability/pkg-orcadub-cli.html) | 55 | 139/wk | active |
+| 28 | [Uploadcheck](https://tashan.sh/capability/pkg-drantoniou-uploadcheck-mcp.html) | 55 | 92/wk | active |
+| 29 | [Furlen](https://tashan.sh/capability/pkg-furlen-mcp.html) | 53 | 97/wk | active |
+| 30 | [YouTube Transcript](https://tashan.sh/capability/pkg-sinco-lab-mcp-youtube-transcript.html) | 50 | 487/wk | active |
+| 31 | [Botverse](https://tashan.sh/capability/pkg-botverse-mcp.html) | 50 | 84/wk | active |
+| 32 | [Ilovevideoeditor](https://tashan.sh/capability/pkg-ilovevideoeditor-mcp-server.html) | 47 | 62/wk | active |
+| 33 | [Puppetry Com](https://tashan.sh/capability/pkg-puppetry-com-mcp-server.html) | 45 | 43/wk | active |
+| 34 | [Transcription](https://tashan.sh/capability/pkg-scriptivox-mcp-server.html) | 44 | 90/wk | active |
+| 35 | [Fal](https://tashan.sh/capability/pkg-noranekob-fal-mcp-server.html) | 44 | 19/wk | active |
+| 36 | [Frenchie Skill](https://tashan.sh/capability/pkg-lab94-frenchie.html) | 43 | 80/wk | active |
+| 37 | [Opusclip](https://tashan.sh/capability/pkg-opusclip-mcp.html) | 43 | 51/wk | active |
+| 38 | [Ssemble AI Clipping](https://tashan.sh/capability/pkg-ssemble-mcp-server.html) | 41 | 110/wk | active |
+| 39 | [Zype Com](https://tashan.sh/capability/pkg-zype-com-mcp.html) | 41 | 64/wk | active |
+| 40 | [Demostudio](https://tashan.sh/capability/pkg-demostudio-mcp-server.html) | 37 | 96/wk | active |
 
 ## What these numbers are not
 

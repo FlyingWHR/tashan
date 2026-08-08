@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 41 | 1 marketplaces | active |
 | 40 | [Keyward](https://tashan.sh/capability/plugin-albemiglio-keyward-keyward.html) | 37 | 1 ★ | active |
 
-Showing the top 40 of 146. The full ranked shelf is at https://tashan.sh/task/security-review.html.
+Showing the top 40 of 104. The full ranked shelf is at https://tashan.sh/task/security-review.html.
 
 ## What these numbers are not
 

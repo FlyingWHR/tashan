@@ -35,24 +35,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 57 | 14 ★ | active |
 | 23 | [Firecrawl Workflows](https://tashan.sh/capability/plugin-firecrawl-firecrawl-workflows-firecrawl-workflows.html) | 54 | 101 ★ | active |
 | 24 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 51 | 21 ★ | active |
-| 25 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 70 | 796/wk | active |
-| 26 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 62 | 337/wk | active |
-| 27 | [Scrapeunblocker](https://tashan.sh/capability/pkg-scrapeunblocker-mcp.html) | 57 | 205/wk | active |
-| 28 | [Alterlab](https://tashan.sh/capability/pkg-alterlab-mcp-server.html) | 53 | 130/wk | active |
-| 29 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 70 | 2k/wk | active |
-| 30 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 68 | 911/wk | active |
-| 31 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 66 | 2k/wk | active |
-| 32 | [Uindow](https://tashan.sh/capability/pkg-uindow-cli.html) | 66 | 1k/wk | active |
-| 33 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 65 | 347/wk | active |
-| 34 | [SEO Audit Console](https://tashan.sh/capability/pkg-houtini-seo-audit-console.html) | 60 | 355/wk | active |
-| 35 | [Octen](https://tashan.sh/capability/pkg-octen-mcp.html) | 60 | 288/wk | active |
-| 36 | [PDF Triage](https://tashan.sh/capability/pkg-pdf-triage-mcp.html) | 59 | 392/wk | active |
-| 37 | [Web Tools](https://tashan.sh/capability/pkg-web-tools-mcp.html) | 59 | 347/wk | active |
-| 38 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 59 | 234/wk | active |
-| 39 | [Taskfleet](https://tashan.sh/capability/pkg-taskfleet-mcp.html) | 57 | 280/wk | active |
-| 40 | [Ainative Browser](https://tashan.sh/capability/pkg-ainative-browser-mcp.html) | 57 | 219/wk | active |
+| 25 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 68 | 594/wk | active |
+| 26 | [Fouradata](https://tashan.sh/capability/pkg-fouradata-mcp.html) | 66 | 255/wk | active |
+| 27 | [Skim402](https://tashan.sh/capability/pkg-skim-mcp.html) | 50 | 61/wk | active |
+| 28 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 70 | 796/wk | active |
+| 29 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 62 | 337/wk | active |
+| 30 | [Scrapeunblocker](https://tashan.sh/capability/pkg-scrapeunblocker-mcp.html) | 57 | 205/wk | active |
+| 31 | [Alterlab](https://tashan.sh/capability/pkg-alterlab-mcp-server.html) | 53 | 130/wk | active |
+| 32 | [Grabzit](https://tashan.sh/capability/pkg-grabzit-mcp-server.html) | 47 | 51/wk | active |
+| 33 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 68 | 911/wk | active |
+| 34 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 66 | 2k/wk | active |
+| 35 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 65 | 436/wk | active |
+| 36 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 65 | 347/wk | active |
+| 37 | [Mcpbrowser](https://tashan.sh/capability/pkg-mcpbrowser.html) | 64 | 407/wk | active |
+| 38 | [Crawlforge](https://tashan.sh/capability/pkg-crawlforge-mcp-server.html) | 63 | 285/wk | active |
+| 39 | [Cockroach Crawler](https://tashan.sh/capability/pkg-cockroach-crawler.html) | 60 | 188/wk | active |
+| 40 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 60 | 164/wk | active |
 
-Showing the top 40 of 70. The full ranked shelf is at https://tashan.sh/task/web-scraping.html.
+Showing the top 40 of 63. The full ranked shelf is at https://tashan.sh/task/web-scraping.html.
 
 ## What these numbers are not
 

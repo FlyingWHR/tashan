@@ -49,10 +49,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 66 | 2k/wk | active |
 | 37 | [One Search](https://tashan.sh/capability/pkg-one-search-mcp.html) | 65 | 603/wk | active |
 | 38 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 65 | 347/wk | active |
-| 39 | [Octen](https://tashan.sh/capability/pkg-octen-mcp.html) | 60 | 288/wk | active |
-| 40 | [Taskfleet](https://tashan.sh/capability/pkg-taskfleet-mcp.html) | 57 | 280/wk | active |
+| 39 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 60 | 164/wk | active |
+| 40 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 60 | 158/wk | active |
 
-Showing the top 40 of 46. The full ranked shelf is at https://tashan.sh/task/web-research.html.
+Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/web-research.html.
 
 ## What these numbers are not
 

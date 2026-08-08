@@ -23,11 +23,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 46 | 18 ★ | active |
 | 6 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
 | 7 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |
-| 8 | [Rigshare](https://tashan.sh/capability/pkg-rigshare-mcp.html) | 50 | 80/wk | active |
-| 9 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 49 | 64/wk | active |
-| 10 | [Hardware Spec Assembly](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-hardware-spec-assembly.html) | 41 | 1 marketplaces | active |
-| 11 | [Hardware ID Annotation](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-hardware-id-annotation.html) | 41 | 1 marketplaces | active |
-| 12 | [Openscad](https://tashan.sh/capability/pkg-openscad-mcp-server.html) | 32 | 76/wk | active |
+| 8 | [Easyeda Mcp Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 64 | 466/wk | active |
+| 9 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 57 | 138/wk | active |
+| 10 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 49 | 64/wk | active |
+| 11 | [Trustrails](https://tashan.sh/capability/pkg-trustrails-mcp-server.html) | 41 | 93/wk | active |
 
 ## What these numbers are not
 

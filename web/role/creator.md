@@ -45,19 +45,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Heygen Automation](https://tashan.sh/capability/skill-composiohq-heygen-automation.html) | not scored | 1 repos | active |
 | 28 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
 | 29 | [ElevenLabs Automation](https://tashan.sh/capability/skill-composiohq-elevenlabs-automation.html) | not scored | 1 repos | active |
-| 30 | [Utilia Solana Transaction Evidence](https://tashan.sh/capability/pkg-utilia-solana-agent.html) | 60 | 258/wk | active |
+| 30 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 55 | 165/wk | active |
 | 31 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 73 | 7k/wk | active |
 | 32 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 70 | 796/wk | active |
-| 33 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
-| 34 | [Hermoso](https://tashan.sh/capability/pkg-hermoso.html) | 70 | 2k/wk | active |
-| 35 | [Sapiens Sintéticos](https://tashan.sh/capability/pkg-sapiens-mcp.html) | 70 | 2k/wk | active |
-| 36 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 70 | 305/wk | active |
-| 37 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 69 | 2k/wk | active |
-| 38 | [Paydirt](https://tashan.sh/capability/pkg-paydirt-mcp.html) | 69 | 2k/wk | active |
-| 39 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 68 | 1k/wk | active |
-| 40 | [Airmcp](https://tashan.sh/capability/pkg-airmcp.html) | 68 | 850/wk | active |
+| 33 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 60 | 239/wk | active |
+| 34 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
+| 35 | [Distribea](https://tashan.sh/capability/pkg-distribea-mcp.html) | 51 | 98/wk | active |
+| 36 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
+| 37 | [Claude Code Session Manager](https://tashan.sh/capability/pkg-claude-code-session-manager.html) | 74 | 8k/wk | active |
+| 38 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
+| 39 | [Hermoso](https://tashan.sh/capability/pkg-hermoso.html) | 70 | 2k/wk | active |
+| 40 | [Sapiens Sintéticos](https://tashan.sh/capability/pkg-sapiens-mcp.html) | 70 | 2k/wk | active |
 
-Showing the top 40 of 129. The full ranked shelf is at https://tashan.sh/role/creator.html.
+Showing the top 40 of 108. The full ranked shelf is at https://tashan.sh/role/creator.html.
 
 ## What these numbers are not
 

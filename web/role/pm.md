@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Sq](https://tashan.sh/capability/plugin-derekstride-sq-sq.html) | 57 | 13 ★ | active |
 | 40 | [Ccf](https://tashan.sh/capability/plugin-naniiluja-ccf-ccf.html) | 56 | 9 ★ | active |
 
-Showing the top 40 of 271. The full ranked shelf is at https://tashan.sh/role/pm.html.
+Showing the top 40 of 243. The full ranked shelf is at https://tashan.sh/role/pm.html.
 
 ## What these numbers are not
 

@@ -34,25 +34,25 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 21 | [Googlebigquery Automation](https://tashan.sh/capability/skill-composiohq-googlebigquery-automation.html) | not scored | 1 repos | active |
 | 22 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 64 | 30 ★ | active |
 | 23 | [ClickHouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 55 | 5 ★ | active |
-| 24 | [Socialneuron](https://tashan.sh/capability/pkg-socialneuron-mcp-server.html) | 68 | 937/wk | active |
-| 25 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 147 ★ | active |
-| 26 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 64 | 865/wk | active |
-| 27 | [SQL Preview](https://tashan.sh/capability/pkg-sql-preview.html) | 63 | 345/wk | active |
-| 28 | [SEO Tools: Yandex.Metrica](https://tashan.sh/capability/pkg-seo-tools-mcp-metrika.html) | 60 | 264/wk | active |
-| 29 | [Makers Page](https://tashan.sh/capability/pkg-makers-page-mcp.html) | 59 | 444/wk | active |
-| 30 | [Scopewalker](https://tashan.sh/capability/pkg-scopewalker-mcp.html) | 59 | 370/wk | active |
-| 31 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 58 | 210/wk | active |
-| 32 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 56 | 248/wk | active |
-| 33 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 54 | 139/wk | active |
-| 34 | [Social Media Analytics](https://tashan.sh/capability/pkg-social-media-analytics.html) | 54 | 139/wk | active |
-| 35 | [Ascendkit](https://tashan.sh/capability/pkg-ascendkit-cli.html) | 49 | 80/wk | active |
-| 36 | [Stride20k x402 Data Gateway](https://tashan.sh/capability/pkg-x402-gateway-mcp.html) | 47 | 62/wk | active |
-| 37 | [SEO Performance](https://tashan.sh/capability/pkg-automatelab-seo-performance-mcp.html) | 45 | 89/wk | active |
-| 38 | [Op3](https://tashan.sh/capability/pkg-conorbronsdon-op3-mcp.html) | 45 | 52/wk | active |
-| 39 | [Transistor](https://tashan.sh/capability/pkg-transistor-mcp.html) | 45 | 42/wk | active |
-| 40 | [Agent Core](https://tashan.sh/capability/plugin-fusedio-skills-agent-core.html) | 44 | 1 marketplaces | active |
+| 24 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 147 ★ | active |
+| 25 | [Appfigures](https://tashan.sh/capability/pkg-appfigures-cli.html) | 59 | 159/wk | active |
+| 26 | [Yandex Metrica](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 53 | 146/wk | active |
+| 27 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 75 | 11k/wk | active |
+| 28 | [Agnost](https://tashan.sh/capability/pkg-agnost.html) | 74 | 35k/wk | active |
+| 29 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
+| 30 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 64 | 865/wk | active |
+| 31 | [Scopewalker](https://tashan.sh/capability/pkg-scopewalker-mcp.html) | 59 | 370/wk | active |
+| 32 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 58 | 210/wk | active |
+| 33 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 56 | 248/wk | active |
+| 34 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 54 | 139/wk | active |
+| 35 | [Social Media Analytics](https://tashan.sh/capability/pkg-social-media-analytics.html) | 54 | 139/wk | active |
+| 36 | [Rolli](https://tashan.sh/capability/pkg-rolli-mcp.html) | 51 | 148/wk | active |
+| 37 | [Voris AI](https://tashan.sh/capability/pkg-voris-ai-mcp.html) | 51 | 60/wk | active |
+| 38 | [Ascendkit](https://tashan.sh/capability/pkg-ascendkit-cli.html) | 49 | 80/wk | active |
+| 39 | [Stride20k x402 Data Gateway](https://tashan.sh/capability/pkg-x402-gateway-mcp.html) | 47 | 62/wk | active |
+| 40 | [Op3](https://tashan.sh/capability/pkg-conorbronsdon-op3-mcp.html) | 45 | 52/wk | active |
 
-Showing the top 40 of 55. The full ranked shelf is at https://tashan.sh/task/exploratory-data-analysis.html.
+Showing the top 40 of 48. The full ranked shelf is at https://tashan.sh/task/exploratory-data-analysis.html.
 
 ## What these numbers are not
 

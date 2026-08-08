@@ -29,17 +29,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Bettercallclaude](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-bettercallclaude.html) | 61 | 33 ★ | active |
 | 17 | [Bettercallclaude Italia](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-italia-bettercallclaude-italia.html) | 56 | 41 ★ | active |
 | 18 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 147 ★ | active |
-| 19 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 66 | 660/wk | active |
-| 20 | [Pubcrawl](https://tashan.sh/capability/pkg-pharmatools-pubcrawl.html) | 59 | 334/wk | active |
+| 19 | [Pubcrawl](https://tashan.sh/capability/pkg-pharmatools-pubcrawl.html) | 59 | 334/wk | active |
+| 20 | [Openalex Research](https://tashan.sh/capability/pkg-openalex-research-mcp.html) | 52 | 224/wk | active |
 | 21 | [Medsci Literature](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-literature.html) | 45 | 1 marketplaces | active |
 | 22 | [Medsci Data](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-data.html) | 45 | 1 marketplaces | active |
-| 23 | [Medsci Modeling](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-modeling.html) | 45 | 1 marketplaces | active |
-| 24 | [Medsci Analysis](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-analysis.html) | 45 | 1 marketplaces | active |
-| 25 | [Medsci Writing](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-writing.html) | 45 | 1 marketplaces | active |
-| 26 | [Medsci Review](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-review.html) | 45 | 1 marketplaces | active |
-| 27 | [Medsci Submission](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-submission.html) | 45 | 1 marketplaces | active |
-| 28 | [Medsci Project](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-project.html) | 45 | 1 marketplaces | active |
-| 29 | [Medsci Presentation](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-presentation.html) | 45 | 1 marketplaces | active |
 
 ## What these numbers are not
 

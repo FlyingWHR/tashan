@@ -29,8 +29,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 63 | 336 ★ | active |
 | 8 | [Roundtable](https://tashan.sh/capability/plugin-wan-huiyan-agent-review-panel-roundtable.html) | 62 | 30 ★ | active |
 | 9 | [Adcp Client](https://tashan.sh/capability/plugin-adcontextprotocol-adcp-client-adcp-client.html) | 62 | 18 ★ | active |
-| 10 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 62 | 18 ★ | active |
-| 11 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 62 | 523 ★ | active |
+| 10 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 62 | 523 ★ | active |
+| 11 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 62 | 18 ★ | active |
 | 12 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 61 | 23 ★ | active |
 | 13 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 61 | 381 ★ | active |
 | 14 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 58 | 18 ★ | active |
@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 72 | 426 ★ | active |
 | 40 | [Godot Prompter](https://tashan.sh/capability/plugin-jame581-godotprompter-godot-prompter.html) | 71 | 485 ★ | active |
 
-Showing the top 40 of 894. The full ranked shelf is at https://tashan.sh/role/engineer.html.
+Showing the top 40 of 789. The full ranked shelf is at https://tashan.sh/role/engineer.html.
 
 ## What these numbers are not
 

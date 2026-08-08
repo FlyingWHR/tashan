@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Laravel Boost](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-laravel-boost.html) | 42 | 1 marketplaces | — |
 | 40 | [Css Development](https://tashan.sh/capability/plugin-2389-research-claude-plugins-css-development.html) | 42 | 1 marketplaces | — |
 
-Showing the top 40 of 128. The full ranked shelf is at https://tashan.sh/task/web-development.html.
+Showing the top 40 of 108. The full ranked shelf is at https://tashan.sh/task/web-development.html.
 
 ## What these numbers are not
 

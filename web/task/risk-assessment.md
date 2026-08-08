@@ -29,15 +29,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Risk Management Specialist](https://tashan.sh/capability/skill-alirezarezvani-risk-management-specialist.html) | not scored | 1 repos | active |
 | 17 | [Wooyun Legacy](https://tashan.sh/capability/plugin-tanweai-wooyun-legacy-wooyun-legacy.html) | not scored | 2k ★ | abandoned |
 | 18 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 54 | 139/wk | active |
-| 19 | [Nuguard](https://tashan.sh/capability/plugin-nuguardai-nuguard-nuguard.html) | 52 | 13 ★ | active |
-| 20 | [Reputa](https://tashan.sh/capability/pkg-reputa-mcp.html) | 51 | 73/wk | active |
-| 21 | [Frisk](https://tashan.sh/capability/pkg-frisk-mcp.html) | 50 | 82/wk | active |
-| 22 | [Mintverdict](https://tashan.sh/capability/pkg-mintverdict-mcp.html) | 50 | 75/wk | active |
-| 23 | [Defi Guard](https://tashan.sh/capability/pkg-iniit-defi-guard-mcp.html) | 46 | 47/wk | active |
-| 24 | [Adversarial Review](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-adversarial-review.html) | 37 | 1 marketplaces | active |
-| 25 | [Agent Native](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-agent-native.html) | 37 | 1 marketplaces | active |
-| 26 | [Ce Review](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-ce-review.html) | 37 | 1 marketplaces | active |
-| 27 | [Compound Workflows](https://tashan.sh/capability/plugin-adamfeldman-compound-workflows-compound-workflows.html) | 27 | 1 ★ | active |
+| 19 | [Reputa](https://tashan.sh/capability/pkg-reputa-mcp.html) | 51 | 73/wk | active |
+| 20 | [Mintverdict](https://tashan.sh/capability/pkg-mintverdict-mcp.html) | 50 | 75/wk | active |
+| 21 | [Defi Guard](https://tashan.sh/capability/pkg-iniit-defi-guard-mcp.html) | 46 | 47/wk | active |
 
 ## What these numbers are not
 

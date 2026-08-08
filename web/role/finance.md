@@ -50,9 +50,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 37 | [Finance Skills](https://tashan.sh/capability/skill-alirezarezvani-finance-skills.html) | not scored | 1 repos | active |
 | 38 | [Saas Metrics Coach](https://tashan.sh/capability/skill-alirezarezvani-saas-metrics-coach.html) | not scored | 1 repos | active |
 | 39 | [Research Finance](https://tashan.sh/capability/skill-alirezarezvani-research-finance.html) | not scored | 1 repos | active |
-| 40 | [Braintree Automation](https://tashan.sh/capability/skill-composiohq-braintree-automation.html) | not scored | 1 repos | active |
+| 40 | [Vendor Management](https://tashan.sh/capability/skill-alirezarezvani-vendor-management.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 163. The full ranked shelf is at https://tashan.sh/role/finance.html.
+Showing the top 40 of 117. The full ranked shelf is at https://tashan.sh/role/finance.html.
 
 ## What these numbers are not
 

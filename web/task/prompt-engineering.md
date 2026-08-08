@@ -41,18 +41,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 71 | 218 ★ | active |
 | 29 | [Prompt Engineering Skills](https://tashan.sh/capability/plugin-treylom-prompt-engineering-skills-prompt-engineering-skills.html) | 68 | 168 ★ | active |
 | 30 | [Co Dialectic](https://tashan.sh/capability/plugin-thewhyman-prompt-engineering-in-action-co-dialectic.html) | 52 | 9 ★ | active |
-| 31 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 96 | 619k/wk | active |
-| 32 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 147 ★ | active |
-| 33 | [Kubernetes](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 85 | 18k/wk | active |
-| 34 | [Coldstart](https://tashan.sh/capability/pkg-cstart-coldstart.html) | 68 | 1k/wk | active |
-| 35 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 66 | 59k/wk | active |
-| 36 | [Portkey Admin](https://tashan.sh/capability/pkg-portkey-admin-mcp.html) | 64 | 472/wk | active |
-| 37 | [Ctxfile](https://tashan.sh/capability/pkg-ctxfile.html) | 52 | 104/wk | active |
-| 38 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
+| 31 | [Kubernetes](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 85 | 18k/wk | active |
+| 32 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 66 | 59k/wk | active |
+| 33 | [Portkey Admin](https://tashan.sh/capability/pkg-portkey-admin-mcp.html) | 64 | 472/wk | active |
+| 34 | [Cortex · danielblomma](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 59 | 153/wk | active |
+| 35 | [Ctxfile](https://tashan.sh/capability/pkg-ctxfile.html) | 52 | 104/wk | active |
+| 36 | [Claude Cup](https://tashan.sh/capability/pkg-claude-cup.html) | 77 | 4.8m/wk | active |
+| 37 | [Nx](https://tashan.sh/capability/pkg-nx-mcp.html) | 76 | 86k/wk | active |
+| 38 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 69 | 1k/wk | active |
 | 39 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 69 | 931/wk | active |
-| 40 | [Systemdox](https://tashan.sh/capability/pkg-systemdox-mcp-server.html) | 64 | 415/wk | active |
+| 40 | [Contextecf Codeledger](https://tashan.sh/capability/pkg-contextecf-codeledger.html) | 68 | 726/wk | active |
 
-Showing the top 40 of 93. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
+Showing the top 40 of 69. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
 
 ## What these numbers are not
 

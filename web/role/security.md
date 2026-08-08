@@ -9,8 +9,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 ## The short answer
 
-- **Regulatory compliance** — [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) · tashan score 65
 - **Security review** — [Zscaler](https://tashan.sh/capability/plugin-zscaler-zscaler-mcp-server-zscaler.html) · tashan score 66
+- **Regulatory compliance** — [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) · tashan score 65
 - **Risk assessment** — [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) · tashan score 68
 
 ## Ranked
@@ -32,33 +32,33 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 57 | 21 ★ | active |
 | 14 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
 | 15 | [Descope Skills](https://tashan.sh/capability/plugin-descope-skills-descope-skills.html) | 53 | 12 ★ | active |
-| 16 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
-| 17 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 60 | 43 ★ | active |
+| 16 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 60 | 43 ★ | active |
+| 17 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
 | 18 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 56 | 12 ★ | active |
 | 19 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 56 | 11 ★ | active |
 | 20 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
 | 21 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 50 | 39 ★ | active |
 | 22 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | 49 | 2 repos | active |
-| 23 | [Senior Secops](https://tashan.sh/capability/skill-alirezarezvani-senior-secops.html) | 49 | 2 repos | active |
-| 24 | [Incident Response](https://tashan.sh/capability/skill-alirezarezvani-incident-response.html) | 49 | 2 repos | active |
+| 23 | [Incident Response](https://tashan.sh/capability/skill-alirezarezvani-incident-response.html) | 49 | 2 repos | active |
+| 24 | [Senior Secops](https://tashan.sh/capability/skill-alirezarezvani-senior-secops.html) | 49 | 2 repos | active |
 | 25 | [Senior Security](https://tashan.sh/capability/skill-alirezarezvani-senior-security.html) | 49 | 2 repos | active |
 | 26 | [Skill Security Auditor](https://tashan.sh/capability/skill-alirezarezvani-skill-security-auditor.html) | 49 | 2 repos | active |
 | 27 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 49 | 1 ★ | active |
 | 28 | [Scenario War Room](https://tashan.sh/capability/skill-alirezarezvani-scenario-war-room.html) | 49 | 2 repos | active |
 | 29 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 48 | 5 ★ | active |
 | 30 | [Gomboc AI Community](https://tashan.sh/capability/plugin-gomboc-ai-gomboc-community-skills-gomboc-ai-community.html) | 48 | 6 ★ | active |
-| 31 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 47 | 5 ★ | active |
-| 32 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 47 | 1 ★ | active |
-| 33 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 47 | 2 ★ | active |
-| 34 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 47 | 6 ★ | active |
-| 35 | [Vanta Mcp Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
-| 36 | [Security Guidance](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-security-guidance.html) | 46 | 2 marketplaces | — |
+| 31 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 47 | 2 ★ | active |
+| 32 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 47 | 6 ★ | active |
+| 33 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 47 | 5 ★ | active |
+| 34 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 47 | 1 ★ | active |
+| 35 | [Security Guidance](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-security-guidance.html) | 46 | 2 marketplaces | — |
+| 36 | [Vanta Mcp Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
 | 37 | [Apiiro](https://tashan.sh/capability/plugin-apiiro-mcp-server-apiiro.html) | 46 | 3 ★ | active |
 | 38 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
-| 39 | [Bubble Shield](https://tashan.sh/capability/plugin-vdk888-bubble-shield-public-bubble-shield.html) | 44 | 0 ★ | active |
-| 40 | [Stackhawk Hawkscan](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-hawkscan.html) | 44 | 1 marketplaces | active |
+| 39 | [Stackhawk Hawkscan](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-hawkscan.html) | 44 | 1 marketplaces | active |
+| 40 | [Stackhawk API](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-api.html) | 44 | 1 marketplaces | active |
 
-Showing the top 40 of 342. The full ranked shelf is at https://tashan.sh/role/security.html.
+Showing the top 40 of 175. The full ranked shelf is at https://tashan.sh/role/security.html.
 
 ## What these numbers are not
 

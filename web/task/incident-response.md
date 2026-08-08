@@ -26,10 +26,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Threat Detection](https://tashan.sh/capability/skill-alirezarezvani-threat-detection.html) | not scored | 1 repos | active |
 | 14 | [Runbook Generator](https://tashan.sh/capability/skill-alirezarezvani-runbook-generator.html) | not scored | 1 repos | active |
 | 15 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 57 | 18 ★ | active |
-| 16 | [Devops Status](https://tashan.sh/capability/pkg-cyanheads-devops-status-mcp-server.html) | 67 | 937/wk | active |
-| 17 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 65 | 414/wk | active |
-| 18 | [Shode House](https://tashan.sh/capability/plugin-shode666-claude-skill-shode-house-shode-house.html) | 40 | 0 ★ | active |
-| 19 | [T View Automation](https://tashan.sh/capability/plugin-zsjon-auto-excel-to-outlook-t-view-automation.html) | 29 | 0 ★ | active |
+| 16 | [Debugbundle](https://tashan.sh/capability/pkg-debugbundle-mcp.html) | 58 | 190/wk | active |
 
 ## What these numbers are not
 

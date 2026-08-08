@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Boltz](https://tashan.sh/capability/plugin-boltz-bio-boltz-api-skills-boltz.html) | 55 | 4 ★ | active |
 | 40 | [Box](https://tashan.sh/capability/plugin-box-box-for-ai-box.html) | 54 | 5 ★ | active |
 
-Showing the top 40 of 314. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 316. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

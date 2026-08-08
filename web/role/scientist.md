@@ -40,7 +40,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Statistical Analyst](https://tashan.sh/capability/skill-alirezarezvani-statistical-analyst.html) | not scored | 1 repos | active |
 | 28 | [Experiment Designer](https://tashan.sh/capability/skill-alirezarezvani-experiment-designer.html) | not scored | 1 repos | active |
 | 29 | [Supply Chain Skills](https://tashan.sh/capability/plugin-kishorkukreja-awesome-supply-chain-supply-chain-skills.html) | 54 | 51 ★ | active |
-| 30 | [Rosetta](https://tashan.sh/capability/pkg-rosetta-mcp-server.html) | 40 | 70/wk | active |
+| 30 | [Scios Skill](https://tashan.sh/capability/pkg-scios-skill.html) | 61 | 243/wk | active |
+| 31 | [Bgpt](https://tashan.sh/capability/pkg-bgpt-mcp.html) | 34 | 171/wk | active |
 
 ## What these numbers are not
 

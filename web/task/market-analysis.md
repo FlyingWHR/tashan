@@ -39,7 +39,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Competitive Ads Extractor](https://tashan.sh/capability/skill-composiohq-competitive-ads-extractor.html) | not scored | 1 repos | active |
 | 27 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 70 | 796/wk | active |
 | 28 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 56 | 205/wk | active |
-| 29 | [Prexist](https://tashan.sh/capability/pkg-prexist.html) | 35 | 31/wk | active |
+| 29 | [Coincap Jj](https://tashan.sh/capability/pkg-bujaayjaay-mcp-coincap-jj.html) | 13 | 17/wk | abandoned |
 
 ## What these numbers are not
 

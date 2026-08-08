@@ -34,25 +34,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 21 | [Performance Profiler](https://tashan.sh/capability/skill-alirezarezvani-performance-profiler.html) | not scored | 1 repos | active |
 | 22 | [Amd Skills](https://tashan.sh/capability/plugin-amd-skills-amd-skills.html) | 69 | 165 ★ | active |
 | 23 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 60 | 27 ★ | active |
-| 24 | [Execbro](https://tashan.sh/capability/pkg-execbro.html) | 70 | 2k/wk | active |
-| 25 | [Agent Only](https://tashan.sh/capability/pkg-agent-only-mcp.html) | 63 | 697/wk | active |
-| 26 | [Crumbtrail](https://tashan.sh/capability/pkg-crumbtrail-node.html) | 59 | 182/wk | active |
-| 27 | [Tauri](https://tashan.sh/capability/pkg-hushlor-tauri-mcp-server.html) | 56 | 265/wk | active |
-| 28 | [Forkmind](https://tashan.sh/capability/pkg-forkmind.html) | 55 | 143/wk | active |
-| 29 | [Kubeview](https://tashan.sh/capability/pkg-kubeview-mcp.html) | 55 | 47/wk | active |
-| 30 | [Agent Observability](https://tashan.sh/capability/pkg-agent-obs.html) | 52 | 72/wk | active |
-| 31 | [Super Ralph](https://tashan.sh/capability/plugin-aezizhu-super-ralph-super-ralph.html) | 46 | 9 ★ | active |
-| 32 | [Rn DevTools](https://tashan.sh/capability/pkg-mcp-rn-devtools.html) | 46 | 37/wk | active |
-| 33 | [Debugging](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-debugging.html) | 41 | 1 marketplaces | active |
-| 34 | [Linux Debugging](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-linux-debugging.html) | 41 | 1 marketplaces | active |
-| 35 | [Dev Debugger](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-dev-debugger.html) | 41 | 1 marketplaces | active |
-| 36 | [Common Mistakes](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-common-mistakes.html) | 37 | 1 marketplaces | active |
-| 37 | [Debugging · lucasmccomb](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-debugging.html) | 37 | 1 marketplaces | active |
-| 38 | [Systematic Debugging · lucasmccomb](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-systematic-debugging.html) | 37 | 1 marketplaces | active |
-| 39 | [General Plugin](https://tashan.sh/capability/plugin-andrewchang-cpu-vibe-coding-configuration-general-plugin.html) | 35 | 1 marketplaces | active |
-| 40 | [Autoresearch X](https://tashan.sh/capability/plugin-waynejing995-autoresearch-x-autoresearch-x.html) | 32 | 2 ★ | active |
-
-Showing the top 40 of 41. The full ranked shelf is at https://tashan.sh/task/debugging.html.
+| 24 | [Agent Only](https://tashan.sh/capability/pkg-agent-only-mcp.html) | 63 | 697/wk | active |
+| 25 | [Super Ralph](https://tashan.sh/capability/plugin-aezizhu-super-ralph-super-ralph.html) | 46 | 9 ★ | active |
+| 26 | [Rn DevTools](https://tashan.sh/capability/pkg-mcp-rn-devtools.html) | 46 | 37/wk | active |
+| 27 | [Autoresearch X](https://tashan.sh/capability/plugin-waynejing995-autoresearch-x-autoresearch-x.html) | 32 | 2 ★ | active |
+| 28 | [Debugger](https://tashan.sh/capability/pkg-ai-capabilities-suite-mcp-debugger-server.html) | 32 | 130/wk | abandoned |
+| 29 | [Cdp Tools](https://tashan.sh/capability/pkg-cdp-tools-mcp.html) | not scored | 966/wk | abandoned |
 
 ## What these numbers are not
 

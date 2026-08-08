@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Skillcheck Free](https://tashan.sh/capability/plugin-olgasafonova-skillcheck-free-skillcheck-free.html) | 52 | 35 ★ | active |
 | 40 | [Jig](https://tashan.sh/capability/plugin-ramboz-jig-jig.html) | 52 | 4 ★ | active |
 
-Showing the top 40 of 167. The full ranked shelf is at https://tashan.sh/task/agent-configuration.html.
+Showing the top 40 of 161. The full ranked shelf is at https://tashan.sh/task/agent-configuration.html.
 
 ## What these numbers are not
 

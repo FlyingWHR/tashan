@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Stress Test](https://tashan.sh/capability/skill-alirezarezvani-stress-test.html) | not scored | 1 repos | active |
 | 40 | [Board Meeting](https://tashan.sh/capability/skill-alirezarezvani-board-meeting.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/task/product-strategy.html.
+Showing the top 40 of 57. The full ranked shelf is at https://tashan.sh/task/product-strategy.html.
 
 ## What these numbers are not
 

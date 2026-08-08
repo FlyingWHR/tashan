@@ -10,8 +10,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Agent development** — [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) · tashan score 78
-- **Prompt engineering** — [Genshijin](https://tashan.sh/capability/plugin-interfacex-co-jp-genshijin-genshijin.html) · tashan score 70
 - **Retrieval systems** — [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) · tashan score 66
+- **Prompt engineering** — [Genshijin](https://tashan.sh/capability/plugin-interfacex-co-jp-genshijin-genshijin.html) · tashan score 70
 - **Model evaluation** — [Evalview](https://tashan.sh/capability/plugin-hidai25-eval-view-evalview.html) · tashan score 68
 
 ## Ranked
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 53 | 20 ★ | active |
 | 40 | [Concordia Protocol](https://tashan.sh/capability/plugin-eriknewton-concordia-protocol-concordia-protocol.html) | 51 | 3 ★ | active |
 
-Showing the top 40 of 566. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
+Showing the top 40 of 450. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
 
 ## What these numbers are not
 

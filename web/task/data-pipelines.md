@@ -48,11 +48,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Bigtable](https://tashan.sh/capability/plugin-googlecloudplatform-cloud-bigtable-ecosystem-bigtable.html) | 59 | 20 ★ | active |
 | 36 | [Versori Skills](https://tashan.sh/capability/plugin-versori-cli-versori-skills.html) | 55 | 12 ★ | active |
 | 37 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 53 | 6 ★ | active |
-| 38 | [Dev Team Kit Fv](https://tashan.sh/capability/plugin-felvieira-claude-skills-fv-dev-team-kit-fv.html) | 55 | 20 ★ | active |
-| 39 | [Tierward](https://tashan.sh/capability/pkg-tierward.html) | 48 | 37/wk | active |
-| 40 | [Ultraweb](https://tashan.sh/capability/plugin-blyatiful1-ultraweb-ultraweb.html) | 44 | 1 ★ | active |
+| 38 | [Ultraweb](https://tashan.sh/capability/plugin-blyatiful1-ultraweb-ultraweb.html) | 44 | 1 ★ | active |
+| 39 | [Bach Snowflake](https://tashan.sh/capability/pkg-bach-snowflake-mcp.html) | 44 | 31/wk | active |
+| 40 | [Sales](https://tashan.sh/capability/pkg-autostackup-sales.html) | 43 | 46/wk | active |
 
-Showing the top 40 of 47. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
+Showing the top 40 of 41. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
 
 ## What these numbers are not
 

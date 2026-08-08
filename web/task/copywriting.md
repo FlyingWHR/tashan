@@ -29,19 +29,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Video Content Strategist](https://tashan.sh/capability/skill-alirezarezvani-video-content-strategist.html) | not scored | 1 repos | active |
 | 17 | [Team Communications](https://tashan.sh/capability/skill-alirezarezvani-team-communications.html) | not scored | 1 repos | active |
 | 18 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 76 | 5k ★ | active |
-| 19 | [Ainative Strapi](https://tashan.sh/capability/pkg-ainative-strapi-mcp-server.html) | 57 | 215/wk | active |
-| 20 | [Rephrasy](https://tashan.sh/capability/pkg-rephrasy-mcp.html) | 52 | 159/wk | active |
-| 21 | [Panini Connector](https://tashan.sh/capability/pkg-panini-connector-mcp.html) | 48 | 61/wk | active |
-| 22 | [Content Writing](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-content-writing.html) | 41 | 1 marketplaces | active |
-| 23 | [Novelty Text Editor](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-novelty-text-editor.html) | 41 | 1 marketplaces | active |
-| 24 | [Pipepost](https://tashan.sh/capability/pkg-pipepost-mcp.html) | 41 | 106/wk | active |
-| 25 | [Email Copywriting](https://tashan.sh/capability/plugin-sendx-email-skills-email-copywriting.html) | 39 | 1 marketplaces | active |
-| 26 | [Neuraldraft](https://tashan.sh/capability/pkg-neuraldraft-mcp.html) | 39 | 45/wk | active |
-| 27 | [Editorial Critique](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-editorial-critique.html) | 37 | 1 marketplaces | active |
-| 28 | [Writing System](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-writing-system.html) | 37 | 1 marketplaces | active |
-| 29 | [Rephrasy · jhubbardsf](https://tashan.sh/capability/plugin-jhubbardsf-rephrasy-skills-rephrasy.html) | 31 | 0 ★ | active |
-| 30 | [Yahav Marketing](https://tashan.sh/capability/plugin-yahav123147-yahav-marketing-plugin-yahav-marketing.html) | 27 | 0 ★ | active |
-| 31 | [Blogcaster](https://tashan.sh/capability/pkg-blogcaster-mcp.html) | 25 | 55/wk | abandoned |
+| 19 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 57 | 141/wk | active |
+| 20 | [Neuraldraft](https://tashan.sh/capability/pkg-neuraldraft-mcp.html) | 39 | 45/wk | active |
 
 ## What these numbers are not
 

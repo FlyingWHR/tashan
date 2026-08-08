@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Marketing Psychology](https://tashan.sh/capability/skill-alirezarezvani-marketing-psychology.html) | not scored | 1 repos | active |
 | 40 | [Marketing Strategy Pmm](https://tashan.sh/capability/skill-alirezarezvani-marketing-strategy-pmm.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 131. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.
+Showing the top 40 of 81. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.
 
 ## What these numbers are not
 

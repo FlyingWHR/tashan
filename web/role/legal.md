@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Fda Consultant Specialist](https://tashan.sh/capability/skill-alirezarezvani-fda-consultant-specialist.html) | not scored | 1 repos | active |
 | 40 | [Gdpr Dsgvo Expert](https://tashan.sh/capability/skill-alirezarezvani-gdpr-dsgvo-expert.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 239. The full ranked shelf is at https://tashan.sh/role/legal.html.
+Showing the top 40 of 102. The full ranked shelf is at https://tashan.sh/role/legal.html.
 
 ## What these numbers are not
 

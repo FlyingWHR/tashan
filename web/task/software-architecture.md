@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [GCP Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-gcp-cloud-architect.html) | not scored | 1 repos | active |
 | 40 | [Agent Designer](https://tashan.sh/capability/skill-alirezarezvani-agent-designer.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 64. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
+Showing the top 40 of 56. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
 
 ## What these numbers are not
 

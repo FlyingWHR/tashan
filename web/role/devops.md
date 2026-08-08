@@ -58,7 +58,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 49 | 1 ★ | active |
 | 40 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 49 | 45 ★ | active |
 
-Showing the top 40 of 224. The full ranked shelf is at https://tashan.sh/role/devops.html.
+Showing the top 40 of 210. The full ranked shelf is at https://tashan.sh/role/devops.html.
 
 ## What these numbers are not
 

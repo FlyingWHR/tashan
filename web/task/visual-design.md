@@ -48,11 +48,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Magicpath](https://tashan.sh/capability/plugin-magicpathai-agent-skills-magicpath.html) | 64 | 84 ★ | active |
 | 36 | [Brand Guidelines](https://tashan.sh/capability/skill-anthropics-brand-guidelines.html) | 55 | 4 repos | active |
 | 37 | [Figma Console](https://tashan.sh/capability/pkg-figma-console-mcp.html) | 86 | 31k/wk | active |
-| 38 | [Figma Developer](https://tashan.sh/capability/pkg-figma-developer-mcp.html) | 88 | 82k/wk | active |
-| 39 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
-| 40 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 70 | 2k/wk | active |
+| 38 | [Accessibility Scanner · Bishop81](https://tashan.sh/capability/pkg-accessibility-scanner-mcp.html) | 57 | 204/wk | active |
+| 39 | [Figma Developer](https://tashan.sh/capability/pkg-figma-developer-mcp.html) | 88 | 82k/wk | active |
+| 40 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
 
-Showing the top 40 of 67. The full ranked shelf is at https://tashan.sh/task/visual-design.html.
+Showing the top 40 of 62. The full ranked shelf is at https://tashan.sh/task/visual-design.html.
 
 ## What these numbers are not
 

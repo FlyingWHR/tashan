@@ -11,28 +11,20 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Sem](https://tashan.sh/capability/pkg-ataraxy-labs-sem.html) | 69 | 4k/wk | active |
-| 2 | [Gk CLI](https://tashan.sh/capability/pkg-gitkraken-gk.html) | 69 | 5k/wk | active |
+| 1 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 70 | 1k/wk | active |
+| 2 | [Nomoreide](https://tashan.sh/capability/pkg-nomoreide.html) | 67 | 628/wk | active |
 | 3 | [Gitpin](https://tashan.sh/capability/pkg-gitpin.html) | 62 | 776/wk | active |
 | 4 | [Udacity Commit](https://tashan.sh/capability/pkg-mcp-udacity-commit.html) | 59 | 373/wk | active |
-| 5 | [Vibe Coding](https://tashan.sh/capability/pkg-vibe-coding-mcp.html) | 50 | 97/wk | active |
+| 5 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 59 | 171/wk | active |
 | 6 | [Weavatrix Git](https://tashan.sh/capability/pkg-weavatrix-git.html) | 48 | 62/wk | active |
 | 7 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 46 | 50/wk | active |
-| 8 | [General](https://tashan.sh/capability/plugin-kingstinct-github-general.html) | 45 | 1 marketplaces | active |
-| 9 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 45 | 71/wk | active |
-| 10 | [Dryrun Pr Review](https://tashan.sh/capability/plugin-dryrunsecurity-external-plugin-marketplace-dryrun-pr-review.html) | 44 | 1 marketplaces | active |
-| 11 | [Athena Dev Plugin](https://tashan.sh/capability/plugin-athena-git-group-athena-plugin-dev-athena-dev-plugin.html) | 37 | 0 ★ | active |
-| 12 | [Branch Guard](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-branch-guard.html) | 37 | 1 marketplaces | active |
-| 13 | [Commands Core](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-commands-core.html) | 37 | 1 marketplaces | active |
-| 14 | [Commands Utility](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-commands-utility.html) | 37 | 1 marketplaces | active |
-| 15 | [Git Workflow](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-git-workflow.html) | 37 | 1 marketplaces | active |
-| 16 | [Git Worktrees](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-git-worktrees.html) | 37 | 1 marketplaces | active |
-| 17 | [Hooks](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-hooks.html) | 37 | 1 marketplaces | active |
-| 18 | [New And Noteworthy](https://tashan.sh/capability/plugin-matthewkhouzam-nn-skill-new-and-noteworthy.html) | 28 | 1 marketplaces | — |
-| 19 | [Git · raytien](https://tashan.sh/capability/pkg-raytien-git-mcp-server.html) | 27 | 57/wk | abandoned |
-| 20 | [Perforce](https://tashan.sh/capability/plugin-tjboudreaux-cc-plugin-perforce-perforce.html) | 26 | 8 ★ | abandoned |
-| 21 | [Beautify Claude Status Line](https://tashan.sh/capability/plugin-goddaehee-beautify-claude-status-line-tmp-beautify-claude-status-line.html) | 20 | 0 ★ | abandoned |
-| 22 | [Git Toolkit](https://tashan.sh/capability/plugin-walis85300-marketplace-git-toolkit.html) | 14 | 1 marketplaces | — |
+| 8 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 45 | 71/wk | active |
+| 9 | [Bitbucket](https://tashan.sh/capability/pkg-mcp-bitbucket.html) | 45 | 37/wk | active |
+| 10 | [Useclawhub](https://tashan.sh/capability/pkg-useclawhub-mcp.html) | 39 | 17/wk | active |
+| 11 | [New And Noteworthy](https://tashan.sh/capability/plugin-matthewkhouzam-nn-skill-new-and-noteworthy.html) | 28 | 1 marketplaces | — |
+| 12 | [Perforce](https://tashan.sh/capability/plugin-tjboudreaux-cc-plugin-perforce-perforce.html) | 26 | 8 ★ | abandoned |
+| 13 | [Beautify Claude Status Line](https://tashan.sh/capability/plugin-goddaehee-beautify-claude-status-line-tmp-beautify-claude-status-line.html) | 20 | 0 ★ | abandoned |
+| 14 | [Git Toolkit](https://tashan.sh/capability/plugin-walis85300-marketplace-git-toolkit.html) | 14 | 1 marketplaces | — |
 
 ## What these numbers are not
 

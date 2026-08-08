@@ -26,33 +26,25 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Quality Manager Qms Iso13485](https://tashan.sh/capability/skill-alirezarezvani-quality-manager-qms-iso13485.html) | not scored | 1 repos | active |
 | 14 | [Ra Qm Skills](https://tashan.sh/capability/skill-alirezarezvani-ra-qm-skills.html) | not scored | 1 repos | active |
 | 15 | [Soc2 Compliance](https://tashan.sh/capability/skill-alirezarezvani-soc2-compliance.html) | not scored | 1 repos | active |
-| 16 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 74 | 2k/wk | active |
-| 17 | [Pixelcheck](https://tashan.sh/capability/pkg-pixelcheck.html) | 65 | 581/wk | active |
-| 18 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 64 | 897/wk | active |
-| 19 | [Ghostlight](https://tashan.sh/capability/pkg-ghostlight.html) | 63 | 538/wk | active |
+| 16 | [Bastion](https://tashan.sh/capability/pkg-mcp-bastion.html) | 61 | 328/wk | active |
+| 17 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 67 | 572/wk | active |
+| 18 | [Crosscheck](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 67 | 568/wk | active |
+| 19 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 64 | 897/wk | active |
 | 20 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 62 | 360/wk | active |
 | 21 | [Audit](https://tashan.sh/capability/pkg-openaeo-audit.html) | 60 | 414/wk | active |
-| 22 | [Protect](https://tashan.sh/capability/pkg-protect-mcp.html) | 60 | 387/wk | active |
-| 23 | [Taplid](https://tashan.sh/capability/pkg-taplid-mcp.html) | 60 | 225/wk | active |
-| 24 | [Whats Allowed](https://tashan.sh/capability/pkg-whats-allowed-mcp.html) | 57 | 348/wk | active |
-| 25 | [Repo Test Architect](https://tashan.sh/capability/pkg-repo-test-architect.html) | 57 | 239/wk | active |
+| 22 | [Taplid](https://tashan.sh/capability/pkg-taplid-mcp.html) | 60 | 225/wk | active |
+| 23 | [Nexus Agents](https://tashan.sh/capability/pkg-nexus-agents.html) | 58 | 194/wk | active |
+| 24 | [Positif](https://tashan.sh/capability/pkg-positif-ai.html) | 57 | 191/wk | active |
+| 25 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 57 | 177/wk | active |
 | 26 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 54 | 131/wk | active |
 | 27 | [Vorim](https://tashan.sh/capability/pkg-vorim-mcp-server.html) | 50 | 87/wk | active |
-| 28 | [Lotor](https://tashan.sh/capability/pkg-lotor-mcp.html) | 49 | 62/wk | active |
-| 29 | [SEO Tools](https://tashan.sh/capability/pkg-seodesignlab-mcp-server.html) | 47 | 53/wk | active |
-| 30 | [Gatekeeper](https://tashan.sh/capability/pkg-runestone-labs-gatekeeper-mcp.html) | 44 | 42/wk | active |
-| 31 | [Security Auditor](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-security-auditor.html) | 41 | 1 marketplaces | active |
-| 32 | [Ads](https://tashan.sh/capability/plugin-tka4enko-ads-discipline-ads.html) | 41 | 0 ★ | active |
-| 33 | [Email Deliverability Expert](https://tashan.sh/capability/plugin-sendx-email-skills-email-deliverability-expert.html) | 39 | 1 marketplaces | active |
-| 34 | [Agent Native](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-agent-native.html) | 37 | 1 marketplaces | active |
-| 35 | [Ccgm Doctor](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-ccgm-doctor.html) | 37 | 1 marketplaces | active |
-| 36 | [Commands Extra](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-commands-extra.html) | 37 | 1 marketplaces | active |
-| 37 | [Pentagonal](https://tashan.sh/capability/pkg-pentagonal-mcp.html) | 35 | 44/wk | active |
-| 38 | [Catalog CLI Pro](https://tashan.sh/capability/pkg-bwb03-catalog-cli-pro.html) | 34 | 56/wk | active |
-| 39 | [Aikido · Bajuzjefe](https://tashan.sh/capability/pkg-aikido-mcp.html) | 31 | 53/wk | active |
-| 40 | [Agent Observability · blueskylineassets](https://tashan.sh/capability/pkg-agent-observability-mcp.html) | 27 | 43/wk | abandoned |
-
-Showing the top 40 of 41. The full ranked shelf is at https://tashan.sh/task/audit.html.
+| 28 | [A11y](https://tashan.sh/capability/pkg-a11y-mcp.html) | 41 | 360/wk | active |
+| 29 | [Email Deliverability Expert](https://tashan.sh/capability/plugin-sendx-email-skills-email-deliverability-expert.html) | 39 | 1 marketplaces | active |
+| 30 | [GitHub Security](https://tashan.sh/capability/pkg-github-security-mcp.html) | 38 | 626/wk | active |
+| 31 | [Pentagonal](https://tashan.sh/capability/pkg-pentagonal-mcp.html) | 35 | 44/wk | active |
+| 32 | [Catalog CLI Pro](https://tashan.sh/capability/pkg-bwb03-catalog-cli-pro.html) | 34 | 56/wk | active |
+| 33 | [Agent Observability · blueskylineassets](https://tashan.sh/capability/pkg-agent-observability-mcp.html) | 27 | 43/wk | abandoned |
+| 34 | [Security Audit](https://tashan.sh/capability/pkg-mcp-security-audit.html) | 14 | 70/wk | abandoned |
 
 ## What these numbers are not
 

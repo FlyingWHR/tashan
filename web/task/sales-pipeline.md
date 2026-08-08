@@ -46,13 +46,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Dynamics 365 Automation](https://tashan.sh/capability/skill-composiohq-dynamics-365-automation.html) | not scored | 1 repos | active |
 | 34 | [Gong Automation](https://tashan.sh/capability/skill-composiohq-gong-automation.html) | not scored | 1 repos | active |
 | 35 | [Gumroad Automation](https://tashan.sh/capability/skill-composiohq-gumroad-automation.html) | not scored | 1 repos | active |
-| 36 | [Scala Score](https://tashan.sh/capability/pkg-scala-mcp-server.html) | 52 | 83/wk | active |
-| 37 | [Ghl Command](https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html) | 68 | 863/wk | active |
-| 38 | [Crmincloud](https://tashan.sh/capability/pkg-memori-ai-mcp-crmincloud.html) | 68 | 374/wk | active |
-| 39 | [Salesforce Metadata](https://tashan.sh/capability/pkg-salesforce-metadata-mcp.html) | 66 | 746/wk | active |
-| 40 | [Boondmanager](https://tashan.sh/capability/pkg-boondmanager-mcp-server.html) | 66 | 500/wk | active |
+| 36 | [Crmincloud](https://tashan.sh/capability/pkg-memori-ai-mcp-crmincloud.html) | 68 | 374/wk | active |
+| 37 | [Boondmanager](https://tashan.sh/capability/pkg-boondmanager-mcp-server.html) | 66 | 500/wk | active |
+| 38 | [Leadbay](https://tashan.sh/capability/pkg-leadbay-mcp.html) | 64 | 397/wk | active |
+| 39 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 58 | 210/wk | active |
+| 40 | [Vruum](https://tashan.sh/capability/pkg-vruum-mcp.html) | 56 | 277/wk | active |
 
-Showing the top 40 of 58. The full ranked shelf is at https://tashan.sh/task/sales-pipeline.html.
+Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/sales-pipeline.html.
 
 ## What these numbers are not
 

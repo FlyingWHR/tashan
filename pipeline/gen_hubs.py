@@ -882,6 +882,27 @@ def role_page(role, rows, tasks, all_roles, gen):
         '<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n'
 
 
+def sweep(dirpath, keep):
+    """Delete every hub page in `dirpath` whose stem is not in `keep` — HTML and markdown twin both.
+
+    Three copies of this cleanup existed and only the category one removed the twin, so a task or
+    role dropping below its floor lost the HTML and left the `.md` behind: served, unlinked, and
+    frozen at whatever it said the day it was dropped.
+
+    It also has to glob BOTH extensions rather than deriving the twin from the HTML. Fixing only
+    the delete left role/educator.md in place, because educator.html had been removed by an earlier
+    run — so nothing iterated over it to find its twin. An orphan the sweep cannot see is the one
+    that survives, and the agent tier is a first-class surface here: a stale .md answers forever.
+    """
+    gone = set()
+    for f in glob.glob(os.path.join(dirpath, "*.html")) + glob.glob(os.path.join(dirpath, "*.md")):
+        stem = os.path.basename(f).rsplit(".", 1)[0]
+        if stem not in keep:
+            os.remove(f)
+            gone.add(stem)
+    return sorted(gone)
+
+
 def main():
     d = json.load(open(DATA))
     gen = d.get("generated_at", "")
@@ -930,16 +951,10 @@ def main():
             continue
         for pg in range(1, max(1, -(-len(rows) // CAT_PER_PAGE)) + 1):
             keep.add(cat["id"] if pg == 1 else f'{cat["id"]}-{pg}')
-    orphans = [f for f in glob.glob(os.path.join(OUT_CAT, "*.html"))
-               if os.path.basename(f)[:-5] not in keep]
-    for f in orphans:
-        os.remove(f)
-        md = f[:-5] + ".md"
-        if os.path.exists(md):
-            os.remove(md)
+    orphans = sweep(OUT_CAT, keep)
     if orphans:
         print("category hubs: removed %d orphaned page(s): %s"
-              % (len(orphans), ", ".join(sorted(os.path.basename(f) for f in orphans))[:90]))
+              % (len(orphans), ", ".join(orphans)[:90]))
 
     print("category hubs: %d written (%d categorised capabilities)" % (written, sum(len(v) for v in by_cat.values())))
 
@@ -979,9 +994,7 @@ def main():
     # publishable tasks are the sibling set too — a chip must never link to a page that does not exist
     pub = [t for t in tasks
            if len([c for c in by_task.get(t["slug"], []) if c.get("tashan_score") is not None]) >= TASK_MIN]
-    for stale in glob.glob(os.path.join(out_task, "*.html")):
-        if os.path.basename(stale)[:-5] not in {t["slug"] for t in pub}:
-            os.remove(stale)                     # a task can fall below the gate; leave no orphan behind
+    sweep(out_task, {t["slug"] for t in pub})    # a task can fall below the gate; leave no orphan
     for t in pub:
         rows = by_task.get(t["slug"], [])
         p = os.path.join(out_task, t["slug"] + ".html")
@@ -1021,9 +1034,7 @@ def main():
                                              -(x.get("tashan_score") or 0)))
     pub_roles = [r for r in roles
                  if len([c for c in by_role.get(r["id"], []) if c.get("tashan_score") is not None]) >= ROLE_MIN]
-    for stale in glob.glob(os.path.join(out_role, "*.html")):
-        if os.path.basename(stale)[:-5] not in {r["id"] for r in pub_roles}:
-            os.remove(stale)                     # a job can fall below the gate; leave no orphan behind
+    sweep(out_role, {r["id"] for r in pub_roles})  # a job can fall below the gate; leave no orphan
     for r in pub_roles:
         rrows, rtasks = by_role.get(r["id"], []), role_tasks.get(r["id"], [])
         p = os.path.join(out_role, r["id"] + ".html")

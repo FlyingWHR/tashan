@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Sdlc Wizard](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard.html) | 44 | 1 marketplaces | active |
 | 40 | [Sdlc Wizard Cowork](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard-cowork.html) | 44 | 1 marketplaces | active |
 
-Showing the top 40 of 134. The full ranked shelf is at https://tashan.sh/task/code-review.html.
+Showing the top 40 of 109. The full ranked shelf is at https://tashan.sh/task/code-review.html.
 
 ## What these numbers are not
 

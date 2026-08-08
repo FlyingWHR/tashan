@@ -25,7 +25,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Bettercallclaude](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-bettercallclaude.html) | 61 | 33 ★ | active |
 | 13 | [Bettercallclaude Italia](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-italia-bettercallclaude-italia.html) | 56 | 41 ★ | active |
 | 14 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 54 | 139/wk | active |
-| 15 | [License Populator](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-license-populator.html) | 41 | 1 marketplaces | active |
+| 15 | [Contract Analysis](https://tashan.sh/capability/pkg-bitsbound-mcp-server.html) | 35 | 212/wk | abandoned |
 
 ## What these numbers are not
 

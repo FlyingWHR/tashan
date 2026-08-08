@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Code To Prd](https://tashan.sh/capability/skill-alirezarezvani-code-to-prd.html) | not scored | 1 repos | active |
 | 40 | [Product Manager Toolkit](https://tashan.sh/capability/skill-alirezarezvani-product-manager-toolkit.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 55. The full ranked shelf is at https://tashan.sh/task/prd-and-specs.html.
+Showing the top 40 of 54. The full ranked shelf is at https://tashan.sh/task/prd-and-specs.html.
 
 ## What these numbers are not
 

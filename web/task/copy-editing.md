@@ -23,15 +23,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Humanizer · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-humanizer-humanizer.html) | 41 | 1 ★ | active |
 | 11 | [Remove AI Flavor](https://tashan.sh/capability/plugin-chujianyun-skills-remove-ai-flavor.html) | 40 | 1 marketplaces | active |
 | 12 | [Copy Editing](https://tashan.sh/capability/skill-alirezarezvani-copy-editing.html) | not scored | 1 repos | active |
-| 13 | [Forcedream](https://tashan.sh/capability/pkg-forcedream-mcp-server.html) | 64 | 511/wk | active |
-| 14 | [Taskfleet](https://tashan.sh/capability/pkg-taskfleet-mcp.html) | 57 | 280/wk | active |
-| 15 | [Goldbean](https://tashan.sh/capability/pkg-goldbean-mcp.html) | 57 | 130/wk | active |
-| 16 | [Orcadub](https://tashan.sh/capability/pkg-orcadub-cli.html) | 55 | 139/wk | active |
-| 17 | [Ditto Workflows](https://tashan.sh/capability/pkg-ditto-workflows-mcp.html) | 47 | 38/wk | active |
-| 18 | [Video Editing](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-video-editing.html) | 41 | 1 marketplaces | active |
-| 19 | [Local Web Capture](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-local-web-capture.html) | 41 | 1 marketplaces | active |
-| 20 | [Editorial Critique](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-editorial-critique.html) | 37 | 1 marketplaces | active |
-| 21 | [Translatize](https://tashan.sh/capability/pkg-translatize-mcp.html) | 49 | 76/wk | active |
+| 13 | [Deepl](https://tashan.sh/capability/pkg-deepl-mcp-server.html) | 67 | 1k/wk | active |
+| 14 | [Goldbean](https://tashan.sh/capability/pkg-goldbean-mcp.html) | 57 | 130/wk | active |
+| 15 | [I18n Agent](https://tashan.sh/capability/pkg-i18n-agent-mcp-client.html) | 48 | 126/wk | active |
+| 16 | [Ditto Workflows](https://tashan.sh/capability/pkg-ditto-workflows-mcp.html) | 47 | 38/wk | active |
+| 17 | [Translatize](https://tashan.sh/capability/pkg-translatize-mcp.html) | 49 | 76/wk | active |
 
 ## What these numbers are not
 

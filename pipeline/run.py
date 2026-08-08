@@ -88,6 +88,12 @@ STAGES = [
     # the day it happens, and a day nobody runs this is a day of alerts nobody can ever get back.
     ("changes",         ["pipeline/change_events.py"], "enrich",
      "what changed since the last run — advisories, install scripts, permissions, ownership"),
+    # FIRST IN THE SITE PHASE, because every generator below reads its output. The export lives in
+    # build.py, which is a `source` stage, so `--site` used to skip it and rebuild the whole site
+    # from whatever capabilities.json was last written. Silent, and it shipped: the task tagger was
+    # corrected, --site was run, and the hubs regenerated from the stale export.
+    ("export",          ["pipeline/export_site.py"], "site",
+     "re-export web/data/*.json from the DB, so the site is never built from a stale snapshot"),
     ("badges",          ["pipeline/gen_badges.py"], "site",
      "embeddable SVGs — cast range"),
     # NOT bump_assets here: a daily run must not increment the asset version. The data changes daily,

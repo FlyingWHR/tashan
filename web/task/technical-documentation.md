@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Quality Documentation Manager](https://tashan.sh/capability/skill-alirezarezvani-quality-documentation-manager.html) | not scored | 1 repos | active |
 | 40 | [Context7 · upstash](https://tashan.sh/capability/plugin-upstash-context7-context7.html) | 77 | 60k ★ | active |
 
-Showing the top 40 of 47. The full ranked shelf is at https://tashan.sh/task/technical-documentation.html.
+Showing the top 40 of 48. The full ranked shelf is at https://tashan.sh/task/technical-documentation.html.
 
 ## What these numbers are not
 

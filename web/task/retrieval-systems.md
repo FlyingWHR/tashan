@@ -33,26 +33,26 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 20 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 69 | 402 ★ | active |
 | 21 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 75 | 3k ★ | active |
 | 22 | [Local RAG](https://tashan.sh/capability/pkg-mcp-local-rag.html) | 72 | 4k/wk | active |
-| 23 | [Conventions](https://tashan.sh/capability/pkg-conventions-mcp.html) | 56 | 159/wk | active |
+| 23 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 68 | 594/wk | active |
 | 24 | [Paparats – Local Semantic Code Search](https://tashan.sh/capability/pkg-paparats-cli.html) | 70 | 2k/wk | active |
-| 25 | [Doc Bridge](https://tashan.sh/capability/pkg-agentskit-doc-bridge.html) | 60 | 304/wk | active |
+| 25 | [Cortex · danielblomma](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 59 | 153/wk | active |
 | 26 | [Neuromcp](https://tashan.sh/capability/pkg-neuromcp.html) | 56 | 146/wk | active |
-| 27 | [Gctrl](https://tashan.sh/capability/pkg-gctrl-mcp.html) | 45 | 39/wk | active |
-| 28 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 70 | 2k/wk | active |
-| 29 | [Memory · cerefox](https://tashan.sh/capability/pkg-cerefox-memory.html) | 70 | 2k/wk | active |
-| 30 | [Prism](https://tashan.sh/capability/pkg-prism-mcp-server.html) | 70 | 2k/wk | active |
-| 31 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 67 | 578/wk | active |
-| 32 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 66 | 660/wk | active |
-| 33 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 65 | 347/wk | active |
-| 34 | [Forcedream](https://tashan.sh/capability/pkg-forcedream-mcp-server.html) | 64 | 511/wk | active |
-| 35 | [Ainative Zerodb Memory](https://tashan.sh/capability/pkg-ainative-zerodb-memory-mcp.html) | 63 | 581/wk | active |
-| 36 | [Local Memory](https://tashan.sh/capability/pkg-studiomeyer-local-memory-mcp.html) | 63 | 485/wk | active |
-| 37 | [Knowmind](https://tashan.sh/capability/pkg-knowmind.html) | 63 | 313/wk | active |
-| 38 | [Wso2 Docs](https://tashan.sh/capability/pkg-wso2-docs-mcp-server.html) | 62 | 362/wk | active |
-| 39 | [Kaval](https://tashan.sh/capability/pkg-usekaval-mcp.html) | 62 | 343/wk | active |
-| 40 | [Ainative Memory](https://tashan.sh/capability/pkg-ainative-memory-mcp.html) | 59 | 625/wk | active |
+| 27 | [API Docs](https://tashan.sh/capability/pkg-imagin-studio-api-docs-mcp.html) | 51 | 64/wk | active |
+| 28 | [Gctrl](https://tashan.sh/capability/pkg-gctrl-mcp.html) | 45 | 39/wk | active |
+| 29 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 79 | 122k/wk | active |
+| 30 | [Loki Mode](https://tashan.sh/capability/pkg-loki-mode.html) | 76 | 24k/wk | active |
+| 31 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow.html) | 73 | 10k/wk | active |
+| 32 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 73 | 6k/wk | active |
+| 33 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 72 | 3k/wk | active |
+| 34 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 70 | 2k/wk | active |
+| 35 | [Prism](https://tashan.sh/capability/pkg-prism-mcp-server.html) | 70 | 2k/wk | active |
+| 36 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 69 | 1k/wk | active |
+| 37 | [Sciverse](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 69 | 1k/wk | active |
+| 38 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 67 | 578/wk | active |
+| 39 | [Grepmax](https://tashan.sh/capability/pkg-grepmax.html) | 67 | 573/wk | active |
+| 40 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 66 | 660/wk | active |
 
-Showing the top 40 of 75. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
+Showing the top 40 of 77. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
 
 ## What these numbers are not
 

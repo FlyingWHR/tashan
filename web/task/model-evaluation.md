@@ -39,13 +39,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Prompt Engineer Toolkit](https://tashan.sh/capability/skill-alirezarezvani-prompt-engineer-toolkit.html) | not scored | 1 repos | active |
 | 27 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 71 | 218 ★ | active |
 | 28 | [Nexus Agents · williamzujkowski](https://tashan.sh/capability/plugin-williamzujkowski-nexus-agents-nexus-agents.html) | 58 | 16 ★ | active |
-| 29 | [Plzebo](https://tashan.sh/capability/pkg-plzebo.html) | 57 | 326/wk | active |
-| 30 | [Opengate](https://tashan.sh/capability/pkg-pharmatools-opengate-mcp.html) | 46 | 44/wk | active |
-| 31 | [Business Idea Eval](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-business-idea-eval.html) | 41 | 1 marketplaces | active |
-| 32 | [Apex Competition Builder](https://tashan.sh/capability/plugin-macrocosm-os-apex-competitions-builder-apex-competition-builder.html) | 41 | 0 ★ | active |
-| 33 | [Agent Native](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-agent-native.html) | 37 | 1 marketplaces | active |
-| 34 | [Ccgm Doctor](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-ccgm-doctor.html) | 37 | 1 marketplaces | active |
-| 35 | [Ragmetric](https://tashan.sh/capability/pkg-mukundakatta-ragmetric-mcp.html) | 36 | 32/wk | active |
+| 29 | [My Pi](https://tashan.sh/capability/pkg-my-pi.html) | 68 | 667/wk | active |
+| 30 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 60 | 158/wk | active |
+| 31 | [Plzebo](https://tashan.sh/capability/pkg-plzebo.html) | 57 | 326/wk | active |
 
 ## What these numbers are not
 

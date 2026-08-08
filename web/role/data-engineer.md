@@ -58,7 +58,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 45 | 2 marketplaces | active |
 | 40 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 45 | 2 marketplaces | active |
 
-Showing the top 40 of 86. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
+Showing the top 40 of 79. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
 
 ## What these numbers are not
 

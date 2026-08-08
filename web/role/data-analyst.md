@@ -57,7 +57,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Idmp Plugin](https://tashan.sh/capability/plugin-taosdata-agent-skills-idmp-plugin.html) | 43 | 2 ★ | active |
 | 40 | [Ts Ddd Repository](https://tashan.sh/capability/plugin-llodev-skills-ts-ddd-repository.html) | 43 | 1 marketplaces | active |
 
-Showing the top 40 of 162. The full ranked shelf is at https://tashan.sh/role/data-analyst.html.
+Showing the top 40 of 150. The full ranked shelf is at https://tashan.sh/role/data-analyst.html.
 
 ## What these numbers are not
 

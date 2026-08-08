@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Private Journal · 2389-research](https://tashan.sh/capability/plugin-2389-research-journal-mcp-private-journal-mcp.html) | 52 | 9 ★ | active |
 | 40 | [Mind](https://tashan.sh/capability/plugin-memvid-claude-brain-mind.html) | 52 | 533 ★ | stable |
 
-Showing the top 40 of 181. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
+Showing the top 40 of 193. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
 
 ## What these numbers are not
 

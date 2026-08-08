@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 49 | 7 ★ | active |
 | 40 | [Guild](https://tashan.sh/capability/plugin-lookatitude-guild-guild.html) | 49 | 6 ★ | active |
 
-Showing the top 40 of 386. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
+Showing the top 40 of 289. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
 
 ## What these numbers are not
 

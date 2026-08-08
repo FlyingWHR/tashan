@@ -26,7 +26,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Clinical Research](https://tashan.sh/capability/skill-alirezarezvani-clinical-research.html) | not scored | 1 repos | active |
 | 14 | [Grants](https://tashan.sh/capability/skill-alirezarezvani-grants.html) | not scored | 1 repos | active |
 | 15 | [Litreview](https://tashan.sh/capability/skill-alirezarezvani-litreview.html) | not scored | 1 repos | active |
-| 16 | [Rosetta](https://tashan.sh/capability/pkg-rosetta-mcp-server.html) | 40 | 70/wk | active |
+| 16 | [Scios Skill](https://tashan.sh/capability/pkg-scios-skill.html) | 61 | 243/wk | active |
+| 17 | [Bgpt](https://tashan.sh/capability/pkg-bgpt-mcp.html) | 34 | 171/wk | active |
 
 ## What these numbers are not
 

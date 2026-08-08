@@ -24,7 +24,6 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | not scored | 1 repos | active |
 | 12 | [Dadata Ru Automation](https://tashan.sh/capability/skill-composiohq-dadata-ru-automation.html) | not scored | 1 repos | active |
 | 13 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 61 | 25 ★ | active |
-| 14 | [Roundtable](https://tashan.sh/capability/plugin-wan-huiyan-agent-review-panel-roundtable.html) | 62 | 30 ★ | active |
 
 ## What these numbers are not
 

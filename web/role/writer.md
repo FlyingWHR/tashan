@@ -56,9 +56,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 37 | [Paid Ads](https://tashan.sh/capability/skill-alirezarezvani-paid-ads.html) | 49 | 2 repos | active |
 | 38 | [Social Content](https://tashan.sh/capability/skill-alirezarezvani-social-content.html) | 49 | 2 repos | active |
 | 39 | [Social Media Manager](https://tashan.sh/capability/skill-alirezarezvani-social-media-manager.html) | 49 | 2 repos | active |
-| 40 | [Board Deck Builder](https://tashan.sh/capability/skill-alirezarezvani-board-deck-builder.html) | 49 | 2 repos | active |
+| 40 | [Changelog Generator](https://tashan.sh/capability/skill-alirezarezvani-changelog-generator.html) | 49 | 2 repos | active |
 
-Showing the top 40 of 264. The full ranked shelf is at https://tashan.sh/role/writer.html.
+Showing the top 40 of 191. The full ranked shelf is at https://tashan.sh/role/writer.html.
 
 ## What these numbers are not
 

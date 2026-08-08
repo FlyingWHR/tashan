@@ -22,12 +22,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 71 | 891/wk | active |
 | 10 | [Help Scout](https://tashan.sh/capability/pkg-help-scout-mcp-server.html) | 66 | 801/wk | active |
 | 11 | [Connectwise Psa](https://tashan.sh/capability/pkg-mcp-connectwise-psa.html) | 60 | 368/wk | active |
-| 12 | [Etix](https://tashan.sh/capability/pkg-etix-mcp.html) | 59 | 258/wk | active |
-| 13 | [Eventbrite](https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html) | 57 | 273/wk | active |
-| 14 | [Quick Desk](https://tashan.sh/capability/pkg-quick-desk-mcp.html) | 56 | 202/wk | active |
+| 12 | [Eventbrite](https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html) | 57 | 273/wk | active |
+| 13 | [Quick Desk](https://tashan.sh/capability/pkg-quick-desk-mcp.html) | 56 | 202/wk | active |
+| 14 | [Zd](https://tashan.sh/capability/pkg-zd-mcp-server.html) | 50 | 370/wk | active |
 | 15 | [Freescout](https://tashan.sh/capability/pkg-verygoodplugins-mcp-freescout.html) | 50 | 239/wk | active |
-| 16 | [Pylon](https://tashan.sh/capability/pkg-pylon-mcp.html) | 37 | 89/wk | active |
-| 17 | [Casemargin](https://tashan.sh/capability/pkg-casemargin-mcp-server.html) | 28 | — | active |
+| 16 | [Gorgias](https://tashan.sh/capability/pkg-gorgias-mcp-server.html) | 43 | 766/wk | active |
+| 17 | [Codmir](https://tashan.sh/capability/pkg-codmir-mcp.html) | 43 | 73/wk | active |
+| 18 | [Sprint](https://tashan.sh/capability/pkg-neki-team-sprint-mcp.html) | 39 | 7/wk | active |
+| 19 | [Pylon](https://tashan.sh/capability/pkg-pylon-mcp.html) | 37 | 89/wk | active |
+| 20 | [Casemargin](https://tashan.sh/capability/pkg-casemargin-mcp-server.html) | 28 | — | active |
 
 ## What these numbers are not
 

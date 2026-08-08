@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Three Pillars](https://tashan.sh/capability/plugin-curtisthe-three-pillars-plugin-three-pillars.html) | 46 | 4 ★ | active |
 | 40 | [Super Ralph](https://tashan.sh/capability/plugin-aezizhu-super-ralph-super-ralph.html) | 46 | 9 ★ | active |
 
-Showing the top 40 of 106. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
+Showing the top 40 of 99. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
 
 ## What these numbers are not
 

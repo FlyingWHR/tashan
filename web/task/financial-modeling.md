@@ -44,15 +44,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Finance Skills](https://tashan.sh/capability/skill-alirezarezvani-finance-skills.html) | not scored | 1 repos | active |
 | 32 | [Saas Metrics Coach](https://tashan.sh/capability/skill-alirezarezvani-saas-metrics-coach.html) | not scored | 1 repos | active |
 | 33 | [Research Finance](https://tashan.sh/capability/skill-alirezarezvani-research-finance.html) | not scored | 1 repos | active |
-| 34 | [Wealth API](https://tashan.sh/capability/pkg-wealth-api-mcp-server.html) | 54 | 48/wk | active |
-| 35 | [Next Finance](https://tashan.sh/capability/pkg-next-finance-mcp.html) | 71 | 3k/wk | active |
+| 34 | [Next Finance](https://tashan.sh/capability/pkg-next-finance-mcp.html) | 71 | 3k/wk | active |
+| 35 | [Actual](https://tashan.sh/capability/pkg-actual-mcp-server.html) | 69 | 962/wk | active |
 | 36 | [Lunchmoney](https://tashan.sh/capability/pkg-akutishevsky-lunchmoney-mcp.html) | 68 | 1k/wk | active |
 | 37 | [Zola](https://tashan.sh/capability/pkg-zola-mcp.html) | 68 | 1k/wk | active |
-| 38 | [Forcedream](https://tashan.sh/capability/pkg-forcedream-mcp-server.html) | 64 | 511/wk | active |
-| 39 | [Yahoo Finance](https://tashan.sh/capability/pkg-yahoo-finance-mcp-server.html) | 62 | 589/wk | active |
-| 40 | [Tickerdb](https://tashan.sh/capability/pkg-tickerdb-mcp.html) | 62 | 204/wk | active |
+| 38 | [Yahoo Finance](https://tashan.sh/capability/pkg-yahoo-finance-mcp-server.html) | 62 | 589/wk | active |
+| 39 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 60 | 302/wk | active |
+| 40 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 56 | 205/wk | active |
 
-Showing the top 40 of 63. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.
+Showing the top 40 of 49. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.
 
 ## What these numbers are not
 

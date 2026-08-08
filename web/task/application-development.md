@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 54 | 7 ★ | active |
 | 40 | [Decimal Scaled](https://tashan.sh/capability/plugin-mootable-decimal-scaled-decimal-scaled.html) | 54 | 8 ★ | active |
 
-Showing the top 40 of 298. The full ranked shelf is at https://tashan.sh/task/application-development.html.
+Showing the top 40 of 232. The full ranked shelf is at https://tashan.sh/task/application-development.html.
 
 ## What these numbers are not
 

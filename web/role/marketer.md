@@ -11,8 +11,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 - **Content marketing** — [Save To Spotify](https://tashan.sh/capability/plugin-spotify-save-to-spotify-save-to-spotify.html) · tashan score 72
 - **SEO** — [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) · tashan score 72
-- **Copywriting** — [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) · tashan score 75
 - **Market analysis** — [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) · tashan score 81
+- **Copywriting** — [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) · tashan score 75
 
 ## Ranked
 
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [App Store Optimization](https://tashan.sh/capability/skill-alirezarezvani-app-store-optimization.html) | 49 | 2 repos | active |
 | 40 | [SEO Audit](https://tashan.sh/capability/skill-alirezarezvani-seo-audit.html) | 49 | 2 repos | active |
 
-Showing the top 40 of 234. The full ranked shelf is at https://tashan.sh/role/marketer.html.
+Showing the top 40 of 165. The full ranked shelf is at https://tashan.sh/role/marketer.html.
 
 ## What these numbers are not
 

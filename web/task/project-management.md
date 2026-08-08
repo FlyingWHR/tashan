@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Sdlc Wizard Cowork](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard-cowork.html) | 44 | 1 marketplaces | active |
 | 40 | [Devflow · KlausFreiberufler](https://tashan.sh/capability/plugin-klausfreiberufler-devflow-mcp-devflow.html) | 43 | 1 ★ | active |
 
-Showing the top 40 of 117. The full ranked shelf is at https://tashan.sh/task/project-management.html.
+Showing the top 40 of 97. The full ranked shelf is at https://tashan.sh/task/project-management.html.
 
 ## What these numbers are not
 

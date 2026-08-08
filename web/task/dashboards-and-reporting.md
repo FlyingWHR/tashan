@@ -40,19 +40,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Looker](https://tashan.sh/capability/plugin-gemini-cli-extensions-looker-looker.html) | 66 | 52 ★ | active |
 | 28 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 64 | 30 ★ | active |
 | 29 | [Preset CLI Skills](https://tashan.sh/capability/plugin-preset-io-agent-skills-preset-cli-skills.html) | 60 | 10 ★ | active |
-| 30 | [Mermaid](https://tashan.sh/capability/pkg-peng-shawn-mermaid-mcp-server.html) | 53 | 400/wk | stable |
-| 31 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 63 | 334/wk | active |
-| 32 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 60 | 40 ★ | active |
-| 33 | [Salesforce Metadata](https://tashan.sh/capability/pkg-salesforce-metadata-mcp.html) | 66 | 746/wk | active |
-| 34 | [Agentic Mermaid](https://tashan.sh/capability/pkg-agentic-mermaid.html) | 62 | 550/wk | active |
-| 35 | [X402 Dataviz](https://tashan.sh/capability/pkg-x402-dataviz-mcp.html) | 54 | 177/wk | active |
-| 36 | [Dashboards](https://tashan.sh/capability/pkg-mcp-dashboards.html) | 53 | 212/wk | active |
-| 37 | [Dashboardbase](https://tashan.sh/capability/pkg-dashboardbase-mcp.html) | 53 | 136/wk | active |
-| 38 | [Scv](https://tashan.sh/capability/plugin-wookiya1364-scv-claude-code-scv.html) | 51 | 7 ★ | active |
-| 39 | [Tabler](https://tashan.sh/capability/pkg-tabler-mcp-server.html) | 46 | 45/wk | active |
-| 40 | [Data Visualisation And Publishing](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-data-visualisation-and-publishing.html) | 41 | 1 marketplaces | active |
+| 30 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 63 | 334/wk | active |
+| 31 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 70 | 2k/wk | active |
+| 32 | [Flint Chart](https://tashan.sh/capability/pkg-flint-chart-mcp.html) | 68 | 1k/wk | active |
+| 33 | [Plugin Dashboard](https://tashan.sh/capability/pkg-frontmcp-plugin-dashboard.html) | 68 | 718/wk | active |
+| 34 | [Excalidraw](https://tashan.sh/capability/pkg-mcp-excalidraw-server.html) | 63 | 2k/wk | active |
+| 35 | [Ellmos Controlcenter](https://tashan.sh/capability/pkg-ellmos-controlcenter-mcp.html) | 63 | 510/wk | active |
+| 36 | [Agentic Mermaid](https://tashan.sh/capability/pkg-agentic-mermaid.html) | 62 | 550/wk | active |
+| 37 | [Redash](https://tashan.sh/capability/pkg-redash-mcp.html) | 59 | 398/wk | active |
+| 38 | [Dashboards](https://tashan.sh/capability/pkg-mcp-dashboards.html) | 53 | 212/wk | active |
+| 39 | [Dashboardbase](https://tashan.sh/capability/pkg-dashboardbase-mcp.html) | 53 | 136/wk | active |
+| 40 | [Chartforge](https://tashan.sh/capability/pkg-chartforge-mcp.html) | 47 | 111/wk | active |
 
-Showing the top 40 of 46. The full ranked shelf is at https://tashan.sh/task/dashboards-and-reporting.html.
+Showing the top 40 of 45. The full ranked shelf is at https://tashan.sh/task/dashboards-and-reporting.html.
 
 ## What these numbers are not
 
