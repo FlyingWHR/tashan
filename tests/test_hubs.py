@@ -287,6 +287,26 @@ check("llms.txt announces the hub markdown convention",
       all(s in _llms for s in ("/category/<id>.md", "/task/<slug>.md", "/role/<id>.md")))
 
 print()
+
+# ---- a task hub must not list what an author merely tagged --------------------------------------
+# /task/audio-production opened with a Solana transaction tool, because solana-preflight declares
+# the npm keyword "podcast". paydirt declares "voice"; airmcp declares "music". Half the hub was
+# package.json padding, and a reader looking for a text-to-speech server was shown crypto tooling
+# ranked first. Keywords cost an author nothing — the same lesson the board gate learned from
+# yahoo-finance2 declaring `mcp`, `agent` AND `skill`. A declared tag now has to survive being
+# checked against the capability's own prose, and 1,601 claims did not.
+import sqlite3 as _sq
+sys.path.insert(0, os.path.join(ROOT, "pipeline"))
+import tag_capabilities as _tc
+_vocab = _tc.task_vocab(json.load(open(os.path.join(WEB, "data", "tasks.json")))["tasks"])
+_con = _sq.connect(os.path.join(ROOT, "data", "tashan.db"))
+_uncorr = [(cid, tag) for cid, tag, nm, ds in _con.execute(
+    "SELECT ct.cap_id, ct.tag, c.name, c.description FROM capability_tags ct "
+    "JOIN capabilities c ON c.id = ct.cap_id WHERE ct.basis = 'declared'")
+    if not _tc.corroborated(tag, nm, ds, _vocab)]
+check("every declared task tag is backed by the capability's own description",
+      not _uncorr, "%d unsupported, e.g. %s" % (len(_uncorr), _uncorr[:2]))
+
 print("=" * 46)
 print("hubs: %d/%d passed%s" % (ok, ok + fail, " · all green" if not fail else ""))
 sys.exit(1 if fail else 0)

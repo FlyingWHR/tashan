@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 129,
+  "full": 123,
   "grade": 856,
   "n": 22902,
   "scan": 2646,
   "score": 9518,
-  "task": 3098
+  "task": 2658
  },
  "axes": [
   {
@@ -34,7 +34,7 @@
   "graded_pct": 14,
   "scanned_pct": 49,
   "scored_pct": 98,
-  "tasked_pct": 24,
+  "tasked_pct": 38,
   "tier": "top1000"
  },
  "queue": [
@@ -44,8 +44,7 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "prisma"
   },
@@ -66,8 +65,7 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "claude-cup"
   },
@@ -119,10 +117,18 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "fallow"
+  },
+  {
+   "downloads": 619257,
+   "id": "pkg:@upstash/context7-mcp",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "@upstash/context7-mcp"
   },
   {
    "downloads": 542458,
@@ -130,8 +136,7 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "eve"
   },
@@ -183,8 +188,7 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "yahoo-finance2"
   },
@@ -194,8 +198,7 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "cline"
   },
@@ -215,8 +218,7 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "agent-device"
   },
@@ -270,8 +272,7 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "agentdb"
   },
@@ -342,8 +343,7 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "ruvector"
   },
@@ -395,8 +395,7 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "freee-mcp"
   },
@@ -406,8 +405,7 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "nx-mcp"
   },
@@ -437,8 +435,7 @@
    "kind": "npm",
    "missing": [
     "scan",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "agentic-flow"
   },
@@ -450,33 +447,24 @@
     "task"
    ],
    "name": "@supabase/mcp-server-supabase"
-  },
-  {
-   "downloads": 74676,
-   "id": "pkg:@wonderwhy-er/desktop-commander",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "@wonderwhy-er/desktop-commander"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 13,
+   "full": 10,
    "grade": 25,
    "n": 100,
    "scan": 44,
    "score": 95,
-   "task": 16
+   "task": 34
   },
   "top1000": {
-   "full": 70,
+   "full": 49,
    "grade": 136,
    "n": 1000,
    "scan": 487,
    "score": 985,
-   "task": 245
+   "task": 377
   }
  }
 }

@@ -118,9 +118,51 @@ def put_tags(con, cap_id, pairs, basis):
 
 
 # ---------------------------------------------------------------- declared pass
+def _stem(w):
+    """Crude plural/gerund stripping, and NOT on short words: naive suffix-stripping turns "tts"
+    into "tt", which matches nothing and silently drops every text-to-speech tool."""
+    w = w.lower()
+    return re.sub(r"(ing|es|s)$", "", w) if len(w) > 4 else w
+
+
+def task_vocab(tasks):
+    """Every word and phrase that means a task, for corroborating an author's keyword."""
+    out = {}
+    for t in tasks:
+        v = set()
+        for x in [t["slug"].replace("-", " "), t["label"]] + t.get("synonyms", []):
+            v.add(x.lower())                                     # the phrase, matched verbatim
+            v |= {_stem(w) for w in x.split() if len(w) > 2}     # and its individual words
+        out[t["slug"]] = v
+    return out
+
+
+def corroborated(tag, name, desc, vocab):
+    """Does the capability's own PROSE support the tag its keyword claimed?
+
+    ONE SELF-DECLARED KEYWORD IS NOT EVIDENCE — the same lesson the board gate learned when
+    yahoo-finance2 turned out to declare `mcp`, `agent` AND `skill`. Here it put a Solana
+    transaction tool at the top of /task/audio-production, because solana-preflight declares
+    "podcast"; paydirt declares "voice"; airmcp declares "music". Half that hub was packages that
+    had padded package.json. Keywords cost an author nothing; a description is what they actually
+    say the thing does, so the claim has to survive being checked against it.
+    """
+    blob = ((name or "") + " " + (desc or "")).lower()
+    words = {_stem(w) for w in re.findall(r"[a-z][a-z0-9+.#-]+", blob)}
+    v = vocab.get(tag, set())
+    return bool(words & v) or any(" " in p and p in blob for p in v)
+
+
 def run_declared(con, tasks, dry=False):
     idx = declared_index(tasks)
-    hit = miss = rows = 0
+    vocab = task_vocab(tasks)
+    # REBUILD, DO NOT ACCUMULATE. put_tags upserts and never removes, so tightening the rule alone
+    # would only stop NEW bad tags while every already-published one stayed. This pass is a pure
+    # function of the author's keywords and their own prose, so it is derived fresh every run.
+    # Only `declared` rows are cleared; the graded pass owns its own.
+    if not dry:
+        con.execute("DELETE FROM capability_tags WHERE basis='declared'")
+    hit = miss = rows = dropped = 0
     for cap_id, name, desc, full, body in rows_with_text(con):
         rows += 1
         got = {}
@@ -128,6 +170,9 @@ def run_declared(con, tasks, dry=False):
             slug = idx.get(norm(w))
             if slug:
                 got[slug] = w
+        before = len(got)
+        got = {s: w for s, w in got.items() if corroborated(s, name, desc or full, vocab)}
+        dropped += before - len(got)
         if not got:
             miss += 1
             continue
@@ -138,7 +183,8 @@ def run_declared(con, tasks, dry=False):
     if not dry:
         con.commit()
     print(f"declared: {hit}/{rows} rows tagged from the author's own keywords "
-          f"({miss} had none that map to a task)")
+          f"({miss} had none that map to a task; {dropped} keyword claim(s) dropped because the "
+          f"capability's own description does not support them)")
     return hit
 
 
