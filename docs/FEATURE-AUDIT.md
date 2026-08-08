@@ -139,6 +139,19 @@ Asked directly, and the data says **not today**, for three stacked reasons.
 versions, and only **2 days** sit under the current one. It needs 3, so a paying customer runs
 `doctor --trend` and is told "not enough comparable history yet". Honest, and worth nothing.
 
+> **Update, 8 Aug 2026 — one of those two missing days was never missing.** The daily workflow
+> commits `data/history` on a red suite and withholds the database, so the DB fell behind the shards
+> and nothing reconciled them: the shards held twelve days while `signal_history` held ten. `trend()`
+> and the exported `retention` read the DB, so both were understating the series against evidence
+> sitting in the same repository. `snapshot_history.restore()` now runs first on every pipeline run
+> and put 37,943 rows back — **s5 has 4 comparable days, not 2, and `trend()` answers today.**
+>
+> Four days are still genuinely gone (07-26, 07-31, 08-02, 08-07): the pipeline step had no
+> `continue-on-error`, so a crash in any of the five source stages that run before the snapshot
+> failed the job and skipped the commit. Fixed, and `tests/test_history_integrity.py` now fails if
+> anyone removes the guard. **The conclusion below still stands** — the series answering is not the
+> same as the series being worth $6, and the advisory detail is still the stronger claim.
+
 **2. The window before it was contaminated, and the guard missed it.** Between 28 and 29 July the
 scale was stretched while both days were still labelled `s1`:
 

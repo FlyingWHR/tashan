@@ -18,13 +18,26 @@ single 3 MB CSV rewritten daily costs ~1 GB of objects a year; a write-once ~150
 it says. Past days are skipped if present — only the newest day is re-written, since a same-day
 re-run may have added rows to it.
 
-The DB stays out of git (see .gitignore). These shards ARE the durable record: to rebuild the series
-on a fresh machine, read them back with load() below.
+These shards ARE the durable record; `data/tashan.db` is a cache of them. (An earlier version of this
+docstring said the DB "stays out of git" — it is tracked, and has been for 116 commits. Verify with
+`git ls-files data/tashan.db` before repeating either claim.)
+
+THE RESTORE RUNS FIRST, EVERY TIME, and it is not a disaster-recovery path — it is routine
+reconciliation. The daily workflow commits `data/history` on a red suite but withholds everything
+else, the DB included. So a red night writes a shard and throws away the database rows behind it,
+and the two records drift apart silently and permanently. On 8 Aug 2026 the shards held twelve days
+and the committed DB held ten: 08-04 and 08-06 existed on disk as durable record while
+`signal_history` had never heard of them.
+
+That is not a cosmetic gap. `trend()` and the exported `retention` column read the DB, so the site
+and the CLI were both understating the series against evidence sitting in the same repository —
+`trend()` needs three points under one scorer and believed it had two. The paid endpoint was fine,
+because push_history.py reads the shards directly, which is exactly why nobody noticed.
 
 Stdlib only. Idempotent. Runs in the daily loop, right after scoring, so a crash in a later stage
 can never cost a day.
 
-    python3 pipeline/snapshot_history.py             # write any missing shards
+    python3 pipeline/snapshot_history.py             # reconcile from shards, then write today
     python3 pipeline/snapshot_history.py --selftest  # round-trip check, no DB needed
 """
 import csv, gzip, io, os, sqlite3, sys
@@ -62,11 +75,36 @@ def load(out_dir=OUT):
     return out
 
 
+def restore(con, out_dir=OUT):
+    """Put back any shard row the database is missing. Returns rows restored.
+
+    Idempotent by (cap_id, metric, at): signal_history has no unique index, so this compares against
+    what is already there rather than relying on the storage to refuse a duplicate. Re-running it
+    inserts nothing.
+    """
+    if not os.path.isdir(out_dir):
+        return 0
+    have = {(r[0], r[1], r[2]) for r in
+            con.execute("SELECT cap_id, metric, at FROM signal_history")}
+    missing = [r for r in load(out_dir) if (r[0], r[1], r[3]) not in have]
+    if missing:
+        con.executemany("INSERT INTO signal_history (cap_id, metric, value, at, scorer) "
+                        "VALUES (?,?,?,?,?)", missing)
+        con.commit()
+    return len(missing)
+
+
 def main():
     if not os.path.exists(DB):
         print("no data/tashan.db — nothing to snapshot"); return 0
     os.makedirs(OUT, exist_ok=True)
     con = sqlite3.connect(DB)
+    # RECONCILE BEFORE WRITING. A red-suite night commits the shard and discards the DB, so the
+    # cache falls behind the record it is caching — and every reader except the paid endpoint goes
+    # through the cache.
+    back = restore(con)
+    if back:
+        print(f"  restored {back:,} row(s) the DB was missing from the shards")
     days = [r[0] for r in con.execute(
         "SELECT DISTINCT substr(at,1,10) FROM signal_history ORDER BY 1")]
     if not days:
@@ -111,6 +149,16 @@ def selftest():
         # a day with no rows is a valid, empty shard, not a crash — and adds nothing on read-back
         assert write_day(con, "1999-01-01", d) == 0
         assert sorted(load(d)) == sorted(src)
+
+        # restore(): a DB that lost a red-suite night gets it back from the shard, exactly once
+        gap = sqlite3.connect(":memory:")
+        gap.execute("CREATE TABLE signal_history "
+                    "(cap_id TEXT, metric TEXT, value REAL, at TEXT, scorer TEXT)")
+        gap.executemany("INSERT INTO signal_history VALUES (?,?,?,?,?)", src[:1])
+        assert restore(gap, d) == 2, "the two rows the DB never saw must come back"
+        assert restore(gap, d) == 0, "a second run must insert nothing — this runs every night"
+        got = sorted(gap.execute("SELECT cap_id, metric, value, at, scorer FROM signal_history"))
+        assert got == sorted(src), f"restore did not reproduce the record:\n{got}"
     print("ok — signal_history shards round-trip, are byte-stable, and tolerate empty days")
     return 0
 

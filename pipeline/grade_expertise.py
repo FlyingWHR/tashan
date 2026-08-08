@@ -19,6 +19,8 @@ the prompt/parse code below is unchanged, only the transport batches. See docs/A
 """
 import json, os, sys, re, time, urllib.request, urllib.error
 
+import grade_evidence
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MANIFEST = os.path.join(ROOT, "data", "readmes", "manifest.json")
 OUT = os.path.join(ROOT, "data", "readmes", "scores_auto.json")
@@ -61,17 +63,48 @@ the bands alone and returned "deep" anywhere from 1.5% to 22.9% of the time (see
    another project's work, and a low grade would borrow blame for it. The export states the
    fact ("shares its documentation with N other capabilities") instead.
 3. Length is not depth. A long README with no worked example is thin.
-4. Internal contradictions (two different tool counts in one file) cap at thin.
-5. A well-documented shim is still a wrapper.
+4. Differing tool counts in one file are usually NOT a contradiction — a per-sub-server inventory
+   ("8 tools for dns, 62 for vps") or a table of deployment modes ("9 remote / 114 local") is the
+   document being precise. Mention it in the note; do not cap the grade for it. Both times this
+   rule fired automatically on the real corpus it was wrong, and both times it was wrong about the
+   best-documented capability in the batch.
+5. Tool documentation that lives in a linked file IS documentation. Splitting a large tool reference
+   out of the README is better practice, not worse. Linked in-repo docs are appended below the
+   README when they could be fetched; if the document hands off to a page that is not here, treat
+   per-tool docs as UNVERIFIED — that rules out deep, which needs all four confirmed, and it is not
+   a reason to grade down.
 Also write a `note`: ONE sentence (<=200 chars), specific and evidence-based — cite what IS and ISN'T in the docs, and flag any real risk (e.g. a prompt-injection surface, a dangerous-op tool). No praise, no fluff.
 
 Respond with ONLY this JSON object, nothing else:
-{"verdict": "<one of the five>", "expertise": <int 0-100>, "note": "<one sentence>"}"""
+{"verdict": "<deep|solid|thin>", "expertise": <int 0-100>, "note": "<one sentence>"}"""
 
-def build_prompt(cap):
+# THE SCALABLE PATH WAS GRADING A PREFIX. The manifest stores a 14,000-character slice, and this
+# builder cut it again at exactly that length — so the automated grader, which is the only path that
+# can ever cover the corpus, read the opening of every long document and nothing else. The bias runs
+# one way: tool references, troubleshooting and stated limitations live at the BOTTOM of a thorough
+# README, so the documents most likely to earn `deep` were the ones most likely to be truncated out
+# of it. Measured on the first top-demand queue, 36 of 57 hit the cap exactly, and reading them in
+# full took firecrawl-mcp from 0 documented tools to 28 and figma-console-mcp from 0 to 70.
+#
+# grade_evidence.follow() re-reads the file at full length from the repo and appends the in-repo
+# tool docs the README points at — chrome-devtools-mcp documents 47 tools in docs/tool-reference.md
+# and none in its README. Both are cached on disk, so this costs network once per capability.
+#
+# The cap that remains is about model context and per-call cost, not about what counts as evidence,
+# and it is set where a full README plus a tool reference fits comfortably underneath it.
+PROMPT_CHARS = int(os.environ.get("GRADE_PROMPT_CHARS", "60000"))
+
+
+def build_prompt(cap, cache=None):
     head = f"name: {cap.get('name')}\nrepo: {cap.get('repo')}\nnpm: {cap.get('npm_pkg')}\ndescription: {cap.get('description') or '(none)'}"
-    readme = (cap.get("readme") or "")[:14000]   # cap the README so a huge one can't blow the context/cost
-    return f"{head}\n\n--- README ---\n{readme}\n--- END README ---"
+    readme, linked = cap.get("readme") or "", []
+    try:
+        readme, linked = grade_evidence.follow(cap, cache if cache is not None else {})
+    except Exception:
+        pass          # a fetch failure must not stop the grading run; the README alone still grades
+    note = ("\n(the sections below the README are its own linked docs: %s)" % ", ".join(linked)
+            if linked else "")
+    return f"{head}{note}\n\n--- DOCUMENTATION ---\n{readme[:PROMPT_CHARS]}\n--- END DOCUMENTATION ---"
 
 def call_api(prompt):
     body = json.dumps({
@@ -123,12 +156,18 @@ def main():
     if limit:
         caps = caps[:limit]
 
+    # ONE fetch cache for the whole run, shared with grade_evidence and persisted between runs.
+    # Without it every capability re-downloads its own linked docs from GitHub — 63 caps x up to
+    # four files, every night, for text that never changes between publishes.
+    linked_cache = (json.load(open(grade_evidence.LINKED, encoding="utf-8"))
+                    if os.path.exists(grade_evidence.LINKED) else {})
+
     print(f"grading {len(caps)} caps with {MODEL}" + (" (dry-run)" if dry else ""))
     if dry:
         # prove prompt-building works with no key/network; assert the rubric is well-formed
         assert all(v in RUBRIC for v in VERDICTS), "rubric missing a verdict label"
         for c in caps[:2]:
-            p = build_prompt(c)
+            p = build_prompt(c, linked_cache)
             assert c["id"] and len(p) > 20
             print(f"  ✓ prompt for {c['id']} ({len(p)} chars)")
         # self-check the parser on a canned response
@@ -147,11 +186,11 @@ def main():
     scores, fails = [], 0
     for i, c in enumerate(caps, 1):
         try:
-            g = parse_grade(call_api(build_prompt(c)))
+            g = parse_grade(call_api(build_prompt(c, linked_cache)))
         except urllib.error.HTTPError as e:
             if e.code == 429 or e.code >= 500:            # rate-limit / server — back off and retry once
                 time.sleep(5)
-                try: g = parse_grade(call_api(build_prompt(c)))
+                try: g = parse_grade(call_api(build_prompt(c, linked_cache)))
                 except Exception: g = None
             else:
                 g = None
@@ -164,8 +203,12 @@ def main():
             fails += 1; print(f"  [{i}/{len(caps)}] {c['id']}: FAILED")
         if i % 20 == 0:
             json.dump(scores, open(OUT, "w"), indent=2)   # checkpoint
+            json.dump(linked_cache, open(grade_evidence.LINKED, "w", encoding="utf-8"))
         time.sleep(0.1)
     json.dump(scores, open(OUT, "w"), indent=2)
+    # Persist the fetched docs. Checkpointed alongside the scores above so a run killed halfway
+    # keeps the downloads it already paid for, same as the grades.
+    json.dump(linked_cache, open(grade_evidence.LINKED, "w", encoding="utf-8"))
     print(f"\nwrote {len(scores)} grades ({fails} failed) -> {OUT}\nnext: python3 pipeline/merge_expertise.py")
 
 if __name__ == "__main__":

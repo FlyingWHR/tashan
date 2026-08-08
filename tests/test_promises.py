@@ -86,6 +86,22 @@ for key, (phrase, proofs) in CLAIMS.items():
 
 # The unlock link is itself a promise: it says detail exists behind a licence. If nothing on the web
 # can ever resolve it, the link is decoration on the one page carrying a buy button.
+# ---- the page must sell ONE product ------------------------------------------------------------
+# og:title and og:description sold different things off the same page: the title said "the advisory
+# detail and the fix", the description said "the full score history of every capability we measure".
+# docs/FEATURE-AUDIT.md decided on 31 Jul 2026 to stop leading with history — "a moat is a barrier to
+# competitors, not a reason for a customer to pay this month" — and the decision reached the visible
+# copy and the title but not the tags. og:description is the most widely distributed sentence we
+# write: it is what a search result and a chat unfurl show. Nothing here checks taste; it checks that
+# the two tags on one page name the same headline feature.
+_og = lambda k: (re.search(r'(?:property|name)="%s" content="([^"]*)"' % k, PRICING) or [None, ""])[1]
+_HEADLINE = re.compile(r"advisor|which CVE|the fix|version that fixes", re.I)
+ok("og:title names the feature that is delivered today", bool(_HEADLINE.search(_og("og:title"))),
+   "og:title = %r" % _og("og:title"))
+ok("og:description leads with the same feature as og:title, not with the IOU",
+   bool(_HEADLINE.search(_og("og:description"))),
+   "og:description = %r" % _og("og:description"))
+
 unlock_in_ui = 'class="unlock"' in read("web/js/capability.js") or 'class="unlock"' in read("pipeline/prerender.py")
 web_can_resolve = bool(re.search(r"/api/security|signed_in|sec_advisories", read("web/js/capability.js")))
 ok("an 'unlock detail' link on the web can actually resolve for a licence holder",

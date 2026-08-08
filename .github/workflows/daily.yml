@@ -61,7 +61,22 @@ jobs:
           # need this and neither ran in the loop. Without it both stages skip loudly and coverage
           # simply stops advancing, which is how 18 of the top 20 by downloads ended up ungraded.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        # SAME LESSON AS THE SUITE GATE BELOW, ONE LEVEL UP, AND IT TOOK FOUR LOST DAYS TO SEE.
+        # A crash in any stage failed the job, so the commit step never ran and the day was gone —
+        # and five source stages run before the snapshot, every one of them doing network I/O
+        # against registries that go down. 07-26, 07-31, 08-02 and 08-07 are holes in the one asset
+        # that cannot be backfilled, and CLAUDE.md already says why that matters more than anything
+        # else here. The pipeline is allowed to fail; it is not allowed to take the record with it.
+        id: pipeline
+        continue-on-error: true
         run: python3 pipeline/run.py
+
+      # Whatever the pipeline managed to score, get it onto disk as a shard. snapshot_history writes
+      # nothing for a day with no rows, so a pipeline that died before compute_scores leaves no
+      # empty shard behind to be mistaken for a finished day.
+      - name: Snapshot the series, whatever else happened
+        if: always()
+        run: python3 pipeline/snapshot_history.py
 
       # Runs to completion and records its verdict rather than ending the job here. A red suite must
       # still stop the SITE from changing — but it must not also destroy the day's measurement, and
@@ -74,17 +89,27 @@ jobs:
         run: bash tests/run.sh
 
       - name: Commit the day's snapshot
+        if: always()          # the record outlives every failure above it
         run: |
           git config user.name  "tashan-bot"
           git config user.email "bot@tashan.sh"
           # The snapshot count is the headline: it is the thing that cannot be reconstructed later.
-          # Counted from the COMMITTED shards, not the DB — the runner builds a throwaway DB from
-          # scratch every night, so asking it would report "1 day" forever. data/history is the
-          # series; the DB is a cache of it.
+          # Counted from the COMMITTED shards, not the DB. data/history is the series; the DB is a
+          # cache of it, and the cache is the copy that drifts — a red night commits the shard and
+          # withholds the DB, so the two disagree until snapshot_history.restore() reconciles them
+          # on the next run. On 8 Aug the shards held twelve days and the DB held ten.
+          #
+          # (This comment used to say the runner "builds a throwaway DB from scratch every night".
+          # It does not — data/tashan.db is tracked and checkout restores it. Verify with
+          # `git ls-files data/tashan.db` before repeating that.)
           DAYS=$(ls data/history/*.csv.gz 2>/dev/null | wc -l | tr -d ' ')
-          if [ "${{ steps.verify.outcome }}" = "success" ]; then
+          if [ "${{ steps.verify.outcome }}" = "success" ] \
+            && [ "${{ steps.pipeline.outcome }}" = "success" ]; then
             git add -A
             MSG="daily: measure ($DAYS days of retention history)"
+          elif [ "${{ steps.pipeline.outcome }}" != "success" ]; then
+            git add data/history
+            MSG="daily: retention only ($DAYS days) — PIPELINE CRASHED, see the run log"
           else
             # ONLY the retention shards. They live outside web/ and are served from nowhere, so this
             # publishes nothing even if Pages is ever wired to build from git — while everything that
@@ -108,7 +133,7 @@ jobs:
       # runs the whole pipeline and simply skips this step instead of failing red for a reason that
       # has nothing to do with the measurement.
       - name: Deploy to Cloudflare Pages
-        if: steps.verify.outcome == 'success' && env.CLOUDFLARE_API_TOKEN != ''
+        if: steps.verify.outcome == 'success' && steps.pipeline.outcome == 'success' && env.CLOUDFLARE_API_TOKEN != ''
         run: |
           # Pages refuses any deployment over 20,000 files. Check BEFORE uploading: the failure
           # arrives after wrangler has walked the whole tree, and the site is then unpublishable with

@@ -102,6 +102,24 @@ if os.path.exists(path):
     print(f"        {graded:,} of {len(caps):,} capabilities graded "
           f"({100 * graded / max(len(caps), 1):.1f}%)")
 
+
+# ---- the scalable grader must grade the same evidence as the hand path -------------------------
+# grade_expertise.py is the ONLY path that can ever cover the corpus — hand-grading reached ~1%.
+# It was cutting every README at 14,000 characters, which is where the manifest already cut it, so
+# the automated grader read the opening of every long document and nothing else. That bias runs one
+# way: tool references and stated limitations sit at the BOTTOM of a thorough README, so the
+# documents most able to earn `deep` were the ones being truncated out of it. It also offered five
+# verdicts in its JSON instruction while merge_expertise validates three, so any `wrapper` or `slop`
+# it returned was silently thrown away on merge.
+import re as _re
+_ge = open(os.path.join(ROOT, "pipeline", "grade_expertise.py"), encoding="utf-8").read()
+ok("the automated grader reads the whole document, not the manifest's 14,000-char prefix",
+      "grade_evidence.follow(" in _ge and '(cap.get("readme") or "")[:14000]' not in _ge)
+ok("it shares one fetch cache across the run instead of re-downloading per capability",
+      "build_prompt(c, linked_cache)" in _ge and "json.dump(linked_cache" in _ge)
+ok("it offers exactly the verdicts merge_expertise will accept",
+      not _re.search(r"one of the five|still a wrapper", _ge))
+
 print("EXPERTISE FAILED" if fail else "ok — expertise grades are internally consistent")
 sys.exit(fail)
 

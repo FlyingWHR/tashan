@@ -106,6 +106,30 @@ def main():
         print(f"        trend() needs 3 and will correctly say so — but Pro's 'every score since we")
         print(f"        started measuring' currently delivers nothing. See docs/FEATURE-AUDIT.md.")
 
+    # ---- the collector must survive its own failures --------------------------------------------
+    # Four days are missing from the record — 07-26, 07-31, 08-02, 08-07 — and none of them were
+    # lost to a bad measurement. The pipeline step had no continue-on-error, so a crash in any of the
+    # five source stages that run BEFORE the snapshot failed the job, skipped the commit, and took
+    # the day with it. The workflow had already learned this lesson for the test suite and not for
+    # itself. These are text checks on purpose: the repo is stdlib-only and has no YAML parser, and
+    # a grep that fails loudly beats a dependency.
+    wf = open(os.path.join(ROOT, ".github", "workflows", "daily.yml"), encoding="utf-8").read()
+    pipeline_step = wf.split("- name: Run the pipeline")[1].split("- name:")[0]
+    ok("a crashing pipeline cannot fail the job before the day is recorded",
+       "continue-on-error: true" in pipeline_step and "id: pipeline" in pipeline_step)
+    ok("the snapshot runs even when everything above it failed",
+       "if: always()" in wf.split("- name: Snapshot the series")[1].split("- name:")[0])
+    ok("the commit runs even when everything above it failed",
+       "if: always()" in wf.split("- name: Commit the day")[1].split("run:")[0])
+    ok("nothing is published from a crashed pipeline",
+       "steps.pipeline.outcome == 'success'" in wf.split("- name: Deploy")[1].split("run:")[0])
+
+    # The DB is a cache of data/history and drifts from it whenever a night commits shards without
+    # the DB. Reconciling must be automatic, not a thing someone remembers after noticing.
+    snap = open(os.path.join(ROOT, "pipeline", "snapshot_history.py"), encoding="utf-8").read()
+    ok("the DB is reconciled from the shards on every run, not just after a disaster",
+       "def restore(" in snap and "restore(con)" in snap.split("def main(")[1])
+
     print("\nHISTORY INTEGRITY FAILED" if fail else "\nok — the paid series carries the capability's movement, not ours")
     return fail
 
