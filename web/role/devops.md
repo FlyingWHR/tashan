@@ -18,47 +18,47 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Zscaler](https://tashan.sh/capability/plugin-zscaler-zscaler-mcp-server-zscaler.html) | 67 | 41 ★ | active |
-| 2 | [Rr](https://tashan.sh/capability/plugin-rileyhilliard-rr-rr.html) | 64 | 194 ★ | active |
-| 3 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 61 | 15 ★ | active |
-| 4 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 54 | 3 ★ | active |
-| 5 | [Jfrog](https://tashan.sh/capability/plugin-jfrog-claude-plugin-jfrog.html) | 52 | 4 ★ | active |
-| 6 | [Expo](https://tashan.sh/capability/plugin-expo-skills-expo.html) | 77 | 2k ★ | active |
-| 7 | [Azure · microsoft](https://tashan.sh/capability/plugin-microsoft-azure-skills-azure.html) | 75 | 1k ★ | active |
-| 8 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 72 | 643 ★ | active |
-| 9 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 70 | 482 ★ | active |
-| 10 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 69 | 81 ★ | active |
-| 11 | [Teamcity CLI](https://tashan.sh/capability/plugin-jetbrains-teamcity-cli-teamcity-cli.html) | 69 | 119 ★ | active |
-| 12 | [Defang](https://tashan.sh/capability/plugin-defanglabs-defang-defang.html) | 69 | 163 ★ | active |
-| 13 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 69 | 101 ★ | active |
-| 14 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
-| 15 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 64 | 41 ★ | active |
-| 16 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 64 | 61 ★ | active |
-| 17 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 63 | 22 ★ | active |
-| 18 | [Insforge · insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 62 | 33 ★ | active |
-| 19 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 62 | 40 ★ | active |
-| 20 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 62 | 40 ★ | active |
-| 21 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 61 | 27 ★ | active |
-| 22 | [Launchdarkly · launchdarkly](https://tashan.sh/capability/plugin-launchdarkly-ai-tooling-launchdarkly.html) | 59 | 20 ★ | active |
-| 23 | [Mirrord Agent Skills](https://tashan.sh/capability/plugin-metalbear-co-skills-mirrord-agent-skills.html) | 59 | 21 ★ | active |
-| 24 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 58 | 21 ★ | active |
-| 25 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 58 | 17 ★ | active |
-| 26 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 55 | 7 ★ | active |
-| 27 | [Datadog](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 54 | 8 ★ | active |
-| 28 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 53 | 12 ★ | active |
-| 29 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 53 | 12 ★ | active |
-| 30 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 69 | 64 ★ | active |
-| 31 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 51 | 13 ★ | active |
-| 32 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 51 | 5 ★ | active |
-| 33 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 50 | 45 ★ | active |
-| 34 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 50 | 8 ★ | active |
-| 35 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | 49 | 2 repos | active |
-| 36 | [Ms365 Tenant Manager](https://tashan.sh/capability/skill-alirezarezvani-ms365-tenant-manager.html) | 49 | 2 repos | active |
-| 37 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | 49 | 2 repos | active |
-| 38 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | 49 | 2 repos | active |
-| 39 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 49 | 1 ★ | active |
-| 40 | [Followrabbit](https://tashan.sh/capability/plugin-followrabbit-ai-awesome-rabbit-followrabbit.html) | 49 | 2 ★ | active |
+| 2 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 61 | 15 ★ | active |
+| 3 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 54 | 3 ★ | active |
+| 4 | [Jfrog](https://tashan.sh/capability/plugin-jfrog-claude-plugin-jfrog.html) | 52 | 4 ★ | active |
+| 5 | [Expo](https://tashan.sh/capability/plugin-expo-skills-expo.html) | 77 | 2k ★ | active |
+| 6 | [Azure · microsoft](https://tashan.sh/capability/plugin-microsoft-azure-skills-azure.html) | 75 | 1k ★ | active |
+| 7 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 72 | 643 ★ | active |
+| 8 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 70 | 482 ★ | active |
+| 9 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 69 | 81 ★ | active |
+| 10 | [Teamcity CLI](https://tashan.sh/capability/plugin-jetbrains-teamcity-cli-teamcity-cli.html) | 69 | 119 ★ | active |
+| 11 | [Defang](https://tashan.sh/capability/plugin-defanglabs-defang-defang.html) | 69 | 163 ★ | active |
+| 12 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 69 | 101 ★ | active |
+| 13 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 64 | 41 ★ | active |
+| 14 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 64 | 61 ★ | active |
+| 15 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 63 | 22 ★ | active |
+| 16 | [Insforge · insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 62 | 33 ★ | active |
+| 17 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 61 | 27 ★ | active |
+| 18 | [Launchdarkly · launchdarkly](https://tashan.sh/capability/plugin-launchdarkly-ai-tooling-launchdarkly.html) | 59 | 20 ★ | active |
+| 19 | [Mirrord Agent Skills](https://tashan.sh/capability/plugin-metalbear-co-skills-mirrord-agent-skills.html) | 59 | 21 ★ | active |
+| 20 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 58 | 21 ★ | active |
+| 21 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 58 | 17 ★ | active |
+| 22 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 55 | 7 ★ | active |
+| 23 | [Datadog](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 54 | 8 ★ | active |
+| 24 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 53 | 12 ★ | active |
+| 25 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 53 | 12 ★ | active |
+| 26 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 71 | 413 ★ | active |
+| 27 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 69 | 64 ★ | active |
+| 28 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
+| 29 | [Rr](https://tashan.sh/capability/plugin-rileyhilliard-rr-rr.html) | 64 | 194 ★ | active |
+| 30 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 62 | 40 ★ | active |
+| 31 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 62 | 40 ★ | active |
+| 32 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 51 | 13 ★ | active |
+| 33 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 51 | 5 ★ | active |
+| 34 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 50 | 45 ★ | active |
+| 35 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 50 | 8 ★ | active |
+| 36 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | 49 | 2 repos | active |
+| 37 | [Ms365 Tenant Manager](https://tashan.sh/capability/skill-alirezarezvani-ms365-tenant-manager.html) | 49 | 2 repos | active |
+| 38 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | 49 | 2 repos | active |
+| 39 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | 49 | 2 repos | active |
+| 40 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 49 | 1 ★ | active |
 
-Showing the top 40 of 188. The full ranked shelf is at https://tashan.sh/role/devops.html.
+Showing the top 40 of 224. The full ranked shelf is at https://tashan.sh/role/devops.html.
 
 ## What these numbers are not
 

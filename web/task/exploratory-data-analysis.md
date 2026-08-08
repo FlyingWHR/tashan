@@ -12,10 +12,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 62 | 523 ★ | active |
-| 2 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 76 | 4k ★ | active |
-| 3 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 67 | 47 ★ | active |
-| 4 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 54 | 7 ★ | active |
-| 5 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 53 | 6 ★ | active |
+| 2 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 67 | 47 ★ | active |
+| 3 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 54 | 7 ★ | active |
+| 4 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 53 | 6 ★ | active |
+| 5 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 76 | 4k ★ | active |
 | 6 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 72 | 558 ★ | active |
 | 7 | [Senior Data Scientist](https://tashan.sh/capability/skill-alirezarezvani-senior-data-scientist.html) | 49 | 2 repos | active |
 | 8 | [Fullstory](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 49 | 9 ★ | active |
@@ -35,21 +35,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 65 | 30 ★ | active |
 | 23 | [ClickHouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 55 | 5 ★ | active |
 | 24 | [Socialneuron](https://tashan.sh/capability/pkg-socialneuron-mcp-server.html) | 68 | 937/wk | active |
-| 25 | [Ascendkit](https://tashan.sh/capability/pkg-ascendkit-cli.html) | 50 | 84/wk | active |
-| 26 | [Stride20k x402 Data Gateway](https://tashan.sh/capability/pkg-x402-gateway-mcp.html) | 47 | 62/wk | active |
-| 27 | [SEO Performance](https://tashan.sh/capability/pkg-automatelab-seo-performance-mcp.html) | 46 | 93/wk | active |
-| 28 | [Claude Data Analyst](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-claude-data-analyst.html) | 41 | 1 marketplaces | active |
-| 29 | [Decision Evaluation Framework](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-decision-evaluation-framework.html) | 41 | 1 marketplaces | active |
-| 30 | [Report Analyst](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-report-analyst.html) | 41 | 1 marketplaces | active |
-| 31 | [Email Analytics](https://tashan.sh/capability/plugin-sendx-email-skills-email-analytics.html) | 39 | 1 marketplaces | active |
-| 32 | [YouTube Transcripts](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-youtube-transcripts.html) | 37 | 1 marketplaces | active |
-| 33 | [Yandex Metrika](https://tashan.sh/capability/pkg-theyahia-yandex-metrika-mcp.html) | 37 | 71/wk | active |
-| 34 | [Thinking](https://tashan.sh/capability/plugin-claude-contrib-claude-services-thinking.html) | 36 | 1 marketplaces | active |
-| 35 | [Roistat](https://tashan.sh/capability/pkg-theyahia-roistat-mcp.html) | 35 | 42/wk | active |
-| 36 | [Calltouch](https://tashan.sh/capability/pkg-theyahia-calltouch-mcp.html) | 35 | 37/wk | active |
-| 37 | [ezStats](https://tashan.sh/capability/pkg-ezstats-ezstats-mcp.html) | 34 | 43/wk | active |
-| 38 | [Imessage · anipotts](https://tashan.sh/capability/pkg-imessage-mcp.html) | 33 | 98/wk | active |
-| 39 | [Js Executor](https://tashan.sh/capability/pkg-mcp-js-executor.html) | 23 | 44/wk | abandoned |
+| 25 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 52 | 147 ★ | active |
+| 26 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 65 | 865/wk | active |
+| 27 | [SQL Preview](https://tashan.sh/capability/pkg-sql-preview.html) | 63 | 345/wk | active |
+| 28 | [Makers Page](https://tashan.sh/capability/pkg-makers-page-mcp.html) | 60 | 444/wk | active |
+| 29 | [Scopewalker](https://tashan.sh/capability/pkg-scopewalker-mcp.html) | 60 | 370/wk | active |
+| 30 | [SEO Tools: Yandex.Metrica](https://tashan.sh/capability/pkg-seo-tools-mcp-metrika.html) | 60 | 264/wk | active |
+| 31 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 59 | 210/wk | active |
+| 32 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 57 | 248/wk | active |
+| 33 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 55 | 139/wk | active |
+| 34 | [Social Media Analytics](https://tashan.sh/capability/pkg-social-media-analytics.html) | 55 | 139/wk | active |
+| 35 | [Ascendkit](https://tashan.sh/capability/pkg-ascendkit-cli.html) | 50 | 84/wk | active |
+| 36 | [Stride20k x402 Data Gateway](https://tashan.sh/capability/pkg-x402-gateway-mcp.html) | 47 | 62/wk | active |
+| 37 | [SEO Performance](https://tashan.sh/capability/pkg-automatelab-seo-performance-mcp.html) | 46 | 93/wk | active |
+| 38 | [Op3](https://tashan.sh/capability/pkg-conorbronsdon-op3-mcp.html) | 46 | 52/wk | active |
+| 39 | [Transistor](https://tashan.sh/capability/pkg-transistor-mcp.html) | 45 | 42/wk | active |
+| 40 | [Agent Core](https://tashan.sh/capability/plugin-fusedio-skills-agent-core.html) | 44 | 1 marketplaces | active |
+
+Showing the top 40 of 55. The full ranked shelf is at https://tashan.sh/task/exploratory-data-analysis.html.
 
 ## What these numbers are not
 

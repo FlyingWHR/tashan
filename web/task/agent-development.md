@@ -35,24 +35,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Project With Reflect](https://tashan.sh/capability/plugin-initialneil-project-with-reflect-project-with-reflect.html) | 48 | 13 ★ | active |
 | 23 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 80 | 62k ★ | active |
 | 24 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 79 | 6k ★ | active |
-| 25 | [Youdotcom Agent Skills](https://tashan.sh/capability/plugin-youdotcom-oss-agent-skills-youdotcom-agent-skills.html) | 66 | 50 ★ | active |
-| 26 | [Claude Session Driver](https://tashan.sh/capability/plugin-obra-claude-session-driver-claude-session-driver.html) | 62 | 102 ★ | active |
-| 27 | [Status](https://tashan.sh/capability/skill-alirezarezvani-status.html) | 58 | 6 repos | active |
-| 28 | [Subagent Driven Development](https://tashan.sh/capability/skill-obra-subagent-driven-development.html) | 57 | 5 repos | active |
-| 29 | [Dispatching Parallel Agents](https://tashan.sh/capability/skill-obra-dispatching-parallel-agents.html) | 55 | 4 repos | active |
-| 30 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 53 | 3 repos | active |
-| 31 | [Extract](https://tashan.sh/capability/skill-alirezarezvani-extract.html) | 52 | 3 repos | active |
-| 32 | [Merge](https://tashan.sh/capability/skill-alirezarezvani-merge.html) | 52 | 3 repos | active |
-| 33 | [Claudelance Worker](https://tashan.sh/capability/plugin-yeheskieltame-claudelance-claudelance-worker.html) | 51 | 4 ★ | active |
-| 34 | [Jetty](https://tashan.sh/capability/plugin-jettyio-jettyio-skills-jetty.html) | 50 | 3 ★ | active |
-| 35 | [Sema](https://tashan.sh/capability/plugin-emergent-wisdom-sema-sema.html) | 50 | 9 ★ | active |
-| 36 | [Triflux](https://tashan.sh/capability/plugin-tellang-triflux-triflux.html) | 50 | 7 ★ | active |
-| 37 | [Agent Protocol](https://tashan.sh/capability/skill-alirezarezvani-agent-protocol.html) | 49 | 2 repos | active |
-| 38 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 49 | 7 ★ | active |
-| 39 | [Guild](https://tashan.sh/capability/plugin-lookatitude-guild-guild.html) | 49 | 6 ★ | active |
-| 40 | [Mistral](https://tashan.sh/capability/plugin-swih-mistral-mcp-mistral-mcp.html) | 49 | 14 ★ | active |
+| 25 | [Cc10x Router Owned Harness](https://tashan.sh/capability/plugin-romiluz13-cc10x-cc10x-router-owned-harness.html) | 68 | 158 ★ | active |
+| 26 | [Youdotcom Agent Skills](https://tashan.sh/capability/plugin-youdotcom-oss-agent-skills-youdotcom-agent-skills.html) | 66 | 50 ★ | active |
+| 27 | [Claude Session Driver](https://tashan.sh/capability/plugin-obra-claude-session-driver-claude-session-driver.html) | 62 | 102 ★ | active |
+| 28 | [Status](https://tashan.sh/capability/skill-alirezarezvani-status.html) | 58 | 6 repos | active |
+| 29 | [Subagent Driven Development](https://tashan.sh/capability/skill-obra-subagent-driven-development.html) | 57 | 5 repos | active |
+| 30 | [Dispatching Parallel Agents](https://tashan.sh/capability/skill-obra-dispatching-parallel-agents.html) | 55 | 4 repos | active |
+| 31 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 53 | 3 repos | active |
+| 32 | [Agent Eval Harness · redhat-global-engineering](https://tashan.sh/capability/plugin-redhat-global-engineering-ge-public-skills-agent-eval-harness.html) | 53 | 5 ★ | active |
+| 33 | [Extract](https://tashan.sh/capability/skill-alirezarezvani-extract.html) | 52 | 3 repos | active |
+| 34 | [Merge](https://tashan.sh/capability/skill-alirezarezvani-merge.html) | 52 | 3 repos | active |
+| 35 | [Claudelance Worker](https://tashan.sh/capability/plugin-yeheskieltame-claudelance-claudelance-worker.html) | 51 | 4 ★ | active |
+| 36 | [Jetty](https://tashan.sh/capability/plugin-jettyio-jettyio-skills-jetty.html) | 50 | 3 ★ | active |
+| 37 | [Sema](https://tashan.sh/capability/plugin-emergent-wisdom-sema-sema.html) | 50 | 9 ★ | active |
+| 38 | [Triflux](https://tashan.sh/capability/plugin-tellang-triflux-triflux.html) | 50 | 7 ★ | active |
+| 39 | [Agent Protocol](https://tashan.sh/capability/skill-alirezarezvani-agent-protocol.html) | 49 | 2 repos | active |
+| 40 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 49 | 7 ★ | active |
 
-Showing the top 40 of 259. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
+Showing the top 40 of 385. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
 
 ## What these numbers are not
 

@@ -39,20 +39,20 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 45 | 22 ★ | active |
 | 27 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 45 | 21 ★ | active |
 | 28 | [LinkedIn Post Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-post-generator.html) | 44 | 1 marketplaces | active |
-| 29 | [Botboard Biz](https://tashan.sh/capability/plugin-2389-research-claude-plugins-botboard-biz.html) | 42 | 1 marketplaces | — |
-| 30 | [Competitive Ads Extractor](https://tashan.sh/capability/skill-composiohq-competitive-ads-extractor.html) | not scored | 1 repos | active |
-| 31 | [Active Campaign Automation](https://tashan.sh/capability/skill-composiohq-active-campaign-automation.html) | not scored | 1 repos | active |
-| 32 | [Customer IO Automation](https://tashan.sh/capability/skill-composiohq-customer-io-automation.html) | not scored | 1 repos | active |
-| 33 | [Cutt Ly Automation](https://tashan.sh/capability/skill-composiohq-cutt-ly-automation.html) | not scored | 1 repos | active |
-| 34 | [Facebook Automation](https://tashan.sh/capability/skill-composiohq-facebook-automation.html) | not scored | 1 repos | active |
-| 35 | [Go To Webinar Automation](https://tashan.sh/capability/skill-composiohq-go-to-webinar-automation.html) | not scored | 1 repos | active |
-| 36 | [Cmo Review](https://tashan.sh/capability/skill-alirezarezvani-cmo-review.html) | not scored | 1 repos | active |
-| 37 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
-| 38 | [Form Cro](https://tashan.sh/capability/skill-alirezarezvani-form-cro.html) | not scored | 1 repos | active |
-| 39 | [Free Tool Strategy](https://tashan.sh/capability/skill-alirezarezvani-free-tool-strategy.html) | not scored | 1 repos | active |
-| 40 | [Marketing Demand Acquisition](https://tashan.sh/capability/skill-alirezarezvani-marketing-demand-acquisition.html) | not scored | 1 repos | active |
+| 29 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 44 | 1 marketplaces | active |
+| 30 | [Botboard Biz](https://tashan.sh/capability/plugin-2389-research-claude-plugins-botboard-biz.html) | 42 | 1 marketplaces | — |
+| 31 | [Wechat Official Account Qr](https://tashan.sh/capability/plugin-chujianyun-skills-wechat-official-account-qr.html) | 40 | 1 marketplaces | active |
+| 32 | [Competitive Ads Extractor](https://tashan.sh/capability/skill-composiohq-competitive-ads-extractor.html) | not scored | 1 repos | active |
+| 33 | [Active Campaign Automation](https://tashan.sh/capability/skill-composiohq-active-campaign-automation.html) | not scored | 1 repos | active |
+| 34 | [Customer IO Automation](https://tashan.sh/capability/skill-composiohq-customer-io-automation.html) | not scored | 1 repos | active |
+| 35 | [Cutt Ly Automation](https://tashan.sh/capability/skill-composiohq-cutt-ly-automation.html) | not scored | 1 repos | active |
+| 36 | [Facebook Automation](https://tashan.sh/capability/skill-composiohq-facebook-automation.html) | not scored | 1 repos | active |
+| 37 | [Go To Webinar Automation](https://tashan.sh/capability/skill-composiohq-go-to-webinar-automation.html) | not scored | 1 repos | active |
+| 38 | [Cmo Review](https://tashan.sh/capability/skill-alirezarezvani-cmo-review.html) | not scored | 1 repos | active |
+| 39 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
+| 40 | [Form Cro](https://tashan.sh/capability/skill-alirezarezvani-form-cro.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 77. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.
+Showing the top 40 of 131. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.
 
 ## What these numbers are not
 

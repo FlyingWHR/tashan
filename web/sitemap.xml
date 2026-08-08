@@ -275,7 +275,6 @@
   <url><loc>https://tashan.sh/capability/pkg-gitkraken-gk</loc><lastmod>2026-07-13</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ataraxy-labs-sem</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-bowmark-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-brains-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-bashbop-otito</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-reelier</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-elberacasa-umbra</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq></url>
@@ -549,7 +548,6 @@
   <url><loc>https://tashan.sh/capability/pkg-pinappai-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-leadbay-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-robrain</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-bizfile-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-astandrik-local-ydb-mcp</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-novada-mcp</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ytdl-rmcp</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq></url>
@@ -602,7 +600,6 @@
   <url><loc>https://tashan.sh/capability/pkg-zillow-mcp</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-agent-passport-system-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-knowmind</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-hs-code-classifier-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-cellarion-mcp</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-tickerdb-mcp</loc><lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-signal8ai-mcp</loc><lastmod>2026-07-17</lastmod><changefreq>weekly</changefreq></url>
@@ -654,7 +651,6 @@
   <url><loc>https://tashan.sh/capability/pkg-weeek-mcp-smart</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-confluentinc-mcp-confluent</loc><lastmod>2026-07-07</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-czagents-dd</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-contextvm-sdk</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-clauderecallhq-cli</loc><lastmod>2026-07-18</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-brandsystem-mcp</loc><lastmod>2026-07-20</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-agent-ready-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
@@ -673,7 +669,6 @@
   <url><loc>https://tashan.sh/capability/pkg-usekaval-mcp</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-server-madeonsol</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-true402-dev-mcp-server</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-vat-validator-mcp</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-slickfast-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-agentdocs-mcp</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-acta-team-docs-mcp</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
@@ -683,11 +678,8 @@
   <url><loc>https://tashan.sh/capability/pkg-affiliate-networks-mcp</loc><lastmod>2026-07-29</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-excaliwow-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-aetherwealth-mcp</loc><lastmod>2026-07-17</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-tender-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-avito-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-tempguru-mcp</loc><lastmod>2026-07-29</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-data-compliance-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-local-model-suitability-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-sap-adt-mcp</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-secretcarousel</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-finmap-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
@@ -846,10 +838,8 @@
   <url><loc>https://tashan.sh/capability/pkg-octen-mcp</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-yarr-mcp</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-suno-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-microsoft-word</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-motionspec</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-webhound-mcp</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-mcp-tool-kit-shared</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-claude-mcp-bridge</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-kling-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-sexai-mcp</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq></url>
@@ -863,8 +853,6 @@
   <url><loc>https://tashan.sh/capability/pkg-mailkite-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-openagenda-mcp</loc><lastmod>2026-07-20</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-taplid-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-document-integrity-validator-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-quantum-suitability-validator-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-stackguide-mcp-server</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-stackql-mcp-server</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mtop-devtools-mcp-server</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
@@ -952,7 +940,6 @@
   <url><loc>https://tashan.sh/capability/pkg-rag-rat-bin</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-server-mcpindex</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-flux-kontext-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-chatgpt</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-companies-house-mcp</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-goldbean-mcp</loc><lastmod>2026-07-29</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-sketch</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq></url>
@@ -960,10 +947,6 @@
   <url><loc>https://tashan.sh/capability/pkg-cenogram-mcp-server</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-livetennisapi-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-aspicio-mcp</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-wikipedia</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-reddit</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-notebooklm</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-slack</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-iwantmymtg-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-brdata-mcp</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-stableops-mcp-server</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
@@ -1028,7 +1011,6 @@
   <url><loc>https://tashan.sh/capability/pkg-pdfnative-mcp</loc><lastmod>2026-07-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-yandex-kit</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-openvisio</loc><lastmod>2026-07-18</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-koishi-plugin-cline</loc><lastmod>2026-07-29</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-anaxer-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-cartridge-cafe-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-chrischall-tripadvisor-mcp</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
@@ -1048,7 +1030,6 @@
   <url><loc>https://tashan.sh/capability/pkg-wso2-docs-mcp-server</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-basicbit-vrchat-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-neuromcp</loc><lastmod>2026-07-13</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-gemini</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-swsd-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mneme-mcp-server</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-igniteui-mcp-server</loc><lastmod>2026-07-15</lastmod><changefreq>weekly</changefreq></url>
@@ -1056,20 +1037,12 @@
   <url><loc>https://tashan.sh/capability/pkg-saihm-mcp-server</loc><lastmod>2026-07-28</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-nano-banana-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-wan-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-minimax-agent</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-flux-2-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-veo-3-1-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mikromcp</loc><lastmod>2026-07-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-rendermark-mcp-server</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-nevent</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-x</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-twitch</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-outlook</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-retool</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-netflix</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-bluesky</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-figma-edit-mcp</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-msds-chain-mcp</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-standardnotes</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-theabbie</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-crumbtrail-node</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
@@ -1124,7 +1097,6 @@
   <url><loc>https://tashan.sh/capability/pkg-monobank-mcp-server</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-x402-list-mcp</loc><lastmod>2026-07-28</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-agent-lagoon-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-takiguchi-yu-google-workspace-mcp-server</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-gpt-image-2-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-corent-mcp</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-eat-pray-ai-yutu</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq></url>
@@ -1135,14 +1107,11 @@
   <url><loc>https://tashan.sh/capability/pkg-agentutility-mcp-edge-market</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-node-opcua-modeler-mcp-server</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-sima-prime-mcp-server</loc><lastmod>2026-07-29</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-npm</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-webflow</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-starling-bank-mcp</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-orygn-omnicord</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-gpt-image-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-elevenlabs-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-keyshot-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-twilio</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-compute-finance-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-grok-imagine-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-z-image-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
@@ -1173,15 +1142,10 @@
   <url><loc>https://tashan.sh/capability/pkg-runapi-ai-imagen-4-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-labby-mcp</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-tabedata-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-terraform-cloud</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-martinloop-mcp</loc><lastmod>2026-07-28</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ridvay-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-hackernews</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-tinder</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-tiktok</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-chamade-mcp-server</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-kinetic-gain</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-feathers-mcp</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-cleanor-mcp</loc><lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-i4ctime-q-ring</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-enconvert-mcp</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq></url>
@@ -1225,7 +1189,6 @@
   <url><loc>https://tashan.sh/capability/pkg-k-data-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ncloud-gov-mcp-server</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-jobo-job-search-mcp</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-api-sorties-mcp</loc><lastmod>2026-08-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-scrapingdog-mcp</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-taskfleet-mcp</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-michalpiszczek-ai-economics-mcp</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
@@ -1473,7 +1436,6 @@
   <url><loc>https://tashan.sh/capability/pkg-e18e-mcp</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-hivelore-mcp</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ai-cost-analyzer</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-b4n1-web</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-server-security-scanner</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-odyssey365-mcp-server</loc><lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-wealthville-mcp-server</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
@@ -1607,7 +1569,6 @@
   <url><loc>https://tashan.sh/capability/pkg-devds1989-t-rush-mcp</loc><lastmod>2026-07-18</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-achamm-veilbrowser</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-opendata-kr-narajangteo-prespec-mcp</loc><lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-expedia</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-maton-mcp</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-jamgate</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-wealth-api-mcp-server</loc><lastmod>2026-07-16</lastmod><changefreq>weekly</changefreq></url>
@@ -1688,7 +1649,6 @@
   <url><loc>https://tashan.sh/capability/pkg-rolnia-mcp</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-vedetta-mcp</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-x402-codesearch-mcp</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-pch-x402-mcp</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-orygn-opa-mcp</loc><lastmod>2026-06-25</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-dashboardbase-mcp</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-braynexservices-nigeria-mcp-fx-rates</loc><lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq></url>
@@ -1720,7 +1680,6 @@
   <url><loc>https://tashan.sh/capability/pkg-autowhisper-mcp</loc><lastmod>2026-07-28</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-aipou-mcp-server</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-agentutility-mcp-rollforge</loc><lastmod>2026-07-21</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-shrkcrft-mcp-server</loc><lastmod>2026-07-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-stifler-memex-mcp</loc><lastmod>2026-07-13</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mpp32-mcp-server</loc><lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-dropthis-mcp</loc><lastmod>2026-07-11</lastmod><changefreq>weekly</changefreq></url>
@@ -1922,7 +1881,6 @@
   <url><loc>https://tashan.sh/capability/pkg-dinglebear-rytdl</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-equateit-mcp</loc><lastmod>2026-07-16</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-openwebninja-mcp-server</loc><lastmod>2026-06-24</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-mcp-oauth-server</loc><lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mindbase-mcp</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-groundcheck-mcp</loc><lastmod>2026-07-26</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-context-autopilot</loc><lastmod>2026-07-12</lastmod><changefreq>weekly</changefreq></url>
@@ -2040,7 +1998,6 @@
   <url><loc>https://tashan.sh/capability/pkg-mafdet-mcp</loc><lastmod>2026-07-20</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-fonteum-mcp</loc><lastmod>2026-07-15</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mintverdict-mcp</loc><lastmod>2026-07-24</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-agentruntime-labs-agentruntime-mcp</loc><lastmod>2026-07-20</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-zugferd-mcp-client</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-tracktag-mcp</loc><lastmod>2026-07-24</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-dinglebear-synapse</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
@@ -2242,7 +2199,6 @@
   <url><loc>https://tashan.sh/capability/pkg-standby-design-mcp</loc><lastmod>2026-07-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-artifacta-mcp-mcp</loc><lastmod>2026-06-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-qaskills-mcp</loc><lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-contextvm-mcp-sdk</loc><lastmod>2026-06-19</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-meertrack-mcp</loc><lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-aetherwave-studio-mcp</loc><lastmod>2026-06-17</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ilovevideoeditor-mcp-server</loc><lastmod>2026-07-15</lastmod><changefreq>weekly</changefreq></url>
@@ -2506,7 +2462,6 @@
   <url><loc>https://tashan.sh/capability/pkg-orbisapi-mcp</loc><lastmod>2026-06-11</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mambalabsdev-mcp-gtm-hiring-signal-scraper</loc><lastmod>2026-06-18</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-aiwerk-mcp-server-cal</loc><lastmod>2026-06-22</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-bounceprotect-mcp</loc><lastmod>2026-06-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-adsturbo-creative-mcp</loc><lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-aiwerk-mcp-server-clawhub</loc><lastmod>2026-06-24</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-genieacs-mcp</loc><lastmod>2026-06-15</lastmod><changefreq>weekly</changefreq></url>
@@ -2632,18 +2587,15 @@
   <url><loc>https://tashan.sh/capability/plugin-chrismccoy-forge-forge</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-splockorg-splock-splock</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-junjak-ai-harness-junjak-ai-harness</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-mastercard-developers-agent-toolkit</loc><lastmod>2026-05-08</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-covalenthq-goldrush-mcp-server</loc><lastmod>2026-03-18</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-aryanbv-pdf-toolkit-mcp</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-startupnamegenerator-mcp</loc><lastmod>2026-06-26</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-dmzagent-skill-builder-mcp</loc><lastmod>2026-06-18</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-automatelab-seo-performance-mcp</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-notharshhaa-mainframe-mcp-server</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-suitecrm-mcp-gateway</loc><lastmod>2026-06-19</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-abhishekmcp-files</loc><lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-e-labus-mcp</loc><lastmod>2026-06-10</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-abhishekmcp-github</loc><lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-vertaaux-mcp-server</loc><lastmod>2026-05-12</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mambalabsdev-mcp-domain-to-linkedin-url-resolver</loc><lastmod>2026-06-18</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-profitlee-mcp</loc><lastmod>2026-06-25</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-sovereign-ai-act-mcp</loc><lastmod>2026-06-15</lastmod><changefreq>weekly</changefreq></url>
@@ -2814,7 +2766,6 @@
   <url><loc>https://tashan.sh/capability/plugin-mauricioperera-llms-txt-skills-llms-txt-aware</loc><lastmod>2026-07-26</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-hojinzs-evidence-browser-evidence-browser</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-playwright-mcp</loc><lastmod>2026-01-04</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-h1deya-langchain-mcp-tools</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ntfy-me-mcp</loc><lastmod>2026-04-11</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-eztexting-mcp-server</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-agonx402-gateway-mcp</loc><lastmod>2026-05-02</lastmod><changefreq>weekly</changefreq></url>
@@ -2841,7 +2792,6 @@
   <url><loc>https://tashan.sh/capability/pkg-pqs-mcp-server</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-deep-research-mcp-server</loc><lastmod>2026-06-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-swins-intent-engineering-mcp</loc><lastmod>2026-06-18</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-onivoro-server-mcp</loc><lastmod>2026-05-15</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-nl4ever-sshmcp</loc><lastmod>2026-05-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-s3-aws-mcp-server</loc><lastmod>2026-06-14</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-fly-io-mcp-server</loc><lastmod>2026-06-14</lastmod><changefreq>weekly</changefreq></url>
@@ -3901,7 +3851,6 @@
   <url><loc>https://tashan.sh/capability/pkg-zype-com-mcp</loc><lastmod>2026-05-08</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-scrapeer-mcp-server</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-crawlconsole-mcp</loc><lastmod>2026-05-20</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-hydite-hydite-mcp</loc><lastmod>2026-05-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-dinanathdash-envault-mcp-server</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-dealsurface-mcp-server</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-laddro-career-mcp</loc><lastmod>2026-05-14</lastmod><changefreq>weekly</changefreq></url>
@@ -4443,7 +4392,6 @@
   <url><loc>https://tashan.sh/capability/plugin-cjrain-12505614-knowledge-forge-marketplace-knowledge-forge</loc><lastmod>2026-07-13</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-concertypin-conness-code-security</loc><lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-hretheum-spec-driven-blog-builder-spec-driven-blog-builder</loc><lastmod>2026-07-07</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-mcp-comfy-ui-builder</loc><lastmod>2026-02-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-threejs-devtools-mcp</loc><lastmod>2026-03-23</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-metrillm-mcp</loc><lastmod>2026-03-16</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-provenonce-mcp</loc><lastmod>2026-03-12</lastmod><changefreq>weekly</changefreq></url>
@@ -4822,6 +4770,7 @@
   <url><loc>https://tashan.sh/capability/plugin-nicolasfmelo-masa-skill-masa</loc><lastmod>2026-04-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-masthead-data-for-agents-masthead-data</loc><lastmod>2026-06-16</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-cjgl23-claude-memory-bank-plugin-memory-bank</loc><lastmod>2026-06-20</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/plugin-littleblakew-msds-chain-mcp-msds-chain</loc><lastmod>2026-07-26</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-joai-plugins-multiversx-multiversx-by-joai</loc><lastmod>2026-07-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-aliksir-neko-harness-doctor-neko-harness-doctor</loc><lastmod>2026-07-01</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-neonpanel-claude-plugin-neonpanel</loc><lastmod>2026-06-18</lastmod><changefreq>weekly</changefreq></url>
@@ -5265,7 +5214,6 @@
   <url><loc>https://tashan.sh/capability/pkg-verygoodplugins-mcp-evernote</loc><lastmod>2026-01-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-prismism-mcp-server</loc><lastmod>2026-03-13</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-s2t-mcp-accelerators</loc><lastmod>2026-02-21</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-metabrain-labs-comfyui-mcp-server</loc><lastmod>2026-04-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-voteship-mcp-server</loc><lastmod>2026-03-06</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-gajarthan-cse-mcp</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-bwb03-catalog-cli-pro</loc><lastmod>2026-04-08</lastmod><changefreq>weekly</changefreq></url>
@@ -6088,7 +6036,6 @@
   <url><loc>https://tashan.sh/capability/pkg-pokeapi-mcp-server</loc><lastmod>2025-11-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-inchat-image-viewer-mcp</loc><lastmod>2026-01-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ai-capabilities-suite-mcp-filesystem</loc><lastmod>2025-12-12</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-contextlayer-mcp</loc><lastmod>2026-01-12</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-rightnow-forge-mcp-server</loc><lastmod>2026-01-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-quantulabs-hivemind</loc><lastmod>2026-01-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ai-capabilities-suite-mcp-screenshot</loc><lastmod>2025-12-12</lastmod><changefreq>weekly</changefreq></url>
@@ -6516,7 +6463,6 @@
   <url><loc>https://tashan.sh/capability/plugin-pinkbubblebubble-repo4agent-repo4agent</loc><lastmod>2026-03-24</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-mentorcruise-skills-mentorcruise</loc><lastmod>2026-04-02</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-kolide-mcp-server</loc><lastmod>2025-08-13</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-mcp-oauth-provider</loc><lastmod>2025-10-20</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-pv-bhat-vibe-check-mcp</loc><lastmod>2025-11-06</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-driflyte-mcp-server</loc><lastmod>2025-09-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-selenium-webdriver-mcp</loc><lastmod>2025-10-12</lastmod><changefreq>weekly</changefreq></url>
@@ -6713,6 +6659,7 @@
   <url><loc>https://tashan.sh/capability/pkg-ffmpeg-mcp-server</loc><lastmod>2025-12-19</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-pdfkit-mcp</loc><lastmod>2025-11-12</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-raytien-git-mcp-server</loc><lastmod>2025-12-08</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/pkg-ctxl</loc><lastmod>2026-01-12</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-bananaprompts-banana-prompts-mcp</loc><lastmod>2026-01-08</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-agent-observability-mcp</loc><lastmod>2025-12-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-photo-organizer-mcp</loc><lastmod>2026-02-03</lastmod><changefreq>weekly</changefreq></url>
@@ -6881,7 +6828,6 @@
   <url><loc>https://tashan.sh/capability/plugin-kklasing-claude-plugin-code-review</loc><lastmod>2026-04-12</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-shreeyak-claude-pr-review-plugin-pr-review</loc><lastmod>2026-04-11</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-dontfreakout-claude-statamic-plugin-statamic-dev</loc><lastmod>2026-03-29</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-tts-fast-mcp</loc><lastmod>2025-11-23</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-crisog-railway-mcp-server</loc><lastmod>2025-11-14</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-source-map-parser-mcp</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mockserver-mcp</loc><lastmod>2025-12-16</lastmod><changefreq>weekly</changefreq></url>
@@ -7474,7 +7420,6 @@
   <url><loc>https://tashan.sh/capability/pkg-serper-search-scrape-mcp-server</loc><lastmod>2025-02-20</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-featurebase-mcp</loc><lastmod>2025-06-19</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-waldzellai-clear-thought-onepointfive</loc><lastmod>2025-08-18</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-7nohe-adonis-mcp</loc><lastmod>2025-07-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-btp-sap-odata-to-mcp-server</loc><lastmod>2025-09-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-web-fetch-mcp</loc><lastmod>2025-09-18</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-djwizard-tvwizard</loc><lastmod>2026-04-20</lastmod><changefreq>weekly</changefreq></url>
@@ -7507,7 +7452,6 @@
   <url><loc>https://tashan.sh/capability/plugin-choxos-itc-agents-itc-modelling</loc><lastmod>2025-12-08</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-dnvriend-aws-bedrock-cost-tool-aws-bedrock-cost-tool</loc><lastmod>2025-12-15</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-armstrongl-super-duper-disco-plugin-development</loc><lastmod>2025-12-04</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-sowonai-nestjs-mcp-adapter</loc><lastmod>2025-05-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-lazydino-ccxt-mcp</loc><lastmod>2025-04-07</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-gumroad-mcp</loc><lastmod>2025-04-21</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-hefeng-weather-mcp</loc><lastmod>2025-07-20</lastmod><changefreq>weekly</changefreq></url>
@@ -7765,7 +7709,6 @@
   <url><loc>https://tashan.sh/capability/plugin-duylam-claude-code-engineering-assembly-work-journal</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-graphql-tools</loc><lastmod>2025-03-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-illuminaresolutions-n8n-mcp-server</loc><lastmod>2025-02-19</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-tilfin-mcp-serverless</loc><lastmod>2025-03-11</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-snjyor-binance-mcp</loc><lastmod>2025-04-08</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-bigvik193-reddit-ads-mcp</loc><lastmod>2025-09-14</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-ai-smithery-bigvik193-reddit-ads-mcp-api</loc><lastmod>2025-09-15</lastmod><changefreq>weekly</changefreq></url>
@@ -8866,6 +8809,14 @@
   <url><loc>https://tashan.sh/capability/pkg-modelcontextprotocol-server-gdrive</loc><lastmod>2025-01-14</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-modelcontextprotocol-server-slack</loc><lastmod>2025-04-25</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/plugin-lucasmccomb-ccgm-agent-manager</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/skill-withwoz-woz-bug</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/skill-withwoz-woz-knowledge</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/skill-withwoz-woz-review</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/skill-withwoz-woz-settings</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/skill-withwoz-woz-share</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/pkg-adobe-spectrum-design-data-mcp</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/pkg-mastra-github</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/pkg-sentropic-h2a-cli</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-io-github-kvantra-dev-nouz-mcp</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-acuris-geo-mcp-server</loc><lastmod>2026-06-09</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/registry-io-github-samytouri-agent-hub</loc><changefreq>weekly</changefreq></url>
@@ -8887,6 +8838,7 @@
   <url><loc>https://tashan.sh/capability/pkg-ansvar-belgian-law-mcp</loc><lastmod>2026-02-20</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ansvar-botswana-law-mcp</loc><lastmod>2026-02-28</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ansvar-brazil-law-mcp</loc><lastmod>2026-02-22</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/pkg-browser-devtools-mcp</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ansvar-bulgarian-law-mcp</loc><lastmod>2026-02-22</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ansvar-cambodian-law-mcp</loc><lastmod>2026-02-28</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ansvar-cameroonian-law-mcp</loc><lastmod>2026-02-28</lastmod><changefreq>weekly</changefreq></url>
@@ -8931,6 +8883,7 @@
   <url><loc>https://tashan.sh/capability/registry-io-github-zaharajabeen13-create-inferra-mcp</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-intel-overdrive-mcp</loc><lastmod>2026-03-26</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ansvar-irish-law-mcp</loc><lastmod>2026-02-22</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/registry-com-isitdeprecated-isitdeprecated</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ansvar-israel-law-mcp</loc><lastmod>2026-02-22</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ansvar-italian-law-mcp</loc><lastmod>2026-02-27</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ansvar-ivorian-law-mcp</loc><lastmod>2026-02-28</lastmod><changefreq>weekly</changefreq></url>
@@ -9295,12 +9248,6 @@
   <url><loc>https://tashan.sh/compare/pkg-bowmark-mcp-vs-pkg-safari-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-bowmark-mcp-vs-pkg-shiplightai-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-bowmark-mcp-vs-pkg-trusty-squire-mcp</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-brains-mcp-vs-pkg-modelcontextprotocol-server-filesystem</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-brains-mcp-vs-pkg-modelcontextprotocol-server-memory</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-brains-mcp-vs-pkg-plur-ai-mcp</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-brains-mcp-vs-pkg-pofky-asc-mcp</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-brains-mcp-vs-pkg-spacefast</loc></url>
-  <url><loc>https://tashan.sh/compare/pkg-brains-mcp-vs-pkg-wonderwhy-er-desktop-commander</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-brilliant-directories-mcp-vs-pkg-imqueue-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-brilliant-directories-mcp-vs-pkg-local-mcp</loc></url>
   <url><loc>https://tashan.sh/compare/pkg-brilliant-directories-mcp-vs-pkg-mcp-atlassian</loc></url>

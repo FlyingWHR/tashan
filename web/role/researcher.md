@@ -37,30 +37,30 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 51 | 12 ★ | active |
 | 17 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 81 | 57k ★ | active |
 | 18 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 77 | 5k ★ | active |
-| 19 | [Hivemind](https://tashan.sh/capability/plugin-activeloopai-hivemind-hivemind.html) | 74 | 2k ★ | active |
-| 20 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 70 | 284 ★ | active |
-| 21 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
-| 22 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 69 | 154 ★ | active |
-| 23 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 69 | 212 ★ | active |
-| 24 | [Slack · slackapi](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 68 | 86 ★ | active |
-| 25 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 68 | 433 ★ | active |
-| 26 | [Sciverse](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 68 | 78 ★ | active |
-| 27 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 67 | 452 ★ | active |
-| 28 | [Miro](https://tashan.sh/capability/plugin-miroapp-miro-ai-miro.html) | 66 | 142 ★ | active |
-| 29 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 66 | 50 ★ | active |
-| 30 | [LLM Wiki Compiler](https://tashan.sh/capability/plugin-ussumant-llm-wiki-compiler-llm-wiki-compiler.html) | 63 | 303 ★ | active |
-| 31 | [Zyte Web Data](https://tashan.sh/capability/plugin-zytedata-claude-skills-zyte-web-data.html) | 63 | 27 ★ | active |
-| 32 | [Parallel](https://tashan.sh/capability/plugin-parallel-web-parallel-agent-skills-parallel.html) | 63 | 62 ★ | active |
-| 33 | [Immich Photo Manager](https://tashan.sh/capability/plugin-drolosoft-immich-photo-manager-immich-photo-manager.html) | 62 | 33 ★ | active |
-| 34 | [Travel Search And Booking API And Skills](https://tashan.sh/capability/plugin-alibaba-flyai-flyai-skill-travel-search-and-booking-api-and-skills.html) | 61 | 880 ★ | active |
-| 35 | [Private Journal](https://tashan.sh/capability/plugin-obra-private-journal-mcp-private-journal-mcp.html) | 60 | 425 ★ | active |
-| 36 | [Mycelium](https://tashan.sh/capability/plugin-arjunrajlaboratory-mycelium-mycelium.html) | 59 | 54 ★ | active |
-| 37 | [Antigravity](https://tashan.sh/capability/plugin-marcosnahuel-antigravity-plugin-cc-antigravity.html) | 59 | 21 ★ | active |
-| 38 | [Origin](https://tashan.sh/capability/plugin-7xuanlu-origin-origin.html) | 58 | 47 ★ | active |
-| 39 | [Serpapi Claude Plugin](https://tashan.sh/capability/plugin-serpapi-serpapi-claude-plugin-serpapi-claude-plugin.html) | 58 | 13 ★ | active |
-| 40 | [Boltz](https://tashan.sh/capability/plugin-boltz-bio-boltz-api-skills-boltz.html) | 56 | 4 ★ | active |
+| 19 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 70 | 284 ★ | active |
+| 20 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
+| 21 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 69 | 154 ★ | active |
+| 22 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 69 | 212 ★ | active |
+| 23 | [Slack · slackapi](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 68 | 86 ★ | active |
+| 24 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 68 | 433 ★ | active |
+| 25 | [Sciverse](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 68 | 78 ★ | active |
+| 26 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 67 | 452 ★ | active |
+| 27 | [Miro](https://tashan.sh/capability/plugin-miroapp-miro-ai-miro.html) | 66 | 142 ★ | active |
+| 28 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 66 | 50 ★ | active |
+| 29 | [LLM Wiki Compiler](https://tashan.sh/capability/plugin-ussumant-llm-wiki-compiler-llm-wiki-compiler.html) | 63 | 303 ★ | active |
+| 30 | [Zyte Web Data](https://tashan.sh/capability/plugin-zytedata-claude-skills-zyte-web-data.html) | 63 | 27 ★ | active |
+| 31 | [Parallel](https://tashan.sh/capability/plugin-parallel-web-parallel-agent-skills-parallel.html) | 63 | 62 ★ | active |
+| 32 | [Immich Photo Manager](https://tashan.sh/capability/plugin-drolosoft-immich-photo-manager-immich-photo-manager.html) | 62 | 33 ★ | active |
+| 33 | [Private Journal](https://tashan.sh/capability/plugin-obra-private-journal-mcp-private-journal-mcp.html) | 60 | 425 ★ | active |
+| 34 | [Mycelium](https://tashan.sh/capability/plugin-arjunrajlaboratory-mycelium-mycelium.html) | 59 | 54 ★ | active |
+| 35 | [Antigravity](https://tashan.sh/capability/plugin-marcosnahuel-antigravity-plugin-cc-antigravity.html) | 59 | 21 ★ | active |
+| 36 | [Origin](https://tashan.sh/capability/plugin-7xuanlu-origin-origin.html) | 58 | 47 ★ | active |
+| 37 | [Serpapi Claude Plugin](https://tashan.sh/capability/plugin-serpapi-serpapi-claude-plugin-serpapi-claude-plugin.html) | 58 | 13 ★ | active |
+| 38 | [Boltz](https://tashan.sh/capability/plugin-boltz-bio-boltz-api-skills-boltz.html) | 56 | 4 ★ | active |
+| 39 | [Box](https://tashan.sh/capability/plugin-box-box-for-ai-box.html) | 55 | 5 ★ | active |
+| 40 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 55 | 10 ★ | active |
 
-Showing the top 40 of 253. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 314. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

@@ -26,21 +26,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 56 | 13 ★ | active |
 | 7 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 55 | 144 ★ | active |
 | 8 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 53 | 6 ★ | active |
-| 9 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 51 | 3 ★ | active |
-| 10 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 81 | 57k ★ | active |
-| 11 | [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) | 72 | 1k ★ | active |
-| 12 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 71 | 168 ★ | active |
-| 13 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
-| 14 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 69 | 137 ★ | active |
-| 15 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 365 ★ | active |
-| 16 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 61 | 18 ★ | active |
-| 17 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 52 | 73 ★ | active |
-| 18 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 81 | 12k ★ | active |
-| 19 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 70 | 558 ★ | active |
-| 20 | [Content Strategy](https://tashan.sh/capability/skill-alirezarezvani-content-strategy.html) | 54 | 4 repos | active |
-| 21 | [Ad Creative](https://tashan.sh/capability/skill-alirezarezvani-ad-creative.html) | 52 | 3 repos | active |
-| 22 | [Competitive Intel](https://tashan.sh/capability/skill-alirezarezvani-competitive-intel.html) | 52 | 3 repos | active |
-| 23 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 52 | 59 ★ | active |
+| 9 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 81 | 57k ★ | active |
+| 10 | [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) | 72 | 1k ★ | active |
+| 11 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 71 | 168 ★ | active |
+| 12 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
+| 13 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 69 | 137 ★ | active |
+| 14 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 365 ★ | active |
+| 15 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 61 | 18 ★ | active |
+| 16 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 52 | 73 ★ | active |
+| 17 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 81 | 12k ★ | active |
+| 18 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 70 | 558 ★ | active |
+| 19 | [Content Strategy](https://tashan.sh/capability/skill-alirezarezvani-content-strategy.html) | 54 | 4 repos | active |
+| 20 | [Ad Creative](https://tashan.sh/capability/skill-alirezarezvani-ad-creative.html) | 52 | 3 repos | active |
+| 21 | [Competitive Intel](https://tashan.sh/capability/skill-alirezarezvani-competitive-intel.html) | 52 | 3 repos | active |
+| 22 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 52 | 59 ★ | active |
+| 23 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 51 | 3 ★ | active |
 | 24 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 51 | 3 ★ | active |
 | 25 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 51 | 5 ★ | active |
 | 26 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 50 | 2 repos | active |
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Social Media Manager](https://tashan.sh/capability/skill-alirezarezvani-social-media-manager.html) | 49 | 2 repos | active |
 | 40 | [App Store Optimization](https://tashan.sh/capability/skill-alirezarezvani-app-store-optimization.html) | 49 | 2 repos | active |
 
-Showing the top 40 of 160. The full ranked shelf is at https://tashan.sh/role/marketer.html.
+Showing the top 40 of 234. The full ranked shelf is at https://tashan.sh/role/marketer.html.
 
 ## What these numbers are not
 

@@ -13,11 +13,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 61 | 15 ★ | active |
 | 2 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 69 | 101 ★ | active |
-| 3 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
-| 4 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 64 | 61 ★ | active |
-| 5 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 61 | 27 ★ | active |
-| 6 | [Datadog](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 54 | 8 ★ | active |
-| 7 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 69 | 64 ★ | active |
+| 3 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 64 | 61 ★ | active |
+| 4 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 61 | 27 ★ | active |
+| 5 | [Datadog](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 54 | 8 ★ | active |
+| 6 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 69 | 64 ★ | active |
+| 7 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
 | 8 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 51 | 5 ★ | active |
 | 9 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 50 | 8 ★ | active |
 | 10 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | 49 | 2 repos | active |
@@ -38,21 +38,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 61 | 27 ★ | active |
 | 26 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 58 | 18 ★ | active |
 | 27 | [Dash0](https://tashan.sh/capability/plugin-dash0hq-dash0-agent-plugin-dash0.html) | 55 | 4 ★ | active |
-| 28 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 62 | 2k/wk | active |
-| 29 | [Forkmind](https://tashan.sh/capability/pkg-forkmind.html) | 56 | 172/wk | active |
-| 30 | [Agent Observability](https://tashan.sh/capability/pkg-agent-obs.html) | 55 | 123/wk | active |
-| 31 | [Observe](https://tashan.sh/capability/pkg-bounded-sh-observe-mcp.html) | 49 | 18/wk | active |
-| 32 | [Linux Debugging](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-linux-debugging.html) | 41 | 1 marketplaces | active |
-| 33 | [Mojaq](https://tashan.sh/capability/pkg-mcp-server-mojaq.html) | 41 | 18/wk | active |
-| 34 | [Sentinal](https://tashan.sh/capability/pkg-md-musaraf-sentinal-mcp.html) | 40 | 61/wk | active |
-| 35 | [Sentinel Core](https://tashan.sh/capability/pkg-sentinel-core-mcp.html) | 40 | 10/wk | active |
-| 36 | [Email Analytics](https://tashan.sh/capability/plugin-sendx-email-skills-email-analytics.html) | 39 | 1 marketplaces | active |
-| 37 | [Thoughtbox](https://tashan.sh/capability/pkg-kastalien-research-thoughtbox.html) | 39 | 51/wk | active |
-| 38 | [Autoheal](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-autoheal.html) | 37 | 1 marketplaces | active |
-| 39 | [Ragdrift](https://tashan.sh/capability/pkg-mukundakatta-ragdrift-mcp.html) | 37 | 38/wk | active |
-| 40 | [Ragmetric](https://tashan.sh/capability/pkg-mukundakatta-ragmetric-mcp.html) | 36 | 32/wk | active |
+| 28 | [Argosvix](https://tashan.sh/capability/pkg-argosvix-mcp-server.html) | 67 | 484/wk | active |
+| 29 | [Portkey Admin](https://tashan.sh/capability/pkg-portkey-admin-mcp.html) | 65 | 472/wk | active |
+| 30 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 75 | 13k/wk | active |
+| 31 | [Whats Running](https://tashan.sh/capability/pkg-whats-running-mcp.html) | 65 | 1k/wk | active |
+| 32 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 65 | 414/wk | active |
+| 33 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 62 | 2k/wk | active |
+| 34 | [Cortex](https://tashan.sh/capability/pkg-dinglebear-cortex.html) | 60 | 424/wk | active |
+| 35 | [Crumbtrail](https://tashan.sh/capability/pkg-crumbtrail-node.html) | 59 | 182/wk | active |
+| 36 | [Forkmind](https://tashan.sh/capability/pkg-forkmind.html) | 56 | 172/wk | active |
+| 37 | [Agent Observability](https://tashan.sh/capability/pkg-agent-obs.html) | 55 | 123/wk | active |
+| 38 | [Observe](https://tashan.sh/capability/pkg-bounded-sh-observe-mcp.html) | 49 | 18/wk | active |
+| 39 | [Linux Debugging](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-linux-debugging.html) | 41 | 1 marketplaces | active |
+| 40 | [Mojaq](https://tashan.sh/capability/pkg-mcp-server-mojaq.html) | 41 | 18/wk | active |
 
-Showing the top 40 of 44. The full ranked shelf is at https://tashan.sh/task/observability.html.
+Showing the top 40 of 54. The full ranked shelf is at https://tashan.sh/task/observability.html.
 
 ## What these numbers are not
 

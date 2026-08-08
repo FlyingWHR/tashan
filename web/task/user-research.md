@@ -21,6 +21,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Product Manager Toolkit](https://tashan.sh/capability/skill-alirezarezvani-product-manager-toolkit.html) | not scored | 1 repos | active |
 | 9 | [Product Research](https://tashan.sh/capability/skill-alirezarezvani-product-research.html) | not scored | 1 repos | active |
 | 10 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 71 | 504 ★ | active |
+| 11 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
 
 ## What these numbers are not
 

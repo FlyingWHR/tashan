@@ -58,7 +58,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Paid Ads](https://tashan.sh/capability/skill-alirezarezvani-paid-ads.html) | 49 | 2 repos | active |
 | 40 | [Social Content](https://tashan.sh/capability/skill-alirezarezvani-social-content.html) | 49 | 2 repos | active |
 
-Showing the top 40 of 196. The full ranked shelf is at https://tashan.sh/role/writer.html.
+Showing the top 40 of 263. The full ranked shelf is at https://tashan.sh/role/writer.html.
 
 ## What these numbers are not
 

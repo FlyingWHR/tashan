@@ -12,9 +12,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 53 | 6 ★ | active |
-| 2 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
-| 3 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 61 | 18 ★ | active |
-| 4 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 56 | 56 ★ | active |
+| 2 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 61 | 18 ★ | active |
+| 3 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 56 | 56 ★ | active |
+| 4 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
 | 5 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 70 | 558 ★ | active |
 | 6 | [Zoominfo](https://tashan.sh/capability/plugin-zoominfo-zoominfo-mcp-plugin-zoominfo.html) | 51 | 3 ★ | active |
 | 7 | [Revenue Operations](https://tashan.sh/capability/skill-alirezarezvani-revenue-operations.html) | 49 | 2 repos | active |
@@ -49,10 +49,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Scala Score](https://tashan.sh/capability/pkg-scala-mcp-server.html) | 53 | 97/wk | active |
 | 37 | [Crmincloud](https://tashan.sh/capability/pkg-memori-ai-mcp-crmincloud.html) | 69 | 374/wk | active |
 | 38 | [Ghl Command](https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html) | 68 | 863/wk | active |
-| 39 | [0nMCP — Universal AI API Orchestrator](https://tashan.sh/capability/pkg-0nmcp.html) | 60 | 309/wk | active |
-| 40 | [Simie](https://tashan.sh/capability/pkg-simie-mcp.html) | 59 | 249/wk | active |
+| 39 | [Boondmanager](https://tashan.sh/capability/pkg-boondmanager-mcp-server.html) | 67 | 500/wk | active |
+| 40 | [Salesforce Metadata](https://tashan.sh/capability/pkg-salesforce-metadata-mcp.html) | 66 | 746/wk | active |
 
-Showing the top 40 of 53. The full ranked shelf is at https://tashan.sh/role/sales.html.
+Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/role/sales.html.
 
 ## What these numbers are not
 

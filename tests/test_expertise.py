@@ -69,9 +69,30 @@ if os.path.exists(path):
         elif not BANDS[v][0] <= e <= BANDS[v][1]:
             bad.append(f"{c['name']}: {v} with {e} (band {BANDS[v][0]}-{BANDS[v][1]})")
     ok(f"no shipped grade contradicts itself" + (": " + "; ".join(bad[:3]) if bad else ""), not bad)
+    # A JUDGMENT MAY NOT REST ON SOMEONE ELSE'S DOCUMENT. 87 published NEGATIVE verdicts were read
+    # off a README the capability shares with other packages, or one that never names it — worst,
+    # @modelcontextprotocol/server-filesystem (Anthropic's own, 482k downloads a week) graded `thin`
+    # for being a list entry in a monorepo index shared with three siblings. doc_signals.py already
+    # capped these at `thin` so a grade could not borrow CREDIT from another project's document; it
+    # must not borrow BLAME either, and `thin` is a criticism, not a neutral floor.
+    borrowed = [c for c in caps
+                if (c.get("doc_shared_with") or 0) > 0
+                or (c.get("doc_names_self") is not None and c["doc_names_self"] == 0)]
+    judged = [c for c in borrowed if c.get("expertise_verdict")]
+    ok(f"no capability is judged on a document about something else ({len(borrowed)} such rows)"
+       + ("" if not judged else f" — {len(judged)} still judged, e.g. "
+          + str([(c["name"], c["expertise_verdict"]) for c in judged[:3]])),
+       not judged)
+    # …and the fact replaces it. Silence would read as "not looked at yet" when we HAVE looked and
+    # found the documentation belongs to something else, which is the more useful thing to say.
+    stated = [c for c in borrowed if c.get("doc_status")]
+    ok(f"each states why instead of going quiet ({len(stated)}/{len(borrowed)} carry doc_status)",
+       len(stated) == len(borrowed))
+
     graded = sum(1 for c in caps if c.get("expertise_verdict"))
     print(f"        {graded:,} of {len(caps):,} capabilities graded "
           f"({100 * graded / max(len(caps), 1):.1f}%)")
 
 print("EXPERTISE FAILED" if fail else "ok — expertise grades are internally consistent")
 sys.exit(fail)
+

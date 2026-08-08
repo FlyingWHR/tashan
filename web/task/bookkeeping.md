@@ -23,36 +23,36 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Freshbooks Automation](https://tashan.sh/capability/skill-composiohq-freshbooks-automation.html) | not scored | 1 repos | active |
 | 11 | [Harvest Automation](https://tashan.sh/capability/skill-composiohq-harvest-automation.html) | not scored | 1 repos | active |
 | 12 | [Frihet ERP](https://tashan.sh/capability/pkg-frihet-mcp-server.html) | 65 | 524/wk | active |
-| 13 | [Solinkify](https://tashan.sh/capability/pkg-solinkify-mcp.html) | 62 | 530/wk | active |
-| 14 | [X402 List](https://tashan.sh/capability/pkg-x402-list-mcp.html) | 58 | 227/wk | active |
-| 15 | [Pdfops](https://tashan.sh/capability/pkg-pdfops-mcp.html) | 47 | 45/wk | active |
-| 16 | [Agentcash](https://tashan.sh/capability/pkg-agentcash.html) | 70 | 2k/wk | active |
-| 17 | [Q402](https://tashan.sh/capability/pkg-quackai-q402-mcp.html) | 67 | 766/wk | active |
-| 18 | [Agent402.Tools — pay-per-call web tools](https://tashan.sh/capability/pkg-agent402-mcp.html) | 66 | 641/wk | active |
-| 19 | [Pulsefeed X402](https://tashan.sh/capability/pkg-pulsefeed-x402-mcp.html) | 65 | 955/wk | active |
-| 20 | [Depix](https://tashan.sh/capability/pkg-depixapp-mcp.html) | 65 | 829/wk | active |
-| 21 | [Sumup](https://tashan.sh/capability/pkg-sumup-mcp.html) | 63 | 132/wk | active |
-| 22 | [Ibanforge](https://tashan.sh/capability/pkg-ibanforge-mcp.html) | 61 | 302/wk | active |
-| 23 | [Xero](https://tashan.sh/capability/pkg-xero-mcp.html) | 61 | 289/wk | active |
-| 24 | [Payment Guard](https://tashan.sh/capability/pkg-payment-guard-mcp.html) | 59 | 361/wk | active |
-| 25 | [Bexio](https://tashan.sh/capability/pkg-promptpartner-bexio-mcp-server.html) | 55 | 180/wk | active |
-| 26 | [Paasbuild](https://tashan.sh/capability/pkg-paasbuild-mcp.html) | 55 | 137/wk | active |
-| 27 | [Karbon](https://tashan.sh/capability/pkg-karbon-mcp-server.html) | 54 | 152/wk | active |
-| 28 | [Paddle](https://tashan.sh/capability/pkg-paddle-paddle-mcp.html) | 53 | 775/wk | active |
-| 29 | [Docweave](https://tashan.sh/capability/pkg-docweave-mcp.html) | 52 | 114/wk | active |
-| 30 | [Gl Importer](https://tashan.sh/capability/pkg-cloudbusiness-gl-importer-mcp.html) | 51 | 69/wk | active |
-| 31 | [Wise](https://tashan.sh/capability/pkg-aiwerk-mcp-server-wise.html) | 47 | 65/wk | active |
-| 32 | [Kx402](https://tashan.sh/capability/pkg-kx402.html) | 47 | 40/wk | active |
-| 33 | [Paypay](https://tashan.sh/capability/pkg-paypay-mcp.html) | 46 | 38/wk | active |
-| 34 | [Appcharge Skills](https://tashan.sh/capability/plugin-appcharge-appcharge-skills-appcharge-skills.html) | 45 | 0 ★ | active |
-| 35 | [Yookassa](https://tashan.sh/capability/pkg-theyahia-yookassa-mcp.html) | 45 | 42/wk | active |
-| 36 | [Denpyo](https://tashan.sh/capability/pkg-denpyo-mcp.html) | 45 | 33/wk | active |
-| 37 | [Merit Aktiva](https://tashan.sh/capability/pkg-merit-aktiva-mcp.html) | 44 | 21/wk | active |
-| 38 | [Invovate](https://tashan.sh/capability/pkg-invovate-mcp-server.html) | 43 | 63/wk | active |
-| 39 | [Kaisha](https://tashan.sh/capability/pkg-kaisha-mcp.html) | 43 | 19/wk | active |
-| 40 | [Parser](https://tashan.sh/capability/pkg-parsedoc-mcp.html) | 42 | 40/wk | active |
+| 13 | [Billingserv](https://tashan.sh/capability/pkg-billingserv-mcp-server.html) | 57 | 224/wk | active |
+| 14 | [AI Agent Firewall](https://tashan.sh/capability/pkg-fidacy-mcp.html) | 71 | 2k/wk | active |
+| 15 | [Tebra](https://tashan.sh/capability/pkg-tebra-mcp-server.html) | 67 | 779/wk | active |
+| 16 | [Solinkify](https://tashan.sh/capability/pkg-solinkify-mcp.html) | 62 | 530/wk | active |
+| 17 | [X402 List](https://tashan.sh/capability/pkg-x402-list-mcp.html) | 58 | 227/wk | active |
+| 18 | [Paysafe](https://tashan.sh/capability/pkg-paysafe-x402.html) | 51 | 63/wk | active |
+| 19 | [Pdfops](https://tashan.sh/capability/pkg-pdfops-mcp.html) | 47 | 45/wk | active |
+| 20 | [Agentcash](https://tashan.sh/capability/pkg-agentcash.html) | 70 | 2k/wk | active |
+| 21 | [Quickbooks](https://tashan.sh/capability/pkg-quickbooks-mcp.html) | 68 | 1k/wk | active |
+| 22 | [Q402](https://tashan.sh/capability/pkg-quackai-q402-mcp.html) | 67 | 766/wk | active |
+| 23 | [Agent402.Tools — pay-per-call web tools](https://tashan.sh/capability/pkg-agent402-mcp.html) | 66 | 641/wk | active |
+| 24 | [Pulsefeed X402](https://tashan.sh/capability/pkg-pulsefeed-x402-mcp.html) | 65 | 955/wk | active |
+| 25 | [Depix](https://tashan.sh/capability/pkg-depixapp-mcp.html) | 65 | 829/wk | active |
+| 26 | [Sumup](https://tashan.sh/capability/pkg-sumup-mcp.html) | 63 | 132/wk | active |
+| 27 | [Ibanforge](https://tashan.sh/capability/pkg-ibanforge-mcp.html) | 61 | 302/wk | active |
+| 28 | [Gocushy](https://tashan.sh/capability/pkg-gocushy-mcp.html) | 61 | 289/wk | active |
+| 29 | [Xero](https://tashan.sh/capability/pkg-xero-mcp.html) | 61 | 289/wk | active |
+| 30 | [Payment Guard](https://tashan.sh/capability/pkg-payment-guard-mcp.html) | 59 | 361/wk | active |
+| 31 | [Signaledi](https://tashan.sh/capability/pkg-signaledi-mcp-server.html) | 57 | 230/wk | active |
+| 32 | [Bexio](https://tashan.sh/capability/pkg-promptpartner-bexio-mcp-server.html) | 55 | 180/wk | active |
+| 33 | [Paasbuild](https://tashan.sh/capability/pkg-paasbuild-mcp.html) | 55 | 137/wk | active |
+| 34 | [Karbon](https://tashan.sh/capability/pkg-karbon-mcp-server.html) | 54 | 152/wk | active |
+| 35 | [Paddle](https://tashan.sh/capability/pkg-paddle-paddle-mcp.html) | 53 | 775/wk | active |
+| 36 | [Jp Corporate ID](https://tashan.sh/capability/pkg-mcp-jp-corporate-id.html) | 52 | 138/wk | active |
+| 37 | [Docweave](https://tashan.sh/capability/pkg-docweave-mcp.html) | 52 | 114/wk | active |
+| 38 | [Gl Importer](https://tashan.sh/capability/pkg-cloudbusiness-gl-importer-mcp.html) | 51 | 69/wk | active |
+| 39 | [Wise](https://tashan.sh/capability/pkg-aiwerk-mcp-server-wise.html) | 47 | 65/wk | active |
+| 40 | [Xendit](https://tashan.sh/capability/pkg-xendit-mcp.html) | 47 | 45/wk | active |
 
-Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/bookkeeping.html.
+Showing the top 40 of 60. The full ranked shelf is at https://tashan.sh/task/bookkeeping.html.
 
 ## What these numbers are not
 

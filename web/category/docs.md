@@ -50,7 +50,7 @@ Ranked by the tashan score
 | 37 | [Type Atlas](https://tashan.sh/capability/pkg-type-atlas-mcp.html) | 60 | 478/wk | active |
 | 38 | [Mail](https://tashan.sh/capability/pkg-honeycrisp-mail.html) | 60 | 404/wk | active |
 | 39 | [Pubcrawl](https://tashan.sh/capability/pkg-pharmatools-pubcrawl.html) | 60 | 334/wk | active |
-| 40 | [Opentabs Plugin Wikipedia](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-wikipedia.html) | 60 | 217/wk | active |
+| 40 | [Simie](https://tashan.sh/capability/pkg-simie-mcp.html) | 59 | 249/wk | active |
 
 Showing the top 40 of 378. The full ranked shelf is at https://tashan.sh/category/docs.html.
 

@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 67 | 118 ★ | active |
 | 40 | [Agent Session Resume](https://tashan.sh/capability/plugin-hacktivist123-agent-session-resume-agent-session-resume.html) | 67 | 235 ★ | active |
 
-Showing the top 40 of 1,042. The full ranked shelf is at https://tashan.sh/category/productivity.html.
+Showing the top 40 of 1,040. The full ranked shelf is at https://tashan.sh/category/productivity.html.
 
 ## What these numbers are not
 

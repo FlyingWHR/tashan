@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Fragrance & Perfume MCP (Noteboxd)](https://tashan.sh/capability/pkg-noteboxd-mcp.html) | 63 | 706/wk | active |
 | 40 | [Clelp](https://tashan.sh/capability/pkg-clelp-mcp-server.html) | 62 | 403/wk | active |
 
-Showing the top 40 of 393. The full ranked shelf is at https://tashan.sh/category/search.html.
+Showing the top 40 of 386. The full ranked shelf is at https://tashan.sh/category/search.html.
 
 ## What these numbers are not
 

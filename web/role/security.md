@@ -28,14 +28,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 65 | 284 ★ | active |
 | 10 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 64 | 22 ★ | active |
 | 11 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 61 | 27 ★ | active |
-| 12 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 61 | 37 ★ | active |
-| 13 | [Malchela](https://tashan.sh/capability/plugin-dwmetz-malchela-malchela.html) | 61 | 114 ★ | active |
-| 14 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 58 | 21 ★ | active |
-| 15 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 57 | 11 ★ | active |
-| 16 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 56 | 12 ★ | active |
-| 17 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
-| 18 | [Descope Skills](https://tashan.sh/capability/plugin-descope-skills-descope-skills.html) | 54 | 12 ★ | active |
-| 19 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 61 | 43 ★ | active |
+| 12 | [Malchela](https://tashan.sh/capability/plugin-dwmetz-malchela-malchela.html) | 61 | 114 ★ | active |
+| 13 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 58 | 21 ★ | active |
+| 14 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
+| 15 | [Descope Skills](https://tashan.sh/capability/plugin-descope-skills-descope-skills.html) | 54 | 12 ★ | active |
+| 16 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 61 | 37 ★ | active |
+| 17 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 61 | 43 ★ | active |
+| 18 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 57 | 11 ★ | active |
+| 19 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 56 | 12 ★ | active |
 | 20 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 51 | 73 ★ | active |
 | 21 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 50 | 39 ★ | active |
 | 22 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | 49 | 2 repos | active |
@@ -58,7 +58,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Bubble Shield](https://tashan.sh/capability/plugin-vdk888-bubble-shield-public-bubble-shield.html) | 44 | 0 ★ | active |
 | 40 | [Stackhawk Hawkscan](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-hawkscan.html) | 44 | 1 marketplaces | active |
 
-Showing the top 40 of 306. The full ranked shelf is at https://tashan.sh/role/security.html.
+Showing the top 40 of 342. The full ranked shelf is at https://tashan.sh/role/security.html.
 
 ## What these numbers are not
 

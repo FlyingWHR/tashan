@@ -24,35 +24,35 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 48 | 15 ★ | active |
 | 12 | [Brightdata Plugin](https://tashan.sh/capability/plugin-brightdata-skills-brightdata-plugin.html) | 46 | 2 marketplaces | — |
 | 13 | [LinkedIn Apply](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-apply.html) | 44 | 1 marketplaces | active |
-| 14 | [Apify Automation](https://tashan.sh/capability/skill-composiohq-apify-automation.html) | not scored | 1 repos | active |
-| 15 | [Firecrawl Automation](https://tashan.sh/capability/skill-composiohq-firecrawl-automation.html) | not scored | 1 repos | active |
-| 16 | [Browser Automation](https://tashan.sh/capability/skill-alirezarezvani-browser-automation.html) | not scored | 1 repos | active |
-| 17 | [Universal Scraping Architect](https://tashan.sh/capability/skill-alirezarezvani-universal-scraping-architect.html) | not scored | 1 repos | active |
-| 18 | [YouTube Full](https://tashan.sh/capability/skill-alirezarezvani-youtube-full.html) | not scored | 1 repos | active |
-| 19 | [Actionbook](https://tashan.sh/capability/plugin-actionbook-actionbook-actionbook.html) | 74 | 2k ★ | active |
-| 20 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 58 | 14 ★ | active |
-| 21 | [Firecrawl Workflows](https://tashan.sh/capability/plugin-firecrawl-firecrawl-workflows-firecrawl-workflows.html) | 55 | 101 ★ | active |
-| 22 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 52 | 21 ★ | active |
-| 23 | [Alltuu Downloader](https://tashan.sh/capability/plugin-chujianyun-skills-alltuu-downloader.html) | 40 | 1 marketplaces | active |
-| 24 | [Photoplus Downloader](https://tashan.sh/capability/plugin-chujianyun-skills-photoplus-downloader.html) | 40 | 1 marketplaces | active |
-| 25 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 63 | 337/wk | active |
-| 26 | [Scrapeunblocker](https://tashan.sh/capability/pkg-scrapeunblocker-mcp.html) | 56 | 240/wk | active |
-| 27 | [Webclaw](https://tashan.sh/capability/pkg-create-webclaw.html) | 56 | 163/wk | active |
+| 14 | [Alltuu Downloader](https://tashan.sh/capability/plugin-chujianyun-skills-alltuu-downloader.html) | 40 | 1 marketplaces | active |
+| 15 | [Photoplus Downloader](https://tashan.sh/capability/plugin-chujianyun-skills-photoplus-downloader.html) | 40 | 1 marketplaces | active |
+| 16 | [Apify Automation](https://tashan.sh/capability/skill-composiohq-apify-automation.html) | not scored | 1 repos | active |
+| 17 | [Firecrawl Automation](https://tashan.sh/capability/skill-composiohq-firecrawl-automation.html) | not scored | 1 repos | active |
+| 18 | [Browser Automation](https://tashan.sh/capability/skill-alirezarezvani-browser-automation.html) | not scored | 1 repos | active |
+| 19 | [Universal Scraping Architect](https://tashan.sh/capability/skill-alirezarezvani-universal-scraping-architect.html) | not scored | 1 repos | active |
+| 20 | [YouTube Full](https://tashan.sh/capability/skill-alirezarezvani-youtube-full.html) | not scored | 1 repos | active |
+| 21 | [Actionbook](https://tashan.sh/capability/plugin-actionbook-actionbook-actionbook.html) | 74 | 2k ★ | active |
+| 22 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 58 | 14 ★ | active |
+| 23 | [Firecrawl Workflows](https://tashan.sh/capability/plugin-firecrawl-firecrawl-workflows-firecrawl-workflows.html) | 55 | 101 ★ | active |
+| 24 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 52 | 21 ★ | active |
+| 25 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 70 | 796/wk | active |
+| 26 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 63 | 337/wk | active |
+| 27 | [Scrapeunblocker](https://tashan.sh/capability/pkg-scrapeunblocker-mcp.html) | 56 | 240/wk | active |
 | 28 | [Alterlab](https://tashan.sh/capability/pkg-alterlab-mcp-server.html) | 54 | 154/wk | active |
-| 29 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 66 | 2k/wk | active |
-| 30 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 65 | 347/wk | active |
-| 31 | [Octen](https://tashan.sh/capability/pkg-octen-mcp.html) | 61 | 288/wk | active |
-| 32 | [Web Tools](https://tashan.sh/capability/pkg-web-tools-mcp.html) | 60 | 347/wk | active |
-| 33 | [Apexapi](https://tashan.sh/capability/pkg-apexapi-mcp.html) | 56 | 196/wk | active |
-| 34 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 55 | 84/wk | active |
-| 35 | [Veilbrowser](https://tashan.sh/capability/pkg-achamm-veilbrowser.html) | 54 | 78/wk | active |
-| 36 | [Pagewatch](https://tashan.sh/capability/pkg-pagewatch-mcp.html) | 53 | 192/wk | active |
-| 37 | [Web Fetcher](https://tashan.sh/capability/pkg-mcp-server-web-fetcher.html) | 52 | 141/wk | active |
-| 38 | [Openwebninja](https://tashan.sh/capability/pkg-openwebninja-mcp-server.html) | 51 | 83/wk | active |
-| 39 | [Comber](https://tashan.sh/capability/pkg-comber-mcp.html) | 49 | 67/wk | active |
-| 40 | [Broke2built Skills](https://tashan.sh/capability/pkg-broke2built-skills-mcp.html) | 48 | 47/wk | active |
+| 29 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 70 | 2k/wk | active |
+| 30 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 68 | 911/wk | active |
+| 31 | [Uindow](https://tashan.sh/capability/pkg-uindow-cli.html) | 67 | 1k/wk | active |
+| 32 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 66 | 2k/wk | active |
+| 33 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 65 | 347/wk | active |
+| 34 | [Octen](https://tashan.sh/capability/pkg-octen-mcp.html) | 61 | 288/wk | active |
+| 35 | [SEO Audit Console](https://tashan.sh/capability/pkg-houtini-seo-audit-console.html) | 60 | 355/wk | active |
+| 36 | [Web Tools](https://tashan.sh/capability/pkg-web-tools-mcp.html) | 60 | 347/wk | active |
+| 37 | [PDF Triage](https://tashan.sh/capability/pkg-pdf-triage-mcp.html) | 59 | 392/wk | active |
+| 38 | [Ainative Browser](https://tashan.sh/capability/pkg-ainative-browser-mcp.html) | 58 | 219/wk | active |
+| 39 | [Scrapingdog](https://tashan.sh/capability/pkg-scrapingdog-mcp.html) | 57 | 294/wk | active |
+| 40 | [Taskfleet](https://tashan.sh/capability/pkg-taskfleet-mcp.html) | 57 | 280/wk | active |
 
-Showing the top 40 of 57. The full ranked shelf is at https://tashan.sh/task/web-scraping.html.
+Showing the top 40 of 70. The full ranked shelf is at https://tashan.sh/task/web-scraping.html.
 
 ## What these numbers are not
 

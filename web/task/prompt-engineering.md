@@ -20,39 +20,39 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Supertool](https://tashan.sh/capability/plugin-digital-process-tools-claude-supertool-supertool.html) | 58 | 14 ★ | active |
 | 8 | [Laconic](https://tashan.sh/capability/plugin-gabrielbarberini-laconic-laconic.html) | 57 | 18 ★ | active |
 | 9 | [Slm Agent](https://tashan.sh/capability/plugin-scaledown-team-slm-agent-slm-agent.html) | 56 | 14 ★ | active |
-| 10 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 49 | 20 ★ | active |
-| 11 | [Caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) | 82 | 93k ★ | active |
-| 12 | [Context Mode](https://tashan.sh/capability/plugin-mksglu-context-mode-context-mode.html) | 80 | 19k ★ | active |
-| 13 | [Enhance](https://tashan.sh/capability/plugin-agent-sh-enhance-enhance.html) | 51 | 3 ★ | active |
-| 14 | [Sema](https://tashan.sh/capability/plugin-emergent-wisdom-sema-sema.html) | 50 | 9 ★ | active |
-| 15 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 50 | 6 ★ | active |
-| 16 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | 49 | 2 repos | active |
-| 17 | [Claude Md Optimizer](https://tashan.sh/capability/plugin-wrsmith108-claude-md-optimizer-claude-md-optimizer.html) | 49 | 21 ★ | active |
+| 10 | [Caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) | 82 | 93k ★ | active |
+| 11 | [Context Mode](https://tashan.sh/capability/plugin-mksglu-context-mode-context-mode.html) | 80 | 19k ★ | active |
+| 12 | [Enhance](https://tashan.sh/capability/plugin-agent-sh-enhance-enhance.html) | 51 | 3 ★ | active |
+| 13 | [Sema](https://tashan.sh/capability/plugin-emergent-wisdom-sema-sema.html) | 50 | 9 ★ | active |
+| 14 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 50 | 6 ★ | active |
+| 15 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | 49 | 2 repos | active |
+| 16 | [Claude Md Optimizer](https://tashan.sh/capability/plugin-wrsmith108-claude-md-optimizer-claude-md-optimizer.html) | 49 | 21 ★ | active |
+| 17 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 49 | 20 ★ | active |
 | 18 | [LLM Transpile](https://tashan.sh/capability/plugin-epicsagas-llm-transpile-llm-transpile.html) | 48 | 5 ★ | active |
 | 19 | [Agent Runway](https://tashan.sh/capability/plugin-rennf93-agent-runway-agent-runway.html) | 45 | 3 ★ | active |
 | 20 | [Compress](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-compress.html) | 44 | 1 marketplaces | active |
 | 21 | [Image Prompt Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-image-prompt-generator.html) | 44 | 1 marketplaces | active |
-| 22 | [Behuman](https://tashan.sh/capability/skill-alirezarezvani-behuman.html) | not scored | 1 repos | active |
-| 23 | [LLM Cost Optimizer](https://tashan.sh/capability/skill-alirezarezvani-llm-cost-optimizer.html) | not scored | 1 repos | active |
-| 24 | [Prompt Governance](https://tashan.sh/capability/skill-alirezarezvani-prompt-governance.html) | not scored | 1 repos | active |
-| 25 | [Prompt Engineer Toolkit](https://tashan.sh/capability/skill-alirezarezvani-prompt-engineer-toolkit.html) | not scored | 1 repos | active |
-| 26 | [Fable Goal](https://tashan.sh/capability/skill-alirezarezvani-fable-goal.html) | not scored | 1 repos | active |
-| 27 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 71 | 218 ★ | active |
-| 28 | [Prompt Engineering Skills](https://tashan.sh/capability/plugin-treylom-prompt-engineering-skills-prompt-engineering-skills.html) | 68 | 168 ★ | active |
-| 29 | [Co Dialectic](https://tashan.sh/capability/plugin-thewhyman-prompt-engineering-in-action-co-dialectic.html) | 53 | 9 ★ | active |
-| 30 | [Prompt Engineering Skills · chujianyun](https://tashan.sh/capability/plugin-chujianyun-skills-prompt-engineering-skills.html) | 40 | 1 marketplaces | active |
-| 31 | [Coldstart](https://tashan.sh/capability/pkg-cstart-coldstart.html) | 69 | 1k/wk | active |
-| 32 | [Ctxfile](https://tashan.sh/capability/pkg-ctxfile.html) | 53 | 110/wk | active |
-| 33 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 67 | 59k/wk | active |
-| 34 | [Memorykit](https://tashan.sh/capability/pkg-memorykit-mcp-server.html) | 62 | 444/wk | active |
-| 35 | [Stackguide](https://tashan.sh/capability/pkg-stackguide-mcp-server.html) | 61 | 197/wk | active |
-| 36 | [Aistoragedepot](https://tashan.sh/capability/pkg-aistoragedepot-mcp.html) | 57 | 269/wk | active |
-| 37 | [Forkmind](https://tashan.sh/capability/pkg-forkmind.html) | 56 | 172/wk | active |
-| 38 | [Clarifyprompt](https://tashan.sh/capability/pkg-clarifyprompt-mcp.html) | 55 | 96/wk | active |
-| 39 | [Memex](https://tashan.sh/capability/pkg-stifler-memex-mcp.html) | 53 | 85/wk | active |
-| 40 | [Projectmind](https://tashan.sh/capability/pkg-nodemint-projectmind.html) | 52 | 118/wk | active |
+| 22 | [Prompt Engineering Skills · chujianyun](https://tashan.sh/capability/plugin-chujianyun-skills-prompt-engineering-skills.html) | 40 | 1 marketplaces | active |
+| 23 | [Behuman](https://tashan.sh/capability/skill-alirezarezvani-behuman.html) | not scored | 1 repos | active |
+| 24 | [LLM Cost Optimizer](https://tashan.sh/capability/skill-alirezarezvani-llm-cost-optimizer.html) | not scored | 1 repos | active |
+| 25 | [Prompt Governance](https://tashan.sh/capability/skill-alirezarezvani-prompt-governance.html) | not scored | 1 repos | active |
+| 26 | [Prompt Engineer Toolkit](https://tashan.sh/capability/skill-alirezarezvani-prompt-engineer-toolkit.html) | not scored | 1 repos | active |
+| 27 | [Fable Goal](https://tashan.sh/capability/skill-alirezarezvani-fable-goal.html) | not scored | 1 repos | active |
+| 28 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 71 | 218 ★ | active |
+| 29 | [Prompt Engineering Skills](https://tashan.sh/capability/plugin-treylom-prompt-engineering-skills-prompt-engineering-skills.html) | 68 | 168 ★ | active |
+| 30 | [Co Dialectic](https://tashan.sh/capability/plugin-thewhyman-prompt-engineering-in-action-co-dialectic.html) | 53 | 9 ★ | active |
+| 31 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 52 | 147 ★ | active |
+| 32 | [Coldstart](https://tashan.sh/capability/pkg-cstart-coldstart.html) | 69 | 1k/wk | active |
+| 33 | [Portkey Admin](https://tashan.sh/capability/pkg-portkey-admin-mcp.html) | 65 | 472/wk | active |
+| 34 | [Ctxfile](https://tashan.sh/capability/pkg-ctxfile.html) | 53 | 110/wk | active |
+| 35 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 97 | 619k/wk | active |
+| 36 | [Kubernetes](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 85 | 18k/wk | active |
+| 37 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
+| 38 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 69 | 931/wk | active |
+| 39 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 67 | 59k/wk | active |
+| 40 | [Systemdox](https://tashan.sh/capability/pkg-systemdox-mcp-server.html) | 65 | 415/wk | active |
 
-Showing the top 40 of 72. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
+Showing the top 40 of 93. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
 
 ## What these numbers are not
 

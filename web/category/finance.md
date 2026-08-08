@@ -43,16 +43,16 @@ Ranked by the tashan score
 | 30 | [Configcat](https://tashan.sh/capability/pkg-configcat-mcp-server.html) | 63 | 357/wk | active |
 | 31 | [Madeonsol](https://tashan.sh/capability/pkg-mcp-server-madeonsol.html) | 63 | 339/wk | active |
 | 32 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 63 | 337/wk | active |
-| 33 | [Vat Validator](https://tashan.sh/capability/pkg-vat-validator-mcp.html) | 63 | 337/wk | active |
-| 34 | [Aether Wealth](https://tashan.sh/capability/pkg-aetherwealth-mcp.html) | 63 | 289/wk | active |
-| 35 | [Finmap](https://tashan.sh/capability/pkg-finmap-mcp.html) | 63 | 270/wk | active |
-| 36 | [Xpay](https://tashan.sh/capability/pkg-xona-labs-xpay.html) | 63 | 270/wk | active |
-| 37 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 62 | 49 ★ | active |
-| 38 | [X402 Pay](https://tashan.sh/capability/pkg-cryptoapis-io-mcp-x402-pay.html) | 62 | 573/wk | active |
-| 39 | [The Bot Wire](https://tashan.sh/capability/pkg-botwire-mcp.html) | 62 | 549/wk | active |
-| 40 | [Stackscan](https://tashan.sh/capability/pkg-stackscan-mcp-server.html) | 62 | 504/wk | active |
+| 33 | [Aether Wealth](https://tashan.sh/capability/pkg-aetherwealth-mcp.html) | 63 | 289/wk | active |
+| 34 | [Finmap](https://tashan.sh/capability/pkg-finmap-mcp.html) | 63 | 270/wk | active |
+| 35 | [Xpay](https://tashan.sh/capability/pkg-xona-labs-xpay.html) | 63 | 270/wk | active |
+| 36 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 62 | 49 ★ | active |
+| 37 | [X402 Pay](https://tashan.sh/capability/pkg-cryptoapis-io-mcp-x402-pay.html) | 62 | 573/wk | active |
+| 38 | [The Bot Wire](https://tashan.sh/capability/pkg-botwire-mcp.html) | 62 | 549/wk | active |
+| 39 | [Stackscan](https://tashan.sh/capability/pkg-stackscan-mcp-server.html) | 62 | 504/wk | active |
+| 40 | [Insightsentry](https://tashan.sh/capability/pkg-insightsentry-mcp.html) | 62 | 228/wk | active |
 
-Showing the top 40 of 502. The full ranked shelf is at https://tashan.sh/category/finance.html.
+Showing the top 40 of 500. The full ranked shelf is at https://tashan.sh/category/finance.html.
 
 ## What these numbers are not
 

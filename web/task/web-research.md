@@ -18,9 +18,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 68 | 433 ★ | active |
 | 6 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 66 | 50 ★ | active |
 | 7 | [Parallel](https://tashan.sh/capability/plugin-parallel-web-parallel-agent-skills-parallel.html) | 63 | 62 ★ | active |
-| 8 | [Travel Search And Booking API And Skills](https://tashan.sh/capability/plugin-alibaba-flyai-flyai-skill-travel-search-and-booking-api-and-skills.html) | 61 | 880 ★ | active |
-| 9 | [Antigravity](https://tashan.sh/capability/plugin-marcosnahuel-antigravity-plugin-cc-antigravity.html) | 59 | 21 ★ | active |
-| 10 | [Serpapi Claude Plugin](https://tashan.sh/capability/plugin-serpapi-serpapi-claude-plugin-serpapi-claude-plugin.html) | 58 | 13 ★ | active |
+| 8 | [Antigravity](https://tashan.sh/capability/plugin-marcosnahuel-antigravity-plugin-cc-antigravity.html) | 59 | 21 ★ | active |
+| 9 | [Serpapi Claude Plugin](https://tashan.sh/capability/plugin-serpapi-serpapi-claude-plugin-serpapi-claude-plugin.html) | 58 | 13 ★ | active |
+| 10 | [Travel Search And Booking API And Skills](https://tashan.sh/capability/plugin-alibaba-flyai-flyai-skill-travel-search-and-booking-api-and-skills.html) | 61 | 880 ★ | active |
 | 11 | [Releases](https://tashan.sh/capability/plugin-buildinternet-releases-cli-releases.html) | 50 | 3 ★ | active |
 | 12 | [Deep Research](https://tashan.sh/capability/skill-alirezarezvani-deep-research.html) | 49 | 2 repos | active |
 | 13 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 49 | 2 repos | active |
@@ -38,17 +38,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Brave Search Skills](https://tashan.sh/capability/plugin-brave-brave-search-skills-brave-search-skills.html) | 66 | 161 ★ | active |
 | 26 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 58 | 14 ★ | active |
 | 27 | [SERPdive Web Search](https://tashan.sh/capability/pkg-serpdive-mcp.html) | 54 | 124/wk | active |
-| 28 | [SearXNG Search](https://tashan.sh/capability/pkg-mcp-searxng.html) | 77 | 30k/wk | active |
-| 29 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 68 | 944/wk | active |
-| 30 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 66 | 2k/wk | active |
-| 31 | [One Search](https://tashan.sh/capability/pkg-one-search-mcp.html) | 65 | 603/wk | active |
-| 32 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 65 | 347/wk | active |
-| 33 | [Octen](https://tashan.sh/capability/pkg-octen-mcp.html) | 61 | 288/wk | active |
-| 34 | [Openwebninja](https://tashan.sh/capability/pkg-openwebninja-mcp-server.html) | 51 | 83/wk | active |
-| 35 | [Deep Research · Perufitlife](https://tashan.sh/capability/pkg-deep-research-mcp-server.html) | 45 | 71/wk | active |
-| 36 | [Serpjet](https://tashan.sh/capability/pkg-serpjet-mcp.html) | 44 | 33/wk | active |
-| 37 | [Deepresearch](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-deepresearch.html) | 37 | 1 marketplaces | active |
-| 38 | [Research · lucasmccomb](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-research.html) | 37 | 1 marketplaces | active |
+| 28 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 70 | 796/wk | active |
+| 29 | [Webhound](https://tashan.sh/capability/pkg-webhound-mcp.html) | 61 | 267/wk | active |
+| 30 | [Google Surf](https://tashan.sh/capability/pkg-google-surf-mcp.html) | 60 | 374/wk | active |
+| 31 | [Firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) | 94 | 130k/wk | active |
+| 32 | [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) | 87 | 23k/wk | active |
+| 33 | [SearXNG Search](https://tashan.sh/capability/pkg-mcp-searxng.html) | 77 | 30k/wk | active |
+| 34 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 68 | 944/wk | active |
+| 35 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 68 | 911/wk | active |
+| 36 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 66 | 2k/wk | active |
+| 37 | [One Search](https://tashan.sh/capability/pkg-one-search-mcp.html) | 65 | 603/wk | active |
+| 38 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 65 | 347/wk | active |
+| 39 | [Octen](https://tashan.sh/capability/pkg-octen-mcp.html) | 61 | 288/wk | active |
+| 40 | [Taskfleet](https://tashan.sh/capability/pkg-taskfleet-mcp.html) | 57 | 280/wk | active |
+
+Showing the top 40 of 46. The full ranked shelf is at https://tashan.sh/task/web-research.html.
 
 ## What these numbers are not
 

@@ -19,40 +19,40 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Domscribe](https://tashan.sh/capability/plugin-patchorbit-domscribe-domscribe.html) | 63 | 179 ★ | active |
 | 7 | [Aptos Agent Skills](https://tashan.sh/capability/plugin-aptos-labs-aptos-agent-skills-aptos-agent-skills.html) | 56 | 19 ★ | active |
 | 8 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 82 | 51k ★ | active |
-| 9 | [Wix](https://tashan.sh/capability/plugin-wix-skills-wix.html) | 64 | 23 ★ | active |
-| 10 | [Dx Aem](https://tashan.sh/capability/plugin-easingthemes-dx-aem-flow-dx-aem.html) | 54 | 6 ★ | active |
-| 11 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 53 | 3 repos | active |
-| 12 | [Ckeditor](https://tashan.sh/capability/plugin-ckeditor-skills-ckeditor.html) | 51 | 3 ★ | active |
-| 13 | [Wasp](https://tashan.sh/capability/plugin-wasp-lang-claude-plugins-wasp.html) | 50 | 12 ★ | active |
-| 14 | [Senior Frontend](https://tashan.sh/capability/skill-alirezarezvani-senior-frontend.html) | 49 | 2 repos | active |
-| 15 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 48 | 3 marketplaces | — |
-| 16 | [Lovable](https://tashan.sh/capability/plugin-lovablelabs-mcp-lovable.html) | 48 | 2 ★ | active |
-| 17 | [Brilliant Directories · brilliantdirectories](https://tashan.sh/capability/plugin-brilliantdirectories-brilliant-directories-mcp-brilliant-directories.html) | 48 | 17 ★ | active |
-| 18 | [Anglesite](https://tashan.sh/capability/plugin-anglesite-anglesite-skills-anglesite.html) | 48 | 4 ★ | active |
-| 19 | [Ui5](https://tashan.sh/capability/plugin-ui5-plugins-coding-agents-ui5.html) | 47 | 2 marketplaces | active |
-| 20 | [Ui5 Modernization](https://tashan.sh/capability/plugin-ui5-plugins-coding-agents-ui5-modernization.html) | 47 | 2 marketplaces | active |
-| 21 | [Ui5 TypeScript Conversion](https://tashan.sh/capability/plugin-ui5-plugins-coding-agents-ui5-typescript-conversion.html) | 47 | 2 marketplaces | active |
-| 22 | [Get Design Done](https://tashan.sh/capability/plugin-hegemonart-get-design-done-get-design-done.html) | 47 | 4 ★ | active |
-| 23 | [Weegloo](https://tashan.sh/capability/plugin-weeglooapi-weegloo-mcp-plugin-weegloo.html) | 47 | 1 ★ | active |
-| 24 | [Buildable](https://tashan.sh/capability/plugin-suntay44-buildable-plugin-skills-buildable.html) | 47 | 52 ★ | active |
-| 25 | [Cloudinary](https://tashan.sh/capability/plugin-cloudinary-devs-cloudinary-plugin-cloudinary.html) | 46 | 0 ★ | active |
-| 26 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
-| 27 | [Build With WordPress](https://tashan.sh/capability/plugin-automattic-claude-code-wordpress-com-build-with-wordpress.html) | 46 | 38 ★ | active |
-| 28 | [Agentic Commerce](https://tashan.sh/capability/plugin-orcaqubits-agentic-commerce-claude-plugins-agentic-commerce.html) | 46 | 35 ★ | active |
-| 29 | [Filestack Claude Plugin](https://tashan.sh/capability/plugin-filestack-filestack-claude-plugin-filestack-claude-plugin.html) | 46 | 3 ★ | active |
-| 30 | [Vercel Plugin](https://tashan.sh/capability/plugin-tomsonxxx-lumbago-codex-vercel-plugin.html) | 46 | 1 ★ | active |
-| 31 | [Claude2figma](https://tashan.sh/capability/plugin-senlindesign-claude2figma-claude2figma.html) | 45 | 180 ★ | active |
-| 32 | [The Design Library](https://tashan.sh/capability/plugin-zeta92-design-library-plugin-the-design-library.html) | 44 | 10 ★ | active |
-| 33 | [S2 Docs](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-s2-docs.html) | 44 | 1 marketplaces | active |
-| 34 | [Laravel Boost](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-laravel-boost.html) | 42 | 1 marketplaces | — |
-| 35 | [Css Development](https://tashan.sh/capability/plugin-2389-research-claude-plugins-css-development.html) | 42 | 1 marketplaces | — |
-| 36 | [Sap Btp Build Work Zone Advanced](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-build-work-zone-advanced.html) | 42 | 1 marketplaces | — |
-| 37 | [Sap Fiori Tools](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-fiori-tools.html) | 42 | 1 marketplaces | — |
-| 38 | [Sap Sac Custom Widget](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-custom-widget.html) | 42 | 1 marketplaces | — |
-| 39 | [Sapui5](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sapui5.html) | 42 | 1 marketplaces | — |
-| 40 | [Sapui5 CLI](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sapui5-cli.html) | 42 | 1 marketplaces | — |
+| 9 | [Stripe](https://tashan.sh/capability/plugin-stripe-ai-stripe.html) | 76 | 2k ★ | active |
+| 10 | [Shopify AI Toolkit](https://tashan.sh/capability/plugin-shopify-shopify-ai-toolkit-shopify-ai-toolkit.html) | 73 | 476 ★ | active |
+| 11 | [Shopify Plugin](https://tashan.sh/capability/plugin-shopify-shopify-ai-toolkit-shopify-plugin.html) | 72 | 476 ★ | active |
+| 12 | [Sap Fiori](https://tashan.sh/capability/plugin-sap-open-ux-tools-sap-fiori-mcp-server.html) | 70 | 153 ★ | active |
+| 13 | [Wix](https://tashan.sh/capability/plugin-wix-skills-wix.html) | 64 | 23 ★ | active |
+| 14 | [Dx Aem](https://tashan.sh/capability/plugin-easingthemes-dx-aem-flow-dx-aem.html) | 54 | 6 ★ | active |
+| 15 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 53 | 3 repos | active |
+| 16 | [Ckeditor](https://tashan.sh/capability/plugin-ckeditor-skills-ckeditor.html) | 51 | 3 ★ | active |
+| 17 | [Wasp](https://tashan.sh/capability/plugin-wasp-lang-claude-plugins-wasp.html) | 50 | 12 ★ | active |
+| 18 | [Senior Frontend](https://tashan.sh/capability/skill-alirezarezvani-senior-frontend.html) | 49 | 2 repos | active |
+| 19 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 48 | 3 marketplaces | — |
+| 20 | [Lovable](https://tashan.sh/capability/plugin-lovablelabs-mcp-lovable.html) | 48 | 2 ★ | active |
+| 21 | [Brilliant Directories · brilliantdirectories](https://tashan.sh/capability/plugin-brilliantdirectories-brilliant-directories-mcp-brilliant-directories.html) | 48 | 17 ★ | active |
+| 22 | [Anglesite](https://tashan.sh/capability/plugin-anglesite-anglesite-skills-anglesite.html) | 48 | 4 ★ | active |
+| 23 | [Ui5](https://tashan.sh/capability/plugin-ui5-plugins-coding-agents-ui5.html) | 47 | 2 marketplaces | active |
+| 24 | [Ui5 Modernization](https://tashan.sh/capability/plugin-ui5-plugins-coding-agents-ui5-modernization.html) | 47 | 2 marketplaces | active |
+| 25 | [Ui5 TypeScript Conversion](https://tashan.sh/capability/plugin-ui5-plugins-coding-agents-ui5-typescript-conversion.html) | 47 | 2 marketplaces | active |
+| 26 | [Get Design Done](https://tashan.sh/capability/plugin-hegemonart-get-design-done-get-design-done.html) | 47 | 4 ★ | active |
+| 27 | [Weegloo](https://tashan.sh/capability/plugin-weeglooapi-weegloo-mcp-plugin-weegloo.html) | 47 | 1 ★ | active |
+| 28 | [Buildable](https://tashan.sh/capability/plugin-suntay44-buildable-plugin-skills-buildable.html) | 47 | 52 ★ | active |
+| 29 | [Cloudinary](https://tashan.sh/capability/plugin-cloudinary-devs-cloudinary-plugin-cloudinary.html) | 46 | 0 ★ | active |
+| 30 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
+| 31 | [Build With WordPress](https://tashan.sh/capability/plugin-automattic-claude-code-wordpress-com-build-with-wordpress.html) | 46 | 38 ★ | active |
+| 32 | [Agentic Commerce](https://tashan.sh/capability/plugin-orcaqubits-agentic-commerce-claude-plugins-agentic-commerce.html) | 46 | 35 ★ | active |
+| 33 | [Filestack Claude Plugin](https://tashan.sh/capability/plugin-filestack-filestack-claude-plugin-filestack-claude-plugin.html) | 46 | 3 ★ | active |
+| 34 | [Vercel Plugin](https://tashan.sh/capability/plugin-tomsonxxx-lumbago-codex-vercel-plugin.html) | 46 | 1 ★ | active |
+| 35 | [Claude2figma](https://tashan.sh/capability/plugin-senlindesign-claude2figma-claude2figma.html) | 45 | 180 ★ | active |
+| 36 | [The Design Library](https://tashan.sh/capability/plugin-zeta92-design-library-plugin-the-design-library.html) | 44 | 10 ★ | active |
+| 37 | [S2 Docs](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-s2-docs.html) | 44 | 1 marketplaces | active |
+| 38 | [Laravel Boost](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-laravel-boost.html) | 42 | 1 marketplaces | — |
+| 39 | [Css Development](https://tashan.sh/capability/plugin-2389-research-claude-plugins-css-development.html) | 42 | 1 marketplaces | — |
+| 40 | [Sap Btp Build Work Zone Advanced](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-build-work-zone-advanced.html) | 42 | 1 marketplaces | — |
 
-Showing the top 40 of 114. The full ranked shelf is at https://tashan.sh/role/web-dev.html.
+Showing the top 40 of 128. The full ranked shelf is at https://tashan.sh/role/web-dev.html.
 
 ## What these numbers are not
 

@@ -13,9 +13,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 65 | 284 ★ | active |
 | 2 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 61 | 27 ★ | active |
-| 3 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 61 | 37 ★ | active |
-| 4 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
-| 5 | [Legalrabbit Docx](https://tashan.sh/capability/plugin-legalrabbit-ai-legalrabbit-docx-claude-plugin-legalrabbit-docx.html) | 54 | 46 ★ | active |
+| 3 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
+| 4 | [Legalrabbit Docx](https://tashan.sh/capability/plugin-legalrabbit-ai-legalrabbit-docx-claude-plugin-legalrabbit-docx.html) | 54 | 46 ★ | active |
+| 5 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 61 | 37 ★ | active |
 | 6 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
 | 7 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 51 | 73 ★ | active |
 | 8 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | 49 | 2 repos | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Fda Consultant Specialist](https://tashan.sh/capability/skill-alirezarezvani-fda-consultant-specialist.html) | not scored | 1 repos | active |
 | 40 | [Gdpr Dsgvo Expert](https://tashan.sh/capability/skill-alirezarezvani-gdpr-dsgvo-expert.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 214. The full ranked shelf is at https://tashan.sh/role/legal.html.
+Showing the top 40 of 239. The full ranked shelf is at https://tashan.sh/role/legal.html.
 
 ## What these numbers are not
 

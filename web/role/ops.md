@@ -10,8 +10,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Knowledge management** — [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) · tashan score 74
-- **Project management** — [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) · tashan score 74
 - **Browser automation** — [Browser Harness](https://tashan.sh/capability/plugin-browser-use-browser-harness-browser-harness.html) · tashan score 79
+- **Project management** — [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) · tashan score 74
 - **Process automation** — [Safety Net](https://tashan.sh/capability/plugin-kenryu42-claude-code-safety-net-safety-net.html) · tashan score 74
 - **Web research** — [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) · tashan score 72
 
@@ -31,36 +31,36 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 62 | 381 ★ | active |
 | 11 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 58 | 24 ★ | active |
 | 12 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 58 | 32 ★ | active |
-| 13 | [Sq](https://tashan.sh/capability/plugin-derekstride-sq-sq.html) | 57 | 13 ★ | active |
-| 14 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 55 | 51 ★ | active |
-| 15 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 55 | 10 ★ | active |
-| 16 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 54 | 7 ★ | active |
-| 17 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 54 | 24 ★ | active |
-| 18 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 54 | 11 ★ | active |
-| 19 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 52 | 76 ★ | active |
-| 20 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 52 | 4 ★ | active |
-| 21 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 51 | 12 ★ | active |
-| 22 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 51 | 3 ★ | active |
-| 23 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 81 | 57k ★ | active |
-| 24 | [Nvidia Skills](https://tashan.sh/capability/plugin-nvidia-skills-nvidia-skills.html) | 77 | 3k ★ | active |
-| 25 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 77 | 5k ★ | active |
-| 26 | [Claude Harness](https://tashan.sh/capability/plugin-chachamaru127-claude-code-harness-claude-harness.html) | 76 | 3k ★ | active |
-| 27 | [Hivemind](https://tashan.sh/capability/plugin-activeloopai-hivemind-hivemind.html) | 74 | 2k ★ | active |
-| 28 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 74 | 2k ★ | active |
-| 29 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 73 | 426 ★ | active |
-| 30 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
-| 31 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 69 | 154 ★ | active |
-| 32 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 69 | 212 ★ | active |
-| 33 | [Slack · slackapi](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 68 | 86 ★ | active |
-| 34 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 68 | 433 ★ | active |
-| 35 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 67 | 452 ★ | active |
-| 36 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 67 | 118 ★ | active |
-| 37 | [Miro](https://tashan.sh/capability/plugin-miroapp-miro-ai-miro.html) | 66 | 142 ★ | active |
-| 38 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 66 | 50 ★ | active |
-| 39 | [Jira](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 64 | 46 ★ | active |
-| 40 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 64 | 48 ★ | active |
+| 13 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 55 | 51 ★ | active |
+| 14 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 55 | 10 ★ | active |
+| 15 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 54 | 7 ★ | active |
+| 16 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 54 | 24 ★ | active |
+| 17 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 54 | 11 ★ | active |
+| 18 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 52 | 76 ★ | active |
+| 19 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 52 | 4 ★ | active |
+| 20 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 51 | 12 ★ | active |
+| 21 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 51 | 3 ★ | active |
+| 22 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 81 | 57k ★ | active |
+| 23 | [Nvidia Skills](https://tashan.sh/capability/plugin-nvidia-skills-nvidia-skills.html) | 77 | 3k ★ | active |
+| 24 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 77 | 5k ★ | active |
+| 25 | [Claude Harness](https://tashan.sh/capability/plugin-chachamaru127-claude-code-harness-claude-harness.html) | 76 | 3k ★ | active |
+| 26 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 74 | 2k ★ | active |
+| 27 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 73 | 426 ★ | active |
+| 28 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
+| 29 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 69 | 154 ★ | active |
+| 30 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 69 | 212 ★ | active |
+| 31 | [Slack · slackapi](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 68 | 86 ★ | active |
+| 32 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 68 | 433 ★ | active |
+| 33 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 67 | 452 ★ | active |
+| 34 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 67 | 118 ★ | active |
+| 35 | [Miro](https://tashan.sh/capability/plugin-miroapp-miro-ai-miro.html) | 66 | 142 ★ | active |
+| 36 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 66 | 50 ★ | active |
+| 37 | [Jira](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 64 | 46 ★ | active |
+| 38 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 64 | 48 ★ | active |
+| 39 | [LLM Wiki Compiler](https://tashan.sh/capability/plugin-ussumant-llm-wiki-compiler-llm-wiki-compiler.html) | 63 | 303 ★ | active |
+| 40 | [Parallel](https://tashan.sh/capability/plugin-parallel-web-parallel-agent-skills-parallel.html) | 63 | 62 ★ | active |
 
-Showing the top 40 of 535. The full ranked shelf is at https://tashan.sh/role/ops.html.
+Showing the top 40 of 667. The full ranked shelf is at https://tashan.sh/role/ops.html.
 
 ## What these numbers are not
 

@@ -28,13 +28,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Iso42001 Specialist](https://tashan.sh/capability/skill-alirezarezvani-iso42001-specialist.html) | not scored | 1 repos | active |
 | 16 | [Risk Management Specialist](https://tashan.sh/capability/skill-alirezarezvani-risk-management-specialist.html) | not scored | 1 repos | active |
 | 17 | [Wooyun Legacy](https://tashan.sh/capability/plugin-tanweai-wooyun-legacy-wooyun-legacy.html) | not scored | 2k ★ | abandoned |
-| 18 | [Reputa](https://tashan.sh/capability/pkg-reputa-mcp.html) | 54 | 108/wk | active |
-| 19 | [Frisk](https://tashan.sh/capability/pkg-frisk-mcp.html) | 53 | 151/wk | active |
-| 20 | [Defi Guard](https://tashan.sh/capability/pkg-iniit-defi-guard-mcp.html) | 47 | 47/wk | active |
-| 21 | [Adversarial Review](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-adversarial-review.html) | 37 | 1 marketplaces | active |
-| 22 | [Agent Native](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-agent-native.html) | 37 | 1 marketplaces | active |
-| 23 | [Ce Review](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-ce-review.html) | 37 | 1 marketplaces | active |
-| 24 | [Compound Workflows](https://tashan.sh/capability/plugin-adamfeldman-compound-workflows-compound-workflows.html) | 27 | 1 ★ | active |
+| 18 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 55 | 139/wk | active |
+| 19 | [Reputa](https://tashan.sh/capability/pkg-reputa-mcp.html) | 54 | 108/wk | active |
+| 20 | [Nuguard](https://tashan.sh/capability/plugin-nuguardai-nuguard-nuguard.html) | 53 | 13 ★ | active |
+| 21 | [Frisk](https://tashan.sh/capability/pkg-frisk-mcp.html) | 53 | 151/wk | active |
+| 22 | [Mintverdict](https://tashan.sh/capability/pkg-mintverdict-mcp.html) | 50 | 75/wk | active |
+| 23 | [Defi Guard](https://tashan.sh/capability/pkg-iniit-defi-guard-mcp.html) | 47 | 47/wk | active |
+| 24 | [Adversarial Review](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-adversarial-review.html) | 37 | 1 marketplaces | active |
+| 25 | [Agent Native](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-agent-native.html) | 37 | 1 marketplaces | active |
+| 26 | [Ce Review](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-ce-review.html) | 37 | 1 marketplaces | active |
+| 27 | [Compound Workflows](https://tashan.sh/capability/plugin-adamfeldman-compound-workflows-compound-workflows.html) | 27 | 1 ★ | active |
 
 ## What these numbers are not
 

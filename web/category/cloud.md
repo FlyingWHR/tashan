@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Mobile Device](https://tashan.sh/capability/pkg-srmorete-mobile-device-mcp.html) | 63 | 507/wk | active |
 | 40 | [Truepane](https://tashan.sh/capability/pkg-truepane-mcp.html) | 63 | 375/wk | active |
 
-Showing the top 40 of 464. The full ranked shelf is at https://tashan.sh/category/cloud.html.
+Showing the top 40 of 466. The full ranked shelf is at https://tashan.sh/category/cloud.html.
 
 ## What these numbers are not
 

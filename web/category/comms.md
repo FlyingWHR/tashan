@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Gotify Rmcp](https://tashan.sh/capability/pkg-gotify-rmcp.html) | 63 | 170/wk | active |
 | 40 | [Inkbox](https://tashan.sh/capability/plugin-inkbox-ai-inkbox-inkbox.html) | 62 | 33 ★ | active |
 
-Showing the top 40 of 553. The full ranked shelf is at https://tashan.sh/category/comms.html.
+Showing the top 40 of 549. The full ranked shelf is at https://tashan.sh/category/comms.html.
 
 ## What these numbers are not
 

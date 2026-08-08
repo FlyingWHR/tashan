@@ -13,10 +13,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 56 | 13 ★ | active |
 | 2 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 53 | 6 ★ | active |
-| 3 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 51 | 3 ★ | active |
-| 4 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 81 | 57k ★ | active |
-| 5 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 61 | 18 ★ | active |
-| 6 | [Competitive Intel](https://tashan.sh/capability/skill-alirezarezvani-competitive-intel.html) | 52 | 3 repos | active |
+| 3 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 81 | 57k ★ | active |
+| 4 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 61 | 18 ★ | active |
+| 5 | [Competitive Intel](https://tashan.sh/capability/skill-alirezarezvani-competitive-intel.html) | 52 | 3 repos | active |
+| 6 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 51 | 3 ★ | active |
 | 7 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 51 | 3 ★ | active |
 | 8 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 50 | 3 ★ | active |
 | 9 | [Sales Engineer](https://tashan.sh/capability/skill-alirezarezvani-sales-engineer.html) | 49 | 2 repos | active |
@@ -37,8 +37,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 24 | [Dossier · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-dossier.html) | not scored | 1 repos | active |
 | 25 | [Patent](https://tashan.sh/capability/skill-alirezarezvani-patent.html) | not scored | 1 repos | active |
 | 26 | [Pulse](https://tashan.sh/capability/skill-alirezarezvani-pulse.html) | not scored | 1 repos | active |
-| 27 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 56 | 205/wk | active |
-| 28 | [Prexist](https://tashan.sh/capability/pkg-prexist.html) | 35 | 31/wk | active |
+| 27 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 70 | 796/wk | active |
+| 28 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 56 | 205/wk | active |
+| 29 | [Prexist](https://tashan.sh/capability/pkg-prexist.html) | 35 | 31/wk | active |
 
 ## What these numbers are not
 

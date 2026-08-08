@@ -12,13 +12,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [AI Context](https://tashan.sh/capability/pkg-vibgrate-cli.html) | 72 | 3k/wk | active |
-| 2 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 66 | 660/wk | active |
-| 3 | [Local Model Suitability](https://tashan.sh/capability/pkg-local-model-suitability-mcp.html) | 63 | 275/wk | active |
-| 4 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 55 | 84/wk | active |
-| 5 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
-| 6 | [Ragdrift](https://tashan.sh/capability/pkg-mukundakatta-ragdrift-mcp.html) | 37 | 38/wk | active |
-| 7 | [ATOM Pricing Intelligence](https://tashan.sh/capability/pkg-atom-mcp-server.html) | 33 | 66/wk | active |
-| 8 | [Forge · rightnow](https://tashan.sh/capability/pkg-rightnow-forge-mcp-server.html) | 29 | 64/wk | abandoned |
+| 2 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 52 | 147 ★ | active |
+| 3 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 66 | 660/wk | active |
+| 4 | [Gpusmarket](https://tashan.sh/capability/pkg-gpusmarket.html) | 63 | 310/wk | active |
+| 5 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 55 | 84/wk | active |
+| 6 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
+| 7 | [Edgegate](https://tashan.sh/capability/pkg-edgegate-mcp.html) | 47 | 11/wk | active |
+| 8 | [Ragdrift](https://tashan.sh/capability/pkg-mukundakatta-ragdrift-mcp.html) | 37 | 38/wk | active |
+| 9 | [ATOM Pricing Intelligence](https://tashan.sh/capability/pkg-atom-mcp-server.html) | 33 | 66/wk | active |
+| 10 | [Valhalla](https://tashan.sh/capability/plugin-lezhang7-autoresearch-valhalla-valhalla.html) | 32 | 0 ★ | active |
+| 11 | [Forge · rightnow](https://tashan.sh/capability/pkg-rightnow-forge-mcp-server.html) | 29 | 64/wk | abandoned |
 
 ## What these numbers are not
 

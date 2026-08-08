@@ -23,10 +23,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 61 | 27 ★ | active |
 | 11 | [Malchela](https://tashan.sh/capability/plugin-dwmetz-malchela-malchela.html) | 61 | 114 ★ | active |
 | 12 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 58 | 21 ★ | active |
-| 13 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 57 | 11 ★ | active |
-| 14 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 56 | 12 ★ | active |
-| 15 | [Descope Skills](https://tashan.sh/capability/plugin-descope-skills-descope-skills.html) | 54 | 12 ★ | active |
-| 16 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 61 | 43 ★ | active |
+| 13 | [Descope Skills](https://tashan.sh/capability/plugin-descope-skills-descope-skills.html) | 54 | 12 ★ | active |
+| 14 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 61 | 43 ★ | active |
+| 15 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 57 | 11 ★ | active |
+| 16 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 56 | 12 ★ | active |
 | 17 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 51 | 73 ★ | active |
 | 18 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 50 | 39 ★ | active |
 | 19 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | 49 | 2 repos | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 42 | 1 marketplaces | active |
 | 40 | [Keyward](https://tashan.sh/capability/plugin-albemiglio-keyward-keyward.html) | 38 | 1 ★ | active |
 
-Showing the top 40 of 127. The full ranked shelf is at https://tashan.sh/task/security-review.html.
+Showing the top 40 of 146. The full ranked shelf is at https://tashan.sh/task/security-review.html.
 
 ## What these numbers are not
 

@@ -24,35 +24,35 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Adversarial Spec](https://tashan.sh/capability/plugin-zscole-adversarial-spec-adversarial-spec.html) | 52 | 554 ★ | stable |
 | 12 | [Specops](https://tashan.sh/capability/plugin-sanmak-specops-specops.html) | 52 | 50 ★ | active |
 | 13 | [Jig](https://tashan.sh/capability/plugin-ramboz-jig-jig.html) | 52 | 4 ★ | active |
-| 14 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 49 | 20 ★ | active |
-| 15 | [Writing Plans](https://tashan.sh/capability/skill-obra-writing-plans.html) | 57 | 5 repos | active |
-| 16 | [Ccf](https://tashan.sh/capability/plugin-naniiluja-ccf-ccf.html) | 57 | 9 ★ | active |
-| 17 | [Brainstorming](https://tashan.sh/capability/skill-obra-brainstorming.html) | 55 | 4 repos | active |
-| 18 | [Spec Driven Development](https://tashan.sh/capability/plugin-gamefixxer-spec-driven-development-spec-driven-development.html) | 51 | 3 ★ | active |
-| 19 | [Grill Me](https://tashan.sh/capability/skill-alirezarezvani-grill-me.html) | 49 | 2 repos | active |
-| 20 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 47 | 5 ★ | active |
-| 21 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 46 | 3 ★ | active |
-| 22 | [Belmont](https://tashan.sh/capability/plugin-blake-simpson-belmont-belmont.html) | 46 | 4 ★ | active |
-| 23 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 45 | 4 ★ | active |
-| 24 | [Spec](https://tashan.sh/capability/plugin-kamioj-spec-workflow-spec.html) | 45 | 9 ★ | active |
-| 25 | [Mindpowers](https://tashan.sh/capability/plugin-rohitgehe05-mindpowers-mindpowers.html) | 44 | 3 ★ | active |
-| 26 | [Vibe Cartographer](https://tashan.sh/capability/plugin-estevanhernandez-stack-ed-vibe-cartographer-vibe-cartographer.html) | 44 | 1 ★ | active |
-| 27 | [Spec First](https://tashan.sh/capability/plugin-bitcraft-apps-spec-first-spec-first.html) | 44 | 4 ★ | active |
-| 28 | [Waterfall](https://tashan.sh/capability/plugin-mgallet92i-waterfall-waterfall.html) | 44 | 2 ★ | active |
-| 29 | [Zsl Superpowers](https://tashan.sh/capability/plugin-zunosmartlabs-zsl-superpowers-zsl-superpowers.html) | 44 | 1 ★ | active |
-| 30 | [Cc Orchestrador Subagents](https://tashan.sh/capability/plugin-allanharlen-cc-orchestrador-subagents-cc-orchestrador-subagents.html) | 43 | 0 ★ | active |
-| 31 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | not scored | 1 repos | active |
-| 32 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | not scored | 1 repos | active |
-| 33 | [Spec Driven Workflow](https://tashan.sh/capability/skill-alirezarezvani-spec-driven-workflow.html) | not scored | 1 repos | active |
-| 34 | [Agile Product Owner](https://tashan.sh/capability/skill-alirezarezvani-agile-product-owner.html) | not scored | 1 repos | active |
-| 35 | [Code To Prd](https://tashan.sh/capability/skill-alirezarezvani-code-to-prd.html) | not scored | 1 repos | active |
-| 36 | [Product Manager Toolkit](https://tashan.sh/capability/skill-alirezarezvani-product-manager-toolkit.html) | not scored | 1 repos | active |
-| 37 | [Spec To Repo](https://tashan.sh/capability/skill-alirezarezvani-spec-to-repo.html) | not scored | 1 repos | active |
-| 38 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 71 | 504 ★ | active |
-| 39 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 68 | 205 ★ | active |
-| 40 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 63 | 96 ★ | active |
+| 14 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 68 | 205 ★ | active |
+| 15 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 63 | 96 ★ | active |
+| 16 | [Memex Checkout](https://tashan.sh/capability/plugin-mindset-ai-memex-ai-memex-checkout.html) | 62 | 29 ★ | active |
+| 17 | [Writing Plans](https://tashan.sh/capability/skill-obra-writing-plans.html) | 57 | 5 repos | active |
+| 18 | [Ccf](https://tashan.sh/capability/plugin-naniiluja-ccf-ccf.html) | 57 | 9 ★ | active |
+| 19 | [Brainstorming](https://tashan.sh/capability/skill-obra-brainstorming.html) | 55 | 4 repos | active |
+| 20 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 53 | 5 ★ | active |
+| 21 | [Spec Driven Development](https://tashan.sh/capability/plugin-gamefixxer-spec-driven-development-spec-driven-development.html) | 51 | 3 ★ | active |
+| 22 | [Grill Me](https://tashan.sh/capability/skill-alirezarezvani-grill-me.html) | 49 | 2 repos | active |
+| 23 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 49 | 20 ★ | active |
+| 24 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 47 | 5 ★ | active |
+| 25 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 46 | 3 ★ | active |
+| 26 | [Belmont](https://tashan.sh/capability/plugin-blake-simpson-belmont-belmont.html) | 46 | 4 ★ | active |
+| 27 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 45 | 4 ★ | active |
+| 28 | [Spec](https://tashan.sh/capability/plugin-kamioj-spec-workflow-spec.html) | 45 | 9 ★ | active |
+| 29 | [Mindpowers](https://tashan.sh/capability/plugin-rohitgehe05-mindpowers-mindpowers.html) | 44 | 3 ★ | active |
+| 30 | [Vibe Cartographer](https://tashan.sh/capability/plugin-estevanhernandez-stack-ed-vibe-cartographer-vibe-cartographer.html) | 44 | 1 ★ | active |
+| 31 | [Spec First](https://tashan.sh/capability/plugin-bitcraft-apps-spec-first-spec-first.html) | 44 | 4 ★ | active |
+| 32 | [Waterfall](https://tashan.sh/capability/plugin-mgallet92i-waterfall-waterfall.html) | 44 | 2 ★ | active |
+| 33 | [Zsl Superpowers](https://tashan.sh/capability/plugin-zunosmartlabs-zsl-superpowers-zsl-superpowers.html) | 44 | 1 ★ | active |
+| 34 | [Cc Orchestrador Subagents](https://tashan.sh/capability/plugin-allanharlen-cc-orchestrador-subagents-cc-orchestrador-subagents.html) | 43 | 0 ★ | active |
+| 35 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | not scored | 1 repos | active |
+| 36 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | not scored | 1 repos | active |
+| 37 | [Spec Driven Workflow](https://tashan.sh/capability/skill-alirezarezvani-spec-driven-workflow.html) | not scored | 1 repos | active |
+| 38 | [Agile Product Owner](https://tashan.sh/capability/skill-alirezarezvani-agile-product-owner.html) | not scored | 1 repos | active |
+| 39 | [Code To Prd](https://tashan.sh/capability/skill-alirezarezvani-code-to-prd.html) | not scored | 1 repos | active |
+| 40 | [Product Manager Toolkit](https://tashan.sh/capability/skill-alirezarezvani-product-manager-toolkit.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/prd-and-specs.html.
+Showing the top 40 of 55. The full ranked shelf is at https://tashan.sh/task/prd-and-specs.html.
 
 ## What these numbers are not
 

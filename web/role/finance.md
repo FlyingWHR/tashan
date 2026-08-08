@@ -12,13 +12,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Vulcan](https://tashan.sh/capability/plugin-ellipsis-labs-vulcan-cli-vulcan.html) | 59 | 18 ★ | active |
-| 2 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 51 | 3 ★ | active |
-| 3 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 58 | 17 ★ | active |
-| 4 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 57 | 43 ★ | active |
-| 5 | [Financial Planner](https://tashan.sh/capability/plugin-cjpatten-canadian-finance-planner-skill-financial-planner.html) | 55 | 43 ★ | active |
-| 6 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 54 | 12 ★ | active |
-| 7 | [Credyt](https://tashan.sh/capability/plugin-credyt-ai-skills-credyt.html) | 53 | 53 ★ | active |
-| 8 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 62 | 49 ★ | active |
+| 2 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 58 | 17 ★ | active |
+| 3 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 57 | 43 ★ | active |
+| 4 | [Financial Planner](https://tashan.sh/capability/plugin-cjpatten-canadian-finance-planner-skill-financial-planner.html) | 55 | 43 ★ | active |
+| 5 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 54 | 12 ★ | active |
+| 6 | [Credyt](https://tashan.sh/capability/plugin-credyt-ai-skills-credyt.html) | 53 | 53 ★ | active |
+| 7 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 62 | 49 ★ | active |
+| 8 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 51 | 3 ★ | active |
 | 9 | [Datarails Financeos](https://tashan.sh/capability/plugin-datarails-dr-claude-code-plugins-re-datarails-financeos.html) | 51 | 3 ★ | active |
 | 10 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 51 | 3 ★ | active |
 | 11 | [Paddle · paddlehq](https://tashan.sh/capability/plugin-paddlehq-paddle-agent-skills-paddle.html) | 51 | 3 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Research Finance](https://tashan.sh/capability/skill-alirezarezvani-research-finance.html) | not scored | 1 repos | active |
 | 40 | [Braintree Automation](https://tashan.sh/capability/skill-composiohq-braintree-automation.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 141. The full ranked shelf is at https://tashan.sh/role/finance.html.
+Showing the top 40 of 163. The full ranked shelf is at https://tashan.sh/role/finance.html.
 
 ## What these numbers are not
 

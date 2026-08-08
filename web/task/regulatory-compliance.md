@@ -13,8 +13,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 65 | 284 ★ | active |
 | 2 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 61 | 27 ★ | active |
-| 3 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 61 | 37 ★ | active |
-| 4 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
+| 3 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
+| 4 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 61 | 37 ★ | active |
 | 5 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 51 | 73 ★ | active |
 | 6 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | 49 | 2 repos | active |
 | 7 | [Senior Secops](https://tashan.sh/capability/skill-alirezarezvani-senior-secops.html) | 49 | 2 repos | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Quality Documentation Manager](https://tashan.sh/capability/skill-alirezarezvani-quality-documentation-manager.html) | not scored | 1 repos | active |
 | 40 | [Quality Manager Qmr](https://tashan.sh/capability/skill-alirezarezvani-quality-manager-qmr.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 187. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
+Showing the top 40 of 207. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
 
 ## What these numbers are not
 

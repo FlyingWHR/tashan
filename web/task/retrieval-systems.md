@@ -29,30 +29,30 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 47 | 3 ★ | active |
 | 17 | [Gnosis](https://tashan.sh/capability/plugin-nicholasglazer-gnosis-mcp-gnosis-mcp.html) | 46 | 25 ★ | active |
 | 18 | [Sap AI Core](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-ai-core.html) | 42 | 1 marketplaces | — |
-| 19 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 69 | 402 ★ | active |
-| 20 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 40 | 1 marketplaces | active |
+| 19 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 40 | 1 marketplaces | active |
+| 20 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 69 | 402 ★ | active |
 | 21 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 75 | 3k ★ | active |
-| 22 | [Doc Bridge](https://tashan.sh/capability/pkg-agentskit-doc-bridge.html) | 60 | 247/wk | active |
-| 23 | [Neuromcp](https://tashan.sh/capability/pkg-neuromcp.html) | 59 | 235/wk | active |
-| 24 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 66 | 660/wk | active |
-| 25 | [Forcedream](https://tashan.sh/capability/pkg-forcedream-mcp-server.html) | 65 | 511/wk | active |
-| 26 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 65 | 347/wk | active |
-| 27 | [Kaval](https://tashan.sh/capability/pkg-usekaval-mcp.html) | 63 | 343/wk | active |
-| 28 | [Memory · cerefox](https://tashan.sh/capability/pkg-cerefox-memory.html) | 60 | 167/wk | active |
-| 29 | [Wso2 Docs](https://tashan.sh/capability/pkg-wso2-docs-mcp-server.html) | 59 | 242/wk | active |
-| 30 | [Nakkas](https://tashan.sh/capability/pkg-nakkas.html) | 56 | 184/wk | active |
-| 31 | [Marsnme](https://tashan.sh/capability/pkg-marsnme-mcp-gateway.html) | 54 | 132/wk | active |
-| 32 | [Freshvault](https://tashan.sh/capability/pkg-freshvault.html) | 53 | 128/wk | active |
-| 33 | [Memex](https://tashan.sh/capability/pkg-stifler-memex-mcp.html) | 53 | 85/wk | active |
-| 34 | [Freshcontext](https://tashan.sh/capability/pkg-freshcontext-mcp.html) | 52 | 85/wk | active |
-| 35 | [Vibe Hnindex](https://tashan.sh/capability/pkg-vibe-hnindex.html) | 51 | 118/wk | active |
-| 36 | [Svg Tracer](https://tashan.sh/capability/pkg-pulsemcp-svg-tracer-mcp-server.html) | 50 | 85/wk | active |
-| 37 | [Refinery](https://tashan.sh/capability/pkg-larelabs-refinery-mcp.html) | 47 | 63/wk | active |
-| 38 | [Ainative Zerodb](https://tashan.sh/capability/pkg-ainative-zerodb-mcp-server.html) | 47 | 30/wk | active |
-| 39 | [Opengate](https://tashan.sh/capability/pkg-pharmatools-opengate-mcp.html) | 46 | 44/wk | active |
-| 40 | [Deep Research · Perufitlife](https://tashan.sh/capability/pkg-deep-research-mcp-server.html) | 45 | 71/wk | active |
+| 22 | [Conventions](https://tashan.sh/capability/pkg-conventions-mcp.html) | 56 | 159/wk | active |
+| 23 | [Paparats – Local Semantic Code Search](https://tashan.sh/capability/pkg-paparats-cli.html) | 70 | 2k/wk | active |
+| 24 | [Doc Bridge](https://tashan.sh/capability/pkg-agentskit-doc-bridge.html) | 60 | 247/wk | active |
+| 25 | [Neuromcp](https://tashan.sh/capability/pkg-neuromcp.html) | 59 | 235/wk | active |
+| 26 | [Gctrl](https://tashan.sh/capability/pkg-gctrl-mcp.html) | 46 | 39/wk | active |
+| 27 | [Local RAG](https://tashan.sh/capability/pkg-mcp-local-rag.html) | 72 | 4k/wk | active |
+| 28 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 70 | 2k/wk | active |
+| 29 | [Prism](https://tashan.sh/capability/pkg-prism-mcp-server.html) | 70 | 2k/wk | active |
+| 30 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 67 | 578/wk | active |
+| 31 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 66 | 660/wk | active |
+| 32 | [Forcedream](https://tashan.sh/capability/pkg-forcedream-mcp-server.html) | 65 | 511/wk | active |
+| 33 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 65 | 347/wk | active |
+| 34 | [Ainative Zerodb Memory](https://tashan.sh/capability/pkg-ainative-zerodb-memory-mcp.html) | 64 | 581/wk | active |
+| 35 | [Local Memory](https://tashan.sh/capability/pkg-studiomeyer-local-memory-mcp.html) | 64 | 485/wk | active |
+| 36 | [Knowmind](https://tashan.sh/capability/pkg-knowmind.html) | 64 | 313/wk | active |
+| 37 | [Kaval](https://tashan.sh/capability/pkg-usekaval-mcp.html) | 63 | 343/wk | active |
+| 38 | [Ainative Memory](https://tashan.sh/capability/pkg-ainative-memory-mcp.html) | 60 | 625/wk | active |
+| 39 | [RAG Rat](https://tashan.sh/capability/pkg-rag-rat-bin.html) | 60 | 247/wk | active |
+| 40 | [Memory · cerefox](https://tashan.sh/capability/pkg-cerefox-memory.html) | 60 | 167/wk | active |
 
-Showing the top 40 of 54. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
+Showing the top 40 of 75. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
 
 ## What these numbers are not
 

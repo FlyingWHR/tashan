@@ -37,22 +37,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 24 | [Sap Btp Master Data Integration](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-master-data-integration.html) | 42 | 1 marketplaces | — |
 | 25 | [Sap Datasphere](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-datasphere.html) | 42 | 1 marketplaces | — |
 | 26 | [Sap Hana Cloud Data Intelligence](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cloud-data-intelligence.html) | 42 | 1 marketplaces | — |
-| 27 | [Cdo Review](https://tashan.sh/capability/skill-alirezarezvani-cdo-review.html) | not scored | 1 repos | active |
-| 28 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | not scored | 1 repos | active |
-| 29 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | not scored | 1 repos | active |
-| 30 | [Universal Scraping Architect](https://tashan.sh/capability/skill-alirezarezvani-universal-scraping-architect.html) | not scored | 1 repos | active |
-| 31 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | not scored | 32 ★ | abandoned |
-| 32 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 62 | 25 ★ | active |
-| 33 | [Bigtable](https://tashan.sh/capability/plugin-googlecloudplatform-cloud-bigtable-ecosystem-bigtable.html) | 59 | 20 ★ | active |
-| 34 | [Versori Skills](https://tashan.sh/capability/plugin-versori-cli-versori-skills.html) | 56 | 12 ★ | active |
-| 35 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 53 | 6 ★ | active |
-| 36 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 40 | 1 marketplaces | active |
+| 27 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 40 | 1 marketplaces | active |
+| 28 | [Cdo Review](https://tashan.sh/capability/skill-alirezarezvani-cdo-review.html) | not scored | 1 repos | active |
+| 29 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | not scored | 1 repos | active |
+| 30 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | not scored | 1 repos | active |
+| 31 | [Universal Scraping Architect](https://tashan.sh/capability/skill-alirezarezvani-universal-scraping-architect.html) | not scored | 1 repos | active |
+| 32 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | not scored | 32 ★ | abandoned |
+| 33 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 62 | 25 ★ | active |
+| 34 | [Bigtable](https://tashan.sh/capability/plugin-googlecloudplatform-cloud-bigtable-ecosystem-bigtable.html) | 59 | 20 ★ | active |
+| 35 | [Versori Skills](https://tashan.sh/capability/plugin-versori-cli-versori-skills.html) | 56 | 12 ★ | active |
+| 36 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 53 | 6 ★ | active |
 | 37 | [Snowflake Cortex Code](https://tashan.sh/capability/plugin-snowflake-labs-snowflake-ai-kit-snowflake-cortex-code.html) | 64 | 32 ★ | active |
-| 38 | [Tierward](https://tashan.sh/capability/pkg-tierward.html) | 48 | 37/wk | active |
-| 39 | [Sales](https://tashan.sh/capability/pkg-autostackup-sales.html) | 44 | 46/wk | active |
-| 40 | [Bach Snowflake](https://tashan.sh/capability/pkg-bach-snowflake-mcp.html) | 44 | 31/wk | active |
+| 38 | [Dev Team Kit Fv](https://tashan.sh/capability/plugin-felvieira-claude-skills-fv-dev-team-kit-fv.html) | 56 | 20 ★ | active |
+| 39 | [Tierward](https://tashan.sh/capability/pkg-tierward.html) | 48 | 37/wk | active |
+| 40 | [Ultraweb](https://tashan.sh/capability/plugin-blyatiful1-ultraweb-ultraweb.html) | 44 | 1 ★ | active |
 
-Showing the top 40 of 45. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
+Showing the top 40 of 47. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
 
 ## What these numbers are not
 

@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Ckan](https://tashan.sh/capability/pkg-aborruso-ckan-mcp-server.html) | 68 | 875/wk | active |
 | 40 | [Chart](https://tashan.sh/capability/pkg-bicharts-chart-mcp.html) | 67 | 1k/wk | active |
 
-Showing the top 40 of 968. The full ranked shelf is at https://tashan.sh/category/design.html.
+Showing the top 40 of 958. The full ranked shelf is at https://tashan.sh/category/design.html.
 
 ## What these numbers are not
 

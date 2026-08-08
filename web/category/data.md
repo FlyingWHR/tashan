@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 65 | 865/wk | active |
 | 40 | [Oe](https://tashan.sh/capability/pkg-openenthrium-oe-mcp.html) | 65 | 821/wk | active |
 
-Showing the top 40 of 726. The full ranked shelf is at https://tashan.sh/category/data.html.
+Showing the top 40 of 722. The full ranked shelf is at https://tashan.sh/category/data.html.
 
 ## What these numbers are not
 

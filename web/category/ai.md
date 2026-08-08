@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Claudexor](https://tashan.sh/capability/pkg-claudexor.html) | 65 | 586/wk | active |
 | 40 | [Lm](https://tashan.sh/capability/pkg-houtini-lm.html) | 65 | 444/wk | active |
 
-Showing the top 40 of 589. The full ranked shelf is at https://tashan.sh/category/ai.html.
+Showing the top 40 of 583. The full ranked shelf is at https://tashan.sh/category/ai.html.
 
 ## What these numbers are not
 

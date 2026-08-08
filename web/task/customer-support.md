@@ -27,6 +27,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Quick Desk](https://tashan.sh/capability/pkg-quick-desk-mcp.html) | 56 | 202/wk | active |
 | 15 | [Freescout](https://tashan.sh/capability/pkg-verygoodplugins-mcp-freescout.html) | 50 | 217/wk | active |
 | 16 | [Pylon](https://tashan.sh/capability/pkg-pylon-mcp.html) | 37 | 82/wk | active |
+| 17 | [Casemargin](https://tashan.sh/capability/pkg-casemargin-mcp-server.html) | 29 | — | active |
 
 ## What these numbers are not
 

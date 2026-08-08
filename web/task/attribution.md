@@ -21,7 +21,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 45 | 3 ★ | active |
 | 9 | [Googleads Automation](https://tashan.sh/capability/skill-composiohq-googleads-automation.html) | not scored | 1 repos | active |
 | 10 | [Social Media Analyzer](https://tashan.sh/capability/skill-alirezarezvani-social-media-analyzer.html) | not scored | 1 repos | active |
-| 11 | [AI Attribution](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-ai-attribution.html) | 41 | 1 marketplaces | active |
+| 11 | [Humansurvey](https://tashan.sh/capability/pkg-humansurvey-mcp.html) | 66 | 799/wk | active |
+| 12 | [AI Attribution](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-ai-attribution.html) | 41 | 1 marketplaces | active |
 
 ## What these numbers are not
 

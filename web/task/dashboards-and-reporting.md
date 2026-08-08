@@ -11,11 +11,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 76 | 4k ★ | active |
-| 2 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
-| 3 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 64 | 100 ★ | active |
-| 4 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 54 | 12 ★ | active |
-| 5 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 54 | 7 ★ | active |
+| 1 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 64 | 100 ★ | active |
+| 2 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 54 | 12 ★ | active |
+| 3 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 54 | 7 ★ | active |
+| 4 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 76 | 4k ★ | active |
+| 5 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
 | 6 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 69 | 64 ★ | active |
 | 7 | [Session Report](https://tashan.sh/capability/skill-anthropics-session-report.html) | 50 | 2 repos | active |
 | 8 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 50 | 2 ★ | active |
@@ -40,16 +40,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Looker](https://tashan.sh/capability/plugin-gemini-cli-extensions-looker-looker.html) | 66 | 52 ★ | active |
 | 28 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 65 | 30 ★ | active |
 | 29 | [Preset CLI Skills](https://tashan.sh/capability/plugin-preset-io-agent-skills-preset-cli-skills.html) | 60 | 10 ★ | active |
-| 30 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 63 | 334/wk | active |
-| 31 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 60 | 40 ★ | active |
-| 32 | [Dashboards](https://tashan.sh/capability/pkg-mcp-dashboards.html) | 52 | 142/wk | active |
-| 33 | [Tabler](https://tashan.sh/capability/pkg-tabler-mcp-server.html) | 46 | 45/wk | active |
-| 34 | [Data Visualisation And Publishing](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-data-visualisation-and-publishing.html) | 41 | 1 marketplaces | active |
-| 35 | [Toggl](https://tashan.sh/capability/pkg-verygoodplugins-mcp-toggl.html) | 41 | 48/wk | active |
-| 36 | [Email Analytics](https://tashan.sh/capability/plugin-sendx-email-skills-email-analytics.html) | 39 | 1 marketplaces | active |
-| 37 | [Ship Readiness](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-ship-readiness.html) | 37 | 1 marketplaces | active |
-| 38 | [Startup Dashboard](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-startup-dashboard.html) | 37 | 1 marketplaces | active |
-| 39 | [Visuals](https://tashan.sh/capability/pkg-harrybin-visuals-mcp.html) | 37 | 44/wk | active |
+| 30 | [Mermaid](https://tashan.sh/capability/pkg-peng-shawn-mermaid-mcp-server.html) | 53 | 400/wk | stable |
+| 31 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 63 | 334/wk | active |
+| 32 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 60 | 40 ★ | active |
+| 33 | [Salesforce Metadata](https://tashan.sh/capability/pkg-salesforce-metadata-mcp.html) | 66 | 746/wk | active |
+| 34 | [Agentic Mermaid](https://tashan.sh/capability/pkg-agentic-mermaid.html) | 63 | 550/wk | active |
+| 35 | [X402 Dataviz](https://tashan.sh/capability/pkg-x402-dataviz-mcp.html) | 54 | 177/wk | active |
+| 36 | [Dashboardbase](https://tashan.sh/capability/pkg-dashboardbase-mcp.html) | 53 | 136/wk | active |
+| 37 | [Scv](https://tashan.sh/capability/plugin-wookiya1364-scv-claude-code-scv.html) | 52 | 7 ★ | active |
+| 38 | [Dashboards](https://tashan.sh/capability/pkg-mcp-dashboards.html) | 52 | 142/wk | active |
+| 39 | [Tabler](https://tashan.sh/capability/pkg-tabler-mcp-server.html) | 46 | 45/wk | active |
+| 40 | [Data Visualisation And Publishing](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-data-visualisation-and-publishing.html) | 41 | 1 marketplaces | active |
+
+Showing the top 40 of 46. The full ranked shelf is at https://tashan.sh/task/dashboards-and-reporting.html.
 
 ## What these numbers are not
 

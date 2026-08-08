@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Scrapingdog](https://tashan.sh/capability/pkg-scrapingdog-mcp.html) | 57 | 294/wk | active |
 | 40 | [Easytable](https://tashan.sh/capability/pkg-easytable-mcp.html) | 57 | 241/wk | active |
 
-Showing the top 40 of 149. The full ranked shelf is at https://tashan.sh/category/browser.html.
+Showing the top 40 of 150. The full ranked shelf is at https://tashan.sh/category/browser.html.
 
 ## What these numbers are not
 

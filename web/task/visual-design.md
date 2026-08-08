@@ -19,10 +19,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 60 | 40 ★ | active |
 | 7 | [Canva](https://tashan.sh/capability/plugin-canva-sdks-canva-skills-canva.html) | 59 | 53 ★ | active |
 | 8 | [Bridge Ds](https://tashan.sh/capability/plugin-noemuch-bridge-bridge-ds.html) | 53 | 155 ★ | active |
-| 9 | [F Mcp Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 53 | 9 ★ | active |
-| 10 | [Pencil Dev Skill](https://tashan.sh/capability/plugin-nisus74-pencil-skill-pencil-dev-skill.html) | 53 | 15 ★ | active |
-| 11 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 82 | 51k ★ | active |
-| 12 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 53 | 3 repos | active |
+| 9 | [Pencil Dev Skill](https://tashan.sh/capability/plugin-nisus74-pencil-skill-pencil-dev-skill.html) | 53 | 15 ★ | active |
+| 10 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 82 | 51k ★ | active |
+| 11 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 53 | 3 repos | active |
+| 12 | [F Mcp Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 53 | 9 ★ | active |
 | 13 | [Canvas Design](https://tashan.sh/capability/skill-anthropics-canvas-design.html) | 50 | 2 repos | active |
 | 14 | [Design System](https://tashan.sh/capability/skill-alirezarezvani-design-system.html) | 49 | 2 repos | active |
 | 15 | [UI Design System](https://tashan.sh/capability/skill-alirezarezvani-ui-design-system.html) | 49 | 2 repos | active |
@@ -47,12 +47,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 34 | [Apple Hig Expert](https://tashan.sh/capability/skill-alirezarezvani-apple-hig-expert.html) | not scored | 1 repos | active |
 | 35 | [Magicpath](https://tashan.sh/capability/plugin-magicpathai-agent-skills-magicpath.html) | 65 | 84 ★ | active |
 | 36 | [Brand Guidelines](https://tashan.sh/capability/skill-anthropics-brand-guidelines.html) | 55 | 4 repos | active |
-| 37 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 70 | 2k/wk | active |
-| 38 | [Chrome Bridge](https://tashan.sh/capability/pkg-chrome-bridge-mcp.html) | 68 | 2k/wk | active |
-| 39 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 65 | 897/wk | active |
-| 40 | [MotionSpec — verified web motion (reduced-motion / WCAG)](https://tashan.sh/capability/pkg-motionspec.html) | 61 | 268/wk | active |
+| 37 | [Figma Developer](https://tashan.sh/capability/pkg-figma-developer-mcp.html) | 88 | 82k/wk | active |
+| 38 | [Figma Console](https://tashan.sh/capability/pkg-figma-console-mcp.html) | 87 | 31k/wk | active |
+| 39 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
+| 40 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 70 | 2k/wk | active |
 
-Showing the top 40 of 53. The full ranked shelf is at https://tashan.sh/task/visual-design.html.
+Showing the top 40 of 67. The full ranked shelf is at https://tashan.sh/task/visual-design.html.
 
 ## What these numbers are not
 

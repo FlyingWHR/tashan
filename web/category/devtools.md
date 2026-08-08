@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Lean Kg](https://tashan.sh/capability/plugin-freepeak-leankg-lean-kg.html) | 69 | 213 ★ | active |
 | 40 | [Wozcode](https://tashan.sh/capability/plugin-withwoz-wozcode-plugin-wozcode.html) | 69 | 196 ★ | active |
 
-Showing the top 40 of 1,501. The full ranked shelf is at https://tashan.sh/category/devtools.html.
+Showing the top 40 of 1,492. The full ranked shelf is at https://tashan.sh/category/devtools.html.
 
 ## What these numbers are not
 

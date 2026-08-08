@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Agent Recall](https://tashan.sh/capability/pkg-agent-recall-mcp.html) | 67 | 614/wk | active |
 | 40 | [Sparda](https://tashan.sh/capability/pkg-sparda-mcp.html) | 67 | 595/wk | active |
 
-Showing the top 40 of 1,106. The full ranked shelf is at https://tashan.sh/category/security.html.
+Showing the top 40 of 1,101. The full ranked shelf is at https://tashan.sh/category/security.html.
 
 ## What these numbers are not
 

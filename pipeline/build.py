@@ -1123,6 +1123,9 @@ def export(con):
             "plugin_market_repo",
             "co_used","adoption","freshness","upkeep","tashan_score",
             "expertise","expertise_verdict","expertise_note","retention","retention_note",
+            # fetched so a verdict can be WITHDRAWN when its evidence is a document about something
+            # else — see the doc-evidence gate in the row loop below
+            "doc_shared_with","doc_names_self",
             "category","in_registry","in_configs",
             "gh_stars","gh_forks","gh_open_issues","gh_pushed","gh_contributors","gh_last_release",
             "gh_license","gh_topics","gh_has_discussions","gh_archived","vitality","single_maintainer",
@@ -1229,6 +1232,43 @@ def export(con):
     # enrichment pass away from a score and they would be on the board.
     PATHY = re.compile(r"^[/~]|^[A-Za-z]:[\\/]|\\\\|^(cd|source|export|sudo|bash|sh|python|node|go)\s"
                        r"|&&|\.(jar|exe|ledger)$|/etc/|OneDrive", re.I)
+
+    def withhold_borrowed_grade(o):
+        """Do not publish a JUDGMENT whose evidence is a document about something else.
+
+        87 of our published negative verdicts rested on a README the capability shares with other
+        packages, or one that never names it. The worst is @modelcontextprotocol/server-filesystem
+        — Anthropic's own, 482k downloads a week — graded `thin` because it appears as a list entry
+        in a monorepo index it shares with three siblings. The note was accurate about the document.
+        The verdict published as a judgment on the software.
+
+        doc_signals.py already caps these at `thin` so a grade cannot borrow CREDIT from someone
+        else's document. That was half the rule. The other half is that it must not borrow BLAME
+        either: `thin` is not a neutral floor, it is a criticism, and we were levelling it at
+        capabilities on the strength of a page that is not about them.
+
+        So the verdict is withdrawn and replaced by the fact, which is stronger anyway — "no
+        documentation of its own" is checkable, useful to a reader deciding whether they can adopt
+        the thing, and not an opinion anyone has to accept. A POSITIVE verdict is withdrawn on the
+        same evidence, for the same reason: it was read off the wrong page.
+        """
+        shared, names_self = o.get("doc_shared_with"), o.get("doc_names_self")
+        # None means doc_signals has not looked at this row; only act on a measured answer.
+        borrowed = (shared is not None and shared > 0) or (names_self is not None and names_self == 0)
+        if not borrowed:
+            return
+        # STATED FOR EVERY ROW WE MEASURED, not only the ones that happened to be graded. 528 rows
+        # have documentation that is not about them; only 120 had a verdict to withdraw. The other
+        # 408 carry the same defect and said nothing, so a reader could not tell "we have not looked"
+        # from "we looked and the docs belong to something else". The second is the more useful fact
+        # and it is free — doc_signals already measured it.
+        o["doc_status"] = ("shares its documentation with %d other capabilit%s"
+                           % (shared, "y" if shared == 1 else "ies")) if shared else \
+                          "its only documentation never names it"
+        if o.get("expertise_verdict"):
+            o["expertise_verdict"] = None
+            o["expertise"] = None
+            o["expertise_note"] = None
 
     def junk(o):
         n = (o["npm_pkg"] or o["id"].split(":", 1)[-1] or "")
@@ -1489,6 +1529,7 @@ def export(con):
         o["description"] = clean_desc(o.get("description"))
         o["official"] = official_of(o.get("npm_pkg"), o.get("source_repo"))
         o["name"] = display_name(o)          # see display_name: a generic config key is not a name
+        withhold_borrowed_grade(o)
         if junk(o):
             continue
         o.pop("npm_runnable", None)   # a membership test, not a published finding

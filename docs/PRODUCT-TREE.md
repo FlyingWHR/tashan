@@ -17,8 +17,8 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 52 |
 | `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 50 |
 | `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | board.json, coverage.json, index.json, tasks.json | free | 35 |
-| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | board.json, index.json, tasks.json | post-sale | 28 |
 | `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | board.json, index.json, tasks.json | free | 27 |
+| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | board.json, index.json, tasks.json | post-sale | 27 |
 | `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | board.json, coverage.json, index.json, requests.json, tasks.json | free | 27 |
 | `/support.html` | How to get help, and what we can see when you ask. | site, terminal | board.json, index.json, tasks.json | free | 26 |
 | `/about.html` | What tashan measures, where it is going, and the principles the scoring follows. | site, terminal | board.json, index.json, tasks.json | free | 25 |
@@ -34,11 +34,11 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route pattern | Pages | Generator |
 |---|---|---|
-| `/capability/*.html` | 9,013 | `pipeline/prerender.py` |
+| `/capability/*.html` | 8,966 | `pipeline/prerender.py` |
 | `/category/*.html` | 84 | `pipeline/gen_hubs.py` |
 | `/task/*.html` | 64 | `pipeline/gen_hubs.py` |
 | `/role/*.html` | 23 | `pipeline/gen_hubs.py` |
-| `/compare/*.html` | 395 | `pipeline/gen_compare.py` |
+| `/compare/*.html` | 389 | `pipeline/gen_compare.py` |
 | `/learn/*.html` | 7 | `pipeline/gen_content.py` |
 
 ## Non-page surfaces
@@ -93,6 +93,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `tests/test_scorer_version.py` — SCORER_VERSION must change whenever the scoring changes.
 - `tests/test_scrape.py` — capability_id() — the config parser that decides what a row IS.
 - `tests/test_security_scan.py` — The security audit is the paid feature. Every rule in it has to be right, or we sell noise.
+- `tests/test_server_json.py` — server.json must satisfy the MCP registry's schema — constraints included, not just field names.
 - `tests/test_site.py` — tashan site test suite — structure, load budgets, SEO/AEO, CSP.
 - `tests/test_terminology.py` — Retired names must not survive in user-visible copy, and sorts must read fields that exist.
 - `tests/test_type_scale.py` — Type scale: every font-size comes from the scale, and nothing renders under 12px.

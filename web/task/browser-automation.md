@@ -35,24 +35,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Cypress](https://tashan.sh/capability/plugin-cypress-io-ai-toolkit-cypress.html) | 59 | 37 ★ | active |
 | 23 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 58 | 14 ★ | active |
 | 24 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 52 | 21 ★ | active |
-| 25 | [Reflex](https://tashan.sh/capability/pkg-reflex-browser.html) | 59 | 171/wk | active |
-| 26 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 70 | 2k/wk | active |
-| 27 | [Solarisdk](https://tashan.sh/capability/pkg-solarisdk-mcp.html) | 69 | 1k/wk | active |
-| 28 | [Chrome Bridge](https://tashan.sh/capability/pkg-chrome-bridge-mcp.html) | 68 | 2k/wk | active |
-| 29 | [Cloakbrowser](https://tashan.sh/capability/pkg-cloakbrowser-mcp.html) | 64 | 544/wk | active |
-| 30 | [Opentabs Plugin Microsoft Word](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-microsoft-word.html) | 61 | 274/wk | active |
-| 31 | [Opentabs Plugin Chatgpt](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-chatgpt.html) | 60 | 241/wk | active |
-| 32 | [Opentabs Plugin Wikipedia](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-wikipedia.html) | 60 | 217/wk | active |
-| 33 | [Opentabs Plugin Reddit](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-reddit.html) | 60 | 216/wk | active |
-| 34 | [Opentabs Plugin Notebooklm](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-notebooklm.html) | 60 | 213/wk | active |
-| 35 | [Opentabs Plugin Slack](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-slack.html) | 60 | 213/wk | active |
-| 36 | [Opentabs Plugin Gemini](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-gemini.html) | 59 | 231/wk | active |
-| 37 | [Opentabs Plugin Minimax Agent](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-minimax-agent.html) | 59 | 217/wk | active |
-| 38 | [Opentabs Plugin X](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-x.html) | 59 | 204/wk | active |
-| 39 | [Opentabs Plugin Twitch](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-twitch.html) | 59 | 204/wk | active |
-| 40 | [Opentabs Plugin Outlook](https://tashan.sh/capability/pkg-opentabs-dev-opentabs-plugin-outlook.html) | 59 | 202/wk | active |
+| 25 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 76 | 3k/wk | active |
+| 26 | [Playwright](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 73 | 22k/wk | stable |
+| 27 | [Google Surf](https://tashan.sh/capability/pkg-google-surf-mcp.html) | 60 | 374/wk | active |
+| 28 | [Reflex](https://tashan.sh/capability/pkg-reflex-browser.html) | 59 | 171/wk | active |
+| 29 | [Studio](https://tashan.sh/capability/pkg-aioproductoscom-mcp-studio.html) | 54 | 170/wk | active |
+| 30 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 70 | 2k/wk | active |
+| 31 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 70 | 2k/wk | active |
+| 32 | [Solarisdk](https://tashan.sh/capability/pkg-solarisdk-mcp.html) | 69 | 1k/wk | active |
+| 33 | [Chrome Bridge](https://tashan.sh/capability/pkg-chrome-bridge-mcp.html) | 68 | 2k/wk | active |
+| 34 | [Uindow](https://tashan.sh/capability/pkg-uindow-cli.html) | 67 | 1k/wk | active |
+| 35 | [Pixelcheck](https://tashan.sh/capability/pkg-pixelcheck.html) | 66 | 581/wk | active |
+| 36 | [Doppel](https://tashan.sh/capability/pkg-doppel-mcp.html) | 65 | 625/wk | active |
+| 37 | [Five46](https://tashan.sh/capability/pkg-five46.html) | 64 | 774/wk | active |
+| 38 | [Cloakbrowser](https://tashan.sh/capability/pkg-cloakbrowser-mcp.html) | 64 | 544/wk | active |
+| 39 | [Ghostlight](https://tashan.sh/capability/pkg-ghostlight.html) | 64 | 538/wk | active |
+| 40 | [Agentic Design System](https://tashan.sh/capability/pkg-ads-mcp.html) | 59 | 277/wk | active |
 
-Showing the top 40 of 85. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
+Showing the top 40 of 133. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
 
 ## What these numbers are not
 
