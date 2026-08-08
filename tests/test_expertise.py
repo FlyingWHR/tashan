@@ -120,6 +120,24 @@ ok("it shares one fetch cache across the run instead of re-downloading per capab
 ok("it offers exactly the verdicts merge_expertise will accept",
       not _re.search(r"one of the five|still a wrapper", _ge))
 
+
+# ---- an absent grade must explain itself, on BOTH renders -------------------------------------
+# prerender.py emitted "Not graded: <why>" and capability.js did not, and the client REPLACES the
+# server render — so on 528 pages, including @modelcontextprotocol/server-filesystem at #3 on the
+# board, the explanation was painted and then wiped the moment JS ran. The two files are one
+# concept and have now drifted three times. Silence reads as "nobody looked"; the refusal is the
+# product.
+_pre = open(os.path.join(ROOT, "pipeline", "prerender.py"), encoding="utf-8").read()
+_js = open(os.path.join(ROOT, "web", "js", "capability.js"), encoding="utf-8").read()
+ok("prerender explains an absent grade", "doc_status" in _pre)
+ok("capability.js explains it too, so hydration does not erase it", "doc_status" in _js)
+
+# And the reason has to reach the reader: withheld rows are recorded, not merely printed.
+_wh = [c for c in caps if c.get("doc_status") and not c.get("expertise_verdict")]
+ok(f"{len(_wh)} ungraded capabilities say why instead of showing nothing", len(_wh) > 0)
+ok("no capability both carries a grade and explains its absence",
+   not [c for c in caps if c.get("doc_status") and c.get("expertise_verdict")])
+
 print("EXPERTISE FAILED" if fail else "ok — expertise grades are internally consistent")
 sys.exit(fail)
 

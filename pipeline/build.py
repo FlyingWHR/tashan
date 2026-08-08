@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS capabilities (
   co_used TEXT,
   adoption REAL, upkeep REAL, freshness REAL, tashan_score REAL,
   expertise REAL, expertise_verdict TEXT, expertise_note TEXT,
+  grade_withheld TEXT,          -- why we looked and refused to grade; NULL means simply not reached
   retention REAL, retention_note TEXT,
   in_registry INTEGER DEFAULT 0, in_configs INTEGER DEFAULT 0,
   updated_at TEXT
@@ -136,6 +137,12 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # document they have. A grader reading that text sees competent docs — for something else.
            "doc_shared_with INTEGER",   # how many OTHER capabilities ship this exact README
            "doc_names_self INTEGER",    # does the text mention this capability at all
+           # WITHHELD IS A RESULT, NOT A GAP, and the page has to be able to tell them apart.
+           # Nine of the top 100 were withheld after reading — no document staged, a document about
+           # twenty other servers, tool docs behind a page we cannot open — and they rendered
+           # identically to the 8,800 nobody has reached yet: blank. Blank reads as laziness; the
+           # refusal is the product.
+           "grade_withheld TEXT"
            # The author's OWN package.json keywords, comma-joined like gh_topics. Fetched on every
            # enrichment pass since the beginning and thrown away, which left npm the only kind with
            # no author vocabulary at all: plugins had manifest tags, skills had frontmatter, and
@@ -168,7 +175,7 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            "shim INTEGER",              # 1 = the author describes it as a bridge/proxy over something else
            "shim_note TEXT"]            # their words, so the page can answer "says who?"
 
-SCHEMA_VERSION = 13  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 14  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # v5 RENAMED the headline score. "Trust" claimed more than the SCORE measures: it is upkeep, freshness
 # and adoption, and a number whose name needs walking back is misnamed. That still holds — the security
@@ -1244,7 +1251,7 @@ def export(con):
             "expertise","expertise_verdict","expertise_note","retention","retention_note",
             # fetched so a verdict can be WITHDRAWN when its evidence is a document about something
             # else — see the doc-evidence gate in the row loop below
-            "doc_shared_with","doc_names_self",
+            "doc_shared_with","doc_names_self","grade_withheld",
             "category","in_registry","in_configs",
             "gh_stars","gh_forks","gh_open_issues","gh_pushed","gh_contributors","gh_last_release",
             "gh_license","gh_topics","gh_has_discussions","gh_archived","vitality","single_maintainer",
@@ -1374,6 +1381,14 @@ def export(con):
         shared, names_self = o.get("doc_shared_with"), o.get("doc_names_self")
         # None means doc_signals has not looked at this row; only act on a measured answer.
         borrowed = (shared is not None and shared > 0) or (names_self is not None and names_self == 0)
+        # AN EXPLICIT REFUSAL OUTRANKS THE DERIVED ONE, and must be checked BEFORE the borrowed-doc
+        # early return — the rows a grader withheld are usually NOT borrowed-doc rows, so placing
+        # this after `if not borrowed: return` meant every one of them returned before reaching it.
+        # grade_withheld is set when someone read the evidence and declined: no document staged, a
+        # document about twenty other servers, tool docs behind a page we cannot open.
+        if o.get("grade_withheld") and not o.get("expertise_verdict"):
+            o["doc_status"] = o["grade_withheld"]
+            return
         if not borrowed:
             return
         # STATED FOR EVERY ROW WE MEASURED, not only the ones that happened to be graded. 528 rows

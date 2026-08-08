@@ -93,8 +93,25 @@ def main():
         return 0
 
     for s in good:
-        con.execute("UPDATE capabilities SET expertise=?, expertise_verdict=?, expertise_note=? WHERE id=?",
+        con.execute("UPDATE capabilities SET expertise=?, expertise_verdict=?, expertise_note=?, "
+                    "grade_withheld=NULL WHERE id=?",
                     (s["expertise"], s["verdict"], s.get("note"), s["id"]))
+
+    # WITHHELD IS A RESULT AND IT GETS RECORDED. grade_evidence writes data/readmes/withheld.json
+    # for capabilities it read and refused to grade — no document staged, a document about twenty
+    # other servers, tool docs behind a page we cannot open. Without this they render exactly like
+    # the thousands nobody has reached yet: blank, which reads as laziness rather than as the
+    # refusal it is. Clearing it above is deliberate: a row that later earns a grade must stop
+    # explaining why it has none.
+    wpath = os.path.join(ROOT, "data", "readmes", "withheld.json")
+    withheld = 0
+    if os.path.exists(wpath):
+        for w in json.load(open(wpath, encoding="utf-8")):
+            if w.get("id") in known and isinstance(w.get("reason"), str) and len(w["reason"]) <= NOTE_MAX:
+                con.execute("UPDATE capabilities SET grade_withheld=? "
+                            "WHERE id=? AND expertise_verdict IS NULL", (w["reason"], w["id"]))
+                withheld += 1
+        print(f"  recorded {withheld} withheld grade(s) — the page says why instead of nothing")
     con.commit()
     graded = con.execute("SELECT COUNT(*) FROM capabilities WHERE expertise_verdict IS NOT NULL").fetchone()[0]
     total = con.execute("SELECT COUNT(*) FROM capabilities WHERE tashan_score IS NOT NULL").fetchone()[0]

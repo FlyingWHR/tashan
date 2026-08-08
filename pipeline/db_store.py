@@ -32,6 +32,7 @@ of `capability_text`. Each of those is a bad night, not a lost record. That is e
 series is sharded as text and the cache is not.
 """
 import os, re, subprocess, sqlite3, sys
+from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "tashan.db")
@@ -117,18 +118,32 @@ def pull():
 
 
 def push():
-    """Store the cache. FATAL on failure, unlike pull: silently not saving means every later run
-    starts from a stale object, and the incremental cursors quietly stop advancing."""
+    """Store the cache, plus a rolling dated copy. FATAL on failure, unlike pull: silently not
+    saving means every later run starts from a stale object and the incremental cursors quietly
+    stop advancing.
+
+    ONE MUTABLE OBJECT IS NOT A BACKUP. `tashan.db` is overwritten in place every night, so a run
+    that corrupts the database — or a bug in this file — replaces the only copy that exists now
+    that it is out of git. The rolling weekday slot costs nothing extra in the free tier (7 x 99 MiB
+    against 10 GB) and needs no bucket listing to prune, because tomorrow's run overwrites the slot
+    from a week ago. `usable()` already refuses to upload a database with no rows, so a truncated
+    local file cannot poison either copy.
+    """
     if not usable():
         print("  db_store: refusing to push — data/tashan.db is missing or has no rows")
         return 1
-    r = _run(["r2", "object", "put", f"{BUCKET}/{KEY}", "--file", DB,
-              "--content-type", "application/vnd.sqlite3"])
-    if r.returncode != 0:
-        print("  db_store: PUSH FAILED — the next run will start from a stale cache")
-        print("           " + (r.stderr or r.stdout or "").strip()[-400:])
-        return 1
-    print(f"  db_store: pushed {os.path.getsize(DB) / 1048576:.1f} MiB to r2://{BUCKET}/{KEY}")
+    mib = os.path.getsize(DB) / 1048576
+    for key in (KEY, f"backup/{datetime.now(timezone.utc).strftime('%a').lower()}.db"):
+        r = _run(["r2", "object", "put", f"{BUCKET}/{key}", "--file", DB,
+                  "--content-type", "application/vnd.sqlite3"])
+        if r.returncode != 0:
+            if key != KEY:
+                print(f"  db_store: pushed the live object; the dated copy failed ({_reason(r)})")
+                return 0                       # the working copy landed; a missing backup is not fatal
+            print("  db_store: PUSH FAILED — the next run will start from a stale cache")
+            print("           " + _reason(r))
+            return 1
+        print(f"  db_store: pushed {mib:.1f} MiB to r2://{BUCKET}/{key}")
     return 0
 
 

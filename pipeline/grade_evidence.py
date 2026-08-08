@@ -484,6 +484,19 @@ def note_for(band, e, followed, budget=200):
     return f"{head}“{q}”{tail}"
 
 
+# The reader-facing sentence for each machine verdict. summarise() returns operator strings
+# ("UNKNOWN — run --follow to read the linked docs"); a dossier needs the fact, not the instruction.
+WITHHELD_TEXT = {
+    "UNGRADEABLE": "no documentation was published with it",
+    "WITHHELD": "its documentation points at a page we cannot read, and shows nothing itself",
+    "UNKNOWN": "its tool documentation lives in files we could not fetch",
+}
+
+
+def _plain(why):
+    return WITHHELD_TEXT.get(why.split(" —")[0].strip(), "we could not read its documentation fairly")
+
+
 def emit_scores(path, graded):
     """Write a scores_*.json for merge_expertise.py, with the band's own evidence as the note."""
     out = []
@@ -542,6 +555,13 @@ def main(argv):
     if follows:
         json.dump(cache, open(LINKED, "w", encoding="utf-8"))
     if emit:
+        # WITHHELD ROWS ARE WRITTEN DOWN, not just printed. Nine of the first top-100 queue were
+        # withheld and rendered identically to the 8,800 nobody has reached: blank. The refusal is
+        # the more useful fact, and it is only useful if it reaches the page.
+        wpath = os.path.join(os.path.dirname(emit), "withheld.json")
+        json.dump([{"id": cid, "reason": _plain(why)} for cid, why in held],
+                  open(wpath, "w", encoding="utf-8"), indent=1)
+        print(f"{len(held)} withheld -> {wpath}")
         rows = emit_scores(emit, graded)
         print(f"\n{len(rows)} graded -> {emit}   "
               + "  ".join(f"{v}:{sum(1 for r in rows if r['verdict'] == v)}"

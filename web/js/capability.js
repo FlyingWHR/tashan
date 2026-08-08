@@ -87,7 +87,17 @@
       '</div>' +
       securityBlock(c) +
       (c.expertise_note ? '<div class="expert-read">' + vchip(c.expertise_verdict) +
-        '<p>&ldquo;' + esc(c.expertise_note) + '&rdquo;</p><span class="expert-read__by mono">— tashan expertise-eval, read of the actual capability</span></div>' : '') +
+        '<p>&ldquo;' + esc(c.expertise_note) + '&rdquo;</p><span class="expert-read__by mono">— tashan expertise-eval, read of the actual capability</span></div>' :
+       // WHY A GRADE IS ABSENT, and it must survive hydration. prerender.py renders this and this
+       // file did not, so on 528 pages — including @modelcontextprotocol/server-filesystem, third on
+       // the board — the server said "Not graded: shares its documentation with 3 other
+       // capabilities" and the client wiped it the instant it painted. The client REPLACES the
+       // server render; the two are one concept and drift silently, which is the third time that
+       // has happened here. Silence reads as "nobody looked" when the truth is that we looked and
+       // refused to grade a document about something else, and that distinction is the product.
+       c.doc_status ? '<div class="expert-read"><p class="mono fs-sm">Not graded: ' +
+        esc(c.doc_status) + '. A grade read off another project\'s document would borrow its ' +
+        'credit, or its blame.</p></div>' : '') +
       repoHealth(c) +
       alsoOn(c) +
       (co ? section("Configured alongside", '<div class="colist">' + co + '</div>', "In real public configs, these ship together.") : '') +
