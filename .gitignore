@@ -19,3 +19,8 @@ data/onet/db_30_3_text/
 # holding it can publish under the sh.tashan/* namespace. Never committed.
 key.pem
 *.pem
+
+# The database is a CACHE, kept in Cloudflare R2 (pipeline/db_store.py), not in git. It hit
+# 98.8 MiB against GitHub every-blob 100 MiB limit while being re-derived nightly. The durable
+# record is data/history/*.csv.gz, which IS committed; losing the R2 object costs a re-fetch.
+data/tashan.db

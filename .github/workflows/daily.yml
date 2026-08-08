@@ -123,33 +123,10 @@ jobs:
           # It does not — data/tashan.db is tracked and checkout restores it. Verify with
           # `git ls-files data/tashan.db` before repeating that.)
           DAYS=$(ls data/history/*.csv.gz 2>/dev/null | wc -l | tr -d ' ')
-          # GitHub REJECTS any file at 100 MB. data/tashan.db was 98.82 MB on 8 Aug 2026 and grows
-          # every night, so the push — not the pipeline, the push — is days from failing outright,
-          # and a rejected push means no shard lands and the day is lost. That is the one outcome
-          # this whole workflow exists to prevent.
-          #
-          # So near the wall we commit everything EXCEPT the database. The series still lands, the
-          # site still deploys, and the loop keeps running while a human picks between git-lfs and
-          # restructuring. The DB is a cache: snapshot_history.restore() rebuilds signal_history
-          # from the shards, and what it cannot rebuild — capability_text's fetched doc bodies —
-          # is re-fetchable, slowly. Losing a night of that beats losing the record.
-          # MEBIBYTES, and `wc -c` rather than `du`. Two unit traps in one line, both hit while
-          # writing it: `du` reports BLOCKS ALLOCATED (113 for this file, which would withhold the
-          # DB weeks early), and 100 "MB" in git and GitHub means 100 MiB — 104,857,600 bytes. A
-          # guard about a size limit measuring in the wrong unit is worse than no guard.
-          DB_MIB=$(( $(wc -c < data/tashan.db 2>/dev/null || echo 0) / 1048576 ))
-          DB_TOO_BIG=$([ "${DB_MIB:-0}" -ge 95 ] && echo yes || echo no)   # 5 MiB of runway
-          if [ "$DB_TOO_BIG" = "yes" ]; then
-            echo "::warning::data/tashan.db is ${DB_MIB} MiB — GitHub refuses the push at 100 MiB."
-            echo "::warning::Committing everything except the DB. Decide: git-lfs, or split the"
-            echo "::warning::0.72 MB of essential state (cap_state, sync_state) out of the binary."
-          fi
           if [ "${{ steps.verify.outcome }}" = "success" ] \
             && [ "${{ steps.pipeline.outcome }}" = "success" ]; then
             git add -A
-            [ "$DB_TOO_BIG" = "yes" ] && git reset -q data/tashan.db
             MSG="daily: measure ($DAYS days of retention history)"
-            [ "$DB_TOO_BIG" = "yes" ] && MSG="$MSG — DB withheld at ${DB_MIB} MiB, see run log"
           elif [ "${{ steps.pipeline.outcome }}" != "success" ]; then
             git add data/history
             MSG="daily: retention only ($DAYS days) — PIPELINE CRASHED, see the run log"

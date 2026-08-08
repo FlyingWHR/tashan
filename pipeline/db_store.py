@@ -47,8 +47,12 @@ def _run(args):
     already in this repo and worth not re-diagnosing. The daily runner has no proxy; a laptop
     usually does.
     """
+    # ALL_PROXY too, and that omission is why this is a list rather than two names: wrangler reads
+    # every one of them, announces "Proxy environment variables detected", and then dies with a bare
+    # `fetch failed` that reads exactly like R2 being switched off. The daily runner has no proxy, so
+    # this only ever breaks on a laptop — the machine where you are trying to diagnose it.
     env = {k: v for k, v in os.environ.items()
-           if k not in ("HTTPS_PROXY", "https_proxy", "HTTP_PROXY", "http_proxy")}
+           if k.lower() not in ("all_proxy", "https_proxy", "http_proxy")}
     return subprocess.run(WRANGLER + args, cwd=ROOT, env=env,
                           capture_output=True, text=True, timeout=900)
 

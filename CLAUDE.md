@@ -47,12 +47,18 @@ pipeline scripts use it, one at a time, once a night. Postgres or D1 would add a
 and a non-stdlib dependency to solve a concurrency problem that does not exist. R2 stores one
 overwritten object — ~0.1 GB of a 10 GB free tier, zero egress, credentials already in the workflow.
 
-**Switch-over state (8 Aug 2026): the DB is STILL TRACKED and R2 is not yet enabled on the account.**
-`db_store.py pull` degrades to the checked-out copy and says so, and the daily run withholds the DB
-from the commit above 95 MiB. Once R2 is enabled the switch is `git rm --cached data/tashan.db` plus
-a `.gitignore` line. Verify which state you are in with `git ls-files data/tashan.db` before
-repeating either claim — an earlier version of this file asserted the wrong one and cost a session a
-wrong risk assessment.
+**Switched over 8 Aug 2026: `data/tashan.db` is NOT tracked.** It lives at
+`r2://tashan-state/tashan.db`, verified by deleting the local file and restoring it byte-identical.
+`db_store.py pull` runs before the pipeline and `push` after; `pull` degrades to whatever is on disk
+and says why, `push` is fatal because silently not saving means every later run starts from a stale
+object. `tests/test_history_integrity.py` fails if the file is ever re-added to git — the 100 MiB
+limit only bites at push time, so a regression would otherwise be invisible until a day was lost.
+Verify with `git ls-files data/tashan.db` before repeating any claim about this; the file has
+asserted it in both directions and been wrong both times.
+
+**Local development needs no credentials.** The pipeline reads whatever `data/tashan.db` is on disk;
+only the daily runner pulls and pushes. If you have no local copy, `db_store.py pull` fetches one,
+or the pipeline rebuilds from the sources and `data/history/`.
 
 Losing the R2 object costs one night of `change_events` (it emits nothing without a previous state,
 by construction), a full registry re-walk, and a slow `capability_text` re-fetch. It does not cost

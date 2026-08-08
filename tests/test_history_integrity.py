@@ -31,7 +31,7 @@ is where the damage actually appears.
 
 Run: python3 tests/test_history_integrity.py
 """
-import collections, os, sqlite3, statistics, sys
+import collections, os, sqlite3, statistics, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "tashan.db")
@@ -130,22 +130,21 @@ def main():
     ok("the DB is reconciled from the shards on every run, not just after a disaster",
        "def restore(" in snap and "restore(con)" in snap.split("def main(")[1])
 
-    # ---- the repository must still accept the commit ------------------------------------------
-    # None of the above matters if the push is refused. GitHub rejects any blob at 100 MiB and
-    # data/tashan.db was 98 MiB on 8 Aug 2026, growing nightly — and a rejected push means no shard
-    # lands, which is the exact loss everything else here exists to prevent. The daily workflow
-    # withholds the DB near the wall so the series still gets committed; this fails the suite before
-    # it comes to that, because the real fix (git-lfs, or splitting the 0.72 MB of essential state
-    # out of a 98 MiB binary) is a decision, not a thing to discover from a red CI run.
-    mib = os.path.getsize(DB) / 1048576 if os.path.exists(DB) else 0
-    if mib >= 90:
-        print(f"        data/tashan.db is {mib:.0f} MiB — GitHub refuses a blob at 100 MiB. "
-              f"cap_state + sync_state gzip to 0.72 MB; the rest is cache.")
-    # Fails only where the push genuinely cannot succeed. A tighter bound would block every local
-    # commit through the pre-commit hook — including the commit that fixes this — which is a worse
-    # outcome than the wall itself. The warning above is what does the forcing.
-    ok(f"data/tashan.db ({mib:.1f} MiB) can still be pushed", mib < 99.5,
-       "at 100 MiB GitHub rejects the push and the daily loop stops recording")
+    # ---- the cache must stay out of git -------------------------------------------------------
+    # data/tashan.db reached 98.8 MiB against GitHub's hard 100 MiB blob limit while the daily
+    # workflow committed it nightly, so the failure was going to land on `git push` AFTER the
+    # pipeline had run — and a rejected push means the day's shard never lands, which is the exact
+    # loss everything above this line exists to prevent. It now lives in R2 (pipeline/db_store.py);
+    # a byte-identical round trip was verified by deleting the local file and restoring it.
+    #
+    # Re-adding it would reintroduce the wall silently, since it only bites at push time.
+    tracked = subprocess.run(["git", "ls-files", "--error-unmatch", "data/tashan.db"],
+                             cwd=ROOT, capture_output=True, text=True).returncode == 0
+    ok("data/tashan.db is NOT tracked — it is a cache, and it lives in R2",
+       not tracked, "re-adding it walks back into GitHub's 100 MiB blob limit at push time")
+    ok("the durable record still is tracked", os.path.isdir(os.path.join(ROOT, "data", "history"))
+       and any(f.endswith(".csv.gz") for f in os.listdir(os.path.join(ROOT, "data", "history"))),
+       "data/history/*.csv.gz is the copy that survives losing the bucket")
 
     print("\nHISTORY INTEGRITY FAILED" if fail else "\nok — the paid series carries the capability's movement, not ours")
     return fail
