@@ -564,3 +564,27 @@ console.log("ok — the entry check survives npm's symlinked bin");
   }
 }
 console.log("ok — npx <package-name> resolves a bin, and every bin ships");
+
+// ---- `--version` must answer with a version ---------------------------------------------------
+// Up to 0.1.4 every form of it — `--version`, `-v`, `version` — printed "unknown command" followed
+// by the usage block. It is the first thing anyone types at a CLI they just installed and the first
+// thing a bug report asks for, so an error there reads as a broken install. The number is read from
+// package.json at runtime rather than written into the source, because two places holding one
+// version is how a CLI ends up confidently reporting the wrong one.
+{
+  const { readFileSync } = await import("node:fs");
+  const { join, dirname } = await import("node:path");
+  const { fileURLToPath } = await import("node:url");
+  const here = dirname(fileURLToPath(import.meta.url));
+  const pkg = JSON.parse(readFileSync(join(here, "package.json"), "utf8"));
+  const src = readFileSync(join(here, "tashan.mjs"), "utf8");
+
+  for (const flag of ["--version", "-v", "version"]) {
+    assert.ok(src.includes(`"${flag}"`), `${flag} is not handled in tashan.mjs`);
+  }
+  assert.ok(/readFileSync\(new URL\("\.\/package\.json", import\.meta\.url\)/.test(src),
+    "VERSION must be read from package.json relative to the module URL — npm installs the bin as " +
+    "a symlink, so anything derived from argv[1] or cwd resolves somewhere else");
+  assert.match(pkg.version, /^\d+\.\d+\.\d+/, "package.json has no usable version to report");
+}
+console.log("ok — --version answers, and reads the number npm published");

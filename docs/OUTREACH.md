@@ -30,7 +30,7 @@ Run `python3 pipeline/coverage.py` and the snippets below against `data/tashan.d
 | …of those, **no build provenance** — nothing proves the publisher built it | **75%** (2,087) | `SELECT sec_provenance, count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL GROUP BY 1` |
 | Servers running an **install-time script** (arbitrary code on `npm i`) | 199 | `WHERE sec_install_script IS NOT NULL` |
 | Confirmed-malicious packages found, kept unranked so `doctor` still warns | 2 | `WHERE sec_max_severity='MALICIOUS'` |
-| Scored capabilities whose maintainer has **stopped** (archived / declared / dormant) | 409 | `WHERE tashan_score IS NOT NULL AND vitality='abandoned'` |
+| Scored capabilities whose maintainer has **stopped** (archived / declared / dormant) | 581 | `WHERE tashan_score IS NOT NULL AND vitality='abandoned'` |
 | Library/SDK packages found so far that can't be launched at all | 123 | `WHERE npm_runnable=0` |
 
 The 75% is the strongest single line in this file. It is not an accusation of anything — most

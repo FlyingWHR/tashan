@@ -27,22 +27,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Ra Qm Skills](https://tashan.sh/capability/skill-alirezarezvani-ra-qm-skills.html) | not scored | 1 repos | active |
 | 15 | [Soc2 Compliance](https://tashan.sh/capability/skill-alirezarezvani-soc2-compliance.html) | not scored | 1 repos | active |
 | 16 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 74 | 2k/wk | active |
-| 17 | [Pixelcheck](https://tashan.sh/capability/pkg-pixelcheck.html) | 66 | 581/wk | active |
-| 18 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 65 | 897/wk | active |
-| 19 | [Ghostlight](https://tashan.sh/capability/pkg-ghostlight.html) | 64 | 538/wk | active |
-| 20 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 63 | 360/wk | active |
-| 21 | [Audit](https://tashan.sh/capability/pkg-openaeo-audit.html) | 61 | 414/wk | active |
-| 22 | [Taplid](https://tashan.sh/capability/pkg-taplid-mcp.html) | 61 | 225/wk | active |
-| 23 | [Protect](https://tashan.sh/capability/pkg-protect-mcp.html) | 60 | 387/wk | active |
-| 24 | [Whats Allowed](https://tashan.sh/capability/pkg-whats-allowed-mcp.html) | 58 | 348/wk | active |
-| 25 | [Repo Test Architect](https://tashan.sh/capability/pkg-repo-test-architect.html) | 57 | 236/wk | active |
-| 26 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 55 | 131/wk | active |
-| 27 | [Vorim](https://tashan.sh/capability/pkg-vorim-mcp-server.html) | 50 | 103/wk | active |
+| 17 | [Pixelcheck](https://tashan.sh/capability/pkg-pixelcheck.html) | 65 | 581/wk | active |
+| 18 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 64 | 897/wk | active |
+| 19 | [Ghostlight](https://tashan.sh/capability/pkg-ghostlight.html) | 63 | 538/wk | active |
+| 20 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 62 | 360/wk | active |
+| 21 | [Audit](https://tashan.sh/capability/pkg-openaeo-audit.html) | 60 | 414/wk | active |
+| 22 | [Protect](https://tashan.sh/capability/pkg-protect-mcp.html) | 60 | 387/wk | active |
+| 23 | [Taplid](https://tashan.sh/capability/pkg-taplid-mcp.html) | 60 | 225/wk | active |
+| 24 | [Whats Allowed](https://tashan.sh/capability/pkg-whats-allowed-mcp.html) | 57 | 348/wk | active |
+| 25 | [Repo Test Architect](https://tashan.sh/capability/pkg-repo-test-architect.html) | 57 | 239/wk | active |
+| 26 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 54 | 131/wk | active |
+| 27 | [Vorim](https://tashan.sh/capability/pkg-vorim-mcp-server.html) | 50 | 87/wk | active |
 | 28 | [Lotor](https://tashan.sh/capability/pkg-lotor-mcp.html) | 49 | 62/wk | active |
 | 29 | [SEO Tools](https://tashan.sh/capability/pkg-seodesignlab-mcp-server.html) | 47 | 53/wk | active |
-| 30 | [Gatekeeper](https://tashan.sh/capability/pkg-runestone-labs-gatekeeper-mcp.html) | 45 | 42/wk | active |
-| 31 | [Ads](https://tashan.sh/capability/plugin-tka4enko-ads-discipline-ads.html) | 42 | 0 ★ | active |
-| 32 | [Security Auditor](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-security-auditor.html) | 41 | 1 marketplaces | active |
+| 30 | [Gatekeeper](https://tashan.sh/capability/pkg-runestone-labs-gatekeeper-mcp.html) | 44 | 42/wk | active |
+| 31 | [Security Auditor](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-security-auditor.html) | 41 | 1 marketplaces | active |
+| 32 | [Ads](https://tashan.sh/capability/plugin-tka4enko-ads-discipline-ads.html) | 41 | 0 ★ | active |
 | 33 | [Email Deliverability Expert](https://tashan.sh/capability/plugin-sendx-email-skills-email-deliverability-expert.html) | 39 | 1 marketplaces | active |
 | 34 | [Agent Native](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-agent-native.html) | 37 | 1 marketplaces | active |
 | 35 | [Ccgm Doctor](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-ccgm-doctor.html) | 37 | 1 marketplaces | active |

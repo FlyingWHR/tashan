@@ -16,7 +16,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [AI Adoption Playbook](https://tashan.sh/capability/plugin-adimango-ai-adoption-playbook-ai-adoption-playbook.html) | 59 | 20 ★ | active |
 | 4 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 57 | 43 ★ | active |
 | 5 | [Product Discovery](https://tashan.sh/capability/plugin-lenar-amirov-product-pipeline-public-product-discovery.html) | 57 | 13 ★ | active |
-| 6 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 53 | 5 ★ | active |
+| 6 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 52 | 5 ★ | active |
 | 7 | [Brief](https://tashan.sh/capability/skill-alirezarezvani-brief.html) | 49 | 2 repos | active |
 | 8 | [Executive Mentor](https://tashan.sh/capability/skill-alirezarezvani-executive-mentor.html) | 49 | 2 repos | active |
 | 9 | [Ceo Advisor](https://tashan.sh/capability/skill-alirezarezvani-ceo-advisor.html) | 49 | 2 repos | active |
@@ -34,9 +34,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 21 | [Pricing Strategy](https://tashan.sh/capability/skill-alirezarezvani-pricing-strategy.html) | 49 | 2 repos | active |
 | 22 | [Product Discovery · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-product-discovery.html) | 49 | 2 repos | active |
 | 23 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 47 | 5 ★ | active |
-| 24 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 45 | 4 ★ | active |
-| 25 | [Mindpowers](https://tashan.sh/capability/plugin-rohitgehe05-mindpowers-mindpowers.html) | 44 | 3 ★ | active |
-| 26 | [Product In Acquisitions](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-product-in-acquisitions.html) | 44 | 1 marketplaces | active |
+| 24 | [Mindpowers](https://tashan.sh/capability/plugin-rohitgehe05-mindpowers-mindpowers.html) | 44 | 3 ★ | active |
+| 25 | [Product In Acquisitions](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-product-in-acquisitions.html) | 44 | 1 marketplaces | active |
+| 26 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 44 | 4 ★ | active |
 | 27 | [Claude Deconstruct](https://tashan.sh/capability/plugin-adelaidasofia-claude-deconstruct-claude-deconstruct.html) | 43 | 1 ★ | active |
 | 28 | [Arquiteto De Empresa](https://tashan.sh/capability/skill-alirezarezvani-arquiteto-de-empresa.html) | not scored | 1 repos | active |
 | 29 | [Boardroom](https://tashan.sh/capability/skill-alirezarezvani-boardroom.html) | not scored | 1 repos | active |

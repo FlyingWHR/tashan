@@ -22,6 +22,15 @@ import { join, dirname } from "node:path";
 import { configLocations, skillLocations, collect, match, resolve, assess, summarize, trend, withTrend,
          suggest, tokenFrequency, isDying } from "./doctor.mjs";
 
+// Resolved against this module's own URL, not cwd and not argv[1] — npm installs the bin as a
+// SYMLINK, so a path derived from how the process was invoked points somewhere else entirely.
+// See [[npm-bin-is-a-symlink]]. Falls back rather than throwing: a missing package.json must not
+// take down every command in the CLI just because one of them wanted to print a number.
+const VERSION = (() => {
+  try { return JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf8")).version; }
+  catch { return "unknown"; }
+})();
+
 // ---- licence ---------------------------------------------------------------------------------
 // Billing is Polar's; the account centre is ours. The customer-portal license-key endpoints
 // (activate / validate / deactivate) are PUBLIC, needing only the org id, so the CLI talks to them
@@ -590,6 +599,12 @@ export async function main(argv) {
   const a = parseArgs(argv);
   const cmd = a._[0];
   if (!cmd || cmd === "help" || cmd === "--help" || cmd === "-h") { process.stdout.write(USAGE + "\n"); return 0; }
+  // `--version` answered "unknown command" in every form up to 0.1.4. It is the first thing anyone
+  // types at a new CLI and the first thing a bug report asks for, and getting an error for it reads
+  // as a broken install. Read from package.json so it can never drift from what npm published.
+  if (cmd === "--version" || cmd === "-v" || cmd === "version") {
+    process.stdout.write(VERSION + "\n"); return 0;
+  }
 
   // Only the commands that read the Index download it. `activate`, `account` and `mcp` do not touch
   // a single row, and downloading ~1 MB before dispatching meant activating Pro FAILED CLOSED on any

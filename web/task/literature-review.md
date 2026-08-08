@@ -11,12 +11,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 77 | 5k ★ | active |
-| 2 | [Sciverse](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 68 | 78 ★ | active |
+| 1 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
+| 2 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 68 | 78 ★ | active |
 | 3 | [Phd Deepread](https://tashan.sh/capability/plugin-heleninsights-dot-phd-deepread-workflow-phd-deepread.html) | 51 | 56 ★ | active |
 | 4 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 49 | 2 repos | active |
 | 5 | [Research Co Pilot](https://tashan.sh/capability/plugin-marazii-research-co-pilot-research-co-pilot.html) | 46 | 5 ★ | active |
-| 6 | [Arx](https://tashan.sh/capability/plugin-eric-tramel-arx-arx.html) | 42 | 7 ★ | active |
+| 6 | [Arx](https://tashan.sh/capability/plugin-eric-tramel-arx-arx.html) | 41 | 7 ★ | active |
 | 7 | [Paper Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-paper-interpreter.html) | 40 | 1 marketplaces | active |
 | 8 | [Article Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-article-interpreter.html) | 40 | 1 marketplaces | active |
 | 9 | [Research Toolkit](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 38 | 2 ★ | active |
@@ -28,9 +28,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 76 | 5k ★ | active |
 | 16 | [Bettercallclaude](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-bettercallclaude.html) | 61 | 33 ★ | active |
 | 17 | [Bettercallclaude Italia](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-italia-bettercallclaude-italia.html) | 56 | 41 ★ | active |
-| 18 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 52 | 147 ★ | active |
+| 18 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 147 ★ | active |
 | 19 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 66 | 660/wk | active |
-| 20 | [Pubcrawl](https://tashan.sh/capability/pkg-pharmatools-pubcrawl.html) | 60 | 334/wk | active |
+| 20 | [Pubcrawl](https://tashan.sh/capability/pkg-pharmatools-pubcrawl.html) | 59 | 334/wk | active |
 | 21 | [Medsci Literature](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-literature.html) | 45 | 1 marketplaces | active |
 | 22 | [Medsci Data](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-data.html) | 45 | 1 marketplaces | active |
 | 23 | [Medsci Modeling](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-modeling.html) | 45 | 1 marketplaces | active |

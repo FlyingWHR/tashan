@@ -18,12 +18,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) | 72 | 829 ★ | active |
 | 2 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 65 | 284 ★ | active |
-| 3 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 52 | 5 ★ | active |
+| 3 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 51 | 5 ★ | active |
 | 4 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 80 | 13k ★ | active |
 | 5 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 46 | 18 ★ | active |
 | 6 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
 | 7 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |
-| 8 | [Rigshare](https://tashan.sh/capability/pkg-rigshare-mcp.html) | 51 | 85/wk | active |
+| 8 | [Rigshare](https://tashan.sh/capability/pkg-rigshare-mcp.html) | 50 | 80/wk | active |
 | 9 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 49 | 64/wk | active |
 | 10 | [Hardware Spec Assembly](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-hardware-spec-assembly.html) | 41 | 1 marketplaces | active |
 | 11 | [Hardware ID Annotation](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-hardware-id-annotation.html) | 41 | 1 marketplaces | active |

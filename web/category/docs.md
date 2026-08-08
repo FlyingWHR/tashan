@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 97 | 619k/wk | active |
-| 2 | [Notion](https://tashan.sh/capability/pkg-notionhq-notion-mcp-server.html) | 91 | 193k/wk | active |
-| 3 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 87 | 107k/wk | active |
-| 4 | [Obsidian](https://tashan.sh/capability/pkg-obsidian-mcp-server.html) | 83 | 6k/wk | active |
-| 5 | [Context7 · upstash](https://tashan.sh/capability/plugin-upstash-context7-context7.html) | 78 | 60k ★ | active |
+| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 96 | 619k/wk | active |
+| 2 | [Notion](https://tashan.sh/capability/pkg-notionhq-notion-mcp-server.html) | 90 | 193k/wk | active |
+| 3 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
+| 4 | [Obsidian](https://tashan.sh/capability/pkg-obsidian-mcp-server.html) | 82 | 6k/wk | active |
+| 5 | [Context7 · upstash](https://tashan.sh/capability/plugin-upstash-context7-context7.html) | 77 | 60k ★ | active |
 | 6 | [Anki](https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html) | 76 | 953/wk | active |
 | 7 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 76 | 5k ★ | active |
 | 8 | [Notion · suekou](https://tashan.sh/capability/pkg-suekou-mcp-notion-server.html) | 74 | 733/wk | active |
 | 9 | [Modern Web Guidance](https://tashan.sh/capability/plugin-googlechrome-modern-web-guidance-modern-web-guidance.html) | 74 | 2k ★ | active |
-| 10 | [Devkit](https://tashan.sh/capability/pkg-mapbox-mcp-devkit-server.html) | 72 | 516/wk | active |
-| 11 | [Data Agent Kit Starter Pack](https://tashan.sh/capability/plugin-gemini-cli-extensions-data-agent-kit-starter-pack-data-agent-kit-starter-pack.html) | 70 | 151 ★ | active |
-| 12 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
-| 13 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 70 | 284 ★ | active |
-| 14 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 70 | 2k/wk | active |
-| 15 | [Witness](https://tashan.sh/capability/pkg-witness-ai-opencode.html) | 70 | 716/wk | active |
-| 16 | [Patina](https://tashan.sh/capability/plugin-devswha-patina-patina.html) | 68 | 311 ★ | active |
-| 17 | [Carbone](https://tashan.sh/capability/pkg-carbone-mcp.html) | 68 | 269/wk | active |
-| 18 | [Northwestern University Libraries Digital Collections API](https://tashan.sh/capability/pkg-nulib-dc-api-mcp.html) | 68 | 180/wk | active |
-| 19 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 67 | 578/wk | active |
-| 20 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 66 | 104 ★ | active |
-| 21 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 365 ★ | active |
-| 22 | [Booboo](https://tashan.sh/capability/pkg-booboo-brain-cli.html) | 66 | 693/wk | active |
-| 23 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 66 | 660/wk | active |
-| 24 | [Obsidian · StevenStavrakis](https://tashan.sh/capability/pkg-obsidian-mcp.html) | 65 | 4k/wk | stable |
-| 25 | [Yandex Direct](https://tashan.sh/capability/pkg-ai-hub-open-yandex-direct-mcp.html) | 64 | 390/wk | active |
-| 26 | [Knowmind](https://tashan.sh/capability/pkg-knowmind.html) | 64 | 313/wk | active |
-| 27 | [Twilio Developer Kit](https://tashan.sh/capability/plugin-twilio-ai-twilio-developer-kit.html) | 63 | 26 ★ | active |
-| 28 | [Amenbo](https://tashan.sh/capability/pkg-amenbo.html) | 63 | 471/wk | active |
-| 29 | [Scholar Sidekick](https://tashan.sh/capability/pkg-scholar-sidekick-mcp.html) | 63 | 388/wk | active |
-| 30 | [Docs](https://tashan.sh/capability/pkg-acta-team-docs-mcp.html) | 63 | 328/wk | active |
-| 31 | [Gpusmarket](https://tashan.sh/capability/pkg-gpusmarket.html) | 63 | 310/wk | active |
-| 32 | [Tracepass](https://tashan.sh/capability/pkg-tracepass-mcp-server.html) | 62 | 270/wk | active |
-| 33 | [Opendata Cat](https://tashan.sh/capability/pkg-opendata-cat-mcp-server.html) | 62 | 230/wk | active |
-| 34 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 61 | 302 ★ | active |
-| 35 | [Filamental](https://tashan.sh/capability/pkg-filamental-mcp.html) | 61 | 341/wk | active |
-| 36 | [Pushinpaybr](https://tashan.sh/capability/pkg-pushinpaybr-mcp-server.html) | 61 | 243/wk | active |
-| 37 | [Type Atlas](https://tashan.sh/capability/pkg-type-atlas-mcp.html) | 60 | 478/wk | active |
-| 38 | [Mail](https://tashan.sh/capability/pkg-honeycrisp-mail.html) | 60 | 404/wk | active |
-| 39 | [Pubcrawl](https://tashan.sh/capability/pkg-pharmatools-pubcrawl.html) | 60 | 334/wk | active |
-| 40 | [Simie](https://tashan.sh/capability/pkg-simie-mcp.html) | 59 | 249/wk | active |
+| 10 | [Iclavue](https://tashan.sh/capability/pkg-iclavue.html) | 74 | 11k/wk | active |
+| 11 | [Vantage](https://tashan.sh/capability/pkg-vantage-mcp-server.html) | 74 | 3k/wk | active |
+| 12 | [Klypix](https://tashan.sh/capability/pkg-klypix-mcp.html) | 72 | 4k/wk | active |
+| 13 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
+| 14 | [Agentic Awesome Skills](https://tashan.sh/capability/pkg-agentic-awesome-skills.html) | 71 | 2k/wk | active |
+| 15 | [Borgmcp](https://tashan.sh/capability/pkg-borgmcp.html) | 71 | 2k/wk | active |
+| 16 | [Devkit](https://tashan.sh/capability/pkg-mapbox-mcp-devkit-server.html) | 71 | 516/wk | active |
+| 17 | [Data Agent Kit Starter Pack](https://tashan.sh/capability/plugin-gemini-cli-extensions-data-agent-kit-starter-pack-data-agent-kit-starter-pack.html) | 70 | 151 ★ | active |
+| 18 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
+| 19 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 70 | 284 ★ | active |
+| 20 | [Witness](https://tashan.sh/capability/pkg-witness-ai-opencode.html) | 70 | 716/wk | active |
+| 21 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 69 | 2k/wk | active |
+| 22 | [Ltcai](https://tashan.sh/capability/pkg-ltcai.html) | 69 | 1k/wk | active |
+| 23 | [Loopctl](https://tashan.sh/capability/pkg-loopctl-mcp-server.html) | 69 | 1k/wk | active |
+| 24 | [Refacil Pay](https://tashan.sh/capability/pkg-refacil-pay-mcp.html) | 69 | 152/wk | active |
+| 25 | [Patina](https://tashan.sh/capability/plugin-devswha-patina-patina.html) | 68 | 311 ★ | active |
+| 26 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 68 | 8k/wk | active |
+| 27 | [Breakpoint](https://tashan.sh/capability/pkg-breakpoint-mcp.html) | 68 | 724/wk | active |
+| 28 | [Graphjin](https://tashan.sh/capability/pkg-graphjin.html) | 67 | 604/wk | active |
+| 29 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 67 | 578/wk | active |
+| 30 | [Jazz AI](https://tashan.sh/capability/pkg-jazz-ai.html) | 67 | 567/wk | active |
+| 31 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 365 ★ | active |
+| 32 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 66 | 660/wk | active |
+| 33 | [Nano Brain](https://tashan.sh/capability/pkg-nano-brain.html) | 66 | 512/wk | active |
+| 34 | [Obsidian · StevenStavrakis](https://tashan.sh/capability/pkg-obsidian-mcp.html) | 65 | 4k/wk | stable |
+| 35 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 65 | 104 ★ | active |
+| 36 | [Booboo](https://tashan.sh/capability/pkg-booboo-brain-cli.html) | 65 | 693/wk | active |
+| 37 | [Engram Wiki](https://tashan.sh/capability/pkg-engram-wiki-mcp.html) | 65 | 639/wk | active |
+| 38 | [Carbone](https://tashan.sh/capability/pkg-carbone-mcp.html) | 64 | 152/wk | active |
+| 39 | [Northwestern University Libraries Digital Collections API](https://tashan.sh/capability/pkg-nulib-dc-api-mcp.html) | 64 | 95/wk | active |
+| 40 | [Twilio Developer Kit](https://tashan.sh/capability/plugin-twilio-ai-twilio-developer-kit.html) | 63 | 26 ★ | active |
 
-Showing the top 40 of 378. The full ranked shelf is at https://tashan.sh/category/docs.html.
+Showing the top 40 of 408. The full ranked shelf is at https://tashan.sh/category/docs.html.
 
 ## What these numbers are not
 

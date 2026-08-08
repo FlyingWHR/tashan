@@ -57,5 +57,84 @@ check("adopt_axis is corpus-independent (a 100x bigger outlier does not move a f
 check("anchors are plain constants, not derived from the data",
       isinstance(build.DL_FULL, float) and isinstance(build.STAR_FULL, float))
 
+# ---- probe_demand: the queue that decides what gets measured ----
+# @playwright/mcp — 6.7M npm downloads/week — sat at rank 4,436 of 4,510 in the enrichment backlog,
+# because never-enriched rows were ordered by config_reach and in_registry and both are 0 for almost
+# all of them. The ordering signal was the one thing we only get BY enriching. No network here: the
+# fetchers are stubbed, because what is under test is the ordering and the failure handling.
+def _probe_checks():
+    calls = []
+
+    def fake_bulk(url, timeout=20):
+        calls.append(url)
+        if "," not in url.rsplit("/", 1)[-1]:
+            raise AssertionError("unscoped packages must be fetched in bulk, not one at a time")
+        return {p: {"downloads": len(p) * 100} for p in url.rsplit("/", 1)[-1].split(",")}
+
+    real_json, real_weekly = build.get_json, build._weekly
+    build.get_json = fake_bulk
+    build._weekly = lambda p, tries=3: 9_999_999 if p == "@big/one" else None
+    try:
+        cache = {}
+        rows = [("a", "small"), ("b", "@big/one"), ("c", "medium-name-here"), ("d", "@dead/one")]
+        out = build.probe_demand(rows, cache)
+        check("the biggest package sorts first even though it was never enriched",
+              out[0][1] == "@big/one")
+        check("a scoped package is never sent to the bulk endpoint",
+              all("@" not in u.rsplit("/", 1)[-1] for u in calls))
+        check("unscoped packages are ordered by real downloads",
+              [p for _, p in out if not p.startswith("@")] == ["medium-name-here", "small"])
+        # The first live run cached 4,441 rate-limited failures as permanent zeros — a package
+        # written off for good by one bad request is the same blind spot with a new cause.
+        check("a failed probe is NOT cached, so the package is retried next run",
+              "@dead/one" not in cache["_probe"])
+        check("a successful probe IS cached", cache["_probe"]["@big/one"] == 9_999_999)
+        check("nothing is dropped from the queue", len(out) == len(rows))
+    finally:
+        build.get_json, build._weekly = real_json, real_weekly
+
+
+_probe_checks()
+
+# ---- the AI-capability gate: npm keywords are marketing, not evidence ----
+# Pricing the backlog made a Yahoo Finance client rank 27th on the board. It is in the corpus at all
+# because discovery reaches npm by keyword and it DECLARES `mcp`, `agent` and `skill` — as do a
+# database ORM and a MockServer client. So the gate reads the name and the author's own prose, and
+# never the tag list. Each row below is a real package that was on, or nearly on, the board.
+
+
+def _says_capability(name, desc):
+    return bool(build.NAME_SAYS.search(name) or build.PROSE_SAYS.search(desc))
+
+
+for _name, _desc, _want in [
+    # keyword-stuffed, and not an AI capability by any reading of what they say they are
+    ("yahoo-finance2", "JS API for Yahoo Finance", False),
+    ("prisma", "Prisma is an open-source database toolkit. It includes a JavaScript/TypeScript ORM"
+               " for Node.js, migrations and a modern GUI", False),
+    ("mockserver-client", "A node client for the MockServer", False),
+    ("igniteui-theming", "A set of Sass variables, mixins, and functions for theming", False),
+    ("npm-deprecated-check", "Check for deprecated packages", False),
+    # real capabilities — the gate must not cost us any of these
+    ("@playwright/mcp", "Playwright Tools for MCP", True),      # declares no npm keywords at all
+    ("frontmcp", "FrontMCP command line interface", True),      # needs substring, not a \\b boundary
+    ("mcporter", "TypeScript runtime and CLI for connecting to configured MCP servers", True),
+    ("firecrawl-mcp", "Firecrawl MCP server", True),
+    ("cline", "Autonomous coding agent CLI", True),
+    ("some-tool", "Filesystem-first framework for durable backend AI agents", True),
+]:
+    check(f"{'keeps' if _want else 'drops'} {_name}", _says_capability(_name, _desc) == _want)
+
+# THE GATE IS FOR npm ROWS ONLY. Applied to every id it cut 1,931 capabilities, nearly all of them
+# skills and plugins — `skill:obra/systematic-debugging`, `skill:Jeffallan/api-designer` — whose
+# descriptions describe the JOB ("Use when encountering any bug, test failure…") instead of
+# announcing that they are AI capabilities, which is what a good skill description does. A `skill:`
+# or `plugin:` id came from a Claude Code repository; it is one by construction and has no npm
+# keyword field to stuff, so the reason for the gate does not apply to it.
+check("the AI-capability gate is scoped to pkg: ids, so skills are never cut for describing the job",
+      'o["id"].startswith("pkg:") and not (' in open(
+          os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "pipeline", "build.py"),
+          encoding="utf-8").read())
+
 print("SCORE SHAPE OK" if not fail else "SCORE SHAPE FAILED")
 sys.exit(fail)

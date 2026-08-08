@@ -1,11 +1,11 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 103,
-  "grade": 808,
+  "full": 129,
+  "grade": 856,
   "n": 22902,
   "scan": 2646,
-  "score": 8647,
+  "score": 9518,
   "task": 3098
  },
  "axes": [
@@ -31,31 +31,120 @@
   }
  ],
  "headline": {
-  "graded_pct": 18,
-  "scanned_pct": 100,
+  "graded_pct": 14,
+  "scanned_pct": 49,
   "scored_pct": 98,
-  "tasked_pct": 49,
+  "tasked_pct": 24,
   "tier": "top1000"
  },
  "queue": [
+  {
+   "downloads": 15845345,
+   "id": "pkg:prisma",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "prisma"
+  },
+  {
+   "downloads": 6700967,
+   "id": "pkg:@playwright/mcp",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "@playwright/mcp"
+  },
+  {
+   "downloads": 4837320,
+   "id": "pkg:claude-cup",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "claude-cup"
+  },
+  {
+   "downloads": 1805347,
+   "id": "pkg:agent-install",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "agent-install"
+  },
   {
    "downloads": 1505082,
    "id": "pkg:chrome-devtools-mcp",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "chrome-devtools-mcp"
   },
   {
-   "downloads": 619257,
-   "id": "pkg:@upstash/context7-mcp",
+   "downloads": 1336414,
+   "id": "pkg:mcp-proxy",
    "kind": "npm",
    "missing": [
-    "grade"
+    "scan",
+    "grade",
+    "task"
    ],
-   "name": "@upstash/context7-mcp"
+   "name": "mcp-proxy"
+  },
+  {
+   "downloads": 803316,
+   "id": "pkg:mcp-handler",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "mcp-handler"
+  },
+  {
+   "downloads": 765082,
+   "id": "pkg:fallow",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "fallow"
+  },
+  {
+   "downloads": 542458,
+   "id": "pkg:eve",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "eve"
+  },
+  {
+   "downloads": 485190,
+   "id": "pkg:mcp-remote",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "mcp-remote"
   },
   {
    "downloads": 482339,
@@ -67,13 +156,48 @@
    "name": "@modelcontextprotocol/server-filesystem"
   },
   {
-   "downloads": 193254,
-   "id": "pkg:@notionhq/notion-mcp-server",
+   "downloads": 261598,
+   "id": "pkg:mcporter",
    "kind": "npm",
    "missing": [
-    "grade"
+    "scan",
+    "grade",
+    "task"
    ],
-   "name": "@notionhq/notion-mcp-server"
+   "name": "mcporter"
+  },
+  {
+   "downloads": 227429,
+   "id": "pkg:add-mcp",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "add-mcp"
+  },
+  {
+   "downloads": 187759,
+   "id": "pkg:yahoo-finance2",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "yahoo-finance2"
+  },
+  {
+   "downloads": 142133,
+   "id": "pkg:cline",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "cline"
   },
   {
    "downloads": 133382,
@@ -86,13 +210,15 @@
    "name": "@modelcontextprotocol/server-sequential-thinking"
   },
   {
-   "downloads": 130105,
-   "id": "pkg:firecrawl-mcp",
+   "downloads": 130839,
+   "id": "pkg:agent-device",
    "kind": "npm",
    "missing": [
-    "grade"
+    "scan",
+    "grade",
+    "task"
    ],
-   "name": "firecrawl-mcp"
+   "name": "agent-device"
   },
   {
    "downloads": 129586,
@@ -104,6 +230,50 @@
     "task"
    ],
    "name": "@modelcontextprotocol/server-github"
+  },
+  {
+   "downloads": 127768,
+   "id": "pkg:supergateway",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "supergateway"
+  },
+  {
+   "downloads": 124945,
+   "id": "pkg:mockserver-client",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "mockserver-client"
+  },
+  {
+   "downloads": 122092,
+   "id": "pkg:n8n-mcp",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "n8n-mcp"
+  },
+  {
+   "downloads": 121808,
+   "id": "pkg:agentdb",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "agentdb"
   },
   {
    "downloads": 120645,
@@ -121,10 +291,20 @@
    "id": "pkg:@zereight/mcp-gitlab",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "@zereight/mcp-gitlab"
+  },
+  {
+   "downloads": 110794,
+   "id": "pkg:pi-mcp-adapter",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "pi-mcp-adapter"
   },
   {
    "downloads": 108257,
@@ -157,6 +337,28 @@
    "name": "azure"
   },
   {
+   "downloads": 105649,
+   "id": "pkg:ruvector",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "ruvector"
+  },
+  {
+   "downloads": 103652,
+   "id": "pkg:agentation-mcp",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "agentation-mcp"
+  },
+  {
    "downloads": 97826,
    "id": "pkg:@modelcontextprotocol/server-slack",
    "kind": "npm",
@@ -168,6 +370,17 @@
    "name": "@modelcontextprotocol/server-slack"
   },
   {
+   "downloads": 92059,
+   "id": "pkg:next-devtools-mcp",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "next-devtools-mcp"
+  },
+  {
    "downloads": 91352,
    "id": "pkg:xcodebuildmcp",
    "kind": "npm",
@@ -175,6 +388,39 @@
     "task"
    ],
    "name": "XcodeBuildMCP"
+  },
+  {
+   "downloads": 89906,
+   "id": "pkg:freee-mcp",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "freee-mcp"
+  },
+  {
+   "downloads": 85544,
+   "id": "pkg:nx-mcp",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "nx-mcp"
+  },
+  {
+   "downloads": 82841,
+   "id": "pkg:ato-mcp",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "ato-mcp"
   },
   {
    "downloads": 81824,
@@ -186,11 +432,21 @@
    "name": "figma-developer-mcp"
   },
   {
+   "downloads": 79483,
+   "id": "pkg:agentic-flow",
+   "kind": "npm",
+   "missing": [
+    "scan",
+    "grade",
+    "task"
+   ],
+   "name": "agentic-flow"
+  },
+  {
    "downloads": 77740,
    "id": "pkg:@supabase/mcp-server-supabase",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "@supabase/mcp-server-supabase"
@@ -200,248 +456,27 @@
    "id": "pkg:@wonderwhy-er/desktop-commander",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "@wonderwhy-er/desktop-commander"
-  },
-  {
-   "downloads": 67662,
-   "id": "pkg:hostinger-api-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "hostinger-api-mcp"
-  },
-  {
-   "downloads": 67296,
-   "id": "pkg:@modelcontextprotocol/server-everything",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@modelcontextprotocol/server-everything"
-  },
-  {
-   "downloads": 58798,
-   "id": "pkg:mcp-framework",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "mcp-framework"
-  },
-  {
-   "downloads": 43488,
-   "id": "pkg:@cloudflare/mcp-server-cloudflare",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@cloudflare/mcp-server-cloudflare"
-  },
-  {
-   "downloads": 41769,
-   "id": "pkg:@bytebase/dbhub",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@bytebase/dbhub"
-  },
-  {
-   "downloads": 37481,
-   "id": "pkg:@gongrzhe/server-gmail-autoauth-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@gongrzhe/server-gmail-autoauth-mcp"
-  },
-  {
-   "downloads": 36519,
-   "id": "pkg:@perplexity-ai/mcp-server",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "mcp-server"
-  },
-  {
-   "downloads": 31786,
-   "id": "pkg:exa-mcp-server",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "exa-mcp-server"
-  },
-  {
-   "downloads": 30702,
-   "id": "pkg:figma-console-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "figma-console-mcp"
-  },
-  {
-   "downloads": 29879,
-   "id": "pkg:mcp-searxng",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "mcp-searxng"
-  },
-  {
-   "downloads": 28903,
-   "id": "pkg:@modelcontextprotocol/server-brave-search",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade",
-    "task"
-   ],
-   "name": "@modelcontextprotocol/server-brave-search"
-  },
-  {
-   "downloads": 26444,
-   "id": "pkg:@modelcontextprotocol/server-puppeteer",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade",
-    "task"
-   ],
-   "name": "@modelcontextprotocol/server-puppeteer"
-  },
-  {
-   "downloads": 25604,
-   "id": "pkg:@mobilenext/mobile-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@mobilenext/mobile-mcp"
-  },
-  {
-   "downloads": 23709,
-   "id": "pkg:@sveltejs/mcp",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "mcp"
-  },
-  {
-   "downloads": 23002,
-   "id": "pkg:@shopify/dev-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@shopify/dev-mcp"
-  },
-  {
-   "downloads": 22696,
-   "id": "pkg:tavily-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "tavily-mcp"
-  },
-  {
-   "downloads": 21192,
-   "id": "pkg:@launchdarkly/mcp-server",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@launchdarkly/mcp-server"
-  },
-  {
-   "downloads": 17941,
-   "id": "pkg:kubernetes-mcp-server",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "kubernetes-mcp-server"
-  },
-  {
-   "downloads": 17534,
-   "id": "pkg:mcp-server-kubernetes",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "mcp-server-kubernetes"
-  },
-  {
-   "downloads": 17356,
-   "id": "pkg:@stripe/mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@stripe/mcp"
-  },
-  {
-   "downloads": 16888,
-   "id": "pkg:xmcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "xmcp"
-  },
-  {
-   "downloads": 14316,
-   "id": "pkg:@smartbear/mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "smartbear-mcp"
-  },
-  {
-   "downloads": 13836,
-   "id": "pkg:@alipay/mcp-server-alipay",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@alipay/mcp-server-alipay"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 14,
-   "grade": 22,
+   "full": 13,
+   "grade": 25,
    "n": 100,
-   "scan": 100,
-   "score": 94,
-   "task": 47
+   "scan": 44,
+   "score": 95,
+   "task": 16
   },
   "top1000": {
-   "full": 72,
-   "grade": 175,
+   "full": 70,
+   "grade": 136,
    "n": 1000,
-   "scan": 1000,
-   "score": 983,
-   "task": 490
+   "scan": 487,
+   "score": 985,
+   "task": 245
   }
  }
 }

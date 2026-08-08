@@ -15,9 +15,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 55 | 10 ★ | active |
 | 3 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 51 | 3 ★ | active |
 | 4 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 74 | 2k ★ | active |
-| 5 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 67 | 118 ★ | active |
-| 6 | [Jira](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 64 | 46 ★ | active |
-| 7 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 64 | 48 ★ | active |
+| 5 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 66 | 118 ★ | active |
+| 6 | [Jira](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 63 | 46 ★ | active |
+| 7 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 63 | 48 ★ | active |
 | 8 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 60 | 27 ★ | active |
 | 9 | [AI Adoption Playbook](https://tashan.sh/capability/plugin-adimango-ai-adoption-playbook-ai-adoption-playbook.html) | 59 | 20 ★ | active |
 | 10 | [Game Of Cards](https://tashan.sh/capability/plugin-zauberzeug-game-of-cards-game-of-cards.html) | 54 | 6 ★ | active |
@@ -28,7 +28,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Sq](https://tashan.sh/capability/plugin-derekstride-sq-sq.html) | 57 | 13 ★ | active |
 | 16 | [Executing Plans](https://tashan.sh/capability/skill-obra-executing-plans.html) | 55 | 4 repos | active |
 | 17 | [Execute](https://tashan.sh/capability/skill-alirezarezvani-execute.html) | 52 | 3 repos | active |
-| 18 | [The H AI K U Method](https://tashan.sh/capability/plugin-gigsmart-haiku-method-the-h-ai-k-u-method.html) | 52 | 24 ★ | active |
+| 18 | [The H AI K U Method](https://tashan.sh/capability/plugin-gigsmart-haiku-method-the-h-ai-k-u-method.html) | 51 | 24 ★ | active |
 | 19 | [Change Management](https://tashan.sh/capability/skill-alirezarezvani-change-management.html) | 49 | 2 repos | active |
 | 20 | [Company OS](https://tashan.sh/capability/skill-alirezarezvani-company-os.html) | 49 | 2 repos | active |
 | 21 | [Coo Advisor](https://tashan.sh/capability/skill-alirezarezvani-coo-advisor.html) | 49 | 2 repos | active |
@@ -39,18 +39,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Shipyard · Acendas](https://tashan.sh/capability/plugin-acendas-shipyard-shipyard.html) | 49 | 2 ★ | active |
 | 27 | [Dominion Flow](https://tashan.sh/capability/plugin-thierryn-fire-flow-dominion-flow.html) | 48 | 77 ★ | active |
 | 28 | [Launchpad](https://tashan.sh/capability/plugin-builtform-launchpad-launchpad.html) | 47 | 1 ★ | active |
-| 29 | [Next Task](https://tashan.sh/capability/plugin-agent-sh-next-task-next-task.html) | 47 | 4 ★ | active |
-| 30 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 47 | 5 ★ | active |
-| 31 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 46 | 3 ★ | active |
-| 32 | [Belmont](https://tashan.sh/capability/plugin-blake-simpson-belmont-belmont.html) | 46 | 4 ★ | active |
-| 33 | [Coordinator Claude](https://tashan.sh/capability/plugin-oduffy-delphi-coordinator-claude-coordinator-claude.html) | 46 | 5 ★ | active |
+| 29 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 47 | 5 ★ | active |
+| 30 | [Belmont](https://tashan.sh/capability/plugin-blake-simpson-belmont-belmont.html) | 46 | 4 ★ | active |
+| 31 | [Coordinator Claude](https://tashan.sh/capability/plugin-oduffy-delphi-coordinator-claude-coordinator-claude.html) | 46 | 5 ★ | active |
+| 32 | [Next Task](https://tashan.sh/capability/plugin-agent-sh-next-task-next-task.html) | 46 | 4 ★ | active |
+| 33 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 45 | 3 ★ | active |
 | 34 | [Astravue](https://tashan.sh/capability/plugin-astravueorg-astravue-mcp-server-astravue.html) | 45 | 12 ★ | active |
 | 35 | [Vibe Cartographer](https://tashan.sh/capability/plugin-estevanhernandez-stack-ed-vibe-cartographer-vibe-cartographer.html) | 44 | 1 ★ | active |
 | 36 | [Product In Acquisitions](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-product-in-acquisitions.html) | 44 | 1 marketplaces | active |
 | 37 | [Superpowers Beads](https://tashan.sh/capability/plugin-rsktash-superpowers-superpowers-beads.html) | 44 | 0 ★ | active |
-| 38 | [1b1](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-1b1.html) | 44 | 1 marketplaces | active |
-| 39 | [Sdlc Wizard](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard.html) | 44 | 1 marketplaces | active |
-| 40 | [Sdlc Wizard Cowork](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard-cowork.html) | 44 | 1 marketplaces | active |
+| 38 | [Sdlc Wizard](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard.html) | 44 | 1 marketplaces | active |
+| 39 | [Sdlc Wizard Cowork](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard-cowork.html) | 44 | 1 marketplaces | active |
+| 40 | [Devflow · KlausFreiberufler](https://tashan.sh/capability/plugin-klausfreiberufler-devflow-mcp-devflow.html) | 43 | 1 ★ | active |
 
 Showing the top 40 of 117. The full ranked shelf is at https://tashan.sh/task/project-management.html.
 

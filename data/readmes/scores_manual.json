@@ -1,0 +1,8 @@
+[
+ {
+  "id": "pkg:@remem-ai/remem",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "29 worked examples, setup, auth and a stated limitation; short of deep on per-tool docs \u2014 the documented lists are eval datasets and token sources, not its tools"
+ }
+]

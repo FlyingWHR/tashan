@@ -11,12 +11,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 69 | 326 ★ | active |
+| 1 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 68 | 326 ★ | active |
 | 2 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | 49 | 2 repos | active |
 | 3 | [Scenario War Room](https://tashan.sh/capability/skill-alirezarezvani-scenario-war-room.html) | 49 | 2 repos | active |
 | 4 | [Senior Security](https://tashan.sh/capability/skill-alirezarezvani-senior-security.html) | 49 | 2 repos | active |
-| 5 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 48 | 5 ★ | active |
-| 6 | [Apiiro](https://tashan.sh/capability/plugin-apiiro-mcp-server-apiiro.html) | 47 | 3 ★ | active |
+| 5 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 47 | 5 ★ | active |
+| 6 | [Apiiro](https://tashan.sh/capability/plugin-apiiro-mcp-server-apiiro.html) | 46 | 3 ★ | active |
 | 7 | [Clover](https://tashan.sh/capability/plugin-clover-security-clover-claude-plugin-clover.html) | 44 | 0 ★ | active |
 | 8 | [Vendor Management](https://tashan.sh/capability/skill-alirezarezvani-vendor-management.html) | not scored | 1 repos | active |
 | 9 | [Challenge](https://tashan.sh/capability/skill-alirezarezvani-challenge.html) | not scored | 1 repos | active |
@@ -28,12 +28,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Iso42001 Specialist](https://tashan.sh/capability/skill-alirezarezvani-iso42001-specialist.html) | not scored | 1 repos | active |
 | 16 | [Risk Management Specialist](https://tashan.sh/capability/skill-alirezarezvani-risk-management-specialist.html) | not scored | 1 repos | active |
 | 17 | [Wooyun Legacy](https://tashan.sh/capability/plugin-tanweai-wooyun-legacy-wooyun-legacy.html) | not scored | 2k ★ | abandoned |
-| 18 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 55 | 139/wk | active |
-| 19 | [Reputa](https://tashan.sh/capability/pkg-reputa-mcp.html) | 54 | 108/wk | active |
-| 20 | [Nuguard](https://tashan.sh/capability/plugin-nuguardai-nuguard-nuguard.html) | 53 | 13 ★ | active |
-| 21 | [Frisk](https://tashan.sh/capability/pkg-frisk-mcp.html) | 53 | 151/wk | active |
+| 18 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 54 | 139/wk | active |
+| 19 | [Nuguard](https://tashan.sh/capability/plugin-nuguardai-nuguard-nuguard.html) | 52 | 13 ★ | active |
+| 20 | [Reputa](https://tashan.sh/capability/pkg-reputa-mcp.html) | 51 | 73/wk | active |
+| 21 | [Frisk](https://tashan.sh/capability/pkg-frisk-mcp.html) | 50 | 82/wk | active |
 | 22 | [Mintverdict](https://tashan.sh/capability/pkg-mintverdict-mcp.html) | 50 | 75/wk | active |
-| 23 | [Defi Guard](https://tashan.sh/capability/pkg-iniit-defi-guard-mcp.html) | 47 | 47/wk | active |
+| 23 | [Defi Guard](https://tashan.sh/capability/pkg-iniit-defi-guard-mcp.html) | 46 | 47/wk | active |
 | 24 | [Adversarial Review](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-adversarial-review.html) | 37 | 1 marketplaces | active |
 | 25 | [Agent Native](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-agent-native.html) | 37 | 1 marketplaces | active |
 | 26 | [Ce Review](https://tashan.sh/capability/plugin-lucasmccomb-ccgm-ce-review.html) | 37 | 1 marketplaces | active |

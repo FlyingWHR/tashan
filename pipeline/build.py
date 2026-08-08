@@ -257,6 +257,17 @@ def get_json(url, timeout=20):
 # "C:\Users\...\dist\index.js") that leaked out of a public config and got mistaken for a package. Guard the
 # ingest trust boundary so this garbage never becomes an id or wastes an npm API round-trip 404ing.
 _BAD_PKG = re.compile(r"[\\:\s]|^[./]|\.js$")
+# WHAT WE RANK MUST SAY IT IS AN AI CAPABILITY — see the gate in export()'s junk().
+# Substring, not \b: `frontmcp` and `mcporter` are real MCP tooling and a word boundary misses both.
+# Matched against the package NAME only, where a false positive costs a name nobody picks by accident.
+NAME_SAYS = re.compile(r"mcp|context7|claude|agent|skill|copilot|cursor|llm", re.I)
+# Matched against the DESCRIPTION — prose the author wrote about what the thing does. Deliberately
+# NOT matched against npm keywords, which are self-declared, cost nothing, and are demonstrably
+# stuffed: yahoo-finance2 declares `mcp`, `agent` and `skill`.
+PROSE_SAYS = re.compile(r"\bmcp\b|model[- ]context[- ]protocol|\bagent(s|ic)?\b|\bskill(s)?\b"
+                        r"|claude|\bllm\b|cursor|windsurf|copilot|openai|anthropic|\bai\b", re.I)
+
+
 def bad_pkg(pkg):
     return bool(pkg) and bool(_BAD_PKG.search(pkg))
 
@@ -401,6 +412,93 @@ def ingest_registry(con, full=False):
     return seen
 
 # ---------- phase C: npm enrichment (quality) ----------
+PROBE_CAP = int(os.environ.get("PROBE_CAP", "6000"))   # backlog rows to price per run
+
+
+def probe_demand(rows, cache):
+    """Order never-enriched packages by their actual weekly downloads.
+
+    Prices the backlog against api.npmjs.org/downloads — a different, much cheaper service than the
+    registry metadata that enrichment fetches: no auth, a few hundred bytes, and 128 unscoped names
+    per call. Results are kept in the npm cache under `_probe`, so the walk is paid once per package
+    rather than once per run and shrinks to nothing as the backlog is worked off.
+
+    Rows we cannot price sort last but keep their old relative order, so a probe failure degrades to
+    exactly the previous behaviour instead of dropping anything out of the queue.
+    """
+    probe = cache.setdefault("_probe", {})
+    todo = [p for _, p in rows if p not in probe and not bad_pkg(p)][:PROBE_CAP]
+    if todo:
+        # BULK WHERE npm ALLOWS IT. The first cut fired one request per package, 16 at a time, and
+        # npm rate-limited 4,441 of 4,507 into failures — a probe that returns nothing is worse than
+        # no probe, because it looks like it ran. The downloads API takes up to 128 comma-separated
+        # names per call, so the unscoped majority costs ~15 requests instead of 1,849.
+        bulk = [p for p in todo if not p.startswith("@")]
+        solo = [p for p in todo if p.startswith("@")]     # "scoped packages are not currently
+        print(f"  pricing {len(todo)} unmeasured packages "  # supported in bulk lookups" — npm
+              f"({len(bulk)} in {-(-len(bulk) // 128)} bulk calls, {len(solo)} scoped singly)...",
+              flush=True)
+        for i in range(0, len(bulk), 128):
+            chunk = bulk[i:i + 128]
+            try:
+                got = get_json("https://api.npmjs.org/downloads/point/last-week/" + ",".join(chunk))
+                for pkg, rec in (got or {}).items():
+                    if isinstance(rec, dict) and rec.get("downloads") is not None:
+                        probe[pkg] = rec["downloads"]
+            except Exception:
+                pass                                       # retried next run — never written off
+            time.sleep(0.2)
+        # SEQUENTIAL, AND IT GIVES UP EARLY. Sixteen workers had 4,441 of 4,507 rate-limited; four
+        # workers still earned a blanket 429; one at a time every 250ms did too — verified by curling
+        # the endpoint by hand mid-run and getting 429 for @playwright/mcp, the exact package this
+        # change exists for. npm's per-second budget on this endpoint is simply small, and scoped
+        # names cannot be batched, so there is no rate at which 2,552 of them finish quickly.
+        #
+        # The circuit breaker is the important part. Without it a throttled run spends forty minutes
+        # collecting 429s and reports nothing, which looks exactly like a run that found nothing.
+        # Stop after a run of consecutive failures, keep what was priced, and continue next time:
+        # `todo` is rebuilt from the cache each run, so this is resumable by construction.
+        misses = 0
+        for i, pkg in enumerate(solo):
+            dl = _weekly(pkg)
+            # ONLY SUCCESSES ARE CACHED. Storing a failed probe as a permanent 0 would mean one
+            # rate-limited request retires a package from the queue for good — the same
+            # self-hiding blind spot this function exists to remove, just with a new cause.
+            if dl is not None:
+                probe[pkg], misses = dl, 0
+            else:
+                misses += 1
+                if misses >= 25:
+                    print(f"    npm is rate-limiting: stopped after {i + 1} scoped probes, "
+                          f"{len(solo) - i - 1} deferred to the next run", flush=True)
+                    break
+            time.sleep(0.4)
+        print(f"  priced {sum(1 for p in todo if probe.get(p))} of {len(todo)}", flush=True)
+    return sorted(rows, key=lambda r: -(probe.get(r[1]) or 0))
+
+
+def _weekly(pkg, tries=3):
+    """Last week's download count, or None when npm has no answer.
+
+    Never raises: this is a hint that orders a queue, and a hint that fails must not take the
+    pipeline down with it. It does back off, though — a flat give-up on the first 429 is what turned
+    the first probe run into 4,441 silent failures.
+    """
+    for n in range(tries):
+        try:
+            return get_json("https://api.npmjs.org/downloads/point/last-week/"
+                            + urllib.parse.quote(pkg, safe="@/"), timeout=12).get("downloads")
+        except urllib.error.HTTPError as e:
+            if e.code in (404, 429):
+                return None      # 404: unpublished. 429: retrying is what CAUSED the 429 — the
+                                 # caller's circuit breaker handles it, and nothing is cached, so
+                                 # the package is simply priced on a later run.
+            time.sleep(0.5 * (n + 1))
+        except Exception:
+            time.sleep(0.5 * (n + 1))
+    return None
+
+
 def enrich_npm(con):
     cache = json.load(open(NPM_CACHE)) if os.path.exists(NPM_CACHE) else {}
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -432,7 +530,21 @@ def enrich_npm(con):
     # keeping the rows people actually look at current; whichever half runs short lends to the other.
     fresh_q = con.execute(
         "SELECT id, npm_pkg FROM capabilities WHERE npm_pkg IS NOT NULL AND npm_downloads IS NULL "
-        "ORDER BY config_reach DESC, in_registry DESC LIMIT ?", (NPM_CAP,)).fetchall()
+        "ORDER BY config_reach DESC, in_registry DESC", ()).fetchall()
+    # DEMAND DECIDED WHAT WE MEASURED, AND WE ONLY KNEW DEMAND FOR WHAT WE HAD MEASURED.
+    #
+    # `config_reach` counts appearances in the configs we have collected and `in_registry` is a flag;
+    # for a row nobody has enriched, both are usually 0, so the ordering above was a tie across
+    # thousands of rows broken by rowid — noise. @playwright/mcp, at 6.7 MILLION npm downloads a week
+    # and almost certainly the most-used MCP server in existence, sat at rank 4,436 of 4,510 and was
+    # still unmeasured on launch night. /v0.1/lookup answered `measured: false` for it, and the
+    # coverage report could not flag the hole either, because coverage ranks by downloads too.
+    #
+    # A blind spot that hides itself. The fix is to stop guessing: the downloads endpoint is a
+    # separate, tiny API from the registry metadata we fetch during enrichment, so probing it for the
+    # backlog is cheap and gives the queue the one signal that actually orders it. Probes are cached
+    # with the rest, so this walk shrinks to nothing once the backlog is worked off.
+    fresh_q = probe_demand(fresh_q, cache)[:NPM_CAP]
     # NO `LIMIT` before the staleness filter. Taking the top NPM_CAP by downloads and then keeping
     # the stale ones sounds equivalent and is not: on a day when few of the top rows have aged out,
     # the query returns a short list and everything below rank NPM_CAP is never considered at all —
@@ -1301,6 +1413,32 @@ def export(con):
         # STRICTLY 0, never falsy: NULL means not yet scanned, and dropping unscanned rows would
         # silently empty the board of everything the security stage has not reached.
         if o.get("npm_runnable") == 0 and not o.get("remote_host"):
+            return True
+        # AND IT HAS TO SAY IT IS ONE. npm KEYWORDS ARE MARKETING, NOT EVIDENCE.
+        #
+        # Discovery reaches npm by keyword, and keywords are self-declared and stuffed:
+        # `yahoo-finance2` ("JS API for Yahoo Finance") declares `mcp`, `agent` AND `skill`;
+        # `mockserver-client` ("A node client for the MockServer") declares `mcp`; so does `prisma`,
+        # a database ORM. They were harmless for as long as nobody had measured them — and the
+        # download probe added above measured them, so a Yahoo Finance client came up the board at
+        # rank 27 on 188k weekly downloads, ahead of most real MCP servers. Adoption was right; it
+        # was measuring the popularity of something that is not an AI capability.
+        #
+        # So the test is what the package SAYS IT IS in prose, or its name, or the MCP registry —
+        # never the tag list, which costs an author nothing to pad. This drops ~2.6% of the board,
+        # including a Sass mixin library, an ESLint plugin and `npm-deprecated-check`. It also drops
+        # a handful of real AI tools whose descriptions never mention it (`byterover-cli`, `ctx7`),
+        # which is the right side to err on for a project whose rule is that an unevidenced claim
+        # does not get published: an author who never says what their tool is for can say so.
+        # ONLY npm ROWS. A `skill:` or `plugin:` id came out of a Claude Code skills or plugins
+        # repository — it is an AI capability by construction, and there is no keyword to stuff.
+        # Applied to everything, this gate cut 1,931 rows: `skill:obra/systematic-debugging`,
+        # `skill:Jeffallan/api-designer` and 1,000 more whose descriptions describe the JOB ("Use
+        # when encountering any bug, test failure…") rather than announcing that they are AI
+        # capabilities, which is exactly what a well-written skill description should do.
+        if o["id"].startswith("pkg:") and not (
+                o.get("in_registry") or NAME_SAYS.search(n + " " + (o.get("name") or ""))
+                or PROSE_SAYS.search(blurb)):
             return True
         if n.startswith("@"):
             return False  # scoped = real identity

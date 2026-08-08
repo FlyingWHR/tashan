@@ -17,17 +17,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Archy](https://tashan.sh/capability/plugin-hslee16-archy-archy.html) | 54 | 6 ★ | active |
 | 5 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 53 | 182 ★ | active |
 | 6 | [AI Craftsman Superpowers](https://tashan.sh/capability/plugin-buldee-ai-craftsman-superpowers-ai-craftsman-superpowers.html) | 56 | 35 ★ | active |
-| 7 | [Groundwork](https://tashan.sh/capability/plugin-etr-groundwork-groundwork.html) | 56 | 41 ★ | active |
+| 7 | [Groundwork](https://tashan.sh/capability/plugin-etr-groundwork-groundwork.html) | 55 | 41 ★ | active |
 | 8 | [Reqvire](https://tashan.sh/capability/plugin-reqvire-org-reqvire-reqvire.html) | 55 | 15 ★ | active |
 | 9 | [Archcore](https://tashan.sh/capability/plugin-archcore-ai-archcore-plugin-archcore.html) | 52 | 50 ★ | active |
-| 10 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 52 | 4 ★ | active |
-| 11 | [Supergraph](https://tashan.sh/capability/plugin-datit309-supergraph-supergraph.html) | 52 | 22 ★ | active |
-| 12 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 52 | 4 ★ | active |
+| 10 | [Supergraph](https://tashan.sh/capability/plugin-datit309-supergraph-supergraph.html) | 52 | 22 ★ | active |
+| 11 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 52 | 4 ★ | active |
+| 12 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 51 | 4 ★ | active |
 | 13 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 80 | 34k ★ | active |
 | 14 | [Understand Anything](https://tashan.sh/capability/plugin-lum1104-understand-anything-understand-anything.html) | 80 | 76k ★ | active |
-| 15 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 71 | 413 ★ | active |
+| 15 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
 | 16 | [Lean Kg](https://tashan.sh/capability/plugin-freepeak-leankg-lean-kg.html) | 69 | 213 ★ | active |
-| 17 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 66 | 104 ★ | active |
+| 17 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 65 | 104 ★ | active |
 | 18 | [Cto Advisor](https://tashan.sh/capability/skill-alirezarezvani-cto-advisor.html) | 49 | 2 repos | active |
 | 19 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | 49 | 2 repos | active |
 | 20 | [Senior Architect](https://tashan.sh/capability/skill-alirezarezvani-senior-architect.html) | 49 | 2 repos | active |
@@ -35,10 +35,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Tech Stack Evaluator](https://tashan.sh/capability/skill-alirezarezvani-tech-stack-evaluator.html) | 49 | 2 repos | active |
 | 23 | [AWS Startup Advisor](https://tashan.sh/capability/plugin-awslabs-startups-aws-startup-advisor.html) | 46 | 2 marketplaces | — |
 | 24 | [Three Pillars](https://tashan.sh/capability/plugin-curtisthe-three-pillars-plugin-three-pillars.html) | 46 | 4 ★ | active |
-| 25 | [Formal Agent Contracts](https://tashan.sh/capability/plugin-kotaroyamame-formal-agent-contracts-formal-agent-contracts.html) | 45 | 1 ★ | active |
-| 26 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 44 | 3 ★ | active |
-| 27 | [Nova Thesis](https://tashan.sh/capability/plugin-jerry7991-nova-thesis-nova-thesis.html) | 44 | 12 ★ | active |
-| 28 | [Gitnexus](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-gitnexus.html) | 44 | 1 marketplaces | active |
+| 25 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 44 | 3 ★ | active |
+| 26 | [Formal Agent Contracts](https://tashan.sh/capability/plugin-kotaroyamame-formal-agent-contracts-formal-agent-contracts.html) | 44 | 1 ★ | active |
+| 27 | [Nova Thesis](https://tashan.sh/capability/plugin-jerry7991-nova-thesis-nova-thesis.html) | 43 | 12 ★ | active |
+| 28 | [Gitnexus · Roxabi](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-gitnexus.html) | 43 | 1 marketplaces | active |
 | 29 | [Django Schema Design](https://tashan.sh/capability/plugin-llodev-skills-django-schema-design.html) | 43 | 1 marketplaces | active |
 | 30 | [Code Modernization](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-code-modernization.html) | 42 | 1 marketplaces | — |
 | 31 | [Feature Dev](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-feature-dev.html) | 42 | 1 marketplaces | — |

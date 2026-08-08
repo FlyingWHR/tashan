@@ -4,7 +4,45 @@
 identity, a dashboard, or a human on the other end. They are ordered by effect, and each one states
 exactly what is already prepared so the step is short.*
 
-**Three of four are done.** Only §1 is left — one toggle in the Cloudflare dashboard.
+**All four are done.** One new item has taken their place, and it is the one that matters most.
+
+---
+
+## 0 · Publish `tashan-cli@0.1.4` — the currently published version defames Microsoft
+
+**Do this before anything else launches.** `tashan-cli@0.1.3` is live on npm right now, and it tells
+every user who has Microsoft's official Playwright MCP server installed:
+
+> `! playwright` — **REMOVED from the MCP registry** — its policy lists spam, malware or illegal
+> content as the usual reasons. Stop using it and verify the source.
+
+`@playwright/mcp` was never removed from anything. `doctor` fell back to matching the bare leaf name
+`mcp` after the scoped lookup missed, and `mcp` resolves to a different, delisted package. Every
+Playwright user running `tashan doctor` sees this. It is reproducible in one command:
+
+```sh
+npm install --prefix /tmp/t tashan-cli@0.1.3
+# with @playwright/mcp in your Claude config:
+/tmp/t/node_modules/.bin/tashan doctor
+```
+
+**0.1.4 fixes it** (`cli/doctor.mjs` refuses generic leaves: `mcp`, `server`, `cli`, `core`, …) and
+was verified the way the bug was found — packed, installed from the tarball, and run against a real
+config, not called as a function in a test. It also gives `--version` an answer; every form of it
+replied "unknown command" up to 0.1.3.
+
+**Do** — GitHub → Actions → **publish cli** → *Run workflow*:
+
+| field | value |
+|---|---|
+| `dry_run` | **unchecked** — checked is a pack-and-verify rehearsal that publishes nothing |
+
+Trusted publishing is already configured (§2), so there is no token to supply. Then move the MCP
+registry entry to 0.1.4 (§3 has the command). Verify with `npx tashan-cli@latest --version` → `0.1.4`.
+
+*Why you and not me: publishing is outward-facing and irreversible — npm restricts unpublish after
+72 hours — so it happens when a human says so. That is also why the workflow is `workflow_dispatch`
+and not a push trigger.*
 
 ---
 

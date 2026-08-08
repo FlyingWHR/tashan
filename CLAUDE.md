@@ -128,13 +128,21 @@ script. Folding them would hide exactly that case. `tests/test_firewall.py` stil
 ### LLM-in-the-loop (expertise + categories)
 
 Two signals are graded by **Claude Code subagents in-session**, not by a script — the `*_prep`/`merge_*` scripts only stage input and fold results back:
-- **Expertise:** `fetch_readmes.py` → `data/readmes/manifest.json` → grade each README against the rubric → `merge_expertise.py` (merges `scores_*.json` + re-exports). Verdicts: `deep / solid / thin / wrapper / slop`. **Read `docs/GRADING-RUBRIC.md` before grading** —
+- **Expertise:** `fetch_readmes.py` → `data/readmes/manifest.json` → grade each README against the rubric → `merge_expertise.py` (merges `scores_*.json` + re-exports). Verdicts: `deep / solid / thin` (`wrapper` and `slop` were removed — see the rubric). **Read `docs/GRADING-RUBRIC.md` before grading** —
 the bands alone produced "deep" at anywhere from 1.5% to 22.9% across six graders on the same corpus,
 so the rubric is now conjunctive (deep requires all four of per-tool docs, two worked examples,
 setup/auth, a stated limitation) with override rules. `pipeline/doc_signals.py` measures whether a
 capability's README is even ABOUT it: 79 of 836 share one byte-for-byte with another capability and
 23 are never named in the only document they have — those cap at `thin`, because a grade must not
 borrow credit from a document describing something else. Grading has two paths: **in-session subagents** (write `scores_*.json`) for hand-curation, or the **automated batch** `grade_expertise.py` (`ANTHROPIC_API_KEY=… python3 pipeline/grade_expertise.py`, same rubric, writes `scores_auto.json`) — the scalable path, since hand-grading only reached ~1% of the corpus. Run `--dry-run` to self-check without a key.
+  **Never grade a README straight from the manifest.** `pipeline/grade_evidence.py --follow <id>…`
+  extracts the four conjunctive criteria and prints the line that produced each, and its `--follow`
+  is not optional politeness: the manifest holds a **14,000-char prefix**, and 36 of the 57
+  capabilities in the first top-demand queue hit that cap exactly, so the sections that earn the top
+  band were the ones being cut. It also reads the in-repo docs a README hands off to — chrome-devtools-mcp
+  documents 47 tools in `docs/tool-reference.md` and none in its README. `--emit <scores.json>` writes
+  a merge-ready file; capabilities it cannot read fairly (no document staged, a document about
+  something else, tool docs behind a page we cannot open) are **withheld, never graded low**.
 - **Categories:** `classify_prep.py` → `data/classify/manifest.json` → (subagents classify into the 15-cat taxonomy, writing `data/classify/cat_*.json`) → `merge_categories.py` (merges + re-exports; unknown categories coerced to `other`). The 15 valid categories are hardcoded in `merge_categories.py` and mirrored in `web/data/categories.json`.
 
 Both merge scripts `import build` to reuse `db()` + `export()`, so merging a grade automatically re-exports the site JSON.

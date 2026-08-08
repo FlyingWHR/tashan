@@ -76,6 +76,14 @@ def main():
         for lineno, line in enumerate(src.split("\n"), 1):
             for rx in (NPX, ARGS):
                 for pkg in rx.findall(line):
+                    # A VERSION SPECIFIER IS PART OF THE SYNTAX, NOT PART OF THE NAME.
+                    # `npx tashan-cli@latest` failed this test as "no such package", which is the
+                    # opposite of true — @latest is exactly what you type to get past a cached older
+                    # copy, which is the whole point when verifying a fresh publish. Strip a
+                    # trailing @spec (never the leading @ of a scope) and compare the name itself.
+                    at = pkg.rfind("@")
+                    if at > 0:
+                        pkg = pkg[:at]
                     if not pkg.lower().startswith("tashan"):
                         continue          # npx-ing someone else's package is normal, that is the product
                     if pkg == NAME:

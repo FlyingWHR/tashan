@@ -130,9 +130,26 @@ check("unscoped shadow of an official name normalises equal",
       _norm("mcp-server-fetch") == _norm("@modelcontextprotocol/server-fetch") != "")
 check("unrelated packages do not collide",
       _norm("tavily-mcp") != _norm("@modelcontextprotocol/server-fetch"))
-check("no ranked capability shadows an official package",
-      not [c["id"] for c in export["capabilities"] if c.get("similar_official")],
-      str([c["id"] for c in export["capabilities"] if c.get("similar_official")][:3]))
+# NOT "no ranked row carries this flag". That assertion was true only by accident — build.py's own
+# comment recorded that similar_official "matches 0 rows today" because the CANARY description filter
+# had removed the two known shadows — and it started failing the moment honest third-party servers
+# were measured: korotovsky/slack-mcp-server (19,731 downloads/week, its own repo), kristofer84/
+# mcp-postgres, Seey215/github-mcp. None is a typosquat. Failing the build over them would have been
+# the accusation this project explicitly refuses to make.
+#
+# What must hold is that the FACT REACHES THE READER. similar_official is CLI-facing by design
+# (doctor.mjs and mcp.mjs print "an official package with a similar name exists"), so the real
+# invariant is that every flagged row is carried into the export the CLI reads.
+_shadowed = [c for c in export["capabilities"] if c.get("similar_official")]
+_by_id = {r["id"]: r for r in
+          json.load(open(os.path.join(WEB, "data", "lookup.json")))["records"]}
+_lost = [c["id"] for c in _shadowed
+         if _by_id.get(c["id"], {}).get("similar_official") != c["similar_official"]]
+check("every name-confusion note reaches the CLI, which is the surface that shows it",
+      not _lost, "%d of %d flagged rows lose the note in lookup.json: %s"
+                 % (len(_lost), len(_shadowed), _lost[:3]))
+check("a name-confusion note names a DIFFERENT package than the row itself",
+      all(c["similar_official"] != (c.get("npm_pkg") or c["id"]) for c in _shadowed))
 # Match the PRODUCTION rule (build.py CANARY), not the bare word: "canary" legitimately describes a
 # deployment strategy ("merge -> canary -> promote"), and flagging that was a false positive.
 _CANARY = re.compile(r"security research canary|\bcanary\b[^.]{0,40}not for production"
