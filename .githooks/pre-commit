@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# THE SUITE IS THE GATE, and reading its exit code then committing anyway is worse than never
+# running it — it manufactures the appearance of a check. That happened three times in one session:
+# 2b398344c3, c80fd8f90f and 6a71054447 all went in red, each time because the run was minutes old
+# and something had changed since.
+#
+# Bypass with `git commit --no-verify` when you genuinely mean to (a WIP branch, a docs-only fix on
+# a known-red tree). Having to type it is the point.
+set -u
+cd "$(git rev-parse --show-toplevel)"
+[ -n "${TASHAN_SKIP_SUITE:-}" ] && exit 0
+echo "pre-commit: running tests/run.sh …"
+if ! out=$(bash tests/run.sh 2>&1); then
+  echo "$out" | grep -E "^  FAIL|^FAIL|SOME SUITES" | head -12
+  echo
+  echo "pre-commit: SUITE RED — commit refused. Fix it, or --no-verify if you mean it."
+  exit 1
+fi
+echo "pre-commit: all suites green"

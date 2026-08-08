@@ -918,6 +918,29 @@ def main():
                     f'Every {cat["label"].lower()} capability tashan measures, ranked on public evidence.',
                     rows, total=len(rows)))
             written += 1
+    # LEAVE NO ORPHAN BEHIND — the task and role loops have always done this; categories never did.
+    # A shelf shrinks whenever the corpus does (the library gate alone removed hundreds), so
+    # design-9.html outlived the ninth page of design: crawlable, in no sitemap, linked from nothing,
+    # and frozen at whatever ?v= last wrote it — which is how it surfaced, as a stale asset version
+    # failing bump_assets --check rather than as the dead page it actually was.
+    keep = set()
+    for cat in cats:
+        rows = by_cat.get(cat["id"], [])
+        if not rows:
+            continue
+        for pg in range(1, max(1, -(-len(rows) // CAT_PER_PAGE)) + 1):
+            keep.add(cat["id"] if pg == 1 else f'{cat["id"]}-{pg}')
+    orphans = [f for f in glob.glob(os.path.join(OUT_CAT, "*.html"))
+               if os.path.basename(f)[:-5] not in keep]
+    for f in orphans:
+        os.remove(f)
+        md = f[:-5] + ".md"
+        if os.path.exists(md):
+            os.remove(md)
+    if orphans:
+        print("category hubs: removed %d orphaned page(s): %s"
+              % (len(orphans), ", ".join(sorted(os.path.basename(f) for f in orphans))[:90]))
+
     print("category hubs: %d written (%d categorised capabilities)" % (written, sum(len(v) for v in by_cat.values())))
 
     # ---- task hubs: one page per job, gated on having a real shelf behind it ----

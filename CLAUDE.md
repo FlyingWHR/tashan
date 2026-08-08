@@ -166,6 +166,21 @@ The flywheel: every measured capability creates indexable surface, and every sur
 
 **Skills are deliberately NOT on the trust board.** A skill is a folder inside a repo, so its only public maintenance signal is the repository's — all 400 skills in a monorepo would score identically and bury every independently-measured server. They get a directory that says so plainly instead.
 
+## The suite is the gate
+
+`bash tests/run.sh` must be green before a commit. Reading its exit code and committing anyway is
+worse than never running it — it manufactures the appearance of a check, and it happened three times
+in one session (2b398344c3, c80fd8f90f, 6a71054447), each time because the run was minutes old and
+something had changed underneath it.
+
+A hook enforces it. Install it in a fresh clone with:
+
+```sh
+git config core.hooksPath .githooks
+```
+
+`git commit --no-verify` still works for a deliberate exception. Having to type it is the point.
+
 ## Working principles (from PROJECT.md §12)
 
 - **Measured, not claimed** — if it can't be derived from public evidence, don't publish it; state plainly what isn't measured yet (that's the roadmap).
