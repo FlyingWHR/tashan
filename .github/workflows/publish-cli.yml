@@ -139,19 +139,42 @@ jobs:
 
       # Reads back what npm actually recorded. A publish that lost provenance would otherwise look
       # identical to a good one, and we would go on citing a number we had quietly stopped meeting.
-      - name: verify provenance landed
+      # VERIFY THE PUBLISH, AND REPORT PROVENANCE HONESTLY.
+      #
+      # This step used to `exit 1` whenever attestations were absent, and attestations CANNOT be
+      # present here: npm builds provenance from a PUBLIC source repository and this one is private.
+      # So the workflow published successfully and then went red, every time — and a red X after a
+      # successful publish is worse than no check at all. tashan-cli@0.1.3 shipped on 7 Aug under
+      # exactly that failure, and the run being red is a fair reason to believe publishing is broken
+      # and not try again. It is why 0.1.4, which stops the CLI calling Microsoft's Playwright server
+      # malware, sat unpublished for a day.
+      #
+      # What must be true is that THE VERSION IS ON npm. Provenance is reported, and only enforced
+      # where it is achievable — if this repository is ever made public, its absence becomes a real
+      # regression and this fails again.
+      - name: verify the publish landed
         if: ${{ !inputs.dry_run }}
+        env:
+          IS_PRIVATE: ${{ github.event.repository.private }}
         run: |
           sleep 15
           node --input-type=module -e "
             import { readFileSync } from 'node:fs';
             const v = JSON.parse(readFileSync('./cli/package.json', 'utf8')).version;
             const d = await fetch('https://registry.npmjs.org/tashan-cli').then(r => r.json());
-            const att = !!d.versions?.[v]?.dist?.attestations;
-            console.log('tashan-cli@' + v + ' attestations:', att);
-            if (!att) {
-              console.error('published WITHOUT provenance — check id-token: write and that the');
-              console.error('trusted publisher names this exact workflow file.');
+            if (!d.versions?.[v]) {
+              console.error('tashan-cli@' + v + ' is NOT on npm — the publish did not land.');
               process.exit(1);
             }
+            console.log('tashan-cli@' + v + ' is live; latest =', d['dist-tags']?.latest);
+            const att = !!d.versions?.[v]?.dist?.attestations;
+            console.log('tashan-cli@' + v + ' attestations:', att);
+            if (att || process.env.IS_PRIVATE === 'true') {
+              if (!att) console.log('no provenance: npm builds attestations from a PUBLIC source');
+              if (!att) console.log('repo and this one is private. start.html says so plainly.');
+              process.exit(0);
+            }
+            console.error('public repo published WITHOUT provenance — check id-token: write and');
+            console.error('that the trusted publisher names this exact workflow file.');
+            process.exit(1);
           "

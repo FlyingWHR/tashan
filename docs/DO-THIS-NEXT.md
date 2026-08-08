@@ -4,40 +4,24 @@
 left needs an identity, a dashboard, or a human on the other end. Ordered by effect, and each one
 states exactly what is already prepared so the step is short.*
 
-**The original four are all done** (§1–§4, kept below for their reasoning). **Two open items:**
-publishing `tashan-cli@0.1.4`, which stops the live CLI calling Microsoft's Playwright server
-malware, and enabling R2, which stops the git push being refused. Both are one action each.
+**The original four are all done** (§1–§4, kept below for their reasoning). **R2 is done too** —
+enabled 8 Aug, `data/tashan.db` now lives at `r2://tashan-state/tashan.db` and is out of git,
+verified by deleting the local file and restoring it byte-identical.
+
+**Two open items, one action each:** publish `tashan-cli@0.1.4`, and add `ANTHROPIC_API_KEY`.
 
 ---
 
-## 0b · Enable R2 — the git push is 1.2 MiB from being refused
+## 0b · Enable R2 — ✅ DONE 8 Aug 2026 (`r2://tashan-state/tashan.db`)
 
-`data/tashan.db` is **98.8 MiB**. GitHub rejects any blob at 100 MiB, and the daily workflow commits
-the database every night, so the failure lands on `git push` *after* the pipeline has run — and a
-rejected push means that day's history shard never lands. That is the one loss the daily workflow
-exists to prevent.
+*The database was 98.8 MiB against GitHub's hard 100 MiB blob limit while being committed nightly,
+so the failure was going to land on `git push` after the pipeline had already run — and a rejected
+push means that day's history shard never lands. R2 is enabled, the bucket exists, 98.8 MiB is
+stored, and the file is untracked. Proven the only way worth proving it: the local database was
+deleted and pulled back byte-identical (same sha256, all four tables intact).*
 
-Everything is built and tested; it needs one dashboard click, because Cloudflare requires R2 to be
-switched on per account:
-
-**Do** — dash.cloudflare.com → **R2 Object Storage** → *Enable*. (Free tier: 10 GB storage, 1M
-writes/month, zero egress. This pipeline uses ~0.1 GB, 30 writes and 30 reads a month.)
-
-Then, from the repo:
-
-```sh
-npx wrangler@3 r2 bucket create tashan-state
-python3 pipeline/db_store.py push        # ~99 MiB, one time
-python3 pipeline/db_store.py pull        # prove the round trip
-```
-
-Once that round trip works, take the DB out of git for good:
-
-```sh
-git rm --cached data/tashan.db
-echo "data/tashan.db" >> .gitignore
-git commit -m "The database is a cache; caches do not belong in git"
-```
+*`tests/test_history_integrity.py` now fails if `data/tashan.db` is ever tracked again — the size
+limit only bites at push time, so a regression would otherwise stay invisible until a day was lost.*
 
 The daily workflow already calls `db_store.py pull` before the pipeline and `push` after, both
 `continue-on-error` so nothing breaks while R2 is off. Losing the bucket later costs one night of
@@ -73,6 +57,14 @@ was verified the way the bug was found — packed, installed from the tarball, a
 config, not called as a function in a test. It also gives `--version` an answer; every form of it
 replied "unknown command" up to 0.1.3.
 
+**The last run went red, and the publish had already succeeded.** On 7 Aug the workflow published
+0.1.3 and then failed its final step on `attestations: false` — a check that could never pass,
+because npm builds provenance from a PUBLIC source repository and this one is private (§2 records
+exactly that). A red X after a successful publish is worse than no check, and it is a fair reason to
+assume publishing is broken and not try again. Fixed: the step now verifies the version is actually
+on npm, reports provenance, and only enforces it where it is achievable — if this repo is ever made
+public, its absence fails the run again.
+
 **Do** — GitHub → Actions → **publish cli** → *Run workflow*:
 
 | field | value |
@@ -85,6 +77,36 @@ registry entry to 0.1.4 (§3 has the command). Verify with `npx tashan-cli@lates
 *Why you and not me: publishing is outward-facing and irreversible — npm restricts unpublish after
 72 hours — so it happens when a human says so. That is also why the workflow is `workflow_dispatch`
 and not a push trigger.*
+
+---
+
+## 0c · Add `ANTHROPIC_API_KEY` — grading has never once run in the loop
+
+`gh secret list` shows only `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`. The daily workflow
+passes `ANTHROPIC_API_KEY` to two stages and neither has ever had it, so both skip every night:
+
+- `grade_expertise.py` — instruction depth, the grade shown on every dossier and hub
+- `tag_capabilities.py --grade` — the job/role mapping that `/browse`, `/task/*` and `/role/*` rank on
+
+Coverage is **858 of 9,643 scored capabilities (8.9%)**, and essentially all of it was graded by
+hand. That is the weakest part of the *free* product, and the free product is what does the
+acquisition — an agent asking "which of these is documented well enough to use" gets `null` nine
+times in ten.
+
+The grader was also reading only the first 14,000 characters of every document until 8 Aug, which
+biased it against exactly the thorough READMEs that earn the top band; it now reads the full file
+plus the in-repo docs a README links to. So this is worth switching on now rather than before.
+
+**Do** — GitHub → Settings → Secrets and variables → Actions → **New repository secret**
+
+| field | value |
+|---|---|
+| Name | `ANTHROPIC_API_KEY` |
+| Secret | a key from console.anthropic.com |
+
+Cost is small and bounded: Sonnet, ~60 capabilities a run, one call each. Verify on the next daily
+run — the log currently prints `SKIPPED — ANTHROPIC_API_KEY is not set`; it should instead start
+printing grades. `python3 pipeline/grade_expertise.py --dry-run` checks the prompt path with no key.
 
 ---
 
