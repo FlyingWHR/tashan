@@ -26,31 +26,31 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Dynoxide](https://tashan.sh/capability/pkg-dynoxide.html) | 71 | 5k/wk | active |
 | 14 | [Infrawise](https://tashan.sh/capability/pkg-infrawise.html) | 68 | 729/wk | active |
 | 15 | [SAP HANA CLI](https://tashan.sh/capability/pkg-hana-cli.html) | 67 | 1k/wk | active |
-| 16 | [Wr Admin Mcp Connector](https://tashan.sh/capability/pkg-wr-admin-mcp-connector.html) | 66 | 992/wk | active |
-| 17 | [Seedfast](https://tashan.sh/capability/pkg-seedfast.html) | 66 | 421/wk | active |
-| 18 | [Oe](https://tashan.sh/capability/pkg-openenthrium-oe-mcp.html) | 65 | 821/wk | active |
-| 19 | [Sqemo](https://tashan.sh/capability/pkg-sqemo-mcp.html) | 64 | 477/wk | active |
-| 20 | [SQL Preview](https://tashan.sh/capability/pkg-sql-preview.html) | 63 | 345/wk | active |
-| 21 | [Orangerail](https://tashan.sh/capability/pkg-orangerail.html) | 62 | 561/wk | active |
-| 22 | [Stackql](https://tashan.sh/capability/pkg-stackql-mcp-server.html) | 61 | 179/wk | active |
-| 23 | [Ainative Postgres](https://tashan.sh/capability/pkg-ainative-postgres-mcp.html) | 60 | 632/wk | active |
-| 24 | [Winctl](https://tashan.sh/capability/pkg-sitharaj88-winctl.html) | 60 | 439/wk | active |
-| 25 | [Infino AI](https://tashan.sh/capability/pkg-infino-ai-mcp-server.html) | 58 | 180/wk | active |
-| 26 | [Ravendb](https://tashan.sh/capability/pkg-ravendb-mcp.html) | 57 | 224/wk | active |
-| 27 | [Schema Designer](https://tashan.sh/capability/pkg-mcp-schema-designer.html) | 55 | 132/wk | active |
-| 28 | [Metaengine](https://tashan.sh/capability/pkg-metaengine-mcp-server.html) | 52 | 86/wk | active |
-| 29 | [Panini Connector](https://tashan.sh/capability/pkg-panini-connector-mcp.html) | 51 | 96/wk | active |
-| 30 | [Lintbase](https://tashan.sh/capability/pkg-lintbase-mcp.html) | 50 | 68/wk | active |
-| 31 | [DB Access](https://tashan.sh/capability/pkg-rheopyrin-db-access-mcp.html) | 49 | 57/wk | active |
-| 32 | [Drawdb](https://tashan.sh/capability/pkg-drawdb-mcp.html) | 48 | 46/wk | active |
-| 33 | [Dev Lifecycle](https://tashan.sh/capability/plugin-eblouin-development-eblouin-plugins-dev-lifecycle.html) | 47 | 1 ★ | active |
-| 34 | [Ainative Zerodb](https://tashan.sh/capability/pkg-ainative-zerodb-mcp-server.html) | 47 | 30/wk | active |
-| 35 | [Sqlike](https://tashan.sh/capability/pkg-sqlike-mcp.html) | 46 | 39/wk | active |
-| 36 | [Kysely SQL](https://tashan.sh/capability/plugin-kingstinct-github-kysely-sql.html) | 45 | 1 marketplaces | active |
-| 37 | [Alpacacloud](https://tashan.sh/capability/pkg-alpacacloud-mcp.html) | 45 | 52/wk | active |
-| 38 | [Breezedeploy](https://tashan.sh/capability/pkg-breezedeploy-mcp.html) | 45 | 31/wk | active |
-| 39 | [SQL · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-sql.html) | 44 | 52/wk | active |
-| 40 | [Bach Snowflake](https://tashan.sh/capability/pkg-bach-snowflake-mcp.html) | 44 | 31/wk | active |
+| 16 | [Mssql Reader](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-reader.html) | 67 | 1k/wk | active |
+| 17 | [Wr Admin Mcp Connector](https://tashan.sh/capability/pkg-wr-admin-mcp-connector.html) | 66 | 992/wk | active |
+| 18 | [Seedfast](https://tashan.sh/capability/pkg-seedfast.html) | 66 | 421/wk | active |
+| 19 | [Oe](https://tashan.sh/capability/pkg-openenthrium-oe-mcp.html) | 65 | 821/wk | active |
+| 20 | [Sqemo](https://tashan.sh/capability/pkg-sqemo-mcp.html) | 64 | 477/wk | active |
+| 21 | [SQL Preview](https://tashan.sh/capability/pkg-sql-preview.html) | 63 | 345/wk | active |
+| 22 | [Orangerail](https://tashan.sh/capability/pkg-orangerail.html) | 62 | 561/wk | active |
+| 23 | [Stackql](https://tashan.sh/capability/pkg-stackql-mcp-server.html) | 61 | 179/wk | active |
+| 24 | [Ainative Postgres](https://tashan.sh/capability/pkg-ainative-postgres-mcp.html) | 60 | 632/wk | active |
+| 25 | [Winctl](https://tashan.sh/capability/pkg-sitharaj88-winctl.html) | 60 | 439/wk | active |
+| 26 | [Infino AI](https://tashan.sh/capability/pkg-infino-ai-mcp-server.html) | 58 | 180/wk | active |
+| 27 | [Ravendb](https://tashan.sh/capability/pkg-ravendb-mcp.html) | 57 | 224/wk | active |
+| 28 | [Schema Designer](https://tashan.sh/capability/pkg-mcp-schema-designer.html) | 55 | 132/wk | active |
+| 29 | [Metaengine](https://tashan.sh/capability/pkg-metaengine-mcp-server.html) | 52 | 86/wk | active |
+| 30 | [Panini Connector](https://tashan.sh/capability/pkg-panini-connector-mcp.html) | 51 | 96/wk | active |
+| 31 | [Lintbase](https://tashan.sh/capability/pkg-lintbase-mcp.html) | 50 | 68/wk | active |
+| 32 | [DB Access](https://tashan.sh/capability/pkg-rheopyrin-db-access-mcp.html) | 49 | 57/wk | active |
+| 33 | [Drawdb](https://tashan.sh/capability/pkg-drawdb-mcp.html) | 48 | 46/wk | active |
+| 34 | [Dev Lifecycle](https://tashan.sh/capability/plugin-eblouin-development-eblouin-plugins-dev-lifecycle.html) | 47 | 1 ★ | active |
+| 35 | [Ainative Zerodb](https://tashan.sh/capability/pkg-ainative-zerodb-mcp-server.html) | 47 | 30/wk | active |
+| 36 | [Sqlike](https://tashan.sh/capability/pkg-sqlike-mcp.html) | 46 | 39/wk | active |
+| 37 | [Kysely SQL](https://tashan.sh/capability/plugin-kingstinct-github-kysely-sql.html) | 45 | 1 marketplaces | active |
+| 38 | [Alpacacloud](https://tashan.sh/capability/pkg-alpacacloud-mcp.html) | 45 | 52/wk | active |
+| 39 | [Breezedeploy](https://tashan.sh/capability/pkg-breezedeploy-mcp.html) | 45 | 31/wk | active |
+| 40 | [SQL · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-sql.html) | 44 | 52/wk | active |
 
 Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/database-access.html.
 

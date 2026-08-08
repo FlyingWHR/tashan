@@ -573,7 +573,8 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
          "- **Freshness** — recency of the most recent public activity: npm publish, git push, or release.",
          "- **Upkeep** — maintainer count, release cadence and freshness, penalised for deprecated/archived.",
          "- **Instruction depth** — an LLM grade of the capability's own documentation against a fixed rubric "
-         "(deep / solid / thin / wrapper / slop). Only a subset is graded; ungraded means ungraded, not zero.",
+         "(deep / solid / thin) — how completely the documentation explains how to use it, and nothing "
+         "else. Only a subset is graded; ungraded means ungraded, not zero.",
 
          "", "## The security audit (separate from the score)", "",
          "Every npm-published capability is checked against OSV.dev using the version you would "
@@ -937,7 +938,7 @@ def main():
     # are both FOR the work, how well the thing is actually documented beats how many people happened
     # to install it. Ungraded sits between solid and thin deliberately: not knowing is not the same as
     # having looked and found it shallow, and it must not be punished as if it were.
-    VERDICT_RANK = {"deep": 0, "solid": 1, None: 2, "thin": 3, "wrapper": 4, "slop": 5}
+    VERDICT_RANK = {"deep": 0, "solid": 1, None: 2, "thin": 3}
     by_task = {}
     for c in caps:
         for t in (c.get("tasks") or []):

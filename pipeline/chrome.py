@@ -76,17 +76,18 @@ TAGLINE = ("The measured layer for AI capabilities — MCP servers and agent ski
 # and it is not the same claim as "this team has domain expertise", which we never measured and were
 # nonetheless asserting on every dossier and hub.
 #
-# "slop" renders as "low-quality" for the same reason. The stored value is unchanged — CSS classes,
-# the CLI filter and the badge colours all key off it — but the word on the page was gratuitously
-# hostile to the publishers a marketplace will one day need, and it described the same finding.
-VERDICT_LABEL = {"deep": "deep", "solid": "solid", "thin": "thin",
-                 "wrapper": "wrapper", "slop": "low-quality"}
+# THREE BANDS, ONE QUESTION. `wrapper` and `slop` were on this scale and did not belong. `wrapper`
+# is a KIND of artifact: ranking a well-documented shim below a badly-documented original is a value
+# judgment dressed as a measurement, so it is now a fact carrying the author's own words. `slop`
+# claimed "AI-generated filler", which reading a README cannot establish — and both rows that
+# carried it turned out to be ordinary factual findings, an announced shutdown and a documentation
+# inconsistency. Softening the word to "low-quality" had treated the wording as the problem; the
+# problem was that we could not support the claim at all.
+VERDICT_LABEL = {"deep": "deep", "solid": "solid", "thin": "thin"}
 VERDICT_BLURB = {
     "deep": "documents every tool, with worked examples, setup and a stated limitation",
     "solid": "documents the job properly, with examples you could follow",
     "thin": "shallow — says what it does, not how to actually use it",
-    "wrapper": "a thin wrapper over someone else's API, with little of its own",
-    "slop": "low-quality documentation, likely machine-generated",
 }
 FIELD_LABEL = "Instruction depth"
 

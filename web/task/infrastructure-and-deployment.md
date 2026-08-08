@@ -33,24 +33,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 20 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 53 | 12 ★ | active |
 | 21 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 71 | 413 ★ | active |
 | 22 | [Rr](https://tashan.sh/capability/plugin-rileyhilliard-rr-rr.html) | 64 | 194 ★ | active |
-| 23 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 62 | 40 ★ | active |
-| 24 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 62 | 40 ★ | active |
-| 25 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 51 | 13 ★ | active |
-| 26 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 50 | 45 ★ | active |
-| 27 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | 49 | 2 repos | active |
-| 28 | [Ms365 Tenant Manager](https://tashan.sh/capability/skill-alirezarezvani-ms365-tenant-manager.html) | 49 | 2 repos | active |
-| 29 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | 49 | 2 repos | active |
-| 30 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | 49 | 2 repos | active |
-| 31 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 49 | 1 ★ | active |
-| 32 | [Followrabbit](https://tashan.sh/capability/plugin-followrabbit-ai-awesome-rabbit-followrabbit.html) | 49 | 2 ★ | active |
-| 33 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
-| 34 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 49 | 6 ★ | active |
-| 35 | [Mise](https://tashan.sh/capability/plugin-brentmitchell25-mise-plugin-mise.html) | 49 | 2 ★ | active |
-| 36 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 48 | 3 marketplaces | — |
-| 37 | [Netlify Skills](https://tashan.sh/capability/plugin-netlify-context-and-tools-netlify-skills.html) | 48 | 2 marketplaces | active |
-| 38 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 48 | 5 ★ | active |
-| 39 | [Gomboc AI Community](https://tashan.sh/capability/plugin-gomboc-ai-gomboc-community-skills-gomboc-ai-community.html) | 48 | 6 ★ | active |
-| 40 | [Anglesite](https://tashan.sh/capability/plugin-anglesite-anglesite-skills-anglesite.html) | 48 | 4 ★ | active |
+| 23 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 62 | 85 ★ | active |
+| 24 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 62 | 40 ★ | active |
+| 25 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 62 | 40 ★ | active |
+| 26 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 51 | 13 ★ | active |
+| 27 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 50 | 45 ★ | active |
+| 28 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | 49 | 2 repos | active |
+| 29 | [Ms365 Tenant Manager](https://tashan.sh/capability/skill-alirezarezvani-ms365-tenant-manager.html) | 49 | 2 repos | active |
+| 30 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | 49 | 2 repos | active |
+| 31 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | 49 | 2 repos | active |
+| 32 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 49 | 1 ★ | active |
+| 33 | [Followrabbit](https://tashan.sh/capability/plugin-followrabbit-ai-awesome-rabbit-followrabbit.html) | 49 | 2 ★ | active |
+| 34 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
+| 35 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 49 | 6 ★ | active |
+| 36 | [Mise](https://tashan.sh/capability/plugin-brentmitchell25-mise-plugin-mise.html) | 49 | 2 ★ | active |
+| 37 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 48 | 3 marketplaces | — |
+| 38 | [Netlify Skills](https://tashan.sh/capability/plugin-netlify-context-and-tools-netlify-skills.html) | 48 | 2 marketplaces | active |
+| 39 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 48 | 5 ★ | active |
+| 40 | [Gomboc AI Community](https://tashan.sh/capability/plugin-gomboc-ai-gomboc-community-skills-gomboc-ai-community.html) | 48 | 6 ★ | active |
 
 Showing the top 40 of 152. The full ranked shelf is at https://tashan.sh/task/infrastructure-and-deployment.html.
 

@@ -10,7 +10,7 @@ DB = os.path.join(ROOT, "data", "tashan.db")
 OUT = os.path.join(ROOT, "web", "badge")
 os.makedirs(OUT, exist_ok=True)
 
-VCOLOR = {"deep": "#5cf0c0", "solid": "#34e0a0", "thin": "#8a8a93", "wrapper": "#f2604a", "slop": "#f2604a"}
+VCOLOR = {"deep": "#5cf0c0", "solid": "#34e0a0", "thin": "#8a8a93"}
 # The 他山之石 stone, as vector paths — same geometry as web/assets/favicon.svg and the --logo CSS var.
 # The badge is the highest cast-range artifact we ship (it renders inside other people's READMEs), so it
 # must carry the actual mark, not a generic ◆ that could be anyone's.

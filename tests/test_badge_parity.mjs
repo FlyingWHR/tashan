@@ -18,11 +18,20 @@ const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
 // Every (score, verdict) pair present in the live map, plus the edges that exercise the width maths.
 const map = JSON.parse(fs.readFileSync(path.join(ROOT, "web", "data", "badges.json"), "utf8"));
+// from pipeline/gen_badges.py's VCOLOR — the definition both renderers key off
+const VERDICTS = [...fs.readFileSync(path.join(ROOT, "pipeline", "gen_badges.py"), "utf8")
+  .match(/VCOLOR = \{([^}]*)\}/)[1].matchAll(/"([a-z]+)":/g)].map((m) => m[1]);
+if (VERDICTS.length < 3) throw new Error("could not read VCOLOR from gen_badges.py — fix this test");
+
 const pairs = new Map();
 for (const [, row] of Object.entries(map)) pairs.set(`${row[0]}|${row[1] || ""}`, [row[0], row[1] || null]);
 for (const s of [0, 1, 9, 10, 99, 100]) {
   pairs.set(`${s}|`, [s, null]);
-  for (const v of ["deep", "solid", "thin", "wrapper", "slop"]) pairs.set(`${s}|${v}`, [s, v]);
+  // READ THE LIVE VOCABULARY, do not restate it. This swept a hardcoded list that still contained
+  // `wrapper` and `slop` after both were retired, so the suite failed on colours for verdicts
+  // nothing can produce — and would equally have missed a NEW verdict added to only one renderer,
+  // which is the failure this test exists for.
+  for (const v of VERDICTS) pairs.set(`${s}|${v}`, [s, v]);
 }
 const cases = [...pairs.values()];
 

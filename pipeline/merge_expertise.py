@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # The bands from the shipped rubric. They overlap on purpose (wrapper 20-44 sits inside thin 35-59)
 # because a thin wrapper is genuinely both, so the check is "inside your own band", not "in one band".
 BANDS = {"deep": (80, 100), "solid": (60, 79), "thin": (35, 59),
-         "wrapper": (20, 44), "slop": (0, 25)}
+         }
 NOTE_MAX = 200
 
 

@@ -51,7 +51,7 @@ stated as unknown rather than omitted. An absent line never means "fine".
 - **Adoption** — npm download volume (log) blended with config-adoption reach across public repos.
 - **Freshness** — recency of the most recent public activity: npm publish, git push, or release.
 - **Upkeep** — maintainer count, release cadence and freshness, penalised for deprecated/archived.
-- **Instruction depth** — an LLM grade of the capability's own documentation against a fixed rubric (deep / solid / thin / wrapper / slop). Only a subset is graded; ungraded means ungraded, not zero.
+- **Instruction depth** — an LLM grade of the capability's own documentation against a fixed rubric (deep / solid / thin) — how completely the documentation explains how to use it, and nothing else. Only a subset is graded; ungraded means ungraded, not zero.
 
 ## The security audit (separate from the score)
 

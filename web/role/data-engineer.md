@@ -44,19 +44,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Daft](https://tashan.sh/capability/plugin-eventual-inc-daft-daft.html) | 77 | 6k ★ | active |
 | 26 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 72 | 558 ★ | active |
 | 27 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
-| 28 | [Azure Cosmos DB Assistant](https://tashan.sh/capability/plugin-azurecosmosdb-cosmosdb-claude-code-plugin-azure-cosmos-db-assistant.html) | 50 | 2 ★ | active |
-| 29 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | 49 | 2 repos | active |
-| 30 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 49 | 1 ★ | active |
-| 31 | [Deepread](https://tashan.sh/capability/plugin-deepread-tech-skills-deepread.html) | 49 | 4 ★ | active |
-| 32 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 49 | 2 repos | active |
-| 33 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 47 | 1 ★ | active |
-| 34 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 47 | 3 ★ | active |
-| 35 | [AWS Data Analytics](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-data-analytics.html) | 46 | 2 marketplaces | — |
-| 36 | [Oracle AI Data Platform Workbench Spark Connectors](https://tashan.sh/capability/plugin-oracle-samples-oracle-aidp-samples-oracle-ai-data-platform-workbench-spark-connectors.html) | 46 | 2 marketplaces | — |
-| 37 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 46 | 3 ★ | active |
-| 38 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 45 | 2 marketplaces | active |
-| 39 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 45 | 2 marketplaces | active |
-| 40 | [Perf](https://tashan.sh/capability/plugin-agent-sh-perf-perf.html) | 44 | 2 ★ | active |
+| 28 | [Snowflake Cortex Code](https://tashan.sh/capability/plugin-snowflake-labs-snowflake-ai-kit-snowflake-cortex-code.html) | 64 | 32 ★ | active |
+| 29 | [Azure Cosmos DB Assistant](https://tashan.sh/capability/plugin-azurecosmosdb-cosmosdb-claude-code-plugin-azure-cosmos-db-assistant.html) | 50 | 2 ★ | active |
+| 30 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | 49 | 2 repos | active |
+| 31 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 49 | 1 ★ | active |
+| 32 | [Deepread](https://tashan.sh/capability/plugin-deepread-tech-skills-deepread.html) | 49 | 4 ★ | active |
+| 33 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 49 | 2 repos | active |
+| 34 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 47 | 1 ★ | active |
+| 35 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 47 | 3 ★ | active |
+| 36 | [AWS Data Analytics](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-data-analytics.html) | 46 | 2 marketplaces | — |
+| 37 | [Oracle AI Data Platform Workbench Spark Connectors](https://tashan.sh/capability/plugin-oracle-samples-oracle-aidp-samples-oracle-ai-data-platform-workbench-spark-connectors.html) | 46 | 2 marketplaces | — |
+| 38 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 46 | 3 ★ | active |
+| 39 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 45 | 2 marketplaces | active |
+| 40 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 45 | 2 marketplaces | active |
 
 Showing the top 40 of 86. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
 

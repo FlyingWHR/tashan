@@ -159,9 +159,16 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # with, not a capability you install. Written by scan_security.py, which already holds the
            # version manifest. 1 = runnable, 0 = positively no bin, NULL = not yet scanned, which the
            # board gate treats as unknown rather than as absent.
-           "npm_runnable INTEGER"]
+           "npm_runnable INTEGER",
+           # WHAT IT IS, NOT HOW GOOD IT IS. `wrapper` used to be a VERDICT sitting below `thin` on
+           # the documentation scale, which asserted that a well-documented shim is worse than a
+           # badly-documented original — a value judgment smuggled in as a measurement. It is a KIND
+           # of artifact, and the evidence for it is the author's own sentence ("self-describes as a
+           # thin MCP-to-IPC adapter"), so it is recorded as a fact with the quote that supports it.
+           "shim INTEGER",              # 1 = the author describes it as a bridge/proxy over something else
+           "shim_note TEXT"]            # their words, so the page can answer "says who?"
 
-SCHEMA_VERSION = 12  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 13  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # v5 RENAMED the headline score. "Trust" claimed more than the SCORE measures: it is upkeep, freshness
 # and adoption, and a number whose name needs walking back is misnamed. That still holds — the security

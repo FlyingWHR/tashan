@@ -24,23 +24,42 @@ MANIFEST = os.path.join(ROOT, "data", "readmes", "manifest.json")
 OUT = os.path.join(ROOT, "data", "readmes", "scores_auto.json")
 MODEL = os.environ.get("GRADE_MODEL", "claude-sonnet-5")
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-VERDICTS = ["deep", "solid", "thin", "wrapper", "slop"]
+# THREE BANDS, ONE QUESTION: how completely does this document explain how to use this thing?
+# `wrapper` and `slop` were on this scale and did not belong. `wrapper` is a KIND of artifact — a
+# well-documented shim ranked below a badly-documented original, which is a value judgment dressed
+# as a measurement; it is now a separate fact carrying the author's own words. `slop` claimed
+# "AI-generated filler", which a README read cannot establish; both rows carrying it turned out to
+# be ordinary factual findings (an announced shutdown, a documentation inconsistency).
+VERDICTS = ["deep", "solid", "thin"]
 
-RUBRIC = """You are grading the real expertise/quality of an AI capability (an MCP server or agent skill) from its README and metadata. Judge the CAPABILITY on public evidence — never on hype. Output STRICT JSON only.
+RUBRIC = """You are grading ONE THING: how completely a capability's own documentation explains how to use it. Not whether the software is good, not whether the team is expert, not whether the idea is original — only how well the documentation does its job. Judge on public evidence, never on hype. Output STRICT JSON only.
 
-Assign a verdict (one of: deep, solid, thin, wrapper, slop) and an expertise score 0-100:
-- deep (80-100): comprehensive, real docs — multiple concrete usage examples, per-tool documentation, setup/auth covered, honest caveats/limitations, evidence of genuine depth or production use.
-- solid (60-79): does the job well — clear docs, some real examples, honest about scope. A genuinely useful capability.
-- thin (35-59): minimal — one-line description, few/no examples, reference-only. May work but is underdocumented.
-- wrapper (20-44): a thin shim around an existing API/tool/library with little added value of its own.
-- slop (0-25): AI-generated filler, no real substance, contradictory/hallucinated, or evidently non-functional.
+Assign a verdict (one of: deep, solid, thin) and a score 0-100:
+- deep (80-100): per-tool documentation, >=2 worked examples with real arguments or output, setup/auth covered, and at least one stated limitation.
+- solid (60-79): clear prose, at least one worked example, honest about scope. A real product with real docs that does not reach all four deep criteria.
+- thin (35-59): reference-only, or install instructions with no worked example, or a wall of badges and client-config blocks where tool docs should be.
+
+SEPARATELY, and NOT part of the verdict, answer whether the capability DESCRIBES ITSELF as a shim: a
+bridge, proxy, adapter or wrapper whose work happens somewhere else. This is a fact about what the
+thing IS, evidenced by the author's own words, and it is recorded beside the grade rather than
+folded into it — a well-documented shim is not worse-documented than a badly-documented original,
+and ranking it lower was a value judgment dressed as a measurement. Set "shim": true only when the
+author says so, and put their sentence in "shim_note". Never infer it from the name or your own
+reading of the architecture.
+
+There is no verdict for "low quality", "AI-generated" or "non-functional". Reading a README cannot
+establish any of those, and a published accusation we cannot support is the one thing this project
+must never ship. If a document announces that the service is shut down, or contradicts itself, say
+so in the note as a fact and grade the documentation on its own terms.
 
 CALIBRATION RULES — these override the band descriptions above, and exist because six graders applied
 the bands alone and returned "deep" anywhere from 1.5% to 22.9% of the time (see docs/GRADING-RUBRIC.md):
 1. deep requires ALL FOUR of: per-tool docs, >=2 worked examples with real arguments, setup/auth
    covered, and at least one stated limitation. Cannot name all four? It is solid.
-2. If the README never names this capability, cap at thin (42) — it is documented by a shared repo
-   README about something else, and must not borrow credit for it.
+2. If the README never names this capability, DO NOT GRADE IT. Return verdict null. It is
+   documented by a shared repo README about something else: a grade would borrow credit for
+   another project's work, and a low grade would borrow blame for it. The export states the
+   fact ("shares its documentation with N other capabilities") instead.
 3. Length is not depth. A long README with no worked example is thin.
 4. Internal contradictions (two different tool counts in one file) cap at thin.
 5. A well-documented shim is still a wrapper.

@@ -15,7 +15,11 @@
 // silently change the artwork inside other people's READMEs. tests/test_badge_parity.mjs renders both
 // and diffs them, and fails on any difference.
 
-const VCOLOR = { deep: "#5cf0c0", solid: "#34e0a0", thin: "#8a8a93", wrapper: "#f2604a", slop: "#f2604a" };
+// Must match VCOLOR in pipeline/gen_badges.py exactly — two renderers, one artifact, and the
+// blast radius is other people's READMEs. `wrapper` and `slop` were retired: a shim is a KIND
+// of artifact and not a documentation grade, and "slop" was an accusation a README read
+// cannot support.
+const VCOLOR = { deep: "#5cf0c0", solid: "#34e0a0", thin: "#8a8a93" };
 const MARK = '<g transform="translate(7,4.2) scale(0.38)">' +
   '<path d="M17 4 L23 10 L29 22 L18 28 L5 24 L4 13 Z" fill="#34e0a0"/>' +
   '<path d="M17 4 L4 13 L14 15 Z" fill="#5cf0c0"/>' +

@@ -46,17 +46,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 69 | 64 ★ | active |
 | 28 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
 | 29 | [Rr](https://tashan.sh/capability/plugin-rileyhilliard-rr-rr.html) | 64 | 194 ★ | active |
-| 30 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 62 | 40 ★ | active |
-| 31 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 62 | 40 ★ | active |
-| 32 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 51 | 13 ★ | active |
-| 33 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 51 | 5 ★ | active |
-| 34 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 50 | 45 ★ | active |
-| 35 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 50 | 8 ★ | active |
-| 36 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | 49 | 2 repos | active |
-| 37 | [Ms365 Tenant Manager](https://tashan.sh/capability/skill-alirezarezvani-ms365-tenant-manager.html) | 49 | 2 repos | active |
-| 38 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | 49 | 2 repos | active |
-| 39 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | 49 | 2 repos | active |
-| 40 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 49 | 1 ★ | active |
+| 30 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 62 | 85 ★ | active |
+| 31 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 62 | 40 ★ | active |
+| 32 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 62 | 40 ★ | active |
+| 33 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 51 | 13 ★ | active |
+| 34 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 51 | 5 ★ | active |
+| 35 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 50 | 45 ★ | active |
+| 36 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 50 | 8 ★ | active |
+| 37 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | 49 | 2 repos | active |
+| 38 | [Ms365 Tenant Manager](https://tashan.sh/capability/skill-alirezarezvani-ms365-tenant-manager.html) | 49 | 2 repos | active |
+| 39 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | 49 | 2 repos | active |
+| 40 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | 49 | 2 repos | active |
 
 Showing the top 40 of 224. The full ranked shelf is at https://tashan.sh/role/devops.html.
 

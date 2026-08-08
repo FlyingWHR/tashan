@@ -49,9 +49,18 @@ ok("an id we do not track is rejected — grades cannot invent capabilities",
    validate({"id": "pkg:never-heard-of-it", "verdict": "solid", "expertise": 72}, "t", known))
 ok("an overlong note is rejected",
    validate({"id": "pkg:x", "verdict": "thin", "expertise": 40, "note": "z" * 500}, "t", known))
-# the bands overlap deliberately: a thin wrapper is both, so membership is "inside your own band"
-ok("wrapper at 40 is valid even though thin also spans 40",
-   not validate({"id": "pkg:x", "verdict": "wrapper", "expertise": 40}, "t", known))
+# THE BANDS NO LONGER OVERLAP, because there is nothing left to overlap with. `wrapper` spanned
+# 20-44 inside `thin`'s 35-59 precisely because it was answering a different question — what KIND of
+# artifact this is, not how well it is documented — while sharing an ordinal scale with the answer to
+# the first. It is a fact with the author's own words behind it now, and `slop` is gone: reading a
+# README cannot establish "AI-generated filler", and both rows carrying it were ordinary findings.
+ok("a retired verdict is rejected, not silently accepted",
+   validate({"id": "pkg:x", "verdict": "wrapper", "expertise": 40}, "t", known)
+   and validate({"id": "pkg:x", "verdict": "slop", "expertise": 20}, "t", known))
+ok("the three surviving bands still validate",
+   not validate({"id": "pkg:x", "verdict": "thin", "expertise": 40}, "t", known)
+   and not validate({"id": "pkg:x", "verdict": "solid", "expertise": 70}, "t", known)
+   and not validate({"id": "pkg:x", "verdict": "deep", "expertise": 90}, "t", known))
 
 # ---- the shipped export -------------------------------------------------------------------------
 path = os.path.join(ROOT, "web", "data", "capabilities.json")
