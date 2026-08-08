@@ -94,8 +94,9 @@ jobs:
       # cache is still the correct output of the measurement. Losing it costs the next run its
       # incremental cursors for no reason.
       - name: Store the database cache
+        id: dbpush
         if: always()
-        continue-on-error: true
+        continue-on-error: true       # reported at the end instead, so it cannot block the deploy
         run: python3 pipeline/db_store.py push
 
       # Runs to completion and records its verdict rather than ending the job here. A red suite must
@@ -166,6 +167,21 @@ jobs:
             exit 1
           fi
           npx wrangler@3 pages deploy web --project-name tashan --commit-dirty=true
+
+      # THE CACHE IS THE ONLY COPY NOW. data/tashan.db is no longer in git, so a push that fails
+      # every night means the object silently stops advancing and every run starts from an older
+      # one — the incremental cursors stop moving and nothing says so. The most likely cause is
+      # mundane: CLOUDFLARE_API_TOKEN was created for Pages and Workers KV, and R2 is a separate
+      # permission (R2 Storage: Edit). Reported LAST, and continue-on-error above, so a broken token
+      # still lets the measurement, the commit and the deploy finish — but the run goes red.
+      - name: Surface a failed cache store
+        if: always() && steps.dbpush.outcome != 'success'
+        run: |
+          echo "::error::db_store push FAILED — r2://tashan-state/tashan.db was not updated."
+          echo "::error::Every later run will start from a stale cache and the incremental"
+          echo "::error::cursors will stop advancing. Most likely CLOUDFLARE_API_TOKEN lacks"
+          echo "::error::'R2 Storage: Edit'. The retention shards in data/history are unaffected."
+          exit 1
 
       - name: Surface the verification result
         if: steps.verify.outcome != 'success'
