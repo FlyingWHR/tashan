@@ -277,5 +277,28 @@ else:
            "an absent explanation reads as an oversight; it is a consequence of a private repo")
 
 print()
+print("# a published judgment must be contestable, and the promise must be kept-able")
+# We print a verdict on someone's documentation under their project's name. Until there was a route
+# to contest it, the only thing on the page was requests.html — which is for asking us to MEASURE
+# something, not for saying we got it wrong.
+mt = text(os.path.join(WEB, "methodology.html"))
+ok("methodology states a correction turnaround",
+   re.search(r"within\s+\*{0,2}?five working days", mt) is not None or "five working days" in mt,
+   "a correction path with no turnaround is a gesture")
+ok("…and does not promise to remove a grade on request",
+   "We do not remove a grade because someone asks" in mt
+   or "do not remove a grade because someone asks" in mt,
+   "a rating that folds on request is not a measurement")
+_graded = [c for c in json.load(open(os.path.join(WEB, "data", "capabilities.json"),
+                                     encoding="utf-8"))["capabilities"]
+           if c.get("expertise_verdict") and c.get("expertise_note")]
+if _graded:
+    _pg = os.path.join(WEB, "capability", _graded[0]["slug"] + ".html")
+    _src = open(_pg, encoding="utf-8").read() if os.path.exists(_pg) else ""
+    ok(f"a graded dossier carries the correction link ({_graded[0]['slug']})",
+       "grade-correction" in _src,
+       "the judgment is on this page; so must the way to challenge it be")
+
+print()
 print(("CLAIMS OK" if not fail else "CLAIMS FAILED"))
 sys.exit(fail)

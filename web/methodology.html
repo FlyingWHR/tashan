@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=249">
+  <link rel="stylesheet" href="/css/site.css?v=250">
   <!--METHOD-LD--><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"How the tashan score is derived","description":"The exact arithmetic behind the tashan score, the evidence each input comes from, how much of the corpus is measured, and what the score deliberately does not claim.","url":"https://tashan.sh/methodology.html","mainEntityOfPage":"https://tashan.sh/methodology.html","author":{"@type":"Organization","name":"tashan","url":"https://tashan.sh/"},"publisher":{"@type":"Organization","name":"tashan","url":"https://tashan.sh/"},"datePublished":"2026-08-08","dateModified":"2026-08-08","inLanguage":"en","about":{"@type":"Dataset","name":"The tashan Index — measured AI capabilities","url":"https://tashan.sh/"},"version":"s5","creativeWorkStatus":"Scorer s5 frozen through 2026-11-01","license":"https://tashan.sh/terms.html"}</script><!--/METHOD-LD-->
 </head>
 <body>
@@ -154,6 +154,27 @@
       side — a capability we have not graded shows as <b>unrated</b> and is ranked on what we did
       read.</p>
 
+    <h2 id="corrections">If we got it wrong</h2>
+
+    <p>Every graded capability carries a <b>&ldquo;This grade is wrong&rdquo;</b> link on its own
+      page, pre-filled with the id and the verdict so you do not have to explain which page you mean.
+      It opens a public issue, because a correction argued in the open is worth more than one settled
+      privately — and because the same evidence that changes our mind should be visible to anyone who
+      read the original.</p>
+
+    <p><b>What we commit to.</b> A reply within <b>five working days</b>. If the grade was read off
+      the wrong document, or off documentation that has since improved, it is withdrawn or re-graded
+      on the next pipeline run and the page says so. If we think the grade was right, we say why, in
+      the issue, where you can argue back. <b>We do not remove a grade because someone asks.</b> A
+      rating nobody can contest is an opinion with better typography; a rating that folds on request
+      is not a measurement at all.</p>
+
+    <p>This is not hypothetical. <b>87 published judgments were withdrawn</b> in one pass after we
+      found they had been read off a README the capability shares with other packages, or one that
+      never names it — including Anthropic&rsquo;s own filesystem server, graded
+      <span class="mono">thin</span> for a monorepo index it shares with three siblings. Those pages
+      now state the fact instead: <em>shares its documentation with 3 other capabilities</em>.</p>
+
     <h2>What we deliberately don't do</h2>
     <ul>
       <li><b>We don't count stars where real usage exists.</b> Stars measure hype and are trivially farmed, so nothing
@@ -225,8 +246,8 @@
 
   <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources, and checkable against them.</span></div></footer>
 
-  <script src="/js/terminal.js?v=249" defer></script>
-  <script src="/js/site.js?v=249" defer></script>
-  <script src="/js/methodology.js?v=249" defer></script>
+  <script src="/js/terminal.js?v=250" defer></script>
+  <script src="/js/site.js?v=250" defer></script>
+  <script src="/js/methodology.js?v=250" defer></script>
 </body>
 </html>

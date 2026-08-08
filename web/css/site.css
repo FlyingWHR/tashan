@@ -1173,3 +1173,10 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .stack__sc { color: var(--jade); font-size:var(--fs-sm); }
 @media (max-width: 640px) { .stack__row { grid-template-columns: 1fr auto; }
   .stack__job { grid-column:1 / -1; } }
+
+/* "This grade is wrong". A published judgment about someone's work needs a route to contest it on
+   the page carrying the judgment — not buried in a support doc. Quiet by default: it is for the
+   handful of authors who disagree, not a call to action for every reader. */
+.expert-read__fix { display:inline-block; margin-top:.5rem; font-family:var(--font-mono);
+  font-size:var(--fs-xs); color:var(--text-faint); border-bottom:1px solid var(--hairline); }
+.expert-read__fix:hover { color:var(--text-dim); border-bottom-color:var(--text-faint); }
