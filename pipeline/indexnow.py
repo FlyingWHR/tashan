@@ -27,7 +27,7 @@ the last day, plus the handful of pages that are rewritten every run anyway.
 Stdlib only. Never fatal — a rejected submission must not fail a pipeline whose real job is
 measurement.
 """
-import json, os, sys, urllib.request, urllib.error
+import json, os, sys, time, urllib.request, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEY = "c8e4ef5a41262283c1bd92a720315b2b"
@@ -87,25 +87,37 @@ def seed_urls(con, n=9000):
     return urls[:MAX_URLS]
 
 
+BATCH = 1000        # the protocol allows 10,000; 9,310 in one POST was refused with a 403
+
+
 def submit(urls, dry=False):
+    """Post in batches. The spec permits 10,000 per request and the endpoint does not: a single
+    9,310-URL body came back 403, while the same key with one URL returned 200 — so the 403 is the
+    payload, not the credential, and it reads exactly like an auth failure. Batching is politer
+    anyway, and a partial success is still a success for the URLs that landed."""
     if not urls:
         print("indexnow: nothing changed today, nothing submitted")
         return 0
-    body = json.dumps({"host": HOST, "key": KEY,
-                       "keyLocation": BASE + "/" + KEY + ".txt", "urlList": urls}).encode()
     if dry:
-        print(f"indexnow: would submit {len(urls)} url(s), e.g. {urls[:3]}")
+        print(f"indexnow: would submit {len(urls)} url(s) in "
+              f"{-(-len(urls) // BATCH)} batch(es), e.g. {urls[:3]}")
         return 0
-    req = urllib.request.Request(ENDPOINT, data=body, method="POST",
-                                 headers={"content-type": "application/json; charset=utf-8"})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            print(f"indexnow: submitted {len(urls)} url(s) -> HTTP {r.status}")
-    except urllib.error.HTTPError as e:
-        # 422 is "key or host mismatch", 429 is throttling. Both are worth reading, neither is fatal.
-        print(f"indexnow: NOT submitted — HTTP {e.code} {e.reason}")
-    except Exception as e:
-        print(f"indexnow: NOT submitted — {e}")
+    sent = 0
+    for i in range(0, len(urls), BATCH):
+        chunk = urls[i:i + BATCH]
+        body = json.dumps({"host": HOST, "key": KEY, "urlList": chunk}).encode()
+        req = urllib.request.Request(ENDPOINT, data=body, method="POST",
+                                     headers={"content-type": "application/json; charset=utf-8"})
+        try:
+            with urllib.request.urlopen(req, timeout=45) as r:
+                if r.status < 300:
+                    sent += len(chunk)
+        except urllib.error.HTTPError as e:
+            print(f"indexnow: batch {i // BATCH + 1} refused — HTTP {e.code} {e.reason}")
+        except Exception as e:
+            print(f"indexnow: batch {i // BATCH + 1} failed — {e}")
+        time.sleep(1)
+    print(f"indexnow: submitted {sent} of {len(urls)} url(s)")
     return 0
 
 
