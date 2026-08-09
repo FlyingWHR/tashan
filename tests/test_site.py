@@ -475,6 +475,39 @@ def main():
     check("pricing ?ref= is percent-encoded server-side, as it is client-side", not _rawref,
           f"{len(_rawref)} page(s) e.g. {_rawref[:2]}")
 
+    # ---- readable prose: no walls of text ------------------------------------------------------
+    # "Big text chunks that feel like AI slop, horribly styled and hard to read" — measured, and
+    # true. The pricing FAQ answered every question in a single 250-500 character paragraph (492 at
+    # the worst) with the answer buried in the middle, on the page where somebody decides whether to
+    # pay. Nobody reads a wall to find out what they are buying; they scan, and if the first line
+    # does not answer the question they leave.
+    #
+    # A RATCHET, not a style opinion. The cap sits just above where the hand-written pages landed
+    # after the rewrite, so prose can still be added freely but a NEW wall fails the build. Raising
+    # it is then a deliberate act with a diff attached — which is the only thing that stops this
+    # creeping back, because every one of those paragraphs was written one reasonable sentence at a
+    # time. Reference and legal pages are exempt: they are read in full, not scanned.
+    import html as _htmlmod
+    PROSE_MAX, WALL_ALLOW = 240, 2
+    EXEMPT = {"methodology.html", "terms.html", "privacy.html"}
+    _walls = []
+    for _f in sorted(_glob.glob(os.path.join(ROOT, "web", "*.html"))
+                     + _glob.glob(os.path.join(ROOT, "web", "learn", "*.html"))):
+        if os.path.basename(_f) in EXEMPT:
+            continue
+        _src = open(_f, encoding="utf-8").read()
+        if "<main" not in _src:
+            continue
+        _body = _src.split("<main", 1)[-1].split("</main>")[0]
+        _long = sum(1 for _m in _re.finditer(r"<(p|li)[^>]*>(.*?)</\1>", _body, _re.S)
+                    if len(_re.sub(r"\s+", " ",
+                                   _htmlmod.unescape(_re.sub(r"<[^>]+>", "", _m.group(2)))).strip())
+                    > PROSE_MAX)
+        if _long > WALL_ALLOW:
+            _walls.append(f"{os.path.basename(_f)}:{_long}")
+    check(f"no page is a wall of text (max {WALL_ALLOW} paragraphs over {PROSE_MAX} chars)",
+          not _walls, "; ".join(_walls[:6]))
+
     # A 404.html is what makes Pages return a real 404. Without it Pages falls back to serving
     # index.html with status 200, so every mistyped URL was a soft 404 a crawler would happily index.
     check("404.html exists (else Pages soft-404s every unknown URL as 200 + the homepage)",

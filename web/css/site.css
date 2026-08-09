@@ -1247,3 +1247,28 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
   .pro__hd { flex-direction: column; gap: .35rem; }
   .pro__k { min-width: 0; }
 }
+
+/* ── readable body copy, and especially on a phone ───────────────────────────────────────────
+   The complaint that started this: "big text chunks that feel like AI slop, horribly styled and
+   hard to read" on mobile. Measured, it was two separate faults.
+
+   CONTENT was one: the pricing FAQ answered every question in a single 250-500 character paragraph
+   (492 at the worst) with the answer buried mid-sentence. That is fixed in the markup, not here.
+
+   TYPOGRAPHY was the other, and this is it. body was a flat 16px/1.6 with no small-screen rule at
+   all — 17 media queries in this file and not one of them touched reading text. On a 375px screen a
+   200-character paragraph is nine or ten dense lines with nothing to rest on. Slightly more leading
+   and a real gap between paragraphs is most of the difference between scannable and a wall. */
+.pfaq-list { margin: .5rem 0 0; padding-left: 1.1rem; color: var(--text-dim); }
+.pfaq-list li { margin: .15rem 0; }
+/* The quieter half of an answer: the detail someone reads only if the first line did not settle it. */
+.pfaq-note, .card__note { color: var(--text-dim); font-size: var(--fs-sm); margin-top: .45rem; }
+
+@media (max-width: 40rem) {
+  /* Leading, not size. Bumping the font on a narrow screen fits fewer words per line and makes the
+     block taller, which is the opposite of the fix. */
+  body { line-height: 1.68; }
+  .prose p, .pfaq p, .card p, .lede { margin-block: 0 .9rem; }
+  /* A long paragraph on a phone needs somewhere for the eye to stop. */
+  .pfaq > div { padding-bottom: .9rem; }
+}

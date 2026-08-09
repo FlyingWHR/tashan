@@ -289,8 +289,9 @@ def changed_strip(rows, what):
         # likely a reader leaves without learning the product watches anything.
         return ('<p class="note chg__pro">Nothing on this shelf has moved in the last 45 days. '
                 'That is worth knowing, and it is the kind of thing that stops being true without '
-                'announcing itself — <a class="link" href="/pricing.html">tashan Pro</a> watches the '
-                'servers in your own config and tells you the day one of them does.</p>')
+                'announcing itself — <a class="link" href="/pricing.html">tashan Pro</a> keeps the '
+                'history behind every capability, so <code>tashan doctor</code> over your own config '
+                'says which of yours moved, and what to move to.</p>')
     ch.sort(key=lambda t: (t[0], t[1]))
     items = ""
     for _, _, c, x in ch[:4]:
@@ -305,8 +306,9 @@ def changed_strip(rows, what):
             + ' recorded here in the last 45 days, newest and most serious first.</p>'
             '<ul class="chg-list">' + items + '</ul>'
             '<p class="chg__pro mono fs-sm">This page cannot know what you run. '
-            '<a class="link" href="/pricing.html">tashan Pro</a> watches the servers in your own config '
-            'and tells you the day one of them moves &mdash; <code>tashan doctor</code>.</p></section>')
+            '<a class="link" href="/pricing.html">tashan Pro</a> gives <code>tashan doctor</code> the '
+            'history behind each one, so a run over your own config says which of YOURS moved '
+            '&mdash; and what to move to.</p></section>')
 
 
 def display_name_of(c):

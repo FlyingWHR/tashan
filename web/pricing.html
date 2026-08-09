@@ -28,7 +28,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=257">
+  <link rel="stylesheet" href="/css/site.css?v=259">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span>tashan</a><div class="nav__links"><a href="/">Find skills</a><a href="/browse.html">Jobs</a><a href="/start.html">Doctor</a><a href="/pricing.html" aria-current="page">Pricing</a><a class="nav__acct" id="navAcct" href="/account.html" title="Your account" aria-label="Your account"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span class="nav__pro mono" id="navPro" hidden>Pro</span></a></div></div></nav>
@@ -94,10 +94,9 @@
         &nbsp;&nbsp;runs: <span class="o-50">node ./scripts/post.js</span> — it did not in 2.0.4, which is
         what you installed<br>
         &nbsp;&nbsp;→ pin 2.0.4, or switch to pg-mcp (scores 78, no install script)</div>
-      <p class="capsec__sub"><b>The risk scan itself is not what Pro sells.</b> Every finding — which
-        CVE, its severity, the version that fixes it, the exact install-time command — is free, in
-        full, for everyone. What Pro sells is <em>time</em>: noticing on the day it changes, without
-        you looking.</p>
+      <p class="capsec__sub"><b>The scan is not what Pro sells.</b> Every finding is free, in full,
+        for everyone — which CVE, its severity, the version that fixes it, the exact install
+        command. Pro sells <em>time</em>: noticing the day it changes, without you looking.</p>
     </section>
 
     <div class="callout"><b>Building on tashan?</b> The endpoints are free and unmetered because we want
@@ -111,35 +110,48 @@
 
     <p class="pfaq-lead kicker">Questions</p>
     <div class="pfaq">
-      <div><h3>What am I paying for today?</h3><p>Being told, on the day it happens, when something you
-        already run gains an advisory, starts executing code at install time, widens what it can reach,
-        loses its maintainers, or is abandoned by its author — plus the named replacement when it is time to
-        move. The score <em>series</em> is there too, and it needs about a month before a trend means
-        anything; we restarted that clock on 30 July when the score was recalibrated, and we would rather
-        say so than let you find out.</p></div>
-      <div><h3>Why isn't this free like everything else?</h3><p>Because it is the one thing that cannot be
-        re-derived from today's public data. Every measurement on the Index is a snapshot anyone could
-        recompute from public sources; a <em>change</em> is observable exactly once, on the day it happens.
-        It only exists because we recorded yesterday, and a day nobody records is gone for good — for us
-        too. That is what the subscription buys, and it is worth more every month it runs.</p></div>
-      <div><h3>How do I sign in?</h3><p><code>tashan login</code> prints a short code and opens your browser; approve it and the terminal has it — the same flow as <code>gh auth login</code>. There is no key to copy. Then
-        <code>tashan doctor</code> as usual — it is stored in <code>~/.config/tashan/key</code>, so there is no
-        export to remember and nothing to re-do in a new terminal. Same key on every machine you use. The key is in your
-        <a class="link" href="/account.html">account</a>. Nothing about your
-        config is uploaded — the CLI reads your local files and asks us only about capability names.
-        Full details on <a class="link" href="/support.html">support</a>.</p></div>
-      <div><h3>Do I get an account?</h3><p>Yes — <a class="link" href="/account.html">your account</a> shows your
-        plan, renewal date, the machines you have activated, your licence key and your invoices. Run
-        <code>tashan account</code> and it opens already signed in; there is no password to make. Pro also shows
-        up in your terminal, where <code>doctor</code> prints <span class="mono">Pro · licence active</span> on
-        every run.</p></div>
-      <div><h3>How many machines?</h3><p>Run <code>tashan login</code> on each one — approving is one click because the browser stays signed in
-        registers it under its hostname, so <a class="link" href="/account.html">your account</a> lists exactly what
-        is active. <code>tashan logout</code> hands a slot back from the machine itself.</p></div>
-      <div><h3>Can a publisher pay to rank higher?</h3><p>No. Commercial relationships never influence task
-        fit, measurements, findings, rankings or editorial recommendations — and that is enforced rather than
-        promised: <span class="mono">tests/test_firewall.py</span> asserts the scorer reads only public-signal
-        columns, so a change that let anything else in fails the build.</p></div>
+      <!-- ANSWER FIRST, THEN THE DETAIL. Every one of these was a single 250-500 character
+           paragraph that buried the answer in the middle of it — 492 characters at the worst, on
+           the page where somebody decides whether to pay. Nobody reads a wall to find out what they
+           are buying; they scan, and if the first line does not answer the question they leave.
+           So: one short sentence that answers it, then the supporting detail in a quieter note, and
+           enumerations as a list rather than a run-on sentence joined by commas. -->
+      <div><h3>What am I paying for today?</h3>
+        <p>Being told the day something you already run changes.</p>
+        <ul class="pfaq-list">
+          <li>Gains an advisory</li>
+          <li>Starts executing code at install time</li>
+          <li>Widens what it can reach</li>
+          <li>Loses its maintainers, or is abandoned</li>
+          <li>The named replacement, when it is time to move</li>
+        </ul>
+        <p class="pfaq-note">The score series is included. A trend needs about a month to mean
+        anything; that clock restarted on 30 July after a recalibration.</p></div>
+      <div><h3>Why isn't this free like everything else?</h3>
+        <p>Because a change can only be seen once — on the day it happens.</p>
+        <p class="pfaq-note">Every measurement on the Index is a snapshot anyone could recompute
+        from public sources. A change is not: it exists only because we recorded yesterday.</p></div>
+      <div><h3>How do I sign in?</h3>
+        <p>No key to copy. Run <code>tashan login</code> — it prints a short code and opens your
+        browser to approve. The same flow as <code>gh auth login</code>.</p>
+        <p class="pfaq-note">Stored in <code>~/.config/tashan/key</code>, so a new terminal needs
+        nothing. Your config is never uploaded — the CLI reads local files and asks us only about
+        capability names.</p></div>
+      <div><h3>Do I get an account?</h3>
+        <p>Yes. Plan, renewal date, activated machines, licence key and invoices.</p>
+        <p class="pfaq-note"><code>tashan account</code> opens it already signed in — no password to
+        make. <code>doctor</code> prints <span class="mono">Pro · licence active</span> on every
+        run.</p></div>
+      <div><h3>How many machines?</h3>
+        <p>As many as you use. Run <code>tashan login</code> on each.</p>
+        <p class="pfaq-note">Each registers under its hostname, so
+        <a class="link" href="/account.html">your account</a> lists what is active.
+        <code>tashan logout</code> hands a slot back.</p></div>
+      <div><h3>Can a publisher pay to rank higher?</h3>
+        <p>No. Nothing purchasable moves a score, rank or listing.</p>
+        <p class="pfaq-note">Enforced, not promised:
+        <span class="mono">tests/test_firewall.py</span> fails the build if the scorer reads
+        anything but public-signal columns.</p></div>
       <div><h3>Team or company use?</h3><p>The data API is live and free — see
         <a class="link" href="/for-hosts.html">for hosts</a>. Org-wide auditing of your own internal skills and
         servers is not built yet; <a class="link" href="mailto:hello@tashan.sh?subject=tashan%20for%20teams">tell us
@@ -151,7 +163,7 @@
 
   <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources, and checkable against them.</span></div></footer>
 
-  <script src="/js/terminal.js?v=257" defer></script>
-  <script src="/js/site.js?v=257" defer></script>
+  <script src="/js/terminal.js?v=259" defer></script>
+  <script src="/js/site.js?v=259" defer></script>
 </body>
 </html>

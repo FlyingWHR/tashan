@@ -198,8 +198,9 @@ def page(a, b, cat_label, gen):
         '<p class="note chg__pro">Both numbers above are today&rsquo;s. Whichever you choose, the '
         'question that matters next is when it changes &mdash; a new advisory, an install script '
         'that appeared, a maintainer walking away. '
-        '<a class="link" href="/pricing.html">tashan Pro</a> watches the servers in your own config '
-        'and tells you the day one of them moves &mdash; <code>tashan doctor</code>.</p>\n'
+        '<a class="link" href="/pricing.html">tashan Pro</a> adds the history to '
+        '<code>tashan doctor</code>, so a run over your own config says which of yours moved '
+        '&mdash; and what to move to.</p>\n'
         "</article></main>\n")
 
     return H.head(title, desc, url, lds) + body + H.FOOT + \

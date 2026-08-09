@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="tashan — what's worth installing for the work you do">
   <meta name="twitter:description" content="The measurement layer for AI capabilities — known advisories, what runs at install time, and what each one can reach on your machine.">
-  <link rel="stylesheet" href="/css/site.css?v=257">
+  <link rel="stylesheet" href="/css/site.css?v=259">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"tashan","url":"https://tashan.sh/","description":"Thousands of MCP servers and agent skills, filed by the job you do and ranked on public evidence: upkeep, freshness and real adoption, with a security audit on the packages we can resolve.","slogan":"AI skills for your job, ranked on public evidence"}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"tashan","url":"https://tashan.sh/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://tashan.sh/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does tashan score MCP servers and skills?","acceptedAnswer":{"@type":"Answer","text":"tashan computes a transparent score from upkeep and freshness, gated by real adoption (npm downloads and public config reach). A separate LLM expertise-eval reads the actual capability and grades it deep / solid / thin / wrapper / slop. Every number links to the public source it came from."}},{"@type":"Question","name":"What decides where a capability ranks?","acceptedAnswer":{"@type":"Answer","text":"Public signal only: npm download volume and publish cadence, repository activity, maintainer count and registry status. The scorer is asserted to read only public-signal columns in tests/test_firewall.py, so the inputs are the ones documented on the methodology page and nothing else. Commercial relationships never influence task fit, measurements, findings, rankings or editorial recommendations."}},{"@type":"Question","name":"What is the difference between an MCP server and an agent skill?","acceptedAnswer":{"@type":"Answer","text":"An MCP server exposes tools to an AI agent over the Model Context Protocol; an agent skill is a folder with a SKILL.md that the agent loads on demand. tashan tracks and scores both in one unified capability model."}}]}</script>
@@ -172,7 +172,9 @@
     <p class="kicker">How the ranking works</p>
     <div class="section__head"><h2>What goes into the number.</h2></div>
     <div class="trust">
-      <div class="card"><h3>Upkeep, freshness, adoption</h3><p>The score combines how actively a capability is maintained and how recently it moved, gated by real adoption — npm downloads and public config reach. Instruction depth — how well it documents itself — is graded separately and never folded in, because "well kept" and "well documented" are different questions.</p></div>
+      <div class="card"><h3>Upkeep, freshness, adoption</h3><p>Upkeep and freshness, gated by real adoption — npm downloads and public config reach.</p>
+        <p class="card__note">Instruction depth is graded separately and never folded in. &ldquo;Well
+        kept&rdquo; and &ldquo;well documented&rdquo; are different questions.</p></div>
       <div class="card"><h3>We read the actual expertise</h3><p>We open each capability and grade what it documents against a published rubric — deep domain work versus a thin wrapper or AI-slop. That is a read of the documentation, not of the running code.</p></div>
       <div class="card"><h3>Checkable at the source</h3><p>No black box. Each signal is defined and points back at where it came from — the registry, npm, git history. If you don't believe a number, verify it.</p></div>
     </div>
@@ -198,14 +200,13 @@
        nav and footer, it never once said what a subscription is for — a reader could browse the
        whole ranked board and leave without learning the product does anything beyond publish it.
        The pitch is the same honest one used on the dossiers and the hubs: everything on this page
-       is public evidence and stays free; what a licence buys is the watch on YOUR OWN config, which
-       a page cannot know by construction. -->
-  <section class="section" id="watch-anchor"><div class="wrap">
+       is public evidence and stays free; what a licence buys is the history behind it, applied to
+       YOUR OWN config by doctor — which a page cannot know by construction. -->
+  <section class="section" id="pro-anchor"><div class="wrap">
     <h2 class="sec-h">This board is a snapshot. Your stack is not.</h2>
-    <p class="lede">Every score, every finding and every advisory above is free, forever, with no
-      account — that is the point of an index. What it cannot do is notice when one of the servers
-      <em>you actually run</em> starts running an install script, widens what it reaches, loses its
-      last maintainer, or has a CVE filed against the version you installed.</p>
+    <p class="lede">Every score, finding and advisory above is free, forever, no account.</p>
+    <p>What an index cannot tell you is which of them <em>you</em> run.
+      <code>npx tashan-cli doctor</code> reads your own config and names what is wrong in it, free.</p>
     <p class="mono fs-sm"><code>npx tashan-cli doctor</code> reads the config you already have and
       names what is wrong in it, free. <a class="link" href="/pricing.html">tashan Pro</a> is $6/mo
       and tells you the day it changes.</p>
@@ -215,10 +216,10 @@
 
   <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources, and checkable against them.</span></div></footer>
 
-  <script src="/js/ridge.js?v=257" defer></script>
-  <script src="/js/hero.js?v=257" defer></script>
-  <script src="/js/terminal.js?v=257" defer></script>
-  <script src="/js/site.js?v=257" defer></script>
-  <script src="/js/index.js?v=257" defer></script>
+  <script src="/js/ridge.js?v=259" defer></script>
+  <script src="/js/hero.js?v=259" defer></script>
+  <script src="/js/terminal.js?v=259" defer></script>
+  <script src="/js/site.js?v=259" defer></script>
+  <script src="/js/index.js?v=259" defer></script>
 </body>
 </html>

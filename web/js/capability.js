@@ -209,11 +209,10 @@ function proPanelFree(c) {
       'not the ones you thought to look up.';
   } else if (c.tashan_score != null) {
     line = name + ' scores <b>' + Math.round(c.tashan_score) + '</b> today. Pro keeps the series, ' +
-      'so you can see whether that is a project getting better or one on its way down — and tells ' +
-      'you the day it moves.';
+      'so you can see whether that is a project getting better or one on its way down.';
   } else {
-    line = 'Pro watches the servers in your own config and tells you the day one of them gains an ' +
-      'advisory, starts running an install script, or loses its last maintainer.';
+    line = 'Pro adds the history to tashan doctor, so a run over your own config says which of ' +
+      'yours gained an advisory or started running an install script — and what to move to.';
   }
   return '<section class="pro" id="pro" data-state="free">' +
     '<div class="pro__hd"><span class="pro__tag mono">tashan Pro</span>' +
@@ -264,7 +263,7 @@ function paintPro(el, c) {
     return '<div class="pro__row"><span class="pro__k mono">' + esc(k) + '</span>' +
            '<span class="pro__v">' + v + '</span></div>';
   }
-  rows += row('Watching', esc(c.label || c.name || c.id));
+  rows += row('Capability', esc(c.label || c.name || c.id));
   rows += row('Changes', ch.length ? esc(String(ch.length)) + ' in the last 45 days' :
                                      'none in the last 45 days');
   if (ch.length) {
@@ -274,7 +273,7 @@ function paintPro(el, c) {
   rows += row('History', '<a class="link" href="/methodology.html#history">' +
     'every score since we started measuring</a> &mdash; <code>tashan doctor --trend</code>');
   el.querySelector('.pro__lede').innerHTML =
-    'You have Pro. This is what we are watching on ' + esc(c.label || c.name || 'this capability') + '.';
+    'You have Pro. Here is the record behind ' + esc(c.label || c.name || 'this capability') + '.';
   var list = el.querySelector('.pro__list');
   if (list) list.outerHTML = '<div class="pro__rows">' + rows + '</div>';
 }

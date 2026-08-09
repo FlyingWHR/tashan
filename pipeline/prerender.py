@@ -316,8 +316,8 @@ def changed_block(c):
     # advertising a feature in the abstract. It is also honest that the page is not the product:
     # nobody reloads a dossier to find out their stack moved.
     pitch = ('<p class="chg__pro mono fs-sm">You are reading this because you came looking. '
-             '<a class="link" href="/pricing.html">tashan Pro</a> tells you the day it happens, for the '
-             'servers in your own config — <code>tashan doctor</code>.</p>')
+             '<a class="link" href="/pricing.html">tashan Pro</a> gives <code>tashan doctor</code> the '
+             'history behind it, so a run over your own config says which of YOURS moved.</p>')
     return ('<section class="changed"><h2 class="sec-h">What changed recently</h2>'
             '<ul class="chg-list">' + items + '</ul>' + pitch + '</section>')
 
@@ -356,8 +356,9 @@ def pro_panel(c):
                 "can see whether that is a project getting better or one on its way down — and "
                 "tells you the day it moves.")
     else:
-        line = ("Pro watches the servers in your own config and tells you the day one of them "
-                "gains an advisory, starts running an install script, or loses its last maintainer.")
+        line = ("Pro adds the history to <code>tashan doctor</code>, so a run over your own config "
+                "says which of yours gained an advisory, started running an install script, or "
+                "lost its last maintainer &mdash; and what to move to.")
     return (
         '<section class="pro" id="pro" data-state="free">'
         '<div class="pro__hd"><span class="pro__tag mono">tashan Pro</span>'
