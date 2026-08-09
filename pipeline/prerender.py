@@ -322,6 +322,58 @@ def changed_block(c):
             '<ul class="chg-list">' + items + '</ul>' + pitch + '</section>')
 
 
+def pro_panel(c):
+    """The one commercial surface on a dossier, and the only place a price appears.
+
+    WHY IT IS A PANEL AND NOT A SENTENCE. Every page carried a pricing link, and a sample of 3,000
+    dossiers found 3,000 plain text links inside a closing paragraph and ZERO buttons. That is not a
+    commercial surface, it is a footnote — a reader scanning a measurement page has no reason to stop
+    at the last line of prose, and nothing about it looked like an offer.
+
+    TWO STATES, ONE ELEMENT. What ships here is the SIGNED-OUT state, because it is the one a crawler
+    and an answer engine read, and it must stand alone. capability.js replaces it with the Pro state
+    once /api/account confirms an active licence — same pattern as the security detail, and the same
+    rule: it starts as the free state and only ever upgrades, so no page flashes a wrong entitlement
+    and an unreachable API leaves the honest offer on screen.
+
+    The offer is specific to THIS capability rather than generic, because a generic upsell on 9,638
+    pages is banner blindness by the second page. It names the row's own numbers.
+
+    NO ACCENT COLOUR. brand/BRAND.md reserves jade for measured data; an offer is not a measurement.
+    The panel earns its separation from a hairline and a tint, which is also why it does not compete
+    with the score sitting a few centimetres above it.
+    """
+    name = esc(c.get("label") or c.get("name") or "this capability")
+    score = c.get("tashan_score")
+    n_ch = len(c.get("changes") or [])
+    # Concrete, and true for this row: what Pro would have told them about THIS package.
+    if n_ch:
+        line = ("We recorded <b>" + str(n_ch) + (" change" if n_ch == 1 else " changes")
+                + "</b> to " + name + " in the last 45 days. Pro tells you on the day — for the "
+                "servers in your own config, not the ones you thought to look up.")
+    elif score is not None:
+        line = (name + " scores <b>" + str(int(score)) + "</b> today. Pro keeps the series, so you "
+                "can see whether that is a project getting better or one on its way down — and "
+                "tells you the day it moves.")
+    else:
+        line = ("Pro watches the servers in your own config and tells you the day one of them "
+                "gains an advisory, starts running an install script, or loses its last maintainer.")
+    return (
+        '<section class="pro" id="pro" data-state="free">'
+        '<div class="pro__hd"><span class="pro__tag mono">tashan Pro</span>'
+        '<span class="pro__price mono">$6<span class="pro__per">/mo</span></span></div>'
+        '<p class="pro__lede">' + line + "</p>"
+        '<ul class="pro__list">'
+        "<li>Every score since we started measuring, for any capability</li>"
+        "<li>The named replacement when something you run is dying &mdash; not just that it is</li>"
+        "<li><code>tashan doctor</code> over the config you already have, on your machine</li>"
+        "</ul>"
+        '<p class="pro__cta"><a class="btn btn--primary" href="/pricing.html" '
+        'data-e="cta" data-k="pro-dossier">Start a 7-day trial &rsaquo;</a>'
+        '<span class="pro__free mono"> Everything measured on this page stays free.</span></p>'
+        "</section>")
+
+
 def summary(c, gen=""):
     """Server-rendered content crawlers see with JS off (capability.js replaces it for humans)."""
     n = disp(c); rows = []
@@ -492,7 +544,7 @@ def summary(c, gen=""):
             '<div class="cid"><span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
-            + works + cat + task + job + install + verdict + swap + changed_block(c) +
+            + works + cat + task + job + install + verdict + swap + changed_block(c) + pro_panel(c) +
             ('<ul class="prose prose--wide">' + "".join(rows) + '</ul>' if rows else '') +
             # The security audit goes BEFORE the CTA and the link row: it is the measurement the
             # page exists to publish, and it was previously absent from this tier entirely.

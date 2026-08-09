@@ -26,6 +26,11 @@
       document.title = disp(o.c) + " — tashan";
       try { render(o.c, { generated_at: o.at, scorer: o.sv }); }
       catch (e) { console.error("render failed", e); el.innerHTML = notfound(); }
+      // AFTER render, and in its own try. The Pro panel is server-rendered and lives outside the
+      // element render() replaces, so it has to be upgraded separately — and a failure here must
+      // never take the dossier with it. The shipped free state is a correct thing to leave on
+      // screen; a blank page is not.
+      try { proPanel(o.c); } catch (e) { console.error("pro panel failed", e); }
     } else {
       el.innerHTML = notfound();
     }
@@ -103,6 +108,7 @@
           ' A grade read off another project\u2019s document would borrow its credit, or its blame.'
           : '') + '</p></div>' : '') +
       changedBlock(c) +
+      proPanelFree(c) +
       closingPitch(c) +
       repoHealth(c) +
       alsoOn(c) +
@@ -188,6 +194,91 @@ var SEV_RANK = { high: 0, medium: 1, low: 2 };
 // already made the case on those pages, and saying it twice is how a measured page starts reading
 // like a landing page. The client REPLACES the server render — omit this and 8,648 pages lose it
 // the instant JS runs, which is the drift that has bitten this file three times.
+// MIRRORS prerender.py::pro_panel — the FREE state, and it has to be here because render()
+// replaces <main> wholesale. Without it the server-rendered panel is destroyed the instant JS runs
+// and proPanel() finds no #pro to upgrade: the offer would exist for crawlers and vanish for every
+// human. That is the drift this file has shipped three times, in the same place, for the same
+// reason.
+function proPanelFree(c) {
+  var name = esc(c.label || c.name || 'this capability');
+  var n = (c.changes || []).length;
+  var line;
+  if (n) {
+    line = 'We recorded <b>' + n + (n === 1 ? ' change' : ' changes') + '</b> to ' + name +
+      ' in the last 45 days. Pro tells you on the day — for the servers in your own config, ' +
+      'not the ones you thought to look up.';
+  } else if (c.tashan_score != null) {
+    line = name + ' scores <b>' + Math.round(c.tashan_score) + '</b> today. Pro keeps the series, ' +
+      'so you can see whether that is a project getting better or one on its way down — and tells ' +
+      'you the day it moves.';
+  } else {
+    line = 'Pro watches the servers in your own config and tells you the day one of them gains an ' +
+      'advisory, starts running an install script, or loses its last maintainer.';
+  }
+  return '<section class="pro" id="pro" data-state="free">' +
+    '<div class="pro__hd"><span class="pro__tag mono">tashan Pro</span>' +
+    '<span class="pro__price mono">$6<span class="pro__per">/mo</span></span></div>' +
+    '<p class="pro__lede">' + line + '</p>' +
+    '<ul class="pro__list">' +
+    '<li>Every score since we started measuring, for any capability</li>' +
+    '<li>The named replacement when something you run is dying — not just that it is</li>' +
+    '<li><code>tashan doctor</code> over the config you already have, on your machine</li>' +
+    '</ul>' +
+    '<p class="pro__cta"><a class="btn btn--primary" href="' + PRICING + '" ' +
+    'data-e="cta" data-k="pro-dossier">Start a 7-day trial &rsaquo;</a>' +
+    '<span class="pro__free mono"> Everything measured on this page stays free.</span></p>' +
+    '</section>';
+}
+
+// ── the Pro half of the panel ────────────────────────────────────────────────────────────────
+// prerender.py ships [data-state="free"] so a crawler reads the offer. This upgrades it in place
+// once /api/account confirms an active licence, reusing the session cache site.js already keeps so
+// browsing does not put a Polar round trip on every page.
+//
+// UPGRADE-ONLY, like the nav mark: it starts as the honest offer and only ever replaces it with
+// more. A failed fetch, an expired licence or an unreachable API leaves the free state on screen,
+// which is correct — never an optimistic Pro.
+//
+// A paying customer is not shown a price again. They have bought; repeating the offer is the
+// fastest way to make a subscription feel like a nag.
+function proPanel(c) {
+  var el = document.getElementById('pro');
+  if (!el) return;
+  var acct = null;
+  try {
+    var raw = sessionStorage.getItem('tashan_acct');
+    if (raw) { var p = JSON.parse(raw); if (p && p.a) acct = p.a; }
+  } catch (e) { /* private mode — fall through to the fetch */ }
+  if (acct) return acct.active ? paintPro(el, c) : undefined;
+  fetch('/api/account', { headers: { accept: 'application/json' } })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (a) { if (a && a.active) paintPro(el, c); })
+    .catch(function () { /* offline: the shipped offer is already the right thing to show */ });
+}
+
+function paintPro(el, c) {
+  el.setAttribute('data-state', 'pro');
+  var ch = c.changes || [];
+  var rows = '';
+  function row(k, v) {
+    return '<div class="pro__row"><span class="pro__k mono">' + esc(k) + '</span>' +
+           '<span class="pro__v">' + v + '</span></div>';
+  }
+  rows += row('Watching', esc(c.label || c.name || c.id));
+  rows += row('Changes', ch.length ? esc(String(ch.length)) + ' in the last 45 days' :
+                                     'none in the last 45 days');
+  if (ch.length) {
+    rows += row('Latest', '<b>' + esc(ch[0].what || '') + '</b>' +
+      (ch[0].action ? '<br><span class="pro__k">' + esc(ch[0].action) + '</span>' : ''));
+  }
+  rows += row('History', '<a class="link" href="/methodology.html#history">' +
+    'every score since we started measuring</a> &mdash; <code>tashan doctor --trend</code>');
+  el.querySelector('.pro__lede').innerHTML =
+    'You have Pro. This is what we are watching on ' + esc(c.label || c.name || 'this capability') + '.';
+  var list = el.querySelector('.pro__list');
+  if (list) list.outerHTML = '<div class="pro__rows">' + rows + '</div>';
+}
+
 function closingPitch(c) {
   if ((c.changes || []).length) return '';
   return '<p class="chg__pro mono fs-sm">Everything on this page is public evidence and free. ' +

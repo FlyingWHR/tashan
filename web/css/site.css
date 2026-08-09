@@ -1200,3 +1200,50 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .chg__at { opacity: .6; font-size: var(--fs-xs); margin-right: .35rem; }
 .chg__why { opacity: .75; }
 .chg__pro { margin-top: .7rem; opacity: .8; }
+
+/* ── tashan Pro panel ────────────────────────────────────────────────────────────────────────
+   The only commercial surface on a dossier, and the only place a price appears on it.
+
+   It exists because every page already carried a pricing link and a sample of 3,000 dossiers found
+   3,000 of them inside a closing paragraph and ZERO buttons. A reader scanning a measurement page
+   has no reason to stop at the last line of prose.
+
+   NO ACCENT. brand/BRAND.md reserves jade for measured data and an offer is not a measurement —
+   which also keeps it from competing with the score a few centimetres above it. Separation comes
+   from a surface tint and a hairline, and the only strong element is the button.
+
+   Two states on one element: [data-state="free"] ships in the HTML so a crawler reads the offer,
+   and capability.js sets [data-state="pro"] once /api/account confirms a licence. */
+.pro {
+  margin: 2rem 0 0; padding: 1.1rem 1.15rem;
+  background: var(--surface-2); border: 1px solid var(--hairline); border-radius: var(--radius);
+}
+.pro__hd { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.pro__tag {
+  font-size: var(--fs-xs); letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim);
+  border: 1px solid var(--hairline); border-radius: 999px; padding: .12rem .5rem;
+}
+.pro__price { font-size: var(--fs-lg); color: var(--text); }
+.pro__per { font-size: var(--fs-xs); color: var(--text-dim); }
+.pro__lede { margin: .7rem 0 0; max-width: var(--measure); }
+.pro__list { margin: .6rem 0 0; padding-left: 1.05rem; color: var(--text-dim); font-size: var(--fs-sm); }
+.pro__list li { margin: .2rem 0; }
+.pro__cta { margin: .95rem 0 0; display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
+.pro__free { font-size: var(--fs-xs); color: var(--text-faint); }
+
+/* The signed-in half. Deeper insight, not a louder offer — a paying customer has already bought and
+   showing them a price again is the fastest way to make a subscription feel like a nag. */
+.pro[data-state="pro"] { background: var(--surface); }
+.pro[data-state="pro"] .pro__price, .pro[data-state="pro"] .pro__cta { display: none; }
+.pro__rows { margin: .8rem 0 0; display: grid; gap: .45rem; }
+.pro__row {
+  display: flex; gap: .6rem; align-items: baseline;
+  font-size: var(--fs-sm); padding-bottom: .45rem; border-bottom: 1px solid var(--hairline-soft);
+}
+.pro__row:last-child { border-bottom: 0; padding-bottom: 0; }
+.pro__k { color: var(--text-faint); min-width: 6.5rem; }
+.pro__v { color: var(--text); }
+@media (max-width: 34rem) {
+  .pro__hd { flex-direction: column; gap: .35rem; }
+  .pro__k { min-width: 0; }
+}
