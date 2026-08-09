@@ -1,0 +1,234 @@
+[
+ {
+  "id": "pkg:@modelcontextprotocol/sdk",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:claude-cup",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:@modelcontextprotocol/server",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@modelcontextprotocol/core",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@modelcontextprotocol/client",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:eve",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:mcp-remote",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@modelcontextprotocol/node",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:cline",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:supergateway",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:mockserver-client",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:n8n-mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "pkg:pi-mcp-adapter",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@azure/mcp",
+  "category": "cloud"
+ },
+ {
+  "id": "pkg:ruvector",
+  "category": "database"
+ },
+ {
+  "id": "pkg:next-devtools-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:freee-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "pkg:agentic-flow",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:hlims-mcp",
+  "category": "cloud"
+ },
+ {
+  "id": "pkg:@redocly/mcp-typescript-sdk",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:metaharness",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:ruflo",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:mcp-hello-world",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@modelcontextprotocol/express",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:decocms",
+  "category": "cloud"
+ },
+ {
+  "id": "pkg:@modelcontextprotocol/hono",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:hono-mcp-server-sse-transport",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@mcp-use/modelcontextprotocol-sdk",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:kordoc",
+  "category": "files"
+ },
+ {
+  "id": "pkg:neo.mjs",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:claude-mem",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:agent-afk",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@alipay/mcp-server-alipay",
+  "category": "finance"
+ },
+ {
+  "id": "pkg:fastify-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@shortcut/mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "pkg:@cyanheads/mcp-ts-core",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@microsoft/powerbi-modeling-mcp",
+  "category": "data"
+ },
+ {
+  "id": "pkg:@sap/mdk-mcp-server",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:mockserver-node",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:serper-search-scrape-mcp-server",
+  "category": "search"
+ },
+ {
+  "id": "pkg:playwright-mcp",
+  "category": "browser"
+ },
+ {
+  "id": "pkg:claude-flow",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:brilliant-directories-mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "pkg:appium-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:hevy-mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "pkg:codebase-memory-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:howtocook-mcp",
+  "category": "search"
+ },
+ {
+  "id": "pkg:ask-experts-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:mcp-image",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:12306-mcp",
+  "category": "search"
+ },
+ {
+  "id": "pkg:agent-rack",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:tidewave",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:edk2-opencode",
+  "category": "docs"
+ },
+ {
+  "id": "pkg:pi-fabric",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@modelcontextprotocol/fastify",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:ios-simulator-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:bunqueue",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:shiplightai",
+  "category": "devtools"
+ }
+]

@@ -15,18 +15,18 @@ Ranked by the tashan score
 | 2 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 83 | 42k/wk | active |
 | 3 | [Whodb](https://tashan.sh/capability/plugin-clidey-whodb-whodb.html) | 77 | 5k ★ | active |
 | 4 | [Postgres](https://tashan.sh/capability/pkg-henkey-postgres-mcp-server.html) | 74 | 2k/wk | active |
-| 5 | [Dynoxide](https://tashan.sh/capability/pkg-dynoxide.html) | 71 | 5k/wk | active |
-| 6 | [MySQL](https://tashan.sh/capability/pkg-benborla29-mcp-server-mysql.html) | 70 | 12k/wk | active |
-| 7 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 69 | 81 ★ | active |
-| 8 | [SQLite](https://tashan.sh/capability/pkg-mokei-mcp-sqlite.html) | 69 | 457/wk | active |
-| 9 | [Co2 Tracker](https://tashan.sh/capability/plugin-gwittebolle-claude-carbon-co2-tracker.html) | 68 | 149 ★ | active |
-| 10 | [Read Only Local MySQL](https://tashan.sh/capability/pkg-hovecapital-read-only-mysql-mcp-server.html) | 67 | 203/wk | active |
-| 11 | [Tmdb](https://tashan.sh/capability/pkg-tmdb-mcp.html) | 65 | 665/wk | active |
-| 12 | [Seedfast](https://tashan.sh/capability/pkg-seedfast.html) | 65 | 421/wk | active |
-| 13 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 64 | 41 ★ | active |
-| 14 | [Firestore Native](https://tashan.sh/capability/plugin-gemini-cli-extensions-firestore-native-firestore-native.html) | 64 | 30 ★ | active |
-| 15 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 63 | 22 ★ | active |
-| 16 | [AWS Lambda](https://tashan.sh/capability/pkg-aws-lambda-mcp-server.html) | 63 | 444/wk | active |
+| 5 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 72 | 643 ★ | active |
+| 6 | [Dynoxide](https://tashan.sh/capability/pkg-dynoxide.html) | 71 | 5k/wk | active |
+| 7 | [MySQL](https://tashan.sh/capability/pkg-benborla29-mcp-server-mysql.html) | 70 | 12k/wk | active |
+| 8 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 69 | 81 ★ | active |
+| 9 | [SQLite](https://tashan.sh/capability/pkg-mokei-mcp-sqlite.html) | 69 | 457/wk | active |
+| 10 | [Co2 Tracker](https://tashan.sh/capability/plugin-gwittebolle-claude-carbon-co2-tracker.html) | 68 | 149 ★ | active |
+| 11 | [Read Only Local MySQL](https://tashan.sh/capability/pkg-hovecapital-read-only-mysql-mcp-server.html) | 67 | 203/wk | active |
+| 12 | [Tmdb](https://tashan.sh/capability/pkg-tmdb-mcp.html) | 65 | 665/wk | active |
+| 13 | [Seedfast](https://tashan.sh/capability/pkg-seedfast.html) | 65 | 421/wk | active |
+| 14 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 64 | 41 ★ | active |
+| 15 | [Firestore Native](https://tashan.sh/capability/plugin-gemini-cli-extensions-firestore-native-firestore-native.html) | 64 | 30 ★ | active |
+| 16 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 63 | 22 ★ | active |
 | 17 | [Dm8](https://tashan.sh/capability/pkg-mcp-dm8-server.html) | 63 | 409/wk | active |
 | 18 | [Dba Master](https://tashan.sh/capability/pkg-dba-master.html) | 63 | 350/wk | active |
 | 19 | [SQL Preview](https://tashan.sh/capability/pkg-sql-preview.html) | 63 | 345/wk | active |
@@ -50,9 +50,9 @@ Ranked by the tashan score
 | 37 | [Fixture](https://tashan.sh/capability/pkg-fixture-mcp.html) | 48 | 44/wk | active |
 | 38 | [MySQL · maxlmgc](https://tashan.sh/capability/pkg-maxlmgc-mysql-mcp.html) | 47 | 33/wk | active |
 | 39 | [Oracle AI Data Platform Workbench Spark Connectors](https://tashan.sh/capability/plugin-oracle-samples-oracle-aidp-samples-oracle-ai-data-platform-workbench-spark-connectors.html) | 46 | 2 marketplaces | — |
-| 40 | [Goldrush](https://tashan.sh/capability/pkg-covalenthq-goldrush-mcp-server.html) | 46 | 296/wk | active |
+| 40 | [Genieacs](https://tashan.sh/capability/pkg-genieacs-mcp.html) | 46 | 70/wk | active |
 
-Showing the top 40 of 115. The full ranked shelf is at https://tashan.sh/category/database.html.
+Showing the top 40 of 111. The full ranked shelf is at https://tashan.sh/category/database.html.
 
 ## What these numbers are not
 
