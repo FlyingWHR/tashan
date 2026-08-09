@@ -1293,3 +1293,12 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .procta__t { max-width: 46ch; }
 .procta__s { color: var(--text-dim); font-size: var(--fs-sm); }
 @media (max-width: 40rem) { .procta { flex-direction: column; align-items: flex-start; } }
+
+/* The free action on a dossier, above the paid one.
+   The only organic arrivals analytics has seen are package-name searches landing on these pages,
+   and the single button they were offered was a paid trial. `doctor` costs nothing, runs on their
+   own machine, and is the only route by which anyone ever becomes a subscriber — so it leads, and
+   it is a command you can copy rather than a sentence about a command. */
+.dcta { margin: 1.6rem 0 0; }
+.dcta__lbl { color: var(--text-dim); font-size: var(--fs-sm); margin: 0 0 .4rem; }
+.dcta__sub { color: var(--text-faint); font-size: var(--fs-sm); margin: .45rem 0 0; max-width: 54ch; }

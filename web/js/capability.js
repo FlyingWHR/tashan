@@ -108,6 +108,7 @@
           ' A grade read off another project\u2019s document would borrow its credit, or its blame.'
           : '') + '</p></div>' : '') +
       changedBlock(c) +
+      doctorCta() +
       proPanelFree(c) +
       closingPitch(c) +
       repoHealth(c) +
@@ -199,6 +200,18 @@ var SEV_RANK = { high: 0, medium: 1, low: 2 };
 // and proPanel() finds no #pro to upgrade: the offer would exist for crawlers and vanish for every
 // human. That is the drift this file has shipped three times, in the same place, for the same
 // reason.
+// Mirrors prerender.py::doctor_cta. The free action comes BEFORE the paid one, because the only
+// organic arrivals we can see are package-name searches landing here, and the strongest thing we
+// have to give them costs nothing. render() replaces <main>, so this must exist here too.
+function doctorCta() {
+  return '<section class="dcta">' +
+    '<p class="dcta__lbl mono">You searched for one. Check the rest of your stack:</p>' +
+    '<pre class="install__snip"><button class="install__copy install__copy--pre" type="button" ' +
+    'data-copy="npx tashan-cli doctor">copy</button><code>npx tashan-cli doctor</code></pre>' +
+    '<p class="dcta__sub">Reads the config already on your machine and names what is dead, ' +
+    'deprecated or running code at install time. No account, nothing uploaded.</p></section>';
+}
+
 function proPanelFree(c) {
   var name = esc(c.label || c.name || 'this capability');
   var n = (c.changes || []).length;

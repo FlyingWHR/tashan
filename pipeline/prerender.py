@@ -322,6 +322,32 @@ def changed_block(c):
             '<ul class="chg-list">' + items + '</ul>' + pitch + '</section>')
 
 
+def doctor_cta(c):
+    """The free action, given to somebody who arrived from a search.
+
+    MEASURED, NOT ASSUMED. With analytics finally live, the only organic arrivals in the first
+    72 hours were Google landing on capability pages — including pkg-agentutility-mcp-web-probe,
+    which is about as long-tail as this corpus gets. Package-name search is the traffic this site
+    gets, and a dossier is where it lands.
+
+    What that reader was offered was one button: "Start a 7-day trial". Asking a stranger for money
+    before giving them anything is the wrong first move, and it is worse than doing nothing here,
+    because the free thing we have is the strongest thing we have. `doctor` reads the config already
+    on their machine and names what is wrong in it, for nothing, with no account.
+
+    It is also the only path to a subscription: everything Pro delivers arrives through doctor. So
+    the free command is the primary action and the trial is secondary — the order the funnel
+    actually runs in, rather than the order we would like it to.
+    """
+    return ('<section class="dcta">'
+            '<p class="dcta__lbl mono">You searched for one. Check the rest of your stack:</p>'
+            '<pre class="install__snip"><button class="install__copy install__copy--pre" type="button" '
+            'data-copy="npx tashan-cli doctor">copy</button><code>npx tashan-cli doctor</code></pre>'
+            '<p class="dcta__sub">Reads the config already on your machine and names what is dead, '
+            'deprecated or running code at install time. No account, nothing uploaded.</p>'
+            "</section>")
+
+
 def pro_panel(c):
     """The one commercial surface on a dossier, and the only place a price appears.
 
@@ -545,7 +571,7 @@ def summary(c, gen=""):
             '<div class="cid"><span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
-            + works + cat + task + job + install + verdict + swap + changed_block(c) + pro_panel(c) +
+            + works + cat + task + job + install + verdict + swap + changed_block(c) + doctor_cta(c) + pro_panel(c) +
             ('<ul class="prose prose--wide">' + "".join(rows) + '</ul>' if rows else '') +
             # The security audit goes BEFORE the CTA and the link row: it is the measurement the
             # page exists to publish, and it was previously absent from this tier entirely.
