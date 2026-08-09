@@ -497,7 +497,22 @@ def summary(c, gen=""):
             # The security audit goes BEFORE the CTA and the link row: it is the measurement the
             # page exists to publish, and it was previously absent from this tier entirely.
             security_block(c)
-            + ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else '') + audit
+            + ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else '')
+            # ONE HONEST CLOSING LINE, ON EVERY DOSSIER. 8,648 of 9,638 capability pages made no
+            # case for the product at all — only the 990 that happen to carry a change block or a
+            # finding did — so a reader could read the deepest page we publish about a package and
+            # leave without learning that anything watches it.
+            #
+            # Suppressed where changed_block already pitched, because saying it twice on one page is
+            # how a measured page starts to read like a landing page. Nothing here is gated and
+            # nothing is withheld: the line names what the PAGE cannot do, which is know what is in
+            # your config. That is the only honest thing left to sell once every finding is free.
+            + ("" if (c.get("changes") or []) else
+               '<p class="chg__pro mono fs-sm">Everything on this page is public evidence and free. '
+               'What it cannot know is whether <em>you</em> run this — '
+               '<code>npx tashan-cli doctor</code> reads your own config and names what is wrong in '
+               'it, also free. <a class="link" href="/pricing.html">tashan Pro</a> tells you the day '
+               'any of it changes.</p>') + audit
             # WHEN THIS WAS MEASURED, in the static file. capability.js prints it in its closing
             # callout, but that is client-side only — so every crawler and answer engine we court in
             # llms.txt read 5,788 pages of measurements with no date attached to any of them. A

@@ -190,6 +190,16 @@ def page(a, b, cat_label, gen):
         '<a class="link" href="/capability/' + esc(b["slug"]) + '.html">' + esc(nb) + "</a>.</p>\n"
         '<p class="mt-12"><a class="btn btn--ghost" href="/category/' + esc(a["category"]) +
         '.html">All ranked ' + esc(cat_label) + " &rsaquo;</a></p>\n"
+        # THE HIGHEST-INTENT PAGE ON THE SITE AND IT MADE NO CASE AT ALL. "X vs Y" is what somebody
+        # types immediately before choosing, and all 413 of these pages ended at a category link.
+        # The pitch is the honest one and it is specific to this page: a comparison is a snapshot,
+        # and the thing it cannot do is tell you when the answer stops being true. Both scores stay
+        # free, both audits stay free — what a licence buys is the watch on whichever one you pick.
+        '<p class="note chg__pro">Both numbers above are today&rsquo;s. Whichever you choose, the '
+        'question that matters next is when it changes &mdash; a new advisory, an install script '
+        'that appeared, a maintainer walking away. '
+        '<a class="link" href="/pricing.html">tashan Pro</a> watches the servers in your own config '
+        'and tells you the day one of them moves &mdash; <code>tashan doctor</code>.</p>\n'
         "</article></main>\n")
 
     return H.head(title, desc, url, lds) + body + H.FOOT + \

@@ -103,6 +103,7 @@
           ' A grade read off another project\u2019s document would borrow its credit, or its blame.'
           : '') + '</p></div>' : '') +
       changedBlock(c) +
+      closingPitch(c) +
       repoHealth(c) +
       alsoOn(c) +
       (co ? section("Configured alongside", '<div class="colist">' + co + '</div>', "In real public configs, these ship together.") : '') +
@@ -183,6 +184,18 @@
 // has happened three times in this file. Free in full: the existence of a risk is never paywalled,
 // and this is the clearest demonstration of the product there is.
 var SEV_RANK = { high: 0, medium: 1, low: 2 };
+// Mirrors prerender.py's closing line, and is suppressed for the same reason: changedBlock has
+// already made the case on those pages, and saying it twice is how a measured page starts reading
+// like a landing page. The client REPLACES the server render — omit this and 8,648 pages lose it
+// the instant JS runs, which is the drift that has bitten this file three times.
+function closingPitch(c) {
+  if ((c.changes || []).length) return '';
+  return '<p class="chg__pro mono fs-sm">Everything on this page is public evidence and free. ' +
+    'What it cannot know is whether <em>you</em> run this — <code>npx tashan-cli doctor</code> ' +
+    'reads your own config and names what is wrong in it, also free. ' +
+    '<a class="link" href="/pricing.html">tashan Pro</a> tells you the day any of it changes.</p>';
+}
+
 function changedBlock(c) {
   var ch = (c.changes || []).slice().sort(function (a, b) {
     return (SEV_RANK[a.sev] == null ? 3 : SEV_RANK[a.sev]) - (SEV_RANK[b.sev] == null ? 3 : SEV_RANK[b.sev]);

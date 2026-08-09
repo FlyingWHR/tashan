@@ -111,6 +111,14 @@ def article_html(a):
         '<div class="callout"><b>Quick answer.</b> ' + a["quick"] + '</div>\n'
         + secs + faq +
         '<p class="mt-12"><a class="btn btn--ghost" href="/">See the ranked Index &rsaquo;</a></p>\n'
+        # THE ORGANIC FRONT DOOR, AND IT ENDED AT A LINK TO THE BOARD. These are the pages a
+        # stranger reaches from a search — the highest-intent arrival on the site — and not one of
+        # the seven said what the product does. Same line as everywhere else: the article is free,
+        # the Index is free, and the thing neither can do is know what is in your config.
+        '<p class="note chg__pro">This article, and every score it links to, is free and needs no '
+        'account. <code>npx tashan-cli doctor</code> reads the config you already have and names '
+        'what is wrong in it, also free. <a class="link" href="/pricing.html">tashan Pro</a> is '
+        '$6/mo and tells you the day one of them changes.</p>\n'
         "</article></main>\n" + FOOT +
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n')
 

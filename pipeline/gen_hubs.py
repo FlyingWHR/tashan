@@ -284,7 +284,13 @@ def changed_strip(rows, what):
         for x in (c.get("changes") or []):
             ch.append((SEV_RANK.get(x.get("sev"), 3), x.get("at") or "", c, x))
     if not ch:
-        return ""
+        # A QUIET SHELF STILL NEEDS THE LINE. 17 categories, 17 tasks and 4 roles had no change in
+        # the window and therefore no strip and no case at all — the emptier the shelf, the more
+        # likely a reader leaves without learning the product watches anything.
+        return ('<p class="note chg__pro">Nothing on this shelf has moved in the last 45 days. '
+                'That is worth knowing, and it is the kind of thing that stops being true without '
+                'announcing itself — <a class="link" href="/pricing.html">tashan Pro</a> watches the '
+                'servers in your own config and tells you the day one of them does.</p>')
     ch.sort(key=lambda t: (t[0], t[1]))
     items = ""
     for _, _, c, x in ch[:4]:
@@ -919,7 +925,7 @@ def role_page(role, rows, tasks, all_roles, gen):
         "on public evidence alone: upkeep, freshness and real adoption. "
         '<a class="link" href="/methodology.html">How we measure &rsaquo;</a></p>\n'
         + stack_for(role, rows, tasks)
-        + board(rows[:ROLE_BOARD_MAX]) +
+        + board(rows[:ROLE_BOARD_MAX]) + changed_strip(rows, role["label"]) +
         (('<p class="note">Showing the top ' + f"{ROLE_BOARD_MAX:,}" + " of " + f"{len(rows):,}"
           + ' — the rest are on the <a class="link" href="/">Index</a>, filterable by this job.</p>\n')
          if len(rows) > ROLE_BOARD_MAX else "")
