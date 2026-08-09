@@ -263,6 +263,50 @@ def board(rows):
 CAT_PER_PAGE = int(os.environ.get("CAT_PER_PAGE", "120"))
 
 
+SEV_RANK = {"high": 0, "medium": 1, "low": 2}
+
+
+def changed_strip(rows, what):
+    """What moved on this shelf lately — the one thing a ranked table cannot show.
+
+    A hub answers "what should I use for X" and then never changes shape, so a reader has no reason
+    to come back. This is the part that does move: change_events records install scripts appearing,
+    permission surfaces widening, projects being deprecated — 404 of them, and until now they
+    reached no page at all.
+
+    FREE, and the whole strip is the argument for Pro rather than a teaser for it. Everything a hub
+    knows is public evidence and belongs to everyone; what a subscription buys is being told the day
+    it happens about the servers in YOUR config, which a static shelf cannot know by construction.
+    A gate here would be theatre anyway — the same rows are ranked in full on the page below it.
+    """
+    ch = []
+    for c in rows:
+        for x in (c.get("changes") or []):
+            ch.append((SEV_RANK.get(x.get("sev"), 3), x.get("at") or "", c, x))
+    if not ch:
+        return ""
+    ch.sort(key=lambda t: (t[0], t[1]))
+    items = ""
+    for _, _, c, x in ch[:4]:
+        items += ('<li class="chg chg--' + esc(x.get("sev") or "low") + '">'
+                  + '<span class="chg__at mono">' + esc((x.get("at") or "")[:10]) + '</span> '
+                  + '<a class="link" href="/capability/' + esc(c.get("slug") or "") + '.html">'
+                  + esc(display_name_of(c)) + "</a> &mdash; " + esc(x.get("what") or "")
+                  + '</li>')
+    n = len(ch)
+    return ('<section class="changed"><h2 class="hubh2">Recently changed in ' + esc(what) + '</h2>'
+            '<p class="hubsub">' + str(n) + (" change" if n == 1 else " changes")
+            + ' recorded here in the last 45 days, newest and most serious first.</p>'
+            '<ul class="chg-list">' + items + '</ul>'
+            '<p class="chg__pro mono fs-sm">This page cannot know what you run. '
+            '<a class="link" href="/pricing.html">tashan Pro</a> watches the servers in your own config '
+            'and tells you the day one of them moves &mdash; <code>tashan doctor</code>.</p></section>')
+
+
+def display_name_of(c):
+    return c.get("label") or c.get("name") or c.get("id") or ""
+
+
 def cat_page(cat, rows, all_cats, gen, page=1, pages=1, total=None):
     """One page of a category shelf.
 
@@ -333,7 +377,7 @@ def cat_page(cat, rows, all_cats, gen, page=1, pages=1, total=None):
         '<p class="lede">' + esc(cat["blurb"]) + " tashan measures <b>" + str(len(rows)) +
         "</b> capabilities here and ranks them by tashan score — a transparent composite of upkeep, "
         "freshness and real adoption. <a class=\"link\" href=\"/methodology.html\">How we measure &rsaquo;</a></p>\n"
-        + board(rows) +
+        + board(rows) + changed_strip(rows, label) +
         ('<p class="note">' + str(len(measured)) + " of these have been expertise-graded against their "
          "documentation; the rest carry adoption and upkeep signal only. We publish what is "
          "measured and say plainly what isn't.</p>\n" if rows else "")
@@ -439,7 +483,7 @@ def task_page(task, rows, all_tasks, gen):
         "</b> capabilities for this work and ranks them by tashan score — a transparent composite of "
         "upkeep, freshness and real adoption. "
         '<a class="link" href="/methodology.html">How we measure &rsaquo;</a></p>\n'
-        + board(rows) + who
+        + board(rows) + who + changed_strip(rows, task["label"])
         + '<h2>Other work</h2>\n<div class="chips">' + sib + "</div>\n"
         '<p class="note mt-8">Occupational data from the '
         '<a class="link" rel="nofollow" href="https://www.onetcenter.org/">O*NET 30.3 Database</a> by the '

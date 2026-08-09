@@ -316,7 +316,7 @@ def changed_block(c):
     # advertising a feature in the abstract. It is also honest that the page is not the product:
     # nobody reloads a dossier to find out their stack moved.
     pitch = ('<p class="chg__pro mono fs-sm">You are reading this because you came looking. '
-             '<a class="link" href="/pricing">tashan Pro</a> tells you the day it happens, for the '
+             '<a class="link" href="/pricing.html">tashan Pro</a> tells you the day it happens, for the '
              'servers in your own config — <code>tashan doctor</code>.</p>')
     return ('<section class="changed"><h2 class="sec-h">What changed recently</h2>'
             '<ul class="chg-list">' + items + '</ul>' + pitch + '</section>')
