@@ -195,12 +195,12 @@ def page(a, b, cat_label, gen):
         # The pitch is the honest one and it is specific to this page: a comparison is a snapshot,
         # and the thing it cannot do is tell you when the answer stops being true. Both scores stay
         # free, both audits stay free — what a licence buys is the watch on whichever one you pick.
-        '<p class="note chg__pro">Both numbers above are today&rsquo;s. Whichever you choose, the '
-        'question that matters next is when it changes &mdash; a new advisory, an install script '
-        'that appeared, a maintainer walking away. '
-        '<a class="link" href="/pricing.html">tashan Pro</a> adds the history to '
-        '<code>tashan doctor</code>, so a run over your own config says which of yours moved '
-        '&mdash; and what to move to.</p>\n'
+        '<div class="procta"><div class="procta__t"><b>Both numbers above are today&rsquo;s.</b> '
+        '<span class="procta__s">Whichever you pick, the question that matters next is when it '
+        'changes. <code>tashan doctor</code> reads your own config; Pro adds the history behind '
+        'each capability, and what to move to.</span></div>'
+        '<a class="btn btn--primary" href="/pricing.html" data-e="cta" data-k="pro-compare">'
+        'tashan Pro &mdash; $6/mo &rsaquo;</a></div>\n'
         "</article></main>\n")
 
     return H.head(title, desc, url, lds) + body + H.FOOT + \

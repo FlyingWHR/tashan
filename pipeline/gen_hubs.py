@@ -263,6 +263,11 @@ def board(rows):
 CAT_PER_PAGE = int(os.environ.get("CAT_PER_PAGE", "120"))
 
 
+CTA = ('<div class="procta">'
+       '<div class="procta__t"><b>%s</b> <span class="procta__s">%s</span></div>'
+       '<a class="btn btn--primary" href="/pricing.html" data-e="cta" data-k="%s">'
+       'tashan Pro &mdash; $6/mo &rsaquo;</a></div>')
+
 SEV_RANK = {"high": 0, "medium": 1, "low": 2}
 
 
@@ -287,11 +292,9 @@ def changed_strip(rows, what):
         # A QUIET SHELF STILL NEEDS THE LINE. 17 categories, 17 tasks and 4 roles had no change in
         # the window and therefore no strip and no case at all — the emptier the shelf, the more
         # likely a reader leaves without learning the product watches anything.
-        return ('<p class="note chg__pro">Nothing on this shelf has moved in the last 45 days. '
-                'That is worth knowing, and it is the kind of thing that stops being true without '
-                'announcing itself — <a class="link" href="/pricing.html">tashan Pro</a> keeps the '
-                'history behind every capability, so <code>tashan doctor</code> over your own config '
-                'says which of yours moved, and what to move to.</p>')
+        return ('<p class="hubsub">Nothing on this shelf has moved in the last 45 days.</p>' + (CTA % ("Quiet is worth knowing.",
+            "It stops being true without announcing itself &mdash; <code>tashan doctor</code> over your own config says which of yours moved.",
+            "pro-hub-quiet")))
     ch.sort(key=lambda t: (t[0], t[1]))
     items = ""
     for _, _, c, x in ch[:4]:
@@ -305,10 +308,10 @@ def changed_strip(rows, what):
             '<p class="hubsub">' + str(n) + (" change" if n == 1 else " changes")
             + ' recorded here in the last 45 days, newest and most serious first.</p>'
             '<ul class="chg-list">' + items + '</ul>'
-            '<p class="chg__pro mono fs-sm">This page cannot know what you run. '
-            '<a class="link" href="/pricing.html">tashan Pro</a> gives <code>tashan doctor</code> the '
-            'history behind each one, so a run over your own config says which of YOURS moved '
-            '&mdash; and what to move to.</p></section>')
+            + (CTA % ("This page cannot know what you run.",
+                    "tashan doctor reads your own config and names which of these you have "
+                    "&mdash; Pro adds the history behind each, and what to move to.",
+                    "pro-hub")) + "</section>")
 
 
 def display_name_of(c):

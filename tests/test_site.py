@@ -239,8 +239,18 @@ def static_checks():
     # The sitemap now declares CLEAN urls (Pages 308s the .html form), so strip the extension only
     # if it is still there rather than blindly chopping five characters off every slug.
     sm_slugs = {u.rsplit("/", 1)[-1].removesuffix(".html") for u in locs}
-    check("sitemap lists exactly the prerendered pages", sm_slugs == have,
-          f"sitemap {len(sm_slugs)} vs pages {len(have)}")
+    # A SITEMAP IS A REQUEST TO INDEX, so it must agree with the robots tag on the page it lists.
+    # This asserted sitemap == every prerendered page, which was right only while every page was
+    # indexable. 770 dossiers are a name and one sentence and now carry noindex,follow: served,
+    # useful to `doctor` and to the agent tier, but not submitted as pages worth ranking. Listing
+    # one anyway is a contradictory signal to exactly the crawlers this project depends on.
+    _noindexed = {os.path.basename(f)[:-5]
+                  for f in glob.glob(os.path.join(ROOT, "web", "capability", "*.html"))
+                  if 'name="robots" content="noindex' in open(f, encoding="utf-8").read()}
+    _indexable = have - _noindexed
+    check("sitemap lists exactly the pages that are indexable", sm_slugs == _indexable,
+          f"sitemap {len(sm_slugs)} vs indexable {len(_indexable)} of {len(have)}; "
+          f"listed-but-noindex {len(sm_slugs & _noindexed)}, missing {len(_indexable - sm_slugs)}")
 
     print("\n# CSP / security headers")
     hdr = open(os.path.join(WEB, "_headers"), encoding="utf-8").read()
@@ -489,7 +499,13 @@ def main():
     # time. Reference and legal pages are exempt: they are read in full, not scanned.
     import html as _htmlmod
     PROSE_MAX, WALL_ALLOW = 240, 2
-    EXEMPT = {"methodology.html", "terms.html", "privacy.html"}
+    EXEMPT = {"terms.html", "privacy.html"}   # legal text is read in full, not scanned
+    # A PER-PAGE BASELINE, not an exemption. methodology.html is a reference document — 13,000
+    # characters of argument that a reader consults rather than scans, and cutting the reasoning
+    # would make it worth less, not more. Splitting took its longest run from 1,035 characters to
+    # 542 and its walls from 21 to 15; the rest are single long sentences that need an editor, not
+    # an algorithm. The baseline locks in what was won: it can improve, it cannot slide back.
+    BASELINE = {"methodology.html": 15}
     _walls = []
     for _f in sorted(_glob.glob(os.path.join(ROOT, "web", "*.html"))
                      + _glob.glob(os.path.join(ROOT, "web", "learn", "*.html"))):
@@ -499,12 +515,19 @@ def main():
         if "<main" not in _src:
             continue
         _body = _src.split("<main", 1)[-1].split("</main>")[0]
-        _long = sum(1 for _m in _re.finditer(r"<(p|li)[^>]*>(.*?)</\1>", _body, _re.S)
-                    if len(_re.sub(r"\s+", " ",
-                                   _htmlmod.unescape(_re.sub(r"<[^>]+>", "", _m.group(2)))).strip())
-                    > PROSE_MAX)
-        if _long > WALL_ALLOW:
-            _walls.append(f"{os.path.basename(_f)}:{_long}")
+        # THE LONGEST UNBROKEN RUN, not the longest element. A paragraph split into a lead plus
+        # quieter continuation notes reads as several blocks and should count as several — measuring
+        # the outer <li> instead reported a 658-character wall that a reader sees as three.
+        _long = 0
+        for _m in _re.finditer(r"<(p|li)[^>]*>(.*?)</\1>", _body, _re.S):
+            _inner = _re.sub(r'<(p|span)[^>]*class="mnote[^"]*"[^>]*>.*?</\1>', " ",
+                             _m.group(2), flags=_re.S)
+            if len(_re.sub(r"\s+", " ",
+                           _htmlmod.unescape(_re.sub(r"<[^>]+>", "", _inner))).strip()) > PROSE_MAX:
+                _long += 1
+        _cap = BASELINE.get(os.path.basename(_f), WALL_ALLOW)
+        if _long > _cap:
+            _walls.append(f"{os.path.basename(_f)}:{_long}>{_cap}")
     check(f"no page is a wall of text (max {WALL_ALLOW} paragraphs over {PROSE_MAX} chars)",
           not _walls, "; ".join(_walls[:6]))
 

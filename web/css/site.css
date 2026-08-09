@@ -1272,3 +1272,24 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
   /* A long paragraph on a phone needs somewhere for the eye to stop. */
   .pfaq > div { padding-bottom: .9rem; }
 }
+
+/* Continuation of a long explanation, split so the eye has somewhere to stop.
+   methodology.html carried a 1,035-character paragraph and twenty more over 240. The content is
+   the proof and should not be cut — a methodology page that trims its reasoning is worth less —
+   so it is broken instead: the claim leads, the reasoning follows in a quieter block. .mnote-i is
+   the same thing inside a list item, where splitting into sibling <li>s would invent bullets the
+   argument never had. */
+.mnote { color: var(--text-dim); margin-top: .5rem; }
+.mnote-i { display: block; color: var(--text-dim); margin-top: .5rem; }
+
+/* The commercial block on a hub or a comparison. Smaller sibling of .pro on a dossier: those pages
+   are a table plus a decision, so the offer is one line and one button rather than a panel. Same
+   rules — no accent, hairline separation, and the button is the only strong element. */
+.procta {
+  margin: 1.4rem 0 0; padding: .9rem 1rem; display: flex; gap: 1rem;
+  align-items: center; justify-content: space-between; flex-wrap: wrap;
+  background: var(--surface-2); border: 1px solid var(--hairline); border-radius: var(--radius);
+}
+.procta__t { max-width: 46ch; }
+.procta__s { color: var(--text-dim); font-size: var(--fs-sm); }
+@media (max-width: 40rem) { .procta { flex-direction: column; align-items: flex-start; } }

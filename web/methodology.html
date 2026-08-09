@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=259">
+  <link rel="stylesheet" href="/css/site.css?v=260">
   <!--METHOD-LD--><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"How the tashan score is derived","description":"The exact arithmetic behind the tashan score, the evidence each input comes from, how much of the corpus is measured, and what the score deliberately does not claim.","url":"https://tashan.sh/methodology.html","mainEntityOfPage":"https://tashan.sh/methodology.html","author":{"@type":"Organization","name":"tashan","url":"https://tashan.sh/"},"publisher":{"@type":"Organization","name":"tashan","url":"https://tashan.sh/"},"datePublished":"2026-08-09","dateModified":"2026-08-09","inLanguage":"en","about":{"@type":"Dataset","name":"The tashan Index — measured AI capabilities","url":"https://tashan.sh/"},"version":"s5","creativeWorkStatus":"Scorer s5 frozen through 2026-11-01","license":"https://tashan.sh/terms.html"}</script><!--/METHOD-LD-->
 </head>
 <body>
@@ -31,8 +31,8 @@
     <h1>How tashan measures</h1>
     <p class="updated" id="updated"></p>
     <p class="lede">tashan exists because the AI-capability ecosystem has massive supply and almost no honest
-      signal. So the first rule is: <strong>we score capabilities on public evidence — and we show every
-      component.</strong> Here is exactly what we count, how tashan score is computed, and what we deliberately refuse to do.</p>
+      signal. So the first rule is:<p class="mnote"><strong>we score capabilities on public evidence — and we show every
+      component.</strong> Here is exactly what we count, how tashan score is computed, and what we deliberately refuse to do.</p></p>
 
     <div class="callout"><b>No user tracking.</b> tashan installs nothing, instruments no one, and reads no
       private data. Every number here is derived from <b>public sources</b> — the MCP registry, npm, and public
@@ -40,9 +40,11 @@
 
     <h2>Coverage</h2>
     <p>We ingest the <b>official MCP registry</b> as the spine of coverage: thousands of capabilities with their
-      canonical name, description, source repository, package, and active/deprecated status. On top of that we mine
+      canonical name, description, source repository, package, and active/deprecated status.</p>
+        <p class="mnote">On top of that we mine
       public GitHub configs (<span class="mono">mcp.json</span>, <span class="mono">claude_desktop_config.json</span>,
-      <span class="mono">.cursor</span>) for real-world usage the registry can't see. The goal is simple: track
+      <span class="mono">.cursor</span>) for real-world usage the registry can't see.</p>
+        <p class="mnote">The goal is simple: track
       everything, then rank it on evidence — and tracking runs well ahead of measuring, which is
       stated as a number further down under <a href="#measured">how much of this is measured</a>
       rather than left for you to discover.</p>
@@ -56,10 +58,10 @@
         the registry's active/deprecated status. Is someone actually keeping it alive?</li>
       <li><b>Freshness</b> — recency of the latest release or host-repo push. Living code, or quietly abandoned?</li>
       <li><b>Instruction depth</b> — a language model reads the capability's own README/docs against a fixed rubric and grades
-        how completely its own documentation explains how to use it: <b>deep</b>, <b>solid</b> or
+        how completely its own documentation explains how to use it:<span class="mnote-i"><b>deep</b>, <b>solid</b> or
         <b>thin</b> — with a one-line,
-        evidence-based verdict you can read. This is the signal a directory can't produce: it requires
-        <em>judgment about the work</em>, not a count. Rolling out from the top of the Index outward.</li>
+        evidence-based verdict you can read.</span><span class="mnote-i">This is the signal a directory can't produce: it requires
+        <em>judgment about the work</em>, not a count. Rolling out from the top of the Index outward.</span></li>
       <li><b>Co-use</b> — which capabilities get configured alongside it. The shape of real stacks.</li>
     </ul>
 
@@ -67,34 +69,46 @@
     <p>The single Index number is a <strong>transparent composite</strong> — and every input is shown on the
       capability's page, never hidden:</p>
     <div class="callout mono fs-base">raw = mean(<b>Upkeep</b>, <b>Freshness</b>) &times; gate(<b>Adoption</b>) &times; coverage<br>tashan score = calibrate(raw)<br><span class="fs-sm">gate = 0.30 + 0.70 &times; Adoption&frasl;100 &nbsp;·&nbsp; coverage discounts a score built on thin evidence<br>calibrate = piecewise-linear, raw 50 &rarr; 68; strictly order-preserving</span></div>
-    <p class="callout"><b>Why it is called the tashan score, not a trust score.</b> We measure whether people use a capability and whether it is kept alive. That is all the number is. The risk scan is a separate reading, it does not feed this score, and it does not read the capability&rsquo;s code or test it for prompt injection. Calling that "trust" claimed something the arithmetic does not support, and this page had to walk it back a paragraph later. The number is our measurement, on public evidence, and it is named accordingly.</p>
+    <p class="callout"><b>Why it is called the tashan score, not a trust score.</b> We measure whether people use a capability and whether it is kept alive. That is all the number is.</p>
+        <p class="mnote">The risk scan is a separate reading, it does not feed this score, and it does not read the capability&rsquo;s code or test it for prompt injection.</p>
+        <p class="mnote">Calling that "trust" claimed something the arithmetic does not support, and this page had to walk it back a paragraph later. The number is our measurement, on public evidence, and it is named accordingly.</p>
     <p>Upkeep and freshness set the ceiling; <b>adoption decides most of what a capability actually scores</b>.
       That balance is deliberate and it was wrong before: upkeep and recency both saturate near 100 for any repo
       that was pushed recently, so when the gate floor sat at 0.6 a well-kept capability nobody used still kept 60%
-      of the score, and a plugin with 30 stars outranked packages with thousands of weekly downloads. The floor is
+      of the score, and a plugin with 30 stars outranked packages with thousands of weekly downloads.</p>
+        <p class="mnote">The floor is
       now 0.30, which means real use — not a recent commit — is what separates the top of the Index from the middle.
       Adoption itself blends npm downloads (log-scaled) and config reach.
-      Capabilities we can't yet measure quality on are shown <b>unrated</b> — plainly marked, never invented. When
+      Capabilities we can't yet measure quality on are shown <b>unrated</b> — plainly marked, never invented.</p>
+        <p class="mnote">When
       retention and evals land, they'll be <em>separate, labelled</em> scores, never quietly folded into one number.</p>
 
     <p><b>Missing evidence is not a bad score.</b> Upkeep is scored only across the axes we can actually read for
       that capability — maintainer count, release cadence, freshness — and rescaled over those, so a capability that
-      simply isn't on npm is no longer marked down for metadata that does not exist. It used to be: anything without
+      simply isn't on npm is no longer marked down for metadata that does not exist.</p>
+        <p class="mnote">It used to be: anything without
       npm was capped at 35/100 however well kept it was, which ranked a 51,000-star plugin pushed yesterday below a
-      package with 422 weekly downloads. Instead, thin evidence discounts <em>tashan score</em> in proportion to how much of
+      package with 422 weekly downloads.</p>
+        <p class="mnote">Instead, thin evidence discounts <em>tashan score</em> in proportion to how much of
       the picture we have, and "we found no adoption signal" is treated no better than a measured-but-low one — absence
-      of evidence must never outscore evidence of absence. As we fill in contributor and release data for
+      of evidence must never outscore evidence of absence.</p>
+        <p class="mnote">As we fill in contributor and release data for
       non-npm repositories, that discount shrinks on its own, because the coverage becomes real.</p>
 
     <p><b>Why there is a calibration step.</b> The raw formula multiplies three factors that are each at
-      most 1, so it decides the <em>order</em> well and lands in a useless <em>range</em>. A capability with no
+      most 1, so it decides the <em>order</em> well and lands in a useless <em>range</em>.</p>
+        <p class="mnote">A capability with no
       adoption signal has gate&nbsp;=&nbsp;0.30, which caps it at about 27&frasl;100 however well kept it is — and
-      38% of what we measure has neither a download count nor a star count. The result was half the index
+      38% of what we measure has neither a download count nor a star count.</p>
+        <p class="mnote">The result was half the index
       inside a 13-point band, 98% below 50, and "well kept but unproven" published as a number that reads
-      as <em>bad</em>. The calibration is a fixed, strictly order-preserving stretch of that raw number onto
+      as <em>bad</em>.</p>
+        <p class="mnote">The calibration is a fixed, strictly order-preserving stretch of that raw number onto
       the published scale: it cannot move any capability past another, it only decides how far apart they
-      are printed. It is deliberately <em>not</em> a percentile — a percentile would re-baseline every night
-      as the index grows, so a badge minted today would quietly mean something different next week. The
+      are printed.</p>
+        <p class="mnote">It is deliberately <em>not</em> a percentile — a percentile would re-baseline every night
+      as the index grows, so a badge minted today would quietly mean something different next week.</p>
+        <p class="mnote">The
       middle of the index sits near 39 rather than 50, because a median of 50 would claim we think half of
       these are proven when for most of them we have no usage evidence either way.</p>
 
@@ -107,19 +121,22 @@
 
     <p><b>And now we say when we <em>won't</em>.</b> Honest labelling was only half the problem. A
       version boundary restarts every trend, so a scorer rewritten four times in a week produces a
-      history that is never more than two days long — accurately labelled and worth nothing. So the
+      history that is never more than two days long — accurately labelled and worth nothing.</p>
+        <p class="mnote">So the
       ruler is now held still on purpose: <span class="mono" id="mScorer2">s5</span> is frozen through
       <span id="mScorerStable">2026-11-01</span>, and no change to the scoring ships before that date.
       A correctness fix — a severity that was wrong, a signal that was misread — can still ship inside
       the window, because leaving a known error in place to protect a graph would be the worse trade;
       it lands as a new version, with the reason recorded, and the old series is kept rather than
-      restated. The commitment is enforced in the build, not in this paragraph: the suite refuses a
+      restated.</p>
+        <p class="mnote">The commitment is enforced in the build, not in this paragraph: the suite refuses a
       scoring change inside the window unless it is explicitly broken open
       (<code>tests/test_scorer_version.py</code>).</p>
 
     <p><b>A capability the registry removes stays visible to you.</b> The MCP registry marks servers
       <span class="mono">deleted</span>, and its moderation policy names spam, malware and illegal content
-      as the usual reasons. We keep that row rather than dropping it: it is never scored, never ranked and
+      as the usual reasons.</p>
+        <p class="mnote">We keep that row rather than dropping it: it is never scored, never ranked and
       never recommended, but it is still there so <code>doctor</code> can tell you if it is in your config.
       Deleting the record would have turned the most serious thing we can tell you into silence.</p>
 
@@ -127,7 +144,8 @@
 
     <p>We track <span class="mono" id="cvAll">22,797</span> capabilities and have measured far fewer.
       The obvious number to publish is the ratio between them, and we did — until it fell from 47% to
-      41% in two days without anything getting worse. Discovery had grown the denominator faster than
+      41% in two days without anything getting worse.</p>
+        <p class="mnote">Discovery had grown the denominator faster than
       measurement grew the numerator, which it will do every time discovery works. A metric that
       improves when you find less is not a coverage metric.</p>
 
@@ -146,7 +164,8 @@
     <p>Two of those are ours to fix by running more of what already works, and they will move nightly.
       Two — expertise and task mapping — are graded reads rather than fetched facts, and they are the
       honest weak spot in this product today: on the capabilities people ask about most, they are
-      mostly absent. That is the roadmap, stated as a number rather than as a plan, and it is
+      mostly absent.</p>
+        <p class="mnote">That is the roadmap, stated as a number rather than as a plan, and it is
       re-measured on every run into <a href="/data/coverage.json">coverage.json</a> so you can watch
       it move or catch us if it doesn't.</p>
 
@@ -164,7 +183,8 @@
 
     <p><b>What we commit to.</b> A reply within <b>five working days</b>. If the grade was read off
       the wrong document, or off documentation that has since improved, it is withdrawn or re-graded
-      on the next pipeline run and the page says so. If we think the grade was right, we say why, in
+      on the next pipeline run and the page says so.</p>
+        <p class="mnote">If we think the grade was right, we say why, in
       the issue, where you can argue back. <b>We do not remove a grade because someone asks.</b> A
       rating nobody can contest is an opinion with better typography; a rating that folds on request
       is not a measurement at all.</p>
@@ -172,18 +192,19 @@
     <p>This is not hypothetical. <b>87 published judgments were withdrawn</b> in one pass after we
       found they had been read off a README the capability shares with other packages, or one that
       never names it — including Anthropic&rsquo;s own filesystem server, graded
-      <span class="mono">thin</span> for a monorepo index it shares with three siblings. Those pages
+      <span class="mono">thin</span> for a monorepo index it shares with three siblings.</p>
+        <p class="mnote">Those pages
       now state the fact instead: <em>shares its documentation with 3 other capabilities</em>.</p>
 
     <h2>What we deliberately don't do</h2>
     <ul>
       <li><b>We don't count stars where real usage exists.</b> Stars measure hype and are trivially farmed, so nothing
-        with download telemetry is scored on them. One exception, stated plainly because the alternative is hiding it:
+        with download telemetry is scored on them.<span class="mnote-i">One exception, stated plainly because the alternative is hiding it:
         Claude Code <b>plugins</b> publish no download figures at all, so a plugin's Adoption comes from stars on its
-        own repository, discounted to 0.8&times; a comparable download signal and never counted for anything else. Every
+        own repository, discounted to 0.8&times; a comparable download signal and never counted for anything else.</span><span class="mnote-i">Every
         row on the Index shows the evidence under its Adoption score — <code>87k/wk</code> or <code>51k &#9733;</code> —
         so you can always see which of the two you are reading, and the star count belongs to the plugin's own repo,
-        never to a marketplace that happens to list it.</li>
+        never to a marketplace that happens to list it.</span></li>
       <li><b>We don't rank on downloads alone.</b> A download is curiosity. We use it only as one input to Adoption, and
         Adoption only <em>gates</em> a score built from upkeep and freshness.</li>
       <li><b>We don't take pay-to-rank.</b> There is no promoted slot, no boost, no ad in the Index — now or ever.</li>
@@ -194,25 +215,26 @@
     <h2>The security audit</h2>
     <p>Separate from the score, and deliberately so: <b>well maintained</b> and <b>nothing known is
       wrong with it</b> are different claims, and a popular, actively maintained package can still
-      ship a vulnerability. Folding one into the other would hide exactly the case you most need to
+      ship a vulnerability.</p>
+        <p class="mnote">Folding one into the other would hide exactly the case you most need to
       see. Four layers, all from public evidence:</p>
     <ul>
       <li><b>Known vulnerabilities.</b> Every npm-published capability is queried against
         <a class="link" href="https://osv.dev" rel="noopener">OSV.dev</a> using <em>the version you
         would install today</em> — so a finding means the current release is affected, not that the
-        package once had a CVE years ago. OSV also carries the malicious-packages database; anything
+        package once had a CVE years ago.<span class="mnote-i">OSV also carries the malicious-packages database; anything
         listed there is refused a place on the board entirely, and stays reachable only so
-        <code>doctor</code> can warn someone already running it.</li>
+        <code>doctor</code> can warn someone already running it.</span></li>
       <li><b>Install-time execution.</b> A <code>postinstall</code> or <code>preinstall</code> script
         runs arbitrary code on your machine at install, before the tool is ever invoked.</li>
       <li><b>Provenance.</b> Whether the published artifact carries a build attestation tying it to
         public CI. npm signs every tarball it hosts, so a signature alone proves nothing about who
         built it — only an attestation does.</li>
       <li><b>Permission surface.</b> What the capability can reach — files, shell, network, browser,
-        credentials, cloud — derived from its <em>declared dependencies</em>. Nothing is executed and
-        nothing is installed to determine this. It under-reports by design: a server can shell out
+        credentials, cloud — derived from its <em>declared dependencies</em>.<span class="mnote-i">Nothing is executed and
+        nothing is installed to determine this.<span class="mnote-i">It under-reports by design: a server can shell out
         using only Node's built-ins and declare nothing, so an empty result means "nothing declared",
-        never "nothing possible".</li>
+        never "nothing possible".</span></span></li>
     </ul>
     <p>What the audit does <b>not</b> do, just as plainly: no source-code review, no execution or
       sandboxing, no testing of outputs for prompt injection, and no coverage of capabilities with no
@@ -246,8 +268,8 @@
 
   <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources, and checkable against them.</span></div></footer>
 
-  <script src="/js/terminal.js?v=259" defer></script>
-  <script src="/js/site.js?v=259" defer></script>
-  <script src="/js/methodology.js?v=259" defer></script>
+  <script src="/js/terminal.js?v=260" defer></script>
+  <script src="/js/site.js?v=260" defer></script>
+  <script src="/js/methodology.js?v=260" defer></script>
 </body>
 </html>

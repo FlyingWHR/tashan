@@ -725,6 +725,28 @@ def security_block(c):
                "scanned " + (c.get("sec_scanned_at") or "")[:10])
 
 
+# HOW MUCH THIS PAGE CAN ACTUALLY SAY. Counted so the thin tail can be kept off the index without
+# being deleted: a dossier with a name and one sentence is still the right answer for `doctor` when
+# somebody runs that obscure server, and still belongs in the agent tier — it just should not be
+# submitted to a search engine as a page worth ranking.
+def signal_count(c):
+    return sum(1 for x in (
+        c.get("tashan_score") is not None,
+        bool((c.get("description") or "").strip()),
+        bool(c.get("sec_scanned_at")),
+        bool(c.get("expertise_verdict")),
+        bool(c.get("changes")),
+        bool(c.get("tasks")),
+    ) if x)
+
+
+THIN_SIGNALS = 1          # a name and, at most, one measured thing
+
+
+def thin(c):
+    return signal_count(c) <= THIN_SIGNALS
+
+
 def page(c, gen):
     n = disp(c); url = BASE + chrome.canon("/capability/" + c["slug"] + ".html")
     title = n + " — tashan score " + (str(c["tashan_score"]) if c.get("tashan_score") is not None else "—") + " · tashan"
@@ -735,7 +757,13 @@ def page(c, gen):
         '<meta name="description" content="' + d + '">\n'
         '<meta name="cap-id" content="' + esc(c["id"]) + '">\n'
         '<meta name="theme-color" content="#0b0b0a">\n'
-        '<link rel="canonical" href="' + url + '">\n'
+        # NOINDEX FOR THE THIN TAIL. 770 of 9,638 dossiers are a name and a sentence — nothing
+        # measured, nothing scanned, nothing graded — and all 10,244 URLs were being submitted to
+        # search. Quality signals are evaluated site-wide, not per page, so a large thin tail drags
+        # on everything above it. `follow` is deliberate: the links out of these pages still pass
+        # value to the hubs and to the capabilities that DO have something to say.
+        + ('<meta name="robots" content="noindex,follow">\n' if thin(c) else "")
+        + '<link rel="canonical" href="' + url + '">\n'
         '<link rel="alternate" type="text/markdown" href="'
         + BASE + '/capability/' + c["slug"] + '.md" title="Plain-markdown dossier">\n'
         '<meta property="og:type" content="website">\n'
@@ -1171,8 +1199,12 @@ def sitemap(caps):
             "/terms.html", "/privacy.html", "/refunds.html", "/support.html", "/for-hosts.html",
             "/browse.html", "/compare.html"]
     static = "".join("  <url><loc>" + BASE + chrome.canon(u) + "</loc></url>\n" for u in urls)
+    # A SITEMAP IS A REQUEST TO INDEX, so it must agree with the robots tag on the page. Submitting
+    # a URL that answers `noindex` wastes crawl budget and sends a contradictory signal about a site
+    # whose entire distribution strategy is being readable by crawlers and answer engines.
     caps_x = "".join('  <url><loc>' + BASE + chrome.canon("/capability/" + c["slug"] + ".html")
-                     + '</loc>' + lastmod(c) + '<changefreq>weekly</changefreq></url>\n' for c in caps)
+                     + '</loc>' + lastmod(c) + '<changefreq>weekly</changefreq></url>\n'
+                     for c in caps if not thin(c))
     # generated hubs + learn/agents pages if present. These are real indexable pages; leaving them out
     # of the sitemap is how a whole content tier stays invisible to crawlers.
     extra = ""

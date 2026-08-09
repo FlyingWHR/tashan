@@ -133,8 +133,12 @@ for sub in ("category", "skills", "task"):
             return "/" + sub + "/" + ("" if f == "index.html" else f.removesuffix(".html"))
         miss = [f for f in files if _clean(f) not in sm]
         check("sitemap lists every /%s/ page" % sub, not miss, "%d missing" % len(miss))
-check("sitemap has no orphan capability URLs",
-      all(("/capability/" + s) in sm for s in list(slugs)[:50]))
+# Sampled from INDEXABLE pages only. 770 thin dossiers carry noindex and are deliberately absent
+# from the sitemap, so a blind sample of 50 slugs picks some of them and fails for being right.
+_ix = [s for s in list(slugs)[:400]
+       if 'name="robots" content="noindex' not in
+       open(os.path.join(WEB, "capability", s + ".html"), encoding="utf-8").read()][:50]
+check("sitemap has no orphan capability URLs", all(("/capability/" + s) in sm for s in _ix))
 
 print()
 print("# robots / AI crawlers")
