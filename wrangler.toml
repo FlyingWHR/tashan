@@ -30,3 +30,28 @@ POLAR_ORG_ID = "caa0fc1b-2f7f-4e52-864a-c71e878d125d"
 [[kv_namespaces]]
 binding = "TASHAN_KV"
 id = "1f68077762cc4fdb938d3dcf35774c69"
+
+# EVERY VISIT WAS BEING THROWN AWAY. js/site.js POSTs to /api/e, the endpoint answers 204, and
+# functions/api/e.js writes the row only `if (env.TASHAN_AE)` — which was never true, because the
+# binding did not exist. A 204 from an endpoint that discards its input is indistinguishable from
+# one that records it, so nothing anywhere said so.
+#
+# It cost nothing while nobody was visiting. It costs the answer to "which outreach worked" the
+# moment somebody is, and Analytics Engine cannot backfill any more than signal_history can.
+#
+# Declared here rather than in the dashboard because this project's bindings are file-managed —
+# Settings > Bindings is greyed out for exactly that reason, which is easy to read as a permissions
+# problem. Free plan: 100,000 data points written and 10,000 read queries per day.
+#
+# COMMENTED OUT UNTIL ANALYTICS ENGINE IS ENABLED ON THE ACCOUNT, because an unbindable dataset
+# fails the WHOLE deploy — "Failed to publish your Function. Got error: You need to enable Analytics
+# Engine" — and that would take the nightly deploy down with it for a feature nothing yet depends
+# on. Same shape as R2: a per-account toggle, not a per-project one.
+#
+#   1. https://dash.cloudflare.com/9ffa373bbc77a0885b1f78b41c0c8dfc/workers/analytics-engine  -> Enable
+#   2. uncomment the three lines below
+#   3. npx wrangler@3 pages deploy web --project-name tashan
+#
+# [[analytics_engine_datasets]]
+# binding = "TASHAN_AE"
+# dataset = "tashan_events"
