@@ -114,6 +114,11 @@ STAGES = [
     # here that is genuinely new rather than recomputed.
     ("feed",            ["pipeline/gen_feed.py"], "site",
      "Atom feed of what changed — the one thing that is new every day"),
+    # DRAFTS ONLY. Nothing here posts: publishing is outward-facing, needs credentials this repo
+    # does not hold, and an automated account that gets one post wrong costs more than the traffic
+    # it wins. A human reads data/social/<day>.json and sends it.
+    ("social",          ["pipeline/gen_social.py"], "site",
+     "draft the day's post for X / Threads / Farcaster from the day's most consequential finding"),
     ("pages",           ["pipeline/prerender.py"], "site", "capability pages + sitemap"),
     ("registry",        ["pipeline/gen_registry.py"], "site", "agent endpoints (/v0.1/servers, /v0.1/scores)"),
     ("content",         ["pipeline/gen_content.py"], "site", "learn articles"),
