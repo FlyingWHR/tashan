@@ -8,7 +8,8 @@ states exactly what is already prepared so the step is short.*
 enabled 8 Aug, `data/tashan.db` now lives at `r2://tashan-state/tashan.db` and is out of git,
 verified by deleting the local file and restoring it byte-identical.
 
-**Two open items, one action each:** publish `tashan-cli@0.1.4`, and add `ANTHROPIC_API_KEY`.
+**One open item:** add `ANTHROPIC_API_KEY` (§0c) — and that one is deliberately on hold until
+there is a paying user, since grading can be done in-session at no API cost.
 
 ---
 
@@ -34,49 +35,27 @@ nothing serves a request from this database, so there is no concurrency to solve
 
 ---
 
-## 0 · Publish `tashan-cli@0.1.4` — the currently published version defames Microsoft
+## 0 · Publish `tashan-cli@0.1.4` — ✅ DONE 9 Aug 2026, on both channels
 
-**Do this before anything else launches.** `tashan-cli@0.1.3` is live on npm right now, and it tells
-every user who has Microsoft's official Playwright MCP server installed:
+*`tashan-cli@0.1.3` told every user with Microsoft's official Playwright MCP server installed that
+it had been **"REMOVED from the MCP registry — spam, malware or illegal content"**. It was never
+removed from anything: `doctor` fell back to matching the bare leaf name `mcp` after the scoped
+lookup missed, and `mcp` resolves to a different, delisted package.*
 
-> `! playwright` — **REMOVED from the MCP registry** — its policy lists spam, malware or illegal
-> content as the usual reasons. Stop using it and verify the source.
+*Fixed in 0.1.4 (`cli/doctor.mjs` refuses generic leaves: `mcp`, `server`, `cli`, `core`, …),
+verified the way the bug was found — packed, installed from the tarball, run against a real config.*
 
-`@playwright/mcp` was never removed from anything. `doctor` fell back to matching the bare leaf name
-`mcp` after the scoped lookup missed, and `mcp` resolves to a different, delisted package. Every
-Playwright user running `tashan doctor` sees this. It is reproducible in one command:
+**npm: 0.1.4. MCP registry: 0.1.4, `isLatest: true`.** Both channels now serve the fix; 0.1.3 stays
+in the registry as version history with `isLatest: false`, which is how it versions.
 
-```sh
-npm install --prefix /tmp/t tashan-cli@0.1.3
-# with @playwright/mcp in your Claude config:
-/tmp/t/node_modules/.bin/tashan doctor
-```
+Two traps this hit on the way, both now fixed in the workflow rather than in a person's memory:
 
-**0.1.4 fixes it** (`cli/doctor.mjs` refuses generic leaves: `mcp`, `server`, `cli`, `core`, …) and
-was verified the way the bug was found — packed, installed from the tarball, and run against a real
-config, not called as a function in a test. It also gives `--version` an answer; every form of it
-replied "unknown command" up to 0.1.3.
-
-**The last run went red, and the publish had already succeeded.** On 7 Aug the workflow published
-0.1.3 and then failed its final step on `attestations: false` — a check that could never pass,
-because npm builds provenance from a PUBLIC source repository and this one is private (§2 records
-exactly that). A red X after a successful publish is worse than no check, and it is a fair reason to
-assume publishing is broken and not try again. Fixed: the step now verifies the version is actually
-on npm, reports provenance, and only enforces it where it is achievable — if this repo is ever made
-public, its absence fails the run again.
-
-**Do** — GitHub → Actions → **publish cli** → *Run workflow*:
-
-| field | value |
-|---|---|
-| `dry_run` | **unchecked** — checked is a pack-and-verify rehearsal that publishes nothing |
-
-Trusted publishing is already configured (§2), so there is no token to supply. Then move the MCP
-registry entry to 0.1.4 (§3 has the command). Verify with `npx tashan-cli@latest --version` → `0.1.4`.
-
-*Why you and not me: publishing is outward-facing and irreversible — npm restricts unpublish after
-72 hours — so it happens when a human says so. That is also why the workflow is `workflow_dispatch`
-and not a push trigger.*
+- **The publish workflow went red after succeeding.** It asserted `attestations: true`, which can
+  never hold — npm builds provenance from a PUBLIC source repo and this one is private. So a working
+  publish reported failure, which is a fair reason to assume publishing is broken and not retry.
+- **A dry run looked exactly like a real one.** `dry_run` defaults to checked; `publish` and its
+  verification were both skipped and the run still showed green. The run summary now says
+  `⚠️ DRY RUN — nothing was published` or `✅ Published tashan-cli@x.y.z`.
 
 ---
 
@@ -183,7 +162,7 @@ older machine.*
 
 ---
 
-## 3 · Publish to the MCP registry — ✅ DONE 7 Aug 2026 (`sh.tashan/tashan@0.1.3`, active)
+## 3 · Publish to the MCP registry — ✅ DONE (`sh.tashan/tashan@0.1.4`, active, isLatest)
 
 **What it costs today:** we ingest `registry.modelcontextprotocol.io` as the spine of our coverage
 and are absent from it. It is where every MCP client with a "browse servers" view looks.
