@@ -322,6 +322,37 @@ def changed_block(c):
             '<ul class="chg-list">' + items + '</ul>' + pitch + '</section>')
 
 
+def embed_block(c):
+    """The badge, offered on the page a publisher actually visits.
+
+    THE ONLY DISTRIBUTION LOOP THIS PRODUCT HAS THAT COMPOUNDS. A maintainer who puts the badge in
+    their README gives us a permanent backlink and an impression to everyone who reads it — and
+    they do it because it shows THEIR score, not as a favour. It is opt-in, it is honest, and it is
+    the opposite of the mass-messaging that would end an independent rater's credibility overnight.
+
+    It existed only in capability.js. The client REPLACES the server render, so the badge offer was
+    invisible to every crawler, to anyone with JS off, and — most expensively — it was absent from
+    the static HTML that answer engines read. The one asset designed to spread was the one asset
+    only a browser could see. That is the fourth time this file and capability.js have disagreed.
+
+    Shown only where there is a score: a badge for an unrated row would advertise an empty number.
+    """
+    if c.get("tashan_score") is None:
+        return ""
+    slug = c["slug"]
+    url = BASE + "/badge/" + slug + ".svg"
+    page = BASE + "/capability/" + slug + ".html"
+    md = "[![tashan](" + url + ")](" + page + ")"
+    return ('<div class="embed"><h2 class="embed__h">Show your score</h2>'
+            '<p class="embed__p">Measured this well? Put the live badge in your README &mdash; it '
+            'updates as the score does.</p>'
+            '<img class="embed__badge" src="/badge/' + esc(slug) + '.svg" alt="tashan badge for '
+            + esc(disp(c)) + '" width="132" height="20" loading="lazy">'
+            '<div class="embed__code"><code id="embedCode">' + esc(md) + '</code>'
+            '<button class="embed__copy" id="embedCopy" type="button" data-copy="' + esc(md)
+            + '">copy</button></div></div>')
+
+
 def doctor_cta(c):
     """The free action, given to somebody who arrived from a search.
 
@@ -571,7 +602,7 @@ def summary(c, gen=""):
             '<div class="cid"><span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
-            + works + cat + task + job + install + verdict + swap + changed_block(c) + doctor_cta(c) + pro_panel(c) +
+            + works + cat + task + job + install + verdict + swap + changed_block(c) + doctor_cta(c) + pro_panel(c) + embed_block(c) +
             ('<ul class="prose prose--wide">' + "".join(rows) + '</ul>' if rows else '') +
             # The security audit goes BEFORE the CTA and the link row: it is the measurement the
             # page exists to publish, and it was previously absent from this tier entirely.
@@ -790,6 +821,8 @@ def page(c, gen):
         # value to the hubs and to the capabilities that DO have something to say.
         + ('<meta name="robots" content="noindex,follow">\n' if thin(c) else "")
         + '<link rel="canonical" href="' + url + '">\n'
+        '<link rel="alternate" type="application/atom+xml" title="tashan — what changed" '
+        'href="' + BASE + '/changes.xml">\n'
         '<link rel="alternate" type="text/markdown" href="'
         + BASE + '/capability/' + c["slug"] + '.md" title="Plain-markdown dossier">\n'
         '<meta property="og:type" content="website">\n'

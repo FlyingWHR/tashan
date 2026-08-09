@@ -109,6 +109,11 @@ STAGES = [
      "coverage weighted by demand — the tiers we commit to, not the ratio that falls as we discover"),
     ("compare",         ["pipeline/gen_compare.py"], "site", "head-to-head X vs Y pages"),
     ("hubs",            ["pipeline/gen_hubs.py"], "site", "category + task + role hubs, llms.txt"),
+    # A sitemap asks a crawler to come and look; a feed is PULLED — by readers, aggregators and the
+    # answer engines that read a dated stream as a freshness signal. It is also the only content
+    # here that is genuinely new rather than recomputed.
+    ("feed",            ["pipeline/gen_feed.py"], "site",
+     "Atom feed of what changed — the one thing that is new every day"),
     ("pages",           ["pipeline/prerender.py"], "site", "capability pages + sitemap"),
     ("registry",        ["pipeline/gen_registry.py"], "site", "agent endpoints (/v0.1/servers, /v0.1/scores)"),
     ("content",         ["pipeline/gen_content.py"], "site", "learn articles"),

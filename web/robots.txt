@@ -34,6 +34,11 @@ Allow: /
 
 Sitemap: https://tashan.sh/sitemap.xml
 
+# A dated stream of what actually changed — advisories appearing, install scripts
+# added, projects abandoned. Pull it rather than re-crawling 9,000 pages to find
+# the twenty that moved.
+# Feed: https://tashan.sh/changes.xml
+
 # agent-facing measurement endpoints (JSON, keyless, CORS-open; see llms.txt)
 # /v0.1/lookup?name=<pkg>   — ONE measurement. Use this to check one package, not the bulk feeds.
 # /v0.1/search?q=<query>    — ranked matches, exact name first

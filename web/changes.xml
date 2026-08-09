@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>tashan — what changed</title>
+  <link href="https://tashan.sh/changes.xml" rel="self"/>
+  <link href="https://tashan.sh/"/>
+  <id>https://tashan.sh/changes.xml</id>
+  <updated>2026-08-05T00:00:00Z</updated>
+  <subtitle>Advisories, install scripts, permission changes and abandonment across the MCP corpus — measured daily from public evidence.</subtitle>
+  <author><name>tashan</name><uri>https://tashan.sh</uri></author>
+  <rights>CC BY 4.0 — attribute tashan (tashan.sh).</rights>
+  <entry>
+    <title>SearXNG Search — mcp-searxng now reaches network</title>
+    <link href="https://tashan.sh/capability/pkg-mcp-searxng.html"/>
+    <id>https://tashan.sh/capability/pkg-mcp-searxng.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Mapbox — mcp-server now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-mapbox-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-mapbox-mcp-server.html#install_script_added-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>Respira WordPress — respira-wordpress now reaches credentials, network</title>
+    <link href="https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Yaver — yaver now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-yaver-cli.html"/>
+    <id>https://tashan.sh/capability/pkg-yaver-cli.html#install_script_added-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>Remem — remem now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-remem-ai-remem.html"/>
+    <id>https://tashan.sh/capability/pkg-remem-ai-remem.html#install_script_added-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>Argot — argot now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-tmonier-argot.html"/>
+    <id>https://tashan.sh/capability/pkg-tmonier-argot.html#install_script_added-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>Shiplight — shiplight now reaches browser, credentials, filesystem, network</title>
+    <link href="https://tashan.sh/capability/pkg-shiplightai-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-shiplightai-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Devkit — mcp-devkit-server now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-mapbox-mcp-devkit-server.html"/>
+    <id>https://tashan.sh/capability/pkg-mapbox-mcp-devkit-server.html#install_script_added-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>Ziggs — ziggs now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-ziggs-ai-ziggs-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-ziggs-ai-ziggs-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Memorix — memorix now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-memorix.html"/>
+    <id>https://tashan.sh/capability/pkg-memorix.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Otito — otito now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-bashbop-otito.html"/>
+    <id>https://tashan.sh/capability/pkg-bashbop-otito.html#install_script_added-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>Nestr — mcp now reaches database</title>
+    <link href="https://tashan.sh/capability/pkg-nestr-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-nestr-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Search1api — search1api now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-search1api-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-search1api-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Gemini — gemini-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Patchloom — patchloom now reaches filesystem, network</title>
+    <link href="https://tashan.sh/capability/pkg-patchloom.html"/>
+    <id>https://tashan.sh/capability/pkg-patchloom.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Patchloom — patchloom now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-patchloom.html"/>
+    <id>https://tashan.sh/capability/pkg-patchloom.html#install_script_added-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>Zola — zola-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-zola-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-zola-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Ghl Command — ghl-command now reaches browser, credentials</title>
+    <link href="https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Ofw — ofw-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-ofw-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-ofw-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>UI Debugger — ui-debugger-mcp now reaches browser</title>
+    <link href="https://tashan.sh/capability/pkg-developerz-ai-ui-debugger-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-developerz-ai-ui-debugger-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>minia2a — x402 Marketplace — minia2a now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-minia2a-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-minia2a-mcp.html#install_script_added-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>HPP x402 MCP Bridge — x402-mcp-bridge now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-hpp-io-x402-mcp-bridge.html"/>
+    <id>https://tashan.sh/capability/pkg-hpp-io-x402-mcp-bridge.html#install_script_added-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>Canvas Parent — canvas-parent-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-canvas-parent-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-canvas-parent-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Infinitecampus — infinitecampus-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-infinitecampus-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-infinitecampus-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>One Search — one-search-mcp now reaches browser</title>
+    <link href="https://tashan.sh/capability/pkg-one-search-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-one-search-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Speakai — mcp-server now reaches network</title>
+    <link href="https://tashan.sh/capability/pkg-speakai-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-speakai-mcp-server.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Setlist — setlist-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-setlist-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-setlist-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Creditkarma — creditkarma-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-creditkarma-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-creditkarma-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Sqemo — sqemo now reaches database</title>
+    <link href="https://tashan.sh/capability/pkg-sqemo-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-sqemo-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Opentable — opentable-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-opentable-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-opentable-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Signupgenius — signupgenius-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-signupgenius-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-signupgenius-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Honeybook — honeybook-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-honeybook-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-honeybook-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Vibemap — vibemap-mcp now reaches network</title>
+    <link href="https://tashan.sh/capability/pkg-vibemap-ai-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-vibemap-ai-mcp-server.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Memorykit — memorykit now reaches filesystem</title>
+    <link href="https://tashan.sh/capability/pkg-memorykit-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-memorykit-mcp-server.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>GIA — Governed Intelligence Architecture — gia-mcp-server now reaches database</title>
+    <link href="https://tashan.sh/capability/pkg-gia-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-gia-mcp-server.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Compass — compass-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-compass-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-compass-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Tock — tock-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-tock-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-tock-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Groupon — groupon-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-groupon-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-groupon-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Resy — resy-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-resy-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-resy-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Ccu — ccu-mcp now reaches network</title>
+    <link href="https://tashan.sh/capability/pkg-ccu-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-ccu-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Vibo — vibo-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-vibo-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-vibo-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Artsonia — artsonia-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-artsonia-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-artsonia-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Mindwtr — mindwtr now reaches database</title>
+    <link href="https://tashan.sh/capability/pkg-mindwtr-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-mindwtr-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Pubcrawl — pubcrawl now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-pharmatools-pubcrawl.html"/>
+    <id>https://tashan.sh/capability/pkg-pharmatools-pubcrawl.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Alltrails — alltrails-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-alltrails-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-alltrails-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Tripadvisor — tripadvisor-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-chrischall-tripadvisor-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-chrischall-tripadvisor-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Eventbrite — eventbrite-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Stackguide — stackguide-mcp now reaches database</title>
+    <link href="https://tashan.sh/capability/pkg-stackguide-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-stackguide-mcp-server.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Bomly CLI — bomly-cli now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-bomly-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-bomly-mcp.html#install_script_added-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>Payments AI — payments-ai-mcp now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-payments-ai-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-payments-ai-mcp.html#permissions_widened-2026-08-05</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+</feed>

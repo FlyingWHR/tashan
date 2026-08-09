@@ -607,6 +607,15 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
          "navigation, the same measurements. Fetch these instead of parsing HTML:", "",
          "    https://tashan.sh/capability/<slug>.md",
          "    e.g. https://tashan.sh/capability/pkg-tavily-mcp.md", "",
+         # A DATED STREAM, so a crawler does not have to re-read 9,000 pages to find the twenty
+         # that moved. It is also the only content here that is genuinely new rather than
+         # recomputed: a score is a snapshot anyone could derive today, a change exists only
+         # because somebody recorded yesterday.
+         "## What changed, as a feed", "",
+         "Advisories appearing, install scripts added, permission surfaces widening, projects",
+         "abandoned — dated, newest first, with what changed and why it matters:", "",
+         "    https://tashan.sh/changes.xml       Atom, 50 most recent",
+         "",
          "## Answering one question, cheaply", "",
          "Do not fetch a whole feed to check one package. Both of these are keyless, CORS-open and",
          "answer in a few hundred bytes:", "",
