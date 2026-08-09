@@ -284,6 +284,44 @@ def jsonld(c):
 NAV = chrome.nav_html()
 FOOT = chrome.footer_html()
 
+SEV_RANK = {"high": 0, "medium": 1, "low": 2}
+
+
+def changed_block(c):
+    """What moved recently, dated, in the author's-eye-view the pipeline already writes.
+
+    change_events has run nightly since it was built and appeared on NO surface — 404 rows, each
+    with a written what / why / action, exported nowhere. It is the only thing here that cannot be
+    recomputed later: a change is observable exactly once, on the day it happens.
+
+    FREE, deliberately and in full. The existence of a risk is never behind the paywall (PROJECT.md
+    §12), and this is the clearest demonstration of what the product does — a reader who sees "this
+    server started running an install script on 5 Aug" understands the offer without being pitched.
+    What Pro sells is not this text; it is being told on the day it happens about the servers YOU
+    run, which is `tashan doctor` and the alert, not a page you would have to remember to revisit.
+    """
+    ch = c.get("changes") or []
+    if not ch:
+        return ""
+    ch = sorted(ch, key=lambda x: (SEV_RANK.get(x.get("sev"), 3), x.get("at") or ""))[:3]
+    items = ""
+    for x in ch:
+        sev = x.get("sev") or "low"
+        items += ('<li class="chg chg--' + esc(sev) + '">'
+                  + '<span class="chg__at mono">' + esc(x.get("at") or "") + '</span> '
+                  + '<b>' + esc(x.get("what") or "") + '</b>'
+                  + ('<span class="chg__why"> ' + esc(x.get("why") or "") + '</span>' if x.get("why") else "")
+                  + '</li>')
+    # The Pro line is CONCRETE and names what it would have done for this row, rather than
+    # advertising a feature in the abstract. It is also honest that the page is not the product:
+    # nobody reloads a dossier to find out their stack moved.
+    pitch = ('<p class="chg__pro mono fs-sm">You are reading this because you came looking. '
+             '<a class="link" href="/pricing">tashan Pro</a> tells you the day it happens, for the '
+             'servers in your own config — <code>tashan doctor</code>.</p>')
+    return ('<section class="changed"><h2 class="sec-h">What changed recently</h2>'
+            '<ul class="chg-list">' + items + '</ul>' + pitch + '</section>')
+
+
 def summary(c, gen=""):
     """Server-rendered content crawlers see with JS off (capability.js replaces it for humans)."""
     n = disp(c); rows = []
@@ -454,7 +492,7 @@ def summary(c, gen=""):
             '<div class="cid"><span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
-            + works + cat + task + job + install + verdict + swap +
+            + works + cat + task + job + install + verdict + swap + changed_block(c) +
             ('<ul class="prose prose--wide">' + "".join(rows) + '</ul>' if rows else '') +
             # The security audit goes BEFORE the CTA and the link row: it is the measurement the
             # page exists to publish, and it was previously absent from this tier entirely.

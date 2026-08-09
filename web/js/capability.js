@@ -102,6 +102,7 @@
         esc(c.doc_status) + '.' + (/documentation with|never names it/.test(c.doc_status) ?
           ' A grade read off another project\u2019s document would borrow its credit, or its blame.'
           : '') + '</p></div>' : '') +
+      changedBlock(c) +
       repoHealth(c) +
       alsoOn(c) +
       (co ? section("Configured alongside", '<div class="colist">' + co + '</div>', "In real public configs, these ship together.") : '') +
@@ -177,7 +178,29 @@
   }
 
   // ---------- GitHub repo health (the capability's own source repo) ----------
-  function repoHealth(c) {
+  // WHAT CHANGED RECENTLY — mirrors prerender.py::changed_block. The client REPLACES the server
+// render, so anything the static page shows and this does not is wiped the instant JS runs; that
+// has happened three times in this file. Free in full: the existence of a risk is never paywalled,
+// and this is the clearest demonstration of the product there is.
+var SEV_RANK = { high: 0, medium: 1, low: 2 };
+function changedBlock(c) {
+  var ch = (c.changes || []).slice().sort(function (a, b) {
+    return (SEV_RANK[a.sev] == null ? 3 : SEV_RANK[a.sev]) - (SEV_RANK[b.sev] == null ? 3 : SEV_RANK[b.sev]);
+  }).slice(0, 3);
+  if (!ch.length) return '';
+  var items = ch.map(function (x) {
+    return '<li class="chg chg--' + esc(x.sev || 'low') + '">' +
+      '<span class="chg__at mono">' + esc(x.at || '') + '</span> <b>' + esc(x.what || '') + '</b>' +
+      (x.why ? '<span class="chg__why"> ' + esc(x.why) + '</span>' : '') + '</li>';
+  }).join('');
+  return '<section class="changed"><h2 class="sec-h">What changed recently</h2>' +
+    '<ul class="chg-list">' + items + '</ul>' +
+    '<p class="chg__pro mono fs-sm">You are reading this because you came looking. ' +
+    '<a class="link" href="/pricing">tashan Pro</a> tells you the day it happens, for the ' +
+    'servers in your own config — <code>tashan doctor</code>.</p></section>';
+}
+
+function repoHealth(c) {
     if (!c.source_repo || c.gh_stars == null) return "";
     var rows = [];
     rows.push(hstat("Stars", fmt(c.gh_stars)));

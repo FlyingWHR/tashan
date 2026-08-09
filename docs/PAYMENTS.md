@@ -143,7 +143,29 @@ done from this repo.
 | Organization ID | `caa0fc1b-2f7f-4e52-864a-c71e878d125d` (this is `POLAR_ORG_ID`) |
 | Licence-key benefit | `80bd4f50-7004-4f79-9a67-102ea9bd8257`, prefix `tashan`, no activation cap |
 | Checkout link | `https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d` |
-| success_url | `https://tashan.sh/welcome.html` |
+| success_url | **`https://tashan.sh/api/checkout?id={CHECKOUT_ID}`** — see below |
+
+**THE success_url IS THE WHOLE POST-PURCHASE SIGN-IN, and it was still pointing at
+`/welcome.html`.** That page is the paste-your-key fallback, so a customer who had just paid was
+asked to find and paste a licence key — the single worst moment to make someone do clerical work,
+and the one place a checkout gets abandoned after the money has already moved.
+
+`functions/api/checkout.js` was built for the real flow and was never pointed at: it exchanges the
+checkout id for the customer's licence key, sets the session cookie, and 302s to `/welcome` already
+signed in. It was parked because it needs `POLAR_ORG_TOKEN` (docs/UX-BACKLOG.md item 3, "the
+founder's call, not a 2am one") — that token is now set in production, and the endpoint is armed:
+a bogus id redirects to a bare `/welcome`, not `/welcome?e=unconfigured`, which is only reachable
+once the token and KV are both present.
+
+**Set it on BOTH checkout links** (monthly and annual), in Polar → Products → the product →
+Checkout Links → each link → *Success URL*:
+
+    https://tashan.sh/api/checkout?id={CHECKOUT_ID}
+
+`{CHECKOUT_ID}` is Polar's own template token — paste it literally, braces included. Everything else
+is already built: single-use burn in KV, paid-status and freshness checks, nothing echoed in a
+response body, and every failure still lands on `/welcome` with the paste form so an outage on
+Polar's side never strands a customer.
 
 The product existed but had **no benefits attached**, so a purchase would have issued no licence key
 and the gate would have refused every paying customer. No activation limit is set deliberately: an

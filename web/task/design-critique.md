@@ -11,13 +11,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 61 | 28 ★ | active |
-| 2 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 60 | 302 ★ | active |
+| 1 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 61 | 302 ★ | active |
+| 2 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 61 | 28 ★ | active |
 | 3 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 82 | 51k ★ | active |
 | 4 | [F Mcp Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 53 | 9 ★ | active |
 | 5 | [Debate](https://tashan.sh/capability/plugin-agent-sh-debate-debate.html) | 50 | 3 ★ | active |
-| 6 | [Frank Grimes](https://tashan.sh/capability/plugin-misfitdev-claude-plugins-frank-grimes.html) | 47 | 2 ★ | active |
+| 6 | [Frank Grimes](https://tashan.sh/capability/plugin-misfitdev-claude-plugins-frank-grimes.html) | 48 | 2 ★ | active |
 | 7 | [Apple Hig Expert](https://tashan.sh/capability/skill-alirezarezvani-apple-hig-expert.html) | not scored | 1 repos | active |
+| 8 | [Aesthetic Foundations](https://tashan.sh/capability/plugin-caoxg-claude-skill-aesthetic-foundations-aesthetic-foundations.html) | 35 | 6 ★ | active |
 
 ## What these numbers are not
 

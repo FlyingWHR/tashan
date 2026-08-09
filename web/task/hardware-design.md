@@ -16,7 +16,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 80 | 13k ★ | active |
 | 4 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
 | 5 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |
-| 6 | [Easyeda Mcp Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 63 | 466/wk | active |
+| 6 | [Easyeda Mcp Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 64 | 466/wk | active |
 | 7 | [Trustrails](https://tashan.sh/capability/pkg-trustrails-mcp-server.html) | 41 | 93/wk | active |
 
 ## What these numbers are not

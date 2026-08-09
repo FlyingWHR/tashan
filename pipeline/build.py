@@ -16,7 +16,7 @@ Scores are transparent, labelled, and computed here — never a black box.
 Roadmap (next passes, not here yet): GitHub repo-health, git-history retention/churn, LLM expertise eval.
 """
 import collections, json, os, sqlite3, urllib.request, urllib.error, urllib.parse, time, math, re, subprocess
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "tashan.db")
@@ -1690,9 +1690,28 @@ def export(con):
             "f": FIT_BY_BASIS.get(basis, "incidental"),
             "e": (evidence or "")[:160] or None})
 
+    # WHAT CHANGED, PUBLISHED. change_events runs every night and reached no surface at all: 404
+    # rows — "minia2a now runs a script when it installs", "one-search-mcp now reaches browser" —
+    # each already carrying a written what / why / action, exported nowhere and rendered nowhere.
+    #
+    # It is the most useful thing this project produces and the only one that cannot be recomputed:
+    # a change is observable exactly once, on the day it happens. Free sees the fact and the reason,
+    # because the EXISTENCE of a risk is never behind a paywall; what Pro sells is being told on the
+    # day it happens about the servers you actually run, which is the CLI's job, not this page's.
+    CHANGE_WINDOW_DAYS = 45
+    since = (datetime.now(timezone.utc) - timedelta(days=CHANGE_WINDOW_DAYS)).isoformat()
+    changes_by_cap = {}
+    for cap_id, at, kind, sev, what, why, action in con.execute(
+            "SELECT cap_id, at, kind, severity, what, why, action FROM change_events "
+            "WHERE at >= ? ORDER BY at DESC", (since,)):
+        changes_by_cap.setdefault(cap_id, []).append(
+            {"at": (at or "")[:10], "kind": kind, "sev": sev,
+             "what": what, "why": why, "action": action})
+
     for r in rows:
         o = dict(zip(cols, r))
         o["tasks"] = tags_by_cap.get(o["id"], [])
+        o["changes"] = changes_by_cap.get(o["id"], [])[:4]
         o["description"] = clean_desc(o.get("description"))
         o["official"] = official_of(o.get("npm_pkg"), o.get("source_repo"))
         o["name"] = display_name(o)          # see display_name: a generic config key is not a name

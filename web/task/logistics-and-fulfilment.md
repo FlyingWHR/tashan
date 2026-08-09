@@ -18,7 +18,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 57 | 177/wk | active |
 | 6 | [Daiso](https://tashan.sh/capability/pkg-daiso.html) | 56 | 281/wk | active |
 | 7 | [3DPACK.ING — Container & Truck Load Planning](https://tashan.sh/capability/pkg-3dpacking-mcp-server.html) | 56 | 254/wk | active |
-| 8 | [Shopify](https://tashan.sh/capability/pkg-aiwerk-mcp-server-shopify.html) | 44 | 51/wk | active |
+| 8 | [Shopify](https://tashan.sh/capability/pkg-aiwerk-mcp-server-shopify.html) | 45 | 60/wk | active |
 | 9 | [Airtreks](https://tashan.sh/capability/pkg-airtreks-mcp.html) | 40 | 53/wk | active |
 | 10 | [GitHub Security](https://tashan.sh/capability/pkg-github-security-mcp.html) | 38 | 626/wk | active |
 | 11 | [Gam Seller Mcp Node](https://tashan.sh/capability/pkg-gam-seller-mcp-node.html) | 29 | — | active |

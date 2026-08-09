@@ -1180,3 +1180,23 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .expert-read__fix { display:inline-block; margin-top:.5rem; font-family:var(--font-mono);
   font-size:var(--fs-xs); color:var(--text-faint); border-bottom:1px solid var(--hairline); }
 .expert-read__fix:hover { color:var(--text-dim); border-bottom-color:var(--text-faint); }
+
+/* What changed recently — the nightly change feed, finally on a page.
+   change_events ran for weeks and rendered nowhere; it is the only signal here that cannot be
+   recomputed, because a change is observable exactly once. Free in full: the EXISTENCE of a risk is
+   never paywalled, and reading "this server started running an install script on 5 Aug" explains
+   the product better than any pitch. Severity is a hairline rule, not a fill — the accent stays
+   reserved for measured data. */
+.changed { margin: 2rem 0 0; }
+.chg-list { list-style: none; margin: .6rem 0 0; padding: 0; display: grid; gap: .5rem; }
+.chg {
+  padding: .55rem .7rem; border: 1px solid var(--hairline); border-radius: 6px;
+  border-left-width: 3px; font-size: var(--fs-sm); line-height: 1.45;
+}
+/* Severity is a hairline edge, never a fill — the accent belongs to measured data only. */
+.chg--high   { border-left-color: var(--red); }
+.chg--medium { border-left-color: var(--hairline-soft); }
+.chg--low    { border-left-color: var(--hairline-soft); }
+.chg__at { opacity: .6; font-size: var(--fs-xs); margin-right: .35rem; }
+.chg__why { opacity: .75; }
+.chg__pro { margin-top: .7rem; opacity: .8; }

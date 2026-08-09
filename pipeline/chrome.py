@@ -56,8 +56,13 @@ FOOTER = [
                  ("/start.html", "Use it"), ("/learn/", "Learn"), ("/for-hosts.html", "For hosts")]),
     ("How it works", [("/methodology.html", "Methodology"), ("/about.html", "About"),
                       ("/pricing.html", "Pricing"), ("/requests.html", "Requests")]),
+    # CONTACT IN THE FOOTER, NOT ONLY BEHIND /support. hello@tashan.sh was on seven pages and
+    # reachable from none of the other 9,700 — a reader on a capability page who wanted to correct
+    # a grade or ask what a finding meant had no address in front of them. For an instrument that
+    # publishes judgments about other people's work, being contactable is not a nicety.
     ("Your account", [("/account.html", "Account"), ("/support.html", "Support"),
-                      ("/refunds.html", "Cancel & refunds")]),
+                      ("/refunds.html", "Cancel & refunds"),
+                      ("mailto:hello@tashan.sh", "hello@tashan.sh")]),
     ("Legal", [("/terms.html", "Terms"), ("/privacy.html", "Privacy")]),
     ("Sources", [("https://registry.modelcontextprotocol.io/", "MCP registry ↗"),
                  ("https://www.npmjs.com/", "npm ↗"), ("https://github.com/", "GitHub ↗")]),
