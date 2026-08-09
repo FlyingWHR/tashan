@@ -1712,6 +1712,7 @@ def export(con):
         o = dict(zip(cols, r))
         o["tasks"] = tags_by_cap.get(o["id"], [])
         o["changes"] = changes_by_cap.get(o["id"], [])[:4]
+        o["changes_all"] = len(changes_by_cap.get(o["id"], []))
         o["description"] = clean_desc(o.get("description"))
         o["official"] = official_of(o.get("npm_pkg"), o.get("source_repo"))
         o["name"] = display_name(o)          # see display_name: a generic config key is not a name
@@ -1723,6 +1724,40 @@ def export(con):
         o["gh_topics"] = o["gh_topics"].split(",") if o["gh_topics"] else []
         o["slug"] = slugify(o["id"])                     # stable per-cap slug (matches gen_badges + prerender)
         caps.append(o)
+
+    # PEERS AND RANK — the two questions a score cannot answer on its own: is this good FOR THE JOB
+    # IT DOES, and what would I use instead. Both are derivable from data already on the page, and
+    # both are laborious to work out by hand across 9,000 rows, which is precisely what a paying
+    # customer is buying — synthesis, not secrets. Nothing here is withheld from anyone; the hubs
+    # publish the same rankings. It is put in front of the person who asked rather than left for
+    # them to assemble.
+    by_task = {}
+    for o in caps:
+        if o.get("tashan_score") is None:
+            continue
+        for t in (o.get("tasks") or []):
+            by_task.setdefault(t["t"], []).append(o)
+    for pool in by_task.values():
+        pool.sort(key=lambda x: -(x.get("tashan_score") or 0))
+    by_cat = {}
+    for o in caps:
+        if o.get("tashan_score") is not None:
+            by_cat.setdefault(o.get("category") or "other", []).append(o.get("tashan_score"))
+    for o in caps:
+        sc = o.get("tashan_score")
+        if sc is None:
+            continue
+        best, seen = [], {o["id"]}
+        for t in (o.get("tasks") or []):
+            for x in by_task.get(t["t"], []):
+                if x["id"] in seen or (x.get("tashan_score") or 0) <= sc:
+                    continue
+                seen.add(x["id"])
+                best.append({"n": x.get("label") or x.get("name"), "s": x.get("tashan_score"),
+                             "slug": x.get("slug"), "for": t["t"]})
+        o["peers"] = sorted(best, key=lambda b: -(b["s"] or 0))[:3]
+        peers_pool = by_cat.get(o.get("category") or "other") or [sc]
+        o["rank_pct"] = round(100 * sum(1 for v in peers_pool if v <= sc) / len(peers_pool))
 
     # TWO CAPABILITIES, ONE PAGE. slugify() maps every non-alphanumeric run to "-", so `@stripe/mcp`
     # and `stripe-mcp` both become `pkg-stripe-mcp`: prerender writes one file twice, the second wins,

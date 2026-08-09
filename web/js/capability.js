@@ -270,25 +270,73 @@ function proPanel(c) {
 
 function paintPro(el, c) {
   el.setAttribute('data-state', 'pro');
-  var ch = c.changes || [];
-  var rows = '';
+  // A PAYING CUSTOMER IS NOT SHOWN THE PITCH AGAIN. The closing line and the change block's own
+  // sales sentence both survived into the Pro state — a subscriber was being told what a
+  // subscription would get them, on the page they were already paying to read.
+  var pitch = document.querySelectorAll('.chg__pro');
+  for (var i = 0; i < pitch.length; i++) pitch[i].style.display = 'none';
+
+  el.querySelector('.pro__lede').innerHTML =
+    'The record behind ' + esc(c.label || c.name || 'this capability') + '.';
+  var list = el.querySelector('.pro__list') || el.querySelector('.pro__rows');
+  if (list) list.outerHTML = '<div class="pro__rows" id="proRows">' + proRows(c) + '</div>';
+  loadSeries(c);
+}
+
+// WHAT A SUBSCRIBER ACTUALLY GETS ON THIS PAGE, and it was three lines of nothing: the capability's
+// own name (which is the page title), "no changes in 45 days" (which the free block above already
+// said), and a LINK to the history rather than the history.
+//
+// The two questions a score cannot answer alone are "is this good for the job it does" and "what
+// would I use instead". Both are derivable from data already published — the hubs rank the same
+// rows — so nothing here is withheld from anyone. What is being sold is synthesis: the comparison
+// assembled and put in front of the person who asked, rather than left across nine thousand pages.
+function proRows(c) {
   function row(k, v) {
     return '<div class="pro__row"><span class="pro__k mono">' + esc(k) + '</span>' +
            '<span class="pro__v">' + v + '</span></div>';
   }
-  rows += row('Capability', esc(c.label || c.name || c.id));
-  rows += row('Changes', ch.length ? esc(String(ch.length)) + ' in the last 45 days' :
-                                     'none in the last 45 days');
-  if (ch.length) {
-    rows += row('Latest', '<b>' + esc(ch[0].what || '') + '</b>' +
-      (ch[0].action ? '<br><span class="pro__k">' + esc(ch[0].action) + '</span>' : ''));
+  var out = '';
+  if (c.tashan_score != null) {
+    out += row('Standing', '<b>' + Math.round(c.tashan_score) + '</b> — above ' +
+      (c.rank_pct != null ? c.rank_pct : '—') + '% of ' + esc(CAT[c.category] || 'its category'));
   }
-  rows += row('History', '<a class="link" href="/methodology.html#history">' +
-    'every score since we started measuring</a> &mdash; <code>tashan doctor --trend</code>');
-  el.querySelector('.pro__lede').innerHTML =
-    'You have Pro. Here is the record behind ' + esc(c.label || c.name || 'this capability') + '.';
-  var list = el.querySelector('.pro__list');
-  if (list) list.outerHTML = '<div class="pro__rows">' + rows + '</div>';
+  var peers = c.peers || [];
+  out += row('Measured better', peers.length
+    ? peers.map(function (p) {
+        return '<a class="link" href="/capability/' + esc(p.slug) + '.html">' + esc(p.n) +
+               '</a> <span class="pro__k">' + Math.round(p.s) + '</span>';
+      }).join('<br>')
+    : 'nothing for the same job scores higher');
+  var n = c.changes_all != null ? c.changes_all : (c.changes || []).length;
+  out += row('Changes', n ? n + ' recorded' + (c.changes && c.changes[0]
+      ? ' — latest ' + esc(c.changes[0].at) + ', ' + esc(c.changes[0].what) : '')
+    : 'none recorded since we started measuring');
+  out += row('Score history', '<span id="proSeries">loading…</span>');
+  return out;
+}
+
+// The one genuinely gated thing: the series lives behind /api/history and cannot be recomputed
+// from today's public data. Rendered as numbers rather than a link, because a link is not a
+// feature. Failure is quiet and specific — never a broken promise on a page somebody paid for.
+function loadSeries(c) {
+  var el = document.getElementById('proSeries');
+  if (!el) return;
+  fetch('/api/history?id=' + encodeURIComponent(c.id), { headers: { accept: 'application/json' } })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      var pts = (d && (d.series || d.points || d.history)) || null;
+      if (!pts || !pts.length) { el.textContent = 'not enough comparable history yet'; return; }
+      var vals = pts.map(function (p) { return p.tashan_score != null ? p.tashan_score : p.v; })
+                    .filter(function (v) { return v != null; });
+      if (!vals.length) { el.textContent = 'not enough comparable history yet'; return; }
+      var first = Math.round(vals[0]), last = Math.round(vals[vals.length - 1]);
+      var delta = last - first;
+      el.innerHTML = '<b>' + last + '</b> today, ' + first + ' ' + vals.length + ' readings ago ' +
+        '<span class="pro__k">(' + (delta > 0 ? '+' : '') + delta + ')</span>' +
+        '<br><span class="pro__k mono">tashan doctor --trend</span>';
+    })
+    .catch(function () { el.textContent = 'history unavailable right now'; });
 }
 
 function closingPitch(c) {
