@@ -16,8 +16,8 @@ Ranked by the tashan score
 | 3 | [Fiori](https://tashan.sh/capability/pkg-sap-ux-fiori-mcp-server.html) | 86 | 108k/wk | active |
 | 4 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 82 | 51k ★ | active |
 | 5 | [Sveltejs](https://tashan.sh/capability/pkg-sveltejs-mcp.html) | 78 | 24k/wk | active |
-| 6 | [Expo](https://tashan.sh/capability/plugin-expo-skills-expo.html) | 77 | 2k ★ | active |
-| 7 | [Semiotic](https://tashan.sh/capability/pkg-semiotic.html) | 77 | 10k/wk | active |
+| 6 | [Semiotic](https://tashan.sh/capability/pkg-semiotic.html) | 77 | 10k/wk | active |
+| 7 | [Expo](https://tashan.sh/capability/plugin-expo-skills-expo.html) | 76 | 2k ★ | active |
 | 8 | [Dart Flutter](https://tashan.sh/capability/plugin-flutter-agent-plugins-dart-flutter.html) | 76 | 3k ★ | active |
 | 9 | [Nx](https://tashan.sh/capability/pkg-nx-mcp.html) | 76 | 86k/wk | active |
 | 10 | [Swiftui Expert](https://tashan.sh/capability/plugin-avdlee-swiftui-agent-skill-swiftui-expert.html) | 75 | 3k ★ | active |
@@ -28,31 +28,31 @@ Ranked by the tashan score
 | 15 | [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) | 72 | 829 ★ | active |
 | 16 | [Auto Mobile](https://tashan.sh/capability/pkg-kaeawc-auto-mobile.html) | 72 | 5k/wk | active |
 | 17 | [Ue](https://tashan.sh/capability/pkg-ue-mcp.html) | 72 | 4k/wk | active |
-| 18 | [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) | 72 | 4k/wk | active |
+| 18 | [Godot Prompter](https://tashan.sh/capability/plugin-jame581-godotprompter-godot-prompter.html) | 71 | 485 ★ | active |
 | 19 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
 | 20 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 70 | 150 ★ | active |
 | 21 | [Unreal Engine Skills For Claude Code](https://tashan.sh/capability/plugin-epicgames-unreal-engine-skills-for-claude-code-plugin-unreal-engine-skills-for-claude-code.html) | 70 | 157 ★ | active |
 | 22 | [Sapiens Sintéticos](https://tashan.sh/capability/pkg-sapiens-mcp.html) | 70 | 2k/wk | active |
-| 23 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 70 | 2k/wk | active |
-| 24 | [Prism](https://tashan.sh/capability/pkg-prism-mcp-server.html) | 70 | 2k/wk | active |
-| 25 | [Figma Relai](https://tashan.sh/capability/pkg-figma-relai.html) | 70 | 2k/wk | active |
-| 26 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 70 | 796/wk | active |
-| 27 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 70 | 305/wk | active |
-| 28 | [Tokportal](https://tashan.sh/capability/pkg-tokportal-mcp.html) | 69 | 2k/wk | active |
-| 29 | [Figma · planetabhi](https://tashan.sh/capability/pkg-figma-mcp-server.html) | 69 | 2k/wk | active |
+| 23 | [Figma Relai](https://tashan.sh/capability/pkg-figma-relai.html) | 70 | 2k/wk | active |
+| 24 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 70 | 796/wk | active |
+| 25 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 70 | 305/wk | active |
+| 26 | [Tokportal](https://tashan.sh/capability/pkg-tokportal-mcp.html) | 69 | 2k/wk | active |
+| 27 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
+| 28 | [Figma · planetabhi](https://tashan.sh/capability/pkg-figma-mcp-server.html) | 69 | 2k/wk | active |
+| 29 | [Memi Design](https://tashan.sh/capability/pkg-memi-design-cli.html) | 69 | 1k/wk | active |
 | 30 | [Codefizz Editor Agent](https://tashan.sh/capability/pkg-codefizz-editor-agent.html) | 69 | 1k/wk | active |
 | 31 | [Customize Agent](https://tashan.sh/capability/pkg-customize-agent.html) | 69 | 1k/wk | active |
-| 32 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 69 | 1k/wk | active |
-| 33 | [Deja Vu](https://tashan.sh/capability/pkg-vshulcz-deja-vu.html) | 69 | 1k/wk | active |
-| 34 | [Frontmcp](https://tashan.sh/capability/pkg-frontmcp.html) | 69 | 1k/wk | active |
-| 35 | [Myoperator](https://tashan.sh/capability/pkg-myoperator-mcp.html) | 69 | 506/wk | active |
-| 36 | [Elements](https://tashan.sh/capability/pkg-nvidia-elements-cli.html) | 69 | 436/wk | active |
-| 37 | [Medusa Dev](https://tashan.sh/capability/plugin-medusajs-medusa-claude-plugins-medusa-dev.html) | 68 | 202 ★ | active |
-| 38 | [Vendo](https://tashan.sh/capability/plugin-runvendo-vendo-vendo.html) | 68 | 369 ★ | active |
-| 39 | [Convex Mcp Gateway](https://tashan.sh/capability/pkg-convex-mcp-gateway.html) | 68 | 2k/wk | active |
-| 40 | [Probe Kit](https://tashan.sh/capability/pkg-mcp-probe-kit.html) | 68 | 930/wk | active |
+| 32 | [Deja Vu](https://tashan.sh/capability/pkg-vshulcz-deja-vu.html) | 69 | 1k/wk | active |
+| 33 | [Frontmcp](https://tashan.sh/capability/pkg-frontmcp.html) | 69 | 1k/wk | active |
+| 34 | [Myoperator](https://tashan.sh/capability/pkg-myoperator-mcp.html) | 69 | 506/wk | active |
+| 35 | [Medusa Dev](https://tashan.sh/capability/plugin-medusajs-medusa-claude-plugins-medusa-dev.html) | 68 | 202 ★ | active |
+| 36 | [Vendo](https://tashan.sh/capability/plugin-runvendo-vendo-vendo.html) | 68 | 369 ★ | active |
+| 37 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 68 | 1k/wk | active |
+| 38 | [Probe Kit](https://tashan.sh/capability/pkg-mcp-probe-kit.html) | 68 | 930/wk | active |
+| 39 | [Ckan](https://tashan.sh/capability/pkg-aborruso-ckan-mcp-server.html) | 68 | 875/wk | active |
+| 40 | [Elements](https://tashan.sh/capability/pkg-nvidia-elements-cli.html) | 68 | 436/wk | active |
 
-Showing the top 40 of 709. The full ranked shelf is at https://tashan.sh/category/design.html.
+Showing the top 40 of 808. The full ranked shelf is at https://tashan.sh/category/design.html.
 
 ## What these numbers are not
 

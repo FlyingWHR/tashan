@@ -3,10 +3,10 @@
  "all": {
   "full": 123,
   "grade": 856,
-  "n": 22902,
-  "scan": 2646,
-  "score": 9518,
-  "task": 2658
+  "n": 26469,
+  "scan": 3520,
+  "score": 10679,
+  "task": 2666
  },
  "axes": [
   {
@@ -32,7 +32,7 @@
  ],
  "headline": {
   "graded_pct": 14,
-  "scanned_pct": 49,
+  "scanned_pct": 100,
   "scored_pct": 98,
   "tasked_pct": 38,
   "tier": "top1000"
@@ -43,7 +43,6 @@
    "id": "pkg:prisma",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade"
    ],
    "name": "prisma"
@@ -53,28 +52,16 @@
    "id": "pkg:@playwright/mcp",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
    "name": "@playwright/mcp"
   },
   {
-   "downloads": 4837320,
-   "id": "pkg:claude-cup",
-   "kind": "npm",
-   "missing": [
-    "scan",
-    "grade"
-   ],
-   "name": "claude-cup"
-  },
-  {
    "downloads": 1805347,
    "id": "pkg:agent-install",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
@@ -94,7 +81,6 @@
    "id": "pkg:mcp-proxy",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
@@ -105,7 +91,6 @@
    "id": "pkg:mcp-handler",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
@@ -116,7 +101,6 @@
    "id": "pkg:fallow",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade"
    ],
    "name": "fallow"
@@ -135,7 +119,6 @@
    "id": "pkg:eve",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade"
    ],
    "name": "eve"
@@ -145,7 +128,6 @@
    "id": "pkg:mcp-remote",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
@@ -165,7 +147,6 @@
    "id": "pkg:mcporter",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
@@ -176,7 +157,6 @@
    "id": "pkg:add-mcp",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
@@ -187,7 +167,6 @@
    "id": "pkg:yahoo-finance2",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade"
    ],
    "name": "yahoo-finance2"
@@ -197,7 +176,6 @@
    "id": "pkg:cline",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade"
    ],
    "name": "cline"
@@ -217,7 +195,6 @@
    "id": "pkg:agent-device",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade"
    ],
    "name": "agent-device"
@@ -238,29 +215,16 @@
    "id": "pkg:supergateway",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
    "name": "supergateway"
   },
   {
-   "downloads": 124945,
-   "id": "pkg:mockserver-client",
-   "kind": "npm",
-   "missing": [
-    "scan",
-    "grade",
-    "task"
-   ],
-   "name": "mockserver-client"
-  },
-  {
    "downloads": 122092,
    "id": "pkg:n8n-mcp",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
@@ -271,7 +235,6 @@
    "id": "pkg:agentdb",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade"
    ],
    "name": "agentdb"
@@ -301,7 +264,6 @@
    "id": "pkg:pi-mcp-adapter",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
@@ -342,7 +304,6 @@
    "id": "pkg:ruvector",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade"
    ],
    "name": "ruvector"
@@ -352,7 +313,6 @@
    "id": "pkg:agentation-mcp",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
@@ -374,7 +334,6 @@
    "id": "pkg:next-devtools-mcp",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
@@ -394,7 +353,6 @@
    "id": "pkg:freee-mcp",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade"
    ],
    "name": "freee-mcp"
@@ -404,7 +362,6 @@
    "id": "pkg:nx-mcp",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade"
    ],
    "name": "nx-mcp"
@@ -414,7 +371,6 @@
    "id": "pkg:ato-mcp",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade",
     "task"
    ],
@@ -434,7 +390,6 @@
    "id": "pkg:agentic-flow",
    "kind": "npm",
    "missing": [
-    "scan",
     "grade"
    ],
    "name": "agentic-flow"
@@ -447,24 +402,43 @@
     "task"
    ],
    "name": "@supabase/mcp-server-supabase"
+  },
+  {
+   "downloads": 74676,
+   "id": "pkg:@wonderwhy-er/desktop-commander",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "@wonderwhy-er/desktop-commander"
+  },
+  {
+   "downloads": 68731,
+   "id": "pkg:mcp-evals",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "mcp-evals"
   }
  ],
  "tiers": {
   "top100": {
    "full": 10,
-   "grade": 25,
+   "grade": 29,
    "n": 100,
-   "scan": 44,
+   "scan": 100,
    "score": 95,
    "task": 34
   },
   "top1000": {
-   "full": 49,
-   "grade": 136,
+   "full": 51,
+   "grade": 140,
    "n": 1000,
-   "scan": 487,
-   "score": 985,
-   "task": 377
+   "scan": 1000,
+   "score": 983,
+   "task": 379
   }
  }
 }

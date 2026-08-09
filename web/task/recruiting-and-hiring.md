@@ -11,15 +11,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | 49 | 2 repos | active |
-| 2 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | 49 | 2 repos | active |
-| 3 | [Vpe Review](https://tashan.sh/capability/skill-alirezarezvani-vpe-review.html) | not scored | 1 repos | active |
-| 4 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | not scored | 1 repos | active |
+| 1 | [Vpe Review](https://tashan.sh/capability/skill-alirezarezvani-vpe-review.html) | not scored | 1 repos | active |
+| 2 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | not scored | 1 repos | active |
+| 3 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | not scored | 1 repos | active |
+| 4 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | not scored | 1 repos | active |
 | 5 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 47 | 43/wk | active |
-| 6 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 61 | 378/wk | active |
+| 6 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 60 | 378/wk | active |
 | 7 | [Freehire](https://tashan.sh/capability/pkg-freehire-mcp.html) | 56 | 204/wk | active |
 | 8 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 55 | 153/wk | active |
-| 9 | [Opentrain](https://tashan.sh/capability/pkg-opentrain-ai-mcp.html) | 47 | 65/wk | active |
+| 9 | [Opentrain](https://tashan.sh/capability/pkg-opentrain-ai-mcp.html) | 47 | 67/wk | active |
 | 10 | [Gtm Hiring Signal Scraper](https://tashan.sh/capability/pkg-mambalabsdev-mcp-gtm-hiring-signal-scraper.html) | 46 | 60/wk | active |
 | 11 | [VerifyRef](https://tashan.sh/capability/pkg-datalinc-verifyref-mcp.html) | 45 | 50/wk | active |
 | 12 | [Hr](https://tashan.sh/capability/pkg-autostackup-hr.html) | 40 | 30/wk | active |

@@ -10,14 +10,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Exploratory data analysis** — [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) · tashan score 66
-- **Dashboards and reporting** — [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) · tashan score 76
+- **Dashboards and reporting** — [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) · tashan score 75
 
 ## Ranked
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 62 | 523 ★ | active |
-| 2 | [Spotify Ads API](https://tashan.sh/capability/plugin-spotify-ads-claude-plugin-spotify-ads-api.html) | 61 | 14 ★ | active |
+| 1 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 61 | 523 ★ | active |
+| 2 | [Spotify Ads API](https://tashan.sh/capability/plugin-spotify-ads-claude-plugin-spotify-ads-api.html) | 60 | 14 ★ | active |
 | 3 | [Statsclaw](https://tashan.sh/capability/plugin-statsclaw-statsclaw-statsclaw.html) | 59 | 87 ★ | active |
 | 4 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 58 | 18 ★ | active |
 | 5 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 66 | 47 ★ | active |
@@ -27,37 +27,37 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 54 | 7 ★ | active |
 | 10 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 53 | 6 ★ | active |
 | 11 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 53 | 12 ★ | active |
-| 12 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 76 | 4k ★ | active |
-| 13 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 72 | 558 ★ | active |
+| 12 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 75 | 4k ★ | active |
+| 13 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 71 | 558 ★ | active |
 | 14 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
 | 15 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
 | 16 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 51 | 59 ★ | active |
 | 17 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 51 | 5 ★ | active |
-| 18 | [Session Report](https://tashan.sh/capability/skill-anthropics-session-report.html) | 50 | 2 repos | active |
-| 19 | [Senior Data Scientist](https://tashan.sh/capability/skill-alirezarezvani-senior-data-scientist.html) | 49 | 2 repos | active |
-| 20 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
-| 21 | [Campaign Analytics](https://tashan.sh/capability/skill-alirezarezvani-campaign-analytics.html) | 49 | 2 repos | active |
-| 22 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 49 | 2 ★ | active |
-| 23 | [Senior Computer Vision](https://tashan.sh/capability/skill-alirezarezvani-senior-computer-vision.html) | 49 | 2 repos | active |
-| 24 | [Ab Test Setup](https://tashan.sh/capability/skill-alirezarezvani-ab-test-setup.html) | 49 | 2 repos | active |
-| 25 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 49 | 2 repos | active |
-| 26 | [Paid Ads](https://tashan.sh/capability/skill-alirezarezvani-paid-ads.html) | 49 | 2 repos | active |
-| 27 | [Fullstory](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 48 | 9 ★ | active |
-| 28 | [Qmt Skills](https://tashan.sh/capability/plugin-dfkai-xtquantai-qmt-skills.html) | 48 | 151 ★ | active |
-| 29 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 47 | 1 ★ | active |
-| 30 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 47 | 0 ★ | active |
-| 31 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
-| 32 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
-| 33 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 45 | 1 ★ | active |
-| 34 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 45 | 3 ★ | active |
-| 35 | [Insight Blueprint](https://tashan.sh/capability/plugin-etoyama-insight-blueprint-insight-blueprint.html) | 44 | 0 ★ | active |
-| 36 | [Holistics Reporting](https://tashan.sh/capability/plugin-holistics-skills-holistics-reporting.html) | 43 | 1 marketplaces | active |
-| 37 | [Honeydew](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew.html) | 43 | 1 marketplaces | active |
-| 38 | [Honeydew AI](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew-ai.html) | 43 | 1 marketplaces | active |
-| 39 | [Idmp Plugin](https://tashan.sh/capability/plugin-taosdata-agent-skills-idmp-plugin.html) | 43 | 2 ★ | active |
-| 40 | [Ts Ddd Repository](https://tashan.sh/capability/plugin-llodev-skills-ts-ddd-repository.html) | 43 | 1 marketplaces | active |
+| 18 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
+| 19 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 49 | 2 ★ | active |
+| 20 | [Fullstory](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 48 | 9 ★ | active |
+| 21 | [Qmt Skills](https://tashan.sh/capability/plugin-dfkai-xtquantai-qmt-skills.html) | 48 | 151 ★ | active |
+| 22 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 48 | 2 repos | active |
+| 23 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 47 | 1 ★ | active |
+| 24 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 47 | 0 ★ | active |
+| 25 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
+| 26 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
+| 27 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 45 | 1 ★ | active |
+| 28 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 45 | 3 ★ | active |
+| 29 | [Insight Blueprint](https://tashan.sh/capability/plugin-etoyama-insight-blueprint-insight-blueprint.html) | 44 | 0 ★ | active |
+| 30 | [Idmp Plugin](https://tashan.sh/capability/plugin-taosdata-agent-skills-idmp-plugin.html) | 43 | 2 ★ | active |
+| 31 | [Ts Ddd Repository](https://tashan.sh/capability/plugin-llodev-skills-ts-ddd-repository.html) | 43 | 1 marketplaces | active |
+| 32 | [Ts Query Cqrs](https://tashan.sh/capability/plugin-llodev-skills-ts-query-cqrs.html) | 43 | 1 marketplaces | active |
+| 33 | [Holistics Reporting](https://tashan.sh/capability/plugin-holistics-skills-holistics-reporting.html) | 43 | 1 marketplaces | active |
+| 34 | [Rill](https://tashan.sh/capability/plugin-rilldata-agent-skills-rill.html) | 43 | 0 ★ | active |
+| 35 | [Holistics Development](https://tashan.sh/capability/plugin-holistics-skills-holistics-development.html) | 43 | 1 marketplaces | active |
+| 36 | [Sap Hana CLI](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cli.html) | 42 | 1 marketplaces | — |
+| 37 | [Sap Sqlscript](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sqlscript.html) | 42 | 1 marketplaces | — |
+| 38 | [Fullstory · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 42 | 1 marketplaces | — |
+| 39 | [Honeydew](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew.html) | 42 | 1 marketplaces | active |
+| 40 | [Honeydew AI](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew-ai.html) | 42 | 1 marketplaces | active |
 
-Showing the top 40 of 150. The full ranked shelf is at https://tashan.sh/role/data-analyst.html.
+Showing the top 40 of 147. The full ranked shelf is at https://tashan.sh/role/data-analyst.html.
 
 ## What these numbers are not
 

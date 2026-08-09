@@ -23,7 +23,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Freshbooks Automation](https://tashan.sh/capability/skill-composiohq-freshbooks-automation.html) | not scored | 1 repos | active |
 | 11 | [Harvest Automation](https://tashan.sh/capability/skill-composiohq-harvest-automation.html) | not scored | 1 repos | active |
 | 12 | [Frihet ERP](https://tashan.sh/capability/pkg-frihet-mcp-server.html) | 65 | 524/wk | active |
-| 13 | [Tebra](https://tashan.sh/capability/pkg-tebra-mcp-server.html) | 66 | 779/wk | active |
+| 13 | [Tebra](https://tashan.sh/capability/pkg-tebra-mcp-server.html) | 65 | 779/wk | active |
 | 14 | [Paysafe](https://tashan.sh/capability/pkg-paysafe-x402.html) | 51 | 63/wk | active |
 | 15 | [Agentcash](https://tashan.sh/capability/pkg-agentcash.html) | 69 | 2k/wk | active |
 | 16 | [Q402](https://tashan.sh/capability/pkg-quackai-q402-mcp.html) | 67 | 766/wk | active |
@@ -42,9 +42,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 29 | [Invovate](https://tashan.sh/capability/pkg-invovate-mcp-server.html) | 43 | 63/wk | active |
 | 30 | [Merit Aktiva](https://tashan.sh/capability/pkg-merit-aktiva-mcp.html) | 43 | 21/wk | active |
 | 31 | [Kaisha](https://tashan.sh/capability/pkg-kaisha-mcp.html) | 43 | 19/wk | active |
-| 32 | [Agentpay](https://tashan.sh/capability/pkg-agentpayxyz-mcp-server.html) | 37 | 57/wk | active |
+| 32 | [Agentpay](https://tashan.sh/capability/pkg-agentpayxyz-mcp-server.html) | 36 | 47/wk | active |
 | 33 | [Tkassa](https://tashan.sh/capability/pkg-theyahia-tkassa-mcp.html) | 35 | 40/wk | active |
-| 34 | [Freeagent](https://tashan.sh/capability/pkg-oxygenbubbles-freeagent-mcp-server.html) | 33 | 43/wk | active |
+| 34 | [Straddle](https://tashan.sh/capability/plugin-straddleio-ai-straddle.html) | 33 | 5 ★ | active |
+| 35 | [Freeagent](https://tashan.sh/capability/pkg-oxygenbubbles-freeagent-mcp-server.html) | 33 | 43/wk | active |
+| 36 | [Nory](https://tashan.sh/capability/pkg-nory-mcp-server.html) | 32 | 92/wk | abandoned |
 
 ## What these numbers are not
 

@@ -13,13 +13,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Swiftui Expert](https://tashan.sh/capability/plugin-avdlee-swiftui-agent-skill-swiftui-expert.html) | 75 | 3k ★ | active |
 | 2 | [Pagespeed Insights](https://tashan.sh/capability/pkg-pagespeed-insights-mcp.html) | 70 | 2k/wk | active |
-| 3 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 64 | 897/wk | active |
-| 4 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 55 | 153/wk | active |
-| 5 | [Lighthouse](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 47 | 580/wk | active |
-| 6 | [Svelte5 Migration Analyst](https://tashan.sh/capability/plugin-gageracer-svelte5-migration-analyst-svelte5-migration-analyst.html) | 40 | 0 ★ | active |
-| 7 | [Deoptkit](https://tashan.sh/capability/pkg-deoptkit.html) | 37 | 7/wk | active |
-| 8 | [Swift Patterns](https://tashan.sh/capability/plugin-efremidze-swift-patterns-skill-swift-patterns.html) | 34 | 8 ★ | active |
-| 9 | [Debugger](https://tashan.sh/capability/pkg-ai-capabilities-suite-mcp-debugger-server.html) | 32 | 130/wk | abandoned |
+| 3 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
+| 4 | [Engineering Discipline](https://tashan.sh/capability/plugin-tmdgusya-engineering-discipline-engineering-discipline.html) | 56 | 124 ★ | active |
+| 5 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 55 | 153/wk | active |
+| 6 | [Lighthouse](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 47 | 580/wk | active |
+| 7 | [Svelte5 Migration Analyst](https://tashan.sh/capability/plugin-gageracer-svelte5-migration-analyst-svelte5-migration-analyst.html) | 40 | 0 ★ | active |
+| 8 | [Deoptkit](https://tashan.sh/capability/pkg-deoptkit.html) | 37 | 7/wk | active |
+| 9 | [Swift Patterns](https://tashan.sh/capability/plugin-efremidze-swift-patterns-skill-swift-patterns.html) | 34 | 8 ★ | active |
+| 10 | [Debugger](https://tashan.sh/capability/pkg-ai-capabilities-suite-mcp-debugger-server.html) | 32 | 130/wk | abandoned |
 
 ## What these numbers are not
 

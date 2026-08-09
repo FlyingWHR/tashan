@@ -11,14 +11,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 70 | 1k/wk | active |
+| 1 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 69 | 1k/wk | active |
 | 2 | [Nomoreide](https://tashan.sh/capability/pkg-nomoreide.html) | 67 | 628/wk | active |
 | 3 | [Gitpin](https://tashan.sh/capability/pkg-gitpin.html) | 62 | 776/wk | active |
 | 4 | [Udacity Commit](https://tashan.sh/capability/pkg-mcp-udacity-commit.html) | 59 | 373/wk | active |
 | 5 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 59 | 171/wk | active |
 | 6 | [Weavatrix Git](https://tashan.sh/capability/pkg-weavatrix-git.html) | 48 | 62/wk | active |
 | 7 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 46 | 50/wk | active |
-| 8 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 45 | 71/wk | active |
+| 8 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 45 | 73/wk | active |
 | 9 | [Bitbucket](https://tashan.sh/capability/pkg-mcp-bitbucket.html) | 45 | 37/wk | active |
 | 10 | [Useclawhub](https://tashan.sh/capability/pkg-useclawhub-mcp.html) | 39 | 17/wk | active |
 | 11 | [New And Noteworthy](https://tashan.sh/capability/plugin-matthewkhouzam-nn-skill-new-and-noteworthy.html) | 28 | 1 marketplaces | — |

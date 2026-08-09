@@ -12,9 +12,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [AI Context](https://tashan.sh/capability/pkg-vibgrate-cli.html) | 71 | 3k/wk | active |
-| 2 | [Agent Nuvira](https://tashan.sh/capability/pkg-agent-nuvira.html) | 74 | 7k/wk | active |
+| 2 | [Agent Nuvira](https://tashan.sh/capability/pkg-agent-nuvira.html) | 73 | 7k/wk | active |
 | 3 | [Gerbil](https://tashan.sh/capability/pkg-tryhamster-gerbil.html) | 69 | 436/wk | active |
-| 4 | [Tuningengines CLI](https://tashan.sh/capability/pkg-tuningengines-cli.html) | 62 | 241/wk | active |
+| 4 | [Tuning Engines - Governed AI Runtime](https://tashan.sh/capability/pkg-tuningengines-cli.html) | 62 | 241/wk | active |
 | 5 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 59 | 234/wk | active |
 | 6 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
 | 7 | [Edgegate](https://tashan.sh/capability/pkg-edgegate-mcp.html) | 47 | 11/wk | active |
