@@ -238,7 +238,14 @@ def board(rows):
             # the name directly above it. The hub kept printing it, so the same capability had a
             # different row anatomy depending on which page you reached it from. That exact
             # divergence (a hub table disagreeing with the board) has shipped here before.
-            '<div class="cap__id">' + esc(CAT_LABEL.get(c.get("category") or "", "")) + "</div></td>"
+            # A CATEGORY IS SHOWN ONLY WHEN SOMETHING BACKS IT. category_basis is None when the
+            # classifier abstained, and printing the label anyway is how /task/audio-production
+            # came to file a lyrics database under "Finance & Crypto" and a text-to-speech toolkit
+            # under "Security". 60% of these labels were right; the row said which with no more
+            # hesitation than a measured download count.
+            + '<div class="cap__id">'
+            + (esc(CAT_LABEL.get(c.get("category") or "", "")) if c.get("category_basis") else "")
+            + "</div></td>"
             '<td><div class="sig' + ("" if t is not None else " sig--none") + '">' + score
             + '<span class="bar" data-w="' + str(int(round(t or 0))) + '"><i></i></span></div></td>'
             '<td class="num">' + ('<span class="ev">' + esc(ev) + "</span>" if ev

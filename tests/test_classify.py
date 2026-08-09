@@ -145,11 +145,32 @@ ok("no category with >=5 held-out examples has zero recall", not dead,
 import json
 export = json.load(open(os.path.join(ROOT, "web", "data", "capabilities.json")))
 caps = export["capabilities"] if isinstance(export, dict) else export
+# TWO DISTINCT FAILURES, TWO DISTINCT CHECKS — and this was one check doing both jobs badly.
+#
+# Concentration asks "are the shelves being used". Abstention asks "how often do we decline to
+# sort at all". They were conflated because `other` was the sink for both, so when the classifier
+# gained a calibrated abstain threshold (NB.predict: 60.3% of labels were wrong before it) the
+# ratchet fired at 47.3% — not because the taxonomy stopped sorting, but because 37.8% of rows now
+# honestly say "we do not know".
+#
+# Splitting them is STRICTER, not laxer. Concentration is now measured over the rows we actually
+# categorise, so it can no longer be diluted by abstaining; and the abstention rate is bounded
+# separately, so a broken model cannot pass by declining to answer.
 dist = collections.Counter(c.get("category") or "(none)" for c in caps)
-top2 = sum(v for _, v in dist.most_common(2)) / max(1, sum(dist.values()))
-ok(f"the two largest categories hold {top2*100:.1f}% of the board, under the {CONCENTRATION_CEIL*100:.0f}% ceiling",
-   top2 <= CONCENTRATION_CEIL,
-   f"{top2*100:.1f}% in {', '.join(c for c, _ in dist.most_common(2))} — the taxonomy is not sorting")
+ABSTAIN_CEIL = 0.42
+abstained = sum(1 for c in caps if not c.get("category_basis"))
+rate = abstained / max(1, len(caps))
+ok(f"the classifier abstains on {rate*100:.1f}% of rows, under the {ABSTAIN_CEIL*100:.0f}% ceiling",
+   rate <= ABSTAIN_CEIL,
+   f"{abstained:,} of {len(caps):,} rows carry no category basis — either the threshold "
+   f"(CLASSIFY_MARGIN) is too high or the model has stopped discriminating")
+
+sorted_caps = [c for c in caps if c.get("category_basis")]
+sdist = collections.Counter(c.get("category") or "(none)" for c in sorted_caps)
+top2 = sum(v for _, v in sdist.most_common(2)) / max(1, sum(sdist.values()))
+ok(f"the two largest categories hold {top2*100:.1f}% of what we DO categorise, under the "
+   f"{CONCENTRATION_CEIL*100:.0f}% ceiling", top2 <= CONCENTRATION_CEIL,
+   f"{top2*100:.1f}% in {', '.join(c for c, _ in sdist.most_common(2))} — the taxonomy is not sorting")
 
 # Every category the site renders must be one the model can actually emit, or the hub is unreachable.
 valid = set(classify.VALID)

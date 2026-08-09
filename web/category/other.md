@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 73 | 1k ★ | active |
-| 2 | [Korean Law](https://tashan.sh/capability/pkg-korean-law-mcp.html) | 72 | 4k/wk | active |
-| 3 | [AI Context](https://tashan.sh/capability/pkg-vibgrate-cli.html) | 71 | 3k/wk | active |
-| 4 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 71 | 3k/wk | active |
-| 5 | [Voyagier](https://tashan.sh/capability/pkg-voyagier-cli.html) | 71 | 1k/wk | active |
-| 6 | [Template Server Name](https://tashan.sh/capability/pkg-azure-mcp-template.html) | 70 | 260/wk | active |
-| 7 | [Courtlistener](https://tashan.sh/capability/pkg-cyanheads-courtlistener-mcp-server.html) | 69 | 1k/wk | active |
-| 8 | [Guesty](https://tashan.sh/capability/pkg-guesty-mcp-server.html) | 68 | 1k/wk | active |
-| 9 | [Code Index](https://tashan.sh/capability/pkg-regsorm-code-index-mcp.html) | 68 | 884/wk | active |
-| 10 | [Airmcp](https://tashan.sh/capability/pkg-airmcp.html) | 68 | 850/wk | active |
-| 11 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 67 | 988/wk | active |
-| 12 | [Hoi4 Agent Tools](https://tashan.sh/capability/pkg-hoi4-agent-tools.html) | 67 | 717/wk | active |
-| 13 | [Claudinho](https://tashan.sh/capability/pkg-claudinho-mcp.html) | 67 | 611/wk | active |
-| 14 | [Lyricscom](https://tashan.sh/capability/pkg-mcp-lyricscom.html) | 66 | 1k/wk | active |
-| 15 | [Open Meteo · cmer81](https://tashan.sh/capability/pkg-open-meteo-mcp-server.html) | 66 | 808/wk | active |
-| 16 | [Ris Austria](https://tashan.sh/capability/pkg-cyanheads-ris-austria-mcp-server.html) | 65 | 822/wk | active |
-| 17 | [Untappd](https://tashan.sh/capability/pkg-untappd-mcp.html) | 65 | 525/wk | active |
-| 18 | [Setlist](https://tashan.sh/capability/pkg-setlist-mcp.html) | 64 | 479/wk | active |
-| 19 | [Basemind](https://tashan.sh/capability/pkg-basemind.html) | 64 | 451/wk | active |
-| 20 | [HemmaBo Host Booking Engine](https://tashan.sh/capability/pkg-hemmabo-mcp-server.html) | 64 | 305/wk | active |
-| 21 | [Feedpik](https://tashan.sh/capability/pkg-feedpik.html) | 63 | 739/wk | active |
-| 22 | [Avito](https://tashan.sh/capability/pkg-avito-mcp.html) | 63 | 319/wk | active |
-| 23 | [Paleobiology](https://tashan.sh/capability/pkg-cyanheads-paleobiology-mcp-server.html) | 62 | 607/wk | active |
-| 24 | [WEEEK (smart)](https://tashan.sh/capability/pkg-weeek-mcp-smart.html) | 62 | 427/wk | active |
-| 25 | [Bettercallclaude](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-bettercallclaude.html) | 61 | 33 ★ | active |
-| 26 | [Guide](https://tashan.sh/capability/plugin-orinachum-onboarding-claude-code-guide.html) | 61 | 117 ★ | active |
-| 27 | [Pdca Framework](https://tashan.sh/capability/plugin-kenjudy-pdca-framework-pdca-framework.html) | 61 | 41 ★ | active |
-| 28 | [Travel Search And Booking API And Skills](https://tashan.sh/capability/plugin-alibaba-flyai-flyai-skill-travel-search-and-booking-api-and-skills.html) | 61 | 880 ★ | active |
-| 29 | [Tock](https://tashan.sh/capability/pkg-tock-mcp.html) | 61 | 439/wk | active |
-| 30 | [Groupon](https://tashan.sh/capability/pkg-groupon-mcp.html) | 61 | 427/wk | active |
-| 31 | [Homes](https://tashan.sh/capability/pkg-homes-mcp.html) | 61 | 290/wk | active |
-| 32 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
-| 33 | [Printkk](https://tashan.sh/capability/pkg-printkk-mcp.html) | 60 | 532/wk | active |
-| 34 | [Trvl](https://tashan.sh/capability/pkg-trvl-mcp.html) | 60 | 370/wk | active |
-| 35 | [Iwantmymtg](https://tashan.sh/capability/pkg-iwantmymtg-mcp.html) | 60 | 211/wk | active |
-| 36 | [Tend](https://tashan.sh/capability/pkg-tend-mcp.html) | 59 | 431/wk | active |
-| 37 | [Synergic Apis](https://tashan.sh/capability/pkg-synergic-apis-mcp.html) | 59 | 351/wk | active |
-| 38 | [Copilot](https://tashan.sh/capability/pkg-apexfdn-copilot-mcp.html) | 59 | 266/wk | active |
-| 39 | [Etix](https://tashan.sh/capability/pkg-etix-mcp.html) | 59 | 258/wk | active |
-| 40 | [Kynth](https://tashan.sh/capability/pkg-kynth-mcp.html) | 58 | 369/wk | active |
+| 1 | [Eve](https://tashan.sh/capability/pkg-eve.html) | 87 | 542k/wk | active |
+| 2 | [Cline](https://tashan.sh/capability/pkg-cline.html) | 86 | 142k/wk | active |
+| 3 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
+| 4 | [Freee](https://tashan.sh/capability/pkg-freee-mcp.html) | 86 | 90k/wk | active |
+| 5 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 80 | 11k ★ | active |
+| 6 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 80 | 89k ★ | active |
+| 7 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 80 | 62k ★ | active |
+| 8 | [N8n](https://tashan.sh/capability/pkg-n8n-mcp.html) | 80 | 122k/wk | active |
+| 9 | [Pi Mcp Adapter](https://tashan.sh/capability/pkg-pi-mcp-adapter.html) | 79 | 111k/wk | active |
+| 10 | [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) | 79 | 9k/wk | active |
+| 11 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 78 | 6k ★ | active |
+| 12 | [Agentic Flow](https://tashan.sh/capability/pkg-agentic-flow.html) | 78 | 79k/wk | active |
+| 13 | [Daft](https://tashan.sh/capability/plugin-eventual-inc-daft-daft.html) | 77 | 6k ★ | active |
+| 14 | [Mempalace](https://tashan.sh/capability/plugin-mempalace-mempalace-mempalace.html) | 77 | 58k ★ | active |
+| 15 | [Claude Cup](https://tashan.sh/capability/pkg-claude-cup.html) | 77 | 4.8m/wk | active |
+| 16 | [Metaharness](https://tashan.sh/capability/pkg-metaharness.html) | 77 | 44k/wk | active |
+| 17 | [Ruflo](https://tashan.sh/capability/pkg-ruflo.html) | 77 | 43k/wk | active |
+| 18 | [Decocms](https://tashan.sh/capability/pkg-decocms.html) | 77 | 29k/wk | active |
+| 19 | [Cloudflare](https://tashan.sh/capability/plugin-cloudflare-skills-cloudflare.html) | 76 | 2k ★ | active |
+| 20 | [Powerbi Modeling](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp.html) | 76 | 13k/wk | active |
+| 21 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 75 | 3k ★ | active |
+| 22 | [Kordoc](https://tashan.sh/capability/pkg-kordoc.html) | 75 | 18k/wk | active |
+| 23 | [Agent Afk](https://tashan.sh/capability/pkg-agent-afk.html) | 75 | 14k/wk | active |
+| 24 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 75 | 13k/wk | active |
+| 25 | [Mdk](https://tashan.sh/capability/pkg-sap-mdk-mcp-server.html) | 75 | 13k/wk | active |
+| 26 | [Agentmail](https://tashan.sh/capability/pkg-agentmail-mcp.html) | 75 | 3k/wk | active |
+| 27 | [Modern Web Guidance](https://tashan.sh/capability/plugin-googlechrome-modern-web-guidance-modern-web-guidance.html) | 74 | 2k ★ | active |
+| 28 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 74 | 2k ★ | active |
+| 29 | [Serve Sim](https://tashan.sh/capability/plugin-evanbacon-serve-sim-serve-sim.html) | 74 | 3k ★ | active |
+| 30 | [Next DevTools](https://tashan.sh/capability/pkg-next-devtools-mcp.html) | 74 | 92k/wk | active |
+| 31 | [Shortcut](https://tashan.sh/capability/pkg-shortcut-mcp.html) | 74 | 13k/wk | active |
+| 32 | [Hevy](https://tashan.sh/capability/pkg-hevy-mcp.html) | 74 | 9k/wk | active |
+| 33 | [Log10x](https://tashan.sh/capability/pkg-log10x-mcp.html) | 74 | 3k/wk | active |
+| 34 | [Vantage](https://tashan.sh/capability/pkg-vantage-mcp-server.html) | 74 | 3k/wk | active |
+| 35 | [Create Mcp Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 74 | 1k/wk | active |
+| 36 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 73 | 1k ★ | active |
+| 37 | [Deeplake Hivemind](https://tashan.sh/capability/plugin-activeloopai-deeplake-claude-code-plugins-deeplake-hivemind.html) | 73 | 2k ★ | active |
+| 38 | [Hivemind](https://tashan.sh/capability/plugin-activeloopai-hivemind-hivemind.html) | 73 | 2k ★ | active |
+| 39 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow.html) | 73 | 10k/wk | active |
+| 40 | [Brilliant Directories](https://tashan.sh/capability/pkg-brilliant-directories-mcp.html) | 73 | 9k/wk | active |
 
-Showing the top 40 of 440. The full ranked shelf is at https://tashan.sh/category/other.html.
+Showing the top 40 of 3,542. The full ranked shelf is at https://tashan.sh/category/other.html.
 
 ## What these numbers are not
 

@@ -156,18 +156,41 @@ class NB:
         return out
 
     def predict(self, feats, margin=0.0):
-        """Abstain to 'other' when the top two classes are too close to call, or there is nothing to go
-        on. An honest 'unsorted' is better than a confident wrong shelf — but the threshold is a number
-        we can tune against measured accuracy, not a reflex."""
+        """Abstain to 'other' when the top two classes are too close to call.
+
+        THE CONFIDENCE MUST BE SCALE-FREE, AND FOR A LONG TIME IT WAS NOT — which is why abstention
+        was switched off and 40% of every category on the site was wrong.
+
+        WCNB divides each weight by the sum of |weights| over the WHOLE vocabulary, so one term
+        contributes about 1/V and a document of three in-vocab words scores ~0.0005. The old code
+        returned `top - second` from those raw scores: across the entire held-out set the maximum gap
+        was 0.001 and the median was 0.000, so ANY threshold above zero abstained on everything
+        (margin 2.0 → 193 of 209) and the only usable setting was 0, meaning never abstain. A softmax
+        does not rescue it either — the posteriors come out at 0.0667 each, exactly uniform over 15
+        classes. The ranking was fine the whole time; only its magnitude was meaningless.
+
+        So confidence is the margin as a FRACTION of the score range across the classes. That is
+        scale-free, and measured against held-out labels it is a real signal:
+
+            threshold   coverage   accuracy of what is kept
+              0.00        100%        60.3%      <- what shipped
+              0.30         70%        71.2%
+              0.40         62%        77.5%
+              0.50         50%        83.8%
+
+        Returns (label, relative_margin) where relative_margin is 0..1.
+        """
         if not feats:
             return "other", 0.0
         s = self.scores(feats)
         if not s:
             return "other", 0.0
         rank = sorted(s.items(), key=lambda kv: -kv[1])
-        top, second = rank[0], (rank[1] if len(rank) > 1 else (None, rank[0][1] - 1))
-        gap = top[1] - second[1]
-        return (top[0] if gap >= margin else "other"), gap
+        if len(rank) < 2:
+            return rank[0][0], 1.0
+        spread = rank[0][1] - rank[-1][1]
+        rel = (rank[0][1] - rank[1][1]) / spread if spread > 0 else 0.0
+        return (rank[0][0] if rel >= margin else "other"), rel
 
 
 # The author's own declared category from .claude-plugin/marketplace.json. 1,361 plugins carry one
@@ -289,11 +312,11 @@ def evaluate(con, margin):
 
 def main():
     con = build.db()
-    margin = float(os.environ.get("CLASSIFY_MARGIN", "0"))
+    margin = float(os.environ.get("CLASSIFY_MARGIN", "0.20"))   # RELATIVE, 0..1 — see NB.predict
 
     if "--eval" in sys.argv:
         print(f"training on data/classify/cat_*.json  (margin={margin})")
-        for mg in (0.0, 2.0, 5.0, 10.0):
+        for mg in (0.0, 0.2, 0.3, 0.4, 0.5):
             acc, ab, n, right, total = evaluate(con, mg)
             print(f"  margin {mg:5.1f}   accuracy {acc*100:5.1f}%   wrongly-abstained {ab:3}/{n}")
         acc, ab, n, right, total = evaluate(con, margin)
@@ -313,14 +336,19 @@ def main():
     tally, samples = collections.Counter(), collections.defaultdict(list)
     dry = "--dry-run" in sys.argv
     for cid, name, title, desc, pkg, repo, topics in rows:
-        cat, _ = model.predict(features(name, title, desc, pkg, repo, topics), margin)
-        # hand labels always win over the model
-        cat = gt.get(cid, cat)
+        cat, conf = model.predict(features(name, title, desc, pkg, repo, topics), margin)
+        # hand labels always win over the model, and are not subject to its threshold
+        basis = "model" if cat != "other" else None
+        if cid in gt:
+            cat, basis, conf = gt[cid], "declared", 1.0
         tally[cat] += 1
         if len(samples[cat]) < 4:
             samples[cat].append((name or "")[:24])
         if not dry:
-            con.execute("UPDATE capabilities SET category=? WHERE id=?", (cat, cid))
+            # RECORDED, NOT JUST DECIDED. Without the basis a reader — and every generator — cannot
+            # tell the author's own word from a coin-flip the model won by a hair.
+            con.execute("UPDATE capabilities SET category=?, category_basis=?, category_conf=? "
+                        "WHERE id=?", (cat, basis, round(conf, 4), cid))
     if not dry:
         con.commit()
     print(f"{'would classify' if dry else 'classified'} {len(rows)} capabilities")
