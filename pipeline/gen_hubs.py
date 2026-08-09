@@ -238,14 +238,17 @@ def board(rows):
             # the name directly above it. The hub kept printing it, so the same capability had a
             # different row anatomy depending on which page you reached it from. That exact
             # divergence (a hub table disagreeing with the board) has shipped here before.
-            # A CATEGORY IS SHOWN ONLY WHEN SOMETHING BACKS IT. category_basis is None when the
-            # classifier abstained, and printing the label anyway is how /task/audio-production
-            # came to file a lyrics database under "Finance & Crypto" and a text-to-speech toolkit
-            # under "Security". 60% of these labels were right; the row said which with no more
-            # hesitation than a measured download count.
-            + '<div class="cap__id">'
-            + (esc(CAT_LABEL.get(c.get("category") or "", "")) if c.get("category_basis") else "")
-            + "</div></td>"
+            # NO CATEGORY ON THE ROW. It sat directly beneath the name and beside the score, in a
+            # table where every other value is measured and checkable — and the classifier is right
+            # about 6 times in 10 (23.5% recall on AI & Agents). A lyrics database read "Finance &
+            # Crypto" with exactly the confidence of a download count.
+            #
+            # Suppressing it only when the model abstained was the first fix and it was half a fix:
+            # the confident-but-wrong labels are the ones that mislead, and no threshold catches
+            # those. A category is a browsing aid, so it now lives where browsing happens — the
+            # category hubs, the index rail, and the dossier's link to its hub — and nowhere that
+            # implies it was measured.
+            + "</td>"
             '<td><div class="sig' + ("" if t is not None else " sig--none") + '">' + score
             + '<span class="bar" data-w="' + str(int(round(t or 0))) + '"><i></i></span></div></td>'
             '<td class="num">' + ('<span class="ev">' + esc(ev) + "</span>" if ev

@@ -10,7 +10,7 @@ These guard the failure modes that actually happened while building this tier:
     exists on disk and is invisible to crawlers
   - a single 375 KB skills page (split into paginated per-repo pages; this keeps it that way)
 """
-import json, os, re, sys, glob
+import collections, json, os, re, sys, glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "pipeline"))
@@ -69,9 +69,33 @@ if by_cat:
 
 print()
 print("# capability -> hub link (the flywheel edge)")
-sample = sorted(glob.glob(os.path.join(WEB, "capability", "*.html")))[:40]
+# THE POINT OF THIS CHECK IS THAT NO HUB IS AN ORPHAN, not that every dossier carries a link.
+# It used to demand 90% of sampled dossiers link out, which was the same thing while every
+# capability asserted a category. Now that the classifier abstains — it is right 6 times in 10, so
+# a guessed shelf is not worth printing — 30% of dossiers correctly claim none, and demanding the
+# link back would mean inventing a category to satisfy a test.
+#
+# So: a capability that HAS a category must link to its hub (the flywheel edge), and separately
+# every published hub must actually be reachable from capabilities. The second is the real
+# invariant and was never checked directly.
+_cat_of = {c["slug"]: c.get("category")
+           for c in export["capabilities"] if c.get("category_basis") and c.get("slug")}
+_inbound = collections.Counter()
+for _p in sorted(glob.glob(os.path.join(WEB, "capability", "*.html"))):
+    for _m in re.findall(r'href="/category/([a-z0-9-]+)', open(_p, encoding="utf-8").read()):
+        _inbound[_m] += 1
+# Page 1 only. A capability links to /category/design.html; design-2 is reached from design's
+# own pagination, so demanding inbound capability links on it flags 74 perfectly healthy pages.
+_orphans = [os.path.basename(h)[:-5] for h in glob.glob(os.path.join(WEB, "category", "*.html"))
+            if not re.search(r"-\d+$", os.path.basename(h)[:-5])
+            and not _inbound[os.path.basename(h)[:-5]]]
+check("no category hub is reachable only from the sitemap", not _orphans,
+      "%d hub(s) with no inbound capability link: %s" % (len(_orphans), _orphans[:4]))
+
+sample = [p for p in sorted(glob.glob(os.path.join(WEB, "capability", "*.html")))[:120]
+          if os.path.basename(p)[:-5] in _cat_of][:40]
 linked = sum(1 for p in sample if '/category/' in open(p).read())
-check("capability pages link to their category hub", linked >= len(sample) * 0.9,
+check("a capability WITH a category links to its hub", not sample or linked >= len(sample) * 0.9,
       "%d/%d" % (linked, len(sample)))
 
 print()

@@ -410,7 +410,7 @@ def summary(c, gen=""):
     # Without this the hubs are orphans that only the sitemap knows about.
     cat = ('<p class="mono fs-sm"><b>Category:</b> <a class="link" href="/category/'
            + esc(c["category"]) + '.html">' + esc(CAT.get(c["category"], c["category"]))
-           + " — see all ranked &rsaquo;</a></p>") if c.get("category") else ""
+           + " — see all ranked &rsaquo;</a></p>") if c.get("category_basis") else ""
     # Same edge for the task axis: what WORK is this for. Category says what it touches; this says what
     # you would be doing when you reach for it, and it is the link that keeps /task/ hubs out of orphan
     # status. Only published tasks are linked — TASKS_PUBLISHED holds the ones that cleared gen_hubs'

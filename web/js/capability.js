@@ -60,7 +60,10 @@
         // The id led this line and was a longer restatement of the <h1> directly above it, with the
         // same string a third time in the install command. Machine key -> links row; see prerender.py.
         '<div class="cid"><span class="tag">' + esc(kindLabel(c.kind)) + '</span>' +
-          (c.category && CAT[c.category] ? ' <a class="cattag cattag--link" href="/?cat=' + esc(c.category) + '">' + esc(CAT[c.category]) + '</a>' : '') +
+          // Gated on category_basis, not on category: an abstained row carries 'other' and would
+          // otherwise link to a shelf nobody put it on. Mirrors prerender.py — the client replaces
+          // the server render and the two have drifted three times.
+          (c.category && c.category_basis && CAT[c.category] ? ' <a class="cattag cattag--link" href="/?cat=' + esc(c.category) + '">' + esc(CAT[c.category]) + '</a>' : '') +
           (officialOrg(c) ? ' <span class="official">✓ ' + esc(officialOrg(c)) + ' · official</span>' : '') +
           (c.single_maintainer ? ' <span class="riskflag" title="One primary maintainer — a bus-factor risk">◑ single-maintainer</span>' : '') +
           (c.npm_deprecated ? ' &nbsp;·&nbsp; <span class="fresh fresh--cold">deprecated</span>' : '') +
