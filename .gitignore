@@ -24,3 +24,4 @@ key.pem
 # 98.8 MiB against GitHub every-blob 100 MiB limit while being re-derived nightly. The durable
 # record is data/history/*.csv.gz, which IS committed; losing the R2 object costs a re-fetch.
 data/tashan.db
+data/.db_store_stamp

@@ -38,6 +38,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "tashan.db")
 BUCKET = os.environ.get("TASHAN_DB_BUCKET", "tashan-state")
 KEY = os.environ.get("TASHAN_DB_KEY", "tashan.db")
+# A tiny sidecar object holding the generation of whatever is in the bucket, plus the local memory
+# of which generation we last saw. Optimistic concurrency, and it exists because of a real incident:
+# see push().
+STAMP_KEY = KEY + ".stamp"
+STAMP_LOCAL = os.path.join(ROOT, "data", ".db_store_stamp")
 WRANGLER = ["npx", "--yes", "wrangler@3"]
 
 
@@ -96,6 +101,24 @@ def _reason(r):
     return (lines[0][:120] if lines else "no output")
 
 
+def _remote_stamp():
+    """The generation string currently in the bucket, or None if there is none / it cannot be read."""
+    tmp = STAMP_LOCAL + ".remote"
+    r = _run(["r2", "object", "get", f"{BUCKET}/{STAMP_KEY}", "--file", tmp])
+    try:
+        return open(tmp, encoding="utf-8").read().strip() if r.returncode == 0 else None
+    except OSError:
+        return None
+    finally:
+        if os.path.exists(tmp):
+            os.remove(tmp)
+
+
+def _write_stamp(value):
+    with open(STAMP_LOCAL, "w", encoding="utf-8") as f:
+        f.write(value)
+
+
 def pull():
     """Fetch the cache. Never fatal: a missing object is a first run, and a failed fetch on a
     machine that already has a database is a reason to warn, not to stop measuring."""
@@ -113,6 +136,8 @@ def pull():
               f"and from data/history ({detail[0][:90]})")
         return 0
     os.replace(tmp, DB)
+    # Remember which generation we started from, so push() can tell whether anyone moved it since.
+    _write_stamp(_remote_stamp() or "")
     print(f"  db_store: pulled {os.path.getsize(DB) / 1048576:.1f} MiB from r2://{BUCKET}/{KEY}")
     return 0
 
@@ -132,6 +157,26 @@ def push():
     if not usable():
         print("  db_store: refusing to push — data/tashan.db is missing or has no rows")
         return 1
+    # REFUSE TO OVERWRITE SOMEONE ELSE'S NEWER STATE.
+    #
+    # On 9 Aug 2026 the nightly run finished at 17:59:10, pushed its database, and 41 seconds later
+    # a laptop pushed a copy from earlier in the day straight over the top of it. One mutable object
+    # and no check: the newer state was simply gone, and the only reason nothing was lost is that
+    # data/security_cache.json and data/history/*.csv.gz are committed to git, so the database could
+    # be rebuilt from them. That is a backup working by accident, not a design.
+    #
+    # So the bucket carries a generation stamp, pull() records which one it saw, and push() refuses
+    # when the bucket has moved on since. TASHAN_DB_FORCE=1 overrides for the case where the local
+    # copy really is the one you want.
+    seen = open(STAMP_LOCAL, encoding="utf-8").read().strip() if os.path.exists(STAMP_LOCAL) else None
+    remote = _remote_stamp()
+    if remote and seen is not None and remote != seen and os.environ.get("TASHAN_DB_FORCE") != "1":
+        print(f"  db_store: REFUSING to push — the bucket moved since this copy was pulled")
+        print(f"            bucket is at {remote}, this machine last saw {seen or '(never pulled)'}")
+        print(f"            run `db_store.py pull` first, or TASHAN_DB_FORCE=1 to overwrite it")
+        return 1
+
+    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ") + "-" + str(os.getpid())
     mib = os.path.getsize(DB) / 1048576
     for key in (KEY, f"backup/{datetime.now(timezone.utc).strftime('%a').lower()}.db"):
         r = _run(["r2", "object", "put", f"{BUCKET}/{key}", "--file", DB,
@@ -144,6 +189,13 @@ def push():
             print("           " + _reason(r))
             return 1
         print(f"  db_store: pushed {mib:.1f} MiB to r2://{BUCKET}/{key}")
+    # Stamp last: a reader that sees the new generation is guaranteed the object behind it landed.
+    with open(STAMP_LOCAL + ".out", "w", encoding="utf-8") as f:
+        f.write(stamp)
+    if _run(["r2", "object", "put", f"{BUCKET}/{STAMP_KEY}", "--file", STAMP_LOCAL + ".out",
+             "--content-type", "text/plain"]).returncode == 0:
+        _write_stamp(stamp)
+    os.remove(STAMP_LOCAL + ".out")
     return 0
 
 
