@@ -2081,7 +2081,15 @@ def export(con):
     }
     out = os.path.join(ROOT, "web", "data", "capabilities.json")
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    json.dump(payload, open(out, "w"), indent=2)
+    # MINIFIED, and it had to be: at indent=2 this file reached 25.8 MiB and Cloudflare Pages
+    # refuses any single file over 25 MiB — the whole deploy fails, not just the file. 10,755 rows
+    # of ~60 fields is ~645,000 lines whose only content is leading whitespace, against 8.6 MiB of
+    # actual values.
+    #
+    # Nothing reads this by eye. The site runs on data/index.json and data/board.json (see
+    # [[tashan-runtime-never-fetches-full-export]]); this is the bulk download, and anyone opening
+    # it has a tool. Pages gzips it in transit either way, so the cost was purely the hard limit.
+    json.dump(payload, open(out, "w"), separators=(",", ":"))
 
     # SLIM index — only the ~15 fields the board / ticker / ⌘K palette actually render. The heavy per-cap
     # fields (co_used, description, expertise_note, gh_topics, install, repo-health, community) are dropped;

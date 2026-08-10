@@ -531,6 +531,20 @@ def main():
     check(f"no page is a wall of text (max {WALL_ALLOW} paragraphs over {PROSE_MAX} chars)",
           not _walls, "; ".join(_walls[:6]))
 
+    # ---- Cloudflare Pages hard limits ----------------------------------------------------------
+    # A single file over 25 MiB fails the WHOLE deploy, not just that file, and the error arrives
+    # after wrangler has walked the tree — the same shape as the 20,000-file ceiling already
+    # guarded below. data/capabilities.json reached 25.8 MiB purely from indent=2 whitespace across
+    # 10,755 rows; the values in it were 8.6 MiB. Minifying took it to 19.1, and this is the guard
+    # that says so before a deploy does.
+    _big = []
+    for _f in glob.glob(os.path.join(ROOT, "web", "**", "*"), recursive=True):
+        if os.path.isfile(_f):
+            _mib = os.path.getsize(_f) / 1048576
+            if _mib > 22:
+                _big.append(f"{os.path.relpath(_f, ROOT)} {_mib:.1f} MiB")
+    check("no file is near Cloudflare Pages' 25 MiB per-file limit", not _big, "; ".join(_big[:3]))
+
     # A 404.html is what makes Pages return a real 404. Without it Pages falls back to serving
     # index.html with status 200, so every mistyped URL was a soft 404 a crawler would happily index.
     check("404.html exists (else Pages soft-404s every unknown URL as 200 + the homepage)",
