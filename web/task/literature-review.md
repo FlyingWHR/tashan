@@ -13,8 +13,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
 | 2 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 68 | 78 ★ | active |
-| 3 | [Phd Deepread](https://tashan.sh/capability/plugin-heleninsights-dot-phd-deepread-workflow-phd-deepread.html) | 51 | 56 ★ | active |
-| 4 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 49 | 2 repos | active |
+| 3 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 57 | 6 repos | active |
+| 4 | [Phd Deepread](https://tashan.sh/capability/plugin-heleninsights-dot-phd-deepread-workflow-phd-deepread.html) | 50 | 56 ★ | active |
 | 5 | [Research Co Pilot](https://tashan.sh/capability/plugin-marazii-research-co-pilot-research-co-pilot.html) | 46 | 5 ★ | active |
 | 6 | [Arx](https://tashan.sh/capability/plugin-eric-tramel-arx-arx.html) | 41 | 7 ★ | active |
 | 7 | [Paper Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-paper-interpreter.html) | 40 | 1 marketplaces | active |
@@ -25,9 +25,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Litreview](https://tashan.sh/capability/skill-alirezarezvani-litreview.html) | not scored | 1 repos | active |
 | 13 | [Patent](https://tashan.sh/capability/skill-alirezarezvani-patent.html) | not scored | 1 repos | active |
 | 14 | [Syllabus](https://tashan.sh/capability/skill-alirezarezvani-syllabus.html) | not scored | 1 repos | active |
-| 15 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 76 | 5k ★ | active |
+| 15 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 75 | 5k ★ | active |
 | 16 | [Bettercallclaude](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-bettercallclaude.html) | 61 | 33 ★ | active |
-| 17 | [Bettercallclaude Italia](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-italia-bettercallclaude-italia.html) | 56 | 41 ★ | active |
+| 17 | [Bettercallclaude Italia](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-italia-bettercallclaude-italia.html) | 55 | 41 ★ | active |
 | 18 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 147 ★ | active |
 | 19 | [Pubcrawl](https://tashan.sh/capability/pkg-pharmatools-pubcrawl.html) | 59 | 334/wk | active |
 | 20 | [Openalex Research](https://tashan.sh/capability/pkg-openalex-research-mcp.html) | 52 | 224/wk | active |

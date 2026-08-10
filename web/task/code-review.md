@@ -13,7 +13,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Roundtable](https://tashan.sh/capability/plugin-wan-huiyan-agent-review-panel-roundtable.html) | 62 | 30 ★ | active |
 | 2 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 61 | 23 ★ | active |
-| 3 | [Archy](https://tashan.sh/capability/plugin-hslee16-archy-archy.html) | 54 | 6 ★ | active |
+| 3 | [Archy](https://tashan.sh/capability/plugin-hslee16-archy-archy.html) | 53 | 6 ★ | active |
 | 4 | [Temper](https://tashan.sh/capability/plugin-galando-temper-temper.html) | 51 | 13 ★ | active |
 | 5 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 74 | 2k ★ | active |
 | 6 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 73 | 1k ★ | active |
@@ -26,14 +26,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Monocle](https://tashan.sh/capability/plugin-josephschmitt-monocle-monocle.html) | 58 | 70 ★ | active |
 | 14 | [Devflow](https://tashan.sh/capability/plugin-the01geek-devflow-autopilot-devflow.html) | 58 | 17 ★ | active |
 | 15 | [Consensus Rnd](https://tashan.sh/capability/plugin-chronoaiproject-consensus-rnd-consensus-rnd.html) | 57 | 23 ★ | active |
-| 16 | [AI Craftsman Superpowers](https://tashan.sh/capability/plugin-buldee-ai-craftsman-superpowers-ai-craftsman-superpowers.html) | 56 | 35 ★ | active |
+| 16 | [AI Craftsman Superpowers](https://tashan.sh/capability/plugin-buldee-ai-craftsman-superpowers-ai-craftsman-superpowers.html) | 55 | 35 ★ | active |
 | 17 | [Supergraph](https://tashan.sh/capability/plugin-datit309-supergraph-supergraph.html) | 52 | 22 ★ | active |
 | 18 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 80 | 191k ★ | active |
 | 19 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
-| 20 | [Review](https://tashan.sh/capability/skill-alirezarezvani-review.html) | 60 | 8 repos | active |
-| 21 | [Requesting Code Review](https://tashan.sh/capability/skill-obra-requesting-code-review.html) | 57 | 5 repos | active |
-| 22 | [Claude Deep Review](https://tashan.sh/capability/plugin-liatrio-labs-claude-deep-review-claude-deep-review.html) | 56 | 11 ★ | active |
-| 23 | [Receiving Code Review](https://tashan.sh/capability/skill-obra-receiving-code-review.html) | 55 | 4 repos | active |
+| 20 | [Review](https://tashan.sh/capability/skill-alirezarezvani-review.html) | 57 | 6 repos | active |
+| 21 | [Claude Deep Review](https://tashan.sh/capability/plugin-liatrio-labs-claude-deep-review-claude-deep-review.html) | 56 | 11 ★ | active |
+| 22 | [Receiving Code Review](https://tashan.sh/capability/skill-obra-receiving-code-review.html) | 49 | 2 repos | active |
+| 23 | [Requesting Code Review](https://tashan.sh/capability/skill-obra-requesting-code-review.html) | 49 | 2 repos | active |
 | 24 | [Pr Comments Resolver](https://tashan.sh/capability/plugin-dropelikeit-pr-comments-resolver-pr-comments-resolver.html) | 49 | 2 ★ | active |
 | 25 | [Cubic](https://tashan.sh/capability/plugin-mrge-io-skills-cubic.html) | 49 | 2 ★ | active |
 | 26 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 47 | 6 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Sdlc Wizard](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard.html) | 44 | 1 marketplaces | active |
 | 40 | [Sdlc Wizard Cowork](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard-cowork.html) | 44 | 1 marketplaces | active |
 
-Showing the top 40 of 109. The full ranked shelf is at https://tashan.sh/task/code-review.html.
+Showing the top 40 of 112. The full ranked shelf is at https://tashan.sh/task/code-review.html.
 
 ## What these numbers are not
 

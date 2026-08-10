@@ -11,14 +11,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | 49 | 2 repos | active |
-| 2 | [Founder Coach](https://tashan.sh/capability/skill-alirezarezvani-founder-coach.html) | 49 | 2 repos | active |
-| 3 | [Cv](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-cv.html) | 43 | 1 marketplaces | active |
-| 4 | [LinkedIn Apply](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-apply.html) | 43 | 1 marketplaces | active |
+| 1 | [Cv](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-cv.html) | 43 | 1 marketplaces | active |
+| 2 | [LinkedIn Apply](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-apply.html) | 43 | 1 marketplaces | active |
+| 3 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | not scored | 1 repos | active |
+| 4 | [Founder Coach](https://tashan.sh/capability/skill-alirezarezvani-founder-coach.html) | not scored | 1 repos | active |
 | 5 | [Meeting Analyzer](https://tashan.sh/capability/skill-alirezarezvani-meeting-analyzer.html) | not scored | 1 repos | active |
-| 6 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 47 | 43/wk | active |
+| 6 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 46 | 43/wk | active |
 | 7 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 71 | 3k/wk | active |
-| 8 | [Jobo Job Search](https://tashan.sh/capability/pkg-jobo-job-search-mcp.html) | 57 | 300/wk | active |
+| 8 | [Jobo Job Search](https://tashan.sh/capability/pkg-jobo-job-search-mcp.html) | 56 | 300/wk | active |
 | 9 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 55 | 153/wk | active |
 | 10 | [JobYap Job Search](https://tashan.sh/capability/pkg-jobyap-mcp.html) | 52 | 167/wk | active |
 | 11 | [JobGPT - Job Search Automation & Auto Apply](https://tashan.sh/capability/pkg-jobgpt-mcp-server.html) | 40 | 84/wk | active |

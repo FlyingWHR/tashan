@@ -11,33 +11,33 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 62 | 523 ★ | active |
+| 1 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 61 | 523 ★ | active |
 | 2 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 66 | 47 ★ | active |
 | 3 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 54 | 7 ★ | active |
 | 4 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 53 | 6 ★ | active |
-| 5 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 76 | 4k ★ | active |
-| 6 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 72 | 558 ★ | active |
-| 7 | [Senior Data Scientist](https://tashan.sh/capability/skill-alirezarezvani-senior-data-scientist.html) | 49 | 2 repos | active |
-| 8 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
-| 9 | [Fullstory](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 48 | 9 ★ | active |
-| 10 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 47 | 1 ★ | active |
-| 11 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 45 | 1 ★ | active |
-| 12 | [Insight Blueprint](https://tashan.sh/capability/plugin-etoyama-insight-blueprint-insight-blueprint.html) | 44 | 0 ★ | active |
-| 13 | [Holistics Reporting](https://tashan.sh/capability/plugin-holistics-skills-holistics-reporting.html) | 43 | 1 marketplaces | active |
-| 14 | [Honeydew](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew.html) | 43 | 1 marketplaces | active |
-| 15 | [Honeydew AI](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew-ai.html) | 43 | 1 marketplaces | active |
-| 16 | [Fullstory · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 42 | 1 marketplaces | — |
-| 17 | [Xlsx · anthropics](https://tashan.sh/capability/skill-anthropics-xlsx.html) | not scored | 1 repos | active |
-| 18 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | not scored | 1 repos | active |
-| 19 | [Product Analytics](https://tashan.sh/capability/skill-alirezarezvani-product-analytics.html) | not scored | 1 repos | active |
-| 20 | [Excel Automation](https://tashan.sh/capability/skill-composiohq-excel-automation.html) | not scored | 1 repos | active |
-| 21 | [Googlebigquery Automation](https://tashan.sh/capability/skill-composiohq-googlebigquery-automation.html) | not scored | 1 repos | active |
+| 5 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 75 | 4k ★ | active |
+| 6 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 71 | 558 ★ | active |
+| 7 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
+| 8 | [Fullstory](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 48 | 9 ★ | active |
+| 9 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 47 | 1 ★ | active |
+| 10 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 45 | 1 ★ | active |
+| 11 | [Insight Blueprint](https://tashan.sh/capability/plugin-etoyama-insight-blueprint-insight-blueprint.html) | 44 | 0 ★ | active |
+| 12 | [Fullstory · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 42 | 1 marketplaces | — |
+| 13 | [Holistics Reporting](https://tashan.sh/capability/plugin-holistics-skills-holistics-reporting.html) | 42 | 1 marketplaces | active |
+| 14 | [Honeydew](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew.html) | 42 | 1 marketplaces | active |
+| 15 | [Honeydew AI](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew-ai.html) | 42 | 1 marketplaces | active |
+| 16 | [Xlsx · anthropics](https://tashan.sh/capability/skill-anthropics-xlsx.html) | not scored | 1 repos | active |
+| 17 | [Excel Automation](https://tashan.sh/capability/skill-composiohq-excel-automation.html) | not scored | 1 repos | active |
+| 18 | [Googlebigquery Automation](https://tashan.sh/capability/skill-composiohq-googlebigquery-automation.html) | not scored | 1 repos | active |
+| 19 | [Senior Data Scientist](https://tashan.sh/capability/skill-alirezarezvani-senior-data-scientist.html) | not scored | 1 repos | active |
+| 20 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | not scored | 1 repos | active |
+| 21 | [Product Analytics](https://tashan.sh/capability/skill-alirezarezvani-product-analytics.html) | not scored | 1 repos | active |
 | 22 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 64 | 30 ★ | active |
 | 23 | [ClickHouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 55 | 5 ★ | active |
 | 24 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 147 ★ | active |
 | 25 | [Appfigures](https://tashan.sh/capability/pkg-appfigures-cli.html) | 59 | 159/wk | active |
 | 26 | [Yandex Metrica](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 53 | 146/wk | active |
-| 27 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 75 | 11k/wk | active |
+| 27 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 74 | 11k/wk | active |
 | 28 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
 | 29 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 64 | 865/wk | active |
 | 30 | [Scopewalker](https://tashan.sh/capability/pkg-scopewalker-mcp.html) | 59 | 370/wk | active |

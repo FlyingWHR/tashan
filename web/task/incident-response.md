@@ -13,17 +13,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 69 | 101 ★ | active |
 | 2 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
-| 3 | [Incident Response](https://tashan.sh/capability/skill-alirezarezvani-incident-response.html) | 49 | 2 repos | active |
-| 4 | [Chaos Engineering](https://tashan.sh/capability/skill-alirezarezvani-chaos-engineering.html) | 49 | 2 repos | active |
-| 5 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 49 | 6 ★ | active |
-| 6 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 48 | 3 ★ | active |
-| 7 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
-| 8 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 41 | 1 marketplaces | active |
-| 9 | [Copaw Ops](https://tashan.sh/capability/plugin-chujianyun-skills-copaw-ops.html) | 40 | 1 marketplaces | active |
-| 10 | [Openclaw Ops](https://tashan.sh/capability/plugin-chujianyun-skills-openclaw-ops.html) | 40 | 1 marketplaces | active |
-| 11 | [Hermes Ops](https://tashan.sh/capability/plugin-chujianyun-skills-hermes-ops.html) | 40 | 1 marketplaces | active |
-| 12 | [Incident Commander](https://tashan.sh/capability/skill-alirezarezvani-incident-commander.html) | not scored | 1 repos | active |
-| 13 | [Threat Detection](https://tashan.sh/capability/skill-alirezarezvani-threat-detection.html) | not scored | 1 repos | active |
+| 3 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 49 | 6 ★ | active |
+| 4 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 48 | 3 ★ | active |
+| 5 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 48 | 3 ★ | active |
+| 6 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
+| 7 | [Copaw Ops](https://tashan.sh/capability/plugin-chujianyun-skills-copaw-ops.html) | 40 | 1 marketplaces | active |
+| 8 | [Openclaw Ops](https://tashan.sh/capability/plugin-chujianyun-skills-openclaw-ops.html) | 40 | 1 marketplaces | active |
+| 9 | [Hermes Ops](https://tashan.sh/capability/plugin-chujianyun-skills-hermes-ops.html) | 40 | 1 marketplaces | active |
+| 10 | [Incident Commander](https://tashan.sh/capability/skill-alirezarezvani-incident-commander.html) | not scored | 1 repos | active |
+| 11 | [Incident Response](https://tashan.sh/capability/skill-alirezarezvani-incident-response.html) | not scored | 1 repos | active |
+| 12 | [Threat Detection](https://tashan.sh/capability/skill-alirezarezvani-threat-detection.html) | not scored | 1 repos | active |
+| 13 | [Chaos Engineering](https://tashan.sh/capability/skill-alirezarezvani-chaos-engineering.html) | not scored | 1 repos | active |
 | 14 | [Runbook Generator](https://tashan.sh/capability/skill-alirezarezvani-runbook-generator.html) | not scored | 1 repos | active |
 | 15 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 57 | 18 ★ | active |
 | 16 | [Debugbundle](https://tashan.sh/capability/pkg-debugbundle-mcp.html) | 58 | 190/wk | active |

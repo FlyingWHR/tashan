@@ -11,8 +11,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 70 | 1k/wk | active |
-| 2 | [Nomoreide](https://tashan.sh/capability/pkg-nomoreide.html) | 67 | 628/wk | active |
+| 1 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 69 | 1k/wk | active |
+| 2 | [Nomoreide](https://tashan.sh/capability/pkg-nomoreide.html) | 66 | 628/wk | active |
 | 3 | [Gitpin](https://tashan.sh/capability/pkg-gitpin.html) | 62 | 776/wk | active |
 | 4 | [Udacity Commit](https://tashan.sh/capability/pkg-mcp-udacity-commit.html) | 59 | 373/wk | active |
 | 5 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 59 | 171/wk | active |
