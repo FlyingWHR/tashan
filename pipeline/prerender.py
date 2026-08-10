@@ -125,7 +125,10 @@ def desc_for(c):
 
     claim = ""
     if c.get("tashan_score") is not None:
-        claim = "tashan score " + str(c["tashan_score"]) + "/100"
+        # int, not float. Every description read "tashan score 34.0/100" — the score is stored as a
+        # REAL and printed raw, so a trailing .0 shipped in the one string a search result quotes.
+        _s = c["tashan_score"]
+        claim = "tashan score " + (str(int(_s)) if float(_s) == int(_s) else str(_s)) + "/100"
         if c.get("expertise_verdict"):
             claim += " · expertise: " + c["expertise_verdict"]
         claim += "."
@@ -178,14 +181,14 @@ def _selfcheck():
     for n in (0, 50, 240, 299, 300, 500):
         out = desc_for({"description": "word " * (n // 5) or None, "tashan_score": 37.0,
                         "name": "x", "label": "X"})
-        assert out.endswith("tashan score 37.0/100."), (n, out[-40:])
+        assert out.endswith("tashan score 37/100."), (n, out[-40:])
         assert len(out) <= MAX_DESC, (n, len(out))
         assert ".…" not in out and "…." not in out and ".." not in out, (n, out[-40:])
     # a description that already ends in an ellipsis must not collect a second full stop
     pre = desc_for({"description": "Already cut short…", "tashan_score": 5.0, "name": "x", "label": "X"})
-    assert pre == "Already cut short… tashan score 5.0/100.", pre
+    assert pre == "Already cut short… tashan score 5/100.", pre
     assert desc_for({"description": "Short.", "tashan_score": 12.0, "name": "x", "label": "X"}) \
-        == "Short. tashan score 12.0/100."
+        == "Short. tashan score 12/100."
     return True
 
 
@@ -806,7 +809,41 @@ def thin(c):
 
 def page(c, gen):
     n = disp(c); url = BASE + chrome.canon("/capability/" + c["slug"] + ".html")
-    title = n + " — tashan score " + (str(c["tashan_score"]) if c.get("tashan_score") is not None else "—") + " · tashan"
+    # THE TITLE MUST CONTAIN THE STRING PEOPLE TYPE. Search Console's first query report is almost
+    # entirely identifier lookups — `registry.npmjs.org/kordoc`, `ussumant/llm-wiki-compiler`,
+    # `contextd` — people checking what an unknown package IS. That is exactly what a dossier
+    # answers, and the one query that visibly worked did so because the repo path is literally on
+    # the page.
+    #
+    # 3,328 titles did not contain their own package identifier: the title said "Supabase" while the
+    # query is `@supabase/mcp-server-supabase`, "Context7" against `@upstash/context7-mcp`,
+    # "Firecrawl" against `firecrawl-mcp`. The friendly label is better to read and worse to find,
+    # so the identifier goes in parentheses after it — kept out of the lead so the human name is
+    # still what a person sees first.
+    #
+    # Dropped when it does not fit: tests/test_site.py caps a title at 62 characters, and a title
+    # truncated by Google helps nobody. The identifier is also in the description and in the body,
+    # so a long scoped name is findable either way.
+    sc = c.get("tashan_score")
+    # int, not float: every one of 8,416 titles read "tashan score 75.0", and a trailing .0 in a
+    # search result is the kind of detail that makes a measurement look unconsidered.
+    score = (str(int(sc)) if sc is not None and float(sc) == int(sc) else str(sc)) if sc is not None else "—"
+    pkg = c.get("npm_pkg") or ""
+    ident = (" (" + pkg + ")") if pkg and pkg.lower() != n.lower() else ""
+    title = n + ident + " — tashan score " + score + " · tashan"
+    # 90, NOT 62. The 62-character rule is about what Google DISPLAYS, and it applies to the
+    # handful of hand-written pages where the whole title is a headline. Here the title's first job
+    # is to CONTAIN the string somebody typed: the query report is identifier lookups, and
+    # `@supabase/mcp-server-supabase` alone is 28 characters. A title Google truncates in the SERP
+    # still matches on every word it holds — dropping the identifier to look tidy loses the match
+    # itself, which is the only reason the page ranks at all.
+    if len(title) > 90:
+        title = n + " — tashan score " + score + " · tashan"
+    # NOT TRUNCATED FURTHER. Cutting the label to fit produced "0nMCP — Universal AI API…" and
+    # tests/test_consistency.py caught it on 105 pages: a title that no longer contains the
+    # capability's name is a worse failure than a long one, because the page stops being findable
+    # by the thing it is about. Google truncates in the SERP either way, and it truncates at the
+    # pixel — the string still has to name the row.
     d = esc(desc_for(c))
     return ("<!doctype html>\n<html lang=\"en\">\n<head>\n"
         '<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
