@@ -435,6 +435,34 @@ def pro_panel(c):
         "</section>")
 
 
+DESC_SHOWN = 700
+
+
+def clip_desc(t):
+    """The author's description, bounded — for reading first, weight second.
+
+    Sixteen exported rows run past 1,200 characters and one reaches 1,647, rendered as a single
+    unbroken paragraph directly under the title. That is the wall-of-text problem this codebase
+    already fixed everywhere else, and it also multiplies: the description appears three times per
+    page — visible, in the inline payload the client re-renders from, and in the structured data —
+    so a long one is the difference between a 16 KB page and a 30 KB one. The nightly went red twice
+    on exactly that.
+
+    Cut on a sentence end where there is one, otherwise a word boundary; never mid-word. The FULL
+    text is untouched in the export, in the .md twin and on the source page, so nothing is lost for
+    an agent or for anyone who wants all of it — only the first screen is protected.
+    """
+    t = (t or "").strip()
+    if len(t) <= DESC_SHOWN:
+        return t
+    cut = t.rfind(". ", 0, DESC_SHOWN)
+    if cut < DESC_SHOWN * 0.5:
+        cut = t.rfind(" ", 0, DESC_SHOWN)
+    if cut <= 0:  # no boundary at all (one long token) — cut flat, never grow
+        cut = DESC_SHOWN
+    return t[:cut].rstrip(" ,;:—-") + ("" if t[cut - 1:cut] == "." else ".") + " …"
+
+
 def summary(c, gen=""):
     """Server-rendered content crawlers see with JS off (capability.js replaces it for humans)."""
     n = disp(c); rows = []
@@ -604,7 +632,8 @@ def summary(c, gen=""):
             # it moved down to the links row where someone reaching for it is already looking.
             '<div class="cid"><span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
-            + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
+            + ('<p class="cap-desc">' + esc(clip_desc(c["description"])) + '</p>'
+               if c.get("description") else '') + '</div>'
             # ORDER IS AN ARGUMENT, and four sections were added to this page in a week without
             # anyone re-reading it top to bottom. The badge ask — which is a request to the
             # PUBLISHER — and the Pro panel had ended up above the security audit, so a reader who

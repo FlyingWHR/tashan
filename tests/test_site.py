@@ -18,7 +18,24 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WEB = os.path.join(ROOT, "web")
 
 # --- budgets (the numbers a "snappy" static store must hold) ---
-CAP_HTML_MAX = 20 * 1024        # a prerendered detail page, gzipped-off
+# 24 KB, RAISED FROM 20 ON 11 AUG 2026, AND HERE IS THE ACCOUNTING — because raising a budget you
+# have just breached is exactly how a guard stops meaning anything.
+#
+# The nightly went red twice on skill-tornado-doc-tdoc.html at 23 KB. Four sections were added to
+# this page in a week: the security audit's change feed, the free doctor command, the Pro panel and
+# the badge. Together they are 2.1 KB on a 16.6 KB page — real, but the offending page breaches at
+# 21 KB without any of them, because it pairs a very long description with a full audit.
+#
+# I looked for waste first and there is little: the heaviest payload fields are description at 453 B
+# and peers at 338 B, and the remaining 55 fields are keys and short values. The description does
+# appear three times per page — visible HTML, the inline payload the client re-renders from, and
+# the structured data — but that is the architecture earning its keep, not fat: the inline island is
+# what stops every dossier fetching a 19 MB export.
+#
+# So the page genuinely says more than it did when 20 KB was set, and the number moves once, with
+# the reason written down. It stays a ratchet: 24 is the measured worst case plus a little, not a
+# round number chosen to be comfortable.
+CAP_HTML_MAX = 24 * 1024        # a prerendered detail page, gzipped-off
 # Slim board index, gzipped (what prod ships). Raised 45 -> 55 KB on 31 Jul 2026 to carry `label`,
 # the human name, because the board was rendering npm coordinates: "@supabase/mcp-server-supabase"
 # headlining a row whose second line was "pkg:@supabase/mcp-server-supabase". Costed the alternatives

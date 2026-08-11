@@ -3,10 +3,10 @@
  "all": {
   "full": 122,
   "grade": 856,
-  "n": 26620,
-  "scan": 4672,
-  "score": 10583,
-  "task": 2676
+  "n": 29379,
+  "scan": 5914,
+  "score": 11785,
+  "task": 2716
  },
  "axes": [
   {
@@ -161,6 +161,16 @@
     "task"
    ],
    "name": "add-mcp"
+  },
+  {
+   "downloads": 206191,
+   "id": "pkg:mongodb-mcp-server",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "mongodb-mcp-server"
   },
   {
    "downloads": 187759,
@@ -411,34 +421,24 @@
     "task"
    ],
    "name": "@wonderwhy-er/desktop-commander"
-  },
-  {
-   "downloads": 68731,
-   "id": "pkg:mcp-evals",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "mcp-evals"
   }
  ],
  "tiers": {
   "top100": {
    "full": 10,
-   "grade": 29,
+   "grade": 28,
    "n": 100,
    "scan": 100,
    "score": 95,
    "task": 34
   },
   "top1000": {
-   "full": 50,
-   "grade": 139,
+   "full": 48,
+   "grade": 136,
    "n": 1000,
    "scan": 1000,
-   "score": 984,
-   "task": 379
+   "score": 985,
+   "task": 380
   }
  }
 }

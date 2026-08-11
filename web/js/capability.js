@@ -73,7 +73,7 @@
           (c.single_maintainer ? ' <span class="riskflag" title="One primary maintainer — a bus-factor risk">◑ single-maintainer</span>' : '') +
           (c.npm_deprecated ? ' &nbsp;·&nbsp; <span class="fresh fresh--cold">deprecated</span>' : '') +
           (c.gh_archived ? ' &nbsp;·&nbsp; <span class="fresh fresh--cold">archived</span>' : '') + '</div>' +
-        (c.description ? '<p class="cap-desc">' + esc(c.description) + '</p>' : '') +
+        (c.description ? '<p class="cap-desc">' + esc(clipDesc(c.description)) + '</p>' : '') +
       '</div>' +
       takeBlock(c) +
       worksWith(c) +
@@ -210,6 +210,18 @@ function doctorCta() {
     'data-copy="npx tashan-cli doctor">copy</button><code>npx tashan-cli doctor</code></pre>' +
     '<p class="dcta__sub">Reads the config already on your machine and names what is dead, ' +
     'deprecated or running code at install time. No account, nothing uploaded.</p></section>';
+}
+
+// Mirrors prerender.py::clip_desc — the client replaces <main>, so an uncapped description here
+// undoes the cap the moment JS runs. Full text stays in the payload, the .md twin and the source.
+var DESC_SHOWN = 700;
+function clipDesc(t) {
+  t = (t || '').trim();
+  if (t.length <= DESC_SHOWN) return t;
+  var cut = t.lastIndexOf('. ', DESC_SHOWN);
+  if (cut < DESC_SHOWN * 0.5) cut = t.lastIndexOf(' ', DESC_SHOWN);
+  if (cut <= 0) cut = DESC_SHOWN;  // one long token: cut flat, never grow
+  return t.slice(0, cut).replace(/[ ,;:—-]+$/, '') + (t[cut - 1] === '.' ? '' : '.') + ' …';
 }
 
 function proPanelFree(c) {

@@ -30,6 +30,9 @@ Run: python3 tests/test_consistency.py
 """
 import collections, glob, html, json, os, re, sys
 
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "pipeline"))
+from prerender import clip_desc
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WEB = os.path.join(ROOT, "web")
 
@@ -159,7 +162,10 @@ for p in pages:
     m = DESC.search(src)
     if m and t.get("description"):
         got = unesc(re.sub(r"<[^>]+>", "", m.group(1)))
-        if got != unesc(t["description"])[:len(got)]:
+        # Compare against the CLIPPED description, imported from prerender rather than restated —
+        # the page shows at most DESC_SHOWN chars (see clip_desc), and a second copy of that rule
+        # living here is how prerender and capability.js drifted four times.
+        if got != unesc(clip_desc(t["description"]))[:len(got)]:
             mismatch["description"] += 1
             examples.setdefault("description", f"{slug}: page={got[:50]!r}")
 
