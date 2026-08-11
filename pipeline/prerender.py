@@ -605,11 +605,18 @@ def summary(c, gen=""):
             '<div class="cid"><span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
             + ('<p class="cap-desc">' + esc(c["description"]) + '</p>' if c.get("description") else '') + '</div>'
-            + works + cat + task + job + install + verdict + swap + changed_block(c) + doctor_cta(c) + pro_panel(c) + embed_block(c) +
+            # ORDER IS AN ARGUMENT, and four sections were added to this page in a week without
+            # anyone re-reading it top to bottom. The badge ask — which is a request to the
+            # PUBLISHER — and the Pro panel had ended up above the security audit, so a reader who
+            # arrived to find out whether a package is safe met a marketing block first and the
+            # answer last.
+            #
+            # The order a visitor actually needs: what it is, what we measured, what it can do to
+            # your machine, what changed, what YOU can do for free, what a licence adds, and only
+            # then the one thing we want from them. Anything else is asking before giving.
+            + works + cat + task + job + install + verdict + swap +
             ('<ul class="prose prose--wide">' + "".join(rows) + '</ul>' if rows else '') +
-            # The security audit goes BEFORE the CTA and the link row: it is the measurement the
-            # page exists to publish, and it was previously absent from this tier entirely.
-            security_block(c)
+            security_block(c) + changed_block(c) + doctor_cta(c) + pro_panel(c) + embed_block(c)
             + ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else '')
             # ONE HONEST CLOSING LINE, ON EVERY DOSSIER. 8,648 of 9,638 capability pages made no
             # case for the product at all — only the 990 that happen to carry a change block or a

@@ -121,11 +121,31 @@
     }
     if (!a) return;
     var href = a.getAttribute("href") || "";
+    // DECLARED EVENTS FIRST. Every commercial CTA on the site carries data-e/data-k — the panel on
+    // 9,638 dossiers, the block on 173 hubs, the one on 413 comparisons — and nothing read them.
+    // A click on /pricing.html is internal, is not a capability link and is not a mailto, so it
+    // fell through all three branches below and recorded NOTHING. The entire commercial surface was
+    // unmeasurable: no way to tell which page, or which of the three CTA shapes, sends anyone to
+    // the pricing page at all.
+    //
+    // The comment below still said "every paid-intent CTA is a mailto, because there is no checkout
+    // yet". There is a checkout. The Polar link is https and does get caught as `outbound`, so the
+    // LAST step of the funnel was measured while the step that feeds it was not.
+    var decl = a.closest("[data-e]");
+    if (decl) {
+      send(decl.getAttribute("data-e") || "cta", {
+        k: decl.getAttribute("data-k") || "",
+        v: location.pathname
+      });
+    }
     if (/^https?:\/\//.test(href)) {
       var h = hostOf(href);
       if (h && h !== host) send("outbound", { k: h, v: a.getAttribute("data-src") || "" });   // registry / repo / community
     } else if (href.indexOf("mailto:") === 0) {
-      // THE ONLY CONVERSION EVENT ON THE SITE. Every paid-intent CTA is a mailto — the Pro waitlist
+      // Contact intent — the teams enquiry and "embedding tashan in your product". It stopped being
+      // the only conversion event when Polar went live; the CTA branch above now records the step
+      // before the checkout, and the checkout itself lands in `outbound`.
+      // Every paid-intent CTA used to be a mailto — the Pro waitlist
       // and the "embedding tashan in your product" contact — because there is no checkout yet. The
       // outbound branch above only matches ^https?://, so all of it recorded nothing, and the pricing
       // page's entire job (find out which part people would pay for) was unmeasurable. The subject
