@@ -48,6 +48,23 @@
       link.classList.add("is-pro");
       pro.hidden = false;
     }
+    if (a.active) proPaid();
+  }
+
+  // Never sell a trial to someone already paying. capability.js swaps the dossier panel because it
+  // has the row's own series to put there; every OTHER surface carrying a .pro panel had no swap at
+  // all, so an active subscriber read "Start a 7-day trial" on the homepage. This is the floor, not
+  // a second implementation of the dossier panel: the offer becomes a way back to their account.
+  function proPaid() {
+    var panels = document.querySelectorAll('.pro[data-state="free"]');
+    for (var i = 0; i < panels.length; i++) {
+      var cta = panels[i].querySelector(".pro__cta");
+      if (!cta) continue;
+      panels[i].setAttribute("data-state", "pro");
+      cta.innerHTML = '<a class="btn btn--primary" href="/account.html" data-e="cta" ' +
+        'data-k="pro-account">Your account &rsaquo;</a>' +
+        '<span class="pro__free mono"> Pro is active on this browser.</span>';
+    }
   }
 
   function session() {

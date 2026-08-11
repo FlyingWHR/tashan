@@ -27,6 +27,13 @@ python3 pipeline/serve.py            # → http://localhost:4173, sends no-store
 
 # Deploy (static; Cloudflare Pages, project "tashan", domain tashan.sh):
 npx wrangler@3 pages deploy web --project-name tashan
+
+# If that dies with a bare `fetch failed` in ~400 ms, it is NOT auth. wrangler prints "Proxy
+# environment variables detected" and routes through $HTTPS_PROXY (127.0.0.1:7890 here); when that
+# local proxy is down, node's fetch fails instantly while curl still reaches api.cloudflare.com.
+# Deploy past it without touching the shell's config:
+env -u HTTPS_PROXY -u HTTP_PROXY -u https_proxy -u http_proxy -u ALL_PROXY -u all_proxy \
+  npx wrangler@3 pages deploy web --project-name tashan
 ```
 
 No package.json, no test suite, no linter — pure Python 3 stdlib scripts (`urllib`, `sqlite3`, no pip deps) + a vanilla-JS static site. To re-run one pipeline stage in isolation, tune env caps instead of editing code: `REG_CAP` (registry servers), `NPM_CAP` (npm packages/run), `TOP_N` (READMEs to fetch).

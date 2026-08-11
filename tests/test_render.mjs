@@ -95,3 +95,44 @@ for (const f of sample) {
 assert.strictEqual(fail, 0, `${fail} pages failed to render`);
 console.log(`ok — render() ran clean on ${checked} sampled pages `
   + `(install blocks: ${tabs}, repo-health: ${health}, install command identical in both renders: ${agreed})`);
+
+// ---- site.js: an active licence must never be sold a trial ----------------------------------------
+// paint() runs on EVERY page. capability.js swaps the dossier panel because it has the row's own
+// series to put there; every other surface had no swap at all, so the homepage read "Start a 7-day
+// trial" to somebody already paying $6/mo. Run the real paint() against a real panel, both states.
+{
+  const SITEJS = fs.readFileSync(path.join(ROOT, "web/js/site.js"), "utf8");
+  const home = fs.readFileSync(path.join(ROOT, "web/index.html"), "utf8");
+  const m = home.match(/<section class="pro"[\s\S]*?<\/section>/);
+  assert.ok(m, "web/index.html no longer carries a .pro panel — the homepage CTA regressed");
+
+  const run = (account) => {
+    let html = m[0];
+    const panel = {
+      getAttribute: (k) => k === "data-state" ? (/data-state="free"/.test(html) ? "free" : "pro") : null,
+      setAttribute: (k, v) => { html = html.replace(/data-state="free"/, `data-state="${v}"`); },
+      querySelector: (sel) => sel === ".pro__cta"
+        ? { set innerHTML(v) { html = html.replace(/<p class="pro__cta">[\s\S]*?<\/p>/, `<p class="pro__cta">${v}</p>`); } }
+        : null,
+    };
+    const g = globalThis;
+    g.document = {
+      getElementById: (id) => id === "navAcct" ? { classList: { add() {} }, setAttribute() {}, title: "" } : null,
+      querySelectorAll: (sel) => sel === '.pro[data-state="free"]' && /data-state="free"/.test(html) ? [panel] : [],
+      querySelector: () => null, addEventListener: () => {}, title: "",
+    };
+    g.location = { pathname: "/", search: "" };
+    g.window = {}; g.sessionStorage = { getItem: () => JSON.stringify({ at: Date.now(), a: account }), setItem() {} };
+    g.fetch = () => Promise.resolve({ ok: false });
+    new Function(SITEJS)();
+    return html;
+  };
+
+  const free = run({ signed_in: false });
+  assert.ok(/7-day trial/.test(free), "signed out must still see the trial offer");
+  const paid = run({ signed_in: true, active: true, email: "a@b.c" });
+  assert.ok(!/7-day trial/.test(paid), "an active licence was still pitched a 7-day trial");
+  assert.ok(/\/account\.html/.test(paid) && /data-state="pro"/.test(paid),
+            "the paid panel must point at the account, and say so in data-state");
+  console.log("ok — site.js swaps the Pro panel for an active licence (no trial pitch to a payer)");
+}
