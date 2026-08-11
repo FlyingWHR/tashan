@@ -31,7 +31,7 @@ Run: python3 tests/test_consistency.py
 import collections, glob, html, json, os, re, sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "pipeline"))
-from prerender import clip_desc
+from prerender import ACTIVATION, clip_desc
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WEB = os.path.join(ROOT, "web")
@@ -605,6 +605,25 @@ over = [f"{k}={_idx.get(k)} > coverage_of={_denom}"
 ok(f"index.json: risk_scanned/expertise_graded/job_mapped all fit inside coverage_of={_denom}",
    isinstance(_denom, int) and _denom > 0 and not over,
    "; ".join(over) or f"coverage_of is {_denom!r} — the denominator every coverage percentage divides by")
+
+# ---- activation text is captioned on BOTH renders --------------------------------------------------
+# 283 skills publish a prompt addressed to a model where a description belongs. prerender captions
+# it; capability.js REPLACES <main>, so a client that does not caption undoes it the moment JS runs.
+# These two have drifted four times — this asserts the fifth place agrees, on real pages, not a mock.
+CAPTION = "activation text, quoted as published"
+want = {re.sub(r"[^a-z0-9]+", "-", c["id"].lower()).strip("-")
+        for c in TRUTH.values() if ACTIVATION.search(c.get("description") or "")}
+got = {os.path.basename(p)[:-5] for p in pages
+       if CAPTION in open(p, encoding="utf-8").read()}
+if SAMPLE:
+    want &= {os.path.basename(p)[:-5] for p in pages}
+ok(f"activation text is captioned on all {len(want)} dossier(s) that publish it, and nowhere else",
+   want == got, f"missing {sorted(want - got)[:3]}, spurious {sorted(got - want)[:3]}")
+
+_js = open(os.path.join(WEB, "js", "capability.js"), encoding="utf-8").read()
+ok("capability.js carries the same caption, so the client re-render does not drop it",
+   CAPTION in _js and "ACTIVATION" in _js,
+   "the client replaces <main>; without this the caption survives only until JS runs")
 
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)

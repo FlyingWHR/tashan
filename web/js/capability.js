@@ -73,7 +73,7 @@
           (c.single_maintainer ? ' <span class="riskflag" title="One primary maintainer — a bus-factor risk">◑ single-maintainer</span>' : '') +
           (c.npm_deprecated ? ' &nbsp;·&nbsp; <span class="fresh fresh--cold">deprecated</span>' : '') +
           (c.gh_archived ? ' &nbsp;·&nbsp; <span class="fresh fresh--cold">archived</span>' : '') + '</div>' +
-        (c.description ? '<p class="cap-desc">' + esc(clipDesc(c.description)) + '</p>' : '') +
+        descBlock(c) +
       '</div>' +
       takeBlock(c) +
       worksWith(c) +
@@ -214,6 +214,16 @@ function doctorCta() {
 
 // Mirrors prerender.py::clip_desc — the client replaces <main>, so an uncapped description here
 // undoes the cap the moment JS runs. Full text stays in the payload, the .md twin and the source.
+// Mirrors prerender.py::ACTIVATION / desc_block. 283 skills publish a prompt addressed to a model
+// where a description belongs; we caption it rather than rewrite it.
+var ACTIVATION = /\btrigger(?:s|ed)?\s+(?:whenever|when)\b|\bactivat(?:e|es|ed)\s+(?:whenever|when)\s+the\s+user\b|\bthe\s+user\s+says\s*["\u201c]|\bYou\s+MUST\b|\b(?:ALWAYS|NEVER)\s+use\s+this\b|^\s*Use\s+(?:this\s+skill|PROACTIVELY)\b/im;
+function descBlock(c) {
+  if (!c.description) return '';
+  var cap = ACTIVATION.test(c.description)
+    ? '<p class="muted">Author\u2019s activation text, quoted as published</p>' : '';
+  return cap + '<p class="cap-desc">' + esc(clipDesc(c.description)) + '</p>';
+}
+
 var DESC_SHOWN = 700;
 function clipDesc(t) {
   t = (t || '').trim();

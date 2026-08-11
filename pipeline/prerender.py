@@ -435,6 +435,36 @@ def pro_panel(c):
         "</section>")
 
 
+ACTIVATION = re.compile(
+    r'\btrigger(?:s|ed)?\s+(?:whenever|when)\b'
+    r'|\bactivat(?:e|es|ed)\s+(?:whenever|when)\s+the\s+user\b'
+    r'|\bthe\s+user\s+says\s*["\u201c]'
+    r'|\bYou\s+MUST\b'
+    r'|\b(?:ALWAYS|NEVER)\s+use\s+this\b'
+    r'|^\s*Use\s+(?:this\s+skill|PROACTIVELY)\b', re.I | re.M)
+
+
+def desc_block(c):
+    """The author's description — captioned when it is not one.
+
+    283 capabilities, almost all skills, publish activation text where a description belongs:
+    "Trigger whenever the user says 'compile the discovery doc'", "You MUST use this before any
+    creative work". That is a prompt addressed to a model, and we render it as the opening
+    paragraph under the title, which makes a page we generated from real evidence read like
+    scraped slop.
+
+    We do not rewrite it — inventing prose about a capability is exactly the claim this project
+    refuses to make. We say what it is. Six words of caption turn a confusing paragraph into a
+    fact about the source, and a reader who was about to bounce learns something instead.
+    """
+    d = c.get("description")
+    if not d:
+        return ""
+    cap = ('<p class="muted">Author\u2019s activation text, quoted as published</p>'
+           if ACTIVATION.search(d) else "")
+    return cap + '<p class="cap-desc">' + esc(clip_desc(d)) + "</p>"
+
+
 DESC_SHOWN = 700
 
 
@@ -632,8 +662,7 @@ def summary(c, gen=""):
             # it moved down to the links row where someone reaching for it is already looking.
             '<div class="cid"><span class="tag">' + esc(c.get("kind") or "") + '</span>' +
             (' <span class="official">✓ ' + esc(official_org(c)) + ' · official</span>' if official_org(c) else '') + '</div>'
-            + ('<p class="cap-desc">' + esc(clip_desc(c["description"])) + '</p>'
-               if c.get("description") else '') + '</div>'
+            + desc_block(c) + '</div>'
             # ORDER IS AN ARGUMENT, and four sections were added to this page in a week without
             # anyone re-reading it top to bottom. The badge ask — which is a request to the
             # PUBLISHER — and the Pro panel had ended up above the security audit, so a reader who
