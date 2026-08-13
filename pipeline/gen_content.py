@@ -224,11 +224,104 @@ def deprecated_article(caps):
     }
 
 
+X402_PAT = re.compile(r"\bx402\b", re.I)
+PAYCALL_PAT = re.compile(r"pay[- ]per[- ](?:call|request|tool|use)|\bUSDC(?:\.e)?\b|micro[- ]?payment", re.I)
+
+
+def agent_payment(caps):
+    """Capabilities that ADVERTISE taking payment from an agent, counted rather than guessed at.
+
+    This is a measurement only this corpus can make, on the thing the whole agent-payment thesis
+    turns on: is anyone actually doing it. Nobody else holds 12,000 MCP servers with their npm
+    descriptions attached.
+
+    SELF-DECLARED, AND SAID SO EVERY TIME. A description mentioning x402 is the author's claim, not
+    a verified integration — exactly the lesson build.py's junk() learned when yahoo-finance2 turned
+    out to declare the `mcp` keyword. We can honestly report "N say they do"; we cannot report "N
+    do", and the page must never blur the two.
+    """
+    x, pay = [], []
+    for c in caps:
+        blob = (c.get("description") or "") + " " + (c.get("label") or "")
+        if X402_PAT.search(blob):
+            x.append(c)
+        elif PAYCALL_PAT.search(blob):
+            pay.append(c)
+    key = lambda c: -(c.get("npm_downloads") or 0)
+    return sorted(x, key=key), sorted(pay, key=key)
+
+
+def x402_article(caps):
+    x, pay = agent_payment(caps)
+    # Below this it is a handful of packages, not a trend, and publishing a table of six would be
+    # dressing up noise as a finding.
+    if len(x) < 25:
+        return None
+    total = len(x) + len(pay)
+    rows = "".join(
+        "<tr><td><code>" + esc(c.get("npm_pkg") or c["id"]) + "</code></td>"
+        "<td class=\"mono\">" + (f"{c['npm_downloads']:,}" if c.get("npm_downloads") else "&mdash;") + "</td>"
+        "<td>" + esc((c.get("description") or "")[:90]) + "</td>"
+        "<td>" + ('<a class="link" href="/capability/' + esc(c["slug"]) + '.html">measured</a>'
+                  if c.get("slug") else "&mdash;") + "</td></tr>"
+        for c in x[:15])
+    return {
+        "slug": "mcp-servers-that-charge-agents", "lang": "en",
+        "title": "How many MCP servers charge agents per call?",
+        "desc": (f"{len(x)} of the {len(caps):,} capabilities tashan measures name x402 in their own "
+                 "description, and " + str(total) + " advertise per-call payment of some kind. The "
+                 "list, the caveat, and how to check one before your agent pays it."),
+        "quick": (f"<b>{len(x)}</b> of the <b>{len(caps):,}</b> capabilities tashan tracks mention "
+                  f"<b>x402</b> in their own npm description, and <b>{total}</b> advertise per-call "
+                  "payment in some form &mdash; USDC, micropayments, or pay-per-tool-call. That is "
+                  "what the authors <i>say</i>, counted from the text they published. It is not a "
+                  "verified integration, and this page does not claim it is."),
+        "sections": [
+            {"q": "Which ones, by adoption?",
+             "body": '<div class="tablewrap"><table class="tbl"><thead><tr><th>package</th>'
+                     "<th>weekly</th><th>what it says</th><th>evidence</th></tr></thead><tbody>"
+                     + rows + "</tbody></table></div>"},
+            {"q": "Why does the distinction between 'says' and 'does' matter here?",
+             "body": "<p>Because money is involved. A keyword in a description costs an author "
+                     "nothing &mdash; this index already had to stop trusting npm keywords when a "
+                     "Yahoo Finance client turned out to declare <code>mcp</code>, "
+                     "<code>agent</code> and <code>skill</code>. tashan can tell you how many "
+                     "packages make the claim, and what their upkeep, advisories and provenance "
+                     "look like. It cannot tell you a payment endpoint honours what it charges "
+                     "for.</p>"},
+            {"q": "Is anyone worried about this already?",
+             "body": "<p>Yes, and it is in the corpus: at least one server exists purely to "
+                     "&ldquo;verify x402 payment endpoints before an AI agent pays&rdquo;, with "
+                     "scam scoring. A market that has grown its own fraud-checking layer is a "
+                     "market with fraud in it.</p>"},
+            {"q": "How do I check one before my agent pays it?",
+             "body": "<pre class=\"snip\"><code>curl -s 'https://tashan.sh/v0.1/lookup?name=&lt;package&gt;'</code></pre>"
+                     "<p>Free, no account. You get the score, the advisories at the version you "
+                     "would install, whether it was built in CI with attestation, and what it "
+                     "declares it can reach. None of that is a guarantee about a payment endpoint "
+                     "&mdash; it is the public evidence about the package serving it.</p>"},
+        ],
+        "howto": ["Look the package up before wiring a wallet to it.",
+                  "Check advisories at the version you would actually install.",
+                  "Prefer packages with build provenance — published from CI, not a laptop.",
+                  "Treat the payment claim as the author's, until you have tested it yourself."],
+        "faq": [("Does tashan take agent payments?",
+                 "The endpoints are built and quote a price in every 402; settlement is not enabled "
+                 "yet, and until it is we quote no payment option we cannot verify."),
+                ("Is this list current?",
+                 "It is recounted from npm descriptions every night, and the page does not render "
+                 "at all below 25 — a table of six would be noise dressed as a trend.")],
+    }
+
+
 def build_articles(caps):
     A = []
     dep = deprecated_article(caps)
     if dep:
         A.append(dep)
+    x4 = x402_article(caps)
+    if x4:
+        A.append(x4)
     # 1. config-location cluster (EN) — HowTo + FAQ, exact path first
     A.append({
         "slug": "where-are-claude-skills-stored", "lang": "en",
