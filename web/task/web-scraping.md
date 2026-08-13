@@ -41,14 +41,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 70 | 2k/wk | active |
 | 29 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 68 | 594/wk | active |
 | 30 | [Fouradata](https://tashan.sh/capability/pkg-fouradata-mcp.html) | 66 | 255/wk | active |
-| 31 | [Skim402](https://tashan.sh/capability/pkg-skim-mcp.html) | 49 | 61/wk | active |
-| 32 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
-| 33 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 61 | 337/wk | active |
-| 34 | [Scrapeunblocker](https://tashan.sh/capability/pkg-scrapeunblocker-mcp.html) | 57 | 205/wk | active |
-| 35 | [Alterlab](https://tashan.sh/capability/pkg-alterlab-mcp-server.html) | 52 | 130/wk | active |
-| 36 | [Grabzit](https://tashan.sh/capability/pkg-grabzit-mcp-server.html) | 47 | 51/wk | active |
-| 37 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 67 | 911/wk | active |
-| 38 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 65 | 2k/wk | active |
+| 31 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 65 | 2k/wk | active |
+| 32 | [Skim402](https://tashan.sh/capability/pkg-skim-mcp.html) | 49 | 61/wk | active |
+| 33 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
+| 34 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 61 | 337/wk | active |
+| 35 | [Scrapeunblocker](https://tashan.sh/capability/pkg-scrapeunblocker-mcp.html) | 57 | 205/wk | active |
+| 36 | [Alterlab](https://tashan.sh/capability/pkg-alterlab-mcp-server.html) | 52 | 130/wk | active |
+| 37 | [Grabzit](https://tashan.sh/capability/pkg-grabzit-mcp-server.html) | 47 | 51/wk | active |
+| 38 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 67 | 911/wk | active |
 | 39 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 64 | 436/wk | active |
 | 40 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 64 | 347/wk | active |
 

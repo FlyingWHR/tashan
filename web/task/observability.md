@@ -40,16 +40,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 60 | 27 ★ | active |
 | 28 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 57 | 18 ★ | active |
 | 29 | [Dash0](https://tashan.sh/capability/plugin-dash0hq-dash0-agent-plugin-dash0.html) | 54 | 4 ★ | active |
-| 30 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 61 | 2k/wk | active |
-| 31 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
-| 32 | [Argosvix](https://tashan.sh/capability/pkg-argosvix-mcp-server.html) | 66 | 484/wk | active |
-| 33 | [Lensmcp](https://tashan.sh/capability/pkg-lensmcp.html) | 69 | 1k/wk | active |
-| 34 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 64 | 414/wk | active |
-| 35 | [Datadog](https://tashan.sh/capability/pkg-datadog-mcp.html) | 62 | 1k/wk | active |
-| 36 | [Lighthouse](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 47 | 580/wk | active |
-| 37 | [Jamp](https://tashan.sh/capability/pkg-jamp-mcp.html) | 47 | 49/wk | active |
-| 38 | [Langfuse · pulsemcp](https://tashan.sh/capability/pkg-langfuse-observability-mcp-server.html) | 44 | 68/wk | active |
-| 39 | [Helicone](https://tashan.sh/capability/pkg-helicone-mcp.html) | 41 | 741/wk | abandoned |
+| 30 | [Datadog](https://tashan.sh/capability/pkg-datadog-mcp.html) | 62 | 1k/wk | active |
+| 31 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 61 | 2k/wk | active |
+| 32 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
+| 33 | [Argosvix](https://tashan.sh/capability/pkg-argosvix-mcp-server.html) | 66 | 484/wk | active |
+| 34 | [Helicone](https://tashan.sh/capability/pkg-helicone-mcp.html) | 41 | 741/wk | abandoned |
+| 35 | [Lensmcp](https://tashan.sh/capability/pkg-lensmcp.html) | 69 | 1k/wk | active |
+| 36 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 64 | 414/wk | active |
+| 37 | [Lighthouse](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 47 | 580/wk | active |
+| 38 | [Jamp](https://tashan.sh/capability/pkg-jamp-mcp.html) | 47 | 49/wk | active |
+| 39 | [Langfuse · pulsemcp](https://tashan.sh/capability/pkg-langfuse-observability-mcp-server.html) | 44 | 68/wk | active |
 | 40 | [Langfuse · hugoles](https://tashan.sh/capability/pkg-langfuse-mcp.html) | 40 | 164/wk | active |
 
 Showing the top 40 of 46. The full ranked shelf is at https://tashan.sh/task/observability.html.

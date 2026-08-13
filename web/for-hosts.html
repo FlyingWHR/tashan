@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=270">
+  <link rel="stylesheet" href="/css/site.css?v=272">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span>tashan</a><div class="nav__links"><a href="/">Find skills</a><a href="/browse.html">Jobs</a><a href="/start.html">Doctor</a><a href="/pricing.html">Pricing</a><a class="nav__acct" id="navAcct" href="/account.html" title="Your account" aria-label="Your account"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span class="nav__pro mono" id="navPro" hidden>Pro</span></a></div></div></nav>
@@ -72,13 +72,53 @@
       change webhooks, that is a conversation:
       <a class="link" href="mailto:hello@tashan.sh?subject=tashan%20in%20our%20product">hello@tashan.sh</a>.</p>
 
+    <h2>For agents: ask a question, pay for one answer</h2>
+    <p class="lede">A licence assumes a human &mdash; sign up, hold a key, amortise a month. An agent
+      deciding once has none of that.</p>
+    <p>These endpoints answer in one request, and price in one request.</p>
+
+    <h3><code>POST /v0.1/kit</code> &mdash; name a job, get something you can run</h3>
+    <div class="callout mono fs-sm">curl -X POST https://tashan.sh/v0.1/kit \<br>
+      &nbsp;&nbsp;-H 'content-type: application/json' \<br>
+      &nbsp;&nbsp;-d '{"task":"web-scraping","client":"claude-code"}'</div>
+    <ul class="prose">
+      <li><b>Free</b> &mdash; the ranked shortlist for that job, plus everything we excluded and why.
+        An exclusion is a risk, and risks are never behind a paywall.</li>
+      <li><b>$0.25</b> &mdash; add <code>{"kit": true}</code> and it is assembled: every pick pinned
+        to the version the advisory scan cleared, and a config for your host.</li>
+    </ul>
+    <p>An unpinned config is an unverified one. The verification is the product.</p>
+
+    <h3><code>POST /v0.1/audit</code> &mdash; hand over a config, get back what is rotting</h3>
+    <ul class="prose">
+      <li><b>Free</b> &mdash; every risk we hold about every capability you name: advisories at the
+        version you would install today, deprecation, archived repos, one maintainer left.</li>
+      <li><b>$0.05</b> &mdash; add <code>{"history": true}</code> for the score series behind each
+        row and its direction of travel.</li>
+    </ul>
+    <p>Direction is the one thing a static index cannot tell you.</p>
+
+    <h3>Paying without an account</h3>
+    <p>Every paid endpoint answers an unauthenticated caller with <b>HTTP 402</b> and the terms in
+      the body: price, checkout link, and the free endpoints answering the same question.</p>
+    <p>Callers with a wallet can pay per request over
+      <a class="link" rel="nofollow" href="https://github.com/coinbase/x402">x402</a> v2, instead of
+      holding a subscription. The <code>accepts</code> array is absent until settlement is live here
+      &mdash; quoting a payment we cannot verify would waste your signature.</p>
+
+    <h3>What is not for sale</h3>
+    <p>We do not sell anyone&rsquo;s skill or server content. A capability is its author&rsquo;s work
+      under their licence; every pick links to its source and you fetch it from them.</p>
+    <p>What is paid for is ours: the measurement, the selection over it, the version that is clean
+      today, and the assembly. Nobody can pay to change a score, a rank, or a listing.</p>
+
     <p class="mt-12"><a class="btn btn--ghost" href="/methodology.html">How the score is computed &rsaquo;</a></p>
 
   </article></main>
 
   <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The measured layer for AI capabilities — MCP servers and agent skills, ranked on public evidence.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources, and checkable against them.</span></div></footer>
 
-  <script src="/js/terminal.js?v=270" defer></script>
-  <script src="/js/site.js?v=270" defer></script>
+  <script src="/js/terminal.js?v=272" defer></script>
+  <script src="/js/site.js?v=272" defer></script>
 </body>
 </html>

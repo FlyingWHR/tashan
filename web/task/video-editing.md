@@ -30,10 +30,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [ElevenLabs Automation](https://tashan.sh/capability/skill-composiohq-elevenlabs-automation.html) | not scored | 1 repos | active |
 | 18 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
 | 19 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
-| 20 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
-| 21 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
-| 22 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 67 | 784/wk | active |
-| 23 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 66 | 988/wk | active |
+| 20 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 66 | 988/wk | active |
+| 21 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
+| 22 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
+| 23 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 67 | 784/wk | active |
 | 24 | [Oh My Cassette](https://tashan.sh/capability/plugin-cassette-editor-oh-my-cassette-oh-my-cassette.html) | 65 | 140 ★ | active |
 | 25 | [Primate Intelligence](https://tashan.sh/capability/pkg-primate-intelligence-mcp.html) | 60 | 467/wk | active |
 | 26 | [Claude Skills Library](https://tashan.sh/capability/pkg-claude-skills-library.html) | 55 | 2k/wk | active |

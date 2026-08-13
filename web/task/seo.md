@@ -31,10 +31,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Programmatic SEO](https://tashan.sh/capability/skill-alirezarezvani-programmatic-seo.html) | not scored | 1 repos | active |
 | 19 | [Site Architecture](https://tashan.sh/capability/skill-alirezarezvani-site-architecture.html) | not scored | 1 repos | active |
 | 20 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 69 | 2k/wk | active |
-| 21 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 61 | 337/wk | active |
-| 22 | [Suganthan Gsc](https://tashan.sh/capability/pkg-suganthan-gsc-mcp.html) | 45 | 2k/wk | active |
-| 23 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 72 | 3k ★ | active |
-| 24 | [Bisibility](https://tashan.sh/capability/pkg-bisibility-mcp.html) | 65 | 1k/wk | active |
+| 21 | [Bisibility](https://tashan.sh/capability/pkg-bisibility-mcp.html) | 65 | 1k/wk | active |
+| 22 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 61 | 337/wk | active |
+| 23 | [Suganthan Gsc](https://tashan.sh/capability/pkg-suganthan-gsc-mcp.html) | 45 | 2k/wk | active |
+| 24 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 72 | 3k ★ | active |
 | 25 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 65 | 504/wk | active |
 | 26 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
 | 27 | [Saglitzdesign](https://tashan.sh/capability/pkg-saglitzdesign-mcp.html) | 62 | 338/wk | active |

@@ -11,8 +11,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 47 | 7k/wk | active |
-| 2 | [Gogcli Mcp Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 70 | 1k/wk | active |
+| 1 | [Gogcli Mcp Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 70 | 1k/wk | active |
+| 2 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 47 | 7k/wk | active |
 | 3 | [Htmlify](https://tashan.sh/capability/plugin-zakelfassi-htmlify-htmlify.html) | 45 | 13 ★ | active |
 | 4 | [Gezhe](https://tashan.sh/capability/pkg-gezhe-mcp-server.html) | 45 | 2k/wk | active |
 | 5 | [Carbone Skill](https://tashan.sh/capability/plugin-carboneio-carbone-skill-carbone-skill.html) | 43 | 4 ★ | active |

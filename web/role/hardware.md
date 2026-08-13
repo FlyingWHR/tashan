@@ -23,8 +23,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 46 | 18 ★ | active |
 | 6 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
 | 7 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |
-| 8 | [Easyeda Mcp Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 63 | 466/wk | active |
-| 9 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 62 | 612/wk | active |
+| 8 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 62 | 612/wk | active |
+| 9 | [Easyeda Mcp Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 63 | 466/wk | active |
 | 10 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 59 | 307/wk | active |
 | 11 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 57 | 138/wk | active |
 | 12 | [Trustrails](https://tashan.sh/capability/pkg-trustrails-mcp-server.html) | 41 | 93/wk | active |

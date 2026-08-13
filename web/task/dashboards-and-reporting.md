@@ -41,10 +41,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Looker](https://tashan.sh/capability/plugin-gemini-cli-extensions-looker-looker.html) | 65 | 52 ★ | active |
 | 29 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 64 | 30 ★ | active |
 | 30 | [Preset CLI Skills](https://tashan.sh/capability/plugin-preset-io-agent-skills-preset-cli-skills.html) | 59 | 10 ★ | active |
-| 31 | [Excalidraw](https://tashan.sh/capability/pkg-mcp-excalidraw-server.html) | 62 | 2k/wk | active |
-| 32 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 62 | 334/wk | active |
-| 33 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 70 | 2k/wk | active |
-| 34 | [Flint Chart](https://tashan.sh/capability/pkg-flint-chart-mcp.html) | 68 | 1k/wk | active |
+| 31 | [Flint Chart](https://tashan.sh/capability/pkg-flint-chart-mcp.html) | 68 | 1k/wk | active |
+| 32 | [Excalidraw](https://tashan.sh/capability/pkg-mcp-excalidraw-server.html) | 62 | 2k/wk | active |
+| 33 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 62 | 334/wk | active |
+| 34 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 70 | 2k/wk | active |
 | 35 | [Ellmos Controlcenter](https://tashan.sh/capability/pkg-ellmos-controlcenter-mcp.html) | 63 | 510/wk | active |
 | 36 | [Agentic Mermaid](https://tashan.sh/capability/pkg-agentic-mermaid.html) | 62 | 550/wk | active |
 | 37 | [Redash](https://tashan.sh/capability/pkg-redash-mcp.html) | 58 | 398/wk | active |

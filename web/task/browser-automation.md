@@ -46,11 +46,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 70 | 2k/wk | active |
 | 34 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 70 | 2k/wk | active |
 | 35 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 69 | 2k/wk | active |
-| 36 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 73 | 22k/wk | stable |
-| 37 | [Cbrowser](https://tashan.sh/capability/pkg-cbrowser.html) | 70 | 2k/wk | active |
-| 38 | [Stock SDK](https://tashan.sh/capability/pkg-stock-sdk.html) | 70 | 2k/wk | active |
-| 39 | [Openchrome](https://tashan.sh/capability/pkg-openchrome-mcp.html) | 63 | 2k/wk | active |
-| 40 | [Google Surf](https://tashan.sh/capability/pkg-google-surf-mcp.html) | 59 | 374/wk | active |
+| 36 | [Camoufox](https://tashan.sh/capability/pkg-mcp-camoufox.html) | 68 | 707/wk | active |
+| 37 | [Machine Bridge](https://tashan.sh/capability/pkg-machine-bridge-mcp.html) | 65 | 763/wk | active |
+| 38 | [Playwright Mcp Advanced](https://tashan.sh/capability/pkg-playwright-mcp-advanced.html) | 26 | 1k/wk | abandoned |
+| 39 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 73 | 22k/wk | stable |
+| 40 | [Cbrowser](https://tashan.sh/capability/pkg-cbrowser.html) | 70 | 2k/wk | active |
 
 Showing the top 40 of 90. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
 

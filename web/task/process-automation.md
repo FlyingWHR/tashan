@@ -21,14 +21,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Claude Harness](https://tashan.sh/capability/plugin-chachamaru127-claude-code-harness-claude-harness.html) | 75 | 3k ★ | active |
 | 9 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 72 | 426 ★ | active |
 | 10 | [Bunqueue](https://tashan.sh/capability/pkg-bunqueue.html) | 72 | 5k/wk | active |
-| 11 | [Android Remote Control](https://tashan.sh/capability/plugin-danielealbano-android-remote-control-mcp-android-remote-control.html) | 61 | 171 ★ | active |
-| 12 | [Join Meeting](https://tashan.sh/capability/plugin-pattern-ai-labs-agentcall-join-meeting.html) | 58 | 127 ★ | active |
-| 13 | [Composio](https://tashan.sh/capability/plugin-composiohq-composio-plugin-cc-composio-mcp.html) | 54 | 7 ★ | active |
-| 14 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
-| 15 | [Conductor](https://tashan.sh/capability/plugin-conductor-oss-conductor-skills-conductor.html) | 51 | 14 ★ | active |
-| 16 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 50 | 38 ★ | active |
-| 17 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 70 | 2k/wk | active |
-| 18 | [Open Computer Use](https://tashan.sh/capability/pkg-open-computer-use.html) | 69 | 1k/wk | active |
+| 11 | [Open Computer Use](https://tashan.sh/capability/pkg-open-computer-use.html) | 69 | 1k/wk | active |
+| 12 | [Android Remote Control](https://tashan.sh/capability/plugin-danielealbano-android-remote-control-mcp-android-remote-control.html) | 61 | 171 ★ | active |
+| 13 | [Join Meeting](https://tashan.sh/capability/plugin-pattern-ai-labs-agentcall-join-meeting.html) | 58 | 127 ★ | active |
+| 14 | [Composio](https://tashan.sh/capability/plugin-composiohq-composio-plugin-cc-composio-mcp.html) | 54 | 7 ★ | active |
+| 15 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
+| 16 | [Conductor](https://tashan.sh/capability/plugin-conductor-oss-conductor-skills-conductor.html) | 51 | 14 ★ | active |
+| 17 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 50 | 38 ★ | active |
+| 18 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 70 | 2k/wk | active |
 | 19 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 61 | 49 ★ | active |
 | 20 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 58 | 20 ★ | active |
 | 21 | [Outlook · anasahmed07](https://tashan.sh/capability/plugin-anasahmed07-outlook-classic-mcp-outlook.html) | 50 | 10 ★ | active |

@@ -32,6 +32,7 @@ of `capability_text`. Each of those is a bad night, not a lost record. That is e
 series is sharded as text and the cache is not.
 """
 import os, re, subprocess, sqlite3, sys
+import time
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -59,8 +60,19 @@ def _run(args):
     # this only ever breaks on a laptop — the machine where you are trying to diagnose it.
     env = {k: v for k, v in os.environ.items()
            if k.lower() not in ("all_proxy", "https_proxy", "http_proxy")}
-    return subprocess.run(WRANGLER + args, cwd=ROOT, env=env,
-                          capture_output=True, text=True, timeout=900)
+    # ONE RETRY, because a push failure is fatal by design and a blip should not be. Observed once:
+    # a push died with a bare `fetch failed` and the identical command succeeded seconds later, with
+    # no proxy involved (they are stripped above) — just the network. Losing a push means every
+    # later run starts from a stale object, which is a whole day of enrichment, so paying two
+    # seconds to rule out a transient is obviously worth it. Not a loop: if it fails twice it is not
+    # transient, and quietly retrying a real outage only delays the error that has to be read.
+    out = subprocess.run(WRANGLER + args, cwd=ROOT, env=env,
+                         capture_output=True, text=True, timeout=900)
+    if out.returncode != 0:
+        time.sleep(2)
+        out = subprocess.run(WRANGLER + args, cwd=ROOT, env=env,
+                             capture_output=True, text=True, timeout=900)
+    return out
 
 
 def usable(path=DB):

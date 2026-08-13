@@ -74,9 +74,9 @@ Coverage is stated over the top 1,000 capabilities by adoption evidence, because
 
 - tashan score: 96% of the top 1,000 (34% of all 33,913 tracked)
 - Security scan: 100% of the top 1,000 (21% of all)
-- Instruction-depth grade: 30% of the top 1,000 (3% of all)
+- Instruction-depth grade: 60% of the top 1,000 (4% of all)
 - Task mapping: 55% of the top 1,000 (9% of all)
-- All four on the same capability: 23% of the top 1,000
+- All four on the same capability: 36% of the top 1,000
 
 An absent value means UNMEASURED and never means zero, absent risk, or poor quality.
 
@@ -167,8 +167,8 @@ One ranked page per job title. These answer "what should I install for a <job>" 
 - [Sales](https://tashan.sh/role/sales.html) — 54 measured. Top: Gooseworks, Vibe Prospecting, Hubspot Admin.
 - [Scientist](https://tashan.sh/role/scientist.html) — 32 measured. Top: Growthbook · growthbook, Statsclaw, Agent Loops.
 - [Security engineer](https://tashan.sh/role/security.html) — 189 measured. Top: Ato, Zscaler, GitHub Autopilot.
-- [Customer support](https://tashan.sh/role/support.html) — 20 measured. Top: Voicenter, Corebee, Zendesk.
-- [Web / frontend developer](https://tashan.sh/role/web-dev.html) — 120 measured. Top: Tray API, Next DevTools, Figma.
+- [Customer support](https://tashan.sh/role/support.html) — 20 measured. Top: Voicenter, Corebee, Help Scout.
+- [Web / frontend developer](https://tashan.sh/role/web-dev.html) — 120 measured. Top: Vuetify, Tray API, Next DevTools.
 - [Writer / content](https://tashan.sh/role/writer.html) — 213 measured. Top: Context7, Humanize Korean, Save To Spotify.
 
 ## Categories

@@ -38,28 +38,28 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 73 | 2k ★ | active |
 | 17 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 72 | 1k ★ | active |
 | 18 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 68 | 2k/wk | active |
-| 19 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 68 | 326 ★ | active |
-| 20 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 66 | 118 ★ | active |
-| 21 | [Jira](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 63 | 46 ★ | active |
-| 22 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 63 | 48 ★ | active |
-| 23 | [Gangsta](https://tashan.sh/capability/plugin-kucherenko-gangsta-gangsta.html) | 62 | 67 ★ | active |
-| 24 | [Draft](https://tashan.sh/capability/plugin-mayurpise-draft-draft.html) | 60 | 39 ★ | active |
-| 25 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
-| 26 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 60 | 302 ★ | active |
-| 27 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 60 | 28 ★ | active |
-| 28 | [AI Adoption Playbook](https://tashan.sh/capability/plugin-adimango-ai-adoption-playbook-ai-adoption-playbook.html) | 59 | 20 ★ | active |
-| 29 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 59 | 27 ★ | active |
-| 30 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 56 | 43 ★ | active |
-| 31 | [Product Discovery](https://tashan.sh/capability/plugin-lenar-amirov-product-pipeline-public-product-discovery.html) | 56 | 13 ★ | active |
-| 32 | [Groundwork](https://tashan.sh/capability/plugin-etr-groundwork-groundwork.html) | 55 | 41 ★ | active |
-| 33 | [Sdd](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 54 | 11 ★ | active |
-| 34 | [Reqvire](https://tashan.sh/capability/plugin-reqvire-org-reqvire-reqvire.html) | 54 | 15 ★ | active |
-| 35 | [Game Of Cards](https://tashan.sh/capability/plugin-zauberzeug-game-of-cards-game-of-cards.html) | 53 | 6 ★ | active |
-| 36 | [Adversarial Spec](https://tashan.sh/capability/plugin-zscole-adversarial-spec-adversarial-spec.html) | 52 | 554 ★ | stable |
-| 37 | [Don Cheli Sdd Framework](https://tashan.sh/capability/plugin-doncheli-don-cheli-sdd-don-cheli-sdd-framework.html) | 52 | 56 ★ | active |
-| 38 | [Jig](https://tashan.sh/capability/plugin-ramboz-jig-jig.html) | 52 | 4 ★ | active |
-| 39 | [Specops](https://tashan.sh/capability/plugin-sanmak-specops-specops.html) | 51 | 50 ★ | active |
-| 40 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 81 | 51k ★ | active |
+| 19 | [Alphacouncil Agent](https://tashan.sh/capability/pkg-alphacouncil-agent.html) | 68 | 1k/wk | active |
+| 20 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 68 | 326 ★ | active |
+| 21 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 66 | 118 ★ | active |
+| 22 | [Jira](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 63 | 46 ★ | active |
+| 23 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 63 | 48 ★ | active |
+| 24 | [Gangsta](https://tashan.sh/capability/plugin-kucherenko-gangsta-gangsta.html) | 62 | 67 ★ | active |
+| 25 | [Draft](https://tashan.sh/capability/plugin-mayurpise-draft-draft.html) | 60 | 39 ★ | active |
+| 26 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
+| 27 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 60 | 302 ★ | active |
+| 28 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 60 | 28 ★ | active |
+| 29 | [AI Adoption Playbook](https://tashan.sh/capability/plugin-adimango-ai-adoption-playbook-ai-adoption-playbook.html) | 59 | 20 ★ | active |
+| 30 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 59 | 27 ★ | active |
+| 31 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 56 | 43 ★ | active |
+| 32 | [Product Discovery](https://tashan.sh/capability/plugin-lenar-amirov-product-pipeline-public-product-discovery.html) | 56 | 13 ★ | active |
+| 33 | [Groundwork](https://tashan.sh/capability/plugin-etr-groundwork-groundwork.html) | 55 | 41 ★ | active |
+| 34 | [Sdd](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 54 | 11 ★ | active |
+| 35 | [Reqvire](https://tashan.sh/capability/plugin-reqvire-org-reqvire-reqvire.html) | 54 | 15 ★ | active |
+| 36 | [Game Of Cards](https://tashan.sh/capability/plugin-zauberzeug-game-of-cards-game-of-cards.html) | 53 | 6 ★ | active |
+| 37 | [Adversarial Spec](https://tashan.sh/capability/plugin-zscole-adversarial-spec-adversarial-spec.html) | 52 | 554 ★ | stable |
+| 38 | [Don Cheli Sdd Framework](https://tashan.sh/capability/plugin-doncheli-don-cheli-sdd-don-cheli-sdd-framework.html) | 52 | 56 ★ | active |
+| 39 | [Jig](https://tashan.sh/capability/plugin-ramboz-jig-jig.html) | 52 | 4 ★ | active |
+| 40 | [Specops](https://tashan.sh/capability/plugin-sanmak-specops-specops.html) | 51 | 50 ★ | active |
 
 Showing the top 40 of 255. The full ranked shelf is at https://tashan.sh/role/pm.html.
 

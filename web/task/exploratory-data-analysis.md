@@ -36,9 +36,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 23 | [ClickHouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 54 | 5 ★ | active |
 | 24 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 74 | 11k/wk | active |
 | 25 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
-| 26 | [Appfigures](https://tashan.sh/capability/pkg-appfigures-cli.html) | 59 | 159/wk | active |
-| 27 | [Yandex Metrica](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 53 | 146/wk | active |
-| 28 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 63 | 865/wk | active |
+| 26 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 63 | 865/wk | active |
+| 27 | [Appfigures](https://tashan.sh/capability/pkg-appfigures-cli.html) | 59 | 159/wk | active |
+| 28 | [Yandex Metrica](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 53 | 146/wk | active |
 | 29 | [Scopewalker](https://tashan.sh/capability/pkg-scopewalker-mcp.html) | 58 | 370/wk | active |
 | 30 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 58 | 210/wk | active |
 | 31 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 56 | 248/wk | active |

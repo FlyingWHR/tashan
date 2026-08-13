@@ -41,16 +41,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 71 | 218 ★ | active |
 | 29 | [Prompt Engineering Skills](https://tashan.sh/capability/plugin-treylom-prompt-engineering-skills-prompt-engineering-skills.html) | 68 | 168 ★ | active |
 | 30 | [Co Dialectic](https://tashan.sh/capability/plugin-thewhyman-prompt-engineering-in-action-co-dialectic.html) | 52 | 9 ★ | active |
-| 31 | [Kubernetes](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 84 | 18k/wk | active |
-| 32 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 66 | 59k/wk | active |
-| 33 | [Cortex](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 59 | 153/wk | active |
-| 34 | [Ctxfile](https://tashan.sh/capability/pkg-ctxfile.html) | 51 | 104/wk | active |
-| 35 | [Caveman Shrink](https://tashan.sh/capability/pkg-caveman-shrink.html) | 50 | 4k/wk | active |
-| 36 | [Nx](https://tashan.sh/capability/pkg-nx-mcp.html) | 76 | 86k/wk | active |
-| 37 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 69 | 1k/wk | active |
-| 38 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 69 | 931/wk | active |
-| 39 | [Contextecf Codeledger](https://tashan.sh/capability/pkg-contextecf-codeledger.html) | 68 | 726/wk | active |
-| 40 | [Slack · korotovsky](https://tashan.sh/capability/pkg-slack-mcp-server.html) | 67 | 20k/wk | active |
+| 31 | [Contextecf Codeledger](https://tashan.sh/capability/pkg-contextecf-codeledger.html) | 68 | 726/wk | active |
+| 32 | [Claude Prompts](https://tashan.sh/capability/pkg-claude-prompts.html) | 67 | 836/wk | active |
+| 33 | [Tanuki Context](https://tashan.sh/capability/pkg-tanuki-context.html) | 66 | 664/wk | active |
+| 34 | [Kubernetes](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 84 | 18k/wk | active |
+| 35 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 69 | 1k/wk | active |
+| 36 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 69 | 931/wk | active |
+| 37 | [Codesight](https://tashan.sh/capability/pkg-codesight.html) | 67 | 827/wk | active |
+| 38 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 66 | 59k/wk | active |
+| 39 | [Madar](https://tashan.sh/capability/pkg-lubab-madar.html) | 64 | 693/wk | active |
+| 40 | [Cortex](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 59 | 153/wk | active |
 
 Showing the top 40 of 67. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
 

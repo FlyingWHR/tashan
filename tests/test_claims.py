@@ -157,6 +157,25 @@ ok(f"pricing advertises one cadence per live checkout link ({len(by_url)} link, 
    len(prices) <= len(by_url), f"{sorted(prices)} advertised, {len(by_url)} checkout link(s)")
 
 print()
+print("# do not document an endpoint that does not exist")
+# We have shipped docs for an unpublished CLI command before, which is the check directly below
+# this one. The agent-facing endpoints are the same hazard with a worse failure: an agent that POSTs
+# to a 404 does not file a bug, it stops calling. Assert each documented route has a Function.
+_hosts = open(os.path.join(WEB, "for-hosts.html"), encoding="utf-8").read()
+for _route in sorted(set(re.findall(r"/v0\.1/([a-z]+)", _hosts))):
+    _f = os.path.join(ROOT, "functions", "v0.1", _route + ".js")
+    _catchall = os.path.join(ROOT, "functions", "v0.1", "[[route]].js")
+    ok(f"for-hosts.html documents /v0.1/{_route}, and it is served",
+       os.path.exists(_f) or os.path.exists(_catchall))
+# The price on the page must be the price the code quotes — same rule as the pricing page.
+_x402 = open(os.path.join(ROOT, "functions", "api", "_x402.js"), encoding="utf-8").read()
+for _key, _label in (("capability-kit", "kit"), ("config-audit", "audit")):
+    _m = re.search(r'"' + _key + r'":\s*\{\s*\n\s*usd:\s*([0-9.]+)', _x402)
+    ok(f"the {_label} price on for-hosts.html matches PRICED['{_key}']",
+       bool(_m) and ("$" + _m.group(1)) in _hosts,
+       f"code says ${_m.group(1) if _m else '?'}")
+
+print()
 print("# do not sell a command the published CLI does not have")
 # tashan-cli@0.1.1 on npm has `activate` and `doctor`; it has no `login` and no `--watch`. The site
 # sold both. A sign-in instruction that does not exist is a conversion dead end for someone who has

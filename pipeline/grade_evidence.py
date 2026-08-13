@@ -194,13 +194,29 @@ EXT = (".yml", ".yaml", ".json", ".md", ".ts", ".js", ".tsx", ".mjs", ".sh", ".t
        ".txt", ".env", ".py", ".go", ".rs", ".html", ".css", ".xml", ".cfg", ".ini")
 NOT_A_TOOL = {"mcp-server", "server-mcp", "mcp-servers", "package-json", "read-me", "node-js",
               "claude-desktop", "claude-code", "docker-compose", "quick-start", "getting-started",
-              "table-of-contents", "self-hosted", "open-source", "step-by-step"}
+              "table-of-contents", "self-hosted", "open-source", "step-by-step",
+              # AN ERROR CODE IS NOT A TOOL. Servers that document their failure modes in the same
+              # `code — meaning` table shape as their tools were credited for both:
+              # @professional-wiki/mediawiki-mcp-server showed "6 tools documented (list-wikis,
+              # not_found, permission_denied…)" — three of those six are what it returns when the
+              # call FAILS. They are snake_case, so the hyphen-corroboration rule waves them
+              # through, and only a name list makes them visible.
+              "not_found", "permission_denied", "invalid_input", "rate_limited", "unauthorized",
+              "internal_error", "bad_request", "invalid_request", "not_implemented", "forbidden",
+              "timeout", "invalid_params", "server_error", "unavailable", "conflict",
+              "invalid_argument", "already_exists", "failed_precondition", "out_of_range"}
 
 
 # A HOSTNAME IS NOT A TOOL. `tool_shaped` accepts a dot as an identifier separator, which is right
 # for `namespace.tool` and wrong for `euparliamentmonitor.com`: european-parliament-mcp-server was
 # credited with 70 tools, two of which were the websites in its own header. Restricted to real TLDs
 # so a genuinely dotted tool name is untouched.
+# ...and enumerating error codes one at a time is the wrong shape: the set above caught
+# `not_found` and `permission_denied`, and the very next run surfaced `upstream_failure`. Error
+# identifiers share a small vocabulary of heads and tails, so match the SHAPE instead.
+ERRORY = re.compile(r"(^|_)(error|failure|failed|denied|invalid|unknown|missing|timeout|unavailable"
+                    r"|unsupported|forbidden|unauthorized|rejected|conflict)(_|$)")
+
 HOSTNAME = re.compile(r"^[a-z0-9-]+(\.[a-z0-9-]+)*\.(com|org|net|io|dev|sh|ai|co|app|eu|gov|edu|me|xyz|cloud|tools)$")
 
 
@@ -208,6 +224,7 @@ def tool_shaped(tok):
     """Does this token look like a tool identifier rather than a filename, a host or an English word?"""
     t = tok.lower()
     return (not t.endswith(EXT) and t not in NOT_A_TOOL and not HOSTNAME.match(t)
+            and not ERRORY.search(t)
             and bool(re.search(r"[_.]|-", t))          # identifiers carry a separator
             and not re.fullmatch(r"[a-z][a-z-]*-\d+", t)  # `brilliant-directories-60031` is an id
             and len(t) >= 5)

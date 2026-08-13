@@ -30,23 +30,23 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 54 | 123 ★ | active |
 | 11 | [Imqueue](https://tashan.sh/capability/pkg-imqueue-mcp.html) | 73 | 2k/wk | active |
 | 12 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 70 | 168 ★ | active |
-| 13 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
-| 14 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 68 | 137 ★ | active |
-| 15 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 68 | 8k/wk | active |
-| 16 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 238 ★ | active |
-| 17 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 64 | 167 ★ | active |
-| 18 | [Vibe Replay](https://tashan.sh/capability/plugin-tuo-lei-vibe-replay-vibe-replay.html) | 60 | 33 ★ | active |
-| 19 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 59 | 40 ★ | active |
-| 20 | [Officecli](https://tashan.sh/capability/plugin-officecli-officecli-skills-officecli.html) | 57 | 72 ★ | active |
-| 21 | [Sdd](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 54 | 11 ★ | active |
-| 22 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 52 | 4 ★ | active |
-| 23 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 51 | 73 ★ | active |
-| 24 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 51 | 4 ★ | active |
-| 25 | [Apple Doc](https://tashan.sh/capability/pkg-apple-doc-mcp-server.html) | 48 | 2k/wk | active |
-| 26 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 47 | 7k/wk | active |
-| 27 | [Yapi Auto](https://tashan.sh/capability/pkg-yapi-auto-mcp.html) | 24 | 3k/wk | abandoned |
-| 28 | [Deepwiki](https://tashan.sh/capability/pkg-mcp-deepwiki.html) | 23 | 2k/wk | abandoned |
-| 29 | [Gogcli Mcp Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 70 | 1k/wk | active |
+| 13 | [Gogcli Mcp Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 70 | 1k/wk | active |
+| 14 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
+| 15 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 68 | 137 ★ | active |
+| 16 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 68 | 8k/wk | active |
+| 17 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 238 ★ | active |
+| 18 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 64 | 167 ★ | active |
+| 19 | [Vibe Replay](https://tashan.sh/capability/plugin-tuo-lei-vibe-replay-vibe-replay.html) | 60 | 33 ★ | active |
+| 20 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 59 | 40 ★ | active |
+| 21 | [Officecli](https://tashan.sh/capability/plugin-officecli-officecli-skills-officecli.html) | 57 | 72 ★ | active |
+| 22 | [Sdd](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 54 | 11 ★ | active |
+| 23 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 52 | 4 ★ | active |
+| 24 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 51 | 73 ★ | active |
+| 25 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 51 | 4 ★ | active |
+| 26 | [Apple Doc](https://tashan.sh/capability/pkg-apple-doc-mcp-server.html) | 48 | 2k/wk | active |
+| 27 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 47 | 7k/wk | active |
+| 28 | [Yapi Auto](https://tashan.sh/capability/pkg-yapi-auto-mcp.html) | 24 | 3k/wk | abandoned |
+| 29 | [Deepwiki](https://tashan.sh/capability/pkg-mcp-deepwiki.html) | 23 | 2k/wk | abandoned |
 | 30 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
 | 31 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 52 | 2 repos | active |
 | 32 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 50 | 3 ★ | active |
