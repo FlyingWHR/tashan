@@ -29,20 +29,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Autoresearch AI Plugin](https://tashan.sh/capability/plugin-proyecto26-autoresearch-ai-plugin-autoresearch-ai-plugin.html) | 44 | 12 ★ | active |
 | 17 | [Bitfab](https://tashan.sh/capability/plugin-project-white-rabbit-bitfab-claude-plugin-bitfab.html) | 42 | 1 ★ | active |
 | 18 | [Claude Performance](https://tashan.sh/capability/plugin-adelaidasofia-claude-performance-claude-performance.html) | 42 | 1 ★ | active |
-| 19 | [Everdict](https://tashan.sh/capability/plugin-everdict-everdict-everdict.html) | 40 | 1 ★ | active |
-| 20 | [Caio Review](https://tashan.sh/capability/skill-alirezarezvani-caio-review.html) | not scored | 1 repos | active |
-| 21 | [Chief AI Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-ai-officer-advisor.html) | not scored | 1 repos | active |
-| 22 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | not scored | 1 repos | active |
-| 23 | [Agenthub](https://tashan.sh/capability/skill-alirezarezvani-agenthub.html) | not scored | 1 repos | active |
-| 24 | [Autoresearch Agent](https://tashan.sh/capability/skill-alirezarezvani-autoresearch-agent.html) | not scored | 1 repos | active |
-| 25 | [Prompt Governance](https://tashan.sh/capability/skill-alirezarezvani-prompt-governance.html) | not scored | 1 repos | active |
-| 26 | [Self Eval](https://tashan.sh/capability/skill-alirezarezvani-self-eval.html) | not scored | 1 repos | active |
-| 27 | [Prompt Engineer Toolkit](https://tashan.sh/capability/skill-alirezarezvani-prompt-engineer-toolkit.html) | not scored | 1 repos | active |
-| 28 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 71 | 218 ★ | active |
-| 29 | [Nexus Agents · williamzujkowski](https://tashan.sh/capability/plugin-williamzujkowski-nexus-agents-nexus-agents.html) | 58 | 16 ★ | active |
-| 30 | [My Pi](https://tashan.sh/capability/pkg-my-pi.html) | 67 | 667/wk | active |
-| 31 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 59 | 158/wk | active |
-| 32 | [Plzebo](https://tashan.sh/capability/pkg-plzebo.html) | 57 | 326/wk | active |
+| 19 | [Langsmith](https://tashan.sh/capability/pkg-langsmith-mcp-server.html) | 42 | 2k/wk | active |
+| 20 | [Everdict](https://tashan.sh/capability/plugin-everdict-everdict-everdict.html) | 40 | 1 ★ | active |
+| 21 | [Caio Review](https://tashan.sh/capability/skill-alirezarezvani-caio-review.html) | not scored | 1 repos | active |
+| 22 | [Chief AI Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-ai-officer-advisor.html) | not scored | 1 repos | active |
+| 23 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | not scored | 1 repos | active |
+| 24 | [Agenthub](https://tashan.sh/capability/skill-alirezarezvani-agenthub.html) | not scored | 1 repos | active |
+| 25 | [Autoresearch Agent](https://tashan.sh/capability/skill-alirezarezvani-autoresearch-agent.html) | not scored | 1 repos | active |
+| 26 | [Prompt Governance](https://tashan.sh/capability/skill-alirezarezvani-prompt-governance.html) | not scored | 1 repos | active |
+| 27 | [Self Eval](https://tashan.sh/capability/skill-alirezarezvani-self-eval.html) | not scored | 1 repos | active |
+| 28 | [Prompt Engineer Toolkit](https://tashan.sh/capability/skill-alirezarezvani-prompt-engineer-toolkit.html) | not scored | 1 repos | active |
+| 29 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 71 | 218 ★ | active |
+| 30 | [Nexus Agents · williamzujkowski](https://tashan.sh/capability/plugin-williamzujkowski-nexus-agents-nexus-agents.html) | 58 | 16 ★ | active |
+| 31 | [My Pi](https://tashan.sh/capability/pkg-my-pi.html) | 67 | 667/wk | active |
+| 32 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 59 | 158/wk | active |
+| 33 | [Plzebo](https://tashan.sh/capability/pkg-plzebo.html) | 57 | 326/wk | active |
 
 ## What these numbers are not
 

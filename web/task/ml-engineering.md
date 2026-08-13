@@ -11,16 +11,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [AI Context](https://tashan.sh/capability/pkg-vibgrate-cli.html) | 71 | 3k/wk | active |
-| 2 | [Agent Nuvira](https://tashan.sh/capability/pkg-agent-nuvira.html) | 73 | 7k/wk | active |
-| 3 | [Gerbil](https://tashan.sh/capability/pkg-tryhamster-gerbil.html) | 69 | 436/wk | active |
-| 4 | [Tuning Engines - Governed AI Runtime](https://tashan.sh/capability/pkg-tuningengines-cli.html) | 62 | 241/wk | active |
-| 5 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 58 | 234/wk | active |
-| 6 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
-| 7 | [Edgegate](https://tashan.sh/capability/pkg-edgegate-mcp.html) | 46 | 11/wk | active |
-| 8 | [Ragdrift](https://tashan.sh/capability/pkg-mukundakatta-ragdrift-mcp.html) | 36 | 38/wk | active |
-| 9 | [Forge · rightnow](https://tashan.sh/capability/pkg-rightnow-forge-mcp-server.html) | 29 | 81/wk | abandoned |
-| 10 | [Sparkrun](https://tashan.sh/capability/plugin-spark-arena-sparkrun-sparkrun.html) | not scored | 443 ★ | active |
+| 1 | [Replicate](https://tashan.sh/capability/pkg-replicate-mcp.html) | 28 | 2k/wk | abandoned |
+| 2 | [AI Context](https://tashan.sh/capability/pkg-vibgrate-cli.html) | 71 | 3k/wk | active |
+| 3 | [Agent Nuvira](https://tashan.sh/capability/pkg-agent-nuvira.html) | 73 | 7k/wk | active |
+| 4 | [Gerbil](https://tashan.sh/capability/pkg-tryhamster-gerbil.html) | 69 | 436/wk | active |
+| 5 | [Tuning Engines - Governed AI Runtime](https://tashan.sh/capability/pkg-tuningengines-cli.html) | 62 | 241/wk | active |
+| 6 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 58 | 234/wk | active |
+| 7 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
+| 8 | [Edgegate](https://tashan.sh/capability/pkg-edgegate-mcp.html) | 46 | 11/wk | active |
+| 9 | [Ragdrift](https://tashan.sh/capability/pkg-mukundakatta-ragdrift-mcp.html) | 36 | 38/wk | active |
+| 10 | [Forge · rightnow](https://tashan.sh/capability/pkg-rightnow-forge-mcp-server.html) | 29 | 81/wk | abandoned |
+| 11 | [Sparkrun](https://tashan.sh/capability/plugin-spark-arena-sparkrun-sparkrun.html) | not scored | 443 ★ | active |
 
 ## What these numbers are not
 

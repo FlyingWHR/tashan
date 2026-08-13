@@ -28,31 +28,31 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Add](https://tashan.sh/capability/pkg-add-mcp.html) | 77 | 227k/wk | active |
 | 16 | [Token Optimizer](https://tashan.sh/capability/plugin-alexgreensh-token-optimizer-token-optimizer.html) | 75 | 2k ★ | active |
 | 17 | [Skillfish](https://tashan.sh/capability/pkg-skillfish.html) | 75 | 16k/wk | active |
-| 18 | [Wozcode](https://tashan.sh/capability/plugin-withwoz-wozcode-plugin-wozcode.html) | 69 | 196 ★ | active |
-| 19 | [Armorclaude](https://tashan.sh/capability/plugin-armoriq-armorclaude-armorclaude.html) | 66 | 44 ★ | active |
-| 20 | [Nlpm](https://tashan.sh/capability/plugin-xiaolai-nlpm-for-claude-nlpm.html) | 66 | 95 ★ | active |
-| 21 | [Agent Session Resume](https://tashan.sh/capability/plugin-hacktivist123-agent-session-resume-agent-session-resume.html) | 66 | 235 ★ | active |
-| 22 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 65 | 68 ★ | active |
-| 23 | [Clawcode](https://tashan.sh/capability/plugin-crisandrews-clawcode-clawcode.html) | 64 | 61 ★ | active |
-| 24 | [Remote](https://tashan.sh/capability/pkg-mcp-remote.html) | 64 | 485k/wk | abandoned |
-| 25 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 63 | 48 ★ | active |
-| 26 | [Network AI](https://tashan.sh/capability/plugin-jovancoding-network-ai-network-ai.html) | 63 | 70 ★ | active |
-| 27 | [Imprint](https://tashan.sh/capability/plugin-ilang-ai-imprint-imprint.html) | 62 | 98 ★ | active |
-| 28 | [Darkroom](https://tashan.sh/capability/plugin-darkroomengineering-cc-settings-darkroom.html) | 62 | 40 ★ | active |
-| 29 | [Guide](https://tashan.sh/capability/plugin-orinachum-onboarding-claude-code-guide.html) | 61 | 117 ★ | active |
-| 30 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 60 | 27 ★ | active |
-| 31 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 60 | 27 ★ | active |
-| 32 | [Vibe Replay](https://tashan.sh/capability/plugin-tuo-lei-vibe-replay-vibe-replay.html) | 60 | 33 ★ | active |
-| 33 | [Token Saver](https://tashan.sh/capability/plugin-ppgranger-token-saver-token-saver.html) | 59 | 121 ★ | active |
-| 34 | [Supertool](https://tashan.sh/capability/plugin-digital-process-tools-claude-supertool-supertool.html) | 57 | 14 ★ | active |
-| 35 | [Laconic](https://tashan.sh/capability/plugin-gabrielbarberini-laconic-laconic.html) | 56 | 18 ★ | active |
-| 36 | [LLM Gateway](https://tashan.sh/capability/plugin-verivus-oss-llm-cli-gateway-llm-gateway.html) | 55 | 10 ★ | active |
-| 37 | [Superpowers Optimized](https://tashan.sh/capability/plugin-repozy-superpowers-optimized-superpowers-optimized.html) | 55 | 128 ★ | active |
-| 38 | [Duck Duck Duck](https://tashan.sh/capability/plugin-ideo-rubber-duck-duck-duck-duck.html) | 54 | 22 ★ | active |
-| 39 | [AI Coding Ok](https://tashan.sh/capability/plugin-mark7766-ai-coding-ok-ai-coding-ok.html) | 52 | 15 ★ | active |
-| 40 | [Claude Eta](https://tashan.sh/capability/plugin-mmmprod-claude-eta-claude-eta.html) | 52 | 5 ★ | active |
+| 18 | [Codeam CLI](https://tashan.sh/capability/pkg-codeam-cli.html) | 71 | 3k/wk | active |
+| 19 | [Wozcode](https://tashan.sh/capability/plugin-withwoz-wozcode-plugin-wozcode.html) | 69 | 196 ★ | active |
+| 20 | [Agentsmesh](https://tashan.sh/capability/pkg-agentsmesh.html) | 69 | 2k/wk | active |
+| 21 | [Armorclaude](https://tashan.sh/capability/plugin-armoriq-armorclaude-armorclaude.html) | 66 | 44 ★ | active |
+| 22 | [Nlpm](https://tashan.sh/capability/plugin-xiaolai-nlpm-for-claude-nlpm.html) | 66 | 95 ★ | active |
+| 23 | [Agent Session Resume](https://tashan.sh/capability/plugin-hacktivist123-agent-session-resume-agent-session-resume.html) | 66 | 235 ★ | active |
+| 24 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 65 | 68 ★ | active |
+| 25 | [Clawcode](https://tashan.sh/capability/plugin-crisandrews-clawcode-clawcode.html) | 64 | 61 ★ | active |
+| 26 | [Remote](https://tashan.sh/capability/pkg-mcp-remote.html) | 64 | 485k/wk | abandoned |
+| 27 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 63 | 48 ★ | active |
+| 28 | [Network AI](https://tashan.sh/capability/plugin-jovancoding-network-ai-network-ai.html) | 63 | 70 ★ | active |
+| 29 | [Imprint](https://tashan.sh/capability/plugin-ilang-ai-imprint-imprint.html) | 62 | 98 ★ | active |
+| 30 | [Darkroom](https://tashan.sh/capability/plugin-darkroomengineering-cc-settings-darkroom.html) | 62 | 40 ★ | active |
+| 31 | [Guide](https://tashan.sh/capability/plugin-orinachum-onboarding-claude-code-guide.html) | 61 | 117 ★ | active |
+| 32 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 60 | 27 ★ | active |
+| 33 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 60 | 27 ★ | active |
+| 34 | [Vibe Replay](https://tashan.sh/capability/plugin-tuo-lei-vibe-replay-vibe-replay.html) | 60 | 33 ★ | active |
+| 35 | [Token Saver](https://tashan.sh/capability/plugin-ppgranger-token-saver-token-saver.html) | 59 | 121 ★ | active |
+| 36 | [Supertool](https://tashan.sh/capability/plugin-digital-process-tools-claude-supertool-supertool.html) | 57 | 14 ★ | active |
+| 37 | [Laconic](https://tashan.sh/capability/plugin-gabrielbarberini-laconic-laconic.html) | 56 | 18 ★ | active |
+| 38 | [LLM Gateway](https://tashan.sh/capability/plugin-verivus-oss-llm-cli-gateway-llm-gateway.html) | 55 | 10 ★ | active |
+| 39 | [Superpowers Optimized](https://tashan.sh/capability/plugin-repozy-superpowers-optimized-superpowers-optimized.html) | 55 | 128 ★ | active |
+| 40 | [Duck Duck Duck](https://tashan.sh/capability/plugin-ideo-rubber-duck-duck-duck-duck.html) | 54 | 22 ★ | active |
 
-Showing the top 40 of 171. The full ranked shelf is at https://tashan.sh/role/agent-operator.html.
+Showing the top 40 of 175. The full ranked shelf is at https://tashan.sh/role/agent-operator.html.
 
 ## What these numbers are not
 

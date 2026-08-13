@@ -58,7 +58,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 45 | 3 ★ | active |
 | 40 | [Perf](https://tashan.sh/capability/plugin-agent-sh-perf-perf.html) | 44 | 2 ★ | active |
 
-Showing the top 40 of 81. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
+Showing the top 40 of 82. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
 
 ## What these numbers are not
 

@@ -1,0 +1,93 @@
+{
+  "_why": "Demand ranks 200-520, the band below the first pass. Same method: graded in session from each capability's own published description, because the `declared` pass reads npm keywords and most of these declare none.",
+  "_rule": "Untagged is a result. Recipes, Airbnb, Giphy, domain lookups, ephemeris maths, Zigbee estates, train tickets and every row whose description is marketing have no honest home in a 69-task taxonomy of work people do, and a wrong shelf is worse than an empty one.",
+
+  "pkg:@shiplightai/mcp": ["browser-automation"],
+  "pkg:puppeteer-mcp-server": ["browser-automation"],
+  "pkg:@trusty-squire/mcp": ["browser-automation"],
+  "pkg:chrome-bridge-mcp": ["browser-automation", "web-development"],
+  "pkg:open-computer-use": ["process-automation"],
+  "pkg:openowl": ["process-automation"],
+
+  "pkg:codeam-cli": ["agent-configuration"],
+  "pkg:agentsmesh": ["agent-configuration"],
+  "pkg:agentic-awesome-skills": ["agent-configuration"],
+  "pkg:skillsmp-mcp-server": ["agent-configuration"],
+  "pkg:keryx": ["agent-development"],
+  "pkg:prjct-cli": ["agent-development"],
+
+  "pkg:@jpisnice/shadcn-ui-mcp-server": ["web-development", "visual-design"],
+  "pkg:daisyui-blueprint": ["web-development"],
+  "pkg:tailwindcss-mcp-server": ["web-development"],
+  "pkg:@vuetify/mcp": ["web-development"],
+  "pkg:@letoribo/mcp-graphql-enhanced": ["application-development"],
+  "pkg:arc-1": ["application-development"],
+  "pkg:kasy-mcp": ["application-development"],
+  "pkg:@pofky/asc-mcp": ["application-development"],
+
+  "pkg:symforge": ["code-review"],
+  "pkg:@tmonier/argot": ["code-review"],
+  "pkg:memtrace": ["code-review"],
+  "pkg:memtrace-skills": ["code-review"],
+  "pkg:@bashbop/otito": ["code-review"],
+  "pkg:@aryam/fixmap": ["code-review"],
+  "pkg:sqlew": ["software-architecture"],
+  "pkg:execbro": ["debugging"],
+  "pkg:monomind": ["knowledge-management", "code-review"],
+
+  "pkg:nexql-mcp": ["database-access"],
+  "pkg:influxdb-mcp-server": ["database-access"],
+
+  "pkg:vercel-mcp": ["infrastructure-and-deployment"],
+  "pkg:@daghis/teamcity-mcp": ["infrastructure-and-deployment"],
+  "pkg:wuying-agentbay-mcp-server": ["infrastructure-and-deployment"],
+
+  "pkg:mcp-testrail": ["test-automation"],
+  "pkg:axe-mcp-server": ["test-automation"],
+  "pkg:langsmith-mcp-server": ["model-evaluation", "observability"],
+  "pkg:replicate-mcp": ["ml-engineering"],
+
+  "pkg:notion-mcp-server": ["knowledge-management"],
+  "pkg:slite-mcp-server": ["knowledge-management"],
+  "pkg:@professional-wiki/mediawiki-mcp-server": ["knowledge-management"],
+  "pkg:memorix": ["knowledge-management"],
+  "pkg:faf-cli": ["knowledge-management"],
+  "pkg:ltcai": ["knowledge-management"],
+
+  "pkg:yapi-auto-mcp": ["technical-documentation"],
+  "pkg:apple-doc-mcp-server": ["technical-documentation"],
+  "pkg:@imqueue/mcp": ["technical-documentation"],
+  "pkg:mcp-deepwiki": ["technical-documentation", "web-research"],
+
+  "pkg:reddit-mcp-buddy": ["web-research"],
+  "pkg:mcp-trends-hub": ["web-research"],
+  "pkg:stepfun-mcp": ["web-research"],
+  "pkg:perplexity-mcp": ["web-research"],
+
+  "pkg:@discord-mcp/cli": ["messaging-and-email"],
+  "pkg:agentmail-mcp": ["messaging-and-email"],
+
+  "pkg:figma-mcp": ["visual-design"],
+  "pkg:mcp-figma": ["visual-design"],
+  "pkg:excalidraw-mcp": ["visual-design", "document-production"],
+  "pkg:touchdesigner-mcp-server": ["animation"],
+
+  "pkg:mcp-google-docs": ["document-production"],
+  "pkg:gogcli-mcp-sheets": ["document-production"],
+  "pkg:gezhe-mcp-server": ["document-production"],
+
+  "pkg:@fidacy/mcp": ["security-review"],
+  "pkg:onepassword-agent-mcp": ["security-review"],
+  "pkg:mcp-server-scf": ["regulatory-compliance", "risk-assessment"],
+  "pkg:hourei-mcp-server": ["regulatory-compliance"],
+  "pkg:labor-law-mcp": ["regulatory-compliance"],
+  "pkg:tax-law-mcp": ["regulatory-compliance", "bookkeeping"],
+
+  "pkg:tyc-cli": ["market-analysis"],
+  "pkg:kiwoom-mcp-server": ["market-analysis"],
+  "pkg:alphacouncil-agent": ["market-analysis"],
+  "pkg:@savvly/mcp-server": ["financial-modeling"],
+  "pkg:meta-ads-mcp": ["content-marketing"],
+  "pkg:@openenterprise/oe-mcp": ["data-pipelines"],
+  "pkg:@openephemeris/mcp-server": ["scientific-research"]
+}

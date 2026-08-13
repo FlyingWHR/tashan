@@ -39,26 +39,26 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 20 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 60 | 27 ★ | active |
 | 21 | [Launchdarkly · launchdarkly](https://tashan.sh/capability/plugin-launchdarkly-ai-tooling-launchdarkly.html) | 59 | 20 ★ | active |
 | 22 | [Mirrord Agent Skills](https://tashan.sh/capability/plugin-metalbear-co-skills-mirrord-agent-skills.html) | 59 | 21 ★ | active |
-| 23 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 57 | 21 ★ | active |
-| 24 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 57 | 17 ★ | active |
-| 25 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 54 | 7 ★ | active |
-| 26 | [Datadog · datadog-labs](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 53 | 8 ★ | active |
-| 27 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 52 | 12 ★ | active |
-| 28 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
-| 29 | [GCP](https://tashan.sh/capability/pkg-gcp-mcp.html) | 19 | 4k/wk | abandoned |
-| 30 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
-| 31 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 84 | 14k/wk | active |
-| 32 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 2 marketplaces | active |
-| 33 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 3 marketplaces | active |
-| 34 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
-| 35 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
-| 36 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
-| 37 | [Rr](https://tashan.sh/capability/plugin-rileyhilliard-rr-rr.html) | 63 | 194 ★ | active |
-| 38 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 61 | 85 ★ | active |
-| 39 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 61 | 40 ★ | active |
-| 40 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 61 | 40 ★ | active |
+| 23 | [Teamcity](https://tashan.sh/capability/pkg-daghis-teamcity-mcp.html) | 58 | 2k/wk | active |
+| 24 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 57 | 21 ★ | active |
+| 25 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 57 | 17 ★ | active |
+| 26 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 54 | 7 ★ | active |
+| 27 | [Datadog · datadog-labs](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 53 | 8 ★ | active |
+| 28 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 52 | 12 ★ | active |
+| 29 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
+| 30 | [GCP](https://tashan.sh/capability/pkg-gcp-mcp.html) | 19 | 4k/wk | abandoned |
+| 31 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
+| 32 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 84 | 14k/wk | active |
+| 33 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 2 marketplaces | active |
+| 34 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 3 marketplaces | active |
+| 35 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
+| 36 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
+| 37 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
+| 38 | [Rr](https://tashan.sh/capability/plugin-rileyhilliard-rr-rr.html) | 63 | 194 ★ | active |
+| 39 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 61 | 85 ★ | active |
+| 40 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 61 | 40 ★ | active |
 
-Showing the top 40 of 221. The full ranked shelf is at https://tashan.sh/role/devops.html.
+Showing the top 40 of 225. The full ranked shelf is at https://tashan.sh/role/devops.html.
 
 ## What these numbers are not
 

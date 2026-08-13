@@ -28,31 +28,31 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Understand Anything](https://tashan.sh/capability/plugin-lum1104-understand-anything-understand-anything.html) | 79 | 76k ★ | active |
 | 16 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
 | 17 | [Lean Kg](https://tashan.sh/capability/plugin-freepeak-leankg-lean-kg.html) | 69 | 213 ★ | active |
-| 18 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 65 | 104 ★ | active |
-| 19 | [AWS Startup Advisor](https://tashan.sh/capability/plugin-awslabs-startups-aws-startup-advisor.html) | 46 | 2 marketplaces | — |
-| 20 | [Three Pillars](https://tashan.sh/capability/plugin-curtisthe-three-pillars-plugin-three-pillars.html) | 45 | 4 ★ | active |
-| 21 | [Formal Agent Contracts](https://tashan.sh/capability/plugin-kotaroyamame-formal-agent-contracts-formal-agent-contracts.html) | 44 | 1 ★ | active |
-| 22 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 43 | 3 ★ | active |
-| 23 | [Nova Thesis](https://tashan.sh/capability/plugin-jerry7991-nova-thesis-nova-thesis.html) | 43 | 12 ★ | active |
-| 24 | [Gitnexus · Roxabi](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-gitnexus.html) | 43 | 1 marketplaces | active |
-| 25 | [Code Modernization](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-code-modernization.html) | 42 | 1 marketplaces | — |
-| 26 | [Feature Dev](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-feature-dev.html) | 42 | 1 marketplaces | — |
-| 27 | [Greptile](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-greptile.html) | 42 | 1 marketplaces | — |
-| 28 | [Building Multiagent Systems](https://tashan.sh/capability/plugin-2389-research-claude-plugins-building-multiagent-systems.html) | 42 | 1 marketplaces | — |
-| 29 | [Django Schema Design](https://tashan.sh/capability/plugin-llodev-skills-django-schema-design.html) | 42 | 1 marketplaces | active |
-| 30 | [Sap Btp Best Practices](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-best-practices.html) | 42 | 1 marketplaces | — |
-| 31 | [GitHub Code Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-github-code-interpreter.html) | 40 | 1 marketplaces | active |
-| 32 | [Kroki Diagrams](https://tashan.sh/capability/plugin-smoldrago-kroki-diagrams-kroki-diagrams.html) | 39 | 5 ★ | active |
-| 33 | [Cto Review](https://tashan.sh/capability/skill-alirezarezvani-cto-review.html) | not scored | 1 repos | active |
-| 34 | [Cto Advisor](https://tashan.sh/capability/skill-alirezarezvani-cto-advisor.html) | not scored | 1 repos | active |
-| 35 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | not scored | 1 repos | active |
-| 36 | [Azure Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-azure-cloud-architect.html) | not scored | 1 repos | active |
-| 37 | [GCP Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-gcp-cloud-architect.html) | not scored | 1 repos | active |
-| 38 | [Senior Architect](https://tashan.sh/capability/skill-alirezarezvani-senior-architect.html) | not scored | 1 repos | active |
-| 39 | [Senior Backend](https://tashan.sh/capability/skill-alirezarezvani-senior-backend.html) | not scored | 1 repos | active |
-| 40 | [Tech Stack Evaluator](https://tashan.sh/capability/skill-alirezarezvani-tech-stack-evaluator.html) | not scored | 1 repos | active |
+| 18 | [Sqlew](https://tashan.sh/capability/pkg-sqlew.html) | 69 | 2k/wk | active |
+| 19 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 65 | 104 ★ | active |
+| 20 | [AWS Startup Advisor](https://tashan.sh/capability/plugin-awslabs-startups-aws-startup-advisor.html) | 46 | 2 marketplaces | — |
+| 21 | [Three Pillars](https://tashan.sh/capability/plugin-curtisthe-three-pillars-plugin-three-pillars.html) | 45 | 4 ★ | active |
+| 22 | [Formal Agent Contracts](https://tashan.sh/capability/plugin-kotaroyamame-formal-agent-contracts-formal-agent-contracts.html) | 44 | 1 ★ | active |
+| 23 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 43 | 3 ★ | active |
+| 24 | [Nova Thesis](https://tashan.sh/capability/plugin-jerry7991-nova-thesis-nova-thesis.html) | 43 | 12 ★ | active |
+| 25 | [Gitnexus · Roxabi](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-gitnexus.html) | 43 | 1 marketplaces | active |
+| 26 | [Code Modernization](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-code-modernization.html) | 42 | 1 marketplaces | — |
+| 27 | [Feature Dev](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-feature-dev.html) | 42 | 1 marketplaces | — |
+| 28 | [Greptile](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-greptile.html) | 42 | 1 marketplaces | — |
+| 29 | [Building Multiagent Systems](https://tashan.sh/capability/plugin-2389-research-claude-plugins-building-multiagent-systems.html) | 42 | 1 marketplaces | — |
+| 30 | [Django Schema Design](https://tashan.sh/capability/plugin-llodev-skills-django-schema-design.html) | 42 | 1 marketplaces | active |
+| 31 | [Sap Btp Best Practices](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-best-practices.html) | 42 | 1 marketplaces | — |
+| 32 | [GitHub Code Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-github-code-interpreter.html) | 40 | 1 marketplaces | active |
+| 33 | [Kroki Diagrams](https://tashan.sh/capability/plugin-smoldrago-kroki-diagrams-kroki-diagrams.html) | 39 | 5 ★ | active |
+| 34 | [Cto Review](https://tashan.sh/capability/skill-alirezarezvani-cto-review.html) | not scored | 1 repos | active |
+| 35 | [Cto Advisor](https://tashan.sh/capability/skill-alirezarezvani-cto-advisor.html) | not scored | 1 repos | active |
+| 36 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | not scored | 1 repos | active |
+| 37 | [Azure Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-azure-cloud-architect.html) | not scored | 1 repos | active |
+| 38 | [GCP Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-gcp-cloud-architect.html) | not scored | 1 repos | active |
+| 39 | [Senior Architect](https://tashan.sh/capability/skill-alirezarezvani-senior-architect.html) | not scored | 1 repos | active |
+| 40 | [Senior Backend](https://tashan.sh/capability/skill-alirezarezvani-senior-backend.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 57. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
+Showing the top 40 of 58. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
 
 ## What these numbers are not
 

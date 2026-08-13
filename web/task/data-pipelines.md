@@ -44,15 +44,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | not scored | 1 repos | active |
 | 32 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | not scored | 1 repos | active |
 | 33 | [Universal Scraping Architect](https://tashan.sh/capability/skill-alirezarezvani-universal-scraping-architect.html) | not scored | 1 repos | active |
-| 34 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 61 | 25 ★ | active |
-| 35 | [Bigtable](https://tashan.sh/capability/plugin-googlecloudplatform-cloud-bigtable-ecosystem-bigtable.html) | 58 | 20 ★ | active |
-| 36 | [Versori Skills](https://tashan.sh/capability/plugin-versori-cli-versori-skills.html) | 55 | 12 ★ | active |
-| 37 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 52 | 6 ★ | active |
-| 38 | [Sales](https://tashan.sh/capability/pkg-autostackup-sales.html) | 44 | 62/wk | active |
-| 39 | [Bach Snowflake](https://tashan.sh/capability/pkg-bach-snowflake-mcp.html) | 44 | 31/wk | active |
-| 40 | [Ultraweb](https://tashan.sh/capability/plugin-blyatiful1-ultraweb-ultraweb.html) | 43 | 1 ★ | active |
+| 34 | [Oe · openenterprise](https://tashan.sh/capability/pkg-openenterprise-oe-mcp.html) | not scored | 2k/wk | abandoned |
+| 35 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 61 | 25 ★ | active |
+| 36 | [Bigtable](https://tashan.sh/capability/plugin-googlecloudplatform-cloud-bigtable-ecosystem-bigtable.html) | 58 | 20 ★ | active |
+| 37 | [Versori Skills](https://tashan.sh/capability/plugin-versori-cli-versori-skills.html) | 55 | 12 ★ | active |
+| 38 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 52 | 6 ★ | active |
+| 39 | [Sales](https://tashan.sh/capability/pkg-autostackup-sales.html) | 44 | 62/wk | active |
+| 40 | [Bach Snowflake](https://tashan.sh/capability/pkg-bach-snowflake-mcp.html) | 44 | 31/wk | active |
 
-Showing the top 40 of 43. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
+Showing the top 40 of 44. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
 
 ## What these numbers are not
 

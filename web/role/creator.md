@@ -21,43 +21,43 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Watch](https://tashan.sh/capability/plugin-bradautomates-claude-video-watch.html) | 67 | 11k ★ | active |
 | 4 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 52 | 5 ★ | active |
 | 5 | [Phantom](https://tashan.sh/capability/plugin-fadelabs-phantom-phantom.html) | 52 | 21 ★ | active |
-| 6 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 68 | 137 ★ | active |
-| 7 | [Hamel Tools](https://tashan.sh/capability/plugin-hamelsmu-hamel-hamel-tools.html) | 52 | 58 ★ | active |
-| 8 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 79 | 34k ★ | active |
-| 9 | [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) | 74 | 8k/wk | active |
-| 10 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 70 | 150 ★ | active |
-| 11 | [Inference Sh](https://tashan.sh/capability/plugin-inference-sh-skills-inference-sh.html) | 61 | 660 ★ | active |
-| 12 | [Peepshow](https://tashan.sh/capability/plugin-t0mtaylor-peepshow-peepshow.html) | 50 | 65 ★ | active |
-| 13 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 49 | 6 ★ | active |
-| 14 | [Letmewatch](https://tashan.sh/capability/plugin-binyamineden-letmewatch-letmewatch.html) | 49 | 9 ★ | active |
-| 15 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 48 | 20 ★ | active |
-| 16 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 46 | 1 ★ | active |
-| 17 | [Sanzaru](https://tashan.sh/capability/plugin-tjc-lp-sanzaru-sanzaru.html) | 45 | 7 ★ | active |
-| 18 | [Hyperframes By Heygen](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes-by-heygen.html) | 44 | 1 marketplaces | active |
-| 19 | [Fk Manim Video](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-manim-video.html) | 44 | 1 marketplaces | active |
-| 20 | [Animated Sketch Diagram](https://tashan.sh/capability/plugin-oldyade-animated-sketch-diagram-animated-sketch-diagram.html) | 44 | 11 ★ | active |
-| 21 | [Image Prompt Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-image-prompt-generator.html) | 43 | 1 marketplaces | active |
-| 22 | [Quickdesign](https://tashan.sh/capability/plugin-anthropics-claude-plugins-community-quickdesign.html) | 42 | 1 marketplaces | — |
-| 23 | [Local Audio Transcriber](https://tashan.sh/capability/plugin-chujianyun-skills-local-audio-transcriber.html) | 40 | 1 marketplaces | active |
-| 24 | [Algorithmic Art](https://tashan.sh/capability/skill-anthropics-algorithmic-art.html) | not scored | 1 repos | active |
-| 25 | [Slack Gif Creator](https://tashan.sh/capability/skill-anthropics-slack-gif-creator.html) | not scored | 1 repos | active |
-| 26 | [All Images AI Automation](https://tashan.sh/capability/skill-composiohq-all-images-ai-automation.html) | not scored | 1 repos | active |
-| 27 | [Heygen Automation](https://tashan.sh/capability/skill-composiohq-heygen-automation.html) | not scored | 1 repos | active |
-| 28 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | not scored | 1 repos | active |
-| 29 | [ElevenLabs Automation](https://tashan.sh/capability/skill-composiohq-elevenlabs-automation.html) | not scored | 1 repos | active |
-| 30 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
-| 31 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 69 | 2k/wk | active |
-| 32 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
-| 33 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 54 | 165/wk | active |
-| 34 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 73 | 7k/wk | active |
-| 35 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
-| 36 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 59 | 239/wk | active |
-| 37 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
-| 38 | [Distribea](https://tashan.sh/capability/pkg-distribea-mcp.html) | 51 | 98/wk | active |
-| 39 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
-| 40 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
+| 6 | [Touchdesigner](https://tashan.sh/capability/pkg-touchdesigner-mcp-server.html) | 70 | 3k/wk | active |
+| 7 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 68 | 137 ★ | active |
+| 8 | [Hamel Tools](https://tashan.sh/capability/plugin-hamelsmu-hamel-hamel-tools.html) | 52 | 58 ★ | active |
+| 9 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 79 | 34k ★ | active |
+| 10 | [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) | 74 | 8k/wk | active |
+| 11 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 70 | 150 ★ | active |
+| 12 | [Inference Sh](https://tashan.sh/capability/plugin-inference-sh-skills-inference-sh.html) | 61 | 660 ★ | active |
+| 13 | [Peepshow](https://tashan.sh/capability/plugin-t0mtaylor-peepshow-peepshow.html) | 50 | 65 ★ | active |
+| 14 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 49 | 6 ★ | active |
+| 15 | [Letmewatch](https://tashan.sh/capability/plugin-binyamineden-letmewatch-letmewatch.html) | 49 | 9 ★ | active |
+| 16 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 48 | 20 ★ | active |
+| 17 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 46 | 1 ★ | active |
+| 18 | [Sanzaru](https://tashan.sh/capability/plugin-tjc-lp-sanzaru-sanzaru.html) | 45 | 7 ★ | active |
+| 19 | [Hyperframes By Heygen](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes-by-heygen.html) | 44 | 1 marketplaces | active |
+| 20 | [Fk Manim Video](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-manim-video.html) | 44 | 1 marketplaces | active |
+| 21 | [Animated Sketch Diagram](https://tashan.sh/capability/plugin-oldyade-animated-sketch-diagram-animated-sketch-diagram.html) | 44 | 11 ★ | active |
+| 22 | [Image Prompt Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-image-prompt-generator.html) | 43 | 1 marketplaces | active |
+| 23 | [Quickdesign](https://tashan.sh/capability/plugin-anthropics-claude-plugins-community-quickdesign.html) | 42 | 1 marketplaces | — |
+| 24 | [Local Audio Transcriber](https://tashan.sh/capability/plugin-chujianyun-skills-local-audio-transcriber.html) | 40 | 1 marketplaces | active |
+| 25 | [Algorithmic Art](https://tashan.sh/capability/skill-anthropics-algorithmic-art.html) | not scored | 1 repos | active |
+| 26 | [Slack Gif Creator](https://tashan.sh/capability/skill-anthropics-slack-gif-creator.html) | not scored | 1 repos | active |
+| 27 | [All Images AI Automation](https://tashan.sh/capability/skill-composiohq-all-images-ai-automation.html) | not scored | 1 repos | active |
+| 28 | [Heygen Automation](https://tashan.sh/capability/skill-composiohq-heygen-automation.html) | not scored | 1 repos | active |
+| 29 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | not scored | 1 repos | active |
+| 30 | [ElevenLabs Automation](https://tashan.sh/capability/skill-composiohq-elevenlabs-automation.html) | not scored | 1 repos | active |
+| 31 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
+| 32 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 69 | 2k/wk | active |
+| 33 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
+| 34 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 54 | 165/wk | active |
+| 35 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 73 | 7k/wk | active |
+| 36 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
+| 37 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 59 | 239/wk | active |
+| 38 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
+| 39 | [Distribea](https://tashan.sh/capability/pkg-distribea-mcp.html) | 51 | 98/wk | active |
+| 40 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
 
-Showing the top 40 of 118. The full ranked shelf is at https://tashan.sh/role/creator.html.
+Showing the top 40 of 119. The full ranked shelf is at https://tashan.sh/role/creator.html.
 
 ## What these numbers are not
 
