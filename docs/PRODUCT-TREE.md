@@ -38,7 +38,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | `/category/*.html` | 107 | `pipeline/gen_hubs.py` |
 | `/task/*.html` | 64 | `pipeline/gen_hubs.py` |
 | `/role/*.html` | 22 | `pipeline/gen_hubs.py` |
-| `/compare/*.html` | 420 | `pipeline/gen_compare.py` |
+| `/compare/*.html` | 407 | `pipeline/gen_compare.py` |
 | `/learn/*.html` | 8 | `pipeline/gen_content.py` |
 
 ## Non-page surfaces

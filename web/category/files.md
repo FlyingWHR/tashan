@@ -15,8 +15,8 @@ Ranked by the tashan score
 | 2 | [Memory](https://tashan.sh/capability/pkg-modelcontextprotocol-server-memory.html) | 93 | 108k/wk | active |
 | 3 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 85 | 75k/wk | active |
 | 4 | [Desktop Commander · wonderwhy-er](https://tashan.sh/capability/plugin-wonderwhy-er-desktopcommandermcp-desktop-commander.html) | 79 | 9k ★ | active |
-| 5 | [Kordoc](https://tashan.sh/capability/pkg-kordoc.html) | 75 | 18k/wk | active |
-| 6 | [Spacefast](https://tashan.sh/capability/pkg-spacefast.html) | 71 | 4k/wk | active |
+| 5 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 79 | 62k ★ | active |
+| 6 | [Mempalace](https://tashan.sh/capability/plugin-mempalace-mempalace-mempalace.html) | 76 | 58k ★ | active |
 | 7 | [Fileditor](https://tashan.sh/capability/pkg-fileditor-mcp.html) | 70 | 2k/wk | active |
 | 8 | [Memory · cerefox](https://tashan.sh/capability/pkg-cerefox-memory.html) | 70 | 2k/wk | active |
 | 9 | [Lossless Context](https://tashan.sh/capability/pkg-lossless-context-mcp.html) | 65 | 817/wk | active |

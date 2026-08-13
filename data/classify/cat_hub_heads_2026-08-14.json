@@ -1,0 +1,43 @@
+[
+  {"id": "plugin:agricidaniel/claude-seo/claude-seo", "category": "data"},
+  {"id": "pkg:document360-writer", "category": "docs"},
+  {"id": "pkg:xmcp", "category": "devtools"},
+
+  {"id": "plugin:jarrodwatts/claude-hud/claude-hud", "category": "devtools"},
+  {"id": "pkg:@shopify/dev-mcp", "category": "devtools"},
+  {"id": "plugin:confident-ai/deepeval/deepeval", "category": "ai"},
+
+  {"id": "plugin:joaoh82/rustunnel/rustunnel", "category": "cloud"},
+  {"id": "plugin:giancarloerra/socraticode/socraticode", "category": "devtools"},
+  {"id": "pkg:decocms", "category": "devtools"},
+
+  {"id": "pkg:@sap-ux/fiori-mcp-server", "category": "devtools"},
+  {"id": "pkg:@sveltejs/mcp", "category": "devtools"},
+  {"id": "plugin:expo/skills/expo", "category": "devtools"},
+  {"id": "plugin:flutter/agent-plugins/dart-flutter", "category": "devtools"},
+  {"id": "pkg:comfyui-mcp", "category": "design"},
+
+  {"id": "pkg:spacefast", "category": "cloud"},
+  {"id": "pkg:kordoc", "category": "docs"},
+
+  {"id": "pkg:@blockrun/mcp", "category": "search"},
+
+  {"id": "pkg:@smartbear/mcp", "category": "devtools"},
+  {"id": "pkg:@zereight/mcp-gitlab", "category": "devtools"},
+  {"id": "pkg:skillfish", "category": "devtools"},
+  {"id": "plugin:mksglu/context-mode/context-mode", "category": "devtools"},
+  {"id": "plugin:alexgreensh/token-optimizer/token-optimizer", "category": "devtools"},
+
+  {"id": "plugin:chachamaru127/claude-code-harness/claude-harness", "category": "ai"},
+  {"id": "pkg:frog", "category": "productivity"},
+  {"id": "pkg:githits", "category": "devtools"},
+
+  {"id": "plugin:huggingface/skills/huggingface-skills", "category": "ai"},
+  {"id": "plugin:brainblend-ai/atomic-agents/atomic-agents", "category": "ai"},
+  {"id": "plugin:revfactory/harness/harness", "category": "ai"},
+  {"id": "plugin:mem0ai/mem0/mem0", "category": "files"},
+  {"id": "plugin:mempalace/mempalace/mempalace", "category": "files"},
+  {"id": "plugin:dayuanjiang/next-ai-draw-io/next-ai-drawio", "category": "design"},
+  {"id": "plugin:cloudflare/skills/cloudflare", "category": "cloud"},
+  {"id": "plugin:eventual-inc/daft/daft", "category": "data"}
+]

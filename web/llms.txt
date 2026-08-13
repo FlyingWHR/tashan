@@ -174,20 +174,20 @@ One ranked page per job title. These answer "what should I install for a <job>" 
 ## Categories
 
 - [Browser & Web](https://tashan.sh/category/browser.html) — 113 measured. Headless browsers, scraping, page automation, fetch. Top: Firecrawl, Chrome DevTools, Playwright.
-- [Search](https://tashan.sh/category/search.html) — 278 measured. Web search, retrieval, and answer engines. Top: Exa, Tavily, Perplexity API Platform.
-- [Database](https://tashan.sh/category/database.html) — 106 measured. SQL, NoSQL, vector stores, query & schema tools. Top: Supabase, MongoDB, Dbhub.
-- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1365 measured. Git, GitHub, code, testing, build & CI. Top: Everything, Superpowers, Handler.
-- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 402 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: Hostinger API, Azure, Kubernetes.
+- [Search](https://tashan.sh/category/search.html) — 279 measured. Web search, retrieval, and answer engines. Top: Exa, Tavily, Perplexity API Platform.
+- [Database](https://tashan.sh/category/database.html) — 105 measured. SQL, NoSQL, vector stores, query & schema tools. Top: Supabase, MongoDB, Dbhub.
+- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1380 measured. Git, GitHub, code, testing, build & CI. Top: Everything, Superpowers, Fiori.
+- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 403 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: Hostinger API, Azure, Kubernetes.
 - [Files & Memory](https://tashan.sh/category/files.html) — 58 measured. Filesystem access, memory, knowledge graphs. Top: Filesystem, Memory, Desktop Commander.
-- [Data & Analytics](https://tashan.sh/category/data.html) — 612 measured. Pipelines, analytics, spreadsheets, BI. Top: Dev, Deepeval, Claude Hud.
-- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 308 measured. Docs lookup, notes, wikis, context retrieval. Top: Context7, Notion, Obsidian.
-- [Communication](https://tashan.sh/category/comms.html) — 457 measured. Slack, email, chat, calendars, meetings. Top: Claude SEO, Xmcp, Aibroker.
-- [Design](https://tashan.sh/category/design.html) — 1038 measured. Figma, UI, images, creative & design tooling. Top: Figma Developer, Figma Console, Fiori.
-- [AI & Agents](https://tashan.sh/category/ai.html) — 651 measured. Reasoning, agents, model & LLM orchestration. Top: Sequential Thinking, Eve, Cline.
-- [Finance & Crypto](https://tashan.sh/category/finance.html) — 430 measured. Payments, markets, blockchain, wallets. Top: Freee, Stripe, Ato.
-- [Productivity](https://tashan.sh/category/productivity.html) — 728 measured. Tasks, automation, workflows, personal tools. Top: Context Mode, Smartbear, Atlassian.
-- [Security](https://tashan.sh/category/security.html) — 980 measured. Auth, secrets, scanning, identity. Top: Claude Harness, Frog, Auth0.
-- [Other](https://tashan.sh/category/other.html) — 4392 measured. Everything not yet categorized. Top: HuggingFace Skills, Mem0, Next AI Drawio.
+- [Data & Analytics](https://tashan.sh/category/data.html) — 611 measured. Pipelines, analytics, spreadsheets, BI. Top: Claude SEO, Nvidia Skills, Daft.
+- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 310 measured. Docs lookup, notes, wikis, context retrieval. Top: Context7, Notion, Obsidian.
+- [Communication](https://tashan.sh/category/comms.html) — 454 measured. Slack, email, chat, calendars, meetings. Top: Aibroker, Search Console, Aaron Marketing.
+- [Design](https://tashan.sh/category/design.html) — 1036 measured. Figma, UI, images, creative & design tooling. Top: Figma Developer, Figma Console, Impeccable.
+- [AI & Agents](https://tashan.sh/category/ai.html) — 655 measured. Reasoning, agents, model & LLM orchestration. Top: Sequential Thinking, Eve, Cline.
+- [Finance & Crypto](https://tashan.sh/category/finance.html) — 429 measured. Payments, markets, blockchain, wallets. Top: Freee, Stripe, Ato.
+- [Productivity](https://tashan.sh/category/productivity.html) — 724 measured. Tasks, automation, workflows, personal tools. Top: Atlassian, N8n, Backlog.
+- [Security](https://tashan.sh/category/security.html) — 977 measured. Auth, secrets, scanning, identity. Top: Auth0, Scf, Safety Net.
+- [Other](https://tashan.sh/category/other.html) — 4384 measured. Everything not yet categorized. Top: Humanize Korean, Create Mcp Use App, Modern Web Guidance.
 
 ## Reference
 
