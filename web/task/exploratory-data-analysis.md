@@ -34,10 +34,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 21 | [Product Analytics](https://tashan.sh/capability/skill-alirezarezvani-product-analytics.html) | not scored | 1 repos | active |
 | 22 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 64 | 30 ★ | active |
 | 23 | [ClickHouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 54 | 5 ★ | active |
-| 24 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 147 ★ | active |
-| 25 | [Appfigures](https://tashan.sh/capability/pkg-appfigures-cli.html) | 59 | 159/wk | active |
-| 26 | [Yandex Metrica](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 53 | 146/wk | active |
-| 27 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 74 | 11k/wk | active |
+| 24 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 74 | 11k/wk | active |
+| 25 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 147 ★ | active |
+| 26 | [Appfigures](https://tashan.sh/capability/pkg-appfigures-cli.html) | 59 | 159/wk | active |
+| 27 | [Yandex Metrica](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 53 | 146/wk | active |
 | 28 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
 | 29 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 63 | 865/wk | active |
 | 30 | [Scopewalker](https://tashan.sh/capability/pkg-scopewalker-mcp.html) | 58 | 370/wk | active |

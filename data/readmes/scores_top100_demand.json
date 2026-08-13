@@ -1,0 +1,218 @@
+[
+ {
+  "id": "pkg:backlog-mcp-server",
+  "expertise": 100,
+  "verdict": "deep",
+  "note": "55 tools documented (get_space, get_users, get_myself\u2026); 34 worked examples; setup and auth covered; states a limit \u2014 \u201cUse it at your own risk after reviewing the\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:samarth-gtm-mcp",
+  "expertise": 97,
+  "verdict": "deep",
+  "note": "74 tools documented (accounts_list, accounts_get\u2026); 20 worked examples; setup and auth covered; states a limit \u2014 \u201c[Service Account\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:loki-mode",
+  "expertise": 93,
+  "verdict": "deep",
+  "note": "13 tools documented (derived_from, related_to, example_of\u2026); 55 worked examples; setup and auth covered; states a limit \u2014 \u201cCrucially, a check that cannot be established\u2026\u201d; read with 4 linked doc(s)"
+ },
+ {
+  "id": "pkg:context-mode",
+  "expertise": 92,
+  "verdict": "deep",
+  "note": "10 tools documented (ctx_batch_execute, ctx_execute\u2026); 41 worked examples; setup and auth covered; states a limit \u2014 \u201cKnown limitation: Cursor accepts additional_context\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:comfyui-mcp",
+  "expertise": 91,
+  "verdict": "deep",
+  "note": "12 tools documented (panel_load_workflow, get_system_stats\u2026); 24 worked examples; setup and auth covered; states a limit \u2014 \u201c\u2014 HTTP primitives route via cloud.comfy.org\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:argocd-mcp",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "14 tools documented (list_clusters, get_appproject\u2026); 15 worked examples; setup and auth covered; states a limit \u2014 \u201cGET /mcp and DELETE /mcp return 405 Method Not Allowed\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:agent-afk",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "3 tools documented (memory_search, memory_update\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201cAgent AFK isn't \"smarter than Claude Code.\" It's *yours*\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:ato-mcp",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "4 tools documented (deduction_discovery, depreciation_helper, bas_prep_checklist\u2026); 5 worked examples; setup and auth covered; states a limit \u2014 \u201cDisclaimer \u2014 This service is provided as information\u2026\u201d"
+ },
+ {
+  "id": "pkg:gitnexus",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "27 worked examples, 11 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:kordoc",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "19 worked examples, 9 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:freee-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "7 worked examples, 15 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:agentdb",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "6 worked examples, 41 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:next-devtools-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "8 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:pi-mcp-adapter",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "14 worked examples, 1 tools documented; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:skillfish",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "15 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@playwright/mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "12 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-proxy",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "12 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:add-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "13 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-remote",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:n8n-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-evals",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "6 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:ruflo",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "9 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:claude-flow",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "9 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:eve",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:cline",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:supergateway",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:instar",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-use",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@stripe/mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:claude-mem",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-handler",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@modelcontextprotocol/server-sequential-thinking",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@modelcontextprotocol/server-memory",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@modelcontextprotocol/server-everything",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:neo.mjs",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@sap-ux/fiori-mcp-server",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ }
+]

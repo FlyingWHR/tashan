@@ -1,8 +1,8 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 122,
-  "grade": 856,
+  "full": 132,
+  "grade": 892,
   "n": 28493,
   "scan": 5822,
   "score": 11637,
@@ -31,7 +31,7 @@
   }
  ],
  "headline": {
-  "graded_pct": 14,
+  "graded_pct": 18,
   "scanned_pct": 100,
   "scored_pct": 98,
   "tasked_pct": 38,
@@ -43,7 +43,6 @@
    "id": "pkg:@playwright/mcp",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "@playwright/mcp"
@@ -72,7 +71,6 @@
    "id": "pkg:mcp-proxy",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "mcp-proxy"
@@ -82,7 +80,6 @@
    "id": "pkg:mcp-handler",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "mcp-handler"
@@ -97,20 +94,10 @@
    "name": "@upstash/context7-mcp"
   },
   {
-   "downloads": 542458,
-   "id": "pkg:eve",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "eve"
-  },
-  {
    "downloads": 485190,
    "id": "pkg:mcp-remote",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "mcp-remote"
@@ -139,7 +126,6 @@
    "id": "pkg:add-mcp",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "add-mcp"
@@ -155,20 +141,10 @@
    "name": "mongodb-mcp-server"
   },
   {
-   "downloads": 142133,
-   "id": "pkg:cline",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "cline"
-  },
-  {
    "downloads": 133382,
    "id": "pkg:@modelcontextprotocol/server-sequential-thinking",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "@modelcontextprotocol/server-sequential-thinking"
@@ -198,7 +174,6 @@
    "id": "pkg:supergateway",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "supergateway"
@@ -208,19 +183,9 @@
    "id": "pkg:n8n-mcp",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "n8n-mcp"
-  },
-  {
-   "downloads": 121808,
-   "id": "pkg:agentdb",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "agentdb"
   },
   {
    "downloads": 120645,
@@ -247,7 +212,6 @@
    "id": "pkg:pi-mcp-adapter",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "pi-mcp-adapter"
@@ -257,7 +221,6 @@
    "id": "pkg:@sap-ux/fiori-mcp-server",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "fiori-mcp-server"
@@ -267,7 +230,6 @@
    "id": "pkg:@modelcontextprotocol/server-memory",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "@modelcontextprotocol/server-memory"
@@ -308,7 +270,6 @@
    "id": "pkg:next-devtools-mcp",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "next-devtools-mcp"
@@ -321,15 +282,6 @@
     "task"
    ],
    "name": "XcodeBuildMCP"
-  },
-  {
-   "downloads": 89906,
-   "id": "pkg:freee-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "freee-mcp"
   },
   {
    "downloads": 85544,
@@ -345,7 +297,6 @@
    "id": "pkg:ato-mcp",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "ato-mcp"
@@ -391,7 +342,6 @@
    "id": "pkg:mcp-evals",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "mcp-evals"
@@ -401,7 +351,6 @@
    "id": "pkg:@modelcontextprotocol/server-everything",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "@modelcontextprotocol/server-everything"
@@ -421,24 +370,60 @@
    "id": "pkg:comfyui-mcp",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "comfyui-mcp"
+  },
+  {
+   "downloads": 52709,
+   "id": "pkg:gitnexus",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "gitnexus"
+  },
+  {
+   "downloads": 43551,
+   "id": "pkg:metaharness",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "metaharness"
+  },
+  {
+   "downloads": 43488,
+   "id": "pkg:@cloudflare/mcp-server-cloudflare",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@cloudflare/mcp-server-cloudflare"
+  },
+  {
+   "downloads": 43044,
+   "id": "pkg:instar",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "instar"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 12,
-   "grade": 31,
+   "full": 22,
+   "grade": 67,
    "n": 100,
    "scan": 100,
    "score": 95,
    "task": 34
   },
   "top1000": {
-   "full": 50,
-   "grade": 139,
+   "full": 60,
+   "grade": 175,
    "n": 1000,
    "scan": 1000,
    "score": 984,

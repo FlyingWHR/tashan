@@ -206,6 +206,36 @@ def tool_shaped(tok):
             and len(t) >= 5)
 
 
+def corroborated_tool(name, line):
+    """A HYPHENATED token is only tool-evidence when the document treats it as a tool.
+
+    Criterion (a) is per-tool documentation, and the extractor was reading three other things as
+    tools because they share the shape `token` — description:
+
+      mcp-remote   - `sse-first`: Tries SSE transport first, falls back to HTTP…   <- a --transport VALUE
+      metaharness  | `npx @metaharness/pi-dev my-bot` | …                          <- an npx COMMAND
+      loki-mode    - `eng-frontend` — …                                            <- a mode name
+
+    All three were graded `deep`, the top band, on documentation of tools they do not have.
+    mcp-remote is a PROXY: it forwards someone else's tools and exposes none of its own.
+
+    Every genuine hit in the same batch was snake_case — get_space, list_clusters, ctx_execute,
+    memory_search, accounts_list, panel_load_workflow — because that is how MCP tools are named in
+    practice. Hyphens are legal in a tool name though, so this does not ban them: it asks for one
+    piece of corroboration, the word "tool" in the line that documents it, or a command/flag marker
+    that rules it out. Underscored and dotted identifiers are unchanged.
+
+    Errs toward NOT counting, which for a conjunctive rubric means a capability lands in a lower
+    band rather than claiming a top one it did not earn.
+    """
+    if "_" in name or "." in name:
+        return True
+    l = line.lower()
+    if "--" in l or "npx " in l or "npm " in l or l.lstrip().startswith("$"):
+        return False
+    return "tool" in l
+
+
 def tool_docs(md):
     """Named tools with something said about each — the (a) criterion.
 
@@ -228,10 +258,10 @@ def tool_docs(md):
         if not tok or not tool_shaped(tok.group(1)):
             continue
         tail = md[m.end():m.end() + 400]
-        if len(tail.strip()) > 60:
+        if len(tail.strip()) > 60 and corroborated_tool(tok.group(1), head + " " + tail[:200]):
             hits.append(("heading", tok.group(1), tail.strip().split("\n")[0][:70]))
     for m in re.finditer(r"^\s*[-*|]\s*`([a-z][a-z0-9_.-]{2,40})`\s*[-—:|]\s*(.{20,})$", md, re.M):
-        if tool_shaped(m.group(1)):
+        if tool_shaped(m.group(1)) and corroborated_tool(m.group(1), m.group(0)):
             hits.append(("list", m.group(1), m.group(2)[:70]))
     # de-dupe by tool name, keeping the richer form
     seen, out = set(), []
