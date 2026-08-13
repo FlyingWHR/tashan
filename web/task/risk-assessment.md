@@ -29,10 +29,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Iso42001 Specialist](https://tashan.sh/capability/skill-alirezarezvani-iso42001-specialist.html) | not scored | 1 repos | active |
 | 17 | [Risk Management Specialist](https://tashan.sh/capability/skill-alirezarezvani-risk-management-specialist.html) | not scored | 1 repos | active |
 | 18 | [Wooyun Legacy](https://tashan.sh/capability/plugin-tanweai-wooyun-legacy-wooyun-legacy.html) | not scored | 2k ★ | abandoned |
-| 19 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 53 | 139/wk | active |
-| 20 | [Reputa](https://tashan.sh/capability/pkg-reputa-mcp.html) | 51 | 73/wk | active |
-| 21 | [Mintverdict](https://tashan.sh/capability/pkg-mintverdict-mcp.html) | 49 | 75/wk | active |
-| 22 | [Defi Guard](https://tashan.sh/capability/pkg-iniit-defi-guard-mcp.html) | 47 | 60/wk | active |
+| 19 | [Defi Guard](https://tashan.sh/capability/pkg-iniit-defi-guard-mcp.html) | 47 | 60/wk | active |
+| 20 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 53 | 139/wk | active |
+| 21 | [Reputa](https://tashan.sh/capability/pkg-reputa-mcp.html) | 51 | 73/wk | active |
+| 22 | [Mintverdict](https://tashan.sh/capability/pkg-mintverdict-mcp.html) | 49 | 75/wk | active |
 
 ## What these numbers are not
 

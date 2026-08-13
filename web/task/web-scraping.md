@@ -45,12 +45,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 64 | 347/wk | active |
 | 33 | [Crawlforge](https://tashan.sh/capability/pkg-crawlforge-mcp-server.html) | 63 | 285/wk | active |
 | 34 | [Scrapingdog](https://tashan.sh/capability/pkg-scrapingdog-mcp.html) | 56 | 294/wk | active |
-| 35 | [Skim402](https://tashan.sh/capability/pkg-skim-mcp.html) | 49 | 61/wk | active |
-| 36 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
-| 37 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 64 | 436/wk | active |
-| 38 | [Anakin IO](https://tashan.sh/capability/pkg-anakin-io-mcp.html) | 64 | 253/wk | active |
-| 39 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 61 | 337/wk | active |
-| 40 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 58 | 234/wk | active |
+| 35 | [Netlens](https://tashan.sh/capability/pkg-netlens-mcp.html) | 51 | 75/wk | active |
+| 36 | [Web Fetcher](https://tashan.sh/capability/pkg-mcp-server-web-fetcher.html) | 49 | 68/wk | active |
+| 37 | [Skim402](https://tashan.sh/capability/pkg-skim-mcp.html) | 49 | 61/wk | active |
+| 38 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
+| 39 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 64 | 436/wk | active |
+| 40 | [Anakin IO](https://tashan.sh/capability/pkg-anakin-io-mcp.html) | 64 | 253/wk | active |
 
 Showing the top 40 of 67. The full ranked shelf is at https://tashan.sh/task/web-scraping.html.
 

@@ -49,8 +49,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 62 | 334/wk | active |
 | 37 | [Redash](https://tashan.sh/capability/pkg-redash-mcp.html) | 58 | 398/wk | active |
 | 38 | [Dashboards](https://tashan.sh/capability/pkg-mcp-dashboards.html) | 53 | 212/wk | active |
-| 39 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 70 | 2k/wk | active |
-| 40 | [Agentic Mermaid](https://tashan.sh/capability/pkg-agentic-mermaid.html) | 62 | 550/wk | active |
+| 39 | [Dashboardbase](https://tashan.sh/capability/pkg-dashboardbase-mcp.html) | 52 | 136/wk | active |
+| 40 | [Chartforge](https://tashan.sh/capability/pkg-chartforge-mcp.html) | 47 | 111/wk | active |
 
 Showing the top 40 of 47. The full ranked shelf is at https://tashan.sh/task/dashboards-and-reporting.html.
 

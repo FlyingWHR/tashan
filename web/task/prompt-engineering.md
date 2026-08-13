@@ -44,13 +44,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Contextecf Codeledger](https://tashan.sh/capability/pkg-contextecf-codeledger.html) | 68 | 726/wk | active |
 | 32 | [Claude Prompts](https://tashan.sh/capability/pkg-claude-prompts.html) | 67 | 836/wk | active |
 | 33 | [Tanuki Context](https://tashan.sh/capability/pkg-tanuki-context.html) | 66 | 664/wk | active |
-| 34 | [Kubernetes](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 84 | 18k/wk | active |
-| 35 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 69 | 1k/wk | active |
-| 36 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 69 | 931/wk | active |
-| 37 | [Codesight](https://tashan.sh/capability/pkg-codesight.html) | 67 | 827/wk | active |
-| 38 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 66 | 59k/wk | active |
-| 39 | [Madar](https://tashan.sh/capability/pkg-lubab-madar.html) | 64 | 693/wk | active |
-| 40 | [Contextforge](https://tashan.sh/capability/pkg-contextforge-mcp.html) | 59 | 230/wk | active |
+| 34 | [Forkmind](https://tashan.sh/capability/pkg-forkmind.html) | 54 | 143/wk | active |
+| 35 | [Clarifyprompt](https://tashan.sh/capability/pkg-clarifyprompt-mcp.html) | 53 | 81/wk | active |
+| 36 | [Slimdex](https://tashan.sh/capability/pkg-slimdex-mcp.html) | 52 | 127/wk | active |
+| 37 | [Kubernetes](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 84 | 18k/wk | active |
+| 38 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 69 | 1k/wk | active |
+| 39 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 69 | 931/wk | active |
+| 40 | [Codesight](https://tashan.sh/capability/pkg-codesight.html) | 67 | 827/wk | active |
 
 Showing the top 40 of 67. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
 

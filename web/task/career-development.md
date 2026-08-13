@@ -16,13 +16,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | not scored | 1 repos | active |
 | 4 | [Founder Coach](https://tashan.sh/capability/skill-alirezarezvani-founder-coach.html) | not scored | 1 repos | active |
 | 5 | [Meeting Analyzer](https://tashan.sh/capability/skill-alirezarezvani-meeting-analyzer.html) | not scored | 1 repos | active |
-| 6 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 70 | 3k/wk | active |
-| 7 | [Jobo Job Search](https://tashan.sh/capability/pkg-jobo-job-search-mcp.html) | 56 | 300/wk | active |
-| 8 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 46 | 43/wk | active |
-| 9 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 54 | 153/wk | active |
-| 10 | [JobYap Job Search](https://tashan.sh/capability/pkg-jobyap-mcp.html) | 52 | 167/wk | active |
-| 11 | [JobGPT - Job Search Automation & Auto Apply](https://tashan.sh/capability/pkg-jobgpt-mcp-server.html) | 40 | 84/wk | active |
-| 12 | [Job Search](https://tashan.sh/capability/pkg-job-search-mcp.html) | 34 | 68/wk | active |
+| 6 | [JobGPT - Job Search Automation & Auto Apply](https://tashan.sh/capability/pkg-jobgpt-mcp-server.html) | 40 | 84/wk | active |
+| 7 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 70 | 3k/wk | active |
+| 8 | [Jobo Job Search](https://tashan.sh/capability/pkg-jobo-job-search-mcp.html) | 56 | 300/wk | active |
+| 9 | [JobYap Job Search](https://tashan.sh/capability/pkg-jobyap-mcp.html) | 52 | 167/wk | active |
+| 10 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 46 | 43/wk | active |
+| 11 | [Job Search](https://tashan.sh/capability/pkg-job-search-mcp.html) | 34 | 68/wk | active |
+| 12 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 54 | 153/wk | active |
 
 ## What these numbers are not
 

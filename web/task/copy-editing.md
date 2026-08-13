@@ -23,9 +23,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Remove AI Flavor](https://tashan.sh/capability/plugin-chujianyun-skills-remove-ai-flavor.html) | 40 | 1 marketplaces | active |
 | 11 | [Copy Editing](https://tashan.sh/capability/skill-alirezarezvani-copy-editing.html) | not scored | 1 repos | active |
 | 12 | [Content Humanizer](https://tashan.sh/capability/skill-alirezarezvani-content-humanizer.html) | not scored | 1 repos | active |
-| 13 | [Deepl](https://tashan.sh/capability/pkg-deepl-mcp-server.html) | 67 | 1k/wk | active |
-| 14 | [Goldbean](https://tashan.sh/capability/pkg-goldbean-mcp.html) | 57 | 130/wk | active |
-| 15 | [Source Library](https://tashan.sh/capability/pkg-source-library-mcp-server.html) | 49 | 113/wk | active |
+| 13 | [Source Library](https://tashan.sh/capability/pkg-source-library-mcp-server.html) | 49 | 113/wk | active |
+| 14 | [Deepl](https://tashan.sh/capability/pkg-deepl-mcp-server.html) | 67 | 1k/wk | active |
+| 15 | [Goldbean](https://tashan.sh/capability/pkg-goldbean-mcp.html) | 57 | 130/wk | active |
 | 16 | [I18n Agent](https://tashan.sh/capability/pkg-i18n-agent-mcp-client.html) | 47 | 126/wk | active |
 | 17 | [Ditto Workflows](https://tashan.sh/capability/pkg-ditto-workflows-mcp.html) | 47 | 38/wk | active |
 | 18 | [Translatize](https://tashan.sh/capability/pkg-translatize-mcp.html) | 48 | 76/wk | active |

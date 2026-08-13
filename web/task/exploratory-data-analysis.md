@@ -42,15 +42,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 29 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
 | 30 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 63 | 865/wk | active |
 | 31 | [Appfigures](https://tashan.sh/capability/pkg-appfigures-cli.html) | 59 | 159/wk | active |
-| 32 | [Yandex Metrica](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 53 | 146/wk | active |
-| 33 | [Worldbank](https://tashan.sh/capability/pkg-worldbank-mcp.html) | 37 | 577/wk | active |
-| 34 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 58 | 210/wk | active |
-| 35 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 53 | 139/wk | active |
-| 36 | [Social Media Analytics](https://tashan.sh/capability/pkg-social-media-analytics.html) | 53 | 139/wk | active |
-| 37 | [Rolli](https://tashan.sh/capability/pkg-rolli-mcp.html) | 51 | 148/wk | active |
-| 38 | [Voris AI](https://tashan.sh/capability/pkg-voris-ai-mcp.html) | 51 | 60/wk | active |
+| 32 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 58 | 210/wk | active |
+| 33 | [Yandex Metrica](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 53 | 146/wk | active |
+| 34 | [Rolli](https://tashan.sh/capability/pkg-rolli-mcp.html) | 51 | 148/wk | active |
+| 35 | [Worldbank](https://tashan.sh/capability/pkg-worldbank-mcp.html) | 37 | 577/wk | active |
+| 36 | [Yandex Metrika](https://tashan.sh/capability/pkg-theyahia-yandex-metrika-mcp.html) | 37 | 71/wk | active |
+| 37 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 53 | 139/wk | active |
+| 38 | [Social Media Analytics](https://tashan.sh/capability/pkg-social-media-analytics.html) | 53 | 139/wk | active |
 | 39 | [Ascendkit](https://tashan.sh/capability/pkg-ascendkit-cli.html) | 49 | 80/wk | active |
-| 40 | [Stride20k x402 Data Gateway](https://tashan.sh/capability/pkg-x402-gateway-mcp.html) | 47 | 89/wk | active |
+| 40 | [Op3](https://tashan.sh/capability/pkg-conorbronsdon-op3-mcp.html) | 45 | 52/wk | active |
 
 Showing the top 40 of 48. The full ranked shelf is at https://tashan.sh/task/exploratory-data-analysis.html.
 

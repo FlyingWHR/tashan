@@ -50,7 +50,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 37 | [Yahoo Finance](https://tashan.sh/capability/pkg-yahoo-finance-mcp-server.html) | 62 | 589/wk | active |
 | 38 | [Zola](https://tashan.sh/capability/pkg-zola-mcp.html) | 68 | 1k/wk | active |
 | 39 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 59 | 302/wk | active |
-| 40 | [Next Finance](https://tashan.sh/capability/pkg-next-finance-mcp.html) | 70 | 3k/wk | active |
+| 40 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 55 | 205/wk | active |
 
 Showing the top 40 of 49. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.
 

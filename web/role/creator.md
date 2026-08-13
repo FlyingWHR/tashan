@@ -54,8 +54,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Livepilot](https://tashan.sh/capability/pkg-livepilot.html) | 65 | 579/wk | active |
 | 37 | [Rive](https://tashan.sh/capability/pkg-rive-mcp-server.html) | 59 | 381/wk | active |
 | 38 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 56 | 248/wk | active |
-| 39 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 54 | 165/wk | active |
-| 40 | [Nano Banana · ConechoAI](https://tashan.sh/capability/pkg-nano-banana-mcp.html) | 26 | 1k/wk | abandoned |
+| 39 | [Chamade](https://tashan.sh/capability/pkg-chamade-mcp-server.html) | 55 | 116/wk | active |
+| 40 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 54 | 165/wk | active |
 
 Showing the top 40 of 119. The full ranked shelf is at https://tashan.sh/role/creator.html.
 

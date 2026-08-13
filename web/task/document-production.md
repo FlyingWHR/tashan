@@ -32,25 +32,25 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 19 | [Md Review](https://tashan.sh/capability/skill-alirezarezvani-md-review.html) | not scored | 1 repos | active |
 | 20 | [Md Slides](https://tashan.sh/capability/skill-alirezarezvani-md-slides.html) | not scored | 1 repos | active |
 | 21 | [Pdfnative](https://tashan.sh/capability/pkg-pdfnative-mcp.html) | 58 | 337/wk | active |
-| 22 | [Kordoc](https://tashan.sh/capability/pkg-kordoc.html) | 75 | 18k/wk | active |
-| 23 | [Pdfops](https://tashan.sh/capability/pkg-pdfops-mcp.html) | 58 | 334/wk | active |
-| 24 | [Docx](https://tashan.sh/capability/pkg-knorq-docx-mcp-server.html) | 54 | 297/wk | active |
-| 25 | [Grabzit](https://tashan.sh/capability/pkg-grabzit-mcp-server.html) | 47 | 51/wk | active |
-| 26 | [Lorem](https://tashan.sh/capability/pkg-lorem-mcp.html) | 63 | 701/wk | active |
-| 27 | [Magictex](https://tashan.sh/capability/pkg-magictex-mcp.html) | 57 | 196/wk | active |
-| 28 | [Differino](https://tashan.sh/capability/pkg-differino-mcp.html) | 55 | 142/wk | active |
-| 29 | [Docweave](https://tashan.sh/capability/pkg-docweave-mcp.html) | 51 | 98/wk | active |
-| 30 | [Miniframe Tools](https://tashan.sh/capability/pkg-miniframe-tools-mcp.html) | 50 | 69/wk | active |
-| 31 | [Exactpdf](https://tashan.sh/capability/pkg-exactpdf-mcp.html) | 49 | 115/wk | active |
-| 32 | [Pdfmakerapi](https://tashan.sh/capability/pkg-pdfmakerapi-mcp.html) | 49 | 95/wk | active |
-| 33 | [Puzzletide](https://tashan.sh/capability/pkg-puzzletide.html) | 49 | 80/wk | active |
-| 34 | [PDF Toolkit](https://tashan.sh/capability/pkg-aryanbv-pdf-toolkit-mcp.html) | 46 | 166/wk | active |
-| 35 | [Truepath PDF](https://tashan.sh/capability/pkg-truepathpdf-mcp-server.html) | 46 | 68/wk | active |
-| 36 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 46 | 49/wk | active |
-| 37 | [MDMagic — Markdown to professional documents](https://tashan.sh/capability/pkg-mdmagic-mcp-server.html) | 45 | 90/wk | active |
-| 38 | [Convertfilefast](https://tashan.sh/capability/pkg-convertfilefast-mcp.html) | 45 | 58/wk | active |
-| 39 | [PDF It](https://tashan.sh/capability/pkg-pdf-it-mcp.html) | 45 | 39/wk | active |
-| 40 | [Pdfgate](https://tashan.sh/capability/pkg-pdfgate-mcp-server.html) | 44 | 94/wk | active |
+| 22 | [Magictex](https://tashan.sh/capability/pkg-magictex-mcp.html) | 57 | 196/wk | active |
+| 23 | [Kordoc](https://tashan.sh/capability/pkg-kordoc.html) | 75 | 18k/wk | active |
+| 24 | [Pdfops](https://tashan.sh/capability/pkg-pdfops-mcp.html) | 58 | 334/wk | active |
+| 25 | [Docx](https://tashan.sh/capability/pkg-knorq-docx-mcp-server.html) | 54 | 297/wk | active |
+| 26 | [Miniframe Tools](https://tashan.sh/capability/pkg-miniframe-tools-mcp.html) | 50 | 69/wk | active |
+| 27 | [Puzzletide](https://tashan.sh/capability/pkg-puzzletide.html) | 49 | 80/wk | active |
+| 28 | [Grabzit](https://tashan.sh/capability/pkg-grabzit-mcp-server.html) | 47 | 51/wk | active |
+| 29 | [PDF Toolkit](https://tashan.sh/capability/pkg-aryanbv-pdf-toolkit-mcp.html) | 46 | 166/wk | active |
+| 30 | [Truepath PDF](https://tashan.sh/capability/pkg-truepathpdf-mcp-server.html) | 46 | 68/wk | active |
+| 31 | [MDMagic — Markdown to professional documents](https://tashan.sh/capability/pkg-mdmagic-mcp-server.html) | 45 | 90/wk | active |
+| 32 | [Pdfgate](https://tashan.sh/capability/pkg-pdfgate-mcp-server.html) | 44 | 94/wk | active |
+| 33 | [Formatix AI](https://tashan.sh/capability/pkg-formatix-ai-mcp.html) | 43 | 74/wk | active |
+| 34 | [Slideshot](https://tashan.sh/capability/pkg-slideshot-mcp.html) | 42 | 88/wk | active |
+| 35 | [Office Oxide](https://tashan.sh/capability/pkg-aimino-opendocswork-mcp.html) | 42 | 58/wk | active |
+| 36 | [RAG Vault](https://tashan.sh/capability/pkg-robthepcguy-rag-vault.html) | 41 | 107/wk | active |
+| 37 | [Filetopdf](https://tashan.sh/capability/pkg-filetopdf-mcp.html) | 40 | 75/wk | active |
+| 38 | [Docalyze](https://tashan.sh/capability/pkg-docalyze-mcp-server.html) | 35 | 56/wk | active |
+| 39 | [Parseflow](https://tashan.sh/capability/pkg-parseflow-mcp-server.html) | 29 | 62/wk | abandoned |
+| 40 | [Lorem](https://tashan.sh/capability/pkg-lorem-mcp.html) | 63 | 701/wk | active |
 
 Showing the top 40 of 53. The full ranked shelf is at https://tashan.sh/task/document-production.html.
 

@@ -25,9 +25,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |
 | 8 | [Easyeda Mcp Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 63 | 466/wk | active |
 | 9 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 62 | 612/wk | active |
-| 10 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 59 | 307/wk | active |
-| 11 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 57 | 138/wk | active |
-| 12 | [Trustrails](https://tashan.sh/capability/pkg-trustrails-mcp-server.html) | 41 | 93/wk | active |
+| 10 | [Trustrails](https://tashan.sh/capability/pkg-trustrails-mcp-server.html) | 41 | 93/wk | active |
+| 11 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 59 | 307/wk | active |
+| 12 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 57 | 138/wk | active |
 
 ## What these numbers are not
 

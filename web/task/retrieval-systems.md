@@ -43,14 +43,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [Basemind](https://tashan.sh/capability/pkg-basemind.html) | 64 | 451/wk | active |
 | 31 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 64 | 347/wk | active |
 | 32 | [Freshvault](https://tashan.sh/capability/pkg-freshvault.html) | 59 | 258/wk | active |
-| 33 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
-| 34 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 73 | 6k/wk | active |
-| 35 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
-| 36 | [Paparats – Local Semantic Code Search](https://tashan.sh/capability/pkg-paparats-cli.html) | 70 | 2k/wk | active |
-| 37 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 69 | 2k/wk | active |
-| 38 | [Sciverse](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 69 | 1k/wk | active |
-| 39 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 66 | 578/wk | active |
-| 40 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 65 | 660/wk | active |
+| 33 | [Infino AI](https://tashan.sh/capability/pkg-infino-ai-mcp-server.html) | 57 | 180/wk | active |
+| 34 | [Ori Memory](https://tashan.sh/capability/pkg-ori-memory.html) | 57 | 154/wk | active |
+| 35 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 56 | 141/wk | active |
+| 36 | [Memory Graph](https://tashan.sh/capability/pkg-mcp-memory-graph.html) | 54 | 141/wk | active |
+| 37 | [Codedev](https://tashan.sh/capability/pkg-codedev-mcp.html) | 32 | 121/wk | abandoned |
+| 38 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
+| 39 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 73 | 6k/wk | active |
+| 40 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
 
 Showing the top 40 of 83. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
 

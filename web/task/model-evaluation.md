@@ -41,8 +41,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Prompt Engineer Toolkit](https://tashan.sh/capability/skill-alirezarezvani-prompt-engineer-toolkit.html) | not scored | 1 repos | active |
 | 29 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 71 | 218 ★ | active |
 | 30 | [Nexus Agents · williamzujkowski](https://tashan.sh/capability/plugin-williamzujkowski-nexus-agents-nexus-agents.html) | 58 | 16 ★ | active |
-| 31 | [My Pi](https://tashan.sh/capability/pkg-my-pi.html) | 67 | 667/wk | active |
-| 32 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 59 | 158/wk | active |
+| 31 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 59 | 158/wk | active |
+| 32 | [My Pi](https://tashan.sh/capability/pkg-my-pi.html) | 67 | 667/wk | active |
 | 33 | [Plzebo](https://tashan.sh/capability/pkg-plzebo.html) | 57 | 326/wk | active |
 
 ## What these numbers are not

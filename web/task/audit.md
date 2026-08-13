@@ -32,14 +32,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 19 | [GitHub Security](https://tashan.sh/capability/pkg-github-security-mcp.html) | 38 | 626/wk | active |
 | 20 | [Audit](https://tashan.sh/capability/pkg-openaeo-audit.html) | 60 | 414/wk | active |
 | 21 | [Bastion](https://tashan.sh/capability/pkg-mcp-bastion.html) | 60 | 328/wk | active |
-| 22 | [Crosscheck](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 66 | 568/wk | active |
-| 23 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
-| 24 | [Nexus Agents](https://tashan.sh/capability/pkg-nexus-agents.html) | 58 | 194/wk | active |
-| 25 | [Positif](https://tashan.sh/capability/pkg-positif-ai.html) | 56 | 191/wk | active |
-| 26 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 56 | 177/wk | active |
-| 27 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 53 | 131/wk | active |
-| 28 | [Cyberaudit Skill](https://tashan.sh/capability/pkg-cyberaudit-skill.html) | 50 | 37/wk | active |
-| 29 | [Vorim](https://tashan.sh/capability/pkg-vorim-mcp-server.html) | 49 | 87/wk | active |
+| 22 | [Nexus Agents](https://tashan.sh/capability/pkg-nexus-agents.html) | 58 | 194/wk | active |
+| 23 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 56 | 177/wk | active |
+| 24 | [Vorim](https://tashan.sh/capability/pkg-vorim-mcp-server.html) | 49 | 87/wk | active |
+| 25 | [Crosscheck](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 66 | 568/wk | active |
+| 26 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
+| 27 | [Positif](https://tashan.sh/capability/pkg-positif-ai.html) | 56 | 191/wk | active |
+| 28 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 53 | 131/wk | active |
+| 29 | [Cyberaudit Skill](https://tashan.sh/capability/pkg-cyberaudit-skill.html) | 50 | 37/wk | active |
 | 30 | [A11y](https://tashan.sh/capability/pkg-a11y-mcp.html) | 41 | 360/wk | active |
 | 31 | [Email Deliverability Expert](https://tashan.sh/capability/plugin-sendx-email-skills-email-deliverability-expert.html) | 39 | 1 marketplaces | active |
 | 32 | [Pentagonal](https://tashan.sh/capability/pkg-pentagonal-mcp.html) | 34 | 44/wk | active |

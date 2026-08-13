@@ -39,10 +39,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Performance Profiler](https://tashan.sh/capability/skill-alirezarezvani-performance-profiler.html) | not scored | 1 repos | active |
 | 27 | [Amd Skills](https://tashan.sh/capability/plugin-amd-skills-amd-skills.html) | 68 | 165 ★ | active |
 | 28 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 60 | 27 ★ | active |
-| 29 | [Agent Only](https://tashan.sh/capability/pkg-agent-only-mcp.html) | 63 | 697/wk | active |
-| 30 | [Super Ralph](https://tashan.sh/capability/plugin-aezizhu-super-ralph-super-ralph.html) | 46 | 9 ★ | active |
-| 31 | [Rn DevTools](https://tashan.sh/capability/pkg-mcp-rn-devtools.html) | 45 | 37/wk | active |
-| 32 | [Safari DevTools](https://tashan.sh/capability/pkg-safari-devtools-mcp.html) | 44 | 125/wk | active |
+| 29 | [Safari DevTools](https://tashan.sh/capability/pkg-safari-devtools-mcp.html) | 44 | 125/wk | active |
+| 30 | [Agent Only](https://tashan.sh/capability/pkg-agent-only-mcp.html) | 63 | 697/wk | active |
+| 31 | [Super Ralph](https://tashan.sh/capability/plugin-aezizhu-super-ralph-super-ralph.html) | 46 | 9 ★ | active |
+| 32 | [Rn DevTools](https://tashan.sh/capability/pkg-mcp-rn-devtools.html) | 45 | 37/wk | active |
 | 33 | [Autoresearch X](https://tashan.sh/capability/plugin-waynejing995-autoresearch-x-autoresearch-x.html) | 32 | 2 ★ | active |
 | 34 | [Debugger](https://tashan.sh/capability/pkg-ai-capabilities-suite-mcp-debugger-server.html) | 32 | 130/wk | abandoned |
 | 35 | [Cdp Tools](https://tashan.sh/capability/pkg-cdp-tools-mcp.html) | not scored | 966/wk | abandoned |

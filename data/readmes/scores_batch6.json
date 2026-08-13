@@ -1,0 +1,5516 @@
+[
+ {
+  "id": "pkg:@pan-sec/notebooklm-mcp",
+  "expertise": 100,
+  "verdict": "deep",
+  "note": "46 tools documented (deep_research, gemini_query\u2026); 50 worked examples; setup and auth covered; states a limit \u2014 \u201cNote: Antigravity does NOT support ${workspaceFolder}\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:code-engine-mcp-server",
+  "expertise": 100,
+  "verdict": "deep",
+  "note": "89 tools documented (detect_container_runtime\u2026); 54 worked examples; setup and auth covered; states a limit \u2014 \u201cThe IBM Code Engine REST API always requires a real\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:speclock",
+  "expertise": 100,
+  "verdict": "deep",
+  "note": "46 tools documented (speclock_init, speclock_get_context\u2026); 30 worked examples; setup and auth covered; states a limit \u2014 \u201cTyped constraint checking \u2014 checking POST\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:codedev-mcp",
+  "expertise": 99,
+  "verdict": "deep",
+  "note": "39 tools documented (change_impact, security_scan\u2026); 25 worked examples; setup and auth covered; states a limit \u2014 \u201c\u26a0\ufe0f Breaking changes: \u2014 Removed: legacyCharge from\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:fs-mcp-rs",
+  "expertise": 99,
+  "verdict": "deep",
+  "note": "39 tools documented (max_concurrency, max_io_concurrency\u2026); 25 worked examples; setup and auth covered; states a limit \u2014 \u201cdefault_timeout_ms: timeout used when a call\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-memory-graph",
+  "expertise": 99,
+  "verdict": "deep",
+  "note": "49 tools documented (memory_store, memory_search, memory_get\u2026); 26 worked examples; setup and auth covered; states a limit \u2014 \u201cThe trade-off is honest: a single-process\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:merx-mcp",
+  "expertise": 99,
+  "verdict": "deep",
+  "note": "61 tools documented (get_prices, get_best_price\u2026); 25 worked examples; setup and auth covered; states a limit \u2014 \u201cWhat MERX can and cannot do \u2014 do | With private key |\u2026\u201d; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:mirroir-mcp",
+  "expertise": 99,
+  "verdict": "deep",
+  "note": "35 tools documented (app_name, max_depth, max_screens\u2026); 38 worked examples; setup and auth covered; states a limit \u2014 \u201c[Known Limitations](docs/limitations.md)\u201d; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:boostu-teamleader-mcp",
+  "expertise": 97,
+  "verdict": "deep",
+  "note": "83 tools documented (teamleader_list_contacts\u2026); 17 worked examples; setup and auth covered; states a limit \u2014 \u201c\u2696\ufe0f Disclaimer \u2014 This is an independent, community-built\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:canvas-mcp-server",
+  "expertise": 97,
+  "verdict": "deep",
+  "note": "31 tools documented (canvas_health_check, canvas_list_courses\u2026); 25 worked examples; setup and auth covered; states a limit \u2014 \u201c\ud83d\udd27 Breaking Changes in v2.2.0 \u2014 in v2.2.0\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:clarifyprompt-mcp",
+  "expertise": 97,
+  "verdict": "deep",
+  "note": "29 tools documented (compose_prompt, optimize_prompt\u2026); 41 worked examples; setup and auth covered; states a limit \u2014 \u201cstone castle, dramatic sunset sky with vibrant\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@e2a/mcp-server",
+  "expertise": 96,
+  "verdict": "deep",
+  "note": "48 tools documented (blocked_by_policy, reserved_domain\u2026); 14 worked examples; setup and auth covered; states a limit \u2014 \u201cMost workers coordinate via SELECT \u2026 FOR UPDATE\u2026\u201d; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:@mahesvara/discord-mcpserver",
+  "expertise": 96,
+  "verdict": "deep",
+  "note": "53 tools documented (discord_list_guilds, discord_get_guild\u2026); 14 worked examples; setup and auth covered; states a limit \u2014 \u201cAdministrator - Full access (use with caution)\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:oilpriceapi-mcp",
+  "expertise": 96,
+  "verdict": "deep",
+  "note": "32 tools documented (opa_get_product_facts, opa_get_price\u2026); 21 worked examples; setup and auth covered; states a limit \u2014 \u201cBreaking Changes in v3.0.0 \u2014 in v3.0.0 - The\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:smart-context-mcp",
+  "expertise": 96,
+  "verdict": "deep",
+  "note": "23 tools documented (smart_read, smart_search, smart_context\u2026); 74 worked examples; setup and auth covered; states a limit \u2014 \u201cFuture Enhancements (Not Implemented)\u201d; read with 4 linked doc(s)"
+ },
+ {
+  "id": "pkg:virtualsms-mcp",
+  "expertise": 96,
+  "verdict": "deep",
+  "note": "43 tools documented (list_services, list_countries, get_price\u2026); 15 worked examples; setup and auth covered; states a limit \u2014 \u201cOpen Settings, turn on Developer mode, then\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:illustrator-mcp-server",
+  "expertise": 95,
+  "verdict": "deep",
+  "note": "62 tools documented (get_document_info, get_artboards\u2026); 13 worked examples; setup and auth covered; states a limit \u2014 \u201cColor profile assignment only \u2014 full conversion is\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:pagerunner",
+  "expertise": 95,
+  "verdict": "deep",
+  "note": "31 tools documented (list_profiles, open_session\u2026); 17 worked examples; setup and auth covered; states a limit \u2014 \u201cSee [DISCLAIMER.md](DISCLAIMER.md) for the full legal\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:robinhood-for-agents",
+  "expertise": 95,
+  "verdict": "deep",
+  "note": "55 tools documented (robinhood_browser_login\u2026); 12 worked examples; setup and auth covered; states a limit \u2014 \u201cUSE AT YOUR OWN RISK. This software enables AI agents to\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:slimdex-mcp",
+  "expertise": 95,
+  "verdict": "deep",
+  "note": "23 tools documented (repo_map, changed_files, index_repo\u2026); 27 worked examples; setup and auth covered; states a limit \u2014 \u201cCaveat on the watcher test: recursive fs.watch\u2026\u201d; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:@heshamfsalama/mcp-tool-factory",
+  "expertise": 94,
+  "verdict": "deep",
+  "note": "14 tools documented (v0.3.0, v0.2.0, v0.1.0\u2026); 147 worked examples; setup and auth covered; states a limit \u2014 \u201cNot supported\u201d; read with 4 linked doc(s)"
+ },
+ {
+  "id": "pkg:@manycontacts/mcp",
+  "expertise": 94,
+  "verdict": "deep",
+  "note": "72 tools documented (manycontacts.context\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201cOnly works within the 24-hour conversation window\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@muhammadsiddiq/twitter-mcp",
+  "expertise": 94,
+  "verdict": "deep",
+  "note": "16 tools documented (post_tweet, post_tweet_with_image\u2026); 36 worked examples; setup and auth covered; states a limit \u2014 \u201cLimitations \u2014 Maximum tweet length: 280 characters\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@samik081/mcp-adguard-home",
+  "expertise": 94,
+  "verdict": "deep",
+  "note": "65 tools documented (global_get_status, global_get_profile\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201cTools that are not available in your tier are\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@samik081/mcp-authentik",
+  "expertise": 94,
+  "verdict": "deep",
+  "note": "261 tools documented (authentik_admin_system_info\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201cTools that are not available in your tier are not\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:imessage-mcp",
+  "expertise": 94,
+  "verdict": "deep",
+  "note": "24 tools documented (search_messages, yearly_wrapped\u2026); 23 worked examples; setup and auth covered; states a limit \u2014 \u201cUse this only if your client does not support\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:iwantmymtg-mcp",
+  "expertise": 94,
+  "verdict": "deep",
+  "note": "59 tools documented (search_cards, get_card, get_card_prices\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201cCard identity and type (BUY/SELL) cannot be\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:javalens-mcp",
+  "expertise": 94,
+  "verdict": "deep",
+  "note": "75 tools documented (find_references, search_symbols\u2026); 8 worked examples; setup and auth covered; states a limit \u2014 \u201cThese use JDT's unique reference type constants\u2014not\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-gdocs",
+  "expertise": 94,
+  "verdict": "deep",
+  "note": "56 tools documented (docs_read_document, docs_get_document_info, docs_list_document_tabs\u2026); 8 worked examples; setup and auth covered; states a limit \u2014 \u201cKnown Limitations \u2014 SA without Workspace:\u2026\u201d"
+ },
+ {
+  "id": "pkg:network-ai",
+  "expertise": 94,
+  "verdict": "deep",
+  "note": "14 tools documented (context_pack, blackboard_search\u2026); 59 worked examples; setup and auth covered; states a limit \u2014 \u201cRestrictions by Resource \u2014 by Resource ### DATABASE\u2026\u201d; read with 4 linked doc(s)"
+ },
+ {
+  "id": "pkg:ui-design-to-code-mcp",
+  "expertise": 94,
+  "verdict": "deep",
+  "note": "14 tools documented (get_run_modes, create_design_run\u2026); 47 worked examples; setup and auth covered; states a limit \u2014 \u201cand heightPx when size cannot be inferred\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@verygoodplugins/mcp-evernote",
+  "expertise": 93,
+  "verdict": "deep",
+  "note": "15 tools documented (evernote_create_note\u2026); 26 worked examples; setup and auth covered; states a limit \u2014 \u201cThis is not an arbitrary floor: it mirrors the engines range\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:awesome-mineflayer-mcp",
+  "expertise": 93,
+  "verdict": "deep",
+  "note": "117 tools documented (get_screenshot, render_map\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201cEvaluations require a seeded world. A live Minecraft\u2026\u201d; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:figma-edit-mcp",
+  "expertise": 93,
+  "verdict": "deep",
+  "note": "45 tools documented (page_info, node_info, node_transform\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cWhat the AI Cannot Do to Your File \u2014 Do to Your\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:infomaniak-mcp-agent",
+  "expertise": 93,
+  "verdict": "deep",
+  "note": "77 tools documented (hosting_3, infomaniak_overview\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201c[Tools](#tools) (78 across 22 areas) \u00b7\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:safari-devtools-mcp",
+  "expertise": 93,
+  "verdict": "deep",
+  "note": "41 tools documented (safari-devtools, list_console_messages\u2026); 5 worked examples; setup and auth covered; states a limit \u2014 \u201conly: Safari and SafariDriver are\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:scrivener-mcp",
+  "expertise": 93,
+  "verdict": "deep",
+  "note": "54 tools documented (open_project, discover_projects\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cand unmaintained\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@automatelab/citation-intelligence",
+  "expertise": 92,
+  "verdict": "deep",
+  "note": "29 tools documented (citations_provenance, citations_check\u2026); 10 worked examples; setup and auth covered; states a limit \u2014 \u201cJust don't report API-proxy numbers as\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@convai/analytics-mcp",
+  "expertise": 92,
+  "verdict": "deep",
+  "note": "9 tools documented (voice.user_to_bot_latency\u2026); 56 worked examples; setup and auth covered; states a limit \u2014 \u201cIf your agent does not support MCP, open this repo in\u2026\u201d; read with 3 linked doc(s)"
+ },
+ {
+  "id": "pkg:@mag-cie/mcp-microsoft-todo",
+  "expertise": 92,
+  "verdict": "deep",
+  "note": "28 tools documented (list_task_lists, list_tasks, get_task\u2026); 12 worked examples; setup and auth covered; states a limit \u2014 \u201cThe tool deletes data or otherwise causes data\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@tocharianou/elasticsearch-mcp",
+  "expertise": 92,
+  "verdict": "deep",
+  "note": "9 tools documented (esql_query, list_indices, get_mappings\u2026); 31 worked examples; setup and auth covered; states a limit \u2014 \u201cAdaptive features - Disables unsupported tools\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:agent-browser-mcp",
+  "expertise": 92,
+  "verdict": "deep",
+  "note": "34 tools documented (browser_navigate, browser_go_back, browser_go_forward\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201c\u26a0\ufe0f Windows Note: agent-browser currently has [known issues\u2026\u201d"
+ },
+ {
+  "id": "pkg:etoro-mcp-server",
+  "expertise": 92,
+  "verdict": "deep",
+  "note": "35 tools documented (etoro_search_instruments\u2026); 5 worked examples; setup and auth covered; states a limit \u2014 \u201cDisclaimer \u2014 This project is an unofficial, community-built\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:foodpanda-ai-mcp",
+  "expertise": 92,
+  "verdict": "deep",
+  "note": "14 tools documented (search_restaurants, get_restaurant\u2026); 21 worked examples; setup and auth covered; states a limit \u2014 \u201cText matching is local; with a filter active it\u2026\u201d; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:forkmind",
+  "expertise": 92,
+  "verdict": "deep",
+  "note": "15 tools documented (forkmind_recent, forkmind_get_node\u2026); 24 worked examples; setup and auth covered; states a limit \u2014 \u201cset 0.0.0.0 to expose on the LAN at your own risk)\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:jobgpt-mcp-server",
+  "expertise": 92,
+  "verdict": "deep",
+  "note": "34 tools documented (search_jobs, match_jobs, get_job\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201cClaude Desktop does not support remote MCP servers directly in the config file\u201d"
+ },
+ {
+  "id": "pkg:@getscaleforge/mcp-meta-ads",
+  "expertise": 91,
+  "verdict": "deep",
+  "note": "34 tools documented (ads_read, pages_manage_ads\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201c\u2192 v24 deprecations (Sept 2025). instagram_actor_id \u2192\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@martinloop/mcp",
+  "expertise": 91,
+  "verdict": "deep",
+  "note": "25 tools documented (martin_doctor, martin_plan\u2026); 11 worked examples; setup and auth covered; states a limit \u2014 \u201cA configured verifier proves only the checks it runs;\u2026\u201d; read with 4 linked doc(s)"
+ },
+ {
+  "id": "pkg:@oleksandrkucherenko/mcp-obsidian",
+  "expertise": 91,
+  "verdict": "deep",
+  "note": "3 tools documented (get_note_content, obsidian_search\u2026); 35 worked examples; setup and auth covered; states a limit \u2014 \u201cNote: Single-URL configuration does not provide\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@omniology/mcp-server",
+  "expertise": 91,
+  "verdict": "deep",
+  "note": "30 tools documented (register_agent, get_agent_status, request_email_verification\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cClosing the window is not a restart\u201d"
+ },
+ {
+  "id": "pkg:@signet-auth/mcp-tools",
+  "expertise": 91,
+  "verdict": "deep",
+  "note": "3 tools documented (inspect_current_request, verify_receipt\u2026); 36 worked examples; setup and auth covered; states a limit \u2014 \u201cIf a tool call cannot be verified\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:postfast-mcp",
+  "expertise": 91,
+  "verdict": "deep",
+  "note": "24 tools documented (list_accounts, list_posts, create_posts\u2026); 13 worked examples; setup and auth covered; states a limit \u2014 \u201cHIDE / UNHIDE / DELETE a comment on the platform (DELETE cannot be\u2026\u201d"
+ },
+ {
+  "id": "pkg:prompt-to-asset",
+  "expertise": 91,
+  "verdict": "deep",
+  "note": "24 tools documented (asset_capabilities, asset_enhance_prompt\u2026); 11 worked examples; setup and auth covered; states a limit \u2014 \u201cImagen 4 image output is paid API. The\u2026\u201d; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:suitecrm-mcp-gateway",
+  "expertise": 91,
+  "verdict": "deep",
+  "note": "11 tools documented (suitecrm_mcp_active_connections\u2026); 21 worked examples; setup and auth covered; states a limit \u2014 \u201cIf an AI requests a complex search requiring raw SQL\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:untappd-mcp-server",
+  "expertise": 91,
+  "verdict": "deep",
+  "note": "33 tools documented (authenticate_untappd, get_auth_status\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201cKnown Limitations \u2014 No tap list data \u2014 actual\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@cosmicjs/mcp",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "18 tools documented (cosmic_objects_list, cosmic_objects_get, cosmic_objects_create\u2026); 16 worked examples; setup and auth covered; states a limit \u2014 \u201cGenerate an image of a futuristic city skyline\u2026\u201d"
+ },
+ {
+  "id": "pkg:@dinglebear/rytdl",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "23 tools documented (youtube_download, youtube_plex_playlist\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201cThe Android YouTube client fixes common This\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@downatthebottomofthemolehole/megalinter-mcp-server",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "12 tools documented (megalinter_quick_action\u2026); 20 worked examples; setup and auth covered; states a limit \u2014 \u201cIt is not an official Model Context Protocol server, but it\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@ibrahimkhaled19/backgen",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "9 tools documented (init_project, add_plugin, remove_plugin\u2026); 24 worked examples; setup and auth covered; states a limit \u2014 \u201cConflict detection: jwt and clerk cannot be\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@ryancardin/noaa-tides-currents-mcp-server",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "29 tools documented (noaa_get_water_levels, noaa_get_water_level_summaries\u2026); 5 worked examples; setup and auth covered; states a limit \u2014 \u201cSunrise/sunset, twilights, golden hour, day length for any\u2026\u201d"
+ },
+ {
+  "id": "pkg:@source-library/mcp-server",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "7 tools documented (search_library, get_quote, get_book\u2026); 21 worked examples; setup and auth covered; states a limit \u2014 \u201cDescribe scope \u2014 State what's in scope AND out of\u2026\u201d; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:@stocktrends-publications/stocktrends-mcp-server",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "12 tools documented (stocktrends_estimate_workflow_cost\u2026); 17 worked examples; setup and auth covered; states a limit \u2014 \u201cSee the [Phase 5A Operator Safety and Release\u2026\u201d; read with 4 linked doc(s)"
+ },
+ {
+  "id": "pkg:email-agent-mcp",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "26 tools documented (get_mailbox_status, create_draft\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201cIf your mailbox status name is not an email address,\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-server-insumer",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "27 tools documented (insumer_setup, insumer_jwks\u2026); 5 worked examples; setup and auth covered; states a limit \u2014 \u201cImportant: rpc_failure is NOT a verification failure\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:onto-mcp",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "24 tools documented (onto_review, onto_prepare_review\u2026); 8 worked examples; setup and auth covered; states a limit \u2014 \u201contology_seed_ref, candidate_disposition_ref,\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:rakuten-mcp",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "27 tools documented (ichiba_item_search, ichiba_genre_search, ichiba_tag_search\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cDisclaimer \u2014 Unofficial. Not affiliated with,\u2026\u201d"
+ },
+ {
+  "id": "pkg:talos-mcp",
+  "expertise": 90,
+  "verdict": "deep",
+  "note": "23 tools documented (talos_resource_definitions, talos_get\u2026); 8 worked examples; setup and auth covered; states a limit \u2014 \u201cfactory.talos.dev/... or :latest) the tag\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@dinglebear/yarr",
+  "expertise": 89,
+  "verdict": "deep",
+  "note": "9 tools documented (service_status, api_get, api_post\u2026); 19 worked examples; setup and auth covered; states a limit \u2014 \u201crequest-media, and successful-response transport\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@fodx/codelens",
+  "expertise": 89,
+  "verdict": "deep",
+  "note": "14 tools documented (cl_current, cl_refresh, cl_search\u2026); 12 worked examples; setup and auth covered; states a limit \u2014 \u201cLimitations \u2014 No vector/semantic search \u2014 there is\u2026\u201d; read with 3 linked doc(s)"
+ },
+ {
+  "id": "pkg:@mambalabsdev/mcp-gtm-suite",
+  "expertise": 89,
+  "verdict": "deep",
+  "note": "21 tools documented (resolve_company_identity, enrich_company_firmographics\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201cInputs mirror the actor, minus deprecated and batch-only\u2026\u201d"
+ },
+ {
+  "id": "pkg:@rheopyrin/db-access-mcp",
+  "expertise": 89,
+  "verdict": "deep",
+  "note": "17 tools documented (conf.d, options.databases, read_only\u2026); 13 worked examples; setup and auth covered; states a limit \u2014 \u201c\u2014 cannot be enforced at the protocol level\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:grok-faf-mcp",
+  "expertise": 89,
+  "verdict": "deep",
+  "note": "18 tools documented (faf_init, faf_auto, faf_score\u2026); 12 worked examples; setup and auth covered; states a limit \u2014 \u201cStatus & known limitations (v1.9) \u2014 (v1.9) v1.9.0 \u2014\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:japan-ux-mcp",
+  "expertise": 89,
+  "verdict": "deep",
+  "note": "21 tools documented (review_jp_ui, generate_jp_form, validate_jp_form\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201cDisclaimer \u2014 This server returns guidance, style rules, and\u2026\u201d"
+ },
+ {
+  "id": "pkg:perplexity-comet-mcp",
+  "expertise": 89,
+  "verdict": "deep",
+  "note": "8 tools documented (comet_connect, comet_ask, comet_poll\u2026); 19 worked examples; setup and auth covered; states a limit \u2014 \u201cProblem: UNC paths are not supported warnings\u201d"
+ },
+ {
+  "id": "pkg:@chamade/mcp-server",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "14 tools documented (chamade_call_join, chamade_call_say, chamade_call_chat\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201cIf the env var is missing, empty, or still contains a\u2026\u201d"
+ },
+ {
+  "id": "pkg:@clawallex/mcp-server",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "16 tools documented (clawallex_setup, clawallex_pay, clawallex_subscribe\u2026); 9 worked examples; setup and auth covered; states a limit \u2014 \u201cOnce bound, the client_id cannot be changed for that API Key\u2026\u201d"
+ },
+ {
+  "id": "pkg:@codecraftersllc/local-voice-mcp",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "3 tools documented (synthesize_text, play_audio, tts_status\u2026); 20 worked examples; setup and auth covered; states a limit \u2014 \u201c\u2705 Long-form content (no length limitations)\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@hayodev/crystallize-mcp",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "16 tools documented (browse_catalogue, get_item\u2026); 9 worked examples; setup and auth covered; states a limit \u2014 \u201cParam scrubbing is on the roadmap but not yet implemented\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@infino-ai/mcp-server",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "12 tools documented (infino_semantic_search\u2026); 12 worked examples; setup and auth covered; states a limit \u2014 \u201cIf unset, a durable per-user directory (~/.infino/mcp) is\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@marvelcodes/mcp-pear",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "20 tools documented (adjust_leverage, adjust_position\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201cDisclaimer \u2014 Not affiliated with Pear Protocol.\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@mbelinky/x-mcp-server",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "3 tools documented (post_tweet, search_tweets, delete_tweet\u2026); 18 worked examples; setup and auth covered; states a limit \u2014 \u201cBase64 limitation: While the server supports base64 encoded images,\u2026\u201d"
+ },
+ {
+  "id": "pkg:@ontomics/ontomics",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "19 tools documented (query_concept, locate_concept, describe_symbol\u2026); 5 worked examples; setup and auth covered; states a limit \u2014 \u201cWhat it does that search can't \u2014 Search tells you where a string\u2026\u201d"
+ },
+ {
+  "id": "pkg:@pedra-ai/mcp",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "20 tools documented (pedra_enhance, pedra_enhance_and_correct_perspective\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201cNote: an image pasted into the chat is not a file path, so\u2026\u201d"
+ },
+ {
+  "id": "pkg:calendly-mcp-server",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "12 tools documented (get_oauth_url, exchange_code_for_tokens, refresh_access_token\u2026); 13 worked examples; setup and auth covered; states a limit \u2014 \u201cAPI Limitations \u2014 Scheduling API: Requires paid\u2026\u201d"
+ },
+ {
+  "id": "pkg:codex-tldraw-mcp",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "7 tools documented (diagram_repo, draw_canvas, draw_architecture\u2026); 14 worked examples; setup and auth covered; states a limit \u2014 \u201cCodex can reliably call local stdio MCP tools and inspect generated\u2026\u201d"
+ },
+ {
+  "id": "pkg:engramx",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "5 tools documented (query_graph, god_nodes, graph_stats\u2026); 20 worked examples; setup and auth covered; states a limit \u2014 \u201cFixes: the engram cost digest no longer prints an\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:india-stock-mcp",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "16 tools documented (get_quote, get_historical, search_symbol\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201cKnown limitations \u2014 get_gainers_losers ranks a built-in NIFTY 50\u2026\u201d"
+ },
+ {
+  "id": "pkg:mcacp",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "21 tools documented (list_installed_agents, registry_search, agent_install\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201cForward as MCP elicitations to the host; falls back to\u2026\u201d"
+ },
+ {
+  "id": "pkg:mcp-instagram-dm",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "16 tools documented (instagram_get_inbox, instagram_get_thread, instagram_get_pending\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201c\u26a0\ufe0f Disclaimer \u2014 This project uses Instagram's\u2026\u201d"
+ },
+ {
+  "id": "pkg:safeinstall-cli",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "4 tools documented (provenance.mode, transitive.mode\u2026); 19 worked examples; setup and auth covered; states a limit \u2014 \u201cThis is best-effort shell interception \u2014 one layer\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:sidebutton",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "17 tools documented (run_workflow, get_run_log, list_workflows\u2026); 8 worked examples; setup and auth covered; states a limit \u2014 \u201cPlatform Automation Disclaimer \u2014 SideButton\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:usrcp",
+  "expertise": 88,
+  "verdict": "deep",
+  "note": "13 tools documented (usrcp_get_state, usrcp_append_event\u2026); 10 worked examples; setup and auth covered; states a limit \u2014 \u201cNo \u2014 content is never sent in the clear;\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@aiwerk/mcp-server-clawhub",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "14 tools documented (clawhub_search, clawhub_list_skills, clawhub_get_skill\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cDiscovery caveat: the live /skills endpoint applies a\u2026\u201d"
+ },
+ {
+  "id": "pkg:@amitgurbani/mcp-server-woocommerce",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "12 tools documented (delete_media, delete_tax_rate\u2026); 9 worked examples; setup and auth covered; states a limit \u2014 \u201cSystem maintenance actions (cache clears, DB updates)\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@dinglebear/rgotify",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "7 tools documented (create_application, update_application\u2026); 10 worked examples; setup and auth covered; states a limit \u2014 \u201cStdio mode runs with the user's local\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@hypd-ai/openai-ads-mcp",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "11 tools documented (get_ad_account, list_campaigns, get_campaign\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201cDisclaimer \u2014 This is an unofficial, community-built project. It is\u2026\u201d"
+ },
+ {
+  "id": "pkg:@vantagate/mcp-server",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "6 tools documented (create_vantagate_checkpoint, check_vantagate_status, notify_email\u2026); 10 worked examples; setup and auth covered; states a limit \u2014 \u201cIt cannot be reconstructed\u201d"
+ },
+ {
+  "id": "pkg:agentic-sdlc-mcp",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "13 tools documented (repo_context, plan_from_context\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201cIt binds only to loopback, validates Host and\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:claude-consult-mcp",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "17 tools documented (ask_claude, claude_second_opinion\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201cThe trust prompt cannot be granted in headless\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:codex-claude-bridge",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "10 tools documented (review_plan, review_code\u2026); 11 worked examples; setup and auth covered; states a limit \u2014 \u201cWith Codex this can't be combined with session_id (a\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:content-genie-mcp",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "17 tools documented (get_korean_trends, analyze_news_trends\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201cKnown limitations \u2014 Scrapers are HTML-driven.\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:gainium-mcp",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "16 tools documented (list_bots, get_bot, create_bot\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201cAn access token whose introspected aud is a *different* resource is rejected \u2014 a\u2026\u201d"
+ },
+ {
+  "id": "pkg:neurohive",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "15 tools documented (store_memory, search_memory, recall_memory\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201cNot supported\u201d"
+ },
+ {
+  "id": "pkg:nitrograph",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "5 tools documented (nitrograph_discover, nitrograph_service_detail\u2026); 14 worked examples; setup and auth covered; states a limit \u2014 \u201cIf stdin is not a TTY, it runs hands-off and installs into every\u2026\u201d"
+ },
+ {
+  "id": "pkg:openttt",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "8 tools documented (pot_generate, pot_verify_v08, pot_query\u2026); 13 worked examples; setup and auth covered; states a limit \u2014 \u201cNote: Shard-based verification (pot_verify\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:ori-memory",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "13 tools documented (ori_orient, ori_update, ori_promote\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201cRetrieval must follow the graph. Memory is not a\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:proxy-veil",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "7 tools documented (agentproxy_fetch, agentproxy_session\u2026); 13 worked examples; setup and auth covered; states a limit \u2014 \u201cKnown Limitations \u2014 Sites requiring full JS\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:spreshapp-mcp",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "18 tools documented (ad_search, ad_search_expand_query, ad_get\u2026); 5 worked examples; setup and auth covered; states a limit \u2014 \u201c\"Feature not available\"\u201d"
+ },
+ {
+  "id": "pkg:vibe-coding-mcp",
+  "expertise": 87,
+  "verdict": "deep",
+  "note": "15 tools documented (muse_collect_code_context\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201cKnown limitations \u2014 Capture is hook-driven. The MCP itself\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@bam-devcrew/maxential-thinking-mcp",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "11 tools documented (switch_branch, list_branches, get_branch\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201cNot supported\u201d"
+ },
+ {
+  "id": "pkg:@dinglebear/rtailscale",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "3 tools documented (device_routes, authorize_device\u2026); 10 worked examples; setup and auth covered; states a limit \u2014 \u201cExplicitly out of scope\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@promptibus/mcp",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "7 tools documented (recommend_model, optimize_prompt, lint_prompt\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201c\u2192 lint_prompt({ prompt: \"[Verse] ...\", model: \"suno-v4\" }) flags\u2026\u201d"
+ },
+ {
+  "id": "pkg:@swapwizard/mcp-server",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "9 tools documented (get_supported_chains, get_supported_dexes, check_api_health\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201cThis is not a testnet demo\u201d"
+ },
+ {
+  "id": "pkg:app-store-operator",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "13 tools documented (research_rivals, search_app_store\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201cLimitations \u2014 iOS only. Nothing here covers Google\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:cursor-history-mcp",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "8 tools documented (cursor_history_list, cursor_history_show, cursor_history_search\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201c\u274c Not available\u201d"
+ },
+ {
+  "id": "pkg:magictex-mcp",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "7 tools documented (render_preview, check_comments\u2026); 9 worked examples; setup and auth covered; states a limit \u2014 \u201cWASM TeX Live and a missing class can't be worked\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:quanttogo-mcp",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "8 tools documented (register_trial, list_strategies, get_strategy_performance\u2026); 7 worked examples; setup and auth covered; states a limit \u2014 \u201cQuantToGo is not a trading platform, not an asset\u2026\u201d"
+ },
+ {
+  "id": "pkg:replicate-flux-mcp",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "9 tools documented (generate_image, generate_multiple_images\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201c![Multiple prompts example: \"A serene\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:servicenow-mcp-ai",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "3 tools documented (servicenow_incident_triage\u2026); 13 worked examples; setup and auth covered; states a limit \u2014 \u201cThe OAuth 2.0 password grant (ROPC) is deprecated in OAuth\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:stylemcp",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "7 tools documented (validate_text, rewrite_to_style, get_voice_rules\u2026); 8 worked examples; setup and auth covered; states a limit \u2014 \u201cConstraints \u2014 Max 25 words per sentence - No exclamation marks\u2026\u201d"
+ },
+ {
+  "id": "pkg:yazio-mcp",
+  "expertise": 86,
+  "verdict": "deep",
+  "note": "12 tools documented (get_user_daily_summary, get_user_consumed_items, get_user_weight\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201c\u26a0\ufe0f Important Disclaimers \u2014 Unofficial API: This\u2026\u201d"
+ },
+ {
+  "id": "pkg:2slides-mcp",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "6 tools documented (slides_generate, themes_search, jobs_get\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201cAdd AI voice narration to a completed Nano Banana job\u2026\u201d"
+ },
+ {
+  "id": "pkg:@agentskb/cli",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "7 tools documented (ask_question, preflight_check, search_questions\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cSome older clients do not support remote HTTP servers and only\u2026\u201d"
+ },
+ {
+  "id": "pkg:@dinglebear/rarcane",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "2 tools documented (elicit_name, scaffold_intent\u2026); 11 worked examples; setup and auth covered; states a limit \u2014 \u201cExplicitly out of scope\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@ecocitizenz/ecz-id-mcp-verifier",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "3 tools documented (ecz_check_target, ecz_recheck_resolver\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201cThere are 18 canonical result_state values,\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@prizmad/mcp-server",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "9 tools documented (create_video, list_templates, list_avatars\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201cbright-neutral, cool-diffused, window-light, earthy-ambient,\u2026\u201d"
+ },
+ {
+  "id": "pkg:@spazio-genesi/attest-mcp",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "6 tools documented (attest_file, get_certificate_pdf, verify_file\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201cKnown limitation \u2014 The certificate PDF and its text are in Italian\u2026\u201d"
+ },
+ {
+  "id": "pkg:@trishchuk/codex-mcp-tool",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "6 tools documented (gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201can explicit upgrade message rather than silently dropping unsupported\u201d"
+ },
+ {
+  "id": "pkg:aem-mcp-server",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "6 tools documented (request_for_activation\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cDoesn't support multi-tenancy at the moment\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:argus-3",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "3 tools documented (argus_ask, argus_status\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201cVerdict (L) \u2014 reviews that can't be faked because every star\u2026\u201d; read with 4 linked doc(s)"
+ },
+ {
+  "id": "pkg:argus-warden",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "3 tools documented (argus_ask, argus_status\u2026); 6 worked examples; setup and auth covered; states a limit \u2014 \u201cVerdict (L) \u2014 reviews that can't be faked because every star\u2026\u201d; read with 4 linked doc(s)"
+ },
+ {
+  "id": "pkg:atom-mcp-server",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "9 tools documented (list_vendors, get_kpis, get_model_intelligence\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201cIf it does not work, use the npx method below\u201d"
+ },
+ {
+  "id": "pkg:devicecloud-mcp",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "10 tools documented (diagnose_run, suite_health, list_uploads\u2026); 5 worked examples; setup and auth covered; states a limit \u2014 \u201cNote: OpenAI products (ChatGPT, Codex, the Assistants API) use their\u2026\u201d"
+ },
+ {
+  "id": "pkg:gumroad-mcp",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "7 tools documented (gumroad_get_product, gumroad_get_offer_codes, gumroad_get_offer_code\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201cYour browser does not support the video tag\u201d"
+ },
+ {
+  "id": "pkg:mcp-jp-corporate-id",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "8 tools documented (likely_different\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201c(\"NEC\" is an abbreviation that cannot be detected by string\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-multi-ssh",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "7 tools documented (ssh_execute, ssh_disconnect, create_ssh_connection\u2026); 5 worked examples; setup and auth covered; states a limit \u2014 \u201cPuTTY .ppk files are not supported - convert them first via\u2026\u201d"
+ },
+ {
+  "id": "pkg:mcp-server-web-fetcher",
+  "expertise": 85,
+  "verdict": "deep",
+  "note": "3 tools documented (fetch_page_markdown, extract_metadata\u2026); 9 worked examples; setup and auth covered; states a limit \u2014 \u201cLimitations \u2014 Static HTML only. Client-rendered\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@needhuman/mcp-server",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "3 tools documented (need_human, check_task_status, list_tasks\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201cStatus and limitations \u2014 Pre-v1.0. API is stable but may change without\u2026\u201d"
+ },
+ {
+  "id": "pkg:@shiftyasan/mcp-server",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "4 tools documented (validate_shift_input, solve_shift, get_solve_job\u2026); 3 worked examples; setup and auth covered; states a limit \u2014 \u201cConstraints the schema accepts but the solver does not apply yet\u2026\u201d"
+ },
+ {
+  "id": "pkg:@swins/intent-engineering-mcp",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "3 tools documented (audit_intent_spec, generate_intent_spec_scaffold\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cLimitations \u2014 The audit is opinionated about heading structure,\u2026\u201d"
+ },
+ {
+  "id": "pkg:corroborate-mcp",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "3 tools documented (corroborate_claim, find_sources, n_independent_sources\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cWhen you need a verdict you can defend \u2014 every answer\u2026\u201d"
+ },
+ {
+  "id": "pkg:furlen-mcp",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "3 tools documented (furlen_public_data, furlen_render, furlen_render_status\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cWhat it can't do yet \u2014 do yet Worth knowing before you\u2026\u201d"
+ },
+ {
+  "id": "pkg:netlens-mcp",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "4 tools documented (web_search, web_fetch, time_range\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cthat is throttling, changed markup or genuinely no matches cannot be\u201d"
+ },
+ {
+  "id": "pkg:owasp-mcp-scan",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "3 tools documented (excessive-scope, tool-poisoning, tool-shadowing\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cLimitations (read these) \u2014 (read these) - Static analysis can't\u2026\u201d"
+ },
+ {
+  "id": "pkg:realdentalcosts-mcp",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "4 tools documented (dental_cost_by_state, dental_cost_by_city, out_of_pocket_estimate\u2026); 5 worked examples; setup and auth covered; states a limit \u2014 \u201cDisclaimer \u2014 This package provides market\u2026\u201d"
+ },
+ {
+  "id": "pkg:secondhand-mcp",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "3 tools documented (search_marketplace, get_listing_details, list_marketplaces\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201cLimitations \u2014 Facebook: May break if Facebook changes\u2026\u201d"
+ },
+ {
+  "id": "pkg:sf-intelligence",
+  "expertise": 84,
+  "verdict": "deep",
+  "note": "2 tools documented (offline_snapshot, live_org\u2026); 9 worked examples; setup and auth covered; states a limit \u2014 \u201cDisclosure-first. Coverage caveats, staleness warnings,\u2026\u201d; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@lab94/frenchie",
+  "expertise": 83,
+  "verdict": "deep",
+  "note": "2 tools documented (ocr_to_markdown, get_job_result\u2026); 4 worked examples; setup and auth covered; states a limit \u2014 \u201cIt is not an alias for Method\u201d"
+ },
+ {
+  "id": "pkg:dependency-fitness-mcp",
+  "expertise": 83,
+  "verdict": "deep",
+  "note": "2 tools documented (check_package_fitness, audit_dependencies\u2026); 2 worked examples; setup and auth covered; states a limit \u2014 \u201cMigration-target inference. When a package is deprecated, it parses the\u201d"
+ },
+ {
+  "id": "pkg:@coinversaa/mcp-server",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "40 worked examples, 82 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@gitscrum-studio/mcp-server",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "39 worked examples, 37 tools documented; short of deep on a stated limitation; read with 3 linked doc(s)"
+ },
+ {
+  "id": "pkg:@indigoprotocol/indigo-mcp",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "29 worked examples, 66 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@mobile-reality/mdma-mcp",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "19 worked examples, 15 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@stellisoft/stellify-mcp",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "24 worked examples, 32 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:browser-ipc-cdp",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "26 worked examples, 76 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:icon-composer-mcp",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "19 worked examples, 48 tools documented; short of deep on setup/auth; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:spaceship-mcp",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "21 worked examples, 51 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:spectra-mcp-server",
+  "expertise": 79,
+  "verdict": "solid",
+  "note": "43 worked examples, 56 tools documented; short of deep on setup/auth; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:keyshot-mcp",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "18 worked examples, 19 tools documented; short of deep on setup/auth; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:logclaw-mcp-server",
+  "expertise": 78,
+  "verdict": "solid",
+  "note": "28 worked examples, 10 tools documented; short of deep on a stated limitation; read with 3 linked doc(s)"
+ },
+ {
+  "id": "pkg:@ffmpeg-micro/mcp-server",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "14 worked examples, 12 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@kenwea/mcp",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "16 worked examples, 26 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@marsnme/mcp-gateway",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "14 worked examples, 15 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:bamboo-mcp-server",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "14 worked examples, 27 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:brightspace-mcp",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "14 worked examples, 33 tools documented; short of deep on a stated limitation; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:camoufox-mcp-server",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "14 worked examples, 19 tools documented; short of deep on a stated limitation and setup/auth; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:graph-polymarket-mcp",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "15 worked examples, 35 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:ibge-br-mcp",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "15 worked examples, 22 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:selenium-ai-agent",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "14 worked examples, 14 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:wopee-mcp",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "24 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:xlsx-for-ai",
+  "expertise": 77,
+  "verdict": "solid",
+  "note": "14 worked examples, 50 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@agenttrust/mcp-server",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "12 worked examples, 18 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@decodo/mcp-server",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "12 worked examples, 29 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@notharshhaa/devops-mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "12 worked examples, 60 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@ping-identity/davinci-mcp-server",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "12 worked examples, 21 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@prereason/mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "12 worked examples, 22 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:adsturbo-creative-mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "14 worked examples, 10 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:browseai-dev",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "13 worked examples, 13 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:freshcontext-mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "13 worked examples, 21 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:nan-forget",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "13 worked examples, 13 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:stifler-memex-mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "12 worked examples, 12 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:tapetide-mcp",
+  "expertise": 76,
+  "verdict": "solid",
+  "note": "12 worked examples, 33 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@agentproto/mcp-server",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "9 worked examples, 12 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@catlabtech/mycal-mcp-server",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "9 worked examples, 13 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@costkits/costkits-mcp",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "9 worked examples, 12 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@fhirfly-io/mcp-server",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "10 worked examples, 61 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@icloud-calendar-mcp/server",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "10 worked examples, 12 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@licinexusbr/mcp",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "11 worked examples, 22 tools documented; short of deep on a stated limitation and setup/auth; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@metabrain-labs/comfyui-mcp-server",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "10 worked examples, 12 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@nl4ever/sshmcp",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "10 worked examples, 17 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@o1-labs/mina-mcp-server",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "9 worked examples, 13 tools documented; short of deep on setup/auth; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@prismism/mcp-server",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "14 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@waitlister/mcp",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "11 worked examples, 14 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:ai-mind-map",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "10 worked examples, 41 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:android-mcp-server",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "10 worked examples, 21 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:arcox-mcp",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "10 worked examples, 15 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:limelink-mcp-server",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "10 worked examples, 13 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-media-forge",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "9 worked examples, 12 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:msds-chain-mcp",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "9 worked examples, 21 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:nexus-agents",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "10 worked examples, 45 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:puzzletide",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "11 worked examples, 15 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:rocket-plus-mcp",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "11 worked examples, 32 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:sverklo",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "10 worked examples, 12 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:vibe-testing",
+  "expertise": 75,
+  "verdict": "solid",
+  "note": "11 worked examples, 18 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@agentchurch/mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "10 worked examples, 10 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@autonomad1/computeback-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "7 worked examples, 15 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@florianbruniaux/dep-scope",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "20 worked examples, 5 tools documented; short of deep on a stated limitation and setup/auth; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:@i18n-agent/mcp-client",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "19 worked examples, 6 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@kultur-dev/mcp-server",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "12 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@maasy-ai/mcp-server",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "7 worked examples, 17 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@orderly.network/mcp-server",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "17 worked examples, 7 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@raytien/git-mcp-server",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "7 worked examples, 23 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@theyahia/yookassa-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "7 worked examples, 20 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@usecomposer/mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "8 worked examples, 16 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:bhived-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "7 worked examples, 15 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:bugherd-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "7 worked examples, 37 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:claude-kvm",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "8 worked examples, 31 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:dejared-mcp",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "9 worked examples, 11 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:i1n",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "13 worked examples, 9 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:semanticscholar-mcp-server",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "7 worked examples, 16 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:xcode-mcp-server",
+  "expertise": 74,
+  "verdict": "solid",
+  "note": "7 worked examples, 51 tools documented; short of deep on a stated limitation; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:@aiwerk/mcp-server-cal",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "5 worked examples, 12 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@allourthings/mcp-server",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "7 worked examples, 10 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@banksync/mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "5 worked examples, 28 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@demostudio/mcp-server",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "8 worked examples, 10 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@flightradar24/fr24api-mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "6 worked examples, 17 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@muhammadmehdi/ollama-mcp-server",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "78 worked examples, 4 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@nextoolsolutions/mcp-n8n",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "5 worked examples, 34 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@opendata-kr/narajangteo-prespec-mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "17 worked examples, 5 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@provenonce/mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 12 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@qr-maker/mcp-server",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "5 worked examples, 19 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@rolli/mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "6 worked examples, 30 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@theyahia/yandex-metrika-mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "6 worked examples, 15 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@ulinkly/mcp-server",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 21 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@vorim/mcp-server",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 19 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:a0nexus-bitcoin-mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "5 worked examples, 17 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:agentphone-mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 27 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:context-mem",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "6 worked examples, 26 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:demipass",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 21 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:excalidraw-mcp-server",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 15 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:greptile-mcp-server",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "19 worked examples, 4 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:llm-advisor-mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "6 worked examples, 14 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-agentic-server",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 16 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-server-andru-intelligence",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 19 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-server-google-search-console",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 12 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:obsidian-everywhere",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "5 worked examples, 22 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:packet-tracer-mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "6 worked examples, 64 tools documented; short of deep on a stated limitation; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:photopea-mcp-server",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 34 tools documented; short of deep on setup/auth"
+ },
+ {
+  "id": "pkg:propstack-mcp-server",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "5 worked examples, 52 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:rigshare-mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "15 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:selenium-webdriver-mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 56 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:seo-tools-mcp-aparser",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "4 worked examples, 70 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:sylex-search",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "7 worked examples, 10 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:threejs-devtools-mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "5 worked examples, 56 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:x402-bazaar-mcp",
+  "expertise": 73,
+  "verdict": "solid",
+  "note": "6 worked examples, 12 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@automatelab/seo-performance-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "2 worked examples, 15 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@finishkit/mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 23 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@gblin-protocol/mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "6 worked examples, 10 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@itechsmart/mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "14 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@lordmendes/lgpd-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "2 worked examples, 34 tools documented; short of deep on a stated limitation and setup/auth; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@mdmagic/mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "5 worked examples, 10 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@nomacms/mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 37 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@overlayqa/mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "7 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@quantrisk/mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "5 worked examples, 10 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@ruddia/being-mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "23 worked examples, 3 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@scrapeer/mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "2 worked examples, 15 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@scriptivox/mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "2 worked examples, 12 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@securityorchestra/security-orchestra",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 61 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@signdocs-brasil/mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 19 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@thenomadinorbit/vision-mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "19 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@theyahia/yandex-direct-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "2 worked examples, 20 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:botindex-mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 17 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:brdata-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "2 worked examples, 15 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:calibre-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 24 tools documented; short of deep on a stated limitation; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:ddc-ci-control-bridge",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "15 worked examples, 5 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:elementor-mcp-agent",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 27 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:ellmos-filecommander-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 46 tools documented; short of deep on setup/auth; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:frappe-dev-mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "2 worked examples, 12 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:graph-aave-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 51 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:impreza-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 34 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:manifold-mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 15 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mappls-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 14 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-aider-executor",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 14 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-kinetic-gain",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "2 worked examples, 72 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:mcp-server-google-forms",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "2 worked examples, 15 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:md-log-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 14 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:ntfy-me-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "19 worked examples, 2 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:obambu-cpanel-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "2 worked examples, 15 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:orizn-visa-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "4 worked examples, 10 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:pylon-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 24 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:random-profiles-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "10 worked examples, 8 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:scrcpy-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 31 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:server-ops-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 16 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:session-forge",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 20 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:supersurf-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 27 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:tapd-mcp-server",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "2 worked examples, 18 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:tgfmcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "4 worked examples, 10 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:whooshly-mcp",
+  "expertise": 72,
+  "verdict": "solid",
+  "note": "3 worked examples, 13 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@agentmetal/mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 13 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@akka-finance/mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "4 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@artifacta-mcp/mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "3 worked examples, 10 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@automatelab/ai-seo-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 19 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@automatelab/content-distribution-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "5 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@compute-finance/mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 17 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@context-sync/server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "17 worked examples, 2 tools documented; short of deep on setup/auth; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@crisog/railway-mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 48 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@dalecb/obsidian-semantic-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "14 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@digilac/simap-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "0 worked examples, 14 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@dropthis/mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 32 tools documented; short of deep on ; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@fidensa/mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "9 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@jimothy-snicket/gemini-image-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "14 worked examples, 4 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@lazydino/ccxt-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "19 worked examples, 1 tools documented; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@meetdewey/mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 25 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@opendata-kr/narajangteo-opening-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "18 worked examples, 3 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@pdfgate/mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 18 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@picoberry/mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "3 worked examples, 11 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@ponzu_app/mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "0 worked examples, 17 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@qmailing/mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "4 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@roamzy/mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "0 worked examples, 12 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@ssemble/mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "6 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@thalovant/mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "5 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@timergy/mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "13 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@trustrails/mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "17 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:aipm-mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "0 worked examples, 23 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:anchor-x402-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "6 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:ani-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 59 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:can-see",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 18 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:claude-sessions-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "3 worked examples, 11 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:codebase-context",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "6 worked examples, 9 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:dart-mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 12 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:depscope-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 12 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:easyhook-mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 16 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:flickr-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 13 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:haiku-mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "11 worked examples, 7 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:health-export-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "9 worked examples, 7 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:hilma-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "4 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:keymem",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "20 worked examples, 1 tools documented; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:kudosity-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 19 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:local-dfw-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "0 worked examples, 13 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-harmonyos",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "11 worked examples, 7 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:mcp-server-opencode",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "2 worked examples, 10 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-server-tempmail",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "5 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:myclaw-toolkit",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "0 worked examples, 16 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:novai-mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "0 worked examples, 12 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:ocular-audio-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "8 worked examples, 8 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:opengrok-mcp-server",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "0 worked examples, 27 tools documented; short of deep on ; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:pipepost-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 22 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:ridvay-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "2 worked examples, 10 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:storykit-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "0 worked examples, 28 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:valta-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "1 worked examples, 16 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:verifox-mcp",
+  "expertise": 71,
+  "verdict": "solid",
+  "note": "12 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@ahdev/dokploy-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "19 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@callmarcus/securityscorecard-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "3 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cross-deck/ai",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "1 worked examples, 11 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:@drantoniou/uploadcheck-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "3 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@flarelink/mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "0 worked examples, 11 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@forgespace/branding-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "1 worked examples, 11 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@hoya25/nctr-mcp-server",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "9 worked examples, 6 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@iflow-mcp/puppeteer-mcp-server",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "4 worked examples, 8 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@knorq/xlsx-mcp-server",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "39 worked examples; short of deep on per-tool docs and setup/auth"
+ },
+ {
+  "id": "pkg:@kyanitelabs/epoch",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "31 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@marocain/mcp-server",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "1 worked examples, 11 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:@mseep/puppeteer-mcp-server",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "4 worked examples, 8 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@nor-data/kartverket-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "8 worked examples, 7 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@robthepcguy/rag-vault",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "20 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@seodesignlab/mcp-server",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "9 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@tastehub/ckb",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "20 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@todoforai/puppeteer-mcp-server",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "4 worked examples, 8 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:agentreader-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "0 worked examples, 11 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:artifyde-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "2 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:bankregpulse-mcp-server",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "14 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:botverse-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "2 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:dear-agent",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "5 worked examples, 8 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:ffmpeg-mcp-server",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "9 worked examples, 5 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:hal-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "27 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:jobyap-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "1 worked examples, 11 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-crypto-price",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "31 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:mcp-ldbd",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "1 worked examples, 10 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-trustcard",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "45 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mindbase-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "29 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:olkcli",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "33 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:outlook-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "28 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:ozav-mcp-server",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "16 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:skilldb",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "25 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:tickerdb-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "2 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:tooltrust-mcp",
+  "expertise": 70,
+  "verdict": "solid",
+  "note": "9 worked examples, 5 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@aimino/opendocswork-mcp",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "3 worked examples, 8 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@arcxs-protocol/mcp-server",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "2 worked examples, 8 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@astrocal/mcp-server",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "2 worked examples, 8 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@autostackup/sales",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "2 worked examples, 8 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@buildpulse/mcp",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "1 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cyanheads/treasury-fiscaldata-mcp-server",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "6 worked examples, 7 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@looppause/mcp",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "11 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@noves/canton-mcp",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "1 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@piqrypt/mcp-server",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "11 worked examples, 4 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:agent-mcp-hub",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "1 worked examples, 9 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:browserbash-cli",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "17 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:claude-gemini-mcp",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "6 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:college-roi-mcp",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "4 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:dealflowpro-mcp",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "9 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:karbon-mcp-server",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "17 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-ffmpeg",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "17 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-roadmapsh",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "1 worked examples, 9 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:media-gen-mcp-server",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "8 worked examples, 5 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:modelcontextprotocol-gemini",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "17 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:pplz-agent",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "1 worked examples, 9 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:repomemory",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "4 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:ssh-mcp-sessions",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "16 worked examples, 1 tools documented; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:weavatrix-git",
+  "expertise": 69,
+  "verdict": "solid",
+  "note": "7 worked examples, 5 tools documented; short of deep on setup/auth"
+ },
+ {
+  "id": "pkg:@ai-capabilities-suite/mcp-screenshot",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "15 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@aicloud360/mcp-server-disk",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "7 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@aiwerk/mcp-server-vault",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "0 worked examples, 8 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@arcede/air-sdk",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "5 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@aryanbv/pdf-toolkit-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "16 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@asgcard/mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "3 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@averra/extract-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "5 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cryptoapis-io/mcp-address-latest",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "6 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cryptoapis-io/mcp-transactions-data",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "4 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@dinanathdash/envault-mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "14 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@doomscrollr/mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "15 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@easyonward/mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "2 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@gammainfra/mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "0 worked examples, 8 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@incultnitollc/mcp-probe",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "6 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@larelabs/refinery-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "9 worked examples, 3 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@openfeature/mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "4 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@ottasia/mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "9 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@quantulabs/hivemind",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "7 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@runapi.ai/gemini-omni-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "4 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@runapi.ai/ideogram-v3-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "4 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@runapi.ai/qwen-image-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "4 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@runapi.ai/seedream-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "4 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@stackfiesta/mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "10 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@theo.foobar/mcp-time",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "5 worked examples, 5 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:abapilot",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "0 worked examples, 8 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:agent-obs",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "6 worked examples, 6 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:agent-services-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "3 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:agentfolio-mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "0 worked examples, 8 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:airtreks-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "3 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:apisix-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "4 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:boostedtravel-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "15 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:bruzethegreat-gsap-master-mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "6 worked examples, 6 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:clickup-mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "2 worked examples, 7 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:cyberdyne-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "6 worked examples, 6 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:dexscreener-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "4 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:haplane",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "3 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:iconify-mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "5 worked examples, 5 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:jina-mcp-tools",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "10 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-bench-router",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "7 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-server-markdown",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "6 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:meltflex-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "4 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:metrillm-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "8 worked examples, 4 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:miniframe-tools-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "5 worked examples, 5 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:mychart-mcp-server",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "0 worked examples, 8 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:s2t-mcp-accelerators",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "6 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:socialmate-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "1 worked examples, 8 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:sportscore-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "0 worked examples, 8 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:storeshots-mcp",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "4 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:web3agent",
+  "expertise": 68,
+  "verdict": "solid",
+  "note": "14 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@cexll/codex-mcp-server",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "12 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@cryptoapis-io/mcp-address-history",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "7 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cryptoapis-io/mcp-hd-wallet",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "4 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cryptoapis-io/mcp-utils",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "4 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@dashboardbase/mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "7 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@fonteum/mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "1 worked examples, 7 tools documented; short of deep on setup/auth"
+ },
+ {
+  "id": "pkg:@formatix-ai/mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "3 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@gpthuman/mcp-server",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "9 worked examples, 1 tools documented; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@halalterminal/mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "3 worked examples, 5 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@infrawise/mcp-server",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "4 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@metaengine/mcp-server",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "0 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@metricspot/mcp-server",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "2 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@morous-dev/engram-cc",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "9 worked examples, 1 tools documented; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@pv-bhat/vibe-check-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "8 worked examples, 2 tools documented; short of deep on a stated limitation; read with 3 linked doc(s)"
+ },
+ {
+  "id": "pkg:@reputemap/mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "2 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@rnaga/wp-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "13 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@runapi.ai/flux-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "4 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@runapi.ai/gpt-image-2-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "4 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@runapi.ai/hailuo-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "4 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@runapi.ai/imagen-4-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "4 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@runapi.ai/recraft-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "4 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@valewnrt/testa-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "12 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:aeonos-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "3 worked examples, 5 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:agentseal-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "1 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:ai-scanner-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "0 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:aistudio-mcp-server",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "9 worked examples, 1 tools documented; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:docalyze-mcp-server",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "4 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:fastalert-mcp-server",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "7 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:forgecraft-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "12 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:freehire-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "0 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:gilbert-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "1 worked examples, 7 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:grok-cli-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "5 worked examples, 4 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:image-vision-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "9 worked examples, 1 tools documented; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:kitsune-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "13 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-openapi",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "12 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-react-toolkit",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "3 worked examples, 6 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:ntfy-mcp-server",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "6 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:peeptrend-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "3 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:pop-pay",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "7 worked examples, 3 tools documented; short of deep on a stated limitation; read with 2 linked doc(s)"
+ },
+ {
+  "id": "pkg:profitlee-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "1 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:routara-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "2 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:seven-dpt-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "0 worked examples, 7 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:stacktree-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "0 worked examples, 7 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:tabedata-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "1 worked examples, 7 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:tracepulse",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "11 worked examples, 1 tools documented; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:unichat-ts-mcp-server",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "5 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:vaults-diagram-tools",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "11 worked examples, 1 tools documented; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:voxplo-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "2 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:wsc-mcp",
+  "expertise": 67,
+  "verdict": "solid",
+  "note": "4 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@5dive/mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "0 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@achamm/veilbrowser",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@agentage/find-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@ajsmonty/adobe-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "0 worked examples, 5 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:@akari-os/keymaster-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "3 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cg3/prior-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "0 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cryptoapis-io/mcp-block-data",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cryptoapis-io/mcp-blockchain-fees",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cryptoapis-io/mcp-contracts",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cryptoapis-io/mcp-market-data",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@dinglebear/runifi",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "9 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@dinglebear/synapse",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@dragapp/mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@httpayer/mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "2 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@idachev/mcp-javadc",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "9 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@ilovevideoeditor/mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "1 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@inferensys/dr-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 2 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@iniit/defi-guard-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "1 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@mcpflow.io/mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@mydaughteralya/mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "0 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@mylinedchart/mcp-chart-context",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "1 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@nannykeeper/mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "3 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@nodemint/projectmind",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "10 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@nulib/dc-api-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@payanagent/mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "10 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@postcept/mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "0 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@promptpartner/bexio-mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "9 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@runapi.ai/gemini-tts-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@runapi.ai/infinitetalk-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@runapi.ai/luma-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@sovseal/mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 2 tools documented; short of deep on a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@sowonai/nestjs-mcp-adapter",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "9 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@teunlao/vidin",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "3 worked examples, 4 tools documented; short of deep on setup/auth"
+ },
+ {
+  "id": "pkg:@truepathpdf/mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "1 worked examples, 6 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:@wuniq/mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "9 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:airlock-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "7 worked examples, 1 tools documented; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:amazon-scraper-api-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "2 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:central-intelligence-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "10 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:chartforge-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:claude-historian-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:coolify-mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "3 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:crw-sdk",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "10 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:duckduckgo-websearch",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "5 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:enigmagent-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "5 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:humanforai",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "1 worked examples, 6 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:job-search-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "0 worked examples, 6 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:knowuswell-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "2 worked examples, 4 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:live-translate-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "5 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-coinglass",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-glue-code-generator",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "5 worked examples, 3 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:mcp-oauth-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "10 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:mcp-server-serper",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "8 worked examples, 1 tools documented; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-standardnotes",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-typegen",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "10 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp_clockify",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mockserver-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "1 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:nakkas",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "7 worked examples, 1 tools documented; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:neurakeep",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "4 worked examples, 2 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:payflowagent-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "1 worked examples, 6 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:pqs-mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "5 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:project-knowledge",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "10 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:proxyclaw-mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "2 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:psychosynth-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "3 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:slideshot-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "2 worked examples, 4 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:soapnoteapi-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "0 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:socialcrawl-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "3 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:supplement-advisor-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "0 worked examples, 5 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:swisstrip-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "1 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:tencent-careers-mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "3 worked examples, 4 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:tiny-http-mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:tiny-stdio-mcp-server",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "11 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:vaaya-cli",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "9 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:vedetta-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "0 worked examples, 6 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:warp-mcp",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "1 worked examples, 5 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:weclaude",
+  "expertise": 66,
+  "verdict": "solid",
+  "note": "10 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:3dstreet-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "8 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@agentpayxyz/mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@aiwerk/mcp-server-wheel-size",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "1 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@ancientwhispers54/leafengines-mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@antonytm/mcp-all",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "0 worked examples, 4 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@ask-llm/claude-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@ask-llm/gemini-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@ask-llm/ollama-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@bananaprompts/banana-prompts-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "3 worked examples, 2 tools documented; short of deep on setup/auth"
+ },
+ {
+  "id": "pkg:@clavisagent/mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "0 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@furlpay/cli",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@kireo/mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "1 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@leadloadz/mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "3 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@licentium/compass-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "1 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@mambalabsdev/mcp-company-social-presence-mapper",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "5 worked examples, 1 tools documented; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@mcp-z/mcp-sheets",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "8 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@namemyapp/mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "2 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@nor-data/statfin-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "0 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@nor-data/udir-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "0 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@orbisapi/mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "0 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@orcarouter/mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "1 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@pharmatools/opengate-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@phi-longevity/mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "2 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@proofslip/mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "4 worked examples, 1 tools documented; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@qaskills/mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@screenshotscout/mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "5 worked examples, 1 tools documented; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@sperekrestova/interactive-leetcode-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@stackguide/mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "4 worked examples, 1 tools documented; short of deep on per-tool docs and setup/auth"
+ },
+ {
+  "id": "pkg:@thenexusintel/mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "0 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@tidyports/mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "1 worked examples, 4 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@vertaaux/mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@verygoodplugins/mcp-automem",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@webuplink/mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "3 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:agentbbs",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "4 worked examples, 1 tools documented; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:agentcert",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "8 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:argo-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "8 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:auxiliar-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "1 worked examples, 4 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:better-qdrant-mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:betterprompt-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:citeguard",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "2 worked examples, 2 tools documented; short of deep on a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:context-autopilot",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:corent-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "0 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:filetopdf-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "0 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:goldbean-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:gurupdf-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "0 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:hackmd-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:inchat-image-viewer-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "8 worked examples; short of deep on per-tool docs and setup/auth"
+ },
+ {
+  "id": "pkg:invovate-mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "1 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:kavel-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "1 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:langfuse-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:lucid-mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "4 worked examples, 1 tools documented; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-nevent",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "8 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-server-reddit-ads",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:memeboat-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "3 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:midnight-nextjs-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mtasa-docs-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "1 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:nocturnusai-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "8 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:nodedex",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "6 worked examples, 1 tools documented; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:plantuml-mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "8 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:reel-estate-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "1 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:rhombus-node-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:savepinner-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "2 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:sfmc-mcp-server",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "3 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:skillssafe-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "3 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:sovereign-ai-act-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "1 worked examples, 4 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:stellavault",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:tapp-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:test-genie-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:tracktag-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "0 worked examples, 4 tools documented; short of deep on "
+ },
+ {
+  "id": "pkg:vidlens-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "8 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:vipsallowed",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "8 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:wpgoldmine-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "0 worked examples, 4 tools documented; short of deep on setup/auth"
+ },
+ {
+  "id": "pkg:xcodebazelmcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:zapret2-mcp",
+  "expertise": 65,
+  "verdict": "solid",
+  "note": "7 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@7nohe/adonis-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@agenium/mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@bighub/bighub-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@bounceprotect/mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "6 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@captapi/mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@cloudbusiness/gl-importer-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "1 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@cryptoapis-io/mcp-aml",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@digicatalyst/dep-diff-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "1 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@evidinvest/aether-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@fazer-ai/mcp-obsidian",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@flashbank/mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and setup/auth; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@fusionauth/mcp-api",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "6 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@google-cloud/gemini-cloud-assist-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@hookwarden/mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@keenable/mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "1 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@kind-ling/twig",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@kundlit/mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "6 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@liuyoshio/mcp-compass",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@mambalabsdev/mcp-domain-to-linkedin-url-resolver",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@mambalabsdev/mcp-gtm-hiring-signal-scraper",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@mambalabsdev/mcp-gtm-signals-aggregator",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@mambalabsdev/mcp-gtm-tech-stack-signal-scraper",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "6 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@mambalabsdev/mcp-icp-fit-scorer",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@mambalabsdev/mcp-job-board-keyword-signal-scanner",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@paasbuild/mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "0 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@patentprecheck/mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@printr/mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "6 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@purplesquirrel/hedera-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@safeprompt.dev/mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@scratchrun/mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "1 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:@snowmead/oxcode-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "6 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@tradallo/reputation",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@voxell/forge-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "1 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:actionproof",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:alibabacloud-dataworks-mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:atest-mcp-server-launcher",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:blogcaster-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "6 worked examples; short of deep on per-tool docs and setup/auth"
+ },
+ {
+  "id": "pkg:box-mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:bun-uia",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:cashpilot-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:chinese-text-tools",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:codecov-mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "0 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:deep-research-mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "0 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:dicomweb-mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:flowgraf-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "1 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:getregdata-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:ghosthunt",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "1 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:graphql-to-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:groundcheck-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:hledit-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "3 worked examples, 1 tools documented; short of deep on per-tool docs and setup/auth"
+ },
+ {
+  "id": "pkg:import-guardian-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:kernelcad",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:komodo-mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:korea-stock-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:living-ai-documentation",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and setup/auth"
+ },
+ {
+  "id": "pkg:llm-trust-guard",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:lyrenth-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "0 worked examples, 3 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:massed-compute-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-growi",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:mcp-relay-client",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:mcp-sdk-client-ssejs",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:mcp-server-flomo",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:mcp-ssh",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-trello",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:memnant",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "6 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:microsoft-outlook-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mpp32-mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:ms-calendar-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:ms-onedrive-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:ms-sharepoint-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:obsideo-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "0 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:opendock-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "6 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:openscad-mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "0 worked examples, 2 tools documented; short of deep on setup/auth"
+ },
+ {
+  "id": "pkg:parseflow-mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:podman-mcp-server",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "6 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:satrank-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "5 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:telegram-archive-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:thesmos-governance",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:umbriel",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:unorouter-mcp",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "1 worked examples, 2 tools documented; short of deep on a stated limitation"
+ },
+ {
+  "id": "pkg:unreal-mcp-ue4",
+  "expertise": 64,
+  "verdict": "solid",
+  "note": "4 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:402-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@10iii/air-mcp-server",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@agonx402/gateway-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@agonx402/protocol-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@aistoragedepot/mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@aiwerk/mcp-server-shopify",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@aiwerk/mcp-server-wise",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@antfeed/mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@billium/mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@bitbooth/mcp-fetch",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@bloomfilter/mcp-server",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@codesys/mcp-toolkit",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@contextvm/mcp-sdk",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@coro-ai/plugin-gitlab",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@cryptoapis-io/mcp-x402-accept",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@dmzagent/skill-builder-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@dpantani/tdmcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@eox/elements-mcp-server",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@gtm-api/linkedin-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@jayofemi/shikamaru",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@maias/mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@maton/mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@mcp-hive-utils/proxy",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@mcp-tool-kit/shared",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@mealmastery/mcp-server",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@modelcontextprotocol/server-transcript",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@moneolabs/mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@nyx-intelligence/val-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@omnisockit/mcp-server",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@opzyai/mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@p1va/symbols",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:@pact-community/mcp-chainweb",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@pact-community/mcp-pact",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@ryvonetwork/protocol-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:@talivia/agent",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@toportal/second-brain-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:ableton-mind",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:aiagentsbay-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:angel-one-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:aoexl-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:atlas-pipeline-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:better-bear",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:claude-find",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:cli2mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:databricks-mcp-server-linux-amd64",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:dav-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:dida365-mcp-server",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:duckduckgo-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:epiphany-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:funplay-unreal-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:genieacs-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:hco-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:hoshin-kanri-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:ifc-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:imagegen-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:jaml-ui",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:keeping-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:lean-reader",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:lintbase-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:lorg-mcp-server",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:lynxprompt-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:m2mcent-sdk",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-customs",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-dataverse",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-divoom-lan",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-security-audit",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:mcp-slim-guard",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:mcp-testing-kit",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:modelcontextprotocol-cjs",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:musubix2",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:nitro-mcp-toolkit",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:obra-cfo",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:panguard",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:parecode",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and setup/auth"
+ },
+ {
+  "id": "pkg:praesentire-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:pumperly-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:rendezvous-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:scrapeless-mcp-server",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:sentvia-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:shared-supabase-mcp-minimal",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:spinnaker-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:ssid-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:standby-design-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation and setup/auth"
+ },
+ {
+  "id": "pkg:toolfunnel",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:u-he-preset-randomizer",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "2 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:weasley-deepmind",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:zentric-protocol-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs"
+ },
+ {
+  "id": "pkg:zero-mcp",
+  "expertise": 63,
+  "verdict": "solid",
+  "note": "3 worked examples; short of deep on per-tool docs and a stated limitation"
+ },
+ {
+  "id": "pkg:@abhishekmcp/files",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@abhishekmcp/git",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@abhishekmcp/github",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@abhishekmcp/notes",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@adeze/raindrop-mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@cropgraph/mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@eztexting/mcp-server",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@intelagent/mcp-file-processor",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@mailbuttons/mcp-server",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@mameta/japan-data-mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@marchward/mcp-server",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@mastercard/developers-mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@ophirai/mcp-server",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@pdfmakerapi/mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@quantustik/mcp-server",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@vidnotes/mcp-server",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@voris-ai/mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:atag-mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 1 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:frisk-mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:linkedin-mcp-tools",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:mcp-emtrafesa",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:provenance-mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:starling-bank-mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:startupnamegenerator-mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:substrate-mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:x402-codesearch-mcp",
+  "expertise": 46,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 1 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:37soul-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@braynexservices/nigeria-mcp-imf-weo",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@bridgenode/mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@circulara/plugin",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@guhcostan/web-search-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@keyhalve/verify-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@mailrith/mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@measurespace/measure-space-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@mukundakatta/agentvet-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@pulsemcp/image-diff-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@pulsemcp/pulse-fetch",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@pulsemcp/svg-tracer-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:@qasperai/mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@rephrasy/mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 1 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@spekoai/mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@stableops/mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@wealthville/mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@wickpics/onchain-safety-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:agentx402-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:appsignal-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:autowhisper-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:aws-dynamodb-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:broke2built-skills-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:fly-io-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:gcs-google-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:good-eggs-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:google-calendar-workspace-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:google-docs-workspace-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:hefeng-mcp-weather",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:jamgate",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:krs-poland-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:langfuse-observability-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:marigold-draft",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:mcp-graphql-tools",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:newsnow-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:postwire-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:proctor-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:s3-aws-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:serpapi-hotels-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:skillselion-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:ssh-agent-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:superhighway-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:thistripbtw-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:tollbooth-x402",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:twist-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:vercel-platform-mcp-server",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples; read with 1 linked doc(s)"
+ },
+ {
+  "id": "pkg:x402-dataviz-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 1 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:x402-repohealth-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 1 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:zig-mcp",
+  "expertise": 42,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 1 worked examples"
+ },
+ {
+  "id": "pkg:@czagents/adis",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@czagents/ares",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@czagents/cnb",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@czagents/isir",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@czagents/payqr",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@czagents/realestate",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@czagents/sanctions",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@mukundakatta/json5-mcp",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@mukundakatta/promptbudget-mcp",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:@nor-data/nabolag-mcp",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:coalesce-mcp",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:devkit-for-strapi-mcp",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:functype-mcp-server",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:imagedimensions-mcp",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 1 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:mcp-hacker-news",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:oom-x402-mcp",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:react-brain",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:theabbie",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ },
+ {
+  "id": "pkg:x402-gateway-mcp",
+  "expertise": 38,
+  "verdict": "thin",
+  "note": "says what it does, not how to use it \u2014 0 tool docs, 0 worked examples"
+ }
+]

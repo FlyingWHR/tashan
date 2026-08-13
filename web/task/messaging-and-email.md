@@ -36,21 +36,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 23 | [Clize](https://tashan.sh/capability/pkg-clize-clize.html) | 62 | 174/wk | active |
 | 24 | [Converse](https://tashan.sh/capability/pkg-converse-mcp-server.html) | 61 | 228/wk | active |
 | 25 | [Apple Calendar](https://tashan.sh/capability/pkg-redpop-apple-calendar-mcp.html) | 60 | 484/wk | active |
-| 26 | [Gmail MCP Server](https://tashan.sh/capability/pkg-artymclabin-gmail-mcp.html) | 54 | 333/wk | active |
-| 27 | [Google Workspace](https://tashan.sh/capability/pkg-gws-mcp-server.html) | 54 | 299/wk | active |
-| 28 | [Imap · aiwerk](https://tashan.sh/capability/pkg-aiwerk-mcp-server-imap.html) | 50 | 88/wk | active |
-| 29 | [Apple Events](https://tashan.sh/capability/pkg-mcp-server-apple-events.html) | 36 | 324/wk | active |
-| 30 | [Local](https://tashan.sh/capability/pkg-local-mcp.html) | 72 | 5k/wk | active |
-| 31 | [Emailmd](https://tashan.sh/capability/pkg-emailmd.html) | 70 | 4k/wk | active |
-| 32 | [Modelcontextprotocol](https://tashan.sh/capability/pkg-atomicmail-mcp-modelcontextprotocol.html) | 70 | 525/wk | active |
-| 33 | [Agent Skill Modelcontextprotocol](https://tashan.sh/capability/pkg-atomicmail-agent-skill-modelcontextprotocol.html) | 69 | 260/wk | active |
-| 34 | [Mailkite](https://tashan.sh/capability/pkg-mailkite-mcp.html) | 65 | 573/wk | active |
-| 35 | [Imap](https://tashan.sh/capability/pkg-imap-mcp-server.html) | 62 | 449/wk | active |
-| 36 | [Mail](https://tashan.sh/capability/pkg-mcp-mail-server.html) | 61 | 353/wk | active |
-| 37 | [DNS Doctor](https://tashan.sh/capability/pkg-dnsdoctor-mcp.html) | 60 | 512/wk | active |
-| 38 | [Chronary](https://tashan.sh/capability/pkg-chronary-mcp.html) | 59 | 148/wk | active |
-| 39 | [Mailbridge](https://tashan.sh/capability/pkg-mailbridge-mcp.html) | 53 | 265/wk | active |
-| 40 | [Multimail](https://tashan.sh/capability/pkg-multimail-mcp-server.html) | 49 | 84/wk | active |
+| 26 | [Agent Email](https://tashan.sh/capability/pkg-email-agent-mcp.html) | 58 | 183/wk | active |
+| 27 | [Gmail MCP Server](https://tashan.sh/capability/pkg-artymclabin-gmail-mcp.html) | 54 | 333/wk | active |
+| 28 | [Google Workspace](https://tashan.sh/capability/pkg-gws-mcp-server.html) | 54 | 299/wk | active |
+| 29 | [Imap · aiwerk](https://tashan.sh/capability/pkg-aiwerk-mcp-server-imap.html) | 50 | 88/wk | active |
+| 30 | [e2a — email for AI agents](https://tashan.sh/capability/pkg-e2a-mcp-server.html) | 42 | 54/wk | active |
+| 31 | [ManyContacts - WhatsApp Business](https://tashan.sh/capability/pkg-manycontacts-mcp.html) | 40 | 117/wk | active |
+| 32 | [Apple Events](https://tashan.sh/capability/pkg-mcp-server-apple-events.html) | 36 | 324/wk | active |
+| 33 | [Calendly](https://tashan.sh/capability/pkg-calendly-mcp-server.html) | 19 | 115/wk | abandoned |
+| 34 | [Local](https://tashan.sh/capability/pkg-local-mcp.html) | 72 | 5k/wk | active |
+| 35 | [Emailmd](https://tashan.sh/capability/pkg-emailmd.html) | 70 | 4k/wk | active |
+| 36 | [Modelcontextprotocol](https://tashan.sh/capability/pkg-atomicmail-mcp-modelcontextprotocol.html) | 70 | 525/wk | active |
+| 37 | [Agent Skill Modelcontextprotocol](https://tashan.sh/capability/pkg-atomicmail-agent-skill-modelcontextprotocol.html) | 69 | 260/wk | active |
+| 38 | [Mailkite](https://tashan.sh/capability/pkg-mailkite-mcp.html) | 65 | 573/wk | active |
+| 39 | [Imap](https://tashan.sh/capability/pkg-imap-mcp-server.html) | 62 | 449/wk | active |
+| 40 | [Mail](https://tashan.sh/capability/pkg-mcp-mail-server.html) | 61 | 353/wk | active |
 
 Showing the top 40 of 106. The full ranked shelf is at https://tashan.sh/task/messaging-and-email.html.
 

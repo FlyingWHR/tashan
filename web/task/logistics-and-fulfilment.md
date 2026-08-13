@@ -14,14 +14,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Freightutils](https://tashan.sh/capability/pkg-freightutils-mcp.html) | 67 | 776/wk | active |
 | 2 | [Fluf](https://tashan.sh/capability/pkg-fluf-mcp.html) | 63 | 908/wk | active |
 | 3 | [Procurement Optimizer](https://tashan.sh/capability/skill-alirezarezvani-procurement-optimizer.html) | not scored | 1 repos | active |
-| 4 | [GitHub Security](https://tashan.sh/capability/pkg-github-security-mcp.html) | 38 | 626/wk | active |
-| 5 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 59 | 302/wk | active |
-| 6 | [AI Trust](https://tashan.sh/capability/pkg-ai-trust.html) | 57 | 404/wk | active |
-| 7 | [Daiso](https://tashan.sh/capability/pkg-daiso.html) | 56 | 281/wk | active |
-| 8 | [3DPACK.ING — Container & Truck Load Planning](https://tashan.sh/capability/pkg-3dpacking-mcp-server.html) | 56 | 254/wk | active |
-| 9 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 56 | 177/wk | active |
-| 10 | [Shopify](https://tashan.sh/capability/pkg-aiwerk-mcp-server-shopify.html) | 44 | 60/wk | active |
-| 11 | [Dependency Fitness](https://tashan.sh/capability/pkg-dependency-fitness-mcp.html) | 41 | 65/wk | active |
+| 4 | [Dependency Fitness](https://tashan.sh/capability/pkg-dependency-fitness-mcp.html) | 41 | 65/wk | active |
+| 5 | [GitHub Security](https://tashan.sh/capability/pkg-github-security-mcp.html) | 38 | 626/wk | active |
+| 6 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 59 | 302/wk | active |
+| 7 | [AI Trust](https://tashan.sh/capability/pkg-ai-trust.html) | 57 | 404/wk | active |
+| 8 | [Daiso](https://tashan.sh/capability/pkg-daiso.html) | 56 | 281/wk | active |
+| 9 | [3DPACK.ING — Container & Truck Load Planning](https://tashan.sh/capability/pkg-3dpacking-mcp-server.html) | 56 | 254/wk | active |
+| 10 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 56 | 177/wk | active |
+| 11 | [Shopify](https://tashan.sh/capability/pkg-aiwerk-mcp-server-shopify.html) | 44 | 60/wk | active |
 | 12 | [Airtreks](https://tashan.sh/capability/pkg-airtreks-mcp.html) | 40 | 62/wk | active |
 | 13 | [Gammainfra](https://tashan.sh/capability/pkg-gammainfra-mcp-server.html) | 39 | 75/wk | active |
 | 14 | [Gam Seller Mcp Node](https://tashan.sh/capability/pkg-gam-seller-mcp-node.html) | 28 | — | active |
