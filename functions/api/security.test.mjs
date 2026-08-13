@@ -60,7 +60,7 @@ const withKey = (h = {}) => ({ authorization: "Bearer " + KEY, ...h });
 
 test("no licence gets nothing", async () => {
   const r = await onRequestGet({ request: req(), env: ENV() });
-  assert.equal(r.status, 401);
+  assert.equal(r.status, 402);   // no credential is a price quote, not an auth failure
   assert.ok(!(await r.text()).includes("GHSA"), "an unauthenticated response leaked the advisory");
 });
 

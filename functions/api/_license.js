@@ -80,7 +80,7 @@ export async function fetchLicence(env, key, activationId = null) {
 }
 
 export async function validate(env, key, activationId = null) {
-  if (!key) return { ok: false, status: 401, why: "no licence key" };
+  if (!key) return { ok: false, status: 402, why: "payment required" };
   // FAIL CLOSED. An unconfigured deployment must refuse everyone, never admit everyone — the opposite
   // of e.js, where a missing analytics binding is allowed to no-op because nothing is being protected.
   if (!env.POLAR_ORG_ID) return { ok: false, status: 503, why: "billing not configured" };
@@ -116,10 +116,64 @@ export async function validate(env, key, activationId = null) {
     : { ok: false, status: 403, why: granted ? "licence expired" : "licence " + (d.status || "not valid") };
 }
 
+// THE PRICE, in one place, because it is now published to machines as well as to people. The two
+// checkout links are the same ones web/pricing.html renders, and tests/test_entitlements.py fails
+// if they ever disagree — a price that drifts between the page a human reads and the JSON an agent
+// reads is the same class of bug as a score differing between two of our own surfaces.
+export const OFFER = {
+  plans: [
+    { amount: 6, currency: "USD", period: "month",
+      checkout: "https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" },
+    { amount: 50, currency: "USD", period: "year",
+      checkout: "https://buy.polar.sh/polar_cl_ESzG71NaofNkWbLp6wBSpLtuAfuv13XDYE6121Rd2jl" },
+  ],
+  // WHAT AN AGENT CAN HAVE WITHOUT PAYING. Naming these in the refusal is not generosity, it is the
+  // firewall: the EXISTENCE of a risk is never behind the paywall, and an agent that bounces off a
+  // 402 without learning that every score and every finding is free would carry away exactly the
+  // wrong impression of what this is.
+  free: {
+    "https://tashan.sh/data/lookup.json": "every capability: score, category, advisory ids, severities, fix versions, install command",
+    "https://tashan.sh/v0.1/lookup?name=<pkg>": "one capability, resolved by name",
+    "https://tashan.sh/v0.1/search?q=<query>": "ranked search over the measured corpus",
+    "https://tashan.sh/llms.txt": "what the score means and how to cite it",
+  },
+};
+
 // One shape for every refusal, so no endpoint invents its own and leaks detail by accident.
+//
+// 402, NOT 401, WHEN THERE IS NO CREDENTIAL AT ALL. An agent that asked for paid data used to get
+// 61 bytes — {"error":"no licence key"} — which tells a machine nothing it can act on: not the
+// price, not where to buy, not what it could have had for free. 401 says "you are not
+// authenticated" to something that has no way to authenticate; 402 says "this costs money" and
+// carries the terms. An invalid or expired key is still 403: that caller HAS paid and has a
+// different problem, and telling them to buy again would be wrong.
+//
+// WHAT THIS DELIBERATELY IS NOT: an x402 `accepts` array. That protocol settles on-chain against a
+// `payTo` address through a facilitator, and we have neither. Publishing payment options we cannot
+// verify would be a door that looks open and is not — worse than the 401 it replaced. The shape
+// below is additive: when there is a wallet and a facilitator, `accepts` goes in beside `plans`
+// and existing readers keep working.
 export function deny(v) {
-  return new Response(JSON.stringify({ error: v.why, docs: "https://tashan.sh/pricing" }), {
-    status: v.status || 403,
-    headers: { "content-type": "application/json", "cache-control": "no-store" },
-  });
+  const paid = (v.status || 403) === 402;
+  const body = paid
+    ? {
+        error: "payment required",
+        resource: "tashan Pro",
+        detail: "Per-capability score history and full advisory detail. Every score, and the "
+              + "existence of every security finding, is free — see `free`.",
+        plans: OFFER.plans,
+        credential: {
+          header: "Authorization: Bearer <licence-key>",
+          obtain: "https://tashan.sh/pricing",
+        },
+        free: OFFER.free,
+        docs: "https://tashan.sh/pricing",
+      }
+    : { error: v.why, docs: "https://tashan.sh/pricing" };
+  const headers = {
+    "content-type": "application/json",
+    "cache-control": "no-store",
+  };
+  if (paid) headers.link = '<https://tashan.sh/pricing>; rel="payment"';
+  return new Response(JSON.stringify(body), { status: v.status || 403, headers });
 }

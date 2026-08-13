@@ -589,6 +589,45 @@ def coverage_lines():
             "An absent value means UNMEASURED and never means zero, absent risk, or poor quality."]
 
 
+def pricing_block():
+    """What is free, what is paid, and what it costs — for the readers who cannot click a toggle.
+
+    llms.txt is the file this project TELLS every AI crawler to read, and it never once said the
+    price. An answer engine asked "how much is tashan" or "is the security data free" had nothing
+    of ours to cite and would have to guess from a pricing page whose annual figure lived in a
+    data attribute. We publish an agent-readability instrument; this was our own worst page.
+
+    Read from data/entitlements.json so the number here cannot drift from the one Terms, Refunds
+    and pricing.html are checked against.
+    """
+    ent = json.load(open(os.path.join(ROOT, "data", "entitlements.json"), encoding="utf-8"))
+    pro = ent["tiers"]["pro"]
+    ann = pro.get("annual") or {}
+    price = pro["price"] + "/" + pro["cadence"]
+    if ann.get("price"):
+        price += " or " + ann["price"] + "/" + ann.get("cadence", "year")
+    return [
+        "Everything measured is free and needs no account: every tashan score and its inputs, "
+        "every security finding's EXISTENCE and severity, advisory ids, the version that fixes "
+        "them, and the install command. Quote any of it.",
+        "",
+        "**tashan Pro — " + price + ", 7 days free.** It buys depth about YOUR stack, never a "
+        "different answer: the score history behind a capability, and `tashan doctor` run over "
+        "the config on your own machine.",
+        "",
+        "- Buy: " + pro["checkout"],
+        "- Terms and the full split: " + BASE + "/pricing.html",
+        "- Paid endpoints answer an unauthenticated caller with **HTTP 402** and a JSON body "
+        "carrying the price, the checkout URL and the free endpoints that answer the same "
+        "question — so an agent never has to guess.",
+        "",
+        "Nobody can pay to change a score, a rank, or a listing, and no listing is paid. If that "
+        "were ever untrue the measurement would be worthless, so it is the one rule with a test "
+        "of its own.",
+        "",
+    ]
+
+
 def llms_txt(caps, cats, by_cat, gen, roles=()):
     """The /llms.txt convention: a plain-markdown map an answer engine can read without running JS."""
     L = ["# tashan", "",
@@ -685,7 +724,9 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
           "registry shape; measurement under the `sh.tashan/measurement` key in `_meta`.",
           "- [/skill/SKILL.md](" + BASE + "/skill/SKILL.md) — install tashan as a capability and call it "
           "when choosing what to install.",
-          "", "## By job", "",
+          "", "## What costs money", "",
+          ] + pricing_block() + [
+          "## By job", "",
           "One ranked page per job title. These answer \"what should I install for a <job>\" with "
           "measured rows rather than an opinion.", ""]
     for r, rows in roles:

@@ -91,5 +91,45 @@ ok(f"pricing shows {pro['price']}/{pro['cadence']}",
    pro["price"].lower() in pt, f"{pro['price']} not found on the page")
 
 print()
+print("# the price an AGENT is quoted is the price a human is quoted")
+# /api/history and /api/security now answer a credential-less caller with 402 and the terms, so the
+# price is published to machines as well as to people. Two copies of a price is exactly how the
+# score once differed between the board and a hub table. This is the guard.
+_lic = open(os.path.join(ROOT, "functions", "api", "_license.js"), encoding="utf-8").read()
+_offer = re.search(r"export const OFFER = \{(.*?)\n\};", _lic, re.S)
+ok("functions/api/_license.js still exports OFFER (the machine-readable price)", bool(_offer))
+if _offer:
+    body = _offer.group(1)
+    quoted = {(int(a), c) for a, c in re.findall(r"amount:\s*(\d+),\s*currency:\s*\"(\w+)\"", body)}
+    ok("the 402 quotes both plans", quoted == {(6, "USD"), (50, "USD")}, f"found {sorted(quoted)}")
+    for amt in (6, 50):
+        ok(f"${amt} in the 402 also appears on pricing.html", f"${amt}" in pt)
+    # A checkout URL that 404s is worse than none: the agent hands its human a dead link. Read the
+    # RAW html here, not text() — a URL lives in an href, so the visible-text copy has none by
+    # construction and this compared the quote against an empty set.
+    _raw = open(os.path.join(WEB, "pricing.html"), encoding="utf-8").read()
+    page_links = set(re.findall(r"https://buy\.polar\.sh/[A-Za-z0-9_]+", _raw))
+    quoted_links = set(re.findall(r"https://buy\.polar\.sh/[A-Za-z0-9_]+", body))
+    ok("every checkout URL quoted to an agent is one the pricing page also links",
+       quoted_links and quoted_links <= page_links,
+       f"only in the 402: {sorted(quoted_links - page_links)}")
+    # The firewall, restated for machines: the refusal must name what costs nothing.
+    ok("the 402 names the free surfaces, so a bounce does not read as 'everything is paid'",
+       "lookup.json" in body and "llms.txt" in body)
+
+print()
+print("# llms.txt is the file we tell every AI crawler to read")
+# It never stated the price. An answer engine asked "how much is tashan" had nothing of ours to
+# cite, on a site whose product is agent-readability.
+_llms = open(os.path.join(WEB, "llms.txt"), encoding="utf-8").read()
+ok("llms.txt names the monthly price", ENT["tiers"]["pro"]["price"] in _llms)
+_ann = (ENT["tiers"]["pro"].get("annual") or {}).get("price")
+ok("llms.txt names the annual price too (it existed only in a data attribute)",
+   not _ann or _ann in _llms, f"{_ann} missing")
+ok("llms.txt says what is FREE before what is paid", "free" in _llms.lower())
+ok("llms.txt restates the firewall for machines",
+   "pay to change" in _llms.lower(), "the one rule that makes the measurement worth citing")
+
+print()
 print("ENTITLEMENTS OK" if not fail else "ENTITLEMENTS FAILED")
 sys.exit(fail)

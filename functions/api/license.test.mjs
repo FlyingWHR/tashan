@@ -30,7 +30,7 @@ let called = 0;
 globalThis.fetch = async () => { called++; return new Response("{}", { status: 400 }); };
 
 let v = await validate({ POLAR_ORG_ID: "org_1" }, "");
-ok("empty key denied 401, no network call", !v.ok && v.status === 401 && called === 0);
+ok("empty key denied 402 payment-required, no network call — an agent with no credential is\n   being sold to, not rejected", !v.ok && v.status === 402 && called === 0);
 
 v = await validate({}, "some-key");
 ok("UNCONFIGURED deployment denies everyone (fails closed)", !v.ok && v.status === 503);

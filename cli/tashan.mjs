@@ -397,6 +397,12 @@ async function withTrends(results, lic, base = SITE, limit = 40) {
     try {
       const res = await fetch(`${base}/api/history?id=${encodeURIComponent(r.row.id)}`,
                               { headers: auth });
+      // 402 means we sent no credential at all, 403 means the one we sent was refused. Telling
+      // somebody whose card just failed to "check your device list" sends them to the wrong page.
+      if (res.status === 402) {
+        process.stderr.write(red("  trend needs tashan Pro — https://tashan.sh/pricing") + "\n");
+        return results;
+      }
       if (res.status === 403 || res.status === 401) {
         process.stderr.write(red("  licence not valid for this device — check " + PORTAL) + "\n");
         return results;                       // stop early; every other call would fail the same way
