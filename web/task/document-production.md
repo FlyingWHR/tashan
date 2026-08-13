@@ -30,12 +30,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Md Document](https://tashan.sh/capability/skill-alirezarezvani-md-document.html) | not scored | 1 repos | active |
 | 18 | [Md Review](https://tashan.sh/capability/skill-alirezarezvani-md-review.html) | not scored | 1 repos | active |
 | 19 | [Md Slides](https://tashan.sh/capability/skill-alirezarezvani-md-slides.html) | not scored | 1 repos | active |
-| 20 | [Kordoc](https://tashan.sh/capability/pkg-kordoc.html) | 75 | 18k/wk | active |
-| 21 | [Pdfops](https://tashan.sh/capability/pkg-pdfops-mcp.html) | 58 | 334/wk | active |
-| 22 | [Docx](https://tashan.sh/capability/pkg-knorq-docx-mcp-server.html) | 54 | 297/wk | active |
-| 23 | [Grabzit](https://tashan.sh/capability/pkg-grabzit-mcp-server.html) | 47 | 51/wk | active |
-| 24 | [Lorem](https://tashan.sh/capability/pkg-lorem-mcp.html) | 63 | 701/wk | active |
-| 25 | [Pdfnative](https://tashan.sh/capability/pkg-pdfnative-mcp.html) | 58 | 337/wk | active |
+| 20 | [Pdfnative](https://tashan.sh/capability/pkg-pdfnative-mcp.html) | 58 | 337/wk | active |
+| 21 | [Kordoc](https://tashan.sh/capability/pkg-kordoc.html) | 75 | 18k/wk | active |
+| 22 | [Pdfops](https://tashan.sh/capability/pkg-pdfops-mcp.html) | 58 | 334/wk | active |
+| 23 | [Docx](https://tashan.sh/capability/pkg-knorq-docx-mcp-server.html) | 54 | 297/wk | active |
+| 24 | [Grabzit](https://tashan.sh/capability/pkg-grabzit-mcp-server.html) | 47 | 51/wk | active |
+| 25 | [Lorem](https://tashan.sh/capability/pkg-lorem-mcp.html) | 63 | 701/wk | active |
 | 26 | [Magictex](https://tashan.sh/capability/pkg-magictex-mcp.html) | 57 | 196/wk | active |
 | 27 | [Differino](https://tashan.sh/capability/pkg-differino-mcp.html) | 55 | 142/wk | active |
 | 28 | [Docweave](https://tashan.sh/capability/pkg-docweave-mcp.html) | 51 | 98/wk | active |

@@ -36,21 +36,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 23 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 64 | 30 ★ | active |
 | 24 | [ClickHouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 54 | 5 ★ | active |
 | 25 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 74 | 11k/wk | active |
-| 26 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
-| 27 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 63 | 865/wk | active |
-| 28 | [Appfigures](https://tashan.sh/capability/pkg-appfigures-cli.html) | 59 | 159/wk | active |
-| 29 | [Yandex Metrica](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 53 | 146/wk | active |
-| 30 | [Scopewalker](https://tashan.sh/capability/pkg-scopewalker-mcp.html) | 58 | 370/wk | active |
-| 31 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 58 | 210/wk | active |
-| 32 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 56 | 248/wk | active |
-| 33 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 53 | 139/wk | active |
-| 34 | [Social Media Analytics](https://tashan.sh/capability/pkg-social-media-analytics.html) | 53 | 139/wk | active |
-| 35 | [Rolli](https://tashan.sh/capability/pkg-rolli-mcp.html) | 51 | 148/wk | active |
-| 36 | [Voris AI](https://tashan.sh/capability/pkg-voris-ai-mcp.html) | 51 | 60/wk | active |
-| 37 | [Ascendkit](https://tashan.sh/capability/pkg-ascendkit-cli.html) | 49 | 80/wk | active |
-| 38 | [Stride20k x402 Data Gateway](https://tashan.sh/capability/pkg-x402-gateway-mcp.html) | 47 | 89/wk | active |
-| 39 | [Op3](https://tashan.sh/capability/pkg-conorbronsdon-op3-mcp.html) | 45 | 52/wk | active |
-| 40 | [Transistor](https://tashan.sh/capability/pkg-transistor-mcp.html) | 45 | 42/wk | active |
+| 26 | [Scopewalker](https://tashan.sh/capability/pkg-scopewalker-mcp.html) | 58 | 370/wk | active |
+| 27 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 56 | 248/wk | active |
+| 28 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
+| 29 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 63 | 865/wk | active |
+| 30 | [Appfigures](https://tashan.sh/capability/pkg-appfigures-cli.html) | 59 | 159/wk | active |
+| 31 | [Yandex Metrica](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 53 | 146/wk | active |
+| 32 | [Worldbank](https://tashan.sh/capability/pkg-worldbank-mcp.html) | 37 | 577/wk | active |
+| 33 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 58 | 210/wk | active |
+| 34 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 53 | 139/wk | active |
+| 35 | [Social Media Analytics](https://tashan.sh/capability/pkg-social-media-analytics.html) | 53 | 139/wk | active |
+| 36 | [Rolli](https://tashan.sh/capability/pkg-rolli-mcp.html) | 51 | 148/wk | active |
+| 37 | [Voris AI](https://tashan.sh/capability/pkg-voris-ai-mcp.html) | 51 | 60/wk | active |
+| 38 | [Ascendkit](https://tashan.sh/capability/pkg-ascendkit-cli.html) | 49 | 80/wk | active |
+| 39 | [Stride20k x402 Data Gateway](https://tashan.sh/capability/pkg-x402-gateway-mcp.html) | 47 | 89/wk | active |
+| 40 | [Op3](https://tashan.sh/capability/pkg-conorbronsdon-op3-mcp.html) | 45 | 52/wk | active |
 
 Showing the top 40 of 47. The full ranked shelf is at https://tashan.sh/task/exploratory-data-analysis.html.
 

@@ -11,17 +11,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 54 | 165/wk | active |
-| 2 | [Livepilot](https://tashan.sh/capability/pkg-livepilot.html) | 65 | 579/wk | active |
-| 3 | [Cursor Chat Bridge](https://tashan.sh/capability/pkg-cursor-telegram-chat.html) | 65 | 475/wk | active |
-| 4 | [Agentvibes](https://tashan.sh/capability/pkg-agentvibes.html) | 64 | 575/wk | active |
-| 5 | [Vibo](https://tashan.sh/capability/pkg-vibo-mcp.html) | 60 | 328/wk | active |
-| 6 | [Mmxomni](https://tashan.sh/capability/pkg-mmxomni.html) | 59 | 4k/wk | active |
-| 7 | [Tonyq Mimo](https://tashan.sh/capability/pkg-tonyq-mimo-mcp-server.html) | 59 | 1k/wk | active |
-| 8 | [Atlascloud](https://tashan.sh/capability/pkg-atlascloud-mcp.html) | 59 | 537/wk | active |
-| 9 | [Spekoai](https://tashan.sh/capability/pkg-spekoai-mcp.html) | 59 | 74/wk | active |
-| 10 | [Goldbean](https://tashan.sh/capability/pkg-goldbean-mcp.html) | 57 | 130/wk | active |
-| 11 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 56 | 248/wk | active |
+| 1 | [Livepilot](https://tashan.sh/capability/pkg-livepilot.html) | 65 | 579/wk | active |
+| 2 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 56 | 248/wk | active |
+| 3 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 54 | 165/wk | active |
+| 4 | [Cursor Chat Bridge](https://tashan.sh/capability/pkg-cursor-telegram-chat.html) | 65 | 475/wk | active |
+| 5 | [Agentvibes](https://tashan.sh/capability/pkg-agentvibes.html) | 64 | 575/wk | active |
+| 6 | [Vibo](https://tashan.sh/capability/pkg-vibo-mcp.html) | 60 | 328/wk | active |
+| 7 | [Mmxomni](https://tashan.sh/capability/pkg-mmxomni.html) | 59 | 4k/wk | active |
+| 8 | [Tonyq Mimo](https://tashan.sh/capability/pkg-tonyq-mimo-mcp-server.html) | 59 | 1k/wk | active |
+| 9 | [Atlascloud](https://tashan.sh/capability/pkg-atlascloud-mcp.html) | 59 | 537/wk | active |
+| 10 | [Spekoai](https://tashan.sh/capability/pkg-spekoai-mcp.html) | 59 | 74/wk | active |
+| 11 | [Goldbean](https://tashan.sh/capability/pkg-goldbean-mcp.html) | 57 | 130/wk | active |
 | 12 | [Chamade](https://tashan.sh/capability/pkg-chamade-mcp-server.html) | 55 | 116/wk | active |
 | 13 | [Uploadcheck](https://tashan.sh/capability/pkg-drantoniou-uploadcheck-mcp.html) | 54 | 92/wk | active |
 | 14 | [Agentphone](https://tashan.sh/capability/pkg-agentphone-mcp.html) | 50 | 144/wk | active |

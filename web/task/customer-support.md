@@ -20,13 +20,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Chief Customer Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-customer-officer-advisor.html) | not scored | 1 repos | active |
 | 8 | [Churn Prevention](https://tashan.sh/capability/skill-alirezarezvani-churn-prevention.html) | not scored | 1 repos | active |
 | 9 | [Help Scout](https://tashan.sh/capability/pkg-help-scout-mcp-server.html) | 65 | 801/wk | active |
-| 10 | [Gorgias](https://tashan.sh/capability/pkg-gorgias-mcp-server.html) | 43 | 766/wk | active |
-| 11 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 70 | 891/wk | active |
-| 12 | [Connectwise Psa](https://tashan.sh/capability/pkg-mcp-connectwise-psa.html) | 60 | 368/wk | active |
-| 13 | [Eventbrite](https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html) | 57 | 273/wk | active |
-| 14 | [Quick Desk](https://tashan.sh/capability/pkg-quick-desk-mcp.html) | 55 | 202/wk | active |
+| 10 | [Freescout](https://tashan.sh/capability/pkg-verygoodplugins-mcp-freescout.html) | 49 | 239/wk | active |
+| 11 | [Gorgias](https://tashan.sh/capability/pkg-gorgias-mcp-server.html) | 43 | 766/wk | active |
+| 12 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 70 | 891/wk | active |
+| 13 | [Connectwise Psa](https://tashan.sh/capability/pkg-mcp-connectwise-psa.html) | 60 | 368/wk | active |
+| 14 | [Eventbrite](https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html) | 57 | 273/wk | active |
 | 15 | [Zd](https://tashan.sh/capability/pkg-zd-mcp-server.html) | 50 | 370/wk | active |
-| 16 | [Freescout](https://tashan.sh/capability/pkg-verygoodplugins-mcp-freescout.html) | 49 | 239/wk | active |
+| 16 | [Quick Desk](https://tashan.sh/capability/pkg-quick-desk-mcp.html) | 55 | 202/wk | active |
 | 17 | [Codmir](https://tashan.sh/capability/pkg-codmir-mcp.html) | 43 | 73/wk | active |
 | 18 | [Sprint](https://tashan.sh/capability/pkg-neki-team-sprint-mcp.html) | 39 | 7/wk | active |
 | 19 | [Pylon](https://tashan.sh/capability/pkg-pylon-mcp.html) | 36 | 89/wk | active |

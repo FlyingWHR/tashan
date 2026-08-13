@@ -15,8 +15,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | not scored | 1 repos | active |
 | 3 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | not scored | 1 repos | active |
 | 4 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | not scored | 1 repos | active |
-| 5 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 46 | 43/wk | active |
-| 6 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 60 | 378/wk | active |
+| 5 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 60 | 378/wk | active |
+| 6 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 46 | 43/wk | active |
 | 7 | [Freehire](https://tashan.sh/capability/pkg-freehire-mcp.html) | 55 | 204/wk | active |
 | 8 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 54 | 153/wk | active |
 | 9 | [LinkedIn Mcp Tools](https://tashan.sh/capability/pkg-linkedin-mcp-tools.html) | 48 | 100/wk | active |

@@ -24,8 +24,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Deal Desk](https://tashan.sh/capability/skill-alirezarezvani-deal-desk.html) | not scored | 1 repos | active |
 | 12 | [Bettercallclaude](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-bettercallclaude.html) | 61 | 33 ★ | active |
 | 13 | [Bettercallclaude Italia](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-italia-bettercallclaude-italia.html) | 55 | 41 ★ | active |
-| 14 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 53 | 139/wk | active |
-| 15 | [Contract Analysis](https://tashan.sh/capability/pkg-bitsbound-mcp-server.html) | 35 | 212/wk | abandoned |
+| 14 | [Contract Analysis](https://tashan.sh/capability/pkg-bitsbound-mcp-server.html) | 35 | 212/wk | abandoned |
+| 15 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 53 | 139/wk | active |
 
 ## What these numbers are not
 

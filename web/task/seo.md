@@ -32,25 +32,25 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 19 | [Marketing Demand Acquisition](https://tashan.sh/capability/skill-alirezarezvani-marketing-demand-acquisition.html) | not scored | 1 repos | active |
 | 20 | [Programmatic SEO](https://tashan.sh/capability/skill-alirezarezvani-programmatic-seo.html) | not scored | 1 repos | active |
 | 21 | [Site Architecture](https://tashan.sh/capability/skill-alirezarezvani-site-architecture.html) | not scored | 1 repos | active |
-| 22 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 69 | 2k/wk | active |
-| 23 | [Bisibility](https://tashan.sh/capability/pkg-bisibility-mcp.html) | 65 | 1k/wk | active |
-| 24 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 61 | 337/wk | active |
-| 25 | [Suganthan Gsc](https://tashan.sh/capability/pkg-suganthan-gsc-mcp.html) | 45 | 2k/wk | active |
-| 26 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 72 | 3k ★ | active |
-| 27 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 65 | 504/wk | active |
-| 28 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
-| 29 | [Saglitzdesign](https://tashan.sh/capability/pkg-saglitzdesign-mcp.html) | 62 | 338/wk | active |
-| 30 | [Cite42](https://tashan.sh/capability/pkg-cite42-mcp.html) | 61 | 335/wk | active |
-| 31 | [SEO Audit Console](https://tashan.sh/capability/pkg-houtini-seo-audit-console.html) | 59 | 355/wk | active |
-| 32 | [SEO Tools: Google Search Console](https://tashan.sh/capability/pkg-seo-tools-mcp-gsc.html) | 59 | 272/wk | active |
-| 33 | [SEO Tools: Yandex.Webmaster](https://tashan.sh/capability/pkg-seo-tools-mcp-ywm.html) | 59 | 271/wk | active |
-| 34 | [SEO Tools: Yandex Wordstat](https://tashan.sh/capability/pkg-seo-tools-mcp-wordstat.html) | 59 | 256/wk | active |
-| 35 | [Google Search Console](https://tashan.sh/capability/pkg-conorbronsdon-gsc-mcp.html) | 58 | 363/wk | active |
-| 36 | [Cituna](https://tashan.sh/capability/pkg-cituna-mcp.html) | 56 | 277/wk | active |
-| 37 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 53 | 131/wk | active |
-| 38 | [Content Genie](https://tashan.sh/capability/pkg-content-genie-mcp.html) | 51 | 87/wk | active |
-| 39 | [SERP Agent SEO](https://tashan.sh/capability/pkg-serpagent-mcp.html) | 49 | 79/wk | active |
-| 40 | [AI SEO](https://tashan.sh/capability/pkg-automatelab-ai-seo-mcp.html) | 48 | 140/wk | active |
+| 22 | [SEO Audit Console](https://tashan.sh/capability/pkg-houtini-seo-audit-console.html) | 59 | 355/wk | active |
+| 23 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 69 | 2k/wk | active |
+| 24 | [Bisibility](https://tashan.sh/capability/pkg-bisibility-mcp.html) | 65 | 1k/wk | active |
+| 25 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 65 | 504/wk | active |
+| 26 | [Saglitzdesign](https://tashan.sh/capability/pkg-saglitzdesign-mcp.html) | 62 | 338/wk | active |
+| 27 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 61 | 337/wk | active |
+| 28 | [SEO Tools: Google Search Console](https://tashan.sh/capability/pkg-seo-tools-mcp-gsc.html) | 59 | 272/wk | active |
+| 29 | [SEO Tools: Yandex.Webmaster](https://tashan.sh/capability/pkg-seo-tools-mcp-ywm.html) | 59 | 271/wk | active |
+| 30 | [SEO Tools: Yandex Wordstat](https://tashan.sh/capability/pkg-seo-tools-mcp-wordstat.html) | 59 | 256/wk | active |
+| 31 | [Google Search Console](https://tashan.sh/capability/pkg-conorbronsdon-gsc-mcp.html) | 58 | 363/wk | active |
+| 32 | [Cituna](https://tashan.sh/capability/pkg-cituna-mcp.html) | 56 | 277/wk | active |
+| 33 | [Suganthan Gsc](https://tashan.sh/capability/pkg-suganthan-gsc-mcp.html) | 45 | 2k/wk | active |
+| 34 | [Gsc](https://tashan.sh/capability/pkg-gsc-mcp-server.html) | 33 | 250/wk | abandoned |
+| 35 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 72 | 3k ★ | active |
+| 36 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
+| 37 | [Cite42](https://tashan.sh/capability/pkg-cite42-mcp.html) | 61 | 335/wk | active |
+| 38 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 53 | 131/wk | active |
+| 39 | [Content Genie](https://tashan.sh/capability/pkg-content-genie-mcp.html) | 51 | 87/wk | active |
+| 40 | [SERP Agent SEO](https://tashan.sh/capability/pkg-serpagent-mcp.html) | 49 | 79/wk | active |
 
 Showing the top 40 of 52. The full ranked shelf is at https://tashan.sh/task/seo.html.
 

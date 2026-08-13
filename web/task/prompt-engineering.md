@@ -50,7 +50,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 37 | [Codesight](https://tashan.sh/capability/pkg-codesight.html) | 67 | 827/wk | active |
 | 38 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 66 | 59k/wk | active |
 | 39 | [Madar](https://tashan.sh/capability/pkg-lubab-madar.html) | 64 | 693/wk | active |
-| 40 | [Cortex](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 59 | 153/wk | active |
+| 40 | [Contextforge](https://tashan.sh/capability/pkg-contextforge-mcp.html) | 59 | 230/wk | active |
 
 Showing the top 40 of 67. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
 

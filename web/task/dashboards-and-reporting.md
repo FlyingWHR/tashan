@@ -43,13 +43,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 64 | 30 ★ | active |
 | 31 | [Preset CLI Skills](https://tashan.sh/capability/plugin-preset-io-agent-skills-preset-cli-skills.html) | 59 | 10 ★ | active |
 | 32 | [Flint Chart](https://tashan.sh/capability/pkg-flint-chart-mcp.html) | 68 | 1k/wk | active |
-| 33 | [Excalidraw](https://tashan.sh/capability/pkg-mcp-excalidraw-server.html) | 62 | 2k/wk | active |
-| 34 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 62 | 334/wk | active |
-| 35 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 70 | 2k/wk | active |
-| 36 | [Ellmos Controlcenter](https://tashan.sh/capability/pkg-ellmos-controlcenter-mcp.html) | 63 | 510/wk | active |
-| 37 | [Agentic Mermaid](https://tashan.sh/capability/pkg-agentic-mermaid.html) | 62 | 550/wk | active |
-| 38 | [Redash](https://tashan.sh/capability/pkg-redash-mcp.html) | 58 | 398/wk | active |
-| 39 | [Dashboards](https://tashan.sh/capability/pkg-mcp-dashboards.html) | 53 | 212/wk | active |
+| 33 | [Ellmos Controlcenter](https://tashan.sh/capability/pkg-ellmos-controlcenter-mcp.html) | 63 | 510/wk | active |
+| 34 | [Excalidraw](https://tashan.sh/capability/pkg-mcp-excalidraw-server.html) | 62 | 2k/wk | active |
+| 35 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 62 | 334/wk | active |
+| 36 | [Redash](https://tashan.sh/capability/pkg-redash-mcp.html) | 58 | 398/wk | active |
+| 37 | [Dashboards](https://tashan.sh/capability/pkg-mcp-dashboards.html) | 53 | 212/wk | active |
+| 38 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 70 | 2k/wk | active |
+| 39 | [Agentic Mermaid](https://tashan.sh/capability/pkg-agentic-mermaid.html) | 62 | 550/wk | active |
 | 40 | [Dashboardbase](https://tashan.sh/capability/pkg-dashboardbase-mcp.html) | 52 | 136/wk | active |
 
 Showing the top 40 of 46. The full ranked shelf is at https://tashan.sh/task/dashboards-and-reporting.html.

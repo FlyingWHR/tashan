@@ -39,18 +39,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Prism](https://tashan.sh/capability/pkg-prism-mcp-server.html) | 69 | 2k/wk | active |
 | 27 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 69 | 1k/wk | active |
 | 28 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 68 | 594/wk | active |
-| 29 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
-| 30 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 73 | 6k/wk | active |
-| 31 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
-| 32 | [Paparats – Local Semantic Code Search](https://tashan.sh/capability/pkg-paparats-cli.html) | 70 | 2k/wk | active |
-| 33 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 69 | 2k/wk | active |
-| 34 | [Sciverse](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 69 | 1k/wk | active |
-| 35 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 65 | 660/wk | active |
-| 36 | [Engram Wiki](https://tashan.sh/capability/pkg-engram-wiki-mcp.html) | 64 | 639/wk | active |
-| 37 | [Cortex](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 59 | 153/wk | active |
-| 38 | [Neuromcp](https://tashan.sh/capability/pkg-neuromcp.html) | 55 | 146/wk | active |
-| 39 | [API Docs](https://tashan.sh/capability/pkg-imagin-studio-api-docs-mcp.html) | 51 | 64/wk | active |
-| 40 | [Gctrl](https://tashan.sh/capability/pkg-gctrl-mcp.html) | 45 | 39/wk | active |
+| 29 | [Grepmax](https://tashan.sh/capability/pkg-grepmax.html) | 67 | 573/wk | active |
+| 30 | [Basemind](https://tashan.sh/capability/pkg-basemind.html) | 64 | 451/wk | active |
+| 31 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 64 | 347/wk | active |
+| 32 | [Freshvault](https://tashan.sh/capability/pkg-freshvault.html) | 59 | 258/wk | active |
+| 33 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
+| 34 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 73 | 6k/wk | active |
+| 35 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
+| 36 | [Paparats – Local Semantic Code Search](https://tashan.sh/capability/pkg-paparats-cli.html) | 70 | 2k/wk | active |
+| 37 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 69 | 2k/wk | active |
+| 38 | [Sciverse](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 69 | 1k/wk | active |
+| 39 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 66 | 578/wk | active |
+| 40 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 65 | 660/wk | active |
 
 Showing the top 40 of 83. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
 

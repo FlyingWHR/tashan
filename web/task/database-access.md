@@ -36,21 +36,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 23 | [SSH Manager](https://tashan.sh/capability/pkg-mcp-ssh-manager.html) | 62 | 596/wk | active |
 | 24 | [Read Only Local Postgres](https://tashan.sh/capability/pkg-hovecapital-read-only-postgres-mcp-server.html) | 61 | 163/wk | active |
 | 25 | [Mssql · BYMCS](https://tashan.sh/capability/pkg-mssql-mcp.html) | 58 | 664/wk | active |
-| 26 | [Snowflake · mikdanjey](https://tashan.sh/capability/pkg-snowflake-mcp-server.html) | 24 | 3k/wk | abandoned |
-| 27 | [Postgres](https://tashan.sh/capability/pkg-henkey-postgres-mcp-server.html) | 73 | 2k/wk | active |
-| 28 | [Run402](https://tashan.sh/capability/pkg-run402-mcp.html) | 71 | 4k/wk | active |
-| 29 | [Read Only Local MySQL](https://tashan.sh/capability/pkg-hovecapital-read-only-mysql-mcp-server.html) | 67 | 203/wk | active |
-| 30 | [Mssql](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-server.html) | 66 | 779/wk | active |
-| 31 | [DB Connect](https://tashan.sh/capability/pkg-mcp-db-connect.html) | 66 | 769/wk | active |
-| 32 | [PostgreSQL (hardened, read-only)](https://tashan.sh/capability/pkg-postgres-mcp-hardened.html) | 63 | 734/wk | active |
-| 33 | [SQLite · jparkerweb](https://tashan.sh/capability/pkg-mcp-sqlite.html) | 60 | 896/wk | active |
-| 34 | [Ainative Postgres](https://tashan.sh/capability/pkg-ainative-postgres-mcp.html) | 59 | 632/wk | active |
-| 35 | [Postgres · antonorlov](https://tashan.sh/capability/pkg-mcp-postgres-server.html) | 18 | 599/wk | abandoned |
-| 36 | [Dynoxide](https://tashan.sh/capability/pkg-dynoxide.html) | 71 | 5k/wk | active |
-| 37 | [SAP HANA CLI](https://tashan.sh/capability/pkg-hana-cli.html) | 66 | 1k/wk | active |
-| 38 | [Wr Admin Mcp Connector](https://tashan.sh/capability/pkg-wr-admin-mcp-connector.html) | 65 | 992/wk | active |
-| 39 | [Seedfast](https://tashan.sh/capability/pkg-seedfast.html) | 64 | 421/wk | active |
-| 40 | [Mongo](https://tashan.sh/capability/pkg-mcp-mongo-server.html) | 63 | 649/wk | active |
+| 26 | [Postgres · kristofer84](https://tashan.sh/capability/pkg-mcp-postgres.html) | 51 | 525/wk | active |
+| 27 | [Snowflake · mikdanjey](https://tashan.sh/capability/pkg-snowflake-mcp-server.html) | 24 | 3k/wk | abandoned |
+| 28 | [Postgres](https://tashan.sh/capability/pkg-henkey-postgres-mcp-server.html) | 73 | 2k/wk | active |
+| 29 | [Run402](https://tashan.sh/capability/pkg-run402-mcp.html) | 71 | 4k/wk | active |
+| 30 | [Read Only Local MySQL](https://tashan.sh/capability/pkg-hovecapital-read-only-mysql-mcp-server.html) | 67 | 203/wk | active |
+| 31 | [Mssql](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-server.html) | 66 | 779/wk | active |
+| 32 | [DB Connect](https://tashan.sh/capability/pkg-mcp-db-connect.html) | 66 | 769/wk | active |
+| 33 | [PostgreSQL (hardened, read-only)](https://tashan.sh/capability/pkg-postgres-mcp-hardened.html) | 63 | 734/wk | active |
+| 34 | [Sqemo](https://tashan.sh/capability/pkg-sqemo-mcp.html) | 63 | 477/wk | active |
+| 35 | [Dm8](https://tashan.sh/capability/pkg-mcp-dm8-server.html) | 63 | 409/wk | active |
+| 36 | [SQLite · jparkerweb](https://tashan.sh/capability/pkg-mcp-sqlite.html) | 60 | 896/wk | active |
+| 37 | [Ainative Postgres](https://tashan.sh/capability/pkg-ainative-postgres-mcp.html) | 59 | 632/wk | active |
+| 38 | [Redash](https://tashan.sh/capability/pkg-redash-mcp.html) | 58 | 398/wk | active |
+| 39 | [MySQL · dpflucas](https://tashan.sh/capability/pkg-mysql-mcp-server.html) | 19 | 559/wk | abandoned |
+| 40 | [Postgres · antonorlov](https://tashan.sh/capability/pkg-mcp-postgres-server.html) | 18 | 599/wk | abandoned |
 
 Showing the top 40 of 64. The full ranked shelf is at https://tashan.sh/task/database-access.html.
 

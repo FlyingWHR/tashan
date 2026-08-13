@@ -19,8 +19,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [GitHub · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-github.html) | not scored | 130k/wk | abandoned |
 | 7 | [Nomoreide](https://tashan.sh/capability/pkg-nomoreide.html) | 66 | 628/wk | active |
 | 8 | [Gitpin](https://tashan.sh/capability/pkg-gitpin.html) | 62 | 776/wk | active |
-| 9 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 69 | 1k/wk | active |
-| 10 | [Udacity Commit](https://tashan.sh/capability/pkg-mcp-udacity-commit.html) | 59 | 373/wk | active |
+| 9 | [Udacity Commit](https://tashan.sh/capability/pkg-mcp-udacity-commit.html) | 59 | 373/wk | active |
+| 10 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 69 | 1k/wk | active |
 | 11 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 59 | 171/wk | active |
 | 12 | [Project Knowledge](https://tashan.sh/capability/pkg-project-knowledge.html) | 57 | 118/wk | active |
 | 13 | [Weavatrix Git](https://tashan.sh/capability/pkg-weavatrix-git.html) | 48 | 62/wk | active |

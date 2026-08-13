@@ -47,10 +47,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 34 | [Deal Desk](https://tashan.sh/capability/skill-alirezarezvani-deal-desk.html) | not scored | 1 repos | active |
 | 35 | [Partnerships Architect](https://tashan.sh/capability/skill-alirezarezvani-partnerships-architect.html) | not scored | 1 repos | active |
 | 36 | [Rfp Responder](https://tashan.sh/capability/skill-alirezarezvani-rfp-responder.html) | not scored | 1 repos | active |
-| 37 | [Crmincloud](https://tashan.sh/capability/pkg-memori-ai-mcp-crmincloud.html) | 68 | 374/wk | active |
-| 38 | [Boondmanager](https://tashan.sh/capability/pkg-boondmanager-mcp-server.html) | 65 | 500/wk | active |
+| 37 | [Boondmanager](https://tashan.sh/capability/pkg-boondmanager-mcp-server.html) | 65 | 500/wk | active |
+| 38 | [Attio](https://tashan.sh/capability/pkg-attio-mcp.html) | 51 | 382/wk | active |
 | 39 | [Leadbay](https://tashan.sh/capability/pkg-leadbay-mcp.html) | 63 | 397/wk | active |
-| 40 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 58 | 210/wk | active |
+| 40 | [Vruum](https://tashan.sh/capability/pkg-vruum-mcp.html) | 56 | 277/wk | active |
 
 Showing the top 40 of 55. The full ranked shelf is at https://tashan.sh/task/sales-pipeline.html.
 

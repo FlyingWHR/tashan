@@ -48,9 +48,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 61 | 2k/wk | active |
 | 36 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
 | 37 | [Argosvix](https://tashan.sh/capability/pkg-argosvix-mcp-server.html) | 66 | 484/wk | active |
-| 38 | [Helicone](https://tashan.sh/capability/pkg-helicone-mcp.html) | 41 | 741/wk | abandoned |
-| 39 | [Lensmcp](https://tashan.sh/capability/pkg-lensmcp.html) | 69 | 1k/wk | active |
-| 40 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 64 | 414/wk | active |
+| 38 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 64 | 414/wk | active |
+| 39 | [Helicone](https://tashan.sh/capability/pkg-helicone-mcp.html) | 41 | 741/wk | abandoned |
+| 40 | [Lensmcp](https://tashan.sh/capability/pkg-lensmcp.html) | 69 | 1k/wk | active |
 
 Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/observability.html.
 

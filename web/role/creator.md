@@ -47,15 +47,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 29 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | not scored | 1 repos | active |
 | 30 | [ElevenLabs Automation](https://tashan.sh/capability/skill-composiohq-elevenlabs-automation.html) | not scored | 1 repos | active |
 | 31 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
-| 32 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 69 | 2k/wk | active |
-| 33 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
-| 34 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 68 | 1k/wk | active |
-| 35 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 54 | 165/wk | active |
-| 36 | [Nano Banana · ConechoAI](https://tashan.sh/capability/pkg-nano-banana-mcp.html) | 26 | 1k/wk | abandoned |
-| 37 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 73 | 7k/wk | active |
-| 38 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
-| 39 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 68 | 1k/wk | active |
-| 40 | [Runapi](https://tashan.sh/capability/pkg-runapi-ai-mcp.html) | 66 | 629/wk | active |
+| 32 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
+| 33 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 69 | 2k/wk | active |
+| 34 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
+| 35 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 68 | 1k/wk | active |
+| 36 | [Livepilot](https://tashan.sh/capability/pkg-livepilot.html) | 65 | 579/wk | active |
+| 37 | [Rive](https://tashan.sh/capability/pkg-rive-mcp-server.html) | 59 | 381/wk | active |
+| 38 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 56 | 248/wk | active |
+| 39 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 54 | 165/wk | active |
+| 40 | [Nano Banana · ConechoAI](https://tashan.sh/capability/pkg-nano-banana-mcp.html) | 26 | 1k/wk | abandoned |
 
 Showing the top 40 of 119. The full ranked shelf is at https://tashan.sh/role/creator.html.
 

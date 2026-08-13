@@ -31,16 +31,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
 | 19 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
 | 20 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 66 | 988/wk | active |
-| 21 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
-| 22 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
-| 23 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 67 | 784/wk | active |
-| 24 | [Oh My Cassette](https://tashan.sh/capability/plugin-cassette-editor-oh-my-cassette-oh-my-cassette.html) | 65 | 140 ★ | active |
-| 25 | [Primate Intelligence](https://tashan.sh/capability/pkg-primate-intelligence-mcp.html) | 60 | 467/wk | active |
-| 26 | [Claude Skills Library](https://tashan.sh/capability/pkg-claude-skills-library.html) | 55 | 2k/wk | active |
-| 27 | [Orcadub](https://tashan.sh/capability/pkg-orcadub-cli.html) | 54 | 139/wk | active |
-| 28 | [Uploadcheck](https://tashan.sh/capability/pkg-drantoniou-uploadcheck-mcp.html) | 54 | 92/wk | active |
-| 29 | [Furlen](https://tashan.sh/capability/pkg-furlen-mcp.html) | 52 | 97/wk | active |
-| 30 | [YouTube Transcript](https://tashan.sh/capability/pkg-sinco-lab-mcp-youtube-transcript.html) | 50 | 487/wk | active |
+| 21 | [Primate Intelligence](https://tashan.sh/capability/pkg-primate-intelligence-mcp.html) | 60 | 467/wk | active |
+| 22 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
+| 23 | [YouTube Transcript](https://tashan.sh/capability/pkg-sinco-lab-mcp-youtube-transcript.html) | 50 | 487/wk | active |
+| 24 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
+| 25 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 67 | 784/wk | active |
+| 26 | [Oh My Cassette](https://tashan.sh/capability/plugin-cassette-editor-oh-my-cassette-oh-my-cassette.html) | 65 | 140 ★ | active |
+| 27 | [Claude Skills Library](https://tashan.sh/capability/pkg-claude-skills-library.html) | 55 | 2k/wk | active |
+| 28 | [Orcadub](https://tashan.sh/capability/pkg-orcadub-cli.html) | 54 | 139/wk | active |
+| 29 | [Uploadcheck](https://tashan.sh/capability/pkg-drantoniou-uploadcheck-mcp.html) | 54 | 92/wk | active |
+| 30 | [Furlen](https://tashan.sh/capability/pkg-furlen-mcp.html) | 52 | 97/wk | active |
 | 31 | [Botverse](https://tashan.sh/capability/pkg-botverse-mcp.html) | 49 | 84/wk | active |
 | 32 | [Myvideogift](https://tashan.sh/capability/pkg-myvideogift-mcp.html) | 48 | 81/wk | active |
 | 33 | [Ilovevideoeditor](https://tashan.sh/capability/pkg-ilovevideoeditor-mcp-server.html) | 47 | 62/wk | active |
