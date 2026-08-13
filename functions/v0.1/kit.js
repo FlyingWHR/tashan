@@ -54,6 +54,7 @@ export const onRequestGet = () => json({
   usage: {
     method: "POST",
     body: { task: "web-scraping", client: "claude-code", limit: 5 },
+    or: { goal: "I need to scrape websites", client: "claude-code" },
     tasks: "https://tashan.sh/data/tags.json",
     free: "The ranked shortlist for the task, with every risk. No account, no payment.",
     paid: "The assembled kit: the version to pin, checked clean at that version; a ready-to-paste "
@@ -95,12 +96,79 @@ function risksOf(r) {
   return f;
 }
 
+
+/**
+ * Resolve free text to a task slug — because an agent says "I need to scrape websites", not
+ * "web-scraping".
+ *
+ * Requiring the caller to already know our slugs makes the paid endpoint useless to exactly the
+ * caller it was built for: an agent that has never seen this API, holding a sentence from a user.
+ * It could fetch /data/tags.json and do this itself, but that is a round trip and a mapping problem
+ * we are better placed to solve — we own the vocabulary.
+ *
+ * Scored, not first-match: a synonym hit is worth more than a label word, and longer phrases beat
+ * shorter ones because "web scraping" is diagnostic where "web" alone is not — the same reasoning
+ * pipeline/tag_capabilities.py::_terms already applies to matching prose. Returns null rather than
+ * guessing when nothing clears the floor: a wrong kit is worse than an honest "name the job".
+ */
+function resolveGoal(tasks, goal) {
+  const g = " " + String(goal || "").toLowerCase().replace(/[^a-z0-9+#. ]+/g, " ").replace(/\s+/g, " ").trim() + " ";
+  if (g.trim().length < 3) return null;
+  // "scrape" must match the synonym "scraping". pipeline/tag_capabilities.py stems for exactly this
+  // reason; without it the most natural phrasing a user would type misses every time.
+  // The trailing -e matters: "scraping" -> "scrap" but "scrape" -> "scrape" without it, and the
+  // most natural way to ask for this ("I need to scrape websites") would miss every time.
+  const stem = (w) => w.replace(/(ing|ers|er|ed|es|s)$/, "").replace(/e$/, "");
+  const words = new Set(g.trim().split(" ").filter((w) => w.length > 2).map(stem));
+  let best = null, bestScore = 0;
+  for (const t of tasks) {
+    let score = 0;
+    const label = String(t.label || "").toLowerCase();
+    const phrases = [label, String(t.slug || "").replace(/-/g, " "), ...(t.synonyms || [])];
+    for (const raw of phrases) {
+      const p = String(raw || "").toLowerCase().trim();
+      if (p.length < 3) continue;
+      // A whole phrase present verbatim is the strongest signal, weighted by how specific it is:
+      // "web scraping" is diagnostic where "web" alone is not.
+      if (g.includes(" " + p + " ")) { score += 2 + p.split(" ").length; continue; }
+      // Otherwise, how much of the phrase survives as stems in the sentence.
+      const parts = p.split(" ").filter((w) => w.length > 2).map(stem);
+      // Scored the same as a verbatim hit: every word of the phrase IS present, just inflected.
+      // At 1 + parts.length a lone distinctive synonym scored 2 and fell under the floor, so
+      // "scrape websites" resolved to nothing while "web scraping" resolved fine.
+      if (parts.length && parts.every((w) => words.has(w))) score += 2 + parts.length;
+    }
+    if (score > bestScore) { bestScore = score; best = t.slug; }
+  }
+  // Below the floor we say so rather than guess: a wrong kit is worse than "name the job".
+  return bestScore >= 3 ? best : null;
+}
+
 export async function onRequestPost({ request, env }) {
   let body;
   try { body = await request.json(); } catch { return json({ error: "body must be JSON" }, 400); }
 
-  const task = String((body && body.task) || "").trim().toLowerCase();
-  if (!task) return json({ error: 'pass {"task": "<slug>"} — slugs at https://tashan.sh/data/tags.json' }, 400);
+  let task = String((body && body.task) || "").trim().toLowerCase();
+  let resolved_from = null;
+  if (!task && body && body.goal) {
+    try {
+      const tr = await fetch(new URL(request.url).origin + "/data/tasks.json",
+                             { cf: { cacheTtl: 300, cacheEverything: true } });
+      if (tr.ok) {
+        const td = await tr.json();
+        const hit = resolveGoal(td.tasks || td, body.goal);
+        if (hit) { task = hit; resolved_from = String(body.goal); }
+      }
+    } catch { /* fall through to the 400 below, which names the alternative */ }
+  }
+  if (!task) {
+    return json({
+      error: body && body.goal
+        ? 'could not match that goal to a job we measure — pass {"task": "<slug>"} instead'
+        : 'pass {"task": "<slug>"} or {"goal": "what you are trying to do"}',
+      tasks: "https://tashan.sh/data/tags.json",
+    }, 400);
+  }
   const client = CLIENTS[String((body && body.client) || "claude-code")] ? body.client : "claude-code";
   const limit = Math.min(Math.max(parseInt(body && body.limit, 10) || 5, 1), MAX_PICKS);
 
@@ -140,6 +208,8 @@ export async function onRequestPost({ request, env }) {
 
   const free = {
     task,
+    // Echoed so a caller can see WHICH job we matched their sentence to, and disagree.
+    ...(resolved_from ? { resolved_from } : {}),
     shortlist: picks.map((r) => ({
       id: r.id, name: r.name, label: r.label,
       tashan_score: r.tashan_score ?? null,

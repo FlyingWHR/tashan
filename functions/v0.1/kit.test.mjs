@@ -34,9 +34,17 @@ const LOOKUP = {
   ],
 };
 
+const TASKS = { tasks: [
+  { slug: "web-scraping", label: "Web scraping", synonyms: ["crawler", "extraction", "scraping", "web scraping"] },
+  { slug: "database-access", label: "Database access", synonyms: ["sql", "query databases"] },
+  { slug: "code-review", label: "Code review", synonyms: ["review a pull request"] },
+] };
+
 const withFetch = async (fn) => {
   const real = globalThis.fetch;
-  globalThis.fetch = async (u) => (String(u).includes("/data/tags.json")
+  globalThis.fetch = async (u) => (String(u).includes("/data/tasks.json")
+    ? { ok: true, json: async () => TASKS }
+    : String(u).includes("/data/tags.json")
     ? { ok: true, json: async () => TAGS }
     : { ok: true, json: async () => LOOKUP });
   try { return await fn(); } finally { globalThis.fetch = real; }
@@ -127,6 +135,28 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
      body.kit.remote_alternatives.some((x) => x.host === "mcp.remote.example"));
   ok("the free half is still present alongside the paid half",
      body.shortlist.length === 3 && body.excluded.length === 2);
+}
+
+// ---- an agent speaks in sentences, not slugs ------------------------------------------------------
+// Requiring the caller to already know our vocabulary makes the paid endpoint useless to exactly
+// the caller it exists for: an agent holding a sentence from a user, that has never seen this API.
+{
+  const { body } = await read(await post({ goal: "I need to scrape websites for a client" }));
+  ok("a plain-language goal resolves to a job", body.task === "web-scraping", JSON.stringify(body.task));
+  ok("...and says WHICH sentence it matched, so the caller can disagree",
+     body.resolved_from === "I need to scrape websites for a client");
+  ok("...and still returns the shortlist", body.shortlist.length === 3);
+
+  const { body: b2 } = await read(await post({ goal: "query databases with sql" }));
+  ok("a different goal resolves to a different job", b2.task === "database-access", b2.task);
+
+  const { status, body: b3 } = await read(await post({ goal: "xyzzy plugh" }));
+  ok("an unmatchable goal is a 400 that names the alternative, NOT a wrong kit",
+     status === 400 && /could not match/.test(b3.error) && /task/.test(b3.error),
+     JSON.stringify(b3));
+
+  const { body: b4 } = await read(await post({ task: "code-review", goal: "scrape websites" }));
+  ok("an explicit task always beats a goal", b4.task === "code-review" && !b4.resolved_from);
 }
 
 // ---- shape ----------------------------------------------------------------------------------------

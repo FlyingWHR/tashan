@@ -765,7 +765,8 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
           "registry shape; measurement under the `sh.tashan/measurement` key in `_meta`.",
           "- [/skill/SKILL.md](" + BASE + "/skill/SKILL.md) — install tashan as a capability and call it "
           "when choosing what to install.",
-          "- `POST /v0.1/kit` — name a job (`{\"task\": \"web-scraping\"}`) and get the ranked "
+          "- `POST /v0.1/kit` — name a job (`{\"task\": \"web-scraping\"}`, or just say what you are "
+          "trying to do: `{\"goal\": \"I need to scrape websites\"}`) and get the ranked "
           "shortlist for it, **free**, with everything we excluded and why. Add `{\"kit\": true}` "
           "to have it assembled: each pick pinned to the version the advisory scan actually "
           "cleared, plus a ready-to-paste config for your host. We do NOT sell anyone's skill or "

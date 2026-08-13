@@ -39,6 +39,8 @@ const PRO = {
   kit: {
     endpoint: "POST https://tashan.sh/v0.1/kit",
     body: { task: "<task slug>", client: "claude-code", kit: false },
+    // A caller that has never seen this API has a sentence, not a slug.
+    or_body: { goal: "I need to scrape websites", client: "claude-code" },
     free: "The ranked shortlist for a job, and everything excluded, with reasons.",
     paid: "`kit: true` assembles it: versions pinned to the release the advisory scan cleared, and " +
           "a config for your host. We do not sell anyone's content — each pick links to its source.",
