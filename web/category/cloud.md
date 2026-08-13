@@ -36,23 +36,23 @@ Ranked by the tashan score
 | 23 | [Keenetic](https://tashan.sh/capability/pkg-keenetic-mcp.html) | 65 | 1k/wk | active |
 | 24 | [Containerization Assist](https://tashan.sh/capability/pkg-containerization-assist-mcp.html) | 65 | 583/wk | active |
 | 25 | [Livepilot](https://tashan.sh/capability/pkg-livepilot.html) | 65 | 579/wk | active |
-| 26 | [Mongo](https://tashan.sh/capability/pkg-mcp-mongo-server.html) | 64 | 649/wk | active |
-| 27 | [Local Ydb](https://tashan.sh/capability/pkg-astandrik-local-ydb-mcp.html) | 64 | 355/wk | active |
-| 28 | [Stackql](https://tashan.sh/capability/pkg-stackql-mcp-server.html) | 64 | 316/wk | active |
-| 29 | [Domainkits](https://tashan.sh/capability/pkg-domainkits-mcp.html) | 63 | 736/wk | active |
+| 26 | [Local Ydb](https://tashan.sh/capability/pkg-astandrik-local-ydb-mcp.html) | 64 | 355/wk | active |
+| 27 | [Stackql](https://tashan.sh/capability/pkg-stackql-mcp-server.html) | 64 | 316/wk | active |
+| 28 | [Domainkits](https://tashan.sh/capability/pkg-domainkits-mcp.html) | 63 | 736/wk | active |
+| 29 | [Mongo](https://tashan.sh/capability/pkg-mcp-mongo-server.html) | 63 | 649/wk | active |
 | 30 | [smbCloud Mail & Auth](https://tashan.sh/capability/pkg-smbcloud-cli.html) | 63 | 176/wk | active |
-| 31 | [Patchright Mcp Jalikey](https://tashan.sh/capability/pkg-patchright-mcp-jalikey.html) | 62 | 898/wk | active |
-| 32 | [SSH Manager](https://tashan.sh/capability/pkg-mcp-ssh-manager.html) | 62 | 596/wk | active |
-| 33 | [Clize](https://tashan.sh/capability/pkg-clize-clize.html) | 62 | 174/wk | active |
-| 34 | [Kube Dc](https://tashan.sh/capability/plugin-kube-dc-kube-dc-public-kube-dc.html) | 61 | 34 ★ | active |
-| 35 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 61 | 40 ★ | active |
-| 36 | [Iterminal](https://tashan.sh/capability/pkg-iterminal-mcp-server.html) | 61 | 303/wk | active |
-| 37 | [Zendesk · enterpret](https://tashan.sh/capability/pkg-enterpret-zendesk-mcp-server.html) | 60 | 568/wk | active |
-| 38 | [Agent Relay](https://tashan.sh/capability/pkg-cloud1map-agent-relay-mcp.html) | 60 | 508/wk | active |
-| 39 | [Qarinah](https://tashan.sh/capability/pkg-qarinah.html) | 60 | 320/wk | active |
-| 40 | [A2ald](https://tashan.sh/capability/pkg-a2ald.html) | 60 | 236/wk | active |
+| 31 | [SSH Manager](https://tashan.sh/capability/pkg-mcp-ssh-manager.html) | 62 | 596/wk | active |
+| 32 | [Clize](https://tashan.sh/capability/pkg-clize-clize.html) | 62 | 174/wk | active |
+| 33 | [Kube Dc](https://tashan.sh/capability/plugin-kube-dc-kube-dc-public-kube-dc.html) | 61 | 34 ★ | active |
+| 34 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 61 | 40 ★ | active |
+| 35 | [Patchright Mcp Jalikey](https://tashan.sh/capability/pkg-patchright-mcp-jalikey.html) | 61 | 898/wk | active |
+| 36 | [Agent Relay](https://tashan.sh/capability/pkg-cloud1map-agent-relay-mcp.html) | 60 | 508/wk | active |
+| 37 | [Qarinah](https://tashan.sh/capability/pkg-qarinah.html) | 60 | 320/wk | active |
+| 38 | [Iterminal](https://tashan.sh/capability/pkg-iterminal-mcp-server.html) | 60 | 303/wk | active |
+| 39 | [A2ald](https://tashan.sh/capability/pkg-a2ald.html) | 60 | 236/wk | active |
+| 40 | [Labby](https://tashan.sh/capability/pkg-labby-mcp.html) | 60 | 183/wk | active |
 
-Showing the top 40 of 339. The full ranked shelf is at https://tashan.sh/category/cloud.html.
+Showing the top 40 of 366. The full ranked shelf is at https://tashan.sh/category/cloud.html.
 
 ## What these numbers are not
 

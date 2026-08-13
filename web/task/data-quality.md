@@ -16,7 +16,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 65 | 37 ★ | active |
 | 4 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 56 | 56 ★ | active |
 | 5 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
-| 6 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 53 | 6 ★ | active |
+| 6 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 52 | 6 ★ | active |
 | 7 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
 | 8 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 59 | 32 ★ | active |
 | 9 | [Dadata Ru Automation](https://tashan.sh/capability/skill-composiohq-dadata-ru-automation.html) | not scored | 1 repos | active |

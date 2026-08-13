@@ -15,8 +15,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
 | 3 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 50 | 12 ★ | active |
 | 4 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 66 | 68 ★ | active |
-| 5 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 66 | 452 ★ | active |
-| 6 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 53 | 20 ★ | active |
+| 5 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 65 | 452 ★ | active |
+| 6 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 52 | 20 ★ | active |
 | 7 | [Mako AI](https://tashan.sh/capability/plugin-drhalto-agentmako-mako-ai.html) | 51 | 51 ★ | active |
 | 8 | [Pixeltable](https://tashan.sh/capability/plugin-pixeltable-pixeltable-skill-pixeltable.html) | 50 | 5 ★ | active |
 | 9 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 65 | 104 ★ | active |
@@ -44,15 +44,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow.html) | 73 | 10k/wk | active |
 | 32 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 73 | 6k/wk | active |
 | 33 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
-| 34 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 70 | 2k/wk | active |
+| 34 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 69 | 2k/wk | active |
 | 35 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 69 | 1k/wk | active |
 | 36 | [Sciverse](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 69 | 1k/wk | active |
 | 37 | [Grepmax](https://tashan.sh/capability/pkg-grepmax.html) | 67 | 573/wk | active |
 | 38 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 66 | 578/wk | active |
 | 39 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 65 | 660/wk | active |
-| 40 | [Engram Wiki](https://tashan.sh/capability/pkg-engram-wiki-mcp.html) | 65 | 639/wk | active |
+| 40 | [Engram Wiki](https://tashan.sh/capability/pkg-engram-wiki-mcp.html) | 64 | 639/wk | active |
 
-Showing the top 40 of 79. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
+Showing the top 40 of 80. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
 
 ## What these numbers are not
 

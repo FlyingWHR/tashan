@@ -19,38 +19,38 @@ Ranked by the tashan score
 | 6 | [Spacefast](https://tashan.sh/capability/pkg-spacefast.html) | 71 | 4k/wk | active |
 | 7 | [Fileditor](https://tashan.sh/capability/pkg-fileditor-mcp.html) | 70 | 2k/wk | active |
 | 8 | [Open Computer Use](https://tashan.sh/capability/pkg-open-computer-use.html) | 69 | 1k/wk | active |
-| 9 | [Kawacode](https://tashan.sh/capability/pkg-kawacode-mcp.html) | 64 | 480/wk | active |
-| 10 | [Bourdon](https://tashan.sh/capability/pkg-getbourdon-mcp-server.html) | 63 | 578/wk | active |
-| 11 | [Formlab](https://tashan.sh/capability/pkg-formlab-mcp.html) | 63 | 346/wk | active |
-| 12 | [Recall](https://tashan.sh/capability/pkg-clauderecallhq-cli.html) | 62 | 414/wk | active |
-| 13 | [Braincloud Mcp Helper](https://tashan.sh/capability/pkg-braincloud-mcp-helper.html) | 62 | 123/wk | active |
-| 14 | [Printkk](https://tashan.sh/capability/pkg-printkk-mcp.html) | 60 | 532/wk | active |
-| 15 | [Korean Dart](https://tashan.sh/capability/pkg-korean-dart-mcp.html) | 57 | 264/wk | active |
-| 16 | [Justdrop](https://tashan.sh/capability/pkg-justdrop-mcp.html) | 53 | 144/wk | active |
-| 17 | [Remote Filesystem](https://tashan.sh/capability/pkg-remote-filesystem-mcp-server.html) | 51 | 236/wk | active |
-| 18 | [Svg Tracer](https://tashan.sh/capability/pkg-pulsemcp-svg-tracer-mcp-server.html) | 48 | 64/wk | active |
-| 19 | [Computer Use](https://tashan.sh/capability/pkg-computer-use-mcp.html) | 47 | 529/wk | active |
+| 9 | [Lossless Context](https://tashan.sh/capability/pkg-lossless-context-mcp.html) | 65 | 817/wk | active |
+| 10 | [Kawacode](https://tashan.sh/capability/pkg-kawacode-mcp.html) | 64 | 480/wk | active |
+| 11 | [Bourdon](https://tashan.sh/capability/pkg-getbourdon-mcp-server.html) | 63 | 578/wk | active |
+| 12 | [Formlab](https://tashan.sh/capability/pkg-formlab-mcp.html) | 63 | 346/wk | active |
+| 13 | [Recall](https://tashan.sh/capability/pkg-clauderecallhq-cli.html) | 62 | 414/wk | active |
+| 14 | [Braincloud Mcp Helper](https://tashan.sh/capability/pkg-braincloud-mcp-helper.html) | 61 | 123/wk | active |
+| 15 | [Printkk](https://tashan.sh/capability/pkg-printkk-mcp.html) | 60 | 532/wk | active |
+| 16 | [Korean Dart](https://tashan.sh/capability/pkg-korean-dart-mcp.html) | 57 | 264/wk | active |
+| 17 | [Justdrop](https://tashan.sh/capability/pkg-justdrop-mcp.html) | 53 | 144/wk | active |
+| 18 | [Remote Filesystem](https://tashan.sh/capability/pkg-remote-filesystem-mcp-server.html) | 51 | 236/wk | active |
+| 19 | [Svg Tracer](https://tashan.sh/capability/pkg-pulsemcp-svg-tracer-mcp-server.html) | 48 | 64/wk | active |
 | 20 | [Proxmox](https://tashan.sh/capability/pkg-proxmox-mcp-server.html) | 47 | 179/wk | active |
-| 21 | [Dropbox](https://tashan.sh/capability/plugin-dropbox-dropbox-ai-plugins-dropbox.html) | 44 | 2 ★ | active |
-| 22 | [Files](https://tashan.sh/capability/pkg-abhishekmcp-files.html) | 44 | 61/wk | active |
-| 23 | [Drive](https://tashan.sh/capability/pkg-armoryworks-drive-mcp.html) | 43 | 10/wk | active |
-| 24 | [Get Invoice Details](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-get-invoice-details.html) | 43 | 1 marketplaces | active |
-| 25 | [Gorgias](https://tashan.sh/capability/pkg-gorgias-mcp-server.html) | 43 | 766/wk | active |
-| 26 | [Media](https://tashan.sh/capability/pkg-spideriq-mcp-media.html) | 43 | 75/wk | active |
-| 27 | [Stdio Proxy](https://tashan.sh/capability/pkg-undisk-mcp-stdio-proxy.html) | 43 | 46/wk | active |
-| 28 | [Proxy · synchronex](https://tashan.sh/capability/pkg-synchronex-mcp-proxy.html) | 43 | 38/wk | active |
-| 29 | [Beckon](https://tashan.sh/capability/pkg-fevernova90-beckon-mcp.html) | 43 | 17/wk | active |
-| 30 | [Striderlabs Doordash](https://tashan.sh/capability/plugin-markswendsen-code-mcp-doordash-striderlabs-doordash.html) | 42 | 6 ★ | active |
-| 31 | [Semantouch](https://tashan.sh/capability/plugin-watzon-semantouch-semantouch.html) | 41 | 5 ★ | active |
-| 32 | [Filesystem Organiser](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-filesystem-organiser.html) | 41 | 1 marketplaces | active |
-| 33 | [Digital Printing](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-digital-printing.html) | 41 | 1 marketplaces | active |
-| 34 | [Dropwarp](https://tashan.sh/capability/pkg-dropwarp-mcp.html) | 40 | 27/wk | active |
-| 35 | [Google Drive Upload](https://tashan.sh/capability/plugin-msapps-mobile-claude-plugins-google-drive-upload.html) | 39 | 1 marketplaces | active |
-| 36 | [Filesystem · claude-contrib](https://tashan.sh/capability/plugin-claude-contrib-claude-services-filesystem.html) | 35 | 1 marketplaces | active |
-| 37 | [Filekiwi](https://tashan.sh/capability/pkg-file-kiwi-filekiwi-mcp-server.html) | 35 | 38/wk | active |
-| 38 | [Blackhawk](https://tashan.sh/capability/pkg-blackhawk-mcp.html) | 34 | 43/wk | active |
-| 39 | [Kagura CLI](https://tashan.sh/capability/plugin-kagura-ai-kagura-plugins-kagura-cli.html) | 28 | 1 marketplaces | — |
-| 40 | [Filesystem · ai-capabilities-suite](https://tashan.sh/capability/pkg-ai-capabilities-suite-mcp-filesystem.html) | 28 | 76/wk | abandoned |
+| 21 | [Jenkins](https://tashan.sh/capability/pkg-mcp-jenkins.html) | 47 | 78/wk | active |
+| 22 | [Computer Use](https://tashan.sh/capability/pkg-computer-use-mcp.html) | 46 | 529/wk | active |
+| 23 | [Dropbox](https://tashan.sh/capability/plugin-dropbox-dropbox-ai-plugins-dropbox.html) | 44 | 2 ★ | active |
+| 24 | [Files](https://tashan.sh/capability/pkg-abhishekmcp-files.html) | 44 | 61/wk | active |
+| 25 | [Drive](https://tashan.sh/capability/pkg-armoryworks-drive-mcp.html) | 43 | 10/wk | active |
+| 26 | [Get Invoice Details](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-get-invoice-details.html) | 43 | 1 marketplaces | active |
+| 27 | [Gorgias](https://tashan.sh/capability/pkg-gorgias-mcp-server.html) | 43 | 766/wk | active |
+| 28 | [Stdio Proxy](https://tashan.sh/capability/pkg-undisk-mcp-stdio-proxy.html) | 43 | 46/wk | active |
+| 29 | [Proxy · synchronex](https://tashan.sh/capability/pkg-synchronex-mcp-proxy.html) | 43 | 38/wk | active |
+| 30 | [Beckon](https://tashan.sh/capability/pkg-fevernova90-beckon-mcp.html) | 43 | 17/wk | active |
+| 31 | [Media](https://tashan.sh/capability/pkg-spideriq-mcp-media.html) | 42 | 75/wk | active |
+| 32 | [Striderlabs Doordash](https://tashan.sh/capability/plugin-markswendsen-code-mcp-doordash-striderlabs-doordash.html) | 41 | 6 ★ | active |
+| 33 | [Semantouch](https://tashan.sh/capability/plugin-watzon-semantouch-semantouch.html) | 41 | 5 ★ | active |
+| 34 | [Filesystem Organiser](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-filesystem-organiser.html) | 40 | 1 marketplaces | active |
+| 35 | [Digital Printing](https://tashan.sh/capability/plugin-danielrosehill-claude-code-plugins-digital-printing.html) | 40 | 1 marketplaces | active |
+| 36 | [Dropwarp](https://tashan.sh/capability/pkg-dropwarp-mcp.html) | 40 | 27/wk | active |
+| 37 | [Google Drive Upload](https://tashan.sh/capability/plugin-msapps-mobile-claude-plugins-google-drive-upload.html) | 38 | 1 marketplaces | active |
+| 38 | [Filesystem · claude-contrib](https://tashan.sh/capability/plugin-claude-contrib-claude-services-filesystem.html) | 35 | 1 marketplaces | active |
+| 39 | [Filekiwi](https://tashan.sh/capability/pkg-file-kiwi-filekiwi-mcp-server.html) | 35 | 38/wk | active |
+| 40 | [Blackhawk](https://tashan.sh/capability/pkg-blackhawk-mcp.html) | 34 | 44/wk | active |
 
 Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/category/files.html.
 

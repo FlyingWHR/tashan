@@ -11,9 +11,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Nah](https://tashan.sh/capability/plugin-manuelschipper-nah-nah.html) | 71 | 457 ★ | active |
-| 2 | [Claude Pulse](https://tashan.sh/capability/plugin-noobygains-claude-pulse-claude-pulse.html) | 64 | 388 ★ | active |
-| 3 | [Maister](https://tashan.sh/capability/plugin-skillpanel-maister-maister.html) | 63 | 191 ★ | active |
+| 1 | [Nah](https://tashan.sh/capability/plugin-manuelschipper-nah-nah.html) | 70 | 457 ★ | active |
+| 2 | [Claude Pulse](https://tashan.sh/capability/plugin-noobygains-claude-pulse-claude-pulse.html) | 63 | 388 ★ | active |
+| 3 | [Maister](https://tashan.sh/capability/plugin-skillpanel-maister-maister.html) | 62 | 191 ★ | active |
 | 4 | [Cxpak](https://tashan.sh/capability/plugin-barnett-studios-cxpak-cxpak.html) | 59 | 19 ★ | active |
 | 5 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 58 | 24 ★ | active |
 | 6 | [Claude RPC](https://tashan.sh/capability/plugin-rar-file-claude-rpc-claude-rpc.html) | 56 | 13 ★ | active |
@@ -29,8 +29,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Agent Session Resume](https://tashan.sh/capability/plugin-hacktivist123-agent-session-resume-agent-session-resume.html) | 66 | 235 ★ | active |
 | 17 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 65 | 68 ★ | active |
 | 18 | [Clawcode](https://tashan.sh/capability/plugin-crisandrews-clawcode-clawcode.html) | 64 | 61 ★ | active |
-| 19 | [Network AI](https://tashan.sh/capability/plugin-jovancoding-network-ai-network-ai.html) | 64 | 70 ★ | active |
-| 20 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 63 | 48 ★ | active |
+| 19 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 63 | 48 ★ | active |
+| 20 | [Network AI](https://tashan.sh/capability/plugin-jovancoding-network-ai-network-ai.html) | 63 | 70 ★ | active |
 | 21 | [Imprint](https://tashan.sh/capability/plugin-ilang-ai-imprint-imprint.html) | 62 | 98 ★ | active |
 | 22 | [Darkroom](https://tashan.sh/capability/plugin-darkroomengineering-cc-settings-darkroom.html) | 62 | 40 ★ | active |
 | 23 | [Guide](https://tashan.sh/capability/plugin-orinachum-onboarding-claude-code-guide.html) | 61 | 117 ★ | active |
@@ -43,11 +43,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [LLM Gateway](https://tashan.sh/capability/plugin-verivus-oss-llm-cli-gateway-llm-gateway.html) | 55 | 10 ★ | active |
 | 31 | [Superpowers Optimized](https://tashan.sh/capability/plugin-repozy-superpowers-optimized-superpowers-optimized.html) | 55 | 128 ★ | active |
 | 32 | [Duck Duck Duck](https://tashan.sh/capability/plugin-ideo-rubber-duck-duck-duck-duck.html) | 54 | 22 ★ | active |
-| 33 | [Sage](https://tashan.sh/capability/plugin-xoai-sage-sage.html) | 53 | 25 ★ | active |
-| 34 | [AI Coding Ok](https://tashan.sh/capability/plugin-mark7766-ai-coding-ok-ai-coding-ok.html) | 52 | 15 ★ | active |
-| 35 | [Claude Eta](https://tashan.sh/capability/plugin-mmmprod-claude-eta-claude-eta.html) | 52 | 5 ★ | active |
-| 36 | [Howl](https://tashan.sh/capability/plugin-ai-screams-howl-howl.html) | 52 | 5 ★ | active |
-| 37 | [LLM Dark Patterns](https://tashan.sh/capability/plugin-waitdeadai-llm-dark-patterns-llm-dark-patterns.html) | 52 | 16 ★ | active |
+| 33 | [AI Coding Ok](https://tashan.sh/capability/plugin-mark7766-ai-coding-ok-ai-coding-ok.html) | 52 | 15 ★ | active |
+| 34 | [Claude Eta](https://tashan.sh/capability/plugin-mmmprod-claude-eta-claude-eta.html) | 52 | 5 ★ | active |
+| 35 | [Howl](https://tashan.sh/capability/plugin-ai-screams-howl-howl.html) | 52 | 5 ★ | active |
+| 36 | [LLM Dark Patterns](https://tashan.sh/capability/plugin-waitdeadai-llm-dark-patterns-llm-dark-patterns.html) | 52 | 16 ★ | active |
+| 37 | [Sage](https://tashan.sh/capability/plugin-xoai-sage-sage.html) | 52 | 25 ★ | active |
 | 38 | [Skillcheck Free](https://tashan.sh/capability/plugin-olgasafonova-skillcheck-free-skillcheck-free.html) | 52 | 35 ★ | active |
 | 39 | [Jig](https://tashan.sh/capability/plugin-ramboz-jig-jig.html) | 52 | 4 ★ | active |
 | 40 | [Tool Gates](https://tashan.sh/capability/plugin-camjac251-tool-gates-tool-gates.html) | 52 | 5 ★ | active |

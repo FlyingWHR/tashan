@@ -9,7 +9,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 ## The short answer
 
-- **Project management** — [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) · tashan score 74
+- **Project management** — [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) · tashan score 73
 - **Product strategy** — [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) · tashan score 71
 - **PRDs and specs** — [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) · tashan score 68
 - **Market analysis** — [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) · tashan score 80
@@ -20,15 +20,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Maister](https://tashan.sh/capability/plugin-skillpanel-maister-maister.html) | 63 | 191 ★ | active |
+| 1 | [Maister](https://tashan.sh/capability/plugin-skillpanel-maister-maister.html) | 62 | 191 ★ | active |
 | 2 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 55 | 13 ★ | active |
 | 3 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 54 | 10 ★ | active |
 | 4 | [Ideonomy](https://tashan.sh/capability/plugin-latentwill-ideonomy-skill-ideonomy.html) | 54 | 39 ★ | active |
 | 5 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 54 | 9 ★ | active |
-| 6 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 53 | 6 ★ | active |
+| 6 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
 | 7 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 51 | 3 ★ | active |
 | 8 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 80 | 57k ★ | active |
-| 9 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 74 | 2k ★ | active |
+| 9 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 73 | 2k ★ | active |
 | 10 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 72 | 1k ★ | active |
 | 11 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 68 | 326 ★ | active |
 | 12 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 66 | 118 ★ | active |
@@ -47,19 +47,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Sdd](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 54 | 11 ★ | active |
 | 26 | [Reqvire](https://tashan.sh/capability/plugin-reqvire-org-reqvire-reqvire.html) | 54 | 15 ★ | active |
 | 27 | [Game Of Cards](https://tashan.sh/capability/plugin-zauberzeug-game-of-cards-game-of-cards.html) | 53 | 6 ★ | active |
-| 28 | [Don Cheli Sdd Framework](https://tashan.sh/capability/plugin-doncheli-don-cheli-sdd-don-cheli-sdd-framework.html) | 53 | 56 ★ | active |
-| 29 | [Adversarial Spec](https://tashan.sh/capability/plugin-zscole-adversarial-spec-adversarial-spec.html) | 52 | 554 ★ | stable |
-| 30 | [Specops](https://tashan.sh/capability/plugin-sanmak-specops-specops.html) | 52 | 50 ★ | active |
-| 31 | [Jig](https://tashan.sh/capability/plugin-ramboz-jig-jig.html) | 52 | 4 ★ | active |
+| 28 | [Adversarial Spec](https://tashan.sh/capability/plugin-zscole-adversarial-spec-adversarial-spec.html) | 52 | 554 ★ | stable |
+| 29 | [Don Cheli Sdd Framework](https://tashan.sh/capability/plugin-doncheli-don-cheli-sdd-don-cheli-sdd-framework.html) | 52 | 56 ★ | active |
+| 30 | [Jig](https://tashan.sh/capability/plugin-ramboz-jig-jig.html) | 52 | 4 ★ | active |
+| 31 | [Specops](https://tashan.sh/capability/plugin-sanmak-specops-specops.html) | 51 | 50 ★ | active |
 | 32 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 81 | 51k ★ | active |
 | 33 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 80 | 191k ★ | active |
 | 34 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 68 | 205 ★ | active |
-| 35 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 63 | 96 ★ | active |
+| 35 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 62 | 96 ★ | active |
 | 36 | [Memex Checkout](https://tashan.sh/capability/plugin-mindset-ai-memex-ai-memex-checkout.html) | 62 | 29 ★ | active |
-| 37 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 59 | 20 ★ | active |
+| 37 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 58 | 20 ★ | active |
 | 38 | [Sq](https://tashan.sh/capability/plugin-derekstride-sq-sq.html) | 56 | 13 ★ | active |
 | 39 | [Ccf](https://tashan.sh/capability/plugin-naniiluja-ccf-ccf.html) | 56 | 9 ★ | active |
-| 40 | [Brief](https://tashan.sh/capability/skill-alirezarezvani-brief.html) | 54 | 4 repos | active |
+| 40 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | 54 | 4 repos | active |
 
 Showing the top 40 of 243. The full ranked shelf is at https://tashan.sh/role/pm.html.
 

@@ -17,9 +17,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Founder Coach](https://tashan.sh/capability/skill-alirezarezvani-founder-coach.html) | not scored | 1 repos | active |
 | 5 | [Meeting Analyzer](https://tashan.sh/capability/skill-alirezarezvani-meeting-analyzer.html) | not scored | 1 repos | active |
 | 6 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 46 | 43/wk | active |
-| 7 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 71 | 3k/wk | active |
+| 7 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 70 | 3k/wk | active |
 | 8 | [Jobo Job Search](https://tashan.sh/capability/pkg-jobo-job-search-mcp.html) | 56 | 300/wk | active |
-| 9 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 55 | 153/wk | active |
+| 9 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 54 | 153/wk | active |
 | 10 | [JobYap Job Search](https://tashan.sh/capability/pkg-jobyap-mcp.html) | 52 | 167/wk | active |
 | 11 | [JobGPT - Job Search Automation & Auto Apply](https://tashan.sh/capability/pkg-jobgpt-mcp-server.html) | 40 | 84/wk | active |
 | 12 | [Job Search](https://tashan.sh/capability/pkg-job-search-mcp.html) | 34 | 68/wk | active |

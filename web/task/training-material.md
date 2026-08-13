@@ -13,11 +13,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Guide](https://tashan.sh/capability/plugin-orinachum-onboarding-claude-code-guide.html) | 61 | 117 ★ | active |
 | 2 | [Claude Education Skills Library](https://tashan.sh/capability/plugin-garethmanning-claude-education-skills-claude-education-skills-library.html) | 65 | 471 ★ | active |
-| 3 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 48 | 2 repos | active |
-| 4 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 48 | 2 repos | active |
-| 5 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 46 | 26 ★ | active |
-| 6 | [Learning Output Style](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-learning-output-style.html) | 42 | 1 marketplaces | — |
-| 7 | [Claude Coach](https://tashan.sh/capability/skill-alirezarezvani-claude-coach.html) | not scored | 1 repos | active |
+| 3 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 46 | 26 ★ | active |
+| 4 | [Learning Output Style](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-learning-output-style.html) | 42 | 1 marketplaces | — |
+| 5 | [Claude Coach](https://tashan.sh/capability/skill-alirezarezvani-claude-coach.html) | not scored | 1 repos | active |
+| 6 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | not scored | 1 repos | active |
+| 7 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | not scored | 1 repos | active |
 | 8 | [Syllabus](https://tashan.sh/capability/skill-alirezarezvani-syllabus.html) | not scored | 1 repos | active |
 | 9 | [Hr](https://tashan.sh/capability/pkg-autostackup-hr.html) | 40 | 30/wk | active |
 

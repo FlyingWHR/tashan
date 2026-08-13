@@ -24,35 +24,35 @@ Ranked by the tashan score
 | 11 | [Respira WordPress](https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html) | 72 | 5k/wk | active |
 | 12 | [Commerce](https://tashan.sh/capability/pkg-commercetools-commerce-mcp.html) | 72 | 939/wk | active |
 | 13 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 71 | 218 ★ | active |
-| 14 | [Hermoso](https://tashan.sh/capability/pkg-hermoso.html) | 70 | 2k/wk | active |
-| 15 | [European Parliament](https://tashan.sh/capability/pkg-european-parliament-mcp-server.html) | 70 | 2k/wk | active |
-| 16 | [Claude Lens](https://tashan.sh/capability/plugin-astro-han-claude-lens-claude-lens.html) | 69 | 216 ★ | active |
-| 17 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 69 | 2k/wk | active |
-| 18 | [Frase SEO](https://tashan.sh/capability/pkg-frase-mcp-server.html) | 69 | 533/wk | active |
-| 19 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
-| 20 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 68 | 212 ★ | active |
-| 21 | [Openstreetmap](https://tashan.sh/capability/pkg-cyanheads-openstreetmap-mcp-server.html) | 68 | 1k/wk | active |
-| 22 | [Zola](https://tashan.sh/capability/pkg-zola-mcp.html) | 68 | 1k/wk | active |
-| 23 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 67 | 1k/wk | active |
+| 14 | [European Parliament](https://tashan.sh/capability/pkg-european-parliament-mcp-server.html) | 70 | 2k/wk | active |
+| 15 | [Claude Lens](https://tashan.sh/capability/plugin-astro-han-claude-lens-claude-lens.html) | 69 | 216 ★ | active |
+| 16 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 69 | 2k/wk | active |
+| 17 | [Frase SEO](https://tashan.sh/capability/pkg-frase-mcp-server.html) | 69 | 533/wk | active |
+| 18 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
+| 19 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 68 | 212 ★ | active |
+| 20 | [Openstreetmap](https://tashan.sh/capability/pkg-cyanheads-openstreetmap-mcp-server.html) | 68 | 1k/wk | active |
+| 21 | [Zola](https://tashan.sh/capability/pkg-zola-mcp.html) | 68 | 1k/wk | active |
+| 22 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 67 | 1k/wk | active |
+| 23 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 67 | 944/wk | active |
 | 24 | [Steam Games](https://tashan.sh/capability/pkg-steam-games-mcp.html) | 67 | 940/wk | active |
 | 25 | [Subgraph Registry](https://tashan.sh/capability/pkg-subgraph-registry-mcp.html) | 67 | 888/wk | active |
 | 26 | [Parseable](https://tashan.sh/capability/pkg-parseable-parseable-mcp-server.html) | 67 | 787/wk | active |
-| 27 | [Mssql](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-server.html) | 67 | 779/wk | active |
-| 28 | [Altmetric](https://tashan.sh/capability/pkg-altmetric-mcp.html) | 67 | 357/wk | active |
-| 29 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 66 | 47 ★ | active |
-| 30 | [Mssql Reader](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-reader.html) | 66 | 1k/wk | active |
-| 31 | [Open Meteo](https://tashan.sh/capability/pkg-cyanheads-open-meteo-mcp-server.html) | 66 | 822/wk | active |
-| 32 | [Nhtsa Vehicle Safety](https://tashan.sh/capability/pkg-cyanheads-nhtsa-vehicle-safety-mcp-server.html) | 66 | 812/wk | active |
-| 33 | [Looker](https://tashan.sh/capability/plugin-gemini-cli-extensions-looker-looker.html) | 65 | 52 ★ | active |
-| 34 | [Website Auditor](https://tashan.sh/capability/pkg-website-auditor-mcp.html) | 65 | 981/wk | active |
-| 35 | [Anilist](https://tashan.sh/capability/pkg-anilist-mcp-server.html) | 65 | 817/wk | active |
-| 36 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 64 | 865/wk | active |
-| 37 | [Chessceo](https://tashan.sh/capability/pkg-chessceo-mcp.html) | 64 | 483/wk | active |
-| 38 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 64 | 414/wk | active |
-| 39 | [Anakin IO](https://tashan.sh/capability/pkg-anakin-io-mcp.html) | 64 | 253/wk | active |
-| 40 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 63 | 100 ★ | active |
+| 27 | [Altmetric](https://tashan.sh/capability/pkg-altmetric-mcp.html) | 67 | 357/wk | active |
+| 28 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 66 | 47 ★ | active |
+| 29 | [Open Meteo](https://tashan.sh/capability/pkg-cyanheads-open-meteo-mcp-server.html) | 66 | 822/wk | active |
+| 30 | [Nhtsa Vehicle Safety](https://tashan.sh/capability/pkg-cyanheads-nhtsa-vehicle-safety-mcp-server.html) | 66 | 812/wk | active |
+| 31 | [Mssql](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-server.html) | 66 | 779/wk | active |
+| 32 | [Looker](https://tashan.sh/capability/plugin-gemini-cli-extensions-looker-looker.html) | 65 | 52 ★ | active |
+| 33 | [Mssql Reader](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-reader.html) | 65 | 1k/wk | active |
+| 34 | [Anilist](https://tashan.sh/capability/pkg-anilist-mcp-server.html) | 65 | 817/wk | active |
+| 35 | [Website Auditor](https://tashan.sh/capability/pkg-website-auditor-mcp.html) | 64 | 981/wk | active |
+| 36 | [Chessceo](https://tashan.sh/capability/pkg-chessceo-mcp.html) | 64 | 483/wk | active |
+| 37 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 64 | 414/wk | active |
+| 38 | [Anakin IO](https://tashan.sh/capability/pkg-anakin-io-mcp.html) | 64 | 253/wk | active |
+| 39 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 63 | 100 ★ | active |
+| 40 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 63 | 865/wk | active |
 
-Showing the top 40 of 568. The full ranked shelf is at https://tashan.sh/category/data.html.
+Showing the top 40 of 634. The full ranked shelf is at https://tashan.sh/category/data.html.
 
 ## What these numbers are not
 

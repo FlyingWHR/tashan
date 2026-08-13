@@ -34,8 +34,8 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route pattern | Pages | Generator |
 |---|---|---|
-| `/capability/*.html` | 10,755 | `pipeline/prerender.py` |
-| `/category/*.html` | 97 | `pipeline/gen_hubs.py` |
+| `/capability/*.html` | 11,762 | `pipeline/prerender.py` |
+| `/category/*.html` | 105 | `pipeline/gen_hubs.py` |
 | `/task/*.html` | 64 | `pipeline/gen_hubs.py` |
 | `/role/*.html` | 22 | `pipeline/gen_hubs.py` |
 | `/compare/*.html` | 413 | `pipeline/gen_compare.py` |

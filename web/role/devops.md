@@ -18,18 +18,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Zscaler](https://tashan.sh/capability/plugin-zscaler-zscaler-mcp-server-zscaler.html) | 66 | 41 ★ | active |
-| 2 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 61 | 15 ★ | active |
+| 2 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 60 | 15 ★ | active |
 | 3 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 53 | 3 ★ | active |
-| 4 | [Jfrog](https://tashan.sh/capability/plugin-jfrog-claude-plugin-jfrog.html) | 52 | 4 ★ | active |
+| 4 | [Jfrog](https://tashan.sh/capability/plugin-jfrog-claude-plugin-jfrog.html) | 51 | 4 ★ | active |
 | 5 | [Expo](https://tashan.sh/capability/plugin-expo-skills-expo.html) | 76 | 2k ★ | active |
 | 6 | [Azure · microsoft](https://tashan.sh/capability/plugin-microsoft-azure-skills-azure.html) | 75 | 1k ★ | active |
-| 7 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 72 | 643 ★ | active |
+| 7 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 71 | 643 ★ | active |
 | 8 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 70 | 482 ★ | active |
 | 9 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 69 | 101 ★ | active |
 | 10 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 68 | 81 ★ | active |
 | 11 | [Teamcity CLI](https://tashan.sh/capability/plugin-jetbrains-teamcity-cli-teamcity-cli.html) | 68 | 119 ★ | active |
 | 12 | [Defang](https://tashan.sh/capability/plugin-defanglabs-defang-defang.html) | 68 | 163 ★ | active |
-| 13 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 64 | 41 ★ | active |
+| 13 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 63 | 41 ★ | active |
 | 14 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 63 | 61 ★ | active |
 | 15 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 62 | 22 ★ | active |
 | 16 | [Insforge · insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 61 | 33 ★ | active |
@@ -51,14 +51,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 61 | 85 ★ | active |
 | 33 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 61 | 40 ★ | active |
 | 34 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 61 | 40 ★ | active |
-| 35 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 51 | 5 ★ | active |
-| 36 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 50 | 13 ★ | active |
-| 37 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 49 | 45 ★ | active |
-| 38 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
-| 39 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 49 | 8 ★ | active |
-| 40 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 49 | 6 ★ | active |
+| 35 | [Build Mcpb](https://tashan.sh/capability/skill-anthropics-build-mcpb.html) | 52 | 3 repos | active |
+| 36 | [Incident Response](https://tashan.sh/capability/skill-alirezarezvani-incident-response.html) | 51 | 3 repos | active |
+| 37 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 50 | 13 ★ | active |
+| 38 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 50 | 5 ★ | active |
+| 39 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 49 | 45 ★ | active |
+| 40 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
 
-Showing the top 40 of 210. The full ranked shelf is at https://tashan.sh/role/devops.html.
+Showing the top 40 of 212. The full ranked shelf is at https://tashan.sh/role/devops.html.
 
 ## What these numbers are not
 

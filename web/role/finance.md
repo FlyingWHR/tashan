@@ -18,8 +18,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 53 | 12 ★ | active |
 | 6 | [Credyt](https://tashan.sh/capability/plugin-credyt-ai-skills-credyt.html) | 52 | 53 ★ | active |
 | 7 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 61 | 49 ★ | active |
-| 8 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 51 | 3 ★ | active |
-| 9 | [Paddle · paddlehq](https://tashan.sh/capability/plugin-paddlehq-paddle-agent-skills-paddle.html) | 51 | 3 ★ | active |
+| 8 | [Paddle · paddlehq](https://tashan.sh/capability/plugin-paddlehq-paddle-agent-skills-paddle.html) | 51 | 3 ★ | active |
+| 9 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 50 | 3 ★ | active |
 | 10 | [Datarails Financeos](https://tashan.sh/capability/plugin-datarails-dr-claude-code-plugins-re-datarails-financeos.html) | 50 | 3 ★ | active |
 | 11 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 50 | 3 ★ | active |
 | 12 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 49 | 45 ★ | active |

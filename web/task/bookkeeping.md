@@ -22,7 +22,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Dynamics 365 Automation](https://tashan.sh/capability/skill-composiohq-dynamics-365-automation.html) | not scored | 1 repos | active |
 | 10 | [Freshbooks Automation](https://tashan.sh/capability/skill-composiohq-freshbooks-automation.html) | not scored | 1 repos | active |
 | 11 | [Harvest Automation](https://tashan.sh/capability/skill-composiohq-harvest-automation.html) | not scored | 1 repos | active |
-| 12 | [Frihet ERP](https://tashan.sh/capability/pkg-frihet-mcp-server.html) | 65 | 524/wk | active |
+| 12 | [Frihet ERP](https://tashan.sh/capability/pkg-frihet-mcp-server.html) | 64 | 524/wk | active |
 | 13 | [Tebra](https://tashan.sh/capability/pkg-tebra-mcp-server.html) | 65 | 779/wk | active |
 | 14 | [Paysafe](https://tashan.sh/capability/pkg-paysafe-x402.html) | 50 | 63/wk | active |
 | 15 | [Agentcash](https://tashan.sh/capability/pkg-agentcash.html) | 69 | 2k/wk | active |
@@ -36,18 +36,20 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 23 | [Jp Corporate ID](https://tashan.sh/capability/pkg-mcp-jp-corporate-id.html) | 51 | 138/wk | active |
 | 24 | [Paasbuild](https://tashan.sh/capability/pkg-paasbuild-mcp.html) | 51 | 76/wk | active |
 | 25 | [Gl Importer](https://tashan.sh/capability/pkg-cloudbusiness-gl-importer-mcp.html) | 50 | 71/wk | active |
-| 26 | [Xendit](https://tashan.sh/capability/pkg-xendit-mcp.html) | 46 | 45/wk | active |
-| 27 | [Kx402](https://tashan.sh/capability/pkg-kx402.html) | 46 | 40/wk | active |
-| 28 | [Yookassa](https://tashan.sh/capability/pkg-theyahia-yookassa-mcp.html) | 45 | 42/wk | active |
-| 29 | [Paypay](https://tashan.sh/capability/pkg-paypay-mcp.html) | 45 | 38/wk | active |
-| 30 | [Denpyo](https://tashan.sh/capability/pkg-denpyo-mcp.html) | 45 | 33/wk | active |
-| 31 | [Merit Aktiva](https://tashan.sh/capability/pkg-merit-aktiva-mcp.html) | 43 | 21/wk | active |
-| 32 | [Kaisha](https://tashan.sh/capability/pkg-kaisha-mcp.html) | 43 | 19/wk | active |
-| 33 | [Invovate](https://tashan.sh/capability/pkg-invovate-mcp-server.html) | 42 | 54/wk | active |
-| 34 | [Agentpay](https://tashan.sh/capability/pkg-agentpayxyz-mcp-server.html) | 36 | 57/wk | active |
-| 35 | [Tkassa](https://tashan.sh/capability/pkg-theyahia-tkassa-mcp.html) | 35 | 40/wk | active |
-| 36 | [Freeagent](https://tashan.sh/capability/pkg-oxygenbubbles-freeagent-mcp-server.html) | 33 | 43/wk | active |
-| 37 | [Nory](https://tashan.sh/capability/pkg-nory-mcp-server.html) | 32 | 92/wk | abandoned |
+| 26 | [Yookassa](https://tashan.sh/capability/pkg-theyahia-yookassa-mcp.html) | 46 | 60/wk | active |
+| 27 | [Xendit](https://tashan.sh/capability/pkg-xendit-mcp.html) | 46 | 45/wk | active |
+| 28 | [Kx402](https://tashan.sh/capability/pkg-kx402.html) | 46 | 40/wk | active |
+| 29 | [Billium](https://tashan.sh/capability/pkg-billium-mcp.html) | 45 | 72/wk | active |
+| 30 | [Paypay](https://tashan.sh/capability/pkg-paypay-mcp.html) | 45 | 38/wk | active |
+| 31 | [Denpyo](https://tashan.sh/capability/pkg-denpyo-mcp.html) | 44 | 33/wk | active |
+| 32 | [Merit Aktiva](https://tashan.sh/capability/pkg-merit-aktiva-mcp.html) | 43 | 21/wk | active |
+| 33 | [Kaisha](https://tashan.sh/capability/pkg-kaisha-mcp.html) | 43 | 19/wk | active |
+| 34 | [Invovate](https://tashan.sh/capability/pkg-invovate-mcp-server.html) | 42 | 54/wk | active |
+| 35 | [Agentpay](https://tashan.sh/capability/pkg-agentpayxyz-mcp-server.html) | 36 | 57/wk | active |
+| 36 | [Tkassa](https://tashan.sh/capability/pkg-theyahia-tkassa-mcp.html) | 35 | 40/wk | active |
+| 37 | [Fortnox](https://tashan.sh/capability/pkg-fortnox-mcp-server.html) | 33 | 44/wk | active |
+| 38 | [Freeagent](https://tashan.sh/capability/pkg-oxygenbubbles-freeagent-mcp-server.html) | 33 | 43/wk | active |
+| 39 | [Nory](https://tashan.sh/capability/pkg-nory-mcp-server.html) | 32 | 92/wk | abandoned |
 
 ## What these numbers are not
 

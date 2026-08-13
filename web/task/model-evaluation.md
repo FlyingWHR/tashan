@@ -19,14 +19,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 80 | 11k ★ | active |
 | 7 | [Promptfoo Evals](https://tashan.sh/capability/plugin-promptfoo-promptfoo-promptfoo-evals.html) | 80 | 24k ★ | active |
 | 8 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 79 | 17k ★ | active |
-| 9 | [Setup](https://tashan.sh/capability/skill-alirezarezvani-setup.html) | 62 | 13 repos | active |
-| 10 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 54 | 4 repos | active |
+| 9 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 63 | 10 repos | active |
+| 10 | [Setup](https://tashan.sh/capability/skill-alirezarezvani-setup.html) | 62 | 12 repos | active |
 | 11 | [Agent Eval Harness · redhat-global-engineering](https://tashan.sh/capability/plugin-redhat-global-engineering-ge-public-skills-agent-eval-harness.html) | 52 | 5 ★ | active |
 | 12 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 49 | 8 ★ | active |
 | 13 | [Eval](https://tashan.sh/capability/skill-alirezarezvani-eval.html) | 48 | 2 repos | active |
 | 14 | [Nnsight](https://tashan.sh/capability/plugin-ndif-team-skills-nnsight.html) | 46 | 9 ★ | active |
 | 15 | [Autoresearch AI Plugin](https://tashan.sh/capability/plugin-proyecto26-autoresearch-ai-plugin-autoresearch-ai-plugin.html) | 44 | 12 ★ | active |
-| 16 | [Bitfab](https://tashan.sh/capability/plugin-project-white-rabbit-bitfab-claude-plugin-bitfab.html) | 43 | 1 ★ | active |
+| 16 | [Bitfab](https://tashan.sh/capability/plugin-project-white-rabbit-bitfab-claude-plugin-bitfab.html) | 42 | 1 ★ | active |
 | 17 | [Claude Performance](https://tashan.sh/capability/plugin-adelaidasofia-claude-performance-claude-performance.html) | 42 | 1 ★ | active |
 | 18 | [Everdict](https://tashan.sh/capability/plugin-everdict-everdict-everdict.html) | 40 | 1 ★ | active |
 | 19 | [Caio Review](https://tashan.sh/capability/skill-alirezarezvani-caio-review.html) | not scored | 1 repos | active |

@@ -22,8 +22,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Daft](https://tashan.sh/capability/plugin-eventual-inc-daft-daft.html) | 76 | 6k ★ | active |
 | 10 | [Snowflake Cortex Code](https://tashan.sh/capability/plugin-snowflake-labs-snowflake-ai-kit-snowflake-cortex-code.html) | 63 | 32 ★ | active |
 | 11 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 59 | 32 ★ | active |
-| 12 | [Deepread](https://tashan.sh/capability/plugin-deepread-tech-skills-deepread.html) | 49 | 4 ★ | active |
-| 13 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 48 | 1 ★ | active |
+| 12 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 48 | 1 ★ | active |
+| 13 | [Deepread](https://tashan.sh/capability/plugin-deepread-tech-skills-deepread.html) | 48 | 4 ★ | active |
 | 14 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 47 | 1 ★ | active |
 | 15 | [AWS Data Analytics](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-data-analytics.html) | 46 | 2 marketplaces | — |
 | 16 | [Oracle AI Data Platform Workbench Spark Connectors](https://tashan.sh/capability/plugin-oracle-samples-oracle-aidp-samples-oracle-ai-data-platform-workbench-spark-connectors.html) | 46 | 2 marketplaces | — |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Bach Snowflake](https://tashan.sh/capability/pkg-bach-snowflake-mcp.html) | 44 | 31/wk | active |
 | 40 | [Ultraweb](https://tashan.sh/capability/plugin-blyatiful1-ultraweb-ultraweb.html) | 43 | 1 ★ | active |
 
-Showing the top 40 of 42. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
+Showing the top 40 of 43. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
 
 ## What these numbers are not
 

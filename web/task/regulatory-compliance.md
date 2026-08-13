@@ -20,7 +20,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 47 | 1 ★ | active |
 | 8 | [Vanta Mcp Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
 | 9 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
-| 10 | [Bubble Shield](https://tashan.sh/capability/plugin-vdk888-bubble-shield-public-bubble-shield.html) | 44 | 0 ★ | active |
+| 10 | [Bubble Shield](https://tashan.sh/capability/plugin-vdk888-bubble-shield-public-bubble-shield.html) | 43 | 0 ★ | active |
 | 11 | [Caio Review](https://tashan.sh/capability/skill-alirezarezvani-caio-review.html) | not scored | 1 repos | active |
 | 12 | [Cdo Review](https://tashan.sh/capability/skill-alirezarezvani-cdo-review.html) | not scored | 1 repos | active |
 | 13 | [Ciso Review](https://tashan.sh/capability/skill-alirezarezvani-ciso-review.html) | not scored | 1 repos | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Quality Documentation Manager](https://tashan.sh/capability/skill-alirezarezvani-quality-documentation-manager.html) | not scored | 1 repos | active |
 | 40 | [Quality Manager Qmr](https://tashan.sh/capability/skill-alirezarezvani-quality-manager-qmr.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 73. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
+Showing the top 40 of 74. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
 
 ## What these numbers are not
 

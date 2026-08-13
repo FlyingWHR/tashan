@@ -17,8 +17,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | not scored | 1 repos | active |
 | 5 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 46 | 43/wk | active |
 | 6 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 60 | 378/wk | active |
-| 7 | [Freehire](https://tashan.sh/capability/pkg-freehire-mcp.html) | 56 | 204/wk | active |
-| 8 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 55 | 153/wk | active |
+| 7 | [Freehire](https://tashan.sh/capability/pkg-freehire-mcp.html) | 55 | 204/wk | active |
+| 8 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 54 | 153/wk | active |
 | 9 | [LinkedIn Mcp Tools](https://tashan.sh/capability/pkg-linkedin-mcp-tools.html) | 48 | 100/wk | active |
 | 10 | [Opentrain](https://tashan.sh/capability/pkg-opentrain-ai-mcp.html) | 46 | 65/wk | active |
 | 11 | [Gtm Hiring Signal Scraper](https://tashan.sh/capability/pkg-mambalabsdev-mcp-gtm-hiring-signal-scraper.html) | 45 | 60/wk | active |

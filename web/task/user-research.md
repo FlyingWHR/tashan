@@ -14,7 +14,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 72 | 1k ★ | active |
 | 2 | [Fullstory](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 48 | 9 ★ | active |
 | 3 | [Windmill Hr](https://tashan.sh/capability/plugin-windmill-dev-windmill-plugin-windmill-hr.html) | 47 | 1 ★ | active |
-| 4 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 46 | 7 ★ | active |
+| 4 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 45 | 7 ★ | active |
 | 5 | [Fullstory · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 42 | 1 marketplaces | — |
 | 6 | [Product Discovery · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-product-discovery.html) | not scored | 1 repos | active |
 | 7 | [Product Manager Toolkit](https://tashan.sh/capability/skill-alirezarezvani-product-manager-toolkit.html) | not scored | 1 repos | active |

@@ -24,6 +24,8 @@ scores 43.
 """
 import json, os, re, sqlite3, sys
 
+import build
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "tashan.db")
 OUT = os.path.join(ROOT, "web", "data", "coverage.json")
@@ -164,11 +166,16 @@ def main():
     # ponytail: two of build.export()'s junk() rules, not all of them — junk() is a closure and the
     # rest (DEMO, CANARY, PATHY, generic leaf names) do not reach the top of a demand ranking. If a
     # third rule ever changes what the board contains at the top, lift junk() out and share it.
+    # ONE DEFINITION OF WHAT COUNTS, imported from build rather than re-stated. This used to be two
+    # of junk()'s rules inlined as SQL, on the assumption the others never reach the top of a demand
+    # ranking. pkg:prisma — a database ORM declaring the `mcp` keyword — was rank 1 of the published
+    # queue at 15.8M weekly downloads, so /requests.html promised to measure five capabilities the
+    # board refuses to list, and every percentage here was divided by a pool containing them.
     rows = [dict(r) for r in con.execute(
-        "SELECT id, name, kind, npm_downloads, adoption, tashan_score, expertise_verdict, "
-        "sec_scanned_at FROM capabilities "
-        "WHERE (npm_runnable IS NULL OR npm_runnable=1) "
-        "AND (sec_max_severity IS NULL OR sec_max_severity!='MALICIOUS')")]
+        "SELECT id, name, kind, npm_pkg, description, title, in_registry, remote_host, "
+        "npm_runnable, sec_max_severity, npm_downloads, adoption, tashan_score, "
+        "expertise_verdict, sec_scanned_at FROM capabilities")]
+    rows = [r for r in rows if not build.junk(r)]
     tagged = {r[0] for r in con.execute("SELECT DISTINCT cap_id FROM capability_tags")}
     ranked = sorted(rows, key=demand)
 

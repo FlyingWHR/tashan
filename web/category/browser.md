@@ -50,9 +50,9 @@ Ranked by the tashan score
 | 37 | [Camofox Browser](https://tashan.sh/capability/pkg-camofox-browser.html) | 58 | 592/wk | active |
 | 38 | [Browser Ipc Cdp](https://tashan.sh/capability/pkg-browser-ipc-cdp.html) | 58 | 143/wk | active |
 | 39 | [Uplink](https://tashan.sh/capability/pkg-uplink-code-mcp.html) | 58 | 132/wk | active |
-| 40 | [Ainative Browser](https://tashan.sh/capability/pkg-ainative-browser-mcp.html) | 57 | 219/wk | active |
+| 40 | [Easytable](https://tashan.sh/capability/pkg-easytable-mcp.html) | 56 | 241/wk | active |
 
-Showing the top 40 of 113. The full ranked shelf is at https://tashan.sh/category/browser.html.
+Showing the top 40 of 124. The full ranked shelf is at https://tashan.sh/category/browser.html.
 
 ## What these numbers are not
 

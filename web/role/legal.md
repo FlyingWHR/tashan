@@ -22,7 +22,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 47 | 1 ★ | active |
 | 10 | [Vanta Mcp Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
 | 11 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
-| 12 | [Bubble Shield](https://tashan.sh/capability/plugin-vdk888-bubble-shield-public-bubble-shield.html) | 44 | 0 ★ | active |
+| 12 | [Bubble Shield](https://tashan.sh/capability/plugin-vdk888-bubble-shield-public-bubble-shield.html) | 43 | 0 ★ | active |
 | 13 | [Indian Banking Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-banking-drafting-litigation-indian-banking-drafting.html) | 42 | 1 ★ | active |
 | 14 | [Indian Company Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-company-drafting-indian-company-drafting.html) | 42 | 1 ★ | active |
 | 15 | [Indian Consumer Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-consumer-drafting-indian-consumer-drafting.html) | 42 | 1 ★ | active |

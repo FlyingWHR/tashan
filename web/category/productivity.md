@@ -34,11 +34,11 @@ Ranked by the tashan score
 | 21 | [Adeu](https://tashan.sh/capability/pkg-adeu-mcp-server.html) | 72 | 635/wk | active |
 | 22 | [Zapier](https://tashan.sh/capability/plugin-zapier-zapier-mcp-zapier.html) | 71 | 363 ★ | active |
 | 23 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
-| 24 | [Emailmd](https://tashan.sh/capability/pkg-emailmd.html) | 71 | 4k/wk | active |
-| 25 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
-| 26 | [Workfile](https://tashan.sh/capability/pkg-illodev-workfile.html) | 71 | 3k/wk | active |
-| 27 | [Apple Notes](https://tashan.sh/capability/pkg-apple-notes-mcp.html) | 71 | 3k/wk | active |
-| 28 | [Apideck](https://tashan.sh/capability/pkg-apideck-mcp.html) | 71 | 353/wk | active |
+| 24 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
+| 25 | [Apple Notes](https://tashan.sh/capability/pkg-apple-notes-mcp.html) | 71 | 3k/wk | active |
+| 26 | [Apideck](https://tashan.sh/capability/pkg-apideck-mcp.html) | 71 | 353/wk | active |
+| 27 | [Emailmd](https://tashan.sh/capability/pkg-emailmd.html) | 70 | 4k/wk | active |
+| 28 | [Workfile](https://tashan.sh/capability/pkg-illodev-workfile.html) | 70 | 3k/wk | active |
 | 29 | [Touchdesigner](https://tashan.sh/capability/pkg-touchdesigner-mcp-server.html) | 70 | 3k/wk | active |
 | 30 | [Daisyui Blueprint](https://tashan.sh/capability/pkg-daisyui-blueprint.html) | 70 | 2k/wk | active |
 | 31 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 70 | 2k/wk | active |
@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Plonk](https://tashan.sh/capability/pkg-plonk-mcp.html) | 68 | 1k/wk | active |
 | 40 | [Campus CLI](https://tashan.sh/capability/pkg-campus-cli.html) | 68 | 1k/wk | active |
 
-Showing the top 40 of 710. The full ranked shelf is at https://tashan.sh/category/productivity.html.
+Showing the top 40 of 770. The full ranked shelf is at https://tashan.sh/category/productivity.html.
 
 ## What these numbers are not
 

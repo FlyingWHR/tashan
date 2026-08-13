@@ -25,7 +25,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Spotify Ads API](https://tashan.sh/capability/plugin-spotify-ads-claude-plugin-spotify-ads-api.html) | 60 | 14 ★ | active |
 | 7 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 57 | 32 ★ | active |
 | 8 | [Ru Text](https://tashan.sh/capability/plugin-talkstream-ru-text-ru-text.html) | 56 | 169 ★ | active |
-| 9 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 55 | 144 ★ | active |
+| 9 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 54 | 144 ★ | active |
 | 10 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 70 | 168 ★ | active |
 | 11 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
 | 12 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 68 | 137 ★ | active |
@@ -33,32 +33,32 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 64 | 167 ★ | active |
 | 15 | [Vibe Replay](https://tashan.sh/capability/plugin-tuo-lei-vibe-replay-vibe-replay.html) | 60 | 33 ★ | active |
 | 16 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 59 | 40 ★ | active |
-| 17 | [Officecli](https://tashan.sh/capability/plugin-officecli-officecli-skills-officecli.html) | 58 | 72 ★ | active |
+| 17 | [Officecli](https://tashan.sh/capability/plugin-officecli-officecli-skills-officecli.html) | 57 | 72 ★ | active |
 | 18 | [Sdd](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 54 | 11 ★ | active |
 | 19 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 52 | 4 ★ | active |
 | 20 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 51 | 73 ★ | active |
 | 21 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 51 | 4 ★ | active |
-| 22 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
-| 23 | [Changelog Generator](https://tashan.sh/capability/skill-alirezarezvani-changelog-generator.html) | 51 | 3 repos | active |
-| 24 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 50 | 3 ★ | active |
-| 25 | [Sync Docs](https://tashan.sh/capability/plugin-agent-sh-sync-docs-sync-docs.html) | 50 | 3 ★ | active |
-| 26 | [Jamdesk](https://tashan.sh/capability/plugin-jamdesk-jamdesk-claude-plugin-jamdesk.html) | 49 | 3 ★ | active |
-| 27 | [Living Manual](https://tashan.sh/capability/plugin-dougstanford-living-manual-living-manual.html) | 49 | 2 ★ | active |
-| 28 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 49 | 2 repos | active |
-| 29 | [Email Sequence](https://tashan.sh/capability/skill-alirezarezvani-email-sequence.html) | 48 | 2 repos | active |
-| 30 | [Knowledge Ops](https://tashan.sh/capability/skill-alirezarezvani-knowledge-ops.html) | 48 | 2 repos | active |
-| 31 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 48 | 2 repos | active |
-| 32 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | 48 | 2 repos | active |
-| 33 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 48 | 2 repos | active |
+| 22 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | 54 | 4 repos | active |
+| 23 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
+| 24 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 52 | 3 repos | active |
+| 25 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 50 | 3 ★ | active |
+| 26 | [Sync Docs](https://tashan.sh/capability/plugin-agent-sh-sync-docs-sync-docs.html) | 50 | 3 ★ | active |
+| 27 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | 49 | 2 repos | active |
+| 28 | [Docx · anthropics](https://tashan.sh/capability/skill-anthropics-docx.html) | 49 | 2 repos | active |
+| 29 | [PDF](https://tashan.sh/capability/skill-anthropics-pdf.html) | 49 | 2 repos | active |
+| 30 | [Jamdesk](https://tashan.sh/capability/plugin-jamdesk-jamdesk-claude-plugin-jamdesk.html) | 49 | 3 ★ | active |
+| 31 | [Living Manual](https://tashan.sh/capability/plugin-dougstanford-living-manual-living-manual.html) | 49 | 2 ★ | active |
+| 32 | [Changelog Generator](https://tashan.sh/capability/skill-alirezarezvani-changelog-generator.html) | 48 | 2 repos | active |
+| 33 | [Code To Prd](https://tashan.sh/capability/skill-alirezarezvani-code-to-prd.html) | 48 | 2 repos | active |
 | 34 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 48 | 40 ★ | active |
 | 35 | [Cold Email](https://tashan.sh/capability/skill-alirezarezvani-cold-email.html) | 48 | 2 repos | active |
-| 36 | [Mintlify](https://tashan.sh/capability/plugin-mintlify-mintlify-claude-plugin-mintlify.html) | 47 | 5 ★ | active |
-| 37 | [Bleu](https://tashan.sh/capability/plugin-nirvaan05-bleu-plugin-bleu.html) | 47 | 3 ★ | active |
+| 36 | [Copy Editing](https://tashan.sh/capability/skill-alirezarezvani-copy-editing.html) | 48 | 2 repos | active |
+| 37 | [Mintlify](https://tashan.sh/capability/plugin-mintlify-mintlify-claude-plugin-mintlify.html) | 47 | 5 ★ | active |
 | 38 | [Resend](https://tashan.sh/capability/plugin-resend-resend-skills-resend.html) | 46 | 2 marketplaces | — |
-| 39 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 46 | 26 ★ | active |
-| 40 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 45 | 21 ★ | active |
+| 39 | [Bleu](https://tashan.sh/capability/plugin-nirvaan05-bleu-plugin-bleu.html) | 46 | 3 ★ | active |
+| 40 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 46 | 26 ★ | active |
 
-Showing the top 40 of 195. The full ranked shelf is at https://tashan.sh/role/writer.html.
+Showing the top 40 of 196. The full ranked shelf is at https://tashan.sh/role/writer.html.
 
 ## What these numbers are not
 

@@ -11,30 +11,30 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 61 | 15 ★ | active |
+| 1 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 60 | 15 ★ | active |
 | 2 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 69 | 101 ★ | active |
 | 3 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 63 | 61 ★ | active |
 | 4 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 60 | 27 ★ | active |
 | 5 | [Datadog · datadog-labs](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 53 | 8 ★ | active |
 | 6 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
 | 7 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
-| 8 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 51 | 5 ★ | active |
+| 8 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 50 | 5 ★ | active |
 | 9 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 49 | 8 ★ | active |
 | 10 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 49 | 6 ★ | active |
-| 11 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 48 | 3 ★ | active |
+| 11 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 47 | 3 ★ | active |
 | 12 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
 | 13 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
 | 14 | [Render](https://tashan.sh/capability/plugin-render-oss-render-plugin-claude-code-render.html) | 46 | 0 ★ | active |
 | 15 | [Loki](https://tashan.sh/capability/plugin-lexfrei-mcp-loki-loki.html) | 45 | 3 ★ | active |
-| 16 | [Luciq](https://tashan.sh/capability/plugin-luciqai-agent-skills-luciq.html) | 44 | 0 ★ | active |
-| 17 | [Bitfab](https://tashan.sh/capability/plugin-project-white-rabbit-bitfab-claude-plugin-bitfab.html) | 43 | 1 ★ | active |
-| 18 | [Jprofiler](https://tashan.sh/capability/plugin-ej-technologies-jprofiler-mcp-jprofiler.html) | 43 | 2 ★ | active |
+| 16 | [Jprofiler](https://tashan.sh/capability/plugin-ej-technologies-jprofiler-mcp-jprofiler.html) | 43 | 2 ★ | active |
+| 17 | [Luciq](https://tashan.sh/capability/plugin-luciqai-agent-skills-luciq.html) | 43 | 0 ★ | active |
+| 18 | [Bitfab](https://tashan.sh/capability/plugin-project-white-rabbit-bitfab-claude-plugin-bitfab.html) | 42 | 1 ★ | active |
 | 19 | [Sap Btp Cloud Logging](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-cloud-logging.html) | 42 | 1 marketplaces | — |
 | 20 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | not scored | 1 repos | active |
 | 21 | [Observability Designer](https://tashan.sh/capability/skill-alirezarezvani-observability-designer.html) | not scored | 1 repos | active |
 | 22 | [Slo Architect](https://tashan.sh/capability/skill-alirezarezvani-slo-architect.html) | not scored | 1 repos | active |
 | 23 | [Railway](https://tashan.sh/capability/plugin-railwayapp-railway-skills-railway.html) | 71 | 300 ★ | active |
-| 24 | [Claude Code Wakatime](https://tashan.sh/capability/plugin-wakatime-claude-code-wakatime-claude-code-wakatime.html) | 63 | 88 ★ | active |
+| 24 | [Claude Code Wakatime](https://tashan.sh/capability/plugin-wakatime-claude-code-wakatime-claude-code-wakatime.html) | 62 | 88 ★ | active |
 | 25 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 60 | 27 ★ | active |
 | 26 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 57 | 18 ★ | active |
 | 27 | [Dash0](https://tashan.sh/capability/plugin-dash0hq-dash0-agent-plugin-dash0.html) | 54 | 4 ★ | active |

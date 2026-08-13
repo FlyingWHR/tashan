@@ -3,10 +3,10 @@
  "all": {
   "full": 122,
   "grade": 856,
-  "n": 29379,
-  "scan": 5914,
-  "score": 11785,
-  "task": 2716
+  "n": 28493,
+  "scan": 5822,
+  "score": 11637,
+  "task": 2704
  },
  "axes": [
   {
@@ -38,15 +38,6 @@
   "tier": "top1000"
  },
  "queue": [
-  {
-   "downloads": 15845345,
-   "id": "pkg:prisma",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "prisma"
-  },
   {
    "downloads": 6700967,
    "id": "pkg:@playwright/mcp",
@@ -95,15 +86,6 @@
     "task"
    ],
    "name": "mcp-handler"
-  },
-  {
-   "downloads": 765082,
-   "id": "pkg:fallow",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "fallow"
   },
   {
    "downloads": 619257,
@@ -171,15 +153,6 @@
     "task"
    ],
    "name": "mongodb-mcp-server"
-  },
-  {
-   "downloads": 187759,
-   "id": "pkg:yahoo-finance2",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "yahoo-finance2"
   },
   {
    "downloads": 142133,
@@ -310,15 +283,6 @@
    "name": "azure"
   },
   {
-   "downloads": 105649,
-   "id": "pkg:ruvector",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "ruvector"
-  },
-  {
    "downloads": 103652,
    "id": "pkg:agentation-mcp",
    "kind": "npm",
@@ -421,24 +385,64 @@
     "task"
    ],
    "name": "@wonderwhy-er/desktop-commander"
+  },
+  {
+   "downloads": 68731,
+   "id": "pkg:mcp-evals",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "mcp-evals"
+  },
+  {
+   "downloads": 67296,
+   "id": "pkg:@modelcontextprotocol/server-everything",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@modelcontextprotocol/server-everything"
+  },
+  {
+   "downloads": 65785,
+   "id": "pkg:hlims-mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "hlims-mcp"
+  },
+  {
+   "downloads": 54194,
+   "id": "pkg:comfyui-mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "comfyui-mcp"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 10,
-   "grade": 28,
+   "full": 12,
+   "grade": 31,
    "n": 100,
    "scan": 100,
    "score": 95,
    "task": 34
   },
   "top1000": {
-   "full": 48,
-   "grade": 136,
+   "full": 50,
+   "grade": 139,
    "n": 1000,
    "scan": 1000,
-   "score": 985,
-   "task": 380
+   "score": 984,
+   "task": 381
   }
  }
 }

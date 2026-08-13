@@ -19,7 +19,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Genshijin](https://tashan.sh/capability/plugin-interfacex-co-jp-genshijin-genshijin.html) | 69 | 287 ★ | active |
-| 2 | [Reprompter](https://tashan.sh/capability/plugin-aytuncyildizli-reprompter-reprompter.html) | 68 | 111 ★ | active |
+| 2 | [Reprompter](https://tashan.sh/capability/plugin-aytuncyildizli-reprompter-reprompter.html) | 67 | 111 ★ | active |
 | 3 | [Adcp Client](https://tashan.sh/capability/plugin-adcontextprotocol-adcp-client-adcp-client.html) | 62 | 18 ★ | active |
 | 4 | [Inkbox](https://tashan.sh/capability/plugin-inkbox-ai-inkbox-inkbox.html) | 61 | 33 ★ | active |
 | 5 | [Cxpak](https://tashan.sh/capability/plugin-barnett-studios-cxpak-cxpak.html) | 59 | 19 ★ | active |
@@ -36,11 +36,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 69 | 93 ★ | active |
 | 17 | [Evalview](https://tashan.sh/capability/plugin-hidai25-eval-view-evalview.html) | 67 | 124 ★ | active |
 | 18 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 66 | 68 ★ | active |
-| 19 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 66 | 452 ★ | active |
-| 20 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 65 | 68 ★ | active |
+| 19 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 65 | 68 ★ | active |
+| 20 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 65 | 452 ★ | active |
 | 21 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 65 | 37 ★ | active |
 | 22 | [Clawcode](https://tashan.sh/capability/plugin-crisandrews-clawcode-clawcode.html) | 64 | 61 ★ | active |
-| 23 | [Network AI](https://tashan.sh/capability/plugin-jovancoding-network-ai-network-ai.html) | 64 | 70 ★ | active |
+| 23 | [Network AI](https://tashan.sh/capability/plugin-jovancoding-network-ai-network-ai.html) | 63 | 70 ★ | active |
 | 24 | [Prompt Improver](https://tashan.sh/capability/plugin-severity1-claude-code-prompt-improver-prompt-improver.html) | 63 | 2k ★ | active |
 | 25 | [Datarobot Agent Skills](https://tashan.sh/capability/plugin-datarobot-oss-datarobot-agent-skills-datarobot-agent-skills.html) | 63 | 23 ★ | active |
 | 26 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 63 | 61 ★ | active |
@@ -51,15 +51,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Forge](https://tashan.sh/capability/plugin-jdforsythe-forge-forge.html) | 58 | 149 ★ | active |
 | 32 | [Supertool](https://tashan.sh/capability/plugin-digital-process-tools-claude-supertool-supertool.html) | 57 | 14 ★ | active |
 | 33 | [Laconic](https://tashan.sh/capability/plugin-gabrielbarberini-laconic-laconic.html) | 56 | 18 ★ | active |
-| 34 | [Slm Agent](https://tashan.sh/capability/plugin-scaledown-team-slm-agent-slm-agent.html) | 56 | 14 ★ | active |
-| 35 | [LLM Gateway](https://tashan.sh/capability/plugin-verivus-oss-llm-cli-gateway-llm-gateway.html) | 55 | 10 ★ | active |
+| 34 | [LLM Gateway](https://tashan.sh/capability/plugin-verivus-oss-llm-cli-gateway-llm-gateway.html) | 55 | 10 ★ | active |
+| 35 | [Slm Agent](https://tashan.sh/capability/plugin-scaledown-team-slm-agent-slm-agent.html) | 55 | 14 ★ | active |
 | 36 | [Atelier Pipeline](https://tashan.sh/capability/plugin-robertsfeir-atelier-pipeline-atelier-pipeline.html) | 54 | 23 ★ | active |
 | 37 | [Composio](https://tashan.sh/capability/plugin-composiohq-composio-plugin-cc-composio-mcp.html) | 54 | 7 ★ | active |
 | 38 | [Agent Social](https://tashan.sh/capability/plugin-2389-research-mcp-socialmedia-mcp-agent-social.html) | 54 | 14 ★ | active |
-| 39 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 53 | 20 ★ | active |
+| 39 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 52 | 20 ★ | active |
 | 40 | [Mako AI](https://tashan.sh/capability/plugin-drhalto-agentmako-mako-ai.html) | 51 | 51 ★ | active |
 
-Showing the top 40 of 449. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
+Showing the top 40 of 458. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
 
 ## What these numbers are not
 

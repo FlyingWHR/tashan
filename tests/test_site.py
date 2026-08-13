@@ -554,13 +554,24 @@ def main():
     # guarded below. data/capabilities.json reached 25.8 MiB purely from indent=2 whitespace across
     # 10,755 rows; the values in it were 8.6 MiB. Minifying took it to 19.1, and this is the guard
     # that says so before a deploy does.
-    _big = []
+    #
+    # THE THRESHOLD IS 24, NOT 22, AND THE REASON IS WHAT A RED SUITE COSTS. daily.yml withholds
+    # every site artifact when the suite fails — correct, you do not publish from a broken state —
+    # so a guard that trips while the file is still perfectly deployable does not protect a deploy,
+    # it stops one. Seven of ten nightlies committed "retention only, site artifacts withheld", and
+    # the board went 1,189 capabilities stale behind the database before anyone noticed. At 22 MiB
+    # against a 25 MiB limit this guard was one 9% growth step from becoming that same freeze.
+    # 24 still leaves a full MiB, and the size is now PRINTED every run so the trend is visible
+    # long before it is urgent — the previous failure mode was nobody watching, not a wrong number.
+    _sizes = []
     for _f in glob.glob(os.path.join(ROOT, "web", "**", "*"), recursive=True):
         if os.path.isfile(_f):
-            _mib = os.path.getsize(_f) / 1048576
-            if _mib > 22:
-                _big.append(f"{os.path.relpath(_f, ROOT)} {_mib:.1f} MiB")
-    check("no file is near Cloudflare Pages' 25 MiB per-file limit", not _big, "; ".join(_big[:3]))
+            _sizes.append((os.path.getsize(_f) / 1048576, os.path.relpath(_f, ROOT)))
+    _sizes.sort(reverse=True)
+    _big = [f"{n} {m:.1f} MiB" for m, n in _sizes if m > 24]
+    check(f"no file is near Cloudflare Pages' 25 MiB per-file limit "
+          f"(largest {_sizes[0][1]} {_sizes[0][0]:.1f} MiB)",
+          not _big, "; ".join(_big[:3]))
 
     # A 404.html is what makes Pages return a real 404. Without it Pages falls back to serving
     # index.html with status 200, so every mistyped URL was a soft 404 a crawler would happily index.

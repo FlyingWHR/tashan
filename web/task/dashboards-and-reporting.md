@@ -12,26 +12,26 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 63 | 100 ★ | active |
-| 2 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 54 | 7 ★ | active |
-| 3 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 53 | 12 ★ | active |
+| 2 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 53 | 12 ★ | active |
+| 3 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 53 | 7 ★ | active |
 | 4 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 75 | 4k ★ | active |
 | 5 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
 | 6 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
-| 7 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 49 | 2 ★ | active |
-| 8 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
-| 9 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
-| 10 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 46 | 0 ★ | active |
-| 11 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 45 | 1 ★ | active |
-| 12 | [Rill](https://tashan.sh/capability/plugin-rilldata-agent-skills-rill.html) | 43 | 0 ★ | active |
-| 13 | [Holistics Development](https://tashan.sh/capability/plugin-holistics-skills-holistics-development.html) | 42 | 1 marketplaces | active |
-| 14 | [Holistics Reporting](https://tashan.sh/capability/plugin-holistics-skills-holistics-reporting.html) | 42 | 1 marketplaces | active |
-| 15 | [Sap Sac Custom Widget](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-custom-widget.html) | 42 | 1 marketplaces | — |
-| 16 | [Sap Sac Planning](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-planning.html) | 42 | 1 marketplaces | — |
-| 17 | [Sap Sac Scripting](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-scripting.html) | 42 | 1 marketplaces | — |
-| 18 | [Pptx](https://tashan.sh/capability/skill-anthropics-pptx.html) | not scored | 1 repos | active |
-| 19 | [Xlsx · anthropics](https://tashan.sh/capability/skill-anthropics-xlsx.html) | not scored | 1 repos | active |
-| 20 | [Receipts](https://tashan.sh/capability/skill-anthropics-receipts.html) | not scored | 1 repos | active |
-| 21 | [Session Report](https://tashan.sh/capability/skill-anthropics-session-report.html) | not scored | 1 repos | active |
+| 7 | [Session Report](https://tashan.sh/capability/skill-anthropics-session-report.html) | 52 | 3 repos | active |
+| 8 | [Pptx](https://tashan.sh/capability/skill-anthropics-pptx.html) | 49 | 2 repos | active |
+| 9 | [Xlsx](https://tashan.sh/capability/skill-anthropics-xlsx.html) | 49 | 2 repos | active |
+| 10 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 49 | 2 ★ | active |
+| 11 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
+| 12 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
+| 13 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 46 | 0 ★ | active |
+| 14 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 45 | 1 ★ | active |
+| 15 | [Rill](https://tashan.sh/capability/plugin-rilldata-agent-skills-rill.html) | 43 | 0 ★ | active |
+| 16 | [Holistics Development](https://tashan.sh/capability/plugin-holistics-skills-holistics-development.html) | 42 | 1 marketplaces | active |
+| 17 | [Holistics Reporting](https://tashan.sh/capability/plugin-holistics-skills-holistics-reporting.html) | 42 | 1 marketplaces | active |
+| 18 | [Sap Sac Custom Widget](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-custom-widget.html) | 42 | 1 marketplaces | — |
+| 19 | [Sap Sac Planning](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-planning.html) | 42 | 1 marketplaces | — |
+| 20 | [Sap Sac Scripting](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-scripting.html) | 42 | 1 marketplaces | — |
+| 21 | [Receipts](https://tashan.sh/capability/skill-anthropics-receipts.html) | not scored | 1 repos | active |
 | 22 | [Excel Automation](https://tashan.sh/capability/skill-composiohq-excel-automation.html) | not scored | 1 repos | active |
 | 23 | [Googleads Automation](https://tashan.sh/capability/skill-composiohq-googleads-automation.html) | not scored | 1 repos | active |
 | 24 | [Campaign Analytics](https://tashan.sh/capability/skill-alirezarezvani-campaign-analytics.html) | not scored | 1 repos | active |

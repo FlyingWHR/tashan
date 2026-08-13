@@ -12,8 +12,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
-| 2 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 68 | 78 ★ | active |
-| 3 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 57 | 6 repos | active |
+| 2 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 67 | 78 ★ | active |
+| 3 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 51 | 3 repos | active |
 | 4 | [Phd Deepread](https://tashan.sh/capability/plugin-heleninsights-dot-phd-deepread-workflow-phd-deepread.html) | 50 | 56 ★ | active |
 | 5 | [Research Co Pilot](https://tashan.sh/capability/plugin-marazii-research-co-pilot-research-co-pilot.html) | 46 | 5 ★ | active |
 | 6 | [Arx](https://tashan.sh/capability/plugin-eric-tramel-arx-arx.html) | 41 | 7 ★ | active |
@@ -30,7 +30,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Bettercallclaude Italia](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-italia-bettercallclaude-italia.html) | 55 | 41 ★ | active |
 | 18 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 147 ★ | active |
 | 19 | [Pubcrawl](https://tashan.sh/capability/pkg-pharmatools-pubcrawl.html) | 59 | 334/wk | active |
-| 20 | [Openalex Research](https://tashan.sh/capability/pkg-openalex-research-mcp.html) | 52 | 224/wk | active |
+| 20 | [Openalex Research](https://tashan.sh/capability/pkg-openalex-research-mcp.html) | 51 | 224/wk | active |
 | 21 | [Medsci Literature](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-literature.html) | 45 | 1 marketplaces | active |
 | 22 | [Medsci Data](https://tashan.sh/capability/plugin-aperivue-medsci-skills-medsci-data.html) | 45 | 1 marketplaces | active |
 

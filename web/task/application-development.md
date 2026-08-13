@@ -32,9 +32,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 19 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 63 | 22 ★ | active |
 | 20 | [Twilio Developer Kit](https://tashan.sh/capability/plugin-twilio-ai-twilio-developer-kit.html) | 62 | 26 ★ | active |
 | 21 | [Tricorder](https://tashan.sh/capability/plugin-tweag-tricorder-tricorder.html) | 62 | 38 ★ | active |
-| 22 | [Delphi Dev](https://tashan.sh/capability/plugin-adrianosantostreina-delphi-dev-delphi-dev.html) | 61 | 71 ★ | active |
-| 23 | [Insforge · insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 61 | 33 ★ | active |
-| 24 | [Pdca Framework](https://tashan.sh/capability/plugin-kenjudy-pdca-framework-pdca-framework.html) | 61 | 41 ★ | active |
+| 22 | [Insforge · insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 61 | 33 ★ | active |
+| 23 | [Pdca Framework](https://tashan.sh/capability/plugin-kenjudy-pdca-framework-pdca-framework.html) | 61 | 41 ★ | active |
+| 24 | [Delphi Dev](https://tashan.sh/capability/plugin-adrianosantostreina-delphi-dev-delphi-dev.html) | 60 | 71 ★ | active |
 | 25 | [Mercadopago](https://tashan.sh/capability/plugin-mercadopago-mercadopago-claude-marketplace-mercadopago.html) | 59 | 24 ★ | active |
 | 26 | [Harness Kit](https://tashan.sh/capability/plugin-romabeckman-harness-kit-harness-kit.html) | 59 | 25 ★ | active |
 | 27 | [Helius](https://tashan.sh/capability/plugin-helius-labs-core-ai-helius.html) | 59 | 24 ★ | active |
@@ -46,13 +46,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Pulp](https://tashan.sh/capability/plugin-generous-corp-pulp-pulp.html) | 57 | 13 ★ | active |
 | 34 | [Flagos Skills](https://tashan.sh/capability/plugin-flagos-ai-skills-flagos-skills.html) | 57 | 19 ★ | active |
 | 35 | [Consensus Rnd](https://tashan.sh/capability/plugin-chronoaiproject-consensus-rnd-consensus-rnd.html) | 57 | 23 ★ | active |
-| 36 | [Slm Agent](https://tashan.sh/capability/plugin-scaledown-team-slm-agent-slm-agent.html) | 56 | 14 ★ | active |
-| 37 | [Aptos Agent Skills](https://tashan.sh/capability/plugin-aptos-labs-aptos-agent-skills-aptos-agent-skills.html) | 55 | 19 ★ | active |
-| 38 | [Chaingpt Developer Kit](https://tashan.sh/capability/plugin-chaingpt-org-chaingpt-claude-skill-chaingpt-developer-kit.html) | 55 | 12 ★ | active |
+| 36 | [Aptos Agent Skills](https://tashan.sh/capability/plugin-aptos-labs-aptos-agent-skills-aptos-agent-skills.html) | 55 | 19 ★ | active |
+| 37 | [Chaingpt Developer Kit](https://tashan.sh/capability/plugin-chaingpt-org-chaingpt-claude-skill-chaingpt-developer-kit.html) | 55 | 12 ★ | active |
+| 38 | [Slm Agent](https://tashan.sh/capability/plugin-scaledown-team-slm-agent-slm-agent.html) | 55 | 14 ★ | active |
 | 39 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 54 | 7 ★ | active |
 | 40 | [Decimal Scaled](https://tashan.sh/capability/plugin-mootable-decimal-scaled-decimal-scaled.html) | 54 | 8 ★ | active |
 
-Showing the top 40 of 233. The full ranked shelf is at https://tashan.sh/task/application-development.html.
+Showing the top 40 of 234. The full ranked shelf is at https://tashan.sh/task/application-development.html.
 
 ## What these numbers are not
 

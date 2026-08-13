@@ -1248,6 +1248,147 @@ def official_of(pkg, repo):
     return None
 
 
+# THE ONE DEFINITION OF "IS THIS A CAPABILITY WE PUBLISH", and the constants it reads.
+#
+# Lifted out of export() because the comment inside it used to say: "if a third rule ever changes
+# what the board contains at the top, lift junk() out and share it." One did. coverage.py
+# re-implemented two of these rules (npm_runnable, MALICIOUS) on the stated assumption that the rest
+# "do not reach the top of a demand ranking". The PROSE_SAYS gate reaches rank ONE: pkg:prisma, a
+# database ORM that declares the `mcp` keyword, led the PUBLISHED measurement queue on 15.8M weekly
+# downloads, with yahoo-finance2, mockserver-client, fallow and ruvector behind it. So
+# /requests.html promised readers we would measure five things the board deliberately refuses to
+# list — and the coverage percentages we commit to were divided by a pool that contained them.
+#
+# Two copies of "what counts" is the same defect class as a score differing between two surfaces,
+# and it is the fourth time in this codebase. One definition, both callers.
+DENY = {"mcp", "server", "mcp-server", "run", "serve", "cli", "app", "main", "index",
+        "stdio", "tools", "mcp-serve", "client", "core", "test", "demo"}
+# Tutorial/homework servers published to the registry: "Send personalized greetings", "Pirate Mode",
+# dad jokes, MIT-course hw3 submissions. They score like any low-adoption server and were ranking on
+# the board, which undercuts the whole claim to measure what works. Patterns are deliberately
+# unambiguous — "template repository"/"boilerplate" are included (a scaffold is not a capability you
+# install to do work) but bare "template" is not, since real tools describe themselves that way.
+DEMO = re.compile(r"\bgreet(ing)?s?\b|hello,?\s*world|pirate mode|swashbuckling|dad joke"
+                  r"|add two numbers|template repository|boilerplate", re.I)
+DEMO_NAME = re.compile(r"(^|[-_])(hw\d|test_m|hello|hellomcp|smithery-exam)([-_]|\d|$)", re.I)
+# Self-declared non-capabilities. `mcp-server-fetch` and `mcp-server-git` are dependency-confusion
+# CANARIES — unscoped npm names shadowing the official @modelcontextprotocol/server-* packages,
+# picking up thousands of weekly installs from people who assume the unscoped name is the real one.
+# They scored Trust 54 and 51 here, and the install snippet was telling readers to npx them. An index
+# that exists to say what is trustworthy must not rank a typosquat, so anything that declares itself
+# a canary/placeholder/not-for-production is not a capability and does not belong on the board.
+CANARY = re.compile(r"security research canary|\bcanary\b.*not for production"
+                    r"|not for production use|placeholder package|name reservation|reserved name"
+                    r"|do not (install|use) this package", re.I)
+# Local paths and shell fragments scraped into the corpus as capability names — "/home/blyons/
+# finances/main.ledger", "C:\\Users\\david\\OneDrive - Qolcom\\...", "cd cmd/mcp-server && go".
+# None currently reach the export because they carry no trust, but that is luck, not a rule: one
+# enrichment pass away from a score and they would be on the board.
+PATHY = re.compile(r"^[/~]|^[A-Za-z]:[\\/]|\\\\|^(cd|source|export|sudo|bash|sh|python|node|go)\s"
+                   r"|&&|\.(jar|exe|ledger)$|/etc/|OneDrive", re.I)
+
+def withhold_borrowed_grade(o):
+    """Do not publish a JUDGMENT whose evidence is a document about something else.
+
+    87 of our published negative verdicts rested on a README the capability shares with other
+    packages, or one that never names it. The worst is @modelcontextprotocol/server-filesystem
+    — Anthropic's own, 482k downloads a week — graded `thin` because it appears as a list entry
+    in a monorepo index it shares with three siblings. The note was accurate about the document.
+    The verdict published as a judgment on the software.
+
+    doc_signals.py already caps these at `thin` so a grade cannot borrow CREDIT from someone
+    else's document. That was half the rule. The other half is that it must not borrow BLAME
+    either: `thin` is not a neutral floor, it is a criticism, and we were levelling it at
+    capabilities on the strength of a page that is not about them.
+
+    So the verdict is withdrawn and replaced by the fact, which is stronger anyway — "no
+    documentation of its own" is checkable, useful to a reader deciding whether they can adopt
+    the thing, and not an opinion anyone has to accept. A POSITIVE verdict is withdrawn on the
+    same evidence, for the same reason: it was read off the wrong page.
+    """
+    shared, names_self = o.get("doc_shared_with"), o.get("doc_names_self")
+    # None means doc_signals has not looked at this row; only act on a measured answer.
+    borrowed = (shared is not None and shared > 0) or (names_self is not None and names_self == 0)
+    # AN EXPLICIT REFUSAL OUTRANKS THE DERIVED ONE, and must be checked BEFORE the borrowed-doc
+    # early return — the rows a grader withheld are usually NOT borrowed-doc rows, so placing
+    # this after `if not borrowed: return` meant every one of them returned before reaching it.
+    # grade_withheld is set when someone read the evidence and declined: no document staged, a
+    # document about twenty other servers, tool docs behind a page we cannot open.
+    if o.get("grade_withheld") and not o.get("expertise_verdict"):
+        o["doc_status"] = o["grade_withheld"]
+        return
+    if not borrowed:
+        return
+    # STATED FOR EVERY ROW WE MEASURED, not only the ones that happened to be graded. 528 rows
+    # have documentation that is not about them; only 120 had a verdict to withdraw. The other
+    # 408 carry the same defect and said nothing, so a reader could not tell "we have not looked"
+    # from "we looked and the docs belong to something else". The second is the more useful fact
+    # and it is free — doc_signals already measured it.
+    o["doc_status"] = ("shares its documentation with %d other capabilit%s"
+                       % (shared, "y" if shared == 1 else "ies")) if shared else \
+                      "its only documentation never names it"
+    if o.get("expertise_verdict"):
+        o["expertise_verdict"] = None
+        o["expertise"] = None
+        o["expertise_note"] = None
+
+def junk(o):
+    n = (o["npm_pkg"] or o["id"].split(":", 1)[-1] or "")
+    if PATHY.search(n) or PATHY.search(o.get("name") or ""):
+        return True
+    # CONFIRMED MALWARE. OSV's malicious-packages database (MAL-* ids) is authoritative and, unlike
+    # the CANARY rule below it, does not depend on the package DESCRIBING itself as a canary — real
+    # malware will not self-declare. The two shadows of @modelcontextprotocol/server-* that CANARY
+    # catches today are both independently confirmed as MAL-2026-5476 and MAL-2026-5478; this catches
+    # the next one, which will not be so polite. The row survives in the lookup table so `doctor`
+    # can still warn someone who already installed it — it is only refused a place on the board.
+    if o.get("sec_max_severity") == "MALICIOUS":
+        return True
+    blurb = (o.get("description") or "") + " " + (o.get("title") or "")
+    if DEMO.search(blurb) or DEMO_NAME.search(n.split("/")[-1]) or CANARY.search(blurb):
+        return True
+    # A LIBRARY IS NOT A CAPABILITY. A host starts an MCP server by running a command; a package
+    # that declares no `bin` cannot be started, so it is something you build servers WITH.
+    # @modelcontextprotocol/sdk sat at the top of the board on 53M weekly downloads — the single
+    # highest-adoption row we publish — beside /core, /client, /node, /express, /hono and
+    # /fastify, all of them build-time dependencies presented as things to install. Adoption was
+    # measuring their popularity correctly; the category was wrong.
+    # STRICTLY 0, never falsy: NULL means not yet scanned, and dropping unscanned rows would
+    # silently empty the board of everything the security stage has not reached.
+    if o.get("npm_runnable") == 0 and not o.get("remote_host"):
+        return True
+    # AND IT HAS TO SAY IT IS ONE. npm KEYWORDS ARE MARKETING, NOT EVIDENCE.
+    #
+    # Discovery reaches npm by keyword, and keywords are self-declared and stuffed:
+    # `yahoo-finance2` ("JS API for Yahoo Finance") declares `mcp`, `agent` AND `skill`;
+    # `mockserver-client` ("A node client for the MockServer") declares `mcp`; so does `prisma`,
+    # a database ORM. They were harmless for as long as nobody had measured them — and the
+    # download probe added above measured them, so a Yahoo Finance client came up the board at
+    # rank 27 on 188k weekly downloads, ahead of most real MCP servers. Adoption was right; it
+    # was measuring the popularity of something that is not an AI capability.
+    #
+    # So the test is what the package SAYS IT IS in prose, or its name, or the MCP registry —
+    # never the tag list, which costs an author nothing to pad. This drops ~2.6% of the board,
+    # including a Sass mixin library, an ESLint plugin and `npm-deprecated-check`. It also drops
+    # a handful of real AI tools whose descriptions never mention it (`byterover-cli`, `ctx7`),
+    # which is the right side to err on for a project whose rule is that an unevidenced claim
+    # does not get published: an author who never says what their tool is for can say so.
+    # ONLY npm ROWS. A `skill:` or `plugin:` id came out of a Claude Code skills or plugins
+    # repository — it is an AI capability by construction, and there is no keyword to stuff.
+    # Applied to everything, this gate cut 1,931 rows: `skill:obra/systematic-debugging`,
+    # `skill:Jeffallan/api-designer` and 1,000 more whose descriptions describe the JOB ("Use
+    # when encountering any bug, test failure…") rather than announcing that they are AI
+    # capabilities, which is exactly what a well-written skill description should do.
+    if o["id"].startswith("pkg:") and not (
+            o.get("in_registry") or NAME_SAYS.search(n + " " + (o.get("name") or ""))
+            or PROSE_SAYS.search(blurb)):
+        return True
+    if n.startswith("@"):
+        return False  # scoped = real identity
+    leaf = n.split("/")[-1].lower()
+    return leaf in DENY
+
+
 def export(con):
     cols = ["id","name","kind","title","description","npm_pkg","source_repo","registry_status",
             "config_reach","config_repos","stars_median","stars_max","last_seen",
@@ -1340,132 +1481,6 @@ def export(con):
     rows += take(f"(self_unmaintained IS NOT NULL OR npm_deprecated=1 OR registry_status='deprecated') "
                  f"AND tashan_score IS NULL AND {DESC_OK}", "config_reach DESC NULLS LAST, name", 400)
     # bare single-word generic names carry no identity in a ranking (registry ingest skips the scraper's filter)
-    DENY = {"mcp", "server", "mcp-server", "run", "serve", "cli", "app", "main", "index",
-            "stdio", "tools", "mcp-serve", "client", "core", "test", "demo"}
-    # Tutorial/homework servers published to the registry: "Send personalized greetings", "Pirate Mode",
-    # dad jokes, MIT-course hw3 submissions. They score like any low-adoption server and were ranking on
-    # the board, which undercuts the whole claim to measure what works. Patterns are deliberately
-    # unambiguous — "template repository"/"boilerplate" are included (a scaffold is not a capability you
-    # install to do work) but bare "template" is not, since real tools describe themselves that way.
-    DEMO = re.compile(r"\bgreet(ing)?s?\b|hello,?\s*world|pirate mode|swashbuckling|dad joke"
-                      r"|add two numbers|template repository|boilerplate", re.I)
-    DEMO_NAME = re.compile(r"(^|[-_])(hw\d|test_m|hello|hellomcp|smithery-exam)([-_]|\d|$)", re.I)
-    # Self-declared non-capabilities. `mcp-server-fetch` and `mcp-server-git` are dependency-confusion
-    # CANARIES — unscoped npm names shadowing the official @modelcontextprotocol/server-* packages,
-    # picking up thousands of weekly installs from people who assume the unscoped name is the real one.
-    # They scored Trust 54 and 51 here, and the install snippet was telling readers to npx them. An index
-    # that exists to say what is trustworthy must not rank a typosquat, so anything that declares itself
-    # a canary/placeholder/not-for-production is not a capability and does not belong on the board.
-    CANARY = re.compile(r"security research canary|\bcanary\b.*not for production"
-                        r"|not for production use|placeholder package|name reservation|reserved name"
-                        r"|do not (install|use) this package", re.I)
-    # Local paths and shell fragments scraped into the corpus as capability names — "/home/blyons/
-    # finances/main.ledger", "C:\\Users\\david\\OneDrive - Qolcom\\...", "cd cmd/mcp-server && go".
-    # None currently reach the export because they carry no trust, but that is luck, not a rule: one
-    # enrichment pass away from a score and they would be on the board.
-    PATHY = re.compile(r"^[/~]|^[A-Za-z]:[\\/]|\\\\|^(cd|source|export|sudo|bash|sh|python|node|go)\s"
-                       r"|&&|\.(jar|exe|ledger)$|/etc/|OneDrive", re.I)
-
-    def withhold_borrowed_grade(o):
-        """Do not publish a JUDGMENT whose evidence is a document about something else.
-
-        87 of our published negative verdicts rested on a README the capability shares with other
-        packages, or one that never names it. The worst is @modelcontextprotocol/server-filesystem
-        — Anthropic's own, 482k downloads a week — graded `thin` because it appears as a list entry
-        in a monorepo index it shares with three siblings. The note was accurate about the document.
-        The verdict published as a judgment on the software.
-
-        doc_signals.py already caps these at `thin` so a grade cannot borrow CREDIT from someone
-        else's document. That was half the rule. The other half is that it must not borrow BLAME
-        either: `thin` is not a neutral floor, it is a criticism, and we were levelling it at
-        capabilities on the strength of a page that is not about them.
-
-        So the verdict is withdrawn and replaced by the fact, which is stronger anyway — "no
-        documentation of its own" is checkable, useful to a reader deciding whether they can adopt
-        the thing, and not an opinion anyone has to accept. A POSITIVE verdict is withdrawn on the
-        same evidence, for the same reason: it was read off the wrong page.
-        """
-        shared, names_self = o.get("doc_shared_with"), o.get("doc_names_self")
-        # None means doc_signals has not looked at this row; only act on a measured answer.
-        borrowed = (shared is not None and shared > 0) or (names_self is not None and names_self == 0)
-        # AN EXPLICIT REFUSAL OUTRANKS THE DERIVED ONE, and must be checked BEFORE the borrowed-doc
-        # early return — the rows a grader withheld are usually NOT borrowed-doc rows, so placing
-        # this after `if not borrowed: return` meant every one of them returned before reaching it.
-        # grade_withheld is set when someone read the evidence and declined: no document staged, a
-        # document about twenty other servers, tool docs behind a page we cannot open.
-        if o.get("grade_withheld") and not o.get("expertise_verdict"):
-            o["doc_status"] = o["grade_withheld"]
-            return
-        if not borrowed:
-            return
-        # STATED FOR EVERY ROW WE MEASURED, not only the ones that happened to be graded. 528 rows
-        # have documentation that is not about them; only 120 had a verdict to withdraw. The other
-        # 408 carry the same defect and said nothing, so a reader could not tell "we have not looked"
-        # from "we looked and the docs belong to something else". The second is the more useful fact
-        # and it is free — doc_signals already measured it.
-        o["doc_status"] = ("shares its documentation with %d other capabilit%s"
-                           % (shared, "y" if shared == 1 else "ies")) if shared else \
-                          "its only documentation never names it"
-        if o.get("expertise_verdict"):
-            o["expertise_verdict"] = None
-            o["expertise"] = None
-            o["expertise_note"] = None
-
-    def junk(o):
-        n = (o["npm_pkg"] or o["id"].split(":", 1)[-1] or "")
-        if PATHY.search(n) or PATHY.search(o.get("name") or ""):
-            return True
-        # CONFIRMED MALWARE. OSV's malicious-packages database (MAL-* ids) is authoritative and, unlike
-        # the CANARY rule below it, does not depend on the package DESCRIBING itself as a canary — real
-        # malware will not self-declare. The two shadows of @modelcontextprotocol/server-* that CANARY
-        # catches today are both independently confirmed as MAL-2026-5476 and MAL-2026-5478; this catches
-        # the next one, which will not be so polite. The row survives in the lookup table so `doctor`
-        # can still warn someone who already installed it — it is only refused a place on the board.
-        if o.get("sec_max_severity") == "MALICIOUS":
-            return True
-        blurb = (o.get("description") or "") + " " + (o.get("title") or "")
-        if DEMO.search(blurb) or DEMO_NAME.search(n.split("/")[-1]) or CANARY.search(blurb):
-            return True
-        # A LIBRARY IS NOT A CAPABILITY. A host starts an MCP server by running a command; a package
-        # that declares no `bin` cannot be started, so it is something you build servers WITH.
-        # @modelcontextprotocol/sdk sat at the top of the board on 53M weekly downloads — the single
-        # highest-adoption row we publish — beside /core, /client, /node, /express, /hono and
-        # /fastify, all of them build-time dependencies presented as things to install. Adoption was
-        # measuring their popularity correctly; the category was wrong.
-        # STRICTLY 0, never falsy: NULL means not yet scanned, and dropping unscanned rows would
-        # silently empty the board of everything the security stage has not reached.
-        if o.get("npm_runnable") == 0 and not o.get("remote_host"):
-            return True
-        # AND IT HAS TO SAY IT IS ONE. npm KEYWORDS ARE MARKETING, NOT EVIDENCE.
-        #
-        # Discovery reaches npm by keyword, and keywords are self-declared and stuffed:
-        # `yahoo-finance2` ("JS API for Yahoo Finance") declares `mcp`, `agent` AND `skill`;
-        # `mockserver-client` ("A node client for the MockServer") declares `mcp`; so does `prisma`,
-        # a database ORM. They were harmless for as long as nobody had measured them — and the
-        # download probe added above measured them, so a Yahoo Finance client came up the board at
-        # rank 27 on 188k weekly downloads, ahead of most real MCP servers. Adoption was right; it
-        # was measuring the popularity of something that is not an AI capability.
-        #
-        # So the test is what the package SAYS IT IS in prose, or its name, or the MCP registry —
-        # never the tag list, which costs an author nothing to pad. This drops ~2.6% of the board,
-        # including a Sass mixin library, an ESLint plugin and `npm-deprecated-check`. It also drops
-        # a handful of real AI tools whose descriptions never mention it (`byterover-cli`, `ctx7`),
-        # which is the right side to err on for a project whose rule is that an unevidenced claim
-        # does not get published: an author who never says what their tool is for can say so.
-        # ONLY npm ROWS. A `skill:` or `plugin:` id came out of a Claude Code skills or plugins
-        # repository — it is an AI capability by construction, and there is no keyword to stuff.
-        # Applied to everything, this gate cut 1,931 rows: `skill:obra/systematic-debugging`,
-        # `skill:Jeffallan/api-designer` and 1,000 more whose descriptions describe the JOB ("Use
-        # when encountering any bug, test failure…") rather than announcing that they are AI
-        # capabilities, which is exactly what a well-written skill description should do.
-        if o["id"].startswith("pkg:") and not (
-                o.get("in_registry") or NAME_SAYS.search(n + " " + (o.get("name") or ""))
-                or PROSE_SAYS.search(blurb)):
-            return True
-        if n.startswith("@"):
-            return False  # scoped = real identity
-        leaf = n.split("/")[-1].lower()
-        return leaf in DENY
     # Descriptions come from READMEs and manifests and arrive full of markup. One row on the Database hub
     # rendered as a raw markdown image link — "[![smithery badge](https://…)](https://…)" — straight into
     # the "what it does" column. Clean once here so every surface (board, hubs, dossiers, llms.txt, CLI,
