@@ -312,6 +312,26 @@ def evaluate(con, margin):
 
 def main():
     con = build.db()
+    # MEASURED 14 Aug 2026, AND DELIBERATELY LEFT AT 0.20. Reading the top eight of every hub found
+    # an agent harness and a friction logger heading Security, and SAP Fiori heading Design — so the
+    # obvious move was "raise the margin, abstain more, stop being confidently wrong". The numbers
+    # say it is a real trade and not a free win. Precision OF WHAT IS KEPT, derived from --eval
+    # (accuracy counts an abstention as a miss, so precision-of-kept = correct / (n - abstained)):
+    #
+    #     margin 0.2   kept 186/241 (77%)   precision 68.8%      <- current
+    #     margin 0.3   kept 161/241 (67%)   precision 73.3%
+    #     margin 0.4   kept 130/241 (54%)   precision 82.3%
+    #     margin 0.5   kept 102/241 (42%)   precision 88.1%
+    #
+    # 0.4 would buy 13 points of precision for 23 points of coverage — a fifth of the corpus moving
+    # to a hub nothing links to. Not taken, because the hand-classified HEAD of each hub is what a
+    # reader sees and that is now correct, while the tail is where thinning would cost most and show
+    # least. Revisit with a bigger labelled set, not by feel.
+    #
+    # AND --eval CANNOT TELL YOU WHETHER NEW LABELS HELPED. It holds out a fifth of whatever labels
+    # exist, so adding 107 changed the test set too (220 -> 241 rows) and the before/after numbers
+    # are scored on different data. The 60.0% -> 58.9% that looks like a regression is not one; it
+    # is not a comparison at all. A real answer needs a frozen holdout.
     margin = float(os.environ.get("CLASSIFY_MARGIN", "0.20"))   # RELATIVE, 0..1 — see NB.predict
 
     if "--eval" in sys.argv:
