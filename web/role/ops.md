@@ -10,8 +10,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Knowledge management** — [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) · tashan score 79
-- **Messaging and email** — [Agentmail](https://tashan.sh/capability/pkg-agentmail-mcp.html) · tashan score 75
 - **Project management** — [Backlog](https://tashan.sh/capability/pkg-backlog-mcp-server.html) · tashan score 76
+- **Messaging and email** — [Agentmail](https://tashan.sh/capability/pkg-agentmail-mcp.html) · tashan score 75
 - **Browser automation** — [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) · tashan score 92
 - **Web research** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 86
 - **Process automation** — [Safety Net](https://tashan.sh/capability/plugin-kenryu42-claude-code-safety-net-safety-net.html) · tashan score 73
@@ -31,37 +31,37 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Remember](https://tashan.sh/capability/plugin-digital-process-tools-claude-remember-remember.html) | 70 | 143 ★ | active |
 | 10 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 69 | 2k/wk | active |
 | 11 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 2k/wk | active |
-| 12 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 68 | 895/wk | active |
-| 13 | [Reddit Mcp Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
-| 14 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 67 | 883/wk | active |
-| 15 | [Vikunja Fastmcp](https://tashan.sh/capability/pkg-vikunja-fastmcp.html) | 67 | 967/wk | active |
-| 16 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 67 | 80 ★ | active |
-| 17 | [Freightutils](https://tashan.sh/capability/pkg-freightutils-mcp.html) | 67 | 776/wk | active |
-| 18 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 65 | 970/wk | active |
-| 19 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 65 | 860/wk | active |
-| 20 | [Fluf](https://tashan.sh/capability/pkg-fluf-mcp.html) | 63 | 908/wk | active |
-| 21 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 62 | 18 ★ | active |
-| 22 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 62 | 3k ★ | active |
-| 23 | [Maister](https://tashan.sh/capability/plugin-skillpanel-maister-maister.html) | 62 | 191 ★ | active |
-| 24 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 62 | 336 ★ | active |
-| 25 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 61 | 381 ★ | active |
-| 26 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 58 | 24 ★ | active |
-| 27 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 57 | 6k/wk | active |
-| 28 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 57 | 32 ★ | active |
-| 29 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 54 | 51 ★ | active |
-| 30 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 54 | 10 ★ | active |
-| 31 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
-| 32 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 53 | 24 ★ | active |
-| 33 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 53 | 11 ★ | active |
-| 34 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 52 | 76 ★ | active |
-| 35 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 51 | 4 ★ | active |
-| 36 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 51 | 3 ★ | active |
-| 37 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 50 | 12 ★ | active |
-| 38 | [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) | 86 | 6.7m/wk | active |
-| 39 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 85 | 75k/wk | active |
-| 40 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 82 | 37k/wk | active |
+| 12 | [Huly](https://tashan.sh/capability/pkg-firfi-huly-mcp.html) | 69 | 1k/wk | active |
+| 13 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 68 | 895/wk | active |
+| 14 | [Reddit Mcp Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
+| 15 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 67 | 883/wk | active |
+| 16 | [Vikunja Fastmcp](https://tashan.sh/capability/pkg-vikunja-fastmcp.html) | 67 | 967/wk | active |
+| 17 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 67 | 80 ★ | active |
+| 18 | [Freightutils](https://tashan.sh/capability/pkg-freightutils-mcp.html) | 67 | 776/wk | active |
+| 19 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 65 | 970/wk | active |
+| 20 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 65 | 860/wk | active |
+| 21 | [Fluf](https://tashan.sh/capability/pkg-fluf-mcp.html) | 63 | 908/wk | active |
+| 22 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 62 | 18 ★ | active |
+| 23 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 62 | 3k ★ | active |
+| 24 | [Maister](https://tashan.sh/capability/plugin-skillpanel-maister-maister.html) | 62 | 191 ★ | active |
+| 25 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 62 | 336 ★ | active |
+| 26 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 61 | 381 ★ | active |
+| 27 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 58 | 24 ★ | active |
+| 28 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 57 | 6k/wk | active |
+| 29 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 57 | 32 ★ | active |
+| 30 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 54 | 51 ★ | active |
+| 31 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 54 | 10 ★ | active |
+| 32 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
+| 33 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 53 | 24 ★ | active |
+| 34 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 53 | 11 ★ | active |
+| 35 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 52 | 76 ★ | active |
+| 36 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 51 | 4 ★ | active |
+| 37 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 51 | 3 ★ | active |
+| 38 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 50 | 12 ★ | active |
+| 39 | [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) | 86 | 6.7m/wk | active |
+| 40 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 85 | 75k/wk | active |
 
-Showing the top 40 of 698. The full ranked shelf is at https://tashan.sh/role/ops.html.
+Showing the top 40 of 705. The full ranked shelf is at https://tashan.sh/role/ops.html.
 
 ## What these numbers are not
 

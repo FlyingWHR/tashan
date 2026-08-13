@@ -49,16 +49,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 52 | 12 ★ | active |
 | 31 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
 | 32 | [Jenkins · mcpland](https://tashan.sh/capability/pkg-jenkins-mcp.html) | 41 | 725/wk | active |
-| 33 | [GCP](https://tashan.sh/capability/pkg-gcp-mcp.html) | 19 | 4k/wk | abandoned |
-| 34 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
-| 35 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 84 | 14k/wk | active |
-| 36 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 2 marketplaces | active |
-| 37 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 3 marketplaces | active |
-| 38 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
-| 39 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
-| 40 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
+| 33 | [SSH · tufantunc](https://tashan.sh/capability/pkg-ssh-mcp.html) | 39 | 1k/wk | abandoned |
+| 34 | [GCP](https://tashan.sh/capability/pkg-gcp-mcp.html) | 19 | 4k/wk | abandoned |
+| 35 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
+| 36 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 84 | 14k/wk | active |
+| 37 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 2 marketplaces | active |
+| 38 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 3 marketplaces | active |
+| 39 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
+| 40 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 69 | 1k/wk | active |
 
-Showing the top 40 of 228. The full ranked shelf is at https://tashan.sh/role/devops.html.
+Showing the top 40 of 231. The full ranked shelf is at https://tashan.sh/role/devops.html.
 
 ## What these numbers are not
 

@@ -32,27 +32,27 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 19 | [Yaver](https://tashan.sh/capability/pkg-yaver-cli.html) | 71 | 4k/wk | active |
 | 20 | [Apollo Skills](https://tashan.sh/capability/plugin-apollographql-skills-apollo-skills.html) | 69 | 100 ★ | active |
 | 21 | [GraphQL Enhanced](https://tashan.sh/capability/pkg-letoribo-mcp-graphql-enhanced.html) | 69 | 2k/wk | active |
-| 22 | [Quarkus Agent](https://tashan.sh/capability/plugin-quarkusio-quarkus-agent-mcp-quarkus-agent.html) | 68 | 45 ★ | active |
-| 23 | [Sfmc](https://tashan.sh/capability/pkg-mcp-server-sfmc.html) | 66 | 758/wk | active |
-| 24 | [Auth0 · auth0](https://tashan.sh/capability/plugin-auth0-agent-skills-auth0.html) | 65 | 40 ★ | active |
-| 25 | [Workos](https://tashan.sh/capability/plugin-workos-skills-workos.html) | 65 | 43 ★ | active |
-| 26 | [Salesforce Metadata](https://tashan.sh/capability/pkg-salesforce-metadata-mcp.html) | 65 | 746/wk | active |
-| 27 | [Postman · postman-devrel](https://tashan.sh/capability/plugin-postman-devrel-postman-claude-code-plugin-postman.html) | 64 | 34 ★ | active |
-| 28 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 64 | 167 ★ | active |
-| 29 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 63 | 22 ★ | active |
-| 30 | [Twilio Developer Kit](https://tashan.sh/capability/plugin-twilio-ai-twilio-developer-kit.html) | 62 | 26 ★ | active |
-| 31 | [Tricorder](https://tashan.sh/capability/plugin-tweag-tricorder-tricorder.html) | 62 | 38 ★ | active |
-| 32 | [Insforge · insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 61 | 33 ★ | active |
-| 33 | [Pdca Framework](https://tashan.sh/capability/plugin-kenjudy-pdca-framework-pdca-framework.html) | 61 | 41 ★ | active |
-| 34 | [Delphi Dev](https://tashan.sh/capability/plugin-adrianosantostreina-delphi-dev-delphi-dev.html) | 60 | 71 ★ | active |
-| 35 | [Mercadopago](https://tashan.sh/capability/plugin-mercadopago-mercadopago-claude-marketplace-mercadopago.html) | 59 | 24 ★ | active |
-| 36 | [Harness Kit](https://tashan.sh/capability/plugin-romabeckman-harness-kit-harness-kit.html) | 59 | 25 ★ | active |
-| 37 | [Helius](https://tashan.sh/capability/plugin-helius-labs-core-ai-helius.html) | 59 | 24 ★ | active |
-| 38 | [Laravel API Tool Kit](https://tashan.sh/capability/plugin-ahmedesa-laravel-api-tool-kit-laravel-api-tool-kit.html) | 59 | 532 ★ | active |
-| 39 | [Launchdarkly · launchdarkly](https://tashan.sh/capability/plugin-launchdarkly-ai-tooling-launchdarkly.html) | 59 | 20 ★ | active |
-| 40 | [Metro](https://tashan.sh/capability/plugin-steve228uk-metro-mcp-metro-mcp.html) | 59 | 73 ★ | active |
+| 22 | [Extension Dev](https://tashan.sh/capability/pkg-extension-dev-mcp.html) | 69 | 1k/wk | active |
+| 23 | [Quarkus Agent](https://tashan.sh/capability/plugin-quarkusio-quarkus-agent-mcp-quarkus-agent.html) | 68 | 45 ★ | active |
+| 24 | [Sfmc](https://tashan.sh/capability/pkg-mcp-server-sfmc.html) | 66 | 758/wk | active |
+| 25 | [Auth0 · auth0](https://tashan.sh/capability/plugin-auth0-agent-skills-auth0.html) | 65 | 40 ★ | active |
+| 26 | [Workos](https://tashan.sh/capability/plugin-workos-skills-workos.html) | 65 | 43 ★ | active |
+| 27 | [Salesforce Metadata](https://tashan.sh/capability/pkg-salesforce-metadata-mcp.html) | 65 | 746/wk | active |
+| 28 | [Postman · postman-devrel](https://tashan.sh/capability/plugin-postman-devrel-postman-claude-code-plugin-postman.html) | 64 | 34 ★ | active |
+| 29 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 64 | 167 ★ | active |
+| 30 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 63 | 22 ★ | active |
+| 31 | [Twilio Developer Kit](https://tashan.sh/capability/plugin-twilio-ai-twilio-developer-kit.html) | 62 | 26 ★ | active |
+| 32 | [Tricorder](https://tashan.sh/capability/plugin-tweag-tricorder-tricorder.html) | 62 | 38 ★ | active |
+| 33 | [Insforge · insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 61 | 33 ★ | active |
+| 34 | [Pdca Framework](https://tashan.sh/capability/plugin-kenjudy-pdca-framework-pdca-framework.html) | 61 | 41 ★ | active |
+| 35 | [Delphi Dev](https://tashan.sh/capability/plugin-adrianosantostreina-delphi-dev-delphi-dev.html) | 60 | 71 ★ | active |
+| 36 | [Mercadopago](https://tashan.sh/capability/plugin-mercadopago-mercadopago-claude-marketplace-mercadopago.html) | 59 | 24 ★ | active |
+| 37 | [Harness Kit](https://tashan.sh/capability/plugin-romabeckman-harness-kit-harness-kit.html) | 59 | 25 ★ | active |
+| 38 | [Helius](https://tashan.sh/capability/plugin-helius-labs-core-ai-helius.html) | 59 | 24 ★ | active |
+| 39 | [Laravel API Tool Kit](https://tashan.sh/capability/plugin-ahmedesa-laravel-api-tool-kit-laravel-api-tool-kit.html) | 59 | 532 ★ | active |
+| 40 | [Launchdarkly · launchdarkly](https://tashan.sh/capability/plugin-launchdarkly-ai-tooling-launchdarkly.html) | 59 | 20 ★ | active |
 
-Showing the top 40 of 248. The full ranked shelf is at https://tashan.sh/task/application-development.html.
+Showing the top 40 of 249. The full ranked shelf is at https://tashan.sh/task/application-development.html.
 
 ## What these numbers are not
 

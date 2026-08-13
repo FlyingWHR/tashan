@@ -35,24 +35,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 52 | 12 ★ | active |
 | 23 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
 | 24 | [Jenkins · mcpland](https://tashan.sh/capability/pkg-jenkins-mcp.html) | 41 | 725/wk | active |
-| 25 | [GCP](https://tashan.sh/capability/pkg-gcp-mcp.html) | 19 | 4k/wk | abandoned |
-| 26 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
-| 27 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 84 | 14k/wk | active |
-| 28 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 2 marketplaces | active |
-| 29 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 3 marketplaces | active |
-| 30 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
-| 31 | [Rr](https://tashan.sh/capability/plugin-rileyhilliard-rr-rr.html) | 63 | 194 ★ | active |
-| 32 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 61 | 85 ★ | active |
-| 33 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 61 | 40 ★ | active |
-| 34 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 61 | 40 ★ | active |
-| 35 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 50 | 13 ★ | active |
-| 36 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 49 | 45 ★ | active |
-| 37 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
-| 38 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 48 | 1 ★ | active |
-| 39 | [Followrabbit](https://tashan.sh/capability/plugin-followrabbit-ai-awesome-rabbit-followrabbit.html) | 48 | 2 ★ | active |
-| 40 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 48 | 6 ★ | active |
+| 25 | [SSH · tufantunc](https://tashan.sh/capability/pkg-ssh-mcp.html) | 39 | 1k/wk | abandoned |
+| 26 | [GCP](https://tashan.sh/capability/pkg-gcp-mcp.html) | 19 | 4k/wk | abandoned |
+| 27 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
+| 28 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 84 | 14k/wk | active |
+| 29 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 2 marketplaces | active |
+| 30 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 3 marketplaces | active |
+| 31 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
+| 32 | [Rr](https://tashan.sh/capability/plugin-rileyhilliard-rr-rr.html) | 63 | 194 ★ | active |
+| 33 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 61 | 85 ★ | active |
+| 34 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 61 | 40 ★ | active |
+| 35 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 61 | 40 ★ | active |
+| 36 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 50 | 13 ★ | active |
+| 37 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 49 | 45 ★ | active |
+| 38 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
+| 39 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 48 | 1 ★ | active |
+| 40 | [Followrabbit](https://tashan.sh/capability/plugin-followrabbit-ai-awesome-rabbit-followrabbit.html) | 48 | 2 ★ | active |
 
-Showing the top 40 of 167. The full ranked shelf is at https://tashan.sh/task/infrastructure-and-deployment.html.
+Showing the top 40 of 168. The full ranked shelf is at https://tashan.sh/task/infrastructure-and-deployment.html.
 
 ## What these numbers are not
 

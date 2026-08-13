@@ -17,42 +17,42 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 50 | 12 ★ | active |
 | 5 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 66 | 68 ★ | active |
 | 6 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 65 | 452 ★ | active |
-| 7 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 52 | 20 ★ | active |
-| 8 | [Mako AI](https://tashan.sh/capability/plugin-drhalto-agentmako-mako-ai.html) | 51 | 51 ★ | active |
-| 9 | [Pixeltable](https://tashan.sh/capability/plugin-pixeltable-pixeltable-skill-pixeltable.html) | 50 | 5 ★ | active |
-| 10 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 65 | 104 ★ | active |
-| 11 | [Qmd Ja](https://tashan.sh/capability/plugin-joycodetech-qmd-ja-qmd-ja.html) | 50 | 3 ★ | active |
-| 12 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 49 | 28 ★ | active |
-| 13 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 48 | 20 ★ | active |
-| 14 | [Zilliz](https://tashan.sh/capability/plugin-zilliztech-zilliz-plugin-zilliz.html) | 46 | 3 ★ | active |
-| 15 | [Gnosis](https://tashan.sh/capability/plugin-nicholasglazer-gnosis-mcp-gnosis-mcp.html) | 46 | 25 ★ | active |
-| 16 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 46 | 3 ★ | active |
-| 17 | [Sap AI Core](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-ai-core.html) | 42 | 1 marketplaces | — |
-| 18 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 40 | 1 marketplaces | active |
-| 19 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | not scored | 1 repos | active |
-| 20 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | not scored | 1 repos | active |
-| 21 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 69 | 402 ★ | active |
-| 22 | [Loki Mode](https://tashan.sh/capability/pkg-loki-mode.html) | 76 | 24k/wk | active |
-| 23 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 74 | 3k ★ | active |
-| 24 | [Local RAG](https://tashan.sh/capability/pkg-mcp-local-rag.html) | 71 | 4k/wk | active |
-| 25 | [Prism](https://tashan.sh/capability/pkg-prism-mcp-server.html) | 69 | 2k/wk | active |
-| 26 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 69 | 1k/wk | active |
-| 27 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 68 | 594/wk | active |
-| 28 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
-| 29 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 73 | 6k/wk | active |
-| 30 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
-| 31 | [Paparats – Local Semantic Code Search](https://tashan.sh/capability/pkg-paparats-cli.html) | 70 | 2k/wk | active |
-| 32 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 69 | 2k/wk | active |
-| 33 | [Sciverse](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 69 | 1k/wk | active |
-| 34 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 65 | 660/wk | active |
-| 35 | [Engram Wiki](https://tashan.sh/capability/pkg-engram-wiki-mcp.html) | 64 | 639/wk | active |
-| 36 | [Cortex](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 59 | 153/wk | active |
-| 37 | [Neuromcp](https://tashan.sh/capability/pkg-neuromcp.html) | 55 | 146/wk | active |
-| 38 | [API Docs](https://tashan.sh/capability/pkg-imagin-studio-api-docs-mcp.html) | 51 | 64/wk | active |
-| 39 | [Gctrl](https://tashan.sh/capability/pkg-gctrl-mcp.html) | 45 | 39/wk | active |
-| 40 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow.html) | 73 | 10k/wk | active |
+| 7 | [Airweave Mcp Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 61 | 1k/wk | active |
+| 8 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 52 | 20 ★ | active |
+| 9 | [Mako AI](https://tashan.sh/capability/plugin-drhalto-agentmako-mako-ai.html) | 51 | 51 ★ | active |
+| 10 | [Pixeltable](https://tashan.sh/capability/plugin-pixeltable-pixeltable-skill-pixeltable.html) | 50 | 5 ★ | active |
+| 11 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 65 | 104 ★ | active |
+| 12 | [Qmd Ja](https://tashan.sh/capability/plugin-joycodetech-qmd-ja-qmd-ja.html) | 50 | 3 ★ | active |
+| 13 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 49 | 28 ★ | active |
+| 14 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 48 | 20 ★ | active |
+| 15 | [Zilliz](https://tashan.sh/capability/plugin-zilliztech-zilliz-plugin-zilliz.html) | 46 | 3 ★ | active |
+| 16 | [Gnosis](https://tashan.sh/capability/plugin-nicholasglazer-gnosis-mcp-gnosis-mcp.html) | 46 | 25 ★ | active |
+| 17 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 46 | 3 ★ | active |
+| 18 | [Sap AI Core](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-ai-core.html) | 42 | 1 marketplaces | — |
+| 19 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 40 | 1 marketplaces | active |
+| 20 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | not scored | 1 repos | active |
+| 21 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | not scored | 1 repos | active |
+| 22 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 69 | 402 ★ | active |
+| 23 | [Loki Mode](https://tashan.sh/capability/pkg-loki-mode.html) | 76 | 24k/wk | active |
+| 24 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 74 | 3k ★ | active |
+| 25 | [Local RAG](https://tashan.sh/capability/pkg-mcp-local-rag.html) | 71 | 4k/wk | active |
+| 26 | [Prism](https://tashan.sh/capability/pkg-prism-mcp-server.html) | 69 | 2k/wk | active |
+| 27 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 69 | 1k/wk | active |
+| 28 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 68 | 594/wk | active |
+| 29 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
+| 30 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 73 | 6k/wk | active |
+| 31 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
+| 32 | [Paparats – Local Semantic Code Search](https://tashan.sh/capability/pkg-paparats-cli.html) | 70 | 2k/wk | active |
+| 33 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 69 | 2k/wk | active |
+| 34 | [Sciverse](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 69 | 1k/wk | active |
+| 35 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 65 | 660/wk | active |
+| 36 | [Engram Wiki](https://tashan.sh/capability/pkg-engram-wiki-mcp.html) | 64 | 639/wk | active |
+| 37 | [Cortex](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 59 | 153/wk | active |
+| 38 | [Neuromcp](https://tashan.sh/capability/pkg-neuromcp.html) | 55 | 146/wk | active |
+| 39 | [API Docs](https://tashan.sh/capability/pkg-imagin-studio-api-docs-mcp.html) | 51 | 64/wk | active |
+| 40 | [Gctrl](https://tashan.sh/capability/pkg-gctrl-mcp.html) | 45 | 39/wk | active |
 
-Showing the top 40 of 82. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
+Showing the top 40 of 83. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
 
 ## What these numbers are not
 

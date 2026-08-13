@@ -1,0 +1,39 @@
+{
+  "_why": "A final sweep of what was still untagged inside the top 1,000 after the three demand bands. Same method, same restraint.",
+  "_note": "korean-law-mcp and courtlistener were skipped in an earlier pass and are tagged here for CONSISTENCY: Austrian federal law and US state legislatures were already mapped to regulatory-compliance, and leaving two other statute-and-case-law servers off the same shelf would have been an inconsistency, not caution.",
+
+  "pkg:@frappe-inspector/mcp": ["code-review"],
+  "pkg:tilth": ["code-review"],
+  "pkg:@neat.is/mcp": ["code-review", "observability"],
+  "pkg:bugsnag-mcp-server": ["observability"],
+
+  "pkg:duckduckgo-mcp-server": ["web-research"],
+  "pkg:search1api-mcp": ["web-research"],
+  "pkg:@blockrun/mcp": ["web-research"],
+  "pkg:airweave-mcp-search": ["retrieval-systems"],
+
+  "pkg:mcp-parser": ["agent-development"],
+  "pkg:create-mcp-use-app": ["agent-development"],
+  "pkg:@papi-ai/server": ["agent-development"],
+  "pkg:@mcpmarket/mcp-auto-install": ["agent-configuration"],
+  "pkg:@jetbrains/mcp-proxy": ["agent-configuration"],
+  "pkg:aiterm-mcp": ["agent-configuration"],
+  "pkg:privateer-agent": ["agent-configuration"],
+
+  "pkg:teable-mcp": ["database-access"],
+  "pkg:ssh-mcp": ["infrastructure-and-deployment"],
+  "pkg:@extension.dev/mcp": ["application-development"],
+
+  "pkg:deepwiki-mcp": ["technical-documentation"],
+  "pkg:seekstone": ["knowledge-management"],
+  "pkg:gogcli-mcp-docs": ["document-production"],
+  "pkg:gogcli-mcp-slides": ["document-production"],
+  "pkg:drawio-mcp-server": ["visual-design", "document-production"],
+  "pkg:uiflowchartcreator": ["visual-design"],
+
+  "pkg:@firfi/huly-mcp": ["project-management"],
+  "pkg:omnifocus-mcp-enhanced": ["project-management"],
+
+  "pkg:korean-law-mcp": ["regulatory-compliance"],
+  "pkg:@cyanheads/courtlistener-mcp-server": ["regulatory-compliance"]
+}

@@ -43,16 +43,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [Mermaid · chujianyun](https://tashan.sh/capability/plugin-chujianyun-skills-mermaid.html) | 40 | 1 marketplaces | active |
 | 31 | [GitHub Code Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-github-code-interpreter.html) | 40 | 1 marketplaces | active |
 | 32 | [Kroki Diagrams](https://tashan.sh/capability/plugin-smoldrago-kroki-diagrams-kroki-diagrams.html) | 39 | 5 ★ | active |
-| 33 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | not scored | 1 repos | active |
-| 34 | [Docx · anthropics](https://tashan.sh/capability/skill-anthropics-docx.html) | not scored | 1 repos | active |
-| 35 | [PDF](https://tashan.sh/capability/skill-anthropics-pdf.html) | not scored | 1 repos | active |
-| 36 | [Code To Prd](https://tashan.sh/capability/skill-alirezarezvani-code-to-prd.html) | not scored | 1 repos | active |
-| 37 | [Business Operations Skills](https://tashan.sh/capability/skill-alirezarezvani-business-operations-skills.html) | not scored | 1 repos | active |
-| 38 | [Knowledge Ops](https://tashan.sh/capability/skill-alirezarezvani-knowledge-ops.html) | not scored | 1 repos | active |
-| 39 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | not scored | 1 repos | active |
-| 40 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | not scored | 1 repos | active |
+| 33 | [Deepwiki · deepwiki-mcp](https://tashan.sh/capability/pkg-deepwiki-mcp.html) | 21 | 1k/wk | abandoned |
+| 34 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | not scored | 1 repos | active |
+| 35 | [Docx · anthropics](https://tashan.sh/capability/skill-anthropics-docx.html) | not scored | 1 repos | active |
+| 36 | [PDF](https://tashan.sh/capability/skill-anthropics-pdf.html) | not scored | 1 repos | active |
+| 37 | [Code To Prd](https://tashan.sh/capability/skill-alirezarezvani-code-to-prd.html) | not scored | 1 repos | active |
+| 38 | [Business Operations Skills](https://tashan.sh/capability/skill-alirezarezvani-business-operations-skills.html) | not scored | 1 repos | active |
+| 39 | [Knowledge Ops](https://tashan.sh/capability/skill-alirezarezvani-knowledge-ops.html) | not scored | 1 repos | active |
+| 40 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 54. The full ranked shelf is at https://tashan.sh/task/technical-documentation.html.
+Showing the top 40 of 55. The full ranked shelf is at https://tashan.sh/task/technical-documentation.html.
 
 ## What these numbers are not
 

@@ -10,8 +10,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Knowledge management** — [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) · tashan score 79
-- **Web scraping** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 86
-- **Web research** — [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) · tashan score 71
+- **Web research** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 86
+- **Web scraping** — [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) · tashan score 71
 - **Literature review** — [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) · tashan score 76
 - **Scientific research** — [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) · tashan score 69
 
@@ -49,18 +49,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 80 | 57k ★ | active |
 | 29 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
 | 30 | [Notion · suekou](https://tashan.sh/capability/pkg-suekou-mcp-notion-server.html) | 73 | 733/wk | active |
-| 31 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 70 | 2k/wk | active |
-| 32 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
-| 33 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 69 | 284 ★ | active |
-| 34 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 69 | 2k/wk | active |
-| 35 | [Slack](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 68 | 86 ★ | active |
-| 36 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 68 | 154 ★ | active |
-| 37 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 68 | 212 ★ | active |
-| 38 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 67 | 433 ★ | active |
-| 39 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 67 | 78 ★ | active |
-| 40 | [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) | 66 | 836/wk | active |
+| 31 | [Blockrun](https://tashan.sh/capability/pkg-blockrun-mcp.html) | 72 | 1k/wk | active |
+| 32 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 70 | 2k/wk | active |
+| 33 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
+| 34 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 69 | 284 ★ | active |
+| 35 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 69 | 2k/wk | active |
+| 36 | [Slack](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 68 | 86 ★ | active |
+| 37 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 68 | 154 ★ | active |
+| 38 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 68 | 212 ★ | active |
+| 39 | [Seekstone](https://tashan.sh/capability/pkg-seekstone.html) | 68 | 1k/wk | active |
+| 40 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 67 | 433 ★ | active |
 
-Showing the top 40 of 362. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 366. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

@@ -18,47 +18,47 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Ato](https://tashan.sh/capability/pkg-ato-mcp.html) | 75 | 83k/wk | active |
-| 2 | [Zscaler](https://tashan.sh/capability/plugin-zscaler-zscaler-mcp-server-zscaler.html) | 66 | 41 ★ | active |
-| 3 | [Openstates](https://tashan.sh/capability/pkg-cyanheads-openstates-mcp-server.html) | 66 | 832/wk | active |
-| 4 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 60 | 23 ★ | active |
-| 5 | [Agentic Security](https://tashan.sh/capability/plugin-clear-capabilities-agentic-security-agentic-security.html) | 53 | 73 ★ | active |
-| 6 | [Jfrog](https://tashan.sh/capability/plugin-jfrog-claude-plugin-jfrog.html) | 51 | 4 ★ | active |
-| 7 | [Osint](https://tashan.sh/capability/pkg-osint-mcp-server.html) | 40 | 857/wk | active |
-| 8 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 74 | 2k/wk | active |
-| 9 | [Shieldcortex](https://tashan.sh/capability/pkg-shieldcortex.html) | 72 | 3k/wk | active |
-| 10 | [NPM Sentinel](https://tashan.sh/capability/pkg-nekzus-mcp-server.html) | 71 | 4k/wk | active |
-| 11 | [AI Agent Firewall](https://tashan.sh/capability/pkg-fidacy-mcp.html) | 70 | 2k/wk | active |
-| 12 | [Sonarqube](https://tashan.sh/capability/plugin-sonarsource-sonarqube-agent-plugins-sonarqube.html) | 68 | 98 ★ | active |
-| 13 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 68 | 326 ★ | active |
-| 14 | [Onepassword Agent](https://tashan.sh/capability/pkg-onepassword-agent-mcp.html) | 67 | 2k/wk | active |
-| 15 | [Armorclaude](https://tashan.sh/capability/plugin-armoriq-armorclaude-armorclaude.html) | 66 | 44 ★ | active |
-| 16 | [Qodo](https://tashan.sh/capability/plugin-qodo-ai-qodo-skills-qodo.html) | 65 | 44 ★ | active |
-| 17 | [Nist Nvd](https://tashan.sh/capability/pkg-cyanheads-nist-nvd-mcp-server.html) | 65 | 728/wk | active |
-| 18 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 65 | 284 ★ | active |
-| 19 | [Ris Austria](https://tashan.sh/capability/pkg-cyanheads-ris-austria-mcp-server.html) | 65 | 822/wk | active |
-| 20 | [Js Reverse](https://tashan.sh/capability/pkg-js-reverse-mcp.html) | 64 | 950/wk | active |
-| 21 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 63 | 22 ★ | active |
-| 22 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 60 | 27 ★ | active |
-| 23 | [Malchela](https://tashan.sh/capability/plugin-dwmetz-malchela-malchela.html) | 60 | 114 ★ | active |
-| 24 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 57 | 21 ★ | active |
-| 25 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
-| 26 | [Descope Skills](https://tashan.sh/capability/plugin-descope-skills-descope-skills.html) | 53 | 12 ★ | active |
-| 27 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 45 | 2k/wk | active |
-| 28 | [Labor Law](https://tashan.sh/capability/pkg-labor-law-mcp.html) | 41 | 2k/wk | active |
-| 29 | [Hourei](https://tashan.sh/capability/pkg-hourei-mcp-server.html) | 32 | 2k/wk | abandoned |
-| 30 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 60 | 43 ★ | active |
-| 31 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
-| 32 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 56 | 11 ★ | active |
-| 33 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 55 | 12 ★ | active |
-| 34 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
-| 35 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 49 | 39 ★ | active |
-| 36 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 48 | 1 ★ | active |
-| 37 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 48 | 3 ★ | active |
-| 38 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 47 | 2 ★ | active |
-| 39 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 47 | 5 ★ | active |
-| 40 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 47 | 6 ★ | active |
+| 2 | [Korean Law](https://tashan.sh/capability/pkg-korean-law-mcp.html) | 72 | 4k/wk | active |
+| 3 | [Courtlistener](https://tashan.sh/capability/pkg-cyanheads-courtlistener-mcp-server.html) | 68 | 1k/wk | active |
+| 4 | [Zscaler](https://tashan.sh/capability/plugin-zscaler-zscaler-mcp-server-zscaler.html) | 66 | 41 ★ | active |
+| 5 | [Openstates](https://tashan.sh/capability/pkg-cyanheads-openstates-mcp-server.html) | 66 | 832/wk | active |
+| 6 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 60 | 23 ★ | active |
+| 7 | [Agentic Security](https://tashan.sh/capability/plugin-clear-capabilities-agentic-security-agentic-security.html) | 53 | 73 ★ | active |
+| 8 | [Jfrog](https://tashan.sh/capability/plugin-jfrog-claude-plugin-jfrog.html) | 51 | 4 ★ | active |
+| 9 | [Osint](https://tashan.sh/capability/pkg-osint-mcp-server.html) | 40 | 857/wk | active |
+| 10 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 74 | 2k/wk | active |
+| 11 | [Shieldcortex](https://tashan.sh/capability/pkg-shieldcortex.html) | 72 | 3k/wk | active |
+| 12 | [NPM Sentinel](https://tashan.sh/capability/pkg-nekzus-mcp-server.html) | 71 | 4k/wk | active |
+| 13 | [AI Agent Firewall](https://tashan.sh/capability/pkg-fidacy-mcp.html) | 70 | 2k/wk | active |
+| 14 | [Sonarqube](https://tashan.sh/capability/plugin-sonarsource-sonarqube-agent-plugins-sonarqube.html) | 68 | 98 ★ | active |
+| 15 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 68 | 326 ★ | active |
+| 16 | [Onepassword Agent](https://tashan.sh/capability/pkg-onepassword-agent-mcp.html) | 67 | 2k/wk | active |
+| 17 | [Armorclaude](https://tashan.sh/capability/plugin-armoriq-armorclaude-armorclaude.html) | 66 | 44 ★ | active |
+| 18 | [Qodo](https://tashan.sh/capability/plugin-qodo-ai-qodo-skills-qodo.html) | 65 | 44 ★ | active |
+| 19 | [Nist Nvd](https://tashan.sh/capability/pkg-cyanheads-nist-nvd-mcp-server.html) | 65 | 728/wk | active |
+| 20 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 65 | 284 ★ | active |
+| 21 | [Ris Austria](https://tashan.sh/capability/pkg-cyanheads-ris-austria-mcp-server.html) | 65 | 822/wk | active |
+| 22 | [Js Reverse](https://tashan.sh/capability/pkg-js-reverse-mcp.html) | 64 | 950/wk | active |
+| 23 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 63 | 22 ★ | active |
+| 24 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 60 | 27 ★ | active |
+| 25 | [Malchela](https://tashan.sh/capability/plugin-dwmetz-malchela-malchela.html) | 60 | 114 ★ | active |
+| 26 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 57 | 21 ★ | active |
+| 27 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
+| 28 | [Descope Skills](https://tashan.sh/capability/plugin-descope-skills-descope-skills.html) | 53 | 12 ★ | active |
+| 29 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 45 | 2k/wk | active |
+| 30 | [Labor Law](https://tashan.sh/capability/pkg-labor-law-mcp.html) | 41 | 2k/wk | active |
+| 31 | [Hourei](https://tashan.sh/capability/pkg-hourei-mcp-server.html) | 32 | 2k/wk | abandoned |
+| 32 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 60 | 43 ★ | active |
+| 33 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
+| 34 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 56 | 11 ★ | active |
+| 35 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 55 | 12 ★ | active |
+| 36 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
+| 37 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 49 | 39 ★ | active |
+| 38 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 48 | 1 ★ | active |
+| 39 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 48 | 3 ★ | active |
+| 40 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 47 | 2 ★ | active |
 
-Showing the top 40 of 194. The full ranked shelf is at https://tashan.sh/role/security.html.
+Showing the top 40 of 196. The full ranked shelf is at https://tashan.sh/role/security.html.
 
 ## What these numbers are not
 
