@@ -141,8 +141,94 @@ def top_table(caps, kind_filter=None, n=10):
     body.append("</tbody></table></div></div>")
     return "".join(body)
 
+def official_deprecated(caps):
+    """The reference servers an agent will reach for from memory, and which of them are dead.
+
+    THE SHARPEST DEMONSTRATION THIS PROJECT HAS. Every model's training data is full of
+    `@modelcontextprotocol/server-github` and `server-postgres` — they were THE examples for two
+    years — and npm now marks them "Package no longer supported". An agent answering "add GitHub
+    access" from memory installs a deprecated package and has no way to know. That is not a
+    hypothetical failure of unmeasured recommendation; it is the most common one, and it is
+    checkable in one request.
+
+    BUILT FROM THE EXPORT, NEVER HARDCODED. A fixed list of dead packages is a claim with an expiry
+    date: the day one is revived or another is retired, the page is publishing something false about
+    named software. This reads `npm_deprecated` on the rows we measure nightly, so the article is
+    true by construction or it does not render at all.
+    """
+    off = [c for c in caps if (c.get("npm_pkg") or "").startswith("@modelcontextprotocol/server-")]
+    dead = sorted((c for c in off if c.get("npm_deprecated")), key=lambda c: c["npm_pkg"])
+    live = sorted((c for c in off if not c.get("npm_deprecated")), key=lambda c: c["npm_pkg"])
+    return dead, live
+
+
+def deprecated_article(caps):
+    dead, live = official_deprecated(caps)
+    # Fewer than two is not a story worth a page, and a page that renders with an empty table is
+    # worse than no page. Return None and the article simply is not published that day.
+    if len(dead) < 2:
+        return None
+    names = ", ".join("<code>" + esc(c["npm_pkg"]) + "</code>" for c in dead[:6])
+    rows = "".join(
+        "<tr><td><code>" + esc(c["npm_pkg"]) + "</code></td><td class=\"mono\">"
+        + (esc(c.get("npm_latest_version") or "—")) + "</td><td>"
+        + ('<a class="link" href="/capability/' + esc(c["slug"]) + '.html">measurement</a>'
+           if c.get("slug") else "&mdash;")
+        + "</td></tr>" for c in dead)
+    live_line = (", ".join("<code>" + esc(c["npm_pkg"]) + "</code>" for c in live)
+                 if live else "none of them")
+    return {
+        "slug": "official-mcp-servers-deprecated", "lang": "en",
+        "title": "Which official MCP reference servers are deprecated?",
+        "desc": ("npm marks " + str(len(dead)) + " of the @modelcontextprotocol reference servers "
+                 "'no longer supported'. Which ones, what still ships, and how to check before you "
+                 "install — measured nightly, every number linked to its source."),
+        "quick": ("npm currently marks <b>" + str(len(dead)) + "</b> of the "
+                  "<code>@modelcontextprotocol/server-*</code> reference servers as "
+                  "<b>deprecated &mdash; &ldquo;Package no longer supported&rdquo;</b>: " + names
+                  + ". Still published without a deprecation notice: " + live_line + ". "
+                  "These were the canonical examples for two years, so they are what an assistant "
+                  "recommends from memory."),
+        "sections": [
+            {"q": "Which ones does npm mark as no longer supported?",
+             "body": '<div class="tablewrap"><table class="tbl"><thead><tr><th>package</th>'
+                     "<th>latest</th><th>evidence</th></tr></thead><tbody>" + rows
+                     + "</tbody></table></div>"},
+            {"q": "Why does an AI assistant still recommend them?",
+             "body": "<p>Because they were the reference implementation when its training data was "
+                     "collected. A model has no way to observe a deprecation flag published "
+                     "afterwards, and npm will install a deprecated package without failing &mdash; "
+                     "it prints a warning most agents never surface.</p>"},
+            {"q": "How do I check before installing?",
+             "body": "<p>One request, no account:</p>"
+                     "<pre class=\"snip\"><code>curl -s 'https://tashan.sh/v0.1/lookup?name=@modelcontextprotocol/server-github'</code></pre>"
+                     "<p>Or hand over a whole config and get every risk back at once with "
+                     "<code>POST /v0.1/audit</code>. Both are free and need no account.</p>"},
+            {"q": "What should be used instead?",
+             "body": "<p>tashan does not pick a favourite by hand. The task hubs rank what is "
+                     "measured and maintained for each job &mdash; and the ranking excludes anything "
+                     "carrying a live advisory or a deprecation notice, which is exactly how these "
+                     "packages drop out of it.</p>"},
+        ],
+        "howto": ["Look up the package before installing it.",
+                  "Check for a deprecation notice and for advisories at the version you would get.",
+                  "If it is deprecated, pick a replacement from the ranked list for that job.",
+                  "Pin the version you verified, so a later release cannot change under you."],
+        "faq": [("Does deprecated mean unsafe?",
+                 "No. It means the author has said they are no longer supporting it, so bugs and "
+                 "vulnerabilities will not be fixed. Deprecation and a security advisory are "
+                 "separate facts and tashan reports them separately."),
+                ("Is this list current?",
+                 "It is regenerated from npm every night. The page only renders the packages "
+                 "carrying a deprecation notice at the time of the last run.")],
+    }
+
+
 def build_articles(caps):
     A = []
+    dep = deprecated_article(caps)
+    if dep:
+        A.append(dep)
     # 1. config-location cluster (EN) — HowTo + FAQ, exact path first
     A.append({
         "slug": "where-are-claude-skills-stored", "lang": "en",
