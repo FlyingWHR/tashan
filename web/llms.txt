@@ -128,6 +128,7 @@ An absent value means UNMEASURED and never means zero, absent risk, or poor qual
 - [/v0.1/scores](https://tashan.sh/v0.1/scores) — compact lookup, `name -> [score, vitality, evidence, slug]`. This is the BULK feed — to check ONE package use /v0.1/lookup instead. An absent name is UNMEASURED, not bad.
 - [/v0.1/servers](https://tashan.sh/v0.1/servers) — full records, byte-compatible with the MCP registry shape; measurement under the `sh.tashan/measurement` key in `_meta`.
 - [/skill/SKILL.md](https://tashan.sh/skill/SKILL.md) — install tashan as a capability and call it when choosing what to install.
+- `POST /v0.1/kit` — name a job (`{"task": "web-scraping"}`) and get the ranked shortlist for it, **free**, with everything we excluded and why. Add `{"kit": true}` to have it assembled: each pick pinned to the version the advisory scan actually cleared, plus a ready-to-paste config for your host. We do NOT sell anyone's skill or server content — every pick links to its own source and licence; what is paid for is the selection, the verified pin and the assembly.
 - `POST /v0.1/audit` — send the servers in a config, get back every risk we hold about each one: advisories at the version installed today, deprecation, archived repos, a maintainer count that fell to one, registry removal. **Free, no account, no payment.** Add `{"history": true}` for the score series and the direction of travel behind each row, which is the paid half — a licence, or per call with x402.
 
 ## What costs money
@@ -139,7 +140,7 @@ Everything measured is free and needs no account: every tashan score and its inp
 - Buy: https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d
 - Terms and the full split: https://tashan.sh/pricing.html
 - Paid endpoints answer an unauthenticated caller with **HTTP 402** and a JSON body carrying the price, the checkout URL and the free endpoints that answer the same question — so an agent never has to guess.
-- **Paying as software, not as a subscriber:** those same 402s speak [x402](https://github.com/coinbase/x402) v2 — a `PAYMENT-REQUIRED` header and an `accepts` array — so a caller with a wallet can pay per request instead of holding an account. `POST /v0.1/audit` costs $0.05 a call that way; one capability's history costs $0.01. The `accepts` array is absent until settlement is live on this deployment, because quoting a payment option we cannot verify would waste your signature.
+- **Paying as software, not as a subscriber:** those same 402s speak [x402](https://github.com/coinbase/x402) v2 — a `PAYMENT-REQUIRED` header and an `accepts` array — so a caller with a wallet can pay per request instead of holding an account. `POST /v0.1/kit` costs $0.25 a call that way, `POST /v0.1/audit` $0.05, and one capability's history $0.01. The `accepts` array is absent until settlement is live on this deployment, because quoting a payment option we cannot verify would waste your signature.
 
 Nobody can pay to change a score, a rank, or a listing, and no listing is paid. If that were ever untrue the measurement would be worthless, so it is the one rule with a test of its own.
 

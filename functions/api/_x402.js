@@ -43,6 +43,12 @@ export const PRICED = {
     description: "Full advisory detail for one capability: which advisory, what the install script "
                + "runs, and the version that fixes it.",
   },
+  "capability-kit": {
+    usd: 0.25,
+    atomic: "250000",
+    description: "A ready-to-run kit for one job: which capabilities to install, pinned to the "
+               + "version the advisory scan actually cleared, with a config for your host.",
+  },
   "config-audit": {
     usd: 0.05,
     atomic: "50000",

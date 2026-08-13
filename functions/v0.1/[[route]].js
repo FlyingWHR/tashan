@@ -36,6 +36,13 @@ const PRO = {
   start: "https://tashan.sh/pricing.html",
   // The endpoint an agent should actually reach for. A per-capability lookup answers "is this one
   // safe"; an agent maintaining a stack has a LIST, and that question is what we sell.
+  kit: {
+    endpoint: "POST https://tashan.sh/v0.1/kit",
+    body: { task: "<task slug>", client: "claude-code", kit: false },
+    free: "The ranked shortlist for a job, and everything excluded, with reasons.",
+    paid: "`kit: true` assembles it: versions pinned to the release the advisory scan cleared, and " +
+          "a config for your host. We do not sell anyone's content — each pick links to its source.",
+  },
   audit: {
     endpoint: "POST https://tashan.sh/v0.1/audit",
     body: { servers: ["<name or id>", "…"], history: false },

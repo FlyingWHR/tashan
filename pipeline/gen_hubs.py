@@ -657,7 +657,8 @@ def pricing_block():
         "- **Paying as software, not as a subscriber:** those same 402s speak "
         "[x402](https://github.com/coinbase/x402) v2 — a `PAYMENT-REQUIRED` header and an `accepts` "
         "array — so a caller with a wallet can pay per request instead of holding an account. "
-        "`POST /v0.1/audit` costs $0.05 a call that way; one capability's history costs $0.01. "
+        "`POST /v0.1/kit` costs $0.25 a call that way, `POST /v0.1/audit` $0.05, and one "
+        "capability's history $0.01. "
         "The `accepts` array is absent until settlement is live on this deployment, because "
         "quoting a payment option we cannot verify would waste your signature.",
         "",
@@ -764,6 +765,12 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
           "registry shape; measurement under the `sh.tashan/measurement` key in `_meta`.",
           "- [/skill/SKILL.md](" + BASE + "/skill/SKILL.md) — install tashan as a capability and call it "
           "when choosing what to install.",
+          "- `POST /v0.1/kit` — name a job (`{\"task\": \"web-scraping\"}`) and get the ranked "
+          "shortlist for it, **free**, with everything we excluded and why. Add `{\"kit\": true}` "
+          "to have it assembled: each pick pinned to the version the advisory scan actually "
+          "cleared, plus a ready-to-paste config for your host. We do NOT sell anyone's skill or "
+          "server content — every pick links to its own source and licence; what is paid for is the "
+          "selection, the verified pin and the assembly.",
           "- `POST /v0.1/audit` — send the servers in a config, get back every risk we hold about "
           "each one: advisories at the version installed today, deprecation, archived repos, a "
           "maintainer count that fell to one, registry removal. **Free, no account, no payment.** "

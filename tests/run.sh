@@ -174,6 +174,7 @@ echo; echo "── licence gate (paywall) ────────────�
 node functions/api/license.test.mjs 2>/dev/null || fail=1
 node functions/api/_x402.test.mjs 2>/dev/null || fail=1
 node functions/v0.1/audit.test.mjs 2>/dev/null || fail=1
+node functions/v0.1/kit.test.mjs 2>/dev/null || fail=1
 
 # 5d. the account centre — who is signed in, and what of their record is safe to send back
 echo; echo "── account centre (session + record) ──────────"
