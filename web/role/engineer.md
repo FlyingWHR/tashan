@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 52 | 182 ★ | active |
 | 40 | [Temper](https://tashan.sh/capability/plugin-galando-temper-temper.html) | 51 | 13 ★ | active |
 
-Showing the top 40 of 898. The full ranked shelf is at https://tashan.sh/role/engineer.html.
+Showing the top 40 of 900. The full ranked shelf is at https://tashan.sh/role/engineer.html.
 
 ## What these numbers are not
 

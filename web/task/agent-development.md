@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Claude Session Driver](https://tashan.sh/capability/plugin-obra-claude-session-driver-claude-session-driver.html) | 62 | 102 ★ | active |
 | 40 | [Status](https://tashan.sh/capability/skill-alirezarezvani-status.html) | 55 | 10 repos | active |
 
-Showing the top 40 of 312. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
+Showing the top 40 of 313. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
 
 ## What these numbers are not
 

@@ -1,0 +1,28 @@
+{
+  "_why": "The last readable slice of untagged rows inside the top 1,000. Same method, same restraint.",
+  "_rule": "Untagged is a result. Payments, fitness trackers, Zigbee estates, Giphy, Airbnb, recipes, geocoding, train tickets and game engines are real software with no home in a 69-task taxonomy of work people do.",
+
+  "pkg:@dokploy/mcp": ["infrastructure-and-deployment"],
+  "pkg:basicdeploy-mcp": ["infrastructure-and-deployment"],
+  "pkg:aws-s3-mcp": ["infrastructure-and-deployment"],
+  "pkg:@launchdarkly/mcp-server": ["application-development"],
+
+  "pkg:envmcp": ["agent-configuration"],
+  "pkg:mimo-executor-zl-mcp": ["agent-configuration"],
+  "pkg:gm-codex": ["agent-development"],
+
+  "pkg:google-sheets-mcp": ["document-production"],
+  "pkg:gogcli-mcp-drive": ["knowledge-management"],
+  "pkg:@opitacode/dark-memory-mcp": ["knowledge-management"],
+
+  "pkg:gogcli-mcp-classroom": ["training-material"],
+  "pkg:campus-cli": ["training-material"],
+
+  "pkg:@bicharts/chart-mcp": ["dashboards-and-reporting"],
+  "pkg:@cyanheads/census-mcp-server": ["exploratory-data-analysis"],
+  "pkg:sui-analytics-mcp": ["market-analysis"],
+  "pkg:gongio-mcp": ["sales-pipeline"],
+
+  "pkg:open-compute-mcp": ["process-automation"],
+  "pkg:@kimtaeyoon83/mcp-server-youtube-transcript": ["web-research"]
+}

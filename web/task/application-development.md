@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Laravel API Tool Kit](https://tashan.sh/capability/plugin-ahmedesa-laravel-api-tool-kit-laravel-api-tool-kit.html) | 59 | 532 ★ | active |
 | 40 | [Launchdarkly · launchdarkly](https://tashan.sh/capability/plugin-launchdarkly-ai-tooling-launchdarkly.html) | 59 | 20 ★ | active |
 
-Showing the top 40 of 249. The full ranked shelf is at https://tashan.sh/task/application-development.html.
+Showing the top 40 of 250. The full ranked shelf is at https://tashan.sh/task/application-development.html.
 
 ## What these numbers are not
 

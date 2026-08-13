@@ -44,15 +44,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Comparative Landscape Brief](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-comparative-landscape-brief.html) | 43 | 1 marketplaces | active |
 | 32 | [Context7 · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-context7.html) | 42 | 1 marketplaces | — |
 | 33 | [Wikipedia · wikipedia-mcp](https://tashan.sh/capability/pkg-wikipedia-mcp.html) | 22 | 826/wk | abandoned |
-| 34 | [Deep Research](https://tashan.sh/capability/skill-alirezarezvani-deep-research.html) | not scored | 1 repos | active |
-| 35 | [Composio Search Automation](https://tashan.sh/capability/skill-composiohq-composio-search-automation.html) | not scored | 1 repos | active |
-| 36 | [Google Maps Automation](https://tashan.sh/capability/skill-composiohq-google-maps-automation.html) | not scored | 1 repos | active |
-| 37 | [YouTube Full](https://tashan.sh/capability/skill-alirezarezvani-youtube-full.html) | not scored | 1 repos | active |
-| 38 | [Research Summarizer](https://tashan.sh/capability/skill-alirezarezvani-research-summarizer.html) | not scored | 1 repos | active |
-| 39 | [Dossier · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-dossier.html) | not scored | 1 repos | active |
-| 40 | [Pulse](https://tashan.sh/capability/skill-alirezarezvani-pulse.html) | not scored | 1 repos | active |
+| 34 | [YouTube Transcript · kimtaeyoon83](https://tashan.sh/capability/pkg-kimtaeyoon83-mcp-server-youtube-transcript.html) | 14 | 1k/wk | abandoned |
+| 35 | [Deep Research](https://tashan.sh/capability/skill-alirezarezvani-deep-research.html) | not scored | 1 repos | active |
+| 36 | [Composio Search Automation](https://tashan.sh/capability/skill-composiohq-composio-search-automation.html) | not scored | 1 repos | active |
+| 37 | [Google Maps Automation](https://tashan.sh/capability/skill-composiohq-google-maps-automation.html) | not scored | 1 repos | active |
+| 38 | [YouTube Full](https://tashan.sh/capability/skill-alirezarezvani-youtube-full.html) | not scored | 1 repos | active |
+| 39 | [Research Summarizer](https://tashan.sh/capability/skill-alirezarezvani-research-summarizer.html) | not scored | 1 repos | active |
+| 40 | [Dossier · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-dossier.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 69. The full ranked shelf is at https://tashan.sh/task/web-research.html.
+Showing the top 40 of 70. The full ranked shelf is at https://tashan.sh/task/web-research.html.
 
 ## What these numbers are not
 

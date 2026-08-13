@@ -22,37 +22,37 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 72 | 426 ★ | active |
 | 10 | [Bunqueue](https://tashan.sh/capability/pkg-bunqueue.html) | 72 | 5k/wk | active |
 | 11 | [Open Computer Use](https://tashan.sh/capability/pkg-open-computer-use.html) | 69 | 1k/wk | active |
-| 12 | [Terminal Driver](https://tashan.sh/capability/pkg-terminal-driver-mcp.html) | 67 | 964/wk | active |
-| 13 | [Android Remote Control](https://tashan.sh/capability/plugin-danielealbano-android-remote-control-mcp-android-remote-control.html) | 61 | 171 ★ | active |
-| 14 | [Join Meeting](https://tashan.sh/capability/plugin-pattern-ai-labs-agentcall-join-meeting.html) | 58 | 127 ★ | active |
-| 15 | [Composio](https://tashan.sh/capability/plugin-composiohq-composio-plugin-cc-composio-mcp.html) | 54 | 7 ★ | active |
-| 16 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
-| 17 | [Conductor](https://tashan.sh/capability/plugin-conductor-oss-conductor-skills-conductor.html) | 51 | 14 ★ | active |
-| 18 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 50 | 38 ★ | active |
-| 19 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 70 | 2k/wk | active |
-| 20 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 61 | 49 ★ | active |
-| 21 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 58 | 20 ★ | active |
-| 22 | [Outlook · anasahmed07](https://tashan.sh/capability/plugin-anasahmed07-outlook-classic-mcp-outlook.html) | 50 | 10 ★ | active |
-| 23 | [Imessage · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-imessage-mcp-imessage-mcp.html) | 49 | 2 ★ | active |
-| 24 | [Loop](https://tashan.sh/capability/skill-alirezarezvani-loop.html) | 48 | 2 repos | active |
-| 25 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 48 | 6 ★ | active |
-| 26 | [Mise](https://tashan.sh/capability/plugin-brentmitchell25-mise-plugin-mise.html) | 48 | 2 ★ | active |
-| 27 | [Conversiontools](https://tashan.sh/capability/plugin-conversiontools-agent-skills-conversiontools.html) | 47 | 5 ★ | active |
-| 28 | [Shippo](https://tashan.sh/capability/plugin-goshippo-ai-shippo.html) | 47 | 1 ★ | active |
-| 29 | [Slack · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-slack-mcp-slack-mcp.html) | 47 | 1 ★ | active |
-| 30 | [Superglue](https://tashan.sh/capability/plugin-superglue-ai-cli-superglue.html) | 47 | 1 ★ | active |
-| 31 | [Klarity](https://tashan.sh/capability/plugin-klarity-ai-klarity-mcp-klarity.html) | 46 | 1 ★ | active |
-| 32 | [Kognitos](https://tashan.sh/capability/plugin-kognitos-kognitos-plugin-kognitos.html) | 46 | 1 ★ | active |
-| 33 | [Wu Whatsapp](https://tashan.sh/capability/plugin-ibrahimhajjaj-wu-cli-wu-whatsapp.html) | 45 | 14 ★ | active |
-| 34 | [Flow Studio Power Automate](https://tashan.sh/capability/plugin-ninihen1-power-automate-mcp-skills-flow-studio-power-automate.html) | 44 | 26 ★ | active |
-| 35 | [Sn](https://tashan.sh/capability/plugin-tehubersheezy-servicenow-cli-sn.html) | 44 | 5 ★ | active |
-| 36 | [Sap Btp Cias](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-cias.html) | 42 | 1 marketplaces | — |
-| 37 | [Sap Btp Integration Suite](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-integration-suite.html) | 42 | 1 marketplaces | — |
-| 38 | [Sap Btp Intelligent Situation Automation](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-intelligent-situation-automation.html) | 42 | 1 marketplaces | — |
-| 39 | [Sap Btp Job Scheduling](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-job-scheduling.html) | 42 | 1 marketplaces | — |
-| 40 | [Anthropic Administrator Automation](https://tashan.sh/capability/skill-composiohq-anthropic-administrator-automation.html) | not scored | 1 repos | active |
+| 12 | [Open Compute](https://tashan.sh/capability/pkg-open-compute-mcp.html) | 67 | 1k/wk | active |
+| 13 | [Terminal Driver](https://tashan.sh/capability/pkg-terminal-driver-mcp.html) | 67 | 964/wk | active |
+| 14 | [Android Remote Control](https://tashan.sh/capability/plugin-danielealbano-android-remote-control-mcp-android-remote-control.html) | 61 | 171 ★ | active |
+| 15 | [Join Meeting](https://tashan.sh/capability/plugin-pattern-ai-labs-agentcall-join-meeting.html) | 58 | 127 ★ | active |
+| 16 | [Composio](https://tashan.sh/capability/plugin-composiohq-composio-plugin-cc-composio-mcp.html) | 54 | 7 ★ | active |
+| 17 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
+| 18 | [Conductor](https://tashan.sh/capability/plugin-conductor-oss-conductor-skills-conductor.html) | 51 | 14 ★ | active |
+| 19 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 50 | 38 ★ | active |
+| 20 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 70 | 2k/wk | active |
+| 21 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 61 | 49 ★ | active |
+| 22 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 58 | 20 ★ | active |
+| 23 | [Outlook · anasahmed07](https://tashan.sh/capability/plugin-anasahmed07-outlook-classic-mcp-outlook.html) | 50 | 10 ★ | active |
+| 24 | [Imessage · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-imessage-mcp-imessage-mcp.html) | 49 | 2 ★ | active |
+| 25 | [Loop](https://tashan.sh/capability/skill-alirezarezvani-loop.html) | 48 | 2 repos | active |
+| 26 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 48 | 6 ★ | active |
+| 27 | [Mise](https://tashan.sh/capability/plugin-brentmitchell25-mise-plugin-mise.html) | 48 | 2 ★ | active |
+| 28 | [Conversiontools](https://tashan.sh/capability/plugin-conversiontools-agent-skills-conversiontools.html) | 47 | 5 ★ | active |
+| 29 | [Shippo](https://tashan.sh/capability/plugin-goshippo-ai-shippo.html) | 47 | 1 ★ | active |
+| 30 | [Slack · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-slack-mcp-slack-mcp.html) | 47 | 1 ★ | active |
+| 31 | [Superglue](https://tashan.sh/capability/plugin-superglue-ai-cli-superglue.html) | 47 | 1 ★ | active |
+| 32 | [Klarity](https://tashan.sh/capability/plugin-klarity-ai-klarity-mcp-klarity.html) | 46 | 1 ★ | active |
+| 33 | [Kognitos](https://tashan.sh/capability/plugin-kognitos-kognitos-plugin-kognitos.html) | 46 | 1 ★ | active |
+| 34 | [Wu Whatsapp](https://tashan.sh/capability/plugin-ibrahimhajjaj-wu-cli-wu-whatsapp.html) | 45 | 14 ★ | active |
+| 35 | [Flow Studio Power Automate](https://tashan.sh/capability/plugin-ninihen1-power-automate-mcp-skills-flow-studio-power-automate.html) | 44 | 26 ★ | active |
+| 36 | [Sn](https://tashan.sh/capability/plugin-tehubersheezy-servicenow-cli-sn.html) | 44 | 5 ★ | active |
+| 37 | [Sap Btp Cias](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-cias.html) | 42 | 1 marketplaces | — |
+| 38 | [Sap Btp Integration Suite](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-integration-suite.html) | 42 | 1 marketplaces | — |
+| 39 | [Sap Btp Intelligent Situation Automation](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-intelligent-situation-automation.html) | 42 | 1 marketplaces | — |
+| 40 | [Sap Btp Job Scheduling](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-job-scheduling.html) | 42 | 1 marketplaces | — |
 
-Showing the top 40 of 58. The full ranked shelf is at https://tashan.sh/task/process-automation.html.
+Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/task/process-automation.html.
 
 ## What these numbers are not
 

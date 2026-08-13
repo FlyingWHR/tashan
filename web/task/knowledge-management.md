@@ -35,24 +35,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 68 | 154 ★ | active |
 | 23 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 68 | 212 ★ | active |
 | 24 | [Seekstone](https://tashan.sh/capability/pkg-seekstone.html) | 68 | 1k/wk | active |
-| 25 | [Miro](https://tashan.sh/capability/plugin-miroapp-miro-ai-miro.html) | 65 | 142 ★ | active |
-| 26 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 65 | 452 ★ | active |
-| 27 | [Stickies](https://tashan.sh/capability/pkg-stickies-mcp.html) | 65 | 865/wk | active |
-| 28 | [LLM Wiki Compiler](https://tashan.sh/capability/plugin-ussumant-llm-wiki-compiler-llm-wiki-compiler.html) | 62 | 303 ★ | active |
-| 29 | [Immich Photo Manager](https://tashan.sh/capability/plugin-drolosoft-immich-photo-manager-immich-photo-manager.html) | 61 | 33 ★ | active |
-| 30 | [Private Journal](https://tashan.sh/capability/plugin-obra-private-journal-mcp-private-journal-mcp.html) | 59 | 425 ★ | active |
-| 31 | [Mycelium](https://tashan.sh/capability/plugin-arjunrajlaboratory-mycelium-mycelium.html) | 58 | 54 ★ | active |
-| 32 | [Origin](https://tashan.sh/capability/plugin-7xuanlu-origin-origin.html) | 57 | 47 ★ | active |
-| 33 | [Box](https://tashan.sh/capability/plugin-box-box-for-ai-box.html) | 54 | 5 ★ | active |
-| 34 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 54 | 10 ★ | active |
-| 35 | [Kagura Memory](https://tashan.sh/capability/plugin-kagura-ai-memory-cloud-kagura-memory.html) | 54 | 8 ★ | active |
-| 36 | [Scout](https://tashan.sh/capability/plugin-raven-scout-scout-plugin-scout.html) | 53 | 7 ★ | active |
-| 37 | [AI Coding Ok](https://tashan.sh/capability/plugin-mark7766-ai-coding-ok-ai-coding-ok.html) | 52 | 15 ★ | active |
-| 38 | [Oh My Obsidian](https://tashan.sh/capability/plugin-hongdangmoo49-oh-my-obsidian-oh-my-obsidian.html) | 52 | 27 ★ | active |
-| 39 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 52 | 20 ★ | active |
-| 40 | [Archcore](https://tashan.sh/capability/plugin-archcore-ai-archcore-plugin-archcore.html) | 51 | 50 ★ | active |
+| 25 | [Dark Memory](https://tashan.sh/capability/pkg-opitacode-dark-memory-mcp.html) | 66 | 1k/wk | active |
+| 26 | [Miro](https://tashan.sh/capability/plugin-miroapp-miro-ai-miro.html) | 65 | 142 ★ | active |
+| 27 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 65 | 452 ★ | active |
+| 28 | [Stickies](https://tashan.sh/capability/pkg-stickies-mcp.html) | 65 | 865/wk | active |
+| 29 | [LLM Wiki Compiler](https://tashan.sh/capability/plugin-ussumant-llm-wiki-compiler-llm-wiki-compiler.html) | 62 | 303 ★ | active |
+| 30 | [Immich Photo Manager](https://tashan.sh/capability/plugin-drolosoft-immich-photo-manager-immich-photo-manager.html) | 61 | 33 ★ | active |
+| 31 | [Private Journal](https://tashan.sh/capability/plugin-obra-private-journal-mcp-private-journal-mcp.html) | 59 | 425 ★ | active |
+| 32 | [Mycelium](https://tashan.sh/capability/plugin-arjunrajlaboratory-mycelium-mycelium.html) | 58 | 54 ★ | active |
+| 33 | [Origin](https://tashan.sh/capability/plugin-7xuanlu-origin-origin.html) | 57 | 47 ★ | active |
+| 34 | [Box](https://tashan.sh/capability/plugin-box-box-for-ai-box.html) | 54 | 5 ★ | active |
+| 35 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 54 | 10 ★ | active |
+| 36 | [Kagura Memory](https://tashan.sh/capability/plugin-kagura-ai-memory-cloud-kagura-memory.html) | 54 | 8 ★ | active |
+| 37 | [Scout](https://tashan.sh/capability/plugin-raven-scout-scout-plugin-scout.html) | 53 | 7 ★ | active |
+| 38 | [AI Coding Ok](https://tashan.sh/capability/plugin-mark7766-ai-coding-ok-ai-coding-ok.html) | 52 | 15 ★ | active |
+| 39 | [Oh My Obsidian](https://tashan.sh/capability/plugin-hongdangmoo49-oh-my-obsidian-oh-my-obsidian.html) | 52 | 27 ★ | active |
+| 40 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 52 | 20 ★ | active |
 
-Showing the top 40 of 221. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
+Showing the top 40 of 222. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
 
 ## What these numbers are not
 

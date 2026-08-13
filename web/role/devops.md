@@ -33,32 +33,32 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 68 | 81 ★ | active |
 | 15 | [Teamcity CLI](https://tashan.sh/capability/plugin-jetbrains-teamcity-cli-teamcity-cli.html) | 68 | 119 ★ | active |
 | 16 | [Defang](https://tashan.sh/capability/plugin-defanglabs-defang-defang.html) | 68 | 163 ★ | active |
-| 17 | [Parseable](https://tashan.sh/capability/pkg-parseable-parseable-mcp-server.html) | 67 | 787/wk | active |
-| 18 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 63 | 41 ★ | active |
-| 19 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 63 | 61 ★ | active |
-| 20 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 62 | 22 ★ | active |
-| 21 | [Insforge · insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 61 | 33 ★ | active |
-| 22 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 60 | 27 ★ | active |
-| 23 | [Launchdarkly · launchdarkly](https://tashan.sh/capability/plugin-launchdarkly-ai-tooling-launchdarkly.html) | 59 | 20 ★ | active |
-| 24 | [Mirrord Agent Skills](https://tashan.sh/capability/plugin-metalbear-co-skills-mirrord-agent-skills.html) | 59 | 21 ★ | active |
-| 25 | [Teamcity](https://tashan.sh/capability/pkg-daghis-teamcity-mcp.html) | 58 | 2k/wk | active |
-| 26 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 57 | 21 ★ | active |
-| 27 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 57 | 17 ★ | active |
-| 28 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 54 | 7 ★ | active |
-| 29 | [Datadog · datadog-labs](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 53 | 8 ★ | active |
-| 30 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 52 | 12 ★ | active |
-| 31 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
-| 32 | [Jenkins · mcpland](https://tashan.sh/capability/pkg-jenkins-mcp.html) | 41 | 725/wk | active |
-| 33 | [SSH · tufantunc](https://tashan.sh/capability/pkg-ssh-mcp.html) | 39 | 1k/wk | abandoned |
-| 34 | [GCP](https://tashan.sh/capability/pkg-gcp-mcp.html) | 19 | 4k/wk | abandoned |
-| 35 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
-| 36 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 84 | 14k/wk | active |
-| 37 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 2 marketplaces | active |
-| 38 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 3 marketplaces | active |
-| 39 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
-| 40 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 69 | 1k/wk | active |
+| 17 | [Basicdeploy](https://tashan.sh/capability/pkg-basicdeploy-mcp.html) | 67 | 1k/wk | active |
+| 18 | [Parseable](https://tashan.sh/capability/pkg-parseable-parseable-mcp-server.html) | 67 | 787/wk | active |
+| 19 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 63 | 41 ★ | active |
+| 20 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 63 | 61 ★ | active |
+| 21 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 62 | 22 ★ | active |
+| 22 | [Insforge · insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 61 | 33 ★ | active |
+| 23 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 60 | 27 ★ | active |
+| 24 | [Launchdarkly · launchdarkly](https://tashan.sh/capability/plugin-launchdarkly-ai-tooling-launchdarkly.html) | 59 | 20 ★ | active |
+| 25 | [Mirrord Agent Skills](https://tashan.sh/capability/plugin-metalbear-co-skills-mirrord-agent-skills.html) | 59 | 21 ★ | active |
+| 26 | [Teamcity](https://tashan.sh/capability/pkg-daghis-teamcity-mcp.html) | 58 | 2k/wk | active |
+| 27 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 57 | 21 ★ | active |
+| 28 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 57 | 17 ★ | active |
+| 29 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 54 | 7 ★ | active |
+| 30 | [Datadog · datadog-labs](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 53 | 8 ★ | active |
+| 31 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 52 | 12 ★ | active |
+| 32 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
+| 33 | [Dokploy](https://tashan.sh/capability/pkg-dokploy-mcp.html) | 51 | 1k/wk | active |
+| 34 | [Jenkins · mcpland](https://tashan.sh/capability/pkg-jenkins-mcp.html) | 41 | 725/wk | active |
+| 35 | [SSH · tufantunc](https://tashan.sh/capability/pkg-ssh-mcp.html) | 39 | 1k/wk | abandoned |
+| 36 | [AWS S3](https://tashan.sh/capability/pkg-aws-s3-mcp.html) | 23 | 1k/wk | abandoned |
+| 37 | [GCP](https://tashan.sh/capability/pkg-gcp-mcp.html) | 19 | 4k/wk | abandoned |
+| 38 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
+| 39 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 84 | 14k/wk | active |
+| 40 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 2 marketplaces | active |
 
-Showing the top 40 of 231. The full ranked shelf is at https://tashan.sh/role/devops.html.
+Showing the top 40 of 234. The full ranked shelf is at https://tashan.sh/role/devops.html.
 
 ## What these numbers are not
 

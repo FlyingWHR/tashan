@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 703,
+  "full": 715,
   "grade": 1858,
   "n": 33913,
   "scan": 6968,
   "score": 11637,
-  "task": 3093
+  "task": 3111
  },
  "axes": [
   {
@@ -34,7 +34,7 @@
   "graded_pct": 72,
   "scanned_pct": 100,
   "scored_pct": 96,
-  "tasked_pct": 64,
+  "tasked_pct": 66,
   "tier": "top1000"
  },
  "queue": [
@@ -266,8 +266,7 @@
    "id": "pkg:@launchdarkly/mcp-server",
    "kind": "npm",
    "missing": [
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "@launchdarkly/mcp-server"
   },
@@ -417,15 +416,15 @@
    "n": 100,
    "scan": 100,
    "score": 95,
-   "task": 87
+   "task": 88
   },
   "top1000": {
-   "full": 475,
+   "full": 487,
    "grade": 715,
    "n": 1000,
    "scan": 1000,
    "score": 955,
-   "task": 643
+   "task": 661
   }
  }
 }

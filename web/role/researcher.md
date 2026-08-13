@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Seekstone](https://tashan.sh/capability/pkg-seekstone.html) | 68 | 1k/wk | active |
 | 40 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 67 | 433 ★ | active |
 
-Showing the top 40 of 366. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 368. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

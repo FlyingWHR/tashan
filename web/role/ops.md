@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) | 86 | 6.7m/wk | active |
 | 40 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 85 | 75k/wk | active |
 
-Showing the top 40 of 705. The full ranked shelf is at https://tashan.sh/role/ops.html.
+Showing the top 40 of 709. The full ranked shelf is at https://tashan.sh/role/ops.html.
 
 ## What these numbers are not
 

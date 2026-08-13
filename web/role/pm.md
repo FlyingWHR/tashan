@@ -44,24 +44,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Alphacouncil Agent](https://tashan.sh/capability/pkg-alphacouncil-agent.html) | 68 | 1k/wk | active |
 | 23 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 68 | 889/wk | active |
 | 24 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 68 | 326 ★ | active |
-| 25 | [Eurostat](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 67 | 876/wk | active |
-| 26 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 66 | 118 ★ | active |
-| 27 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 65 | 899/wk | active |
-| 28 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 64 | 770/wk | active |
-| 29 | [Jira](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 63 | 46 ★ | active |
-| 30 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 63 | 48 ★ | active |
-| 31 | [Gangsta](https://tashan.sh/capability/plugin-kucherenko-gangsta-gangsta.html) | 62 | 67 ★ | active |
-| 32 | [Draft](https://tashan.sh/capability/plugin-mayurpise-draft-draft.html) | 60 | 39 ★ | active |
-| 33 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
-| 34 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 60 | 302 ★ | active |
-| 35 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 60 | 28 ★ | active |
-| 36 | [AI Adoption Playbook](https://tashan.sh/capability/plugin-adimango-ai-adoption-playbook-ai-adoption-playbook.html) | 59 | 20 ★ | active |
-| 37 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 59 | 27 ★ | active |
-| 38 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 56 | 43 ★ | active |
-| 39 | [Product Discovery](https://tashan.sh/capability/plugin-lenar-amirov-product-pipeline-public-product-discovery.html) | 56 | 13 ★ | active |
-| 40 | [Groundwork](https://tashan.sh/capability/plugin-etr-groundwork-groundwork.html) | 55 | 41 ★ | active |
+| 25 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 67 | 1k/wk | active |
+| 26 | [Eurostat](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 67 | 876/wk | active |
+| 27 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 66 | 118 ★ | active |
+| 28 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 65 | 899/wk | active |
+| 29 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 64 | 770/wk | active |
+| 30 | [Jira](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 63 | 46 ★ | active |
+| 31 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 63 | 48 ★ | active |
+| 32 | [Gangsta](https://tashan.sh/capability/plugin-kucherenko-gangsta-gangsta.html) | 62 | 67 ★ | active |
+| 33 | [Draft](https://tashan.sh/capability/plugin-mayurpise-draft-draft.html) | 60 | 39 ★ | active |
+| 34 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
+| 35 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 60 | 302 ★ | active |
+| 36 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 60 | 28 ★ | active |
+| 37 | [AI Adoption Playbook](https://tashan.sh/capability/plugin-adimango-ai-adoption-playbook-ai-adoption-playbook.html) | 59 | 20 ★ | active |
+| 38 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 59 | 27 ★ | active |
+| 39 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 56 | 43 ★ | active |
+| 40 | [Product Discovery](https://tashan.sh/capability/plugin-lenar-amirov-product-pipeline-public-product-discovery.html) | 56 | 13 ★ | active |
 
-Showing the top 40 of 264. The full ranked shelf is at https://tashan.sh/role/pm.html.
+Showing the top 40 of 265. The full ranked shelf is at https://tashan.sh/role/pm.html.
 
 ## What these numbers are not
 

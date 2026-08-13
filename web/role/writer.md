@@ -41,25 +41,25 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 21 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 59 | 40 ★ | active |
 | 22 | [Officecli](https://tashan.sh/capability/plugin-officecli-officecli-skills-officecli.html) | 57 | 72 ★ | active |
 | 23 | [Sdd](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 54 | 11 ★ | active |
-| 24 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 52 | 4 ★ | active |
-| 25 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 51 | 73 ★ | active |
-| 26 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 51 | 4 ★ | active |
-| 27 | [Apple Doc](https://tashan.sh/capability/pkg-apple-doc-mcp-server.html) | 48 | 2k/wk | active |
-| 28 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 47 | 7k/wk | active |
-| 29 | [Yapi Auto](https://tashan.sh/capability/pkg-yapi-auto-mcp.html) | 24 | 3k/wk | abandoned |
-| 30 | [Deepwiki](https://tashan.sh/capability/pkg-mcp-deepwiki.html) | 23 | 2k/wk | abandoned |
-| 31 | [Integration Guide](https://tashan.sh/capability/pkg-tosspayments-integration-guide-mcp.html) | 69 | 759/wk | active |
-| 32 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
-| 33 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 52 | 2 repos | active |
-| 34 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 50 | 3 ★ | active |
-| 35 | [Sync Docs](https://tashan.sh/capability/plugin-agent-sh-sync-docs-sync-docs.html) | 50 | 3 ★ | active |
-| 36 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | 49 | 2 repos | active |
-| 37 | [Jamdesk](https://tashan.sh/capability/plugin-jamdesk-jamdesk-claude-plugin-jamdesk.html) | 49 | 3 ★ | active |
-| 38 | [Living Manual](https://tashan.sh/capability/plugin-dougstanford-living-manual-living-manual.html) | 49 | 2 ★ | active |
-| 39 | [Changelog Generator](https://tashan.sh/capability/skill-alirezarezvani-changelog-generator.html) | 48 | 2 repos | active |
-| 40 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 48 | 40 ★ | active |
+| 24 | [Google Sheets](https://tashan.sh/capability/pkg-google-sheets-mcp.html) | 53 | 1k/wk | active |
+| 25 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 52 | 4 ★ | active |
+| 26 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 51 | 73 ★ | active |
+| 27 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 51 | 4 ★ | active |
+| 28 | [Apple Doc](https://tashan.sh/capability/pkg-apple-doc-mcp-server.html) | 48 | 2k/wk | active |
+| 29 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 47 | 7k/wk | active |
+| 30 | [Yapi Auto](https://tashan.sh/capability/pkg-yapi-auto-mcp.html) | 24 | 3k/wk | abandoned |
+| 31 | [Deepwiki](https://tashan.sh/capability/pkg-mcp-deepwiki.html) | 23 | 2k/wk | abandoned |
+| 32 | [Integration Guide](https://tashan.sh/capability/pkg-tosspayments-integration-guide-mcp.html) | 69 | 759/wk | active |
+| 33 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
+| 34 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 52 | 2 repos | active |
+| 35 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 50 | 3 ★ | active |
+| 36 | [Sync Docs](https://tashan.sh/capability/plugin-agent-sh-sync-docs-sync-docs.html) | 50 | 3 ★ | active |
+| 37 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | 49 | 2 repos | active |
+| 38 | [Jamdesk](https://tashan.sh/capability/plugin-jamdesk-jamdesk-claude-plugin-jamdesk.html) | 49 | 3 ★ | active |
+| 39 | [Living Manual](https://tashan.sh/capability/plugin-dougstanford-living-manual-living-manual.html) | 49 | 2 ★ | active |
+| 40 | [Changelog Generator](https://tashan.sh/capability/skill-alirezarezvani-changelog-generator.html) | 48 | 2 repos | active |
 
-Showing the top 40 of 217. The full ranked shelf is at https://tashan.sh/role/writer.html.
+Showing the top 40 of 218. The full ranked shelf is at https://tashan.sh/role/writer.html.
 
 ## What these numbers are not
 

@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Airweave Mcp Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 61 | 1k/wk | active |
 | 40 | [Token Saver](https://tashan.sh/capability/plugin-ppgranger-token-saver-token-saver.html) | 59 | 121 ★ | active |
 
-Showing the top 40 of 481. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
+Showing the top 40 of 482. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
 
 ## What these numbers are not
 
