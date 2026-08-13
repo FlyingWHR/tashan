@@ -45,14 +45,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Super Ralph](https://tashan.sh/capability/plugin-aezizhu-super-ralph-super-ralph.html) | 46 | 9 ★ | active |
 | 33 | [Audit Project](https://tashan.sh/capability/plugin-agent-sh-audit-project-audit-project.html) | 45 | 3 ★ | active |
 | 34 | [Deslop](https://tashan.sh/capability/plugin-agent-sh-deslop-deslop.html) | 45 | 3 ★ | active |
-| 35 | [Codex Bridge](https://tashan.sh/capability/plugin-igorganapolsky-thumbgate-codex-bridge.html) | 44 | 1 marketplaces | active |
-| 36 | [Fk Eng Agents](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-eng-agents.html) | 44 | 1 marketplaces | active |
-| 37 | [Fk Gh Flow](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-gh-flow.html) | 44 | 1 marketplaces | active |
-| 38 | [Sdlc Wizard](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard.html) | 44 | 1 marketplaces | active |
-| 39 | [Sdlc Wizard Cowork](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard-cowork.html) | 44 | 1 marketplaces | active |
-| 40 | [Hydra Swarm](https://tashan.sh/capability/plugin-1tommycheung-hydra-swarm-hydra-swarm.html) | 44 | 2 ★ | active |
+| 35 | [Ship Gate](https://tashan.sh/capability/skill-alirezarezvani-ship-gate.html) | 44 | 2 repos | active |
+| 36 | [Codex Bridge](https://tashan.sh/capability/plugin-igorganapolsky-thumbgate-codex-bridge.html) | 44 | 1 marketplaces | active |
+| 37 | [Fk Eng Agents](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-eng-agents.html) | 44 | 1 marketplaces | active |
+| 38 | [Fk Gh Flow](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-gh-flow.html) | 44 | 1 marketplaces | active |
+| 39 | [Sdlc Wizard](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard.html) | 44 | 1 marketplaces | active |
+| 40 | [Sdlc Wizard Cowork](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard-cowork.html) | 44 | 1 marketplaces | active |
 
-Showing the top 40 of 113. The full ranked shelf is at https://tashan.sh/task/code-review.html.
+Showing the top 40 of 115. The full ranked shelf is at https://tashan.sh/task/code-review.html.
 
 ## What these numbers are not
 

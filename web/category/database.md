@@ -41,18 +41,18 @@ Ranked by the tashan score
 | 28 | [Ponch](https://tashan.sh/capability/pkg-ponch-mcp-server.html) | 58 | 140/wk | active |
 | 29 | [Sumup](https://tashan.sh/capability/pkg-sumup-mcp.html) | 58 | 61/wk | active |
 | 30 | [Cloud SQL MySQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-mysql-cloud-sql-mysql.html) | 57 | 11 ★ | active |
-| 31 | [State](https://tashan.sh/capability/pkg-state-mcp.html) | 55 | 21/wk | active |
-| 32 | [Supabase · supabase-community](https://tashan.sh/capability/plugin-supabase-community-supabase-plugin-supabase.html) | 52 | 9 ★ | active |
-| 33 | [Stripe Projects](https://tashan.sh/capability/skill-tdealer01-crypto-stripe-projects.html) | 52 | 2 repos | active |
-| 34 | [Brokre](https://tashan.sh/capability/pkg-brokre.html) | 52 | 113/wk | active |
-| 35 | [Postgres · kristofer84](https://tashan.sh/capability/pkg-mcp-postgres.html) | 51 | 525/wk | active |
-| 36 | [Vsql Extension Builder](https://tashan.sh/capability/plugin-villagesql-villagesql-skills-vsql-extension-builder.html) | 50 | 5 ★ | active |
-| 37 | [Querybridge](https://tashan.sh/capability/pkg-querybridge-mcp.html) | 50 | 41/wk | active |
-| 38 | [Cclsp](https://tashan.sh/capability/pkg-cclsp.html) | 48 | 8k/wk | abandoned |
-| 39 | [DB Access](https://tashan.sh/capability/pkg-rheopyrin-db-access-mcp.html) | 48 | 57/wk | active |
+| 31 | [Supabase · supabase-community](https://tashan.sh/capability/plugin-supabase-community-supabase-plugin-supabase.html) | 52 | 9 ★ | active |
+| 32 | [Stripe Projects](https://tashan.sh/capability/skill-tdealer01-crypto-stripe-projects.html) | 52 | 2 repos | active |
+| 33 | [Brokre](https://tashan.sh/capability/pkg-brokre.html) | 52 | 113/wk | active |
+| 34 | [Postgres · kristofer84](https://tashan.sh/capability/pkg-mcp-postgres.html) | 51 | 525/wk | active |
+| 35 | [Vsql Extension Builder](https://tashan.sh/capability/plugin-villagesql-villagesql-skills-vsql-extension-builder.html) | 50 | 5 ★ | active |
+| 36 | [Querybridge](https://tashan.sh/capability/pkg-querybridge-mcp.html) | 50 | 41/wk | active |
+| 37 | [Cclsp](https://tashan.sh/capability/pkg-cclsp.html) | 48 | 8k/wk | abandoned |
+| 38 | [DB Access](https://tashan.sh/capability/pkg-rheopyrin-db-access-mcp.html) | 48 | 57/wk | active |
+| 39 | [Obambu Cpanel](https://tashan.sh/capability/pkg-obambu-cpanel-mcp.html) | 48 | 57/wk | active |
 | 40 | [Gitea](https://tashan.sh/capability/pkg-gitea-mcp.html) | 47 | 894/wk | active |
 
-Showing the top 40 of 112. The full ranked shelf is at https://tashan.sh/category/database.html.
+Showing the top 40 of 105. The full ranked shelf is at https://tashan.sh/category/database.html.
 
 ## What these numbers are not
 

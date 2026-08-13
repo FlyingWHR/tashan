@@ -45,14 +45,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 73 | 6k/wk | active |
 | 33 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
 | 34 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 69 | 2k/wk | active |
-| 35 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 69 | 1k/wk | active |
-| 36 | [Sciverse](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 69 | 1k/wk | active |
-| 37 | [Grepmax](https://tashan.sh/capability/pkg-grepmax.html) | 67 | 573/wk | active |
-| 38 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 66 | 578/wk | active |
-| 39 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 65 | 660/wk | active |
-| 40 | [Engram Wiki](https://tashan.sh/capability/pkg-engram-wiki-mcp.html) | 64 | 639/wk | active |
+| 35 | [Prism](https://tashan.sh/capability/pkg-prism-mcp-server.html) | 69 | 2k/wk | active |
+| 36 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 69 | 1k/wk | active |
+| 37 | [Sciverse](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 69 | 1k/wk | active |
+| 38 | [Grepmax](https://tashan.sh/capability/pkg-grepmax.html) | 67 | 573/wk | active |
+| 39 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 66 | 578/wk | active |
+| 40 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 65 | 660/wk | active |
 
-Showing the top 40 of 80. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
+Showing the top 40 of 81. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
 
 ## What these numbers are not
 

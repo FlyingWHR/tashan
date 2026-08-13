@@ -37,22 +37,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 24 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 78 | 6k ★ | active |
 | 25 | [Cc10x Router Owned Harness](https://tashan.sh/capability/plugin-romiluz13-cc10x-cc10x-router-owned-harness.html) | 67 | 158 ★ | active |
 | 26 | [Youdotcom Agent Skills](https://tashan.sh/capability/plugin-youdotcom-oss-agent-skills-youdotcom-agent-skills.html) | 65 | 50 ★ | active |
-| 27 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 63 | 10 repos | active |
+| 27 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 63 | 7 repos | active |
 | 28 | [Claude Session Driver](https://tashan.sh/capability/plugin-obra-claude-session-driver-claude-session-driver.html) | 62 | 102 ★ | active |
-| 29 | [Status](https://tashan.sh/capability/skill-alirezarezvani-status.html) | 55 | 5 repos | active |
-| 30 | [Build Mcp App](https://tashan.sh/capability/skill-anthropics-build-mcp-app.html) | 52 | 3 repos | active |
-| 31 | [Build · anthropics](https://tashan.sh/capability/skill-anthropics-build-mcp-server.html) | 52 | 3 repos | active |
-| 32 | [Build Mcpb](https://tashan.sh/capability/skill-anthropics-build-mcpb.html) | 52 | 3 repos | active |
-| 33 | [Agent Development](https://tashan.sh/capability/skill-anthropics-agent-development.html) | 52 | 3 repos | active |
-| 34 | [Agent Eval Harness · redhat-global-engineering](https://tashan.sh/capability/plugin-redhat-global-engineering-ge-public-skills-agent-eval-harness.html) | 52 | 5 ★ | active |
-| 35 | [Extract](https://tashan.sh/capability/skill-alirezarezvani-extract.html) | 51 | 3 repos | active |
-| 36 | [Claudelance Worker](https://tashan.sh/capability/plugin-yeheskieltame-claudelance-claudelance-worker.html) | 50 | 4 ★ | active |
-| 37 | [Claude API](https://tashan.sh/capability/skill-anthropics-claude-api.html) | 49 | 2 repos | active |
-| 38 | [Builder](https://tashan.sh/capability/skill-anthropics-mcp-builder.html) | 49 | 2 repos | active |
-| 39 | [Dispatching Parallel Agents](https://tashan.sh/capability/skill-obra-dispatching-parallel-agents.html) | 49 | 2 repos | active |
-| 40 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 49 | 7 ★ | active |
+| 29 | [Status](https://tashan.sh/capability/skill-alirezarezvani-status.html) | 55 | 10 repos | active |
+| 30 | [Agent Development](https://tashan.sh/capability/skill-anthropics-agent-development.html) | 52 | 2 repos | active |
+| 31 | [Agent Eval Harness · redhat-global-engineering](https://tashan.sh/capability/plugin-redhat-global-engineering-ge-public-skills-agent-eval-harness.html) | 52 | 5 ★ | active |
+| 32 | [Claudelance Worker](https://tashan.sh/capability/plugin-yeheskieltame-claudelance-claudelance-worker.html) | 50 | 4 ★ | active |
+| 33 | [Dispatching Parallel Agents](https://tashan.sh/capability/skill-obra-dispatching-parallel-agents.html) | 49 | 2 repos | active |
+| 34 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 49 | 7 ★ | active |
+| 35 | [Jetty](https://tashan.sh/capability/plugin-jettyio-jettyio-skills-jetty.html) | 49 | 3 ★ | active |
+| 36 | [Mnemopay](https://tashan.sh/capability/plugin-mnemopay-mnemopay-sdk-mnemopay.html) | 49 | 6 ★ | active |
+| 37 | [Sema](https://tashan.sh/capability/plugin-emergent-wisdom-sema-sema.html) | 49 | 9 ★ | active |
+| 38 | [Triflux](https://tashan.sh/capability/plugin-tellang-triflux-triflux.html) | 49 | 7 ★ | active |
+| 39 | [Guild](https://tashan.sh/capability/plugin-lookatitude-guild-guild.html) | 48 | 6 ★ | active |
+| 40 | [Mistral](https://tashan.sh/capability/plugin-swih-mistral-mcp-mistral-mcp.html) | 48 | 14 ★ | active |
 
-Showing the top 40 of 298. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
+Showing the top 40 of 301. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
 
 ## What these numbers are not
 

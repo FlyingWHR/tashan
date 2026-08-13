@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Research Finance](https://tashan.sh/capability/skill-alirezarezvani-research-finance.html) | not scored | 1 repos | active |
 | 40 | [Braintree Automation](https://tashan.sh/capability/skill-composiohq-braintree-automation.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 119. The full ranked shelf is at https://tashan.sh/role/finance.html.
+Showing the top 40 of 124. The full ranked shelf is at https://tashan.sh/role/finance.html.
 
 ## What these numbers are not
 

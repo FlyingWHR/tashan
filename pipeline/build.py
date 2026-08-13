@@ -2104,6 +2104,18 @@ def export(con):
     # Nothing reads this by eye. The site runs on data/index.json and data/board.json (see
     # [[tashan-runtime-never-fetches-full-export]]); this is the bulk download, and anyone opening
     # it has a tool. Pages gzips it in transit either way, so the cost was purely the hard limit.
+    #
+    # AND NULLS ARE DROPPED, which was 34% of the file — 6.89 MiB of `"field":null` across 11,762
+    # rows of ~150 mostly-sparse columns, against 12.88 MiB of actual values. It is not a
+    # compression trick and it loses nothing: absent and null both mean "we have not measured this",
+    # which is the same distinction this codebase already insists on everywhere else (an unknown
+    # input stays None, it is never faked to 0). Every one of the twenty consumers reads it with
+    # `.get(x) is not None`, which cannot tell the two apart; for a JS caller `undefined` and `null`
+    # are both `== null` and both falsy.
+    #
+    # 21.1 -> 14.2 MiB, against a 25 MiB hard limit the board was one growth step from hitting.
+    payload["capabilities"] = [{k: v for k, v in c.items() if v is not None}
+                               for c in payload["capabilities"]]
     json.dump(payload, open(out, "w"), separators=(",", ":"))
 
     # SLIM index — only the ~15 fields the board / ticker / ⌘K palette actually render. The heavy per-cap

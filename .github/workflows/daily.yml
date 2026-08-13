@@ -20,6 +20,7 @@ on:
 
 permissions:
   contents: write              # to commit the day's snapshot back
+  issues: write                # to raise the alarm when publication freezes (see the last step)
 
 concurrency:
   group: daily
@@ -191,6 +192,54 @@ jobs:
           echo "::error::cursors will stop advancing. Most likely CLOUDFLARE_API_TOKEN lacks"
           echo "::error::'R2 Storage: Edit'. The retention shards in data/history are unaffected."
           exit 1
+
+      # RAISE THE ALARM WHERE IT CANNOT BE MISSED, before failing the job.
+      #
+      # This workflow already exited 1 with ::error:: on every red night, and it went unnoticed for
+      # SEVEN CONSECUTIVE NIGHTS: seven commits reading "retention only — site artifacts withheld"
+      # while the database advanced and the published board fell 1,189 capabilities behind. Nobody
+      # is watching a check mark on a scheduled run. An issue emails, sits at the top of the repo,
+      # and stays open until someone closes it — and because it is REOPENED and commented rather
+      # than duplicated, the comment count is the number of nights the site has been frozen, which
+      # is the one number that makes the cost obvious.
+      - name: Raise an issue when publication is frozen
+        if: always() && (steps.verify.outcome != 'success' || steps.pipeline.outcome != 'success')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        continue-on-error: true      # never let the alarm itself become the failure
+        run: |
+          TITLE="nightly: site publication is frozen"
+          BODY=$(printf '%s\n' \
+            "The daily run could not publish. Retention shards were preserved; every site artifact" \
+            "was withheld and nothing was deployed, so **tashan.sh is serving stale data**." \
+            "" \
+            "- pipeline: \`${{ steps.pipeline.outcome }}\`" \
+            "- suite:    \`${{ steps.verify.outcome }}\`" \
+            "- run:      ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            "" \
+            "Each comment below is one more night frozen. Close this issue once a run publishes.")
+          NUM=$(gh issue list --state all --search "$TITLE in:title" --limit 1 --json number \
+                  --jq '.[0].number' 2>/dev/null || true)
+          if [ -n "$NUM" ]; then
+            gh issue reopen "$NUM" 2>/dev/null || true
+            gh issue comment "$NUM" --body "$BODY"
+          else
+            gh issue create --title "$TITLE" --body "$BODY" --label "" 2>/dev/null \
+              || gh issue create --title "$TITLE" --body "$BODY"
+          fi
+
+      # And close it the moment a run publishes again, so an open issue always means "frozen right
+      # now" rather than "was broken once". An alarm that stays on after the fire is out gets muted.
+      - name: Clear the alarm once publishing resumes
+        if: steps.verify.outcome == 'success' && steps.pipeline.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        continue-on-error: true
+        run: |
+          NUM=$(gh issue list --state open --search "nightly: site publication is frozen in:title" \
+                  --limit 1 --json number --jq '.[0].number' 2>/dev/null || true)
+          [ -n "$NUM" ] && gh issue close "$NUM" \
+            --comment "Published again — run ${{ github.run_id }}." || true
 
       - name: Surface the verification result
         if: steps.verify.outcome != 'success'

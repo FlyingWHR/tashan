@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Quality Documentation Manager](https://tashan.sh/capability/skill-alirezarezvani-quality-documentation-manager.html) | not scored | 1 repos | active |
 | 40 | [Quality Manager Qmr](https://tashan.sh/capability/skill-alirezarezvani-quality-manager-qmr.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 74. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
+Showing the top 40 of 75. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
 
 ## What these numbers are not
 

@@ -19,8 +19,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 80 | 11k ★ | active |
 | 7 | [Promptfoo Evals](https://tashan.sh/capability/plugin-promptfoo-promptfoo-promptfoo-evals.html) | 80 | 24k ★ | active |
 | 8 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 79 | 17k ★ | active |
-| 9 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 63 | 10 repos | active |
-| 10 | [Setup](https://tashan.sh/capability/skill-alirezarezvani-setup.html) | 62 | 12 repos | active |
+| 9 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 63 | 7 repos | active |
+| 10 | [Setup](https://tashan.sh/capability/skill-alirezarezvani-setup.html) | 62 | 16 repos | active |
 | 11 | [Agent Eval Harness · redhat-global-engineering](https://tashan.sh/capability/plugin-redhat-global-engineering-ge-public-skills-agent-eval-harness.html) | 52 | 5 ★ | active |
 | 12 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 49 | 8 ★ | active |
 | 13 | [Eval](https://tashan.sh/capability/skill-alirezarezvani-eval.html) | 48 | 2 repos | active |

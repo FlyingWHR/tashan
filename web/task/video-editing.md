@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Opusclip](https://tashan.sh/capability/pkg-opusclip-mcp.html) | 43 | 51/wk | active |
 | 40 | [Zype Com](https://tashan.sh/capability/pkg-zype-com-mcp.html) | 41 | 64/wk | active |
 
-Showing the top 40 of 42. The full ranked shelf is at https://tashan.sh/task/video-editing.html.
+Showing the top 40 of 43. The full ranked shelf is at https://tashan.sh/task/video-editing.html.
 
 ## What these numbers are not
 

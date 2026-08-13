@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [LLM Wiki Compiler](https://tashan.sh/capability/plugin-ussumant-llm-wiki-compiler-llm-wiki-compiler.html) | 62 | 303 ★ | active |
 | 40 | [Parallel](https://tashan.sh/capability/plugin-parallel-web-parallel-agent-skills-parallel.html) | 62 | 62 ★ | active |
 
-Showing the top 40 of 627. The full ranked shelf is at https://tashan.sh/role/ops.html.
+Showing the top 40 of 633. The full ranked shelf is at https://tashan.sh/role/ops.html.
 
 ## What these numbers are not
 

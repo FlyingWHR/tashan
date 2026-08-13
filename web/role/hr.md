@@ -37,7 +37,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 24 | [LinkedIn Mcp Tools](https://tashan.sh/capability/pkg-linkedin-mcp-tools.html) | 48 | 100/wk | active |
 | 25 | [Opentrain](https://tashan.sh/capability/pkg-opentrain-ai-mcp.html) | 46 | 65/wk | active |
 | 26 | [Gtm Hiring Signal Scraper](https://tashan.sh/capability/pkg-mambalabsdev-mcp-gtm-hiring-signal-scraper.html) | 45 | 60/wk | active |
-| 27 | [VerifyRef](https://tashan.sh/capability/pkg-datalinc-verifyref-mcp.html) | 45 | 50/wk | active |
+| 27 | [VerifyRef](https://tashan.sh/capability/pkg-datalinc-verifyref-mcp.html) | 45 | 58/wk | active |
 | 28 | [Hr](https://tashan.sh/capability/pkg-autostackup-hr.html) | 40 | 30/wk | active |
 | 29 | [JobGPT - Job Search Automation & Auto Apply](https://tashan.sh/capability/pkg-jobgpt-mcp-server.html) | 40 | 84/wk | active |
 | 30 | [Formacv](https://tashan.sh/capability/pkg-formacv-mcp.html) | 36 | 43/wk | active |

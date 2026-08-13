@@ -31,28 +31,28 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 54 | 7 ★ | active |
 | 19 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 52 | 12 ★ | active |
 | 20 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
-| 21 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 246 ★ | active |
-| 22 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 86 ★ | active |
+| 21 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 2 marketplaces | active |
+| 22 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 3 marketplaces | active |
 | 23 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
 | 24 | [Rr](https://tashan.sh/capability/plugin-rileyhilliard-rr-rr.html) | 63 | 194 ★ | active |
 | 25 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 61 | 85 ★ | active |
 | 26 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 61 | 40 ★ | active |
 | 27 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 61 | 40 ★ | active |
-| 28 | [Build Mcpb](https://tashan.sh/capability/skill-anthropics-build-mcpb.html) | 52 | 3 repos | active |
-| 29 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 50 | 13 ★ | active |
-| 30 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 49 | 45 ★ | active |
-| 31 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
-| 32 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 48 | 1 ★ | active |
-| 33 | [Followrabbit](https://tashan.sh/capability/plugin-followrabbit-ai-awesome-rabbit-followrabbit.html) | 48 | 2 ★ | active |
-| 34 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 48 | 6 ★ | active |
-| 35 | [Mise](https://tashan.sh/capability/plugin-brentmitchell25-mise-plugin-mise.html) | 48 | 2 ★ | active |
-| 36 | [Netlify Skills](https://tashan.sh/capability/plugin-netlify-context-and-tools-netlify-skills.html) | 47 | 2 marketplaces | active |
-| 37 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 47 | 5 ★ | active |
-| 38 | [Gomboc AI Community](https://tashan.sh/capability/plugin-gomboc-ai-gomboc-community-skills-gomboc-ai-community.html) | 47 | 6 ★ | active |
-| 39 | [Anglesite](https://tashan.sh/capability/plugin-anglesite-anglesite-skills-anglesite.html) | 47 | 4 ★ | active |
-| 40 | [AWS Agents](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-agents.html) | 46 | 2 marketplaces | — |
+| 28 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 50 | 13 ★ | active |
+| 29 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 49 | 45 ★ | active |
+| 30 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
+| 31 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 48 | 1 ★ | active |
+| 32 | [Followrabbit](https://tashan.sh/capability/plugin-followrabbit-ai-awesome-rabbit-followrabbit.html) | 48 | 2 ★ | active |
+| 33 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 48 | 6 ★ | active |
+| 34 | [Mise](https://tashan.sh/capability/plugin-brentmitchell25-mise-plugin-mise.html) | 48 | 2 ★ | active |
+| 35 | [Netlify Skills](https://tashan.sh/capability/plugin-netlify-context-and-tools-netlify-skills.html) | 47 | 2 marketplaces | active |
+| 36 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 47 | 5 ★ | active |
+| 37 | [Gomboc AI Community](https://tashan.sh/capability/plugin-gomboc-ai-gomboc-community-skills-gomboc-ai-community.html) | 47 | 6 ★ | active |
+| 38 | [Anglesite](https://tashan.sh/capability/plugin-anglesite-anglesite-skills-anglesite.html) | 47 | 4 ★ | active |
+| 39 | [AWS Agents](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-agents.html) | 46 | 2 marketplaces | — |
+| 40 | [AWS Core](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-core.html) | 46 | 2 marketplaces | — |
 
-Showing the top 40 of 155. The full ranked shelf is at https://tashan.sh/task/infrastructure-and-deployment.html.
+Showing the top 40 of 156. The full ranked shelf is at https://tashan.sh/task/infrastructure-and-deployment.html.
 
 ## What these numbers are not
 

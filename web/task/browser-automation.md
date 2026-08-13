@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Uindow](https://tashan.sh/capability/pkg-uindow-cli.html) | 65 | 1k/wk | active |
 | 40 | [Machine Bridge](https://tashan.sh/capability/pkg-machine-bridge-mcp.html) | 65 | 763/wk | active |
 
-Showing the top 40 of 81. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
+Showing the top 40 of 82. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
 
 ## What these numbers are not
 

@@ -14,8 +14,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) | 72 | 829 ★ | active |
 | 2 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 51 | 5 ★ | active |
 | 3 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 79 | 13k ★ | active |
-| 4 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | 49 | 2 repos | active |
-| 5 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
+| 4 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
+| 5 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |
 | 6 | [Easyeda Mcp Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 63 | 466/wk | active |
 | 7 | [Trustrails](https://tashan.sh/capability/pkg-trustrails-mcp-server.html) | 41 | 93/wk | active |
 

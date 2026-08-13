@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 37 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 58 | 20 ★ | active |
 | 38 | [Sq](https://tashan.sh/capability/plugin-derekstride-sq-sq.html) | 56 | 13 ★ | active |
 | 39 | [Ccf](https://tashan.sh/capability/plugin-naniiluja-ccf-ccf.html) | 56 | 9 ★ | active |
-| 40 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | 54 | 4 repos | active |
+| 40 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 52 | 5 ★ | active |
 
 Showing the top 40 of 243. The full ranked shelf is at https://tashan.sh/role/pm.html.
 

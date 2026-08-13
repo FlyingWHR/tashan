@@ -43,8 +43,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [Email Deliverability Expert](https://tashan.sh/capability/plugin-sendx-email-skills-email-deliverability-expert.html) | 39 | 1 marketplaces | active |
 | 31 | [GitHub Security](https://tashan.sh/capability/pkg-github-security-mcp.html) | 38 | 626/wk | active |
 | 32 | [Pentagonal](https://tashan.sh/capability/pkg-pentagonal-mcp.html) | 34 | 44/wk | active |
-| 33 | [Catalog CLI Pro](https://tashan.sh/capability/pkg-bwb03-catalog-cli-pro.html) | 33 | 56/wk | active |
+| 33 | [Catalog CLI Pro](https://tashan.sh/capability/pkg-bwb03-catalog-cli-pro.html) | 33 | 51/wk | active |
 | 34 | [Agent Observability · blueskylineassets](https://tashan.sh/capability/pkg-agent-observability-mcp.html) | 26 | 43/wk | abandoned |
+| 35 | [Claude Ads](https://tashan.sh/capability/plugin-agricidaniel-claude-ads-claude-ads.html) | not scored | 8k ★ | active |
 
 ## What these numbers are not
 

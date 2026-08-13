@@ -42,17 +42,17 @@ Ranked by the tashan score
 | 29 | [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) | 74 | 20k/wk | active |
 | 30 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 74 | 13k/wk | active |
 | 31 | [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) | 74 | 8k/wk | active |
-| 32 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 73 | 2k ★ | active |
-| 33 | [Serve Sim](https://tashan.sh/capability/plugin-evanbacon-serve-sim-serve-sim.html) | 73 | 3k ★ | active |
-| 34 | [Agnix](https://tashan.sh/capability/pkg-agnix.html) | 73 | 8k/wk | active |
-| 35 | [Agent Rack](https://tashan.sh/capability/pkg-agent-rack.html) | 73 | 6k/wk | active |
-| 36 | [Aidevops](https://tashan.sh/capability/pkg-aidevops.html) | 73 | 5k/wk | active |
-| 37 | [Locadex](https://tashan.sh/capability/pkg-locadex.html) | 73 | 766/wk | active |
-| 38 | [Tdd Guard](https://tashan.sh/capability/plugin-nizos-tdd-guard-tdd-guard.html) | 72 | 2k ★ | active |
-| 39 | [Agent Install](https://tashan.sh/capability/pkg-agent-install.html) | 72 | 1.8m/wk | active |
-| 40 | [Harness Mcp V2](https://tashan.sh/capability/pkg-harness-mcp-v2.html) | 72 | 5k/wk | active |
+| 32 | [Serve Sim](https://tashan.sh/capability/plugin-evanbacon-serve-sim-serve-sim.html) | 73 | 3k ★ | active |
+| 33 | [Agent Rack](https://tashan.sh/capability/pkg-agent-rack.html) | 73 | 6k/wk | active |
+| 34 | [Locadex](https://tashan.sh/capability/pkg-locadex.html) | 73 | 766/wk | active |
+| 35 | [Tdd Guard](https://tashan.sh/capability/plugin-nizos-tdd-guard-tdd-guard.html) | 72 | 2k ★ | active |
+| 36 | [Agent Install](https://tashan.sh/capability/pkg-agent-install.html) | 72 | 1.8m/wk | active |
+| 37 | [Harness Mcp V2](https://tashan.sh/capability/pkg-harness-mcp-v2.html) | 72 | 5k/wk | active |
+| 38 | [Bunqueue](https://tashan.sh/capability/pkg-bunqueue.html) | 72 | 5k/wk | active |
+| 39 | [Codemod](https://tashan.sh/capability/pkg-modelcontextprotocol-codemod.html) | 72 | 1k/wk | active |
+| 40 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 3 marketplaces | active |
 
-Showing the top 40 of 1,461. The full ranked shelf is at https://tashan.sh/category/devtools.html.
+Showing the top 40 of 1,343. The full ranked shelf is at https://tashan.sh/category/devtools.html.
 
 ## What these numbers are not
 

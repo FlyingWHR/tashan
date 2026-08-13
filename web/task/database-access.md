@@ -46,13 +46,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Postgres · kristofer84](https://tashan.sh/capability/pkg-mcp-postgres.html) | 51 | 525/wk | active |
 | 34 | [Metaengine](https://tashan.sh/capability/pkg-metaengine-mcp-server.html) | 49 | 60/wk | active |
 | 35 | [DB Access](https://tashan.sh/capability/pkg-rheopyrin-db-access-mcp.html) | 48 | 57/wk | active |
-| 36 | [Sqlike](https://tashan.sh/capability/pkg-sqlike-mcp.html) | 46 | 39/wk | active |
-| 37 | [Androidapi](https://tashan.sh/capability/pkg-androidapi-mcp.html) | 45 | 52/wk | active |
-| 38 | [Breezedeploy](https://tashan.sh/capability/pkg-breezedeploy-mcp.html) | 45 | 31/wk | active |
-| 39 | [Firebird · firebird-mcp-server](https://tashan.sh/capability/pkg-firebird-mcp-server.html) | 45 | 30/wk | active |
-| 40 | [Alpacacloud](https://tashan.sh/capability/pkg-alpacacloud-mcp.html) | 44 | 52/wk | active |
+| 36 | [Mssql Writer](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-writer.html) | 47 | 425/wk | active |
+| 37 | [Sqlike](https://tashan.sh/capability/pkg-sqlike-mcp.html) | 46 | 39/wk | active |
+| 38 | [Androidapi](https://tashan.sh/capability/pkg-androidapi-mcp.html) | 45 | 52/wk | active |
+| 39 | [Breezedeploy](https://tashan.sh/capability/pkg-breezedeploy-mcp.html) | 45 | 31/wk | active |
+| 40 | [Firebird · firebird-mcp-server](https://tashan.sh/capability/pkg-firebird-mcp-server.html) | 45 | 30/wk | active |
 
-Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/database-access.html.
+Showing the top 40 of 51. The full ranked shelf is at https://tashan.sh/task/database-access.html.
 
 ## What these numbers are not
 

@@ -31,28 +31,28 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 62 | 96 ★ | active |
 | 19 | [Review](https://tashan.sh/capability/skill-alirezarezvani-review.html) | 59 | 7 repos | active |
 | 20 | [Super Claude For Sap](https://tashan.sh/capability/plugin-babamba2-superclaude-for-sap-super-claude-for-sap.html) | 55 | 46 ★ | active |
-| 21 | [Init](https://tashan.sh/capability/skill-alirezarezvani-init.html) | 54 | 4 repos | active |
-| 22 | [Migrate](https://tashan.sh/capability/skill-alirezarezvani-migrate.html) | 54 | 4 repos | active |
-| 23 | [Dx Aem](https://tashan.sh/capability/plugin-easingthemes-dx-aem-flow-dx-aem.html) | 53 | 6 ★ | active |
-| 24 | [Webapp Testing](https://tashan.sh/capability/skill-anthropics-webapp-testing.html) | 52 | 3 repos | active |
-| 25 | [Fix](https://tashan.sh/capability/skill-alirezarezvani-fix.html) | 51 | 3 repos | active |
-| 26 | [Test Driven Development](https://tashan.sh/capability/skill-obra-test-driven-development.html) | 49 | 2 repos | active |
-| 27 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
-| 28 | [Report](https://tashan.sh/capability/skill-alirezarezvani-report.html) | 48 | 2 repos | active |
-| 29 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 48 | 1 ★ | active |
-| 30 | [Agentiqa](https://tashan.sh/capability/plugin-agentiqa-agentiqa-plugin-agentiqa.html) | 46 | 1 ★ | active |
-| 31 | [Ranger](https://tashan.sh/capability/plugin-ranger-testing-trailhead-ranger.html) | 46 | 1 ★ | active |
-| 32 | [Super Ralph](https://tashan.sh/capability/plugin-aezizhu-super-ralph-super-ralph.html) | 46 | 9 ★ | active |
+| 21 | [Init](https://tashan.sh/capability/skill-alirezarezvani-init.html) | 54 | 2 repos | active |
+| 22 | [Dx Aem](https://tashan.sh/capability/plugin-easingthemes-dx-aem-flow-dx-aem.html) | 53 | 6 ★ | active |
+| 23 | [Webapp Testing](https://tashan.sh/capability/skill-anthropics-webapp-testing.html) | 52 | 3 repos | active |
+| 24 | [Fix](https://tashan.sh/capability/skill-alirezarezvani-fix.html) | 51 | 4 repos | active |
+| 25 | [Test Driven Development](https://tashan.sh/capability/skill-obra-test-driven-development.html) | 49 | 2 repos | active |
+| 26 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
+| 27 | [Report](https://tashan.sh/capability/skill-alirezarezvani-report.html) | 48 | 3 repos | active |
+| 28 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 48 | 1 ★ | active |
+| 29 | [Agentiqa](https://tashan.sh/capability/plugin-agentiqa-agentiqa-plugin-agentiqa.html) | 46 | 1 ★ | active |
+| 30 | [Ranger](https://tashan.sh/capability/plugin-ranger-testing-trailhead-ranger.html) | 46 | 1 ★ | active |
+| 31 | [Super Ralph](https://tashan.sh/capability/plugin-aezizhu-super-ralph-super-ralph.html) | 46 | 9 ★ | active |
+| 32 | [Verification Before Completion](https://tashan.sh/capability/skill-obra-verification-before-completion.html) | 45 | 2 repos | active |
 | 33 | [Local CI](https://tashan.sh/capability/plugin-mrpuls-local-ci-local-ci.html) | 45 | 3 ★ | active |
 | 34 | [Tailtest](https://tashan.sh/capability/plugin-avansaber-tailtest-tailtest.html) | 45 | 9 ★ | active |
 | 35 | [Three Pillars](https://tashan.sh/capability/plugin-curtisthe-three-pillars-plugin-three-pillars.html) | 45 | 4 ★ | active |
-| 36 | [Sdlc Wizard](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard.html) | 44 | 1 marketplaces | active |
-| 37 | [Sdlc Wizard Cowork](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard-cowork.html) | 44 | 1 marketplaces | active |
-| 38 | [Cantrips](https://tashan.sh/capability/plugin-toverux-cantrips-cantrips.html) | 44 | 1 ★ | active |
-| 39 | [Ironflow](https://tashan.sh/capability/plugin-zhijiang-li1111-ironflow-ironflow.html) | 43 | 10 ★ | active |
-| 40 | [Quick Question](https://tashan.sh/capability/plugin-tykisgod-quick-question-quick-question.html) | 43 | 10 ★ | active |
+| 36 | [Generate · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-generate.html) | 44 | 5 repos | active |
+| 37 | [Sdlc Wizard](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard.html) | 44 | 1 marketplaces | active |
+| 38 | [Sdlc Wizard Cowork](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard-cowork.html) | 44 | 1 marketplaces | active |
+| 39 | [Cantrips](https://tashan.sh/capability/plugin-toverux-cantrips-cantrips.html) | 44 | 1 ★ | active |
+| 40 | [Ironflow](https://tashan.sh/capability/plugin-zhijiang-li1111-ironflow-ironflow.html) | 43 | 10 ★ | active |
 
-Showing the top 40 of 100. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
+Showing the top 40 of 102. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
 
 ## What these numbers are not
 

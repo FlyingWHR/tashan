@@ -17,14 +17,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 56 | 43 ★ | active |
 | 5 | [Product Discovery](https://tashan.sh/capability/plugin-lenar-amirov-product-pipeline-public-product-discovery.html) | 56 | 13 ★ | active |
 | 6 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 52 | 5 ★ | active |
-| 7 | [Brief](https://tashan.sh/capability/skill-alirezarezvani-brief.html) | 51 | 3 repos | active |
-| 8 | [Post Mortem](https://tashan.sh/capability/skill-alirezarezvani-post-mortem.html) | 48 | 2 repos | active |
-| 9 | [Pricing Strategist](https://tashan.sh/capability/skill-alirezarezvani-pricing-strategist.html) | 48 | 2 repos | active |
-| 10 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 46 | 5 ★ | active |
-| 11 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 44 | 4 ★ | active |
-| 12 | [Mindpowers](https://tashan.sh/capability/plugin-rohitgehe05-mindpowers-mindpowers.html) | 43 | 3 ★ | active |
-| 13 | [Claude Deconstruct](https://tashan.sh/capability/plugin-adelaidasofia-claude-deconstruct-claude-deconstruct.html) | 43 | 1 ★ | active |
-| 14 | [Product In Acquisitions](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-product-in-acquisitions.html) | 43 | 1 marketplaces | active |
+| 7 | [Brief](https://tashan.sh/capability/skill-alirezarezvani-brief.html) | 51 | 4 repos | active |
+| 8 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 46 | 5 ★ | active |
+| 9 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 44 | 4 ★ | active |
+| 10 | [Mindpowers](https://tashan.sh/capability/plugin-rohitgehe05-mindpowers-mindpowers.html) | 43 | 3 ★ | active |
+| 11 | [Claude Deconstruct](https://tashan.sh/capability/plugin-adelaidasofia-claude-deconstruct-claude-deconstruct.html) | 43 | 1 ★ | active |
+| 12 | [Product In Acquisitions](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-product-in-acquisitions.html) | 43 | 1 marketplaces | active |
+| 13 | [Post Mortem](https://tashan.sh/capability/skill-alirezarezvani-post-mortem.html) | not scored | 1 repos | active |
+| 14 | [Pricing Strategist](https://tashan.sh/capability/skill-alirezarezvani-pricing-strategist.html) | not scored | 1 repos | active |
 | 15 | [Arquiteto De Empresa](https://tashan.sh/capability/skill-alirezarezvani-arquiteto-de-empresa.html) | not scored | 1 repos | active |
 | 16 | [Boardroom](https://tashan.sh/capability/skill-alirezarezvani-boardroom.html) | not scored | 1 repos | active |
 | 17 | [Cco Review](https://tashan.sh/capability/skill-alirezarezvani-cco-review.html) | not scored | 1 repos | active |

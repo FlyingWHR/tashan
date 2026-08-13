@@ -18,7 +18,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 59 | 171/wk | active |
 | 6 | [Project Knowledge](https://tashan.sh/capability/pkg-project-knowledge.html) | 57 | 118/wk | active |
 | 7 | [Weavatrix Git](https://tashan.sh/capability/pkg-weavatrix-git.html) | 48 | 62/wk | active |
-| 8 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 46 | 50/wk | active |
+| 8 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 46 | 49/wk | active |
 | 9 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 45 | 71/wk | active |
 | 10 | [Bitbucket](https://tashan.sh/capability/pkg-mcp-bitbucket.html) | 45 | 37/wk | active |
 | 11 | [Useclawhub](https://tashan.sh/capability/pkg-useclawhub-mcp.html) | 39 | 17/wk | active |

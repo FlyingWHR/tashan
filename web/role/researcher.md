@@ -33,7 +33,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 52 | 76 ★ | active |
 | 13 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
 | 14 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 51 | 4 ★ | active |
-| 15 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 147 ★ | active |
+| 15 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 143 ★ | active |
 | 16 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 50 | 12 ★ | active |
 | 17 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 80 | 57k ★ | active |
 | 18 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Box](https://tashan.sh/capability/plugin-box-box-for-ai-box.html) | 54 | 5 ★ | active |
 | 40 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 54 | 10 ★ | active |
 
-Showing the top 40 of 328. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 329. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

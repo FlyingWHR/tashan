@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Agent Email](https://tashan.sh/capability/pkg-email-agent-mcp.html) | 58 | 183/wk | active |
 | 40 | [Easyhook](https://tashan.sh/capability/pkg-easyhook-mcp-server.html) | 57 | 210/wk | active |
 
-Showing the top 40 of 99. The full ranked shelf is at https://tashan.sh/task/messaging-and-email.html.
+Showing the top 40 of 101. The full ranked shelf is at https://tashan.sh/task/messaging-and-email.html.
 
 ## What these numbers are not
 

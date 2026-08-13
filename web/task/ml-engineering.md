@@ -19,7 +19,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
 | 7 | [Edgegate](https://tashan.sh/capability/pkg-edgegate-mcp.html) | 46 | 11/wk | active |
 | 8 | [Ragdrift](https://tashan.sh/capability/pkg-mukundakatta-ragdrift-mcp.html) | 36 | 38/wk | active |
-| 9 | [Forge · rightnow](https://tashan.sh/capability/pkg-rightnow-forge-mcp-server.html) | 29 | 64/wk | abandoned |
+| 9 | [Forge · rightnow](https://tashan.sh/capability/pkg-rightnow-forge-mcp-server.html) | 29 | 81/wk | abandoned |
+| 10 | [Sparkrun](https://tashan.sh/capability/plugin-spark-arena-sparkrun-sparkrun.html) | not scored | 443 ★ | active |
 
 ## What these numbers are not
 

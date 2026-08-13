@@ -35,24 +35,24 @@ Ranked by the tashan score
 | 22 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 65 | 899/wk | active |
 | 23 | [minia2a — x402 Marketplace](https://tashan.sh/capability/pkg-minia2a-mcp.html) | 65 | 838/wk | active |
 | 24 | [Z Zero](https://tashan.sh/capability/pkg-z-zero-mcp-server.html) | 65 | 559/wk | active |
-| 25 | [Depix](https://tashan.sh/capability/pkg-depixapp-mcp.html) | 64 | 829/wk | active |
-| 26 | [Fibx](https://tashan.sh/capability/pkg-fibx.html) | 64 | 528/wk | active |
-| 27 | [Creditkarma](https://tashan.sh/capability/pkg-creditkarma-mcp.html) | 64 | 467/wk | active |
-| 28 | [Sayba Platform](https://tashan.sh/capability/pkg-sayba-platform.html) | 64 | 407/wk | active |
-| 29 | [Tradeblocks](https://tashan.sh/capability/pkg-tradeblocks-mcp.html) | 64 | 406/wk | active |
-| 30 | [Permitverdict](https://tashan.sh/capability/pkg-permitverdict-mcp.html) | 63 | 747/wk | active |
-| 31 | [Yahoo Finance](https://tashan.sh/capability/pkg-yahoo-finance-mcp-server.html) | 62 | 589/wk | active |
-| 32 | [Vatnode](https://tashan.sh/capability/pkg-vatnode-mcp.html) | 62 | 477/wk | active |
-| 33 | [Minia2a Client](https://tashan.sh/capability/pkg-minia2a-client.html) | 62 | 379/wk | active |
-| 34 | [Form4api](https://tashan.sh/capability/pkg-form4api-mcp.html) | 62 | 375/wk | active |
-| 35 | [Configcat](https://tashan.sh/capability/pkg-configcat-mcp-server.html) | 62 | 357/wk | active |
-| 36 | [Xpay](https://tashan.sh/capability/pkg-xona-labs-xpay.html) | 62 | 270/wk | active |
-| 37 | [Insightsentry](https://tashan.sh/capability/pkg-insightsentry-mcp.html) | 62 | 228/wk | active |
-| 38 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 61 | 49 ★ | active |
-| 39 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 61 | 337/wk | active |
-| 40 | [Finmap](https://tashan.sh/capability/pkg-finmap-mcp.html) | 61 | 270/wk | active |
+| 25 | [Agentmap](https://tashan.sh/capability/pkg-raymondchins-agentmap.html) | 65 | 544/wk | active |
+| 26 | [Depix](https://tashan.sh/capability/pkg-depixapp-mcp.html) | 64 | 829/wk | active |
+| 27 | [Fibx](https://tashan.sh/capability/pkg-fibx.html) | 64 | 528/wk | active |
+| 28 | [Creditkarma](https://tashan.sh/capability/pkg-creditkarma-mcp.html) | 64 | 467/wk | active |
+| 29 | [Sayba Platform](https://tashan.sh/capability/pkg-sayba-platform.html) | 64 | 407/wk | active |
+| 30 | [Tradeblocks](https://tashan.sh/capability/pkg-tradeblocks-mcp.html) | 64 | 406/wk | active |
+| 31 | [Permitverdict](https://tashan.sh/capability/pkg-permitverdict-mcp.html) | 63 | 747/wk | active |
+| 32 | [Yahoo Finance](https://tashan.sh/capability/pkg-yahoo-finance-mcp-server.html) | 62 | 589/wk | active |
+| 33 | [Vatnode](https://tashan.sh/capability/pkg-vatnode-mcp.html) | 62 | 477/wk | active |
+| 34 | [Minia2a Client](https://tashan.sh/capability/pkg-minia2a-client.html) | 62 | 379/wk | active |
+| 35 | [Form4api](https://tashan.sh/capability/pkg-form4api-mcp.html) | 62 | 375/wk | active |
+| 36 | [Configcat](https://tashan.sh/capability/pkg-configcat-mcp-server.html) | 62 | 357/wk | active |
+| 37 | [Xpay](https://tashan.sh/capability/pkg-xona-labs-xpay.html) | 62 | 270/wk | active |
+| 38 | [Insightsentry](https://tashan.sh/capability/pkg-insightsentry-mcp.html) | 62 | 228/wk | active |
+| 39 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 61 | 49 ★ | active |
+| 40 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 61 | 337/wk | active |
 
-Showing the top 40 of 437. The full ranked shelf is at https://tashan.sh/category/finance.html.
+Showing the top 40 of 428. The full ranked shelf is at https://tashan.sh/category/finance.html.
 
 ## What these numbers are not
 

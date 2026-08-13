@@ -18,12 +18,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 50 | 3 ★ | active |
 | 6 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 50 | 3 ★ | active |
 | 7 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 49 | 3 ★ | active |
-| 8 | [Pricing Strategist](https://tashan.sh/capability/skill-alirezarezvani-pricing-strategist.html) | 48 | 2 repos | active |
-| 9 | [Algovault Skills](https://tashan.sh/capability/plugin-algovaultlabs-algovault-skills-algovault-skills.html) | 47 | 1 ★ | active |
-| 10 | [Bigdata Com](https://tashan.sh/capability/plugin-bigdata-com-bigdata-plugins-marketplace-bigdata-com.html) | 46 | 2 ★ | active |
-| 11 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 45 | 7 ★ | active |
-| 12 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 44 | 4 ★ | active |
-| 13 | [Comparative Landscape Brief](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-comparative-landscape-brief.html) | 43 | 1 marketplaces | active |
+| 8 | [Algovault Skills](https://tashan.sh/capability/plugin-algovaultlabs-algovault-skills-algovault-skills.html) | 47 | 1 ★ | active |
+| 9 | [Bigdata Com](https://tashan.sh/capability/plugin-bigdata-com-bigdata-plugins-marketplace-bigdata-com.html) | 46 | 2 ★ | active |
+| 10 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 45 | 7 ★ | active |
+| 11 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 44 | 4 ★ | active |
+| 12 | [Comparative Landscape Brief](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-comparative-landscape-brief.html) | 43 | 1 marketplaces | active |
+| 13 | [Pricing Strategist](https://tashan.sh/capability/skill-alirezarezvani-pricing-strategist.html) | not scored | 1 repos | active |
 | 14 | [Competitive Ads Extractor](https://tashan.sh/capability/skill-composiohq-competitive-ads-extractor.html) | not scored | 1 repos | active |
 | 15 | [Sales Engineer](https://tashan.sh/capability/skill-alirezarezvani-sales-engineer.html) | not scored | 1 repos | active |
 | 16 | [Cmo Review](https://tashan.sh/capability/skill-alirezarezvani-cmo-review.html) | not scored | 1 repos | active |

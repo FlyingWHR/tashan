@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 59 | 302/wk | active |
 | 40 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 55 | 205/wk | active |
 
-Showing the top 40 of 46. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.
+Showing the top 40 of 48. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.
 
 ## What these numbers are not
 

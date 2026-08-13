@@ -17,42 +17,42 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Spotify Ads API](https://tashan.sh/capability/plugin-spotify-ads-claude-plugin-spotify-ads-api.html) | 60 | 14 ★ | active |
 | 5 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 70 | 168 ★ | active |
 | 6 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 68 | 137 ★ | active |
-| 7 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 365 ★ | active |
+| 7 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 238 ★ | active |
 | 8 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 51 | 73 ★ | active |
 | 9 | [Resend](https://tashan.sh/capability/plugin-resend-resend-skills-resend.html) | 46 | 2 marketplaces | — |
 | 10 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 45 | 21 ★ | active |
-| 11 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 44 | 3 ★ | active |
-| 12 | [Post Bridge](https://tashan.sh/capability/plugin-post-bridge-hq-agent-mode-post-bridge.html) | 44 | 13 ★ | active |
-| 13 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 44 | 22 ★ | active |
-| 14 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 44 | 1 marketplaces | active |
-| 15 | [LinkedIn Post Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-post-generator.html) | 43 | 1 marketplaces | active |
-| 16 | [Botboard Biz](https://tashan.sh/capability/plugin-2389-research-claude-plugins-botboard-biz.html) | 42 | 1 marketplaces | — |
-| 17 | [Wechat Official Account Qr](https://tashan.sh/capability/plugin-chujianyun-skills-wechat-official-account-qr.html) | 40 | 1 marketplaces | active |
-| 18 | [Competitive Ads Extractor](https://tashan.sh/capability/skill-composiohq-competitive-ads-extractor.html) | not scored | 1 repos | active |
-| 19 | [Active Campaign Automation](https://tashan.sh/capability/skill-composiohq-active-campaign-automation.html) | not scored | 1 repos | active |
-| 20 | [Customer IO Automation](https://tashan.sh/capability/skill-composiohq-customer-io-automation.html) | not scored | 1 repos | active |
-| 21 | [Cutt Ly Automation](https://tashan.sh/capability/skill-composiohq-cutt-ly-automation.html) | not scored | 1 repos | active |
-| 22 | [Facebook Automation](https://tashan.sh/capability/skill-composiohq-facebook-automation.html) | not scored | 1 repos | active |
-| 23 | [Go To Webinar Automation](https://tashan.sh/capability/skill-composiohq-go-to-webinar-automation.html) | not scored | 1 repos | active |
-| 24 | [Cmo Review](https://tashan.sh/capability/skill-alirezarezvani-cmo-review.html) | not scored | 1 repos | active |
-| 25 | [Internal Narrative](https://tashan.sh/capability/skill-alirezarezvani-internal-narrative.html) | not scored | 1 repos | active |
-| 26 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
-| 27 | [Ad Creative](https://tashan.sh/capability/skill-alirezarezvani-ad-creative.html) | not scored | 1 repos | active |
-| 28 | [Competitor Alternatives](https://tashan.sh/capability/skill-alirezarezvani-competitor-alternatives.html) | not scored | 1 repos | active |
-| 29 | [Content Creator](https://tashan.sh/capability/skill-alirezarezvani-content-creator.html) | not scored | 1 repos | active |
-| 30 | [Content Production](https://tashan.sh/capability/skill-alirezarezvani-content-production.html) | not scored | 1 repos | active |
-| 31 | [Content Strategy](https://tashan.sh/capability/skill-alirezarezvani-content-strategy.html) | not scored | 1 repos | active |
-| 32 | [Copywriting](https://tashan.sh/capability/skill-alirezarezvani-copywriting.html) | not scored | 1 repos | active |
-| 33 | [Email Sequence](https://tashan.sh/capability/skill-alirezarezvani-email-sequence.html) | not scored | 1 repos | active |
-| 34 | [Form Cro](https://tashan.sh/capability/skill-alirezarezvani-form-cro.html) | not scored | 1 repos | active |
-| 35 | [Free Tool Strategy](https://tashan.sh/capability/skill-alirezarezvani-free-tool-strategy.html) | not scored | 1 repos | active |
-| 36 | [Launch Strategy](https://tashan.sh/capability/skill-alirezarezvani-launch-strategy.html) | not scored | 1 repos | active |
-| 37 | [Marketing Context](https://tashan.sh/capability/skill-alirezarezvani-marketing-context.html) | not scored | 1 repos | active |
-| 38 | [Marketing Demand Acquisition](https://tashan.sh/capability/skill-alirezarezvani-marketing-demand-acquisition.html) | not scored | 1 repos | active |
-| 39 | [Marketing Ideas](https://tashan.sh/capability/skill-alirezarezvani-marketing-ideas.html) | not scored | 1 repos | active |
-| 40 | [Marketing Ops](https://tashan.sh/capability/skill-alirezarezvani-marketing-ops.html) | not scored | 1 repos | active |
+| 11 | [Content Strategy](https://tashan.sh/capability/skill-alirezarezvani-content-strategy.html) | 44 | 3 repos | active |
+| 12 | [Copywriting](https://tashan.sh/capability/skill-alirezarezvani-copywriting.html) | 44 | 2 repos | active |
+| 13 | [Marketing Ops](https://tashan.sh/capability/skill-alirezarezvani-marketing-ops.html) | 44 | 2 repos | active |
+| 14 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 44 | 3 ★ | active |
+| 15 | [Post Bridge](https://tashan.sh/capability/plugin-post-bridge-hq-agent-mode-post-bridge.html) | 44 | 13 ★ | active |
+| 16 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 44 | 22 ★ | active |
+| 17 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 44 | 1 marketplaces | active |
+| 18 | [LinkedIn Post Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-post-generator.html) | 43 | 1 marketplaces | active |
+| 19 | [Botboard Biz](https://tashan.sh/capability/plugin-2389-research-claude-plugins-botboard-biz.html) | 42 | 1 marketplaces | — |
+| 20 | [Wechat Official Account Qr](https://tashan.sh/capability/plugin-chujianyun-skills-wechat-official-account-qr.html) | 40 | 1 marketplaces | active |
+| 21 | [Competitive Ads Extractor](https://tashan.sh/capability/skill-composiohq-competitive-ads-extractor.html) | not scored | 1 repos | active |
+| 22 | [Active Campaign Automation](https://tashan.sh/capability/skill-composiohq-active-campaign-automation.html) | not scored | 1 repos | active |
+| 23 | [Customer IO Automation](https://tashan.sh/capability/skill-composiohq-customer-io-automation.html) | not scored | 1 repos | active |
+| 24 | [Cutt Ly Automation](https://tashan.sh/capability/skill-composiohq-cutt-ly-automation.html) | not scored | 1 repos | active |
+| 25 | [Facebook Automation](https://tashan.sh/capability/skill-composiohq-facebook-automation.html) | not scored | 1 repos | active |
+| 26 | [Go To Webinar Automation](https://tashan.sh/capability/skill-composiohq-go-to-webinar-automation.html) | not scored | 1 repos | active |
+| 27 | [Cmo Review](https://tashan.sh/capability/skill-alirezarezvani-cmo-review.html) | not scored | 1 repos | active |
+| 28 | [Internal Narrative](https://tashan.sh/capability/skill-alirezarezvani-internal-narrative.html) | not scored | 1 repos | active |
+| 29 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
+| 30 | [Ad Creative](https://tashan.sh/capability/skill-alirezarezvani-ad-creative.html) | not scored | 1 repos | active |
+| 31 | [Competitor Alternatives](https://tashan.sh/capability/skill-alirezarezvani-competitor-alternatives.html) | not scored | 1 repos | active |
+| 32 | [Content Creator](https://tashan.sh/capability/skill-alirezarezvani-content-creator.html) | not scored | 1 repos | active |
+| 33 | [Content Production](https://tashan.sh/capability/skill-alirezarezvani-content-production.html) | not scored | 1 repos | active |
+| 34 | [Email Sequence](https://tashan.sh/capability/skill-alirezarezvani-email-sequence.html) | not scored | 1 repos | active |
+| 35 | [Form Cro](https://tashan.sh/capability/skill-alirezarezvani-form-cro.html) | not scored | 1 repos | active |
+| 36 | [Free Tool Strategy](https://tashan.sh/capability/skill-alirezarezvani-free-tool-strategy.html) | not scored | 1 repos | active |
+| 37 | [Launch Strategy](https://tashan.sh/capability/skill-alirezarezvani-launch-strategy.html) | not scored | 1 repos | active |
+| 38 | [Marketing Context](https://tashan.sh/capability/skill-alirezarezvani-marketing-context.html) | not scored | 1 repos | active |
+| 39 | [Marketing Demand Acquisition](https://tashan.sh/capability/skill-alirezarezvani-marketing-demand-acquisition.html) | not scored | 1 repos | active |
+| 40 | [Marketing Ideas](https://tashan.sh/capability/skill-alirezarezvani-marketing-ideas.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 82. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.
+Showing the top 40 of 84. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.
 
 ## What these numbers are not
 

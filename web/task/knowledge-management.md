@@ -48,11 +48,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 79 | 62k ★ | active |
 | 36 | [Deeplake Hivemind](https://tashan.sh/capability/plugin-activeloopai-deeplake-claude-code-plugins-deeplake-hivemind.html) | 73 | 2k ★ | active |
 | 37 | [Hivemind](https://tashan.sh/capability/plugin-activeloopai-hivemind-hivemind.html) | 73 | 2k ★ | active |
-| 38 | [Handoff · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-handoff.html) | 55 | 5 repos | active |
+| 38 | [Handoff · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-handoff.html) | 55 | 7 repos | active |
 | 39 | [Private Journal · 2389-research](https://tashan.sh/capability/plugin-2389-research-journal-mcp-private-journal-mcp.html) | 52 | 9 ★ | active |
 | 40 | [Mind](https://tashan.sh/capability/plugin-memvid-claude-brain-mind.html) | 52 | 533 ★ | stable |
 
-Showing the top 40 of 203. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
+Showing the top 40 of 204. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
 
 ## What these numbers are not
 

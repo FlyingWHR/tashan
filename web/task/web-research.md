@@ -21,14 +21,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Antigravity](https://tashan.sh/capability/plugin-marcosnahuel-antigravity-plugin-cc-antigravity.html) | 58 | 21 ★ | active |
 | 9 | [Serpapi Claude Plugin](https://tashan.sh/capability/plugin-serpapi-serpapi-claude-plugin-serpapi-claude-plugin.html) | 57 | 13 ★ | active |
 | 10 | [Travel Search And Booking API And Skills](https://tashan.sh/capability/plugin-alibaba-flyai-flyai-skill-travel-search-and-booking-api-and-skills.html) | 60 | 880 ★ | active |
-| 11 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 51 | 3 repos | active |
+| 11 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 51 | 2 repos | active |
 | 12 | [Releases](https://tashan.sh/capability/plugin-buildinternet-releases-cli-releases.html) | 49 | 3 ★ | active |
-| 13 | [Deep Research](https://tashan.sh/capability/skill-alirezarezvani-deep-research.html) | 48 | 2 repos | active |
-| 14 | [Grep Research Skills](https://tashan.sh/capability/plugin-parcha-ai-grep-research-skills-grep-research-skills.html) | 48 | 1 ★ | active |
-| 15 | [Brightdata Plugin](https://tashan.sh/capability/plugin-brightdata-skills-brightdata-plugin.html) | 46 | 2 marketplaces | — |
-| 16 | [Learn · agent-sh](https://tashan.sh/capability/plugin-agent-sh-learn-learn.html) | 44 | 2 ★ | active |
-| 17 | [Comparative Landscape Brief](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-comparative-landscape-brief.html) | 43 | 1 marketplaces | active |
-| 18 | [Context7 · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-context7.html) | 42 | 1 marketplaces | — |
+| 13 | [Grep Research Skills](https://tashan.sh/capability/plugin-parcha-ai-grep-research-skills-grep-research-skills.html) | 48 | 1 ★ | active |
+| 14 | [Brightdata Plugin](https://tashan.sh/capability/plugin-brightdata-skills-brightdata-plugin.html) | 46 | 2 marketplaces | — |
+| 15 | [Learn · agent-sh](https://tashan.sh/capability/plugin-agent-sh-learn-learn.html) | 44 | 2 ★ | active |
+| 16 | [Comparative Landscape Brief](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-comparative-landscape-brief.html) | 43 | 1 marketplaces | active |
+| 17 | [Context7 · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-context7.html) | 42 | 1 marketplaces | — |
+| 18 | [Deep Research](https://tashan.sh/capability/skill-alirezarezvani-deep-research.html) | not scored | 1 repos | active |
 | 19 | [Composio Search Automation](https://tashan.sh/capability/skill-composiohq-composio-search-automation.html) | not scored | 1 repos | active |
 | 20 | [Google Maps Automation](https://tashan.sh/capability/skill-composiohq-google-maps-automation.html) | not scored | 1 repos | active |
 | 21 | [YouTube Full](https://tashan.sh/capability/skill-alirezarezvani-youtube-full.html) | not scored | 1 repos | active |

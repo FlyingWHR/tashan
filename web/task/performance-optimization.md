@@ -16,10 +16,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
 | 4 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 54 | 153/wk | active |
 | 5 | [Lighthouse](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 47 | 580/wk | active |
-| 6 | [Svelte5 Migration Analyst](https://tashan.sh/capability/plugin-gageracer-svelte5-migration-analyst-svelte5-migration-analyst.html) | 40 | 0 ★ | active |
-| 7 | [Deoptkit](https://tashan.sh/capability/pkg-deoptkit.html) | 37 | 7/wk | active |
-| 8 | [Swift Patterns](https://tashan.sh/capability/plugin-efremidze-swift-patterns-skill-swift-patterns.html) | 34 | 8 ★ | active |
-| 9 | [Debugger](https://tashan.sh/capability/pkg-ai-capabilities-suite-mcp-debugger-server.html) | 32 | 130/wk | abandoned |
+| 6 | [Deoptkit](https://tashan.sh/capability/pkg-deoptkit.html) | 37 | 7/wk | active |
+| 7 | [Swift Patterns](https://tashan.sh/capability/plugin-efremidze-swift-patterns-skill-swift-patterns.html) | 34 | 8 ★ | active |
+| 8 | [Debugger](https://tashan.sh/capability/pkg-ai-capabilities-suite-mcp-debugger-server.html) | 32 | 130/wk | abandoned |
 
 ## What these numbers are not
 

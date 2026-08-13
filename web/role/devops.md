@@ -42,8 +42,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 23 | [Datadog · datadog-labs](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 53 | 8 ★ | active |
 | 24 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 52 | 12 ★ | active |
 | 25 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
-| 26 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 246 ★ | active |
-| 27 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 86 ★ | active |
+| 26 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 72 | 2 marketplaces | active |
+| 27 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 71 | 3 marketplaces | active |
 | 28 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
 | 29 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
 | 30 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 66 | 90 ★ | active |
@@ -51,12 +51,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 61 | 85 ★ | active |
 | 33 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 61 | 40 ★ | active |
 | 34 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 61 | 40 ★ | active |
-| 35 | [Build Mcpb](https://tashan.sh/capability/skill-anthropics-build-mcpb.html) | 52 | 3 repos | active |
-| 36 | [Incident Response](https://tashan.sh/capability/skill-alirezarezvani-incident-response.html) | 51 | 3 repos | active |
-| 37 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 50 | 13 ★ | active |
-| 38 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 50 | 5 ★ | active |
-| 39 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 49 | 45 ★ | active |
-| 40 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
+| 35 | [Edgeone](https://tashan.sh/capability/plugin-tencent-tencent-edgeone-agent-plugins-edgeone.html) | 50 | 13 ★ | active |
+| 36 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 50 | 5 ★ | active |
+| 37 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 49 | 45 ★ | active |
+| 38 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 49 | 12 ★ | active |
+| 39 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 49 | 8 ★ | active |
+| 40 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 49 | 6 ★ | active |
 
 Showing the top 40 of 212. The full ranked shelf is at https://tashan.sh/role/devops.html.
 

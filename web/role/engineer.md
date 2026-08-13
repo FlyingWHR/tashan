@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [ClickHouse Best Practices](https://tashan.sh/capability/plugin-clickhouse-agent-skills-clickhouse-best-practices.html) | 73 | 498 ★ | active |
 | 40 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 72 | 426 ★ | active |
 
-Showing the top 40 of 802. The full ranked shelf is at https://tashan.sh/role/engineer.html.
+Showing the top 40 of 805. The full ranked shelf is at https://tashan.sh/role/engineer.html.
 
 ## What these numbers are not
 
