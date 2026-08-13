@@ -1,5 +1,5 @@
 // node cli/mcp.test.mjs — protocol + rendering for the MCP server. No network.
-import { handle, handshake, evidence, risks, renderFind, renderCheck } from "./mcp.mjs";
+import { handle, handshake, evidence, risks, renderFind, renderCheck, trendBlock } from "./mcp.mjs";
 import assert from "node:assert";
 
 const rpc = (method, params, id = 1) => handle({ jsonrpc: "2.0", id, method, params });
@@ -283,3 +283,34 @@ console.log("ok — the agent gets the full security audit, free");
   assert.ok(!/Not shown here/.test(cleanOut));
 }
 console.log("ok — the agent gets the advisory id, the fix version and the install command, free");
+
+// ---- the paid half, inside the agent's decision loop ---------------------------------------------
+// audit_config is the moment the trend is worth most: the agent is holding the user's actual list.
+// Everything above it stays free; this is the one thing local files cannot know.
+{
+  const down = trendBlock({ history: {
+    "pkg:a": { direction: "down", change: -12, first: "2026-06-01" },
+    "pkg:b": { direction: "up", change: 3, first: "2026-06-01" },
+    "pkg:c": { direction: "flat", change: 0, first: "2026-06-01" },
+  } }).join("\n");
+  assert.ok(/↓ pkg:a  -12 since/.test(down), "a falling capability must be named with its delta");
+  assert.ok(/↑ pkg:b  \+3 since/.test(down), "a rising one too, with a sign");
+  assert.ok(!/pkg:c/.test(down), "a flat row is noise in a list about movement");
+  assert.ok(down.indexOf("pkg:a") < down.indexOf("pkg:b"), "biggest move first — that is the news");
+
+  const quiet = trendBlock({ history: {} }).join("\n");
+  assert.ok(/nothing in this config has moved/.test(quiet),
+            "'nothing moved' is a real answer and must not read as a failed fetch");
+
+  // These two send someone to different places. Guessing wrong wastes the moment they would act.
+  assert.ok(/refused/.test(trendBlock({ status: 403 }).join("")), "a refused licence says so");
+  assert.ok(/portal/.test(trendBlock({ status: 403 }).join("")), "...and points at the portal");
+  assert.ok(/pricing/.test(trendBlock({ status: 402 }).join("")), "no licence points at pricing");
+  assert.ok(!/refused/.test(trendBlock({ status: 402 }).join("")),
+            "somebody who never had a licence must not be told theirs was refused");
+
+  const pitch = trendBlock({ count: 14 }).join(" ");
+  assert.ok(/these 14 /.test(pitch), "the offer is sized to THEIR config, not generic");
+  assert.ok(/7 days free/.test(pitch));
+}
+console.log("ok — audit_config reports direction, and says which kind of 'no' it got");

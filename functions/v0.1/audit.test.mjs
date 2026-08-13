@@ -15,7 +15,8 @@ const ok = (name, cond, extra = "") => {
 const LOOKUP = {
   generated_at: "2026-08-14T00:00:00Z",
   scorer: "s5",
-  keys: { "good-mcp": 0, "pkg:good-mcp": 0, "sick-mcp": 1, "pkg:sick-mcp": 1, "old-mcp": 2, "pkg:old-mcp": 2 },
+  keys: { "good-mcp": 0, "pkg:good-mcp": 0, "sick-mcp": 1, "pkg:sick-mcp": 1, "old-mcp": 2, "pkg:old-mcp": 2,
+         "canary-mcp": 3, "pkg:canary-mcp": 3 },
   records: [
     { id: "pkg:good-mcp", name: "good-mcp", label: "Good", slug: "pkg-good-mcp", tashan_score: 91,
       vitality: "active", rated: true, sec_advisory_count: 0 },
@@ -23,6 +24,8 @@ const LOOKUP = {
       vitality: "active", rated: true, sec_advisory_count: 2, single_maintainer: 1 },
     { id: "pkg:old-mcp", name: "old-mcp", label: "Old", slug: "pkg-old-mcp", tashan_score: 55,
       vitality: "dormant", rated: true, npm_deprecated: 1, gh_archived: 1 },
+    // A row junk() keeps OFF the board: it survives in lookup.json only to warn, and has no slug.
+    { id: "pkg:canary-mcp", name: "canary-mcp", tashan_score: null, sec_advisory_count: 1 },
   ],
 };
 
@@ -80,6 +83,17 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
      /free and needs no account/i.test(body.note) && /never safe/i.test(body.note));
   ok("...and says what payment would add", Boolean(body.history_available));
   ok("no history leaked into the free response", body.history === undefined);
+}
+
+// ---- an unlisted row must not be handed a URL that 404s ------------------------------------------
+{
+  const { body } = await read(await post({ servers: ["canary-mcp"] }));
+  const c = body.audited[0];
+  ok("a row with no dossier gets NO url rather than /capability/undefined.html",
+     c.url === undefined && c.listed === false, JSON.stringify(c));
+  ok("...and says why it is here at all", /only to warn/i.test(c.note || ""));
+  ok("...while still carrying its advisory and its verdict",
+     c.verdict === "replace" && c.flags.some(f => f.k === "advisory"));
 }
 
 // ---- the paid half is not served without payment -------------------------------------------------

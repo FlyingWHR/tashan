@@ -106,7 +106,17 @@ function assess(r) {
     expertise: r.expertise_verdict || null,
     flags,
     verdict: stop ? "replace" : look ? "review" : "keep",
-    url: "https://tashan.sh/capability/" + r.slug + ".html",
+    // NO SLUG MEANS NO PAGE, AND A URL THAT 404s IS WORSE THAN NO URL. Rows that junk() keeps out of
+    // the board survive in lookup.json for exactly one reason — so `doctor` and this endpoint can
+    // still warn somebody already running one — and they have no dossier. mcp-server-fetch, a
+    // dependency-confusion canary carrying a MAL advisory, was answering with
+    // /capability/undefined.html: a broken link handed to a machine, on the row where being
+    // believed matters most.
+    ...(r.slug
+      ? { url: "https://tashan.sh/capability/" + r.slug + ".html" }
+      : { listed: false,
+          note: "Known but deliberately not listed on the board — it survives here only to warn "
+              + "anyone already running it. There is no dossier page." }),
   };
 }
 

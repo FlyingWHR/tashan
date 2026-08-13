@@ -21,7 +21,8 @@
 // Zero dependencies, stdio transport, newline-delimited JSON-RPC 2.0.
 
 import { realpathSync } from "node:fs";
-import { disp, search, find, installSnippets, pretty, slugify, advisoriesOf, installScriptOf } from "./tashan.mjs";
+import { disp, search, find, installSnippets, pretty, slugify, advisoriesOf, installScriptOf,
+         resolveLicence } from "./tashan.mjs";
 import { tokensOf } from "./doctor.mjs";
 import { configLocations, skillLocations, collect, resolve, assess, summarize } from "./doctor.mjs";
 
@@ -361,7 +362,13 @@ async function callTool(name, args) {
   if (name === "audit_config") {
     const lk = await lookup();
     const { found, problems } = collect(configLocations(), skillLocations());
-    const results = found.map((item) => ({ item, assessment: assess(item, resolve(item, lk)) }));
+    // Keep the RESOLVED ROW, not just the verdict: assess() returns {level, notes} and carries no
+    // id, so reading r.assessment.id would have been undefined on every row and the trend block
+    // below would have silently sent nothing at all.
+    const results = found.map((item) => {
+      const row = resolve(item, lk);
+      return { item, row, assessment: assess(item, row) };
+    });
     const sum = summarize(results);
     const L = [`${sum.total} capabilities installed · ${sum.alert} need attention · ${sum.warn} worth a look`, ""];
     for (const r of results) {
@@ -373,9 +380,76 @@ async function callTool(name, args) {
     if (sum.alert === 0 && sum.warn === 0) L.push("Nothing deprecated, archived or abandoned.");
     for (const p of problems) L.push(`could not read ${p.path}: ${p.error}`);
     L.push("", "Read from local files only. Nothing was uploaded.");
+
+    // THE TREND, WHICH IS THE ONE THING THE LOCAL FILES CANNOT TELL YOU.
+    //
+    // Everything above is derived from this machine plus the public lookup table: what is dead,
+    // deprecated, or impersonating an official name. All free, and it stays free. What no local
+    // file knows is DIRECTION — whether a server the user depends on is a project getting better
+    // or one quietly sliding. That is the retention series, it is the paid half, and this is the
+    // moment it is worth most: the agent is holding the actual list.
+    //
+    // With a licence we fetch it. Without one we say what it would have told them, sized to THEIR
+    // config — a specific number beats a generic upsell, and it is the difference between an offer
+    // and a nag. Nothing is uploaded in the free path; the ids only leave the machine when the user
+    // has paid and asked for the trend.
+    const ids = [...new Set(results.map((r) => r.row && r.row.id).filter(Boolean))];
+    const lic = resolveLicence({});
+    if (lic && lic.key && ids.length) {
+      try {
+        const res = await fetch(`${SITE}/v0.1/audit`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+            authorization: `Bearer ${lic.key}`,
+            ...(lic.activation_id ? { "x-tashan-activation": lic.activation_id } : {}),
+          },
+          body: JSON.stringify({ servers: ids, history: true }),
+        });
+        if (res.ok) {
+          const { history } = await res.json();
+          L.push(...trendBlock({ history }));
+        } else if (res.status === 402 || res.status === 403) {
+          L.push(...trendBlock({ status: res.status }));
+        }
+      } catch { /* offline: the audit above is complete and correct on its own */ }
+    } else if (ids.length) {
+      L.push(...trendBlock({ count: ids.length }));
+    }
     return L.join("\n");
   }
   throw new Error(`unknown tool: ${name}`);
+}
+
+
+/**
+ * The Pro half of an audit, as lines — pure, so it can be tested without a filesystem or a network.
+ *
+ * Four states, and the distinctions matter more than the wording. "Your licence was refused" and
+ * "you have no licence" send someone to two different places, and guessing wrong wastes the one
+ * moment they were willing to act. "Nothing moved" is a real, reassuring answer and must not read
+ * as a failure to fetch. And the unlicensed pitch is sized to THEIR config, because a specific
+ * number is the difference between an offer and a nag.
+ */
+export function trendBlock({ history, status, count } = {}) {
+  if (status === 403) return ["", "tashan Pro: this licence was refused — check https://polar.sh/tashan/portal"];
+  if (status === 402) return ["", "tashan Pro would add the trend here — https://tashan.sh/pricing"];
+  if (count) {
+    return ["", `tashan Pro watches these ${count} for direction — whether each is a project getting `
+      + "better or one on its way down — and names a measured replacement when one dies. "
+      + "$6/mo, 7 days free: https://tashan.sh/pricing"];
+  }
+  const moved = Object.entries(history || {})
+    .filter(([, h]) => h && h.direction && h.direction !== "flat" && Number.isFinite(h.change))
+    .sort((a, b) => Math.abs(b[1].change) - Math.abs(a[1].change));
+  if (!moved.length) {
+    return ["", "tashan Pro: nothing in this config has moved since we started measuring it."];
+  }
+  const L = ["", "Moving (tashan Pro — the score series behind each one):"];
+  for (const [id, h] of moved.slice(0, 12)) {
+    L.push(`  ${h.direction === "up" ? "↑" : "↓"} ${id}  ${h.change > 0 ? "+" : ""}${h.change} since ${h.first}`);
+  }
+  return L;
 }
 
 // ---- JSON-RPC plumbing ----

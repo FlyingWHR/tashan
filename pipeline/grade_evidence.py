@@ -197,10 +197,17 @@ NOT_A_TOOL = {"mcp-server", "server-mcp", "mcp-servers", "package-json", "read-m
               "table-of-contents", "self-hosted", "open-source", "step-by-step"}
 
 
+# A HOSTNAME IS NOT A TOOL. `tool_shaped` accepts a dot as an identifier separator, which is right
+# for `namespace.tool` and wrong for `euparliamentmonitor.com`: european-parliament-mcp-server was
+# credited with 70 tools, two of which were the websites in its own header. Restricted to real TLDs
+# so a genuinely dotted tool name is untouched.
+HOSTNAME = re.compile(r"^[a-z0-9-]+(\.[a-z0-9-]+)*\.(com|org|net|io|dev|sh|ai|co|app|eu|gov|edu|me|xyz|cloud|tools)$")
+
+
 def tool_shaped(tok):
-    """Does this token look like a tool identifier rather than a filename or an English word?"""
+    """Does this token look like a tool identifier rather than a filename, a host or an English word?"""
     t = tok.lower()
-    return (not t.endswith(EXT) and t not in NOT_A_TOOL
+    return (not t.endswith(EXT) and t not in NOT_A_TOOL and not HOSTNAME.match(t)
             and bool(re.search(r"[_.]|-", t))          # identifiers carry a separator
             and not re.fullmatch(r"[a-z][a-z-]*-\d+", t)  # `brilliant-directories-60031` is an id
             and len(t) >= 5)

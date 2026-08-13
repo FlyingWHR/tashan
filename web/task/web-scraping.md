@@ -35,15 +35,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 57 | 14 ★ | active |
 | 23 | [Firecrawl Workflows](https://tashan.sh/capability/plugin-firecrawl-firecrawl-workflows-firecrawl-workflows.html) | 54 | 101 ★ | active |
 | 24 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 51 | 21 ★ | active |
-| 25 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 68 | 594/wk | active |
-| 26 | [Fouradata](https://tashan.sh/capability/pkg-fouradata-mcp.html) | 66 | 255/wk | active |
-| 27 | [Skim402](https://tashan.sh/capability/pkg-skim-mcp.html) | 49 | 61/wk | active |
-| 28 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
-| 29 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 61 | 337/wk | active |
-| 30 | [Scrapeunblocker](https://tashan.sh/capability/pkg-scrapeunblocker-mcp.html) | 57 | 205/wk | active |
-| 31 | [Alterlab](https://tashan.sh/capability/pkg-alterlab-mcp-server.html) | 52 | 130/wk | active |
-| 32 | [Grabzit](https://tashan.sh/capability/pkg-grabzit-mcp-server.html) | 47 | 51/wk | active |
-| 33 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 70 | 2k/wk | active |
+| 25 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 70 | 2k/wk | active |
+| 26 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 68 | 594/wk | active |
+| 27 | [Fouradata](https://tashan.sh/capability/pkg-fouradata-mcp.html) | 66 | 255/wk | active |
+| 28 | [Skim402](https://tashan.sh/capability/pkg-skim-mcp.html) | 49 | 61/wk | active |
+| 29 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
+| 30 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 61 | 337/wk | active |
+| 31 | [Scrapeunblocker](https://tashan.sh/capability/pkg-scrapeunblocker-mcp.html) | 57 | 205/wk | active |
+| 32 | [Alterlab](https://tashan.sh/capability/pkg-alterlab-mcp-server.html) | 52 | 130/wk | active |
+| 33 | [Grabzit](https://tashan.sh/capability/pkg-grabzit-mcp-server.html) | 47 | 51/wk | active |
 | 34 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 67 | 911/wk | active |
 | 35 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 65 | 2k/wk | active |
 | 36 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 64 | 436/wk | active |

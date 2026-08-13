@@ -27,8 +27,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | not scored | 1 repos | active |
 | 15 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | not scored | 1 repos | active |
 | 16 | [Syllabus](https://tashan.sh/capability/skill-alirezarezvani-syllabus.html) | not scored | 1 repos | active |
-| 17 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 46 | 43/wk | active |
-| 18 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 70 | 3k/wk | active |
+| 17 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 70 | 3k/wk | active |
+| 18 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 46 | 43/wk | active |
 | 19 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 60 | 378/wk | active |
 | 20 | [Jobo Job Search](https://tashan.sh/capability/pkg-jobo-job-search-mcp.html) | 56 | 300/wk | active |
 | 21 | [Freehire](https://tashan.sh/capability/pkg-freehire-mcp.html) | 55 | 204/wk | active |

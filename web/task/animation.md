@@ -29,28 +29,28 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [All Images AI Automation](https://tashan.sh/capability/skill-composiohq-all-images-ai-automation.html) | not scored | 1 repos | active |
 | 17 | [Heygen Automation](https://tashan.sh/capability/skill-composiohq-heygen-automation.html) | not scored | 1 repos | active |
 | 18 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | not scored | 1 repos | active |
-| 19 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 73 | 7k/wk | active |
-| 20 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
-| 21 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 59 | 239/wk | active |
-| 22 | [Distribea](https://tashan.sh/capability/pkg-distribea-mcp.html) | 51 | 98/wk | active |
-| 23 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
-| 24 | [Hermoso](https://tashan.sh/capability/pkg-hermoso.html) | 70 | 2k/wk | active |
-| 25 | [Sapiens Sintéticos](https://tashan.sh/capability/pkg-sapiens-mcp.html) | 70 | 2k/wk | active |
-| 26 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 69 | 2k/wk | active |
-| 27 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 69 | 305/wk | active |
-| 28 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 68 | 1k/wk | active |
-| 29 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 68 | 1k/wk | active |
-| 30 | [Runapi](https://tashan.sh/capability/pkg-runapi-ai-mcp.html) | 66 | 629/wk | active |
-| 31 | [Chutes Media](https://tashan.sh/capability/pkg-chutes-media-mcp.html) | 64 | 516/wk | active |
-| 32 | [Kodelyth Ecc](https://tashan.sh/capability/pkg-kodelyth-ecc.html) | 60 | 307/wk | active |
-| 33 | [Mmxomni](https://tashan.sh/capability/pkg-mmxomni.html) | 59 | 4k/wk | active |
-| 34 | [Atlascloud](https://tashan.sh/capability/pkg-atlascloud-mcp.html) | 59 | 537/wk | active |
-| 35 | [Rive](https://tashan.sh/capability/pkg-rive-mcp-server.html) | 59 | 381/wk | active |
-| 36 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 59 | 164/wk | active |
-| 37 | [Gpt Image](https://tashan.sh/capability/pkg-runapi-ai-gpt-image-mcp.html) | 58 | 221/wk | active |
-| 38 | [Gpt 4o Image](https://tashan.sh/capability/pkg-runapi-ai-gpt-4o-image-mcp.html) | 58 | 213/wk | active |
-| 39 | [Gpt Image 2](https://tashan.sh/capability/pkg-runapi-ai-gpt-image-2-mcp.html) | 58 | 210/wk | active |
-| 40 | [Media Gen](https://tashan.sh/capability/pkg-media-gen-mcp-server.html) | 58 | 141/wk | active |
+| 19 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 69 | 2k/wk | active |
+| 20 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 73 | 7k/wk | active |
+| 21 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
+| 22 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 59 | 239/wk | active |
+| 23 | [Distribea](https://tashan.sh/capability/pkg-distribea-mcp.html) | 51 | 98/wk | active |
+| 24 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
+| 25 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 69 | 305/wk | active |
+| 26 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 68 | 1k/wk | active |
+| 27 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 68 | 1k/wk | active |
+| 28 | [Runapi](https://tashan.sh/capability/pkg-runapi-ai-mcp.html) | 66 | 629/wk | active |
+| 29 | [Chutes Media](https://tashan.sh/capability/pkg-chutes-media-mcp.html) | 64 | 516/wk | active |
+| 30 | [Kodelyth Ecc](https://tashan.sh/capability/pkg-kodelyth-ecc.html) | 60 | 307/wk | active |
+| 31 | [Mmxomni](https://tashan.sh/capability/pkg-mmxomni.html) | 59 | 4k/wk | active |
+| 32 | [Atlascloud](https://tashan.sh/capability/pkg-atlascloud-mcp.html) | 59 | 537/wk | active |
+| 33 | [Rive](https://tashan.sh/capability/pkg-rive-mcp-server.html) | 59 | 381/wk | active |
+| 34 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 59 | 164/wk | active |
+| 35 | [Gpt Image](https://tashan.sh/capability/pkg-runapi-ai-gpt-image-mcp.html) | 58 | 221/wk | active |
+| 36 | [Gpt 4o Image](https://tashan.sh/capability/pkg-runapi-ai-gpt-4o-image-mcp.html) | 58 | 213/wk | active |
+| 37 | [Gpt Image 2](https://tashan.sh/capability/pkg-runapi-ai-gpt-image-2-mcp.html) | 58 | 210/wk | active |
+| 38 | [Media Gen](https://tashan.sh/capability/pkg-media-gen-mcp-server.html) | 58 | 141/wk | active |
+| 39 | [Z Image](https://tashan.sh/capability/pkg-runapi-ai-z-image-mcp.html) | 57 | 219/wk | active |
+| 40 | [Qwen Image](https://tashan.sh/capability/pkg-runapi-ai-qwen-image-mcp.html) | 54 | 181/wk | active |
 
 Showing the top 40 of 61. The full ranked shelf is at https://tashan.sh/task/animation.html.
 

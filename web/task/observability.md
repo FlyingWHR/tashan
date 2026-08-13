@@ -38,19 +38,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 60 | 27 ★ | active |
 | 26 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 57 | 18 ★ | active |
 | 27 | [Dash0](https://tashan.sh/capability/plugin-dash0hq-dash0-agent-plugin-dash0.html) | 54 | 4 ★ | active |
-| 28 | [Argosvix](https://tashan.sh/capability/pkg-argosvix-mcp-server.html) | 66 | 484/wk | active |
-| 29 | [Log10x](https://tashan.sh/capability/pkg-log10x-mcp.html) | 73 | 3k/wk | active |
-| 30 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
+| 28 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 61 | 2k/wk | active |
+| 29 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 71 | 4k/wk | active |
+| 30 | [Argosvix](https://tashan.sh/capability/pkg-argosvix-mcp-server.html) | 66 | 484/wk | active |
 | 31 | [Lensmcp](https://tashan.sh/capability/pkg-lensmcp.html) | 69 | 1k/wk | active |
 | 32 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 64 | 414/wk | active |
 | 33 | [Datadog](https://tashan.sh/capability/pkg-datadog-mcp.html) | 62 | 1k/wk | active |
-| 34 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 61 | 2k/wk | active |
-| 35 | [Lighthouse](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 47 | 580/wk | active |
-| 36 | [Jamp](https://tashan.sh/capability/pkg-jamp-mcp.html) | 47 | 49/wk | active |
-| 37 | [Langfuse · pulsemcp](https://tashan.sh/capability/pkg-langfuse-observability-mcp-server.html) | 44 | 68/wk | active |
-| 38 | [Helicone](https://tashan.sh/capability/pkg-helicone-mcp.html) | 41 | 741/wk | abandoned |
-| 39 | [Langfuse · hugoles](https://tashan.sh/capability/pkg-langfuse-mcp.html) | 40 | 164/wk | active |
-| 40 | [Email Analytics](https://tashan.sh/capability/plugin-sendx-email-skills-email-analytics.html) | 39 | 1 marketplaces | active |
+| 34 | [Lighthouse](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 47 | 580/wk | active |
+| 35 | [Jamp](https://tashan.sh/capability/pkg-jamp-mcp.html) | 47 | 49/wk | active |
+| 36 | [Langfuse · pulsemcp](https://tashan.sh/capability/pkg-langfuse-observability-mcp-server.html) | 44 | 68/wk | active |
+| 37 | [Helicone](https://tashan.sh/capability/pkg-helicone-mcp.html) | 41 | 741/wk | abandoned |
+| 38 | [Langfuse · hugoles](https://tashan.sh/capability/pkg-langfuse-mcp.html) | 40 | 164/wk | active |
+| 39 | [Email Analytics](https://tashan.sh/capability/plugin-sendx-email-skills-email-analytics.html) | 39 | 1 marketplaces | active |
+| 40 | [Sentinal](https://tashan.sh/capability/pkg-md-musaraf-sentinal-mcp.html) | 38 | 45/wk | active |
 
 Showing the top 40 of 44. The full ranked shelf is at https://tashan.sh/task/observability.html.
 

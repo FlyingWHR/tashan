@@ -12,7 +12,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
 | `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | board.json, capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 97 |
-| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 57 |
+| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 58 |
 | `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 56 |
 | `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | board.json, capabilities.json, index.json, tasks.json | free | 53 |
 | `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 52 |
@@ -62,6 +62,7 @@ Each of these exists because the failure it prevents already shipped once.
 
 - `cli/mcp.test.mjs` — node cli/mcp.test.mjs — protocol + rendering for the MCP server. No network.
 - `cli/tashan.test.mjs` — node cli/tashan.test.mjs  — pure-logic tests for the CLI (no network, no deps).
+- `functions/api/_x402.test.mjs` — node functions/api/_x402.test.mjs
 - `functions/api/account.test.mjs` — node --test functions/api/account.test.mjs
 - `functions/api/checkout.test.mjs` — The post-purchase sign-in. This endpoint turns a checkout id — a value that rides in a redirect
 - `functions/api/device.test.mjs` — The device-authorisation grant. This is a credential path, so the tests are about what MUST NOT

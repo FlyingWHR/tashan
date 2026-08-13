@@ -1,8 +1,8 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 134,
-  "grade": 892,
+  "full": 198,
+  "grade": 1024,
   "n": 33913,
   "scan": 6968,
   "score": 11637,
@@ -31,7 +31,7 @@
   }
  ],
  "headline": {
-  "graded_pct": 17,
+  "graded_pct": 30,
   "scanned_pct": 100,
   "scored_pct": 96,
   "tasked_pct": 38,
@@ -135,7 +135,6 @@
    "id": "pkg:mongodb-mcp-server",
    "kind": "npm",
    "missing": [
-    "grade",
     "task"
    ],
    "name": "mongodb-mcp-server"
@@ -415,15 +414,15 @@
  "tiers": {
   "top100": {
    "full": 22,
-   "grade": 67,
+   "grade": 68,
    "n": 100,
    "scan": 100,
    "score": 95,
    "task": 34
   },
   "top1000": {
-   "full": 58,
-   "grade": 172,
+   "full": 122,
+   "grade": 304,
    "n": 1000,
    "scan": 1000,
    "score": 955,

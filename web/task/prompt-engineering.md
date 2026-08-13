@@ -45,12 +45,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 66 | 59k/wk | active |
 | 33 | [Cortex](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 59 | 153/wk | active |
 | 34 | [Ctxfile](https://tashan.sh/capability/pkg-ctxfile.html) | 51 | 104/wk | active |
-| 35 | [Nx](https://tashan.sh/capability/pkg-nx-mcp.html) | 76 | 86k/wk | active |
-| 36 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 69 | 1k/wk | active |
-| 37 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 69 | 931/wk | active |
-| 38 | [Contextecf Codeledger](https://tashan.sh/capability/pkg-contextecf-codeledger.html) | 68 | 726/wk | active |
-| 39 | [Slack · korotovsky](https://tashan.sh/capability/pkg-slack-mcp-server.html) | 67 | 20k/wk | active |
-| 40 | [Claude Prompts](https://tashan.sh/capability/pkg-claude-prompts.html) | 67 | 836/wk | active |
+| 35 | [Caveman Shrink](https://tashan.sh/capability/pkg-caveman-shrink.html) | 50 | 4k/wk | active |
+| 36 | [Nx](https://tashan.sh/capability/pkg-nx-mcp.html) | 76 | 86k/wk | active |
+| 37 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 69 | 1k/wk | active |
+| 38 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 69 | 931/wk | active |
+| 39 | [Contextecf Codeledger](https://tashan.sh/capability/pkg-contextecf-codeledger.html) | 68 | 726/wk | active |
+| 40 | [Slack · korotovsky](https://tashan.sh/capability/pkg-slack-mcp-server.html) | 67 | 20k/wk | active |
 
 Showing the top 40 of 67. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
 

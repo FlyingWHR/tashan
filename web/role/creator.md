@@ -44,18 +44,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | not scored | 1 repos | active |
 | 27 | [ElevenLabs Automation](https://tashan.sh/capability/skill-composiohq-elevenlabs-automation.html) | not scored | 1 repos | active |
 | 28 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
-| 29 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 54 | 165/wk | active |
-| 30 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 73 | 7k/wk | active |
-| 31 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
-| 32 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 59 | 239/wk | active |
-| 33 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
-| 34 | [Distribea](https://tashan.sh/capability/pkg-distribea-mcp.html) | 51 | 98/wk | active |
-| 35 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
-| 36 | [Claude Code Session Manager](https://tashan.sh/capability/pkg-claude-code-session-manager.html) | 73 | 8k/wk | active |
-| 37 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
-| 38 | [Hermoso](https://tashan.sh/capability/pkg-hermoso.html) | 70 | 2k/wk | active |
-| 39 | [Sapiens Sintéticos](https://tashan.sh/capability/pkg-sapiens-mcp.html) | 70 | 2k/wk | active |
-| 40 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 69 | 2k/wk | active |
+| 29 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 69 | 2k/wk | active |
+| 30 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
+| 31 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 54 | 165/wk | active |
+| 32 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 73 | 7k/wk | active |
+| 33 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
+| 34 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 59 | 239/wk | active |
+| 35 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
+| 36 | [Distribea](https://tashan.sh/capability/pkg-distribea-mcp.html) | 51 | 98/wk | active |
+| 37 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
+| 38 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
+| 39 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 69 | 305/wk | active |
+| 40 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 68 | 1k/wk | active |
 
 Showing the top 40 of 116. The full ranked shelf is at https://tashan.sh/role/creator.html.
 

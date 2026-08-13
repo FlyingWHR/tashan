@@ -35,22 +35,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Cypress](https://tashan.sh/capability/plugin-cypress-io-ai-toolkit-cypress.html) | 59 | 37 ★ | active |
 | 23 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 57 | 14 ★ | active |
 | 24 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 51 | 21 ★ | active |
-| 25 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 73 | 22k/wk | stable |
-| 26 | [Google Surf](https://tashan.sh/capability/pkg-google-surf-mcp.html) | 59 | 374/wk | active |
-| 27 | [Reflex](https://tashan.sh/capability/pkg-reflex-browser.html) | 59 | 171/wk | active |
-| 28 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
+| 25 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 70 | 2k/wk | active |
+| 26 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 70 | 2k/wk | active |
+| 27 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 69 | 2k/wk | active |
+| 28 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 73 | 22k/wk | stable |
 | 29 | [Cbrowser](https://tashan.sh/capability/pkg-cbrowser.html) | 70 | 2k/wk | active |
 | 30 | [Stock SDK](https://tashan.sh/capability/pkg-stock-sdk.html) | 70 | 2k/wk | active |
-| 31 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 70 | 2k/wk | active |
-| 32 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 70 | 2k/wk | active |
-| 33 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 69 | 2k/wk | active |
-| 34 | [Cicy Desktop](https://tashan.sh/capability/pkg-cicy-desktop.html) | 68 | 830/wk | active |
-| 35 | [Real Browser](https://tashan.sh/capability/pkg-real-browser-mcp-server.html) | 68 | 716/wk | active |
-| 36 | [Camoufox](https://tashan.sh/capability/pkg-mcp-camoufox.html) | 68 | 707/wk | active |
-| 37 | [Nexus Mcp Agent](https://tashan.sh/capability/pkg-nexus-mcp-agent.html) | 68 | 707/wk | active |
-| 38 | [Solarisdk](https://tashan.sh/capability/pkg-solarisdk-mcp.html) | 67 | 1k/wk | active |
-| 39 | [Uindow](https://tashan.sh/capability/pkg-uindow-cli.html) | 65 | 1k/wk | active |
-| 40 | [Machine Bridge](https://tashan.sh/capability/pkg-machine-bridge-mcp.html) | 65 | 763/wk | active |
+| 31 | [Openchrome](https://tashan.sh/capability/pkg-openchrome-mcp.html) | 63 | 2k/wk | active |
+| 32 | [Google Surf](https://tashan.sh/capability/pkg-google-surf-mcp.html) | 59 | 374/wk | active |
+| 33 | [Reflex](https://tashan.sh/capability/pkg-reflex-browser.html) | 59 | 171/wk | active |
+| 34 | [Vibium](https://tashan.sh/capability/pkg-vibium.html) | 58 | 2k/wk | active |
+| 35 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
+| 36 | [Playwright Parallel](https://tashan.sh/capability/pkg-playwright-parallel-mcp.html) | 36 | 3k/wk | abandoned |
+| 37 | [Cicy Desktop](https://tashan.sh/capability/pkg-cicy-desktop.html) | 68 | 830/wk | active |
+| 38 | [Real Browser](https://tashan.sh/capability/pkg-real-browser-mcp-server.html) | 68 | 716/wk | active |
+| 39 | [Camoufox](https://tashan.sh/capability/pkg-mcp-camoufox.html) | 68 | 707/wk | active |
+| 40 | [Nexus Mcp Agent](https://tashan.sh/capability/pkg-nexus-mcp-agent.html) | 68 | 707/wk | active |
 
 Showing the top 40 of 82. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
 
