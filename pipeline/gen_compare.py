@@ -195,12 +195,12 @@ def page(a, b, cat_label, gen):
         # The pitch is the honest one and it is specific to this page: a comparison is a snapshot,
         # and the thing it cannot do is tell you when the answer stops being true. Both scores stay
         # free, both audits stay free — what a licence buys is the watch on whichever one you pick.
-        '<div class="procta"><div class="procta__t"><b>Both numbers above are today&rsquo;s.</b> '
-        '<span class="procta__s">Whichever you pick, the question that matters next is when it '
-        'changes. <code>tashan doctor</code> reads your own config; Pro adds the history behind '
-        'each capability, and what to move to.</span></div>'
-        '<a class="btn btn--primary" href="/pricing.html" data-e="cta" data-k="pro-compare">'
-        'tashan Pro &mdash; $6/mo &rsaquo;</a></div>\n'
+        + chrome.pro_panel(
+            "<b>Both numbers above are today&rsquo;s.</b> Whichever you pick, the question "
+            "that matters next is when it changes &mdash; and this page cannot know that. Pro "
+            "keeps the series behind each capability, and names what to move to.",
+            "pro-compare")
+        +
         "</article></main>\n")
 
     return H.head(title, desc, url, lds) + body + H.FOOT + \

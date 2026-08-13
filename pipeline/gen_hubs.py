@@ -271,6 +271,38 @@ CTA = ('<div class="procta">'
 SEV_RANK = {"high": 0, "medium": 1, "low": 2}
 
 
+def hub_pro(rows, what, key):
+    """The Pro offer on a hub, argued from THIS shelf's own numbers.
+
+    An audit by page type found the panel on 11,918 dossiers and on nothing else: these hubs carried
+    a bare pricing link. They are the highest commercial intent on the site — somebody reading "best
+    MCP server for X" or a head-to-head is deciding — and a decision is exactly when an offer is
+    useful rather than an interruption.
+
+    The line is built from the rows on the page, never generic, because a generic upsell repeated
+    across 607 pages is banner blindness by the second one. It also has to stay honest about the
+    split: the changes are listed IN FULL, free, a few centimetres above this panel. What Pro sells
+    is not the fact that things move, it is being told the day one of YOURS does — which a static
+    shelf cannot know by construction.
+    """
+    n_ch = sum(len(c.get("changes") or []) for c in rows)
+    graded = sum(1 for c in rows if c.get("expertise_verdict"))
+    if n_ch:
+        lede = ("We recorded <b>" + f"{n_ch:,}" + (" change" if n_ch == 1 else " changes")
+                + "</b> across " + what + " in the last 45 days &mdash; a new advisory, an install "
+                "script appearing, a maintainer leaving. They are listed free above. Pro tells you "
+                "the day it happens to the ones in your own config.")
+    elif graded:
+        lede = ("Nothing on this shelf moved in the last 45 days, and " + str(graded) + " of these "
+                "are graded against their own documentation. Pro watches the ones you actually run, "
+                "and tells you the day that changes.")
+    else:
+        lede = ("This shelf ranks what is measured today. Pro keeps the series behind it, so you "
+                "can tell a project getting better from one on its way down &mdash; and hear about "
+                "it the day it moves, for the servers in your own config.")
+    return chrome.pro_panel(lede, key)
+
+
 def changed_strip(rows, what):
     """What moved on this shelf lately — the one thing a ranked table cannot show.
 
@@ -407,6 +439,7 @@ def cat_page(cat, rows, all_cats, gen, page=1, pages=1, total=None):
             + "</nav>\n") if pages > 1 else "")
         + '<h2>Other categories</h2>\n<div class="chips">' + sib + "</div>\n"
         '<p class="mt-12"><a class="btn btn--ghost" href="/">See the full Index &rsaquo;</a></p>\n'
+        + hub_pro(rows, cat["label"] + " capabilities", "pro-category") +
         "</main>\n")
     return head(title, desc, url, lds, extra=rel) + body + FOOT + \
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n' \
@@ -503,6 +536,7 @@ def task_page(task, rows, all_tasks, gen):
         "tashan consolidated its process steps into the terms practitioners use; O*NET does not endorse "
         "this site.</p>\n"
         '<p class="mt-12"><a class="btn btn--ghost" href="/">See the full Index &rsaquo;</a></p>\n'
+        + hub_pro(rows, task["label"], "pro-task") +
         "</main>\n")
     return head(title, desc, url, lds) + body + FOOT + \
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n' \
@@ -991,6 +1025,7 @@ def role_page(role, rows, tasks, all_roles, gen):
         + '<h2>Other jobs</h2>\n<div class="chips">' + sib + "</div>\n"
         '<p class="mt-12"><a class="btn btn--ghost" href="/?role=' + esc(rid) +
         '">Open this job on the Index &rsaquo;</a></p>\n'
+        + hub_pro(rows, role["label"], "pro-role") +
         "</main>\n")
     return head(title, desc, url, lds) + body + FOOT + \
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n' \

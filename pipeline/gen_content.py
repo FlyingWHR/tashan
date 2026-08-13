@@ -115,10 +115,13 @@ def article_html(a):
         # stranger reaches from a search — the highest-intent arrival on the site — and not one of
         # the seven said what the product does. Same line as everywhere else: the article is free,
         # the Index is free, and the thing neither can do is know what is in your config.
-        '<p class="note chg__pro">This article, and every score it links to, is free and needs no '
-        'account. <code>npx tashan-cli doctor</code> reads the config you already have and names '
-        'what is wrong in it, also free. <a class="link" href="/pricing.html">tashan Pro</a> is '
-        '$6/mo and tells you the day one of them changes.</p>\n'
+        + chrome.pro_panel(
+            "This article, and every score it links to, is free and needs no account. "
+            "<code>npx tashan-cli doctor</code> reads the config you already have and names "
+            "what is wrong in it, also free. What Pro adds is the watch: the day one of "
+            "them changes.",
+            "pro-learn")
+        +
         "</article></main>\n" + FOOT +
         '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n')
 
@@ -265,7 +268,14 @@ def index_page(A):
     body = ('<main class="wrap" id="main"><article class="prose"><h1>Learn</h1>'
             '<p class="lede">Practical, evidence-backed guides to MCP servers and agent skills — where they live, '
             'how to install them in every client, and which ones are actually worth it.</p>'
-            '<div class="tashan_score mt-8">' + cards + '</div></article></main>')
+            '<div class="tashan_score mt-8">' + cards + '</div>'
+            # The /learn/ index was the only one of the eight with no offer at all.
+            + chrome.pro_panel(
+                "Every guide here, and every score they link to, is free and needs no "
+                "account. Pro is for after you have chosen: it watches the capabilities in "
+                "your own config and tells you the day one of them changes.",
+                "pro-learn-index")
+            + '</article></main>')
     a0 = {"slug": "index", "lang": "en", "title": "Learn — MCP & agent-skill guides",
           "desc": "Evidence-backed guides to MCP servers and agent skills — where they're stored, how to install them, and which are worth it."}
     return head(a0) + body + FOOT + '<script src="/js/terminal.js?v=' + AV + '" defer></script>\n<script src="/js/site.js?v=' + AV + '" defer></script>\n</body>\n</html>\n'

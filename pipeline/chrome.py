@@ -225,3 +225,43 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+# ---- the one commercial panel, rendered on every surface that has an offer to make ---------------
+PRO_PRICE = ("$6", "/mo")
+
+
+def pro_panel(lede, key, extra=(), pid=None):
+    """The Pro offer, one definition, used by prerender (dossiers), gen_hubs and gen_content.
+
+    WHY IT MOVED HERE. An audit by page type found the panel on 11,918 capability dossiers and on
+    NOTHING else: category, task, role and compare hubs — 607 pages — carried a bare pricing button,
+    and the seven /learn/ explainers carried no call to action at all. Those hubs are the highest
+    commercial intent on the site ("best MCP server for X", "X vs Y"): somebody reading a comparison
+    is deciding, which is exactly when an offer is useful rather than rude.
+
+    `lede` MUST be specific to the page. prerender's own note says a generic upsell across thousands
+    of pages is banner blindness by the second page, and that is truer on a hub than on a dossier —
+    so each caller passes a line built from that page's own measured numbers, and `extra` lets a
+    surface add one bullet of its own.
+
+    NO ACCENT COLOUR: brand/BRAND.md reserves jade for measured data, and an offer is not a
+    measurement. `data-state="free"` is what site.js::proPaid() swaps so an active subscriber is
+    never sold a trial.
+    """
+    bullets = list(extra) + [
+        "Every score since we started measuring, for any capability",
+        "The named replacement when something you run is dying &mdash; not just that it is",
+        "<code>tashan doctor</code> over the config you already have, on your machine",
+    ]
+    return (
+        '<section class="pro"' + (' id="' + pid + '"' if pid else '') + ' data-state="free">'
+        '<div class="pro__hd"><span class="pro__tag mono">tashan Pro</span>'
+        '<span class="pro__price mono">' + PRO_PRICE[0]
+        + '<span class="pro__per">' + PRO_PRICE[1] + '</span></span></div>'
+        '<p class="pro__lede">' + lede + '</p>'
+        '<ul class="pro__list">' + "".join("<li>" + b + "</li>" for b in bullets[:3]) + '</ul>'
+        '<p class="pro__cta"><a class="btn btn--primary" href="/pricing.html" '
+        'data-e="cta" data-k="' + key + '">Start a 7-day trial &rsaquo;</a>'
+        '<span class="pro__free mono"> Everything measured on this page stays free.</span></p>'
+        '</section>')

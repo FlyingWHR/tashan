@@ -419,20 +419,9 @@ def pro_panel(c):
         line = ("Pro adds the history to <code>tashan doctor</code>, so a run over your own config "
                 "says which of yours gained an advisory, started running an install script, or "
                 "lost its last maintainer &mdash; and what to move to.")
-    return (
-        '<section class="pro" id="pro" data-state="free">'
-        '<div class="pro__hd"><span class="pro__tag mono">tashan Pro</span>'
-        '<span class="pro__price mono">$6<span class="pro__per">/mo</span></span></div>'
-        '<p class="pro__lede">' + line + "</p>"
-        '<ul class="pro__list">'
-        "<li>Every score since we started measuring, for any capability</li>"
-        "<li>The named replacement when something you run is dying &mdash; not just that it is</li>"
-        "<li><code>tashan doctor</code> over the config you already have, on your machine</li>"
-        "</ul>"
-        '<p class="pro__cta"><a class="btn btn--primary" href="/pricing.html" '
-        'data-e="cta" data-k="pro-dossier">Start a 7-day trial &rsaquo;</a>'
-        '<span class="pro__free mono"> Everything measured on this page stays free.</span></p>'
-        "</section>")
+    # ONE DEFINITION: the markup lives in chrome.pro_panel now, because the hubs and the
+    # /learn/ pages need the identical panel and a second copy is how surfaces drift.
+    return chrome.pro_panel(line, "pro-dossier", pid="pro")
 
 
 ACTIVATION = re.compile(

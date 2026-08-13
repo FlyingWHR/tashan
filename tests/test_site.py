@@ -548,6 +548,30 @@ def main():
     check(f"no page is a wall of text (max {WALL_ALLOW} paragraphs over {PROSE_MAX} chars)",
           not _walls, "; ".join(_walls[:6]))
 
+    # ---- every generated surface makes the offer, and swaps it for a payer ---------------------
+    # An audit by page type found the Pro panel on 11,918 dossiers and NOWHERE else: the hubs had a
+    # bare pricing link and /learn/ had an untracked <a>. Worse, the two bespoke CTAs that did exist
+    # (.procta on 413 compare pages, a note on 7 learn pages) lacked data-state="free" — the hook
+    # site.js::proPaid() looks for — so an active subscriber was pitched a trial on all 420.
+    # data-e is what makes the click countable; a CTA nobody can measure is a guess.
+    _surfaces = [("category", 1), ("task", 1), ("role", 1), ("compare", 1), ("learn", 1),
+                 ("capability", 200)]
+    _gaps = []
+    for _dir, _step in _surfaces:
+        _f = sorted(glob.glob(os.path.join(ROOT, "web", _dir, "*.html")))[::_step]
+        if not _f:
+            continue
+        _miss = [os.path.basename(x) for x in _f
+                 if 'data-state="free"' not in open(x, encoding="utf-8").read()]
+        _untracked = [os.path.basename(x) for x in _f
+                      if 'data-k="pro-' not in open(x, encoding="utf-8").read()]
+        if _miss:
+            _gaps.append(f"{_dir}: {len(_miss)} without a swappable panel, e.g. {_miss[0]}")
+        if _untracked:
+            _gaps.append(f"{_dir}: {len(_untracked)} with an untracked CTA, e.g. {_untracked[0]}")
+    check("every generated page type carries a Pro panel a payer stops seeing, and a countable CTA",
+          not _gaps, "; ".join(_gaps[:4]))
+
     # ---- Cloudflare Pages hard limits ----------------------------------------------------------
     # A single file over 25 MiB fails the WHOLE deploy, not just that file, and the error arrives
     # after wrangler has walked the tree — the same shape as the 20,000-file ceiling already
