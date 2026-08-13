@@ -20,6 +20,7 @@
 // because a second pattern for the same job is how this codebase's other defects started.
 
 import { keyFrom, validate, activationFrom, deny } from "./_license.js";
+import { paymentRequired } from "./_x402.js";
 
 const SHARDS = 64;
 
@@ -45,7 +46,8 @@ export async function onRequestGet({ request, env }) {
   if (!id) return json({ error: "pass ?id=<capability id>, e.g. pkg:tavily-mcp" }, 400);
 
   const v = await validate(env, keyFrom(request), activationFrom(request));
-  if (!v.ok) return deny(v);
+  if (!v.ok) return deny(v, paymentRequired(env, "security-detail",
+                       new URL(request.url).origin + "/api/security"));
 
   if (!env.TASHAN_KV) return json({ error: "security store not configured" }, 503);
 

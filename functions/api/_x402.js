@@ -1,0 +1,173 @@
+// x402 — pay-per-request, for callers that are software.
+//
+// WHY THIS EXISTS. A licence key assumes a human: someone signs up, stores a credential, and amortises
+// $6/mo over a month of use. An agent deciding once whether to install a package has no account, no
+// credential store and no reason to hold a subscription — it wants to pay a fraction of a cent for
+// one answer and move on. x402 is the standard for exactly that: HTTP 402 carries the price, the
+// client retries with a signed payment, a facilitator verifies and settles.
+//
+// IMPLEMENTED AGAINST specs/x402-specification-v2.md and specs/transports-v2/{http,mcp}.md from
+// github.com/coinbase/x402, read directly rather than remembered. v2 is what the field names below
+// follow: `amount` (atomic units, string), CAIP-2 `network`, and the PAYMENT-REQUIRED /
+// PAYMENT-SIGNATURE / PAYMENT-RESPONSE header trio. v1's `maxAmountRequired` and `X-PAYMENT` are a
+// different generation; we do not claim to speak it.
+//
+// ==================================================================================================
+// IT IS DORMANT UNTIL A WALLET EXISTS, AND THAT IS THE POINT.
+//
+// Settlement needs an address we control (`X402_PAY_TO`) and a facilitator. We have neither yet, and
+// creating a wallet is a decision for the CEO, not a thing to improvise in a deploy. So:
+//
+//   configured()  false  ->  no `accepts`, no PAYMENT-REQUIRED header. The 402 still quotes the
+//                            subscription price and the free endpoints, exactly as it does today.
+//   configured()  true   ->  the same 402 additionally carries a spec-shaped PaymentRequired, and
+//                            paid routes verify and settle.
+//
+// Advertising payment options we cannot settle would be a door that looks open and is not — worse
+// than no door, because the agent burns a signature and gets nothing. Everything here is written and
+// tested so that turning it on is setting three secrets, not writing code under time pressure.
+// ==================================================================================================
+
+// One definition of what each paid thing costs. Atomic units, because that is what the wire carries:
+// USDC has 6 decimals, so $0.01 is "10000". Keeping the human price beside it means the two cannot
+// drift, and `usd` is what the JSON fallback and the docs quote.
+export const PRICED = {
+  "capability-history": {
+    usd: 0.01,
+    atomic: "10000",
+    description: "The full score history for one capability, every point we have recorded.",
+  },
+  "security-detail": {
+    usd: 0.01,
+    atomic: "10000",
+    description: "Full advisory detail for one capability: which advisory, what the install script "
+               + "runs, and the version that fixes it.",
+  },
+  "config-audit": {
+    usd: 0.05,
+    atomic: "50000",
+    description: "Audit a whole config: for every capability you run, what changed since a date "
+               + "you name, and what to move to.",
+  },
+};
+
+const VERSION = 2;
+const SCHEME = "exact";
+const TIMEOUT_S = 60;
+
+export function config(env) {
+  return {
+    payTo: (env.X402_PAY_TO || "").trim(),
+    network: (env.X402_NETWORK || "").trim(),
+    asset: (env.X402_ASSET || "").trim(),
+    facilitator: (env.X402_FACILITATOR || "").trim().replace(/\/+$/, ""),
+    assetName: (env.X402_ASSET_NAME || "USDC").trim(),
+    assetVersion: (env.X402_ASSET_VERSION || "2").trim(),
+  };
+}
+
+// ALL FOUR OR NONE. A payTo with no facilitator would quote a price we cannot verify a payment
+// against, which is the failure mode this whole file is arranged to avoid.
+export function configured(env) {
+  const c = config(env);
+  return Boolean(c.payTo && c.network && c.asset && c.facilitator);
+}
+
+const b64 = (obj) => btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
+
+function unb64(s) {
+  try {
+    return JSON.parse(decodeURIComponent(escape(atob(s))));
+  } catch {
+    return null;                       // malformed header: treated as "no payment", never as a pass
+  }
+}
+
+/** The PaymentRequired object — the v2 body/structuredContent shape, identical on both transports. */
+export function paymentRequired(env, key, resourceUrl, error = "payment required") {
+  const p = PRICED[key];
+  if (!p || !configured(env)) return null;
+  const c = config(env);
+  return {
+    x402Version: VERSION,
+    error,
+    resource: { url: resourceUrl, description: p.description, mimeType: "application/json" },
+    accepts: [{
+      scheme: SCHEME,
+      network: c.network,
+      amount: p.atomic,
+      asset: c.asset,
+      payTo: c.payTo,
+      maxTimeoutSeconds: TIMEOUT_S,
+      extra: { name: c.assetName, version: c.assetVersion },
+    }],
+    extensions: {},
+  };
+}
+
+export const requiredHeader = (pr) => (pr ? { "payment-required": b64(pr) } : {});
+
+/** The client's signed payload, from the HTTP header or the MCP `_meta` field. */
+export function paymentFrom(request) {
+  const h = request.headers.get("payment-signature");
+  return h ? unb64(h) : null;
+}
+
+export const paymentFromMeta = (params) =>
+  (params && params._meta && params._meta["x402/payment"]) || null;
+
+async function facilitate(env, path, payload, requirements) {
+  const c = config(env);
+  const r = await fetch(c.facilitator + path, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ x402Version: VERSION, paymentPayload: payload,
+                           paymentRequirements: requirements }),
+  });
+  if (!r.ok) throw new Error(path + " returned HTTP " + r.status);
+  return r.json();
+}
+
+/**
+ * Verify, run the work, then settle — in that order, and FAIL CLOSED at every step.
+ *
+ * Ordering is the whole design. Verifying first means we never do the work for a payment that was
+ * never valid. Settling AFTER means we never charge for work that threw. And per the MCP transport
+ * spec, a settlement that fails after the work ran must NOT return the content: the caller has not
+ * paid, and handing it over anyway makes the price advisory.
+ *
+ * Any error — a refusal, a malformed response, a facilitator that is simply down — denies. An
+ * outage must never become a free tier, and it must never become a charge for nothing either.
+ */
+export async function charge(env, pr, payload, work) {
+  const requirements = pr.accepts[0];
+  let v;
+  try {
+    v = await facilitate(env, "/verify", payload, requirements);
+  } catch (e) {
+    return { ok: false, reason: "verification_unavailable", detail: String(e) };
+  }
+  if (!v || v.isValid === false || v.valid === false) {
+    return { ok: false, reason: (v && (v.invalidReason || v.errorReason)) || "payment_invalid" };
+  }
+
+  const result = await work();
+
+  let s;
+  try {
+    s = await facilitate(env, "/settle", payload, requirements);
+  } catch (e) {
+    return { ok: false, reason: "settlement_unavailable", detail: String(e) };
+  }
+  if (!s || s.success === false) {
+    return { ok: false, reason: (s && s.errorReason) || "settlement_failed" };
+  }
+  return { ok: true, result, settlement: s };
+}
+
+export const responseHeader = (settlement) =>
+  (settlement ? { "payment-response": b64(settlement) } : {});
+
+// ---- self-test (no network, no credentials) -------------------------------------------------------
+// Run: node functions/api/_x402.test.mjs
+export const _internals = { b64, unb64 };

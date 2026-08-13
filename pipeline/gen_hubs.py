@@ -654,6 +654,12 @@ def pricing_block():
         "- Paid endpoints answer an unauthenticated caller with **HTTP 402** and a JSON body "
         "carrying the price, the checkout URL and the free endpoints that answer the same "
         "question — so an agent never has to guess.",
+        "- **Paying as software, not as a subscriber:** those same 402s speak "
+        "[x402](https://github.com/coinbase/x402) v2 — a `PAYMENT-REQUIRED` header and an `accepts` "
+        "array — so a caller with a wallet can pay per request instead of holding an account. "
+        "`POST /v0.1/audit` costs $0.05 a call that way; one capability's history costs $0.01. "
+        "The `accepts` array is absent until settlement is live on this deployment, because "
+        "quoting a payment option we cannot verify would waste your signature.",
         "",
         "Nobody can pay to change a score, a rank, or a listing, and no listing is paid. If that "
         "were ever untrue the measurement would be worthless, so it is the one rule with a test "
@@ -758,6 +764,11 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
           "registry shape; measurement under the `sh.tashan/measurement` key in `_meta`.",
           "- [/skill/SKILL.md](" + BASE + "/skill/SKILL.md) — install tashan as a capability and call it "
           "when choosing what to install.",
+          "- `POST /v0.1/audit` — send the servers in a config, get back every risk we hold about "
+          "each one: advisories at the version installed today, deprecation, archived repos, a "
+          "maintainer count that fell to one, registry removal. **Free, no account, no payment.** "
+          "Add `{\"history\": true}` for the score series and the direction of travel behind each "
+          "row, which is the paid half — a licence, or per call with x402.",
           "", "## What costs money", "",
           ] + pricing_block() + [
           "## By job", "",

@@ -116,6 +116,9 @@ export async function validate(env, key, activationId = null) {
     : { ok: false, status: 403, why: granted ? "licence expired" : "licence " + (d.status || "not valid") };
 }
 
+// base64 of the PaymentRequired object — specs/transports-v2/http.md.
+const x402Header = (pr) => btoa(unescape(encodeURIComponent(JSON.stringify(pr))));
+
 // THE PRICE, in one place, because it is now published to machines as well as to people. The two
 // checkout links are the same ones web/pricing.html renders, and tests/test_entitlements.py fails
 // if they ever disagree — a price that drifts between the page a human reads and the JSON an agent
@@ -153,7 +156,7 @@ export const OFFER = {
 // verify would be a door that looks open and is not — worse than the 401 it replaced. The shape
 // below is additive: when there is a wallet and a facilitator, `accepts` goes in beside `plans`
 // and existing readers keep working.
-export function deny(v) {
+export function deny(v, x402 = null) {
   const paid = (v.status || 403) === 402;
   const body = paid
     ? {
@@ -168,6 +171,11 @@ export function deny(v) {
         },
         free: OFFER.free,
         docs: "https://tashan.sh/pricing",
+        // When a wallet exists, the SAME refusal additionally carries a spec-shaped x402
+        // PaymentRequired, so an agent that would rather spend a fraction of a cent than hold a
+        // subscription can pay and retry. Spread last and only when non-null: unconfigured, this
+        // object is untouched and the refusal is exactly what it was.
+        ...(x402 || {}),
       }
     : { error: v.why, docs: "https://tashan.sh/pricing" };
   const headers = {
@@ -175,5 +183,6 @@ export function deny(v) {
     "cache-control": "no-store",
   };
   if (paid) headers.link = '<https://tashan.sh/pricing>; rel="payment"';
+  if (paid && x402) headers["payment-required"] = x402Header(x402);
   return new Response(JSON.stringify(body), { status: v.status || 403, headers });
 }

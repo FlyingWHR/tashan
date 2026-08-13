@@ -34,6 +34,15 @@ const PRO = {
         "or lost its last maintainer.",
   price: OFFER.plans.map(p => `$${p.amount}/${p.period}`).join(" or ") + ", 7 days free",
   start: "https://tashan.sh/pricing.html",
+  // The endpoint an agent should actually reach for. A per-capability lookup answers "is this one
+  // safe"; an agent maintaining a stack has a LIST, and that question is what we sell.
+  audit: {
+    endpoint: "POST https://tashan.sh/v0.1/audit",
+    body: { servers: ["<name or id>", "…"], history: false },
+    free: "Every risk we hold about every capability you name. No account, no payment.",
+    paid: "`history: true` adds the score series and direction of travel. Licence, or per call " +
+          "with x402 (github.com/coinbase/x402).",
+  },
   free: "Everything in this response is free, needs no account, and stays free. Nothing " +
         "purchasable moves a score, a rank or a listing.",
 };
