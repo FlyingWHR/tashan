@@ -26,41 +26,41 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Remember](https://tashan.sh/capability/plugin-digital-process-tools-claude-remember-remember.html) | 70 | 143 ★ | active |
 | 6 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 69 | 2k/wk | active |
 | 7 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 2k/wk | active |
-| 8 | [Reddit Mcp Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
-| 9 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 62 | 18 ★ | active |
-| 10 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 62 | 3k ★ | active |
-| 11 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 57 | 6k/wk | active |
-| 12 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 57 | 32 ★ | active |
-| 13 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 56 | 35 ★ | active |
-| 14 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 54 | 51 ★ | active |
-| 15 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
-| 16 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 53 | 24 ★ | active |
-| 17 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 53 | 11 ★ | active |
-| 18 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 52 | 76 ★ | active |
-| 19 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
-| 20 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 51 | 4 ★ | active |
-| 21 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 143 ★ | active |
-| 22 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 50 | 12 ★ | active |
-| 23 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 82 | 37k/wk | active |
-| 24 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 80 | 57k ★ | active |
-| 25 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
-| 26 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 70 | 2k/wk | active |
-| 27 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
-| 28 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 69 | 284 ★ | active |
-| 29 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 69 | 2k/wk | active |
-| 30 | [Slack](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 68 | 86 ★ | active |
-| 31 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 68 | 154 ★ | active |
-| 32 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 68 | 212 ★ | active |
-| 33 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 67 | 433 ★ | active |
-| 34 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 67 | 78 ★ | active |
-| 35 | [Miro](https://tashan.sh/capability/plugin-miroapp-miro-ai-miro.html) | 65 | 142 ★ | active |
-| 36 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 65 | 452 ★ | active |
-| 37 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 65 | 50 ★ | active |
-| 38 | [LLM Wiki Compiler](https://tashan.sh/capability/plugin-ussumant-llm-wiki-compiler-llm-wiki-compiler.html) | 62 | 303 ★ | active |
-| 39 | [Zyte Web Data](https://tashan.sh/capability/plugin-zytedata-claude-skills-zyte-web-data.html) | 62 | 27 ★ | active |
-| 40 | [Parallel](https://tashan.sh/capability/plugin-parallel-web-parallel-agent-skills-parallel.html) | 62 | 62 ★ | active |
+| 8 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 68 | 895/wk | active |
+| 9 | [Reddit Mcp Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
+| 10 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 67 | 883/wk | active |
+| 11 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 65 | 970/wk | active |
+| 12 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 65 | 860/wk | active |
+| 13 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 62 | 18 ★ | active |
+| 14 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 62 | 3k ★ | active |
+| 15 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 57 | 6k/wk | active |
+| 16 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 57 | 32 ★ | active |
+| 17 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 56 | 35 ★ | active |
+| 18 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 54 | 51 ★ | active |
+| 19 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
+| 20 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 53 | 24 ★ | active |
+| 21 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 53 | 11 ★ | active |
+| 22 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 52 | 76 ★ | active |
+| 23 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
+| 24 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 51 | 4 ★ | active |
+| 25 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 143 ★ | active |
+| 26 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 50 | 12 ★ | active |
+| 27 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 82 | 37k/wk | active |
+| 28 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 80 | 57k ★ | active |
+| 29 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
+| 30 | [Notion · suekou](https://tashan.sh/capability/pkg-suekou-mcp-notion-server.html) | 73 | 733/wk | active |
+| 31 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 70 | 2k/wk | active |
+| 32 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
+| 33 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 69 | 284 ★ | active |
+| 34 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 69 | 2k/wk | active |
+| 35 | [Slack](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 68 | 86 ★ | active |
+| 36 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 68 | 154 ★ | active |
+| 37 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 68 | 212 ★ | active |
+| 38 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 67 | 433 ★ | active |
+| 39 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 67 | 78 ★ | active |
+| 40 | [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) | 66 | 836/wk | active |
 
-Showing the top 40 of 353. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 362. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

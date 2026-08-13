@@ -1,0 +1,86 @@
+{
+  "_why": "Demand ranks 520-1000. Same method: graded in session from each capability's own published description, because the `declared` pass reads npm keywords and most of these declare none.",
+  "_rule": "Untagged is a result. Weather, anime, Metacritic, Steam, Roblox, isochrones, co-parenting, raffle fairness, vehicle recalls and every row whose description is marketing have no honest home in a 69-task taxonomy of work people do.",
+
+  "pkg:@aliveranme/stata-mcp": ["statistical-modeling", "exploratory-data-analysis"],
+  "pkg:@cyanheads/eurostat-mcp-server": ["market-analysis"],
+  "pkg:@cyanheads/eia-energy-mcp-server": ["market-analysis"],
+  "pkg:bykaranteli-mcp": ["market-analysis"],
+  "pkg:@llamaventures/cli": ["market-analysis"],
+  "pkg:@aborruso/ckan-mcp-server": ["data-pipelines"],
+  "pkg:@openenthrium/oe-mcp": ["data-pipelines"],
+
+  "pkg:mysql-mcp": ["database-access"],
+  "pkg:snowflake-mcp": ["database-access"],
+  "pkg:@lishenxydlgzs/aws-athena-mcp": ["database-access"],
+
+  "pkg:gitea-mcp": ["version-control"],
+  "pkg:jenkins-mcp": ["infrastructure-and-deployment"],
+  "pkg:@dynatrace-oss/dynatrace-managed-mcp-server": ["observability"],
+  "pkg:@parseable/parseable-mcp-server": ["observability"],
+
+  "pkg:hyperbrowser-mcp": ["browser-automation"],
+  "pkg:patchright-mcp-jalikey": ["browser-automation"],
+  "pkg:@taprun/cli": ["browser-automation"],
+  "pkg:terminal-driver-mcp": ["process-automation"],
+  "pkg:drengr": ["test-automation"],
+  "pkg:rn-debug-mcp": ["debugging"],
+
+  "pkg:weavatrix": ["code-review"],
+  "pkg:@regsorm/code-index-mcp": ["code-review"],
+  "pkg:mcp-code-graph": ["code-review"],
+  "pkg:sigmap": ["code-review"],
+  "pkg:githits": ["code-review"],
+  "pkg:package-registry-mcp": ["code-review"],
+  "pkg:mcp-adr-analysis-server": ["software-architecture"],
+
+  "pkg:js-reverse-mcp": ["security-review"],
+  "pkg:osint-mcp-server": ["security-review"],
+  "pkg:@cyanheads/nist-nvd-mcp-server": ["security-review"],
+  "pkg:@sofagent/mcp": ["audit"],
+
+  "pkg:mcp-linear": ["project-management"],
+  "pkg:clickup-custom-mcp": ["project-management"],
+  "pkg:vikunja-fastmcp": ["project-management"],
+
+  "pkg:@suekou/mcp-notion-server": ["knowledge-management"],
+  "pkg:affine-mcp-server": ["knowledge-management"],
+  "pkg:@roomi-fields/notebooklm-mcp": ["knowledge-management"],
+  "pkg:stickies-mcp": ["knowledge-management"],
+  "pkg:@ankimcp/anki-mcp-server": ["training-material"],
+
+  "pkg:wikipedia-mcp": ["web-research"],
+  "pkg:redditapis-mcp": ["web-research"],
+  "pkg:@cyanheads/bluesky-mcp-server": ["web-research"],
+  "pkg:feedpik": ["web-research"],
+
+  "pkg:mcp-wordpress": ["web-development", "seo"],
+  "pkg:website-auditor-mcp": ["seo"],
+  "pkg:@pepitahq/mcp": ["web-development"],
+  "pkg:@kuailian/mcp-server": ["web-development"],
+  "pkg:salesforce-metadata-mcp": ["application-development"],
+  "pkg:mcp-server-sfmc": ["application-development"],
+  "pkg:@tosspayments/integration-guide-mcp": ["technical-documentation"],
+
+  "pkg:icon-mcp": ["visual-design"],
+  "pkg:mcp-color-convert": ["visual-design"],
+  "pkg:@nyuchi/mzizi-mcp": ["visual-design"],
+  "pkg:@microcharts/mcp": ["dashboards-and-reporting", "visual-design"],
+
+  "pkg:ollama-mcp-server": ["ml-engineering"],
+  "pkg:ollama-mcp": ["ml-engineering"],
+  "pkg:codex-mcp-server": ["agent-configuration"],
+  "pkg:cursor-delegate-mcp": ["agent-configuration"],
+  "pkg:claude-code-deepseek-delegator": ["agent-configuration"],
+  "pkg:pm-claude-skills": ["agent-configuration"],
+
+  "pkg:clinicaltrialsgov-mcp-server": ["scientific-research", "literature-review"],
+  "pkg:@cyanheads/openstates-mcp-server": ["regulatory-compliance"],
+  "pkg:@cyanheads/ris-austria-mcp-server": ["regulatory-compliance"],
+  "pkg:siigo-pyme-mcp": ["bookkeeping"],
+  "pkg:hilan-mcp": ["bookkeeping"],
+  "pkg:@elitedcs/ghl-mcp": ["sales-pipeline"],
+  "pkg:wechat-mcp-server": ["content-marketing"],
+  "pkg:fluf-mcp": ["logistics-and-fulfilment"],
+  "pkg:freightutils-mcp": ["logistics-and-fulfilment"]
+}

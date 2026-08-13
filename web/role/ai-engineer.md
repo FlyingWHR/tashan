@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Supertool](https://tashan.sh/capability/plugin-digital-process-tools-claude-supertool-supertool.html) | 57 | 14 ★ | active |
 | 40 | [Laconic](https://tashan.sh/capability/plugin-gabrielbarberini-laconic-laconic.html) | 56 | 18 ★ | active |
 
-Showing the top 40 of 475. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
+Showing the top 40 of 477. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
 
 ## What these numbers are not
 

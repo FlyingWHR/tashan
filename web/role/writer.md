@@ -47,19 +47,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 47 | 7k/wk | active |
 | 28 | [Yapi Auto](https://tashan.sh/capability/pkg-yapi-auto-mcp.html) | 24 | 3k/wk | abandoned |
 | 29 | [Deepwiki](https://tashan.sh/capability/pkg-mcp-deepwiki.html) | 23 | 2k/wk | abandoned |
-| 30 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
-| 31 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 52 | 2 repos | active |
-| 32 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 50 | 3 ★ | active |
-| 33 | [Sync Docs](https://tashan.sh/capability/plugin-agent-sh-sync-docs-sync-docs.html) | 50 | 3 ★ | active |
-| 34 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | 49 | 2 repos | active |
-| 35 | [Jamdesk](https://tashan.sh/capability/plugin-jamdesk-jamdesk-claude-plugin-jamdesk.html) | 49 | 3 ★ | active |
-| 36 | [Living Manual](https://tashan.sh/capability/plugin-dougstanford-living-manual-living-manual.html) | 49 | 2 ★ | active |
-| 37 | [Changelog Generator](https://tashan.sh/capability/skill-alirezarezvani-changelog-generator.html) | 48 | 2 repos | active |
-| 38 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 48 | 40 ★ | active |
-| 39 | [Mintlify](https://tashan.sh/capability/plugin-mintlify-mintlify-claude-plugin-mintlify.html) | 47 | 5 ★ | active |
-| 40 | [Resend](https://tashan.sh/capability/plugin-resend-resend-skills-resend.html) | 46 | 2 marketplaces | — |
+| 30 | [Integration Guide](https://tashan.sh/capability/pkg-tosspayments-integration-guide-mcp.html) | 69 | 759/wk | active |
+| 31 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
+| 32 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 52 | 2 repos | active |
+| 33 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 50 | 3 ★ | active |
+| 34 | [Sync Docs](https://tashan.sh/capability/plugin-agent-sh-sync-docs-sync-docs.html) | 50 | 3 ★ | active |
+| 35 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | 49 | 2 repos | active |
+| 36 | [Jamdesk](https://tashan.sh/capability/plugin-jamdesk-jamdesk-claude-plugin-jamdesk.html) | 49 | 3 ★ | active |
+| 37 | [Living Manual](https://tashan.sh/capability/plugin-dougstanford-living-manual-living-manual.html) | 49 | 2 ★ | active |
+| 38 | [Changelog Generator](https://tashan.sh/capability/skill-alirezarezvani-changelog-generator.html) | 48 | 2 repos | active |
+| 39 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 48 | 40 ★ | active |
+| 40 | [Mintlify](https://tashan.sh/capability/plugin-mintlify-mintlify-claude-plugin-mintlify.html) | 47 | 5 ★ | active |
 
-Showing the top 40 of 213. The full ranked shelf is at https://tashan.sh/role/writer.html.
+Showing the top 40 of 215. The full ranked shelf is at https://tashan.sh/role/writer.html.
 
 ## What these numbers are not
 

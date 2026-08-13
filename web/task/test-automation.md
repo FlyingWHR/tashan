@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Super Ralph](https://tashan.sh/capability/plugin-aezizhu-super-ralph-super-ralph.html) | 46 | 9 ★ | active |
 | 40 | [Verification Before Completion](https://tashan.sh/capability/skill-obra-verification-before-completion.html) | 45 | 2 repos | active |
 
-Showing the top 40 of 111. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
+Showing the top 40 of 112. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
 
 ## What these numbers are not
 
