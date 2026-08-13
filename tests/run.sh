@@ -77,6 +77,7 @@ python3 pipeline/db_store.py --selftest || fail=1
 echo; echo "── indexnow ───────────────────────────────────"
 python3 pipeline/indexnow.py --selftest || fail=1
 python3 pipeline/gen_social.py --selftest || fail=1
+python3 pipeline/funnel.py --selftest || fail=1
 
 # 3b3. every published `npx …` must name a package that resolves to us (shipped wrong twice)
 echo; echo "── npx package name ───────────────────────────"

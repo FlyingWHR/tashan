@@ -193,6 +193,16 @@ jobs:
           echo "::error::'R2 Storage: Edit'. The retention shards in data/history are unaffected."
           exit 1
 
+      # WHAT THE SITE EARNED, printed into the run summary. The events have been landing in
+      # Analytics Engine since 9 Aug and nobody has ever read them — docs/ANALYTICS.md documents the
+      # SQL and runs none of it. Same failure as the seven silent red nights: a number nobody looks
+      # at is a number nobody collected. Runs even when the suite was red, because a frozen site is
+      # exactly when you want to know what the traffic was doing.
+      - name: Read the funnel
+        if: always()
+        continue-on-error: true
+        run: python3 pipeline/funnel.py --days 7
+
       # RAISE THE ALARM WHERE IT CANNOT BE MISSED, before failing the job.
       #
       # This workflow already exited 1 with ::error:: on every red night, and it went unnoticed for
