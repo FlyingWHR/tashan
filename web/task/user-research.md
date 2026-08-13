@@ -11,16 +11,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 72 | 1k ★ | active |
-| 2 | [Fullstory](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 48 | 9 ★ | active |
-| 3 | [Windmill Hr](https://tashan.sh/capability/plugin-windmill-dev-windmill-plugin-windmill-hr.html) | 47 | 1 ★ | active |
-| 4 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 45 | 7 ★ | active |
-| 5 | [Fullstory · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 42 | 1 marketplaces | — |
-| 6 | [Product Discovery · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-product-discovery.html) | not scored | 1 repos | active |
-| 7 | [Product Manager Toolkit](https://tashan.sh/capability/skill-alirezarezvani-product-manager-toolkit.html) | not scored | 1 repos | active |
-| 8 | [UX Researcher Designer](https://tashan.sh/capability/skill-alirezarezvani-ux-researcher-designer.html) | not scored | 1 repos | active |
-| 9 | [Product Research](https://tashan.sh/capability/skill-alirezarezvani-product-research.html) | not scored | 1 repos | active |
-| 10 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 71 | 504 ★ | active |
+| 1 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 75 | 5k/wk | active |
+| 2 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 72 | 1k ★ | active |
+| 3 | [Fullstory](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 48 | 9 ★ | active |
+| 4 | [Windmill Hr](https://tashan.sh/capability/plugin-windmill-dev-windmill-plugin-windmill-hr.html) | 47 | 1 ★ | active |
+| 5 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 45 | 7 ★ | active |
+| 6 | [Fullstory · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 42 | 1 marketplaces | — |
+| 7 | [Product Discovery · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-product-discovery.html) | not scored | 1 repos | active |
+| 8 | [Product Manager Toolkit](https://tashan.sh/capability/skill-alirezarezvani-product-manager-toolkit.html) | not scored | 1 repos | active |
+| 9 | [UX Researcher Designer](https://tashan.sh/capability/skill-alirezarezvani-ux-researcher-designer.html) | not scored | 1 repos | active |
+| 10 | [Product Research](https://tashan.sh/capability/skill-alirezarezvani-product-research.html) | not scored | 1 repos | active |
+| 11 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 71 | 504 ★ | active |
 
 ## What these numbers are not
 
