@@ -246,4 +246,24 @@ const ok = (name, cond, extra = "") => {
      "status " + r.status);
 }
 
+// ---- the agent API sells, and restates the firewall while doing it ---------------------------
+// This endpoint is the product's best distribution: every assistant wired to it is a channel, and
+// the response is the only place that channel ever reads. It carried an honest, complete answer and
+// no indication that anything else existed, so an assistant could never tell its human that tashan
+// tracks whether this changes. The price must be the one the 402 quotes — two copies of a price is
+// how a score once differed between two of our own surfaces.
+{
+  const d = await body(await onRequestGet(ctx("/v0.1/lookup?name=tavily-mcp")));
+  ok("lookup tells an agent what a licence adds", d.pro && /history/i.test(d.pro.buys || ""),
+     JSON.stringify(d.pro || null));
+  ok("...quoting the same monthly and annual price as the 402",
+     /\$6\/month/.test(d.pro?.price || "") && /\$50\/year/.test(d.pro?.price || ""),
+     d.pro?.price);
+  ok("...and restating the firewall where a machine reads it",
+     /stays free/i.test(d.pro?.free || "") && /nothing purchasable moves a score/i.test(d.pro?.free || ""),
+     d.pro?.free);
+  ok("...without displacing the measurement, which is the point of the response",
+     d.tashan_score !== undefined && d.security !== undefined);
+}
+
 console.log(`\nv0.1 route: ${n}/${n} passed · all green`);

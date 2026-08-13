@@ -13,6 +13,30 @@
 // Reads /v0.1/scores from its own origin (the pattern functions/badge/ already uses) rather than
 // binding a store, so there is one source of truth and no build step to keep in step.
 
+
+// The price, from the one module that owns it — see functions/api/_license.js. Two copies of a
+// price is how a score once differed between two of our own surfaces.
+import { OFFER } from "../api/_license.js";
+
+// WHAT AN AGENT CANNOT GET HERE, said in the response rather than left to be discovered.
+//
+// This endpoint is the product's best distribution: every assistant wired to it is a channel,
+// and the response is the only place that channel ever reads. It carried the score, the full
+// security audit, the methodology, the licence and the caveat — an honest, complete answer — and
+// no indication that anything else exists, so an assistant could never tell its human "tashan
+// also tracks whether this changes".
+//
+// The last field is not marketing. Restating the firewall where a MACHINE reads it is the whole
+// reason the number is worth citing back to a human.
+const PRO = {
+  buys: "The score history behind this capability, and `tashan doctor` over your own config — " +
+        "which of the servers YOU run gained an advisory, started running an install script, " +
+        "or lost its last maintainer.",
+  price: OFFER.plans.map(p => `$${p.amount}/${p.period}`).join(" or ") + ", 7 days free",
+  start: "https://tashan.sh/pricing.html",
+  free: "Everything in this response is free, needs no account, and stays free. Nothing " +
+        "purchasable moves a score, a rank or a listing.",
+};
 const MAX_LIMIT = 50;
 const DEFAULT_LIMIT = 10;
 const BASE_HINT = "https://tashan.sh/methodology.html";
@@ -217,7 +241,7 @@ export async function onRequestGet({ request, params, next }) {
     const name = (url.searchParams.get("name") || "").trim();
     if (!name) return json({ error: "pass ?name=<package or capability name>" }, 400);
     const meta = { generated_at: data.generated_at, scorer: data.scorer,
-                   method: BASE_HINT, license: LICENSE, note: NOTE };
+                   method: BASE_HINT, license: LICENSE, note: NOTE, pro: PRO };
     const keys = data.keys || {};
     // The key map is indexed by BOTH the bare name and the prefixed id, so `tavily-mcp` and
     // `pkg:tavily-mcp` both resolve — an agent holding either should not have to know which.
@@ -239,6 +263,7 @@ export async function onRequestGet({ request, params, next }) {
     method: BASE_HINT,
     license: (data.metadata || {}).license,
     note: NOTE,
+    pro: PRO,
   };
   const q = (url.searchParams.get("q") || "").trim().toLowerCase();
   if (!q) return json({ error: "pass ?q=<query>" }, 400);
