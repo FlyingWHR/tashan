@@ -17,42 +17,42 @@ Ranked by the tashan score
 | 4 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 74 | 2k/wk | active |
 | 5 | [Safety Net](https://tashan.sh/capability/plugin-kenryu42-claude-code-safety-net-safety-net.html) | 73 | 1k ★ | active |
 | 6 | [Githits](https://tashan.sh/capability/pkg-githits.html) | 73 | 978/wk | active |
-| 7 | [Tuteliq](https://tashan.sh/capability/pkg-tuteliq-mcp.html) | 72 | 485/wk | active |
-| 8 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 71 | 558 ★ | active |
-| 9 | [NPM Sentinel](https://tashan.sh/capability/pkg-nekzus-mcp-server.html) | 71 | 4k/wk | active |
-| 10 | [Nah](https://tashan.sh/capability/plugin-manuelschipper-nah-nah.html) | 70 | 457 ★ | active |
-| 11 | [Codeguard Security](https://tashan.sh/capability/plugin-cosai-oasis-project-codeguard-codeguard-security.html) | 70 | 276 ★ | active |
-| 12 | [Governance SDK](https://tashan.sh/capability/pkg-governance-sdk.html) | 70 | 3k/wk | active |
-| 13 | [Argot](https://tashan.sh/capability/pkg-tmonier-argot.html) | 70 | 3k/wk | active |
-| 14 | [Arc 1](https://tashan.sh/capability/pkg-arc-1.html) | 70 | 3k/wk | active |
-| 15 | [Observatory](https://tashan.sh/capability/pkg-kryptosai-mcp-observatory.html) | 70 | 2k/wk | active |
-| 16 | [Qverisai](https://tashan.sh/capability/pkg-qverisai-mcp.html) | 70 | 1k/wk | active |
-| 17 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 69 | 93 ★ | active |
-| 18 | [Coderabbit](https://tashan.sh/capability/plugin-coderabbitai-skills-coderabbit.html) | 69 | 142 ★ | active |
-| 19 | [Agentsmesh](https://tashan.sh/capability/pkg-agentsmesh.html) | 69 | 2k/wk | active |
-| 20 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 69 | 2k/wk | active |
-| 21 | [Umbra](https://tashan.sh/capability/pkg-elberacasa-umbra.html) | 69 | 2k/wk | active |
-| 22 | [Axe](https://tashan.sh/capability/pkg-axe-mcp-server.html) | 69 | 2k/wk | active |
-| 23 | [Agent Security Scanner](https://tashan.sh/capability/pkg-agent-security-scanner-mcp.html) | 69 | 2k/wk | active |
-| 24 | [Thumbgate](https://tashan.sh/capability/pkg-thumbgate.html) | 69 | 1k/wk | active |
-| 25 | [Dod Guard](https://tashan.sh/capability/pkg-dod-guard.html) | 69 | 1k/wk | active |
-| 26 | [Depwire CLI](https://tashan.sh/capability/pkg-depwire-cli.html) | 69 | 1k/wk | active |
-| 27 | [Pushci](https://tashan.sh/capability/pkg-pushci.html) | 69 | 962/wk | active |
-| 28 | [Sonarqube](https://tashan.sh/capability/plugin-sonarsource-sonarqube-agent-plugins-sonarqube.html) | 68 | 98 ★ | active |
-| 29 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 68 | 326 ★ | active |
-| 30 | [Openapi Mcp Generator](https://tashan.sh/capability/pkg-openapi-mcp-generator.html) | 68 | 15k/wk | active |
-| 31 | [Fullcourtdefense CLI](https://tashan.sh/capability/pkg-fullcourtdefense-cli.html) | 68 | 1k/wk | active |
-| 32 | [1Claw Vault](https://tashan.sh/capability/pkg-1claw-mcp.html) | 68 | 1k/wk | active |
-| 33 | [Marrow](https://tashan.sh/capability/pkg-getmarrow-mcp.html) | 68 | 947/wk | active |
-| 34 | [Onepassword Agent](https://tashan.sh/capability/pkg-onepassword-agent-mcp.html) | 67 | 2k/wk | active |
-| 35 | [Frappe Inspector](https://tashan.sh/capability/pkg-frappe-inspector-mcp.html) | 67 | 1k/wk | active |
-| 36 | [Talkthru](https://tashan.sh/capability/pkg-talkthru-mcp.html) | 67 | 1k/wk | active |
-| 37 | [Ghl Command](https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html) | 67 | 863/wk | active |
-| 38 | [Kcp Agent](https://tashan.sh/capability/pkg-kcp-agent.html) | 67 | 842/wk | active |
-| 39 | [Kit](https://tashan.sh/capability/pkg-paybond-kit.html) | 67 | 703/wk | active |
-| 40 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 67 | 572/wk | active |
+| 7 | [Shieldcortex](https://tashan.sh/capability/pkg-shieldcortex.html) | 72 | 3k/wk | active |
+| 8 | [Tuteliq](https://tashan.sh/capability/pkg-tuteliq-mcp.html) | 72 | 485/wk | active |
+| 9 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 71 | 558 ★ | active |
+| 10 | [NPM Sentinel](https://tashan.sh/capability/pkg-nekzus-mcp-server.html) | 71 | 4k/wk | active |
+| 11 | [Nah](https://tashan.sh/capability/plugin-manuelschipper-nah-nah.html) | 70 | 457 ★ | active |
+| 12 | [Codeguard Security](https://tashan.sh/capability/plugin-cosai-oasis-project-codeguard-codeguard-security.html) | 70 | 276 ★ | active |
+| 13 | [Governance SDK](https://tashan.sh/capability/pkg-governance-sdk.html) | 70 | 3k/wk | active |
+| 14 | [Argot](https://tashan.sh/capability/pkg-tmonier-argot.html) | 70 | 3k/wk | active |
+| 15 | [Arc 1](https://tashan.sh/capability/pkg-arc-1.html) | 70 | 3k/wk | active |
+| 16 | [AI Agent Firewall](https://tashan.sh/capability/pkg-fidacy-mcp.html) | 70 | 2k/wk | active |
+| 17 | [Observatory](https://tashan.sh/capability/pkg-kryptosai-mcp-observatory.html) | 70 | 2k/wk | active |
+| 18 | [Qverisai](https://tashan.sh/capability/pkg-qverisai-mcp.html) | 70 | 1k/wk | active |
+| 19 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 69 | 93 ★ | active |
+| 20 | [Coderabbit](https://tashan.sh/capability/plugin-coderabbitai-skills-coderabbit.html) | 69 | 142 ★ | active |
+| 21 | [Agentsmesh](https://tashan.sh/capability/pkg-agentsmesh.html) | 69 | 2k/wk | active |
+| 22 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 69 | 2k/wk | active |
+| 23 | [Umbra](https://tashan.sh/capability/pkg-elberacasa-umbra.html) | 69 | 2k/wk | active |
+| 24 | [Axe](https://tashan.sh/capability/pkg-axe-mcp-server.html) | 69 | 2k/wk | active |
+| 25 | [Agent Security Scanner](https://tashan.sh/capability/pkg-agent-security-scanner-mcp.html) | 69 | 2k/wk | active |
+| 26 | [Thumbgate](https://tashan.sh/capability/pkg-thumbgate.html) | 69 | 1k/wk | active |
+| 27 | [Dod Guard](https://tashan.sh/capability/pkg-dod-guard.html) | 69 | 1k/wk | active |
+| 28 | [Depwire CLI](https://tashan.sh/capability/pkg-depwire-cli.html) | 69 | 1k/wk | active |
+| 29 | [Pushci](https://tashan.sh/capability/pkg-pushci.html) | 69 | 962/wk | active |
+| 30 | [Sonarqube](https://tashan.sh/capability/plugin-sonarsource-sonarqube-agent-plugins-sonarqube.html) | 68 | 98 ★ | active |
+| 31 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 68 | 326 ★ | active |
+| 32 | [Openapi Mcp Generator](https://tashan.sh/capability/pkg-openapi-mcp-generator.html) | 68 | 15k/wk | active |
+| 33 | [Fullcourtdefense CLI](https://tashan.sh/capability/pkg-fullcourtdefense-cli.html) | 68 | 1k/wk | active |
+| 34 | [1Claw Vault](https://tashan.sh/capability/pkg-1claw-mcp.html) | 68 | 1k/wk | active |
+| 35 | [Marrow](https://tashan.sh/capability/pkg-getmarrow-mcp.html) | 68 | 947/wk | active |
+| 36 | [Onepassword Agent](https://tashan.sh/capability/pkg-onepassword-agent-mcp.html) | 67 | 2k/wk | active |
+| 37 | [Frappe Inspector](https://tashan.sh/capability/pkg-frappe-inspector-mcp.html) | 67 | 1k/wk | active |
+| 38 | [Talkthru](https://tashan.sh/capability/pkg-talkthru-mcp.html) | 67 | 1k/wk | active |
+| 39 | [Ghl Command](https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html) | 67 | 863/wk | active |
+| 40 | [Kcp Agent](https://tashan.sh/capability/pkg-kcp-agent.html) | 67 | 842/wk | active |
 
-Showing the top 40 of 978. The full ranked shelf is at https://tashan.sh/category/security.html.
+Showing the top 40 of 980. The full ranked shelf is at https://tashan.sh/category/security.html.
 
 ## What these numbers are not
 

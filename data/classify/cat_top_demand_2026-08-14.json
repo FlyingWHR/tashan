@@ -1,0 +1,298 @@
+[
+ {
+  "id": "pkg:mongodb-mcp-server",
+  "category": "database"
+ },
+ {
+  "id": "pkg:@letoribo/mcp-graphql-enhanced",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:mcporter",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:agent-device",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:agnix",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:aiwg",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:aidevops",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@extentos/mcp-server",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:react-native-ai-devtools",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:rn-devtools-hub",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:execbro",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@ataraxy-labs/sem",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:symforge",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:alibabacloud-devops-mcp-server",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:ai-test-process-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:unity-mcp-cli",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:lsp-mcp-server",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:sunpeak",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:nikou-cli",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:kasy-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:pagespeed-insights-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:yaver-cli",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:@pofky/asc-mcp",
+  "category": "devtools"
+ },
+ {
+  "id": "pkg:instar",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:daedalus-cli",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:iclavue",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:patchwork-os",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:takt",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:klypix-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:ecc-universal",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:moflo",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:borgmcp",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:replicate-mcp",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:talon-agent",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:amicus",
+  "category": "ai"
+ },
+ {
+  "id": "pkg:mcp-scraper",
+  "category": "browser"
+ },
+ {
+  "id": "pkg:playwright-parallel-mcp",
+  "category": "browser"
+ },
+ {
+  "id": "pkg:search-mcp-server",
+  "category": "browser"
+ },
+ {
+  "id": "pkg:safari-mcp",
+  "category": "browser"
+ },
+ {
+  "id": "pkg:kimi-mcp",
+  "category": "search"
+ },
+ {
+  "id": "pkg:screenpipe-mcp",
+  "category": "search"
+ },
+ {
+  "id": "pkg:mcp-local-rag",
+  "category": "search"
+ },
+ {
+  "id": "pkg:@homespunapps/mcp",
+  "category": "cloud"
+ },
+ {
+  "id": "pkg:run402-mcp",
+  "category": "cloud"
+ },
+ {
+  "id": "pkg:vantage-mcp-server",
+  "category": "cloud"
+ },
+ {
+  "id": "pkg:datadog-mcp-server",
+  "category": "cloud"
+ },
+ {
+  "id": "pkg:shieldcortex",
+  "category": "security"
+ },
+ {
+  "id": "pkg:@fidacy/mcp",
+  "category": "security"
+ },
+ {
+  "id": "pkg:log10x-mcp",
+  "category": "data"
+ },
+ {
+  "id": "pkg:@openenterprise/oe-mcp",
+  "category": "data"
+ },
+ {
+  "id": "pkg:search-console-mcp",
+  "category": "data"
+ },
+ {
+  "id": "pkg:@mapbox/mcp-server",
+  "category": "data"
+ },
+ {
+  "id": "pkg:@imqueue/mcp",
+  "category": "docs"
+ },
+ {
+  "id": "pkg:mcp-deepwiki",
+  "category": "docs"
+ },
+ {
+  "id": "pkg:docdex",
+  "category": "docs"
+ },
+ {
+  "id": "pkg:doccupine",
+  "category": "docs"
+ },
+ {
+  "id": "pkg:slite-mcp-server",
+  "category": "docs"
+ },
+ {
+  "id": "pkg:korean-law-mcp",
+  "category": "docs"
+ },
+ {
+  "id": "pkg:hourei-mcp-server",
+  "category": "docs"
+ },
+ {
+  "id": "pkg:labor-law-mcp",
+  "category": "docs"
+ },
+ {
+  "id": "pkg:@cerefox/memory",
+  "category": "files"
+ },
+ {
+  "id": "pkg:@discord-mcp/cli",
+  "category": "comms"
+ },
+ {
+  "id": "pkg:hermoso",
+  "category": "comms"
+ },
+ {
+  "id": "pkg:excalidraw-mcp",
+  "category": "design"
+ },
+ {
+  "id": "pkg:mcp-excalidraw-server",
+  "category": "design"
+ },
+ {
+  "id": "pkg:touchdesigner-mcp-server",
+  "category": "design"
+ },
+ {
+  "id": "pkg:mmxomni",
+  "category": "design"
+ },
+ {
+  "id": "pkg:@modellix/agent-canvas",
+  "category": "design"
+ },
+ {
+  "id": "pkg:agentcash",
+  "category": "finance"
+ },
+ {
+  "id": "pkg:tax-law-mcp",
+  "category": "finance"
+ },
+ {
+  "id": "pkg:mcp-gsheets",
+  "category": "productivity"
+ },
+ {
+  "id": "pkg:@next-lane/mcp",
+  "category": "productivity"
+ },
+ {
+  "id": "pkg:pipedrive-mcp-server",
+  "category": "productivity"
+ },
+ {
+  "id": "pkg:trackly-cli",
+  "category": "productivity"
+ }
+]

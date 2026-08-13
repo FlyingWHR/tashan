@@ -36,23 +36,23 @@ Ranked by the tashan score
 | 23 | [Apideck](https://tashan.sh/capability/pkg-apideck-mcp.html) | 71 | 353/wk | active |
 | 24 | [Emailmd](https://tashan.sh/capability/pkg-emailmd.html) | 70 | 4k/wk | active |
 | 25 | [Workfile](https://tashan.sh/capability/pkg-illodev-workfile.html) | 70 | 3k/wk | active |
-| 26 | [Daisyui Blueprint](https://tashan.sh/capability/pkg-daisyui-blueprint.html) | 70 | 2k/wk | active |
-| 27 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 70 | 2k/wk | active |
-| 28 | [Awb Agent Manager](https://tashan.sh/capability/pkg-awb-agent-manager.html) | 70 | 2k/wk | active |
-| 29 | [Sensorium](https://tashan.sh/capability/pkg-sensorium-mcp.html) | 70 | 2k/wk | active |
-| 30 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 70 | 891/wk | active |
-| 31 | [Toggl 2.0](https://tashan.sh/capability/pkg-togglhq-mcp.html) | 70 | 664/wk | active |
-| 32 | [Gk CLI](https://tashan.sh/capability/pkg-gitkraken-gk.html) | 69 | 5k/wk | active |
-| 33 | [Akm CLI](https://tashan.sh/capability/pkg-akm-cli.html) | 69 | 1k/wk | active |
-| 34 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 68 | 154 ★ | active |
-| 35 | [Plonk](https://tashan.sh/capability/pkg-plonk-mcp.html) | 68 | 1k/wk | active |
-| 36 | [Campus CLI](https://tashan.sh/capability/pkg-campus-cli.html) | 68 | 1k/wk | active |
-| 37 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 68 | 895/wk | active |
-| 38 | [Kaneo](https://tashan.sh/capability/pkg-kaneo-mcp.html) | 68 | 651/wk | active |
-| 39 | [Flowviant](https://tashan.sh/capability/pkg-flowviant.html) | 67 | 665/wk | active |
-| 40 | [Adbutler](https://tashan.sh/capability/pkg-adbutler-mcp-server.html) | 67 | 236/wk | active |
+| 26 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 70 | 3k/wk | active |
+| 27 | [Daisyui Blueprint](https://tashan.sh/capability/pkg-daisyui-blueprint.html) | 70 | 2k/wk | active |
+| 28 | [Next Lane](https://tashan.sh/capability/pkg-next-lane-mcp.html) | 70 | 2k/wk | active |
+| 29 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 70 | 2k/wk | active |
+| 30 | [Awb Agent Manager](https://tashan.sh/capability/pkg-awb-agent-manager.html) | 70 | 2k/wk | active |
+| 31 | [Sensorium](https://tashan.sh/capability/pkg-sensorium-mcp.html) | 70 | 2k/wk | active |
+| 32 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 70 | 891/wk | active |
+| 33 | [Toggl 2.0](https://tashan.sh/capability/pkg-togglhq-mcp.html) | 70 | 664/wk | active |
+| 34 | [Gk CLI](https://tashan.sh/capability/pkg-gitkraken-gk.html) | 69 | 5k/wk | active |
+| 35 | [Gsheets](https://tashan.sh/capability/pkg-mcp-gsheets.html) | 69 | 2k/wk | active |
+| 36 | [Akm CLI](https://tashan.sh/capability/pkg-akm-cli.html) | 69 | 1k/wk | active |
+| 37 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 68 | 154 ★ | active |
+| 38 | [Plonk](https://tashan.sh/capability/pkg-plonk-mcp.html) | 68 | 1k/wk | active |
+| 39 | [Campus CLI](https://tashan.sh/capability/pkg-campus-cli.html) | 68 | 1k/wk | active |
+| 40 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 68 | 895/wk | active |
 
-Showing the top 40 of 724. The full ranked shelf is at https://tashan.sh/category/productivity.html.
+Showing the top 40 of 728. The full ranked shelf is at https://tashan.sh/category/productivity.html.
 
 ## What these numbers are not
 

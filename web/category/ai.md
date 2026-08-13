@@ -20,39 +20,39 @@ Ranked by the tashan score
 | 7 | [Agentic Flow](https://tashan.sh/capability/pkg-agentic-flow.html) | 78 | 79k/wk | active |
 | 8 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 78 | 54k/wk | active |
 | 9 | [Ruflo](https://tashan.sh/capability/pkg-ruflo.html) | 77 | 43k/wk | active |
-| 10 | [Clawdi](https://tashan.sh/capability/pkg-clawdi.html) | 77 | 4k/wk | active |
-| 11 | [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) | 74 | 14k/wk | active |
-| 12 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow.html) | 73 | 10k/wk | active |
-| 13 | [Agent Nuvira](https://tashan.sh/capability/pkg-agent-nuvira.html) | 73 | 7k/wk | active |
-| 14 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 73 | 7k/wk | active |
-| 15 | [Claudish](https://tashan.sh/capability/pkg-claudish.html) | 72 | 4k/wk | active |
-| 16 | [Toon Memory](https://tashan.sh/capability/pkg-toon-memory.html) | 71 | 3k/wk | active |
-| 17 | [Luma](https://tashan.sh/capability/pkg-luma-mcp.html) | 71 | 3k/wk | active |
-| 18 | [Grix Connector](https://tashan.sh/capability/pkg-grix-connector.html) | 71 | 3k/wk | active |
-| 19 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 70 | 2k/wk | active |
-| 20 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 70 | 2k/wk | active |
-| 21 | [Memtrace Skills](https://tashan.sh/capability/pkg-memtrace-skills.html) | 70 | 2k/wk | active |
-| 22 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 70 | 2k/wk | active |
-| 23 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 69 | 402 ★ | active |
-| 24 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 2k/wk | active |
-| 25 | [Privateer Agent](https://tashan.sh/capability/pkg-privateer-agent.html) | 69 | 1k/wk | active |
-| 26 | [Aiterm](https://tashan.sh/capability/pkg-aiterm-mcp.html) | 69 | 1k/wk | active |
-| 27 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 69 | 1k/wk | active |
-| 28 | [PAPI: Persistent Adaptive Project Intelligence](https://tashan.sh/capability/pkg-papi-ai-server.html) | 69 | 1k/wk | active |
-| 29 | [Vexp CLI](https://tashan.sh/capability/pkg-vexp-cli.html) | 69 | 1k/wk | active |
-| 30 | [Tribunal Kit](https://tashan.sh/capability/pkg-tribunal-kit.html) | 69 | 1k/wk | active |
-| 31 | [Gerbil](https://tashan.sh/capability/pkg-tryhamster-gerbil.html) | 69 | 436/wk | active |
-| 32 | [DeepSeek](https://tashan.sh/capability/pkg-deepseek-mcp-server.html) | 68 | 2k/wk | active |
-| 33 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 68 | 205 ★ | active |
-| 34 | [Prompt Engineering Skills](https://tashan.sh/capability/plugin-treylom-prompt-engineering-skills-prompt-engineering-skills.html) | 68 | 168 ★ | active |
-| 35 | [Codebase Memory](https://tashan.sh/capability/pkg-codebase-memory-mcp.html) | 68 | 7k/wk | active |
-| 36 | [Forgememo CLI](https://tashan.sh/capability/pkg-forgememo-cli.html) | 68 | 1k/wk | active |
-| 37 | [Sdlc Agent 4 Enterprise](https://tashan.sh/capability/pkg-sdlc-agent-4-enterprise-server.html) | 68 | 946/wk | active |
-| 38 | [Velixar](https://tashan.sh/capability/pkg-velixar-mcp-server.html) | 68 | 895/wk | active |
-| 39 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 68 | 889/wk | active |
-| 40 | [Contextecf Codeledger](https://tashan.sh/capability/pkg-contextecf-codeledger.html) | 68 | 726/wk | active |
+| 10 | [Instar](https://tashan.sh/capability/pkg-instar.html) | 77 | 43k/wk | active |
+| 11 | [Clawdi](https://tashan.sh/capability/pkg-clawdi.html) | 77 | 4k/wk | active |
+| 12 | [Daedalus CLI](https://tashan.sh/capability/pkg-daedalus-cli.html) | 75 | 15k/wk | active |
+| 13 | [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) | 74 | 14k/wk | active |
+| 14 | [Iclavue](https://tashan.sh/capability/pkg-iclavue.html) | 74 | 11k/wk | active |
+| 15 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow.html) | 73 | 10k/wk | active |
+| 16 | [Agent Nuvira](https://tashan.sh/capability/pkg-agent-nuvira.html) | 73 | 7k/wk | active |
+| 17 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 73 | 7k/wk | active |
+| 18 | [Takt](https://tashan.sh/capability/pkg-takt.html) | 72 | 5k/wk | active |
+| 19 | [Klypix](https://tashan.sh/capability/pkg-klypix-mcp.html) | 72 | 4k/wk | active |
+| 20 | [Claudish](https://tashan.sh/capability/pkg-claudish.html) | 72 | 4k/wk | active |
+| 21 | [Patchwork OS](https://tashan.sh/capability/pkg-patchwork-os.html) | 71 | 8k/wk | active |
+| 22 | [Toon Memory](https://tashan.sh/capability/pkg-toon-memory.html) | 71 | 3k/wk | active |
+| 23 | [Luma](https://tashan.sh/capability/pkg-luma-mcp.html) | 71 | 3k/wk | active |
+| 24 | [Grix Connector](https://tashan.sh/capability/pkg-grix-connector.html) | 71 | 3k/wk | active |
+| 25 | [Moflo](https://tashan.sh/capability/pkg-moflo.html) | 71 | 3k/wk | active |
+| 26 | [Borgmcp](https://tashan.sh/capability/pkg-borgmcp.html) | 71 | 2k/wk | active |
+| 27 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 70 | 2k/wk | active |
+| 28 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 70 | 2k/wk | active |
+| 29 | [Talon Agent](https://tashan.sh/capability/pkg-talon-agent.html) | 70 | 2k/wk | active |
+| 30 | [Amicus](https://tashan.sh/capability/pkg-amicus.html) | 70 | 2k/wk | active |
+| 31 | [Memtrace Skills](https://tashan.sh/capability/pkg-memtrace-skills.html) | 70 | 2k/wk | active |
+| 32 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 70 | 2k/wk | active |
+| 33 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 69 | 402 ★ | active |
+| 34 | [Ecc Universal](https://tashan.sh/capability/pkg-ecc-universal.html) | 69 | 4k/wk | active |
+| 35 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 2k/wk | active |
+| 36 | [Privateer Agent](https://tashan.sh/capability/pkg-privateer-agent.html) | 69 | 1k/wk | active |
+| 37 | [Aiterm](https://tashan.sh/capability/pkg-aiterm-mcp.html) | 69 | 1k/wk | active |
+| 38 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 69 | 1k/wk | active |
+| 39 | [PAPI: Persistent Adaptive Project Intelligence](https://tashan.sh/capability/pkg-papi-ai-server.html) | 69 | 1k/wk | active |
+| 40 | [Vexp CLI](https://tashan.sh/capability/pkg-vexp-cli.html) | 69 | 1k/wk | active |
 
-Showing the top 40 of 639. The full ranked shelf is at https://tashan.sh/category/ai.html.
+Showing the top 40 of 651. The full ranked shelf is at https://tashan.sh/category/ai.html.
 
 ## What these numbers are not
 
