@@ -193,6 +193,25 @@ jobs:
           echo "::error::'R2 Storage: Edit'. The retention shards in data/history are unaffected."
           exit 1
 
+      # IS THE MONEY PATH STILL WORKING? The post-purchase hand-off was broken for weeks because
+      # every piece worked in isolation and the one broken thing was a field in someone else's
+      # dashboard that nothing we owned ever looked at. This walks the steps a customer walks.
+      # continue-on-error: a broken checkout must not stop the site publishing, but it must be
+      # impossible to miss in the run summary.
+      - name: Check the payment path
+        if: always()
+        continue-on-error: true
+        run: |
+          python3 pipeline/check_payments.py | tee /tmp/pay.txt
+          if grep -q FAIL /tmp/pay.txt; then
+            echo "## Payment path — NOT READY" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "## Payment path — ready" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          cat /tmp/pay.txt >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
       # WHAT THE SITE EARNED, printed into the run summary. The events have been landing in
       # Analytics Engine since 9 Aug and nobody has ever read them — docs/ANALYTICS.md documents the
       # SQL and runs none of it. Same failure as the seven silent red nights: a number nobody looks
