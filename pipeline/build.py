@@ -763,8 +763,18 @@ def enrich_github(con):
         if not REPO_RE.match(repo):          # only owner/name (skip full URLs / junk)
             continue
         cached = cache.get(repo)
-        # cache hit — unless it's a 'missing' entry old enough to re-verify (a 404 today may be a real repo later;
-        # this also auto-purges legacy poisoned entries, which have no 'at' timestamp → treated as stale)
+        # A HALF-ENTRY IS A MISS, NOT A HIT — and this is the root cause of the KeyError below.
+        # enrich_homepages() shares this cache file and does `cache.setdefault(repo, {})` before
+        # writing a homepage, so a repo the homepage pass reaches FIRST is left as
+        # {"homepage": "..."} with no repo health in it at all. This branch then read it as a cache
+        # hit, skipped the fetch, and handed an object with no 'stars' to the UPDATE. 230 of 4,214
+        # cached repos were in that state — modelcontextprotocol/typescript-sdk, microsoft/mcp,
+        # sveltejs/mcp among them — so those rows also silently lost their stars, forks and push
+        # dates for as long as the entry survived.
+        # Requiring the field that makes an entry a repo-health record turns a poisoned entry into a
+        # re-fetch instead of a crash.
+        if cached is not None and not cached.get("missing") and "stars" not in cached:
+            cached = None
         if cached is not None and not (cached.get("missing") and _stale(cached.get("at"), GH_MISSING_TTL_DAYS)):
             info = cached
         else:
@@ -794,7 +804,18 @@ def enrich_github(con):
         con.execute("""UPDATE capabilities SET gh_stars=?, gh_forks=?, gh_open_issues=?, gh_pushed=?,
               gh_contributors=?, gh_last_release=?, gh_license=?, gh_topics=?,
               gh_has_discussions=?, gh_archived=? WHERE id=?""",
-          (info["stars"] if cid not in shared_star_ids else None,
+          # .get, NOT a subscript — and this is the line that took the nightly down for three days.
+          # Every sibling field here already used .get(); `stars` alone was a hard subscript, so a
+          # GitHub response that came back without it raised KeyError and killed the whole
+          # registry+npm stage 429 seconds in. Nothing after it ran: no security scan, no
+          # push_history, so the PAID data in KV stopped advancing and went three days stale, and
+          # the deploy was skipped because the pipeline step had failed.
+          #
+          # Worse, `cache[repo] = info` had already stored that response, so the poisoned entry
+          # would have crashed every future run for that repo too. A missing star count is UNKNOWN
+          # and belongs as NULL — the same rule this file applies everywhere else: never fake an
+          # unmeasured input to 0, and never let one absent field take down a stage.
+          (info.get("stars") if cid not in shared_star_ids else None,
            info.get("forks"), info.get("open_issues"), info.get("pushed"),
            info.get("contributors"), info.get("last_release"), info.get("license"), info.get("topics"),
            1 if info.get("has_discussions") else 0, 1 if info.get("archived") else 0, cid))
@@ -834,6 +855,8 @@ def enrich_homepage(con):
         repo = (repo or "").strip().strip("/")
         if not REPO_RE.match(repo):
             continue
+        # setdefault, not assignment — but see enrich_github: an entry created HERE carries only a
+        # homepage, and the repo-health pass now treats that as a miss rather than a hit.
         ent = cache.setdefault(repo, {})
         if not ent.get("homepage"):                       # wrap in an object — a bare-string jq isn't valid JSON
             # gh_api returns (status, data). This was the ONE caller that read the tuple as a dict,

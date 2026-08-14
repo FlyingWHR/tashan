@@ -31,6 +31,8 @@ state, by construction), a full registry re-walk instead of an incremental one, 
 of `capability_text`. Each of those is a bad night, not a lost record. That is exactly why the
 series is sharded as text and the cache is not.
 """
+import gzip
+import shutil
 import os, re, subprocess, sqlite3, sys
 import time
 from datetime import datetime, timezone
@@ -39,6 +41,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "tashan.db")
 BUCKET = os.environ.get("TASHAN_DB_BUCKET", "tashan-state")
 KEY = os.environ.get("TASHAN_DB_KEY", "tashan.db")
+# GZIPPED, BECAUSE WRANGLER REFUSES ANYTHING OVER 300 MiB. The database passed 284 MiB on 14 Aug and
+# CI died with "Wrangler only supports uploading files up to 300 MiB in size" — so every run since
+# had been starting from a stale object with its incremental cursors frozen, silently, because push
+# failures are reported at the end of a long job. SQLite compresses to about 21% of its size
+# (284 MiB -> ~61 MiB), which buys years rather than weeks and costs a few seconds each way.
+GZKEY = KEY + ".gz"
 # A tiny sidecar object holding the generation of whatever is in the bucket, plus the local memory
 # of which generation we last saw. Optimistic concurrency, and it exists because of a real incident:
 # see push().
@@ -136,7 +144,20 @@ def pull():
     machine that already has a database is a reason to warn, not to stop measuring."""
     had = usable()
     tmp = DB + ".pull"
-    r = _run(["r2", "object", "get", f"{BUCKET}/{KEY}", "--file", tmp])
+    # Prefer the compressed object; fall back to the legacy uncompressed one so a bucket written by
+    # an older revision still restores. The fallback can be deleted once a gzipped object exists.
+    gz = tmp + ".gz"
+    r = _run(["r2", "object", "get", f"{BUCKET}/{GZKEY}", "--file", gz])
+    if r.returncode == 0 and os.path.exists(gz) and os.path.getsize(gz) > 0:
+        try:
+            with gzip.open(gz, "rb") as fin, open(tmp, "wb") as fout:
+                shutil.copyfileobj(fin, fout, 1024 * 1024)
+        except OSError as e:
+            print(f"  db_store: compressed object would not decompress ({e}) — trying the legacy key")
+        finally:
+            os.remove(gz)
+    if not usable(tmp):
+        r = _run(["r2", "object", "get", f"{BUCKET}/{KEY}", "--file", tmp])
     if r.returncode != 0 or not usable(tmp):
         if os.path.exists(tmp):
             os.remove(tmp)
@@ -189,18 +210,29 @@ def push():
         return 1
 
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ") + "-" + str(os.getpid())
-    mib = os.path.getsize(DB) / 1048576
-    for key in (KEY, f"backup/{datetime.now(timezone.utc).strftime('%a').lower()}.db"):
-        r = _run(["r2", "object", "put", f"{BUCKET}/{key}", "--file", DB,
-                  "--content-type", "application/vnd.sqlite3"])
+    raw_mib = os.path.getsize(DB) / 1048576
+    blob = DB + ".gz"
+    with open(DB, "rb") as fin, gzip.open(blob, "wb", compresslevel=6) as fout:
+        shutil.copyfileobj(fin, fout, 1024 * 1024)
+    mib = os.path.getsize(blob) / 1048576
+    print(f"  db_store: {raw_mib:.1f} MiB -> {mib:.1f} MiB gzipped ({100 * mib / raw_mib:.0f}%)")
+    if mib > 290:
+        print("  db_store: REFUSING to push — even compressed this is near wrangler's 300 MiB "
+              "ceiling. Split the object or move to the S3 API before it fails silently.")
+        os.remove(blob)
+        return 1
+    for key in (GZKEY, f"backup/{datetime.now(timezone.utc).strftime('%a').lower()}.db.gz"):
+        r = _run(["r2", "object", "put", f"{BUCKET}/{key}", "--file", blob,
+                  "--content-type", "application/gzip"])
         if r.returncode != 0:
-            if key != KEY:
+            if key != GZKEY:
                 print(f"  db_store: pushed the live object; the dated copy failed ({_reason(r)})")
                 return 0                       # the working copy landed; a missing backup is not fatal
             print("  db_store: PUSH FAILED — the next run will start from a stale cache")
             print("           " + _reason(r))
             return 1
         print(f"  db_store: pushed {mib:.1f} MiB to r2://{BUCKET}/{key}")
+    os.remove(blob)
     # Stamp last: a reader that sees the new generation is guaranteed the object behind it landed.
     with open(STAMP_LOCAL + ".out", "w", encoding="utf-8") as f:
         f.write(stamp)
