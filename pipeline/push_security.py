@@ -1,26 +1,32 @@
 #!/usr/bin/env python3
-"""Push the security audit's DETAIL into Cloudflare KV, where /api/security serves it to licence holders.
+"""Push the security audit into Cloudflare KV, where /api/security answers about ONE capability.
 
     CF_ACCOUNT_ID=... CF_KV_NAMESPACE_ID=... CF_API_TOKEN=... python3 pipeline/push_security.py
     python3 pipeline/push_security.py --dry-run      # build the shards, print sizes, send nothing
 
-WHY THIS EXISTS. The detail is the paid half of the audit, and it had no delivery path at all: the
-pricing page sold "which CVE or GHSA … and the version that fixes it", the capability page offered
-"unlock detail", and no endpoint, CLI path or client fetch ever produced any of it. The values were
-instead sitting in the public /data/capabilities.json, so a stranger could read what a customer could
-not get. build.py::redact_paid removed them from every public payload; this is how they reach the
-people who paid.
+THIS IS NO LONGER A PAID DELIVERY PATH. It was built as one, back when advisory detail was sold:
+the pricing page promised "which CVE or GHSA … and the version that fixes it" and nothing delivered
+it. build.py::redact_paid later moved all of that into the PUBLIC export — "naming a risk and then
+charging to say which risk is a worse position than not scanning at all" — and /api/security was
+ungated to match, because it was quoting a price for data /v0.1/lookup already gives away.
 
-WHAT IS PUSHED, AND WHAT IS NOT. Only the three things the copy sells:
+So what this feeds is a free, per-capability endpoint. It still earns its place: the public bulk
+file is 6.9 MB, and this answers about one row.
+
+WHAT IS PUSHED:
 
     a  the advisory list — id, severity, summary, the version that fixes it
     s  the literal command run at install time
-    (permissions are NOT here: "what it can reach on your machine" is the free tier's own promise,
-     and gating it sold one fact twice)
+    t  when it was scanned — and for a clean row this is the WHOLE record
 
-Everything a free reader sees stays in the public export and is not duplicated here. If a capability
-has none of the three, it is not written at all — an id missing from KV means "nothing to add",
-which /api/security returns as a 404 with a note, never as "we scanned it and it was clean".
+EVERY SCANNED ROW SHIPS. It used to be only rows with a finding, which left 7,366 of 7,862 absent,
+so /api/security answered "no audit detail recorded" for chrome-devtools-mcp and @playwright/mcp
+alike. A record carrying only `t` now means "scanned on that date, nothing found" — an answer, and
+for a security audit the most common one — and an id missing from KV means what the 404 says: we
+have never scanned it.
+
+(permissions are NOT here: "what it can reach on your machine" is in the public export, and
+duplicating it would be a second copy of a fact that already has a home.)
 
 SHARDING is identical to push_history.py, deliberately: same 64 buckets, same character-sum
 arithmetic, so the two paid paths cannot drift. bucket_of() MUST stay byte-for-byte equivalent to
@@ -129,8 +135,8 @@ def main():
         # A skip, not a failure: this runs inside the nightly loop, and a missing credential must not
         # take down the whole measurement. It must be LOUD, though — silence here means paying
         # customers quietly stop receiving what they bought.
-        print("SKIPPED — set CF_ACCOUNT_ID, CF_KV_NAMESPACE_ID and CF_API_TOKEN to deliver paid "
-              "detail. Until then /api/security returns 503 and every 'unlock detail' link is dead.")
+        print("SKIPPED — set CF_ACCOUNT_ID, CF_KV_NAMESPACE_ID and CF_API_TOKEN to deliver the audit. "
+              "Until then /api/security returns 503 for every id.")
         return 0
     con = sqlite3.connect(DB)
     data = shards(con)
@@ -138,7 +144,7 @@ def main():
     n_adv = sum(1 for b in data.values() for r in b.values() if r.get("a"))
     n_scr = sum(1 for b in data.values() for r in b.values() if r.get("s"))
     con.close()
-    print(f"{total:,} capabilities with paid detail -> {len(data)} shard(s)")
+    print(f"{total:,} capabilities with audit detail -> {len(data)} shard(s)")
     print(f"  {n_adv:,} with advisories · {n_scr:,} with an install script")
     sent = 0
     for b in sorted(data, key=int):
