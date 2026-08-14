@@ -26,16 +26,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Loki](https://tashan.sh/capability/plugin-lexfrei-mcp-loki-loki.html) | 45 | 3 ★ | active |
 | 14 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 68 | 1k/wk | active |
 | 15 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 65 | 90 ★ | active |
-| 16 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | 48 | 2 repos | active |
-| 17 | [Observability Designer](https://tashan.sh/capability/skill-alirezarezvani-observability-designer.html) | 48 | 2 repos | active |
-| 18 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
-| 19 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
-| 20 | [Render](https://tashan.sh/capability/plugin-render-oss-render-plugin-claude-code-render.html) | 46 | 0 ★ | active |
-| 21 | [Jprofiler](https://tashan.sh/capability/plugin-ej-technologies-jprofiler-mcp-jprofiler.html) | 43 | 2 ★ | active |
-| 22 | [Luciq](https://tashan.sh/capability/plugin-luciqai-agent-skills-luciq.html) | 43 | 0 ★ | active |
-| 23 | [Bitfab](https://tashan.sh/capability/plugin-project-white-rabbit-bitfab-claude-plugin-bitfab.html) | 42 | 1 ★ | active |
-| 24 | [Sap Btp Cloud Logging](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-cloud-logging.html) | 42 | 1 marketplaces | — |
-| 25 | [Langsmith](https://tashan.sh/capability/pkg-langsmith-mcp-server.html) | 42 | 2k/wk | active |
+| 16 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
+| 17 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
+| 18 | [Render](https://tashan.sh/capability/plugin-render-oss-render-plugin-claude-code-render.html) | 46 | 0 ★ | active |
+| 19 | [Jprofiler](https://tashan.sh/capability/plugin-ej-technologies-jprofiler-mcp-jprofiler.html) | 43 | 2 ★ | active |
+| 20 | [Luciq](https://tashan.sh/capability/plugin-luciqai-agent-skills-luciq.html) | 43 | 0 ★ | active |
+| 21 | [Bitfab](https://tashan.sh/capability/plugin-project-white-rabbit-bitfab-claude-plugin-bitfab.html) | 42 | 1 ★ | active |
+| 22 | [Sap Btp Cloud Logging](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-cloud-logging.html) | 42 | 1 marketplaces | — |
+| 23 | [Langsmith](https://tashan.sh/capability/pkg-langsmith-mcp-server.html) | 42 | 2k/wk | active |
+| 24 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | not scored | 1 repos | active |
+| 25 | [Observability Designer](https://tashan.sh/capability/skill-alirezarezvani-observability-designer.html) | not scored | 1 repos | active |
 | 26 | [Slo Architect](https://tashan.sh/capability/skill-alirezarezvani-slo-architect.html) | not scored | 1 repos | active |
 | 27 | [Railway](https://tashan.sh/capability/plugin-railwayapp-railway-skills-railway.html) | 70 | 300 ★ | active |
 | 28 | [Claude Code Wakatime](https://tashan.sh/capability/plugin-wakatime-claude-code-wakatime-claude-code-wakatime.html) | 62 | 88 ★ | active |

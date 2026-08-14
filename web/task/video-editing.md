@@ -44,7 +44,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Transcription](https://tashan.sh/capability/pkg-scriptivox-mcp-server.html) | 43 | 90/wk | active |
 | 32 | [Ssemble AI Clipping](https://tashan.sh/capability/pkg-ssemble-mcp-server.html) | 40 | 110/wk | active |
 | 33 | [Demostudio](https://tashan.sh/capability/pkg-demostudio-mcp-server.html) | 36 | 96/wk | active |
-| 34 | [Fablecut](https://tashan.sh/capability/plugin-ronak-create-fablecut-fablecut.html) | 69 | 595 ★ | active |
+| 34 | [Fablecut](https://tashan.sh/capability/plugin-ronak-create-fablecut-fablecut.html) | 69 | 597 ★ | active |
 | 35 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 67 | 784/wk | active |
 | 36 | [Ffmpeg Render Pro](https://tashan.sh/capability/pkg-ffmpeg-render-pro.html) | 59 | 234/wk | active |
 | 37 | [Claude Skills Library](https://tashan.sh/capability/pkg-claude-skills-library.html) | 54 | 2k/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Myvideogift](https://tashan.sh/capability/pkg-myvideogift-mcp.html) | 47 | 81/wk | active |
 | 40 | [Media Context](https://tashan.sh/capability/pkg-media-context-mcp.html) | 45 | 61/wk | active |
 
-Showing the top 40 of 47. The full ranked shelf is at https://tashan.sh/task/video-editing.html.
+Showing the top 40 of 48. The full ranked shelf is at https://tashan.sh/task/video-editing.html.
 
 ## What these numbers are not
 

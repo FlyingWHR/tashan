@@ -21,38 +21,38 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Zoominfo](https://tashan.sh/capability/plugin-zoominfo-zoominfo-mcp-plugin-zoominfo.html) | 49 | 3 ★ | active |
 | 9 | [Lusha](https://tashan.sh/capability/plugin-lusha-oss-lusha-mcp-plugin-lusha.html) | 48 | 3 ★ | active |
 | 10 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 70 | 417 ★ | active |
-| 11 | [Revenue Operations](https://tashan.sh/capability/skill-alirezarezvani-revenue-operations.html) | 48 | 2 repos | active |
-| 12 | [Sales Engineer](https://tashan.sh/capability/skill-alirezarezvani-sales-engineer.html) | 48 | 2 repos | active |
-| 13 | [Cro Advisor](https://tashan.sh/capability/skill-alirezarezvani-cro-advisor.html) | 48 | 2 repos | active |
-| 14 | [Channel Economics](https://tashan.sh/capability/skill-alirezarezvani-channel-economics.html) | 48 | 2 repos | active |
-| 15 | [Commercial Policy](https://tashan.sh/capability/skill-alirezarezvani-commercial-policy.html) | 48 | 2 repos | active |
-| 16 | [Deal Desk](https://tashan.sh/capability/skill-alirezarezvani-deal-desk.html) | 48 | 2 repos | active |
-| 17 | [Partnerships Architect](https://tashan.sh/capability/skill-alirezarezvani-partnerships-architect.html) | 48 | 2 repos | active |
-| 18 | [Cold Email](https://tashan.sh/capability/skill-alirezarezvani-cold-email.html) | 48 | 2 repos | active |
-| 19 | [Apollo · apolloio](https://tashan.sh/capability/plugin-apolloio-apollo-mcp-plugin-apollo.html) | 43 | 1 marketplaces | active |
-| 20 | [Carta CRM](https://tashan.sh/capability/plugin-carta-plugins-carta-crm.html) | 43 | 1 marketplaces | active |
-| 21 | [Apollo MCP Plugin](https://tashan.sh/capability/plugin-apolloio-apollo-mcp-plugin-apollo-mcp-plugin.html) | 43 | 1 marketplaces | active |
-| 22 | [Sanka](https://tashan.sh/capability/plugin-sankahq-sanka-plugin-sanka.html) | 43 | 0 ★ | active |
-| 23 | [Deepline](https://tashan.sh/capability/plugin-getaero-io-deepline-plugins-deepline.html) | 43 | 1 ★ | active |
-| 24 | [Clearskies Cowork Plugin](https://tashan.sh/capability/plugin-scratchpad-ai-clearskies-cowork-plugin-clearskies-cowork-plugin.html) | 42 | 0 ★ | active |
-| 25 | [Tiga Gtm](https://tashan.sh/capability/plugin-tiga-labs-tiga-gtm-tiga-gtm.html) | 42 | 1 ★ | active |
-| 26 | [Active Campaign Automation](https://tashan.sh/capability/skill-composiohq-active-campaign-automation.html) | not scored | 1 repos | active |
-| 27 | [Apollo Automation](https://tashan.sh/capability/skill-composiohq-apollo-automation.html) | not scored | 1 repos | active |
-| 28 | [Attio Automation](https://tashan.sh/capability/skill-composiohq-attio-automation.html) | not scored | 1 repos | active |
-| 29 | [Capsule CRM Automation](https://tashan.sh/capability/skill-composiohq-capsule-crm-automation.html) | not scored | 1 repos | active |
-| 30 | [Dynamics 365 Automation](https://tashan.sh/capability/skill-composiohq-dynamics-365-automation.html) | not scored | 1 repos | active |
-| 31 | [Gong Automation](https://tashan.sh/capability/skill-composiohq-gong-automation.html) | not scored | 1 repos | active |
-| 32 | [Gumroad Automation](https://tashan.sh/capability/skill-composiohq-gumroad-automation.html) | not scored | 1 repos | active |
-| 33 | [Business Growth Skills](https://tashan.sh/capability/skill-alirezarezvani-business-growth-skills.html) | not scored | 1 repos | active |
-| 34 | [Cro Review](https://tashan.sh/capability/skill-alirezarezvani-cro-review.html) | not scored | 1 repos | active |
-| 35 | [Commercial Forecaster](https://tashan.sh/capability/skill-alirezarezvani-commercial-forecaster.html) | not scored | 1 repos | active |
-| 36 | [Commercial Skills](https://tashan.sh/capability/skill-alirezarezvani-commercial-skills.html) | not scored | 1 repos | active |
-| 37 | [Rfp Responder](https://tashan.sh/capability/skill-alirezarezvani-rfp-responder.html) | not scored | 1 repos | active |
+| 11 | [Apollo · apolloio](https://tashan.sh/capability/plugin-apolloio-apollo-mcp-plugin-apollo.html) | 43 | 1 marketplaces | active |
+| 12 | [Carta CRM](https://tashan.sh/capability/plugin-carta-plugins-carta-crm.html) | 43 | 1 marketplaces | active |
+| 13 | [Apollo MCP Plugin](https://tashan.sh/capability/plugin-apolloio-apollo-mcp-plugin-apollo-mcp-plugin.html) | 43 | 1 marketplaces | active |
+| 14 | [Sanka](https://tashan.sh/capability/plugin-sankahq-sanka-plugin-sanka.html) | 43 | 0 ★ | active |
+| 15 | [Deepline](https://tashan.sh/capability/plugin-getaero-io-deepline-plugins-deepline.html) | 43 | 1 ★ | active |
+| 16 | [Clearskies Cowork Plugin](https://tashan.sh/capability/plugin-scratchpad-ai-clearskies-cowork-plugin-clearskies-cowork-plugin.html) | 42 | 0 ★ | active |
+| 17 | [Tiga Gtm](https://tashan.sh/capability/plugin-tiga-labs-tiga-gtm-tiga-gtm.html) | 42 | 1 ★ | active |
+| 18 | [Active Campaign Automation](https://tashan.sh/capability/skill-composiohq-active-campaign-automation.html) | not scored | 1 repos | active |
+| 19 | [Apollo Automation](https://tashan.sh/capability/skill-composiohq-apollo-automation.html) | not scored | 1 repos | active |
+| 20 | [Attio Automation](https://tashan.sh/capability/skill-composiohq-attio-automation.html) | not scored | 1 repos | active |
+| 21 | [Capsule CRM Automation](https://tashan.sh/capability/skill-composiohq-capsule-crm-automation.html) | not scored | 1 repos | active |
+| 22 | [Dynamics 365 Automation](https://tashan.sh/capability/skill-composiohq-dynamics-365-automation.html) | not scored | 1 repos | active |
+| 23 | [Gong Automation](https://tashan.sh/capability/skill-composiohq-gong-automation.html) | not scored | 1 repos | active |
+| 24 | [Gumroad Automation](https://tashan.sh/capability/skill-composiohq-gumroad-automation.html) | not scored | 1 repos | active |
+| 25 | [Business Growth Skills](https://tashan.sh/capability/skill-alirezarezvani-business-growth-skills.html) | not scored | 1 repos | active |
+| 26 | [Revenue Operations](https://tashan.sh/capability/skill-alirezarezvani-revenue-operations.html) | not scored | 1 repos | active |
+| 27 | [Sales Engineer](https://tashan.sh/capability/skill-alirezarezvani-sales-engineer.html) | not scored | 1 repos | active |
+| 28 | [Cro Review](https://tashan.sh/capability/skill-alirezarezvani-cro-review.html) | not scored | 1 repos | active |
+| 29 | [Cro Advisor](https://tashan.sh/capability/skill-alirezarezvani-cro-advisor.html) | not scored | 1 repos | active |
+| 30 | [Channel Economics](https://tashan.sh/capability/skill-alirezarezvani-channel-economics.html) | not scored | 1 repos | active |
+| 31 | [Commercial Forecaster](https://tashan.sh/capability/skill-alirezarezvani-commercial-forecaster.html) | not scored | 1 repos | active |
+| 32 | [Commercial Policy](https://tashan.sh/capability/skill-alirezarezvani-commercial-policy.html) | not scored | 1 repos | active |
+| 33 | [Commercial Skills](https://tashan.sh/capability/skill-alirezarezvani-commercial-skills.html) | not scored | 1 repos | active |
+| 34 | [Deal Desk](https://tashan.sh/capability/skill-alirezarezvani-deal-desk.html) | not scored | 1 repos | active |
+| 35 | [Partnerships Architect](https://tashan.sh/capability/skill-alirezarezvani-partnerships-architect.html) | not scored | 1 repos | active |
+| 36 | [Rfp Responder](https://tashan.sh/capability/skill-alirezarezvani-rfp-responder.html) | not scored | 1 repos | active |
+| 37 | [Cold Email](https://tashan.sh/capability/skill-alirezarezvani-cold-email.html) | not scored | 1 repos | active |
 | 38 | [Boondmanager](https://tashan.sh/capability/pkg-boondmanager-mcp-server.html) | 65 | 500/wk | active |
 | 39 | [Attio](https://tashan.sh/capability/pkg-attio-mcp.html) | 50 | 382/wk | active |
 | 40 | [Leadbay](https://tashan.sh/capability/pkg-leadbay-mcp.html) | 63 | 397/wk | active |
 
-Showing the top 40 of 58. The full ranked shelf is at https://tashan.sh/task/sales-pipeline.html.
+Showing the top 40 of 57. The full ranked shelf is at https://tashan.sh/task/sales-pipeline.html.
 
 ## What these numbers are not
 

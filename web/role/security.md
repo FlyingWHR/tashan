@@ -48,17 +48,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 29 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 49 | 73 ★ | active |
 | 30 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 49 | 39 ★ | active |
 | 31 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 47 | 5 ★ | active |
-| 32 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 46 | 2 ★ | active |
-| 33 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 46 | 6 ★ | active |
-| 34 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 45 | 2k/wk | active |
-| 35 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 44 | 12 ★ | active |
-| 36 | [Rugproof](https://tashan.sh/capability/plugin-omermaksutii-rugproof-rugproof.html) | 42 | 9 ★ | active |
-| 37 | [Labor Law](https://tashan.sh/capability/pkg-labor-law-mcp.html) | 41 | 2k/wk | active |
-| 38 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 40 | 1 marketplaces | active |
+| 32 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 47 | 3 ★ | active |
+| 33 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 46 | 2 ★ | active |
+| 34 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 46 | 6 ★ | active |
+| 35 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 45 | 2k/wk | active |
+| 36 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 44 | 12 ★ | active |
+| 37 | [Rugproof](https://tashan.sh/capability/plugin-omermaksutii-rugproof-rugproof.html) | 42 | 9 ★ | active |
+| 38 | [Labor Law](https://tashan.sh/capability/pkg-labor-law-mcp.html) | 41 | 2k/wk | active |
 | 39 | [Hourei](https://tashan.sh/capability/pkg-hourei-mcp-server.html) | 32 | 2k/wk | abandoned |
 | 40 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 59 | 43 ★ | active |
 
-Showing the top 40 of 197. The full ranked shelf is at https://tashan.sh/role/security.html.
+Showing the top 40 of 196. The full ranked shelf is at https://tashan.sh/role/security.html.
 
 ## What these numbers are not
 

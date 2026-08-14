@@ -29,9 +29,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Dig](https://tashan.sh/capability/pkg-mcp-server-dig.html) | 40 | 117/wk | active |
 | 17 | [Useclawhub](https://tashan.sh/capability/pkg-useclawhub-mcp.html) | 38 | 17/wk | active |
 | 18 | [Athena Dev Plugin](https://tashan.sh/capability/plugin-athena-git-group-athena-plugin-dev-athena-dev-plugin.html) | 34 | 0 ★ | active |
-| 19 | [New And Noteworthy](https://tashan.sh/capability/plugin-matthewkhouzam-nn-skill-new-and-noteworthy.html) | 28 | 1 marketplaces | — |
-| 20 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 44 | 71/wk | active |
-| 21 | [Bitbucket](https://tashan.sh/capability/pkg-mcp-bitbucket.html) | 44 | 37/wk | active |
+| 19 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 44 | 71/wk | active |
+| 20 | [Bitbucket](https://tashan.sh/capability/pkg-mcp-bitbucket.html) | 44 | 37/wk | active |
 
 ## What these numbers are not
 

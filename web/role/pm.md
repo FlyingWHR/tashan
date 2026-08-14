@@ -35,7 +35,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 49 | 3 ★ | active |
 | 14 | [Dominion Flow](https://tashan.sh/capability/plugin-thierryn-fire-flow-dominion-flow.html) | 47 | 77 ★ | active |
 | 15 | [Astravue](https://tashan.sh/capability/plugin-astravueorg-astravue-mcp-server-astravue.html) | 44 | 12 ★ | active |
-| 16 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 81 | 51k ★ | active |
+| 16 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 82 | 51k ★ | active |
 | 17 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 79 | 191k ★ | active |
 | 18 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 79 | 54k ★ | active |
 | 19 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 78 | 118k/wk | active |
@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 60 | 28 ★ | active |
 | 40 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 59 | 27 ★ | active |
 
-Showing the top 40 of 267. The full ranked shelf is at https://tashan.sh/role/pm.html.
+Showing the top 40 of 269. The full ranked shelf is at https://tashan.sh/role/pm.html.
 
 ## What these numbers are not
 

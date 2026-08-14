@@ -27,11 +27,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 48 | 20 ★ | active |
 | 15 | [Zilliz](https://tashan.sh/capability/plugin-zilliztech-zilliz-plugin-zilliz.html) | 46 | 3 ★ | active |
 | 16 | [Gnosis](https://tashan.sh/capability/plugin-nicholasglazer-gnosis-mcp-gnosis-mcp.html) | 45 | 25 ★ | active |
-| 17 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | 48 | 2 repos | active |
-| 18 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | 48 | 2 repos | active |
-| 19 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 45 | 3 ★ | active |
-| 20 | [Sap AI Core](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-ai-core.html) | 42 | 1 marketplaces | — |
-| 21 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 39 | 1 marketplaces | active |
+| 17 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 45 | 3 ★ | active |
+| 18 | [Sap AI Core](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-ai-core.html) | 42 | 1 marketplaces | — |
+| 19 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 39 | 1 marketplaces | active |
+| 20 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | not scored | 1 repos | active |
+| 21 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | not scored | 1 repos | active |
 | 22 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 69 | 402 ★ | active |
 | 23 | [Loki Mode](https://tashan.sh/capability/pkg-loki-mode.html) | 76 | 24k/wk | active |
 | 24 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 74 | 3k ★ | active |
@@ -48,11 +48,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Memory Graph](https://tashan.sh/capability/pkg-mcp-memory-graph.html) | 54 | 141/wk | active |
 | 36 | [Ainative Zerodb](https://tashan.sh/capability/pkg-ainative-zerodb-mcp-server.html) | 46 | 30/wk | active |
 | 37 | [Codedev](https://tashan.sh/capability/pkg-codedev-mcp.html) | 32 | 121/wk | abandoned |
-| 38 | [Melchizedek](https://tashan.sh/capability/pkg-melchizedek.html) | 31 | 49/wk | active |
-| 39 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
-| 40 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 72 | 6k/wk | active |
+| 38 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
+| 39 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 72 | 6k/wk | active |
+| 40 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
 
-Showing the top 40 of 86. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
+Showing the top 40 of 83. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
 
 ## What these numbers are not
 

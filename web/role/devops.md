@@ -58,7 +58,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 49 | 8 ★ | active |
 | 40 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 48 | 1 ★ | active |
 
-Showing the top 40 of 243. The full ranked shelf is at https://tashan.sh/role/devops.html.
+Showing the top 40 of 240. The full ranked shelf is at https://tashan.sh/role/devops.html.
 
 ## What these numbers are not
 

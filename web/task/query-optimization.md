@@ -27,14 +27,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Cloud SQL Sqlserver](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-sqlserver-cloud-sql-sqlserver.html) | 54 | 7 ★ | active |
 | 15 | [Alloydb Omni](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-omni-alloydb-omni.html) | 52 | 4 ★ | active |
 | 16 | [Azure Cosmos DB Assistant](https://tashan.sh/capability/plugin-azurecosmosdb-cosmosdb-claude-code-plugin-azure-cosmos-db-assistant.html) | 49 | 2 ★ | active |
-| 17 | [Database Designer](https://tashan.sh/capability/skill-alirezarezvani-database-designer.html) | 48 | 2 repos | active |
-| 18 | [Performance Profiler](https://tashan.sh/capability/skill-alirezarezvani-performance-profiler.html) | 48 | 2 repos | active |
-| 19 | [SQL Database Assistant](https://tashan.sh/capability/skill-alirezarezvani-sql-database-assistant.html) | 48 | 2 repos | active |
-| 20 | [Perf](https://tashan.sh/capability/plugin-agent-sh-perf-perf.html) | 43 | 2 ★ | active |
-| 21 | [Firefox DevTools](https://tashan.sh/capability/plugin-mozilla-firefox-devtools-mcp-firefox-devtools-mcp.html) | 43 | 1 marketplaces | active |
-| 22 | [Django Schema Design](https://tashan.sh/capability/plugin-llodev-skills-django-schema-design.html) | 42 | 1 marketplaces | active |
-| 23 | [Sap Sqlscript](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sqlscript.html) | 42 | 1 marketplaces | — |
-| 24 | [Googlebigquery Automation](https://tashan.sh/capability/skill-composiohq-googlebigquery-automation.html) | not scored | 1 repos | active |
+| 17 | [Perf](https://tashan.sh/capability/plugin-agent-sh-perf-perf.html) | 43 | 2 ★ | active |
+| 18 | [Firefox DevTools](https://tashan.sh/capability/plugin-mozilla-firefox-devtools-mcp-firefox-devtools-mcp.html) | 43 | 1 marketplaces | active |
+| 19 | [Django Schema Design](https://tashan.sh/capability/plugin-llodev-skills-django-schema-design.html) | 42 | 1 marketplaces | active |
+| 20 | [Sap Sqlscript](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sqlscript.html) | 42 | 1 marketplaces | — |
+| 21 | [Googlebigquery Automation](https://tashan.sh/capability/skill-composiohq-googlebigquery-automation.html) | not scored | 1 repos | active |
+| 22 | [Database Designer](https://tashan.sh/capability/skill-alirezarezvani-database-designer.html) | not scored | 1 repos | active |
+| 23 | [Performance Profiler](https://tashan.sh/capability/skill-alirezarezvani-performance-profiler.html) | not scored | 1 repos | active |
+| 24 | [SQL Database Assistant](https://tashan.sh/capability/skill-alirezarezvani-sql-database-assistant.html) | not scored | 1 repos | active |
 | 25 | [MongoDB · mongodb](https://tashan.sh/capability/plugin-mongodb-agent-skills-mongodb.html) | 69 | 164 ★ | active |
 | 26 | [Firestore Native](https://tashan.sh/capability/plugin-gemini-cli-extensions-firestore-native-firestore-native.html) | 63 | 30 ★ | active |
 | 27 | [Spanner](https://tashan.sh/capability/plugin-gemini-cli-extensions-spanner-spanner.html) | 60 | 19 ★ | active |

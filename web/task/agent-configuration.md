@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 59 | 27 ★ | active |
 | 40 | [Vibe Replay](https://tashan.sh/capability/plugin-tuo-lei-vibe-replay-vibe-replay.html) | 59 | 33 ★ | active |
 
-Showing the top 40 of 181. The full ranked shelf is at https://tashan.sh/task/agent-configuration.html.
+Showing the top 40 of 182. The full ranked shelf is at https://tashan.sh/task/agent-configuration.html.
 
 ## What these numbers are not
 

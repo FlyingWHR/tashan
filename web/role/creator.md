@@ -33,17 +33,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 79 | 34k ★ | active |
 | 16 | [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) | 73 | 8k/wk | active |
 | 17 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
-| 18 | [Algorithmic Art](https://tashan.sh/capability/skill-anthropics-algorithmic-art.html) | 49 | 2 repos | active |
-| 19 | [Slack Gif Creator](https://tashan.sh/capability/skill-anthropics-slack-gif-creator.html) | 49 | 2 repos | active |
-| 20 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 46 | 1 ★ | active |
-| 21 | [Hyperframes By Heygen](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes-by-heygen.html) | 43 | 1 marketplaces | active |
-| 22 | [Image Prompt Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-image-prompt-generator.html) | 43 | 1 marketplaces | active |
-| 23 | [Fk Manim Video](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-manim-video.html) | 43 | 1 marketplaces | active |
-| 24 | [Quickdesign](https://tashan.sh/capability/plugin-anthropics-claude-plugins-community-quickdesign.html) | 42 | 1 marketplaces | — |
-| 25 | [Local Audio Transcriber](https://tashan.sh/capability/plugin-chujianyun-skills-local-audio-transcriber.html) | 39 | 1 marketplaces | active |
-| 26 | [All Images AI Automation](https://tashan.sh/capability/skill-composiohq-all-images-ai-automation.html) | not scored | 1 repos | active |
-| 27 | [Heygen Automation](https://tashan.sh/capability/skill-composiohq-heygen-automation.html) | not scored | 1 repos | active |
-| 28 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | not scored | 1 repos | active |
+| 18 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | 48 | 2 repos | active |
+| 19 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 46 | 1 ★ | active |
+| 20 | [Hyperframes By Heygen](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes-by-heygen.html) | 43 | 1 marketplaces | active |
+| 21 | [Image Prompt Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-image-prompt-generator.html) | 43 | 1 marketplaces | active |
+| 22 | [Fk Manim Video](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-manim-video.html) | 43 | 1 marketplaces | active |
+| 23 | [Quickdesign](https://tashan.sh/capability/plugin-anthropics-claude-plugins-community-quickdesign.html) | 42 | 1 marketplaces | — |
+| 24 | [Local Audio Transcriber](https://tashan.sh/capability/plugin-chujianyun-skills-local-audio-transcriber.html) | 39 | 1 marketplaces | active |
+| 25 | [Algorithmic Art](https://tashan.sh/capability/skill-anthropics-algorithmic-art.html) | not scored | 1 repos | active |
+| 26 | [Slack Gif Creator](https://tashan.sh/capability/skill-anthropics-slack-gif-creator.html) | not scored | 1 repos | active |
+| 27 | [All Images AI Automation](https://tashan.sh/capability/skill-composiohq-all-images-ai-automation.html) | not scored | 1 repos | active |
+| 28 | [Heygen Automation](https://tashan.sh/capability/skill-composiohq-heygen-automation.html) | not scored | 1 repos | active |
 | 29 | [ElevenLabs Automation](https://tashan.sh/capability/skill-composiohq-elevenlabs-automation.html) | not scored | 1 repos | active |
 | 30 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
 | 31 | [Animated Sketch Diagram](https://tashan.sh/capability/plugin-oldyade-animated-sketch-diagram-animated-sketch-diagram.html) | 43 | 11 ★ | active |
@@ -57,7 +57,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Chamade](https://tashan.sh/capability/pkg-chamade-mcp-server.html) | 55 | 116/wk | active |
 | 40 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 54 | 165/wk | active |
 
-Showing the top 40 of 123. The full ranked shelf is at https://tashan.sh/role/creator.html.
+Showing the top 40 of 124. The full ranked shelf is at https://tashan.sh/role/creator.html.
 
 ## What these numbers are not
 

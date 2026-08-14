@@ -4,408 +4,408 @@
   <link href="https://tashan.sh/changes.xml" rel="self"/>
   <link href="https://tashan.sh/"/>
   <id>https://tashan.sh/changes.xml</id>
-  <updated>2026-08-10T00:00:00Z</updated>
+  <updated>2026-08-14T00:00:00Z</updated>
   <subtitle>Advisories, install scripts, permission changes and abandonment across the MCP corpus — measured daily from public evidence.</subtitle>
   <author><name>tashan</name><uri>https://tashan.sh</uri></author>
   <rights>CC BY 4.0 — attribute tashan (tashan.sh).</rights>
   <entry>
-    <title>Playwright — @playwright/mcp now reaches browser</title>
-    <link href="https://tashan.sh/capability/pkg-at-playwright-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-at-playwright-mcp.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
-  </entry>
-  <entry>
-    <title>Eve — eve now reaches network</title>
-    <link href="https://tashan.sh/capability/pkg-eve.html"/>
-    <id>https://tashan.sh/capability/pkg-eve.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
-  </entry>
-  <entry>
-    <title>Cline — cline now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-cline.html"/>
-    <id>https://tashan.sh/capability/pkg-cline.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
+    <title>Prism — prism-mcp-server now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-prism-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-prism-mcp-server.html#install_script_added-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
     <category term="install_script_added"/>
     <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
   </entry>
   <entry>
-    <title>Freee — freee-mcp now reaches database</title>
-    <link href="https://tashan.sh/capability/pkg-freee-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-freee-mcp.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
+    <title>minia2a — x402 Marketplace — the command minia2a runs at install time changed</title>
+    <link href="https://tashan.sh/capability/pkg-minia2a-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-minia2a-mcp.html#install_script_changed-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="install_script_changed"/>
+    <summary>The code that executes on your machine is not the code you last approved.  Compare the new command on the dossier against what you accepted.</summary>
+  </entry>
+  <entry>
+    <title>Pincushion — pincushion now reaches browser</title>
+    <link href="https://tashan.sh/capability/pkg-pincushion-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-pincushion-mcp.html#permissions_widened-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
     <category term="permissions_widened"/>
     <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
   </entry>
   <entry>
-    <title>N8n — n8n-mcp now reaches credentials, network</title>
-    <link href="https://tashan.sh/capability/pkg-n8n-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-n8n-mcp.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
+    <title>Octen — octen-mcp now reaches network</title>
+    <link href="https://tashan.sh/capability/pkg-octen-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-octen-mcp.html#permissions_widened-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
     <category term="permissions_widened"/>
     <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
   </entry>
   <entry>
-    <title>Pi Mcp Adapter — pi-mcp-adapter now reaches shell</title>
-    <link href="https://tashan.sh/capability/pkg-pi-mcp-adapter.html"/>
-    <id>https://tashan.sh/capability/pkg-pi-mcp-adapter.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Travel · Boosted-Chat — travel was marked deprecated on npm</title>
+    <link href="https://tashan.sh/capability/pkg-boostedtravel-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-boostedtravel-mcp.html#deprecated-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="deprecated"/>
+    <summary>The publisher is telling installers to stop using it.  Move to the successor named in the deprecation notice.</summary>
   </entry>
   <entry>
-    <title>Agentdb — agentdb now reaches credentials</title>
-    <link href="https://tashan.sh/capability/pkg-agentdb.html"/>
-    <id>https://tashan.sh/capability/pkg-agentdb.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Mermaid · hustcc — mcp-mermaid now reads as abandoned, was active</title>
+    <link href="https://tashan.sh/capability/pkg-mcp-mermaid.html"/>
+    <id>https://tashan.sh/capability/pkg-mcp-mermaid.html#abandoned-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="abandoned"/>
+    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
   </entry>
   <entry>
-    <title>Agentdb — agentdb now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-agentdb.html"/>
-    <id>https://tashan.sh/capability/pkg-agentdb.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Clockify — mcp_clockify now reads as abandoned, was active</title>
+    <link href="https://tashan.sh/capability/pkg-mcp-clockify.html"/>
+    <id>https://tashan.sh/capability/pkg-mcp-clockify.html#abandoned-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="abandoned"/>
+    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
   </entry>
   <entry>
-    <title>Agentic Flow — agentic-flow now reaches credentials, filesystem, network</title>
-    <link href="https://tashan.sh/capability/pkg-agentic-flow.html"/>
-    <id>https://tashan.sh/capability/pkg-agentic-flow.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Hapticpaper — mcp now reads as abandoned, was active</title>
+    <link href="https://tashan.sh/capability/pkg-hapticpaper-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-hapticpaper-mcp-server.html#abandoned-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="abandoned"/>
+    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
   </entry>
   <entry>
-    <title>Agentic Flow — agentic-flow now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-agentic-flow.html"/>
-    <id>https://tashan.sh/capability/pkg-agentic-flow.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Secondhand — secondhand-mcp now reads as abandoned, was active</title>
+    <link href="https://tashan.sh/capability/pkg-secondhand-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-secondhand-mcp.html#abandoned-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="abandoned"/>
+    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
   </entry>
   <entry>
-    <title>Comfyui — comfyui-mcp now reaches credentials, database</title>
-    <link href="https://tashan.sh/capability/pkg-comfyui-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-comfyui-mcp.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Spaceship — spaceship-mcp now reads as abandoned, was active</title>
+    <link href="https://tashan.sh/capability/pkg-spaceship-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-spaceship-mcp.html#abandoned-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="abandoned"/>
+    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
   </entry>
   <entry>
-    <title>Comfyui — comfyui-mcp now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-comfyui-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-comfyui-mcp.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Gitscrum Studio — mcp now reads as abandoned, was active</title>
+    <link href="https://tashan.sh/capability/pkg-gitscrum-studio-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-gitscrum-studio-mcp-server.html#abandoned-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="abandoned"/>
+    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
   </entry>
   <entry>
-    <title>Instar — instar now reaches database, network</title>
-    <link href="https://tashan.sh/capability/pkg-instar.html"/>
-    <id>https://tashan.sh/capability/pkg-instar.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Branding · forgespace — branding-mcp now reads as abandoned, was active</title>
+    <link href="https://tashan.sh/capability/pkg-forgespace-branding-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-forgespace-branding-mcp.html#abandoned-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="abandoned"/>
+    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
   </entry>
   <entry>
-    <title>Instar — instar now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-instar.html"/>
-    <id>https://tashan.sh/capability/pkg-instar.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>PentaTrail CTEM — ctem now reads as abandoned, was active</title>
+    <link href="https://tashan.sh/capability/pkg-pentatrail-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-pentatrail-mcp-server.html#abandoned-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="abandoned"/>
+    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
   </entry>
   <entry>
-    <title>Decocms — decocms now reaches cloud</title>
-    <link href="https://tashan.sh/capability/pkg-decocms.html"/>
-    <id>https://tashan.sh/capability/pkg-decocms.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Rapay — mcp-server now reads as abandoned, was active</title>
+    <link href="https://tashan.sh/capability/pkg-rapay-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-rapay-mcp-server.html#abandoned-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="abandoned"/>
+    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
   </entry>
   <entry>
-    <title>Backlog — backlog-mcp-server now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-backlog-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-backlog-mcp-server.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Travel · Boosted-Chat — travel now reads as abandoned, was active</title>
+    <link href="https://tashan.sh/capability/pkg-boostedtravel-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-boostedtravel-mcp.html#abandoned-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="abandoned"/>
+    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
   </entry>
   <entry>
-    <title>Daedalus CLI — daedalus-cli now reaches browser, credentials, database</title>
-    <link href="https://tashan.sh/capability/pkg-daedalus-cli.html"/>
-    <id>https://tashan.sh/capability/pkg-daedalus-cli.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Hostinger API — hostinger-api-mcp published 1.35.6, was 1.34.0</title>
+    <link href="https://tashan.sh/capability/pkg-hostinger-api-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-hostinger-api-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Daedalus CLI — daedalus-cli now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-daedalus-cli.html"/>
-    <id>https://tashan.sh/capability/pkg-daedalus-cli.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Azure — azure published 3.0.0-beta.35, was 3.0.0-beta.34</title>
+    <link href="https://tashan.sh/capability/pkg-azure-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-azure-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Agent Afk — agent-afk now reaches browser, credentials, database, network</title>
-    <link href="https://tashan.sh/capability/pkg-agent-afk.html"/>
-    <id>https://tashan.sh/capability/pkg-agent-afk.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Superpowers — the tashan score for superpowers rose to 85.0, from 54.0</title>
+    <link href="https://tashan.sh/capability/plugin-obra-superpowers-superpowers.html"/>
+    <id>https://tashan.sh/capability/plugin-obra-superpowers-superpowers.html#score_moved-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="score_moved"/>
+    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
   </entry>
   <entry>
-    <title>Agent Afk — agent-afk now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-agent-afk.html"/>
-    <id>https://tashan.sh/capability/pkg-agent-afk.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Superpowers — the tashan score for superpowers fell to 54.0, from 86.0</title>
+    <link href="https://tashan.sh/capability/plugin-obra-superpowers-superpowers.html"/>
+    <id>https://tashan.sh/capability/plugin-obra-superpowers-superpowers.html#score_moved-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="score_moved"/>
+    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
   </entry>
   <entry>
-    <title>Next DevTools — next-devtools-mcp now reaches network</title>
-    <link href="https://tashan.sh/capability/pkg-next-devtools-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-next-devtools-mcp.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Mempalace — the tashan score for mempalace rose to 81.0, from 76.0</title>
+    <link href="https://tashan.sh/capability/plugin-mempalace-mempalace-mempalace.html"/>
+    <id>https://tashan.sh/capability/plugin-mempalace-mempalace-mempalace.html#score_moved-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="score_moved"/>
+    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
   </entry>
   <entry>
-    <title>Gitnexus — gitnexus now reaches filesystem</title>
-    <link href="https://tashan.sh/capability/pkg-gitnexus.html"/>
-    <id>https://tashan.sh/capability/pkg-gitnexus.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Anki — @ankimcp/anki-mcp-server published 0.24.0, was 0.23.0</title>
+    <link href="https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Gitnexus — gitnexus now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-gitnexus.html"/>
-    <id>https://tashan.sh/capability/pkg-gitnexus.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Auth0 — mcp published 0.1.0-beta.19, was 0.1.0-beta.18</title>
+    <link href="https://tashan.sh/capability/pkg-auth0-auth0-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-auth0-auth0-mcp-server.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Paqad AI — paqad-ai now reaches filesystem, shell</title>
-    <link href="https://tashan.sh/capability/pkg-paqad-ai.html"/>
-    <id>https://tashan.sh/capability/pkg-paqad-ai.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Mediawiki — mediawiki-mcp-server published 0.17.0, was 0.16.0</title>
+    <link href="https://tashan.sh/capability/pkg-professional-wiki-mediawiki-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-professional-wiki-mediawiki-mcp-server.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Paqad AI — paqad-ai now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-paqad-ai.html"/>
-    <id>https://tashan.sh/capability/pkg-paqad-ai.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Brilliant Directories — brilliant-directories-mcp published 6.58.592, was 6.58.589</title>
+    <link href="https://tashan.sh/capability/pkg-brilliant-directories-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-brilliant-directories-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Argocd — argocd-mcp now reaches credentials</title>
-    <link href="https://tashan.sh/capability/pkg-argocd-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-argocd-mcp.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Githits — githits published 0.9.2, was 0.9.0</title>
+    <link href="https://tashan.sh/capability/pkg-githits.html"/>
+    <id>https://tashan.sh/capability/pkg-githits.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Samarth Gtm — samarth-gtm-mcp now reaches cloud, credentials</title>
-    <link href="https://tashan.sh/capability/pkg-samarth-gtm-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-samarth-gtm-mcp.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Local — local-mcp published 3.0.371, was 3.0.370</title>
+    <link href="https://tashan.sh/capability/pkg-local-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-local-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Iclavue — iclavue now reaches database</title>
-    <link href="https://tashan.sh/capability/pkg-iclavue.html"/>
-    <id>https://tashan.sh/capability/pkg-iclavue.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Auto Mobile — auto-mobile published 0.0.55, was 0.0.53</title>
+    <link href="https://tashan.sh/capability/pkg-kaeawc-auto-mobile.html"/>
+    <id>https://tashan.sh/capability/pkg-kaeawc-auto-mobile.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Iclavue — iclavue now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-iclavue.html"/>
-    <id>https://tashan.sh/capability/pkg-iclavue.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Homespun — homespun published 1.6.61, was 1.6.60</title>
+    <link href="https://tashan.sh/capability/pkg-homespunapps-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-homespunapps-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Alibabacloud Devops — alibabacloud-devops-mcp-server now reaches credentials</title>
-    <link href="https://tashan.sh/capability/pkg-alibabacloud-devops-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-alibabacloud-devops-mcp-server.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Blockrun — blockrun-mcp published 0.40.1, was 0.40.0</title>
+    <link href="https://tashan.sh/capability/pkg-blockrun-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-blockrun-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Claude Flow — claude-flow now reaches filesystem</title>
-    <link href="https://tashan.sh/capability/pkg-claude-flow.html"/>
-    <id>https://tashan.sh/capability/pkg-claude-flow.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Adeu — adeu published 2.4.0, was 2.3.1</title>
+    <link href="https://tashan.sh/capability/pkg-adeu-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-adeu-mcp-server.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Agnix — agnix now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-agnix.html"/>
-    <id>https://tashan.sh/capability/pkg-agnix.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Extentos — mcp-server published 0.11.56, was 0.11.54</title>
+    <link href="https://tashan.sh/capability/pkg-extentos-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-extentos-mcp-server.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Claude Code Session Manager — claude-code-session-manager now reaches filesystem, shell</title>
-    <link href="https://tashan.sh/capability/pkg-claude-code-session-manager.html"/>
-    <id>https://tashan.sh/capability/pkg-claude-code-session-manager.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Respira WordPress — respira-wordpress published 8.3.3, was 8.2.11</title>
+    <link href="https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Claude Code Session Manager — claude-code-session-manager now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-claude-code-session-manager.html"/>
-    <id>https://tashan.sh/capability/pkg-claude-code-session-manager.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Remem — remem published 0.6.74, was 0.6.72</title>
+    <link href="https://tashan.sh/capability/pkg-remem-ai-remem.html"/>
+    <id>https://tashan.sh/capability/pkg-remem-ai-remem.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Aiwg — aiwg now reaches filesystem</title>
-    <link href="https://tashan.sh/capability/pkg-aiwg.html"/>
-    <id>https://tashan.sh/capability/pkg-aiwg.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Xrpl Utilities — mcp published 0.2.193, was 0.2.192</title>
+    <link href="https://tashan.sh/capability/pkg-xrpl-utilities-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-xrpl-utilities-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Agent Rack — agent-rack now reaches shell</title>
-    <link href="https://tashan.sh/capability/pkg-agent-rack.html"/>
-    <id>https://tashan.sh/capability/pkg-agent-rack.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Opentakeoff — opentakeoff published 0.9.42, was 0.9.40</title>
+    <link href="https://tashan.sh/capability/pkg-opentakeoff-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-opentakeoff-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Agent Rack — agent-rack now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-agent-rack.html"/>
-    <id>https://tashan.sh/capability/pkg-agent-rack.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Opentakeoff — opentakeoff published 0.9.40, was 0.9.39</title>
+    <link href="https://tashan.sh/capability/pkg-opentakeoff-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-opentakeoff-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Edk2 Opencode — edk2-opencode now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-edk2-opencode.html"/>
-    <id>https://tashan.sh/capability/pkg-edk2-opencode.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>AI Context — ai-context published 2026.813.1, was 2026.807.1</title>
+    <link href="https://tashan.sh/capability/pkg-vibgrate-cli.html"/>
+    <id>https://tashan.sh/capability/pkg-vibgrate-cli.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Aidevops — aidevops now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-aidevops.html"/>
-    <id>https://tashan.sh/capability/pkg-aidevops.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Tuteliq — mcp published 3.22.2, was 3.22.1</title>
+    <link href="https://tashan.sh/capability/pkg-tuteliq-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-tuteliq-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Log10x — log10x-mcp now reaches credentials</title>
-    <link href="https://tashan.sh/capability/pkg-log10x-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-log10x-mcp.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Andrej Karpathy Skills — the tashan score for andrej-karpathy-skills rose to 70.0, from 58.0</title>
+    <link href="https://tashan.sh/capability/plugin-multica-ai-andrej-karpathy-skills-andrej-karpathy-skills.html"/>
+    <id>https://tashan.sh/capability/plugin-multica-ai-andrej-karpathy-skills-andrej-karpathy-skills.html#score_moved-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="score_moved"/>
+    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
   </entry>
   <entry>
-    <title>Vuetify — @vuetify/mcp now reaches credentials</title>
-    <link href="https://tashan.sh/capability/pkg-vuetify-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-vuetify-mcp.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Discord — discord-mcp published 0.23.0, was 0.22.0</title>
+    <link href="https://tashan.sh/capability/pkg-discord-mcp-cli.html"/>
+    <id>https://tashan.sh/capability/pkg-discord-mcp-cli.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Locadex — locadex now reaches credentials</title>
-    <link href="https://tashan.sh/capability/pkg-locadex.html"/>
-    <id>https://tashan.sh/capability/pkg-locadex.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Discord — discord-mcp published 0.22.0, was 0.18.1</title>
+    <link href="https://tashan.sh/capability/pkg-discord-mcp-cli.html"/>
+    <id>https://tashan.sh/capability/pkg-discord-mcp-cli.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Harness Mcp V2 — harness-mcp-v2 now reaches credentials</title>
-    <link href="https://tashan.sh/capability/pkg-harness-mcp-v2.html"/>
-    <id>https://tashan.sh/capability/pkg-harness-mcp-v2.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Argot — argot published 0.2.127, was 0.2.124</title>
+    <link href="https://tashan.sh/capability/pkg-tmonier-argot.html"/>
+    <id>https://tashan.sh/capability/pkg-tmonier-argot.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Harness Mcp V2 — harness-mcp-v2 now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-harness-mcp-v2.html"/>
-    <id>https://tashan.sh/capability/pkg-harness-mcp-v2.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Execbro — execbro published 2.8.7, was 2.8.3</title>
+    <link href="https://tashan.sh/capability/pkg-execbro.html"/>
+    <id>https://tashan.sh/capability/pkg-execbro.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Takt — takt now reaches shell</title>
-    <link href="https://tashan.sh/capability/pkg-takt.html"/>
-    <id>https://tashan.sh/capability/pkg-takt.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>AI Agent Firewall — ai-agent-firewall published 0.18.2, was 0.15.5</title>
+    <link href="https://tashan.sh/capability/pkg-fidacy-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-fidacy-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Korean Law — korean-law-mcp now reaches credentials</title>
-    <link href="https://tashan.sh/capability/pkg-korean-law-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-korean-law-mcp.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Memory · cerefox — @cerefox/memory published 1.7.1, was 1.6.1</title>
+    <link href="https://tashan.sh/capability/pkg-cerefox-memory.html"/>
+    <id>https://tashan.sh/capability/pkg-cerefox-memory.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Scraper — mcp-scraper now reaches browser</title>
-    <link href="https://tashan.sh/capability/pkg-mcp-scraper.html"/>
-    <id>https://tashan.sh/capability/pkg-mcp-scraper.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Hermoso — hermoso published 0.1.87, was 0.1.86</title>
+    <link href="https://tashan.sh/capability/pkg-hermoso.html"/>
+    <id>https://tashan.sh/capability/pkg-hermoso.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Claudish — claudish now reaches credentials</title>
-    <link href="https://tashan.sh/capability/pkg-claudish.html"/>
-    <id>https://tashan.sh/capability/pkg-claudish.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Hermoso — hermoso published 0.1.86, was 0.1.85</title>
+    <link href="https://tashan.sh/capability/pkg-hermoso.html"/>
+    <id>https://tashan.sh/capability/pkg-hermoso.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Shieldcortex — shieldcortex now reaches database</title>
-    <link href="https://tashan.sh/capability/pkg-shieldcortex.html"/>
-    <id>https://tashan.sh/capability/pkg-shieldcortex.html#permissions_widened-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+    <title>Sapiens Sintéticos — sapiens-mcp published 1.53.2, was 1.52.0</title>
+    <link href="https://tashan.sh/capability/pkg-sapiens-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-sapiens-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Shieldcortex — shieldcortex now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-shieldcortex.html"/>
-    <id>https://tashan.sh/capability/pkg-shieldcortex.html#install_script_added-2026-08-10</id>
-    <updated>2026-08-10T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+    <title>Safari — safari-mcp published 2.16.0, was 2.15.12</title>
+    <link href="https://tashan.sh/capability/pkg-safari-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-safari-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Ziggs — ziggs published 0.10.3, was 0.9.11</title>
+    <link href="https://tashan.sh/capability/pkg-ziggs-ai-ziggs-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-ziggs-ai-ziggs-mcp.html#version_published-2026-08-14</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
 </feed>

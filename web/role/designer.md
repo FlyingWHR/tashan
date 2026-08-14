@@ -9,7 +9,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 ## The short answer
 
-- **Visual design** — [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) · tashan score 81
+- **Visual design** — [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) · tashan score 82
 - **Animation and generated imagery** — [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) · tashan score 78
 - **User research** — [Frog](https://tashan.sh/capability/pkg-frog.html) · tashan score 74
 
@@ -22,7 +22,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 52 | 182 ★ | active |
 | 4 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 52 | 5 ★ | active |
 | 5 | [Sanzaru](https://tashan.sh/capability/plugin-tjc-lp-sanzaru-sanzaru.html) | 40 | 6 ★ | active |
-| 6 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 81 | 51k ★ | active |
+| 6 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 82 | 51k ★ | active |
 | 7 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 74 | 5k/wk | active |
 | 8 | [Figma](https://tashan.sh/capability/plugin-figma-mcp-server-guide-figma.html) | 73 | 2k ★ | active |
 | 9 | [Shadcn UI](https://tashan.sh/capability/pkg-jpisnice-shadcn-ui-mcp-server.html) | 72 | 3k/wk | active |
@@ -48,15 +48,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 29 | [Paper Desktop](https://tashan.sh/capability/plugin-paper-design-agent-plugins-paper-desktop.html) | 44 | 11 ★ | active |
 | 30 | [The Design Library](https://tashan.sh/capability/plugin-zeta92-design-library-plugin-the-design-library.html) | 43 | 10 ★ | active |
 | 31 | [Color Convert](https://tashan.sh/capability/pkg-mcp-color-convert.html) | 40 | 923/wk | abandoned |
-| 32 | [Storybook · stefanoamorelli](https://tashan.sh/capability/pkg-storybook-mcp-server.html) | 30 | 5k/wk | abandoned |
-| 33 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 79 | 34k ★ | active |
-| 34 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
-| 35 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 65 | 865/wk | active |
-| 36 | [Brand Guidelines](https://tashan.sh/capability/skill-anthropics-brand-guidelines.html) | 56 | 5 repos | active |
-| 37 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 54 | 4 repos | active |
-| 38 | [Design System](https://tashan.sh/capability/skill-alirezarezvani-design-system.html) | 53 | 4 repos | active |
-| 39 | [Canvas Design](https://tashan.sh/capability/skill-anthropics-canvas-design.html) | 52 | 3 repos | active |
-| 40 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 52 | 9 ★ | active |
+| 32 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 79 | 34k ★ | active |
+| 33 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
+| 34 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 65 | 865/wk | active |
+| 35 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 63 | 10 repos | active |
+| 36 | [Brand Guidelines](https://tashan.sh/capability/skill-anthropics-brand-guidelines.html) | 52 | 3 repos | active |
+| 37 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 52 | 9 ★ | active |
+| 38 | [Canvas Design](https://tashan.sh/capability/skill-anthropics-canvas-design.html) | 49 | 2 repos | active |
+| 39 | [Playground](https://tashan.sh/capability/skill-anthropics-playground.html) | 49 | 2 repos | active |
+| 40 | [A11y Audit](https://tashan.sh/capability/skill-alirezarezvani-a11y-audit.html) | 48 | 2 repos | active |
 
 Showing the top 40 of 151. The full ranked shelf is at https://tashan.sh/role/designer.html.
 

@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Xrpl Utilities](https://tashan.sh/capability/pkg-xrpl-utilities-mcp.html) | 71 | 3k/wk | active |
 | 40 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 68 | 969/wk | active |
 
-Showing the top 40 of 182. The full ranked shelf is at https://tashan.sh/role/marketer.html.
+Showing the top 40 of 186. The full ranked shelf is at https://tashan.sh/role/marketer.html.
 
 ## What these numbers are not
 

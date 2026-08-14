@@ -31,26 +31,26 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 43 | 3 ★ | active |
 | 19 | [Kroki Diagrams](https://tashan.sh/capability/plugin-smoldrago-kroki-diagrams-kroki-diagrams.html) | 39 | 5 ★ | active |
 | 20 | [Integration Guide](https://tashan.sh/capability/pkg-tosspayments-integration-guide-mcp.html) | 69 | 759/wk | active |
-| 21 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | 52 | 3 repos | active |
-| 22 | [PDF](https://tashan.sh/capability/skill-anthropics-pdf.html) | 52 | 3 repos | active |
-| 23 | [Knowledge Ops](https://tashan.sh/capability/skill-alirezarezvani-knowledge-ops.html) | 51 | 3 repos | active |
-| 24 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 51 | 3 repos | active |
-| 25 | [Changelog Generator](https://tashan.sh/capability/skill-alirezarezvani-changelog-generator.html) | 51 | 3 repos | active |
-| 26 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 51 | 3 repos | active |
-| 27 | [Docx · anthropics](https://tashan.sh/capability/skill-anthropics-docx.html) | 49 | 2 repos | active |
-| 28 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 49 | 3 ★ | active |
-| 29 | [Runbook Generator](https://tashan.sh/capability/skill-alirezarezvani-runbook-generator.html) | 48 | 2 repos | active |
-| 30 | [Roadmap Communicator](https://tashan.sh/capability/skill-alirezarezvani-roadmap-communicator.html) | 48 | 2 repos | active |
-| 31 | [Confluence Expert](https://tashan.sh/capability/skill-alirezarezvani-confluence-expert.html) | 48 | 2 repos | active |
-| 32 | [Quality Documentation Manager](https://tashan.sh/capability/skill-alirezarezvani-quality-documentation-manager.html) | 48 | 2 repos | active |
-| 33 | [Living Manual](https://tashan.sh/capability/plugin-dougstanford-living-manual-living-manual.html) | 48 | 2 ★ | active |
-| 34 | [Techne](https://tashan.sh/capability/plugin-ajbarea-techne-techne.html) | 43 | 0 ★ | active |
-| 35 | [Sap API Style](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-api-style.html) | 42 | 1 marketplaces | — |
-| 36 | [Mermaid · chujianyun](https://tashan.sh/capability/plugin-chujianyun-skills-mermaid.html) | 39 | 1 marketplaces | active |
-| 37 | [GitHub Code Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-github-code-interpreter.html) | 39 | 1 marketplaces | active |
-| 38 | [Business Operations Skills](https://tashan.sh/capability/skill-alirezarezvani-business-operations-skills.html) | not scored | 1 repos | active |
-| 39 | [Grill With Docs · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | not scored | 1 repos | active |
-| 40 | [Tc Tracker](https://tashan.sh/capability/skill-alirezarezvani-tc-tracker.html) | not scored | 1 repos | active |
+| 21 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 50 | 3 repos | active |
+| 22 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | 49 | 2 repos | active |
+| 23 | [PDF](https://tashan.sh/capability/skill-anthropics-pdf.html) | 49 | 2 repos | active |
+| 24 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 49 | 3 ★ | active |
+| 25 | [Knowledge Ops](https://tashan.sh/capability/skill-alirezarezvani-knowledge-ops.html) | 48 | 2 repos | active |
+| 26 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 48 | 2 repos | active |
+| 27 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | 48 | 2 repos | active |
+| 28 | [Changelog Generator](https://tashan.sh/capability/skill-alirezarezvani-changelog-generator.html) | 48 | 2 repos | active |
+| 29 | [Living Manual](https://tashan.sh/capability/plugin-dougstanford-living-manual-living-manual.html) | 48 | 2 ★ | active |
+| 30 | [Techne](https://tashan.sh/capability/plugin-ajbarea-techne-techne.html) | 43 | 0 ★ | active |
+| 31 | [Sap API Style](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-api-style.html) | 42 | 1 marketplaces | — |
+| 32 | [Mermaid · chujianyun](https://tashan.sh/capability/plugin-chujianyun-skills-mermaid.html) | 39 | 1 marketplaces | active |
+| 33 | [GitHub Code Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-github-code-interpreter.html) | 39 | 1 marketplaces | active |
+| 34 | [Docx · anthropics](https://tashan.sh/capability/skill-anthropics-docx.html) | not scored | 1 repos | active |
+| 35 | [Business Operations Skills](https://tashan.sh/capability/skill-alirezarezvani-business-operations-skills.html) | not scored | 1 repos | active |
+| 36 | [Runbook Generator](https://tashan.sh/capability/skill-alirezarezvani-runbook-generator.html) | not scored | 1 repos | active |
+| 37 | [Tc Tracker](https://tashan.sh/capability/skill-alirezarezvani-tc-tracker.html) | not scored | 1 repos | active |
+| 38 | [Code To Prd](https://tashan.sh/capability/skill-alirezarezvani-code-to-prd.html) | not scored | 1 repos | active |
+| 39 | [Roadmap Communicator](https://tashan.sh/capability/skill-alirezarezvani-roadmap-communicator.html) | not scored | 1 repos | active |
+| 40 | [Confluence Expert](https://tashan.sh/capability/skill-alirezarezvani-confluence-expert.html) | not scored | 1 repos | active |
 
 Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/technical-documentation.html.
 

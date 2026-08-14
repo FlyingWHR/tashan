@@ -50,9 +50,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 37 | [Denpyo](https://tashan.sh/capability/pkg-denpyo-mcp.html) | 44 | 33/wk | active |
 | 38 | [Paperless Tax](https://tashan.sh/capability/pkg-paperless-tax-mcp.html) | 43 | 18/wk | active |
 | 39 | [Kaisha](https://tashan.sh/capability/pkg-kaisha-mcp.html) | 42 | 19/wk | active |
-| 40 | [Straddle](https://tashan.sh/capability/plugin-straddleio-ai-straddle.html) | 33 | 5 ★ | active |
+| 40 | [Attest · attest-mcp](https://tashan.sh/capability/pkg-attest-mcp.html) | 39 | 41/wk | active |
 
-Showing the top 40 of 48. The full ranked shelf is at https://tashan.sh/task/bookkeeping.html.
+Showing the top 40 of 49. The full ranked shelf is at https://tashan.sh/task/bookkeeping.html.
 
 ## What these numbers are not
 

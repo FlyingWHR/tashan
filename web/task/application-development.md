@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 61 | 33 ★ | active |
 | 40 | [Tricorder](https://tashan.sh/capability/plugin-tweag-tricorder-tricorder.html) | 61 | 38 ★ | active |
 
-Showing the top 40 of 250. The full ranked shelf is at https://tashan.sh/task/application-development.html.
+Showing the top 40 of 248. The full ranked shelf is at https://tashan.sh/task/application-development.html.
 
 ## What these numbers are not
 

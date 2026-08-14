@@ -30,29 +30,29 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Releases](https://tashan.sh/capability/plugin-buildinternet-releases-cli-releases.html) | 49 | 3 ★ | active |
 | 18 | [Stepfun](https://tashan.sh/capability/pkg-stepfun-mcp.html) | 44 | 2k/wk | active |
 | 19 | [Trends Hub](https://tashan.sh/capability/pkg-mcp-trends-hub.html) | 42 | 2k/wk | abandoned |
-| 20 | [Perplexity](https://tashan.sh/capability/pkg-perplexity-mcp.html) | 31 | 1k/wk | abandoned |
-| 21 | [Feedpik](https://tashan.sh/capability/pkg-feedpik.html) | 62 | 739/wk | active |
-| 22 | [Travel Search And Booking API And Skills](https://tashan.sh/capability/plugin-alibaba-flyai-flyai-skill-travel-search-and-booking-api-and-skills.html) | 60 | 880 ★ | active |
-| 23 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 55 | 5 repos | active |
-| 24 | [Deep Research](https://tashan.sh/capability/skill-alirezarezvani-deep-research.html) | 51 | 3 repos | active |
-| 25 | [Research Summarizer](https://tashan.sh/capability/skill-alirezarezvani-research-summarizer.html) | 48 | 2 repos | active |
-| 26 | [Dossier · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-dossier.html) | 48 | 2 repos | active |
-| 27 | [Grep Research Skills](https://tashan.sh/capability/plugin-parcha-ai-grep-research-skills-grep-research-skills.html) | 48 | 1 ★ | active |
-| 28 | [Brightdata Plugin](https://tashan.sh/capability/plugin-brightdata-skills-brightdata-plugin.html) | 46 | 2 marketplaces | — |
-| 29 | [Comparative Landscape Brief](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-comparative-landscape-brief.html) | 43 | 1 marketplaces | active |
-| 30 | [Learn · agent-sh](https://tashan.sh/capability/plugin-agent-sh-learn-learn.html) | 43 | 2 ★ | active |
-| 31 | [Context7 · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-context7.html) | 42 | 1 marketplaces | — |
-| 32 | [Composio Search Automation](https://tashan.sh/capability/skill-composiohq-composio-search-automation.html) | not scored | 1 repos | active |
-| 33 | [Google Maps Automation](https://tashan.sh/capability/skill-composiohq-google-maps-automation.html) | not scored | 1 repos | active |
-| 34 | [YouTube Full](https://tashan.sh/capability/skill-alirezarezvani-youtube-full.html) | not scored | 1 repos | active |
-| 35 | [Pulse](https://tashan.sh/capability/skill-alirezarezvani-pulse.html) | not scored | 1 repos | active |
-| 36 | [Brave Search](https://tashan.sh/capability/pkg-modelcontextprotocol-server-brave-search.html) | not scored | 29k/wk | abandoned |
-| 37 | [Brave Search Skills](https://tashan.sh/capability/plugin-brave-brave-search-skills-brave-search-skills.html) | 65 | 161 ★ | active |
-| 38 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 56 | 14 ★ | active |
-| 39 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 67 | 944/wk | active |
-| 40 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 64 | 2k/wk | active |
+| 20 | [Feedpik](https://tashan.sh/capability/pkg-feedpik.html) | 62 | 739/wk | active |
+| 21 | [Travel Search And Booking API And Skills](https://tashan.sh/capability/plugin-alibaba-flyai-flyai-skill-travel-search-and-booking-api-and-skills.html) | 60 | 880 ★ | active |
+| 22 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 56 | 6 repos | active |
+| 23 | [Deep Research](https://tashan.sh/capability/skill-alirezarezvani-deep-research.html) | 53 | 4 repos | active |
+| 24 | [Grep Research Skills](https://tashan.sh/capability/plugin-parcha-ai-grep-research-skills-grep-research-skills.html) | 48 | 1 ★ | active |
+| 25 | [Brightdata Plugin](https://tashan.sh/capability/plugin-brightdata-skills-brightdata-plugin.html) | 46 | 2 marketplaces | — |
+| 26 | [Comparative Landscape Brief](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-comparative-landscape-brief.html) | 43 | 1 marketplaces | active |
+| 27 | [Learn · agent-sh](https://tashan.sh/capability/plugin-agent-sh-learn-learn.html) | 43 | 2 ★ | active |
+| 28 | [Context7 · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-context7.html) | 42 | 1 marketplaces | — |
+| 29 | [Composio Search Automation](https://tashan.sh/capability/skill-composiohq-composio-search-automation.html) | not scored | 1 repos | active |
+| 30 | [Google Maps Automation](https://tashan.sh/capability/skill-composiohq-google-maps-automation.html) | not scored | 1 repos | active |
+| 31 | [YouTube Full](https://tashan.sh/capability/skill-alirezarezvani-youtube-full.html) | not scored | 1 repos | active |
+| 32 | [Research Summarizer](https://tashan.sh/capability/skill-alirezarezvani-research-summarizer.html) | not scored | 1 repos | active |
+| 33 | [Dossier · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-dossier.html) | not scored | 1 repos | active |
+| 34 | [Pulse](https://tashan.sh/capability/skill-alirezarezvani-pulse.html) | not scored | 1 repos | active |
+| 35 | [Brave Search](https://tashan.sh/capability/pkg-modelcontextprotocol-server-brave-search.html) | not scored | 29k/wk | abandoned |
+| 36 | [Brave Search Skills](https://tashan.sh/capability/plugin-brave-brave-search-skills-brave-search-skills.html) | 65 | 161 ★ | active |
+| 37 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 56 | 14 ★ | active |
+| 38 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 67 | 944/wk | active |
+| 39 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 64 | 2k/wk | active |
+| 40 | [One Search](https://tashan.sh/capability/pkg-one-search-mcp.html) | 64 | 603/wk | active |
 
-Showing the top 40 of 64. The full ranked shelf is at https://tashan.sh/task/web-research.html.
+Showing the top 40 of 63. The full ranked shelf is at https://tashan.sh/task/web-research.html.
 
 ## What these numbers are not
 

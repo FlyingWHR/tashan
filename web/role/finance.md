@@ -37,28 +37,28 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 45 | 2k/wk | active |
 | 19 | [Daloopa](https://tashan.sh/capability/plugin-daloopa-plugin-daloopa.html) | 43 | 7 ★ | active |
 | 20 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 50 | 3 ★ | active |
-| 21 | [Revenue Operations](https://tashan.sh/capability/skill-alirezarezvani-revenue-operations.html) | 48 | 2 repos | active |
-| 22 | [Capacity Planner](https://tashan.sh/capability/skill-alirezarezvani-capacity-planner.html) | 48 | 2 repos | active |
-| 23 | [Procurement Optimizer](https://tashan.sh/capability/skill-alirezarezvani-procurement-optimizer.html) | 48 | 2 repos | active |
-| 24 | [Cfo Advisor](https://tashan.sh/capability/skill-alirezarezvani-cfo-advisor.html) | 48 | 2 repos | active |
-| 25 | [Cro Advisor](https://tashan.sh/capability/skill-alirezarezvani-cro-advisor.html) | 48 | 2 repos | active |
-| 26 | [Ma Playbook](https://tashan.sh/capability/skill-alirezarezvani-ma-playbook.html) | 48 | 2 repos | active |
-| 27 | [Channel Economics](https://tashan.sh/capability/skill-alirezarezvani-channel-economics.html) | 48 | 2 repos | active |
-| 28 | [Business Investment Advisor](https://tashan.sh/capability/skill-alirezarezvani-business-investment-advisor.html) | 48 | 2 repos | active |
-| 29 | [Financial Analyst](https://tashan.sh/capability/skill-alirezarezvani-financial-analyst.html) | 48 | 2 repos | active |
-| 30 | [Saas Metrics Coach](https://tashan.sh/capability/skill-alirezarezvani-saas-metrics-coach.html) | 48 | 2 repos | active |
-| 31 | [Research Finance](https://tashan.sh/capability/skill-alirezarezvani-research-finance.html) | 48 | 2 repos | active |
-| 32 | [Followrabbit](https://tashan.sh/capability/plugin-followrabbit-ai-awesome-rabbit-followrabbit.html) | 48 | 2 ★ | active |
-| 33 | [Vendor Management](https://tashan.sh/capability/skill-alirezarezvani-vendor-management.html) | 48 | 2 repos | active |
-| 34 | [Aims Audit](https://tashan.sh/capability/skill-alirezarezvani-aims-audit.html) | 48 | 2 repos | active |
-| 35 | [Compliance Readiness](https://tashan.sh/capability/skill-alirezarezvani-compliance-readiness.html) | 48 | 2 repos | active |
-| 36 | [Fda Qsr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-fda-qsr-audit-prep.html) | 48 | 2 repos | active |
-| 37 | [Gdpr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-gdpr-audit-prep.html) | 48 | 2 repos | active |
-| 38 | [Soc2 Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-soc2-audit-prep.html) | 48 | 2 repos | active |
-| 39 | [Capa Officer](https://tashan.sh/capability/skill-alirezarezvani-capa-officer.html) | 48 | 2 repos | active |
-| 40 | [Isms Audit Expert](https://tashan.sh/capability/skill-alirezarezvani-isms-audit-expert.html) | 48 | 2 repos | active |
+| 21 | [Followrabbit](https://tashan.sh/capability/plugin-followrabbit-ai-awesome-rabbit-followrabbit.html) | 48 | 2 ★ | active |
+| 22 | [Carta Cap Table](https://tashan.sh/capability/plugin-carta-plugins-carta-cap-table.html) | 47 | 2 marketplaces | active |
+| 23 | [Carta Investors](https://tashan.sh/capability/plugin-carta-plugins-carta-investors.html) | 47 | 2 marketplaces | active |
+| 24 | [Bigdata Com](https://tashan.sh/capability/plugin-bigdata-com-bigdata-plugins-marketplace-bigdata-com.html) | 46 | 2 ★ | active |
+| 25 | [Sanka](https://tashan.sh/capability/plugin-sankahq-sanka-plugin-sanka.html) | 43 | 0 ★ | active |
+| 26 | [Get Invoice Details](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-get-invoice-details.html) | 43 | 1 marketplaces | active |
+| 27 | [Sap Sac Planning](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-planning.html) | 42 | 1 marketplaces | — |
+| 28 | [Tres Finance Plugin](https://tashan.sh/capability/plugin-anthropics-claude-plugins-community-tres-finance-plugin.html) | 42 | 1 marketplaces | — |
+| 29 | [Revenue Operations](https://tashan.sh/capability/skill-alirezarezvani-revenue-operations.html) | not scored | 1 repos | active |
+| 30 | [Capacity Planner](https://tashan.sh/capability/skill-alirezarezvani-capacity-planner.html) | not scored | 1 repos | active |
+| 31 | [Procurement Optimizer](https://tashan.sh/capability/skill-alirezarezvani-procurement-optimizer.html) | not scored | 1 repos | active |
+| 32 | [Cfo Review](https://tashan.sh/capability/skill-alirezarezvani-cfo-review.html) | not scored | 1 repos | active |
+| 33 | [Cfo Advisor](https://tashan.sh/capability/skill-alirezarezvani-cfo-advisor.html) | not scored | 1 repos | active |
+| 34 | [Cro Advisor](https://tashan.sh/capability/skill-alirezarezvani-cro-advisor.html) | not scored | 1 repos | active |
+| 35 | [Ma Playbook](https://tashan.sh/capability/skill-alirezarezvani-ma-playbook.html) | not scored | 1 repos | active |
+| 36 | [Channel Economics](https://tashan.sh/capability/skill-alirezarezvani-channel-economics.html) | not scored | 1 repos | active |
+| 37 | [Commercial Forecaster](https://tashan.sh/capability/skill-alirezarezvani-commercial-forecaster.html) | not scored | 1 repos | active |
+| 38 | [Commercial Skills](https://tashan.sh/capability/skill-alirezarezvani-commercial-skills.html) | not scored | 1 repos | active |
+| 39 | [Business Investment Advisor](https://tashan.sh/capability/skill-alirezarezvani-business-investment-advisor.html) | not scored | 1 repos | active |
+| 40 | [Finance Skills](https://tashan.sh/capability/skill-alirezarezvani-finance-skills.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 136. The full ranked shelf is at https://tashan.sh/role/finance.html.
+Showing the top 40 of 138. The full ranked shelf is at https://tashan.sh/role/finance.html.
 
 ## What these numbers are not
 

@@ -34,30 +34,30 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Labor Law](https://tashan.sh/capability/pkg-labor-law-mcp.html) | 41 | 2k/wk | active |
 | 17 | [Hourei](https://tashan.sh/capability/pkg-hourei-mcp-server.html) | 32 | 2k/wk | abandoned |
 | 18 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 59 | 37 ★ | active |
-| 19 | [Chief AI Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-ai-officer-advisor.html) | 48 | 2 repos | active |
-| 20 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | 48 | 2 repos | active |
-| 21 | [General Counsel Advisor](https://tashan.sh/capability/skill-alirezarezvani-general-counsel-advisor.html) | 48 | 2 repos | active |
-| 22 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | 48 | 2 repos | active |
-| 23 | [AI Act Readiness](https://tashan.sh/capability/skill-alirezarezvani-ai-act-readiness.html) | 48 | 2 repos | active |
-| 24 | [Aims Audit](https://tashan.sh/capability/skill-alirezarezvani-aims-audit.html) | 48 | 2 repos | active |
-| 25 | [Compliance Readiness](https://tashan.sh/capability/skill-alirezarezvani-compliance-readiness.html) | 48 | 2 repos | active |
-| 26 | [Fda Qsr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-fda-qsr-audit-prep.html) | 48 | 2 repos | active |
-| 27 | [Gdpr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-gdpr-audit-prep.html) | 48 | 2 repos | active |
-| 28 | [Soc2 Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-soc2-audit-prep.html) | 48 | 2 repos | active |
-| 29 | [Senior Secops](https://tashan.sh/capability/skill-alirezarezvani-senior-secops.html) | 48 | 2 repos | active |
-| 30 | [Eu AI Act Specialist](https://tashan.sh/capability/skill-alirezarezvani-eu-ai-act-specialist.html) | 48 | 2 repos | active |
-| 31 | [Capa Officer](https://tashan.sh/capability/skill-alirezarezvani-capa-officer.html) | 48 | 2 repos | active |
-| 32 | [Fda Consultant Specialist](https://tashan.sh/capability/skill-alirezarezvani-fda-consultant-specialist.html) | 48 | 2 repos | active |
-| 33 | [Gdpr Dsgvo Expert](https://tashan.sh/capability/skill-alirezarezvani-gdpr-dsgvo-expert.html) | 48 | 2 repos | active |
-| 34 | [Information Security Manager Iso27001](https://tashan.sh/capability/skill-alirezarezvani-information-security-manager-iso27001.html) | 48 | 2 repos | active |
-| 35 | [Isms Audit Expert](https://tashan.sh/capability/skill-alirezarezvani-isms-audit-expert.html) | 48 | 2 repos | active |
-| 36 | [Mdr 745 Specialist](https://tashan.sh/capability/skill-alirezarezvani-mdr-745-specialist.html) | 48 | 2 repos | active |
-| 37 | [Qms Audit Expert](https://tashan.sh/capability/skill-alirezarezvani-qms-audit-expert.html) | 48 | 2 repos | active |
-| 38 | [Quality Documentation Manager](https://tashan.sh/capability/skill-alirezarezvani-quality-documentation-manager.html) | 48 | 2 repos | active |
-| 39 | [Quality Manager Qmr](https://tashan.sh/capability/skill-alirezarezvani-quality-manager-qmr.html) | 48 | 2 repos | active |
-| 40 | [Quality Manager Qms Iso13485](https://tashan.sh/capability/skill-alirezarezvani-quality-manager-qms-iso13485.html) | 48 | 2 repos | active |
+| 19 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
+| 20 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 46 | 5 ★ | active |
+| 21 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 46 | 1 ★ | active |
+| 22 | [Bubble Shield](https://tashan.sh/capability/plugin-vdk888-bubble-shield-public-bubble-shield.html) | 43 | 0 ★ | active |
+| 23 | [Indian Banking Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-banking-drafting-litigation-indian-banking-drafting.html) | 42 | 1 ★ | active |
+| 24 | [Indian Company Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-company-drafting-indian-company-drafting.html) | 42 | 1 ★ | active |
+| 25 | [Indian Consumer Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-consumer-drafting-indian-consumer-drafting.html) | 42 | 1 ★ | active |
+| 26 | [Indian Contracts Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-contracts-drafting-litigation-indian-contracts-drafting.html) | 42 | 1 ★ | active |
+| 27 | [Caio Review](https://tashan.sh/capability/skill-alirezarezvani-caio-review.html) | not scored | 1 repos | active |
+| 28 | [Cdo Review](https://tashan.sh/capability/skill-alirezarezvani-cdo-review.html) | not scored | 1 repos | active |
+| 29 | [Ciso Review](https://tashan.sh/capability/skill-alirezarezvani-ciso-review.html) | not scored | 1 repos | active |
+| 30 | [Gc Review](https://tashan.sh/capability/skill-alirezarezvani-gc-review.html) | not scored | 1 repos | active |
+| 31 | [Chief AI Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-ai-officer-advisor.html) | not scored | 1 repos | active |
+| 32 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | not scored | 1 repos | active |
+| 33 | [General Counsel Advisor](https://tashan.sh/capability/skill-alirezarezvani-general-counsel-advisor.html) | not scored | 1 repos | active |
+| 34 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | not scored | 1 repos | active |
+| 35 | [AI Act Readiness](https://tashan.sh/capability/skill-alirezarezvani-ai-act-readiness.html) | not scored | 1 repos | active |
+| 36 | [Aims Audit](https://tashan.sh/capability/skill-alirezarezvani-aims-audit.html) | not scored | 1 repos | active |
+| 37 | [Compliance OS](https://tashan.sh/capability/skill-alirezarezvani-compliance-os.html) | not scored | 1 repos | active |
+| 38 | [Compliance Readiness](https://tashan.sh/capability/skill-alirezarezvani-compliance-readiness.html) | not scored | 1 repos | active |
+| 39 | [Fda Qsr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-fda-qsr-audit-prep.html) | not scored | 1 repos | active |
+| 40 | [Gdpr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-gdpr-audit-prep.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 116. The full ranked shelf is at https://tashan.sh/role/legal.html.
+Showing the top 40 of 118. The full ranked shelf is at https://tashan.sh/role/legal.html.
 
 ## What these numbers are not
 

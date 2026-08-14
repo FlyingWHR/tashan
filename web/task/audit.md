@@ -12,19 +12,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Sofagent](https://tashan.sh/capability/pkg-sofagent-mcp.html) | 67 | 815/wk | active |
-| 2 | [Vendor Management](https://tashan.sh/capability/skill-alirezarezvani-vendor-management.html) | 48 | 2 repos | active |
-| 3 | [Aims Audit](https://tashan.sh/capability/skill-alirezarezvani-aims-audit.html) | 48 | 2 repos | active |
-| 4 | [Compliance Readiness](https://tashan.sh/capability/skill-alirezarezvani-compliance-readiness.html) | 48 | 2 repos | active |
-| 5 | [Fda Qsr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-fda-qsr-audit-prep.html) | 48 | 2 repos | active |
-| 6 | [Gdpr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-gdpr-audit-prep.html) | 48 | 2 repos | active |
-| 7 | [Soc2 Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-soc2-audit-prep.html) | 48 | 2 repos | active |
-| 8 | [Capa Officer](https://tashan.sh/capability/skill-alirezarezvani-capa-officer.html) | 48 | 2 repos | active |
-| 9 | [Isms Audit Expert](https://tashan.sh/capability/skill-alirezarezvani-isms-audit-expert.html) | 48 | 2 repos | active |
-| 10 | [Qms Audit Expert](https://tashan.sh/capability/skill-alirezarezvani-qms-audit-expert.html) | 48 | 2 repos | active |
-| 11 | [Quality Manager Qms Iso13485](https://tashan.sh/capability/skill-alirezarezvani-quality-manager-qms-iso13485.html) | 48 | 2 repos | active |
-| 12 | [Compliance OS](https://tashan.sh/capability/skill-alirezarezvani-compliance-os.html) | not scored | 1 repos | active |
-| 13 | [Iso13485 Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-iso13485-audit-prep.html) | not scored | 1 repos | active |
-| 14 | [Iso27001 Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-iso27001-audit-prep.html) | not scored | 1 repos | active |
+| 2 | [Vendor Management](https://tashan.sh/capability/skill-alirezarezvani-vendor-management.html) | not scored | 1 repos | active |
+| 3 | [Aims Audit](https://tashan.sh/capability/skill-alirezarezvani-aims-audit.html) | not scored | 1 repos | active |
+| 4 | [Compliance OS](https://tashan.sh/capability/skill-alirezarezvani-compliance-os.html) | not scored | 1 repos | active |
+| 5 | [Compliance Readiness](https://tashan.sh/capability/skill-alirezarezvani-compliance-readiness.html) | not scored | 1 repos | active |
+| 6 | [Fda Qsr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-fda-qsr-audit-prep.html) | not scored | 1 repos | active |
+| 7 | [Gdpr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-gdpr-audit-prep.html) | not scored | 1 repos | active |
+| 8 | [Iso13485 Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-iso13485-audit-prep.html) | not scored | 1 repos | active |
+| 9 | [Iso27001 Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-iso27001-audit-prep.html) | not scored | 1 repos | active |
+| 10 | [Soc2 Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-soc2-audit-prep.html) | not scored | 1 repos | active |
+| 11 | [Capa Officer](https://tashan.sh/capability/skill-alirezarezvani-capa-officer.html) | not scored | 1 repos | active |
+| 12 | [Isms Audit Expert](https://tashan.sh/capability/skill-alirezarezvani-isms-audit-expert.html) | not scored | 1 repos | active |
+| 13 | [Qms Audit Expert](https://tashan.sh/capability/skill-alirezarezvani-qms-audit-expert.html) | not scored | 1 repos | active |
+| 14 | [Quality Manager Qms Iso13485](https://tashan.sh/capability/skill-alirezarezvani-quality-manager-qms-iso13485.html) | not scored | 1 repos | active |
 | 15 | [Ra Qm Skills](https://tashan.sh/capability/skill-alirezarezvani-ra-qm-skills.html) | not scored | 1 repos | active |
 | 16 | [Soc2 Compliance](https://tashan.sh/capability/skill-alirezarezvani-soc2-compliance.html) | not scored | 1 repos | active |
 | 17 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 67 | 572/wk | active |
@@ -46,8 +46,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 53 | 131/wk | active |
 | 34 | [Site Doctor](https://tashan.sh/capability/pkg-site-doctor.html) | 44 | 27/wk | active |
 | 35 | [A11y](https://tashan.sh/capability/pkg-a11y-mcp.html) | 40 | 360/wk | active |
-| 36 | [Email Deliverability Expert](https://tashan.sh/capability/plugin-sendx-email-skills-email-deliverability-expert.html) | 38 | 1 marketplaces | active |
-| 37 | [Taplid](https://tashan.sh/capability/pkg-taplid-mcp.html) | 59 | 225/wk | active |
+| 36 | [Vies](https://tashan.sh/capability/pkg-vies-mcp.html) | 39 | 12/wk | active |
+| 37 | [Email Deliverability Expert](https://tashan.sh/capability/plugin-sendx-email-skills-email-deliverability-expert.html) | 38 | 1 marketplaces | active |
+| 38 | [Taplid](https://tashan.sh/capability/pkg-taplid-mcp.html) | 59 | 225/wk | active |
 
 ## What these numbers are not
 

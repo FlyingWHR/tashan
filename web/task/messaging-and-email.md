@@ -14,16 +14,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Agentmail](https://tashan.sh/capability/pkg-agentmail-mcp.html) | 75 | 3k/wk | active |
 | 2 | [Discord](https://tashan.sh/capability/pkg-discord-mcp-cli.html) | 70 | 3k/wk | active |
 | 3 | [Feishu](https://tashan.sh/capability/pkg-feishu-mcp.html) | 52 | 4k/wk | active |
-| 4 | [Google Workspace CLI](https://tashan.sh/capability/skill-alirezarezvani-google-workspace-cli.html) | 48 | 2 repos | active |
-| 5 | [Ms365 Tenant Manager](https://tashan.sh/capability/skill-alirezarezvani-ms365-tenant-manager.html) | 48 | 2 repos | active |
-| 6 | [Inbox Triage](https://tashan.sh/capability/skill-alirezarezvani-inbox-triage.html) | 48 | 2 repos | active |
-| 7 | [Lark](https://tashan.sh/capability/pkg-larksuiteoapi-lark-mcp.html) | 47 | 9k/wk | abandoned |
-| 8 | [Discord · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-discord.html) | 42 | 1 marketplaces | — |
-| 9 | [Imessage · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-imessage.html) | 42 | 1 marketplaces | — |
-| 10 | [Google Workspace · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-google-workspace-mcp-google-workspace-mcp.html) | 42 | 1 ★ | active |
-| 11 | [Gws Connector](https://tashan.sh/capability/plugin-orieg-gws-connector-gws-connector.html) | 42 | 1 ★ | active |
-| 12 | [Local · lanchuske](https://tashan.sh/capability/plugin-lanchuske-local-mcp-claude-plugin-local-mcp.html) | 42 | 1 ★ | active |
-| 13 | [Inbox Setup](https://tashan.sh/capability/skill-alirezarezvani-inbox-setup.html) | not scored | 1 repos | active |
+| 4 | [Lark](https://tashan.sh/capability/pkg-larksuiteoapi-lark-mcp.html) | 47 | 9k/wk | abandoned |
+| 5 | [Discord · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-discord.html) | 42 | 1 marketplaces | — |
+| 6 | [Imessage · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-imessage.html) | 42 | 1 marketplaces | — |
+| 7 | [Google Workspace · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-google-workspace-mcp-google-workspace-mcp.html) | 42 | 1 ★ | active |
+| 8 | [Gws Connector](https://tashan.sh/capability/plugin-orieg-gws-connector-gws-connector.html) | 42 | 1 ★ | active |
+| 9 | [Local · lanchuske](https://tashan.sh/capability/plugin-lanchuske-local-mcp-claude-plugin-local-mcp.html) | 42 | 1 ★ | active |
+| 10 | [Google Workspace CLI](https://tashan.sh/capability/skill-alirezarezvani-google-workspace-cli.html) | not scored | 1 repos | active |
+| 11 | [Ms365 Tenant Manager](https://tashan.sh/capability/skill-alirezarezvani-ms365-tenant-manager.html) | not scored | 1 repos | active |
+| 12 | [Inbox Setup](https://tashan.sh/capability/skill-alirezarezvani-inbox-setup.html) | not scored | 1 repos | active |
+| 13 | [Inbox Triage](https://tashan.sh/capability/skill-alirezarezvani-inbox-triage.html) | not scored | 1 repos | active |
 | 14 | [Slack · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-slack.html) | not scored | 98k/wk | abandoned |
 | 15 | [Apple Mail](https://tashan.sh/capability/pkg-apple-mail-mcp.html) | 70 | 3k/wk | active |
 | 16 | [Shipmail](https://tashan.sh/capability/pkg-shipmail-mcp.html) | 69 | 2k/wk | active |
