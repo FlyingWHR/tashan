@@ -1,19 +1,22 @@
 /* /welcome — the first screen after paying.
  *
- * WHY THIS IS NOT AUTO-SIGN-IN. Polar's success_url does carry `?checkout_id={CHECKOUT_ID}`, so we
- * know WHICH checkout just completed. Turning that into a licence key requires
- * customer-portal/license-keys/list, which requires a customer session, which is created by a
- * server-side endpoint that requires the ORGANISATION access token. That token can read every
- * customer's record. Holding it in an edge function, on a path keyed only by an id that travels in
- * URLs, browser history and Referer headers, is a materially larger trust surface than this product
- * has ever asked for — wrangler.toml says plainly that the org token is deliberately absent.
+ * AUTO SIGN-IN, WHEN POLAR SENDS US THE ID. This comment used to say the organisation token was
+ * "deliberately absent" and that pasting a key was therefore the design. Both halves are now stale:
+ * functions/api/checkout.js exists, POLAR_ORG_TOKEN is set on the Pages project, and the exchange
+ * works. What was never done is the one-line change in Polar — the checkout links' success_url is
+ * still a bare `https://tashan.sh/welcome.html`, with no id on it, so /api/checkout is never
+ * reached and every customer is asked to paste a key. Two half-finished states coexisting, and the
+ * finished one unreachable.
  *
- * So: one paste, once, in a browser, where paste is one keystroke and a password manager often does
- * it unprompted. Every machine after this one is a click, because /activate approves device codes
- * against this session. The customer types their key at most once in their life either way; this
- * decides only whether that once happens here or on the first machine.
+ * Polar substitutes {CHECKOUT_ID} ONLY into a parameter you write yourself; it appends nothing on
+ * its own. So this page now handles the id if it ever arrives here, and /api/checkout handles it if
+ * Polar is pointed straight there. Either success_url works:
  *
- * If the org token is ever added, this page becomes a redirect and nothing else changes.
+ *     https://tashan.sh/api/checkout?id={CHECKOUT_ID}        <- preferred, no page renders first
+ *     https://tashan.sh/welcome.html?checkout_id={CHECKOUT_ID}
+ *
+ * The paste form stays as the fallback, because a customer whose exchange fails — Polar down, id
+ * already burned, JS off — must never be stranded on the screen they just paid to see.
  *
  * Two states, never guessed. An unreachable API renders SIGNED OUT — never an optimistic "you're in".
  */
@@ -22,6 +25,19 @@
 
   var host = document.getElementById("welcome");
   if (!host) return;
+
+  // If Polar sent the checkout id here, hand it to the endpoint that can exchange it. Done before
+  // anything renders, so the customer sees the signed-in page rather than a form they do not need.
+  // ONE ATTEMPT, and never a loop: /api/checkout burns the id, so a retry can only ever fail, and a
+  // page that keeps redirecting is worse than one that asks for a paste.
+  try {
+    var q = new URLSearchParams(location.search);
+    var cid = q.get("checkout_id") || q.get("id");
+    if (cid && !q.get("e")) {
+      location.replace("/api/checkout?id=" + encodeURIComponent(cid));
+      return;
+    }
+  } catch (e) { /* no URLSearchParams, or an opaque URL: fall through to the paste form */ }
 
   var esc = function (s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {

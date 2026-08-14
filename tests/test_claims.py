@@ -157,6 +157,25 @@ ok(f"pricing advertises one cadence per live checkout link ({len(by_url)} link, 
    len(prices) <= len(by_url), f"{sorted(prices)} advertised, {len(by_url)} checkout link(s)")
 
 print()
+print("# the post-purchase hand-off must be reachable")
+# THE BUG THIS EXISTS FOR. functions/api/checkout.js exchanges a checkout id for a session, and
+# POLAR_ORG_TOKEN is set on the Pages project — the auto sign-in was built and deployed. But the
+# Polar checkout links' success_url is a bare https://tashan.sh/welcome.html with no id on it, so
+# that endpoint is never reached and every paying customer is asked to paste a licence key. Polar
+# substitutes {CHECKOUT_ID} only into a parameter you write yourself; it appends nothing.
+# We cannot assert Polar's configuration from here. We CAN assert that our half stays able to
+# receive the id, so the moment success_url is fixed the flow works.
+_w = open(os.path.join(WEB, "js", "welcome.js"), encoding="utf-8").read()
+ok("welcome.js exchanges a checkout id if one arrives",
+   "checkout_id" in _w and "/api/checkout?id=" in _w,
+   "without this, pointing success_url at /welcome.html?checkout_id=… silently does nothing")
+ok("...and still falls back to the paste form rather than stranding anyone",
+   "location.replace" in _w and "key" in _w.lower())
+_c = open(os.path.join(ROOT, "functions", "api", "checkout.js"), encoding="utf-8").read()
+ok("the /api/checkout hand-off still exists to be pointed at",
+   "export async function onRequest" in _c)
+
+print()
 print("# do not document an endpoint that does not exist")
 # We have shipped docs for an unpublished CLI command before, which is the check directly below
 # this one. The agent-facing endpoints are the same hazard with a worse failure: an agent that POSTs
