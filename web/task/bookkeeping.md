@@ -48,9 +48,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Pulsefeed X402](https://tashan.sh/capability/pkg-pulsefeed-x402-mcp.html) | 64 | 955/wk | active |
 | 36 | [Denpyo](https://tashan.sh/capability/pkg-denpyo-mcp.html) | 44 | 33/wk | active |
 | 37 | [Kaisha](https://tashan.sh/capability/pkg-kaisha-mcp.html) | 43 | 19/wk | active |
-| 38 | [Rapay](https://tashan.sh/capability/pkg-rapay-mcp-server.html) | 34 | 87/wk | active |
-| 39 | [Fortnox](https://tashan.sh/capability/pkg-fortnox-mcp-server.html) | 33 | 44/wk | active |
-| 40 | [Nory](https://tashan.sh/capability/pkg-nory-mcp-server.html) | 32 | 92/wk | abandoned |
+| 38 | [Fortnox](https://tashan.sh/capability/pkg-fortnox-mcp-server.html) | 33 | 44/wk | active |
+| 39 | [Nory](https://tashan.sh/capability/pkg-nory-mcp-server.html) | 32 | 92/wk | abandoned |
+| 40 | [Rapay](https://tashan.sh/capability/pkg-rapay-mcp-server.html) | not scored | 87/wk | active |
 
 Showing the top 40 of 45. The full ranked shelf is at https://tashan.sh/task/bookkeeping.html.
 

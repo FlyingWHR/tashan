@@ -36,20 +36,20 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 23 | [Loki Mode](https://tashan.sh/capability/pkg-loki-mode.html) | 76 | 24k/wk | active |
 | 24 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 74 | 3k ★ | active |
 | 25 | [Local RAG](https://tashan.sh/capability/pkg-mcp-local-rag.html) | 71 | 4k/wk | active |
-| 26 | [Prism](https://tashan.sh/capability/pkg-prism-mcp-server.html) | 69 | 2k/wk | active |
-| 27 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 69 | 1k/wk | active |
-| 28 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 68 | 594/wk | active |
-| 29 | [Grepmax](https://tashan.sh/capability/pkg-grepmax.html) | 67 | 573/wk | active |
-| 30 | [Basemind](https://tashan.sh/capability/pkg-basemind.html) | 64 | 451/wk | active |
-| 31 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 64 | 347/wk | active |
-| 32 | [Freshvault](https://tashan.sh/capability/pkg-freshvault.html) | 59 | 258/wk | active |
-| 33 | [Infino AI](https://tashan.sh/capability/pkg-infino-ai-mcp-server.html) | 57 | 180/wk | active |
-| 34 | [Ori Memory](https://tashan.sh/capability/pkg-ori-memory.html) | 57 | 154/wk | active |
-| 35 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 56 | 141/wk | active |
-| 36 | [Memory Graph](https://tashan.sh/capability/pkg-mcp-memory-graph.html) | 54 | 141/wk | active |
-| 37 | [Ainative Zerodb](https://tashan.sh/capability/pkg-ainative-zerodb-mcp-server.html) | 47 | 30/wk | active |
-| 38 | [Codedev](https://tashan.sh/capability/pkg-codedev-mcp.html) | 32 | 121/wk | abandoned |
-| 39 | [Melchizedek](https://tashan.sh/capability/pkg-melchizedek.html) | 32 | 49/wk | active |
+| 26 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 69 | 1k/wk | active |
+| 27 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 68 | 594/wk | active |
+| 28 | [Grepmax](https://tashan.sh/capability/pkg-grepmax.html) | 67 | 573/wk | active |
+| 29 | [Basemind](https://tashan.sh/capability/pkg-basemind.html) | 64 | 451/wk | active |
+| 30 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 64 | 347/wk | active |
+| 31 | [Freshvault](https://tashan.sh/capability/pkg-freshvault.html) | 59 | 258/wk | active |
+| 32 | [Infino AI](https://tashan.sh/capability/pkg-infino-ai-mcp-server.html) | 57 | 180/wk | active |
+| 33 | [Ori Memory](https://tashan.sh/capability/pkg-ori-memory.html) | 57 | 154/wk | active |
+| 34 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 56 | 141/wk | active |
+| 35 | [Memory Graph](https://tashan.sh/capability/pkg-mcp-memory-graph.html) | 54 | 141/wk | active |
+| 36 | [Ainative Zerodb](https://tashan.sh/capability/pkg-ainative-zerodb-mcp-server.html) | 47 | 30/wk | active |
+| 37 | [Codedev](https://tashan.sh/capability/pkg-codedev-mcp.html) | 32 | 121/wk | abandoned |
+| 38 | [Melchizedek](https://tashan.sh/capability/pkg-melchizedek.html) | 32 | 49/wk | active |
+| 39 | [Prism](https://tashan.sh/capability/pkg-prism-mcp-server.html) | not scored | 2k/wk | active |
 | 40 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
 
 Showing the top 40 of 83. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.

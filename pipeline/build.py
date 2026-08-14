@@ -2048,6 +2048,22 @@ def export(con):
         # already lives in compute_scores and a second copy would drift from it.
         c["discontinued"] = bool(c.get("self_unmaintained") or c.get("npm_deprecated")
                                  or c.get("registry_status") == "deprecated")
+        # AND THEN IT CANNOT CARRY A SCORE, WHICHEVER STAGE RAN LAST. compute_scores already nulls
+        # the score for a discontinued row — eligibility overrides score, s4 — but npm enrichment can
+        # set npm_deprecated AFTER scoring in the same run, and the score then survives until the
+        # next scoring pass. Three rows were in exactly that state: prism-mcp-server holding 69 with
+        # registry_status='deprecated'. The rule is a promise about the artifact, so it is enforced
+        # where the artifact is written rather than only where the number is computed.
+        if c["discontinued"] and c.get("tashan_score") is not None:
+            c["tashan_score"] = None
+            # `rated` is set a few lines above from the score, so it has to move with it or the row
+            # claims to be rated while carrying no number — which is exactly the disagreement
+            # tests/test_consistency.py exists to catch, and did.
+            c["rated"] = False
+            c.setdefault("rating_basis",
+                         "Not rated: its author, npm or the registry has declared it discontinued. "
+                         "Eligibility overrides score — a capability that says not to use it is not "
+                         "ranked, rather than ranked low.")
         # Every exported row must land in a category — the hubs are built by grouping on it, so an
         # uncategorised row is a page nothing links to. Discontinued rows can arrive without one
         # because classify.py only ever ran over scored capabilities, and these lost their score.

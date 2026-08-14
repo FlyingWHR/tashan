@@ -380,7 +380,6 @@
   <url><loc>https://tashan.sh/capability/pkg-letoribo-mcp-graphql-enhanced</loc><lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-accessibility-scanner</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-memorix</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-prism-mcp-server</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-openephemeris-mcp-server</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-elberacasa-umbra</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-modellix-agent-canvas</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq></url>
@@ -4624,7 +4623,6 @@
   <url><loc>https://tashan.sh/capability/pkg-tradingview-mcp-server</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-fhirfly-io-mcp-server</loc><lastmod>2026-03-25</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-langfuse-mcp</loc><lastmod>2026-05-04</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-forgespace-branding-mcp</loc><lastmod>2026-04-07</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-agentx402-mcp-server</loc><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-manycontacts-mcp</loc><lastmod>2026-04-15</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-ssemble-mcp-server</loc><lastmod>2026-04-13</lastmod><changefreq>weekly</changefreq></url>
@@ -5838,7 +5836,6 @@
   <url><loc>https://tashan.sh/capability/pkg-cryptoapis-io-mcp-utils</loc><lastmod>2026-03-13</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-amitgurbani-mcp-server-woocommerce</loc><lastmod>2026-03-12</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-s2t-mcp-accelerators</loc><lastmod>2026-02-21</lastmod><changefreq>weekly</changefreq></url>
-  <url><loc>https://tashan.sh/capability/pkg-rapay-mcp-server</loc><lastmod>2026-02-24</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-kultur-dev-mcp-server</loc><lastmod>2026-04-03</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-verygoodplugins-mcp-evernote</loc><lastmod>2026-08-12</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-logclaw-mcp-server</loc><lastmod>2026-03-11</lastmod><changefreq>weekly</changefreq></url>
@@ -8533,6 +8530,7 @@
   <url><loc>https://tashan.sh/capability/plugin-duylam-claude-code-engineering-assembly-work-journal</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-kimtaeyoon83-mcp-server-youtube-transcript</loc><lastmod>2024-11-29</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-mcp-server-apple-shortcuts</loc><lastmod>2024-12-22</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/pkg-prism-mcp-server</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-alirezarezvani-reflect</loc><lastmod>2026-07-17</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-anthropics-example-skill</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-alirezarezvani-migrate</loc><lastmod>2026-07-17</lastmod><changefreq>weekly</changefreq></url>
@@ -9924,6 +9922,7 @@
   <url><loc>https://tashan.sh/capability/skill-garethmanning-self-efficacy-builder-sequence</loc><lastmod>2026-07-15</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-garethmanning-trauma-informed-practice-designer</loc><lastmod>2026-07-15</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-garethmanning-wellbeing-learning-connection-mapper</loc><lastmod>2026-07-15</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/pkg-forgespace-branding-mcp</loc><lastmod>2026-04-07</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-appsvortex-arn-assessing</loc><lastmod>2026-07-05</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-appsvortex-arn-code-assess</loc><lastmod>2026-07-05</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-appsvortex-arn-code-batch-cve-fix</loc><lastmod>2026-07-05</lastmod><changefreq>weekly</changefreq></url>
@@ -10282,6 +10281,7 @@
   <url><loc>https://tashan.sh/capability/skill-normalight-route-activate</loc><lastmod>2026-05-15</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-normalight-show-routing</loc><lastmod>2026-05-15</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-normalight-task-route</loc><lastmod>2026-05-15</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://tashan.sh/capability/pkg-rapay-mcp-server</loc><lastmod>2026-02-24</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-varianter-create-plugin-skill</loc><lastmod>2026-06-19</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-varianter-create-skill-with-colocated-tool</loc><lastmod>2026-06-19</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/skill-varianter-create-skill-with-colocated-widget</loc><lastmod>2026-06-19</lastmod><changefreq>weekly</changefreq></url>

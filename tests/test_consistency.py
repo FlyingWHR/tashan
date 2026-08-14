@@ -626,6 +626,22 @@ ok("capability.js carries the same caption, so the client re-render does not dro
    "the client replaces <main>; without this the caption survives only until JS runs")
 
 print()
+print("# a capability declared over carries no score, in the artifact")
+# compute_scores nulls the score for a discontinued row — eligibility overrides score — but npm
+# enrichment can set npm_deprecated AFTER scoring in the same run, and the score then survives to
+# the export. Three rows were in that state, prism-mcp-server holding 69 with a 'deprecated'
+# registry status. The rule is a promise about what we publish, so it is asserted on what we publish.
+_scored_over = [c["id"] for c in TRUTH.values()
+                if c.get("tashan_score") is not None and c.get("discontinued")]
+ok("no discontinued capability carries a tashan score",
+   not _scored_over, f"{len(_scored_over)} e.g. {_scored_over[:3]}")
+# ...and the corollary a reader depends on: `rated` must agree with the score being present.
+_rated_bad = [c["id"] for c in TRUTH.values()
+              if bool(c.get("rated")) != (c.get("tashan_score") is not None)]
+ok("`rated` agrees with whether a score is present", not _rated_bad,
+   f"{len(_rated_bad)} e.g. {_rated_bad[:3]}")
+
+print()
 print("# the SKILL.md block survives hydration")
 # prerender renders it and capability.js REPLACES <main>, so a block only one of them knows about
 # exists for crawlers and vanishes for every human. These two files have drifted five times; this

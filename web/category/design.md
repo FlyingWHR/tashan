@@ -36,21 +36,21 @@ Ranked by the tashan score
 | 23 | [Tokportal](https://tashan.sh/capability/pkg-tokportal-mcp.html) | 69 | 2k/wk | active |
 | 24 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
 | 25 | [Figma · planetabhi](https://tashan.sh/capability/pkg-figma-mcp-server.html) | 69 | 2k/wk | active |
-| 26 | [Prism](https://tashan.sh/capability/pkg-prism-mcp-server.html) | 69 | 2k/wk | active |
-| 27 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 69 | 2k/wk | active |
-| 28 | [Figma Relai](https://tashan.sh/capability/pkg-figma-relai.html) | 69 | 2k/wk | active |
-| 29 | [Memi Design](https://tashan.sh/capability/pkg-memi-design-cli.html) | 69 | 1k/wk | active |
-| 30 | [Codefizz Editor Agent](https://tashan.sh/capability/pkg-codefizz-editor-agent.html) | 69 | 1k/wk | active |
-| 31 | [Customize Agent](https://tashan.sh/capability/pkg-customize-agent.html) | 69 | 1k/wk | active |
-| 32 | [Runline](https://tashan.sh/capability/pkg-runline.html) | 69 | 1k/wk | active |
-| 33 | [Frontmcp](https://tashan.sh/capability/pkg-frontmcp.html) | 69 | 1k/wk | active |
-| 34 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
-| 35 | [Myoperator](https://tashan.sh/capability/pkg-myoperator-mcp.html) | 69 | 506/wk | active |
-| 36 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 69 | 305/wk | active |
-| 37 | [Medusa Dev](https://tashan.sh/capability/plugin-medusajs-medusa-claude-plugins-medusa-dev.html) | 68 | 202 ★ | active |
-| 38 | [Vendo](https://tashan.sh/capability/plugin-runvendo-vendo-vendo.html) | 68 | 381 ★ | active |
-| 39 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 68 | 1k/wk | active |
-| 40 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 68 | 1k/wk | active |
+| 26 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 69 | 2k/wk | active |
+| 27 | [Figma Relai](https://tashan.sh/capability/pkg-figma-relai.html) | 69 | 2k/wk | active |
+| 28 | [Memi Design](https://tashan.sh/capability/pkg-memi-design-cli.html) | 69 | 1k/wk | active |
+| 29 | [Codefizz Editor Agent](https://tashan.sh/capability/pkg-codefizz-editor-agent.html) | 69 | 1k/wk | active |
+| 30 | [Customize Agent](https://tashan.sh/capability/pkg-customize-agent.html) | 69 | 1k/wk | active |
+| 31 | [Runline](https://tashan.sh/capability/pkg-runline.html) | 69 | 1k/wk | active |
+| 32 | [Frontmcp](https://tashan.sh/capability/pkg-frontmcp.html) | 69 | 1k/wk | active |
+| 33 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
+| 34 | [Myoperator](https://tashan.sh/capability/pkg-myoperator-mcp.html) | 69 | 506/wk | active |
+| 35 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 69 | 305/wk | active |
+| 36 | [Medusa Dev](https://tashan.sh/capability/plugin-medusajs-medusa-claude-plugins-medusa-dev.html) | 68 | 202 ★ | active |
+| 37 | [Vendo](https://tashan.sh/capability/plugin-runvendo-vendo-vendo.html) | 68 | 381 ★ | active |
+| 38 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 68 | 1k/wk | active |
+| 39 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 68 | 1k/wk | active |
+| 40 | [Elements](https://tashan.sh/capability/pkg-nvidia-elements-cli.html) | 68 | 436/wk | active |
 
 Showing the top 40 of 1,036. The full ranked shelf is at https://tashan.sh/category/design.html.
 
