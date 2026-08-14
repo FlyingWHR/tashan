@@ -31,7 +31,7 @@ state, by construction), a full registry re-walk instead of an incremental one, 
 of `capability_text`. Each of those is a bad night, not a lost record. That is exactly why the
 series is sharded as text and the cache is not.
 """
-import gzip
+import json, gzip
 import shutil
 import os, re, subprocess, sqlite3, sys
 import time

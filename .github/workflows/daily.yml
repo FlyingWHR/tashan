@@ -143,7 +143,28 @@ jobs:
             echo "no change today"
           else
             git commit -m "$MSG"
-            git push
+            # REBASE AND RETRY, because the day's retention shard is un-backfillable and a plain
+            # race must not cost it. This run takes about forty minutes; anyone pushing inside that
+            # window makes the bot's push non-fast-forward and it died with
+            # "! [rejected] main -> main (fetch first)", losing the shard for that day. It happened
+            # on 14 Aug and the only reason nothing was lost is that the next run re-derived it.
+            #
+            # Rebase is safe here specifically: this commit only ever adds data/history/*.csv.gz and
+            # regenerated web/ artifacts, so there is no shared file whose two versions need merging
+            # — a human's commit and the bot's touch different things, and the bot's is derived.
+            # Three attempts, not a loop: if it is still racing after three, something is pushing
+            # continuously and that is worth failing loudly about.
+            pushed=0
+            for attempt in 1 2 3; do
+              if git push; then pushed=1; break; fi
+              echo "push rejected (attempt $attempt) — rebasing onto origin/main and retrying"
+              git pull --rebase --autostash origin main || break
+            done
+            if [ "$pushed" != "1" ]; then
+              echo "::error::could not push the day's snapshot after 3 attempts — the retention"
+              echo "::error::shard for today is NOT committed and cannot be recreated later."
+              exit 1
+            fi
           fi
 
       # PUBLISH — only when the suite was green. Measuring nightly and publishing by hand meant the
