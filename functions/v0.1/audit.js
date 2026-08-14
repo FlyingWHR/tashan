@@ -96,8 +96,20 @@ function assess(r) {
   if (r.sec_remote_content) flags.push({ k: "remote-content",
     say: "can carry third-party text into the model's context" });
 
+  // NEVER SCANNED IS NOT THE SAME AS CLEAN. Skills and plugins are not security-scanned — a skill
+  // is a folder in a repository, there is no package version to query OSV about — so they arrived
+  // here with zero flags and a `keep`, rendering identically to chrome-devtools-mcp, which HAS been
+  // scanned and genuinely is clean. That is the one thing this project says on every other surface:
+  // absence means unmeasured, never safe. An agent acting on "keep" would have been told we checked.
+  const scanned = Boolean(r.sec_scanned_at);
+  if (!scanned) {
+    flags.push({ k: "unscanned",
+      say: "no security scan has been run on this — advisories, install scripts and permission "
+         + "surface are unknown, not clean" });
+  }
   const stop = flags.some(f => ["advisory", "deprecated", "delisted"].includes(f.k));
-  const look = flags.length > 0;
+  // "unscanned" alone must not read as a problem we found, so it does not count toward `review`.
+  const look = flags.some(f => f.k !== "unscanned");
   return {
     id: r.id, name: r.name, label: r.label,
     tashan_score: r.tashan_score ?? null,
@@ -105,7 +117,9 @@ function assess(r) {
     vitality: r.vitality || null,
     expertise: r.expertise_verdict || null,
     flags,
-    verdict: stop ? "replace" : look ? "review" : "keep",
+    scanned,
+    // `keep` is a claim that we looked and found nothing. Only a scanned row can earn it.
+    verdict: stop ? "replace" : look ? "review" : scanned ? "keep" : "unknown",
     // NO SLUG MEANS NO PAGE, AND A URL THAT 404s IS WORSE THAN NO URL. Rows that junk() keeps out of
     // the board survive in lookup.json for exactly one reason — so `doctor` and this endpoint can
     // still warn somebody already running one — and they have no dossier. mcp-server-fetch, a
@@ -195,6 +209,7 @@ export async function onRequestPost({ request, env, next }) {
       replace: audited.filter(a => a.verdict === "replace").length,
       review: audited.filter(a => a.verdict === "review").length,
       keep: audited.filter(a => a.verdict === "keep").length,
+      unknown: audited.filter(a => a.verdict === "unknown").length,
       unmeasured: unmeasured.length,
     },
     generated_at: data.generated_at,

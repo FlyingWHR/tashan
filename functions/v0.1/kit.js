@@ -74,6 +74,22 @@ const CLIENTS = {
   windsurf: { file: "~/.codeium/windsurf/mcp_config.json", key: "mcpServers" },
 };
 
+/** Where the caller can get it — the author's own home, never our page. */
+function sourceOf(r) {
+  if (r.npm_pkg) return "https://www.npmjs.com/package/" + r.npm_pkg;
+  if (r.source_repo) return "https://github.com/" + r.source_repo;
+  return null;
+}
+
+/** What kind of install this is. `mcp-server` is the only one an mcpServers config can express. */
+function installVia(r) {
+  if (r.npm_pkg) return "mcp-server";
+  if (r.remote_host) return "remote";
+  if (r.id.startsWith("plugin:")) return "claude-plugin";
+  if (r.id.startsWith("skill:")) return "agent-skill";
+  return "unknown";
+}
+
 /** Why this one, in the caller's terms — assembled from the row's own measured columns. */
 function because(r) {
   const w = [];
@@ -169,7 +185,14 @@ export async function onRequestPost({ request, env }) {
       tasks: "https://tashan.sh/data/tags.json",
     }, 400);
   }
-  const client = CLIENTS[String((body && body.client) || "claude-code")] ? body.client : "claude-code";
+  // THE DEFAULT HAD TO BE THE ASSIGNED VALUE, NOT JUST THE TESTED ONE. This read
+  //     CLIENTS[String(body.client || "claude-code")] ? body.client : "claude-code"
+  // so with no `client` in the body the lookup succeeded on the fallback string and then assigned
+  // `body.client` — undefined. Every later read of CLIENTS[client] was undefined, and assemble()
+  // threw on `c.file`. It could only ever surface on the PAID path, because the free and 402 paths
+  // never assemble, so the first customer to actually pay would have got a 500.
+  const asked = String((body && body.client) || "");
+  const client = CLIENTS[asked] ? asked : "claude-code";
   const limit = Math.min(Math.max(parseInt(body && body.limit, 10) || 5, 1), MAX_PICKS);
 
   const origin = new URL(request.url).origin;
@@ -217,7 +240,11 @@ export async function onRequestPost({ request, env }) {
       expertise: r.expertise_verdict || null,
       because: because(r),
       risks: risksOf(r),
-      source: r.npm_pkg ? "https://www.npmjs.com/package/" + r.npm_pkg : null,
+      source: sourceOf(r),
+      // HOW IT IS INSTALLED, because not everything on a shelf goes in an mcpServers block. A
+      // plugin is added through a marketplace and a skill is a folder you drop in — neither is a
+      // command a host can launch — so a config assembled from them would be silently short.
+      install_via: installVia(r),
       ...(r.slug ? { measurement: origin + "/capability/" + r.slug + ".html" } : {}),
     })),
     // NAMED, NOT HIDDEN. What we left out and why is the most useful half of a recommendation, and
@@ -249,6 +276,17 @@ export async function onRequestPost({ request, env }) {
       ...free,
       kit: {
         client,
+        // EVERY PICK IS ACCOUNTED FOR. The config can only express servers, so the rest are listed
+        // here with how they are actually installed. Returning a five-row shortlist and a two-row
+        // config without saying why is the kind of silent shortfall a paid artifact cannot have.
+        not_in_config: picks.filter((r) => installVia(r) !== "mcp-server").map((r) => ({
+          id: r.id, name: r.name, install_via: installVia(r), source: sourceOf(r),
+          say: installVia(r) === "claude-plugin"
+            ? "A Claude Code plugin — added from its marketplace, not an mcpServers entry."
+            : installVia(r) === "agent-skill"
+              ? "An agent skill — a folder you place in .claude/skills/, not an mcpServers entry."
+              : "Served over HTTP — connect to the host below rather than launching a command.",
+        })),
         // The pin is the point. "latest" resolves to whatever ships tomorrow, and the advisory scan
         // that cleared this package ran against THIS version — so an unpinned config is an
         // unverified one, and the verification is what was paid for.

@@ -16,16 +16,24 @@ const LOOKUP = {
   generated_at: "2026-08-14T00:00:00Z",
   scorer: "s5",
   keys: { "good-mcp": 0, "pkg:good-mcp": 0, "sick-mcp": 1, "pkg:sick-mcp": 1, "old-mcp": 2, "pkg:old-mcp": 2,
-         "canary-mcp": 3, "pkg:canary-mcp": 3 },
+         "canary-mcp": 3, "pkg:canary-mcp": 3,
+         "helper": 4, "skill:acme/helper": 4 },
   records: [
     { id: "pkg:good-mcp", name: "good-mcp", label: "Good", slug: "pkg-good-mcp", tashan_score: 91,
-      vitality: "active", rated: true, sec_advisory_count: 0 },
+      vitality: "active", rated: true, sec_advisory_count: 0,
+      sec_scanned_at: "2026-08-13T00:00:00Z" },
     { id: "pkg:sick-mcp", name: "sick-mcp", label: "Sick", slug: "pkg-sick-mcp", tashan_score: 40,
-      vitality: "active", rated: true, sec_advisory_count: 2, single_maintainer: 1 },
+      vitality: "active", rated: true, sec_advisory_count: 2, single_maintainer: 1,
+      sec_scanned_at: "2026-08-13T00:00:00Z" },
     { id: "pkg:old-mcp", name: "old-mcp", label: "Old", slug: "pkg-old-mcp", tashan_score: 55,
-      vitality: "dormant", rated: true, npm_deprecated: 1, gh_archived: 1 },
+      vitality: "dormant", rated: true, npm_deprecated: 1, gh_archived: 1,
+      sec_scanned_at: "2026-08-13T00:00:00Z" },
     // A row junk() keeps OFF the board: it survives in lookup.json only to warn, and has no slug.
-    { id: "pkg:canary-mcp", name: "canary-mcp", tashan_score: null, sec_advisory_count: 1 },
+    { id: "pkg:canary-mcp", name: "canary-mcp", tashan_score: null, sec_advisory_count: 1,
+      sec_scanned_at: "2026-08-13T00:00:00Z" },
+    // Never security-scanned: a skill is a folder, there is no version to query OSV about.
+    { id: "skill:acme/helper", name: "helper", label: "Helper", slug: "skill-acme-helper",
+      tashan_score: 63, rated: true, vitality: "active" },
   ],
 };
 
@@ -94,6 +102,25 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
   ok("...and says why it is here at all", /only to warn/i.test(c.note || ""));
   ok("...while still carrying its advisory and its verdict",
      c.verdict === "replace" && c.flags.some(f => f.k === "advisory"));
+}
+
+// ---- never scanned is not the same as clean -------------------------------------------------------
+{
+  const { body } = await read(await post({ servers: ["good-mcp", "helper"] }));
+  const scanned = body.audited.find(a => a.id === "pkg:good-mcp");
+  const never = body.audited.find(a => a.id === "skill:acme/helper");
+  ok("a row that was never security-scanned does NOT get `keep`",
+     never.verdict === "unknown", never.verdict);
+  ok("...and says so as a flag, in words",
+     never.flags.some(f => f.k === "unscanned" && /unknown, not clean/.test(f.say)),
+     JSON.stringify(never.flags));
+  ok("...and carries scanned:false", never.scanned === false);
+  ok("`unscanned` alone is not counted as a problem we found — that would make every skill 'review'",
+     never.verdict !== "review");
+  ok("the summary counts unknown separately from keep",
+     body.summary.unknown === 1 && body.summary.keep === 1, JSON.stringify(body.summary));
+  ok("a genuinely scanned clean row still earns keep",
+     scanned.verdict === "keep" && scanned.scanned === true);
 }
 
 // ---- the paid half is not served without payment -------------------------------------------------

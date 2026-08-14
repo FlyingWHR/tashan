@@ -2212,7 +2212,12 @@ def export(con):
               "sec_advisory_count", "sec_max_severity", "sec_install_script", "sec_permissions",
               "sec_perm_n", "sec_provenance", "sec_remote_content", "sec_scanned_at",
               # the author's own "we stopped" sentence — doctor quotes it rather than asserting it
-              "self_unmaintained"]
+              "self_unmaintained",
+              # WHERE THE THING LIVES. Without this, /v0.1/kit could link an npm package to npmjs
+              # and had nowhere at all to point for a plugin or a skill — 60% of the picks on some
+              # jobs — while the response claimed every pick links to its own source. A plugin and a
+              # skill are folders in a repository; the repository IS the source.
+              "source_repo"]
     # DELISTED ROWS BELONG IN THE LOOKUP, and nowhere else. A capability the registry pulled for
     # spam/malware/illegal content has no score (compute_scores refuses it one), so it is correctly
     # absent from the board, the bulk export and every hub — we must never recommend it. But `doctor`

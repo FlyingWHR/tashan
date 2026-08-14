@@ -13,7 +13,8 @@ const ok = (name, cond, extra = "") => {
 };
 
 const TAGS = { generated_at: "2026-08-14", tasks: { "web-scraping": [
-  "pkg:good-a", "pkg:good-b", "pkg:sick", "pkg:dead", "pkg:remote" ] } };
+  "pkg:good-a", "plugin:acme/pack/thing", "skill:acme/helper", "pkg:good-b",
+  "pkg:sick", "pkg:dead", "pkg:remote" ] } };
 
 const rec = (o) => ({ rated: true, vitality: "active", ...o });
 const LOOKUP = {
@@ -31,6 +32,11 @@ const LOOKUP = {
     rec({ id: "pkg:remote", name: "remote", slug: "pkg-remote", tashan_score: 70,
           npm_pkg: "remote", npm_latest_version: "1.0.0", sec_advisory_count: 0,
           remote_host: "mcp.remote.example" }),
+    // A plugin and a skill: on a shelf, ranked, and NOT expressible as an mcpServers entry.
+    rec({ id: "plugin:acme/pack/thing", name: "thing", slug: "plugin-acme-pack-thing",
+          tashan_score: 88, source_repo: "acme/pack" }),
+    rec({ id: "skill:acme/helper", name: "helper", slug: "skill-acme-helper",
+          tashan_score: 82, source_repo: "acme/helper" }),
   ],
 };
 
@@ -71,14 +77,17 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
 // ---- the free shortlist ---------------------------------------------------------------------------
 {
   const { status, body } = await read(await post({ task: "web-scraping" }));
-  ok("no credential: 200 with a shortlist", status === 200 && body.shortlist.length === 3);
+  ok("no credential: 200 with a shortlist", status === 200 && body.shortlist.length === 5,
+     String(body.shortlist.length));
 
   const ids = body.shortlist.map((s) => s.id);
   ok("A CAPABILITY WITH A LIVE ADVISORY IS NEVER RECOMMENDED, even scoring highest",
      !ids.includes("pkg:sick"),
      "pkg:sick scores 97 — the highest in the set — and has 3 advisories");
   ok("...nor a deprecated and archived one", !ids.includes("pkg:dead"));
-  ok("the shortlist is ranked by score", body.shortlist[0].id === "pkg:good-a");
+  ok("the shortlist is ranked by score",
+     body.shortlist[0].id === "pkg:good-a" && body.shortlist[1].id === "plugin:acme/pack/thing",
+     body.shortlist.map((s) => s.id).join(","));
 
   ok("what was EXCLUDED is named, with the reason — that is a risk, so it is free",
      body.excluded.length === 2
@@ -89,8 +98,10 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
   ok("each pick says why, from its own measured columns",
      /scores 91/.test(body.shortlist[0].because) && /deep documentation/.test(body.shortlist[0].because),
      body.shortlist[0].because);
-  ok("each pick links to its own source, because we do not host it",
-     body.shortlist.every((s) => s.source && s.source.includes("npmjs.com")));
+  ok("EVERY pick links to its own source — npm for packages, the repo for plugins and skills",
+     body.shortlist.every((s) => s.source
+       && (s.source.includes("npmjs.com") || s.source.includes("github.com"))),
+     JSON.stringify(body.shortlist.map((s) => s.source)));
   ok("the licence line disclaims redistributing anyone's content",
      /do not redistribute/i.test(body.licence) && /own licence/i.test(body.licence));
   ok("no kit in the free response", body.kit === undefined);
@@ -104,7 +115,7 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
   ok("kit without a credential is 402", status === 402);
   ok("no kit in the refusal", body.kit === undefined);
   ok("THE FREE SHORTLIST AND THE EXCLUSIONS ARE STILL RETURNED with the 402",
-     body.free_result && body.free_result.shortlist.length === 3 && body.free_result.excluded.length === 2);
+     body.free_result && body.free_result.shortlist.length === 5 && body.free_result.excluded.length === 2);
   ok("unconfigured x402: no accepts, no header",
      body.accepts === undefined && !r.headers.get("payment-required"));
 }
@@ -134,7 +145,39 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
   ok("remote alternatives are surfaced where they exist",
      body.kit.remote_alternatives.some((x) => x.host === "mcp.remote.example"));
   ok("the free half is still present alongside the paid half",
-     body.shortlist.length === 3 && body.excluded.length === 2);
+     body.shortlist.length === 5 && body.excluded.length === 2);
+}
+
+// ---- not everything on a shelf is an mcpServers entry ---------------------------------------------
+// 60% of picks on some real jobs are plugins and skills. A plugin is added from a marketplace and a
+// skill is a folder you drop in — neither is a command a host can launch. Returning a five-row
+// shortlist and a two-row config without saying why is a silent shortfall in a paid artifact.
+{
+  const { body } = await read(await post({ task: "web-scraping", limit: 5 }));
+  const plug = body.shortlist.find((s) => s.id === "plugin:acme/pack/thing");
+  const skill = body.shortlist.find((s) => s.id === "skill:acme/helper");
+  ok("a plugin links to its own repository, not to nothing",
+     plug.source === "https://github.com/acme/pack", plug.source);
+  ok("a skill does too", skill.source === "https://github.com/acme/helper", skill.source);
+  ok("each pick says how it is installed",
+     plug.install_via === "claude-plugin" && skill.install_via === "agent-skill",
+     plug.install_via + "/" + skill.install_via);
+
+  const paid = await read(await post(
+    { task: "web-scraping", kit: true, limit: 5 },
+    { headers: { authorization: "Bearer real" }, env: { POLAR_ORG_ID: "org" },
+      stubLicence: { status: "granted" } }));
+  const k = paid.body.kit;
+  ok("the config contains ONLY things a host can launch",
+     Object.keys(k.config.mcpServers).every((n) => !/thing|helper/.test(n)),
+     JSON.stringify(Object.keys(k.config.mcpServers)));
+  ok("EVERY pick the config cannot express is listed, with how to install it instead",
+     k.not_in_config.length === 2
+     && k.not_in_config.every((x) => x.say && x.source),
+     JSON.stringify(k.not_in_config));
+  ok("...and the shortfall is explained in words, not left as arithmetic",
+     k.not_in_config.some((x) => /marketplace/.test(x.say))
+     && k.not_in_config.some((x) => /\.claude\/skills/.test(x.say)));
 }
 
 // ---- an agent speaks in sentences, not slugs ------------------------------------------------------
@@ -145,7 +188,7 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
   ok("a plain-language goal resolves to a job", body.task === "web-scraping", JSON.stringify(body.task));
   ok("...and says WHICH sentence it matched, so the caller can disagree",
      body.resolved_from === "I need to scrape websites for a client");
-  ok("...and still returns the shortlist", body.shortlist.length === 3);
+  ok("...and still returns the shortlist", body.shortlist.length === 5);
 
   const { body: b2 } = await read(await post({ goal: "query databases with sql" }));
   ok("a different goal resolves to a different job", b2.task === "database-access", b2.task);
@@ -157,6 +200,28 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
 
   const { body: b4 } = await read(await post({ task: "code-review", goal: "scrape websites" }));
   ok("an explicit task always beats a goal", b4.task === "code-review" && !b4.resolved_from);
+}
+
+// ---- the default client, which the paid path crashed on -------------------------------------------
+// CLIENTS[fallback] ? body.client : fallback — the guard tested the fallback and assigned the
+// ABSENT value, so `client` was undefined and assemble() threw on CLIENTS[undefined].file. Only the
+// paid path assembles, so this was invisible until someone paid.
+{
+  const { status, body } = await read(await post(
+    { task: "web-scraping", kit: true },                       // no `client`
+    { headers: { authorization: "Bearer real" }, env: { POLAR_ORG_ID: "org" },
+      stubLicence: { status: "granted" } }));
+  ok("a kit with no client defaults to claude-code instead of throwing",
+     status === 200 && body.kit.client === "claude-code", "status " + status);
+  ok("...and the config file path is the real one",
+     body.kit.config_file === "~/.claude.json", body.kit && body.kit.config_file);
+
+  const { body: b2 } = await read(await post(
+    { task: "web-scraping", kit: true, client: "nonsense-editor" },
+    { headers: { authorization: "Bearer real" }, env: { POLAR_ORG_ID: "org" },
+      stubLicence: { status: "granted" } }));
+  ok("an unknown client falls back rather than producing a config for nothing",
+     b2.kit.client === "claude-code", b2.kit && b2.kit.client);
 }
 
 // ---- shape ----------------------------------------------------------------------------------------
