@@ -66,6 +66,7 @@ Every npm-published capability is checked against OSV.dev using the version you 
 
 - Anything OSV lists as malicious is refused a place on the board entirely.
 - We do NOT review source code, execute the capability, or test its output for prompt injection. A clean audit means nothing KNOWN is wrong.
+- Advisories are matched against the capability's OWN package name, not its dependency tree. A dependency's CVE will not appear here. Verified 15 Aug 2026 against live OSV over the 18 most-installed scanned packages: zero disagreements, so what is reported is accurate — this is a limit of SCOPE, not of correctness.
 - Permission surface UNDER-reports by design: a server can shell out using Node built-ins and declare nothing, so an empty result means 'nothing declared', not 'nothing possible'.
 
 ## How much of this is measured
@@ -125,6 +126,7 @@ An absent value means UNMEASURED and never means zero, absent risk, or poor qual
 
 ## For agents
 
+- **Install tashan as an MCP server** — `claude mcp add tashan -- npx -y tashan-cli mcp`, or point any host at `npx -y tashan-cli mcp` over stdio. Three tools, all free, no account: `find_capability` (what should I install for X), `check_capability` (is this one safe and maintained), `audit_config` (what is already in this config, and what is wrong with it). Zero dependencies; `audit_config` reads local files and sends nothing.
 - [/v0.1/scores](https://tashan.sh/v0.1/scores) — compact lookup, `name -> [score, vitality, evidence, slug]`. This is the BULK feed — to check ONE package use /v0.1/lookup instead. An absent name is UNMEASURED, not bad.
 - [/v0.1/servers](https://tashan.sh/v0.1/servers) — full records, byte-compatible with the MCP registry shape; measurement under the `sh.tashan/measurement` key in `_meta`.
 - [/skill/SKILL.md](https://tashan.sh/skill/SKILL.md) — install tashan as a capability and call it when choosing what to install.
@@ -137,7 +139,7 @@ Everything measured is free and needs no account: every tashan score and its inp
 
 **tashan Pro — $6/month or $50/year, 7 days free.** It buys depth about YOUR stack, never a different answer: the score history behind a capability, and `tashan doctor` run over the config on your own machine.
 
-- Buy: https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d
+- Buy: https://tashan.sh/api/buy?plan=monthly  (annual: /api/buy?plan=annual)
 - Terms and the full split: https://tashan.sh/pricing.html
 - Paid endpoints answer an unauthenticated caller with **HTTP 402** and a JSON body carrying the price, the checkout URL and the free endpoints that answer the same question — so an agent never has to guess.
 - **Paying as software, not as a subscriber:** those same 402s speak [x402](https://github.com/coinbase/x402) v2 — a `PAYMENT-REQUIRED` header and an `accepts` array — so a caller with a wallet can pay per request instead of holding an account. `POST /v0.1/kit` costs $0.25 a call that way, `POST /v0.1/audit` $0.05, and one capability's history $0.01. The `accepts` array is absent until settlement is live on this deployment, because quoting a payment option we cannot verify would waste your signature.

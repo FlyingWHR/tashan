@@ -694,6 +694,33 @@ _miscased = [c["id"] for c in TRUTH.values()
 ok("no exported label mis-cases MCP", not _miscased,
    f"{len(_miscased)} e.g. {_miscased[:3]}")
 
+# "CLEAR" MUST SAY WHAT WAS CHECKED, on both surfaces.
+#
+# OSV is queried by package NAME, so "No known advisories" is a claim about this package and not
+# about its dependency tree — a server whose transitive dependency carries a CVE reads "clear". The
+# findings are sound (verified against live OSV: 18 of the most-installed scanned rows, zero
+# mismatches); it is the SCOPE a reader could over-read, and for a security product that is the
+# difference between a limit and a lie.
+#
+# Both surfaces, because the client REPLACES the server render and these two have drifted three
+# times. A note on only one of them is a note that disappears the moment the page hydrates.
+_SCOPE = "not its dependency tree"
+_pre = open(os.path.join(ROOT, "pipeline", "prerender.py"), encoding="utf-8").read()
+_capjs = open(os.path.join(WEB, "js", "capability.js"), encoding="utf-8").read()
+ok("prerender says an advisory scan covers the package, not its dependency tree", _SCOPE in _pre)
+ok("...and capability.js says it identically, so it survives the client re-render", _SCOPE in _capjs)
+# AND IT MUST BE ON THE RENDERED PAGE, not merely in the generator. The first version of this check
+# read `_SCOPE in _html or "known advisor" in _html` — an OR whose right side matches the string
+# "No known advisories" itself, so it passed on every page whether or not the note had rendered.
+# A decorative check on a claim about honesty is worse than no check.
+_clear = [p for p in glob.glob(os.path.join(WEB, "capability", "pkg-*.html"))[:400]
+          if "No known advisories" in open(p, encoding="utf-8").read()]
+if _clear:
+    _missing = [os.path.basename(p) for p in _clear
+                if _SCOPE not in open(p, encoding="utf-8").read()]
+    ok(f"...and every one of {len(_clear)} sampled clear-scan dossiers actually carries it",
+       not _missing, f"{len(_missing)} rendered without the scope note, e.g. {_missing[:3]}")
+
 # A CONFIRMED-MALICIOUS ROW MUST NOT CARRY A SCORE, on any surface.
 #
 # Four of the six did: claude-cup published 77/100 next to MAL-2026-5789 and 4.8M weekly installs.

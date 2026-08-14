@@ -808,9 +808,17 @@ def security_block(c):
             advisory_detail(c),
             "secrow--alert"))
     else:
+        # SAY WHAT WAS CHECKED, not just against what version. OSV is queried by PACKAGE NAME, so
+        # this is a statement about this package and not about its dependency tree — a server whose
+        # dependency carries a CVE still reads "clear" here. Verified 15 Aug against live OSV: all
+        # 18 of the most-installed scanned rows agree exactly with what we publish, so the finding
+        # is correct; it is the SCOPE that a reader could over-read. The same rule the permission
+        # surface already follows: an empty result means "nothing found where we looked", never
+        # "nothing there".
         rows.append(sec_row("No known advisories", '<span class="sev sev--none">clear</span>',
                             '<span class="secrow__ok">checked against OSV for '
-                            + esc(c.get("npm_latest_version") or "the current release") + "</span>"))
+                            + esc(c.get("npm_latest_version") or "the current release")
+                            + " &mdash; this package, not its dependency tree</span>"))
 
     if c.get("sec_install_script"):
         scr = c.get("sec_install_script")

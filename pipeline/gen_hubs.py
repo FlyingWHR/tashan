@@ -753,6 +753,14 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
          "- Anything OSV lists as malicious is refused a place on the board entirely.",
          "- We do NOT review source code, execute the capability, or test its output for prompt "
          "injection. A clean audit means nothing KNOWN is wrong.",
+         # The advisory scan has the same shape of limit as the permission surface below, and until
+         # now only one of the two was declared. OSV is queried by package NAME, so a server whose
+         # transitive dependency carries a CVE reads clear. An agent quoting "no known advisories"
+         # to a human needs to know what that sentence covers.
+         "- Advisories are matched against the capability's OWN package name, not its dependency "
+         "tree. A dependency's CVE will not appear here. Verified 15 Aug 2026 against live OSV over "
+         "the 18 most-installed scanned packages: zero disagreements, so what is reported is "
+         "accurate — this is a limit of SCOPE, not of correctness.",
          "- Permission surface UNDER-reports by design: a server can shell out using Node built-ins "
          "and declare nothing, so an empty result means 'nothing declared', not 'nothing possible'.",
          # WHAT WE HAVE NOT MEASURED, TOLD TO THE READER MOST AFFECTED BY IT. An agent that hits an

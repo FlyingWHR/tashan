@@ -716,9 +716,13 @@ function repoHealth(c) {
         advisoryDetail(c),
         "secrow--alert"));
     } else {
+      // Must match prerender.py's wording exactly — the client REPLACES the server render, and
+      // these two have drifted three times. OSV is queried by package NAME, so "clear" is a claim
+      // about this package and not about what it depends on.
       rows.push(secRow("No known advisories",
         '<span class="sev sev--none">clear</span>',
-        '<span class="secrow__ok">checked against OSV for ' + esc(c.npm_latest_version || "the current release") + '</span>'));
+        '<span class="secrow__ok">checked against OSV for ' + esc(c.npm_latest_version || "the current release")
+        + ' &mdash; this package, not its dependency tree</span>'));
     }
 
     if (c.sec_install_script) {

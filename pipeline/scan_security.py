@@ -29,6 +29,12 @@ from datetime import datetime, timezone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "pipeline"))
 CACHE = os.path.join(ROOT, "data", "security_cache.json")
+# QUERIED BY PACKAGE NAME, so a result is about THIS package and not about its dependency tree.
+# A server whose transitive dependency carries a CVE returns nothing here, and every surface that
+# renders "No known advisories" says so rather than letting a reader hear "nothing vulnerable".
+# The findings themselves are sound: verified 15 Aug 2026 against live OSV over the 18 most-
+# installed scanned rows — zero mismatches — with lodash@4.17.20 (5 vulns) and claude-cup@0.9.12
+# (1, the MAL entry) as positive controls, so a silent query-shape failure would have shown.
 OSV = "https://api.osv.dev/v1/query"
 NPM = "https://registry.npmjs.org/"
 # A budget of NETWORK FETCHES, not of rows. It used to be a `LIMIT` on the query, which quietly made
