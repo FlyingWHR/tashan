@@ -1,15 +1,56 @@
 # Do this next — the things only you can do
 
-*Written 6 Aug 2026, revised 8 Aug. Everything that could be done from a keyboard has been. What is
-left needs an identity, a dashboard, or a human on the other end. Ordered by effect, and each one
-states exactly what is already prepared so the step is short.*
+*Rewritten 14 Aug 2026. Everything doable from a keyboard has been done. What is left needs an
+identity, a dashboard, or money in an account. The history below §1 is kept for its reasoning; this
+header is the current state and supersedes any summary further down.*
 
-**The original four are all done** (§1–§4, kept below for their reasoning). **R2 is done too** —
-enabled 8 Aug, `data/tashan.db` now lives at `r2://tashan-state/tashan.db` and is out of git,
-verified by deleting the local file and restoring it byte-identical.
+## The one thing standing between the product and revenue
 
-**One open item:** add `ANTHROPIC_API_KEY` (§0c) — and that one is deliberately on hold until
-there is a paying user, since grading can be done in-session at no API cost.
+**Change the success_url on both Polar checkout links.** Measured 14 Aug: both resolve to a session
+whose `success_url` is a bare `https://tashan.sh/welcome.html`. Polar substitutes `{CHECKOUT_ID}`
+**only** into a parameter you write yourself and appends nothing on its own — so a customer arrives
+with no id, `/api/checkout` is never reached, no session is created, and they are asked to paste a
+licence key.
+
+Set both links to:
+
+    https://tashan.sh/api/checkout?id={CHECKOUT_ID}
+
+Everything else on that path is already correct and was verified the same day: `POLAR_ORG_TOKEN` and
+`POLAR_WEBHOOK_SECRET` are set on the Pages project, KV holds 64 history and 65 security shards so a
+licence holder gets real data, `/api/checkout` refuses a bogus id safely instead of 500ing, and a
+bad bearer token gets 403 rather than 402. One field.
+
+`/welcome` now also accepts `?checkout_id=…` and forwards it, so
+`https://tashan.sh/welcome.html?checkout_id={CHECKOUT_ID}` works too if that is easier to paste.
+
+## The other two, both small
+
+**Add `Account Analytics: Read` to the Cloudflare API token.** Every click has been recorded since
+9 Aug and nothing has ever read one. `pipeline/funnel.py` runs in the nightly and prints
+views → offer clicks → checkout into the run summary; without that permission it prints the
+permission error instead and exits 0 rather than failing the pipeline.
+
+**Create a wallet, if per-call agent payment is wanted.** `docs/X402.md` is the whole procedure:
+four secrets and a verification curl. The protocol layer, the priced endpoints (`/v0.1/kit` at
+$0.25, `/v0.1/audit` at $0.05) and 40+ tests are built and dormant — they quote no payment option
+that cannot be settled, deliberately. Context for whether it is worth doing: 172 capabilities in our
+own corpus already advertise per-call payment, 144 naming x402, and one of them exists purely to
+discover 170+ x402 services.
+
+## Deliberately not done, with the reasoning written down
+
+- **`ANTHROPIC_API_KEY` for batch grading** — on hold until there is a paying user; grading runs
+  in-session at no API cost. 2,889 capabilities graded that way.
+- **A verdict word for skills** — `docs/GRADING-RUBRIC.md` has the measurement: the server rubric
+  lands skills at 2.7% `deep` against servers' 16–20%, because a skill has no tools. A validated
+  replacement criterion exists (16.8%). What ships instead is facts, not a grade, because a new
+  public scale over 40% of the corpus is a decision, not a chore.
+- **Raising `CLASSIFY_MARGIN`** — measured in `pipeline/classify.py`: 0.4 buys 11 points of
+  precision for 21 points of coverage. Not taken; the hand-classified head of each hub is what a
+  reader sees.
+- **Description bigrams in the classifier** — +2.5 accuracy on 248 held-out rows, which is six
+  answers and inside the noise. Left as `CLASSIFY_BIGRAM=1` with the table beside it.
 
 ---
 
