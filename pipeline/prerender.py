@@ -20,6 +20,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import assets
 import chrome
+import skill_doc
 AV = str(assets.V)   # single source of truth for cache-busting
 SCORER = ""          # which ruler produced these numbers; read from the export in main()
 GEN_DATE = ""        # the day these numbers were measured — a citation signal, same source
@@ -382,6 +383,34 @@ def doctor_cta(c):
             "</section>")
 
 
+def skill_doc_block(c):
+    """What a skill's own SKILL.md contains — facts, deliberately not a grade.
+
+    A skill cannot be graded by the expertise rubric: its first criterion is per-tool documentation
+    and a skill has no tools, which lands skills at 2.7% `deep` against servers' 16-20% and measures
+    the mismatch rather than the writing (docs/GRADING-RUBRIC.md has the numbers). So the page states
+    checkable facts about the document instead. Facts need no shared vocabulary, so nothing here can
+    be misread as comparable to a server's verdict.
+
+    It is also the only measured thing most of these pages have. 2,775 skill dossiers were noindexed
+    as thin because a description was their single signal.
+    """
+    raw = c.get("skill_doc")
+    if not raw:
+        return ""
+    try:
+        m = json.loads(raw) if isinstance(raw, str) else raw
+    except (ValueError, TypeError):
+        return ""
+    if not isinstance(m, dict) or not m:
+        return ""
+    return ('<section class="sec"><h2>Its own instructions</h2>'
+            '<p class="prose">' + esc(skill_doc.sentence(m)) + "</p>"
+            '<p class="muted">Read from the capability&rsquo;s own SKILL.md. This is not a grade '
+            'and does not compare to the instruction-depth verdict on an MCP server &mdash; a skill '
+            'has no tools to document, so that rubric does not apply to it.</p></section>')
+
+
 def pro_panel(c):
     """The one commercial surface on a dossier, and the only place a price appears.
 
@@ -663,7 +692,7 @@ def summary(c, gen=""):
             # then the one thing we want from them. Anything else is asking before giving.
             + works + cat + task + job + install + verdict + swap +
             ('<ul class="prose prose--wide">' + "".join(rows) + '</ul>' if rows else '') +
-            security_block(c) + changed_block(c) + doctor_cta(c) + pro_panel(c) + embed_block(c)
+            security_block(c) + skill_doc_block(c) + changed_block(c) + doctor_cta(c) + pro_panel(c) + embed_block(c)
             + ('<p class="mono">' + " &nbsp;·&nbsp; ".join(links) + '</p>' if links else '')
             # ONE HONEST CLOSING LINE, ON EVERY DOSSIER. 8,648 of 9,638 capability pages made no
             # case for the product at all — only the 990 that happen to carry a change block or a
@@ -843,6 +872,18 @@ def security_block(c):
 # being deleted: a dossier with a name and one sentence is still the right answer for `doctor` when
 # somebody runs that obscure server, and still belongs in the agent tier — it just should not be
 # submitted to a search engine as a page worth ranking.
+def skill_doc_found(c):
+    """True when a skill's own SKILL.md documented at least one of the five things we look for."""
+    raw = c.get("skill_doc")
+    if not raw:
+        return False
+    try:
+        m = json.loads(raw) if isinstance(raw, str) else raw
+    except (ValueError, TypeError):
+        return False
+    return isinstance(m, dict) and any(m.values())
+
+
 def signal_count(c):
     return sum(1 for x in (
         c.get("tashan_score") is not None,
@@ -851,6 +892,12 @@ def signal_count(c):
         bool(c.get("expertise_verdict")),
         bool(c.get("changes")),
         bool(c.get("tasks")),
+        # A measured SKILL.md is a real signal — the one axis a skill can be measured on at all —
+        # but ONLY when the reading found something. 337 of 3,368 SKILL.md files say none of the
+        # five things, and "we read it and it documents nothing" is an honest sentence to print and
+        # a poor reason to ask a search engine to index the page. The block still renders on those;
+        # a negative result is a result. It just does not count as content.
+        skill_doc_found(c),
     ) if x)
 
 

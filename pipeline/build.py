@@ -44,6 +44,8 @@ CREATE TABLE IF NOT EXISTS capabilities (
   adoption REAL, upkeep REAL, freshness REAL, tashan_score REAL,
   expertise REAL, expertise_verdict TEXT, expertise_note TEXT,
   grade_withheld TEXT,          -- why we looked and refused to grade; NULL means simply not reached
+  skill_doc TEXT,               -- JSON: what a skill's own SKILL.md contains. FACTS, not a
+                                -- grade — see pipeline/skill_doc.py and docs/GRADING-RUBRIC.md
   category_basis TEXT,          -- 'declared' (the author's own) | 'model' | NULL when abstained
   category_conf REAL,           -- 0..1 relative margin; the model's own confidence, not a guess
   retention REAL, retention_note TEXT,
@@ -149,7 +151,7 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # task tag; category was one bare string, so an author's own declaration and a 60%-
            # accurate naive-Bayes guess were stored identically and rendered identically as fact.
            # 40% of the labels on the site were wrong and nothing on the row said which.
-           "category_basis TEXT", "category_conf REAL"
+           "category_basis TEXT", "category_conf REAL", "skill_doc TEXT"
            # The author's OWN package.json keywords, comma-joined like gh_topics. Fetched on every
            # enrichment pass since the beginning and thrown away, which left npm the only kind with
            # no author vocabulary at all: plugins had manifest tags, skills had frontmatter, and
@@ -182,7 +184,7 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            "shim INTEGER",              # 1 = the author describes it as a bridge/proxy over something else
            "shim_note TEXT"]            # their words, so the page can answer "says who?"
 
-SCHEMA_VERSION = 15  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 16  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # v5 RENAMED the headline score. "Trust" claimed more than the SCORE measures: it is upkeep, freshness
 # and adoption, and a number whose name needs walking back is misnamed. That still holds — the security
@@ -1400,7 +1402,7 @@ def export(con):
             # fetched so a verdict can be WITHDRAWN when its evidence is a document about something
             # else — see the doc-evidence gate in the row loop below
             "doc_shared_with","doc_names_self","grade_withheld",
-            "category","category_basis","category_conf","in_registry","in_configs",
+            "category","category_basis","category_conf","skill_doc","in_registry","in_configs",
             "gh_stars","gh_forks","gh_open_issues","gh_pushed","gh_contributors","gh_last_release",
             "gh_license","gh_topics","gh_has_discussions","gh_archived","vitality","single_maintainer",
             # the author's own sentence behind an "abandoned" vitality — exported so the page can

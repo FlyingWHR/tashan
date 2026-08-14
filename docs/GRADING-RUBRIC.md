@@ -179,3 +179,27 @@ can compare the two scales.
 
 Not built. Written down so the backlog is a decision waiting on a rubric, rather than a chore
 somebody completes with the wrong instrument.
+
+### The replacement criterion, measured
+
+(a′) — *does the SKILL.md say when it should be used?* — tested on 250 randomly sampled skills:
+
+| | skills |
+|---|---:|
+| (a′) says **when to use** it | 70.0% |
+| says when **not** to use it | 18.8% |
+| (b) two worked examples | 58.8% |
+| (c) setup / prerequisites | 65.2% |
+| (d) a stated limitation | 42.8% |
+| **all four, with (a′) in place of (a)** | **16.8%** |
+| all four, additionally requiring when-not | 4.4% |
+
+16.8% against a server `deep` rate of 16–20%. The swap produces a band of comparable *difficulty*
+without pretending it measures the same thing — and requiring "when NOT to use it" as well collapses
+it to 4.4%, which is a distinction worth reporting but far too strict to gate a band on.
+
+**What ships now: the facts, not a verdict.** A new grade word for 40% of the corpus is a product
+decision about a public scale. The four booleans are not — they are checkable statements about a
+document, they need no shared vocabulary, and they cannot be misread as comparable to a server's
+grade because they are not a grade. Skill dossiers state what their SKILL.md does and does not
+contain. If a verdict word is ever wanted, the evidence for it is already being measured.

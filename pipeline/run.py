@@ -80,6 +80,10 @@ STAGES = [
      "grade how well each capability documents itself, against the published rubric (needs a key)"),
     ("task-grade",      ["pipeline/tag_capabilities.py", "--grade", "--limit", "150"], "enrich",
      "map the most-used capabilities to the work they are for (needs a key)"),
+    # Skills carry their own SKILL.md and no grade — the expertise rubric is server-shaped
+    # and a skill has no tools. This reads the documents we already hold and states facts.
+    ("skill-docs",       ["pipeline/skill_doc.py"], "enrich",
+     "what each skill's own SKILL.md contains — facts, not a grade"),
     ("doc-signals",     ["pipeline/doc_signals.py"], "enrich",
      "is a capability's only documentation actually about that capability"),
     # LAST of the enrich stages, deliberately: it diffs the FINAL state of each capability against
