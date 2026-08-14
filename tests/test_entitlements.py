@@ -108,11 +108,17 @@ if _offer:
     # RAW html here, not text() — a URL lives in an href, so the visible-text copy has none by
     # construction and this compared the quote against an empty set.
     _raw = open(os.path.join(WEB, "pricing.html"), encoding="utf-8").read()
-    page_links = set(re.findall(r"https://buy\.polar\.sh/[A-Za-z0-9_]+", _raw))
-    quoted_links = set(re.findall(r"https://buy\.polar\.sh/[A-Za-z0-9_]+", body))
+    # MATCH ON THE BUY ROUTE, not on a Polar URL. Both surfaces now send buyers through /api/buy,
+    # which repairs the checkout link's success_url on the way past; a raw buy.polar.sh link is the
+    # one route that skips it. The check is unchanged in intent — an agent must never hand its
+    # human a checkout the page itself does not offer — only in what a checkout looks like.
+    _plans = lambda t: set(re.findall(r"/api/buy\?plan=([a-z]+)", t))
+    page_links, quoted_links = _plans(_raw), _plans(body)
     ok("every checkout URL quoted to an agent is one the pricing page also links",
        quoted_links and quoted_links <= page_links,
        f"only in the 402: {sorted(quoted_links - page_links)}")
+    ok("the 402 quotes no raw Polar link — that route skips the success_url repair",
+       "buy.polar.sh" not in body, "found a direct Polar URL in OFFER")
     # The firewall, restated for machines: the refusal must name what costs nothing.
     ok("the 402 names the free surfaces, so a bounce does not read as 'everything is paid'",
        "lookup.json" in body and "llms.txt" in body)

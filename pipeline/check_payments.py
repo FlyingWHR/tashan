@@ -64,9 +64,30 @@ def get(url, headers=None, method="GET", body=None):
 
 
 def checkout_links():
-    """The buy links as the pricing page actually publishes them — not as a constant here."""
-    html = open(os.path.join(ROOT, "web", "pricing.html"), encoding="utf-8").read()
-    return sorted(set(re.findall(r"https://buy\.polar\.sh/[A-Za-z0-9_]+", html)))
+    """The Polar checkout links this site sells through, from the file that defines what is sold.
+
+    These used to be scraped out of pricing.html, because the page was the thing that published
+    them. It no longer does: every buy button goes through /api/buy, which repairs the checkout
+    link's success_url on the way past. entitlements.json is where the real URLs live now, and
+    where the prerender validates them."""
+    ent = json.load(open(os.path.join(ROOT, "data", "entitlements.json"), encoding="utf-8"))
+    pro = ent["tiers"]["pro"]
+    out = {}
+    if pro.get("checkout"):
+        out["monthly"] = pro["checkout"]
+    if (pro.get("annual") or {}).get("url"):
+        out["annual"] = pro["annual"]["url"]
+    return out
+
+
+def buy_constants():
+    """The two links hardcoded in functions/api/buy.js, which is what the redirect actually uses.
+
+    A test asserts these equal entitlements.json. Without it the page could advertise one product
+    and the button send you to another — the exact shape of the bug where the annual control billed
+    the monthly price, and the one class of defect this file exists to catch."""
+    js = open(os.path.join(ROOT, "functions", "api", "buy.js"), encoding="utf-8").read()
+    return dict(re.findall(r"^\s*(monthly|annual):\s*\"(polar_cl_[A-Za-z0-9_]+)\"", js, re.M))
 
 
 def success_url_of(link):
@@ -84,23 +105,48 @@ def success_url_of(link):
 def main():
     print(f"\npayment path — {BASE}\n")
 
-    # 1. THE HAND-OFF. The step that was broken: Polar must send the checkout id back to us, or the
-    #    customer lands on a page that cannot identify them and is asked to paste a licence key.
+    # 1. THE HAND-OFF. The step that was broken for weeks: Polar must send the checkout id back to
+    #    us, or the customer lands on a page that cannot identify them and is asked to paste a
+    #    licence key they were never given.
+    #
+    #    RUNNING THIS CHECK IS NOW ALSO THE FIX. /api/buy verifies and repairs that field on its
+    #    way to Polar, so hitting the button here — which is what a real buyer does — heals it.
+    #    The nightly workflow runs this file, so the field is re-verified every day against the
+    #    live dashboard rather than trusted because somebody set it once.
     links = checkout_links()
+    consts = buy_constants()
     if not links:
-        record(FAIL, "pricing.html publishes at least one checkout link")
-    for link in links:
+        record(FAIL, "entitlements.json names at least one checkout link")
+    for plan, link in sorted(links.items()):
+        want_secret = link.rsplit("/", 1)[-1]
+        if consts.get(plan) != want_secret:
+            record(FAIL, f"the {plan} button sends buyers to the {plan} product",
+                   f"functions/api/buy.js has {consts.get(plan)!r}, entitlements.json has "
+                   f"{want_secret!r} — the page and the button would sell different things")
+            continue
+        record(PASS, f"the {plan} button and the {plan} price name the same checkout link")
+
+        # The redirect itself, as a buyer experiences it.
+        status, _, hdrs = get(f"{BASE}/api/buy?plan={plan}")
+        loc = hop(f"{BASE}/api/buy", hdrs) or ""
+        if status not in (301, 302, 303, 307, 308) or loc != link:
+            record(FAIL, f"/api/buy?plan={plan} reaches Polar",
+                   f"expected a redirect to {link}, got HTTP {status} -> {loc!r}")
+            continue
+        record(PASS, f"/api/buy?plan={plan} redirects to the {plan} checkout")
+
+        # And the field that redirect exists to repair. Read from Polar's own checkout page, so
+        # this is the configuration as it really is, not as we hope we set it.
         su, err = success_url_of(link)
-        short = link.rsplit("/", 1)[-1][:18] + "…"
         if err:
-            record(WARN, f"checkout link {short} reachable", err)
+            record(WARN, f"the {plan} checkout returns the checkout id", err)
         elif su and "{CHECKOUT_ID}" in su or (su and re.search(r"[?&](id|checkout_id)=", su)):
-            record(PASS, f"checkout link {short} returns the checkout id")
+            record(PASS, f"the {plan} checkout returns the checkout id to /api/checkout")
         else:
-            record(FAIL, f"checkout link {short} returns the checkout id",
-                   f"success_url is {su!r} — no id, so /api/checkout never runs and the customer is "
-                   f"asked to paste a key.\n        FIX (Polar dashboard, this link): set success_url to "
-                   f"{BASE}/api/checkout?id={{CHECKOUT_ID}}")
+            record(FAIL, f"the {plan} checkout returns the checkout id to /api/checkout",
+                   f"success_url is {su!r} — no id, so /api/checkout never runs and the customer "
+                   f"is asked to paste a key.\n        /api/buy should have repaired this. Check "
+                   f"POLAR_ORG_TOKEN can write checkout links, then re-run.")
 
     # 2. OUR SIDE OF THE HAND-OFF. Must exist, and must refuse a forged id without leaking a session.
     status, body, hdrs = get(f"{BASE}/api/checkout?id=chk_definitely_not_real_000")
@@ -220,7 +266,20 @@ def _selftest():
     good = r'"success_url\":\"https://tashan.sh/api/checkout?id={CHECKOUT_ID}\"'
     m2 = re.search(r'success_url\\?"\s*:\s*\\?"([^"\\]+)', good)
     assert m2 and "{CHECKOUT_ID}" in m2.group(1)
-    assert checkout_links(), "pricing.html must publish at least one buy link"
+    links = checkout_links()
+    assert links, "entitlements.json must name at least one buy link"
+    consts = buy_constants()
+    assert consts, "functions/api/buy.js must define the checkout links it redirects to"
+    # The one that matters offline: the button and the price tag must name the same product.
+    for plan, url in links.items():
+        assert consts.get(plan) == url.rsplit("/", 1)[-1], (
+            f"{plan}: buy.js has {consts.get(plan)!r}, entitlements.json has {url!r}")
+    # And the page must actually route through the repair, or the whole mechanism is bypassed.
+    page = open(os.path.join(ROOT, "web", "pricing.html"), encoding="utf-8").read()
+    assert "buy.polar.sh" not in page, (
+        "pricing.html links straight to Polar somewhere — that route skips the success_url repair")
+    for plan in links:
+        assert f"/api/buy?plan={plan}" in page, f"pricing.html has no {plan} button through /api/buy"
     print("check_payments selftest ok")
     return 0
 

@@ -1,8 +1,10 @@
-// Cloudflare Pages Function — GET /api/checkout?id=<checkout_id> : the post-purchase sign-in.
+// Cloudflare Pages Function — GET /api/checkout?checkout_id=<id> : the post-purchase sign-in.
 //
-// Polar's success_url is configured to
-//     https://tashan.sh/api/checkout?id={CHECKOUT_ID}
-// so the customer lands HERE, not on a page. This exchanges the checkout for their licence key,
+// Polar's success_url is set to
+//     https://tashan.sh/api/checkout?checkout_id={CHECKOUT_ID}
+// so the customer lands HERE, not on a page. `id=` is accepted too — see below. That field is no
+// longer maintained by hand: /api/buy verifies and repairs it on the way to the checkout, because
+// whether we get paid should not depend on a text box in someone else's dashboard staying right. This exchanges the checkout for their licence key,
 // sets the session cookie, and 302s to /welcome. Nothing renders at this URL, no JavaScript is
 // involved, and the checkout id never reaches a document — so it never appears in a Referer header
 // from a rendered page, and works with JS off.
@@ -51,7 +53,13 @@ async function polar(env, path, init = {}, token = null) {
 
 export async function onRequest({ request, env }) {
   const url = new URL(request.url);
-  const id = (url.searchParams.get("id") || "").trim();
+  // BOTH SPELLINGS. This file's header, and the runbook, said to configure `id={CHECKOUT_ID}` —
+  // but Polar's own API documentation for success_url says to add `checkout_id={CHECKOUT_ID}`.
+  // Anyone following the vendor's docs would have configured the field correctly and still landed
+  // here with nothing to read, and the failure is invisible: a redirect to /welcome and a paste
+  // form, exactly like a customer who never paid. Accept either name.
+  const id = (url.searchParams.get("id") ||
+              url.searchParams.get("checkout_id") || "").trim();
 
   if (!id) return back(url.origin);
   // NOT CONFIGURED IS ITS OWN ANSWER. These two used to redirect to a bare /welcome, identical to a

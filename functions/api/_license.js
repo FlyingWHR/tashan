@@ -126,9 +126,9 @@ const x402Header = (pr) => btoa(unescape(encodeURIComponent(JSON.stringify(pr)))
 export const OFFER = {
   plans: [
     { amount: 6, currency: "USD", period: "month",
-      checkout: "https://buy.polar.sh/polar_cl_pc42cdJpEltRSFaI3Uz2oYgmKbWN6ytw6os6X0IuB0d" },
+      checkout: "https://tashan.sh/api/buy?plan=monthly" },
     { amount: 50, currency: "USD", period: "year",
-      checkout: "https://buy.polar.sh/polar_cl_ESzG71NaofNkWbLp6wBSpLtuAfuv13XDYE6121Rd2jl" },
+      checkout: "https://tashan.sh/api/buy?plan=annual" },
   ],
   // WHAT AN AGENT CAN HAVE WITHOUT PAYING. Naming these in the refusal is not generosity, it is the
   // firewall: the EXISTENCE of a risk is never behind the paywall, and an agent that bounces off a

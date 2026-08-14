@@ -1189,6 +1189,17 @@ def bake_pricing():
     ann = pro.get("annual") or None
     monthly_url, price = pro.get("checkout", ""), pro.get("price", "")
 
+    # THE BUTTON GOES THROUGH US NOW, and the Polar links below stay the canonical record of what
+    # is being sold. /api/buy 302s to exactly these URLs — but on the way it verifies the one field
+    # that decides whether a paying customer can be identified afterwards (`success_url`), and
+    # repairs it if it is wrong. That field lives in Polar's dashboard, it was wrong for weeks, and
+    # nothing we owned could see it. See functions/api/buy.js.
+    #
+    # The validation below is UNCHANGED and still runs against the real Polar URLs, because those
+    # are what /api/buy redirects to — routing through our origin must not become a way to stop
+    # checking that the destination is a real checkout link.
+    buy_href = {"monthly": "/api/buy?plan=monthly", "annual": "/api/buy?plan=annual"}
+
     # A PRODUCT ID IS NOT A CHECKOUT LINK. buy.polar.sh/<product-uuid> answers 302 -> polar.sh/ —
     # Polar's own marketing homepage, with a 200 at the end of the redirect. So a pasted product id
     # produces a working-looking "Annual" button that lands the buyer on someone else's landing page
@@ -1213,8 +1224,8 @@ def bake_pricing():
             '<button type="button" class="ptoggle__b is-on" data-cad="month" aria-pressed="true">Monthly</button>'
             f'<button type="button" class="ptoggle__b" data-cad="year" aria-pressed="false">Annual{esc(save)}</button>'
             "</div>")
-        data = (f' data-monthly-url="{esc(monthly_url)}" data-monthly-label="{esc(price)} monthly"'
-                f' data-annual-url="{esc(ann["url"])}" data-annual-label="{esc(ann["price"])} annually"'
+        data = (f' data-monthly-url="{esc(buy_href["monthly"])}" data-monthly-label="{esc(price)} monthly"'
+                f' data-annual-url="{esc(buy_href["annual"])}" data-annual-label="{esc(ann["price"])} annually"'
                 # THE HEADLINE PRICE HAS TO MOVE TOO. Without this the card read "$6 /mo" while the
                 # button under it read "$50 annually" — two prices for one plan, on the page whose
                 # entire job is that the number you see is the number you are charged.
@@ -1247,8 +1258,18 @@ def bake_pricing():
             data += ' data-annual-terms="' + esc(terms_for(ann["price"], "yr")) + '"'
 
     out = re.sub(r'(<a class="btn btn--primary plan__cta" id="proCta")[^>]*?(\s+rel="noopener">)([^<]*)(</a>)',
-                 lambda m: (m.group(1) + f' data-src="pricing-pro-monthly" href="{monthly_url}"' + data
+                 lambda m: (m.group(1) + f' data-src="pricing-pro-monthly" href="{buy_href["monthly"]}"' + data
                             + m.group(2) + f"{price} monthly &rsaquo;" + m.group(4)), out, count=1)
+    # The secondary "Annual: $50/yr" link was hand-written in the page and pointed straight at
+    # Polar, so it would have been the one route that skipped the repair — and it is the link for
+    # the more valuable subscription. Baked from the same source as the button.
+    if ann and ann.get("url"):
+        out, n_ann = re.subn(r'(<a class="link" href=")[^"]*(" data-src="pricing-pro-annual")',
+                             lambda m: m.group(1) + buy_href["annual"] + m.group(2), out, count=1)
+        if n_ann != 1:
+            raise SystemExit("pricing.html has no data-src=\"pricing-pro-annual\" link to bake — "
+                             "it moved or was edited away, and an un-baked one goes straight to "
+                             "Polar without the success_url repair.")
     out = re.sub(r'(<span class="plan__note mono" id="proCadence">)[^<]*(</span>)',
                  lambda m: m.group(1) + note + m.group(2), out, count=1)
 

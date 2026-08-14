@@ -660,7 +660,9 @@ def pricing_block():
         "different answer: the score history behind a capability, and `tashan doctor` run over "
         "the config on your own machine.",
         "",
-        "- Buy: " + pro["checkout"],
+        # Through our own origin, like every other buy button. An agent quoting the raw Polar URL
+        # would send a human down the one route that skips the success_url repair.
+        "- Buy: https://tashan.sh/api/buy?plan=monthly  (annual: /api/buy?plan=annual)",
         "- Terms and the full split: " + BASE + "/pricing.html",
         "- Paid endpoints answer an unauthenticated caller with **HTTP 402** and a JSON body "
         "carrying the price, the checkout URL and the free endpoints that answer the same "

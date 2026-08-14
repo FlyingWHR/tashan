@@ -45,7 +45,13 @@ def pages():
 def exists(u):
     if u.endswith("/"):
         u += "index.html"
-    return os.path.exists(WEB + u)
+    if os.path.exists(WEB + u):
+        return True
+    # A Pages Function serves a route with no file behind it — /api/buy is functions/api/buy.js.
+    # Resolved against the function tree rather than allow-listed by prefix, so a link to an /api/
+    # route nobody implemented is still a dead link.
+    fn = os.path.join(ROOT, "functions") + u
+    return os.path.exists(fn + ".js") or os.path.exists(os.path.join(fn, "[[route]].js"))
 
 
 def main():

@@ -133,7 +133,11 @@ pricing = open(os.path.join(WEB, "pricing.html"), encoding="utf-8").read()
 # read its attributes.
 links = []
 for tag in re.findall(r"<a\b[^>]*>", pricing):
-    href = re.search(r'href="(https://buy\.polar\.sh/[^"]+)"', tag)
+    # THE BUY ROUTE, not the Polar URL. Every CTA now goes through /api/buy?plan=…, which repairs
+    # the checkout link's success_url before handing the buyer over. `plan` is exactly as
+    # discriminating as the old link was — two cadences sharing one plan is the same bug as two
+    # cadences sharing one Polar checkout, and is what this still catches.
+    href = re.search(r'href="(/api/buy\?plan=[^"]+)"', tag)
     src = re.search(r'data-src="([^"]+)"', tag)
     if href:
         links.append((href.group(1), src.group(1) if src else ""))
