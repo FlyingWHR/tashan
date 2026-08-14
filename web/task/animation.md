@@ -20,16 +20,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 48 | 6 ★ | active |
 | 8 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 79 | 34k ★ | active |
 | 9 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
-| 10 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | 48 | 2 repos | active |
-| 11 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 46 | 1 ★ | active |
-| 12 | [Hyperframes By Heygen](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes-by-heygen.html) | 43 | 1 marketplaces | active |
-| 13 | [Image Prompt Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-image-prompt-generator.html) | 43 | 1 marketplaces | active |
-| 14 | [Fk Manim Video](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-manim-video.html) | 43 | 1 marketplaces | active |
-| 15 | [Quickdesign](https://tashan.sh/capability/plugin-anthropics-claude-plugins-community-quickdesign.html) | 42 | 1 marketplaces | — |
-| 16 | [Algorithmic Art](https://tashan.sh/capability/skill-anthropics-algorithmic-art.html) | not scored | 1 repos | active |
-| 17 | [Slack Gif Creator](https://tashan.sh/capability/skill-anthropics-slack-gif-creator.html) | not scored | 1 repos | active |
-| 18 | [All Images AI Automation](https://tashan.sh/capability/skill-composiohq-all-images-ai-automation.html) | not scored | 1 repos | active |
-| 19 | [Heygen Automation](https://tashan.sh/capability/skill-composiohq-heygen-automation.html) | not scored | 1 repos | active |
+| 10 | [Algorithmic Art](https://tashan.sh/capability/skill-anthropics-algorithmic-art.html) | 49 | 2 repos | active |
+| 11 | [Slack Gif Creator](https://tashan.sh/capability/skill-anthropics-slack-gif-creator.html) | 49 | 2 repos | active |
+| 12 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 46 | 1 ★ | active |
+| 13 | [Hyperframes By Heygen](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes-by-heygen.html) | 43 | 1 marketplaces | active |
+| 14 | [Image Prompt Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-image-prompt-generator.html) | 43 | 1 marketplaces | active |
+| 15 | [Fk Manim Video](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-manim-video.html) | 43 | 1 marketplaces | active |
+| 16 | [Quickdesign](https://tashan.sh/capability/plugin-anthropics-claude-plugins-community-quickdesign.html) | 42 | 1 marketplaces | — |
+| 17 | [All Images AI Automation](https://tashan.sh/capability/skill-composiohq-all-images-ai-automation.html) | not scored | 1 repos | active |
+| 18 | [Heygen Automation](https://tashan.sh/capability/skill-composiohq-heygen-automation.html) | not scored | 1 repos | active |
+| 19 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | not scored | 1 repos | active |
 | 20 | [Animated Sketch Diagram](https://tashan.sh/capability/plugin-oldyade-animated-sketch-diagram-animated-sketch-diagram.html) | 43 | 11 ★ | active |
 | 21 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 545/wk | active |
 | 22 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 68 | 2k/wk | active |

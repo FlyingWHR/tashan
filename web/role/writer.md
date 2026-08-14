@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 43 | 22 ★ | active |
 | 40 | [Carbone Skill](https://tashan.sh/capability/plugin-carboneio-carbone-skill-carbone-skill.html) | 43 | 4 ★ | active |
 
-Showing the top 40 of 222. The full ranked shelf is at https://tashan.sh/role/writer.html.
+Showing the top 40 of 217. The full ranked shelf is at https://tashan.sh/role/writer.html.
 
 ## What these numbers are not
 

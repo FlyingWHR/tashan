@@ -22,24 +22,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Patchright MCP Jalikey](https://tashan.sh/capability/pkg-patchright-mcp-jalikey.html) | 61 | 898/wk | active |
 | 10 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 50 | 38 ★ | active |
 | 11 | [Browser Use](https://tashan.sh/capability/plugin-browser-use-plugins-browser-use.html) | 47 | 7 ★ | active |
-| 12 | [Realbrowser](https://tashan.sh/capability/plugin-darkamenosa-realbrowser-realbrowser.html) | 47 | 57 ★ | active |
-| 13 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 46 | 15 ★ | active |
+| 12 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 47 | 15 ★ | active |
+| 13 | [Realbrowser](https://tashan.sh/capability/plugin-darkamenosa-realbrowser-realbrowser.html) | 47 | 57 ★ | active |
 | 14 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 43 | 22 ★ | active |
 | 15 | [Ever Browser](https://tashan.sh/capability/plugin-namuh-eng-everbrowser-ever-browser.html) | 43 | 6 ★ | active |
 | 16 | [Hyperbrowser](https://tashan.sh/capability/pkg-hyperbrowser-mcp.html) | 35 | 890/wk | abandoned |
 | 17 | [Playwright Pro](https://tashan.sh/capability/plugin-alirezarezvani-claude-skills-playwright-pro.html) | 78 | 23k ★ | active |
 | 18 | [Shiplight](https://tashan.sh/capability/pkg-shiplightai-mcp.html) | 70 | 2k/wk | active |
 | 19 | [Chrome Bridge](https://tashan.sh/capability/pkg-chrome-bridge-mcp.html) | 66 | 2k/wk | active |
-| 20 | [Webapp Testing](https://tashan.sh/capability/skill-anthropics-webapp-testing.html) | 49 | 2 repos | active |
-| 21 | [Agentiqa](https://tashan.sh/capability/plugin-agentiqa-agentiqa-plugin-agentiqa.html) | 46 | 1 ★ | active |
-| 22 | [Foxcode](https://tashan.sh/capability/plugin-korchasa-foxcode-foxcode.html) | 43 | 0 ★ | active |
-| 23 | [Firefox DevTools](https://tashan.sh/capability/plugin-mozilla-firefox-devtools-mcp-firefox-devtools-mcp.html) | 43 | 1 marketplaces | active |
-| 24 | [Claude Mac Chrome](https://tashan.sh/capability/plugin-yolo-labz-claude-mac-chrome-claude-mac-chrome.html) | 42 | 1 ★ | active |
-| 25 | [Browser Tool Automation](https://tashan.sh/capability/skill-composiohq-browser-tool-automation.html) | not scored | 1 repos | active |
-| 26 | [Browserbase Tool Automation](https://tashan.sh/capability/skill-composiohq-browserbase-tool-automation.html) | not scored | 1 repos | active |
-| 27 | [Browser Automation](https://tashan.sh/capability/skill-alirezarezvani-browser-automation.html) | not scored | 1 repos | active |
-| 28 | [Full Page Screenshot](https://tashan.sh/capability/skill-alirezarezvani-full-page-screenshot.html) | not scored | 1 repos | active |
-| 29 | [Notebooklm · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-notebooklm.html) | not scored | 1 repos | active |
+| 20 | [Browser Automation](https://tashan.sh/capability/skill-alirezarezvani-browser-automation.html) | 51 | 3 repos | active |
+| 21 | [Webapp Testing](https://tashan.sh/capability/skill-anthropics-webapp-testing.html) | 49 | 2 repos | active |
+| 22 | [Notebooklm · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-notebooklm.html) | 48 | 2 repos | active |
+| 23 | [Agentiqa](https://tashan.sh/capability/plugin-agentiqa-agentiqa-plugin-agentiqa.html) | 46 | 1 ★ | active |
+| 24 | [Foxcode](https://tashan.sh/capability/plugin-korchasa-foxcode-foxcode.html) | 43 | 0 ★ | active |
+| 25 | [Firefox DevTools](https://tashan.sh/capability/plugin-mozilla-firefox-devtools-mcp-firefox-devtools-mcp.html) | 43 | 1 marketplaces | active |
+| 26 | [Claude Mac Chrome](https://tashan.sh/capability/plugin-yolo-labz-claude-mac-chrome-claude-mac-chrome.html) | 42 | 1 ★ | active |
+| 27 | [Browser Tool Automation](https://tashan.sh/capability/skill-composiohq-browser-tool-automation.html) | not scored | 1 repos | active |
+| 28 | [Browserbase Tool Automation](https://tashan.sh/capability/skill-composiohq-browserbase-tool-automation.html) | not scored | 1 repos | active |
+| 29 | [Full Page Screenshot](https://tashan.sh/capability/skill-alirezarezvani-full-page-screenshot.html) | not scored | 1 repos | active |
 | 30 | [Puppeteer](https://tashan.sh/capability/pkg-modelcontextprotocol-server-puppeteer.html) | not scored | 26k/wk | abandoned |
 | 31 | [Actionbook](https://tashan.sh/capability/plugin-actionbook-actionbook-actionbook.html) | 73 | 2k ★ | active |
 | 32 | [Bowmark](https://tashan.sh/capability/pkg-bowmark-mcp.html) | 68 | 3k/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Camoufox](https://tashan.sh/capability/pkg-mcp-camoufox.html) | 67 | 707/wk | active |
 | 40 | [Machine Bridge](https://tashan.sh/capability/pkg-machine-bridge-mcp.html) | 64 | 763/wk | active |
 
-Showing the top 40 of 101. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
+Showing the top 40 of 98. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
 
 ## What these numbers are not
 

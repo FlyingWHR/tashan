@@ -35,22 +35,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
 | 23 | [Lean Kg](https://tashan.sh/capability/plugin-freepeak-leankg-lean-kg.html) | 69 | 213 ★ | active |
 | 24 | [Sqlew](https://tashan.sh/capability/pkg-sqlew.html) | 69 | 2k/wk | active |
-| 25 | [Agent Designer](https://tashan.sh/capability/skill-alirezarezvani-agent-designer.html) | 48 | 2 repos | active |
-| 26 | [AWS Startup Advisor](https://tashan.sh/capability/plugin-awslabs-startups-aws-startup-advisor.html) | 46 | 2 marketplaces | — |
-| 27 | [Formal Agent Contracts](https://tashan.sh/capability/plugin-kotaroyamame-formal-agent-contracts-formal-agent-contracts.html) | 44 | 1 ★ | active |
-| 28 | [Gitnexus · Roxabi](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-gitnexus.html) | 43 | 1 marketplaces | active |
-| 29 | [Code Modernization](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-code-modernization.html) | 42 | 1 marketplaces | — |
-| 30 | [Feature Dev](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-feature-dev.html) | 42 | 1 marketplaces | — |
-| 31 | [Greptile](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-greptile.html) | 42 | 1 marketplaces | — |
-| 32 | [Building Multiagent Systems](https://tashan.sh/capability/plugin-2389-research-claude-plugins-building-multiagent-systems.html) | 42 | 1 marketplaces | — |
-| 33 | [Django Schema Design](https://tashan.sh/capability/plugin-llodev-skills-django-schema-design.html) | 42 | 1 marketplaces | active |
-| 34 | [Sap Btp Best Practices](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-best-practices.html) | 42 | 1 marketplaces | — |
-| 35 | [GitHub Code Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-github-code-interpreter.html) | 39 | 1 marketplaces | active |
-| 36 | [Cto Review](https://tashan.sh/capability/skill-alirezarezvani-cto-review.html) | not scored | 1 repos | active |
-| 37 | [Cto Advisor](https://tashan.sh/capability/skill-alirezarezvani-cto-advisor.html) | not scored | 1 repos | active |
-| 38 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | not scored | 1 repos | active |
-| 39 | [Azure Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-azure-cloud-architect.html) | not scored | 1 repos | active |
-| 40 | [GCP Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-gcp-cloud-architect.html) | not scored | 1 repos | active |
+| 25 | [Cto Advisor](https://tashan.sh/capability/skill-alirezarezvani-cto-advisor.html) | 48 | 2 repos | active |
+| 26 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | 48 | 2 repos | active |
+| 27 | [Azure Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-azure-cloud-architect.html) | 48 | 2 repos | active |
+| 28 | [GCP Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-gcp-cloud-architect.html) | 48 | 2 repos | active |
+| 29 | [Senior Architect](https://tashan.sh/capability/skill-alirezarezvani-senior-architect.html) | 48 | 2 repos | active |
+| 30 | [Senior Backend](https://tashan.sh/capability/skill-alirezarezvani-senior-backend.html) | 48 | 2 repos | active |
+| 31 | [Tech Stack Evaluator](https://tashan.sh/capability/skill-alirezarezvani-tech-stack-evaluator.html) | 48 | 2 repos | active |
+| 32 | [Agent Designer](https://tashan.sh/capability/skill-alirezarezvani-agent-designer.html) | 48 | 2 repos | active |
+| 33 | [API Design Reviewer](https://tashan.sh/capability/skill-alirezarezvani-api-design-reviewer.html) | 48 | 2 repos | active |
+| 34 | [Database Designer](https://tashan.sh/capability/skill-alirezarezvani-database-designer.html) | 48 | 2 repos | active |
+| 35 | [Database Schema Designer](https://tashan.sh/capability/skill-alirezarezvani-database-schema-designer.html) | 48 | 2 repos | active |
+| 36 | [Migration Architect](https://tashan.sh/capability/skill-alirezarezvani-migration-architect.html) | 48 | 2 repos | active |
+| 37 | [Monorepo Navigator](https://tashan.sh/capability/skill-alirezarezvani-monorepo-navigator.html) | 48 | 2 repos | active |
+| 38 | [AWS Startup Advisor](https://tashan.sh/capability/plugin-awslabs-startups-aws-startup-advisor.html) | 46 | 2 marketplaces | — |
+| 39 | [Formal Agent Contracts](https://tashan.sh/capability/plugin-kotaroyamame-formal-agent-contracts-formal-agent-contracts.html) | 44 | 1 ★ | active |
+| 40 | [Gitnexus · Roxabi](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-gitnexus.html) | 43 | 1 marketplaces | active |
 
 Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
 

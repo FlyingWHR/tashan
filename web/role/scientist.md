@@ -29,17 +29,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Nnsight](https://tashan.sh/capability/plugin-ndif-team-skills-nnsight.html) | 46 | 9 ★ | active |
 | 17 | [Research Co Pilot](https://tashan.sh/capability/plugin-marazii-research-co-pilot-research-co-pilot.html) | 45 | 5 ★ | active |
 | 18 | [Research Paper Writing](https://tashan.sh/capability/plugin-yuanyuanma03-research-paper-writing-skills-research-paper-writing.html) | 44 | 3 ★ | active |
-| 19 | [Math Olympiad](https://tashan.sh/capability/skill-anthropics-math-olympiad.html) | 49 | 2 repos | active |
-| 20 | [Sap Hana Cloud Data Intelligence](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cloud-data-intelligence.html) | 42 | 1 marketplaces | — |
-| 21 | [Sap Hana Ml](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-ml.html) | 42 | 1 marketplaces | — |
-| 22 | [Research Toolkit](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 37 | 2 ★ | active |
-| 23 | [Clinical Research](https://tashan.sh/capability/skill-alirezarezvani-clinical-research.html) | not scored | 1 repos | active |
-| 24 | [Grants](https://tashan.sh/capability/skill-alirezarezvani-grants.html) | not scored | 1 repos | active |
-| 25 | [Litreview](https://tashan.sh/capability/skill-alirezarezvani-litreview.html) | not scored | 1 repos | active |
-| 26 | [Senior Computer Vision](https://tashan.sh/capability/skill-alirezarezvani-senior-computer-vision.html) | not scored | 1 repos | active |
-| 27 | [Senior Data Scientist](https://tashan.sh/capability/skill-alirezarezvani-senior-data-scientist.html) | not scored | 1 repos | active |
-| 28 | [Statistical Analyst](https://tashan.sh/capability/skill-alirezarezvani-statistical-analyst.html) | not scored | 1 repos | active |
-| 29 | [Ab Test Setup](https://tashan.sh/capability/skill-alirezarezvani-ab-test-setup.html) | not scored | 1 repos | active |
+| 19 | [Clinical Research](https://tashan.sh/capability/skill-alirezarezvani-clinical-research.html) | 48 | 2 repos | active |
+| 20 | [Grants](https://tashan.sh/capability/skill-alirezarezvani-grants.html) | 48 | 2 repos | active |
+| 21 | [Litreview](https://tashan.sh/capability/skill-alirezarezvani-litreview.html) | 48 | 2 repos | active |
+| 22 | [Senior Computer Vision](https://tashan.sh/capability/skill-alirezarezvani-senior-computer-vision.html) | 48 | 2 repos | active |
+| 23 | [Statistical Analyst](https://tashan.sh/capability/skill-alirezarezvani-statistical-analyst.html) | 48 | 2 repos | active |
+| 24 | [Ab Test Setup](https://tashan.sh/capability/skill-alirezarezvani-ab-test-setup.html) | 48 | 2 repos | active |
+| 25 | [Sap Hana Cloud Data Intelligence](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cloud-data-intelligence.html) | 42 | 1 marketplaces | — |
+| 26 | [Sap Hana Ml](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-ml.html) | 42 | 1 marketplaces | — |
+| 27 | [Research Toolkit](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 37 | 2 ★ | active |
+| 28 | [Math Olympiad](https://tashan.sh/capability/skill-anthropics-math-olympiad.html) | not scored | 1 repos | active |
+| 29 | [Senior Data Scientist](https://tashan.sh/capability/skill-alirezarezvani-senior-data-scientist.html) | not scored | 1 repos | active |
 | 30 | [Experiment Designer](https://tashan.sh/capability/skill-alirezarezvani-experiment-designer.html) | not scored | 1 repos | active |
 | 31 | [Supply Chain Skills](https://tashan.sh/capability/plugin-kishorkukreja-awesome-supply-chain-supply-chain-skills.html) | 53 | 51 ★ | active |
 | 32 | [Scios Skill](https://tashan.sh/capability/pkg-scios-skill.html) | 60 | 243/wk | active |

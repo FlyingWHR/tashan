@@ -46,13 +46,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Coordinator Claude](https://tashan.sh/capability/plugin-oduffy-delphi-coordinator-claude-coordinator-claude.html) | 45 | 5 ★ | active |
 | 34 | [Deslop](https://tashan.sh/capability/plugin-agent-sh-deslop-deslop.html) | 45 | 3 ★ | active |
 | 35 | [Nova Thesis](https://tashan.sh/capability/plugin-jerry7991-nova-thesis-nova-thesis.html) | 43 | 12 ★ | active |
-| 36 | [Githits](https://tashan.sh/capability/pkg-githits.html) | 73 | 978/wk | active |
-| 37 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
-| 38 | [Memtrace Skills](https://tashan.sh/capability/pkg-memtrace-skills.html) | 70 | 2k/wk | active |
-| 39 | [Monomind](https://tashan.sh/capability/pkg-monomind.html) | 69 | 1k/wk | active |
-| 40 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 68 | 1k/wk | active |
+| 36 | [Package Registry](https://tashan.sh/capability/pkg-package-registry-mcp.html) | 31 | 840/wk | abandoned |
+| 37 | [Githits](https://tashan.sh/capability/pkg-githits.html) | 73 | 978/wk | active |
+| 38 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 70 | 413 ★ | active |
+| 39 | [Memtrace Skills](https://tashan.sh/capability/pkg-memtrace-skills.html) | 70 | 2k/wk | active |
+| 40 | [Monomind](https://tashan.sh/capability/pkg-monomind.html) | 69 | 1k/wk | active |
 
-Showing the top 40 of 141. The full ranked shelf is at https://tashan.sh/task/code-review.html.
+Showing the top 40 of 142. The full ranked shelf is at https://tashan.sh/task/code-review.html.
 
 ## What these numbers are not
 

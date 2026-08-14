@@ -40,17 +40,17 @@ Ranked by the tashan score
 | 27 | [AgentUtility Web Probe](https://tashan.sh/capability/pkg-agentutility-mcp-web-probe.html) | 62 | 345/wk | active |
 | 28 | [Onestep Puppeteer](https://tashan.sh/capability/pkg-onestep-puppeteer-mcp-server.html) | 61 | 228/wk | active |
 | 29 | [Selenium](https://tashan.sh/capability/pkg-angiejones-mcp-selenium.html) | 60 | 1k/wk | active |
-| 30 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-skills-firecrawl.html) | 60 | 70 ★ | active |
-| 31 | [Kapture](https://tashan.sh/capability/pkg-kapture-mcp.html) | 60 | 676/wk | active |
-| 32 | [Agent360 Browser](https://tashan.sh/capability/pkg-agent360-browser-mcp.html) | 60 | 426/wk | active |
-| 33 | [Supersurf](https://tashan.sh/capability/pkg-supersurf-mcp.html) | 60 | 177/wk | active |
-| 34 | [Browser Agent](https://tashan.sh/capability/pkg-runbook-ai-mcp.html) | 59 | 186/wk | active |
-| 35 | [Camofox Browser](https://tashan.sh/capability/pkg-camofox-browser.html) | 58 | 592/wk | active |
-| 36 | [Google Surf](https://tashan.sh/capability/pkg-google-surf-mcp.html) | 58 | 374/wk | active |
-| 37 | [Uplink](https://tashan.sh/capability/pkg-uplink-code-mcp.html) | 58 | 132/wk | active |
-| 38 | [Vibium](https://tashan.sh/capability/pkg-vibium.html) | 57 | 2k/wk | active |
-| 39 | [Browser Ipc Cdp](https://tashan.sh/capability/pkg-browser-ipc-cdp.html) | 57 | 143/wk | active |
-| 40 | [Easytable](https://tashan.sh/capability/pkg-easytable-mcp.html) | 56 | 241/wk | active |
+| 30 | [Kapture](https://tashan.sh/capability/pkg-kapture-mcp.html) | 60 | 676/wk | active |
+| 31 | [Agent360 Browser](https://tashan.sh/capability/pkg-agent360-browser-mcp.html) | 60 | 426/wk | active |
+| 32 | [Supersurf](https://tashan.sh/capability/pkg-supersurf-mcp.html) | 60 | 177/wk | active |
+| 33 | [Browser Agent](https://tashan.sh/capability/pkg-runbook-ai-mcp.html) | 59 | 186/wk | active |
+| 34 | [Camofox Browser](https://tashan.sh/capability/pkg-camofox-browser.html) | 58 | 592/wk | active |
+| 35 | [Google Surf](https://tashan.sh/capability/pkg-google-surf-mcp.html) | 58 | 374/wk | active |
+| 36 | [Uplink](https://tashan.sh/capability/pkg-uplink-code-mcp.html) | 58 | 132/wk | active |
+| 37 | [Vibium](https://tashan.sh/capability/pkg-vibium.html) | 57 | 2k/wk | active |
+| 38 | [Browser Ipc Cdp](https://tashan.sh/capability/pkg-browser-ipc-cdp.html) | 57 | 143/wk | active |
+| 39 | [Ainative Browser](https://tashan.sh/capability/pkg-ainative-browser-mcp.html) | 56 | 219/wk | active |
+| 40 | [Playwright Stealth](https://tashan.sh/capability/pkg-playwright-stealth-mcp-server.html) | 54 | 446/wk | active |
 
 Showing the top 40 of 114. The full ranked shelf is at https://tashan.sh/category/browser.html.
 

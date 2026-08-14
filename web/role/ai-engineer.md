@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 64 | 104 ★ | active |
 | 40 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 64 | 37 ★ | active |
 
-Showing the top 40 of 509. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
+Showing the top 40 of 500. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
 
 ## What these numbers are not
 

@@ -37,7 +37,7 @@ import build
 # star count drifting by three is not an event, and every field here has to survive the "would a
 # competent engineer want to be told?" test.
 WATCHED = ("vitality", "npm_deprecated", "gh_archived", "self_unmaintained", "npm_latest_version",
-           "npm_maintainers", "sec_advisory_count", "sec_max_severity", "sec_install_script",
+           "npm_maintainers", "npm_maint_fp", "sec_advisory_count", "sec_max_severity", "sec_install_script",
            "sec_permissions", "tashan_score")
 
 SEV_ORDER = {None: 0, "": 0, "LOW": 1, "MODERATE": 2, "MEDIUM": 2, "HIGH": 3, "CRITICAL": 4,
@@ -136,6 +136,19 @@ def diff(prev, cur, name):
                     "Check whether an alternative is better maintained before you depend on it further."))
 
     # --- who is behind it -------------------------------------------------------------------------
+    # OWNERSHIP CHANGED — the same number of maintainers, different people. This is how event-stream
+    # and ua-parser-js happened: nobody dropped, somebody was ADDED, and the count never moved. The
+    # count-based check below cannot see it by construction.
+    #
+    # Only fires when both sides are known: a first sighting has nothing to compare against, and
+    # reporting one as a handoff would alarm somebody about a package that simply entered the index.
+    was_fp, now_fp = g("npm_maint_fp")
+    if was_fp and now_fp and was_fp != now_fp:
+        out.append(("ownership_changed", "high",
+                    f"{name} has a different set of npm maintainers than it did",
+                    "who can publish this package changed — the classic supply-chain handoff, and "
+                    "invisible to a maintainer count that did not move"))
+
     was, now = g("npm_maintainers")
     if was and now and now < was and now <= 1:
         out.append(("maintainers_dropped", "medium",
@@ -233,6 +246,15 @@ def _selfcheck():
 
     got = {e[0] for e in diff(base, dict(base, npm_maintainers=1), "x")}
     assert "maintainers_dropped" in got, got
+    # A handoff with no change in headcount must still fire — that is the whole point.
+    same_count = {e[0] for e in diff(dict(base, npm_maint_fp="aaa"),
+                                     dict(base, npm_maint_fp="bbb"), "x")}
+    assert "ownership_changed" in same_count, same_count
+    assert "maintainers_dropped" not in same_count, same_count
+    # A first sighting has nothing to compare against and must not be reported as a handoff.
+    first = {e[0] for e in diff(dict(base, npm_maint_fp=None),
+                                dict(base, npm_maint_fp="bbb"), "x")}
+    assert "ownership_changed" not in first, first
     # a drop that still leaves a team is not a bus-factor alert
     assert "maintainers_dropped" not in {e[0] for e in diff(dict(base, npm_maintainers=9),
                                                             dict(base, npm_maintainers=4), "x")}

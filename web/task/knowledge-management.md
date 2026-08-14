@@ -21,9 +21,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 61 | 18 ★ | active |
 | 9 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 61 | 3k ★ | active |
 | 10 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 57 | 6k/wk | active |
-| 11 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 56 | 11 ★ | active |
-| 12 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 53 | 51 ★ | active |
-| 13 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
+| 11 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 53 | 51 ★ | active |
+| 12 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
+| 13 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 53 | 11 ★ | active |
 | 14 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 52 | 24 ★ | active |
 | 15 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 51 | 76 ★ | active |
 | 16 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 51 | 4 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Box](https://tashan.sh/capability/plugin-box-box-for-ai-box.html) | 54 | 5 ★ | active |
 | 40 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 54 | 10 ★ | active |
 
-Showing the top 40 of 238. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
+Showing the top 40 of 234. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
 
 ## What these numbers are not
 

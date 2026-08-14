@@ -18,14 +18,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) | 65 | 836/wk | active |
 | 6 | [Phd Deepread](https://tashan.sh/capability/plugin-heleninsights-dot-phd-deepread-workflow-phd-deepread.html) | 50 | 56 ★ | active |
 | 7 | [Research Co Pilot](https://tashan.sh/capability/plugin-marazii-research-co-pilot-research-co-pilot.html) | 45 | 5 ★ | active |
-| 8 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 56 | 6 repos | active |
-| 9 | [Paper Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-paper-interpreter.html) | 39 | 1 marketplaces | active |
-| 10 | [Article Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-article-interpreter.html) | 39 | 1 marketplaces | active |
-| 11 | [Research Toolkit](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 37 | 2 ★ | active |
-| 12 | [Research Summarizer](https://tashan.sh/capability/skill-alirezarezvani-research-summarizer.html) | not scored | 1 repos | active |
-| 13 | [Grants](https://tashan.sh/capability/skill-alirezarezvani-grants.html) | not scored | 1 repos | active |
-| 14 | [Litreview](https://tashan.sh/capability/skill-alirezarezvani-litreview.html) | not scored | 1 repos | active |
-| 15 | [Patent](https://tashan.sh/capability/skill-alirezarezvani-patent.html) | not scored | 1 repos | active |
+| 8 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 55 | 5 repos | active |
+| 9 | [Research Summarizer](https://tashan.sh/capability/skill-alirezarezvani-research-summarizer.html) | 48 | 2 repos | active |
+| 10 | [Grants](https://tashan.sh/capability/skill-alirezarezvani-grants.html) | 48 | 2 repos | active |
+| 11 | [Litreview](https://tashan.sh/capability/skill-alirezarezvani-litreview.html) | 48 | 2 repos | active |
+| 12 | [Patent](https://tashan.sh/capability/skill-alirezarezvani-patent.html) | 48 | 2 repos | active |
+| 13 | [Paper Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-paper-interpreter.html) | 39 | 1 marketplaces | active |
+| 14 | [Article Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-article-interpreter.html) | 39 | 1 marketplaces | active |
+| 15 | [Research Toolkit](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 37 | 2 ★ | active |
 | 16 | [Syllabus](https://tashan.sh/capability/skill-alirezarezvani-syllabus.html) | not scored | 1 repos | active |
 | 17 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 75 | 5k ★ | active |
 | 18 | [Bettercallclaude](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-bettercallclaude.html) | 60 | 33 ★ | active |

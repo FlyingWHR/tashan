@@ -626,6 +626,30 @@ ok("capability.js carries the same caption, so the client re-render does not dro
    "the client replaces <main>; without this the caption survives only until JS runs")
 
 print()
+print("# the warning rows carry the facts that make the warning land")
+# Rows junk() keeps OFF the board — confirmed malware and registry deletions — are fetched
+# separately into lookup.json so `doctor` can warn somebody already running one. Each SELECT had
+# grown its own hand-picked column list, so those rows arrived missing npm_downloads and
+# sec_scanned_at: claude-cup carries MAL-2026-5789 and 4,837,320 weekly installs, and the lookup
+# said its adoption was unknown while /v0.1/audit reported "no security scan has been run on this"
+# in the same response as the advisory it had just found.
+_lk = json.load(open(os.path.join(WEB, "data", "lookup.json"), encoding="utf-8"))
+_recs = _lk.get("records") or []
+_mal = [r for r in _recs if r.get("sec_max_severity") == "MALICIOUS"]
+ok(f"lookup.json still carries every confirmed-malicious row ({len(_mal)})", len(_mal) >= 1)
+_thin = [r["id"] for r in _mal if r.get("npm_pkg") and not r.get("sec_scanned_at")]
+ok("a malicious row says WHEN it was scanned, so nothing reports it as unscanned",
+   not _thin, f"{_thin[:3]} — /v0.1/audit will contradict itself on these")
+# Adoption is allowed to be absent — two of these were never npm-enriched, and "unknown" is a real
+# answer this project insists on elsewhere. What must not happen is the COLUMN being dropped from
+# the fetch, which is what the old hand-picked SELECT did. Assert that adoption survives where it
+# exists, which proves the field is in the query without pretending every package has one.
+_withadopt = [r for r in _mal if r.get("npm_downloads")]
+ok("...and the fetch carries adoption, so the number that makes it matter is not dropped",
+   bool(_withadopt),
+   "no malicious row carries npm_downloads — the column fell out of the SELECT again")
+
+print()
 print("# a capability declared over carries no score, in the artifact")
 # compute_scores nulls the score for a discontinued row — eligibility overrides score — but npm
 # enrichment can set npm_deprecated AFTER scoring in the same run, and the score then survives to

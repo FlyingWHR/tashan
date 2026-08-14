@@ -25,24 +25,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 48 | 1 ★ | active |
 | 13 | [Deepread](https://tashan.sh/capability/plugin-deepread-tech-skills-deepread.html) | 48 | 4 ★ | active |
 | 14 | [Daft](https://tashan.sh/capability/plugin-eventual-inc-daft-daft.html) | 76 | 6k ★ | active |
-| 15 | [AWS Data Analytics](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-data-analytics.html) | 46 | 2 marketplaces | — |
-| 16 | [Oracle AI Data Platform Workbench Spark Connectors](https://tashan.sh/capability/plugin-oracle-samples-oracle-aidp-samples-oracle-ai-data-platform-workbench-spark-connectors.html) | 46 | 2 marketplaces | — |
-| 17 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 46 | 1 ★ | active |
-| 18 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 45 | 3 ★ | active |
-| 19 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 44 | 2 marketplaces | active |
-| 20 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 44 | 2 marketplaces | active |
-| 21 | [Holistics Development](https://tashan.sh/capability/plugin-holistics-skills-holistics-development.html) | 42 | 1 marketplaces | active |
-| 22 | [Honeydew](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew.html) | 42 | 1 marketplaces | active |
-| 23 | [Honeydew AI](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew-ai.html) | 42 | 1 marketplaces | active |
-| 24 | [Sap Abap Cds](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-abap-cds.html) | 42 | 1 marketplaces | — |
-| 25 | [Sap Btp Master Data Integration](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-master-data-integration.html) | 42 | 1 marketplaces | — |
-| 26 | [Sap Datasphere](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-datasphere.html) | 42 | 1 marketplaces | — |
-| 27 | [Sap Hana Cloud Data Intelligence](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cloud-data-intelligence.html) | 42 | 1 marketplaces | — |
-| 28 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 39 | 1 marketplaces | active |
-| 29 | [Cdo Review](https://tashan.sh/capability/skill-alirezarezvani-cdo-review.html) | not scored | 1 repos | active |
-| 30 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | not scored | 1 repos | active |
-| 31 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | not scored | 1 repos | active |
-| 32 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | not scored | 1 repos | active |
+| 15 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | 48 | 2 repos | active |
+| 16 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | 48 | 2 repos | active |
+| 17 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | 48 | 2 repos | active |
+| 18 | [AWS Data Analytics](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-data-analytics.html) | 46 | 2 marketplaces | — |
+| 19 | [Oracle AI Data Platform Workbench Spark Connectors](https://tashan.sh/capability/plugin-oracle-samples-oracle-aidp-samples-oracle-ai-data-platform-workbench-spark-connectors.html) | 46 | 2 marketplaces | — |
+| 20 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 46 | 1 ★ | active |
+| 21 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 45 | 3 ★ | active |
+| 22 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 44 | 2 marketplaces | active |
+| 23 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 44 | 2 marketplaces | active |
+| 24 | [Holistics Development](https://tashan.sh/capability/plugin-holistics-skills-holistics-development.html) | 42 | 1 marketplaces | active |
+| 25 | [Honeydew](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew.html) | 42 | 1 marketplaces | active |
+| 26 | [Honeydew AI](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew-ai.html) | 42 | 1 marketplaces | active |
+| 27 | [Sap Abap Cds](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-abap-cds.html) | 42 | 1 marketplaces | — |
+| 28 | [Sap Btp Master Data Integration](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-master-data-integration.html) | 42 | 1 marketplaces | — |
+| 29 | [Sap Datasphere](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-datasphere.html) | 42 | 1 marketplaces | — |
+| 30 | [Sap Hana Cloud Data Intelligence](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cloud-data-intelligence.html) | 42 | 1 marketplaces | — |
+| 31 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 39 | 1 marketplaces | active |
+| 32 | [Cdo Review](https://tashan.sh/capability/skill-alirezarezvani-cdo-review.html) | not scored | 1 repos | active |
 | 33 | [Universal Scraping Architect](https://tashan.sh/capability/skill-alirezarezvani-universal-scraping-architect.html) | not scored | 1 repos | active |
 | 34 | [Oe · openenterprise](https://tashan.sh/capability/pkg-openenterprise-oe-mcp.html) | not scored | 2k/wk | abandoned |
 | 35 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 60 | 25 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 52 | 6 ★ | active |
 | 40 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 45 | 3 ★ | active |
 
-Showing the top 40 of 45. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
+Showing the top 40 of 46. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
 
 ## What these numbers are not
 

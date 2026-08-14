@@ -11,10 +11,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 - **Knowledge management** — [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) · tashan score 78
 - **Project management** — [Backlog](https://tashan.sh/capability/pkg-backlog-mcp-server.html) · tashan score 75
-- **Browser automation** — [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) · tashan score 92
 - **Messaging and email** — [Agentmail](https://tashan.sh/capability/pkg-agentmail-mcp.html) · tashan score 75
+- **Browser automation** — [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) · tashan score 92
 - **Web research** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 86
-- **Document production** — [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) · tashan score 69
+- **Process automation** — [Safety Net](https://tashan.sh/capability/plugin-kenryu42-claude-code-safety-net-safety-net.html) · tashan score 73
 
 ## Ranked
 
@@ -49,10 +49,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 57 | 6k/wk | active |
 | 28 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 57 | 32 ★ | active |
 | 29 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 57 | 24 ★ | active |
-| 30 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 56 | 11 ★ | active |
-| 31 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 54 | 10 ★ | active |
-| 32 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 53 | 51 ★ | active |
-| 33 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
+| 30 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 54 | 10 ★ | active |
+| 31 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 53 | 51 ★ | active |
+| 32 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
+| 33 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 53 | 11 ★ | active |
 | 34 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 52 | 24 ★ | active |
 | 35 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 51 | 76 ★ | active |
 | 36 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 51 | 4 ★ | active |
@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 48 | 7 ★ | active |
 | 40 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 48 | 28 ★ | active |
 
-Showing the top 40 of 728. The full ranked shelf is at https://tashan.sh/role/ops.html.
+Showing the top 40 of 721. The full ranked shelf is at https://tashan.sh/role/ops.html.
 
 ## What these numbers are not
 

@@ -10,8 +10,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Knowledge management** — [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) · tashan score 78
-- **Web scraping** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 86
-- **Web research** — [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) · tashan score 71
+- **Web research** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 86
+- **Web scraping** — [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) · tashan score 71
 - **Literature review** — [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) · tashan score 76
 - **Scientific research** — [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) · tashan score 69
 
@@ -35,10 +35,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 61 | 3k ★ | active |
 | 15 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 57 | 6k/wk | active |
 | 16 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 57 | 32 ★ | active |
-| 17 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 56 | 11 ★ | active |
-| 18 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 56 | 35 ★ | active |
-| 19 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 53 | 51 ★ | active |
-| 20 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
+| 17 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 56 | 35 ★ | active |
+| 18 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 53 | 51 ★ | active |
+| 19 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
+| 20 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 53 | 11 ★ | active |
 | 21 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 52 | 24 ★ | active |
 | 22 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
 | 23 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 51 | 76 ★ | active |
@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 69 | 2k/wk | active |
 | 40 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 69 | 284 ★ | active |
 
-Showing the top 40 of 374. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 371. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

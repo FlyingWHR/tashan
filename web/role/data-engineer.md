@@ -50,15 +50,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Deepread](https://tashan.sh/capability/plugin-deepread-tech-skills-deepread.html) | 48 | 4 ★ | active |
 | 32 | [Daft](https://tashan.sh/capability/plugin-eventual-inc-daft-daft.html) | 76 | 6k ★ | active |
 | 33 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 65 | 90 ★ | active |
-| 34 | [AWS Data Analytics](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-data-analytics.html) | 46 | 2 marketplaces | — |
-| 35 | [Oracle AI Data Platform Workbench Spark Connectors](https://tashan.sh/capability/plugin-oracle-samples-oracle-aidp-samples-oracle-ai-data-platform-workbench-spark-connectors.html) | 46 | 2 marketplaces | — |
-| 36 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 46 | 1 ★ | active |
-| 37 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 45 | 3 ★ | active |
-| 38 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 44 | 2 marketplaces | active |
-| 39 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 44 | 2 marketplaces | active |
-| 40 | [Perf](https://tashan.sh/capability/plugin-agent-sh-perf-perf.html) | 43 | 2 ★ | active |
+| 34 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | 48 | 2 repos | active |
+| 35 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | 48 | 2 repos | active |
+| 36 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | 48 | 2 repos | active |
+| 37 | [Database Designer](https://tashan.sh/capability/skill-alirezarezvani-database-designer.html) | 48 | 2 repos | active |
+| 38 | [Performance Profiler](https://tashan.sh/capability/skill-alirezarezvani-performance-profiler.html) | 48 | 2 repos | active |
+| 39 | [SQL Database Assistant](https://tashan.sh/capability/skill-alirezarezvani-sql-database-assistant.html) | 48 | 2 repos | active |
+| 40 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | 48 | 2 repos | active |
 
-Showing the top 40 of 83. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
+Showing the top 40 of 84. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
 
 ## What these numbers are not
 

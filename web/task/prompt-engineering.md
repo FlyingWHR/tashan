@@ -28,15 +28,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 48 | 6 ★ | active |
 | 16 | [LLM Transpile](https://tashan.sh/capability/plugin-epicsagas-llm-transpile-llm-transpile.html) | 47 | 5 ★ | active |
 | 17 | [Agent Runway](https://tashan.sh/capability/plugin-rennf93-agent-runway-agent-runway.html) | 44 | 3 ★ | active |
-| 18 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 48 | 20 ★ | active |
-| 19 | [Compress](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-compress.html) | 43 | 1 marketplaces | active |
-| 20 | [Image Prompt Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-image-prompt-generator.html) | 43 | 1 marketplaces | active |
-| 21 | [Prompt Engineering Skills · chujianyun](https://tashan.sh/capability/plugin-chujianyun-skills-prompt-engineering-skills.html) | 39 | 1 marketplaces | active |
-| 22 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | not scored | 1 repos | active |
-| 23 | [Behuman](https://tashan.sh/capability/skill-alirezarezvani-behuman.html) | not scored | 1 repos | active |
-| 24 | [LLM Cost Optimizer](https://tashan.sh/capability/skill-alirezarezvani-llm-cost-optimizer.html) | not scored | 1 repos | active |
-| 25 | [Prompt Governance](https://tashan.sh/capability/skill-alirezarezvani-prompt-governance.html) | not scored | 1 repos | active |
-| 26 | [Prompt Engineer Toolkit](https://tashan.sh/capability/skill-alirezarezvani-prompt-engineer-toolkit.html) | not scored | 1 repos | active |
+| 18 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | 48 | 2 repos | active |
+| 19 | [LLM Cost Optimizer](https://tashan.sh/capability/skill-alirezarezvani-llm-cost-optimizer.html) | 48 | 2 repos | active |
+| 20 | [Prompt Governance](https://tashan.sh/capability/skill-alirezarezvani-prompt-governance.html) | 48 | 2 repos | active |
+| 21 | [Prompt Engineer Toolkit](https://tashan.sh/capability/skill-alirezarezvani-prompt-engineer-toolkit.html) | 48 | 2 repos | active |
+| 22 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 48 | 20 ★ | active |
+| 23 | [Compress](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-compress.html) | 43 | 1 marketplaces | active |
+| 24 | [Image Prompt Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-image-prompt-generator.html) | 43 | 1 marketplaces | active |
+| 25 | [Prompt Engineering Skills · chujianyun](https://tashan.sh/capability/plugin-chujianyun-skills-prompt-engineering-skills.html) | 39 | 1 marketplaces | active |
+| 26 | [Behuman](https://tashan.sh/capability/skill-alirezarezvani-behuman.html) | not scored | 1 repos | active |
 | 27 | [Fable Goal](https://tashan.sh/capability/skill-alirezarezvani-fable-goal.html) | not scored | 1 repos | active |
 | 28 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 70 | 218 ★ | active |
 | 29 | [Prompt Engineering Skills](https://tashan.sh/capability/plugin-treylom-prompt-engineering-skills-prompt-engineering-skills.html) | 67 | 168 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 69 | 1k/wk | active |
 | 40 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 68 | 931/wk | active |
 
-Showing the top 40 of 71. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
+Showing the top 40 of 70. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
 
 ## What these numbers are not
 

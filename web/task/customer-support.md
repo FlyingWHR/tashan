@@ -11,14 +11,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Voicenter](https://tashan.sh/capability/plugin-voicenterteam-claude-marketplace-voicenter.html) | 48 | 2 ★ | active |
-| 2 | [Corebee](https://tashan.sh/capability/plugin-jonny-1812-corebee-mcp-skills-corebee.html) | 43 | 0 ★ | active |
-| 3 | [Gorgias Automation](https://tashan.sh/capability/skill-composiohq-gorgias-automation.html) | not scored | 1 repos | active |
-| 4 | [Business Growth Skills](https://tashan.sh/capability/skill-alirezarezvani-business-growth-skills.html) | not scored | 1 repos | active |
-| 5 | [Customer Success Manager](https://tashan.sh/capability/skill-alirezarezvani-customer-success-manager.html) | not scored | 1 repos | active |
-| 6 | [Cco Review](https://tashan.sh/capability/skill-alirezarezvani-cco-review.html) | not scored | 1 repos | active |
-| 7 | [Chief Customer Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-customer-officer-advisor.html) | not scored | 1 repos | active |
-| 8 | [Churn Prevention](https://tashan.sh/capability/skill-alirezarezvani-churn-prevention.html) | not scored | 1 repos | active |
+| 1 | [Customer Success Manager](https://tashan.sh/capability/skill-alirezarezvani-customer-success-manager.html) | 48 | 2 repos | active |
+| 2 | [Chief Customer Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-customer-officer-advisor.html) | 48 | 2 repos | active |
+| 3 | [Churn Prevention](https://tashan.sh/capability/skill-alirezarezvani-churn-prevention.html) | 48 | 2 repos | active |
+| 4 | [Voicenter](https://tashan.sh/capability/plugin-voicenterteam-claude-marketplace-voicenter.html) | 48 | 2 ★ | active |
+| 5 | [Corebee](https://tashan.sh/capability/plugin-jonny-1812-corebee-mcp-skills-corebee.html) | 43 | 0 ★ | active |
+| 6 | [Gorgias Automation](https://tashan.sh/capability/skill-composiohq-gorgias-automation.html) | not scored | 1 repos | active |
+| 7 | [Business Growth Skills](https://tashan.sh/capability/skill-alirezarezvani-business-growth-skills.html) | not scored | 1 repos | active |
+| 8 | [Cco Review](https://tashan.sh/capability/skill-alirezarezvani-cco-review.html) | not scored | 1 repos | active |
 | 9 | [Help Scout](https://tashan.sh/capability/pkg-help-scout-mcp-server.html) | 65 | 801/wk | active |
 | 10 | [Freescout](https://tashan.sh/capability/pkg-verygoodplugins-mcp-freescout.html) | 49 | 239/wk | active |
 | 11 | [Gorgias](https://tashan.sh/capability/pkg-gorgias-mcp-server.html) | 43 | 766/wk | active |

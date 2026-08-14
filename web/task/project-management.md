@@ -38,21 +38,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 67 | 205 ★ | active |
 | 26 | [Clickup Custom](https://tashan.sh/capability/pkg-clickup-custom-mcp.html) | 62 | 746/wk | active |
 | 27 | [Sq](https://tashan.sh/capability/plugin-derekstride-sq-sq.html) | 56 | 13 ★ | active |
-| 28 | [Execute](https://tashan.sh/capability/skill-alirezarezvani-execute.html) | 54 | 5 repos | active |
-| 29 | [Executing Plans](https://tashan.sh/capability/skill-obra-executing-plans.html) | 52 | 3 repos | active |
-| 30 | [Writing Plans](https://tashan.sh/capability/skill-obra-writing-plans.html) | 52 | 3 repos | active |
-| 31 | [The H AI K U Method](https://tashan.sh/capability/plugin-gigsmart-haiku-method-the-h-ai-k-u-method.html) | 51 | 24 ★ | active |
-| 32 | [Postmortem](https://tashan.sh/capability/skill-alirezarezvani-postmortem.html) | 48 | 2 repos | active |
-| 33 | [Weekly Review](https://tashan.sh/capability/skill-alirezarezvani-weekly-review.html) | 48 | 2 repos | active |
-| 34 | [Shipyard · Acendas](https://tashan.sh/capability/plugin-acendas-shipyard-shipyard.html) | 48 | 2 ★ | active |
-| 35 | [Launchpad](https://tashan.sh/capability/plugin-builtform-launchpad-launchpad.html) | 46 | 1 ★ | active |
-| 36 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 46 | 5 ★ | active |
-| 37 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 45 | 3 ★ | active |
-| 38 | [Belmont](https://tashan.sh/capability/plugin-blake-simpson-belmont-belmont.html) | 45 | 4 ★ | active |
-| 39 | [Product In Acquisitions](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-product-in-acquisitions.html) | 43 | 1 marketplaces | active |
-| 40 | [Superpowers Beads](https://tashan.sh/capability/plugin-rsktash-superpowers-superpowers-beads.html) | 43 | 0 ★ | active |
+| 28 | [Executing Plans](https://tashan.sh/capability/skill-obra-executing-plans.html) | 52 | 3 repos | active |
+| 29 | [Writing Plans](https://tashan.sh/capability/skill-obra-writing-plans.html) | 52 | 3 repos | active |
+| 30 | [Change Management](https://tashan.sh/capability/skill-alirezarezvani-change-management.html) | 51 | 3 repos | active |
+| 31 | [Deep Work](https://tashan.sh/capability/skill-alirezarezvani-deep-work.html) | 51 | 3 repos | active |
+| 32 | [The H AI K U Method](https://tashan.sh/capability/plugin-gigsmart-haiku-method-the-h-ai-k-u-method.html) | 51 | 24 ★ | active |
+| 33 | [Capacity Planner](https://tashan.sh/capability/skill-alirezarezvani-capacity-planner.html) | 48 | 2 repos | active |
+| 34 | [Postmortem](https://tashan.sh/capability/skill-alirezarezvani-postmortem.html) | 48 | 2 repos | active |
+| 35 | [Company OS](https://tashan.sh/capability/skill-alirezarezvani-company-os.html) | 48 | 2 repos | active |
+| 36 | [Coo Advisor](https://tashan.sh/capability/skill-alirezarezvani-coo-advisor.html) | 48 | 2 repos | active |
+| 37 | [Decision Logger](https://tashan.sh/capability/skill-alirezarezvani-decision-logger.html) | 48 | 2 repos | active |
+| 38 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | 48 | 2 repos | active |
+| 39 | [Tech Debt Tracker](https://tashan.sh/capability/skill-alirezarezvani-tech-debt-tracker.html) | 48 | 2 repos | active |
+| 40 | [Agile Product Owner](https://tashan.sh/capability/skill-alirezarezvani-agile-product-owner.html) | 48 | 2 repos | active |
 
-Showing the top 40 of 111. The full ranked shelf is at https://tashan.sh/task/project-management.html.
+Showing the top 40 of 109. The full ranked shelf is at https://tashan.sh/task/project-management.html.
 
 ## What these numbers are not
 

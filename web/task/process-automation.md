@@ -37,22 +37,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 24 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 47 | 6 ★ | active |
 | 25 | [Flow Studio Power Automate](https://tashan.sh/capability/plugin-ninihen1-power-automate-mcp-skills-flow-studio-power-automate.html) | 43 | 26 ★ | active |
 | 26 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 69 | 2k/wk | active |
-| 27 | [Resume](https://tashan.sh/capability/skill-alirezarezvani-resume.html) | 53 | 4 repos | active |
-| 28 | [Loop](https://tashan.sh/capability/skill-alirezarezvani-loop.html) | 48 | 2 repos | active |
-| 29 | [Imessage · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-imessage-mcp-imessage-mcp.html) | 48 | 2 ★ | active |
-| 30 | [Mise](https://tashan.sh/capability/plugin-brentmitchell25-mise-plugin-mise.html) | 48 | 2 ★ | active |
-| 31 | [Slack · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-slack-mcp-slack-mcp.html) | 47 | 1 ★ | active |
-| 32 | [Superglue](https://tashan.sh/capability/plugin-superglue-ai-cli-superglue.html) | 47 | 1 ★ | active |
-| 33 | [Klarity](https://tashan.sh/capability/plugin-klarity-ai-klarity-mcp-klarity.html) | 46 | 1 ★ | active |
-| 34 | [Shippo](https://tashan.sh/capability/plugin-goshippo-ai-shippo.html) | 46 | 1 ★ | active |
-| 35 | [Wu Whatsapp](https://tashan.sh/capability/plugin-ibrahimhajjaj-wu-cli-wu-whatsapp.html) | 45 | 14 ★ | active |
-| 36 | [Kognitos](https://tashan.sh/capability/plugin-kognitos-kognitos-plugin-kognitos.html) | 45 | 1 ★ | active |
-| 37 | [Sap Btp Cias](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-cias.html) | 42 | 1 marketplaces | — |
-| 38 | [Sap Btp Integration Suite](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-integration-suite.html) | 42 | 1 marketplaces | — |
-| 39 | [Sap Btp Intelligent Situation Automation](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-intelligent-situation-automation.html) | 42 | 1 marketplaces | — |
-| 40 | [Sap Btp Job Scheduling](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-job-scheduling.html) | 42 | 1 marketplaces | — |
+| 27 | [Process Mapper](https://tashan.sh/capability/skill-alirezarezvani-process-mapper.html) | 48 | 2 repos | active |
+| 28 | [Coo Advisor](https://tashan.sh/capability/skill-alirezarezvani-coo-advisor.html) | 48 | 2 repos | active |
+| 29 | [Google Workspace CLI](https://tashan.sh/capability/skill-alirezarezvani-google-workspace-cli.html) | 48 | 2 repos | active |
+| 30 | [Workflow Builder](https://tashan.sh/capability/skill-alirezarezvani-workflow-builder.html) | 48 | 2 repos | active |
+| 31 | [Imessage · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-imessage-mcp-imessage-mcp.html) | 48 | 2 ★ | active |
+| 32 | [Mise](https://tashan.sh/capability/plugin-brentmitchell25-mise-plugin-mise.html) | 48 | 2 ★ | active |
+| 33 | [Slack · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-slack-mcp-slack-mcp.html) | 47 | 1 ★ | active |
+| 34 | [Superglue](https://tashan.sh/capability/plugin-superglue-ai-cli-superglue.html) | 47 | 1 ★ | active |
+| 35 | [Klarity](https://tashan.sh/capability/plugin-klarity-ai-klarity-mcp-klarity.html) | 46 | 1 ★ | active |
+| 36 | [Shippo](https://tashan.sh/capability/plugin-goshippo-ai-shippo.html) | 46 | 1 ★ | active |
+| 37 | [Wu Whatsapp](https://tashan.sh/capability/plugin-ibrahimhajjaj-wu-cli-wu-whatsapp.html) | 45 | 14 ★ | active |
+| 38 | [Kognitos](https://tashan.sh/capability/plugin-kognitos-kognitos-plugin-kognitos.html) | 45 | 1 ★ | active |
+| 39 | [Sap Btp Cias](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-cias.html) | 42 | 1 marketplaces | — |
+| 40 | [Sap Btp Integration Suite](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-integration-suite.html) | 42 | 1 marketplaces | — |
 
-Showing the top 40 of 57. The full ranked shelf is at https://tashan.sh/task/process-automation.html.
+Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/task/process-automation.html.
 
 ## What these numbers are not
 

@@ -46,13 +46,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 47 | 6 ★ | active |
 | 34 | [Zilliz](https://tashan.sh/capability/plugin-zilliztech-zilliz-plugin-zilliz.html) | 46 | 3 ★ | active |
 | 35 | [Anglesite](https://tashan.sh/capability/plugin-anglesite-anglesite-skills-anglesite.html) | 46 | 4 ★ | active |
-| 36 | [Cpln](https://tashan.sh/capability/plugin-controlplane-com-ai-plugin-cpln.html) | 43 | 10 ★ | active |
+| 36 | [Cpln](https://tashan.sh/capability/plugin-controlplane-com-ai-plugin-cpln.html) | 44 | 10 ★ | active |
 | 37 | [Jenkins · mcpland](https://tashan.sh/capability/pkg-jenkins-mcp.html) | 41 | 725/wk | active |
 | 38 | [SSH · tufantunc](https://tashan.sh/capability/pkg-ssh-mcp.html) | 38 | 1k/wk | abandoned |
 | 39 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
 | 40 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 84 | 14k/wk | active |
 
-Showing the top 40 of 175. The full ranked shelf is at https://tashan.sh/task/infrastructure-and-deployment.html.
+Showing the top 40 of 179. The full ranked shelf is at https://tashan.sh/task/infrastructure-and-deployment.html.
 
 ## What these numbers are not
 

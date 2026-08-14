@@ -20,19 +20,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 52 | 6 ★ | active |
 | 8 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 48 | 240 ★ | active |
 | 9 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 75 | 4k ★ | active |
-| 10 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 46 | 1 ★ | active |
-| 11 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 44 | 1 ★ | active |
-| 12 | [Insight Blueprint](https://tashan.sh/capability/plugin-etoyama-insight-blueprint-insight-blueprint.html) | 43 | 0 ★ | active |
-| 13 | [Fullstory · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 42 | 1 marketplaces | — |
-| 14 | [Holistics Reporting](https://tashan.sh/capability/plugin-holistics-skills-holistics-reporting.html) | 42 | 1 marketplaces | active |
-| 15 | [Honeydew](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew.html) | 42 | 1 marketplaces | active |
-| 16 | [Honeydew AI](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew-ai.html) | 42 | 1 marketplaces | active |
-| 17 | [Xlsx · anthropics](https://tashan.sh/capability/skill-anthropics-xlsx.html) | not scored | 1 repos | active |
-| 18 | [Excel Automation](https://tashan.sh/capability/skill-composiohq-excel-automation.html) | not scored | 1 repos | active |
-| 19 | [Googlebigquery Automation](https://tashan.sh/capability/skill-composiohq-googlebigquery-automation.html) | not scored | 1 repos | active |
-| 20 | [Senior Data Scientist](https://tashan.sh/capability/skill-alirezarezvani-senior-data-scientist.html) | not scored | 1 repos | active |
-| 21 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | not scored | 1 repos | active |
-| 22 | [Product Analytics](https://tashan.sh/capability/skill-alirezarezvani-product-analytics.html) | not scored | 1 repos | active |
+| 10 | [Xlsx](https://tashan.sh/capability/skill-anthropics-xlsx.html) | 49 | 2 repos | active |
+| 11 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | 48 | 2 repos | active |
+| 12 | [Product Analytics](https://tashan.sh/capability/skill-alirezarezvani-product-analytics.html) | 48 | 2 repos | active |
+| 13 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 46 | 1 ★ | active |
+| 14 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 44 | 1 ★ | active |
+| 15 | [Insight Blueprint](https://tashan.sh/capability/plugin-etoyama-insight-blueprint-insight-blueprint.html) | 43 | 0 ★ | active |
+| 16 | [Fullstory · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 42 | 1 marketplaces | — |
+| 17 | [Holistics Reporting](https://tashan.sh/capability/plugin-holistics-skills-holistics-reporting.html) | 42 | 1 marketplaces | active |
+| 18 | [Honeydew](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew.html) | 42 | 1 marketplaces | active |
+| 19 | [Honeydew AI](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew-ai.html) | 42 | 1 marketplaces | active |
+| 20 | [Excel Automation](https://tashan.sh/capability/skill-composiohq-excel-automation.html) | not scored | 1 repos | active |
+| 21 | [Googlebigquery Automation](https://tashan.sh/capability/skill-composiohq-googlebigquery-automation.html) | not scored | 1 repos | active |
+| 22 | [Senior Data Scientist](https://tashan.sh/capability/skill-alirezarezvani-senior-data-scientist.html) | not scored | 1 repos | active |
 | 23 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 63 | 30 ★ | active |
 | 24 | [ClickHouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 54 | 5 ★ | active |
 | 25 | [Fullstory](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 47 | 9 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Roistat](https://tashan.sh/capability/pkg-theyahia-roistat-mcp.html) | 34 | 42/wk | active |
 | 40 | [Calltouch](https://tashan.sh/capability/pkg-theyahia-calltouch-mcp.html) | 34 | 37/wk | active |
 
-Showing the top 40 of 51. The full ranked shelf is at https://tashan.sh/task/exploratory-data-analysis.html.
+Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/exploratory-data-analysis.html.
 
 ## What these numbers are not
 

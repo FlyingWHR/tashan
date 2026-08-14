@@ -16,6 +16,7 @@ Scores are transparent, labelled, and computed here — never a black box.
 Roadmap (next passes, not here yet): GitHub repo-health, git-history retention/churn, LLM expertise eval.
 """
 import collections, json, os, sqlite3, urllib.request, urllib.error, urllib.parse, time, math, re, subprocess
+import hashlib
 from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,6 +41,8 @@ CREATE TABLE IF NOT EXISTS capabilities (
   stars_median INTEGER DEFAULT 0, stars_max INTEGER DEFAULT 0, last_seen TEXT,
   npm_downloads INTEGER, npm_last_publish TEXT, npm_created TEXT,
   npm_maintainers INTEGER, npm_versions INTEGER, npm_deprecated INTEGER,
+  npm_maint_fp TEXT,            -- hash of the sorted maintainer set: detects a handoff,
+                                -- which the count alone cannot. Never the names.
   co_used TEXT,
   adoption REAL, upkeep REAL, freshness REAL, tashan_score REAL,
   expertise REAL, expertise_verdict TEXT, expertise_note TEXT,
@@ -151,7 +154,7 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # task tag; category was one bare string, so an author's own declaration and a 60%-
            # accurate naive-Bayes guess were stored identically and rendered identically as fact.
            # 40% of the labels on the site were wrong and nothing on the row said which.
-           "category_basis TEXT", "category_conf REAL", "skill_doc TEXT"
+           "category_basis TEXT", "category_conf REAL", "skill_doc TEXT", "npm_maint_fp TEXT"
            # The author's OWN package.json keywords, comma-joined like gh_topics. Fetched on every
            # enrichment pass since the beginning and thrown away, which left npm the only kind with
            # no author vocabulary at all: plugins had manifest tags, skills had frontmatter, and
@@ -184,7 +187,7 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            "shim INTEGER",              # 1 = the author describes it as a bridge/proxy over something else
            "shim_note TEXT"]            # their words, so the page can answer "says who?"
 
-SCHEMA_VERSION = 16  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 17  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # v5 RENAMED the headline score. "Trust" claimed more than the SCORE measures: it is upkeep, freshness
 # and adoption, and a number whose name needs walking back is misnamed. That still holds — the security
@@ -624,6 +627,19 @@ def enrich_npm(con):
                 # never faked to 0; this was the leak.
                 info["latest_version"] = latest or None
                 info["maintainers"] = len(meta["maintainers"]) if meta.get("maintainers") else None
+                # A FINGERPRINT OF WHO, NOT JUST HOW MANY. The count alone cannot tell a handoff from
+                # a headcount change, and a handoff is the classic supply-chain attack — event-stream
+                # and ua-parser-js were both "same number of maintainers, different people". We
+                # already have the names in the packument and were discarding them.
+                #
+                # A HASH, DELIBERATELY, NOT THE NAMES. The signal we want is "this changed", and that
+                # is all a hash gives. Storing the list would turn a package index into a register of
+                # individuals and publish who maintains what, which is a different product and not
+                # one this project should become. Sorted, so re-ordering is not a change.
+                _m = meta.get("maintainers") or []
+                _names = sorted(str((x or {}).get("name") or x) for x in _m)
+                info["maint_fp"] = (hashlib.sha256("\x00".join(_names).encode()).hexdigest()[:16]
+                                    if _names else None)
                 info["versions"] = len(meta["versions"]) if meta.get("versions") else None
                 # UNPUBLISHED IS NOT UNKNOWN. npm answers a removed package with a tombstone packument —
                 # `_id`, `_rev`, `name`, `time` and nothing else: no dist-tags, no versions, no
@@ -670,13 +686,14 @@ def enrich_npm(con):
               npm_last_publish=COALESCE(?, npm_last_publish),
               npm_created=COALESCE(?, npm_created),
               npm_maintainers=COALESCE(?, npm_maintainers),
+              npm_maint_fp=COALESCE(?, npm_maint_fp),
               npm_versions=COALESCE(?, npm_versions),
               npm_deprecated=COALESCE(?, npm_deprecated),
               npm_latest_version=COALESCE(?, npm_latest_version),
               npm_keywords=COALESCE(?, npm_keywords),
               source_repo=COALESCE(source_repo,?) WHERE id=?""",
           (info.get("downloads"), info.get("last_publish"), info.get("created"),
-           info.get("maintainers"), info.get("versions"), info.get("deprecated"),
+           info.get("maintainers"), info.get("maint_fp"), info.get("versions"), info.get("deprecated"),
            info.get("latest_version"), ",".join(info.get("keywords") or []) or None,
            info.get("repo"), cid))
         done += 1
@@ -2262,14 +2279,25 @@ def export(con):
     # absent from the board, the bulk export and every hub — we must never recommend it. But `doctor`
     # answers from what it can find, so if it is missing here too, a user running it is told
     # "unmeasured, not necessarily bad". The row is the only thing that lets us warn.
-    delisted = [dict(zip(("id", "name", "kind", "registry_status"), r)) for r in con.execute(
-        "SELECT id, name, kind, registry_status FROM capabilities WHERE registry_status='deleted'")]
+    # THE FULL LOOKUP COLUMN SET, not a hand-picked subset. These rows are fetched separately
+    # because they are absent from `caps`, and each SELECT had grown its own short list of columns —
+    # so the warning rows arrived at the lookup missing the very facts that make the warning land.
+    # LOOKUP carries computed fields too (label, rated, official), which are not columns — so
+    # intersect with the real schema rather than assuming the two lists are the same thing.
+    _have = {r[1] for r in con.execute("PRAGMA table_info(capabilities)")}
+    _sel = [c for c in dict.fromkeys(LOOKUP + ["sec_advisories"]) if c in _have]
+    _cols = ", ".join(_sel)
+    delisted = [dict(zip(_sel, r)) for r in con.execute(
+        f"SELECT {_cols} FROM capabilities WHERE registry_status='deleted'")]
     # Same reasoning for confirmed malware: junk() keeps it off the board, but a user who already ran
     # `npx mcp-server-fetch` needs to be told, and doctor can only tell them if the row is reachable.
-    malicious = [dict(zip(("id", "name", "kind", "sec_max_severity", "sec_advisory_count",
-                           "sec_advisories", "sec_install_script"), r)) for r in con.execute(
-        "SELECT id, name, kind, sec_max_severity, sec_advisory_count, sec_advisories, "
-        "sec_install_script FROM capabilities WHERE sec_max_severity='MALICIOUS'")]
+    # claude-cup carries MAL-2026-5789 and 4,837,320 weekly downloads. The seven-column subset that
+    # used to be here dropped npm_downloads and sec_scanned_at, so the lookup row said the adoption
+    # was unknown and /v0.1/audit reported "no security scan has been run on this" IN THE SAME
+    # RESPONSE as the advisory it had just found. On the highest-stakes row in the corpus, our own
+    # output contradicted itself and hid the number that makes the warning matter.
+    malicious = [dict(zip(_sel, r)) for r in con.execute(
+        f"SELECT {_cols} FROM capabilities WHERE sec_max_severity='MALICIOUS'")]
     # NO SEPARATE discontinued FETCH HERE. There used to be one, on the same reasoning as `delisted`
     # and `malicious` above — but those two are absent from `caps` and these are not: the export now
     # carries discontinued rows so their dossier still gets built. Fetching them again appended a

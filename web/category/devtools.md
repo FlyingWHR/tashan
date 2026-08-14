@@ -13,26 +13,26 @@ Ranked by the tashan score
 |---|---|---|---|---|
 | 1 | [Everything](https://tashan.sh/capability/pkg-modelcontextprotocol-server-everything.html) | 88 | 67k/wk | active |
 | 2 | [Fiori](https://tashan.sh/capability/pkg-sap-ux-fiori-mcp-server.html) | 86 | 108k/wk | active |
-| 3 | [Superpowers](https://tashan.sh/capability/plugin-obra-superpowers-superpowers.html) | 85 | 269k ★ | active |
-| 4 | [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) | 84 | 803k/wk | active |
-| 5 | [Use](https://tashan.sh/capability/pkg-mcp-use.html) | 83 | 41k/wk | active |
-| 6 | [Caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) | 81 | 93k ★ | active |
-| 7 | [Dev](https://tashan.sh/capability/pkg-shopify-dev-mcp.html) | 81 | 23k/wk | active |
-| 8 | [Ponytail](https://tashan.sh/capability/plugin-dietrichgebert-ponytail-ponytail.html) | 79 | 90k ★ | active |
-| 9 | [Context Mode](https://tashan.sh/capability/plugin-mksglu-context-mode-context-mode.html) | 79 | 19k ★ | active |
-| 10 | [Promptfoo Evals](https://tashan.sh/capability/plugin-promptfoo-promptfoo-promptfoo-evals.html) | 79 | 24k ★ | active |
-| 11 | [Understand Anything](https://tashan.sh/capability/plugin-lum1104-understand-anything-understand-anything.html) | 79 | 76k ★ | active |
-| 12 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 79 | 191k ★ | active |
-| 13 | [Proxy](https://tashan.sh/capability/pkg-mcp-proxy.html) | 79 | 1.3m/wk | active |
-| 14 | [Agent Device](https://tashan.sh/capability/pkg-agent-device.html) | 79 | 131k/wk | active |
-| 15 | [Pi MCP Adapter](https://tashan.sh/capability/pkg-pi-mcp-adapter.html) | 79 | 111k/wk | active |
-| 16 | [Mobile](https://tashan.sh/capability/pkg-mobilenext-mobile-mcp.html) | 79 | 26k/wk | active |
-| 17 | [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) | 79 | 14k/wk | active |
-| 18 | [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) | 79 | 9k/wk | active |
-| 19 | [Claude Hud](https://tashan.sh/capability/plugin-jarrodwatts-claude-hud-claude-hud.html) | 78 | 27k ★ | active |
-| 20 | [Mcporter](https://tashan.sh/capability/pkg-mcporter.html) | 78 | 262k/wk | active |
-| 21 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 78 | 118k/wk | active |
-| 22 | [Git](https://tashan.sh/capability/pkg-cyanheads-git-mcp-server.html) | 77 | 5k/wk | active |
+| 3 | [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) | 84 | 803k/wk | active |
+| 4 | [Use](https://tashan.sh/capability/pkg-mcp-use.html) | 83 | 41k/wk | active |
+| 5 | [Caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) | 81 | 93k ★ | active |
+| 6 | [Dev](https://tashan.sh/capability/pkg-shopify-dev-mcp.html) | 81 | 23k/wk | active |
+| 7 | [Ponytail](https://tashan.sh/capability/plugin-dietrichgebert-ponytail-ponytail.html) | 79 | 90k ★ | active |
+| 8 | [Context Mode](https://tashan.sh/capability/plugin-mksglu-context-mode-context-mode.html) | 79 | 19k ★ | active |
+| 9 | [Promptfoo Evals](https://tashan.sh/capability/plugin-promptfoo-promptfoo-promptfoo-evals.html) | 79 | 24k ★ | active |
+| 10 | [Understand Anything](https://tashan.sh/capability/plugin-lum1104-understand-anything-understand-anything.html) | 79 | 76k ★ | active |
+| 11 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 79 | 191k ★ | active |
+| 12 | [Proxy](https://tashan.sh/capability/pkg-mcp-proxy.html) | 79 | 1.3m/wk | active |
+| 13 | [Agent Device](https://tashan.sh/capability/pkg-agent-device.html) | 79 | 131k/wk | active |
+| 14 | [Pi MCP Adapter](https://tashan.sh/capability/pkg-pi-mcp-adapter.html) | 79 | 111k/wk | active |
+| 15 | [Mobile](https://tashan.sh/capability/pkg-mobilenext-mobile-mcp.html) | 79 | 26k/wk | active |
+| 16 | [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) | 79 | 14k/wk | active |
+| 17 | [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) | 79 | 9k/wk | active |
+| 18 | [Claude Hud](https://tashan.sh/capability/plugin-jarrodwatts-claude-hud-claude-hud.html) | 78 | 27k ★ | active |
+| 19 | [Mcporter](https://tashan.sh/capability/pkg-mcporter.html) | 78 | 262k/wk | active |
+| 20 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 78 | 118k/wk | active |
+| 21 | [Git](https://tashan.sh/capability/pkg-cyanheads-git-mcp-server.html) | 77 | 5k/wk | active |
+| 22 | [Octo](https://tashan.sh/capability/plugin-nyldn-claude-octopus-octo.html) | 77 | 4k ★ | active |
 | 23 | [Add](https://tashan.sh/capability/pkg-add-mcp.html) | 77 | 227k/wk | active |
 | 24 | [XcodeBuildMCP](https://tashan.sh/capability/pkg-xcodebuildmcp.html) | 77 | 91k/wk | active |
 | 25 | [Metaharness](https://tashan.sh/capability/pkg-metaharness.html) | 77 | 44k/wk | active |
@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Next DevTools](https://tashan.sh/capability/pkg-next-devtools-mcp.html) | 74 | 92k/wk | active |
 | 40 | [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) | 74 | 20k/wk | active |
 
-Showing the top 40 of 1,763. The full ranked shelf is at https://tashan.sh/category/devtools.html.
+Showing the top 40 of 1,762. The full ranked shelf is at https://tashan.sh/category/devtools.html.
 
 ## What these numbers are not
 

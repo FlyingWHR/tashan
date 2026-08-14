@@ -13,7 +13,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Freightutils](https://tashan.sh/capability/pkg-freightutils-mcp.html) | 67 | 776/wk | active |
 | 2 | [Fluf](https://tashan.sh/capability/pkg-fluf-mcp.html) | 63 | 908/wk | active |
-| 3 | [Procurement Optimizer](https://tashan.sh/capability/skill-alirezarezvani-procurement-optimizer.html) | not scored | 1 repos | active |
+| 3 | [Procurement Optimizer](https://tashan.sh/capability/skill-alirezarezvani-procurement-optimizer.html) | 48 | 2 repos | active |
 | 4 | [Dependency Fitness](https://tashan.sh/capability/pkg-dependency-fitness-mcp.html) | 41 | 65/wk | active |
 | 5 | [GitHub Security](https://tashan.sh/capability/pkg-github-security-mcp.html) | 37 | 626/wk | active |
 | 6 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 59 | 302/wk | active |
@@ -24,12 +24,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Shopify](https://tashan.sh/capability/pkg-aiwerk-mcp-server-shopify.html) | 44 | 60/wk | active |
 | 12 | [Airtreks](https://tashan.sh/capability/pkg-airtreks-mcp.html) | 40 | 62/wk | active |
 | 13 | [Gammainfra](https://tashan.sh/capability/pkg-gammainfra-mcp-server.html) | 39 | 75/wk | active |
-| 14 | [Package Intel](https://tashan.sh/capability/pkg-package-intel-mcp.html) | 61 | 592/wk | active |
-| 15 | [Calllint](https://tashan.sh/capability/pkg-calllint.html) | 52 | 53/wk | active |
-| 16 | [Frugal · brainsparker](https://tashan.sh/capability/pkg-frugal-mcp.html) | 49 | 68/wk | active |
-| 17 | [Calllint · calllint-mcp](https://tashan.sh/capability/pkg-calllint-mcp.html) | 47 | 75/wk | active |
-| 18 | [Meridian Skills](https://tashan.sh/capability/pkg-meridian-skills-mcp.html) | not scored | 101/wk | abandoned |
-| 19 | [AWS Spapi](https://tashan.sh/capability/pkg-cesarobedfl-aws-spapi-mcp.html) | 60 | 497/wk | active |
+| 14 | [Calllint](https://tashan.sh/capability/pkg-calllint.html) | 52 | 53/wk | active |
+| 15 | [Frugal · brainsparker](https://tashan.sh/capability/pkg-frugal-mcp.html) | 49 | 68/wk | active |
+| 16 | [Calllint · calllint-mcp](https://tashan.sh/capability/pkg-calllint-mcp.html) | 47 | 75/wk | active |
+| 17 | [Meridian Skills](https://tashan.sh/capability/pkg-meridian-skills-mcp.html) | not scored | 57/wk | abandoned |
+| 18 | [AWS Spapi](https://tashan.sh/capability/pkg-cesarobedfl-aws-spapi-mcp.html) | 60 | 497/wk | active |
 
 ## What these numbers are not
 
