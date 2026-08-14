@@ -140,3 +140,42 @@ of 57 on document length alone. A limitation must now be **asserted** ("does not
 `## Limitations` section), not an incidental negation. Criterion (a) had the mirror problem: loosened
 to accept prose-y headings, it accepted anything lowercase and reported *"42 tools documented (ci.yml,
 publish.yml, security.yml…)"*. A tool name is an identifier; a filename is a file.
+
+---
+
+## Skills are NOT graded by this rubric, and the reason is measured
+
+14,309 skills carry their own `SKILL.md` in `capability_text.doc_body` — already ingested, no
+network fetch needed — and every one of them is ungraded. That looks like an obvious backlog: pure
+compute, the purest possible application of a documentation rubric, and it would lift ~2,775 thin
+skill pages out of `noindex`.
+
+It was measured before it was done. Applying the four criteria above to 150 randomly sampled skills
+with a real `SKILL.md` (600–40,000 chars):
+
+| criterion | skills |
+|---|---:|
+| (a) per-tool docs | **10.7%** |
+| (b) two worked examples | 53.3% |
+| (c) setup / auth | 56.0% |
+| (d) a stated limitation | 41.3% |
+| **all four → `deep`** | **2.7%** |
+
+Recently graded server batches land `deep` at roughly 16–20%. Skills would land at 2.7% — a six-fold
+gap produced almost entirely by criterion (a), because **a skill has no tools**. It is a folder of
+instructions for a model, not a server exposing an interface. Criterion (a) is not measuring that
+skills are badly documented; it is measuring that the question does not apply.
+
+Grading them anyway would put the same three words — `deep`, `solid`, `thin` — on two populations
+where they mean different things, and a reader comparing a skill's `thin` to a server's `thin` would
+be misled by our own label. That is the failure this rubric exists to prevent.
+
+**What a skill rubric would need.** (b), (c) and (d) transfer as-is, at rates comparable to servers.
+The replacement for (a) is the thing a `SKILL.md` uniquely has to get right: **does it say when it
+should activate, and when it should not?** That is a skill's equivalent of per-tool documentation —
+the contract between the author and the model loading it — and it is checkable in the same
+conjunctive way. It also has to be a separate verdict vocabulary, or a separate field, so no surface
+can compare the two scales.
+
+Not built. Written down so the backlog is a decision waiting on a rubric, rather than a chore
+somebody completes with the wrong instrument.
