@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) | 75 | 4k ★ | active |
-| 2 | [Create MCP Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 74 | 1k/wk | active |
-| 3 | [Modern Web Guidance](https://tashan.sh/capability/plugin-googlechrome-modern-web-guidance-modern-web-guidance.html) | 73 | 2k ★ | active |
-| 4 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 73 | 2k ★ | active |
-| 5 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 73 | 1k ★ | active |
-| 6 | [Deeplake Hivemind](https://tashan.sh/capability/plugin-activeloopai-deeplake-claude-code-plugins-deeplake-hivemind.html) | 73 | 2k ★ | active |
-| 7 | [Hivemind](https://tashan.sh/capability/plugin-activeloopai-hivemind-hivemind.html) | 73 | 2k ★ | active |
-| 8 | [Actionbook](https://tashan.sh/capability/plugin-actionbook-actionbook-actionbook.html) | 73 | 2k ★ | active |
-| 9 | [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) | 73 | 1k ★ | active |
-| 10 | [Vuetify](https://tashan.sh/capability/pkg-vuetify-mcp.html) | 73 | 1k/wk | active |
-| 11 | [Netsuite Suitecloud](https://tashan.sh/capability/plugin-oracle-netsuite-suitecloud-sdk-netsuite-suitecloud.html) | 72 | 315 ★ | active |
-| 12 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 72 | 426 ★ | active |
-| 13 | [Dynatrace Managed](https://tashan.sh/capability/pkg-dynatrace-oss-dynatrace-managed-mcp-server.html) | 72 | 869/wk | active |
-| 14 | [Codspeed](https://tashan.sh/capability/plugin-codspeedhq-codspeed-codspeed.html) | 71 | 235 ★ | active |
-| 15 | [Databricks](https://tashan.sh/capability/plugin-databricks-databricks-agent-skills-databricks.html) | 71 | 228 ★ | active |
-| 16 | [Dataverse](https://tashan.sh/capability/plugin-microsoft-dataverse-skills-dataverse.html) | 71 | 184 ★ | active |
-| 17 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 71 | 504 ★ | active |
-| 18 | [Liftlog Plan Builder](https://tashan.sh/capability/plugin-liammorrow-liftlog-liftlog-plan-builder.html) | 71 | 509 ★ | active |
-| 19 | [Voyagier](https://tashan.sh/capability/pkg-voyagier-cli.html) | 71 | 1k/wk | active |
-| 20 | [Data Agent Kit Starter Pack](https://tashan.sh/capability/plugin-gemini-cli-extensions-data-agent-kit-starter-pack-data-agent-kit-starter-pack.html) | 70 | 151 ★ | active |
-| 21 | [MongoDB · mongodb](https://tashan.sh/capability/plugin-mongodb-agent-skills-mongodb.html) | 70 | 164 ★ | active |
-| 22 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 70 | 168 ★ | active |
-| 23 | [Sap Fiori](https://tashan.sh/capability/plugin-sap-open-ux-tools-sap-fiori-mcp-server.html) | 70 | 153 ★ | active |
-| 24 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
-| 25 | [Claude Video Vision](https://tashan.sh/capability/plugin-jordanrendric-claude-video-vision-claude-video-vision.html) | 70 | 1k ★ | active |
-| 26 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 70 | 482 ★ | active |
-| 27 | [Domain Check Skills](https://tashan.sh/capability/pkg-domain-check-skills-mcp.html) | 70 | 2k/wk | active |
-| 28 | [Argus Decision](https://tashan.sh/capability/pkg-argus-decision-mcp.html) | 70 | 2k/wk | active |
-| 29 | [Mealie](https://tashan.sh/capability/pkg-mealie-mcp.html) | 70 | 2k/wk | active |
-| 30 | [Ruvnet Brain](https://tashan.sh/capability/pkg-ruvnet-brain.html) | 70 | 2k/wk | active |
-| 31 | [Ziggs](https://tashan.sh/capability/pkg-ziggs-ai-ziggs-mcp.html) | 70 | 2k/wk | active |
-| 32 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 70 | 1k/wk | active |
-| 33 | [Modelcontextprotocol](https://tashan.sh/capability/pkg-atomicmail-mcp-modelcontextprotocol.html) | 70 | 525/wk | active |
-| 34 | [Aiven](https://tashan.sh/capability/pkg-mcp-aiven.html) | 70 | 376/wk | active |
-| 35 | [OneSource](https://tashan.sh/capability/pkg-one-source-mcp.html) | 70 | 305/wk | active |
-| 36 | [Apollo Skills](https://tashan.sh/capability/plugin-apollographql-skills-apollo-skills.html) | 69 | 100 ★ | active |
-| 37 | [Servicenow SDK](https://tashan.sh/capability/plugin-servicenow-sdk-servicenow-sdk.html) | 69 | 104 ★ | active |
-| 38 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
-| 39 | [Unicli](https://tashan.sh/capability/plugin-yucchiy-unicli-unicli.html) | 69 | 248 ★ | active |
-| 40 | [Cppcheatsheet](https://tashan.sh/capability/plugin-crazyguitar-cppcheatsheet-cppcheatsheet.html) | 69 | 278 ★ | active |
+| 1 | [Desktop Commander · wonderwhy-er](https://tashan.sh/capability/plugin-wonderwhy-er-desktopcommandermcp-desktop-commander.html) | 79 | 9k ★ | active |
+| 2 | [Browser Harness](https://tashan.sh/capability/plugin-browser-use-browser-harness-browser-harness.html) | 79 | 16k ★ | active |
+| 3 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 79 | 13k ★ | active |
+| 4 | [Playwright Pro](https://tashan.sh/capability/plugin-alirezarezvani-claude-skills-playwright-pro.html) | 78 | 23k ★ | active |
+| 5 | [Stripe](https://tashan.sh/capability/plugin-stripe-ai-stripe.html) | 75 | 2k ★ | active |
+| 6 | [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) | 75 | 4k ★ | active |
+| 7 | [Nx](https://tashan.sh/capability/pkg-nx-mcp.html) | 75 | 86k/wk | active |
+| 8 | [Gitnexus](https://tashan.sh/capability/pkg-gitnexus.html) | 74 | 53k/wk | active |
+| 9 | [Mediawiki](https://tashan.sh/capability/pkg-professional-wiki-mediawiki-mcp-server.html) | 74 | 1k/wk | active |
+| 10 | [Modern Web Guidance](https://tashan.sh/capability/plugin-googlechrome-modern-web-guidance-modern-web-guidance.html) | 73 | 2k ★ | active |
+| 11 | [Deeplake Hivemind](https://tashan.sh/capability/plugin-activeloopai-deeplake-claude-code-plugins-deeplake-hivemind.html) | 73 | 2k ★ | active |
+| 12 | [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) | 73 | 1k ★ | active |
+| 13 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 72 | 426 ★ | active |
+| 14 | [Shopify AI Toolkit](https://tashan.sh/capability/plugin-shopify-shopify-ai-toolkit-shopify-ai-toolkit.html) | 72 | 476 ★ | active |
+| 15 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 72 | 1k ★ | active |
+| 16 | [Ue](https://tashan.sh/capability/pkg-ue-mcp.html) | 72 | 4k/wk | active |
+| 17 | [Vuetify](https://tashan.sh/capability/pkg-vuetify-mcp.html) | 72 | 1k/wk | active |
+| 18 | [Codspeed](https://tashan.sh/capability/plugin-codspeedhq-codspeed-codspeed.html) | 71 | 235 ★ | active |
+| 19 | [Save To Spotify](https://tashan.sh/capability/plugin-spotify-save-to-spotify-save-to-spotify.html) | 71 | 388 ★ | active |
+| 20 | [Godot Prompter](https://tashan.sh/capability/plugin-jame581-godotprompter-godot-prompter.html) | 71 | 485 ★ | active |
+| 21 | [Shopify Plugin](https://tashan.sh/capability/plugin-shopify-shopify-ai-toolkit-shopify-plugin.html) | 71 | 476 ★ | active |
+| 22 | [Patina](https://tashan.sh/capability/plugin-devswha-patina-patina.html) | 71 | 316 ★ | active |
+| 23 | [Mem9](https://tashan.sh/capability/plugin-mem9-ai-mem9-mem9.html) | 71 | 1k ★ | active |
+| 24 | [Remem](https://tashan.sh/capability/pkg-remem-ai-remem.html) | 71 | 3k/wk | active |
+| 25 | [AI Context](https://tashan.sh/capability/pkg-vibgrate-cli.html) | 71 | 3k/wk | active |
+| 26 | [Voyagier](https://tashan.sh/capability/pkg-voyagier-cli.html) | 71 | 1k/wk | active |
+| 27 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 70 | 168 ★ | active |
+| 28 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 70 | 218 ★ | active |
+| 29 | [Claude Video Vision](https://tashan.sh/capability/plugin-jordanrendric-claude-video-vision-claude-video-vision.html) | 70 | 1k ★ | active |
+| 30 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 70 | 482 ★ | active |
+| 31 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 70 | 504 ★ | active |
+| 32 | [Factory](https://tashan.sh/capability/plugin-hmlongco-factory-factory.html) | 70 | 3k ★ | active |
+| 33 | [Pohuy](https://tashan.sh/capability/plugin-smixs-pohuy-pohuy.html) | 70 | 957 ★ | active |
+| 34 | [Workfile](https://tashan.sh/capability/pkg-illodev-workfile.html) | 70 | 3k/wk | active |
+| 35 | [Domain Check Skills](https://tashan.sh/capability/pkg-domain-check-skills-mcp.html) | 70 | 2k/wk | active |
+| 36 | [Mixdog](https://tashan.sh/capability/pkg-mixdog.html) | 70 | 2k/wk | active |
+| 37 | [Cbrowser](https://tashan.sh/capability/pkg-cbrowser.html) | 70 | 2k/wk | active |
+| 38 | [Awb Agent Manager](https://tashan.sh/capability/pkg-awb-agent-manager.html) | 70 | 2k/wk | active |
+| 39 | [Memtrace](https://tashan.sh/capability/pkg-memtrace.html) | 70 | 2k/wk | active |
+| 40 | [Sensorium](https://tashan.sh/capability/pkg-sensorium-mcp.html) | 70 | 2k/wk | active |
 
-Showing the top 40 of 4,384. The full ranked shelf is at https://tashan.sh/category/other.html.
+Showing the top 40 of 4,169. The full ranked shelf is at https://tashan.sh/category/other.html.
 
 ## What these numbers are not
 

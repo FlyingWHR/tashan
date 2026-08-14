@@ -18,16 +18,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) | 72 | 829 ★ | active |
 | 2 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 79 | 13k ★ | active |
-| 3 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 65 | 284 ★ | active |
-| 4 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 51 | 5 ★ | active |
-| 5 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 46 | 18 ★ | active |
+| 3 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 64 | 284 ★ | active |
+| 4 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 50 | 5 ★ | active |
+| 5 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 45 | 18 ★ | active |
 | 6 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
 | 7 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |
 | 8 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 63 | 466/wk | active |
-| 9 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 62 | 612/wk | active |
+| 9 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 61 | 612/wk | active |
 | 10 | [Trustrails](https://tashan.sh/capability/pkg-trustrails-mcp-server.html) | 41 | 93/wk | active |
-| 11 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 59 | 307/wk | active |
-| 12 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 57 | 138/wk | active |
+| 11 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 58 | 307/wk | active |
+| 12 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 56 | 138/wk | active |
 
 ## What these numbers are not
 

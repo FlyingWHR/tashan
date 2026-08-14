@@ -12,11 +12,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 79 | 13k ★ | active |
-| 2 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 65 | 284 ★ | active |
-| 3 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 46 | 18 ★ | active |
-| 4 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 62 | 612/wk | active |
-| 5 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 59 | 307/wk | active |
-| 6 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 57 | 138/wk | active |
+| 2 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 64 | 284 ★ | active |
+| 3 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 45 | 18 ★ | active |
+| 4 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 61 | 612/wk | active |
+| 5 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 58 | 307/wk | active |
+| 6 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 56 | 138/wk | active |
 
 ## What these numbers are not
 

@@ -47,6 +47,17 @@ KEY = os.environ.get("TASHAN_DB_KEY", "tashan.db")
 # failures are reported at the end of a long job. SQLite compresses to about 21% of its size
 # (284 MiB -> ~61 MiB), which buys years rather than weeks and costs a few seconds each way.
 GZKEY = KEY + ".gz"
+
+# THE SAME PROBLEM, A SECOND FILE. data/skills_cache.json is a blob-SHA-keyed cache of SKILL.md
+# content that makes re-ingestion nearly free. It reached 127 MB in CI on 14 Aug and GitHub refused
+# the push — "File data/skills_cache.json is 127.09 MB; this exceeds GitHub's file size limit of
+# 100.00 MB" — so the nightly could not commit the day's retention shard, and the deploy that
+# depends on that commit was skipped. Exactly what moved the database out of git in the first place.
+#
+# Gzipping it and keeping it in git would be WORSE than the database case: a fresh binary blob every
+# night defeats delta compression entirely, so a ~20 MB compressed cache would add ~7 GB of pack a
+# year. It rides to R2 beside the database instead, on the same credentials and the same free tier.
+AUX = [("data/skills_cache.json", "skills_cache.json.gz")]
 # A tiny sidecar object holding the generation of whatever is in the bucket, plus the local memory
 # of which generation we last saw. Optimistic concurrency, and it exists because of a real incident:
 # see push().
@@ -147,6 +158,7 @@ def pull():
     # Prefer the compressed object; fall back to the legacy uncompressed one so a bucket written by
     # an older revision still restores. The fallback can be deleted once a gzipped object exists.
     gz = tmp + ".gz"
+    used = GZKEY
     r = _run(["r2", "object", "get", f"{BUCKET}/{GZKEY}", "--file", gz])
     if r.returncode == 0 and os.path.exists(gz) and os.path.getsize(gz) > 0:
         try:
@@ -157,6 +169,7 @@ def pull():
         finally:
             os.remove(gz)
     if not usable(tmp):
+        used = KEY
         r = _run(["r2", "object", "get", f"{BUCKET}/{KEY}", "--file", tmp])
     if r.returncode != 0 or not usable(tmp):
         if os.path.exists(tmp):
@@ -169,10 +182,58 @@ def pull():
               f"and from data/history ({detail[0][:90]})")
         return 0
     os.replace(tmp, DB)
+    _pull_aux()
     # Remember which generation we started from, so push() can tell whether anyone moved it since.
     _write_stamp(_remote_stamp() or "")
-    print(f"  db_store: pulled {os.path.getsize(DB) / 1048576:.1f} MiB from r2://{BUCKET}/{KEY}")
+    print(f"  db_store: pulled {os.path.getsize(DB) / 1048576:.1f} MiB from r2://{BUCKET}/{used}")
     return 0
+
+
+def _aux_paths(rel):
+    return os.path.join(ROOT, rel)
+
+
+def _pull_aux():
+    """Auxiliary caches. Never fatal: a missing one costs a slower run, never a wrong one."""
+    for rel, key in AUX:
+        dest = _aux_paths(rel)
+        gz = dest + ".gz"
+        r = _run(["r2", "object", "get", f"{BUCKET}/{key}", "--file", gz])
+        if r.returncode != 0 or not os.path.exists(gz) or os.path.getsize(gz) == 0:
+            print(f"  db_store: no {key} in R2 — {rel} will rebuild as it goes")
+            if os.path.exists(gz):
+                os.remove(gz)
+            continue
+        try:
+            with gzip.open(gz, "rb") as fin, open(dest + ".tmp", "wb") as fout:
+                shutil.copyfileobj(fin, fout, 1024 * 1024)
+            json.load(open(dest + ".tmp", encoding="utf-8"))   # refuse a truncated cache outright
+            os.replace(dest + ".tmp", dest)
+            print(f"  db_store: pulled {os.path.getsize(dest) / 1048576:.1f} MiB {rel}")
+        except (OSError, ValueError) as e:
+            print(f"  db_store: {key} would not restore ({e}) — {rel} will rebuild")
+            if os.path.exists(dest + ".tmp"):
+                os.remove(dest + ".tmp")
+        finally:
+            os.remove(gz)
+
+
+def _push_aux():
+    for rel, key in AUX:
+        src = _aux_paths(rel)
+        if not os.path.exists(src):
+            continue
+        gz = src + ".gz"
+        with open(src, "rb") as fin, gzip.open(gz, "wb", compresslevel=6) as fout:
+            shutil.copyfileobj(fin, fout, 1024 * 1024)
+        r = _run(["r2", "object", "put", f"{BUCKET}/{key}", "--file", gz,
+                  "--content-type", "application/gzip"])
+        size = os.path.getsize(gz) / 1048576
+        os.remove(gz)
+        # NOT fatal. The database is the state that must survive; this is a speed cache, and losing
+        # it costs one slow re-ingest rather than a wrong answer.
+        print(f"  db_store: {'pushed' if r.returncode == 0 else 'FAILED to push'} "
+              f"{size:.1f} MiB {key}" + ("" if r.returncode == 0 else f" ({_reason(r)})"))
 
 
 def push():
@@ -233,6 +294,7 @@ def push():
             return 1
         print(f"  db_store: pushed {mib:.1f} MiB to r2://{BUCKET}/{key}")
     os.remove(blob)
+    _push_aux()
     # Stamp last: a reader that sees the new generation is guaranteed the object behind it landed.
     with open(STAMP_LOCAL + ".out", "w", encoding="utf-8") as f:
         f.write(stamp)
