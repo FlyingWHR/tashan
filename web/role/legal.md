@@ -26,17 +26,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Ris Austria](https://tashan.sh/capability/pkg-cyanheads-ris-austria-mcp-server.html) | 65 | 822/wk | active |
 | 9 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 60 | 27 ★ | active |
 | 10 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
-| 11 | [Legalrabbit Docx](https://tashan.sh/capability/plugin-legalrabbit-ai-legalrabbit-docx-claude-plugin-legalrabbit-docx.html) | 53 | 46 ★ | active |
-| 12 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 45 | 2k/wk | active |
-| 13 | [Labor Law](https://tashan.sh/capability/pkg-labor-law-mcp.html) | 41 | 2k/wk | active |
-| 14 | [Hourei](https://tashan.sh/capability/pkg-hourei-mcp-server.html) | 32 | 2k/wk | abandoned |
-| 15 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
-| 16 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
-| 17 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
-| 18 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 47 | 5 ★ | active |
-| 19 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 47 | 1 ★ | active |
-| 20 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
-| 21 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
+| 11 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
+| 12 | [Legalrabbit Docx](https://tashan.sh/capability/plugin-legalrabbit-ai-legalrabbit-docx-claude-plugin-legalrabbit-docx.html) | 53 | 46 ★ | active |
+| 13 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
+| 14 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
+| 15 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 45 | 2k/wk | active |
+| 16 | [Labor Law](https://tashan.sh/capability/pkg-labor-law-mcp.html) | 41 | 2k/wk | active |
+| 17 | [Hourei](https://tashan.sh/capability/pkg-hourei-mcp-server.html) | 32 | 2k/wk | abandoned |
+| 18 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
+| 19 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 47 | 5 ★ | active |
+| 20 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 47 | 1 ★ | active |
+| 21 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
 | 22 | [Bubble Shield](https://tashan.sh/capability/plugin-vdk888-bubble-shield-public-bubble-shield.html) | 43 | 0 ★ | active |
 | 23 | [Indian Banking Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-banking-drafting-litigation-indian-banking-drafting.html) | 42 | 1 ★ | active |
 | 24 | [Indian Company Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-company-drafting-indian-company-drafting.html) | 42 | 1 ★ | active |

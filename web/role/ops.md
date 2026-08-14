@@ -58,8 +58,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 51 | 4 ★ | active |
 | 37 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 51 | 3 ★ | active |
 | 38 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 50 | 12 ★ | active |
-| 39 | [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) | 86 | 6.7m/wk | active |
-| 40 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 85 | 75k/wk | active |
+| 39 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 49 | 7 ★ | active |
+| 40 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 49 | 28 ★ | active |
 
 Showing the top 40 of 709. The full ranked shelf is at https://tashan.sh/role/ops.html.
 

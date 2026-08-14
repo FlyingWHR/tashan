@@ -10,7 +10,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Database access** — [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) · tashan score 87
-- **Exploratory data analysis** — [Census](https://tashan.sh/capability/pkg-cyanheads-census-mcp-server.html) · tashan score 67
+- **Exploratory data analysis** — [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) · tashan score 71
 - **Dashboards and reporting** — [Powerbi Modeling](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp.html) · tashan score 75
 
 ## Ranked
@@ -25,38 +25,38 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) | 96 | 78k/wk | active |
 | 7 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 83 | 42k/wk | active |
 | 8 | [Powerbi Modeling](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp.html) | 75 | 13k/wk | active |
-| 9 | [Census](https://tashan.sh/capability/pkg-cyanheads-census-mcp-server.html) | 67 | 1k/wk | active |
-| 10 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 66 | 47 ★ | active |
-| 11 | [Microcharts](https://tashan.sh/capability/pkg-microcharts-mcp.html) | 65 | 836/wk | active |
-| 12 | [Stata](https://tashan.sh/capability/pkg-aliveranme-stata-mcp.html) | 64 | 986/wk | active |
-| 13 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 63 | 100 ★ | active |
-| 14 | [Datarobot Agent Skills](https://tashan.sh/capability/plugin-datarobot-oss-datarobot-agent-skills-datarobot-agent-skills.html) | 63 | 23 ★ | active |
-| 15 | [Probabl Skills](https://tashan.sh/capability/plugin-probabl-ai-skills-probabl-skills.html) | 62 | 74 ★ | active |
-| 16 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 53 | 7 ★ | active |
-| 17 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 53 | 12 ★ | active |
-| 18 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 52 | 6 ★ | active |
-| 19 | [Teable](https://tashan.sh/capability/pkg-teable-mcp.html) | 50 | 1k/wk | active |
-| 20 | [Snowflake](https://tashan.sh/capability/pkg-snowflake-mcp.html) | 39 | 863/wk | active |
-| 21 | [Influxdb](https://tashan.sh/capability/pkg-influxdb-mcp-server.html) | 31 | 1k/wk | abandoned |
-| 22 | [Supabase · Cappahccino](https://tashan.sh/capability/pkg-supabase-mcp.html) | 23 | 3k/wk | abandoned |
-| 23 | [AWS Athena](https://tashan.sh/capability/pkg-lishenxydlgzs-aws-athena-mcp.html) | 19 | 734/wk | abandoned |
-| 24 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 75 | 4k ★ | active |
-| 25 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 71 | 558 ★ | active |
-| 26 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
-| 27 | [NexQL Postgres](https://tashan.sh/capability/pkg-nexql-mcp.html) | 68 | 1k/wk | active |
-| 28 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
-| 29 | [Chart](https://tashan.sh/capability/pkg-bicharts-chart-mcp.html) | 66 | 1k/wk | active |
-| 30 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 51 | 59 ★ | active |
-| 31 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 50 | 5 ★ | active |
-| 32 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
-| 33 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 49 | 2 ★ | active |
-| 34 | [Fullstory](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 48 | 9 ★ | active |
-| 35 | [Qmt Skills](https://tashan.sh/capability/plugin-dfkai-xtquantai-qmt-skills.html) | 48 | 151 ★ | active |
-| 36 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 47 | 1 ★ | active |
-| 37 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
-| 38 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
-| 39 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 46 | 0 ★ | active |
-| 40 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 45 | 1 ★ | active |
+| 9 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 71 | 558 ★ | active |
+| 10 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
+| 11 | [Census](https://tashan.sh/capability/pkg-cyanheads-census-mcp-server.html) | 67 | 1k/wk | active |
+| 12 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 66 | 47 ★ | active |
+| 13 | [Microcharts](https://tashan.sh/capability/pkg-microcharts-mcp.html) | 65 | 836/wk | active |
+| 14 | [Stata](https://tashan.sh/capability/pkg-aliveranme-stata-mcp.html) | 64 | 986/wk | active |
+| 15 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 63 | 100 ★ | active |
+| 16 | [Datarobot Agent Skills](https://tashan.sh/capability/plugin-datarobot-oss-datarobot-agent-skills-datarobot-agent-skills.html) | 63 | 23 ★ | active |
+| 17 | [Probabl Skills](https://tashan.sh/capability/plugin-probabl-ai-skills-probabl-skills.html) | 62 | 74 ★ | active |
+| 18 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 53 | 7 ★ | active |
+| 19 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 53 | 12 ★ | active |
+| 20 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 52 | 6 ★ | active |
+| 21 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 51 | 59 ★ | active |
+| 22 | [Teable](https://tashan.sh/capability/pkg-teable-mcp.html) | 50 | 1k/wk | active |
+| 23 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
+| 24 | [Qmt Skills](https://tashan.sh/capability/plugin-dfkai-xtquantai-qmt-skills.html) | 48 | 151 ★ | active |
+| 25 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 44 | 3 ★ | active |
+| 26 | [Snowflake](https://tashan.sh/capability/pkg-snowflake-mcp.html) | 39 | 863/wk | active |
+| 27 | [Influxdb](https://tashan.sh/capability/pkg-influxdb-mcp-server.html) | 31 | 1k/wk | abandoned |
+| 28 | [Supabase · Cappahccino](https://tashan.sh/capability/pkg-supabase-mcp.html) | 23 | 3k/wk | abandoned |
+| 29 | [AWS Athena](https://tashan.sh/capability/pkg-lishenxydlgzs-aws-athena-mcp.html) | 19 | 734/wk | abandoned |
+| 30 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 75 | 4k ★ | active |
+| 31 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
+| 32 | [NexQL Postgres](https://tashan.sh/capability/pkg-nexql-mcp.html) | 68 | 1k/wk | active |
+| 33 | [Chart](https://tashan.sh/capability/pkg-bicharts-chart-mcp.html) | 66 | 1k/wk | active |
+| 34 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 49 | 2 ★ | active |
+| 35 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 47 | 1 ★ | active |
+| 36 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
+| 37 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
+| 38 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 46 | 0 ★ | active |
+| 39 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 45 | 1 ★ | active |
+| 40 | [Insight Blueprint](https://tashan.sh/capability/plugin-etoyama-insight-blueprint-insight-blueprint.html) | 44 | 0 ★ | active |
 
 Showing the top 40 of 170. The full ranked shelf is at https://tashan.sh/role/data-analyst.html.
 

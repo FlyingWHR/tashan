@@ -22,13 +22,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Tricorder](https://tashan.sh/capability/plugin-tweag-tricorder-tricorder.html) | 62 | 38 ★ | active |
 | 10 | [Metro](https://tashan.sh/capability/plugin-steve228uk-metro-mcp-metro-mcp.html) | 59 | 73 ★ | active |
 | 11 | [Mirrord Agent Skills](https://tashan.sh/capability/plugin-metalbear-co-skills-mirrord-agent-skills.html) | 59 | 21 ★ | active |
-| 12 | [Rn Debug](https://tashan.sh/capability/pkg-rn-debug-mcp.html) | 41 | 964/wk | active |
-| 13 | [Super Claude For Sap](https://tashan.sh/capability/plugin-babamba2-superclaude-for-sap-super-claude-for-sap.html) | 55 | 46 ★ | active |
-| 14 | [Fix](https://tashan.sh/capability/skill-alirezarezvani-fix.html) | 51 | 4 repos | active |
-| 15 | [Systematic Debugging](https://tashan.sh/capability/skill-obra-systematic-debugging.html) | 49 | 3 repos | active |
-| 16 | [Meta VR](https://tashan.sh/capability/plugin-meta-quest-agentic-tools-meta-vr.html) | 49 | 156 ★ | active |
-| 17 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 49 | 39 ★ | active |
-| 18 | [Flow Studio Power Automate](https://tashan.sh/capability/plugin-ninihen1-power-automate-mcp-skills-flow-studio-power-automate.html) | 44 | 26 ★ | active |
+| 12 | [Meta VR](https://tashan.sh/capability/plugin-meta-quest-agentic-tools-meta-vr.html) | 49 | 156 ★ | active |
+| 13 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 49 | 39 ★ | active |
+| 14 | [Flow Studio Power Automate](https://tashan.sh/capability/plugin-ninihen1-power-automate-mcp-skills-flow-studio-power-automate.html) | 44 | 26 ★ | active |
+| 15 | [Rn Debug](https://tashan.sh/capability/pkg-rn-debug-mcp.html) | 41 | 964/wk | active |
+| 16 | [Super Claude For Sap](https://tashan.sh/capability/plugin-babamba2-superclaude-for-sap-super-claude-for-sap.html) | 55 | 46 ★ | active |
+| 17 | [Fix](https://tashan.sh/capability/skill-alirezarezvani-fix.html) | 51 | 4 repos | active |
+| 18 | [Systematic Debugging](https://tashan.sh/capability/skill-obra-systematic-debugging.html) | 49 | 3 repos | active |
 | 19 | [Perf](https://tashan.sh/capability/plugin-agent-sh-perf-perf.html) | 44 | 2 ★ | active |
 | 20 | [Firefox DevTools](https://tashan.sh/capability/plugin-mozilla-firefox-devtools-mcp-firefox-devtools-mcp.html) | 44 | 1 marketplaces | active |
 | 21 | [Fk Eng Agents](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-eng-agents.html) | 44 | 1 marketplaces | active |
@@ -39,10 +39,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Performance Profiler](https://tashan.sh/capability/skill-alirezarezvani-performance-profiler.html) | not scored | 1 repos | active |
 | 27 | [Amd Skills](https://tashan.sh/capability/plugin-amd-skills-amd-skills.html) | 68 | 165 ★ | active |
 | 28 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 60 | 27 ★ | active |
-| 29 | [Safari DevTools](https://tashan.sh/capability/pkg-safari-devtools-mcp.html) | 44 | 125/wk | active |
-| 30 | [Agent Only](https://tashan.sh/capability/pkg-agent-only-mcp.html) | 63 | 697/wk | active |
-| 31 | [Super Ralph](https://tashan.sh/capability/plugin-aezizhu-super-ralph-super-ralph.html) | 46 | 9 ★ | active |
-| 32 | [Rn DevTools](https://tashan.sh/capability/pkg-mcp-rn-devtools.html) | 45 | 37/wk | active |
+| 29 | [Rn DevTools](https://tashan.sh/capability/pkg-mcp-rn-devtools.html) | 45 | 37/wk | active |
+| 30 | [Safari DevTools](https://tashan.sh/capability/pkg-safari-devtools-mcp.html) | 44 | 125/wk | active |
+| 31 | [Agent Only](https://tashan.sh/capability/pkg-agent-only-mcp.html) | 63 | 697/wk | active |
+| 32 | [Super Ralph](https://tashan.sh/capability/plugin-aezizhu-super-ralph-super-ralph.html) | 46 | 9 ★ | active |
 | 33 | [Autoresearch X](https://tashan.sh/capability/plugin-waynejing995-autoresearch-x-autoresearch-x.html) | 32 | 2 ★ | active |
 | 34 | [Debugger](https://tashan.sh/capability/pkg-ai-capabilities-suite-mcp-debugger-server.html) | 32 | 130/wk | abandoned |
 | 35 | [Cdp Tools](https://tashan.sh/capability/pkg-cdp-tools-mcp.html) | not scored | 966/wk | abandoned |

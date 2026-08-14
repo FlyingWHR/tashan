@@ -17,8 +17,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 54 | 123 ★ | active |
 | 5 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
 | 6 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 46 | 26 ★ | active |
-| 7 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 44 | 1 marketplaces | active |
-| 8 | [AI Slop](https://tashan.sh/capability/plugin-se-uhd-ai-slop-skill-ai-slop.html) | 44 | 9 ★ | active |
+| 7 | [AI Slop](https://tashan.sh/capability/plugin-se-uhd-ai-slop-skill-ai-slop.html) | 44 | 9 ★ | active |
+| 8 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 44 | 1 marketplaces | active |
 | 9 | [Humanizer · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-humanizer-humanizer.html) | 41 | 1 ★ | active |
 | 10 | [Remove AI Flavor](https://tashan.sh/capability/plugin-chujianyun-skills-remove-ai-flavor.html) | 40 | 1 marketplaces | active |
 | 11 | [Copy Editing](https://tashan.sh/capability/skill-alirezarezvani-copy-editing.html) | not scored | 1 repos | active |

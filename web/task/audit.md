@@ -34,16 +34,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 21 | [Bastion](https://tashan.sh/capability/pkg-mcp-bastion.html) | 60 | 328/wk | active |
 | 22 | [Nexus Agents](https://tashan.sh/capability/pkg-nexus-agents.html) | 58 | 194/wk | active |
 | 23 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 56 | 177/wk | active |
-| 24 | [Vorim](https://tashan.sh/capability/pkg-vorim-mcp-server.html) | 49 | 87/wk | active |
-| 25 | [Crosscheck](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 66 | 568/wk | active |
-| 26 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
-| 27 | [Positif](https://tashan.sh/capability/pkg-positif-ai.html) | 56 | 191/wk | active |
-| 28 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 53 | 131/wk | active |
-| 29 | [Cyberaudit Skill](https://tashan.sh/capability/pkg-cyberaudit-skill.html) | 50 | 37/wk | active |
-| 30 | [A11y](https://tashan.sh/capability/pkg-a11y-mcp.html) | 41 | 360/wk | active |
-| 31 | [Email Deliverability Expert](https://tashan.sh/capability/plugin-sendx-email-skills-email-deliverability-expert.html) | 39 | 1 marketplaces | active |
-| 32 | [Pentagonal](https://tashan.sh/capability/pkg-pentagonal-mcp.html) | 34 | 44/wk | active |
-| 33 | [Catalog CLI Pro](https://tashan.sh/capability/pkg-bwb03-catalog-cli-pro.html) | 33 | 51/wk | active |
+| 24 | [Cyberaudit Skill](https://tashan.sh/capability/pkg-cyberaudit-skill.html) | 50 | 37/wk | active |
+| 25 | [Vorim](https://tashan.sh/capability/pkg-vorim-mcp-server.html) | 49 | 87/wk | active |
+| 26 | [Pentagonal](https://tashan.sh/capability/pkg-pentagonal-mcp.html) | 34 | 44/wk | active |
+| 27 | [Catalog CLI Pro](https://tashan.sh/capability/pkg-bwb03-catalog-cli-pro.html) | 33 | 51/wk | active |
+| 28 | [Crosscheck](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 66 | 568/wk | active |
+| 29 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
+| 30 | [Positif](https://tashan.sh/capability/pkg-positif-ai.html) | 56 | 191/wk | active |
+| 31 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 53 | 131/wk | active |
+| 32 | [A11y](https://tashan.sh/capability/pkg-a11y-mcp.html) | 41 | 360/wk | active |
+| 33 | [Email Deliverability Expert](https://tashan.sh/capability/plugin-sendx-email-skills-email-deliverability-expert.html) | 39 | 1 marketplaces | active |
 | 34 | [Agent Observability · blueskylineassets](https://tashan.sh/capability/pkg-agent-observability-mcp.html) | 26 | 43/wk | abandoned |
 | 35 | [Claude Ads](https://tashan.sh/capability/plugin-agricidaniel-claude-ads-claude-ads.html) | not scored | 8k ★ | active |
 | 36 | [Taplid](https://tashan.sh/capability/pkg-taplid-mcp.html) | 60 | 225/wk | active |

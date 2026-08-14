@@ -13,11 +13,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Pagespeed Insights](https://tashan.sh/capability/pkg-pagespeed-insights-mcp.html) | 70 | 2k/wk | active |
 | 2 | [Swiftui Expert](https://tashan.sh/capability/plugin-avdlee-swiftui-agent-skill-swiftui-expert.html) | 75 | 3k ★ | active |
-| 3 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
-| 4 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 54 | 153/wk | active |
-| 5 | [Lighthouse](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 47 | 580/wk | active |
-| 6 | [Deoptkit](https://tashan.sh/capability/pkg-deoptkit.html) | 37 | 7/wk | active |
-| 7 | [Swift Patterns](https://tashan.sh/capability/plugin-efremidze-swift-patterns-skill-swift-patterns.html) | 34 | 8 ★ | active |
+| 3 | [Deoptkit](https://tashan.sh/capability/pkg-deoptkit.html) | 37 | 7/wk | active |
+| 4 | [Swift Patterns](https://tashan.sh/capability/plugin-efremidze-swift-patterns-skill-swift-patterns.html) | 34 | 8 ★ | active |
+| 5 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
+| 6 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 54 | 153/wk | active |
+| 7 | [Lighthouse](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 47 | 580/wk | active |
 | 8 | [Debugger](https://tashan.sh/capability/pkg-ai-capabilities-suite-mcp-debugger-server.html) | 32 | 130/wk | abandoned |
 
 ## What these numbers are not

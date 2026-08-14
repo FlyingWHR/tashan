@@ -19,14 +19,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 68 | 137 ★ | active |
 | 7 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 238 ★ | active |
 | 8 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 51 | 73 ★ | active |
-| 9 | [Resend](https://tashan.sh/capability/plugin-resend-resend-skills-resend.html) | 46 | 2 marketplaces | — |
-| 10 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 45 | 21 ★ | active |
-| 11 | [Content Strategy](https://tashan.sh/capability/skill-alirezarezvani-content-strategy.html) | 44 | 3 repos | active |
-| 12 | [Copywriting](https://tashan.sh/capability/skill-alirezarezvani-copywriting.html) | 44 | 2 repos | active |
-| 13 | [Marketing Ops](https://tashan.sh/capability/skill-alirezarezvani-marketing-ops.html) | 44 | 2 repos | active |
-| 14 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 44 | 3 ★ | active |
-| 15 | [Post Bridge](https://tashan.sh/capability/plugin-post-bridge-hq-agent-mode-post-bridge.html) | 44 | 13 ★ | active |
-| 16 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 44 | 22 ★ | active |
+| 9 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 45 | 21 ★ | active |
+| 10 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 44 | 3 ★ | active |
+| 11 | [Post Bridge](https://tashan.sh/capability/plugin-post-bridge-hq-agent-mode-post-bridge.html) | 44 | 13 ★ | active |
+| 12 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 44 | 22 ★ | active |
+| 13 | [Resend](https://tashan.sh/capability/plugin-resend-resend-skills-resend.html) | 46 | 2 marketplaces | — |
+| 14 | [Content Strategy](https://tashan.sh/capability/skill-alirezarezvani-content-strategy.html) | 44 | 3 repos | active |
+| 15 | [Copywriting](https://tashan.sh/capability/skill-alirezarezvani-copywriting.html) | 44 | 2 repos | active |
+| 16 | [Marketing Ops](https://tashan.sh/capability/skill-alirezarezvani-marketing-ops.html) | 44 | 2 repos | active |
 | 17 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 44 | 1 marketplaces | active |
 | 18 | [LinkedIn Post Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-post-generator.html) | 43 | 1 marketplaces | active |
 | 19 | [Botboard Biz](https://tashan.sh/capability/plugin-2389-research-claude-plugins-botboard-biz.html) | 42 | 1 marketplaces | — |

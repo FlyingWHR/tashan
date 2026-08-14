@@ -11,22 +11,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Evalview](https://tashan.sh/capability/plugin-hidai25-eval-view-evalview.html) | 67 | 124 ★ | active |
-| 2 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 65 | 37 ★ | active |
-| 3 | [Datarobot Agent Skills](https://tashan.sh/capability/plugin-datarobot-oss-datarobot-agent-skills-datarobot-agent-skills.html) | 63 | 23 ★ | active |
-| 4 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 63 | 61 ★ | active |
-| 5 | [Probabl Skills](https://tashan.sh/capability/plugin-probabl-ai-skills-probabl-skills.html) | 62 | 74 ★ | active |
-| 6 | [Evals](https://tashan.sh/capability/pkg-mcp-evals.html) | 35 | 69k/wk | abandoned |
-| 7 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 80 | 11k ★ | active |
-| 8 | [Promptfoo Evals](https://tashan.sh/capability/plugin-promptfoo-promptfoo-promptfoo-evals.html) | 80 | 24k ★ | active |
-| 9 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 79 | 17k ★ | active |
-| 10 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 63 | 7 repos | active |
-| 11 | [Setup](https://tashan.sh/capability/skill-alirezarezvani-setup.html) | 62 | 16 repos | active |
-| 12 | [Agent Eval Harness · redhat-global-engineering](https://tashan.sh/capability/plugin-redhat-global-engineering-ge-public-skills-agent-eval-harness.html) | 52 | 5 ★ | active |
-| 13 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 49 | 8 ★ | active |
-| 14 | [Eval](https://tashan.sh/capability/skill-alirezarezvani-eval.html) | 48 | 2 repos | active |
-| 15 | [Nnsight](https://tashan.sh/capability/plugin-ndif-team-skills-nnsight.html) | 46 | 9 ★ | active |
-| 16 | [Autoresearch AI Plugin](https://tashan.sh/capability/plugin-proyecto26-autoresearch-ai-plugin-autoresearch-ai-plugin.html) | 44 | 12 ★ | active |
+| 1 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 79 | 17k ★ | active |
+| 2 | [Evalview](https://tashan.sh/capability/plugin-hidai25-eval-view-evalview.html) | 67 | 124 ★ | active |
+| 3 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 65 | 37 ★ | active |
+| 4 | [Datarobot Agent Skills](https://tashan.sh/capability/plugin-datarobot-oss-datarobot-agent-skills-datarobot-agent-skills.html) | 63 | 23 ★ | active |
+| 5 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 63 | 61 ★ | active |
+| 6 | [Probabl Skills](https://tashan.sh/capability/plugin-probabl-ai-skills-probabl-skills.html) | 62 | 74 ★ | active |
+| 7 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 49 | 8 ★ | active |
+| 8 | [Nnsight](https://tashan.sh/capability/plugin-ndif-team-skills-nnsight.html) | 46 | 9 ★ | active |
+| 9 | [Autoresearch AI Plugin](https://tashan.sh/capability/plugin-proyecto26-autoresearch-ai-plugin-autoresearch-ai-plugin.html) | 44 | 12 ★ | active |
+| 10 | [Evals](https://tashan.sh/capability/pkg-mcp-evals.html) | 35 | 69k/wk | abandoned |
+| 11 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 80 | 11k ★ | active |
+| 12 | [Promptfoo Evals](https://tashan.sh/capability/plugin-promptfoo-promptfoo-promptfoo-evals.html) | 80 | 24k ★ | active |
+| 13 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 63 | 7 repos | active |
+| 14 | [Setup](https://tashan.sh/capability/skill-alirezarezvani-setup.html) | 62 | 16 repos | active |
+| 15 | [Agent Eval Harness · redhat-global-engineering](https://tashan.sh/capability/plugin-redhat-global-engineering-ge-public-skills-agent-eval-harness.html) | 52 | 5 ★ | active |
+| 16 | [Eval](https://tashan.sh/capability/skill-alirezarezvani-eval.html) | 48 | 2 repos | active |
 | 17 | [Bitfab](https://tashan.sh/capability/plugin-project-white-rabbit-bitfab-claude-plugin-bitfab.html) | 42 | 1 ★ | active |
 | 18 | [Claude Performance](https://tashan.sh/capability/plugin-adelaidasofia-claude-performance-claude-performance.html) | 42 | 1 ★ | active |
 | 19 | [Langsmith](https://tashan.sh/capability/pkg-langsmith-mcp-server.html) | 42 | 2k/wk | active |

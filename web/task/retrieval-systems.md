@@ -15,15 +15,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Writ](https://tashan.sh/capability/plugin-infinri-writ-writ.html) | 55 | 163 ★ | active |
 | 3 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
 | 4 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 50 | 12 ★ | active |
-| 5 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 66 | 68 ★ | active |
-| 6 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 65 | 452 ★ | active |
-| 7 | [Airweave MCP Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 61 | 1k/wk | active |
-| 8 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 52 | 20 ★ | active |
-| 9 | [Mako AI](https://tashan.sh/capability/plugin-drhalto-agentmako-mako-ai.html) | 51 | 51 ★ | active |
-| 10 | [Pixeltable](https://tashan.sh/capability/plugin-pixeltable-pixeltable-skill-pixeltable.html) | 50 | 5 ★ | active |
-| 11 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 65 | 104 ★ | active |
-| 12 | [Qmd Ja](https://tashan.sh/capability/plugin-joycodetech-qmd-ja-qmd-ja.html) | 50 | 3 ★ | active |
-| 13 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 49 | 28 ★ | active |
+| 5 | [Qmd Ja](https://tashan.sh/capability/plugin-joycodetech-qmd-ja-qmd-ja.html) | 50 | 3 ★ | active |
+| 6 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 49 | 28 ★ | active |
+| 7 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 66 | 68 ★ | active |
+| 8 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 65 | 452 ★ | active |
+| 9 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 65 | 104 ★ | active |
+| 10 | [Airweave MCP Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 61 | 1k/wk | active |
+| 11 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 52 | 20 ★ | active |
+| 12 | [Mako AI](https://tashan.sh/capability/plugin-drhalto-agentmako-mako-ai.html) | 51 | 51 ★ | active |
+| 13 | [Pixeltable](https://tashan.sh/capability/plugin-pixeltable-pixeltable-skill-pixeltable.html) | 50 | 5 ★ | active |
 | 14 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 48 | 20 ★ | active |
 | 15 | [Zilliz](https://tashan.sh/capability/plugin-zilliztech-zilliz-plugin-zilliz.html) | 46 | 3 ★ | active |
 | 16 | [Gnosis](https://tashan.sh/capability/plugin-nicholasglazer-gnosis-mcp-gnosis-mcp.html) | 46 | 25 ★ | active |
@@ -47,10 +47,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 34 | [Ori Memory](https://tashan.sh/capability/pkg-ori-memory.html) | 57 | 154/wk | active |
 | 35 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 56 | 141/wk | active |
 | 36 | [Memory Graph](https://tashan.sh/capability/pkg-mcp-memory-graph.html) | 54 | 141/wk | active |
-| 37 | [Codedev](https://tashan.sh/capability/pkg-codedev-mcp.html) | 32 | 121/wk | abandoned |
-| 38 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
-| 39 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 73 | 6k/wk | active |
-| 40 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
+| 37 | [Ainative Zerodb](https://tashan.sh/capability/pkg-ainative-zerodb-mcp-server.html) | 47 | 30/wk | active |
+| 38 | [Codedev](https://tashan.sh/capability/pkg-codedev-mcp.html) | 32 | 121/wk | abandoned |
+| 39 | [Melchizedek](https://tashan.sh/capability/pkg-melchizedek.html) | 32 | 49/wk | active |
+| 40 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
 
 Showing the top 40 of 83. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
 

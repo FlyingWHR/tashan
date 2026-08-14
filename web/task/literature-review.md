@@ -12,13 +12,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 57 | 6k/wk | active |
-| 2 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
-| 3 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 67 | 78 ★ | active |
-| 4 | [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) | 66 | 836/wk | active |
-| 5 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 51 | 2 repos | active |
+| 2 | [Arx](https://tashan.sh/capability/plugin-eric-tramel-arx-arx.html) | 41 | 7 ★ | active |
+| 3 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
+| 4 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 67 | 78 ★ | active |
+| 5 | [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) | 66 | 836/wk | active |
 | 6 | [Phd Deepread](https://tashan.sh/capability/plugin-heleninsights-dot-phd-deepread-workflow-phd-deepread.html) | 50 | 56 ★ | active |
 | 7 | [Research Co Pilot](https://tashan.sh/capability/plugin-marazii-research-co-pilot-research-co-pilot.html) | 46 | 5 ★ | active |
-| 8 | [Arx](https://tashan.sh/capability/plugin-eric-tramel-arx-arx.html) | 41 | 7 ★ | active |
+| 8 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 51 | 2 repos | active |
 | 9 | [Paper Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-paper-interpreter.html) | 40 | 1 marketplaces | active |
 | 10 | [Article Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-article-interpreter.html) | 40 | 1 marketplaces | active |
 | 11 | [Research Toolkit](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 38 | 2 ★ | active |

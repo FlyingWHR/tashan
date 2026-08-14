@@ -22,16 +22,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Udacity Commit](https://tashan.sh/capability/pkg-mcp-udacity-commit.html) | 59 | 373/wk | active |
 | 10 | [Project Knowledge](https://tashan.sh/capability/pkg-project-knowledge.html) | 57 | 118/wk | active |
 | 11 | [Weavatrix Git](https://tashan.sh/capability/pkg-weavatrix-git.html) | 48 | 62/wk | active |
-| 12 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 69 | 1k/wk | active |
-| 13 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 59 | 171/wk | active |
-| 14 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 46 | 49/wk | active |
-| 15 | [Bitbucket](https://tashan.sh/capability/pkg-mcp-bitbucket.html) | 45 | 37/wk | active |
+| 12 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 46 | 49/wk | active |
+| 13 | [Perforce](https://tashan.sh/capability/plugin-tjboudreaux-cc-plugin-perforce-perforce.html) | 26 | 8 ★ | abandoned |
+| 14 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 69 | 1k/wk | active |
+| 15 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 59 | 171/wk | active |
 | 16 | [Useclawhub](https://tashan.sh/capability/pkg-useclawhub-mcp.html) | 39 | 17/wk | active |
 | 17 | [New And Noteworthy](https://tashan.sh/capability/plugin-matthewkhouzam-nn-skill-new-and-noteworthy.html) | 28 | 1 marketplaces | — |
-| 18 | [Perforce](https://tashan.sh/capability/plugin-tjboudreaux-cc-plugin-perforce-perforce.html) | 26 | 8 ★ | abandoned |
-| 19 | [Beautify Claude Status Line](https://tashan.sh/capability/plugin-goddaehee-beautify-claude-status-line-tmp-beautify-claude-status-line.html) | 20 | 0 ★ | abandoned |
-| 20 | [Git Toolkit](https://tashan.sh/capability/plugin-walis85300-marketplace-git-toolkit.html) | 14 | 1 marketplaces | — |
-| 21 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 45 | 71/wk | active |
+| 18 | [Beautify Claude Status Line](https://tashan.sh/capability/plugin-goddaehee-beautify-claude-status-line-tmp-beautify-claude-status-line.html) | 20 | 0 ★ | abandoned |
+| 19 | [Git Toolkit](https://tashan.sh/capability/plugin-walis85300-marketplace-git-toolkit.html) | 14 | 1 marketplaces | — |
+| 20 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 45 | 71/wk | active |
+| 21 | [Bitbucket](https://tashan.sh/capability/pkg-mcp-bitbucket.html) | 45 | 37/wk | active |
 
 ## What these numbers are not
 

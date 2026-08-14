@@ -18,12 +18,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Agent Nuvira](https://tashan.sh/capability/pkg-agent-nuvira.html) | 73 | 7k/wk | active |
 | 6 | [Tuning Engines - Governed AI Runtime](https://tashan.sh/capability/pkg-tuningengines-cli.html) | 62 | 241/wk | active |
 | 7 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 58 | 234/wk | active |
-| 8 | [Gerbil](https://tashan.sh/capability/pkg-tryhamster-gerbil.html) | 69 | 436/wk | active |
-| 9 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
-| 10 | [Edgegate](https://tashan.sh/capability/pkg-edgegate-mcp.html) | 46 | 11/wk | active |
-| 11 | [Ragdrift](https://tashan.sh/capability/pkg-mukundakatta-ragdrift-mcp.html) | 36 | 38/wk | active |
-| 12 | [Forge · rightnow](https://tashan.sh/capability/pkg-rightnow-forge-mcp-server.html) | 29 | 81/wk | abandoned |
-| 13 | [Sparkrun](https://tashan.sh/capability/plugin-spark-arena-sparkrun-sparkrun.html) | not scored | 443 ★ | active |
+| 8 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | active |
+| 9 | [Edgegate](https://tashan.sh/capability/pkg-edgegate-mcp.html) | 46 | 11/wk | active |
+| 10 | [Gerbil](https://tashan.sh/capability/pkg-tryhamster-gerbil.html) | 69 | 436/wk | active |
+| 11 | [Forge · rightnow](https://tashan.sh/capability/pkg-rightnow-forge-mcp-server.html) | 29 | 81/wk | abandoned |
+| 12 | [Sparkrun](https://tashan.sh/capability/plugin-spark-arena-sparkrun-sparkrun.html) | not scored | 443 ★ | active |
+| 13 | [Ragdrift](https://tashan.sh/capability/pkg-mukundakatta-ragdrift-mcp.html) | 36 | 38/wk | active |
 
 ## What these numbers are not
 

@@ -57,9 +57,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 54 | 10 ★ | active |
 | 36 | [Archy](https://tashan.sh/capability/plugin-hslee16-archy-archy.html) | 53 | 6 ★ | active |
 | 37 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 53 | 3 ★ | active |
-| 38 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
-| 39 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 52 | 182 ★ | active |
-| 40 | [Temper](https://tashan.sh/capability/plugin-galando-temper-temper.html) | 51 | 13 ★ | active |
+| 38 | [Minecraft Java](https://tashan.sh/capability/plugin-chapmanjw-minecraft-java-fabric-claude-plugin-minecraft-java.html) | 52 | 5 ★ | active |
+| 39 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
+| 40 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 52 | 182 ★ | active |
 
 Showing the top 40 of 900. The full ranked shelf is at https://tashan.sh/role/engineer.html.
 

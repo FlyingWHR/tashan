@@ -10,16 +10,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Hardware design** — [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) · tashan score 72
-- **CAD modelling** — [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) · tashan score 65
+- **CAD modelling** — [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) · tashan score 79
 
 ## Ranked
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) | 72 | 829 ★ | active |
-| 2 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 65 | 284 ★ | active |
-| 3 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 51 | 5 ★ | active |
-| 4 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 79 | 13k ★ | active |
+| 2 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 79 | 13k ★ | active |
+| 3 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 65 | 284 ★ | active |
+| 4 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 51 | 5 ★ | active |
 | 5 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 46 | 18 ★ | active |
 | 6 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
 | 7 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |

@@ -11,9 +11,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Legalrabbit Docx](https://tashan.sh/capability/plugin-legalrabbit-ai-legalrabbit-docx-claude-plugin-legalrabbit-docx.html) | 53 | 46 ★ | active |
-| 2 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
-| 3 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
+| 1 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 54 | 4 ★ | active |
+| 2 | [Legalrabbit Docx](https://tashan.sh/capability/plugin-legalrabbit-ai-legalrabbit-docx-claude-plugin-legalrabbit-docx.html) | 53 | 46 ★ | active |
+| 3 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
 | 4 | [Indian Banking Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-banking-drafting-litigation-indian-banking-drafting.html) | 42 | 1 ★ | active |
 | 5 | [Indian Company Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-company-drafting-indian-company-drafting.html) | 42 | 1 ★ | active |
 | 6 | [Indian Consumer Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-consumer-drafting-indian-consumer-drafting.html) | 42 | 1 ★ | active |

@@ -29,36 +29,36 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 55 | 13 ★ | active |
 | 9 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 54 | 123 ★ | active |
 | 10 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
-| 11 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 80 | 57k ★ | active |
-| 12 | [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) | 76 | 10k/wk | active |
-| 13 | [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) | 72 | 1k ★ | active |
-| 14 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 70 | 168 ★ | active |
-| 15 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
-| 16 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 68 | 137 ★ | active |
-| 17 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 68 | 2k/wk | active |
-| 18 | [Alphacouncil Agent](https://tashan.sh/capability/pkg-alphacouncil-agent.html) | 68 | 1k/wk | active |
-| 19 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 68 | 889/wk | active |
-| 20 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 67 | 1k/wk | active |
-| 21 | [Eurostat](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 67 | 876/wk | active |
-| 22 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 238 ★ | active |
-| 23 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 65 | 899/wk | active |
-| 24 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 64 | 770/wk | active |
-| 25 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
-| 26 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 51 | 73 ★ | active |
-| 27 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 80 | 12k ★ | active |
-| 28 | [Xrpl Utilities](https://tashan.sh/capability/pkg-xrpl-utilities-mcp.html) | 71 | 3k/wk | active |
-| 29 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 69 | 558 ★ | active |
-| 30 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 68 | 969/wk | active |
-| 31 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 52 | 2 repos | active |
-| 32 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 51 | 59 ★ | active |
-| 33 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 50 | 3 ★ | active |
-| 34 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 50 | 3 ★ | active |
-| 35 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 50 | 5 ★ | active |
-| 36 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 49 | 3 ★ | active |
-| 37 | [Algovault Skills](https://tashan.sh/capability/plugin-algovaultlabs-algovault-skills-algovault-skills.html) | 47 | 1 ★ | active |
-| 38 | [Resend](https://tashan.sh/capability/plugin-resend-resend-skills-resend.html) | 46 | 2 marketplaces | — |
-| 39 | [Bigdata Com](https://tashan.sh/capability/plugin-bigdata-com-bigdata-plugins-marketplace-bigdata-com.html) | 46 | 2 ★ | active |
-| 40 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 46 | 0 ★ | active |
+| 11 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 49 | 3 ★ | active |
+| 12 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 80 | 57k ★ | active |
+| 13 | [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) | 76 | 10k/wk | active |
+| 14 | [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) | 72 | 1k ★ | active |
+| 15 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 70 | 168 ★ | active |
+| 16 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
+| 17 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 69 | 558 ★ | active |
+| 18 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 68 | 137 ★ | active |
+| 19 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 68 | 2k/wk | active |
+| 20 | [Alphacouncil Agent](https://tashan.sh/capability/pkg-alphacouncil-agent.html) | 68 | 1k/wk | active |
+| 21 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 68 | 889/wk | active |
+| 22 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 67 | 1k/wk | active |
+| 23 | [Eurostat](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 67 | 876/wk | active |
+| 24 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 238 ★ | active |
+| 25 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 65 | 899/wk | active |
+| 26 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 64 | 770/wk | active |
+| 27 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
+| 28 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 51 | 73 ★ | active |
+| 29 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 51 | 59 ★ | active |
+| 30 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 50 | 3 ★ | active |
+| 31 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 45 | 21 ★ | active |
+| 32 | [Ultimate SEO Geo](https://tashan.sh/capability/plugin-mykpono-ultimate-seo-geo-ultimate-seo-geo.html) | 45 | 61 ★ | active |
+| 33 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 45 | 7 ★ | active |
+| 34 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 44 | 3 ★ | active |
+| 35 | [Post Bridge](https://tashan.sh/capability/plugin-post-bridge-hq-agent-mode-post-bridge.html) | 44 | 13 ★ | active |
+| 36 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 44 | 22 ★ | active |
+| 37 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 44 | 4 ★ | active |
+| 38 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 80 | 12k ★ | active |
+| 39 | [Xrpl Utilities](https://tashan.sh/capability/pkg-xrpl-utilities-mcp.html) | 71 | 3k/wk | active |
+| 40 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 68 | 969/wk | active |
 
 Showing the top 40 of 183. The full ranked shelf is at https://tashan.sh/role/marketer.html.
 

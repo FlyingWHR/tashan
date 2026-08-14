@@ -20,11 +20,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Zyte Web Data](https://tashan.sh/capability/plugin-zytedata-claude-skills-zyte-web-data.html) | 62 | 27 ★ | active |
 | 8 | [Parallel](https://tashan.sh/capability/plugin-parallel-web-parallel-agent-skills-parallel.html) | 62 | 62 ★ | active |
 | 9 | [Serpapi Claude Plugin](https://tashan.sh/capability/plugin-serpapi-serpapi-claude-plugin-serpapi-claude-plugin.html) | 57 | 13 ★ | active |
-| 10 | [Serper Search Scrape](https://tashan.sh/capability/pkg-serper-search-scrape-mcp-server.html) | 20 | 11k/wk | abandoned |
-| 11 | [Scraper](https://tashan.sh/capability/pkg-mcp-scraper.html) | 72 | 4k/wk | active |
-| 12 | [Haunt API](https://tashan.sh/capability/plugin-darko893-haunt-mcp-server-haunt-api.html) | 48 | 2 ★ | active |
-| 13 | [Browser Use](https://tashan.sh/capability/plugin-browser-use-plugins-browser-use.html) | 47 | 7 ★ | active |
-| 14 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 47 | 15 ★ | active |
+| 10 | [Browser Use](https://tashan.sh/capability/plugin-browser-use-plugins-browser-use.html) | 47 | 7 ★ | active |
+| 11 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 47 | 15 ★ | active |
+| 12 | [Serper Search Scrape](https://tashan.sh/capability/pkg-serper-search-scrape-mcp-server.html) | 20 | 11k/wk | abandoned |
+| 13 | [Scraper](https://tashan.sh/capability/pkg-mcp-scraper.html) | 72 | 4k/wk | active |
+| 14 | [Haunt API](https://tashan.sh/capability/plugin-darko893-haunt-mcp-server-haunt-api.html) | 48 | 2 ★ | active |
 | 15 | [Brightdata Plugin](https://tashan.sh/capability/plugin-brightdata-skills-brightdata-plugin.html) | 46 | 2 marketplaces | — |
 | 16 | [LinkedIn Apply](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-apply.html) | 43 | 1 marketplaces | active |
 | 17 | [Alltuu Downloader](https://tashan.sh/capability/plugin-chujianyun-skills-alltuu-downloader.html) | 40 | 1 marketplaces | active |

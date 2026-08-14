@@ -45,20 +45,20 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 24 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 51 | 4 ★ | active |
 | 25 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 51 | 143 ★ | active |
 | 26 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 50 | 12 ★ | active |
-| 27 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 82 | 37k/wk | active |
-| 28 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 80 | 57k ★ | active |
-| 29 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
-| 30 | [Notion · suekou](https://tashan.sh/capability/pkg-suekou-mcp-notion-server.html) | 73 | 733/wk | active |
-| 31 | [Blockrun](https://tashan.sh/capability/pkg-blockrun-mcp.html) | 72 | 1k/wk | active |
-| 32 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 70 | 2k/wk | active |
-| 33 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
-| 34 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 69 | 284 ★ | active |
-| 35 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 69 | 2k/wk | active |
-| 36 | [Slack](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 68 | 86 ★ | active |
-| 37 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 68 | 154 ★ | active |
-| 38 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 68 | 212 ★ | active |
-| 39 | [Seekstone](https://tashan.sh/capability/pkg-seekstone.html) | 68 | 1k/wk | active |
-| 40 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 67 | 433 ★ | active |
+| 27 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 49 | 7 ★ | active |
+| 28 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 49 | 28 ★ | active |
+| 29 | [Arx](https://tashan.sh/capability/plugin-eric-tramel-arx-arx.html) | 41 | 7 ★ | active |
+| 30 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 82 | 37k/wk | active |
+| 31 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 80 | 57k ★ | active |
+| 32 | [Desktop Commander · wonderwhy-er](https://tashan.sh/capability/plugin-wonderwhy-er-desktopcommandermcp-desktop-commander.html) | 79 | 9k ★ | active |
+| 33 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 79 | 89k ★ | active |
+| 34 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 79 | 62k ★ | active |
+| 35 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
+| 36 | [Notion · suekou](https://tashan.sh/capability/pkg-suekou-mcp-notion-server.html) | 73 | 733/wk | active |
+| 37 | [Blockrun](https://tashan.sh/capability/pkg-blockrun-mcp.html) | 72 | 1k/wk | active |
+| 38 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 70 | 2k/wk | active |
+| 39 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
+| 40 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 69 | 284 ★ | active |
 
 Showing the top 40 of 368. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 

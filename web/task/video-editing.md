@@ -17,11 +17,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 52 | 5 ★ | active |
 | 5 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 68 | 137 ★ | active |
 | 6 | [Hamel Tools](https://tashan.sh/capability/plugin-hamelsmu-hamel-hamel-tools.html) | 52 | 58 ★ | active |
-| 7 | [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) | 74 | 8k/wk | active |
-| 8 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 70 | 150 ★ | active |
-| 9 | [Peepshow](https://tashan.sh/capability/plugin-t0mtaylor-peepshow-peepshow.html) | 50 | 65 ★ | active |
-| 10 | [Letmewatch](https://tashan.sh/capability/plugin-binyamineden-letmewatch-letmewatch.html) | 49 | 9 ★ | active |
-| 11 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 48 | 20 ★ | active |
+| 7 | [Peepshow](https://tashan.sh/capability/plugin-t0mtaylor-peepshow-peepshow.html) | 50 | 65 ★ | active |
+| 8 | [Letmewatch](https://tashan.sh/capability/plugin-binyamineden-letmewatch-letmewatch.html) | 49 | 9 ★ | active |
+| 9 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 48 | 20 ★ | active |
+| 10 | [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) | 74 | 8k/wk | active |
+| 11 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 70 | 150 ★ | active |
 | 12 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 46 | 1 ★ | active |
 | 13 | [Hyperframes By Heygen](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes-by-heygen.html) | 44 | 1 marketplaces | active |
 | 14 | [Fk Manim Video](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-manim-video.html) | 44 | 1 marketplaces | active |
@@ -33,18 +33,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 20 | [Furlen](https://tashan.sh/capability/pkg-furlen-mcp.html) | 52 | 97/wk | active |
 | 21 | [Frenchie Skill](https://tashan.sh/capability/pkg-lab94-frenchie.html) | 43 | 80/wk | active |
 | 22 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 66 | 988/wk | active |
-| 23 | [Primate Intelligence](https://tashan.sh/capability/pkg-primate-intelligence-mcp.html) | 60 | 467/wk | active |
-| 24 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
-| 25 | [Uploadcheck](https://tashan.sh/capability/pkg-drantoniou-uploadcheck-mcp.html) | 54 | 92/wk | active |
-| 26 | [YouTube Transcript](https://tashan.sh/capability/pkg-sinco-lab-mcp-youtube-transcript.html) | 50 | 487/wk | active |
-| 27 | [Botverse](https://tashan.sh/capability/pkg-botverse-mcp.html) | 49 | 84/wk | active |
-| 28 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
-| 29 | [Ilovevideoeditor](https://tashan.sh/capability/pkg-ilovevideoeditor-mcp-server.html) | 47 | 62/wk | active |
-| 30 | [Transcription](https://tashan.sh/capability/pkg-scriptivox-mcp-server.html) | 43 | 90/wk | active |
-| 31 | [Ssemble AI Clipping](https://tashan.sh/capability/pkg-ssemble-mcp-server.html) | 40 | 110/wk | active |
-| 32 | [Demostudio](https://tashan.sh/capability/pkg-demostudio-mcp-server.html) | 37 | 96/wk | active |
-| 33 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 67 | 784/wk | active |
-| 34 | [Oh My Cassette](https://tashan.sh/capability/plugin-cassette-editor-oh-my-cassette-oh-my-cassette.html) | 65 | 140 ★ | active |
+| 23 | [Oh My Cassette](https://tashan.sh/capability/plugin-cassette-editor-oh-my-cassette-oh-my-cassette.html) | 65 | 140 ★ | active |
+| 24 | [Primate Intelligence](https://tashan.sh/capability/pkg-primate-intelligence-mcp.html) | 60 | 467/wk | active |
+| 25 | [Instavar](https://tashan.sh/capability/pkg-instavar-mcp-server.html) | 57 | 186/wk | active |
+| 26 | [Uploadcheck](https://tashan.sh/capability/pkg-drantoniou-uploadcheck-mcp.html) | 54 | 92/wk | active |
+| 27 | [YouTube Transcript](https://tashan.sh/capability/pkg-sinco-lab-mcp-youtube-transcript.html) | 50 | 487/wk | active |
+| 28 | [Botverse](https://tashan.sh/capability/pkg-botverse-mcp.html) | 49 | 84/wk | active |
+| 29 | [Opencut Controller](https://tashan.sh/capability/pkg-opencut-controller.html) | 48 | 51/wk | active |
+| 30 | [Ilovevideoeditor](https://tashan.sh/capability/pkg-ilovevideoeditor-mcp-server.html) | 47 | 62/wk | active |
+| 31 | [Transcription](https://tashan.sh/capability/pkg-scriptivox-mcp-server.html) | 43 | 90/wk | active |
+| 32 | [Ssemble AI Clipping](https://tashan.sh/capability/pkg-ssemble-mcp-server.html) | 40 | 110/wk | active |
+| 33 | [Demostudio](https://tashan.sh/capability/pkg-demostudio-mcp-server.html) | 37 | 96/wk | active |
+| 34 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 67 | 784/wk | active |
 | 35 | [Claude Skills Library](https://tashan.sh/capability/pkg-claude-skills-library.html) | 55 | 2k/wk | active |
 | 36 | [Orcadub](https://tashan.sh/capability/pkg-orcadub-cli.html) | 54 | 139/wk | active |
 | 37 | [Myvideogift](https://tashan.sh/capability/pkg-myvideogift-mcp.html) | 48 | 81/wk | active |

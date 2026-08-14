@@ -14,8 +14,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Anki](https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html) | 76 | 953/wk | active |
 | 2 | [Campus CLI](https://tashan.sh/capability/pkg-campus-cli.html) | 68 | 1k/wk | active |
 | 3 | [Guide](https://tashan.sh/capability/plugin-orinachum-onboarding-claude-code-guide.html) | 61 | 117 ★ | active |
-| 4 | [Claude Education Skills Library](https://tashan.sh/capability/plugin-garethmanning-claude-education-skills-claude-education-skills-library.html) | 65 | 471 ★ | active |
-| 5 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 46 | 26 ★ | active |
+| 4 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 46 | 26 ★ | active |
+| 5 | [Claude Education Skills Library](https://tashan.sh/capability/plugin-garethmanning-claude-education-skills-claude-education-skills-library.html) | 65 | 471 ★ | active |
 | 6 | [Learning Output Style](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-learning-output-style.html) | 42 | 1 marketplaces | — |
 | 7 | [Claude Coach](https://tashan.sh/capability/skill-alirezarezvani-claude-coach.html) | not scored | 1 repos | active |
 | 8 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | not scored | 1 repos | active |

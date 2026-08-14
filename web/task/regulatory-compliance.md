@@ -20,15 +20,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Ris Austria](https://tashan.sh/capability/pkg-cyanheads-ris-austria-mcp-server.html) | 65 | 822/wk | active |
 | 8 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 60 | 27 ★ | active |
 | 9 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
-| 10 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 45 | 2k/wk | active |
-| 11 | [Labor Law](https://tashan.sh/capability/pkg-labor-law-mcp.html) | 41 | 2k/wk | active |
-| 12 | [Hourei](https://tashan.sh/capability/pkg-hourei-mcp-server.html) | 32 | 2k/wk | abandoned |
-| 13 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
-| 14 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
-| 15 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 47 | 5 ★ | active |
-| 16 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 47 | 1 ★ | active |
-| 17 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
-| 18 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
+| 10 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
+| 11 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
+| 12 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 45 | 2k/wk | active |
+| 13 | [Labor Law](https://tashan.sh/capability/pkg-labor-law-mcp.html) | 41 | 2k/wk | active |
+| 14 | [Hourei](https://tashan.sh/capability/pkg-hourei-mcp-server.html) | 32 | 2k/wk | abandoned |
+| 15 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
+| 16 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 47 | 5 ★ | active |
+| 17 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 47 | 1 ★ | active |
+| 18 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
 | 19 | [Bubble Shield](https://tashan.sh/capability/plugin-vdk888-bubble-shield-public-bubble-shield.html) | 43 | 0 ★ | active |
 | 20 | [Caio Review](https://tashan.sh/capability/skill-alirezarezvani-caio-review.html) | not scored | 1 repos | active |
 | 21 | [Cdo Review](https://tashan.sh/capability/skill-alirezarezvani-cdo-review.html) | not scored | 1 repos | active |

@@ -15,8 +15,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 54 | 123 ★ | active |
 | 3 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
 | 4 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 66 | 238 ★ | active |
-| 5 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 52 | 2 repos | active |
-| 6 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 45 | 21 ★ | active |
+| 5 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 45 | 21 ★ | active |
+| 6 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 52 | 2 repos | active |
 | 7 | [Copywriting](https://tashan.sh/capability/skill-alirezarezvani-copywriting.html) | 44 | 2 repos | active |
 | 8 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 44 | 1 marketplaces | active |
 | 9 | [LinkedIn Post Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-post-generator.html) | 43 | 1 marketplaces | active |

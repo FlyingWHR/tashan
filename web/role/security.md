@@ -45,18 +45,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 57 | 21 ★ | active |
 | 27 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 55 | 13 ★ | active |
 | 28 | [Descope Skills](https://tashan.sh/capability/plugin-descope-skills-descope-skills.html) | 53 | 12 ★ | active |
-| 29 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 45 | 2k/wk | active |
-| 30 | [Labor Law](https://tashan.sh/capability/pkg-labor-law-mcp.html) | 41 | 2k/wk | active |
-| 31 | [Hourei](https://tashan.sh/capability/pkg-hourei-mcp-server.html) | 32 | 2k/wk | abandoned |
-| 32 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 60 | 43 ★ | active |
-| 33 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 60 | 37 ★ | active |
-| 34 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 56 | 11 ★ | active |
-| 35 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 55 | 12 ★ | active |
-| 36 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
-| 37 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 49 | 39 ★ | active |
-| 38 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 48 | 1 ★ | active |
-| 39 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 48 | 3 ★ | active |
-| 40 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 47 | 2 ★ | active |
+| 29 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
+| 30 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 49 | 39 ★ | active |
+| 31 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 48 | 3 ★ | active |
+| 32 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 47 | 2 ★ | active |
+| 33 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 47 | 5 ★ | active |
+| 34 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 47 | 6 ★ | active |
+| 35 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
+| 36 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 45 | 2k/wk | active |
+| 37 | [Rugproof](https://tashan.sh/capability/plugin-omermaksutii-rugproof-rugproof.html) | 43 | 9 ★ | active |
+| 38 | [Labor Law](https://tashan.sh/capability/pkg-labor-law-mcp.html) | 41 | 2k/wk | active |
+| 39 | [Hourei](https://tashan.sh/capability/pkg-hourei-mcp-server.html) | 32 | 2k/wk | abandoned |
+| 40 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 60 | 43 ★ | active |
 
 Showing the top 40 of 196. The full ranked shelf is at https://tashan.sh/role/security.html.
 

@@ -12,15 +12,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
-| 2 | [Ghl Command](https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html) | 67 | 863/wk | active |
-| 3 | [Gongio](https://tashan.sh/capability/pkg-gongio-mcp.html) | 66 | 1k/wk | active |
-| 4 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
-| 5 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 56 | 56 ★ | active |
-| 6 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
-| 7 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 69 | 558 ★ | active |
+| 2 | [Apollo](https://tashan.sh/capability/plugin-adelaidasofia-apollo-mcp-apollo-mcp.html) | 46 | 3 ★ | active |
+| 3 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 69 | 558 ★ | active |
+| 4 | [Ghl Command](https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html) | 67 | 863/wk | active |
+| 5 | [Gongio](https://tashan.sh/capability/pkg-gongio-mcp.html) | 66 | 1k/wk | active |
+| 6 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
+| 7 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 56 | 56 ★ | active |
 | 8 | [Zoominfo](https://tashan.sh/capability/plugin-zoominfo-zoominfo-mcp-plugin-zoominfo.html) | 50 | 3 ★ | active |
 | 9 | [Lusha](https://tashan.sh/capability/plugin-lusha-oss-lusha-mcp-plugin-lusha.html) | 48 | 3 ★ | active |
-| 10 | [Apollo](https://tashan.sh/capability/plugin-adelaidasofia-apollo-mcp-apollo-mcp.html) | 46 | 3 ★ | active |
+| 10 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
 | 11 | [Carta CRM](https://tashan.sh/capability/plugin-carta-plugins-carta-crm.html) | 44 | 1 marketplaces | active |
 | 12 | [Deepline](https://tashan.sh/capability/plugin-getaero-io-deepline-plugins-deepline.html) | 44 | 1 ★ | active |
 | 13 | [Apollo · apolloio](https://tashan.sh/capability/plugin-apolloio-apollo-mcp-plugin-apollo.html) | 43 | 1 marketplaces | active |

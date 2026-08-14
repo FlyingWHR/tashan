@@ -16,10 +16,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [AI Adoption Playbook](https://tashan.sh/capability/plugin-adimango-ai-adoption-playbook-ai-adoption-playbook.html) | 59 | 20 ★ | active |
 | 4 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 56 | 43 ★ | active |
 | 5 | [Product Discovery](https://tashan.sh/capability/plugin-lenar-amirov-product-pipeline-public-product-discovery.html) | 56 | 13 ★ | active |
-| 6 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 52 | 5 ★ | active |
-| 7 | [Brief](https://tashan.sh/capability/skill-alirezarezvani-brief.html) | 51 | 4 repos | active |
-| 8 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 46 | 5 ★ | active |
-| 9 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 44 | 4 ★ | active |
+| 6 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 44 | 4 ★ | active |
+| 7 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 52 | 5 ★ | active |
+| 8 | [Brief](https://tashan.sh/capability/skill-alirezarezvani-brief.html) | 51 | 4 repos | active |
+| 9 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 46 | 5 ★ | active |
 | 10 | [Mindpowers](https://tashan.sh/capability/plugin-rohitgehe05-mindpowers-mindpowers.html) | 43 | 3 ★ | active |
 | 11 | [Claude Deconstruct](https://tashan.sh/capability/plugin-adelaidasofia-claude-deconstruct-claude-deconstruct.html) | 43 | 1 ★ | active |
 | 12 | [Product In Acquisitions](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-product-in-acquisitions.html) | 43 | 1 marketplaces | active |

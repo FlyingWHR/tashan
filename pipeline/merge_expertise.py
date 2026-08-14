@@ -52,6 +52,7 @@ def main():
     con = build.db()
     known = {r[0] for r in con.execute("SELECT id FROM capabilities")}
 
+    skipped_skills = 0
     files = sorted(glob.glob(os.path.join(ROOT, "data", "readmes", "scores_*.json")))
     good, rejected, seen = [], [], {}
     for f in files:
@@ -67,6 +68,17 @@ def main():
         for rec in recs:
             if not isinstance(rec, dict):
                 rejected.append(f"{src}: non-object entry")
+                continue
+            # A SKILL CANNOT BE GRADED BY THIS RUBRIC, AND THE RULE HAS TO LIVE HERE.
+            # docs/GRADING-RUBRIC.md has the measurement: criterion (a) is per-tool documentation
+            # and a skill has no tools, so the rubric lands skills at 2.7% `deep` against servers'
+            # 16-20% — measuring the mismatch, not the writing. That was written down and nothing
+            # enforced it, so the very next batch arrived carrying 213 graded skills purely because
+            # fetch_readmes reached far enough down the demand curve to stage them. A rule in a
+            # document that the pipeline does not check is a rule that holds until someone is busy.
+            # What skills get instead is pipeline/skill_doc.py: facts about their own SKILL.md.
+            if str(rec.get("id", "")).startswith("skill:"):
+                skipped_skills += 1
                 continue
             problems = validate(rec, src, known)
             if problems:
@@ -115,6 +127,9 @@ def main():
     con.commit()
     graded = con.execute("SELECT COUNT(*) FROM capabilities WHERE expertise_verdict IS NOT NULL").fetchone()[0]
     total = con.execute("SELECT COUNT(*) FROM capabilities WHERE tashan_score IS NOT NULL").fetchone()[0]
+    if skipped_skills:
+        print(f"  skipped {skipped_skills} skill(s) — the expertise rubric does not apply to them "
+              f"(docs/GRADING-RUBRIC.md); they carry skill_doc facts instead")
     print(f"  merged {len(good)} grades -> {graded:,} of {total:,} scored capabilities graded "
           f"({100 * graded / max(total, 1):.1f}%)")
     build.export(con)

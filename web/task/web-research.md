@@ -27,17 +27,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Parallel](https://tashan.sh/capability/plugin-parallel-web-parallel-agent-skills-parallel.html) | 62 | 62 ★ | active |
 | 15 | [Antigravity](https://tashan.sh/capability/plugin-marcosnahuel-antigravity-plugin-cc-antigravity.html) | 58 | 21 ★ | active |
 | 16 | [Serpapi Claude Plugin](https://tashan.sh/capability/plugin-serpapi-serpapi-claude-plugin-serpapi-claude-plugin.html) | 57 | 13 ★ | active |
-| 17 | [Stepfun](https://tashan.sh/capability/pkg-stepfun-mcp.html) | 44 | 2k/wk | active |
-| 18 | [Trends Hub](https://tashan.sh/capability/pkg-mcp-trends-hub.html) | 42 | 2k/wk | abandoned |
-| 19 | [Perplexity](https://tashan.sh/capability/pkg-perplexity-mcp.html) | 31 | 1k/wk | abandoned |
-| 20 | [Deepwiki](https://tashan.sh/capability/pkg-mcp-deepwiki.html) | 23 | 2k/wk | abandoned |
-| 21 | [Serper Search Scrape](https://tashan.sh/capability/pkg-serper-search-scrape-mcp-server.html) | 20 | 11k/wk | abandoned |
-| 22 | [Kimi · qwang07](https://tashan.sh/capability/pkg-kimi-mcp.html) | 19 | 4k/wk | abandoned |
-| 23 | [Duckduckgo · zhsama](https://tashan.sh/capability/pkg-duckduckgo-mcp-server.html) | 17 | 1k/wk | abandoned |
-| 24 | [Feedpik](https://tashan.sh/capability/pkg-feedpik.html) | 62 | 739/wk | active |
-| 25 | [Travel Search And Booking API And Skills](https://tashan.sh/capability/plugin-alibaba-flyai-flyai-skill-travel-search-and-booking-api-and-skills.html) | 60 | 880 ★ | active |
-| 26 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 51 | 2 repos | active |
-| 27 | [Releases](https://tashan.sh/capability/plugin-buildinternet-releases-cli-releases.html) | 49 | 3 ★ | active |
+| 17 | [Releases](https://tashan.sh/capability/plugin-buildinternet-releases-cli-releases.html) | 49 | 3 ★ | active |
+| 18 | [Stepfun](https://tashan.sh/capability/pkg-stepfun-mcp.html) | 44 | 2k/wk | active |
+| 19 | [Trends Hub](https://tashan.sh/capability/pkg-mcp-trends-hub.html) | 42 | 2k/wk | abandoned |
+| 20 | [Perplexity](https://tashan.sh/capability/pkg-perplexity-mcp.html) | 31 | 1k/wk | abandoned |
+| 21 | [Deepwiki](https://tashan.sh/capability/pkg-mcp-deepwiki.html) | 23 | 2k/wk | abandoned |
+| 22 | [Serper Search Scrape](https://tashan.sh/capability/pkg-serper-search-scrape-mcp-server.html) | 20 | 11k/wk | abandoned |
+| 23 | [Kimi · qwang07](https://tashan.sh/capability/pkg-kimi-mcp.html) | 19 | 4k/wk | abandoned |
+| 24 | [Duckduckgo · zhsama](https://tashan.sh/capability/pkg-duckduckgo-mcp-server.html) | 17 | 1k/wk | abandoned |
+| 25 | [Feedpik](https://tashan.sh/capability/pkg-feedpik.html) | 62 | 739/wk | active |
+| 26 | [Travel Search And Booking API And Skills](https://tashan.sh/capability/plugin-alibaba-flyai-flyai-skill-travel-search-and-booking-api-and-skills.html) | 60 | 880 ★ | active |
+| 27 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 51 | 2 repos | active |
 | 28 | [Grep Research Skills](https://tashan.sh/capability/plugin-parcha-ai-grep-research-skills-grep-research-skills.html) | 48 | 1 ★ | active |
 | 29 | [Brightdata Plugin](https://tashan.sh/capability/plugin-brightdata-skills-brightdata-plugin.html) | 46 | 2 marketplaces | — |
 | 30 | [Learn · agent-sh](https://tashan.sh/capability/plugin-agent-sh-learn-learn.html) | 44 | 2 ★ | active |

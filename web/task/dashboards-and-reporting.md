@@ -12,13 +12,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Powerbi Modeling](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp.html) | 75 | 13k/wk | active |
-| 2 | [Microcharts](https://tashan.sh/capability/pkg-microcharts-mcp.html) | 65 | 836/wk | active |
-| 3 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 63 | 100 ★ | active |
-| 4 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 53 | 12 ★ | active |
-| 5 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 53 | 7 ★ | active |
-| 6 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 75 | 4k ★ | active |
-| 7 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
-| 8 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
+| 2 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 68 | 64 ★ | active |
+| 3 | [Microcharts](https://tashan.sh/capability/pkg-microcharts-mcp.html) | 65 | 836/wk | active |
+| 4 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 63 | 100 ★ | active |
+| 5 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 53 | 12 ★ | active |
+| 6 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 53 | 7 ★ | active |
+| 7 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 75 | 4k ★ | active |
+| 8 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 71 | 417 ★ | active |
 | 9 | [Chart](https://tashan.sh/capability/pkg-bicharts-chart-mcp.html) | 66 | 1k/wk | active |
 | 10 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 49 | 2 ★ | active |
 | 11 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
@@ -45,12 +45,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Preset CLI Skills](https://tashan.sh/capability/plugin-preset-io-agent-skills-preset-cli-skills.html) | 59 | 10 ★ | active |
 | 33 | [Flint Chart](https://tashan.sh/capability/pkg-flint-chart-mcp.html) | 68 | 1k/wk | active |
 | 34 | [Ellmos Controlcenter](https://tashan.sh/capability/pkg-ellmos-controlcenter-mcp.html) | 63 | 510/wk | active |
-| 35 | [Excalidraw](https://tashan.sh/capability/pkg-mcp-excalidraw-server.html) | 62 | 2k/wk | active |
-| 36 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 62 | 334/wk | active |
-| 37 | [Redash](https://tashan.sh/capability/pkg-redash-mcp.html) | 58 | 398/wk | active |
-| 38 | [Dashboards](https://tashan.sh/capability/pkg-mcp-dashboards.html) | 53 | 212/wk | active |
-| 39 | [Dashboardbase](https://tashan.sh/capability/pkg-dashboardbase-mcp.html) | 52 | 136/wk | active |
-| 40 | [Chartforge](https://tashan.sh/capability/pkg-chartforge-mcp.html) | 47 | 111/wk | active |
+| 35 | [Toggl](https://tashan.sh/capability/pkg-verygoodplugins-mcp-toggl.html) | 41 | 48/wk | active |
+| 36 | [Excalidraw](https://tashan.sh/capability/pkg-mcp-excalidraw-server.html) | 62 | 2k/wk | active |
+| 37 | [Slickfast](https://tashan.sh/capability/pkg-slickfast-mcp.html) | 62 | 334/wk | active |
+| 38 | [Redash](https://tashan.sh/capability/pkg-redash-mcp.html) | 58 | 398/wk | active |
+| 39 | [Dashboards](https://tashan.sh/capability/pkg-mcp-dashboards.html) | 53 | 212/wk | active |
+| 40 | [Dashboardbase](https://tashan.sh/capability/pkg-dashboardbase-mcp.html) | 52 | 136/wk | active |
 
 Showing the top 40 of 47. The full ranked shelf is at https://tashan.sh/task/dashboards-and-reporting.html.
 

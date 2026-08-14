@@ -31,21 +31,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Malchela](https://tashan.sh/capability/plugin-dwmetz-malchela-malchela.html) | 60 | 114 ★ | active |
 | 19 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 57 | 21 ★ | active |
 | 20 | [Descope Skills](https://tashan.sh/capability/plugin-descope-skills-descope-skills.html) | 53 | 12 ★ | active |
-| 21 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 60 | 43 ★ | active |
-| 22 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 56 | 11 ★ | active |
-| 23 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 55 | 12 ★ | active |
-| 24 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
-| 25 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 49 | 39 ★ | active |
-| 26 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 48 | 1 ★ | active |
-| 27 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 48 | 3 ★ | active |
-| 28 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 47 | 2 ★ | active |
-| 29 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 47 | 5 ★ | active |
-| 30 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 47 | 6 ★ | active |
-| 31 | [Gomboc AI Community](https://tashan.sh/capability/plugin-gomboc-ai-gomboc-community-skills-gomboc-ai-community.html) | 47 | 6 ★ | active |
-| 32 | [Security Guidance](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-security-guidance.html) | 46 | 2 marketplaces | — |
-| 33 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
-| 34 | [Apiiro](https://tashan.sh/capability/plugin-apiiro-mcp-server-apiiro.html) | 46 | 3 ★ | active |
-| 35 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
+| 21 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
+| 22 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 49 | 39 ★ | active |
+| 23 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 48 | 3 ★ | active |
+| 24 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 47 | 2 ★ | active |
+| 25 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 47 | 5 ★ | active |
+| 26 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 47 | 6 ★ | active |
+| 27 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
+| 28 | [Rugproof](https://tashan.sh/capability/plugin-omermaksutii-rugproof-rugproof.html) | 43 | 9 ★ | active |
+| 29 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 60 | 43 ★ | active |
+| 30 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 56 | 11 ★ | active |
+| 31 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 55 | 12 ★ | active |
+| 32 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 48 | 1 ★ | active |
+| 33 | [Gomboc AI Community](https://tashan.sh/capability/plugin-gomboc-ai-gomboc-community-skills-gomboc-ai-community.html) | 47 | 6 ★ | active |
+| 34 | [Security Guidance](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-security-guidance.html) | 46 | 2 marketplaces | — |
+| 35 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
 | 36 | [Red Team](https://tashan.sh/capability/skill-alirezarezvani-red-team.html) | 44 | 2 repos | active |
 | 37 | [Ship Gate](https://tashan.sh/capability/skill-alirezarezvani-ship-gate.html) | 44 | 2 repos | active |
 | 38 | [Clover](https://tashan.sh/capability/plugin-clover-security-clover-claude-plugin-clover.html) | 44 | 0 ★ | active |
