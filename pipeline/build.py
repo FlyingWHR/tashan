@@ -483,35 +483,103 @@ def probe_demand(rows, cache):
             # ONLY SUCCESSES ARE CACHED. Storing a failed probe as a permanent 0 would mean one
             # rate-limited request retires a package from the queue for good — the same
             # self-hiding blind spot this function exists to remove, just with a new cause.
-            if dl is not None:
+            if dl is GONE:
+                # AN ANSWER, SO RECORD IT. npm has no download data for this name. Zero is the
+                # honest price and it sorts last, which is right — but it is now cached, so the
+                # package stops consuming a probe slot on every future run.
+                probe[pkg], misses = 0, 0
+            elif dl is not None:
                 probe[pkg], misses = dl, 0
             else:
                 misses += 1
                 if misses >= 25:
-                    print(f"    npm is rate-limiting: stopped after {i + 1} scoped probes, "
+                    print(f"    npm is throttling: stopped after {i + 1} scoped probes, "
                           f"{len(solo) - i - 1} deferred to the next run", flush=True)
                     break
             time.sleep(0.4)
-        print(f"  priced {sum(1 for p in todo if probe.get(p))} of {len(todo)}", flush=True)
-    return sorted(rows, key=lambda r: -(probe.get(r[1]) or 0))
+        print(f"  priced {sum(1 for p in todo if p in probe)} of {len(todo)}", flush=True)
+    return interleave_unpriced(rows, probe)
+
+
+# One in three of the never-enriched slots goes to a row we could not price. Measured, not guessed:
+# see interleave_unpriced.
+UNPRICED_EVERY = 3
+
+
+def interleave_unpriced(rows, probe):
+    """Order the backlog by measured demand — but never let an unpriceable row starve.
+
+    THE BLIND SPOT HAD MOVED, NOT CLOSED. probe_demand exists because ordering the backlog by
+    `config_reach` was noise, and @playwright/mcp sat at rank 4,436 while being the most-installed
+    MCP server alive. The fix priced the backlog against the downloads API and sorted by it. But
+    npm's bulk endpoint refuses scoped names — verified 15 Aug 2026, and a MIXED chunk fails
+    outright, so one scoped name would cost all 128 — and scoped names probed singly cost ~2.4s
+    each even un-proxied, with 6 workers earning 18 HTTP 429s out of 60. There is no rate at which
+    4,476 of them finish.
+
+    So they went unpriced, and unpriced sorted last. Measured on the live corpus:
+
+        scoped    4,476 rows | 0.9% priced | 35.4% enriched
+        unscoped  3,574 rows | 58.8% priced | 65.8% enriched
+
+    61% of scoped packages that we KNOW exist had no download count, and downloads are the heaviest
+    input to Adoption, which gates every score. The ordering signal had become a filter: a row we
+    could not cheaply price was a row we would not measure, so it stayed unpriceable. Same shape as
+    the defect this function was written to fix, one layer down.
+
+    Sorting them fairly is the fix, not probing harder. A scoped probe spends a request to learn a
+    number that enrichment fetches again anyway, so for those names the probe is pure overhead —
+    what they need is a slot, not a price. Unpriced rows keep their incoming order (registry
+    presence, then config reach), and take every third never-enriched slot until the backlog drains,
+    at which point every row has a real count and demand ordering takes over on its own.
+    """
+    # MEMBERSHIP, NOT TRUTHINESS. A 404 is cached as price 0, which is falsy — so testing
+    # `probe.get(pkg)` filed every package npm has confirmed is GONE under "we could not price
+    # this", where it would compete for the fair share reserved for rows we genuinely do not know
+    # about. A zero is knowledge: it sorts last among the priced, and never takes a rescue slot.
+    priced = sorted((r for r in rows if r[1] in probe), key=lambda r: -probe[r[1]])
+    unpriced = [r for r in rows if r[1] not in probe]
+    out, i, j = [], 0, 0
+    while i < len(priced) or j < len(unpriced):
+        for _ in range(UNPRICED_EVERY - 1):
+            if i < len(priced):
+                out.append(priced[i]); i += 1
+        if j < len(unpriced):
+            out.append(unpriced[j]); j += 1
+    return out
+
+
+GONE = "gone"    # npm answered 404: no download data. An ANSWER, not a failure — see _weekly.
 
 
 def _weekly(pkg, tries=3):
-    """Last week's download count, or None when npm has no answer.
+    """Last week's download count, GONE when npm says 404, or None when we never got an answer.
 
     Never raises: this is a hint that orders a queue, and a hint that fails must not take the
     pipeline down with it. It does back off, though — a flat give-up on the first 429 is what turned
     the first probe run into 4,441 silent failures.
+
+    404 AND 429 USED TO BE THE SAME RETURN, and they are opposites. 404 means npm answered and the
+    package has no download data; 429 means npm refused to answer. Collapsing them into None had
+    two consequences, both invisible:
+
+      - every 404 counted toward the caller's rate-limit circuit breaker, so a run of unpublished
+        packages tripped it and printed "npm is rate-limiting" when npm was answering perfectly.
+        Measured 15 Aug 2026: 60 scoped probes, serial — 58 ok, 2 failures, BOTH 404. Not one 429.
+      - a 404 was never cached, so those packages were re-requested every night for ever. The same
+        defect as the security scan's LIMIT-on-rows: work that can never succeed consumes the budget
+        on every run, and crowds out work that can.
     """
     for n in range(tries):
         try:
             return get_json("https://api.npmjs.org/downloads/point/last-week/"
                             + urllib.parse.quote(pkg, safe="@/"), timeout=12).get("downloads")
         except urllib.error.HTTPError as e:
-            if e.code in (404, 429):
-                return None      # 404: unpublished. 429: retrying is what CAUSED the 429 — the
-                                 # caller's circuit breaker handles it, and nothing is cached, so
-                                 # the package is simply priced on a later run.
+            if e.code == 404:
+                return GONE      # unpublished, or too new to have a week of data. Cache it.
+            if e.code == 429:
+                return None      # retrying is what CAUSED the 429 — the caller's breaker handles
+                                 # it, nothing is cached, and the package is priced on a later run.
             time.sleep(0.5 * (n + 1))
         except Exception:
             time.sleep(0.5 * (n + 1))
@@ -2264,6 +2332,12 @@ def export(con):
               "npm_latest_version", "remote_host",
               "vitality", "expertise_verdict", "npm_downloads", "gh_stars", "npm_deprecated",
               "gh_archived", "registry_status", "single_maintainer", "similar_official", "rated",
+              # WHY a row is unrated, not just that it is. Without this the CLI can only say
+              # "catalogued but not rated — no per-item evidence yet", which is the right sentence
+              # for a row nobody has measured and the wrong one for a row we REFUSED to rate: it
+              # tells an agent we are missing data about a package listed as malware. Only unrated
+              # rows carry it, so it costs a string on a few hundred of 11,749.
+              "rating_basis",
               # the security audit, so `doctor` can warn about something already installed
               "sec_advisory_count", "sec_max_severity", "sec_install_script", "sec_permissions",
               "sec_perm_n", "sec_provenance", "sec_remote_content", "sec_scanned_at",
@@ -2309,6 +2383,30 @@ def export(con):
     # arrived carrying the raw install command and full advisory blob into a public file. Redact on
     # the way in, where every row passes, rather than at each source.
     for c in caps + delisted + malicious:
+        # A CONFIRMED-MALICIOUS ROW MUST NOT CARRY A SCORE, for the same reason a discontinued one
+        # does not: eligibility overrides score. Four of the six did — claude-cup led with
+        # "tashan score 77/100 · 4,837,320 downloads/wk · active" and only then said the package IS
+        # the attack. Read top-down by an agent, that is an endorsement followed by a footnote.
+        #
+        # And the number is not merely awkward, it is WRONG BY CONSTRUCTION. Adoption is the
+        # heaviest input, and 4.8M weekly installs of malware measures how many machines it reached,
+        # not how good it is. Publishing that as a quality score inverts the meaning of the only
+        # evidence that matters here.
+        #
+        # The downloads STAY. They are what makes the warning land, and the previous commit existed
+        # to stop this row hiding them. What changes is that they are no longer laundered into a
+        # score. This is an export-time eligibility rule, exactly like `discontinued` above — the
+        # scorer is untouched, so tests/test_firewall.py still governs it.
+        # EVERY malicious row, not only the ones losing a number. Two of the six had never been
+        # enriched at all, so they had no score to strip — and under a `tashan_score is not None`
+        # guard they came out `rated: false` with no reason attached, which the CLI renders as
+        # "catalogued but not rated — no per-item evidence yet". That sentence is true of a row
+        # nobody has measured and false here: we have the evidence and refused to rate on it.
+        if c.get("sec_max_severity") == "MALICIOUS":
+            c = {**c, "tashan_score": None, "rated": False,
+                 "rating_basis": "Not rated: listed in OSV's malicious-packages database. "
+                                 "Eligibility overrides score — a package that is itself the attack "
+                                 "is not ranked, rather than ranked low."}
         rec = redact_paid({k: c[k] for k in LOOKUP + ["sec_advisories"] if c.get(k) is not None})
         i = len(recs); recs.append(rec)
         # Every way a config entry can name this thing points at the same record. `identify()` in

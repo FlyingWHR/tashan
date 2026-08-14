@@ -314,3 +314,48 @@ console.log("ok — the agent gets the advisory id, the fix version and the inst
   assert.ok(/7 days free/.test(pitch));
 }
 console.log("ok — audit_config reports direction, and says which kind of 'no' it got");
+
+// ---------------------------------------------------------------------------
+// CONFIRMED MALWARE STOPS FIRST.
+//
+// This is the highest-stakes string this codebase produces. claude-cup carries MAL-2026-5789 and
+// 4.8M weekly installs, and check_capability used to open with "tashan score 77/100 · 4,837,320
+// downloads/wk · active" and put "this package IS the attack" three lines below — an endorsement
+// followed by a footnote, on the one row where an agent summarising for a human must not drop the
+// caveat. The score is gone at the source (eligibility overrides score, as for discontinued rows)
+// and the verdict now leads.
+{
+  const mal = {
+    id: "pkg:claude-cup", name: "claude-cup", kind: "npm", npm_pkg: "claude-cup",
+    sec_max_severity: "MALICIOUS", sec_advisory_count: 1, npm_downloads: 4837320,
+    vitality: "active", rated: false, single_maintainer: 1,
+    rating_basis: "Not rated: listed in OSV's malicious-packages database.",
+  };
+  const out = renderCheck(mal, "claude-cup");
+  const head = out.split("\n")[0];
+
+  assert.ok(/^DO NOT INSTALL/.test(head), "the first line must be the verdict, not the metrics: " + head);
+  assert.ok(!/score/i.test(head), "no score on the first line of a malware warning: " + head);
+  // The number stays — it is what makes the warning land — but it must be framed, not laundered.
+  assert.ok(out.includes("4,837,320"), "how far it spread is the point, and must still be shown");
+  assert.ok(/not of quality/.test(out), "the adoption figure must be framed, not presented as merit");
+  assert.ok(out.indexOf("DO NOT INSTALL") < out.indexOf("4,837,320"),
+            "the verdict must precede the adoption figure");
+  assert.ok(/do not add it to any config/i.test(out), "the agent needs an instruction, not a mood");
+
+  // "No per-item evidence yet" about a confirmed attack understates it. A row with a stated
+  // rating_basis is unrated on purpose, and says why.
+  assert.ok(!/no per-item evidence yet/.test(out),
+            "a refused rating must not read as missing data:\n" + out);
+
+  // A healthy row is untouched — this branch must not swallow the normal rendering.
+  const good = { id: "pkg:x", name: "x", kind: "npm", tashan_score: 92, npm_downloads: 1000,
+                 vitality: "active", expertise_verdict: "deep" };
+  assert.ok(/tashan score 92/.test(renderCheck(good, "x")), "healthy rows still lead with the score");
+  assert.ok(!/DO NOT INSTALL/.test(renderCheck(good, "x")));
+
+  // And an unrated row with NO stated reason still gets the honest "we have not measured this".
+  assert.ok(/no per-item evidence yet/.test(renderCheck({ id: "pkg:y", name: "y", rated: false }, "y")),
+            "genuinely unmeasured rows must still say so");
+}
+console.log("ok — confirmed malware leads with the verdict, and the download count is framed");

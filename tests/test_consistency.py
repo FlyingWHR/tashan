@@ -694,5 +694,38 @@ _miscased = [c["id"] for c in TRUTH.values()
 ok("no exported label mis-cases MCP", not _miscased,
    f"{len(_miscased)} e.g. {_miscased[:3]}")
 
+# A CONFIRMED-MALICIOUS ROW MUST NOT CARRY A SCORE, on any surface.
+#
+# Four of the six did: claude-cup published 77/100 next to MAL-2026-5789 and 4.8M weekly installs.
+# Adoption is the heaviest input to the score, so on a malicious package that number measures how
+# many machines it reached — publishing it as quality inverts the meaning of the only evidence that
+# matters. Eligibility overrides score, exactly as for discontinued rows.
+#
+# lookup.json is the file the CLI, the MCP server and `doctor` read, so this is where an agent would
+# have seen it.
+_look = json.load(open(os.path.join(WEB, "data", "lookup.json"), encoding="utf-8"))["records"]
+_mal = [r for r in _look if r.get("sec_max_severity") == "MALICIOUS"]
+ok(f"the {len(_mal)} malicious row(s) are still reachable at all — the warning is the point",
+   bool(_mal), "junk() keeps them off the board; the lookup is how doctor warns someone already running one")
+_scored = [r["id"] for r in _mal if r.get("tashan_score") is not None]
+ok("no malicious row publishes a tashan score", not _scored, f"scored: {_scored}")
+_claims = [r["id"] for r in _mal if r.get("rated")]
+ok("...and none of them claims to be rated", not _claims, f"rated: {_claims}")
+_why = [r["id"] for r in _mal if not r.get("rating_basis")]
+ok("...and each says WHY it is unrated, so 'unrated' cannot read as 'unmeasured'",
+   not _why, f"no rating_basis: {_why}")
+# The adoption and scan evidence must SURVIVE. These rows are fetched by their own SELECT, separate
+# from the board's, and that SELECT once carried a hand-picked seven-column subset — so EVERY
+# malicious row lost npm_downloads and sec_scanned_at, and /v0.1/audit answered "no security scan
+# has been run on this" in the same response as the advisory it had just found.
+#
+# Asserted over the CLASS, not per row: two of the six have genuinely never been enriched, and
+# demanding a number we have never fetched would be a test of the corpus rather than of the export.
+# If the column list is ever re-narrowed, every row loses these at once and this fires.
+for _field in ("npm_downloads", "sec_scanned_at", "sec_max_severity"):
+    ok(f"the malicious rows still carry {_field} — a narrowed SELECT would drop it from all of them",
+       any(r.get(_field) is not None for r in _mal),
+       f"no malicious row carries {_field}; the lookup SELECT has been narrowed again")
+
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)

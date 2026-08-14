@@ -136,5 +136,46 @@ check("the AI-capability gate is scoped to pkg: ids, so skills are never cut for
           os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "pipeline", "build.py"),
           encoding="utf-8").read())
 
+# ---------------------------------------------------------------------------
+# THE BACKLOG ORDERING MUST NOT BECOME A FILTER.
+#
+# Downloads are the heaviest input to Adoption, which gates every score — so whichever rows the
+# enrichment queue reaches are the rows that can be scored at all. probe_demand prices the backlog
+# against npm's downloads API and sorts by it, which is right; but npm's bulk endpoint refuses
+# scoped names, singly they cost ~2.4s each, and 6 workers earns HTTP 429. So scoped rows went
+# unpriced, unpriced sorted last, and they were never measured — which kept them unpriceable.
+# Measured on the live corpus before the fix: scoped 0.9% priced / 35.4% enriched, unscoped
+# 58.8% / 65.8%. A row we could not cheaply price was a row we would not measure.
+_rows = ([(f"p{i}", f"p{i}") for i in range(10)]
+         + [("g1", "g1"), ("g2", "g2")]                       # npm answered 404: price 0
+         + [(f"s{i}", f"@s/{i}") for i in range(10)])         # never priced
+_probe = {f"p{i}": (10 - i) * 100 for i in range(10)}
+_probe.update({"g1": 0, "g2": 0})
+_out = [p for _, p in build.interleave_unpriced(_rows, _probe)]
+_pos = {p: i for i, p in enumerate(_out)}
+
+check("demand still orders the backlog — the most-installed package goes first",
+      _out[0] == "p0")
+check("an unpriceable row is never starved: one in three of the early slots",
+      sum(1 for p in _out[:9] if p.startswith("@s/")) == 3)
+check("a package npm confirmed has no downloads sorts below every real count",
+      all(_pos[f"p{i}"] < _pos["g1"] for i in range(10)))
+check("...and below a row we have never measured, which is still worth measuring",
+      _pos["@s/0"] < _pos["g1"])
+check("no row is dropped or duplicated by the interleave",
+      len(_out) == len(_rows) == len(set(_out)))
+# Degenerate inputs: the loop must terminate and preserve everything.
+check("all-priced input terminates and stays in demand order",
+      [p for _, p in build.interleave_unpriced([("a", "x"), ("b", "y")], {"x": 1, "y": 9})] == ["y", "x"])
+check("all-unpriced input terminates and keeps its incoming order",
+      [p for _, p in build.interleave_unpriced([("a", "x"), ("b", "y")], {})] == ["x", "y"])
+check("an empty backlog is not an error", build.interleave_unpriced([], {}) == [])
+
+# 404 and 429 are opposites and must not share a return value: one is an answer to cache, the other
+# is a refusal to retry later. Collapsing them made every unpublished package count toward the
+# rate-limit breaker AND be re-requested every night for ever.
+check("_weekly distinguishes 'npm says gone' from 'npm would not answer'",
+      build.GONE is not None and build.GONE != 0)
+
 print("SCORE SHAPE OK" if not fail else "SCORE SHAPE FAILED")
 sys.exit(fail)

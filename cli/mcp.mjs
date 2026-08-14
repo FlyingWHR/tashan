@@ -97,7 +97,12 @@ export function risks(c) {
   }
   if (c.vitality === "abandoned") out.push("no recent activity — looks abandoned");
   if (c.single_maintainer) out.push("single primary maintainer (bus-factor risk)");
-  if (c.rated === false) out.push("catalogued but not rated — no per-item evidence yet");
+  // "No per-item evidence yet" is the right sentence for a row nobody has measured, and the WRONG
+  // one for a row we refused to rate. A malicious or discontinued package is unrated because
+  // eligibility overrides score, not because we are missing data — saying "no evidence yet" about a
+  // confirmed attack understates it, and `rating_basis` already carries the real reason.
+  if (c.rated === false && !c.rating_basis)
+    out.push("catalogued but not rated — no per-item evidence yet");
   return out;
 }
 
@@ -291,6 +296,30 @@ export function renderCheck(c, name) {
       + `it may be new, private, or named differently. Do not present absence as a warning.`;
   }
   const rs = risks(c);
+  // STOP-FIRST FOR CONFIRMED MALWARE. Everything else here reads top-down as description, then
+  // caveats — which is right for a deprecated package and wrong for an attack. claude-cup opened
+  // with "4,837,320 downloads/wk · active" and put "this package IS the attack" three lines below,
+  // where an agent summarising for a human can drop it. The adoption figure still appears further
+  // down, because how far it spread is the point; it just no longer arrives first, dressed as
+  // popularity.
+  if (c.sec_max_severity === "MALICIOUS") {
+    return [
+      `DO NOT INSTALL ${disp(c)}.`,
+      "",
+      "It is listed in OSV's malicious-packages database — the package IS the attack, not a package",
+      "with a vulnerability. Tell the user plainly and stop; do not add it to any config.",
+      "",
+      `Measured: ${evidence(c)}`,
+      c.npm_downloads
+        ? `Its ${c.npm_downloads.toLocaleString()} downloads/wk are a measure of how far it spread, not of quality.`
+        : null,
+      "",
+      ...(rs.length > 1 ? ["Also:", ...rs.filter((r) => !/malicious-packages/.test(r)).map((r) => `  ⚠ ${r}`)] : []),
+      // Drop only the absent lines. Filtering every "" — the first version of this — collapsed the
+      // paragraph breaks too, and the result read as one undifferentiated block on the one message
+      // in this codebase that most needs to be skimmable.
+    ].filter((s) => s !== null).join("\n");
+  }
   const L = [`${disp(c)} — ${evidence(c)}`, ""];
   if (rs.length) {
     L.push("Risks found:");
