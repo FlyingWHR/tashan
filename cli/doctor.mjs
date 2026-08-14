@@ -335,7 +335,32 @@ export function isDying(c) {
     || c.vitality === "abandoned"));
 }
 
-/** Alternatives to `cap`, best first. Empty when nothing is confidently comparable. */
+/** Alternatives to `cap`, best first. Empty when nothing is confidently comparable.
+ *
+ * COVERAGE IS 45.2% OF DYING ROWS (208 of 460, measured 15 Aug 2026) AND THAT IS THE CEILING OF
+ * WHAT THIS EVIDENCE SUPPORTS. The other 55% get no name, which is why pricing.html says "where a
+ * measured one exists" rather than promising a replacement every time.
+ *
+ * MEASURED AND REJECTED: matching on descriptions as well as names. lookup.json already ships a
+ * `terms` bag per record — the same one find_capability searches — so widening tokensOf() to
+ * include it is a two-line change and lifts coverage to 74.8%, or 71.3% with the spurious matches
+ * anchored out by requiring a shared token to appear in one of the NAMES.
+ *
+ * I hand-checked 16 of the 127 rows that gain a suggestion. Three were right, four arguable, NINE
+ * were wrong:
+ *
+ *     german-law-mcp   -> @gmo-internet/conoha-vps-mcp   (shared: "internet")
+ *     i-ching          -> the-h-ai-k-u-method            (shared: "method")
+ *     402proof         -> gst-invoice-generator-india    (shared: "invoice")
+ *     ui-mcp           -> claude-forge                   (shared: "forge")
+ *     marketintell     -> @quick-desk/mcp                (shared: "desk")
+ *
+ * A word two descriptions happen to share is a coincidence, not a relationship — the same finding
+ * as the task tagger's description pass (~38% precision, see pipeline/tag_capabilities.py), reached
+ * independently on different data. And the cost is asymmetric here: this output tells somebody what
+ * to install INSTEAD of the thing they are already running, so a wrong name is worse than no name.
+ * Names stay the only evidence. If you are tempted to widen it, re-run the sample first.
+ */
 export function suggest(cap, pool, df = null, opts = {}) {
   if (!cap) return [];
   const maxDf = opts.maxDf || 60;      // a token shared by more than this is a category word, not an integration
