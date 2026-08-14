@@ -142,6 +142,29 @@ def main():
                              cwd=ROOT, capture_output=True, text=True).returncode == 0
     ok("data/tashan.db is NOT tracked — it is a cache, and it lives in R2",
        not tracked, "re-adding it walks back into GitHub's 100 MiB blob limit at push time")
+    # NO TRACKED FILE MAY APPROACH GITHUB'S 100 MiB BLOB LIMIT — not just the database.
+    #
+    # The limit was guarded for tashan.db alone, so when data/skills_cache.json grew past it the
+    # nightly simply stopped being able to push: "File data/skills_cache.json is 127.09 MB; this
+    # exceeds GitHub's file size limit of 100.00 MB", pre-receive hook declined. No retention shard
+    # landed and the deploy gated on that commit was skipped. The failure arrives at `git push`,
+    # after a 40-minute pipeline has already done its work, which is the worst possible place for it.
+    #
+    # 80 MiB, not 99: a file that crosses this is usually growing nightly, and a guard that fires the
+    # day before the outage is worth more than one that fires during it.
+    _big = []
+    for _f in subprocess.run(["git", "ls-files", "-z"], cwd=ROOT, capture_output=True,
+                             text=True).stdout.split("\0"):
+        if not _f:
+            continue
+        _p = os.path.join(ROOT, _f)
+        if os.path.exists(_p):
+            _mib = os.path.getsize(_p) / 1048576
+            if _mib > 80:
+                _big.append(f"{_f} {_mib:.0f} MiB")
+    ok("no tracked file is near GitHub's 100 MiB blob limit", not _big,
+       "; ".join(_big[:3]) + " — a push carrying this is rejected AFTER the pipeline has run")
+
     ok("the durable record still is tracked", os.path.isdir(os.path.join(ROOT, "data", "history"))
        and any(f.endswith(".csv.gz") for f in os.listdir(os.path.join(ROOT, "data", "history"))),
        "data/history/*.csv.gz is the copy that survives losing the bucket")
