@@ -169,7 +169,18 @@ print("# one price ladder, and the docs must not invent a second")
 _x402src = open(os.path.join(ROOT, "functions", "api", "_x402.js"), encoding="utf-8").read()
 _priced = dict((m.group(1), m.group(2)) for m in
                re.finditer(r'"([a-z-]+)":\s*\{\s*\n\s*usd:\s*([0-9.]+)', _x402src))
-ok("PRICED still parses and holds every priced resource", len(_priced) >= 4, str(_priced))
+# A COUNT IS THE WRONG ASSERTION. This was `>= 4`, which made removing a product a test failure —
+# and one had to be removed: `security-detail` sold advisory detail that redact_paid() already
+# publishes free, so the ladder is deliberately shorter than it was. What must hold is that the
+# parse still works (a rename of the PRICED shape would otherwise silently zero every check below)
+# and that every price the docs quote is a price the code charges.
+ok("PRICED still parses", bool(_priced), str(_priced))
+# THE RULE THAT MAKES THE LADDER DEFENSIBLE: every priced resource sells TIME or ASSEMBLY, never the
+# current state of anything. Current state is the free tier, and the free tier is the distribution.
+# `security-detail` violated it and is gone; this stops it, or a sibling, coming back unnoticed.
+ok("nothing on the price ladder sells current state",
+   "security-detail" not in _priced,
+   "advisory detail is free in the export and at /v0.1/lookup — pricing it charges for a giveaway")
 _doc = open(os.path.join(ROOT, "docs", "X402.md"), encoding="utf-8").read()
 for _k, _usd in _priced.items():
     ok(f"docs/X402.md quotes {_k} at the price the code charges (${_usd})",

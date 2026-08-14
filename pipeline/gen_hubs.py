@@ -771,6 +771,15 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
     # The agent-facing surfaces, announced where a crawler or an agent will actually look. An endpoint
     # nobody can discover is not distribution.
     L += ["", "## For agents", "",
+          # THE MCP SERVER WAS MISSING FROM THIS FILE ENTIRELY. Everything else here is an endpoint
+          # a crawler reads once; this is the one line that turns a reader into a caller. It is
+          # published, works today (`npx -y tashan-cli mcp` answers initialize/tools/list), and an
+          # agent that installs it asks us before every install rather than once.
+          "- **Install tashan as an MCP server** — `claude mcp add tashan -- npx -y tashan-cli mcp`, "
+          "or point any host at `npx -y tashan-cli mcp` over stdio. Three tools, all free, no "
+          "account: `find_capability` (what should I install for X), `check_capability` (is this "
+          "one safe and maintained), `audit_config` (what is already in this config, and what is "
+          "wrong with it). Zero dependencies; `audit_config` reads local files and sends nothing.",
           "- [/v0.1/scores](" + BASE + "/v0.1/scores) — compact lookup, `name -> [score, vitality, "
           "evidence, slug]`. This is the BULK feed — to check ONE package use /v0.1/lookup instead. "
           "An absent name is UNMEASURED, not bad.",

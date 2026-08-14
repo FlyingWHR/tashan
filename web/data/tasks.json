@@ -178,6 +178,7 @@
         "development",
         "implementation",
         "migration",
+        "refactor",
         "refactoring"
       ],
       "roles": [
@@ -243,6 +244,8 @@
         "music",
         "podcast",
         "speech",
+        "speech to text",
+        "text to speech",
         "transcription",
         "tts",
         "voice"
@@ -344,7 +347,9 @@
         "browser",
         "browser automation",
         "playwright",
-        "puppeteer"
+        "puppeteer",
+        "screenshot",
+        "screenshots"
       ],
       "roles": [
         "engineer",
@@ -551,6 +556,7 @@
         "copy editing",
         "editing",
         "proofreading",
+        "translate",
         "translation"
       ],
       "roles": [
@@ -1019,6 +1025,9 @@
       "term": "deployment",
       "blurb": "'Shipping it' — CI/CD, provisioning, environments.",
       "synonyms": [
+        "ci cd",
+        "cicd",
+        "deploy",
         "deployment",
         "devops",
         "docker",
@@ -2280,9 +2289,14 @@
       "term": "scraping",
       "blurb": "'Scraping' / 'extraction' — structured data out of pages.",
       "synonyms": [
+        "crawl",
         "crawler",
         "extraction",
+        "scrape",
+        "scraper",
         "scraping",
+        "web crawler",
+        "web scraper",
         "web scraping"
       ],
       "roles": [

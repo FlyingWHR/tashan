@@ -104,7 +104,8 @@ A and B are not exclusive: B today (so the page stops overclaiming), A next.
 | Pro features delivered | 2 | **5** |
 | surfaces that differentiate | 2 of 9 (both CLI) | **4 of 9** (CLI ×2, web dossier, API) |
 
-- `functions/api/security.js` — gated by the same `_license.js` as `/api/history`; returns the
+- `functions/api/security.js` — **now FREE and ungated** (it returned only current state, which the
+  public export already carries; see docs/X402.md). Returns the
   advisory list, the install command and the full permission list. 10 tests, every negative path
   first: no licence, invalid licence, provider down, unconfigured deployment — a paywall that fails
   open would give away the one thing $6 buys while still charging for it.

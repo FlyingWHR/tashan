@@ -240,6 +240,44 @@ def main():
     status, _, _ = get(f"{BASE}/activate")
     record(PASS if status in (200, 301, 308) else FAIL, "/activate renders", f"HTTP {status}")
 
+    # 9. THE AGENT RAIL. x402 is built and dormant until a wallet exists, which is deliberate:
+    #    quoting a payment option we cannot settle wastes the caller's signature. So "no accepts"
+    #    is a WARN, not a failure — it is the documented state. What must never happen is a HALF
+    #    configuration, where we advertise terms and then cannot verify a payment.
+    status, body, hdrs = get(f"{BASE}/v0.1/audit", method="POST",
+                             body=b'{"servers":["chrome-devtools-mcp"],"history":true}',
+                             headers={"content-type": "application/json"})
+    quote = {}
+    try:
+        quote = json.loads(body)
+    except ValueError:
+        pass
+    accepts = quote.get("accepts") or []
+    has_hdr = any(k.lower() == "payment-required" for k in hdrs)
+    if status == 402 and not accepts and not has_hdr:
+        record(WARN, "agent payments (x402) are live",
+               "dormant — no wallet configured, which is the documented state, not a fault.\n"
+               "        The free audit still answers. To turn it on, see docs/X402.md:\n"
+               "        wrangler pages secret put X402_PAY_TO / X402_NETWORK / X402_ASSET / "
+               "X402_FACILITATOR")
+    elif status == 402 and accepts and has_hdr:
+        a = accepts[0] if isinstance(accepts[0], dict) else {}
+        good = (quote.get("x402Version") == 2 and a.get("payTo") and a.get("network")
+                and a.get("asset") and isinstance(a.get("amount"), str))
+        record(PASS if good else FAIL, "agent payments (x402) quote complete, spec-shaped terms",
+               f"x402Version={quote.get('x402Version')!r} accepts[0]={a!r}")
+    else:
+        # Terms without a header, or a header without terms: a caller cannot act on either.
+        record(FAIL, "x402 is either fully on or fully off",
+               f"HTTP {status}, accepts={len(accepts)}, PAYMENT-REQUIRED header={has_hdr} — a "
+               f"half-configuration advertises a price we cannot settle")
+
+    # The free half must answer regardless. This is the firewall on the agent rail: the EXISTENCE
+    # of a risk is never behind a paywall, so a 402 still carries the audit.
+    record(PASS if (quote.get("free_result") or quote.get("free") or quote.get("results")) else FAIL,
+           "...and the free risk audit is still in the body of the 402",
+           f"keys: {sorted(quote)[:8]}")
+
     # 8. Price parity — what a human is quoted and what the code charges.
     ent = json.load(open(os.path.join(ROOT, "data", "entitlements.json"), encoding="utf-8"))
     pro = ent["tiers"]["pro"]

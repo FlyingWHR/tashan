@@ -37,12 +37,16 @@ export const PRICED = {
     atomic: "10000",
     description: "The full score history for one capability, every point we have recorded.",
   },
-  "security-detail": {
-    usd: 0.01,
-    atomic: "10000",
-    description: "Full advisory detail for one capability: which advisory, what the install script "
-               + "runs, and the version that fixes it.",
-  },
+  // `security-detail` WAS HERE AT $0.01 AND HAS BEEN REMOVED — it sold data we publish for free.
+  // redact_paid() had already moved advisory ids, severities, fixing versions and the install
+  // command into the public export, and /v0.1/lookup returns all of them per capability with no
+  // account. The 402 quoting this price even listed /data/lookup.json in its own `free` block as a
+  // source of those exact fields.
+  //
+  // What is left on this ladder is coherent, and that is the point: EVERY priced resource sells
+  // either TIME (a series, a direction of travel) or ASSEMBLY (selection, pinning, a config). None
+  // of them sells the current state of anything, because the current state is the free tier and the
+  // free tier is the distribution.
   "capability-kit": {
     usd: 0.25,
     atomic: "250000",

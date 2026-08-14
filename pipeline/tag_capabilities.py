@@ -207,6 +207,47 @@ def run_declared(con, tasks, dry=False):
 #
 # Tags do NOT reach the site from here. Use --grade (a model reads each capability) or hand grading
 # merged via --merge; both write basis='graded' and carry evidence.
+#
+# ---------------------------------------------------------------------------------------------
+# RE-RUN 15 AUG 2026, NARROWER, AND REJECTED AGAIN — read this before trying a third time.
+#
+# The starting point was a real product defect: POST /v0.1/kit for "I need to scrape websites"
+# returns exa-mcp-server (86) first and omits firecrawl-mcp (93), the highest-scoring scraping
+# server we measure. Its description literally reads "web search, scraping, and biomedical/arXiv
+# paper search" — so the obvious conclusion is that we should read descriptions.
+#
+# The candidate was deliberately much narrower than the sweep above: DESCRIPTION ONLY (never the
+# body, which that sweep proved harmful), the task's own `term` or a multi-word synonym, matched as
+# a whole word, negation-guarded, applied ONLY to rows carrying no tag at all, and only when exactly
+# one task matched — no scoring, no threshold, no tie-breaking.
+#
+# It would have tagged 2,759 of the 11,179 untagged rows. I hand-checked a stable md5-ordered sample
+# of 22 and about 8 were right: ~38% precision, statistically indistinguishable from the 37.1% above.
+# The failures are the point, because they are not fixable by tuning:
+#
+#     "Model Context Protocol"        -> prompt-engineering   (term 'context')
+#     "currency ... conversion"       -> conversion-optimization (term 'conversion')
+#     "YouTube MCP Server Implementation" -> application-development (term 'implementation')
+#     "Agent skill for @kuboxx/craft-ui"  -> agent-development  (term 'agent')
+#     "...into the CI/CD pipeline"    -> data-pipelines       (synonym 'pipeline')
+#
+# A word in a description is a MENTION, not a PURPOSE, and a one-sentence description does not
+# disambiguate the two any better than a body does. The corroboration rule already in the declared
+# pass works precisely because the keyword supplies the claim and the prose only has to support it;
+# reverse the direction and there is no claim, only vocabulary.
+#
+# WHAT WAS DONE INSTEAD, because it is attributable: the taxonomy gained 14 synonyms that are
+# morphological variants of words already in it — `scrape`/`scraper`/`crawl` for web-scraping,
+# `screenshot` for browser-automation, `deploy`/`ci cd` for infrastructure-and-deployment,
+# `text to speech` for audio-production. 87 author-keyword occurrences that mapped to nothing now
+# map, and every one still has to survive corroborated().
+#
+# AND THE HONEST RESIDUE: firecrawl-mcp is STILL untagged for scraping, and correctly so. Its npm
+# keywords are ['mcp','firecrawl','web-search','web-data','web-interaction'] — the author never
+# declared scraping. Task coverage is 21.6% of scored capabilities (3,121 of 14,419); the remaining
+# 11,298 are invisible to every job, role and kit query. The ONLY measured way to close that is
+# --grade, which needs ANTHROPIC_API_KEY. That is a cost decision, not an engineering gap, and
+# pretending a lexical rule can substitute for it has now been measured and rejected twice.
 IDF_MIN = 1.5          # terms this common carry no signal at all
 FIELD_W = {"name": 3.0, "desc": 2.0, "body": 1.0}
 INFER_MIN = float(os.environ.get("TAG_INFER_MIN", "3.0"))   # tuned in --eval, see docstring

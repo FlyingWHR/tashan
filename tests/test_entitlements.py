@@ -92,9 +92,11 @@ ok(f"pricing shows {pro['price']}/{pro['cadence']}",
 
 print()
 print("# the price an AGENT is quoted is the price a human is quoted")
-# /api/history and /api/security now answer a credential-less caller with 402 and the terms, so the
-# price is published to machines as well as to people. Two copies of a price is exactly how the
-# score once differed between the board and a hub table. This is the guard.
+# /api/history answers a credential-less caller with 402 and the terms, so the price is published to
+# machines as well as to people. Two copies of a price is exactly how the score once differed
+# between the board and a hub table. This is the guard.
+# (/api/security was in this list until it was made free — it returned only current state, which
+# redact_paid() and /v0.1/lookup already publish. See docs/X402.md.)
 _lic = open(os.path.join(ROOT, "functions", "api", "_license.js"), encoding="utf-8").read()
 _offer = re.search(r"export const OFFER = \{(.*?)\n\};", _lic, re.S)
 ok("functions/api/_license.js still exports OFFER (the machine-readable price)", bool(_offer))
@@ -122,6 +124,38 @@ if _offer:
     # The firewall, restated for machines: the refusal must name what costs nothing.
     ok("the 402 names the free surfaces, so a bounce does not read as 'everything is paid'",
        "lookup.json" in body and "llms.txt" in body)
+
+print()
+print("# a feature we sell must not be sitting in the public export")
+# THE CONTRADICTION THIS CATCHES, which had been live for weeks and which no other check could see.
+# `advisory-detail`, `install-script` and `permissions` were marked pro-only HERE — the single
+# definition of what is sold — long after build.py's redact_paid() had moved all three into the
+# public export, pricing.html had started advertising them in the FREE column, and every dossier had
+# begun printing "Nothing in this audit is behind a licence". Three documents agreed with each
+# other and the source of truth disagreed with all of them.
+#
+# Prose comparison cannot catch that. This can: if a feature is sold as pro-only, the data behind it
+# must NOT be in the file anyone can curl. It ties the commercial claim to the actual bytes.
+_EXPORT_COLUMN = {
+    "advisory-detail": "sec_advisories",
+    "install-script": "sec_install_script",
+    "permissions": "sec_permissions",
+}
+_lookup = json.load(open(os.path.join(WEB, "data", "lookup.json"), encoding="utf-8"))["records"]
+_present = {k for r in _lookup for k in r}
+for _f in feats:
+    _col = _EXPORT_COLUMN.get(_f["id"])
+    if not _col or _f["status"] == "planned":
+        continue
+    if _f["pro"] and not _f["free"]:
+        ok(f"{_f['id']} is sold as paid, so {_col} must not be in the public export",
+           _col not in _present,
+           f"{_col} is in /data/lookup.json — this charges for a giveaway")
+    else:
+        # The inverse matters just as much: a feature listed as free must actually be delivered
+        # free, or the free tier is a claim rather than a fact.
+        ok(f"{_f['id']} is listed as free, so {_col} is actually in the public export",
+           _col in _present, f"{_col} is missing from /data/lookup.json")
 
 print()
 print("# llms.txt is the file we tell every AI crawler to read")

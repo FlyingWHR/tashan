@@ -137,6 +137,7 @@ export const OFFER = {
   free: {
     "https://tashan.sh/data/lookup.json": "every capability: score, category, advisory ids, severities, fix versions, install command",
     "https://tashan.sh/v0.1/lookup?name=<pkg>": "one capability, resolved by name",
+    "https://tashan.sh/api/security?id=<id>": "one capability's full audit: every advisory, the version that fixes it, the install command, and the date it was scanned",
     "https://tashan.sh/v0.1/search?q=<query>": "ranked search over the measured corpus",
     "https://tashan.sh/llms.txt": "what the score means and how to cite it",
   },

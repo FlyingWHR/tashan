@@ -1,30 +1,34 @@
 # Do this next — the things only you can do
 
-*Rewritten 14 Aug 2026. Everything doable from a keyboard has been done. What is left needs an
+*Rewritten 15 Aug 2026. Everything doable from a keyboard has been done. What is left needs an
 identity, a dashboard, or money in an account. The history below §1 is kept for its reasoning; this
 header is the current state and supersedes any summary further down.*
 
-## The one thing standing between the product and revenue
+## ✅ The payment path is working. Nothing on it is waiting for you.
 
-**Change the success_url on both Polar checkout links.** Measured 14 Aug: both resolve to a session
-whose `success_url` is a bare `https://tashan.sh/welcome.html`. Polar substitutes `{CHECKOUT_ID}`
-**only** into a parameter you write yourself and appends nothing on its own — so a customer arrives
-with no id, `/api/checkout` is never reached, no session is created, and they are asked to paste a
-licence key.
+**The success_url was on this list for weeks and should never have been.** It was described as a
+text box only a human could edit. `POLAR_ORG_TOKEN` has been a Pages secret the whole time, it is
+already used to exchange a checkout for a licence, and Polar exposes `PATCH /v1/checkout-links/{id}`.
+So `/api/buy` now sits between the button and Polar: it verifies that field, repairs it if wrong,
+and redirects — and if anything at all fails, the customer still reaches the checkout.
 
-Set both links to:
+Verified live, 15 Aug, end to end:
 
-    https://tashan.sh/api/checkout?id={CHECKOUT_ID}
+```
+python3 pipeline/check_payments.py     # 21 passing, 0 failing, 1 unverified (x402, see below)
+```
 
-Everything else on that path is already correct and was verified the same day: `POLAR_ORG_TOKEN` and
-`POLAR_WEBHOOK_SECRET` are set on the Pages project, KV holds 64 history and 65 security shards so a
-licence holder gets real data, `/api/checkout` refuses a bogus id safely instead of 500ing, and a
-bad bearer token gets 403 rather than 402. One field.
+Both checkout links now return `https://tashan.sh/api/checkout?checkout_id=…`, read back from
+Polar's own checkout page. The annual button was walked in a browser: it lands on "tashan Pro
+(annual) — 7 days free, then $50/year", which is the product and the price the page advertises.
+KV holds the history and security shards (last nightly: `push-paid` 21s, `push-history` 24s), so a
+licence holder gets real data the moment they subscribe.
 
-`/welcome` now also accepts `?checkout_id=…` and forwards it, so
-`https://tashan.sh/welcome.html?checkout_id={CHECKOUT_ID}` works too if that is easier to paste.
+The rule this cost us: **before escalating a config change, check whether a credential the project
+already holds can make it.** Genuinely CEO-only means an account that holds money, or a permission
+the current token cannot grant itself. Both remaining items are that.
 
-## The other two, both small
+## The two that are really yours
 
 **Add `Account Analytics: Read` to the Cloudflare API token.** Every click has been recorded since
 9 Aug and nothing has ever read one. `pipeline/funnel.py` runs in the nightly and prints
@@ -38,10 +42,59 @@ that cannot be settled, deliberately. Context for whether it is worth doing: 172
 own corpus already advertise per-call payment, 144 naming x402, and one of them exists purely to
 discover 170+ x402 services.
 
+## One decision I made without asking, and why — you can reverse it
+
+**I removed `security-detail` ($0.01) from the price ladder and made `/api/security` free.** It sold
+data we already publish for nothing: `redact_paid()` puts advisory ids, severities, fixing versions
+and the install command in the public export, and `/v0.1/lookup?name=…` returns every one of them
+per capability with no account. The 402 quoting that price listed `/data/lookup.json` in its own
+`free` block as a source of the same fields — we were quoting a price beside a pointer to the
+giveaway.
+
+I treated this as enforcing policy rather than setting it, because the policy was already written
+down in two places: `redact_paid()` ("naming a risk and then charging to say which risk is a worse
+position than not scanning at all") and `history.js` ("every score stays free forever… what is
+genuinely not obtainable free is the SERIES"). `/api/security` was the one endpoint contradicting
+both. No customer was affected — there are none yet on that endpoint.
+
+What is left is a ladder with one rule, which is what makes it defensible to an agent developer who
+checks: **every priced resource sells TIME or ASSEMBLY, never the current state of anything.**
+`capability-history` $0.01, `config-audit` $0.05, `capability-kit` $0.25. A test now fails if
+anything that sells current state reappears on it.
+
+**If you want the revenue line back, the honest version exists:** sell the finding's *history* —
+"this advisory appeared on 9 Aug; before that this package was clean" — which is time, which we
+have in `change_events`, and which nothing free answers. That is a build, not a config change, and
+I did not start it because it is a product decision rather than a correctness fix.
+
+## The one number that decides how good the agent product is
+
+**Task coverage is 21.6%** — 3,121 of 14,419 scored capabilities carry a task tag. The other 11,298
+are invisible to `/task/*`, `/role/*`, `/browse` and to `POST /v0.1/kit`, which is the endpoint an
+agent pays $0.25 to call.
+
+What that costs, concretely: ask the live kit endpoint "I need to scrape websites" and it returns
+`exa-mcp-server` (86) first and never mentions `firecrawl-mcp` (93), the highest-scoring scraping
+server we measure. Not a ranking bug — firecrawl-mcp simply carries no scraping tag, because its
+author's npm keywords are `web-search, web-data, web-interaction` and the free pass only trusts
+what the author declared.
+
+I tried to close this without spending anything and **measured that it does not work**: a
+description-only lexical rule would have tagged 2,759 rows at ~38% precision — "Model **Context**
+Protocol" → prompt-engineering, currency "**conversion**" → conversion-optimization. That is the
+second time this has been measured and rejected; the reasoning is written into
+`pipeline/tag_capabilities.py` so it is not attempted a third time. What I did instead was
+attributable: 14 synonyms added to the taxonomy for author keywords that mapped to nothing
+(`scraper`, `crawl`, `screenshot`, `deploy`, `text to speech`), covering 87 keyword occurrences.
+
+**The only measured way to close the rest is `--grade`, which needs `ANTHROPIC_API_KEY`.** That is a
+cost decision, not an engineering gap. Sonnet, ~60 capabilities a run, one call each.
+
 ## Deliberately not done, with the reasoning written down
 
 - **`ANTHROPIC_API_KEY` for batch grading** — on hold until there is a paying user; grading runs
-  in-session at no API cost. 2,889 capabilities graded that way.
+  in-session at no API cost. 2,889 capabilities graded that way. See the section above for what the
+  hold actually costs now that it has been measured rather than assumed.
 - **A verdict word for skills** — `docs/GRADING-RUBRIC.md` has the measurement: the server rubric
   lands skills at 2.7% `deep` against servers' 16–20%, because a skill has no tools. A validated
   replacement criterion exists (16.8%). What ships instead is facts, not a grade, because a new

@@ -195,6 +195,7 @@ node functions/api/buy.test.mjs 2>/dev/null || { node functions/api/buy.test.mjs
 # 5e. the audit's paid half — a paywall that fails open gives away the one thing $6 buys
 echo; echo "── security detail API (paid) ─────────────────"
 node --test functions/api/security.test.mjs >/dev/null 2>&1 || { node --test functions/api/security.test.mjs; fail=1; }
+node --test functions/api/history.test.mjs >/dev/null 2>&1 || { node --test functions/api/history.test.mjs; fail=1; }
 
 # 5e2. the paid series must carry the capability's movement, not our own recalibration
 echo; echo "── history integrity (the moat) ───────────────"

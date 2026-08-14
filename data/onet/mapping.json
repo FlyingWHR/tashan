@@ -61,7 +61,8 @@
         "backend",
         "api",
         "refactoring",
-        "migration"
+        "migration",
+        "refactor"
       ]
     },
     {
@@ -223,7 +224,10 @@
         "cd",
         "docker",
         "kubernetes",
-        "terraform"
+        "terraform",
+        "deploy",
+        "ci cd",
+        "cicd"
       ]
     },
     {
@@ -599,7 +603,8 @@
       "synonyms": [
         "editing",
         "proofreading",
-        "translation"
+        "translation",
+        "translate"
       ]
     },
     {
@@ -1046,7 +1051,9 @@
         "browser",
         "playwright",
         "puppeteer",
-        "automation"
+        "automation",
+        "screenshot",
+        "screenshots"
       ]
     },
     {
@@ -1063,7 +1070,12 @@
       "synonyms": [
         "scraping",
         "crawler",
-        "extraction"
+        "extraction",
+        "scrape",
+        "scraper",
+        "web scraper",
+        "crawl",
+        "web crawler"
       ]
     },
     {
@@ -1176,7 +1188,9 @@
         "music",
         "podcast",
         "mixing",
-        "transcription"
+        "transcription",
+        "text to speech",
+        "speech to text"
       ]
     },
     {
