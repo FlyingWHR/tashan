@@ -367,10 +367,26 @@ function infoCard(r) {
   return L.join("\n");
 }
 
-function renderAdd(r, client) {
+export function renderAdd(r, client) {
   const snips = installSnippets(r, client);
   if (!snips.length) return red(`  no install method for client "${client}". try: claude · cursor · desktop · codex · npx`);
   const out = ["", "  " + bold(disp(r)) + dim("  — " + SITE + "/capability/" + (r.slug || slugify(r.id))), ""];
+  // THE WARNING GOES ABOVE THE COMMAND, NOT BESIDE IT. `info` now falls back to the lookup table so
+  // that a deprecated or delisted capability can be looked up at all — which is the point — but
+  // `add` shares that branch, and it was printing a clean, copyable install line for a package npm
+  // marks "no longer supported" with nothing said about it. A warning under the snippet is a
+  // warning nobody reads: by then the command is already on the clipboard.
+  const stop = [];
+  if (r.npm_deprecated) stop.push("the author has marked it DEPRECATED on npm");
+  if (r.registry_status === "deleted") stop.push("it has been REMOVED from the MCP registry");
+  if (r.gh_archived) stop.push("its repository is ARCHIVED");
+  if (r.sec_advisory_count) stop.push(`it has ${r.sec_advisory_count} known advisor` +
+    (r.sec_advisory_count === 1 ? "y" : "ies") + " against the version you would install");
+  if (stop.length) {
+    out.push("  " + red("Not recommended — " + stop.join("; ")) + ".");
+    out.push(dim("  The commands below still work. Check " + SITE + "/capability/" +
+                 (r.slug || slugify(r.id)) + " before using them."), "");
+  }
   for (const s of snips) {
     out.push("  " + dim(s.label));
     out.push(s.cmd.split("\n").map((l) => "    " + jade(l)).join("\n"));
@@ -636,7 +652,21 @@ export async function main(argv) {
     return 0;
   }
   if (cmd === "info" || cmd === "add") {
-    const r = find(rows, arg);
+    let r = find(rows, arg);
+    // THE BOARD IS NOT THE INDEX OF EVERYTHING, AND THIS IS THE QUERY THAT MATTERS MOST.
+    // search/top read index.json — the ranked board — and a capability that is deprecated,
+    // delisted or malicious loses its score and drops off it. Those are exactly the ones somebody
+    // types into `tashan info`: they were told to install it and want to know if it is safe.
+    // `tashan info @modelcontextprotocol/server-github` answered "no capability matches" — a
+    // package npm marks "no longer supported", which we measure, and which lookup.json carries
+    // for precisely this reason. Falling back to the lookup turns the most valuable question the
+    // CLI can be asked from a dead end into the warning it exists to give.
+    if (!r) {
+      try {
+        const lk = await loadLookup();
+        r = find(lk.records || [], arg);
+      } catch { /* offline: the message below is still the right one */ }
+    }
     if (!r) { process.stderr.write(red(`  no capability matches "${arg}". try: tashan search ${arg}`) + "\n"); return 1; }
     if (a.json) { process.stdout.write(JSON.stringify(cmd === "add" ? { capability: r, install: installSnippets(r, a.client) } : r, null, 2) + "\n"); return 0; }
     process.stdout.write((cmd === "add" ? renderAdd(r, a.client) : infoCard(r)) + "\n");

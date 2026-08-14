@@ -1,5 +1,5 @@
 // node cli/tashan.test.mjs  — pure-logic tests for the CLI (no network, no deps).
-import { search, top, find, installSnippets, slugify } from "./tashan.mjs";
+import { search, top, find, installSnippets, slugify, renderAdd } from "./tashan.mjs";
 import assert from "node:assert";
 
 const rows = [
@@ -588,3 +588,27 @@ console.log("ok — npx <package-name> resolves a bin, and every bin ships");
   assert.match(pkg.version, /^\d+\.\d+\.\d+/, "package.json has no usable version to report");
 }
 console.log("ok — --version answers, and reads the number npm published");
+
+// ---- add must warn BEFORE it prints a copyable command ------------------------------------------
+// `info` now falls back to lookup.json so a deprecated or delisted capability can be looked up at
+// all — search/top read the ranked board, and those rows lose their score and drop off it, which
+// made `tashan info @modelcontextprotocol/server-github` answer "no capability matches" for a
+// package npm marks "no longer supported". `add` shares that branch, so it started printing a
+// clean install line for a dead package. A warning under the snippet is a warning nobody reads:
+// by then the command is on the clipboard.
+{
+  const dead = { id: "pkg:x", name: "x", npm_pkg: "x", slug: "pkg-x", npm_deprecated: 1 };
+  const out = renderAdd(dead, null);
+  assert.ok(/Not recommended/.test(out), "a deprecated package must be flagged when adding it");
+  assert.ok(out.indexOf("Not recommended") < out.indexOf("npx"),
+            "the warning must come BEFORE the first install command");
+  assert.ok(/DEPRECATED on npm/.test(out), "and say what is actually wrong");
+
+  const risky = { id: "pkg:y", name: "y", npm_pkg: "y", slug: "pkg-y", sec_advisory_count: 2 };
+  assert.ok(/2 known advisories/.test(renderAdd(risky, null)), "advisories are named too");
+
+  const fine = { id: "pkg:z", name: "z", npm_pkg: "z", slug: "pkg-z" };
+  assert.ok(!/Not recommended/.test(renderAdd(fine, null)),
+            "a healthy capability must not be decorated with a warning it did not earn");
+}
+console.log("ok — add warns above the command, and only when the row earned it");
