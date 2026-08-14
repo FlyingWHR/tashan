@@ -27,7 +27,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 69 | 2k/wk | active |
 | 7 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 2k/wk | active |
 | 8 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 68 | 895/wk | active |
-| 9 | [Reddit Mcp Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
+| 9 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
 | 10 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 67 | 883/wk | active |
 | 11 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 65 | 970/wk | active |
 | 12 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 65 | 860/wk | active |

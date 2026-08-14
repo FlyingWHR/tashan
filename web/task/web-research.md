@@ -13,7 +13,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 86 | 32k/wk | active |
 | 2 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 71 | 542 ★ | active |
-| 3 | [Reddit Mcp Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
+| 3 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
 | 4 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 65 | 970/wk | active |
 | 5 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 65 | 860/wk | active |
 | 6 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 57 | 32 ★ | active |

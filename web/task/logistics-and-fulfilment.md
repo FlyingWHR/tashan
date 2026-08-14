@@ -24,7 +24,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Shopify](https://tashan.sh/capability/pkg-aiwerk-mcp-server-shopify.html) | 44 | 60/wk | active |
 | 12 | [Airtreks](https://tashan.sh/capability/pkg-airtreks-mcp.html) | 40 | 62/wk | active |
 | 13 | [Gammainfra](https://tashan.sh/capability/pkg-gammainfra-mcp-server.html) | 39 | 75/wk | active |
-| 14 | [Gam Seller Mcp Node](https://tashan.sh/capability/pkg-gam-seller-mcp-node.html) | 28 | — | active |
+| 14 | [Gam Seller MCP Node](https://tashan.sh/capability/pkg-gam-seller-mcp-node.html) | 28 | — | active |
 | 15 | [AIShield Security Scanner](https://tashan.sh/capability/pkg-aishield-mcp-server.html) | 28 | — | active |
 | 16 | [Meridian Skills](https://tashan.sh/capability/pkg-meridian-skills-mcp.html) | not scored | 57/wk | abandoned |
 | 17 | [AWS Spapi](https://tashan.sh/capability/pkg-cesarobedfl-aws-spapi-mcp.html) | 60 | 497/wk | active |

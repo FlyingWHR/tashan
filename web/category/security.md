@@ -39,7 +39,7 @@ Ranked by the tashan score
 | 26 | [Pushci](https://tashan.sh/capability/pkg-pushci.html) | 69 | 962/wk | active |
 | 27 | [Sonarqube](https://tashan.sh/capability/plugin-sonarsource-sonarqube-agent-plugins-sonarqube.html) | 68 | 98 ★ | active |
 | 28 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 68 | 326 ★ | active |
-| 29 | [Openapi Mcp Generator](https://tashan.sh/capability/pkg-openapi-mcp-generator.html) | 68 | 15k/wk | active |
+| 29 | [Openapi MCP Generator](https://tashan.sh/capability/pkg-openapi-mcp-generator.html) | 68 | 15k/wk | active |
 | 30 | [Fullcourtdefense CLI](https://tashan.sh/capability/pkg-fullcourtdefense-cli.html) | 68 | 1k/wk | active |
 | 31 | [1Claw Vault](https://tashan.sh/capability/pkg-1claw-mcp.html) | 68 | 1k/wk | active |
 | 32 | [Marrow](https://tashan.sh/capability/pkg-getmarrow-mcp.html) | 68 | 947/wk | active |

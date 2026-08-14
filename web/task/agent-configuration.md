@@ -26,7 +26,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Mr Meeseeks](https://tashan.sh/capability/plugin-thephw-claude-meseeks-mr-meeseeks.html) | 51 | 79 ★ | active |
 | 14 | [Agented](https://tashan.sh/capability/plugin-frane-agented-agented.html) | 50 | 5 ★ | active |
 | 15 | [Proxy](https://tashan.sh/capability/pkg-mcp-proxy.html) | 79 | 1.3m/wk | active |
-| 16 | [Pi Mcp Adapter](https://tashan.sh/capability/pkg-pi-mcp-adapter.html) | 79 | 111k/wk | active |
+| 16 | [Pi MCP Adapter](https://tashan.sh/capability/pkg-pi-mcp-adapter.html) | 79 | 111k/wk | active |
 | 17 | [Add](https://tashan.sh/capability/pkg-add-mcp.html) | 77 | 227k/wk | active |
 | 18 | [Token Optimizer](https://tashan.sh/capability/plugin-alexgreensh-token-optimizer-token-optimizer.html) | 75 | 2k ★ | active |
 | 19 | [Skillfish](https://tashan.sh/capability/pkg-skillfish.html) | 75 | 16k/wk | active |

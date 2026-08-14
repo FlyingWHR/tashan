@@ -27,7 +27,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
 | 15 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 47 | 5 ★ | active |
 | 16 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 47 | 1 ★ | active |
-| 17 | [Vanta Mcp Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
+| 17 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
 | 18 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
 | 19 | [Bubble Shield](https://tashan.sh/capability/plugin-vdk888-bubble-shield-public-bubble-shield.html) | 43 | 0 ★ | active |
 | 20 | [Caio Review](https://tashan.sh/capability/skill-alirezarezvani-caio-review.html) | not scored | 1 repos | active |

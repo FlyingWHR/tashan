@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 - **Content marketing** — [Save To Spotify](https://tashan.sh/capability/plugin-spotify-save-to-spotify-save-to-spotify.html) · tashan score 72
 - **Technical documentation** — [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) · tashan score 96
-- **Document production** — [Gogcli Mcp Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) · tashan score 70
+- **Document production** — [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) · tashan score 70
 - **Copywriting** — [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) · tashan score 75
 
 ## Ranked
@@ -30,7 +30,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 54 | 123 ★ | active |
 | 11 | [Imqueue](https://tashan.sh/capability/pkg-imqueue-mcp.html) | 73 | 2k/wk | active |
 | 12 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 70 | 168 ★ | active |
-| 13 | [Gogcli Mcp Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 70 | 1k/wk | active |
+| 13 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 70 | 1k/wk | active |
 | 14 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 70 | 1k ★ | active |
 | 15 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 68 | 137 ★ | active |
 | 16 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 68 | 8k/wk | active |

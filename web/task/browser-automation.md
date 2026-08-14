@@ -17,7 +17,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) | 86 | 6.7m/wk | active |
 | 5 | [Chrome DevTools Axi](https://tashan.sh/capability/pkg-chrome-devtools-axi.html) | 73 | 5k/wk | active |
 | 6 | [Tap](https://tashan.sh/capability/pkg-taprun-cli.html) | 67 | 829/wk | active |
-| 7 | [Patchright Mcp Jalikey](https://tashan.sh/capability/pkg-patchright-mcp-jalikey.html) | 61 | 898/wk | active |
+| 7 | [Patchright MCP Jalikey](https://tashan.sh/capability/pkg-patchright-mcp-jalikey.html) | 61 | 898/wk | active |
 | 8 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 50 | 38 ★ | active |
 | 9 | [Hyperbrowser](https://tashan.sh/capability/pkg-hyperbrowser-mcp.html) | 35 | 890/wk | abandoned |
 | 10 | [Browser Harness](https://tashan.sh/capability/plugin-browser-use-browser-harness-browser-harness.html) | 79 | 16k ★ | active |

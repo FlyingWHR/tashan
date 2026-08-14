@@ -20,7 +20,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 51 | 3 ★ | active |
 | 8 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 79 | 118k/wk | active |
 | 9 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 73 | 2k ★ | active |
-| 10 | [Omnifocus Mcp Enhanced](https://tashan.sh/capability/pkg-omnifocus-mcp-enhanced.html) | 69 | 1k/wk | active |
+| 10 | [Omnifocus MCP Enhanced](https://tashan.sh/capability/pkg-omnifocus-mcp-enhanced.html) | 69 | 1k/wk | active |
 | 11 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 66 | 118 ★ | active |
 | 12 | [Jira](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 63 | 46 ★ | active |
 | 13 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 63 | 48 ★ | active |

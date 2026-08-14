@@ -35,7 +35,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 50 | 73 ★ | active |
 | 18 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 47 | 5 ★ | active |
 | 19 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 47 | 1 ★ | active |
-| 20 | [Vanta Mcp Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
+| 20 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
 | 21 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
 | 22 | [Bubble Shield](https://tashan.sh/capability/plugin-vdk888-bubble-shield-public-bubble-shield.html) | 43 | 0 ★ | active |
 | 23 | [Indian Banking Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-banking-drafting-litigation-indian-banking-drafting.html) | 42 | 1 ★ | active |

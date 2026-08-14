@@ -24,7 +24,7 @@ Ranked by the tashan score
 | 11 | [Bourdon](https://tashan.sh/capability/pkg-getbourdon-mcp-server.html) | 63 | 578/wk | active |
 | 12 | [Formlab](https://tashan.sh/capability/pkg-formlab-mcp.html) | 63 | 346/wk | active |
 | 13 | [Recall](https://tashan.sh/capability/pkg-clauderecallhq-cli.html) | 62 | 414/wk | active |
-| 14 | [Braincloud Mcp Helper](https://tashan.sh/capability/pkg-braincloud-mcp-helper.html) | 61 | 123/wk | active |
+| 14 | [Braincloud MCP Helper](https://tashan.sh/capability/pkg-braincloud-mcp-helper.html) | 61 | 123/wk | active |
 | 15 | [Macbeth](https://tashan.sh/capability/pkg-macbeth.html) | 59 | 322/wk | active |
 | 16 | [Korean Dart](https://tashan.sh/capability/pkg-korean-dart-mcp.html) | 57 | 264/wk | active |
 | 17 | [Justdrop](https://tashan.sh/capability/pkg-justdrop-mcp.html) | 53 | 144/wk | active |

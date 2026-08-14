@@ -45,7 +45,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Inference Sh](https://tashan.sh/capability/plugin-inference-sh-skills-inference-sh.html) | 61 | 660 ★ | active |
 | 26 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 58 | 5 repos | active |
 | 27 | [Canvas Design](https://tashan.sh/capability/skill-anthropics-canvas-design.html) | 52 | 2 repos | active |
-| 28 | [F Mcp Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 52 | 9 ★ | active |
+| 28 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 52 | 9 ★ | active |
 | 29 | [Debate](https://tashan.sh/capability/plugin-agent-sh-debate-debate.html) | 50 | 3 ★ | active |
 | 30 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 49 | 6 ★ | active |
 | 31 | [Perception First Design](https://tashan.sh/capability/plugin-skovalik-perception-first-design-perception-first-design.html) | 48 | 80 ★ | active |

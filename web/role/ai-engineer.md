@@ -36,7 +36,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Use](https://tashan.sh/capability/pkg-mcp-use.html) | 83 | 41k/wk | active |
 | 17 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 77 | 9k ★ | active |
 | 18 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 74 | 13k/wk | active |
-| 19 | [Create Mcp Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 74 | 1k/wk | active |
+| 19 | [Create MCP Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 74 | 1k/wk | active |
 | 20 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 72 | 426 ★ | active |
 | 21 | [Keryx](https://tashan.sh/capability/pkg-keryx.html) | 71 | 2k/wk | active |
 | 22 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 70 | 482 ★ | active |
@@ -56,7 +56,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Gangsta](https://tashan.sh/capability/plugin-kucherenko-gangsta-gangsta.html) | 62 | 67 ★ | active |
 | 37 | [Equilateral Agents Open Core](https://tashan.sh/capability/plugin-equilateral-ai-equilateral-agents-open-core-equilateral-agents-open-core.html) | 62 | 59 ★ | active |
 | 38 | [Probabl Skills](https://tashan.sh/capability/plugin-probabl-ai-skills-probabl-skills.html) | 62 | 74 ★ | active |
-| 39 | [Airweave Mcp Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 61 | 1k/wk | active |
+| 39 | [Airweave MCP Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 61 | 1k/wk | active |
 | 40 | [Token Saver](https://tashan.sh/capability/plugin-ppgranger-token-saver-token-saver.html) | 59 | 121 ★ | active |
 
 Showing the top 40 of 482. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.

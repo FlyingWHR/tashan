@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Gogcli Mcp Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 70 | 1k/wk | active |
+| 1 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 70 | 1k/wk | active |
 | 2 | [Drawio](https://tashan.sh/capability/pkg-drawio-mcp-server.html) | 63 | 1k/wk | active |
 | 3 | [Google Sheets](https://tashan.sh/capability/pkg-google-sheets-mcp.html) | 53 | 1k/wk | active |
 | 4 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 47 | 7k/wk | active |

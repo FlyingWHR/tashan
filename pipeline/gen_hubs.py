@@ -167,6 +167,17 @@ def vitality_cell(c):
     return ("%.1f" % (months / 12)).rstrip("0").rstrip(".") + "y", "fresh--cold", ""
 
 
+def sentence_case(p):
+    """Upper-case the first LETTER only, leaving acronyms intact.
+
+    str.capitalize() lower-cases everything after the first character, so
+    kinds_phrase()'s "MCP servers, plugins & skills" came out as "Mcp servers…" — on the <h1> of
+    all 22 role hubs and in their ItemList JSON-LD, while the <title> of the same page said MCP
+    correctly. The first three characters of the biggest heading on the page, wrong.
+    """
+    return p[:1].upper() + p[1:] if p else p
+
+
 def kinds_phrase(rows, amp=False):
     """Name the artifact types THIS page actually contains, in corpus order.
 
@@ -987,7 +998,7 @@ def role_page(role, rows, tasks, all_roles, gen):
     work = ", ".join(t["label"].lower() for t in tasks[:6])
     lds = [
         {"@context": "https://schema.org", "@type": "ItemList",
-         "name": kinds_phrase(rows).capitalize() + " for " + label.lower() + ", ranked by the tashan score",
+         "name": sentence_case(kinds_phrase(rows)) + " for " + label.lower() + ", ranked by the tashan score",
          "itemListOrder": "https://schema.org/ItemListOrderDescending", "numberOfItems": len(scored),
          "itemListElement": [
              {"@type": "ListItem", "position": i + 1,
@@ -1027,7 +1038,7 @@ def role_page(role, rows, tasks, all_roles, gen):
     body = ('<main class="wrap" id="main">\n'
         '<p class="kicker"><a class="link" href="/">The Index</a> · <a class="link" href="/browse.html">By job</a> · '
         + esc(label) + "</p>\n"
-        "<h1>" + kinds_phrase(rows, amp=True).capitalize() + " for " + esc(label.lower()) + ", ranked</h1>\n"
+        "<h1>" + sentence_case(kinds_phrase(rows, amp=True)) + " for " + esc(label.lower()) + ", ranked</h1>\n"
         '<p class="lede">tashan measures <b>' + str(len(rows)) + "</b> capabilities against the work a "
         + esc(label.lower()) + " actually does" + (" — " + esc(work) if work else "") + " — and ranks them "
         "on public evidence alone: upkeep, freshness and real adoption. "

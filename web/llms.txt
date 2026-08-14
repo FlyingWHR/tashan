@@ -2,7 +2,7 @@
 
 > The intelligence layer for AI capabilities. tashan scores MCP servers and agent skills on public evidence — npm downloads and publish cadence, GitHub activity, registry status, and how often a server appears in real public agent configs. Nobody can pay to change a score, rank, or listing; payment buys depth and tooling only.
 
-Generated: 2026-08-13. Capabilities tracked: 11918 ranked. Every number below links to the public source it came from.
+Generated: 2026-08-14. Capabilities tracked: 11918 ranked. Every number below links to the public source it came from.
 
 ## Read any capability as plain markdown
 
@@ -187,7 +187,7 @@ One ranked page per job title. These answer "what should I install for a <job>" 
 - [Finance & Crypto](https://tashan.sh/category/finance.html) — 429 measured. Payments, markets, blockchain, wallets. Top: Freee, Stripe, Ato.
 - [Productivity](https://tashan.sh/category/productivity.html) — 724 measured. Tasks, automation, workflows, personal tools. Top: Atlassian, N8n, Backlog.
 - [Security](https://tashan.sh/category/security.html) — 977 measured. Auth, secrets, scanning, identity. Top: Auth0, Scf, Safety Net.
-- [Other](https://tashan.sh/category/other.html) — 4384 measured. Everything not yet categorized. Top: Humanize Korean, Create Mcp Use App, Modern Web Guidance.
+- [Other](https://tashan.sh/category/other.html) — 4384 measured. Everything not yet categorized. Top: Humanize Korean, Create MCP Use App, Modern Web Guidance.
 
 ## Reference
 
@@ -197,4 +197,4 @@ One ranked page per job title. These answer "what should I install for a <job>" 
 
 ## Citing tashan
 
-Scores change as evidence changes; cite the date. Attribute as: tashan (tashan.sh), measured 2026-08-13. Full machine-readable export: https://tashan.sh/data/capabilities.json
+Scores change as evidence changes; cite the date. Attribute as: tashan (tashan.sh), measured 2026-08-14. Full machine-readable export: https://tashan.sh/data/capabilities.json

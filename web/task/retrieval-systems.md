@@ -17,7 +17,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 50 | 12 ★ | active |
 | 5 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 66 | 68 ★ | active |
 | 6 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 65 | 452 ★ | active |
-| 7 | [Airweave Mcp Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 61 | 1k/wk | active |
+| 7 | [Airweave MCP Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 61 | 1k/wk | active |
 | 8 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 52 | 20 ★ | active |
 | 9 | [Mako AI](https://tashan.sh/capability/plugin-drhalto-agentmako-mako-ai.html) | 51 | 51 ★ | active |
 | 10 | [Pixeltable](https://tashan.sh/capability/plugin-pixeltable-pixeltable-skill-pixeltable.html) | 50 | 5 ★ | active |

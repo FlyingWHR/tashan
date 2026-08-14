@@ -625,5 +625,16 @@ ok("capability.js carries the same caption, so the client re-render does not dro
    CAPTION in _js and "ACTIVATION" in _js,
    "the client replaces <main>; without this the caption survives only until JS runs")
 
+print()
+print("# the acronym this index is about, cased correctly")
+# _titlecase() upper-cases known acronyms, and `mcp` was missing from that set — because
+# _strip_affixes removes it from the start and end of a name, so an INTERNAL one was never
+# considered. 99 labels shipped as "Pi Mcp Adapter", "Openapi Mcp Generator", and "Unity Mcp CLI",
+# which got CLI right and MCP wrong in the same three words.
+_miscased = [c["id"] for c in TRUTH.values()
+             if re.search(r"\bMcp\b", (c.get("label") or "") + " " + (c.get("name") or ""))]
+ok("no exported label mis-cases MCP", not _miscased,
+   f"{len(_miscased)} e.g. {_miscased[:3]}")
+
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)

@@ -30,7 +30,7 @@ Ranked by the tashan score
 | 17 | [Mcporter](https://tashan.sh/capability/pkg-mcporter.html) | 79 | 262k/wk | active |
 | 18 | [Agent Device](https://tashan.sh/capability/pkg-agent-device.html) | 79 | 131k/wk | active |
 | 19 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 79 | 118k/wk | active |
-| 20 | [Pi Mcp Adapter](https://tashan.sh/capability/pkg-pi-mcp-adapter.html) | 79 | 111k/wk | active |
+| 20 | [Pi MCP Adapter](https://tashan.sh/capability/pkg-pi-mcp-adapter.html) | 79 | 111k/wk | active |
 | 21 | [Mobile](https://tashan.sh/capability/pkg-mobilenext-mobile-mcp.html) | 79 | 26k/wk | active |
 | 22 | [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) | 79 | 9k/wk | active |
 | 23 | [Playwright Pro](https://tashan.sh/capability/plugin-alirezarezvani-claude-skills-playwright-pro.html) | 78 | 23k ★ | active |

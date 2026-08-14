@@ -43,7 +43,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 47 | 6 ★ | active |
 | 31 | [Gomboc AI Community](https://tashan.sh/capability/plugin-gomboc-ai-gomboc-community-skills-gomboc-ai-community.html) | 47 | 6 ★ | active |
 | 32 | [Security Guidance](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-security-guidance.html) | 46 | 2 marketplaces | — |
-| 33 | [Vanta Mcp Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
+| 33 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
 | 34 | [Apiiro](https://tashan.sh/capability/plugin-apiiro-mcp-server-apiiro.html) | 46 | 3 ★ | active |
 | 35 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 45 | 12 ★ | active |
 | 36 | [Red Team](https://tashan.sh/capability/skill-alirezarezvani-red-team.html) | 44 | 2 repos | active |

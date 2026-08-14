@@ -29,7 +29,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 65 | 865/wk | active |
 | 17 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 58 | 5 repos | active |
 | 18 | [Canvas Design](https://tashan.sh/capability/skill-anthropics-canvas-design.html) | 52 | 2 repos | active |
-| 19 | [F Mcp Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 52 | 9 ★ | active |
+| 19 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 52 | 9 ★ | active |
 | 20 | [Perception First Design](https://tashan.sh/capability/plugin-skovalik-perception-first-design-perception-first-design.html) | 48 | 80 ★ | active |
 | 21 | [Pluginos Figma Operations Platform](https://tashan.sh/capability/plugin-lsdimi-pluginos-pluginos-figma-operations-platform.html) | 48 | 2 ★ | active |
 | 22 | [UI Theme Designer](https://tashan.sh/capability/plugin-sap-ui-theme-designer-plugins-for-coding-agents-ui-theme-designer.html) | 47 | 1 ★ | active |

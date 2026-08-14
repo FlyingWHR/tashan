@@ -22,7 +22,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Use](https://tashan.sh/capability/pkg-mcp-use.html) | 83 | 41k/wk | active |
 | 10 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 77 | 9k ★ | active |
 | 11 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 74 | 13k/wk | active |
-| 12 | [Create Mcp Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 74 | 1k/wk | active |
+| 12 | [Create MCP Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 74 | 1k/wk | active |
 | 13 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 72 | 426 ★ | active |
 | 14 | [Keryx](https://tashan.sh/capability/pkg-keryx.html) | 71 | 2k/wk | active |
 | 15 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 70 | 482 ★ | active |
@@ -45,7 +45,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 78 | 6k ★ | active |
 | 33 | [Xmcp](https://tashan.sh/capability/pkg-xmcp.html) | 73 | 17k/wk | active |
 | 34 | [PAPI: Persistent Adaptive Project Intelligence](https://tashan.sh/capability/pkg-papi-ai-server.html) | 69 | 1k/wk | active |
-| 35 | [Openapi Mcp Generator](https://tashan.sh/capability/pkg-openapi-mcp-generator.html) | 68 | 15k/wk | active |
+| 35 | [Openapi MCP Generator](https://tashan.sh/capability/pkg-openapi-mcp-generator.html) | 68 | 15k/wk | active |
 | 36 | [Cc10x Router Owned Harness](https://tashan.sh/capability/plugin-romiluz13-cc10x-cc10x-router-owned-harness.html) | 67 | 158 ★ | active |
 | 37 | [Youdotcom Agent Skills](https://tashan.sh/capability/plugin-youdotcom-oss-agent-skills-youdotcom-agent-skills.html) | 65 | 50 ★ | active |
 | 38 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 63 | 7 repos | active |

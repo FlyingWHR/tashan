@@ -33,7 +33,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 2k/wk | active |
 | 12 | [Huly](https://tashan.sh/capability/pkg-firfi-huly-mcp.html) | 69 | 1k/wk | active |
 | 13 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 68 | 895/wk | active |
-| 14 | [Reddit Mcp Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
+| 14 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
 | 15 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 67 | 883/wk | active |
 | 16 | [Vikunja Fastmcp](https://tashan.sh/capability/pkg-vikunja-fastmcp.html) | 67 | 967/wk | active |
 | 17 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 67 | 80 ★ | active |

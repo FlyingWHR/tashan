@@ -12,7 +12,7 @@ Ranked by the tashan score
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) | 75 | 4k ★ | active |
-| 2 | [Create Mcp Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 74 | 1k/wk | active |
+| 2 | [Create MCP Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 74 | 1k/wk | active |
 | 3 | [Modern Web Guidance](https://tashan.sh/capability/plugin-googlechrome-modern-web-guidance-modern-web-guidance.html) | 73 | 2k ★ | active |
 | 4 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 73 | 2k ★ | active |
 | 5 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 73 | 1k ★ | active |
@@ -42,7 +42,7 @@ Ranked by the tashan score
 | 29 | [Mealie](https://tashan.sh/capability/pkg-mealie-mcp.html) | 70 | 2k/wk | active |
 | 30 | [Ruvnet Brain](https://tashan.sh/capability/pkg-ruvnet-brain.html) | 70 | 2k/wk | active |
 | 31 | [Ziggs](https://tashan.sh/capability/pkg-ziggs-ai-ziggs-mcp.html) | 70 | 2k/wk | active |
-| 32 | [Gogcli Mcp Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 70 | 1k/wk | active |
+| 32 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 70 | 1k/wk | active |
 | 33 | [Modelcontextprotocol](https://tashan.sh/capability/pkg-atomicmail-mcp-modelcontextprotocol.html) | 70 | 525/wk | active |
 | 34 | [Aiven](https://tashan.sh/capability/pkg-mcp-aiven.html) | 70 | 376/wk | active |
 | 35 | [OneSource](https://tashan.sh/capability/pkg-one-source-mcp.html) | 70 | 305/wk | active |

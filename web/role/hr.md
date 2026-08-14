@@ -44,7 +44,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Hr](https://tashan.sh/capability/pkg-autostackup-hr.html) | 40 | 30/wk | active |
 | 32 | [Formacv](https://tashan.sh/capability/pkg-formacv-mcp.html) | 36 | 43/wk | active |
 | 33 | [Osf Data Marketplace](https://tashan.sh/capability/pkg-osf-data-marketplace.html) | 28 | — | active |
-| 34 | [LinkedIn Mcp Tools](https://tashan.sh/capability/pkg-linkedin-mcp-tools.html) | 48 | 100/wk | active |
+| 34 | [LinkedIn MCP Tools](https://tashan.sh/capability/pkg-linkedin-mcp-tools.html) | 48 | 100/wk | active |
 
 ## What these numbers are not
 

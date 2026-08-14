@@ -24,7 +24,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Carta CRM](https://tashan.sh/capability/plugin-carta-plugins-carta-crm.html) | 44 | 1 marketplaces | active |
 | 12 | [Deepline](https://tashan.sh/capability/plugin-getaero-io-deepline-plugins-deepline.html) | 44 | 1 ★ | active |
 | 13 | [Apollo · apolloio](https://tashan.sh/capability/plugin-apolloio-apollo-mcp-plugin-apollo.html) | 43 | 1 marketplaces | active |
-| 14 | [Apollo Mcp Plugin](https://tashan.sh/capability/plugin-apolloio-apollo-mcp-plugin-apollo-mcp-plugin.html) | 43 | 1 marketplaces | active |
+| 14 | [Apollo MCP Plugin](https://tashan.sh/capability/plugin-apolloio-apollo-mcp-plugin-apollo-mcp-plugin.html) | 43 | 1 marketplaces | active |
 | 15 | [Clearskies Cowork Plugin](https://tashan.sh/capability/plugin-scratchpad-ai-clearskies-cowork-plugin-clearskies-cowork-plugin.html) | 43 | 0 ★ | active |
 | 16 | [Sanka](https://tashan.sh/capability/plugin-sankahq-sanka-plugin-sanka.html) | 43 | 0 ★ | active |
 | 17 | [Tiga Gtm](https://tashan.sh/capability/plugin-tiga-labs-tiga-gtm-tiga-gtm.html) | 42 | 1 ★ | active |

@@ -32,7 +32,7 @@ Ranked by the tashan score
 | 19 | [Paparats – Local Semantic Code Search](https://tashan.sh/capability/pkg-paparats-cli.html) | 70 | 2k/wk | active |
 | 20 | [Duduclaw](https://tashan.sh/capability/pkg-duduclaw.html) | 70 | 2k/wk | active |
 | 21 | [Shipmail](https://tashan.sh/capability/pkg-shipmail-mcp.html) | 70 | 2k/wk | active |
-| 22 | [Apt Mcp Agent Setup](https://tashan.sh/capability/pkg-apt-mcp-agent-setup.html) | 69 | 1k/wk | active |
+| 22 | [Apt MCP Agent Setup](https://tashan.sh/capability/pkg-apt-mcp-agent-setup.html) | 69 | 1k/wk | active |
 | 23 | [Cybara](https://tashan.sh/capability/pkg-cybara.html) | 69 | 1k/wk | active |
 | 24 | [Agenticmail](https://tashan.sh/capability/plugin-agenticmail-agenticmail-agenticmail.html) | 68 | 180 ★ | active |
 | 25 | [Defang](https://tashan.sh/capability/plugin-defanglabs-defang-defang.html) | 68 | 163 ★ | active |

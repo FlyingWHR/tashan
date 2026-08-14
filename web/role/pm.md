@@ -39,7 +39,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 74 | 2k/wk | active |
 | 18 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 73 | 2k ★ | active |
 | 19 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 72 | 1k ★ | active |
-| 20 | [Omnifocus Mcp Enhanced](https://tashan.sh/capability/pkg-omnifocus-mcp-enhanced.html) | 69 | 1k/wk | active |
+| 20 | [Omnifocus MCP Enhanced](https://tashan.sh/capability/pkg-omnifocus-mcp-enhanced.html) | 69 | 1k/wk | active |
 | 21 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 68 | 2k/wk | active |
 | 22 | [Alphacouncil Agent](https://tashan.sh/capability/pkg-alphacouncil-agent.html) | 68 | 1k/wk | active |
 | 23 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 68 | 889/wk | active |

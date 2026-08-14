@@ -26,7 +26,7 @@ Ranked by the tashan score
 | 13 | [Howtocook](https://tashan.sh/capability/pkg-howtocook-mcp.html) | 69 | 7k/wk | active |
 | 14 | [Sciverse](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 69 | 1k/wk | active |
 | 15 | [Searxng](https://tashan.sh/capability/pkg-kevinwatt-mcp-server-searxng.html) | 68 | 161/wk | active |
-| 16 | [Reddit Mcp Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
+| 16 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
 | 17 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 67 | 433 ★ | active |
 | 18 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 67 | 78 ★ | active |
 | 19 | [Search1api](https://tashan.sh/capability/pkg-search1api-mcp.html) | 67 | 1k/wk | active |
@@ -45,7 +45,7 @@ Ranked by the tashan score
 | 32 | [Zillow](https://tashan.sh/capability/pkg-zillow-mcp.html) | 63 | 358/wk | active |
 | 33 | [Crawlforge](https://tashan.sh/capability/pkg-crawlforge-mcp-server.html) | 63 | 285/wk | active |
 | 34 | [Zyte Web Data](https://tashan.sh/capability/plugin-zytedata-claude-skills-zyte-web-data.html) | 62 | 27 ★ | active |
-| 35 | [Airweave Mcp Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 61 | 1k/wk | active |
+| 35 | [Airweave MCP Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 61 | 1k/wk | active |
 | 36 | [Getcourse](https://tashan.sh/capability/pkg-getcourse-mcp.html) | 61 | 438/wk | active |
 | 37 | [Resy](https://tashan.sh/capability/pkg-resy-mcp.html) | 61 | 331/wk | active |
 | 38 | [Compass](https://tashan.sh/capability/pkg-compass-mcp.html) | 61 | 327/wk | active |

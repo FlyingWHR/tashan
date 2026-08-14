@@ -1548,7 +1548,11 @@ def export(con):
     # into one name. It is the same defect as keying a plugin by the marketplace that listed it: the
     # artifact's name must come from the artifact. So a title is used only when no other capability
     # claims it.
-    ACRONYM = set("api ai ui ux cli sql aws gcp db sdk http https url id io pdf csv json xml yaml "
+    # `mcp` belongs here even though _strip_affixes removes it from the START and END of a name:
+    # an INTERNAL one survives, and 99 labels rendered "Pi Mcp Adapter", "Openapi Mcp Generator",
+    # "Unity Mcp CLI" — the last of which got CLI right and MCP wrong in the same three words. It is
+    # the acronym this entire index is about, mis-cased on its own board.
+    ACRONYM = set("mcp api ai ui ux cli sql aws gcp db sdk http https url id io pdf csv json xml yaml "
                   "s3 ci cd seo crm erp gui ide os vm k8s ftp ssh dns rss llm npm qa bi 3d rag jwt "
                   "oauth ocr tts stt sms cms cdn dom ast orm rpc grpc tcp udp ip iot ar vr nlp".split())
     BRAND = {"devtools": "DevTools", "github": "GitHub", "gitlab": "GitLab", "postgresql": "PostgreSQL",
