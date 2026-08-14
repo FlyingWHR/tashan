@@ -157,6 +157,31 @@ ok(f"pricing advertises one cadence per live checkout link ({len(by_url)} link, 
    len(prices) <= len(by_url), f"{sorted(prices)} advertised, {len(by_url)} checkout link(s)")
 
 print()
+print("# one price ladder, and the docs must not invent a second")
+# GROWTH.md advertised "$0.20 USDC deep-grades any capability on the spot ... (Live on
+# pricing.html)". pricing.html has never mentioned USDC, x402 or a per-call price, and on-demand
+# deep-grading is not a product. A strategy doc describing a shipped feature that does not exist is
+# how a second, unreconciled ladder came to be invented beside it.
+_x402src = open(os.path.join(ROOT, "functions", "api", "_x402.js"), encoding="utf-8").read()
+_priced = dict((m.group(1), m.group(2)) for m in
+               re.finditer(r'"([a-z-]+)":\s*\{\s*\n\s*usd:\s*([0-9.]+)', _x402src))
+ok("PRICED still parses and holds every priced resource", len(_priced) >= 4, str(_priced))
+_doc = open(os.path.join(ROOT, "docs", "X402.md"), encoding="utf-8").read()
+for _k, _usd in _priced.items():
+    ok(f"docs/X402.md quotes {_k} at the price the code charges (${_usd})",
+       f"`{_k}` | ${_usd}" in _doc or f"${_usd}" in _doc, f"code says ${_usd}")
+_growth = open(os.path.join(ROOT, "docs", "GROWTH.md"), encoding="utf-8").read()
+# The phrase may still appear inside the correction note, which QUOTES it — that is history, not a
+# claim. Only an occurrence outside a blockquote is the site promising something again.
+_live_claims = [ln for ln in _growth.splitlines()
+                if "Live on `pricing.html`" in ln and not ln.lstrip().startswith(">")]
+ok("GROWTH.md does not claim a per-call product is live on pricing.html",
+   not _live_claims,
+   "it said $0.20 USDC deep-grade was live; pricing.html has never mentioned USDC")
+ok("...and the correction is recorded rather than the line quietly deleted",
+   "Corrected 14 Aug 2026" in _growth)
+
+print()
 print("# the post-purchase hand-off must be reachable")
 # THE BUG THIS EXISTS FOR. functions/api/checkout.js exchanges a checkout id for a session, and
 # POLAR_ORG_TOKEN is set on the Pages project — the auto sign-in was built and deployed. But the

@@ -52,9 +52,15 @@ not the price. Cheap consumer tier is top-of-funnel; the real money is later (Te
 Accept **card or USDC** (Coinbase **x402**). Crypto isn't a roadmap item, it's a launch convenience:
 instant, global (180+ countries, no bank/KYC), machine-native. Two paths:
 - **Subscription** payable in card or USDC.
-- **Pay-per-use micropayment** — **$0.20 USDC** deep-grades any capability on the spot, no account.
-  Sub-cent-friendly rails make this the lowest-friction possible entry *and* a showcase of the
-  convenience. (Live on `pricing.html`.)
+- **Pay-per-request** — built, dormant until a wallet exists. The ladder and its unit economics live
+  in `docs/X402.md`; `PRICED` in `functions/api/_x402.js` is the only source of truth for a number.
+
+> **Corrected 14 Aug 2026.** This section previously said "**$0.20 USDC** deep-grades any capability
+> on the spot, no account. (Live on `pricing.html`.)" None of that was true: pricing.html has never
+> mentioned USDC, x402 or a per-call price, and on-demand deep-grading is not a product — grading
+> costs a model call, which is the one spend deliberately on hold until there is a paying customer.
+> A strategy doc describing a shipped feature that does not exist is how a second, unreconciled
+> price ladder came to be invented beside it.
 The full 8-layer agent trust-stack (escrow, ZK, insurance) stays **roadmap** — see On-chain below.
 
 **Later tiers (not now):** *Team* ($40/seat — private capability audits for an org's own
