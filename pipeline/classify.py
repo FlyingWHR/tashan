@@ -287,19 +287,59 @@ def rows_for(con, ids=None):
     return con.execute(q).fetchall()
 
 
+HOLDOUT = os.path.join(ROOT, "data", "classify", "_holdout.json")
+
+
+def holdout_ids(gt):
+    """The FROZEN evaluation set — written once, never grown.
+
+    WHY IT HAD TO BE FROZEN. The old split sorted every labelled row by a stable hash and took the
+    last fifth. Stable across processes, which was the previous fix, but NOT stable across label
+    sets: adding 107 hand labels moved the boundary and the test set went 220 -> 241 rows. So
+    "accuracy before vs after adding labels" compared two different exams, and the 60.0% -> 58.9%
+    it produced looks exactly like a regression while meaning nothing at all. I nearly reported it
+    as one.
+
+    Frozen, every future label goes to TRAINING and the exam stays the same, so the numbers finally
+    answer the question anyone actually asks: did the labels help.
+
+    Created from the current label set on first run and committed. Ids in it are never trained on;
+    if a held-out id later gets a hand label, that improves its ground TRUTH, which is fine — it
+    still never teaches the model.
+    """
+    if os.path.exists(HOLDOUT):
+        return json.load(open(HOLDOUT, encoding="utf-8"))["labels"]
+    ids = sorted(gt)
+    ids.sort(key=lambda i: hashlib.md5(i.encode()).hexdigest())
+    picked = {i: gt[i] for i in ids[:max(1, len(ids) // 5)]}
+    json.dump({"_why": "Frozen evaluation set for classify.py --eval. Never train on these, never "
+                       "add to this list, and note it stores the ANSWERS as well as the questions. "
+                       "Storing ids alone was not enough: a held-out id whose only label lived in "
+                       "the file under test vanished from the exam when that file was removed, so "
+                       "the before/after still scored on different sets (223 vs 248 rows). A frozen "
+                       "exam needs fixed questions AND fixed answers.",
+               "created": "2026-08-14", "n": len(picked), "labels": picked},
+              open(HOLDOUT, "w", encoding="utf-8"), indent=1, sort_keys=True)
+    print(f"  wrote a frozen holdout of {len(picked)} labelled ids -> {HOLDOUT}")
+    return picked
+
+
 def evaluate(con, margin):
     gt = dict(declared_labels()); gt.update(load_labels())   # hand labels override declared ones
-    rows = {r[0]: r for r in rows_for(con, list(gt))}
-    data = [(features(*rows[i][1:7]), c, rows[i][1]) for i, c in gt.items() if i in rows]
-    # STABLE 80/20 split. Python's hash() on str is salted per process (PYTHONHASHSEED), so an earlier
-    # version of this line reshuffled the split on every run and the "accuracy deltas" it produced were
-    # partly noise. md5 is stable across processes, which is the whole point of a regression suite.
-    data.sort(key=lambda d: hashlib.md5(" ".join(d[0][:8]).encode()).hexdigest())
-    cut = int(len(data) * 0.8)
-    train, test = data[:cut], data[cut:]
-    m = NB().fit([(f, c) for f, c, _ in train])
+    held = holdout_ids(gt)          # {id: frozen truth}
+    # Fetch rows for the UNION. Fetching only `gt` meant a held-out id whose label file was absent
+    # had no row to score, so the exam silently shrank with the training set — the third and last
+    # way this comparison was not a comparison.
+    rows = {r[0]: r for r in rows_for(con, sorted(set(gt) | set(held)))}
+    # Train on every label that is NOT held out. Score on the frozen answers, so neither the
+    # questions nor the truth move when the training set grows.
+    train = [(features(*rows[i][1:7]), c, rows[i][1], i)
+             for i, c in gt.items() if i in rows and i not in held]
+    test = [(features(*rows[i][1:7]), c, rows[i][1], i)
+            for i, c in held.items() if i in rows]
+    m = NB().fit([(f, c) for f, c, _, _ in train])
     right = collections.Counter(); total = collections.Counter(); abstain = 0
-    for feats, truth, nm in test:
+    for feats, truth, nm, _cid in test:
         pred, _ = m.predict(feats, margin)
         total[truth] += 1
         if pred == truth:
@@ -307,7 +347,7 @@ def evaluate(con, margin):
         if pred == "other" and truth != "other":
             abstain += 1
     acc = sum(right.values()) / max(1, len(test))
-    return acc, abstain, len(test), right, total
+    return acc, abstain, len(test), right, total, len(train)
 
 
 def main():
@@ -318,29 +358,48 @@ def main():
     # say it is a real trade and not a free win. Precision OF WHAT IS KEPT, derived from --eval
     # (accuracy counts an abstention as a miss, so precision-of-kept = correct / (n - abstained)):
     #
-    #     margin 0.2   kept 186/241 (77%)   precision 68.8%      <- current
-    #     margin 0.3   kept 161/241 (67%)   precision 73.3%
-    #     margin 0.4   kept 130/241 (54%)   precision 82.3%
-    #     margin 0.5   kept 102/241 (42%)   precision 88.1%
+    #     margin 0.2   kept 181/248 (73%)   precision 60.8%      <- current
+    #     margin 0.3   kept 162/248 (65%)   precision 64.8%
+    #     margin 0.4   kept 130/248 (52%)   precision 72.3%
+    #     margin 0.5   kept 104/248 (42%)   precision 75.0%
     #
-    # 0.4 would buy 13 points of precision for 23 points of coverage — a fifth of the corpus moving
+    # 0.4 would buy 11 points of precision for 21 points of coverage — a fifth of the corpus moving
     # to a hub nothing links to. Not taken, because the hand-classified HEAD of each hub is what a
     # reader sees and that is now correct, while the tail is where thinning would cost most and show
-    # least. Revisit with a bigger labelled set, not by feel.
+    # least.
     #
-    # AND --eval CANNOT TELL YOU WHETHER NEW LABELS HELPED. It holds out a fifth of whatever labels
-    # exist, so adding 107 changed the test set too (220 -> 241 rows) and the before/after numbers
-    # are scored on different data. The 60.0% -> 58.9% that looks like a regression is not one; it
-    # is not a comparison at all. A real answer needs a frozen holdout.
+    # AND THE THING WORTH KNOWING BEFORE LABELLING MORE BY HAND. With the frozen holdout in place,
+    # adding today's 107 hand labels to the training set changed the production margin by NOTHING:
+    #
+    #                        without the 107      with them
+    #     margin 0.2         44.4% / 60.8%        44.4% / 60.8%     <- identical
+    #     margin 0.0         48.8% / 50.6%        50.8% / 52.3%
+    #     margin 0.4         38.7% / 69.1%        37.9% / 72.3%
+    #
+    # So hand-labelling is worth doing for the ROWS you label — mongodb-mcp-server is on the database
+    # hub now, and it was not — but it is NOT a route to a better classifier. 107 labels on top of
+    # 955 is an 11% larger training set for a bag-of-words model over one-line descriptions, and it
+    # buys nothing measurable. Anyone planning to grind out labels expecting the model to improve
+    # should read this table first: the fix is better features or a different model, not more of the
+    # same labels.
     margin = float(os.environ.get("CLASSIFY_MARGIN", "0.20"))   # RELATIVE, 0..1 — see NB.predict
 
     if "--eval" in sys.argv:
-        print(f"training on data/classify/cat_*.json  (margin={margin})")
+        print(f"training on data/classify/cat_*.json, scoring on the FROZEN holdout  (margin={margin})")
+        # PRECISION OF WHAT IS KEPT is printed beside accuracy, because they answer different
+        # questions and only one of them is about hub quality. `accuracy` counts an abstention as a
+        # miss, so it FALLS as the margin rises even though every kept answer gets better — which
+        # reads as "raising the margin makes it worse" and is the opposite of what is happening.
+        # Precision is correct / kept: how often a row that landed on a shelf belongs there.
+        print("  margin   accuracy   precision-of-kept   kept   wrongly-abstained")
         for mg in (0.0, 0.2, 0.3, 0.4, 0.5):
-            acc, ab, n, right, total = evaluate(con, mg)
-            print(f"  margin {mg:5.1f}   accuracy {acc*100:5.1f}%   wrongly-abstained {ab:3}/{n}")
-        acc, ab, n, right, total = evaluate(con, margin)
-        print(f"\nper-category recall at margin={margin} (held-out n={n}):")
+            acc, ab, n, right, total, ntrain = evaluate(con, mg)
+            kept = n - ab
+            prec = (100 * sum(right.values()) / kept) if kept else 0.0
+            print(f"  {mg:5.1f}   {acc*100:7.1f}%   {prec:14.1f}%   {kept:4}/{n}   {ab:3}")
+        acc, ab, n, right, total, ntrain = evaluate(con, margin)
+        print(f"\ntrained on {ntrain} labels, scored on {n} frozen holdout rows")
+        print(f"per-category recall at margin={margin}:")
         for cat in sorted(total, key=lambda c: -total[c]):
             print(f"  {cat:14} {right[cat]:3}/{total[cat]:3}  {100*right[cat]/total[cat]:5.1f}%")
         con.close(); return 0

@@ -202,12 +202,24 @@ import subprocess
 _r = subprocess.run([sys.executable, os.path.join(ROOT, "pipeline", "classify.py"), "--eval"],
                     capture_output=True, text=True, cwd=ROOT,
                     env={**os.environ, "PYTHONPATH": os.path.join(ROOT, "pipeline")})
-_m = re.search(r"margin\s+0\.0\s+accuracy\s+([\d.]+)%", _r.stdout)
+# Row shape: "  0.0      50.8%       52.3%   241/248   7"  (margin, accuracy, precision-of-kept, …)
+_m = re.search(r"^\s*0\.0\s+([\d.]+)%\s+([\d.]+)%", _r.stdout, re.M)
 check("classifier --eval reports an accuracy", bool(_m), _r.stdout[-200:] or _r.stderr[-200:])
 if _m:
-    _acc = float(_m.group(1))
-    check(f"classifier accuracy >= 55% (is {_acc:.1f}%)", _acc >= 55.0,
-          "measured 62.9% when written; floor set below it to allow noise, not decay")
+    _acc, _prec = float(_m.group(1)), float(_m.group(2))
+    # RE-BASELINED 14 Aug 2026, AND THE OLD NUMBER IS NOT COMPARABLE. The floor was 55% against a
+    # 62.9% measurement taken on a rolling 80/20 split — one that re-drew itself every time the
+    # label set changed, which is exactly why it could not answer whether new labels helped. --eval
+    # now scores on data/classify/_holdout.json: fixed questions, fixed answers, 248 rows. That is a
+    # different and harder exam, and it reads 50.8%. The drop is the ruler changing, not the model.
+    # Floor set below the new baseline to allow noise, not decay.
+    check(f"classifier accuracy >= 45% on the frozen holdout (is {_acc:.1f}%)", _acc >= 45.0,
+          "measured 50.8% when the frozen holdout was introduced")
+    # The number that actually governs hub quality: of the rows the model does shelve, how many
+    # belong there. Accuracy counts an abstention as a miss and so moves with the margin for
+    # reasons that have nothing to do with the model getting better or worse.
+    check(f"precision of what it shelves >= 45% at margin 0 (is {_prec:.1f}%)", _prec >= 45.0,
+          "measured 52.3% when written")
 
 
 print()
