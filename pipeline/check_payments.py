@@ -175,7 +175,10 @@ def main():
 
     # 4. PAID ENDPOINTS. 402 means "priced and reachable"; 503 means the store is not configured and
     #    a paying customer would get nothing.
-    for path in ("/api/history?id=pkg:chrome-devtools-mcp", "/api/security?id=pkg:chrome-devtools-mcp"):
+    # /api/security IS NOT IN THIS LIST any more — it was made free, because everything it returns
+    # is already in the public export and at /v0.1/lookup. It gets its own check below, asserting
+    # the opposite: that it does NOT ask for money.
+    for path in ("/api/history?id=pkg:chrome-devtools-mcp",):
         status, body, _ = get(BASE + path)
         name = path.split("?")[0]
         if status == 402:
@@ -191,6 +194,19 @@ def main():
                    "503 — the KV store is missing, so a paying customer gets nothing")
         else:
             record(FAIL, f"{name} answers 402", f"got HTTP {status}")
+
+    # 4b. AND THE FREE SIDE OF THE SAME LINE. /api/security must never start asking for money again:
+    #     it returns current state, which redact_paid() publishes and /v0.1/lookup serves to anyone.
+    #     A 402 here would charge for a giveaway, which is the defect this endpoint just came out of.
+    status, body, _ = get(f"{BASE}/api/security?id=pkg:claude-cup")
+    ok_free = False
+    try:
+        d = json.loads(body)
+        ok_free = status == 200 and d.get("licence") == "free" and d.get("advisories") is not None
+    except ValueError:
+        pass
+    record(PASS if ok_free else FAIL, "/api/security answers without a credential, and says it is free",
+           f"HTTP {status}: {body[:120]}")
 
     # 5. A BAD CREDENTIAL IS 403, NOT 402. Telling somebody whose licence was refused to go and buy
     #    one sends them to the wrong place, and reads as their subscription being ignored.
