@@ -94,6 +94,7 @@
              "", "how many of the score's inputs we actually have") +
       '</div>' +
       securityBlock(c) +
+      skillDocBlock(c) +
       (c.expertise_note ? '<div class="expert-read">' + vchip(c.expertise_verdict) +
         '<p>&ldquo;' + esc(c.expertise_note) + '&rdquo;</p><span class="expert-read__by mono">— tashan expertise-eval, read of the actual capability</span></div>' :
        // WHY A GRADE IS ABSENT, and it must survive hydration. prerender.py renders this and this
@@ -367,6 +368,30 @@ function closingPitch(c) {
     'What it cannot know is whether <em>you</em> run this — <code>npx tashan-cli doctor</code> ' +
     'reads your own config and names what is wrong in it, also free. ' +
     '<a class="link" href="/pricing.html">tashan Pro</a> tells you the day any of it changes.</p>';
+}
+
+// Mirrors prerender.py::skill_doc_block. The client REPLACES <main>, so without this the block
+// exists for crawlers and vanishes for every human the moment JS runs — which is exactly how these
+// two files have drifted five times already.
+function skillDocBlock(c) {
+  var raw = c.skill_doc;
+  if (!raw) return '';
+  var m;
+  try { m = typeof raw === 'string' ? JSON.parse(raw) : raw; } catch (e) { return ''; }
+  if (!m || typeof m !== 'object') return '';
+  var yes = [];
+  if (m.when) yes.push('says when to use it');
+  if (m.stop) yes.push('says when not to');
+  if (m.ex) yes.push('shows worked examples');
+  if (m.setup) yes.push('covers setup');
+  if (m.limit) yes.push('states a limitation');
+  var line = yes.length
+    ? 'Its SKILL.md ' + (yes.length > 1 ? yes.slice(0, -1).join(', ') + ' and ' : '') + yes[yes.length - 1] + '.'
+    : 'Its SKILL.md does not say when to use it, show a worked example, cover setup, or state a limitation.';
+  return '<section class="sec"><h2>Its own instructions</h2><p class="prose">' + esc(line) + '</p>' +
+    '<p class="muted">Read from the capability\u2019s own SKILL.md. This is not a grade and does not ' +
+    'compare to the instruction-depth verdict on an MCP server \u2014 a skill has no tools to ' +
+    'document, so that rubric does not apply to it.</p></section>';
 }
 
 function changedBlock(c) {

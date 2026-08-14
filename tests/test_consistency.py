@@ -626,6 +626,24 @@ ok("capability.js carries the same caption, so the client re-render does not dro
    "the client replaces <main>; without this the caption survives only until JS runs")
 
 print()
+print("# the SKILL.md block survives hydration")
+# prerender renders it and capability.js REPLACES <main>, so a block only one of them knows about
+# exists for crawlers and vanishes for every human. These two files have drifted five times; this
+# is the sixth place they have to agree, asserted on real pages rather than on a mock.
+_SD = "Its own instructions"
+_want = {re.sub(r"[^a-z0-9]+", "-", c["id"].lower()).strip("-")
+         for c in TRUTH.values() if c.get("skill_doc")}
+_got = {os.path.basename(p)[:-5] for p in pages if _SD in open(p, encoding="utf-8").read()}
+if SAMPLE:
+    _want &= {os.path.basename(p)[:-5] for p in pages}
+ok(f"the SKILL.md block is on all {len(_want)} dossier(s) whose row carries one",
+   _want == _got, f"missing {sorted(_want - _got)[:3]}, spurious {sorted(_got - _want)[:3]}")
+_capjs = open(os.path.join(WEB, "js", "capability.js"), encoding="utf-8").read()
+ok("capability.js renders it too, so it survives the client re-render",
+   _SD in _capjs and "skillDocBlock" in _capjs,
+   "the client replaces <main>; without this the block is crawler-only")
+
+print()
 print("# the acronym this index is about, cased correctly")
 # _titlecase() upper-cases known acronyms, and `mcp` was missing from that set — because
 # _strip_affixes removes it from the start and end of a name, so an INTERNAL one was never
