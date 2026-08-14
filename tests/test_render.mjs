@@ -14,6 +14,7 @@ const dir = path.join(ROOT, "web/capability");
 const files = fs.readdirSync(dir).filter((f) => f.endsWith(".html"));
 
 // sample a spread (every Nth) plus guarantee coverage of the tricky branches by scanning for them
+let sdExpected = 0, sdShown = 0;
 const step = Math.max(1, Math.floor(files.length / 60));
 const sample = files.filter((_, i) => i % step === 0);
 
@@ -78,6 +79,15 @@ for (const f of sample) {
   if (/install__tab|install__snip/.test(capHTML)) tabs++;
   if (/hstat|repoHealth|Bus factor|stars/.test(capHTML)) health++;
 
+  // THE BLOCK MUST SURVIVE HYDRATION, ASSERTED ON THE RENDERED OUTPUT. A string check in
+  // test_consistency.py that capability.js merely CONTAINS "skillDocBlock" passes on the function
+  // DEFINITION even after the call site is deleted — verified by deleting it and watching that
+  // check exit 0. Only running render() and looking at what comes out can tell the difference.
+  if (/"skill_doc"/.test(m[1])) {
+    sdExpected++;
+    if (/Its own instructions/.test(capHTML)) sdShown++;
+  }
+
   const served = snip(html), shown = snip(capHTML);
   if (shown && !served) {
     console.log("FAIL client offers an install command the crawled HTML does not:", f, "—", shown.split("\n")[0]);
@@ -91,6 +101,11 @@ for (const f of sample) {
   }
   if (served && shown) agreed++;
 }
+
+assert.strictEqual(sdExpected === 0 || sdShown, sdExpected === 0 || sdExpected,
+  `the SKILL.md block vanished on hydration: ${sdShown}/${sdExpected} sampled pages kept it — ` +
+  `prerender renders it and capability.js must too, or it exists only for crawlers`);
+console.log(`ok — the SKILL.md block survives the client re-render (${sdShown}/${sdExpected} sampled)`);
 
 assert.strictEqual(fail, 0, `${fail} pages failed to render`);
 console.log(`ok — render() ran clean on ${checked} sampled pages `
