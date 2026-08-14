@@ -154,7 +154,16 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # task tag; category was one bare string, so an author's own declaration and a 60%-
            # accurate naive-Bayes guess were stored identically and rendered identically as fact.
            # 40% of the labels on the site were wrong and nothing on the row said which.
-           "category_basis TEXT", "category_conf REAL", "skill_doc TEXT", "npm_maint_fp TEXT"
+           # THE COMMA IS LOAD-BEARING. Twice now a column has been appended at the end of this line
+           # without one, and Python silently concatenates adjacent string literals: the entry became
+           # "npm_maint_fp TEXTnpm_keywords TEXT". SQLite ACCEPTS that — a type name may contain
+           # spaces, and anything containing "TEXT" gets TEXT affinity — so the column is created,
+           # works, and nothing ever complains. The real damage is the entry that got swallowed:
+           # npm_keywords disappeared from MIGRATE entirely, so any existing database missing it
+           # would never be given it. `skill_doc` and `npm_maint_fp` both carry the corrupt declared
+           # type today, harmlessly. tests/test_score.py now rejects any entry that is not exactly
+           # "<name> <TYPE>".
+           "category_basis TEXT", "category_conf REAL", "skill_doc TEXT", "npm_maint_fp TEXT",
            # The author's OWN package.json keywords, comma-joined like gh_topics. Fetched on every
            # enrichment pass since the beginning and thrown away, which left npm the only kind with
            # no author vocabulary at all: plugins had manifest tags, skills had frontmatter, and

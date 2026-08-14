@@ -177,5 +177,30 @@ check("an empty backlog is not an error", build.interleave_unpriced([], {}) == [
 check("_weekly distinguishes 'npm says gone' from 'npm would not answer'",
       build.GONE is not None and build.GONE != 0)
 
+# ---------------------------------------------------------------------------
+# EVERY MIGRATE ENTRY MUST BE EXACTLY "<name> <TYPE>".
+#
+# SQLite has no ADD COLUMN IF NOT EXISTS, so MIGRATE is how an existing database gets a new column —
+# and it is a Python list of string literals, where a missing comma concatenates two entries instead
+# of failing. That happened twice: `skill_doc TEXT` and later `npm_maint_fp TEXT` each swallowed the
+# next entry, producing "npm_maint_fp TEXTnpm_keywords TEXT".
+#
+# NOTHING COMPLAINED, which is the whole problem. A SQLite type name may contain spaces, and any
+# type containing "TEXT" gets TEXT affinity, so the ALTER succeeded and the column worked. The
+# damage was invisible and one level away: `npm_keywords` vanished from the list, so a database
+# missing that column would never have been given it — the next pull from R2 would have run against
+# a schema quietly one column short.
+_bad = [m for m in build.MIGRATE
+        if len(m.split()) != 2 or m.split()[1] not in ("TEXT", "INTEGER", "REAL", "BLOB", "NUMERIC")]
+check("every MIGRATE entry is a well-formed '<name> <TYPE>' (a missing comma silently merges two)",
+      not _bad)
+if _bad:
+    print("       malformed: " + repr(_bad[:3]))
+_names = [m.split()[0] for m in build.MIGRATE]
+check("no MIGRATE column is declared twice", len(_names) == len(set(_names)))
+# The two that matter most, because they are the ones the merge ate.
+for _col in ("npm_keywords", "npm_maint_fp"):
+    check(f"MIGRATE still carries {_col}", _col in _names)
+
 print("SCORE SHAPE OK" if not fail else "SCORE SHAPE FAILED")
 sys.exit(fail)
