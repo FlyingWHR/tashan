@@ -168,6 +168,32 @@ def main():
     record(PASS if status in (401, 403) else FAIL,
            "the Polar webhook refuses an unsigned delivery", f"got HTTP {status}")
 
+    # 8. THE CLI ACTIVATION PATH, which is how a paying customer actually uses what they bought.
+    #    A licence that works on the website and not in the terminal is half a product, and the
+    #    terminal is where `doctor` — the thing Pro is sold on — runs.
+    status, body, _ = get(f"{BASE}/api/device", method="POST",
+                          body=b"{}", headers={"content-type": "application/json"})
+    dev = {}
+    try:
+        dev = json.loads(body)
+    except ValueError:
+        pass
+    record(PASS if status == 200 and dev.get("device_code") and dev.get("user_code") else FAIL,
+           "the CLI can start a device-code sign-in", f"HTTP {status}: {body[:90]}")
+    record(PASS if str(dev.get("verify_url", "")).endswith("/activate") else FAIL,
+           "...and is sent to a page that exists", f"verify_url={dev.get('verify_url')!r}")
+    if dev.get("device_code"):
+        # An unapproved code must NOT hand over a key, and must not error either — the CLI polls it.
+        st2, b2, _ = get(f"{BASE}/api/device", method="POST",
+                         body=json.dumps({"device_code": dev["device_code"]}).encode(),
+                         headers={"content-type": "application/json"})
+        leaked = '"key"' in b2
+        record(PASS if st2 == 200 and not leaked else FAIL,
+               "an unapproved device code yields no licence key",
+               f"HTTP {st2}, key present={leaked} — this is the one that must never regress")
+    status, _, _ = get(f"{BASE}/activate")
+    record(PASS if status in (200, 301, 308) else FAIL, "/activate renders", f"HTTP {status}")
+
     # 8. Price parity — what a human is quoted and what the code charges.
     ent = json.load(open(os.path.join(ROOT, "data", "entitlements.json"), encoding="utf-8"))
     pro = ent["tiers"]["pro"]
