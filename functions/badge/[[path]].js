@@ -90,6 +90,19 @@ export async function onRequestGet({ request, params }) {
   if (!row) {
     // UNKNOWN, not zero. A capability we do not rank must never be handed a badge reading 0 — that is
     // a measurement we never made, embedded in a stranger's README.
+    //
+    // KNOWN GAP, deliberately not fixed yet. A capability that WAS rated — so a maintainer embedded
+    // this badge — and is later deprecated drops out of /v0.1/scores and its badge starts 404ing, so
+    // their README shows a broken image. Verified: /badge/pkg-modelcontextprotocol-server-github.svg
+    // 404s today for exactly that reason.
+    //
+    // Fixing it means either fetching the 6 MB lookup.json on every badge request, or putting
+    // unrated rows into /v0.1/scores — whose contract says in as many words that only capabilities
+    // we actually measure appear, no unrated rows padding a count. Both are real costs for a case
+    // that needs somebody to have embedded a badge AND then deprecated their package, and there are
+    // no known embedders yet. The honest shape when it matters is a small companion map of
+    // known-but-unrated slugs with a reason, rendered as "discontinued" rather than 404 — a working
+    // URL saying something true beats a broken image. Build it when a real badge breaks.
     return new Response("no badge for this capability", { status: 404, headers: { "cache-control": "public, max-age=300" } });
   }
   return new Response(badge(row[0], row[1] || null), { headers: SVG_HEADERS });
