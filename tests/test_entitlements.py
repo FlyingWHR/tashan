@@ -126,6 +126,24 @@ if _offer:
        "lookup.json" in body and "llms.txt" in body)
 
 print()
+print("# the Pro column must not claim credit for something the Free column gives away")
+# THE SAME PAGE SOLD ADVISORY DETAIL TWICE. The free column said "which CVE or GHSA, its severity
+# and the version that fixes it … the detail, not just the count", and four lines below the Pro
+# column's command hint read "# with Pro: history, advisory detail, replacements". redact_paid()
+# had made that free months earlier. A reader comparing the two columns cannot tell what the £6
+# actually buys, and the honest list is short: TIME (the series) and the named replacement.
+_hint = re.search(r"# with Pro:([^<]*)", open(os.path.join(WEB, "pricing.html"), encoding="utf-8").read())
+ok("the Pro command hint exists to be checked", bool(_hint))
+if _hint:
+    _claimed = _hint.group(1).lower()
+    _free_ids = {f["id"] for f in feats if f["free"]}
+    _PHRASE = {"advisory-detail": "advisory detail", "install-script": "install script",
+               "permissions": "permission"}
+    _wrong = [i for i in _free_ids if _PHRASE.get(i) and _PHRASE[i] in _claimed]
+    ok("...and it names nothing that entitlements.json marks free",
+       not _wrong, f"claimed as a Pro benefit but free to everyone: {_wrong} — hint reads '{_claimed.strip()}'")
+
+print()
 print("# a feature we sell must not be sitting in the public export")
 # THE CONTRADICTION THIS CATCHES, which had been live for weeks and which no other check could see.
 # `advisory-detail`, `install-script` and `permissions` were marked pro-only HERE — the single
