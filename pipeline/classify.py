@@ -52,6 +52,21 @@ TOKEN = re.compile(r"[a-z][a-z0-9+#.]{1,}")
 
 
 NAME_W = int(os.environ.get("CLASSIFY_NAME_W", "1"))   # swept: 1 beats 3 and 5 on the stable split
+# DESCRIPTION BIGRAMS — MEASURED, AND LEFT OFF. Adjacent pairs catch the phrases where the meaning
+# is not in either word ("web scraping", "version control", "vector database"), so this looked like
+# the obvious next lever once more hand labels turned out to buy nothing. On the frozen holdout:
+#
+#              accuracy / precision-of-kept        margin 0.2      margin 0.4
+#     unigrams  (current)                          44.4% / 60.8%   37.9% / 72.3%
+#     + bigrams                                    46.8% / 60.1%   40.7% / 71.6%
+#
+# Consistently about +2.5 accuracy at flat precision, at every margin — more rows shelved, roughly
+# as correctly. Tempting, and NOT taken: on 248 held-out rows that difference is six answers, and a
+# 95% interval at n=248 is around six points wide. It is inside the noise, and this file's own
+# history is a warning about exactly that — the earlier 3x name weighting "measured best" on a split
+# that reshuffled per process. Kept as a swept flag so it can be re-run against a bigger holdout
+# rather than re-derived from scratch: CLASSIFY_BIGRAM=1 python3 pipeline/classify.py --eval
+BIGRAM = os.environ.get("CLASSIFY_BIGRAM", "0") == "1"
 BINARY = os.environ.get("CLASSIFY_BINARY", "1") == "1"  # de-duplicating tokens is worth ~6 points
 
 def features(name, title, desc, pkg=None, repo=None, topics=None):
@@ -69,6 +84,11 @@ def features(name, title, desc, pkg=None, repo=None, topics=None):
         return [t for t in TOKEN.findall((s or "").lower().replace("_", "-").replace("/", "-").replace("-", " "))
                 if t not in STOP and (len(t) > 2 or t in SHORT)]
     body = toks(title) + toks(desc) + toks(pkg) + toks(repo) + toks(topics)
+    if BIGRAM:
+        # EXPERIMENT: adjacent pairs from the description, where the phrase carries the meaning the
+        # words do not — "web scraping", "version control", "vector database". Measured below.
+        d = toks(desc)
+        body += [d[i] + "_" + d[i + 1] for i in range(len(d) - 1)]
     if BINARY:
         body = list(dict.fromkeys(body))
     return toks(name) * NAME_W + body
