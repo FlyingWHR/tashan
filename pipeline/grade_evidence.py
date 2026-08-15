@@ -29,6 +29,9 @@ import hashlib, json, os, re, sys, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MANIFEST = os.path.join(ROOT, "data", "readmes", "manifest.json")
 LINKED = os.path.join(ROOT, "data", "readmes", "linked_cache.json")
+# Mirrors MAXLEN in pipeline/fetch_readmes.py — the prefix length the manifest stores. A document
+# at exactly this size was cut, and must not be graded from without --follow.
+MANIFEST_CAP = 14000
 
 # A fenced block that is only an install line or a client-config stanza is not a worked example —
 # rule 2, "a wall of badges and client-config blocks where tool docs should be" is thin.
@@ -81,7 +84,23 @@ LIMIT = re.compile(r"("
                    r"sunset|no longer (?:maintained|supported|actively)|"
                    r"not actively (?:monitored|maintained|supported|developed)|unmaintained|"
                    r"we (?:may|will) (?:sunset|retire|archive|stop)|"
-                   r"is not (?:a |an |intended|designed|meant|suitable)"
+                   # NOT bare "is not a|an". It was here, and it is the third way this criterion has
+                   # been wrong — the previous two are documented above, and this one had the same
+                   # shape: a phrase common in ordinary prose, matching often enough to look like it
+                   # was working. Measured over 600 staged READMEs, 21 documents had (d) resting
+                   # SOLELY on it, and reading them, most are not limitations at all:
+                   #
+                   #   "This is not a model problem you can wait out"        (marketing)
+                   #   "A lookup miss is not a dead end — it's demand data"  (marketing)
+                   #   "it is not a count of how many times the words occur" (API semantics)
+                   #   "`p.vbeln` is not a typo the parser forgives"         (parser note)
+                   #
+                   # It graded medical-terminologies-mcp `deep` on "Affiliate licenses available for
+                   # others (Brazil is not a member country)" — a sentence about SNOMED membership.
+                   # (d) is the criterion that separates deep from solid, so a false positive here
+                   # does not add noise, it hands out the top band. The intent-bearing forms stay:
+                   # "is not intended/designed/meant/suitable" are how a maintainer states a limit.
+                   r"is not (?:intended|designed|meant|suitable)"
                    r")", re.I)
 
 
@@ -437,8 +456,20 @@ def _selftest():
     assert lh and "single-threaded" in lh[0], lh   # the heading AND what sits under it
     assert limits("# X\nThis does not support batch writes.\n"), "an asserted constraint must register"
     # the excerpt is a whole sentence, never a mid-word slice
-    q = limits("We keep the default install lean. This package is not a runtime. More prose here.")[0]
-    assert q.startswith("This package is not a runtime"), q
+    q = limits("We keep the default install lean. This package is not intended for production. More prose.")[0]
+    assert q.startswith("This package is not intended for production"), q
+    # (d) MUST NOT FIRE ON BARE "is not a|an". It did, and it is the criterion that gates `deep`:
+    # medical-terminologies-mcp was graded deep on "Brazil is not a member country". Over 600 staged
+    # READMEs, 21 had (d) resting solely on this phrasing, nearly all of them ordinary prose.
+    for prose in ("This is not a model problem you can wait out.",
+                  "A lookup miss is not a dead end, it is demand data.",
+                  "Affiliate licenses available for others (Brazil is not a member country).",
+                  "`p.vbeln` is not a typo the parser forgives."):
+        assert not limits("# X\n" + prose + "\n" + "Filler prose. " * 40), prose
+    # …while the forms that DO state a limit still register.
+    for real in ("This is not intended for production use.",
+                 "This server is not designed for multi-tenant deployments."):
+        assert limits("# X\n" + real + "\n"), real
     assert not limits("# X\n| `limit` | Deprecated alias for `max`. |\n" + "Filler. " * 40)
     assert limits("# X\nThis package is deprecated and will be removed.\n")
     e4 = evidence({"id": "n", "readme": "# N\nIssues here are not actively monitored.\n"
@@ -567,6 +598,7 @@ WITHHELD_TEXT = {
     # documentation rather than a criticism of this row.
     "SHARED": "its README is the same file its sibling capabilities ship, so it describes the "
               "repository rather than this capability",
+    "TRUNCATED": "only a truncated copy of its documentation was read",
 }
 
 
@@ -647,6 +679,19 @@ def main(argv):
             ceiling = (f"SHARED — its README is byte-identical to {shared[cid] - 1} other "
                        f"capabilit{'y' if shared[cid] == 2 else 'ies'}, so it describes the "
                        f"repository rather than this one")
+        # A GRADE MUST NOT BE READ OFF A DOCUMENT WE KNOW WAS CUT. fetch_readmes stages a
+        # 14,000-character prefix, and 739 of the 2,115 staged documents — 34.9% — hit that cap
+        # exactly. The sections that earn the top band (per-tool docs, a stated limitation) are
+        # usually the ones past it, so grading a truncated document is not merely noisy, it is
+        # biased in one direction: every sampled row came back "solid — short of deep on per-tool
+        # docs and a stated limitation" while sitting at exactly 14,000 chars.
+        #
+        # --follow re-reads the full file and the docs it hands off to. This makes forgetting it a
+        # refusal rather than a quietly worse grade, which is the failure this codebase keeps
+        # having: the run looks like it worked.
+        elif not follows and len(rec.get("readme") or "") >= MANIFEST_CAP:
+            ceiling = ("TRUNCATED — the staged copy is cut at the manifest cap; re-run with "
+                       "--follow to read the whole document")
         (graded.append((cid, ceiling, e, len(extra))) if ceiling in ("deep", "solid", "thin")
          else held.append((cid, ceiling)))
         print("=" * 96)
