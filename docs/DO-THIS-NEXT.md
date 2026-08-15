@@ -28,6 +28,23 @@ The rule this cost us: **before escalating a config change, check whether a cred
 already holds can make it.** Genuinely CEO-only means an account that holds money, or a permission
 the current token cannot grant itself. Both remaining items are that.
 
+## A third, small one: the CLI has fixes that are not published
+
+`tashan-cli@0.1.4` is what `npx` serves today, and two behaviour changes sit unpublished in the
+repo. Neither is urgent; both are user-facing:
+
+- **Confirmed malware now leads with the verdict.** `check_capability` on claude-cup used to open
+  "tashan score 77/100 · 4,837,320 downloads/wk · active" and put "this package IS the attack"
+  three lines below. It now opens `DO NOT INSTALL`, and the score is gone at the source.
+- **A malformed tool call is reported as an error.** Calling `find_capability` with the wrong
+  property name answered `No measured capability matches "undefined"` — indistinguishable from a
+  real miss, so an agent would relay "nothing like this exists".
+
+Actions → **publish cli** → Run workflow, `dry_run` checked first. The run summary says
+`⚠️ DRY RUN — nothing was published` or `✅ Published tashan-cli@x.y.z`, so it cannot lie to you
+about which it did. Bump `cli/package.json` and `server.json` together — `tests/test_agent_surface.py`
+fails if they drift.
+
 ## The two that are really yours
 
 **Add `Account Analytics: Read` to the Cloudflare API token.** Every click has been recorded since
