@@ -24,7 +24,7 @@ The four criteria, from the rubric:
   (d) at least one stated limitation, caveat or "does not do X"
 `deep` requires ALL FOUR. Missing any one is `solid` at most.
 """
-import json, os, re, sys, urllib.request
+import hashlib, json, os, re, sys, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MANIFEST = os.path.join(ROOT, "data", "readmes", "manifest.json")
@@ -491,6 +491,24 @@ def _selftest():
                                         "npx c\nNeeds an API key.\n"
                                         + "Filler to clear the stub guard. " * 14, "name": "c"})
     assert summarise(e5)[1].startswith("UNKNOWN"), summarise(e5)
+    # A DOCUMENT THAT DESCRIBES SEVERAL CAPABILITIES CREDITS NONE OF THEM.
+    # 904 of the 2,090 staged READMEs over 400 chars are byte-identical to another capability's —
+    # 43.3%, including one cluster of 241 skills from a single repository. Graded from that text,
+    # all 241 receive the same verdict, and it is a verdict about the repository.
+    _man = {
+        "a": {"id": "a", "readme": "x" * 500},
+        "b": {"id": "b", "readme": "x" * 500},          # byte-identical to a
+        "c": {"id": "c", "readme": "y" * 500},          # its own
+        "d": {"id": "d", "readme": "z" * 100},          # too short to stage; not a "share"
+        "e": {"id": "e", "readme": "z" * 100},
+    }
+    _sh = shared_documents(_man)
+    assert _sh.get("a") == 2 and _sh.get("b") == 2, _sh
+    assert "c" not in _sh, "a capability with its own README must not be withheld"
+    assert "d" not in _sh and "e" not in _sh, (
+        "two stub READMEs under the stage threshold are not a shared document")
+    assert _plain("SHARED — its README is byte-identical to 4 others").startswith("its README is the same file"), \
+        "the shared-document refusal must say what it means, not fall through to the generic text"
     print("grade_evidence selftest ok")
 
 
@@ -544,6 +562,11 @@ WITHHELD_TEXT = {
     "UNGRADEABLE": "no documentation was published with it",
     "WITHHELD": "its documentation points at a page we cannot read, and shows nothing itself",
     "UNKNOWN": "its tool documentation lives in files we could not fetch",
+    # Not "we could not read it" — we read it fine, it just is not about this capability. Saying so
+    # is more useful to a reader than a generic refusal, and it is a fact about the repository's
+    # documentation rather than a criticism of this row.
+    "SHARED": "its README is the same file its sibling capabilities ship, so it describes the "
+              "repository rather than this capability",
 }
 
 
@@ -567,8 +590,41 @@ def emit_scores(path, graded):
     return out
 
 
+def shared_documents(man):
+    """ids whose staged README is BYTE-IDENTICAL to another capability's.
+
+    A grade must not borrow credit from a document describing something else. 904 of the 2,090
+    staged documents over 400 chars — 43.3% — are shared: one cluster is 241 skills from a single
+    repository pointing at one README, another is 109 npm packages from one monorepo. Graded from
+    that text, all 241 would receive the same verdict, and it would be a verdict about the
+    repository rather than about any of them.
+
+    The rule already exists for the LLM path (pipeline/doc_signals.py caps these at `thin`); it was
+    simply never applied here, so the deterministic extractor — the one that scales — was the one
+    without the guard.
+
+    WITHHELD RATHER THAN CAPPED, on this path. `thin` is a published judgement that reads as "badly
+    documented", and a skill in a well-documented monorepo has not earned that; what is true is
+    that we cannot grade it from the document we have. That is exactly what the withheld list is
+    for, and it is what this file already does for a README it cannot read.
+    """
+    seen, out = {}, {}
+    for m in man.values():
+        body = m.get("readme") or ""
+        if len(body) <= 400:
+            continue
+        h = hashlib.sha256(body.encode("utf-8")).hexdigest()
+        seen.setdefault(h, []).append(m["id"])
+    for ids in seen.values():
+        if len(ids) > 1:
+            for i in ids:
+                out[i] = len(ids)
+    return out
+
+
 def main(argv):
     man = {m["id"]: m for m in json.load(open(MANIFEST, encoding="utf-8"))}
+    shared = shared_documents(man)
     want = [a for a in argv if not a.startswith("-")] or list(man)
     follows = "--follow" in argv
     emit = (argv[argv.index("--emit") + 1] if "--emit" in argv else None)
@@ -585,6 +641,12 @@ def main(argv):
             rec = {**rec, "readme": merged}
         e = evidence(rec)
         met, ceiling = summarise(e)
+        # A DOCUMENT THAT DESCRIBES SEVERAL CAPABILITIES CREDITS NONE OF THEM. Checked before the
+        # bands are applied, so a shared README cannot reach the emitted file by any route.
+        if cid in shared:
+            ceiling = (f"SHARED — its README is byte-identical to {shared[cid] - 1} other "
+                       f"capabilit{'y' if shared[cid] == 2 else 'ies'}, so it describes the "
+                       f"repository rather than this one")
         (graded.append((cid, ceiling, e, len(extra))) if ceiling in ("deep", "solid", "thin")
          else held.append((cid, ceiling)))
         print("=" * 96)
