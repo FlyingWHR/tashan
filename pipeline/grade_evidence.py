@@ -719,6 +719,11 @@ def main(argv):
         # WITHHELD ROWS ARE WRITTEN DOWN, not just printed. Nine of the first top-100 queue were
         # withheld and rendered identically to the 8,800 nobody has reached: blank. The refusal is
         # the more useful fact, and it is only useful if it reaches the page.
+        # NEXT TO THE EMIT FILE, WHICH MEANS A PROBE CAN CLOBBER THE REAL ONE. Emitting to
+        # data/readmes/anything.json writes data/readmes/withheld.json — the tracked artifact
+        # merge_expertise.py reads. I overwrote the committed 9-row file with a throwaway batch
+        # exactly that way. Emitting outside data/readmes/ now keeps its withheld list beside
+        # itself, so a scratch run cannot touch the record.
         wpath = os.path.join(os.path.dirname(emit), "withheld.json")
         json.dump([{"id": cid, "reason": _plain(why)} for cid, why in held],
                   open(wpath, "w", encoding="utf-8"), indent=1)
