@@ -501,7 +501,24 @@ export async function handle(msg) {
     if (method === "initialize") return reply(handshake(params));
     if (method === "tools/list") return reply({ tools: TOOLS });
     if (method === "tools/call") {
-      const text = await callTool(params.name, params.arguments || {});
+      const args = params.arguments || {};
+      // A MISSING REQUIRED ARGUMENT IS A CALLER ERROR, NOT A FINDING. Calling find_capability with
+      // the wrong property name answered `No measured capability matches "undefined"` — the same
+      // sentence we use for a genuine miss. On a measurement product that is the worst possible
+      // confusion: a typo in the host's tool call reads as "nothing like this exists", and an agent
+      // would relay that to a person as evidence. Say which parameter is missing instead.
+      const spec = TOOLS.find((t) => t.name === params.name);
+      const missing = ((spec && spec.inputSchema && spec.inputSchema.required) || [])
+        .filter((k) => args[k] === undefined || args[k] === null || args[k] === "");
+      if (missing.length) {
+        return reply({
+          isError: true,
+          content: [{ type: "text", text:
+            `${params.name} requires ${missing.map((m) => `"${m}"`).join(", ")}. `
+            + `This is a problem with the call, not a result — do not report it as "nothing found".` }],
+        });
+      }
+      const text = await callTool(params.name, args);
       return reply({ content: [{ type: "text", text }] });
     }
     if (method === "ping") return reply({});

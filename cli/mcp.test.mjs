@@ -359,3 +359,33 @@ console.log("ok — audit_config reports direction, and says which kind of 'no' 
             "genuinely unmeasured rows must still say so");
 }
 console.log("ok — confirmed malware leads with the verdict, and the download count is framed");
+
+// ---------------------------------------------------------------------------
+// A MISSING REQUIRED ARGUMENT IS A CALLER ERROR, NOT A FINDING.
+//
+// find_capability takes `task`. Calling it with `query` — an easy mistake for a host or another
+// model to make — answered `No measured capability matches "undefined"`, which is the exact
+// sentence used for a genuine miss. An agent relaying that to a person reports "nothing like this
+// exists" when the truth is "you called it wrong". On an index whose whole claim is that absence
+// means unmeasured rather than bad, that confusion is the one we can least afford.
+{
+  const bad = await handle({ jsonrpc: "2.0", id: 1, method: "tools/call",
+    params: { name: "find_capability", arguments: { query: "search the web" } } });
+  assert.equal(bad.result.isError, true, "a missing required argument must be flagged as an error");
+  const t = bad.result.content[0].text;
+  assert.ok(/"task"/.test(t), "it must name the parameter that is missing: " + t);
+  assert.ok(/not a result/i.test(t), "and say plainly that it is not a finding: " + t);
+  assert.ok(!/undefined/.test(t), "and never quote the missing value back as a search term: " + t);
+
+  // check_capability has the same shape, so it must behave the same way.
+  const bad2 = await handle({ jsonrpc: "2.0", id: 2, method: "tools/call",
+    params: { name: "check_capability", arguments: {} } });
+  assert.equal(bad2.result.isError, true);
+  assert.ok(/"name"/.test(bad2.result.content[0].text));
+
+  // audit_config requires nothing, and must not be broken by the guard.
+  const okCall = await handle({ jsonrpc: "2.0", id: 3, method: "tools/call",
+    params: { name: "audit_config", arguments: {} } });
+  assert.ok(!okCall.result.isError, "a tool with no required arguments still runs");
+}
+console.log("ok — a malformed tool call is reported as a caller error, never as 'nothing found'");
