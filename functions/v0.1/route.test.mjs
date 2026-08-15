@@ -8,7 +8,7 @@
 //
 // Run: node functions/v0.1/route.test.mjs
 import assert from "node:assert";
-import { onRequestGet } from "./[[route]].js";
+import { onRequestGet, tokenise } from "./[[route]].js";
 
 // lookup.json's shape: a key map (bare name AND prefixed id) into a records array.
 const LOOKUP = {
@@ -32,6 +32,14 @@ const LOOKUP = {
     { id: "pkg:corrupt-thing", name: "corrupt-thing", kind: "npm", slug: "pkg-corrupt-thing",
       tashan_score: 55, rated: true, sec_advisory_count: 0, sec_scanned_at: "2026-08-06T00:00:00+00:00",
       sec_permissions: "{not json", sec_advisories: "also not json" },
+  ],
+  // Parallel to `records`, exactly as build.py emits it: a token bag of what each capability SAYS
+  // it does. /v0.1/search falls back to this when no NAME matches the query.
+  terms: [
+    "search web results real time answers",
+    "fetch url content pages",
+    "legacy thing nobody maintains",
+    "broken fixture",
   ],
 };
 
@@ -264,6 +272,53 @@ const ok = (name, cond, extra = "") => {
      d.pro?.free);
   ok("...without displacing the measurement, which is the point of the response",
      d.tashan_score !== undefined && d.security !== undefined);
+}
+
+
+// ---------------------------------------------------------------------------------------------
+// SEARCH ANSWERS A SENTENCE, NOT ONLY A PACKAGE NAME.
+//
+// tier() matches the query as ONE literal substring of a NAME, so live traffic looked like this:
+//   scrape -> 11 results, "scrape websites" -> 0.  postgres -> 7, "read my postgres database" -> 0.
+// An agent asks in words, and this is the endpoint llms.txt points it at.
+{
+  const r = await onRequestGet(ctx("/v0.1/search?q=search%20the%20web"));
+  const d = await r.json();
+  ok("a sentence that matches no NAME still gets an answer", d.count > 0);
+  ok("...and it is the capability whose DESCRIPTION says it does that",
+     d.results[0] && d.results[0].name === "tavily-mcp");
+  ok("...labelled as a description match, so a caller knows which kind it got",
+     d.matched_on === "description");
+  ok("...with the looser matching explained rather than implied", /matched against/i.test(d.match_note || ""));
+}
+{
+  // The path that already worked must be untouched: same route, no relabelling, no reordering.
+  const r = await onRequestGet(ctx("/v0.1/search?q=postgres"));
+  const d = await r.json();
+  ok("a name match is still a name match", d.matched_on === "name");
+  ok("...and still ranks the measurement over the literal name", d.results[0].name !== "postgres");
+  ok("...and says nothing about looser matching", d.match_note === undefined);
+}
+{
+  const r = await onRequestGet(ctx("/v0.1/search?q=zzzz%20nothing%20here%20at%20all"));
+  const d = await r.json();
+  ok("a query nothing matches is still an empty answer, not an error", d.count === 0);
+}
+{
+  // Only rows the scores map can render are returnable — mcp-server-fetch is confirmed malware and
+  // junk() keeps it OUT of /v0.1/scores, so it must never surface as a search recommendation even
+  // though its terms mention fetching.
+  const r = await onRequestGet(ctx("/v0.1/search?q=fetch%20url%20content"));
+  const d = await r.json();
+  ok("the fallback never recommends a row junk() removed from the board",
+     !(d.results || []).some((x) => x.name === "mcp-server-fetch"));
+}
+{
+  const t = tokenise("I need to Read my POSTGRES database");
+  ok("tokenise drops stopwords", !t.includes("need") && !t.includes("my"));
+  ok("...keeps the words that carry the query", t.includes("read") && t.includes("postgr"));
+  ok("...stems so 'scrape' can reach 'scraping'", tokenise("scrape websites")[0] === "scrap");
+  ok("...and never stems a short word into nothing", tokenise("tts api")[0] === "tts");
 }
 
 console.log(`\nv0.1 route: ${n}/${n} passed · all green`);

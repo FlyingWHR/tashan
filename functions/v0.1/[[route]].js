@@ -209,6 +209,30 @@ function tier(q, name) {
   return 0;
 }
 
+// Query words worth matching on. Stopwords go because "read my postgres database" must not be
+// dragged down by "my"; the crude plural/gerund trim is the same one pipeline/tag_capabilities.py
+// uses, and it is deliberately NOT applied to short words — stripping "s" from a four-letter token
+// turns real names into nothing.
+const STOP = new Set(["the", "and", "for", "with", "that", "this", "you", "your", "our", "use",
+  "using", "used", "from", "are", "can", "all", "any", "via", "into", "not", "its", "how", "need",
+  "want", "get", "let", "some", "what", "which", "when", "who", "why", "have", "has", "does", "did",
+  "will", "would", "should", "could", "there", "their", "them", "they", "was", "were", "been"]);
+
+export function tokenise(q) {
+  const out = [];
+  for (const w of String(q || "").toLowerCase().split(/[^a-z0-9]+/)) {
+    if (w.length < 3 || STOP.has(w)) continue;
+    let t = w.length > 4 ? w.replace(/(ing|es|s)$/, "") : w;
+    // AND THE TRAILING 'e', because the terms bag is not stemmed and the match is left-anchored.
+    // "scrape" must reach "scraping": trimming to "scrap" does it, and measured on the live corpus
+    // it is the difference between firecrawl-mcp (93) leading the results for "scrape websites"
+    // and not appearing at all.
+    if (t.length > 4) t = t.replace(/e$/, "");
+    out.push(t);
+  }
+  return [...new Set(out)];
+}
+
 function relevance(q, name, score) {
   const t = tier(q, name);
   if (!t) return 0;
@@ -294,6 +318,52 @@ export async function onRequestGet({ request, params, next }) {
     const rel = relevance(q, name, map[name][0]);
     if (rel > 0) hits.push([-rel, -(map[name][0] || 0), name]);
   }
+
+  // NOTHING MATCHED, WHICH IS WHAT AGENTS ACTUALLY GET. tier() matches the query as ONE literal
+  // substring of a NAME, so single words work and sentences do not:
+  //
+  //     scrape              11 results          scrape websites            0
+  //     postgres             7 results          read my postgres database  0
+  //     screenshot           3 results          browser automation         0
+  //
+  // An agent asks in words, not in package names, and this is the endpoint llms.txt points it at.
+  // Meanwhile /v0.1/kit answers the same sentence with five good picks, because it tokenises.
+  //
+  // lookup.json already ships the fix and says so: its `terms` bag exists because "tavily's NAME
+  // contains none of those words while its DESCRIPTION contains all of them". cli/mcp.mjs uses it.
+  // This endpoint never did.
+  //
+  // ONLY ON AN EMPTY RESULT, deliberately. Every query that works today takes the identical path
+  // and pays nothing — no second fetch, no re-ranking, no chance of a regression. The fallback is
+  // reached exactly when the alternative is answering "count: 0" to a fair question.
+  //
+  // And this is RANKING, not labelling. Two proposals to match on descriptions were measured and
+  // rejected in this codebase (task tagging ~38% precision; replacement suggestions 9 wrong in 16)
+  // — both because they ASSERT something as fact. Here the caller supplied the words and a weak
+  // match merely ranks lower, which is what search is.
+  let fallback = false;
+  if (!hits.length) {
+    try {
+      const lk = await load(origin, "lookup");
+      const toks = tokenise(q);
+      if (toks.length) {
+        const terms = lk.terms || [], recs = lk.records || [];
+        for (let i = 0; i < terms.length; i++) {
+          const name = recs[i] && recs[i].name;
+          if (!name || !map[name]) continue;          // only rows we can render a result row for
+          const hay = " " + String(terms[i] || "") + " " + name.toLowerCase().replace(/[^a-z0-9]+/g, " ") + " ";
+          let n = 0;
+          for (const t of toks) if (hay.includes(" " + t) ) n++;
+          if (!n) continue;
+          // Every query token found beats a partial match; the score decides between equals, on the
+          // same 1.5 exponent the name path uses.
+          const s = (map[name][0] == null ? 45 : map[name][0]) / 100;
+          hits.push([-(n / toks.length) * Math.pow(s, 1.5), -(map[name][0] || 0), name]);
+        }
+        fallback = hits.length > 0;
+      }
+    } catch (_) { /* the primary answer is already "nothing"; never turn that into an error */ }
+  }
   // Descending relevance, then descending score, then name — so the order is total and identical
   // between runs. An unstable ordering on a recommendation endpoint means two agents asking the
   // same question get different first answers.
@@ -302,6 +372,13 @@ export async function onRequestGet({ request, params, next }) {
   return json({
     query: q,
     count: hits.length,
+    // SAY HOW THE MATCH WAS MADE. A name match and a description match are different strengths of
+    // answer, and a caller ranking our results against another source is entitled to know which it
+    // got rather than inferring it from how good the list looks.
+    matched_on: fallback ? "description" : "name",
+    ...(fallback ? { match_note: "No capability NAME matched this query, so it was matched against "
+                                 + "what each capability says it does. Ranked by how much of the "
+                                 + "query matched, then by tashan score." } : {}),
     results: shown.map(([, , name]) => row(name, map[name], origin)),
     ...meta,
     ...(hits.length > shown.length
