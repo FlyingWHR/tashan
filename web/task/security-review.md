@@ -27,32 +27,32 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Nist Nvd](https://tashan.sh/capability/pkg-cyanheads-nist-nvd-mcp-server.html) | 64 | 728/wk | active |
 | 15 | [Js Reverse](https://tashan.sh/capability/pkg-js-reverse-mcp.html) | 63 | 950/wk | active |
 | 16 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 62 | 22 ★ | active |
-| 17 | [Malchela](https://tashan.sh/capability/plugin-dwmetz-malchela-malchela.html) | 60 | 114 ★ | active |
-| 18 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 59 | 27 ★ | active |
+| 17 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 59 | 27 ★ | active |
+| 18 | [Malchela](https://tashan.sh/capability/plugin-dwmetz-malchela-malchela.html) | 59 | 114 ★ | active |
 | 19 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 56 | 21 ★ | active |
 | 20 | [Descope Skills](https://tashan.sh/capability/plugin-descope-skills-descope-skills.html) | 52 | 12 ★ | active |
 | 21 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 49 | 73 ★ | active |
-| 22 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 49 | 39 ★ | active |
+| 22 | [Kernel Vuln Analyzer](https://tashan.sh/capability/plugin-winmin-kernel-vuln-analyzer-kernel-vuln-analyzer.html) | 48 | 39 ★ | active |
 | 23 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 47 | 5 ★ | active |
-| 24 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 46 | 2 ★ | active |
-| 25 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 46 | 6 ★ | active |
-| 26 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 44 | 12 ★ | active |
-| 27 | [Rugproof](https://tashan.sh/capability/plugin-omermaksutii-rugproof-rugproof.html) | 42 | 9 ★ | active |
-| 28 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 40 | 1 marketplaces | active |
+| 24 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 47 | 3 ★ | active |
+| 25 | [Nightvision](https://tashan.sh/capability/plugin-nvsecurity-nightvision-skills-nightvision.html) | 46 | 2 ★ | active |
+| 26 | [Dreamforge Audit](https://tashan.sh/capability/plugin-brainit-consulting-dreamforgesoftwareagentskills-dreamforge-audit.html) | 46 | 6 ★ | active |
+| 27 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 44 | 12 ★ | active |
+| 28 | [Rugproof](https://tashan.sh/capability/plugin-omermaksutii-rugproof-rugproof.html) | 42 | 9 ★ | active |
 | 29 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 59 | 43 ★ | active |
-| 30 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 55 | 12 ★ | active |
-| 31 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 55 | 11 ★ | active |
-| 32 | [Red Team](https://tashan.sh/capability/skill-alirezarezvani-red-team.html) | 51 | 3 repos | active |
-| 33 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | 48 | 2 repos | active |
-| 34 | [AI Security](https://tashan.sh/capability/skill-alirezarezvani-ai-security.html) | 48 | 2 repos | active |
-| 35 | [Cloud Security](https://tashan.sh/capability/skill-alirezarezvani-cloud-security.html) | 48 | 2 repos | active |
-| 36 | [Incident Response](https://tashan.sh/capability/skill-alirezarezvani-incident-response.html) | 48 | 2 repos | active |
-| 37 | [Senior Secops](https://tashan.sh/capability/skill-alirezarezvani-senior-secops.html) | 48 | 2 repos | active |
-| 38 | [Senior Security](https://tashan.sh/capability/skill-alirezarezvani-senior-security.html) | 48 | 2 repos | active |
-| 39 | [Threat Detection](https://tashan.sh/capability/skill-alirezarezvani-threat-detection.html) | 48 | 2 repos | active |
-| 40 | [Dependency Auditor](https://tashan.sh/capability/skill-alirezarezvani-dependency-auditor.html) | 48 | 2 repos | active |
+| 30 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 55 | 11 ★ | active |
+| 31 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 54 | 12 ★ | active |
+| 32 | [Ship Gate](https://tashan.sh/capability/skill-alirezarezvani-ship-gate.html) | 48 | 2 repos | active |
+| 33 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 48 | 1 ★ | active |
+| 34 | [Gomboc AI Community](https://tashan.sh/capability/plugin-gomboc-ai-gomboc-community-skills-gomboc-ai-community.html) | 47 | 6 ★ | active |
+| 35 | [Security Guidance](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-security-guidance.html) | 46 | 2 marketplaces | — |
+| 36 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
+| 37 | [Stackhawk Hawkscan](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-hawkscan.html) | 43 | 1 marketplaces | active |
+| 38 | [Stackhawk API](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-api.html) | 43 | 1 marketplaces | active |
+| 39 | [Clover](https://tashan.sh/capability/plugin-clover-security-clover-claude-plugin-clover.html) | 43 | 0 ★ | active |
+| 40 | [Optibot · Optimal-AI](https://tashan.sh/capability/plugin-optimal-ai-optibot-skill-optibot.html) | 43 | 1 ★ | active |
 
-Showing the top 40 of 116. The full ranked shelf is at https://tashan.sh/task/security-review.html.
+Showing the top 40 of 114. The full ranked shelf is at https://tashan.sh/task/security-review.html.
 
 ## What these numbers are not
 

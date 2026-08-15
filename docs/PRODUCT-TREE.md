@@ -34,11 +34,11 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route pattern | Pages | Generator |
 |---|---|---|
-| `/capability/*.html` | 11,665 | `pipeline/prerender.py` |
-| `/category/*.html` | 104 | `pipeline/gen_hubs.py` |
+| `/capability/*.html` | 11,850 | `pipeline/prerender.py` |
+| `/category/*.html` | 105 | `pipeline/gen_hubs.py` |
 | `/task/*.html` | 64 | `pipeline/gen_hubs.py` |
 | `/role/*.html` | 23 | `pipeline/gen_hubs.py` |
-| `/compare/*.html` | 413 | `pipeline/gen_compare.py` |
+| `/compare/*.html` | 420 | `pipeline/gen_compare.py` |
 | `/learn/*.html` | 9 | `pipeline/gen_content.py` |
 
 ## Non-page surfaces
@@ -64,9 +64,11 @@ Each of these exists because the failure it prevents already shipped once.
 - `cli/tashan.test.mjs` — node cli/tashan.test.mjs  — pure-logic tests for the CLI (no network, no deps).
 - `functions/api/_x402.test.mjs` — node functions/api/_x402.test.mjs
 - `functions/api/account.test.mjs` — node --test functions/api/account.test.mjs
+- `functions/api/buy.test.mjs` — The buy button. Two things must hold no matter what breaks: the customer always reaches Polar,
 - `functions/api/checkout.test.mjs` — The post-purchase sign-in. This endpoint turns a checkout id — a value that rides in a redirect
 - `functions/api/device.test.mjs` — The device-authorisation grant. This is a credential path, so the tests are about what MUST NOT
 - `functions/api/e.test.mjs` — node functions/api/e.test.mjs  — validates the analytics collector's field shaping (no deps).
+- `functions/api/history.test.mjs` — node --test functions/api/history.test.mjs
 - `functions/api/license.test.mjs` — The paywall. Run: node functions/api/license.test.mjs
 - `functions/api/polar.test.mjs` — Polar webhook verification — the security boundary. Run: node functions/api/polar.test.mjs
 - `functions/api/security.test.mjs` — node --test functions/api/security.test.mjs

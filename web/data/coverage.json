@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 1114,
+  "full": 1135,
   "grade": 3808,
-  "n": 37621,
-  "scan": 6970,
-  "score": 13951,
-  "task": 3104
+  "n": 43382,
+  "scan": 7123,
+  "score": 16976,
+  "task": 3365
  },
  "axes": [
   {
@@ -31,7 +31,7 @@
   }
  ],
  "headline": {
-  "graded_pct": 71,
+  "graded_pct": 67,
   "scanned_pct": 100,
   "scored_pct": 98,
   "tasked_pct": 66,
@@ -102,6 +102,15 @@
     "grade"
    ],
    "name": "@modelcontextprotocol/server-postgres"
+  },
+  {
+   "downloads": 108517,
+   "id": "pkg:@ui5/mcp-server",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "@ui5/mcp-server"
   },
   {
    "downloads": 106528,
@@ -179,6 +188,16 @@
    "name": "hlims-mcp"
   },
   {
+   "downloads": 51413,
+   "id": "pkg:@swmansion/argent",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@swmansion/argent"
+  },
+  {
    "downloads": 43551,
    "id": "pkg:metaharness",
    "kind": "npm",
@@ -251,6 +270,16 @@
     "grade"
    ],
    "name": "task-master-ai"
+  },
+  {
+   "downloads": 23257,
+   "id": "pkg:@softeria/ms-365-mcp-server",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@softeria/ms-365-mcp-server"
   },
   {
    "downloads": 23002,
@@ -379,52 +408,24 @@
     "task"
    ],
    "name": "iclavue"
-  },
-  {
-   "downloads": 10766,
-   "id": "pkg:playwright-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "playwright-mcp"
-  },
-  {
-   "downloads": 10514,
-   "id": "pkg:veryfront",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "veryfront"
-  },
-  {
-   "downloads": 9361,
-   "id": "pkg:brilliant-directories-mcp",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "brilliant-directories-mcp"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 61,
-   "grade": 68,
+   "full": 59,
+   "grade": 66,
    "n": 100,
    "scan": 100,
    "score": 95,
-   "task": 88
+   "task": 87
   },
   "top1000": {
-   "full": 486,
-   "grade": 713,
+   "full": 472,
+   "grade": 670,
    "n": 1000,
    "scan": 1000,
-   "score": 983,
-   "task": 660
+   "score": 985,
+   "task": 664
   }
  }
 }

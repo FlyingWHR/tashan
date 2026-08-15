@@ -23,42 +23,42 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Orchestra](https://tashan.sh/capability/plugin-orchestra-hq-orchestra-skills-orchestra.html) | 54 | 9 ★ | active |
 | 5 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 53 | 3 ★ | active |
 | 6 | [Whodb](https://tashan.sh/capability/plugin-clidey-whodb-whodb.html) | 76 | 5k ★ | active |
-| 7 | [ClickHouse Best Practices](https://tashan.sh/capability/plugin-clickhouse-agent-skills-clickhouse-best-practices.html) | 72 | 498 ★ | active |
-| 8 | [Codspeed](https://tashan.sh/capability/plugin-codspeedhq-codspeed-codspeed.html) | 71 | 235 ★ | active |
-| 9 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 71 | 558 ★ | active |
-| 10 | [Databricks](https://tashan.sh/capability/plugin-databricks-databricks-agent-skills-databricks.html) | 70 | 228 ★ | active |
-| 11 | [Dataverse](https://tashan.sh/capability/plugin-microsoft-dataverse-skills-dataverse.html) | 70 | 184 ★ | active |
-| 12 | [Data Agent Kit Starter Pack](https://tashan.sh/capability/plugin-gemini-cli-extensions-data-agent-kit-starter-pack-data-agent-kit-starter-pack.html) | 69 | 151 ★ | active |
-| 13 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 68 | 212 ★ | active |
-| 14 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 68 | 81 ★ | active |
-| 15 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 65 | 47 ★ | active |
-| 16 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 64 | 37 ★ | active |
-| 17 | [Datahub Skills](https://tashan.sh/capability/plugin-datahub-project-datahub-skills-datahub-skills.html) | 63 | 34 ★ | active |
-| 18 | [Datarobot Agent Skills](https://tashan.sh/capability/plugin-datarobot-oss-datarobot-agent-skills-datarobot-agent-skills.html) | 62 | 23 ★ | active |
-| 19 | [Snowflake Cortex Code](https://tashan.sh/capability/plugin-snowflake-labs-snowflake-ai-kit-snowflake-cortex-code.html) | 62 | 32 ★ | active |
-| 20 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 62 | 100 ★ | active |
-| 21 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 62 | 22 ★ | active |
-| 22 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 62 | 41 ★ | active |
-| 23 | [Cloud SQL MySQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-mysql-cloud-sql-mysql.html) | 57 | 11 ★ | active |
-| 24 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 55 | 56 ★ | active |
-| 25 | [Cloud SQL Sqlserver](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-sqlserver-cloud-sql-sqlserver.html) | 54 | 7 ★ | active |
-| 26 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 54 | 13 ★ | active |
-| 27 | [Alloydb Omni](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-omni-alloydb-omni.html) | 52 | 4 ★ | active |
-| 28 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 52 | 6 ★ | active |
+| 7 | [Codspeed](https://tashan.sh/capability/plugin-codspeedhq-codspeed-codspeed.html) | 71 | 235 ★ | active |
+| 8 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 71 | 558 ★ | active |
+| 9 | [Databricks](https://tashan.sh/capability/plugin-databricks-databricks-agent-skills-databricks.html) | 70 | 228 ★ | active |
+| 10 | [Dataverse](https://tashan.sh/capability/plugin-microsoft-dataverse-skills-dataverse.html) | 70 | 184 ★ | active |
+| 11 | [Data Agent Kit Starter Pack](https://tashan.sh/capability/plugin-gemini-cli-extensions-data-agent-kit-starter-pack-data-agent-kit-starter-pack.html) | 69 | 151 ★ | active |
+| 12 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 68 | 212 ★ | active |
+| 13 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 68 | 81 ★ | active |
+| 14 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 65 | 47 ★ | active |
+| 15 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 64 | 37 ★ | active |
+| 16 | [Datahub Skills](https://tashan.sh/capability/plugin-datahub-project-datahub-skills-datahub-skills.html) | 63 | 34 ★ | active |
+| 17 | [Datarobot Agent Skills](https://tashan.sh/capability/plugin-datarobot-oss-datarobot-agent-skills-datarobot-agent-skills.html) | 62 | 23 ★ | active |
+| 18 | [Snowflake Cortex Code](https://tashan.sh/capability/plugin-snowflake-labs-snowflake-ai-kit-snowflake-cortex-code.html) | 62 | 32 ★ | active |
+| 19 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 62 | 100 ★ | active |
+| 20 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 62 | 41 ★ | active |
+| 21 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 61 | 22 ★ | active |
+| 22 | [Cloud SQL MySQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-mysql-cloud-sql-mysql.html) | 57 | 11 ★ | active |
+| 23 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 55 | 56 ★ | active |
+| 24 | [Cloud SQL Sqlserver](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-sqlserver-cloud-sql-sqlserver.html) | 54 | 7 ★ | active |
+| 25 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 54 | 13 ★ | active |
+| 26 | [Alloydb Omni](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-omni-alloydb-omni.html) | 52 | 4 ★ | active |
+| 27 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 52 | 6 ★ | active |
+| 28 | [ClickHouse Best Practices](https://tashan.sh/capability/plugin-clickhouse-agent-skills-clickhouse-best-practices.html) | 49 | 3 marketplaces | active |
 | 29 | [Azure Cosmos DB Assistant](https://tashan.sh/capability/plugin-azurecosmosdb-cosmosdb-claude-code-plugin-azure-cosmos-db-assistant.html) | 49 | 2 ★ | active |
 | 30 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 48 | 1 ★ | active |
 | 31 | [Deepread](https://tashan.sh/capability/plugin-deepread-tech-skills-deepread.html) | 48 | 4 ★ | active |
 | 32 | [Daft](https://tashan.sh/capability/plugin-eventual-inc-daft-daft.html) | 76 | 6k ★ | active |
 | 33 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 65 | 90 ★ | active |
-| 34 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | 48 | 2 repos | active |
-| 35 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | 48 | 2 repos | active |
-| 36 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | 48 | 2 repos | active |
-| 37 | [Database Designer](https://tashan.sh/capability/skill-alirezarezvani-database-designer.html) | 48 | 2 repos | active |
-| 38 | [Performance Profiler](https://tashan.sh/capability/skill-alirezarezvani-performance-profiler.html) | 48 | 2 repos | active |
-| 39 | [SQL Database Assistant](https://tashan.sh/capability/skill-alirezarezvani-sql-database-assistant.html) | 48 | 2 repos | active |
-| 40 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | 48 | 2 repos | active |
+| 34 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 48 | 2 repos | active |
+| 35 | [AWS Data Analytics](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-data-analytics.html) | 46 | 2 marketplaces | — |
+| 36 | [Oracle AI Data Platform Workbench Spark Connectors](https://tashan.sh/capability/plugin-oracle-samples-oracle-aidp-samples-oracle-ai-data-platform-workbench-spark-connectors.html) | 46 | 2 marketplaces | — |
+| 37 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 46 | 1 ★ | active |
+| 38 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 45 | 3 ★ | active |
+| 39 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 44 | 2 marketplaces | active |
+| 40 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 44 | 2 marketplaces | active |
 
-Showing the top 40 of 84. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
+Showing the top 40 of 83. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
 
 ## What these numbers are not
 

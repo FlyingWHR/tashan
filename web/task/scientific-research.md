@@ -22,13 +22,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Nnsight](https://tashan.sh/capability/plugin-ndif-team-skills-nnsight.html) | 46 | 9 ★ | active |
 | 10 | [Research Co Pilot](https://tashan.sh/capability/plugin-marazii-research-co-pilot-research-co-pilot.html) | 45 | 5 ★ | active |
 | 11 | [Research Paper Writing](https://tashan.sh/capability/plugin-yuanyuanma03-research-paper-writing-skills-research-paper-writing.html) | 44 | 3 ★ | active |
-| 12 | [Clinical Research](https://tashan.sh/capability/skill-alirezarezvani-clinical-research.html) | 48 | 2 repos | active |
-| 13 | [Grants](https://tashan.sh/capability/skill-alirezarezvani-grants.html) | 48 | 2 repos | active |
-| 14 | [Litreview](https://tashan.sh/capability/skill-alirezarezvani-litreview.html) | 48 | 2 repos | active |
-| 15 | [Research Toolkit](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 37 | 2 ★ | active |
-| 16 | [Math Olympiad](https://tashan.sh/capability/skill-anthropics-math-olympiad.html) | not scored | 1 repos | active |
-| 17 | [Scios Skill](https://tashan.sh/capability/pkg-scios-skill.html) | 60 | 243/wk | active |
-| 18 | [Bgpt](https://tashan.sh/capability/pkg-bgpt-mcp.html) | 33 | 171/wk | active |
+| 12 | [Research Toolkit](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 37 | 2 ★ | active |
+| 13 | [Math Olympiad](https://tashan.sh/capability/skill-anthropics-math-olympiad.html) | not scored | 1 repos | active |
+| 14 | [Clinical Research](https://tashan.sh/capability/skill-alirezarezvani-clinical-research.html) | not scored | 1 repos | active |
+| 15 | [Grants](https://tashan.sh/capability/skill-alirezarezvani-grants.html) | not scored | 1 repos | active |
+| 16 | [Litreview](https://tashan.sh/capability/skill-alirezarezvani-litreview.html) | not scored | 1 repos | active |
+| 17 | [Scios Skill](https://tashan.sh/capability/pkg-scios-skill.html) | 59 | 243/wk | active |
 
 ## What these numbers are not
 

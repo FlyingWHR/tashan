@@ -26,16 +26,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Teamcity CLI](https://tashan.sh/capability/plugin-jetbrains-teamcity-cli-teamcity-cli.html) | 68 | 119 ★ | active |
 | 14 | [Defang](https://tashan.sh/capability/plugin-defanglabs-defang-defang.html) | 68 | 163 ★ | active |
 | 15 | [Basicdeploy](https://tashan.sh/capability/pkg-basicdeploy-mcp.html) | 65 | 1k/wk | active |
-| 16 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 62 | 22 ★ | active |
-| 17 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 62 | 41 ★ | active |
-| 18 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 61 | 85 ★ | active |
-| 19 | [Insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 61 | 33 ★ | active |
+| 16 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 62 | 41 ★ | active |
+| 17 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 61 | 22 ★ | active |
+| 18 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 60 | 85 ★ | active |
+| 19 | [Insforge · insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 60 | 33 ★ | active |
 | 20 | [Launchdarkly · launchdarkly](https://tashan.sh/capability/plugin-launchdarkly-ai-tooling-launchdarkly.html) | 58 | 20 ★ | active |
 | 21 | [Mirrord Agent Skills](https://tashan.sh/capability/plugin-metalbear-co-skills-mirrord-agent-skills.html) | 58 | 21 ★ | active |
 | 22 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 57 | 17 ★ | active |
 | 23 | [Teamcity](https://tashan.sh/capability/pkg-daghis-teamcity-mcp.html) | 57 | 2k/wk | active |
 | 24 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 56 | 21 ★ | active |
-| 25 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 54 | 7 ★ | active |
+| 25 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 53 | 7 ★ | active |
 | 26 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 52 | 12 ★ | active |
 | 27 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
 | 28 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 51 | 3 marketplaces | active |
@@ -44,15 +44,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 48 | 45 ★ | active |
 | 32 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 47 | 5 ★ | active |
 | 33 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 47 | 6 ★ | active |
-| 34 | [Zilliz](https://tashan.sh/capability/plugin-zilliztech-zilliz-plugin-zilliz.html) | 46 | 3 ★ | active |
-| 35 | [Anglesite](https://tashan.sh/capability/plugin-anglesite-anglesite-skills-anglesite.html) | 46 | 4 ★ | active |
-| 36 | [Cpln](https://tashan.sh/capability/plugin-controlplane-com-ai-plugin-cpln.html) | 44 | 10 ★ | active |
+| 34 | [Anglesite](https://tashan.sh/capability/plugin-anglesite-anglesite-skills-anglesite.html) | 46 | 4 ★ | active |
+| 35 | [Zilliz](https://tashan.sh/capability/plugin-zilliztech-zilliz-plugin-zilliz.html) | 45 | 3 ★ | active |
+| 36 | [Cpln](https://tashan.sh/capability/plugin-controlplane-com-ai-plugin-cpln.html) | 43 | 10 ★ | active |
 | 37 | [Jenkins · mcpland](https://tashan.sh/capability/pkg-jenkins-mcp.html) | 41 | 725/wk | active |
 | 38 | [SSH · tufantunc](https://tashan.sh/capability/pkg-ssh-mcp.html) | 38 | 1k/wk | abandoned |
-| 39 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
+| 39 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 85 | 107k/wk | active |
 | 40 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 84 | 14k/wk | active |
 
-Showing the top 40 of 179. The full ranked shelf is at https://tashan.sh/task/infrastructure-and-deployment.html.
+Showing the top 40 of 192. The full ranked shelf is at https://tashan.sh/task/infrastructure-and-deployment.html.
 
 ## What these numbers are not
 

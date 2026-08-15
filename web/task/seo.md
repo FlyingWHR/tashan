@@ -18,21 +18,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 69 | 558 ★ | active |
 | 6 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 51 | 73 ★ | active |
 | 7 | [Ultimate SEO Geo](https://tashan.sh/capability/plugin-mykpono-ultimate-seo-geo-ultimate-seo-geo.html) | 45 | 61 ★ | active |
-| 8 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 80 | 12k ★ | active |
+| 8 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 79 | 12k ★ | active |
 | 9 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 68 | 969/wk | active |
-| 10 | [Aeo](https://tashan.sh/capability/skill-alirezarezvani-aeo.html) | 48 | 2 repos | active |
-| 11 | [App Store Optimization](https://tashan.sh/capability/skill-alirezarezvani-app-store-optimization.html) | 48 | 2 repos | active |
+| 10 | [SEO Audit](https://tashan.sh/capability/skill-alirezarezvani-seo-audit.html) | 53 | 4 repos | active |
+| 11 | [Content Strategy](https://tashan.sh/capability/skill-alirezarezvani-content-strategy.html) | 50 | 3 repos | active |
 | 12 | [Competitor Alternatives](https://tashan.sh/capability/skill-alirezarezvani-competitor-alternatives.html) | 48 | 2 repos | active |
-| 13 | [Content Strategy](https://tashan.sh/capability/skill-alirezarezvani-content-strategy.html) | 48 | 2 repos | active |
-| 14 | [Marketing Demand Acquisition](https://tashan.sh/capability/skill-alirezarezvani-marketing-demand-acquisition.html) | 48 | 2 repos | active |
-| 15 | [Programmatic SEO](https://tashan.sh/capability/skill-alirezarezvani-programmatic-seo.html) | 48 | 2 repos | active |
-| 16 | [Schema Markup](https://tashan.sh/capability/skill-alirezarezvani-schema-markup.html) | 48 | 2 repos | active |
-| 17 | [SEO Audit](https://tashan.sh/capability/skill-alirezarezvani-seo-audit.html) | 48 | 2 repos | active |
-| 18 | [Site Architecture](https://tashan.sh/capability/skill-alirezarezvani-site-architecture.html) | 48 | 2 repos | active |
-| 19 | [Ahrefs Automation](https://tashan.sh/capability/skill-composiohq-ahrefs-automation.html) | not scored | 1 repos | active |
-| 20 | [Google Search Console Automation](https://tashan.sh/capability/skill-composiohq-google-search-console-automation.html) | not scored | 1 repos | active |
-| 21 | [Local SEO Manager](https://tashan.sh/capability/skill-alirezarezvani-local-seo-manager.html) | not scored | 1 repos | active |
-| 22 | [SEO Audit Console](https://tashan.sh/capability/pkg-houtini-seo-audit-console.html) | 59 | 355/wk | active |
+| 13 | [Programmatic SEO](https://tashan.sh/capability/skill-alirezarezvani-programmatic-seo.html) | 48 | 2 repos | active |
+| 14 | [Schema Markup](https://tashan.sh/capability/skill-alirezarezvani-schema-markup.html) | 48 | 2 repos | active |
+| 15 | [Site Architecture](https://tashan.sh/capability/skill-alirezarezvani-site-architecture.html) | 48 | 2 repos | active |
+| 16 | [Ahrefs Automation](https://tashan.sh/capability/skill-composiohq-ahrefs-automation.html) | not scored | 1 repos | active |
+| 17 | [Google Search Console Automation](https://tashan.sh/capability/skill-composiohq-google-search-console-automation.html) | not scored | 1 repos | active |
+| 18 | [Aeo · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-aeo.html) | not scored | 1 repos | active |
+| 19 | [App Store Optimization](https://tashan.sh/capability/skill-alirezarezvani-app-store-optimization.html) | not scored | 1 repos | active |
+| 20 | [Local SEO Manager](https://tashan.sh/capability/skill-alirezarezvani-local-seo-manager.html) | not scored | 1 repos | active |
+| 21 | [Marketing Demand Acquisition](https://tashan.sh/capability/skill-alirezarezvani-marketing-demand-acquisition.html) | not scored | 1 repos | active |
+| 22 | [SEO Audit Console](https://tashan.sh/capability/pkg-houtini-seo-audit-console.html) | 58 | 355/wk | active |
 | 23 | [Content Genie](https://tashan.sh/capability/pkg-content-genie-mcp.html) | 50 | 87/wk | active |
 | 24 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 69 | 2k/wk | active |
 | 25 | [Bisibility](https://tashan.sh/capability/pkg-bisibility-mcp.html) | 65 | 1k/wk | active |
@@ -45,14 +45,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Google Search Console](https://tashan.sh/capability/pkg-conorbronsdon-gsc-mcp.html) | 57 | 363/wk | active |
 | 33 | [Cituna](https://tashan.sh/capability/pkg-cituna-mcp.html) | 55 | 277/wk | active |
 | 34 | [AI SEO](https://tashan.sh/capability/pkg-automatelab-ai-seo-mcp.html) | 48 | 140/wk | active |
-| 35 | [SEO Tools](https://tashan.sh/capability/pkg-seodesignlab-mcp-server.html) | 47 | 61/wk | active |
+| 35 | [SEO Tools](https://tashan.sh/capability/pkg-seodesignlab-mcp-server.html) | 46 | 61/wk | active |
 | 36 | [Xiaoflow](https://tashan.sh/capability/pkg-xiaoflow-mcp-server.html) | 46 | 38/wk | active |
 | 37 | [Suganthan Gsc](https://tashan.sh/capability/pkg-suganthan-gsc-mcp.html) | 45 | 2k/wk | active |
 | 38 | [SEO Performance](https://tashan.sh/capability/pkg-automatelab-seo-performance-mcp.html) | 44 | 89/wk | active |
 | 39 | [Yandex Webmaster · theyahia](https://tashan.sh/capability/pkg-theyahia-yandex-webmaster-mcp.html) | 44 | 46/wk | active |
 | 40 | [SEO · metricspot](https://tashan.sh/capability/pkg-metricspot-mcp-server.html) | 40 | 66/wk | active |
 
-Showing the top 40 of 55. The full ranked shelf is at https://tashan.sh/task/seo.html.
+Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/task/seo.html.
 
 ## What these numbers are not
 

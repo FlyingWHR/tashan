@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 - **Infrastructure and deployment** — [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) · tashan score 74
 - **Observability** — [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) · tashan score 79
-- **Incident response** — [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) · tashan score 69
+- **Incident response** — [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) · tashan score 68
 
 ## Ranked
 
@@ -31,34 +31,34 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 71 | 643 ★ | active |
 | 13 | [Dynatrace Managed](https://tashan.sh/capability/pkg-dynatrace-oss-dynatrace-managed-mcp-server.html) | 71 | 869/wk | active |
 | 14 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 70 | 482 ★ | active |
-| 15 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 69 | 101 ★ | active |
-| 16 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 68 | 81 ★ | active |
-| 17 | [Teamcity CLI](https://tashan.sh/capability/plugin-jetbrains-teamcity-cli-teamcity-cli.html) | 68 | 119 ★ | active |
-| 18 | [Defang](https://tashan.sh/capability/plugin-defanglabs-defang-defang.html) | 68 | 163 ★ | active |
+| 15 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 68 | 81 ★ | active |
+| 16 | [Teamcity CLI](https://tashan.sh/capability/plugin-jetbrains-teamcity-cli-teamcity-cli.html) | 68 | 119 ★ | active |
+| 17 | [Defang](https://tashan.sh/capability/plugin-defanglabs-defang-defang.html) | 68 | 163 ★ | active |
+| 18 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 68 | 101 ★ | active |
 | 19 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 67 | 64 ★ | active |
-| 20 | [Parseable](https://tashan.sh/capability/pkg-parseable-parseable-mcp-server.html) | 66 | 787/wk | active |
-| 21 | [Basicdeploy](https://tashan.sh/capability/pkg-basicdeploy-mcp.html) | 65 | 1k/wk | active |
+| 20 | [Basicdeploy](https://tashan.sh/capability/pkg-basicdeploy-mcp.html) | 65 | 1k/wk | active |
+| 21 | [Parseable](https://tashan.sh/capability/pkg-parseable-parseable-mcp-server.html) | 65 | 787/wk | active |
 | 22 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 63 | 61 ★ | active |
-| 23 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 62 | 22 ★ | active |
-| 24 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 62 | 41 ★ | active |
-| 25 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 61 | 85 ★ | active |
-| 26 | [Insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 61 | 33 ★ | active |
-| 27 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 60 | 27 ★ | active |
+| 23 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 62 | 41 ★ | active |
+| 24 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 61 | 22 ★ | active |
+| 25 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 60 | 85 ★ | active |
+| 26 | [Insforge · insforge](https://tashan.sh/capability/plugin-insforge-insforge-skills-insforge.html) | 60 | 33 ★ | active |
+| 27 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 59 | 27 ★ | active |
 | 28 | [Launchdarkly · launchdarkly](https://tashan.sh/capability/plugin-launchdarkly-ai-tooling-launchdarkly.html) | 58 | 20 ★ | active |
 | 29 | [Mirrord Agent Skills](https://tashan.sh/capability/plugin-metalbear-co-skills-mirrord-agent-skills.html) | 58 | 21 ★ | active |
 | 30 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 57 | 17 ★ | active |
 | 31 | [Teamcity](https://tashan.sh/capability/pkg-daghis-teamcity-mcp.html) | 57 | 2k/wk | active |
 | 32 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 56 | 21 ★ | active |
-| 33 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 54 | 7 ★ | active |
+| 33 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 53 | 7 ★ | active |
 | 34 | [Datadog · datadog-labs](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 53 | 8 ★ | active |
 | 35 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 52 | 12 ★ | active |
 | 36 | [Itential Builder](https://tashan.sh/capability/plugin-itential-builder-skills-itential-builder.html) | 52 | 12 ★ | active |
 | 37 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 51 | 3 marketplaces | active |
 | 38 | [Dokploy · @dokploy](https://tashan.sh/capability/pkg-dokploy-mcp.html) | 50 | 1k/wk | active |
-| 39 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 49 | 8 ★ | active |
-| 40 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 48 | 1 ★ | active |
+| 39 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 48 | 1 ★ | active |
+| 40 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 48 | 45 ★ | active |
 
-Showing the top 40 of 243. The full ranked shelf is at https://tashan.sh/role/devops.html.
+Showing the top 40 of 256. The full ranked shelf is at https://tashan.sh/role/devops.html.
 
 ## What these numbers are not
 
