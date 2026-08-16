@@ -15,7 +15,7 @@ the derived rate (rounding), and exact on counts.
 
 Run: python3 tests/test_outreach_numbers.py
 """
-import os, re, sqlite3, sys
+import json, os, re, sqlite3, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOC = os.path.join(ROOT, "docs", "OUTREACH.md")
@@ -35,6 +35,32 @@ if not os.path.exists(DOC):
 
 con = sqlite3.connect(os.path.join(ROOT, "data", "tashan.db"))
 q = lambda s: con.execute(s).fetchone()[0]
+
+# IS THIS DATABASE THE ONE THE NUMBERS CAME FROM? This test predates data/tashan.db leaving git for
+# R2. It compares COMMITTED docs — regenerated nightly from the R2 copy — against the LOCAL database,
+# which on any machine without R2 credentials is however stale it happens to be. Mine was 32 hours
+# behind and every count came out "wrong", blaming the drafts for the difference:
+#
+#     FAIL scanned for advisories: doc says 8,044, database says 7,862
+#
+# That is a false failure, it blocks every commit, and worst of all it says "re-run the query and
+# update the drafts" — which would make somebody overwrite CORRECT numbers with stale ones.
+#
+# Compared by DATE, not timestamp: within a nightly run the sources sync before the export is
+# written, so last_synced is legitimately a little older than generated_at. A different DAY means a
+# different run. A run that straddles midnight skips this check for one night, which costs a
+# re-check and never a wrong assertion.
+_synced = (q("SELECT MAX(last_synced) FROM sync_state") or "")[:10]
+try:
+    _exported = json.load(open(os.path.join(ROOT, "web", "data", "capabilities.json"),
+                               encoding="utf-8")).get("generated_at", "")[:10]
+except Exception:
+    _exported = ""
+if _synced and _exported and _synced < _exported:
+    print(f"  -- SKIPPED: this database was last synced {_synced}, but the committed numbers were "
+          f"exported {_exported}.\n     The docs are not stale, the local database is. "
+          f"`python3 pipeline/db_store.py pull` to compare against the real thing.")
+    sys.exit(0)
 scanned = q("SELECT count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL")
 attested = q("SELECT count(*) FROM capabilities WHERE sec_provenance=1")
 

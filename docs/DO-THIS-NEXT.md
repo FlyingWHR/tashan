@@ -45,6 +45,36 @@ Actions → **publish cli** → Run workflow, `dry_run` checked first. The run s
 about which it did. Bump `cli/package.json` and `server.json` together — `tests/test_agent_surface.py`
 fails if they drift.
 
+## ✅ x402 is live on Base Sepolia (16 Aug 2026)
+
+All four secrets are set and the rail answers. Verified against production:
+
+```
+ok  agent payments (x402) quote complete, spec-shaped terms
+ok  our asset, EIP-712 name and version match the facilitator's
+```
+
+Quoting `x402Version 2`, scheme `exact`, network `eip155:84532`, asset
+`0x036CbD53842c5426634e7929541eC2318f3dCF7e`, `extra {name: "USD Coin", version: "2"}` — the last
+of which is the one that would have silently broken every signature, and is now cross-checked
+against the facilitator's own `/supported` on every run.
+
+**Pages secrets need a REDEPLOY to take effect.** Setting them changed nothing until
+`wrangler pages deploy` ran; the check reported "dormant" in between, which looks like a bad value
+and is not.
+
+**To go to mainnet**, change two secrets and redeploy:
+
+    X402_NETWORK  -> eip155:8453
+    X402_ASSET    -> 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
+
+The facilitator (`https://facilitator.openx402.ai`) and payTo stay as they are. Re-run
+`X402_FACILITATOR=https://facilitator.openx402.ai python3 pipeline/check_payments.py` after the
+deploy — the asset/name/version check is what catches a wrong mainnet address before a caller does.
+
+**Not yet proven: that a payment SETTLES.** The rail quotes correctly; nobody has paid. That needs a
+buyer holding Sepolia USDC (Circle runs a faucet) driving an x402 client.
+
 ## The two that are really yours
 
 **Add `Account Analytics: Read` to the Cloudflare API token.** Every click has been recorded since
