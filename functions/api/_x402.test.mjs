@@ -159,7 +159,10 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
     () => Promise.reject(new Error("facilitator down")),
     () => charge(LIVE, PR, {}, async () => { ran++; return "PAID DATA"; }));
   ok("a facilitator OUTAGE denies rather than becoming a free tier", !out.ok && ran === 0);
-  ok("...and says which step failed", out.reason === "verification_unavailable");
+  // Renamed from the catch-all "verification_unavailable": a facilitator we cannot REACH is a
+  // different fault from one that refuses our credential or answers 5xx, and on an authenticated
+  // facilitator telling them apart is the difference between fixing a URL and rotating a key.
+  ok("...and says which step failed", out.reason === "verification_unreachable", out.reason);
 }
 {
   let ran = 0;
@@ -176,7 +179,9 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
   const out = await withFetch(
     (u) => String(u).endsWith("/verify") ? res({}, false) : res({ success: true }),
     () => charge(LIVE, PR, {}, async () => "PAID DATA"));
-  ok("a non-200 from the facilitator denies", !out.ok && out.reason === "verification_unavailable");
+  // res({}, false) is a 500 here, so the reason now carries the status rather than a catch-all.
+  ok("a non-200 from the facilitator denies",
+     !out.ok && String(out.reason).startsWith("verification_http_"), out.reason);
 }
 
 {
@@ -196,8 +201,16 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
   const down = await withFetch(
     () => new Response("boom", { status: 503 }),
     () => charge(LIVE, PR, {}, async () => "PAID DATA"));
-  ok("a 503 is still an outage, not a credential problem",
-     down.reason === "verification_unavailable", JSON.stringify(down));
+  ok("a 503 is reported as an HTTP failure, with the status kept",
+     down.reason === "verification_http_503", JSON.stringify(down));
+
+  // AND NEVER REACHING IT AT ALL is its own thing: a bad facilitator URL, DNS, TLS. This is what a
+  // live deploy actually returned, and calling it "unavailable" sent me looking at the credential.
+  const gone = await withFetch(
+    () => { throw new TypeError("fetch failed"); },
+    () => charge(LIVE, PR, {}, async () => "PAID DATA"));
+  ok("an unreachable facilitator says so, rather than blaming the credential",
+     gone.reason === "verification_unreachable", JSON.stringify(gone));
 }
 
 // ---- the shared refusal carries it, and only when a wallet exists --------------------------------

@@ -181,11 +181,16 @@ export async function charge(env, pr, payload, work) {
   try {
     v = await facilitate(env, "/verify", payload, requirements);
   } catch (e) {
+    // THE REASON IS THE DIAGNOSTIC. Three failures wear the same word otherwise, and they need
+    // three different fixes: a refused credential (your key is wrong), an HTTP error (the
+    // facilitator is unhappy), and never reaching it at all (bad URL, DNS, TLS). The last one is
+    // what we actually hit — a 401 would have said so, and did not.
     const m = String(e);
-    return { ok: false,
-             reason: m.includes("credential_rejected") ? "verification_credential_rejected"
-                                                      : "verification_unavailable",
-             detail: m };
+    const reason =
+      m.includes("credential_rejected") ? "verification_credential_rejected" :
+      /http_\d+/.test(m)               ? "verification_" + (m.match(/http_\d+/) || [""])[0] :
+                                         "verification_unreachable";
+    return { ok: false, reason, detail: m };
   }
   // AN EXPLICIT YES, OR NOTHING. This used to deny only when the facilitator said `isValid: false`
   // or `valid: false` — which means ANY other shape was treated as a pass. A facilitator that
