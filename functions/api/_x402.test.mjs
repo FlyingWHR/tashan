@@ -206,6 +206,29 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
 
   // AND NEVER REACHING IT AT ALL is its own thing: a bad facilitator URL, DNS, TLS. This is what a
   // live deploy actually returned, and calling it "unavailable" sent me looking at the credential.
+  // A FACILITATOR MAY RETURN ITS VERDICT AS A 4xx. openx402 answers an invalid payment 200 with
+  // {isValid:false}; CDP answers 400 with the identical body. Verified live 17 Aug 2026 — CDP
+  // returned {"invalidReason":"invalid_exact_evm_payload_signature", …} with HTTP 400, and treating
+  // that as an outage reported "verification_http_400" to a caller whose signature was simply bad.
+  {
+    let r2 = 0;
+    const verdict = await withFetch(
+      () => new Response(JSON.stringify({ isValid: false,
+              invalidReason: "invalid_exact_evm_payload_signature",
+              invalidMessage: "invalid signature: not for a valid curve point" }),
+              { status: 400, headers: { "content-type": "application/json" } }),
+      () => charge(LIVE, PR, {}, async () => { r2++; return "PAID DATA"; }));
+    ok("a 4xx carrying {isValid:false} is read as a PAYMENT refusal, not an outage",
+       verdict.reason === "invalid_exact_evm_payload_signature", JSON.stringify(verdict));
+    ok("...and still never runs the work", r2 === 0);
+    // A 4xx that is NOT a verdict stays a transport failure.
+    const junk = await withFetch(
+      () => new Response("<html>gateway error</html>", { status: 400 }),
+      () => charge(LIVE, PR, {}, async () => "PAID DATA"));
+    ok("a 4xx with no verdict in it is still an HTTP failure",
+       String(junk.reason).startsWith("verification_http_"), junk.reason);
+  }
+
   const gone = await withFetch(
     () => { throw new TypeError("fetch failed"); },
     () => charge(LIVE, PR, {}, async () => "PAID DATA"));

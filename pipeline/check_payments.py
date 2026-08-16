@@ -16,7 +16,7 @@ says which kind it is.
 
 Exit code is the number of FAILING checks, so CI can gate on it.
 """
-import json, os, re, sys, urllib.error, urllib.parse, urllib.request
+import base64, json, os, re, sys, urllib.error, urllib.parse, urllib.request
 
 BASE = os.environ.get("TASHAN_SITE", "https://tashan.sh")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -336,62 +336,62 @@ def main():
                        "our asset, EIP-712 name and version match the facilitator's",
                        "; ".join(bad) + " — signatures will not verify")
 
-            # WOULD IT ACCEPT A PAYMENT TO US AT ALL? Everything above can pass while every payment
-            # is refused for a reason that has nothing to do with the payer. Found exactly that on
-            # the day mainnet went live: 25 checks green, and openx402 answering
-            #
-            #   {"isValid":false,"invalidReason":"address_not_registered",
-            #    "invalidMessage":"Address 0x813e… is not registered. Register at …/register"}
-            #
-            # A refusal about the SELLER, invisible to every check we had, and it would have been
-            # discovered by the first paying stranger — who would simply have gone away.
-            #
-            # So: send a deliberately invalid payment and read WHY it is refused. It must be refused
-            # (a pass here would mean the facilitator validates nothing), and the reason must be
-            # about the PAYMENT — a bad signature, no funds — not about our configuration. No money
-            # moves; the signature is 0x00 and cannot settle.
-            SELLER_SIDE = ("not_registered", "unregistered", "unsupported", "unknown_network",
-                           "unknown_asset", "invalid_recipient", "not_allowed", "forbidden",
-                           "unauthorized", "no_such")
-            probe = {
-                "x402Version": 2,
-                "paymentPayload": {"x402Version": 2, "scheme": a.get("scheme"),
-                                   "network": a.get("network"),
-                                   "payload": {"signature": "0x00", "authorization": {
-                                       "from": "0x0000000000000000000000000000000000000001",
-                                       "to": a.get("payTo"), "value": a.get("amount"),
-                                       "validAfter": "0", "validBefore": "99999999999",
-                                       "nonce": "0x00"}}},
-                "paymentRequirements": a,
-            }
-            st3, body3, _ = get(fac.rstrip("/") + "/verify", method="POST",
-                                body=json.dumps(probe).encode(),
-                                headers={"content-type": "application/json"})
-            try:
-                vr = json.loads(body3)
-            except ValueError:
-                vr = {}
-            reason = str(vr.get("invalidReason") or vr.get("errorReason") or "").lower()
-            msg = str(vr.get("invalidMessage") or vr.get("errorMessage") or "")[:160]
-            if vr.get("isValid") is True or vr.get("valid") is True:
-                record(FAIL, "the facilitator actually validates payments",
-                       "it approved a payment signed 0x00 — it is not checking anything")
-            elif any(m in reason for m in SELLER_SIDE):
-                record(FAIL, "the facilitator will accept a payment addressed to us",
-                       f"it refuses for a SELLER-side reason: {reason!r}\n        {msg}\n"
-                       f"        No caller can pay us until this is fixed, and every other check "
-                       f"here passes while it is broken.")
-            elif reason:
-                record(PASS, "the facilitator will accept a payment addressed to us",
-                       f"a bogus payment is refused for a payment-side reason ({reason})")
-            else:
-                record(WARN, "the facilitator will accept a payment addressed to us",
-                       f"HTTP {st3}, unrecognised reply: {body3[:120]}")
-    else:
-        # Terms without a header, or a header without terms: a caller cannot act on either.
-        record(FAIL, "x402 is either fully on or fully off",
-               f"HTTP {status}, accepts={len(accepts)}, PAYMENT-REQUIRED header={has_hdr} — a "
-               f"half-configuration advertises a price we cannot settle")
+            # WOULD A PAYMENT ACTUALLY BE JUDGED? Asked END TO END, through our own endpoint, because
+        # that is the only way to test the path a payer takes — and because the facilitator may
+        # need credentials this shell does not have. CDP does: /supported answers 401 to anyone
+        # without a signed JWT, so the previous version of this check timed out against it and took
+        # the whole run down with a traceback.
+        #
+        # A deliberately invalid payment is sent to a priced endpoint. Nothing can settle: the
+        # signature is fabricated. What matters is WHICH refusal comes back.
+        #
+        #   invalid_*/insufficient_*        the facilitator authenticated us, parsed the request and
+        #                                   judged the PAYMENT. The rail works.
+        #   verification_credential_rejected   our key is wrong (401/403)
+        #   verification_unreachable        bad facilitator URL, DNS, TLS
+        #   verification_http_<status>      it answered, unhappily
+        #
+        # Those four were one word until 17 Aug, which cost three deploys of guessing.
+        acc = dict(a)
+        probe_payload = {
+            "x402Version": 2, "accepted": acc,
+            # `accepted` is REQUIRED by the v2 PaymentPayload schema and omitting it is a 400 that
+            # looks like a broken integration. It is also exactly what one facilitator told us
+            # ("accepted: Invalid input: expected object, received undefined") while we recorded it
+            # as that facilitator being non-conformant. It was us.
+            "payload": {"signature": "0x" + "11" * 32 + "22" * 32 + "1b",
+                        "authorization": {
+                            "from": "0x0000000000000000000000000000000000000001",
+                            "to": a.get("payTo"), "value": a.get("amount"),
+                            "validAfter": "0", "validBefore": "99999999999",
+                            "nonce": "0x" + "33" * 32}},
+        }
+        hdr = base64.b64encode(json.dumps(probe_payload).encode()).decode()
+        st4, body4, _ = get(f"{BASE}/v0.1/audit", method="POST",
+                            body=b'{"servers":["chrome-devtools-mcp"],"history":true}',
+                            headers={"content-type": "application/json",
+                                     "payment-signature": hdr})
+        why = ""
+        try:
+            why = str(json.loads(body4).get("error") or "")
+        except ValueError:
+            pass
+        judged = any(m in why for m in ("invalid_", "insufficient", "expired", "nonce",
+                                        "authorization", "signature", "funds"))
+        if judged:
+            record(PASS, "a payment is actually verified end to end",
+                   f"the facilitator judged it: {why}")
+        elif "credential_rejected" in why:
+            record(FAIL, "a payment is actually verified end to end",
+                   "the facilitator REFUSED OUR CREDENTIAL (401/403). Check X402_CDP_KEY_ID and "
+                   "X402_CDP_KEY_SECRET, and that the key's algorithm is Ed25519.")
+        elif "unreachable" in why:
+            record(FAIL, "a payment is actually verified end to end",
+                   "the facilitator was never reached — check X402_FACILITATOR is a valid URL.")
+        else:
+            record(FAIL, "a payment is actually verified end to end",
+                   f"unrecognised refusal: {why!r} — no caller can pay until this is a payment-side "
+                   f"reason.")
 
     # The free half must answer regardless. This is the firewall on the agent rail: the EXISTENCE
     # of a risk is never behind a paywall, so a 402 still carries the audit.

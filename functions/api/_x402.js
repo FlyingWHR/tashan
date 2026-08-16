@@ -159,6 +159,22 @@ async function facilitate(env, path, payload, requirements) {
   // is the single most likely failure and the least self-evident.
   if (!r.ok) {
     const kind = (r.status === 401 || r.status === 403) ? "credential_rejected" : "http_" + r.status;
+    // THE FACILITATOR IS TELLING US WHAT IS WRONG AND WE WERE THROWING IT AWAY. A 400 carries the
+    // field it could not read; without the body, three deploys can go by knowing only "400".
+    // Logged, not returned: it is upstream diagnostic text, and a paying caller has no business
+    // reading our integration's errors. Visible with `wrangler pages deployment tail`.
+    let body = "";
+    try { body = (await r.text()).slice(0, 400); } catch (_) { /* body already consumed */ }
+    console.log("x402 facilitator " + path + " -> HTTP " + r.status + " :: " + body);
+    // A 4xx MAY STILL BE A VERDICT ABOUT THE PAYMENT. Facilitators disagree on this: openx402
+    // answers an invalid payment 200 with {isValid:false}, CDP answers 400 with the same body.
+    // Treating every non-200 as an outage turned "your signature is invalid" into
+    // "verification_http_400" — the caller learns nothing actionable, and we cannot tell a broken
+    // integration from a bad payment. If it parses as a verification result, it IS one.
+    try {
+      const verdict = JSON.parse(body);
+      if (verdict && (verdict.isValid !== undefined || verdict.invalidReason)) return verdict;
+    } catch (_) { /* not JSON: a real transport failure, fall through */ }
     throw new Error(path + " " + kind + " (HTTP " + r.status + ")");
   }
   return r.json();
