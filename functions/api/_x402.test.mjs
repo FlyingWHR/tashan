@@ -112,6 +112,48 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
   ok("...and reports the facilitator's reason", out.reason === "insufficient_funds");
 }
 {
+  // VERIFICATION MUST REQUIRE AN EXPLICIT YES. The old code denied only on `isValid: false` or
+  // `valid: false`, so ANY other shape was read as approval — the work would run and the paid
+  // content would be served for free. Every stub in this file happened to return the exact field
+  // the code looked for, which is why 39 tests passed over a paywall that failed OPEN.
+  for (const [label, reply] of [
+    ["an empty object", {}],
+    ["an error shape we do not recognise", { error: "facilitator exploded" }],
+    ["a status string instead of a boolean", { status: "invalid" }],
+    ["a null body", null],
+    ["valid spelled as a string", { isValid: "true" }],
+  ]) {
+    let ran = 0;
+    const out = await withFetch(
+      (u) => res(String(u).endsWith("/verify") ? reply : { success: true }),
+      () => charge(LIVE, PR, {}, async () => { ran++; return "PAID DATA"; }));
+    ok(`${label} is a refusal, never a pass`, !out.ok && ran === 0, JSON.stringify(out));
+  }
+  // …and the positive case still works, so this is a tightening and not a wall.
+  let ran = 0;
+  const yes = await withFetch(
+    (u) => res(String(u).endsWith("/verify") ? { valid: true } : { success: true }),
+    () => charge(LIVE, PR, {}, async () => { ran++; return "PAID DATA"; }));
+  ok("an explicit `valid: true` still passes", yes.ok && ran === 1, JSON.stringify(yes));
+}
+{
+  // THE SHAPE THE LIVE FACILITATOR ACTUALLY RETURNS, captured 16 Aug 2026 from openx402 when the
+  // receiving address was not registered with it. Everything about our config was correct and every
+  // payment would have been refused — so the reason has to survive to the caller, not be flattened
+  // into "payment_invalid".
+  let ran = 0;
+  const out = await withFetch(
+    (u) => res(String(u).endsWith("/verify")
+      ? { isValid: false, invalidReason: "address_not_registered",
+          invalidMessage: "Address 0x813e… is not registered. Register at https://openx402.ai/register" }
+      : { success: true }),
+    () => charge(LIVE, PR, {}, async () => { ran++; return "PAID DATA"; }));
+  ok("a seller-side refusal never runs the work", !out.ok && ran === 0);
+  ok("...and names the reason", out.reason === "address_not_registered");
+  ok("...and keeps the message that says how to fix it",
+     String(out.detail || "").includes("openx402.ai/register"));
+}
+{
   let ran = 0;
   const out = await withFetch(
     () => Promise.reject(new Error("facilitator down")),

@@ -168,8 +168,21 @@ export async function charge(env, pr, payload, work) {
   } catch (e) {
     return { ok: false, reason: "verification_unavailable", detail: String(e) };
   }
-  if (!v || v.isValid === false || v.valid === false) {
-    return { ok: false, reason: (v && (v.invalidReason || v.errorReason)) || "payment_invalid" };
+  // AN EXPLICIT YES, OR NOTHING. This used to deny only when the facilitator said `isValid: false`
+  // or `valid: false` — which means ANY other shape was treated as a pass. A facilitator that
+  // answered `{"error": "..."}`, or `{"status":"invalid"}`, or `{}` on some edge, would have had
+  // its refusal read as approval and we would have run the work and served the content for free.
+  // The stub in the tests returns the exact field the code looked for, so nothing ever showed it.
+  //
+  // Verified against the live facilitator on 16 Aug 2026: openx402 answers
+  // `{"isValid":false,"invalidReason":"…"}`, so the old code happened to be correct FOR THIS ONE.
+  // That is luck, and luck is not a thing to leave in the paid path. Now a payment passes only on a
+  // positive assertion, and every other answer — including an unrecognised one — denies.
+  const said_yes = v && (v.isValid === true || v.valid === true);
+  if (!said_yes) {
+    return { ok: false,
+             reason: (v && (v.invalidReason || v.errorReason)) || "payment_invalid",
+             detail: (v && (v.invalidMessage || v.errorMessage)) || undefined };
   }
 
   const result = await work();

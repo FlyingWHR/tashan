@@ -335,6 +335,58 @@ def main():
                 record(PASS if not bad else FAIL,
                        "our asset, EIP-712 name and version match the facilitator's",
                        "; ".join(bad) + " — signatures will not verify")
+
+            # WOULD IT ACCEPT A PAYMENT TO US AT ALL? Everything above can pass while every payment
+            # is refused for a reason that has nothing to do with the payer. Found exactly that on
+            # the day mainnet went live: 25 checks green, and openx402 answering
+            #
+            #   {"isValid":false,"invalidReason":"address_not_registered",
+            #    "invalidMessage":"Address 0x813e… is not registered. Register at …/register"}
+            #
+            # A refusal about the SELLER, invisible to every check we had, and it would have been
+            # discovered by the first paying stranger — who would simply have gone away.
+            #
+            # So: send a deliberately invalid payment and read WHY it is refused. It must be refused
+            # (a pass here would mean the facilitator validates nothing), and the reason must be
+            # about the PAYMENT — a bad signature, no funds — not about our configuration. No money
+            # moves; the signature is 0x00 and cannot settle.
+            SELLER_SIDE = ("not_registered", "unregistered", "unsupported", "unknown_network",
+                           "unknown_asset", "invalid_recipient", "not_allowed", "forbidden",
+                           "unauthorized", "no_such")
+            probe = {
+                "x402Version": 2,
+                "paymentPayload": {"x402Version": 2, "scheme": a.get("scheme"),
+                                   "network": a.get("network"),
+                                   "payload": {"signature": "0x00", "authorization": {
+                                       "from": "0x0000000000000000000000000000000000000001",
+                                       "to": a.get("payTo"), "value": a.get("amount"),
+                                       "validAfter": "0", "validBefore": "99999999999",
+                                       "nonce": "0x00"}}},
+                "paymentRequirements": a,
+            }
+            st3, body3, _ = get(fac.rstrip("/") + "/verify", method="POST",
+                                body=json.dumps(probe).encode(),
+                                headers={"content-type": "application/json"})
+            try:
+                vr = json.loads(body3)
+            except ValueError:
+                vr = {}
+            reason = str(vr.get("invalidReason") or vr.get("errorReason") or "").lower()
+            msg = str(vr.get("invalidMessage") or vr.get("errorMessage") or "")[:160]
+            if vr.get("isValid") is True or vr.get("valid") is True:
+                record(FAIL, "the facilitator actually validates payments",
+                       "it approved a payment signed 0x00 — it is not checking anything")
+            elif any(m in reason for m in SELLER_SIDE):
+                record(FAIL, "the facilitator will accept a payment addressed to us",
+                       f"it refuses for a SELLER-side reason: {reason!r}\n        {msg}\n"
+                       f"        No caller can pay us until this is fixed, and every other check "
+                       f"here passes while it is broken.")
+            elif reason:
+                record(PASS, "the facilitator will accept a payment addressed to us",
+                       f"a bogus payment is refused for a payment-side reason ({reason})")
+            else:
+                record(WARN, "the facilitator will accept a payment addressed to us",
+                       f"HTTP {st3}, unrecognised reply: {body3[:120]}")
     else:
         # Terms without a header, or a header without terms: a caller cannot act on either.
         record(FAIL, "x402 is either fully on or fully off",
