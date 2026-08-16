@@ -54,6 +54,35 @@ def exists(u):
     return os.path.exists(fn + ".js") or os.path.exists(os.path.join(fn, "[[route]].js"))
 
 
+def _stats_page_is_citable():
+    """/stats.html exists to be QUOTED, so the parts that make it quotable are the parts to guard:
+    real numbers, an explicit licence, and a citation line carrying source, date and URL. A stats
+    page without attribution is a page people screenshot instead of link — which is the opposite of
+    the point, since the whole reason it exists is that our deficit is inbound links."""
+    import re as _re
+    out = []
+    p = os.path.join(WEB, "stats.html")
+    if not os.path.exists(p):
+        return ["web/stats.html is missing — run pipeline/gen_stats.py"]
+    h = open(p, encoding="utf-8").read()
+    if not _re.search(r"\d{1,3},\d{3}", h):
+        out.append("stats.html carries no thousands-separated figure — the numbers did not render")
+    if "creativecommons.org/licenses/by/4.0" not in h:
+        out.append("stats.html does not state its licence; an unlicensed number is unquotable")
+    if "CC BY 4.0" not in h or "/stats" not in h:
+        out.append("stats.html has no citation line naming the source and URL")
+    if "falls every time discovery succeeds" not in h:
+        out.append("stats.html omits the honest coverage caveat — the aggregate ratio falls when "
+                   "discovery succeeds, and quoting it flat would be the flattering lie")
+    sm = os.path.join(WEB, "sitemap.xml")
+    if os.path.exists(sm) and "/stats<" not in open(sm, encoding="utf-8").read():
+        out.append("stats.html is not in sitemap.xml")
+    idx = os.path.join(WEB, "index.html")
+    if os.path.exists(idx) and "/stats" not in open(idx, encoding="utf-8").read():
+        out.append("nothing on the homepage links to /stats — it is an orphan")
+    return out
+
+
 def _changes_page_is_reachable_and_real():
     """/changes.html is the freshest surface we publish and the only one rivals cannot reproduce —
     it is built from a series that cannot be backfilled. It is also the easiest kind of page to
@@ -100,6 +129,7 @@ def main():
                 external.add(h.split("#")[0])
 
     fail += _changes_page_is_reachable_and_real()
+    fail += _stats_page_is_citable()
 
     # unpublished targets, wherever they appear — links, code blocks, install snippets
     for p in list(pages()) + [os.path.join(ROOT, "cli", "README.md")]:

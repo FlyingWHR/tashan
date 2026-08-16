@@ -14,6 +14,7 @@
   <url><loc>https://tashan.sh/browse</loc></url>
   <url><loc>https://tashan.sh/compare</loc></url>
   <url><loc>https://tashan.sh/changes</loc><changefreq>daily</changefreq></url>
+  <url><loc>https://tashan.sh/stats</loc></url>
   <url><loc>https://tashan.sh/capability/pkg-supabase-mcp-server-supabase</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-upstash-context7-mcp</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq></url>

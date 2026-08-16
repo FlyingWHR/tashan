@@ -1426,7 +1426,7 @@ def sitemap(caps):
             "/browse.html", "/compare.html",
             # The freshest page on the site, and the only one competitors cannot reproduce — it is
             # built from a series that cannot be backfilled. `changefreq` says daily below.
-            "/changes.html"]
+            "/changes.html", "/stats.html"]
     def _static_url(u):
         # /changes.html is rewritten every night from change_events; saying so is the whole point of
         # having it in here. Everything else changes when the site is rebuilt, which is not daily.

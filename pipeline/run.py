@@ -123,6 +123,10 @@ STAGES = [
     # have whose freshness a static catalogue cannot match, built from a series nobody can backfill.
     ("changes-page",    ["pipeline/gen_changes.py"], "site",
      "/changes.html — what moved in the ecosystem, dated, the one page rivals cannot reproduce"),
+    # The numbers a writer would quote, in a form they can quote. Our deficit is authority and
+    # authority comes from citation; a stats page is the classic thing people link to.
+    ("stats-page",      ["pipeline/gen_stats.py"], "site",
+     "/stats.html — the ecosystem in numbers, licensed CC BY and built to be cited"),
     # DRAFTS ONLY. Nothing here posts: publishing is outward-facing, needs credentials this repo
     # does not hold, and an automated account that gets one post wrong costs more than the traffic
     # it wins. A human reads data/social/<day>.json and sends it.
