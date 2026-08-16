@@ -45,35 +45,34 @@ Actions → **publish cli** → Run workflow, `dry_run` checked first. The run s
 about which it did. Bump `cli/package.json` and `server.json` together — `tests/test_agent_surface.py`
 fails if they drift.
 
-## ✅ x402 is live on Base Sepolia (16 Aug 2026)
+## ✅ x402 is LIVE ON BASE MAINNET (16 Aug 2026) — real money
 
-All four secrets are set and the rail answers. Verified against production:
+    scheme  exact          network  eip155:8453
+    asset   0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913   (USDC, Circle-confirmed)
+    payTo   0x813e91688330cB03BD9F4e710A28C4B6207e9fC1
+    extra   {name: "USD Coin", version: "2"}
 
-```
-ok  agent payments (x402) quote complete, spec-shaped terms
-ok  our asset, EIP-712 name and version match the facilitator's
-```
+`X402_FACILITATOR=https://facilitator.openx402.ai python3 pipeline/check_payments.py` → **25
+passing, 0 failing**, including three checks that exist because this is the step that cannot be
+undone:
 
-Quoting `x402Version 2`, scheme `exact`, network `eip155:84532`, asset
-`0x036CbD53842c5426634e7929541eC2318f3dCF7e`, `extra {name: "USD Coin", version: "2"}` — the last
-of which is the one that would have silently broken every signature, and is now cross-checked
-against the facilitator's own `/supported` on every run.
+- **payTo and asset pass their EIP-55 checksums** (`pipeline/eip55.py`). A single mistyped character
+  in a mixed-case address fails to verify, so this is what stands between a wallet typo and funds
+  landing somewhere nobody controls. keccak-256 is hand-rolled — hashlib's sha3_256 is a DIFFERENT
+  algorithm — and pinned to the canonical vector plus all four EIP-55 worked examples.
+- **Our asset, EIP-712 name and version match the facilitator's `/supported`.** The name is
+  "USD Coin", not "USDC"; it defaulted to the ticker until 16 Aug and would have failed every
+  signature while looking perfectly configured.
 
-**Pages secrets need a REDEPLOY to take effect.** Setting them changed nothing until
-`wrangler pages deploy` ran; the check reported "dormant" in between, which looks like a bad value
-and is not.
+**Pages secrets need a REDEPLOY.** Setting them changes nothing until `wrangler pages deploy` runs,
+and in between the check reports "dormant", which reads exactly like a bad value.
 
-**To go to mainnet**, change two secrets and redeploy:
+**Still unproven: that a payment SETTLES.** We quote correctly on mainnet and nobody has paid yet.
+The first real payment is the only thing that proves the loop, and it will arrive from a stranger's
+agent rather than from a test.
 
-    X402_NETWORK  -> eip155:8453
-    X402_ASSET    -> 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
-
-The facilitator (`https://facilitator.openx402.ai`) and payTo stay as they are. Re-run
-`X402_FACILITATOR=https://facilitator.openx402.ai python3 pipeline/check_payments.py` after the
-deploy — the asset/name/version check is what catches a wrong mainnet address before a caller does.
-
-**Not yet proven: that a payment SETTLES.** The rail quotes correctly; nobody has paid. That needs a
-buyer holding Sepolia USDC (Circle runs a faucet) driving an x402 client.
+**To roll back to testnet**, two secrets and a redeploy: `X402_NETWORK` → `eip155:84532`,
+`X402_ASSET` → `0x036CbD53842c5426634e7929541eC2318f3dCF7e`.
 
 ## The two that are really yours
 

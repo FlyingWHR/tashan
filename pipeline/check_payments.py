@@ -283,6 +283,25 @@ def main():
         record(PASS if good else FAIL, "agent payments (x402) quote complete, spec-shaped terms",
                f"x402Version={quote.get('x402Version')!r} accepts[0]={a!r}")
 
+        # THE ADDRESS THAT RECEIVES THE MONEY, CHECKED. A wrong payTo is the only unrecoverable
+        # error here — funds land somewhere nobody controls and no one can reverse it. EIP-55 hides
+        # a checksum in the case of the hex letters, so a mistyped mixed-case address fails to
+        # verify with overwhelming probability. All-lowercase carries no checksum and is reported as
+        # unverifiable rather than as valid, because "we cannot tell" is not "fine".
+        sys.path.insert(0, os.path.join(ROOT, "pipeline"))
+        from eip55 import valid as _addr_ok
+        for label, addr in (("payTo", a.get("payTo")), ("asset", a.get("asset"))):
+            v = _addr_ok(addr or "")
+            if v is True:
+                record(PASS, f"the {label} address passes its EIP-55 checksum")
+            elif v is None:
+                record(WARN, f"the {label} address carries no checksum to verify",
+                       f"{addr} is all one case — re-copy it from the wallet in mixed case and a "
+                       f"typo becomes detectable")
+            else:
+                record(FAIL, f"the {label} address is not a valid checksummed address",
+                       f"{addr!r} — on mainnet this sends funds nowhere recoverable")
+
         # WHAT WE QUOTE MUST BE WHAT THE FACILITATOR WILL SETTLE. A facilitator publishes the exact
         # asset, EIP-712 domain name and version it verifies against, per network, at /supported.
         # If our `accepts` disagrees on any of them the caller signs a domain nobody accepts, every
