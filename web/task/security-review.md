@@ -15,9 +15,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 60 | 23 ★ | active |
 | 3 | [Agentic Security](https://tashan.sh/capability/plugin-clear-capabilities-agentic-security-agentic-security.html) | 52 | 73 ★ | active |
 | 4 | [Jfrog](https://tashan.sh/capability/plugin-jfrog-claude-plugin-jfrog.html) | 51 | 4 ★ | active |
-| 5 | [Osint](https://tashan.sh/capability/pkg-osint-mcp-server.html) | 40 | 857/wk | active |
-| 6 | [NPM Sentinel](https://tashan.sh/capability/pkg-nekzus-mcp-server.html) | 71 | 4k/wk | active |
-| 7 | [Shieldcortex](https://tashan.sh/capability/pkg-shieldcortex.html) | 71 | 3k/wk | active |
+| 5 | [Osint](https://tashan.sh/capability/pkg-osint-mcp-server.html) | 39 | 857/wk | active |
+| 6 | [Shieldcortex](https://tashan.sh/capability/pkg-shieldcortex.html) | 71 | 3k/wk | active |
+| 7 | [NPM Sentinel](https://tashan.sh/capability/pkg-nekzus-mcp-server.html) | 70 | 4k/wk | active |
 | 8 | [AI Agent Firewall](https://tashan.sh/capability/pkg-fidacy-mcp.html) | 70 | 2k/wk | active |
 | 9 | [Sonarqube](https://tashan.sh/capability/plugin-sonarsource-sonarqube-agent-plugins-sonarqube.html) | 69 | 98 ★ | active |
 | 10 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 67 | 326 ★ | active |
@@ -42,17 +42,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 29 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 59 | 43 ★ | active |
 | 30 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 55 | 11 ★ | active |
 | 31 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 54 | 12 ★ | active |
-| 32 | [Ship Gate](https://tashan.sh/capability/skill-alirezarezvani-ship-gate.html) | 48 | 2 repos | active |
-| 33 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 48 | 1 ★ | active |
-| 34 | [Gomboc AI Community](https://tashan.sh/capability/plugin-gomboc-ai-gomboc-community-skills-gomboc-ai-community.html) | 47 | 6 ★ | active |
-| 35 | [Security Guidance](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-security-guidance.html) | 46 | 2 marketplaces | — |
-| 36 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
-| 37 | [Stackhawk Hawkscan](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-hawkscan.html) | 43 | 1 marketplaces | active |
-| 38 | [Stackhawk API](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-api.html) | 43 | 1 marketplaces | active |
-| 39 | [Clover](https://tashan.sh/capability/plugin-clover-security-clover-claude-plugin-clover.html) | 43 | 0 ★ | active |
-| 40 | [Optibot · Optimal-AI](https://tashan.sh/capability/plugin-optimal-ai-optibot-skill-optibot.html) | 43 | 1 ★ | active |
+| 32 | [AI Security](https://tashan.sh/capability/skill-alirezarezvani-ai-security.html) | 50 | 3 repos | active |
+| 33 | [Ciso Review](https://tashan.sh/capability/skill-alirezarezvani-ciso-review.html) | 48 | 2 repos | active |
+| 34 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | 48 | 2 repos | active |
+| 35 | [Cloud Security](https://tashan.sh/capability/skill-alirezarezvani-cloud-security.html) | 48 | 2 repos | active |
+| 36 | [Incident Response](https://tashan.sh/capability/skill-alirezarezvani-incident-response.html) | 48 | 2 repos | active |
+| 37 | [Red Team](https://tashan.sh/capability/skill-alirezarezvani-red-team.html) | 48 | 2 repos | active |
+| 38 | [Security Pen Testing](https://tashan.sh/capability/skill-alirezarezvani-security-pen-testing.html) | 48 | 2 repos | active |
+| 39 | [Senior Secops](https://tashan.sh/capability/skill-alirezarezvani-senior-secops.html) | 48 | 2 repos | active |
+| 40 | [Senior Security](https://tashan.sh/capability/skill-alirezarezvani-senior-security.html) | 48 | 2 repos | active |
 
-Showing the top 40 of 114. The full ranked shelf is at https://tashan.sh/task/security-review.html.
+Showing the top 40 of 112. The full ranked shelf is at https://tashan.sh/task/security-review.html.
 
 ## What these numbers are not
 

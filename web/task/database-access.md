@@ -11,28 +11,28 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 86 | 206k/wk | active |
+| 1 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 85 | 73k/wk | active |
 | 2 | [Supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) | 95 | 78k/wk | active |
-| 3 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 83 | 42k/wk | active |
-| 4 | [Teable](https://tashan.sh/capability/pkg-teable-mcp.html) | 49 | 1k/wk | active |
+| 3 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 82 | 42k/wk | active |
+| 4 | [Teable](https://tashan.sh/capability/pkg-teable-mcp.html) | 48 | 1k/wk | active |
 | 5 | [Snowflake](https://tashan.sh/capability/pkg-snowflake-mcp.html) | 38 | 863/wk | active |
 | 6 | [NexQL Postgres](https://tashan.sh/capability/pkg-nexql-mcp.html) | 67 | 1k/wk | active |
-| 7 | [Idmp Plugin](https://tashan.sh/capability/plugin-taosdata-agent-skills-idmp-plugin.html) | 42 | 2 ★ | active |
-| 8 | [Ts Ddd Repository](https://tashan.sh/capability/plugin-llodev-skills-ts-ddd-repository.html) | 42 | 1 marketplaces | active |
-| 9 | [Ts Query Cqrs](https://tashan.sh/capability/plugin-llodev-skills-ts-query-cqrs.html) | 42 | 1 marketplaces | active |
-| 10 | [Sap Hana CLI](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cli.html) | 42 | 1 marketplaces | — |
-| 11 | [Sap Sqlscript](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sqlscript.html) | 42 | 1 marketplaces | — |
-| 12 | [SQLite Npx](https://tashan.sh/capability/pkg-mcp-server-sqlite-npx.html) | 37 | 3k/wk | abandoned |
-| 13 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | not scored | 1 repos | active |
-| 14 | [SQL Database Assistant](https://tashan.sh/capability/skill-alirezarezvani-sql-database-assistant.html) | not scored | 1 repos | active |
+| 7 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | 48 | 2 repos | active |
+| 8 | [SQL Database Assistant](https://tashan.sh/capability/skill-alirezarezvani-sql-database-assistant.html) | 48 | 2 repos | active |
+| 9 | [Idmp Plugin](https://tashan.sh/capability/plugin-taosdata-agent-skills-idmp-plugin.html) | 42 | 2 ★ | active |
+| 10 | [Ts Ddd Repository](https://tashan.sh/capability/plugin-llodev-skills-ts-ddd-repository.html) | 42 | 1 marketplaces | active |
+| 11 | [Ts Query Cqrs](https://tashan.sh/capability/plugin-llodev-skills-ts-query-cqrs.html) | 42 | 1 marketplaces | active |
+| 12 | [Sap Hana CLI](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cli.html) | 42 | 1 marketplaces | — |
+| 13 | [Sap Sqlscript](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sqlscript.html) | 42 | 1 marketplaces | — |
+| 14 | [SQLite Npx](https://tashan.sh/capability/pkg-mcp-server-sqlite-npx.html) | 37 | 3k/wk | abandoned |
 | 15 | [Postgres · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-postgres.html) | not scored | 121k/wk | abandoned |
 | 16 | [MySQL](https://tashan.sh/capability/pkg-benborla29-mcp-server-mysql.html) | 69 | 12k/wk | active |
 | 17 | [Infrawise](https://tashan.sh/capability/pkg-infrawise.html) | 66 | 729/wk | active |
 | 18 | [Mssql · vicagbasi](https://tashan.sh/capability/pkg-mssql-mcp-server.html) | 62 | 3k/wk | active |
-| 19 | [SSH Manager](https://tashan.sh/capability/pkg-mcp-ssh-manager.html) | 61 | 596/wk | active |
+| 19 | [SSH Manager](https://tashan.sh/capability/pkg-mcp-ssh-manager.html) | 60 | 596/wk | active |
 | 20 | [Read Only Local Postgres](https://tashan.sh/capability/pkg-hovecapital-read-only-postgres-mcp-server.html) | 60 | 163/wk | active |
 | 21 | [Mssql · BYMCS](https://tashan.sh/capability/pkg-mssql-mcp.html) | 57 | 664/wk | active |
-| 22 | [Infino AI](https://tashan.sh/capability/pkg-infino-ai-mcp-server.html) | 57 | 180/wk | active |
+| 22 | [Infino AI](https://tashan.sh/capability/pkg-infino-ai-mcp-server.html) | 56 | 180/wk | active |
 | 23 | [Postgres · kristofer84](https://tashan.sh/capability/pkg-mcp-postgres.html) | 51 | 525/wk | active |
 | 24 | [DB Access](https://tashan.sh/capability/pkg-rheopyrin-db-access-mcp.html) | 47 | 59/wk | active |
 | 25 | [Postgres](https://tashan.sh/capability/pkg-henkey-postgres-mcp-server.html) | 73 | 2k/wk | active |
@@ -40,7 +40,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Mssql](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-server.html) | 66 | 779/wk | active |
 | 28 | [Read Only Local MySQL](https://tashan.sh/capability/pkg-hovecapital-read-only-mysql-mcp-server.html) | 66 | 203/wk | active |
 | 29 | [DB Connect](https://tashan.sh/capability/pkg-mcp-db-connect.html) | 65 | 769/wk | active |
-| 30 | [PostgreSQL (hardened, read-only)](https://tashan.sh/capability/pkg-postgres-mcp-hardened.html) | 63 | 734/wk | active |
+| 30 | [PostgreSQL (hardened, read-only)](https://tashan.sh/capability/pkg-postgres-mcp-hardened.html) | 62 | 734/wk | active |
 | 31 | [Sqemo](https://tashan.sh/capability/pkg-sqemo-mcp.html) | 62 | 477/wk | active |
 | 32 | [Dm8](https://tashan.sh/capability/pkg-mcp-dm8-server.html) | 62 | 409/wk | active |
 | 33 | [SQLite · jparkerweb](https://tashan.sh/capability/pkg-mcp-sqlite.html) | 60 | 896/wk | active |

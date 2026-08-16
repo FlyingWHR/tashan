@@ -18,16 +18,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Carbone Skill](https://tashan.sh/capability/plugin-carboneio-carbone-skill-carbone-skill.html) | 43 | 4 ★ | active |
 | 6 | [Gogcli MCP Docs](https://tashan.sh/capability/pkg-gogcli-mcp-docs.html) | 69 | 1k/wk | active |
 | 7 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 69 | 1k/wk | active |
-| 8 | [Htmlify](https://tashan.sh/capability/plugin-zakelfassi-htmlify-htmlify.html) | 44 | 13 ★ | active |
-| 9 | [Gezhe](https://tashan.sh/capability/pkg-gezhe-mcp-server.html) | 44 | 2k/wk | active |
-| 10 | [Google Workspace · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-google-workspace-mcp-google-workspace-mcp.html) | 42 | 1 ★ | active |
-| 11 | [Indian Banking Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-banking-drafting-litigation-indian-banking-drafting.html) | 42 | 1 ★ | active |
-| 12 | [Indian Company Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-company-drafting-indian-company-drafting.html) | 42 | 1 ★ | active |
-| 13 | [Indian Consumer Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-consumer-drafting-indian-consumer-drafting.html) | 42 | 1 ★ | active |
-| 14 | [Indian Contracts Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-contracts-drafting-litigation-indian-contracts-drafting.html) | 42 | 1 ★ | active |
-| 15 | [Google Docs · mcp-google-docs](https://tashan.sh/capability/pkg-mcp-google-docs.html) | 38 | 1k/wk | abandoned |
-| 16 | [Contract And Proposal Writer](https://tashan.sh/capability/skill-alirezarezvani-contract-and-proposal-writer.html) | not scored | 1 repos | active |
-| 17 | [Board Deck Builder](https://tashan.sh/capability/skill-alirezarezvani-board-deck-builder.html) | not scored | 1 repos | active |
+| 8 | [Contract And Proposal Writer](https://tashan.sh/capability/skill-alirezarezvani-contract-and-proposal-writer.html) | 48 | 2 repos | active |
+| 9 | [Board Deck Builder](https://tashan.sh/capability/skill-alirezarezvani-board-deck-builder.html) | 48 | 2 repos | active |
+| 10 | [Htmlify](https://tashan.sh/capability/plugin-zakelfassi-htmlify-htmlify.html) | 44 | 13 ★ | active |
+| 11 | [Gezhe](https://tashan.sh/capability/pkg-gezhe-mcp-server.html) | 44 | 2k/wk | active |
+| 12 | [Google Workspace · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-google-workspace-mcp-google-workspace-mcp.html) | 42 | 1 ★ | active |
+| 13 | [Indian Banking Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-banking-drafting-litigation-indian-banking-drafting.html) | 42 | 1 ★ | active |
+| 14 | [Indian Company Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-company-drafting-indian-company-drafting.html) | 42 | 1 ★ | active |
+| 15 | [Indian Consumer Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-consumer-drafting-indian-consumer-drafting.html) | 42 | 1 ★ | active |
+| 16 | [Indian Contracts Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-contracts-drafting-litigation-indian-contracts-drafting.html) | 42 | 1 ★ | active |
+| 17 | [Google Docs · mcp-google-docs](https://tashan.sh/capability/pkg-mcp-google-docs.html) | 38 | 1k/wk | abandoned |
 | 18 | [Markdown Html Orchestrator](https://tashan.sh/capability/skill-alirezarezvani-markdown-html-orchestrator.html) | not scored | 1 repos | active |
 | 19 | [Md Document](https://tashan.sh/capability/skill-alirezarezvani-md-document.html) | not scored | 1 repos | active |
 | 20 | [Md Review](https://tashan.sh/capability/skill-alirezarezvani-md-review.html) | not scored | 1 repos | active |
@@ -43,16 +43,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [Grabzit](https://tashan.sh/capability/pkg-grabzit-mcp-server.html) | 46 | 51/wk | active |
 | 31 | [Truepath PDF](https://tashan.sh/capability/pkg-truepathpdf-mcp-server.html) | 45 | 68/wk | active |
 | 32 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 45 | 49/wk | active |
-| 33 | [PDF It](https://tashan.sh/capability/pkg-pdf-it-mcp.html) | 45 | 39/wk | active |
-| 34 | [MDMagic — Markdown to professional documents](https://tashan.sh/capability/pkg-mdmagic-mcp-server.html) | 44 | 90/wk | active |
+| 33 | [MDMagic — Markdown to professional documents](https://tashan.sh/capability/pkg-mdmagic-mcp-server.html) | 44 | 90/wk | active |
+| 34 | [PDF It](https://tashan.sh/capability/pkg-pdf-it-mcp.html) | 44 | 39/wk | active |
 | 35 | [Pdfgate](https://tashan.sh/capability/pkg-pdfgate-mcp-server.html) | 43 | 94/wk | active |
-| 36 | [Packforai](https://tashan.sh/capability/pkg-packforai-mcp.html) | 43 | 36/wk | active |
-| 37 | [Filetopdf](https://tashan.sh/capability/pkg-filetopdf-mcp.html) | 42 | 75/wk | active |
-| 38 | [Formatix AI](https://tashan.sh/capability/pkg-formatix-ai-mcp.html) | 42 | 74/wk | active |
-| 39 | [Office Oxide](https://tashan.sh/capability/pkg-aimino-opendocswork-mcp.html) | 42 | 58/wk | active |
+| 36 | [Filetopdf](https://tashan.sh/capability/pkg-filetopdf-mcp.html) | 42 | 75/wk | active |
+| 37 | [Formatix AI](https://tashan.sh/capability/pkg-formatix-ai-mcp.html) | 42 | 74/wk | active |
+| 38 | [Office Oxide](https://tashan.sh/capability/pkg-aimino-opendocswork-mcp.html) | 42 | 58/wk | active |
+| 39 | [Packforai](https://tashan.sh/capability/pkg-packforai-mcp.html) | 42 | 36/wk | active |
 | 40 | [Md2word](https://tashan.sh/capability/plugin-cp-yu-md2word-md2word.html) | 41 | 13 ★ | active |
 
-Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/task/document-production.html.
+Showing the top 40 of 61. The full ranked shelf is at https://tashan.sh/task/document-production.html.
 
 ## What these numbers are not
 

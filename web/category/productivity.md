@@ -24,8 +24,8 @@ Ranked by the tashan score
 | 11 | [Mediawiki](https://tashan.sh/capability/pkg-professional-wiki-mediawiki-mcp-server.html) | 73 | 1k/wk | active |
 | 12 | [Local](https://tashan.sh/capability/pkg-local-mcp.html) | 72 | 5k/wk | active |
 | 13 | [Formio](https://tashan.sh/capability/pkg-formio-mcp.html) | 72 | 1k/wk | active |
-| 14 | [Adeu](https://tashan.sh/capability/pkg-adeu-mcp-server.html) | 72 | 635/wk | active |
-| 15 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
+| 14 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 71 | 3k/wk | active |
+| 15 | [Adeu](https://tashan.sh/capability/pkg-adeu-mcp-server.html) | 71 | 635/wk | active |
 | 16 | [Zapier](https://tashan.sh/capability/plugin-zapier-zapier-mcp-zapier.html) | 70 | 363 ★ | active |
 | 17 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 70 | 417 ★ | active |
 | 18 | [Emailmd](https://tashan.sh/capability/pkg-emailmd.html) | 70 | 4k/wk | active |
@@ -34,25 +34,25 @@ Ranked by the tashan score
 | 21 | [Qase Test Management](https://tashan.sh/capability/pkg-qase-mcp-server.html) | 70 | 2k/wk | active |
 | 22 | [Daisyui Blueprint](https://tashan.sh/capability/pkg-daisyui-blueprint.html) | 70 | 2k/wk | active |
 | 23 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 70 | 891/wk | active |
-| 24 | [Toggl 2.0](https://tashan.sh/capability/pkg-togglhq-mcp.html) | 70 | 664/wk | active |
-| 25 | [Apideck](https://tashan.sh/capability/pkg-apideck-mcp.html) | 70 | 353/wk | active |
-| 26 | [Next Lane](https://tashan.sh/capability/pkg-next-lane-mcp.html) | 69 | 2k/wk | active |
-| 27 | [Gogcli](https://tashan.sh/capability/pkg-gogcli-mcp.html) | 69 | 1k/wk | active |
+| 24 | [Apideck](https://tashan.sh/capability/pkg-apideck-mcp.html) | 70 | 353/wk | active |
+| 25 | [Next Lane](https://tashan.sh/capability/pkg-next-lane-mcp.html) | 69 | 2k/wk | active |
+| 26 | [Gogcli](https://tashan.sh/capability/pkg-gogcli-mcp.html) | 69 | 1k/wk | active |
+| 27 | [Toggl 2.0](https://tashan.sh/capability/pkg-togglhq-mcp.html) | 69 | 664/wk | active |
 | 28 | [Gsheets](https://tashan.sh/capability/pkg-mcp-gsheets.html) | 68 | 2k/wk | active |
 | 29 | [Fixmap](https://tashan.sh/capability/pkg-aryam-fixmap.html) | 68 | 2k/wk | active |
-| 30 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 67 | 154 ★ | active |
-| 31 | [Dotagents](https://tashan.sh/capability/plugin-getsentry-dotagents-dotagents.html) | 67 | 217 ★ | active |
+| 30 | [Withone](https://tashan.sh/capability/pkg-withone-mcp.html) | 68 | 604/wk | active |
+| 31 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 67 | 154 ★ | active |
 | 32 | [Campus CLI](https://tashan.sh/capability/pkg-campus-cli.html) | 67 | 1k/wk | active |
 | 33 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 67 | 895/wk | active |
-| 34 | [Flowviant](https://tashan.sh/capability/pkg-flowviant.html) | 67 | 665/wk | active |
-| 35 | [Kaneo](https://tashan.sh/capability/pkg-kaneo-mcp.html) | 67 | 651/wk | active |
-| 36 | [Open Compute](https://tashan.sh/capability/pkg-open-compute-mcp.html) | 66 | 1k/wk | active |
+| 34 | [Kaneo](https://tashan.sh/capability/pkg-kaneo-mcp.html) | 67 | 651/wk | active |
+| 35 | [Dotagents](https://tashan.sh/capability/plugin-getsentry-dotagents-dotagents.html) | 66 | 217 ★ | active |
+| 36 | [Flowviant](https://tashan.sh/capability/pkg-flowviant.html) | 66 | 665/wk | active |
 | 37 | [Omnidim](https://tashan.sh/capability/pkg-omnidim-ai-mcp-server.html) | 66 | 311/wk | active |
 | 38 | [Adbutler](https://tashan.sh/capability/pkg-adbutler-mcp-server.html) | 66 | 236/wk | active |
 | 39 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 65 | 118 ★ | active |
-| 40 | [Wr Admin MCP Connector](https://tashan.sh/capability/pkg-wr-admin-mcp-connector.html) | 65 | 992/wk | active |
+| 40 | [Open Compute](https://tashan.sh/capability/pkg-open-compute-mcp.html) | 65 | 1k/wk | active |
 
-Showing the top 40 of 531. The full ranked shelf is at https://tashan.sh/category/productivity.html.
+Showing the top 40 of 515. The full ranked shelf is at https://tashan.sh/category/productivity.html.
 
 ## What these numbers are not
 

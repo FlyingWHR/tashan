@@ -11,14 +11,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Churn Prevention](https://tashan.sh/capability/skill-alirezarezvani-churn-prevention.html) | 48 | 2 repos | active |
-| 2 | [Voicenter](https://tashan.sh/capability/plugin-voicenterteam-claude-marketplace-voicenter.html) | 48 | 2 ★ | active |
-| 3 | [Corebee](https://tashan.sh/capability/plugin-jonny-1812-corebee-mcp-skills-corebee.html) | 43 | 0 ★ | active |
-| 4 | [Gorgias Automation](https://tashan.sh/capability/skill-composiohq-gorgias-automation.html) | not scored | 1 repos | active |
-| 5 | [Business Growth Skills](https://tashan.sh/capability/skill-alirezarezvani-business-growth-skills.html) | not scored | 1 repos | active |
-| 6 | [Customer Success Manager](https://tashan.sh/capability/skill-alirezarezvani-customer-success-manager.html) | not scored | 1 repos | active |
-| 7 | [Cco Review](https://tashan.sh/capability/skill-alirezarezvani-cco-review.html) | not scored | 1 repos | active |
-| 8 | [Chief Customer Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-customer-officer-advisor.html) | not scored | 1 repos | active |
+| 1 | [Business Growth Skills](https://tashan.sh/capability/skill-alirezarezvani-business-growth-skills.html) | 48 | 2 repos | active |
+| 2 | [Customer Success Manager](https://tashan.sh/capability/skill-alirezarezvani-customer-success-manager.html) | 48 | 2 repos | active |
+| 3 | [Cco Review](https://tashan.sh/capability/skill-alirezarezvani-cco-review.html) | 48 | 2 repos | active |
+| 4 | [Chief Customer Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-customer-officer-advisor.html) | 48 | 2 repos | active |
+| 5 | [Churn Prevention](https://tashan.sh/capability/skill-alirezarezvani-churn-prevention.html) | 48 | 2 repos | active |
+| 6 | [Voicenter](https://tashan.sh/capability/plugin-voicenterteam-claude-marketplace-voicenter.html) | 48 | 2 ★ | active |
+| 7 | [Corebee](https://tashan.sh/capability/plugin-jonny-1812-corebee-mcp-skills-corebee.html) | 43 | 0 ★ | active |
+| 8 | [Gorgias Automation](https://tashan.sh/capability/skill-composiohq-gorgias-automation.html) | not scored | 1 repos | active |
 | 9 | [Help Scout](https://tashan.sh/capability/pkg-help-scout-mcp-server.html) | 64 | 801/wk | active |
 | 10 | [Freescout](https://tashan.sh/capability/pkg-verygoodplugins-mcp-freescout.html) | 49 | 239/wk | active |
 | 11 | [Gorgias](https://tashan.sh/capability/pkg-gorgias-mcp-server.html) | 43 | 766/wk | active |
@@ -27,11 +27,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Eventbrite](https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html) | 56 | 273/wk | active |
 | 15 | [Zd](https://tashan.sh/capability/pkg-zd-mcp-server.html) | 49 | 370/wk | active |
 | 16 | [Sprint · neki-team](https://tashan.sh/capability/pkg-neki-team-sprint-mcp.html) | 38 | 7/wk | active |
-| 17 | [Pylon](https://tashan.sh/capability/pkg-pylon-mcp.html) | 36 | 89/wk | active |
-| 18 | [Quick Desk](https://tashan.sh/capability/pkg-quick-desk-mcp.html) | 55 | 202/wk | active |
-| 19 | [Freshdesk](https://tashan.sh/capability/pkg-freshdesk-mcp.html) | 45 | 170/wk | active |
-| 20 | [Codmir](https://tashan.sh/capability/pkg-codmir-mcp.html) | 42 | 73/wk | active |
-| 21 | [Jitbit Helpdesk](https://tashan.sh/capability/pkg-jitbit-helpdesk-mcp.html) | 37 | 50/wk | active |
+| 17 | [Quick Desk](https://tashan.sh/capability/pkg-quick-desk-mcp.html) | 55 | 202/wk | active |
+| 18 | [Freshdesk](https://tashan.sh/capability/pkg-freshdesk-mcp.html) | 45 | 170/wk | active |
+| 19 | [Codmir](https://tashan.sh/capability/pkg-codmir-mcp.html) | 42 | 73/wk | active |
+| 20 | [Jitbit Helpdesk](https://tashan.sh/capability/pkg-jitbit-helpdesk-mcp.html) | 37 | 50/wk | active |
 
 ## What these numbers are not
 

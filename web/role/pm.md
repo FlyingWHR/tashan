@@ -26,15 +26,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Kiwoom Securities](https://tashan.sh/capability/pkg-kiwoom-mcp-server.html) | 68 | 1k/wk | active |
 | 5 | [Vikunja Fastmcp](https://tashan.sh/capability/pkg-vikunja-fastmcp.html) | 66 | 967/wk | active |
 | 6 | [Maister](https://tashan.sh/capability/plugin-skillpanel-maister-maister.html) | 62 | 191 ★ | active |
-| 7 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 55 | 13 ★ | active |
-| 8 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 54 | 10 ★ | active |
-| 9 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 54 | 9 ★ | active |
-| 10 | [Ideonomy](https://tashan.sh/capability/plugin-latentwill-ideonomy-skill-ideonomy.html) | 53 | 39 ★ | active |
+| 7 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 54 | 10 ★ | active |
+| 8 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 54 | 13 ★ | active |
+| 9 | [Ideonomy](https://tashan.sh/capability/plugin-latentwill-ideonomy-skill-ideonomy.html) | 53 | 39 ★ | active |
+| 10 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 53 | 9 ★ | active |
 | 11 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
 | 12 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 50 | 3 ★ | active |
-| 13 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 49 | 3 ★ | active |
+| 13 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 48 | 3 ★ | active |
 | 14 | [Dominion Flow](https://tashan.sh/capability/plugin-thierryn-fire-flow-dominion-flow.html) | 47 | 77 ★ | active |
-| 15 | [Astravue](https://tashan.sh/capability/plugin-astravueorg-astravue-mcp-server-astravue.html) | 44 | 12 ★ | active |
+| 15 | [Astravue](https://tashan.sh/capability/plugin-astravueorg-astravue-mcp-server-astravue.html) | 43 | 12 ★ | active |
 | 16 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 82 | 51k ★ | active |
 | 17 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 79 | 191k ★ | active |
 | 18 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 79 | 54k ★ | active |
@@ -56,12 +56,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 34 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 63 | 770/wk | active |
 | 35 | [Jira](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 62 | 46 ★ | active |
 | 36 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 62 | 48 ★ | active |
-| 37 | [Gangsta](https://tashan.sh/capability/plugin-kucherenko-gangsta-gangsta.html) | 62 | 67 ★ | active |
-| 38 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
-| 39 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 60 | 28 ★ | active |
-| 40 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 59 | 27 ★ | active |
+| 37 | [Gangsta](https://tashan.sh/capability/plugin-kucherenko-gangsta-gangsta.html) | 61 | 67 ★ | active |
+| 38 | [Draft](https://tashan.sh/capability/plugin-mayurpise-draft-draft.html) | 59 | 39 ★ | active |
+| 39 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 59 | 18 ★ | active |
+| 40 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 59 | 302 ★ | active |
 
-Showing the top 40 of 270. The full ranked shelf is at https://tashan.sh/role/pm.html.
+Showing the top 40 of 267. The full ranked shelf is at https://tashan.sh/role/pm.html.
 
 ## What these numbers are not
 

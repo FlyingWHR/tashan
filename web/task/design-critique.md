@@ -12,12 +12,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 82 | 51k ★ | active |
-| 2 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 60 | 28 ★ | active |
-| 3 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 59 | 302 ★ | active |
+| 2 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 59 | 302 ★ | active |
+| 3 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 59 | 28 ★ | active |
 | 4 | [Debate](https://tashan.sh/capability/plugin-agent-sh-debate-debate.html) | 49 | 3 ★ | active |
 | 5 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 52 | 9 ★ | active |
 | 6 | [Frank Grimes](https://tashan.sh/capability/plugin-misfitdev-claude-plugins-frank-grimes.html) | 50 | 2 ★ | active |
-| 7 | [Apple Hig Expert](https://tashan.sh/capability/skill-alirezarezvani-apple-hig-expert.html) | not scored | 1 repos | active |
+| 7 | [Apple Hig Expert](https://tashan.sh/capability/skill-alirezarezvani-apple-hig-expert.html) | 48 | 2 repos | active |
 
 ## What these numbers are not
 

@@ -11,20 +11,20 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Cv](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-cv.html) | 42 | 1 marketplaces | active |
-| 2 | [LinkedIn Apply](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-apply.html) | 42 | 1 marketplaces | active |
-| 3 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | not scored | 1 repos | active |
-| 4 | [Founder Coach](https://tashan.sh/capability/skill-alirezarezvani-founder-coach.html) | not scored | 1 repos | active |
-| 5 | [Meeting Analyzer](https://tashan.sh/capability/skill-alirezarezvani-meeting-analyzer.html) | not scored | 1 repos | active |
+| 1 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | 48 | 2 repos | active |
+| 2 | [Founder Coach](https://tashan.sh/capability/skill-alirezarezvani-founder-coach.html) | 48 | 2 repos | active |
+| 3 | [Meeting Analyzer](https://tashan.sh/capability/skill-alirezarezvani-meeting-analyzer.html) | 48 | 2 repos | active |
+| 4 | [Cv](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-cv.html) | 42 | 1 marketplaces | active |
+| 5 | [LinkedIn Apply](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-apply.html) | 42 | 1 marketplaces | active |
 | 6 | [JobGPT - Job Search Automation & Auto Apply](https://tashan.sh/capability/pkg-jobgpt-mcp-server.html) | 39 | 84/wk | active |
 | 7 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 70 | 3k/wk | active |
 | 8 | [Jobo Job Search](https://tashan.sh/capability/pkg-jobo-job-search-mcp.html) | 56 | 300/wk | active |
 | 9 | [JobYap Job Search](https://tashan.sh/capability/pkg-jobyap-mcp.html) | 52 | 167/wk | active |
-| 10 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 46 | 43/wk | active |
-| 11 | [Delx](https://tashan.sh/capability/pkg-delx-mcp-server.html) | 61 | 275/wk | active |
+| 10 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 45 | 43/wk | active |
+| 11 | [Delx](https://tashan.sh/capability/pkg-delx-mcp-server.html) | 60 | 275/wk | active |
 | 12 | [Career Compass](https://tashan.sh/capability/pkg-career-compass-mcp.html) | 55 | 165/wk | active |
 | 13 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 54 | 153/wk | active |
-| 14 | [Mail Muncher](https://tashan.sh/capability/plugin-craigjmidwinter-mail-muncher-mail-muncher.html) | 46 | 3 ★ | active |
+| 14 | [Mail Muncher](https://tashan.sh/capability/plugin-craigjmidwinter-mail-muncher-mail-muncher.html) | 45 | 3 ★ | active |
 | 15 | [Cv Tailor](https://tashan.sh/capability/pkg-cv-tailor.html) | 44 | 21/wk | active |
 
 ## What these numbers are not

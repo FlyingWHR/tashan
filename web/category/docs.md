@@ -11,7 +11,7 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 96 | 619k/wk | active |
+| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 95 | 619k/wk | active |
 | 2 | [Notion](https://tashan.sh/capability/pkg-notionhq-notion-mcp-server.html) | 89 | 193k/wk | active |
 | 3 | [Obsidian](https://tashan.sh/capability/pkg-obsidian-mcp-server.html) | 81 | 6k/wk | active |
 | 4 | [Context7 · upstash](https://tashan.sh/capability/plugin-upstash-context7-context7.html) | 78 | 60k ★ | active |
@@ -32,10 +32,10 @@ Ranked by the tashan score
 | 19 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 69 | 2k/wk | active |
 | 20 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 69 | 2k/wk | active |
 | 21 | [Doccupine](https://tashan.sh/capability/pkg-doccupine.html) | 69 | 2k/wk | active |
-| 22 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 68 | 8k/wk | active |
-| 23 | [Refacil Pay](https://tashan.sh/capability/pkg-refacil-pay-mcp.html) | 68 | 152/wk | active |
-| 24 | [Biorxiv](https://tashan.sh/capability/pkg-cyanheads-biorxiv-mcp-server.html) | 67 | 791/wk | active |
-| 25 | [AI Doc Gen](https://tashan.sh/capability/plugin-divar-ir-ai-doc-gen-ai-doc-gen.html) | 66 | 747 ★ | active |
+| 22 | [Refacil Pay](https://tashan.sh/capability/pkg-refacil-pay-mcp.html) | 68 | 152/wk | active |
+| 23 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 67 | 8k/wk | active |
+| 24 | [AI Doc Gen](https://tashan.sh/capability/plugin-divar-ir-ai-doc-gen-ai-doc-gen.html) | 66 | 747 ★ | active |
+| 25 | [Biorxiv](https://tashan.sh/capability/pkg-cyanheads-biorxiv-mcp-server.html) | 66 | 791/wk | active |
 | 26 | [Graphjin](https://tashan.sh/capability/pkg-graphjin.html) | 66 | 604/wk | active |
 | 27 | [Obsidian · StevenStavrakis](https://tashan.sh/capability/pkg-obsidian-mcp.html) | 65 | 4k/wk | stable |
 | 28 | [Claw Hwp](https://tashan.sh/capability/plugin-dohyun468-claw-hwp-claw-hwp.html) | 65 | 38 ★ | active |
@@ -44,15 +44,15 @@ Ranked by the tashan score
 | 31 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 65 | 578/wk | active |
 | 32 | [Siftable](https://tashan.sh/capability/pkg-siftable-mcp-server.html) | 65 | 422/wk | active |
 | 33 | [Scholar Feed](https://tashan.sh/capability/pkg-scholar-feed-mcp.html) | 64 | 660/wk | active |
-| 34 | [Carbone](https://tashan.sh/capability/pkg-carbone-mcp.html) | 64 | 152/wk | active |
-| 35 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 63 | 238 ★ | active |
+| 34 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 63 | 238 ★ | active |
+| 35 | [Carbone](https://tashan.sh/capability/pkg-carbone-mcp.html) | 63 | 152/wk | active |
 | 36 | [Northwestern University Libraries Digital Collections API](https://tashan.sh/capability/pkg-nulib-dc-api-mcp.html) | 63 | 95/wk | active |
-| 37 | [Yandex Audience](https://tashan.sh/capability/pkg-mcp-yandex-audience.html) | 61 | 447/wk | active |
-| 38 | [Mssql Writer](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-writer.html) | 61 | 425/wk | active |
-| 39 | [Scholar Sidekick](https://tashan.sh/capability/pkg-scholar-sidekick-mcp.html) | 61 | 388/wk | active |
-| 40 | [Docs](https://tashan.sh/capability/pkg-acta-team-docs-mcp.html) | 61 | 328/wk | active |
+| 37 | [Mssql Writer](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-writer.html) | 61 | 425/wk | active |
+| 38 | [Scholar Sidekick](https://tashan.sh/capability/pkg-scholar-sidekick-mcp.html) | 61 | 388/wk | active |
+| 39 | [Docs](https://tashan.sh/capability/pkg-acta-team-docs-mcp.html) | 61 | 328/wk | active |
+| 40 | [Kusto](https://tashan.sh/capability/pkg-kusto-mcp.html) | 61 | 215/wk | active |
 
-Showing the top 40 of 372. The full ranked shelf is at https://tashan.sh/category/docs.html.
+Showing the top 40 of 354. The full ranked shelf is at https://tashan.sh/category/docs.html.
 
 ## What these numbers are not
 

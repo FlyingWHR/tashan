@@ -26,24 +26,24 @@ Ranked by the tashan score
 | 13 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
 | 14 | [Sciverse](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 68 | 1k/wk | active |
 | 15 | [Searxng](https://tashan.sh/capability/pkg-kevinwatt-mcp-server-searxng.html) | 67 | 161/wk | active |
-| 16 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 67 | 78 ★ | active |
-| 17 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 67 | 911/wk | active |
-| 18 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 66 | 433 ★ | active |
+| 16 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 67 | 911/wk | active |
+| 17 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 66 | 433 ★ | active |
+| 18 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 66 | 78 ★ | active |
 | 19 | [Search1api](https://tashan.sh/capability/pkg-search1api-mcp.html) | 66 | 1k/wk | active |
 | 20 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 66 | 883/wk | active |
-| 21 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 65 | 50 ★ | active |
-| 22 | [Brave Search Skills](https://tashan.sh/capability/plugin-brave-brave-search-skills-brave-search-skills.html) | 65 | 161 ★ | active |
-| 23 | [Gongio](https://tashan.sh/capability/pkg-gongio-mcp.html) | 65 | 1k/wk | active |
-| 24 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 65 | 504/wk | active |
+| 21 | [Brave Search Skills](https://tashan.sh/capability/plugin-brave-brave-search-skills-brave-search-skills.html) | 65 | 161 ★ | active |
+| 22 | [Gongio](https://tashan.sh/capability/pkg-gongio-mcp.html) | 65 | 1k/wk | active |
+| 23 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 65 | 504/wk | active |
+| 24 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 64 | 50 ★ | active |
 | 25 | [Help Scout](https://tashan.sh/capability/pkg-help-scout-mcp-server.html) | 64 | 801/wk | active |
 | 26 | [Clipy](https://tashan.sh/capability/pkg-clipy-mcp.html) | 64 | 600/wk | active |
 | 27 | [Linkup](https://tashan.sh/capability/pkg-linkup-mcp-server.html) | 64 | 535/wk | active |
 | 28 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 64 | 436/wk | active |
 | 29 | [Autosearch](https://tashan.sh/capability/plugin-0xmariowu-autosearch-autosearch.html) | 63 | 41 ★ | active |
-| 30 | [Libraryofcongress](https://tashan.sh/capability/pkg-mcp-libraryofcongress.html) | 63 | 647/wk | active |
-| 31 | [Leadbay](https://tashan.sh/capability/pkg-leadbay-mcp.html) | 63 | 397/wk | active |
-| 32 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 63 | 347/wk | active |
-| 33 | [Allmcps](https://tashan.sh/capability/pkg-allmcps-server.html) | 62 | 772/wk | active |
+| 30 | [Leadbay](https://tashan.sh/capability/pkg-leadbay-mcp.html) | 63 | 397/wk | active |
+| 31 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 63 | 347/wk | active |
+| 32 | [Allmcps](https://tashan.sh/capability/pkg-allmcps-server.html) | 62 | 772/wk | active |
+| 33 | [Libraryofcongress](https://tashan.sh/capability/pkg-mcp-libraryofcongress.html) | 62 | 647/wk | active |
 | 34 | [Fetch](https://tashan.sh/capability/pkg-yawlabs-fetch-mcp.html) | 62 | 529/wk | active |
 | 35 | [Yandex Wordstat](https://tashan.sh/capability/pkg-mcp-yandex-wordstat.html) | 62 | 468/wk | active |
 | 36 | [Dossier Research](https://tashan.sh/capability/pkg-dossier-research-mcp.html) | 62 | 430/wk | active |
@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Airweave MCP Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 61 | 1k/wk | active |
 | 40 | [Gitpin](https://tashan.sh/capability/pkg-gitpin.html) | 61 | 776/wk | active |
 
-Showing the top 40 of 286. The full ranked shelf is at https://tashan.sh/category/search.html.
+Showing the top 40 of 267. The full ranked shelf is at https://tashan.sh/category/search.html.
 
 ## What these numbers are not
 

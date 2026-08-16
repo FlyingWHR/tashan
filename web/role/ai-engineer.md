@@ -10,7 +10,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Agent development** — [Agent Afk](https://tashan.sh/capability/pkg-agent-afk.html) · tashan score 74
-- **Retrieval systems** — [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) · tashan score 96
+- **Retrieval systems** — [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) · tashan score 95
 - **Prompt engineering** — [Context Mode](https://tashan.sh/capability/plugin-mksglu-context-mode-context-mode.html) · tashan score 79
 - **Model evaluation** — [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) · tashan score 79
 
@@ -18,19 +18,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 96 | 619k/wk | active |
+| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 95 | 619k/wk | active |
 | 2 | [Context Mode](https://tashan.sh/capability/plugin-mksglu-context-mode-context-mode.html) | 79 | 19k ★ | active |
 | 3 | [Agent Afk](https://tashan.sh/capability/pkg-agent-afk.html) | 74 | 14k/wk | active |
 | 4 | [Genshijin](https://tashan.sh/capability/plugin-interfacex-co-jp-genshijin-genshijin.html) | 69 | 287 ★ | active |
 | 5 | [Reprompter](https://tashan.sh/capability/plugin-aytuncyildizli-reprompter-reprompter.html) | 67 | 111 ★ | active |
 | 6 | [Adcp Client](https://tashan.sh/capability/plugin-adcontextprotocol-adcp-client-adcp-client.html) | 61 | 18 ★ | active |
 | 7 | [Inkbox](https://tashan.sh/capability/plugin-inkbox-ai-inkbox-inkbox.html) | 60 | 33 ★ | active |
-| 8 | [Statsclaw](https://tashan.sh/capability/plugin-statsclaw-statsclaw-statsclaw.html) | 58 | 87 ★ | active |
-| 9 | [Cxpak](https://tashan.sh/capability/plugin-barnett-studios-cxpak-cxpak.html) | 58 | 19 ★ | active |
-| 10 | [Writ](https://tashan.sh/capability/plugin-infinri-writ-writ.html) | 55 | 163 ★ | active |
-| 11 | [Claude Relay](https://tashan.sh/capability/plugin-innestic-claude-relay-claude-relay.html) | 54 | 62 ★ | active |
+| 8 | [Cxpak](https://tashan.sh/capability/plugin-barnett-studios-cxpak-cxpak.html) | 58 | 19 ★ | active |
+| 9 | [Statsclaw](https://tashan.sh/capability/plugin-statsclaw-statsclaw-statsclaw.html) | 57 | 87 ★ | active |
+| 10 | [Claude Relay](https://tashan.sh/capability/plugin-innestic-claude-relay-claude-relay.html) | 54 | 62 ★ | active |
+| 11 | [Writ](https://tashan.sh/capability/plugin-infinri-writ-writ.html) | 54 | 163 ★ | active |
 | 12 | [Twining](https://tashan.sh/capability/plugin-daveangulo-twining-mcp-twining.html) | 53 | 7 ★ | active |
-| 13 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
+| 13 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 52 | 7 ★ | active |
 | 14 | [Praxis](https://tashan.sh/capability/plugin-xd4o-praxis-praxis.html) | 49 | 27 ★ | active |
 | 15 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 49 | 12 ★ | active |
 | 16 | [Qmd Ja](https://tashan.sh/capability/plugin-joycodetech-qmd-ja-qmd-ja.html) | 49 | 3 ★ | active |
@@ -42,15 +42,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) | 81 | 93k ★ | active |
 | 23 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 79 | 62k ★ | active |
 | 24 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 79 | 17k ★ | active |
-| 25 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 78 | 6k ★ | active |
+| 25 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 77 | 6k ★ | active |
 | 26 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 76 | 9k ★ | active |
 | 27 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 74 | 13k/wk | active |
 | 28 | [Create MCP Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 74 | 1k/wk | active |
 | 29 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 72 | 426 ★ | active |
-| 30 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 70 | 482 ★ | active |
-| 31 | [Keryx](https://tashan.sh/capability/pkg-keryx.html) | 70 | 2k/wk | active |
-| 32 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 69 | 93 ★ | active |
-| 33 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 69 | 2k/wk | active |
+| 30 | [Keryx](https://tashan.sh/capability/pkg-keryx.html) | 70 | 2k/wk | active |
+| 31 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 69 | 482 ★ | active |
+| 32 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 69 | 2k/wk | active |
+| 33 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 68 | 93 ★ | active |
 | 34 | [Evalview](https://tashan.sh/capability/plugin-hidai25-eval-view-evalview.html) | 66 | 124 ★ | active |
 | 35 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 65 | 68 ★ | active |
 | 36 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 65 | 452 ★ | active |
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 64 | 37 ★ | active |
 | 40 | [Clawcode](https://tashan.sh/capability/plugin-crisandrews-clawcode-clawcode.html) | 63 | 61 ★ | active |
 
-Showing the top 40 of 533. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
+Showing the top 40 of 528. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
 
 ## What these numbers are not
 

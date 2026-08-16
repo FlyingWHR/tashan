@@ -13,7 +13,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Freightutils](https://tashan.sh/capability/pkg-freightutils-mcp.html) | 66 | 776/wk | active |
 | 2 | [Fluf](https://tashan.sh/capability/pkg-fluf-mcp.html) | 62 | 908/wk | active |
-| 3 | [Procurement Optimizer](https://tashan.sh/capability/skill-alirezarezvani-procurement-optimizer.html) | not scored | 1 repos | active |
+| 3 | [Procurement Optimizer](https://tashan.sh/capability/skill-alirezarezvani-procurement-optimizer.html) | 48 | 2 repos | active |
 | 4 | [Dependency Fitness](https://tashan.sh/capability/pkg-dependency-fitness-mcp.html) | 41 | 65/wk | active |
 | 5 | [GitHub Security](https://tashan.sh/capability/pkg-github-security-mcp.html) | 37 | 626/wk | active |
 | 6 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 59 | 302/wk | active |
@@ -21,11 +21,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Daiso](https://tashan.sh/capability/pkg-daiso.html) | 56 | 281/wk | active |
 | 9 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 56 | 177/wk | active |
 | 10 | [3DPACK.ING — Container & Truck Load Planning](https://tashan.sh/capability/pkg-3dpacking-mcp-server.html) | 55 | 254/wk | active |
-| 11 | [Shopify](https://tashan.sh/capability/pkg-aiwerk-mcp-server-shopify.html) | 44 | 60/wk | active |
+| 11 | [Shopify](https://tashan.sh/capability/pkg-aiwerk-mcp-server-shopify.html) | 43 | 60/wk | active |
 | 12 | [Airtreks](https://tashan.sh/capability/pkg-airtreks-mcp.html) | 40 | 62/wk | active |
-| 13 | [Gammainfra](https://tashan.sh/capability/pkg-gammainfra-mcp-server.html) | 39 | 75/wk | active |
+| 13 | [Gammainfra](https://tashan.sh/capability/pkg-gammainfra-mcp-server.html) | 38 | 75/wk | active |
 | 14 | [Package Intel](https://tashan.sh/capability/pkg-package-intel-mcp.html) | 61 | 592/wk | active |
-| 15 | [Calllint](https://tashan.sh/capability/pkg-calllint.html) | 52 | 53/wk | active |
+| 15 | [Calllint](https://tashan.sh/capability/pkg-calllint.html) | 51 | 53/wk | active |
 | 16 | [Frugal · brainsparker](https://tashan.sh/capability/pkg-frugal-mcp.html) | 49 | 68/wk | active |
 | 17 | [Calllint · calllint-mcp](https://tashan.sh/capability/pkg-calllint-mcp.html) | 47 | 75/wk | active |
 | 18 | [Pkgpulse](https://tashan.sh/capability/pkg-pkgpulse-mcp.html) | 40 | 13/wk | active |

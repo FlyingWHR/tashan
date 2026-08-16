@@ -25,10 +25,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 60 | 23 ★ | active |
 | 7 | [Agentic Security](https://tashan.sh/capability/plugin-clear-capabilities-agentic-security-agentic-security.html) | 52 | 73 ★ | active |
 | 8 | [Jfrog](https://tashan.sh/capability/plugin-jfrog-claude-plugin-jfrog.html) | 51 | 4 ★ | active |
-| 9 | [Osint](https://tashan.sh/capability/pkg-osint-mcp-server.html) | 40 | 857/wk | active |
+| 9 | [Osint](https://tashan.sh/capability/pkg-osint-mcp-server.html) | 39 | 857/wk | active |
 | 10 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 73 | 2k/wk | active |
-| 11 | [NPM Sentinel](https://tashan.sh/capability/pkg-nekzus-mcp-server.html) | 71 | 4k/wk | active |
-| 12 | [Shieldcortex](https://tashan.sh/capability/pkg-shieldcortex.html) | 71 | 3k/wk | active |
+| 11 | [Shieldcortex](https://tashan.sh/capability/pkg-shieldcortex.html) | 71 | 3k/wk | active |
+| 12 | [NPM Sentinel](https://tashan.sh/capability/pkg-nekzus-mcp-server.html) | 70 | 4k/wk | active |
 | 13 | [AI Agent Firewall](https://tashan.sh/capability/pkg-fidacy-mcp.html) | 70 | 2k/wk | active |
 | 14 | [Sonarqube](https://tashan.sh/capability/plugin-sonarsource-sonarqube-agent-plugins-sonarqube.html) | 69 | 98 ★ | active |
 | 15 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 67 | 326 ★ | active |
@@ -58,7 +58,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 59 | 43 ★ | active |
 | 40 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 59 | 37 ★ | active |
 
-Showing the top 40 of 197. The full ranked shelf is at https://tashan.sh/role/security.html.
+Showing the top 40 of 195. The full ranked shelf is at https://tashan.sh/role/security.html.
 
 ## What these numbers are not
 

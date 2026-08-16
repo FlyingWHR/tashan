@@ -17,13 +17,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 45 | 26 ★ | active |
 | 5 | [Gogcli MCP Classroom](https://tashan.sh/capability/pkg-gogcli-mcp-classroom.html) | 69 | 1k/wk | active |
 | 6 | [Claude Education Skills Library](https://tashan.sh/capability/plugin-garethmanning-claude-education-skills-claude-education-skills-library.html) | 64 | 471 ★ | active |
-| 7 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 48 | 2 repos | active |
-| 8 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 48 | 2 repos | active |
-| 9 | [Learning Output Style](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-learning-output-style.html) | 42 | 1 marketplaces | — |
-| 10 | [Claude Coach](https://tashan.sh/capability/skill-alirezarezvani-claude-coach.html) | not scored | 1 repos | active |
-| 11 | [Syllabus](https://tashan.sh/capability/skill-alirezarezvani-syllabus.html) | not scored | 1 repos | active |
+| 7 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 53 | 4 repos | active |
+| 8 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 50 | 3 repos | active |
+| 9 | [Syllabus](https://tashan.sh/capability/skill-alirezarezvani-syllabus.html) | 48 | 2 repos | active |
+| 10 | [Learning Output Style](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-learning-output-style.html) | 42 | 1 marketplaces | — |
+| 11 | [Claude Coach](https://tashan.sh/capability/skill-alirezarezvani-claude-coach.html) | not scored | 1 repos | active |
 | 12 | [Hr](https://tashan.sh/capability/pkg-autostackup-hr.html) | 39 | 30/wk | active |
-| 13 | [StudioMeyer Academy](https://tashan.sh/capability/pkg-mcp-academy.html) | 52 | 53/wk | active |
+| 13 | [StudioMeyer Academy](https://tashan.sh/capability/pkg-mcp-academy.html) | 60 | 330/wk | active |
 
 ## What these numbers are not
 

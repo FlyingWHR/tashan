@@ -18,10 +18,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 54 | 13 ★ | active |
 | 6 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 52 | 6 ★ | active |
 | 7 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 65 | 90 ★ | active |
-| 8 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 48 | 2 repos | active |
-| 9 | [Dadata Ru Automation](https://tashan.sh/capability/skill-composiohq-dadata-ru-automation.html) | not scored | 1 repos | active |
-| 10 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | not scored | 1 repos | active |
-| 11 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | not scored | 1 repos | active |
+| 8 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | 48 | 2 repos | active |
+| 9 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | 48 | 2 repos | active |
+| 10 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 48 | 2 repos | active |
+| 11 | [Dadata Ru Automation](https://tashan.sh/capability/skill-composiohq-dadata-ru-automation.html) | not scored | 1 repos | active |
 | 12 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 60 | 25 ★ | active |
 | 13 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 58 | 32 ★ | active |
 

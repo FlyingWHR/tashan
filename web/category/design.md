@@ -30,29 +30,29 @@ Ranked by the tashan score
 | 17 | [Unreal Engine Skills For Claude Code](https://tashan.sh/capability/plugin-epicgames-unreal-engine-skills-for-claude-code-plugin-unreal-engine-skills-for-claude-code.html) | 69 | 157 ★ | active |
 | 18 | [Comfyui Custom Nodes](https://tashan.sh/capability/plugin-jtydhr88-comfyui-custom-node-skills-comfyui-custom-nodes.html) | 69 | 257 ★ | active |
 | 19 | [Factory](https://tashan.sh/capability/plugin-hmlongco-factory-factory.html) | 69 | 3k ★ | active |
-| 20 | [Tokportal](https://tashan.sh/capability/pkg-tokportal-mcp.html) | 69 | 2k/wk | active |
-| 21 | [Sapiens Sintéticos](https://tashan.sh/capability/pkg-sapiens-mcp.html) | 69 | 2k/wk | active |
-| 22 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
-| 23 | [Uxloom](https://tashan.sh/capability/pkg-uxloom.html) | 69 | 2k/wk | active |
-| 24 | [Figma Relai](https://tashan.sh/capability/pkg-figma-relai.html) | 69 | 2k/wk | active |
-| 25 | [Codefizz Editor Agent](https://tashan.sh/capability/pkg-codefizz-editor-agent.html) | 69 | 1k/wk | active |
-| 26 | [Customize Agent](https://tashan.sh/capability/pkg-customize-agent.html) | 69 | 1k/wk | active |
-| 27 | [Runline](https://tashan.sh/capability/pkg-runline.html) | 69 | 1k/wk | active |
-| 28 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 69 | 1k/wk | active |
-| 29 | [Dgmo](https://tashan.sh/capability/pkg-diagrammo-dgmo-mcp.html) | 69 | 1k/wk | active |
-| 30 | [Frontmcp](https://tashan.sh/capability/pkg-frontmcp.html) | 69 | 1k/wk | active |
-| 31 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
-| 32 | [Myoperator](https://tashan.sh/capability/pkg-myoperator-mcp.html) | 69 | 506/wk | active |
-| 33 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 69 | 305/wk | active |
-| 34 | [Figma · planetabhi](https://tashan.sh/capability/pkg-figma-mcp-server.html) | 68 | 2k/wk | active |
-| 35 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 68 | 2k/wk | active |
-| 36 | [Memi Design](https://tashan.sh/capability/pkg-memi-design-cli.html) | 68 | 1k/wk | active |
+| 20 | [Sapiens Sintéticos](https://tashan.sh/capability/pkg-sapiens-mcp.html) | 69 | 2k/wk | active |
+| 21 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
+| 22 | [Uxloom](https://tashan.sh/capability/pkg-uxloom.html) | 69 | 2k/wk | active |
+| 23 | [Figma Relai](https://tashan.sh/capability/pkg-figma-relai.html) | 69 | 2k/wk | active |
+| 24 | [Codefizz Editor Agent](https://tashan.sh/capability/pkg-codefizz-editor-agent.html) | 69 | 1k/wk | active |
+| 25 | [Customize Agent](https://tashan.sh/capability/pkg-customize-agent.html) | 69 | 1k/wk | active |
+| 26 | [Runline](https://tashan.sh/capability/pkg-runline.html) | 69 | 1k/wk | active |
+| 27 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 69 | 1k/wk | active |
+| 28 | [Dgmo](https://tashan.sh/capability/pkg-diagrammo-dgmo-mcp.html) | 69 | 1k/wk | active |
+| 29 | [Frontmcp](https://tashan.sh/capability/pkg-frontmcp.html) | 69 | 1k/wk | active |
+| 30 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
+| 31 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 69 | 305/wk | active |
+| 32 | [Tokportal](https://tashan.sh/capability/pkg-tokportal-mcp.html) | 68 | 2k/wk | active |
+| 33 | [Figma · planetabhi](https://tashan.sh/capability/pkg-figma-mcp-server.html) | 68 | 2k/wk | active |
+| 34 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 68 | 2k/wk | active |
+| 35 | [Memi Design](https://tashan.sh/capability/pkg-memi-design-cli.html) | 68 | 1k/wk | active |
+| 36 | [Myoperator](https://tashan.sh/capability/pkg-myoperator-mcp.html) | 68 | 506/wk | active |
 | 37 | [Elements](https://tashan.sh/capability/pkg-nvidia-elements-cli.html) | 68 | 436/wk | active |
 | 38 | [Medusa Dev](https://tashan.sh/capability/plugin-medusajs-medusa-claude-plugins-medusa-dev.html) | 67 | 202 ★ | active |
 | 39 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 67 | 137 ★ | active |
-| 40 | [Identityforge](https://tashan.sh/capability/pkg-identityforge.html) | 67 | 1k/wk | active |
+| 40 | [Decantr](https://tashan.sh/capability/pkg-decantr-mcp-server.html) | 67 | 737/wk | active |
 
-Showing the top 40 of 894. The full ranked shelf is at https://tashan.sh/category/design.html.
+Showing the top 40 of 885. The full ranked shelf is at https://tashan.sh/category/design.html.
 
 ## What these numbers are not
 

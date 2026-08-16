@@ -9,7 +9,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 ## The short answer
 
-- **Database access** — [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) · tashan score 86
+- **Database access** — [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) · tashan score 85
 - **Dashboards and reporting** — [Powerbi Modeling](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp.html) · tashan score 75
 - **Exploratory data analysis** — [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) · tashan score 71
 
@@ -17,13 +17,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 86 | 206k/wk | active |
+| 1 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 85 | 73k/wk | active |
 | 2 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 60 | 523 ★ | active |
 | 3 | [Spotify Ads API](https://tashan.sh/capability/plugin-spotify-ads-claude-plugin-spotify-ads-api.html) | 59 | 14 ★ | active |
-| 4 | [Statsclaw](https://tashan.sh/capability/plugin-statsclaw-statsclaw-statsclaw.html) | 58 | 87 ★ | active |
-| 5 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 57 | 18 ★ | active |
+| 4 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 57 | 18 ★ | active |
+| 5 | [Statsclaw](https://tashan.sh/capability/plugin-statsclaw-statsclaw-statsclaw.html) | 57 | 87 ★ | active |
 | 6 | [Supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) | 95 | 78k/wk | active |
-| 7 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 83 | 42k/wk | active |
+| 7 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 82 | 42k/wk | active |
 | 8 | [Powerbi Modeling](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp.html) | 75 | 13k/wk | active |
 | 9 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 71 | 558 ★ | active |
 | 10 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 67 | 64 ★ | active |
@@ -38,7 +38,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 19 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 52 | 12 ★ | active |
 | 20 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 52 | 6 ★ | active |
 | 21 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 50 | 59 ★ | active |
-| 22 | [Teable](https://tashan.sh/capability/pkg-teable-mcp.html) | 49 | 1k/wk | active |
+| 22 | [Teable](https://tashan.sh/capability/pkg-teable-mcp.html) | 48 | 1k/wk | active |
 | 23 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 48 | 240 ★ | active |
 | 24 | [Qmt Skills](https://tashan.sh/capability/plugin-dfkai-xtquantai-qmt-skills.html) | 47 | 151 ★ | active |
 | 25 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 44 | 3 ★ | active |
@@ -47,18 +47,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 70 | 417 ★ | active |
 | 29 | [NexQL Postgres](https://tashan.sh/capability/pkg-nexql-mcp.html) | 67 | 1k/wk | active |
 | 30 | [Chart](https://tashan.sh/capability/pkg-bicharts-chart-mcp.html) | 65 | 1k/wk | active |
-| 31 | [Pptx](https://tashan.sh/capability/skill-anthropics-pptx.html) | 49 | 2 repos | active |
-| 32 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 48 | 2 ★ | active |
-| 33 | [Ab Test Setup](https://tashan.sh/capability/skill-alirezarezvani-ab-test-setup.html) | 48 | 2 repos | active |
-| 34 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 48 | 2 repos | active |
-| 35 | [Paid Ads](https://tashan.sh/capability/skill-alirezarezvani-paid-ads.html) | 48 | 2 repos | active |
-| 36 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
-| 37 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
-| 38 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 46 | 0 ★ | active |
-| 39 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 46 | 1 ★ | active |
-| 40 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 44 | 1 ★ | active |
+| 31 | [Session Report](https://tashan.sh/capability/skill-anthropics-session-report.html) | 49 | 2 repos | active |
+| 32 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | 48 | 2 repos | active |
+| 33 | [SQL Database Assistant](https://tashan.sh/capability/skill-alirezarezvani-sql-database-assistant.html) | 48 | 2 repos | active |
+| 34 | [Campaign Analytics](https://tashan.sh/capability/skill-alirezarezvani-campaign-analytics.html) | 48 | 2 repos | active |
+| 35 | [Social Media Analyzer](https://tashan.sh/capability/skill-alirezarezvani-social-media-analyzer.html) | 48 | 2 repos | active |
+| 36 | [Product Analytics](https://tashan.sh/capability/skill-alirezarezvani-product-analytics.html) | 48 | 2 repos | active |
+| 37 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 48 | 2 ★ | active |
+| 38 | [Senior Data Scientist](https://tashan.sh/capability/skill-alirezarezvani-senior-data-scientist.html) | 48 | 2 repos | active |
+| 39 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | 48 | 2 repos | active |
+| 40 | [Senior Computer Vision](https://tashan.sh/capability/skill-alirezarezvani-senior-computer-vision.html) | 48 | 2 repos | active |
 
-Showing the top 40 of 173. The full ranked shelf is at https://tashan.sh/role/data-analyst.html.
+Showing the top 40 of 171. The full ranked shelf is at https://tashan.sh/role/data-analyst.html.
 
 ## What these numbers are not
 

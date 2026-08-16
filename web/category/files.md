@@ -11,7 +11,7 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Filesystem](https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html) | 94 | 482k/wk | active |
+| 1 | [Filesystem](https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html) | 93 | 482k/wk | active |
 | 2 | [Memory](https://tashan.sh/capability/pkg-modelcontextprotocol-server-memory.html) | 93 | 108k/wk | active |
 | 3 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 84 | 75k/wk | active |
 | 4 | [Mempalace](https://tashan.sh/capability/plugin-mempalace-mempalace-mempalace.html) | 81 | 58k ★ | active |
@@ -41,7 +41,7 @@ Ranked by the tashan score
 | 28 | [Google Tag Manager](https://tashan.sh/capability/pkg-google-tag-manager-mcp-server.html) | 51 | 64/wk | active |
 | 29 | [Remote Filesystem](https://tashan.sh/capability/pkg-remote-filesystem-mcp-server.html) | 50 | 236/wk | active |
 | 30 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 49 | 12 ★ | active |
-| 31 | [Proxmox](https://tashan.sh/capability/pkg-proxmox-mcp-server.html) | 47 | 179/wk | active |
+| 31 | [Proxmox](https://tashan.sh/capability/pkg-proxmox-mcp-server.html) | 46 | 179/wk | active |
 | 32 | [Awesome Mineflayer](https://tashan.sh/capability/pkg-awesome-mineflayer-mcp.html) | 46 | 66/wk | active |
 | 33 | [Teach](https://tashan.sh/capability/skill-gustavo-santos-swe-teach.html) | 45 | 2 repos | active |
 | 34 | [Jolli](https://tashan.sh/capability/plugin-jolliai-jolli-claude-plugin-jolli.html) | 45 | 0 ★ | active |
@@ -49,10 +49,10 @@ Ranked by the tashan score
 | 36 | [Dropbox](https://tashan.sh/capability/plugin-dropbox-dropbox-ai-plugins-dropbox.html) | 43 | 2 ★ | active |
 | 37 | [Gorgias](https://tashan.sh/capability/pkg-gorgias-mcp-server.html) | 43 | 766/wk | active |
 | 38 | [Stdio Proxy](https://tashan.sh/capability/pkg-undisk-mcp-stdio-proxy.html) | 43 | 46/wk | active |
-| 39 | [Drive](https://tashan.sh/capability/pkg-armoryworks-drive-mcp.html) | 42 | 10/wk | active |
-| 40 | [Media](https://tashan.sh/capability/pkg-spideriq-mcp-media.html) | 42 | 75/wk | active |
+| 39 | [File Organizer](https://tashan.sh/capability/skill-primax79-file-organizer.html) | 42 | 2 repos | active |
+| 40 | [Drive](https://tashan.sh/capability/pkg-armoryworks-drive-mcp.html) | 42 | 10/wk | active |
 
-Showing the top 40 of 64. The full ranked shelf is at https://tashan.sh/category/files.html.
+Showing the top 40 of 63. The full ranked shelf is at https://tashan.sh/category/files.html.
 
 ## What these numbers are not
 

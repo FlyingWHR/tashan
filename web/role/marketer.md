@@ -26,10 +26,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 60 | 381 ★ | active |
 | 6 | [SEO Skills](https://tashan.sh/capability/plugin-seranking-seo-skills-seo-skills.html) | 60 | 100 ★ | active |
 | 7 | [Spotify Ads API](https://tashan.sh/capability/plugin-spotify-ads-claude-plugin-spotify-ads-api.html) | 59 | 14 ★ | active |
-| 8 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 55 | 13 ★ | active |
+| 8 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 54 | 13 ★ | active |
 | 9 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 53 | 123 ★ | active |
 | 10 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
-| 11 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 49 | 3 ★ | active |
+| 11 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 48 | 3 ★ | active |
 | 12 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 79 | 54k ★ | active |
 | 13 | [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) | 75 | 10k/wk | active |
 | 14 | [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) | 71 | 1k ★ | active |
@@ -45,22 +45,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 24 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 65 | 899/wk | active |
 | 25 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 63 | 238 ★ | active |
 | 26 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 63 | 770/wk | active |
-| 27 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
+| 27 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 59 | 18 ★ | active |
 | 28 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 51 | 73 ★ | active |
-| 29 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 50 | 3 ★ | active |
-| 30 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 50 | 59 ★ | active |
+| 29 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 50 | 59 ★ | active |
+| 30 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 49 | 3 ★ | active |
 | 31 | [Ultimate SEO Geo](https://tashan.sh/capability/plugin-mykpono-ultimate-seo-geo-ultimate-seo-geo.html) | 45 | 61 ★ | active |
 | 32 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 45 | 7 ★ | active |
 | 33 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 44 | 3 ★ | active |
 | 34 | [Post Bridge](https://tashan.sh/capability/plugin-post-bridge-hq-agent-mode-post-bridge.html) | 44 | 13 ★ | active |
 | 35 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 44 | 19 ★ | active |
-| 36 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 44 | 4 ★ | active |
-| 37 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 43 | 22 ★ | active |
+| 36 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 43 | 22 ★ | active |
+| 37 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 43 | 4 ★ | active |
 | 38 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 79 | 12k ★ | active |
 | 39 | [Xrpl Utilities](https://tashan.sh/capability/pkg-xrpl-utilities-mcp.html) | 71 | 3k/wk | active |
 | 40 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 68 | 969/wk | active |
 
-Showing the top 40 of 188. The full ranked shelf is at https://tashan.sh/role/marketer.html.
+Showing the top 40 of 185. The full ranked shelf is at https://tashan.sh/role/marketer.html.
 
 ## What these numbers are not
 

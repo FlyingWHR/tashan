@@ -38,7 +38,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Vikunja Fastmcp](https://tashan.sh/capability/pkg-vikunja-fastmcp.html) | 66 | 967/wk | active |
 | 17 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 66 | 80 ★ | active |
 | 18 | [Freightutils](https://tashan.sh/capability/pkg-freightutils-mcp.html) | 66 | 776/wk | active |
-| 19 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 65 | 970/wk | active |
+| 19 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 64 | 970/wk | active |
 | 20 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 64 | 860/wk | active |
 | 21 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 62 | 335 ★ | active |
 | 22 | [Maister](https://tashan.sh/capability/plugin-skillpanel-maister-maister.html) | 62 | 191 ★ | active |
@@ -47,12 +47,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 61 | 3k ★ | active |
 | 26 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 60 | 381 ★ | active |
 | 27 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 57 | 6k/wk | active |
-| 28 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 57 | 32 ★ | active |
-| 29 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 57 | 24 ★ | active |
-| 30 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 56 | 11 ★ | active |
+| 28 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 57 | 24 ★ | active |
+| 29 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 56 | 11 ★ | active |
+| 30 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 56 | 32 ★ | active |
 | 31 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 54 | 10 ★ | active |
 | 32 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 53 | 51 ★ | active |
-| 33 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
+| 33 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 52 | 7 ★ | active |
 | 34 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 52 | 24 ★ | active |
 | 35 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 51 | 76 ★ | active |
 | 36 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 51 | 4 ★ | active |
@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 48 | 7 ★ | active |
 | 40 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 48 | 28 ★ | active |
 
-Showing the top 40 of 764. The full ranked shelf is at https://tashan.sh/role/ops.html.
+Showing the top 40 of 761. The full ranked shelf is at https://tashan.sh/role/ops.html.
 
 ## What these numbers are not
 

@@ -11,14 +11,14 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Sequential Thinking](https://tashan.sh/capability/pkg-modelcontextprotocol-server-sequential-thinking.html) | 91 | 133k/wk | active |
+| 1 | [Sequential Thinking](https://tashan.sh/capability/pkg-modelcontextprotocol-server-sequential-thinking.html) | 90 | 133k/wk | active |
 | 2 | [Eve](https://tashan.sh/capability/pkg-eve.html) | 86 | 542k/wk | active |
-| 3 | [Cline](https://tashan.sh/capability/pkg-cline.html) | 86 | 142k/wk | active |
+| 3 | [Cline](https://tashan.sh/capability/pkg-cline.html) | 85 | 142k/wk | active |
 | 4 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 79 | 11k ★ | active |
 | 5 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 79 | 17k ★ | active |
-| 6 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 78 | 6k ★ | active |
-| 7 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 78 | 89k ★ | active |
-| 8 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
+| 6 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 78 | 89k ★ | active |
+| 7 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 78 | 122k/wk | active |
+| 8 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 77 | 6k ★ | active |
 | 9 | [Octo](https://tashan.sh/capability/plugin-nyldn-claude-octopus-octo.html) | 77 | 4k ★ | active |
 | 10 | [Agentic Flow](https://tashan.sh/capability/pkg-agentic-flow.html) | 77 | 79k/wk | active |
 | 11 | [Instar](https://tashan.sh/capability/pkg-instar.html) | 77 | 43k/wk | active |
@@ -32,9 +32,9 @@ Ranked by the tashan score
 | 19 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow.html) | 73 | 10k/wk | active |
 | 20 | [Agent Nuvira](https://tashan.sh/capability/pkg-agent-nuvira.html) | 73 | 7k/wk | active |
 | 21 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 72 | 7k/wk | active |
-| 22 | [Takt](https://tashan.sh/capability/pkg-takt.html) | 72 | 5k/wk | active |
-| 23 | [Cq](https://tashan.sh/capability/plugin-mozilla-ai-cq-cq.html) | 71 | 1k ★ | active |
-| 24 | [Patchwork OS](https://tashan.sh/capability/pkg-patchwork-os.html) | 71 | 8k/wk | active |
+| 22 | [Cq](https://tashan.sh/capability/plugin-mozilla-ai-cq-cq.html) | 71 | 1k ★ | active |
+| 23 | [Patchwork OS](https://tashan.sh/capability/pkg-patchwork-os.html) | 71 | 8k/wk | active |
+| 24 | [Takt](https://tashan.sh/capability/pkg-takt.html) | 71 | 5k/wk | active |
 | 25 | [Klypix](https://tashan.sh/capability/pkg-klypix-mcp.html) | 71 | 4k/wk | active |
 | 26 | [Claudish](https://tashan.sh/capability/pkg-claudish.html) | 71 | 4k/wk | active |
 | 27 | [Toon Memory](https://tashan.sh/capability/pkg-toon-memory.html) | 71 | 3k/wk | active |
@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Amicus](https://tashan.sh/capability/pkg-amicus.html) | 69 | 2k/wk | active |
 | 40 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 2k/wk | active |
 
-Showing the top 40 of 667. The full ranked shelf is at https://tashan.sh/category/ai.html.
+Showing the top 40 of 660. The full ranked shelf is at https://tashan.sh/category/ai.html.
 
 ## What these numbers are not
 

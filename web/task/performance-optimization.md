@@ -14,14 +14,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Pagespeed Insights](https://tashan.sh/capability/pkg-pagespeed-insights-mcp.html) | 69 | 2k/wk | active |
 | 2 | [Convai Analytics](https://tashan.sh/capability/pkg-convai-analytics-mcp.html) | 41 | 102/wk | active |
 | 3 | [Swiftui Expert](https://tashan.sh/capability/plugin-avdlee-swiftui-agent-skill-swiftui-expert.html) | 76 | 3k ★ | active |
-| 4 | [Deoptkit](https://tashan.sh/capability/pkg-deoptkit.html) | 36 | 7/wk | active |
-| 5 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
-| 6 | [Prompt Optimizer](https://tashan.sh/capability/pkg-mcp-prompt-optimizer.html) | 56 | 123/wk | active |
-| 7 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 54 | 153/wk | active |
-| 8 | [Lighthouse](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 46 | 580/wk | active |
-| 9 | [RASON](https://tashan.sh/capability/pkg-frontlinesystems-rason-mcp-server.html) | 43 | 88/wk | active |
-| 10 | [Callstack Skills](https://tashan.sh/capability/plugin-kingstinct-github-callstack-skills.html) | 42 | 1 marketplaces | — |
-| 11 | [Svelte5 Migration Analyst](https://tashan.sh/capability/plugin-alijohnzy-svelte5-migration-analyst-svelte5-migration-analyst.html) | 40 | 0 ★ | active |
+| 4 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 63 | 897/wk | active |
+| 5 | [Prompt Optimizer](https://tashan.sh/capability/pkg-mcp-prompt-optimizer.html) | 56 | 123/wk | active |
+| 6 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 54 | 153/wk | active |
+| 7 | [Lighthouse](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 46 | 580/wk | active |
+| 8 | [Callstack Skills](https://tashan.sh/capability/plugin-kingstinct-github-callstack-skills.html) | 42 | 1 marketplaces | — |
+| 9 | [RASON](https://tashan.sh/capability/pkg-frontlinesystems-rason-mcp-server.html) | 42 | 88/wk | active |
+| 10 | [Svelte5 Migration Analyst](https://tashan.sh/capability/plugin-alijohnzy-svelte5-migration-analyst-svelte5-migration-analyst.html) | 39 | 0 ★ | active |
 
 ## What these numbers are not
 

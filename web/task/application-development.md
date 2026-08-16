@@ -18,8 +18,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Scandit SDK](https://tashan.sh/capability/plugin-scandit-scandit-sdk-skills-scandit-sdk.html) | 57 | 15 ★ | active |
 | 6 | [Suiper](https://tashan.sh/capability/plugin-pivyme-suiperpower-suiper.html) | 55 | 12 ★ | active |
 | 7 | [Ios Simulator](https://tashan.sh/capability/pkg-ios-simulator-mcp.html) | 55 | 5k/wk | active |
-| 8 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 54 | 9 ★ | active |
-| 9 | [Summer](https://tashan.sh/capability/plugin-summerengine-summer-summer.html) | 54 | 32 ★ | active |
+| 8 | [Summer](https://tashan.sh/capability/plugin-summerengine-summer-summer.html) | 54 | 32 ★ | active |
+| 9 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 53 | 9 ★ | active |
 | 10 | [Tray API](https://tashan.sh/capability/plugin-tray-tecnologia-tray-api-claude-plugin-tray-api.html) | 53 | 13 ★ | active |
 | 11 | [Minecraft Java](https://tashan.sh/capability/plugin-chapmanjw-minecraft-java-fabric-claude-plugin-minecraft-java.html) | 52 | 5 ★ | active |
 | 12 | [Claude Xcindex](https://tashan.sh/capability/plugin-drewalth-claude-xcindex-claude-xcindex.html) | 49 | 3 ★ | active |
@@ -34,25 +34,25 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 21 | [Dart Flutter](https://tashan.sh/capability/plugin-flutter-agent-plugins-dart-flutter.html) | 74 | 3k ★ | active |
 | 22 | [Mdk](https://tashan.sh/capability/pkg-sap-mdk-mcp-server.html) | 74 | 13k/wk | active |
 | 23 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 72 | 1k ★ | active |
-| 24 | [Godot Prompter](https://tashan.sh/capability/plugin-jame581-godotprompter-godot-prompter.html) | 71 | 485 ★ | active |
-| 25 | [Yaver](https://tashan.sh/capability/pkg-yaver-cli.html) | 71 | 4k/wk | active |
+| 24 | [Yaver](https://tashan.sh/capability/pkg-yaver-cli.html) | 71 | 4k/wk | active |
+| 25 | [Godot Prompter](https://tashan.sh/capability/plugin-jame581-godotprompter-godot-prompter.html) | 70 | 485 ★ | active |
 | 26 | [Unreal Engine Skills For Claude Code](https://tashan.sh/capability/plugin-epicgames-unreal-engine-skills-for-claude-code-plugin-unreal-engine-skills-for-claude-code.html) | 69 | 157 ★ | active |
 | 27 | [Extension Dev](https://tashan.sh/capability/pkg-extension-dev-mcp.html) | 69 | 1k/wk | active |
 | 28 | [Apollo Skills](https://tashan.sh/capability/plugin-apollographql-skills-apollo-skills.html) | 68 | 100 ★ | active |
 | 29 | [GraphQL Enhanced](https://tashan.sh/capability/pkg-letoribo-mcp-graphql-enhanced.html) | 68 | 2k/wk | active |
 | 30 | [Quarkus Agent](https://tashan.sh/capability/plugin-quarkusio-quarkus-agent-mcp-quarkus-agent.html) | 67 | 45 ★ | active |
-| 31 | [Auth0 · auth0](https://tashan.sh/capability/plugin-auth0-agent-skills-auth0.html) | 65 | 40 ★ | active |
-| 32 | [Sfmc](https://tashan.sh/capability/pkg-mcp-server-sfmc.html) | 65 | 758/wk | active |
-| 33 | [Salesforce Metadata](https://tashan.sh/capability/pkg-salesforce-metadata-mcp.html) | 65 | 746/wk | active |
-| 34 | [Twilio Developer Kit](https://tashan.sh/capability/plugin-twilio-ai-twilio-developer-kit.html) | 64 | 26 ★ | active |
-| 35 | [Workos](https://tashan.sh/capability/plugin-workos-skills-workos.html) | 64 | 43 ★ | active |
+| 31 | [Sfmc](https://tashan.sh/capability/pkg-mcp-server-sfmc.html) | 65 | 758/wk | active |
+| 32 | [Twilio Developer Kit](https://tashan.sh/capability/plugin-twilio-ai-twilio-developer-kit.html) | 64 | 26 ★ | active |
+| 33 | [Auth0 · auth0](https://tashan.sh/capability/plugin-auth0-agent-skills-auth0.html) | 64 | 40 ★ | active |
+| 34 | [Workos](https://tashan.sh/capability/plugin-workos-skills-workos.html) | 64 | 43 ★ | active |
+| 35 | [Salesforce Metadata](https://tashan.sh/capability/pkg-salesforce-metadata-mcp.html) | 64 | 746/wk | active |
 | 36 | [Postman · postman-devrel](https://tashan.sh/capability/plugin-postman-devrel-postman-claude-code-plugin-postman.html) | 63 | 34 ★ | active |
 | 37 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 63 | 167 ★ | active |
 | 38 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 62 | 22 ★ | active |
 | 39 | [Tricorder](https://tashan.sh/capability/plugin-tweag-tricorder-tricorder.html) | 61 | 38 ★ | active |
 | 40 | [Delphi Dev](https://tashan.sh/capability/plugin-adrianosantostreina-delphi-dev-delphi-dev.html) | 60 | 71 ★ | active |
 
-Showing the top 40 of 254. The full ranked shelf is at https://tashan.sh/task/application-development.html.
+Showing the top 40 of 253. The full ranked shelf is at https://tashan.sh/task/application-development.html.
 
 ## What these numbers are not
 

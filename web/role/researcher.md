@@ -29,16 +29,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 68 | 2k/wk | active |
 | 9 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 67 | 895/wk | active |
 | 10 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 66 | 883/wk | active |
-| 11 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 65 | 970/wk | active |
+| 11 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 64 | 970/wk | active |
 | 12 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 64 | 860/wk | active |
 | 13 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 61 | 18 ★ | active |
 | 14 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 61 | 3k ★ | active |
 | 15 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 57 | 6k/wk | active |
-| 16 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 57 | 32 ★ | active |
-| 17 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 56 | 11 ★ | active |
-| 18 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 56 | 35 ★ | active |
+| 16 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 56 | 11 ★ | active |
+| 17 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 56 | 32 ★ | active |
+| 18 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 55 | 35 ★ | active |
 | 19 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 53 | 51 ★ | active |
-| 20 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 53 | 7 ★ | active |
+| 20 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 52 | 7 ★ | active |
 | 21 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 52 | 24 ★ | active |
 | 22 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
 | 23 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 51 | 76 ★ | active |
@@ -56,11 +56,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 75 | 5k ★ | active |
 | 36 | [Notion · suekou](https://tashan.sh/capability/pkg-suekou-mcp-notion-server.html) | 73 | 733/wk | active |
 | 37 | [Blockrun](https://tashan.sh/capability/pkg-blockrun-mcp.html) | 71 | 1k/wk | active |
-| 38 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 69 | 219 ★ | active |
-| 39 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 69 | 2k/wk | active |
-| 40 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-firecrawl-claude-plugin-firecrawl.html) | 69 | 174 ★ | active |
+| 38 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 69 | 2k/wk | active |
+| 39 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 69 | 284 ★ | active |
+| 40 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 69 | 2k/wk | active |
 
-Showing the top 40 of 390. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 393. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

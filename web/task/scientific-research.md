@@ -14,7 +14,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 50 | 143 ★ | active |
 | 2 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 69 | 284 ★ | active |
 | 3 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 69 | 2k/wk | active |
-| 4 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 67 | 78 ★ | active |
+| 4 | [Sciverse · opendatalab](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 66 | 78 ★ | active |
 | 5 | [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) | 65 | 836/wk | active |
 | 6 | [Boltz](https://tashan.sh/capability/plugin-boltz-bio-boltz-api-skills-boltz.html) | 54 | 4 ★ | active |
 | 7 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 50 | 5 ★ | active |
@@ -22,11 +22,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Nnsight](https://tashan.sh/capability/plugin-ndif-team-skills-nnsight.html) | 46 | 9 ★ | active |
 | 10 | [Research Co Pilot](https://tashan.sh/capability/plugin-marazii-research-co-pilot-research-co-pilot.html) | 45 | 5 ★ | active |
 | 11 | [Research Paper Writing](https://tashan.sh/capability/plugin-yuanyuanma03-research-paper-writing-skills-research-paper-writing.html) | 44 | 3 ★ | active |
-| 12 | [Research Toolkit](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 37 | 2 ★ | active |
-| 13 | [Math Olympiad](https://tashan.sh/capability/skill-anthropics-math-olympiad.html) | not scored | 1 repos | active |
-| 14 | [Clinical Research](https://tashan.sh/capability/skill-alirezarezvani-clinical-research.html) | not scored | 1 repos | active |
-| 15 | [Grants](https://tashan.sh/capability/skill-alirezarezvani-grants.html) | not scored | 1 repos | active |
-| 16 | [Litreview](https://tashan.sh/capability/skill-alirezarezvani-litreview.html) | not scored | 1 repos | active |
+| 12 | [Grants](https://tashan.sh/capability/skill-alirezarezvani-grants.html) | 48 | 2 repos | active |
+| 13 | [Litreview](https://tashan.sh/capability/skill-alirezarezvani-litreview.html) | 48 | 2 repos | active |
+| 14 | [Research Toolkit](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 37 | 2 ★ | active |
+| 15 | [Math Olympiad](https://tashan.sh/capability/skill-anthropics-math-olympiad.html) | not scored | 1 repos | active |
+| 16 | [Clinical Research](https://tashan.sh/capability/skill-alirezarezvani-clinical-research.html) | not scored | 1 repos | active |
 | 17 | [Scios Skill](https://tashan.sh/capability/pkg-scios-skill.html) | 59 | 243/wk | active |
 
 ## What these numbers are not

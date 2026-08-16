@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 1135,
+  "full": 1137,
   "grade": 3808,
-  "n": 43382,
-  "scan": 7123,
-  "score": 16976,
-  "task": 3365
+  "n": 46019,
+  "scan": 7150,
+  "score": 18235,
+  "task": 3394
  },
  "axes": [
   {
@@ -420,12 +420,12 @@
    "task": 87
   },
   "top1000": {
-   "full": 472,
-   "grade": 670,
+   "full": 470,
+   "grade": 667,
    "n": 1000,
    "scan": 1000,
    "score": 985,
-   "task": 664
+   "task": 660
   }
  }
 }
