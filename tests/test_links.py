@@ -54,6 +54,36 @@ def exists(u):
     return os.path.exists(fn + ".js") or os.path.exists(os.path.join(fn, "[[route]].js"))
 
 
+def _changes_page_is_reachable_and_real():
+    """/changes.html is the freshest surface we publish and the only one rivals cannot reproduce —
+    it is built from a series that cannot be backfilled. It is also the easiest kind of page to
+    ship as an orphan: generated nightly, linked from nothing, indexed by no one.
+
+    So: it must exist, be in the sitemap, be linked from the shared footer (which puts it on every
+    page a crawler already reaches), and actually contain dated events rather than an empty shell.
+    """
+    import re as _re
+    out = []
+    p = os.path.join(WEB, "changes.html")
+    if not os.path.exists(p):
+        return ["web/changes.html is missing — run pipeline/gen_changes.py"]
+    h = open(p, encoding="utf-8").read()
+    if "tashan recorded" not in h and "No consequential changes" not in h:
+        out.append("changes.html has no summary sentence — the quotable fact is the point")
+    if len(_re.findall(r'class="chg__i', h)) < 5:
+        out.append("changes.html lists fewer than 5 events; it should carry the last 30 days")
+    if not _re.search(r"\d{4}-\d{2}-\d{2}", h):
+        out.append("changes.html shows no dates — 'dated' is the whole claim")
+    sm = os.path.join(WEB, "sitemap.xml")
+    if os.path.exists(sm) and "/changes<" not in open(sm, encoding="utf-8").read():
+        out.append("changes.html is not in sitemap.xml — an unindexed page is not distribution")
+    # Linked from somewhere a crawler already goes. The footer is baked into every generated page.
+    idx = os.path.join(WEB, "index.html")
+    if os.path.exists(idx) and "/changes" not in open(idx, encoding="utf-8").read():
+        out.append("nothing on the homepage links to /changes — it is an orphan")
+    return out
+
+
 def main():
     fail, internal, external = [], set(), set()
     for p in pages():
@@ -68,6 +98,8 @@ def main():
                     fail.append(f"{rel}  ->  {u}  (no such file)")
             elif h.startswith("http"):
                 external.add(h.split("#")[0])
+
+    fail += _changes_page_is_reachable_and_real()
 
     # unpublished targets, wherever they appear — links, code blocks, install snippets
     for p in list(pages()) + [os.path.join(ROOT, "cli", "README.md")]:

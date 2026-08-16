@@ -42,6 +42,8 @@ PURPOSE = {
     "/pricing.html":      ("What Pro costs and exactly what it adds.", "sells"),
     "/account.html":      ("Your plan, machines, licence key and invoices — read live from /api/account.", "post-sale"),
     "/requests.html":     ("Ask for a capability to be measured.", "free"),
+    "/changes.html":      ("What moved in the ecosystem, dated — the only page built from a series "
+                           "that cannot be backfilled, and the freshest thing we publish.", "free"),
     "/for-hosts.html":    ("For IDEs and agent hosts: swap one base URL, get the measurement.", "free"),
     "/capability.html":   ("Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs.", "free"),
     "/welcome.html":      ("Post-checkout: activate the licence. noindex, reached only from Polar.", "post-sale"),

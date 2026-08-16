@@ -118,6 +118,11 @@ STAGES = [
     # here that is genuinely new rather than recomputed.
     ("feed",            ["pipeline/gen_feed.py"], "site",
      "Atom feed of what changed — the one thing that is new every day"),
+    # THE SAME EVENTS, AS A PAGE A CRAWLER AND A READER CAN USE. The feed is pulled; this is
+    # indexable, linked from the footer of every page, and rewritten nightly — the only surface we
+    # have whose freshness a static catalogue cannot match, built from a series nobody can backfill.
+    ("changes-page",    ["pipeline/gen_changes.py"], "site",
+     "/changes.html — what moved in the ecosystem, dated, the one page rivals cannot reproduce"),
     # DRAFTS ONLY. Nothing here posts: publishing is outward-facing, needs credentials this repo
     # does not hold, and an automated account that gets one post wrong costs more than the traffic
     # it wins. A human reads data/social/<day>.json and sends it.

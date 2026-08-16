@@ -1423,8 +1423,17 @@ def sitemap(caps):
     # it is the post-checkout page and carries noindex.
     urls = ["/", "/start.html", "/methodology.html", "/about.html", "/pricing.html", "/requests.html",
             "/terms.html", "/privacy.html", "/refunds.html", "/support.html", "/for-hosts.html",
-            "/browse.html", "/compare.html"]
-    static = "".join("  <url><loc>" + BASE + chrome.canon(u) + "</loc></url>\n" for u in urls)
+            "/browse.html", "/compare.html",
+            # The freshest page on the site, and the only one competitors cannot reproduce — it is
+            # built from a series that cannot be backfilled. `changefreq` says daily below.
+            "/changes.html"]
+    def _static_url(u):
+        # /changes.html is rewritten every night from change_events; saying so is the whole point of
+        # having it in here. Everything else changes when the site is rebuilt, which is not daily.
+        freq = "<changefreq>daily</changefreq>" if u == "/changes.html" else ""
+        return "  <url><loc>" + BASE + chrome.canon(u) + "</loc>" + freq + "</url>\n"
+
+    static = "".join(_static_url(u) for u in urls)
     # A SITEMAP IS A REQUEST TO INDEX, so it must agree with the robots tag on the page. Submitting
     # a URL that answers `noindex` wastes crawl budget and sends a contradictory signal about a site
     # whose entire distribution strategy is being readable by crawlers and answer engines.
