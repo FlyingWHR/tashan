@@ -185,6 +185,15 @@ _ann = (ENT["tiers"]["pro"].get("annual") or {}).get("price")
 ok("llms.txt names the annual price too (it existed only in a data attribute)",
    not _ann or _ann in _llms, f"{_ann} missing")
 ok("llms.txt says what is FREE before what is paid", "free" in _llms.lower())
+# THE TWO CITABLE SURFACES MUST BE IN THE FILE WE TELL CRAWLERS TO READ. /stats and /changes exist
+# to be quoted by answer engines — that is their entire reason for existing, since our distribution
+# deficit is inbound citation and not page count. Publishing them and leaving them out of llms.txt
+# is building a shop and not putting it on the map.
+ok("llms.txt points at the ecosystem numbers", "/stats.html" in _llms,
+   "the page built to be cited is absent from the file crawlers are told to read")
+ok("llms.txt points at the dated record of what changed", "/changes.html" in _llms)
+ok("...and names the Atom feed beside it", "/changes.xml" in _llms)
+
 ok("llms.txt restates the firewall for machines",
    "pay to change" in _llms.lower(), "the one rule that makes the measurement worth citing")
 

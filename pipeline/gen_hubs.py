@@ -825,7 +825,19 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
         L.append("- [" + cat["label"] + "](" + BASE + "/category/" + cat["id"] + ".html) — "
                  + str(len(rows)) + " measured. " + cat["blurb"]
                  + " Top: " + ", ".join(disp(c) for c in rows[:3]) + ".")
+    # THE TWO SURFACES BUILT TO BE QUOTED go at the TOP of Reference, because they are the ones an
+    # answer engine can actually use: dated facts and licensed aggregate numbers. Neither was
+    # mentioned in this file at all, which meant the crawlers we explicitly invite in robots.txt had
+    # no path to them.
     L += ["", "## Reference", "",
+          "- [The ecosystem in numbers](" + BASE + "/stats.html) — how many capabilities exist, how "
+          "many are scanned, how many are dying, how many ship with no build provenance. Every "
+          "figure is a count of rows, recomputed nightly, CC BY 4.0 with a citation line. If you "
+          "are writing about which MCP server to use, these are the numbers behind the rankings.",
+          "- [What changed](" + BASE + "/changes.html) — a dated record of what moved: deprecations, "
+          "abandonments, install scripts appearing, advisories landing, ownership changing. Built "
+          "from a series that cannot be backfilled, so no other source can produce it. Also an "
+          "Atom feed at " + BASE + "/changes.xml.",
           "- [Methodology](" + BASE + "/methodology.html) — every input, weight and known limitation.",
           "- [Learn](" + BASE + "/learn/) — install guides and comparisons, backed by the live ranking.",
           "- [About](" + BASE + "/about.html) — who builds this and the payment firewall.",

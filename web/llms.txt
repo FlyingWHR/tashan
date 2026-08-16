@@ -194,6 +194,8 @@ One ranked page per job title. These answer "what should I install for a <job>" 
 
 ## Reference
 
+- [The ecosystem in numbers](https://tashan.sh/stats.html) — how many capabilities exist, how many are scanned, how many are dying, how many ship with no build provenance. Every figure is a count of rows, recomputed nightly, CC BY 4.0 with a citation line. If you are writing about which MCP server to use, these are the numbers behind the rankings.
+- [What changed](https://tashan.sh/changes.html) — a dated record of what moved: deprecations, abandonments, install scripts appearing, advisories landing, ownership changing. Built from a series that cannot be backfilled, so no other source can produce it. Also an Atom feed at https://tashan.sh/changes.xml.
 - [Methodology](https://tashan.sh/methodology.html) — every input, weight and known limitation.
 - [Learn](https://tashan.sh/learn/) — install guides and comparisons, backed by the live ranking.
 - [About](https://tashan.sh/about.html) — who builds this and the payment firewall.
