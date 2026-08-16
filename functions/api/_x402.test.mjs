@@ -179,6 +179,27 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
   ok("a non-200 from the facilitator denies", !out.ok && out.reason === "verification_unavailable");
 }
 
+{
+  // AN OUTAGE AND A REJECTED CREDENTIAL NEED OPPOSITE FIXES, so they must not share a word. With an
+  // authenticated facilitator (CDP) a 401 is the likeliest failure and the least self-evident: the
+  // quote looks perfect, every secret is set, and every payment is refused. Collapsing it into
+  // "verification_unavailable" is what made that invisible for a deploy.
+  let ran = 0;
+  const rejected = await withFetch(
+    () => new Response("Unauthorized", { status: 401 }),
+    () => charge(LIVE, PR, {}, async () => { ran++; return "PAID DATA"; }));
+  ok("a 401 from the facilitator is reported as a REJECTED CREDENTIAL",
+     rejected.reason === "verification_credential_rejected", JSON.stringify(rejected));
+  ok("...and still never runs the work", ran === 0);
+  ok("...and keeps the status for a human", /401/.test(String(rejected.detail)));
+
+  const down = await withFetch(
+    () => new Response("boom", { status: 503 }),
+    () => charge(LIVE, PR, {}, async () => "PAID DATA"));
+  ok("a 503 is still an outage, not a credential problem",
+     down.reason === "verification_unavailable", JSON.stringify(down));
+}
+
 // ---- the shared refusal carries it, and only when a wallet exists --------------------------------
 // deny() is where every paid endpoint refuses. If x402 only reached the audit route, an agent
 // hitting /api/history would still see a subscription it cannot buy and nothing it can.

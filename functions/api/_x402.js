@@ -152,7 +152,15 @@ async function facilitate(env, path, payload, requirements) {
     body: JSON.stringify({ x402Version: VERSION, paymentPayload: payload,
                            paymentRequirements: requirements }),
   });
-  if (!r.ok) throw new Error(path + " returned HTTP " + r.status);
+  // THE STATUS, IN THE MESSAGE. This threw a bare "…returned HTTP 401" that charge() flattened to
+  // `verification_unavailable`, and a caller — including our own payment check — could not tell an
+  // outage from a rejected credential. Those need opposite fixes: one is "wait", the other is "your
+  // key is wrong". 401/403 is specifically called out because with an authenticated facilitator it
+  // is the single most likely failure and the least self-evident.
+  if (!r.ok) {
+    const kind = (r.status === 401 || r.status === 403) ? "credential_rejected" : "http_" + r.status;
+    throw new Error(path + " " + kind + " (HTTP " + r.status + ")");
+  }
   return r.json();
 }
 
@@ -173,7 +181,11 @@ export async function charge(env, pr, payload, work) {
   try {
     v = await facilitate(env, "/verify", payload, requirements);
   } catch (e) {
-    return { ok: false, reason: "verification_unavailable", detail: String(e) };
+    const m = String(e);
+    return { ok: false,
+             reason: m.includes("credential_rejected") ? "verification_credential_rejected"
+                                                      : "verification_unavailable",
+             detail: m };
   }
   // AN EXPLICIT YES, OR NOTHING. This used to deny only when the facilitator said `isValid: false`
   // or `valid: false` — which means ANY other shape was treated as a pass. A facilitator that
