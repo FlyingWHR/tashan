@@ -45,34 +45,49 @@ Actions → **publish cli** → Run workflow, `dry_run` checked first. The run s
 about which it did. Bump `cli/package.json` and `server.json` together — `tests/test_agent_surface.py`
 fails if they drift.
 
-## ✅ x402 is LIVE ON BASE MAINNET (16 Aug 2026) — real money
+## ⚠️ x402 quotes correctly on Base mainnet — and NO CALLER CAN PAY YET
 
-    scheme  exact          network  eip155:8453
-    asset   0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913   (USDC, Circle-confirmed)
-    payTo   0x813e91688330cB03BD9F4e710A28C4B6207e9fC1
-    extra   {name: "USD Coin", version: "2"}
+The rail is configured, spec-shaped and verified. It is also refusing every payment, for a reason
+nothing we had could see until I asked the facilitator directly:
 
-`X402_FACILITATOR=https://facilitator.openx402.ai python3 pipeline/check_payments.py` → **25
-passing, 0 failing**, including three checks that exist because this is the step that cannot be
-undone:
+    FAIL the facilitator will accept a payment addressed to us
+         it refuses for a SELLER-side reason: 'address_not_registered'
+         Address 0x813e…9fC1 is not registered. Register at https://openx402.ai/register
 
-- **payTo and asset pass their EIP-55 checksums** (`pipeline/eip55.py`). A single mistyped character
-  in a mixed-case address fails to verify, so this is what stands between a wallet typo and funds
-  landing somewhere nobody controls. keccak-256 is hand-rolled — hashlib's sha3_256 is a DIFFERENT
-  algorithm — and pinned to the canonical vector plus all four EIP-55 worked examples.
-- **Our asset, EIP-712 name and version match the facilitator's `/supported`.** The name is
-  "USD Coin", not "USDC"; it defaulted to the ticker until 16 Aug and would have failed every
-  signature while looking perfectly configured.
+25 other checks pass while that is true. It would have been discovered by the first paying stranger,
+who would simply have left.
 
-**Pages secrets need a REDEPLOY.** Setting them changes nothing until `wrangler pages deploy` runs,
-and in between the check reports "dormant", which reads exactly like a bad value.
+### The fix is one decision, and it also decides whether agents can FIND us
 
-**Still unproven: that a payment SETTLES.** We quote correctly on mainnet and nobody has paid yet.
-The first real payment is the only thing that proves the loop, and it will arrive from a stranger's
-agent rather than from a test.
+**Settle through Coinbase's CDP facilitator.** Not a vendor preference — the only option that is both
+payable and discoverable:
 
-**To roll back to testnet**, two secrets and a redeploy: `X402_NETWORK` → `eip155:84532`,
-`X402_ASSET` → `0x036CbD53842c5426634e7929541eC2318f3dCF7e`.
+- Every keyless facilitator fails today. openx402 whitelists receivers; `facilitator.xpay.sh` and
+  `facilitator.payai.network` cannot parse a spec-conformant v2 request (ours IS conformant —
+  checked against `specs/x402-specification-v2.md`). `python3 pipeline/x402_probe.py <url>` re-runs
+  that comparison against any candidate, without deploying it and without moving money.
+- **The Bazaar only indexes what the CDP facilitator settles.** The Bazaar is where agents search
+  for paid endpoints, and a seller is listed within ~30 seconds of their first confirmed settle.
+  Settling anywhere else means nobody finds us.
+
+**What you do — create a CDP API key at portal.cdp.coinbase.com, then three secrets and a redeploy:**
+
+    X402_CDP_KEY_ID      organizations/…/apiKeys/…       (from the key you create)
+    X402_CDP_KEY_SECRET  the base64 secret for that key
+    X402_FACILITATOR     https://api.cdp.coinbase.com/platform/v2/x402
+
+Free for the first 1,000 settlements a month, then $0.001 each — and with batch settlement one
+onchain transaction covers thousands of payments.
+
+The signing side is built and tested (`functions/api/_cdp.js`, 14 checks including a real signature
+verification). Both CDP values or neither: half a pair produces no header at all rather than a token
+that cannot work.
+
+**Then verify:** `X402_FACILITATOR=https://api.cdp.coinbase.com/platform/v2/x402 python3
+pipeline/check_payments.py` — the seller-side check flips from FAIL to "a bogus payment is refused
+for a payment-side reason", which is what a facilitator that would take a real payment looks like.
+
+**Pages secrets need a REDEPLOY.** Setting them changes nothing until `wrangler pages deploy` runs.
 
 ## The two that are really yours
 

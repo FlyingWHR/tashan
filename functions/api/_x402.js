@@ -28,6 +28,8 @@
 // tested so that turning it on is setting three secrets, not writing code under time pressure.
 // ==================================================================================================
 
+import { cdpAuthHeader } from "./_cdp.js";
+
 // One definition of what each paid thing costs. Atomic units, because that is what the wire carries:
 // USDC has 6 decimals, so $0.01 is "10000". Keeping the human price beside it means the two cannot
 // drift, and `usd` is what the JSON fallback and the docs quote.
@@ -139,9 +141,14 @@ export const paymentFromMeta = (params) =>
 
 async function facilitate(env, path, payload, requirements) {
   const c = config(env);
-  const r = await fetch(c.facilitator + path, {
+  const url = c.facilitator + path;
+  // CDP's facilitator needs a signed JWT per request; every keyless one ignores the header. Minted
+  // per call because the token is valid for two minutes, and returns {} when this deployment has no
+  // CDP key — so the keyless path is byte-identical to what it was.
+  const auth = await cdpAuthHeader(env, "POST", url);
+  const r = await fetch(url, {
     method: "POST",
-    headers: { "content-type": "application/json" },
+    headers: { "content-type": "application/json", ...auth },
     body: JSON.stringify({ x402Version: VERSION, paymentPayload: payload,
                            paymentRequirements: requirements }),
   });
