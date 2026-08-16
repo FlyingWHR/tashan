@@ -282,6 +282,40 @@ def main():
                 and a.get("asset") and isinstance(a.get("amount"), str))
         record(PASS if good else FAIL, "agent payments (x402) quote complete, spec-shaped terms",
                f"x402Version={quote.get('x402Version')!r} accepts[0]={a!r}")
+
+        # WHAT WE QUOTE MUST BE WHAT THE FACILITATOR WILL SETTLE. A facilitator publishes the exact
+        # asset, EIP-712 domain name and version it verifies against, per network, at /supported.
+        # If our `accepts` disagrees on any of them the caller signs a domain nobody accepts, every
+        # payment fails verification, and NOTHING looks broken: all four secrets set, a spec-shaped
+        # quote on every 402. The default asset name was "USDC" until 16 Aug 2026; USDC's contract
+        # on Base is named "USD Coin", so that is precisely the failure this would have had.
+        fac = (a.get("extra") or {}).get("facilitator") or os.environ.get("X402_FACILITATOR", "")
+        if not fac:
+            record(WARN, "x402 terms agree with the facilitator",
+                   "set X402_FACILITATOR in this shell to cross-check the quote against /supported")
+        else:
+            st, body2, _ = get(fac.rstrip("/") + "/supported")
+            kinds = []
+            try:
+                kinds = (json.loads(body2) or {}).get("kinds") or []
+            except ValueError:
+                pass
+            mine = {k: (a.get("extra") or {}).get(k) for k in ("name", "version")}
+            mine["asset"], mine["network"] = a.get("asset"), a.get("network")
+            match = [k for k in kinds
+                     if k.get("network") == mine["network"] and k.get("scheme") == a.get("scheme")]
+            if not match:
+                record(FAIL, "the facilitator settles the network we quote",
+                       f"we quote {mine['network']!r}; it supports "
+                       f"{sorted({k.get('network') for k in kinds})[:6]}")
+            else:
+                ex = match[0].get("extra") or {}
+                bad = [f"{k}: we say {mine[k]!r}, it expects {ex.get(k)!r}"
+                       for k in ("asset", "name", "version")
+                       if ex.get(k) and str(ex[k]).lower() != str(mine.get(k) or "").lower()]
+                record(PASS if not bad else FAIL,
+                       "our asset, EIP-712 name and version match the facilitator's",
+                       "; ".join(bad) + " — signatures will not verify")
     else:
         # Terms without a header, or a header without terms: a caller cannot act on either.
         record(FAIL, "x402 is either fully on or fully off",

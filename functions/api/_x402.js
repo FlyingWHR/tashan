@@ -71,7 +71,18 @@ export function config(env) {
     network: (env.X402_NETWORK || "").trim(),
     asset: (env.X402_ASSET || "").trim(),
     facilitator: (env.X402_FACILITATOR || "").trim().replace(/\/+$/, ""),
-    assetName: (env.X402_ASSET_NAME || "USDC").trim(),
+    // "USD Coin", NOT "USDC". This is the EIP-712 domain name the client signs against, and it must
+    // equal the token contract's own `name()` exactly or the signature does not verify. USDC's
+    // contract on Base — mainnet AND Sepolia — is named "USD Coin"; the ticker is not the name.
+    // Confirmed 16 Aug 2026 from facilitator.openx402.ai/supported, which publishes the domain per
+    // network: eip155:8453 and eip155:84532 both report name "USD Coin", version "2".
+    //
+    // The old default was "USDC", which is wrong on the only two networks we would plausibly use.
+    // Nothing would have LOOKED broken: all four secrets set, `configured()` true, a spec-shaped
+    // `accepts` array quoted on every 402 — and every payment silently failing to verify. Override
+    // per network where the name genuinely differs (Monad's is "USDC"); check_payments.py compares
+    // this against the facilitator's own answer so a mismatch is named rather than discovered.
+    assetName: (env.X402_ASSET_NAME || "USD Coin").trim(),
     assetVersion: (env.X402_ASSET_VERSION || "2").trim(),
   };
 }
