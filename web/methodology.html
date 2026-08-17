@@ -196,7 +196,25 @@
         <p class="mnote">Those pages
       now state the fact instead: <em>shares its documentation with 3 other capabilities</em>.</p>
 
-    <h2>What we deliberately don't do</h2>
+    <h2 class="capsec__h">What a low score does NOT mean</h2>
+      <p class="p"><b>It does not mean safe.</b> It usually means nothing is happening &mdash; and
+        nothing happening includes nothing being observed.</p>
+      <p class="p">We tested that against our own series. Capabilities scoring 70&ndash;84 turned
+        out <b>224&times;</b> more likely to have a security-relevant change than those under 40.</p>
+      <p class="p o-70">Read naively, that says high scores are dangerous. It says nothing of the
+        kind.</p>
+      <p class="p o-70">A dormant package cannot add an install script, because it never ships.
+        Only <b>0.35%</b> of capabilities under 40 published a release in the window, against
+        <b>24%</b> of those scoring 55&ndash;69.</p>
+      <p class="p o-70">Among the ones that actually shipped, the effect largely collapses.</p>
+      <p class="p">So the score separates <i>alive</i> from <i>dormant</i> by roughly eightyfold,
+        which is what it claims to measure. It is not a safety verdict.</p>
+      <p class="p mono fs-sm o-70">Whether it predicts risk once activity is held constant, we
+        cannot yet say: ten events across 573 shippers is too few to read.</p>
+      <p class="p mono fs-sm o-70">We would rather publish that than round a null into a headline.
+        <code>pipeline/validate_score.py</code> re-runs as the series grows.</p>
+
+      <h2>What we deliberately don't do</h2>
     <ul>
       <li><b>We don't count stars where real usage exists.</b> Stars measure hype and are trivially farmed, so nothing
         with download telemetry is scored on them.<span class="mnote-i">One exception, stated plainly because the alternative is hiding it:

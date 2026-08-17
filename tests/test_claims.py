@@ -378,5 +378,24 @@ if _graded:
        "the judgment is on this page; so must the way to challenge it be")
 
 print()
+
+print()
+print("# the score's own limits, measured and published")
+# A LOW SCORE IS NOT A SAFETY SIGNAL, and we only know that because we tested it against the series
+# instead of asserting it. The raw association says high scores are 224x riskier; conditioning on
+# having shipped a release shows that is detection bias — a dormant package cannot add an install
+# script. Publishing the caveat WITHOUT the arithmetic behind it would be the same unfounded
+# confidence the finding warns against, so both must stay on the page.
+_meth = open(os.path.join(WEB, "methodology.html"), encoding="utf-8").read()
+ok("methodology says plainly that a low score does not mean safe",
+   "does NOT mean" in _meth and "does not mean safe" in _meth.replace("<b>", "").replace("</b>", ""))
+ok("...and shows the measurement rather than asserting it",
+   "224" in _meth and "0.35%" in _meth,
+   "the caveat without its numbers is just another claim")
+ok("...and admits what the sample cannot answer",
+   "too few to read" in _meth or "cannot yet say" in _meth)
+ok("the analysis behind it is in the repo and re-runnable",
+   os.path.exists(os.path.join(ROOT, "pipeline", "validate_score.py")))
+
 print(("CLAIMS OK" if not fail else "CLAIMS FAILED"))
 sys.exit(fail)
