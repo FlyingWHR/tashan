@@ -68,6 +68,24 @@ HEADLINE = {
 }
 
 
+# THE SECURITY SWEEP'S OWN SHADOW. Until 18 Aug the state snapshot did not record whether the L1-L4
+# scan had ever run for a capability, so the first time the scan reached a package its NULL install
+# script became "node install.js" and the diff called that an ADDITION. This page told the public
+# that 301 packages "started running a script at install time" in 30 days, against 490 that have one
+# at all — 143 of them on a single day, which is the shape of a scanner walking a corpus, not of the
+# world changing.
+#
+# change_events.py now requires a prior observation before any security transition (see SEC_FIELDS).
+# That fixes every future event and NOTHING already written: no historical snapshot recorded the
+# flag, so a pre-cutoff security event cannot be told apart from a first look. They are therefore
+# not shown. They are not deleted either — a handful are real, and deleting a record because it is
+# inconveniently ambiguous is how an archive stops being one. They simply stop being published as
+# fact, which is the claim we could not stand behind.
+SEC_KINDS = ("advisory_new", "severity_raised", "install_script_added", "install_script_changed",
+             "permissions_widened")
+SEC_TRUSTED_FROM = "2026-08-18"
+
+
 def rows(con, days=DAYS):
     since = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)).strftime("%Y-%m-%d")
     # `slug` is DERIVED, not stored — prerender.slugify() is the one definition and the dossier
@@ -76,19 +94,28 @@ def rows(con, days=DAYS):
          "       c.name, c.tashan_score "
          "FROM change_events e LEFT JOIN capabilities c ON c.id = e.cap_id "
          "WHERE substr(e.at,1,10) >= ? AND e.kind IN (%s) "
+         "  AND (e.kind NOT IN (%s) OR substr(e.at,1,10) >= ?) "
          "ORDER BY e.at DESC, "
          "  CASE e.severity WHEN 'high' THEN 0 WHEN 'medium' THEN 1 ELSE 2 END, e.cap_id"
-         % ",".join("?" * len(CONSEQUENTIAL)))
-    return con.execute(q, [since] + CONSEQUENTIAL).fetchall()
+         % (",".join("?" * len(CONSEQUENTIAL)), ",".join("?" * len(SEC_KINDS))))
+    return con.execute(q, [since] + list(CONSEQUENTIAL) + list(SEC_KINDS)
+                       + [SEC_TRUSTED_FROM]).fetchall()
 
 
 def tally(con, days=DAYS):
     """Counts a reader (or an answer engine) can quote. Every one is a row count, not an estimate."""
     since = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)).strftime("%Y-%m-%d")
     out = {}
+    # The SAME withholding as rows(). This tally feeds the JSON-LD description, the meta
+    # description and the citation line — the three places a number gets quoted BY SOMEONE ELSE.
+    # Filtering the visible list but not the counts is worse than not filtering at all: the page
+    # would show 12 install-script events above a sentence advertising 301, and the sentence is the
+    # part an answer engine repeats.
     for kind, n in con.execute(
             "SELECT kind, COUNT(DISTINCT cap_id) FROM change_events "
-            "WHERE substr(at,1,10) >= ? GROUP BY kind", (since,)):
+            "WHERE substr(at,1,10) >= ? AND (kind NOT IN (%s) OR substr(at,1,10) >= ?) "
+            "GROUP BY kind" % ",".join("?" * len(SEC_KINDS)),
+            [since] + list(SEC_KINDS) + [SEC_TRUSTED_FROM]):
         out[kind] = n
     return out
 
@@ -225,7 +252,35 @@ def main():
     return 0
 
 
+def _sec_withholding_check():
+    """rows() and tally() must withhold the SAME events, or the page contradicts its own summary."""
+    import sqlite3
+    c = sqlite3.connect(":memory:")
+    c.execute("CREATE TABLE change_events (cap_id TEXT, at TEXT, kind TEXT, severity TEXT, "
+              "what TEXT, why TEXT, action TEXT)")
+    c.execute("CREATE TABLE capabilities (id TEXT, name TEXT, tashan_score REAL)")
+    c.execute("INSERT INTO capabilities VALUES ('pkg:x','x',70)")
+    old, new = "2026-08-11T00:00:00Z", SEC_TRUSTED_FROM + "T00:00:00Z"
+    c.executemany("INSERT INTO change_events VALUES (?,?,?,?,?,?,?)", [
+        ("pkg:x", old, "install_script_added", "high", "w", "y", "a"),   # first-scan shadow
+        ("pkg:x", old, "permissions_widened", "high", "w", "y", "a"),    # same shadow
+        ("pkg:x", old, "deprecated", "high", "w", "y", "a"),             # NOT security: keep
+        ("pkg:x", new, "install_script_added", "high", "w", "y", "a"),   # trustworthy: keep
+    ])
+    got = {r[2] for r in rows(c, days=3650)}
+    assert got == {"deprecated", "install_script_added"}, got
+    t = tally(c, days=3650)
+    # One install_script_added survives, and it is the post-cutoff one.
+    assert t.get("install_script_added") == 1, t
+    assert "permissions_widened" not in t, t
+    assert t.get("deprecated") == 1, t
+    # THE SUMMARY MUST NOT OUTRUN THE LIST. This is the failure that would put "301" in a sentence
+    # above twelve rows, and the sentence is what gets quoted.
+    assert sum(t.values()) == len({(r[0], r[1], r[2]) for r in rows(c, days=3650)}), (t, got)
+
+
 def _selftest():
+    _sec_withholding_check()
     t = {"deprecated": 52, "abandoned": 111, "install_script_added": 301, "advisory_new": 5}
     s = sentence(t)
     assert "52 were deprecated" in s and "301 started running a script" in s, s

@@ -38,7 +38,12 @@ import build
 # competent engineer want to be told?" test.
 WATCHED = ("vitality", "npm_deprecated", "gh_archived", "self_unmaintained", "npm_latest_version",
            "npm_maintainers", "npm_maint_fp", "sec_advisory_count", "sec_max_severity", "sec_install_script",
-           "sec_permissions", "tashan_score")
+           "sec_permissions", "tashan_score",
+           # NOT a signal anyone is alerted about — it records whether the L1-L4 fields above were
+           # ever LOOKED AT. Without it, an unscanned capability's NULL install script is
+           # indistinguishable from an observed absence, and the first scan of a package reads as
+           # the package changing. See SEC_FIELDS below.
+           "sec_scanned_at")
 
 SEV_ORDER = {None: 0, "": 0, "LOW": 1, "MODERATE": 2, "MEDIUM": 2, "HIGH": 3, "CRITICAL": 4,
              "MALICIOUS": 5}
@@ -66,6 +71,25 @@ def _perms(v):
         return set()
 
 
+# UNKNOWN IS NOT ZERO, and this is where that cost the most.
+#
+# Every field the security scan writes is NULL until the scan reaches that package. The scan walks
+# the corpus over days, so on the day it first reaches something, `sec_install_script` goes NULL ->
+# "node install.js" and the old diff read that as THE PACKAGE ADDED AN INSTALL SCRIPT. It published
+# 143 such alerts on 10 Aug, 110 on 11 Aug, 35 on 12 Aug, then 1 and 1 — the decay curve of a
+# scanner sweeping a corpus, not of the world changing. /changes.html told the public that 301
+# packages "started running a script at install time" when ~289 of them had simply been examined for
+# the first time.
+#
+# That is the worst failure mode this instrument has. A false security alarm from the thing that
+# exists to stop false security alarms costs more than saying nothing, and it is exactly what a
+# subscriber would be paying to receive.
+#
+# So: a security transition requires that the PREVIOUS state was itself observed. Anything derived
+# from the L1-L4 scan is withheld until we have two real observations to compare.
+SEC_FIELDS = ("sec_advisory_count", "sec_max_severity", "sec_install_script", "sec_permissions")
+
+
 def diff(prev, cur, name):
     """Every transition between two states, as (kind, severity, what, why, action).
 
@@ -73,42 +97,46 @@ def diff(prev, cur, name):
     """
     out = []
     g = lambda k: (prev.get(k), cur.get(k))
+    # Was the security scan's output ever observed for this capability before now? A state snapshot
+    # written before sec_scanned_at joined WATCHED has no key at all, which is correctly falsy — one
+    # quiet run while the field backfills beats a wave of invented alerts.
+    sec_known = bool(prev.get("sec_scanned_at"))
 
     # --- security: the reason someone subscribes -------------------------------------------------
     was, now = g("sec_advisory_count")
-    if (now or 0) > (was or 0):
+    if sec_known and (now or 0) > (was or 0):
         out.append(("advisory_new", "high",
                     f"{name} now has {now} known advisor{'y' if now == 1 else 'ies'}, up from {was or 0}",
                     "A published advisory means someone has demonstrated a way this can be abused.",
                     "Open the dossier for the advisory id and the version that fixes it, then upgrade."))
-    elif (was or 0) > (now or 0) and (now or 0) == 0:
+    elif sec_known and (was or 0) > (now or 0) and (now or 0) == 0:
         out.append(("advisory_cleared", "info",
                     f"{name} no longer has any known advisory",
                     "The finding that was open against it has been resolved upstream.",
                     "No action needed. Worth noting if you pinned an old version to avoid it."))
 
     was, now = g("sec_max_severity")
-    if SEV_ORDER.get(now, 0) > SEV_ORDER.get(was, 0):
+    if sec_known and SEV_ORDER.get(now, 0) > SEV_ORDER.get(was, 0):
         out.append(("severity_raised", "critical" if now in ("CRITICAL", "MALICIOUS") else "high",
                     f"the worst advisory against {name} is now {now}, was {was or 'none'}",
                     "The severity ceiling rose, so the worst case for this dependency got worse.",
                     "Re-check whether you still accept this risk at its new level."))
 
     was, now = g("sec_install_script")
-    if now and not was:
+    if sec_known and now and not was:
         out.append(("install_script_added", "high",
                     f"{name} now runs a script when it installs",
                     "Install-time code executes on your machine before you have used the tool once, "
                     "and it did not do this before.",
                     "Read the command on the dossier — it is free — before your next install or CI run."))
-    elif was and now and was != now:
+    elif sec_known and was and now and was != now:
         out.append(("install_script_changed", "high",
                     f"the command {name} runs at install time changed",
                     "The code that executes on your machine is not the code you last approved.",
                     "Compare the new command on the dossier against what you accepted."))
 
     gained = _perms(cur.get("sec_permissions")) - _perms(prev.get("sec_permissions"))
-    if gained:
+    if sec_known and gained:
         out.append(("permissions_widened", "high",
                     f"{name} now reaches {', '.join(sorted(gained))}",
                     "Its declared dependencies reach further into your machine than they did before.",
@@ -227,8 +255,36 @@ def _selfcheck():
     base = {"sec_advisory_count": 0, "sec_max_severity": None, "sec_install_script": None,
             "sec_permissions": None, "npm_deprecated": 0, "gh_archived": 0,
             "self_unmaintained": None, "npm_maintainers": 3, "npm_latest_version": "1.0.0",
-            "vitality": "active", "tashan_score": 70}
+            "vitality": "active", "tashan_score": 70,
+            # base models a capability we have ALREADY scanned — the ordinary case. The
+            # never-scanned case is exercised separately below, and must stay silent.
+            "sec_scanned_at": "2026-08-01T00:00:00Z"}
     assert diff(base, base, "x") == [], "an unchanged capability must produce no events"
+
+    # THE FIRST SCAN IS NOT A CHANGE. Without sec_scanned_at in the previous state, every security
+    # field is unobserved, and a NULL install script must not be read as an observed absence. This
+    # published 301 false "started running a script at install time" alerts before it was caught.
+    # Never scanned: every security field NULL *and* no scan timestamp. Nulling the fields alone
+    # would leave sec_scanned_at set and quietly test the wrong thing.
+    unseen = dict(base, sec_scanned_at=None)
+    unseen.update({f: None for f in SEC_FIELDS})
+    first_look = dict(unseen, sec_install_script="node install.js", sec_advisory_count=2,
+                      sec_max_severity="HIGH", sec_scanned_at="2026-08-10T00:00:00Z")
+    assert diff(unseen, first_look, "x") == [], \
+        "a package examined for the first time must emit NO security event"
+
+    # ...but once observed, a REAL addition must still fire. Over-suppressing would silently delete
+    # the alert people subscribe for, which is the same failure wearing the opposite mask.
+    seen_clean = dict(unseen, sec_scanned_at="2026-08-10T00:00:00Z")
+    kinds = {e[0] for e in diff(seen_clean, first_look, "x")}
+    assert "install_script_added" in kinds, kinds
+    assert "advisory_new" in kinds and "severity_raised" in kinds, kinds
+    # A changed script, between two observed states, still fires.
+    was = dict(seen_clean, sec_install_script="node a.js")
+    now2 = dict(was, sec_install_script="node b.js", sec_scanned_at="2026-08-12T00:00:00Z")
+    assert "install_script_changed" in {e[0] for e in diff(was, now2, "x")}
+    # Non-security signals are NOT gated — deprecation does not depend on the advisory scan.
+    assert "deprecated" in {e[0] for e in diff(unseen, dict(unseen, npm_deprecated=1), "x")}
 
     got = {e[0] for e in diff(base, dict(base, sec_advisory_count=1, sec_max_severity="HIGH"), "x")}
     assert {"advisory_new", "severity_raised"} <= got, got

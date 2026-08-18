@@ -28,7 +28,7 @@ HONEST BY CONSTRUCTION, which is the whole product:
     python3 pipeline/gen_stats.py            # write web/stats.html
     python3 pipeline/gen_stats.py --selftest # no DB, no network
 """
-import datetime as dt, html, json, os, sqlite3, sys
+import re, datetime as dt, html, json, os, sqlite3, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -71,6 +71,11 @@ HEALTH = [
      "SELECT COUNT(*) FROM capabilities WHERE sec_install_script IS NOT NULL "
      "AND sec_install_script != ''",
      "A postinstall or preinstall hook — code that runs before you have agreed to anything."),
+    ("opaque_install", "of those install scripts run code we CANNOT read",
+     None,     # derived: see opaque_share(). Percentage of install_script.
+     "The hook runs a file inside the tarball — postinstall.js, install.js — and a static check "
+     "cannot see what is in it without downloading and running the package, which no auditor "
+     "should do. This is the honest limit of every scanner, including ours."),
     ("no_provenance", "of scanned packages ship with NO build provenance",
      None,     # derived: scanned - attested, as a percentage. Computed in numbers().
      "npm signs every tarball it hosts, so a signature proves nothing about who built it. Only a "
@@ -82,6 +87,30 @@ HEALTH = [
 ]
 
 
+# An install hook is either INLINE — `node -e "..."`, echo, chmod, mkdir — where the code is right
+# there in package.json and we can read it, or it DELEGATES to a file in the tarball, where we
+# cannot. That distinction is the whole point: a scanner that reports "runs a script" without saying
+# whether it could read the script invites the reader to assume it did.
+#
+# Deliberately conservative — anything we are not sure is inline counts as inline, so this figure is
+# a FLOOR on what is unreadable, never an inflated one.
+INLINE = re.compile(r"""^\s*(node\s+-e\s|echo\s|chmod\s|mkdir\s|test\s|which\s|\[\s|true\s*$)""",
+                    re.I | re.X)
+
+
+def opaque_share(con):
+    """(unreadable, total) install hooks. Splits on whether the code is in package.json or a file."""
+    rows = [r[0] or "" for r in con.execute(
+        "SELECT sec_install_script FROM capabilities "
+        "WHERE sec_install_script IS NOT NULL AND sec_install_script != ''")]
+    # A chained hook is only readable if EVERY step is: `chmod x && node install.js` still runs a
+    # file we cannot see, and reporting it as readable would be the exact overstatement this guards.
+    unreadable = sum(1 for s in rows
+                     if any(not INLINE.match(part.strip())
+                            for part in re.split(r"&&|\|\||;", s) if part.strip()))
+    return unreadable, len(rows)
+
+
 def numbers(con):
     q = lambda s: con.execute(s).fetchone()[0]
     n = {k: q(sql) for k, _l, sql, _w in FACTS}
@@ -91,6 +120,9 @@ def numbers(con):
     attested = q("SELECT COUNT(*) FROM capabilities WHERE sec_provenance=1")
     n["attested"] = attested
     n["no_provenance"] = round(100 * (n["scanned"] - attested) / n["scanned"]) if n["scanned"] else 0
+    opaque, hooks = opaque_share(con)
+    n["opaque_install_n"] = opaque
+    n["opaque_install"] = round(100 * opaque / hooks) if hooks else 0
     n["history_points"] = q("SELECT COUNT(*) FROM signal_history")
     n["days"] = q("SELECT COUNT(DISTINCT substr(at,1,10)) FROM signal_history")
     return n
@@ -126,7 +158,7 @@ def render(n, cov, today):
         h = ['<dl class="stat ' + cls + '">']
         for k, label, _sql, why in items:
             v = n.get(k, 0)
-            shown = f"{v}%" if k == "no_provenance" else f"{v:,}"
+            shown = f"{v}%" if k in ("no_provenance", "opaque_install") else f"{v:,}"
             h.append('<div class="stat__i"><dt class="stat__n mono">' + esc(shown) + "</dt>"
                      '<dd class="stat__l">' + esc(label)
                      + '<span class="mnote stat__w o-70"> ' + esc(why) + "</span></dd></div>")
@@ -220,7 +252,8 @@ def main():
 def _selftest():
     n = {"tracked": 39374, "scored": 14419, "scanned": 7862, "graded": 3969, "dying": 727,
          "solo": 7652, "install_script": 490, "attested": 2044, "no_provenance": 74,
-         "malicious": 6, "history_points": 229279, "days": 19}
+         "malicious": 6, "history_points": 229279, "days": 19,
+         "opaque_install": 92, "opaque_install_n": 453}
     lds, body, lede = render(n, {"headline": {"scanned_pct": 100, "scored_pct": 92, "graded_pct": 67}},
                              "2026-08-16")
     assert "39,374" in body and "74%" in body, "the headline numbers must reach the page"
@@ -236,6 +269,25 @@ def _selftest():
     assert len(lds[0]["variableMeasured"]) == len(FACTS)
     # No number may be typed: every FACTS row is either SQL or explicitly derived.
     assert all(sql for _k, _l, sql, _w in FACTS), "a fact without a query is a claim"
+    assert "92%" in body, "the unreadable-install share must reach the page"
+
+    # THE SPLIT THAT DECIDES THE NUMBER: inline code we can read vs a file we cannot. Getting this
+    # backwards would let us claim we audited install behaviour we never saw.
+    import sqlite3 as _s
+    c2 = _s.connect(":memory:")
+    c2.execute("CREATE TABLE capabilities (sec_install_script TEXT)")
+    c2.executemany("INSERT INTO capabilities VALUES (?)", [
+        ("echo 'installed!'",),                       # readable
+        ('node -e "console.log(1)"',),                # readable
+        ("chmod +x dist/index.js",),                  # readable
+        ("node scripts/postinstall.js",),             # a file in the tarball: unreadable
+        ("playwright install chromium",),             # downloads a browser: unreadable
+        # A CHAIN IS ONLY READABLE IF EVERY STEP IS. Splitting on && and taking the first part
+        # would score this as a harmless chmod and hide the install.js behind it.
+        ("chmod +x a && node install.js",),
+        ("",), (None,)])                              # neither counts as a hook at all
+    op, tot = opaque_share(c2)
+    assert (op, tot) == (3, 6), (op, tot)
     print("gen_stats selftest ok")
     return 0
 
