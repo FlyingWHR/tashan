@@ -1,0 +1,11 @@
+{
+  "_note": "Second in-session pass, 18 Aug 2026. Shortlisted rows whose OWN description names a job their tags miss, then hand-judged one by one — most of the shortlist was rejected. 'SQLite persistence' is an implementation detail, not database-access; 'plan, write, review, test' is a verb list, not test-automation; a smithery badge URL containing the word security is not a security tool. put_tags upserts, so these ADD to existing tags rather than replacing them.",
+  "pkg:firecrawl-mcp": ["web-scraping"],
+  "pkg:cline": ["browser-automation"],
+  "pkg:@homespunapps/mcp": ["infrastructure-and-deployment"],
+  "pkg:@kryptosai/mcp-observatory": ["test-automation"],
+  "pkg:@extension.dev/mcp": ["browser-automation"],
+  "pkg:depwire-cli": ["security-review"],
+  "pkg:githits": ["security-review"],
+  "pkg:terminal-driver-mcp": ["test-automation"]
+}

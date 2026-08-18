@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 1114,
+  "full": 1144,
   "grade": 3808,
   "n": 37634,
   "scan": 6970,
   "score": 13951,
-  "task": 3104
+  "task": 3146
  },
  "axes": [
   {
@@ -34,7 +34,7 @@
   "graded_pct": 67,
   "scanned_pct": 100,
   "scored_pct": 92,
-  "tasked_pct": 64,
+  "tasked_pct": 68,
   "tier": "top1000"
  },
  "queue": [
@@ -64,15 +64,6 @@
     "grade"
    ],
    "name": "mcporter"
-  },
-  {
-   "downloads": 133382,
-   "id": "pkg:@modelcontextprotocol/server-sequential-thinking",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "@modelcontextprotocol/server-sequential-thinking"
   },
   {
    "downloads": 130839,
@@ -128,8 +119,7 @@
    "id": "pkg:agentation-mcp",
    "kind": "npm",
    "missing": [
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "agentation-mcp"
   },
@@ -171,21 +161,11 @@
    "name": "agentic-flow"
   },
   {
-   "downloads": 67296,
-   "id": "pkg:@modelcontextprotocol/server-everything",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "@modelcontextprotocol/server-everything"
-  },
-  {
    "downloads": 65785,
    "id": "pkg:hlims-mcp",
    "kind": "npm",
    "missing": [
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "hlims-mcp"
   },
@@ -217,15 +197,6 @@
     "grade"
    ],
    "name": "@cloudflare/mcp-server-cloudflare"
-  },
-  {
-   "downloads": 43044,
-   "id": "pkg:instar",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "instar"
   },
   {
    "downloads": 37481,
@@ -331,15 +302,6 @@
    "name": "context-mode"
   },
   {
-   "downloads": 17356,
-   "id": "pkg:@stripe/mcp",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "@stripe/mcp"
-  },
-  {
    "downloads": 16888,
    "id": "pkg:xmcp",
    "kind": "npm",
@@ -347,15 +309,6 @@
     "grade"
    ],
    "name": "xmcp"
-  },
-  {
-   "downloads": 14965,
-   "id": "pkg:neo.mjs",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "neo.mjs"
   },
   {
    "downloads": 14776,
@@ -380,8 +333,7 @@
    "id": "pkg:@alipay/mcp-server-alipay",
    "kind": "npm",
    "missing": [
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "@alipay/mcp-server-alipay"
   },
@@ -408,28 +360,72 @@
    "id": "pkg:iclavue",
    "kind": "npm",
    "missing": [
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "iclavue"
+  },
+  {
+   "downloads": 10766,
+   "id": "pkg:playwright-mcp",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "playwright-mcp"
+  },
+  {
+   "downloads": 10514,
+   "id": "pkg:veryfront",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "veryfront"
+  },
+  {
+   "downloads": 9044,
+   "id": "pkg:hevy-mcp",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "hevy-mcp"
+  },
+  {
+   "downloads": 8509,
+   "id": "pkg:@larksuiteoapi/lark-mcp",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "@larksuiteoapi/lark-mcp"
+  },
+  {
+   "downloads": 8089,
+   "id": "pkg:davinci-resolve-mcp",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "davinci-resolve-mcp"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 59,
+   "full": 64,
    "grade": 66,
    "n": 100,
    "scan": 100,
    "score": 92,
-   "task": 86
+   "task": 95
   },
   "top1000": {
-   "full": 471,
+   "full": 501,
    "grade": 670,
    "n": 1000,
    "scan": 1000,
    "score": 924,
-   "task": 643
+   "task": 685
   }
  }
 }
