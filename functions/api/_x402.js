@@ -38,6 +38,17 @@ export const PRICED = {
     usd: 0.01,
     atomic: "10000",
     description: "The full score history for one capability, every point we have recorded.",
+    bazaar: {
+      method: "GET",
+      queryParamsSchema: {
+        properties: { id: { type: "string",
+          description: "Capability id, e.g. pkg:chrome-devtools-mcp" } },
+        required: ["id"],
+      },
+      output: { example: { id: "pkg:chrome-devtools-mcp",
+        series: { tashan_score: { "2026-07-23": 91, "2026-08-14": 92 } },
+        scorers: { "2026-08-14": "s5" }, source: "tashan signal_history" } },
+    },
   },
   // `security-detail` WAS HERE AT $0.01 AND HAS BEEN REMOVED — it sold data we publish for free.
   // redact_paid() had already moved advisory ids, severities, fixing versions and the install
@@ -52,12 +63,41 @@ export const PRICED = {
   "capability-kit": {
     usd: 0.25,
     atomic: "250000",
+    bazaar: {
+      method: "POST",
+      bodySchema: {
+        properties: {
+          goal: { type: "string", description: "What you are trying to do, in plain words" },
+          task: { type: "string", description: "Or a task slug, e.g. web-scraping" },
+          client: { type: "string", description: "claude-code | cursor | codex | npx" },
+          kit: { type: "boolean", description: "true to assemble pinned versions and a config" },
+        },
+      },
+      output: { example: { task: "web-scraping",
+        shortlist: [{ name: "firecrawl-mcp", tashan_score: 93 }],
+        kit: { client: "claude-code", config_file: "~/.claude.json",
+               pinned: [{ id: "pkg:firecrawl-mcp", install: "firecrawl-mcp@4.4.0",
+                          advisories_at_that_version: 0 }] } } },
+    },
     description: "A ready-to-run kit for one job: which capabilities to install, pinned to the "
                + "version the advisory scan actually cleared, with a config for your host.",
   },
   "config-audit": {
     usd: 0.05,
     atomic: "50000",
+    bazaar: {
+      method: "POST",
+      bodySchema: {
+        properties: {
+          servers: { type: "array", items: { type: "string" },
+                     description: "Capability names or ids from your config" },
+          history: { type: "boolean", description: "true for the score series behind each row" },
+        },
+        required: ["servers"],
+      },
+      output: { example: { results: [{ name: "chrome-devtools-mcp", verdict: "keep",
+        flags: [] }], note: "every risk is free; history is the paid half" } },
+    },
     description: "Audit a whole config: for every capability you run, what changed since a date "
                + "you name, and what to move to.",
   },
@@ -124,7 +164,11 @@ export function paymentRequired(env, key, resourceUrl, error = "payment required
       maxTimeoutSeconds: TIMEOUT_S,
       extra: { name: c.assetName, version: c.assetVersion },
     }],
-    extensions: {},
+    // BAZAAR — the discovery layer agents search. A seller is indexed within ~30s of their first
+    // CONFIRMED SETTLE, but only if the settle carries this declaration and a resource to attach it
+    // to. We shipped `extensions: {}`, so a payment would have earned us the money and none of the
+    // discovery, which is the half that compounds. See docs.cdp.coinbase.com/x402/seller/get-discovered.
+    extensions: p.bazaar ? { bazaar: { ...p.bazaar, description: p.description } } : {},
   };
 }
 
@@ -229,7 +273,13 @@ export async function charge(env, pr, payload, work) {
 
   let s;
   try {
-    s = await facilitate(env, "/settle", payload, requirements);
+    // "without it the Bazaar has no resource to attach the metadata to" — CDP's own words. The
+    // client's payload may omit it; we know the URL because it is ours. Added at SETTLE only, after
+    // verification has already passed, and it is outside the signed authorization struct
+    // (from/to/value/validAfter/validBefore/nonce), so it cannot invalidate a signature.
+    const settlePayload = (payload && !payload.resource && pr && pr.resource)
+      ? { ...payload, resource: pr.resource } : payload;
+    s = await facilitate(env, "/settle", settlePayload, requirements);
   } catch (e) {
     return { ok: false, reason: "settlement_unavailable", detail: String(e) };
   }

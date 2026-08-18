@@ -261,4 +261,63 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
      forbidden.status === 403 && fb.accepts === undefined && fb.error === "licence expired");
 }
 
+
+// ---------------------------------------------------------------------------------------------
+// BAZAAR — being FINDABLE, which is the half that compounds.
+//
+// The Bazaar is the discovery layer agents search for paid endpoints. A seller is indexed within
+// ~30 seconds of their first CONFIRMED SETTLE, and only if that settle carries a declaration and a
+// resource to attach it to. We shipped `extensions: {}`, so the first real payment would have
+// earned the money and bought no discovery at all.
+{
+  const pr = paymentRequired(LIVE, "capability-kit", "https://tashan.sh/v0.1/kit");
+  ok("the 402 declares the endpoint to the Bazaar", Boolean(pr.extensions && pr.extensions.bazaar),
+     JSON.stringify(pr.extensions));
+  const b = pr.extensions.bazaar;
+  ok("...with the method an agent must use", b.method === "POST", b.method);
+  ok("...an input schema, so it can construct a call BEFORE paying", Boolean(b.bodySchema));
+  ok("...and a worked output example, not an empty object",
+     b.output && b.output.example && Object.keys(b.output.example).length > 0);
+  ok("...carrying the same description the price quotes",
+     b.description === PRICED["capability-kit"].description);
+
+  const h = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/history");
+  ok("a GET resource declares its query parameters", h.extensions.bazaar.method === "GET"
+     && Boolean(h.extensions.bazaar.queryParamsSchema));
+
+  // Unconfigured stays unconfigured: no wallet, no quote, nothing declared.
+  ok("nothing is declared when the rail is off",
+     paymentRequired({}, "capability-kit", "https://tashan.sh/v0.1/kit") === null);
+}
+{
+  // THE SETTLE MUST NAME THE RESOURCE. Verified separately from verify, because we add it only
+  // after verification has passed and only when the client left it out.
+  const seen = [];
+  const out = await withFetch(
+    (u, init) => { seen.push({ u: String(u), body: JSON.parse(init.body) });
+                   return res(String(u).endsWith("/verify") ? { isValid: true }
+                                                            : { success: true, transaction: "0x1" }); },
+    () => charge(LIVE, PR, { x402Version: 2 }, async () => "PAID"));
+  ok("payment succeeded", out.ok, JSON.stringify(out));
+  const settle = seen.find((c) => c.u.endsWith("/settle"));
+  ok("the settle call carries paymentPayload.resource",
+     Boolean(settle && settle.body.paymentPayload.resource), JSON.stringify(settle && settle.body));
+  const verify = seen.find((c) => c.u.endsWith("/verify"));
+  ok("...and verify is sent EXACTLY what the client signed, untouched",
+     verify && verify.body.paymentPayload.resource === undefined,
+     JSON.stringify(verify && verify.body.paymentPayload));
+}
+{
+  // A client that supplied its own resource keeps it — we never overwrite the caller.
+  const seen = [];
+  await withFetch(
+    (u, init) => { seen.push({ u: String(u), body: JSON.parse(init.body) });
+                   return res(String(u).endsWith("/verify") ? { isValid: true } : { success: true }); },
+    () => charge(LIVE, PR, { x402Version: 2, resource: { url: "https://client.example/r" } },
+                 async () => "PAID"));
+  const settle = seen.find((c) => c.u.endsWith("/settle"));
+  ok("a resource the client supplied is not overwritten",
+     settle.body.paymentPayload.resource.url === "https://client.example/r");
+}
+
 console.log(`\nx402: ${n}/${n} passed · all green`);
