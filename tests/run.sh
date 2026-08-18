@@ -176,6 +176,7 @@ echo; echo "── licence gate (paywall) ────────────�
 node functions/api/license.test.mjs 2>/dev/null || fail=1
 node functions/api/_x402.test.mjs 2>/dev/null || fail=1
 node functions/api/_cdp.test.mjs 2>/dev/null || { node functions/api/_cdp.test.mjs; fail=1; }
+node functions/api/_demand.test.mjs 2>/dev/null || { node functions/api/_demand.test.mjs; fail=1; }
 node functions/v0.1/audit.test.mjs 2>/dev/null || fail=1
 node functions/v0.1/kit.test.mjs 2>/dev/null || fail=1
 

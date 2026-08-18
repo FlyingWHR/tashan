@@ -30,6 +30,8 @@ API = "https://api.cloudflare.com/client/v4/accounts/{}/analytics_engine/sql"
 # blob1 event · blob2 path · blob3 referrer host · blob4 context key · blob5 value
 # · blob6 viewport · blob7 country · blob8 session   (see functions/api/e.js and docs/ANALYTICS.md)
 EV, PATH, REF, KEY = "blob1", "blob2", "blob3", "blob4"
+# The x402 rows reuse the same eight blobs: blob2 resource · blob4 stage · blob5 reason · blob8 UA.
+VAL, UA = "blob5", "blob8"
 
 
 def sql(q):
@@ -77,7 +79,19 @@ def collect(days):
     refs = sql("SELECT %s AS ref, SUM(_sample_interval) AS c FROM %s WHERE %s='pageview' "
                "AND %s != '' AND %s GROUP BY ref ORDER BY c DESC LIMIT 10"
                % (REF, DATASET, EV, REF, since))
-    return {"totals": totals, "offers": offers, "checkout": checkout, "pages": pages, "refs": refs}
+    # THE AGENT FUNNEL. A 402 served is demand; a payment refused is demand with a named obstacle.
+    # Both were invisible until 18 Aug, so an absence before that date means "not measured", not zero.
+    x_stage = sql("SELECT %s AS stage, SUM(_sample_interval) AS c FROM %s WHERE %s='x402' AND %s "
+                  "GROUP BY stage ORDER BY c DESC" % (KEY, DATASET, EV, since))
+    x_why = sql("SELECT %s AS reason, SUM(_sample_interval) AS c FROM %s WHERE %s='x402' "
+                "AND %s='failed' AND %s GROUP BY reason ORDER BY c DESC LIMIT 12"
+                % (VAL, DATASET, EV, KEY, since))
+    x_res = sql("SELECT %s AS res, SUM(_sample_interval) AS c FROM %s WHERE %s='x402' AND %s "
+                "GROUP BY res ORDER BY c DESC LIMIT 8" % (PATH, DATASET, EV, since))
+    x_ua = sql("SELECT %s AS ua, SUM(_sample_interval) AS c FROM %s WHERE %s='x402' AND %s != '' "
+               "AND %s GROUP BY ua ORDER BY c DESC LIMIT 8" % (UA, DATASET, EV, UA, since))
+    return {"totals": totals, "offers": offers, "checkout": checkout, "pages": pages, "refs": refs,
+            "x_stage": x_stage, "x_why": x_why, "x_res": x_res, "x_ua": x_ua}
 
 
 def rate(num, den):
@@ -85,6 +99,60 @@ def rate(num, den):
     if den < 100:
         return "—"
     return "%.2f%%" % (100.0 * num / den)
+
+
+# Failures that mean OUR RAIL IS BROKEN and no caller on earth could have succeeded. These are not
+# customer problems and must never be read as weak demand — they are outages with a payer attached.
+OURS = ("verification_credential_rejected", "verification_unreachable", "verification_http_",
+        "settle_unavailable", "not_configured")
+
+
+def agent_funnel(d):
+    """The x402 funnel — and specifically, who tried to pay and what stopped them."""
+    stage = {r.get("stage", ""): n(r, "c") for r in d.get("x_stage") or []}
+    quoted, tried = stage.get("quoted", 0), stage.get("attempted", 0)
+    failed, paid = stage.get("failed", 0), stage.get("settled", 0)
+    if not (quoted or tried or failed or paid):
+        return ["### Agents (x402)", "",
+                "No agent has reached a priced endpoint yet. Instrumented 18 Aug — an absence before "
+                "that date means unmeasured, not zero.", ""]
+    L = ["### Agents (x402)", "",
+         "| stage | count |", "|---|---:|",
+         "| quoted a price (402) | %s |" % f"{quoted:,}",
+         "| attempted payment | %s |" % f"{tried:,}",
+         "| payment failed | %s |" % f"{failed:,}",
+         "| **settled (paid)** | **%s** |" % f"{paid:,}", ""]
+    if tried:
+        L.append("%d of %d quoted callers tried to pay (%s)."
+                 % (tried, quoted, rate(tried, quoted) if quoted >= 100 else "%d/%d" % (tried, quoted)))
+        L.append("")
+    # THE LINE THAT DECIDES WHAT TO DO TODAY. A payer stopped by our own broken rail is a bug with a
+    # deadline; a payer stopped by their own wallet is a market fact.
+    if d.get("x_why"):
+        ours = sum(n(r, "c") for r in d["x_why"]
+                   if any(str(r.get("reason", "")).startswith(o) for o in OURS))
+        L.append("**Why payments failed** — %d on our side, %d on the caller's."
+                 % (ours, failed - ours))
+        L.append("")
+        L.append("| reason | count | whose |")
+        L.append("|---|---:|---|")
+        for r in d["x_why"]:
+            why = str(r.get("reason", "") or "(none)")
+            mine = any(why.startswith(o) for o in OURS)
+            L.append("| `%s` | %s | %s |" % (why, f"{n(r, 'c'):,}", "**ours — fix**" if mine else "caller"))
+        L.append("")
+        if ours:
+            L.append("> %d payment%s failed because of OUR configuration. Every caller hitting that "
+                     "path is a customer we turned away. Run `python3 pipeline/check_payments.py`."
+                     % (ours, "" if ours == 1 else "s"))
+            L.append("")
+    for key, title in (("x_res", "Which priced resource"), ("x_ua", "Which client")):
+        if d.get(key):
+            L.append("**%s:** %s" % (title, ", ".join(
+                "%s (%d)" % (str(r.get("res") or r.get("ua") or "?")[:48], n(r, "c"))
+                for r in d[key])))
+            L.append("")
+    return L
 
 
 def report(d, days):
@@ -104,6 +172,7 @@ def report(d, days):
     if views < 100:
         L.append("_Too little traffic to read a rate yet (%d views). Counts only._" % views)
         L.append("")
+    L.extend(agent_funnel(d))
     if d["offers"]:
         L.append("### Which offer gets clicked")
         L.append("")
@@ -144,6 +213,25 @@ def _selftest():
     assert "0.30%" in out and "pro-dossier" in out and "| 1,000 |" in out, out
     empty = report({"totals": {}, "offers": [], "checkout": [], "pages": [], "refs": []}, 7)
     assert "Too little traffic" in empty and "not missing instrumentation" in empty
+    # SILENCE IS NOT ZERO. Before 18 Aug nothing recorded a 402, so an empty agent funnel must say
+    # "unmeasured" — reporting it as no demand would be inventing a finding out of our own blindness.
+    assert "unmeasured, not zero" in empty, empty
+
+    # THE JUDGEMENT THIS REPORT EXISTS TO MAKE: was the payer stopped by their wallet, or by us?
+    # Getting this backwards means either ignoring an outage or chasing a customer who never existed.
+    ag = "\n".join(agent_funnel({
+        "x_stage": [{"stage": "quoted", "c": "40"}, {"stage": "attempted", "c": "6"},
+                    {"stage": "failed", "c": "5"}, {"stage": "settled", "c": "1"}],
+        "x_why": [{"reason": "verification_credential_rejected", "c": "3"},
+                  {"reason": "insufficient_funds", "c": "2"}],
+        "x_res": [{"res": "capability-kit", "c": "40"}], "x_ua": [{"ua": "claude-code/2.1", "c": "6"}]}))
+    assert "3 on our side, 2 on the caller's" in ag, ag
+    assert "ours — fix" in ag and "check_payments.py" in ag, ag
+    assert "**1**" in ag, "a settled payment must be the line that stands out"
+    # A caller-side failure alone must NOT raise our-side alarm — that would cry wolf on real demand.
+    theirs = "\n".join(agent_funnel({"x_stage": [{"stage": "failed", "c": "2"}],
+                                     "x_why": [{"reason": "insufficient_funds", "c": "2"}]}))
+    assert "0 on our side" in theirs and "ours — fix" not in theirs, theirs
     print("funnel selftest ok")
     return 0
 

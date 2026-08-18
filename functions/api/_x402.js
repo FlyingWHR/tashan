@@ -29,10 +29,31 @@
 // ==================================================================================================
 
 import { cdpAuthHeader } from "./_cdp.js";
+import { demand } from "./_demand.js";
 
 // One definition of what each paid thing costs. Atomic units, because that is what the wire carries:
 // USDC has 6 decimals, so $0.01 is "10000". Keeping the human price beside it means the two cannot
 // drift, and `usd` is what the JSON fallback and the docs quote.
+// PRICED AT WHERE THE MARKET ACTUALLY TRANSACTS, measured 18 Aug against the CDP Bazaar's own
+// index (15,089 listed resources, public and keyless) rather than guessed — pipeline/bazaar.py:
+//
+//     price band       listings   calls/30d   share of all x402 calls
+//     <= $0.01            8,312     269,061      82.9%
+//     $0.01 - $0.05       3,406      36,823      11.3%
+//     $0.05 - $0.10       1,278       6,290       1.9%
+//     $0.10 - $0.25       1,214       7,739       2.4%
+//     > $0.25               876       4,540       1.4%
+//
+// The kit sold at $0.25 — a band carrying 1.4% of all traffic. Every top earner in the ecosystem
+// prices between $0.006 and $0.025: Tavily search $0.01, Exa $0.007, Firecrawl $0.025. Nothing was
+// lost by learning this late, because we had zero settles — but the price had to be right BEFORE
+// the first one, since THE BAZAAR LISTING IS CREATED BY A SETTLE and records what it settled at.
+//
+// PRICED FOR VOLUME, NOT MARGIN, deliberately. The entire x402 market is ~$9.8k GMV a month split
+// across 15,089 sellers — $0.65 each — and its best-earning resource takes ~$362 of that. So this
+// is a DISCOVERY channel (41,671 unique paying agents) and a credibility surface, not revenue. Optimising it for margin
+// would optimise a rounding error at the cost of the only thing it is good for. Revenue is Pro's
+// job. Re-measure before assuming any of this still holds: pipeline/bazaar.py prints it.
 export const PRICED = {
   "capability-history": {
     usd: 0.01,
@@ -61,8 +82,8 @@ export const PRICED = {
   // of them sells the current state of anything, because the current state is the free tier and the
   // free tier is the distribution.
   "capability-kit": {
-    usd: 0.25,
-    atomic: "250000",
+    usd: 0.05,
+    atomic: "50000",
     bazaar: {
       method: "POST",
       bodySchema: {
@@ -83,8 +104,8 @@ export const PRICED = {
                + "version the advisory scan actually cleared, with a config for your host.",
   },
   "config-audit": {
-    usd: 0.05,
-    atomic: "50000",
+    usd: 0.01,
+    atomic: "10000",
     bazaar: {
       method: "POST",
       bodySchema: {
@@ -235,7 +256,11 @@ async function facilitate(env, path, payload, requirements) {
  * Any error — a refusal, a malformed response, a facilitator that is simply down — denies. An
  * outage must never become a free tier, and it must never become a charge for nothing either.
  */
-export async function charge(env, pr, payload, work) {
+export async function charge(env, pr, payload, work, request = null) {
+  // EVERY OUTCOME IS RECORDED, and the failures matter more than the success. Without this a
+  // refused payment is indistinguishable from nobody having come at all.
+  const res = (pr && pr.resource && pr.resource.url) || "";
+  demand(env, request, "attempted", res);
   const requirements = pr.accepts[0];
   let v;
   try {
@@ -250,6 +275,7 @@ export async function charge(env, pr, payload, work) {
       m.includes("credential_rejected") ? "verification_credential_rejected" :
       /http_\d+/.test(m)               ? "verification_" + (m.match(/http_\d+/) || [""])[0] :
                                          "verification_unreachable";
+    demand(env, request, "failed", reason);
     return { ok: false, reason, detail: m };
   }
   // AN EXPLICIT YES, OR NOTHING. This used to deny only when the facilitator said `isValid: false`
@@ -264,6 +290,8 @@ export async function charge(env, pr, payload, work) {
   // positive assertion, and every other answer — including an unrecognised one — denies.
   const said_yes = v && (v.isValid === true || v.valid === true);
   if (!said_yes) {
+    demand(env, request, "failed",
+           (v && (v.invalidReason || v.errorReason)) || "payment_invalid");
     return { ok: false,
              reason: (v && (v.invalidReason || v.errorReason)) || "payment_invalid",
              detail: (v && (v.invalidMessage || v.errorMessage)) || undefined };
@@ -281,11 +309,14 @@ export async function charge(env, pr, payload, work) {
       ? { ...payload, resource: pr.resource } : payload;
     s = await facilitate(env, "/settle", settlePayload, requirements);
   } catch (e) {
+    demand(env, request, "failed", "settle_unavailable");
     return { ok: false, reason: "settlement_unavailable", detail: String(e) };
   }
   if (!s || s.success === false) {
+    demand(env, request, "failed", "settle:" + ((s && s.errorReason) || "settlement_failed"));
     return { ok: false, reason: (s && s.errorReason) || "settlement_failed" };
   }
+  demand(env, request, "settled", res);
   return { ok: true, result, settlement: s };
 }
 

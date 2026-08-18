@@ -670,7 +670,7 @@ def pricing_block():
         "- **Paying as software, not as a subscriber:** those same 402s speak "
         "[x402](https://github.com/coinbase/x402) v2 — a `PAYMENT-REQUIRED` header and an `accepts` "
         "array — so a caller with a wallet can pay per request instead of holding an account. "
-        "`POST /v0.1/kit` costs $0.25 a call that way, `POST /v0.1/audit` $0.05, and one "
+        "`POST /v0.1/kit` costs $0.05 a call that way, `POST /v0.1/audit` $0.01, and one "
         "capability's history $0.01. "
         "The `accepts` array is absent until settlement is live on this deployment, because "
         "quoting a payment option we cannot verify would waste your signature.",

@@ -48,8 +48,17 @@ for (const missing of ["X402_PAY_TO", "X402_NETWORK", "X402_ASSET", "X402_FACILI
      && a.asset && a.payTo && typeof a.maxTimeoutSeconds === "number",
      JSON.stringify(a));
   ok("amount is atomic units as a STRING, not a float",
-     a.amount === "50000" && typeof a.amount === "string",
-     "0.05 USDC at 6 decimals; a float here loses money to rounding");
+     a.amount === "10000" && typeof a.amount === "string",
+     "0.01 USDC at 6 decimals; a float here loses money to rounding");
+  // THE TWO HALVES OF A PRICE MUST NEVER DRIFT. `usd` is what every human-readable surface quotes
+  // and `atomic` is what the caller actually signs for — nothing recomputes one from the other, so
+  // a repricing that edits one and forgets the other silently charges a different amount than the
+  // page advertises. That is exactly the mistake the 18 Aug repricing nearly made.
+  for (const [key, p] of Object.entries(PRICED)) {
+    ok(`${key}: usd and atomic agree`,
+       String(Math.round(p.usd * 1e6)) === p.atomic,
+       `usd ${p.usd} implies ${Math.round(p.usd * 1e6)}, atomic says ${p.atomic}`);
+  }
   ok("no v1 field names leak in (maxAmountRequired is a different generation)",
      !("maxAmountRequired" in a));
   const header = requiredHeader(pr);

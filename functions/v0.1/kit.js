@@ -27,6 +27,7 @@
 import { validate, keyFrom, activationFrom, OFFER } from "../api/_license.js";
 import { PRICED, configured, paymentRequired, requiredHeader, paymentFrom, charge, responseHeader }
   from "../api/_x402.js";
+import { demand } from "../api/_demand.js";
 
 const PRICE_KEY = "capability-kit";
 const MAX_PICKS = 8;
@@ -333,11 +334,12 @@ export async function onRequestPost({ request, env }) {
                              "payment required to assemble the kit");
   const payment = paymentFrom(request);
   if (pr && payment) {
-    const out = await charge(env, pr, payment, assemble);
+    const out = await charge(env, pr, payment, assemble, request);
     if (!out.ok) return json({ ...pr, error: "payment " + out.reason }, 402, requiredHeader(pr));
     return json(out.result, 200, responseHeader(out.settlement));
   }
 
+  demand(env, request, "quoted", "capability-kit");
   return json({
     ...(pr || {}),
     error: "payment required to assemble the kit",

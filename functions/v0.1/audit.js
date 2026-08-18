@@ -31,6 +31,7 @@ import { validate, keyFrom, activationFrom, OFFER } from "../api/_license.js";
 import { bucketOf } from "../api/history.js";
 import { PRICED, configured, paymentRequired, requiredHeader, paymentFrom, charge, responseHeader }
   from "../api/_x402.js";
+import { demand } from "../api/_demand.js";
 
 const MAX_SERVERS = 200;          // bounds the work; an honest cap that is reported, never silent
 const PRICE_KEY = "config-audit";
@@ -254,7 +255,7 @@ export async function onRequestPost({ request, env, next }) {
                              "payment required for the history half of this audit");
   const payment = paymentFrom(request);
   if (pr && payment) {
-    const out = await charge(env, pr, payment, run);
+    const out = await charge(env, pr, payment, run, request);
     if (!out.ok) {
       return json({ ...pr, error: "payment " + out.reason }, 402, requiredHeader(pr));
     }
@@ -263,6 +264,7 @@ export async function onRequestPost({ request, env, next }) {
 
   // 3. Neither. 402 with the terms — spec-shaped when x402 is live, and always carrying the
   //    subscription price and THE FREE AUDIT ITSELF, because the risks were never the paid part.
+  demand(env, request, "quoted", "config-audit");
   return json({
     ...(pr || {}),
     error: "payment required for the history half of this audit",

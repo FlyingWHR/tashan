@@ -12,6 +12,7 @@
 
 import { keyFrom, validate, activationFrom, deny } from "./_license.js";
 import { paymentRequired } from "./_x402.js";
+import { demand } from "./_demand.js";
 
 // Bucketing must match bucket_of() in pipeline/push_history.py exactly, or every lookup misses
 // silently and a paying customer sees 404. One KV value per capability is ~6,500 writes a night; one
@@ -40,8 +41,11 @@ export async function onRequestGet({ request, env }) {
   }
 
   const v = await validate(env, keyFrom(request), activationFrom(request));
-  if (!v.ok) return deny(v, paymentRequired(env, "capability-history",
-                       new URL(request.url).origin + "/api/history"));
+  if (!v.ok) {
+    demand(env, request, "quoted", "capability-history", v.reason || "");
+    return deny(v, paymentRequired(env, "capability-history",
+                new URL(request.url).origin + "/api/history"));
+  }
 
   if (!env.TASHAN_KV) {
     return new Response(JSON.stringify({ error: "history store not configured" }), {
