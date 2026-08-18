@@ -29,11 +29,27 @@ concurrency:
 jobs:
   measure:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # 90, RAISED FROM 45 ON 18 AUG BECAUSE THE PIPELINE OUTGREW IT. The run was cancelled mid
+    # `registry+npm` at 47 minutes and committed "PIPELINE CRASHED" — it had not crashed, it had run
+    # out of clock, which reads identically from outside and sent me looking for a traceback.
+    #
+    # The work grows with the corpus and that is correct: skills 557s, security 436s, registry+npm
+    # 378s, metadata 229s, config-adoption 209s. Two changes made it heavier ON PURPOSE — scoped npm
+    # packages now get enrichment slots instead of being starved by an unpriceable ordering, and L5
+    # resolves dependency trees. Both buy coverage we did not have.
+    #
+    # The real control is the per-stage caps below, not this number: every long stage takes a budget
+    # of FETCHES and is resumable, so a bigger corpus means more nights, never a longer night. This
+    # is headroom so a slow upstream cannot turn a normal run into a lost day.
+    timeout-minutes: 90
     # JOB level, deliberately. A step's own `env:` block is NOT in scope for that step's `if:`, so
     # gating the deploy on `env.CLOUDFLARE_API_TOKEN` declared beside it would read empty every time
     # and silently never deploy — a skipped step looks identical to a passing one in the UI.
     env:
+      # L5 dependency resolution costs seconds per package (npm resolves the whole graph), so it is
+      # capped low and walks the demand curve. 30/night covers the top of the corpus in weeks and
+      # cannot be what pushes a run past the clock.
+      DEPS_CAP: "30"
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
