@@ -713,13 +713,21 @@ ok("...and capability.js says it identically, so it survives the client re-rende
 # read `_SCOPE in _html or "known advisor" in _html` — an OR whose right side matches the string
 # "No known advisories" itself, so it passed on every page whether or not the note had rendered.
 # A decorative check on a claim about honesty is worse than no check.
+# THE SCOPE MUST ALWAYS BE STATED — but there are now two truthful statements of it, because L5
+# resolves the dependency tree for part of the corpus. A row we have only name-scanned says "this
+# package, not its dependency tree"; a row whose tree we resolved says "and the N packages it
+# installs", which is a BIGGER claim and the one we earned. What must never happen is neither.
+_WIDER = "packages it installs"
 _clear = [p for p in glob.glob(os.path.join(WEB, "capability", "pkg-*.html"))[:400]
           if "No known advisories" in open(p, encoding="utf-8").read()]
 if _clear:
-    _missing = [os.path.basename(p) for p in _clear
-                if _SCOPE not in open(p, encoding="utf-8").read()]
-    ok(f"...and every one of {len(_clear)} sampled clear-scan dossiers actually carries it",
-       not _missing, f"{len(_missing)} rendered without the scope note, e.g. {_missing[:3]}")
+    _missing = []
+    for p in _clear:
+        h = open(p, encoding="utf-8").read()
+        if _SCOPE not in h and _WIDER not in h and "package it installs" not in h:
+            _missing.append(os.path.basename(p))
+    ok(f"...and every one of {len(_clear)} sampled clear-scan dossiers states its scope",
+       not _missing, f"{len(_missing)} state neither scope, e.g. {_missing[:3]}")
 
 # A CONFIRMED-MALICIOUS ROW MUST NOT CARRY A SCORE, on any surface.
 #

@@ -54,6 +54,11 @@ STAGES = [
     # almost nothing and a new package is picked up the day it appears.
     ("security",        ["pipeline/scan_security.py"], "enrich",
      "OSV advisories for the current release + install scripts, provenance, permission surface"),
+    # L5. scan_security answers about the package's own name; this resolves what it actually
+    # installs and queries OSV at the resolved versions. Budget-capped and demand-ordered because
+    # resolution costs seconds per package — the corpus is covered over weeks, most-used first.
+    ("deps",            ["pipeline/scan_deps.py"], "enrich",
+     "resolve each capability's dependency tree and scan it at the versions actually installed"),
     # COVERAGE MUST COMPOUND NIGHTLY, not wait for someone to remember. Task mapping was a
     # developer-run script and never ran in the loop, so the axis that makes job and role pages
     # work simply stopped advancing as the corpus tripled. --declared is free and deterministic —

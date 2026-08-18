@@ -164,6 +164,10 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # type today, harmlessly. tests/test_score.py now rejects any entry that is not exactly
            # "<name> <TYPE>".
            "category_basis TEXT", "category_conf REAL", "skill_doc TEXT", "npm_maint_fp TEXT",
+           # L5 — THE DEPENDENCY TREE, resolved at the installed version. scan_security answers
+           # about the package's own name; this answers about the install. See pipeline/scan_deps.py
+           # for why it resolves versions rather than matching names (86% vs 7%).
+           "dep_tree_n INTEGER", "dep_vuln_n INTEGER", "dep_vulns TEXT", "dep_scanned_at TEXT",
            # The author's OWN package.json keywords, comma-joined like gh_topics. Fetched on every
            # enrichment pass since the beginning and thrown away, which left npm the only kind with
            # no author vocabulary at all: plugins had manifest tags, skills had frontmatter, and
@@ -1529,6 +1533,10 @@ def export(con):
             # full finding list; the page decides what a free reader sees and what needs a licence.
             "sec_advisory_count","sec_max_severity","sec_install_script","sec_permissions",
             "sec_provenance","sec_remote_content","sec_dep_count","sec_scanned_at","sec_advisories",
+            # L5 — the resolved dependency tree. LOOKUP names these, but a column absent from THIS
+            # select never reaches the row dict, so it was stripped as null and the lookup carried
+            # nothing. The column list is the gate; adding to LOOKUP alone changes nothing.
+            "dep_tree_n","dep_vuln_n","dep_vulns","dep_scanned_at",
             # sec_advisories is fetched so redact_paid() can strip it; it never reaches a public file.
             # npm_runnable is fetched for junk(): a package with no `bin` cannot be launched as a
             # server. Not exported to any public file — it decides membership, it is not a finding.
@@ -2350,6 +2358,9 @@ def export(con):
               # the security audit, so `doctor` can warn about something already installed
               "sec_advisory_count", "sec_max_severity", "sec_install_script", "sec_permissions",
               "sec_perm_n", "sec_provenance", "sec_remote_content", "sec_scanned_at",
+              # L5 — what it INSTALLS, not just what it is called. A capability with a clean name
+              # and a vulnerable dependency read identically before this.
+              "dep_tree_n", "dep_vuln_n", "dep_vulns", "dep_scanned_at",
               # the author's own "we stopped" sentence — doctor quotes it rather than asserting it
               "self_unmaintained",
               # WHERE THE THING LIVES. Without this, /v0.1/kit could link an npm package to npmjs

@@ -815,10 +815,41 @@ def security_block(c):
         # is correct; it is the SCOPE that a reader could over-read. The same rule the permission
         # surface already follows: an empty result means "nothing found where we looked", never
         # "nothing there".
+        # L5 CHANGES WHAT THIS SENTENCE IS ALLOWED TO SAY. Until the tree is resolved, "clear" covers
+        # the package's own name and nothing else, and the row says so. Once it IS resolved, the
+        # claim gets bigger and the number backing it is printed: 172 packages checked, not one.
+        _dn, _dv = c.get("dep_tree_n"), c.get("dep_vuln_n")
+        if _dn and not _dv:
+            _scope = ("checked against OSV for "
+                      + esc(c.get("npm_latest_version") or "the current release")
+                      + " &mdash; and the " + (f"{_dn:,} packages" if _dn != 1 else "1 package")
+                      + " it installs")
+        else:
+            _scope = ("checked against OSV for "
+                      + esc(c.get("npm_latest_version") or "the current release")
+                      + " &mdash; this package, not its dependency tree")
         rows.append(sec_row("No known advisories", '<span class="sev sev--none">clear</span>',
-                            '<span class="secrow__ok">checked against OSV for '
-                            + esc(c.get("npm_latest_version") or "the current release")
-                            + " &mdash; this package, not its dependency tree</span>"))
+                            '<span class="secrow__ok">' + _scope + "</span>"))
+
+    # A VULNERABLE DEPENDENCY IS A FINDING ABOUT THIS CAPABILITY. It is what you install when you
+    # install this, and before L5 it read as "No known advisories" — the single largest thing our
+    # audit was not looking at.
+    if c.get("dep_vuln_n"):
+        try:
+            _dv_list = json.loads(c.get("dep_vulns") or "[]")
+        except (TypeError, ValueError):
+            _dv_list = []
+        _names = ", ".join(esc(f"{d.get('name')}@{d.get('version')}") for d in _dv_list[:3])
+        _ids = ", ".join(esc(i) for d in _dv_list[:2] for i in (d.get("ids") or [])[:2])
+        rows.append(sec_row(
+            "<b>" + str(c["dep_vuln_n"]) + " vulnerable "
+            + ("dependency" if c["dep_vuln_n"] == 1 else "dependencies") + "</b>",
+            '<span class="sev sev--high">installs</span>',
+            "<span>" + _names + (" &mdash; " + _ids if _ids else "")
+            + '<span class="mnote o-70"> &middot; found by resolving all '
+            + f"{c.get('dep_tree_n') or 0:,}" + " packages this installs and querying OSV at the "
+            "version each resolves to, not by name</span></span>",
+            "secrow--alert"))
 
     if c.get("sec_install_script"):
         scr = c.get("sec_install_script")

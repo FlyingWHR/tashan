@@ -719,10 +719,31 @@ function repoHealth(c) {
       // Must match prerender.py's wording exactly — the client REPLACES the server render, and
       // these two have drifted three times. OSV is queried by package NAME, so "clear" is a claim
       // about this package and not about what it depends on.
+      // MUST MATCH prerender.py — the client REPLACES the server render, and a finding that exists
+      // only in the static HTML disappears the moment this runs. These two have drifted three times.
+      var dn = c.dep_tree_n, dv = c.dep_vuln_n;
+      var scope = 'checked against OSV for ' + esc(c.npm_latest_version || "the current release")
+        + (dn && !dv
+            ? ' &mdash; and the ' + (dn === 1 ? '1 package' : dn.toLocaleString() + ' packages') + ' it installs'
+            : ' &mdash; this package, not its dependency tree');
       rows.push(secRow("No known advisories",
         '<span class="sev sev--none">clear</span>',
-        '<span class="secrow__ok">checked against OSV for ' + esc(c.npm_latest_version || "the current release")
-        + ' &mdash; this package, not its dependency tree</span>'));
+        '<span class="secrow__ok">' + scope + '</span>'));
+    }
+    if (c.dep_vuln_n) {
+      var dl = [];
+      try { dl = JSON.parse(c.dep_vulns || "[]"); } catch (e) { dl = []; }
+      var names = dl.slice(0, 3).map(function (d) { return esc(d.name + "@" + d.version); }).join(", ");
+      var ids = dl.slice(0, 2).reduce(function (a, d) {
+        return a.concat((d.ids || []).slice(0, 2).map(esc)); }, []).join(", ");
+      rows.push(secRow(
+        "<b>" + c.dep_vuln_n + " vulnerable " + (c.dep_vuln_n === 1 ? "dependency" : "dependencies") + "</b>",
+        '<span class="sev sev--high">installs</span>',
+        "<span>" + names + (ids ? " &mdash; " + ids : "")
+        + '<span class="mnote o-70"> &middot; found by resolving all '
+        + (c.dep_tree_n || 0).toLocaleString() + ' packages this installs and querying OSV at the '
+        + 'version each resolves to, not by name</span></span>',
+        "secrow--alert"));
     }
 
     if (c.sec_install_script) {
