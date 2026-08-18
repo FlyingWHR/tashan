@@ -29,3 +29,4 @@ data/.db_store_stamp
 # 95-127 MB blob-SHA cache of SKILL.md content — over GitHub's 100 MB limit, and a fresh
 # binary blob nightly would defeat delta compression. Lives in R2 beside the database.
 data/skills_cache.json
+tools/node_modules/
