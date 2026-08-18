@@ -59,7 +59,7 @@ python3 tests/test_outreach_numbers.py || fail=1
 # 3b1z. the badge moved from 6,453 static files to a Function; two renderers, one artifact, and the
 # blast radius is other people's READMEs
 echo; echo "── badge parity (python == js) ────────────────"
-node tests/test_badge_parity.mjs 2>/dev/null || fail=1
+node tests/test_badge_parity.mjs >/dev/null 2>&1 || { echo "  ↳ tests/test_badge_parity.mjs FAILED — rerunning to show why:"; node tests/test_badge_parity.mjs; fail=1; }
 
 # 3b2a. prerender pure logic: description clipping + the .md dossier an answer engine reads
 echo; echo "── prerender + markdown dossier ───────────────"
@@ -146,11 +146,11 @@ python3 tests/test_agent_surface.py || fail=1
 
 # 5. analytics collector field-shaping
 echo; echo "── analytics collector ────────────────────────"
-node functions/api/e.test.mjs 2>/dev/null || fail=1
+node functions/api/e.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/api/e.test.mjs FAILED — rerunning to show why:"; node functions/api/e.test.mjs; fail=1; }
 
 # 5b. billing webhook — the signature check is a security boundary, it must fail closed
 echo; echo "── polar webhook (signature) ──────────────────"
-node functions/api/polar.test.mjs 2>/dev/null || fail=1
+node functions/api/polar.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/api/polar.test.mjs FAILED — rerunning to show why:"; node functions/api/polar.test.mjs; fail=1; }
 
 # 5b2. server.json against the MCP registry's real schema — constraints, not just field names. The
 # shallow check in test_agent_surface passed a manifest the registry rejected with a 422 for a
@@ -162,23 +162,23 @@ python3 tests/test_server_json.py || fail=1
 # route over a static asset, so a fall-through mistake here does not degrade the new endpoints — it
 # takes /v0.1/scores and /v0.1/servers, both published and linked from llms.txt, off the air.
 echo; echo "── /v0.1 lookup + search ──────────────────────"
-node functions/v0.1/route.test.mjs 2>/dev/null || fail=1
+node functions/v0.1/route.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/v0.1/route.test.mjs FAILED — rerunning to show why:"; node functions/v0.1/route.test.mjs; fail=1; }
 
 # 5d. the markdown dossier route. This Function mounts on /capability/*, where 9,013 real .html
 # files live, so a fall-through mistake takes every capability page off the air — not just the .md
 # tier. It also carries the JS half of the shard hash; if that drifts from prerender.py, every
 # dossier 404s at once.
 echo; echo "── /capability/*.md (sharded dossiers) ────────"
-node functions/capability/path.test.mjs 2>/dev/null || fail=1
+node functions/capability/path.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/capability/path.test.mjs FAILED — rerunning to show why:"; node functions/capability/path.test.mjs; fail=1; }
 
 # 5c. the paywall — every way of getting paid data without paying must be closed
 echo; echo "── licence gate (paywall) ─────────────────────"
-node functions/api/license.test.mjs 2>/dev/null || fail=1
-node functions/api/_x402.test.mjs 2>/dev/null || fail=1
+node functions/api/license.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/api/license.test.mjs FAILED — rerunning to show why:"; node functions/api/license.test.mjs; fail=1; }
+node functions/api/_x402.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/api/_x402.test.mjs FAILED — rerunning to show why:"; node functions/api/_x402.test.mjs; fail=1; }
 node functions/api/_cdp.test.mjs 2>/dev/null || { node functions/api/_cdp.test.mjs; fail=1; }
 node functions/api/_demand.test.mjs 2>/dev/null || { node functions/api/_demand.test.mjs; fail=1; }
-node functions/v0.1/audit.test.mjs 2>/dev/null || fail=1
-node functions/v0.1/kit.test.mjs 2>/dev/null || fail=1
+node functions/v0.1/audit.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/v0.1/audit.test.mjs FAILED — rerunning to show why:"; node functions/v0.1/audit.test.mjs; fail=1; }
+node functions/v0.1/kit.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/v0.1/kit.test.mjs FAILED — rerunning to show why:"; node functions/v0.1/kit.test.mjs; fail=1; }
 
 # 5d. the account centre — who is signed in, and what of their record is safe to send back
 echo; echo "── account centre (session + record) ──────────"
