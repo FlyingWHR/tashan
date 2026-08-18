@@ -114,6 +114,33 @@ await ok("the recorded event distinguishes monthly from annual", async () => {
   assert.ok(a.rows[0].blobs[4].includes("annual"), a.rows[0].blobs[4]);
 });
 
+await ok("our own payment check is NOT counted as reaching checkout", async () => {
+  // The funnel's first week read "0 offer clicks, 43 reached Polar checkout" — impossible for real
+  // traffic, and exactly 21 check_payments runs x 2 plans. A metric your own monitoring inflates is
+  // worse than no metric: it manufactures the number a founder would celebrate.
+  const a = ae();
+  await onRequest({ request: new Request(`${ORIGIN}/api/buy?plan=monthly`,
+                    { headers: { "user-agent": "tashan-payment-check" } }), env: { TASHAN_AE: a } });
+  assert.equal(a.rows.length, 0, "the checker must not appear in the funnel");
+});
+
+await ok("...but the redirect still happens, so the check still checks something", async () => {
+  const r = await onRequest({ request: new Request(`${ORIGIN}/api/buy?plan=monthly`,
+                    { headers: { "user-agent": "tashan-payment-check" } }), env: {} });
+  assert.equal(r.status, 302);
+  assert.equal(locOf(r), buyUrl(MONTHLY));
+});
+
+await ok("a real caller with any other user-agent IS counted", async () => {
+  // Only our own checker is excluded. An agent hitting this route is a genuine signal.
+  for (const agent of ["Mozilla/5.0", "some-agent/1.0", ""]) {
+    const a = ae();
+    await onRequest({ request: new Request(`${ORIGIN}/api/buy?plan=monthly`,
+                      { headers: agent ? { "user-agent": agent } : {} }), env: { TASHAN_AE: a } });
+    assert.equal(a.rows.length, 1, `dropped a real caller: ${agent || "(none)"}`);
+  }
+});
+
 await ok("a throwing analytics binding does not cost the sale", async () => {
   const r = await call({ TASHAN_AE: { writeDataPoint() { throw new Error("AE down"); } } });
   assert.equal(r.status, 302);

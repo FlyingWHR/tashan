@@ -115,8 +115,20 @@ export async function onRequest({ request, env }) {
   const secret = LINK[plan];
 
   // Rule 3 — the funnel's checkout row, written where it cannot be lost.
+  //
+  // BUT NOT FOR OUR OWN MONITORING. check_payments.py hits this route twice on every run — once per
+  // plan — to verify the redirect and repair the success_url. Moving the event server-side made it
+  // immune to ad-blockers and also made it count every non-buyer that touches the URL, and the
+  // biggest such non-buyer is us. The first week's funnel read "0 offer clicks, 43 reached Polar
+  // checkout", which is arithmetically impossible for real traffic and was ~21 runs x 2 plans.
+  //
+  // A metric a team can inflate by testing is worse than no metric: it manufactures the exact
+  // number a founder would celebrate. Only OUR OWN checker is excluded, by its declared user-agent
+  // — a real agent hitting this route IS a genuine signal and must still count.
+  const ua = request.headers.get("user-agent") || "";
+  const isSelfCheck = ua.includes("tashan-payment-check");
   try {
-    if (env.TASHAN_AE) {
+    if (env.TASHAN_AE && !isSelfCheck) {
       env.TASHAN_AE.writeDataPoint({
         indexes: ["outbound"],
         blobs: ["outbound", "/api/buy", "", "buy.polar.sh", "buy-" + plan, "",
