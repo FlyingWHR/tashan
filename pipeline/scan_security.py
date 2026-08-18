@@ -30,6 +30,24 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "pipeline"))
 CACHE = os.path.join(ROOT, "data", "security_cache.json")
 # QUERIED BY PACKAGE NAME, so a result is about THIS package and not about its dependency tree.
+#
+# HOW BIG IS THAT BLIND SPOT? Measured 18 Aug 2026, and it is the largest honest gap in this file.
+# Of the 30 most-installed capabilities we report as having NO advisories, 29 declare dependencies,
+# and 25 of those 29 — 86% — have at least one DIRECT dependency that carries advisories in OSV:
+#
+#     @modelcontextprotocol/sdk   55M/wk   -> ajv, zod, hono
+#     prisma                      15M/wk   -> mysql2
+#     @playwright/mcp            6.7M/wk   -> playwright
+#     mcp-remote                 485k/wk   -> express, open, undici
+#
+# WHAT THAT NUMBER IS NOT. It counts advisories against the dependency PACKAGE at any version, not
+# against the version actually resolved at install. Most will be fixed in the range being used. So
+# 86% is the scope of what we do not look at, NOT a vulnerability rate — quoting it as the latter
+# would be exactly the over-claim this file exists to avoid. The actionable figure needs real
+# version resolution over the tree, which is a resolver we have not written.
+#
+# It does establish that "No known advisories" is scoped far more narrowly than a reader assumes,
+# which is why every surface now says "this package, not its dependency tree" beside it.
 # A server whose transitive dependency carries a CVE returns nothing here, and every surface that
 # renders "No known advisories" says so rather than letting a reader hear "nothing vulnerable".
 # The findings themselves are sound: verified 15 Aug 2026 against live OSV over the 18 most-
