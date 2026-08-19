@@ -12,10 +12,10 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
 | `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | board.json, capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 116 |
-| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 70 |
+| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 71 |
+| `/audit.html` | Paste your MCP config and see every risk we hold about what is in it. Parsed in the browser, so keys never leave the page. | audit, site, terminal | board.json, index.json, tasks.json | free | 69 |
 | `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 66 |
 | `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 62 |
-| `/audit.html` | Paste your MCP config and see every risk we hold about what is in it. Parsed in the browser, so keys never leave the page. | audit, site, terminal | board.json, index.json, tasks.json | free | 60 |
 | `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | board.json, coverage.json, index.json, tasks.json | free | 43 |
 | `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | board.json, capabilities.json, index.json, tasks.json | free | 33 |
 | `/changes.html` | What moved in the ecosystem, dated — the only page built from a series that cannot be backfilled, and the freshest thing we publish. | site | — | free | 32 |

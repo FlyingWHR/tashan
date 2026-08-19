@@ -73,11 +73,11 @@ Every npm-published capability is checked against OSV.dev using the version you 
 
 Coverage is stated over the top 1,000 capabilities by adoption evidence, because an absence on something you looked up is what costs you — not a gap in the tail. Machine-readable at https://tashan.sh/data/coverage.json, re-measured on every run.
 
-- tashan score: 92% of the top 1,000 (37% of all 37,634 tracked)
-- Security scan: 100% of the top 1,000 (19% of all)
-- Instruction-depth grade: 67% of the top 1,000 (10% of all)
-- Task mapping: 68% of the top 1,000 (8% of all)
-- All four on the same capability: 50% of the top 1,000
+- tashan score: 98% of the top 1,000 (41% of all 53,453 tracked)
+- Security scan: 100% of the top 1,000 (13% of all)
+- Instruction-depth grade: 59% of the top 1,000 (7% of all)
+- Task mapping: 65% of the top 1,000 (7% of all)
+- All four on the same capability: 44% of the top 1,000
 
 An absent value means UNMEASURED and never means zero, absent risk, or poor quality.
 

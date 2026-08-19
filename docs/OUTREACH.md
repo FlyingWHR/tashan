@@ -26,12 +26,12 @@ Run `python3 pipeline/coverage.py` and the snippets below against `data/tashan.d
 
 | Fact | Value (19 Aug 2026) | Query |
 |---|---|---|
-| npm packages scanned for advisories against the version you'd install today | 7,862 | `SELECT count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL` |
-| …of those, **no build provenance** — nothing proves the publisher built it | **74%** (5,818) | `SELECT sec_provenance, count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL GROUP BY 1` |
-| Servers running an **install-time script** (arbitrary code on `npm i`) | 490, and 92% of them run a file we cannot read | `WHERE sec_install_script IS NOT NULL` |
+| npm packages scanned for advisories against the version you'd install today | 8,052 | `SELECT count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL` |
+| …of those, **no build provenance** — nothing proves the publisher built it | **74%** (5,943) | `SELECT sec_provenance, count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL GROUP BY 1` |
+| Servers running an **install-time script** (arbitrary code on `npm i`) | 495 | `WHERE sec_install_script IS NOT NULL` |
 | Confirmed-malicious packages found, kept unranked so `doctor` still warns | 6 | `WHERE sec_max_severity='MALICIOUS'` |
-| Scored capabilities whose maintainer has **stopped** (archived / declared / dormant) | 727 | `WHERE tashan_score IS NOT NULL AND vitality='abandoned'` |
-| Library/SDK packages found so far that can't be launched at all | 794 | `WHERE npm_runnable=0` |
+| Scored capabilities whose maintainer has **stopped** (archived / declared / dormant) | 992 | `WHERE tashan_score IS NOT NULL AND vitality='abandoned'` |
+| Library/SDK packages found so far that can't be launched at all | 798 | `WHERE npm_runnable=0` |
 
 The 74% is the strongest single line in this file. It is not an accusation of anything — most
 publishers have simply never turned on npm provenance — but it means that for three out of four MCP
