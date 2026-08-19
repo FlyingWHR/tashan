@@ -43,7 +43,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NAV = [
     ("/", "Find skills"),
     ("/browse.html", "Jobs"),
-    ("/start.html", "Doctor"),
+    # "Check my setup" REPLACED "Doctor" (/start.html), which named our furniture: a page about
+    # installing our CLI. /audit.html does the same job in the browser with nothing to install, and
+    # it was the only page on the site where a visitor could DO anything rather than read about it.
+    # /start.html keeps its footer slot for people who want the CLI.
+    ("/audit.html", "Check my setup"),
     ("/pricing.html", "Pricing"),
 ]
 
@@ -53,6 +57,7 @@ ACCOUNT = ("/account.html", "Your account")
 
 FOOTER = [
     ("Explore", [("/", "The Index"), ("/browse.html", "Browse"), ("/compare.html", "Compare"),
+                 ("/audit.html", "Check my setup"),
                  ("/start.html", "Use it"), ("/learn/", "Learn"), ("/for-hosts.html", "For hosts"),
                  ("/changes.html", "What changed"), ("/stats.html", "The numbers")]),
     ("How it works", [("/methodology.html", "Methodology"), ("/about.html", "About"),

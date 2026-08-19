@@ -11,22 +11,23 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
-| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | board.json, capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 113 |
-| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 68 |
-| `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 64 |
-| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | board.json, capabilities.json, index.json, tasks.json | free | 61 |
-| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 60 |
-| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | board.json, coverage.json, index.json, tasks.json | free | 41 |
-| `/changes.html` | What moved in the ecosystem, dated — the only page built from a series that cannot be backfilled, and the freshest thing we publish. | site | — | free | 31 |
-| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | board.json, index.json, tasks.json | free | 31 |
-| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | board.json, index.json, tasks.json | post-sale | 31 |
-| `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | board.json, coverage.json, index.json, requests.json, tasks.json | free | 31 |
-| `/about.html` | What tashan measures, where it is going, and the principles the scoring follows. | site, terminal | board.json, index.json, tasks.json | free | 29 |
-| `/compare.html` | Pick any two capabilities and see them side by side. The 395 pre-generated pairs cover what people search for; this covers the comparison they have. | compare, site, terminal | board.json, compare.json, index.json, tasks.json | free | 29 |
-| `/privacy.html` | What we collect, which is close to nothing. | site, terminal | board.json, index.json, tasks.json | free | 29 |
-| `/stats.html` | The ecosystem in numbers, CC BY 4.0 with a citation line — built so the articles that outrank us cite us instead. | site | — | free | 29 |
-| `/support.html` | How to get help, and what we can see when you ask. | site, terminal | board.json, index.json, tasks.json | free | 29 |
-| `/terms.html` | Terms of service. | site, terminal | board.json, index.json, tasks.json | free | 29 |
+| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | board.json, capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 116 |
+| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 70 |
+| `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 66 |
+| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 62 |
+| `/audit.html` | Paste your MCP config and see every risk we hold about what is in it. Parsed in the browser, so keys never leave the page. | audit, site, terminal | board.json, index.json, tasks.json | free | 60 |
+| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | board.json, coverage.json, index.json, tasks.json | free | 43 |
+| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | board.json, capabilities.json, index.json, tasks.json | free | 33 |
+| `/changes.html` | What moved in the ecosystem, dated — the only page built from a series that cannot be backfilled, and the freshest thing we publish. | site | — | free | 32 |
+| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | board.json, index.json, tasks.json | free | 32 |
+| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | board.json, index.json, tasks.json | post-sale | 32 |
+| `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | board.json, coverage.json, index.json, requests.json, tasks.json | free | 32 |
+| `/about.html` | What tashan measures, where it is going, and the principles the scoring follows. | site, terminal | board.json, index.json, tasks.json | free | 30 |
+| `/compare.html` | Pick any two capabilities and see them side by side. The 395 pre-generated pairs cover what people search for; this covers the comparison they have. | compare, site, terminal | board.json, compare.json, index.json, tasks.json | free | 30 |
+| `/privacy.html` | What we collect, which is close to nothing. | site, terminal | board.json, index.json, tasks.json | free | 30 |
+| `/stats.html` | The ecosystem in numbers, CC BY 4.0 with a citation line — built so the articles that outrank us cite us instead. | site | — | free | 30 |
+| `/support.html` | How to get help, and what we can see when you ask. | site, terminal | board.json, index.json, tasks.json | free | 30 |
+| `/terms.html` | Terms of service. | site, terminal | board.json, index.json, tasks.json | free | 30 |
 | `/capability.html` | Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs. | capability, site, terminal | board.json, index.json, tasks.json | free | 1 |
 | `/404.html` *(noindex)* | Real 404 with a route back in. noindex; without it Pages served the homepage at status 200 for every unknown URL. | site, terminal | board.json, index.json, tasks.json | free | 0 |
 | `/activate.html` *(noindex)* | Approve a device that ran `tashan login`. noindex; the browser half of the RFC 8628 grant, so a licence key is typed once ever, not per machine. | activate, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 0 |
@@ -65,6 +66,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `cli/mcp.test.mjs` — node cli/mcp.test.mjs — protocol + rendering for the MCP server. No network.
 - `cli/tashan.test.mjs` — node cli/tashan.test.mjs  — pure-logic tests for the CLI (no network, no deps).
 - `functions/api/_cdp.test.mjs` — CDP auth. A wrong claim here is a 401 with no explanation, and a 401 means charge() denies — so
+- `functions/api/_demand.test.mjs` — node functions/api/_demand.test.mjs
 - `functions/api/_x402.test.mjs` — node functions/api/_x402.test.mjs
 - `functions/api/account.test.mjs` — node --test functions/api/account.test.mjs
 - `functions/api/buy.test.mjs` — The buy button. Two things must hold no matter what breaks: the customer always reaches Polar,

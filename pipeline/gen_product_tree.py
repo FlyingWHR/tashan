@@ -36,6 +36,7 @@ PURPOSE = {
     "/browse.html":       ("Parent index for every category and task hub — the full taxonomy.", "free"),
     "/compare.html":      ("Pick any two capabilities and see them side by side. The 395 pre-generated "
                            "pairs cover what people search for; this covers the comparison they have.", "free"),
+    "/audit.html":        ("Paste your MCP config and see every risk we hold about what is in it. Parsed in the browser, so keys never leave the page.", "free"),
     "/start.html":        ("How to use it: the CLI, the MCP server, the plugin.", "free"),
     "/methodology.html":  ("How every number is derived, so the score is re-checkable.", "free"),
     "/about.html":        ("What tashan measures, where it is going, and the principles the scoring follows.", "free"),

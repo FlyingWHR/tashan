@@ -1454,7 +1454,7 @@ def sitemap(caps):
     # it is the post-checkout page and carries noindex.
     urls = ["/", "/start.html", "/methodology.html", "/about.html", "/pricing.html", "/requests.html",
             "/terms.html", "/privacy.html", "/refunds.html", "/support.html", "/for-hosts.html",
-            "/browse.html", "/compare.html",
+            "/browse.html", "/compare.html", "/audit.html",
             # The freshest page on the site, and the only one competitors cannot reproduce — it is
             # built from a series that cannot be backfilled. `changefreq` says daily below.
             "/changes.html", "/stats.html"]

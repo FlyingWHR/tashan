@@ -1302,3 +1302,47 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .dcta { margin: 1.6rem 0 0; }
 .dcta__lbl { color: var(--text-dim); font-size: var(--fs-sm); margin: 0 0 .4rem; }
 .dcta__sub { color: var(--text-faint); font-size: var(--fs-sm); margin: .45rem 0 0; max-width: 54ch; }
+
+
+/* ── /audit — paste a config, see what is in it ───────────────────────────────────────────
+   Only variables that EXIST are used here. An undefined var() does not fall back, it drops the
+   whole declaration silently: var(--sp-5) once killed 13 of them including the homepage hero's
+   margins, and nothing in a browser tells you. */
+.aud__priv { border:1px solid var(--jade-line); background: var(--jade-dim);
+  border-radius: var(--radius); padding: var(--sp-3) var(--sp-4); margin-bottom: var(--sp-4);
+  color: var(--text-dim); font-size: var(--fs-sm); max-width: var(--measure); }
+.aud__priv b { color: var(--jade-bright); }
+.aud__in { min-height: 13rem; resize: vertical; line-height: 1.5; }
+.aud__in::placeholder { opacity: .55; }
+#audGo { margin-top: var(--sp-3); }
+
+.aud__sum { margin-top: var(--sp-6); }
+.aud__sum__h { font-size: var(--fs-md); color: var(--text); margin:0; }
+.aud__sum__l { color: var(--text-faint); font-size: var(--fs-sm); margin:.25rem 0 0; }
+
+.aud__l { list-style:none; padding:0; margin: var(--sp-4) 0 0; display:grid; gap: var(--sp-2); }
+.aud__r { border:1px solid var(--hairline); border-left-width:3px; border-radius: var(--radius-sm);
+  padding: var(--sp-3) var(--sp-4); background: var(--surface); }
+.aud__r--bad  { border-left-color: var(--red); }
+.aud__r--warn { border-left-color: var(--amber); }
+.aud__r--ok   { border-left-color: var(--jade-line); }
+.aud__top { display:flex; align-items:baseline; gap: var(--sp-3); flex-wrap:wrap; }
+.aud__n { color: var(--text); font-weight:500; text-decoration:none; }
+.aud__n:hover { color: var(--jade-bright); }
+.aud__v { font-size: var(--fs-xs); text-transform:uppercase; letter-spacing:.08em;
+  color: var(--text-faint); }
+.aud__r--bad  .aud__v { color: var(--red); }
+.aud__r--warn .aud__v { color: var(--amber); }
+.aud__s { margin-left:auto; color: var(--text-dim); font-size: var(--fs-sm); }
+.aud__f { list-style:none; padding:0; margin:.5rem 0 0; color: var(--text-dim);
+  font-size: var(--fs-sm); display:grid; gap:.2rem; }
+.aud__f li::before { content:"— "; color: var(--text-faint); }
+.aud__un { margin-top: var(--sp-4); color: var(--text-faint); font-size: var(--fs-sm);
+  max-width: var(--measure); }
+.aud__err { color: var(--red); font-size: var(--fs-sm); margin-top: var(--sp-4); }
+
+/* A long table of results must scroll inside itself, never make the page scroll sideways. */
+@media (max-width: 34rem) {
+  .aud__s { margin-left:0; }
+  .aud__top { gap: var(--sp-2); }
+}
