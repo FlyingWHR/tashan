@@ -366,8 +366,9 @@ function closingPitch(c) {
   if ((c.changes || []).length) return '';
   return '<p class="chg__pro mono fs-sm">Everything on this page is public evidence and free. ' +
     'What it cannot know is whether <em>you</em> run this — <code>npx tashan-cli doctor</code> ' +
-    'reads your own config and names what is wrong in it, also free. ' +
-    '<a class="link" href="/pricing.html">tashan Pro</a> tells you the day any of it changes.</p>';
+    '<a class="link" href="/audit.html">check your whole config</a>, free, in the browser. ' +
+    '<a class="link" href="/pricing.html">tashan Pro</a> adds the series behind each row and ' +
+    'names a replacement for anything dying.</p>';
 }
 
 // Mirrors prerender.py::skill_doc_block. The client REPLACES <main>, so without this the block
@@ -407,8 +408,9 @@ function changedBlock(c) {
   return '<section class="changed"><h2 class="sec-h">What changed recently</h2>' +
     '<ul class="chg-list">' + items + '</ul>' +
     '<p class="chg__pro mono fs-sm">You are reading this because you came looking. ' +
-    '<a class="link" href="/pricing.html">tashan Pro</a> tells you the day it happens, for the ' +
-    'servers in your own config — <code>tashan doctor</code>.</p></section>';
+    '<a class="link" href="/pricing.html">tashan Pro</a> keeps the series behind each row, so ' +
+    'a number today comes with a direction — and names a replacement for anything dying.' +
+    '</p></section>';
 }
 
 function repoHealth(c) {

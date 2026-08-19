@@ -301,8 +301,9 @@ def changed_block(c):
     FREE, deliberately and in full. The existence of a risk is never behind the paywall (PROJECT.md
     §12), and this is the clearest demonstration of what the product does — a reader who sees "this
     server started running an install script on 5 Aug" understands the offer without being pitched.
-    What Pro sells is not this text; it is being told on the day it happens about the servers YOU
-    run, which is `tashan doctor` and the alert, not a page you would have to remember to revisit.
+    What Pro sells is not this text; it is the SERIES behind it — where a row has been, not only
+    where it is — plus a named replacement when one is dying. (Proactive alerting is `watch`, which
+    is status:planned in entitlements.json and must not be described here as if it shipped.)
     """
     ch = c.get("changes") or []
     if not ch:
@@ -442,8 +443,7 @@ def pro_panel(c):
                 "servers in your own config, not the ones you thought to look up.")
     elif score is not None:
         line = (name + " scores <b>" + str(int(score)) + "</b> today. Pro keeps the series, so you "
-                "can see whether that is a project getting better or one on its way down — and "
-                "tells you the day it moves.")
+                "can see whether that is a project getting better or one on its way down.")
     else:
         line = ("Pro adds the history to <code>tashan doctor</code>, so a run over your own config "
                 "says which of yours gained an advisory, started running an install script, or "
@@ -658,9 +658,16 @@ def summary(c, gen=""):
            + "</p>") if roles_for else ""
     # every dossier offers the next action: check whether YOU are running this, and what else you run.
     # without it a capability page is a dead end — the reader learns about one thing and leaves.
+    # THE NEXT STEP FOR THE TRAFFIC WE ACTUALLY GET. Organic arrivals land here, on a dossier, from
+    # a package-name search — someone checking one server they are about to install. The question
+    # they have next is about the OTHER things in their config, and until now the answer was "install
+    # our CLI", which is a strange thing to ask of a stranger who has been on the site for nine
+    # seconds. /audit answers it in the browser with nothing to install, so it leads; the CLI still
+    # follows for anyone who would rather their config never left the machine at all.
     audit = ('<p class="mono fs-sm mt-6"><b>Already running this?</b> '
-             '<code>npx tashan-cli doctor</code> checks your whole config against the Index — '
-             '<a class="link" href="/start.html">how it works &rsaquo;</a></p>')
+             '<a class="link" href="/audit.html">Check your whole config</a> &mdash; free, in your '
+             'browser, nothing installed. Or <code>npx tashan-cli doctor</code> locally, which '
+             '<a class="link" href="/start.html">sends nothing at all</a>.</p>')
     # THE ONE PLACE THE PAID FEATURE IS ACTUALLY WANTED. 266 of these pages describe something
     # archived, deprecated or abandoned, and on every one of them the reader's next thought is "so
     # what do I use instead". Offering the answer there is not an upsell bolted onto a page; it is the
@@ -706,9 +713,9 @@ def summary(c, gen=""):
             + ("" if (c.get("changes") or []) else
                '<p class="chg__pro mono fs-sm">Everything on this page is public evidence and free. '
                'What it cannot know is whether <em>you</em> run this — '
-               '<code>npx tashan-cli doctor</code> reads your own config and names what is wrong in '
-               'it, also free. <a class="link" href="/pricing.html">tashan Pro</a> tells you the day '
-               'any of it changes.</p>') + audit
+               '<a class="link" href="/audit.html">check your whole config</a>, free, in the '
+               'browser. <a class="link" href="/pricing.html">tashan Pro</a> adds the series behind '
+               'each row and names a replacement for anything dying.</p>') + audit
             # WHEN THIS WAS MEASURED, in the static file. capability.js prints it in its closing
             # callout, but that is client-side only — so every crawler and answer engine we court in
             # llms.txt read 5,788 pages of measurements with no date attached to any of them. A

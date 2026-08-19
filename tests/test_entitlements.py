@@ -76,12 +76,41 @@ print("# nothing anywhere sells what does not exist")
 import glob as _glob
 _pages = sorted(os.path.relpath(x, WEB) for x in _glob.glob(os.path.join(WEB, "*.html")))
 _pages += sorted(os.path.relpath(x, WEB) for x in _glob.glob(os.path.join(WEB, "learn", "*.html")))
+# GENERATED PAGES SELL TOO, and widening this to static pages only was not enough: the Pro panel on
+# every category, task, role and compare hub said "Pro tells you the day it happens to the ones in
+# your own config" — the unshipped `watch` feature, on 179 pages, from four different generators.
+# A promise lives in the generator, so one page per generated type is enough to catch it, and
+# sampling keeps this test from walking 12,000 files.
+for _d in ("category", "task", "role", "compare", "capability"):
+    _some = sorted(_glob.glob(os.path.join(WEB, _d, "*.html")))[:3]
+    _pages += [os.path.relpath(x, WEB) for x in _some]
 for pg in _pages:
     p = os.path.join(WEB, pg)
     if not os.path.exists(p):
         continue
     t = text(pg)
+    # WHAT SELLING IT ACTUALLY LOOKS LIKE. A keyword probe on the feature id cannot see a promise
+    # written in plain English, and that is how the same unshipped `watch` feature was sold three
+    # separate times: "Pro tells you the day it changes" on the homepage, "Pro watches the ones you
+    # actually run" on 98 category hubs, "tells you the day one of them changes" on /learn/. None
+    # contains the token "watch" as a word. These are the phrasings, and they are only a promise
+    # when they sit next to the offer — "watch it move" in the methodology is prose, not a sale.
+    PROMISE = {
+        "watch": ("tells you the day", "tell you the day", "watches the", "watches your",
+                  "notifies you", "notify you", "alerts you", "alert you when",
+                  "the day it changes", "the day that changes", "the day one of them changes",
+                  "the day it happens", "the day it moves"),
+    }
     bad = []
+    for f in planned:
+        for phrase in PROMISE.get(f["id"], ()):
+            i = t.lower().find(phrase)
+            while i >= 0:
+                near = t[max(0, i - 200):i + 200].lower()
+                if any(w in near for w in ("pro ", "tashan pro", "trial", "/mo", "subscription")):
+                    bad.append(phrase)
+                    break
+                i = t.lower().find(phrase, i + 1)
     for f in planned:
         # AN UNAMBIGUOUS FLAG-SHAPED STRING IS ALWAYS A PROMISE.
         for probe in ("doctor --watch", "--watch"):

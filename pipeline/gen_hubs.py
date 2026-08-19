@@ -301,16 +301,16 @@ def hub_pro(rows, what, key):
     if n_ch:
         lede = ("We recorded <b>" + f"{n_ch:,}" + (" change" if n_ch == 1 else " changes")
                 + "</b> across " + what + " in the last 45 days &mdash; a new advisory, an install "
-                "script appearing, a maintainer leaving. They are listed free above. Pro tells you "
-                "the day it happens to the ones in your own config.")
+                "script appearing, a maintainer leaving. They are listed free above. Pro keeps "
+                "the series behind each row, so a number today comes with a direction.")
     elif graded:
         lede = ("Nothing on this shelf moved in the last 45 days, and " + str(graded) + " of these "
-                "are graded against their own documentation. Pro watches the ones you actually run, "
-                "and tells you the day that changes.")
+                "are graded against their own documentation. Pro keeps the series behind each one, "
+                "so you can see which are climbing and which are quietly sliding.")
     else:
         lede = ("This shelf ranks what is measured today. Pro keeps the series behind it, so you "
-                "can tell a project getting better from one on its way down &mdash; and hear about "
-                "it the day it moves, for the servers in your own config.")
+                "can tell a project getting better from one on its way down &mdash; and names a "
+                "replacement for anything already dead.")
     return chrome.pro_panel(lede, key)
 
 

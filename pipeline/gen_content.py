@@ -450,8 +450,8 @@ def index_page(A):
             # The /learn/ index was the only one of the eight with no offer at all.
             + chrome.pro_panel(
                 "Every guide here, and every score they link to, is free and needs no "
-                "account. Pro is for after you have chosen: it watches the capabilities in "
-                "your own config and tells you the day one of them changes.",
+                "account. Pro is for after you have chosen: the whole series behind each "
+                "capability, and a named replacement when one you depend on is dying.",
                 "pro-learn-index")
             + '</article></main>')
     a0 = {"slug": "index", "lang": "en", "title": "Learn — MCP & agent-skill guides",
