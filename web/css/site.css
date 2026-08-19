@@ -1346,3 +1346,6 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
   .aud__s { margin-left:0; }
   .aud__top { gap: var(--sp-2); }
 }
+.aud__act { display:flex; align-items:center; gap: var(--sp-4); flex-wrap:wrap; margin-top: var(--sp-3); }
+.aud__ex { font-size: var(--fs-sm); color: var(--text-faint); }
+.aud__ex:hover { color: var(--jade-bright); }

@@ -263,6 +263,17 @@
       return r.json();
     }).then(function (d) {
       render(d, names);
+      // THE FUNNEL STEP THAT DID NOT EXIST. A pageview says someone arrived; the CTA says they were
+      // interested. Neither says whether the tool WORKED for them, which is the only thing that
+      // decides if the offer after it means anything. Counts only — never what they pasted.
+      if (window.tashanEvent) {
+        var sm = d.summary || {};
+        window.tashanEvent("audit", {
+          k: "ran",
+          v: String(names.length) + ":" + String(sm.measured || 0)
+                  + ":" + String((sm.replace || 0) + (sm.review || 0)),
+        });
+      }
       if (localOnly) {
         $("audNote").textContent = (($("audNote").textContent || "") + " " + localOnly
           + " local or remote entr" + (localOnly === 1 ? "y was" : "ies were")
@@ -277,10 +288,34 @@
     });
   }
 
+  // A REAL CONFIG, INCLUDING SERVERS THAT COME BACK BAD. An example made only of healthy rows
+  // teaches the reader that the tool says "fine" — the two deprecated official servers here are
+  // what actually shows them what it is for. These are genuinely deprecated on npm by their
+  // publisher; nothing is invented to look alarming.
+  var EXAMPLE = JSON.stringify({
+    mcpServers: {
+      filesystem: { command: "npx", args: ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"] },
+      github: { command: "npx", args: ["-y", "@modelcontextprotocol/server-github"],
+                env: { GITHUB_TOKEN: "<your token stays in your browser>" } },
+      postgres: { command: "npx", args: ["-y", "@modelcontextprotocol/server-postgres"] },
+      firecrawl: { command: "npx", args: ["-y", "firecrawl-mcp"] },
+      playwright: { command: "npx", args: ["-y", "@playwright/mcp"] },
+    },
+  }, null, 2);
+
   function boot() {
     var btn = $("audGo");
     if (!btn) return;
     btn.addEventListener("click", run);
+    var ex = $("audEx");
+    if (ex) {
+      ex.addEventListener("click", function (e) {
+        e.preventDefault();
+        $("audIn").value = EXAMPLE;
+        if (window.tashanEvent) window.tashanEvent("audit", { k: "example" });
+        run();
+      });
+    }
     $("audIn").addEventListener("keydown", function (e) {
       if ((e.metaKey || e.ctrlKey) && e.key === "Enter") run();
     });

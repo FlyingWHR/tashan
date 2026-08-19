@@ -119,6 +119,15 @@
   }
   function hostOf(u) { try { return new URL(u).hostname; } catch (e) { return ""; } }
 
+  // ONE BEACON, ONE DNT CHECK. A page script that needs to record something calls this rather than
+  // POSTing /api/e itself — a second copy of the beacon is a second copy of the Do-Not-Track
+  // decision, and the one that gets forgotten is the one that leaks. /audit uses it to record that
+  // an audit actually RAN, which is the funnel step between arriving and being offered anything.
+  window.tashanEvent = function (name, props) {
+    if (!name) return;
+    send(String(name).slice(0, 32), props || null);
+  };
+
   // public hook so other scripts (⌘K search, etc.) can record events
   window.t = { track: send };
 

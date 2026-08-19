@@ -120,13 +120,14 @@ ok(same(parsed.map((p) => p.id), ["@modelcontextprotocol/server-github"]), JSON.
   panel.querySelector = (sel) => (sel === ".pro__lede" ? panel.lede : null);
 
   let requests = 0, sentBody = null;
+  const events = [];
   const mod2 = { exports: {} };
   new Function("module", "document", "window", "fetch", src)(
     mod2,
     { getElementById: (id) => nodes[id] || null, addEventListener: () => {},
       readyState: "complete", createElement: mk,
       querySelector: (sel) => (sel.indexOf('data-pro="audit"') >= 0 ? panel : null) },
-    {},
+    { tashanEvent: (name, props) => events.push({ name, props }) },
     (url, init) => {
       requests++; sentBody = JSON.parse(init.body);
       return Promise.resolve({ ok: true, json: () => Promise.resolve(fixture) });
@@ -144,6 +145,11 @@ ok(same(parsed.map((p) => p.id), ["@modelcontextprotocol/server-github"]), JSON.
   await new Promise((r) => setTimeout(r, 0));
 
   ok(requests === 1, `a paste triggers exactly one audit request (got ${requests})`);
+  // The funnel step between arriving and being offered anything: did the tool actually RUN?
+  ok(events.some((e) => e.name === "audit" && e.props && e.props.k === "ran"),
+     `a completed audit is recorded: ${JSON.stringify(events)}`);
+  // Counts only. What someone pasted is their config, and it never becomes a metric.
+  ok(!JSON.stringify(events).includes("firecrawl"), "no package name reaches analytics");
   // THE PRIVACY PROMISE, ON THE WIRE. Asserting the parser drops secrets is not enough — this is
   // the actual request body the page sends.
   ok(!JSON.stringify(sentBody).includes("ghp_"), "no token reaches the request body");
