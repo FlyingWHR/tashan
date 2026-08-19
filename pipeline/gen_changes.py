@@ -83,7 +83,12 @@ HEADLINE = {
 # fact, which is the claim we could not stand behind.
 SEC_KINDS = ("advisory_new", "severity_raised", "install_script_added", "install_script_changed",
              "permissions_widened")
-SEC_TRUSTED_FROM = "2026-08-18"
+# THE DATE THE GUARD FIRST RAN, NOT THE DATE IT WAS WRITTEN. This said 2026-08-18 — when the fix
+# was committed — while the nightly kept running the previous commit for two more days because the
+# fix sat unpushed. The 19 Aug run therefore emitted first-observation events that this cutoff
+# happily published as fact. A trust boundary has to key on deployment; code that exists on a laptop
+# has never protected anything.
+SEC_TRUSTED_FROM = "2026-08-20"
 
 
 def rows(con, days=DAYS):
