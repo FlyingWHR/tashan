@@ -211,9 +211,23 @@ PRO_MARK_RE = re.compile(r'<section class="pro"[^>]*data-pro="([a-z0-9-]+)"[^>]*
 # The lede for each opted-in static page, in its own words. A generic upsell repeated across a site
 # is banner blindness; the panel's own docstring says so.
 STATIC_PRO = {
-    "audit": ("You have just seen the state of these servers today. What you cannot see from one "
-              "look is the change: a maintainer adding an install script in a patch release, an "
-              "advisory landing against the version you already run."),
+    # The homepage panel used to be hand-copied markup carrying its own price string — the drift this
+    # marker exists to prevent, sitting on the highest-traffic page on the site. Its free step also
+    # used to be "install our CLI", which is a strange thing to ask of someone who has been on the
+    # site for nine seconds now that the same answer is one paste away.
+    # (lede, starts_hidden). Hidden means the page's own JS reveals it once a finding has earned it.
+    # NOT "the watch" and NOT "tells you the day it changes". `watch` is status:planned in
+    # entitlements.json — proactive notification does not exist. The copy that stood here promised it
+    # in words the keyword guard could not see, which is worse than the version that trips the guard.
+    # What Pro actually ships is `history` and `replacement`, so that is what this sells.
+    "home": ("Every score, finding and advisory above is free, forever, no account. What an index "
+             "cannot tell you is which of them <em>you</em> run &mdash; "
+             '<a class="link" href="/audit.html">paste your config</a> and see, free, with nothing '
+             "to install. Pro adds the series behind each one, and names a replacement when "
+             "something you depend on is dying.", False),
+    "audit": ("You have just seen where these stand today. Pro shows you every score and signal "
+              "behind them since we started measuring &mdash; whether each one is getting better or "
+              "quietly sliding &mdash; and names a replacement for anything already dying.", True),
 }
 
 
@@ -228,15 +242,17 @@ def apply(path, check=False):
 
     def _pro(m):
         key = m.group(1) or m.group(2)
-        lede = STATIC_PRO.get(key)
-        if not lede:
+        spec = STATIC_PRO.get(key)
+        if not spec:
             return m.group(0)
-        # `hidden` because the offer must be EARNED: audit.js reveals it only once a reader has
-        # results in front of them. A panel that greets someone before they have pasted anything is
-        # the standing nag this project has a rule against.
+        lede, starts_hidden = spec
+        # `hidden` ONLY where the page earns the offer from its own results — /audit reveals it once
+        # a reader has findings in front of them. A panel that greets someone before they have
+        # pasted anything is the standing nag this project has a rule against; a panel hidden on a
+        # page with nothing to earn it is just an offer nobody ever sees.
+        attrs = ' data-pro="' + key + '"' + (" hidden" if starts_hidden else "")
         return (pro_panel(lede, "pro-" + key, pid=None)
-                .replace('<section class="pro"',
-                         '<section class="pro" data-pro="' + key + '" hidden', 1))
+                .replace('<section class="pro"', '<section class="pro"' + attrs, 1))
 
     out = PRO_MARK_RE.sub(_pro, out, count=1)
     if out == src:

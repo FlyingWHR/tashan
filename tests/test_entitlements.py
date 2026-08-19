@@ -70,17 +70,35 @@ for pg in ("terms.html", "refunds.html"):
 
 print()
 print("# nothing anywhere sells what does not exist")
-for pg in ("pricing.html", "terms.html", "refunds.html", "start.html", "support.html", "index.html"):
+# EVERY PAGE, not a hand-listed six. The old list exempted /learn/ — where the Pro panel literally
+# said "What Pro adds is the watch" — and would have exempted /audit.html the day it shipped. A guard
+# against selling vapour cannot have an opt-out list that new pages join by default.
+import glob as _glob
+_pages = sorted(os.path.relpath(x, WEB) for x in _glob.glob(os.path.join(WEB, "*.html")))
+_pages += sorted(os.path.relpath(x, WEB) for x in _glob.glob(os.path.join(WEB, "learn", "*.html")))
+for pg in _pages:
     p = os.path.join(WEB, pg)
     if not os.path.exists(p):
         continue
     t = text(pg)
     bad = []
     for f in planned:
-        # the feature's own id and its most quotable phrase
-        for probe in (f["id"], "doctor --watch", "--watch"):
-            if probe and probe in t:
+        # AN UNAMBIGUOUS FLAG-SHAPED STRING IS ALWAYS A PROMISE.
+        for probe in ("doctor --watch", "--watch"):
+            if probe in t:
                 bad.append(probe)
+        # THE BARE FEATURE ID IS NOT. Probing for "watch" as a substring flagged a capability
+        # literally named claude-watcher and the sentence "so you can watch it move" — the guard is
+        # against OFFERING something unshipped, not against a common English word. So the id only
+        # counts when it appears in commercial context: inside the Pro panel, or close to a word
+        # that means "this is what you get".
+        for m in re.finditer(r"\b" + re.escape(f["id"]) + r"\b", t, re.I):
+            near = t[max(0, m.start() - 160):m.start() + 160].lower()
+            if any(w in near for w in ("pro adds", "pro tells", "pro includes", "tashan pro",
+                                       "what pro", "included", "subscription", "per month",
+                                       "/mo", "trial")):
+                bad.append(f["id"])
+                break
     ok(f"{pg} does not offer a planned feature", not bad, f"found {sorted(set(bad))}")
 
 print()

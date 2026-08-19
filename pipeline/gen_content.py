@@ -116,10 +116,9 @@ def article_html(a):
         # the seven said what the product does. Same line as everywhere else: the article is free,
         # the Index is free, and the thing neither can do is know what is in your config.
         + chrome.pro_panel(
-            "This article, and every score it links to, is free and needs no account. "
-            "<code>npx tashan-cli doctor</code> reads the config you already have and names "
-            "what is wrong in it, also free. What Pro adds is the watch: the day one of "
-            "them changes.",
+            "This article and every score it links to are free, no account. "
+            '<a class="link" href="/audit.html">Check your own config</a> free too. Pro adds '
+            "the series behind each row, and names a replacement when one is dying.",
             "pro-learn")
         +
         "</article></main>\n" + FOOT +
