@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 1144,
-  "grade": 3808,
-  "n": 37634,
-  "scan": 6970,
-  "score": 13951,
-  "task": 3146
+  "full": 1145,
+  "grade": 3809,
+  "n": 53453,
+  "scan": 7159,
+  "score": 21967,
+  "task": 3503
  },
  "axes": [
   {
@@ -31,10 +31,10 @@
   }
  ],
  "headline": {
-  "graded_pct": 67,
+  "graded_pct": 59,
   "scanned_pct": 100,
-  "scored_pct": 92,
-  "tasked_pct": 68,
+  "scored_pct": 98,
+  "tasked_pct": 65,
   "tier": "top1000"
  },
  "queue": [
@@ -46,6 +46,15 @@
     "grade"
    ],
    "name": "agent-install"
+  },
+  {
+   "downloads": 783851,
+   "id": "pkg:@copilotkit/aimock",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "@copilotkit/aimock"
   },
   {
    "downloads": 482339,
@@ -64,6 +73,15 @@
     "grade"
    ],
    "name": "mcporter"
+  },
+  {
+   "downloads": 133382,
+   "id": "pkg:@modelcontextprotocol/server-sequential-thinking",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "@modelcontextprotocol/server-sequential-thinking"
   },
   {
    "downloads": 130839,
@@ -99,9 +117,7 @@
    "id": "pkg:@ui5/mcp-server",
    "kind": "npm",
    "missing": [
-    "score",
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "@ui5/mcp-server"
   },
@@ -119,7 +135,8 @@
    "id": "pkg:agentation-mcp",
    "kind": "npm",
    "missing": [
-    "grade"
+    "grade",
+    "task"
    ],
    "name": "agentation-mcp"
   },
@@ -143,15 +160,6 @@
    "name": "nx-mcp"
   },
   {
-   "downloads": 81824,
-   "id": "pkg:figma-developer-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "figma-developer-mcp"
-  },
-  {
    "downloads": 79483,
    "id": "pkg:agentic-flow",
    "kind": "npm",
@@ -161,20 +169,38 @@
    "name": "agentic-flow"
   },
   {
+   "downloads": 67296,
+   "id": "pkg:@modelcontextprotocol/server-everything",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "@modelcontextprotocol/server-everything"
+  },
+  {
    "downloads": 65785,
    "id": "pkg:hlims-mcp",
    "kind": "npm",
    "missing": [
-    "grade"
+    "grade",
+    "task"
    ],
    "name": "hlims-mcp"
+  },
+  {
+   "downloads": 57771,
+   "id": "pkg:figma-developer-mcp",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "figma-developer-mcp"
   },
   {
    "downloads": 51413,
    "id": "pkg:@swmansion/argent",
    "kind": "npm",
    "missing": [
-    "score",
     "grade",
     "task"
    ],
@@ -199,6 +225,35 @@
    "name": "@cloudflare/mcp-server-cloudflare"
   },
   {
+   "downloads": 43044,
+   "id": "pkg:instar",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "instar"
+  },
+  {
+   "downloads": 40261,
+   "id": "pkg:@transcend-io/mcp-server-consent",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@transcend-io/mcp-server-consent"
+  },
+  {
+   "downloads": 40223,
+   "id": "pkg:@transcend-io/mcp-server-workflows",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@transcend-io/mcp-server-workflows"
+  },
+  {
    "downloads": 37481,
    "id": "pkg:@gongrzhe/server-gmail-autoauth-mcp",
    "kind": "npm",
@@ -206,6 +261,25 @@
     "grade"
    ],
    "name": "@gongrzhe/server-gmail-autoauth-mcp"
+  },
+  {
+   "downloads": 36566,
+   "id": "pkg:@transcend-io/mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@transcend-io/mcp"
+  },
+  {
+   "downloads": 31988,
+   "id": "pkg:@tobilu/qmd",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "@tobilu/qmd"
   },
   {
    "downloads": 29150,
@@ -217,6 +291,16 @@
    "name": "decocms"
   },
   {
+   "downloads": 28961,
+   "id": "pkg:@currents/mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@currents/mcp"
+  },
+  {
    "downloads": 28903,
    "id": "pkg:@modelcontextprotocol/server-brave-search",
    "kind": "npm",
@@ -225,6 +309,15 @@
     "grade"
    ],
    "name": "@modelcontextprotocol/server-brave-search"
+  },
+  {
+   "downloads": 27117,
+   "id": "pkg:xmcp",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "xmcp"
   },
   {
    "downloads": 26444,
@@ -250,7 +343,6 @@
    "id": "pkg:@softeria/ms-365-mcp-server",
    "kind": "npm",
    "missing": [
-    "score",
     "grade",
     "task"
    ],
@@ -302,130 +394,41 @@
    "name": "context-mode"
   },
   {
-   "downloads": 16888,
-   "id": "pkg:xmcp",
+   "downloads": 17521,
+   "id": "pkg:@the-next-ai/ai-gateway",
    "kind": "npm",
    "missing": [
-    "grade"
+    "grade",
+    "task"
    ],
-   "name": "xmcp"
+   "name": "@the-next-ai/ai-gateway"
   },
   {
-   "downloads": 14776,
-   "id": "pkg:openapi-mcp-generator",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "openapi-mcp-generator"
-  },
-  {
-   "downloads": 14687,
-   "id": "pkg:daedalus-cli",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "daedalus-cli"
-  },
-  {
-   "downloads": 13836,
-   "id": "pkg:@alipay/mcp-server-alipay",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@alipay/mcp-server-alipay"
-  },
-  {
-   "downloads": 13728,
-   "id": "pkg:@cloudbase/cloudbase-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@cloudbase/cloudbase-mcp"
-  },
-  {
-   "downloads": 12189,
-   "id": "pkg:fetcher-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "fetcher-mcp"
-  },
-  {
-   "downloads": 10785,
-   "id": "pkg:iclavue",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "iclavue"
-  },
-  {
-   "downloads": 10766,
-   "id": "pkg:playwright-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "playwright-mcp"
-  },
-  {
-   "downloads": 10514,
-   "id": "pkg:veryfront",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "veryfront"
-  },
-  {
-   "downloads": 9044,
-   "id": "pkg:hevy-mcp",
+   "downloads": 17356,
+   "id": "pkg:@stripe/mcp",
    "kind": "npm",
    "missing": [
     "task"
    ],
-   "name": "hevy-mcp"
-  },
-  {
-   "downloads": 8509,
-   "id": "pkg:@larksuiteoapi/lark-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@larksuiteoapi/lark-mcp"
-  },
-  {
-   "downloads": 8089,
-   "id": "pkg:davinci-resolve-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "davinci-resolve-mcp"
+   "name": "@stripe/mcp"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 64,
-   "grade": 66,
+   "full": 52,
+   "grade": 59,
    "n": 100,
    "scan": 100,
-   "score": 92,
-   "task": 95
+   "score": 95,
+   "task": 80
   },
   "top1000": {
-   "full": 501,
-   "grade": 670,
+   "full": 441,
+   "grade": 589,
    "n": 1000,
    "scan": 1000,
-   "score": 924,
-   "task": 685
+   "score": 982,
+   "task": 648
   }
  }
 }

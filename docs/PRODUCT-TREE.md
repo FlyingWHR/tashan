@@ -11,7 +11,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
-| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | board.json, capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 113 |
+| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | board.json, capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 111 |
 | `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 68 |
 | `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 64 |
 | `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | board.json, capabilities.json, index.json, tasks.json | free | 61 |
@@ -36,11 +36,11 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route pattern | Pages | Generator |
 |---|---|---|
-| `/capability/*.html` | 11,666 | `pipeline/prerender.py` |
-| `/category/*.html` | 104 | `pipeline/gen_hubs.py` |
+| `/capability/*.html` | 11,914 | `pipeline/prerender.py` |
+| `/category/*.html` | 108 | `pipeline/gen_hubs.py` |
 | `/task/*.html` | 64 | `pipeline/gen_hubs.py` |
 | `/role/*.html` | 23 | `pipeline/gen_hubs.py` |
-| `/compare/*.html` | 413 | `pipeline/gen_compare.py` |
+| `/compare/*.html` | 420 | `pipeline/gen_compare.py` |
 | `/learn/*.html` | 9 | `pipeline/gen_content.py` |
 
 ## Non-page surfaces
