@@ -152,6 +152,14 @@ ok(same(parsed.map((p) => p.id), ["@modelcontextprotocol/server-github"]), JSON.
   const text = nodes.audOut.textContent;
   ok(/Measured 3 of 4/.test(text), `summary counts measured vs asked — got: ${text.slice(0, 90)}`);
   ok(text.includes("tavily-mcp"), "every audited row is rendered");
+  // THE FINDING ITSELF, NOT "[object Object]". A flag is {k, say, n}; String(flag) renders the
+  // object tag, and the assertion above passed anyway because it only looked for the package name.
+  // The flag sentence IS the product on this page.
+  const flagged = fixture.audited.find((r) => (r.flags || []).length);
+  ok(!!flagged, "the fixture must contain a flagged row or this proves nothing");
+  const sentence = flagged.flags[0].say || flagged.flags[0].k;
+  ok(text.includes(sentence), `the flag's sentence must render: expected "${sentence}"`);
+  ok(!text.includes("[object Object]"), "no flag renders as [object Object]");
   ok(/have not looked, never that they are safe/.test(text), "the unmeasured line stays honest");
   ok(text.includes("totally-not-a-real-pkg-xyz"), "the unmeasured package is named");
 

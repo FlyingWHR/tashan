@@ -147,11 +147,17 @@
     if (r.tashan_score != null) top.appendChild(el("span", "aud__s mono", String(r.tashan_score)));
     li.appendChild(top);
 
+    // A FLAG IS AN OBJECT, NOT A STRING: {k: "deprecated", say: "the author has marked it
+    // deprecated on npm", n: 1}. String(flag) yields "[object Object]", which is what this rendered
+    // until someone pasted a config with a deprecated server in it — on the one line of the page
+    // that carries the actual finding. Read `say`, which is the sentence the API writes for humans.
     var flags = (r.flags || []).slice();
     if (flags.length) {
       var ul = el("ul", "aud__f");
       for (var i = 0; i < flags.length; i++) {
-        ul.appendChild(el("li", null, String(flags[i])));
+        var f = flags[i];
+        var say = (f && typeof f === "object") ? (f.say || f.k) : f;
+        if (say) ul.appendChild(el("li", null, String(say)));
       }
       li.appendChild(ul);
     } else if (r.rated === false) {
