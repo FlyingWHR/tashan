@@ -24,11 +24,11 @@ outreach email is the same sin the product exists to point at.
 
 Run `python3 pipeline/coverage.py` and the snippets below against `data/tashan.db`.
 
-| Fact | Value (6 Aug 2026) | Query |
+| Fact | Value (19 Aug 2026) | Query |
 |---|---|---|
 | npm packages scanned for advisories against the version you'd install today | 7,862 | `SELECT count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL` |
 | …of those, **no build provenance** — nothing proves the publisher built it | **74%** (5,818) | `SELECT sec_provenance, count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL GROUP BY 1` |
-| Servers running an **install-time script** (arbitrary code on `npm i`) | 490 | `WHERE sec_install_script IS NOT NULL` |
+| Servers running an **install-time script** (arbitrary code on `npm i`) | 490, and 92% of them run a file we cannot read | `WHERE sec_install_script IS NOT NULL` |
 | Confirmed-malicious packages found, kept unranked so `doctor` still warns | 6 | `WHERE sec_max_severity='MALICIOUS'` |
 | Scored capabilities whose maintainer has **stopped** (archived / declared / dormant) | 727 | `WHERE tashan_score IS NOT NULL AND vitality='abandoned'` |
 | Library/SDK packages found so far that can't be launched at all | 794 | `WHERE npm_runnable=0` |
@@ -133,45 +133,65 @@ through `.mcp.json` rather than `package.json` — a file their scanners don't r
 
 ---
 
-## 4. The launch post
+## 4. The launch post  — REWRITTEN 19 Aug 2026
 
-*For HN Show / X / r/mcp. The register is flat on purpose: a measurement company that oversells its
-own measurements has already lost the argument. The numbers are the punch.*
+*The previous draft led with "I scored 8,700 MCP servers". Two problems. Its numbers had gone stale
+(199 install scripts -> 490, 2 malicious -> 6, 409 abandoned -> 727), which is the exact sin this
+file warns about two sections up. And it asked the reader to read rather than to DO something —
+/audit.html now exists, so the opening move can be a thing they try in ten seconds on their own
+config. Every number below was re-derived 19 Aug; re-run them before posting.*
 
-**Title:** Show HN: I scored 8,700 MCP servers on public evidence, and 74% have no build provenance
+**Title:** Show HN: Paste your MCP config and see what is actually in it
 
-> I kept installing MCP servers with no way to tell which were maintained, so I built the measurement
-> and left it running.
+> I kept adding MCP servers to Claude Code and Cursor without any way to tell which ones were
+> maintained, so I built the measurement and left it running for a few months.
 >
-> tashan.sh scores them on public signal only — upkeep, freshness, real adoption, and an OSV advisory
-> scan run against the version you'd actually install rather than the latest tagged one. Every score
-> shows its inputs. Nothing paid can change a score, a rank, or a listing; that's the one line the
-> whole thing rests on.
+> https://tashan.sh/audit — paste your `mcpServers` block, get every risk I hold about each one.
+> Free, no account. **The config is parsed in your browser and only the bare package names are sent**;
+> an MCP config keeps API tokens and database URLs in the `env` block right next to the package name,
+> so nothing else leaves the page.
 >
-> Some of what fell out:
+> Some of what fell out of measuring 39,374 capabilities (14,419 scored, 7,862 scanned against the
+> version you would actually install rather than the latest tag):
 >
-> - ~74% of scanned packages have **no build provenance** — npm signs every tarball it hosts, which
->   is a fact about npm and not about the publisher, and reading it as provenance marked 266 of 266
->   packages "verified" until I caught it.
-> - 199 run a script at install time.
-> - 2 were in OSV's malicious-packages database. They're kept in the lookup, unranked, so the CLI can
->   still warn someone who already installed one.
-> - 409 scored capabilities are maintained by nobody — archived, deprecated, or the author saying so
->   in the README. One opened with "我们决定不维护了" and was still ranked #1 on its shelf.
-> - The single highest-adoption package on the board was the SDK you *build* servers with, at 53M
->   downloads a week. Fixed the day I noticed: a package that declares no `bin` can't be launched by
->   a host, so it isn't a capability. That removed 30 rows, including 19 browser-extension plugins
->   listed as if you could install them.
+> - **74% have no build provenance.** npm signs every tarball it hosts, which is a fact about npm and
+>   not about the publisher — reading it as provenance marked 266 of 266 packages "verified" until I
+>   caught it. Only `dist.attestations` means the publisher built it in CI.
+> - **490 run a script when you install them, and for 92% of those I cannot tell you what the script
+>   does.** The hook delegates to a file inside the tarball (`postinstall.js`, `install.js`), and a
+>   static check cannot read it without downloading and running the package. That is the honest limit
+>   of every scanner including mine, and I would rather publish the limit than the implication.
+> - **26% of resolved dependency trees carry a known advisory** — 85 of the 315 I have resolved so
+>   far. Matching dependency *names* against OSV said 86%, which is a scare story: express and undici
+>   carry advisories at *some* version and resolve to fixed ones. You have to resolve the tree and
+>   query with the version that actually installs.
+> - 6 packages are in OSV's malicious-packages database. They are kept in the lookup, unranked, so
+>   the CLI can still warn someone who already installed one.
+> - 727 scored capabilities are maintained by nobody. One README opened with "we have decided to stop
+>   maintaining this" and it was still ranked #1 on its shelf.
+> - The highest-adoption package on the board was once the SDK you *build* servers with, at 53M
+>   downloads a week. A package that declares no `bin` cannot be launched by a host, so it is not a
+>   capability. That removed 794 rows.
 >
-> Free and keyless if you want the data: `/v0.1/scores`, `/v0.1/servers`, `/llms.txt`.
+> Nothing paid can change a score, a rank, or a listing. That is the one line the whole thing rests
+> on, and it has a test of its own that fails if the scorer ever reads a payment column.
+>
+> Keyless data if you want it: `/v0.1/scores`, `/v0.1/servers`, `/llms.txt`.
 > `npx tashan-cli doctor` reads your local config and uploads nothing.
 >
-> The methodology page says what it doesn't measure, which is more than it does: no source review, no
-> sandboxing, no prompt-injection testing. Corrections welcome — several of the fixes above came from
-> someone telling me a number was wrong.
+> The methodology page spends more space on what this does not measure than what it does: no source
+> review, no sandboxing, no prompt-injection testing, and a package I have never measured is reported
+> as unmeasured rather than as safe. Corrections welcome — several of the numbers above are different
+> from what I first published because someone told me they were wrong.
 
-**The last line is the point.** Inviting correction is the only opening move available to something
-claiming to be a rating agency, and it's the one that survives contact with a sceptical crowd.
+**Why this one and not the old one.** The strongest line is the one that admits a limit: *for 92% of
+install scripts I cannot tell you what the script does*. A measurement product that leads with its
+blind spot is making the only claim a sceptical crowd cannot immediately puncture, and it happens to
+be the most interesting fact in the set.
+
+**Do not** post the same text to six places. One Show HN, one r/mcp post written differently, and
+nothing else the same week. The failure mode is looking like a launch campaign instead of a person
+who built a thing — and be there to answer for the first few hours, or do not post at all.
 
 ---
 

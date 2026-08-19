@@ -200,6 +200,23 @@ NAV_RE = re.compile(r"(?:<a class=\"skip\"[^>]*>.*?</a>)?<nav class=\"nav\">.*?<
 FOOT_RE = re.compile(r"<footer class=\"footer\">.*?</footer>", re.S)
 
 
+# A hand-written page opts into the commercial panel by carrying this marker. The panel is then
+# rendered from pro_panel() like every generated surface, so there is still exactly ONE definition of
+# the offer. Copying the markup into a static page by hand is how the price ends up different on one
+# page from every other, which is the drift tests/test_claims.py exists to catch — this makes that
+# impossible instead of merely detected.
+PRO_MARK_RE = re.compile(r'<section class="pro"[^>]*data-pro="([a-z0-9-]+)"[^>]*>.*?</section>|'
+                         r'<!--PRO:([a-z0-9-]+)-->', re.S)
+
+# The lede for each opted-in static page, in its own words. A generic upsell repeated across a site
+# is banner blindness; the panel's own docstring says so.
+STATIC_PRO = {
+    "audit": ("You have just seen the state of these servers today. What you cannot see from one "
+              "look is the change: a maintainer adding an install script in a patch release, an "
+              "advisory landing against the version you already run."),
+}
+
+
 def apply(path, check=False):
     """Return True when the file's chrome had drifted from the definition."""
     src = open(path, encoding="utf-8").read()
@@ -208,6 +225,20 @@ def apply(path, check=False):
         route = "/"
     out = NAV_RE.sub(lambda _m: nav_html(route), src, count=1)
     out = FOOT_RE.sub(lambda _m: footer_html(), out, count=1)
+
+    def _pro(m):
+        key = m.group(1) or m.group(2)
+        lede = STATIC_PRO.get(key)
+        if not lede:
+            return m.group(0)
+        # `hidden` because the offer must be EARNED: audit.js reveals it only once a reader has
+        # results in front of them. A panel that greets someone before they have pasted anything is
+        # the standing nag this project has a rule against.
+        return (pro_panel(lede, "pro-" + key, pid=None)
+                .replace('<section class="pro"',
+                         '<section class="pro" data-pro="' + key + '" hidden', 1))
+
+    out = PRO_MARK_RE.sub(_pro, out, count=1)
     if out == src:
         return False
     if not check:
@@ -229,8 +260,6 @@ def main():
     return 0
 
 
-if __name__ == "__main__":
-    sys.exit(main())
 
 
 # ---- the one commercial panel, rendered on every surface that has an offer to make ---------------
@@ -271,3 +300,12 @@ def pro_panel(lede, key, extra=(), pid=None):
         'data-e="cta" data-k="' + key + '">Start a 7-day trial &rsaquo;</a>'
         '<span class="pro__free mono"> Everything measured on this page stays free.</span></p>'
         '</section>')
+
+
+# THE ENTRY POINT LIVES AT THE BOTTOM, and it has to. pro_panel() below used to be defined AFTER
+# `sys.exit(main())`, so importing this module worked fine (generators only ever imported it) while
+# running it as a script raised NameError the moment apply() needed the panel. Same shape as the
+# appended-test trap this repo already documents: anything after sys.exit(main()) does not exist yet
+# when main() runs.
+if __name__ == "__main__":
+    sys.exit(main())

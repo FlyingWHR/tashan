@@ -195,6 +195,31 @@
         + ". That means we have not looked, never that they are safe."));
     }
     $("audNote").textContent = data.note || "";
+    offer(rows, s);
+  }
+
+  // THE OFFER IS EARNED, NEVER A STANDING NAG. This project's rule is that the Pro panel appears
+  // because a finding put it there, so it stays hidden until someone has actually checked a setup —
+  // and it is a WATCH pitch, not a "see more" one. Everything on this page is already free and stays
+  // free; what a subscription adds is the axis a single look cannot give you, which is time. Selling
+  // "unlock the findings" here would be selling what we just gave away.
+  function offer(rows, sum) {
+    var panel = document.querySelector('.pro[data-pro="audit"]');
+    if (!panel || !rows.length) return;
+    var watchable = rows.filter(function (r) { return r.id; }).length;
+    if (!watchable) return;
+    var lede = panel.querySelector(".pro__lede");
+    if (lede) {
+      var attention = (sum.replace || 0) + (sum.review || 0);
+      lede.textContent = attention
+        ? ("Right now " + attention + " of these " + watchable + " want a look. What one check cannot "
+           + "show you is the change — a maintainer adding an install script in a patch release, an "
+           + "advisory landing against the version you already run. That is what watching them adds.")
+        : ("These " + watchable + " look fine today. What one check cannot show you is the change — a "
+           + "maintainer adding an install script in a patch release, an advisory landing against the "
+           + "version you already run. That is what watching them adds.");
+    }
+    panel.hidden = false;
   }
 
   function run() {

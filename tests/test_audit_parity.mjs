@@ -113,13 +113,19 @@ ok(same(parsed.map((p) => p.id), ["@modelcontextprotocol/server-github"]), JSON.
   });
   const nodes = {};
   for (const id of ["audOut", "audNote", "audIn", "audGo"]) nodes[id] = mk("div");
+  // The commercial panel, as pipeline/chrome.py renders it into the static page: present but hidden.
+  const panel = mk("section");
+  panel.hidden = true;
+  panel.lede = mk("p");
+  panel.querySelector = (sel) => (sel === ".pro__lede" ? panel.lede : null);
 
   let requests = 0, sentBody = null;
   const mod2 = { exports: {} };
   new Function("module", "document", "window", "fetch", src)(
     mod2,
     { getElementById: (id) => nodes[id] || null, addEventListener: () => {},
-      readyState: "complete", createElement: mk },
+      readyState: "complete", createElement: mk,
+      querySelector: (sel) => (sel.indexOf('data-pro="audit"') >= 0 ? panel : null) },
     {},
     (url, init) => {
       requests++; sentBody = JSON.parse(init.body);
@@ -148,6 +154,38 @@ ok(same(parsed.map((p) => p.id), ["@modelcontextprotocol/server-github"]), JSON.
   ok(text.includes("tavily-mcp"), "every audited row is rendered");
   ok(/have not looked, never that they are safe/.test(text), "the unmeasured line stays honest");
   ok(text.includes("totally-not-a-real-pkg-xyz"), "the unmeasured package is named");
+
+  // THE OFFER MUST BE EARNED. It stays hidden until results exist, and it must pitch WATCHING —
+  // selling "unlock the findings" on a page that just gave them away for free would break the one
+  // rule the whole product rests on.
+  ok(panel.hidden === false, "the Pro panel is revealed once there are results");
+  ok(/what one check cannot show you is the change/i.test(panel.lede._text),
+     `the pitch is time, not access: ${panel.lede._text.slice(0, 80)}`);
+  ok(/1 of these 3 want a look/.test(panel.lede._text),
+     `the lede counts what this reader actually pasted: ${panel.lede._text.slice(0, 60)}`);
+
+  // ...AND IT MUST STAY HIDDEN WHEN NOTHING EARNED IT. A panel that greets a reader before they
+  // have checked anything is the standing nag this project has a rule against, and revealing it on
+  // an empty result is the easiest way to reintroduce one.
+  {
+    const n2 = {};
+    for (const id of ["audOut", "audNote", "audIn", "audGo"]) n2[id] = mk("div");
+    const p2 = mk("section"); p2.hidden = true; p2.lede = mk("p");
+    p2.querySelector = () => p2.lede;
+    const m4 = { exports: {} };
+    new Function("module", "document", "window", "fetch", src)(
+      m4,
+      { getElementById: (id) => n2[id] || null, addEventListener: () => {}, readyState: "complete",
+        createElement: mk, querySelector: () => p2 },
+      {},
+      () => Promise.resolve({ ok: true,
+        json: () => Promise.resolve({ audited: [], unmeasured: [], summary: { measured: 0 } }) }),
+    );
+    n2.audIn.value = "some-package-nobody-measured";
+    n2.audGo.on.click[0]();
+    await new Promise((r) => setTimeout(r, 0));
+    ok(p2.hidden === true, "no results means no offer — the panel must not become a standing nag");
+  }
 
   // The row needing attention must not sit below the fine ones.
   const list = nodes.audOut.children.find((c) => c.tag === "ul");
