@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 1145,
+  "full": 1144,
   "grade": 3809,
-  "n": 53453,
-  "scan": 7159,
-  "score": 21967,
-  "task": 3503
+  "n": 55343,
+  "scan": 7341,
+  "score": 23257,
+  "task": 3535
  },
  "axes": [
   {
@@ -31,10 +31,10 @@
   }
  ],
  "headline": {
-  "graded_pct": 59,
+  "graded_pct": 56,
   "scanned_pct": 100,
   "scored_pct": 98,
-  "tasked_pct": 65,
+  "tasked_pct": 64,
   "tier": "top1000"
  },
  "queue": [
@@ -48,7 +48,7 @@
    "name": "agent-install"
   },
   {
-   "downloads": 783851,
+   "downloads": 653410,
    "id": "pkg:@copilotkit/aimock",
    "kind": "npm",
    "missing": [
@@ -73,6 +73,15 @@
     "grade"
    ],
    "name": "mcporter"
+  },
+  {
+   "downloads": 234041,
+   "id": "pkg:@modelcontextprotocol/server-everything",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "@modelcontextprotocol/server-everything"
   },
   {
    "downloads": 133382,
@@ -101,16 +110,6 @@
     "grade"
    ],
    "name": "@modelcontextprotocol/server-github"
-  },
-  {
-   "downloads": 120645,
-   "id": "pkg:@modelcontextprotocol/server-postgres",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade"
-   ],
-   "name": "@modelcontextprotocol/server-postgres"
   },
   {
    "downloads": 108517,
@@ -160,6 +159,16 @@
    "name": "nx-mcp"
   },
   {
+   "downloads": 85507,
+   "id": "pkg:@modelcontextprotocol/server-postgres",
+   "kind": "npm",
+   "missing": [
+    "score",
+    "grade"
+   ],
+   "name": "@modelcontextprotocol/server-postgres"
+  },
+  {
    "downloads": 79483,
    "id": "pkg:agentic-flow",
    "kind": "npm",
@@ -167,15 +176,6 @@
     "grade"
    ],
    "name": "agentic-flow"
-  },
-  {
-   "downloads": 67296,
-   "id": "pkg:@modelcontextprotocol/server-everything",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "@modelcontextprotocol/server-everything"
   },
   {
    "downloads": 65785,
@@ -244,16 +244,6 @@
    "name": "@transcend-io/mcp-server-consent"
   },
   {
-   "downloads": 40223,
-   "id": "pkg:@transcend-io/mcp-server-workflows",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@transcend-io/mcp-server-workflows"
-  },
-  {
    "downloads": 37481,
    "id": "pkg:@gongrzhe/server-gmail-autoauth-mcp",
    "kind": "npm",
@@ -273,6 +263,16 @@
    "name": "@transcend-io/mcp"
   },
   {
+   "downloads": 32221,
+   "id": "pkg:@currents/mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@currents/mcp"
+  },
+  {
    "downloads": 31988,
    "id": "pkg:@tobilu/qmd",
    "kind": "npm",
@@ -289,16 +289,6 @@
     "grade"
    ],
    "name": "decocms"
-  },
-  {
-   "downloads": 28961,
-   "id": "pkg:@currents/mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@currents/mcp"
   },
   {
    "downloads": 28903,
@@ -320,16 +310,6 @@
    "name": "xmcp"
   },
   {
-   "downloads": 26444,
-   "id": "pkg:@modelcontextprotocol/server-puppeteer",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade"
-   ],
-   "name": "@modelcontextprotocol/server-puppeteer"
-  },
-  {
    "downloads": 25898,
    "id": "pkg:task-master-ai",
    "kind": "npm",
@@ -337,6 +317,16 @@
     "grade"
    ],
    "name": "task-master-ai"
+  },
+  {
+   "downloads": 23274,
+   "id": "pkg:@modelcontextprotocol/server-puppeteer",
+   "kind": "npm",
+   "missing": [
+    "score",
+    "grade"
+   ],
+   "name": "@modelcontextprotocol/server-puppeteer"
   },
   {
    "downloads": 23257,
@@ -411,6 +401,16 @@
     "task"
    ],
    "name": "@stripe/mcp"
+  },
+  {
+   "downloads": 17305,
+   "id": "pkg:@lark-project/meegle",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@lark-project/meegle"
   }
  ],
  "tiers": {
@@ -423,12 +423,12 @@
    "task": 80
   },
   "top1000": {
-   "full": 441,
-   "grade": 589,
+   "full": 421,
+   "grade": 559,
    "n": 1000,
    "scan": 1000,
-   "score": 982,
-   "task": 648
+   "score": 983,
+   "task": 640
   }
  }
 }

@@ -9,57 +9,57 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 ## The short answer
 
-- **Application development** — [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) · tashan score 71
-- **Code review** — [Sem](https://tashan.sh/capability/pkg-ataraxy-labs-sem.html) · tashan score 69
-- **Test automation** — [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) · tashan score 79
-- **Browser automation** — [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) · tashan score 92
-- **Web scraping** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 86
-- **Database access** — [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) · tashan score 86
+- **Application development** — [Ios Simulator](https://tashan.sh/capability/pkg-ios-simulator-mcp.html) · tashan score 73
+- **Code review** — [Sem](https://tashan.sh/capability/pkg-ataraxy-labs-sem.html) · tashan score 68
+- **Browser automation** — [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) · tashan score 93
+- **Test automation** — [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) · tashan score 78
+- **Web scraping** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 85
+- **Database access** — [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) · tashan score 84
 
 ## Ranked
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 96 | 619k/wk | active |
-| 2 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 92 | 1.5m/wk | active |
-| 3 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 86 | 32k/wk | active |
-| 4 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 86 | 206k/wk | active |
-| 5 | [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) | 79 | 9k/wk | active |
-| 6 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 75 | 3k/wk | active |
-| 7 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 74 | 3k ★ | active |
-| 8 | [Safety Net](https://tashan.sh/capability/plugin-kenryu42-claude-code-safety-net-safety-net.html) | 73 | 1k ★ | active |
-| 9 | [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) | 71 | 4k/wk | active |
-| 10 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 71 | 542 ★ | active |
-| 11 | [Execbro](https://tashan.sh/capability/pkg-execbro.html) | 70 | 2k/wk | active |
-| 12 | [Unicli](https://tashan.sh/capability/plugin-yucchiy-unicli-unicli.html) | 69 | 248 ★ | active |
-| 13 | [Sem](https://tashan.sh/capability/pkg-ataraxy-labs-sem.html) | 69 | 4k/wk | active |
-| 14 | [Observatory](https://tashan.sh/capability/pkg-kryptosai-mcp-observatory.html) | 69 | 2k/wk | active |
-| 15 | [Asc](https://tashan.sh/capability/pkg-pofky-asc-mcp.html) | 68 | 2k/wk | active |
-| 16 | [Weavatrix](https://tashan.sh/capability/pkg-weavatrix.html) | 67 | 901/wk | active |
-| 17 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 67 | 80 ★ | active |
-| 18 | [Codedna](https://tashan.sh/capability/plugin-larens94-codedna-codedna.html) | 65 | 143 ★ | active |
-| 19 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 62 | 335 ★ | active |
-| 20 | [Roundtable](https://tashan.sh/capability/plugin-wan-huiyan-agent-review-panel-roundtable.html) | 61 | 30 ★ | active |
-| 21 | [Adcp Client](https://tashan.sh/capability/plugin-adcontextprotocol-adcp-client-adcp-client.html) | 61 | 18 ★ | active |
-| 22 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 61 | 18 ★ | active |
-| 23 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 60 | 23 ★ | active |
-| 24 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 60 | 381 ★ | active |
-| 25 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 60 | 523 ★ | active |
-| 26 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 57 | 18 ★ | active |
-| 27 | [Scandit SDK](https://tashan.sh/capability/plugin-scandit-scandit-sdk-skills-scandit-sdk.html) | 57 | 15 ★ | active |
-| 28 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 57 | 24 ★ | active |
-| 29 | [Ios Simulator](https://tashan.sh/capability/pkg-ios-simulator-mcp.html) | 56 | 5k/wk | active |
-| 30 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 56 | 35 ★ | active |
-| 31 | [Summer](https://tashan.sh/capability/plugin-summerengine-summer-summer.html) | 55 | 32 ★ | active |
-| 32 | [Suiper](https://tashan.sh/capability/plugin-pivyme-suiperpower-suiper.html) | 55 | 12 ★ | active |
-| 33 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 55 | 13 ★ | active |
-| 34 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 54 | 9 ★ | active |
-| 35 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 54 | 10 ★ | active |
-| 36 | [Tray API](https://tashan.sh/capability/plugin-tray-tecnologia-tray-api-claude-plugin-tray-api.html) | 53 | 13 ★ | active |
-| 37 | [Archy](https://tashan.sh/capability/plugin-hslee16-archy-archy.html) | 53 | 6 ★ | active |
-| 38 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 53 | 3 ★ | active |
-| 39 | [Minecraft Java](https://tashan.sh/capability/plugin-chapmanjw-minecraft-java-fabric-claude-plugin-minecraft-java.html) | 52 | 5 ★ | active |
-| 40 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 52 | 6 ★ | active |
+| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 95 | 619k/wk | active |
+| 2 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 93 | 2.3m/wk | active |
+| 3 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 85 | 32k/wk | active |
+| 4 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 73k/wk | active |
+| 5 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 78 | 5k/wk | active |
+| 6 | [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) | 78 | 9k/wk | active |
+| 7 | [Ios Simulator](https://tashan.sh/capability/pkg-ios-simulator-mcp.html) | 73 | 10k/wk | active |
+| 8 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 73 | 3k ★ | active |
+| 9 | [Safety Net](https://tashan.sh/capability/plugin-kenryu42-claude-code-safety-net-safety-net.html) | 72 | 1k ★ | active |
+| 10 | [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) | 71 | 4k/wk | active |
+| 11 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 70 | 542 ★ | active |
+| 12 | [Execbro](https://tashan.sh/capability/pkg-execbro.html) | 69 | 2k/wk | active |
+| 13 | [Unicli](https://tashan.sh/capability/plugin-yucchiy-unicli-unicli.html) | 68 | 248 ★ | active |
+| 14 | [Sem](https://tashan.sh/capability/pkg-ataraxy-labs-sem.html) | 68 | 4k/wk | active |
+| 15 | [Asc](https://tashan.sh/capability/pkg-pofky-asc-mcp.html) | 67 | 2k/wk | active |
+| 16 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 66 | 80 ★ | active |
+| 17 | [Codedna](https://tashan.sh/capability/plugin-larens94-codedna-codedna.html) | 64 | 143 ★ | active |
+| 18 | [Weavatrix](https://tashan.sh/capability/pkg-weavatrix.html) | 63 | 358/wk | active |
+| 19 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 61 | 335 ★ | active |
+| 20 | [Roundtable](https://tashan.sh/capability/plugin-wan-huiyan-agent-review-panel-roundtable.html) | 60 | 30 ★ | active |
+| 21 | [Adcp Client](https://tashan.sh/capability/plugin-adcontextprotocol-adcp-client-adcp-client.html) | 60 | 18 ★ | active |
+| 22 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 60 | 381 ★ | active |
+| 23 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 60 | 523 ★ | active |
+| 24 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 60 | 18 ★ | active |
+| 25 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 59 | 23 ★ | active |
+| 26 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 56 | 18 ★ | active |
+| 27 | [Scandit SDK](https://tashan.sh/capability/plugin-scandit-scandit-sdk-skills-scandit-sdk.html) | 56 | 15 ★ | active |
+| 28 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 56 | 24 ★ | active |
+| 29 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 55 | 35 ★ | active |
+| 30 | [Summer](https://tashan.sh/capability/plugin-summerengine-summer-summer.html) | 54 | 32 ★ | active |
+| 31 | [Suiper](https://tashan.sh/capability/plugin-pivyme-suiperpower-suiper.html) | 54 | 12 ★ | active |
+| 32 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 54 | 13 ★ | active |
+| 33 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 53 | 9 ★ | active |
+| 34 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 53 | 10 ★ | active |
+| 35 | [Tray API](https://tashan.sh/capability/plugin-tray-tecnologia-tray-api-claude-plugin-tray-api.html) | 52 | 13 ★ | active |
+| 36 | [Archy](https://tashan.sh/capability/plugin-hslee16-archy-archy.html) | 52 | 6 ★ | active |
+| 37 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 52 | 3 ★ | active |
+| 38 | [Minecraft Java](https://tashan.sh/capability/plugin-chapmanjw-minecraft-java-fabric-claude-plugin-minecraft-java.html) | 51 | 5 ★ | active |
+| 39 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 51 | 6 ★ | active |
+| 40 | [Temper](https://tashan.sh/capability/plugin-galando-temper-temper.html) | 50 | 13 ★ | active |
 
 Showing the top 40 of 918. The full ranked shelf is at https://tashan.sh/role/engineer.html.
 

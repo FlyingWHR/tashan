@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Hostinger API](https://tashan.sh/capability/pkg-hostinger-api-mcp.html) | 88 | 68k/wk | active |
-| 2 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 107k/wk | active |
-| 3 | [Kubernetes](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 84 | 18k/wk | active |
-| 4 | [Kubernetes · Flux159](https://tashan.sh/capability/pkg-mcp-server-kubernetes.html) | 84 | 18k/wk | active |
-| 5 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 84 | 14k/wk | active |
-| 6 | [Cloudflare](https://tashan.sh/capability/plugin-cloudflare-skills-cloudflare.html) | 76 | 2k ★ | active |
-| 7 | [Azure · microsoft](https://tashan.sh/capability/plugin-microsoft-azure-skills-azure.html) | 74 | 1k ★ | active |
-| 8 | [Postman](https://tashan.sh/capability/pkg-postman-postman-mcp-server.html) | 74 | 5k/wk | active |
-| 9 | [Localstack](https://tashan.sh/capability/pkg-localstack-localstack-mcp-server.html) | 73 | 626/wk | active |
-| 10 | [AI Infra Auto Driven Skills](https://tashan.sh/capability/plugin-bbuf-ai-infra-auto-driven-skills-ai-infra-auto-driven-skills.html) | 73 | 740 ★ | active |
-| 11 | [Coolify](https://tashan.sh/capability/pkg-masonator-coolify-mcp.html) | 73 | 11k/wk | active |
-| 12 | [Veryfront](https://tashan.sh/capability/pkg-veryfront.html) | 73 | 11k/wk | active |
-| 13 | [Vantage](https://tashan.sh/capability/pkg-vantage-mcp-server.html) | 73 | 3k/wk | active |
-| 14 | [Homespun](https://tashan.sh/capability/pkg-homespunapps-mcp.html) | 72 | 4k/wk | active |
-| 15 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 71 | 643 ★ | active |
-| 16 | [Run402](https://tashan.sh/capability/pkg-run402-mcp.html) | 71 | 4k/wk | active |
-| 17 | [Spacefast](https://tashan.sh/capability/pkg-spacefast.html) | 71 | 4k/wk | active |
-| 18 | [Railway](https://tashan.sh/capability/plugin-railwayapp-railway-skills-railway.html) | 70 | 300 ★ | active |
-| 19 | [Gonzo](https://tashan.sh/capability/plugin-control-theory-gonzo-gonzo.html) | 70 | 3k ★ | active |
-| 20 | [Shipmail](https://tashan.sh/capability/pkg-shipmail-mcp.html) | 69 | 2k/wk | active |
-| 21 | [Cybara](https://tashan.sh/capability/pkg-cybara.html) | 69 | 1k/wk | active |
-| 22 | [Agenticmail](https://tashan.sh/capability/plugin-agenticmail-agenticmail-agenticmail.html) | 68 | 180 ★ | active |
-| 23 | [Defang](https://tashan.sh/capability/plugin-defanglabs-defang-defang.html) | 68 | 163 ★ | active |
-| 24 | [Apt MCP Agent Setup](https://tashan.sh/capability/pkg-apt-mcp-agent-setup.html) | 68 | 1k/wk | active |
-| 25 | [Basicdeploy](https://tashan.sh/capability/pkg-basicdeploy-mcp.html) | 65 | 1k/wk | active |
-| 26 | [Keenetic](https://tashan.sh/capability/pkg-keenetic-mcp.html) | 65 | 1k/wk | active |
-| 27 | [Containerization Assist](https://tashan.sh/capability/pkg-containerization-assist-mcp.html) | 65 | 583/wk | active |
-| 28 | [Livepilot](https://tashan.sh/capability/pkg-livepilot.html) | 65 | 579/wk | active |
-| 29 | [Dokploy](https://tashan.sh/capability/pkg-dokploy-mcp-server.html) | 65 | 559/wk | active |
-| 30 | [Familiar](https://tashan.sh/capability/pkg-familiar-vtt.html) | 64 | 504/wk | active |
-| 31 | [Agent Comms](https://tashan.sh/capability/pkg-agent-comms.html) | 64 | 458/wk | active |
-| 32 | [Gitcontribute](https://tashan.sh/capability/pkg-gitcontribute.html) | 64 | 383/wk | active |
-| 33 | [Stackql](https://tashan.sh/capability/pkg-stackql-mcp-server.html) | 64 | 316/wk | active |
-| 34 | [Local Ydb](https://tashan.sh/capability/pkg-astandrik-local-ydb-mcp.html) | 63 | 355/wk | active |
-| 35 | [smbCloud Mail & Auth](https://tashan.sh/capability/pkg-smbcloud-cli.html) | 63 | 176/wk | active |
-| 36 | [Frugal](https://tashan.sh/capability/plugin-yuanbop-frugal-frugal.html) | 62 | 225 ★ | active |
-| 37 | [Domainkits](https://tashan.sh/capability/pkg-domainkits-mcp.html) | 62 | 736/wk | active |
-| 38 | [Kube Dc](https://tashan.sh/capability/plugin-kube-dc-kube-dc-public-kube-dc.html) | 61 | 34 ★ | active |
-| 39 | [Patchright MCP Jalikey](https://tashan.sh/capability/pkg-patchright-mcp-jalikey.html) | 61 | 898/wk | active |
-| 40 | [Palantir](https://tashan.sh/capability/pkg-palantir-mcp.html) | 61 | 882/wk | active |
+| 1 | [Hostinger API](https://tashan.sh/capability/pkg-hostinger-api-mcp.html) | 87 | 68k/wk | active |
+| 2 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 85 | 107k/wk | active |
+| 3 | [Kubernetes](https://tashan.sh/capability/pkg-mcp-server-kubernetes.html) | 83 | 18k/wk | active |
+| 4 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 83 | 14k/wk | active |
+| 5 | [Kubernetes · containers](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 82 | 8k/wk | active |
+| 6 | [Postman](https://tashan.sh/capability/pkg-postman-postman-mcp-server.html) | 79 | 6k/wk | active |
+| 7 | [Beads](https://tashan.sh/capability/plugin-gastownhall-beads-beads.html) | 78 | 26k ★ | active |
+| 8 | [Darwin X64](https://tashan.sh/capability/pkg-azure-mcp-darwin-x64.html) | 76 | 2k/wk | active |
+| 9 | [Linux Arm64](https://tashan.sh/capability/pkg-azure-mcp-linux-arm64.html) | 76 | 2k/wk | active |
+| 10 | [Cloudflare](https://tashan.sh/capability/plugin-cloudflare-skills-cloudflare.html) | 75 | 2k ★ | active |
+| 11 | [Azure · microsoft](https://tashan.sh/capability/plugin-microsoft-azure-skills-azure.html) | 74 | 1k ★ | active |
+| 12 | [Localstack](https://tashan.sh/capability/pkg-localstack-localstack-mcp-server.html) | 73 | 626/wk | active |
+| 13 | [Coolify](https://tashan.sh/capability/pkg-masonator-coolify-mcp.html) | 73 | 11k/wk | active |
+| 14 | [Veryfront](https://tashan.sh/capability/pkg-veryfront.html) | 73 | 11k/wk | active |
+| 15 | [Vantage](https://tashan.sh/capability/pkg-vantage-mcp-server.html) | 73 | 3k/wk | active |
+| 16 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 71 | 643 ★ | active |
+| 17 | [Homespun](https://tashan.sh/capability/pkg-homespunapps-mcp.html) | 71 | 4k/wk | active |
+| 18 | [SSH](https://tashan.sh/capability/pkg-fangjunjie-ssh-mcp-server.html) | 71 | 2k/wk | active |
+| 19 | [Cube](https://tashan.sh/capability/pkg-edgescaleai-cube-mcp.html) | 71 | 456/wk | active |
+| 20 | [Railway](https://tashan.sh/capability/plugin-railwayapp-railway-skills-railway.html) | 70 | 300 ★ | active |
+| 21 | [Run402](https://tashan.sh/capability/pkg-run402-mcp.html) | 70 | 4k/wk | active |
+| 22 | [Aiven](https://tashan.sh/capability/pkg-mcp-aiven.html) | 70 | 376/wk | active |
+| 23 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 69 | 168 ★ | active |
+| 24 | [Gonzo](https://tashan.sh/capability/plugin-control-theory-gonzo-gonzo.html) | 69 | 3k ★ | active |
+| 25 | [Spacefast](https://tashan.sh/capability/pkg-spacefast.html) | 69 | 2k/wk | active |
+| 26 | [Shipmail](https://tashan.sh/capability/pkg-shipmail-mcp.html) | 69 | 2k/wk | active |
+| 27 | [Cortex](https://tashan.sh/capability/pkg-theronap-cortex-mcp.html) | 69 | 1k/wk | active |
+| 28 | [Caw](https://tashan.sh/capability/pkg-kelceyp-caw-server.html) | 69 | 1k/wk | active |
+| 29 | [Atrium](https://tashan.sh/capability/pkg-lacneu-atrium-mcp.html) | 69 | 954/wk | active |
+| 30 | [Cybara](https://tashan.sh/capability/pkg-cybara.html) | 68 | 1k/wk | active |
+| 31 | [Defang](https://tashan.sh/capability/plugin-defanglabs-defang-defang.html) | 67 | 163 ★ | active |
+| 32 | [Apt MCP Agent Setup](https://tashan.sh/capability/pkg-apt-mcp-agent-setup.html) | 67 | 1k/wk | active |
+| 33 | [Tailscale](https://tashan.sh/capability/pkg-yawlabs-tailscale-mcp.html) | 66 | 772/wk | active |
+| 34 | [Atomgit](https://tashan.sh/capability/pkg-atomgit-com-atomgit-mcp-server.html) | 66 | 567/wk | active |
+| 35 | [Basicdeploy](https://tashan.sh/capability/pkg-basicdeploy-mcp.html) | 65 | 1k/wk | active |
+| 36 | [Antics](https://tashan.sh/capability/pkg-antics-mcp.html) | 65 | 852/wk | active |
+| 37 | [MCPComp Diagnostics](https://tashan.sh/capability/pkg-mcpcomp.html) | 65 | 745/wk | active |
+| 38 | [Infrawise](https://tashan.sh/capability/pkg-infrawise.html) | 65 | 729/wk | active |
+| 39 | [Keenetic](https://tashan.sh/capability/pkg-keenetic-mcp.html) | 64 | 1k/wk | active |
+| 40 | [Wisewall](https://tashan.sh/capability/pkg-wisewall-mcp.html) | 64 | 763/wk | active |
 
-Showing the top 40 of 435. The full ranked shelf is at https://tashan.sh/category/cloud.html.
+Showing the top 40 of 602. The full ranked shelf is at https://tashan.sh/category/cloud.html.
 
 ## What these numbers are not
 
