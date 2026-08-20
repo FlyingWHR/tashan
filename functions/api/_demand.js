@@ -26,14 +26,22 @@
 // monitoring inflates manufactures the number you would most like to see. That already happened
 // once here, producing 43 checkouts nobody made.
 
-const SELF = "tashan-payment-check";
+// OUR OWN TRAFFIC, BY DECLARED USER-AGENT. `tashan-payment-check` is what check_payments.py sends.
+// `tashan-selfcheck` is the marker every OTHER diagnostic must carry — added after five of the six
+// "agent quoted a price" events in the first week turned out to be my own curl probes
+// (tashan-live-verify, tashan-bazaar-compliance). Having an exclusion and then not using it is the
+// same as not having one: it manufactured the exact demand signal this file exists to measure.
+//
+// A REAL CLIENT MUST NEVER MATCH THESE. `tashan-cli` is our shipped CLI and its traffic is genuine
+// demand, so the markers are deliberately not "tashan".
+const SELF = ["tashan-payment-check", "tashan-selfcheck"];
 
 /** One row per demand event. Never throws — telemetry must not cost a sale, or a refusal. */
 export function demand(env, request, stage, resource, reason) {
   try {
     if (!env || !env.TASHAN_AE) return;
     const ua = (request && request.headers && request.headers.get("user-agent")) || "";
-    if (ua.includes(SELF)) return;
+    if (SELF.some((m) => ua.includes(m))) return;
     env.TASHAN_AE.writeDataPoint({
       indexes: ["x402"],
       blobs: [

@@ -723,7 +723,10 @@ def summary(c, gen=""):
             + ('<p class="mono fs-sm faint">Measured ' + esc(gen[:10]) + ' &nbsp;·&nbsp; scorer '
                + esc(SCORER) + ' &nbsp;·&nbsp; '
                '<a class="link" href="/methodology.html">how</a> &nbsp;·&nbsp; '
-               '<a class="link" href="/support.html?ref=' + quote(c["id"], safe="") + '#corrections">'
+               # rel=nofollow: this ?ref= makes ONE page look like 11,666 distinct URLs to a
+               # crawler, which is duplicate-content crawl waste and put 415 phantom views on
+               # /support in a week — more than the homepage got. The link stays for humans.
+               '<a class="link" rel="nofollow" href="/support.html?ref=' + quote(c["id"], safe="") + '#corrections">'
                'something wrong here?</a></p>' if gen else ''))
 
 def clip_notice(t):

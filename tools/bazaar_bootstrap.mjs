@@ -61,7 +61,7 @@ const TARGETS = [
 // the number a founder most wants to see. That already happened once here — 43 checkouts nobody
 // made. Indexing is driven by the facilitator's settle, not by our analytics, so excluding
 // ourselves costs the listing nothing.
-const UA = "tashan-payment-check/bazaar-bootstrap";
+const UA = "tashan-selfcheck/bazaar-bootstrap";
 
 function bail(msg, code = 1) {
   console.error(`\n  ${msg}\n`);

@@ -29,15 +29,21 @@ const req = (ua = "some-agent/1.0", country = "US") =>
   ok(env.rows.length === 0, "self-check excluded");
   demand(env, req("python-urllib/3 tashan-payment-check"), "settled", "config-audit");
   ok(env.rows.length === 0, "excluded anywhere in the UA, not just as a prefix");
+  demand(env, req("curl/8 tashan-selfcheck/bazaar"), "quoted", "capability-kit");
+  ok(env.rows.length === 0, "any diagnostic carrying the marker is excluded");
+  // ...but the SHIPPED CLI is a real client and its traffic is real demand.
+  demand(env, req("tashan-cli/0.1.4"), "quoted", "capability-kit");
+  ok(env.rows.length === 1, "tashan-cli is a customer, not a self-check");
   // ...but a REAL agent still counts. Over-excluding would silently delete the signal.
   demand(env, req("claude-code/2.1"), "quoted", "config-audit");
-  ok(env.rows.length === 1, "a real agent is still recorded");
+  ok(env.rows.length === 2, "a real agent is still recorded");
 }
 
 // NEVER THROWS. Telemetry that can fail a request would turn a metric into an outage — and this one
 // sits directly in the payment path, so a throw here costs the sale it is trying to measure.
 {
-  ok(_SELF === "tashan-payment-check", "exclusion token matches check_payments.py's UA");
+  ok(_SELF.includes("tashan-payment-check"), "check_payments.py's UA is excluded");
+  ok(_SELF.includes("tashan-selfcheck"), "the general diagnostic marker is excluded");
   const boom = { TASHAN_AE: { writeDataPoint: () => { throw new Error("AE down"); } } };
   let threw = false;
   try { demand(boom, req(), "settled", "x"); } catch (_) { threw = true; }

@@ -250,5 +250,48 @@ await ok("end to end: a wrong field is repaired and the customer still lands on 
   } finally { globalThis.fetch = saved; }
 });
 
+// ---- a crawler is not a buyer -------------------------------------------------------------------
+// The funnel read "0 offer clicks, 47 reached Polar checkout" over a week. That is impossible for
+// humans, and it is the MONEY row — the one number that decides whether the offer works. /api/buy is
+// a plain href on pricing.html and is deliberately published in llms.txt, so bots reach it by
+// design. The redirect must still serve them; only the metric excludes them.
+const hitBuy = async (ua) => {
+  const rows = [];
+  const env = { TASHAN_AE: { writeDataPoint: (d) => rows.push(d) } };
+  const request = { url: "https://tashan.sh/api/buy?plan=monthly",
+                    headers: { get: (h) => (h === "user-agent" ? ua : null) }, cf: {} };
+  const res = await onRequest({ request, env });
+  return { counted: rows.length === 1, status: res.status, loc: res.headers.get("location") };
+};
+
+await ok("a real browser counts as reaching checkout", async () => {
+  const r = await hitBuy("Mozilla/5.0 (Macintosh) AppleWebKit/537.36 Chrome/120 Safari/537.36");
+  assert.equal(r.counted, true);
+});
+
+await ok("crawlers reach Polar but are NOT counted", async () => {
+  for (const ua of ["Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+                    "Mozilla/5.0 (compatible; bingbot/2.0)", "Mozilla/5.0 (compatible; AhrefsBot/7.0)",
+                    "python-requests/2.31", "curl/8.4.0", "Scrapy/2.11"]) {
+    const r = await hitBuy(ua);
+    assert.equal(r.counted, false, "counted a crawler: " + ua);
+    // RULE 1 STILL HOLDS: never block the redirect. Excluding a bot from a metric must not
+    // accidentally turn /api/buy into a 403 for anyone.
+    assert.equal(r.status, 302, "a crawler must still be redirected: " + ua);
+    assert.equal(r.loc, buyUrl(_LINK.monthly), ua);
+  }
+});
+
+await ok("our own payment checker is still excluded", async () => {
+  assert.equal((await hitBuy("tashan-payment-check")).counted, false);
+});
+
+// AN AGENT IS A REAL BUYER. llms.txt tells agents to quote this exact URL, so a filter that
+// excluded everything non-browser would delete the demand we are trying to measure.
+await ok("an agent that is not a crawler still counts", async () => {
+  assert.equal((await hitBuy("claude-code/2.1")).counted, true);
+  assert.equal((await hitBuy("tashan-cli/0.1.4")).counted, true);
+});
+
 console.log(`\n  ${pass} passing, ${fail} failing\n`);
 process.exit(fail ? 1 : 0);

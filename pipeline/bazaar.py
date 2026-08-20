@@ -50,7 +50,7 @@ BANDS = ((0.01, "<= $0.01"), (0.05, "$0.01-0.05"), (0.10, "$0.05-0.10"),
 def fetch(limit=100, cap=20000, get=None):
     """Every listed resource. Paginated; the index was 1,700 rows and growing when written."""
     get = get or (lambda u: json.load(urllib.request.urlopen(
-        urllib.request.Request(u, headers={"user-agent": "tashan-bazaar-probe"}), timeout=45)))
+        urllib.request.Request(u, headers={"user-agent": "tashan-selfcheck/bazaar"}), timeout=45)))
     out, off = [], 0
     while off < cap:
         got = (get(f"{INDEX}?limit={limit}&offset={off}") or {}).get("items") or []

@@ -125,10 +125,17 @@ export async function onRequest({ request, env }) {
   // A metric a team can inflate by testing is worse than no metric: it manufactures the exact
   // number a founder would celebrate. Only OUR OWN checker is excluded, by its declared user-agent
   // — a real agent hitting this route IS a genuine signal and must still count.
+  // A CRAWLER IS NOT A BUYER. /api/buy is a plain href on pricing.html and is deliberately
+  // published in llms.txt, so every bot that follows links reaches it — and the funnel read
+  // "0 offer clicks, 47 reached Polar checkout", which is impossible for humans and is the same
+  // shape as the 43 fake checkouts our own monitoring once manufactured. The redirect still works
+  // for anyone; only the METRIC excludes them, because the point of this row is counting people
+  // who chose to buy.
   const ua = request.headers.get("user-agent") || "";
   const isSelfCheck = ua.includes("tashan-payment-check");
+  const isBot = /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|headless|python-|curl\/|wget|scrapy|semrush|ahrefs|dataforseo|petalbot|yandex/i.test(ua);
   try {
-    if (env.TASHAN_AE && !isSelfCheck) {
+    if (env.TASHAN_AE && !isSelfCheck && !isBot) {
       env.TASHAN_AE.writeDataPoint({
         indexes: ["outbound"],
         blobs: ["outbound", "/api/buy", "", "buy.polar.sh", "buy-" + plan, "",

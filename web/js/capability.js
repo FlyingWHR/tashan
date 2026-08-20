@@ -127,7 +127,7 @@
         // MIRRORS prerender.py::summary. The server render carries this line and this function
         // REPLACES the server render, so a link that exists only in prerender.py is a link no
         // reader with JS ever sees. See [[prerender-and-capability-js-are-one-concept]].
-        '<a class="link" href="/support.html?ref=' + encodeURIComponent(CAP_ID) + '#corrections' +
+        '<a class="link" rel="nofollow" href="/support.html?ref=' + encodeURIComponent(CAP_ID) + '#corrections' +
         '">Something wrong here?</a></div>';
 
     wireTabs();
