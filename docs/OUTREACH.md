@@ -195,39 +195,35 @@ who built a thing — and be there to answer for the first few hours, or do not 
 
 ---
 
-## 0. List tashan in the official MCP registry (do this first — 10 minutes)
+## 0. The official MCP registry — DONE, 7 Aug 2026
 
-*Not outreach exactly, but it is the single highest-intent distribution surface for an MCP tool, and
-we are absent from it while ingesting it as the spine of our own coverage. Measured 6 Aug 2026:*
+*This section used to open "we are absent from it while ingesting it as the spine of our own
+coverage", citing a 6 Aug curl. That stopped being true the next day and the section sat here
+unchanged, which is the exact failure this file warns about in "The facts, and how to re-derive
+them". It was quoted back as an outstanding task twice before anyone re-ran the query.*
 
 ```sh
 curl -s "https://registry.modelcontextprotocol.io/v0/servers?search=tashan"
-# {"servers":[],"metadata":{"count":0}}
 ```
 
-Every MCP client that offers a "browse servers" view reads that registry. `server.json` is written,
-validated against the official schema (`2025-12-11`), and sits at the repo root. Publishing needs a
-human because it needs an identity:
+    sh.tashan/tashan  v0.1.3  published 2026-08-07  status=active
+    sh.tashan/tashan  v0.1.4  published 2026-08-09  status=active  isLatest=true
 
-```sh
-brew install mcp-publisher          # or: go install github.com/modelcontextprotocol/registry/cmd/publisher@latest
-mcp-publisher login dns --domain tashan.sh        # prints a TXT record to add at Cloudflare
-mcp-publisher publish
-```
+Listed under the **DNS-verified `sh.tashan/*` namespace**, which is the namespace worth having for
+a measurement company — it says the domain vouches for the entry. v0.1.4 matches `server.json` at
+the repo root, so the published entry and the package agree today.
 
-`login dns` proves control of `tashan.sh` and is what earns the `sh.tashan/*` namespace — the right
-signal for a measurement company, and worth the extra DNS step. If you would rather not touch DNS,
-`mcp-publisher login github` works immediately but the name has to become
-`io.github.FlyingWHR/tashan`; change `name` in `server.json` to match before publishing, or the
-publish is rejected.
-
-Verify with the same curl above. `tests/test_agent_surface.py` checks the manifest stays in step with
-what the CLI actually publishes, so the entry cannot drift from the package.
+**What is left here is not publishing, it is re-publishing.** `mcp-publisher publish` again whenever
+`server.json`'s version changes, or the registry keeps serving an older description of what the CLI
+does. `tests/test_agent_surface.py` checks the manifest against what the CLI actually publishes, so
+drift inside the repo is caught; drift between the repo and the *registry* is not, and nothing here
+watches for it.
 
 ---
 
 ## Order of operations
 
+0. ~~List in the MCP registry~~ — done 7 Aug, verify with the curl in §0 before repeating the claim.
 1. **Send #1 to three clients.** Not one — three, so a single non-reply isn't a signal.
 2. **Post #4 the same week.** The post and the emails compound: an integrator who has seen the
    thread twice replies at a different rate.
