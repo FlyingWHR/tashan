@@ -16,14 +16,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 69 | 1k ★ | active |
 | 4 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 62 | 238 ★ | active |
 | 5 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 43 | 19 ★ | active |
-| 6 | [Ad Creative](https://tashan.sh/capability/skill-alirezarezvani-ad-creative.html) | 50 | 3 repos | active |
-| 7 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 48 | 2 repos | active |
-| 8 | [Internal Narrative](https://tashan.sh/capability/skill-alirezarezvani-internal-narrative.html) | 47 | 2 repos | active |
-| 9 | [Cold Email](https://tashan.sh/capability/skill-alirezarezvani-cold-email.html) | 47 | 2 repos | active |
-| 10 | [Content Production](https://tashan.sh/capability/skill-alirezarezvani-content-production.html) | 47 | 2 repos | active |
-| 11 | [Copywriting](https://tashan.sh/capability/skill-alirezarezvani-copywriting.html) | 47 | 2 repos | active |
-| 12 | [Email Sequence](https://tashan.sh/capability/skill-alirezarezvani-email-sequence.html) | 47 | 2 repos | active |
-| 13 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 43 | 1 marketplaces | active |
+| 6 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 48 | 2 repos | active |
+| 7 | [Copywriting](https://tashan.sh/capability/skill-alirezarezvani-copywriting.html) | 47 | 2 repos | active |
+| 8 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 43 | 1 marketplaces | active |
+| 9 | [Internal Narrative](https://tashan.sh/capability/skill-alirezarezvani-internal-narrative.html) | not scored | 1 repos | active |
+| 10 | [Ad Creative](https://tashan.sh/capability/skill-alirezarezvani-ad-creative.html) | not scored | 1 repos | active |
+| 11 | [Cold Email](https://tashan.sh/capability/skill-alirezarezvani-cold-email.html) | not scored | 1 repos | active |
+| 12 | [Content Production](https://tashan.sh/capability/skill-alirezarezvani-content-production.html) | not scored | 1 repos | active |
+| 13 | [Email Sequence](https://tashan.sh/capability/skill-alirezarezvani-email-sequence.html) | not scored | 1 repos | active |
 | 14 | [X Twitter Growth](https://tashan.sh/capability/skill-alirezarezvani-x-twitter-growth.html) | not scored | 1 repos | active |
 | 15 | [Video Content Strategist](https://tashan.sh/capability/skill-alirezarezvani-video-content-strategist.html) | not scored | 1 repos | active |
 | 16 | [Team Communications](https://tashan.sh/capability/skill-alirezarezvani-team-communications.html) | not scored | 1 repos | active |

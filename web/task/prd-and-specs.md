@@ -16,7 +16,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 49 | 3 ★ | active |
 | 4 | [Gangsta](https://tashan.sh/capability/plugin-kucherenko-gangsta-gangsta.html) | 61 | 67 ★ | active |
 | 5 | [Draft](https://tashan.sh/capability/plugin-mayurpise-draft-draft.html) | 59 | 39 ★ | active |
-| 6 | [Product Discovery](https://tashan.sh/capability/plugin-lenar-amirov-product-pipeline-public-product-discovery.html) | 55 | 13 ★ | active |
+| 6 | [Product Discovery](https://tashan.sh/capability/plugin-lenar-amirov-product-pipeline-public-product-discovery.html) | 54 | 13 ★ | active |
 | 7 | [Ccf](https://tashan.sh/capability/plugin-naniiluja-ccf-ccf.html) | 54 | 9 ★ | active |
 | 8 | [Groundwork](https://tashan.sh/capability/plugin-etr-groundwork-groundwork.html) | 53 | 41 ★ | active |
 | 9 | [Sdd · applica-software-guru](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 53 | 11 ★ | active |
@@ -32,11 +32,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 19 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 66 | 205 ★ | active |
 | 20 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 61 | 96 ★ | active |
 | 21 | [Memex Checkout](https://tashan.sh/capability/plugin-mindset-ai-memex-ai-memex-checkout.html) | 58 | 29 ★ | active |
-| 22 | [Writing Plans](https://tashan.sh/capability/skill-obra-writing-plans.html) | 57 | 6 repos | active |
-| 23 | [Brainstorming](https://tashan.sh/capability/skill-obra-brainstorming.html) | 55 | 5 repos | active |
-| 24 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 51 | 5 ★ | active |
-| 25 | [Grill Me](https://tashan.sh/capability/skill-alirezarezvani-grill-me.html) | 50 | 3 repos | active |
-| 26 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | 47 | 2 repos | active |
+| 22 | [Writing Plans](https://tashan.sh/capability/skill-obra-writing-plans.html) | 53 | 4 repos | active |
+| 23 | [Grill Me](https://tashan.sh/capability/skill-alirezarezvani-grill-me.html) | 52 | 4 repos | active |
+| 24 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | 52 | 4 repos | active |
+| 25 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 51 | 5 ★ | active |
+| 26 | [Brainstorming](https://tashan.sh/capability/skill-obra-brainstorming.html) | 48 | 2 repos | active |
 | 27 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 47 | 20 ★ | active |
 | 28 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 45 | 5 ★ | active |
 | 29 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 44 | 3 ★ | active |

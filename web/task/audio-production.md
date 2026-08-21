@@ -35,22 +35,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Podcast Guest CRM](https://tashan.sh/capability/pkg-podcast-guest-crm-cli.html) | 64 | 315/wk | active |
 | 23 | [Agentvibes](https://tashan.sh/capability/pkg-agentvibes.html) | 62 | 575/wk | active |
 | 24 | [Audio Studio](https://tashan.sh/capability/pkg-mcp-audio-studio.html) | 59 | 493/wk | active |
-| 25 | [Vibo](https://tashan.sh/capability/pkg-vibo-mcp.html) | 59 | 328/wk | active |
-| 26 | [Ffmpeg Render Pro](https://tashan.sh/capability/pkg-ffmpeg-render-pro.html) | 59 | 247/wk | active |
-| 27 | [Tonyq Mimo](https://tashan.sh/capability/pkg-tonyq-mimo-mcp-server.html) | 58 | 1k/wk | active |
+| 25 | [Ffmpeg Render Pro](https://tashan.sh/capability/pkg-ffmpeg-render-pro.html) | 59 | 247/wk | active |
+| 26 | [Tonyq Mimo](https://tashan.sh/capability/pkg-tonyq-mimo-mcp-server.html) | 58 | 1k/wk | active |
+| 27 | [Vibo](https://tashan.sh/capability/pkg-vibo-mcp.html) | 58 | 328/wk | active |
 | 28 | [Mmxomni](https://tashan.sh/capability/pkg-mmxomni.html) | 57 | 4k/wk | active |
 | 29 | [Atlascloud](https://tashan.sh/capability/pkg-atlascloud-mcp.html) | 57 | 537/wk | active |
 | 30 | [Spoken](https://tashan.sh/capability/pkg-spoken-mcp.html) | 53 | 83/wk | active |
-| 31 | [Twilio](https://tashan.sh/capability/pkg-twilio-mcp-server.html) | 52 | 96/wk | active |
+| 31 | [Twilio](https://tashan.sh/capability/pkg-twilio-mcp-server.html) | 51 | 96/wk | active |
 | 32 | [Cadence Code](https://tashan.sh/capability/plugin-michael-l-i-cadence-code-cadence-code.html) | 43 | 1 ★ | active |
 | 33 | [Pepys](https://tashan.sh/capability/pkg-pepys-mcp.html) | 43 | 50/wk | active |
 | 34 | [Media Context](https://tashan.sh/capability/pkg-media-context-mcp.html) | 43 | 44/wk | active |
-| 35 | [Fal](https://tashan.sh/capability/pkg-noranekob-fal-mcp-server.html) | 43 | 19/wk | active |
-| 36 | [Developers · gaudiolab](https://tashan.sh/capability/pkg-gaudiolab-mcp-developers.html) | 41 | 89/wk | active |
-| 37 | [Claude Code Session Manager](https://tashan.sh/capability/pkg-claude-code-session-manager.html) | 72 | 8k/wk | active |
-| 38 | [Aleph Siliconflow](https://tashan.sh/capability/pkg-aleph-siliconflow-mcp.html) | 58 | 3k/wk | active |
-| 39 | [Spekoai](https://tashan.sh/capability/pkg-spekoai-mcp.html) | 58 | 74/wk | active |
-| 40 | [Lacuna Music](https://tashan.sh/capability/pkg-lacuna-mcp.html) | 54 | 189/wk | active |
+| 35 | [Fal](https://tashan.sh/capability/pkg-noranekob-fal-mcp-server.html) | 42 | 19/wk | active |
+| 36 | [Claude Code Session Manager](https://tashan.sh/capability/pkg-claude-code-session-manager.html) | 72 | 8k/wk | active |
+| 37 | [Aleph Siliconflow](https://tashan.sh/capability/pkg-aleph-siliconflow-mcp.html) | 58 | 3k/wk | active |
+| 38 | [Spekoai](https://tashan.sh/capability/pkg-spekoai-mcp.html) | 57 | 74/wk | active |
+| 39 | [Lacuna Music](https://tashan.sh/capability/pkg-lacuna-mcp.html) | 54 | 189/wk | active |
 
 ## What these numbers are not
 

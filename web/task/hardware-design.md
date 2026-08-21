@@ -16,7 +16,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 49 | 5 ★ | active |
 | 4 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
 | 5 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |
-| 6 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 62 | 466/wk | active |
+| 6 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 61 | 466/wk | active |
 | 7 | [Embedcalc](https://tashan.sh/capability/pkg-embedcalc-mcp.html) | 56 | 208/wk | active |
 | 8 | [Rftools](https://tashan.sh/capability/pkg-rftools-mcp.html) | 50 | 151/wk | active |
 

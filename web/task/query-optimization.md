@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 60 | 523 ★ | active |
+| 1 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 59 | 523 ★ | active |
 | 2 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 52 | 3 ★ | active |
 | 3 | [Whodb](https://tashan.sh/capability/plugin-clidey-whodb-whodb.html) | 75 | 5k ★ | active |
 | 4 | [ClickHouse Best Practices](https://tashan.sh/capability/plugin-clickhouse-agent-skills-clickhouse-best-practices.html) | 73 | 498 ★ | active |
@@ -21,8 +21,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Data Agent Kit Starter Pack](https://tashan.sh/capability/plugin-gemini-cli-extensions-data-agent-kit-starter-pack-data-agent-kit-starter-pack.html) | 69 | 151 ★ | active |
 | 9 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 67 | 81 ★ | active |
 | 10 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 64 | 47 ★ | active |
-| 11 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 61 | 22 ★ | active |
-| 12 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 61 | 41 ★ | active |
+| 11 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 61 | 41 ★ | active |
+| 12 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 60 | 22 ★ | active |
 | 13 | [Cloud SQL MySQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-mysql-cloud-sql-mysql.html) | 56 | 11 ★ | active |
 | 14 | [Cloud SQL Sqlserver](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-sqlserver-cloud-sql-sqlserver.html) | 53 | 7 ★ | active |
 | 15 | [Alloydb Omni](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-omni-alloydb-omni.html) | 51 | 4 ★ | active |

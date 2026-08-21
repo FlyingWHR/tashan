@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 1145,
+  "full": 1144,
   "grade": 3809,
-  "n": 53453,
-  "scan": 7159,
-  "score": 21967,
-  "task": 3503
+  "n": 55986,
+  "scan": 7341,
+  "score": 24524,
+  "task": 3566
  },
  "axes": [
   {
@@ -31,10 +31,10 @@
   }
  ],
  "headline": {
-  "graded_pct": 59,
+  "graded_pct": 52,
   "scanned_pct": 100,
-  "scored_pct": 98,
-  "tasked_pct": 65,
+  "scored_pct": 99,
+  "tasked_pct": 64,
   "tier": "top1000"
  },
  "queue": [
@@ -48,7 +48,7 @@
    "name": "agent-install"
   },
   {
-   "downloads": 783851,
+   "downloads": 653410,
    "id": "pkg:@copilotkit/aimock",
    "kind": "npm",
    "missing": [
@@ -75,6 +75,15 @@
    "name": "mcporter"
   },
   {
+   "downloads": 234041,
+   "id": "pkg:@modelcontextprotocol/server-everything",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "@modelcontextprotocol/server-everything"
+  },
+  {
    "downloads": 133382,
    "id": "pkg:@modelcontextprotocol/server-sequential-thinking",
    "kind": "npm",
@@ -91,26 +100,6 @@
     "grade"
    ],
    "name": "agent-device"
-  },
-  {
-   "downloads": 129586,
-   "id": "pkg:@modelcontextprotocol/server-github",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade"
-   ],
-   "name": "@modelcontextprotocol/server-github"
-  },
-  {
-   "downloads": 120645,
-   "id": "pkg:@modelcontextprotocol/server-postgres",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade"
-   ],
-   "name": "@modelcontextprotocol/server-postgres"
   },
   {
    "downloads": 108517,
@@ -141,7 +130,17 @@
    "name": "agentation-mcp"
   },
   {
-   "downloads": 97826,
+   "downloads": 102778,
+   "id": "pkg:@modelcontextprotocol/server-github",
+   "kind": "npm",
+   "missing": [
+    "score",
+    "grade"
+   ],
+   "name": "@modelcontextprotocol/server-github"
+  },
+  {
+   "downloads": 94168,
    "id": "pkg:@modelcontextprotocol/server-slack",
    "kind": "npm",
    "missing": [
@@ -160,6 +159,16 @@
    "name": "nx-mcp"
   },
   {
+   "downloads": 85507,
+   "id": "pkg:@modelcontextprotocol/server-postgres",
+   "kind": "npm",
+   "missing": [
+    "score",
+    "grade"
+   ],
+   "name": "@modelcontextprotocol/server-postgres"
+  },
+  {
    "downloads": 79483,
    "id": "pkg:agentic-flow",
    "kind": "npm",
@@ -167,15 +176,6 @@
     "grade"
    ],
    "name": "agentic-flow"
-  },
-  {
-   "downloads": 67296,
-   "id": "pkg:@modelcontextprotocol/server-everything",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "@modelcontextprotocol/server-everything"
   },
   {
    "downloads": 65785,
@@ -244,16 +244,6 @@
    "name": "@transcend-io/mcp-server-consent"
   },
   {
-   "downloads": 40223,
-   "id": "pkg:@transcend-io/mcp-server-workflows",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@transcend-io/mcp-server-workflows"
-  },
-  {
    "downloads": 37481,
    "id": "pkg:@gongrzhe/server-gmail-autoauth-mcp",
    "kind": "npm",
@@ -273,6 +263,25 @@
    "name": "@transcend-io/mcp"
   },
   {
+   "downloads": 36387,
+   "id": "pkg:@mcp-use/inspector",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "@mcp-use/inspector"
+  },
+  {
+   "downloads": 32221,
+   "id": "pkg:@currents/mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@currents/mcp"
+  },
+  {
    "downloads": 31988,
    "id": "pkg:@tobilu/qmd",
    "kind": "npm",
@@ -289,16 +298,6 @@
     "grade"
    ],
    "name": "decocms"
-  },
-  {
-   "downloads": 28961,
-   "id": "pkg:@currents/mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@currents/mcp"
   },
   {
    "downloads": 28903,
@@ -320,16 +319,6 @@
    "name": "xmcp"
   },
   {
-   "downloads": 26444,
-   "id": "pkg:@modelcontextprotocol/server-puppeteer",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade"
-   ],
-   "name": "@modelcontextprotocol/server-puppeteer"
-  },
-  {
    "downloads": 25898,
    "id": "pkg:task-master-ai",
    "kind": "npm",
@@ -337,6 +326,16 @@
     "grade"
    ],
    "name": "task-master-ai"
+  },
+  {
+   "downloads": 23274,
+   "id": "pkg:@modelcontextprotocol/server-puppeteer",
+   "kind": "npm",
+   "missing": [
+    "score",
+    "grade"
+   ],
+   "name": "@modelcontextprotocol/server-puppeteer"
   },
   {
    "downloads": 23257,
@@ -376,6 +375,16 @@
    "name": "paqad-ai"
   },
   {
+   "downloads": 19777,
+   "id": "pkg:@eslint/mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@eslint/mcp"
+  },
+  {
    "downloads": 19731,
    "id": "pkg:slack-mcp-server",
    "kind": "npm",
@@ -394,41 +403,32 @@
    "name": "context-mode"
   },
   {
-   "downloads": 17521,
-   "id": "pkg:@the-next-ai/ai-gateway",
+   "downloads": 18229,
+   "id": "pkg:@agentmemory/mcp",
    "kind": "npm",
    "missing": [
     "grade",
     "task"
    ],
-   "name": "@the-next-ai/ai-gateway"
-  },
-  {
-   "downloads": 17356,
-   "id": "pkg:@stripe/mcp",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "@stripe/mcp"
+   "name": "@agentmemory/mcp"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 52,
-   "grade": 59,
+   "full": 49,
+   "grade": 55,
    "n": 100,
    "scan": 100,
    "score": 95,
-   "task": 80
+   "task": 78
   },
   "top1000": {
-   "full": 441,
-   "grade": 589,
+   "full": 408,
+   "grade": 519,
    "n": 1000,
    "scan": 1000,
-   "score": 982,
-   "task": 648
+   "score": 986,
+   "task": 635
   }
  }
 }

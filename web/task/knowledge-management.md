@@ -11,17 +11,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) | 78 | 4k/wk | active |
+| 1 | [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) | 77 | 4k/wk | active |
 | 2 | [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) | 72 | 1k ★ | active |
 | 3 | [Remember](https://tashan.sh/capability/plugin-digital-process-tools-claude-remember-remember.html) | 69 | 143 ★ | active |
 | 4 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 1k/wk | active |
 | 5 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 67 | 895/wk | active |
-| 6 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 65 | 905/wk | active |
-| 7 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 65 | 367/wk | active |
+| 6 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 65 | 367/wk | active |
+| 7 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 64 | 905/wk | active |
 | 8 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 60 | 18 ★ | active |
 | 9 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 60 | 3k ★ | active |
-| 10 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 56 | 6k/wk | active |
-| 11 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 55 | 11 ★ | active |
+| 10 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 55 | 11 ★ | active |
+| 11 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 55 | 6k/wk | active |
 | 12 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 52 | 51 ★ | active |
 | 13 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 52 | 7 ★ | active |
 | 14 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 52 | 24 ★ | active |
@@ -45,14 +45,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Miro](https://tashan.sh/capability/plugin-miroapp-miro-ai-miro.html) | 63 | 142 ★ | active |
 | 33 | [Immich Photo Manager](https://tashan.sh/capability/plugin-drolosoft-immich-photo-manager-immich-photo-manager.html) | 60 | 33 ★ | active |
 | 34 | [LLM Wiki Compiler](https://tashan.sh/capability/plugin-ussumant-llm-wiki-compiler-llm-wiki-compiler.html) | 60 | 303 ★ | active |
-| 35 | [Private Journal](https://tashan.sh/capability/plugin-obra-private-journal-mcp-private-journal-mcp.html) | 58 | 416 ★ | active |
-| 36 | [Mycelium](https://tashan.sh/capability/plugin-arjunrajlaboratory-mycelium-mycelium.html) | 57 | 54 ★ | active |
+| 35 | [Private Journal](https://tashan.sh/capability/plugin-obra-private-journal-mcp-private-journal-mcp.html) | 57 | 416 ★ | active |
+| 36 | [Mycelium](https://tashan.sh/capability/plugin-arjunrajlaboratory-mycelium-mycelium.html) | 56 | 54 ★ | active |
 | 37 | [Origin](https://tashan.sh/capability/plugin-7xuanlu-origin-origin.html) | 55 | 47 ★ | active |
 | 38 | [Box](https://tashan.sh/capability/plugin-box-box-for-ai-box.html) | 53 | 5 ★ | active |
 | 39 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 53 | 10 ★ | active |
 | 40 | [Kagura Memory](https://tashan.sh/capability/plugin-kagura-ai-memory-cloud-kagura-memory.html) | 53 | 8 ★ | active |
 
-Showing the top 40 of 247. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
+Showing the top 40 of 243. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
 
 ## What these numbers are not
 

@@ -12,16 +12,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Safety Net](https://tashan.sh/capability/plugin-kenryu42-claude-code-safety-net-safety-net.html) | 72 | 1k ★ | active |
-| 2 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 66 | 80 ★ | active |
+| 2 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 65 | 80 ★ | active |
 | 3 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 60 | 381 ★ | active |
 | 4 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 56 | 24 ★ | active |
 | 5 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 84 | 75k/wk | active |
 | 6 | [N8n](https://tashan.sh/capability/pkg-n8n-mcp.html) | 78 | 122k/wk | active |
-| 7 | [Nvidia Skills](https://tashan.sh/capability/plugin-nvidia-skills-nvidia-skills.html) | 76 | 3k ★ | active |
+| 7 | [Nvidia Skills](https://tashan.sh/capability/plugin-nvidia-skills-nvidia-skills.html) | 75 | 3k ★ | active |
 | 8 | [Claude Harness](https://tashan.sh/capability/plugin-chachamaru127-claude-code-harness-claude-harness.html) | 74 | 3k ★ | active |
 | 9 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 71 | 426 ★ | active |
 | 10 | [Bunqueue](https://tashan.sh/capability/pkg-bunqueue.html) | 71 | 5k/wk | active |
-| 11 | [Open Computer Use](https://tashan.sh/capability/pkg-open-computer-use.html) | 68 | 1k/wk | active |
+| 11 | [Open Computer Use](https://tashan.sh/capability/pkg-open-computer-use.html) | 67 | 1k/wk | active |
 | 12 | [Open Compute](https://tashan.sh/capability/pkg-open-compute-mcp.html) | 65 | 1k/wk | active |
 | 13 | [Terminal Driver](https://tashan.sh/capability/pkg-terminal-driver-mcp.html) | 65 | 964/wk | active |
 | 14 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 59 | 49 ★ | active |
@@ -37,13 +37,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 24 | [Conversiontools](https://tashan.sh/capability/plugin-conversiontools-agent-skills-conversiontools.html) | 46 | 5 ★ | active |
 | 25 | [Flow Studio Power Automate](https://tashan.sh/capability/plugin-ninihen1-power-automate-mcp-skills-flow-studio-power-automate.html) | 43 | 26 ★ | active |
 | 26 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 69 | 2k/wk | active |
-| 27 | [Imessage · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-imessage-mcp-imessage-mcp.html) | 48 | 2 ★ | active |
-| 28 | [Coo Advisor](https://tashan.sh/capability/skill-alirezarezvani-coo-advisor.html) | 47 | 2 repos | active |
+| 27 | [Resume](https://tashan.sh/capability/skill-alirezarezvani-resume.html) | 47 | 2 repos | active |
+| 28 | [Imessage · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-imessage-mcp-imessage-mcp.html) | 47 | 2 ★ | active |
 | 29 | [Mise](https://tashan.sh/capability/plugin-brentmitchell25-mise-plugin-mise.html) | 47 | 2 ★ | active |
-| 30 | [Shippo](https://tashan.sh/capability/plugin-goshippo-ai-shippo.html) | 46 | 1 ★ | active |
-| 31 | [Slack · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-slack-mcp-slack-mcp.html) | 46 | 1 ★ | active |
-| 32 | [Superglue](https://tashan.sh/capability/plugin-superglue-ai-cli-superglue.html) | 46 | 1 ★ | active |
-| 33 | [Klarity](https://tashan.sh/capability/plugin-klarity-ai-klarity-mcp-klarity.html) | 45 | 1 ★ | active |
+| 30 | [Slack · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-slack-mcp-slack-mcp.html) | 46 | 1 ★ | active |
+| 31 | [Superglue](https://tashan.sh/capability/plugin-superglue-ai-cli-superglue.html) | 46 | 1 ★ | active |
+| 32 | [Klarity](https://tashan.sh/capability/plugin-klarity-ai-klarity-mcp-klarity.html) | 45 | 1 ★ | active |
+| 33 | [Shippo](https://tashan.sh/capability/plugin-goshippo-ai-shippo.html) | 45 | 1 ★ | active |
 | 34 | [Wu Whatsapp](https://tashan.sh/capability/plugin-ibrahimhajjaj-wu-cli-wu-whatsapp.html) | 44 | 14 ★ | active |
 | 35 | [Kognitos](https://tashan.sh/capability/plugin-kognitos-kognitos-plugin-kognitos.html) | 44 | 1 ★ | active |
 | 36 | [Sap Btp Cias](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-cias.html) | 42 | 1 marketplaces | — |

@@ -12,7 +12,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 77 | 54k/wk | active |
-| 2 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 51 | 5 ★ | active |
+| 2 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 50 | 5 ★ | active |
 | 3 | [Touchdesigner](https://tashan.sh/capability/pkg-touchdesigner-mcp-server.html) | 69 | 3k/wk | active |
 | 4 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 66 | 137 ★ | active |
 | 5 | [Inference Sh](https://tashan.sh/capability/plugin-inference-sh-skills-inference-sh.html) | 60 | 660 ★ | active |
@@ -28,9 +28,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [All Images AI Automation](https://tashan.sh/capability/skill-composiohq-all-images-ai-automation.html) | not scored | 1 repos | active |
 | 16 | [Heygen Automation](https://tashan.sh/capability/skill-composiohq-heygen-automation.html) | not scored | 1 repos | active |
 | 17 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | not scored | 1 repos | active |
-| 18 | [Animated Sketch Diagram](https://tashan.sh/capability/plugin-oldyade-animated-sketch-diagram-animated-sketch-diagram.html) | 43 | 11 ★ | active |
-| 19 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 70 | 545/wk | active |
-| 20 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 68 | 700/wk | active |
+| 18 | [Animated Sketch Diagram](https://tashan.sh/capability/plugin-oldyade-animated-sketch-diagram-animated-sketch-diagram.html) | 42 | 11 ★ | active |
+| 19 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 73 | 856/wk | active |
+| 20 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 67 | 700/wk | active |
 | 21 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 61 | 276/wk | active |
 | 22 | [Rive](https://tashan.sh/capability/pkg-rive-mcp-server.html) | 58 | 381/wk | active |
 | 23 | [Aetherwave](https://tashan.sh/capability/pkg-aetherwave-studio-mcp.html) | 45 | 51/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Qwen Image](https://tashan.sh/capability/pkg-runapi-ai-qwen-image-mcp.html) | 52 | 181/wk | active |
 | 40 | [Corent](https://tashan.sh/capability/pkg-corent-mcp.html) | 50 | 57/wk | active |
 
-Showing the top 40 of 61. The full ranked shelf is at https://tashan.sh/task/animation.html.
+Showing the top 40 of 63. The full ranked shelf is at https://tashan.sh/task/animation.html.
 
 ## What these numbers are not
 

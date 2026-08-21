@@ -11,11 +11,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | 47 | 2 repos | active |
-| 2 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | 47 | 2 repos | active |
-| 3 | [Vpe Review](https://tashan.sh/capability/skill-alirezarezvani-vpe-review.html) | not scored | 1 repos | active |
-| 4 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | not scored | 1 repos | active |
-| 5 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 59 | 378/wk | active |
+| 1 | [Vpe Review](https://tashan.sh/capability/skill-alirezarezvani-vpe-review.html) | not scored | 1 repos | active |
+| 2 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | not scored | 1 repos | active |
+| 3 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | not scored | 1 repos | active |
+| 4 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | not scored | 1 repos | active |
+| 5 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 69 | 1k/wk | active |
 | 6 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 45 | 43/wk | active |
 | 7 | [Gtm Hiring Signal Scraper](https://tashan.sh/capability/pkg-mambalabsdev-mcp-gtm-hiring-signal-scraper.html) | 44 | 60/wk | active |
 | 8 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 53 | 153/wk | active |

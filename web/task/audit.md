@@ -28,7 +28,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Ra Qm Skills](https://tashan.sh/capability/skill-alirezarezvani-ra-qm-skills.html) | not scored | 1 repos | active |
 | 16 | [Soc2 Compliance](https://tashan.sh/capability/skill-alirezarezvani-soc2-compliance.html) | not scored | 1 repos | active |
 | 17 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 65 | 572/wk | active |
-| 18 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 60 | 360/wk | active |
+| 18 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 54 | 95/wk | active |
 | 19 | [Bastion](https://tashan.sh/capability/pkg-mcp-bastion.html) | 59 | 328/wk | active |
 | 20 | [Audit](https://tashan.sh/capability/pkg-openaeo-audit.html) | 58 | 414/wk | active |
 | 21 | [Nexus Agents](https://tashan.sh/capability/pkg-nexus-agents.html) | 56 | 194/wk | active |
@@ -39,8 +39,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 69 | 1k/wk | active |
 | 27 | [Npmjs](https://tashan.sh/capability/pkg-yawlabs-npmjs-mcp.html) | 67 | 784/wk | active |
 | 28 | [Crosscheck](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 65 | 568/wk | active |
-| 29 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 62 | 897/wk | active |
-| 30 | [Uxlint](https://tashan.sh/capability/pkg-uxlint-net-uxlint.html) | 62 | 512/wk | active |
+| 29 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 61 | 897/wk | active |
+| 30 | [Uxlint](https://tashan.sh/capability/pkg-uxlint-net-uxlint.html) | 61 | 512/wk | active |
 | 31 | [Smartflow Verify](https://tashan.sh/capability/pkg-smartflow-verify-mcp.html) | 55 | 210/wk | active |
 | 32 | [Positif](https://tashan.sh/capability/pkg-positif-ai.html) | 54 | 191/wk | active |
 | 33 | [Fullstackgtm](https://tashan.sh/capability/pkg-fullstackgtm.html) | 53 | 99/wk | active |

@@ -19,7 +19,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 77 | 54k/wk | active |
 | 2 | [Claude Video Vision](https://tashan.sh/capability/plugin-jordanrendric-claude-video-vision-claude-video-vision.html) | 69 | 1k ★ | active |
 | 3 | [Watch](https://tashan.sh/capability/plugin-bradautomates-claude-video-watch.html) | 65 | 11k ★ | active |
-| 4 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 51 | 5 ★ | active |
+| 4 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 50 | 5 ★ | active |
 | 5 | [Phantom](https://tashan.sh/capability/plugin-fadelabs-phantom-phantom.html) | 50 | 21 ★ | active |
 | 6 | [Touchdesigner](https://tashan.sh/capability/pkg-touchdesigner-mcp-server.html) | 69 | 3k/wk | active |
 | 7 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 66 | 137 ★ | active |
@@ -43,10 +43,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | not scored | 1 repos | active |
 | 26 | [ElevenLabs Automation](https://tashan.sh/capability/skill-composiohq-elevenlabs-automation.html) | not scored | 1 repos | active |
 | 27 | [Demo Video](https://tashan.sh/capability/skill-alirezarezvani-demo-video.html) | not scored | 1 repos | active |
-| 28 | [Animated Sketch Diagram](https://tashan.sh/capability/plugin-oldyade-animated-sketch-diagram-animated-sketch-diagram.html) | 43 | 11 ★ | active |
-| 29 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 70 | 545/wk | active |
-| 30 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 68 | 700/wk | active |
-| 31 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 68 | 2k/wk | active |
+| 28 | [Animated Sketch Diagram](https://tashan.sh/capability/plugin-oldyade-animated-sketch-diagram-animated-sketch-diagram.html) | 42 | 11 ★ | active |
+| 29 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 73 | 856/wk | active |
+| 30 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 68 | 2k/wk | active |
+| 31 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 67 | 700/wk | active |
 | 32 | [Livepilot](https://tashan.sh/capability/pkg-livepilot.html) | 64 | 579/wk | active |
 | 33 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 61 | 276/wk | active |
 | 34 | [Rive](https://tashan.sh/capability/pkg-rive-mcp-server.html) | 58 | 381/wk | active |
