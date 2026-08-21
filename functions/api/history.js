@@ -11,6 +11,7 @@
 // unlike watch/alerts, which are still unbuilt and therefore still unsold.
 
 import { keyFrom, validate, activationFrom, deny } from "./_license.js";
+import { headOf } from "./_head.js";
 import { paymentRequired } from "./_x402.js";
 import { demand } from "./_demand.js";
 
@@ -67,3 +68,6 @@ export async function onRequestGet({ request, env }) {
     headers: { "content-type": "application/json", "cache-control": "private, max-age=60" },
   });
 }
+
+// A probe that cannot HEAD this endpoint reports us down. See _head.js.
+export const onRequestHead = headOf(onRequestGet);

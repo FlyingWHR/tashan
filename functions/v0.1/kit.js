@@ -25,6 +25,7 @@
 // block, the direction of travel behind each pick, and the reason each one beat the others.
 
 import { validate, keyFrom, activationFrom, OFFER } from "../api/_license.js";
+import { headOf } from "../api/_head.js";
 import { PRICED, configured, paymentRequired, requiredHeader, paymentFrom, charge, responseHeader }
   from "../api/_x402.js";
 import { demand } from "../api/_demand.js";
@@ -365,3 +366,6 @@ export async function onRequestPost({ request, env }) {
     docs: "https://tashan.sh/pricing",
   }, 402, { ...requiredHeader(pr), link: '<https://tashan.sh/pricing>; rel="payment"' });
 }
+
+// A probe that cannot HEAD this endpoint reports us down. See _head.js.
+export const onRequestHead = headOf(onRequestGet);

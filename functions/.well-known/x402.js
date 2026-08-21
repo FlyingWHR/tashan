@@ -9,6 +9,7 @@
 // forget: the price would drift, or a new endpoint would ship undiscoverable. Adding a priced
 // resource in _x402.js now publishes it here on the same deploy.
 import { PRICED } from "../api/_x402.js";
+import { headOf } from "../api/_head.js";
 
 export const onRequestGet = ({ request }) => {
   const origin = new URL(request.url).origin;
@@ -24,3 +25,6 @@ export const onRequestGet = ({ request }) => {
     },
   });
 };
+
+// A probe that cannot HEAD this endpoint reports us down. See _head.js.
+export const onRequestHead = headOf(onRequestGet);

@@ -28,6 +28,7 @@
 // nothing, until a wallet exists.
 
 import { validate, keyFrom, activationFrom, OFFER } from "../api/_license.js";
+import { headOf } from "../api/_head.js";
 import { bucketOf } from "../api/history.js";
 import { PRICED, configured, paymentRequired, requiredHeader, paymentFrom, charge, responseHeader }
   from "../api/_x402.js";
@@ -331,3 +332,6 @@ export async function onRequestPost({ request, env, next }) {
     docs: "https://tashan.sh/pricing",
   }, 402, { ...requiredHeader(pr), link: '<https://tashan.sh/pricing>; rel="payment"' });
 }
+
+// A probe that cannot HEAD this endpoint reports us down. See _head.js.
+export const onRequestHead = headOf(onRequestGet);

@@ -184,6 +184,7 @@ node functions/api/_x402.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/api
 node functions/api/_cdp.test.mjs 2>/dev/null || { node functions/api/_cdp.test.mjs; fail=1; }
 node functions/api/_demand.test.mjs 2>/dev/null || { node functions/api/_demand.test.mjs; fail=1; }
 node functions/.well-known/x402.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/.well-known/x402.test.mjs FAILED — rerunning to show why:"; node functions/.well-known/x402.test.mjs; fail=1; }
+node functions/api/_head.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/api/_head.test.mjs FAILED — rerunning to show why:"; node functions/api/_head.test.mjs; fail=1; }
 node functions/v0.1/audit.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/v0.1/audit.test.mjs FAILED — rerunning to show why:"; node functions/v0.1/audit.test.mjs; fail=1; }
 node functions/v0.1/kit.test.mjs >/dev/null 2>&1 || { echo "  ↳ functions/v0.1/kit.test.mjs FAILED — rerunning to show why:"; node functions/v0.1/kit.test.mjs; fail=1; }
 
