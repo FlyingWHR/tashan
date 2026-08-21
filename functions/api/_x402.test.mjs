@@ -115,7 +115,7 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
   let ran = 0;
   const out = await withFetch(
     (u) => res(String(u).endsWith("/verify") ? { isValid: false, invalidReason: "insufficient_funds" }
-                                             : { success: true }),
+                                             : { success: true, transaction: "0xdead" }),
     () => charge(LIVE, PR, {}, async () => { ran++; return "PAID DATA"; }));
   ok("an INVALID payment never runs the work", !out.ok && ran === 0, JSON.stringify(out));
   ok("...and reports the facilitator's reason", out.reason === "insufficient_funds");
@@ -134,14 +134,14 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
   ]) {
     let ran = 0;
     const out = await withFetch(
-      (u) => res(String(u).endsWith("/verify") ? reply : { success: true }),
+      (u) => res(String(u).endsWith("/verify") ? reply : { success: true, transaction: "0xdead" }),
       () => charge(LIVE, PR, {}, async () => { ran++; return "PAID DATA"; }));
     ok(`${label} is a refusal, never a pass`, !out.ok && ran === 0, JSON.stringify(out));
   }
   // …and the positive case still works, so this is a tightening and not a wall.
   let ran = 0;
   const yes = await withFetch(
-    (u) => res(String(u).endsWith("/verify") ? { valid: true } : { success: true }),
+    (u) => res(String(u).endsWith("/verify") ? { valid: true } : { success: true, transaction: "0xdead" }),
     () => charge(LIVE, PR, {}, async () => { ran++; return "PAID DATA"; }));
   ok("an explicit `valid: true` still passes", yes.ok && ran === 1, JSON.stringify(yes));
 }
@@ -155,7 +155,7 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
     (u) => res(String(u).endsWith("/verify")
       ? { isValid: false, invalidReason: "address_not_registered",
           invalidMessage: "Address 0x813e… is not registered. Register at https://openx402.ai/register" }
-      : { success: true }),
+      : { success: true, transaction: "0xdead" }),
     () => charge(LIVE, PR, {}, async () => { ran++; return "PAID DATA"; }));
   ok("a seller-side refusal never runs the work", !out.ok && ran === 0);
   ok("...and names the reason", out.reason === "address_not_registered");
@@ -186,7 +186,7 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
 }
 {
   const out = await withFetch(
-    (u) => String(u).endsWith("/verify") ? res({}, false) : res({ success: true }),
+    (u) => String(u).endsWith("/verify") ? res({}, false) : res({ success: true, transaction: "0xdead" }),
     () => charge(LIVE, PR, {}, async () => "PAID DATA"));
   // res({}, false) is a 500 here, so the reason now carries the status rather than a catch-all.
   ok("a non-200 from the facilitator denies",
@@ -321,12 +321,53 @@ const PR = paymentRequired(LIVE, "capability-history", "https://tashan.sh/api/hi
   const seen = [];
   await withFetch(
     (u, init) => { seen.push({ u: String(u), body: JSON.parse(init.body) });
-                   return res(String(u).endsWith("/verify") ? { isValid: true } : { success: true }); },
+                   return res(String(u).endsWith("/verify") ? { isValid: true } : { success: true, transaction: "0xdead" }); },
     () => charge(LIVE, PR, { x402Version: 2, resource: { url: "https://client.example/r" } },
                  async () => "PAID"));
   const settle = seen.find((c) => c.u.endsWith("/settle"));
   ok("a resource the client supplied is not overwritten",
      settle.body.paymentPayload.resource.url === "https://client.example/r");
+}
+
+// ---- a settlement must be ON-CHAIN, or it is not a settlement -----------------------------------
+// The verify path was hardened to require an explicit `isValid: true`; the settle path was left
+// checking only `success === false`, so `{}` passed. That is the more expensive half of the same
+// bug: a false pass there hands over the content AND records money that never moved, which
+// corrupts the one number this whole effort is being steered by.
+{
+  const REQS = { scheme: "exact", network: "eip155:8453", amount: "10000",
+                 asset: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913", payTo: "0xPAY",
+                 maxTimeoutSeconds: 60 };
+  const pr = { accepts: [REQS], resource: { url: "https://tashan.sh/v0.1/audit" } };
+  const settleWith = async (settleBody) => {
+    const saved = globalThis.fetch;
+    globalThis.fetch = async (u) => ({
+      ok: true, status: 200,
+      json: async () => (String(u).endsWith("/verify") ? { isValid: true } : settleBody),
+      text: async () => JSON.stringify(settleBody),
+    });
+    try { return await charge(LIVE, pr, { x402Version: 2 }, async () => "CONTENT"); }
+    finally { globalThis.fetch = saved; }
+  };
+
+  ok("an empty settle response is NOT a settlement",
+     (await settleWith({})).ok === false);
+  ok("...nor is an unrecognised shape",
+     (await settleWith({ status: "pending" })).ok === false);
+  // ISOLATES THE EXPLICIT-YES CHECK. A body carrying a transaction but no `success` passes the
+  // old `!(success === false)` test and has a hash, so the tx requirement cannot catch it either.
+  // Without this case both guards could be reverted one at a time and the suite would stay green.
+  ok("a transaction without an explicit success is NOT a settlement",
+     (await settleWith({ transaction: "0xabc123" })).ok === false);
+  ok("success:true with no transaction is refused",
+     (await settleWith({ success: true })).reason === "settlement_without_transaction");
+  const good = await settleWith({ success: true, transaction: "0xabc123", network: "eip155:8453" });
+  ok("success:true WITH a transaction settles", good.ok === true && good.result === "CONTENT");
+  // FAIL CLOSED: none of the refusals may leak the paid content.
+  for (const body of [{}, { status: "pending" }, { success: true }]) {
+    const r = await settleWith(body);
+    ok("a refused settlement never returns the content", r.result === undefined);
+  }
 }
 
 console.log(`\nx402: ${n}/${n} passed · all green`);

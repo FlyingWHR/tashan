@@ -221,6 +221,12 @@ jobs:
         continue-on-error: true
         run: python3 pipeline/indexnow.py
 
+      - name: What actually arrived on-chain
+        # The only settlement number we do not have to trust ourselves for. Never fatal: a report
+        # about money must not be able to fail the run that measures everything else.
+        continue-on-error: true
+        run: python3 pipeline/onchain.py | tee -a "$GITHUB_STEP_SUMMARY"
+
       - name: Surface a failed cache store
         if: always() && steps.dbpush.outcome != 'success'
         run: |

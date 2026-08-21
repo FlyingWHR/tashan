@@ -312,11 +312,31 @@ export async function charge(env, pr, payload, work, request = null) {
     demand(env, request, "failed", "settle_unavailable");
     return { ok: false, reason: "settlement_unavailable", detail: String(e) };
   }
-  if (!s || s.success === false) {
+  // AN EXPLICIT YES AT SETTLE TOO, AND A TRANSACTION TO PROVE IT.
+  //
+  // This used to deny only on `success === false`, so `{}` — or any shape we did not recognise —
+  // passed as a completed settlement. The verify path above was hardened against exactly this and
+  // the settle path was left as it was, which is the more expensive half: a false pass there means
+  // we hand over the content AND record money that never moved. Every number downstream, including
+  // the one this work is being steered by, would have been counting settlements that did not
+  // happen.
+  //
+  // The x402 SettleResponse carries `transaction` — the on-chain hash. Requiring it is what makes
+  // "settled" mean *on-chain*, and it is checkable against Base by anyone, including us.
+  const settled = s && s.success === true;
+  const tx = s && (s.transaction || s.txHash || s.transactionHash);
+  if (!settled) {
     demand(env, request, "failed", "settle:" + ((s && s.errorReason) || "settlement_failed"));
     return { ok: false, reason: (s && s.errorReason) || "settlement_failed" };
   }
-  demand(env, request, "settled", res);
+  if (!tx) {
+    // A yes with no transaction is not a payment. Fail closed rather than invent one — a settle we
+    // cannot point at a block for is indistinguishable from a facilitator bug.
+    demand(env, request, "failed", "settle:no_transaction");
+    return { ok: false, reason: "settlement_without_transaction" };
+  }
+  // The hash rides in the event so the metric can be audited against the chain rather than trusted.
+  demand(env, request, "settled", res, String(tx).slice(0, 80));
   return { ok: true, result, settlement: s };
 }
 

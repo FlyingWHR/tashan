@@ -20,6 +20,9 @@ python3 tests/test_site.py --url http://127.0.0.1:4173 || fail=1
 echo; echo "── capability render (headless) ───────────────"
 node tests/test_render.mjs || fail=1
 
+echo; echo "── on-chain truth ─────────────────────────────"
+python3 pipeline/onchain.py --selftest || fail=1
+
 echo; echo "── /audit (config parse + privacy) ────────────"
 node tests/test_audit_parity.mjs >/dev/null 2>&1 || { echo "  ↳ tests/test_audit_parity.mjs FAILED — rerunning to show why:"; node tests/test_audit_parity.mjs; fail=1; }
 
