@@ -167,8 +167,17 @@ print("# one price ladder, and the docs must not invent a second")
 # deep-grading is not a product. A strategy doc describing a shipped feature that does not exist is
 # how a second, unreconciled ladder came to be invented beside it.
 _x402src = open(os.path.join(ROOT, "functions", "api", "_x402.js"), encoding="utf-8").read()
-_priced = dict((m.group(1), m.group(2)) for m in
-               re.finditer(r'"([a-z-]+)":\s*\{\s*\n\s*usd:\s*([0-9.]+)', _x402src))
+# FIELD ORDER IS NOT PART OF THE CONTRACT. This used to require `usd:` on the line immediately
+# after the opening brace, so adding `path:` above it — a one-line change in _x402.js — zeroed the
+# whole dict and turned every price check below into a comparison against nothing. The "still
+# parses" guard caught it, which is the only reason that guard is there. Now the key is found
+# first and `usd` is looked for anywhere inside its block.
+_priced = {}
+for _m in re.finditer(r'"([a-z-]+)":\s*\{', _x402src):
+    _blk = _x402src[_m.end():_x402src.find("\n  },", _m.end())]
+    _u = re.search(r"\busd:\s*([0-9.]+)", _blk)
+    if _u:
+        _priced[_m.group(1)] = _u.group(1)
 # A COUNT IS THE WRONG ASSERTION. This was `>= 4`, which made removing a product a test failure —
 # and one had to be removed: `security-detail` sold advisory detail that redact_paid() already
 # publishes free, so the ladder is deliberately shorter than it was. What must hold is that the
@@ -227,12 +236,12 @@ for _route in sorted(set(re.findall(r"/v0\.1/([a-z]+)", _hosts))):
     ok(f"for-hosts.html documents /v0.1/{_route}, and it is served",
        os.path.exists(_f) or os.path.exists(_catchall))
 # The price on the page must be the price the code quotes — same rule as the pricing page.
-_x402 = open(os.path.join(ROOT, "functions", "api", "_x402.js"), encoding="utf-8").read()
+# REUSES `_priced` from above rather than re-parsing. This block carried its own copy of the same
+# brittle regex, so adding one field to a PRICED entry broke the price check in two places at once.
 for _key, _label in (("capability-kit", "kit"), ("config-audit", "audit")):
-    _m = re.search(r'"' + _key + r'":\s*\{\s*\n\s*usd:\s*([0-9.]+)', _x402)
+    _v = _priced.get(_key)
     ok(f"the {_label} price on for-hosts.html matches PRICED['{_key}']",
-       bool(_m) and ("$" + _m.group(1)) in _hosts,
-       f"code says ${_m.group(1) if _m else '?'}")
+       bool(_v) and ("$" + _v) in _hosts, f"code says ${_v or '?'}")
 
 print()
 print("# do not sell a command the published CLI does not have")

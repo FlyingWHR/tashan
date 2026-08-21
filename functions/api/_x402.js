@@ -56,6 +56,9 @@ import { demand } from "./_demand.js";
 // job. Re-measure before assuming any of this still holds: pipeline/bazaar.py prints it.
 export const PRICED = {
   "capability-history": {
+    // The route this resource lives at. /.well-known/x402 enumerates PRICED rather than
+    // keeping its own list, so a new priced endpoint is discoverable the day it ships.
+    path: "/api/history",
     usd: 0.01,
     atomic: "10000",
     description: "The full score history for one capability, every point we have recorded.",
@@ -82,6 +85,9 @@ export const PRICED = {
   // of them sells the current state of anything, because the current state is the free tier and the
   // free tier is the distribution.
   "capability-kit": {
+    // The route this resource lives at. /.well-known/x402 enumerates PRICED rather than
+    // keeping its own list, so a new priced endpoint is discoverable the day it ships.
+    path: "/v0.1/kit",
     usd: 0.05,
     atomic: "50000",
     bazaar: {
@@ -104,6 +110,9 @@ export const PRICED = {
                + "version the advisory scan actually cleared, with a config for your host.",
   },
   "config-audit": {
+    // The route this resource lives at. /.well-known/x402 enumerates PRICED rather than
+    // keeping its own list, so a new priced endpoint is discoverable the day it ships.
+    path: "/v0.1/audit",
     usd: 0.01,
     atomic: "10000",
     bazaar: {
