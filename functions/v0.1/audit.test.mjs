@@ -213,8 +213,12 @@ const X = {
 {
   const { status, body } = await read(await post({ servers: [] }));
   ok("an empty list is a 400 with usage", status === 400 && /servers/.test(body.error));
-  const g = await read(await onRequestGet());
-  ok("GET explains how to POST rather than 404ing", g.status === 400 && g.body.usage.method === "POST");
+  const g = await read(await onRequestGet({ request: new Request("https://tashan.sh/x"), env: {} }));
+  // A NAKED GET IS A DISCOVERY PROBE. It used to answer 400 with no payment terms, so every x402
+  // crawler that probes a URL concluded this was not a paid endpoint — two of our three priced
+  // resources were invisible to the layer the wallets are on. It still explains how to POST.
+  ok("GET still explains how to POST", g.body.usage && g.body.usage.method === "POST");
+  ok("...but answers 402 so discovery can see the price", g.status === 402);
 
   const many = Array.from({ length: 250 }, (_, i) => "good-mcp");
   const { body: b2 } = await read(await post({ servers: many }));

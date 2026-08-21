@@ -231,8 +231,11 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
      status === 404 && /tags.json/.test(body.tasks));
   const { status: s2 } = await read(await post({}));
   ok("a missing task is a 400", s2 === 400);
-  const g = await read(await onRequestGet());
-  ok("GET documents the endpoint instead of 404ing", g.status === 400 && g.body.usage.method === "POST");
+  const g = await read(await onRequestGet({ request: new Request("https://tashan.sh/x"), env: {} }));
+  // A NAKED GET IS A DISCOVERY PROBE — it answered 400 with no payment terms, so x402 crawlers
+  // read this as "not a paid endpoint". It still explains how to POST.
+  ok("GET still explains how to POST", g.body.usage && g.body.usage.method === "POST");
+  ok("...but answers 402 so discovery can see the price", g.status === 402);
   ok("...and says plainly what we do not sell", /do not sell/i.test(g.body.usage.not_sold));
 }
 

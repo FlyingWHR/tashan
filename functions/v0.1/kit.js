@@ -50,7 +50,22 @@ export const onRequestOptions = () =>
     "access-control-allow-headers": "content-type, authorization, payment-signature, x-tashan-activation",
   } });
 
-export const onRequestGet = () => json({
+// A NAKED GET IS HOW DISCOVERY FINDS US, and it used to answer 400 with no payment terms at
+// all — so every x402 crawler and directory that probes a URL concluded this was not a paid
+// endpoint. Two of our three priced resources were invisible to the entire discovery layer,
+// which is the layer the wallets are on.
+//
+// It answers 402 with spec-shaped `accepts` now, carrying the same usage block it always did.
+// That is not a claim that everything here costs money — the body says which half is free, in
+// the same breath — it is the correct status for a resource that HAS a price, and the one
+// machines look for.
+export const onRequestGet = ({ request, env } = {}) => {
+  // Defaults because a handler that throws when called bare is a footgun: the Pages
+  // runtime always passes context, tests and probes do not always bother.
+  const origin = request ? new URL(request.url).origin : "https://tashan.sh";
+  const pr = paymentRequired(env, PRICE_KEY, origin + "/v0.1/kit");
+  demand(env, request, "quoted", PRICE_KEY, "get-probe");
+  return json({ ...pr,
   error: "POST a JSON body to this endpoint",
   usage: {
     method: "POST",
@@ -64,7 +79,8 @@ export const onRequestGet = () => json({
     not_sold: "We do not sell skill or server content. Each pick links to its own source and "
             + "licence — fetch it from the author.",
   },
-}, 400);
+}, 402, { ...requiredHeader(pr), link: '<https://tashan.sh/pricing>; rel="payment"' });
+};
 
 // Hosts differ in where the file lives, but the stanza shape is the same everywhere that matters.
 const CLIENTS = {
