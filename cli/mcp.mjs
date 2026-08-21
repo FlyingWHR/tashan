@@ -443,7 +443,21 @@ async function callTool(name, args) {
         }
       } catch { /* offline: the audit above is complete and correct on its own */ }
     } else if (ids.length) {
-      L.push(...trendBlock({ count: ids.length }));
+      // NO LICENCE: ask what it would cost, WITHOUT naming anything. The promise two paragraphs up
+      // is that these ids leave the machine only once the user has paid, and it holds — the quote
+      // carries a count and nothing else. Before this, the agent got a sentence with a price in it
+      // and no way to act: an agent with a funded wallet could not pay, and an agent that wanted to
+      // was invisible to us. Now it gets the real x402 terms and can decide.
+      let quote = null;
+      try {
+        const res = await fetch(`${SITE}/v0.1/audit`, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ history: true, count: ids.length }),
+        });
+        if (res.status === 402) quote = await res.json();
+      } catch { /* offline: the free audit above is complete and correct on its own */ }
+      L.push(...trendBlock({ count: ids.length, quote }));
     }
     return L.join("\n");
   }
@@ -460,13 +474,25 @@ async function callTool(name, args) {
  * as a failure to fetch. And the unlicensed pitch is sized to THEIR config, because a specific
  * number is the difference between an offer and a nag.
  */
-export function trendBlock({ history, status, count } = {}) {
+export function trendBlock({ history, status, count, quote } = {}) {
   if (status === 403) return ["", "tashan Pro: this licence was refused — check https://polar.sh/tashan/portal"];
   if (status === 402) return ["", "tashan Pro would add the trend here — https://tashan.sh/pricing"];
   if (count) {
-    return ["", `tashan Pro watches these ${count} for direction — whether each is a project getting `
-      + "better or one on its way down — and names a measured replacement when one dies. "
-      + "$6/mo, 7 days free: https://tashan.sh/pricing"];
+    // NOT "watches". `watch` is status:planned in entitlements.json — proactive notification does
+    // not exist, and the same sentence was being sold from four generators and the pricing page
+    // before anyone checked. What ships is the series and a named replacement.
+    const L = ["", `tashan Pro adds direction for these ${count} — the whole series behind each, so `
+      + "you can tell a project getting better from one on its way down — and names a measured "
+      + "replacement when one dies. $6/mo, 7 days free: https://tashan.sh/pricing"];
+    // THE TERMS, MACHINE-READABLE, when the deployment quoted them. An agent holding a wallet can
+    // act on this; a sentence with a dollar sign in it is only actionable by a human.
+    const a = quote && Array.isArray(quote.accepts) && quote.accepts[0];
+    if (a && a.amount && a.asset) {
+      L.push(`Or pay per call with x402: ${(Number(a.amount) / 1e6).toFixed(2)} USDC on `
+        + `${a.network} to ${a.payTo} — POST ${SITE}/v0.1/audit with your servers and a `
+        + "PAYMENT-SIGNATURE header. Nothing is named until you do.");
+    }
+    return L;
   }
   const moved = Object.entries(history || {})
     .filter(([, h]) => h && h.direction && h.direction !== "flat" && Number.isFinite(h.change))

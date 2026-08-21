@@ -223,4 +223,29 @@ const X = {
      JSON.stringify(b2.capped));
 }
 
+// ---- a quote that names nothing -----------------------------------------------------------------
+// cli/mcp.mjs promises that a config's ids leave the machine only once the user has paid. Honouring
+// that meant an agent holding a real config could never be told the price: the audience most likely
+// to pay could not reach a quote, could not use a funded wallet, and registered as no demand at all.
+// `{history: true, count: N}` asks what direction for N servers costs, and names nothing.
+{
+  const r = await post({ history: true, count: 7 }, { env: X });
+  const { status, body } = await read(r);
+  ok("{history, count} quotes without naming anything", status === 402 && body.quoted_for === 7);
+  ok("...with real x402 terms", Array.isArray(body.accepts) && Boolean(body.accepts[0].amount));
+  ok("...and the spec header", Boolean(r.headers.get("payment-required")));
+  // A QUOTE IS A PRICE, NOT A FREE ANSWER. If it ever carried content it would become the way to
+  // get the paid half without paying, which is the opposite of what it is for.
+  ok("a quote carries no audited content", !body.audited && !body.history);
+}
+{
+  const { status } = await read(await post({ count: 5 }, { env: X }));
+  ok("count without history is still a bad request", status === 400);
+}
+{
+  // Naming servers means you want the audit. A quote must never shadow a real request.
+  const { status } = await read(await post({ servers: ["good-mcp"], count: 9 }, { env: X }));
+  ok("servers win over count", status === 200);
+}
+
 console.log(`\nv0.1 audit: ${n}/${n} passed · all green`);

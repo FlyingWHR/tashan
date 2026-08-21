@@ -388,4 +388,30 @@ console.log("ok — confirmed malware leads with the verdict, and the download c
     params: { name: "audit_config", arguments: {} } });
   assert.ok(!okCall.result.isError, "a tool with no required arguments still runs");
 }
+// ---- the agent is quoted, and nothing is named --------------------------------------------------
+// The unlicensed path used to end in a sentence with a price in it. An agent holding a funded wallet
+// could not act on that, and an agent that wanted to pay was invisible to us — zero quotes from the
+// audience most likely to buy, because we never actually asked for a price on their behalf.
+{
+  const q = { accepts: [{ amount: "10000", asset: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+                          network: "eip155:8453", payTo: "0xPAYTO" }] };
+  const lines = trendBlock({ count: 4, quote: q }).join("\n");
+  assert.ok(lines.includes("0.01 USDC") && lines.includes("eip155:8453") && lines.includes("0xPAYTO"),
+            "the quote's real terms must reach the agent: " + lines);
+  assert.ok(/nothing is named until/i.test(lines),
+            "the privacy promise must travel with the offer");
+  // `watch` is status:planned. It was being sold here, and from four generators, and from the
+  // pricing page, before anyone checked what had actually shipped.
+  assert.ok(!/watches|tells you the day|notif/i.test(lines),
+            "must not sell proactive notification: " + lines);
+  assert.ok(/series/.test(lines) && /replacement/.test(lines), "must sell what ships");
+
+  // Offline, or a deployment with no wallet: still honest, and inventing no terms.
+  const bare = trendBlock({ count: 4 }).join("\n");
+  assert.ok(bare.includes("$6/mo"), "the subscription price still stands on its own");
+  assert.ok(!/USDC|PAYMENT-SIGNATURE/.test(bare), "no x402 terms may be invented without a quote");
+}
+console.log("ok — an unlicensed agent is quoted in terms it can act on, naming nothing");
+
+
 console.log("ok — a malformed tool call is reported as a caller error, never as 'nothing found'");

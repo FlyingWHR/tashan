@@ -65,6 +65,8 @@ export const onRequestGet = () => json({
         + "repos, single-maintainer, registry removal. No credential, no payment.",
     paid: "`history: true` adds the score series and the trend behind each row. Pay with a licence "
         + "(Authorization: Bearer <key>) or per call with x402.",
+    quote: "POST {\"history\": true, \"count\": N} for the price of N servers' history — a 402 with "
+         + "x402 terms and nothing named. For agents that must not upload a config to ask a price.",
     limit: MAX_SERVERS,
   },
 }, 400);
@@ -175,9 +177,44 @@ export async function onRequestPost({ request, env, next }) {
   } catch {
     return json({ error: "body must be JSON: {\"servers\": [...]}" }, 400);
   }
+  // A QUOTE THAT NAMES NOTHING. `{"history": true, "count": N}` asks what direction for N servers
+  // would cost, and answers with the same 402 and the same x402 terms as a real request — without
+  // the caller sending a single package name.
+  //
+  // This exists because of a promise made in cli/mcp.mjs: a config's ids leave the machine only
+  // once the user has paid. Honouring it meant an agent holding a real config could never be told
+  // the price, so the highest-intent audience we have — agents that already installed us — could
+  // not reach a quote, could not pay by x402 even with a funded wallet, and showed up as no demand
+  // at all. Asking "what would this cost" is not the same as handing over what you have.
+  //
+  // It is a QUOTE ONLY: it can never return content, because there is nothing to return about
+  // servers nobody named. That is what keeps it from becoming a way to get the paid answer free.
+  const quoteOnly = body && body.history === true && !body.servers
+                    && Number.isInteger(body.count) && body.count > 0;
+  if (quoteOnly) {
+    const origin0 = new URL(request.url).origin;
+    const v0 = await validate(env, keyFrom(request), activationFrom(request));
+    if (v0.ok) {
+      // A licence holder asking this wanted the audit, not the price. Say so rather than 402ing
+      // someone who has already paid.
+      return json({ quote: null, note: "Your licence is active — send {\"servers\": [...]} for the "
+                                       + "audit itself.", count: body.count }, 200);
+    }
+    const pr0 = paymentRequired(env, PRICE_KEY, origin0 + "/v0.1/audit",
+                                { servers: ["<your servers>"], history: true });
+    demand(env, request, "quoted", "config-audit", "quote-only");
+    return json({ ...pr0,
+      error: "payment required for the history half of an audit",
+      quoted_for: body.count,
+      note: "This is a price for " + body.count + " server(s). Nothing was named and nothing was "
+          + "audited. Re-send with {\"servers\": [...]} plus a licence or a PAYMENT-SIGNATURE.",
+    }, 402, { ...requiredHeader(pr0), link: '<https://tashan.sh/pricing>; rel="payment"' });
+  }
+
   const names = Array.isArray(body && body.servers) ? body.servers : null;
   if (!names || !names.length) {
-    return json({ error: "pass {\"servers\": [\"<name or id>\", …]}" }, 400);
+    return json({ error: "pass {\"servers\": [\"<name or id>\", …]}, or "
+                       + "{\"history\": true, \"count\": N} for a price with nothing named" }, 400);
   }
   const capped = names.length > MAX_SERVERS;
   const list = names.slice(0, MAX_SERVERS);
@@ -230,6 +267,10 @@ export async function onRequestPost({ request, env, next }) {
       pay: ["Authorization: Bearer <licence key> — " + OFFER.plans.map(p => `$${p.amount}/${p.period}`).join(" or "),
             "or per call with x402: " + (configured(env) ? "$" + PRICED[PRICE_KEY].usd + " per audit"
                                                          : "not yet enabled on this deployment")],
+      // A PRICE YOU CAN ASK FOR WITHOUT HANDING ANYTHING OVER. An agent under instructions not to
+      // upload a config still needs to know what the paid half costs before it can decide.
+      quote: "or ask the price alone: {\"history\": true, \"count\": N} — 402 with x402 terms, "
+           + "nothing named, nothing audited",
       start: "https://tashan.sh/pricing.html",
     };
     return json(base);

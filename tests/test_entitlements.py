@@ -84,6 +84,35 @@ _pages += sorted(os.path.relpath(x, WEB) for x in _glob.glob(os.path.join(WEB, "
 for _d in ("category", "task", "role", "compare", "capability"):
     _some = sorted(_glob.glob(os.path.join(WEB, _d, "*.html")))[:3]
     _pages += [os.path.relpath(x, WEB) for x in _some]
+# THE CLI SELLS TOO, and it was the last place still promising `watch`: audit_config ended with
+# "tashan Pro watches these N for direction". A guard that only reads web/ cannot see the surface
+# an agent actually talks to.
+_CLI = [os.path.join(ROOT, "cli", f) for f in ("mcp.mjs", "doctor.mjs", "tashan.mjs")]
+def _cli_text(path):
+    try:
+        return open(path, encoding="utf-8").read()
+    except OSError:
+        return ""
+
+
+for _c in _CLI:
+    _t = _cli_text(_c)
+    if not _t:
+        continue
+    _bad = []
+    for _f in planned:
+        for _ph in ("tells you the day", "watches these", "watches your", "notifies you",
+                    "alerts you", "the day it changes", "the day that changes"):
+            _i = _t.lower().find(_ph)
+            while _i >= 0:
+                _near = _t[max(0, _i - 200):_i + 200].lower()
+                if any(w in _near for w in ("pro ", "tashan pro", "/mo", "trial", "pricing")):
+                    _bad.append(_ph)
+                    break
+                _i = _t.lower().find(_ph, _i + 1)
+    ok(f"cli/{os.path.basename(_c)} does not offer a planned feature", not _bad,
+       f"found {sorted(set(_bad))}")
+
 for pg in _pages:
     p = os.path.join(WEB, pg)
     if not os.path.exists(p):

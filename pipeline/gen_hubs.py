@@ -802,7 +802,10 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
           "cleared, plus a ready-to-paste config for your host. We do NOT sell anyone's skill or "
           "server content — every pick links to its own source and licence; what is paid for is the "
           "selection, the verified pin and the assembly.",
-          "- `POST /v0.1/audit` — send the servers in a config, get back every risk we hold about "
+          "- `POST /v0.1/audit` with `{\"history\": true, \"count\": N}` — the PRICE of the paid half "
+        "for N servers, as a spec-shaped 402 with x402 terms, naming nothing and auditing nothing. "
+        "For an agent that must not upload a config in order to ask what something costs.",
+        "- `POST /v0.1/audit` — send the servers in a config, get back every risk we hold about "
           "each one: advisories at the version installed today, deprecation, archived repos, a "
           "maintainer count that fell to one, registry removal. **Free, no account, no payment.** "
           "Add `{\"history\": true}` for the score series and the direction of travel behind each "
