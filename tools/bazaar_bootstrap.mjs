@@ -44,6 +44,9 @@
 // one payer. Do not repeat it to make the number look better. Getting indexed is a door; walking
 // through it is real demand's job, and the funnel now records that separately.
 
+const INSTALL = "    npm i --no-save --prefix . @coinbase/cdp-sdk @x402/fetch @x402/core \\\n"
+              + "      @x402/evm @x402/extensions @x402/svm viem";
+
 const BASE = process.env.TASHAN_BASE || "https://tashan.sh";
 
 // One call per priced resource: the Bazaar indexes RESOURCES, not sellers, so each endpoint needs
@@ -66,6 +69,37 @@ const UA = "tashan-selfcheck/bazaar-bootstrap";
 function bail(msg, code = 1) {
   console.error(`\n  ${msg}\n`);
   process.exit(code);
+}
+
+// TWO WAYS TO PAY, and the choice is only about whose wallet holds the USDC.
+//
+//   PRIVATE_KEY=0x...   your own wallet. Nothing is created, nothing to fund but the wallet you
+//                       already have. The key is read from the environment and never leaves this
+//                       process — do not paste it into a chat, a file, or a commit.
+//   CDP_*               a CDP-managed wallet the SDK creates and signs inside. No key anywhere,
+//                       but it is a NEW empty address you have to send USDC to first.
+//
+// Either produces the same thing: a real settle through the CDP facilitator, which is what the
+// Bazaar indexes on and what proves our /settle path works.
+async function localKeyClient() {
+  const key = process.env.PRIVATE_KEY;
+  if (!key) return null;
+  if (!/^0x[0-9a-fA-F]{64}$/.test(key)) {
+    bail("PRIVATE_KEY must be a 0x-prefixed 32-byte hex key.");
+  }
+  let privateKeyToAccount, ExactEvmScheme, wrapFetchWithPaymentFromConfig;
+  try {
+    ({ privateKeyToAccount } = await import("viem/accounts"));
+    ({ ExactEvmScheme } = await import("@x402/evm"));
+    ({ wrapFetchWithPaymentFromConfig } = await import("@x402/fetch"));
+  } catch (e) {
+    bail("Dependencies are not installed. In this directory run:\n" + INSTALL + `\n  (${e.message})`);
+  }
+  const account = privateKeyToAccount(key);
+  const wrapped = wrapFetchWithPaymentFromConfig(globalThis.fetch, {
+    schemes: [{ network: "eip155:8453", client: new ExactEvmScheme(account) }],
+  });
+  return { address: account.address, fetchPaid: wrapped };
 }
 
 async function client() {
@@ -97,22 +131,35 @@ async function main() {
   const pay = process.argv.includes("--pay");
   if (!showAddress && !pay) bail("Pass --address (see where to send USDC) or --pay (settle).", 2);
 
-  const { cdp, wrap } = await client();
-  const { evmAddress } = await cdp.getAddresses();
+  // Your own wallet wins when PRIVATE_KEY is set — no new address, nothing extra to fund.
+  const local = await localKeyClient();
+  let evmAddress, fetchPaid;
+  if (local) {
+    ({ address: evmAddress, fetchPaid } = local);
+  } else {
+    const { cdp, wrap } = await client();
+    ({ evmAddress } = await cdp.getAddresses());
+    fetchPaid = wrap(globalThis.fetch, cdp);
+  }
 
   if (showAddress) {
-    console.log(`\n  CDP-managed buyer wallet:  ${evmAddress}`);
+    console.log(`\n  Paying from:               ${evmAddress}`
+                + (local ? "  (your own wallet, from PRIVATE_KEY)" : "  (CDP-managed — fund this)"));
     console.log("  Network:                   Base mainnet (eip155:8453)");
-    console.log("  Send:                      ~$1 of USDC on BASE (contract");
-    console.log("                             0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913)");
-    console.log("  Spent by --pay:            $0.07 total. The rest stays yours and is withdrawable.");
+    if (local) {
+      console.log("  Needs:                     $0.07 of USDC on Base in that wallet. Nothing to");
+      console.log("                             send anywhere — it pays from where it already is.");
+    } else {
+      console.log("  Send:                      ~$1 of USDC on BASE (contract");
+      console.log("                             0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913)");
+      console.log("  Spent by --pay:            $0.07 total. The rest stays yours.");
+    }
     console.log("  No ETH needed:             the facilitator submits the transaction and pays gas.\n");
     console.log("  NOT the same address as the RECEIVING wallet (X402_PAY_TO). That one still needs");
     console.log("  no funding — it only ever receives.\n");
     return 0;
   }
 
-  const fetchPaid = wrap(globalThis.fetch, cdp);
   let ok = 0;
   for (const t of TARGETS) {
     process.stdout.write(`  ${t.method} ${t.url.replace(BASE, "")} ($${t.usd.toFixed(2)}) ... `);
