@@ -37,7 +37,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route pattern | Pages | Generator |
 |---|---|---|
-| `/capability/*.html` | 11,967 | `pipeline/prerender.py` |
+| `/capability/*.html` | 11,990 | `pipeline/prerender.py` |
 | `/category/*.html` | 108 | `pipeline/gen_hubs.py` |
 | `/task/*.html` | 64 | `pipeline/gen_hubs.py` |
 | `/role/*.html` | 23 | `pipeline/gen_hubs.py` |
@@ -67,6 +67,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `cli/tashan.test.mjs` — node cli/tashan.test.mjs  — pure-logic tests for the CLI (no network, no deps).
 - `functions/api/_cdp.test.mjs` — CDP auth. A wrong claim here is a 401 with no explanation, and a 401 means charge() denies — so
 - `functions/api/_demand.test.mjs` — node functions/api/_demand.test.mjs
+- `functions/api/_head.test.mjs` — node functions/api/_head.test.mjs
 - `functions/api/_x402.test.mjs` — node functions/api/_x402.test.mjs
 - `functions/api/account.test.mjs` — node --test functions/api/account.test.mjs
 - `functions/api/buy.test.mjs` — The buy button. Two things must hold no matter what breaks: the customer always reaches Polar,

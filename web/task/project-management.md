@@ -27,32 +27,32 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 63 | 118 ★ | active |
 | 15 | [Jira · mulhamna](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 61 | 46 ★ | active |
 | 16 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 61 | 48 ★ | active |
-| 17 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 58 | 27 ★ | active |
-| 18 | [AI Adoption Playbook](https://tashan.sh/capability/plugin-adimango-ai-adoption-playbook-ai-adoption-playbook.html) | 57 | 20 ★ | active |
-| 19 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 57 | 20 ★ | active |
+| 17 | [AI Adoption Playbook](https://tashan.sh/capability/plugin-adimango-ai-adoption-playbook-ai-adoption-playbook.html) | 57 | 20 ★ | active |
+| 18 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 57 | 20 ★ | active |
+| 19 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 57 | 27 ★ | active |
 | 20 | [Game Of Cards](https://tashan.sh/capability/plugin-zauberzeug-game-of-cards-game-of-cards.html) | 52 | 6 ★ | active |
 | 21 | [Agent Estimate](https://tashan.sh/capability/plugin-haoranc-agent-estimate-agent-estimate.html) | 47 | 3 ★ | active |
-| 22 | [Next Task](https://tashan.sh/capability/plugin-agent-sh-next-task-next-task.html) | 45 | 4 ★ | active |
-| 23 | [Coordinator Claude](https://tashan.sh/capability/plugin-oduffy-delphi-coordinator-claude-coordinator-claude.html) | 44 | 5 ★ | active |
-| 24 | [Vibe Cartographer](https://tashan.sh/capability/plugin-estevanhernandez-stack-ed-vibe-cartographer-vibe-cartographer.html) | 43 | 1 ★ | active |
+| 22 | [Coordinator Claude](https://tashan.sh/capability/plugin-oduffy-delphi-coordinator-claude-coordinator-claude.html) | 44 | 5 ★ | active |
+| 23 | [Next Task](https://tashan.sh/capability/plugin-agent-sh-next-task-next-task.html) | 44 | 4 ★ | active |
+| 24 | [Vibe Cartographer](https://tashan.sh/capability/plugin-estevanhernandez-stack-ed-vibe-cartographer-vibe-cartographer.html) | 42 | 1 ★ | active |
 | 25 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 66 | 205 ★ | active |
 | 26 | [Sq](https://tashan.sh/capability/plugin-derekstride-sq-sq.html) | 54 | 13 ★ | active |
-| 27 | [Writing Plans](https://tashan.sh/capability/skill-obra-writing-plans.html) | 53 | 4 repos | active |
-| 28 | [The H AI K U Method](https://tashan.sh/capability/plugin-gigsmart-haiku-method-the-h-ai-k-u-method.html) | 50 | 24 ★ | active |
-| 29 | [Execute](https://tashan.sh/capability/skill-alirezarezvani-execute.html) | 49 | 3 repos | active |
-| 30 | [Clickup Custom](https://tashan.sh/capability/pkg-clickup-custom-mcp.html) | 49 | 58/wk | active |
-| 31 | [Executing Plans](https://tashan.sh/capability/skill-obra-executing-plans.html) | 48 | 2 repos | active |
-| 32 | [Shipyard · Acendas](https://tashan.sh/capability/plugin-acendas-shipyard-shipyard.html) | 47 | 2 ★ | active |
-| 33 | [Launchpad](https://tashan.sh/capability/plugin-builtform-launchpad-launchpad.html) | 46 | 1 ★ | active |
-| 34 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 45 | 5 ★ | active |
-| 35 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 44 | 3 ★ | active |
-| 36 | [Belmont](https://tashan.sh/capability/plugin-blake-simpson-belmont-belmont.html) | 44 | 4 ★ | active |
-| 37 | [Asana](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-asana.html) | 42 | 1 marketplaces | — |
-| 38 | [GitHub · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-github.html) | 42 | 1 marketplaces | — |
-| 39 | [GitLab · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-gitlab.html) | 42 | 1 marketplaces | — |
-| 40 | [Linear](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-linear.html) | 42 | 1 marketplaces | — |
+| 27 | [The H AI K U Method](https://tashan.sh/capability/plugin-gigsmart-haiku-method-the-h-ai-k-u-method.html) | 50 | 24 ★ | active |
+| 28 | [Clickup Custom](https://tashan.sh/capability/pkg-clickup-custom-mcp.html) | 49 | 58/wk | active |
+| 29 | [Executing Plans](https://tashan.sh/capability/skill-obra-executing-plans.html) | 48 | 2 repos | active |
+| 30 | [Writing Plans](https://tashan.sh/capability/skill-obra-writing-plans.html) | 48 | 2 repos | active |
+| 31 | [Shipyard · Acendas](https://tashan.sh/capability/plugin-acendas-shipyard-shipyard.html) | 47 | 2 ★ | active |
+| 32 | [Launchpad](https://tashan.sh/capability/plugin-builtform-launchpad-launchpad.html) | 45 | 1 ★ | active |
+| 33 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 45 | 5 ★ | active |
+| 34 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 44 | 3 ★ | active |
+| 35 | [Belmont](https://tashan.sh/capability/plugin-blake-simpson-belmont-belmont.html) | 44 | 4 ★ | active |
+| 36 | [Asana](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-asana.html) | 42 | 1 marketplaces | — |
+| 37 | [GitHub · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-github.html) | 42 | 1 marketplaces | — |
+| 38 | [GitLab · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-gitlab.html) | 42 | 1 marketplaces | — |
+| 39 | [Linear · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-linear.html) | 42 | 1 marketplaces | — |
+| 40 | [Devflow · KlausFreiberufler](https://tashan.sh/capability/plugin-klausfreiberufler-devflow-mcp-devflow.html) | 42 | 1 ★ | active |
 
-Showing the top 40 of 108. The full ranked shelf is at https://tashan.sh/task/project-management.html.
+Showing the top 40 of 103. The full ranked shelf is at https://tashan.sh/task/project-management.html.
 
 ## What these numbers are not
 

@@ -34,17 +34,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 21 | [Nexus Agents](https://tashan.sh/capability/pkg-nexus-agents.html) | 56 | 194/wk | active |
 | 22 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 55 | 177/wk | active |
 | 23 | [Cyberaudit Skill](https://tashan.sh/capability/pkg-cyberaudit-skill.html) | 49 | 37/wk | active |
-| 24 | [Vorim](https://tashan.sh/capability/pkg-vorim-mcp-server.html) | 48 | 87/wk | active |
+| 24 | [Vorim](https://tashan.sh/capability/pkg-vorim-mcp-server.html) | 47 | 87/wk | active |
 | 25 | [Claude Ads](https://tashan.sh/capability/plugin-agricidaniel-claude-ads-claude-ads.html) | 70 | 8k ★ | active |
 | 26 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 69 | 1k/wk | active |
 | 27 | [Npmjs](https://tashan.sh/capability/pkg-yawlabs-npmjs-mcp.html) | 67 | 784/wk | active |
-| 28 | [Crosscheck](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 65 | 568/wk | active |
-| 29 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 61 | 897/wk | active |
-| 30 | [Uxlint](https://tashan.sh/capability/pkg-uxlint-net-uxlint.html) | 61 | 512/wk | active |
-| 31 | [Smartflow Verify](https://tashan.sh/capability/pkg-smartflow-verify-mcp.html) | 55 | 210/wk | active |
-| 32 | [Positif](https://tashan.sh/capability/pkg-positif-ai.html) | 54 | 191/wk | active |
-| 33 | [Fullstackgtm](https://tashan.sh/capability/pkg-fullstackgtm.html) | 53 | 99/wk | active |
-| 34 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 52 | 131/wk | active |
+| 28 | [Crosscheck](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 64 | 568/wk | active |
+| 29 | [Uxlint](https://tashan.sh/capability/pkg-uxlint-net-uxlint.html) | 61 | 512/wk | active |
+| 30 | [Smartflow Verify](https://tashan.sh/capability/pkg-smartflow-verify-mcp.html) | 54 | 210/wk | active |
+| 31 | [Positif](https://tashan.sh/capability/pkg-positif-ai.html) | 54 | 191/wk | active |
+| 32 | [Fullstackgtm](https://tashan.sh/capability/pkg-fullstackgtm.html) | 53 | 99/wk | active |
+| 33 | [SEO Audit Tool](https://tashan.sh/capability/pkg-seo-audit-tool.html) | 52 | 131/wk | active |
+| 34 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 51 | 48/wk | active |
 | 35 | [Risk](https://tashan.sh/capability/pkg-mcp-risk.html) | 48 | 40/wk | active |
 | 36 | [Kronos Forgemesh](https://tashan.sh/capability/pkg-forgemeshlabs-kronos-forgemesh-mcp.html) | 45 | 29/wk | active |
 | 37 | [Site Doctor](https://tashan.sh/capability/pkg-site-doctor.html) | 43 | 27/wk | active |

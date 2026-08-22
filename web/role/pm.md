@@ -11,10 +11,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 - **Project management** — [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) · tashan score 77
 - **Product strategy** — [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) · tashan score 70
-- **PRDs and specs** — [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) · tashan score 74
+- **PRDs and specs** — [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) · tashan score 73
 - **Market analysis** — [Kiwoom Securities](https://tashan.sh/capability/pkg-kiwoom-mcp-server.html) · tashan score 67
 - **Risk assessment** — [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) · tashan score 71
-- **User research** — [Frog](https://tashan.sh/capability/pkg-frog.html) · tashan score 74
+- **User research** — [Frog](https://tashan.sh/capability/pkg-frog.html) · tashan score 75
 
 ## Ranked
 
@@ -28,8 +28,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Maister](https://tashan.sh/capability/plugin-skillpanel-maister-maister.html) | 61 | 191 ★ | active |
 | 7 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 54 | 13 ★ | active |
 | 8 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 53 | 10 ★ | active |
-| 9 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 53 | 9 ★ | active |
-| 10 | [Ideonomy](https://tashan.sh/capability/plugin-latentwill-ideonomy-skill-ideonomy.html) | 52 | 39 ★ | active |
+| 9 | [Ideonomy](https://tashan.sh/capability/plugin-latentwill-ideonomy-skill-ideonomy.html) | 52 | 39 ★ | active |
+| 10 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 52 | 9 ★ | active |
 | 11 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 51 | 6 ★ | active |
 | 12 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 49 | 3 ★ | active |
 | 13 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 48 | 3 ★ | active |
@@ -39,29 +39,29 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 78 | 191k ★ | active |
 | 18 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 78 | 54k ★ | active |
 | 19 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 77 | 118k/wk | active |
-| 20 | [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) | 75 | 10k/wk | active |
-| 21 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 74 | 5k/wk | active |
+| 20 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 75 | 9k/wk | active |
+| 21 | [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) | 75 | 10k/wk | active |
 | 22 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 73 | 2k ★ | active |
 | 23 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 71 | 923/wk | active |
 | 24 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 71 | 1k ★ | active |
 | 25 | [Omnifocus MCP Enhanced](https://tashan.sh/capability/pkg-omnifocus-mcp-enhanced.html) | 67 | 1k/wk | active |
-| 26 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 67 | 889/wk | active |
-| 27 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 67 | 326 ★ | active |
-| 28 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 66 | 2k/wk | active |
+| 26 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 66 | 2k/wk | active |
+| 27 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 66 | 889/wk | active |
+| 28 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 66 | 326 ★ | active |
 | 29 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 65 | 1k/wk | active |
 | 30 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 63 | 118 ★ | active |
 | 31 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 63 | 899/wk | active |
 | 32 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 63 | 770/wk | active |
 | 33 | [Jira · mulhamna](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 61 | 46 ★ | active |
 | 34 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 61 | 48 ★ | active |
-| 35 | [Gangsta](https://tashan.sh/capability/plugin-kucherenko-gangsta-gangsta.html) | 61 | 67 ★ | active |
-| 36 | [Draft](https://tashan.sh/capability/plugin-mayurpise-draft-draft.html) | 59 | 39 ★ | active |
-| 37 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 59 | 18 ★ | active |
-| 38 | [Eurostat](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 59 | 214/wk | active |
-| 39 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 59 | 28 ★ | active |
-| 40 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 58 | 27 ★ | active |
+| 35 | [Gangsta](https://tashan.sh/capability/plugin-kucherenko-gangsta-gangsta.html) | 60 | 67 ★ | active |
+| 36 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 59 | 18 ★ | active |
+| 37 | [Eurostat](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 59 | 214/wk | active |
+| 38 | [Draft](https://tashan.sh/capability/plugin-mayurpise-draft-draft.html) | 58 | 39 ★ | active |
+| 39 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 58 | 302 ★ | active |
+| 40 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 58 | 28 ★ | active |
 
-Showing the top 40 of 267. The full ranked shelf is at https://tashan.sh/role/pm.html.
+Showing the top 40 of 257. The full ranked shelf is at https://tashan.sh/role/pm.html.
 
 ## What these numbers are not
 

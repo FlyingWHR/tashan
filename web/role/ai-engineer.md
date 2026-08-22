@@ -10,7 +10,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Agent development** — [Agent Afk](https://tashan.sh/capability/pkg-agent-afk.html) · tashan score 74
-- **Retrieval systems** — [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) · tashan score 95
+- **Retrieval systems** — [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) · tashan score 94
 - **Prompt engineering** — [Context Mode](https://tashan.sh/capability/plugin-mksglu-context-mode-context-mode.html) · tashan score 78
 - **Model evaluation** — [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) · tashan score 78
 
@@ -18,17 +18,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 95 | 619k/wk | active |
+| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 94 | 619k/wk | active |
 | 2 | [Context Mode](https://tashan.sh/capability/plugin-mksglu-context-mode-context-mode.html) | 78 | 19k ★ | active |
 | 3 | [Agent Afk](https://tashan.sh/capability/pkg-agent-afk.html) | 74 | 14k/wk | active |
-| 4 | [Genshijin](https://tashan.sh/capability/plugin-interfacex-co-jp-genshijin-genshijin.html) | 69 | 287 ★ | active |
+| 4 | [Genshijin](https://tashan.sh/capability/plugin-interfacex-co-jp-genshijin-genshijin.html) | 68 | 287 ★ | active |
 | 5 | [Reprompter](https://tashan.sh/capability/plugin-aytuncyildizli-reprompter-reprompter.html) | 66 | 111 ★ | active |
 | 6 | [Adcp Client](https://tashan.sh/capability/plugin-adcontextprotocol-adcp-client-adcp-client.html) | 60 | 18 ★ | active |
 | 7 | [Inkbox](https://tashan.sh/capability/plugin-inkbox-ai-inkbox-inkbox.html) | 59 | 33 ★ | active |
-| 8 | [Statsclaw](https://tashan.sh/capability/plugin-statsclaw-statsclaw-statsclaw.html) | 57 | 87 ★ | active |
-| 9 | [Cxpak](https://tashan.sh/capability/plugin-barnett-studios-cxpak-cxpak.html) | 57 | 19 ★ | active |
-| 10 | [Writ](https://tashan.sh/capability/plugin-infinri-writ-writ.html) | 54 | 163 ★ | active |
-| 11 | [Claude Relay](https://tashan.sh/capability/plugin-innestic-claude-relay-claude-relay.html) | 53 | 62 ★ | active |
+| 8 | [Cxpak](https://tashan.sh/capability/plugin-barnett-studios-cxpak-cxpak.html) | 57 | 19 ★ | active |
+| 9 | [Statsclaw](https://tashan.sh/capability/plugin-statsclaw-statsclaw-statsclaw.html) | 56 | 87 ★ | active |
+| 10 | [Claude Relay](https://tashan.sh/capability/plugin-innestic-claude-relay-claude-relay.html) | 53 | 62 ★ | active |
+| 11 | [Writ](https://tashan.sh/capability/plugin-infinri-writ-writ.html) | 53 | 163 ★ | active |
 | 12 | [Twining](https://tashan.sh/capability/plugin-daveangulo-twining-mcp-twining.html) | 52 | 7 ★ | active |
 | 13 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 52 | 7 ★ | active |
 | 14 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 49 | 12 ★ | active |
@@ -53,13 +53,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 68 | 93 ★ | active |
 | 34 | [Evalview](https://tashan.sh/capability/plugin-hidai25-eval-view-evalview.html) | 65 | 124 ★ | active |
 | 35 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 64 | 68 ★ | active |
-| 36 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 64 | 452 ★ | active |
-| 37 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 63 | 68 ★ | active |
+| 36 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 63 | 68 ★ | active |
+| 37 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 63 | 452 ★ | active |
 | 38 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 63 | 104 ★ | active |
 | 39 | [Clawcode](https://tashan.sh/capability/plugin-crisandrews-clawcode-clawcode.html) | 62 | 61 ★ | active |
 | 40 | [Network AI](https://tashan.sh/capability/plugin-jovancoding-network-ai-network-ai.html) | 62 | 70 ★ | active |
 
-Showing the top 40 of 518. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
+Showing the top 40 of 510. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
 
 ## What these numbers are not
 

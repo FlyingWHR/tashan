@@ -21,13 +21,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Zoominfo](https://tashan.sh/capability/plugin-zoominfo-zoominfo-mcp-plugin-zoominfo.html) | 48 | 3 ★ | active |
 | 9 | [Lusha](https://tashan.sh/capability/plugin-lusha-oss-lusha-mcp-plugin-lusha.html) | 47 | 3 ★ | active |
 | 10 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 69 | 417 ★ | active |
-| 11 | [Carta CRM](https://tashan.sh/capability/plugin-carta-plugins-carta-crm.html) | 43 | 1 marketplaces | active |
-| 12 | [Deepline](https://tashan.sh/capability/plugin-getaero-io-deepline-plugins-deepline.html) | 43 | 1 ★ | active |
-| 13 | [Apollo · apolloio](https://tashan.sh/capability/plugin-apolloio-apollo-mcp-plugin-apollo.html) | 42 | 1 marketplaces | active |
+| 11 | [Cold Email](https://tashan.sh/capability/skill-alirezarezvani-cold-email.html) | 49 | 3 repos | active |
+| 12 | [Apollo · apolloio](https://tashan.sh/capability/plugin-apolloio-apollo-mcp-plugin-apollo.html) | 42 | 1 marketplaces | active |
+| 13 | [Carta CRM](https://tashan.sh/capability/plugin-carta-plugins-carta-crm.html) | 42 | 1 marketplaces | active |
 | 14 | [Apollo MCP Plugin](https://tashan.sh/capability/plugin-apolloio-apollo-mcp-plugin-apollo-mcp-plugin.html) | 42 | 1 marketplaces | active |
 | 15 | [Clearskies Cowork Plugin](https://tashan.sh/capability/plugin-scratchpad-ai-clearskies-cowork-plugin-clearskies-cowork-plugin.html) | 42 | 0 ★ | active |
 | 16 | [Sanka](https://tashan.sh/capability/plugin-sankahq-sanka-plugin-sanka.html) | 42 | 0 ★ | active |
-| 17 | [Tiga Gtm](https://tashan.sh/capability/plugin-tiga-labs-tiga-gtm-tiga-gtm.html) | 41 | 1 ★ | active |
+| 17 | [Deepline](https://tashan.sh/capability/plugin-getaero-io-deepline-plugins-deepline.html) | 42 | 1 ★ | active |
 | 18 | [Active Campaign Automation](https://tashan.sh/capability/skill-composiohq-active-campaign-automation.html) | not scored | 1 repos | active |
 | 19 | [Apollo Automation](https://tashan.sh/capability/skill-composiohq-apollo-automation.html) | not scored | 1 repos | active |
 | 20 | [Attio Automation](https://tashan.sh/capability/skill-composiohq-attio-automation.html) | not scored | 1 repos | active |
@@ -47,12 +47,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 34 | [Deal Desk](https://tashan.sh/capability/skill-alirezarezvani-deal-desk.html) | not scored | 1 repos | active |
 | 35 | [Partnerships Architect](https://tashan.sh/capability/skill-alirezarezvani-partnerships-architect.html) | not scored | 1 repos | active |
 | 36 | [Rfp Responder](https://tashan.sh/capability/skill-alirezarezvani-rfp-responder.html) | not scored | 1 repos | active |
-| 37 | [Cold Email](https://tashan.sh/capability/skill-alirezarezvani-cold-email.html) | not scored | 1 repos | active |
-| 38 | [Boondmanager](https://tashan.sh/capability/pkg-boondmanager-mcp-server.html) | 65 | 485/wk | active |
-| 39 | [Attio](https://tashan.sh/capability/pkg-attio-mcp.html) | 50 | 382/wk | active |
-| 40 | [Leadbay](https://tashan.sh/capability/pkg-leadbay-mcp.html) | 65 | 457/wk | active |
+| 37 | [Boondmanager](https://tashan.sh/capability/pkg-boondmanager-mcp-server.html) | 65 | 485/wk | active |
+| 38 | [Attio](https://tashan.sh/capability/pkg-attio-mcp.html) | 49 | 382/wk | active |
+| 39 | [Leadbay](https://tashan.sh/capability/pkg-leadbay-mcp.html) | 65 | 457/wk | active |
+| 40 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 56 | 210/wk | active |
 
-Showing the top 40 of 60. The full ranked shelf is at https://tashan.sh/role/sales.html.
+Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/role/sales.html.
 
 ## What these numbers are not
 

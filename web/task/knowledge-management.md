@@ -15,7 +15,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) | 72 | 1k ★ | active |
 | 3 | [Remember](https://tashan.sh/capability/plugin-digital-process-tools-claude-remember-remember.html) | 69 | 143 ★ | active |
 | 4 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 1k/wk | active |
-| 5 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 67 | 895/wk | active |
+| 5 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 66 | 895/wk | active |
 | 6 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 65 | 367/wk | active |
 | 7 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 64 | 905/wk | active |
 | 8 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 60 | 18 ★ | active |
@@ -41,18 +41,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Slack](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 66 | 86 ★ | active |
 | 29 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 66 | 154 ★ | active |
 | 30 | [Dark Memory](https://tashan.sh/capability/pkg-opitacode-dark-memory-mcp.html) | 65 | 1k/wk | active |
-| 31 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 64 | 452 ★ | active |
-| 32 | [Miro](https://tashan.sh/capability/plugin-miroapp-miro-ai-miro.html) | 63 | 142 ★ | active |
-| 33 | [Immich Photo Manager](https://tashan.sh/capability/plugin-drolosoft-immich-photo-manager-immich-photo-manager.html) | 60 | 33 ★ | active |
-| 34 | [LLM Wiki Compiler](https://tashan.sh/capability/plugin-ussumant-llm-wiki-compiler-llm-wiki-compiler.html) | 60 | 303 ★ | active |
+| 31 | [Miro](https://tashan.sh/capability/plugin-miroapp-miro-ai-miro.html) | 63 | 142 ★ | active |
+| 32 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 63 | 452 ★ | active |
+| 33 | [Immich Photo Manager](https://tashan.sh/capability/plugin-drolosoft-immich-photo-manager-immich-photo-manager.html) | 59 | 33 ★ | active |
+| 34 | [LLM Wiki Compiler](https://tashan.sh/capability/plugin-ussumant-llm-wiki-compiler-llm-wiki-compiler.html) | 59 | 303 ★ | active |
 | 35 | [Private Journal](https://tashan.sh/capability/plugin-obra-private-journal-mcp-private-journal-mcp.html) | 57 | 416 ★ | active |
 | 36 | [Mycelium](https://tashan.sh/capability/plugin-arjunrajlaboratory-mycelium-mycelium.html) | 56 | 54 ★ | active |
 | 37 | [Origin](https://tashan.sh/capability/plugin-7xuanlu-origin-origin.html) | 55 | 47 ★ | active |
-| 38 | [Box](https://tashan.sh/capability/plugin-box-box-for-ai-box.html) | 53 | 5 ★ | active |
-| 39 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 53 | 10 ★ | active |
-| 40 | [Kagura Memory](https://tashan.sh/capability/plugin-kagura-ai-memory-cloud-kagura-memory.html) | 53 | 8 ★ | active |
+| 38 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 53 | 10 ★ | active |
+| 39 | [Box](https://tashan.sh/capability/plugin-box-box-for-ai-box.html) | 52 | 5 ★ | active |
+| 40 | [Mind](https://tashan.sh/capability/plugin-memvid-claude-brain-mind.html) | 52 | 533 ★ | stable |
 
-Showing the top 40 of 243. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
+Showing the top 40 of 239. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
 
 ## What these numbers are not
 

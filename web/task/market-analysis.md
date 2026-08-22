@@ -16,8 +16,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 51 | 6 ★ | active |
 | 4 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 48 | 3 ★ | active |
 | 5 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 78 | 54k ★ | active |
-| 6 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 67 | 889/wk | active |
-| 7 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 66 | 2k/wk | active |
+| 6 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 66 | 2k/wk | active |
+| 7 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 66 | 889/wk | active |
 | 8 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 65 | 1k/wk | active |
 | 9 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 63 | 899/wk | active |
 | 10 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 63 | 770/wk | active |
@@ -25,13 +25,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Eurostat](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 59 | 214/wk | active |
 | 13 | [Alphacouncil Agent](https://tashan.sh/capability/pkg-alphacouncil-agent.html) | 54 | 94/wk | active |
 | 14 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 49 | 3 ★ | active |
-| 15 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 45 | 7 ★ | active |
+| 15 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 44 | 7 ★ | active |
 | 16 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 43 | 4 ★ | active |
 | 17 | [Xrpl Utilities](https://tashan.sh/capability/pkg-xrpl-utilities-mcp.html) | 70 | 2k/wk | active |
-| 18 | [Market Research](https://tashan.sh/capability/skill-alirezarezvani-market-research.html) | 49 | 3 repos | active |
-| 19 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 49 | 3 ★ | active |
-| 20 | [Algovault Skills](https://tashan.sh/capability/plugin-algovaultlabs-algovault-skills-algovault-skills.html) | 46 | 1 ★ | active |
-| 21 | [Bigdata Com](https://tashan.sh/capability/plugin-bigdata-com-bigdata-plugins-marketplace-bigdata-com.html) | 45 | 2 ★ | active |
+| 18 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 49 | 3 ★ | active |
+| 19 | [Pricing Strategist](https://tashan.sh/capability/skill-alirezarezvani-pricing-strategist.html) | 47 | 2 repos | active |
+| 20 | [Bigdata Com](https://tashan.sh/capability/plugin-bigdata-com-bigdata-plugins-marketplace-bigdata-com.html) | 45 | 2 ★ | active |
+| 21 | [Algovault Skills](https://tashan.sh/capability/plugin-algovaultlabs-algovault-skills-algovault-skills.html) | 45 | 1 ★ | active |
 | 22 | [Comparative Landscape Brief](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-comparative-landscape-brief.html) | 42 | 1 marketplaces | active |
 | 23 | [Competitive Ads Extractor](https://tashan.sh/capability/skill-composiohq-competitive-ads-extractor.html) | not scored | 1 repos | active |
 | 24 | [Sales Engineer](https://tashan.sh/capability/skill-alirezarezvani-sales-engineer.html) | not scored | 1 repos | active |
@@ -39,10 +39,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Cmo Advisor](https://tashan.sh/capability/skill-alirezarezvani-cmo-advisor.html) | not scored | 1 repos | active |
 | 27 | [Competitive Intel](https://tashan.sh/capability/skill-alirezarezvani-competitive-intel.html) | not scored | 1 repos | active |
 | 28 | [Intl Expansion](https://tashan.sh/capability/skill-alirezarezvani-intl-expansion.html) | not scored | 1 repos | active |
-| 29 | [Pricing Strategist](https://tashan.sh/capability/skill-alirezarezvani-pricing-strategist.html) | not scored | 1 repos | active |
-| 30 | [Marketing Strategy Pmm](https://tashan.sh/capability/skill-alirezarezvani-marketing-strategy-pmm.html) | not scored | 1 repos | active |
-| 31 | [Competitive Teardown](https://tashan.sh/capability/skill-alirezarezvani-competitive-teardown.html) | not scored | 1 repos | active |
-| 32 | [Product Strategist](https://tashan.sh/capability/skill-alirezarezvani-product-strategist.html) | not scored | 1 repos | active |
+| 29 | [Marketing Strategy Pmm](https://tashan.sh/capability/skill-alirezarezvani-marketing-strategy-pmm.html) | not scored | 1 repos | active |
+| 30 | [Competitive Teardown](https://tashan.sh/capability/skill-alirezarezvani-competitive-teardown.html) | not scored | 1 repos | active |
+| 31 | [Product Strategist](https://tashan.sh/capability/skill-alirezarezvani-product-strategist.html) | not scored | 1 repos | active |
+| 32 | [Market Research](https://tashan.sh/capability/skill-alirezarezvani-market-research.html) | not scored | 1 repos | active |
 | 33 | [Dossier · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-dossier.html) | not scored | 1 repos | active |
 | 34 | [Patent](https://tashan.sh/capability/skill-alirezarezvani-patent.html) | not scored | 1 repos | active |
 | 35 | [Pulse](https://tashan.sh/capability/skill-alirezarezvani-pulse.html) | not scored | 1 repos | active |

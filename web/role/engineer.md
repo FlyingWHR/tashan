@@ -10,17 +10,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Application development** — [Ios Simulator](https://tashan.sh/capability/pkg-ios-simulator-mcp.html) · tashan score 73
-- **Browser automation** — [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) · tashan score 93
 - **Code review** — [Sem](https://tashan.sh/capability/pkg-ataraxy-labs-sem.html) · tashan score 68
+- **Browser automation** — [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) · tashan score 93
 - **Test automation** — [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) · tashan score 78
 - **Web scraping** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 85
-- **Database access** — [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) · tashan score 84
+- **Process automation** — [Safety Net](https://tashan.sh/capability/plugin-kenryu42-claude-code-safety-net-safety-net.html) · tashan score 72
 
 ## Ranked
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 95 | 619k/wk | active |
+| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 94 | 619k/wk | active |
 | 2 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 93 | 2.3m/wk | active |
 | 3 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 85 | 32k/wk | active |
 | 4 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 73k/wk | active |
@@ -51,17 +51,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 29 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 55 | 35 ★ | active |
 | 30 | [Suiper](https://tashan.sh/capability/plugin-pivyme-suiperpower-suiper.html) | 54 | 12 ★ | active |
 | 31 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 54 | 13 ★ | active |
-| 32 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 53 | 9 ★ | active |
-| 33 | [Summer](https://tashan.sh/capability/plugin-summerengine-summer-summer.html) | 53 | 32 ★ | active |
-| 34 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 53 | 10 ★ | active |
+| 32 | [Summer](https://tashan.sh/capability/plugin-summerengine-summer-summer.html) | 53 | 32 ★ | active |
+| 33 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 53 | 10 ★ | active |
+| 34 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 52 | 9 ★ | active |
 | 35 | [Tray API](https://tashan.sh/capability/plugin-tray-tecnologia-tray-api-claude-plugin-tray-api.html) | 52 | 13 ★ | active |
 | 36 | [Archy](https://tashan.sh/capability/plugin-hslee16-archy-archy.html) | 52 | 6 ★ | active |
 | 37 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 52 | 3 ★ | active |
 | 38 | [Minecraft Java](https://tashan.sh/capability/plugin-chapmanjw-minecraft-java-fabric-claude-plugin-minecraft-java.html) | 51 | 5 ★ | active |
 | 39 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 51 | 6 ★ | active |
-| 40 | [Temper](https://tashan.sh/capability/plugin-galando-temper-temper.html) | 50 | 13 ★ | active |
+| 40 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 50 | 182 ★ | active |
 
-Showing the top 40 of 904. The full ranked shelf is at https://tashan.sh/role/engineer.html.
+Showing the top 40 of 867. The full ranked shelf is at https://tashan.sh/role/engineer.html.
 
 ## What these numbers are not
 

@@ -25,8 +25,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 70 | 542 ★ | active |
 | 5 | [Remember](https://tashan.sh/capability/plugin-digital-process-tools-claude-remember-remember.html) | 69 | 143 ★ | active |
 | 6 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 1k/wk | active |
-| 7 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 67 | 895/wk | active |
-| 8 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 67 | 2k/wk | active |
+| 7 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 67 | 2k/wk | active |
+| 8 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 66 | 895/wk | active |
 | 9 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 65 | 367/wk | active |
 | 10 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 64 | 905/wk | active |
 | 11 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 61 | 228/wk | active |
@@ -36,7 +36,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 55 | 11 ★ | active |
 | 16 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 55 | 6k/wk | active |
 | 17 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 55 | 35 ★ | active |
-| 18 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 54 | 121/wk | active |
+| 18 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 53 | 121/wk | active |
 | 19 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 52 | 51 ★ | active |
 | 20 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 52 | 7 ★ | active |
 | 21 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 52 | 24 ★ | active |
@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-firecrawl-claude-plugin-firecrawl.html) | 68 | 174 ★ | active |
 | 40 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 68 | 284 ★ | active |
 
-Showing the top 40 of 377. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 372. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 1144,
+  "full": 1143,
   "grade": 3809,
-  "n": 55986,
-  "scan": 7341,
-  "score": 24524,
-  "task": 3566
+  "n": 56768,
+  "scan": 7345,
+  "score": 25786,
+  "task": 3591
  },
  "axes": [
   {
@@ -31,10 +31,10 @@
   }
  ],
  "headline": {
-  "graded_pct": 52,
+  "graded_pct": 50,
   "scanned_pct": 100,
-  "scored_pct": 99,
-  "tasked_pct": 64,
+  "scored_pct": 98,
+  "tasked_pct": 62,
   "tier": "top1000"
  },
  "queue": [
@@ -178,16 +178,6 @@
    "name": "agentic-flow"
   },
   {
-   "downloads": 65785,
-   "id": "pkg:hlims-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "hlims-mcp"
-  },
-  {
    "downloads": 57771,
    "id": "pkg:figma-developer-mcp",
    "kind": "npm",
@@ -242,15 +232,6 @@
     "task"
    ],
    "name": "@transcend-io/mcp-server-consent"
-  },
-  {
-   "downloads": 37481,
-   "id": "pkg:@gongrzhe/server-gmail-autoauth-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@gongrzhe/server-gmail-autoauth-mcp"
   },
   {
    "downloads": 36566,
@@ -317,6 +298,15 @@
     "grade"
    ],
    "name": "xmcp"
+  },
+  {
+   "downloads": 26986,
+   "id": "pkg:@hasna/conversations",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "@hasna/conversations"
   },
   {
    "downloads": 25898,
@@ -411,24 +401,34 @@
     "task"
    ],
    "name": "@agentmemory/mcp"
+  },
+  {
+   "downloads": 17521,
+   "id": "pkg:@the-next-ai/ai-gateway",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@the-next-ai/ai-gateway"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 49,
-   "grade": 55,
+   "full": 48,
+   "grade": 54,
    "n": 100,
    "scan": 100,
    "score": 95,
    "task": 78
   },
   "top1000": {
-   "full": 408,
-   "grade": 519,
+   "full": 393,
+   "grade": 498,
    "n": 1000,
    "scan": 1000,
-   "score": 986,
-   "task": 635
+   "score": 985,
+   "task": 619
   }
  }
 }

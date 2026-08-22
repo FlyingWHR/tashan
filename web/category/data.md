@@ -18,10 +18,10 @@ Ranked by the tashan score
 | 5 | [Daft](https://tashan.sh/capability/plugin-eventual-inc-daft-daft.html) | 75 | 6k ★ | active |
 | 6 | [Eslint](https://tashan.sh/capability/pkg-eslint-mcp.html) | 75 | 20k/wk | active |
 | 7 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 74 | 4k ★ | active |
-| 8 | [Powerbi Modeling](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp.html) | 73 | 6k/wk | active |
+| 8 | [Powerbi Modeling](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp.html) | 72 | 6k/wk | active |
 | 9 | [Log10x](https://tashan.sh/capability/pkg-log10x-mcp.html) | 72 | 3k/wk | active |
 | 10 | [Mapbox](https://tashan.sh/capability/pkg-mapbox-mcp-server.html) | 71 | 614/wk | active |
-| 11 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 70 | 218 ★ | active |
+| 11 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 69 | 218 ★ | active |
 | 12 | [LightOn Tools](https://tashan.sh/capability/plugin-lightonai-next-plaid-colgrep.html) | 69 | 532 ★ | active |
 | 13 | [European Parliament](https://tashan.sh/capability/pkg-european-parliament-mcp-server.html) | 69 | 2k/wk | active |
 | 14 | [Powerbi Modeling MCP Linux X64](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp-linux-x64.html) | 69 | 1k/wk | active |
@@ -32,27 +32,27 @@ Ranked by the tashan score
 | 19 | [Dataforseo](https://tashan.sh/capability/pkg-dataforseo-mcp-server.html) | 67 | 5k/wk | active |
 | 20 | [Cachly Dev](https://tashan.sh/capability/pkg-cachly-dev-mcp-server.html) | 67 | 780/wk | active |
 | 21 | [Frase SEO](https://tashan.sh/capability/pkg-frase-mcp-server.html) | 67 | 533/wk | active |
-| 22 | [Apple Health](https://tashan.sh/capability/pkg-neiltron-apple-health-mcp.html) | 66 | 1k/wk | active |
-| 23 | [Altmetric](https://tashan.sh/capability/pkg-altmetric-mcp.html) | 66 | 357/wk | active |
-| 24 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 65 | 1k/wk | active |
-| 25 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 65 | 944/wk | active |
-| 26 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 65 | 609/wk | active |
-| 27 | [PropLine — Sports Betting Odds & Prop Resolution](https://tashan.sh/capability/pkg-propline-mcp.html) | 65 | 550/wk | active |
-| 28 | [Steam Games](https://tashan.sh/capability/pkg-steam-games-mcp.html) | 65 | 548/wk | active |
-| 29 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 64 | 47 ★ | active |
-| 30 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 64 | 90 ★ | active |
-| 31 | [Mssql Reader](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-reader.html) | 64 | 940/wk | active |
-| 32 | [Website Auditor](https://tashan.sh/capability/pkg-website-auditor-mcp.html) | 64 | 765/wk | active |
-| 33 | [Anilist](https://tashan.sh/capability/pkg-anilist-mcp-server.html) | 63 | 817/wk | active |
-| 34 | [Nats Trail](https://tashan.sh/capability/pkg-nats-trail-mcp.html) | 63 | 681/wk | active |
-| 35 | [YouTube Data](https://tashan.sh/capability/pkg-kirbah-mcp-youtube.html) | 63 | 351/wk | active |
-| 36 | [Subgraph Registry](https://tashan.sh/capability/pkg-subgraph-registry-mcp.html) | 63 | 340/wk | active |
-| 37 | [Vk Ads](https://tashan.sh/capability/pkg-mcp-vk-ads.html) | 62 | 438/wk | active |
-| 38 | [Open OCR CLI](https://tashan.sh/capability/pkg-open-ocr-cli.html) | 62 | 432/wk | active |
-| 39 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 62 | 414/wk | active |
-| 40 | [Nordic Data](https://tashan.sh/capability/pkg-nordic-data-mcp.html) | 62 | 399/wk | active |
+| 22 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 65 | 1k/wk | active |
+| 23 | [Apple Health](https://tashan.sh/capability/pkg-neiltron-apple-health-mcp.html) | 65 | 1k/wk | active |
+| 24 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 65 | 944/wk | active |
+| 25 | [PropLine — Sports Betting Odds & Prop Resolution](https://tashan.sh/capability/pkg-propline-mcp.html) | 65 | 550/wk | active |
+| 26 | [Steam Games](https://tashan.sh/capability/pkg-steam-games-mcp.html) | 65 | 548/wk | active |
+| 27 | [Altmetric](https://tashan.sh/capability/pkg-altmetric-mcp.html) | 65 | 357/wk | active |
+| 28 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 64 | 47 ★ | active |
+| 29 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 64 | 90 ★ | active |
+| 30 | [Mssql Reader](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-reader.html) | 64 | 940/wk | active |
+| 31 | [Website Auditor](https://tashan.sh/capability/pkg-website-auditor-mcp.html) | 64 | 765/wk | active |
+| 32 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 64 | 609/wk | active |
+| 33 | [Csszyx](https://tashan.sh/capability/pkg-csszyx-mcp-server.html) | 64 | 295/wk | active |
+| 34 | [Anilist](https://tashan.sh/capability/pkg-anilist-mcp-server.html) | 63 | 817/wk | active |
+| 35 | [RNCP / RS — certifications professionnelles (France compétences)](https://tashan.sh/capability/pkg-mcp-rncp.html) | 63 | 715/wk | active |
+| 36 | [Nats Trail](https://tashan.sh/capability/pkg-nats-trail-mcp.html) | 63 | 681/wk | active |
+| 37 | [YouTube Data](https://tashan.sh/capability/pkg-kirbah-mcp-youtube.html) | 63 | 351/wk | active |
+| 38 | [Subgraph Registry](https://tashan.sh/capability/pkg-subgraph-registry-mcp.html) | 63 | 340/wk | active |
+| 39 | [Talonic](https://tashan.sh/capability/pkg-talonic-mcp.html) | 63 | 298/wk | active |
+| 40 | [Vk Ads](https://tashan.sh/capability/pkg-mcp-vk-ads.html) | 62 | 438/wk | active |
 
-Showing the top 40 of 407. The full ranked shelf is at https://tashan.sh/category/data.html.
+Showing the top 40 of 397. The full ranked shelf is at https://tashan.sh/category/data.html.
 
 ## What these numbers are not
 

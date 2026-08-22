@@ -4,408 +4,408 @@
   <link href="https://tashan.sh/changes.xml" rel="self"/>
   <link href="https://tashan.sh/"/>
   <id>https://tashan.sh/changes.xml</id>
-  <updated>2026-08-21T00:00:00Z</updated>
+  <updated>2026-08-22T00:00:00Z</updated>
   <subtitle>Advisories, install scripts, permission changes and abandonment across the MCP corpus — measured daily from public evidence.</subtitle>
   <author><name>tashan</name><uri>https://tashan.sh</uri></author>
   <rights>CC BY 4.0 — attribute tashan (tashan.sh).</rights>
   <entry>
-    <title>Vanta · @vantasdk — the author of @vantasdk/vanta-mcp-server has declared it unmaintained</title>
-    <link href="https://tashan.sh/capability/pkg-vantasdk-vanta-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-vantasdk-vanta-mcp-server.html#declared_unmaintained-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="declared_unmaintained"/>
-    <summary>Nobody is going to fix the next problem with this, including a security one.  Plan a replacement. The dossier links what else does this work.</summary>
+    <title>Aether Code — aether-code now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-aether-code.html"/>
+    <id>https://tashan.sh/capability/pkg-aether-code.html#install_script_added-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
   </entry>
   <entry>
-    <title>Claude SEO Skill — claude-seo-skill now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/plugin-mangollc-claude-seo-skill-claude-seo-skill.html"/>
-    <id>https://tashan.sh/capability/plugin-mangollc-claude-seo-skill-claude-seo-skill.html#abandoned-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
+    <title>Ada Agent — ada-agent now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-ada-agent.html"/>
+    <id>https://tashan.sh/capability/pkg-ada-agent.html#install_script_added-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>Phrase — @phrase/phrase-mcp-server was marked deprecated on npm</title>
+    <link href="https://tashan.sh/capability/pkg-phrase-phrase-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-phrase-phrase-mcp-server.html#deprecated-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="deprecated"/>
+    <summary>The publisher is telling installers to stop using it.  Move to the successor named in the deprecation notice.</summary>
+  </entry>
+  <entry>
+    <title>React Assistant — @syncfusion/react-assistant was marked deprecated on npm</title>
+    <link href="https://tashan.sh/capability/pkg-syncfusion-react-assistant.html"/>
+    <id>https://tashan.sh/capability/pkg-syncfusion-react-assistant.html#deprecated-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="deprecated"/>
+    <summary>The publisher is telling installers to stop using it.  Move to the successor named in the deprecation notice.</summary>
+  </entry>
+  <entry>
+    <title>Picahq — mcp now reads as abandoned, was active</title>
+    <link href="https://tashan.sh/capability/pkg-picahq-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-picahq-mcp.html#abandoned-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
     <category term="abandoned"/>
     <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
   </entry>
   <entry>
-    <title>Agents Md · dding-g — agents-md now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/skill-dding-g-agents-md.html"/>
-    <id>https://tashan.sh/capability/skill-dding-g-agents-md.html#abandoned-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
+    <title>Supabase — the tashan score for @supabase/mcp-server-supabase rose to 99.0, from 94.0</title>
+    <link href="https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html"/>
+    <id>https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html#score_moved-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="score_moved"/>
+    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
   </entry>
   <entry>
-    <title>One — @noodleseed/one published 0.132.1, was 0.109.0</title>
-    <link href="https://tashan.sh/capability/pkg-noodleseed-one.html"/>
-    <id>https://tashan.sh/capability/pkg-noodleseed-one.html#version_published-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
+    <title>Supabase — @supabase/mcp-server-supabase published 0.11.0, was 0.10.0</title>
+    <link href="https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html"/>
+    <id>https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
     <category term="version_published"/>
     <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Vercel — the tashan score for vercel rose to 71.0, from 47.0</title>
-    <link href="https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html"/>
-    <id>https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Productmaker — @productmaker/mcp published 3.4.1, was 2.4.0</title>
-    <link href="https://tashan.sh/capability/pkg-productmaker-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-productmaker-mcp.html#version_published-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
+    <title>Context7 — @upstash/context7-mcp published 4.0.3, was 4.0.2</title>
+    <link href="https://tashan.sh/capability/pkg-upstash-context7-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-upstash-context7-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
     <category term="version_published"/>
     <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Agent Hooks — @pushary/agent-hooks published 0.84.0, was 0.78.0</title>
-    <link href="https://tashan.sh/capability/pkg-pushary-agent-hooks.html"/>
-    <id>https://tashan.sh/capability/pkg-pushary-agent-hooks.html#version_published-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
+    <title>Everything — @modelcontextprotocol/server-everything published 2026.8.18, was 2026.7.4</title>
+    <link href="https://tashan.sh/capability/pkg-modelcontextprotocol-server-everything.html"/>
+    <id>https://tashan.sh/capability/pkg-modelcontextprotocol-server-everything.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
     <category term="version_published"/>
     <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Kintone — the tashan score for @kintone/mcp-server rose to 69.0, from 62.0</title>
-    <link href="https://tashan.sh/capability/pkg-kintone-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-kintone-mcp-server.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Cvx — the tashan score for @hrtips/cvx rose to 69.0, from 59.0</title>
-    <link href="https://tashan.sh/capability/pkg-hrtips-cvx.html"/>
-    <id>https://tashan.sh/capability/pkg-hrtips-cvx.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Kbdb — @dikolab/kbdb published 0.16.3, was 0.13.0</title>
-    <link href="https://tashan.sh/capability/pkg-dikolab-kbdb.html"/>
-    <id>https://tashan.sh/capability/pkg-dikolab-kbdb.html#version_published-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
+    <title>Hostinger API — hostinger-api-mcp published 1.45.5, was 1.35.6</title>
+    <link href="https://tashan.sh/capability/pkg-hostinger-api-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-hostinger-api-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
     <category term="version_published"/>
     <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>SQL Preview — the tashan score for sql-preview rose to 68.0, from 60.0</title>
-    <link href="https://tashan.sh/capability/pkg-sql-preview.html"/>
-    <id>https://tashan.sh/capability/pkg-sql-preview.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Oe — the tashan score for oe-mcp rose to 67.0, from 61.0</title>
-    <link href="https://tashan.sh/capability/pkg-openenthrium-oe-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-openenthrium-oe-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Egc — @egchq/egc published 1.1.20, was 1.1.18</title>
-    <link href="https://tashan.sh/capability/pkg-egchq-egc.html"/>
-    <id>https://tashan.sh/capability/pkg-egchq-egc.html#version_published-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
+    <title>Exa — exa-mcp-server published 3.4.1, was 3.4.0</title>
+    <link href="https://tashan.sh/capability/pkg-exa-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-exa-mcp-server.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
     <category term="version_published"/>
     <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
   <entry>
-    <title>Toon Memory — the tashan score for toon-memory fell to 61.0, from 70.0</title>
-    <link href="https://tashan.sh/capability/pkg-toon-memory.html"/>
-    <id>https://tashan.sh/capability/pkg-toon-memory.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
+    <title>Fiori — fiori-mcp-server published 1.11.13, was 1.11.9</title>
+    <link href="https://tashan.sh/capability/pkg-sap-ux-fiori-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-sap-ux-fiori-mcp-server.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Azure — azure published 3.0.0-beta.37, was 3.0.0-beta.35</title>
+    <link href="https://tashan.sh/capability/pkg-azure-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-azure-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Cloudbase — @cloudbase/cloudbase-mcp published 2.31.0, was 2.26.0</title>
+    <link href="https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Figma Console — figma-console-mcp published 1.40.0, was 1.39.1</title>
+    <link href="https://tashan.sh/capability/pkg-figma-console-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-figma-console-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Dbhub — @bytebase/dbhub published 1.2.1, was 1.2.0</title>
+    <link href="https://tashan.sh/capability/pkg-bytebase-dbhub.html"/>
+    <id>https://tashan.sh/capability/pkg-bytebase-dbhub.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Obsidian — obsidian-mcp-server published 3.3.1, was 3.2.12</title>
+    <link href="https://tashan.sh/capability/pkg-obsidian-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-obsidian-mcp-server.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Dev — @shopify/dev-mcp published 1.14.5, was 1.14.4</title>
+    <link href="https://tashan.sh/capability/pkg-shopify-dev-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-shopify-dev-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Argocd — the tashan score for argocd-mcp rose to 80.0, from 73.0</title>
+    <link href="https://tashan.sh/capability/pkg-argocd-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-argocd-mcp.html#score_moved-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
     <category term="score_moved"/>
     <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
   </entry>
   <entry>
-    <title>Sap — the tashan score for sap-mcp fell to 60.0, from 69.0</title>
-    <link href="https://tashan.sh/capability/pkg-oobe-protocol-labs-sap-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-oobe-protocol-labs-sap-mcp-server.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
+    <title>Anki — @ankimcp/anki-mcp-server published 0.24.1, was 0.24.0</title>
+    <link href="https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Xmcp — xmcp published 0.8.0, was 0.6.13</title>
+    <link href="https://tashan.sh/capability/pkg-xmcp.html"/>
+    <id>https://tashan.sh/capability/pkg-xmcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Postman — postman-mcp-server published 2.12.0, was 2.11.2</title>
+    <link href="https://tashan.sh/capability/pkg-postman-postman-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-postman-postman-mcp-server.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Smartbear — smartbear-mcp published 0.37.0, was 0.35.0</title>
+    <link href="https://tashan.sh/capability/pkg-smartbear-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-smartbear-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>MCP Appium - Mobile Development and Automation Server — appium-mcp published 1.92.5, was 1.92.2</title>
+    <link href="https://tashan.sh/capability/pkg-appium-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-appium-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Trusty Squire — trusty-squire published 1.1.12, was 1.1.8</title>
+    <link href="https://tashan.sh/capability/pkg-trusty-squire-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-trusty-squire-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>GitLab — @zereight/mcp-gitlab published 2.1.49, was 2.1.46</title>
+    <link href="https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html"/>
+    <id>https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Semiotic — semiotic published 3.9.1, was 3.8.9</title>
+    <link href="https://tashan.sh/capability/pkg-semiotic.html"/>
+    <id>https://tashan.sh/capability/pkg-semiotic.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Codescene — codescene-mcp-server published 1.4.7, was 1.4.5</title>
+    <link href="https://tashan.sh/capability/pkg-codescene-codehealth-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-codescene-codehealth-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Githits — githits published 0.10.0, was 0.9.2</title>
+    <link href="https://tashan.sh/capability/pkg-githits.html"/>
+    <id>https://tashan.sh/capability/pkg-githits.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>SearXNG Search — mcp-searxng published 2.0.0, was 1.15.0</title>
+    <link href="https://tashan.sh/capability/pkg-mcp-searxng.html"/>
+    <id>https://tashan.sh/capability/pkg-mcp-searxng.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Adeu — adeu published 2.4.1, was 2.4.0</title>
+    <link href="https://tashan.sh/capability/pkg-adeu-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-adeu-mcp-server.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Ts Core — @cyanheads/mcp-ts-core published 0.12.3, was 0.11.5</title>
+    <link href="https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html"/>
+    <id>https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Dokploy — the tashan score for @dokploy/mcp rose to 73.0, from 49.0</title>
+    <link href="https://tashan.sh/capability/pkg-dokploy-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-dokploy-mcp.html#score_moved-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
     <category term="score_moved"/>
     <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
   </entry>
   <entry>
-    <title>Openstreetmap — the tashan score for openstreetmap-mcp-server fell to 60.0, from 67.0</title>
-    <link href="https://tashan.sh/capability/pkg-cyanheads-openstreetmap-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-cyanheads-openstreetmap-mcp-server.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
+    <title>Dokploy — @dokploy/mcp published 0.30.2, was 0.29.14</title>
+    <link href="https://tashan.sh/capability/pkg-dokploy-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-dokploy-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Savvly — savvly published 1.0.90, was 1.0.88</title>
+    <link href="https://tashan.sh/capability/pkg-savvly-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-savvly-mcp-server.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Raven — raven-mcp published 2.5.0, was 2.4.1</title>
+    <link href="https://tashan.sh/capability/pkg-raven-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-raven-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Auto Mobile — auto-mobile published 0.0.60, was 0.0.55</title>
+    <link href="https://tashan.sh/capability/pkg-kaeawc-auto-mobile.html"/>
+    <id>https://tashan.sh/capability/pkg-kaeawc-auto-mobile.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Plur — plur published 0.18.0, was 0.17.2</title>
+    <link href="https://tashan.sh/capability/pkg-plur-ai-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-plur-ai-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Imqueue — mcp published 3.6.0, was 3.5.1</title>
+    <link href="https://tashan.sh/capability/pkg-imqueue-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-imqueue-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Formio — formio-mcp published 0.11.0, was 0.8.4</title>
+    <link href="https://tashan.sh/capability/pkg-formio-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-formio-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Extentos — mcp-server published 0.11.60, was 0.11.56</title>
+    <link href="https://tashan.sh/capability/pkg-extentos-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-extentos-mcp-server.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Respira WordPress — respira-wordpress published 8.3.9, was 8.3.3</title>
+    <link href="https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Homespun — homespun published 1.6.64, was 1.6.61</title>
+    <link href="https://tashan.sh/capability/pkg-homespunapps-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-homespunapps-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Next Finance — next-finance-mcp published 0.9.151, was 0.9.111</title>
+    <link href="https://tashan.sh/capability/pkg-next-finance-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-next-finance-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Datalab Extension — @modootoday/datalab-extension-mcp published 1.9.1, was 1.8.19</title>
+    <link href="https://tashan.sh/capability/pkg-modootoday-datalab-extension-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-modootoday-datalab-extension-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Brilliant Directories — brilliant-directories-mcp published 6.58.608, was 6.58.592</title>
+    <link href="https://tashan.sh/capability/pkg-brilliant-directories-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-brilliant-directories-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Blockrun — blockrun-mcp published 0.40.2, was 0.40.1</title>
+    <link href="https://tashan.sh/capability/pkg-blockrun-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-blockrun-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Tuteliq — mcp published 3.25.0, was 3.22.2</title>
+    <link href="https://tashan.sh/capability/pkg-tuteliq-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-tuteliq-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
+  </entry>
+  <entry>
+    <title>Airbnb — the tashan score for @openbnb/mcp-server-airbnb rose to 70.0, from 50.0</title>
+    <link href="https://tashan.sh/capability/pkg-openbnb-mcp-server-airbnb.html"/>
+    <id>https://tashan.sh/capability/pkg-openbnb-mcp-server-airbnb.html#score_moved-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
     <category term="score_moved"/>
     <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
   </entry>
   <entry>
-    <title>Ofw — the tashan score for ofw-mcp fell to 60.0, from 65.0</title>
-    <link href="https://tashan.sh/capability/pkg-ofw-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-ofw-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Paydirt — the tashan score for paydirt-mcp fell to 58.0, from 67.0</title>
-    <link href="https://tashan.sh/capability/pkg-paydirt-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-paydirt-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Mendapi — the tashan score for mendapi fell to 57.0, from 63.0</title>
-    <link href="https://tashan.sh/capability/pkg-mendapi.html"/>
-    <id>https://tashan.sh/capability/pkg-mendapi.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Sparda — the tashan score for sparda-mcp fell to 56.0, from 64.0</title>
-    <link href="https://tashan.sh/capability/pkg-sparda-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-sparda-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Visual Memory — the tashan score for @putervision/vision-memory-mcp fell to 56.0, from 62.0</title>
-    <link href="https://tashan.sh/capability/pkg-putervision-vision-memory-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-putervision-vision-memory-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Research · alirezarezvani — the tashan score for research rose to 55.0, from 47.0</title>
-    <link href="https://tashan.sh/capability/skill-alirezarezvani-research.html"/>
-    <id>https://tashan.sh/capability/skill-alirezarezvani-research.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Solinkify — the tashan score for mcp fell to 55.0, from 60.0</title>
-    <link href="https://tashan.sh/capability/pkg-solinkify-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-solinkify-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Mal — the tashan score for mal-mcp fell to 55.0, from 63.0</title>
-    <link href="https://tashan.sh/capability/pkg-mal-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-mal-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Brief — the tashan score for brief rose to 54.0, from 47.0</title>
-    <link href="https://tashan.sh/capability/skill-alirezarezvani-brief.html"/>
-    <id>https://tashan.sh/capability/skill-alirezarezvani-brief.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Open State: Camping - Parks Canada — the tashan score for open-state-camping fell to 54.0, from 63.0</title>
-    <link href="https://tashan.sh/capability/pkg-open-state-camping.html"/>
-    <id>https://tashan.sh/capability/pkg-open-state-camping.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>M1nd — the tashan score for @maxkle1nz/m1nd fell to 54.0, from 61.0</title>
-    <link href="https://tashan.sh/capability/pkg-maxkle1nz-m1nd.html"/>
-    <id>https://tashan.sh/capability/pkg-maxkle1nz-m1nd.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Umbra — the tashan score for umbra fell to 54.0, from 68.0</title>
-    <link href="https://tashan.sh/capability/pkg-elberacasa-umbra.html"/>
-    <id>https://tashan.sh/capability/pkg-elberacasa-umbra.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>GIA — Governed Intelligence Architecture — the tashan score for gia-mcp-server fell to 54.0, from 60.0</title>
-    <link href="https://tashan.sh/capability/pkg-gia-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-gia-mcp-server.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Alphacouncil Agent — the tashan score for alphacouncil-agent fell to 54.0, from 67.0</title>
-    <link href="https://tashan.sh/capability/pkg-alphacouncil-agent.html"/>
-    <id>https://tashan.sh/capability/pkg-alphacouncil-agent.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Parseable — the tashan score for parseable-mcp-server fell to 54.0, from 65.0</title>
-    <link href="https://tashan.sh/capability/pkg-parseable-parseable-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-parseable-parseable-mcp-server.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Evite — the tashan score for evite-mcp fell to 54.0, from 60.0</title>
-    <link href="https://tashan.sh/capability/pkg-evite-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-evite-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Systematic Debugging — the tashan score for systematic-debugging fell to 53.0, from 58.0</title>
-    <link href="https://tashan.sh/capability/skill-obra-systematic-debugging.html"/>
-    <id>https://tashan.sh/capability/skill-obra-systematic-debugging.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Crazyseo — the tashan score for crazyseo fell to 53.0, from 59.0</title>
-    <link href="https://tashan.sh/capability/pkg-crazyseo.html"/>
-    <id>https://tashan.sh/capability/pkg-crazyseo.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Substack — the tashan score for substack-mcp fell to 53.0, from 59.0</title>
-    <link href="https://tashan.sh/capability/pkg-conorbronsdon-substack-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-conorbronsdon-substack-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>GadgetHumans API Hub — the tashan score for gadgethumans-mcp fell to 53.0, from 62.0</title>
-    <link href="https://tashan.sh/capability/pkg-gadgethumans-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-gadgethumans-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Codex MCP Bridge — the tashan score for codex-mcp-bridge fell to 53.0, from 60.0</title>
-    <link href="https://tashan.sh/capability/pkg-codex-mcp-bridge.html"/>
-    <id>https://tashan.sh/capability/pkg-codex-mcp-bridge.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Grill With Docs — the tashan score for grill-with-docs rose to 52.0, from 47.0</title>
-    <link href="https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html"/>
-    <id>https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>X402 Pay — the tashan score for mcp-x402-pay fell to 52.0, from 60.0</title>
-    <link href="https://tashan.sh/capability/pkg-cryptoapis-io-mcp-x402-pay.html"/>
-    <id>https://tashan.sh/capability/pkg-cryptoapis-io-mcp-x402-pay.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Leakrank Guard — the tashan score for leakrank-guard fell to 52.0, from 57.0</title>
-    <link href="https://tashan.sh/capability/pkg-leakrank-guard.html"/>
-    <id>https://tashan.sh/capability/pkg-leakrank-guard.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Gency — the tashan score for gency-mcp fell to 52.0, from 61.0</title>
-    <link href="https://tashan.sh/capability/pkg-gency-ai-gency-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-gency-ai-gency-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Claude Account Sync — the tashan score for claude-account-sync fell to 52.0, from 62.0</title>
-    <link href="https://tashan.sh/capability/pkg-claude-account-sync.html"/>
-    <id>https://tashan.sh/capability/pkg-claude-account-sync.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Test Driven Development — the tashan score for test-driven-development fell to 51.0, from 57.0</title>
-    <link href="https://tashan.sh/capability/skill-obra-test-driven-development.html"/>
-    <id>https://tashan.sh/capability/skill-obra-test-driven-development.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Writing Skills — the tashan score for writing-skills fell to 51.0, from 57.0</title>
-    <link href="https://tashan.sh/capability/skill-obra-writing-skills.html"/>
-    <id>https://tashan.sh/capability/skill-obra-writing-skills.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Rapprise — the tashan score for rapprise fell to 51.0, from 60.0</title>
-    <link href="https://tashan.sh/capability/pkg-dinglebear-rapprise.html"/>
-    <id>https://tashan.sh/capability/pkg-dinglebear-rapprise.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>DNS Doctor — the tashan score for dns-doctor fell to 51.0, from 59.0</title>
-    <link href="https://tashan.sh/capability/pkg-dnsdoctor-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-dnsdoctor-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Code Review · flutter — the tashan score for code-review fell to 50.0, from 55.0</title>
-    <link href="https://tashan.sh/capability/skill-flutter-code-review.html"/>
-    <id>https://tashan.sh/capability/skill-flutter-code-review.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Ainative Opencode Memory — the tashan score for ainative-opencode-memory-mcp fell to 50.0, from 57.0</title>
-    <link href="https://tashan.sh/capability/pkg-ainative-opencode-memory-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-ainative-opencode-memory-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Agent Relay — the tashan score for agent-relay fell to 50.0, from 59.0</title>
-    <link href="https://tashan.sh/capability/pkg-cloud1map-agent-relay-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-cloud1map-agent-relay-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
-  </entry>
-  <entry>
-    <title>Qpost — the tashan score for qpost-mcp fell to 49.0, from 57.0</title>
-    <link href="https://tashan.sh/capability/pkg-qpost-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-qpost-mcp.html#score_moved-2026-08-21</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <category term="score_moved"/>
-    <summary>Upkeep, freshness or adoption moved enough to change how this measures.  Informational. A sustained fall is the early shape of abandonment.</summary>
+    <title>Run402 — mcp published 4.24.1, was 4.23.0</title>
+    <link href="https://tashan.sh/capability/pkg-run402-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-run402-mcp.html#version_published-2026-08-22</id>
+    <updated>2026-08-22T00:00:00Z</updated>
+    <category term="version_published"/>
+    <summary>A new release is available.  Upgrade at your convenience; check the advisory row first if one is open.</summary>
   </entry>
 </feed>

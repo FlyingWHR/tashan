@@ -17,12 +17,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Courtlistener](https://tashan.sh/capability/pkg-cyanheads-courtlistener-mcp-server.html) | 57 | 157/wk | active |
 | 5 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 71 | 923/wk | active |
 | 6 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 63 | 284 ★ | active |
-| 7 | [Ris Austria](https://tashan.sh/capability/pkg-cyanheads-ris-austria-mcp-server.html) | 63 | 822/wk | active |
-| 8 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 58 | 27 ★ | active |
-| 9 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 53 | 13 ★ | active |
+| 7 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 58 | 27 ★ | active |
+| 8 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 53 | 13 ★ | active |
+| 9 | [Ris Austria](https://tashan.sh/capability/pkg-cyanheads-ris-austria-mcp-server.html) | 52 | 82/wk | active |
 | 10 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 48 | 73 ★ | active |
-| 11 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 44 | 2k/wk | active |
-| 12 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 43 | 12 ★ | active |
+| 11 | [Secure Sdlc Agents](https://tashan.sh/capability/plugin-kaademos-secure-sdlc-agents-secure-sdlc-agents.html) | 43 | 12 ★ | active |
+| 12 | [Tax Law](https://tashan.sh/capability/pkg-tax-law-mcp.html) | 43 | 2k/wk | active |
 | 13 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 58 | 37 ★ | active |
 | 14 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 46 | 2 marketplaces | — |
 | 15 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 46 | 5 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Capa Officer](https://tashan.sh/capability/skill-alirezarezvani-capa-officer.html) | not scored | 1 repos | active |
 | 40 | [Fda Consultant Specialist](https://tashan.sh/capability/skill-alirezarezvani-fda-consultant-specialist.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 85. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
+Showing the top 40 of 83. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
 
 ## What these numbers are not
 

@@ -36,9 +36,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 69 | 168 ★ | active |
 | 16 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 69 | 1k ★ | active |
 | 17 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 68 | 558 ★ | active |
-| 18 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 67 | 889/wk | active |
-| 19 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 66 | 137 ★ | active |
-| 20 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 66 | 2k/wk | active |
+| 18 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 66 | 137 ★ | active |
+| 19 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 66 | 2k/wk | active |
+| 20 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 66 | 889/wk | active |
 | 21 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 65 | 1k/wk | active |
 | 22 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 63 | 899/wk | active |
 | 23 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 63 | 770/wk | active |
@@ -49,8 +49,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 50 | 73 ★ | active |
 | 29 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 49 | 3 ★ | active |
 | 30 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 49 | 59 ★ | active |
-| 31 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 45 | 7 ★ | active |
-| 32 | [Ultimate SEO Geo](https://tashan.sh/capability/plugin-mykpono-ultimate-seo-geo-ultimate-seo-geo.html) | 44 | 61 ★ | active |
+| 31 | [Ultimate SEO Geo](https://tashan.sh/capability/plugin-mykpono-ultimate-seo-geo-ultimate-seo-geo.html) | 44 | 61 ★ | active |
+| 32 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 44 | 7 ★ | active |
 | 33 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 43 | 3 ★ | active |
 | 34 | [Post Bridge](https://tashan.sh/capability/plugin-post-bridge-hq-agent-mode-post-bridge.html) | 43 | 13 ★ | active |
 | 35 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 43 | 19 ★ | active |
@@ -58,9 +58,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 37 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 42 | 22 ★ | active |
 | 38 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 79 | 12k ★ | active |
 | 39 | [Xrpl Utilities](https://tashan.sh/capability/pkg-xrpl-utilities-mcp.html) | 70 | 2k/wk | active |
-| 40 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 67 | 969/wk | active |
+| 40 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 65 | 484/wk | active |
 
-Showing the top 40 of 176. The full ranked shelf is at https://tashan.sh/role/marketer.html.
+Showing the top 40 of 175. The full ranked shelf is at https://tashan.sh/role/marketer.html.
 
 ## What these numbers are not
 

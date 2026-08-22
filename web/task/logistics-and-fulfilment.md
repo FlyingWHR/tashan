@@ -24,11 +24,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Package Intel](https://tashan.sh/capability/pkg-package-intel-mcp.html) | 60 | 592/wk | active |
 | 12 | [Pingpoint](https://tashan.sh/capability/pkg-suverselabs-pingpoint-mcp.html) | 59 | 258/wk | active |
 | 13 | [Calllint](https://tashan.sh/capability/pkg-calllint.html) | 55 | 65/wk | active |
-| 14 | [Frugal · brainsparker](https://tashan.sh/capability/pkg-frugal-mcp.html) | 48 | 68/wk | active |
-| 15 | [Calllint · calllint-mcp](https://tashan.sh/capability/pkg-calllint-mcp.html) | 47 | 91/wk | active |
-| 16 | [Ship Issue](https://tashan.sh/capability/plugin-smykla-skalski-sai-ship-issue.html) | 42 | 1 marketplaces | — |
-| 17 | [Meridian Skills](https://tashan.sh/capability/pkg-meridian-skills-mcp.html) | not scored | 101/wk | abandoned |
-| 18 | [AWS Spapi](https://tashan.sh/capability/pkg-cesarobedfl-aws-spapi-mcp.html) | 58 | 497/wk | active |
+| 14 | [Gam Seller MCP Node](https://tashan.sh/capability/pkg-gam-seller-mcp-node.html) | 50 | 73/wk | active |
+| 15 | [AIShield Security Scanner](https://tashan.sh/capability/pkg-aishield-mcp-server.html) | 49 | 62/wk | active |
+| 16 | [Frugal · brainsparker](https://tashan.sh/capability/pkg-frugal-mcp.html) | 48 | 68/wk | active |
+| 17 | [Calllint · calllint-mcp](https://tashan.sh/capability/pkg-calllint-mcp.html) | 47 | 91/wk | active |
+| 18 | [Meridian Skills](https://tashan.sh/capability/pkg-meridian-skills-mcp.html) | not scored | 101/wk | abandoned |
+| 19 | [AWS Spapi](https://tashan.sh/capability/pkg-cesarobedfl-aws-spapi-mcp.html) | 58 | 497/wk | active |
 
 ## What these numbers are not
 

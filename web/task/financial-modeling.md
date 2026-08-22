@@ -13,7 +13,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Vulcan](https://tashan.sh/capability/plugin-ellipsis-labs-vulcan-cli-vulcan.html) | 56 | 18 ★ | active |
 | 2 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 59 | 49 ★ | active |
-| 3 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 56 | 17 ★ | active |
+| 3 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 55 | 17 ★ | active |
 | 4 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 54 | 43 ★ | active |
 | 5 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 52 | 12 ★ | active |
 | 6 | [Financial Planner](https://tashan.sh/capability/plugin-cjpatten-canadian-finance-planner-skill-financial-planner.html) | 52 | 43 ★ | active |
@@ -45,14 +45,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Saas Metrics Coach](https://tashan.sh/capability/skill-alirezarezvani-saas-metrics-coach.html) | not scored | 1 repos | active |
 | 33 | [Research Finance](https://tashan.sh/capability/skill-alirezarezvani-research-finance.html) | not scored | 1 repos | active |
 | 34 | [Savvly](https://tashan.sh/capability/pkg-savvly-mcp-server.html) | 73 | 1k/wk | active |
-| 35 | [Lunchmoney](https://tashan.sh/capability/pkg-akutishevsky-lunchmoney-mcp.html) | 67 | 1k/wk | active |
-| 36 | [Actual](https://tashan.sh/capability/pkg-actual-mcp-server.html) | 67 | 962/wk | active |
+| 35 | [Actual](https://tashan.sh/capability/pkg-actual-mcp-server.html) | 67 | 962/wk | active |
+| 36 | [Lunchmoney](https://tashan.sh/capability/pkg-akutishevsky-lunchmoney-mcp.html) | 66 | 1k/wk | active |
 | 37 | [Yahoo Finance](https://tashan.sh/capability/pkg-yahoo-finance-mcp-server.html) | 60 | 589/wk | active |
 | 38 | [Zola](https://tashan.sh/capability/pkg-zola-mcp.html) | 66 | 1k/wk | active |
 | 39 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 58 | 302/wk | active |
 | 40 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 53 | 205/wk | active |
 
-Showing the top 40 of 48. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.
+Showing the top 40 of 49. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.
 
 ## What these numbers are not
 

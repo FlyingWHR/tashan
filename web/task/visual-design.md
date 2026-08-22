@@ -18,8 +18,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Shadcn UI](https://tashan.sh/capability/pkg-jpisnice-shadcn-ui-mcp-server.html) | 71 | 3k/wk | active |
 | 6 | [Microcharts](https://tashan.sh/capability/pkg-microcharts-mcp.html) | 63 | 836/wk | active |
 | 7 | [Drawio](https://tashan.sh/capability/pkg-drawio-mcp-server.html) | 61 | 1k/wk | active |
-| 8 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 59 | 28 ★ | active |
-| 9 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 58 | 302 ★ | active |
+| 8 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 58 | 302 ★ | active |
+| 9 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 58 | 28 ★ | active |
 | 10 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 57 | 40 ★ | active |
 | 11 | [Canva](https://tashan.sh/capability/plugin-canva-sdks-canva-skills-canva.html) | 57 | 53 ★ | active |
 | 12 | [Bridge Ds](https://tashan.sh/capability/plugin-noemuch-bridge-bridge-ds.html) | 52 | 155 ★ | active |
@@ -31,23 +31,23 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Paper Desktop](https://tashan.sh/capability/plugin-paper-design-agent-plugins-paper-desktop.html) | 43 | 11 ★ | active |
 | 19 | [The Design Library](https://tashan.sh/capability/plugin-zeta92-design-library-plugin-the-design-library.html) | 42 | 10 ★ | active |
 | 20 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 63 | 865/wk | active |
-| 21 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 57 | 6 repos | active |
-| 22 | [Brand Guidelines](https://tashan.sh/capability/skill-anthropics-brand-guidelines.html) | 51 | 3 repos | active |
+| 21 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 56 | 6 repos | active |
+| 22 | [Brand Guidelines](https://tashan.sh/capability/skill-anthropics-brand-guidelines.html) | 54 | 5 repos | active |
 | 23 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 51 | 9 ★ | active |
-| 24 | [Design System](https://tashan.sh/capability/skill-alirezarezvani-design-system.html) | 49 | 3 repos | active |
-| 25 | [Canvas Design](https://tashan.sh/capability/skill-anthropics-canvas-design.html) | 48 | 2 repos | active |
-| 26 | [Pluginos Figma Operations Platform](https://tashan.sh/capability/plugin-lsdimi-pluginos-pluginos-figma-operations-platform.html) | 47 | 2 ★ | active |
-| 27 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
-| 28 | [UI Theme Designer](https://tashan.sh/capability/plugin-sap-ui-theme-designer-plugins-for-coding-agents-ui-theme-designer.html) | 45 | 1 ★ | active |
-| 29 | [PDF Forge](https://tashan.sh/capability/plugin-syx-labs-pdf-forge-pdf-forge.html) | 45 | 1 ★ | active |
-| 30 | [S2 Docs](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-s2-docs.html) | 43 | 1 marketplaces | active |
-| 31 | [Design Data](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-design-data.html) | 43 | 1 marketplaces | active |
-| 32 | [Design Data Agent](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-design-data-agent.html) | 43 | 1 marketplaces | active |
-| 33 | [Css Development](https://tashan.sh/capability/plugin-2389-research-claude-plugins-css-development.html) | 42 | 1 marketplaces | — |
-| 34 | [Theme Factory](https://tashan.sh/capability/skill-anthropics-theme-factory.html) | not scored | 1 repos | active |
+| 24 | [Canvas Design](https://tashan.sh/capability/skill-anthropics-canvas-design.html) | 50 | 3 repos | active |
+| 25 | [Theme Factory](https://tashan.sh/capability/skill-anthropics-theme-factory.html) | 48 | 2 repos | active |
+| 26 | [A11y Audit](https://tashan.sh/capability/skill-alirezarezvani-a11y-audit.html) | 47 | 2 repos | active |
+| 27 | [Pluginos Figma Operations Platform](https://tashan.sh/capability/plugin-lsdimi-pluginos-pluginos-figma-operations-platform.html) | 47 | 2 ★ | active |
+| 28 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
+| 29 | [UI Theme Designer](https://tashan.sh/capability/plugin-sap-ui-theme-designer-plugins-for-coding-agents-ui-theme-designer.html) | 45 | 1 ★ | active |
+| 30 | [PDF Forge](https://tashan.sh/capability/plugin-syx-labs-pdf-forge-pdf-forge.html) | 45 | 1 ★ | active |
+| 31 | [Css Development](https://tashan.sh/capability/plugin-2389-research-claude-plugins-css-development.html) | 42 | 1 marketplaces | — |
+| 32 | [S2 Docs](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-s2-docs.html) | 42 | 1 marketplaces | active |
+| 33 | [Design Data](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-design-data.html) | 42 | 1 marketplaces | active |
+| 34 | [Design Data Agent](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-design-data-agent.html) | 42 | 1 marketplaces | active |
 | 35 | [Googleslides Automation](https://tashan.sh/capability/skill-composiohq-googleslides-automation.html) | not scored | 1 repos | active |
-| 36 | [A11y Audit](https://tashan.sh/capability/skill-alirezarezvani-a11y-audit.html) | not scored | 1 repos | active |
-| 37 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | not scored | 1 repos | active |
+| 36 | [Epic Design](https://tashan.sh/capability/skill-alirezarezvani-epic-design.html) | not scored | 1 repos | active |
+| 37 | [Design System · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-design-system.html) | not scored | 1 repos | active |
 | 38 | [Apple Hig Expert](https://tashan.sh/capability/skill-alirezarezvani-apple-hig-expert.html) | not scored | 1 repos | active |
 | 39 | [UI Design System](https://tashan.sh/capability/skill-alirezarezvani-ui-design-system.html) | not scored | 1 repos | active |
 | 40 | [Magicpath](https://tashan.sh/capability/plugin-magicpathai-agent-skills-magicpath.html) | 61 | 84 ★ | active |
