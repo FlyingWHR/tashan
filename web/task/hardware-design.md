@@ -14,8 +14,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) | 71 | 829 ★ | active |
 | 2 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 78 | 13k ★ | active |
 | 3 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 49 | 5 ★ | active |
-| 4 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | 48 | 2 repos | active |
-| 5 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
+| 4 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
+| 5 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |
 | 6 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 61 | 466/wk | active |
 | 7 | [Embedcalc](https://tashan.sh/capability/pkg-embedcalc-mcp.html) | 56 | 208/wk | active |
 | 8 | [Rftools](https://tashan.sh/capability/pkg-rftools-mcp.html) | 50 | 151/wk | active |

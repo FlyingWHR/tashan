@@ -15,10 +15,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | not scored | 1 repos | active |
 | 3 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | not scored | 1 repos | active |
 | 4 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | not scored | 1 repos | active |
-| 5 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 69 | 1k/wk | active |
+| 5 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 68 | 1k/wk | active |
 | 6 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 45 | 43/wk | active |
 | 7 | [Gtm Hiring Signal Scraper](https://tashan.sh/capability/pkg-mambalabsdev-mcp-gtm-hiring-signal-scraper.html) | 44 | 60/wk | active |
-| 8 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 53 | 153/wk | active |
+| 8 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 52 | 153/wk | active |
 | 9 | [Osf Data Marketplace](https://tashan.sh/capability/pkg-osf-data-marketplace.html) | 48 | 47/wk | active |
 | 10 | [Opentrain](https://tashan.sh/capability/pkg-opentrain-ai-mcp.html) | 44 | 65/wk | active |
 | 11 | [VerifyRef](https://tashan.sh/capability/pkg-datalinc-verifyref-mcp.html) | 43 | 58/wk | active |

@@ -29,21 +29,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 66 | 895/wk | active |
 | 9 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 65 | 367/wk | active |
 | 10 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 64 | 905/wk | active |
-| 11 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 61 | 228/wk | active |
-| 12 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 60 | 18 ★ | active |
-| 13 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 60 | 3k ★ | active |
-| 14 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 56 | 32 ★ | active |
-| 15 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 55 | 11 ★ | active |
-| 16 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 55 | 6k/wk | active |
-| 17 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 55 | 35 ★ | active |
+| 11 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 60 | 18 ★ | active |
+| 12 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 60 | 3k ★ | active |
+| 13 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 60 | 228/wk | active |
+| 14 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 55 | 11 ★ | active |
+| 15 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 55 | 6k/wk | active |
+| 16 | [Openweb](https://tashan.sh/capability/plugin-openweb-org-openweb-openweb.html) | 55 | 35 ★ | active |
+| 17 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 55 | 32 ★ | active |
 | 18 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 53 | 121/wk | active |
 | 19 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 52 | 51 ★ | active |
 | 20 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 52 | 7 ★ | active |
-| 21 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 52 | 24 ★ | active |
+| 21 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 51 | 24 ★ | active |
 | 22 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 51 | 6 ★ | active |
 | 23 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 50 | 76 ★ | active |
-| 24 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 50 | 4 ★ | active |
-| 25 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 49 | 12 ★ | active |
+| 24 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 49 | 12 ★ | active |
+| 25 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 49 | 4 ★ | active |
 | 26 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 49 | 143 ★ | active |
 | 27 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 47 | 7 ★ | active |
 | 28 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 47 | 28 ★ | active |
@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-firecrawl-claude-plugin-firecrawl.html) | 68 | 174 ★ | active |
 | 40 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 68 | 284 ★ | active |
 
-Showing the top 40 of 372. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 374. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

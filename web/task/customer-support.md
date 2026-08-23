@@ -25,9 +25,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Connectwise Psa](https://tashan.sh/capability/pkg-mcp-connectwise-psa.html) | 58 | 368/wk | active |
 | 13 | [Eventbrite](https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html) | 55 | 273/wk | active |
 | 14 | [Zd](https://tashan.sh/capability/pkg-zd-mcp-server.html) | 48 | 370/wk | active |
-| 15 | [Quick Desk](https://tashan.sh/capability/pkg-quick-desk-mcp.html) | 54 | 202/wk | active |
+| 15 | [Quick Desk](https://tashan.sh/capability/pkg-quick-desk-mcp.html) | 53 | 202/wk | active |
 | 16 | [Casemargin](https://tashan.sh/capability/pkg-casemargin-mcp-server.html) | 51 | 124/wk | active |
-| 17 | [Freshdesk](https://tashan.sh/capability/pkg-freshdesk-mcp.html) | 44 | 170/wk | active |
+| 17 | [Freshdesk · hashcott](https://tashan.sh/capability/pkg-freshdesk-mcp.html) | 44 | 170/wk | active |
 
 ## What these numbers are not
 

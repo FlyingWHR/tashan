@@ -14,7 +14,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 78 | 13k ★ | active |
 | 2 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 63 | 284 ★ | active |
 | 3 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 45 | 18 ★ | active |
-| 4 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 60 | 612/wk | active |
+| 4 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 59 | 612/wk | active |
 | 5 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 57 | 307/wk | active |
 | 6 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 54 | 138/wk | active |
 | 7 | [Cadlens](https://tashan.sh/capability/pkg-cadlens-mcp-server.html) | 50 | 66/wk | active |

@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 - **Content marketing** — [Save To Spotify](https://tashan.sh/capability/plugin-spotify-save-to-spotify-save-to-spotify.html) · tashan score 71
 - **Technical documentation** — [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) · tashan score 94
-- **Document production** — [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) · tashan score 66
+- **Document production** — [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) · tashan score 65
 - **Copywriting** — [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) · tashan score 74
 
 ## Ranked
@@ -25,7 +25,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 60 | 381 ★ | active |
 | 6 | [SEO Skills](https://tashan.sh/capability/plugin-seranking-seo-skills-seo-skills.html) | 59 | 100 ★ | active |
 | 7 | [Spotify Ads API](https://tashan.sh/capability/plugin-spotify-ads-claude-plugin-spotify-ads-api.html) | 58 | 14 ★ | active |
-| 8 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 56 | 32 ★ | active |
+| 8 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 55 | 32 ★ | active |
 | 9 | [Ru Text](https://tashan.sh/capability/plugin-talkstream-ru-text-ru-text.html) | 54 | 169 ★ | active |
 | 10 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 52 | 123 ★ | active |
 | 11 | [Imqueue](https://tashan.sh/capability/pkg-imqueue-mcp.html) | 72 | 2k/wk | active |
@@ -33,7 +33,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 69 | 1k ★ | active |
 | 14 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 66 | 137 ★ | active |
 | 15 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 66 | 8k/wk | active |
-| 16 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 66 | 519/wk | active |
+| 16 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 65 | 519/wk | active |
 | 17 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 62 | 238 ★ | active |
 | 18 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 62 | 167 ★ | active |
 | 19 | [Drawio](https://tashan.sh/capability/pkg-drawio-mcp-server.html) | 61 | 1k/wk | active |
@@ -47,8 +47,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 49 | 4 ★ | active |
 | 28 | [Jamdesk](https://tashan.sh/capability/plugin-jamdesk-jamdesk-claude-plugin-jamdesk.html) | 48 | 3 ★ | active |
 | 29 | [Sync Docs](https://tashan.sh/capability/plugin-agent-sh-sync-docs-sync-docs.html) | 48 | 3 ★ | active |
-| 30 | [Apple Doc](https://tashan.sh/capability/pkg-apple-doc-mcp-server.html) | 47 | 2k/wk | active |
-| 31 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 46 | 40 ★ | active |
+| 30 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 46 | 40 ★ | active |
+| 31 | [Apple Doc](https://tashan.sh/capability/pkg-apple-doc-mcp-server.html) | 46 | 2k/wk | active |
 | 32 | [Bleu](https://tashan.sh/capability/plugin-nirvaan05-bleu-plugin-bleu.html) | 45 | 3 ★ | active |
 | 33 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 45 | 7k/wk | abandoned |
 | 34 | [Google Sheets](https://tashan.sh/capability/pkg-google-sheets-mcp.html) | 45 | 237/wk | active |
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 42 | 22 ★ | active |
 | 40 | [Vibe Doc](https://tashan.sh/capability/plugin-estevanhernandez-stack-ed-vibe-doc-vibe-doc.html) | 42 | 1 ★ | active |
 
-Showing the top 40 of 200. The full ranked shelf is at https://tashan.sh/role/writer.html.
+Showing the top 40 of 194. The full ranked shelf is at https://tashan.sh/role/writer.html.
 
 ## What these numbers are not
 

@@ -17,7 +17,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Oe](https://tashan.sh/capability/pkg-openenthrium-oe-mcp.html) | 67 | 837/wk | active |
-| 2 | [Ckan](https://tashan.sh/capability/pkg-aborruso-ckan-mcp-server.html) | 66 | 875/wk | active |
+| 2 | [Ckan](https://tashan.sh/capability/pkg-aborruso-ckan-mcp-server.html) | 65 | 875/wk | active |
 | 3 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 59 | 523 ★ | active |
 | 4 | [Orchestra](https://tashan.sh/capability/plugin-orchestra-hq-orchestra-skills-orchestra.html) | 53 | 9 ★ | active |
 | 5 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 52 | 3 ★ | active |
@@ -38,7 +38,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 20 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 61 | 100 ★ | active |
 | 21 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 61 | 41 ★ | active |
 | 22 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 60 | 22 ★ | active |
-| 23 | [Cloud SQL MySQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-mysql-cloud-sql-mysql.html) | 56 | 11 ★ | active |
+| 23 | [Cloud SQL MySQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-mysql-cloud-sql-mysql.html) | 55 | 11 ★ | active |
 | 24 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 54 | 56 ★ | active |
 | 25 | [Cloud SQL Sqlserver](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-sqlserver-cloud-sql-sqlserver.html) | 53 | 7 ★ | active |
 | 26 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 53 | 13 ★ | active |
@@ -55,9 +55,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 37 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 44 | 3 ★ | active |
 | 38 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 43 | 2 marketplaces | active |
 | 39 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 43 | 2 marketplaces | active |
-| 40 | [Sap Abap Cds](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-abap-cds.html) | 42 | 1 marketplaces | — |
+| 40 | [Perf · agent-sh](https://tashan.sh/capability/plugin-agent-sh-perf-perf.html) | 42 | 2 ★ | active |
 
-Showing the top 40 of 77. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
+Showing the top 40 of 71. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
 
 ## What these numbers are not
 

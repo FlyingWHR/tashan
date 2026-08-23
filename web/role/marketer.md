@@ -39,12 +39,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 66 | 137 ★ | active |
 | 19 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 66 | 2k/wk | active |
 | 20 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 66 | 889/wk | active |
-| 21 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 65 | 1k/wk | active |
-| 22 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 63 | 899/wk | active |
-| 23 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 63 | 770/wk | active |
-| 24 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 62 | 238 ★ | active |
-| 25 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 59 | 18 ★ | active |
-| 26 | [Eurostat](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 59 | 214/wk | active |
+| 21 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 63 | 899/wk | active |
+| 22 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 62 | 238 ★ | active |
+| 23 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 62 | 770/wk | active |
+| 24 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 59 | 18 ★ | active |
+| 25 | [Eurostat](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 58 | 214/wk | active |
+| 26 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 57 | 220/wk | active |
 | 27 | [Alphacouncil Agent](https://tashan.sh/capability/pkg-alphacouncil-agent.html) | 54 | 94/wk | active |
 | 28 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 50 | 73 ★ | active |
 | 29 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 49 | 3 ★ | active |
@@ -54,13 +54,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 43 | 3 ★ | active |
 | 34 | [Post Bridge](https://tashan.sh/capability/plugin-post-bridge-hq-agent-mode-post-bridge.html) | 43 | 13 ★ | active |
 | 35 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 43 | 19 ★ | active |
-| 36 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 43 | 4 ★ | active |
-| 37 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 42 | 22 ★ | active |
+| 36 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 42 | 22 ★ | active |
+| 37 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 42 | 4 ★ | active |
 | 38 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 79 | 12k ★ | active |
-| 39 | [Xrpl Utilities](https://tashan.sh/capability/pkg-xrpl-utilities-mcp.html) | 70 | 2k/wk | active |
+| 39 | [Xrpl Utilities](https://tashan.sh/capability/pkg-xrpl-utilities-mcp.html) | 69 | 2k/wk | active |
 | 40 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 65 | 484/wk | active |
 
-Showing the top 40 of 175. The full ranked shelf is at https://tashan.sh/role/marketer.html.
+Showing the top 40 of 174. The full ranked shelf is at https://tashan.sh/role/marketer.html.
 
 ## What these numbers are not
 

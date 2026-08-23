@@ -21,10 +21,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 63 | 284 ★ | active |
 | 4 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 49 | 5 ★ | active |
 | 5 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 45 | 18 ★ | active |
-| 6 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | 48 | 2 repos | active |
-| 7 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
+| 6 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
+| 7 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |
 | 8 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 61 | 466/wk | active |
-| 9 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 60 | 612/wk | active |
+| 9 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 59 | 612/wk | active |
 | 10 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 57 | 307/wk | active |
 | 11 | [Embedcalc](https://tashan.sh/capability/pkg-embedcalc-mcp.html) | 56 | 208/wk | active |
 | 12 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 54 | 138/wk | active |

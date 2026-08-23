@@ -35,7 +35,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 55 | 14 ★ | active |
 | 23 | [Firecrawl Workflows](https://tashan.sh/capability/plugin-firecrawl-firecrawl-workflows-firecrawl-workflows.html) | 52 | 101 ★ | active |
 | 24 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 49 | 21 ★ | active |
-| 25 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 69 | 2k/wk | active |
+| 25 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 68 | 2k/wk | active |
 | 26 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 66 | 594/wk | active |
 | 27 | [Fouradata](https://tashan.sh/capability/pkg-fouradata-mcp.html) | 64 | 255/wk | active |
 | 28 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 63 | 2k/wk | active |
@@ -48,11 +48,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Web Fetcher](https://tashan.sh/capability/pkg-mcp-server-web-fetcher.html) | 47 | 68/wk | active |
 | 36 | [Skim402](https://tashan.sh/capability/pkg-skim-mcp.html) | 47 | 61/wk | active |
 | 37 | [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) | 84 | 25k/wk | active |
-| 38 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
+| 38 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 68 | 518/wk | active |
 | 39 | [Search1api](https://tashan.sh/capability/pkg-search1api-mcp.html) | 65 | 1k/wk | active |
-| 40 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 63 | 436/wk | active |
+| 40 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 62 | 436/wk | active |
 
-Showing the top 40 of 72. The full ranked shelf is at https://tashan.sh/task/web-scraping.html.
+Showing the top 40 of 73. The full ranked shelf is at https://tashan.sh/task/web-scraping.html.
 
 ## What these numbers are not
 

@@ -15,8 +15,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 59 | 49 ★ | active |
 | 3 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 55 | 17 ★ | active |
 | 4 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 54 | 43 ★ | active |
-| 5 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 52 | 12 ★ | active |
-| 6 | [Financial Planner](https://tashan.sh/capability/plugin-cjpatten-canadian-finance-planner-skill-financial-planner.html) | 52 | 43 ★ | active |
+| 5 | [Financial Planner](https://tashan.sh/capability/plugin-cjpatten-canadian-finance-planner-skill-financial-planner.html) | 52 | 43 ★ | active |
+| 6 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 51 | 12 ★ | active |
 | 7 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 49 | 3 ★ | active |
 | 8 | [Datarails Financeos](https://tashan.sh/capability/plugin-datarails-dr-claude-code-plugins-re-datarails-financeos.html) | 48 | 3 ★ | active |
 | 9 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 47 | 45 ★ | active |
@@ -28,31 +28,31 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Carta Cap Table](https://tashan.sh/capability/plugin-carta-plugins-carta-cap-table.html) | 46 | 2 marketplaces | active |
 | 16 | [Carta Investors](https://tashan.sh/capability/plugin-carta-plugins-carta-investors.html) | 46 | 2 marketplaces | active |
 | 17 | [Bigdata Com](https://tashan.sh/capability/plugin-bigdata-com-bigdata-plugins-marketplace-bigdata-com.html) | 45 | 2 ★ | active |
-| 18 | [Sap Sac Planning](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-planning.html) | 42 | 1 marketplaces | — |
-| 19 | [Revenue Operations](https://tashan.sh/capability/skill-alirezarezvani-revenue-operations.html) | not scored | 1 repos | active |
-| 20 | [Capacity Planner](https://tashan.sh/capability/skill-alirezarezvani-capacity-planner.html) | not scored | 1 repos | active |
-| 21 | [Procurement Optimizer](https://tashan.sh/capability/skill-alirezarezvani-procurement-optimizer.html) | not scored | 1 repos | active |
-| 22 | [Cfo Review](https://tashan.sh/capability/skill-alirezarezvani-cfo-review.html) | not scored | 1 repos | active |
-| 23 | [Cfo Advisor](https://tashan.sh/capability/skill-alirezarezvani-cfo-advisor.html) | not scored | 1 repos | active |
-| 24 | [Cro Advisor](https://tashan.sh/capability/skill-alirezarezvani-cro-advisor.html) | not scored | 1 repos | active |
-| 25 | [Ma Playbook](https://tashan.sh/capability/skill-alirezarezvani-ma-playbook.html) | not scored | 1 repos | active |
-| 26 | [Channel Economics](https://tashan.sh/capability/skill-alirezarezvani-channel-economics.html) | not scored | 1 repos | active |
-| 27 | [Commercial Forecaster](https://tashan.sh/capability/skill-alirezarezvani-commercial-forecaster.html) | not scored | 1 repos | active |
-| 28 | [Commercial Skills](https://tashan.sh/capability/skill-alirezarezvani-commercial-skills.html) | not scored | 1 repos | active |
-| 29 | [Business Investment Advisor](https://tashan.sh/capability/skill-alirezarezvani-business-investment-advisor.html) | not scored | 1 repos | active |
-| 30 | [Finance Skills](https://tashan.sh/capability/skill-alirezarezvani-finance-skills.html) | not scored | 1 repos | active |
-| 31 | [Financial Analyst](https://tashan.sh/capability/skill-alirezarezvani-financial-analyst.html) | not scored | 1 repos | active |
-| 32 | [Saas Metrics Coach](https://tashan.sh/capability/skill-alirezarezvani-saas-metrics-coach.html) | not scored | 1 repos | active |
-| 33 | [Research Finance](https://tashan.sh/capability/skill-alirezarezvani-research-finance.html) | not scored | 1 repos | active |
-| 34 | [Savvly](https://tashan.sh/capability/pkg-savvly-mcp-server.html) | 73 | 1k/wk | active |
-| 35 | [Actual](https://tashan.sh/capability/pkg-actual-mcp-server.html) | 67 | 962/wk | active |
-| 36 | [Lunchmoney](https://tashan.sh/capability/pkg-akutishevsky-lunchmoney-mcp.html) | 66 | 1k/wk | active |
-| 37 | [Yahoo Finance](https://tashan.sh/capability/pkg-yahoo-finance-mcp-server.html) | 60 | 589/wk | active |
-| 38 | [Zola](https://tashan.sh/capability/pkg-zola-mcp.html) | 66 | 1k/wk | active |
-| 39 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 58 | 302/wk | active |
-| 40 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 53 | 205/wk | active |
+| 18 | [Revenue Operations](https://tashan.sh/capability/skill-alirezarezvani-revenue-operations.html) | not scored | 1 repos | active |
+| 19 | [Capacity Planner](https://tashan.sh/capability/skill-alirezarezvani-capacity-planner.html) | not scored | 1 repos | active |
+| 20 | [Procurement Optimizer](https://tashan.sh/capability/skill-alirezarezvani-procurement-optimizer.html) | not scored | 1 repos | active |
+| 21 | [Cfo Review](https://tashan.sh/capability/skill-alirezarezvani-cfo-review.html) | not scored | 1 repos | active |
+| 22 | [Cfo Advisor](https://tashan.sh/capability/skill-alirezarezvani-cfo-advisor.html) | not scored | 1 repos | active |
+| 23 | [Cro Advisor](https://tashan.sh/capability/skill-alirezarezvani-cro-advisor.html) | not scored | 1 repos | active |
+| 24 | [Ma Playbook](https://tashan.sh/capability/skill-alirezarezvani-ma-playbook.html) | not scored | 1 repos | active |
+| 25 | [Channel Economics](https://tashan.sh/capability/skill-alirezarezvani-channel-economics.html) | not scored | 1 repos | active |
+| 26 | [Commercial Forecaster](https://tashan.sh/capability/skill-alirezarezvani-commercial-forecaster.html) | not scored | 1 repos | active |
+| 27 | [Commercial Skills](https://tashan.sh/capability/skill-alirezarezvani-commercial-skills.html) | not scored | 1 repos | active |
+| 28 | [Business Investment Advisor](https://tashan.sh/capability/skill-alirezarezvani-business-investment-advisor.html) | not scored | 1 repos | active |
+| 29 | [Finance Skills](https://tashan.sh/capability/skill-alirezarezvani-finance-skills.html) | not scored | 1 repos | active |
+| 30 | [Financial Analyst](https://tashan.sh/capability/skill-alirezarezvani-financial-analyst.html) | not scored | 1 repos | active |
+| 31 | [Saas Metrics Coach](https://tashan.sh/capability/skill-alirezarezvani-saas-metrics-coach.html) | not scored | 1 repos | active |
+| 32 | [Research Finance](https://tashan.sh/capability/skill-alirezarezvani-research-finance.html) | not scored | 1 repos | active |
+| 33 | [Savvly](https://tashan.sh/capability/pkg-savvly-mcp-server.html) | 73 | 1k/wk | active |
+| 34 | [Actual](https://tashan.sh/capability/pkg-actual-mcp-server.html) | 67 | 962/wk | active |
+| 35 | [Lunchmoney](https://tashan.sh/capability/pkg-akutishevsky-lunchmoney-mcp.html) | 66 | 1k/wk | active |
+| 36 | [Yahoo Finance](https://tashan.sh/capability/pkg-yahoo-finance-mcp-server.html) | 60 | 589/wk | active |
+| 37 | [Zola](https://tashan.sh/capability/pkg-zola-mcp.html) | 66 | 1k/wk | active |
+| 38 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 57 | 302/wk | active |
+| 39 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 53 | 205/wk | active |
+| 40 | [Evidinvest](https://tashan.sh/capability/pkg-evidinvest-mcp-server.html) | 49 | 81/wk | active |
 
-Showing the top 40 of 49. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.
+Showing the top 40 of 48. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.
 
 ## What these numbers are not
 

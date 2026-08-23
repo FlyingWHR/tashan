@@ -3,10 +3,10 @@
  "all": {
   "full": 1143,
   "grade": 3809,
-  "n": 56768,
-  "scan": 7345,
-  "score": 25786,
-  "task": 3591
+  "n": 57534,
+  "scan": 7420,
+  "score": 26996,
+  "task": 3627
  },
  "axes": [
   {
@@ -31,10 +31,10 @@
   }
  ],
  "headline": {
-  "graded_pct": 50,
+  "graded_pct": 47,
   "scanned_pct": 100,
-  "scored_pct": 98,
-  "tasked_pct": 62,
+  "scored_pct": 99,
+  "tasked_pct": 61,
   "tier": "top1000"
  },
  "queue": [
@@ -111,16 +111,7 @@
    "name": "@ui5/mcp-server"
   },
   {
-   "downloads": 106528,
-   "id": "pkg:@azure/mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "azure"
-  },
-  {
-   "downloads": 103652,
+   "downloads": 106870,
    "id": "pkg:agentation-mcp",
    "kind": "npm",
    "missing": [
@@ -128,6 +119,15 @@
     "task"
    ],
    "name": "agentation-mcp"
+  },
+  {
+   "downloads": 106528,
+   "id": "pkg:@azure/mcp",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "azure"
   },
   {
    "downloads": 102778,
@@ -197,15 +197,6 @@
    "name": "@swmansion/argent"
   },
   {
-   "downloads": 43551,
-   "id": "pkg:metaharness",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "metaharness"
-  },
-  {
    "downloads": 43488,
    "id": "pkg:@cloudflare/mcp-server-cloudflare",
    "kind": "npm",
@@ -232,6 +223,15 @@
     "task"
    ],
    "name": "@transcend-io/mcp-server-consent"
+  },
+  {
+   "downloads": 38512,
+   "id": "pkg:metaharness",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "metaharness"
   },
   {
    "downloads": 36566,
@@ -393,6 +393,15 @@
    "name": "context-mode"
   },
   {
+   "downloads": 18288,
+   "id": "pkg:@cloudbase/cloudbase-mcp",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "@cloudbase/cloudbase-mcp"
+  },
+  {
    "downloads": 18229,
    "id": "pkg:@agentmemory/mcp",
    "kind": "npm",
@@ -401,34 +410,24 @@
     "task"
    ],
    "name": "@agentmemory/mcp"
-  },
-  {
-   "downloads": 17521,
-   "id": "pkg:@the-next-ai/ai-gateway",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@the-next-ai/ai-gateway"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 48,
-   "grade": 54,
+   "full": 49,
+   "grade": 55,
    "n": 100,
    "scan": 100,
    "score": 95,
-   "task": 78
+   "task": 79
   },
   "top1000": {
-   "full": 393,
-   "grade": 498,
+   "full": 376,
+   "grade": 473,
    "n": 1000,
    "scan": 1000,
-   "score": 985,
-   "task": 619
+   "score": 986,
+   "task": 612
   }
  }
 }

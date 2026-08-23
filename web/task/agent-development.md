@@ -28,14 +28,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 73 | 13k/wk | active |
 | 16 | [Create MCP Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 73 | 1k/wk | active |
 | 17 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 71 | 426 ★ | active |
-| 18 | [Keryx](https://tashan.sh/capability/pkg-keryx.html) | 70 | 2k/wk | active |
-| 19 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 69 | 482 ★ | active |
+| 18 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 69 | 482 ★ | active |
+| 19 | [Keryx](https://tashan.sh/capability/pkg-keryx.html) | 69 | 2k/wk | active |
 | 20 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 69 | 2k/wk | active |
 | 21 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 68 | 93 ★ | active |
 | 22 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 63 | 68 ★ | active |
 | 23 | [Clawcode](https://tashan.sh/capability/plugin-crisandrews-clawcode-clawcode.html) | 62 | 61 ★ | active |
-| 24 | [Network AI](https://tashan.sh/capability/plugin-jovancoding-network-ai-network-ai.html) | 62 | 70 ★ | active |
-| 25 | [Parser](https://tashan.sh/capability/pkg-mcp-parser.html) | 62 | 1k/wk | active |
+| 24 | [Parser](https://tashan.sh/capability/pkg-mcp-parser.html) | 62 | 1k/wk | active |
+| 25 | [Network AI](https://tashan.sh/capability/plugin-jovancoding-network-ai-network-ai.html) | 61 | 70 ★ | active |
 | 26 | [Gangsta](https://tashan.sh/capability/plugin-kucherenko-gangsta-gangsta.html) | 60 | 67 ★ | active |
 | 27 | [Equilateral Agents Open Core](https://tashan.sh/capability/plugin-equilateral-ai-equilateral-agents-open-core-equilateral-agents-open-core.html) | 60 | 59 ★ | active |
 | 28 | [Claude Session Driver](https://tashan.sh/capability/plugin-obra-claude-session-driver-claude-session-driver.html) | 60 | 101 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Mnemopay](https://tashan.sh/capability/plugin-mnemopay-mnemopay-sdk-mnemopay.html) | 47 | 6 ★ | active |
 | 40 | [Sanctuary Framework](https://tashan.sh/capability/plugin-eriknewton-sanctuary-framework-sanctuary-framework.html) | 47 | 6 ★ | active |
 
-Showing the top 40 of 350. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
+Showing the top 40 of 360. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
 
 ## What these numbers are not
 

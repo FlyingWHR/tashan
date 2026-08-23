@@ -19,12 +19,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Project Knowledge](https://tashan.sh/capability/pkg-project-knowledge.html) | 61 | 182/wk | active |
 | 7 | [Gitpin](https://tashan.sh/capability/pkg-gitpin.html) | 56 | 208/wk | active |
 | 8 | [Udacity Commit](https://tashan.sh/capability/pkg-mcp-udacity-commit.html) | 48 | 50/wk | active |
-| 9 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 46 | 66/wk | active |
-| 10 | [Weavatrix Git](https://tashan.sh/capability/pkg-weavatrix-git.html) | 46 | 62/wk | active |
-| 11 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 68 | 1k/wk | active |
-| 12 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 57 | 171/wk | active |
-| 13 | [Quilt](https://tashan.sh/capability/pkg-quilt-dev-cli.html) | 56 | 119/wk | active |
-| 14 | [General](https://tashan.sh/capability/plugin-kingstinct-github-general.html) | 42 | 1 marketplaces | — |
+| 9 | [Weavatrix Git](https://tashan.sh/capability/pkg-weavatrix-git.html) | 46 | 62/wk | active |
+| 10 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 45 | 66/wk | active |
+| 11 | [Gitwand](https://tashan.sh/capability/pkg-gitwand-mcp.html) | 69 | 1k/wk | active |
+| 12 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 68 | 1k/wk | active |
+| 13 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 57 | 171/wk | active |
+| 14 | [Quilt](https://tashan.sh/capability/pkg-quilt-dev-cli.html) | 56 | 119/wk | active |
 | 15 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 43 | 71/wk | active |
 | 16 | [Bitbucket · shyamayadav154](https://tashan.sh/capability/pkg-mcp-bitbucket.html) | 43 | 37/wk | active |
 

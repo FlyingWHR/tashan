@@ -16,8 +16,8 @@ Ranked by the tashan score
 | 3 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 80 | 31k/wk | active |
 | 4 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 78 | 54k ★ | active |
 | 5 | [Brave Search](https://tashan.sh/capability/pkg-brave-brave-search-mcp-server.html) | 78 | 16k/wk | active |
-| 6 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 75 | 5k ★ | active |
-| 7 | [SearXNG Search](https://tashan.sh/capability/pkg-mcp-searxng.html) | 75 | 30k/wk | active |
+| 6 | [SearXNG Search](https://tashan.sh/capability/pkg-mcp-searxng.html) | 76 | 21k/wk | active |
+| 7 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 75 | 5k ★ | active |
 | 8 | [Digitalocean](https://tashan.sh/capability/pkg-digitalocean-mcp.html) | 74 | 2k/wk | active |
 | 9 | [Nirvana](https://tashan.sh/capability/pkg-nirvana-labs-nirvana-mcp.html) | 73 | 874/wk | active |
 | 10 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 71 | 1k ★ | active |
@@ -39,20 +39,20 @@ Ranked by the tashan score
 | 26 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 65 | 911/wk | active |
 | 27 | [Clipy](https://tashan.sh/capability/pkg-clipy-mcp.html) | 65 | 506/wk | active |
 | 28 | [Leadbay](https://tashan.sh/capability/pkg-leadbay-mcp.html) | 65 | 457/wk | active |
-| 29 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 65 | 367/wk | active |
-| 30 | [Brave Search Skills](https://tashan.sh/capability/plugin-brave-brave-search-skills-brave-search-skills.html) | 64 | 161 ★ | active |
-| 31 | [Gongio](https://tashan.sh/capability/pkg-gongio-mcp.html) | 64 | 1k/wk | active |
-| 32 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 64 | 504/wk | active |
+| 29 | [Searxng MCP Bridge](https://tashan.sh/capability/pkg-nitish-raj-searxng-mcp-bridge.html) | 65 | 451/wk | active |
+| 30 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 65 | 367/wk | active |
+| 31 | [Brave Search Skills](https://tashan.sh/capability/plugin-brave-brave-search-skills-brave-search-skills.html) | 64 | 161 ★ | active |
+| 32 | [Gongio](https://tashan.sh/capability/pkg-gongio-mcp.html) | 64 | 1k/wk | active |
 | 33 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 63 | 50 ★ | active |
-| 34 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 63 | 436/wk | active |
+| 34 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 63 | 504/wk | active |
 | 35 | [Autosearch](https://tashan.sh/capability/plugin-0xmariowu-autosearch-autosearch.html) | 62 | 41 ★ | active |
-| 36 | [Freshrss](https://tashan.sh/capability/pkg-ni-c-freshrss-mcp.html) | 62 | 562/wk | active |
+| 36 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 62 | 436/wk | active |
 | 37 | [Dossier Research](https://tashan.sh/capability/pkg-dossier-research-mcp.html) | 62 | 430/wk | active |
 | 38 | [Read Website Fast](https://tashan.sh/capability/pkg-just-every-mcp-read-website-fast.html) | 62 | 381/wk | active |
 | 39 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 62 | 347/wk | active |
-| 40 | [Linkup](https://tashan.sh/capability/pkg-linkup-mcp-server.html) | 61 | 348/wk | active |
+| 40 | [Freshrss](https://tashan.sh/capability/pkg-ni-c-freshrss-mcp.html) | 61 | 562/wk | active |
 
-Showing the top 40 of 264. The full ranked shelf is at https://tashan.sh/category/search.html.
+Showing the top 40 of 304. The full ranked shelf is at https://tashan.sh/category/search.html.
 
 ## What these numbers are not
 

@@ -12,7 +12,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Oe](https://tashan.sh/capability/pkg-openenthrium-oe-mcp.html) | 67 | 837/wk | active |
-| 2 | [Ckan](https://tashan.sh/capability/pkg-aborruso-ckan-mcp-server.html) | 66 | 875/wk | active |
+| 2 | [Ckan](https://tashan.sh/capability/pkg-aborruso-ckan-mcp-server.html) | 65 | 875/wk | active |
 | 3 | [Orchestra](https://tashan.sh/capability/plugin-orchestra-hq-orchestra-skills-orchestra.html) | 53 | 9 ★ | active |
 | 4 | [ClickHouse Best Practices](https://tashan.sh/capability/plugin-clickhouse-agent-skills-clickhouse-best-practices.html) | 73 | 498 ★ | active |
 | 5 | [Databricks](https://tashan.sh/capability/plugin-databricks-databricks-agent-skills-databricks.html) | 70 | 228 ★ | active |
@@ -31,26 +31,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 44 | 3 ★ | active |
 | 19 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 43 | 2 marketplaces | active |
 | 20 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 43 | 2 marketplaces | active |
-| 21 | [Sap Abap Cds](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-abap-cds.html) | 42 | 1 marketplaces | — |
-| 22 | [Sap Btp Master Data Integration](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-master-data-integration.html) | 42 | 1 marketplaces | — |
-| 23 | [Sap Datasphere](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-datasphere.html) | 42 | 1 marketplaces | — |
-| 24 | [Sap Hana Cloud Data Intelligence](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cloud-data-intelligence.html) | 42 | 1 marketplaces | — |
-| 25 | [Cdo Review](https://tashan.sh/capability/skill-alirezarezvani-cdo-review.html) | not scored | 1 repos | active |
-| 26 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | not scored | 1 repos | active |
-| 27 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | not scored | 1 repos | active |
-| 28 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | not scored | 1 repos | active |
-| 29 | [Universal Scraping Architect](https://tashan.sh/capability/skill-alirezarezvani-universal-scraping-architect.html) | not scored | 1 repos | active |
-| 30 | [Oe · openenterprise](https://tashan.sh/capability/pkg-openenterprise-oe-mcp.html) | not scored | 2k/wk | abandoned |
-| 31 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 59 | 25 ★ | active |
-| 32 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 57 | 32 ★ | active |
-| 33 | [Bigtable](https://tashan.sh/capability/plugin-googlecloudplatform-cloud-bigtable-ecosystem-bigtable.html) | 56 | 20 ★ | active |
-| 34 | [Versori Skills](https://tashan.sh/capability/plugin-versori-cli-versori-skills.html) | 54 | 12 ★ | active |
-| 35 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 51 | 6 ★ | active |
-| 36 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 44 | 3 ★ | active |
-| 37 | [Sales](https://tashan.sh/capability/pkg-autostackup-sales.html) | 43 | 62/wk | active |
-| 38 | [Launch Kit](https://tashan.sh/capability/pkg-launchsecure-launch-kit.html) | 70 | 2k/wk | active |
-| 39 | [Agentic Kdd](https://tashan.sh/capability/pkg-agentic-kdd.html) | 60 | 243/wk | active |
-| 40 | [Dpf It](https://tashan.sh/capability/pkg-dpf-it-mcp-server.html) | not scored | 93/wk | abandoned |
+| 21 | [Cdo Review](https://tashan.sh/capability/skill-alirezarezvani-cdo-review.html) | not scored | 1 repos | active |
+| 22 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | not scored | 1 repos | active |
+| 23 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | not scored | 1 repos | active |
+| 24 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | not scored | 1 repos | active |
+| 25 | [Universal Scraping Architect](https://tashan.sh/capability/skill-alirezarezvani-universal-scraping-architect.html) | not scored | 1 repos | active |
+| 26 | [Oe · openenterprise](https://tashan.sh/capability/pkg-openenterprise-oe-mcp.html) | not scored | 2k/wk | abandoned |
+| 27 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 59 | 25 ★ | active |
+| 28 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 57 | 32 ★ | active |
+| 29 | [Bigtable](https://tashan.sh/capability/plugin-googlecloudplatform-cloud-bigtable-ecosystem-bigtable.html) | 56 | 20 ★ | active |
+| 30 | [Versori Skills](https://tashan.sh/capability/plugin-versori-cli-versori-skills.html) | 53 | 12 ★ | active |
+| 31 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 51 | 6 ★ | active |
+| 32 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 44 | 3 ★ | active |
+| 33 | [Sales](https://tashan.sh/capability/pkg-autostackup-sales.html) | 43 | 62/wk | active |
+| 34 | [Launch Kit](https://tashan.sh/capability/pkg-launchsecure-launch-kit.html) | 70 | 2k/wk | active |
+| 35 | [Agentic Kdd](https://tashan.sh/capability/pkg-agentic-kdd.html) | 60 | 243/wk | active |
+| 36 | [Dpf It](https://tashan.sh/capability/pkg-dpf-it-mcp-server.html) | not scored | 93/wk | abandoned |
 
 ## What these numbers are not
 

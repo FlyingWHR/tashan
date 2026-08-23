@@ -13,16 +13,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 71 | 923/wk | active |
 | 2 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 66 | 326 ★ | active |
-| 3 | [Challenge](https://tashan.sh/capability/skill-alirezarezvani-challenge.html) | 47 | 2 repos | active |
-| 4 | [Red Team](https://tashan.sh/capability/skill-alirezarezvani-red-team.html) | 47 | 2 repos | active |
-| 5 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 46 | 5 ★ | active |
-| 6 | [Clover](https://tashan.sh/capability/plugin-clover-security-clover-claude-plugin-clover.html) | 42 | 0 ★ | active |
-| 7 | [Vendor Management](https://tashan.sh/capability/skill-alirezarezvani-vendor-management.html) | not scored | 1 repos | active |
-| 8 | [Hard Call](https://tashan.sh/capability/skill-alirezarezvani-hard-call.html) | not scored | 1 repos | active |
-| 9 | [Stress Test](https://tashan.sh/capability/skill-alirezarezvani-stress-test.html) | not scored | 1 repos | active |
-| 10 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | not scored | 1 repos | active |
-| 11 | [Scenario War Room](https://tashan.sh/capability/skill-alirezarezvani-scenario-war-room.html) | not scored | 1 repos | active |
-| 12 | [AI Security](https://tashan.sh/capability/skill-alirezarezvani-ai-security.html) | not scored | 1 repos | active |
+| 3 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 45 | 5 ★ | active |
+| 4 | [Clover](https://tashan.sh/capability/plugin-clover-security-clover-claude-plugin-clover.html) | 42 | 0 ★ | active |
+| 5 | [Vendor Management](https://tashan.sh/capability/skill-alirezarezvani-vendor-management.html) | not scored | 1 repos | active |
+| 6 | [Challenge](https://tashan.sh/capability/skill-alirezarezvani-challenge.html) | not scored | 1 repos | active |
+| 7 | [Hard Call](https://tashan.sh/capability/skill-alirezarezvani-hard-call.html) | not scored | 1 repos | active |
+| 8 | [Stress Test](https://tashan.sh/capability/skill-alirezarezvani-stress-test.html) | not scored | 1 repos | active |
+| 9 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | not scored | 1 repos | active |
+| 10 | [Scenario War Room](https://tashan.sh/capability/skill-alirezarezvani-scenario-war-room.html) | not scored | 1 repos | active |
+| 11 | [AI Security](https://tashan.sh/capability/skill-alirezarezvani-ai-security.html) | not scored | 1 repos | active |
+| 12 | [Red Team](https://tashan.sh/capability/skill-alirezarezvani-red-team.html) | not scored | 1 repos | active |
 | 13 | [Senior Security](https://tashan.sh/capability/skill-alirezarezvani-senior-security.html) | not scored | 1 repos | active |
 | 14 | [Senior Pm](https://tashan.sh/capability/skill-alirezarezvani-senior-pm.html) | not scored | 1 repos | active |
 | 15 | [Iso42001 Specialist](https://tashan.sh/capability/skill-alirezarezvani-iso42001-specialist.html) | not scored | 1 repos | active |

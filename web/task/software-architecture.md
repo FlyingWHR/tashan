@@ -40,19 +40,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Feature Dev](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-feature-dev.html) | 42 | 1 marketplaces | — |
 | 28 | [Greptile](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-greptile.html) | 42 | 1 marketplaces | — |
 | 29 | [Building Multiagent Systems](https://tashan.sh/capability/plugin-2389-research-claude-plugins-building-multiagent-systems.html) | 42 | 1 marketplaces | — |
-| 30 | [Gitnexus · Roxabi](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-gitnexus.html) | 42 | 1 marketplaces | active |
-| 31 | [Sap Btp Best Practices](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-best-practices.html) | 42 | 1 marketplaces | — |
-| 32 | [Cto Review](https://tashan.sh/capability/skill-alirezarezvani-cto-review.html) | not scored | 1 repos | active |
-| 33 | [Cto Advisor](https://tashan.sh/capability/skill-alirezarezvani-cto-advisor.html) | not scored | 1 repos | active |
-| 34 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | not scored | 1 repos | active |
-| 35 | [Azure Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-azure-cloud-architect.html) | not scored | 1 repos | active |
-| 36 | [GCP Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-gcp-cloud-architect.html) | not scored | 1 repos | active |
-| 37 | [Senior Architect](https://tashan.sh/capability/skill-alirezarezvani-senior-architect.html) | not scored | 1 repos | active |
-| 38 | [Senior Backend](https://tashan.sh/capability/skill-alirezarezvani-senior-backend.html) | not scored | 1 repos | active |
-| 39 | [Tech Stack Evaluator](https://tashan.sh/capability/skill-alirezarezvani-tech-stack-evaluator.html) | not scored | 1 repos | active |
-| 40 | [Agent Designer](https://tashan.sh/capability/skill-alirezarezvani-agent-designer.html) | not scored | 1 repos | active |
+| 30 | [Cto Review](https://tashan.sh/capability/skill-alirezarezvani-cto-review.html) | not scored | 1 repos | active |
+| 31 | [Cto Advisor](https://tashan.sh/capability/skill-alirezarezvani-cto-advisor.html) | not scored | 1 repos | active |
+| 32 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | not scored | 1 repos | active |
+| 33 | [Azure Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-azure-cloud-architect.html) | not scored | 1 repos | active |
+| 34 | [GCP Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-gcp-cloud-architect.html) | not scored | 1 repos | active |
+| 35 | [Senior Architect](https://tashan.sh/capability/skill-alirezarezvani-senior-architect.html) | not scored | 1 repos | active |
+| 36 | [Senior Backend](https://tashan.sh/capability/skill-alirezarezvani-senior-backend.html) | not scored | 1 repos | active |
+| 37 | [Tech Stack Evaluator](https://tashan.sh/capability/skill-alirezarezvani-tech-stack-evaluator.html) | not scored | 1 repos | active |
+| 38 | [Agent Designer](https://tashan.sh/capability/skill-alirezarezvani-agent-designer.html) | not scored | 1 repos | active |
+| 39 | [API Design Reviewer](https://tashan.sh/capability/skill-alirezarezvani-api-design-reviewer.html) | not scored | 1 repos | active |
+| 40 | [Database Designer](https://tashan.sh/capability/skill-alirezarezvani-database-designer.html) | not scored | 1 repos | active |
 
-Showing the top 40 of 53. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
+Showing the top 40 of 52. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
 
 ## What these numbers are not
 

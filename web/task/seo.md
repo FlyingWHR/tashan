@@ -35,7 +35,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [SEO Audit Console](https://tashan.sh/capability/pkg-houtini-seo-audit-console.html) | 57 | 355/wk | active |
 | 23 | [Content Genie](https://tashan.sh/capability/pkg-content-genie-mcp.html) | 49 | 87/wk | active |
 | 24 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 64 | 609/wk | active |
-| 25 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 64 | 504/wk | active |
+| 25 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 63 | 504/wk | active |
 | 26 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 62 | 351/wk | active |
 | 27 | [Bisibility](https://tashan.sh/capability/pkg-bisibility-mcp.html) | 60 | 289/wk | active |
 | 28 | [Saglitzdesign](https://tashan.sh/capability/pkg-saglitzdesign-mcp.html) | 59 | 338/wk | active |
@@ -47,12 +47,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 34 | [AI SEO](https://tashan.sh/capability/pkg-automatelab-ai-seo-mcp.html) | 47 | 140/wk | active |
 | 35 | [SEO Tools](https://tashan.sh/capability/pkg-seodesignlab-mcp-server.html) | 45 | 61/wk | active |
 | 36 | [Xiaoflow](https://tashan.sh/capability/pkg-xiaoflow-mcp-server.html) | 45 | 38/wk | active |
-| 37 | [Suganthan Gsc](https://tashan.sh/capability/pkg-suganthan-gsc-mcp.html) | 44 | 2k/wk | active |
+| 37 | [Suganthan Gsc](https://tashan.sh/capability/pkg-suganthan-gsc-mcp.html) | 43 | 1k/wk | active |
 | 38 | [SEO Performance](https://tashan.sh/capability/pkg-automatelab-seo-performance-mcp.html) | 43 | 89/wk | active |
 | 39 | [Yandex Webmaster · theyahia](https://tashan.sh/capability/pkg-theyahia-yandex-webmaster-mcp.html) | 43 | 46/wk | active |
 | 40 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 72 | 3k ★ | active |
 
-Showing the top 40 of 54. The full ranked shelf is at https://tashan.sh/task/seo.html.
+Showing the top 40 of 53. The full ranked shelf is at https://tashan.sh/task/seo.html.
 
 ## What these numbers are not
 

@@ -11,10 +11,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Ios Simulator](https://tashan.sh/capability/pkg-ios-simulator-mcp.html) | 73 | 10k/wk | active |
-| 2 | [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) | 71 | 4k/wk | active |
+| 1 | [Ios Simulator](https://tashan.sh/capability/pkg-ios-simulator-mcp.html) | 72 | 10k/wk | active |
+| 2 | [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) | 70 | 4k/wk | active |
 | 3 | [Unicli](https://tashan.sh/capability/plugin-yucchiy-unicli-unicli.html) | 68 | 248 ★ | active |
-| 4 | [Asc](https://tashan.sh/capability/pkg-pofky-asc-mcp.html) | 66 | 2k/wk | active |
+| 4 | [Asc · pofky](https://tashan.sh/capability/pkg-pofky-asc-mcp.html) | 58 | 177/wk | active |
 | 5 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 56 | 18 ★ | active |
 | 6 | [Scandit SDK](https://tashan.sh/capability/plugin-scandit-scandit-sdk-skills-scandit-sdk.html) | 56 | 15 ★ | active |
 | 7 | [Suiper](https://tashan.sh/capability/plugin-pivyme-suiperpower-suiper.html) | 54 | 12 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Tricorder](https://tashan.sh/capability/plugin-tweag-tricorder-tricorder.html) | 60 | 38 ★ | active |
 | 40 | [Delphi Dev](https://tashan.sh/capability/plugin-adrianosantostreina-delphi-dev-delphi-dev.html) | 59 | 71 ★ | active |
 
-Showing the top 40 of 239. The full ranked shelf is at https://tashan.sh/task/application-development.html.
+Showing the top 40 of 222. The full ranked shelf is at https://tashan.sh/task/application-development.html.
 
 ## What these numbers are not
 

@@ -21,8 +21,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Paid Ads](https://tashan.sh/capability/skill-alirezarezvani-paid-ads.html) | not scored | 1 repos | active |
 | 9 | [Social Media Analyzer](https://tashan.sh/capability/skill-alirezarezvani-social-media-analyzer.html) | not scored | 1 repos | active |
 | 10 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 49 | 5 ★ | active |
-| 11 | [Humansurvey](https://tashan.sh/capability/pkg-humansurvey-mcp.html) | 51 | 60/wk | active |
-| 12 | [Marketic](https://tashan.sh/capability/pkg-marketic-mcp.html) | 43 | 19/wk | active |
+| 11 | [Humansurvey](https://tashan.sh/capability/pkg-humansurvey-mcp.html) | 50 | 60/wk | active |
 
 ## What these numbers are not
 

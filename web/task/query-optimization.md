@@ -23,28 +23,26 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 64 | 47 ★ | active |
 | 11 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 61 | 41 ★ | active |
 | 12 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 60 | 22 ★ | active |
-| 13 | [Cloud SQL MySQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-mysql-cloud-sql-mysql.html) | 56 | 11 ★ | active |
+| 13 | [Cloud SQL MySQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-mysql-cloud-sql-mysql.html) | 55 | 11 ★ | active |
 | 14 | [Cloud SQL Sqlserver](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-sqlserver-cloud-sql-sqlserver.html) | 53 | 7 ★ | active |
 | 15 | [Alloydb Omni](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-omni-alloydb-omni.html) | 51 | 4 ★ | active |
 | 16 | [Azure Cosmos DB Assistant](https://tashan.sh/capability/plugin-azurecosmosdb-cosmosdb-claude-code-plugin-azure-cosmos-db-assistant.html) | 48 | 2 ★ | active |
 | 17 | [Perf · agent-sh](https://tashan.sh/capability/plugin-agent-sh-perf-perf.html) | 42 | 2 ★ | active |
-| 18 | [Firefox DevTools](https://tashan.sh/capability/plugin-mozilla-firefox-devtools-mcp-firefox-devtools-mcp.html) | 42 | 1 marketplaces | active |
-| 19 | [Sap Sqlscript](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sqlscript.html) | 42 | 1 marketplaces | — |
-| 20 | [Googlebigquery Automation](https://tashan.sh/capability/skill-composiohq-googlebigquery-automation.html) | not scored | 1 repos | active |
-| 21 | [Database Designer](https://tashan.sh/capability/skill-alirezarezvani-database-designer.html) | not scored | 1 repos | active |
-| 22 | [Performance Profiler](https://tashan.sh/capability/skill-alirezarezvani-performance-profiler.html) | not scored | 1 repos | active |
-| 23 | [SQL Database Assistant](https://tashan.sh/capability/skill-alirezarezvani-sql-database-assistant.html) | not scored | 1 repos | active |
-| 24 | [MongoDB · mongodb](https://tashan.sh/capability/plugin-mongodb-agent-skills-mongodb.html) | 69 | 164 ★ | active |
-| 25 | [Firestore Native](https://tashan.sh/capability/plugin-gemini-cli-extensions-firestore-native-firestore-native.html) | 61 | 30 ★ | active |
-| 26 | [Spanner](https://tashan.sh/capability/plugin-gemini-cli-extensions-spanner-spanner.html) | 59 | 19 ★ | active |
-| 27 | [Oracledb](https://tashan.sh/capability/plugin-gemini-cli-extensions-oracledb-oracledb.html) | 58 | 10 ★ | active |
-| 28 | [Bigtable](https://tashan.sh/capability/plugin-googlecloudplatform-cloud-bigtable-ecosystem-bigtable.html) | 56 | 20 ★ | active |
-| 29 | [ClickHouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 53 | 5 ★ | active |
-| 30 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 51 | 6 ★ | active |
-| 31 | [Supabase · supabase-community](https://tashan.sh/capability/plugin-supabase-community-supabase-plugin-supabase.html) | 50 | 9 ★ | active |
-| 32 | [Azure SQL Developer](https://tashan.sh/capability/plugin-microsoft-azure-sql-database-container-azure-sql-developer.html) | 50 | 6 ★ | active |
-| 33 | [Planetscale](https://tashan.sh/capability/plugin-planetscale-claude-plugin-planetscale.html) | 48 | 4 ★ | active |
-| 34 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 44 | 3 ★ | active |
+| 18 | [Googlebigquery Automation](https://tashan.sh/capability/skill-composiohq-googlebigquery-automation.html) | not scored | 1 repos | active |
+| 19 | [Database Designer](https://tashan.sh/capability/skill-alirezarezvani-database-designer.html) | not scored | 1 repos | active |
+| 20 | [Performance Profiler](https://tashan.sh/capability/skill-alirezarezvani-performance-profiler.html) | not scored | 1 repos | active |
+| 21 | [SQL Database Assistant](https://tashan.sh/capability/skill-alirezarezvani-sql-database-assistant.html) | not scored | 1 repos | active |
+| 22 | [MongoDB · mongodb](https://tashan.sh/capability/plugin-mongodb-agent-skills-mongodb.html) | 69 | 164 ★ | active |
+| 23 | [Firestore Native](https://tashan.sh/capability/plugin-gemini-cli-extensions-firestore-native-firestore-native.html) | 61 | 30 ★ | active |
+| 24 | [Spanner](https://tashan.sh/capability/plugin-gemini-cli-extensions-spanner-spanner.html) | 59 | 19 ★ | active |
+| 25 | [Oracledb](https://tashan.sh/capability/plugin-gemini-cli-extensions-oracledb-oracledb.html) | 58 | 10 ★ | active |
+| 26 | [Bigtable](https://tashan.sh/capability/plugin-googlecloudplatform-cloud-bigtable-ecosystem-bigtable.html) | 56 | 20 ★ | active |
+| 27 | [ClickHouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 53 | 5 ★ | active |
+| 28 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 51 | 6 ★ | active |
+| 29 | [Supabase · supabase-community](https://tashan.sh/capability/plugin-supabase-community-supabase-plugin-supabase.html) | 50 | 9 ★ | active |
+| 30 | [Azure SQL Developer](https://tashan.sh/capability/plugin-microsoft-azure-sql-database-container-azure-sql-developer.html) | 50 | 6 ★ | active |
+| 31 | [Planetscale](https://tashan.sh/capability/plugin-planetscale-claude-plugin-planetscale.html) | 48 | 4 ★ | active |
+| 32 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 44 | 3 ★ | active |
 
 ## What these numbers are not
 
