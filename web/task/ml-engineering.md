@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [AI Context](https://tashan.sh/capability/pkg-vibgrate-cli.html) | 71 | 2k/wk | active |
+| 1 | [AI Context](https://tashan.sh/capability/pkg-vibgrate-cli.html) | 70 | 2k/wk | active |
 | 2 | [Agent Nuvira](https://tashan.sh/capability/pkg-agent-nuvira.html) | 72 | 7k/wk | active |
 | 3 | [Tuning Engines - Governed AI Runtime](https://tashan.sh/capability/pkg-tuningengines-cli.html) | 60 | 241/wk | active |
 | 4 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 56 | 234/wk | active |

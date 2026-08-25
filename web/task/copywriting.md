@@ -13,24 +13,23 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) | 74 | 4k ★ | active |
 | 2 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 52 | 123 ★ | active |
-| 3 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 69 | 1k ★ | active |
+| 3 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 68 | 1k ★ | active |
 | 4 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 62 | 238 ★ | active |
 | 5 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 43 | 19 ★ | active |
-| 6 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 48 | 2 repos | active |
-| 7 | [Internal Narrative](https://tashan.sh/capability/skill-alirezarezvani-internal-narrative.html) | not scored | 1 repos | active |
-| 8 | [Ad Creative](https://tashan.sh/capability/skill-alirezarezvani-ad-creative.html) | not scored | 1 repos | active |
-| 9 | [Cold Email](https://tashan.sh/capability/skill-alirezarezvani-cold-email.html) | not scored | 1 repos | active |
-| 10 | [Content Production](https://tashan.sh/capability/skill-alirezarezvani-content-production.html) | not scored | 1 repos | active |
-| 11 | [Copywriting](https://tashan.sh/capability/skill-alirezarezvani-copywriting.html) | not scored | 1 repos | active |
-| 12 | [Email Sequence](https://tashan.sh/capability/skill-alirezarezvani-email-sequence.html) | not scored | 1 repos | active |
-| 13 | [X Twitter Growth](https://tashan.sh/capability/skill-alirezarezvani-x-twitter-growth.html) | not scored | 1 repos | active |
-| 14 | [Video Content Strategist](https://tashan.sh/capability/skill-alirezarezvani-video-content-strategist.html) | not scored | 1 repos | active |
-| 15 | [Team Communications](https://tashan.sh/capability/skill-alirezarezvani-team-communications.html) | not scored | 1 repos | active |
+| 6 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 52 | 4 repos | active |
+| 7 | [Copywriting](https://tashan.sh/capability/skill-alirezarezvani-copywriting.html) | 49 | 3 repos | active |
+| 8 | [Internal Narrative](https://tashan.sh/capability/skill-alirezarezvani-internal-narrative.html) | 47 | 2 repos | active |
+| 9 | [Ad Creative](https://tashan.sh/capability/skill-alirezarezvani-ad-creative.html) | 47 | 2 repos | active |
+| 10 | [Cold Email](https://tashan.sh/capability/skill-alirezarezvani-cold-email.html) | 47 | 2 repos | active |
+| 11 | [Content Production](https://tashan.sh/capability/skill-alirezarezvani-content-production.html) | 47 | 2 repos | active |
+| 12 | [Email Sequence](https://tashan.sh/capability/skill-alirezarezvani-email-sequence.html) | 47 | 2 repos | active |
+| 13 | [X Twitter Growth](https://tashan.sh/capability/skill-alirezarezvani-x-twitter-growth.html) | 47 | 2 repos | active |
+| 14 | [Video Content Strategist](https://tashan.sh/capability/skill-alirezarezvani-video-content-strategist.html) | 47 | 2 repos | active |
+| 15 | [Team Communications](https://tashan.sh/capability/skill-alirezarezvani-team-communications.html) | 47 | 2 repos | active |
 | 16 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 74 | 5k ★ | active |
 | 17 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 54 | 141/wk | active |
-| 18 | [Etincel Nonfiction](https://tashan.sh/capability/pkg-etincel.html) | 67 | 1k/wk | active |
+| 18 | [Etincel Nonfiction](https://tashan.sh/capability/pkg-etincel.html) | 66 | 1k/wk | active |
 | 19 | [Writing With Agents](https://tashan.sh/capability/plugin-jeffallan-writing-with-agents-writing-with-agents.html) | 49 | 31 ★ | active |
-| 20 | [Freemodel](https://tashan.sh/capability/pkg-freemodel-mcp.html) | 43 | 32/wk | active |
 
 ## What these numbers are not
 

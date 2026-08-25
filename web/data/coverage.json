@@ -3,10 +3,10 @@
  "all": {
   "full": 1143,
   "grade": 3809,
-  "n": 57534,
-  "scan": 7420,
-  "score": 26996,
-  "task": 3627
+  "n": 58228,
+  "scan": 7560,
+  "score": 29514,
+  "task": 3697
  },
  "axes": [
   {
@@ -31,10 +31,10 @@
   }
  ],
  "headline": {
-  "graded_pct": 47,
+  "graded_pct": 43,
   "scanned_pct": 100,
   "scored_pct": 99,
-  "tasked_pct": 61,
+  "tasked_pct": 60,
   "tier": "top1000"
  },
  "queue": [
@@ -57,7 +57,7 @@
    "name": "@copilotkit/aimock"
   },
   {
-   "downloads": 482339,
+   "downloads": 591813,
    "id": "pkg:@modelcontextprotocol/server-filesystem",
    "kind": "npm",
    "missing": [
@@ -66,13 +66,23 @@
    "name": "@modelcontextprotocol/server-filesystem"
   },
   {
-   "downloads": 261598,
+   "downloads": 424989,
    "id": "pkg:mcporter",
    "kind": "npm",
    "missing": [
     "grade"
    ],
    "name": "mcporter"
+  },
+  {
+   "downloads": 259959,
+   "id": "pkg:@pandacss/mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@pandacss/mcp"
   },
   {
    "downloads": 234041,
@@ -84,13 +94,14 @@
    "name": "@modelcontextprotocol/server-everything"
   },
   {
-   "downloads": 133382,
-   "id": "pkg:@modelcontextprotocol/server-sequential-thinking",
+   "downloads": 138289,
+   "id": "pkg:@modelcontextprotocol/server-pdf",
    "kind": "npm",
    "missing": [
+    "grade",
     "task"
    ],
-   "name": "@modelcontextprotocol/server-sequential-thinking"
+   "name": "@modelcontextprotocol/server-pdf"
   },
   {
    "downloads": 130839,
@@ -109,6 +120,15 @@
     "grade"
    ],
    "name": "@ui5/mcp-server"
+  },
+  {
+   "downloads": 107663,
+   "id": "pkg:@modelcontextprotocol/server-sequential-thinking",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "@modelcontextprotocol/server-sequential-thinking"
   },
   {
    "downloads": 106870,
@@ -176,6 +196,16 @@
     "grade"
    ],
    "name": "agentic-flow"
+  },
+  {
+   "downloads": 61736,
+   "id": "pkg:@cap-js/mcp-server",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@cap-js/mcp-server"
   },
   {
    "downloads": 57771,
@@ -253,6 +283,16 @@
    "name": "@mcp-use/inspector"
   },
   {
+   "downloads": 34224,
+   "id": "pkg:@mcp-use/cli",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@mcp-use/cli"
+  },
+  {
    "downloads": 32221,
    "id": "pkg:@currents/mcp",
    "kind": "npm",
@@ -270,6 +310,16 @@
     "grade"
    ],
    "name": "@tobilu/qmd"
+  },
+  {
+   "downloads": 30341,
+   "id": "pkg:@ericthered926/duckduckgo-mcp-server",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@ericthered926/duckduckgo-mcp-server"
   },
   {
    "downloads": 29150,
@@ -318,6 +368,15 @@
    "name": "task-master-ai"
   },
   {
+   "downloads": 25474,
+   "id": "pkg:@taazkareem/clickup-mcp-server",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "@taazkareem/clickup-mcp-server"
+  },
+  {
    "downloads": 23274,
    "id": "pkg:@modelcontextprotocol/server-puppeteer",
    "kind": "npm",
@@ -354,80 +413,24 @@
     "grade"
    ],
    "name": "@launchdarkly/mcp-server"
-  },
-  {
-   "downloads": 20474,
-   "id": "pkg:paqad-ai",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "paqad-ai"
-  },
-  {
-   "downloads": 19777,
-   "id": "pkg:@eslint/mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@eslint/mcp"
-  },
-  {
-   "downloads": 19731,
-   "id": "pkg:slack-mcp-server",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "slack-mcp-server"
-  },
-  {
-   "downloads": 19258,
-   "id": "pkg:context-mode",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "context-mode"
-  },
-  {
-   "downloads": 18288,
-   "id": "pkg:@cloudbase/cloudbase-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@cloudbase/cloudbase-mcp"
-  },
-  {
-   "downloads": 18229,
-   "id": "pkg:@agentmemory/mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@agentmemory/mcp"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 49,
-   "grade": 55,
+   "full": 47,
+   "grade": 52,
    "n": 100,
    "scan": 100,
    "score": 95,
-   "task": 79
+   "task": 76
   },
   "top1000": {
-   "full": 376,
-   "grade": 473,
+   "full": 352,
+   "grade": 434,
    "n": 1000,
    "scan": 1000,
-   "score": 986,
-   "task": 612
+   "score": 987,
+   "task": 601
   }
  }
 }

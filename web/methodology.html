@@ -22,7 +22,7 @@
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
   <link rel="stylesheet" href="/css/site.css?v=287">
-  <!--METHOD-LD--><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"How the tashan score is derived","description":"The exact arithmetic behind the tashan score, the evidence each input comes from, how much of the corpus is measured, and what the score deliberately does not claim.","url":"https://tashan.sh/methodology.html","mainEntityOfPage":"https://tashan.sh/methodology.html","author":{"@type":"Organization","name":"tashan","url":"https://tashan.sh/"},"publisher":{"@type":"Organization","name":"tashan","url":"https://tashan.sh/"},"datePublished":"2026-08-23","dateModified":"2026-08-23","inLanguage":"en","about":{"@type":"Dataset","name":"The tashan Index — measured AI capabilities","url":"https://tashan.sh/"},"version":"s5","creativeWorkStatus":"Scorer s5 frozen through 2026-11-01","license":"https://tashan.sh/terms.html"}</script><!--/METHOD-LD-->
+  <!--METHOD-LD--><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"How the tashan score is derived","description":"The exact arithmetic behind the tashan score, the evidence each input comes from, how much of the corpus is measured, and what the score deliberately does not claim.","url":"https://tashan.sh/methodology.html","mainEntityOfPage":"https://tashan.sh/methodology.html","author":{"@type":"Organization","name":"tashan","url":"https://tashan.sh/"},"publisher":{"@type":"Organization","name":"tashan","url":"https://tashan.sh/"},"datePublished":"2026-08-25","dateModified":"2026-08-25","inLanguage":"en","about":{"@type":"Dataset","name":"The tashan Index — measured AI capabilities","url":"https://tashan.sh/"},"version":"s5","creativeWorkStatus":"Scorer s5 frozen through 2026-11-01","license":"https://tashan.sh/terms.html"}</script><!--/METHOD-LD-->
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span>tashan</a><div class="nav__links"><a href="/">Find skills</a><a href="/browse.html">Jobs</a><a href="/audit.html">Check my setup</a><a href="/pricing.html">Pricing</a><a class="nav__acct" id="navAcct" href="/account.html" title="Your account" aria-label="Your account"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span class="nav__pro mono" id="navPro" hidden>Pro</span></a></div></div></nav>
@@ -117,7 +117,7 @@
       reads 43, 43, 43, 42, 40 across those days and every step down was <em>us</em>, not the capability.
       Comparing across that line would report our own recalibration as something declining, so we do not
       do it — a trend is only ever computed within a single scorer version, and a version change starts
-      the clock again. The current version is <span class="mono" id="mScorer">s5</span>, measured <span id="mScorerDate">2026-08-23</span>.</p>
+      the clock again. The current version is <span class="mono" id="mScorer">s5</span>, measured <span id="mScorerDate">2026-08-25</span>.</p>
 
     <p><b>And now we say when we <em>won't</em>.</b> Honest labelling was only half the problem. A
       version boundary restarts every trend, so a scorer rewritten four times in a week produces a
@@ -142,7 +142,7 @@
 
     <h2 id="measured">How much of this is measured</h2>
 
-    <p>We track <span class="mono" id="cvAll">57,534</span> capabilities and have measured far fewer.
+    <p>We track <span class="mono" id="cvAll">58,228</span> capabilities and have measured far fewer.
       The obvious number to publish is the ratio between them, and we did — until it fell from 47% to
       41% in two days without anything getting worse.</p>
         <p class="mnote">Discovery had grown the denominator faster than
@@ -155,10 +155,10 @@
 
     <div class="callout mono fs-base">
       tashan score <span id="cvScore">99</span>% &nbsp;·&nbsp; security scan <span id="cvScan">100</span>%
-      &nbsp;·&nbsp; expertise grade <span id="cvGrade">47</span>% &nbsp;·&nbsp; task mapping
-      <span id="cvTask">61</span>%<br>
-      <span class="fs-sm">all four, on the same capability: <span id="cvFull">38</span>% &nbsp;·&nbsp;
-      across all <span id="cvAll2">57,534</span> tracked: <span id="cvAllFull">2</span>%</span>
+      &nbsp;·&nbsp; expertise grade <span id="cvGrade">43</span>% &nbsp;·&nbsp; task mapping
+      <span id="cvTask">60</span>%<br>
+      <span class="fs-sm">all four, on the same capability: <span id="cvFull">35</span>% &nbsp;·&nbsp;
+      across all <span id="cvAll2">58,228</span> tracked: <span id="cvAllFull">2</span>%</span>
     </div>
 
     <p>Two of those are ours to fix by running more of what already works, and they will move nightly.
