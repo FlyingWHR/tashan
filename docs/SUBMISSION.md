@@ -53,6 +53,10 @@ attributed to one project.
 Payment is deliberately not an input to the score. "Someone pays for this" and "this is well made"
 are different claims, and folding them would hide exactly the case worth seeing.
 
+And we are in our own table. tashan.sh publishes an x402 price, so it appears on `/paid.html` like
+any other row — last, with $0.00, never paid. Nobody exempted us; the join simply found us. An
+instrument that leaves itself out of its own measurement is not an instrument.
+
 ## How to try it
 
 - **The site:** https://tashan.sh — the index, and https://tashan.sh/paid.html for the money signal.

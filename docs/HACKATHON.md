@@ -171,6 +171,11 @@ downloads a week. Say: "Adoption and payment are different questions, and this i
 when they disagree. Payment is deliberately not an input to the score — 'someone pays for this' and
 'this is well made' are different claims."
 
+Then scroll to the LAST row and pause on it. It is us: Tashan CLI, tashan.sh, $0.00, never paid.
+Say: "We publish a price too, so we are in our own table — last, with zero. Nobody put us there and
+nobody exempted us; the join found us like it found everyone else." That is the single most
+persuasive thing on the page, and it costs one sentence.
+
 **2:30–3:10 — how it is read, which is the part to be proud of.** Scroll to *Re-run it yourself*.
 
 Say: "These receipts are not ours. They are a subgraph on The Graph Network, and we read it through

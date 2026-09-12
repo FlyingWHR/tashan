@@ -157,6 +157,8 @@ def table(rows):
 def render(demand, export, today):
     eco = demand.get("economy") or {}
     rows = rows_from(demand, export)
+    _ours = next((r for r in rows if r["host"] == "tashan.sh"
+                  or "tashan-cli" in r["id"] or r["id"] == "pkg:tashan-cli"), None)
     listed = demand.get("receivers_indexed") or 0
     paid = eco.get("receivers_paid") or 0
     never = eco.get("receivers_never_paid") or 0
@@ -235,6 +237,17 @@ def render(demand, export, today):
         '<p class="mnote o-70">Payment is <b>not</b> an input to the tashan score. '
         '“Someone pays for this” and “this is well made” are different claims — '
         'the top earner here scores 71.</p>',
+
+        # WE ARE IN OUR OWN TABLE, and that is worth saying rather than hoping someone notices.
+        # tashan.sh publishes an x402 price, so it appears here like any other row — at the bottom,
+        # with a measured zero. Rendered from that row, so the sentence can never claim what the
+        # data does not say: if we are ever paid, it changes by itself, and if we ever drop out of
+        # the table it disappears.
+        (('<p class="mnote o-70">We are in this table. <b>' + esc(_ours["name"])
+          + '</b> publishes a price and has settled ' + esc(money(_ours["paid_usd"]))
+          + (' across ' + f'{_ours["calls"]:,} calls' if _ours["calls"] else ', ever')
+          + '. An instrument that exempts itself from its own measurement is not an instrument.</p>')
+         if _ours else ''),
 
         '<h2 class="h2">What this does not mean</h2>',
         '<ul class="bul">'
@@ -368,6 +381,18 @@ def _selftest():
     assert "$0.50" in body, "the median must survive to the page"
     assert "1 never have" in body, "the never-paid count is the finding; it must be stated"
     assert "an input to the tashan score" in body, "the firewall note must be on the page"
+    # Our own row, when we are in the table, must be stated — and must never be stated when we are
+    # not. The sentence is a claim about the data, so it is rendered from the data.
+    assert "We are in this table" not in body, "we are not in this fixture and must not claim to be"
+    mine = dict(demand, records=demand["records"] + [
+        {"address": "0xus", "hosts": ["tashan.sh"], "capabilities": ["pkg:tashan-cli"],
+         "shared": False, "attributable": True, "paid_usd": 0.0, "calls": 0}])
+    mine_exp = {"capabilities": export["capabilities"] + [
+        {"id": "pkg:tashan-cli", "slug": "pkg-tashan-cli", "name": "Tashan CLI", "kind": "npm",
+         "tashan_score": 55.0}]}
+    _, body_us, _ = render(mine, mine_exp, "2026-09-13")
+    assert "We are in this table" in body_us and "$0.00, ever" in body_us, "our own row must be named"
+    print("  ok — the page names its own row, from the row, or not at all")
     assert "style=" not in body, "an inline style attribute is dropped by the CSP on this site"
     assert "x402AddressSummaries" in body, "the page must print the call it made"
     assert lds[0]["@type"] == "Dataset" and lds[0]["isAccessibleForFree"] is True
