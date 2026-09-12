@@ -1672,9 +1672,20 @@ def main():
     for c in caps:
         c.setdefault("slug", slugify(c["id"]))
     have = {c["slug"] for c in caps}  # only these have prerendered pages
+    # FILTER BY ID, NOT BY SLUG. A page exists for an ID; a slug is a label derived from one, and
+    # two ids can derive the same label — the collision class that once sent @stripe/mcp to a
+    # third-party stripe-mcp's page. Today's export happens to have no colliding slugs, so this
+    # changes no output right now; it is here because checking the derived label for membership in
+    # a set of derived labels is only accidentally correct, and the accident is one ingest away
+    # from ending.
+    #
+    # NOT a fix for the cross-surface consistency failure, which is still open: co_used on a page
+    # naming an id that is absent from the export. Ruled out so far — prerender and the test read
+    # the same file, prerender runs after export in run.py, and the export has no slug collisions.
+    have_ids = {c["id"] for c in caps}
     for c in caps:
-        if c.get("co_used"):  # drop co-use links to caps we didn't prerender (would 404 / hit the slow legacy path)
-            c["co_used"] = [x for x in c["co_used"] if slugify(x["id"]) in have]
+        if c.get("co_used"):
+            c["co_used"] = [x for x in c["co_used"] if x["id"] in have_ids]
     for c in caps:
         open(os.path.join(OUT, c["slug"] + ".html"), "w").write(page(c, gen))
     write_md_shards({c["slug"]: markdown(c, gen) for c in caps})
