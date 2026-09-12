@@ -214,6 +214,7 @@ node --test functions/api/history.test.mjs >/dev/null 2>&1 || { node --test func
 
 # 5e2. the paid series must carry the capability's movement, not our own recalibration
 echo; echo "── history integrity (the moat) ───────────────"
+python3 tests/test_identity.py || fail=1
 python3 tests/test_history_integrity.py || fail=1
 
 # 5f. every feature the pricing page sells must have code that delivers it
