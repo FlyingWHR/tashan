@@ -1,0 +1,16 @@
+{
+  "name": "tashan-x402-demand",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Settled x402 payments on Base, indexed — the demand side of the agent economy.",
+  "scripts": {
+    "receivers": "node scripts/receivers.mjs",
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy tashan-x402-demand"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "0.98.1",
+    "@graphprotocol/graph-ts": "0.38.2"
+  }
+}

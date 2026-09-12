@@ -1,0 +1,71 @@
+# The agent payment economy, as evidence.
+#
+# x402 turns an HTTP 402 into a settled USDC transfer. The Coinbase Bazaar publishes the DIRECTORY
+# of those services — 15,104 resources — and no evidence about any of them: not one number saying
+# whether a listed endpoint has ever been paid. That is the same gap tashan exists to close for MCP
+# servers, one layer down, and it is why this subgraph indexes receipts rather than listings.
+#
+# A receiver here is an x402 payTo address harvested from the Bazaar. A payment is a USDC transfer
+# that landed on one. Nothing is inferred: every field is a fact that settled on Base.
+
+type Receiver @entity(immutable: false) {
+  "the payTo address, lowercase hex"
+  id: ID!
+  "total USDC received, in atomic units (6 decimals)"
+  totalPaid: BigInt!
+  "settled calls — one transfer is one paid call"
+  payments: BigInt!
+  "distinct paying addresses, the number that separates a real service from a demo"
+  payers: BigInt!
+  firstPaymentAt: BigInt!
+  lastPaymentAt: BigInt!
+  firstBlock: BigInt!
+  lastBlock: BigInt!
+  history: [Payment!]! @derivedFrom(field: "receiver")
+  days: [ReceiverDay!]! @derivedFrom(field: "receiver")
+}
+
+type Payment @entity(immutable: true) {
+  "tx hash + log index"
+  id: ID!
+  receiver: Receiver!
+  payer: Bytes!
+  amount: BigInt!
+  block: BigInt!
+  timestamp: BigInt!
+  tx: Bytes!
+}
+
+"One row per receiver per UTC day — the shape a trend needs, and the reason this is a subgraph and not an RPC loop."
+type ReceiverDay @entity(immutable: false) {
+  "receiver-YYYYMMDD"
+  id: ID!
+  receiver: Receiver!
+  day: Int!
+  totalPaid: BigInt!
+  payments: BigInt!
+}
+
+"The whole indexed economy, so a reader can see a receiver's share of it."
+type Economy @entity(immutable: false) {
+  id: ID!
+  totalPaid: BigInt!
+  payments: BigInt!
+  receiversPaid: BigInt!
+  lastBlock: BigInt!
+}
+
+"A payer seen once is a test; a payer seen across services is the demand side of this market."
+type Payer @entity(immutable: false) {
+  id: ID!
+  totalPaid: BigInt!
+  payments: BigInt!
+  receiversPaid: BigInt!
+  firstPaymentAt: BigInt!
+  lastPaymentAt: BigInt!
+}
+
+"Join key between a payer and a receiver, so `payers` can be counted without an array scan."
+type PayerReceiver @entity(immutable: true) {
+  id: ID!
+}
