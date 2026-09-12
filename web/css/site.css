@@ -482,6 +482,20 @@ td.num .unit { display:block; line-height:1.25; white-space:nowrap; }
 .install__snip { position:relative; margin:0; border:1px solid var(--hairline); border-radius:8px; background: var(--bg); overflow:auto; }
 .install__snip code { display:block; font-family: var(--font-mono); font-size:var(--fs-sm); color: var(--text-dim); padding:.8rem 1rem; white-space:pre; }
 .install__copy--pre { position:absolute; top:6px; right:6px; border:1px solid var(--hairline); border-radius:5px; padding:.15rem .5rem; }
+/* A READ-ONLY CODE BLOCK — the second class I shipped with no rules at all (after .stat__*), and
+   this one was visible at phone width: /paid.html prints an endpoint and a GraphQL query, the
+   unstyled <code> would not wrap, and the whole PAGE scrolled sideways, 452px inside a 390px
+   viewport. Same shape as .install__snip, which is the site's established code block, plus the one
+   thing that block does not need: these are long unbreakable tokens (a subgraph id, a URL), so they
+   wrap rather than force the document wide. `anywhere` breaks only when a line would overflow, so
+   ordinary words are untouched. */
+.code { margin:.5rem 0 0; border:1px solid var(--hairline); border-radius:8px; background: var(--bg);
+        overflow-x:auto; }
+.code code { display:block; font-family: var(--font-mono); font-size:var(--fs-sm);
+             color: var(--text-dim); padding:.8rem 1rem; white-space:pre-wrap;
+             overflow-wrap:anywhere; }
+/* A bare id or URL inside prose must not widen the page either — same rule, same reason. */
+.mnote { overflow-wrap:anywhere; }
 .fresh { font-family: var(--font-mono); font-size:var(--fs-sm); }
 .fresh--hot { color: var(--green); }
 .fresh--warm { color: var(--text-dim); }

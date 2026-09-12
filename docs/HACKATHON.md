@@ -191,7 +191,9 @@ downloads a week. Say: "Adoption and payment are different questions, and this i
 when they disagree. Payment is deliberately not an input to the score — 'someone pays for this' and
 'this is well made' are different claims."
 
-Then scroll to the LAST row and pause on it. It is us: Tashan CLI, tashan.sh, $0.00, never paid.
+Then find our own row — ⌘F for `tashan.sh`; it sorts last today, on $0.00 — and pause on it:
+Tashan CLI, tashan.sh, $0.00, never paid. (Do not say "the last row": the table is regenerated
+nightly and another zero-earning row could sort below us by name.)
 Say: "We publish a price too, so we are in our own table — last, with zero. Nobody put us there and
 nobody exempted us; the join found us like it found everyone else." That is the single most
 persuasive thing on the page, and it costs one sentence.
