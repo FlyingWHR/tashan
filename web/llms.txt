@@ -2,7 +2,7 @@
 
 > The intelligence layer for AI capabilities. tashan scores MCP servers and agent skills on public evidence — npm downloads and publish cadence, GitHub activity, registry status, and how often a server appears in real public agent configs. Nobody can pay to change a score, rank, or listing; payment buys depth and tooling only.
 
-Generated: 2026-08-25. Capabilities tracked: 12001 ranked. Every number below links to the public source it came from.
+Generated: 2026-09-12. Capabilities tracked: 11914 ranked. Every number below links to the public source it came from.
 
 ## Read any capability as plain markdown
 
@@ -83,46 +83,46 @@ An absent value means UNMEASURED and never means zero, absent risk, or poor qual
 
 ## Top capabilities by tashan score
 
-- [Supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) — tashan score 99.0, active. MCP server for interacting with the Supabase platform
-- [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) — tashan score 94.0, active. MCP server for Context7
-- [Everything](https://tashan.sh/capability/pkg-modelcontextprotocol-server-everything.html) — tashan score 93.0, active. MCP server that exercises all the features of the MCP protocol
-- [Filesystem](https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html) — tashan score 92.0, active. MCP server for filesystem access
-- [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) — tashan score 92.0, active. MCP server for Chrome DevTools
-- [Memory](https://tashan.sh/capability/pkg-modelcontextprotocol-server-memory.html) — tashan score 91.0, active. MCP server for enabling memory for Claude through a knowledge graph
-- [Firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) — tashan score 91.0, active. MCP server for Firecrawl — web search, scraping, and biomedical/arXiv paper search.
+- [Supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) — tashan score 95.0, active. MCP server for interacting with the Supabase platform
+- [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) — tashan score 95.0, active. MCP server for Context7
+- [Filesystem](https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html) — tashan score 93.0, active. MCP server for filesystem access
+- [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) — tashan score 93.0, active. MCP server for Chrome DevTools
+- [Memory](https://tashan.sh/capability/pkg-modelcontextprotocol-server-memory.html) — tashan score 92.0, active. MCP server for enabling memory for Claude through a knowledge graph
+- [Firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) — tashan score 92.0, active. MCP server for Firecrawl — web search, scraping, and biomedical/arXiv paper search.
 - [Sequential Thinking](https://tashan.sh/capability/pkg-modelcontextprotocol-server-sequential-thinking.html) — tashan score 90.0, active. MCP server for sequential thinking and problem solving
-- [Notion](https://tashan.sh/capability/pkg-notionhq-notion-mcp-server.html) — tashan score 88.0, active. Official MCP server for Notion API
+- [Notion](https://tashan.sh/capability/pkg-notionhq-notion-mcp-server.html) — tashan score 89.0, active. Official MCP server for Notion API
+- [Everything](https://tashan.sh/capability/pkg-modelcontextprotocol-server-everything.html) — tashan score 88.0, active. MCP server that exercises all the features of the MCP protocol
 - [Hostinger API](https://tashan.sh/capability/pkg-hostinger-api-mcp.html) — tashan score 87.0, active. MCP server for Hostinger API
-- [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) — tashan score 87.0, active. A Model Context Protocol server with Exa for web search and web crawling. Provides real-time web searches with configurable tool selection, allowing u
-- [Eve](https://tashan.sh/capability/pkg-eve.html) — tashan score 86.0, active. Filesystem-first framework for durable backend AI agents that run anywhere.
-- [Figma Developer](https://tashan.sh/capability/pkg-figma-developer-mcp.html) — tashan score 85.0, active. Give your coding agent access to your Figma data. Implement designs in any framework in one-shot.
-- [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) — tashan score 85.0, active. CloudBase MCP: DB, functions, storage, hosting via @cloudbase/cloudbase-mcp
+- [Figma Developer](https://tashan.sh/capability/pkg-figma-developer-mcp.html) — tashan score 86.0, active. Give your coding agent access to your Figma data. Implement designs in any framework in one-shot.
+- [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) — tashan score 85.0, active. A Model Context Protocol server with Exa for web search and web crawling. Provides real-time web searches with configurable tool selection, allowing u
+- [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) — tashan score 85.0, active. MCP server for advanced web search using Tavily
+- [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) — tashan score 85.0, active. Playwright Tools for MCP
+- [Eve](https://tashan.sh/capability/pkg-eve.html) — tashan score 85.0, active. Filesystem-first framework for durable backend AI agents that run anywhere.
+- [Cline](https://tashan.sh/capability/pkg-cline.html) — tashan score 85.0, active. Autonomous coding agent CLI - capable of creating/editing files, running commands, using the browser, and more
+- [Fiori](https://tashan.sh/capability/pkg-sap-ux-fiori-mcp-server.html) — tashan score 85.0, active. SAP Fiori - Model Context Protocol (MCP) server
+- [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) — tashan score 85.0, active. All Azure MCP tools to create a seamless connection between AI agents and Azure services.
+- [Freee](https://tashan.sh/capability/pkg-freee-mcp.html) — tashan score 85.0, active. Model Context Protocol (MCP) server for freee API integration
+- [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) — tashan score 85.0, active. MongoDB Model Context Protocol Server
 - [Superpowers](https://tashan.sh/capability/plugin-obra-superpowers-superpowers.html) — tashan score 84.0, active. Core skills library for Claude Code: TDD, debugging, collaboration patterns, and proven techniques
-- [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) — tashan score 84.0, active. MCP server for advanced web search using Tavily
-- [Playwright](https://tashan.sh/capability/pkg-playwright-mcp.html) — tashan score 84.0, active. Playwright Tools for MCP
-- [Cline](https://tashan.sh/capability/pkg-cline.html) — tashan score 84.0, active. Autonomous coding agent CLI - capable of creating/editing files, running commands, using the browser, and more
-- [Fiori](https://tashan.sh/capability/pkg-sap-ux-fiori-mcp-server.html) — tashan score 84.0, active. SAP Fiori - Model Context Protocol (MCP) server
-- [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) — tashan score 84.0, active. All Azure MCP tools to create a seamless connection between AI agents and Azure services.
-- [Freee](https://tashan.sh/capability/pkg-freee-mcp.html) — tashan score 84.0, active. Model Context Protocol (MCP) server for freee API integration
-- [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) — tashan score 84.0, active. MongoDB Model Context Protocol Server
-- [Use](https://tashan.sh/capability/pkg-mcp-use.html) — tashan score 84.0, active. MCP framework and CLI built on the official v2 SDK
+- [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) — tashan score 84.0, active. Framework-agnostic HTTP adapter for Model Context Protocol servers
+- [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) — tashan score 84.0, active. MCP server for terminal commands, file operations, and process management
+- [Argent](https://tashan.sh/capability/pkg-swmansion-argent.html) — tashan score 84.0, active. Drive iOS Simulators, Android emulators, TVs and Electron/web apps from your coding agent
+- [Consent](https://tashan.sh/capability/pkg-transcend-io-mcp-server-consent.html) — tashan score 84.0, active. Transcend MCP Server — Consent Management tools.
+- [Workflows](https://tashan.sh/capability/pkg-transcend-io-mcp-server-workflows.html) — tashan score 84.0, active. Transcend MCP Server — Workflows tools.
+- [Transcend IO](https://tashan.sh/capability/pkg-transcend-io-mcp.html) — tashan score 84.0, active. Transcend MCP Server — unified server with all domain tools.
 - [Kubernetes](https://tashan.sh/capability/pkg-mcp-server-kubernetes.html) — tashan score 83.0, active. MCP server for interacting with Kubernetes clusters via kubectl
-- [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) — tashan score 83.0, active. Framework-agnostic HTTP adapter for Model Context Protocol servers
-- [Argent](https://tashan.sh/capability/pkg-swmansion-argent.html) — tashan score 83.0, active. Drive iOS Simulators, Android emulators, TVs and Electron/web apps from your coding agent
-- [Consent](https://tashan.sh/capability/pkg-transcend-io-mcp-server-consent.html) — tashan score 83.0, active. Transcend MCP Server — Consent Management tools.
-- [Transcend IO](https://tashan.sh/capability/pkg-transcend-io-mcp.html) — tashan score 83.0, active. Transcend MCP Server — unified server with all domain tools.
-- [Inspector](https://tashan.sh/capability/pkg-mcp-use-inspector.html) — tashan score 83.0, active. MCP Inspector - A tool for inspecting and debugging MCP servers
-- [Use · @mcp-use](https://tashan.sh/capability/pkg-mcp-use-cli.html) — tashan score 83.0, active. Prebuilt CLI, development server, and build pipeline for mcp-use
-- [Figma Console](https://tashan.sh/capability/pkg-figma-console-mcp.html) — tashan score 82.0, active. The most comprehensive MCP server for Figma — design tokens, variables, components, write tools, version history diff, accessibility audits, FigJam, S
-- [PDF](https://tashan.sh/capability/pkg-modelcontextprotocol-server-pdf.html) — tashan score 82.0, active. MCP server for loading and extracting text from PDF files with chunked pagination and interactive viewer
-- [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) — tashan score 82.0, active. MCP server for terminal commands, file operations, and process management
-- [Currents](https://tashan.sh/capability/pkg-currents-mcp.html) — tashan score 82.0, active. Currents MCP server
+- [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) — tashan score 83.0, active. CloudBase MCP: DB, functions, storage, hosting via @cloudbase/cloudbase-mcp
+- [Figma Console](https://tashan.sh/capability/pkg-figma-console-mcp.html) — tashan score 83.0, active. The most comprehensive MCP server for Figma — design tokens, variables, components, write tools, version history diff, accessibility audits, FigJam, S
+- [Currents](https://tashan.sh/capability/pkg-currents-mcp.html) — tashan score 83.0, active. Currents MCP server
+- [Kubernetes · containers](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) — tashan score 82.0, active. A Model Context Protocol (MCP) server for Kubernetes and OpenShift
+- [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) — tashan score 82.0, active. Minimal, token-efficient Database MCP Server for PostgreSQL, MySQL, SQL Server, SQLite, MariaDB
+- [Use](https://tashan.sh/capability/pkg-mcp-use.html) — tashan score 82.0, active. MCP framework and CLI built on the official v2 SDK
 - [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) — tashan score 81.0, active. Design fluency for frontend development. 1 skill with 23 commands (/impeccable polish, /impeccable audit, /impeccable critique, etc.) and curated anti
-- [Kubernetes · containers](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) — tashan score 81.0, active. A Model Context Protocol (MCP) server for Kubernetes and OpenShift
-- [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) — tashan score 81.0, active. Minimal, token-efficient Database MCP Server for PostgreSQL, MySQL, SQL Server, SQLite, MariaDB
-- [Sveltejs](https://tashan.sh/capability/pkg-sveltejs-mcp.html) — tashan score 81.0, active. The official Svelte MCP server providing docs and autofixing tools for Svelte development
-- [Workflows](https://tashan.sh/capability/pkg-transcend-io-mcp-server-workflows.html) — tashan score 81.0, active. Transcend MCP Server — Workflows tools.
-- [Obsidian](https://tashan.sh/capability/pkg-obsidian-mcp-server.html) — tashan score 80.0, active. Read, write, search, and surgically edit Obsidian notes, tags, and frontmatter via MCP.
+- [Obsidian](https://tashan.sh/capability/pkg-obsidian-mcp-server.html) — tashan score 81.0, active. Read, write, search, and surgically edit Obsidian notes, tags, and frontmatter via MCP.
+- [Mempalace](https://tashan.sh/capability/plugin-mempalace-mempalace-mempalace.html) — tashan score 81.0, active. AI memory system — mine projects and conversations into a searchable palace. 33 MCP tools, auto-save hooks, guided setup.
+- [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) — tashan score 81.0, active. Real-time web search, reasoning, and research through Perplexity's API
+- [Caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) — tashan score 80.0, active. Auto-activation works differently per agent: Claude Code uses SessionStart hooks, this repo's Codex dogfood setup uses .codex/hooks.json, Gemini uses 
+- [Context7 · upstash](https://tashan.sh/capability/plugin-upstash-context7-context7.html) — tashan score 80.0, active. Up-to-date documentation lookup. Pull version-specific documentation and code examples directly from source repositories into your LLM context.
 
 ## For agents
 
@@ -151,56 +151,57 @@ Nobody can pay to change a score, a rank, or a listing, and no listing is paid. 
 
 One ranked page per job title. These answer "what should I install for a <job>" with measured rows rather than an opinion.
 
-- [Agent operator](https://tashan.sh/role/agent-operator.html) — 138 measured. Top: Claude Hud, Claudish, Nah.
-- [AI engineer](https://tashan.sh/role/ai-engineer.html) — 524 measured. Top: Context7, Context Mode, Agent Afk.
-- [Creator / video](https://tashan.sh/role/creator.html) — 106 measured. Top: Comfyui, Claude Video Vision, Watch.
-- [Data analyst](https://tashan.sh/role/data-analyst.html) — 149 measured. Top: MongoDB, DuckDB Skills, Spotify Ads API.
-- [Data engineer](https://tashan.sh/role/data-engineer.html) — 69 measured. Top: Oe, Ckan, DuckDB Skills.
-- [Designer](https://tashan.sh/role/designer.html) — 131 measured. Top: Comfyui, Obsidian Visual Skills, Excalidraw Skill.
-- [DevOps / SRE](https://tashan.sh/role/devops.html) — 211 measured. Top: Argocd, Auth0, Vercel.
+- [Agent operator](https://tashan.sh/role/agent-operator.html) — 169 measured. Top: Claude Hud, Claudish, Nah.
+- [AI engineer](https://tashan.sh/role/ai-engineer.html) — 520 measured. Top: Context7, Context Mode, Agent Afk.
+- [Creator / video](https://tashan.sh/role/creator.html) — 124 measured. Top: Comfyui, Claude Video Vision, Watch.
+- [Data analyst](https://tashan.sh/role/data-analyst.html) — 168 measured. Top: MongoDB, DuckDB Skills, Spotify Ads API.
+- [Data engineer](https://tashan.sh/role/data-engineer.html) — 81 measured. Top: Ckan, Oe, DuckDB Skills.
+- [Designer](https://tashan.sh/role/designer.html) — 148 measured. Top: Comfyui, Obsidian Visual Skills, Excalidraw Skill.
+- [DevOps / SRE](https://tashan.sh/role/devops.html) — 239 measured. Top: Auth0, Argocd, Zscaler.
 - [Educator](https://tashan.sh/role/educator.html) — 12 measured. Top: Anki, Campus CLI, Guide.
-- [Software engineer](https://tashan.sh/role/engineer.html) — 790 measured. Top: Context7, Chrome DevTools, Exa.
-- [Finance / accounting](https://tashan.sh/role/finance.html) — 123 measured. Top: Ato, Vulcan, Sofagent.
-- [Hardware / electronics](https://tashan.sh/role/hardware.html) — 13 measured. Top: Kicad Happy, Cad, Architecture Studio.
-- [HR / recruiting](https://tashan.sh/role/hr.html) — 31 measured. Top: Anki, Campus CLI, Guide.
-- [Legal / compliance](https://tashan.sh/role/legal.html) — 113 measured. Top: Ato, Korean Law, Openstates.
-- [Marketer / growth](https://tashan.sh/role/marketer.html) — 168 measured. Top: Humanize Korean, Save To Spotify, Kiwoom Securities.
-- [Operations](https://tashan.sh/role/ops.html) — 701 measured. Top: Chrome DevTools, Exa, Trusty Squire.
-- [Product manager](https://tashan.sh/role/pm.html) — 243 measured. Top: Atlassian, Backlog, Huly.
-- [Researcher](https://tashan.sh/role/researcher.html) — 369 measured. Top: Exa, Atlassian, Minutes.
-- [Sales](https://tashan.sh/role/sales.html) — 51 measured. Top: Gooseworks, Apollo, Ghl Command.
-- [Scientist](https://tashan.sh/role/scientist.html) — 29 measured. Top: Statsclaw, Growthbook · growthbook, Agent Loops.
-- [Security engineer](https://tashan.sh/role/security.html) — 181 measured. Top: Ato, Korean Law, Zscaler.
-- [Customer support](https://tashan.sh/role/support.html) — 15 measured. Top: Customer Success Manager, Chief Customer Officer Advisor, Churn Prevention.
-- [Web / frontend developer](https://tashan.sh/role/web-dev.html) — 98 measured. Top: Vuetify, Tray API, Filestack Claude Plugin.
-- [Writer / content](https://tashan.sh/role/writer.html) — 191 measured. Top: Context7, Humanize Korean, Save To Spotify.
+- [Software engineer](https://tashan.sh/role/engineer.html) — 912 measured. Top: Context7, Chrome DevTools, Exa.
+- [Finance / accounting](https://tashan.sh/role/finance.html) — 132 measured. Top: Ato, Vulcan, Sofagent.
+- [Hardware / electronics](https://tashan.sh/role/hardware.html) — 14 measured. Top: Kicad Happy, Cad, Architecture Studio.
+- [HR / recruiting](https://tashan.sh/role/hr.html) — 35 measured. Top: Anki, Campus CLI, Guide.
+- [Legal / compliance](https://tashan.sh/role/legal.html) — 120 measured. Top: Ato, Korean Law, Courtlistener.
+- [Marketer / growth](https://tashan.sh/role/marketer.html) — 176 measured. Top: Humanize Korean, Save To Spotify, Kiwoom Securities.
+- [Operations](https://tashan.sh/role/ops.html) — 743 measured. Top: Chrome DevTools, Exa, Atlassian.
+- [Product manager](https://tashan.sh/role/pm.html) — 268 measured. Top: Atlassian, Backlog, Huly.
+- [Researcher](https://tashan.sh/role/researcher.html) — 379 measured. Top: Exa, Atlassian, Minutes.
+- [Sales](https://tashan.sh/role/sales.html) — 61 measured. Top: Gooseworks, Apollo, Ghl Command.
+- [Scientist](https://tashan.sh/role/scientist.html) — 31 measured. Top: Statsclaw, Growthbook · growthbook, Agent Loops.
+- [Security engineer](https://tashan.sh/role/security.html) — 197 measured. Top: Ato, Korean Law, Courtlistener.
+- [Customer support](https://tashan.sh/role/support.html) — 18 measured. Top: Voicenter, Corebee, Help Scout.
+- [Web / frontend developer](https://tashan.sh/role/web-dev.html) — 103 measured. Top: Vuetify, Pepitahq, Tray API.
+- [Writer / content](https://tashan.sh/role/writer.html) — 211 measured. Top: Context7, Humanize Korean, Save To Spotify.
 
 ## Categories
 
-- [Browser & Web](https://tashan.sh/category/browser.html) — 97 measured. Headless browsers, scraping, page automation, fetch. Top: Chrome DevTools, Firecrawl, Playwright.
-- [Search](https://tashan.sh/category/search.html) — 309 measured. Web search, retrieval, and answer engines. Top: Exa, Tavily, Perplexity API Platform.
-- [Database](https://tashan.sh/category/database.html) — 148 measured. SQL, NoSQL, vector stores, query & schema tools. Top: Supabase, MongoDB, Dbhub.
-- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1817 measured. Git, GitHub, code, testing, build & CI. Top: Everything, Superpowers, Fiori.
-- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 633 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: Hostinger API, Cloudbase, Azure.
-- [Files & Memory](https://tashan.sh/category/files.html) — 34 measured. Filesystem access, memory, knowledge graphs. Top: Filesystem, Memory, Desktop Commander.
-- [Data & Analytics](https://tashan.sh/category/data.html) — 404 measured. Pipelines, analytics, spreadsheets, BI. Top: Inventory, Claude SEO, Heroku.
-- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 376 measured. Docs lookup, notes, wikis, context retrieval. Top: Context7, Notion, Obsidian.
-- [Communication](https://tashan.sh/category/comms.html) — 423 measured. Slack, email, chat, calendars, meetings. Top: Meegle, Conversations, Claude Funnel.
-- [Design](https://tashan.sh/category/design.html) — 862 measured. Figma, UI, images, creative & design tooling. Top: Figma Developer, Figma Console, Impeccable.
-- [AI & Agents](https://tashan.sh/category/ai.html) — 738 measured. Reasoning, agents, model & LLM orchestration. Top: Sequential Thinking, Eve, Cline.
-- [Finance & Crypto](https://tashan.sh/category/finance.html) — 417 measured. Payments, markets, blockchain, wallets. Top: Freee, Stripe, Ato.
-- [Productivity](https://tashan.sh/category/productivity.html) — 415 measured. Tasks, automation, workflows, personal tools. Top: N8n, Preferences, Atlassian.
-- [Security](https://tashan.sh/category/security.html) — 818 measured. Auth, secrets, scanning, identity. Top: Consent, Agent Skill Creator, Ifixai.
-- [Other](https://tashan.sh/category/other.html) — 4510 measured. Everything not yet categorized. Top: Transcend IO, Workflows, 21st Dev.
+- [Browser & Web](https://tashan.sh/category/browser.html) — 111 measured. Headless browsers, scraping, page automation, fetch. Top: Chrome DevTools, Firecrawl, Playwright.
+- [Search](https://tashan.sh/category/search.html) — 261 measured. Web search, retrieval, and answer engines. Top: Exa, Tavily, Perplexity API Platform.
+- [Database](https://tashan.sh/category/database.html) — 144 measured. SQL, NoSQL, vector stores, query & schema tools. Top: Supabase, MongoDB, Dbhub.
+- [Dev Tools & CI](https://tashan.sh/category/devtools.html) — 1821 measured. Git, GitHub, code, testing, build & CI. Top: Everything, Fiori, Superpowers.
+- [Cloud & Infra](https://tashan.sh/category/cloud.html) — 636 measured. Kubernetes, AWS, Docker, serverless, deploy. Top: Hostinger API, Azure, Kubernetes.
+- [Files & Memory](https://tashan.sh/category/files.html) — 54 measured. Filesystem access, memory, knowledge graphs. Top: Filesystem, Memory, Desktop Commander.
+- [Data & Analytics](https://tashan.sh/category/data.html) — 479 measured. Pipelines, analytics, spreadsheets, BI. Top: Claude SEO, Heroku, Nvidia Skills.
+- [Docs & Knowledge](https://tashan.sh/category/docs.html) — 338 measured. Docs lookup, notes, wikis, context retrieval. Top: Context7, Notion, Obsidian.
+- [Communication](https://tashan.sh/category/comms.html) — 463 measured. Slack, email, chat, calendars, meetings. Top: Meegle, Claude Funnel, Conversations.
+- [Design](https://tashan.sh/category/design.html) — 856 measured. Figma, UI, images, creative & design tooling. Top: Figma Developer, Figma Console, Impeccable.
+- [AI & Agents](https://tashan.sh/category/ai.html) — 634 measured. Reasoning, agents, model & LLM orchestration. Top: Sequential Thinking, Eve, Cline.
+- [Finance & Crypto](https://tashan.sh/category/finance.html) — 430 measured. Payments, markets, blockchain, wallets. Top: Freee, Stripe, Ato.
+- [Productivity](https://tashan.sh/category/productivity.html) — 482 measured. Tasks, automation, workflows, personal tools. Top: Atlassian, N8n, Qmd.
+- [Security](https://tashan.sh/category/security.html) — 869 measured. Auth, secrets, scanning, identity. Top: Consent, Ifixai, Auth0.
+- [Other](https://tashan.sh/category/other.html) — 4336 measured. Everything not yet categorized. Top: Workflows, Transcend IO, Desktop Commander · wonderwhy-er.
 
 ## Reference
 
 - [The ecosystem in numbers](https://tashan.sh/stats.html) — how many capabilities exist, how many are scanned, how many are dying, how many ship with no build provenance. Every figure is a count of rows, recomputed nightly, CC BY 4.0 with a citation line. If you are writing about which MCP server to use, these are the numbers behind the rankings.
 - [What changed](https://tashan.sh/changes.html) — a dated record of what moved: deprecations, abandonments, install scripts appearing, advisories landing, ownership changing. Built from a series that cannot be backfilled, so no other source can produce it. Also an Atom feed at https://tashan.sh/changes.xml.
+- [Who gets paid](https://tashan.sh/paid.html) — settled x402 payments on Base, joined to the capabilities we measure. Of the listed payment addresses we could resolve, most have been paid at least once, but the MEDIAN service has earned well under a dollar in its entire life and two thirds of all volume belongs to one receiver. Quote the median beside the total: a sum is the one statistic a concentrated economy always passes. Machine-readable at https://tashan.sh/data/demand.json. Read from a subgraph on The Graph Network through The Graph's Subgraph MCP server, so the query is reproducible — the page prints it.
 - [Methodology](https://tashan.sh/methodology.html) — every input, weight and known limitation.
 - [Learn](https://tashan.sh/learn/) — install guides and comparisons, backed by the live ranking.
 - [About](https://tashan.sh/about.html) — who builds this and the payment firewall.
 
 ## Citing tashan
 
-Scores change as evidence changes; cite the date. Attribute as: tashan (tashan.sh), measured 2026-08-25. Full machine-readable export: https://tashan.sh/data/capabilities.json
+Scores change as evidence changes; cite the date. Attribute as: tashan (tashan.sh), measured 2026-09-12. Full machine-readable export: https://tashan.sh/data/capabilities.json

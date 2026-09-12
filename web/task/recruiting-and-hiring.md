@@ -11,16 +11,20 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | 47 | 2 repos | active |
-| 2 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | 47 | 2 repos | active |
-| 3 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | 47 | 2 repos | active |
-| 4 | [Vpe Review](https://tashan.sh/capability/skill-alirezarezvani-vpe-review.html) | not scored | 1 repos | active |
-| 5 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 68 | 1k/wk | active |
-| 6 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 44 | 43/wk | active |
-| 7 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 52 | 153/wk | active |
-| 8 | [Osf Data Marketplace](https://tashan.sh/capability/pkg-osf-data-marketplace.html) | 47 | 47/wk | active |
-| 9 | [Opentrain](https://tashan.sh/capability/pkg-opentrain-ai-mcp.html) | 44 | 65/wk | active |
-| 10 | [LinkedIn MCP Tools](https://tashan.sh/capability/pkg-linkedin-mcp-tools.html) | 46 | 100/wk | active |
+| 1 | [Vpe Review](https://tashan.sh/capability/skill-alirezarezvani-vpe-review.html) | not scored | 1 repos | active |
+| 2 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | not scored | 1 repos | active |
+| 3 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | not scored | 1 repos | active |
+| 4 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | not scored | 1 repos | active |
+| 5 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 59 | 378/wk | active |
+| 6 | [Digital Innovation Agents](https://tashan.sh/capability/plugin-pssah4-digital-innovation-agents-digital-innovation-agents.html) | 58 | 38 ★ | active |
+| 7 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 45 | 43/wk | active |
+| 8 | [Gtm Hiring Signal Scraper](https://tashan.sh/capability/pkg-mambalabsdev-mcp-gtm-hiring-signal-scraper.html) | 44 | 60/wk | active |
+| 9 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 53 | 153/wk | active |
+| 10 | [Opentrain](https://tashan.sh/capability/pkg-opentrain-ai-mcp.html) | 45 | 65/wk | active |
+| 11 | [VerifyRef](https://tashan.sh/capability/pkg-datalinc-verifyref-mcp.html) | 44 | 58/wk | active |
+| 12 | [Cv Tailor](https://tashan.sh/capability/pkg-cv-tailor.html) | 44 | 21/wk | active |
+| 13 | [Staff Resume](https://tashan.sh/capability/plugin-smykla-skalski-sai-staff-resume.html) | 42 | 1 marketplaces | — |
+| 14 | [LinkedIn MCP Tools](https://tashan.sh/capability/pkg-linkedin-mcp-tools.html) | 46 | 100/wk | active |
 
 ## What these numbers are not
 

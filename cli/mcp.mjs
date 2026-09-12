@@ -51,6 +51,14 @@ async function lookup() {
   if (!lookupCache) lookupCache = await get("/data/lookup.json");
   return lookupCache;
 }
+// Settled x402 receipts. A THIRD file, deliberately: the board answers "what is good", the lookup
+// answers "what is this", and this answers "has anyone actually paid for it" — the only one of the
+// three that is not a proxy for demand.
+let demandCache = null;
+async function demand() {
+  if (!demandCache) demandCache = await get("/data/demand.json");
+  return demandCache;
+}
 
 // ---- the evidence line. One string an agent can quote to a human without over-claiming. ----
 export function evidence(c) {
@@ -252,6 +260,21 @@ const TOOLS = [
     },
   },
   {
+    name: "paid_demand",
+    description:
+      "Which AI services have actually been PAID, from settled x402 payments on Base — the only "
+      + "demand signal here that is not a proxy. Call it with a name to ask whether that specific "
+      + "capability has ever been paid, or with no argument for the shape of the whole paid economy. "
+      + "Use it when the user is choosing between capabilities and wants evidence of real use, or "
+      + "asks who is making money from agent tooling. Always free.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        name: { type: "string", description: "Optional: a capability, npm package or host, e.g. 'blockrun' or 'blockrun.ai'" },
+      },
+    },
+  },
+  {
     name: "audit_config",
     description:
       "Audit the agent configuration already on this machine — every MCP server and skill the user "
@@ -361,7 +384,69 @@ export function renderCheck(c, name) {
   return L.join("\n");
 }
 
+// Money, at the precision the number deserves. Mirrors prerender.paid_line and gen_paid.money —
+// three renderers, one rule, because a figure that reads differently per surface is not evidence.
+function paidUsd(v) {
+  if (v == null) return "unknown";
+  if (v === 0) return "$0";
+  if (v < 0.01) return "<$0.01";
+  if (v < 100) return `$${v.toFixed(2)}`;
+  return `$${Math.round(v).toLocaleString("en-US")}`;
+}
+
+export function renderPaid(doc, q) {
+  const eco = (doc && doc.economy) || null;
+  if (!eco) {
+    return "No settled-payment data published yet. That means we have not read the chain, not that "
+      + "nothing has been paid — say so rather than guessing.";
+  }
+  const recs = (doc.records || []).filter((r) => r.attributable);
+  if (q) {
+    const t = String(q).toLowerCase();
+    const hit = recs.filter((r) => (r.capabilities || []).some((c) => c.toLowerCase().includes(t))
+      || (r.hosts || []).some((h) => h.toLowerCase().includes(t)));
+    if (!hit.length) {
+      return `No settled x402 payments are attributable to "${q}".\n\n`
+        + "This is NOT a negative signal about it. Almost every MCP server is free by design and "
+        + "never publishes a payment address, so there is nothing to measure. It means only that "
+        + "this capability has no payment address we can resolve, or that its address is shared "
+        + "with other services and the chain cannot separate them.";
+    }
+    const L = [`Settled x402 payments attributable to "${q}" (Base, all time):\n`];
+    for (const r of hit) {
+      L.push(`- ${(r.capabilities || []).join(", ")} — ${paidUsd(r.paid_usd)} across `
+        + `${(r.calls || 0).toLocaleString("en-US")} settled calls, at ${r.address}`);
+      L.push(`  host: ${(r.hosts || []).join(", ")}`);
+    }
+    L.push("", `Context: the median paid service in this economy has earned ${paidUsd(eco.median_usd)} `
+      + `in its life, and ${eco.under_1_usd} of ${eco.receivers_paid} have earned under $1.`);
+    L.push("Payment is not an input to the tashan score: being paid and being well made are "
+      + "different claims.");
+    return L.join("\n");
+  }
+  return [
+    "The x402 paid economy, measured (Base, all time):",
+    "",
+    `- ${eco.receivers_paid} of ${doc.receivers_indexed} listed payment addresses have ever been paid; `
+      + `${eco.receivers_never_paid} never have.`,
+    `- ${paidUsd(eco.paid_usd)} settled in total, across ${(eco.calls || 0).toLocaleString("en-US")} payments `
+      + `(mean ${paidUsd(eco.mean_payment_usd)} per call).`,
+    `- The MEDIAN paid service has earned ${paidUsd(eco.median_usd)}. ${eco.under_1_usd} have earned under $1, `
+      + `${eco.under_10_usd} under $10, and only ${eco.over_1000_usd} more than $1,000.`,
+    `- Concentration: the single largest receiver is ${Math.round((eco.top1_share || 0) * 100)}% of all volume; `
+      + `the top five are ${Math.round((eco.top5_share || 0) * 100)}%.`,
+    `- ${doc.paid_capabilities} capabilities in the tashan catalog have receipts attributable to them.`,
+    "",
+    "If you are quoting the total, quote the median beside it — a sum is the one statistic a "
+      + "concentrated economy always passes.",
+    `Source: ${doc.source}. Detail: ${SITE}/paid.html`,
+  ].join("\n");
+}
+
 async function callTool(name, args) {
+  if (name === "paid_demand") {
+    return renderPaid(await demand().catch(() => null), args && args.name);
+  }
   if (name === "find_capability") {
     const [all, lk] = [await rows(), await lookup().catch(() => null)];
     const list = forTask(all, String(args.task || ""), Math.max(1, Math.min(10, args.limit || 3)), lk);

@@ -11,48 +11,48 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 58 | 15 ★ | active |
-| 2 | [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) | 78 | 14k/wk | active |
-| 3 | [Dynatrace Managed](https://tashan.sh/capability/pkg-dynatrace-oss-dynatrace-managed-mcp-server.html) | 69 | 425/wk | active |
-| 4 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 67 | 101 ★ | active |
-| 5 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 65 | 64 ★ | active |
-| 6 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 61 | 61 ★ | active |
-| 7 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 58 | 27 ★ | active |
-| 8 | [Parseable](https://tashan.sh/capability/pkg-parseable-parseable-mcp-server.html) | 54 | 91/wk | active |
-| 9 | [Datadog · datadog-labs](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 52 | 8 ★ | active |
-| 10 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 47 | 6 ★ | active |
+| 1 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 59 | 15 ★ | active |
+| 2 | [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) | 79 | 14k/wk | active |
+| 3 | [Dynatrace Managed](https://tashan.sh/capability/pkg-dynatrace-oss-dynatrace-managed-mcp-server.html) | 71 | 869/wk | active |
+| 4 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 68 | 101 ★ | active |
+| 5 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 66 | 64 ★ | active |
+| 6 | [Parseable](https://tashan.sh/capability/pkg-parseable-parseable-mcp-server.html) | 65 | 787/wk | active |
+| 7 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 62 | 61 ★ | active |
+| 8 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 59 | 27 ★ | active |
+| 9 | [Datadog · datadog-labs](https://tashan.sh/capability/plugin-datadog-labs-claude-code-plugin-datadog.html) | 53 | 8 ★ | active |
+| 10 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 48 | 6 ★ | active |
 | 11 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 46 | 3 ★ | active |
 | 12 | [Loki](https://tashan.sh/capability/plugin-lexfrei-mcp-loki-loki.html) | 44 | 3 ★ | active |
-| 13 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 70 | 2k/wk | active |
-| 14 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 63 | 90 ★ | active |
-| 15 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | 47 | 2 repos | active |
-| 16 | [Observability Designer](https://tashan.sh/capability/skill-alirezarezvani-observability-designer.html) | 47 | 2 repos | active |
-| 17 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
-| 18 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
-| 19 | [Render](https://tashan.sh/capability/plugin-render-oss-render-plugin-claude-code-render.html) | 44 | 0 ★ | active |
-| 20 | [Slo Architect](https://tashan.sh/capability/skill-alirezarezvani-slo-architect.html) | not scored | 1 repos | active |
-| 21 | [Railway](https://tashan.sh/capability/plugin-railwayapp-railway-skills-railway.html) | 70 | 300 ★ | active |
-| 22 | [Claude Code Wakatime](https://tashan.sh/capability/plugin-wakatime-claude-code-wakatime-claude-code-wakatime.html) | 60 | 88 ★ | active |
-| 23 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 58 | 27 ★ | active |
-| 24 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 55 | 18 ★ | active |
-| 25 | [Dash0](https://tashan.sh/capability/plugin-dash0hq-dash0-agent-plugin-dash0.html) | 52 | 4 ★ | active |
-| 26 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 49 | 5 ★ | active |
-| 27 | [Datadog](https://tashan.sh/capability/pkg-datadog-mcp.html) | 60 | 1k/wk | active |
-| 28 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 58 | 1k/wk | active |
-| 29 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 63 | 371/wk | active |
-| 30 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 62 | 414/wk | active |
-| 31 | [Argosvix](https://tashan.sh/capability/pkg-argosvix-mcp-server.html) | 60 | 280/wk | active |
-| 32 | [Lensmcp](https://tashan.sh/capability/pkg-lensmcp.html) | 67 | 1k/wk | active |
-| 33 | [Monitoring](https://tashan.sh/capability/pkg-uptybots-mcp-server.html) | 65 | 773/wk | active |
-| 34 | [Sslwebsites](https://tashan.sh/capability/pkg-sslwebsites.html) | 56 | 412/wk | active |
-| 35 | [Health Monitor](https://tashan.sh/capability/pkg-health-monitor-mcp.html) | 50 | 88/wk | active |
-| 36 | [Newrelic · meet-bhalodiya](https://tashan.sh/capability/pkg-meet-bhalodiya-newrelic-mcp.html) | 50 | 79/wk | active |
-| 37 | [Lighthouse · lighthouse-mcp](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 46 | 791/wk | active |
-| 38 | [Jamp](https://tashan.sh/capability/pkg-jamp-mcp.html) | 45 | 49/wk | active |
-| 39 | [React Native](https://tashan.sh/capability/pkg-ohah-react-native-mcp-server.html) | 44 | 1k/wk | active |
-| 40 | [Log10x](https://tashan.sh/capability/pkg-log10x-mcp.html) | 76 | 6k/wk | active |
+| 13 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 67 | 1k/wk | active |
+| 14 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 64 | 90 ★ | active |
+| 15 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 46 | 2 marketplaces | — |
+| 16 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
+| 17 | [Render](https://tashan.sh/capability/plugin-render-oss-render-plugin-claude-code-render.html) | 45 | 0 ★ | active |
+| 18 | [Luciq](https://tashan.sh/capability/plugin-luciqai-agent-skills-luciq.html) | 43 | 0 ★ | active |
+| 19 | [Bitfab](https://tashan.sh/capability/plugin-project-white-rabbit-bitfab-claude-plugin-bitfab.html) | 42 | 1 ★ | active |
+| 20 | [Jprofiler](https://tashan.sh/capability/plugin-ej-technologies-jprofiler-mcp-jprofiler.html) | 42 | 2 ★ | active |
+| 21 | [Sap Btp Cloud Logging](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-cloud-logging.html) | 42 | 1 marketplaces | — |
+| 22 | [Langsmith](https://tashan.sh/capability/pkg-langsmith-mcp-server.html) | 41 | 2k/wk | abandoned |
+| 23 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | not scored | 1 repos | active |
+| 24 | [Observability Designer](https://tashan.sh/capability/skill-alirezarezvani-observability-designer.html) | not scored | 1 repos | active |
+| 25 | [Slo Architect](https://tashan.sh/capability/skill-alirezarezvani-slo-architect.html) | not scored | 1 repos | active |
+| 26 | [Railway](https://tashan.sh/capability/plugin-railwayapp-railway-skills-railway.html) | 70 | 300 ★ | active |
+| 27 | [Claude Code Wakatime](https://tashan.sh/capability/plugin-wakatime-claude-code-wakatime-claude-code-wakatime.html) | 61 | 88 ★ | active |
+| 28 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 59 | 27 ★ | active |
+| 29 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 56 | 18 ★ | active |
+| 30 | [Dash0](https://tashan.sh/capability/plugin-dash0hq-dash0-agent-plugin-dash0.html) | 53 | 4 ★ | active |
+| 31 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 49 | 5 ★ | active |
+| 32 | [Datadog](https://tashan.sh/capability/pkg-datadog-mcp.html) | 61 | 1k/wk | active |
+| 33 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 60 | 2k/wk | active |
+| 34 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 70 | 4k/wk | active |
+| 35 | [Argosvix](https://tashan.sh/capability/pkg-argosvix-mcp-server.html) | 64 | 484/wk | active |
+| 36 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 63 | 414/wk | active |
+| 37 | [Lensmcp](https://tashan.sh/capability/pkg-lensmcp.html) | 68 | 1k/wk | active |
+| 38 | [Sslwebsites](https://tashan.sh/capability/pkg-sslwebsites.html) | 57 | 412/wk | active |
+| 39 | [Health Monitor](https://tashan.sh/capability/pkg-health-monitor-mcp.html) | 51 | 88/wk | active |
+| 40 | [Lighthouse · lighthouse-mcp](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 46 | 580/wk | active |
 
-Showing the top 40 of 41. The full ranked shelf is at https://tashan.sh/task/observability.html.
+Showing the top 40 of 45. The full ranked shelf is at https://tashan.sh/task/observability.html.
 
 ## What these numbers are not
 

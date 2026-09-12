@@ -120,6 +120,11 @@ STAGES = [
      "coverage weighted by demand — the tiers we commit to, not the ratio that falls as we discover"),
     ("compare",         ["pipeline/gen_compare.py"], "site", "head-to-head X vs Y pages"),
     ("hubs",            ["pipeline/gen_hubs.py"], "site", "category + task + role hubs, llms.txt"),
+    # AFTER the export and the hubs, because it reads web/data/capabilities.json to resolve a
+    # receipt to a capability that actually has a page. Before `pages`, so a dossier and this table
+    # are built from the same run.
+    ("paid",            ["pipeline/gen_paid.py"], "site",
+     "/paid.html — settled x402 receipts, read through The Graph's Subgraph MCP"),
     # A sitemap asks a crawler to come and look; a feed is PULLED — by readers, aggregators and the
     # answer engines that read a dated stream as a freshness signal. It is also the only content
     # here that is genuinely new rather than recomputed.
@@ -167,8 +172,15 @@ STAGES = [
     ("push-history",    ["pipeline/push_history.py"], "site",
      "the retention series -> Cloudflare KV, where /api/history serves licence holders"),
 ]
-SITE_ONLY = {"badges", "pages", "content", "hubs", "compare", "coverage", "registry", "product-tree",
-             "push-paid", "push-history"}
+# DERIVED FROM THE PHASE, NOT LISTED BY HAND. This was a literal set and it had drifted from the
+# phase it was supposed to mirror: `export`, `changes-page`, `stats-page`, `feed` and `social` are
+# all phase "site" and none of them was in the set, so `--site` — documented here and in CLAUDE.md
+# as "site generation only" — regenerated the pages WITHOUT regenerating the export they are built
+# from, and left /changes.html untouched. The visible symptom was 18 dead links: prerender removed
+# the dossiers for capabilities that had left the export, and changes.html went on linking to them,
+# which tests/test_links.py correctly called a broken page. A second list of the same fact is a
+# second thing to forget.
+SITE_ONLY = {s[0] for s in STAGES if s[2] == "site"}
 
 
 def run(name, argv, full):

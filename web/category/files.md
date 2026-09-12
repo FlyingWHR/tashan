@@ -11,40 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Filesystem](https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html) | 92 | 592k/wk | active |
-| 2 | [Memory](https://tashan.sh/capability/pkg-modelcontextprotocol-server-memory.html) | 91 | 80k/wk | active |
-| 3 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 82 | 39k/wk | active |
-| 4 | [Mempalace](https://tashan.sh/capability/plugin-mempalace-mempalace-mempalace.html) | 80 | 58k ★ | active |
-| 5 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 79 | 62k ★ | active |
-| 6 | [Discourse](https://tashan.sh/capability/pkg-discourse-mcp.html) | 76 | 2k/wk | active |
-| 7 | [Respira WordPress](https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html) | 70 | 5k/wk | active |
-| 8 | [Memory · cerefox](https://tashan.sh/capability/pkg-cerefox-memory.html) | 69 | 1k/wk | active |
-| 9 | [Gogcli MCP Drive](https://tashan.sh/capability/pkg-gogcli-mcp-drive.html) | 67 | 709/wk | active |
-| 10 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 65 | 519/wk | active |
-| 11 | [Skillsmith](https://tashan.sh/capability/pkg-skillsmith-cli.html) | 63 | 383/wk | active |
-| 12 | [Kawacode](https://tashan.sh/capability/pkg-kawacode-mcp.html) | 62 | 480/wk | active |
-| 13 | [Terminal Commander](https://tashan.sh/capability/pkg-terminal-commander.html) | 62 | 350/wk | active |
-| 14 | [Bourdon](https://tashan.sh/capability/pkg-getbourdon-mcp-server.html) | 61 | 578/wk | active |
-| 15 | [Fileditor](https://tashan.sh/capability/pkg-fileditor-mcp.html) | 61 | 257/wk | active |
-| 16 | [Beepflow](https://tashan.sh/capability/pkg-beepflow-mcp.html) | 61 | 214/wk | active |
-| 17 | [Fimemory](https://tashan.sh/capability/pkg-fimemory.html) | 60 | 503/wk | active |
-| 18 | [Braincloud MCP Helper](https://tashan.sh/capability/pkg-braincloud-mcp-helper.html) | 59 | 123/wk | active |
-| 19 | [Recall · @clauderecallhq](https://tashan.sh/capability/pkg-clauderecallhq-cli.html) | 56 | 221/wk | active |
-| 20 | [Help · MemPalace](https://tashan.sh/capability/skill-mempalace-help.html) | 53 | 3 repos | active |
-| 21 | [En16931](https://tashan.sh/capability/pkg-attestwire-mcp.html) | 53 | 101/wk | active |
-| 22 | [Justdrop](https://tashan.sh/capability/pkg-justdrop-mcp.html) | 51 | 144/wk | active |
-| 23 | [Mempalace Recall](https://tashan.sh/capability/skill-mempalace-mempalace-recall.html) | 50 | 2 repos | active |
-| 24 | [Mine · MemPalace](https://tashan.sh/capability/skill-mempalace-mine.html) | 50 | 2 repos | active |
-| 25 | [Search · MemPalace](https://tashan.sh/capability/skill-mempalace-search.html) | 50 | 2 repos | active |
-| 26 | [Taibu](https://tashan.sh/capability/pkg-taibu-mcp.html) | 49 | 100/wk | active |
-| 27 | [Google Tag Manager](https://tashan.sh/capability/pkg-google-tag-manager-mcp-server.html) | 49 | 64/wk | active |
-| 28 | [Remote Filesystem](https://tashan.sh/capability/pkg-remote-filesystem-mcp-server.html) | 48 | 236/wk | active |
-| 29 | [Proxmox](https://tashan.sh/capability/pkg-proxmox-mcp-server.html) | 45 | 179/wk | active |
-| 30 | [Awesome Mineflayer](https://tashan.sh/capability/pkg-awesome-mineflayer-mcp.html) | 45 | 66/wk | active |
-| 31 | [Rclone](https://tashan.sh/capability/skill-jikig-ai-rclone.html) | not scored | 1 repos | active |
-| 32 | [Lp Rclone](https://tashan.sh/capability/skill-builtform-lp-rclone.html) | not scored | 1 repos | active |
-| 33 | [Delete Sandbox](https://tashan.sh/capability/skill-sankahq-delete-sandbox.html) | not scored | 1 repos | active |
-| 34 | [Gdrive](https://tashan.sh/capability/pkg-modelcontextprotocol-server-gdrive.html) | not scored | 5k/wk | abandoned |
+| 1 | [Filesystem](https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html) | 93 | 482k/wk | active |
+| 2 | [Memory](https://tashan.sh/capability/pkg-modelcontextprotocol-server-memory.html) | 92 | 108k/wk | active |
+| 3 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 84 | 75k/wk | active |
+| 4 | [Mempalace](https://tashan.sh/capability/plugin-mempalace-mempalace-mempalace.html) | 81 | 58k ★ | active |
+| 5 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 78 | 62k ★ | active |
+| 6 | [Respira WordPress](https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html) | 71 | 5k/wk | active |
+| 7 | [Remember](https://tashan.sh/capability/plugin-digital-process-tools-claude-remember-remember.html) | 69 | 143 ★ | active |
+| 8 | [Fileditor](https://tashan.sh/capability/pkg-fileditor-mcp.html) | 69 | 2k/wk | active |
+| 9 | [Memory · cerefox](https://tashan.sh/capability/pkg-cerefox-memory.html) | 69 | 2k/wk | active |
+| 10 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 69 | 1k/wk | active |
+| 11 | [Gogcli MCP Drive](https://tashan.sh/capability/pkg-gogcli-mcp-drive.html) | 69 | 1k/wk | active |
+| 12 | [Kawacode](https://tashan.sh/capability/pkg-kawacode-mcp.html) | 63 | 480/wk | active |
+| 13 | [Terminal Commander](https://tashan.sh/capability/pkg-terminal-commander.html) | 63 | 350/wk | active |
+| 14 | [Skillsmith](https://tashan.sh/capability/pkg-skillsmith-mcp-server.html) | 63 | 249/wk | active |
+| 15 | [Bourdon](https://tashan.sh/capability/pkg-getbourdon-mcp-server.html) | 62 | 578/wk | active |
+| 16 | [Render Useful](https://tashan.sh/capability/pkg-render-useful-mcp.html) | 60 | 646/wk | active |
+| 17 | [Recall](https://tashan.sh/capability/pkg-clauderecallhq-cli.html) | 60 | 414/wk | active |
+| 18 | [Braincloud MCP Helper](https://tashan.sh/capability/pkg-braincloud-mcp-helper.html) | 60 | 123/wk | active |
+| 19 | [Help · MemPalace](https://tashan.sh/capability/skill-mempalace-help.html) | 57 | 4 repos | active |
+| 20 | [Automem](https://tashan.sh/capability/pkg-verygoodplugins-mcp-automem.html) | 53 | 100/wk | active |
+| 21 | [Epiphany](https://tashan.sh/capability/pkg-epiphany-mcp.html) | 52 | 189/wk | active |
+| 22 | [Justdrop](https://tashan.sh/capability/pkg-justdrop-mcp.html) | 52 | 144/wk | active |
+| 23 | [Jamgate](https://tashan.sh/capability/pkg-jamgate.html) | 52 | 54/wk | active |
+| 24 | [Mempalace Recall](https://tashan.sh/capability/skill-mempalace-mempalace-recall.html) | 51 | 2 repos | active |
+| 25 | [Mine · MemPalace](https://tashan.sh/capability/skill-mempalace-mine.html) | 51 | 2 repos | active |
+| 26 | [Search · MemPalace](https://tashan.sh/capability/skill-mempalace-search.html) | 51 | 2 repos | active |
+| 27 | [Teach](https://tashan.sh/capability/skill-korenkrita-teach.html) | 51 | 2 repos | active |
+| 28 | [Outlook · anasahmed07](https://tashan.sh/capability/plugin-anasahmed07-outlook-classic-mcp-outlook.html) | 50 | 10 ★ | active |
+| 29 | [Google Tag Manager](https://tashan.sh/capability/pkg-google-tag-manager-mcp-server.html) | 50 | 64/wk | active |
+| 30 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 49 | 12 ★ | active |
+| 31 | [Remote Filesystem](https://tashan.sh/capability/pkg-remote-filesystem-mcp-server.html) | 49 | 236/wk | active |
+| 32 | [Proxmox](https://tashan.sh/capability/pkg-proxmox-mcp-server.html) | 46 | 179/wk | active |
+| 33 | [Awesome Mineflayer](https://tashan.sh/capability/pkg-awesome-mineflayer-mcp.html) | 46 | 66/wk | active |
+| 34 | [Jolli](https://tashan.sh/capability/plugin-jolliai-jolli-claude-plugin-jolli.html) | 44 | 0 ★ | active |
+| 35 | [Zerodha MCP Server Aks](https://tashan.sh/capability/pkg-zerodha-mcp-server-aks.html) | 44 | 30/wk | active |
+| 36 | [Dropbox](https://tashan.sh/capability/plugin-dropbox-dropbox-ai-plugins-dropbox.html) | 43 | 2 ★ | active |
+| 37 | [Stdio Proxy](https://tashan.sh/capability/pkg-undisk-mcp-stdio-proxy.html) | 43 | 46/wk | active |
+| 38 | [File Organizer](https://tashan.sh/capability/skill-primax79-file-organizer.html) | 42 | 2 repos | active |
+| 39 | [Drive](https://tashan.sh/capability/pkg-armoryworks-drive-mcp.html) | 42 | 10/wk | active |
+| 40 | [Gorgias](https://tashan.sh/capability/pkg-gorgias-mcp-server.html) | 42 | 766/wk | active |
+
+Showing the top 40 of 54. The full ranked shelf is at https://tashan.sh/category/files.html.
 
 ## What these numbers are not
 

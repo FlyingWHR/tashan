@@ -11,23 +11,24 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route | Purpose | JS | Data | Gate | Inbound |
 |---|---|---|---|---|---|
-| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | board.json, capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 114 |
-| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 71 |
-| `/audit.html` | Paste your MCP config and see every risk we hold about what is in it. Parsed in the browser, so keys never leave the page. | audit, site, terminal | board.json, index.json, tasks.json | free | 69 |
-| `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 66 |
-| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 62 |
-| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | board.json, coverage.json, index.json, tasks.json | free | 43 |
-| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | board.json, capabilities.json, index.json, tasks.json | free | 33 |
-| `/changes.html` | What moved in the ecosystem, dated — the only page built from a series that cannot be backfilled, and the freshest thing we publish. | site | — | free | 32 |
-| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | board.json, index.json, tasks.json | free | 32 |
-| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | board.json, index.json, tasks.json | post-sale | 32 |
-| `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | board.json, coverage.json, index.json, requests.json, tasks.json | free | 32 |
-| `/about.html` | What tashan measures, where it is going, and the principles the scoring follows. | site, terminal | board.json, index.json, tasks.json | free | 30 |
-| `/compare.html` | Pick any two capabilities and see them side by side. The 395 pre-generated pairs cover what people search for; this covers the comparison they have. | compare, site, terminal | board.json, compare.json, index.json, tasks.json | free | 30 |
-| `/privacy.html` | What we collect, which is close to nothing. | site, terminal | board.json, index.json, tasks.json | free | 30 |
-| `/stats.html` | The ecosystem in numbers, CC BY 4.0 with a citation line — built so the articles that outrank us cite us instead. | site | — | free | 30 |
-| `/support.html` | How to get help, and what we can see when you ask. | site, terminal | board.json, index.json, tasks.json | free | 30 |
-| `/terms.html` | Terms of service. | site, terminal | board.json, index.json, tasks.json | free | 30 |
+| `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | board.json, capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 117 |
+| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 73 |
+| `/audit.html` | Paste your MCP config and see every risk we hold about what is in it. Parsed in the browser, so keys never leave the page. | audit, site, terminal | board.json, index.json, tasks.json | free | 71 |
+| `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 68 |
+| `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 64 |
+| `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | board.json, coverage.json, index.json, tasks.json | free | 44 |
+| `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | board.json, capabilities.json, index.json, tasks.json | free | 34 |
+| `/changes.html` | What moved in the ecosystem, dated — the only page built from a series that cannot be backfilled, and the freshest thing we publish. | site | — | free | 33 |
+| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | board.json, index.json, tasks.json | free | 33 |
+| `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | board.json, index.json, tasks.json | post-sale | 33 |
+| `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | board.json, coverage.json, index.json, requests.json, tasks.json | free | 33 |
+| `/about.html` | What tashan measures, where it is going, and the principles the scoring follows. | site, terminal | board.json, index.json, tasks.json | free | 31 |
+| `/compare.html` | Pick any two capabilities and see them side by side. The 395 pre-generated pairs cover what people search for; this covers the comparison they have. | compare, site, terminal | board.json, compare.json, index.json, tasks.json | free | 31 |
+| `/paid.html` | Settled x402 receipts on Base, joined to the catalog — the only signal here that is not a proxy for demand. Read through The Graph's Subgraph MCP, and the page prints the query so a reader can re-run it. | site | — | free | 31 |
+| `/privacy.html` | What we collect, which is close to nothing. | site, terminal | board.json, index.json, tasks.json | free | 31 |
+| `/stats.html` | The ecosystem in numbers, CC BY 4.0 with a citation line — built so the articles that outrank us cite us instead. | site | — | free | 31 |
+| `/support.html` | How to get help, and what we can see when you ask. | site, terminal | board.json, index.json, tasks.json | free | 31 |
+| `/terms.html` | Terms of service. | site, terminal | board.json, index.json, tasks.json | free | 31 |
 | `/capability.html` | Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs. | capability, site, terminal | board.json, index.json, tasks.json | free | 1 |
 | `/404.html` *(noindex)* | Real 404 with a route back in. noindex; without it Pages served the homepage at status 200 for every unknown URL. | site, terminal | board.json, index.json, tasks.json | free | 0 |
 | `/activate.html` *(noindex)* | Approve a device that ran `tashan login`. noindex; the browser half of the RFC 8628 grant, so a licence key is typed once ever, not per machine. | activate, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 0 |
@@ -37,11 +38,11 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route pattern | Pages | Generator |
 |---|---|---|
-| `/capability/*.html` | 12,001 | `pipeline/prerender.py` |
-| `/category/*.html` | 109 | `pipeline/gen_hubs.py` |
+| `/capability/*.html` | 11,914 | `pipeline/prerender.py` |
+| `/category/*.html` | 108 | `pipeline/gen_hubs.py` |
 | `/task/*.html` | 64 | `pipeline/gen_hubs.py` |
 | `/role/*.html` | 23 | `pipeline/gen_hubs.py` |
-| `/compare/*.html` | 407 | `pipeline/gen_compare.py` |
+| `/compare/*.html` | 420 | `pipeline/gen_compare.py` |
 | `/learn/*.html` | 9 | `pipeline/gen_content.py` |
 
 ## Non-page surfaces
@@ -49,7 +50,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | File | Kind | Exposes |
 |---|---|---|
 | `cli/tashan.mjs` | CLI | search / top / info / add / doctor / activate / mcp |
-| `cli/mcp.mjs` | MCP server | find_capability / check_capability / audit_config |
+| `cli/mcp.mjs` | MCP server | find_capability / check_capability / audit_config / paid_demand |
 | `functions/api/account.js` | Account | session + the customer's own record |
 | `functions/api/checkout.js` | Post-purchase sign-in | checkout id -> session, single-use |
 | `functions/api/device.js` | Device login | RFC 8628 grant for `tashan login` |

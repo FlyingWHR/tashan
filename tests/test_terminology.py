@@ -50,6 +50,14 @@ EXEMPT = [
 
 
 def visible_text(html):
+    # A QUOTED NAME IS NOT OUR COPY. This rule exists to catch OUR retired vocabulary, and the
+    # docstring above already says the ~12,000 generated pages are excluded because a capability
+    # really is called "remote-system-maintenance". Two hand-written pages now embed generated rows
+    # — index.html bakes the top of the board, /paid.html ranks by settled receipts — and one of
+    # those rows is a third-party server literally named "X402 Trust". Flagging a publisher's own
+    # product name teaches you to skip the guard, which is the failure this file is about. The
+    # capability-name cell is dropped; every word we wrote around it is still scanned.
+    html = re.sub(r'<a class="cap__link"[^>]*>.*?</a>', " ", html, flags=re.S)
     html = re.sub(r"<script.*?</script>", " ", html, flags=re.S)
     html = re.sub(r"<style.*?</style>", " ", html, flags=re.S)
     html = re.sub(r"<!--.*?-->", " ", html, flags=re.S)

@@ -11,19 +11,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Orchestra](https://tashan.sh/capability/plugin-orchestra-hq-orchestra-skills-orchestra.html) | 52 | 9 ★ | active |
+| 1 | [Orchestra](https://tashan.sh/capability/plugin-orchestra-hq-orchestra-skills-orchestra.html) | 53 | 9 ★ | active |
 | 2 | [Whodb](https://tashan.sh/capability/plugin-clidey-whodb-whodb.html) | 75 | 5k ★ | active |
-| 3 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 62 | 37 ★ | active |
-| 4 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 53 | 13 ★ | active |
-| 5 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 53 | 56 ★ | active |
-| 6 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 51 | 6 ★ | active |
-| 7 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 63 | 90 ★ | active |
-| 8 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | 47 | 2 repos | active |
-| 9 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | 47 | 2 repos | active |
-| 10 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 47 | 2 repos | active |
-| 11 | [Dadata Ru Automation](https://tashan.sh/capability/skill-composiohq-dadata-ru-automation.html) | not scored | 1 repos | active |
-| 12 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 58 | 25 ★ | active |
-| 13 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 57 | 32 ★ | active |
+| 3 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 63 | 37 ★ | active |
+| 4 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 54 | 13 ★ | active |
+| 5 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 54 | 56 ★ | active |
+| 6 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 52 | 6 ★ | active |
+| 7 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 64 | 90 ★ | active |
+| 8 | [Dadata Ru Automation](https://tashan.sh/capability/skill-composiohq-dadata-ru-automation.html) | not scored | 1 repos | active |
+| 9 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | not scored | 1 repos | active |
+| 10 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | not scored | 1 repos | active |
+| 11 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | not scored | 1 repos | active |
+| 12 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 59 | 25 ★ | active |
+| 13 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 58 | 32 ★ | active |
 
 ## What these numbers are not
 

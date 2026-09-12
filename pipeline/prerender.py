@@ -511,6 +511,32 @@ def clip_desc(t):
     return t[:cut].rstrip(" ,;:—-") + ("" if t[cut - 1:cut] == "." else ".") + " …"
 
 
+def paid_line(c):
+    """Settled x402 receipts, in one sentence, or None if we have never asked the chain about it.
+
+    THE DISTINCTION THAT MATTERS HERE IS ZERO VERSUS UNKNOWN. paid_seen_at records that we asked;
+    a measured zero is a finding ("its payment address has never been paid") and a missing row is
+    not a claim at all. Printing 0 for both would tell a reader that 6,700 free MCP servers had
+    failed to earn money they never asked for.
+    """
+    if not c.get("paid_seen_at"):
+        return None
+    usd, calls = c.get("paid_usd") or 0.0, c.get("paid_calls") or 0
+    addrs = len([a for a in (c.get("paid_address") or "").split(",") if a])
+    where = (" at %d payment addresses" % addrs) if addrs > 1 else " at its own payment address"
+    if not calls:
+        return "none yet — its payment address has never been paid (Base, all time)"
+    # Precision the number deserves: a half-cent must not round to zero and $166,658.8173 must not
+    # print four decimals as if the cents were the point. Mirrors gen_paid.money().
+    if usd < 0.01:
+        amount = "under $0.01"
+    elif usd < 100:
+        amount = "$%.2f" % usd
+    else:
+        amount = "$" + fmt(int(round(usd)))
+    return "%s across %s x402 calls%s (Base, all time)" % (amount, fmt(calls), where)
+
+
 def summary(c, gen=""):
     """Server-rendered content crawlers see with JS off (capability.js replaces it for humans)."""
     n = disp(c); rows = []
@@ -534,6 +560,10 @@ def summary(c, gen=""):
                              + ("" if c["coverage"] >= 1 else " — the rest are unknown, and the score is "
                                 "discounted for it")) if c.get("coverage") is not None else None)
     kv("Health", c.get("vitality"))
+    # THE ONLY EVIDENCE ON THIS PAGE THAT IS NOT A PROXY. Downloads, stars and config appearances
+    # can all exist without anyone finding the thing useful; a settled USDC transfer cannot. Shown
+    # beside them rather than folded into the score — see /paid.html.
+    kv("Settled payments", paid_line(c))
     kv("GitHub stars", fmt(c.get("gh_stars")) if c.get("gh_stars") is not None else None)
     kv("Contributors", c.get("gh_contributors"))
     kv("License", c.get("gh_license"))
@@ -1512,7 +1542,9 @@ def sitemap(caps):
             "/browse.html", "/compare.html", "/audit.html",
             # The freshest page on the site, and the only one competitors cannot reproduce — it is
             # built from a series that cannot be backfilled. `changefreq` says daily below.
-            "/changes.html", "/stats.html"]
+            "/changes.html", "/stats.html",
+            # The only ranking on this site that is not a proxy for demand.
+            "/paid.html"]
     def _static_url(u):
         # /changes.html is rewritten every night from change_events; saying so is the whole point of
         # having it in here. Everything else changes when the site is rebuilt, which is not daily.
@@ -1626,6 +1658,8 @@ def markdown(c, gen):
                               if c.get("coverage") is not None else "not measured")
     fact("Health", c.get("vitality") or "not measured")
     fact("Instruction depth", c.get("expertise_verdict") or "not yet graded")
+    # An answer engine reading this instead of the page must still see the money signal.
+    if paid_line(c):                    fact("Settled payments", paid_line(c))
     if c.get("gh_stars") is not None:   fact("GitHub stars", f'{c["gh_stars"]:,}')
     if c.get("npm_downloads") is not None: fact("npm downloads", f'{c["npm_downloads"]:,}/week')
     if c.get("gh_license"):             fact("License", c["gh_license"])

@@ -59,7 +59,10 @@ FOOTER = [
     ("Explore", [("/", "The Index"), ("/browse.html", "Browse"), ("/compare.html", "Compare"),
                  ("/audit.html", "Check my setup"),
                  ("/start.html", "Use it"), ("/learn/", "Learn"), ("/for-hosts.html", "For hosts"),
-                 ("/changes.html", "What changed"), ("/stats.html", "The numbers")]),
+                 ("/changes.html", "What changed"), ("/stats.html", "The numbers"),
+                 # The money signal needs a door. A page nothing links to is a page nobody reads,
+                 # and this one carries the only evidence here that is not a proxy for demand.
+                 ("/paid.html", "Who gets paid")]),
     ("How it works", [("/methodology.html", "Methodology"), ("/about.html", "About"),
                       ("/pricing.html", "Pricing"), ("/requests.html", "Requests")]),
     # CONTACT IN THE FOOTER, NOT ONLY BEHIND /support. hello@tashan.sh was on seven pages and

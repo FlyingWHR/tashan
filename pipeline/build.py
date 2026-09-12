@@ -198,9 +198,19 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            # of artifact, and the evidence for it is the author's own sentence ("self-describes as a
            # thin MCP-to-IPC adapter"), so it is recorded as a fact with the quote that supports it.
            "shim INTEGER",              # 1 = the author describes it as a bridge/proxy over something else
-           "shim_note TEXT"]            # their words, so the page can answer "says who?"
+           "shim_note TEXT",            # their words, so the page can answer "says who?"
+           # SETTLED x402 PAYMENTS — the only signal here that is money, and the first one that is
+           # not a proxy for demand. Everything else on this row is an upstream claim measured from
+           # outside (downloads, publish cadence, stars, appearances in public configs); these are
+           # USDC receipts on Base, read from a subgraph through The Graph's Subgraph MCP server.
+           # Written ONLY for a payment address that publishes a single host — see
+           # paid_demand.attributable(). Deliberately NOT an input to tashan_score, for the same
+           # reason the security columns are not: "someone pays for this" and "this is well made"
+           # are different claims, and folding them would hide exactly the case worth seeing.
+           "paid_usd REAL", "paid_calls INTEGER", "paid_address TEXT",
+           "paid_first INTEGER", "paid_last INTEGER", "paid_seen_at TEXT"]
 
-SCHEMA_VERSION = 17  # bump when MIGRATE changes; PRAGMA user_version records the applied version
+SCHEMA_VERSION = 18  # bump when MIGRATE changes; PRAGMA user_version records the applied version
 
 # v5 RENAMED the headline score. "Trust" claimed more than the SCORE measures: it is upkeep, freshness
 # and adoption, and a number whose name needs walking back is misnamed. That still holds — the security
@@ -1541,7 +1551,10 @@ def export(con):
             # npm_runnable is fetched for junk(): a package with no `bin` cannot be launched as a
             # server. Not exported to any public file — it decides membership, it is not a finding.
             "npm_license","npm_runnable",
-            "discord_url","gh_homepage"]
+            "discord_url","gh_homepage",
+            # settled x402 receipts. In THIS list because a column absent from this select never
+            # reaches the row dict — the same trap the L5 dependency fields fell into above.
+            "paid_usd","paid_calls","paid_address","paid_first","paid_last","paid_seen_at"]
     # Only trust-ranked caps are ever exported (ranked = trust-not-null, capped below), so fetch just the top
     # slice via idx_score instead of materializing the whole table. LIMIT is a buffer above the 800 board cap
     # so junk-filtering still leaves ≥800. At 1M rows this reads ~1500 rows, not all of them.
@@ -2286,7 +2299,11 @@ def export(con):
             # Security is the headline of the product, so the board must show it. Only the summary —
             # a count and a severity — never the advisory list, which is 30x the size and belongs on
             # the dossier. Emitted sparsely, so the ~76% of rows with no npm package cost nothing.
-            "sec_advisory_count", "sec_max_severity", "sec_install_script"]  # NOT description: it is 104 KB gz of the index and the board never reads it
+            "sec_advisory_count", "sec_max_severity", "sec_install_script",
+            # Settled receipts, for the board's money column and the ⌘K palette. 37 rows carry these
+            # today and the writer drops None, so the other 6,700 cost nothing — and this is the one
+            # column on the board that is not a proxy for demand.
+            "paid_usd", "paid_calls"]  # NOT description: it is 104 KB gz of the index and the board never reads it
     slim = {k: payload[k] for k in ("generated_at", "method", "total_capabilities", "enriched_npm",
                                     "expertise_graded", "risk_scanned", "job_mapped", "coverage_of",
                                     "scorer", "ranked", "catalogued", "measured", "note")}

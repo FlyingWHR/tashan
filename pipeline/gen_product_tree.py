@@ -47,6 +47,9 @@ PURPOSE = {
                            "that cannot be backfilled, and the freshest thing we publish.", "free"),
     "/stats.html":        ("The ecosystem in numbers, CC BY 4.0 with a citation line — built so the "
                            "articles that outrank us cite us instead.", "free"),
+    "/paid.html":         ("Settled x402 receipts on Base, joined to the catalog — the only signal "
+                           "here that is not a proxy for demand. Read through The Graph's Subgraph "
+                           "MCP, and the page prints the query so a reader can re-run it.", "free"),
     "/for-hosts.html":    ("For IDEs and agent hosts: swap one base URL, get the measurement.", "free"),
     "/capability.html":   ("Client-side dossier fallback (?id=). Prerendered twins are the canonical URLs.", "free"),
     "/welcome.html":      ("Post-checkout: activate the licence. noindex, reached only from Polar.", "post-sale"),
@@ -67,7 +70,7 @@ PURPOSE = {
 # Surfaces that are not pages but are product, and get audited the same way.
 NON_PAGE = [
     ("cli/tashan.mjs",   "CLI", "search / top / info / add / doctor / activate / mcp"),
-    ("cli/mcp.mjs",      "MCP server", "find_capability / check_capability / audit_config"),
+    ("cli/mcp.mjs",      "MCP server", "find_capability / check_capability / audit_config / paid_demand"),
     ("functions/api/account.js", "Account", "session + the customer's own record"),
     ("functions/api/checkout.js", "Post-purchase sign-in", "checkout id -> session, single-use"),
     ("functions/api/device.js",   "Device login", "RFC 8628 grant for `tashan login`"),

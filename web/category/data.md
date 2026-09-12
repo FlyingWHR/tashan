@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Inventory](https://tashan.sh/capability/pkg-transcend-io-mcp-server-inventory.html) | 80 | 12k/wk | active |
-| 2 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 78 | 12k ★ | active |
-| 3 | [Heroku](https://tashan.sh/capability/pkg-heroku-mcp-server.html) | 78 | 8k/wk | active |
-| 4 | [Log10x](https://tashan.sh/capability/pkg-log10x-mcp.html) | 76 | 6k/wk | active |
-| 5 | [Nvidia Skills](https://tashan.sh/capability/plugin-nvidia-skills-nvidia-skills.html) | 75 | 3k ★ | active |
-| 6 | [Daft](https://tashan.sh/capability/plugin-eventual-inc-daft-daft.html) | 75 | 6k ★ | active |
-| 7 | [Dataforseo](https://tashan.sh/capability/pkg-dataforseo-mcp-server.html) | 75 | 24k/wk | active |
-| 8 | [Eslint](https://tashan.sh/capability/pkg-eslint-mcp.html) | 75 | 20k/wk | active |
-| 9 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 74 | 4k ★ | active |
-| 10 | [Powerbi Modeling](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp.html) | 72 | 6k/wk | active |
-| 11 | [Mapbox](https://tashan.sh/capability/pkg-mapbox-mcp-server.html) | 70 | 614/wk | active |
-| 12 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 69 | 218 ★ | active |
-| 13 | [Powerbi Modeling MCP Linux X64](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp-linux-x64.html) | 69 | 1k/wk | active |
-| 14 | [Gscdump](https://tashan.sh/capability/pkg-gscdump-cli.html) | 69 | 1k/wk | active |
-| 15 | [LightOn Tools](https://tashan.sh/capability/plugin-lightonai-next-plaid-colgrep.html) | 68 | 532 ★ | active |
-| 16 | [European Parliament](https://tashan.sh/capability/pkg-european-parliament-mcp-server.html) | 68 | 2k/wk | active |
-| 17 | [Myco](https://tashan.sh/capability/pkg-goondocks-myco.html) | 68 | 1k/wk | active |
-| 18 | [Warden](https://tashan.sh/capability/plugin-getsentry-warden-warden.html) | 67 | 387 ★ | active |
-| 19 | [Google Analytics](https://tashan.sh/capability/pkg-mcp-google-analytics.html) | 67 | 1k/wk | active |
-| 20 | [Frase SEO](https://tashan.sh/capability/pkg-frase-mcp-server.html) | 67 | 533/wk | active |
-| 21 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 66 | 212 ★ | active |
-| 22 | [Cachly Dev](https://tashan.sh/capability/pkg-cachly-dev-mcp-server.html) | 66 | 780/wk | active |
-| 23 | [Apple Health](https://tashan.sh/capability/pkg-neiltron-apple-health-mcp.html) | 65 | 1k/wk | active |
-| 24 | [Placeroot](https://tashan.sh/capability/pkg-placeroot.html) | 65 | 890/wk | active |
-| 25 | [Altmetric](https://tashan.sh/capability/pkg-altmetric-mcp.html) | 65 | 357/wk | active |
-| 26 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 64 | 47 ★ | active |
-| 27 | [Website Auditor](https://tashan.sh/capability/pkg-website-auditor-mcp.html) | 64 | 765/wk | active |
-| 28 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 64 | 609/wk | active |
-| 29 | [PropLine — Sports Betting Odds & Prop Resolution](https://tashan.sh/capability/pkg-propline-mcp.html) | 64 | 550/wk | active |
-| 30 | [Steam Games](https://tashan.sh/capability/pkg-steam-games-mcp.html) | 64 | 548/wk | active |
-| 31 | [Csszyx](https://tashan.sh/capability/pkg-csszyx-mcp-server.html) | 64 | 295/wk | active |
-| 32 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 63 | 90 ★ | active |
-| 33 | [Mssql Reader](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-reader.html) | 63 | 940/wk | active |
-| 34 | [Shopify Multi Store](https://tashan.sh/capability/pkg-shopify-multi-store-mcp-server.html) | 63 | 771/wk | active |
-| 35 | [RNCP / RS — certifications professionnelles (France compétences)](https://tashan.sh/capability/pkg-mcp-rncp.html) | 63 | 715/wk | active |
-| 36 | [Barsom](https://tashan.sh/capability/pkg-barivia-barsom-mcp.html) | 63 | 378/wk | active |
-| 37 | [YouTube Data](https://tashan.sh/capability/pkg-kirbah-mcp-youtube.html) | 63 | 351/wk | active |
-| 38 | [Subgraph Registry](https://tashan.sh/capability/pkg-subgraph-registry-mcp.html) | 63 | 340/wk | active |
-| 39 | [Talonic](https://tashan.sh/capability/pkg-talonic-mcp.html) | 63 | 298/wk | active |
-| 40 | [Nats Trail](https://tashan.sh/capability/pkg-nats-trail-mcp.html) | 62 | 681/wk | active |
+| 1 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 79 | 12k ★ | active |
+| 2 | [Heroku](https://tashan.sh/capability/pkg-heroku-mcp-server.html) | 78 | 8k/wk | active |
+| 3 | [Nvidia Skills](https://tashan.sh/capability/plugin-nvidia-skills-nvidia-skills.html) | 76 | 3k ★ | active |
+| 4 | [Daft](https://tashan.sh/capability/plugin-eventual-inc-daft-daft.html) | 75 | 6k ★ | active |
+| 5 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 74 | 4k ★ | active |
+| 6 | [Powerbi Modeling](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp.html) | 74 | 13k/wk | active |
+| 7 | [Log10x](https://tashan.sh/capability/pkg-log10x-mcp.html) | 73 | 3k/wk | active |
+| 8 | [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) | 71 | 1k ★ | active |
+| 9 | [Myco](https://tashan.sh/capability/pkg-goondocks-myco.html) | 71 | 3k/wk | active |
+| 10 | [Mapbox](https://tashan.sh/capability/pkg-mapbox-mcp-server.html) | 71 | 614/wk | active |
+| 11 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 70 | 218 ★ | active |
+| 12 | [LightOn Tools](https://tashan.sh/capability/plugin-lightonai-next-plaid-colgrep.html) | 69 | 532 ★ | active |
+| 13 | [European Parliament](https://tashan.sh/capability/pkg-european-parliament-mcp-server.html) | 69 | 2k/wk | active |
+| 14 | [Powerbi Modeling MCP Linux X64](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp-linux-x64.html) | 69 | 1k/wk | active |
+| 15 | [Claude Lens](https://tashan.sh/capability/plugin-astro-han-claude-lens-claude-lens.html) | 68 | 216 ★ | active |
+| 16 | [Warden](https://tashan.sh/capability/plugin-getsentry-warden-warden.html) | 68 | 387 ★ | active |
+| 17 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 68 | 2k/wk | active |
+| 18 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 68 | 2k/wk | active |
+| 19 | [Frase SEO](https://tashan.sh/capability/pkg-frase-mcp-server.html) | 68 | 533/wk | active |
+| 20 | [Open Ontologies](https://tashan.sh/capability/plugin-fabio-rovai-open-ontologies-open-ontologies.html) | 67 | 212 ★ | active |
+| 21 | [Dataforseo](https://tashan.sh/capability/pkg-dataforseo-mcp-server.html) | 67 | 5k/wk | active |
+| 22 | [Openstreetmap](https://tashan.sh/capability/pkg-cyanheads-openstreetmap-mcp-server.html) | 67 | 1k/wk | active |
+| 23 | [Cachly Dev](https://tashan.sh/capability/pkg-cachly-dev-mcp-server.html) | 67 | 780/wk | active |
+| 24 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 66 | 64 ★ | active |
+| 25 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 66 | 944/wk | active |
+| 26 | [Subgraph Registry](https://tashan.sh/capability/pkg-subgraph-registry-mcp.html) | 66 | 888/wk | active |
+| 27 | [Altmetric](https://tashan.sh/capability/pkg-altmetric-mcp.html) | 66 | 357/wk | active |
+| 28 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 65 | 1k/wk | active |
+| 29 | [Mssql Reader](https://tashan.sh/capability/pkg-connorbritain-mssql-mcp-reader.html) | 65 | 1k/wk | active |
+| 30 | [Bisibility](https://tashan.sh/capability/pkg-bisibility-mcp.html) | 65 | 1k/wk | active |
+| 31 | [Nhtsa Vehicle Safety](https://tashan.sh/capability/pkg-cyanheads-nhtsa-vehicle-safety-mcp-server.html) | 65 | 812/wk | active |
+| 32 | [Website Auditor](https://tashan.sh/capability/pkg-website-auditor-mcp.html) | 65 | 765/wk | active |
+| 33 | [Yandex Direct](https://tashan.sh/capability/pkg-mcp-yandex-direct.html) | 65 | 570/wk | active |
+| 34 | [PropLine — Sports Betting Odds & Prop Resolution](https://tashan.sh/capability/pkg-propline-mcp.html) | 65 | 550/wk | active |
+| 35 | [Steam Games](https://tashan.sh/capability/pkg-steam-games-mcp.html) | 65 | 548/wk | active |
+| 36 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 64 | 47 ★ | active |
+| 37 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 64 | 90 ★ | active |
+| 38 | [Open Meteo](https://tashan.sh/capability/pkg-cyanheads-open-meteo-mcp-server.html) | 64 | 822/wk | active |
+| 39 | [Anilist](https://tashan.sh/capability/pkg-anilist-mcp-server.html) | 63 | 817/wk | active |
+| 40 | [Chessceo](https://tashan.sh/capability/pkg-chessceo-mcp.html) | 63 | 483/wk | active |
 
-Showing the top 40 of 404. The full ranked shelf is at https://tashan.sh/category/data.html.
+Showing the top 40 of 479. The full ranked shelf is at https://tashan.sh/category/data.html.
 
 ## What these numbers are not
 

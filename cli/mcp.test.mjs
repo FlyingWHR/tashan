@@ -1,5 +1,5 @@
 // node cli/mcp.test.mjs — protocol + rendering for the MCP server. No network.
-import { handle, handshake, evidence, risks, renderFind, renderCheck, trendBlock } from "./mcp.mjs";
+import { handle, handshake, evidence, risks, renderFind, renderCheck, renderPaid, trendBlock } from "./mcp.mjs";
 import assert from "node:assert";
 
 const rpc = (method, params, id = 1) => handle({ jsonrpc: "2.0", id, method, params });
@@ -17,7 +17,7 @@ assert.strictEqual(init.jsonrpc, "2.0"); assert.ok(init.result.serverInfo.name =
 
 const list = await rpc("tools/list");
 const names = list.result.tools.map((t) => t.name).sort();
-assert.deepStrictEqual(names, ["audit_config", "check_capability", "find_capability"]);
+assert.deepStrictEqual(names, ["audit_config", "check_capability", "find_capability", "paid_demand"]);
 for (const t of list.result.tools) {
   assert.ok(t.description.length > 40, `${t.name} needs a description an agent can route on`);
   assert.strictEqual(t.inputSchema.type, "object", `${t.name} schema must be an object`);
@@ -415,3 +415,38 @@ console.log("ok — an unlicensed agent is quoted in terms it can act on, naming
 
 
 console.log("ok — a malformed tool call is reported as a caller error, never as 'nothing found'");
+
+// ---- paid_demand: the money signal, and above all what its ABSENCE means ----
+const DOC = {
+  source: "subgraph ABC via subgraphs.mcp.thegraph.com", receivers_indexed: 1079,
+  paid_capabilities: 31,
+  economy: { paid_usd: 247247.51, calls: 10414327, receivers_paid: 997, receivers_never_paid: 82,
+             median_usd: 0.51, top1_share: 0.6741, top5_share: 0.8911, under_1_usd: 592,
+             under_10_usd: 827, over_1000_usd: 9, mean_payment_usd: 0.0237 },
+  records: [
+    { address: "0xe90", hosts: ["blockrun.ai"], capabilities: ["pkg:@blockrun/mcp"],
+      attributable: true, shared: false, paid_usd: 166658.82, calls: 8718732 },
+    { address: "0x6e0", hosts: ["blockrun.ai", "api.aidress.ai"], capabilities: ["pkg:@blockrun/mcp"],
+      attributable: false, shared: true, paid_usd: 130.83, calls: 33408 },
+  ],
+};
+
+const eco = renderPaid(DOC, null);
+assert.ok(/\$247,248|\$247,247/.test(eco), "the total must be there");
+assert.ok(/median/i.test(eco) && /\$0\.51/.test(eco),
+  "a total without the median lets a concentrated economy read as a healthy one");
+assert.ok(/67%/.test(eco), "concentration is the point, not the sum");
+
+const hit = renderPaid(DOC, "blockrun");
+assert.ok(/\$166,659/.test(hit), "the attributable receipt is reported");
+assert.ok(!/0x6e0/.test(hit), "a SHARED address must never be attributed to a capability");
+assert.ok(/not an input to the tashan score/.test(hit),
+  "the firewall has to travel with the number");
+
+const miss = renderPaid(DOC, "tavily-mcp");
+assert.ok(/NOT a negative signal/.test(miss),
+  "unpaid must not read as bad — almost every MCP server is free by design");
+
+assert.ok(/have not read the chain/.test(renderPaid(null, null)),
+  "no data must say so rather than implying nothing has ever been paid");
+console.log("ok — paid_demand: totals carry the median, shared addresses excluded, absence explained");

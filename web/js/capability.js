@@ -83,6 +83,12 @@
         stat("Instruction depth", c.expertise == null ? "—" : c.expertise, "jade",
              c.expertise_verdict ? "graded against the published rubric" : "not yet graded") +
         stat("Adoption", adoption(c), "", c.npm_downloads != null ? "npm downloads / week" : "distinct public repos") +
+        // SETTLED x402 RECEIPTS — the only tile here that is not a proxy for demand. Rendered ONLY
+        // when paid_seen_at says we asked the chain: an em-dash among measured tiles reads as "we
+        // looked and found nothing", and for the ~6,700 free servers that never published a price
+        // there was nothing to look for. Mirrors prerender.py::paid_line — this function replaces
+        // the server render, and those two have drifted three times before.
+        (c.paid_seen_at ? stat("Settled", paidShort(c), "jade", paidWhy(c)) : '') +
         stat("Upkeep", score(c.upkeep), "", "cadence · maintainers · status") +
         stat("Freshness", fr.txt, "", "latest release / push", fr.cls) +
         stat("Bus factor", busFactor(c), "", "distinct contributors", c.single_maintainer ? "fresh--cold" : "") +
@@ -834,6 +840,22 @@ function repoHealth(c) {
   function enc(repo) { return String(repo).split("/").map(encodeURIComponent).join("/"); }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function fmt(n) { return (n == null) ? "—" : String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+  // Money, at the precision the number deserves — a half-cent must not round to zero and
+  // $166,658.8173 must not print its four decimals. Mirrors prerender.paid_line / gen_paid.money.
+  function paidUsd(v) {
+    if (v == null) return "—";
+    if (v === 0) return "$0";
+    if (v < 0.01) return "<$0.01";
+    if (v < 100) return "$" + v.toFixed(2);
+    return "$" + Math.round(v).toLocaleString("en-US");
+  }
+  function paidShort(c) { return (c.paid_calls ? paidUsd(c.paid_usd) : "never paid"); }
+  function paidWhy(c) {
+    if (!c.paid_calls) return "its payment address has never been paid (Base, all time)";
+    var n = (c.paid_address || "").split(",").filter(Boolean).length;
+    return c.paid_calls.toLocaleString("en-US") + " settled x402 calls"
+      + (n > 1 ? " at " + n + " payment addresses" : "") + " — Base, all time";
+  }
   function fdate(iso) { if (!iso) return ""; return new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }); }
   function notfound() { return '<div class="cap-hd"><a class="back" href="/">&lsaquo; The Index</a><h1>Not tracked yet</h1><div class="cid">This capability isn\'t in the current pass. The Index grows every run.</div></div>'; }
 

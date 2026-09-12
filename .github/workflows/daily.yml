@@ -52,6 +52,10 @@ jobs:
       DEPS_CAP: "30"
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      # The Graph Network gateway key. Without it the paid-demand stage cannot read the chain — it
+      # keeps the last good read rather than publishing zeros, so a missing key degrades freshness
+      # and never correctness. JOB level for the same reason as the two above.
+      GRAPH_API_KEY: ${{ secrets.GRAPH_API_KEY }}
     steps:
       - uses: actions/checkout@v7
 
