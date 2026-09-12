@@ -13,14 +13,14 @@ Ranked by the tashan score
 |---|---|---|---|---|
 | 1 | [Memory](https://tashan.sh/capability/pkg-modelcontextprotocol-server-memory.html) | 96 | 152k/wk | active |
 | 2 | [Filesystem](https://tashan.sh/capability/pkg-modelcontextprotocol-server-filesystem.html) | 90 | 627k/wk | active |
-| 3 | [Preferences](https://tashan.sh/capability/pkg-transcend-io-mcp-server-preferences.html) | 87 | 123k/wk | active |
+| 3 | [Preferences](https://tashan.sh/capability/pkg-transcend-io-mcp-server-preferences.html) | 87 | 149k/wk | active |
 | 4 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 83 | 39k/wk | active |
 | 5 | [Mempalace](https://tashan.sh/capability/plugin-mempalace-mempalace-mempalace.html) | 79 | 58k ★ | active |
 | 6 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 78 | 62k ★ | active |
-| 7 | [Reactor](https://tashan.sh/capability/pkg-powerhousedao-reactor-mcp.html) | 77 | 3k/wk | active |
-| 8 | [Discourse](https://tashan.sh/capability/pkg-discourse-mcp.html) | 76 | 3k/wk | active |
-| 9 | [Respira WordPress](https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html) | 70 | 2k/wk | active |
-| 10 | [Brains](https://tashan.sh/capability/pkg-brains-mcp.html) | 70 | 2k/wk | active |
+| 7 | [Discourse](https://tashan.sh/capability/pkg-discourse-mcp.html) | 76 | 3k/wk | active |
+| 8 | [Brains](https://tashan.sh/capability/pkg-brains-mcp.html) | 72 | 4k/wk | active |
+| 9 | [Reactor](https://tashan.sh/capability/pkg-powerhousedao-reactor-mcp.html) | 72 | 4k/wk | active |
+| 10 | [Respira WordPress](https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html) | 70 | 2k/wk | active |
 | 11 | [Remember](https://tashan.sh/capability/plugin-digital-process-tools-claude-remember-remember.html) | 68 | 143 ★ | active |
 | 12 | [Memory · cerefox](https://tashan.sh/capability/pkg-cerefox-memory.html) | 66 | 1k/wk | active |
 | 13 | [Google Drive · mcp-z](https://tashan.sh/capability/pkg-mcp-z-mcp-drive.html) | 65 | 892/wk | active |
@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Search · MemPalace](https://tashan.sh/capability/skill-mempalace-search.html) | 48 | 2 repos | active |
 | 40 | [Epiphany](https://tashan.sh/capability/pkg-epiphany-mcp.html) | 48 | 189/wk | active |
 
-Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/category/files.html.
+Showing the top 40 of 51. The full ranked shelf is at https://tashan.sh/category/files.html.
 
 ## What these numbers are not
 

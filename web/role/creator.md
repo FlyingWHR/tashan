@@ -30,7 +30,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 45 | 20 ★ | active |
 | 13 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 44 | 6 ★ | active |
 | 14 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 76 | 34k ★ | active |
-| 15 | [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) | 75 | 14k/wk | active |
+| 15 | [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) | 76 | 28k/wk | active |
 | 16 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
 | 17 | [Algorithmic Art](https://tashan.sh/capability/skill-anthropics-algorithmic-art.html) | 48 | 3 repos | active |
 | 18 | [Slack Gif Creator](https://tashan.sh/capability/skill-anthropics-slack-gif-creator.html) | 48 | 3 repos | active |
@@ -57,7 +57,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 55 | 164/wk | active |
 | 40 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 54 | 239/wk | active |
 
-Showing the top 40 of 135. The full ranked shelf is at https://tashan.sh/role/creator.html.
+Showing the top 40 of 136. The full ranked shelf is at https://tashan.sh/role/creator.html.
 
 ## What these numbers are not
 

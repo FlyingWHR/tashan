@@ -24,14 +24,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Use · mcp-use](https://tashan.sh/capability/pkg-mcp-use.html) | 82 | 19k/wk | active |
 | 12 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 78 | 62k ★ | active |
 | 13 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 76 | 6k ★ | active |
-| 14 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 74 | 9k ★ | active |
-| 15 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 74 | 13k/wk | active |
+| 14 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 75 | 13k/wk | active |
+| 15 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 74 | 9k ★ | active |
 | 16 | [Create MCP Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 72 | 675/wk | active |
 | 17 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 70 | 426 ★ | active |
-| 18 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 69 | 1k/wk | active |
-| 19 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 67 | 93 ★ | active |
-| 20 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 66 | 482 ★ | active |
-| 21 | [Keryx](https://tashan.sh/capability/pkg-keryx.html) | 66 | 1k/wk | active |
+| 18 | [Keryx](https://tashan.sh/capability/pkg-keryx.html) | 70 | 2k/wk | active |
+| 19 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 69 | 1k/wk | active |
+| 20 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 67 | 93 ★ | active |
+| 21 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 66 | 482 ★ | active |
 | 22 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 63 | 68 ★ | active |
 | 23 | [Clawcode](https://tashan.sh/capability/plugin-crisandrews-clawcode-clawcode.html) | 59 | 61 ★ | active |
 | 24 | [Parser](https://tashan.sh/capability/pkg-mcp-parser.html) | 59 | 2k/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Triflux](https://tashan.sh/capability/plugin-tellang-triflux-triflux.html) | 45 | 7 ★ | active |
 | 40 | [Guild](https://tashan.sh/capability/plugin-lookatitude-guild-guild.html) | 44 | 6 ★ | active |
 
-Showing the top 40 of 413. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
+Showing the top 40 of 418. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
 
 ## What these numbers are not
 

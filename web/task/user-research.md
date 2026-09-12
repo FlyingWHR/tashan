@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 74 | 13k/wk | active |
+| 1 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 73 | 9k/wk | active |
 | 2 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 69 | 1k ★ | active |
 | 3 | [Product Manager Toolkit](https://tashan.sh/capability/skill-alirezarezvani-product-manager-toolkit.html) | 47 | 3 repos | active |
 | 4 | [UX Researcher Designer](https://tashan.sh/capability/skill-alirezarezvani-ux-researcher-designer.html) | 47 | 3 repos | active |

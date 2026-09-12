@@ -13,7 +13,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 - **SEO** — [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) · tashan score 69
 - **Market analysis** — [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) · tashan score 76
 - **Copywriting** — [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) · tashan score 72
-- **Conversion optimisation** — [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) · tashan score 73
+- **Conversion optimisation** — [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) · tashan score 71
 
 ## Ranked
 
@@ -31,13 +31,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 48 | 6 ★ | active |
 | 11 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 45 | 3 ★ | active |
 | 12 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 76 | 54k ★ | active |
-| 13 | [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) | 73 | 6k/wk | active |
+| 13 | [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) | 71 | 4k/wk | active |
 | 14 | [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) | 69 | 1k ★ | active |
 | 15 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 68 | 168 ★ | active |
 | 16 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 65 | 1k ★ | active |
 | 17 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 65 | 558 ★ | active |
 | 18 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 63 | 137 ★ | active |
-| 19 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 63 | 2k/wk | active |
+| 19 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 62 | 2k/wk | active |
 | 20 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
 | 21 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 60 | 395/wk | active |
 | 22 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 59 | 256/wk | active |
@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Competitor Alternatives](https://tashan.sh/capability/skill-alirezarezvani-competitor-alternatives.html) | 47 | 3 repos | active |
 | 40 | [Content Creator](https://tashan.sh/capability/skill-alirezarezvani-content-creator.html) | 47 | 3 repos | active |
 
-Showing the top 40 of 165. The full ranked shelf is at https://tashan.sh/role/marketer.html.
+Showing the top 40 of 166. The full ranked shelf is at https://tashan.sh/role/marketer.html.
 
 ## What these numbers are not
 

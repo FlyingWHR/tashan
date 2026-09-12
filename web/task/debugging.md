@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 94 | 1.5m/wk | active |
+| 1 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 92 | 3.3m/wk | active |
 | 2 | [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) | 71 | 3k/wk | active |
 | 3 | [Execbro](https://tashan.sh/capability/pkg-execbro.html) | 67 | 1k/wk | active |
 | 4 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 57 | 18 ★ | active |

@@ -27,11 +27,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Mr Meeseeks](https://tashan.sh/capability/plugin-thephw-claude-meseeks-mr-meeseeks.html) | 46 | 79 ★ | active |
 | 15 | [Agented](https://tashan.sh/capability/plugin-frane-agented-agented.html) | 45 | 5 ★ | active |
 | 16 | [Cc Suite](https://tashan.sh/capability/plugin-xiaolai-cc-suite-cc-suite.html) | 44 | 29 ★ | active |
-| 17 | [Proxy](https://tashan.sh/capability/pkg-mcp-proxy.html) | 79 | 487k/wk | active |
-| 18 | [Pi MCP Adapter](https://tashan.sh/capability/pkg-pi-mcp-adapter.html) | 78 | 253k/wk | active |
-| 19 | [Add](https://tashan.sh/capability/pkg-add-mcp.html) | 77 | 149k/wk | active |
+| 17 | [Proxy](https://tashan.sh/capability/pkg-mcp-proxy.html) | 79 | 357k/wk | active |
+| 18 | [Add](https://tashan.sh/capability/pkg-add-mcp.html) | 79 | 113k/wk | active |
+| 19 | [Pi MCP Adapter](https://tashan.sh/capability/pkg-pi-mcp-adapter.html) | 78 | 253k/wk | active |
 | 20 | [Token Optimizer](https://tashan.sh/capability/plugin-alexgreensh-token-optimizer-token-optimizer.html) | 71 | 2k ★ | active |
-| 21 | [Codeam CLI](https://tashan.sh/capability/pkg-codeam-cli.html) | 70 | 2k/wk | active |
+| 21 | [Codeam CLI](https://tashan.sh/capability/pkg-codeam-cli.html) | 71 | 2k/wk | active |
 | 22 | [Skillfish](https://tashan.sh/capability/pkg-skillfish.html) | 69 | 5k/wk | active |
 | 23 | [Privateer Agent](https://tashan.sh/capability/pkg-privateer-agent.html) | 69 | 2k/wk | active |
 | 24 | [Agentsmesh](https://tashan.sh/capability/pkg-agentsmesh.html) | 69 | 1k/wk | active |

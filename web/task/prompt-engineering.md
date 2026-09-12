@@ -46,13 +46,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 67 | 1k/wk | active |
 | 34 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 63 | 780/wk | active |
 | 35 | [Codesight](https://tashan.sh/capability/pkg-codesight.html) | 62 | 1k/wk | active |
-| 36 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 61 | 61k/wk | active |
+| 36 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 60 | 43k/wk | active |
 | 37 | [Madar](https://tashan.sh/capability/pkg-lubab-madar.html) | 57 | 233/wk | active |
 | 38 | [Mcpfy SDK](https://tashan.sh/capability/pkg-mcpfy-sdk.html) | 54 | 538/wk | active |
 | 39 | [Cortex · danielblomma](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 54 | 153/wk | active |
 | 40 | [Odin](https://tashan.sh/capability/plugin-outlinedriven-odin-claude-plugin-odin.html) | 52 | 34 ★ | active |
 
-Showing the top 40 of 85. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
+Showing the top 40 of 86. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
 
 ## What these numbers are not
 

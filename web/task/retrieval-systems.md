@@ -29,9 +29,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | 44 | 2 repos | active |
 | 17 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | 44 | 2 repos | active |
 | 18 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 64 | 402 ★ | active |
-| 19 | [Loki Mode](https://tashan.sh/capability/pkg-loki-mode.html) | 73 | 5k/wk | active |
-| 20 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 71 | 3k ★ | active |
-| 21 | [Local RAG](https://tashan.sh/capability/pkg-mcp-local-rag.html) | 71 | 3k/wk | active |
+| 19 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 71 | 3k ★ | active |
+| 20 | [Local RAG](https://tashan.sh/capability/pkg-mcp-local-rag.html) | 71 | 3k/wk | active |
+| 21 | [Loki Mode](https://tashan.sh/capability/pkg-loki-mode.html) | 68 | 2k/wk | active |
 | 22 | [Grepmax](https://tashan.sh/capability/pkg-grepmax.html) | 68 | 1k/wk | active |
 | 23 | [Basemind](https://tashan.sh/capability/pkg-basemind.html) | 59 | 451/wk | active |
 | 24 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 59 | 347/wk | active |
@@ -42,8 +42,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 29 | [Ori Memory](https://tashan.sh/capability/pkg-ori-memory.html) | 52 | 154/wk | active |
 | 30 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 51 | 141/wk | active |
 | 31 | [Memory Graph](https://tashan.sh/capability/pkg-mcp-memory-graph.html) | 50 | 141/wk | active |
-| 32 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 74 | 79k/wk | active |
-| 33 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 70 | 2k/wk | active |
+| 32 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 75 | 96k/wk | active |
+| 33 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 66 | 2k/wk | active |
 | 34 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 64 | 680/wk | active |
 | 35 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 63 | 1k/wk | active |
 | 36 | [Engram Wiki](https://tashan.sh/capability/pkg-engram-wiki-mcp.html) | 59 | 639/wk | active |

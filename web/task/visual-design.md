@@ -43,8 +43,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [PDF Forge](https://tashan.sh/capability/plugin-syx-labs-pdf-forge-pdf-forge.html) | 43 | 1 ★ | active |
 | 31 | [Magicpath](https://tashan.sh/capability/plugin-magicpathai-agent-skills-magicpath.html) | 58 | 84 ★ | active |
 | 32 | [Figma Console](https://tashan.sh/capability/pkg-figma-console-mcp.html) | 78 | 3k/wk | active |
-| 33 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 856/wk | active |
-| 34 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 70 | 2k/wk | active |
+| 33 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 71 | 3k/wk | active |
+| 34 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 856/wk | active |
 | 35 | [Identityforge](https://tashan.sh/capability/pkg-identityforge.html) | 60 | 482/wk | active |
 | 36 | [Figma MCP Express](https://tashan.sh/capability/pkg-figma-mcp-express.html) | 58 | 465/wk | active |
 | 37 | [Agentic Design System](https://tashan.sh/capability/pkg-ads-mcp.html) | 53 | 277/wk | active |

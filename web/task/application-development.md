@@ -33,9 +33,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 20 | [XcodeBuildMCP](https://tashan.sh/capability/pkg-xcodebuildmcp.html) | 73 | 63k/wk | active |
 | 21 | [Yaver](https://tashan.sh/capability/pkg-yaver-cli.html) | 73 | 5k/wk | active |
 | 22 | [Dart Flutter](https://tashan.sh/capability/plugin-flutter-agent-plugins-dart-flutter.html) | 72 | 3k ★ | active |
-| 23 | [GraphQL Enhanced](https://tashan.sh/capability/pkg-letoribo-mcp-graphql-enhanced.html) | 72 | 7k/wk | active |
-| 24 | [Mdk](https://tashan.sh/capability/pkg-sap-mdk-mcp-server.html) | 71 | 7k/wk | active |
-| 25 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 70 | 1k ★ | active |
+| 23 | [GraphQL Enhanced](https://tashan.sh/capability/pkg-letoribo-mcp-graphql-enhanced.html) | 72 | 6k/wk | active |
+| 24 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 70 | 1k ★ | active |
+| 25 | [Mdk](https://tashan.sh/capability/pkg-sap-mdk-mcp-server.html) | 70 | 5k/wk | active |
 | 26 | [Unreal Engine Skills For Claude Code](https://tashan.sh/capability/plugin-epicgames-unreal-engine-skills-for-claude-code-plugin-unreal-engine-skills-for-claude-code.html) | 68 | 157 ★ | active |
 | 27 | [Godot Prompter](https://tashan.sh/capability/plugin-jame581-godotprompter-godot-prompter.html) | 68 | 485 ★ | active |
 | 28 | [Apollo Skills](https://tashan.sh/capability/plugin-apollographql-skills-apollo-skills.html) | 67 | 100 ★ | active |

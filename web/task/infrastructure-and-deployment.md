@@ -12,7 +12,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) | 77 | 13k/wk | active |
-| 2 | [Auth0](https://tashan.sh/capability/pkg-auth0-auth0-mcp-server.html) | 74 | 4k/wk | active |
+| 2 | [Auth0](https://tashan.sh/capability/pkg-auth0-auth0-mcp-server.html) | 75 | 5k/wk | active |
 | 3 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 70 | 246 ★ | active |
 | 4 | [Zscaler](https://tashan.sh/capability/plugin-zscaler-zscaler-mcp-server-zscaler.html) | 63 | 41 ★ | active |
 | 5 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 53 | 3 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 56 | 40 ★ | active |
 | 40 | [Zeabur](https://tashan.sh/capability/plugin-zeabur-agent-skills-zeabur.html) | 56 | 40 ★ | active |
 
-Showing the top 40 of 156. The full ranked shelf is at https://tashan.sh/task/infrastructure-and-deployment.html.
+Showing the top 40 of 158. The full ranked shelf is at https://tashan.sh/task/infrastructure-and-deployment.html.
 
 ## What these numbers are not
 

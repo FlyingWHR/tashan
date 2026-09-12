@@ -12,10 +12,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 48 | 6 ★ | active |
-| 2 | [Ghl Command](https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html) | 71 | 3k/wk | active |
+| 2 | [Ghl Command](https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html) | 70 | 2k/wk | active |
 | 3 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 65 | 558 ★ | active |
 | 4 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
-| 5 | [Gongio](https://tashan.sh/capability/pkg-gongio-mcp.html) | 60 | 1k/wk | active |
+| 5 | [Gongio](https://tashan.sh/capability/pkg-gongio-mcp.html) | 55 | 372/wk | active |
 | 6 | [Zoominfo](https://tashan.sh/capability/plugin-zoominfo-zoominfo-mcp-plugin-zoominfo.html) | 51 | 3 ★ | active |
 | 7 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 51 | 56 ★ | active |
 | 8 | [Lusha](https://tashan.sh/capability/plugin-lusha-oss-lusha-mcp-plugin-lusha.html) | 50 | 3 ★ | active |

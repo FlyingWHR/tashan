@@ -21,14 +21,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Memtrace](https://tashan.sh/capability/pkg-memtrace.html) | 72 | 5k/wk | active |
 | 9 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 71 | 2k ★ | active |
 | 10 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 70 | 1k ★ | active |
-| 11 | [Coderabbit](https://tashan.sh/capability/plugin-coderabbitai-skills-coderabbit.html) | 67 | 142 ★ | active |
-| 12 | [Code Index](https://tashan.sh/capability/pkg-regsorm-code-index-mcp.html) | 67 | 898/wk | active |
-| 13 | [Sonarqube](https://tashan.sh/capability/plugin-sonarsource-sonarqube-agent-plugins-sonarqube.html) | 65 | 98 ★ | active |
-| 14 | [Sigmap](https://tashan.sh/capability/pkg-sigmap.html) | 65 | 703/wk | active |
-| 15 | [Qodo](https://tashan.sh/capability/plugin-qodo-ai-qodo-skills-qodo.html) | 64 | 44 ★ | active |
-| 16 | [Argot](https://tashan.sh/capability/pkg-tmonier-argot.html) | 63 | 708/wk | active |
-| 17 | [Mergify](https://tashan.sh/capability/plugin-mergifyio-mergify-cli-mergify.html) | 61 | 28 ★ | active |
-| 18 | [Symforge](https://tashan.sh/capability/pkg-symforge.html) | 60 | 161/wk | active |
+| 11 | [Symforge](https://tashan.sh/capability/pkg-symforge.html) | 69 | 2k/wk | active |
+| 12 | [Coderabbit](https://tashan.sh/capability/plugin-coderabbitai-skills-coderabbit.html) | 67 | 142 ★ | active |
+| 13 | [Code Index](https://tashan.sh/capability/pkg-regsorm-code-index-mcp.html) | 67 | 898/wk | active |
+| 14 | [Sonarqube](https://tashan.sh/capability/plugin-sonarsource-sonarqube-agent-plugins-sonarqube.html) | 65 | 98 ★ | active |
+| 15 | [Sigmap](https://tashan.sh/capability/pkg-sigmap.html) | 65 | 703/wk | active |
+| 16 | [Qodo](https://tashan.sh/capability/plugin-qodo-ai-qodo-skills-qodo.html) | 64 | 44 ★ | active |
+| 17 | [Argot](https://tashan.sh/capability/pkg-tmonier-argot.html) | 63 | 708/wk | active |
+| 18 | [Mergify](https://tashan.sh/capability/plugin-mergifyio-mergify-cli-mergify.html) | 61 | 28 ★ | active |
 | 19 | [Codescene Codehealth](https://tashan.sh/capability/plugin-codescene-oss-codescene-mcp-server-codescene-codehealth.html) | 59 | 58 ★ | active |
 | 20 | [Otito](https://tashan.sh/capability/pkg-bashbop-otito.html) | 59 | 432/wk | active |
 | 21 | [Fixmap](https://tashan.sh/capability/pkg-aryam-fixmap.html) | 57 | 177/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Requesting Code Review](https://tashan.sh/capability/skill-obra-requesting-code-review.html) | 48 | 3 repos | active |
 | 40 | [Code Review · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-code-review.html) | 46 | 2 marketplaces | — |
 
-Showing the top 40 of 97. The full ranked shelf is at https://tashan.sh/task/code-review.html.
+Showing the top 40 of 98. The full ranked shelf is at https://tashan.sh/task/code-review.html.
 
 ## What these numbers are not
 

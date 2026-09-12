@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 - **Visual design** — [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) · tashan score 79
 - **Animation and generated imagery** — [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) · tashan score 78
-- **User research** — [Frog](https://tashan.sh/capability/pkg-frog.html) · tashan score 74
+- **User research** — [Frog](https://tashan.sh/capability/pkg-frog.html) · tashan score 73
 
 ## Ranked
 
@@ -22,8 +22,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 48 | 182 ★ | active |
 | 4 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 48 | 5 ★ | active |
 | 5 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 79 | 51k ★ | active |
-| 6 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 74 | 13k/wk | active |
-| 7 | [Figma](https://tashan.sh/capability/plugin-figma-mcp-server-guide-figma.html) | 73 | 2k ★ | active |
+| 6 | [Figma](https://tashan.sh/capability/plugin-figma-mcp-server-guide-figma.html) | 73 | 2k ★ | active |
+| 7 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 73 | 9k/wk | active |
 | 8 | [Shadcn UI](https://tashan.sh/capability/pkg-jpisnice-shadcn-ui-mcp-server.html) | 70 | 4k/wk | active |
 | 9 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 69 | 1k ★ | active |
 | 10 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 63 | 137 ★ | active |

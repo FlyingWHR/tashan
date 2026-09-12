@@ -17,7 +17,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 79 | 51k ★ | active |
 | 5 | [Figma](https://tashan.sh/capability/plugin-figma-mcp-server-guide-figma.html) | 73 | 2k ★ | active |
 | 6 | [Modern Web Guidance](https://tashan.sh/capability/plugin-googlechrome-modern-web-guidance-modern-web-guidance.html) | 73 | 2k ★ | active |
-| 7 | [Next DevTools](https://tashan.sh/capability/pkg-next-devtools-mcp.html) | 71 | 73k/wk | active |
+| 7 | [Next DevTools](https://tashan.sh/capability/pkg-next-devtools-mcp.html) | 71 | 77k/wk | active |
 | 8 | [Shadcn UI](https://tashan.sh/capability/pkg-jpisnice-shadcn-ui-mcp-server.html) | 70 | 4k/wk | active |
 | 9 | [Auth0 · auth0](https://tashan.sh/capability/plugin-auth0-agent-skills-auth0.html) | 64 | 40 ★ | active |
 | 10 | [Wix](https://tashan.sh/capability/plugin-wix-skills-wix.html) | 62 | 23 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
 | 40 | [Laravel Boost](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-laravel-boost.html) | 46 | 2 marketplaces | — |
 
-Showing the top 40 of 95. The full ranked shelf is at https://tashan.sh/task/web-development.html.
+Showing the top 40 of 96. The full ranked shelf is at https://tashan.sh/task/web-development.html.
 
 ## What these numbers are not
 

@@ -11,7 +11,7 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 94 | 1.5m/wk | active |
+| 1 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 92 | 3.3m/wk | active |
 | 2 | [Firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) | 86 | 27k/wk | active |
 | 3 | [Playwright](https://tashan.sh/capability/pkg-playwright-mcp.html) | 85 | 4.6m/wk | active |
 | 4 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 76 | 3k/wk | active |
@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Browser Automation](https://tashan.sh/capability/pkg-mindstone-mcp-server-browser-automation.html) | 56 | 416/wk | active |
 | 40 | [Supertoinette](https://tashan.sh/capability/pkg-mcp-supertoinette.html) | 56 | 349/wk | active |
 
-Showing the top 40 of 105. The full ranked shelf is at https://tashan.sh/category/browser.html.
+Showing the top 40 of 107. The full ranked shelf is at https://tashan.sh/category/browser.html.
 
 ## What these numbers are not
 
