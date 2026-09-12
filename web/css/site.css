@@ -524,7 +524,7 @@ td.num .unit { display:block; line-height:1.25; white-space:nowrap; }
 .cap-hd .back:hover { color: var(--jade); }
 .cap-hd h1 { font-size: clamp(1.8rem,4vw,2.6rem); font-weight:600; letter-spacing:-0.02em; margin:.6rem 0 .3rem; color:#fff; word-break:break-word; }
 .cap-hd .cid { font-family: var(--font-mono); font-size:var(--fs-sm); color: var(--text-faint); word-break:break-all; }
-.stats { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: var(--sp-3); margin: var(--sp-8) 0; }
+.stats { display:grid; grid-template-columns: repeat(auto-fit, minmax(168px,1fr)); gap: var(--sp-3); margin: var(--sp-8) 0; }
 .stat { border:1px solid var(--hairline); border-radius: var(--radius); padding: var(--sp-6); background: var(--surface); }
 .stat .l { font-family: var(--font-mono); font-size:var(--fs-micro); letter-spacing:.08em; text-transform:uppercase; color: var(--text-faint); margin:0 0 .5rem; }
 .stat .v { font-family: var(--font-mono); font-size:1.7rem; color:#fff; line-height:1; }
@@ -538,7 +538,13 @@ td.num .unit { display:block; line-height:1.25; white-space:nowrap; }
    size, no grid, no hierarchy. Same silent class of failure as the undefined var() that dropped 13
    declarations: a selector nothing matches costs nothing at build time and everything on the page.
    One definition, both pages, and any generator that reaches for the same block next. */
-.stat { display:grid; gap: var(--sp-6); grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+/* SCOPED TO dl.stat, and the reason is a name collision I walked straight into. `.stat` is TWO
+   components: the dossier's metric TILE (<div class="stat"> inside .stats, with .l/.v/.s) and this
+   page-level BLOCK (<dl class="stat">, with .stat__*). An unscoped `display:grid` here turned every
+   one of the 11,914 dossiers' tiles into a grid whose 210px minimum track did not fit its own 152px
+   card, so each caption overflowed and was painted over by the next tile. Same class, two meanings,
+   and the one that broke was the page type nobody was looking at. */
+dl.stat { display:grid; gap: var(--sp-6); grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
 .stat__i { margin:0; }
 .stat__n { font-family: var(--font-mono); font-size:1.7rem; line-height:1; color:#fff;
            font-variant-numeric: tabular-nums; }
@@ -547,7 +553,7 @@ td.num .unit { display:block; line-height:1.25; white-space:nowrap; }
 .stat__l { margin:.45rem 0 0; font-size: var(--fs-sm); color: var(--text); }
 .stat__w { display:block; margin-top:.2rem; color: var(--text-faint); }
 /* A four-figure row on a phone is one column, not four 60px columns of wrapped words. */
-@media (max-width: 560px) { .stat { gap: var(--sp-5); } .stat__n { font-size:1.45rem; } }
+@media (max-width: 560px) { dl.stat { gap: var(--sp-5); } .stat__n { font-size:1.45rem; } }
 .colist { display:flex; flex-wrap:wrap; gap: var(--sp-2); }
 .colist a { font-family: var(--font-mono); font-size:var(--fs-sm); padding:.3rem .6rem; border:1px solid var(--hairline);
   border-radius: var(--radius-pill); color: var(--text-dim); }
