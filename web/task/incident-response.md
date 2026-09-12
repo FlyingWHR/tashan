@@ -11,20 +11,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 68 | 101 ★ | active |
-| 2 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 48 | 6 ★ | active |
-| 3 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 47 | 3 ★ | active |
-| 4 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 46 | 3 ★ | active |
-| 5 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 64 | 90 ★ | active |
-| 6 | [Firehydrant](https://tashan.sh/capability/pkg-firehydrant-mcp.html) | 51 | 3k/wk | active |
-| 7 | [Incident Response](https://tashan.sh/capability/skill-alirezarezvani-incident-response.html) | 47 | 2 repos | active |
-| 8 | [Chaos Engineering](https://tashan.sh/capability/skill-alirezarezvani-chaos-engineering.html) | 47 | 2 repos | active |
-| 9 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 46 | 2 marketplaces | — |
-| 10 | [Incident Commander](https://tashan.sh/capability/skill-alirezarezvani-incident-commander.html) | not scored | 1 repos | active |
-| 11 | [Threat Detection](https://tashan.sh/capability/skill-alirezarezvani-threat-detection.html) | not scored | 1 repos | active |
-| 12 | [Runbook Generator](https://tashan.sh/capability/skill-alirezarezvani-runbook-generator.html) | not scored | 1 repos | active |
-| 13 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 56 | 18 ★ | active |
-| 14 | [Debugbundle](https://tashan.sh/capability/pkg-debugbundle-mcp.html) | 56 | 190/wk | active |
+| 1 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 67 | 101 ★ | active |
+| 2 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 45 | 6 ★ | active |
+| 3 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 44 | 3 ★ | active |
+| 4 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 44 | 3 ★ | active |
+| 5 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 60 | 90 ★ | active |
+| 6 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
+| 7 | [Firehydrant](https://tashan.sh/capability/pkg-firehydrant-mcp.html) | 48 | 3k/wk | abandoned |
+| 8 | [Incident Commander](https://tashan.sh/capability/skill-alirezarezvani-incident-commander.html) | 44 | 2 repos | active |
+| 9 | [Threat Detection](https://tashan.sh/capability/skill-alirezarezvani-threat-detection.html) | 44 | 2 repos | active |
+| 10 | [Chaos Engineering](https://tashan.sh/capability/skill-alirezarezvani-chaos-engineering.html) | 44 | 2 repos | active |
+| 11 | [Runbook Generator](https://tashan.sh/capability/skill-alirezarezvani-runbook-generator.html) | 44 | 2 repos | active |
+| 12 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 59 | 18 ★ | active |
+| 13 | [Debugbundle](https://tashan.sh/capability/pkg-debugbundle-mcp.html) | 52 | 190/wk | active |
 
 ## What these numbers are not
 
