@@ -762,5 +762,84 @@ for _field in ("npm_downloads", "sec_scanned_at", "sec_max_severity"):
        any(r.get(_field) is not None for r in _mal),
        f"no malicious row carries {_field}; the lookup SELECT has been narrowed again")
 
+# ---- 15. THE MONEY SIGNAL, on every surface that carries it -------------------------------------
+# The newest column set, and it drifted TWICE on the night it was written: the MCP server told an
+# agent "37 capabilities have attributable receipts" while /paid.html beside it said 31, and the
+# per-capability totals were ranked once per payment ADDRESS instead of summed, so three servers
+# appeared twice at two different numbers. Both were caught by hand. Neither would have been caught
+# by this file, which is the file whose entire job is catching exactly that — so the signal is in it
+# now, on all four surfaces: the export, the dossier, the page, and the agent-readable JSON.
+_paid = [c for c in TRUTH.values() if c.get("paid_seen_at")]
+_demand = load("data/demand.json")
+
+# ZERO AND UNKNOWN ARE DIFFERENT CLAIMS. paid_seen_at records that we asked the chain; a measured
+# zero means "this address has never been paid" and a missing row means nothing at all. Publishing
+# 0 for both would tell a reader that thousands of free MCP servers had failed to earn money they
+# never asked for.
+_bad_zero = [c["id"] for c in TRUTH.values()
+             if c.get("paid_usd") is not None and not c.get("paid_seen_at")]
+ok(f"all {len(_paid)} paid figures carry the date we asked the chain",
+   not _bad_zero, f"{len(_bad_zero)} row(s) publish a payment figure with no paid_seen_at, so a "
+                  f"zero cannot be told from an absence: {_bad_zero[:3]}")
+
+if _demand and _demand.get("paid_measured"):
+    recs = [r for r in (_demand.get("records") or []) if r.get("attributable")]
+    # THE ATTRIBUTION RULE: volume belongs to an ADDRESS. A receiver publishing several hosts cannot
+    # be split by anything on chain, so its money must never reach a capability row.
+    _shared = [r["address"] for r in (_demand.get("records") or [])
+               if r.get("shared") and r.get("attributable")]
+    ok("no shared payment address is marked attributable",
+       not _shared, f"{len(_shared)} shared address(es) attributed: {_shared[:2]} — that invents a "
+                    f"per-project number the chain does not contain")
+
+    # ONE ROW PER CAPABILITY. Ranked once per address, three capabilities appeared twice with
+    # different totals — the "one thing ranked twice at two different numbers" defect, one layer down.
+    _by_cap = {}
+    for r in recs:
+        for cid in r.get("capabilities") or []:
+            _by_cap.setdefault(cid, []).append(r)
+    _sum_mismatch = []
+    for cid, rows in _by_cap.items():
+        c = TRUTH.get(cid)
+        if not c or c.get("paid_usd") is None:
+            continue
+        want = round(sum(r["paid_usd"] or 0 for r in rows), 4)
+        if abs((c["paid_usd"] or 0) - want) > 0.01:
+            _sum_mismatch.append(f"{cid}: export={c['paid_usd']} sum-of-addresses={want}")
+    ok(f"each of {len(_by_cap)} paid capabilities equals the SUM of its payment addresses",
+       not _sum_mismatch, "; ".join(_sum_mismatch[:3]))
+
+    # The agent-readable count must equal what a reader sees on the page it points at.
+    _published = len([cid for cid in _by_cap if cid in TRUTH])
+    ok(f"demand.json's paid_capabilities ({_demand.get('paid_capabilities')}) is the number the "
+       f"page can show ({_published})",
+       _demand.get("paid_capabilities") == _published,
+       "the MCP server quotes one number and /paid.html shows another")
+
+    # Every row the page ranks must link to a dossier that exists.
+    _pp = os.path.join(WEB, "paid.html")
+    if os.path.exists(_pp):
+        _html = open(_pp, encoding="utf-8").read()
+        _hrefs = set(re.findall(r'href="/capability/([^"]+)\.html"', _html))
+        _dead = [h for h in _hrefs if not os.path.exists(os.path.join(WEB, "capability", h + ".html"))]
+        ok(f"all {len(_hrefs)} capability links on /paid.html resolve to a page",
+           not _dead, f"dead: {_dead[:3]}")
+        # And the money on the page must be the money in the export — the page formats, never edits.
+        _top = max(_paid, key=lambda c: c.get("paid_usd") or 0, default=None)
+        if _top and (_top.get("paid_usd") or 0) >= 100:
+            _want = "$" + f"{round(_top['paid_usd']):,}"
+            ok(f"the largest settled figure on /paid.html is the export's ({_want})",
+               _want in _html, f"{_want} is not on the page; the page is formatting a different number")
+
+# The dossier states it too, and the client re-render must not drop it — the drift that has already
+# happened three times between prerender.py and capability.js.
+_shown = [p_ for p_ in pages if "Settled payments" in open(p_, encoding="utf-8").read()]
+ok(f"the Settled row is on all {len(_paid)} dossier(s) whose row carries a measurement",
+   len(_shown) == len(_paid), f"{len(_shown)} pages show it, {len(_paid)} rows carry it")
+_capjs = open(os.path.join(WEB, "js", "capability.js"), encoding="utf-8").read()
+ok("capability.js renders the settled figure too, so hydration does not erase it",
+   "paid_seen_at" in _capjs and "paidShort" in _capjs,
+   "the client render has no paid branch; a reader with JS would see less than a crawler")
+
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)
