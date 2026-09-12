@@ -174,8 +174,9 @@ def diff(prev, cur, name):
     if was_fp and now_fp and was_fp != now_fp:
         out.append(("ownership_changed", "high",
                     f"{name} has a different set of npm maintainers than it did",
-                    "who can publish this package changed — the classic supply-chain handoff, and "
-                    "invisible to a maintainer count that did not move"))
+                    "Who can publish this package changed — the classic supply-chain handoff, and "
+                    "invisible to a maintainer count that did not move.",
+                    "Pin the version you have audited and read the next release's diff before taking it."))
 
     was, now = g("npm_maintainers")
     if was and now and now < was and now <= 1:
@@ -317,6 +318,31 @@ def _selfcheck():
     # score noise below the threshold stays quiet
     assert diff(base, dict(base, tashan_score=73), "x") == []
     assert {e[0] for e in diff(base, dict(base, tashan_score=61), "x")} == {"score_moved"}
+
+    # EVERY event is well-formed, including the branches nothing above exercises.
+    #
+    # This check exists because `ownership_changed` shipped with four fields instead of five and
+    # took the daily pipeline down for twelve days — every run from 1 September crashed on
+    # `for kind, sev, what, why, action in diff(...)`, so the site went stale and signal_history,
+    # the one series that cannot be backfilled, recorded retention and nothing else.
+    #
+    # The assertions above did not catch it because they all read e[0], the kind. The event fired
+    # correctly; it was simply malformed, and a set of kinds cannot see a missing column. So this
+    # reads the SOURCE rather than the output: a branch that never fires in a test still has to be
+    # the right shape, and there is no state pair that exercises all fourteen.
+    import ast as _ast
+    _fn = next(n for n in _ast.walk(_ast.parse(open(__file__).read()))
+               if isinstance(n, _ast.FunctionDef) and n.name == "diff")
+    _bad = [(c.lineno, len(c.args[0].elts)) for c in _ast.walk(_fn)
+            if isinstance(c, _ast.Call) and getattr(c.func, "attr", None) == "append"
+            and isinstance(c.args[0], _ast.Tuple) and len(c.args[0].elts) != 5]
+    assert not _bad, f"diff() appends a non-5-tuple at line(s) {_bad} — the consumer unpacks five"
+
+    # and what the branches we CAN drive actually produce
+    for _ev in diff(base, dict(base, npm_maint_fp="zzz", npm_deprecated=1, gh_archived=1,
+                               npm_latest_version="9.9.9", tashan_score=20), "x"):
+        assert len(_ev) == 5, f"event is not a 5-tuple: {_ev}"
+        assert all(isinstance(f, str) and f.strip() for f in _ev), f"event has an empty field: {_ev}"
 
 
 def main():
