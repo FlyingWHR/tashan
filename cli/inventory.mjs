@@ -100,6 +100,12 @@ export function skillsIn(dirs, pluginPaths = [], deps = {}) {
     try { names = list(d.dir); } catch { continue; }
     for (const n of names) {
       if (String(n).startsWith(".")) continue;
+      // A skill is a DIRECTORY. Listing one returns loose files too — a stray `_chain-audit.md`
+      // was counted and reported as a skill by that name, which is how an inventory starts lying
+      // about its own total. Match KNOWN file extensions, not "anything after a dot": the first
+      // version used /\.[a-z0-9]+$/ and dropped every versioned skill directory on the machine,
+      // `cinema-worldbuilder-pro-2.0` among them, because ".0" is a dot followed by a digit.
+      if (/\.(md|markdown|json|ya?ml|txt|js|mjs|ts|sh|py|toml|lock|log|bak)$/i.test(String(n))) continue;
       const path = join(d.dir, n);
       const md = join(path, "SKILL.md");
       let meta = {};
@@ -178,10 +184,14 @@ export function scan(home = homedir(), cwd = process.cwd(), deps = {}) {
   const installed = readJson(join(home, ".claude", "plugins", "installed_plugins.json"));
   const plugins = pluginsFrom(installed);
   const marketplaces = Object.keys(readJson(join(home, ".claude", "plugins", "known_marketplaces.json")) || {});
+  // Plugins ship skills inside their own install path, and those were never scanned — so every
+  // skill on the machine looked unowned, which reads as "113 things nobody maintains" on a box
+  // with 11 plugins. Scan the plugin directories too and the ownership line becomes true.
   const skills = skillsIn(
     [
       { scope: "user", dir: join(home, ".claude", "skills") },
       { scope: "project", dir: join(cwd, ".claude", "skills") },
+      ...plugins.filter((p) => p.path).map((p) => ({ scope: "plugin", dir: join(p.path, "skills") })),
     ],
     plugins.map((p) => p.path),
     deps,

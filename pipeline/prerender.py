@@ -1063,9 +1063,47 @@ def bake_hero(caps, total):
     open(idx, "w", encoding="utf-8").write(html)
     print(f"hero: baked {len(caps):,} measured / {total:,} tracked / {when} "
           f"+ top {min(BOARD_BAKE_N, len(caps))} rows and an ItemList")
+    bake_counts(len(caps))
 
 
-BOARD_BAKE_N = int(os.environ.get("BOARD_BAKE_N", "25"))
+def bake_counts(measured):
+    """The same number, everywhere it is asserted in hand-written prose.
+
+    for-hosts.html said "5,278 measured servers today" and pricing.html said "300 of the things we
+    measure are abandoned or deprecated" while the index said 12,001 and stats.html said 30,233 —
+    four answers to how big the thing we measure is, on one site whose only asset is being right
+    about numbers. A reader who opens two tabs catches it in ten seconds.
+
+    These are stamped like the hero is, so a figure cannot outlive the run that made it true.
+    tests/test_claims.py fails the suite if a hand-written page ever states one that has drifted.
+    """
+    import sqlite3
+    db = os.path.join(ROOT, "data", "tashan.db")
+    if not os.path.exists(db):
+        return
+    con = sqlite3.connect(db)
+    dead = con.execute("SELECT COUNT(*) FROM capabilities WHERE vitality='abandoned' "
+                       "OR npm_deprecated=1 OR gh_archived=1").fetchone()[0]
+    con.close()
+    edits = (
+        ("for-hosts.html", r"(\b)[\d,]+( measured servers today)", f"{measured:,}"),
+        ("pricing.html", r"(<b>)[\d,]+(</b> of the things we measure are abandoned)", f"{dead:,}"),
+    )
+    for page, pat, val in edits:
+        path = os.path.join(ROOT, "web", page)
+        if not os.path.exists(path):
+            continue
+        body = open(path, encoding="utf-8").read()
+        out = re.sub(pat, lambda m: m.group(1) + val + m.group(2), body, count=1)
+        if out != body:
+            open(path, "w", encoding="utf-8").write(out)
+    print(f"counts: {measured:,} measured · {dead:,} abandoned or deprecated, stamped into 2 pages")
+
+
+# MATCH THE TEASER, OR THE PAGE SHRINKS WHILE YOU WATCH IT. index.js renders TEASER = 10 rows until
+# a filter is applied, so baking 25 meant the first paint showed 25 and JS immediately replaced them
+# with 10. The reader sees the board collapse. Bake exactly what JS will render.
+BOARD_BAKE_N = int(os.environ.get("BOARD_BAKE_N", "10"))
 # Mirrors KIND_LABEL in web/js/index.js. Two copies of a display map is a smell, but the alternative
 # is shipping it in the export and paying for it on every board row; the pre-JS table is replaced by
 # the client anyway, so a drift here shows for one paint and never contradicts the live board.

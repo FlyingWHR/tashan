@@ -16,7 +16,11 @@
 (function () {
   "use strict";
 
-  var el = document.getElementById("acct");
+  // The page carried id="acct" AND id="main" on the same <main>. A duplicate id is not a warning:
+  // the browser keeps the first and silently discards the second, so the skip link pointed at
+  // nothing on this page alone. The element is now #main like every other page, and this reads the
+  // data attribute instead.
+  var el = document.querySelector("[data-acct]") || document.getElementById("main");
   if (!el) return;
 
   var esc = function (s) {

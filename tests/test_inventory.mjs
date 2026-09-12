@@ -67,6 +67,17 @@ ok(three.gone.length === 1, "something that vanished is reported");
 ok(three.ledger.seen["skill:user:y"].first === "2026-09-05",
    "and is kept, because an unmounted disk is not an uninstall and the date cannot be re-derived");
 
+// A skill is a directory. Loose files beside them are not skills — but a versioned directory is.
+const mixed = skillsIn([{ scope: "user", dir: "/h/.claude/skills" }], [], {
+  exists: () => true,
+  list: () => ["real-skill", "cinema-pro-2.0", "_notes.md", "config.json", "run.sh"],
+  read: () => "---\nname: x\ndescription: y\n---",
+  stat: () => ({ mtime: new Date("2026-09-01T00:00:00Z") }),
+});
+ok(mixed.length === 2, `loose files are not skills (got ${mixed.length}, expected 2)`);
+ok(mixed.some((x) => x.path.endsWith("cinema-pro-2.0")),
+   "a versioned directory survives — matching /\\.[a-z0-9]+$/ dropped every one of them");
+
 ok(Object.keys(frontmatter("---\nname: a\ndescription: b\n---")).length === 2, "frontmatter reads name and description");
 ok(!frontmatter("no frontmatter").name, "and invents nothing when there is none");
 

@@ -165,7 +165,35 @@ def main():
     print(f"  ok    {len(internal)} internal links resolve"
           + (f", {len(external)} external checked" if os.environ.get("LINKCHECK")
              else f" ({len(external)} external — set LINKCHECK=1 to fetch them)"))
+    if ANCHOR_BAD:
+        print(f"  FAIL  {len(ANCHOR_BAD)} cross-page anchor(s) point at no element:")
+        for a in ANCHOR_BAD[:10]:
+            print("        " + a)
+        return 1
+    print(f"  ok    every cross-page anchor exists")
     return 0
+
+
+
+# ------------------------------------------------------------------------------------------------
+# AN ANCHOR THAT GOES NOWHERE IS A BROKEN LINK THAT LOOKS FINE.
+#
+# start.html linked to /methodology.html#unrated; methodology.html has #main, #updated, #measured
+# and #corrections. The browser silently lands at the top of the page, so nobody reports it and the
+# sentence that promised an explanation quietly stops delivering one.
+import glob as _glob, os as _os, re as _re
+_WEB = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), "web")
+_ids = {}
+for _p in _glob.glob(_os.path.join(_WEB, "*.html")):
+    _ids[_os.path.basename(_p)] = set(_re.findall(r'id="([^"]+)"', open(_p, encoding="utf-8").read()))
+_bad = []
+for _p in _glob.glob(_os.path.join(_WEB, "*.html")):
+    _src = _os.path.basename(_p)
+    for _href in _re.findall(r'href="(/[a-z0-9-]+\.html#[a-z0-9-]+)"', open(_p, encoding="utf-8").read()):
+        _page, _frag = _href.lstrip("/").split("#", 1)
+        if _page in _ids and _frag not in _ids[_page]:
+            _bad.append(f"{_src} -> {_href}")
+ANCHOR_BAD = _bad
 
 
 if __name__ == "__main__":

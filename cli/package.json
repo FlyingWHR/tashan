@@ -15,7 +15,9 @@
   "files": [
     "tashan.mjs",
     "doctor.mjs",
-    "mcp.mjs"
+    "inventory.mjs",
+    "mcp.mjs",
+    "README.md"
   ],
   "keywords": [
     "mcp",

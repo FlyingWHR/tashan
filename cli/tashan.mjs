@@ -363,8 +363,15 @@ function infoCard(r) {
   }
   L.push("  dossier      " + under(SITE + "/capability/" + (r.slug || slugify(r.id))));
   L.push("");
-  L.push("  " + dim("install:  ") + jade("tashan add " + pretty(r.name)));
-  L.push("");
+  // Only real commands. For a capability with no package the helper returns a comment
+  // ("# see the capability's source"), and an `install` heading over a comment is worse than no
+  // heading at all — it promises a command and delivers a shrug.
+  const snips = installSnippets(r).filter((sn) => sn.cmd && !sn.cmd.trimStart().startsWith("#"));
+  if (snips.length) {
+    L.push("  " + dim("install"));
+    for (const sn of snips.slice(0, 2)) L.push("    " + jade(sn.cmd));
+    L.push("");
+  }
   return L.join("\n");
 }
 
@@ -486,22 +493,23 @@ async function loadData() {
 }
 const rowsOf = (d) => (Array.isArray(d) ? d : d.capabilities || []);
 
+// FIVE VERBS. It had twelve, and the extra seven were the same three ideas spelled differently:
+// `top` was `search` with no query, `add` was the last line of `info`, and `activate`/`account`
+// were a licence key and a URL wearing the costume of commands. A first-time reader had to choose
+// between twelve things to find the one that does something without an argument.
+//
+// The first line says what the tool DOES, not what it is. "The measured layer for AI capabilities"
+// is a positioning statement; nobody can act on it.
 const USAGE = `
-${bold("tashan")} — the measured layer for AI capabilities ${dim("· " + SITE)}
+${bold("tashan")} — is anything you run dead, deprecated or malicious? ${dim("· " + SITE)}
 
-  ${jade("tashan search")} <query>       find MCP servers & skills, ranked by tashan score
-  ${jade("tashan top")} [category]       the leaderboard
-  ${jade("tashan info")} <name>          the measured dossier for one capability
-  ${jade("tashan add")} <name>           the install command  ${dim("(--client claude|cursor|desktop|codex|npx)")}
-  ${jade("tashan doctor")}               audit the config you already have — dead, deprecated, risky
-  ${jade("tashan login")}                sign in — approve a code in the browser, once per machine
-  ${jade("tashan logout")}               release this machine's seat
-  ${jade("tashan account")}              open your account in the browser, already signed in
-  ${dim("tashan activate <key>")}       ${dim("non-interactive, for CI — needs the key")}
-  ${dim("Pro names the replacement for anything dead in your config · $6/mo · " + SITE + "/pricing")}
+  ${jade("tashan")}                      audit what you have installed ${dim("(the default)")}
+  ${jade("tashan search")} <query>       find MCP servers & skills, ranked on public evidence
+  ${jade("tashan info")} <name>          one capability in full, and how to install it
+  ${jade("tashan mcp")}                  run tashan as an MCP server, so your agent can ask
+  ${dim("tashan login")} ${dim("/")} ${dim("logout")}         ${dim("Pro: the replacement for anything dead, and 30 days of history")}
 
-  ${dim("flags:")}  --json   --limit <n>   --client <c>   --all   --forget
-  ${dim("free tier needs no account · your plan, machines and invoices: tashan account")}
+  ${dim("flags:")}  --json   --all   --limit <n>   ${dim("· CI: TASHAN_KEY=<key> tashan doctor")}
 `;
 
 export function parseArgs(argv) {
@@ -581,10 +589,16 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
   // — because the audit reads this directory's project config and the inventory reads all 52. Two
   // different numbers for "your servers", two lines apart, reads as a bug. The inventory is the one
   // that answers "what do I have", so it carries the count alone.
-  let out = "\n  " + bold("Your stack") +
-    (inv ? "" : dim(`  ·  ${sum.servers} server${sum.servers === 1 ? "" : "s"}, ${sum.skills} skill${sum.skills === 1 ? "" : "s"}`)) + "\n\n";
+  // THE ANSWER FIRST. This used to open with three lines of inventory and put the verdict sixth,
+  // which is the wrong way round: the reader came to find out whether anything is wrong, not to be
+  // told what they own. Inventory is context and follows.
+  const flagged = results.filter((r) => r.assessment.level === "alert" || r.assessment.level === "warn").length;
+  let out = "\n  " + (flagged
+    ? red(`${flagged} need${flagged === 1 ? "s" : ""} attention`)
+    : jade("Nothing you run is deprecated, archived or abandoned.")) + "\n\n";
   out += renderInventory(inv);
-  if (!rows.length) out += "  " + jade("+") + " " + dim("nothing deprecated, archived or abandoned.") + "\n";
+  // The clean-run line used to live here as well as at the top of the report, so a healthy machine
+  // was told the same sentence twice, four lines apart.
   for (const { item, row, assessment, alts } of rows) {
     const t = row && row.tashan_score != null ? String(Math.round(row.tashan_score)) : "—";
     out += "  " + (MARK[assessment.level] || " ") + " " + bold(pretty(item.name).padEnd(28).slice(0, 28)) +
@@ -620,13 +634,15 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
     }
   }
   for (const p of problems) out += "  " + red("!") + " " + bold("config unreadable") + dim("  " + p.path) + "\n";
-  const bits = [];
-  if (sum.alert) bits.push(red(sum.alert + " need attention"));
-  if (sum.warn) bits.push(sum.warn + " worth a look");
-  if (sum.unrated) bits.push(dim(sum.unrated + " catalogued, unrated"));
-  if (sum.unknown) bits.push(dim(sum.unknown + " not in the index"));
-  out += "\n  " + (bits.length ? bits.join(dim(" · ")) : jade("nothing flagged")) + "\n";
-  if (quiet && !verbose) out += dim(`  ${quiet} more not flagged — --all lists every row.`) + "\n";
+  // FOUR NUMBERS FOR ONE PILE. This printed "10 catalogued, unrated · 79 not in the index" and
+  // then "122 more not flagged", three counts that do not add up to each other or to the inventory
+  // above, because they count different things. What a reader can act on is one number: how many
+  // of the things you run we have no evidence about. The rest is bookkeeping.
+  const unmeasured = sum.unrated + sum.unknown;
+  if (sum.warn) out += "\n  " + dim(`${sum.warn} worth a look`) + "\n";
+  if (unmeasured && !verbose) {
+    out += "\n  " + dim(`${unmeasured} of these we have no evidence about yet · --all lists them`) + "\n";
+  }
   // The offer appears only where a free reader has just been shown a finding whose DETAIL exists
   // and is withheld — never on a clean run, never as a recurring nag. If there is nothing to
   // unlock, saying nothing is the honest behaviour and the one that keeps the tool installed.
@@ -654,7 +670,9 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
            dim(" — your subscription is fine; run `tashan activate <key>`") + "\n";
   else if (keyState === "invalid") out += "  " + red("Pro key not valid") + dim(" — check " + PORTAL) + "\n";
   else if (keyState === "unknown") out += dim("  Pro · could not reach tashan to check your licence") + "\n";
-  out += dim("  local only — nothing was uploaded. tashan info <name> for the full dossier.") + "\n";
+  // "local only — nothing was uploaded" was printed on every run forever. A privacy promise is
+  // worth making once, to someone deciding whether to trust the tool; repeated daily it is furniture.
+  // It lives in the README and in doctor.mjs's header where the claim can actually be checked.
   return out;
 }
 
@@ -664,8 +682,11 @@ export const NEEDS_INDEX = new Set(["search", "top", "info", "add", "doctor"]);
 
 export async function main(argv) {
   const a = parseArgs(argv);
-  const cmd = a._[0];
-  if (!cmd || cmd === "help" || cmd === "--help" || cmd === "-h") { process.stdout.write(USAGE + "\n"); return 0; }
+  // NO ARGUMENT MEANS DOCTOR. `npx tashan-cli` used to print the menu, which is what you show
+  // somebody who already knows what the tool is. doctor is the only command that needs no argument,
+  // it is the reason to install this, and it turns a stranger into a user in one keystroke.
+  const cmd = a._[0] || "doctor";
+  if (cmd === "help" || cmd === "--help" || cmd === "-h") { process.stdout.write(USAGE + "\n"); return 0; }
   // `--version` answered "unknown command" in every form up to 0.1.4. It is the first thing anyone
   // types at a new CLI and the first thing a bug report asks for, and getting an error for it reads
   // as a broken install. Read from package.json so it can never drift from what npm published.
