@@ -63,7 +63,7 @@ the surviving row's label, survived the filter, and was baked into eight pages. 
 coincidences at once to show, which is why it never reproduced by hand; the case is now synthesised
 in `pipeline/prerender.py --selftest`, asserted in both directions.
 
-See `docs/HACKATHON.md` for the entry's state and `docs/AI-USAGE.md` for how AI was used.
+See `docs/STORY.md` for how to talk about this to a builder — the argument in the order it convinces, every number checkable on the site. `docs/HACKATHON.md` for the entry's state, `docs/AI-USAGE.md` for how AI was used.
 
 ## Structure
 ```
