@@ -841,5 +841,30 @@ ok("capability.js renders the settled figure too, so hydration does not erase it
    "paid_seen_at" in _capjs and "paidShort" in _capjs,
    "the client render has no paid branch; a reader with JS would see less than a crawler")
 
+# ---- 16. ONE ECOSYSTEM, ONE SIZE, on every page that states it ----------------------------------
+# test_claims.py already refuses a hand-written page to print a number that matches no live
+# population. That is a weaker rule than it sounds: it lets two pages each print a DIFFERENT live
+# number and both pass. Tonight both did — the homepage hero, for-hosts and index.json all said
+# 95,101 tracked while /stats.html, the page written specifically to be cited, said 55,268, because
+# it counted rows in whatever database was on the machine while everything else was built from the
+# export. A visitor who opens two tabs catches that in ten seconds, and a writer who cites the wrong
+# one carries our mistake into their article.
+_idx = load("data/index.json") or {}
+_tracked, _measured = _idx.get("total_capabilities"), _idx.get("measured")
+_num = lambda s: int(s.replace(",", ""))
+for _page, _rx, _want, _label in (
+        ("index.html", r'id="sCaps">([\d,]+)<', _measured, "measured"),
+        ("index.html", r'id="sRepos">([\d,]+)<', _tracked, "tracked"),
+        ("for-hosts.html", r"([\d,]+) measured servers today", _measured, "measured"),
+        ("stats.html", r"We track ([\d,]+)", _tracked, "tracked")):
+    _p = os.path.join(WEB, _page)
+    if not (os.path.exists(_p) and _want):
+        continue
+    _m = re.search(_rx, open(_p, encoding="utf-8").read())
+    ok(f"{_page} states the published {_label} count ({_want:,})",
+       bool(_m) and _num(_m.group(1)) == _want,
+       f"says {_m.group(1) if _m else 'nothing'} where index.json says {_want:,} — two pages, two "
+       f"sizes of the same ecosystem")
+
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)

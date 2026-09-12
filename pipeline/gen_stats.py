@@ -114,6 +114,27 @@ def opaque_share(con):
 def numbers(con):
     q = lambda s: con.execute(s).fetchone()[0]
     n = {k: q(sql) for k, _l, sql, _w in FACTS}
+
+    # THE SITE MUST DESCRIBE WHAT THE SITE PUBLISHED. Every count here came from whatever database
+    # happened to be on the machine, and the rest of the site is built from the EXPORT — so the
+    # moment those two are out of step, this page contradicts its own homepage. Tonight it did:
+    # index.json, for-hosts and the hero all said 95,101 tracked while this page, generated from a
+    # local database that had not run discovery, said 55,268. On the one page written specifically
+    # to be cited, that is the worst possible number to get wrong.
+    #
+    # Only the two figures the export actually carries are overridden; everything else here is a
+    # count of columns the export does not publish, and those still come from the database.
+    idxp = os.path.join(ROOT, "web", "data", "index.json")
+    if os.path.exists(idxp):
+        try:
+            with open(idxp, encoding="utf-8") as fh:
+                idx = json.load(fh)
+            if idx.get("total_capabilities"):
+                n["tracked"] = idx["total_capabilities"]
+            if idx.get("measured"):
+                n["scored"] = max(n.get("scored", 0), idx["measured"])
+        except (OSError, ValueError):
+            pass
     for k, _l, sql, _w in HEALTH:
         if sql:
             n[k] = q(sql)
