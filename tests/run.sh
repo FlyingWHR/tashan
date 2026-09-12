@@ -20,6 +20,10 @@ python3 tests/test_site.py --url http://127.0.0.1:4173 || fail=1
 echo; echo "── capability render (headless) ───────────────"
 node tests/test_render.mjs || fail=1
 
+echo "▸ inventory  (what you have, and when it arrived)"
+node tests/test_inventory.mjs || fail=1
+node cli/inventory.mjs --selftest || fail=1
+
 echo; echo "── on-chain truth ─────────────────────────────"
 python3 pipeline/onchain.py --selftest || fail=1
 

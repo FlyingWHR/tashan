@@ -21,6 +21,7 @@ import { homedir, hostname, platform } from "node:os";
 import { join, dirname } from "node:path";
 import { configLocations, skillLocations, collect, match, resolve, assess, summarize, trend, withTrend,
          suggest, tokenFrequency, isDying } from "./doctor.mjs";
+import { scan, loadLedger, saveLedger, reconcile } from "./inventory.mjs";
 
 // Resolved against this module's own URL, not cwd and not argv[1] — npm installs the bin as a
 // SYMLINK, so a path derived from how the process was invoked points somewhere else entirely.
@@ -523,7 +524,44 @@ export function parseArgs(argv) {
 
 const MARK = { alert: red("!"), warn: C("33")("~"), note: dim("·"), ok: jade("+"), unrated: dim("·"), unknown: dim("?") };
 
-function renderDoctor(results, problems, sum, pro = false, verbose = false, keyState = null) {
+/** What you have, before what is wrong with it.
+ *
+ *  Counts, not a list: a machine with 113 skills does not want them enumerated every run. The two
+ *  lines that earn their place are the ones you cannot get anywhere else — what arrived since the
+ *  last run, and how much of the pile has no owner but you.
+ */
+function renderInventory(inv) {
+  if (!inv) return "";
+  const proj = inv.servers.filter((s) => s.scope === "project").length;
+  const unmanaged = inv.skills.filter((s) => s.authored).length;
+  const undocumented = inv.skills.filter((s) => !s.documented).length;
+  let out = "  " + dim("inventory  ") +
+    `${inv.servers.length} servers` + dim(proj ? ` (${proj} in ${inv.projects} projects)` : "") +
+    ` · ${inv.plugins.length} plugins` + dim(inv.marketplaces.length ? ` from ${inv.marketplaces.length} marketplaces` : "") +
+    ` · ${inv.skills.length} skills` + "\n";
+  if (unmanaged) {
+    out += "  " + dim("           ") + jade(String(unmanaged)) +
+      dim(` skill${unmanaged === 1 ? "" : "s"} no plugin owns — nothing will update ${unmanaged === 1 ? "it" : "them"} but you`);
+    out += undocumented ? dim(`, ${undocumented} with no description`) + "\n" : "\n";
+  }
+  if (inv.first) {
+    out += "  " + dim("           first run — recording what is here now, so the next run can tell you what changed") + "\n";
+  } else {
+    if (inv.fresh.length) {
+      const names = inv.fresh.slice(0, 4).map((f) => f.name).join(", ");
+      out += "  " + dim("           ") + jade("new since last run: ") + names +
+        dim(inv.fresh.length > 4 ? ` and ${inv.fresh.length - 4} more` : "") + "\n";
+    }
+    if (inv.gone.length) {
+      const names = inv.gone.slice(0, 4).map((f) => f.name).join(", ");
+      out += "  " + dim("           gone since last run: " + names +
+        (inv.gone.length > 4 ? ` and ${inv.gone.length - 4} more` : "")) + "\n";
+    }
+  }
+  return out + "\n";
+}
+
+function renderDoctor(results, problems, sum, pro = false, verbose = false, keyState = null, inv = null) {
   if (!results.length) {
     return "\n  " + bold("No agent config found.") + "\n" +
       dim("  Looked in ~/.claude.json, ~/.cursor/mcp.json, Claude Desktop, .mcp.json, ~/.claude/skills/ …") + "\n";
@@ -538,7 +576,14 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
   const quiet = results.length - shown.length;
   const rows = (verbose ? results.slice() : shown)
     .sort((x, y) => order[x.assessment.level] - order[y.assessment.level]);
-  let out = "\n  " + bold("Your stack") + dim(`  ·  ${sum.servers} server${sum.servers === 1 ? "" : "s"}, ${sum.skills} skill${sum.skills === 1 ? "" : "s"}`) + "\n\n";
+  // The header used to carry its own count, taken from what the audit could RESOLVE. Beside the
+  // inventory's count those two numbers disagree — 10 against 12 on the machine this was written on
+  // — because the audit reads this directory's project config and the inventory reads all 52. Two
+  // different numbers for "your servers", two lines apart, reads as a bug. The inventory is the one
+  // that answers "what do I have", so it carries the count alone.
+  let out = "\n  " + bold("Your stack") +
+    (inv ? "" : dim(`  ·  ${sum.servers} server${sum.servers === 1 ? "" : "s"}, ${sum.skills} skill${sum.skills === 1 ? "" : "s"}`)) + "\n\n";
+  out += renderInventory(inv);
   if (!rows.length) out += "  " + jade("+") + " " + dim("nothing deprecated, archived or abandoned.") + "\n";
   for (const { item, row, assessment, alts } of rows) {
     const t = row && row.tashan_score != null ? String(Math.round(row.tashan_score)) : "—";
@@ -833,8 +878,26 @@ export async function main(argv) {
     }
 
     const sum = summarize(results);
-    if (a.json) { process.stdout.write(JSON.stringify({ summary: sum, problems, results }, null, 2) + "\n"); return 0; }
-    process.stdout.write(renderDoctor(results, problems, sum, keyState === "active", a.all, keyState) + "\n");
+
+    // THE INVENTORY. Findings answer "is any of this dangerous"; this answers the question that
+    // comes first once the pile is large — what do I have, what arrived since last time, and what
+    // is nobody maintaining. It reads every project's servers rather than only this directory's,
+    // and it keeps a first-seen date locally because nothing on disk records one for a skill.
+    let inv = null;
+    try {
+      const today = new Date().toISOString().slice(0, 10);
+      const s = scan();
+      const items = [...s.servers, ...s.plugins, ...s.skills];
+      const before = loadLedger();
+      const firstRun = Object.keys(before.seen || {}).length === 0;
+      const { ledger, fresh, gone } = reconcile(before, items, today);
+      saveLedger(ledger);
+      // On the first run everything is "new", which is true and useless. Say so instead.
+      inv = { ...s, fresh, gone, first: firstRun };
+    } catch { /* the inventory is an addition; doctor's findings must never depend on it */ }
+
+    if (a.json) { process.stdout.write(JSON.stringify({ summary: sum, inventory: inv, problems, results }, null, 2) + "\n"); return 0; }
+    process.stdout.write(renderDoctor(results, problems, sum, keyState === "active", a.all, keyState, inv) + "\n");
     return sum.alert > 0 ? 2 : 0;      // nonzero exit when something needs attention, so it can gate CI
   }
   process.stderr.write(red(`  unknown command: ${cmd}`) + "\n" + USAGE + "\n");
