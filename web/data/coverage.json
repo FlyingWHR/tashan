@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 1143,
+  "full": 1145,
   "grade": 3809,
-  "n": 58228,
-  "scan": 7560,
-  "score": 29514,
-  "task": 3697
+  "n": 53453,
+  "scan": 7159,
+  "score": 21967,
+  "task": 3503
  },
  "axes": [
   {
@@ -31,10 +31,10 @@
   }
  ],
  "headline": {
-  "graded_pct": 43,
+  "graded_pct": 59,
   "scanned_pct": 100,
-  "scored_pct": 99,
-  "tasked_pct": 60,
+  "scored_pct": 98,
+  "tasked_pct": 65,
   "tier": "top1000"
  },
  "queue": [
@@ -48,7 +48,7 @@
    "name": "agent-install"
   },
   {
-   "downloads": 653410,
+   "downloads": 783851,
    "id": "pkg:@copilotkit/aimock",
    "kind": "npm",
    "missing": [
@@ -57,7 +57,7 @@
    "name": "@copilotkit/aimock"
   },
   {
-   "downloads": 591813,
+   "downloads": 482339,
    "id": "pkg:@modelcontextprotocol/server-filesystem",
    "kind": "npm",
    "missing": [
@@ -66,7 +66,7 @@
    "name": "@modelcontextprotocol/server-filesystem"
   },
   {
-   "downloads": 424989,
+   "downloads": 261598,
    "id": "pkg:mcporter",
    "kind": "npm",
    "missing": [
@@ -75,33 +75,13 @@
    "name": "mcporter"
   },
   {
-   "downloads": 259959,
-   "id": "pkg:@pandacss/mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@pandacss/mcp"
-  },
-  {
-   "downloads": 234041,
-   "id": "pkg:@modelcontextprotocol/server-everything",
+   "downloads": 133382,
+   "id": "pkg:@modelcontextprotocol/server-sequential-thinking",
    "kind": "npm",
    "missing": [
     "task"
    ],
-   "name": "@modelcontextprotocol/server-everything"
-  },
-  {
-   "downloads": 138289,
-   "id": "pkg:@modelcontextprotocol/server-pdf",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@modelcontextprotocol/server-pdf"
+   "name": "@modelcontextprotocol/server-sequential-thinking"
   },
   {
    "downloads": 130839,
@@ -113,6 +93,26 @@
    "name": "agent-device"
   },
   {
+   "downloads": 129586,
+   "id": "pkg:@modelcontextprotocol/server-github",
+   "kind": "npm",
+   "missing": [
+    "score",
+    "grade"
+   ],
+   "name": "@modelcontextprotocol/server-github"
+  },
+  {
+   "downloads": 120645,
+   "id": "pkg:@modelcontextprotocol/server-postgres",
+   "kind": "npm",
+   "missing": [
+    "score",
+    "grade"
+   ],
+   "name": "@modelcontextprotocol/server-postgres"
+  },
+  {
    "downloads": 108517,
    "id": "pkg:@ui5/mcp-server",
    "kind": "npm",
@@ -120,25 +120,6 @@
     "grade"
    ],
    "name": "@ui5/mcp-server"
-  },
-  {
-   "downloads": 107663,
-   "id": "pkg:@modelcontextprotocol/server-sequential-thinking",
-   "kind": "npm",
-   "missing": [
-    "task"
-   ],
-   "name": "@modelcontextprotocol/server-sequential-thinking"
-  },
-  {
-   "downloads": 106870,
-   "id": "pkg:agentation-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "agentation-mcp"
   },
   {
    "downloads": 106528,
@@ -150,17 +131,17 @@
    "name": "azure"
   },
   {
-   "downloads": 102778,
-   "id": "pkg:@modelcontextprotocol/server-github",
+   "downloads": 103652,
+   "id": "pkg:agentation-mcp",
    "kind": "npm",
    "missing": [
-    "score",
-    "grade"
+    "grade",
+    "task"
    ],
-   "name": "@modelcontextprotocol/server-github"
+   "name": "agentation-mcp"
   },
   {
-   "downloads": 94168,
+   "downloads": 97826,
    "id": "pkg:@modelcontextprotocol/server-slack",
    "kind": "npm",
    "missing": [
@@ -179,16 +160,6 @@
    "name": "nx-mcp"
   },
   {
-   "downloads": 85507,
-   "id": "pkg:@modelcontextprotocol/server-postgres",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade"
-   ],
-   "name": "@modelcontextprotocol/server-postgres"
-  },
-  {
    "downloads": 79483,
    "id": "pkg:agentic-flow",
    "kind": "npm",
@@ -198,14 +169,23 @@
    "name": "agentic-flow"
   },
   {
-   "downloads": 61736,
-   "id": "pkg:@cap-js/mcp-server",
+   "downloads": 67296,
+   "id": "pkg:@modelcontextprotocol/server-everything",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "@modelcontextprotocol/server-everything"
+  },
+  {
+   "downloads": 65785,
+   "id": "pkg:hlims-mcp",
    "kind": "npm",
    "missing": [
     "grade",
     "task"
    ],
-   "name": "@cap-js/mcp-server"
+   "name": "hlims-mcp"
   },
   {
    "downloads": 57771,
@@ -225,6 +205,15 @@
     "task"
    ],
    "name": "@swmansion/argent"
+  },
+  {
+   "downloads": 43551,
+   "id": "pkg:metaharness",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "metaharness"
   },
   {
    "downloads": 43488,
@@ -255,13 +244,23 @@
    "name": "@transcend-io/mcp-server-consent"
   },
   {
-   "downloads": 38512,
-   "id": "pkg:metaharness",
+   "downloads": 40223,
+   "id": "pkg:@transcend-io/mcp-server-workflows",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@transcend-io/mcp-server-workflows"
+  },
+  {
+   "downloads": 37481,
+   "id": "pkg:@gongrzhe/server-gmail-autoauth-mcp",
    "kind": "npm",
    "missing": [
     "grade"
    ],
-   "name": "metaharness"
+   "name": "@gongrzhe/server-gmail-autoauth-mcp"
   },
   {
    "downloads": 36566,
@@ -274,35 +273,6 @@
    "name": "@transcend-io/mcp"
   },
   {
-   "downloads": 36387,
-   "id": "pkg:@mcp-use/inspector",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@mcp-use/inspector"
-  },
-  {
-   "downloads": 34224,
-   "id": "pkg:@mcp-use/cli",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@mcp-use/cli"
-  },
-  {
-   "downloads": 32221,
-   "id": "pkg:@currents/mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@currents/mcp"
-  },
-  {
    "downloads": 31988,
    "id": "pkg:@tobilu/qmd",
    "kind": "npm",
@@ -312,16 +282,6 @@
    "name": "@tobilu/qmd"
   },
   {
-   "downloads": 30341,
-   "id": "pkg:@ericthered926/duckduckgo-mcp-server",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@ericthered926/duckduckgo-mcp-server"
-  },
-  {
    "downloads": 29150,
    "id": "pkg:decocms",
    "kind": "npm",
@@ -329,6 +289,16 @@
     "grade"
    ],
    "name": "decocms"
+  },
+  {
+   "downloads": 28961,
+   "id": "pkg:@currents/mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@currents/mcp"
   },
   {
    "downloads": 28903,
@@ -350,13 +320,14 @@
    "name": "xmcp"
   },
   {
-   "downloads": 26986,
-   "id": "pkg:@hasna/conversations",
+   "downloads": 26444,
+   "id": "pkg:@modelcontextprotocol/server-puppeteer",
    "kind": "npm",
    "missing": [
+    "score",
     "grade"
    ],
-   "name": "@hasna/conversations"
+   "name": "@modelcontextprotocol/server-puppeteer"
   },
   {
    "downloads": 25898,
@@ -366,25 +337,6 @@
     "grade"
    ],
    "name": "task-master-ai"
-  },
-  {
-   "downloads": 25474,
-   "id": "pkg:@taazkareem/clickup-mcp-server",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@taazkareem/clickup-mcp-server"
-  },
-  {
-   "downloads": 23274,
-   "id": "pkg:@modelcontextprotocol/server-puppeteer",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade"
-   ],
-   "name": "@modelcontextprotocol/server-puppeteer"
   },
   {
    "downloads": 23257,
@@ -413,24 +365,70 @@
     "grade"
    ],
    "name": "@launchdarkly/mcp-server"
+  },
+  {
+   "downloads": 20474,
+   "id": "pkg:paqad-ai",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "paqad-ai"
+  },
+  {
+   "downloads": 19731,
+   "id": "pkg:slack-mcp-server",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "slack-mcp-server"
+  },
+  {
+   "downloads": 19258,
+   "id": "pkg:context-mode",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "context-mode"
+  },
+  {
+   "downloads": 17521,
+   "id": "pkg:@the-next-ai/ai-gateway",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@the-next-ai/ai-gateway"
+  },
+  {
+   "downloads": 17356,
+   "id": "pkg:@stripe/mcp",
+   "kind": "npm",
+   "missing": [
+    "task"
+   ],
+   "name": "@stripe/mcp"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 47,
-   "grade": 52,
+   "full": 52,
+   "grade": 59,
    "n": 100,
    "scan": 100,
    "score": 95,
-   "task": 76
+   "task": 80
   },
   "top1000": {
-   "full": 352,
-   "grade": 434,
+   "full": 441,
+   "grade": 589,
    "n": 1000,
    "scan": 1000,
-   "score": 987,
-   "task": 601
+   "score": 982,
+   "task": 648
   }
  }
 }

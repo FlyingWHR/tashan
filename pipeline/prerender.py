@@ -1042,7 +1042,7 @@ def inline_data(c, gen):
     payload = json.dumps({"c": c, "at": gen, "sv": SCORER}, ensure_ascii=False).replace("</", "<\\/")
     return '<script type="application/json" id="cap-data">' + payload + "</script>\n"
 
-def bake_hero(caps, total):
+def bake_hero(caps, total, gen=""):
     """Write the real counts into index.html's hero, so it is not em-dashes before JS runs.
 
     The hero is the first thing a visitor reads and it said "— capabilities measured / of — tracked /
@@ -1054,7 +1054,14 @@ def bake_hero(caps, total):
     """
     idx = os.path.join(ROOT, "web", "index.html")
     html = open(idx, encoding="utf-8").read()
-    when = datetime.now(timezone.utc).strftime("%b %-d")
+    # STAMP THE DATA'S DATE, NOT THE RENDER CLOCK. index.js sets this very element to
+    # "measured <generated_at>"; this wrote datetime.now(), so any run that regenerated the site
+    # without re-measuring told every no-JS reader — which is every crawler and every agent — that
+    # the field was measured today, while the export it was rendered from said 25 August. One
+    # element, two dates, and the wrong one served to the readers who cannot see the correction.
+    # Freshness is the one claim a measurement instrument cannot get wrong.
+    when = "measured " + (datetime.strptime(gen[:10], "%Y-%m-%d").strftime("%b %-d, %Y")
+                          if gen[:10] else datetime.now(timezone.utc).strftime("%b %-d, %Y"))
     for pat, val in ((r'(<b class="k" id="sCaps">)[^<]*(</b>)', f"{len(caps):,}"),
                      (r'(<b id="sRepos">)[^<]*(</b>)', f"{total:,}"),
                      (r'(<span class="dim" id="sDate">)[^<]*(</span>)', when)):
@@ -1662,6 +1669,51 @@ def install_cmd(c):
     return None
 
 
+def _selfcheck_co_used():
+    """The collision case, synthesised — because production needs three coincidences to show it.
+
+    `pkg:stripe-mcp` is absent from the export and `pkg:@stripe/mcp` is present; both slugify to
+    `pkg-stripe-mcp`. A filter keyed on the slug keeps the dead link, a filter keyed on the id drops
+    it. Asserted in both directions so nobody "simplifies" this back to the label.
+    """
+    assert slugify("pkg:stripe-mcp") == slugify("pkg:@stripe/mcp") == "pkg-stripe-mcp", \
+        "the collision this guards against no longer exists — check slugify() before deleting this"
+    caps = [{"id": "pkg:@stripe/mcp", "slug": "pkg-stripe-mcp",
+             "co_used": [{"id": "pkg:stripe-mcp"}, {"id": "pkg:figma-developer-mcp"}]},
+            {"id": "pkg:figma-developer-mcp", "slug": "pkg-figma-developer-mcp"}]
+    filter_co_used(caps)
+    kept = [x["id"] for x in caps[0]["co_used"]]
+    assert kept == ["pkg:figma-developer-mcp"], kept
+    # and the old, slug-keyed rule would have kept the dead one — the proof this check is load-bearing
+    have_slugs = {c["slug"] for c in caps}
+    assert slugify("pkg:stripe-mcp") in have_slugs
+    print("  ok — co_used filtered by id: the slug-colliding dead link is dropped")
+
+
+def filter_co_used(caps):
+    """Drop co-use links to capabilities this run did not write a page for. BY ID, NOT BY SLUG.
+
+    THIS WAS THE CROSS-SURFACE CONSISTENCY FAILURE, and it cost eighteen days of publishing. The
+    filter read `slugify(x["id"]) in have_slugs` — a derived label, tested for membership in a set of
+    derived labels — and a slug is not an identity: `pkg:stripe-mcp` and `pkg:@stripe/mcp` both
+    slugify to `pkg-stripe-mcp`. The export carried `@stripe/mcp` and had dropped the third-party
+    `stripe-mcp`, so a co-use link to the dropped id matched the surviving row's LABEL, passed the
+    filter, and was baked into eight dossiers naming a capability that does not exist in the export.
+    tests/test_consistency.py caught it every night (`co_used links a capability with no page`),
+    the nightly withheld the site, and tashan.sh served 25 August for two and a half weeks.
+
+    It was not reproducible by hand: it needs one export where two ids collide on a slug AND the
+    loser is filtered out AND something co-uses the loser. The local export had the collision and no
+    co-use edge; CI run 34693420492 had all three. Hence the synthetic case in --selftest below —
+    the condition is too specific to wait for.
+    """
+    have_ids = {c["id"] for c in caps}
+    for c in caps:
+        if c.get("co_used"):
+            c["co_used"] = [x for x in c["co_used"] if x["id"] in have_ids]
+    return caps
+
+
 def main():
     d = json.load(open(DATA))
     gen = d.get("generated_at", "")
@@ -1672,20 +1724,7 @@ def main():
     for c in caps:
         c.setdefault("slug", slugify(c["id"]))
     have = {c["slug"] for c in caps}  # only these have prerendered pages
-    # FILTER BY ID, NOT BY SLUG. A page exists for an ID; a slug is a label derived from one, and
-    # two ids can derive the same label — the collision class that once sent @stripe/mcp to a
-    # third-party stripe-mcp's page. Today's export happens to have no colliding slugs, so this
-    # changes no output right now; it is here because checking the derived label for membership in
-    # a set of derived labels is only accidentally correct, and the accident is one ingest away
-    # from ending.
-    #
-    # NOT a fix for the cross-surface consistency failure, which is still open: co_used on a page
-    # naming an id that is absent from the export. Ruled out so far — prerender and the test read
-    # the same file, prerender runs after export in run.py, and the export has no slug collisions.
-    have_ids = {c["id"] for c in caps}
-    for c in caps:
-        if c.get("co_used"):
-            c["co_used"] = [x for x in c["co_used"] if x["id"] in have_ids]
+    filter_co_used(caps)
     for c in caps:
         open(os.path.join(OUT, c["slug"] + ".html"), "w").write(page(c, gen))
     write_md_shards({c["slug"]: markdown(c, gen) for c in caps})
@@ -1700,7 +1739,7 @@ def main():
     if stale:
         print("removed %d orphaned/superseded page file(s)" % len(stale))
     sitemap(caps)
-    bake_hero(caps, d.get("total_capabilities") or len(caps))
+    bake_hero(caps, d.get("total_capabilities") or len(caps), gen)
     bake_methodology(gen)
     bake_pricing()
     print("prerendered %d capability pages -> %s" % (len(caps), OUT))
@@ -1711,6 +1750,6 @@ if __name__ == "__main__":
     # filesystem or export needed. _selfcheck() existed for weeks and was called from NOWHERE — a
     # check that never runs is not a check. tests/run.sh invokes this.
     if "--selftest" in sys.argv:
-        _selfcheck(); _selfcheck_markdown()
+        _selfcheck(); _selfcheck_markdown(); _selfcheck_co_used()
     else:
         main()

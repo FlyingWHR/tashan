@@ -92,6 +92,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `tests/test_history_integrity.py` — The paid series must contain the capability's movement, not ours.
 - `tests/test_hubs.py` — tashan — the generated content tier: asset versioning, category hubs, skills, llms.txt.
 - `tests/test_icons.py` — Every taxonomy id has an icon, and no icon is invisible at the size it ships.
+- `tests/test_identity.py` — One thing must not be ranked twice at two different numbers.
 - `tests/test_links.py` — Every link and every install instruction must lead somewhere that exists.
 - `tests/test_official.py` — The "✓ Official" badge is an endorsement claim. It must be provable from the namespace.
 - `tests/test_outreach_numbers.py` — Every number in docs/OUTREACH.md must still be true of the database.

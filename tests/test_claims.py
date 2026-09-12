@@ -426,11 +426,24 @@ if os.path.exists(DB):
     tracked = con.execute("SELECT COUNT(*) FROM capabilities").fetchone()[0]
     dead = con.execute("SELECT COUNT(*) FROM capabilities WHERE vitality='abandoned' "
                        "OR npm_deprecated=1 OR gh_archived=1").fetchone()[0]
-    # Every standalone thousands-separated integer on these pages, checked against the two
-    # populations it could plausibly be. A number within 2% of neither is a stale claim.
+    # PUBLISHED, not just stored. The DB holds 22,552 scored rows; the export publishes 12,001,
+    # because export() drops what a host cannot launch — libraries with no `bin`, demo servers,
+    # dependency-confusion canaries, malicious packages, duplicate registry twins. for-hosts.html
+    # tells hosts what the API can ANSWER about, so its population is the export's, and
+    # prerender.bake_counts stamps exactly that. Leaving `measured` out of this tuple set the
+    # generator and the test against each other over one sentence: an audit hand-edited the page to
+    # the DB figure to make this pass, the next prerender put the export figure back, and the suite
+    # went red on a number that was true. Four populations now, all derived, none hand-typed.
+    idx = os.path.join(WEB, "data", "index.json")
+    measured = scored
+    if os.path.exists(idx):
+        with open(idx, encoding="utf-8") as fh:
+            measured = json.load(fh).get("measured") or scored
+    # Every standalone thousands-separated integer on these pages, checked against the populations
+    # it could plausibly be. A number within 2% of none of them is a stale claim.
     # stats.html and index.html are GENERATED (gen_stats.py, prerender.py), so their numbers are
-    # whatever the last run measured and cannot go stale on their own. These two are hand-written,
-    # which is exactly why they drifted.
+    # whatever the last run measured and cannot go stale on their own. These two are hand-written
+    # prose with generated figures stamped into them, which is why they drifted in the first place.
     for page in ("for-hosts.html", "pricing.html"):
         path = os.path.join(WEB, page)
         if not os.path.exists(path):
@@ -438,11 +451,11 @@ if os.path.exists(DB):
         body = text(path)
         for m in re.finditer(r"\b(\d{1,3}(?:,\d{3})+)\b", body):
             n = int(m.group(1).replace(",", ""))
-            near = min(abs(n - p) / max(p, 1) for p in (scored, tracked, dead))
+            near = min(abs(n - p) / max(p, 1) for p in (measured, scored, tracked, dead))
             ok(f"{page}: {m.group(1)} is a live count, not a stale one",
                near < 0.02 or n < 1000,
-               f"{n:,} matches none of scored ({scored:,}), tracked ({tracked:,}) "
-               f"or abandoned ({dead:,}) — prerender.bake_counts stamps these")
+               f"{n:,} matches none of measured ({measured:,}), scored ({scored:,}), "
+               f"tracked ({tracked:,}) or abandoned ({dead:,}) — prerender.bake_counts stamps these")
     con.close()
 
 print(("CLAIMS OK" if not fail else "CLAIMS FAILED"))
