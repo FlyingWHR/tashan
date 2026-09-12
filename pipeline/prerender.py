@@ -1108,7 +1108,24 @@ def bake_hero(caps, total, gen=""):
                 paid_txt = "$%d in settled agent payments \u203a" % round(usd)
         except (OSError, ValueError):
             pass
-    for pat, val in ((r'(<b class="k" id="sCaps">)[^<]*(</b>)', f"{len(caps):,}"),
+    # The homepage's third card states the finding, not the feature. Baked from the same file the
+    # page links to, so the sentence cannot drift from the table behind it.
+    eco_all = {}
+    if os.path.exists(paid_path):
+        try:
+            with open(paid_path, encoding="utf-8") as fh:
+                eco_all = (json.load(fh) or {}).get("economy") or {}
+        except (OSError, ValueError):
+            eco_all = {}
+    paid_card = ("Settled x402 receipts on Base, joined to the capabilities we measure — "
+                 "the one signal here that is not a proxy for demand.")
+    if eco_all.get("receivers_paid") and eco_all.get("median_usd") is not None:
+        paid_card = (f"{eco_all['receivers_paid']:,} of "
+                     f"{eco_all['receivers_paid'] + eco_all.get('receivers_never_paid', 0):,} "
+                     f"x402 services have ever been paid \u2014 and the median one has earned "
+                     f"${eco_all['median_usd']:,.2f} in its life.")
+    for pat, val in ((r'(<p class="job__d" id="homePaid">)[^<]*(</p>)', paid_card),
+                     (r'(<b class="k" id="sCaps">)[^<]*(</b>)', f"{len(caps):,}"),
                      (r'(<b id="sRepos">)[^<]*(</b>)', f"{total:,}"),
                      (r'(<a class="link" href="/paid\.html" id="sPaid">)[^<]*(</a>)', paid_txt),
                      (r'(<span class="dim" id="sDate">)[^<]*(</span>)', when)):
