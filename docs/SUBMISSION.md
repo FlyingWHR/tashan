@@ -63,8 +63,11 @@ instrument that leaves itself out of its own measurement is not an instrument.
 - **The CLI:** `npx tashan-cli doctor` audits the agent setup already on your machine — every MCP
   server and skill across Claude Code, Claude Desktop, Cursor, VS Code and Windsurf — and tells you
   what is dead, deprecated, unmaintained or carrying an advisory. Reads local files only.
-- **The MCP server:** `npx tashan-cli mcp` (or the Claude Code plugin). Four tools:
-  `find_capability`, `check_capability`, `audit_config`, `paid_demand`.
+- **The MCP server:** `npx tashan-cli mcp` (or the Claude Code plugin) — `find_capability`,
+  `check_capability`, `audit_config`. The fourth tool, `paid_demand`, is in this repository and
+  runs from a clone today (`node cli/mcp.mjs`); it reaches npm with the next release. The published
+  package is 0.1.4, from 8 August, and `tests/test_server_json.py` refuses to let the manifest claim
+  a version that is not actually on npm — which is why it has not been bumped ahead of the publish.
 - **Machine-readable:** `/data/demand.json`, `/v0.1/servers`, `/v0.1/scores`, `/llms.txt`.
 
 ## Repository

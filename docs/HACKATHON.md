@@ -20,6 +20,26 @@ Two partner slots, third left empty:
 - **Bazantic.** All three tracks look reachable: the continuity gateway, a recipe combining tashan
   with a second service, and agentifying an API that was not in Bazantic before, which ours was not.
 
+## DO THIS FIRST — two minutes, and it makes a claim true
+
+**Publish the CLI.** The npm package is 0.1.4 from 8 August, so a stranger running
+`npx tashan-cli mcp` today gets three tools; the fourth, `paid_demand`, exists only in this
+repository. The demo shows four. Publishing closes that gap:
+
+```sh
+npm login                                   # this machine is not authenticated
+# bump BOTH, they are asserted equal by tests/test_server_json.py:
+#   cli/package.json  "version": "0.2.0"
+#   server.json       "version": "0.2.0"  (twice — top level and the package entry)
+cd cli && npm pack && npm i -g ./tashan-cli-0.2.0.tgz && tashan-cli mcp --help
+# ^ install the TARBALL before publishing: npm's bin is a symlink, so argv[1] never equals
+#   import.meta.url on a real install, and that has shipped broken here before.
+npm publish
+```
+
+Do not bump the version without publishing: `test_server_json.py` checks the newest version in the
+registry manifest is actually on npm, and will correctly go red.
+
 ## BLOCKED — needs a human
 
 **Subgraph Studio deploy key.** thegraph.com/studio, connect a wallet, create a subgraph named
