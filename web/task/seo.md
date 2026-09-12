@@ -11,48 +11,48 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Website Auditor](https://tashan.sh/capability/pkg-website-auditor-mcp.html) | 65 | 765/wk | active |
-| 2 | [SEO Skills](https://tashan.sh/capability/plugin-seranking-seo-skills-seo-skills.html) | 60 | 100 ★ | active |
-| 3 | [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) | 71 | 1k ★ | active |
-| 4 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 69 | 1k ★ | active |
-| 5 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 68 | 558 ★ | active |
-| 6 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 50 | 73 ★ | active |
-| 7 | [Ultimate SEO Geo](https://tashan.sh/capability/plugin-mykpono-ultimate-seo-geo-ultimate-seo-geo.html) | 44 | 61 ★ | active |
-| 8 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 79 | 12k ★ | active |
-| 9 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 67 | 969/wk | active |
-| 10 | [SEO Audit](https://tashan.sh/capability/skill-alirezarezvani-seo-audit.html) | 50 | 3 repos | active |
-| 11 | [Ahrefs Automation](https://tashan.sh/capability/skill-composiohq-ahrefs-automation.html) | not scored | 1 repos | active |
-| 12 | [Google Search Console Automation](https://tashan.sh/capability/skill-composiohq-google-search-console-automation.html) | not scored | 1 repos | active |
-| 13 | [Aeo · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-aeo.html) | not scored | 1 repos | active |
-| 14 | [App Store Optimization](https://tashan.sh/capability/skill-alirezarezvani-app-store-optimization.html) | not scored | 1 repos | active |
-| 15 | [Competitor Alternatives](https://tashan.sh/capability/skill-alirezarezvani-competitor-alternatives.html) | not scored | 1 repos | active |
-| 16 | [Content Strategy](https://tashan.sh/capability/skill-alirezarezvani-content-strategy.html) | not scored | 1 repos | active |
-| 17 | [Local SEO Manager](https://tashan.sh/capability/skill-alirezarezvani-local-seo-manager.html) | not scored | 1 repos | active |
-| 18 | [Marketing Demand Acquisition](https://tashan.sh/capability/skill-alirezarezvani-marketing-demand-acquisition.html) | not scored | 1 repos | active |
-| 19 | [Programmatic SEO](https://tashan.sh/capability/skill-alirezarezvani-programmatic-seo.html) | not scored | 1 repos | active |
-| 20 | [Schema Markup](https://tashan.sh/capability/skill-alirezarezvani-schema-markup.html) | not scored | 1 repos | active |
-| 21 | [Site Architecture](https://tashan.sh/capability/skill-alirezarezvani-site-architecture.html) | not scored | 1 repos | active |
-| 22 | [SEO Audit Console](https://tashan.sh/capability/pkg-houtini-seo-audit-console.html) | 57 | 355/wk | active |
-| 23 | [Content Genie](https://tashan.sh/capability/pkg-content-genie-mcp.html) | 49 | 87/wk | active |
-| 24 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 68 | 2k/wk | active |
-| 25 | [Bisibility](https://tashan.sh/capability/pkg-bisibility-mcp.html) | 65 | 1k/wk | active |
-| 26 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 64 | 504/wk | active |
-| 27 | [Saglitzdesign](https://tashan.sh/capability/pkg-saglitzdesign-mcp.html) | 60 | 338/wk | active |
-| 28 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 60 | 337/wk | active |
-| 29 | [SEO Tools: Google Search Console](https://tashan.sh/capability/pkg-seo-tools-mcp-gsc.html) | 58 | 272/wk | active |
-| 30 | [SEO Tools: Yandex.Webmaster](https://tashan.sh/capability/pkg-seo-tools-mcp-ywm.html) | 58 | 271/wk | active |
-| 31 | [SEO Tools: Yandex Wordstat](https://tashan.sh/capability/pkg-seo-tools-mcp-wordstat.html) | 58 | 256/wk | active |
-| 32 | [Google Search Console](https://tashan.sh/capability/pkg-conorbronsdon-gsc-mcp.html) | 56 | 363/wk | active |
-| 33 | [Cituna](https://tashan.sh/capability/pkg-cituna-mcp.html) | 54 | 277/wk | active |
-| 34 | [AI SEO · automatelab](https://tashan.sh/capability/pkg-automatelab-ai-seo-mcp.html) | 47 | 140/wk | active |
-| 35 | [SEO Tools](https://tashan.sh/capability/pkg-seodesignlab-mcp-server.html) | 46 | 61/wk | active |
-| 36 | [Xiaoflow](https://tashan.sh/capability/pkg-xiaoflow-mcp-server.html) | 46 | 38/wk | active |
-| 37 | [Suganthan Gsc](https://tashan.sh/capability/pkg-suganthan-gsc-mcp.html) | 44 | 2k/wk | active |
-| 38 | [SEO Performance](https://tashan.sh/capability/pkg-automatelab-seo-performance-mcp.html) | 44 | 89/wk | active |
-| 39 | [Yandex Webmaster · theyahia](https://tashan.sh/capability/pkg-theyahia-yandex-webmaster-mcp.html) | 43 | 46/wk | active |
-| 40 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 72 | 3k ★ | active |
+| 1 | [Website Auditor](https://tashan.sh/capability/pkg-website-auditor-mcp.html) | 61 | 765/wk | active |
+| 2 | [SEO Skills](https://tashan.sh/capability/plugin-seranking-seo-skills-seo-skills.html) | 56 | 100 ★ | active |
+| 3 | [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) | 69 | 1k ★ | active |
+| 4 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 65 | 1k ★ | active |
+| 5 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 65 | 558 ★ | active |
+| 6 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 47 | 73 ★ | active |
+| 7 | [Ultimate SEO Geo](https://tashan.sh/capability/plugin-mykpono-ultimate-seo-geo-ultimate-seo-geo.html) | 41 | 61 ★ | active |
+| 8 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 78 | 12k ★ | active |
+| 9 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 62 | 484/wk | active |
+| 10 | [App Store Optimization](https://tashan.sh/capability/skill-alirezarezvani-app-store-optimization.html) | 47 | 3 repos | active |
+| 11 | [Competitor Alternatives](https://tashan.sh/capability/skill-alirezarezvani-competitor-alternatives.html) | 47 | 3 repos | active |
+| 12 | [Marketing Demand Acquisition](https://tashan.sh/capability/skill-alirezarezvani-marketing-demand-acquisition.html) | 47 | 3 repos | active |
+| 13 | [Programmatic SEO](https://tashan.sh/capability/skill-alirezarezvani-programmatic-seo.html) | 47 | 3 repos | active |
+| 14 | [Schema Markup](https://tashan.sh/capability/skill-alirezarezvani-schema-markup.html) | 47 | 3 repos | active |
+| 15 | [SEO Audit](https://tashan.sh/capability/skill-alirezarezvani-seo-audit.html) | 47 | 3 repos | active |
+| 16 | [Aeo](https://tashan.sh/capability/skill-alirezarezvani-aeo.html) | 44 | 2 repos | active |
+| 17 | [Content Strategy](https://tashan.sh/capability/skill-alirezarezvani-content-strategy.html) | 44 | 2 repos | active |
+| 18 | [Site Architecture](https://tashan.sh/capability/skill-alirezarezvani-site-architecture.html) | 44 | 2 repos | active |
+| 19 | [SEO Audit Console](https://tashan.sh/capability/pkg-houtini-seo-audit-console.html) | 54 | 355/wk | active |
+| 20 | [Content Genie](https://tashan.sh/capability/pkg-content-genie-mcp.html) | 46 | 87/wk | active |
+| 21 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 61 | 609/wk | active |
+| 22 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 60 | 504/wk | active |
+| 23 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 59 | 351/wk | active |
+| 24 | [Bisibility](https://tashan.sh/capability/pkg-bisibility-mcp.html) | 57 | 289/wk | active |
+| 25 | [Saglitzdesign](https://tashan.sh/capability/pkg-saglitzdesign-mcp.html) | 56 | 338/wk | active |
+| 26 | [SEO Tools: Google Search Console](https://tashan.sh/capability/pkg-seo-tools-mcp-gsc.html) | 54 | 272/wk | active |
+| 27 | [SEO Tools: Yandex.Webmaster](https://tashan.sh/capability/pkg-seo-tools-mcp-ywm.html) | 54 | 271/wk | active |
+| 28 | [SEO Tools: Yandex Wordstat](https://tashan.sh/capability/pkg-seo-tools-mcp-wordstat.html) | 54 | 256/wk | active |
+| 29 | [Cituna](https://tashan.sh/capability/pkg-cituna-mcp.html) | 50 | 277/wk | active |
+| 30 | [Google Search Console · conorbronsdon](https://tashan.sh/capability/pkg-conorbronsdon-gsc-mcp.html) | 45 | 59/wk | active |
+| 31 | [AI SEO](https://tashan.sh/capability/pkg-automatelab-ai-seo-mcp.html) | 44 | 140/wk | active |
+| 32 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 70 | 3k ★ | active |
+| 33 | [Citable](https://tashan.sh/capability/pkg-citable-mcp.html) | 68 | 2k/wk | active |
+| 34 | [Gscdump](https://tashan.sh/capability/pkg-gscdump-cli.html) | 66 | 1k/wk | active |
+| 35 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 65 | 1k/wk | active |
+| 36 | [Upkeep](https://tashan.sh/capability/pkg-upkeep-mcp.html) | 65 | 1k/wk | active |
+| 37 | [Bing](https://tashan.sh/capability/pkg-hasdata-bing-mcp.html) | 60 | 84/wk | active |
+| 38 | [Tooltrace](https://tashan.sh/capability/pkg-tooltrace-mcp-server.html) | 58 | 335/wk | active |
+| 39 | [Motiblog](https://tashan.sh/capability/pkg-motiblog-mcp.html) | 58 | 244/wk | active |
+| 40 | [Sytecheck](https://tashan.sh/capability/pkg-ascentws-sytecheck-mcp.html) | 57 | 300/wk | active |
 
-Showing the top 40 of 54. The full ranked shelf is at https://tashan.sh/task/seo.html.
+Showing the top 40 of 57. The full ranked shelf is at https://tashan.sh/task/seo.html.
 
 ## What these numbers are not
 

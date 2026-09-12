@@ -26,14 +26,14 @@ Run `python3 pipeline/coverage.py` and the snippets below against `data/tashan.d
 
 | Fact | Value (19 Aug 2026) | Query |
 |---|---|---|
-| npm packages scanned for advisories against the version you'd install today | 8,052 | `SELECT count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL` |
-| …of those, **no build provenance** — nothing proves the publisher built it | **74%** (5,943) | `SELECT sec_provenance, count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL GROUP BY 1` |
-| Servers running an **install-time script** (arbitrary code on `npm i`) | 495 | `WHERE sec_install_script IS NOT NULL` |
+| npm packages scanned for advisories against the version you'd install today | 8,635 | `SELECT count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL` |
+| …of those, **no build provenance** — nothing proves the publisher built it | **73%** (6,286) | `SELECT sec_provenance, count(*) FROM capabilities WHERE sec_scanned_at IS NOT NULL GROUP BY 1` |
+| Servers running an **install-time script** (arbitrary code on `npm i`) | 503 | `WHERE sec_install_script IS NOT NULL` |
 | Confirmed-malicious packages found, kept unranked so `doctor` still warns | 6 | `WHERE sec_max_severity='MALICIOUS'` |
-| Scored capabilities whose maintainer has **stopped** (archived / declared / dormant) | 992 | `WHERE tashan_score IS NOT NULL AND vitality='abandoned'` |
-| Library/SDK packages found so far that can't be launched at all | 798 | `WHERE npm_runnable=0` |
+| Scored capabilities whose maintainer has **stopped** (archived / declared / dormant) | 2,813 | `WHERE tashan_score IS NOT NULL AND vitality='abandoned'` |
+| Library/SDK packages found so far that can't be launched at all | 805 | `WHERE npm_runnable=0` |
 
-The 74% is the strongest single line in this file. It is not an accusation of anything — most
+The 73% is the strongest single line in this file. It is not an accusation of anything — most
 publishers have simply never turned on npm provenance — but it means that for three out of four MCP
 servers your users install, **nobody can show that the tarball came from the source repo it claims**.
 
@@ -102,7 +102,7 @@ so plainly is more persuasive than pretending we're not adjacent.*
 > `/badge/<slug>.svg` if you want it inline.
 >
 > Two things you'd be able to show that nobody in this space shows yet: whether a package's current
-> release has an open advisory, and whether it has build provenance (~74% don't).
+> release has an open advisory, and whether it has build provenance (~73% don't).
 >
 > Happy to add whatever field makes it drop into your schema.
 >
