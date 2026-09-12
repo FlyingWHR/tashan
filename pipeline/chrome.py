@@ -178,7 +178,11 @@ def nav_html(current=None):
     # a permanently hidden one is useless to the 1%.
     return ('<a class="skip" href="#main">Skip to content</a>'
             '<nav class="nav"><div class="wrap nav__in">'
-            '<a class="brand" href="/"><span class="brand__mark"></span>tashan</a>'
+            # The wordmark is wrapped so the NAV can drop it under 40rem and still show all four
+            # links (they needed 323px and had 250px, which clipped "Pricing"). The footer keeps
+            # it — there is room there, and that is where a wordmark actually signs the page.
+            '<a class="brand" href="/"><span class="brand__mark"></span>'
+            '<span class="brand__wm">tashan</span></a>'
             f'<div class="nav__links">{links}{acct}</div>'
             "</div></nav>")
 

@@ -99,7 +99,7 @@ def rows_from(demand, export):
 
 
 def stat_block(items):
-    h = ['<dl class="stat stat--4">']
+    h = ['<dl class="stat">']
     for value, label, why in items:
         h.append('<div class="stat__i"><dt class="stat__n mono">' + esc(value) + "</dt>"
                  '<dd class="stat__l">' + esc(label)

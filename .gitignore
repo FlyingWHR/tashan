@@ -30,3 +30,7 @@ data/.db_store_stamp
 # binary blob nightly would defeat delta compression. Lives in R2 beside the database.
 data/skills_cache.json
 tools/node_modules/
+
+# Browser-session artifacts: screenshots and DOM snapshots from a QA pass are evidence for the
+# session that took them, not for the repo.
+.playwright-mcp/

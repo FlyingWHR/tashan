@@ -123,7 +123,24 @@ img { max-width: 100%; display: block; }
   background: var(--jade-dim); }
 .nav__links a:hover { color: var(--text); }
 .nav__links a[aria-current="page"] { color: var(--text); }
-@media (max-width: 40rem){ .nav__links { gap: var(--sp-4); font-size:var(--fs-sm); } .brand small{ display:none; } }
+/* THE NAV WAS BROKEN ON A PHONE, on all ~12,000 pages. At 390px the four labels could not fit
+   beside the wordmark, so each one WRAPPED inside its own flex item — "Find / skills", "Check my /
+   setup" — the row grew to two lines and collided with the brand. Nothing hid it, because the
+   desktop layout is fine and nobody had looked at the header at the width most readers arrive on.
+   Fixed without touching --nav-h, which every sticky layer on the site offsets by: the labels stop
+   wrapping, the gap tightens, and if a screen is still too narrow the row scrolls horizontally
+   rather than reflowing the header. One row, one height, every link reachable. */
+@media (max-width: 40rem){
+  .nav__links { gap: var(--sp-2); font-size:var(--fs-xs); flex-wrap:nowrap;
+                overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; }
+  .nav__links::-webkit-scrollbar { display:none; }
+  .nav__links a { white-space:nowrap; }
+  .nav__in { gap: var(--sp-3); }
+  .brand { flex:none; }
+  .brand small{ display:none; }
+  /* Scoped to the nav: the footer has room and is where a wordmark signs the page. */
+  .nav .brand__wm { display:none; }
+}
 
 /* ---------- hero ---------- */
 .hero { position: relative; overflow: hidden; isolation: isolate;
@@ -513,6 +530,24 @@ td.num .unit { display:block; line-height:1.25; white-space:nowrap; }
 .stat .v { font-family: var(--font-mono); font-size:1.7rem; color:#fff; line-height:1; }
 .stat .v.jade { color: var(--jade); }
 .stat .s { font-size:var(--fs-sm); color: var(--text-dim); margin-top:.4rem; }
+
+/* THE STAT GRID — and until now it did not exist. gen_stats.py and gen_paid.py both emit
+   .stat__i / .stat__n / .stat__l / .stat__w and NOT ONE of those class names had a rule anywhere in
+   this file, so /stats.html — the page written to be cited by the articles that outrank us — served
+   its headline numbers as a browser-default <dl>: 40px of inherited dd indent, the figure at body
+   size, no grid, no hierarchy. Same silent class of failure as the undefined var() that dropped 13
+   declarations: a selector nothing matches costs nothing at build time and everything on the page.
+   One definition, both pages, and any generator that reaches for the same block next. */
+.stat { display:grid; gap: var(--sp-6); grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.stat__i { margin:0; }
+.stat__n { font-family: var(--font-mono); font-size:1.7rem; line-height:1; color:#fff;
+           font-variant-numeric: tabular-nums; }
+/* dd carries a default margin-inline-start of 40px. Zeroing it is the difference between a grid of
+   figures and an indented list of them. */
+.stat__l { margin:.45rem 0 0; font-size: var(--fs-sm); color: var(--text); }
+.stat__w { display:block; margin-top:.2rem; color: var(--text-faint); }
+/* A four-figure row on a phone is one column, not four 60px columns of wrapped words. */
+@media (max-width: 560px) { .stat { gap: var(--sp-5); } .stat__n { font-size:1.45rem; } }
 .colist { display:flex; flex-wrap:wrap; gap: var(--sp-2); }
 .colist a { font-family: var(--font-mono); font-size:var(--fs-sm); padding:.3rem .6rem; border:1px solid var(--hairline);
   border-radius: var(--radius-pill); color: var(--text-dim); }

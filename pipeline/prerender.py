@@ -1092,8 +1092,25 @@ def bake_hero(caps, total, gen=""):
     # Freshness is the one claim a measurement instrument cannot get wrong.
     when = "measured " + (datetime.strptime(gen[:10], "%Y-%m-%d").strftime("%b %-d, %Y")
                           if gen[:10] else datetime.now(timezone.utc).strftime("%b %-d, %Y"))
+    # THE MONEY SIGNAL NEEDS A DOOR ON THE PAGE EVERYONE LANDS ON. It was reachable only from the
+    # footer, which is where things go to be technically present. Baked, not fetched: demand.json is
+    # 308 KB and the homepage deliberately does not download the dossier tier at runtime.
+    paid_txt = "Who gets paid \u203a"
+    paid_path = os.path.join(ROOT, "web", "data", "demand.json")
+    if os.path.exists(paid_path):
+        try:
+            with open(paid_path, encoding="utf-8") as fh:
+                eco = (json.load(fh) or {}).get("economy") or {}
+            usd = eco.get("paid_usd") or 0
+            if usd >= 1000:
+                paid_txt = "$%dk in settled agent payments \u203a" % round(usd / 1000)
+            elif usd:
+                paid_txt = "$%d in settled agent payments \u203a" % round(usd)
+        except (OSError, ValueError):
+            pass
     for pat, val in ((r'(<b class="k" id="sCaps">)[^<]*(</b>)', f"{len(caps):,}"),
                      (r'(<b id="sRepos">)[^<]*(</b>)', f"{total:,}"),
+                     (r'(<a class="link" href="/paid\.html" id="sPaid">)[^<]*(</a>)', paid_txt),
                      (r'(<span class="dim" id="sDate">)[^<]*(</span>)', when)):
         html = re.sub(pat, lambda m: m.group(1) + val + m.group(2), html, count=1)
     html = bake_board(html, caps)
