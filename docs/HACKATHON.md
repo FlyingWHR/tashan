@@ -40,24 +40,27 @@ npm publish
 Do not bump the version without publishing: `test_server_json.py` checks the newest version in the
 registry manifest is actually on npm, and will correctly go red.
 
-## BLOCKED — needs a human
+## NEEDS A HUMAN — but no longer blocking
 
-**Subgraph Studio deploy key.** thegraph.com/studio, connect a wallet, create a subgraph named
-`tashan-x402-demand`, copy the deploy key and slug. A browser wallet connect cannot be automated.
-Until it lands the subgraph is finished but unpublished, and an unindexed subgraph is not a
-submission.
+**~~Subgraph Studio deploy key.~~ Optional now.** This was the blocker and it is not one any more:
+the Track 1 composition ships by reading an x402 settlement index ALREADY published on The Graph
+Network, through The Graph's own Subgraph MCP server. Two Graph products, composed, live, with the
+query printed on /paid.html.
 
-Once you have it:
+Publishing ours is still worth doing — it indexes the same economy independently, and two indexes
+disagreeing is a finding rather than an error — but it is now an improvement, not a submission
+requirement. If you want it:
 
 ```sh
 cd subgraph
-npx graph auth <DEPLOY_KEY>
-npx graph codegen && npx graph build
+npx graph auth <DEPLOY_KEY>          # thegraph.com/studio, connect a wallet, create
+npx graph codegen && npx graph build # `tashan-x402-demand`, copy the key
 npx graph deploy tashan-x402-demand
-# then, so the pipeline stage has something to read:
-export TASHAN_SUBGRAPH_URL=<the studio query URL>
-python3 pipeline/paid_demand.py
+export TASHAN_SUBGRAPH_ID=<the published subgraph id>
+python3 pipeline/subgraph_mcp.py --probe   # reads OURS instead of the public one
 ```
+
+**The video, and the submission form.** Both below. Those are the real remaining human jobs.
 
 ## What shipped in the window
 
