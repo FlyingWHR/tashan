@@ -132,16 +132,74 @@ to `data/history/`. The cheap path: `capability_text` is 308 MiB of the 636 MiB 
 re-fetchable cache — `db_store` already pushes more than one object, so splitting it out puts both
 halves under the ceiling without a new dependency or a slow re-fetch.
 
-## The demo, when it comes to recording
+## The demo — a 3:30 script, read it while you record
 
-Four beats, ~30s each, one narrative:
+Rules that auto-reject: under 720p, over 4 minutes, sped up, AI voiceover, phone-recorded. Your
+voice, a real terminal, a real browser. Local preview is fine and faster than production:
+`python3 pipeline/serve.py` then http://localhost:4173.
 
-1. **The claim.** tashan measures which capabilities get used. Open `tashan doctor` on a real
-   machine — 12 servers, 11 plugins, 241 skills, 113 maintained by nobody but the user.
-2. **The instrument.** The board: a score, its four inputs, and the security audit beside it. Say
-   the firewall out loud — nobody can pay to move a rank, and it is a test, not a promise.
-3. **The window's work.** The subgraph: 1,079 x402 receivers on Base, USDC receipts joined to the
-   catalog by exact host. The Bazaar lists 14,536 services and publishes evidence about none of them.
-4. **The honesty.** An unmeasured capability is published as unmeasured. Show a `null`, not a zero.
+**0:00–0:25 — the problem, on your own machine.**
 
-The line to land: tashan measures which capabilities get *used*; nothing measures which get *paid*.
+```sh
+npx tashan-cli doctor
+```
+
+Say: "Twelve MCP servers, eleven plugins, two hundred and forty-one skills. A hundred and thirteen
+of those skills are owned by no plugin — nothing will ever update them but me. I did not know that
+before I wrote this, and neither does anyone else running an agent."
+
+**0:25–1:10 — what tashan is.** Open http://localhost:4173. Point at the hero: 11,914 measured of
+55,268 tracked. Click any capability. Say: "Every number has its inputs on the page — upkeep,
+freshness, adoption, how much of the evidence we actually have. And an advisory scan against the
+version you would install today." Then the sentence that matters: "Nobody can pay to move a rank.
+That is not a promise on an about page, it is `tests/test_firewall.py` — it reads the scorer's
+source and fails if it touches a column that is not public signal."
+
+**1:10–2:30 — the window's work, and the point of the whole thing.** Click *Who gets paid*.
+
+Say: "Everything I just showed you is a proxy. Downloads, stars, publish cadence — all of them can
+exist without one person finding the thing useful. This cannot." Then read the four figures off the
+page: 997 of 1,079 listed x402 services have been paid at least once, 82 never have, $247,247
+settled across 10.4 million payments — "and the median service has earned fifty-one cents in its
+entire life. Two thirds of all the money is one receiver."
+
+"A directory lists all of them and publishes evidence about none of them. This is the first index of
+which ones anybody actually paid."
+
+Scroll to the table. Land on blockrun: $166,659 across 8.7 million calls, tashan score 71, 1.3k
+downloads a week. Say: "Adoption and payment are different questions, and this is what it looks like
+when they disagree. Payment is deliberately not an input to the score — 'someone pays for this' and
+'this is well made' are different claims."
+
+**2:30–3:10 — how it is read, which is the part to be proud of.** Scroll to *Re-run it yourself*.
+
+Say: "These receipts are not ours. They are a subgraph on The Graph Network, and we read it through
+The Graph's own Subgraph MCP server — the same tool call any agent can make. The endpoint, the tool
+and the query are printed on the page, so you can re-run it and check me." Then show an agent doing
+exactly that:
+
+```sh
+# with the MCP server configured, ask an agent: "has anyone actually paid for blockrun?"
+```
+
+Or show the raw call if a live agent is risky on camera:
+
+```sh
+printf '%s\n%s\n%s\n' \
+  '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18"}}' \
+  '{"jsonrpc":"2.0","method":"notifications/initialized"}' \
+  '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"paid_demand","arguments":{"name":"blockrun"}}}' \
+  | TASHAN_SITE=http://127.0.0.1:4173 node cli/mcp.mjs
+```
+
+**3:10–3:30 — the close.** Say: "tashan predates this hackathon; the README says exactly which
+commits are new. What is new is that the instrument now measures money, and that an agent can ask
+it. Thirteen commits, the suite green on every one."
+
+### Do not say
+- Do not say "$247k settled" without the median in the same breath. A sum is the one statistic a
+  concentrated economy always passes, and overselling it is the exact thing this product exists to
+  point at.
+- Do not call an unpaid capability worse. Almost every MCP server is free by design.
+- Do not claim we index the whole x402 economy. It is Base, it is x402, and it is the addresses we
+  could resolve from public listings.

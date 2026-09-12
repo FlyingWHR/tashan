@@ -283,6 +283,7 @@ def main():
     demand = json.load(open(DEMAND, encoding="utf-8"))
     export = json.load(open(EXPORT, encoding="utf-8")) if os.path.exists(EXPORT) else {}
     today = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")
+    rows = rows_from(demand, export)
     lds, body, lede = render(demand, export, today)
 
     import gen_hubs
@@ -296,7 +297,22 @@ def main():
     doc += body + chrome.footer_html()
     doc += '<script src="/js/site.js?v=' + str(assets.V) + '" defer></script>\n</body>\n</html>\n'
     open(OUT, "w", encoding="utf-8").write(doc)
-    n = len(rows_from(demand, export))
+    # ONE NUMBER, BOTH SURFACES. paid_demand.py counts every capability with an attributable
+    # receipt (37); this page can only show the ones that have a dossier to link to (31), because
+    # the export drops what a host cannot launch. demand.json is a SITE artifact — it is what the
+    # MCP server's paid_demand tool reads — so it must agree with the page beside it, or an agent
+    # quotes 37 while the page a reader opens says 31. That is the cross-surface disagreement this
+    # repo already has a test for, arriving through a new door. The raw count stays in
+    # data/paid_demand.json, which is the pipeline's own record and not published.
+    n = len(rows)
+    if demand.get("paid_capabilities") != n:
+        demand["paid_capabilities"] = n
+        demand["paid_capabilities_note"] = ("capabilities with an attributable receipt AND a "
+                                            "published dossier; see data/paid_demand.json for the "
+                                            "pre-export count")
+        with open(DEMAND, "w", encoding="utf-8") as f:
+            json.dump(demand, f)
+            f.write("\n")
     print(f"paid: {eco.get('receivers_paid', 0)} paid receivers, {n} attributable capabilities "
           f"-> web/paid.html")
     return 0
