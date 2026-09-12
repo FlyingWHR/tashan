@@ -166,8 +166,9 @@ Full detail in `docs/AI-USAGE.md`, which is measured rather than asserted:
 
 ## Judging notes
 
-- **Version control:** 399 commits since 23 July, no squashed history. The in-window work is
-  thirteen commits, each with its reasoning in the message.
+- **Version control:** ~400 commits since 23 July, no squashed history. The in-window work is
+  listed by `git log --since='2026-09-12T12:00:00+00:00' --oneline`, each commit carrying its
+  reasoning — including what was ruled out and what is still open.
 - **The test suite is the gate.** `bash tests/run.sh` — 34 test files, green, enforced by a
   pre-commit hook. It includes a cross-surface consistency check that renders one capability's facts
   on all eight surfaces and fails if any two disagree; that check is what caught the bug which had

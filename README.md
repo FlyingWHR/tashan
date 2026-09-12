@@ -19,8 +19,9 @@ the static site and its generated SEO/GEO tier, the CLI and MCP server (`tashan-
 published 2026-07-31, registry entry `sh.tashan/tashan`), and 34 test files. None of it counts as
 hackathon work and none of it is presented as such.
 
-**Built in the window (12–13 September 2026).** Thirteen commits. Eleven are listed here; the
-other two are this README split and the AI-usage disclosure, which the rules require:
+**Built in the window (12–13 September 2026).** Every commit in the window is listed by
+`git log --since='2026-09-12T12:00:00+00:00' --oneline` — a count typed here would go stale by the
+next commit, which is the defect this project exists to point at. The substantive ones:
 
 | commit | what landed |
 |---|---|
@@ -35,6 +36,9 @@ other two are this README split and the AI-usage disclosure, which the rules req
 | *(13 Sep)* | **`/paid.html` — the money signal, on the site.** Settled x402 payments on Base, read through The Graph's own Subgraph MCP server, joined to the catalog. A page, a row on every dossier, a `paid_demand` tool on our MCP server. |
 | *(13 Sep)* | A ratchet that punished measuring more: the identity gate compared an absolute count, tripled overnight when 18 days of enrichment backlog cleared, and withheld the site. It ratchets the rate now. |
 | *(13 Sep)* | UX: the stat grid had **no CSS at all** (so `/stats.html` shipped its headline numbers as a default `<dl>`), and the nav wrapped and collided with the wordmark on every phone. |
+| *(13 Sep)* | The money signal added to the cross-surface consistency suite — ten assertions across the export, the dossier, the page and the agent JSON, because it had already drifted twice in one night. |
+| *(13 Sep)* | `/v0.1/servers` carries settled receipts, so the agent-readable registry publishes the newest measurement too. |
+| *(13 Sep)* | We are in our own paid table — last, $0.00, never paid. The page says so, rendered from that row. |
 
 **The headline feature: which AI services actually get paid.** Every other number here is a proxy
 for demand measured from outside — downloads, publish cadence, stars, appearances in public configs
