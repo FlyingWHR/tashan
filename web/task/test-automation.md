@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [API Test Suite Builder](https://tashan.sh/capability/skill-alirezarezvani-api-test-suite-builder.html) | 44 | 2 repos | active |
 | 40 | [Skill Tester](https://tashan.sh/capability/skill-alirezarezvani-skill-tester.html) | 44 | 2 repos | active |
 
-Showing the top 40 of 99. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
+Showing the top 40 of 100. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
 
 ## What these numbers are not
 

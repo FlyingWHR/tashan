@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Git](https://tashan.sh/capability/pkg-cyanheads-git-mcp-server.html) | 78 | 3k/wk | active |
+| 1 | [Git](https://tashan.sh/capability/pkg-cyanheads-git-mcp-server.html) | 80 | 7k/wk | active |
 | 2 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 78 | 66k/wk | active |
 | 3 | [Gk CLI](https://tashan.sh/capability/pkg-gitkraken-gk.html) | 64 | 5k/wk | active |
 | 4 | [Nomoreide](https://tashan.sh/capability/pkg-nomoreide.html) | 62 | 443/wk | active |
@@ -27,7 +27,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Komnet](https://tashan.sh/capability/pkg-komnet.html) | 65 | 1k/wk | active |
 | 15 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 54 | 171/wk | active |
 | 16 | [Quilt](https://tashan.sh/capability/pkg-quilt-dev-cli.html) | 53 | 119/wk | active |
-| 17 | [Atlassian Bitbucket](https://tashan.sh/capability/pkg-aashari-mcp-server-atlassian-bitbucket.html) | 45 | 3k/wk | abandoned |
+| 17 | [Atlassian Bitbucket](https://tashan.sh/capability/pkg-aashari-mcp-server-atlassian-bitbucket.html) | 45 | 4k/wk | abandoned |
 | 18 | [Uvcs](https://tashan.sh/capability/pkg-proanima-uvcs-mcp.html) | 44 | 65/wk | active |
 
 ## What these numbers are not

@@ -14,8 +14,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 62 | 519/wk | active |
 | 2 | [Drawio · lgazo](https://tashan.sh/capability/pkg-drawio-mcp-server.html) | 55 | 717/wk | active |
 | 3 | [Carbone Skill](https://tashan.sh/capability/plugin-carboneio-carbone-skill-carbone-skill.html) | 44 | 4 ★ | active |
-| 4 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 67 | 1k/wk | active |
-| 5 | [Gogcli MCP Docs](https://tashan.sh/capability/pkg-gogcli-mcp-docs.html) | 63 | 383/wk | active |
+| 4 | [Gogcli MCP Docs](https://tashan.sh/capability/pkg-gogcli-mcp-docs.html) | 63 | 383/wk | active |
+| 5 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 63 | 248/wk | active |
 | 6 | [Contract And Proposal Writer](https://tashan.sh/capability/skill-alirezarezvani-contract-and-proposal-writer.html) | 44 | 2 repos | active |
 | 7 | [Board Deck Builder](https://tashan.sh/capability/skill-alirezarezvani-board-deck-builder.html) | 44 | 2 repos | active |
 | 8 | [Md Document](https://tashan.sh/capability/skill-alirezarezvani-md-document.html) | 44 | 2 repos | active |

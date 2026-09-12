@@ -10,7 +10,6 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Content marketing** — [Save To Spotify](https://tashan.sh/capability/plugin-spotify-save-to-spotify-save-to-spotify.html) · tashan score 70
-- **Document production** — [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) · tashan score 67
 - **Technical documentation** — [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) · tashan score 99
 - **Copy editing** — [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) · tashan score 72
 - **Copywriting** — [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) · tashan score 65
@@ -54,13 +53,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Bleu](https://tashan.sh/capability/plugin-nirvaan05-bleu-plugin-bleu.html) | 43 | 3 ★ | active |
 | 34 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 43 | 40 ★ | active |
 | 35 | [Integration Guide](https://tashan.sh/capability/pkg-tosspayments-integration-guide-mcp.html) | 71 | 887/wk | active |
-| 36 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 67 | 1k/wk | active |
-| 37 | [Gogcli MCP Docs](https://tashan.sh/capability/pkg-gogcli-mcp-docs.html) | 63 | 383/wk | active |
+| 36 | [Gogcli MCP Docs](https://tashan.sh/capability/pkg-gogcli-mcp-docs.html) | 63 | 383/wk | active |
+| 37 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 63 | 248/wk | active |
 | 38 | [PDF · anthropics](https://tashan.sh/capability/skill-anthropics-pdf.html) | 50 | 4 repos | active |
 | 39 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 50 | 4 repos | active |
 | 40 | [Marketing Ideas](https://tashan.sh/capability/skill-alirezarezvani-marketing-ideas.html) | 49 | 4 repos | active |
 
-Showing the top 40 of 192. The full ranked shelf is at https://tashan.sh/role/writer.html.
+Showing the top 40 of 193. The full ranked shelf is at https://tashan.sh/role/writer.html.
 
 ## What these numbers are not
 

@@ -13,32 +13,32 @@ Ranked by the tashan score
 |---|---|---|---|---|
 | 1 | [Sequential Thinking](https://tashan.sh/capability/pkg-modelcontextprotocol-server-sequential-thinking.html) | 94 | 109k/wk | active |
 | 2 | [Eve](https://tashan.sh/capability/pkg-eve.html) | 84 | 702k/wk | active |
-| 3 | [Cline](https://tashan.sh/capability/pkg-cline.html) | 82 | 142k/wk | active |
+| 3 | [Cline](https://tashan.sh/capability/pkg-cline.html) | 83 | 44k/wk | active |
 | 4 | [Openviking Memory](https://tashan.sh/capability/plugin-volcengine-openviking-openviking-memory.html) | 81 | 34k ★ | active |
-| 5 | [Z AI](https://tashan.sh/capability/pkg-z-ai-mcp-server.html) | 79 | 13k/wk | active |
-| 6 | [Neurolink](https://tashan.sh/capability/pkg-juspay-neurolink.html) | 79 | 7k/wk | active |
-| 7 | [Gitnexus](https://tashan.sh/capability/plugin-abhigyanpatwari-gitnexus-gitnexus.html) | 78 | 47k ★ | active |
-| 8 | [Ruflo](https://tashan.sh/capability/pkg-ruflo.html) | 78 | 47k/wk | active |
-| 9 | [Clawdi](https://tashan.sh/capability/pkg-clawdi.html) | 78 | 7k/wk | active |
-| 10 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 77 | 11k ★ | active |
-| 11 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 77 | 17k ★ | active |
-| 12 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 77 | 89k ★ | active |
-| 13 | [Todos](https://tashan.sh/capability/pkg-hasna-todos.html) | 77 | 50k/wk | active |
-| 14 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow-cli.html) | 77 | 36k/wk | active |
-| 15 | [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) | 77 | 13k/wk | active |
+| 5 | [Neurolink](https://tashan.sh/capability/pkg-juspay-neurolink.html) | 79 | 6k/wk | active |
+| 6 | [Gitnexus](https://tashan.sh/capability/plugin-abhigyanpatwari-gitnexus-gitnexus.html) | 78 | 47k ★ | active |
+| 7 | [Clawdi](https://tashan.sh/capability/pkg-clawdi.html) | 78 | 5k/wk | active |
+| 8 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 77 | 11k ★ | active |
+| 9 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 77 | 17k ★ | active |
+| 10 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 77 | 89k ★ | active |
+| 11 | [Todos](https://tashan.sh/capability/pkg-hasna-todos.html) | 77 | 50k/wk | active |
+| 12 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow-cli.html) | 77 | 36k/wk | active |
+| 13 | [Mementos](https://tashan.sh/capability/pkg-hasna-mementos.html) | 77 | 34k/wk | active |
+| 14 | [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) | 77 | 13k/wk | active |
+| 15 | [Z AI](https://tashan.sh/capability/pkg-z-ai-mcp-server.html) | 77 | 8k/wk | active |
 | 16 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 76 | 6k ★ | active |
 | 17 | [Diffusers](https://tashan.sh/capability/plugin-huggingface-diffusers-diffusers.html) | 76 | 34k ★ | active |
 | 18 | [Copilotkit](https://tashan.sh/capability/plugin-copilotkit-copilotkit-copilotkit.html) | 76 | 37k ★ | active |
-| 19 | [Agents CLI](https://tashan.sh/capability/pkg-phnx-labs-agents-cli.html) | 76 | 5k/wk | active |
-| 20 | [Agentmemory](https://tashan.sh/capability/plugin-rohitg00-agentmemory-agentmemory.html) | 75 | 28k ★ | active |
-| 21 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 75 | 96k/wk | active |
+| 19 | [Ruflo](https://tashan.sh/capability/pkg-ruflo.html) | 76 | 29k/wk | active |
+| 20 | [Agents CLI](https://tashan.sh/capability/pkg-phnx-labs-agents-cli.html) | 76 | 5k/wk | active |
+| 21 | [Agentmemory](https://tashan.sh/capability/plugin-rohitg00-agentmemory-agentmemory.html) | 75 | 28k ★ | active |
 | 22 | [Claude Flow · ruvnet](https://tashan.sh/capability/pkg-claude-flow.html) | 75 | 17k/wk | active |
-| 23 | [Mementos](https://tashan.sh/capability/pkg-hasna-mementos.html) | 75 | 15k/wk | active |
-| 24 | [Octo](https://tashan.sh/capability/plugin-nyldn-claude-octopus-octo.html) | 74 | 4k ★ | active |
-| 25 | [DeepSeek](https://tashan.sh/capability/pkg-deepseek-mcp-server.html) | 74 | 970/wk | active |
-| 26 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 74 | 9k ★ | active |
+| 23 | [Octo](https://tashan.sh/capability/plugin-nyldn-claude-octopus-octo.html) | 74 | 4k ★ | active |
+| 24 | [DeepSeek](https://tashan.sh/capability/pkg-deepseek-mcp-server.html) | 74 | 970/wk | active |
+| 25 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 74 | 9k ★ | active |
+| 26 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 74 | 79k/wk | active |
 | 27 | [Agentic Flow](https://tashan.sh/capability/pkg-agentic-flow.html) | 74 | 67k/wk | active |
-| 28 | [Instar](https://tashan.sh/capability/pkg-instar.html) | 74 | 16k/wk | active |
+| 28 | [Instar](https://tashan.sh/capability/pkg-instar.html) | 74 | 11k/wk | active |
 | 29 | [Grix Connector](https://tashan.sh/capability/pkg-grix-connector.html) | 73 | 7k/wk | active |
 | 30 | [Iclavue](https://tashan.sh/capability/pkg-iclavue.html) | 73 | 6k/wk | active |
 | 31 | [Daedalus CLI](https://tashan.sh/capability/pkg-daedalus-cli.html) | 73 | 5k/wk | active |
@@ -49,10 +49,10 @@ Ranked by the tashan score
 | 36 | [Takt](https://tashan.sh/capability/pkg-takt.html) | 72 | 5k/wk | active |
 | 37 | [Xopc](https://tashan.sh/capability/pkg-xopcai-xopc.html) | 72 | 5k/wk | active |
 | 38 | [Code Graph](https://tashan.sh/capability/pkg-sdsrs-code-graph.html) | 72 | 4k/wk | active |
-| 39 | [Photoshop](https://tashan.sh/capability/pkg-alisaitteke-photoshop-mcp.html) | 72 | 4k/wk | active |
-| 40 | [Cq](https://tashan.sh/capability/plugin-mozilla-ai-cq-cq.html) | 71 | 1k ★ | active |
+| 39 | [Cq](https://tashan.sh/capability/plugin-mozilla-ai-cq-cq.html) | 71 | 1k ★ | active |
+| 40 | [Acontext](https://tashan.sh/capability/plugin-memodb-io-acontext-acontext.html) | 71 | 4k ★ | active |
 
-Showing the top 40 of 662. The full ranked shelf is at https://tashan.sh/category/ai.html.
+Showing the top 40 of 663. The full ranked shelf is at https://tashan.sh/category/ai.html.
 
 ## What these numbers are not
 

@@ -58,7 +58,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 47 | 1 ★ | active |
 | 40 | [Zilliz](https://tashan.sh/capability/plugin-zilliztech-zilliz-plugin-zilliz.html) | 45 | 3 ★ | active |
 
-Showing the top 40 of 213. The full ranked shelf is at https://tashan.sh/role/devops.html.
+Showing the top 40 of 215. The full ranked shelf is at https://tashan.sh/role/devops.html.
 
 ## What these numbers are not
 

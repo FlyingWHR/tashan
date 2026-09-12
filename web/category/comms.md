@@ -11,9 +11,9 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Salesforce](https://tashan.sh/capability/pkg-salesforce-mcp.html) | 76 | 28k/wk | active |
-| 2 | [Meegle](https://tashan.sh/capability/pkg-lark-project-meegle.html) | 76 | 4k/wk | active |
-| 3 | [Conversations](https://tashan.sh/capability/pkg-hasna-conversations.html) | 75 | 20k/wk | active |
+| 1 | [Conversations](https://tashan.sh/capability/pkg-hasna-conversations.html) | 77 | 36k/wk | active |
+| 2 | [Salesforce](https://tashan.sh/capability/pkg-salesforce-mcp.html) | 76 | 28k/wk | active |
+| 3 | [Meegle](https://tashan.sh/capability/pkg-lark-project-meegle.html) | 76 | 4k/wk | active |
 | 4 | [Skypilot](https://tashan.sh/capability/plugin-skypilot-org-skypilot-skypilot.html) | 74 | 11k ★ | active |
 | 5 | [Claude Funnel](https://tashan.sh/capability/pkg-interactive-inc-claude-funnel.html) | 74 | 2k/wk | active |
 | 6 | [CLI Microsoft365](https://tashan.sh/capability/pkg-pnp-cli-microsoft365-mcp-server.html) | 73 | 1k/wk | active |
@@ -27,13 +27,13 @@ Ranked by the tashan score
 | 14 | [Dataverse](https://tashan.sh/capability/pkg-microsoft-dataverse.html) | 70 | 1k/wk | active |
 | 15 | [Layers Marketing](https://tashan.sh/capability/pkg-layers-cli.html) | 70 | 459/wk | active |
 | 16 | [Claude Ads](https://tashan.sh/capability/plugin-agricidaniel-claude-ads-claude-ads.html) | 69 | 8k ★ | active |
-| 17 | [Pwa Kit](https://tashan.sh/capability/pkg-salesforce-pwa-kit-mcp.html) | 69 | 1k/wk | active |
-| 18 | [Salesforce · snokam](https://tashan.sh/capability/pkg-snokam-mcp-salesforce.html) | 68 | 2k/wk | active |
-| 19 | [Modelcontextprotocol](https://tashan.sh/capability/pkg-atomicmail-mcp-modelcontextprotocol.html) | 68 | 358/wk | active |
-| 20 | [Hermoso](https://tashan.sh/capability/pkg-hermoso.html) | 67 | 1k/wk | active |
-| 21 | [Outlook](https://tashan.sh/capability/pkg-mcp-z-mcp-outlook.html) | 67 | 1k/wk | active |
-| 22 | [Marketing Studio](https://tashan.sh/capability/plugin-ucsandman-marketing-studio-marketing-studio.html) | 66 | 227 ★ | active |
-| 23 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 66 | 2k/wk | active |
+| 17 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 69 | 1k/wk | active |
+| 18 | [Pwa Kit](https://tashan.sh/capability/pkg-salesforce-pwa-kit-mcp.html) | 69 | 1k/wk | active |
+| 19 | [Salesforce · snokam](https://tashan.sh/capability/pkg-snokam-mcp-salesforce.html) | 68 | 2k/wk | active |
+| 20 | [Modelcontextprotocol](https://tashan.sh/capability/pkg-atomicmail-mcp-modelcontextprotocol.html) | 68 | 358/wk | active |
+| 21 | [Hermoso](https://tashan.sh/capability/pkg-hermoso.html) | 67 | 1k/wk | active |
+| 22 | [Outlook](https://tashan.sh/capability/pkg-mcp-z-mcp-outlook.html) | 67 | 1k/wk | active |
+| 23 | [Marketing Studio](https://tashan.sh/capability/plugin-ucsandman-marketing-studio-marketing-studio.html) | 66 | 227 ★ | active |
 | 24 | [Slack](https://tashan.sh/capability/pkg-jtalk22-slack-mcp.html) | 66 | 1k/wk | active |
 | 25 | [Apparelhub](https://tashan.sh/capability/pkg-apparelhub-mcp-server.html) | 66 | 879/wk | active |
 | 26 | [Pipeshub AI](https://tashan.sh/capability/pkg-pipeshub-ai-mcp.html) | 66 | 754/wk | active |
@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Mailgun](https://tashan.sh/capability/pkg-mailgun-mcp-server.html) | 64 | 585/wk | active |
 | 40 | [Mailwarden](https://tashan.sh/capability/pkg-mailwarden.html) | 63 | 863/wk | active |
 
-Showing the top 40 of 418. The full ranked shelf is at https://tashan.sh/category/comms.html.
+Showing the top 40 of 417. The full ranked shelf is at https://tashan.sh/category/comms.html.
 
 ## What these numbers are not
 

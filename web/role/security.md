@@ -58,7 +58,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Red Team](https://tashan.sh/capability/skill-alirezarezvani-red-team.html) | 49 | 4 repos | active |
 | 40 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 47 | 1 ★ | active |
 
-Showing the top 40 of 177. The full ranked shelf is at https://tashan.sh/role/security.html.
+Showing the top 40 of 178. The full ranked shelf is at https://tashan.sh/role/security.html.
 
 ## What these numbers are not
 

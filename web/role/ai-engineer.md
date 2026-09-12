@@ -20,7 +20,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 99 | 1.1m/wk | active |
 | 2 | [Context Mode](https://tashan.sh/capability/plugin-mksglu-context-mode-context-mode.html) | 78 | 19k ★ | active |
-| 3 | [Agent Afk](https://tashan.sh/capability/pkg-agent-afk.html) | 74 | 9k/wk | active |
+| 3 | [Agent Afk](https://tashan.sh/capability/pkg-agent-afk.html) | 74 | 10k/wk | active |
 | 4 | [Genshijin](https://tashan.sh/capability/plugin-interfacex-co-jp-genshijin-genshijin.html) | 66 | 287 ★ | active |
 | 5 | [Reprompter](https://tashan.sh/capability/plugin-aytuncyildizli-reprompter-reprompter.html) | 62 | 111 ★ | active |
 | 6 | [Adcp Client](https://tashan.sh/capability/plugin-adcontextprotocol-adcp-client-adcp-client.html) | 57 | 18 ★ | active |
@@ -37,7 +37,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 45 | 12 ★ | active |
 | 18 | [Praxis · xD4O](https://tashan.sh/capability/plugin-xd4o-praxis-praxis.html) | 44 | 27 ★ | active |
 | 19 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 44 | 28 ★ | active |
-| 20 | [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) | 83 | 846k/wk | active |
+| 20 | [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) | 83 | 708k/wk | active |
 | 21 | [Use · mcp-use](https://tashan.sh/capability/pkg-mcp-use.html) | 82 | 19k/wk | active |
 | 22 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 78 | 62k ★ | active |
 | 23 | [Caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) | 78 | 93k ★ | active |
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 61 | 37 ★ | active |
 | 40 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 60 | 452 ★ | active |
 
-Showing the top 40 of 590. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
+Showing the top 40 of 591. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
 
 ## What these numbers are not
 

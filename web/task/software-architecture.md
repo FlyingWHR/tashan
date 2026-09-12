@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Weavatrix Online](https://tashan.sh/capability/pkg-weavatrix-online.html) | 53 | 374/wk | active |
 | 40 | [Forgecraft](https://tashan.sh/capability/pkg-forgecraft-mcp.html) | 45 | 110/wk | active |
 
-Showing the top 40 of 49. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
+Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
 
 ## What these numbers are not
 

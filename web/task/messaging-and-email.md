@@ -18,8 +18,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Google Workspace CLI](https://tashan.sh/capability/skill-alirezarezvani-google-workspace-cli.html) | 44 | 2 repos | active |
 | 6 | [Ms365 Tenant Manager](https://tashan.sh/capability/skill-alirezarezvani-ms365-tenant-manager.html) | 44 | 2 repos | active |
 | 7 | [Inbox Triage](https://tashan.sh/capability/skill-alirezarezvani-inbox-triage.html) | 44 | 2 repos | active |
-| 8 | [Lark](https://tashan.sh/capability/pkg-larksuiteoapi-lark-mcp.html) | 43 | 5k/wk | abandoned |
-| 9 | [Slack · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-slack.html) | not scored | 99k/wk | abandoned |
+| 8 | [Lark](https://tashan.sh/capability/pkg-larksuiteoapi-lark-mcp.html) | 44 | 7k/wk | abandoned |
+| 9 | [Slack · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-slack.html) | not scored | 121k/wk | abandoned |
 | 10 | [Apple Mail](https://tashan.sh/capability/pkg-apple-mail-mcp.html) | 71 | 3k/wk | active |
 | 11 | [Slack](https://tashan.sh/capability/pkg-jtalk22-slack-mcp.html) | 66 | 1k/wk | active |
 | 12 | [Mailwarden](https://tashan.sh/capability/pkg-mailwarden.html) | 63 | 863/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Dragapp](https://tashan.sh/capability/pkg-dragapp-mcp-server.html) | 45 | 128/wk | active |
 | 40 | [Multimail](https://tashan.sh/capability/pkg-multimail-mcp-server.html) | 45 | 84/wk | active |
 
-Showing the top 40 of 118. The full ranked shelf is at https://tashan.sh/task/messaging-and-email.html.
+Showing the top 40 of 119. The full ranked shelf is at https://tashan.sh/task/messaging-and-email.html.
 
 ## What these numbers are not
 

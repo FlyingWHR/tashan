@@ -44,15 +44,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Doccupine](https://tashan.sh/capability/pkg-doccupine.html) | 61 | 323/wk | active |
 | 32 | [Wso2 Docs](https://tashan.sh/capability/pkg-wso2-docs-mcp-server.html) | 56 | 362/wk | active |
 | 33 | [Context7 · upstash](https://tashan.sh/capability/plugin-upstash-context7-context7.html) | 77 | 60k ★ | active |
-| 34 | [Sourcey](https://tashan.sh/capability/pkg-sourcey.html) | 61 | 2k/wk | active |
+| 34 | [Sourcey](https://tashan.sh/capability/pkg-sourcey.html) | 60 | 1k/wk | active |
 | 35 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 60 | 371/wk | active |
-| 36 | [Mantine](https://tashan.sh/capability/pkg-mantine-mcp-server.html) | 71 | 3k/wk | active |
-| 37 | [Matra](https://tashan.sh/capability/pkg-matrajs-mcp.html) | 62 | 355/wk | active |
-| 38 | [IMBA Agent Docs](https://tashan.sh/capability/pkg-imba-wallet-agent-mcp-docs.html) | 59 | 457/wk | active |
-| 39 | [Ignis Docs](https://tashan.sh/capability/pkg-venizia-ignis-docs.html) | 56 | 140/wk | active |
-| 40 | [Google Tools](https://tashan.sh/capability/pkg-google-tools-mcp.html) | 53 | 165/wk | active |
+| 36 | [Mantine](https://tashan.sh/capability/pkg-mantine-mcp-server.html) | 70 | 2k/wk | active |
+| 37 | [Adobe Commerce Docs](https://tashan.sh/capability/pkg-adobe-commerce-docs-mcp.html) | 65 | 758/wk | active |
+| 38 | [Matra](https://tashan.sh/capability/pkg-matrajs-mcp.html) | 62 | 355/wk | active |
+| 39 | [IMBA Agent Docs](https://tashan.sh/capability/pkg-imba-wallet-agent-mcp-docs.html) | 59 | 457/wk | active |
+| 40 | [Ignis Docs](https://tashan.sh/capability/pkg-venizia-ignis-docs.html) | 56 | 140/wk | active |
 
-Showing the top 40 of 42. The full ranked shelf is at https://tashan.sh/task/technical-documentation.html.
+Showing the top 40 of 43. The full ranked shelf is at https://tashan.sh/task/technical-documentation.html.
 
 ## What these numbers are not
 

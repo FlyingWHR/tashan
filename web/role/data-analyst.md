@@ -23,7 +23,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Spotify Ads API](https://tashan.sh/capability/plugin-spotify-ads-claude-plugin-spotify-ads-api.html) | 58 | 14 ★ | active |
 | 5 | [Statsclaw](https://tashan.sh/capability/plugin-statsclaw-statsclaw-statsclaw.html) | 53 | 87 ★ | active |
 | 6 | [Supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) | 98 | 112k/wk | active |
-| 7 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 80 | 16k/wk | active |
+| 7 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 80 | 12k/wk | active |
 | 8 | [Powerbi Modeling](https://tashan.sh/capability/pkg-microsoft-powerbi-modeling-mcp.html) | 73 | 5k/wk | active |
 | 9 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 68 | 558 ★ | active |
 | 10 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 64 | 64 ★ | active |

@@ -40,8 +40,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Research Finance](https://tashan.sh/capability/skill-alirezarezvani-research-finance.html) | 44 | 2 repos | active |
 | 28 | [Followrabbit](https://tashan.sh/capability/plugin-followrabbit-ai-awesome-rabbit-followrabbit.html) | 44 | 2 ★ | active |
 | 29 | [Savvly](https://tashan.sh/capability/pkg-savvly-mcp-server.html) | 71 | 585/wk | active |
-| 30 | [Actual](https://tashan.sh/capability/pkg-actual-mcp-server.html) | 65 | 777/wk | active |
-| 31 | [Lunchmoney](https://tashan.sh/capability/pkg-akutishevsky-lunchmoney-mcp.html) | 64 | 2k/wk | active |
+| 30 | [Lunchmoney](https://tashan.sh/capability/pkg-akutishevsky-lunchmoney-mcp.html) | 68 | 5k/wk | active |
+| 31 | [Actual](https://tashan.sh/capability/pkg-actual-mcp-server.html) | 65 | 777/wk | active |
 | 32 | [Yahoo Finance](https://tashan.sh/capability/pkg-yahoo-finance-mcp-server.html) | 54 | 262/wk | active |
 | 33 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 54 | 302/wk | active |
 | 34 | [Zola](https://tashan.sh/capability/pkg-zola-mcp.html) | 54 | 142/wk | active |

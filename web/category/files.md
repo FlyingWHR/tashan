@@ -17,10 +17,10 @@ Ranked by the tashan score
 | 4 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 83 | 39k/wk | active |
 | 5 | [Mempalace](https://tashan.sh/capability/plugin-mempalace-mempalace-mempalace.html) | 79 | 58k ★ | active |
 | 6 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 78 | 62k ★ | active |
-| 7 | [Discourse](https://tashan.sh/capability/pkg-discourse-mcp.html) | 76 | 3k/wk | active |
-| 8 | [Brains](https://tashan.sh/capability/pkg-brains-mcp.html) | 72 | 4k/wk | active |
-| 9 | [Reactor](https://tashan.sh/capability/pkg-powerhousedao-reactor-mcp.html) | 72 | 4k/wk | active |
-| 10 | [Respira WordPress](https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html) | 70 | 2k/wk | active |
+| 7 | [Reactor](https://tashan.sh/capability/pkg-powerhousedao-reactor-mcp.html) | 77 | 3k/wk | active |
+| 8 | [Discourse](https://tashan.sh/capability/pkg-discourse-mcp.html) | 76 | 3k/wk | active |
+| 9 | [Respira WordPress](https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html) | 70 | 2k/wk | active |
+| 10 | [Brains](https://tashan.sh/capability/pkg-brains-mcp.html) | 70 | 2k/wk | active |
 | 11 | [Remember](https://tashan.sh/capability/plugin-digital-process-tools-claude-remember-remember.html) | 68 | 143 ★ | active |
 | 12 | [Memory · cerefox](https://tashan.sh/capability/pkg-cerefox-memory.html) | 66 | 1k/wk | active |
 | 13 | [Google Drive · mcp-z](https://tashan.sh/capability/pkg-mcp-z-mcp-drive.html) | 65 | 892/wk | active |

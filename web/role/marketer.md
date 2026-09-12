@@ -37,7 +37,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 65 | 1k ★ | active |
 | 17 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 65 | 558 ★ | active |
 | 18 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 63 | 137 ★ | active |
-| 19 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 62 | 2k/wk | active |
+| 19 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 63 | 2k/wk | active |
 | 20 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
 | 21 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 60 | 395/wk | active |
 | 22 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 59 | 256/wk | active |

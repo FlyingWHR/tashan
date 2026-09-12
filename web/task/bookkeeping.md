@@ -28,7 +28,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Paysafe](https://tashan.sh/capability/pkg-paysafe-x402.html) | 46 | 63/wk | active |
 | 16 | [Furlpay CLI](https://tashan.sh/capability/pkg-furlpay-cli.html) | 44 | 80/wk | active |
 | 17 | [Visa](https://tashan.sh/capability/pkg-visa-cli.html) | 73 | 5k/wk | active |
-| 18 | [Agentcash](https://tashan.sh/capability/pkg-agentcash.html) | 63 | 1k/wk | active |
+| 18 | [Agentcash](https://tashan.sh/capability/pkg-agentcash.html) | 64 | 2k/wk | active |
 | 19 | [Beeswax](https://tashan.sh/capability/pkg-beeswax-mcp.html) | 61 | 314/wk | active |
 | 20 | [Easy Labs](https://tashan.sh/capability/pkg-easylabs-mcp-server.html) | 59 | 642/wk | active |
 | 21 | [Billing Tools](https://tashan.sh/capability/pkg-arnaudjnn-billing-tools.html) | 58 | 224/wk | active |

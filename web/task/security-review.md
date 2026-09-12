@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Senior Secops](https://tashan.sh/capability/skill-alirezarezvani-senior-secops.html) | 44 | 2 repos | active |
 | 40 | [Senior Security](https://tashan.sh/capability/skill-alirezarezvani-senior-security.html) | 44 | 2 repos | active |
 
-Showing the top 40 of 100. The full ranked shelf is at https://tashan.sh/task/security-review.html.
+Showing the top 40 of 101. The full ranked shelf is at https://tashan.sh/task/security-review.html.
 
 ## What these numbers are not
 

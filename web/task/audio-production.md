@@ -24,7 +24,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Corent](https://tashan.sh/capability/pkg-corent-mcp.html) | 47 | 57/wk | active |
 | 12 | [Agentphone](https://tashan.sh/capability/pkg-agentphone-mcp.html) | 46 | 144/wk | active |
 | 13 | [Tracktag](https://tashan.sh/capability/pkg-tracktag-mcp.html) | 44 | 73/wk | active |
-| 14 | [Neurolink](https://tashan.sh/capability/pkg-juspay-neurolink.html) | 79 | 7k/wk | active |
+| 14 | [Neurolink](https://tashan.sh/capability/pkg-juspay-neurolink.html) | 79 | 6k/wk | active |
 | 15 | [Kolbo](https://tashan.sh/capability/pkg-kolbo-mcp.html) | 72 | 4k/wk | active |
 | 16 | [Spotify](https://tashan.sh/capability/pkg-novalux12-spotify-mcp.html) | 62 | 504/wk | active |
 | 17 | [Agentvibes](https://tashan.sh/capability/pkg-agentvibes.html) | 61 | 1k/wk | active |

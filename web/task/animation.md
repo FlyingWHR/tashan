@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 78 | 44k/wk | active |
+| 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 78 | 61k/wk | active |
 | 2 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 48 | 5 ★ | active |
 | 3 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 63 | 137 ★ | active |
 | 4 | [Touchdesigner](https://tashan.sh/capability/pkg-touchdesigner-mcp-server.html) | 60 | 664/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Productmaker](https://tashan.sh/capability/pkg-productmaker-mcp.html) | 67 | 1k/wk | active |
 | 40 | [Comfyui · bachstudio](https://tashan.sh/capability/pkg-bachstudio-comfyui-mcp-server.html) | 60 | 438/wk | active |
 
-Showing the top 40 of 65. The full ranked shelf is at https://tashan.sh/task/animation.html.
+Showing the top 40 of 67. The full ranked shelf is at https://tashan.sh/task/animation.html.
 
 ## What these numbers are not
 

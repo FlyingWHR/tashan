@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Agent Afk](https://tashan.sh/capability/pkg-agent-afk.html) | 74 | 9k/wk | active |
+| 1 | [Agent Afk](https://tashan.sh/capability/pkg-agent-afk.html) | 74 | 10k/wk | active |
 | 2 | [Adcp Client](https://tashan.sh/capability/plugin-adcontextprotocol-adcp-client-adcp-client.html) | 57 | 18 ★ | active |
 | 3 | [Inkbox](https://tashan.sh/capability/plugin-inkbox-ai-inkbox-inkbox.html) | 56 | 33 ★ | active |
 | 4 | [Statsclaw](https://tashan.sh/capability/plugin-statsclaw-statsclaw-statsclaw.html) | 53 | 87 ★ | active |
@@ -20,7 +20,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Mistral](https://tashan.sh/capability/plugin-swih-mistral-mcp-mistral-mcp.html) | 46 | 14 ★ | active |
 | 8 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 45 | 7 ★ | active |
 | 9 | [Praxis · xD4O](https://tashan.sh/capability/plugin-xd4o-praxis-praxis.html) | 44 | 27 ★ | active |
-| 10 | [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) | 83 | 846k/wk | active |
+| 10 | [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) | 83 | 708k/wk | active |
 | 11 | [Use · mcp-use](https://tashan.sh/capability/pkg-mcp-use.html) | 82 | 19k/wk | active |
 | 12 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 78 | 62k ★ | active |
 | 13 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 76 | 6k ★ | active |

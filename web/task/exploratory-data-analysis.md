@@ -28,7 +28,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 61 | 30 ★ | active |
 | 16 | [ClickHouse · clickhouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 54 | 5 ★ | active |
 | 17 | [Fullstory · fullstorydev](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 44 | 9 ★ | active |
-| 18 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 66 | 2k/wk | active |
+| 18 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 69 | 1k/wk | active |
 | 19 | [Scopewalker](https://tashan.sh/capability/pkg-scopewalker-mcp.html) | 53 | 370/wk | active |
 | 20 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 50 | 248/wk | active |
 | 21 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 60 | 371/wk | active |
@@ -37,7 +37,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 24 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 51 | 124/wk | active |
 | 25 | [Yandex Metrica · BoxLab-Ltd](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 48 | 146/wk | active |
 | 26 | [Rolli](https://tashan.sh/capability/pkg-rolli-mcp.html) | 47 | 148/wk | active |
-| 27 | [Memlab](https://tashan.sh/capability/pkg-memlab-mcp-server.html) | 73 | 2k/wk | active |
+| 27 | [Memlab](https://tashan.sh/capability/pkg-memlab-mcp-server.html) | 74 | 3k/wk | active |
 | 28 | [Analytics](https://tashan.sh/capability/pkg-armature-tech-mcp-analytics.html) | 73 | 2k/wk | active |
 | 29 | [Ops](https://tashan.sh/capability/pkg-uluops-ops-mcp.html) | 65 | 711/wk | active |
 | 30 | [Claudestat](https://tashan.sh/capability/pkg-statforge-claudestat.html) | 65 | 597/wk | active |

@@ -11,9 +11,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) | 74 | 2k/wk | active |
-| 2 | [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) | 71 | 1k ★ | active |
-| 3 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 2k/wk | active |
+| 1 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 76 | 23k/wk | active |
+| 2 | [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) | 74 | 2k/wk | active |
+| 3 | [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) | 71 | 1k ★ | active |
 | 4 | [Remember](https://tashan.sh/capability/plugin-digital-process-tools-claude-remember-remember.html) | 68 | 143 ★ | active |
 | 5 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 62 | 895/wk | active |
 | 6 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 61 | 905/wk | active |
@@ -21,9 +21,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 57 | 18 ★ | active |
 | 9 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 56 | 3k ★ | active |
 | 10 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 52 | 11 ★ | active |
-| 11 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 49 | 51 ★ | active |
-| 12 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 49 | 7 ★ | active |
-| 13 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 49 | 2k/wk | active |
+| 11 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 51 | 5k/wk | active |
+| 12 | [Enzyme](https://tashan.sh/capability/plugin-jshph-enzyme-enzyme.html) | 49 | 51 ★ | active |
+| 13 | [Ix Memory](https://tashan.sh/capability/plugin-ix-infrastructure-ix-claude-plugin-ix-memory.html) | 49 | 7 ★ | active |
 | 14 | [Kindex](https://tashan.sh/capability/plugin-jmcentire-kindex-kindex.html) | 48 | 24 ★ | active |
 | 15 | [Loredocs](https://tashan.sh/capability/plugin-labyrinth-analytics-loredocs-loredocs.html) | 47 | 4 ★ | active |
 | 16 | [LLM Wiki Plugin](https://tashan.sh/capability/plugin-praneybehl-llm-wiki-plugin-llm-wiki-plugin.html) | 46 | 76 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Mind](https://tashan.sh/capability/plugin-memvid-claude-brain-mind.html) | 52 | 533 ★ | stable |
 | 40 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 50 | 10 ★ | active |
 
-Showing the top 40 of 266. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
+Showing the top 40 of 269. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
 
 ## What these numbers are not
 

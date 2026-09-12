@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 92 | 3.3m/wk | active |
+| 1 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 94 | 1.5m/wk | active |
 | 2 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 76 | 3k/wk | active |
 | 3 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 58 | 335 ★ | active |
 | 4 | [Playwright](https://tashan.sh/capability/pkg-playwright-mcp.html) | 85 | 4.6m/wk | active |
@@ -35,7 +35,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 55 | 14 ★ | active |
 | 23 | [Cypress](https://tashan.sh/capability/plugin-cypress-io-ai-toolkit-cypress.html) | 54 | 37 ★ | active |
 | 24 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 46 | 21 ★ | active |
-| 25 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 71 | 3k/wk | active |
+| 25 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 70 | 2k/wk | active |
 | 26 | [Desktop Touch](https://tashan.sh/capability/pkg-harusame64-desktop-touch-mcp.html) | 68 | 1k/wk | active |
 | 27 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 65 | 965/wk | active |
 | 28 | [Camoufox](https://tashan.sh/capability/pkg-mcp-camoufox.html) | 62 | 707/wk | active |
@@ -45,14 +45,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Getcourse](https://tashan.sh/capability/pkg-getcourse-mcp.html) | 55 | 438/wk | active |
 | 33 | [Sidebutton · sidebutton](https://tashan.sh/capability/pkg-sidebutton.html) | 54 | 174/wk | active |
 | 34 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 72 | 10k/wk | stable |
-| 35 | [Stock SDK](https://tashan.sh/capability/pkg-stock-sdk.html) | 68 | 2k/wk | active |
+| 35 | [Stock SDK](https://tashan.sh/capability/pkg-stock-sdk.html) | 71 | 2k/wk | active |
 | 36 | [Vibium](https://tashan.sh/capability/pkg-vibium.html) | 66 | 1k/wk | active |
 | 37 | [Cloakbrowser](https://tashan.sh/capability/pkg-cloakbrowser-mcp.html) | 62 | 599/wk | active |
 | 38 | [Camofox Browser](https://tashan.sh/capability/pkg-camofox-browser.html) | 62 | 560/wk | active |
 | 39 | [Cbrowser](https://tashan.sh/capability/pkg-cbrowser.html) | 59 | 265/wk | active |
 | 40 | [Mcpbrowser](https://tashan.sh/capability/pkg-mcpbrowser.html) | 58 | 407/wk | active |
 
-Showing the top 40 of 124. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
+Showing the top 40 of 128. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
 
 ## What these numbers are not
 

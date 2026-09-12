@@ -16,8 +16,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 44 | 3 ★ | active |
 | 4 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 44 | 3 ★ | active |
 | 5 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 60 | 90 ★ | active |
-| 6 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
-| 7 | [Firehydrant](https://tashan.sh/capability/pkg-firehydrant-mcp.html) | 48 | 3k/wk | abandoned |
+| 6 | [Firehydrant](https://tashan.sh/capability/pkg-firehydrant-mcp.html) | 51 | 7k/wk | abandoned |
+| 7 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
 | 8 | [Incident Commander](https://tashan.sh/capability/skill-alirezarezvani-incident-commander.html) | 44 | 2 repos | active |
 | 9 | [Threat Detection](https://tashan.sh/capability/skill-alirezarezvani-threat-detection.html) | 44 | 2 repos | active |
 | 10 | [Chaos Engineering](https://tashan.sh/capability/skill-alirezarezvani-chaos-engineering.html) | 44 | 2 repos | active |

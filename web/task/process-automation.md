@@ -16,11 +16,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 58 | 381 ★ | active |
 | 4 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 53 | 24 ★ | active |
 | 5 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 83 | 39k/wk | active |
-| 6 | [N8n](https://tashan.sh/capability/pkg-n8n-mcp.html) | 77 | 170k/wk | active |
+| 6 | [N8n](https://tashan.sh/capability/pkg-n8n-mcp.html) | 79 | 77k/wk | active |
 | 7 | [Nvidia Skills](https://tashan.sh/capability/plugin-nvidia-skills-nvidia-skills.html) | 74 | 3k ★ | active |
 | 8 | [Claude Harness](https://tashan.sh/capability/plugin-chachamaru127-claude-code-harness-claude-harness.html) | 72 | 3k ★ | active |
 | 9 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 70 | 426 ★ | active |
-| 10 | [Open Computer Use](https://tashan.sh/capability/pkg-open-computer-use.html) | 69 | 2k/wk | active |
+| 10 | [Open Computer Use](https://tashan.sh/capability/pkg-open-computer-use.html) | 70 | 2k/wk | active |
 | 11 | [Bunqueue](https://tashan.sh/capability/pkg-bunqueue.html) | 68 | 3k/wk | active |
 | 12 | [Terminal Driver](https://tashan.sh/capability/pkg-terminal-driver-mcp.html) | 61 | 964/wk | active |
 | 13 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 59 | 49 ★ | active |

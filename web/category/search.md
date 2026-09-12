@@ -11,7 +11,7 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 86 | 79k/wk | active |
+| 1 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 83 | 20k/wk | active |
 | 2 | [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) | 81 | 17k/wk | active |
 | 3 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 81 | 27k/wk | active |
 | 4 | [Imbad0202 Academic Research Skills](https://tashan.sh/capability/plugin-imbad0202-academic-research-skills-imbad0202-academic-research-skills.html) | 78 | 48k ★ | active |
@@ -24,35 +24,35 @@ Ranked by the tashan score
 | 11 | [SearXNG Search](https://tashan.sh/capability/pkg-mcp-searxng.html) | 74 | 9k/wk | active |
 | 12 | [Avallon Labs](https://tashan.sh/capability/pkg-avallon-labs-mcp.html) | 74 | 3k/wk | active |
 | 13 | [Digitalocean](https://tashan.sh/capability/pkg-digitalocean-mcp.html) | 72 | 2k/wk | active |
-| 14 | [Local RAG](https://tashan.sh/capability/pkg-mcp-local-rag.html) | 71 | 3k/wk | active |
-| 15 | [Nirvana](https://tashan.sh/capability/pkg-nirvana-labs-nirvana-mcp.html) | 71 | 874/wk | active |
-| 16 | [Windbg Uvx](https://tashan.sh/capability/plugin-svnscha-mcp-windbg-mcp-windbg-uvx.html) | 70 | 2k ★ | active |
-| 17 | [Screenpipe](https://tashan.sh/capability/pkg-screenpipe-mcp.html) | 70 | 3k/wk | active |
-| 18 | [Dws](https://tashan.sh/capability/pkg-nutrient-sdk-dws-mcp-server.html) | 70 | 652/wk | active |
-| 19 | [Instagram](https://tashan.sh/capability/pkg-hasdata-instagram-mcp.html) | 70 | 497/wk | active |
-| 20 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 69 | 1k ★ | active |
-| 21 | [12306](https://tashan.sh/capability/pkg-12306-mcp.html) | 69 | 8k/wk | active |
-| 22 | [Video Extract](https://tashan.sh/capability/pkg-yanlinglabs-video-extract-mcp.html) | 68 | 666/wk | active |
-| 23 | [Blockrun](https://tashan.sh/capability/pkg-blockrun-mcp.html) | 68 | 636/wk | active |
-| 24 | [Airbnb](https://tashan.sh/capability/pkg-hasdata-airbnb-mcp.html) | 68 | 505/wk | active |
-| 25 | [Airbnb · openbnb](https://tashan.sh/capability/pkg-openbnb-mcp-server-airbnb.html) | 67 | 2k/wk | active |
-| 26 | [Bytekit](https://tashan.sh/capability/pkg-hunt-labs-bytekit-mcp.html) | 66 | 407/wk | active |
-| 27 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 65 | 433 ★ | active |
-| 28 | [Substack](https://tashan.sh/capability/pkg-substack-mcp.html) | 65 | 939/wk | active |
-| 29 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 64 | 50 ★ | active |
-| 30 | [Products](https://tashan.sh/capability/pkg-telora-mcp-products.html) | 64 | 904/wk | active |
-| 31 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 64 | 598/wk | active |
-| 32 | [Duckduckgo](https://tashan.sh/capability/pkg-hasdata-duckduckgo-mcp.html) | 64 | 245/wk | active |
-| 33 | [Searxng](https://tashan.sh/capability/pkg-kevinwatt-mcp-server-searxng.html) | 63 | 161/wk | active |
-| 34 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 63 | 2k/wk | active |
+| 14 | [You.com Web Access & AI](https://tashan.sh/capability/pkg-youdotcom-oss-mcp.html) | 72 | 500/wk | active |
+| 15 | [Local RAG](https://tashan.sh/capability/pkg-mcp-local-rag.html) | 71 | 3k/wk | active |
+| 16 | [Nirvana](https://tashan.sh/capability/pkg-nirvana-labs-nirvana-mcp.html) | 71 | 874/wk | active |
+| 17 | [Windbg Uvx](https://tashan.sh/capability/plugin-svnscha-mcp-windbg-mcp-windbg-uvx.html) | 70 | 2k ★ | active |
+| 18 | [Screenpipe](https://tashan.sh/capability/pkg-screenpipe-mcp.html) | 70 | 3k/wk | active |
+| 19 | [Dws](https://tashan.sh/capability/pkg-nutrient-sdk-dws-mcp-server.html) | 70 | 652/wk | active |
+| 20 | [Instagram](https://tashan.sh/capability/pkg-hasdata-instagram-mcp.html) | 70 | 497/wk | active |
+| 21 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 69 | 1k ★ | active |
+| 22 | [12306](https://tashan.sh/capability/pkg-12306-mcp.html) | 69 | 8k/wk | active |
+| 23 | [Video Extract](https://tashan.sh/capability/pkg-yanlinglabs-video-extract-mcp.html) | 68 | 666/wk | active |
+| 24 | [Blockrun](https://tashan.sh/capability/pkg-blockrun-mcp.html) | 68 | 636/wk | active |
+| 25 | [Airbnb](https://tashan.sh/capability/pkg-hasdata-airbnb-mcp.html) | 68 | 505/wk | active |
+| 26 | [Airbnb · openbnb](https://tashan.sh/capability/pkg-openbnb-mcp-server-airbnb.html) | 67 | 2k/wk | active |
+| 27 | [Bytekit](https://tashan.sh/capability/pkg-hunt-labs-bytekit-mcp.html) | 66 | 407/wk | active |
+| 28 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 65 | 433 ★ | active |
+| 29 | [Substack](https://tashan.sh/capability/pkg-substack-mcp.html) | 65 | 939/wk | active |
+| 30 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 64 | 50 ★ | active |
+| 31 | [Products](https://tashan.sh/capability/pkg-telora-mcp-products.html) | 64 | 904/wk | active |
+| 32 | [Smart Web](https://tashan.sh/capability/pkg-smart-web-mcp.html) | 64 | 598/wk | active |
+| 33 | [Duckduckgo](https://tashan.sh/capability/pkg-hasdata-duckduckgo-mcp.html) | 64 | 245/wk | active |
+| 34 | [Searxng](https://tashan.sh/capability/pkg-kevinwatt-mcp-server-searxng.html) | 63 | 161/wk | active |
 | 35 | [Web Docs](https://tashan.sh/capability/pkg-cosmocoder-mcp-web-docs.html) | 63 | 297/wk | active |
 | 36 | [Clipy](https://tashan.sh/capability/pkg-clipy-mcp.html) | 62 | 506/wk | active |
 | 37 | [Grilling](https://tashan.sh/capability/skill-shipshitdev-grilling.html) | 61 | 7 repos | active |
 | 38 | [Sciverse](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 61 | 78 ★ | active |
-| 39 | [Howtocook](https://tashan.sh/capability/pkg-howtocook-mcp.html) | 61 | 3k/wk | active |
+| 39 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 61 | 1k/wk | active |
 | 40 | [Lastsearch](https://tashan.sh/capability/pkg-lastsearch.html) | 61 | 971/wk | active |
 
-Showing the top 40 of 324. The full ranked shelf is at https://tashan.sh/category/search.html.
+Showing the top 40 of 321. The full ranked shelf is at https://tashan.sh/category/search.html.
 
 ## What these numbers are not
 
