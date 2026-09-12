@@ -44,9 +44,15 @@
       &nbsp;&nbsp;&nbsp;&nbsp;"score": 86, "adoption": 84, "upkeep": 98, "freshness": 97,<br>
       &nbsp;&nbsp;&nbsp;&nbsp;"vitality": "active", "expertise": "solid",<br>
       &nbsp;&nbsp;&nbsp;&nbsp;"evidence": "32 517 npm downloads/week",<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;"url": "https://tashan.sh/capability/…", "measured_at": "…"<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"url": "https://tashan.sh/capability/…", "measured_at": "…",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"settled": { "usd": 166658.82, "payments": 8718732,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"protocol": "x402", "chain": "base" }<br>
       &nbsp;&nbsp;}<br>
       }</div>
+    <p><span class="mono">settled</span> appears only where the capability publishes a payment
+      address and we have asked the chain about it. A zero there is a measurement — that address has
+      never been paid — and an absent block is not a finding. It is deliberately not part of the
+      score: <a class="link" href="/paid.html">who gets paid</a> explains why.</p>
     <p>11,914 measured servers today. Unscored servers are <b>absent</b> rather than zero — we never
       publish a number we did not measure.</p>
 

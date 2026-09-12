@@ -25,6 +25,20 @@ RETIRED = {
     r"\bTrust\b(?!ed|worthy)": "tashan score",
     r"\bmaintenance\b": "upkeep",
     r"\bVitality\b": "Health",
+    # THE EXPERTISE SCALE LOST TWO BANDS AND THE COPY KEPT BOTH. `wrapper` and `slop` were removed
+    # because neither was a measurement — "a thin wrapper" is a KIND of artifact rather than a lower
+    # grade, and "likely AI-slop" is a claim that reading a README cannot establish. The scale has
+    # been deep/solid/thin ever since, and the homepage still told every reader we grade for
+    # "a thin wrapper or AI-slop", the homepage FAQ's JSON-LD still published a five-band scale to
+    # every answer engine, and about.html still described the read as "deep work vs. thin wrapper
+    # vs. slop". A retracted claim is worse than a stale word: it is a judgment about somebody
+    # else's work that we said we could not support.
+    #
+    # Deliberately narrow. A capability may legitimately be DESCRIBED as a thin wrapper by its own
+    # author — shim_note quotes exactly that — so only the band-list forms are caught.
+    r"\bAI[-\s]?slop\b": "the three bands the rubric actually has: deep, solid, thin",
+    r"thin\s*/\s*wrapper|wrapper\s*/\s*slop|wrapper vs\.? slop|vs\.? slop\b":
+        "the three bands the rubric actually has: deep, solid, thin",
     # The capital-T rule missed every lowercase use, and those are the ones that shipped: the ticker
     # in terminal.js said "LIVE ▸ ranked by trust" on EVERY page, llms.txt headed its list "Top
     # capabilities by measured trust", and the task hubs' ItemList JSON-LD said "ranked by trust" on
