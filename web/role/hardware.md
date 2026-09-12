@@ -9,26 +9,27 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 ## The short answer
 
-- **CAD modelling** — [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) · tashan score 75
-- **Hardware design** — [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) · tashan score 69
+- **Hardware design** — [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) · tashan score 71
+- **CAD modelling** — [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) · tashan score 78
 
 ## Ranked
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) | 69 | 829 ★ | active |
-| 2 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 75 | 11k ★ | active |
-| 3 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 59 | 284 ★ | active |
-| 4 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 47 | 5 ★ | active |
-| 5 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 46 | 2 marketplaces | — |
-| 6 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 58 | 466/wk | active |
-| 7 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 56 | 612/wk | active |
-| 8 | [Shapeitup](https://tashan.sh/capability/pkg-shapeitup-mcp-server.html) | 55 | 99/wk | active |
-| 9 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 54 | 307/wk | active |
-| 10 | [Embedcalc](https://tashan.sh/capability/pkg-embedcalc-mcp.html) | 52 | 208/wk | active |
-| 11 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 51 | 138/wk | active |
-| 12 | [Cadlens](https://tashan.sh/capability/pkg-cadlens-mcp-server.html) | 47 | 66/wk | active |
-| 13 | [Rftools](https://tashan.sh/capability/pkg-rftools-mcp.html) | 47 | 151/wk | active |
+| 1 | [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) | 71 | 829 ★ | active |
+| 2 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 78 | 13k ★ | active |
+| 3 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 63 | 284 ★ | active |
+| 4 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 50 | 5 ★ | active |
+| 5 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 45 | 18 ★ | active |
+| 6 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 42 | 1 marketplaces | — |
+| 7 | [M5 Onboard](https://tashan.sh/capability/skill-anthropics-m5-onboard.html) | not scored | 1 repos | active |
+| 8 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 62 | 466/wk | active |
+| 9 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 60 | 612/wk | active |
+| 10 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 58 | 307/wk | active |
+| 11 | [Embedcalc](https://tashan.sh/capability/pkg-embedcalc-mcp.html) | 56 | 208/wk | active |
+| 12 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 55 | 138/wk | active |
+| 13 | [Rftools](https://tashan.sh/capability/pkg-rftools-mcp.html) | 50 | 151/wk | active |
+| 14 | [Cadlens](https://tashan.sh/capability/pkg-cadlens-mcp-server.html) | 50 | 66/wk | active |
 
 ## What these numbers are not
 

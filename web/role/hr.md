@@ -11,46 +11,41 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Anki](https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html) | 78 | 2k/wk | active |
-| 2 | [Campus CLI](https://tashan.sh/capability/pkg-campus-cli.html) | 62 | 1k/wk | active |
-| 3 | [Guide · OriNachum](https://tashan.sh/capability/plugin-orinachum-onboarding-claude-code-guide.html) | 56 | 117 ★ | active |
-| 4 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 44 | 26 ★ | active |
-| 5 | [Gogcli MCP Classroom](https://tashan.sh/capability/pkg-gogcli-mcp-classroom.html) | 64 | 525/wk | active |
-| 6 | [Claude Education Skills Library](https://tashan.sh/capability/plugin-garethmanning-claude-education-skills-claude-education-skills-library.html) | 59 | 471 ★ | active |
-| 7 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 49 | 4 repos | active |
-| 8 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 47 | 3 repos | active |
-| 9 | [Learning Output Style](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-learning-output-style.html) | 46 | 2 marketplaces | — |
-| 10 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | 44 | 2 repos | active |
-| 11 | [Founder Coach](https://tashan.sh/capability/skill-alirezarezvani-founder-coach.html) | 44 | 2 repos | active |
-| 12 | [Meeting Analyzer](https://tashan.sh/capability/skill-alirezarezvani-meeting-analyzer.html) | 44 | 2 repos | active |
-| 13 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | 44 | 2 repos | active |
-| 14 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | 44 | 2 repos | active |
-| 15 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 65 | 720/wk | active |
-| 16 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 65 | 1k/wk | active |
-| 17 | [Jobo Job Search](https://tashan.sh/capability/pkg-jobo-job-search-mcp.html) | 51 | 300/wk | active |
-| 18 | [JobYap Job Search](https://tashan.sh/capability/pkg-jobyap-mcp.html) | 47 | 167/wk | active |
-| 19 | [Indeed](https://tashan.sh/capability/pkg-hasdata-indeed-mcp.html) | 67 | 435/wk | active |
-| 20 | [MCP FactorialHR](https://tashan.sh/capability/pkg-t4dhg-mcp-factorial.html) | 67 | 667/wk | active |
-| 21 | [Devcoach](https://tashan.sh/capability/pkg-devcoach.html) | 63 | 441/wk | active |
-| 22 | [Delx](https://tashan.sh/capability/pkg-delx-mcp-server.html) | 59 | 420/wk | active |
-| 23 | [Ashby](https://tashan.sh/capability/pkg-mcp-ashby.html) | 57 | 352/wk | active |
-| 24 | [Bothire](https://tashan.sh/capability/pkg-bothire-mcp.html) | 57 | 381/wk | active |
-| 25 | [Dreamworkhq](https://tashan.sh/capability/pkg-dreamworkhq-mcp.html) | 56 | 84/wk | active |
-| 26 | [Smarter Weather Developer Onboarding](https://tashan.sh/capability/pkg-smarterweather-mcp-onboarding.html) | 56 | 212/wk | active |
-| 27 | [Matchcv](https://tashan.sh/capability/pkg-matchcv-mcp.html) | 55 | 257/wk | active |
-| 28 | [FoundRole — AI Job Search & Application Tracker MCP for Claude & ChatGPT](https://tashan.sh/capability/pkg-foundrole-ai-job-search-mcp.html) | 55 | 94/wk | active |
-| 29 | [StudioMeyer Academy](https://tashan.sh/capability/pkg-mcp-academy.html) | 55 | 330/wk | active |
-| 30 | [ATS Jobs — open roles and hiring changes](https://tashan.sh/capability/pkg-ats-jobs-mcp.html) | 54 | 187/wk | active |
-| 31 | [Merekit](https://tashan.sh/capability/pkg-merekit-cli.html) | 54 | 81/wk | active |
-| 32 | [Career Compass](https://tashan.sh/capability/pkg-career-compass-mcp.html) | 51 | 165/wk | active |
-| 33 | [cv.json — open CV data](https://tashan.sh/capability/pkg-cvjson-mcp.html) | 51 | 77/wk | active |
-| 34 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 50 | 153/wk | active |
-| 35 | [Jobscout](https://tashan.sh/capability/pkg-sarutobi-sasuke-jobscout-mcp.html) | 47 | 82/wk | active |
-| 36 | [Juicedresume](https://tashan.sh/capability/pkg-juicedresume-mcp.html) | 46 | 19/wk | active |
-| 37 | [Osf Data Marketplace](https://tashan.sh/capability/pkg-osf-data-marketplace.html) | 45 | 47/wk | active |
-| 38 | [Hh](https://tashan.sh/capability/pkg-theyahia-hh-mcp.html) | 44 | 114/wk | active |
-| 39 | [Ask Xverum](https://tashan.sh/capability/pkg-xverum-mcp.html) | not scored | 91/wk | abandoned |
-| 40 | [LinkedIn MCP Tools](https://tashan.sh/capability/pkg-linkedin-mcp-tools.html) | 44 | 100/wk | active |
+| 1 | [Anki](https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html) | 79 | 2k/wk | active |
+| 2 | [Campus CLI](https://tashan.sh/capability/pkg-campus-cli.html) | 66 | 1k/wk | active |
+| 3 | [Guide](https://tashan.sh/capability/plugin-orinachum-onboarding-claude-code-guide.html) | 59 | 117 ★ | active |
+| 4 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 45 | 26 ★ | active |
+| 5 | [Gogcli MCP Classroom](https://tashan.sh/capability/pkg-gogcli-mcp-classroom.html) | 69 | 1k/wk | active |
+| 6 | [Claude Education Skills Library](https://tashan.sh/capability/plugin-garethmanning-claude-education-skills-claude-education-skills-library.html) | 64 | 471 ★ | active |
+| 7 | [Learning Output Style](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-learning-output-style.html) | 42 | 1 marketplaces | — |
+| 8 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | not scored | 1 repos | active |
+| 9 | [Founder Coach](https://tashan.sh/capability/skill-alirezarezvani-founder-coach.html) | not scored | 1 repos | active |
+| 10 | [Meeting Analyzer](https://tashan.sh/capability/skill-alirezarezvani-meeting-analyzer.html) | not scored | 1 repos | active |
+| 11 | [Vpe Review](https://tashan.sh/capability/skill-alirezarezvani-vpe-review.html) | not scored | 1 repos | active |
+| 12 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | not scored | 1 repos | active |
+| 13 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | not scored | 1 repos | active |
+| 14 | [Claude Coach](https://tashan.sh/capability/skill-alirezarezvani-claude-coach.html) | not scored | 1 repos | active |
+| 15 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | not scored | 1 repos | active |
+| 16 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | not scored | 1 repos | active |
+| 17 | [Syllabus](https://tashan.sh/capability/skill-alirezarezvani-syllabus.html) | not scored | 1 repos | active |
+| 18 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 70 | 3k/wk | active |
+| 19 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 59 | 378/wk | active |
+| 20 | [Digital Innovation Agents](https://tashan.sh/capability/plugin-pssah4-digital-innovation-agents-digital-innovation-agents.html) | 58 | 38 ★ | active |
+| 21 | [Jobo Job Search](https://tashan.sh/capability/pkg-jobo-job-search-mcp.html) | 55 | 300/wk | active |
+| 22 | [JobYap Job Search](https://tashan.sh/capability/pkg-jobyap-mcp.html) | 51 | 167/wk | active |
+| 23 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 45 | 43/wk | active |
+| 24 | [Gtm Hiring Signal Scraper](https://tashan.sh/capability/pkg-mambalabsdev-mcp-gtm-hiring-signal-scraper.html) | 44 | 60/wk | active |
+| 25 | [Delx](https://tashan.sh/capability/pkg-delx-mcp-server.html) | 63 | 420/wk | active |
+| 26 | [StudioMeyer Academy](https://tashan.sh/capability/pkg-mcp-academy.html) | 59 | 330/wk | active |
+| 27 | [Career Compass](https://tashan.sh/capability/pkg-career-compass-mcp.html) | 55 | 165/wk | active |
+| 28 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 53 | 153/wk | active |
+| 29 | [Jobscout](https://tashan.sh/capability/pkg-sarutobi-sasuke-jobscout-mcp.html) | 51 | 82/wk | active |
+| 30 | [Mail Muncher](https://tashan.sh/capability/plugin-craigjmidwinter-mail-muncher-mail-muncher.html) | 45 | 3 ★ | active |
+| 31 | [Opentrain](https://tashan.sh/capability/pkg-opentrain-ai-mcp.html) | 45 | 65/wk | active |
+| 32 | [Cv Tailor](https://tashan.sh/capability/pkg-cv-tailor.html) | 44 | 21/wk | active |
+| 33 | [VerifyRef](https://tashan.sh/capability/pkg-datalinc-verifyref-mcp.html) | 44 | 58/wk | active |
+| 34 | [Staff Resume](https://tashan.sh/capability/plugin-smykla-skalski-sai-staff-resume.html) | 42 | 1 marketplaces | — |
+| 35 | [LinkedIn MCP Tools](https://tashan.sh/capability/pkg-linkedin-mcp-tools.html) | 46 | 100/wk | active |
 
 ## What these numbers are not
 

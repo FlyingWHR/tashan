@@ -2384,7 +2384,13 @@ def export(con):
               # and had nowhere at all to point for a plugin or a skill — 60% of the picks on some
               # jobs — while the response claimed every pick links to its own source. A plugin and a
               # skill are folders in a repository; the repository IS the source.
-              "source_repo"]
+              "source_repo",
+              # SETTLED RECEIPTS, so the CLI can print money beside downloads — the whole point of
+              # the signal is the contrast, and `tashan info` was the one surface showing adoption
+              # with no way to show payment. Sparse: ~50 rows of 11,749 carry it, and the writer
+              # drops None, so the rest cost nothing. paid_seen_at travels with it because a zero
+              # here is a measurement and its absence is not.
+              "paid_usd", "paid_calls", "paid_seen_at"]
     # DELISTED ROWS BELONG IN THE LOOKUP, and nowhere else. A capability the registry pulled for
     # spam/malware/illegal content has no score (compute_scores refuses it one), so it is correctly
     # absent from the board, the bulk export and every hub — we must never recommend it. But `doctor`

@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Workflows](https://tashan.sh/capability/pkg-transcend-io-mcp-server-workflows.html) | 87 | 149k/wk | active |
-| 2 | [PDF](https://tashan.sh/capability/pkg-modelcontextprotocol-server-pdf.html) | 86 | 288k/wk | active |
-| 3 | [Js](https://tashan.sh/capability/pkg-lovable-dev-mcp-js.html) | 86 | 182k/wk | active |
-| 4 | [Actors](https://tashan.sh/capability/pkg-apify-actors-mcp-server.html) | 83 | 22k/wk | active |
-| 5 | [Inspector · mcp-use](https://tashan.sh/capability/pkg-mcp-use-inspector.html) | 82 | 19k/wk | active |
-| 6 | [Transcend IO](https://tashan.sh/capability/pkg-transcend-io-mcp.html) | 81 | 14k/wk | active |
-| 7 | [Aikidosec](https://tashan.sh/capability/pkg-aikidosec-mcp.html) | 80 | 29k/wk | active |
-| 8 | [Arbor](https://tashan.sh/capability/pkg-lambdacurry-arbor.html) | 79 | 7k/wk | active |
-| 9 | [Desktop Commander · wonderwhy-er](https://tashan.sh/capability/plugin-wonderwhy-er-desktopcommandermcp-desktop-commander.html) | 78 | 9k ★ | active |
-| 10 | [Santifer Career Ops](https://tashan.sh/capability/plugin-santifer-career-ops-santifer-career-ops.html) | 78 | 71k ★ | active |
-| 11 | [Vanguard Frontier Agentic](https://tashan.sh/capability/pkg-raishin-vanguard-frontier-agentic.html) | 78 | 163k/wk | active |
-| 12 | [SDK](https://tashan.sh/capability/pkg-adcp-sdk.html) | 78 | 20k/wk | active |
-| 13 | [Warmhub](https://tashan.sh/capability/pkg-warmhub-cli.html) | 78 | 4k/wk | active |
-| 14 | [Kepano Obsidian Skills](https://tashan.sh/capability/plugin-kepano-obsidian-skills-kepano-obsidian-skills.html) | 77 | 48k ★ | active |
-| 15 | [Contentful](https://tashan.sh/capability/pkg-contentful-mcp-server.html) | 77 | 5k/wk | active |
-| 16 | [Dsr](https://tashan.sh/capability/pkg-transcend-io-mcp-server-dsr.html) | 77 | 4k/wk | active |
-| 17 | [Discovery](https://tashan.sh/capability/pkg-transcend-io-mcp-server-discovery.html) | 77 | 4k/wk | active |
-| 18 | [Postman](https://tashan.sh/capability/pkg-postman-postman-mcp-server.html) | 77 | 4k/wk | active |
-| 19 | [Browser Harness](https://tashan.sh/capability/plugin-browser-use-browser-harness-browser-harness.html) | 76 | 16k ★ | active |
-| 20 | [Ecc](https://tashan.sh/capability/plugin-affaan-m-ecc-ecc.html) | 76 | 244k ★ | active |
-| 21 | [Career Ops](https://tashan.sh/capability/plugin-santifer-career-ops-career-ops.html) | 76 | 69k ★ | active |
-| 22 | [Marketing Skills](https://tashan.sh/capability/plugin-coreyhaines31-marketingskills-marketing-skills.html) | 76 | 46k ★ | active |
-| 23 | [Pake](https://tashan.sh/capability/plugin-tw93-pake-pake.html) | 76 | 61k ★ | active |
-| 24 | [Headroom](https://tashan.sh/capability/plugin-headroomlabs-ai-headroom-headroom.html) | 76 | 68k ★ | active |
-| 25 | [Oh My Claudecode](https://tashan.sh/capability/plugin-yeachan-heo-oh-my-claudecode-oh-my-claudecode.html) | 76 | 39k ★ | active |
-| 26 | [Spacetimedb](https://tashan.sh/capability/plugin-clockworklabs-spacetimedb-spacetimedb.html) | 76 | 25k ★ | active |
-| 27 | [Watermarks Remover](https://tashan.sh/capability/plugin-guillaumemeyer-watermarks-remover-watermarks-remover.html) | 76 | 19k ★ | active |
-| 28 | [Open Code Review](https://tashan.sh/capability/plugin-alibaba-open-code-review-open-code-review.html) | 76 | 22k ★ | active |
-| 29 | [Playwright Pro](https://tashan.sh/capability/plugin-alirezarezvani-claude-skills-playwright-pro.html) | 75 | 23k ★ | active |
-| 30 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 75 | 11k ★ | active |
-| 31 | [I Have Adhd](https://tashan.sh/capability/plugin-ayghri-i-have-adhd-i-have-adhd.html) | 75 | 25k ★ | active |
-| 32 | [Ag UI Dotnet](https://tashan.sh/capability/plugin-ag-ui-protocol-ag-ui-ag-ui-dotnet.html) | 75 | 16k ★ | active |
-| 33 | [Florianbruniaux Claude Code Ultimate Guide Self Assessment](https://tashan.sh/capability/plugin-florianbruniaux-claude-code-ultimate-guide-florianbruniaux-claude-code-ultimate-guide-self-assessment.html) | 75 | 6k ★ | active |
-| 34 | [Kubb](https://tashan.sh/capability/pkg-kubb-mcp.html) | 75 | 19k/wk | active |
-| 35 | [Eslint](https://tashan.sh/capability/pkg-eslint-mcp.html) | 75 | 9k/wk | active |
-| 36 | [Brightdata](https://tashan.sh/capability/pkg-brightdata-mcp.html) | 75 | 8k/wk | active |
-| 37 | [21st Dev](https://tashan.sh/capability/pkg-21st-dev-cli.html) | 75 | 5k/wk | active |
-| 38 | [Phoenix](https://tashan.sh/capability/pkg-arizeai-phoenix-mcp.html) | 75 | 2k/wk | active |
-| 39 | [Ctx](https://tashan.sh/capability/plugin-ctxrs-ctx-ctx.html) | 74 | 1k ★ | active |
-| 40 | [CLI Anything](https://tashan.sh/capability/plugin-hkuds-cli-anything-cli-anything.html) | 74 | 49k ★ | active |
+| 1 | [Workflows](https://tashan.sh/capability/pkg-transcend-io-mcp-server-workflows.html) | 84 | 40k/wk | active |
+| 2 | [Transcend IO](https://tashan.sh/capability/pkg-transcend-io-mcp.html) | 84 | 37k/wk | active |
+| 3 | [Desktop Commander · wonderwhy-er](https://tashan.sh/capability/plugin-wonderwhy-er-desktopcommandermcp-desktop-commander.html) | 78 | 9k ★ | active |
+| 4 | [Browser Harness](https://tashan.sh/capability/plugin-browser-use-browser-harness-browser-harness.html) | 78 | 16k ★ | active |
+| 5 | [Playwright Pro](https://tashan.sh/capability/plugin-alirezarezvani-claude-skills-playwright-pro.html) | 78 | 23k ★ | active |
+| 6 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 78 | 13k ★ | active |
+| 7 | [Sellable](https://tashan.sh/capability/pkg-sellable-mcp.html) | 78 | 17k/wk | active |
+| 8 | [Phoenix](https://tashan.sh/capability/pkg-arizeai-phoenix-mcp.html) | 77 | 4k/wk | active |
+| 9 | [Digitalocean](https://tashan.sh/capability/pkg-digitalocean-mcp.html) | 77 | 3k/wk | active |
+| 10 | [Microsoft 365](https://tashan.sh/capability/pkg-softeria-ms-365-mcp-server.html) | 76 | 23k/wk | active |
+| 11 | [Nx](https://tashan.sh/capability/pkg-nx-mcp.html) | 75 | 86k/wk | active |
+| 12 | [Agents](https://tashan.sh/capability/pkg-inkeep-agents-mcp.html) | 75 | 2k/wk | active |
+| 13 | [Integration Guide](https://tashan.sh/capability/pkg-tosspayments-integration-guide-mcp.html) | 75 | 2k/wk | active |
+| 14 | [Rigour Labs](https://tashan.sh/capability/pkg-rigour-labs-mcp.html) | 75 | 2k/wk | active |
+| 15 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 74 | 11k/wk | active |
+| 16 | [Productbrain](https://tashan.sh/capability/pkg-productbrain-mcp.html) | 74 | 10k/wk | active |
+| 17 | [Docs](https://tashan.sh/capability/pkg-seed-design-docs-mcp.html) | 74 | 2k/wk | active |
+| 18 | [Synapse](https://tashan.sh/capability/pkg-myelixlabs-synapse-mcp.html) | 74 | 2k/wk | active |
+| 19 | [Nirvana](https://tashan.sh/capability/pkg-nirvana-labs-nirvana-mcp.html) | 74 | 874/wk | active |
+| 20 | [Modern Web Guidance](https://tashan.sh/capability/plugin-googlechrome-modern-web-guidance-modern-web-guidance.html) | 73 | 2k ★ | active |
+| 21 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 73 | 3k ★ | active |
+| 22 | [Gitnexus](https://tashan.sh/capability/pkg-gitnexus.html) | 73 | 53k/wk | active |
+| 23 | [Shopify AI Toolkit](https://tashan.sh/capability/plugin-shopify-shopify-ai-toolkit-shopify-ai-toolkit.html) | 72 | 476 ★ | active |
+| 24 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 72 | 1k ★ | active |
+| 25 | [Deeplake Hivemind](https://tashan.sh/capability/plugin-activeloopai-deeplake-claude-code-plugins-deeplake-hivemind.html) | 72 | 2k ★ | active |
+| 26 | [Hivemind](https://tashan.sh/capability/plugin-activeloopai-hivemind-hivemind.html) | 72 | 2k ★ | active |
+| 27 | [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) | 72 | 1k ★ | active |
+| 28 | [Ctxlint](https://tashan.sh/capability/pkg-yawlabs-ctxlint.html) | 72 | 8k/wk | active |
+| 29 | [Mbcli](https://tashan.sh/capability/pkg-mightybot-mbcli.html) | 72 | 4k/wk | active |
+| 30 | [Vuetify](https://tashan.sh/capability/pkg-vuetify-mcp.html) | 72 | 1k/wk | active |
+| 31 | [Kontent AI](https://tashan.sh/capability/pkg-kontent-ai-mcp-server.html) | 72 | 607/wk | active |
+| 32 | [Save To Spotify](https://tashan.sh/capability/plugin-spotify-save-to-spotify-save-to-spotify.html) | 71 | 388 ★ | active |
+| 33 | [AI Infra Auto Driven Skills](https://tashan.sh/capability/plugin-bbuf-ai-infra-auto-driven-skills-ai-infra-auto-driven-skills.html) | 71 | 717 ★ | active |
+| 34 | [Remem](https://tashan.sh/capability/pkg-remem-ai-remem.html) | 71 | 3k/wk | active |
+| 35 | [Roblox](https://tashan.sh/capability/pkg-weppy-roblox-mcp.html) | 71 | 3k/wk | active |
+| 36 | [Video Editor](https://tashan.sh/capability/pkg-agimon-ai-video-editor-mcp.html) | 71 | 3k/wk | active |
+| 37 | [Wrongstack](https://tashan.sh/capability/pkg-wrongstack-cli.html) | 71 | 3k/wk | active |
+| 38 | [Datalab Extension](https://tashan.sh/capability/pkg-modootoday-datalab-extension-mcp.html) | 71 | 2k/wk | active |
+| 39 | [Codspeed](https://tashan.sh/capability/plugin-codspeedhq-codspeed-codspeed.html) | 70 | 235 ★ | active |
+| 40 | [Databricks](https://tashan.sh/capability/plugin-databricks-databricks-agent-skills-databricks.html) | 70 | 228 ★ | active |
 
-Showing the top 40 of 4,127. The full ranked shelf is at https://tashan.sh/category/other.html.
+Showing the top 40 of 4,336. The full ranked shelf is at https://tashan.sh/category/other.html.
 
 ## What these numbers are not
 

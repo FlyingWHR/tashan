@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 92 | 3.3m/wk | active |
-| 2 | [Firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) | 86 | 27k/wk | active |
-| 3 | [Playwright](https://tashan.sh/capability/pkg-playwright-mcp.html) | 85 | 4.6m/wk | active |
-| 4 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 76 | 3k/wk | active |
-| 5 | [Agent Browser](https://tashan.sh/capability/plugin-vercel-labs-agent-browser-agent-browser.html) | 75 | 42k ★ | active |
-| 6 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 72 | 10k/wk | stable |
-| 7 | [Actionbook](https://tashan.sh/capability/plugin-actionbook-actionbook-actionbook.html) | 70 | 2k ★ | active |
-| 8 | [Chrome DevTools Axi](https://tashan.sh/capability/pkg-chrome-devtools-axi.html) | 70 | 4k/wk | active |
-| 9 | [Scraper](https://tashan.sh/capability/pkg-mcp-scraper.html) | 70 | 2k/wk | active |
-| 10 | [Mearl](https://tashan.sh/capability/pkg-mearl-mcp-server.html) | 69 | 997/wk | active |
-| 11 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 68 | 542 ★ | active |
-| 12 | [Browser Gateway](https://tashan.sh/capability/pkg-browser-gateway.html) | 67 | 799/wk | active |
-| 13 | [Browse Tool](https://tashan.sh/capability/pkg-agimon-ai-browse-tool.html) | 67 | 716/wk | active |
-| 14 | [Web Browser (kogiQA)](https://tashan.sh/capability/pkg-kogiqa-mcp.html) | 67 | 482/wk | active |
-| 15 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-skills-firecrawl.html) | 66 | 94 ★ | active |
-| 16 | [Browser Tools](https://tashan.sh/capability/pkg-agentdeskai-browser-tools-mcp.html) | 66 | 2k/wk | active |
-| 17 | [Vibium](https://tashan.sh/capability/pkg-vibium.html) | 66 | 1k/wk | active |
-| 18 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 65 | 965/wk | active |
-| 19 | [Public Browser](https://tashan.sh/capability/pkg-public-browser.html) | 65 | 725/wk | active |
-| 20 | [Zenrows](https://tashan.sh/capability/pkg-zenrows-mcp.html) | 65 | 476/wk | active |
-| 21 | [Figranium](https://tashan.sh/capability/pkg-figranium-mcp.html) | 63 | 504/wk | active |
-| 22 | [Real Browser](https://tashan.sh/capability/pkg-real-browser-mcp-server.html) | 62 | 716/wk | active |
-| 23 | [Camoufox](https://tashan.sh/capability/pkg-mcp-camoufox.html) | 62 | 707/wk | active |
-| 24 | [Cloakbrowser](https://tashan.sh/capability/pkg-cloakbrowser-mcp.html) | 62 | 599/wk | active |
-| 25 | [Camofox Browser](https://tashan.sh/capability/pkg-camofox-browser.html) | 62 | 560/wk | active |
-| 26 | [Selenium](https://tashan.sh/capability/pkg-angiejones-mcp-selenium.html) | 61 | 848/wk | stable |
-| 27 | [Agent Browser · AetherAI3](https://tashan.sh/capability/pkg-aether-browser.html) | 60 | 425/wk | active |
-| 28 | [walkerOS Source Browser](https://tashan.sh/capability/pkg-walkeros-mcp-source-browser.html) | 60 | 257/wk | active |
-| 29 | [Fouradata](https://tashan.sh/capability/pkg-fouradata-mcp.html) | 60 | 255/wk | active |
-| 30 | [Chromeship](https://tashan.sh/capability/pkg-chromeship.html) | 59 | 419/wk | active |
-| 31 | [Vibe MCP — Real Chrome, Remotely](https://tashan.sh/capability/pkg-vibebrowser-mcp.html) | 59 | 399/wk | active |
-| 32 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 58 | 335 ★ | active |
-| 33 | [Doppel](https://tashan.sh/capability/pkg-doppel-mcp.html) | 58 | 625/wk | active |
-| 34 | [Mcpbrowser](https://tashan.sh/capability/pkg-mcpbrowser.html) | 58 | 407/wk | active |
-| 35 | [AgentUtility Web Probe](https://tashan.sh/capability/pkg-agentutility-mcp-web-probe.html) | 57 | 345/wk | active |
-| 36 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 57 | 234/wk | active |
-| 37 | [Kapture](https://tashan.sh/capability/pkg-kapture-mcp.html) | 56 | 918/wk | active |
-| 38 | [Browser Automation](https://tashan.sh/capability/pkg-mindstone-mcp-server-browser-automation.html) | 56 | 416/wk | active |
-| 39 | [Supertoinette](https://tashan.sh/capability/pkg-mcp-supertoinette.html) | 56 | 349/wk | active |
-| 40 | [Tap](https://tashan.sh/capability/pkg-taprun-cli.html) | 56 | 282/wk | active |
+| 1 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 93 | 2.3m/wk | active |
+| 2 | [Firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) | 92 | 130k/wk | active |
+| 3 | [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) | 85 | 6.7m/wk | active |
+| 4 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 78 | 5k/wk | active |
+| 5 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 73 | 22k/wk | stable |
+| 6 | [Actionbook](https://tashan.sh/capability/plugin-actionbook-actionbook-actionbook.html) | 72 | 2k ★ | active |
+| 7 | [Chrome DevTools Axi](https://tashan.sh/capability/pkg-chrome-devtools-axi.html) | 72 | 5k/wk | active |
+| 8 | [Scraper](https://tashan.sh/capability/pkg-mcp-scraper.html) | 71 | 4k/wk | active |
+| 9 | [Mearl](https://tashan.sh/capability/pkg-mearl-mcp-server.html) | 71 | 1k/wk | active |
+| 10 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 70 | 542 ★ | active |
+| 11 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 69 | 2k/wk | active |
+| 12 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 69 | 965/wk | active |
+| 13 | [kogiQA MCP Web Browser](https://tashan.sh/capability/pkg-kogiqa-mcp.html) | 68 | 706/wk | active |
+| 14 | [Zenrows](https://tashan.sh/capability/pkg-zenrows-mcp.html) | 68 | 476/wk | active |
+| 15 | [Bowmark](https://tashan.sh/capability/pkg-bowmark-mcp.html) | 67 | 3k/wk | active |
+| 16 | [Cicy Desktop](https://tashan.sh/capability/pkg-cicy-desktop.html) | 67 | 830/wk | active |
+| 17 | [Cloakbrowser](https://tashan.sh/capability/pkg-cloakbrowser-mcp.html) | 67 | 599/wk | active |
+| 18 | [Tap](https://tashan.sh/capability/pkg-taprun-cli.html) | 66 | 829/wk | active |
+| 19 | [Real Browser](https://tashan.sh/capability/pkg-real-browser-mcp-server.html) | 66 | 716/wk | active |
+| 20 | [Camoufox](https://tashan.sh/capability/pkg-mcp-camoufox.html) | 66 | 707/wk | active |
+| 21 | [Uindow](https://tashan.sh/capability/pkg-uindow-cli.html) | 64 | 1k/wk | active |
+| 22 | [Fouradata](https://tashan.sh/capability/pkg-fouradata-mcp.html) | 64 | 255/wk | active |
+| 23 | [Vibe MCP — Real Chrome, Remotely](https://tashan.sh/capability/pkg-vibebrowser-mcp.html) | 63 | 399/wk | active |
+| 24 | [Openchrome](https://tashan.sh/capability/pkg-openchrome-mcp.html) | 62 | 2k/wk | active |
+| 25 | [Doppel](https://tashan.sh/capability/pkg-doppel-mcp.html) | 62 | 625/wk | active |
+| 26 | [Mcpbrowser](https://tashan.sh/capability/pkg-mcpbrowser.html) | 62 | 407/wk | active |
+| 27 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 61 | 335 ★ | active |
+| 28 | [AgentUtility Web Probe](https://tashan.sh/capability/pkg-agentutility-mcp-web-probe.html) | 61 | 345/wk | active |
+| 29 | [Browser Automation](https://tashan.sh/capability/pkg-mindstone-mcp-server-browser-automation.html) | 60 | 416/wk | active |
+| 30 | [Onestep Puppeteer](https://tashan.sh/capability/pkg-onestep-puppeteer-mcp-server.html) | 60 | 228/wk | active |
+| 31 | [Supersurf](https://tashan.sh/capability/pkg-supersurf-mcp.html) | 60 | 177/wk | active |
+| 32 | [Selenium](https://tashan.sh/capability/pkg-angiejones-mcp-selenium.html) | 59 | 1k/wk | active |
+| 33 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-skills-firecrawl.html) | 59 | 70 ★ | active |
+| 34 | [Kapture](https://tashan.sh/capability/pkg-kapture-mcp.html) | 59 | 676/wk | active |
+| 35 | [Agent360 Browser](https://tashan.sh/capability/pkg-agent360-browser-mcp.html) | 59 | 426/wk | active |
+| 36 | [Google Forms](https://tashan.sh/capability/pkg-mcp-google-forms.html) | 58 | 392/wk | active |
+| 37 | [Browser Agent](https://tashan.sh/capability/pkg-runbook-ai-mcp.html) | 58 | 186/wk | active |
+| 38 | [Google Surf](https://tashan.sh/capability/pkg-google-surf-mcp.html) | 57 | 374/wk | active |
+| 39 | [Browser Ipc Cdp](https://tashan.sh/capability/pkg-browser-ipc-cdp.html) | 57 | 143/wk | active |
+| 40 | [Uplink](https://tashan.sh/capability/pkg-uplink-code-mcp.html) | 57 | 132/wk | active |
 
-Showing the top 40 of 105. The full ranked shelf is at https://tashan.sh/category/browser.html.
+Showing the top 40 of 111. The full ranked shelf is at https://tashan.sh/category/browser.html.
 
 ## What these numbers are not
 

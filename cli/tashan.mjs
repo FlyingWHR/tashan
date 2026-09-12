@@ -317,6 +317,17 @@ const fmtNum = (n) => n == null ? "—" : n >= 1e6 ? (n / 1e6).toFixed(1) + "M" 
 const trustStr = (t) => t == null ? dim("  —") : (t >= 70 ? jade : t >= 40 ? C("33") : dim)(String(Math.round(t)).padStart(3));
 const verdict = (v) => v ? ({ deep: "deep", solid: "solid", thin: "thin", wrapper: "wrapper", slop: "slop" }[v] || v) : "";
 
+// Money at the precision the number deserves. Mirrors prerender.paid_line, gen_paid.money and
+// mcp.paidUsd — four renderers, one rule, because a figure that reads differently per surface is
+// not evidence.
+function paidUsd(v) {
+  if (v == null) return "unknown";
+  if (v === 0) return "$0";
+  if (v < 0.01) return "<$0.01";
+  if (v < 100) return "$" + v.toFixed(2);
+  return "$" + Math.round(v).toLocaleString("en-US");
+}
+
 function row(r) {
   const name = disp(r).slice(0, 34).padEnd(34);
   const kind = dim((r.kind || "").padEnd(6));
@@ -339,6 +350,15 @@ function infoCard(r) {
   L.push("  tashan score        " + trustStr(r.tashan_score).trim() + dim("/100") + "   " + dim("upkeep " + (r.upkeep ?? "—") + " · vitality " + (r.vitality || "—")));
   if (r.expertise_verdict) L.push("  Expertise    " + jade(verdict(r.expertise_verdict)) + (r.expertise != null ? dim("  (" + r.expertise + "/100)") : ""));
   L.push("  Adoption     " + dim(fmtNum(r.npm_downloads) + " downloads/wk" + (r.config_reach ? " · reach " + r.config_reach : "")));
+  // SETTLED RECEIPTS, directly under adoption, because the contrast IS the signal: this row reads
+  // "636 downloads/wk" and "$166,659 settled". Printed only where paid_seen_at says we asked the
+  // chain — an em-dash would read as "we looked and found nothing" for the ~11,700 capabilities
+  // that never published a price and had nothing to look for.
+  if (r.paid_seen_at || r.paid_usd != null) {
+    L.push("  Settled      " + dim(paidUsd(r.paid_usd) + (r.paid_calls
+      ? " · " + fmtNum(r.paid_calls) + " x402 calls, all time"
+      : " — its payment address has never been paid")));
+  }
   if (r.category) L.push("  Category     " + dim(r.category));
   if (r.npm_deprecated) L.push("  " + red("⚠ deprecated on npm"));
   if (r.gh_archived) L.push("  " + red("⚠ repository archived"));
