@@ -21,7 +21,7 @@ and it cannot be made correctly at 2am against a deadline. What can be done now 
 number grow: the disagreement is measured, recorded, and the suite fails if a pipeline change starts
 manufacturing more of it. A known defect with a ceiling is a different thing from an unknown one.
 
-    python3 tests/test_identity.py            # fail if divergence grows past the recorded baseline
+    python3 tests/test_identity.py            # fail if the divergence RATE grows past the baseline
     python3 tests/test_identity.py --report   # list the worst offenders
 """
 import json, os, sqlite3, sys
@@ -57,11 +57,19 @@ def groups(con):
 def measure(con):
     rows = groups(con)
     multi = [g for g in rows if g[3] > 1]
+    # THE DENOMINATOR, and the reason this test failed for the wrong reason. An identity can only
+    # CONTRADICT itself if at least two of its channels carry a score; one score and three blanks is
+    # incomplete, not inconsistent. So the population at risk is not "every multi-kind identity", it
+    # is "every multi-kind identity we have scored twice" — and that population grows every time
+    # scoring succeeds.
+    at_risk = [g for g in multi if g[5] >= 2]
     diverging = [g for g in multi if g[4] is not None and g[4] >= SPREAD]
     return {
         "duplicated_identities": len(rows),
         "spanning_kinds": len(multi),
+        "at_risk": len(at_risk),
         "diverging": len(diverging),
+        "rate": round(len(diverging) / max(len(at_risk), 1), 4),
         "worst": max((g[4] for g in diverging), default=0),
     }, diverging
 
@@ -100,12 +108,37 @@ def main():
         print(f"  ok    baseline established: {now['diverging']:,} identities score themselves two ways")
         return 0
 
-    ceiling = int(was.get("diverging", 0) * SLACK) + 5
-    bad = now["diverging"] > ceiling
-    print(f"  {'FAIL' if bad else 'ok  '}  {now['diverging']:,} identities score themselves two ways "
-          f"(was {was.get('diverging', 0):,}, ceiling {ceiling:,}, worst spread {now['worst']:.0f})")
+    # RATCHET THE RATE, NOT THE COUNT. The first version of this gate compared the raw number of
+    # diverging identities, and it went red on its second night: 65 -> 172 against a ceiling of 79 —
+    # which withheld the whole site. Nothing had got worse. The pipeline had not completed a run
+    # since 25 August, so that night it cleared eighteen days of enrichment backlog and scored
+    # thousands of rows for the first time; every newly-scored second channel moved an identity into
+    # the population that CAN disagree. The tell was in the numbers: the count nearly tripled while
+    # the worst spread went DOWN, 49 to 46. A defect getting worse does not improve its extreme.
+    #
+    # This is the same shape as the coverage ratio in CLAUDE.md, which falls every time discovery
+    # succeeds and is therefore reported and never targeted: a ratchet on an absolute count punishes
+    # measuring more. The rate is the defect; the count is coverage times the defect. Both are
+    # printed, with the denominator, so the next failure can be read without re-running the pipeline
+    # — the CI line that cost a day said "172 (was 65)" and nothing about how many were at risk.
+    was_rate = was.get("rate")
+    if was_rate is None:                      # baseline predates the rate — derive it if we can
+        was_rate = was.get("diverging", 0) / max(was.get("at_risk") or 0, 1) if was.get("at_risk") else None
+    ceiling = round(was_rate * SLACK, 4) if was_rate else None
+    worst_ceiling = max(was.get("worst", 0), SPREAD)
+    bad_rate = ceiling is not None and now["rate"] > ceiling
+    bad_worst = now["worst"] > worst_ceiling
+    bad = bad_rate or bad_worst
+    print(f"  {'FAIL' if bad else 'ok  '}  {now['diverging']:,} of {now['at_risk']:,} twice-scored "
+          f"identities disagree with themselves — {now['rate']:.1%}"
+          + (f" (was {was_rate:.1%}, ceiling {ceiling:.1%})" if was_rate else " (no baseline rate)")
+          + f", worst spread {now['worst']:.0f} of {worst_ceiling:.0f} allowed")
     if bad:
-        print("        A change has made the index disagree with itself more often than it did.")
+        if bad_rate:
+            print("        A change has made the index disagree with itself MORE OFTEN, per identity")
+            print("        it has scored twice. That is not discovery — that is a regression.")
+        if bad_worst:
+            print(f"        And the worst single contradiction has grown past {worst_ceiling:.0f} points.")
         print("        python3 tests/test_identity.py --report   to see which, then fix or --accept.")
         return 1
     return 0

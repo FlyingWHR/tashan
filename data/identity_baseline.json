@@ -1,6 +1,8 @@
 {
   "duplicated_identities": 2060,
   "spanning_kinds": 2030,
+  "at_risk": 466,
   "diverging": 65,
+  "rate": 0.1395,
   "worst": 49.0
 }
