@@ -26,6 +26,7 @@ node cli/inventory.mjs --selftest || fail=1
 
 echo; echo "── on-chain truth ─────────────────────────────"
 python3 pipeline/onchain.py --selftest || fail=1
+python3 pipeline/paid_demand.py --selftest || fail=1
 
 echo; echo "── /audit (config parse + privacy) ────────────"
 node tests/test_audit_parity.mjs >/dev/null 2>&1 || { echo "  ↳ tests/test_audit_parity.mjs FAILED — rerunning to show why:"; node tests/test_audit_parity.mjs; fail=1; }

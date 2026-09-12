@@ -97,6 +97,8 @@ STAGES = [
     # the day it happens, and a day nobody runs this is a day of alerts nobody can ever get back.
     ("changes",         ["pipeline/change_events.py"], "enrich",
      "what changed since the last run — advisories, install scripts, permissions, ownership"),
+    ("paid-demand",     ["pipeline/paid_demand.py"], "enrich",
+     "settled x402 payments on Base, from the subgraph — the only signal here that is money"),
     # FIRST IN THE SITE PHASE, because every generator below reads its output. The export lives in
     # build.py, which is a `source` stage, so `--site` used to skip it and rebuild the whole site
     # from whatever capabilities.json was last written. Silent, and it shipped: the task tagger was
