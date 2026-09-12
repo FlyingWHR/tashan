@@ -11,10 +11,10 @@ public, standardised path any agent can reproduce: same server, same tool, same 
 evidence product should be reachable the way it asks others to be reachable, and "you can verify this
 yourself with two lines of config" is a stronger claim than "trust our exporter".
 
-    export GRAPH_API_KEY=<gateway api key>     # thegraph.com/studio -> API keys
-    export TASHAN_SUBGRAPH_ID=<subgraph id>    # the published id, not the deploy key
-    python3 pipeline/subgraph_mcp.py --probe   # schema + 30-day query counts, proves the hop works
+    export GRAPH_API_KEY=<gateway api key>      # thegraph.com/studio -> API keys. That is ALL.
+    python3 pipeline/subgraph_mcp.py --probe    # proves the whole hop against the index we read
     python3 pipeline/subgraph_mcp.py --selftest # no network, no key
+    export TASHAN_SUBGRAPH_ID=<subgraph id>     # point it at ours once that one is published
 
 NO DEPENDENCIES, ON PURPOSE. There is a Node bridge (`npx mcp-remote`) in The Graph's own docs and an
 official Python SDK; both would be the third way this repo reaches a network. The MCP SSE transport
@@ -25,7 +25,11 @@ import json, os, sys, urllib.error, urllib.request
 
 SSE_URL = os.environ.get("GRAPH_MCP_URL", "https://subgraphs.mcp.thegraph.com/sse")
 API_KEY = os.environ.get("GRAPH_API_KEY", "")
-SUBGRAPH_ID = os.environ.get("TASHAN_SUBGRAPH_ID", "")
+# Defaults to the x402 settlement index that paid_demand.py actually reads, so `--probe` proves the
+# whole hop — client, transport, gateway, subgraph — with nothing but a gateway key. Point it at our
+# own subgraph with TASHAN_SUBGRAPH_ID once that is published.
+X402_SUBGRAPH = "Cb56epg3EvQ6JRpPfknbkM54QxpzTvLa7mwKNQQfUyoj"
+SUBGRAPH_ID = os.environ.get("TASHAN_SUBGRAPH_ID") or os.environ.get("X402_SUBGRAPH_ID") or X402_SUBGRAPH
 UA = "tashan/subgraph-mcp (+https://tashan.sh)"
 PROTOCOL = "2024-11-05"      # the revision that defines this HTTP+SSE transport
 
@@ -257,14 +261,12 @@ def main():
         if not API_KEY:
             print("GRAPH_API_KEY is not set. thegraph.com/studio -> API keys.")
             return 1
-        if not SUBGRAPH_ID:
-            print("TASHAN_SUBGRAPH_ID is not set. Publish the subgraph, then export its id.")
-            return 1
         with Session() as s:
             schema = s.call_tool("get_schema_by_subgraph_id", {"subgraph_id": SUBGRAPH_ID})
             print("schema via Subgraph MCP:", str(schema)[:400])
-        data = query("{ economy(id: \"x402\") { totalPaid payments receiversPaid } }")
-        print("economy via Subgraph MCP:", json.dumps(data))
+        data = query("{ x402DailyStats_collection(first: 1, orderBy: date, orderDirection: desc)"
+                     " { date totalPayments totalVolumeDecimal } }")
+        print("latest day via Subgraph MCP:", json.dumps(data)[:300])
         return 0
     print(__doc__.strip().splitlines()[0])
     print("  --probe     query the published subgraph through The Graph's MCP server")

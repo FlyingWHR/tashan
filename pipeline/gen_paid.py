@@ -279,6 +279,13 @@ def render(demand, export, today):
         + esc('{ x402AddressSummaries(first: 1000, where: {role: RECIPIENT}) {')
         + "<br>" + esc('    address totalPayments totalVolume } }')
         + "</code></div>",
+        # LITERALLY re-runnable, not just quotable. The client is in the repository and needs
+        # nothing but a gateway key, so the invitation costs a reader one command instead of an
+        # afternoon wiring an MCP client.
+        '<p class="mnote o-70">From a clone of the repo, one command runs exactly that hop:</p>',
+        '<div class="code"><code class="mono">'
+        + esc('GRAPH_API_KEY=<your key> python3 pipeline/subgraph_mcp.py --probe')
+        + "</code></div>",
         '<p class="mnote o-70">Addresses from the Bazaar’s own listings. Receipts from the '
         'chain. The join is an <b>exact host match</b> against a homepage or repository we already '
         'hold — never a fuzzy name match.</p>',
