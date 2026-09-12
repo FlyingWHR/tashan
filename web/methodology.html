@@ -258,6 +258,31 @@
       sandboxing, no testing of outputs for prompt injection, and no coverage of capabilities with no
       npm package to resolve. A clean audit means nothing <em>known</em> is wrong.</p>
 
+    <h2 id="paid">Settled payments</h2>
+    <p>Every other number here is a proxy: downloads, publish cadence, stars, config appearances.
+      Each can exist without one person finding the thing useful.</p>
+    <p>A settled payment cannot. Where a capability publishes an
+      <a class="link" href="https://x402.org/" rel="noopener">x402</a> price, a calling agent signs
+      a USDC transfer and the receipt is on Base permanently.</p>
+    <p>We read those receipts and join them to the catalog —
+      <a class="link" href="/paid.html">who gets paid</a>.</p>
+    <ul>
+      <li><b>Where it comes from.</b> A subgraph on The Graph Network, read through The Graph's own
+        Subgraph MCP server — the same tool call any agent can make. The page prints the call, and a
+        command that re-runs it.</li>
+      <li><b>How it is attached.</b> Exact host match only — a host counts when we already hold it
+        as the capability's own homepage or repository. Never a fuzzy name match.</li>
+      <li><b>Volume belongs to an address, not a project.</b> Where one payment address is shared by
+        several services, the chain cannot separate them, so that money is counted in the totals and
+        <b>never</b> attributed to a capability.</li>
+      <li><b>Zero is a measurement; absent is not.</b> "Never paid" means we asked the chain about
+        that exact address and it has never received a payment. A capability with no row here has no
+        payment address we can resolve — that is not a finding about it.</li>
+    </ul>
+    <p><b>It is not an input to the tashan score</b>, for the same reason the security audit is not:
+      "someone pays for this" and "this is well made" are different claims.</p>
+    <p>Almost every MCP server is free by design. Being unpaid is the normal case, not a defect.</p>
+
     <h2>What this is <em>not</em> (yet) — stated plainly</h2>
     <ul>
       <li>Adoption and upkeep are <b>not</b> outcome quality. They tell you a capability is used and kept alive —
