@@ -3,6 +3,11 @@
 Everything the Hacker Dashboard form asks for, written out. Nothing here needs editing to be
 submitted; trim if a field has a shorter limit than expected.
 
+**One caveat before pasting:** the figures below were true at 03:00 on 13 September and are
+recomputed nightly. `/paid.html` always carries the current ones. If you are submitting much later,
+open the page and copy the four headline numbers across — quoting a stale figure is the single
+thing this project cannot afford to be caught doing.
+
 **Track:** Continuity (Extend Open Source / Ship a Feature) — *not* Classic "From Scratch".
 tashan predates the event, the pre-existing work is documented at the top of `README.md`, and the
 in-window commits are listed there individually.
@@ -44,11 +49,11 @@ all volume belongs to one receiver. `/paid.html` publishes that distribution, ne
 own, because a sum is the one statistic a concentrated economy always passes.
 
 The receipts are read from a subgraph on The Graph Network **through The Graph's own Subgraph MCP
-server** — the same tool call any agent can make — and the page prints the endpoint, the tool and
-the query so a reader re-runs it instead of trusting our exporter. 31 capabilities in the published
-catalog have receipts attributable to them, under a rule that keeps it honest: volume is a property
-of an *address*, so an address shared by several services is counted in the totals and never
-attributed to one project.
+server** — the same tool call any agent can make. The page prints the endpoint, the tool, the query
+and a one-line command that re-runs the whole hop from a clone, so a reader checks us rather than
+trusting our exporter. Around thirty capabilities in the published catalog have receipts
+attributable to them, under a rule that keeps it honest: volume is a property of an *address*, so an
+address shared by several services is counted in the totals and never attributed to one project.
 
 Payment is deliberately not an input to the score. "Someone pays for this" and "this is well made"
 are different claims, and folding them would hide exactly the case worth seeing.
