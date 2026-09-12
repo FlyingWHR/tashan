@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Sequential Thinking](https://tashan.sh/capability/pkg-modelcontextprotocol-server-sequential-thinking.html) | 90 | 133k/wk | active |
-| 2 | [Eve](https://tashan.sh/capability/pkg-eve.html) | 85 | 542k/wk | active |
-| 3 | [Cline](https://tashan.sh/capability/pkg-cline.html) | 85 | 142k/wk | active |
-| 4 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 79 | 11k ★ | active |
-| 5 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 78 | 17k ★ | active |
-| 6 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 78 | 89k ★ | active |
-| 7 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 77 | 6k ★ | active |
-| 8 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 77 | 122k/wk | active |
-| 9 | [Agentic Flow](https://tashan.sh/capability/pkg-agentic-flow.html) | 77 | 79k/wk | active |
-| 10 | [Clawdi](https://tashan.sh/capability/pkg-clawdi.html) | 77 | 4k/wk | active |
-| 11 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 76 | 9k ★ | active |
-| 12 | [Ruflo](https://tashan.sh/capability/pkg-ruflo.html) | 76 | 43k/wk | active |
-| 13 | [Instar](https://tashan.sh/capability/pkg-instar.html) | 76 | 43k/wk | active |
-| 14 | [Claude Harness](https://tashan.sh/capability/plugin-chachamaru127-claude-code-harness-claude-harness.html) | 74 | 3k ★ | active |
-| 15 | [Daedalus CLI](https://tashan.sh/capability/pkg-daedalus-cli.html) | 74 | 15k/wk | active |
-| 16 | [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) | 73 | 14k/wk | active |
-| 17 | [Iclavue](https://tashan.sh/capability/pkg-iclavue.html) | 73 | 11k/wk | active |
-| 18 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow.html) | 72 | 10k/wk | active |
-| 19 | [Agent Nuvira](https://tashan.sh/capability/pkg-agent-nuvira.html) | 72 | 7k/wk | active |
-| 20 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 72 | 7k/wk | active |
-| 21 | [Claude Code](https://tashan.sh/capability/pkg-go-hare-claude-code.html) | 72 | 3k/wk | active |
-| 22 | [Cq](https://tashan.sh/capability/plugin-mozilla-ai-cq-cq.html) | 71 | 1k ★ | active |
-| 23 | [Takt](https://tashan.sh/capability/pkg-takt.html) | 71 | 5k/wk | active |
-| 24 | [Klypix](https://tashan.sh/capability/pkg-klypix-mcp.html) | 71 | 4k/wk | active |
-| 25 | [Claudish](https://tashan.sh/capability/pkg-claudish.html) | 71 | 4k/wk | active |
-| 26 | [Tokst](https://tashan.sh/capability/pkg-tokst-mcp-server.html) | 71 | 2k/wk | active |
-| 27 | [Monet](https://tashan.sh/capability/pkg-team-monet-monet.html) | 71 | 819/wk | active |
-| 28 | [Patchwork OS](https://tashan.sh/capability/pkg-patchwork-os.html) | 70 | 8k/wk | active |
-| 29 | [Toon Memory](https://tashan.sh/capability/pkg-toon-memory.html) | 70 | 3k/wk | active |
-| 30 | [Workfile](https://tashan.sh/capability/pkg-illodev-workfile.html) | 70 | 3k/wk | active |
-| 31 | [Luma](https://tashan.sh/capability/pkg-luma-mcp.html) | 70 | 3k/wk | active |
-| 32 | [Grix Connector](https://tashan.sh/capability/pkg-grix-connector.html) | 70 | 3k/wk | active |
-| 33 | [DeepSeek](https://tashan.sh/capability/pkg-arikusi-deepseek-mcp-server.html) | 70 | 3k/wk | active |
-| 34 | [Moflo](https://tashan.sh/capability/pkg-moflo.html) | 70 | 3k/wk | active |
-| 35 | [Borgmcp](https://tashan.sh/capability/pkg-borgmcp.html) | 70 | 2k/wk | active |
-| 36 | [Engramx](https://tashan.sh/capability/pkg-engramx-mcp.html) | 70 | 2k/wk | active |
-| 37 | [Contextium](https://tashan.sh/capability/pkg-contextium-mcp-server.html) | 70 | 655/wk | active |
-| 38 | [Acontext](https://tashan.sh/capability/plugin-memodb-io-acontext-acontext.html) | 69 | 4k ★ | active |
-| 39 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 69 | 2k/wk | active |
-| 40 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 69 | 2k/wk | active |
+| 1 | [Sequential Thinking](https://tashan.sh/capability/pkg-modelcontextprotocol-server-sequential-thinking.html) | 94 | 109k/wk | active |
+| 2 | [Eve](https://tashan.sh/capability/pkg-eve.html) | 84 | 702k/wk | active |
+| 3 | [Cline](https://tashan.sh/capability/pkg-cline.html) | 83 | 44k/wk | active |
+| 4 | [Openviking Memory](https://tashan.sh/capability/plugin-volcengine-openviking-openviking-memory.html) | 81 | 34k ★ | active |
+| 5 | [Neurolink](https://tashan.sh/capability/pkg-juspay-neurolink.html) | 79 | 6k/wk | active |
+| 6 | [Gitnexus](https://tashan.sh/capability/plugin-abhigyanpatwari-gitnexus-gitnexus.html) | 78 | 47k ★ | active |
+| 7 | [Clawdi](https://tashan.sh/capability/pkg-clawdi.html) | 78 | 5k/wk | active |
+| 8 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 77 | 11k ★ | active |
+| 9 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 77 | 17k ★ | active |
+| 10 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 77 | 89k ★ | active |
+| 11 | [Todos](https://tashan.sh/capability/pkg-hasna-todos.html) | 77 | 50k/wk | active |
+| 12 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow-cli.html) | 77 | 36k/wk | active |
+| 13 | [Mementos](https://tashan.sh/capability/pkg-hasna-mementos.html) | 77 | 34k/wk | active |
+| 14 | [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) | 77 | 13k/wk | active |
+| 15 | [Z AI](https://tashan.sh/capability/pkg-z-ai-mcp-server.html) | 77 | 8k/wk | active |
+| 16 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 76 | 6k ★ | active |
+| 17 | [Diffusers](https://tashan.sh/capability/plugin-huggingface-diffusers-diffusers.html) | 76 | 34k ★ | active |
+| 18 | [Copilotkit](https://tashan.sh/capability/plugin-copilotkit-copilotkit-copilotkit.html) | 76 | 37k ★ | active |
+| 19 | [Ruflo](https://tashan.sh/capability/pkg-ruflo.html) | 76 | 29k/wk | active |
+| 20 | [Agents CLI](https://tashan.sh/capability/pkg-phnx-labs-agents-cli.html) | 76 | 5k/wk | active |
+| 21 | [Agentmemory](https://tashan.sh/capability/plugin-rohitg00-agentmemory-agentmemory.html) | 75 | 28k ★ | active |
+| 22 | [Claude Flow · ruvnet](https://tashan.sh/capability/pkg-claude-flow.html) | 75 | 17k/wk | active |
+| 23 | [Octo](https://tashan.sh/capability/plugin-nyldn-claude-octopus-octo.html) | 74 | 4k ★ | active |
+| 24 | [DeepSeek](https://tashan.sh/capability/pkg-deepseek-mcp-server.html) | 74 | 970/wk | active |
+| 25 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 74 | 9k ★ | active |
+| 26 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 74 | 79k/wk | active |
+| 27 | [Agentic Flow](https://tashan.sh/capability/pkg-agentic-flow.html) | 74 | 67k/wk | active |
+| 28 | [Instar](https://tashan.sh/capability/pkg-instar.html) | 74 | 11k/wk | active |
+| 29 | [Grix Connector](https://tashan.sh/capability/pkg-grix-connector.html) | 73 | 7k/wk | active |
+| 30 | [Iclavue](https://tashan.sh/capability/pkg-iclavue.html) | 73 | 6k/wk | active |
+| 31 | [Daedalus CLI](https://tashan.sh/capability/pkg-daedalus-cli.html) | 73 | 5k/wk | active |
+| 32 | [Claude Harness](https://tashan.sh/capability/plugin-chachamaru127-claude-code-harness-claude-harness.html) | 72 | 3k ★ | active |
+| 33 | [Clickup](https://tashan.sh/capability/pkg-taazkareem-clickup-mcp-server.html) | 72 | 13k/wk | active |
+| 34 | [Ecc Universal](https://tashan.sh/capability/pkg-ecc-universal.html) | 72 | 7k/wk | active |
+| 35 | [Trace](https://tashan.sh/capability/pkg-trace-mcp.html) | 72 | 5k/wk | active |
+| 36 | [Takt](https://tashan.sh/capability/pkg-takt.html) | 72 | 5k/wk | active |
+| 37 | [Xopc](https://tashan.sh/capability/pkg-xopcai-xopc.html) | 72 | 5k/wk | active |
+| 38 | [Code Graph](https://tashan.sh/capability/pkg-sdsrs-code-graph.html) | 72 | 4k/wk | active |
+| 39 | [Cq](https://tashan.sh/capability/plugin-mozilla-ai-cq-cq.html) | 71 | 1k ★ | active |
+| 40 | [Acontext](https://tashan.sh/capability/plugin-memodb-io-acontext-acontext.html) | 71 | 4k ★ | active |
 
-Showing the top 40 of 634. The full ranked shelf is at https://tashan.sh/category/ai.html.
+Showing the top 40 of 663. The full ranked shelf is at https://tashan.sh/category/ai.html.
 
 ## What these numbers are not
 

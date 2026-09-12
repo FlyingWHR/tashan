@@ -11,18 +11,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Anki](https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html) | 79 | 2k/wk | active |
-| 2 | [Campus CLI](https://tashan.sh/capability/pkg-campus-cli.html) | 66 | 1k/wk | active |
-| 3 | [Guide](https://tashan.sh/capability/plugin-orinachum-onboarding-claude-code-guide.html) | 59 | 117 ★ | active |
-| 4 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 45 | 26 ★ | active |
-| 5 | [Gogcli MCP Classroom](https://tashan.sh/capability/pkg-gogcli-mcp-classroom.html) | 69 | 1k/wk | active |
-| 6 | [Claude Education Skills Library](https://tashan.sh/capability/plugin-garethmanning-claude-education-skills-claude-education-skills-library.html) | 64 | 471 ★ | active |
-| 7 | [Learning Output Style](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-learning-output-style.html) | 42 | 1 marketplaces | — |
-| 8 | [Claude Coach](https://tashan.sh/capability/skill-alirezarezvani-claude-coach.html) | not scored | 1 repos | active |
-| 9 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | not scored | 1 repos | active |
-| 10 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | not scored | 1 repos | active |
-| 11 | [Syllabus](https://tashan.sh/capability/skill-alirezarezvani-syllabus.html) | not scored | 1 repos | active |
-| 12 | [StudioMeyer Academy](https://tashan.sh/capability/pkg-mcp-academy.html) | 59 | 330/wk | active |
+| 1 | [Anki](https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html) | 78 | 2k/wk | active |
+| 2 | [Campus CLI](https://tashan.sh/capability/pkg-campus-cli.html) | 62 | 1k/wk | active |
+| 3 | [Guide · OriNachum](https://tashan.sh/capability/plugin-orinachum-onboarding-claude-code-guide.html) | 56 | 117 ★ | active |
+| 4 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 44 | 26 ★ | active |
+| 5 | [Gogcli MCP Classroom](https://tashan.sh/capability/pkg-gogcli-mcp-classroom.html) | 64 | 525/wk | active |
+| 6 | [Claude Education Skills Library](https://tashan.sh/capability/plugin-garethmanning-claude-education-skills-claude-education-skills-library.html) | 59 | 471 ★ | active |
+| 7 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 49 | 4 repos | active |
+| 8 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 47 | 3 repos | active |
+| 9 | [Learning Output Style](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-learning-output-style.html) | 46 | 2 marketplaces | — |
+| 10 | [Smarter Weather Developer Onboarding](https://tashan.sh/capability/pkg-smarterweather-mcp-onboarding.html) | 56 | 212/wk | active |
+| 11 | [StudioMeyer Academy](https://tashan.sh/capability/pkg-mcp-academy.html) | 55 | 330/wk | active |
+| 12 | [Merekit](https://tashan.sh/capability/pkg-merekit-cli.html) | 54 | 81/wk | active |
 
 ## What these numbers are not
 

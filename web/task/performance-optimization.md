@@ -11,16 +11,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Pagespeed Insights](https://tashan.sh/capability/pkg-pagespeed-insights-mcp.html) | 69 | 2k/wk | active |
-| 2 | [Convai Analytics](https://tashan.sh/capability/pkg-convai-analytics-mcp.html) | 41 | 102/wk | active |
-| 3 | [Swiftui Expert](https://tashan.sh/capability/plugin-avdlee-swiftui-agent-skill-swiftui-expert.html) | 76 | 3k ★ | active |
-| 4 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 69 | 1k/wk | active |
-| 5 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 62 | 897/wk | active |
-| 6 | [Prompt Optimizer](https://tashan.sh/capability/pkg-mcp-prompt-optimizer.html) | 56 | 123/wk | active |
-| 7 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 53 | 153/wk | active |
-| 8 | [Lighthouse · lighthouse-mcp](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 46 | 580/wk | active |
-| 9 | [Callstack Skills](https://tashan.sh/capability/plugin-kingstinct-github-callstack-skills.html) | 42 | 1 marketplaces | — |
-| 10 | [RASON](https://tashan.sh/capability/pkg-frontlinesystems-rason-mcp-server.html) | 42 | 78/wk | active |
+| 1 | [Swiftui Expert](https://tashan.sh/capability/plugin-avdlee-swiftui-agent-skill-swiftui-expert.html) | 73 | 3k ★ | active |
+| 2 | [Prodcheck](https://tashan.sh/capability/pkg-prodcheck.html) | 69 | 2k/wk | active |
+| 3 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 65 | 1k/wk | active |
+| 4 | [Perfonext Profiler](https://tashan.sh/capability/pkg-perfonext-profiler-mcp.html) | 64 | 633/wk | active |
+| 5 | [Jprofiler](https://tashan.sh/capability/pkg-ej-technologies-jprofiler-mcp.html) | 62 | 234/wk | active |
+| 6 | [Memorylens](https://tashan.sh/capability/pkg-memorylens-mcp.html) | 61 | 665/wk | active |
+| 7 | [Pkgdiet](https://tashan.sh/capability/pkg-pkgdiet.html) | 61 | 632/wk | active |
+| 8 | [Perf](https://tashan.sh/capability/plugin-qainsights-perf-skills-perf.html) | 52 | 14 ★ | active |
+| 9 | [Prompt Optimizer](https://tashan.sh/capability/pkg-mcp-prompt-optimizer.html) | 52 | 123/wk | active |
+| 10 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 50 | 153/wk | active |
+| 11 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 48 | 48/wk | active |
+| 12 | [Lighthouse · lighthouse-mcp](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 45 | 1k/wk | active |
 
 ## What these numbers are not
 

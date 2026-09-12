@@ -11,26 +11,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 78 | 118k/wk | active |
-| 2 | [Git](https://tashan.sh/capability/pkg-cyanheads-git-mcp-server.html) | 76 | 5k/wk | active |
-| 3 | [Gk CLI](https://tashan.sh/capability/pkg-gitkraken-gk.html) | 68 | 5k/wk | active |
-| 4 | [Gitea](https://tashan.sh/capability/pkg-gitea-mcp.html) | 46 | 894/wk | active |
-| 5 | [Bitbucket · MatanYemini](https://tashan.sh/capability/pkg-bitbucket-mcp.html) | 41 | 5k/wk | abandoned |
-| 6 | [GitHub · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-github.html) | not scored | 130k/wk | abandoned |
-| 7 | [Nomoreide](https://tashan.sh/capability/pkg-nomoreide.html) | 64 | 628/wk | active |
-| 8 | [Project Knowledge](https://tashan.sh/capability/pkg-project-knowledge.html) | 61 | 182/wk | active |
-| 9 | [Gitpin](https://tashan.sh/capability/pkg-gitpin.html) | 60 | 776/wk | active |
-| 10 | [Udacity Commit](https://tashan.sh/capability/pkg-mcp-udacity-commit.html) | 57 | 373/wk | active |
-| 11 | [Weavatrix Git](https://tashan.sh/capability/pkg-weavatrix-git.html) | 47 | 62/wk | active |
-| 12 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 46 | 66/wk | active |
-| 13 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 69 | 1k/wk | active |
-| 14 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 58 | 171/wk | active |
-| 15 | [Quilt](https://tashan.sh/capability/pkg-quilt-dev-cli.html) | 57 | 119/wk | active |
-| 16 | [General](https://tashan.sh/capability/plugin-kingstinct-github-general.html) | 42 | 1 marketplaces | — |
-| 17 | [Git Clean Gone](https://tashan.sh/capability/plugin-smykla-skalski-sai-git-clean-gone.html) | 42 | 1 marketplaces | — |
-| 18 | [Git Stage Hunk](https://tashan.sh/capability/plugin-smykla-skalski-sai-git-stage-hunk.html) | 42 | 1 marketplaces | — |
-| 19 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 44 | 71/wk | active |
-| 20 | [Bitbucket · shyamayadav154](https://tashan.sh/capability/pkg-mcp-bitbucket.html) | 44 | 37/wk | active |
+| 1 | [Git](https://tashan.sh/capability/pkg-cyanheads-git-mcp-server.html) | 80 | 7k/wk | active |
+| 2 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 78 | 66k/wk | active |
+| 3 | [Gk CLI](https://tashan.sh/capability/pkg-gitkraken-gk.html) | 64 | 5k/wk | active |
+| 4 | [Nomoreide](https://tashan.sh/capability/pkg-nomoreide.html) | 62 | 443/wk | active |
+| 5 | [Project Knowledge](https://tashan.sh/capability/pkg-project-knowledge.html) | 57 | 182/wk | active |
+| 6 | [Gitpin](https://tashan.sh/capability/pkg-gitpin.html) | 53 | 208/wk | active |
+| 7 | [Udacity Commit](https://tashan.sh/capability/pkg-mcp-udacity-commit.html) | 45 | 50/wk | active |
+| 8 | [Kobo](https://tashan.sh/capability/pkg-loicngr-kobo.html) | 69 | 1k/wk | active |
+| 9 | [Rebase](https://tashan.sh/capability/pkg-rebasepro-mcp.html) | 69 | 1k/wk | active |
+| 10 | [Avcs](https://tashan.sh/capability/pkg-izagood-avcs.html) | 68 | 721/wk | active |
+| 11 | [Gitwand](https://tashan.sh/capability/pkg-gitwand-mcp.html) | 67 | 1k/wk | active |
+| 12 | [Audit](https://tashan.sh/capability/pkg-sofagent-audit.html) | 67 | 827/wk | active |
+| 13 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 65 | 1k/wk | active |
+| 14 | [Komnet](https://tashan.sh/capability/pkg-komnet.html) | 65 | 1k/wk | active |
+| 15 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 54 | 171/wk | active |
+| 16 | [Quilt](https://tashan.sh/capability/pkg-quilt-dev-cli.html) | 53 | 119/wk | active |
+| 17 | [Atlassian Bitbucket](https://tashan.sh/capability/pkg-aashari-mcp-server-atlassian-bitbucket.html) | 45 | 4k/wk | abandoned |
+| 18 | [Uvcs](https://tashan.sh/capability/pkg-proanima-uvcs-mcp.html) | 44 | 65/wk | active |
 
 ## What these numbers are not
 

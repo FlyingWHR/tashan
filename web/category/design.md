@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Figma Developer](https://tashan.sh/capability/pkg-figma-developer-mcp.html) | 86 | 58k/wk | active |
-| 2 | [Figma Console](https://tashan.sh/capability/pkg-figma-console-mcp.html) | 83 | 6k/wk | active |
-| 3 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 81 | 51k ★ | active |
-| 4 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 78 | 34k ★ | active |
-| 5 | [Aimock](https://tashan.sh/capability/pkg-copilotkit-aimock.html) | 78 | 784k/wk | active |
-| 6 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 77 | 54k/wk | active |
-| 7 | [Semiotic](https://tashan.sh/capability/pkg-semiotic.html) | 77 | 9k/wk | active |
-| 8 | [Swiftui Expert](https://tashan.sh/capability/plugin-avdlee-swiftui-agent-skill-swiftui-expert.html) | 76 | 3k ★ | active |
-| 9 | [Codesign](https://tashan.sh/capability/pkg-imgly-codesign-mcp.html) | 74 | 1k/wk | active |
-| 10 | [Primevue](https://tashan.sh/capability/pkg-primevue-mcp.html) | 73 | 4k/wk | active |
-| 11 | [Shadcn UI](https://tashan.sh/capability/pkg-jpisnice-shadcn-ui-mcp-server.html) | 72 | 3k/wk | active |
-| 12 | [Figma](https://tashan.sh/capability/plugin-figma-mcp-server-guide-figma.html) | 72 | 2k ★ | active |
-| 13 | [Pm Claude Skills](https://tashan.sh/capability/plugin-mohitagw15856-pm-claude-skills-pm-claude-skills.html) | 72 | 1k ★ | active |
-| 14 | [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) | 71 | 829 ★ | active |
-| 15 | [Vendo](https://tashan.sh/capability/plugin-runvendo-vendo-vendo.html) | 71 | 381 ★ | active |
-| 16 | [Ue](https://tashan.sh/capability/pkg-ue-mcp.html) | 71 | 4k/wk | active |
-| 17 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 70 | 545/wk | active |
-| 18 | [Solid Design System](https://tashan.sh/capability/pkg-solid-design-system-mcp.html) | 70 | 315/wk | active |
-| 19 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
-| 20 | [Unreal Engine Skills For Claude Code](https://tashan.sh/capability/plugin-epicgames-unreal-engine-skills-for-claude-code-plugin-unreal-engine-skills-for-claude-code.html) | 69 | 157 ★ | active |
-| 21 | [Factory](https://tashan.sh/capability/plugin-hmlongco-factory-factory.html) | 69 | 3k ★ | active |
-| 22 | [Touchdesigner](https://tashan.sh/capability/pkg-touchdesigner-mcp-server.html) | 69 | 3k/wk | active |
-| 23 | [Sapiens Sintéticos](https://tashan.sh/capability/pkg-sapiens-mcp.html) | 69 | 2k/wk | active |
-| 24 | [Premiere Pro](https://tashan.sh/capability/pkg-premiere-pro-mcp.html) | 69 | 2k/wk | active |
-| 25 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 69 | 1k/wk | active |
-| 26 | [Runline](https://tashan.sh/capability/pkg-runline.html) | 69 | 1k/wk | active |
-| 27 | [Dgmo](https://tashan.sh/capability/pkg-diagrammo-dgmo-mcp.html) | 69 | 1k/wk | active |
-| 28 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 69 | 796/wk | active |
-| 29 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 69 | 305/wk | active |
-| 30 | [Comfyui Custom Nodes](https://tashan.sh/capability/plugin-jtydhr88-comfyui-custom-node-skills-comfyui-custom-nodes.html) | 68 | 257 ★ | active |
-| 31 | [Taiga UI](https://tashan.sh/capability/pkg-taiga-ui-mcp.html) | 68 | 2k/wk | active |
-| 32 | [Figma · planetabhi](https://tashan.sh/capability/pkg-figma-mcp-server.html) | 68 | 2k/wk | active |
-| 33 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 68 | 2k/wk | active |
-| 34 | [Figma Relai](https://tashan.sh/capability/pkg-figma-relai.html) | 68 | 2k/wk | active |
-| 35 | [Memi Design](https://tashan.sh/capability/pkg-memi-design-cli.html) | 68 | 1k/wk | active |
-| 36 | [Codefizz Editor Agent](https://tashan.sh/capability/pkg-codefizz-editor-agent.html) | 68 | 1k/wk | active |
-| 37 | [Customize Agent](https://tashan.sh/capability/pkg-customize-agent.html) | 68 | 1k/wk | active |
-| 38 | [Frontmcp](https://tashan.sh/capability/pkg-frontmcp.html) | 68 | 1k/wk | active |
-| 39 | [Canvas Lms](https://tashan.sh/capability/pkg-canvas-lms-mcp.html) | 68 | 671/wk | active |
-| 40 | [Myoperator](https://tashan.sh/capability/pkg-myoperator-mcp.html) | 68 | 506/wk | active |
+| 1 | [Bike4mind](https://tashan.sh/capability/pkg-bike4mind-cli.html) | 85 | 65k/wk | active |
+| 2 | [Ppt Master](https://tashan.sh/capability/plugin-hugohe3-ppt-master-ppt-master.html) | 83 | 50k ★ | active |
+| 3 | [Figma Developer](https://tashan.sh/capability/pkg-figma-developer-mcp.html) | 83 | 57k/wk | active |
+| 4 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 79 | 51k ★ | active |
+| 5 | [Figma Console](https://tashan.sh/capability/pkg-figma-console-mcp.html) | 78 | 3k/wk | active |
+| 6 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 78 | 61k/wk | active |
+| 7 | [Diagram Design](https://tashan.sh/capability/plugin-cathrynlavery-diagram-design-diagram-design.html) | 77 | 37k ★ | active |
+| 8 | [Aimock](https://tashan.sh/capability/pkg-copilotkit-aimock.html) | 77 | 2.6m/wk | active |
+| 9 | [Mui](https://tashan.sh/capability/pkg-mui-mcp.html) | 77 | 10k/wk | active |
+| 10 | [Design System](https://tashan.sh/capability/pkg-infineon-design-system-mcp.html) | 77 | 3k/wk | active |
+| 11 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 76 | 34k ★ | active |
+| 12 | [Nextjs](https://tashan.sh/capability/plugin-vercel-next-js-nextjs.html) | 76 | 142k ★ | active |
+| 13 | [Open Design](https://tashan.sh/capability/plugin-nexu-io-open-design-open-design.html) | 76 | 93k ★ | active |
+| 14 | [Gpt Image 2 Style Library](https://tashan.sh/capability/plugin-freestylefly-awesome-gpt-image-2-gpt-image-2-style-library.html) | 76 | 25k ★ | active |
+| 15 | [Lib](https://tashan.sh/capability/pkg-aleph-alpha-lib-mcp.html) | 76 | 3k/wk | active |
+| 16 | [UI UX Pro Max](https://tashan.sh/capability/plugin-nextlevelbuilder-ui-ux-pro-max-skill-ui-ux-pro-max.html) | 75 | 123k ★ | active |
+| 17 | [Taste Skill](https://tashan.sh/capability/plugin-leonxlnx-taste-skill-taste-skill.html) | 75 | 82k ★ | active |
+| 18 | [21st](https://tashan.sh/capability/plugin-21st-dev-magic-mcp-21st.html) | 75 | 6k ★ | active |
+| 19 | [Pandacss](https://tashan.sh/capability/pkg-pandacss-mcp.html) | 75 | 260k/wk | active |
+| 20 | [Primeng](https://tashan.sh/capability/pkg-primeng-mcp.html) | 75 | 5k/wk | active |
+| 21 | [Magic · mastergo](https://tashan.sh/capability/pkg-mastergo-magic-mcp.html) | 75 | 2k/wk | active |
+| 22 | [Kami](https://tashan.sh/capability/plugin-tw93-kami-kami.html) | 74 | 11k ★ | active |
+| 23 | [Semiotic](https://tashan.sh/capability/pkg-semiotic.html) | 74 | 3k/wk | active |
+| 24 | [Figma](https://tashan.sh/capability/plugin-figma-mcp-server-guide-figma.html) | 73 | 2k ★ | active |
+| 25 | [Swiftui Expert](https://tashan.sh/capability/plugin-avdlee-swiftui-agent-skill-swiftui-expert.html) | 73 | 3k ★ | active |
+| 26 | [Ccg](https://tashan.sh/capability/plugin-fengshao1227-ccg-workflow-ccg.html) | 73 | 6k ★ | active |
+| 27 | [Primer](https://tashan.sh/capability/pkg-primer-mcp.html) | 73 | 8k/wk | active |
+| 28 | [React Aria](https://tashan.sh/capability/pkg-react-aria-mcp.html) | 73 | 3k/wk | active |
+| 29 | [Canvas Kit](https://tashan.sh/capability/pkg-workday-canvas-kit-mcp.html) | 73 | 970/wk | active |
+| 30 | [Design Data](https://tashan.sh/capability/pkg-adobe-design-data-mcp.html) | 73 | 859/wk | active |
+| 31 | [Memtrace](https://tashan.sh/capability/pkg-memtrace.html) | 72 | 5k/wk | active |
+| 32 | [Kolbo](https://tashan.sh/capability/pkg-kolbo-mcp.html) | 72 | 4k/wk | active |
+| 33 | [Robloxstudio](https://tashan.sh/capability/pkg-chrrxs-robloxstudio-mcp.html) | 72 | 4k/wk | active |
+| 34 | [Docs · seed-design](https://tashan.sh/capability/pkg-seed-design-docs-mcp.html) | 72 | 2k/wk | active |
+| 35 | [Cds](https://tashan.sh/capability/pkg-coinbase-cds-mcp-server.html) | 72 | 2k/wk | active |
+| 36 | [Codesign](https://tashan.sh/capability/pkg-imgly-codesign-mcp.html) | 72 | 1k/wk | active |
+| 37 | [Factory](https://tashan.sh/capability/plugin-hmlongco-factory-factory.html) | 71 | 3k ★ | active |
+| 38 | [Gsap Skills](https://tashan.sh/capability/plugin-greensock-gsap-skills-gsap-skills.html) | 71 | 15k ★ | active |
+| 39 | [Igniteui Theming](https://tashan.sh/capability/pkg-igniteui-theming.html) | 71 | 9k/wk | active |
+| 40 | [Roast My Design System](https://tashan.sh/capability/pkg-roast-my-design-system.html) | 71 | 2k/wk | active |
 
-Showing the top 40 of 856. The full ranked shelf is at https://tashan.sh/category/design.html.
+Showing the top 40 of 1,138. The full ranked shelf is at https://tashan.sh/category/design.html.
 
 ## What these numbers are not
 

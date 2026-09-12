@@ -9,56 +9,56 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 ## The short answer
 
-- **Visual design** — [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) · tashan score 81
-- **Animation and generated imagery** — [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) · tashan score 77
+- **Visual design** — [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) · tashan score 79
+- **Animation and generated imagery** — [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) · tashan score 78
 - **User research** — [Frog](https://tashan.sh/capability/pkg-frog.html) · tashan score 74
 
 ## Ranked
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 77 | 54k/wk | active |
-| 2 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 60 | 3k ★ | active |
-| 3 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 51 | 182 ★ | active |
-| 4 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 51 | 5 ★ | active |
-| 5 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 81 | 51k ★ | active |
-| 6 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 74 | 5k/wk | active |
-| 7 | [Shadcn UI](https://tashan.sh/capability/pkg-jpisnice-shadcn-ui-mcp-server.html) | 72 | 3k/wk | active |
-| 8 | [Figma](https://tashan.sh/capability/plugin-figma-mcp-server-guide-figma.html) | 72 | 2k ★ | active |
-| 9 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 71 | 1k ★ | active |
-| 10 | [Touchdesigner](https://tashan.sh/capability/pkg-touchdesigner-mcp-server.html) | 69 | 3k/wk | active |
-| 11 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 67 | 137 ★ | active |
-| 12 | [Microcharts](https://tashan.sh/capability/pkg-microcharts-mcp.html) | 64 | 836/wk | active |
-| 13 | [Drawio](https://tashan.sh/capability/pkg-drawio-mcp-server.html) | 62 | 1k/wk | active |
-| 14 | [Inference Sh](https://tashan.sh/capability/plugin-inference-sh-skills-inference-sh.html) | 60 | 660 ★ | active |
-| 15 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 59 | 28 ★ | active |
-| 16 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 58 | 40 ★ | active |
-| 17 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 58 | 302 ★ | active |
-| 18 | [Canva](https://tashan.sh/capability/plugin-canva-sdks-canva-skills-canva.html) | 57 | 53 ★ | active |
-| 19 | [Bridge Ds](https://tashan.sh/capability/plugin-noemuch-bridge-bridge-ds.html) | 52 | 155 ★ | active |
-| 20 | [Pencil Dev Skill](https://tashan.sh/capability/plugin-nisus74-pencil-skill-pencil-dev-skill.html) | 51 | 15 ★ | active |
-| 21 | [Debate](https://tashan.sh/capability/plugin-agent-sh-debate-debate.html) | 49 | 3 ★ | active |
-| 22 | [Perception First Design](https://tashan.sh/capability/plugin-skovalik-perception-first-design-perception-first-design.html) | 47 | 80 ★ | active |
-| 23 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 47 | 6 ★ | active |
-| 24 | [Buildable](https://tashan.sh/capability/plugin-suntay44-buildable-plugin-skills-buildable.html) | 46 | 52 ★ | active |
-| 25 | [Get Design Done](https://tashan.sh/capability/plugin-hegemonart-get-design-done-get-design-done.html) | 45 | 4 ★ | active |
-| 26 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 45 | 7 ★ | active |
-| 27 | [Paper Desktop](https://tashan.sh/capability/plugin-paper-design-agent-plugins-paper-desktop.html) | 44 | 11 ★ | active |
-| 28 | [Claude2figma](https://tashan.sh/capability/plugin-senlindesign-claude2figma-claude2figma.html) | 43 | 180 ★ | active |
-| 29 | [The Design Library](https://tashan.sh/capability/plugin-zeta92-design-library-plugin-the-design-library.html) | 42 | 10 ★ | active |
-| 30 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 78 | 34k ★ | active |
-| 31 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
-| 32 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 64 | 865/wk | active |
-| 33 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 57 | 6 repos | active |
-| 34 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 52 | 9 ★ | active |
-| 35 | [Brand Guidelines](https://tashan.sh/capability/skill-anthropics-brand-guidelines.html) | 51 | 3 repos | active |
-| 36 | [Frank Grimes](https://tashan.sh/capability/plugin-misfitdev-claude-plugins-frank-grimes.html) | 49 | 2 ★ | active |
-| 37 | [Canvas Design](https://tashan.sh/capability/skill-anthropics-canvas-design.html) | 48 | 2 repos | active |
-| 38 | [Playground](https://tashan.sh/capability/skill-anthropics-playground.html) | 48 | 2 repos | active |
-| 39 | [Design System](https://tashan.sh/capability/skill-alirezarezvani-design-system.html) | 47 | 2 repos | active |
-| 40 | [UI Design System](https://tashan.sh/capability/skill-alirezarezvani-ui-design-system.html) | 47 | 2 repos | active |
+| 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 78 | 61k/wk | active |
+| 2 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 56 | 3k ★ | active |
+| 3 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 48 | 182 ★ | active |
+| 4 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 48 | 5 ★ | active |
+| 5 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 79 | 51k ★ | active |
+| 6 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 74 | 13k/wk | active |
+| 7 | [Figma](https://tashan.sh/capability/plugin-figma-mcp-server-guide-figma.html) | 73 | 2k ★ | active |
+| 8 | [Shadcn UI](https://tashan.sh/capability/pkg-jpisnice-shadcn-ui-mcp-server.html) | 70 | 4k/wk | active |
+| 9 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 69 | 1k ★ | active |
+| 10 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 63 | 137 ★ | active |
+| 11 | [Touchdesigner](https://tashan.sh/capability/pkg-touchdesigner-mcp-server.html) | 60 | 664/wk | active |
+| 12 | [Canva](https://tashan.sh/capability/plugin-canva-sdks-canva-skills-canva.html) | 59 | 53 ★ | active |
+| 13 | [Microcharts](https://tashan.sh/capability/pkg-microcharts-mcp.html) | 59 | 315/wk | active |
+| 14 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 56 | 28 ★ | active |
+| 15 | [Inference Sh](https://tashan.sh/capability/plugin-inference-sh-skills-inference-sh.html) | 56 | 660 ★ | active |
+| 16 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 55 | 302 ★ | active |
+| 17 | [Drawio · lgazo](https://tashan.sh/capability/pkg-drawio-mcp-server.html) | 55 | 717/wk | active |
+| 18 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 54 | 40 ★ | active |
+| 19 | [Pencil Dev Skill](https://tashan.sh/capability/plugin-nisus74-pencil-skill-pencil-dev-skill.html) | 50 | 15 ★ | active |
+| 20 | [Bridge Ds](https://tashan.sh/capability/plugin-noemuch-bridge-bridge-ds.html) | 48 | 155 ★ | active |
+| 21 | [Debate](https://tashan.sh/capability/plugin-agent-sh-debate-debate.html) | 46 | 3 ★ | active |
+| 22 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 44 | 6 ★ | active |
+| 23 | [Perception First Design](https://tashan.sh/capability/plugin-skovalik-perception-first-design-perception-first-design.html) | 43 | 80 ★ | active |
+| 24 | [Buildable](https://tashan.sh/capability/plugin-suntay44-buildable-plugin-skills-buildable.html) | 42 | 52 ★ | active |
+| 25 | [Claude2figma](https://tashan.sh/capability/plugin-senlindesign-claude2figma-claude2figma.html) | 40 | 180 ★ | active |
+| 26 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 76 | 34k ★ | active |
+| 27 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
+| 28 | [Brand Guidelines](https://tashan.sh/capability/skill-anthropics-brand-guidelines.html) | 54 | 6 repos | active |
+| 29 | [Canvas Design](https://tashan.sh/capability/skill-anthropics-canvas-design.html) | 50 | 4 repos | active |
+| 30 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 50 | 4 repos | active |
+| 31 | [Theme Factory](https://tashan.sh/capability/skill-anthropics-theme-factory.html) | 48 | 3 repos | active |
+| 32 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 48 | 9 ★ | active |
+| 33 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 48 | 43/wk | active |
+| 34 | [Algorithmic Art](https://tashan.sh/capability/skill-anthropics-algorithmic-art.html) | 48 | 3 repos | active |
+| 35 | [Slack Gif Creator](https://tashan.sh/capability/skill-anthropics-slack-gif-creator.html) | 48 | 3 repos | active |
+| 36 | [Design System · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-design-system.html) | 47 | 3 repos | active |
+| 37 | [UI Design System](https://tashan.sh/capability/skill-alirezarezvani-ui-design-system.html) | 47 | 3 repos | active |
+| 38 | [Product Manager Toolkit](https://tashan.sh/capability/skill-alirezarezvani-product-manager-toolkit.html) | 47 | 3 repos | active |
+| 39 | [UX Researcher Designer](https://tashan.sh/capability/skill-alirezarezvani-ux-researcher-designer.html) | 47 | 3 repos | active |
+| 40 | [Frank Grimes](https://tashan.sh/capability/plugin-misfitdev-claude-plugins-frank-grimes.html) | 47 | 2 ★ | active |
 
-Showing the top 40 of 148. The full ranked shelf is at https://tashan.sh/role/designer.html.
+Showing the top 40 of 155. The full ranked shelf is at https://tashan.sh/role/designer.html.
 
 ## What these numbers are not
 
