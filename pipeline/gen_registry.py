@@ -100,6 +100,19 @@ def main():
             "measured_at": gen,
             "method": BASE + "/methodology.html",
         }}
+        # SETTLED RECEIPTS, for the consumer that cannot ask a follow-up question. Emitted only
+        # when paid_seen_at says we asked the chain, so a measured zero ("this address has never
+        # been paid") is never confused with silence — the same rule the rest of this file follows
+        # for scores. The caveat travels with the number, because an agent has nowhere to read it.
+        if c.get("paid_seen_at"):
+            meta["sh.tashan/measurement"]["settled"] = {
+                "usd": c.get("paid_usd"),
+                "payments": c.get("paid_calls"),
+                "protocol": "x402", "chain": "base", "measured_at": c["paid_seen_at"],
+                "note": ("settled payments at this capability's own payment address, all time. A "
+                         "zero here is measured, not missing. Deliberately NOT an input to the "
+                         "score: being paid and being well made are different claims."),
+            }
         if c.get("registry_status"):
             meta["io.modelcontextprotocol.registry/official"] = {"status": c["registry_status"]}
         rows.append({"server": server_block(c), "_meta": meta})
