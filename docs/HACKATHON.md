@@ -54,6 +54,24 @@ Eight commits, suite green on each.
 | `c565d8e9` | Co-use links filtered by id rather than by derived slug — which turned out to be the fix for the failure below, two hours after the run that could have proved it. |
 | *(13 Sep)* | That fix identified and proven from the CI log, with the collision case synthesised in `prerender.py --selftest`; the hero's freshness date read the render clock instead of the data; README split; `docs/AI-USAGE.md`. |
 
+## SHIPPED since this was written — the money signal is on the site
+
+`/paid.html`, a row on every dossier, a `paid_demand` tool on the MCP server, and
+`/data/demand.json`. Real receipts, no deploy key needed: we read a subgraph that was ALREADY
+published on The Graph Network (`x402 Base`, id `Cb56epg3EvQ6JRpPfknbkM54QxpzTvLa7mwKNQQfUyoj`)
+through The Graph's own Subgraph MCP server, which is the Track 1 composition and works today.
+
+    997 of 1,079 listed x402 receivers have been paid; 82 never have
+    $247,247 settled across 10,414,343 payments
+    median receiver: $0.51 all-time · 592 under $1 · 9 over $1,000 · top receiver = 67% of volume
+    31 capabilities in the published catalog have attributable receipts
+
+Our own subgraph is still worth publishing — it indexes the same economy independently, and
+disagreement between two indexes is a finding. It is no longer a blocker for the submission.
+
+The gateway key is a repo secret (`GRAPH_API_KEY`), so the nightly refreshes the figures. Without a
+key the stage keeps the last chain read rather than publishing zeros.
+
 ## Still open
 
 1. ~~**The cross-surface consistency suite is red.**~~ **FOUND AND FIXED.** It was `c565d8e9` —
@@ -88,7 +106,12 @@ Eight commits, suite green on each.
 3. **The 2–4 minute video.** Not startable by a model: the rules auto-reject AI voiceover, under
    720p, over 4 minutes, sped up, or phone-recorded. Script below.
 
-4. ~~**README split**~~ and ~~**AI-usage documentation**~~ — both done. `README.md` now opens with
+4. **The submission form itself.** `docs/SUBMISSION.md` is written to be pasted — title,
+   description, both partner write-ups with real feedback, the AI disclosure, and judging notes.
+   Select **Continuity (Extend Open Source / Ship a Feature)**, then The Graph and Bazantic as the
+   two partner prizes; leave the third empty.
+
+5. ~~**README split**~~ and ~~**AI-usage documentation**~~ — both done. `README.md` now opens with
    what is pre-existing (386 commits, 23 July – 11 Sep) against the eight in-window commits, and
    `docs/AI-USAGE.md` discloses the tooling, the planning artifacts, the two model-graded signals and
    the fence around them (no model output is published as a measurement, and none can move a rank).

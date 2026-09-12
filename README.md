@@ -19,8 +19,8 @@ the static site and its generated SEO/GEO tier, the CLI and MCP server (`tashan-
 published 2026-07-31, registry entry `sh.tashan/tashan`), and 34 test files. None of it counts as
 hackathon work and none of it is presented as such.
 
-**Built in the window (12–13 September 2026).** Eight commits, listed with what each one actually
-did — and one of them is a bug fix that had cost the project eighteen days of publishing:
+**Built in the window (12–13 September 2026).** Thirteen commits. Eleven are listed here; the
+other two are this README split and the AI-usage disclosure, which the rules require:
 
 | commit | what landed |
 |---|---|
@@ -32,8 +32,25 @@ did — and one of them is a bug fix that had cost the project eighteen days of 
 | `47abe203` | Directory data quality: 2,030 identities exist as more than one kind and 460 carry disagreeing scores. Measured and baselined so it cannot grow. |
 | `c565d8e9` | Co-use links filtered by id rather than by derived slug. |
 | *(13 Sep)* | That filter **was** the cross-surface consistency failure — proven, not guessed (see below), plus a freshness claim that was reading the render clock instead of the data. |
+| *(13 Sep)* | **`/paid.html` — the money signal, on the site.** Settled x402 payments on Base, read through The Graph's own Subgraph MCP server, joined to the catalog. A page, a row on every dossier, a `paid_demand` tool on our MCP server. |
+| *(13 Sep)* | A ratchet that punished measuring more: the identity gate compared an absolute count, tripled overnight when 18 days of enrichment backlog cleared, and withheld the site. It ratchets the rate now. |
+| *(13 Sep)* | UX: the stat grid had **no CSS at all** (so `/stats.html` shipped its headline numbers as a default `<dl>`), and the nav wrapped and collided with the wordmark on every phone. |
 
-**The eighteen-day bug, since it is the most useful thing in this list.** `tests/test_consistency.py`
+**The headline feature: which AI services actually get paid.** Every other number here is a proxy
+for demand measured from outside — downloads, publish cadence, stars, appearances in public configs
+— and all of them can exist without anyone finding the thing useful. A settled USDC payment cannot.
+`/paid.html` asks the chain about all 1,079 x402 payment addresses harvested from the Bazaar's
+listings: **997 have been paid at least once, 82 never have**, they have settled **$247,247 across
+10.4 million payments**, and the **median service has earned $0.51 in its entire life**. Two thirds
+of all volume is one receiver. The page publishes that distribution rather than the total, because a
+sum is the one statistic a concentrated economy always passes.
+
+It is read through The Graph's own Subgraph MCP server (`pipeline/subgraph_mcp.py` — an MCP client
+over HTTP+SSE, stdlib only, no SDK and no `npx mcp-remote`), so the page can print the endpoint, the
+tool and the query and invite you to re-run it. Payment is deliberately **not** an input to the
+score, for the same reason the security columns are not.
+
+**The eighteen-day bug, since it is the second most useful thing in this list.** `tests/test_consistency.py`
 had been failing every night since 27 August, which by design withholds the whole site — so tashan.sh
 served 25 August data for two and a half weeks. The cause: co-use links were filtered by *slug*
 against a set of slugs. A slug is a label derived from an id, and `pkg:stripe-mcp` and

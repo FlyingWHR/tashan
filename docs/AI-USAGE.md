@@ -11,12 +11,12 @@ is not a disclaimer, it is checkable: every such commit carries a `Co-Authored-B
 model, so the proportion is a `git log` query rather than an estimate.
 
 ```sh
-git log --format='%(trailers:key=Co-Authored-By,valueonly)' | grep -ci claude   # 316
-git rev-list --count HEAD                                                      # 394
+git log --format='%(trailers:key=Co-Authored-By,valueonly)' | grep -ci claude   # 321
+git rev-list --count HEAD                                                      # 399
 ```
 
-**316 of 394 commits** (80%), and **8 of the 8** commits inside the hackathon window. The remaining
-78 are early scaffolding, brand and copy work, and merges.
+**321 of 399 commits** (80%), and **13 of the 13** commits inside the hackathon window. The
+remaining 78 are early scaffolding, brand and copy work, and merges.
 
 What stayed human: the product decisions, and every decision where being wrong is expensive. Some
 are recorded in the commits themselves, which is where this repo keeps its reasoning —
@@ -42,7 +42,7 @@ Nothing here was planned in a chat window that reviewers cannot see:
 |---|---|
 | `PROJECT.md` | the thesis, positioning, moat and roadmap — the spec |
 | `CLAUDE.md` | the operational map, and the invariants that were learned the hard way (each one is there because it broke) |
-| `docs/` | 31 documents: architecture, competitive landscape, monetization, payments (`X402.md`), scale, audits, next steps |
+| `docs/` | 33 documents: architecture, competitive landscape, monetization, payments (`X402.md`), scale, audits, next steps |
 | `docs/GRADING-RUBRIC.md` | the published rubric the expertise grader is held to |
 | `docs/HACKATHON.md` | this entry's state, written to be picked up cold |
 | `brand/BRAND.md` | the design system |
