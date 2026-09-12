@@ -4,5 +4,6 @@
   "at_risk": 466,
   "diverging": 65,
   "rate": 0.1395,
-  "worst": 49.0
+  "worst": 49.0,
+  "note": "Recorded on a LOCAL database, which holds fewer scored channels than a completed nightly: 65 of 466 twice-scored identities here, 14.0%. CI run 34709783753 measured 173 of 2,162 on the full corpus \u2014 8.0%. Both are honest; the rate is a property of the corpus it was measured on. The gate therefore binds at the LOCAL rate and is looser than it could be in CI, where a genuine doubling from 8% would still pass under the 16% ceiling. Tighten it by running --accept on a machine that has just completed a full pipeline, after the deadline \u2014 not now, because a baseline recorded from CI would fail every local run and a gate that is red on a developer's machine gets disabled within a week."
 }
