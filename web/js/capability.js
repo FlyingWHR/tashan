@@ -143,8 +143,13 @@
   // ---------- tashan's read: turn the measured evidence into a one-line DECISION (the whole point) ----------
   function takeBlock(c) {
     if (c.tashan_score == null && !c.expertise_verdict) return "";
+    // THREE BANDS. `wrapper` and `slop` were retired from the scale because neither was a
+    // measurement: "a thin wrapper" is a KIND of artifact, not a lower grade, and "likely AI-slop"
+    // is a claim reading a README cannot establish — both were withdrawn, and both were still
+    // shipping in this bundle, one data migration away from rendering a retracted judgment about
+    // somebody's work. Nothing can emit them today; that is not a reason to keep the strings.
     var quality = { deep: "Deep, real domain work", solid: "Solid — does the job well",
-      thin: "Thin — shallow coverage", wrapper: "A thin wrapper over an API", slop: "Low-quality, likely AI-slop" }[c.expertise_verdict];
+      thin: "Thin — shallow coverage" }[c.expertise_verdict];
     var maint = { active: "actively maintained", stable: "mature and stable", abandoned: "looks abandoned" }[c.vitality];
     var adopted = (c.npm_downloads >= 5e4 || c.config_reach >= 20) ? "broadly adopted"
                 : (c.npm_downloads >= 5e3) ? "moderately adopted" : null;

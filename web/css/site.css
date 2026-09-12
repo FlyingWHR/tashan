@@ -654,7 +654,6 @@ body { padding-bottom: 30px; }
 .tk-sep { color: var(--text-faint); margin:0 1rem; }
 .tk-v { text-transform:uppercase; font-size:var(--fs-micro); letter-spacing:.05em; margin-left:.15rem; }
 .tk-v--deep{color:var(--green)} .tk-v--solid{color:var(--jade)} .tk-v--thin{color:var(--text-faint)}
-.tk-v--wrapper,.tk-v--slop{color:var(--red)}
 /* bottom status line (tmux-style) */
 .statusline { position:fixed; left:0; right:0; bottom:0; z-index:60; height:30px;
   display:flex; align-items:center; gap: var(--sp-6); padding:0 var(--sp-6);
