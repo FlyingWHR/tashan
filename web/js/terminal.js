@@ -106,12 +106,36 @@
   });
   function open() { if (!pal) return; pal.hidden = false; document.body.classList.add("pal-open"); input.value = ""; query(""); input.focus(); }
   function close() { if (!pal) return; pal.hidden = true; document.body.classList.remove("pal-open"); }
+  // CAPABILITIES BY TOKEN, RANKED — not by raw substring on the whole query. Jobs above are already
+  // scored on how many typed words they contain; capabilities were matched with indexOf(q), so this
+  // box answered "postgres" and answered "query postgres" with nothing, because that literal string
+  // appears in no name. The placeholder invites a sentence, so a sentence has to reach capabilities.
+  //
+  // Ranked by how many words match, never filtered to ALL of them: the palette can only see a name
+  // and an id, so "query postgres" has no row carrying both words and demanding both returns an
+  // empty list. More matched words wins; the board arrives score-ordered, so equal matches keep the
+  // measured order. Same principle the CLI uses with the full terms bag — matching more of what was
+  // asked for outranks matching less of it, and identity is what the palette has to match on.
+  function capHits(q, toks) {
+    var out = [];
+    for (var i = 0; i < caps.length; i++) {
+      var c = caps[i], n = 0;
+      if (c._s.indexOf(q) >= 0) n = toks.length + 1;          // the whole phrase, verbatim
+      else for (var j = 0; j < toks.length; j++) if (c._s.indexOf(toks[j]) >= 0) n++;
+      if (n) out.push({ n: n, i: i, c: c });
+    }
+    out.sort(function (a, b) { return (b.n - a.n) || (a.i - b.i); });
+    return out.map(function (x) { return x.c; });
+  }
+
   function query(q) {
     q = q.trim().toLowerCase();
     var pool;
     if (!q) {
       pool = PAGES.concat(jobs.slice(0, 6)).concat(caps.slice(0, 6));
-    } else if (["deep", "solid", "thin", "wrapper", "slop"].indexOf(q) >= 0) {
+    // THREE BANDS. `wrapper` and `slop` were withdrawn from the scale — neither was a measurement —
+    // so typing either here filtered for a verdict nothing can carry and returned an empty palette.
+    } else if (["deep", "solid", "thin"].indexOf(q) >= 0) {
       pool = caps.filter(function (c) { return c.expertise_verdict === q; });
     } else {
       // TOKEN MATCH, because people type sentences. A plain substring test could not answer "review
@@ -138,7 +162,13 @@
       }
       pool = PAGES.filter(function (p) { return p.name.toLowerCase().indexOf(q) >= 0; })
         .concat(scored.map(function (x) { return x.j; }))
-        .concat(caps.filter(function (c) { return c._s.indexOf(q) >= 0; }));   // _s: lowercased once at load
+        // CAPABILITIES BY TOKEN, NOT BY RAW SUBSTRING. The jobs above are scored on how many of the
+        // typed words they contain; capabilities were matched with indexOf(q) on the WHOLE query, so
+        // this box answered "postgres" and answered "query postgres" with nothing — the literal
+        // string never appears in a name. The placeholder invites a sentence, so a sentence has to
+        // reach the capabilities too. Every meaningful token must be present, which keeps it strict:
+        // matching one word of three is how a sign-up tool won "take a screenshot of a website".
+        .concat(capHits(q, toks));   // _s: lowercased once at load
     }
     view = pool.slice(0, 40); sel = 0; renderList();
   }

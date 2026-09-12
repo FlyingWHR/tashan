@@ -208,6 +208,26 @@ console.log("ok — task ranking uses descriptions, weighted by measurement");
     new URL("./mcp.mjs", import.meta.url), "utf8");
   assert.ok(/Math\.pow\(w, 1\.5\)/.test(src),
     "the swept score exponent is 1.5 — changing it requires re-running the sweep, not a guess");
+  assert.ok(/const IDENT_WEIGHT = 0\.7;/.test(src),
+    "the swept identity weight is 0.7 — bounded by two real cases, see the table at the use site");
+
+  // IDENTITY BEATS A PASSING MENTION, but never a large measurement gap. Both directions, because
+  // one without the other is how this went wrong: "query postgres" answered with @hasna/domains and
+  // run402-mcp — which mention postgres once — above @henkey/postgres-mcp-server, which is named
+  // for it; and the first fix that solved THAT put web-search (57) above tavily (86), which is the
+  // regression the assertion above this block exists to prevent. A name is cheap.
+  const pg = {
+    records: [
+      { id: "p1", name: "postgres-mcp-server", tashan_score: 69 },
+      { id: "p2", name: "domains",             tashan_score: 72 },
+    ],
+    terms: [
+      "database postgres postgresql queries schema",
+      "domains dns records postgres",           // mentions it once, is not about it
+    ],
+  };
+  assert.strictEqual(forTask(null, "query postgres", 1, pg)[0].name, "postgres-mcp-server",
+    "a capability NAMED for what was asked must beat one that merely mentions it three points higher");
 
   // NO CATEGORY BONUS. A flat +0.5 was worth more than a real token match on a common word, which is
   // how a website SIGN-UP tool kept winning "take a screenshot of a website" by matching only

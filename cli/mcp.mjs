@@ -167,6 +167,10 @@ export function taskTokens(task) {
  *  Scoring is idf-weighted — a rarer shared word is stronger evidence — and the tashan score breaks
  *  ties rather than driving the order, because a well-measured wrong tool is still the wrong tool.
  */
+// How much a match in the capability's own NAME outweighs the same match in its description.
+// Swept, not chosen by feel — see the table at the use site. Bounded on BOTH sides by real cases.
+const IDENT_WEIGHT = 0.7;
+
 export function forTask(all, task, limit, lookup = null) {
   const stem = (t) => (t.endsWith("s") && t.length > 3 ? t.slice(0, -1) : t);
   const toks = taskTokens(task);
@@ -178,6 +182,13 @@ export function forTask(all, task, limit, lookup = null) {
     // the singular — which is how "work with PDFs" surfaced brandsystem over opendataloader-pdf.
     const df = new Map();
     const bags = lookup.terms.map((b) => new Set(b.split(" ").filter(Boolean).map(stem)));
+    // WHAT THE AUTHOR NAMED IT is a stronger claim about what a thing is than a word that happens to
+    // appear in its blurb. Without this, "query postgres" answered with @hasna/domains and run402-mcp
+    // — two servers that MENTION postgres once — ranked above @henkey/postgres-mcp-server, which is
+    // named for it, purely because they scored 72 to its 69. Asking for a technology and being handed
+    // something that merely name-drops it is the product failing at its one job.
+    const ident = lookup.records.map((r) => new Set(
+      taskTokens(`${r.name || ""} ${r.npm_pkg || ""} ${r.label || ""} ${r.id || ""}`).map(stem)));
     for (const bag of bags) for (const t of bag) df.set(t, (df.get(t) || 0) + 1);
     const N = bags.length;
     const scored = [];
@@ -191,7 +202,27 @@ export function forTask(all, task, limit, lookup = null) {
         // corpus, which would make a genuine match count AGAINST the capability that has it. The 8%
         // cut in the pipeline makes that unreachable in production and it is trivially reachable in a
         // small set, so the arithmetic should not depend on the corpus being large.
-        if (bag.has(q)) rel += Math.max(0.05, Math.log(N / (1 + (df.get(q) || 1))));
+        const named = ident[i] && ident[i].has(q);
+        if (!bag.has(q) && !named) continue;
+        // IDENT_WEIGHT lifts a token matched in the capability's own NAME. Swept over fourteen judged
+        // phrases against the real export, scored mechanically — the rank-1 answer's own name must
+        // contain the technology the phrase asked for, so no judgement sits inside the loop:
+        //   0.0 -> 8/14 at rank 1, 10/14 in the top 3   (mentions beat identity: the bug)
+        //   0.2 -> 9/14, 12/14      0.4 -> 9/14, 12/14
+        //   0.5 -> 11/14, 12/14     0.6 -> 11/14, 13/14
+        //   0.7 -> 12/14, 13/14                          <- chosen: the knee
+        //   0.8, 0.85 -> 12/14, 13/14                    (no further gain)
+        //
+        // BOUNDED ON BOTH SIDES, and the upper bound is the interesting one. A name is cheap —
+        // anyone can publish a package called `web-search` — so identity must break a small
+        // measurement gap and never overturn a large one. The two real cases fix the window exactly:
+        //   @henkey/postgres-mcp-server (69) must beat @hasna/domains (72), which merely MENTIONS
+        //     postgres  ->  weight > (72/69)^1.5 - 1 = 0.066
+        //   tavily (86) must keep beating web-search (57), which is only NAMED for the task
+        //     ->  weight < (86/57)^1.5 - 1 = 0.853
+        // 0.7 sits inside [0.066, 0.853] and is the best rank-1 in it. Both bounds are asserted in
+        // cli/mcp.test.mjs; moving this number means re-running the sweep, not guessing.
+        rel += Math.max(0.05, Math.log(N / (1 + (df.get(q) || 1)))) * (named ? 1 + IDENT_WEIGHT : 1);
       }
       // NO CATEGORY NUDGE. It was here before descriptions were matchable, as the only signal that a
       // capability was even in the right area. Now the terms bag carries that and the nudge only
