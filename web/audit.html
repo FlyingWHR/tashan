@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=298">
+  <link rel="stylesheet" href="/css/site.css?v=302">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does my MCP config get uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. The config is parsed in your browser and only the bare package names are sent — never the env block, never a token, never a file path. An MCP config usually holds API keys and database URLs next to the package name, so nothing else is read, kept or transmitted."}},{"@type":"Question","name":"What does this check?","acceptedAnswer":{"@type":"Answer","text":"For each published package: known advisories at the version you would install today, whether it runs a script at install time, whether its repository is archived or the package deprecated, how many maintainers it has, and whether anything in its resolved dependency tree carries a known advisory. Every one of those findings is free and needs no account."}},{"@type":"Question","name":"Does a clean result mean my setup is safe?","acceptedAnswer":{"@type":"Answer","text":"No. It means nothing known is wrong with the packages we have measured. We do not read source code, execute anything, or test for prompt injection, and a package we have never measured is reported as unmeasured rather than as safe."}}]}</script>
 </head>
 <body>
@@ -31,9 +31,9 @@
     <div class="cap-hd">
       <p class="kicker">Your setup</p>
       <h1>What are you actually running?</h1>
-      <p class="lede">Paste your MCP config. You get every risk we hold about each server —
-        advisories at the version you would install today, install-time scripts, abandonment, and
-        anything vulnerable in the dependency tree. Free, no account, nothing to install.</p>
+      <p class="lede">Paste your MCP config. You get every risk we hold about each server:
+        advisories at the version you would install today, install-time scripts, abandonment,
+        anything vulnerable in the dependency tree. Free. No account. Nothing to install.</p>
     </div>
 
     <section class="capsec">
@@ -59,19 +59,19 @@
       <p class="note" id="audNote"></p>
     </section>
 
-    <section class="pro" data-pro="audit" hidden data-state="free"><div class="pro__hd"><span class="pro__tag mono">tashan Pro</span><span class="pro__price mono">$6<span class="pro__per">/mo</span></span></div><p class="pro__lede">You have just seen where these stand today. Pro shows you every score and signal behind them since we started measuring &mdash; whether each one is getting better or quietly sliding &mdash; and names a replacement for anything already dying.</p><ul class="pro__list"><li>Every score since we started measuring, for any capability</li><li>The named replacement when something you run is dying &mdash; not just that it is</li><li><code>tashan doctor</code> over the config you already have, on your machine</li></ul><p class="pro__cta"><a class="btn btn--primary" href="/pricing.html" data-e="cta" data-k="pro-audit">Start a 7-day trial &rsaquo;</a><span class="pro__free mono"> Everything measured on this page stays free.</span></p></section>
+    <section class="pro" data-pro="audit" hidden data-state="free"><div class="pro__hd"><span class="pro__tag mono">tashan Pro</span><span class="pro__price mono">$6<span class="pro__per">/mo</span></span></div><p class="pro__lede">That is where they stand today. Pro adds every score and signal behind them since we started measuring, so you can see which are getting better and which are quietly sliding &mdash; and names a replacement for anything already dying.</p><ul class="pro__list"><li>The whole series behind any row, back to the first day we measured it</li><li>The replacement, named &mdash; not just the news that something died</li><li><code>tashan doctor</code> over your own config, on your own machine</li></ul><p class="pro__cta"><a class="btn btn--primary" href="/pricing.html" data-e="cta" data-k="pro-audit">Start a 7-day trial &rsaquo;</a><span class="pro__free mono"> Everything measured on this page stays free.</span></p></section>
 
-    <div class="callout"><b>Absence is not safety.</b> A package we have never measured is reported as
-      unmeasured, never as clean — and a clean result means nothing known is wrong, not that nothing
-      is wrong. We read public evidence: we do not run the server, read its source, or test it for
-      prompt injection. What that does and does not cover is written out in the
+    <div class="callout"><b>Absence is not safety.</b> A package we have never measured is reported
+      as unmeasured, never as clean. A clean result means nothing known is wrong, not that nothing
+      is wrong. We read public evidence. We do not run the server, read its source, or test it for
+      prompt injection. What that covers and what it does not is written out in the
       <a class="link" href="/methodology.html">methodology</a>.</div>
   </main>
 
-  <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The trusted directory for your AI's toolbox — tools and skills, with the evidence behind every score.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/audit.html">Check my setup</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a><a href="/changes.html">What changed</a><a href="/stats.html">The numbers</a><a href="/paid.html">Who gets paid</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources, and checkable against them.</span></div></footer>
+  <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The trusted directory for your AI's toolbox.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/audit.html">Check my setup</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a><a href="/changes.html">What changed</a><a href="/stats.html">The numbers</a><a href="/paid.html">Who gets paid</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources. Every tool, on the record.</span></div></footer>
 
-  <script src="/js/terminal.js?v=298" defer></script>
-  <script src="/js/site.js?v=298" defer></script>
-  <script src="/js/audit.js?v=298" defer></script>
+  <script src="/js/terminal.js?v=302" defer></script>
+  <script src="/js/site.js?v=302" defer></script>
+  <script src="/js/audit.js?v=302" defer></script>
 </body>
 </html>

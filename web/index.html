@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="tashan — what's worth installing for the work you do">
   <meta name="twitter:description" content="The measurement layer for AI capabilities — known advisories, what runs at install time, and what each one can reach on your machine.">
-  <link rel="stylesheet" href="/css/site.css?v=298">
+  <link rel="stylesheet" href="/css/site.css?v=302">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"tashan","url":"https://tashan.sh/","description":"Thousands of MCP servers and agent skills, filed by the job you do and ranked on public evidence: upkeep, freshness and real adoption, with a security audit on the packages we can resolve.","slogan":"AI skills for your job, ranked on public evidence"}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"tashan","url":"https://tashan.sh/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://tashan.sh/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does tashan score MCP servers and skills?","acceptedAnswer":{"@type":"Answer","text":"tashan computes a transparent score from upkeep and freshness, gated by real adoption (npm downloads and public config reach). A separate LLM expertise-eval reads the actual capability and grades it deep / solid / thin. Every number links to the public source it came from."}},{"@type":"Question","name":"What decides where a capability ranks?","acceptedAnswer":{"@type":"Answer","text":"Public signal only: npm download volume and publish cadence, repository activity, maintainer count and registry status. The scorer is asserted to read only public-signal columns in tests/test_firewall.py, so the inputs are the ones documented on the methodology page and nothing else. Commercial relationships never influence task fit, measurements, findings, rankings or editorial recommendations."}},{"@type":"Question","name":"What is the difference between an MCP server and an agent skill?","acceptedAnswer":{"@type":"Answer","text":"An MCP server exposes tools to an AI agent over the Model Context Protocol; an agent skill is a folder with a SKILL.md that the agent loads on demand. tashan tracks and scores both in one unified capability model."}}]}</script>
@@ -54,6 +54,11 @@
       <span class="herosearch__eg rot mono" id="rot" aria-hidden="true"><span>review code</span></span>
       <span class="herosearch__k mono"><kbd>&#8984;K</kbd></span>
     </button>
+    <!-- THE COMMAND, IN THE HERO. Our strongest single proof is doctor finding real rot on a real
+         machine in three seconds, and it was buried in a card below the board. Two short sentences:
+         what it reads, and the thing everyone asks next. -->
+    <p class="hero__cmd mono"><code>npx tashan-cli doctor</code> <a class="link" href="/start.html">checks
+      the toolbox you already have &rsaquo;</a></p>
   </div></header>
 
   <!-- THE FIGURES, IN A PLACE BUILT FOR THEM. They used to be four values of four different kinds —
@@ -62,8 +67,8 @@
        they get the same component /stats.html and /paid.html use: a figure, what it is, and the one
        clause that makes it mean something. Baked by prerender; index.js refreshes them by id. -->
   <section class="section section--figures"><div class="wrap">
-    <p class="lede figures__lede"><strong>Ranked on upkeep, freshness and real adoption</strong> —
-      with a security audit on the packages we can resolve.</p>
+    <p class="lede figures__lede"><strong>Upkeep. Freshness. Real adoption. Known advisories at the
+      version you would install today.</strong> Four measures, every input public.</p>
     <dl class="stat">
       <div class="stat__i">
         <dt class="stat__n mono" id="sCaps">11,586</dt>
@@ -94,8 +99,8 @@
     <div class="section__head"><div>
       <p class="kicker">Start here</p>
       <h2>What do you do?</h2>
-      <p class="section__lede">Pick the work and the board below re-ranks to the capabilities measured
-        for it. Every count is capabilities on the board right now, not a catalogue total.</p>
+      <p class="section__lede">Pick the work. The board re-ranks to what we have measured for it.
+        Counts are live rows, not catalogue totals.</p>
     </div></div>
     <div class="rolegrid" id="rolegrid"></div>
   </div></section>
@@ -154,18 +159,20 @@
   <section class="section section--jobs"><div class="wrap">
     <div class="jobs">
       <a class="job" href="/start.html">
-        <p class="job__k mono">What&rsquo;s already in your toolbox</p>
-        <h3 class="job__h">Is anything in there dead or dangerous?</h3>
-        <p class="job__d">One command reads your Claude Code, Cursor and Desktop configs and flags
-          known advisories, install-time scripts, and anything deprecated, archived or abandoned.
-          Local only — nothing is uploaded.</p>
+        <p class="job__k mono">#1 &nbsp;Check</p>
+        <h3 class="job__h">Nothing rots unseen</h3>
+        <p class="job__d">Claude Code, Claude Desktop, Cursor, VS Code, Windsurf,
+          <code>~/.claude/skills/</code>. Read on your machine. Named if it is deprecated, archived,
+          abandoned, running an install script, or shadowing an official package name. Nothing is
+          uploaded.</p>
         <p class="job__cta mono">npx tashan-cli doctor &rsaquo;</p>
       </a>
       <a class="job" href="/llms.txt">
-        <p class="job__k mono">Let your agent choose</p>
-        <h3 class="job__h">Can my agent check before it installs?</h3>
-        <p class="job__d">A 50&nbsp;KB lookup of every score, the full set in MCP-registry shape, and a
-          SKILL.md you can install so checking is a tool call. An absent name means unmeasured, never bad.</p>
+        <p class="job__k mono">#2 &nbsp;Ask</p>
+        <h3 class="job__h">Your agent checks first</h3>
+        <p class="job__d">Every score in a 50&nbsp;KB lookup, the full set in MCP-registry shape, a
+          SKILL.md so checking is a tool call. A name we have never seen comes back unmeasured,
+          never bad.</p>
         <p class="job__cta mono">curl tashan.sh/v0.1/scores &rsaquo;</p>
       </a>
       <!-- THE THIRD CARD, and the grid has always been repeat(3, 1fr) — a third of this row was
@@ -173,8 +180,8 @@
            config appearances can all exist without anyone finding a capability useful, and a
            settled payment cannot. Numbers baked by prerender from demand.json, never typed. -->
       <a class="job" href="/paid.html">
-        <p class="job__k mono">Which tools get paid for</p>
-        <h3 class="job__h">Which of these do people actually pay for?</h3>
+        <p class="job__k mono">#3 &nbsp;Follow</p>
+        <h3 class="job__h">The money is public</h3>
         <p class="job__d" id="homePaid">997 of 1,079 x402 services have ever been paid — and the median one has earned $0.51 in its life.</p>
         <p class="job__cta mono">Who gets paid &rsaquo;</p>
       </a>
@@ -184,12 +191,17 @@
   <section class="section"><div class="wrap">
     <p class="kicker">How the ranking works</p>
     <div class="section__head"><h2>What goes into the number.</h2></div>
+    <!-- ONE PRODUCT, SIX THINGS IT DOES. These three cards and the three above it were two separate
+         essays about the same instrument, and a reader arriving mid-page could not tell whether
+         they were features or footnotes. Numbering them continuously — #1 through #6, verb first,
+         one short name, one sentence that names the actual inputs — is the Hermes shape: a grid you
+         can read in four seconds, where the specificity does the persuading. -->
     <div class="trust">
-      <div class="card"><h3>Upkeep, freshness, adoption</h3><p>Upkeep and freshness, gated by real adoption — npm downloads and public config reach.</p>
+      <div class="card"><p class="job__k mono">#4 &nbsp;Rank</p><h3>Kept, current, used</h3><p>Maintainer count, release cadence, deprecation and registry status; days since the last publish, push or release; npm downloads and public config reach as the gate.</p>
         <p class="card__note">Instruction depth is graded separately and never folded in. &ldquo;Well
         kept&rdquo; and &ldquo;well documented&rdquo; are different questions.</p></div>
-      <div class="card"><h3>We read the actual expertise</h3><p>We open each capability and grade what it documents against a published rubric — per-tool docs, worked examples, setup, a stated limitation. That is a read of the documentation, not of the running code.</p></div>
-      <div class="card"><h3>Checkable at the source</h3><p>No black box. Each signal is defined and points back at where it came from — the registry, npm, git history. If you don't believe a number, verify it.</p></div>
+      <div class="card"><p class="job__k mono">#5 &nbsp;Read</p><h3>Somebody opened the docs</h3><p>Per-tool documentation, two worked examples, setup and auth, a stated limitation. All four, or it is not deep. That is a read of the documentation, never of the running code.</p></div>
+      <div class="card"><p class="job__k mono">#6 &nbsp;Prove</p><h3>Every number, sourced</h3><p>No black box. Each signal points back at where it came from: the MCP registry, npm, git history, OSV. If you don&rsquo;t believe a number, go and check it.</p></div>
     </div>
     <!-- COVERAGE, NOT A CLAIM. "Audited first" sat over a corpus where three quarters of ranked
          capabilities had never been risk-scanned. Numbers that move only when we do the work are
@@ -204,7 +216,7 @@
         <li><b id="covJob">—</b> mapped to the work they are for, with the evidence for each mapping</li>
       </ul>
       <p class="coverage__note">The rest carry adoption and upkeep signal only. We publish what is
-        measured and say plainly what is not — the gaps are the roadmap.</p>
+        measured and name what is not. The gaps are the roadmap.</p>
     </div>
   </div></section>
 
@@ -217,29 +229,26 @@
        YOUR OWN config by doctor — which a page cannot know by construction. -->
   <section class="section" id="pro-anchor"><div class="wrap">
     <h2 class="sec-h">This board is a snapshot. Your stack is not.</h2>
-    <section class="pro" data-pro="home" data-state="free"><div class="pro__hd"><span class="pro__tag mono">tashan Pro</span><span class="pro__price mono">$6<span class="pro__per">/mo</span></span></div><p class="pro__lede">Every score, finding and advisory above is free, forever, no account. What an index cannot tell you is which of them <em>you</em> run &mdash; <a class="link" href="/audit.html">paste your config</a> and see, free, with nothing to install. Pro adds the series behind each one, and names a replacement when something you depend on is dying.</p><ul class="pro__list"><li>Every score since we started measuring, for any capability</li><li>The named replacement when something you run is dying &mdash; not just that it is</li><li><code>tashan doctor</code> over the config you already have, on your machine</li></ul><p class="pro__cta"><a class="btn btn--primary" href="/pricing.html" data-e="cta" data-k="pro-home">Start a 7-day trial &rsaquo;</a><span class="pro__free mono"> Everything measured on this page stays free.</span></p></section>
+    <section class="pro" data-pro="home" data-state="free"><div class="pro__hd"><span class="pro__tag mono">tashan Pro</span><span class="pro__price mono">$6<span class="pro__per">/mo</span></span></div><p class="pro__lede">Every score, finding and advisory above is free, forever, no account. An index cannot know which of them <em>you</em> run. <a class="link" href="/audit.html">Paste your config</a> and see &mdash; free, nothing to install. Pro adds the series behind each row, and names the replacement when something you depend on is dying.</p><ul class="pro__list"><li>The whole series behind any row, back to the first day we measured it</li><li>The replacement, named &mdash; not just the news that something died</li><li><code>tashan doctor</code> over your own config, on your own machine</li></ul><p class="pro__cta"><a class="btn btn--primary" href="/pricing.html" data-e="cta" data-k="pro-home">Start a 7-day trial &rsaquo;</a><span class="pro__free mono"> Everything measured on this page stays free.</span></p></section>
   </div></section>
 
-  <!-- THE NAME, ON THE PAGE PEOPLE ACTUALLY REACH. The proverb has been in brand/BRAND.md,
-       PROJECT.md and one paragraph on /about.html — page eleven — while the ridge art at the top of
-       this page has been drawing it the whole time. It is the most memorable thing we have and it
-       explains an unfamiliar name in one line. -->
-  <section class="section section--name"><div class="wrap">
-    <p class="lede"><span lang="zh">他山之石，可以攻玉</span> — <em>a stone from another mountain can
-      polish your jade.</em></p>
-    <p class="mnote o-70">Every tool in your AI&rsquo;s toolbox was made on somebody else&rsquo;s
-      mountain. Not all of them are worth carrying home. <a class="link" href="/about.html">Why we
-      are called tashan &rsaquo;</a></p>
-  </div></section>
+  <!-- THE NAME, AS A COLOPHON. It had a section of its own with a lede-sized pull quote, which made
+       an origin note read like a fourth product claim two scroll-lengths after the last one. The
+       proverb is the quietest thing we own and it should arrive that way: one line, footnote
+       weight, the last thing on the page. There for the reader who wondered about the word;
+       invisible to the reader who did not. The full story is on /about.html, where it belongs. -->
+  <p class="colophon wrap"><span lang="zh">他山之石，可以攻玉</span> — <em>a stone from another
+    mountain can polish your jade.</em> Every tool your AI uses was made on somebody else&rsquo;s.
+    <a class="link" href="/about.html">Why we are called tashan &rsaquo;</a></p>
 
   </main>
 
-  <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The trusted directory for your AI's toolbox — tools and skills, with the evidence behind every score.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/audit.html">Check my setup</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a><a href="/changes.html">What changed</a><a href="/stats.html">The numbers</a><a href="/paid.html">Who gets paid</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources, and checkable against them.</span></div></footer>
+  <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The trusted directory for your AI's toolbox.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/audit.html">Check my setup</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a><a href="/changes.html">What changed</a><a href="/stats.html">The numbers</a><a href="/paid.html">Who gets paid</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources. Every tool, on the record.</span></div></footer>
 
-  <script src="/js/ridge.js?v=298" defer></script>
-  <script src="/js/hero.js?v=298" defer></script>
-  <script src="/js/terminal.js?v=298" defer></script>
-  <script src="/js/site.js?v=298" defer></script>
-  <script src="/js/index.js?v=298" defer></script>
+  <script src="/js/ridge.js?v=302" defer></script>
+  <script src="/js/hero.js?v=302" defer></script>
+  <script src="/js/terminal.js?v=302" defer></script>
+  <script src="/js/site.js?v=302" defer></script>
+  <script src="/js/index.js?v=302" defer></script>
 </body>
 </html>

@@ -1117,8 +1117,8 @@ def bake_hero(caps, total, gen=""):
                 eco_all = (json.load(fh) or {}).get("economy") or {}
         except (OSError, ValueError):
             eco_all = {}
-    paid_card = ("Settled x402 receipts on Base, joined to the capabilities we measure — "
-                 "the one signal here that is not a proxy for demand.")
+    paid_card = ("Settled x402 receipts on Base, joined to the capabilities we measure. "
+                 "The one signal here that is not a proxy for demand.")
     if eco_all.get("receivers_paid") and eco_all.get("median_usd") is not None:
         paid_card = (f"{eco_all['receivers_paid']:,} of "
                      f"{eco_all['receivers_paid'] + eco_all.get('receivers_never_paid', 0):,} "

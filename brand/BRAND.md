@@ -67,7 +67,29 @@ Rule: **numbers are mono, prose is sans, wisdom is serif.**
 Precise, evidence-first, quietly confident, **humble about the unknown**. Short declaratives.
 No hype, no exclamation, no adjectives we can't measure. We say plainly what we *can't* yet
 measure and call it the roadmap. Signature line: **"Measure what actually works."** Core stance:
-**measured, not claimed.**
+**measured, not claimed.** Sign-off: **"Every tool, on the record."**
+
+### The five rules of the register
+
+Held against the best product copy in this field (Nous Research's Hermes Agent page, Midjourney,
+skills.sh). The failure mode here has never been hype — it is a *defensive* sentence: a claim
+followed by two subordinate clauses protecting it. Judged page by page, the copy was arguing with a
+reader who had not objected yet.
+
+1. **Declare, don't explain.** One clause per sentence where one clause will carry it. A full stop
+   is cheaper than an em-dash, and an em-dash is almost always a clause we added to feel safer.
+   *"Free. No account. Nothing to install."* beats *"Free, no account, nothing to install."*
+2. **Verb first, and number it.** Product capabilities are `#1 CHECK` / `Nothing rots unseen` / one
+   sentence. A reader should be able to take the whole product off the page in four seconds. The
+   homepage runs #1–#6 continuously across two bands, because they are one instrument.
+3. **Enumerate instead of quantifying.** Never "many platforms" — say *Claude Code, Claude Desktop,
+   Cursor, VS Code, Windsurf, `~/.claude/skills/`*. Never "several checks" — name them. Listing the
+   actual things is the cheapest credibility available to us, and we own more lists than anyone.
+4. **Put the command where the reader is.** The hero carries `npx tashan-cli doctor`, not a
+   description of it. The fastest proof this works is somebody running it.
+5. **The caveats stay, compressed.** *"A name we have never seen comes back unmeasured, never bad."*
+   is the same promise as the old three-clause version and survives being read. Epistemic honesty is
+   the moat; hedging is not honesty, it is decoration on honesty.
 
 ## What to never do
 Pay-to-rank. Star-counting. Fabricated scores. A single black-box number. Illustration/gradients.

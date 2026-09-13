@@ -159,7 +159,9 @@ img { max-width: 100%; display: block; }
    shadow AREA — a wide scrim behind the hero text, sitting above the canvas but under the words. */
 .hero__in::before { content:""; position:absolute; z-index:-1; pointer-events:none;
   left:-4%; right:0; top:-6%; bottom:-8%;
-  background: radial-gradient(52% 58% at 20% 46%,
+  /* The block gained a line when the doctor command moved into the hero, so the scrim's reach had
+     to follow it down — otherwise the last line sits outside the shadow, on bare ridge. */
+  background: radial-gradient(54% 66% at 20% 52%,
     rgba(11,11,10,.82) 0%, rgba(11,11,10,.52) 40%, rgba(11,11,10,.18) 68%, rgba(11,11,10,0) 100%); }
 /* TWO COLUMNS ON A REAL SCREEN — the art stops being a backdrop and gets its own half.
    Everything above this rule is the cost of the old arrangement: a four-layer text-shadow on every
@@ -208,6 +210,19 @@ img { max-width: 100%; display: block; }
 .rot { display:inline-block; overflow:hidden; height:1.2em; vertical-align:-0.28em; }
 .rot > span { display:inline-block; color: var(--jade); will-change: transform, opacity; }
 .hero__sub { margin: var(--sp-5) 0 0; max-width: 42rem; font-size: var(--text-lead); color: var(--text-dim); line-height:1.5; }
+/* THE COMMAND BELONGS ABOVE THE FOLD. Hermes puts `curl … | bash` in the hero, under the buttons,
+   because the fastest proof a product works is the reader running it. Ours was three sections down
+   inside a card. Small, dim and mono so it reads as machine residue rather than a third message
+   competing with the headline. */
+.hero__cmd { margin: var(--sp-4) 0 0; font-size: var(--fs-sm); color: var(--text-faint);
+  line-height:1.6; max-width: 46rem; }
+/* THE COLOPHON — the name's story at footnote weight, last thing on the page. A hairline separates
+   it from the content above so it reads as a signature rather than a final claim. */
+.colophon { border-top:1px solid var(--hairline); margin: var(--sp-24) auto var(--sp-16);
+  padding-top: var(--sp-6); font-size: var(--fs-xs); color: var(--text-faint); line-height:1.8; }
+.colophon em { font-style: italic; }
+.hero__cmd code { color: var(--jade); }
+@media (max-width: 40rem) { .hero__cmd { font-size: var(--fs-xs); } }
 /* A capability that should not be installed. The one place on the site that stops you rather than
    informs you, so it does not look like every other callout. */
 .callout--stop { border-color: var(--red); }
@@ -533,7 +548,10 @@ td.num .unit { display:block; line-height:1.25; white-space:nowrap; }
 .trust { display:grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: var(--sp-4); }
 .trust .card { border:1px solid var(--hairline); border-radius: var(--radius); padding: var(--sp-6); background: var(--surface); }
 .trust .card h3 { margin:0 0 .4rem; font-size:var(--fs-md); font-weight:600; display:flex; align-items:center; gap:.5rem; }
-.trust .card h3::before { content:""; width:7px; height:7px; border-radius:2px; background: var(--jade); }
+/* The jade square was this card's only label. Now that each card is numbered (#4 RANK) in the same
+   mono kicker the three cards above it use, the square is a second marker for the same job — and it
+   is the one that breaks the run of six, since the .job cards never had one. */
+.trust .card h3::before { content:none; }
 .trust .card p { margin:0; color: var(--text-dim); font-size:var(--fs-base); }
 
 /* ---------- prose (methodology / about) ---------- */

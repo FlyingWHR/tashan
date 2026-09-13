@@ -28,7 +28,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=298">
+  <link rel="stylesheet" href="/css/site.css?v=302">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span><span class="brand__wm">tashan</span></a><div class="nav__links"><a href="/">Find skills</a><a href="/browse.html">Jobs</a><a href="/audit.html">Check my setup</a><a href="/pricing.html" aria-current="page">Pricing</a><a class="nav__acct" id="navAcct" href="/account.html" title="Your account" aria-label="Your account"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span class="nav__pro mono" id="navPro" hidden>Pro</span></a></div></div></nav>
@@ -37,11 +37,10 @@
     <header class="phead">
       <p class="hero__eyebrow">Pricing</p>
       <h1 class="phead__h">The facts are free. The work is paid.</h1>
-      <p class="phead__sub">Every score and every risk we hold about a tool is free forever, for
-        people and for agents alike. More than
-        <b>1,382</b> of the things we measure are abandoned or deprecated right now.
-        <strong>What costs money is having the work done: your toolbox watched over time, or the
-        answer assembled on demand.</strong></p>
+      <p class="phead__sub">Every score, and every risk we hold about a tool you name, is free
+        forever. People and agents alike. Right now <b>1,382</b> of the things we measure are
+        abandoned or deprecated. <strong>What costs money is the work: your toolbox watched over
+        time, or the answer assembled on demand.</strong></p>
     </header>
 
     <div class="plans">
@@ -50,16 +49,19 @@
           <span class="plan__name">Free</span>
           <span class="plan__price">$0<small>/forever</small></span>
         </div>
-        <p class="plan__for">Every fact we hold, free. A finding is never paywalled — what a scan
-          found is free, including the fix. This product exists to stop you installing something
-          dangerous; charging for that would make it worse at its own job.</p>
+        <p class="plan__for">Every fact we hold. A finding is never paywalled: what the scan found
+          is free, including the fix. This product exists to stop you installing something
+          dangerous. Charging for that would make it worse at its own job.</p>
         <ul class="plan__feat">
-          <li><b>The risk scan in full</b> — which CVE or GHSA, its severity and the version that
-            fixes it; the exact command a package runs at install time; and everything it can reach
-            on your machine. The detail, not just the count.</li>
-          <li>The full Index — every tashan score and expertise grade, filed by job function</li>
-          <li><code>doctor</code> audits the config you already have, on your machine, no account</li>
-          <li>Badges, and the agent endpoints that answer about a tool you name — no key, no quota</li>
+          <li><b>The risk scan in full.</b> Which CVE or GHSA, its severity, the version that fixes
+            it, the exact command a package runs at install time, everything it can reach on your
+            machine. The detail, not the count.</li>
+          <li><b>The whole Index.</b> Every tashan score and instruction-depth grade, filed by the
+            job it is for.</li>
+          <li><b><code>doctor</code>, on your machine.</b> Your own config, no account, nothing
+            uploaded.</li>
+          <li><b>Badges and the agent endpoints.</b> Ask about any tool by name. No key, no
+            quota.</li>
         </ul>
         <a class="btn btn--ghost plan__cta" href="/">Browse the Index &rsaquo;</a>
         <p class="plan__note mono">no account · no key · no quota</p>
@@ -70,7 +72,7 @@
           <span class="plan__name">tashan Pro</span>
           <span class="plan__price" id="proPrice">$6<small>/mo</small></span>
         </div>
-                <p class="plan__for"><b>The work, done for you.</b> Free tells you what is true today. Pro adds the history behind each row — so a number has a direction — and names the replacement for anything dead.</p>
+                <p class="plan__for"><b>The work, done for you.</b> Free tells you what is true today. Pro adds the history behind each row, so a number has a direction and not just a value, and names the replacement for anything dead.</p>
         <div class="callout mono fs-sm mb-4">$ tashan doctor <span class="o-50"># with Pro: score history and the named replacement</span></div>
         <ul class="plan__feat">
             <li>A new advisory against something you run</li>
@@ -98,13 +100,13 @@
       <p class="capsec__sub">Your agent does not want a subscription. It turns up once, needs an
         answer, and can pay for it by itself.</p>
       <ul class="bul">
-        <li><b>Asking stays free.</b> Every score, and every risk we hold about a tool it names — no
+        <li><b>Asking stays free.</b> Every score, and every risk we hold about a tool it names. No
           key, no quota. An agent checking before it installs is the whole point of this product.</li>
-        <li><b>Assembling is the work.</b> The kit for a job with versions pinned and checked clean,
-          a ready-to-paste config for its host, and why each pick beat the rest. The advisory detail
+        <li><b>Assembling is the work.</b> The kit for a job, versions pinned and checked clean, a
+          ready-to-paste config for its host, and why each pick beat the rest. The advisory detail
           and the fix. The history behind a row.</li>
-        <li><b>It pays per call with <a class="link" href="https://x402.org/" rel="noopener">x402</a></b>
-          — HTTP 402, a stablecoin transfer, fractions of a cent, no account to create and no key to
+        <li><b>It pays per call with <a class="link" href="https://x402.org/" rel="noopener">x402</a>.</b>
+          HTTP 402, a stablecoin transfer, fractions of a cent. No account to create, no key to
           store. A licence covers it too, if a human is already paying.</li>
       </ul>
       <p class="mnote o-70">Which is also why we are on <a class="link" href="/paid.html">our own paid
@@ -113,8 +115,8 @@
 
     <section class="capsec pricing-detail">
       <div class="capsec__hd"><h2>What an alert actually says</h2></div>
-      <p class="capsec__sub">Every one names what changed, why it matters and what to do about it. A
-        warning that only says "something changed" is one you learn to ignore, so we do not send those.</p>
+      <p class="capsec__sub">What changed, why it matters, what to do about it. A warning that only
+        says "something changed" is one you learn to ignore, so we do not send those.</p>
       <div class="callout mono fs-sm">! @acme/db-mcp — install script added in 2.1.0<br>
         &nbsp;&nbsp;runs: <span class="o-50">node ./scripts/post.js</span> — it did not in 2.0.4, which is
         what you installed<br>
@@ -128,10 +130,10 @@
          advisory detail have answered 402 for months — and it also undersold the thing: a person
          reading a page costs us nothing, an agent assembling a kit is doing work worth paying for.
          The line is not human-versus-agent, it is ASKING versus TAKING. -->
-    <div class="callout"><b>Building on tashan?</b> Asking is free — every score, every risk we hold
-      about a tool you name, for people and for agents alike, no key and no quota. The assembled
-      answers are priced: the kit with versions pinned, the advisory detail and the fix, the history
-      behind a row. A licence covers them, or an agent can pay per call with
+    <div class="callout"><b>Building on tashan?</b> Asking is free: every score, every risk we hold
+      about a tool you name, for people and agents alike, no key and no quota. The assembled answers
+      are priced: the kit with versions pinned, the advisory detail and the fix, the history behind a
+      row. A licence covers them, or an agent pays per call with
       <a class="link" href="https://x402.org/" rel="noopener">x402</a> — no account, fractions of a
       cent. <a class="link" href="/for-hosts.html">Swap one base URL &rsaquo;</a></div>
 
@@ -193,9 +195,9 @@
     <p class="sec-gap"><a class="btn btn--ghost" href="/">&lsaquo; Back to the Index</a></p>
   </main>
 
-  <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The trusted directory for your AI's toolbox — tools and skills, with the evidence behind every score.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/audit.html">Check my setup</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a><a href="/changes.html">What changed</a><a href="/stats.html">The numbers</a><a href="/paid.html">Who gets paid</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources, and checkable against them.</span></div></footer>
+  <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The trusted directory for your AI's toolbox.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/audit.html">Check my setup</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a><a href="/changes.html">What changed</a><a href="/stats.html">The numbers</a><a href="/paid.html">Who gets paid</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources. Every tool, on the record.</span></div></footer>
 
-  <script src="/js/terminal.js?v=298" defer></script>
-  <script src="/js/site.js?v=298" defer></script>
+  <script src="/js/terminal.js?v=302" defer></script>
+  <script src="/js/site.js?v=302" defer></script>
 </body>
 </html>

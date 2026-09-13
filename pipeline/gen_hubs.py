@@ -299,18 +299,18 @@ def hub_pro(rows, what, key):
     n_ch = sum(len(c.get("changes") or []) for c in rows)
     graded = sum(1 for c in rows if c.get("expertise_verdict"))
     if n_ch:
-        lede = ("We recorded <b>" + f"{n_ch:,}" + (" change" if n_ch == 1 else " changes")
-                + "</b> across " + what + " in the last 45 days &mdash; a new advisory, an install "
-                "script appearing, a maintainer leaving. They are listed free above. Pro keeps "
-                "the series behind each row, so a number today comes with a direction.")
+        lede = ("<b>" + f"{n_ch:,}" + (" change" if n_ch == 1 else " changes")
+                + "</b> across " + what + " in the last 45 days. A new advisory, an install script "
+                "appearing, a maintainer leaving. All listed free above. Pro keeps the series behind "
+                "each row, so a number today comes with a direction.")
     elif graded:
         lede = ("Nothing on this shelf moved in the last 45 days, and " + str(graded) + " of these "
                 "are graded against their own documentation. Pro keeps the series behind each one, "
                 "so you can see which are climbing and which are quietly sliding.")
     else:
-        lede = ("This shelf ranks what is measured today. Pro keeps the series behind it, so you "
-                "can tell a project getting better from one on its way down &mdash; and names a "
-                "replacement for anything already dead.")
+        lede = ("This shelf ranks what is measured today. Pro keeps the series behind it, so you can "
+                "tell a project getting better from one on its way down, and names a replacement for "
+                "anything already dead.")
     return chrome.pro_panel(lede, key)
 
 
@@ -429,12 +429,12 @@ def cat_page(cat, rows, all_cats, gen, page=1, pages=1, total=None):
         '<p class="kicker"><a class="link" href="/">The Index</a> · ' + esc(label) + "</p>\n"
         "<h1>" + esc(label) + " " + kinds_phrase(rows, amp=True) + ", ranked</h1>\n"
         '<p class="lede">' + esc(cat["blurb"]) + " tashan measures <b>" + str(len(rows)) +
-        "</b> capabilities here and ranks them by tashan score — a transparent composite of upkeep, "
-        "freshness and real adoption. <a class=\"link\" href=\"/methodology.html\">How we measure &rsaquo;</a></p>\n"
+        "</b> capabilities here. Ranked on upkeep, freshness and real adoption, every input public. "
+        "<a class=\"link\" href=\"/methodology.html\">How we measure &rsaquo;</a></p>\n"
         + board(rows) + changed_strip(rows, label) +
-        ('<p class="note">' + str(len(measured)) + " of these have been expertise-graded against their "
-         "documentation; the rest carry adoption and upkeep signal only. We publish what is "
-         "measured and say plainly what isn't.</p>\n" if rows else "")
+        ('<p class="note">' + str(len(measured)) + " of these are graded against their own "
+         "documentation. The rest carry adoption and upkeep signal only. We publish what is "
+         "measured and name what is not.</p>\n" if rows else "")
         + (('<h2>Head to head</h2>\n<p class="note">The question people actually ask, answered with '
             'two measurements taken the same day by the same scorer.</p>\n<div class="chips">'
             + "".join('<a class="chip" href="/compare/' + p["slug"] + '.html">'
@@ -535,8 +535,8 @@ def task_page(task, rows, all_tasks, gen):
         '<p class="kicker"><a class="link" href="/">The Index</a> · ' + esc(label) + "</p>\n"
         "<h1>" + esc(label) + "</h1>\n"
         '<p class="lede">' + esc(task.get("blurb", "")) + " tashan measures <b>" + str(len(rows)) +
-        "</b> capabilities for this work and ranks them by tashan score — a transparent composite of "
-        "upkeep, freshness and real adoption. "
+        "</b> capabilities for this work. Ranked on upkeep, freshness and real adoption, every "
+        "input public. "
         '<a class="link" href="/methodology.html">How we measure &rsaquo;</a></p>\n'
         + board(rows) + who + changed_strip(rows, task["label"])
         + '<h2>Other work</h2>\n<div class="chips">' + sib + "</div>\n"
@@ -1007,8 +1007,8 @@ def stack_for(role, rows, tasks):
     if not picks:
         return ""
     out = ['<h2>The stack for this job</h2>',
-           '<p class="lede">One pick per task, taken from the ranking below — best fit first, then how '
-           'well it documents itself, then the tashan score.</p>',
+           '<p class="lede">One pick per task, taken from the ranking below. Best fit first, then '
+           'how well it documents itself, then the tashan score.</p>',
            '<div class="stack">']
     for t, c in picks:
         sc = c.get("tashan_score")
@@ -1083,17 +1083,17 @@ def role_page(role, rows, tasks, all_roles, gen):
         + esc(label) + "</p>\n"
         "<h1>" + sentence_case(kinds_phrase(rows, amp=True)) + " for " + esc(label.lower()) + ", ranked</h1>\n"
         '<p class="lede">tashan measures <b>' + str(len(rows)) + "</b> capabilities against the work a "
-        + esc(label.lower()) + " actually does" + (" — " + esc(work) if work else "") + " — and ranks them "
-        "on public evidence alone: upkeep, freshness and real adoption. "
+        + esc(label.lower()) + " actually does" + (": " + esc(work) if work else "")
+        + ". Ranked on public evidence alone: upkeep, freshness and real adoption. "
         '<a class="link" href="/methodology.html">How we measure &rsaquo;</a></p>\n'
         + stack_for(role, rows, tasks)
         + board(rows[:ROLE_BOARD_MAX]) + changed_strip(rows, role["label"]) +
         (('<p class="note">Showing the top ' + f"{ROLE_BOARD_MAX:,}" + " of " + f"{len(rows):,}"
           + ' — the rest are on the <a class="link" href="/">Index</a>, filterable by this job.</p>\n')
          if len(rows) > ROLE_BOARD_MAX else "")
-        + ('<p class="note">' + str(len(graded)) + " of these have been expertise-graded against their own "
-         "documentation; the rest carry adoption and upkeep signal only. We publish what is measured and "
-         "say plainly what is not.</p>\n" if rows else "")
+        + ('<p class="note">' + str(len(graded)) + " of these are graded against their own "
+         "documentation. The rest carry adoption and upkeep signal only. We publish what is measured "
+         "and name what is not.</p>\n" if rows else "")
         + ('<h2>The work behind this job</h2>\n<div class="chips">' + chips + "</div>\n" if chips else "")
         + '<h2>Other jobs</h2>\n<div class="chips">' + sib + "</div>\n"
         '<p class="mt-12"><a class="btn btn--ghost" href="/?role=' + esc(rid) +

@@ -83,8 +83,12 @@ FOOTER = [
 # call them, which almost never happens; "your AI's toolbox" keeps ownership with the reader, since
 # we host nothing and supply nothing. `capability` stays where it belongs: the database, the export
 # fields, /v0.1 and the CLI's JSON.
-TAGLINE = ("The trusted directory for your AI's toolbox — tools and skills, "
-           "with the evidence behind every score.")
+#
+# AND IT DOES NOT EXPLAIN ITSELF. The second clause — "tools and skills, with the evidence behind
+# every score" — was the tagline apologising for the first clause. A positioning line that has to
+# gloss its own nouns is not finished; the evidence claim is made eleven times elsewhere on every
+# page, by showing the evidence.
+TAGLINE = "The trusted directory for your AI's toolbox."
 
 
 # WHAT THE GRADE MEANS, defined once for every Python generator. The chips shipped as a bare word —
@@ -206,7 +210,10 @@ def footer_html():
             '<p class="footer__meta" id="footMethod"></p></div>'
             f"{cols}</div>"
             '<div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span>'
-            "<span>Measured from public sources, and checkable against them.</span></div></footer>")
+            # THE SIGN-OFF. Hermes closes on "THE INTERNET'S OWN AI" — four words that claim a
+            # position and explain nothing. The old line here spent eleven words defending our
+            # method in the one slot on the page where nobody is arguing with us.
+            "<span>Measured from public sources. Every tool, on the record.</span></div></footer>")
 
 
 NAV_RE = re.compile(r"(?:<a class=\"skip\"[^>]*>.*?</a>)?<nav class=\"nav\">.*?</nav>", re.S)
@@ -233,14 +240,14 @@ STATIC_PRO = {
     # entitlements.json — proactive notification does not exist. The copy that stood here promised it
     # in words the keyword guard could not see, which is worse than the version that trips the guard.
     # What Pro actually ships is `history` and `replacement`, so that is what this sells.
-    "home": ("Every score, finding and advisory above is free, forever, no account. What an index "
-             "cannot tell you is which of them <em>you</em> run &mdash; "
-             '<a class="link" href="/audit.html">paste your config</a> and see, free, with nothing '
-             "to install. Pro adds the series behind each one, and names a replacement when "
+    "home": ("Every score, finding and advisory above is free, forever, no account. An index cannot "
+             "know which of them <em>you</em> run. "
+             '<a class="link" href="/audit.html">Paste your config</a> and see &mdash; free, nothing '
+             "to install. Pro adds the series behind each row, and names the replacement when "
              "something you depend on is dying.", False),
-    "audit": ("You have just seen where these stand today. Pro shows you every score and signal "
-              "behind them since we started measuring &mdash; whether each one is getting better or "
-              "quietly sliding &mdash; and names a replacement for anything already dying.", True),
+    "audit": ("That is where they stand today. Pro adds every score and signal behind them since we "
+              "started measuring, so you can see which are getting better and which are quietly "
+              "sliding &mdash; and names a replacement for anything already dying.", True),
 }
 
 
@@ -314,9 +321,9 @@ def pro_panel(lede, key, extra=(), pid=None):
     never sold a trial.
     """
     bullets = list(extra) + [
-        "Every score since we started measuring, for any capability",
-        "The named replacement when something you run is dying &mdash; not just that it is",
-        "<code>tashan doctor</code> over the config you already have, on your machine",
+        "The whole series behind any row, back to the first day we measured it",
+        "The replacement, named &mdash; not just the news that something died",
+        "<code>tashan doctor</code> over your own config, on your own machine",
     ]
     return (
         '<section class="pro"' + (' id="' + pid + '"' if pid else '') + ' data-state="free">'
