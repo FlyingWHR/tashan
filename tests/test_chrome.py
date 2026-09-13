@@ -122,5 +122,32 @@ _bad = [c["id"] for c in _caps if c.get("npm_pkg")
 ok("every npm-backed capability yields a usable install alias",
    not _bad, "%d broken, e.g. %s" % (len(_bad), ", ".join(_bad[:3])))
 
+# ---- the search hint and the search itself must suggest the same jobs ---------------------------
+# The bar cycles six phrases; opening it lands on six jobs. Those are two lists in two files, and
+# the failure mode is silent and stupid: the hint offers "scrape a website", the palette opens on
+# something else, and the one suggestion the reader was given is the one thing the search does not
+# lead with. Worse, a slug that no longer exists opens on nothing at all — tasks are renamed as the
+# taxonomy is tidied, and nothing else would notice.
+_hero = open(os.path.join(ROOT, "web", "js", "hero.js"), encoding="utf-8").read()
+_term = open(os.path.join(ROOT, "web", "js", "terminal.js"), encoding="utf-8").read()
+_words = re.search(r"var words = \[(.*?)\];", _hero, re.S)
+_openers = re.search(r"var OPENERS = \[(.*?)\];", _term, re.S)
+ok("the hero hint and the palette's opening rows are both defined",
+   bool(_words) and bool(_openers), "one of the two lists has been renamed away")
+if _words and _openers:
+    _w = re.findall(r'"([^"]+)"', _words.group(1))
+    _o = re.findall(r'"([^"]+)"', _openers.group(1))
+    ok(f"the hint cycles {len(_w)} phrases and the palette opens on {len(_o)} jobs — the same count",
+       len(_w) == len(_o), "the two lists have drifted apart in length")
+    try:
+        _tasks = json.load(open(os.path.join(ROOT, "web", "data", "tasks.json"), encoding="utf-8"))
+        _slugs = {t.get("slug") for t in (_tasks.get("tasks") or [])}
+    except (OSError, ValueError):
+        _slugs = set()
+    if _slugs:
+        _dead = [x for x in _o if x not in _slugs]
+        ok(f"all {len(_o)} suggested jobs exist in the taxonomy",
+           not _dead, f"{_dead} — the palette would open on nothing for these")
+
 print("CHROME FAILED" if fail else "ok — one navigation, rendered everywhere")
 sys.exit(fail)

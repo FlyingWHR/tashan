@@ -3,28 +3,35 @@
   "use strict";
   var el = document.getElementById("rot");
   if (!el) return;
-  // The four axes actually published on every capability page. "retention" was in this list and we
-  // measure NONE of it — the column is empty on all 12,109 rows — so the homepage headline was
-  // advertising a signal that does not exist, which is the one thing this site claims never to do.
-  // "maintenance" was the name retired in SCHEMA_VERSION 5 because it overstated what is measured;
-  // the column and every surface now say upkeep.
-  var words = ["advisories", "install scripts", "permissions", "upkeep", "expertise"];
+  // WHAT SOMEONE COULD TYPE, not what we measure. This used to cycle the measurement axes under the
+  // headline — advisories, permissions, upkeep — which read as a second claim competing with the
+  // one above it. It now sits inside the search control and cycles jobs, so the hint answers the
+  // question the control asks. Every one of these resolves to a real task hub, so the suggestion is
+  // never a phrase the search then fails on.
+  var words = ["review code", "automate a browser", "analyse a spreadsheet",
+               "query postgres", "scrape a website", "read my gmail"];
   var i = 0;
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce) { el.firstChild.textContent = "everything that matters"; return; }
+  if (reduce) { el.firstChild.textContent = words[0]; return; }
+  // A REEL, not a cross-fade. The old motion slid half a line and faded through, which reads as a
+  // glitch at small sizes; this drives the word fully out of the clipped window (.rot is
+  // overflow:hidden with a fixed height) and brings the next one up from below, so it reads as one
+  // strip of text moving past a slot. No opacity: a reel does not fade, it travels, and fading is
+  // what made the old one look like a rendering error rather than a mechanism.
+  var OUT = "transform .34s cubic-bezier(.55,0,.6,.2)";    // leaves with acceleration
+  var IN = "transform .46s cubic-bezier(.16,1,.3,1)";      // arrives and settles
   setInterval(function () {
     i = (i + 1) % words.length;
     var inner = el.firstChild;
-    inner.style.transform = "translateY(-0.5em)";
-    inner.style.opacity = "0";
+    inner.style.transition = OUT;
+    inner.style.transform = "translateY(-115%)";
     setTimeout(function () {
+      inner.style.transition = "none";
       inner.textContent = words[i];
-      inner.style.transform = "translateY(0.5em)";
-      // reflow, then settle
-      void inner.offsetWidth;
-      inner.style.transition = "transform .32s cubic-bezier(.2,.7,.2,1), opacity .32s ease";
+      inner.style.transform = "translateY(115%)";
+      void inner.offsetWidth;                              // commit the jump before easing back
+      inner.style.transition = IN;
       inner.style.transform = "translateY(0)";
-      inner.style.opacity = "1";
-    }, 260);
-  }, 2100);
+    }, 340);
+  }, 2600);
 })();

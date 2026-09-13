@@ -71,6 +71,11 @@
   // Words that carry no intent — dropping them is what lets a typed sentence match a task label.
   var STOP = ["the", "for", "with", "and", "how", "help", "need", "want", "find", "best", "using",
               "from", "into", "that", "this", "your", "our", "get", "can", "any"];
+  // Mirrors the words hero.js cycles in the search bar — same jobs, same order. Two lists is a
+  // smell, but the alternative is shipping a shared constant to every page for six strings that
+  // only two files read; they are asserted equal in tests/test_chrome.py instead.
+  var OPENERS = ["code-review", "browser-automation", "exploratory-data-analysis",
+                 "database-access", "web-scraping", "messaging-and-email"];
   var PAGES = [
     { name: "The Index", id: "@index", href: "/", kind: "page" },
     { name: "Methodology", id: "@methodology", href: "/methodology.html", kind: "page" },
@@ -132,7 +137,22 @@
     q = q.trim().toLowerCase();
     var pool;
     if (!q) {
-      pool = PAGES.concat(jobs.slice(0, 6)).concat(caps.slice(0, 6));
+      // JOBS FIRST on open, and THESE jobs. The control asks "what do you need to get done?" and the
+      // first four rows answering it were The Index, Methodology, Pricing and About — our own
+      // furniture above every job. Putting jobs first was half the fix: unordered, tasks.json is
+      // alphabetical, so it opened on "Agent configuration, Animation and generated imagery,
+      // Attribution" — the A-list, not the useful list, and no count exists to rank by.
+      // So: the same six the hero hint cycles, in the same order. Opening the search must land on
+      // what it just suggested, and these are the phrases people actually type.
+      pool = OPENERS.map(function (sl) {
+        var href = "/task/" + sl + ".html";
+        for (var i = 0; i < jobs.length; i++) if (jobs[i].href === href) return jobs[i];
+        return null;
+      }).filter(Boolean);
+      pool = pool.concat(jobs.filter(function (j) {
+                   return OPENERS.indexOf(String(j.href).replace("/task/", "").replace(".html", "")) < 0;
+                 }).slice(0, 2))
+                 .concat(caps.slice(0, 4)).concat(PAGES);
     // THREE BANDS. `wrapper` and `slop` were withdrawn from the scale — neither was a measurement —
     // so typing either here filtered for a verdict nothing can carry and returned an empty palette.
     } else if (["deep", "solid", "thin"].indexOf(q) >= 0) {

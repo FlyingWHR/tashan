@@ -247,7 +247,15 @@ img { max-width: 100%; display: block; }
 .herosearch:hover, .herosearch:focus-visible { border-color: var(--jade); background: var(--surface-2); }
 .herosearch__q { color: var(--text-dim); font-size: var(--fs-lg); }
 .herosearch__k { color: var(--text-faint); flex:none; }
-.herosearch__eg { margin-top: var(--sp-3); font-size: var(--fs-sm); color: var(--text-faint); }
+/* THE HINT LIVES IN THE CONTROL, on the right, next to the shortcut — it used to be four links in a
+   paragraph underneath, which answered a question before anyone had asked it. margin-left:auto
+   groups it with ⌘K and leaves the question on the left.
+   NOT jade: brand/BRAND.md reserves the accent for measured data, and a suggestion is not a
+   measurement. The reel window (.rot) supplies overflow:hidden and the fixed height. */
+.herosearch__eg { font-size: var(--fs-sm); color: var(--text-faint); margin-left: auto; flex: none; }
+.herosearch__eg.rot > span { color: var(--text-faint); }
+/* Under 34rem the question alone fills the bar; a second string would wrap the control. */
+@media (max-width: 34rem) { .herosearch__eg { display: none; } }
 .hero__cta { margin-top: var(--sp-8); display:flex; gap: var(--sp-3); flex-wrap:wrap; }
 .hero__stat { margin-top: var(--sp-8); display:flex; flex-wrap:wrap; gap: var(--sp-8);
   font-family: var(--font-mono); font-size:var(--fs-base); color: var(--text-dim); }
