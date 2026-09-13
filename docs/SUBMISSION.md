@@ -13,10 +13,28 @@ tashan predates the event, the pre-existing work is documented at the top of `RE
 in-window commits are listed there individually.
 
 **Partner prizes (up to 3; a partner with several tracks still counts as one).**
-1. **The Graph** — all applicable tracks.
-2. **Bazantic** — all applicable tracks.
+1. **The Graph** — Track 1 (Composable/Standardized, $5,000) and Track 3 (AI, Continuity, $5,000).
+2. **Bazantic** — **only if the three Bazantic artifacts exist by submission time. See the warning
+   below; as of 13 Sep they do not, and claiming the track without them is a false claim.**
 3. *Left empty deliberately.* A third slot spent on a partner whose tools we did not actually use
    would be the same sin the product exists to point at.
+
+> ### ⚠ Check this before submitting: `python3 pipeline/demo.py --fit`
+>
+> Requirements verified 13 Sep 2026 against `ethglobal.com/events/ethonline2026/prizes`. Two
+> blockers stand between this document and an eligible entry, and neither is fixed by editing copy.
+>
+> **1. THE REPOSITORY IS PRIVATE.** Every track listed here requires a public repo — The Graph
+> Track 1 says "public repo", Track 3 says "open-source code with README". `gh repo view` reports
+> `isPrivate: true`. Nothing else on this page matters until that changes, and it wants a secrets
+> sweep first. It is also the reason `tashan-cli` cannot carry an npm provenance attestation, which
+> `/start.html` already explains to readers — the same fact, costing us twice.
+>
+> **2. NO BAZANTIC ARTIFACTS EXIST.** All three Bazantic tracks require a bazantic.com account, an
+> x402/MPP Gateway built on their platform, a published Recipe, and the username in the submission.
+> We have none of the four. What we have is our *own* MCP server and our *own* x402 endpoints, which
+> is a different thing and does not qualify. The write-up further down was drafted as though it did;
+> it has been corrected.
 
 ---
 
@@ -31,8 +49,8 @@ and now the only index of which of them actually get *paid*.
 
 ## Description (long)
 
-Every "best MCP server" list is an opinion. tashan is an instrument: it tracks 55,268 capabilities,
-scores 11,914 of them on upkeep, freshness and real adoption, audits the ones it can resolve against
+Every "best MCP server" list is an opinion. tashan is an instrument: it tracks 95,195 capabilities,
+scores 12,656 of them on upkeep, freshness and real adoption, audits the ones it can resolve against
 OSV.dev at the version you would install today, and publishes every input so the number can be
 re-checked. Nobody can pay to change a score — that is enforced by a test, not a promise.
 
@@ -42,16 +60,16 @@ downloads, stars, publish cadence, appearances in public configs — and each ca
 single person finding the thing useful. A settled USDC payment cannot.
 
 So we asked the chain. Of the 1,079 x402 payment addresses we could resolve from the Bazaar's own
-listings, **997 have been paid at least once and 82 never have**. Between them they have settled
-**$247,247 across 10.4 million payments**. And the median service has earned **$0.51** in its entire
-life: 592 of the 997 have earned under a dollar, 9 have earned over a thousand, and two thirds of
+listings, **998 have been paid at least once and 81 never have**. Between them they have settled
+**$247,318 across 10.4 million payments**. And the median service has earned **$0.51** in its entire
+life: 591 of the 998 have earned under a dollar, 9 have earned over a thousand, and 67% of
 all volume belongs to one receiver. `/paid.html` publishes that distribution, never the total on its
 own, because a sum is the one statistic a concentrated economy always passes.
 
 The receipts are read from a subgraph on The Graph Network **through The Graph's own Subgraph MCP
 server** — the same tool call any agent can make. The page prints the endpoint, the tool, the query
 and a one-line command that re-runs the whole hop from a clone, so a reader checks us rather than
-trusting our exporter. Around thirty capabilities in the published catalog have receipts
+trusting our exporter. 57 capabilities in the published catalog have receipts
 attributable to them, under a rule that keeps it honest: volume is a property of an *address*, so an
 address shared by several services is counted in the totals and never attributed to one project.
 
@@ -107,7 +125,7 @@ the page prints the call. "Re-run this yourself" is a stronger claim than "trust
 
 The Bazaar lists thousands of x402 services and publishes no evidence about any of them. Because the
 settlement data was already indexed and reachable over MCP, the gap between "nobody measures this"
-and a live page joined to a 55,268-row catalog was one night — with no node to run, no RPC to
+and a live page joined to a 95,195-row catalog was one night — with no node to run, no RPC to
 rate-limit and no backfill to wait for.
 
 ### Feedback
@@ -132,17 +150,31 @@ rate-limit and no backfill to wait for.
 
 ## Partner: Bazantic
 
-### What we used, and how
+> **DO NOT SUBMIT THIS SECTION AS WRITTEN.** Every Bazantic track requires four things that live on
+> *their* platform: an account, an x402/MPP Gateway, a published Recipe, and the username in the
+> form. We have none of them. What is described below is our own MCP server and our own x402
+> endpoints — genuinely built, genuinely useful, and **not what the track asks for**. An earlier
+> draft of this page presented them as qualifying. They do not.
+>
+> **To actually qualify** (roughly an hour, most of it on their dashboard):
+> 1. Create a bazantic.com account.
+> 2. Build the Gateway over an endpoint we already serve. `/v0.1/kit` and `/v0.1/audit` are live and
+>    already answer HTTP 402 with terms in the body; `.well-known/x402` lists them.
+> 3. Publish a Recipe for `paid_demand` — *when* to call it, *why*, and what the answer means.
+>    **Track 3 ("Agentify a New API") is the best fit we have**: the paid-demand signal exists
+>    nowhere else, so it is genuinely an API that was not previously on Bazantic.
+> 4. Put the username in `data/hackathon.json` so `--fit` stops reporting it blocked, and in the
+>    submission form.
 
-The same artifact, used as Bazantic asks for it rather than rebuilt:
+### What we have built that the Gateway would wrap
 
-- **An API that was not agent-reachable before, agentified.** The paid-demand signal exists nowhere
-  else; it is now a tool on our MCP server (`paid_demand`, in `cli/mcp.mjs`) and a machine-readable
-  file at `/data/demand.json`. An agent choosing between two capabilities can ask "has either ever
-  been paid, and by how many distinct payers?" and get a sourced answer.
-- **A recipe combining tashan with a second service.** tashan + The Graph's Subgraph MCP: our
-  catalog supplies identity and quality, their MCP server supplies the settled receipts, and the
-  join is an exact host match. Neither half answers the question alone.
+- **A signal that exists nowhere else.** Which x402 services have actually been paid — a tool on our
+  MCP server (`paid_demand`, in `cli/mcp.mjs`) and a machine-readable file at `/data/demand.json`.
+  An agent choosing between two capabilities can ask "has either ever been paid, and how much?" and
+  get a sourced answer. This is the thing worth agentifying.
+- **Two services in one flow.** tashan + The Graph's Subgraph MCP: our catalog supplies identity and
+  quality, their MCP server supplies the settled receipts, and the join is an exact host match.
+  Neither half answers the question alone. That is the shape a Recipe would describe.
 - **Continuity.** The MCP server, the CLI and the npm package (`tashan-cli`, first published
   2026-07-31) predate the event; what is new is the money signal and the tool that serves it.
 

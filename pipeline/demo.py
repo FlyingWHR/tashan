@@ -178,6 +178,146 @@ def beats(f):
     return out
 
 
+# ---- the tracks, and whether we actually qualify -------------------------------------------------
+# Verified 13 Sep 2026 against ethglobal.com/events/ethonline2026/prizes. `need` is the sponsor's own
+# requirement list, shortened but not softened; `gate` names the check in qualify() that tests it.
+#
+# THE POINT OF ENCODING THIS. It is very easy to write a submission that describes the project you
+# wish you had entered. docs/SUBMISSION.md already claimed all three Bazantic tracks on the strength
+# of our own MCP server — but every Bazantic track requires artifacts that live on bazantic.com, and
+# we have never had an account. Claiming a track we do not qualify for is the exact failure this
+# product exists to point at, aimed at ourselves.
+TRACKS = [
+    {"id": "graph1", "sponsor": "The Graph", "prize": "$5,000",
+     "name": "Best Use of Composable or Standardized Graph Products",
+     "need": ["Compose two or more of The Graph's products, or build on a standardized schema",
+              "Consume live data from a Graph provider",
+              "Public repo", "Demo video, 2-4 min"],
+     "gate": ["graph_composed", "graph_live", "repo_public", "video"],
+     "beats": ["money", "regraph", "index"]},
+    {"id": "graph3", "sponsor": "The Graph", "prize": "$5,000",
+     "name": "Best AI Tooling or AI Use Case with The Graph - Continuity",
+     "need": ["The Graph is a load-bearing part of the project",
+              "Consume live data via providers",
+              "Meaningful work with the data: reasoning, decisions, automation",
+              "Open-source code with README", "Demo video", "Select the Continuity pool"],
+     "gate": ["graph_live", "graph_work", "repo_public", "video"],
+     "beats": ["money", "agent", "regraph"]},
+    {"id": "baz1", "sponsor": "Bazantic", "prize": "$1,000",
+     "name": "Help an Agent Use Your Hackathon Project - Continuity",
+     "need": ["A bazantic.com account", "An x402/MPP Gateway for the project",
+              "A Recipe explaining when/why/how to use the service",
+              "Show the improvement: raw API info vs the Recipe",
+              "Screen recording", "The bazantic username in the submission"],
+     "gate": ["baz_account", "baz_gateway", "baz_recipe", "video"],
+     "beats": ["agent", "x402", "money"]},
+    {"id": "baz2", "sponsor": "Bazantic", "prize": "$1,000",
+     "name": "Best Recipe Using EthGlobal Hackathon Sponsor APIs",
+     "need": ["A bazantic.com account", "An x402/MPP Gateway",
+              "At least one OTHER service from Bazantic or a hackathon sponsor",
+              "A recipe combining them in one working flow",
+              "Screen recording of the completed task", "The bazantic username"],
+     "gate": ["baz_account", "baz_gateway", "baz_recipe", "video"],
+     "beats": ["money", "agent", "x402"]},
+    {"id": "baz3", "sponsor": "Bazantic", "prize": "$1,000",
+     "name": "Agentify a New API",
+     "need": ["A bazantic.com account", "A Gateway for an API not previously on Bazantic",
+              "A recipe using the new service with the hackathon project",
+              "Screen recording", "The bazantic username"],
+     "gate": ["baz_account", "baz_gateway", "baz_recipe", "video"],
+     "beats": ["money", "agent", "x402"]},
+]
+
+# What each gate means in one line, for the failure message. A blocker a reader cannot act on is
+# just bad news.
+GATE_FIX = {
+    "graph_composed": "compose 2+ Graph products — we read a published subgraph THROUGH Subgraph MCP",
+    "graph_live": "web/data/demand.json must be read via subgraph-mcp — re-run with GRAPH_API_KEY set",
+    "graph_work": "the data must drive reasoning/decisions, not just be displayed",
+    "repo_public": "THE REPO IS PRIVATE. Every track here requires a public repo. `gh repo edit "
+                   "--visibility public` (and check for secrets first)",
+    "video": "record it — 2-4 min, 720p+, your own voice. `python3 pipeline/demo.py --track <id>`",
+    "baz_account": "create a bazantic.com account and put the username in data/hackathon.json",
+    "baz_gateway": "build the x402/MPP Gateway on bazantic.com for our API",
+    "baz_recipe": "publish a Bazantic Recipe describing when/why/how to call it",
+}
+
+
+def qualify(f=None):
+    """Which gates we actually pass, checked rather than assumed.
+
+    Offline-safe: everything here reads the repo or the published files. `repo_public` is the one
+    that needs the network, so it degrades to None (unknown) rather than guessing — and a None gate
+    is reported as UNKNOWN, never as a pass. A qualification matrix that resolves an unknown in our
+    favour is worse than no matrix.
+    """
+    dem = load("demand.json")
+    state = {}
+    p = os.path.join(ROOT, "data", "hackathon.json")
+    if os.path.exists(p):
+        try:
+            with open(p, encoding="utf-8") as fh:
+                state = json.load(fh) or {}
+        except (OSError, ValueError):
+            state = {}
+    via = (dem.get("via") or "")
+    g = {
+        "graph_composed": via == "subgraph-mcp" and bool(dem.get("source")),
+        "graph_live": via == "subgraph-mcp" and bool((dem.get("economy") or {}).get("paid_usd")),
+        # Reasoning over the data, not a passthrough: we join receipts to a catalogue, refuse to
+        # attribute a shared address, and expose the result as an agent tool.
+        "graph_work": bool(dem.get("paid_capabilities")) and os.path.exists(
+            os.path.join(ROOT, "pipeline", "paid_demand.py")),
+        "repo_public": _repo_public(),
+        "video": bool(state.get("video_url")),
+        "baz_account": bool(state.get("bazantic_username")),
+        "baz_gateway": bool(state.get("bazantic_gateway")),
+        "baz_recipe": bool(state.get("bazantic_recipe")),
+    }
+    return g
+
+
+def _repo_public():
+    """None when we cannot tell. Never a guess."""
+    try:
+        out = subprocess.run(["gh", "repo", "view", "--json", "isPrivate"],
+                             capture_output=True, text=True, timeout=25, cwd=ROOT)
+        if out.returncode != 0:
+            return None
+        return not json.loads(out.stdout).get("isPrivate", True)
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return None
+
+
+def fit():
+    """The qualification matrix. Prints every blocker with the thing that clears it."""
+    g = qualify()
+    w = 92
+    print("=" * w)
+    print("  TRACK FIT — checked, not assumed")
+    print("  requirements verified 13 Sep 2026 against ethglobal.com/events/ethonline2026/prizes")
+    print("=" * w)
+    blocked = 0
+    for t in TRACKS:
+        miss = [k for k in t["gate"] if g.get(k) is not True]
+        unknown = [k for k in t["gate"] if g.get(k) is None]
+        state = "QUALIFIES" if not miss else ("UNKNOWN" if miss == unknown else "BLOCKED")
+        blocked += state != "QUALIFIES"
+        print(f"\n  [{state:<9}] {t['sponsor']} {t['prize']} — {t['name']}")
+        for n in t["need"]:
+            print(f"      · {n}")
+        for k in miss:
+            mark = "?" if g.get(k) is None else "x"
+            print(f"      {mark} {GATE_FIX[k]}")
+    print("\n" + "=" * w)
+    print(f"  {len(TRACKS) - blocked} of {len(TRACKS)} tracks clear today.")
+    print("  Record blockers you have cleared in data/hackathon.json:")
+    print('    {"bazantic_username": "...", "bazantic_gateway": "...", '
+          '"bazantic_recipe": "...", "video_url": "..."}')
+    print("=" * w)
+    return 0
+
+
 RULES = [
     "Between 2 and 4 minutes. Under or over is rejected outright.",
     "720p or higher. The upload fails below it.",
@@ -188,17 +328,75 @@ RULES = [
 ]
 
 
-def render(f):
+# THE BEAT A SPONSOR'S JUDGE IS ACTUALLY LOOKING FOR. The general script tells the product's story;
+# a track submission has to additionally SHOW the thing the sponsor wrote down. For The Graph that is
+# the composition running live — not a slide claiming it — and for Bazantic it is the Recipe doing
+# something the raw API could not. Inserted as its own beat so it cannot be lost inside the narrative.
+TRACK_BEAT = {
+    "graph1": ("+0:40", "The composition, running",
+               ["Terminal.", "Run:  GRAPH_API_KEY=<key> python3 pipeline/paid_demand.py",
+                "Then scroll to 'Re-run it yourself' on /paid.html."],
+               ["Two Graph products, composed. A subgraph published on The Graph Network, read "
+                "through The Graph's own Subgraph MCP server — the same tool call any agent can "
+                "make.",
+                "That is live data from a Graph provider, refreshed nightly, not a snapshot.",
+                "The page prints the endpoint, the tool and the query, and one command re-runs the "
+                "whole hop from a clone. You check us rather than trusting our exporter."]),
+    "graph3": ("+0:40", "What we do with the data",
+               ["Show /paid.html, then the MCP tool answering."],
+               ["The Graph is load-bearing for this feature: without it there is no page.",
+                "And it is not a passthrough. We join receipts to a 12,656-row catalogue by exact "
+                "host, refuse to attribute an address shared by several services, compute the "
+                "distribution rather than the total, and expose the answer as an agent tool.",
+                "A sum is the one statistic a concentrated economy always passes, so we never "
+                "publish it alone."]),
+    "baz1": ("+0:40", "The Recipe, against the raw API",
+             ["Show the raw endpoint first, then the Bazantic Recipe doing the same job."],
+             ["This is what an agent saw before: a URL and a JSON body it has to guess at.",
+              "This is the Recipe: when to call it, why, and what the answer means.",
+              "Same API. The difference is whether an agent can use it without being told."]),
+    "baz2": ("+0:40", "Two services, one flow",
+             ["Show the recipe combining tashan with the second service end to end."],
+             ["Our catalogue supplies identity and quality. The second service supplies what we "
+              "cannot measure. Neither half answers the question alone.",
+              "One flow, one task completed, start to finish."]),
+    "baz3": ("+0:40", "An API agents could not reach before",
+             ["Show the Gateway, then an agent calling it."],
+             ["The paid-demand signal exists nowhere else — no directory publishes which x402 "
+              "services have actually been paid.",
+              "It was a file and an MCP tool. Now it is a Bazantic Gateway, so any agent on the "
+              "platform can ask it without knowing we exist."]),
+}
+
+
+def render(f, track=None):
     w = 92
+    t = next((x for x in TRACKS if x["id"] == track), None) if track else None
     L = ["=" * w,
-         "  THE DEMO — 3:30, read it while you record",
+         "  THE DEMO — 3:30, read it while you record" if not t
+         else f"  THE DEMO for {t['sponsor']} {t['prize']} — {t['name']}",
          f"  every figure below was read from web/data/ on {f['generated'] or 'an unknown date'}",
-         "=" * w, "",
-         "  BEFORE YOU RECORD", ""]
+         "=" * w, ""]
+    if t:
+        g = qualify()
+        L += ["  WHAT THIS JUDGE REQUIRES", ""]
+        for need in t["need"]:
+            L.append(f"    · {need}")
+        miss = [k for k in t["gate"] if g.get(k) is not True]
+        if miss:
+            L += ["", "  !! NOT QUALIFYING YET — recording this does not fix these:", ""]
+            L += [f"    {'?' if g.get(k) is None else 'x'} {GATE_FIX[k]}" for k in miss]
+        L.append("")
+    L += ["  BEFORE YOU RECORD", ""]
     L += [f"    [ ] {r}" for r in RULES]
     L += ["", f"    [ ] python3 pipeline/serve.py   ->  {PREVIEW}",
           "    [ ] python3 pipeline/demo.py --check   (fails if any number here has moved)", ""]
-    for clock, head, do, say in beats(f):
+    seq = list(beats(f))
+    if t and t["id"] in TRACK_BEAT:
+        # After the product is established (beat 2) and before the money beat, so the sponsor's
+        # requirement lands on a viewer who now knows what they are looking at.
+        seq.insert(2, TRACK_BEAT[t["id"]])
+    for clock, head, do, say in seq:
         L += ["-" * w, f"  {clock}  {head}", "-" * w, ""]
         for d in do:
             L.append(f"    DO    {d}")
@@ -267,7 +465,45 @@ def _selftest():
     assert "across — payments" not in t2 and "— settled" not in t2, t2
     assert "payments." not in t2, "the payments clause must vanish when the figure is absent"
     assert check(dict(f2), quiet=True) == 0
+    # ---- the qualification matrix must never round in our favour --------------------------------
+    # docs/SUBMISSION.md claimed all three Bazantic tracks on the strength of our own MCP server,
+    # while every one of them requires artifacts on bazantic.com we have never had. So the gates are
+    # tested for the two ways a fit check goes wrong: a missing gate reading as a pass, and an
+    # UNKNOWN (the network check we cannot always make) reading as a pass.
+    for t in TRACKS:
+        assert t["gate"], f"{t['id']} has no gate — a track that cannot fail is not a check"
+        assert all(k in GATE_FIX for k in t["gate"]), f"{t['id']} names a gate with no fix line"
+        assert t["need"], f"{t['id']} records no requirement"
+    import io, contextlib
+    for fake, expect in (({k: False for k in GATE_FIX}, "BLOCKED"),   # checked and absent
+                         ({k: True for k in GATE_FIX}, "QUALIFIES")):  # checked and present
+        with contextlib.redirect_stdout(io.StringIO()) as buf:
+            _real, globals()["qualify"] = qualify, (lambda _f=None, _g=fake: dict(_g))
+            try:
+                fit()
+            finally:
+                globals()["qualify"] = _real
+        assert expect in buf.getvalue(), f"fit() did not report {expect} for {fake and 'all-pass'}"
+    with contextlib.redirect_stdout(io.StringIO()) as buf:
+        _real, globals()["qualify"] = qualify, (lambda _f=None: {k: None for k in GATE_FIX})
+        try:
+            fit()
+        finally:
+            globals()["qualify"] = _real
+    out = buf.getvalue()
+    assert "QUALIFIES" not in out, "an UNKNOWN gate must never be reported as qualifying"
+    assert "UNKNOWN" in out, "an unknowable gate must say so rather than pick a side"
+    # A track script must print the sponsor's own requirements and its unmet gates.
+    with contextlib.redirect_stdout(io.StringIO()):
+        _real, globals()["qualify"] = qualify, (lambda _f=None: {k: False for k in GATE_FIX})
+        try:
+            s = render(f2, "graph1")
+        finally:
+            globals()["qualify"] = _real
+    assert "NOT QUALIFYING YET" in s and "Consume live data from a Graph provider" in s
+    assert "Two Graph products, composed" in s, "the track beat did not make it into the script"
     print("ok — demo script: figures derived, absences stated, --check refuses a stale read")
+    print("ok — track fit: no gate rounds in our favour, unknown never reads as qualifying")
     return 0
 
 
@@ -275,10 +511,16 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--serve", action="store_true", help="start the local preview first")
     ap.add_argument("--check", action="store_true", help="exit 1 if any figure would be stale")
+    ap.add_argument("--fit", action="store_true",
+                    help="which prize tracks we actually qualify for, and what blocks the rest")
+    ap.add_argument("--track", choices=[t["id"] for t in TRACKS],
+                    help="tune the script to one sponsor's requirements")
     ap.add_argument("--selftest", action="store_true")
     a = ap.parse_args()
     if a.selftest:
         return _selftest()
+    if a.fit:
+        return fit()
     f = facts()
     if a.check:
         return check(f)
@@ -286,7 +528,7 @@ def main():
         subprocess.Popen([sys.executable, os.path.join(ROOT, "pipeline", "serve.py")],
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         print(f"  preview starting -> {PREVIEW}\n")
-    print(render(f))
+    print(render(f, a.track))
     return 0
 
 

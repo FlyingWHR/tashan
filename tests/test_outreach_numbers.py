@@ -100,6 +100,42 @@ stale = sorted({int(m) for m in re.findall(r"(?:~|about )(\d\d)% (?:ship with no
 ok(f"every prose mention of the provenance gap says {pct}%",
    all(abs(v - pct) <= 1 for v in stale), f"found {stale} in the drafts")
 
+# ------------------------------------------------------------------------------------------------
+# AND THE SUBMISSION DRAFT, which is the one document here that gets pasted into somebody else's
+# form and judged. Its figures went stale within a day of being written — it claimed 997 receivers
+# paid and $247,247 settled against a published page reading 998 and $247,318, and 55,268 tracked
+# against 95,195. A stale number in an outreach email is embarrassing; a stale number in a
+# submission, on a project whose entire claim is that its numbers are current, is the case for the
+# defence written by the prosecution.
+#
+# Checked against the COMMITTED exports rather than the database, deliberately: demand.json and
+# index.json are regenerated in the same run as each other, so there is no sync skew to skip over
+# and this section runs even on a machine with no R2 credentials.
+SUB = os.path.join(ROOT, "docs", "SUBMISSION.md")
+if os.path.exists(SUB):
+    print()
+    body = open(SUB, encoding="utf-8").read()
+    try:
+        _dem = json.load(open(os.path.join(ROOT, "web", "data", "demand.json"), encoding="utf-8"))
+        _idx = json.load(open(os.path.join(ROOT, "web", "data", "index.json"), encoding="utf-8"))
+    except Exception:
+        _dem = _idx = None
+    if _dem and _idx:
+        _e = _dem.get("economy") or {}
+        for label, want in (
+                ("receivers paid", _e.get("receivers_paid")),
+                ("receivers never paid", _e.get("receivers_never_paid")),
+                ("settled USD", f"${_e['paid_usd']:,.0f}" if _e.get("paid_usd") else None),
+                ("receivers under $1", _e.get("under_1_usd")),
+                ("attributable capabilities", _dem.get("paid_capabilities")),
+                ("tracked", f"{_idx['total_capabilities']:,}" if _idx.get("total_capabilities") else None),
+                ("measured", f"{_idx['measured']:,}" if _idx.get("measured") else None)):
+            if want is None:
+                continue
+            ok(f"SUBMISSION.md states the live {label} ({want})", str(want) in body,
+               f"the published data says {want} and the draft does not contain it — "
+               f"re-read /paid.html and the hero before pasting this into the form")
+
 print()
 print("OUTREACH NUMBERS OK" if not fail else "OUTREACH NUMBERS STALE")
 sys.exit(fail)
