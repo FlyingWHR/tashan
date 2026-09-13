@@ -610,6 +610,9 @@ dl.stat { display:grid; gap: var(--sp-6); grid-template-columns: repeat(auto-fit
 /* dd carries a default margin-inline-start of 40px. Zeroing it is the difference between a grid of
    figures and an indented list of them. */
 .stat__l { margin:.45rem 0 0; font-size: var(--fs-sm); color: var(--text); }
+/* Still used by /paid.html, where the second clause is genuinely a second fact ("591 have earned
+   under $1"), not a restatement of the first. The homepage band dropped it because there the two
+   lines were saying the same thing twice. */
 .stat__w { display:block; margin-top:.2rem; color: var(--text-faint); }
 /* A four-figure row on a phone is one column, not four 60px columns of wrapped words. */
 @media (max-width: 560px) { dl.stat { gap: var(--sp-5); } .stat__n { font-size:1.45rem; } }

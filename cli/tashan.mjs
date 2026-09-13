@@ -274,7 +274,8 @@ export function evidenceOf(r, max = 4) {
 export function reachOf(results) {
   const perms = {}, remote = [];
   for (const { item, row } of results) {
-    if (!row) continue;
+    // A skill matched by folder name may be describing a stranger; its reach is not yours to be told.
+    if (!row || item.type === "skill") continue;
     const name = pretty(item.name);
     let ps = [];
     try { ps = JSON.parse(row.sec_permissions || "[]"); } catch { /* a malformed field never breaks the audit */ }
@@ -291,7 +292,7 @@ export function reachOf(results) {
 export function recentOf(results, limit = 6) {
   const seen = new Set(), out = [];
   for (const { item, row } of results) {
-    if (!row || seen.has(row.id)) continue;
+    if (!row || item.type === "skill" || seen.has(row.id)) continue;       // same identity rule as reachOf
     seen.add(row.id);
     for (const e of row.recent || []) out.push({ ...e, name: pretty(item.name) });
   }
@@ -317,9 +318,11 @@ export function spark(values, width = 14) {
  *  full), or once any licence exists — then the state of the licence is said instead. */
 export function offerFor(results, keyState) {
   if (keyState != null) return null;
-  const replaceable = results.filter((r) => r.row && r.alts && r.alts.length).length;
+  // Never sold on a guess: a skill resolves by folder name alone, so its record may be someone else's.
+  const known = results.filter((r) => r.row && !(r.item && r.item.type === "skill"));
+  const replaceable = known.filter((r) => r.alts && r.alts.length).length;
   if (replaceable) return { kind: "replacement", n: replaceable };
-  const measured = new Set(results.filter((r) => r.row && r.row.tashan_score != null).map((r) => r.row.id)).size;
+  const measured = new Set(known.filter((r) => r.row.tashan_score != null).map((r) => r.row.id)).size;
   return measured ? { kind: "series", n: measured } : null;
 }
 
@@ -733,7 +736,7 @@ function renderInventory(inv) {
   return out + "\n";
 }
 
-function renderDoctor(results, problems, sum, pro = false, verbose = false, keyState = null, inv = null,
+export function renderDoctor(results, problems, sum, pro = false, verbose = false, keyState = null, inv = null,
                       index = null, use = null) {
   if (!results.length) {
     return "\n  " + bold("No agent config found.") + "\n" +
@@ -884,7 +887,7 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
       dim("  ·  already bought? ") + jade("tashan login") + "\n";
   } else if (offer) {
     out += "\n  " + jade("tashan Pro") +
-      dim(` $6/mo · the daily score series behind these ${offer.n}, drawn beside each one, and the`) + "\n" +
+      dim(` $6/mo · the daily score series behind ${offer.n === 1 ? "this one" : `these ${offer.n}`}, drawn beside the score, and the`) + "\n" +
       "  " + dim("measured replacement when one of them dies. 7 days free · " + SITE + "/pricing · already bought? ") +
       jade("tashan login") + "\n";
   }
@@ -1144,7 +1147,8 @@ export async function main(argv) {
     const pool = lookup ? lookup.records : rows;
     const df = tokenFrequency(pool);
     for (const r of results) {
-      if (r.row && isDying(r.row)) r.alts = suggest(r.row, pool, df);
+      // Not for a skill: it matched by folder name, so "what to replace it with" could answer for a stranger.
+      if (r.row && r.item.type !== "skill" && isDying(r.row)) r.alts = suggest(r.row, pool, df);
     }
 
     // --trend is the whole paid product, and it is the SAME command with one flag. A separate

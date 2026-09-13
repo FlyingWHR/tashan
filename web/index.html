@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="tashan — what's worth installing for the work you do">
   <meta name="twitter:description" content="The measurement layer for AI capabilities — known advisories, what runs at install time, and what each one can reach on your machine.">
-  <link rel="stylesheet" href="/css/site.css?v=303">
+  <link rel="stylesheet" href="/css/site.css?v=306">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"tashan","url":"https://tashan.sh/","description":"Thousands of MCP servers and agent skills, filed by the job you do and ranked on public evidence: upkeep, freshness and real adoption, with a security audit on the packages we can resolve.","slogan":"AI skills for your job, ranked on public evidence"}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"tashan","url":"https://tashan.sh/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://tashan.sh/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does tashan score MCP servers and skills?","acceptedAnswer":{"@type":"Answer","text":"tashan computes a transparent score from upkeep and freshness, gated by real adoption (npm downloads and public config reach). A separate LLM expertise-eval reads the actual capability and grades it deep / solid / thin. Every number links to the public source it came from."}},{"@type":"Question","name":"What decides where a capability ranks?","acceptedAnswer":{"@type":"Answer","text":"Public signal only: npm download volume and publish cadence, repository activity, maintainer count and registry status. The scorer is asserted to read only public-signal columns in tests/test_firewall.py, so the inputs are the ones documented on the methodology page and nothing else. Commercial relationships never influence task fit, measurements, findings, rankings or editorial recommendations."}},{"@type":"Question","name":"What is the difference between an MCP server and an agent skill?","acceptedAnswer":{"@type":"Answer","text":"An MCP server exposes tools to an AI agent over the Model Context Protocol; an agent skill is a folder with a SKILL.md that the agent loads on demand. tashan tracks and scores both in one unified capability model."}}]}</script>
@@ -67,28 +67,30 @@
        they get the same component /stats.html and /paid.html use: a figure, what it is, and the one
        clause that makes it mean something. Baked by prerender; index.js refreshes them by id. -->
   <section class="section section--figures"><div class="wrap">
-    <p class="lede figures__lede"><strong>Upkeep. Freshness. Real adoption. Known advisories at the
-      version you would install today.</strong> Four measures, every input public.</p>
+    <!-- ONE LINE PER FIGURE. Each stat carried a label AND a note, so four numbers arrived as eight
+         lines of prose and the band read as a paragraph broken into boxes — nobody scans that. The
+         second line was mostly restating the first (`tools and skills measured` / `of 95,574
+         discovered and tracked`) or repeating the lede verbatim (`the version you would install
+         today`, said twice within 40 words). A figure earns one clause; if it needs two, the number
+         is not carrying its own weight. -->
+    <p class="lede figures__lede"><strong>Upkeep, freshness, real adoption, and known
+      advisories.</strong> Four measures, every input public.</p>
     <dl class="stat">
       <div class="stat__i">
         <dt class="stat__n mono" id="sCaps">12,662</dt>
-        <dd class="stat__l">tools and skills measured<span class="mnote stat__w o-70">of <span
-          id="sRepos">95,574</span> discovered and tracked</span></dd>
+        <dd class="stat__l">measured, of <span id="sRepos">95,574</span> tracked</dd>
       </div>
       <div class="stat__i">
         <dt class="stat__n mono" id="sScanned">6,345</dt>
-        <dd class="stat__l">audited for advisories<span class="mnote stat__w o-70">against the
-          version you would install today</span></dd>
+        <dd class="stat__l">audited at the version you would install today</dd>
       </div>
       <div class="stat__i">
         <dt class="stat__n mono" id="sJobs">3,436</dt>
-        <dd class="stat__l">mapped to the work they do<span class="mnote stat__w o-70">every mapping
-          states the evidence for it</span></dd>
+        <dd class="stat__l">mapped to the work they do</dd>
       </div>
       <div class="stat__i">
         <dt class="stat__n mono"><a class="link" href="/paid.html" id="sPaid">$247k</a></dt>
-        <dd class="stat__l">settled agent payments<span class="mnote stat__w o-70"
-          id="sPaidNote">the median service has earned $0.52</span></dd>
+        <dd class="stat__l">settled agent payments<span id="sPaidNote">, median $0.52</span></dd>
       </div>
     </dl>
     <p class="mnote o-70"><span id="sDate">measured Sep 13, 2026</span> &middot; recomputed nightly,
@@ -99,8 +101,11 @@
     <div class="section__head"><div>
       <p class="kicker">Start here</p>
       <h2>What do you do?</h2>
-      <p class="section__lede">Pick the work. The board re-ranks to what we have measured for it.
-        Counts are live rows, not catalogue totals.</p>
+      <!-- The old caption said "Counts are live rows, not catalogue totals", which stopped being
+           true the moment those counts became catalogue totals so they would stop contradicting
+           /role/ and /task/. The board note now states what it is showing, so this line no longer
+           has to apologise for a number. -->
+      <p class="section__lede">Pick the work. The board re-ranks to what we have measured for it.</p>
     </div></div>
     <div class="rolegrid" id="rolegrid"></div>
   </div></section>
@@ -245,10 +250,10 @@
 
   <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The trusted directory for your AI's toolbox.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/audit.html">Check my setup</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a><a href="/changes.html">What changed</a><a href="/stats.html">The numbers</a><a href="/paid.html">Who gets paid</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources. Every tool, on the record.</span></div></footer>
 
-  <script src="/js/ridge.js?v=303" defer></script>
-  <script src="/js/hero.js?v=303" defer></script>
-  <script src="/js/terminal.js?v=303" defer></script>
-  <script src="/js/site.js?v=303" defer></script>
-  <script src="/js/index.js?v=303" defer></script>
+  <script src="/js/ridge.js?v=306" defer></script>
+  <script src="/js/hero.js?v=306" defer></script>
+  <script src="/js/terminal.js?v=306" defer></script>
+  <script src="/js/site.js?v=306" defer></script>
+  <script src="/js/index.js?v=306" defer></script>
 </body>
 </html>

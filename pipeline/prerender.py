@@ -1138,12 +1138,12 @@ def bake_hero(caps, total, gen=""):
     scanned = live.get("risk_scanned") or 0
     jobbed = live.get("job_mapped") or 0
     paid_short = "\u2014"
-    paid_note = "no settled payment read yet"
+    paid_note = ", not read yet"          # reads as a clause after "settled agent payments"
     if eco_all.get("paid_usd"):
         usd_ = eco_all["paid_usd"]
         paid_short = ("$%dk" % round(usd_ / 1000)) if usd_ >= 1000 else ("$%d" % round(usd_))
         if eco_all.get("median_usd") is not None:
-            paid_note = f"the median service has earned ${eco_all['median_usd']:,.2f}"
+            paid_note = f", median ${eco_all['median_usd']:,.2f}"
     for pat, val in ((r'(<b id="hCount">)[^<]*(</b>)', f"{total:,}"),
                      (r'(<b id="hChecked">)[^<]*(</b>)', f"{len(caps):,}"),
                      (r'(<p class="job__d" id="homePaid">)[^<]*(</p>)', paid_card),

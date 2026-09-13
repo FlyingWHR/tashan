@@ -436,6 +436,9 @@ import { join } from "node:path";
   }
   assert.strictEqual(offerFor([{ row: { id: "x", sec_advisory_count: 2, sec_install_script: "node evil.js" } }], null), null,
     "an advisory and an install command are free in full — neither is ever what the offer is about");
+  assert.strictEqual(offerFor([{ item: { type: "skill", name: "review" }, row: { id: "skill:someone/review", tashan_score: 80 },
+                                 alts: [{ cap: {} }] }], null), null,
+    "a skill matches by folder name alone, so its record is a guess at identity — never the basis of a sale");
   console.log("ok — the offer names what this stack has, never a free fact, never past a licence");
 
   assert.strictEqual(standing({ tashan_score: 85, rank_pct: 98, category: "browser" }), "above 98% of browser",
@@ -464,6 +467,12 @@ import { join } from "node:path";
   assert.deepStrictEqual(reachOf(rs).remote, ["playwright"], "the third-party-text surface names each tool once");
   assert.deepStrictEqual(recentOf(rs).map((e) => e.at), ["2026-09-01", "2026-08-10"],
     "changes are newest first, and a capability configured twice reports its change once");
+  const withSkill = [...rs, { item: { type: "skill", name: "extract" },
+    row: { id: "skill:someone/extract", sec_permissions: '["network"]', sec_remote_content: 1,
+           recent: [{ at: "2026-09-12", kind: "abandoned", what: "stopped" }] } }];
+  assert.deepStrictEqual(reachOf(withSkill), reachOf(rs),
+    "a skill matched by folder name adds nothing to reach — its record may describe a stranger");
+  assert.deepStrictEqual(recentOf(withSkill), recentOf(rs), "nor to what changed");
 
   assert.strictEqual(spark([85, 85, 85]), "▅▅▅", "a flat series sits mid-height, not on the floor");
   assert.strictEqual(spark([58, 50, 41])[0] + spark([58, 50, 41])[2], "█▁", "a real fall uses the full height");
@@ -503,6 +512,42 @@ import { join } from "node:path";
   assert.strictEqual(resolve({ kind: "plugin", name: "vercel", id: "plugin:vercel/vercel-plugin/vercel" }, lk).id,
     "plugin:vercel/vercel-plugin/vercel", "and one with a home resolves to exactly that record");
   console.log("ok — standing, evidence, reach, changes, sparkline, verdict and plugin identity");
+}
+
+// ---- the report itself, both ways it is read -------------------------------------------------------
+// The Pro branch is the one a paying customer sees and the one no local run can reach without a key,
+// so it is rendered here from a fixture: a series drawn beside the score, the licence saying what it
+// delivered, no pitch. The free branch must carry every fact and the offer, and nothing else.
+{
+  const { renderDoctor } = await import("./tashan.mjs");
+  const { trend, withTrend, summarize } = await import("./doctor.mjs");
+  const strip = (s) => s.replace(/\x1b\[[0-9;]*m/g, "");
+  const row = { id: "pkg:@playwright/mcp", name: "@playwright/mcp", tashan_score: 85, rank_pct: 98, category: "browser",
+                official: "Microsoft", npm_downloads: 4633135, sec_permissions: '["browser"]', sec_remote_content: 1,
+                recent: [{ at: "2026-08-10", kind: "permissions_widened", what: "@playwright/mcp now reaches browser" }] };
+  const item = { type: "server", client: "Claude Code", scope: "user", name: "playwright", kind: "npm", id: "@playwright/mcp" };
+  const series = trend({ tashan_score: { "2026-09-01": 84, "2026-09-02": 85, "2026-09-03": 85 } });
+  const use = { available: true, days: 30 };
+  const index = { records: 12956, date: "2026-09-13" };
+  const paid = [{ item, row, assessment: withTrend({ level: "ok", notes: [] }, series), use: { calls: 477, recent: true } }];
+
+  const pro = strip(renderDoctor(paid, [], summarize(paid), true, false, "active", null, index, use));
+  assert.ok(/playwright\s+85\s+[▁▂▃▄▅▆▇█]+ steady\s+above 98% of browser/.test(pro), "Pro draws the series beside the score");
+  assert.ok(!/steady over/.test(pro), "and does not repeat it as a note under the row");
+  assert.ok(/477 calls in 30 days · Microsoft official · 4\.6M downloads\/wk/.test(pro), "usage leads the evidence line");
+  assert.ok(/licence active — 1 score series read/.test(pro), "the licence says what it delivered on this run");
+  assert.ok(!/\$6\/mo/.test(pro), "a licence holder is never pitched");
+
+  const plain = paid.map((r) => ({ ...r, assessment: { level: "ok", notes: [] } }));
+  const free = strip(renderDoctor(plain, [], summarize(plain), false, false, null, null, index, use));
+  assert.ok(/12,956 capabilities measured 2026-09-13/.test(free), "the header says what the stack was checked against");
+  assert.ok(/browser\s+playwright/.test(free), "reach is free");
+  assert.ok(/2026-08-10\s+playwright — @playwright\/mcp now reaches browser/.test(free), "what changed is free");
+  assert.ok(/1 of 1 servers called\s+playwright 477/.test(free), "usage is free");
+  assert.ok(/tashan Pro \$6\/mo · the daily score series behind (this one|these \d+)/.test(free),
+    "a free reader with a scored stack is told what the licence adds");
+  assert.ok(!/▁|▂|▃|▄|▅|▆|▇|█/.test(free), "and is not shown a series it has not paid for");
+  console.log("ok — the report renders for Pro and for free, and only Pro is drawn a series");
 }
 
 // ---- the security audit's DETAIL is free too, and never invented -------------------------------
