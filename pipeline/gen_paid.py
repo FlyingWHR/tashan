@@ -138,7 +138,14 @@ def table(rows):
             '<td><div class="cap__name"><a class="cap__link" href="' + esc(href) + '">'
             + esc(r["name"]) + "</a>"
             ' <span class="tag">' + esc(r["kind"]) + "</span></div>"
+            # THE RECEIPT, ONE CLICK AWAY. The whole argument of this page is that these figures
+            # came off a public ledger rather than out of our exporter, and until now a reader had to
+            # take that on faith — the addresses were summed and then thrown away. Linking the first
+            # one to a block explorer turns "trust us" into "go and look": the USDC transfers are
+            # right there, in the same order of magnitude, under somebody else's domain.
             '<div class="mnote o-70 mono">' + esc(r["host"])
+            + ((' &middot; <a class="link" rel="nofollow noopener" href="https://basescan.org/address/'
+                + esc(r["addresses"][0]) + '#tokentxns">receipts &#8599;</a>') if r.get("addresses") else "")
             + (esc(f' · {len(r["addresses"])} payment addresses') if len(r["addresses"]) > 1 else "")
             + "</div></td>"
             '<td class="num"><span class="ev">' + esc(money(r["paid_usd"])) + "</span></td>"
