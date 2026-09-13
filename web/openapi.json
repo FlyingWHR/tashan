@@ -266,6 +266,83 @@
     }
    }
   },
+  "/data/demand.json": {
+   "get": {
+    "operationId": "paidDemand",
+    "summary": "Which AI services have actually been paid",
+    "description": "Settled x402 receipts on Base, read from a subgraph on The Graph Network and joined to the capabilities we measure. Free.\n\nEvery other signal in this space is a proxy — downloads count machines running an install, stars count people who liked a link. A settled payment is not a proxy. This is the only published index of which x402 services have ever received one.\n\n`economy` carries the distribution, never the total alone: a sum is the one statistic a concentrated economy always passes. `records` carries one row per payment address, and an address shared by several services is counted in the totals and never attributed to a single project.\n\nPayment is deliberately not an input to any score. Unpaid is the normal case for an MCP server and is never a defect.",
+    "responses": {
+     "200": {
+      "description": "The market, and the rows behind it",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "economy": {
+           "type": "object",
+           "properties": {
+            "paid_usd": {
+             "type": "number"
+            },
+            "calls": {
+             "type": "integer"
+            },
+            "receivers_paid": {
+             "type": "integer"
+            },
+            "receivers_never_paid": {
+             "type": "integer"
+            },
+            "median_usd": {
+             "type": "number"
+            },
+            "top1_share": {
+             "type": "number"
+            }
+           }
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "address": {
+              "type": "string"
+             },
+             "hosts": {
+              "type": "array",
+              "items": {
+               "type": "string"
+              }
+             },
+             "capabilities": {
+              "type": "array",
+              "items": {
+               "type": "string"
+              }
+             },
+             "shared": {
+              "type": "boolean",
+              "description": "True when several services publish this address. Never attributed to one project."
+             },
+             "paid_usd": {
+              "type": "number"
+             },
+             "calls": {
+              "type": "integer"
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
   "/v0.1/audit": {
    "post": {
     "operationId": "auditConfig",
