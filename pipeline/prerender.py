@@ -12,7 +12,7 @@ Then regenerates web/sitemap.xml with every page. Runs after build.py's export. 
 ponytail: the summary is intentionally a subset of capability.js's render — the JSON-LD carries the
 structured data, so we don't duplicate the whole client template in Python. Keep them loosely in sync.
 """
-import json, os, re, html, sys
+import glob, json, os, re, html, sys
 from urllib.parse import quote
 from datetime import datetime, timezone
 
@@ -1186,8 +1186,25 @@ def bake_counts(measured):
     # matching — silently, since re.sub finding nothing is not an error. The page then held a figure
     # from a week earlier on the one site whose product is numbers being current. A generator that
     # can be disarmed by a line wrap is a trap; match runs of whitespace, not single spaces.
+    # /about.html argues that this is not a directory, using four live figures. An argument whose
+    # evidence has gone stale is weaker than no argument, and this one is the page's whole point.
+    skills = ranked_skills = catalogued = 0
+    try:
+        with open(os.path.join(ROOT, "web", "data", "capabilities.json"), encoding="utf-8") as fh:
+            _ex = json.load(fh) or {}
+        _caps = _ex.get("capabilities") or []
+        skills = sum(1 for c in _caps if str(c.get("id", "")).startswith("skill:"))
+        ranked_skills = sum(1 for c in _caps if str(c.get("id", "")).startswith("skill:")
+                            and c.get("tashan_score") is not None)
+        catalogued = _ex.get("catalogued") or 0
+    except (OSError, ValueError):
+        pass
+    days = len(glob.glob(os.path.join(ROOT, "data", "history", "*.csv.gz")))
     edits = (
         ("for-hosts.html", r"(\b)[\d,]+(\s+measured\s+servers\s+today)", f"{measured:,}"),
+        ("about.html", r'(<b id="abSkills">)[^<]*(</b>)', f"{skills:,}"),
+        ("about.html", r'(<b id="abCatalogued">)[^<]*(</b>)', f"{catalogued:,}"),
+        ("about.html", r'(<b id="abDays">)[^<]*(</b>)', f"{days:,}"),
         ("pricing.html",
          r"(<b>)[\d,]+(</b>\s+of\s+the\s+things\s+we\s+measure\s+are\s+abandoned)", f"{dead:,}"),
     )

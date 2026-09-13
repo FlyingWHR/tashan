@@ -458,5 +458,40 @@ if os.path.exists(DB):
                f"tracked ({tracked:,}) or abandoned ({dead:,}) — prerender.bake_counts stamps these")
     con.close()
 
+# ------------------------------------------------------------------------------------------------
+# THE "NOT A DIRECTORY" ARGUMENT MUST STAY TRUE OF THE DATA IT CITES.
+#
+# /about.html answers the question every reader arrives with — why is this not another directory —
+# and it answers it with evidence rather than adjectives: that 723 skills are published and NONE of
+# them are ranked, because a skill's only upkeep signal is its repository's and publishing that
+# per-skill would be one repo's number repeated 300 times.
+#
+# That is the strongest claim on the site and it is one merge away from being false. The moment a
+# skill earns a grade of its own SKILL.md it becomes legitimately rankable, the sentence stops being
+# true, and nothing else would notice. An argument that has quietly become a lie is worse than one
+# never made, because a reader who checks it finds us doing the exact thing we say nobody should.
+print()
+print("# the not-a-directory argument must match the export it cites")
+_about_p = os.path.join(WEB, "about.html")
+_exp_p = os.path.join(WEB, "data", "capabilities.json")
+if os.path.exists(_about_p) and os.path.exists(_exp_p):
+    _ab = open(_about_p, encoding="utf-8").read()
+    with open(_exp_p, encoding="utf-8") as fh:
+        _caps = (json.load(fh) or {}).get("capabilities") or []
+    _sk = [c for c in _caps if str(c.get("id", "")).startswith("skill:")]
+    _sk_ranked = [c for c in _sk if c.get("tashan_score") is not None]
+    _says_none = "none of them are ranked" in _ab
+    ok(f"about.html's 'none of them are ranked' matches the export ({len(_sk_ranked)} ranked "
+       f"of {len(_sk):,} skills)",
+       not (_says_none and _sk_ranked),
+       f"{len(_sk_ranked)} skill(s) now carry a score — e.g. {[c['id'] for c in _sk_ranked[:2]]} — "
+       f"so the page's central argument is false. Either the gate in build.py::export regressed, or "
+       f"a skill earned a per-skill grade and this sentence needs rewriting to say how many.")
+    # And the figure it leads with must be the published one, not a number from a prior run.
+    _m = re.search(r'id="abSkills">([\d,]+)<', _ab)
+    ok(f"about.html states the published skill count ({len(_sk):,})",
+       bool(_m) and _m.group(1).replace(",", "") == str(len(_sk)),
+       f"page says {_m.group(1) if _m else 'nothing'} — prerender bakes this, so re-run it")
+
 print(("CLAIMS OK" if not fail else "CLAIMS FAILED"))
 sys.exit(fail)
