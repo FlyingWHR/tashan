@@ -964,6 +964,20 @@ function isEntry(metaUrl) {
   }
 }
 
+// EXIT CODE WITHOUT TRUNCATING THE OUTPUT. `process.exit()` does not wait for stdout to drain, and
+// when stdout is a PIPE node buffers it asynchronously — so `doctor --json | jq` was cut at the
+// 64 KiB pipe buffer and handed the caller unparseable JSON with exit status 0. A terminal hid it
+// completely (stdout to a TTY is synchronous on POSIX) and so did `> file`, which is how it survived:
+// it only appeared through the pipe, which is the one arrangement /start.html actually tells people
+// to use ("Add --json to pipe it"), and only on a machine with enough rows to pass 64 KiB. Truncated
+// output plus a success code is the worst pair — a script reads garbage and never learns it did.
+//
+// Setting exitCode lets node finish flushing and leave on its own. The explicit exit stays behind a
+// 'beforeExit' hook: if a stray timer or open handle would hold the process open, we still leave with
+// the right status, but only once the event loop has nothing left to do and the write has landed.
 if (isEntry(import.meta.url)) {
-  main(process.argv.slice(2)).then((code) => process.exit(code || 0));
+  main(process.argv.slice(2)).then((code) => {
+    process.exitCode = code || 0;
+    process.once("beforeExit", () => process.exit(process.exitCode || 0));
+  });
 }

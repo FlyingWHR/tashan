@@ -155,81 +155,30 @@ to `data/history/`. The cheap path: `capability_text` is 308 MiB of the 636 MiB 
 re-fetchable cache — `db_store` already pushes more than one object, so splitting it out puts both
 halves under the ceiling without a new dependency or a slow re-fetch.
 
-## The demo — a 3:30 script, read it while you record
+## The demo — generated, not typed
 
-Rules that auto-reject: under 720p, over 4 minutes, sped up, AI voiceover, phone-recorded. Your
-voice, a real terminal, a real browser. Local preview is fine and faster than production:
-`python3 pipeline/serve.py` then http://localhost:4173.
+**`python3 pipeline/demo.py`** prints the beat sheet with every figure read off `web/data/` at the
+moment you run it. `--serve` starts the local preview first; `--check` exits non-zero if anything in
+it has gone stale, and is the last thing to run before you hit record.
 
-**0:00–0:25 — the problem, on your own machine.**
+This used to be a script with its numbers typed into the prose, and within a week it told the
+presenter to say "11,914 measured of 55,268 tracked" over a page reading 12,656 of 95,195, and
+"$247,247 settled" over a page reading $247,318. Reading a stale number aloud, on camera, on a
+product whose whole claim is that its numbers are current, is the most expensive sentence in the
+submission. So it is derived now, like everything else here.
 
-```sh
-npx tashan-cli doctor
-```
+### The rules, verified 13 Sep 2026 against ethglobal.com/events/ethonline/info/details
 
-Say: "Twelve MCP servers, eleven plugins, two hundred and forty-one skills. A hundred and thirteen
-of those skills are owned by no plugin — nothing will ever update them but me. I did not know that
-before I wrote this, and neither does anyone else running an agent."
+> - "Must be between 2 and 4 minutes"
+> - "DO NOT export the video in any resolution less than 720p (Upload will fail if the video is less than 720p)"
+> - "DO NOT use a text to speech synthesizer / AI Voiceover"
+> - "DO NOT use mobile phones to record the video submission"
+> - "DO NOT speed up the video to fit under the time limit"
+> - "DO NOT play music with text on the video describing your project (instead of talking)"
 
-**0:25–1:10 — what tashan is.** Open http://localhost:4173. Point at the hero: 11,914 measured of
-55,268 tracked. Click any capability. Say: "Every number has its inputs on the page — upkeep,
-freshness, adoption, how much of the evidence we actually have. And an advisory scan against the
-version you would install today." Then the sentence that matters: "Nobody can pay to move a rank.
-That is not a promise on an about page, it is `tests/test_firewall.py` — it reads the scorer's
-source and fails if it touches a column that is not public signal."
+**The narration has to be a person, and the last two rules close the obvious ways around that** —
+no sped-up footage, and no music-over-text standing in for talking. There is no version of this a
+model can hand over finished; `demo.py` prepares everything up to the moment the microphone opens
+and stops there.
 
-**1:10–2:30 — the window's work, and the point of the whole thing.** Click *Who gets paid*.
-
-Say: "Everything I just showed you is a proxy. Downloads, stars, publish cadence — all of them can
-exist without one person finding the thing useful. This cannot." Then read the four figures off the
-page: 997 of 1,079 listed x402 services have been paid at least once, 82 never have, $247,247
-settled across 10.4 million payments — "and the median service has earned fifty-one cents in its
-entire life. Two thirds of all the money is one receiver."
-
-"A directory lists all of them and publishes evidence about none of them. This is the first index of
-which ones anybody actually paid."
-
-Scroll to the table. Land on blockrun: $166,659 across 8.7 million calls, tashan score 71, 1.3k
-downloads a week. Say: "Adoption and payment are different questions, and this is what it looks like
-when they disagree. Payment is deliberately not an input to the score — 'someone pays for this' and
-'this is well made' are different claims."
-
-Then find our own row — ⌘F for `tashan.sh`; it sorts last today, on $0.00 — and pause on it:
-Tashan CLI, tashan.sh, $0.00, never paid. (Do not say "the last row": the table is regenerated
-nightly and another zero-earning row could sort below us by name.)
-Say: "We publish a price too, so we are in our own table — last, with zero. Nobody put us there and
-nobody exempted us; the join found us like it found everyone else." That is the single most
-persuasive thing on the page, and it costs one sentence.
-
-**2:30–3:10 — how it is read, which is the part to be proud of.** Scroll to *Re-run it yourself*.
-
-Say: "These receipts are not ours. They are a subgraph on The Graph Network, and we read it through
-The Graph's own Subgraph MCP server — the same tool call any agent can make. The endpoint, the tool
-and the query are printed on the page, so you can re-run it and check me." Then show an agent doing
-exactly that:
-
-```sh
-# with the MCP server configured, ask an agent: "has anyone actually paid for blockrun?"
-```
-
-Or show the raw call if a live agent is risky on camera:
-
-```sh
-printf '%s\n%s\n%s\n' \
-  '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18"}}' \
-  '{"jsonrpc":"2.0","method":"notifications/initialized"}' \
-  '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"paid_demand","arguments":{"name":"blockrun"}}}' \
-  | TASHAN_SITE=http://127.0.0.1:4173 node cli/mcp.mjs
-```
-
-**3:10–3:30 — the close.** Say: "tashan predates this hackathon; the README says exactly which
-commits are new. What is new is that the instrument now measures money, and that an agent can ask
-it. Thirteen commits, the suite green on every one."
-
-### Do not say
-- Do not say "$247k settled" without the median in the same breath. A sum is the one statistic a
-  concentrated economy always passes, and overselling it is the exact thing this product exists to
-  point at.
-- Do not call an unpaid capability worse. Almost every MCP server is free by design.
-- Do not claim we index the whole x402 economy. It is Base, it is x402, and it is the addresses we
-  could resolve from public listings.
+The four beats total 3:30, which leaves slack at both ends of the 2–4 minute window.

@@ -612,3 +612,29 @@ console.log("ok — --version answers, and reads the number npm published");
             "a healthy capability must not be decorated with a warning it did not earn");
 }
 console.log("ok — add warns above the command, and only when the row earned it");
+
+// ---- stdout must survive a PIPE -----------------------------------------------------------------
+// `main().then(code => process.exit(code))` does not wait for stdout to drain, and node buffers
+// stdout asynchronously when it is a pipe. So `tashan doctor --json | jq` was truncated at the
+// 64 KiB pipe buffer and handed the caller unparseable JSON — with exit status 0, which is the worst
+// half: a script reads garbage and never learns it did. Measured on a real machine, 65,478 of
+// 225,178 bytes arrived; 71% of the output was dropped.
+//
+// It was invisible in every normal test: stdout to a TTY is synchronous on POSIX, and `> file` is
+// synchronous too. Only a pipe shows it — which is the one arrangement /start.html tells people to
+// use ("Add --json to pipe it"). So this test PIPES, deliberately, and uses `search --json` rather
+// than `doctor` because that reads the committed index and is therefore the same size on every
+// machine, including one whose own agent config is too small to cross the buffer.
+{
+  const { execFileSync } = await import("node:child_process");
+  const here = new URL(".", import.meta.url).pathname;
+  const out = execFileSync(process.execPath,
+                           [here + "tashan.mjs", "search", "mcp", "--json", "--limit", "400"],
+                           { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"],
+                             maxBuffer: 64 * 1024 * 1024 });
+  assert.ok(out.length > 64 * 1024,
+            `the fixture must exceed the 64 KiB pipe buffer or this proves nothing (got ${out.length})`);
+  assert.doesNotThrow(() => JSON.parse(out),
+                      `--json was truncated through a pipe at ${out.length} bytes`);
+}
+console.log("ok — --json survives a pipe (exit does not race the flush)");
