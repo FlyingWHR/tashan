@@ -54,10 +54,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 44 | 3 marketplaces | active |
 | 37 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 44 | 3 marketplaces | active |
 | 38 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 43 | 1 ★ | active |
-| 39 | [Sap Abap Cds](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-abap-cds.html) | 42 | 1 marketplaces | — |
-| 40 | [Sap Btp Master Data Integration](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-master-data-integration.html) | 42 | 1 marketplaces | — |
+| 39 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 42 | 3 ★ | active |
+| 40 | [Sap Abap Cds](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-abap-cds.html) | 42 | 1 marketplaces | — |
 
-Showing the top 40 of 77. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
+Showing the top 40 of 76. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
 
 ## What these numbers are not
 

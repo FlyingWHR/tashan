@@ -45,11 +45,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Memlab](https://tashan.sh/capability/pkg-memlab-mcp-server.html) | 74 | 3k/wk | active |
 | 33 | [Analytics](https://tashan.sh/capability/pkg-armature-tech-mcp-analytics.html) | 73 | 2k/wk | active |
 | 34 | [Claudestat](https://tashan.sh/capability/pkg-statforge-claudestat.html) | 65 | 597/wk | active |
-| 35 | [Ops](https://tashan.sh/capability/pkg-uluops-ops-mcp.html) | 64 | 711/wk | active |
-| 36 | [Umami](https://tashan.sh/capability/pkg-asif2bd-umami-mcp.html) | 60 | 715/wk | active |
-| 37 | [X402 Ads](https://tashan.sh/capability/pkg-forgemeshlabs-x402-ads-mcp.html) | 59 | 256/wk | active |
-| 38 | [Motherduck Skills](https://tashan.sh/capability/plugin-motherduckdb-agent-skills-motherduck-skills.html) | 56 | 53 ★ | active |
-| 39 | [Analyga](https://tashan.sh/capability/pkg-analyga.html) | 54 | 78/wk | active |
+| 35 | [Umami](https://tashan.sh/capability/pkg-asif2bd-umami-mcp.html) | 59 | 352/wk | active |
+| 36 | [X402 Ads](https://tashan.sh/capability/pkg-forgemeshlabs-x402-ads-mcp.html) | 59 | 256/wk | active |
+| 37 | [Motherduck Skills](https://tashan.sh/capability/plugin-motherduckdb-agent-skills-motherduck-skills.html) | 56 | 53 ★ | active |
+| 38 | [Analyga](https://tashan.sh/capability/pkg-analyga.html) | 54 | 78/wk | active |
+| 39 | [Ops](https://tashan.sh/capability/pkg-uluops-ops-mcp.html) | 54 | 46/wk | active |
 | 40 | [Nichedb](https://tashan.sh/capability/pkg-profullstack-nichedb.html) | 54 | 38/wk | active |
 
 Showing the top 40 of 61. The full ranked shelf is at https://tashan.sh/task/exploratory-data-analysis.html.

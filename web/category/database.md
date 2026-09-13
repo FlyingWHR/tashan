@@ -12,16 +12,16 @@ Ranked by the tashan score
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) | 98 | 112k/wk | active |
-| 2 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 54k/wk | active |
+| 2 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 56k/wk | active |
 | 3 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 80 | 12k/wk | active |
 | 4 | [Pi Mnemopi](https://tashan.sh/capability/pkg-oh-my-pi-pi-mnemopi.html) | 79 | 94k/wk | active |
-| 5 | [Manifest](https://tashan.sh/capability/pkg-absolutejs-manifest.html) | 75 | 47k/wk | active |
-| 6 | [Postgres](https://tashan.sh/capability/pkg-yawlabs-postgres-mcp.html) | 75 | 26k/wk | active |
-| 7 | [Instantdb](https://tashan.sh/capability/pkg-instantdb-mcp.html) | 75 | 2k/wk | active |
-| 8 | [Runpod](https://tashan.sh/capability/pkg-runpod-mcp-server.html) | 74 | 5k/wk | active |
-| 9 | [Whodb](https://tashan.sh/capability/plugin-clidey-whodb-whodb.html) | 73 | 5k ★ | active |
-| 10 | [Dynoxide](https://tashan.sh/capability/pkg-dynoxide.html) | 73 | 12k/wk | active |
-| 11 | [Agent Swarm](https://tashan.sh/capability/pkg-desplega-ai-agent-swarm.html) | 73 | 3k/wk | active |
+| 5 | [Agent Swarm](https://tashan.sh/capability/pkg-desplega-ai-agent-swarm.html) | 76 | 5k/wk | active |
+| 6 | [Manifest](https://tashan.sh/capability/pkg-absolutejs-manifest.html) | 75 | 47k/wk | active |
+| 7 | [Postgres](https://tashan.sh/capability/pkg-yawlabs-postgres-mcp.html) | 75 | 26k/wk | active |
+| 8 | [Instantdb](https://tashan.sh/capability/pkg-instantdb-mcp.html) | 75 | 2k/wk | active |
+| 9 | [Runpod](https://tashan.sh/capability/pkg-runpod-mcp-server.html) | 74 | 5k/wk | active |
+| 10 | [Whodb](https://tashan.sh/capability/plugin-clidey-whodb-whodb.html) | 73 | 5k ★ | active |
+| 11 | [Dynoxide](https://tashan.sh/capability/pkg-dynoxide.html) | 73 | 12k/wk | active |
 | 12 | [Firebase](https://tashan.sh/capability/plugin-firebase-firebase-tools-firebase.html) | 72 | 4k ★ | active |
 | 13 | [ClickHouse Best Practices](https://tashan.sh/capability/plugin-clickhouse-agent-skills-clickhouse-best-practices.html) | 71 | 498 ★ | active |
 | 14 | [Fortemi](https://tashan.sh/capability/pkg-fortemi-core.html) | 70 | 2k/wk | active |
@@ -37,20 +37,20 @@ Ranked by the tashan score
 | 24 | [SQLite](https://tashan.sh/capability/pkg-mokei-mcp-sqlite.html) | 63 | 457/wk | active |
 | 25 | [Co2 Tracker](https://tashan.sh/capability/plugin-gwittebolle-claude-carbon-co2-tracker.html) | 63 | 149 ★ | active |
 | 26 | [SQL Preview](https://tashan.sh/capability/pkg-sql-preview.html) | 63 | 782/wk | active |
-| 27 | [Titen Memory](https://tashan.sh/capability/pkg-titen-memory.html) | 63 | 681/wk | active |
-| 28 | [Postmark](https://tashan.sh/capability/pkg-activecampaign-postmark-mcp.html) | 62 | 688/wk | active |
-| 29 | [Cloud](https://tashan.sh/capability/pkg-unified-product-graph-cloud-server.html) | 62 | 614/wk | active |
-| 30 | [remem-mcp — Local-first MCP Memory + CodeGraph + Wiki](https://tashan.sh/capability/pkg-remem-mcp.html) | 62 | 508/wk | active |
-| 31 | [PostgreSQL (hardened, read-only)](https://tashan.sh/capability/pkg-postgres-mcp-hardened.html) | 61 | 799/wk | active |
-| 32 | [Backblaze B2](https://tashan.sh/capability/pkg-backblaze-labs-b2-mcp.html) | 61 | 227/wk | active |
-| 33 | [Read Only Local MySQL](https://tashan.sh/capability/pkg-hovecapital-read-only-mysql-mcp-server.html) | 61 | 203/wk | active |
-| 34 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 60 | 41 ★ | active |
-| 35 | [Firestore Native](https://tashan.sh/capability/plugin-gemini-cli-extensions-firestore-native-firestore-native.html) | 60 | 30 ★ | active |
-| 36 | [Statecore](https://tashan.sh/capability/pkg-statecore-mcp.html) | 60 | 958/wk | active |
-| 37 | [NexQL Postgres](https://tashan.sh/capability/pkg-nexql-mcp.html) | 60 | 367/wk | active |
-| 38 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 59 | 22 ★ | active |
-| 39 | [Seedfast](https://tashan.sh/capability/pkg-seedfast.html) | 59 | 421/wk | active |
-| 40 | [Mongo](https://tashan.sh/capability/pkg-mcp-mongo-server.html) | 58 | 649/wk | active |
+| 27 | [Postmark](https://tashan.sh/capability/pkg-activecampaign-postmark-mcp.html) | 62 | 688/wk | active |
+| 28 | [Cloud](https://tashan.sh/capability/pkg-unified-product-graph-cloud-server.html) | 62 | 614/wk | active |
+| 29 | [remem-mcp — Local-first MCP Memory + CodeGraph + Wiki](https://tashan.sh/capability/pkg-remem-mcp.html) | 62 | 508/wk | active |
+| 30 | [PostgreSQL (hardened, read-only)](https://tashan.sh/capability/pkg-postgres-mcp-hardened.html) | 61 | 799/wk | active |
+| 31 | [Backblaze B2](https://tashan.sh/capability/pkg-backblaze-labs-b2-mcp.html) | 61 | 227/wk | active |
+| 32 | [Read Only Local MySQL](https://tashan.sh/capability/pkg-hovecapital-read-only-mysql-mcp-server.html) | 61 | 203/wk | active |
+| 33 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 60 | 41 ★ | active |
+| 34 | [Firestore Native](https://tashan.sh/capability/plugin-gemini-cli-extensions-firestore-native-firestore-native.html) | 60 | 30 ★ | active |
+| 35 | [Statecore](https://tashan.sh/capability/pkg-statecore-mcp.html) | 60 | 958/wk | active |
+| 36 | [NexQL Postgres](https://tashan.sh/capability/pkg-nexql-mcp.html) | 60 | 367/wk | active |
+| 37 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 59 | 22 ★ | active |
+| 38 | [Seedfast](https://tashan.sh/capability/pkg-seedfast.html) | 59 | 421/wk | active |
+| 39 | [Mongo](https://tashan.sh/capability/pkg-mcp-mongo-server.html) | 58 | 649/wk | active |
+| 40 | [MySQL · berthojoris](https://tashan.sh/capability/pkg-berthojoris-mcp-mysql-server.html) | 58 | 509/wk | active |
 
 Showing the top 40 of 169. The full ranked shelf is at https://tashan.sh/category/database.html.
 

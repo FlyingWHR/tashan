@@ -28,7 +28,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 43 | 40 ★ | active |
 | 16 | [Apple Doc](https://tashan.sh/capability/pkg-apple-doc-mcp-server.html) | 43 | 997/wk | active |
 | 17 | [Vibe Doc](https://tashan.sh/capability/plugin-estevanhernandez-stack-ed-vibe-doc-vibe-doc.html) | 40 | 1 ★ | active |
-| 18 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 40 | 3 ★ | active |
+| 18 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 39 | 3 ★ | active |
 | 19 | [Kroki Diagrams](https://tashan.sh/capability/plugin-smoldrago-kroki-diagrams-kroki-diagrams.html) | 36 | 5 ★ | active |
 | 20 | [Integration Guide](https://tashan.sh/capability/pkg-tosspayments-integration-guide-mcp.html) | 71 | 887/wk | active |
 | 21 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 46 | 3 ★ | active |

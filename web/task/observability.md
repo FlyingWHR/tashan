@@ -27,7 +27,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 68 | 946/wk | active |
 | 15 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 60 | 90 ★ | active |
 | 16 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 50 | 4 marketplaces | — |
-| 17 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
+| 17 | [Grafana · grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
 | 18 | [Render](https://tashan.sh/capability/plugin-render-oss-render-plugin-claude-code-render.html) | 45 | 0 ★ | active |
 | 19 | [Sap Btp Cloud Logging](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-cloud-logging.html) | 42 | 1 marketplaces | — |
 | 20 | [Luciq](https://tashan.sh/capability/plugin-luciqai-agent-skills-luciq.html) | 40 | 0 ★ | active |
@@ -39,7 +39,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 55 | 27 ★ | active |
 | 27 | [Dash0](https://tashan.sh/capability/plugin-dash0hq-dash0-agent-plugin-dash0.html) | 52 | 4 ★ | active |
 | 28 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 50 | 5 ★ | active |
-| 29 | [Datadog · TANTIOPE](https://tashan.sh/capability/pkg-datadog-mcp.html) | 57 | 1k/wk | active |
+| 29 | [Datadog · TANTIOPE](https://tashan.sh/capability/pkg-datadog-mcp.html) | 56 | 688/wk | active |
 | 30 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 55 | 1k/wk | active |
 | 31 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 60 | 371/wk | active |
 | 32 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 59 | 414/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Lensmcp](https://tashan.sh/capability/pkg-lensmcp.html) | 64 | 1k/wk | active |
 | 40 | [Monitoring](https://tashan.sh/capability/pkg-uptybots-mcp-server.html) | 62 | 773/wk | active |
 
-Showing the top 40 of 56. The full ranked shelf is at https://tashan.sh/task/observability.html.
+Showing the top 40 of 55. The full ranked shelf is at https://tashan.sh/task/observability.html.
 
 ## What these numbers are not
 

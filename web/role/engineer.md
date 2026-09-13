@@ -22,7 +22,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 98 | 1.1m/wk | active |
 | 2 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 92 | 3.3m/wk | active |
-| 3 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 54k/wk | active |
+| 3 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 56k/wk | active |
 | 4 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 83 | 20k/wk | active |
 | 5 | [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) | 79 | 8k/wk | active |
 | 6 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 76 | 3k/wk | active |
@@ -31,8 +31,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Sem](https://tashan.sh/capability/pkg-ataraxy-labs-sem.html) | 70 | 3k/wk | active |
 | 10 | [Safety Net](https://tashan.sh/capability/plugin-kenryu42-claude-code-safety-net-safety-net.html) | 70 | 1k ★ | active |
 | 11 | [Ios Simulator](https://tashan.sh/capability/pkg-ios-simulator-mcp.html) | 69 | 5k/wk | active |
-| 12 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 68 | 542 ★ | active |
-| 13 | [Execbro](https://tashan.sh/capability/pkg-execbro.html) | 66 | 1k/wk | active |
+| 12 | [Execbro](https://tashan.sh/capability/pkg-execbro.html) | 69 | 2k/wk | active |
+| 13 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 68 | 542 ★ | active |
 | 14 | [Unicli](https://tashan.sh/capability/plugin-yucchiy-unicli-unicli.html) | 65 | 248 ★ | active |
 | 15 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 61 | 80 ★ | active |
 | 16 | [Codedna](https://tashan.sh/capability/plugin-larens94-codedna-codedna.html) | 60 | 143 ★ | active |
@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 48 | 6 ★ | active |
 | 40 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 47 | 182 ★ | active |
 
-Showing the top 40 of 1,038. The full ranked shelf is at https://tashan.sh/role/engineer.html.
+Showing the top 40 of 1,030. The full ranked shelf is at https://tashan.sh/role/engineer.html.
 
 ## What these numbers are not
 

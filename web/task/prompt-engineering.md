@@ -28,7 +28,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 44 | 6 ★ | active |
 | 16 | [LLM Transpile](https://tashan.sh/capability/plugin-epicsagas-llm-transpile-llm-transpile.html) | 43 | 5 ★ | active |
 | 17 | [Agent Runway](https://tashan.sh/capability/plugin-rennf93-agent-runway-agent-runway.html) | 40 | 3 ★ | active |
-| 18 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 44 | 20 ★ | active |
+| 18 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 43 | 20 ★ | active |
 | 19 | [Compress](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-compress.html) | 39 | 1 marketplaces | active |
 | 20 | [Image Prompt Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-image-prompt-generator.html) | 39 | 1 marketplaces | active |
 | 21 | [Prompt Engineering Skills · chujianyun](https://tashan.sh/capability/plugin-chujianyun-skills-prompt-engineering-skills.html) | 36 | 1 marketplaces | active |
@@ -43,7 +43,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [Tanuki Context](https://tashan.sh/capability/pkg-tanuki-context.html) | 49 | 60/wk | active |
 | 31 | [Slimdex](https://tashan.sh/capability/pkg-slimdex-mcp.html) | 46 | 127/wk | active |
 | 32 | [Clarik](https://tashan.sh/capability/pkg-clarik.html) | 35 | 37/wk | active |
-| 33 | [Kubernetes · containers](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 79 | 9k/wk | active |
+| 33 | [Kubernetes · containers](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 78 | 6k/wk | active |
 | 34 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 67 | 1k/wk | active |
 | 35 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 63 | 780/wk | active |
 | 36 | [Codesight](https://tashan.sh/capability/pkg-codesight.html) | 62 | 1k/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Mcpfy SDK](https://tashan.sh/capability/pkg-mcpfy-sdk.html) | 54 | 538/wk | active |
 | 40 | [Cortex · danielblomma](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 54 | 153/wk | active |
 
-Showing the top 40 of 103. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
+Showing the top 40 of 102. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
 
 ## What these numbers are not
 

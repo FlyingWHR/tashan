@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Superpowers Beads](https://tashan.sh/capability/plugin-rsktash-superpowers-superpowers-beads.html) | 40 | 0 ★ | active |
 | 40 | [Swagger Contract Testing](https://tashan.sh/capability/plugin-pactflow-pactflow-agent-skills-swagger-contract-testing.html) | 40 | 1 marketplaces | active |
 
-Showing the top 40 of 129. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
+Showing the top 40 of 125. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
 
 ## What these numbers are not
 

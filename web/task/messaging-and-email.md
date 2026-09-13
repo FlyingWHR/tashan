@@ -22,8 +22,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Gws Connector](https://tashan.sh/capability/plugin-orieg-gws-connector-gws-connector.html) | 38 | 1 ★ | active |
 | 10 | [Apple Mail](https://tashan.sh/capability/pkg-apple-mail-mcp.html) | 71 | 3k/wk | active |
 | 11 | [Slack](https://tashan.sh/capability/pkg-jtalk22-slack-mcp.html) | 66 | 1k/wk | active |
-| 12 | [Mailwarden](https://tashan.sh/capability/pkg-mailwarden.html) | 63 | 863/wk | active |
-| 13 | [Patchcord](https://tashan.sh/capability/pkg-patchcord.html) | 61 | 684/wk | active |
+| 12 | [Patchcord](https://tashan.sh/capability/pkg-patchcord.html) | 66 | 427/wk | active |
+| 13 | [Mailwarden](https://tashan.sh/capability/pkg-mailwarden.html) | 63 | 863/wk | active |
 | 14 | [Mailpouch](https://tashan.sh/capability/pkg-mailpouch.html) | 60 | 492/wk | active |
 | 15 | [Shipmail](https://tashan.sh/capability/pkg-shipmail-mcp.html) | 58 | 159/wk | active |
 | 16 | [Microsoft Teams API](https://tashan.sh/capability/pkg-teams-api.html) | 57 | 438/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Sentvia](https://tashan.sh/capability/pkg-sentvia-mcp.html) | 47 | 128/wk | active |
 | 40 | [Icloud Calendar · @icloud-calendar-mcp](https://tashan.sh/capability/pkg-icloud-calendar-mcp-server.html) | 47 | 104/wk | active |
 
-Showing the top 40 of 165. The full ranked shelf is at https://tashan.sh/task/messaging-and-email.html.
+Showing the top 40 of 162. The full ranked shelf is at https://tashan.sh/task/messaging-and-email.html.
 
 ## What these numbers are not
 

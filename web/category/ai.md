@@ -23,7 +23,7 @@ Ranked by the tashan score
 | 10 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 77 | 17k ★ | active |
 | 11 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 77 | 89k ★ | active |
 | 12 | [Todos](https://tashan.sh/capability/pkg-hasna-todos.html) | 77 | 50k/wk | active |
-| 13 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow-cli.html) | 77 | 36k/wk | active |
+| 13 | [Claude Flow](https://tashan.sh/capability/pkg-claude-flow-cli.html) | 77 | 38k/wk | active |
 | 14 | [Mementos](https://tashan.sh/capability/pkg-hasna-mementos.html) | 77 | 34k/wk | active |
 | 15 | [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) | 77 | 13k/wk | active |
 | 16 | [Agents CLI](https://tashan.sh/capability/pkg-phnx-labs-agents-cli.html) | 77 | 7k/wk | active |
@@ -44,15 +44,15 @@ Ranked by the tashan score
 | 31 | [Claude Harness](https://tashan.sh/capability/plugin-chachamaru127-claude-code-harness-claude-harness.html) | 72 | 3k ★ | active |
 | 32 | [Clickup](https://tashan.sh/capability/pkg-taazkareem-clickup-mcp-server.html) | 72 | 13k/wk | active |
 | 33 | [Ecc Universal](https://tashan.sh/capability/pkg-ecc-universal.html) | 72 | 7k/wk | active |
-| 34 | [Iclavue](https://tashan.sh/capability/pkg-iclavue.html) | 72 | 6k/wk | active |
-| 35 | [Takt](https://tashan.sh/capability/pkg-takt.html) | 72 | 5k/wk | active |
-| 36 | [Xopc](https://tashan.sh/capability/pkg-xopcai-xopc.html) | 72 | 5k/wk | active |
-| 37 | [Code Graph](https://tashan.sh/capability/pkg-sdsrs-code-graph.html) | 72 | 4k/wk | active |
+| 34 | [Xopc](https://tashan.sh/capability/pkg-xopcai-xopc.html) | 72 | 5k/wk | active |
+| 35 | [Code Graph](https://tashan.sh/capability/pkg-sdsrs-code-graph.html) | 72 | 4k/wk | active |
+| 36 | [Iclavue](https://tashan.sh/capability/pkg-iclavue.html) | 72 | 4k/wk | active |
+| 37 | [Takt](https://tashan.sh/capability/pkg-takt.html) | 72 | 4k/wk | active |
 | 38 | [Cq](https://tashan.sh/capability/plugin-mozilla-ai-cq-cq.html) | 71 | 1k ★ | active |
 | 39 | [Acontext](https://tashan.sh/capability/plugin-memodb-io-acontext-acontext.html) | 71 | 4k ★ | active |
 | 40 | [Memsearch](https://tashan.sh/capability/plugin-zilliztech-memsearch-memsearch.html) | 71 | 3k ★ | active |
 
-Showing the top 40 of 721. The full ranked shelf is at https://tashan.sh/category/ai.html.
+Showing the top 40 of 734. The full ranked shelf is at https://tashan.sh/category/ai.html.
 
 ## What these numbers are not
 

@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Gpt Image 2](https://tashan.sh/capability/pkg-runapi-ai-gpt-image-2-mcp.html) | 52 | 210/wk | active |
 | 40 | [Chutes Media](https://tashan.sh/capability/pkg-chutes-media-mcp.html) | 51 | 98/wk | active |
 
-Showing the top 40 of 89. The full ranked shelf is at https://tashan.sh/task/animation.html.
+Showing the top 40 of 88. The full ranked shelf is at https://tashan.sh/task/animation.html.
 
 ## What these numbers are not
 

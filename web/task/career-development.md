@@ -14,7 +14,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Cv · Roxabi](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-cv.html) | 39 | 1 marketplaces | active |
 | 2 | [LinkedIn Apply](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-apply.html) | 39 | 1 marketplaces | active |
 | 3 | [JobGPT - Job Search Automation & Auto Apply](https://tashan.sh/capability/pkg-jobgpt-mcp-server.html) | 36 | 84/wk | active |
-| 4 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 65 | 720/wk | active |
+| 4 | [Trackly](https://tashan.sh/capability/pkg-trackly-cli.html) | 67 | 638/wk | active |
 | 5 | [Jobo Job Search](https://tashan.sh/capability/pkg-jobo-job-search-mcp.html) | 51 | 300/wk | active |
 | 6 | [JobYap Job Search](https://tashan.sh/capability/pkg-jobyap-mcp.html) | 47 | 167/wk | active |
 | 7 | [Vitex — AI Resume Generator](https://tashan.sh/capability/pkg-vitex-cli.html) | 42 | 43/wk | active |

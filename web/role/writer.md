@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 40 | 19 ★ | active |
 | 40 | [Vibe Doc](https://tashan.sh/capability/plugin-estevanhernandez-stack-ed-vibe-doc-vibe-doc.html) | 40 | 1 ★ | active |
 
-Showing the top 40 of 225. The full ranked shelf is at https://tashan.sh/role/writer.html.
+Showing the top 40 of 224. The full ranked shelf is at https://tashan.sh/role/writer.html.
 
 ## What these numbers are not
 

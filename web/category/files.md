@@ -32,27 +32,27 @@ Ranked by the tashan score
 | 19 | [Docket](https://tashan.sh/capability/pkg-pasichdev-docket.html) | 59 | 352/wk | active |
 | 20 | [Terminal Commander](https://tashan.sh/capability/pkg-terminal-commander.html) | 59 | 350/wk | active |
 | 21 | [Fileditor](https://tashan.sh/capability/pkg-fileditor-mcp.html) | 59 | 257/wk | active |
-| 22 | [Kawacode](https://tashan.sh/capability/pkg-kawacode-mcp.html) | 58 | 480/wk | active |
-| 23 | [Beepflow](https://tashan.sh/capability/pkg-beepflow-mcp.html) | 58 | 214/wk | active |
-| 24 | [Bourdon](https://tashan.sh/capability/pkg-getbourdon-mcp-server.html) | 57 | 578/wk | active |
-| 25 | [Fimemory](https://tashan.sh/capability/pkg-fimemory.html) | 57 | 503/wk | active |
-| 26 | [Molecare](https://tashan.sh/capability/pkg-molecare-mcp.html) | 57 | 434/wk | active |
-| 27 | [Watchgoose](https://tashan.sh/capability/pkg-watchgoose-mcp.html) | 56 | 231/wk | active |
-| 28 | [Braincloud MCP Helper](https://tashan.sh/capability/pkg-braincloud-mcp-helper.html) | 56 | 123/wk | active |
-| 29 | [Clio](https://tashan.sh/capability/pkg-oktopeak-clio-mcp.html) | 54 | 122/wk | active |
-| 30 | [Daileyos](https://tashan.sh/capability/pkg-daileyos-mcp-server.html) | 54 | 109/wk | active |
-| 31 | [Recall · @clauderecallhq](https://tashan.sh/capability/pkg-clauderecallhq-cli.html) | 53 | 221/wk | active |
-| 32 | [Desktop Commander · tokor](https://tashan.sh/capability/pkg-tokor-desktop-commander.html) | 53 | 101/wk | active |
-| 33 | [En16931](https://tashan.sh/capability/pkg-attestwire-mcp.html) | 50 | 101/wk | active |
-| 34 | [Jamgate](https://tashan.sh/capability/pkg-jamgate.html) | 49 | 54/wk | active |
-| 35 | [Justdrop](https://tashan.sh/capability/pkg-justdrop-mcp.html) | 48 | 144/wk | active |
-| 36 | [Epiphany](https://tashan.sh/capability/pkg-epiphany-mcp.html) | 47 | 189/wk | active |
-| 37 | [Taibu](https://tashan.sh/capability/pkg-taibu-mcp.html) | 47 | 100/wk | active |
-| 38 | [Csdd](https://tashan.sh/capability/pkg-protonspy-csdd-mcp.html) | 47 | 32/wk | active |
-| 39 | [Outlook · anasahmed07](https://tashan.sh/capability/plugin-anasahmed07-outlook-classic-mcp-outlook.html) | 46 | 10 ★ | active |
-| 40 | [Google Drive · a1-x-tech](https://tashan.sh/capability/pkg-a1-x-tech-mcp-google-drive.html) | 46 | 46/wk | active |
+| 22 | [Srift](https://tashan.sh/capability/pkg-srift-transfer.html) | 59 | 253/wk | active |
+| 23 | [Kawacode](https://tashan.sh/capability/pkg-kawacode-mcp.html) | 58 | 480/wk | active |
+| 24 | [Beepflow](https://tashan.sh/capability/pkg-beepflow-mcp.html) | 58 | 214/wk | active |
+| 25 | [Bourdon](https://tashan.sh/capability/pkg-getbourdon-mcp-server.html) | 57 | 578/wk | active |
+| 26 | [Fimemory](https://tashan.sh/capability/pkg-fimemory.html) | 57 | 503/wk | active |
+| 27 | [Molecare](https://tashan.sh/capability/pkg-molecare-mcp.html) | 57 | 434/wk | active |
+| 28 | [Watchgoose](https://tashan.sh/capability/pkg-watchgoose-mcp.html) | 56 | 231/wk | active |
+| 29 | [Braincloud MCP Helper](https://tashan.sh/capability/pkg-braincloud-mcp-helper.html) | 56 | 123/wk | active |
+| 30 | [Clio](https://tashan.sh/capability/pkg-oktopeak-clio-mcp.html) | 54 | 122/wk | active |
+| 31 | [Daileyos](https://tashan.sh/capability/pkg-daileyos-mcp-server.html) | 54 | 109/wk | active |
+| 32 | [Recall · @clauderecallhq](https://tashan.sh/capability/pkg-clauderecallhq-cli.html) | 53 | 221/wk | active |
+| 33 | [Desktop Commander · tokor](https://tashan.sh/capability/pkg-tokor-desktop-commander.html) | 53 | 101/wk | active |
+| 34 | [En16931](https://tashan.sh/capability/pkg-attestwire-mcp.html) | 50 | 101/wk | active |
+| 35 | [Jamgate](https://tashan.sh/capability/pkg-jamgate.html) | 49 | 54/wk | active |
+| 36 | [Justdrop](https://tashan.sh/capability/pkg-justdrop-mcp.html) | 48 | 144/wk | active |
+| 37 | [Epiphany](https://tashan.sh/capability/pkg-epiphany-mcp.html) | 47 | 189/wk | active |
+| 38 | [Taibu](https://tashan.sh/capability/pkg-taibu-mcp.html) | 47 | 100/wk | active |
+| 39 | [Csdd](https://tashan.sh/capability/pkg-protonspy-csdd-mcp.html) | 47 | 32/wk | active |
+| 40 | [Outlook · anasahmed07](https://tashan.sh/capability/plugin-anasahmed07-outlook-classic-mcp-outlook.html) | 46 | 10 ★ | active |
 
-Showing the top 40 of 66. The full ranked shelf is at https://tashan.sh/category/files.html.
+Showing the top 40 of 67. The full ranked shelf is at https://tashan.sh/category/files.html.
 
 ## What these numbers are not
 

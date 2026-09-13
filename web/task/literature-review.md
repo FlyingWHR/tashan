@@ -21,7 +21,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Paper Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-paper-interpreter.html) | 36 | 1 marketplaces | active |
 | 9 | [Article Interpreter](https://tashan.sh/capability/plugin-chujianyun-skills-article-interpreter.html) | 36 | 1 marketplaces | active |
 | 10 | [Research Toolkit · gioviat](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 34 | 2 ★ | active |
-| 11 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | not scored | 5 repos | active |
+| 11 | [Research](https://tashan.sh/capability/skill-alirezarezvani-research.html) | not scored | 9 repos | active |
 | 12 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 72 | 5k ★ | active |
 | 13 | [Bettercallclaude](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-bettercallclaude.html) | 59 | 33 ★ | active |
 | 14 | [Bettercallclaude Italia](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-italia-bettercallclaude-italia.html) | 50 | 41 ★ | active |

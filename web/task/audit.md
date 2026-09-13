@@ -12,7 +12,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Sofagent](https://tashan.sh/capability/pkg-sofagent-mcp.html) | 65 | 683/wk | active |
-| 2 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 65 | 728/wk | active |
+| 2 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 66 | 536/wk | active |
 | 3 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 50 | 95/wk | active |
 | 4 | [GitHub Security](https://tashan.sh/capability/pkg-github-security-mcp.html) | 35 | 886/wk | abandoned |
 | 5 | [Bastion](https://tashan.sh/capability/pkg-mcp-bastion.html) | 55 | 328/wk | active |
@@ -25,8 +25,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Kya OS](https://tashan.sh/capability/pkg-kya-os-mcp.html) | 70 | 1k/wk | active |
 | 13 | [Claude Ads](https://tashan.sh/capability/plugin-agricidaniel-claude-ads-claude-ads.html) | 69 | 8k ★ | active |
 | 14 | [Audit](https://tashan.sh/capability/pkg-sofagent-audit.html) | 67 | 827/wk | active |
-| 15 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 65 | 1k/wk | active |
-| 16 | [Crosscheck](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 65 | 789/wk | active |
+| 15 | [Crosscheck](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 67 | 604/wk | active |
+| 16 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 65 | 1k/wk | active |
 | 17 | [Claude Code](https://tashan.sh/capability/pkg-ory-claude-code.html) | 65 | 83/wk | active |
 | 18 | [Npmjs](https://tashan.sh/capability/pkg-yawlabs-npmjs-mcp.html) | 62 | 383/wk | active |
 | 19 | [Mcpscore](https://tashan.sh/capability/pkg-mcp-box-mcpscore.html) | 60 | 348/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Stdio Shellguard](https://tashan.sh/capability/pkg-mcp-stdio-shellguard.html) | 40 | 62/wk | active |
 | 40 | [Site Doctor](https://tashan.sh/capability/pkg-site-doctor.html) | 40 | 27/wk | active |
 
-Showing the top 40 of 46. The full ranked shelf is at https://tashan.sh/task/audit.html.
+Showing the top 40 of 45. The full ranked shelf is at https://tashan.sh/task/audit.html.
 
 ## What these numbers are not
 

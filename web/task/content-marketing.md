@@ -28,7 +28,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 40 | 1 marketplaces | active |
 | 16 | [LinkedIn Post Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-post-generator.html) | 39 | 1 marketplaces | active |
 | 17 | [Wechat Official Account Qr](https://tashan.sh/capability/plugin-chujianyun-skills-wechat-official-account-qr.html) | 36 | 1 marketplaces | active |
-| 18 | [Socialneuron](https://tashan.sh/capability/pkg-socialneuron-mcp-server.html) | 61 | 860/wk | active |
+| 18 | [Socialneuron](https://tashan.sh/capability/pkg-socialneuron-mcp-server.html) | 67 | 605/wk | active |
 | 19 | [Reddit](https://tashan.sh/capability/pkg-reddit-mcp-server.html) | 53 | 460/wk | active |
 | 20 | [Postfast](https://tashan.sh/capability/pkg-postfast-mcp.html) | 52 | 103/wk | active |
 | 21 | [Content Genie](https://tashan.sh/capability/pkg-content-genie-mcp.html) | 46 | 87/wk | active |
@@ -44,15 +44,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Viralhunt](https://tashan.sh/capability/pkg-viralhunt-mcp.html) | 43 | 38/wk | active |
 | 32 | [Marketing · autostackup](https://tashan.sh/capability/pkg-autostackup-marketing.html) | 41 | 80/wk | active |
 | 33 | [Maasy — AI Marketing Copilot](https://tashan.sh/capability/pkg-maasy-ai-mcp-server.html) | 37 | 86/wk | active |
-| 34 | [Founder](https://tashan.sh/capability/pkg-autostackup-founder.html) | 34 | 20/wk | active |
-| 35 | [Chirpie](https://tashan.sh/capability/pkg-chirpie-mcp.html) | 71 | 3k/wk | active |
-| 36 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 70 | 3k ★ | active |
-| 37 | [Marketing Studio](https://tashan.sh/capability/plugin-ucsandman-marketing-studio-marketing-studio.html) | 66 | 227 ★ | active |
-| 38 | [Planvortex](https://tashan.sh/capability/pkg-planvortex-mcp.html) | 65 | 888/wk | active |
-| 39 | [Omnisocials](https://tashan.sh/capability/pkg-omnisocials-mcp-server.html) | 64 | 758/wk | active |
-| 40 | [Crmsolid](https://tashan.sh/capability/pkg-crmsolid-mcp-server.html) | 59 | 537/wk | active |
+| 34 | [Chirpie](https://tashan.sh/capability/pkg-chirpie-mcp.html) | 71 | 3k/wk | active |
+| 35 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 70 | 3k ★ | active |
+| 36 | [Marketing Studio](https://tashan.sh/capability/plugin-ucsandman-marketing-studio-marketing-studio.html) | 66 | 227 ★ | active |
+| 37 | [Planvortex](https://tashan.sh/capability/pkg-planvortex-mcp.html) | 65 | 888/wk | active |
+| 38 | [Omnisocials](https://tashan.sh/capability/pkg-omnisocials-mcp-server.html) | 64 | 758/wk | active |
+| 39 | [Crmsolid](https://tashan.sh/capability/pkg-crmsolid-mcp-server.html) | 59 | 537/wk | active |
+| 40 | [Mysocial](https://tashan.sh/capability/pkg-mysocial-io-intelligence.html) | 59 | 428/wk | active |
 
-Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.
+Showing the top 40 of 58. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.
 
 ## What these numbers are not
 

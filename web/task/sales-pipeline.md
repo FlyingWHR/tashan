@@ -40,19 +40,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Voxplo](https://tashan.sh/capability/pkg-voxplo-mcp.html) | 41 | 71/wk | active |
 | 28 | [Sales](https://tashan.sh/capability/pkg-autostackup-sales.html) | 40 | 62/wk | active |
 | 29 | [Coherenceos](https://tashan.sh/capability/pkg-coherenceos-mcp-server.html) | 38 | 90/wk | active |
-| 30 | [Founder](https://tashan.sh/capability/pkg-autostackup-founder.html) | 34 | 20/wk | active |
-| 31 | [Free AI Ops](https://tashan.sh/capability/pkg-miraigent-free-ai-ops-mcp.html) | 67 | 1k/wk | active |
-| 32 | [Affinity](https://tashan.sh/capability/pkg-alludium-affinity-mcp-server.html) | 67 | 364/wk | active |
-| 33 | [Skills · vruum](https://tashan.sh/capability/pkg-vruum-skills.html) | 63 | 695/wk | active |
-| 34 | [Crmincloud](https://tashan.sh/capability/pkg-memori-ai-mcp-crmincloud.html) | 62 | 374/wk | active |
-| 35 | [Fq 239 Audit](https://tashan.sh/capability/pkg-fullqueso-fq-239-audit.html) | 61 | 638/wk | active |
-| 36 | [Luca](https://tashan.sh/capability/pkg-setluca-mcp.html) | 56 | 346/wk | active |
-| 37 | [Holded](https://tashan.sh/capability/pkg-t4dhg-mcp-holded.html) | 56 | 156/wk | active |
-| 38 | [Keepsake](https://tashan.sh/capability/pkg-keepsake-mcp.html) | 54 | 232/wk | active |
-| 39 | [Outbound Infrastructure Fingerprint](https://tashan.sh/capability/pkg-mambalabsdev-mcp-outbound-infrastructure-fingerprint.html) | 53 | 341/wk | active |
-| 40 | [Livespace CRM](https://tashan.sh/capability/pkg-livespace-crm-mcp.html) | 52 | 313/wk | active |
+| 30 | [Affinity](https://tashan.sh/capability/pkg-alludium-affinity-mcp-server.html) | 67 | 364/wk | active |
+| 31 | [Skills · vruum](https://tashan.sh/capability/pkg-vruum-skills.html) | 63 | 695/wk | active |
+| 32 | [Crmincloud](https://tashan.sh/capability/pkg-memori-ai-mcp-crmincloud.html) | 62 | 374/wk | active |
+| 33 | [Fq 239 Audit](https://tashan.sh/capability/pkg-fullqueso-fq-239-audit.html) | 61 | 638/wk | active |
+| 34 | [Luca](https://tashan.sh/capability/pkg-setluca-mcp.html) | 56 | 346/wk | active |
+| 35 | [Holded](https://tashan.sh/capability/pkg-t4dhg-mcp-holded.html) | 56 | 156/wk | active |
+| 36 | [Free AI Ops](https://tashan.sh/capability/pkg-miraigent-free-ai-ops-mcp.html) | 56 | 115/wk | active |
+| 37 | [Keepsake](https://tashan.sh/capability/pkg-keepsake-mcp.html) | 54 | 232/wk | active |
+| 38 | [Outbound Infrastructure Fingerprint](https://tashan.sh/capability/pkg-mambalabsdev-mcp-outbound-infrastructure-fingerprint.html) | 53 | 341/wk | active |
+| 39 | [Livespace CRM](https://tashan.sh/capability/pkg-livespace-crm-mcp.html) | 52 | 313/wk | active |
+| 40 | [Dealsurface](https://tashan.sh/capability/pkg-dealsurface-mcp-server.html) | 52 | 158/wk | active |
 
-Showing the top 40 of 55. The full ranked shelf is at https://tashan.sh/task/sales-pipeline.html.
+Showing the top 40 of 54. The full ranked shelf is at https://tashan.sh/task/sales-pipeline.html.
 
 ## What these numbers are not
 

@@ -47,18 +47,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Paper Desktop](https://tashan.sh/capability/plugin-paper-design-agent-plugins-paper-desktop.html) | 41 | 11 ★ | active |
 | 29 | [Claude2figma](https://tashan.sh/capability/plugin-senlindesign-claude2figma-claude2figma.html) | 40 | 180 ★ | active |
 | 30 | [The Design Library](https://tashan.sh/capability/plugin-zeta92-design-library-plugin-the-design-library.html) | 40 | 10 ★ | active |
-| 31 | [Color Convert](https://tashan.sh/capability/pkg-mcp-color-convert.html) | 37 | 839/wk | abandoned |
-| 32 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 76 | 34k ★ | active |
-| 33 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
-| 34 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 48 | 9 ★ | active |
-| 35 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 48 | 43/wk | active |
-| 36 | [Hyperframes · heygen-com](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes.html) | 46 | 3 marketplaces | active |
-| 37 | [Frontend Design](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
-| 38 | [UI Theme Designer](https://tashan.sh/capability/plugin-sap-ui-theme-designer-plugins-for-coding-agents-ui-theme-designer.html) | 46 | 1 ★ | active |
-| 39 | [Frank Grimes](https://tashan.sh/capability/plugin-misfitdev-claude-plugins-frank-grimes.html) | 46 | 2 ★ | active |
-| 40 | [Fullstory](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 46 | 2 marketplaces | — |
+| 31 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 76 | 34k ★ | active |
+| 32 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
+| 33 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 48 | 9 ★ | active |
+| 34 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 48 | 43/wk | active |
+| 35 | [Hyperframes · heygen-com](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes.html) | 46 | 3 marketplaces | active |
+| 36 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
+| 37 | [UI Theme Designer](https://tashan.sh/capability/plugin-sap-ui-theme-designer-plugins-for-coding-agents-ui-theme-designer.html) | 46 | 1 ★ | active |
+| 38 | [Frank Grimes](https://tashan.sh/capability/plugin-misfitdev-claude-plugins-frank-grimes.html) | 46 | 2 ★ | active |
+| 39 | [Fullstory](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 46 | 2 marketplaces | — |
+| 40 | [Playground](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-playground.html) | 46 | 2 marketplaces | — |
 
-Showing the top 40 of 188. The full ranked shelf is at https://tashan.sh/role/designer.html.
+Showing the top 40 of 184. The full ranked shelf is at https://tashan.sh/role/designer.html.
 
 ## What these numbers are not
 

@@ -27,8 +27,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Archcore](https://tashan.sh/capability/plugin-archcore-ai-archcore-plugin-archcore.html) | 46 | 50 ★ | active |
 | 15 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 46 | 4 ★ | active |
 | 16 | [Three Pillars](https://tashan.sh/capability/plugin-curtisthe-three-pillars-plugin-three-pillars.html) | 42 | 4 ★ | active |
-| 17 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 40 | 3 ★ | active |
-| 18 | [Nova Thesis](https://tashan.sh/capability/plugin-jerry7991-nova-thesis-nova-thesis.html) | 40 | 12 ★ | active |
+| 17 | [Nova Thesis](https://tashan.sh/capability/plugin-jerry7991-nova-thesis-nova-thesis.html) | 40 | 12 ★ | active |
+| 18 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 39 | 3 ★ | active |
 | 19 | [Kroki Diagrams](https://tashan.sh/capability/plugin-smoldrago-kroki-diagrams-kroki-diagrams.html) | 36 | 5 ★ | active |
 | 20 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 76 | 34k ★ | active |
 | 21 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 66 | 413 ★ | active |
@@ -50,9 +50,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 37 | [Forgecraft](https://tashan.sh/capability/pkg-forgecraft-mcp.html) | 45 | 110/wk | active |
 | 38 | [Flowgraf](https://tashan.sh/capability/pkg-flowgraf-mcp.html) | 42 | 65/wk | active |
 | 39 | [Drawx](https://tashan.sh/capability/pkg-drawx-mcp-server.html) | 39 | 42/wk | active |
-| 40 | [Composer](https://tashan.sh/capability/pkg-usecomposer-mcp.html) | 34 | 72/wk | active |
+| 40 | [Systemdox](https://tashan.sh/capability/pkg-systemdox-mcp-server.html) | 58 | 415/wk | active |
 
-Showing the top 40 of 53. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
+Showing the top 40 of 52. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
 
 ## What these numbers are not
 

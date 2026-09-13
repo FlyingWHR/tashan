@@ -19,7 +19,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 66 | 1k/wk | active |
 | 7 | [Gogcli MCP Docs](https://tashan.sh/capability/pkg-gogcli-mcp-docs.html) | 62 | 383/wk | active |
 | 8 | [Htmlify](https://tashan.sh/capability/plugin-zakelfassi-htmlify-htmlify.html) | 41 | 13 ★ | active |
-| 9 | [Gezhe](https://tashan.sh/capability/pkg-gezhe-mcp-server.html) | 41 | 1k/wk | abandoned |
+| 9 | [Gezhe](https://tashan.sh/capability/pkg-gezhe-mcp-server.html) | 40 | 867/wk | abandoned |
 | 10 | [Google Workspace · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-google-workspace-mcp-google-workspace-mcp.html) | 39 | 1 ★ | active |
 | 11 | [Indian Banking Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-banking-drafting-litigation-indian-banking-drafting.html) | 38 | 1 ★ | active |
 | 12 | [Indian Company Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-company-drafting-indian-company-drafting.html) | 38 | 1 ★ | active |

@@ -22,7 +22,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Humanizer · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-humanizer-humanizer.html) | 38 | 1 ★ | active |
 | 10 | [Remove AI Flavor](https://tashan.sh/capability/plugin-chujianyun-skills-remove-ai-flavor.html) | 36 | 1 marketplaces | active |
 | 11 | [Source Library](https://tashan.sh/capability/pkg-source-library-mcp-server.html) | 47 | 113/wk | active |
-| 12 | [Deepl](https://tashan.sh/capability/pkg-deepl-mcp-server.html) | 62 | 732/wk | active |
+| 12 | [Deepl](https://tashan.sh/capability/pkg-deepl-mcp-server.html) | 63 | 338/wk | active |
 | 13 | [Goldbean](https://tashan.sh/capability/pkg-goldbean-mcp.html) | 52 | 130/wk | active |
 | 14 | [I18n Agent](https://tashan.sh/capability/pkg-i18n-agent-mcp-client.html) | 43 | 126/wk | active |
 | 15 | [Ditto Workflows](https://tashan.sh/capability/pkg-ditto-workflows-mcp.html) | 43 | 38/wk | active |

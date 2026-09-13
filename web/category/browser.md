@@ -16,18 +16,18 @@ Ranked by the tashan score
 | 3 | [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) | 85 | 4.6m/wk | active |
 | 4 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 76 | 3k/wk | active |
 | 5 | [Agent Browser](https://tashan.sh/capability/plugin-vercel-labs-agent-browser-agent-browser.html) | 75 | 42k ★ | active |
-| 6 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 72 | 10k/wk | stable |
+| 6 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 72 | 11k/wk | stable |
 | 7 | [Actionbook](https://tashan.sh/capability/plugin-actionbook-actionbook-actionbook.html) | 70 | 2k ★ | active |
 | 8 | [Chrome DevTools Axi](https://tashan.sh/capability/pkg-chrome-devtools-axi.html) | 70 | 4k/wk | active |
 | 9 | [Scraper](https://tashan.sh/capability/pkg-mcp-scraper.html) | 70 | 2k/wk | active |
 | 10 | [Mearl](https://tashan.sh/capability/pkg-mearl-mcp-server.html) | 69 | 997/wk | active |
 | 11 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 68 | 542 ★ | active |
 | 12 | [Browser Tools](https://tashan.sh/capability/pkg-agentdeskai-browser-tools-mcp.html) | 68 | 3k/wk | active |
-| 13 | [Browser Gateway](https://tashan.sh/capability/pkg-browser-gateway.html) | 67 | 799/wk | active |
-| 14 | [Browse Tool](https://tashan.sh/capability/pkg-agimon-ai-browse-tool.html) | 67 | 716/wk | active |
-| 15 | [Web Browser (kogiQA)](https://tashan.sh/capability/pkg-kogiqa-mcp.html) | 67 | 482/wk | active |
-| 16 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-skills-firecrawl.html) | 66 | 94 ★ | active |
-| 17 | [Vibium](https://tashan.sh/capability/pkg-vibium.html) | 66 | 1k/wk | active |
+| 13 | [Vibium](https://tashan.sh/capability/pkg-vibium.html) | 67 | 2k/wk | active |
+| 14 | [Browser Gateway](https://tashan.sh/capability/pkg-browser-gateway.html) | 67 | 799/wk | active |
+| 15 | [Browse Tool](https://tashan.sh/capability/pkg-agimon-ai-browse-tool.html) | 67 | 716/wk | active |
+| 16 | [Web Browser (kogiQA)](https://tashan.sh/capability/pkg-kogiqa-mcp.html) | 67 | 482/wk | active |
+| 17 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-skills-firecrawl.html) | 66 | 94 ★ | active |
 | 18 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 65 | 965/wk | active |
 | 19 | [Public Browser](https://tashan.sh/capability/pkg-public-browser.html) | 65 | 725/wk | active |
 | 20 | [Zenrows](https://tashan.sh/capability/pkg-zenrows-mcp.html) | 65 | 476/wk | active |
@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Supertoinette](https://tashan.sh/capability/pkg-mcp-supertoinette.html) | 56 | 349/wk | active |
 | 40 | [Tap](https://tashan.sh/capability/pkg-taprun-cli.html) | 56 | 282/wk | active |
 
-Showing the top 40 of 129. The full ranked shelf is at https://tashan.sh/category/browser.html.
+Showing the top 40 of 126. The full ranked shelf is at https://tashan.sh/category/browser.html.
 
 ## What these numbers are not
 

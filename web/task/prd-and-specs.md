@@ -33,7 +33,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 20 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 57 | 96 ★ | active |
 | 21 | [Memex Checkout](https://tashan.sh/capability/plugin-mindset-ai-memex-ai-memex-checkout.html) | 55 | 29 ★ | active |
 | 22 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 48 | 5 ★ | active |
-| 23 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 44 | 20 ★ | active |
+| 23 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 43 | 20 ★ | active |
 | 24 | [Belmont](https://tashan.sh/capability/plugin-blake-simpson-belmont-belmont.html) | 42 | 4 ★ | active |
 | 25 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 42 | 5 ★ | active |
 | 26 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 41 | 3 ★ | active |
@@ -49,7 +49,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Lanhu](https://tashan.sh/capability/pkg-mcp-lanhu.html) | 52 | 243/wk | active |
 | 37 | [Ainative Prd](https://tashan.sh/capability/pkg-ainative-prd-mcp.html) | 51 | 229/wk | active |
 | 38 | [Studio](https://tashan.sh/capability/pkg-aioproductoscom-mcp-studio.html) | 48 | 170/wk | active |
-| 39 | [Openapi To Tools](https://tashan.sh/capability/pkg-buildwithlayer-openapi-to-tools.html) | 34 | 1k/wk | abandoned |
+| 39 | [Openapi To Tools](https://tashan.sh/capability/pkg-buildwithlayer-openapi-to-tools.html) | 36 | 2k/wk | abandoned |
 | 40 | [Cloud](https://tashan.sh/capability/pkg-unified-product-graph-cloud-server.html) | 62 | 614/wk | active |
 
 Showing the top 40 of 47. The full ranked shelf is at https://tashan.sh/task/prd-and-specs.html.

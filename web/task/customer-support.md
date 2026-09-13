@@ -29,7 +29,6 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Zendesk · markusvankempen](https://tashan.sh/capability/pkg-markusvankempen-zendesk-mcp-server.html) | 42 | 179/wk | active |
 | 17 | [Freshdesk · hashcott](https://tashan.sh/capability/pkg-freshdesk-mcp.html) | 41 | 170/wk | active |
 | 18 | [Codmir](https://tashan.sh/capability/pkg-codmir-mcp.html) | 39 | 73/wk | active |
-| 19 | [Jitbit Helpdesk](https://tashan.sh/capability/pkg-jitbit-helpdesk-mcp.html) | 34 | 50/wk | active |
 
 ## What these numbers are not
 

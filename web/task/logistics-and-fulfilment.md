@@ -41,12 +41,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Moysklad](https://tashan.sh/capability/pkg-theyahia-moysklad-mcp.html) | 44 | 100/wk | active |
 | 29 | [Calllint · calllint-mcp](https://tashan.sh/capability/pkg-calllint-mcp.html) | 44 | 91/wk | active |
 | 30 | [Frugal · brainsparker](https://tashan.sh/capability/pkg-frugal-mcp.html) | 44 | 68/wk | active |
-| 31 | [Ship Issue](https://tashan.sh/capability/plugin-smykla-skalski-sai-ship-issue.html) | 42 | 1 marketplaces | — |
-| 32 | [Hansatic](https://tashan.sh/capability/pkg-hansatic-mcp.html) | 36 | 17/wk | active |
-| 33 | [Pkgpulse](https://tashan.sh/capability/pkg-pkgpulse-mcp.html) | 36 | 13/wk | active |
-| 34 | [Geo](https://tashan.sh/capability/pkg-thinairtelematics-geo.html) | 35 | 30/wk | active |
-| 35 | [Meridian Skills](https://tashan.sh/capability/pkg-meridian-skills-mcp.html) | not scored | 101/wk | abandoned |
-| 36 | [AWS Spapi](https://tashan.sh/capability/pkg-cesarobedfl-aws-spapi-mcp.html) | 54 | 497/wk | active |
+| 31 | [Agent Toolkit · white-hat-lab](https://tashan.sh/capability/pkg-agent-toolkit-mcp.html) | 43 | 26/wk | active |
+| 32 | [Ship Issue](https://tashan.sh/capability/plugin-smykla-skalski-sai-ship-issue.html) | 42 | 1 marketplaces | — |
+| 33 | [Hansatic](https://tashan.sh/capability/pkg-hansatic-mcp.html) | 36 | 17/wk | active |
+| 34 | [Pkgpulse](https://tashan.sh/capability/pkg-pkgpulse-mcp.html) | 36 | 13/wk | active |
+| 35 | [Geo](https://tashan.sh/capability/pkg-thinairtelematics-geo.html) | 35 | 30/wk | active |
+| 36 | [Meridian Skills](https://tashan.sh/capability/pkg-meridian-skills-mcp.html) | not scored | 101/wk | abandoned |
+| 37 | [AWS Spapi](https://tashan.sh/capability/pkg-cesarobedfl-aws-spapi-mcp.html) | 54 | 497/wk | active |
 
 ## What these numbers are not
 

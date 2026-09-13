@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Superpowers Beads](https://tashan.sh/capability/plugin-rsktash-superpowers-superpowers-beads.html) | 40 | 0 ★ | active |
 | 40 | [Sdlc Wizard](https://tashan.sh/capability/plugin-baseinfinity-claude-sdlc-wizard-sdlc-wizard.html) | 40 | 1 marketplaces | active |
 
-Showing the top 40 of 115. The full ranked shelf is at https://tashan.sh/task/project-management.html.
+Showing the top 40 of 114. The full ranked shelf is at https://tashan.sh/task/project-management.html.
 
 ## What these numbers are not
 

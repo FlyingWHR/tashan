@@ -25,17 +25,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 61 | 609/wk | active |
 | 13 | [SEO](https://tashan.sh/capability/pkg-seo.html) | 59 | 504/wk | active |
 | 14 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 59 | 351/wk | active |
-| 15 | [Bisibility](https://tashan.sh/capability/pkg-bisibility-mcp.html) | 57 | 289/wk | active |
-| 16 | [Saglitzdesign](https://tashan.sh/capability/pkg-saglitzdesign-mcp.html) | 56 | 338/wk | active |
-| 17 | [SEO Tools: Google Search Console](https://tashan.sh/capability/pkg-seo-tools-mcp-gsc.html) | 53 | 272/wk | active |
-| 18 | [SEO Tools: Yandex.Webmaster](https://tashan.sh/capability/pkg-seo-tools-mcp-ywm.html) | 53 | 271/wk | active |
-| 19 | [SEO Tools: Yandex Wordstat](https://tashan.sh/capability/pkg-seo-tools-mcp-wordstat.html) | 53 | 256/wk | active |
-| 20 | [Cituna](https://tashan.sh/capability/pkg-cituna-mcp.html) | 50 | 277/wk | active |
-| 21 | [Google Search Console · conorbronsdon](https://tashan.sh/capability/pkg-conorbronsdon-gsc-mcp.html) | 45 | 59/wk | active |
-| 22 | [AI SEO](https://tashan.sh/capability/pkg-automatelab-ai-seo-mcp.html) | 44 | 140/wk | active |
-| 23 | [SEO Tools](https://tashan.sh/capability/pkg-seodesignlab-mcp-server.html) | 43 | 61/wk | active |
-| 24 | [Xiaoflow](https://tashan.sh/capability/pkg-xiaoflow-mcp-server.html) | 42 | 38/wk | active |
-| 25 | [Suganthan Gsc](https://tashan.sh/capability/pkg-suganthan-gsc-mcp.html) | 41 | 1k/wk | active |
+| 15 | [Suganthan Gsc](https://tashan.sh/capability/pkg-suganthan-gsc-mcp.html) | 57 | 407/wk | active |
+| 16 | [Bisibility](https://tashan.sh/capability/pkg-bisibility-mcp.html) | 57 | 289/wk | active |
+| 17 | [Saglitzdesign](https://tashan.sh/capability/pkg-saglitzdesign-mcp.html) | 56 | 338/wk | active |
+| 18 | [SEO Tools: Google Search Console](https://tashan.sh/capability/pkg-seo-tools-mcp-gsc.html) | 53 | 272/wk | active |
+| 19 | [SEO Tools: Yandex.Webmaster](https://tashan.sh/capability/pkg-seo-tools-mcp-ywm.html) | 53 | 271/wk | active |
+| 20 | [SEO Tools: Yandex Wordstat](https://tashan.sh/capability/pkg-seo-tools-mcp-wordstat.html) | 53 | 256/wk | active |
+| 21 | [Cituna](https://tashan.sh/capability/pkg-cituna-mcp.html) | 50 | 277/wk | active |
+| 22 | [Google Search Console · conorbronsdon](https://tashan.sh/capability/pkg-conorbronsdon-gsc-mcp.html) | 45 | 59/wk | active |
+| 23 | [AI SEO](https://tashan.sh/capability/pkg-automatelab-ai-seo-mcp.html) | 44 | 140/wk | active |
+| 24 | [SEO Tools](https://tashan.sh/capability/pkg-seodesignlab-mcp-server.html) | 43 | 61/wk | active |
+| 25 | [Xiaoflow](https://tashan.sh/capability/pkg-xiaoflow-mcp-server.html) | 42 | 38/wk | active |
 | 26 | [SEO Performance](https://tashan.sh/capability/pkg-automatelab-seo-performance-mcp.html) | 41 | 89/wk | active |
 | 27 | [Yandex Webmaster · theyahia](https://tashan.sh/capability/pkg-theyahia-yandex-webmaster-mcp.html) | 40 | 46/wk | active |
 | 28 | [SEO · metricspot](https://tashan.sh/capability/pkg-metricspot-mcp-server.html) | 37 | 66/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Sytecheck](https://tashan.sh/capability/pkg-ascentws-sytecheck-mcp.html) | 57 | 300/wk | active |
 | 40 | [Cite42](https://tashan.sh/capability/pkg-cite42-mcp.html) | 57 | 290/wk | active |
 
-Showing the top 40 of 67. The full ranked shelf is at https://tashan.sh/task/seo.html.
+Showing the top 40 of 66. The full ranked shelf is at https://tashan.sh/task/seo.html.
 
 ## What these numbers are not
 

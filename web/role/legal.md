@@ -45,7 +45,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Bettercallclaude Italia](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-italia-bettercallclaude-italia.html) | 50 | 41 ★ | active |
 | 28 | [Marrow](https://tashan.sh/capability/pkg-getmarrow-mcp.html) | 69 | 1k/wk | active |
 | 29 | [Governance SDK](https://tashan.sh/capability/pkg-governance-sdk.html) | 68 | 3k/wk | active |
-| 30 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 65 | 728/wk | active |
+| 30 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 66 | 536/wk | active |
 | 31 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 50 | 95/wk | active |
 | 32 | [Dingdawg Compliance](https://tashan.sh/capability/pkg-dingdawg-compliance.html) | 48 | 88/wk | active |
 | 33 | [GitHub Security](https://tashan.sh/capability/pkg-github-security-mcp.html) | 35 | 886/wk | abandoned |

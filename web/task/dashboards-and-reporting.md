@@ -20,7 +20,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 72 | 4k ★ | active |
 | 8 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 70 | 417 ★ | active |
 | 9 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 50 | 4 marketplaces | — |
-| 10 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
+| 10 | [Grafana · grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
 | 11 | [Chart · @bicharts](https://tashan.sh/capability/pkg-bicharts-chart-mcp.html) | 48 | 70/wk | active |
 | 12 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 45 | 0 ★ | active |
 | 13 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 45 | 2 ★ | active |
@@ -44,13 +44,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Dashboardbase](https://tashan.sh/capability/pkg-dashboardbase-mcp.html) | 46 | 136/wk | active |
 | 32 | [Tabler](https://tashan.sh/capability/pkg-tabler-mcp-server.html) | 43 | 75/wk | active |
 | 33 | [Chartforge](https://tashan.sh/capability/pkg-chartforge-mcp.html) | 42 | 111/wk | active |
-| 34 | [Thingd](https://tashan.sh/capability/pkg-thingd-cli.html) | 65 | 839/wk | active |
-| 35 | [Kibana](https://tashan.sh/capability/pkg-tocharianou-mcp-server-kibana.html) | 61 | 1k/wk | active |
-| 36 | [Graph It Live](https://tashan.sh/capability/pkg-magic5644-graph-it-live.html) | 60 | 465/wk | active |
-| 37 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 59 | 289/wk | active |
-| 38 | [Cloudarch](https://tashan.sh/capability/pkg-cloud-arch-mcp-server.html) | 57 | 344/wk | active |
-| 39 | [Agentic Kdd](https://tashan.sh/capability/pkg-agentic-kdd.html) | 56 | 243/wk | active |
-| 40 | [Agentic Mermaid](https://tashan.sh/capability/pkg-agentic-mermaid.html) | 54 | 313/wk | active |
+| 34 | [Thingd](https://tashan.sh/capability/pkg-thingd-cli.html) | 68 | 1k/wk | active |
+| 35 | [Grafana](https://tashan.sh/capability/pkg-dockndevai-mcp-grafana.html) | 64 | 670/wk | active |
+| 36 | [Kibana](https://tashan.sh/capability/pkg-tocharianou-mcp-server-kibana.html) | 61 | 1k/wk | active |
+| 37 | [Graph It Live](https://tashan.sh/capability/pkg-magic5644-graph-it-live.html) | 60 | 465/wk | active |
+| 38 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 59 | 289/wk | active |
+| 39 | [Cloudarch](https://tashan.sh/capability/pkg-cloud-arch-mcp-server.html) | 57 | 344/wk | active |
+| 40 | [Agentic Kdd](https://tashan.sh/capability/pkg-agentic-kdd.html) | 56 | 243/wk | active |
 
 Showing the top 40 of 56. The full ranked shelf is at https://tashan.sh/task/dashboards-and-reporting.html.
 

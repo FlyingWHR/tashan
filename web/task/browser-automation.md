@@ -18,10 +18,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Browser Harness](https://tashan.sh/capability/plugin-browser-use-browser-harness-browser-harness.html) | 76 | 16k ★ | active |
 | 6 | [Chrome DevTools Axi](https://tashan.sh/capability/pkg-chrome-devtools-axi.html) | 70 | 4k/wk | active |
 | 7 | [Subtext](https://tashan.sh/capability/plugin-fullstorydev-subtext-subtext.html) | 59 | 64 ★ | active |
-| 8 | [Patchright MCP Jalikey](https://tashan.sh/capability/pkg-patchright-mcp-jalikey.html) | 57 | 925/wk | active |
-| 9 | [Tap](https://tashan.sh/capability/pkg-taprun-cli.html) | 56 | 282/wk | active |
-| 10 | [Browser Use](https://tashan.sh/capability/plugin-browser-use-plugins-browser-use.html) | 48 | 7 ★ | active |
-| 11 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 45 | 38 ★ | active |
+| 8 | [Tap](https://tashan.sh/capability/pkg-taprun-cli.html) | 56 | 282/wk | active |
+| 9 | [Browser Use](https://tashan.sh/capability/plugin-browser-use-plugins-browser-use.html) | 48 | 7 ★ | active |
+| 10 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 45 | 38 ★ | active |
+| 11 | [Patchright MCP Jalikey](https://tashan.sh/capability/pkg-patchright-mcp-jalikey.html) | 44 | 37/wk | active |
 | 12 | [Realbrowser](https://tashan.sh/capability/plugin-darkamenosa-realbrowser-realbrowser.html) | 43 | 57 ★ | active |
 | 13 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 42 | 15 ★ | active |
 | 14 | [Ever Browser](https://tashan.sh/capability/plugin-namuh-eng-everbrowser-ever-browser.html) | 40 | 6 ★ | active |
@@ -49,10 +49,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Getcourse](https://tashan.sh/capability/pkg-getcourse-mcp.html) | 55 | 438/wk | active |
 | 37 | [Sidebutton · sidebutton](https://tashan.sh/capability/pkg-sidebutton.html) | 54 | 174/wk | active |
 | 38 | [Safari DevTools](https://tashan.sh/capability/pkg-safari-devtools-mcp.html) | 43 | 125/wk | active |
-| 39 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 72 | 10k/wk | stable |
-| 40 | [Stock SDK](https://tashan.sh/capability/pkg-stock-sdk.html) | 67 | 2k/wk | active |
+| 39 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 72 | 11k/wk | stable |
+| 40 | [Vibium](https://tashan.sh/capability/pkg-vibium.html) | 67 | 2k/wk | active |
 
-Showing the top 40 of 163. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
+Showing the top 40 of 162. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
 
 ## What these numbers are not
 

@@ -48,7 +48,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 45 | 12 ★ | active |
 | 28 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 44 | 28 ★ | active |
 | 29 | [Arx](https://tashan.sh/capability/plugin-eric-tramel-arx-arx.html) | 37 | 7 ★ | active |
-| 30 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 81 | 27k/wk | active |
+| 30 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 81 | 30k/wk | active |
 | 31 | [Desktop Commander · wonderwhy-er](https://tashan.sh/capability/plugin-wonderwhy-er-desktopcommandermcp-desktop-commander.html) | 78 | 9k ★ | active |
 | 32 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 78 | 62k ★ | active |
 | 33 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 77 | 89k ★ | active |
@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) | 67 | 802/wk | active |
 | 40 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 66 | 662/wk | active |
 
-Showing the top 40 of 480. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 479. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

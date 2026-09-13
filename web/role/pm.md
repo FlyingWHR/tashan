@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 54 | 20 ★ | active |
 | 40 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 54 | 27 ★ | active |
 
-Showing the top 40 of 222. The full ranked shelf is at https://tashan.sh/role/pm.html.
+Showing the top 40 of 221. The full ranked shelf is at https://tashan.sh/role/pm.html.
 
 ## What these numbers are not
 

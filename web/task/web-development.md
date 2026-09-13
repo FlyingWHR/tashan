@@ -20,14 +20,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Modern Web Guidance](https://tashan.sh/capability/plugin-googlechrome-modern-web-guidance-modern-web-guidance.html) | 73 | 2k ★ | active |
 | 8 | [Shadcn UI](https://tashan.sh/capability/pkg-jpisnice-shadcn-ui-mcp-server.html) | 70 | 4k/wk | active |
 | 9 | [Next DevTools](https://tashan.sh/capability/pkg-next-devtools-mcp.html) | 70 | 77k/wk | active |
-| 10 | [Auth0 · auth0](https://tashan.sh/capability/plugin-auth0-agent-skills-auth0.html) | 63 | 40 ★ | active |
-| 11 | [Wix](https://tashan.sh/capability/plugin-wix-skills-wix.html) | 62 | 23 ★ | active |
-| 12 | [Workos](https://tashan.sh/capability/plugin-workos-skills-workos.html) | 62 | 43 ★ | active |
-| 13 | [Domscribe](https://tashan.sh/capability/plugin-patchorbit-domscribe-domscribe.html) | 57 | 179 ★ | active |
-| 14 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 56 | 85 ★ | active |
-| 15 | [Dx Aem](https://tashan.sh/capability/plugin-easingthemes-dx-aem-flow-dx-aem.html) | 51 | 6 ★ | active |
-| 16 | [Aptos Agent Skills](https://tashan.sh/capability/plugin-aptos-labs-aptos-agent-skills-aptos-agent-skills.html) | 51 | 19 ★ | active |
-| 17 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 49 | 4 marketplaces | active |
+| 10 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 69 | 86 ★ | active |
+| 11 | [Auth0 · auth0](https://tashan.sh/capability/plugin-auth0-agent-skills-auth0.html) | 63 | 40 ★ | active |
+| 12 | [Wix](https://tashan.sh/capability/plugin-wix-skills-wix.html) | 62 | 23 ★ | active |
+| 13 | [Workos](https://tashan.sh/capability/plugin-workos-skills-workos.html) | 62 | 43 ★ | active |
+| 14 | [Domscribe](https://tashan.sh/capability/plugin-patchorbit-domscribe-domscribe.html) | 57 | 179 ★ | active |
+| 15 | [Autocode](https://tashan.sh/capability/plugin-ilang-ai-autocode-autocode.html) | 56 | 85 ★ | active |
+| 16 | [Dx Aem](https://tashan.sh/capability/plugin-easingthemes-dx-aem-flow-dx-aem.html) | 51 | 6 ★ | active |
+| 17 | [Aptos Agent Skills](https://tashan.sh/capability/plugin-aptos-labs-aptos-agent-skills-aptos-agent-skills.html) | 51 | 19 ★ | active |
 | 18 | [Build With WordPress](https://tashan.sh/capability/plugin-automattic-claude-code-wordpress-com-build-with-wordpress.html) | 43 | 38 ★ | active |
 | 19 | [Brilliant Directories · brilliantdirectories](https://tashan.sh/capability/plugin-brilliantdirectories-brilliant-directories-mcp-brilliant-directories.html) | 42 | 17 ★ | active |
 | 20 | [Get Design Done](https://tashan.sh/capability/plugin-hegemonart-get-design-done-get-design-done.html) | 42 | 4 ★ | active |
@@ -40,19 +40,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Shopify Plugin](https://tashan.sh/capability/plugin-shopify-shopify-ai-toolkit-shopify-plugin.html) | 70 | 476 ★ | active |
 | 28 | [Respira WordPress](https://tashan.sh/capability/pkg-respira-wordpress-mcp-server.html) | 70 | 2k/wk | active |
 | 29 | [Sap Fiori](https://tashan.sh/capability/plugin-sap-open-ux-tools-sap-fiori-mcp-server.html) | 68 | 153 ★ | active |
-| 30 | [Daisyui Blueprint](https://tashan.sh/capability/pkg-daisyui-blueprint.html) | 66 | 1k/wk | active |
+| 30 | [Daisyui Blueprint](https://tashan.sh/capability/pkg-daisyui-blueprint.html) | 67 | 725/wk | active |
 | 31 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 61 | 484/wk | active |
 | 32 | [Ckeditor](https://tashan.sh/capability/plugin-ckeditor-skills-ckeditor.html) | 49 | 3 ★ | active |
 | 33 | [Chrome Bridge](https://tashan.sh/capability/pkg-chrome-bridge-mcp.html) | 49 | 104/wk | active |
 | 34 | [Kuailian — publish AI-generated pages to a live URL](https://tashan.sh/capability/pkg-kuailian-mcp-server.html) | 48 | 91/wk | active |
 | 35 | [Cloudinary](https://tashan.sh/capability/plugin-cloudinary-devs-cloudinary-plugin-cloudinary.html) | 46 | 0 ★ | active |
-| 36 | [Frontend Design](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
+| 36 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
 | 37 | [Laravel Boost](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-laravel-boost.html) | 46 | 2 marketplaces | — |
 | 38 | [Lovable](https://tashan.sh/capability/plugin-lovablelabs-mcp-lovable.html) | 46 | 2 ★ | active |
 | 39 | [Playground](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-playground.html) | 46 | 2 marketplaces | — |
 | 40 | [Ui5 · ui5](https://tashan.sh/capability/plugin-ui5-plugins-coding-agents-ui5.html) | 45 | 3 marketplaces | active |
 
-Showing the top 40 of 112. The full ranked shelf is at https://tashan.sh/task/web-development.html.
+Showing the top 40 of 111. The full ranked shelf is at https://tashan.sh/task/web-development.html.
 
 ## What these numbers are not
 

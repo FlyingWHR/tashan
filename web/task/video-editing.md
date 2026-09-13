@@ -44,9 +44,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Ssemble AI Clipping](https://tashan.sh/capability/pkg-ssemble-mcp-server.html) | 37 | 110/wk | active |
 | 32 | [Fablecut](https://tashan.sh/capability/plugin-ronak-create-fablecut-fablecut.html) | 70 | 597 ★ | active |
 | 33 | [Video Extract](https://tashan.sh/capability/pkg-yanlinglabs-video-extract-mcp.html) | 68 | 666/wk | active |
-| 34 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 67 | 1k/wk | active |
-| 35 | [Marketing Studio](https://tashan.sh/capability/plugin-ucsandman-marketing-studio-marketing-studio.html) | 66 | 227 ★ | active |
-| 36 | [Bilibili](https://tashan.sh/capability/pkg-xzxzzx-bilibili-mcp.html) | 65 | 705/wk | active |
+| 34 | [Marketing Studio](https://tashan.sh/capability/plugin-ucsandman-marketing-studio-marketing-studio.html) | 66 | 227 ★ | active |
+| 35 | [Bilibili](https://tashan.sh/capability/pkg-xzxzzx-bilibili-mcp.html) | 65 | 705/wk | active |
+| 36 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 63 | 279/wk | active |
 | 37 | [Leclap](https://tashan.sh/capability/pkg-leclap-mcp.html) | 59 | 427/wk | active |
 | 38 | [AppsGolem YouTube Cutter](https://tashan.sh/capability/pkg-appsgolem-mcp.html) | 56 | 370/wk | active |
 | 39 | [Katto](https://tashan.sh/capability/pkg-katto-mcp.html) | 56 | 140/wk | active |

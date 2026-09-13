@@ -20,15 +20,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 63 | 68 ★ | active |
 | 8 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 60 | 452 ★ | active |
 | 9 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 60 | 104 ★ | active |
-| 10 | [Airweave MCP Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 58 | 1k/wk | active |
+| 10 | [Airweave MCP Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 57 | 1k/wk | active |
 | 11 | [Pixeltable](https://tashan.sh/capability/plugin-pixeltable-pixeltable-skill-pixeltable.html) | 51 | 5 ★ | active |
 | 12 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 48 | 20 ★ | active |
 | 13 | [Mako AI](https://tashan.sh/capability/plugin-drhalto-agentmako-mako-ai.html) | 46 | 51 ★ | active |
 | 14 | [Zilliz](https://tashan.sh/capability/plugin-zilliztech-zilliz-plugin-zilliz.html) | 45 | 3 ★ | active |
 | 15 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 45 | 20 ★ | active |
 | 16 | [Gnosis](https://tashan.sh/capability/plugin-nicholasglazer-gnosis-mcp-gnosis-mcp.html) | 42 | 25 ★ | active |
-| 17 | [Sap AI Core](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-ai-core.html) | 42 | 1 marketplaces | — |
-| 18 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 36 | 1 marketplaces | active |
+| 17 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 42 | 3 ★ | active |
+| 18 | [Sap AI Core](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-ai-core.html) | 42 | 1 marketplaces | — |
 | 19 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 36 | 1 marketplaces | active |
 | 20 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 64 | 402 ★ | active |
 | 21 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 71 | 3k ★ | active |

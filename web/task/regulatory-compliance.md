@@ -48,9 +48,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Company Gi](https://tashan.sh/capability/pkg-company-gi-mcp.html) | not scored | 55/wk | abandoned |
 | 36 | [Ges](https://tashan.sh/capability/pkg-greenarmor-ges-mcp-server.html) | 63 | 649/wk | active |
 | 37 | [H1veframework](https://tashan.sh/capability/pkg-h1veframework-cli.html) | 62 | 488/wk | active |
-| 38 | [ComplyEdge TrustLint — offline EU AI Act compliance checks](https://tashan.sh/capability/pkg-complyedge-mcp.html) | 60 | 823/wk | active |
-| 39 | [Compliance](https://tashan.sh/capability/pkg-yawlabs-mcp-compliance.html) | 60 | 519/wk | active |
-| 40 | [Compliance · yaktool-compliance-mcp](https://tashan.sh/capability/pkg-yaktool-compliance-mcp.html) | 55 | 187/wk | active |
+| 38 | [Compliance](https://tashan.sh/capability/pkg-yawlabs-mcp-compliance.html) | 60 | 519/wk | active |
+| 39 | [Compliance · yaktool-compliance-mcp](https://tashan.sh/capability/pkg-yaktool-compliance-mcp.html) | 55 | 187/wk | active |
+| 40 | [VITNA — Agent Compliance Preflight](https://tashan.sh/capability/pkg-costrinity-vitna-compliance-mcp.html) | 54 | 317/wk | active |
 
 Showing the top 40 of 65. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
 

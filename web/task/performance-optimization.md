@@ -26,7 +26,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 49 | 153/wk | active |
 | 14 | [Auditor](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 48 | 48/wk | active |
 | 15 | [Callstack Skills](https://tashan.sh/capability/plugin-kingstinct-github-callstack-skills.html) | 42 | 1 marketplaces | — |
-| 16 | [React](https://tashan.sh/capability/plugin-kingstinct-github-react.html) | 42 | 1 marketplaces | — |
+| 16 | [React · kingstinct](https://tashan.sh/capability/plugin-kingstinct-github-react.html) | 42 | 1 marketplaces | — |
 | 17 | [Orizu](https://tashan.sh/capability/plugin-orizuai-orizu-cli-orizu.html) | 40 | 0 ★ | active |
 | 18 | [RASON](https://tashan.sh/capability/pkg-frontlinesystems-rason-mcp-server.html) | 39 | 78/wk | active |
 | 19 | [Ios Development](https://tashan.sh/capability/plugin-arimunandar-claude-code-ios-plugin-ios-development.html) | 21 | 1 ★ | abandoned |

@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 59 | 167 ★ | active |
 | 40 | [Harness Kit](https://tashan.sh/capability/plugin-romabeckman-harness-kit-harness-kit.html) | 58 | 25 ★ | active |
 
-Showing the top 40 of 283. The full ranked shelf is at https://tashan.sh/task/application-development.html.
+Showing the top 40 of 282. The full ranked shelf is at https://tashan.sh/task/application-development.html.
 
 ## What these numbers are not
 

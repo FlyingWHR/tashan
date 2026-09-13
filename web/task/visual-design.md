@@ -30,29 +30,29 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Paper Desktop](https://tashan.sh/capability/plugin-paper-design-agent-plugins-paper-desktop.html) | 41 | 11 ★ | active |
 | 18 | [Claude2figma](https://tashan.sh/capability/plugin-senlindesign-claude2figma-claude2figma.html) | 40 | 180 ★ | active |
 | 19 | [The Design Library](https://tashan.sh/capability/plugin-zeta92-design-library-plugin-the-design-library.html) | 40 | 10 ★ | active |
-| 20 | [Color Convert](https://tashan.sh/capability/pkg-mcp-color-convert.html) | 37 | 839/wk | abandoned |
-| 21 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 48 | 9 ★ | active |
-| 22 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 48 | 43/wk | active |
-| 23 | [Frontend Design](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
-| 24 | [UI Theme Designer](https://tashan.sh/capability/plugin-sap-ui-theme-designer-plugins-for-coding-agents-ui-theme-designer.html) | 46 | 1 ★ | active |
-| 25 | [Pluginos Figma Operations Platform](https://tashan.sh/capability/plugin-lsdimi-pluginos-pluginos-figma-operations-platform.html) | 44 | 2 ★ | active |
-| 26 | [PDF Forge](https://tashan.sh/capability/plugin-syx-labs-pdf-forge-pdf-forge.html) | 43 | 1 ★ | active |
-| 27 | [Css Development](https://tashan.sh/capability/plugin-2389-research-claude-plugins-css-development.html) | 42 | 1 marketplaces | — |
-| 28 | [S2 Docs](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-s2-docs.html) | 40 | 1 marketplaces | active |
-| 29 | [Design Data · adobe](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-design-data.html) | 40 | 1 marketplaces | active |
-| 30 | [Design Data Agent](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-design-data-agent.html) | 40 | 1 marketplaces | active |
-| 31 | [Brand Guidelines](https://tashan.sh/capability/skill-anthropics-brand-guidelines.html) | not scored | 6 repos | active |
-| 32 | [Magicpath](https://tashan.sh/capability/plugin-magicpathai-agent-skills-magicpath.html) | 58 | 84 ★ | active |
-| 33 | [Figma Console](https://tashan.sh/capability/pkg-figma-console-mcp.html) | 78 | 3k/wk | active |
-| 34 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 71 | 3k/wk | active |
-| 35 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 856/wk | active |
-| 36 | [Identityforge](https://tashan.sh/capability/pkg-identityforge.html) | 60 | 482/wk | active |
-| 37 | [Figma MCP Express](https://tashan.sh/capability/pkg-figma-mcp-express.html) | 58 | 465/wk | active |
-| 38 | [Agentic Design System](https://tashan.sh/capability/pkg-ads-mcp.html) | 52 | 277/wk | active |
-| 39 | [Figma Edit](https://tashan.sh/capability/pkg-figma-edit-mcp.html) | 52 | 197/wk | active |
-| 40 | [UI Design To Code](https://tashan.sh/capability/pkg-ui-design-to-code-mcp.html) | 45 | 93/wk | active |
+| 20 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 48 | 9 ★ | active |
+| 21 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 48 | 43/wk | active |
+| 22 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
+| 23 | [UI Theme Designer](https://tashan.sh/capability/plugin-sap-ui-theme-designer-plugins-for-coding-agents-ui-theme-designer.html) | 46 | 1 ★ | active |
+| 24 | [Pluginos Figma Operations Platform](https://tashan.sh/capability/plugin-lsdimi-pluginos-pluginos-figma-operations-platform.html) | 44 | 2 ★ | active |
+| 25 | [PDF Forge](https://tashan.sh/capability/plugin-syx-labs-pdf-forge-pdf-forge.html) | 43 | 1 ★ | active |
+| 26 | [Css Development](https://tashan.sh/capability/plugin-2389-research-claude-plugins-css-development.html) | 42 | 1 marketplaces | — |
+| 27 | [S2 Docs](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-s2-docs.html) | 40 | 1 marketplaces | active |
+| 28 | [Design Data · adobe](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-design-data.html) | 40 | 1 marketplaces | active |
+| 29 | [Design Data Agent](https://tashan.sh/capability/plugin-adobe-spectrum-design-data-design-data-agent.html) | 40 | 1 marketplaces | active |
+| 30 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | not scored | 6 repos | active |
+| 31 | [Magicpath](https://tashan.sh/capability/plugin-magicpathai-agent-skills-magicpath.html) | 58 | 84 ★ | active |
+| 32 | [Figma Console](https://tashan.sh/capability/pkg-figma-console-mcp.html) | 78 | 3k/wk | active |
+| 33 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 71 | 3k/wk | active |
+| 34 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 856/wk | active |
+| 35 | [Identityforge](https://tashan.sh/capability/pkg-identityforge.html) | 60 | 482/wk | active |
+| 36 | [Figma MCP Express](https://tashan.sh/capability/pkg-figma-mcp-express.html) | 58 | 465/wk | active |
+| 37 | [Agentic Design System](https://tashan.sh/capability/pkg-ads-mcp.html) | 52 | 277/wk | active |
+| 38 | [Figma Edit](https://tashan.sh/capability/pkg-figma-edit-mcp.html) | 52 | 197/wk | active |
+| 39 | [UI Design To Code](https://tashan.sh/capability/pkg-ui-design-to-code-mcp.html) | 45 | 93/wk | active |
+| 40 | [Figma · planetabhi](https://tashan.sh/capability/pkg-figma-mcp-server.html) | 64 | 2k/wk | active |
 
-Showing the top 40 of 88. The full ranked shelf is at https://tashan.sh/task/visual-design.html.
+Showing the top 40 of 85. The full ranked shelf is at https://tashan.sh/task/visual-design.html.
 
 ## What these numbers are not
 

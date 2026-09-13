@@ -37,17 +37,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 45 | 12 ★ | active |
 | 18 | [Praxis · xD4O](https://tashan.sh/capability/plugin-xd4o-praxis-praxis.html) | 44 | 27 ★ | active |
 | 19 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 44 | 28 ★ | active |
-| 20 | [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) | 82 | 708k/wk | active |
-| 21 | [Use · mcp-use](https://tashan.sh/capability/pkg-mcp-use.html) | 82 | 19k/wk | active |
+| 20 | [Use](https://tashan.sh/capability/pkg-mcp-use.html) | 83 | 25k/wk | active |
+| 21 | [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) | 82 | 708k/wk | active |
 | 22 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 78 | 62k ★ | active |
 | 23 | [Caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) | 78 | 93k ★ | active |
 | 24 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 77 | 17k ★ | active |
 | 25 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 76 | 6k ★ | active |
 | 26 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 74 | 9k ★ | active |
 | 27 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 74 | 13k/wk | active |
-| 28 | [Create MCP Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 72 | 675/wk | active |
-| 29 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 70 | 426 ★ | active |
-| 30 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 69 | 1k/wk | active |
+| 28 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 70 | 426 ★ | active |
+| 29 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 69 | 1k/wk | active |
+| 30 | [Create MCP Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 68 | 132/wk | active |
 | 31 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 67 | 93 ★ | active |
 | 32 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 66 | 482 ★ | active |
 | 33 | [Keryx](https://tashan.sh/capability/pkg-keryx.html) | 66 | 1k/wk | active |
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 61 | 61 ★ | active |
 | 40 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 60 | 452 ★ | active |
 
-Showing the top 40 of 733. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
+Showing the top 40 of 731. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
 
 ## What these numbers are not
 

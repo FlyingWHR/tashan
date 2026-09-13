@@ -30,14 +30,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 44 | 3 marketplaces | active |
 | 18 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 44 | 3 marketplaces | active |
 | 19 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 43 | 1 ★ | active |
-| 20 | [Sap Abap Cds](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-abap-cds.html) | 42 | 1 marketplaces | — |
-| 21 | [Sap Btp Master Data Integration](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-master-data-integration.html) | 42 | 1 marketplaces | — |
-| 22 | [Sap Datasphere](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-datasphere.html) | 42 | 1 marketplaces | — |
-| 23 | [Sap Hana Cloud Data Intelligence](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cloud-data-intelligence.html) | 42 | 1 marketplaces | — |
-| 24 | [Holistics Development](https://tashan.sh/capability/plugin-holistics-skills-holistics-development.html) | 39 | 1 marketplaces | active |
-| 25 | [Honeydew](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew.html) | 39 | 1 marketplaces | active |
-| 26 | [Honeydew AI](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew-ai.html) | 39 | 1 marketplaces | active |
-| 27 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 36 | 1 marketplaces | active |
+| 20 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 42 | 3 ★ | active |
+| 21 | [Sap Abap Cds](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-abap-cds.html) | 42 | 1 marketplaces | — |
+| 22 | [Sap Btp Master Data Integration](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-master-data-integration.html) | 42 | 1 marketplaces | — |
+| 23 | [Sap Datasphere](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-datasphere.html) | 42 | 1 marketplaces | — |
+| 24 | [Sap Hana Cloud Data Intelligence](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cloud-data-intelligence.html) | 42 | 1 marketplaces | — |
+| 25 | [Holistics Development](https://tashan.sh/capability/plugin-holistics-skills-holistics-development.html) | 39 | 1 marketplaces | active |
+| 26 | [Honeydew](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew.html) | 39 | 1 marketplaces | active |
+| 27 | [Honeydew AI](https://tashan.sh/capability/plugin-honeydew-ai-honeydew-ai-coding-agents-plugins-honeydew-ai.html) | 39 | 1 marketplaces | active |
 | 28 | [Opendataloader PDF](https://tashan.sh/capability/plugin-chujianyun-skills-opendataloader-pdf.html) | 36 | 1 marketplaces | active |
 | 29 | [Oe · openenterprise](https://tashan.sh/capability/pkg-openenterprise-oe-mcp.html) | not scored | 63/wk | abandoned |
 | 30 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 58 | 32 ★ | active |
@@ -47,12 +47,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 34 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 48 | 6 ★ | active |
 | 35 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 44 | 3 ★ | active |
 | 36 | [Sales](https://tashan.sh/capability/pkg-autostackup-sales.html) | 40 | 62/wk | active |
-| 37 | [Atlas Pipeline](https://tashan.sh/capability/pkg-atlas-pipeline-mcp.html) | 34 | 127/wk | abandoned |
-| 38 | [Launch Kit](https://tashan.sh/capability/pkg-launchsecure-launch-kit.html) | 67 | 2k/wk | active |
-| 39 | [Agentic Kdd](https://tashan.sh/capability/pkg-agentic-kdd.html) | 56 | 243/wk | active |
-| 40 | [Moysklad](https://tashan.sh/capability/pkg-theyahia-moysklad-mcp.html) | 44 | 100/wk | active |
+| 37 | [Launch Kit](https://tashan.sh/capability/pkg-launchsecure-launch-kit.html) | 67 | 2k/wk | active |
+| 38 | [Agentic Kdd](https://tashan.sh/capability/pkg-agentic-kdd.html) | 56 | 243/wk | active |
+| 39 | [Moysklad](https://tashan.sh/capability/pkg-theyahia-moysklad-mcp.html) | 44 | 100/wk | active |
+| 40 | [Bach Snowflake](https://tashan.sh/capability/pkg-bach-snowflake-mcp.html) | 40 | 31/wk | active |
 
-Showing the top 40 of 43. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
+Showing the top 40 of 42. The full ranked shelf is at https://tashan.sh/task/data-pipelines.html.
 
 ## What these numbers are not
 

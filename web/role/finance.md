@@ -46,9 +46,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Get Invoice Details](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-get-invoice-details.html) | 39 | 1 marketplaces | active |
 | 29 | [Savvly](https://tashan.sh/capability/pkg-savvly-mcp-server.html) | 71 | 585/wk | active |
 | 30 | [Hilan](https://tashan.sh/capability/pkg-hilan-mcp.html) | 46 | 49/wk | active |
-| 31 | [Q402](https://tashan.sh/capability/pkg-quackai-q402-mcp.html) | 68 | 607/wk | active |
-| 32 | [Actual](https://tashan.sh/capability/pkg-actual-mcp-server.html) | 65 | 777/wk | active |
-| 33 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 65 | 728/wk | active |
+| 31 | [Actual](https://tashan.sh/capability/pkg-actual-mcp-server.html) | 69 | 1k/wk | active |
+| 32 | [Q402](https://tashan.sh/capability/pkg-quackai-q402-mcp.html) | 68 | 607/wk | active |
+| 33 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 66 | 536/wk | active |
 | 34 | [Lunchmoney](https://tashan.sh/capability/pkg-akutishevsky-lunchmoney-mcp.html) | 64 | 2k/wk | active |
 | 35 | [Yahoo Finance](https://tashan.sh/capability/pkg-yahoo-finance-mcp-server.html) | 54 | 262/wk | active |
 | 36 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 50 | 95/wk | active |
@@ -57,7 +57,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [GitHub Security](https://tashan.sh/capability/pkg-github-security-mcp.html) | 35 | 886/wk | abandoned |
 | 40 | [E Arveldaja](https://tashan.sh/capability/pkg-e-arveldaja-mcp.html) | 60 | 665/wk | active |
 
-Showing the top 40 of 160. The full ranked shelf is at https://tashan.sh/role/finance.html.
+Showing the top 40 of 161. The full ranked shelf is at https://tashan.sh/role/finance.html.
 
 ## What these numbers are not
 

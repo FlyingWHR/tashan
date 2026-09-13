@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [three.ws Agent Payments](https://tashan.sh/capability/pkg-three-ws-agentcore-payments-mcp.html) | 53 | 231/wk | active |
 | 40 | [MuPag Sandbox Payments](https://tashan.sh/capability/pkg-mupag-mcp-server.html) | 52 | 140/wk | active |
 
-Showing the top 40 of 67. The full ranked shelf is at https://tashan.sh/task/bookkeeping.html.
+Showing the top 40 of 68. The full ranked shelf is at https://tashan.sh/task/bookkeeping.html.
 
 ## What these numbers are not
 

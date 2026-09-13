@@ -39,10 +39,10 @@ Ranked by the tashan score
 | 26 | [Google Trends](https://tashan.sh/capability/pkg-hasdata-google-trends-mcp.html) | 65 | 282/wk | active |
 | 27 | [Lunchmoney](https://tashan.sh/capability/pkg-akutishevsky-lunchmoney-mcp.html) | 64 | 2k/wk | active |
 | 28 | [Agentcash](https://tashan.sh/capability/pkg-agentcash.html) | 64 | 2k/wk | active |
-| 29 | [Anyapi](https://tashan.sh/capability/pkg-anyapi-mcp.html) | 64 | 937/wk | active |
-| 30 | [Stateset](https://tashan.sh/capability/pkg-stateset-cli.html) | 64 | 407/wk | active |
-| 31 | [Agentbank Merchant](https://tashan.sh/capability/pkg-curless-agentbank-merchant-mcp.html) | 64 | 259/wk | active |
-| 32 | [Stripe · @stripe](https://tashan.sh/capability/pkg-at-stripe-mcp.html) | 63 | 15k/wk | active |
+| 29 | [Stateset](https://tashan.sh/capability/pkg-stateset-cli.html) | 64 | 407/wk | active |
+| 30 | [Agentbank Merchant](https://tashan.sh/capability/pkg-curless-agentbank-merchant-mcp.html) | 64 | 259/wk | active |
+| 31 | [Stripe · @stripe](https://tashan.sh/capability/pkg-at-stripe-mcp.html) | 63 | 15k/wk | active |
+| 32 | [Anyapi](https://tashan.sh/capability/pkg-anyapi-mcp.html) | 63 | 849/wk | active |
 | 33 | [Kiwoom Securities](https://tashan.sh/capability/pkg-kiwoom-mcp-server.html) | 63 | 649/wk | active |
 | 34 | [Toll402](https://tashan.sh/capability/pkg-toll402-mcp.html) | 63 | 589/wk | active |
 | 35 | [Irs Taxpayer](https://tashan.sh/capability/pkg-irs-taxpayer-mcp.html) | 63 | 537/wk | active |
@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Shopware](https://tashan.sh/capability/pkg-shopware-mcp.html) | 62 | 575/wk | active |
 | 40 | [Secedgar](https://tashan.sh/capability/pkg-cyanheads-secedgar-mcp-server.html) | 62 | 439/wk | active |
 
-Showing the top 40 of 593. The full ranked shelf is at https://tashan.sh/category/finance.html.
+Showing the top 40 of 585. The full ranked shelf is at https://tashan.sh/category/finance.html.
 
 ## What these numbers are not
 

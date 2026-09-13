@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Memtrace Skills](https://tashan.sh/capability/pkg-memtrace-skills.html) | 63 | 514/wk | active |
 | 40 | [Frappe Inspector](https://tashan.sh/capability/pkg-frappe-inspector-mcp.html) | 52 | 150/wk | active |
 
-Showing the top 40 of 139. The full ranked shelf is at https://tashan.sh/task/code-review.html.
+Showing the top 40 of 137. The full ranked shelf is at https://tashan.sh/task/code-review.html.
 
 ## What these numbers are not
 

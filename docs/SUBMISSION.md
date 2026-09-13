@@ -14,27 +14,31 @@ in-window commits are listed there individually.
 
 **Partner prizes (up to 3; a partner with several tracks still counts as one).**
 1. **The Graph** — Track 1 (Composable/Standardized, $5,000) and Track 3 (AI, Continuity, $5,000).
-2. **Bazantic** — **only if the three Bazantic artifacts exist by submission time. See the warning
-   below; as of 13 Sep they do not, and claiming the track without them is a false claim.**
+2. **Bazantic** — Track 1 (Help an Agent Use Your Project) and Track 3 (Agentify a New API).
+   Track 2 needs a second sponsor's service in the recipe; see the state box.
 3. *Left empty deliberately.* A third slot spent on a partner whose tools we did not actually use
    would be the same sin the product exists to point at.
 
-> ### ⚠ Check this before submitting: `python3 pipeline/demo.py --fit`
+**Bazantic username: `Seroto`.** Gateway `6l6nau2p5ve7tjjwyhbtvctduy`, Recipe
+`check-before-you-install` (published).
+
+> ### ⚠ Run this before submitting: `python3 pipeline/demo.py --fit`
 >
-> Requirements verified 13 Sep 2026 against `ethglobal.com/events/ethonline2026/prizes`. Two
-> blockers stand between this document and an eligible entry, and neither is fixed by editing copy.
+> Requirements verified 13 Sep 2026 against `ethglobal.com/events/ethonline2026/prizes`, and checked
+> in code rather than remembered — the matrix reports UNKNOWN rather than a pass for anything it
+> cannot verify, because a fit check that rounds in your favour is worse than none.
 >
-> **1. THE REPOSITORY IS PRIVATE.** Every track listed here requires a public repo — The Graph
-> Track 1 says "public repo", Track 3 says "open-source code with README". `gh repo view` reports
-> `isPrivate: true`. Nothing else on this page matters until that changes, and it wants a secrets
-> sweep first. It is also the reason `tashan-cli` cannot carry an npm provenance attestation, which
-> `/start.html` already explains to readers — the same fact, costing us twice.
+> **Cleared:** the repository is public (it was private, which disqualified every track here); the
+> Bazantic account, x402/MPP Gateway and published Recipe all exist.
 >
-> **2. NO BAZANTIC ARTIFACTS EXIST.** All three Bazantic tracks require a bazantic.com account, an
-> x402/MPP Gateway built on their platform, a published Recipe, and the username in the submission.
-> We have none of the four. What we have is our *own* MCP server and our *own* x402 endpoints, which
-> is a different thing and does not qualify. The write-up further down was drafted as though it did;
-> it has been corrected.
+> **Open — the video.** It gates all five tracks and nothing else does. 2–4 min, 720p+, a human
+> voice: the rules bar text-to-speech, sped-up footage and music-over-text, so there is no version of
+> this that is not you talking. `python3 pipeline/demo.py --track <id>` prints the beat sheet for a
+> specific judge with every figure read live.
+>
+> **Open — Bazantic Track 2 only.** It wants information moving between two services with the result
+> depending on both. Our Recipe binds three tools and all three are ours, which satisfies Tracks 1
+> and 3 and not that one.
 
 ---
 
@@ -49,8 +53,8 @@ and now the only index of which of them actually get *paid*.
 
 ## Description (long)
 
-Every "best MCP server" list is an opinion. tashan is an instrument: it tracks 95,195 capabilities,
-scores 12,656 of them on upkeep, freshness and real adoption, audits the ones it can resolve against
+Every "best MCP server" list is an opinion. tashan is an instrument: it tracks 95,574 capabilities,
+scores 12,662 of them on upkeep, freshness and real adoption, audits the ones it can resolve against
 OSV.dev at the version you would install today, and publishes every input so the number can be
 re-checked. Nobody can pay to change a score — that is enforced by a test, not a promise.
 
@@ -61,7 +65,7 @@ single person finding the thing useful. A settled USDC payment cannot.
 
 So we asked the chain. Of the 1,079 x402 payment addresses we could resolve from the Bazaar's own
 listings, **998 have been paid at least once and 81 never have**. Between them they have settled
-**$247,318 across 10.4 million payments**. And the median service has earned **$0.51** in its entire
+**$247,350 across 10.4 million payments**. And the median service has earned **$0.51** in its entire
 life: 591 of the 998 have earned under a dollar, 9 have earned over a thousand, and 67% of
 all volume belongs to one receiver. `/paid.html` publishes that distribution, never the total on its
 own, because a sum is the one statistic a concentrated economy always passes.
@@ -125,7 +129,7 @@ the page prints the call. "Re-run this yourself" is a stronger claim than "trust
 
 The Bazaar lists thousands of x402 services and publishes no evidence about any of them. Because the
 settlement data was already indexed and reachable over MCP, the gap between "nobody measures this"
-and a live page joined to a 95,195-row catalog was one night — with no node to run, no RPC to
+and a live page joined to a 95,574-row catalog was one night — with no node to run, no RPC to
 rate-limit and no backfill to wait for.
 
 ### Feedback

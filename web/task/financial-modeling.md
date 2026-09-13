@@ -30,7 +30,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Followrabbit](https://tashan.sh/capability/plugin-followrabbit-ai-awesome-rabbit-followrabbit.html) | 44 | 2 ★ | active |
 | 18 | [Sap Sac Planning](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-planning.html) | 42 | 1 marketplaces | — |
 | 19 | [Savvly](https://tashan.sh/capability/pkg-savvly-mcp-server.html) | 71 | 585/wk | active |
-| 20 | [Actual](https://tashan.sh/capability/pkg-actual-mcp-server.html) | 65 | 777/wk | active |
+| 20 | [Actual](https://tashan.sh/capability/pkg-actual-mcp-server.html) | 69 | 1k/wk | active |
 | 21 | [Lunchmoney](https://tashan.sh/capability/pkg-akutishevsky-lunchmoney-mcp.html) | 64 | 2k/wk | active |
 | 22 | [Yahoo Finance](https://tashan.sh/capability/pkg-yahoo-finance-mcp-server.html) | 54 | 262/wk | active |
 | 23 | [Replenishradar](https://tashan.sh/capability/pkg-replenishradar-mcp-server.html) | 54 | 302/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Backtest Kit](https://tashan.sh/capability/pkg-backtest-kit-mcp.html) | 52 | 123/wk | active |
 | 40 | [Ledgr](https://tashan.sh/capability/plugin-kentaniguchi-r-ledgr-ledgr.html) | 51 | 11 ★ | active |
 
-Showing the top 40 of 47. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.
+Showing the top 40 of 48. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.
 
 ## What these numbers are not
 

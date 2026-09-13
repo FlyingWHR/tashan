@@ -3,15 +3,15 @@
   "via": "subgraph-mcp",
   "paid_measured": true,
   "economy": {
-    "paid_usd": 247317.7945,
-    "calls": 10417727,
+    "paid_usd": 247350.1299,
+    "calls": 10418867,
     "receivers_paid": 998,
     "receivers_never_paid": 81,
-    "mean_payment_usd": 0.02374,
+    "mean_payment_usd": 0.023741,
     "receivers": 998,
-    "median_usd": 0.5125,
-    "top1_share": 0.6739,
-    "top5_share": 0.8908,
+    "median_usd": 0.5175,
+    "top1_share": 0.6738,
+    "top5_share": 0.8907,
     "under_1_usd": 591,
     "under_10_usd": 828,
     "over_1000_usd": 9
@@ -33,11 +33,11 @@
       ],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 166660.7534,
-      "calls": 8718793,
+      "paid_usd": 166663.6039,
+      "calls": 8718899,
       "payers": null,
       "first": 1766711773,
-      "last": 1789291157,
+      "last": 1789302865,
       "attributable": true
     },
     {
@@ -50,11 +50,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 20807.023,
-      "calls": 118456,
+      "paid_usd": 20807.095,
+      "calls": 118464,
       "payers": null,
       "first": 1770982761,
-      "last": 1789286497,
+      "last": 1789301779,
       "attributable": false
     },
     {
@@ -67,11 +67,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 17641.7872,
-      "calls": 565193,
+      "paid_usd": 17643.3398,
+      "calls": 565227,
       "payers": null,
       "first": 1770067117,
-      "last": 1789289305,
+      "last": 1789296923,
       "attributable": false
     },
     {
@@ -155,11 +155,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 1704.9745,
-      "calls": 62376,
+      "paid_usd": 1704.9865,
+      "calls": 62381,
       "payers": null,
       "first": 1769193827,
-      "last": 1789289383,
+      "last": 1789303059,
       "attributable": false
     },
     {
@@ -186,11 +186,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 852.023,
-      "calls": 14343,
+      "paid_usd": 852.323,
+      "calls": 14348,
       "payers": null,
       "first": 1770759557,
-      "last": 1789290505,
+      "last": 1789302651,
       "attributable": false
     },
     {
@@ -201,11 +201,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 819.2,
-      "calls": 29674,
+      "paid_usd": 819.25,
+      "calls": 29675,
       "payers": null,
       "first": 1771258263,
-      "last": 1789275787,
+      "last": 1789301497,
       "attributable": false
     },
     {
@@ -247,11 +247,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 661.74,
-      "calls": 22736,
+      "paid_usd": 661.92,
+      "calls": 22745,
       "payers": null,
       "first": 1762512907,
-      "last": 1789252967,
+      "last": 1789301081,
       "attributable": false
     },
     {
@@ -262,11 +262,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 615.871,
-      "calls": 242,
+      "paid_usd": 615.873,
+      "calls": 243,
       "payers": null,
       "first": 1779442549,
-      "last": 1789135817,
+      "last": 1789297279,
       "attributable": false
     },
     {
@@ -445,11 +445,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 496.0345,
-      "calls": 20305,
+      "paid_usd": 496.4655,
+      "calls": 20325,
       "payers": null,
       "first": 1777910857,
-      "last": 1789284393,
+      "last": 1789298911,
       "attributable": false
     },
     {
@@ -460,11 +460,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 434.387,
-      "calls": 51147,
+      "paid_usd": 434.863,
+      "calls": 51201,
       "payers": null,
       "first": 1776685113,
-      "last": 1789291205,
+      "last": 1789302649,
       "attributable": false
     },
     {
@@ -558,11 +558,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 262.394,
-      "calls": 38833,
+      "paid_usd": 262.516,
+      "calls": 38855,
       "payers": null,
       "first": 1776422017,
-      "last": 1789290579,
+      "last": 1789303181,
       "attributable": false
     },
     {
@@ -573,11 +573,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 258.6562,
-      "calls": 6602,
+      "paid_usd": 258.6662,
+      "calls": 6612,
       "payers": null,
       "first": 1781508715,
-      "last": 1789288993,
+      "last": 1789302999,
       "attributable": false
     },
     {
@@ -588,11 +588,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 239.39,
-      "calls": 1973,
+      "paid_usd": 251.45,
+      "calls": 2033,
       "payers": null,
       "first": 1781212047,
-      "last": 1789144997,
+      "last": 1789303177,
       "attributable": false
     },
     {
@@ -649,11 +649,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 180.0188,
-      "calls": 6927,
+      "paid_usd": 180.047,
+      "calls": 6930,
       "payers": null,
       "first": 1777777251,
-      "last": 1789290501,
+      "last": 1789296021,
       "attributable": false
     },
     {
@@ -665,11 +665,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 178.479,
-      "calls": 40642,
+      "paid_usd": 178.486,
+      "calls": 40645,
       "payers": null,
       "first": 1769439789,
-      "last": 1789277913,
+      "last": 1789295467,
       "attributable": false
     },
     {
@@ -765,6 +765,22 @@
       "attributable": false
     },
     {
+      "address": "0x7284d41b5b852f2bd4c99bdf95043d84452d299c",
+      "hosts": [
+        "ax1-new.vercel.app",
+        "www.ax1.vc"
+      ],
+      "capabilities": [],
+      "shared": true,
+      "paid_measured": true,
+      "paid_usd": 137.16,
+      "calls": 6858,
+      "payers": null,
+      "first": 1788774967,
+      "last": 1789303201,
+      "attributable": false
+    },
+    {
       "address": "0x8d0663bbb967ebf1c047405a888ddf865f3e8854",
       "hosts": [
         "apexrunner.ai"
@@ -790,11 +806,11 @@
       ],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 130.842,
-      "calls": 33410,
+      "paid_usd": 130.8505,
+      "calls": 33411,
       "payers": null,
       "first": 1773757273,
-      "last": 1789275497,
+      "last": 1789302243,
       "attributable": false
     },
     {
@@ -810,22 +826,6 @@
       "payers": null,
       "first": 1770343401,
       "last": 1788705983,
-      "attributable": false
-    },
-    {
-      "address": "0x7284d41b5b852f2bd4c99bdf95043d84452d299c",
-      "hosts": [
-        "ax1-new.vercel.app",
-        "www.ax1.vc"
-      ],
-      "capabilities": [],
-      "shared": true,
-      "paid_measured": true,
-      "paid_usd": 124.78,
-      "calls": 6239,
-      "payers": null,
-      "first": 1788774967,
-      "last": 1789291441,
       "attributable": false
     },
     {
@@ -996,11 +996,11 @@
       ],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 109.358,
-      "calls": 9040,
+      "paid_usd": 109.376,
+      "calls": 9048,
       "payers": null,
       "first": 1781146709,
-      "last": 1789286509,
+      "last": 1789302925,
       "attributable": true
     },
     {
@@ -1011,11 +1011,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 109.159,
-      "calls": 29054,
+      "paid_usd": 109.256,
+      "calls": 29083,
       "payers": null,
       "first": 1771529923,
-      "last": 1789283439,
+      "last": 1789303113,
       "attributable": false
     },
     {
@@ -1072,11 +1072,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 92.85,
-      "calls": 852,
+      "paid_usd": 93.15,
+      "calls": 853,
       "payers": null,
       "first": 1778620175,
-      "last": 1789151351,
+      "last": 1789294749,
       "attributable": false
     },
     {
@@ -1213,11 +1213,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 77.17,
-      "calls": 4183,
+      "paid_usd": 77.2,
+      "calls": 4186,
       "payers": null,
       "first": 1768369051,
-      "last": 1789247421,
+      "last": 1789298409,
       "attributable": false
     },
     {
@@ -1461,11 +1461,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 46.16,
-      "calls": 550,
+      "paid_usd": 46.19,
+      "calls": 553,
       "payers": null,
       "first": 1770700921,
-      "last": 1789282981,
+      "last": 1789296007,
       "attributable": false
     },
     {
@@ -1476,11 +1476,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 45.632,
-      "calls": 2671,
+      "paid_usd": 45.672,
+      "calls": 2675,
       "payers": null,
       "first": 1770782465,
-      "last": 1789258791,
+      "last": 1789294827,
       "attributable": false
     },
     {
@@ -1566,11 +1566,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 38.285,
-      "calls": 1269,
+      "paid_usd": 38.495,
+      "calls": 1276,
       "payers": null,
       "first": 1782081089,
-      "last": 1789279421,
+      "last": 1789300019,
       "attributable": false
     },
     {
@@ -1837,11 +1837,11 @@
       ],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 28.9161,
-      "calls": 10108,
+      "paid_usd": 28.9197,
+      "calls": 10109,
       "payers": null,
       "first": 1780018897,
-      "last": 1789282665,
+      "last": 1789296003,
       "attributable": true
     },
     {
@@ -2611,6 +2611,21 @@
       "attributable": false
     },
     {
+      "address": "0xdc9f94a8b93f070b58cfa580cbe740d763005fe6",
+      "hosts": [
+        "stockwaves.net"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 11.735,
+      "calls": 270,
+      "payers": null,
+      "first": 1780827147,
+      "last": 1789301493,
+      "attributable": false
+    },
+    {
       "address": "0x6013d764502369012df405a21c7dcbb6efd1507b",
       "hosts": [
         "x402.orthogonal.com"
@@ -2623,21 +2638,6 @@
       "payers": null,
       "first": 1766514305,
       "last": 1789253099,
-      "attributable": false
-    },
-    {
-      "address": "0xdc9f94a8b93f070b58cfa580cbe740d763005fe6",
-      "hosts": [
-        "stockwaves.net"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 11.675,
-      "calls": 268,
-      "payers": null,
-      "first": 1780827147,
-      "last": 1788855905,
       "attributable": false
     },
     {
@@ -2684,11 +2684,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 11.444,
-      "calls": 205,
+      "paid_usd": 11.464,
+      "calls": 207,
       "payers": null,
       "first": 1778815571,
-      "last": 1789180577,
+      "last": 1789296005,
       "attributable": false
     },
     {
@@ -3136,11 +3136,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 7.124,
-      "calls": 325,
+      "paid_usd": 7.134,
+      "calls": 327,
       "payers": null,
       "first": 1766563307,
-      "last": 1789290021,
+      "last": 1789302839,
       "attributable": false
     },
     {
@@ -3570,11 +3570,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 5.29,
-      "calls": 93,
+      "paid_usd": 5.3,
+      "calls": 94,
       "payers": null,
       "first": 1767808407,
-      "last": 1789192883,
+      "last": 1789296031,
       "attributable": false
     },
     {
@@ -3742,11 +3742,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 4.7778,
-      "calls": 174,
+      "paid_usd": 4.7808,
+      "calls": 175,
       "payers": null,
       "first": 1785377781,
-      "last": 1789231991,
+      "last": 1789296013,
       "attributable": false
     },
     {
@@ -3757,11 +3757,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 4.709,
-      "calls": 954,
+      "paid_usd": 4.712,
+      "calls": 955,
       "payers": null,
       "first": 1777837101,
-      "last": 1789261781,
+      "last": 1789300889,
       "attributable": false
     },
     {
@@ -5031,11 +5031,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 2.405,
-      "calls": 216,
+      "paid_usd": 2.418,
+      "calls": 221,
       "payers": null,
       "first": 1786021109,
-      "last": 1789284943,
+      "last": 1789295147,
       "attributable": false
     },
     {
@@ -5161,6 +5161,22 @@
       "attributable": false
     },
     {
+      "address": "0x84fa7ea8303d4f503267e2e998a3f7d980e814a5",
+      "hosts": [
+        "toolcall.click",
+        "toolsmith-api.dassad10.workers.dev"
+      ],
+      "capabilities": [],
+      "shared": true,
+      "paid_measured": true,
+      "paid_usd": 2.246,
+      "calls": 118,
+      "payers": null,
+      "first": 1784045463,
+      "last": 1789292613,
+      "attributable": false
+    },
+    {
       "address": "0x74500ee8519da3b6bf43642bc06be5874a9ecc99",
       "hosts": [
         "thevaultreport.com"
@@ -5173,22 +5189,6 @@
       "payers": null,
       "first": 1784430981,
       "last": 1789088465,
-      "attributable": false
-    },
-    {
-      "address": "0x84fa7ea8303d4f503267e2e998a3f7d980e814a5",
-      "hosts": [
-        "toolcall.click",
-        "toolsmith-api.dassad10.workers.dev"
-      ],
-      "capabilities": [],
-      "shared": true,
-      "paid_measured": true,
-      "paid_usd": 2.236,
-      "calls": 117,
-      "payers": null,
-      "first": 1784045463,
-      "last": 1789232139,
       "attributable": false
     },
     {
@@ -5308,6 +5308,21 @@
       "attributable": false
     },
     {
+      "address": "0x05a877ef93e7818828d199e2df0028bca3c75bf0",
+      "hosts": [
+        "x402.cloudpulsepoint.com"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 2.11,
+      "calls": 93,
+      "payers": null,
+      "first": 1784919953,
+      "last": 1789300819,
+      "attributable": false
+    },
+    {
       "address": "0x0550779cfbc832657a8bb46bac9f359a5ad038b8",
       "hosts": [
         "sat.ipintel.ai",
@@ -5351,26 +5366,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 2.102,
-      "calls": 760,
+      "paid_usd": 2.103,
+      "calls": 761,
       "payers": null,
       "first": 1775344067,
-      "last": 1789233925,
-      "attributable": false
-    },
-    {
-      "address": "0x05a877ef93e7818828d199e2df0028bca3c75bf0",
-      "hosts": [
-        "x402.cloudpulsepoint.com"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 2.1,
-      "calls": 92,
-      "payers": null,
-      "first": 1784919953,
-      "last": 1789214427,
+      "last": 1789300081,
       "attributable": false
     },
     {
@@ -5450,11 +5450,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 2.049,
-      "calls": 572,
+      "paid_usd": 2.057,
+      "calls": 575,
       "payers": null,
       "first": 1783082311,
-      "last": 1789273563,
+      "last": 1789300943,
       "attributable": false
     },
     {
@@ -5756,6 +5756,21 @@
       "attributable": false
     },
     {
+      "address": "0xc3d01fd2f79d4c57ad106ab8ecc12a5de24f97cb",
+      "hosts": [
+        "quotient-api-gateway.onrender.com"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 1.8093,
+      "calls": 120,
+      "payers": null,
+      "first": 1785794341,
+      "last": 1789292291,
+      "attributable": false
+    },
+    {
       "address": "0x6382e6929a20b7eb02bdacfb5368362984b24c15",
       "hosts": [
         "zaref.dev"
@@ -5771,18 +5786,18 @@
       "attributable": false
     },
     {
-      "address": "0xc3d01fd2f79d4c57ad106ab8ecc12a5de24f97cb",
+      "address": "0xa13d363aecccf878ec64f6eb687eb4a771fb0599",
       "hosts": [
-        "quotient-api-gateway.onrender.com"
+        "api.robinx.io"
       ],
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 1.7993,
-      "calls": 119,
+      "paid_usd": 1.79,
+      "calls": 97,
       "payers": null,
-      "first": 1785794341,
-      "last": 1789290055,
+      "first": 1783606039,
+      "last": 1789302143,
       "attributable": false
     },
     {
@@ -5798,21 +5813,6 @@
       "payers": null,
       "first": 1776969087,
       "last": 1788910019,
-      "attributable": false
-    },
-    {
-      "address": "0xa13d363aecccf878ec64f6eb687eb4a771fb0599",
-      "hosts": [
-        "api.robinx.io"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 1.75,
-      "calls": 95,
-      "payers": null,
-      "first": 1783606039,
-      "last": 1789283159,
       "attributable": false
     },
     {
@@ -5854,11 +5854,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 1.687,
-      "calls": 159,
+      "paid_usd": 1.689,
+      "calls": 161,
       "payers": null,
       "first": 1780001693,
-      "last": 1789172599,
+      "last": 1789296017,
       "attributable": false
     },
     {
@@ -6471,11 +6471,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 1.1155,
-      "calls": 49,
+      "paid_usd": 1.1255,
+      "calls": 50,
       "payers": null,
       "first": 1788887151,
-      "last": 1789163299,
+      "last": 1789296031,
       "attributable": false
     },
     {
@@ -6546,6 +6546,21 @@
       "attributable": false
     },
     {
+      "address": "0xf752eeb75d3bea24aa867ad93bfd8ef5a2f431b9",
+      "hosts": [
+        "websearch.use.x402atlas.com"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 1.08,
+      "calls": 99,
+      "payers": null,
+      "first": 1783040589,
+      "last": 1789292935,
+      "attributable": false
+    },
+    {
       "address": "0xc4f9f3b2cc0eac2542df9f1cb8f5c118e13a0045",
       "hosts": [
         "srv1334799.hstgr.cloud"
@@ -6558,21 +6573,6 @@
       "payers": null,
       "first": 1784149439,
       "last": 1789233123,
-      "attributable": false
-    },
-    {
-      "address": "0xf752eeb75d3bea24aa867ad93bfd8ef5a2f431b9",
-      "hosts": [
-        "websearch.use.x402atlas.com"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 1.07,
-      "calls": 98,
-      "payers": null,
-      "first": 1783040589,
-      "last": 1789290301,
       "attributable": false
     },
     {
@@ -6650,22 +6650,6 @@
       "payers": null,
       "first": 1784624909,
       "last": 1789214989,
-      "attributable": false
-    },
-    {
-      "address": "0x7586b801b79a85fb9898b2017b786f7800bba691",
-      "hosts": [
-        "flint.network",
-        "imperial-columns-classification-coastal.trycloudflare.com"
-      ],
-      "capabilities": [],
-      "shared": true,
-      "paid_measured": true,
-      "paid_usd": 1.02,
-      "calls": 3,
-      "payers": null,
-      "first": 1786845251,
-      "last": 1789163407,
       "attributable": false
     },
     {
@@ -6764,11 +6748,27 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 1.016,
-      "calls": 286,
+      "paid_usd": 1.022,
+      "calls": 288,
       "payers": null,
       "first": 1788613123,
-      "last": 1789285345,
+      "last": 1789296029,
+      "attributable": false
+    },
+    {
+      "address": "0x7586b801b79a85fb9898b2017b786f7800bba691",
+      "hosts": [
+        "flint.network",
+        "imperial-columns-classification-coastal.trycloudflare.com"
+      ],
+      "capabilities": [],
+      "shared": true,
+      "paid_measured": true,
+      "paid_usd": 1.02,
+      "calls": 3,
+      "payers": null,
+      "first": 1786845251,
+      "last": 1789163407,
       "attributable": false
     },
     {
@@ -7203,6 +7203,21 @@
       "attributable": false
     },
     {
+      "address": "0xc2afb91833f4de19542a025872c6085cc29185eb",
+      "hosts": [
+        "api.clawfetch.ai"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 0.814,
+      "calls": 231,
+      "payers": null,
+      "first": 1785047597,
+      "last": 1789298083,
+      "attributable": false
+    },
+    {
       "address": "0x17cd53c04d707ef0dd615ef56c633f02915a7905",
       "hosts": [
         "keyring-agent.blockchhub.link"
@@ -7210,11 +7225,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 0.813,
-      "calls": 22,
+      "paid_usd": 0.814,
+      "calls": 23,
       "payers": null,
       "first": 1785309909,
-      "last": 1789231913,
+      "last": 1789296035,
       "attributable": false
     },
     {
@@ -7248,21 +7263,6 @@
       "first": 1784103697,
       "last": 1787429125,
       "attributable": true
-    },
-    {
-      "address": "0xc2afb91833f4de19542a025872c6085cc29185eb",
-      "hosts": [
-        "api.clawfetch.ai"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 0.809,
-      "calls": 230,
-      "payers": null,
-      "first": 1785047597,
-      "last": 1789290343,
-      "attributable": false
     },
     {
       "address": "0xa0ac44becc6302298f01ed255b175ca1060c189e",
@@ -7457,6 +7457,21 @@
       "payers": null,
       "first": 1787976039,
       "last": 1788128319,
+      "attributable": false
+    },
+    {
+      "address": "0x91d568599fb802cb3f03f067d2063785dbaf0abd",
+      "hosts": [
+        "intel.rallylive.ca"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 0.75,
+      "calls": 75,
+      "payers": null,
+      "first": 1789226213,
+      "last": 1789296033,
       "attributable": false
     },
     {
@@ -9403,6 +9418,21 @@
       "attributable": false
     },
     {
+      "address": "0xce339395d7f2ea5a5009022ef1c392fb208a989e",
+      "hosts": [
+        "agent-commerce-factory-jm.austriaeast.cloudapp.azure.com"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 0.3705,
+      "calls": 61,
+      "payers": null,
+      "first": 1787398747,
+      "last": 1789291727,
+      "attributable": false
+    },
+    {
       "address": "0x712c78928080adb009e31315c0c3c7473da9648a",
       "hosts": [
         "deadchannel.vercel.app",
@@ -9494,21 +9524,6 @@
       "payers": null,
       "first": 1782236093,
       "last": 1788463595,
-      "attributable": false
-    },
-    {
-      "address": "0xce339395d7f2ea5a5009022ef1c392fb208a989e",
-      "hosts": [
-        "agent-commerce-factory-jm.austriaeast.cloudapp.azure.com"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 0.3585,
-      "calls": 58,
-      "payers": null,
-      "first": 1787398747,
-      "last": 1789247001,
       "attributable": false
     },
     {
@@ -9724,6 +9739,22 @@
       "attributable": false
     },
     {
+      "address": "0x9504a5939ab5be2b2b1f8bea7d7ebeccd96c485d",
+      "hosts": [
+        "sendcheck-x402.pennyforge.workers.dev",
+        "sendcheck-x402.pennyforgeorg.workers.dev"
+      ],
+      "capabilities": [],
+      "shared": true,
+      "paid_measured": true,
+      "paid_usd": 0.301,
+      "calls": 27,
+      "payers": null,
+      "first": 1788397565,
+      "last": 1789294661,
+      "attributable": false
+    },
+    {
       "address": "0x6b1ac7935dad576b921af0e6edc27319bc27aadd",
       "hosts": [
         "travel.forgemesh.io"
@@ -9858,22 +9889,6 @@
       "payers": null,
       "first": 1772568807,
       "last": 1786981207,
-      "attributable": false
-    },
-    {
-      "address": "0x9504a5939ab5be2b2b1f8bea7d7ebeccd96c485d",
-      "hosts": [
-        "sendcheck-x402.pennyforge.workers.dev",
-        "sendcheck-x402.pennyforgeorg.workers.dev"
-      ],
-      "capabilities": [],
-      "shared": true,
-      "paid_measured": true,
-      "paid_usd": 0.291,
-      "calls": 26,
-      "payers": null,
-      "first": 1788397565,
-      "last": 1789275233,
       "attributable": false
     },
     {
@@ -10702,6 +10717,21 @@
       "attributable": false
     },
     {
+      "address": "0x9200c98c8188ef50302ed3b8b0ffd5d39832090c",
+      "hosts": [
+        "bazaar-gateway.vercel.app"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 0.186,
+      "calls": 65,
+      "payers": null,
+      "first": 1783585017,
+      "last": 1789292827,
+      "attributable": false
+    },
+    {
       "address": "0xef879bfd6c4accb8f795136de90246e1ec245e06",
       "hosts": [
         "api.hergertsynthora.com",
@@ -10715,21 +10745,6 @@
       "payers": null,
       "first": 1788463589,
       "last": 1789214911,
-      "attributable": false
-    },
-    {
-      "address": "0x9200c98c8188ef50302ed3b8b0ffd5d39832090c",
-      "hosts": [
-        "bazaar-gateway.vercel.app"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 0.183,
-      "calls": 64,
-      "payers": null,
-      "first": 1783585017,
-      "last": 1789236149,
       "attributable": false
     },
     {
@@ -11796,6 +11811,21 @@
       "attributable": false
     },
     {
+      "address": "0x2bcfa4f7e1fa5e96934846a7dea623398ed7f752",
+      "hosts": [
+        "alphapipeline-eu.onrender.com"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 0.105,
+      "calls": 9,
+      "payers": null,
+      "first": 1788362361,
+      "last": 1789300985,
+      "attributable": false
+    },
+    {
       "address": "0xcdd5cb6ab2b9c5f3d2bae896ce516b65010c1f4e",
       "hosts": [
         "bunnvault.xyz"
@@ -12221,6 +12251,21 @@
       "attributable": false
     },
     {
+      "address": "0x33cc8de6e86761d217044a8a6b394ad23b579596",
+      "hosts": [
+        "api.macaroonnetwork.com"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 0.093,
+      "calls": 21,
+      "payers": null,
+      "first": 1786203791,
+      "last": 1789296011,
+      "attributable": false
+    },
+    {
       "address": "0x737426d3ed53930b889b3f61774669a0fdf3be54",
       "hosts": [
         "x402.fenixfoundry.com"
@@ -12383,21 +12428,6 @@
       "payers": null,
       "first": 1781466169,
       "last": 1789183167,
-      "attributable": false
-    },
-    {
-      "address": "0x33cc8de6e86761d217044a8a6b394ad23b579596",
-      "hosts": [
-        "api.macaroonnetwork.com"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 0.083,
-      "calls": 20,
-      "payers": null,
-      "first": 1786203791,
-      "last": 1788969807,
       "attributable": false
     },
     {
@@ -12645,21 +12675,6 @@
       "payers": null,
       "first": 1784179895,
       "last": 1787535863,
-      "attributable": false
-    },
-    {
-      "address": "0x2bcfa4f7e1fa5e96934846a7dea623398ed7f752",
-      "hosts": [
-        "alphapipeline-eu.onrender.com"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 0.07,
-      "calls": 7,
-      "payers": null,
-      "first": 1788362361,
-      "last": 1789233603,
       "attributable": false
     },
     {
@@ -12931,6 +12946,21 @@
       "payers": null,
       "first": 1784133315,
       "last": 1788513937,
+      "attributable": false
+    },
+    {
+      "address": "0xb9f06d2734b7e9d7b21b64c4d8b95bd774b71acf",
+      "hosts": [
+        "api.jarvis-x402.com"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 0.06,
+      "calls": 5,
+      "payers": null,
+      "first": 1789048685,
+      "last": 1789296017,
       "attributable": false
     },
     {
@@ -13249,21 +13279,6 @@
       "payers": null,
       "first": 1786962533,
       "last": 1788524033,
-      "attributable": false
-    },
-    {
-      "address": "0xb9f06d2734b7e9d7b21b64c4d8b95bd774b71acf",
-      "hosts": [
-        "api.jarvis-x402.com"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 0.05,
-      "calls": 4,
-      "payers": null,
-      "first": 1789048685,
-      "last": 1789145059,
       "attributable": false
     },
     {
@@ -14110,6 +14125,21 @@
       "attributable": false
     },
     {
+      "address": "0xd94ce1924dedd6f3442380a4f075dc3796fb2875",
+      "hosts": [
+        "ari001.tailb4ac3a.ts.net"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 0.025,
+      "calls": 3,
+      "payers": null,
+      "first": 1788820803,
+      "last": 1789296025,
+      "attributable": false
+    },
+    {
       "address": "0x0adc7adac7bbaffffbd73505711e42378c4f9f9e",
       "hosts": [
         "toolshed.lemon-agent.dev"
@@ -14492,21 +14522,6 @@
       "payers": null,
       "first": 1788850897,
       "last": 1789233597,
-      "attributable": false
-    },
-    {
-      "address": "0xd94ce1924dedd6f3442380a4f075dc3796fb2875",
-      "hosts": [
-        "ari001.tailb4ac3a.ts.net"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 0.02,
-      "calls": 2,
-      "payers": null,
-      "first": 1788820803,
-      "last": 1789187221,
       "attributable": false
     },
     {
@@ -15033,6 +15048,21 @@
       "attributable": false
     },
     {
+      "address": "0x589a2314a2e05f45e40c4823da3ba58d421db3d8",
+      "hosts": [
+        "www.api-xpay.com"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 0.01,
+      "calls": 10,
+      "payers": null,
+      "first": 1789136255,
+      "last": 1789297831,
+      "attributable": false
+    },
+    {
       "address": "0x5f5a631e975183d084f60d7121e967b30ec83cb8",
       "hosts": [
         "767-2676.com"
@@ -15362,21 +15392,6 @@
       "payers": null,
       "first": 1771432379,
       "last": 1771432379,
-      "attributable": false
-    },
-    {
-      "address": "0x91d568599fb802cb3f03f067d2063785dbaf0abd",
-      "hosts": [
-        "intel.rallylive.ca"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 0.01,
-      "calls": 1,
-      "payers": null,
-      "first": 1789226213,
-      "last": 1789226213,
       "attributable": false
     },
     {
@@ -15761,21 +15776,6 @@
       "payers": null,
       "first": 1788616129,
       "last": 1788616137,
-      "attributable": false
-    },
-    {
-      "address": "0x589a2314a2e05f45e40c4823da3ba58d421db3d8",
-      "hosts": [
-        "www.api-xpay.com"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 0.002,
-      "calls": 2,
-      "payers": null,
-      "first": 1789136255,
-      "last": 1789231975,
       "attributable": false
     },
     {

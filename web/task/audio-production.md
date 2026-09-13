@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Music Studio](https://tashan.sh/capability/pkg-mcp-music-studio.html) | 54 | 65/wk | active |
 | 40 | [Mmxomni](https://tashan.sh/capability/pkg-mmxomni.html) | 53 | 4k/wk | active |
 
-Showing the top 40 of 63. The full ranked shelf is at https://tashan.sh/task/audio-production.html.
+Showing the top 40 of 62. The full ranked shelf is at https://tashan.sh/task/audio-production.html.
 
 ## What these numbers are not
 

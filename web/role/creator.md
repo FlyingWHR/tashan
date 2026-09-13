@@ -57,7 +57,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Frenchie Skill](https://tashan.sh/capability/pkg-lab94-frenchie.html) | 39 | 80/wk | active |
 | 40 | [Prompt To Asset](https://tashan.sh/capability/pkg-prompt-to-asset.html) | 38 | 140/wk | active |
 
-Showing the top 40 of 185. The full ranked shelf is at https://tashan.sh/role/creator.html.
+Showing the top 40 of 183. The full ranked shelf is at https://tashan.sh/role/creator.html.
 
 ## What these numbers are not
 
