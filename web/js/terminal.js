@@ -96,7 +96,7 @@
     pal.setAttribute("aria-label", "Search capabilities");
     head.appendChild(input);
     listEl = el("div", "pal__list");
-    var foot = el("div", "pal__foot"); foot.innerHTML = '<span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span><span class="pal__by">measured, not claimed</span>';
+    var foot = el("div", "pal__foot"); foot.innerHTML = '<span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span><span class="pal__by">every score shows its work</span>';
     box.appendChild(head); box.appendChild(listEl); box.appendChild(foot);
     pal.appendChild(box);
     document.body.appendChild(pal);

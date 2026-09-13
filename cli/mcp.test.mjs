@@ -403,10 +403,17 @@ console.log("ok — confirmed malware leads with the verdict, and the download c
   assert.equal(bad2.result.isError, true);
   assert.ok(/"name"/.test(bad2.result.content[0].text));
 
-  // audit_config requires nothing, and must not be broken by the guard.
+  // audit_config requires nothing, and must not be broken by the guard. Asserted on WHICH error it
+  // is, not on success: this tool fetches the published lookup, so a flat `!isError` made a unit
+  // test depend on the network and it went red on a dropped connection with nothing wrong in the
+  // code. A red that means "your wifi blinked" teaches you to ignore red. The guard is what is
+  // under test, so the guard is what is asserted — a missing-argument complaint must not appear for
+  // a tool that requires no arguments, however the call otherwise ends.
   const okCall = await handle({ jsonrpc: "2.0", id: 3, method: "tools/call",
     params: { name: "audit_config", arguments: {} } });
-  assert.ok(!okCall.result.isError, "a tool with no required arguments still runs");
+  const okText = okCall.result.isError ? String(okCall.result.content[0].text) : "";
+  assert.ok(!/required|missing|expects/i.test(okText),
+    `the argument guard fired on a tool with no required arguments: ${okText.slice(0, 120)}`);
 }
 // ---- the agent is quoted, and nothing is named --------------------------------------------------
 // The unlicensed path used to end in a sentence with a price in it. An agent holding a funded wallet

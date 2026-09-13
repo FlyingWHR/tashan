@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-**tashan** — an *instrument* that scores AI capabilities (MCP servers today) on public evidence, not a directory or store. Read `PROJECT.md` for the full thesis, positioning, moat, and roadmap; `README.md` for the short version; `brand/BRAND.md` for the design system; `docs/COMPETITIVE.md` + `docs/GROWTH.md` for landscape and revenue. This file is only the operational map.
+**tashan** — **the trusted directory for your AI's toolbox**: it scores the tools and skills you can add to an agent, on public evidence. "Directory" is the word people search for and it is now ours; the distinction the old line protected — we do not merely LIST, we check, and nobody can pay for position — is carried by *trusted* and enforced by tests/test_firewall.py. `capability` remains the internal noun: the schema, the export fields, /v0.1 and the CLI's JSON. Read `PROJECT.md` for the full thesis, positioning, moat, and roadmap; `README.md` for the short version; `brand/BRAND.md` for the design system; `docs/COMPETITIVE.md` + `docs/GROWTH.md` for landscape and revenue. This file is only the operational map.
 
 ## Commands
 

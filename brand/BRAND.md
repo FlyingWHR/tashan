@@ -4,10 +4,16 @@
 
 ## The name
 **tashan** (他山) is from the Chinese proverb **他山之石，可以攻玉** — *a stone from another
-mountain can polish your jade.* It's the product thesis in three characters: we judge the
-field using the field's **own public evidence** (its stones — registries, npm, git history,
-the READMEs people wrote) to reveal which capabilities are jade and which are gravel. We bring
-no stone of our own to sell; we only sharpen with what's already out there. Always lowercase —
+mountain can polish your jade.* It's the product thesis in three characters, and it is the same
+idea as the toolbox: **every tool in your AI's toolbox was made on somebody else's mountain.**
+We host none of them and sell none of them. We judge the field using the field's **own public
+evidence** — registries, npm, git history, the READMEs people wrote — to say which stones polish
+the jade and which scratch it.
+
+**The voice, in one line:** *the trusted directory for your AI's toolbox.* `tool` is both the word
+MCP's spec uses and the word a non-technical reader uses, which is why it is the public noun;
+`capability` stays in the schema, the export, /v0.1 and the CLI's JSON, where precision matters more
+than warmth. The toolbox is always **theirs** — we supply nothing to put in it. Always lowercase —
 it's a command you run (`tashan`, `tashan.sh`, `npx tashan`), not a company you shout.
 
 ## Positioning

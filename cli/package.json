@@ -2,7 +2,7 @@
   "name": "tashan-cli",
   "version": "0.1.4",
   "mcpName": "sh.tashan/tashan",
-  "description": "The measured layer for AI capabilities — search, rank, and install MCP servers & agent skills from your terminal.",
+  "description": "The trusted directory for your agent's toolbox \u2014 search, check and install MCP servers and agent skills from your terminal, with the evidence behind every score.",
   "type": "module",
   "bin": {
     "tashan-cli": "tashan.mjs",

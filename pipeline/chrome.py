@@ -77,8 +77,14 @@ FOOTER = [
                  ("https://www.npmjs.com/", "npm ↗"), ("https://github.com/", "GitHub ↗")]),
 ]
 
-TAGLINE = ("The measured layer for AI capabilities — MCP servers and agent skills, "
-           "ranked on public evidence.")
+# THE TOOLBOX IS THEIRS; THE CHECKING IS OURS. "The measured layer for AI capabilities" named our
+# method and our schema — two engineering nouns and a process — which is what the reader least needs
+# from a tagline. A tool is what MCP's own spec calls these things AND what someone's mother would
+# call them, which almost never happens; "your AI's toolbox" keeps ownership with the reader, since
+# we host nothing and supply nothing. `capability` stays where it belongs: the database, the export
+# fields, /v0.1 and the CLI's JSON.
+TAGLINE = ("The trusted directory for your AI's toolbox — tools and skills, "
+           "with the evidence behind every score.")
 
 
 # WHAT THE GRADE MEANS, defined once for every Python generator. The chips shipped as a bare word —

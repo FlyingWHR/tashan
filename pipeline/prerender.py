@@ -1144,7 +1144,9 @@ def bake_hero(caps, total, gen=""):
         paid_short = ("$%dk" % round(usd_ / 1000)) if usd_ >= 1000 else ("$%d" % round(usd_))
         if eco_all.get("median_usd") is not None:
             paid_note = f"the median service has earned ${eco_all['median_usd']:,.2f}"
-    for pat, val in ((r'(<p class="job__d" id="homePaid">)[^<]*(</p>)', paid_card),
+    for pat, val in ((r'(<b id="hCount">)[^<]*(</b>)', f"{total:,}"),
+                     (r'(<b id="hChecked">)[^<]*(</b>)', f"{len(caps):,}"),
+                     (r'(<p class="job__d" id="homePaid">)[^<]*(</p>)', paid_card),
                      (r'(<dt class="stat__n mono" id="sCaps">)[^<]*(</dt>)', f"{len(caps):,}"),
                      (r'(<span\s+id="sRepos">)[^<]*(</span>)', f"{total:,}"),
                      (r'(<dt class="stat__n mono" id="sScanned">)[^<]*(</dt>)', f"{scanned:,}"),

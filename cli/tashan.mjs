@@ -521,9 +521,9 @@ const rowsOf = (d) => (Array.isArray(d) ? d : d.capabilities || []);
 // The first line says what the tool DOES, not what it is. "The measured layer for AI capabilities"
 // is a positioning statement; nobody can act on it.
 const USAGE = `
-${bold("tashan")} — is anything you run dead, deprecated or malicious? ${dim("· " + SITE)}
+${bold("tashan")} — check your agent's toolbox: anything dead, deprecated or malicious? ${dim("· " + SITE)}
 
-  ${jade("tashan")}                      audit what you have installed ${dim("(the default)")}
+  ${jade("tashan")}                      check the toolbox you already have ${dim("(the default)")}
   ${jade("tashan search")} <query>       find MCP servers & skills, ranked on public evidence
   ${jade("tashan info")} <name>          one capability in full, and how to install it
   ${jade("tashan mcp")}                  run tashan as an MCP server, so your agent can ask
