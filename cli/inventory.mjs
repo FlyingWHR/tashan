@@ -83,6 +83,27 @@ export function pluginsFrom(installed) {
 }
 
 /**
+ * The capability id of an installed plugin, or null when its home cannot be read off disk.
+ *
+ * IDENTITY IS WHERE THE PLUGIN LIVES, and a name is not an identity: by name `vercel-plugin` resolves
+ * to a third party's fork and `frontend-design` to three different rows. The marketplace manifest
+ * says where each plugin lives — a relative `source` is a folder inside the marketplace's own GitHub
+ * repository, a `url` source names the repository outright. A marketplace that is only a local
+ * directory tells us nothing, and stays unresolved rather than guessed.
+ */
+export function pluginId(name, market, manifest) {
+  const entry = (manifest?.plugins || []).find((p) => p && p.name === name);
+  if (!entry) return null;
+  const src = entry.source;
+  let repo = null;
+  if (typeof src === "string") repo = market?.source?.source === "github" ? market.source.repo : null;
+  else if (src && typeof src.url === "string") {
+    repo = (/github\.com[/:]([^/]+\/[^/#?]+?)(?:\.git)?(?:[/#?]|$)/.exec(src.url) || [])[1] || null;
+  } else if (src && src.source === "github") repo = src.repo || null;
+  return repo ? `plugin:${repo}/${name}`.toLowerCase() : null;
+}
+
+/**
  * Skills on disk, with the one distinction that matters: did you write this, or did something
  * install it. A skill whose directory sits inside a plugin's cache belongs to that plugin; anything
  * else under your skills directory is yours, and yours is the half nobody else will ever maintain.
@@ -163,7 +184,10 @@ export function reconcile(prev, items, today) {
   for (const [id, row] of Object.entries(next.seen)) {
     if (here.has(id)) continue;
     next.seen[id] = { ...row, gone: true };
-    gone.push({ id, ...row });
+    // Only what was HERE last run is news. Everything already marked gone was reported again on every
+    // run, forever — "gone since last run: _chain-audit.md" on each doctor, about a file that had
+    // left weeks before.
+    if (!row.gone) gone.push({ id, ...row });
   }
   return { ledger: next, fresh, gone, returning };
 }
@@ -183,7 +207,18 @@ export function scan(home = homedir(), cwd = process.cwd(), deps = {}) {
   const servers = serversFromClaudeJson(claude);
   const installed = readJson(join(home, ".claude", "plugins", "installed_plugins.json"));
   const plugins = pluginsFrom(installed);
-  const marketplaces = Object.keys(readJson(join(home, ".claude", "plugins", "known_marketplaces.json")) || {});
+  const known = readJson(join(home, ".claude", "plugins", "known_marketplaces.json")) || {};
+  const marketplaces = Object.keys(known);
+  // Each plugin's home, read off its marketplace's manifest, so doctor can audit plugins by identity
+  // rather than by a name that several unrelated plugins share. One manifest read per marketplace.
+  const manifests = {};
+  for (const p of plugins) {
+    const m = known[p.marketplace];
+    if (m?.installLocation && !(p.marketplace in manifests)) {
+      manifests[p.marketplace] = readJson(join(m.installLocation, ".claude-plugin", "marketplace.json"));
+    }
+    p.id = pluginId(p.name, m, manifests[p.marketplace]);
+  }
   // Plugins ship skills inside their own install path, and those were never scanned — so every
   // skill on the machine looked unowned, which reads as "113 things nobody maintains" on a box
   // with 11 plugins. Scan the plugin directories too and the ownership line becomes true.
@@ -216,6 +251,114 @@ export function saveLedger(ledger, home = homedir()) {
   } catch {
     return false;   // a read-only home is not a reason to fail a scan
   }
+}
+
+// ---- usage: what you call, not what you have ----------------------------------------------------
+//
+// Once the pile is big, a list of what is installed answers nobody's question. Which of it you USE
+// does — and Claude Code already records both halves on this machine: every tool call lands in a
+// session transcript under ~/.claude/projects, and ~/.claude.json keeps a usageCount and lastUsedAt
+// per skill. Nothing is executed and nothing leaves the machine. The only things read out of a
+// transcript are the name of an MCP tool that was called and the date; the scan matches the bytes
+// around the tool_use marker and never parses a message.
+//
+// CLAUDE CODE ONLY. Cursor and Claude Desktop leave nothing this readable, so a server configured
+// there gets NO usage figure — never a zero, which would read as "you never use it".
+
+const TOOL_USE = Buffer.from('"type":"tool_use","id":"');
+const NAME = Buffer.from('"name":"');
+
+/** MCP calls recorded in one transcript's bytes, folded into `into`: { server: { calls, last } }.
+ *  A tool_use quoted inside a tool result is escaped (\"type\"), so it never matches the marker. */
+export function mcpCallsIn(buf, into = {}, sinceDay = "") {
+  let i = 0;
+  while ((i = buf.indexOf(TOOL_USE, i)) !== -1) {
+    // The first "name" after the id is this block's own: an id is a bare token with no quotes in it.
+    const n = buf.indexOf(NAME, i + TOOL_USE.length);
+    if (n === -1) break;
+    const start = n + NAME.length;
+    i = start;
+    if (buf.toString("utf8", start, start + 5) !== "mcp__") continue;
+    const end = buf.indexOf(34, start);                            // 34 = the closing quote
+    if (end === -1) break;
+    const full = buf.toString("utf8", start + 5, end);             // "<server>__<tool>"
+    const sep = full.indexOf("__");
+    const server = sep > 0 ? full.slice(0, sep) : full;
+    // ponytail: the first "timestamp" on the line is taken as the entry's own; a tool INPUT carrying
+    // its own "timestamp" key could shadow it, which misdates one call and cannot miscount it.
+    const ls = buf.lastIndexOf(10, n) + 1, le = buf.indexOf(10, end);
+    const m = /"timestamp":"(\d{4}-\d\d-\d\d)/.exec(buf.toString("utf8", ls, le === -1 ? buf.length : le));
+    const day = m ? m[1] : "";
+    if (day >= sinceDay) {
+      const u = into[server] || (into[server] = { calls: 0, last: "" });
+      u.calls++;
+      if (day > u.last) u.last = day;
+    }
+  }
+  return into;
+}
+
+/** How Claude Code spells a configured server inside its tool names: anything outside
+ *  [A-Za-z0-9_-] becomes "_" — "claude.ai Gmail" appears in transcripts as claude_ai_Gmail. */
+export function toolPrefix(name) {
+  return String(name || "").replace(/[^A-Za-z0-9_-]/g, "_");
+}
+
+/** Everything Claude Code has recorded about what gets used over the last `days`. Never throws. */
+export function usage(home = homedir(), now = Date.now(), days = 30, deps = {}) {
+  const list = deps.list || readdirSync, stat = deps.stat || statSync, read = deps.read || readFileSync;
+  const sinceMs = now - days * 864e5;
+  const since = new Date(sinceMs).toISOString().slice(0, 10);
+  const servers = {};
+  let files = 0;
+  const root = join(home, ".claude", "projects");
+  let dirs = [];
+  try { dirs = list(root); } catch { /* no Claude Code history on this machine */ }
+  for (const d of dirs) {
+    let names = [];
+    try { names = list(join(root, d)); } catch { continue; }
+    for (const f of names) {
+      if (!String(f).endsWith(".jsonl")) continue;
+      const p = join(root, d, f);
+      try {
+        if (stat(p).mtimeMs < sinceMs) continue;     // untouched since before the window: nothing in it counts
+        mcpCallsIn(read(p), servers, since);
+        files++;
+      } catch { /* a transcript mid-write or unreadable is skipped, never fatal */ }
+    }
+  }
+  let skills = {};
+  try { skills = JSON.parse(read(join(home, ".claude.json"), "utf8")).skillUsage || {}; } catch { /* none recorded */ }
+  return { since, days, sinceMs, files, servers, skills, available: files > 0 };
+}
+
+/**
+ * One configured item's usage, or null where nothing readable records it. null is not zero.
+ *   - a Claude Code server: calls inside the window, from the transcripts
+ *   - a skill: Claude Code's own counter, and whether its last use falls inside the window
+ *   - a plugin: only ever a POSITIVE figure. Hooks, agents and commands leave no trace in a
+ *     transcript, so a plugin that is never "called" may be working on every session — ponytail is a
+ *     SessionStart hook — and silence from it is not disuse.
+ */
+export function usageOf(item, u) {
+  if (!u || !item) return null;
+  if (item.type === "skill" || item.kind === "skill") {
+    if (!Object.keys(u.skills || {}).length) return null;
+    const s = u.skills[item.plugin ? `${item.plugin}:${item.name}` : item.name];
+    return { calls: (s && s.usageCount) || 0, recent: Boolean(s && s.lastUsedAt >= u.sinceMs),
+             last: s && s.lastUsedAt ? new Date(s.lastUsedAt).toISOString().slice(0, 10) : null };
+  }
+  if (!u.available || item.client !== "Claude Code") return null;
+  if (item.type === "plugin") {
+    let calls = 0, last = "";
+    const pre = `plugin_${toolPrefix(item.name)}_`;
+    for (const [srv, v] of Object.entries(u.servers)) {
+      if (srv.startsWith(pre)) { calls += v.calls; if (v.last > last) last = v.last; }
+    }
+    return calls ? { calls, last, recent: true } : null;
+  }
+  const v = u.servers[toolPrefix(item.name)];
+  return { calls: v ? v.calls : 0, last: v ? v.last : null, recent: Boolean(v) };
 }
 
 /* ---------------------------------------------------------------- self-check ------------------ */

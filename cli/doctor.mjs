@@ -152,6 +152,10 @@ export function resolve(item, lookup) {
     const i = lookup.keys[String(k).toLowerCase()];
     return i === undefined ? null : lookup.records[i];
   };
+  // A PLUGIN RESOLVES BY ITS HOME ID OR NOT AT ALL. By name alone `vercel-plugin` lands on a third
+  // party's fork and `frontend-design` on one of three rows — the GENERIC defect below, one level up.
+  // inventory.pluginId() reads the real home off the marketplace manifest; no id means unknown.
+  if (item.kind === "plugin") return rec(item.id);
   const id = item.id || item.name || "";
   const bare = String(id).replace(/^@[^/]+\//, "");
   // NEVER STRIP A SCOPE DOWN TO A GENERIC LEAF. `@playwright/mcp` — Microsoft's official server —
@@ -225,9 +229,9 @@ export function assess(item, row) {
 }
 
 export function summarize(results) {
-  const s = { total: results.length, servers: 0, skills: 0, alert: 0, warn: 0, ok: 0, unknown: 0 };
+  const s = { total: results.length, servers: 0, plugins: 0, skills: 0, alert: 0, warn: 0, ok: 0, unknown: 0 };
   for (const r of results) {
-    if (r.item.type === "skill") s.skills++; else s.servers++;
+    if (r.item.type === "skill") s.skills++; else if (r.item.type === "plugin") s.plugins++; else s.servers++;
     s[r.assessment.level] = (s[r.assessment.level] || 0) + 1;
   }
   return s;
@@ -259,32 +263,35 @@ export function trend(series, scorers = null, minDays = 3) {
     if (newest) entries = entries.filter(([d]) => scorers[d] === newest);
   }
   const points = entries.sort((a, b) => (a[0] < b[0] ? -1 : 1));
+  // The comparable points themselves ride along, so the renderer can draw the series it is selling
+  // instead of only describing it — and draws exactly the points the verdict was computed from.
+  const values = points.map((p) => p[1]);
   if (points.length < minDays) {
-    return { level: "note", direction: "new", days: points.length,
+    return { level: "note", direction: "new", days: points.length, values,
              text: `only ${points.length} day(s) of comparable history — not enough to call a trend yet` };
   }
   const first = points[0][1], last = points[points.length - 1][1];
   const delta = Math.round(last - first);
   const days = points.length;
-  const lo = Math.min(...points.map((p) => p[1]));
+  const lo = Math.min(...values);
   const off = Math.round(last - lo);
 
   // A DROP IS NOT THE SAME AS A LOW SCORE, and only the drop is news. A capability that has sat at
   // 32 for a month is already visible on the free board; one that fell from 58 to 41 this week is
   // the thing you would never notice by looking at it today.
   if (delta <= -10) {
-    return { level: "alert", direction: "falling", days, delta,
+    return { level: "alert", direction: "falling", days, delta, values,
              text: `fell ${Math.abs(delta)} points over ${days} days (${first} → ${last})` };
   }
   if (delta <= -4) {
-    return { level: "warn", direction: "slipping", days, delta,
+    return { level: "warn", direction: "slipping", days, delta, values,
              text: `down ${Math.abs(delta)} points over ${days} days (${first} → ${last})` };
   }
   if (delta >= 6 && off >= 4) {
-    return { level: "note", direction: "recovering", days, delta,
+    return { level: "note", direction: "recovering", days, delta, values,
              text: `recovering — up ${delta} points over ${days} days (${first} → ${last})` };
   }
-  return { level: "ok", direction: "steady", days, delta, text: `steady over ${days} days (${last})` };
+  return { level: "ok", direction: "steady", days, delta, values, text: `steady over ${days} days (${last})` };
 }
 
 // Fold trends into the free assessment. Escalates a level but never de-escalates one: a falling score

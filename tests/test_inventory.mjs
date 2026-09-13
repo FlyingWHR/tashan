@@ -81,5 +81,61 @@ ok(mixed.some((x) => x.path.endsWith("cinema-pro-2.0")),
 ok(Object.keys(frontmatter("---\nname: a\ndescription: b\n---")).length === 2, "frontmatter reads name and description");
 ok(!frontmatter("no frontmatter").name, "and invents nothing when there is none");
 
+// --- plugin identity: where it lives, never a shared name ----------------------------------------
+const { pluginId, mcpCallsIn, usageOf, toolPrefix } = await import("../cli/inventory.mjs");
+const officialMk = { source: { source: "github", repo: "anthropics/claude-plugins-official" } };
+const manifest = { plugins: [
+  { name: "telegram", source: "./external_plugins/telegram" },
+  { name: "vercel", source: { source: "url", url: "https://github.com/vercel/vercel-plugin.git", sha: "abc" } },
+] };
+ok(pluginId("telegram", officialMk, manifest) === "plugin:anthropics/claude-plugins-official/telegram",
+   "a relative source lives in the marketplace's own repository");
+ok(pluginId("vercel", officialMk, manifest) === "plugin:vercel/vercel-plugin/vercel",
+   "a url source names its own home — being listed in Anthropic's marketplace does not make it Anthropic's");
+ok(pluginId("vercel-plugin", { source: { source: "directory", path: "/x" } },
+            { plugins: [{ name: "vercel-plugin", source: "./" }] }) === null,
+   "a marketplace that is only a local directory yields no id, not a guess");
+ok(pluginId("absent", officialMk, manifest) === null, "a plugin its manifest does not list has no id");
+
+// --- a departure is news once --------------------------------------------------------------------
+const four = reconcile(three.ledger, [{ kind: "skill", scope: "user", name: "x" }], "2026-09-07");
+ok(four.gone.length === 0, "something already reported gone is not reported again on every run");
+
+// --- usage: counted from the bytes around a tool call, dated by its own entry -----------------------
+const entry = (ts, name) => JSON.stringify({ type: "assistant",
+  message: { content: [{ type: "tool_use", id: "toolu_01abc", name, input: {} }] }, timestamp: ts });
+const transcript = Buffer.from([
+  entry("2026-09-10T10:00:00.000Z", "mcp__chrome-devtools__click"),
+  entry("2026-09-12T10:00:00.000Z", "mcp__chrome-devtools__navigate_page"),
+  entry("2026-07-01T10:00:00.000Z", "mcp__tavily__search"),
+  entry("2026-09-11T10:00:00.000Z", "Bash"),
+  entry("2026-09-11T10:00:00.000Z", "mcp__plugin_telegram_telegram__reply"),
+  JSON.stringify({ type: "user", timestamp: "2026-09-11T00:00:00Z", message: { content: [{ type: "tool_result",
+    content: 'quoted: {"type":"tool_use","id":"x","name":"mcp__fake__y"}' }] } }),
+].join("\n"));
+const calls = mcpCallsIn(transcript, {}, "2026-08-14");
+ok(calls["chrome-devtools"]?.calls === 2 && calls["chrome-devtools"].last === "2026-09-12",
+   "calls are counted per server and dated by their own entry");
+ok(!calls.tavily, "a call from before the window does not count");
+ok(!calls.fake, "a tool_use quoted inside a tool result is text, not a call");
+ok(Object.keys(calls).length === 2, `only MCP tools are counted (got ${Object.keys(calls)})`);
+
+const u = { available: true, sinceMs: Date.parse("2026-08-14"), servers: calls,
+            skills: { audit: { usageCount: 13, lastUsedAt: Date.parse("2026-09-01") },
+                      "watch:watch": { usageCount: 4, lastUsedAt: Date.parse("2026-01-01") } } };
+ok(usageOf({ type: "server", client: "Claude Code", name: "chrome-devtools" }, u).calls === 2,
+   "a Claude Code server's calls are read");
+const idle = usageOf({ type: "server", client: "Claude Code", name: "tavily" }, u);
+ok(idle.calls === 0 && idle.recent === false, "a Claude Code server with no calls is a real zero");
+ok(usageOf({ type: "server", client: "Cursor", name: "tavily" }, u) === null,
+   "a Cursor server has no readable record — null, never a zero");
+ok(usageOf({ type: "plugin", client: "Claude Code", name: "telegram" }, u).calls === 1, "a plugin's own servers count toward it");
+ok(usageOf({ type: "plugin", client: "Claude Code", name: "ponytail" }, u) === null,
+   "a plugin with no calls is silent — hooks leave no trace, so silence is not disuse");
+ok(usageOf({ type: "skill", name: "audit" }, u).recent === true, "a skill used inside the window is recent");
+ok(usageOf({ type: "skill", name: "watch", plugin: "watch" }, u).recent === false,
+   "a plugin's skill is keyed plugin:skill, and use from months ago is not recent");
+ok(toolPrefix("claude.ai Gmail") === "claude_ai_Gmail", "a configured name is spelled the way its tool names spell it");
+
 console.log(fail ? `\n  ${fail} failing` : "\n  all inventory checks pass");
 process.exit(fail ? 1 : 0);

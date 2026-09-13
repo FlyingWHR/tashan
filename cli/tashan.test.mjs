@@ -413,28 +413,96 @@ import { join } from "node:path";
 }
 
 // ---- the upsell must be earned, not recurring ---------------------------------------------------
-// renderDoctor is not exported, so this asserts the RULE the implementation encodes: an offer is
-// shown only for rows where something is actually withheld. A tool that prints a pitch on a clean
-// run gets uninstalled, and it deserves to be.
-//
-// The rule NARROWED when the security audit went free. Advisories and install scripts used to count
-// as "detail worth unlocking"; they are now printed in full, to everyone, so pitching them would be
-// selling the reader something already on their screen. What is left behind the licence is the
-// replacement to move to — and the trend, which needs history nobody can backfill.
+// The rule is offerFor() itself now, not a copy of it re-typed into this file — the copy passed
+// while renderDoctor did whatever it liked. It CHANGED on purpose: "only where a finding's detail is
+// withheld" had shrunk to a named replacement alone, so a healthy stack never learned anything was
+// for sale. A licence buys every measured row its score series, so the offer names that, for the
+// rows this reader has. What still must never happen is asserted below.
 {
-  const replaceable = (rows) => rows.filter((r) => r.row && r.alts && r.alts.length).length;
+  const { offerFor, standing, evidenceOf, reachOf, recentOf, spark, verdictOf } = await import("./tashan.mjs");
+  const m = (id, extra = {}) => ({ row: { id, tashan_score: 80, ...extra } });
 
-  assert.strictEqual(replaceable([{ row: {} }, { row: { rated: true } }]), 0,
-    "a clean stack has nothing to offer, so nothing is offered");
-  assert.strictEqual(replaceable([{ row: { sec_advisory_count: 2 } }]), 0,
-    "an advisory is free in full — it must not trigger a pitch");
-  assert.strictEqual(replaceable([{ row: { sec_install_script: "node evil.js" } }]), 0,
-    "neither does the install command, which is printed verbatim");
-  assert.strictEqual(replaceable([{ row: {}, alts: [{ cap: {} }] }]), 1,
-    "a named replacement is the thing a licence still buys");
-  assert.strictEqual(replaceable([{ row: null, alts: [{ cap: {} }] }]), 0,
-    "an unresolved row has no detail to sell, whatever else is attached to it");
-  console.log("ok — the Pro offer is earned per finding, never a standing nag");
+  assert.strictEqual(offerFor([], null), null, "nothing measured, nothing offered");
+  assert.strictEqual(offerFor([{ row: null }, { row: { id: "skill:x", rated: false } }], null), null,
+    "unmeasured and unrated rows have no series to sell");
+  assert.deepStrictEqual(offerFor([m("a"), m("a"), m("b")], null), { kind: "series", n: 2 },
+    "the count is distinct capabilities — one tool configured in two clients is one series");
+  assert.deepStrictEqual(offerFor([m("a"), { ...m("b"), alts: [{ cap: {} }] }], null), { kind: "replacement", n: 1 },
+    "a named replacement outranks the series: it is the more specific thing withheld");
+  assert.strictEqual(offerFor([{ row: null, alts: [{ cap: {} }] }], null), null,
+    "an unresolved row has nothing to sell, whatever is attached to it");
+  for (const st of ["active", "invalid", "deactivated", "unknown"]) {
+    assert.strictEqual(offerFor([m("a")], st), null, `with a licence in any state (${st}) its state is said, never a pitch`);
+  }
+  assert.strictEqual(offerFor([{ row: { id: "x", sec_advisory_count: 2, sec_install_script: "node evil.js" } }], null), null,
+    "an advisory and an install command are free in full — neither is ever what the offer is about");
+  console.log("ok — the offer names what this stack has, never a free fact, never past a licence");
+
+  assert.strictEqual(standing({ tashan_score: 85, rank_pct: 98, category: "browser" }), "above 98% of browser",
+    "standing is the dossier's own sentence");
+  assert.strictEqual(standing({ tashan_score: 98, rank_pct: 100, category: "docs" }), "above 99% of docs",
+    "rank_pct is rounded, so 100 prints as the claim it can support");
+  assert.strictEqual(standing({ tashan_score: null, rank_pct: 50 }), null, "no score, no standing");
+
+  assert.deepStrictEqual(
+    evidenceOf({ official: "Microsoft", npm_downloads: 4633135, gh_stars: 47475, sec_provenance: 1, expertise_verdict: "solid" }),
+    ["Microsoft official", "4.6M downloads/wk", "47k stars", "provenance-attested build"],
+    "evidence leads with the publisher and stops at four facts");
+  assert.deepStrictEqual(evidenceOf({ npm_downloads: 0, sec_provenance: 0 }), [], "a zero is not evidence");
+
+  const rs = [
+    { item: { name: "playwright" }, row: { id: "p", sec_permissions: '["browser"]', sec_remote_content: 1,
+      recent: [{ at: "2026-08-10", kind: "permissions_widened", what: "now reaches browser" }] } },
+    { item: { name: "playwright" }, row: { id: "p", sec_permissions: '["browser"]', sec_remote_content: 1,
+      recent: [{ at: "2026-08-10", kind: "permissions_widened", what: "now reaches browser" }] } },
+    { item: { name: "fs" }, row: { id: "f", sec_permissions: "{broken",
+      recent: [{ at: "2026-09-01", kind: "deprecated", what: "deprecated by its publisher" }] } },
+    { item: { name: "ghost" }, row: null },
+  ];
+  assert.deepStrictEqual(reachOf(rs).perms, { browser: ["playwright"] },
+    "reach is per permission, each tool named once, a malformed field skipped rather than fatal");
+  assert.deepStrictEqual(reachOf(rs).remote, ["playwright"], "the third-party-text surface names each tool once");
+  assert.deepStrictEqual(recentOf(rs).map((e) => e.at), ["2026-09-01", "2026-08-10"],
+    "changes are newest first, and a capability configured twice reports its change once");
+
+  assert.strictEqual(spark([85, 85, 85]), "▅▅▅", "a flat series sits mid-height, not on the floor");
+  assert.strictEqual(spark([58, 50, 41])[0] + spark([58, 50, 41])[2], "█▁", "a real fall uses the full height");
+  const wob = spark([80, 81, 80]);
+  assert.ok(!wob.includes("█") && !wob.includes("▁"), "a one-point wobble cannot draw a collapse");
+  assert.strictEqual(spark([70]), "", "one point is not a line");
+
+  assert.strictEqual(verdictOf({ tashan_score: 90, sec_max_severity: "MALICIOUS" }).text, "Do not install",
+    "malware is refused before its score is read");
+  assert.strictEqual(verdictOf({ tashan_score: 88, npm_deprecated: 1 }).text, "Not recommended",
+    "a dead package is not a pick at any score");
+  assert.strictEqual(verdictOf({ tashan_score: 88, sec_advisory_count: 1, sec_max_severity: "HIGH" }).text, "Not recommended");
+  assert.strictEqual(verdictOf({ tashan_score: 88, sec_advisory_count: 1, sec_max_severity: "LOW" }).text, "Use with care");
+  const az = verdictOf({ tashan_score: 86, rank_pct: 97, category: "cloud", sec_install_script: 1 });
+  assert.strictEqual(az.text, "Strong pick", "an install script does not lower a well-measured verdict…");
+  assert.strictEqual(az.but, "runs a script at install time", "…it is said beside it");
+  assert.strictEqual(az.why, "86/100, above 97% of cloud", "and the verdict carries the fact behind it");
+  assert.strictEqual(verdictOf({ tashan_score: 55 }).text, "Reasonable pick");
+  assert.strictEqual(verdictOf({ tashan_score: 20 }).text, "Weak evidence");
+  assert.strictEqual(verdictOf({ rated: false }).text, "Unrated");
+
+  const twins = [
+    { id: "plugin:upstash/context7/context7", name: "context7", kind: "plugin", tashan_score: 77 },
+    { id: "pkg:@upstash/context7-mcp", name: "@upstash/context7-mcp", npm_pkg: "@upstash/context7-mcp",
+      label: "Context7", kind: "npm", tashan_score: 98 },
+  ];
+  assert.strictEqual(find(twins, "context7").id, "pkg:@upstash/context7-mcp",
+    "among exact matches the best-measured wins, not whichever came first");
+  assert.strictEqual(find(twins, "plugin:upstash/context7/context7").id, "plugin:upstash/context7/context7",
+    "a typed id still wins outright");
+
+  const { resolve } = await import("./doctor.mjs");
+  const lk = { keys: { "vercel-plugin": 0, "plugin:vercel/vercel-plugin/vercel": 1 },
+               records: [{ id: "plugin:tomsonxxx/lumbago_codex/vercel-plugin" }, { id: "plugin:vercel/vercel-plugin/vercel" }] };
+  assert.strictEqual(resolve({ kind: "plugin", name: "vercel-plugin", id: null }, lk), null,
+    "a plugin with no readable home is unknown — never a stranger that shares its name");
+  assert.strictEqual(resolve({ kind: "plugin", name: "vercel", id: "plugin:vercel/vercel-plugin/vercel" }, lk).id,
+    "plugin:vercel/vercel-plugin/vercel", "and one with a home resolves to exactly that record");
+  console.log("ok — standing, evidence, reach, changes, sparkline, verdict and plugin identity");
 }
 
 // ---- the security audit's DETAIL is free too, and never invented -------------------------------

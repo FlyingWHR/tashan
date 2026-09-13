@@ -901,5 +901,57 @@ ok(f"no publisher's skills all share one score ({len(_big)} publishers with 5+ r
    f"{len(_flat)} publisher(s) have an identical score on every skill they ship: {_flat[:4]} — "
    f"that is the repo's maintenance signal wearing a per-skill label")
 
+# ---- THE TERMINAL'S STANDING IS THE DOSSIER'S ---------------------------------------------------
+# `doctor` and `info` print "above 98% of browser" from lookup.json's rank_pct; the dossier prints it
+# from capabilities.json's. Recomputed in the CLI instead, it came out one point off on 6,156 of
+# 11,647 rows — which is why the number travels, and why it must be one number in both files.
+_lk_recs = {r["id"]: r for r in (load("data/lookup.json") or {}).get("records", [])}
+_rank_off = [c["id"] for c in (_ex.get("capabilities") or [])
+             if c.get("rank_pct") is not None and c["id"] in _lk_recs
+             and _lk_recs[c["id"]].get("rank_pct") != c["rank_pct"]]
+ok("lookup.json carries the dossier's rank_pct, identically",
+   not _rank_off and any(r.get("rank_pct") is not None for r in _lk_recs.values()),
+   f"{len(_rank_off)} rows differ, e.g. {_rank_off[:3]} — or lookup.json carries no rank_pct at all")
+_routine = [r["id"] for r in _lk_recs.values()
+            if any(e.get("kind") in ("version_published", "score_moved") for e in r.get("recent") or [])]
+ok("the changes doctor prints are consequential — no routine releases, no score steps",
+   not _routine, f"routine events on {len(_routine)} lookup rows, e.g. {_routine[:3]}")
+
+# ---- 18. A ROLE MEANS THE SAME SIZE ON THE HOMEPAGE AND ON ITS OWN PAGE -------------------------
+# The homepage grid said "Software engineer 176" and /role/engineer.html said 1,030. Both were
+# defensible in isolation — the grid counted the capped board so a tile would not promise 30 and open
+# onto 12; the hub counted the catalogue — and together they were a six-fold disagreement one click
+# apart. A reader who checks does not conclude "two populations", they conclude the numbers are made
+# up, and that is the one conclusion this product cannot survive.
+#
+# The rule now: the count comes from the catalogue on both surfaces, and the board says how many of
+# them it is showing. This checks the data those counts are built from, since the grid is computed in
+# JS at runtime: tags.json + tasks.json must reproduce exactly what each role hub printed.
+_tags = load("data/tags.json") or {}
+_meta = load("data/tasks.json") or {}
+_bytask = _tags.get("tasks") or {}
+if _bytask and _meta.get("tasks"):
+    _roles = {}
+    for _t in _meta["tasks"]:
+        _ids = set(_bytask.get(_t["slug"]) or [])
+        for _rid in (_t.get("roles") or []):
+            _roles.setdefault(_rid, set()).update(_ids)
+    _checked = 0
+    for _rid, _ids in sorted(_roles.items()):
+        _p = os.path.join(WEB, "role", _rid + ".html")
+        if not os.path.exists(_p):
+            continue
+        _m = re.search(r"measures <b>([\d,]+)</b> capabilities", open(_p, encoding="utf-8").read())
+        if not _m:
+            continue
+        _checked += 1
+        _hub = int(_m.group(1).replace(",", ""))
+        ok(f"role '{_rid}': the homepage grid and /role/{_rid}.html count the same population",
+           _hub == len(_ids),
+           f"the hub page says {_hub:,} and tags.json+tasks.json give {len(_ids):,} — the grid is "
+           f"computed from the latter, so the two surfaces would print different sizes for one role")
+    ok(f"every published role hub was checked ({_checked})", _checked > 0,
+       "no role hub matched — the selector or the page shape changed")
+
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)

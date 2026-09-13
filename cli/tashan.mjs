@@ -18,10 +18,10 @@
 import { spawn } from "node:child_process";
 import { readFileSync, writeFileSync, mkdirSync, rmSync, chmodSync, realpathSync } from "node:fs";
 import { homedir, hostname, platform } from "node:os";
-import { join, dirname } from "node:path";
+import { join, dirname, basename } from "node:path";
 import { configLocations, skillLocations, collect, match, resolve, assess, summarize, trend, withTrend,
-         suggest, tokenFrequency, isDying } from "./doctor.mjs";
-import { scan, loadLedger, saveLedger, reconcile } from "./inventory.mjs";
+         suggest, tokenFrequency, isDying, identify } from "./doctor.mjs";
+import { scan, loadLedger, saveLedger, reconcile, usage, usageOf } from "./inventory.mjs";
 
 // Resolved against this module's own URL, not cwd and not argv[1] — npm installs the bin as a
 // SYMLINK, so a path derived from how the process was invoked points somewhere else entirely.
@@ -246,6 +246,111 @@ export function installScriptOf(row) {
   return typeof s === "string" && s.trim() && s !== "1" ? s : null;
 }
 
+// ---- the directory's evidence, read the way a person decides ------------------------------------
+// One implementation behind doctor and info, so the two cannot describe the same row two ways.
+
+/** Where a row sits in its category, in the dossier's words ("above 98% of browser"). The number is
+ *  build.py's rank_pct, carried in lookup.json — recomputed here it disagreed with the dossier on half
+ *  the rows. ponytail: 100 prints as 99; rank_pct is rounded, so "above 100%" is odd and untrue. */
+export function standing(r) {
+  if (!r || r.rank_pct == null || r.tashan_score == null) return null;
+  return `above ${Math.min(99, r.rank_pct)}% of ${r.category || "its category"}`;
+}
+
+/** The public facts behind a score, most telling first — only the ones this row actually carries. */
+export function evidenceOf(r, max = 4) {
+  if (!r) return [];
+  const out = [];
+  if (r.official) out.push(`${r.official} official`);
+  if (r.npm_downloads) out.push(`${fmtNum(r.npm_downloads)} downloads/wk`);
+  if (r.gh_stars) out.push(`${fmtNum(r.gh_stars)} stars`);
+  if (r.sec_provenance) out.push("provenance-attested build");
+  if (r.expertise_verdict) out.push(`${r.expertise_verdict} docs`);
+  return out.slice(0, max);
+}
+
+/** What the agent can reach, summed over everything resolved. From DECLARED dependencies — nothing is
+ *  run — so an empty list means "nothing declared", never "nothing possible". */
+export function reachOf(results) {
+  const perms = {}, remote = [];
+  for (const { item, row } of results) {
+    if (!row) continue;
+    const name = pretty(item.name);
+    let ps = [];
+    try { ps = JSON.parse(row.sec_permissions || "[]"); } catch { /* a malformed field never breaks the audit */ }
+    for (const p of Array.isArray(ps) ? ps : []) {
+      perms[p] = perms[p] || [];
+      if (!perms[p].includes(name)) perms[p].push(name);
+    }
+    if (row.sec_remote_content && !remote.includes(name)) remote.push(name);
+  }
+  return { perms, remote };
+}
+
+/** The consequential changes lookup.json carries for what you run, newest first. */
+export function recentOf(results, limit = 6) {
+  const seen = new Set(), out = [];
+  for (const { item, row } of results) {
+    if (!row || seen.has(row.id)) continue;
+    seen.add(row.id);
+    for (const e of row.recent || []) out.push({ ...e, name: pretty(item.name) });
+  }
+  return out.sort((a, b) => (a.at < b.at ? 1 : a.at > b.at ? -1 : 0)).slice(0, limit);
+}
+
+/** A score series as a sparkline over at least ten points of range, centred. Scaled to its own
+ *  min–max, a one-point wobble fills the whole height and reads as a collapse. */
+export function spark(values, width = 14) {
+  const v = (values || []).filter((x) => typeof x === "number").slice(-width);
+  if (v.length < 2) return "";
+  const lo = Math.min(...v), hi = Math.max(...v), span = Math.max(10, hi - lo), base = (lo + hi - span) / 2;
+  return v.map((x) => "▁▂▃▄▅▆▇█"[Math.max(0, Math.min(7, Math.round(((x - base) / span) * 7)))]).join("");
+}
+
+/** Which offer a reader without a licence sees, or null.
+ *
+ *  THE RULE CHANGED, deliberately. It was "only where a finding's detail is withheld", which once the
+ *  security detail went free meant a named replacement and nothing else — so a healthy stack, the
+ *  common case, never learned anything was for sale. What a licence buys for EVERY measured row is
+ *  its score series (entitlements: history, live), so the offer names that, for the rows this reader
+ *  has. Still never: where nothing is measured, for an advisory or an install command (both free in
+ *  full), or once any licence exists — then the state of the licence is said instead. */
+export function offerFor(results, keyState) {
+  if (keyState != null) return null;
+  const replaceable = results.filter((r) => r.row && r.alts && r.alts.length).length;
+  if (replaceable) return { kind: "replacement", n: replaceable };
+  const measured = new Set(results.filter((r) => r.row && r.row.tashan_score != null).map((r) => r.row.id)).size;
+  return measured ? { kind: "series", n: measured } : null;
+}
+
+/** The answer to "should I install this", before the detail. Every branch is a published
+ *  measurement and the thresholds are the board's own colour bands (70 / 40). Fit for a particular
+ *  job is not judged here — that is the job pages' question. A script at install time does not lower
+ *  the verdict, it rides beside it: azure is Microsoft-official, scores 86 and runs one, and folding
+ *  the two together would hide exactly that case. */
+export function verdictOf(r) {
+  if (!r) return null;
+  const s = r.tashan_score;
+  const why = s == null ? null : [`${Math.round(s)}/100`, standing(r)].filter(Boolean).join(", ");
+  const but = r.sec_install_script ? "runs a script at install time" : null;
+  if (r.sec_max_severity === "MALICIOUS") return { level: "alert", text: "Do not install", why: "listed in OSV's malicious-packages database" };
+  if (r.registry_status === "deleted") return { level: "alert", text: "Do not install", why: "removed from the MCP registry" };
+  const dead = r.npm_deprecated ? "deprecated on npm" : r.gh_archived ? "its repository is archived"
+    : r.registry_status === "deprecated" ? "deprecated in the MCP registry"
+    : r.vitality === "abandoned" ? "no recent activity — looks abandoned" : null;
+  if (dead) return { level: "alert", text: "Not recommended", why: dead };
+  if (r.sec_advisory_count) {
+    const sev = (r.sec_max_severity || "unrated").toLowerCase();
+    const bad = sev === "critical" || sev === "high";
+    return { level: bad ? "alert" : "warn", text: bad ? "Not recommended" : "Use with care", but,
+             why: `${r.sec_advisory_count} known advisor${r.sec_advisory_count === 1 ? "y" : "ies"} (${sev}) against the current release` };
+  }
+  if (s == null) return { level: "note", text: "Unrated", why: r.rating_basis || "catalogued, no per-item evidence yet" };
+  if (s >= 70) return { level: "ok", text: "Strong pick", why, but };
+  if (s >= 40) return { level: "note", text: "Reasonable pick", why, but };
+  return { level: "warn", text: "Weak evidence", why, but };
+}
+
 export function search(rows, q) {
   q = (q || "").toLowerCase().trim();
   if (!q) return [];
@@ -274,8 +379,16 @@ export function top(rows, cat) {
 
 export function find(rows, key) {
   const k = (key || "").toLowerCase();
+  // AMONG EXACT MATCHES, THE BEST-MEASURED ONE. `tashan info context7` answered with a plugin that
+  // re-lists Context7 (77, no downloads) instead of @upstash/context7-mcp (98, 1.1M/wk), because the
+  // plugin is NAMED exactly "context7" and happened to come first. A typed package name or id still
+  // wins outright: whoever wrote `@scope/pkg` meant that package, measured or not.
+  const bare = (r) => pretty(r.name || "").toLowerCase().replace(/^@[^/]+\//, "");
+  const best = (xs) => xs.sort((a, b) => (b.tashan_score ?? -1) - (a.tashan_score ?? -1))[0];
   return rows.find((r) => r.slug === k)
-      || rows.find((r) => (r.name || "").toLowerCase() === k || (r.npm_pkg || "").toLowerCase() === k)
+      || rows.find((r) => (r.npm_pkg || "").toLowerCase() === k || String(r.id || "").toLowerCase() === k)
+      || best(rows.filter((r) => (r.name || "").toLowerCase() === k || (r.label || "").toLowerCase() === k
+                               || bare(r) === k))
       || rows.find((r) => slugify(r.id) === slugify(k))
       || rows.find((r) => (r.name || "").toLowerCase().includes(k) || (r.npm_pkg || "").toLowerCase().includes(k));
 }
@@ -343,13 +456,29 @@ function table(rows, limit) {
 
 function infoCard(r) {
   const L = [];
+  const kv = (k, v) => L.push("  " + k.padEnd(13) + v);
   L.push("");
   L.push("  " + bold(disp(r)) + "  " + dim(r.kind || ""));
   L.push("  " + dim(r.id));
   L.push("");
-  L.push("  tashan score        " + trustStr(r.tashan_score).trim() + dim("/100") + "   " + dim("upkeep " + (r.upkeep ?? "—") + " · vitality " + (r.vitality || "—")));
-  if (r.expertise_verdict) L.push("  Expertise    " + jade(verdict(r.expertise_verdict)) + (r.expertise != null ? dim("  (" + r.expertise + "/100)") : ""));
-  L.push("  Adoption     " + dim(fmtNum(r.npm_downloads) + " downloads/wk" + (r.config_reach ? " · reach " + r.config_reach : "")));
+  // THE ANSWER FIRST. This card was nine fields in the order they were registered and never said the
+  // one thing somebody running `info` came for: should I install this. The verdict leads with the
+  // fact behind it; the evidence follows for whoever wants to check it.
+  const v = verdictOf(r);
+  if (v) {
+    const paint = v.level === "alert" ? red : v.level === "warn" ? C("33") : v.level === "ok" ? jade : bold;
+    L.push("  " + paint(v.text) + (v.why ? dim(" — " + v.why) : "") + (v.but ? C("33")(" · " + v.but) : ""));
+    L.push("");
+  }
+  kv("tashan score", trustStr(r.tashan_score).trim() + dim("/100") + (standing(r) ? dim("   " + standing(r)) : ""));
+  if (r.official) kv("Publisher", r.official + dim(" (official)"));
+  kv("Adoption", dim([r.npm_downloads != null ? fmtNum(r.npm_downloads) + " downloads/wk" : null,
+                      r.gh_stars ? fmtNum(r.gh_stars) + " GitHub stars" : null,
+                      r.config_reach ? "reach " + r.config_reach : null].filter(Boolean).join(" · ") || "—"));
+  kv("Upkeep", dim([r.vitality || "—", r.upkeep != null ? "upkeep " + r.upkeep : null,
+                    r.npm_latest_version ? "latest " + r.npm_latest_version : null,
+                    r.single_maintainer ? "one primary maintainer" : null].filter(Boolean).join(" · ")));
+  if (r.expertise_verdict) kv("Docs", jade(verdict(r.expertise_verdict)) + (r.expertise != null ? dim("  (" + r.expertise + "/100)") : ""));
   // SETTLED RECEIPTS, directly under adoption, because the contrast IS the signal: this row reads
   // "636 downloads/wk" and "$166,659 settled". Printed only where paid_seen_at says we asked the
   // chain — an em-dash would read as "we looked and found nothing" for the ~11,700 capabilities
@@ -371,15 +500,30 @@ function infoCard(r) {
   if (r.sec_max_severity === "MALICIOUS") sec.push(red("MALICIOUS — listed in OSV's malicious-packages database. Do not install."));
   else if (r.sec_advisory_count) sec.push(red(`${r.sec_advisory_count} known advisor${r.sec_advisory_count === 1 ? "y" : "ies"}`) + dim(` (${(r.sec_max_severity || "unrated").toLowerCase()}) against the current release`));
   else if (r.sec_advisory_count === 0) sec.push(jade("no known advisories") + dim(" against the current release"));
-  if (r.sec_install_script) sec.push(C("33")("runs a script at install time"));
+  if (r.sec_install_script) sec.push(C("33")("runs a script at install time") + (installScriptOf(r) ? dim(": " + installScriptOf(r)) : ""));
   if (r.sec_permissions) {
     try { const ps = JSON.parse(r.sec_permissions); if (ps.length) sec.push(dim("can reach: ") + ps.join(", ")); } catch { /* never break info */ }
   }
+  if (r.sec_remote_content) sec.push(dim("can bring third-party text into your model's context"));
+  if (r.dep_scanned_at && r.dep_tree_n) {
+    sec.push(r.dep_vuln_n
+      ? C("33")(`${r.dep_vuln_n} known advisor${r.dep_vuln_n === 1 ? "y" : "ies"} across its ${r.dep_tree_n} installed dependencies`)
+      : dim(`${r.dep_tree_n} installed dependencies, none with a known advisory`));
+  }
+  // The date a reader needs to weigh "no known advisories", and the limit of the method in four words.
+  if (sec.length && r.sec_scanned_at) sec.push(dim("scanned " + String(r.sec_scanned_at).slice(0, 10) + " · declared, never executed"));
   if (sec.length) {
     L.push("");
     L.push("  " + dim("security") + "     " + sec[0]);
     for (const x of sec.slice(1)) L.push("               " + x);
     L.push("");                 // separator belongs to the block, not to the line after it
+  }
+  // What moved in the last 30 days, straight from the record — the same events /changes.html dates.
+  const moved = r.recent || [];
+  if (moved.length) {
+    L.push("  " + dim("changed") + "      " + dim(moved[0].at) + "  " + moved[0].what);
+    for (const e of moved.slice(1)) L.push("               " + dim(e.at) + "  " + e.what);
+    L.push("");
   }
   L.push("  dossier      " + under(SITE + "/capability/" + (r.slug || slugify(r.id))));
   L.push("");
@@ -589,42 +733,65 @@ function renderInventory(inv) {
   return out + "\n";
 }
 
-function renderDoctor(results, problems, sum, pro = false, verbose = false, keyState = null, inv = null) {
+function renderDoctor(results, problems, sum, pro = false, verbose = false, keyState = null, inv = null,
+                      index = null, use = null) {
   if (!results.length) {
     return "\n  " + bold("No agent config found.") + "\n" +
       dim("  Looked in ~/.claude.json, ~/.cursor/mcp.json, Claude Desktop, .mcp.json, ~/.claude/skills/ …") + "\n";
   }
-  const order = { alert: 0, warn: 1, unrated: 2, unknown: 3, ok: 4 };
-  // ONLY PRINT WHAT NEEDS A DECISION. A real machine has ~113 skills that are catalogued but unrated,
-  // and listing each with an identical "no per-item evidence yet" line buried the ten servers that
-  // actually had findings under a wall of repetition. Rows that need attention are shown in full;
-  // everything else is counted. The detail is one flag away, not gone.
-  const shown = results.filter((r) => r.assessment.level === "alert" || r.assessment.level === "warn"
-                                   || (r.alts && r.alts.length));
-  const quiet = results.length - shown.length;
-  const rows = (verbose ? results.slice() : shown)
-    .sort((x, y) => order[x.assessment.level] - order[y.assessment.level]);
+  const order = { alert: 0, warn: 1, ok: 2, unrated: 3, unknown: 4 };
+  const flaggedRow = (r) => r.assessment.level === "alert" || r.assessment.level === "warn";
+  // A SKILL IS MATCHED BY ITS FOLDER NAME ALONE: "review" in ~/.claude/skills resolves to whichever
+  // public skill is also called review, so its record is a guess about identity — and a guessed score
+  // printed as evidence is worse than no score. Servers resolve by package or host and plugins by their
+  // home; those are the rows that get scored here. A skill still surfaces when it is flagged.
+  const measured = (r) => Boolean(r.row && r.row.tashan_score != null && r.item.type !== "skill");
+  // THE MEASURED STACK IS THE REPORT. This printed only what needed a decision, which on a healthy
+  // machine — 12 servers, 11 plugins, 241 skills — was four lines and not one piece of the evidence we
+  // hold about any of it. A result that says nothing on most runs is a result nobody keeps running.
+  // Every row we can score is shown with the public evidence behind it; what no public record
+  // describes is still counted rather than listed, because 113 identical "no evidence" lines bury the
+  // ten that matter. --all lists them.
+  const rows = results.filter((r) => verbose || flaggedRow(r) || measured(r) || (r.alts && r.alts.length))
+    .sort((x, y) => (order[x.assessment.level] - order[y.assessment.level])
+                 || ((y.row?.tashan_score ?? -1) - (x.row?.tashan_score ?? -1)));
   // The header used to carry its own count, taken from what the audit could RESOLVE. Beside the
-  // inventory's count those two numbers disagree — 10 against 12 on the machine this was written on
-  // — because the audit reads this directory's project config and the inventory reads all 52. Two
-  // different numbers for "your servers", two lines apart, reads as a bug. The inventory is the one
-  // that answers "what do I have", so it carries the count alone.
-  // THE ANSWER FIRST. This used to open with three lines of inventory and put the verdict sixth,
-  // which is the wrong way round: the reader came to find out whether anything is wrong, not to be
-  // told what they own. Inventory is context and follows.
-  const flagged = results.filter((r) => r.assessment.level === "alert" || r.assessment.level === "warn").length;
-  let out = "\n  " + (flagged
+  // inventory's count those two numbers disagreed, so the inventory carries the count alone and the
+  // header says what everything was checked AGAINST — the one number that is ours to state.
+  // THE ANSWER FIRST, then what you have, then the evidence.
+  const flagged = results.filter(flaggedRow).length;
+  let out = "\n  " + bold("tashan doctor") + dim(index
+    ? ` · ${index.records.toLocaleString("en-US")} capabilities measured ${index.date} · npm, GitHub, OSV, MCP registry`
+    : " · checked against the tashan index") + "\n";
+  out += "  " + (flagged
     ? red(`${flagged} need${flagged === 1 ? "s" : ""} attention`)
     : jade("Nothing you run is deprecated, archived or abandoned.")) + "\n\n";
   out += renderInventory(inv);
-  // The clean-run line used to live here as well as at the top of the report, so a healthy machine
-  // was told the same sentence twice, four lines apart.
-  for (const { item, row, assessment, alts } of rows) {
-    const t = row && row.tashan_score != null ? String(Math.round(row.tashan_score)) : "—";
-    out += "  " + (MARK[assessment.level] || " ") + " " + bold(pretty(item.name).padEnd(28).slice(0, 28)) +
-      dim((item.client + " · " + item.scope).padEnd(22)) + dim("score ") + (t === "—" ? dim(t) : jade(t)) + "\n";
+  const nMeasured = new Set(results.filter(measured).map((r) => r.row.id)).size;
+  if (rows.length) {
+    out += "  " + bold("your stack") + dim(`  ${nMeasured} scored · score, standing in its category, the evidence behind it`) + "\n";
+  }
+  for (const { item, row, assessment, alts, use: u } of rows) {
+    const t = row && row.tashan_score != null ? Math.round(row.tashan_score) : null;
+    const tr = assessment.trend;
+    const line = spark(tr && tr.values);
+    out += "  " + (MARK[assessment.level] || " ") + " " + bold(pretty(item.name).padEnd(26).slice(0, 26)) +
+      (t == null ? dim("  —") : trustStr(t)) +
+      (line ? "  " + jade(line) + dim(" " + tr.direction) : "") +
+      "  " + dim(standing(row) || `${item.client} · ${item.scope}`) + "\n";
+    // One line of facts under the name: how much YOU use it, then why the directory scores it as it does.
+    const bits = [];
+    if (u) {
+      bits.push(u.recent
+        ? dim(item.type === "skill" ? `used · last ${u.last}` : `${u.calls.toLocaleString("en-US")} calls in 30 days`)
+        : C("33")(item.type === "skill" ? "not used in 30 days" : "no calls in 30 days"));
+    }
+    for (const e of evidenceOf(row)) bits.push(dim(e));
+    if (bits.length) out += "      " + bits.join(dim(" · ")) + "\n";
     for (const n of assessment.notes) {
       const txt = typeof n === "string" ? n : n.text;
+      if (/^can reach:/.test(txt)) continue;                                   // summed once, below
+      if (n.trend && line && n.level !== "alert" && n.level !== "warn") continue;  // the sparkline says it
       out += "      " + dim("↳ ") + (n.level === "alert" ? red(txt) : dim(txt)) + "\n";
     }
     // WHICH advisory, and what the install script actually runs — directly under the finding that
@@ -654,37 +821,79 @@ function renderDoctor(results, problems, sum, pro = false, verbose = false, keyS
     }
   }
   for (const p of problems) out += "  " + red("!") + " " + bold("config unreadable") + dim("  " + p.path) + "\n";
-  // FOUR NUMBERS FOR ONE PILE. This printed "10 catalogued, unrated · 79 not in the index" and
-  // then "122 more not flagged", three counts that do not add up to each other or to the inventory
-  // above, because they count different things. What a reader can act on is one number: how many
-  // of the things you run we have no evidence about. The rest is bookkeeping.
-  const unmeasured = sum.unrated + sum.unknown;
-  if (sum.warn) out += "\n  " + dim(`${sum.warn} worth a look`) + "\n";
-  if (unmeasured && !verbose) {
-    out += "\n  " + dim(`${unmeasured} of these we have no evidence about yet · --all lists them`) + "\n";
-  }
-  // The offer appears only where a free reader has just been shown a finding whose DETAIL exists
-  // and is withheld — never on a clean run, never as a recurring nag. If there is nothing to
-  // unlock, saying nothing is the honest behaviour and the one that keeps the tool installed.
-  if (!pro && keyState === null) {
-    // THE OFFER NAMES ONLY WHAT IS ACTUALLY WITHHELD. It used to count advisories and install scripts
-    // as well, and promise "which advisory and the version that fixes it" behind the licence — copy
-    // that is now false twice over: that detail is printed above, free, and pitching a reader
-    // something already on their screen is the fastest way to lose them. A licence buys the
-    // replacement to move to, and the history that says whether a thing is dying. Nothing else.
-    const replaceable = rows.filter((r) => r.row && r.alts && r.alts.length).length;
-    if (replaceable) {
-      out += "\n  " + dim(`${replaceable} of these ${replaceable === 1 ? "has" : "have"} a measured replacement behind a licence — `) +
-        dim("the one to move to, and whether anything else here is on the way down.") + "\n" +
-        "  " + jade("tashan Pro") + dim(" $6/mo · " + SITE + "/pricing") +
-        dim("  ·  already bought? ") + jade("tashan login") + "\n";
+
+  // WHAT IT CAN REACH, summed once for the whole stack instead of repeated under every row.
+  const reach = reachOf(results);
+  const kinds = Object.keys(reach.perms).sort();
+  if (kinds.length || reach.remote.length) {
+    out += "\n  " + bold("what it can reach") +
+      dim("  declared by each package's dependencies · nothing executed, so it can under-report") + "\n";
+    for (const k of kinds) out += "    " + k.padEnd(12) + dim(reach.perms[k].join(", ")) + "\n";
+    if (reach.remote.length) {
+      out += "    " + C("33")(String(reach.remote.length)) +
+        dim(` can bring third-party text into your model's context: ${reach.remote.join(", ")}`) + "\n";
     }
   }
+
+  // WHAT CHANGED for what you run — the consequential events /changes.html dates, never a release.
+  const moved = recentOf(results);
+  if (moved.length) {
+    out += "\n  " + bold("changed in the last 30 days") + dim("  " + SITE + "/changes.html") + "\n";
+    for (const e of moved) out += "    " + dim(e.at) + "  " + bold(e.name) + dim(" — " + e.what) + "\n";
+  }
+
+  // WHAT YOU USE. The question about a big pile that always has an answer, and that only this machine
+  // can answer: which of it you actually call. Claude Code only — see inventory.usage().
+  if (use && use.available) {
+    const cc = results.filter((r) => r.item.type === "server" && r.use);
+    const called = cc.filter((r) => r.use.calls).sort((a, b) => b.use.calls - a.use.calls);
+    const idle = [...new Set(cc.filter((r) => !r.use.calls).map((r) => pretty(r.item.name)))];
+    const ownerOf = (s) => (inv && s.owner && (inv.plugins.find((p) => p.path === s.owner) || {}).name) || null;
+    const sk = inv ? inv.skills.map((s) => usageOf({ type: "skill", name: s.name, plugin: ownerOf(s) }, use)).filter(Boolean) : [];
+    const usedSk = sk.filter((x) => x.recent).length;
+    out += "\n  " + bold("what you use") +
+      dim(`  your Claude Code history, last ${use.days} days · read on this machine, nothing uploaded`) + "\n";
+    if (cc.length) {
+      out += "    " + `${called.length} of ${cc.length} servers called` + dim(called.length
+        ? "  " + called.slice(0, 4).map((r) => `${pretty(r.item.name)} ${r.use.calls.toLocaleString("en-US")}`).join(" · ")
+        : "") + "\n";
+    }
+    if (idle.length) {
+      out += "    " + C("33")(`${idle.length} not called once: `) + dim(idle.join(", ")) + "\n" +
+        "    " + dim("each still starts with every session it is configured for · claude mcp remove <name>") + "\n";
+    }
+    if (sk.length) {
+      out += "    " + `${usedSk} of ${sk.length} skills used` +
+        dim(sk.length > usedSk ? ` · the other ${sk.length - usedSk} are still listed to the model at session start` : "") + "\n";
+    }
+  }
+
+  // ONE NUMBER for the pile no public record describes, said as a fact about those items rather than
+  // an apology about us: "68 of these we have no evidence about yet" put our gap in the reader's report.
+  const unmeasured = (sum.unrated || 0) + (sum.unknown || 0);
+  if (sum.warn) out += "\n  " + dim(`${sum.warn} worth a look`) + "\n";
+  if (unmeasured && !verbose) {
+    out += "\n  " + dim(`${unmeasured} more have no public score — your own, local, or not yet rated · --all lists them`) + "\n";
+  }
+  // The rule for what is offered, and when, lives in offerFor() where the test can reach it.
+  const offer = offerFor(results, keyState);
+  if (offer && offer.kind === "replacement") {
+    out += "\n  " + dim(`${offer.n} of these ${offer.n === 1 ? "has" : "have"} a measured replacement behind a licence — `) +
+      dim("the one to move to, and whether anything else here is on the way down.") + "\n" +
+      "  " + jade("tashan Pro") + dim(" $6/mo · " + SITE + "/pricing") +
+      dim("  ·  already bought? ") + jade("tashan login") + "\n";
+  } else if (offer) {
+    out += "\n  " + jade("tashan Pro") +
+      dim(` $6/mo · the daily score series behind these ${offer.n}, drawn beside each one, and the`) + "\n" +
+      "  " + dim("measured replacement when one of them dies. 7 days free · " + SITE + "/pricing · already bought? ") +
+      jade("tashan login") + "\n";
+  }
   // Say the subscription state out loud, every run. Silence is what makes someone wonder.
-  if (keyState === "active")
-    out += "  " + jade("Pro") + dim(rows.some((r) => r.alts && r.alts.length)
-      ? " · licence active — replacements named above"
-      : " · licence active — nothing in your stack needs replacing") + "\n";
+  if (keyState === "active") {
+    const series = results.filter((r) => r.assessment.trend && (r.assessment.trend.values || []).length > 1).length;
+    out += "\n  " + jade("Pro") + dim(` · licence active — ${series} score series read, ` +
+      (results.some((r) => r.alts && r.alts.length) ? "replacements named above" : "nothing in your stack needs replacing")) + "\n";
+  }
   else if (keyState === "deactivated")
     out += "  " + red("This device was deactivated") +
            dim(" — your subscription is fine; run `tashan activate <key>`") + "\n";
@@ -747,11 +956,19 @@ export async function main(argv) {
     // package npm marks "no longer supported", which we measure, and which lookup.json carries
     // for precisely this reason. Falling back to the lookup turns the most valuable question the
     // CLI can be asked from a dead end into the warning it exists to give.
-    if (!r) {
+    // AND THE CARD NEEDS THE LOOKUP EVEN WHEN THE BOARD HAS THE ROW. The board is sized for a page's
+    // first paint and carries none of what makes a verdict checkable — publisher, provenance, standing,
+    // reach, what changed — so `info` read like a stub for exactly the capabilities people look up
+    // most. `add` only ever needed the fallback.
+    if (!r || cmd === "info") {
       try {
         const lk = await loadLookup();
-        r = find(lk.records || [], arg);
-      } catch { /* offline: the message below is still the right one */ }
+        if (!r) r = find(lk.records || [], arg);
+        else {
+          const i = lk.keys ? lk.keys[String(r.id).toLowerCase()] : undefined;
+          if (i !== undefined && lk.records[i] && lk.records[i].id === r.id) r = { ...r, ...lk.records[i] };
+        }
+      } catch { /* offline: the board row, or the message below, is still the right answer */ }
     }
     if (!r) { process.stderr.write(red(`  no capability matches "${arg}". try: tashan search ${arg}`) + "\n"); return 1; }
     if (a.json) { process.stdout.write(JSON.stringify(cmd === "add" ? { capability: r, install: installSnippets(r, a.client) } : r, null, 2) + "\n"); return 0; }
@@ -887,13 +1104,38 @@ export async function main(argv) {
 
   if (cmd === "doctor") {
     const { found, problems } = collect(configLocations(), skillLocations());
+    // THE AUDIT SEES WHAT THE INVENTORY SEES. collect() reads the top-level config and THIS directory's
+    // project file, while the inventory already walked every project in ~/.claude.json and every
+    // installed plugin — so doctor counted 12 servers and 11 plugins, then scored neither the project
+    // servers nor a single plugin. Both are audited now: a project server by what its entry launches,
+    // a plugin by the home its marketplace manifest names, never by a name several plugins share.
+    let s = null;
+    try { s = scan(); } catch { /* the inventory is an addition; doctor's findings must never depend on it */ }
+    if (s) {
+      for (const sv of s.servers) {
+        if (sv.scope !== "project") continue;               // the top-level block is already in `found`
+        found.push({ type: "server", client: "Claude Code", scope: basename(sv.project || "") || "project",
+                     name: sv.name, path: join(homedir(), ".claude.json"), ...(identify(sv.entry) || {}) });
+      }
+      for (const p of s.plugins) {
+        found.push({ type: "plugin", client: "Claude Code", scope: p.marketplace || "local", name: p.name,
+                     kind: "plugin", id: p.id, path: p.path });
+      }
+    }
     const lic = resolveLicence(a);
     const key = lic ? lic.key : null;
     const keyState = await verifyLicence(lic);
     let lookup = null;
     try { lookup = await loadLookup(); } catch { /* fall back to the board rather than failing */ }
-    const look = (item) => (lookup ? resolve(item, lookup) : match(item, rows));
-    let results = found.map((item) => { const row = look(item); return { item, row, assessment: assess(item, row) }; });
+    // match() resolves by name, which is exactly how a plugin lands on a stranger — no lookup, no plugin row.
+    const look = (item) => (lookup ? resolve(item, lookup) : item.kind === "plugin" ? null : match(item, rows));
+    // WHAT YOU USE, from Claude Code's own records on this machine — see inventory.usage().
+    let use = null;
+    try { use = usage(); } catch { /* usage is an addition, never a reason doctor fails */ }
+    let results = found.map((item) => {
+      const row = look(item);
+      return { item, row, assessment: assess(item, row), use: usageOf(item, use) };
+    });
 
     // GATE THE COLUMN, NOT THE COMMAND. Everything above this line is free and stays free: what you
     // run, what it is, and every risk verdict. What a key buys is the answer — which replacement.
@@ -909,36 +1151,48 @@ export async function main(argv) {
     // `tashan pro` verb would have been a second thing to learn for no benefit; the question is
     // identical, only the timeframe changes. Without a key it says so and exits 0 — a missing
     // subscription is not an error, and it must never look like the config is broken.
-    if (a.trend) {
-      if (!key) {
-        process.stderr.write(red("  that needs a licence key — run: tashan activate <key> "
-          + "(tashan Pro, $6/mo — https://tashan.sh/pricing)") + "\n");
-        return 0;
-      }
-      results = await withTrends(results, lic);
+    if (a.trend && !key) {
+      process.stderr.write(red("  that needs a licence key — run: tashan activate <key> "
+        + "(tashan Pro, $6/mo — https://tashan.sh/pricing)") + "\n");
+      return 0;
     }
+    // THE SERIES IS WHAT THE LICENCE BUYS, so a licence gets it without having to know a flag. A paying
+    // customer whose run looked identical to a free one is the "did my payment even work" ticket, and
+    // --trend was the only way to see a single point of what they paid for.
+    if (key && (a.trend || keyState === "active")) results = await withTrends(results, lic);
 
     const sum = summarize(results);
 
     // THE INVENTORY. Findings answer "is any of this dangerous"; this answers the question that
     // comes first once the pile is large — what do I have, what arrived since last time, and what
-    // is nobody maintaining. It reads every project's servers rather than only this directory's,
-    // and it keeps a first-seen date locally because nothing on disk records one for a skill.
+    // is nobody maintaining. It keeps a first-seen date locally because nothing on disk records one
+    // for a skill. It reuses the scan above rather than walking every project a second time.
     let inv = null;
-    try {
-      const today = new Date().toISOString().slice(0, 10);
-      const s = scan();
-      const items = [...s.servers, ...s.plugins, ...s.skills];
-      const before = loadLedger();
-      const firstRun = Object.keys(before.seen || {}).length === 0;
-      const { ledger, fresh, gone } = reconcile(before, items, today);
-      saveLedger(ledger);
-      // On the first run everything is "new", which is true and useless. Say so instead.
-      inv = { ...s, fresh, gone, first: firstRun };
-    } catch { /* the inventory is an addition; doctor's findings must never depend on it */ }
+    if (s) {
+      try {
+        const today = new Date().toISOString().slice(0, 10);
+        const items = [...s.servers, ...s.plugins, ...s.skills];
+        const before = loadLedger();
+        const firstRun = Object.keys(before.seen || {}).length === 0;
+        const { ledger, fresh, gone } = reconcile(before, items, today);
+        saveLedger(ledger);
+        // On the first run everything is "new", which is true and useless. Say so instead.
+        inv = { ...s, fresh, gone, first: firstRun };
+      } catch { /* the inventory is an addition; doctor's findings must never depend on it */ }
+    }
 
-    if (a.json) { process.stdout.write(JSON.stringify({ summary: sum, inventory: inv, problems, results }, null, 2) + "\n"); return 0; }
-    process.stdout.write(renderDoctor(results, problems, sum, keyState === "active", a.all, keyState, inv) + "\n");
+    const index = lookup
+      ? { records: (lookup.records || []).length, date: String(lookup.generated_at || "").slice(0, 10) }
+      : null;
+    if (a.json) {
+      process.stdout.write(JSON.stringify({
+        summary: sum, inventory: inv, problems, results, index,
+        reach: reachOf(results), changes: recentOf(results, 100),
+        usage: use && { since: use.since, days: use.days, available: use.available, servers: use.servers },
+      }, null, 2) + "\n");
+      return 0;
+    }
+    process.stdout.write(renderDoctor(results, problems, sum, keyState === "active", a.all, keyState, inv, index, use) + "\n");
     return sum.alert > 0 ? 2 : 0;      // nonzero exit when something needs attention, so it can gate CI
   }
   process.stderr.write(red(`  unknown command: ${cmd}`) + "\n" + USAGE + "\n");

@@ -77,7 +77,8 @@
       cov.hidden = false;
     }
     var bn = document.getElementById("boardNote");
-    if (bn) bn.textContent = d.note || "";
+    data._note = d.note || "";        // kept, because render() restores it when no filter narrows
+    if (bn) bn.textContent = data._note;
 
     data.caps = (d.capabilities || []).filter(function (c) { return c.id.indexOf("key:") !== 0; });
     // The tail is merged by terminal.js's shared loader (the ONE place that fetches). It fires this
@@ -101,13 +102,23 @@
     var raw = (res[3] && res[3].tasks) || {};
     data.taskIds = {};
     Object.keys(raw).forEach(function (k) { data.taskIds[k] = new Set(raw[k]); });
-    // Count what the board actually holds, not what the export knows: the slim index is capped, so a
-    // rail promising 30 would open onto 12 if we counted the bulk figure.
+    // ONE POPULATION, COUNTED ONCE. These counts used to be filtered to the board — the reasoning
+    // was sound (the slim index is capped, so a rail promising 30 should not open onto 12) and the
+    // result was worse than the problem: the homepage said "Software engineer 176" and /role/
+    // engineer.html said 1,030, for the same role, on the same site. A reader who clicks through
+    // sees a six-fold disagreement and concludes the numbers are made up — which is the one
+    // conclusion this product cannot afford.
+    //
+    // So the count is now the catalogue's, matching every hub page exactly, and the over-promise it
+    // reintroduces is answered where it actually appears: boardNote() says how many of them the
+    // board is showing and links to the page that holds the rest. A number that disagrees with
+    // another page is a bug; a number that is bigger than one view of it is just a view.
     var onBoard = {};
     data.caps.forEach(function (c) { onBoard[c.id] = 1; });
     data.tasks.forEach(function (t) {
       var ids = raw[t.slug] || [];
-      t.count = ids.filter(function (i) { return onBoard[i]; }).length;
+      t.count = ids.length;                      // catalogue, as /task/<slug>.html reports it
+      t.onBoard = ids.filter(function (i) { return onBoard[i]; }).length;
     });
     // role -> the set of capability ids reachable through any of its tasks. Computed once: the grid
     // prints a count per role and the filter tests membership, and both would otherwise re-walk 69
@@ -117,7 +128,7 @@
       var ids = raw[t.slug] || [];
       (t.roles || []).forEach(function (rid) {
         var into = data.roleIds[rid];
-        if (into) ids.forEach(function (i) { if (onBoard[i]) into.add(i); });
+        if (into) ids.forEach(function (i) { into.add(i); });
       });
     });
     urlToState();
@@ -497,6 +508,30 @@
     }
 
     var list = data.caps.filter(passes).slice().sort(sortComparator);
+    // WHAT THIS BOARD IS SHOWING, when it is showing less than the count that got you here. The
+    // rail and the role grid now report the catalogue, so they agree with /task/ and /role/ — which
+    // means the board, capped for first paint, can hold fewer rows than the tile you clicked
+    // promised. Saying so is the whole fix: an unexplained gap reads as a broken number, and a
+    // stated one reads as a view. Links to the page that actually holds the rest.
+    var bn2 = document.getElementById("boardNote");
+    if (bn2) {
+      var full = 0, hub = "";
+      if (state.role) {
+        full = (data.roleIds[state.role] || { size: 0 }).size;
+        hub = "/role/" + state.role + ".html";
+      } else if (state.task && state.task.size === 1) {
+        var ts = Array.from(state.task)[0];
+        var tm = data.tasks.filter(function (t) { return t.slug === ts; })[0];
+        if (tm) { full = tm.count || 0; hub = "/task/" + ts + ".html"; }
+      }
+      if (full > list.length) {
+        bn2.innerHTML = "Showing the " + list.length.toLocaleString() + " highest-ranked of "
+          + full.toLocaleString() + ' measured for this work. <a class="link" href="' + hub
+          + '">See all &rsaquo;</a>';
+      } else {
+        bn2.textContent = data._note || "";
+      }
+    }
     renderActiveBar(list.length);
     var shown = list.slice(0, shownCount);
     if (!shown.length) { rowsEl.innerHTML = '<tr><td colspan="5"><div class="empty">No capabilities match these filters. <button class="linkbtn" id="clearEmpty" type="button">Clear filters</button></div></td></tr>';

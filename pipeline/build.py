@@ -2473,7 +2473,12 @@ def export(con):
               # with no way to show payment. Sparse: ~50 rows of 11,749 carry it, and the writer
               # drops None, so the rest cost nothing. paid_seen_at travels with it because a zero
               # here is a measurement and its absence is not.
-              "paid_usd", "paid_calls", "paid_seen_at"]
+              "paid_usd", "paid_calls", "paid_seen_at",
+              # STANDING, so `doctor` and `info` can say where a capability sits in its category in
+              # the dossier's own words ("above 98% of browser"). Recomputed in the CLI from these
+              # records it came out one point off the dossier on 6,156 of 11,647 rows, so the number
+              # travels and the formula stays here.
+              "rank_pct"]
     # DELISTED ROWS BELONG IN THE LOOKUP, and nowhere else. A capability the registry pulled for
     # spam/malware/illegal content has no score (compute_scores refuses it one), so it is correctly
     # absent from the board, the bulk export and every hub — we must never recommend it. But `doctor`
@@ -2504,6 +2509,10 @@ def export(con):
     # SECOND copy of all 141 to the lookup, and a name that resolves to two records resolves to
     # whichever landed first, which is how `chrome-devtools-mcp` started answering with a downgraded
     # row. They are already in `caps`; that is enough.
+    # The same 30 days /changes.html covers, minus the event kinds that are the bulk of the table and
+    # none of its signal. Used below to put what changed on the record `doctor` already reads.
+    ROUTINE_CHANGES = {"version_published", "score_moved"}
+    recent_since = (datetime.now(timezone.utc) - timedelta(days=30)).date().isoformat()
     by_key, recs = {}, []
     # `malicious` and `delisted` are fetched fresh from SQL, AFTER caps were redacted — so they
     # arrived carrying the raw install command and full advisory blob into a public file. Redact on
@@ -2529,11 +2538,19 @@ def export(con):
         # "catalogued but not rated — no per-item evidence yet". That sentence is true of a row
         # nobody has measured and false here: we have the evidence and refused to rate on it.
         if c.get("sec_max_severity") == "MALICIOUS":
-            c = {**c, "tashan_score": None, "rated": False,
+            c = {**c, "tashan_score": None, "rated": False, "rank_pct": None,
                  "rating_basis": "Not rated: listed in OSV's malicious-packages database. "
                                  "Eligibility overrides score — a package that is itself the attack "
                                  "is not ranked, rather than ranked low."}
         rec = redact_paid({k: c[k] for k in LOOKUP + ["sec_advisories"] if c.get(k) is not None})
+        # WHAT CHANGED, on the record `doctor` already holds for something a person runs, so a server
+        # that changed hands or widened its reach reaches the terminal of whoever depends on it instead
+        # of only a page they would have to go and read. Three per row: doctor prints a list, not a log.
+        recent = [{"at": e["at"], "kind": e["kind"], "what": e["what"]}
+                  for e in changes_by_cap.get(c["id"], [])
+                  if e["kind"] not in ROUTINE_CHANGES and e["at"] >= recent_since][:3]
+        if recent:
+            rec["recent"] = recent
         i = len(recs); recs.append(rec)
         # Every way a config entry can name this thing points at the same record. `identify()` in
         # cli/doctor.mjs yields an npm package, a python package, a docker image or a remote host, so all
