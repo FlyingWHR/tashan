@@ -161,6 +161,25 @@ img { max-width: 100%; display: block; }
   left:-4%; right:0; top:-6%; bottom:-8%;
   background: radial-gradient(52% 58% at 20% 46%,
     rgba(11,11,10,.82) 0%, rgba(11,11,10,.52) 40%, rgba(11,11,10,.18) 68%, rgba(11,11,10,0) 100%); }
+/* TWO COLUMNS ON A REAL SCREEN — the art stops being a backdrop and gets its own half.
+   Everything above this rule is the cost of the old arrangement: a four-layer text-shadow on every
+   word plus a radial scrim behind the whole block, both there to keep copy readable on top of a
+   moving mountain, and both of them dimming the art they sit on. Words left, ridge right, and
+   neither needs to be hidden from the other. Under 60rem it stacks as before, where the scrim is
+   still doing real work. */
+@media (min-width: 60rem) {
+  /* ART FIRST. The overlay is three things now — what this is, the one claim, and the one action —
+     so the ridge gets the whole header back instead of half of it. Splitting the hero into columns
+     was the right fix for SEVEN stacked blocks of text; with three, the art can be the page and the
+     words can sit on it without a fight. */
+  .hero { min-height: min(76vh, 720px); }
+  /* The ridge sits BELOW the words rather than through them: the band stays transparent past the
+     title and only opens under the search. Overlay is fine — overlay across the one line someone
+     has to read is not. */
+  #ridge { left: 0; -webkit-mask-image: linear-gradient(180deg, transparent 0 34%, #000 56%, #000 88%, transparent 100%);
+                              mask-image: linear-gradient(180deg, transparent 0 34%, #000 56%, #000 88%, transparent 100%); }
+  .ascii-range { width: 78%; }
+}
 .hero__eyebrow { font-family: var(--font-mono); font-size:var(--fs-sm); letter-spacing:.12em; text-transform:uppercase;
   color: var(--jade); margin: 0 0 var(--sp-6); display:flex; align-items:center; gap:.6rem; }
 .hero__eyebrow::before { content:""; width:22px; height:1px; background: var(--jade-line); display:inline-block; }

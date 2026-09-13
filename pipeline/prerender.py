@@ -1124,11 +1124,34 @@ def bake_hero(caps, total, gen=""):
                      f"{eco_all['receivers_paid'] + eco_all.get('receivers_never_paid', 0):,} "
                      f"x402 services have ever been paid \u2014 and the median one has earned "
                      f"${eco_all['median_usd']:,.2f} in its life.")
+    # The figures band. Each id is baked here and refreshed by index.js at runtime, so the page is
+    # right before JS runs and stays right after — the pre-JS state is what every crawler and answer
+    # engine sees, and it used to be em-dashes.
+    idxp = os.path.join(ROOT, "web", "data", "index.json")
+    live = {}
+    if os.path.exists(idxp):
+        try:
+            with open(idxp, encoding="utf-8") as fh:
+                live = json.load(fh) or {}
+        except (OSError, ValueError):
+            live = {}
+    scanned = live.get("risk_scanned") or 0
+    jobbed = live.get("job_mapped") or 0
+    paid_short = "\u2014"
+    paid_note = "no settled payment read yet"
+    if eco_all.get("paid_usd"):
+        usd_ = eco_all["paid_usd"]
+        paid_short = ("$%dk" % round(usd_ / 1000)) if usd_ >= 1000 else ("$%d" % round(usd_))
+        if eco_all.get("median_usd") is not None:
+            paid_note = f"the median service has earned ${eco_all['median_usd']:,.2f}"
     for pat, val in ((r'(<p class="job__d" id="homePaid">)[^<]*(</p>)', paid_card),
-                     (r'(<b class="k" id="sCaps">)[^<]*(</b>)', f"{len(caps):,}"),
-                     (r'(<b id="sRepos">)[^<]*(</b>)', f"{total:,}"),
-                     (r'(<a class="link" href="/paid\.html" id="sPaid">)[^<]*(</a>)', paid_txt),
-                     (r'(<span class="dim" id="sDate">)[^<]*(</span>)', when)):
+                     (r'(<dt class="stat__n mono" id="sCaps">)[^<]*(</dt>)', f"{len(caps):,}"),
+                     (r'(<span\s+id="sRepos">)[^<]*(</span>)', f"{total:,}"),
+                     (r'(<dt class="stat__n mono" id="sScanned">)[^<]*(</dt>)', f"{scanned:,}"),
+                     (r'(<dt class="stat__n mono" id="sJobs">)[^<]*(</dt>)', f"{jobbed:,}"),
+                     (r'(<a class="link" href="/paid\.html" id="sPaid">)[^<]*(</a>)', paid_short),
+                     (r'(id="sPaidNote">)[^<]*(</span>)', paid_note),
+                     (r'(<span id="sDate">)[^<]*(</span>)', when)):
         html = re.sub(pat, lambda m: m.group(1) + val + m.group(2), html, count=1)
     html = bake_board(html, caps)
     open(idx, "w", encoding="utf-8").write(html)
