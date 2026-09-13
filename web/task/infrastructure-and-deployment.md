@@ -12,15 +12,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) | 77 | 13k/wk | active |
-| 2 | [Auth0](https://tashan.sh/capability/pkg-auth0-auth0-mcp-server.html) | 75 | 5k/wk | active |
+| 2 | [Auth0](https://tashan.sh/capability/pkg-auth0-auth0-mcp-server.html) | 74 | 4k/wk | active |
 | 3 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 70 | 246 ★ | active |
 | 4 | [Zscaler](https://tashan.sh/capability/plugin-zscaler-zscaler-mcp-server-zscaler.html) | 63 | 41 ★ | active |
 | 5 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 53 | 3 ★ | active |
 | 6 | [Jfrog](https://tashan.sh/capability/plugin-jfrog-claude-plugin-jfrog.html) | 47 | 4 ★ | active |
 | 7 | [Expo](https://tashan.sh/capability/plugin-expo-skills-expo.html) | 75 | 2k ★ | active |
 | 8 | [SSH — policy-gated remote access](https://tashan.sh/capability/pkg-ssh-mcp.html) | 74 | 12k/wk | active |
-| 9 | [Dokploy](https://tashan.sh/capability/pkg-dokploy-mcp.html) | 74 | 9k/wk | active |
-| 10 | [Azure · microsoft](https://tashan.sh/capability/plugin-microsoft-azure-skills-azure.html) | 73 | 1k ★ | active |
+| 9 | [Azure · microsoft](https://tashan.sh/capability/plugin-microsoft-azure-skills-azure.html) | 73 | 1k ★ | active |
+| 10 | [Dokploy](https://tashan.sh/capability/pkg-dokploy-mcp.html) | 73 | 9k/wk | active |
 | 11 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 69 | 643 ★ | active |
 | 12 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 66 | 81 ★ | active |
 | 13 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 66 | 482 ★ | active |
@@ -34,7 +34,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 21 | [Launchdarkly · launchdarkly](https://tashan.sh/capability/plugin-launchdarkly-ai-tooling-launchdarkly.html) | 54 | 20 ★ | active |
 | 22 | [Mirrord Agent Skills](https://tashan.sh/capability/plugin-metalbear-co-skills-mirrord-agent-skills.html) | 54 | 21 ★ | active |
 | 23 | [Confidence](https://tashan.sh/capability/plugin-spotify-confidence-ai-plugins-confidence.html) | 53 | 7 ★ | active |
-| 24 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 53 | 17 ★ | active |
+| 24 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 52 | 17 ★ | active |
 | 25 | [AWS Dev Toolkit](https://tashan.sh/capability/plugin-aws-samples-sample-claude-code-plugins-for-startups-aws-dev-toolkit.html) | 50 | 12 ★ | active |
 | 26 | [Teamcity](https://tashan.sh/capability/pkg-daghis-teamcity-mcp.html) | 50 | 1k/wk | active |
 | 27 | [Basicdeploy](https://tashan.sh/capability/pkg-basicdeploy-mcp.html) | 50 | 97/wk | active |
@@ -46,7 +46,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 44 | 6 ★ | active |
 | 34 | [Dotsecenv](https://tashan.sh/capability/plugin-dotsecenv-dotsecenv-dotsecenv.html) | 43 | 5 ★ | active |
 | 35 | [Cloudbase](https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp.html) | 86 | 21k/wk | active |
-| 36 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 86 | 104k/wk | active |
+| 36 | [Azure](https://tashan.sh/capability/pkg-azure-mcp.html) | 85 | 104k/wk | active |
 | 37 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 66 | 413 ★ | active |
 | 38 | [Rr](https://tashan.sh/capability/plugin-rileyhilliard-rr-rr.html) | 58 | 194 ★ | active |
 | 39 | [Zeabur · zeabur](https://tashan.sh/capability/plugin-zeabur-zeabur-claude-plugin-zeabur.html) | 56 | 40 ★ | active |

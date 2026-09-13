@@ -22,14 +22,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Groundwork](https://tashan.sh/capability/plugin-etr-groundwork-groundwork.html) | 50 | 41 ★ | active |
 | 10 | [Sdd · applica-software-guru](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 50 | 11 ★ | active |
 | 11 | [Reqvire](https://tashan.sh/capability/plugin-reqvire-org-reqvire-reqvire.html) | 50 | 15 ★ | active |
-| 12 | [Don Cheli Sdd Framework](https://tashan.sh/capability/plugin-doncheli-don-cheli-sdd-don-cheli-sdd-framework.html) | 49 | 56 ★ | active |
+| 12 | [Don Cheli Sdd Framework](https://tashan.sh/capability/plugin-doncheli-don-cheli-sdd-don-cheli-sdd-framework.html) | 48 | 56 ★ | active |
 | 13 | [Specops](https://tashan.sh/capability/plugin-sanmak-specops-specops.html) | 47 | 50 ★ | active |
 | 14 | [Jig](https://tashan.sh/capability/plugin-ramboz-jig-jig.html) | 47 | 4 ★ | active |
 | 15 | [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) | 75 | 19k/wk | active |
 | 16 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 62 | 205 ★ | active |
-| 17 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 58 | 96 ★ | active |
+| 17 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 57 | 96 ★ | active |
 | 18 | [Memex Checkout](https://tashan.sh/capability/plugin-mindset-ai-memex-ai-memex-checkout.html) | 55 | 29 ★ | active |
-| 19 | [Brainstorming](https://tashan.sh/capability/skill-obra-brainstorming.html) | 52 | 5 repos | active |
+| 19 | [Brainstorming](https://tashan.sh/capability/skill-obra-brainstorming.html) | 51 | 5 repos | active |
 | 20 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | 48 | 3 repos | active |
 | 21 | [Writing Plans](https://tashan.sh/capability/skill-obra-writing-plans.html) | 48 | 3 repos | active |
 | 22 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 48 | 5 ★ | active |
@@ -47,8 +47,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 34 | [Cloud](https://tashan.sh/capability/pkg-unified-product-graph-cloud-server.html) | 62 | 614/wk | active |
 | 35 | [Unified Product Graph · @unified-product-graph](https://tashan.sh/capability/pkg-unified-product-graph-mcp-server.html) | 62 | 293/wk | active |
 | 36 | [Compliance](https://tashan.sh/capability/pkg-yawlabs-mcp-compliance.html) | 60 | 519/wk | active |
-| 37 | [Qatouch](https://tashan.sh/capability/pkg-qatouch-mcp-server.html) | 57 | 274/wk | active |
-| 38 | [Aha](https://tashan.sh/capability/pkg-cedricziel-aha-mcp.html) | 54 | 141/wk | active |
+| 37 | [Qatouch](https://tashan.sh/capability/pkg-qatouch-mcp-server.html) | 56 | 274/wk | active |
+| 38 | [Aha](https://tashan.sh/capability/pkg-cedricziel-aha-mcp.html) | 53 | 141/wk | active |
 | 39 | [Vaspera Pm](https://tashan.sh/capability/pkg-vaspera-pm.html) | 51 | 111/wk | active |
 | 40 | [Claude Code Session Manager](https://tashan.sh/capability/pkg-claude-code-session-manager.html) | 70 | 2k/wk | active |
 

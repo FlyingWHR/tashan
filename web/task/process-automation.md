@@ -18,10 +18,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 83 | 39k/wk | active |
 | 6 | [N8n](https://tashan.sh/capability/pkg-n8n-mcp.html) | 77 | 170k/wk | active |
 | 7 | [Nvidia Skills](https://tashan.sh/capability/plugin-nvidia-skills-nvidia-skills.html) | 74 | 3k ★ | active |
-| 8 | [Bunqueue](https://tashan.sh/capability/pkg-bunqueue.html) | 73 | 5k/wk | active |
-| 9 | [Claude Harness](https://tashan.sh/capability/plugin-chachamaru127-claude-code-harness-claude-harness.html) | 72 | 3k ★ | active |
-| 10 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 70 | 426 ★ | active |
-| 11 | [Open Computer Use](https://tashan.sh/capability/pkg-open-computer-use.html) | 69 | 2k/wk | active |
+| 8 | [Claude Harness](https://tashan.sh/capability/plugin-chachamaru127-claude-code-harness-claude-harness.html) | 72 | 3k ★ | active |
+| 9 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 70 | 426 ★ | active |
+| 10 | [Open Computer Use](https://tashan.sh/capability/pkg-open-computer-use.html) | 69 | 2k/wk | active |
+| 11 | [Bunqueue](https://tashan.sh/capability/pkg-bunqueue.html) | 68 | 3k/wk | active |
 | 12 | [Terminal Driver](https://tashan.sh/capability/pkg-terminal-driver-mcp.html) | 61 | 964/wk | active |
 | 13 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 59 | 49 ★ | active |
 | 14 | [Android Remote Control](https://tashan.sh/capability/plugin-danielealbano-android-remote-control-mcp-android-remote-control.html) | 55 | 171 ★ | active |
@@ -35,7 +35,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 45 | 38 ★ | active |
 | 23 | [Nyann](https://tashan.sh/capability/plugin-thettwe-nyann-nyann.html) | 44 | 6 ★ | active |
 | 24 | [Conversiontools](https://tashan.sh/capability/plugin-conversiontools-agent-skills-conversiontools.html) | 43 | 5 ★ | active |
-| 25 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 63 | 1k/wk | active |
+| 25 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 65 | 2k/wk | active |
 | 26 | [Imessage · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-imessage-mcp-imessage-mcp.html) | 45 | 2 ★ | active |
 | 27 | [Process Mapper](https://tashan.sh/capability/skill-alirezarezvani-process-mapper.html) | 44 | 2 repos | active |
 | 28 | [Coo Advisor](https://tashan.sh/capability/skill-alirezarezvani-coo-advisor.html) | 44 | 2 repos | active |

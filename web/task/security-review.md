@@ -21,9 +21,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Qodo](https://tashan.sh/capability/plugin-qodo-ai-qodo-skills-qodo.html) | 64 | 44 ★ | active |
 | 9 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 62 | 326 ★ | active |
 | 10 | [NPM Sentinel](https://tashan.sh/capability/pkg-nekzus-mcp-server.html) | 62 | 924/wk | active |
-| 11 | [AI Agent Firewall](https://tashan.sh/capability/pkg-fidacy-mcp.html) | 61 | 454/wk | active |
-| 12 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 60 | 22 ★ | active |
-| 13 | [Armorclaude](https://tashan.sh/capability/plugin-armoriq-armorclaude-armorclaude.html) | 60 | 44 ★ | active |
+| 11 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 60 | 22 ★ | active |
+| 12 | [Armorclaude](https://tashan.sh/capability/plugin-armoriq-armorclaude-armorclaude.html) | 60 | 44 ★ | active |
+| 13 | [AI Agent Firewall](https://tashan.sh/capability/pkg-fidacy-mcp.html) | 60 | 454/wk | active |
 | 14 | [Nist Nvd](https://tashan.sh/capability/pkg-cyanheads-nist-nvd-mcp-server.html) | 59 | 728/wk | active |
 | 15 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 55 | 21 ★ | active |
 | 16 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 55 | 27 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Senior Secops](https://tashan.sh/capability/skill-alirezarezvani-senior-secops.html) | 44 | 2 repos | active |
 | 40 | [Senior Security](https://tashan.sh/capability/skill-alirezarezvani-senior-security.html) | 44 | 2 repos | active |
 
-Showing the top 40 of 101. The full ranked shelf is at https://tashan.sh/task/security-review.html.
+Showing the top 40 of 100. The full ranked shelf is at https://tashan.sh/task/security-review.html.
 
 ## What these numbers are not
 

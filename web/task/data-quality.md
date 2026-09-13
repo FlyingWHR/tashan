@@ -14,8 +14,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Orchestra](https://tashan.sh/capability/plugin-orchestra-hq-orchestra-skills-orchestra.html) | 50 | 9 ★ | active |
 | 2 | [Whodb](https://tashan.sh/capability/plugin-clidey-whodb-whodb.html) | 73 | 5k ★ | active |
 | 3 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 61 | 37 ★ | active |
-| 4 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 51 | 56 ★ | active |
-| 5 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 50 | 13 ★ | active |
+| 4 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 50 | 13 ★ | active |
+| 5 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 50 | 56 ★ | active |
 | 6 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 48 | 6 ★ | active |
 | 7 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 60 | 90 ★ | active |
 | 8 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 47 | 3 repos | active |

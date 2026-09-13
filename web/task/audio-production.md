@@ -28,18 +28,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Kolbo](https://tashan.sh/capability/pkg-kolbo-mcp.html) | 72 | 4k/wk | active |
 | 16 | [Paxalabs](https://tashan.sh/capability/pkg-paxalabs-mcp.html) | 68 | 1k/wk | active |
 | 17 | [Spotify](https://tashan.sh/capability/pkg-novalux12-spotify-mcp.html) | 62 | 504/wk | active |
-| 18 | [Agentvibes](https://tashan.sh/capability/pkg-agentvibes.html) | 61 | 1k/wk | active |
-| 19 | [Podcast Guest CRM](https://tashan.sh/capability/pkg-podcast-guest-crm-cli.html) | 60 | 315/wk | active |
-| 20 | [Musicbrainz](https://tashan.sh/capability/pkg-musicbrainz-mcp.html) | 58 | 249/wk | active |
-| 21 | [Justtranscribe](https://tashan.sh/capability/pkg-justtranscribe-mcp.html) | 57 | 393/wk | active |
-| 22 | [Upnext](https://tashan.sh/capability/pkg-upnext-mcp.html) | 57 | 254/wk | active |
-| 23 | [Imslp](https://tashan.sh/capability/pkg-mcp-imslp.html) | 56 | 304/wk | active |
+| 18 | [Podcast Guest CRM](https://tashan.sh/capability/pkg-podcast-guest-crm-cli.html) | 60 | 315/wk | active |
+| 19 | [Agentvibes](https://tashan.sh/capability/pkg-agentvibes.html) | 59 | 914/wk | active |
+| 20 | [Justtranscribe](https://tashan.sh/capability/pkg-justtranscribe-mcp.html) | 57 | 393/wk | active |
+| 21 | [Musicbrainz](https://tashan.sh/capability/pkg-musicbrainz-mcp.html) | 57 | 249/wk | active |
+| 22 | [Imslp](https://tashan.sh/capability/pkg-mcp-imslp.html) | 56 | 304/wk | active |
+| 23 | [Upnext](https://tashan.sh/capability/pkg-upnext-mcp.html) | 56 | 254/wk | active |
 | 24 | [Voice](https://tashan.sh/capability/pkg-forgemeshlabs-voice-mcp.html) | 56 | 198/wk | active |
-| 25 | [Audio Studio](https://tashan.sh/capability/pkg-mcp-audio-studio.html) | 55 | 493/wk | active |
-| 26 | [Macos](https://tashan.sh/capability/pkg-cyanheads-macos-mcp-server.html) | 55 | 285/wk | active |
-| 27 | [Ffmpeg Render Pro](https://tashan.sh/capability/pkg-ffmpeg-render-pro.html) | 55 | 247/wk | active |
-| 28 | [Etincel Nonfiction](https://tashan.sh/capability/pkg-etincel.html) | 55 | 209/wk | active |
-| 29 | [Atlascloud](https://tashan.sh/capability/pkg-atlascloud-mcp.html) | 54 | 537/wk | active |
+| 25 | [Macos](https://tashan.sh/capability/pkg-cyanheads-macos-mcp-server.html) | 55 | 285/wk | active |
+| 26 | [Ffmpeg Render Pro](https://tashan.sh/capability/pkg-ffmpeg-render-pro.html) | 55 | 247/wk | active |
+| 27 | [Etincel Nonfiction](https://tashan.sh/capability/pkg-etincel.html) | 55 | 209/wk | active |
+| 28 | [Atlascloud](https://tashan.sh/capability/pkg-atlascloud-mcp.html) | 54 | 537/wk | active |
+| 29 | [Audio Studio](https://tashan.sh/capability/pkg-mcp-audio-studio.html) | 54 | 493/wk | active |
 | 30 | [Vibo](https://tashan.sh/capability/pkg-vibo-mcp.html) | 54 | 328/wk | active |
 | 31 | [Markuprplus](https://tashan.sh/capability/pkg-markuprplus.html) | 54 | 207/wk | active |
 | 32 | [Telephony](https://tashan.sh/capability/pkg-hasna-telephony.html) | 54 | 105/wk | active |

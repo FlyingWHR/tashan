@@ -13,9 +13,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 77 | 17k ★ | active |
 | 2 | [Datarobot Agent Skills](https://tashan.sh/capability/plugin-datarobot-oss-datarobot-agent-skills-datarobot-agent-skills.html) | 62 | 23 ★ | active |
-| 3 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 62 | 61 ★ | active |
-| 4 | [Evalview](https://tashan.sh/capability/plugin-hidai25-eval-view-evalview.html) | 62 | 124 ★ | active |
-| 5 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 61 | 37 ★ | active |
+| 3 | [Evalview](https://tashan.sh/capability/plugin-hidai25-eval-view-evalview.html) | 62 | 124 ★ | active |
+| 4 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 61 | 37 ★ | active |
+| 5 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 61 | 61 ★ | active |
 | 6 | [Probabl Skills](https://tashan.sh/capability/plugin-probabl-ai-skills-probabl-skills.html) | 57 | 74 ★ | active |
 | 7 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 45 | 8 ★ | active |
 | 8 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 77 | 11k ★ | active |

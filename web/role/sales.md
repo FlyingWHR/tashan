@@ -12,13 +12,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 48 | 6 ★ | active |
-| 2 | [Ghl Command](https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html) | 70 | 2k/wk | active |
+| 2 | [Ghl Command](https://tashan.sh/capability/pkg-elitedcs-ghl-mcp.html) | 71 | 3k/wk | active |
 | 3 | [Opendirectory](https://tashan.sh/capability/plugin-varnan-tech-opendirectory-opendirectory.html) | 65 | 558 ★ | active |
-| 4 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
-| 5 | [Gongio](https://tashan.sh/capability/pkg-gongio-mcp.html) | 55 | 372/wk | active |
+| 4 | [Gongio](https://tashan.sh/capability/pkg-gongio-mcp.html) | 60 | 1k/wk | active |
+| 5 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 59 | 18 ★ | active |
 | 6 | [Zoominfo](https://tashan.sh/capability/plugin-zoominfo-zoominfo-mcp-plugin-zoominfo.html) | 51 | 3 ★ | active |
-| 7 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 51 | 56 ★ | active |
-| 8 | [Lusha](https://tashan.sh/capability/plugin-lusha-oss-lusha-mcp-plugin-lusha.html) | 50 | 3 ★ | active |
+| 7 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 50 | 56 ★ | active |
+| 8 | [Lusha](https://tashan.sh/capability/plugin-lusha-oss-lusha-mcp-plugin-lusha.html) | 49 | 3 ★ | active |
 | 9 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 70 | 417 ★ | active |
 | 10 | [Carta CRM](https://tashan.sh/capability/plugin-carta-plugins-carta-crm.html) | 46 | 3 marketplaces | active |
 | 11 | [Revenue Operations](https://tashan.sh/capability/skill-alirezarezvani-revenue-operations.html) | 44 | 2 repos | active |
@@ -38,18 +38,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Rdstation CRM](https://tashan.sh/capability/pkg-rdstation-crm-mcp.html) | 50 | 258/wk | active |
 | 26 | [Propstack](https://tashan.sh/capability/pkg-propstack-mcp-server.html) | 44 | 92/wk | active |
 | 27 | [Acculynx CLI](https://tashan.sh/capability/pkg-opsrev-acculynx-cli.html) | 44 | 47/wk | active |
-| 28 | [Affinity](https://tashan.sh/capability/pkg-alludium-affinity-mcp-server.html) | 68 | 364/wk | active |
-| 29 | [Free AI Ops](https://tashan.sh/capability/pkg-miraigent-free-ai-ops-mcp.html) | 67 | 1k/wk | active |
+| 28 | [Free AI Ops](https://tashan.sh/capability/pkg-miraigent-free-ai-ops-mcp.html) | 67 | 1k/wk | active |
+| 29 | [Affinity](https://tashan.sh/capability/pkg-alludium-affinity-mcp-server.html) | 67 | 364/wk | active |
 | 30 | [Skills · vruum](https://tashan.sh/capability/pkg-vruum-skills.html) | 63 | 695/wk | active |
 | 31 | [Crmincloud](https://tashan.sh/capability/pkg-memori-ai-mcp-crmincloud.html) | 62 | 374/wk | active |
 | 32 | [Fq 239 Audit](https://tashan.sh/capability/pkg-fullqueso-fq-239-audit.html) | 61 | 638/wk | active |
-| 33 | [Luca](https://tashan.sh/capability/pkg-setluca-mcp.html) | 57 | 346/wk | active |
+| 33 | [Luca](https://tashan.sh/capability/pkg-setluca-mcp.html) | 56 | 346/wk | active |
 | 34 | [Holded](https://tashan.sh/capability/pkg-t4dhg-mcp-holded.html) | 56 | 156/wk | active |
-| 35 | [Outbound Infrastructure Fingerprint](https://tashan.sh/capability/pkg-mambalabsdev-mcp-outbound-infrastructure-fingerprint.html) | 54 | 341/wk | active |
-| 36 | [Keepsake](https://tashan.sh/capability/pkg-keepsake-mcp.html) | 54 | 232/wk | active |
-| 37 | [Dealsurface](https://tashan.sh/capability/pkg-dealsurface-mcp-server.html) | 53 | 158/wk | active |
-| 38 | [Salesforce Cloud](https://tashan.sh/capability/pkg-aaronsb-salesforce-cloud-mcp.html) | 53 | 60/wk | active |
-| 39 | [Livespace CRM](https://tashan.sh/capability/pkg-livespace-crm-mcp.html) | 52 | 313/wk | active |
+| 35 | [Keepsake](https://tashan.sh/capability/pkg-keepsake-mcp.html) | 54 | 232/wk | active |
+| 36 | [Outbound Infrastructure Fingerprint](https://tashan.sh/capability/pkg-mambalabsdev-mcp-outbound-infrastructure-fingerprint.html) | 53 | 341/wk | active |
+| 37 | [Livespace CRM](https://tashan.sh/capability/pkg-livespace-crm-mcp.html) | 52 | 313/wk | active |
+| 38 | [Dealsurface](https://tashan.sh/capability/pkg-dealsurface-mcp-server.html) | 52 | 158/wk | active |
+| 39 | [Salesforce Cloud](https://tashan.sh/capability/pkg-aaronsb-salesforce-cloud-mcp.html) | 52 | 60/wk | active |
 | 40 | [Misarreach](https://tashan.sh/capability/pkg-misarreach-mcp.html) | 51 | 44/wk | active |
 
 Showing the top 40 of 46. The full ranked shelf is at https://tashan.sh/role/sales.html.

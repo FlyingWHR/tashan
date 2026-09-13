@@ -11,17 +11,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Kiwoom Securities](https://tashan.sh/capability/pkg-kiwoom-mcp-server.html) | 64 | 649/wk | active |
+| 1 | [Kiwoom Securities](https://tashan.sh/capability/pkg-kiwoom-mcp-server.html) | 63 | 649/wk | active |
 | 2 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 51 | 13 ★ | active |
 | 3 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 48 | 6 ★ | active |
 | 4 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 45 | 3 ★ | active |
 | 5 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 76 | 54k ★ | active |
 | 6 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 62 | 2k/wk | active |
-| 7 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
-| 8 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 60 | 395/wk | active |
+| 7 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 60 | 395/wk | active |
+| 8 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 59 | 18 ★ | active |
 | 9 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 59 | 256/wk | active |
-| 10 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 55 | 220/wk | active |
-| 11 | [Eurostat](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 55 | 214/wk | active |
+| 10 | [Eurostat](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 55 | 214/wk | active |
+| 11 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 54 | 220/wk | active |
 | 12 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 54 | 125/wk | active |
 | 13 | [Alphacouncil Agent](https://tashan.sh/capability/pkg-alphacouncil-agent.html) | 51 | 94/wk | active |
 | 14 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 46 | 3 ★ | active |
@@ -40,7 +40,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Dossier · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-dossier.html) | 44 | 2 repos | active |
 | 28 | [Patent](https://tashan.sh/capability/skill-alirezarezvani-patent.html) | 44 | 2 repos | active |
 | 29 | [Algovault Skills](https://tashan.sh/capability/plugin-algovaultlabs-algovault-skills-algovault-skills.html) | 43 | 1 ★ | active |
-| 30 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 66 | 518/wk | active |
+| 30 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 65 | 518/wk | active |
 | 31 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 51 | 205/wk | active |
 | 32 | [Sandbase Skills](https://tashan.sh/capability/plugin-sandbaseai-sandbase-skills-sandbase-skills.html) | 59 | 29 ★ | active |
 | 33 | [Raportagent](https://tashan.sh/capability/pkg-raportagent-mcp.html) | 44 | 48/wk | active |

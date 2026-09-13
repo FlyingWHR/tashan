@@ -10,8 +10,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Content marketing** — [Save To Spotify](https://tashan.sh/capability/plugin-spotify-save-to-spotify-save-to-spotify.html) · tashan score 70
-- **Document production** — [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) · tashan score 67
-- **Technical documentation** — [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) · tashan score 99
+- **Document production** — [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) · tashan score 66
+- **Technical documentation** — [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) · tashan score 98
 - **Copy editing** — [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) · tashan score 72
 - **Copywriting** — [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) · tashan score 65
 
@@ -19,7 +19,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 99 | 1.1m/wk | active |
+| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 98 | 1.1m/wk | active |
 | 2 | [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) | 72 | 4k ★ | active |
 | 3 | [Save To Spotify](https://tashan.sh/capability/plugin-spotify-save-to-spotify-save-to-spotify.html) | 70 | 388 ★ | active |
 | 4 | [Codedna](https://tashan.sh/capability/plugin-larens94-codedna-codedna.html) | 60 | 143 ★ | active |
@@ -29,14 +29,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Ru Text](https://tashan.sh/capability/plugin-talkstream-ru-text-ru-text.html) | 53 | 169 ★ | active |
 | 9 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 53 | 32 ★ | active |
 | 10 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 49 | 123 ★ | active |
-| 11 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 68 | 168 ★ | active |
-| 12 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 65 | 1k ★ | active |
-| 13 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 63 | 137 ★ | active |
-| 14 | [Imqueue](https://tashan.sh/capability/pkg-imqueue-mcp.html) | 63 | 161/wk | active |
+| 11 | [Imqueue](https://tashan.sh/capability/pkg-imqueue-mcp.html) | 71 | 2k/wk | active |
+| 12 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 68 | 168 ★ | active |
+| 13 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 65 | 1k ★ | active |
+| 14 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 63 | 137 ★ | active |
 | 15 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 62 | 519/wk | active |
 | 16 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 59 | 167 ★ | active |
-| 17 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 59 | 4k/wk | active |
-| 18 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 58 | 238 ★ | active |
+| 17 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 58 | 238 ★ | active |
+| 18 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 58 | 3k/wk | active |
 | 19 | [Drawio · lgazo](https://tashan.sh/capability/pkg-drawio-mcp-server.html) | 55 | 717/wk | active |
 | 20 | [Vibe Replay](https://tashan.sh/capability/plugin-tuo-lei-vibe-replay-vibe-replay.html) | 55 | 33 ★ | active |
 | 21 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 54 | 40 ★ | active |
@@ -44,8 +44,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 23 | [Sdd · applica-software-guru](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 50 | 11 ★ | active |
 | 24 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 50 | 4 ★ | active |
 | 25 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 47 | 73 ★ | active |
-| 26 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 47 | 4 ★ | active |
-| 27 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 47 | 4 ★ | active |
+| 26 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 47 | 4 ★ | active |
+| 27 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 46 | 4 ★ | active |
 | 28 | [Sync Docs](https://tashan.sh/capability/plugin-agent-sh-sync-docs-sync-docs.html) | 46 | 3 ★ | active |
 | 29 | [Jamdesk](https://tashan.sh/capability/plugin-jamdesk-jamdesk-claude-plugin-jamdesk.html) | 45 | 3 ★ | active |
 | 30 | [Carbone Skill](https://tashan.sh/capability/plugin-carboneio-carbone-skill-carbone-skill.html) | 44 | 4 ★ | active |
@@ -54,8 +54,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Bleu](https://tashan.sh/capability/plugin-nirvaan05-bleu-plugin-bleu.html) | 43 | 3 ★ | active |
 | 34 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 43 | 40 ★ | active |
 | 35 | [Integration Guide](https://tashan.sh/capability/pkg-tosspayments-integration-guide-mcp.html) | 71 | 887/wk | active |
-| 36 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 67 | 1k/wk | active |
-| 37 | [Gogcli MCP Docs](https://tashan.sh/capability/pkg-gogcli-mcp-docs.html) | 63 | 383/wk | active |
+| 36 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 66 | 1k/wk | active |
+| 37 | [Gogcli MCP Docs](https://tashan.sh/capability/pkg-gogcli-mcp-docs.html) | 62 | 383/wk | active |
 | 38 | [PDF · anthropics](https://tashan.sh/capability/skill-anthropics-pdf.html) | 50 | 4 repos | active |
 | 39 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 50 | 4 repos | active |
 | 40 | [Marketing Ideas](https://tashan.sh/capability/skill-alirezarezvani-marketing-ideas.html) | 49 | 4 repos | active |

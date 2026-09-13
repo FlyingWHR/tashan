@@ -17,7 +17,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Korean Law](https://tashan.sh/capability/pkg-korean-law-mcp.html) | 72 | 4k/wk | active |
+| 1 | [Korean Law](https://tashan.sh/capability/pkg-korean-law-mcp.html) | 72 | 5k/wk | active |
 | 2 | [Zscaler](https://tashan.sh/capability/plugin-zscaler-zscaler-mcp-server-zscaler.html) | 63 | 41 ★ | active |
 | 3 | [Openstates](https://tashan.sh/capability/pkg-cyanheads-openstates-mcp-server.html) | 60 | 317/wk | active |
 | 4 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 55 | 23 ★ | active |
@@ -32,9 +32,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Qodo](https://tashan.sh/capability/plugin-qodo-ai-qodo-skills-qodo.html) | 64 | 44 ★ | active |
 | 14 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 62 | 326 ★ | active |
 | 15 | [NPM Sentinel](https://tashan.sh/capability/pkg-nekzus-mcp-server.html) | 62 | 924/wk | active |
-| 16 | [AI Agent Firewall](https://tashan.sh/capability/pkg-fidacy-mcp.html) | 61 | 454/wk | active |
-| 17 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 60 | 22 ★ | active |
-| 18 | [Armorclaude](https://tashan.sh/capability/plugin-armoriq-armorclaude-armorclaude.html) | 60 | 44 ★ | active |
+| 16 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 60 | 22 ★ | active |
+| 17 | [Armorclaude](https://tashan.sh/capability/plugin-armoriq-armorclaude-armorclaude.html) | 60 | 44 ★ | active |
+| 18 | [AI Agent Firewall](https://tashan.sh/capability/pkg-fidacy-mcp.html) | 60 | 454/wk | active |
 | 19 | [Nist Nvd](https://tashan.sh/capability/pkg-cyanheads-nist-nvd-mcp-server.html) | 59 | 728/wk | active |
 | 20 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 59 | 284 ★ | active |
 | 21 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 55 | 21 ★ | active |
@@ -58,7 +58,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Red Team](https://tashan.sh/capability/skill-alirezarezvani-red-team.html) | 49 | 4 repos | active |
 | 40 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 47 | 1 ★ | active |
 
-Showing the top 40 of 178. The full ranked shelf is at https://tashan.sh/role/security.html.
+Showing the top 40 of 176. The full ranked shelf is at https://tashan.sh/role/security.html.
 
 ## What these numbers are not
 

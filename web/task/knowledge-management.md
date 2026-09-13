@@ -12,12 +12,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) | 74 | 2k/wk | active |
-| 2 | [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) | 71 | 1k ★ | active |
+| 2 | [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) | 70 | 1k ★ | active |
 | 3 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 2k/wk | active |
 | 4 | [Remember](https://tashan.sh/capability/plugin-digital-process-tools-claude-remember-remember.html) | 68 | 143 ★ | active |
 | 5 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 62 | 895/wk | active |
 | 6 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 61 | 905/wk | active |
-| 7 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 61 | 367/wk | active |
+| 7 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 60 | 367/wk | active |
 | 8 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 57 | 18 ★ | active |
 | 9 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 56 | 3k ★ | active |
 | 10 | [Total Recall](https://tashan.sh/capability/plugin-strvmarv-total-recall-total-recall.html) | 52 | 11 ★ | active |
@@ -33,8 +33,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 20 | [Desktop Commander · wonderwhy-er](https://tashan.sh/capability/plugin-wonderwhy-er-desktopcommandermcp-desktop-commander.html) | 78 | 9k ★ | active |
 | 21 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 78 | 62k ★ | active |
 | 22 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 77 | 89k ★ | active |
-| 23 | [Notion · suekou](https://tashan.sh/capability/pkg-suekou-mcp-notion-server.html) | 72 | 1k/wk | active |
-| 24 | [Seekstone](https://tashan.sh/capability/pkg-seekstone.html) | 68 | 755/wk | active |
+| 23 | [Notion · suekou](https://tashan.sh/capability/pkg-suekou-mcp-notion-server.html) | 71 | 801/wk | active |
+| 24 | [Seekstone](https://tashan.sh/capability/pkg-seekstone.html) | 69 | 2k/wk | active |
 | 25 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 66 | 662/wk | active |
 | 26 | [Slack · slackapi](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 65 | 86 ★ | active |
 | 27 | [Claude Self Reflect](https://tashan.sh/capability/plugin-ramakay-claude-self-reflect-claude-self-reflect.html) | 64 | 219 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Mind](https://tashan.sh/capability/plugin-memvid-claude-brain-mind.html) | 52 | 533 ★ | stable |
 | 40 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 50 | 10 ★ | active |
 
-Showing the top 40 of 270. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
+Showing the top 40 of 271. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
 
 ## What these numbers are not
 

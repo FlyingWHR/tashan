@@ -46,7 +46,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 69 | 504 ★ | active |
 | 34 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 61 | 30 ★ | active |
 | 35 | [Repo Test Architect](https://tashan.sh/capability/pkg-repo-test-architect.html) | 51 | 239/wk | active |
-| 36 | [Canvasaas](https://tashan.sh/capability/pkg-canvasaas.html) | 47 | 34/wk | active |
+| 36 | [Canvasaas](https://tashan.sh/capability/pkg-canvasaas.html) | 46 | 34/wk | active |
 
 ## What these numbers are not
 

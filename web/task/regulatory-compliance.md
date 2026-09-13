@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Korean Law](https://tashan.sh/capability/pkg-korean-law-mcp.html) | 72 | 4k/wk | active |
+| 1 | [Korean Law](https://tashan.sh/capability/pkg-korean-law-mcp.html) | 72 | 5k/wk | active |
 | 2 | [Openstates](https://tashan.sh/capability/pkg-cyanheads-openstates-mcp-server.html) | 60 | 317/wk | active |
 | 3 | [Ato](https://tashan.sh/capability/pkg-ato-mcp.html) | 53 | 389/wk | active |
 | 4 | [Courtlistener](https://tashan.sh/capability/pkg-cyanheads-courtlistener-mcp-server.html) | 53 | 157/wk | active |
@@ -49,10 +49,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Risk Management Specialist](https://tashan.sh/capability/skill-alirezarezvani-risk-management-specialist.html) | 44 | 2 repos | active |
 | 37 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 43 | 5 ★ | active |
 | 38 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 43 | 1 ★ | active |
-| 39 | [Governance SDK](https://tashan.sh/capability/pkg-governance-sdk.html) | 68 | 3k/wk | active |
-| 40 | [Marrow](https://tashan.sh/capability/pkg-getmarrow-mcp.html) | 68 | 727/wk | active |
+| 39 | [Marrow](https://tashan.sh/capability/pkg-getmarrow-mcp.html) | 69 | 1k/wk | active |
+| 40 | [Governance SDK](https://tashan.sh/capability/pkg-governance-sdk.html) | 68 | 3k/wk | active |
 
-Showing the top 40 of 72. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
+Showing the top 40 of 71. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
 
 ## What these numbers are not
 

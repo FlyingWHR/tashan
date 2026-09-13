@@ -1,9 +1,9 @@
 {
  "subject": "pkg:@cloudbase/cloudbase-mcp",
  "kind": "ownership_changed",
- "x": "Cloudbase changed.\n\nMeasured 2026-09-12. https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp",
- "threads": "Cloudbase changed.\n\nPin the version you have audited and read the next release's diff before taking it.\n\nMeasured 2026-09-12 from public evidence, free to check: https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp",
- "farcaster": "Cloudbase changed.\n\nPin the version you have audited and read the next release's diff before taking it.\n\nMeasured 2026-09-12 from public evidence, free to check: https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp",
+ "x": "Cloudbase changed.\n\nMeasured 2026-09-13. https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp",
+ "threads": "Cloudbase changed.\n\nPin the version you have audited and read the next release's diff before taking it.\n\nMeasured 2026-09-13 from public evidence, free to check: https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp",
+ "farcaster": "Cloudbase changed.\n\nPin the version you have audited and read the next release's diff before taking it.\n\nMeasured 2026-09-13 from public evidence, free to check: https://tashan.sh/capability/pkg-cloudbase-cloudbase-mcp",
  "day": "2026-09-13",
  "status": "draft"
 }

@@ -13,7 +13,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Vulcan](https://tashan.sh/capability/plugin-ellipsis-labs-vulcan-cli-vulcan.html) | 53 | 18 ★ | active |
 | 2 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 59 | 49 ★ | active |
-| 3 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 53 | 17 ★ | active |
+| 3 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 52 | 17 ★ | active |
 | 4 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 51 | 43 ★ | active |
 | 5 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 50 | 12 ★ | active |
 | 6 | [Financial Planner](https://tashan.sh/capability/plugin-cjpatten-canadian-finance-planner-skill-financial-planner.html) | 49 | 43 ★ | active |
@@ -22,8 +22,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 44 | 45 ★ | active |
 | 10 | [Slice Global](https://tashan.sh/capability/plugin-global-slice-claude-plugin-slice-global.html) | 44 | 9 ★ | active |
 | 11 | [Qmt Skills](https://tashan.sh/capability/plugin-dfkai-xtquantai-qmt-skills.html) | 43 | 151 ★ | active |
-| 12 | [Carta Cap Table](https://tashan.sh/capability/plugin-carta-plugins-carta-cap-table.html) | 48 | 4 marketplaces | active |
-| 13 | [Carta Investors](https://tashan.sh/capability/plugin-carta-plugins-carta-investors.html) | 48 | 4 marketplaces | active |
+| 12 | [Carta Cap Table](https://tashan.sh/capability/plugin-carta-plugins-carta-cap-table.html) | 47 | 4 marketplaces | active |
+| 13 | [Carta Investors](https://tashan.sh/capability/plugin-carta-plugins-carta-investors.html) | 47 | 4 marketplaces | active |
 | 14 | [Bigdata Com](https://tashan.sh/capability/plugin-bigdata-com-bigdata-plugins-marketplace-bigdata-com.html) | 46 | 2 ★ | active |
 | 15 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 46 | 3 ★ | active |
 | 16 | [Revenue Operations](https://tashan.sh/capability/skill-alirezarezvani-revenue-operations.html) | 44 | 2 repos | active |
@@ -48,8 +48,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 51 | 205/wk | active |
 | 36 | [Evidinvest](https://tashan.sh/capability/pkg-evidinvest-mcp-server.html) | 46 | 81/wk | active |
 | 37 | [A0nexus Bitcoin](https://tashan.sh/capability/pkg-a0nexus-bitcoin-mcp.html) | 44 | 86/wk | active |
-| 38 | [Earth2studio](https://tashan.sh/capability/plugin-nvidia-earth2studio-earth2studio.html) | 70 | 1k ★ | active |
-| 39 | [Next Finance](https://tashan.sh/capability/pkg-next-finance-mcp.html) | 70 | 2k/wk | active |
+| 38 | [Next Finance](https://tashan.sh/capability/pkg-next-finance-mcp.html) | 70 | 2k/wk | active |
+| 39 | [Earth2studio](https://tashan.sh/capability/plugin-nvidia-earth2studio-earth2studio.html) | 69 | 1k ★ | active |
 | 40 | [Actual Budget](https://tashan.sh/capability/pkg-actual-budget-mcp.html) | 62 | 444/wk | active |
 
 Showing the top 40 of 49. The full ranked shelf is at https://tashan.sh/task/financial-modeling.html.

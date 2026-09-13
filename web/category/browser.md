@@ -22,21 +22,21 @@ Ranked by the tashan score
 | 9 | [Scraper](https://tashan.sh/capability/pkg-mcp-scraper.html) | 70 | 2k/wk | active |
 | 10 | [Mearl](https://tashan.sh/capability/pkg-mearl-mcp-server.html) | 69 | 997/wk | active |
 | 11 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 68 | 542 ★ | active |
-| 12 | [Browser Gateway](https://tashan.sh/capability/pkg-browser-gateway.html) | 67 | 799/wk | active |
-| 13 | [Browse Tool](https://tashan.sh/capability/pkg-agimon-ai-browse-tool.html) | 67 | 716/wk | active |
-| 14 | [Web Browser (kogiQA)](https://tashan.sh/capability/pkg-kogiqa-mcp.html) | 67 | 482/wk | active |
-| 15 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-skills-firecrawl.html) | 66 | 94 ★ | active |
-| 16 | [Browser Tools](https://tashan.sh/capability/pkg-agentdeskai-browser-tools-mcp.html) | 66 | 2k/wk | active |
+| 12 | [Browser Tools](https://tashan.sh/capability/pkg-agentdeskai-browser-tools-mcp.html) | 68 | 3k/wk | active |
+| 13 | [Browser Gateway](https://tashan.sh/capability/pkg-browser-gateway.html) | 67 | 799/wk | active |
+| 14 | [Browse Tool](https://tashan.sh/capability/pkg-agimon-ai-browse-tool.html) | 67 | 716/wk | active |
+| 15 | [Web Browser (kogiQA)](https://tashan.sh/capability/pkg-kogiqa-mcp.html) | 67 | 482/wk | active |
+| 16 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-skills-firecrawl.html) | 66 | 94 ★ | active |
 | 17 | [Vibium](https://tashan.sh/capability/pkg-vibium.html) | 66 | 1k/wk | active |
 | 18 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 65 | 965/wk | active |
 | 19 | [Public Browser](https://tashan.sh/capability/pkg-public-browser.html) | 65 | 725/wk | active |
 | 20 | [Zenrows](https://tashan.sh/capability/pkg-zenrows-mcp.html) | 65 | 476/wk | active |
-| 21 | [Figranium](https://tashan.sh/capability/pkg-figranium-mcp.html) | 63 | 504/wk | active |
-| 22 | [Real Browser](https://tashan.sh/capability/pkg-real-browser-mcp-server.html) | 62 | 716/wk | active |
-| 23 | [Camoufox](https://tashan.sh/capability/pkg-mcp-camoufox.html) | 62 | 707/wk | active |
-| 24 | [Cloakbrowser](https://tashan.sh/capability/pkg-cloakbrowser-mcp.html) | 62 | 599/wk | active |
-| 25 | [Camofox Browser](https://tashan.sh/capability/pkg-camofox-browser.html) | 62 | 560/wk | active |
-| 26 | [Selenium](https://tashan.sh/capability/pkg-angiejones-mcp-selenium.html) | 61 | 848/wk | stable |
+| 21 | [Real Browser](https://tashan.sh/capability/pkg-real-browser-mcp-server.html) | 62 | 716/wk | active |
+| 22 | [Camoufox](https://tashan.sh/capability/pkg-mcp-camoufox.html) | 62 | 707/wk | active |
+| 23 | [Cloakbrowser](https://tashan.sh/capability/pkg-cloakbrowser-mcp.html) | 62 | 599/wk | active |
+| 24 | [Figranium](https://tashan.sh/capability/pkg-figranium-mcp.html) | 62 | 504/wk | active |
+| 25 | [Selenium](https://tashan.sh/capability/pkg-angiejones-mcp-selenium.html) | 61 | 848/wk | stable |
+| 26 | [Camofox Browser](https://tashan.sh/capability/pkg-camofox-browser.html) | 61 | 560/wk | active |
 | 27 | [Agent Browser · AetherAI3](https://tashan.sh/capability/pkg-aether-browser.html) | 60 | 425/wk | active |
 | 28 | [walkerOS Source Browser](https://tashan.sh/capability/pkg-walkeros-mcp-source-browser.html) | 60 | 257/wk | active |
 | 29 | [Fouradata](https://tashan.sh/capability/pkg-fouradata-mcp.html) | 60 | 255/wk | active |
@@ -49,8 +49,8 @@ Ranked by the tashan score
 | 36 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 57 | 234/wk | active |
 | 37 | [FireKey](https://tashan.sh/capability/pkg-firekey-mcp.html) | 57 | 188/wk | active |
 | 38 | [Kapture](https://tashan.sh/capability/pkg-kapture-mcp.html) | 56 | 918/wk | active |
-| 39 | [Browser Automation](https://tashan.sh/capability/pkg-mindstone-mcp-server-browser-automation.html) | 56 | 416/wk | active |
-| 40 | [Supertoinette](https://tashan.sh/capability/pkg-mcp-supertoinette.html) | 56 | 349/wk | active |
+| 39 | [Supertoinette](https://tashan.sh/capability/pkg-mcp-supertoinette.html) | 56 | 349/wk | active |
+| 40 | [Tap](https://tashan.sh/capability/pkg-taprun-cli.html) | 56 | 282/wk | active |
 
 Showing the top 40 of 107. The full ranked shelf is at https://tashan.sh/category/browser.html.
 

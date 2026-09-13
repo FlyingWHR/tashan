@@ -24,7 +24,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 58 | 466/wk | active |
 | 7 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 56 | 612/wk | active |
 | 8 | [Shapeitup](https://tashan.sh/capability/pkg-shapeitup-mcp-server.html) | 55 | 99/wk | active |
-| 9 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 54 | 307/wk | active |
+| 9 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 53 | 307/wk | active |
 | 10 | [Embedcalc](https://tashan.sh/capability/pkg-embedcalc-mcp.html) | 52 | 208/wk | active |
 | 11 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 51 | 138/wk | active |
 | 12 | [Cadlens](https://tashan.sh/capability/pkg-cadlens-mcp-server.html) | 47 | 66/wk | active |

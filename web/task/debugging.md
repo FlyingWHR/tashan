@@ -12,8 +12,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 92 | 3.3m/wk | active |
-| 2 | [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) | 71 | 3k/wk | active |
-| 3 | [Execbro](https://tashan.sh/capability/pkg-execbro.html) | 67 | 1k/wk | active |
+| 2 | [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) | 71 | 2k/wk | active |
+| 3 | [Execbro](https://tashan.sh/capability/pkg-execbro.html) | 66 | 1k/wk | active |
 | 4 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 57 | 18 ★ | active |
 | 5 | [Superpowers](https://tashan.sh/capability/plugin-obra-superpowers-superpowers.html) | 81 | 269k ★ | active |
 | 6 | [Teamcity CLI](https://tashan.sh/capability/plugin-jetbrains-teamcity-cli-teamcity-cli.html) | 65 | 119 ★ | active |
@@ -30,9 +30,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Amd Skills](https://tashan.sh/capability/plugin-amd-skills-amd-skills.html) | 67 | 165 ★ | active |
 | 18 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 55 | 27 ★ | active |
 | 19 | [Agent Only](https://tashan.sh/capability/pkg-agent-only-mcp.html) | 47 | 62/wk | active |
-| 20 | [Inspector · mcp-use](https://tashan.sh/capability/pkg-mcp-use-inspector.html) | 82 | 19k/wk | active |
+| 20 | [Inspector · mcp-use](https://tashan.sh/capability/pkg-mcp-use-inspector.html) | 83 | 27k/wk | active |
 | 21 | [Mcpjam](https://tashan.sh/capability/pkg-mcpjam-cli.html) | 75 | 5k/wk | active |
-| 22 | [Metro](https://tashan.sh/capability/pkg-metro-mcp.html) | 66 | 592/wk | active |
+| 22 | [Metro](https://tashan.sh/capability/pkg-metro-mcp.html) | 65 | 592/wk | active |
 | 23 | [God Prompt](https://tashan.sh/capability/pkg-god-prompt-mcp.html) | 57 | 310/wk | active |
 | 24 | [Zotero Dev](https://tashan.sh/capability/pkg-introfini-mcp-server-zotero-dev.html) | 57 | 300/wk | active |
 | 25 | [Cdp Tools](https://tashan.sh/capability/pkg-cdp-tools-mcp.html) | not scored | 188/wk | abandoned |

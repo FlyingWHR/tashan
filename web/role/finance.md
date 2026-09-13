@@ -20,7 +20,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Ato](https://tashan.sh/capability/pkg-ato-mcp.html) | 53 | 389/wk | active |
 | 3 | [Sofagent](https://tashan.sh/capability/pkg-sofagent-mcp.html) | 65 | 683/wk | active |
 | 4 | [Revolut X](https://tashan.sh/capability/plugin-revolut-engineering-revolut-x-api-revolut-x.html) | 59 | 49 ★ | active |
-| 5 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 53 | 17 ★ | active |
+| 5 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 52 | 17 ★ | active |
 | 6 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 51 | 43 ★ | active |
 | 7 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 50 | 12 ★ | active |
 | 8 | [Siigo Pyme](https://tashan.sh/capability/pkg-siigo-pyme-mcp.html) | 50 | 81/wk | active |
@@ -33,8 +33,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Cloud Finops](https://tashan.sh/capability/plugin-optimnow-cloud-finops-skills-cloud-finops.html) | 44 | 45 ★ | active |
 | 16 | [Slice Global](https://tashan.sh/capability/plugin-global-slice-claude-plugin-slice-global.html) | 44 | 9 ★ | active |
 | 17 | [Qmt Skills](https://tashan.sh/capability/plugin-dfkai-xtquantai-qmt-skills.html) | 43 | 151 ★ | active |
-| 18 | [Carta Cap Table](https://tashan.sh/capability/plugin-carta-plugins-carta-cap-table.html) | 48 | 4 marketplaces | active |
-| 19 | [Carta Investors](https://tashan.sh/capability/plugin-carta-plugins-carta-investors.html) | 48 | 4 marketplaces | active |
+| 18 | [Carta Cap Table](https://tashan.sh/capability/plugin-carta-plugins-carta-cap-table.html) | 47 | 4 marketplaces | active |
+| 19 | [Carta Investors](https://tashan.sh/capability/plugin-carta-plugins-carta-investors.html) | 47 | 4 marketplaces | active |
 | 20 | [Bigdata Com](https://tashan.sh/capability/plugin-bigdata-com-bigdata-plugins-marketplace-bigdata-com.html) | 46 | 2 ★ | active |
 | 21 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 46 | 3 ★ | active |
 | 22 | [Revenue Operations](https://tashan.sh/capability/skill-alirezarezvani-revenue-operations.html) | 44 | 2 repos | active |
@@ -57,7 +57,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Gdpr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-gdpr-audit-prep.html) | 44 | 2 repos | active |
 | 40 | [Soc2 Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-soc2-audit-prep.html) | 44 | 2 repos | active |
 
-Showing the top 40 of 140. The full ranked shelf is at https://tashan.sh/role/finance.html.
+Showing the top 40 of 139. The full ranked shelf is at https://tashan.sh/role/finance.html.
 
 ## What these numbers are not
 

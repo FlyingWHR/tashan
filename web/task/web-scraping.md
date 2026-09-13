@@ -25,7 +25,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Scraper](https://tashan.sh/capability/pkg-mcp-scraper.html) | 70 | 2k/wk | active |
 | 13 | [Brightdata Plugin](https://tashan.sh/capability/plugin-brightdata-skills-brightdata-plugin.html) | 50 | 4 marketplaces | — |
 | 14 | [Browser Automation · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-browser-automation.html) | 47 | 3 repos | active |
-| 15 | [Haunt API](https://tashan.sh/capability/plugin-darko893-haunt-mcp-server-haunt-api.html) | 45 | 2 ★ | active |
+| 15 | [Haunt API](https://tashan.sh/capability/plugin-darko893-haunt-mcp-server-haunt-api.html) | 44 | 2 ★ | active |
 | 16 | [Actionbook](https://tashan.sh/capability/plugin-actionbook-actionbook-actionbook.html) | 70 | 2k ★ | active |
 | 17 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 55 | 14 ★ | active |
 | 18 | [Firecrawl Workflows](https://tashan.sh/capability/plugin-firecrawl-firecrawl-workflows-firecrawl-workflows.html) | 49 | 101 ★ | active |
@@ -44,12 +44,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Skim402](https://tashan.sh/capability/pkg-skim-mcp.html) | 45 | 61/wk | active |
 | 32 | [Web Fetcher](https://tashan.sh/capability/pkg-mcp-server-web-fetcher.html) | 44 | 68/wk | active |
 | 33 | [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) | 81 | 17k/wk | active |
-| 34 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 66 | 518/wk | active |
+| 34 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 65 | 518/wk | active |
 | 35 | [Search1api](https://tashan.sh/capability/pkg-search1api-mcp.html) | 61 | 394/wk | active |
 | 36 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 59 | 436/wk | active |
 | 37 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 59 | 351/wk | active |
 | 38 | [Anakin IO](https://tashan.sh/capability/pkg-anakin-io-mcp.html) | 59 | 253/wk | active |
-| 39 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 55 | 164/wk | active |
+| 39 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 54 | 164/wk | active |
 | 40 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 54 | 158/wk | active |
 
 Showing the top 40 of 70. The full ranked shelf is at https://tashan.sh/task/web-scraping.html.

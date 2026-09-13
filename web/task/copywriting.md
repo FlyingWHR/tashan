@@ -27,7 +27,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Team Communications](https://tashan.sh/capability/skill-alirezarezvani-team-communications.html) | 44 | 2 repos | active |
 | 15 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 72 | 5k ★ | active |
 | 16 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 51 | 141/wk | active |
-| 17 | [Misarblog](https://tashan.sh/capability/pkg-misarblog-mcp.html) | 60 | 161/wk | active |
+| 17 | [Misarblog](https://tashan.sh/capability/pkg-misarblog-mcp.html) | 59 | 161/wk | active |
 | 18 | [Etincel Nonfiction](https://tashan.sh/capability/pkg-etincel.html) | 55 | 209/wk | active |
 | 19 | [Velocms](https://tashan.sh/capability/pkg-velocms-mcp.html) | 53 | 67/wk | active |
 

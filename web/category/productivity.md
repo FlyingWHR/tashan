@@ -21,7 +21,7 @@ Ranked by the tashan score
 | 8 | [Superset](https://tashan.sh/capability/plugin-superset-sh-superset-superset.html) | 75 | 13k ★ | active |
 | 9 | [Doit](https://tashan.sh/capability/pkg-doitintl-doit-mcp-server.html) | 75 | 2k/wk | active |
 | 10 | [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) | 74 | 2k/wk | active |
-| 11 | [Qmd · tobilu](https://tashan.sh/capability/pkg-tobilu-qmd.html) | 74 | 39k/wk | active |
+| 11 | [Qmd · tobilu](https://tashan.sh/capability/pkg-tobilu-qmd.html) | 73 | 39k/wk | active |
 | 12 | [Linear](https://tashan.sh/capability/pkg-tacticlaunch-mcp-linear.html) | 73 | 12k/wk | active |
 | 13 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 73 | 9k/wk | active |
 | 14 | [Backlog](https://tashan.sh/capability/pkg-backlog-mcp-server.html) | 73 | 8k/wk | active |
@@ -36,12 +36,12 @@ Ranked by the tashan score
 | 23 | [Quantum Management](https://tashan.sh/capability/pkg-chkp-quantum-management-mcp.html) | 71 | 641/wk | active |
 | 24 | [Zapier](https://tashan.sh/capability/plugin-zapier-zapier-mcp-zapier.html) | 70 | 363 ★ | active |
 | 25 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 70 | 417 ★ | active |
-| 26 | [Chorus](https://tashan.sh/capability/plugin-chorus-aidlc-chorus-chorus.html) | 70 | 1k ★ | active |
-| 27 | [Jira](https://tashan.sh/capability/pkg-atlassian-dc-mcp-jira.html) | 70 | 3k/wk | active |
-| 28 | [Claude Code Session Manager](https://tashan.sh/capability/pkg-claude-code-session-manager.html) | 70 | 2k/wk | active |
-| 29 | [Trycompai](https://tashan.sh/capability/pkg-trycompai-mcp-server.html) | 70 | 639/wk | active |
-| 30 | [Formio](https://tashan.sh/capability/pkg-formio-mcp.html) | 70 | 615/wk | active |
-| 31 | [Mediawiki](https://tashan.sh/capability/pkg-professional-wiki-mediawiki-mcp-server.html) | 70 | 566/wk | active |
+| 26 | [Jira](https://tashan.sh/capability/pkg-atlassian-dc-mcp-jira.html) | 70 | 3k/wk | active |
+| 27 | [Claude Code Session Manager](https://tashan.sh/capability/pkg-claude-code-session-manager.html) | 70 | 2k/wk | active |
+| 28 | [Trycompai](https://tashan.sh/capability/pkg-trycompai-mcp-server.html) | 70 | 639/wk | active |
+| 29 | [Formio](https://tashan.sh/capability/pkg-formio-mcp.html) | 70 | 615/wk | active |
+| 30 | [Mediawiki](https://tashan.sh/capability/pkg-professional-wiki-mediawiki-mcp-server.html) | 70 | 566/wk | active |
+| 31 | [Chorus](https://tashan.sh/capability/plugin-chorus-aidlc-chorus-chorus.html) | 69 | 1k ★ | active |
 | 32 | [Zoteus](https://tashan.sh/capability/pkg-oscardvs-zoteus.html) | 69 | 2k/wk | active |
 | 33 | [Monday API](https://tashan.sh/capability/pkg-mondaydotcomorg-monday-api-mcp.html) | 69 | 2k/wk | active |
 | 34 | [Anytype](https://tashan.sh/capability/pkg-anyproto-anytype-mcp.html) | 69 | 802/wk | active |
@@ -49,8 +49,8 @@ Ranked by the tashan score
 | 36 | [Cube](https://tashan.sh/capability/pkg-edgescaleai-cube-mcp.html) | 69 | 456/wk | active |
 | 37 | [Hf](https://tashan.sh/capability/pkg-llmindset-hf-mcp-server.html) | 68 | 1k/wk | active |
 | 38 | [Opsee](https://tashan.sh/capability/pkg-opsee-mcp-server.html) | 68 | 1k/wk | active |
-| 39 | [Bitbucket · atlassian-dc-mcp](https://tashan.sh/capability/pkg-atlassian-dc-mcp-bitbucket.html) | 68 | 1k/wk | active |
-| 40 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 68 | 660/wk | active |
+| 39 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 68 | 660/wk | active |
+| 40 | [Apideck](https://tashan.sh/capability/pkg-apideck-mcp.html) | 68 | 353/wk | active |
 
 Showing the top 40 of 479. The full ranked shelf is at https://tashan.sh/category/productivity.html.
 

@@ -20,27 +20,27 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 99 | 1.1m/wk | active |
+| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 98 | 1.1m/wk | active |
 | 2 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 92 | 3.3m/wk | active |
 | 3 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 54k/wk | active |
 | 4 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 83 | 20k/wk | active |
 | 5 | [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) | 79 | 8k/wk | active |
 | 6 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 76 | 3k/wk | active |
-| 7 | [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) | 71 | 3k/wk | active |
+| 7 | [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) | 71 | 2k/wk | active |
 | 8 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 71 | 3k ★ | active |
 | 9 | [Sem](https://tashan.sh/capability/pkg-ataraxy-labs-sem.html) | 70 | 3k/wk | active |
 | 10 | [Safety Net](https://tashan.sh/capability/plugin-kenryu42-claude-code-safety-net-safety-net.html) | 70 | 1k ★ | active |
 | 11 | [Ios Simulator](https://tashan.sh/capability/pkg-ios-simulator-mcp.html) | 69 | 5k/wk | active |
 | 12 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 68 | 542 ★ | active |
-| 13 | [Execbro](https://tashan.sh/capability/pkg-execbro.html) | 67 | 1k/wk | active |
+| 13 | [Execbro](https://tashan.sh/capability/pkg-execbro.html) | 66 | 1k/wk | active |
 | 14 | [Unicli](https://tashan.sh/capability/plugin-yucchiy-unicli-unicli.html) | 65 | 248 ★ | active |
 | 15 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 61 | 80 ★ | active |
-| 16 | [Weavatrix](https://tashan.sh/capability/pkg-weavatrix.html) | 60 | 358/wk | active |
-| 17 | [Codedna](https://tashan.sh/capability/plugin-larens94-codedna-codedna.html) | 60 | 143 ★ | active |
-| 18 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 59 | 18 ★ | active |
-| 19 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 59 | 523 ★ | active |
-| 20 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 58 | 335 ★ | active |
-| 21 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 58 | 381 ★ | active |
+| 16 | [Codedna](https://tashan.sh/capability/plugin-larens94-codedna-codedna.html) | 60 | 143 ★ | active |
+| 17 | [Weavatrix](https://tashan.sh/capability/pkg-weavatrix.html) | 59 | 358/wk | active |
+| 18 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 58 | 18 ★ | active |
+| 19 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 58 | 335 ★ | active |
+| 20 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 58 | 381 ★ | active |
+| 21 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 58 | 523 ★ | active |
 | 22 | [Adcp Client](https://tashan.sh/capability/plugin-adcontextprotocol-adcp-client-adcp-client.html) | 57 | 18 ★ | active |
 | 23 | [Roundtable](https://tashan.sh/capability/plugin-wan-huiyan-agent-review-panel-roundtable.html) | 57 | 30 ★ | active |
 | 24 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 57 | 18 ★ | active |
@@ -54,14 +54,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 51 | 13 ★ | active |
 | 33 | [Specrails](https://tashan.sh/capability/plugin-fjpulidop-specrails-core-specrails.html) | 50 | 9 ★ | active |
 | 34 | [Summer](https://tashan.sh/capability/plugin-summerengine-summer-summer.html) | 50 | 32 ★ | active |
-| 35 | [Tray API](https://tashan.sh/capability/plugin-tray-tecnologia-tray-api-claude-plugin-tray-api.html) | 50 | 13 ★ | active |
-| 36 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 50 | 10 ★ | active |
+| 35 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 50 | 10 ★ | active |
+| 36 | [Tray API](https://tashan.sh/capability/plugin-tray-tecnologia-tray-api-claude-plugin-tray-api.html) | 49 | 13 ★ | active |
 | 37 | [Archy](https://tashan.sh/capability/plugin-hslee16-archy-archy.html) | 49 | 6 ★ | active |
 | 38 | [Minecraft Java](https://tashan.sh/capability/plugin-chapmanjw-minecraft-java-fabric-claude-plugin-minecraft-java.html) | 48 | 5 ★ | active |
 | 39 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 48 | 6 ★ | active |
-| 40 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 48 | 182 ★ | active |
+| 40 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 47 | 182 ★ | active |
 
-Showing the top 40 of 831. The full ranked shelf is at https://tashan.sh/role/engineer.html.
+Showing the top 40 of 826. The full ranked shelf is at https://tashan.sh/role/engineer.html.
 
 ## What these numbers are not
 

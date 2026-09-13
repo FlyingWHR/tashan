@@ -19,16 +19,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 50 | 10 ★ | active |
 | 7 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 46 | 3 ★ | active |
 | 8 | [Dominion Flow](https://tashan.sh/capability/plugin-thierryn-fire-flow-dominion-flow.html) | 42 | 77 ★ | active |
-| 9 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 78 | 191k ★ | active |
-| 10 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 78 | 66k/wk | active |
+| 9 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 79 | 82k/wk | active |
+| 10 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 78 | 191k ★ | active |
 | 11 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 71 | 2k ★ | active |
 | 12 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 60 | 118 ★ | active |
 | 13 | [Jira · mulhamna](https://tashan.sh/capability/plugin-mulhamna-jira-commands-jira.html) | 58 | 46 ★ | active |
 | 14 | [Session Orchestrator](https://tashan.sh/capability/plugin-kanevry-session-orchestrator-session-orchestrator.html) | 58 | 48 ★ | active |
-| 15 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 55 | 27 ★ | active |
-| 16 | [AI Adoption Playbook](https://tashan.sh/capability/plugin-adimango-ai-adoption-playbook-ai-adoption-playbook.html) | 54 | 20 ★ | active |
-| 17 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 54 | 20 ★ | active |
-| 18 | [Omnifocus MCP Enhanced](https://tashan.sh/capability/pkg-omnifocus-mcp-enhanced.html) | 53 | 94/wk | active |
+| 15 | [AI Adoption Playbook](https://tashan.sh/capability/plugin-adimango-ai-adoption-playbook-ai-adoption-playbook.html) | 54 | 20 ★ | active |
+| 16 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 54 | 20 ★ | active |
+| 17 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 54 | 27 ★ | active |
+| 18 | [Omnifocus MCP Enhanced](https://tashan.sh/capability/pkg-omnifocus-mcp-enhanced.html) | 52 | 94/wk | active |
 | 19 | [Game Of Cards](https://tashan.sh/capability/plugin-zauberzeug-game-of-cards-game-of-cards.html) | 49 | 6 ★ | active |
 | 20 | [Agent Estimate](https://tashan.sh/capability/plugin-haoranc-agent-estimate-agent-estimate.html) | 44 | 3 ★ | active |
 | 21 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 62 | 205 ★ | active |

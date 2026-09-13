@@ -27,7 +27,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [FoundRole — AI Job Search & Application Tracker MCP for Claude & ChatGPT](https://tashan.sh/capability/pkg-foundrole-ai-job-search-mcp.html) | 55 | 94/wk | active |
 | 15 | [Career Compass](https://tashan.sh/capability/pkg-career-compass-mcp.html) | 51 | 165/wk | active |
 | 16 | [cv.json — open CV data](https://tashan.sh/capability/pkg-cvjson-mcp.html) | 51 | 77/wk | active |
-| 17 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 50 | 153/wk | active |
+| 17 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 49 | 153/wk | active |
 | 18 | [Jobscout](https://tashan.sh/capability/pkg-sarutobi-sasuke-jobscout-mcp.html) | 47 | 82/wk | active |
 | 19 | [Hh](https://tashan.sh/capability/pkg-theyahia-hh-mcp.html) | 44 | 114/wk | active |
 

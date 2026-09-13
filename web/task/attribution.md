@@ -12,7 +12,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Spotify Ads API](https://tashan.sh/capability/plugin-spotify-ads-claude-plugin-spotify-ads-api.html) | 58 | 14 ★ | active |
-| 2 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 46 | 59 ★ | active |
+| 2 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 45 | 59 ★ | active |
 | 3 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 43 | 3 ★ | active |
 | 4 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 47 | 3 repos | active |
 | 5 | [Paid Ads](https://tashan.sh/capability/skill-alirezarezvani-paid-ads.html) | 47 | 3 repos | active |
@@ -20,7 +20,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Campaign Analytics](https://tashan.sh/capability/skill-alirezarezvani-campaign-analytics.html) | 44 | 2 repos | active |
 | 8 | [Social Media Analyzer](https://tashan.sh/capability/skill-alirezarezvani-social-media-analyzer.html) | 44 | 2 repos | active |
 | 9 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 50 | 5 ★ | active |
-| 10 | [Humansurvey](https://tashan.sh/capability/pkg-humansurvey-mcp.html) | 48 | 60/wk | active |
+| 10 | [Humansurvey](https://tashan.sh/capability/pkg-humansurvey-mcp.html) | 47 | 60/wk | active |
 
 ## What these numbers are not
 

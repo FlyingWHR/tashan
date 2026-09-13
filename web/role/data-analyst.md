@@ -18,8 +18,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 54k/wk | active |
-| 2 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 59 | 523 ★ | active |
-| 3 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 59 | 18 ★ | active |
+| 2 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 58 | 523 ★ | active |
+| 3 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 58 | 18 ★ | active |
 | 4 | [Spotify Ads API](https://tashan.sh/capability/plugin-spotify-ads-claude-plugin-spotify-ads-api.html) | 58 | 14 ★ | active |
 | 5 | [Statsclaw](https://tashan.sh/capability/plugin-statsclaw-statsclaw-statsclaw.html) | 53 | 87 ★ | active |
 | 6 | [Supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) | 98 | 112k/wk | active |
@@ -30,15 +30,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Datarobot Agent Skills](https://tashan.sh/capability/plugin-datarobot-oss-datarobot-agent-skills-datarobot-agent-skills.html) | 62 | 23 ★ | active |
 | 12 | [BigQuery Data Analytics](https://tashan.sh/capability/plugin-gemini-cli-extensions-bigquery-data-analytics-bigquery-data-analytics.html) | 60 | 47 ★ | active |
 | 13 | [Census](https://tashan.sh/capability/pkg-cyanheads-census-mcp-server.html) | 60 | 386/wk | active |
-| 14 | [Microcharts](https://tashan.sh/capability/pkg-microcharts-mcp.html) | 59 | 315/wk | active |
-| 15 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 58 | 100 ★ | active |
+| 14 | [Sentio AI Kit](https://tashan.sh/capability/plugin-sentioxyz-sentio-ai-kit-sentio-ai-kit.html) | 58 | 100 ★ | active |
+| 15 | [Microcharts](https://tashan.sh/capability/pkg-microcharts-mcp.html) | 58 | 315/wk | active |
 | 16 | [Probabl Skills](https://tashan.sh/capability/plugin-probabl-ai-skills-probabl-skills.html) | 57 | 74 ★ | active |
-| 17 | [Stata](https://tashan.sh/capability/pkg-aliveranme-stata-mcp.html) | 51 | 87/wk | active |
+| 17 | [Stata](https://tashan.sh/capability/pkg-aliveranme-stata-mcp.html) | 50 | 87/wk | active |
 | 18 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 50 | 12 ★ | active |
 | 19 | [Altertable](https://tashan.sh/capability/plugin-altertable-ai-skills-altertable.html) | 49 | 7 ★ | active |
 | 20 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | stable |
 | 21 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 48 | 6 ★ | active |
-| 22 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 46 | 59 ★ | active |
+| 22 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 45 | 59 ★ | active |
 | 23 | [Qmt Skills](https://tashan.sh/capability/plugin-dfkai-xtquantai-qmt-skills.html) | 43 | 151 ★ | active |
 | 24 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 43 | 3 ★ | active |
 | 25 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 72 | 4k ★ | active |

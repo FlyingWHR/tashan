@@ -11,17 +11,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 99 | 1.1m/wk | active |
+| 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 98 | 1.1m/wk | active |
 | 2 | [Codedna](https://tashan.sh/capability/plugin-larens94-codedna-codedna.html) | 60 | 143 ★ | active |
-| 3 | [Imqueue](https://tashan.sh/capability/pkg-imqueue-mcp.html) | 63 | 161/wk | active |
+| 3 | [Imqueue](https://tashan.sh/capability/pkg-imqueue-mcp.html) | 71 | 2k/wk | active |
 | 4 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 59 | 167 ★ | active |
-| 5 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 59 | 4k/wk | active |
+| 5 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 58 | 3k/wk | active |
 | 6 | [Vibe Replay](https://tashan.sh/capability/plugin-tuo-lei-vibe-replay-vibe-replay.html) | 55 | 33 ★ | active |
 | 7 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 54 | 40 ★ | active |
 | 8 | [Officecli](https://tashan.sh/capability/plugin-officecli-officecli-skills-officecli.html) | 53 | 72 ★ | active |
 | 9 | [Sdd · applica-software-guru](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 50 | 11 ★ | active |
-| 10 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 47 | 4 ★ | active |
-| 11 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 47 | 4 ★ | active |
+| 10 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 47 | 4 ★ | active |
+| 11 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 46 | 4 ★ | active |
 | 12 | [Sync Docs](https://tashan.sh/capability/plugin-agent-sh-sync-docs-sync-docs.html) | 46 | 3 ★ | active |
 | 13 | [Jamdesk](https://tashan.sh/capability/plugin-jamdesk-jamdesk-claude-plugin-jamdesk.html) | 45 | 3 ★ | active |
 | 14 | [Bleu](https://tashan.sh/capability/plugin-nirvaan05-bleu-plugin-bleu.html) | 43 | 3 ★ | active |
@@ -41,16 +41,16 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Confluence Expert](https://tashan.sh/capability/skill-alirezarezvani-confluence-expert.html) | 44 | 2 repos | active |
 | 29 | [Quality Documentation Manager](https://tashan.sh/capability/skill-alirezarezvani-quality-documentation-manager.html) | 44 | 2 repos | active |
 | 30 | [Mintlify](https://tashan.sh/capability/plugin-mintlify-mintlify-claude-plugin-mintlify.html) | 48 | 5 ★ | active |
-| 31 | [Doccupine](https://tashan.sh/capability/pkg-doccupine.html) | 61 | 323/wk | active |
+| 31 | [Doccupine](https://tashan.sh/capability/pkg-doccupine.html) | 60 | 323/wk | active |
 | 32 | [Wso2 Docs](https://tashan.sh/capability/pkg-wso2-docs-mcp-server.html) | 56 | 362/wk | active |
 | 33 | [Context7 · upstash](https://tashan.sh/capability/plugin-upstash-context7-context7.html) | 77 | 60k ★ | active |
 | 34 | [Sourcey](https://tashan.sh/capability/pkg-sourcey.html) | 61 | 2k/wk | active |
 | 35 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 60 | 371/wk | active |
 | 36 | [Mantine](https://tashan.sh/capability/pkg-mantine-mcp-server.html) | 70 | 2k/wk | active |
-| 37 | [Adobe Commerce Docs](https://tashan.sh/capability/pkg-adobe-commerce-docs-mcp.html) | 65 | 758/wk | active |
+| 37 | [Adobe Commerce Docs](https://tashan.sh/capability/pkg-adobe-commerce-docs-mcp.html) | 64 | 758/wk | active |
 | 38 | [Matra](https://tashan.sh/capability/pkg-matrajs-mcp.html) | 62 | 355/wk | active |
 | 39 | [IMBA Agent Docs](https://tashan.sh/capability/pkg-imba-wallet-agent-mcp-docs.html) | 59 | 457/wk | active |
-| 40 | [Ignis Docs](https://tashan.sh/capability/pkg-venizia-ignis-docs.html) | 56 | 140/wk | active |
+| 40 | [Ignis Docs](https://tashan.sh/capability/pkg-venizia-ignis-docs.html) | 55 | 140/wk | active |
 
 Showing the top 40 of 43. The full ranked shelf is at https://tashan.sh/task/technical-documentation.html.
 

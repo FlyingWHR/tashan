@@ -24,18 +24,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Hyperframes · heygen-com](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes.html) | 46 | 3 marketplaces | active |
 | 12 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 43 | 1 ★ | active |
 | 13 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 856/wk | active |
-| 14 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 64 | 700/wk | active |
+| 14 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 63 | 700/wk | active |
 | 15 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 57 | 276/wk | active |
 | 16 | [Rendobar](https://tashan.sh/capability/pkg-rendobar-mcp.html) | 55 | 197/wk | active |
 | 17 | [Rive](https://tashan.sh/capability/pkg-rive-mcp-server.html) | 54 | 381/wk | active |
 | 18 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 71 | 4k/wk | active |
-| 19 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 66 | 518/wk | active |
-| 20 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 66 | 305/wk | active |
+| 19 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 66 | 305/wk | active |
+| 20 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 65 | 518/wk | active |
 | 21 | [Runapi](https://tashan.sh/capability/pkg-runapi-ai-mcp.html) | 64 | 588/wk | active |
 | 22 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 63 | 885/wk | active |
 | 23 | [Kodelyth Ecc](https://tashan.sh/capability/pkg-kodelyth-ecc.html) | 55 | 307/wk | active |
-| 24 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 55 | 164/wk | active |
-| 25 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 54 | 239/wk | active |
+| 24 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 54 | 239/wk | active |
+| 25 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 54 | 164/wk | active |
 | 26 | [Media Gen](https://tashan.sh/capability/pkg-media-gen-mcp-server.html) | 53 | 141/wk | active |
 | 27 | [Gpt Image](https://tashan.sh/capability/pkg-runapi-ai-gpt-image-mcp.html) | 52 | 221/wk | active |
 | 28 | [Z Image](https://tashan.sh/capability/pkg-runapi-ai-z-image-mcp.html) | 52 | 219/wk | active |

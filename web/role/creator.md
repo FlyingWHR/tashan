@@ -18,7 +18,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 78 | 61k/wk | active |
 | 2 | [Claude Video Vision](https://tashan.sh/capability/plugin-jordanrendric-claude-video-vision-claude-video-vision.html) | 67 | 1k ★ | active |
-| 3 | [Watch](https://tashan.sh/capability/plugin-bradautomates-claude-video-watch.html) | 61 | 11k ★ | active |
+| 3 | [Watch](https://tashan.sh/capability/plugin-bradautomates-claude-video-watch.html) | 60 | 11k ★ | active |
 | 4 | [Phantom · fadelabs](https://tashan.sh/capability/plugin-fadelabs-phantom-phantom.html) | 50 | 21 ★ | active |
 | 5 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 48 | 5 ★ | active |
 | 6 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 63 | 137 ★ | active |
@@ -37,7 +37,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 19 | [Hyperframes · heygen-com](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes.html) | 46 | 3 marketplaces | active |
 | 20 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 43 | 1 ★ | active |
 | 21 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 856/wk | active |
-| 22 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 64 | 700/wk | active |
+| 22 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 63 | 700/wk | active |
 | 23 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 57 | 276/wk | active |
 | 24 | [Rendobar](https://tashan.sh/capability/pkg-rendobar-mcp.html) | 55 | 197/wk | active |
 | 25 | [Rive](https://tashan.sh/capability/pkg-rive-mcp-server.html) | 54 | 381/wk | active |
@@ -46,18 +46,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 50 | 165/wk | active |
 | 29 | [Furlen](https://tashan.sh/capability/pkg-furlen-mcp.html) | 48 | 97/wk | active |
 | 30 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 71 | 4k/wk | active |
-| 31 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 66 | 518/wk | active |
-| 32 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 66 | 305/wk | active |
-| 33 | [Oh My Cassette](https://tashan.sh/capability/plugin-cassette-editor-oh-my-cassette-oh-my-cassette.html) | 66 | 138 ★ | active |
+| 31 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 66 | 305/wk | active |
+| 32 | [Oh My Cassette](https://tashan.sh/capability/plugin-cassette-editor-oh-my-cassette-oh-my-cassette.html) | 66 | 138 ★ | active |
+| 33 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 65 | 518/wk | active |
 | 34 | [Runapi](https://tashan.sh/capability/pkg-runapi-ai-mcp.html) | 64 | 588/wk | active |
 | 35 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 63 | 885/wk | active |
-| 36 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 62 | 570/wk | active |
+| 36 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 61 | 570/wk | active |
 | 37 | [Cursor Chat Bridge](https://tashan.sh/capability/pkg-cursor-telegram-chat.html) | 59 | 475/wk | active |
 | 38 | [Kodelyth Ecc](https://tashan.sh/capability/pkg-kodelyth-ecc.html) | 55 | 307/wk | active |
-| 39 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 55 | 164/wk | active |
-| 40 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 54 | 239/wk | active |
+| 39 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 54 | 239/wk | active |
+| 40 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 54 | 164/wk | active |
 
-Showing the top 40 of 136. The full ranked shelf is at https://tashan.sh/role/creator.html.
+Showing the top 40 of 135. The full ranked shelf is at https://tashan.sh/role/creator.html.
 
 ## What these numbers are not
 

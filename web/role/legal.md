@@ -16,7 +16,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Korean Law](https://tashan.sh/capability/pkg-korean-law-mcp.html) | 72 | 4k/wk | active |
+| 1 | [Korean Law](https://tashan.sh/capability/pkg-korean-law-mcp.html) | 72 | 5k/wk | active |
 | 2 | [Openstates](https://tashan.sh/capability/pkg-cyanheads-openstates-mcp-server.html) | 60 | 317/wk | active |
 | 3 | [Ato](https://tashan.sh/capability/pkg-ato-mcp.html) | 53 | 389/wk | active |
 | 4 | [Courtlistener](https://tashan.sh/capability/pkg-cyanheads-courtlistener-mcp-server.html) | 53 | 157/wk | active |
@@ -57,7 +57,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Risk Management Specialist](https://tashan.sh/capability/skill-alirezarezvani-risk-management-specialist.html) | 44 | 2 repos | active |
 | 40 | [Vendor Management](https://tashan.sh/capability/skill-alirezarezvani-vendor-management.html) | 44 | 2 repos | active |
 
-Showing the top 40 of 113. The full ranked shelf is at https://tashan.sh/role/legal.html.
+Showing the top 40 of 112. The full ranked shelf is at https://tashan.sh/role/legal.html.
 
 ## What these numbers are not
 

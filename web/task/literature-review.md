@@ -15,7 +15,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
 | 3 | [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) | 67 | 802/wk | active |
 | 4 | [Sciverse](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 61 | 78 ★ | active |
-| 5 | [Phd Deepread](https://tashan.sh/capability/plugin-heleninsights-dot-phd-deepread-workflow-phd-deepread.html) | 46 | 56 ★ | active |
+| 5 | [Phd Deepread](https://tashan.sh/capability/plugin-heleninsights-dot-phd-deepread-workflow-phd-deepread.html) | 45 | 56 ★ | active |
 | 6 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | 51 | 5 repos | active |
 | 7 | [Research Summarizer](https://tashan.sh/capability/skill-alirezarezvani-research-summarizer.html) | 44 | 2 repos | active |
 | 8 | [Grants](https://tashan.sh/capability/skill-alirezarezvani-grants.html) | 44 | 2 repos | active |

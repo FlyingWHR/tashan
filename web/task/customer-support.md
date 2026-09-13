@@ -16,7 +16,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Churn Prevention](https://tashan.sh/capability/skill-alirezarezvani-churn-prevention.html) | 44 | 2 repos | active |
 | 4 | [Voicenter](https://tashan.sh/capability/plugin-voicenterteam-claude-marketplace-voicenter.html) | 44 | 2 ★ | active |
 | 5 | [Help Scout](https://tashan.sh/capability/pkg-help-scout-mcp-server.html) | 53 | 188/wk | active |
-| 6 | [Freescout](https://tashan.sh/capability/pkg-verygoodplugins-mcp-freescout.html) | 46 | 239/wk | active |
+| 6 | [Freescout](https://tashan.sh/capability/pkg-verygoodplugins-mcp-freescout.html) | 45 | 239/wk | active |
 | 7 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 68 | 660/wk | active |
 | 8 | [Connectwise Psa](https://tashan.sh/capability/pkg-mcp-connectwise-psa.html) | 54 | 368/wk | active |
 | 9 | [Eventbrite](https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html) | 52 | 273/wk | active |

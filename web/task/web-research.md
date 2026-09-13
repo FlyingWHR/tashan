@@ -44,13 +44,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 54 | 133/wk | active |
 | 32 | [One Search](https://tashan.sh/capability/pkg-one-search-mcp.html) | 53 | 189/wk | active |
 | 33 | [Agent Search](https://tashan.sh/capability/pkg-agent-search-mcp.html) | 52 | 225/wk | active |
-| 34 | [SERPdive Web Search](https://tashan.sh/capability/pkg-serpdive-mcp.html) | 49 | 124/wk | active |
+| 34 | [SERPdive Web Search](https://tashan.sh/capability/pkg-serpdive-mcp.html) | 48 | 124/wk | active |
 | 35 | [Netlens](https://tashan.sh/capability/pkg-netlens-mcp.html) | 47 | 75/wk | active |
 | 36 | [Firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) | 86 | 27k/wk | active |
 | 37 | [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) | 81 | 17k/wk | active |
 | 38 | [SearXNG Search](https://tashan.sh/capability/pkg-mcp-searxng.html) | 74 | 9k/wk | active |
-| 39 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 66 | 518/wk | active |
-| 40 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 55 | 164/wk | active |
+| 39 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 65 | 518/wk | active |
+| 40 | [Google Surf](https://tashan.sh/capability/pkg-google-surf-mcp.html) | 54 | 374/wk | active |
 
 Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/task/web-research.html.
 

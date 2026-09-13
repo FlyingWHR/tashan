@@ -14,7 +14,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 - **Messaging and email** — [Agentmail](https://tashan.sh/capability/pkg-agentmail-mcp.html) · tashan score 76
 - **Project management** — [Backlog](https://tashan.sh/capability/pkg-backlog-mcp-server.html) · tashan score 73
 - **Web research** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 83
-- **Document production** — [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) · tashan score 67
+- **Document production** — [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) · tashan score 66
 
 ## Ranked
 
@@ -25,7 +25,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 76 | 3k/wk | active |
 | 4 | [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) | 74 | 2k/wk | active |
 | 5 | [Backlog](https://tashan.sh/capability/pkg-backlog-mcp-server.html) | 73 | 8k/wk | active |
-| 6 | [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) | 71 | 1k ★ | active |
+| 6 | [Minutes](https://tashan.sh/capability/plugin-silverstein-minutes-minutes.html) | 70 | 1k ★ | active |
 | 7 | [Safety Net](https://tashan.sh/capability/plugin-kenryu42-claude-code-safety-net-safety-net.html) | 70 | 1k ★ | active |
 | 8 | [Memorix](https://tashan.sh/capability/pkg-memorix.html) | 69 | 2k/wk | active |
 | 9 | [Huly](https://tashan.sh/capability/pkg-firfi-huly-mcp.html) | 69 | 1k/wk | active |
@@ -34,8 +34,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 63 | 2k/wk | active |
 | 13 | [Affine](https://tashan.sh/capability/pkg-affine-mcp-server.html) | 62 | 895/wk | active |
 | 14 | [Notion · awkoy](https://tashan.sh/capability/pkg-notion-mcp-server.html) | 61 | 905/wk | active |
-| 15 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 61 | 367/wk | active |
-| 16 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 61 | 80 ★ | active |
+| 15 | [Reolink CLI](https://tashan.sh/capability/plugin-reolink-reolink-cli-reolink-cli.html) | 61 | 80 ★ | active |
+| 16 | [Notebooklm](https://tashan.sh/capability/pkg-roomi-fields-notebooklm-mcp.html) | 60 | 367/wk | active |
 | 17 | [Freightutils](https://tashan.sh/capability/pkg-freightutils-mcp.html) | 60 | 311/wk | active |
 | 18 | [Vikunja Fastmcp](https://tashan.sh/capability/pkg-vikunja-fastmcp.html) | 59 | 306/wk | active |
 | 19 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 58 | 335 ★ | active |
@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 45 | 12 ★ | active |
 | 40 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 44 | 28 ★ | active |
 
-Showing the top 40 of 785. The full ranked shelf is at https://tashan.sh/role/ops.html.
+Showing the top 40 of 784. The full ranked shelf is at https://tashan.sh/role/ops.html.
 
 ## What these numbers are not
 

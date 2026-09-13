@@ -49,7 +49,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [X Twitter Growth](https://tashan.sh/capability/skill-alirezarezvani-x-twitter-growth.html) | 44 | 2 repos | active |
 | 37 | [Video Content Strategist](https://tashan.sh/capability/skill-alirezarezvani-video-content-strategist.html) | 44 | 2 repos | active |
 | 38 | [Socialneuron](https://tashan.sh/capability/pkg-socialneuron-mcp-server.html) | 61 | 860/wk | active |
-| 39 | [Reddit](https://tashan.sh/capability/pkg-reddit-mcp-server.html) | 54 | 460/wk | active |
+| 39 | [Reddit](https://tashan.sh/capability/pkg-reddit-mcp-server.html) | 53 | 460/wk | active |
 | 40 | [Postfast](https://tashan.sh/capability/pkg-postfast-mcp.html) | 52 | 103/wk | active |
 
 Showing the top 40 of 64. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.

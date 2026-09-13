@@ -15,7 +15,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Codedna](https://tashan.sh/capability/plugin-larens94-codedna-codedna.html) | 60 | 143 ★ | active |
 | 3 | [Haytham](https://tashan.sh/capability/plugin-arslan70-haytham-haytham.html) | 51 | 13 ★ | active |
 | 4 | [Archy](https://tashan.sh/capability/plugin-hslee16-archy-archy.html) | 49 | 6 ★ | active |
-| 5 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 48 | 182 ★ | active |
+| 5 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 47 | 182 ★ | active |
 | 6 | [Understand Anything](https://tashan.sh/capability/plugin-lum1104-understand-anything-understand-anything.html) | 76 | 76k ★ | active |
 | 7 | [Adr Analysis](https://tashan.sh/capability/pkg-mcp-adr-analysis-server.html) | 73 | 744/wk | active |
 | 8 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 60 | 104 ★ | active |
@@ -23,9 +23,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [AI Craftsman Superpowers](https://tashan.sh/capability/plugin-buldee-ai-craftsman-superpowers-ai-craftsman-superpowers.html) | 50 | 35 ★ | active |
 | 11 | [Groundwork](https://tashan.sh/capability/plugin-etr-groundwork-groundwork.html) | 50 | 41 ★ | active |
 | 12 | [Reqvire](https://tashan.sh/capability/plugin-reqvire-org-reqvire-reqvire.html) | 50 | 15 ★ | active |
-| 13 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 47 | 4 ★ | active |
-| 14 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 47 | 4 ★ | active |
-| 15 | [Archcore](https://tashan.sh/capability/plugin-archcore-ai-archcore-plugin-archcore.html) | 46 | 50 ★ | active |
+| 13 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 47 | 4 ★ | active |
+| 14 | [Archcore](https://tashan.sh/capability/plugin-archcore-ai-archcore-plugin-archcore.html) | 46 | 50 ★ | active |
+| 15 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 46 | 4 ★ | active |
 | 16 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 76 | 34k ★ | active |
 | 17 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 66 | 413 ★ | active |
 | 18 | [Lean Kg](https://tashan.sh/capability/plugin-freepeak-leankg-lean-kg.html) | 64 | 213 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Weavatrix Online](https://tashan.sh/capability/pkg-weavatrix-online.html) | 53 | 374/wk | active |
 | 40 | [Forgecraft](https://tashan.sh/capability/pkg-forgecraft-mcp.html) | 45 | 110/wk | active |
 
-Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
+Showing the top 40 of 49. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
 
 ## What these numbers are not
 
