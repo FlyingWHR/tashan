@@ -58,6 +58,20 @@ GZKEY = KEY + ".gz"
 # night defeats delta compression entirely, so a ~20 MB compressed cache would add ~7 GB of pack a
 # year. It rides to R2 beside the database instead, on the same credentials and the same free tier.
 AUX = [("data/skills_cache.json", "skills_cache.json.gz")]
+
+# THE TEXT CACHE TRAVELS SEPARATELY, and this is what keeps the object under wrangler's ceiling.
+# capability_text is README and SKILL.md text — 49% of the database on this machine, and the single
+# reason the push started refusing: 1,485.9 MiB compressed to 297.1 MiB against a 300 MiB limit, so
+# the R2 object stopped advancing on 11 September and every run since has started from an older
+# cursor. It is also the most re-derivable thing in the file: losing it costs a slow re-fetch, never
+# a wrong answer. Splitting it out halves the object that MUST land and gives the rest years of room.
+#
+# NOT signal_history, which is the other obvious candidate and would be a bug. It is sharded to git
+# and snapshot_history.restore() rebuilds it — but that runs in the ENRICH phase, after build.py has
+# already scored, and scoring is what reads the series. Emptying it here would hand the scorer an
+# empty history on every run.
+TEXTKEY = KEY + ".text.gz"
+TEXT_TABLE = "capability_text"
 # A tiny sidecar object holding the generation of whatever is in the bucket, plus the local memory
 # of which generation we last saw. Optimistic concurrency, and it exists because of a real incident:
 # see push().
@@ -182,6 +196,29 @@ def pull():
               f"and from data/history ({detail[0][:90]})")
         return 0
     os.replace(tmp, DB)
+    # THE TEXT CACHE, back into the file it came out of. Best-effort by design: an object that is
+    # missing (a bucket written before the split) or unreadable leaves capability_text empty, which
+    # costs a slow re-fetch of README text and nothing else. The cursors, the scores and the change
+    # history all travelled in the core object that has already landed.
+    tgz = DB + ".text.gz"
+    rt = _run(["r2", "object", "get", f"{BUCKET}/{TEXTKEY}", "--file", tgz])
+    if rt.returncode == 0 and os.path.exists(tgz) and os.path.getsize(tgz) > 0:
+        tpath = DB + ".text"
+        try:
+            with gzip.open(tgz, "rb") as fin, open(tpath, "wb") as fout:
+                shutil.copyfileobj(fin, fout, 1024 * 1024)
+            n = _merge_text(DB, tpath)
+            print(f"  db_store: merged {n:,} cached document(s) back from {TEXTKEY}")
+        except OSError as e:
+            print(f"  db_store: {TEXTKEY} would not restore ({e}) — README text will re-fetch")
+        finally:
+            for p_ in (tgz, tpath):
+                if os.path.exists(p_):
+                    os.remove(p_)
+    else:
+        print(f"  db_store: no {TEXTKEY} in R2 — README text will re-fetch as it goes")
+        if os.path.exists(tgz):
+            os.remove(tgz)
     _pull_aux()
     # Remember which generation we started from, so push() can tell whether anyone moved it since.
     _write_stamp(_remote_stamp() or "")
@@ -236,6 +273,62 @@ def _push_aux():
               f"{size:.1f} MiB {key}" + ("" if r.returncode == 0 else f" ({_reason(r)})"))
 
 
+def _split(src):
+    """(core, text): the database with capability_text lifted into its own file.
+
+    VACUUM INTO for the core rather than a file copy, so the pages the DELETE frees are actually
+    reclaimed — deleting rows from SQLite without vacuuming leaves the file exactly as large, which
+    would make this whole exercise a no-op that looks like it worked.
+    """
+    core, text = src + ".core", src + ".text"
+    for p in (core, text):
+        if os.path.exists(p):
+            os.remove(p)
+    con = sqlite3.connect(src)
+    try:
+        has_text = bool(con.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name=?", (TEXT_TABLE,)).fetchone())
+        con.execute("VACUUM INTO ?", (core,))
+    finally:
+        con.close()
+    if not has_text:
+        return core, None
+    c = sqlite3.connect(core)
+    try:
+        c.execute("ATTACH ? AS side", (text,))
+        c.execute(f"CREATE TABLE side.{TEXT_TABLE} AS SELECT * FROM {TEXT_TABLE}")
+        c.commit()
+        c.execute("DETACH side")
+        c.execute(f"DELETE FROM {TEXT_TABLE}")
+        c.commit()
+        c.execute("VACUUM")                      # reclaim, or the split saved nothing
+    finally:
+        c.close()
+    return core, text
+
+
+def _merge_text(dbpath, textpath):
+    """Put the text cache back. Missing or unreadable is survivable — it re-fetches."""
+    if not (textpath and os.path.exists(textpath)):
+        return 0
+    con = sqlite3.connect(dbpath)
+    try:
+        con.execute("ATTACH ? AS side", (textpath,))
+        if not con.execute("SELECT 1 FROM side.sqlite_master WHERE type='table' AND name=?",
+                           (TEXT_TABLE,)).fetchone():
+            return 0
+        n = con.execute(f"SELECT count(*) FROM side.{TEXT_TABLE}").fetchone()[0]
+        con.execute(f"INSERT OR REPLACE INTO {TEXT_TABLE} SELECT * FROM side.{TEXT_TABLE}")
+        con.commit()
+        con.execute("DETACH side")
+        return n
+    except sqlite3.Error as e:
+        print(f"  db_store: the text cache would not merge ({e}) — it will re-fetch")
+        return 0
+    finally:
+        con.close()
+
+
 def push():
     """Store the cache, plus a rolling dated copy. FATAL on failure, unlike pull: silently not
     saving means every later run starts from a stale object and the incremental cursors quietly
@@ -272,15 +365,19 @@ def push():
 
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ") + "-" + str(os.getpid())
     raw_mib = os.path.getsize(DB) / 1048576
+    core, text = _split(DB)
     blob = DB + ".gz"
-    with open(DB, "rb") as fin, gzip.open(blob, "wb", compresslevel=6) as fout:
+    with open(core, "rb") as fin, gzip.open(blob, "wb", compresslevel=6) as fout:
         shutil.copyfileobj(fin, fout, 1024 * 1024)
     mib = os.path.getsize(blob) / 1048576
-    print(f"  db_store: {raw_mib:.1f} MiB -> {mib:.1f} MiB gzipped ({100 * mib / raw_mib:.0f}%)")
+    print(f"  db_store: {raw_mib:.1f} MiB -> core {os.path.getsize(core) / 1048576:.1f} MiB "
+          f"-> {mib:.1f} MiB gzipped, text cache split out")
     if mib > 290:
-        print("  db_store: REFUSING to push — even compressed this is near wrangler's 300 MiB "
-              "ceiling. Split the object or move to the S3 API before it fails silently.")
-        os.remove(blob)
+        print("  db_store: REFUSING to push — even split and compressed this is near wrangler's "
+              "300 MiB ceiling. The next thing to lift out is cap_state, or move to the S3 API.")
+        for p_ in (blob, core, text):
+            if p_ and os.path.exists(p_):
+                os.remove(p_)
         return 1
     for key in (GZKEY, f"backup/{datetime.now(timezone.utc).strftime('%a').lower()}.db.gz"):
         r = _run(["r2", "object", "put", f"{BUCKET}/{key}", "--file", blob,
@@ -294,6 +391,21 @@ def push():
             return 1
         print(f"  db_store: pushed {mib:.1f} MiB to r2://{BUCKET}/{key}")
     os.remove(blob)
+    os.remove(core)
+    # The text cache, as its own object. NOT fatal — same posture as the aux caches: losing it costs
+    # a slow re-fetch of README text, never a wrong answer, and the object that carries the cursors
+    # has already landed by the time we get here.
+    if text and os.path.exists(text):
+        tgz = text + ".gz"
+        with open(text, "rb") as fin, gzip.open(tgz, "wb", compresslevel=6) as fout:
+            shutil.copyfileobj(fin, fout, 1024 * 1024)
+        tmib = os.path.getsize(tgz) / 1048576
+        r = _run(["r2", "object", "put", f"{BUCKET}/{TEXTKEY}", "--file", tgz,
+                  "--content-type", "application/gzip"])
+        print(f"  db_store: {'pushed' if r.returncode == 0 else 'FAILED to push'} {tmib:.1f} MiB "
+              f"{TEXTKEY}" + ("" if r.returncode == 0 else f" ({_reason(r)}) — it will re-fetch"))
+        os.remove(tgz)
+        os.remove(text)
     _push_aux()
     # Stamp last: a reader that sees the new generation is guaranteed the object behind it landed.
     with open(STAMP_LOCAL + ".out", "w", encoding="utf-8") as f:
@@ -305,7 +417,57 @@ def push():
     return 0
 
 
+def _selftest_split():
+    """The split must round-trip exactly, and must actually make the file smaller.
+
+    Both halves matter. If the core is not smaller the whole exercise is a no-op that still prints
+    a success line — deleting rows from SQLite without vacuuming leaves the file byte-for-byte the
+    size it was. If the merge is not exact the pipeline silently re-fetches documents it already
+    had, or worse, grades against a truncated one.
+    """
+    import tempfile
+    with tempfile.TemporaryDirectory() as d:
+        src = os.path.join(d, "t.db")
+        con = sqlite3.connect(src)
+        con.execute("CREATE TABLE capabilities (id TEXT PRIMARY KEY)")
+        con.execute(f"CREATE TABLE {TEXT_TABLE} (cap_id TEXT PRIMARY KEY, body TEXT)")
+        con.executemany("INSERT INTO capabilities VALUES (?)", [(f"pkg:{i}",) for i in range(200)])
+        # Big enough that reclaiming pages is measurable rather than rounding.
+        con.executemany(f"INSERT INTO {TEXT_TABLE} VALUES (?, ?)",
+                        [(f"pkg:{i}", "x" * 20000) for i in range(200)])
+        con.commit(); con.close()
+        before = os.path.getsize(src)
+
+        core, text = _split(src)
+        assert usable(core), "the core must still be a usable database — it carries the cursors"
+        c = sqlite3.connect(core)
+        assert c.execute("SELECT count(*) FROM capabilities").fetchone()[0] == 200
+        assert c.execute(f"SELECT count(*) FROM {TEXT_TABLE}").fetchone()[0] == 0, \
+            "the text table must be empty in the core, or nothing was saved"
+        c.close()
+        assert os.path.getsize(core) < before * 0.5, (
+            f"the core must actually shrink: {os.path.getsize(core)} vs {before} — a DELETE without "
+            f"VACUUM leaves the file exactly as large and this whole split does nothing")
+        t = sqlite3.connect(text)
+        assert t.execute(f"SELECT count(*) FROM {TEXT_TABLE}").fetchone()[0] == 200
+        t.close()
+
+        assert _merge_text(core, text) == 200, "every document must come back"
+        c = sqlite3.connect(core)
+        assert c.execute(f"SELECT count(*) FROM {TEXT_TABLE}").fetchone()[0] == 200
+        assert c.execute(f"SELECT body FROM {TEXT_TABLE} WHERE cap_id='pkg:7'").fetchone()[0] \
+            == "x" * 20000, "a merged document must be the one that went in, not a truncation"
+        c.close()
+        print("  ok — the text cache splits out, the core shrinks by half, and it all comes back")
+
+        # A bucket written before the split has no text object. That must cost a re-fetch, not a run.
+        assert _merge_text(core, os.path.join(d, "nope.db")) == 0
+        assert _merge_text(core, None) == 0
+        print("  ok — a missing text object is survivable: README text simply re-fetches")
+
+
 def _selftest():
+    _selftest_split()
     import tempfile
     with tempfile.TemporaryDirectory() as d:
         good, empty, junk = (os.path.join(d, n) for n in ("g.db", "e.db", "j.db"))
