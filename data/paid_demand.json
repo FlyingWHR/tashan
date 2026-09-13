@@ -3,8 +3,8 @@
   "via": "subgraph-mcp",
   "paid_measured": true,
   "economy": {
-    "paid_usd": 247350.1299,
-    "calls": 10418867,
+    "paid_usd": 247353.279,
+    "calls": 10418946,
     "receivers_paid": 998,
     "receivers_never_paid": 81,
     "mean_payment_usd": 0.023741,
@@ -33,11 +33,11 @@
       ],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 166663.6039,
-      "calls": 8718899,
+      "paid_usd": 166663.686,
+      "calls": 8718909,
       "payers": null,
       "first": 1766711773,
-      "last": 1789302865,
+      "last": 1789303693,
       "attributable": true
     },
     {
@@ -460,11 +460,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 434.863,
-      "calls": 51201,
+      "paid_usd": 434.913,
+      "calls": 51206,
       "payers": null,
       "first": 1776685113,
-      "last": 1789302649,
+      "last": 1789303543,
       "attributable": false
     },
     {
@@ -588,11 +588,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 251.45,
-      "calls": 2033,
+      "paid_usd": 253.45,
+      "calls": 2041,
       "payers": null,
       "first": 1781212047,
-      "last": 1789303177,
+      "last": 1789303519,
       "attributable": false
     },
     {
@@ -773,11 +773,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 137.16,
-      "calls": 6858,
+      "paid_usd": 138.1,
+      "calls": 6905,
       "payers": null,
       "first": 1788774967,
-      "last": 1789303201,
+      "last": 1789303687,
       "attributable": false
     },
     {
@@ -1011,11 +1011,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 109.256,
-      "calls": 29083,
+      "paid_usd": 109.333,
+      "calls": 29092,
       "payers": null,
       "first": 1771529923,
-      "last": 1789303113,
+      "last": 1789303681,
       "attributable": false
     },
     {
