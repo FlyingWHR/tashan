@@ -1340,8 +1340,39 @@ def snapshot_history(con):
             con.execute("INSERT INTO signal_history (cap_id, metric, value, at, scorer) VALUES (?,?,?,?,?)",
                         (cid, "adoption", adoption, today, SCORER_VERSION))
         n += 1
+    # ---- and the money, which was the one signal we were re-reading nightly and throwing away ----
+    #
+    # THE LEVEL IS NOT THE ASSET. Anyone can recompute today's $247,353 by running the query we
+    # print on /paid.html — that is the point of printing it. What nobody can recompute is what it
+    # said last month, and until now nothing here recorded that: paid_usd was overwritten on the
+    # capabilities row every night, so we knew today's total and had no idea whether the agent
+    # economy was growing or whether one receiver simply got busier. Git had accidentally preserved
+    # two days of it, and even two days showed a service taking its first payment ever — 997 paid
+    # receivers becoming 998. That is a fact nobody else on earth is in a position to publish, and
+    # we were discarding the series that makes it visible.
+    #
+    # STAMPED "chain", NOT THE SCORER VERSION. Everything above is our arithmetic, so it is versioned
+    # by the scorer that produced it and trend() refuses to compare across a boundary. A settled
+    # payment is not our arithmetic — it happened on Base whatever our scorer thinks — so tying it to
+    # SCORER_VERSION would truncate the payment series every time we rewrite scoring, which is the
+    # exact defect the version stamp exists to prevent, inverted.
+    #
+    # NOT GATED ON A SCORE, unlike the loop above. A capability can carry receipts and no score (an
+    # unrated skill, a discontinued package someone still pays for), and those rows are the
+    # interesting ones. `paid_seen_at` is the gate instead: it means we asked the chain, so a zero
+    # here is a measurement — "this address has never been paid" — and not an absence.
+    p = 0
+    for cid, usd, calls in con.execute(
+            "SELECT id, paid_usd, paid_calls FROM capabilities WHERE paid_seen_at IS NOT NULL"):
+        if usd is not None:
+            con.execute("INSERT INTO signal_history (cap_id, metric, value, at, scorer) VALUES (?,?,?,?,?)",
+                        (cid, "paid_usd", usd, today, "chain"))
+        if calls is not None:
+            con.execute("INSERT INTO signal_history (cap_id, metric, value, at, scorer) VALUES (?,?,?,?,?)",
+                        (cid, "paid_calls", calls, today, "chain"))
+        p += 1
     con.commit()
-    print(f"  signal_history: snapshotted {n} caps for {today}", flush=True)
+    print(f"  signal_history: snapshotted {n} caps + {p} payment rows for {today}", flush=True)
 
 # ---------- phase E: export site JSON ----------
 def slugify(cid):

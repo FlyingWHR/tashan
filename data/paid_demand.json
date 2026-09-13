@@ -3,8 +3,8 @@
   "via": "subgraph-mcp",
   "paid_measured": true,
   "economy": {
-    "paid_usd": 247353.279,
-    "calls": 10418946,
+    "paid_usd": 247356.4633,
+    "calls": 10419086,
     "receivers_paid": 998,
     "receivers_never_paid": 81,
     "mean_payment_usd": 0.023741,
@@ -33,11 +33,11 @@
       ],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 166663.686,
-      "calls": 8718909,
+      "paid_usd": 166664.5703,
+      "calls": 8718923,
       "payers": null,
       "first": 1766711773,
-      "last": 1789303693,
+      "last": 1789304859,
       "attributable": true
     },
     {
@@ -50,11 +50,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 20807.095,
-      "calls": 118464,
+      "paid_usd": 20807.125,
+      "calls": 118467,
       "payers": null,
       "first": 1770982761,
-      "last": 1789301779,
+      "last": 1789304399,
       "attributable": false
     },
     {
@@ -460,11 +460,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 434.913,
-      "calls": 51206,
+      "paid_usd": 435.067,
+      "calls": 51215,
       "payers": null,
       "first": 1776685113,
-      "last": 1789303543,
+      "last": 1789304827,
       "attributable": false
     },
     {
@@ -558,11 +558,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 262.516,
-      "calls": 38855,
+      "paid_usd": 262.541,
+      "calls": 38858,
       "payers": null,
       "first": 1776422017,
-      "last": 1789303181,
+      "last": 1789304843,
       "attributable": false
     },
     {
@@ -773,11 +773,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 138.1,
-      "calls": 6905,
+      "paid_usd": 140.16,
+      "calls": 7008,
       "payers": null,
       "first": 1788774967,
-      "last": 1789303687,
+      "last": 1789304873,
       "attributable": false
     },
     {
@@ -1011,11 +1011,11 @@
       "capabilities": [],
       "shared": false,
       "paid_measured": true,
-      "paid_usd": 109.333,
-      "calls": 29092,
+      "paid_usd": 109.35,
+      "calls": 29097,
       "payers": null,
       "first": 1771529923,
-      "last": 1789303681,
+      "last": 1789303723,
       "attributable": false
     },
     {
@@ -2436,11 +2436,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 14.5372,
-      "calls": 3078,
+      "paid_usd": 14.5412,
+      "calls": 3079,
       "payers": null,
       "first": 1780922707,
-      "last": 1789281393,
+      "last": 1789303873,
       "attributable": false
     },
     {
@@ -3136,11 +3136,11 @@
       "capabilities": [],
       "shared": true,
       "paid_measured": true,
-      "paid_usd": 7.134,
-      "calls": 327,
+      "paid_usd": 7.139,
+      "calls": 328,
       "payers": null,
       "first": 1766563307,
-      "last": 1789302839,
+      "last": 1789304647,
       "attributable": false
     },
     {
@@ -5551,6 +5551,21 @@
       "attributable": false
     },
     {
+      "address": "0x0d083590c048a243e24a75e3a7c968145de25b44",
+      "hosts": [
+        "base-gas-x402-production.up.railway.app"
+      ],
+      "capabilities": [],
+      "shared": false,
+      "paid_measured": true,
+      "paid_usd": 2.011,
+      "calls": 615,
+      "payers": null,
+      "first": 1782157325,
+      "last": 1789304403,
+      "attributable": false
+    },
+    {
       "address": "0xe4181c7de066959bcca010525304ba68a84768e0",
       "hosts": [
         "www.x402financialdata.com",
@@ -5579,21 +5594,6 @@
       "payers": null,
       "first": 1780132867,
       "last": 1789143877,
-      "attributable": false
-    },
-    {
-      "address": "0x0d083590c048a243e24a75e3a7c968145de25b44",
-      "hosts": [
-        "base-gas-x402-production.up.railway.app"
-      ],
-      "capabilities": [],
-      "shared": false,
-      "paid_measured": true,
-      "paid_usd": 2.006,
-      "calls": 614,
-      "payers": null,
-      "first": 1782157325,
-      "last": 1789272003,
       "attributable": false
     },
     {

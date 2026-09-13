@@ -28,6 +28,7 @@ attached.
     python3 pipeline/paid_demand.py --selftest   # no network, no credentials
 """
 import json, os, sys, urllib.error, urllib.request
+from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -353,6 +354,47 @@ def store(records):
     return n
 
 
+# ---- the market series, which is the part that cannot be recomputed ------------------------------
+def bank(eco, path=None):
+    """Append today's market aggregate, once per day, write-once.
+
+    WHY A FILE AND NOT A COLUMN. store() above records per-CAPABILITY receipts, and 58 capabilities
+    carry one — but the finding people actually want is about the whole economy: 1,079 listed
+    receivers, 998 of them ever paid, a median of 51 cents. Those are properties of the market, not
+    of any row in our catalogue, so they had nowhere to live and were overwritten nightly. We were
+    re-reading the chain every night and keeping only the latest answer.
+
+    The level is not the asset. Anyone can recompute today's total with the query /paid.html prints.
+    What nobody can recompute is last month's, and two days of it recovered by accident from git
+    already showed a service taking its first payment ever — 997 paid receivers becoming 998. That
+    is the only kind of statement about the agent economy nobody else is in a position to make.
+
+    One line of JSON per day, ~200 bytes, same write-once discipline as data/history/*.csv.gz: a day
+    already banked is never rewritten, so a second run cannot revise history and a crash cannot cost
+    a day that was already recorded.
+    """
+    path = path or os.path.join(ROOT, "data", "demand_history.jsonl")
+    if not eco:
+        return False
+    day = datetime.now(timezone.utc).date().isoformat()
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if line.startswith("{") and json.loads(line).get("day") == day:
+                    return False        # already banked today
+    row = {"day": day}
+    for k in ("paid_usd", "calls", "receivers", "receivers_paid", "receivers_never_paid",
+              "median_usd", "mean_payment_usd", "top1_share", "top5_share",
+              "under_1_usd", "under_10_usd", "over_1000_usd"):
+        if eco.get(k) is not None:
+            row[k] = eco[k]
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "a", encoding="utf-8") as fh:
+        fh.write(json.dumps(row, separators=(",", ":")) + "\n")
+    return True
+
+
 def main():
     addr_hosts = hosts_for()
     host_to_cap = {}
@@ -438,12 +480,14 @@ def main():
         with open(path, "w") as f:
             json.dump(doc, f, indent=2 if path == OUT else None)
             f.write("\n")
+    banked = bank(economy) if economy else False
     if economy:
         print(f"  paid-demand: via {via} · {economy['receivers_paid']} of {len(addr_hosts)} listed "
               f"receivers have been paid, {economy['receivers_never_paid']} never · "
               f"${economy['paid_usd']:,.2f} across {economy['calls']:,} payments · median receiver "
               f"${economy.get('median_usd', 0):,.2f} · top receiver {economy.get('top1_share', 0):.0%} "
-              f"of all volume · {doc['paid_capabilities']} capabilities attributable ({stored} stored)")
+              f"of all volume · {doc['paid_capabilities']} capabilities attributable ({stored} stored)"
+              + ("" if banked else " · market series already banked today"))
     else:
         print(f"  paid-demand: no chain read (set GRAPH_API_KEY) — published "
               f"{doc['charging_capabilities']} capabilities that CHARGE, of {len(addr_hosts)} "
@@ -452,6 +496,29 @@ def main():
 
 
 def _selftest():
+    # ---- the market series is write-once, and that is the whole guarantee ----------------------
+    # A second run on the same day must not revise a day already recorded: the value of this file is
+    # that it says what we believed on the morning we believed it. If a re-run could rewrite today,
+    # a bad chain read would quietly overwrite a good one and nothing would show it.
+    import tempfile
+    with tempfile.TemporaryDirectory() as td:
+        hp = os.path.join(td, "demand_history.jsonl")
+        eco = {"paid_usd": 247353.28, "calls": 10418946, "receivers_paid": 998,
+               "receivers_never_paid": 81, "median_usd": 0.5125, "top1_share": 0.674}
+        assert bank(eco, hp) is True, "first write of the day must land"
+        assert bank(dict(eco, paid_usd=1.0), hp) is False, "a second run must not revise today"
+        rows = [json.loads(l) for l in open(hp, encoding="utf-8") if l.strip()]
+        assert len(rows) == 1, rows
+        assert rows[0]["paid_usd"] == 247353.28 and rows[0]["receivers_paid"] == 998
+        assert rows[0]["day"] == datetime.now(timezone.utc).date().isoformat()
+        # A missing figure is omitted, never written as zero — the same rule the rest of the
+        # product follows, because a zero here would read as "nobody was paid".
+        assert bank({"paid_usd": 5.0}, os.path.join(td, "b.jsonl")) is True
+        only = json.loads(open(os.path.join(td, "b.jsonl"), encoding="utf-8").read())
+        assert "receivers_paid" not in only, only
+        assert bank({}, os.path.join(td, "c.jsonl")) is False, "nothing to bank is not a write"
+    print("ok — market series: write-once per day, absent figures omitted not zeroed")
+
     assert usd(10000) == 0.01, "a cent must not print as 10000"
     assert usd(1_000_000) == 1.0
     assert usd(None) == 0.0 and usd("x") == 0.0, "a missing amount is zero, never a crash"

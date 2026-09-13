@@ -65,7 +65,7 @@ single person finding the thing useful. A settled USDC payment cannot.
 
 So we asked the chain. Of the 1,079 x402 payment addresses we could resolve from the Bazaar's own
 listings, **998 have been paid at least once and 81 never have**. Between them they have settled
-**$247,353 across 10.4 million payments**. And the median service has earned **$0.51** in its entire
+**$247,356 across 10.4 million payments**. And the median service has earned **$0.51** in its entire
 life: 591 of the 998 have earned under a dollar, 9 have earned over a thousand, and 67% of
 all volume belongs to one receiver. `/paid.html` publishes that distribution, never the total on its
 own, because a sum is the one statistic a concentrated economy always passes.
