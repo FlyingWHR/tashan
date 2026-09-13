@@ -22,35 +22,37 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Groundwork](https://tashan.sh/capability/plugin-etr-groundwork-groundwork.html) | 50 | 41 ★ | active |
 | 10 | [Sdd · applica-software-guru](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 50 | 11 ★ | active |
 | 11 | [Reqvire](https://tashan.sh/capability/plugin-reqvire-org-reqvire-reqvire.html) | 50 | 15 ★ | active |
-| 12 | [Don Cheli Sdd Framework](https://tashan.sh/capability/plugin-doncheli-don-cheli-sdd-don-cheli-sdd-framework.html) | 49 | 56 ★ | active |
+| 12 | [Don Cheli Sdd Framework](https://tashan.sh/capability/plugin-doncheli-don-cheli-sdd-don-cheli-sdd-framework.html) | 48 | 56 ★ | active |
 | 13 | [Specops](https://tashan.sh/capability/plugin-sanmak-specops-specops.html) | 47 | 50 ★ | active |
 | 14 | [Jig](https://tashan.sh/capability/plugin-ramboz-jig-jig.html) | 47 | 4 ★ | active |
-| 15 | [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) | 75 | 19k/wk | active |
-| 16 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 62 | 205 ★ | active |
-| 17 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 58 | 96 ★ | active |
-| 18 | [Memex Checkout](https://tashan.sh/capability/plugin-mindset-ai-memex-ai-memex-checkout.html) | 55 | 29 ★ | active |
-| 19 | [Brainstorming](https://tashan.sh/capability/skill-obra-brainstorming.html) | 52 | 5 repos | active |
-| 20 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | 48 | 3 repos | active |
-| 21 | [Writing Plans](https://tashan.sh/capability/skill-obra-writing-plans.html) | 48 | 3 repos | active |
+| 15 | [Vibe Cartographer](https://tashan.sh/capability/plugin-estevanhernandez-stack-ed-vibe-cartographer-vibe-cartographer.html) | 40 | 1 ★ | active |
+| 16 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 40 | 4 ★ | active |
+| 17 | [Spec · kamioj](https://tashan.sh/capability/plugin-kamioj-spec-workflow-spec.html) | 40 | 9 ★ | active |
+| 18 | [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) | 75 | 19k/wk | active |
+| 19 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 62 | 205 ★ | active |
+| 20 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 57 | 96 ★ | active |
+| 21 | [Memex Checkout](https://tashan.sh/capability/plugin-mindset-ai-memex-ai-memex-checkout.html) | 55 | 29 ★ | active |
 | 22 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 48 | 5 ★ | active |
-| 23 | [Agile Product Owner](https://tashan.sh/capability/skill-alirezarezvani-agile-product-owner.html) | 47 | 3 repos | active |
-| 24 | [Product Manager Toolkit](https://tashan.sh/capability/skill-alirezarezvani-product-manager-toolkit.html) | 47 | 3 repos | active |
-| 25 | [Spec Driven Workflow](https://tashan.sh/capability/skill-alirezarezvani-spec-driven-workflow.html) | 44 | 2 repos | active |
-| 26 | [Spec To Repo](https://tashan.sh/capability/skill-alirezarezvani-spec-to-repo.html) | 44 | 2 repos | active |
-| 27 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 44 | 20 ★ | active |
-| 28 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 69 | 504 ★ | active |
-| 29 | [Spec Driven Development · GameFixxer](https://tashan.sh/capability/plugin-gamefixxer-spec-driven-development-spec-driven-development.html) | 46 | 3 ★ | active |
-| 30 | [Aioproductoscom](https://tashan.sh/capability/pkg-aioproductoscom-mcp.html) | 56 | 215/wk | active |
-| 31 | [Lanhu](https://tashan.sh/capability/pkg-mcp-lanhu.html) | 52 | 243/wk | active |
-| 32 | [Ainative Prd](https://tashan.sh/capability/pkg-ainative-prd-mcp.html) | 51 | 229/wk | active |
-| 33 | [Studio](https://tashan.sh/capability/pkg-aioproductoscom-mcp-studio.html) | 48 | 170/wk | active |
-| 34 | [Cloud](https://tashan.sh/capability/pkg-unified-product-graph-cloud-server.html) | 62 | 614/wk | active |
-| 35 | [Unified Product Graph · @unified-product-graph](https://tashan.sh/capability/pkg-unified-product-graph-mcp-server.html) | 62 | 293/wk | active |
-| 36 | [Compliance](https://tashan.sh/capability/pkg-yawlabs-mcp-compliance.html) | 60 | 519/wk | active |
-| 37 | [Qatouch](https://tashan.sh/capability/pkg-qatouch-mcp-server.html) | 57 | 274/wk | active |
-| 38 | [Aha](https://tashan.sh/capability/pkg-cedricziel-aha-mcp.html) | 54 | 141/wk | active |
-| 39 | [Vaspera Pm](https://tashan.sh/capability/pkg-vaspera-pm.html) | 51 | 111/wk | active |
-| 40 | [Claude Code Session Manager](https://tashan.sh/capability/pkg-claude-code-session-manager.html) | 70 | 2k/wk | active |
+| 23 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 44 | 20 ★ | active |
+| 24 | [Belmont](https://tashan.sh/capability/plugin-blake-simpson-belmont-belmont.html) | 42 | 4 ★ | active |
+| 25 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 42 | 5 ★ | active |
+| 26 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 41 | 3 ★ | active |
+| 27 | [Zsl Superpowers](https://tashan.sh/capability/plugin-zunosmartlabs-zsl-superpowers-zsl-superpowers.html) | 40 | 1 ★ | active |
+| 28 | [Mindpowers](https://tashan.sh/capability/plugin-rohitgehe05-mindpowers-mindpowers.html) | 39 | 3 ★ | active |
+| 29 | [Cc Orchestrador Subagents](https://tashan.sh/capability/plugin-allanharlen-cc-orchestrador-subagents-cc-orchestrador-subagents.html) | 39 | 0 ★ | active |
+| 30 | [Waterfall](https://tashan.sh/capability/plugin-mgallet92i-waterfall-waterfall.html) | 39 | 2 ★ | active |
+| 31 | [Brainstorming](https://tashan.sh/capability/skill-obra-brainstorming.html) | not scored | 5 repos | active |
+| 32 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 69 | 504 ★ | active |
+| 33 | [Spec Driven Development](https://tashan.sh/capability/plugin-gamefixxer-spec-driven-development-spec-driven-development.html) | 46 | 3 ★ | active |
+| 34 | [Spec First](https://tashan.sh/capability/plugin-bitcraft-apps-spec-first-spec-first.html) | 39 | 4 ★ | active |
+| 35 | [Aioproductoscom](https://tashan.sh/capability/pkg-aioproductoscom-mcp.html) | 56 | 215/wk | active |
+| 36 | [Lanhu](https://tashan.sh/capability/pkg-mcp-lanhu.html) | 52 | 243/wk | active |
+| 37 | [Ainative Prd](https://tashan.sh/capability/pkg-ainative-prd-mcp.html) | 51 | 229/wk | active |
+| 38 | [Studio](https://tashan.sh/capability/pkg-aioproductoscom-mcp-studio.html) | 48 | 170/wk | active |
+| 39 | [Openapi To Tools](https://tashan.sh/capability/pkg-buildwithlayer-openapi-to-tools.html) | 34 | 1k/wk | abandoned |
+| 40 | [Cloud](https://tashan.sh/capability/pkg-unified-product-graph-cloud-server.html) | 62 | 614/wk | active |
+
+Showing the top 40 of 47. The full ranked shelf is at https://tashan.sh/task/prd-and-specs.html.
 
 ## What these numbers are not
 

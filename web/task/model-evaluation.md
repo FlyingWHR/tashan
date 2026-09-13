@@ -13,29 +13,33 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 77 | 17k ★ | active |
 | 2 | [Datarobot Agent Skills](https://tashan.sh/capability/plugin-datarobot-oss-datarobot-agent-skills-datarobot-agent-skills.html) | 62 | 23 ★ | active |
-| 3 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 62 | 61 ★ | active |
-| 4 | [Evalview](https://tashan.sh/capability/plugin-hidai25-eval-view-evalview.html) | 62 | 124 ★ | active |
-| 5 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 61 | 37 ★ | active |
+| 3 | [Evalview](https://tashan.sh/capability/plugin-hidai25-eval-view-evalview.html) | 62 | 124 ★ | active |
+| 4 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 61 | 37 ★ | active |
+| 5 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 61 | 61 ★ | active |
 | 6 | [Probabl Skills](https://tashan.sh/capability/plugin-probabl-ai-skills-probabl-skills.html) | 57 | 74 ★ | active |
 | 7 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 45 | 8 ★ | active |
-| 8 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 77 | 11k ★ | active |
-| 9 | [Promptfoo Evals](https://tashan.sh/capability/plugin-promptfoo-promptfoo-promptfoo-evals.html) | 76 | 24k ★ | active |
-| 10 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | 55 | 7 repos | active |
-| 11 | [Setup](https://tashan.sh/capability/skill-alirezarezvani-setup.html) | 54 | 7 repos | active |
+| 8 | [Nnsight](https://tashan.sh/capability/plugin-ndif-team-skills-nnsight.html) | 42 | 9 ★ | active |
+| 9 | [Autoresearch AI Plugin](https://tashan.sh/capability/plugin-proyecto26-autoresearch-ai-plugin-autoresearch-ai-plugin.html) | 40 | 12 ★ | active |
+| 10 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 77 | 11k ★ | active |
+| 11 | [Promptfoo Evals](https://tashan.sh/capability/plugin-promptfoo-promptfoo-promptfoo-evals.html) | 76 | 24k ★ | active |
 | 12 | [Agent Eval Harness · redhat-global-engineering](https://tashan.sh/capability/plugin-redhat-global-engineering-ge-public-skills-agent-eval-harness.html) | 48 | 5 ★ | active |
-| 13 | [Chief AI Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-ai-officer-advisor.html) | 44 | 2 repos | active |
-| 14 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | 44 | 2 repos | active |
-| 15 | [Agenthub](https://tashan.sh/capability/skill-alirezarezvani-agenthub.html) | 44 | 2 repos | active |
-| 16 | [Prompt Governance](https://tashan.sh/capability/skill-alirezarezvani-prompt-governance.html) | 44 | 2 repos | active |
-| 17 | [Prompt Engineer Toolkit](https://tashan.sh/capability/skill-alirezarezvani-prompt-engineer-toolkit.html) | 44 | 2 repos | active |
-| 18 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 70 | 218 ★ | active |
-| 19 | [Nexus Agents · williamzujkowski](https://tashan.sh/capability/plugin-williamzujkowski-nexus-agents-nexus-agents.html) | 53 | 16 ★ | active |
-| 20 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 54 | 158/wk | active |
-| 21 | [My Pi](https://tashan.sh/capability/pkg-my-pi.html) | 68 | 1k/wk | active |
-| 22 | [Evals](https://tashan.sh/capability/pkg-cyanheads-evals-mcp-server.html) | 53 | 224/wk | active |
-| 23 | [Mcpscope](https://tashan.sh/capability/pkg-mcpscope.html) | 52 | 300/wk | active |
-| 24 | [Trustmodel](https://tashan.sh/capability/pkg-trustmodel-mcp-server.html) | 48 | 59/wk | active |
-| 25 | [Plzebo](https://tashan.sh/capability/pkg-plzebo.html) | 51 | 326/wk | active |
+| 13 | [Bitfab](https://tashan.sh/capability/plugin-project-white-rabbit-bitfab-claude-plugin-bitfab.html) | 39 | 1 ★ | active |
+| 14 | [Langsmith](https://tashan.sh/capability/pkg-langsmith-mcp-server.html) | 39 | 3k/wk | abandoned |
+| 15 | [Claude Performance](https://tashan.sh/capability/plugin-adelaidasofia-claude-performance-claude-performance.html) | 38 | 1 ★ | active |
+| 16 | [Everdict](https://tashan.sh/capability/plugin-everdict-everdict-everdict.html) | 34 | 1 ★ | active |
+| 17 | [Setup](https://tashan.sh/capability/skill-alirezarezvani-setup.html) | not scored | 7 repos | active |
+| 18 | [Skill Creator](https://tashan.sh/capability/skill-anthropics-skill-creator.html) | not scored | 7 repos | active |
+| 19 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 70 | 218 ★ | active |
+| 20 | [Nexus Agents · williamzujkowski](https://tashan.sh/capability/plugin-williamzujkowski-nexus-agents-nexus-agents.html) | 53 | 16 ★ | active |
+| 21 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 54 | 158/wk | active |
+| 22 | [My Pi](https://tashan.sh/capability/pkg-my-pi.html) | 68 | 1k/wk | active |
+| 23 | [Evals](https://tashan.sh/capability/pkg-cyanheads-evals-mcp-server.html) | 53 | 224/wk | active |
+| 24 | [Mcpscope](https://tashan.sh/capability/pkg-mcpscope.html) | 52 | 300/wk | active |
+| 25 | [Trustmodel](https://tashan.sh/capability/pkg-trustmodel-mcp-server.html) | 48 | 59/wk | active |
+| 26 | [Orizu](https://tashan.sh/capability/plugin-orizuai-orizu-cli-orizu.html) | 40 | 0 ★ | active |
+| 27 | [Crosscheck · lakshaymeghlan](https://tashan.sh/capability/pkg-lakshaymeghlan-crosscheck.html) | 34 | 6/wk | active |
+| 28 | [Prove](https://tashan.sh/capability/plugin-vassilissoum-prove-prove.html) | 31 | 1 ★ | active |
+| 29 | [Plzebo](https://tashan.sh/capability/pkg-plzebo.html) | 51 | 326/wk | active |
 
 ## What these numbers are not
 

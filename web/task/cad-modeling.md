@@ -13,11 +13,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 75 | 11k ★ | active |
 | 2 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 59 | 284 ★ | active |
-| 3 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 56 | 612/wk | active |
-| 4 | [Shapeitup](https://tashan.sh/capability/pkg-shapeitup-mcp-server.html) | 55 | 99/wk | active |
-| 5 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 54 | 307/wk | active |
-| 6 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 51 | 138/wk | active |
-| 7 | [Cadlens](https://tashan.sh/capability/pkg-cadlens-mcp-server.html) | 47 | 66/wk | active |
+| 3 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 42 | 18 ★ | active |
+| 4 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 56 | 612/wk | active |
+| 5 | [Shapeitup](https://tashan.sh/capability/pkg-shapeitup-mcp-server.html) | 55 | 99/wk | active |
+| 6 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 53 | 307/wk | active |
+| 7 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 51 | 138/wk | active |
+| 8 | [Cadlens](https://tashan.sh/capability/pkg-cadlens-mcp-server.html) | 47 | 66/wk | active |
 
 ## What these numbers are not
 

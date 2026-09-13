@@ -866,5 +866,40 @@ for _page, _rx, _want, _label in (
        f"says {_m.group(1) if _m else 'nothing'} where index.json says {_want:,} — two pages, two "
        f"sizes of the same ecosystem")
 
+# ---- 17. A SCORE MUST MEAN THE SAME THING IN EVERY ROW ------------------------------------------
+# The board put `Context7 99` — 1.1M npm downloads a week, a graded README, an advisory scan — in
+# the same column as `code-review 64`, a folder inside a repository whose number was the
+# repository's. It got there through an escape hatch in export()'s rated/catalogued gate:
+# `config_reach > 1` counted as "this skill has evidence of its own", and for a skill config_reach
+# counts references to the REPO, so the gate was asking a repo-level question to license repo-level
+# scoring. Measured when this was found: of the 395 owners with five or more scored skills (9,748
+# rows), 66% had ONE identical score across every skill they publish. Gavin-Gibson: 263 skills,
+# three values.
+#
+# The rule, stated as behaviour rather than as prose in a docstring: a ranked skill must carry
+# per-skill evidence. A grade of its own SKILL.md, or adoption of its own. Nothing else licenses a
+# number, because nothing else varies within a repository.
+_ex = load("data/capabilities.json") or {}
+_sk = [c for c in (_ex.get("capabilities") or []) if str(c.get("id", "")).startswith("skill:")]
+_ranked_sk = [c for c in _sk if c.get("tashan_score") is not None]
+_no_ev = [c for c in _ranked_sk if not c.get("expertise_verdict") and c.get("npm_downloads") is None]
+ok(f"every ranked skill has per-skill evidence ({len(_ranked_sk):,} ranked of {len(_sk):,})",
+   not _no_ev,
+   f"{len(_no_ev):,} skills carry a score with no grade of their own and no adoption of their own — "
+   f"e.g. {[c['id'] for c in _no_ev[:3]]}. That number is the repository's, shared by every skill in "
+   f"it; see export()'s rated/catalogued gate in build.py")
+
+# And the shape that proves it, independent of the gate: a repository's skills must not all land on
+# one number. Checked over the owners big enough for the collision to be unambiguous.
+_by_owner = {}
+for _c in _ranked_sk:
+    _by_owner.setdefault(_c["id"].split(":", 1)[1].split("/")[0], []).append(_c)
+_big = {o: v for o, v in _by_owner.items() if len(v) >= 5}
+_flat = [o for o, v in _big.items() if len({c["tashan_score"] for c in v}) == 1]
+ok(f"no publisher's skills all share one score ({len(_big)} publishers with 5+ ranked skills)",
+   not _flat,
+   f"{len(_flat)} publisher(s) have an identical score on every skill they ship: {_flat[:4]} — "
+   f"that is the repo's maintenance signal wearing a per-skill label")
+
 print("\nCONSISTENCY FAILED" if fail else "\nok — one capability, one set of facts, every surface")
 sys.exit(fail)

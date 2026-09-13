@@ -15,21 +15,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 49 | 123 ★ | active |
 | 3 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 65 | 1k ★ | active |
 | 4 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 58 | 238 ★ | active |
-| 5 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 50 | 4 repos | active |
-| 6 | [Copywriting](https://tashan.sh/capability/skill-alirezarezvani-copywriting.html) | 47 | 3 repos | active |
-| 7 | [Email Sequence](https://tashan.sh/capability/skill-alirezarezvani-email-sequence.html) | 47 | 3 repos | active |
-| 8 | [Internal Narrative](https://tashan.sh/capability/skill-alirezarezvani-internal-narrative.html) | 44 | 2 repos | active |
-| 9 | [Ad Creative](https://tashan.sh/capability/skill-alirezarezvani-ad-creative.html) | 44 | 2 repos | active |
-| 10 | [Cold Email](https://tashan.sh/capability/skill-alirezarezvani-cold-email.html) | 44 | 2 repos | active |
-| 11 | [Content Production](https://tashan.sh/capability/skill-alirezarezvani-content-production.html) | 44 | 2 repos | active |
-| 12 | [X Twitter Growth](https://tashan.sh/capability/skill-alirezarezvani-x-twitter-growth.html) | 44 | 2 repos | active |
-| 13 | [Video Content Strategist](https://tashan.sh/capability/skill-alirezarezvani-video-content-strategist.html) | 44 | 2 repos | active |
-| 14 | [Team Communications](https://tashan.sh/capability/skill-alirezarezvani-team-communications.html) | 44 | 2 repos | active |
-| 15 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 72 | 5k ★ | active |
-| 16 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 51 | 141/wk | active |
-| 17 | [Misarblog](https://tashan.sh/capability/pkg-misarblog-mcp.html) | 60 | 161/wk | active |
-| 18 | [Etincel Nonfiction](https://tashan.sh/capability/pkg-etincel.html) | 55 | 209/wk | active |
-| 19 | [Velocms](https://tashan.sh/capability/pkg-velocms-mcp.html) | 53 | 67/wk | active |
+| 5 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 40 | 19 ★ | active |
+| 6 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 40 | 1 marketplaces | active |
+| 7 | [LinkedIn Post Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-post-generator.html) | 39 | 1 marketplaces | active |
+| 8 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 72 | 5k ★ | active |
+| 9 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 51 | 141/wk | active |
+| 10 | [Neuraldraft](https://tashan.sh/capability/pkg-neuraldraft-mcp.html) | 35 | 29/wk | active |
+| 11 | [Misarblog](https://tashan.sh/capability/pkg-misarblog-mcp.html) | 59 | 161/wk | active |
+| 12 | [Etincel Nonfiction](https://tashan.sh/capability/pkg-etincel.html) | 55 | 209/wk | active |
+| 13 | [Velocms](https://tashan.sh/capability/pkg-velocms-mcp.html) | 53 | 67/wk | active |
+| 14 | [Humanize · smykla-skalski](https://tashan.sh/capability/plugin-smykla-skalski-sai-humanize.html) | 42 | 1 marketplaces | — |
+| 15 | [Freemodel](https://tashan.sh/capability/pkg-freemodel-mcp.html) | 41 | 32/wk | active |
+| 16 | [Markdown](https://tashan.sh/capability/plugin-virajp-ai-plugins-markdown.html) | 37 | 1 marketplaces | active |
+| 17 | [Overgrow](https://tashan.sh/capability/plugin-zhizdev-overgrow-overgrow.html) | 35 | 7 ★ | active |
 
 ## What these numbers are not
 

@@ -18,12 +18,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 60 | 90 ★ | active |
 | 6 | [Firehydrant](https://tashan.sh/capability/pkg-firehydrant-mcp.html) | 51 | 7k/wk | abandoned |
 | 7 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
-| 8 | [Incident Commander](https://tashan.sh/capability/skill-alirezarezvani-incident-commander.html) | 44 | 2 repos | active |
-| 9 | [Threat Detection](https://tashan.sh/capability/skill-alirezarezvani-threat-detection.html) | 44 | 2 repos | active |
-| 10 | [Chaos Engineering](https://tashan.sh/capability/skill-alirezarezvani-chaos-engineering.html) | 44 | 2 repos | active |
-| 11 | [Runbook Generator](https://tashan.sh/capability/skill-alirezarezvani-runbook-generator.html) | 44 | 2 repos | active |
-| 12 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 59 | 18 ★ | active |
-| 13 | [Debugbundle](https://tashan.sh/capability/pkg-debugbundle-mcp.html) | 52 | 190/wk | active |
+| 8 | [Copaw Ops](https://tashan.sh/capability/plugin-chujianyun-skills-copaw-ops.html) | 36 | 1 marketplaces | active |
+| 9 | [Openclaw Ops](https://tashan.sh/capability/plugin-chujianyun-skills-openclaw-ops.html) | 36 | 1 marketplaces | active |
+| 10 | [Hermes Ops](https://tashan.sh/capability/plugin-chujianyun-skills-hermes-ops.html) | 36 | 1 marketplaces | active |
+| 11 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 59 | 18 ★ | active |
+| 12 | [Debugbundle](https://tashan.sh/capability/pkg-debugbundle-mcp.html) | 52 | 190/wk | active |
 
 ## What these numbers are not
 

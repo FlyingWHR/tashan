@@ -1587,7 +1587,15 @@ def export(con):
     # layer down.
     BULK_CAP = int(os.environ.get("BULK_CAP", "12000"))
     RANK_CAP = 1080   # board only: the largest that fits the 45 KB gz index budget (test_site asserts it)
+    # THE GATE HAS TO RUN BEFORE THE SLICE, NOT AFTER IT. The rated/catalogued rule below nulls the
+    # score of any skill with no per-skill evidence — but it ran on rows this query had already
+    # chosen, and this query chose them BY that score. 35,808 skills carry a repository's score in
+    # the 44-64 band, so they took 5,176 of the 12,000 bulk slots from real servers, arrived, lost
+    # the number that won them the slot, and landed in the catalogued tail. The board's first-paint
+    # payload went from 98 KB to 148 KB gz delivering them. Same rule, one stage earlier: a score
+    # nobody is going to publish cannot buy a place in the export.
     rows = con.execute(f"SELECT {','.join(cols)} FROM capabilities WHERE tashan_score IS NOT NULL "
+                       "AND NOT (kind='skill' AND expertise IS NULL AND npm_downloads IS NULL) "
                        "ORDER BY tashan_score DESC, config_reach DESC, npm_downloads DESC "
                        f"LIMIT {BULK_CAP}").fetchall()
     scored_total = con.execute("SELECT COUNT(*) FROM capabilities WHERE tashan_score IS NOT NULL").fetchone()[0]
@@ -1601,16 +1609,45 @@ def export(con):
     # zero — the same class of silent-tier-deletion bug as before, one layer down. Populations that are
     # selected against different signals must not share a LIMIT.
     seen_ids = {r[0] for r in rows}
-    def take(where, order, limit):
-        out = [r for r in con.execute(
-            f"SELECT {','.join(cols)} FROM capabilities WHERE {where} "
-            f"ORDER BY {order} LIMIT {limit}").fetchall() if r[0] not in seen_ids]
-        seen_ids.update(r[0] for r in out)
+
+    # ONE REPOSITORY IS NOT A CATALOGUE. Every row in the catalogued tier is unrated by construction,
+    # so nothing orders them against each other — which means whoever publishes the most skills wins
+    # the browse view outright. Measured before this cap: tonone-ai held 382 of 4,890 exported skills
+    # and 378 of 2,677 on the board, one repository accounting for 10% of everything a visitor could
+    # scroll; the top ten publishers held 34%. That is not a ranking anyone can argue with, it is a
+    # directory sorted by who was most prolific, and it buries the 583rd publisher's one good skill
+    # under the 300th copy of somebody's prompt folder.
+    #
+    # `per_owner` caps the depth any single publisher can reach into an unranked tier. It is a browse
+    # cap, not a deletion: the rows stay in the database, keep their dossier once they earn a grade,
+    # and `doctor` still resolves every one of them through lookup.json. The number is deliberately
+    # small — with no per-item evidence there is nothing to say about skill #4 from a repo that was
+    # not already said by skill #1.
+    def owner_of(cid):
+        """Who published this. `skill:<owner>/<name>`, `plugin:<home-repo>/<name>`."""
+        rest = cid.split(":", 1)[1] if ":" in cid else cid
+        return rest.split("/")[0].lower()
+
+    def take(where, order, limit, per_owner=None):
+        out, held = [], {}
+        for r in con.execute(f"SELECT {','.join(cols)} FROM capabilities WHERE {where} "
+                             f"ORDER BY {order} LIMIT {max(limit * 12, limit)}"):
+            if r[0] in seen_ids:
+                continue
+            if per_owner:
+                o = owner_of(r[0])
+                if held.get(o, 0) >= per_owner:
+                    continue
+                held[o] = held.get(o, 0) + 1
+            out.append(r)
+            seen_ids.add(r[0])
+            if len(out) >= limit:
+                break
         return out
 
     DESC_OK = "description IS NOT NULL AND description != ''"
-    rows += take(f"kind='plugin' AND {DESC_OK}", "gh_stars DESC NULLS LAST", 700)
-    rows += take(f"kind='skill'  AND {DESC_OK}", "config_reach DESC, name", 700)
+    rows += take(f"kind='plugin' AND {DESC_OK}", "gh_stars DESC NULLS LAST", 700, per_owner=6)
+    rows += take(f"kind='skill'  AND {DESC_OK}", "config_reach DESC, name", 700, per_owner=3)
     # DISCONTINUED: listed, never recommended. compute_scores refuses a score to anything the author,
     # npm or the registry has declared over, which is what keeps it off the board and out of every
     # hub. But dropping it from the export entirely is a different mistake: pkg:docfork went from
@@ -2170,9 +2207,24 @@ def export(con):
     # cannot support. So it is withheld rather than shown — the row stays fully browsable, searchable and
     # installable, it just isn't ranked until there is per-skill evidence (an expertise grade of its own
     # SKILL.md, or real cross-repo adoption). Saying "not rated yet" is the honest version of not knowing.
+    #
+    # AND `config_reach` WAS NEVER PER-SKILL EVIDENCE. It sat in this gate as an escape hatch, and it
+    # made the rule circular: config_reach counts the public configs that reference a capability, and
+    # for a skill those references are to the REPOSITORY, so it is the same repo-level number the
+    # gate exists to refuse. Measured over the 395 owners with five or more scored skills, covering
+    # 9,748 rows: 68% have one config_reach across every skill they publish, and 66% end up with one
+    # identical tashan_score across every skill they publish. The median owner produced exactly ONE
+    # distinct score for their whole catalogue — Gavin-Gibson, 263 skills, three values; reevesc88,
+    # 162 skills, two. A reader sorting the board saw those beside Context7 at 99, which means 1.1M
+    # npm downloads a week and a graded README, in the same column, as if they were the same claim.
+    #
+    # So the gate is now what the paragraph above always said it was: a skill is rankable when it has
+    # evidence of its OWN — a grade of its own SKILL.md, or real adoption because it also ships as a
+    # package. Today that is zero skills out of 10,991 scored, and publishing zero ranked skills is
+    # the honest reading of having graded none of them. They stay catalogued: browsable, searchable,
+    # installable, with `rating_basis` saying why there is no number.
     for c in caps:
-        per_item = (c.get("expertise") is not None) or ((c.get("config_reach") or 0) > 1) \
-                   or (c.get("npm_downloads") is not None)
+        per_item = (c.get("expertise") is not None) or (c.get("npm_downloads") is not None)
         if c.get("kind") == "skill" and not per_item:
             c["tashan_score"] = None
             c["rated"] = False

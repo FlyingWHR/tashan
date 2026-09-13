@@ -20,15 +20,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 75 | 11k ★ | active |
 | 3 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 59 | 284 ★ | active |
 | 4 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 47 | 5 ★ | active |
-| 5 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 46 | 2 marketplaces | — |
-| 6 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 58 | 466/wk | active |
-| 7 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 56 | 612/wk | active |
-| 8 | [Shapeitup](https://tashan.sh/capability/pkg-shapeitup-mcp-server.html) | 55 | 99/wk | active |
-| 9 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 54 | 307/wk | active |
-| 10 | [Embedcalc](https://tashan.sh/capability/pkg-embedcalc-mcp.html) | 52 | 208/wk | active |
-| 11 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 51 | 138/wk | active |
-| 12 | [Cadlens](https://tashan.sh/capability/pkg-cadlens-mcp-server.html) | 47 | 66/wk | active |
-| 13 | [Rftools](https://tashan.sh/capability/pkg-rftools-mcp.html) | 47 | 151/wk | active |
+| 5 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 42 | 18 ★ | active |
+| 6 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 46 | 2 marketplaces | — |
+| 7 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 58 | 466/wk | active |
+| 8 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 56 | 612/wk | active |
+| 9 | [Trustrails](https://tashan.sh/capability/pkg-trustrails-mcp-server.html) | 38 | 93/wk | active |
+| 10 | [Shapeitup](https://tashan.sh/capability/pkg-shapeitup-mcp-server.html) | 55 | 99/wk | active |
+| 11 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 53 | 307/wk | active |
+| 12 | [Embedcalc](https://tashan.sh/capability/pkg-embedcalc-mcp.html) | 52 | 208/wk | active |
+| 13 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 51 | 138/wk | active |
+| 14 | [Cadlens](https://tashan.sh/capability/pkg-cadlens-mcp-server.html) | 47 | 66/wk | active |
+| 15 | [Rftools](https://tashan.sh/capability/pkg-rftools-mcp.html) | 47 | 151/wk | active |
 
 ## What these numbers are not
 

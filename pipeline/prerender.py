@@ -1181,9 +1181,15 @@ def bake_counts(measured):
     dead = con.execute("SELECT COUNT(*) FROM capabilities WHERE vitality='abandoned' "
                        "OR npm_deprecated=1 OR gh_archived=1").fetchone()[0]
     con.close()
+    # WHITESPACE-TOLERANT, because the prose around these numbers is edited by hand and HTML wraps.
+    # A copy pass rewrapped "…we measure are abandoned" across a line break and this stamper stopped
+    # matching — silently, since re.sub finding nothing is not an error. The page then held a figure
+    # from a week earlier on the one site whose product is numbers being current. A generator that
+    # can be disarmed by a line wrap is a trap; match runs of whitespace, not single spaces.
     edits = (
-        ("for-hosts.html", r"(\b)[\d,]+( measured servers today)", f"{measured:,}"),
-        ("pricing.html", r"(<b>)[\d,]+(</b> of the things we measure are abandoned)", f"{dead:,}"),
+        ("for-hosts.html", r"(\b)[\d,]+(\s+measured\s+servers\s+today)", f"{measured:,}"),
+        ("pricing.html",
+         r"(<b>)[\d,]+(</b>\s+of\s+the\s+things\s+we\s+measure\s+are\s+abandoned)", f"{dead:,}"),
     )
     for page, pat, val in edits:
         path = os.path.join(ROOT, "web", page)

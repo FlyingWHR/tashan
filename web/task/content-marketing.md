@@ -20,39 +20,39 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 58 | 238 ★ | active |
 | 8 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 47 | 73 ★ | active |
 | 9 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 43 | 3 ★ | active |
-| 10 | [Marketing Ideas](https://tashan.sh/capability/skill-alirezarezvani-marketing-ideas.html) | 49 | 4 repos | active |
-| 11 | [Resend](https://tashan.sh/capability/plugin-resend-resend-skills-resend.html) | 48 | 3 marketplaces | — |
-| 12 | [Competitor Alternatives](https://tashan.sh/capability/skill-alirezarezvani-competitor-alternatives.html) | 47 | 3 repos | active |
-| 13 | [Content Creator](https://tashan.sh/capability/skill-alirezarezvani-content-creator.html) | 47 | 3 repos | active |
-| 14 | [Copywriting](https://tashan.sh/capability/skill-alirezarezvani-copywriting.html) | 47 | 3 repos | active |
-| 15 | [Email Sequence](https://tashan.sh/capability/skill-alirezarezvani-email-sequence.html) | 47 | 3 repos | active |
-| 16 | [Form Cro](https://tashan.sh/capability/skill-alirezarezvani-form-cro.html) | 47 | 3 repos | active |
-| 17 | [Free Tool Strategy](https://tashan.sh/capability/skill-alirezarezvani-free-tool-strategy.html) | 47 | 3 repos | active |
-| 18 | [Launch Strategy](https://tashan.sh/capability/skill-alirezarezvani-launch-strategy.html) | 47 | 3 repos | active |
-| 19 | [Marketing Demand Acquisition](https://tashan.sh/capability/skill-alirezarezvani-marketing-demand-acquisition.html) | 47 | 3 repos | active |
-| 20 | [Marketing Psychology](https://tashan.sh/capability/skill-alirezarezvani-marketing-psychology.html) | 47 | 3 repos | active |
-| 21 | [Marketing Strategy Pmm](https://tashan.sh/capability/skill-alirezarezvani-marketing-strategy-pmm.html) | 47 | 3 repos | active |
-| 22 | [Page Cro](https://tashan.sh/capability/skill-alirezarezvani-page-cro.html) | 47 | 3 repos | active |
-| 23 | [Paid Ads](https://tashan.sh/capability/skill-alirezarezvani-paid-ads.html) | 47 | 3 repos | active |
-| 24 | [Popup Cro](https://tashan.sh/capability/skill-alirezarezvani-popup-cro.html) | 47 | 3 repos | active |
-| 25 | [Referral Program](https://tashan.sh/capability/skill-alirezarezvani-referral-program.html) | 47 | 3 repos | active |
-| 26 | [Social Content](https://tashan.sh/capability/skill-alirezarezvani-social-content.html) | 47 | 3 repos | active |
-| 27 | [Landing Page Generator](https://tashan.sh/capability/skill-alirezarezvani-landing-page-generator.html) | 47 | 3 repos | active |
-| 28 | [Competitive Ads Extractor](https://tashan.sh/capability/skill-composiohq-competitive-ads-extractor.html) | 45 | 2 repos | active |
-| 29 | [Internal Narrative](https://tashan.sh/capability/skill-alirezarezvani-internal-narrative.html) | 44 | 2 repos | active |
-| 30 | [Ad Creative](https://tashan.sh/capability/skill-alirezarezvani-ad-creative.html) | 44 | 2 repos | active |
-| 31 | [Content Production](https://tashan.sh/capability/skill-alirezarezvani-content-production.html) | 44 | 2 repos | active |
-| 32 | [Content Strategy](https://tashan.sh/capability/skill-alirezarezvani-content-strategy.html) | 44 | 2 repos | active |
-| 33 | [Marketing Context](https://tashan.sh/capability/skill-alirezarezvani-marketing-context.html) | 44 | 2 repos | active |
-| 34 | [Marketing Ops](https://tashan.sh/capability/skill-alirezarezvani-marketing-ops.html) | 44 | 2 repos | active |
-| 35 | [Social Media Manager](https://tashan.sh/capability/skill-alirezarezvani-social-media-manager.html) | 44 | 2 repos | active |
-| 36 | [X Twitter Growth](https://tashan.sh/capability/skill-alirezarezvani-x-twitter-growth.html) | 44 | 2 repos | active |
-| 37 | [Video Content Strategist](https://tashan.sh/capability/skill-alirezarezvani-video-content-strategist.html) | 44 | 2 repos | active |
-| 38 | [Socialneuron](https://tashan.sh/capability/pkg-socialneuron-mcp-server.html) | 61 | 860/wk | active |
-| 39 | [Reddit](https://tashan.sh/capability/pkg-reddit-mcp-server.html) | 54 | 460/wk | active |
-| 40 | [Postfast](https://tashan.sh/capability/pkg-postfast-mcp.html) | 52 | 103/wk | active |
+| 10 | [Post Bridge](https://tashan.sh/capability/plugin-post-bridge-hq-agent-mode-post-bridge.html) | 40 | 13 ★ | active |
+| 11 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 40 | 19 ★ | active |
+| 12 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 39 | 22 ★ | active |
+| 13 | [Resend](https://tashan.sh/capability/plugin-resend-resend-skills-resend.html) | 48 | 3 marketplaces | — |
+| 14 | [Botboard Biz](https://tashan.sh/capability/plugin-2389-research-claude-plugins-botboard-biz.html) | 42 | 1 marketplaces | — |
+| 15 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 40 | 1 marketplaces | active |
+| 16 | [LinkedIn Post Generator](https://tashan.sh/capability/plugin-roxabi-roxabi-plugins-linkedin-post-generator.html) | 39 | 1 marketplaces | active |
+| 17 | [Wechat Official Account Qr](https://tashan.sh/capability/plugin-chujianyun-skills-wechat-official-account-qr.html) | 36 | 1 marketplaces | active |
+| 18 | [Socialneuron](https://tashan.sh/capability/pkg-socialneuron-mcp-server.html) | 61 | 860/wk | active |
+| 19 | [Reddit](https://tashan.sh/capability/pkg-reddit-mcp-server.html) | 53 | 460/wk | active |
+| 20 | [Postfast](https://tashan.sh/capability/pkg-postfast-mcp.html) | 52 | 103/wk | active |
+| 21 | [Content Genie](https://tashan.sh/capability/pkg-content-genie-mcp.html) | 46 | 87/wk | active |
+| 22 | [Opedd — Licensed Content for AI](https://tashan.sh/capability/pkg-opedd-mcp.html) | 58 | 441/wk | active |
+| 23 | [Socialclaw](https://tashan.sh/capability/pkg-socialclaw.html) | 55 | 242/wk | active |
+| 24 | [Makers Page](https://tashan.sh/capability/pkg-makers-page-mcp.html) | 53 | 444/wk | active |
+| 25 | [Postlint](https://tashan.sh/capability/pkg-conorbronsdon-postlint-mcp.html) | 53 | 378/wk | active |
+| 26 | [Socialcrawl](https://tashan.sh/capability/pkg-socialcrawl-mcp.html) | 48 | 133/wk | active |
+| 27 | [Posteverywhere](https://tashan.sh/capability/pkg-posteverywhere-mcp.html) | 48 | 98/wk | active |
+| 28 | [Company Social Presence Mapper](https://tashan.sh/capability/pkg-mambalabsdev-mcp-company-social-presence-mapper.html) | 48 | 91/wk | active |
+| 29 | [Rolli](https://tashan.sh/capability/pkg-rolli-mcp.html) | 47 | 148/wk | active |
+| 30 | [Captapi](https://tashan.sh/capability/pkg-captapi-mcp.html) | 43 | 73/wk | active |
+| 31 | [Viralhunt](https://tashan.sh/capability/pkg-viralhunt-mcp.html) | 43 | 38/wk | active |
+| 32 | [Marketing · autostackup](https://tashan.sh/capability/pkg-autostackup-marketing.html) | 41 | 80/wk | active |
+| 33 | [Maasy — AI Marketing Copilot](https://tashan.sh/capability/pkg-maasy-ai-mcp-server.html) | 37 | 86/wk | active |
+| 34 | [Founder](https://tashan.sh/capability/pkg-autostackup-founder.html) | 34 | 20/wk | active |
+| 35 | [Chirpie](https://tashan.sh/capability/pkg-chirpie-mcp.html) | 71 | 3k/wk | active |
+| 36 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 70 | 3k ★ | active |
+| 37 | [Marketing Studio](https://tashan.sh/capability/plugin-ucsandman-marketing-studio-marketing-studio.html) | 66 | 227 ★ | active |
+| 38 | [Planvortex](https://tashan.sh/capability/pkg-planvortex-mcp.html) | 65 | 888/wk | active |
+| 39 | [Omnisocials](https://tashan.sh/capability/pkg-omnisocials-mcp-server.html) | 64 | 758/wk | active |
+| 40 | [Crmsolid](https://tashan.sh/capability/pkg-crmsolid-mcp-server.html) | 59 | 537/wk | active |
 
-Showing the top 40 of 64. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.
+Showing the top 40 of 59. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.
 
 ## What these numbers are not
 
