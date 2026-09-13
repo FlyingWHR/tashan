@@ -1,0 +1,70 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "The Graph — subgraph query",
+  "summary": "Query any subgraph published on The Graph Network over HTTP.",
+  "description": "The second half of tashan's composition, described so an agent platform can onboard it.\n\ntashan measures whether a capability is well made. This measures whether anyone has paid for it — the x402 settlement index on Base, read from a subgraph published on The Graph Network. Neither half answers the question alone, which is the point: the interesting rows are the ones where quality and payment disagree.\n\nThis is a thin description of one operation: POST a GraphQL query to a subgraph by id. It exists so a Recipe can bind The Graph as a tool alongside tashan's own, rather than us re-serving their data and calling it ours.",
+  "version": "1.0.0",
+  "contact": { "name": "The Graph", "url": "https://thegraph.com/docs/" }
+ },
+ "servers": [{ "url": "https://gateway.thegraph.com" }],
+ "paths": {
+  "/api/subgraphs/id/{subgraphId}": {
+   "post": {
+    "operationId": "querySubgraph",
+    "summary": "Run a GraphQL query against a published subgraph",
+    "description": "The x402 settlement index on Base is subgraph `Cb56epg3EvQ6JRpPfknbkM54QxpzTvLa7mwKNQQfUyoj`. Its `payments` entities carry the receipts tashan joins to its catalogue: `to` (the receiver address), `amount` (USDC, 6 decimals) and `blockTimestamp`.\n\nAggregate rather than paginate where you can — this is a chain index, not a database, and a query that walks every payment will time out.",
+    "parameters": [
+     {
+      "name": "subgraphId",
+      "in": "path",
+      "required": true,
+      "schema": { "type": "string" },
+      "example": "Cb56epg3EvQ6JRpPfknbkM54QxpzTvLa7mwKNQQfUyoj",
+      "description": "Deployment id of a subgraph published on The Graph Network"
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "type": "object",
+        "required": ["query"],
+        "properties": {
+         "query": { "type": "string", "description": "A GraphQL query document" },
+         "variables": { "type": "object", "description": "Optional GraphQL variables" }
+        }
+       },
+       "example": {
+        "query": "{ payments(first: 5, orderBy: amount, orderDirection: desc, where: {to: \"0xe9030014f5dae217d0a152f02a043567b16c1abf\"}) { to amount blockTimestamp } }"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "GraphQL result. Note that GraphQL reports failures inside `errors` with HTTP 200, so check for it.",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "data": { "type": "object" },
+          "errors": { "type": "array", "items": { "type": "object" } }
+         }
+        }
+       }
+      }
+     },
+     "401": { "description": "Missing or invalid gateway API key" },
+     "429": { "description": "Rate limited by the gateway" }
+    }
+   }
+  }
+ },
+ "externalDocs": {
+  "description": "The Graph — querying from an application",
+  "url": "https://thegraph.com/docs/en/subgraphs/querying/introduction/"
+ }
+}

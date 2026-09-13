@@ -1,0 +1,49 @@
+{
+  "name": "Is this worth building for",
+  "description": "Answers a question neither half of it can answer alone: is a given AI capability well made, AND has anyone ever actually paid for it?\n\ntashan supplies the measurement — the tashan score, whether the project is still maintained, known advisories at the version you would install today, and what it can reach on a machine. The Graph supplies the money: settled x402 receipts on Base, read from the published settlement index, for the payment address that capability advertises.\n\nThe interesting rows are the ones where the two disagree. A capability can be immaculately maintained and have never taken a cent, which is the normal case and not a defect — almost every MCP server is free by design. And the single largest receiver in the whole x402 economy, holding roughly two thirds of all volume, scores a perfectly ordinary 68. Quality and demand are different questions, and anyone deciding what to build for the agent economy needs both answers side by side rather than one of them twice.\n\nWhat it will not do: payment is never treated as a quality signal, unpaid is never reported as bad, and a capability with no measurement comes back unmeasured rather than guessed at. An address published by several services is reported as shared and never attributed to one project, because volume is a property of an address.",
+  "input_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "capability": {
+        "type": "string",
+        "description": "npm package, capability name or slug, e.g. tavily-mcp"
+      },
+      "address": {
+        "type": "string",
+        "description": "Optional x402 payment address to check on-chain. If omitted, only the measurement is returned and the payment half is reported as not looked up.",
+        "pattern": "^0x[a-fA-F0-9]{40}$"
+      }
+    },
+    "required": ["capability"]
+  },
+  "input_example": {
+    "capability": "blockrun-mcp",
+    "address": "0xe9030014f5dae217d0a152f02a043567b16c1abf"
+  },
+  "output_example": {
+    "capability": "blockrun-mcp",
+    "measured": {
+      "tashan_score": 68,
+      "health": "active",
+      "advisories": 0,
+      "source": "https://tashan.sh/capability/pkg-blockrun-mcp.html"
+    },
+    "settled": {
+      "usd": 166661.0,
+      "payments": 8718793,
+      "chain": "base",
+      "protocol": "x402",
+      "shared_address": false
+    },
+    "read": "Well maintained and, unusually, genuinely paid — this one address is roughly two thirds of all settled x402 volume. Quality and demand agree here, which is rare: the median service in this economy has earned about fifty cents in its entire life.",
+    "caveat": "Payment is not a quality signal and unpaid is not a defect. The measurement covers public evidence only: no code was executed and nothing was tested for prompt injection."
+  },
+  "prompt_template": "Decide whether an AI capability is worth building for, using both halves of the evidence.\n\nRequest: {{inputs}}\n\nStep 1 — quality. Call lookupCapability with the capability name. Take the tashan score, health, advisory count and dossier URL from it verbatim.\n\nStep 2 — money. If an address was supplied, call querySubgraph against subgraph Cb56epg3EvQ6JRpPfknbkM54QxpzTvLa7mwKNQQfUyoj and aggregate the `payments` entities for that `to` address: total `amount` (USDC has 6 decimals, so divide by 1,000,000) and the number of payments. If no address was supplied, call paidDemand and look the capability up in `records` instead. If neither yields a row, say the payment half was not found rather than reporting zero.\n\nStep 3 — read them together. Return JSON matching the output example: `capability`, `measured`, `settled`, `read`, `caveat`.\n\nThe `read` is the whole point and must compare the two, not restate them. Name which of these it is:\n- maintained and paid — rare, and worth saying so\n- maintained and unpaid — the normal case, explicitly not a defect\n- paid but poorly maintained — the case a download count would have hidden\n- neither — say so plainly\n\nRules you must not break:\n- Payment is never evidence of quality and never an input to any score. Never write that something is good because it earned, or bad because it did not.\n- Unpaid is the normal case for an MCP server. Never present it as a warning.\n- A shared address — one several services publish — is reported as shared and never attributed to this capability alone.\n- An unmeasured capability is reported as unmeasured. Never estimate a score.\n- Report every figure as the tools returned it. Convert USDC decimals, and round nothing else.",
+  "model": "anthropic/claude-sonnet-4.6",
+  "tool_bindings": [
+    { "gateway_slug": "6l6nau2p5ve7tjjwyhbtvctduy", "tool_name": "lookupCapability" },
+    { "gateway_slug": "6l6nau2p5ve7tjjwyhbtvctduy", "tool_name": "paidDemand" },
+    { "gateway_slug": "REPLACE_WITH_THEGRAPH_GATEWAY_SLUG", "tool_name": "querySubgraph" }
+  ]
+}
