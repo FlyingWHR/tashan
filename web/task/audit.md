@@ -35,8 +35,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Claude Ads](https://tashan.sh/capability/plugin-agricidaniel-claude-ads-claude-ads.html) | 69 | 8k ★ | active |
 | 23 | [Audit](https://tashan.sh/capability/pkg-sofagent-audit.html) | 67 | 827/wk | active |
 | 24 | [Crosscheck](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 66 | 789/wk | active |
-| 25 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 65 | 1k/wk | active |
-| 26 | [Claude Code](https://tashan.sh/capability/pkg-ory-claude-code.html) | 65 | 83/wk | active |
+| 25 | [Claude Code](https://tashan.sh/capability/pkg-ory-claude-code.html) | 65 | 83/wk | active |
+| 26 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 64 | 964/wk | active |
 | 27 | [Npmjs](https://tashan.sh/capability/pkg-yawlabs-npmjs-mcp.html) | 62 | 383/wk | active |
 | 28 | [Mcpscore](https://tashan.sh/capability/pkg-mcp-box-mcpscore.html) | 60 | 348/wk | active |
 | 29 | [Uxlint](https://tashan.sh/capability/pkg-uxlint-net-uxlint.html) | 57 | 512/wk | active |

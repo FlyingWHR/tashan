@@ -31,9 +31,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Firecrawl Workflows](https://tashan.sh/capability/plugin-firecrawl-firecrawl-workflows-firecrawl-workflows.html) | 49 | 101 ★ | active |
 | 19 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 46 | 21 ★ | active |
 | 20 | [Fouradata](https://tashan.sh/capability/pkg-fouradata-mcp.html) | 60 | 255/wk | active |
-| 21 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 59 | 347/wk | active |
-| 22 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 58 | 212/wk | active |
-| 23 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 57 | 839/wk | active |
+| 21 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 59 | 2k/wk | active |
+| 22 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 59 | 347/wk | active |
+| 23 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 58 | 212/wk | active |
 | 24 | [Crawlforge](https://tashan.sh/capability/pkg-crawlforge-mcp-server.html) | 57 | 285/wk | active |
 | 25 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 57 | 234/wk | active |
 | 26 | [SEO Audit Console](https://tashan.sh/capability/pkg-houtini-seo-audit-console.html) | 54 | 355/wk | active |

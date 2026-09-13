@@ -17,22 +17,6 @@
     <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
   </entry>
   <entry>
-    <title>Bike4mind — @bike4mind/cli has a different set of npm maintainers than it did</title>
-    <link href="https://tashan.sh/capability/pkg-bike4mind-cli.html"/>
-    <id>https://tashan.sh/capability/pkg-bike4mind-cli.html#ownership_changed-2026-09-12</id>
-    <updated>2026-09-12T00:00:00Z</updated>
-    <category term="ownership_changed"/>
-    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
-  </entry>
-  <entry>
-    <title>Bike4mind — the command @bike4mind/cli runs at install time changed</title>
-    <link href="https://tashan.sh/capability/pkg-bike4mind-cli.html"/>
-    <id>https://tashan.sh/capability/pkg-bike4mind-cli.html#install_script_changed-2026-09-12</id>
-    <updated>2026-09-12T00:00:00Z</updated>
-    <category term="install_script_changed"/>
-    <summary>The code that executes on your machine is not the code you last approved.  Compare the new command on the dossier against what you accepted.</summary>
-  </entry>
-  <entry>
     <title>MongoDB — mongodb-mcp-server has a different set of npm maintainers than it did</title>
     <link href="https://tashan.sh/capability/pkg-mongodb-mcp-server.html"/>
     <id>https://tashan.sh/capability/pkg-mongodb-mcp-server.html#ownership_changed-2026-09-12</id>
@@ -47,6 +31,22 @@
     <updated>2026-09-12T00:00:00Z</updated>
     <category term="ownership_changed"/>
     <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
+  </entry>
+  <entry>
+    <title>Bike4mind — @bike4mind/cli has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-bike4mind-cli.html"/>
+    <id>https://tashan.sh/capability/pkg-bike4mind-cli.html#ownership_changed-2026-09-12</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
+  </entry>
+  <entry>
+    <title>Bike4mind — the command @bike4mind/cli runs at install time changed</title>
+    <link href="https://tashan.sh/capability/pkg-bike4mind-cli.html"/>
+    <id>https://tashan.sh/capability/pkg-bike4mind-cli.html#install_script_changed-2026-09-12</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <category term="install_script_changed"/>
+    <summary>The code that executes on your machine is not the code you last approved.  Compare the new command on the dossier against what you accepted.</summary>
   </entry>
   <entry>
     <title>Acw Tools — @bangdao-ai/acw-tools has a different set of npm maintainers than it did</title>
@@ -68,14 +68,6 @@
     <title>Heroku — @heroku/mcp-server has a different set of npm maintainers than it did</title>
     <link href="https://tashan.sh/capability/pkg-heroku-mcp-server.html"/>
     <id>https://tashan.sh/capability/pkg-heroku-mcp-server.html#ownership_changed-2026-09-12</id>
-    <updated>2026-09-12T00:00:00Z</updated>
-    <category term="ownership_changed"/>
-    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
-  </entry>
-  <entry>
-    <title>Runpod — @runpod/mcp-server has a different set of npm maintainers than it did</title>
-    <link href="https://tashan.sh/capability/pkg-runpod-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-runpod-mcp-server.html#ownership_changed-2026-09-12</id>
     <updated>2026-09-12T00:00:00Z</updated>
     <category term="ownership_changed"/>
     <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
@@ -105,14 +97,6 @@
     <summary>The code that executes on your machine is not the code you last approved.  Compare the new command on the dossier against what you accepted.</summary>
   </entry>
   <entry>
-    <title>Reactor — @powerhousedao/reactor-mcp has a different set of npm maintainers than it did</title>
-    <link href="https://tashan.sh/capability/pkg-powerhousedao-reactor-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-powerhousedao-reactor-mcp.html#ownership_changed-2026-09-12</id>
-    <updated>2026-09-12T00:00:00Z</updated>
-    <category term="ownership_changed"/>
-    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
-  </entry>
-  <entry>
     <title>21st Dev — @21st-dev/cli has a different set of npm maintainers than it did</title>
     <link href="https://tashan.sh/capability/pkg-21st-dev-cli.html"/>
     <id>https://tashan.sh/capability/pkg-21st-dev-cli.html#ownership_changed-2026-09-12</id>
@@ -121,9 +105,9 @@
     <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
   </entry>
   <entry>
-    <title>Maker — @taptap/maker has a different set of npm maintainers than it did</title>
-    <link href="https://tashan.sh/capability/pkg-taptap-maker.html"/>
-    <id>https://tashan.sh/capability/pkg-taptap-maker.html#ownership_changed-2026-09-12</id>
+    <title>Runpod — @runpod/mcp-server has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-runpod-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-runpod-mcp-server.html#ownership_changed-2026-09-12</id>
     <updated>2026-09-12T00:00:00Z</updated>
     <category term="ownership_changed"/>
     <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
@@ -137,12 +121,28 @@
     <summary>The code that executes on your machine is not the code you last approved.  Compare the new command on the dossier against what you accepted.</summary>
   </entry>
   <entry>
+    <title>Maker — @taptap/maker has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-taptap-maker.html"/>
+    <id>https://tashan.sh/capability/pkg-taptap-maker.html#ownership_changed-2026-09-12</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
+  </entry>
+  <entry>
     <title>Kolbo — @kolbo/mcp now reaches network</title>
     <link href="https://tashan.sh/capability/pkg-kolbo-mcp.html"/>
     <id>https://tashan.sh/capability/pkg-kolbo-mcp.html#permissions_widened-2026-09-12</id>
     <updated>2026-09-12T00:00:00Z</updated>
     <category term="permissions_widened"/>
     <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Reactor — @powerhousedao/reactor-mcp has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-powerhousedao-reactor-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-powerhousedao-reactor-mcp.html#ownership_changed-2026-09-12</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
   </entry>
   <entry>
     <title>Run402 — mcp now reaches network</title>
@@ -183,6 +183,14 @@
     <updated>2026-09-12T00:00:00Z</updated>
     <category term="permissions_widened"/>
     <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Cognium AI — @cognium-ai/mcp-server has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-cognium-ai-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-cognium-ai-mcp-server.html#ownership_changed-2026-09-12</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
   </entry>
   <entry>
     <title>Hicortex — @gamaze/hicortex now reaches network</title>
@@ -239,6 +247,14 @@
     <updated>2026-09-12T00:00:00Z</updated>
     <category term="permissions_widened"/>
     <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Devlens — devlens now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-devlensio-cli.html"/>
+    <id>https://tashan.sh/capability/pkg-devlensio-cli.html#install_script_added-2026-09-12</id>
+    <updated>2026-09-12T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
   </entry>
   <entry>
     <title>Google Surf — google-surf-mcp now reaches network</title>
@@ -388,22 +404,6 @@
     <title>M365agentstoolkit — @microsoft/m365agentstoolkit-mcp now reads as abandoned, was active</title>
     <link href="https://tashan.sh/capability/pkg-microsoft-m365agentstoolkit-mcp.html"/>
     <id>https://tashan.sh/capability/pkg-microsoft-m365agentstoolkit-mcp.html#abandoned-2026-09-12</id>
-    <updated>2026-09-12T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Docs · workos — @workos/mcp-docs-server now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-workos-mcp-docs-server.html"/>
-    <id>https://tashan.sh/capability/pkg-workos-mcp-docs-server.html#abandoned-2026-09-12</id>
-    <updated>2026-09-12T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Fetch · zcaceres — mcp-fetch-server now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-mcp-fetch-server.html"/>
-    <id>https://tashan.sh/capability/pkg-mcp-fetch-server.html#abandoned-2026-09-12</id>
     <updated>2026-09-12T00:00:00Z</updated>
     <category term="abandoned"/>
     <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>

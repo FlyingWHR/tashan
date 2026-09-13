@@ -18,7 +18,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) | 77 | 13k/wk | active |
-| 2 | [Auth0](https://tashan.sh/capability/pkg-auth0-auth0-mcp-server.html) | 74 | 4k/wk | active |
+| 2 | [Auth0](https://tashan.sh/capability/pkg-auth0-auth0-mcp-server.html) | 75 | 5k/wk | active |
 | 3 | [Vercel](https://tashan.sh/capability/plugin-vercel-vercel-plugin-vercel.html) | 70 | 246 ★ | active |
 | 4 | [Zscaler](https://tashan.sh/capability/plugin-zscaler-zscaler-mcp-server-zscaler.html) | 63 | 41 ★ | active |
 | 5 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 58 | 15 ★ | active |
@@ -58,7 +58,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 47 | 1 ★ | active |
 | 40 | [Zilliz](https://tashan.sh/capability/plugin-zilliztech-zilliz-plugin-zilliz.html) | 45 | 3 ★ | active |
 
-Showing the top 40 of 215. The full ranked shelf is at https://tashan.sh/role/devops.html.
+Showing the top 40 of 217. The full ranked shelf is at https://tashan.sh/role/devops.html.
 
 ## What these numbers are not
 

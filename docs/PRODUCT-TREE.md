@@ -17,7 +17,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 68 |
 | `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 64 |
 | `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | board.json, coverage.json, index.json, tasks.json | free | 44 |
-| `/paid.html` | Settled x402 receipts on Base, joined to the catalog — the only signal here that is not a proxy for demand. Read through The Graph's Subgraph MCP, and the page prints the query so a reader can re-run it. | site | — | free | 34 |
+| `/paid.html` | Settled x402 receipts on Base, joined to the catalog — the only signal here that is not a proxy for demand. Read through The Graph's Subgraph MCP, and the page prints the query so a reader can re-run it. | site | — | free | 35 |
 | `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | board.json, capabilities.json, index.json, tasks.json | free | 34 |
 | `/changes.html` | What moved in the ecosystem, dated — the only page built from a series that cannot be backfilled, and the freshest thing we publish. | site | — | free | 33 |
 | `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | board.json, index.json, tasks.json | free | 33 |
@@ -38,7 +38,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route pattern | Pages | Generator |
 |---|---|---|
-| `/capability/*.html` | 11,584 | `pipeline/prerender.py` |
+| `/capability/*.html` | 11,586 | `pipeline/prerender.py` |
 | `/category/*.html` | 104 | `pipeline/gen_hubs.py` |
 | `/task/*.html` | 64 | `pipeline/gen_hubs.py` |
 | `/role/*.html` | 23 | `pipeline/gen_hubs.py` |

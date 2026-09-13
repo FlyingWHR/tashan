@@ -23,8 +23,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Azure Cost Calculator](https://tashan.sh/capability/plugin-ahmadabdalla-azure-cost-calculator-azure-cost-calculator.html) | 53 | 17 ★ | active |
 | 6 | [Management Consulting](https://tashan.sh/capability/plugin-anotb-management-consulting-plugin-management-consulting.html) | 51 | 43 ★ | active |
 | 7 | [Pigment](https://tashan.sh/capability/plugin-gopigment-ai-plugins-pigment.html) | 50 | 12 ★ | active |
-| 8 | [Financial Planner](https://tashan.sh/capability/plugin-cjpatten-canadian-finance-planner-skill-financial-planner.html) | 50 | 43 ★ | active |
-| 9 | [Siigo Pyme](https://tashan.sh/capability/pkg-siigo-pyme-mcp.html) | 50 | 81/wk | active |
+| 8 | [Siigo Pyme](https://tashan.sh/capability/pkg-siigo-pyme-mcp.html) | 50 | 81/wk | active |
+| 9 | [Financial Planner](https://tashan.sh/capability/plugin-cjpatten-canadian-finance-planner-skill-financial-planner.html) | 49 | 43 ★ | active |
 | 10 | [Credyt](https://tashan.sh/capability/plugin-credyt-ai-skills-credyt.html) | 48 | 53 ★ | active |
 | 11 | [Datarails Financeos](https://tashan.sh/capability/plugin-datarails-dr-claude-code-plugins-re-datarails-financeos.html) | 46 | 3 ★ | active |
 | 12 | [Parallax](https://tashan.sh/capability/plugin-bencharoenwong-parallax-workflows-parallax.html) | 46 | 3 ★ | active |

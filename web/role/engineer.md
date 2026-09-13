@@ -10,7 +10,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Application development** — [React Native AI DevTools](https://tashan.sh/capability/pkg-react-native-ai-devtools.html) · tashan score 71
-- **Browser automation** — [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) · tashan score 94
+- **Browser automation** — [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) · tashan score 92
 - **Test automation** — [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) · tashan score 79
 - **Code review** — [Sem](https://tashan.sh/capability/pkg-ataraxy-labs-sem.html) · tashan score 70
 - **Web scraping** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 83
@@ -21,7 +21,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 99 | 1.1m/wk | active |
-| 2 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 94 | 1.5m/wk | active |
+| 2 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 92 | 3.3m/wk | active |
 | 3 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 54k/wk | active |
 | 4 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 83 | 20k/wk | active |
 | 5 | [MCP Appium - Mobile Development and Automation Server](https://tashan.sh/capability/pkg-appium-mcp.html) | 79 | 8k/wk | active |

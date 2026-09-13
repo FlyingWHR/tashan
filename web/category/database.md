@@ -15,10 +15,10 @@ Ranked by the tashan score
 | 2 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 54k/wk | active |
 | 3 | [Pi Mnemopi](https://tashan.sh/capability/pkg-oh-my-pi-pi-mnemopi.html) | 80 | 94k/wk | active |
 | 4 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 80 | 12k/wk | active |
-| 5 | [Runpod](https://tashan.sh/capability/pkg-runpod-mcp-server.html) | 78 | 7k/wk | active |
-| 6 | [Manifest](https://tashan.sh/capability/pkg-absolutejs-manifest.html) | 75 | 47k/wk | active |
+| 5 | [Manifest](https://tashan.sh/capability/pkg-absolutejs-manifest.html) | 75 | 47k/wk | active |
+| 6 | [Postgres](https://tashan.sh/capability/pkg-yawlabs-postgres-mcp.html) | 75 | 26k/wk | active |
 | 7 | [Instantdb](https://tashan.sh/capability/pkg-instantdb-mcp.html) | 75 | 2k/wk | active |
-| 8 | [Postgres](https://tashan.sh/capability/pkg-yawlabs-postgres-mcp.html) | 74 | 9k/wk | active |
+| 8 | [Runpod](https://tashan.sh/capability/pkg-runpod-mcp-server.html) | 74 | 5k/wk | active |
 | 9 | [Whodb](https://tashan.sh/capability/plugin-clidey-whodb-whodb.html) | 73 | 5k ★ | active |
 | 10 | [Dynoxide](https://tashan.sh/capability/pkg-dynoxide.html) | 73 | 12k/wk | active |
 | 11 | [Agent Swarm](https://tashan.sh/capability/pkg-desplega-ai-agent-swarm.html) | 73 | 3k/wk | active |
@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Mongo](https://tashan.sh/capability/pkg-mcp-mongo-server.html) | 58 | 649/wk | active |
 | 40 | [MySQL · berthojoris](https://tashan.sh/capability/pkg-berthojoris-mcp-mysql-server.html) | 58 | 509/wk | active |
 
-Showing the top 40 of 136. The full ranked shelf is at https://tashan.sh/category/database.html.
+Showing the top 40 of 132. The full ranked shelf is at https://tashan.sh/category/database.html.
 
 ## What these numbers are not
 

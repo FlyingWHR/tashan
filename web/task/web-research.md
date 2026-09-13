@@ -13,7 +13,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 83 | 20k/wk | active |
 | 2 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 68 | 542 ★ | active |
-| 3 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 61 | 1k/wk | active |
+| 3 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 63 | 2k/wk | active |
 | 4 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 57 | 228/wk | active |
 | 5 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 53 | 32 ★ | active |
 | 6 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 50 | 121/wk | active |
@@ -36,11 +36,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 23 | [Context7 · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-context7.html) | 46 | 2 marketplaces | — |
 | 24 | [Research Summarizer](https://tashan.sh/capability/skill-alirezarezvani-research-summarizer.html) | 44 | 2 repos | active |
 | 25 | [Dossier · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-dossier.html) | 44 | 2 repos | active |
-| 26 | [Brave Search · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-brave-search.html) | not scored | 14k/wk | abandoned |
+| 26 | [Brave Search · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-brave-search.html) | not scored | 13k/wk | abandoned |
 | 27 | [Brave Search Skills](https://tashan.sh/capability/plugin-brave-brave-search-skills-brave-search-skills.html) | 60 | 161 ★ | active |
 | 28 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 55 | 14 ★ | active |
-| 29 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 59 | 347/wk | active |
-| 30 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 57 | 839/wk | active |
+| 29 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 59 | 2k/wk | active |
+| 30 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 59 | 347/wk | active |
 | 31 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 54 | 133/wk | active |
 | 32 | [One Search](https://tashan.sh/capability/pkg-one-search-mcp.html) | 53 | 189/wk | active |
 | 33 | [Agent Search](https://tashan.sh/capability/pkg-agent-search-mcp.html) | 52 | 225/wk | active |

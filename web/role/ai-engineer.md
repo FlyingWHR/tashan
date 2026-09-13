@@ -43,14 +43,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 23 | [Caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) | 78 | 93k ★ | active |
 | 24 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 77 | 17k ★ | active |
 | 25 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 76 | 6k ★ | active |
-| 26 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 74 | 9k ★ | active |
-| 27 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 74 | 13k/wk | active |
+| 26 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 75 | 13k/wk | active |
+| 27 | [Harness](https://tashan.sh/capability/plugin-revfactory-harness-harness.html) | 74 | 9k ★ | active |
 | 28 | [Create MCP Use App](https://tashan.sh/capability/pkg-create-mcp-use-app.html) | 72 | 675/wk | active |
 | 29 | [Outputai](https://tashan.sh/capability/plugin-growthxai-output-outputai.html) | 70 | 426 ★ | active |
-| 30 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 69 | 1k/wk | active |
-| 31 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 67 | 93 ★ | active |
-| 32 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 66 | 482 ★ | active |
-| 33 | [Keryx](https://tashan.sh/capability/pkg-keryx.html) | 66 | 1k/wk | active |
+| 30 | [Keryx](https://tashan.sh/capability/pkg-keryx.html) | 70 | 2k/wk | active |
+| 31 | [Prjct CLI](https://tashan.sh/capability/pkg-prjct-cli.html) | 69 | 1k/wk | active |
+| 32 | [Agentforce Adlc](https://tashan.sh/capability/plugin-salesforceairesearch-agentforce-adlc-agentforce-adlc.html) | 67 | 93 ★ | active |
+| 33 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 66 | 482 ★ | active |
 | 34 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 63 | 68 ★ | active |
 | 35 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 63 | 68 ★ | active |
 | 36 | [Datarobot Agent Skills](https://tashan.sh/capability/plugin-datarobot-oss-datarobot-agent-skills-datarobot-agent-skills.html) | 62 | 23 ★ | active |
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 61 | 37 ★ | active |
 | 40 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 60 | 452 ★ | active |
 
-Showing the top 40 of 591. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
+Showing the top 40 of 596. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
 
 ## What these numbers are not
 

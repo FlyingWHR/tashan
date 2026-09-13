@@ -13,7 +13,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Swiftui Expert](https://tashan.sh/capability/plugin-avdlee-swiftui-agent-skill-swiftui-expert.html) | 73 | 3k ★ | active |
 | 2 | [Prodcheck](https://tashan.sh/capability/pkg-prodcheck.html) | 69 | 2k/wk | active |
-| 3 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 65 | 1k/wk | active |
+| 3 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 64 | 964/wk | active |
 | 4 | [Perfonext Profiler](https://tashan.sh/capability/pkg-perfonext-profiler-mcp.html) | 64 | 633/wk | active |
 | 5 | [Jprofiler](https://tashan.sh/capability/pkg-ej-technologies-jprofiler-mcp.html) | 62 | 234/wk | active |
 | 6 | [Memorylens](https://tashan.sh/capability/pkg-memorylens-mcp.html) | 61 | 665/wk | active |

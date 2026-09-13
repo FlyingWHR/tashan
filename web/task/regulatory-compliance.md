@@ -49,8 +49,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Risk Management Specialist](https://tashan.sh/capability/skill-alirezarezvani-risk-management-specialist.html) | 44 | 2 repos | active |
 | 37 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 43 | 5 ★ | active |
 | 38 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 43 | 1 ★ | active |
-| 39 | [Governance SDK](https://tashan.sh/capability/pkg-governance-sdk.html) | 70 | 6k/wk | active |
-| 40 | [Marrow](https://tashan.sh/capability/pkg-getmarrow-mcp.html) | 69 | 1k/wk | active |
+| 39 | [Governance SDK](https://tashan.sh/capability/pkg-governance-sdk.html) | 68 | 3k/wk | active |
+| 40 | [Marrow](https://tashan.sh/capability/pkg-getmarrow-mcp.html) | 68 | 727/wk | active |
 
 Showing the top 40 of 72. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
 

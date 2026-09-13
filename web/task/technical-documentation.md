@@ -13,9 +13,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 99 | 1.1m/wk | active |
 | 2 | [Codedna](https://tashan.sh/capability/plugin-larens94-codedna-codedna.html) | 60 | 143 ★ | active |
-| 3 | [Imqueue](https://tashan.sh/capability/pkg-imqueue-mcp.html) | 71 | 2k/wk | active |
+| 3 | [Imqueue](https://tashan.sh/capability/pkg-imqueue-mcp.html) | 63 | 161/wk | active |
 | 4 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 59 | 167 ★ | active |
-| 5 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 58 | 3k/wk | active |
+| 5 | [Docusaurus Plugin](https://tashan.sh/capability/pkg-docusaurus-plugin-mcp-server.html) | 59 | 4k/wk | active |
 | 6 | [Vibe Replay](https://tashan.sh/capability/plugin-tuo-lei-vibe-replay-vibe-replay.html) | 55 | 33 ★ | active |
 | 7 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 54 | 40 ★ | active |
 | 8 | [Officecli](https://tashan.sh/capability/plugin-officecli-officecli-skills-officecli.html) | 53 | 72 ★ | active |
@@ -44,7 +44,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 31 | [Doccupine](https://tashan.sh/capability/pkg-doccupine.html) | 61 | 323/wk | active |
 | 32 | [Wso2 Docs](https://tashan.sh/capability/pkg-wso2-docs-mcp-server.html) | 56 | 362/wk | active |
 | 33 | [Context7 · upstash](https://tashan.sh/capability/plugin-upstash-context7-context7.html) | 77 | 60k ★ | active |
-| 34 | [Sourcey](https://tashan.sh/capability/pkg-sourcey.html) | 60 | 1k/wk | active |
+| 34 | [Sourcey](https://tashan.sh/capability/pkg-sourcey.html) | 61 | 2k/wk | active |
 | 35 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 60 | 371/wk | active |
 | 36 | [Mantine](https://tashan.sh/capability/pkg-mantine-mcp-server.html) | 70 | 2k/wk | active |
 | 37 | [Adobe Commerce Docs](https://tashan.sh/capability/pkg-adobe-commerce-docs-mcp.html) | 65 | 758/wk | active |

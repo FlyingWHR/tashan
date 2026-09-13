@@ -16,7 +16,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 48 | 6 ★ | active |
 | 4 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 45 | 3 ★ | active |
 | 5 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 76 | 54k ★ | active |
-| 6 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 63 | 2k/wk | active |
+| 6 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 62 | 2k/wk | active |
 | 7 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |
 | 8 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 60 | 395/wk | active |
 | 9 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 59 | 256/wk | active |

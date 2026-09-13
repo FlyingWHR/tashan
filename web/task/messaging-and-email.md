@@ -18,7 +18,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Google Workspace CLI](https://tashan.sh/capability/skill-alirezarezvani-google-workspace-cli.html) | 44 | 2 repos | active |
 | 6 | [Ms365 Tenant Manager](https://tashan.sh/capability/skill-alirezarezvani-ms365-tenant-manager.html) | 44 | 2 repos | active |
 | 7 | [Inbox Triage](https://tashan.sh/capability/skill-alirezarezvani-inbox-triage.html) | 44 | 2 repos | active |
-| 8 | [Lark](https://tashan.sh/capability/pkg-larksuiteoapi-lark-mcp.html) | 44 | 7k/wk | abandoned |
+| 8 | [Lark](https://tashan.sh/capability/pkg-larksuiteoapi-lark-mcp.html) | 43 | 5k/wk | abandoned |
 | 9 | [Slack · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-slack.html) | not scored | 121k/wk | abandoned |
 | 10 | [Apple Mail](https://tashan.sh/capability/pkg-apple-mail-mcp.html) | 71 | 3k/wk | active |
 | 11 | [Slack](https://tashan.sh/capability/pkg-jtalk22-slack-mcp.html) | 66 | 1k/wk | active |

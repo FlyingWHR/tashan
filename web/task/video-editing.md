@@ -20,7 +20,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Peepshow](https://tashan.sh/capability/plugin-t0mtaylor-peepshow-peepshow.html) | 46 | 65 ★ | active |
 | 8 | [Letmewatch](https://tashan.sh/capability/plugin-binyamineden-letmewatch-letmewatch.html) | 45 | 9 ★ | active |
 | 9 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 45 | 20 ★ | active |
-| 10 | [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) | 75 | 14k/wk | active |
+| 10 | [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) | 76 | 28k/wk | active |
 | 11 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
 | 12 | [Hyperframes · heygen-com](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes.html) | 46 | 3 marketplaces | active |
 | 13 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 43 | 1 ★ | active |

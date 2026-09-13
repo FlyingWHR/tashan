@@ -41,9 +41,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Planetscale](https://tashan.sh/capability/plugin-planetscale-claude-plugin-planetscale.html) | 49 | 4 ★ | active |
 | 29 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 48 | 6 ★ | active |
 | 30 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 44 | 3 ★ | active |
-| 31 | [Postgres](https://tashan.sh/capability/pkg-yawlabs-postgres-mcp.html) | 74 | 9k/wk | active |
-| 32 | [Prodcheck](https://tashan.sh/capability/pkg-prodcheck.html) | 69 | 2k/wk | active |
-| 33 | [Sqlserver](https://tashan.sh/capability/pkg-cevelas-mcp-sqlserver.html) | 51 | 82/wk | active |
+| 31 | [Prodcheck](https://tashan.sh/capability/pkg-prodcheck.html) | 69 | 2k/wk | active |
+| 32 | [Sqlserver](https://tashan.sh/capability/pkg-cevelas-mcp-sqlserver.html) | 51 | 82/wk | active |
 
 ## What these numbers are not
 

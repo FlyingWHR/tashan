@@ -13,7 +13,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 |---|---|---|---|---|
 | 1 | [Git](https://tashan.sh/capability/pkg-cyanheads-git-mcp-server.html) | 80 | 7k/wk | active |
 | 2 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 78 | 66k/wk | active |
-| 3 | [Gk CLI](https://tashan.sh/capability/pkg-gitkraken-gk.html) | 64 | 5k/wk | active |
+| 3 | [Gk CLI](https://tashan.sh/capability/pkg-gitkraken-gk.html) | 63 | 5k/wk | active |
 | 4 | [Nomoreide](https://tashan.sh/capability/pkg-nomoreide.html) | 62 | 443/wk | active |
 | 5 | [Project Knowledge](https://tashan.sh/capability/pkg-project-knowledge.html) | 57 | 182/wk | active |
 | 6 | [Gitpin](https://tashan.sh/capability/pkg-gitpin.html) | 53 | 208/wk | active |

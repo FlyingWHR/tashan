@@ -14,7 +14,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 - **Product strategy** — [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) · tashan score 69
 - **Market analysis** — [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) · tashan score 76
 - **Risk assessment** — [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) · tashan score 69
-- **User research** — [Frog](https://tashan.sh/capability/pkg-frog.html) · tashan score 74
+- **User research** — [Frog](https://tashan.sh/capability/pkg-frog.html) · tashan score 73
 
 ## Ranked
 
@@ -38,12 +38,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 78 | 191k ★ | active |
 | 17 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 78 | 66k/wk | active |
 | 18 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 76 | 54k ★ | active |
-| 19 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 74 | 13k/wk | active |
-| 20 | [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) | 73 | 6k/wk | active |
-| 21 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 71 | 2k ★ | active |
+| 19 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 73 | 9k/wk | active |
+| 20 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 71 | 2k ★ | active |
+| 21 | [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) | 71 | 4k/wk | active |
 | 22 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 69 | 923/wk | active |
 | 23 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 69 | 1k ★ | active |
-| 24 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 63 | 2k/wk | active |
+| 24 | [Tyc CLI](https://tashan.sh/capability/pkg-tyc-cli.html) | 62 | 2k/wk | active |
 | 25 | [Offensive Claude](https://tashan.sh/capability/plugin-hypnguyen1209-offensive-claude-offensive-claude.html) | 62 | 326 ★ | active |
 | 26 | [Linear Claude Skill](https://tashan.sh/capability/plugin-wrsmith108-linear-claude-skill-linear-claude-skill.html) | 60 | 118 ★ | active |
 | 27 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 60 | 18 ★ | active |

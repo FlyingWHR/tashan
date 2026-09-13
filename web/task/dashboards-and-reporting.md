@@ -41,14 +41,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Dashboards](https://tashan.sh/capability/pkg-mcp-dashboards.html) | 48 | 212/wk | active |
 | 29 | [Dashboardbase](https://tashan.sh/capability/pkg-dashboardbase-mcp.html) | 47 | 136/wk | active |
 | 30 | [Thingd](https://tashan.sh/capability/pkg-thingd-cli.html) | 65 | 839/wk | active |
-| 31 | [Kibana](https://tashan.sh/capability/pkg-tocharianou-mcp-server-kibana.html) | 61 | 1k/wk | active |
-| 32 | [Graph It Live](https://tashan.sh/capability/pkg-magic5644-graph-it-live.html) | 61 | 465/wk | active |
-| 33 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 60 | 289/wk | active |
+| 31 | [Graph It Live](https://tashan.sh/capability/pkg-magic5644-graph-it-live.html) | 61 | 465/wk | active |
+| 32 | [Claude Memory Layer](https://tashan.sh/capability/pkg-claude-memory-layer.html) | 60 | 289/wk | active |
+| 33 | [Kibana](https://tashan.sh/capability/pkg-tocharianou-mcp-server-kibana.html) | 59 | 750/wk | active |
 | 34 | [Cloudarch](https://tashan.sh/capability/pkg-cloud-arch-mcp-server.html) | 57 | 344/wk | active |
 | 35 | [Agentic Kdd](https://tashan.sh/capability/pkg-agentic-kdd.html) | 57 | 243/wk | active |
 | 36 | [Agentic Mermaid](https://tashan.sh/capability/pkg-agentic-mermaid.html) | 54 | 313/wk | active |
 | 37 | [Klaviyo](https://tashan.sh/capability/pkg-scalably-io-klaviyo-mcp.html) | 54 | 180/wk | active |
-| 38 | [Metabase · serdnaley](https://tashan.sh/capability/pkg-serdnaley-metabase-mcp.html) | 53 | 50k/wk | active |
+| 38 | [Metabase · serdnaley](https://tashan.sh/capability/pkg-serdnaley-metabase-mcp.html) | 53 | 42k/wk | active |
 | 39 | [Entrapulse Polyarchy](https://tashan.sh/capability/pkg-entrapulse-polyarchy.html) | 49 | 78/wk | active |
 | 40 | [Midown](https://tashan.sh/capability/pkg-bentlyr-midown.html) | 48 | 47/wk | active |
 

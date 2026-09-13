@@ -22,17 +22,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Source Library](https://tashan.sh/capability/pkg-source-library-mcp-server.html) | 48 | 113/wk | active |
 | 10 | [Deepl](https://tashan.sh/capability/pkg-deepl-mcp-server.html) | 63 | 732/wk | active |
 | 11 | [Goldbean](https://tashan.sh/capability/pkg-goldbean-mcp.html) | 52 | 130/wk | active |
-| 12 | [The I18n](https://tashan.sh/capability/pkg-the-i18n-mcp.html) | 61 | 530/wk | active |
-| 13 | [Safe Docx](https://tashan.sh/capability/pkg-usejunior-safe-docx.html) | 56 | 348/wk | active |
-| 14 | [Xcomet](https://tashan.sh/capability/pkg-xcomet-mcp-server.html) | 52 | 148/wk | active |
-| 15 | [L10n.dev - AI Localization Agent](https://tashan.sh/capability/pkg-ai-l10n-mcp.html) | 49 | 70/wk | active |
-| 16 | [Langapi](https://tashan.sh/capability/pkg-langapi-mcp-server.html) | 49 | 39/wk | active |
-| 17 | [Getlinnk](https://tashan.sh/capability/pkg-getlinnk-mcp-server.html) | 49 | 30/wk | active |
-| 18 | [I18n Codelens](https://tashan.sh/capability/pkg-i18n-codelens-mcp.html) | 48 | 43/wk | active |
-| 19 | [Claude Translate](https://tashan.sh/capability/pkg-claude-translate.html) | 46 | 45/wk | active |
-| 20 | [Prose](https://tashan.sh/capability/plugin-dabd-tacit-prose.html) | 44 | 1 ★ | active |
-| 21 | [Local Translate](https://tashan.sh/capability/pkg-damoqiongqiu-mcp-local-translate.html) | 44 | 76/wk | active |
-| 22 | [Translatize](https://tashan.sh/capability/pkg-translatize-mcp.html) | 45 | 99/wk | active |
+| 12 | [Paxalabs](https://tashan.sh/capability/pkg-paxalabs-mcp.html) | 68 | 1k/wk | active |
+| 13 | [The I18n](https://tashan.sh/capability/pkg-the-i18n-mcp.html) | 61 | 530/wk | active |
+| 14 | [Safe Docx](https://tashan.sh/capability/pkg-usejunior-safe-docx.html) | 56 | 348/wk | active |
+| 15 | [Xcomet](https://tashan.sh/capability/pkg-xcomet-mcp-server.html) | 52 | 148/wk | active |
+| 16 | [L10n.dev - AI Localization Agent](https://tashan.sh/capability/pkg-ai-l10n-mcp.html) | 49 | 70/wk | active |
+| 17 | [Langapi](https://tashan.sh/capability/pkg-langapi-mcp-server.html) | 49 | 39/wk | active |
+| 18 | [Getlinnk](https://tashan.sh/capability/pkg-getlinnk-mcp-server.html) | 49 | 30/wk | active |
+| 19 | [I18n Codelens](https://tashan.sh/capability/pkg-i18n-codelens-mcp.html) | 48 | 43/wk | active |
+| 20 | [Claude Translate](https://tashan.sh/capability/pkg-claude-translate.html) | 46 | 45/wk | active |
+| 21 | [Prose](https://tashan.sh/capability/plugin-dabd-tacit-prose.html) | 44 | 1 ★ | active |
+| 22 | [Local Translate](https://tashan.sh/capability/pkg-damoqiongqiu-mcp-local-translate.html) | 44 | 76/wk | active |
+| 23 | [Translatize](https://tashan.sh/capability/pkg-translatize-mcp.html) | 45 | 99/wk | active |
 
 ## What these numbers are not
 
