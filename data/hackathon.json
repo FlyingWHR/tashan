@@ -1,0 +1,19 @@
+{
+  "_why": "Submission state that is not derivable from the repo. pipeline/demo.py --fit reads this to decide which prize tracks actually clear, so a blocker is only cleared here once the artifact really exists.",
+  "_never_put_a_credential_in_this_file": "This repo is PUBLIC as of 2026-09-13. Handles, slugs and usernames only. The Bazantic session token lives in ~/.bazantic/config.json (mode 0600) and belongs nowhere near git.",
+
+  "bazantic_username": "Seroto",
+  "bazantic_gateway": "6l6nau2p5ve7tjjwyhbtvctduy",
+  "bazantic_gateway_endpoint": "https://6l6nau2p5ve7tjjwyhbtvctduy.bazgateway.com",
+  "bazantic_gateway_mcp": "https://6l6nau2p5ve7tjjwyhbtvctduy.bazgateway.com/mcp",
+  "bazantic_recipe": "check-before-you-install",
+
+  "video_url": null,
+
+  "_open": [
+    "PRICE THE FREE ROUTES AT ZERO. Bazantic defaulted every route to priceMillicents 1000 ($0.01), including /v0.1/lookup, /v0.1/search, /v0.1/scores and /v0.1/servers — which this site publishes as free, with no key and no quota. Our own API still answers those free at tashan.sh; it is only the gateway copy that charges. Fix it on the bazantic.com dashboard so the gateway matches what we publish: zero for those four, and leave /v0.1/kit and /v0.1/audit priced, since those are genuinely our paid endpoints.",
+    "REPOINT THE SPEC AT tashan.sh. The gateway was registered against the spec on the openapi-spec branch, because main could not be pushed and production could not be deployed from this session. Once /openapi.json is live at tashan.sh, re-register or replace the spec so the gateway does not depend on a branch.",
+    "PAIDDEMAND IS IN THE SPEC BUT NOT YET ON THE GATEWAY. The gateway stores the spec it was created with; the /data/demand.json operation landed after. Replace the spec and run `baz gateway resync <slug>` to pick it up — that is the operation the Agentify-a-New-API track is really about.",
+    "RECORD THE VIDEO. The only remaining gate on both Graph tracks."
+  ]
+}

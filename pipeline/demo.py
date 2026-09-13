@@ -217,7 +217,7 @@ TRACKS = [
               "At least one OTHER service from Bazantic or a hackathon sponsor",
               "A recipe combining them in one working flow",
               "Screen recording of the completed task", "The bazantic username"],
-     "gate": ["baz_account", "baz_gateway", "baz_recipe", "video"],
+     "gate": ["baz_account", "baz_gateway", "baz_recipe", "baz_second_service", "video"],
      "beats": ["money", "agent", "x402"]},
     {"id": "baz3", "sponsor": "Bazantic", "prize": "$1,000",
      "name": "Agentify a New API",
@@ -240,6 +240,12 @@ GATE_FIX = {
     "baz_account": "create a bazantic.com account and put the username in data/hackathon.json",
     "baz_gateway": "build the x402/MPP Gateway on bazantic.com for our API",
     "baz_recipe": "publish a Bazantic Recipe describing when/why/how to call it",
+    # TRACK 2 ONLY, and it was missing from this table while the track read as clear. The recipe we
+    # published binds three tools and all three are ours, which satisfies Tracks 1 and 3 and NOT
+    # this one: it wants information moving between two services, with the result depending on both.
+    "baz_second_service": "bind a SECOND service (a sponsor's, or The Graph's Subgraph MCP) into a "
+                          "recipe so the answer depends on both — record it in data/hackathon.json "
+                          "as bazantic_second_service",
 }
 
 
@@ -273,6 +279,7 @@ def qualify(f=None):
         "baz_account": bool(state.get("bazantic_username")),
         "baz_gateway": bool(state.get("bazantic_gateway")),
         "baz_recipe": bool(state.get("bazantic_recipe")),
+        "baz_second_service": bool(state.get("bazantic_second_service")),
     }
     return g
 
