@@ -18,12 +18,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Hubspot Admin](https://tashan.sh/capability/plugin-tomgranot-hubspot-admin-skills-hubspot-admin.html) | 50 | 56 ★ | active |
 | 6 | [Alation](https://tashan.sh/capability/plugin-alation-alation-plugins-alation.html) | 48 | 6 ★ | active |
 | 7 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 60 | 90 ★ | active |
-| 8 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 47 | 3 repos | active |
-| 9 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | 44 | 2 repos | active |
-| 10 | [Data Quality Auditor](https://tashan.sh/capability/skill-alirezarezvani-data-quality-auditor.html) | 44 | 2 repos | active |
-| 11 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 58 | 32 ★ | active |
-| 12 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 58 | 25 ★ | active |
-| 13 | [Icedq](https://tashan.sh/capability/pkg-icedq-mcp-server.html) | 59 | 205/wk | active |
+| 8 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 58 | 32 ★ | active |
+| 9 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 58 | 25 ★ | active |
+| 10 | [Icedq](https://tashan.sh/capability/pkg-icedq-mcp-server.html) | 59 | 205/wk | active |
 
 ## What these numbers are not
 

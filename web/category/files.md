@@ -32,27 +32,27 @@ Ranked by the tashan score
 | 19 | [Docket](https://tashan.sh/capability/pkg-pasichdev-docket.html) | 59 | 352/wk | active |
 | 20 | [Terminal Commander](https://tashan.sh/capability/pkg-terminal-commander.html) | 59 | 350/wk | active |
 | 21 | [Fileditor](https://tashan.sh/capability/pkg-fileditor-mcp.html) | 59 | 257/wk | active |
-| 22 | [Kawacode](https://tashan.sh/capability/pkg-kawacode-mcp.html) | 58 | 480/wk | active |
-| 23 | [Beepflow](https://tashan.sh/capability/pkg-beepflow-mcp.html) | 58 | 214/wk | active |
-| 24 | [Bourdon](https://tashan.sh/capability/pkg-getbourdon-mcp-server.html) | 57 | 578/wk | active |
-| 25 | [Fimemory](https://tashan.sh/capability/pkg-fimemory.html) | 57 | 503/wk | active |
-| 26 | [Molecare](https://tashan.sh/capability/pkg-molecare-mcp.html) | 57 | 434/wk | active |
-| 27 | [Recall · Cain-Ish](https://tashan.sh/capability/skill-cain-ish-recall.html) | 56 | 5 repos | active |
-| 28 | [Watchgoose](https://tashan.sh/capability/pkg-watchgoose-mcp.html) | 56 | 231/wk | active |
-| 29 | [Braincloud MCP Helper](https://tashan.sh/capability/pkg-braincloud-mcp-helper.html) | 56 | 123/wk | active |
-| 30 | [Clio](https://tashan.sh/capability/pkg-oktopeak-clio-mcp.html) | 54 | 122/wk | active |
-| 31 | [Daileyos](https://tashan.sh/capability/pkg-daileyos-mcp-server.html) | 54 | 109/wk | active |
-| 32 | [Help · MemPalace](https://tashan.sh/capability/skill-mempalace-help.html) | 53 | 4 repos | active |
-| 33 | [Recall · @clauderecallhq](https://tashan.sh/capability/pkg-clauderecallhq-cli.html) | 53 | 221/wk | active |
-| 34 | [Desktop Commander · tokor](https://tashan.sh/capability/pkg-tokor-desktop-commander.html) | 53 | 101/wk | active |
-| 35 | [Teach · ngpestelos-mirrors](https://tashan.sh/capability/skill-ngpestelos-mirrors-teach.html) | 51 | 3 repos | active |
-| 36 | [En16931](https://tashan.sh/capability/pkg-attestwire-mcp.html) | 50 | 101/wk | active |
-| 37 | [Jamgate](https://tashan.sh/capability/pkg-jamgate.html) | 49 | 54/wk | active |
-| 38 | [Mempalace Recall](https://tashan.sh/capability/skill-mempalace-mempalace-recall.html) | 48 | 2 repos | active |
-| 39 | [Mine · MemPalace](https://tashan.sh/capability/skill-mempalace-mine.html) | 48 | 2 repos | active |
-| 40 | [Search · MemPalace](https://tashan.sh/capability/skill-mempalace-search.html) | 48 | 2 repos | active |
+| 22 | [Srift](https://tashan.sh/capability/pkg-srift-transfer.html) | 59 | 253/wk | active |
+| 23 | [Kawacode](https://tashan.sh/capability/pkg-kawacode-mcp.html) | 58 | 480/wk | active |
+| 24 | [Beepflow](https://tashan.sh/capability/pkg-beepflow-mcp.html) | 58 | 214/wk | active |
+| 25 | [Bourdon](https://tashan.sh/capability/pkg-getbourdon-mcp-server.html) | 57 | 578/wk | active |
+| 26 | [Fimemory](https://tashan.sh/capability/pkg-fimemory.html) | 57 | 503/wk | active |
+| 27 | [Molecare](https://tashan.sh/capability/pkg-molecare-mcp.html) | 57 | 434/wk | active |
+| 28 | [Recall · Cain-Ish](https://tashan.sh/capability/skill-cain-ish-recall.html) | 56 | 5 repos | active |
+| 29 | [Watchgoose](https://tashan.sh/capability/pkg-watchgoose-mcp.html) | 56 | 231/wk | active |
+| 30 | [Braincloud MCP Helper](https://tashan.sh/capability/pkg-braincloud-mcp-helper.html) | 56 | 123/wk | active |
+| 31 | [Clio](https://tashan.sh/capability/pkg-oktopeak-clio-mcp.html) | 54 | 122/wk | active |
+| 32 | [Daileyos](https://tashan.sh/capability/pkg-daileyos-mcp-server.html) | 54 | 109/wk | active |
+| 33 | [Help · MemPalace](https://tashan.sh/capability/skill-mempalace-help.html) | 53 | 4 repos | active |
+| 34 | [Recall · @clauderecallhq](https://tashan.sh/capability/pkg-clauderecallhq-cli.html) | 53 | 221/wk | active |
+| 35 | [Desktop Commander · tokor](https://tashan.sh/capability/pkg-tokor-desktop-commander.html) | 53 | 101/wk | active |
+| 36 | [Teach · ngpestelos-mirrors](https://tashan.sh/capability/skill-ngpestelos-mirrors-teach.html) | 51 | 3 repos | active |
+| 37 | [En16931](https://tashan.sh/capability/pkg-attestwire-mcp.html) | 50 | 101/wk | active |
+| 38 | [Jamgate](https://tashan.sh/capability/pkg-jamgate.html) | 49 | 54/wk | active |
+| 39 | [Mempalace Recall](https://tashan.sh/capability/skill-mempalace-mempalace-recall.html) | 48 | 2 repos | active |
+| 40 | [Mine · MemPalace](https://tashan.sh/capability/skill-mempalace-mine.html) | 48 | 2 repos | active |
 
-Showing the top 40 of 51. The full ranked shelf is at https://tashan.sh/category/files.html.
+Showing the top 40 of 54. The full ranked shelf is at https://tashan.sh/category/files.html.
 
 ## What these numbers are not
 

@@ -26,33 +26,33 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 68 | 946/wk | active |
 | 14 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 60 | 90 ★ | active |
 | 15 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 50 | 4 marketplaces | — |
-| 16 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
+| 16 | [Grafana · grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
 | 17 | [Render](https://tashan.sh/capability/plugin-render-oss-render-plugin-claude-code-render.html) | 45 | 0 ★ | active |
-| 18 | [Senior Devops](https://tashan.sh/capability/skill-alirezarezvani-senior-devops.html) | 44 | 2 repos | active |
-| 19 | [Observability Designer](https://tashan.sh/capability/skill-alirezarezvani-observability-designer.html) | 44 | 2 repos | active |
-| 20 | [Railway](https://tashan.sh/capability/plugin-railwayapp-railway-skills-railway.html) | 69 | 300 ★ | active |
-| 21 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 59 | 18 ★ | active |
-| 22 | [Claude Code Wakatime](https://tashan.sh/capability/plugin-wakatime-claude-code-wakatime-claude-code-wakatime.html) | 57 | 88 ★ | active |
-| 23 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 55 | 27 ★ | active |
-| 24 | [Dash0](https://tashan.sh/capability/plugin-dash0hq-dash0-agent-plugin-dash0.html) | 52 | 4 ★ | active |
-| 25 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 50 | 5 ★ | active |
-| 26 | [Datadog · TANTIOPE](https://tashan.sh/capability/pkg-datadog-mcp.html) | 57 | 1k/wk | active |
-| 27 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 55 | 1k/wk | active |
-| 28 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 60 | 371/wk | active |
-| 29 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 59 | 414/wk | active |
-| 30 | [Argosvix](https://tashan.sh/capability/pkg-argosvix-mcp-server.html) | 57 | 280/wk | active |
-| 31 | [Lighthouse · priyankark](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 65 | 752/wk | active |
-| 32 | [Claudestat](https://tashan.sh/capability/pkg-statforge-claudestat.html) | 65 | 597/wk | active |
-| 33 | [Lensmcp](https://tashan.sh/capability/pkg-lensmcp.html) | 64 | 1k/wk | active |
-| 34 | [Monitoring](https://tashan.sh/capability/pkg-uptybots-mcp-server.html) | 62 | 773/wk | active |
-| 35 | [Uptime](https://tashan.sh/capability/pkg-hasna-uptime.html) | 61 | 293/wk | active |
-| 36 | [Kafka](https://tashan.sh/capability/pkg-dockndevai-mcp-kafka.html) | 57 | 389/wk | active |
-| 37 | [Mssql · piyapat](https://tashan.sh/capability/pkg-piyapat-mssql-mcp-server.html) | 57 | 370/wk | active |
-| 38 | [GitHub Projectpulse](https://tashan.sh/capability/pkg-projectpulse-mcp.html) | 57 | 142/wk | active |
-| 39 | [Watchgoose](https://tashan.sh/capability/pkg-watchgoose-mcp.html) | 56 | 231/wk | active |
-| 40 | [Sslwebsites](https://tashan.sh/capability/pkg-sslwebsites.html) | 53 | 412/wk | active |
+| 18 | [Railway](https://tashan.sh/capability/plugin-railwayapp-railway-skills-railway.html) | 69 | 300 ★ | active |
+| 19 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 59 | 18 ★ | active |
+| 20 | [Claude Code Wakatime](https://tashan.sh/capability/plugin-wakatime-claude-code-wakatime-claude-code-wakatime.html) | 57 | 88 ★ | active |
+| 21 | [Lightrun](https://tashan.sh/capability/plugin-lightrun-platform-lightrun-ai-lightrun.html) | 55 | 27 ★ | active |
+| 22 | [Dash0](https://tashan.sh/capability/plugin-dash0hq-dash0-agent-plugin-dash0.html) | 52 | 4 ★ | active |
+| 23 | [Noibu](https://tashan.sh/capability/plugin-noibu-ai-plugin-noibu.html) | 50 | 5 ★ | active |
+| 24 | [Datadog · TANTIOPE](https://tashan.sh/capability/pkg-datadog-mcp.html) | 56 | 688/wk | active |
+| 25 | [Newrelic](https://tashan.sh/capability/pkg-newrelic-mcp.html) | 55 | 1k/wk | active |
+| 26 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 60 | 371/wk | active |
+| 27 | [Observability](https://tashan.sh/capability/pkg-thotischner-observability-mcp.html) | 59 | 414/wk | active |
+| 28 | [Argosvix](https://tashan.sh/capability/pkg-argosvix-mcp-server.html) | 57 | 280/wk | active |
+| 29 | [Lighthouse · priyankark](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 65 | 752/wk | active |
+| 30 | [Claudestat](https://tashan.sh/capability/pkg-statforge-claudestat.html) | 65 | 597/wk | active |
+| 31 | [Lensmcp](https://tashan.sh/capability/pkg-lensmcp.html) | 64 | 1k/wk | active |
+| 32 | [Monitoring](https://tashan.sh/capability/pkg-uptybots-mcp-server.html) | 62 | 773/wk | active |
+| 33 | [Uptime](https://tashan.sh/capability/pkg-hasna-uptime.html) | 61 | 293/wk | active |
+| 34 | [Kafka](https://tashan.sh/capability/pkg-dockndevai-mcp-kafka.html) | 57 | 389/wk | active |
+| 35 | [Mssql · piyapat](https://tashan.sh/capability/pkg-piyapat-mssql-mcp-server.html) | 57 | 370/wk | active |
+| 36 | [GitHub Projectpulse](https://tashan.sh/capability/pkg-projectpulse-mcp.html) | 57 | 142/wk | active |
+| 37 | [Watchgoose](https://tashan.sh/capability/pkg-watchgoose-mcp.html) | 56 | 231/wk | active |
+| 38 | [Sslwebsites](https://tashan.sh/capability/pkg-sslwebsites.html) | 53 | 412/wk | active |
+| 39 | [Observability · google-cloud](https://tashan.sh/capability/pkg-google-cloud-observability-mcp.html) | 51 | 21k/wk | abandoned |
+| 40 | [Health Monitor](https://tashan.sh/capability/pkg-health-monitor-mcp.html) | 47 | 88/wk | active |
 
-Showing the top 40 of 44. The full ranked shelf is at https://tashan.sh/task/observability.html.
+Showing the top 40 of 42. The full ranked shelf is at https://tashan.sh/task/observability.html.
 
 ## What these numbers are not
 

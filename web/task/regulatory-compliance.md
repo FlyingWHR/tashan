@@ -23,36 +23,36 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Fort](https://tashan.sh/capability/plugin-djadmin-fort-fort.html) | 45 | 73 ★ | active |
 | 11 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 55 | 37 ★ | active |
 | 12 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 50 | 4 marketplaces | — |
-| 13 | [Chief AI Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-ai-officer-advisor.html) | 44 | 2 repos | active |
-| 14 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | 44 | 2 repos | active |
-| 15 | [General Counsel Advisor](https://tashan.sh/capability/skill-alirezarezvani-general-counsel-advisor.html) | 44 | 2 repos | active |
-| 16 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | 44 | 2 repos | active |
-| 17 | [AI Act Readiness](https://tashan.sh/capability/skill-alirezarezvani-ai-act-readiness.html) | 44 | 2 repos | active |
-| 18 | [Aims Audit](https://tashan.sh/capability/skill-alirezarezvani-aims-audit.html) | 44 | 2 repos | active |
-| 19 | [Compliance Readiness](https://tashan.sh/capability/skill-alirezarezvani-compliance-readiness.html) | 44 | 2 repos | active |
-| 20 | [Fda Qsr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-fda-qsr-audit-prep.html) | 44 | 2 repos | active |
-| 21 | [Gdpr Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-gdpr-audit-prep.html) | 44 | 2 repos | active |
-| 22 | [Soc2 Audit Prep](https://tashan.sh/capability/skill-alirezarezvani-soc2-audit-prep.html) | 44 | 2 repos | active |
-| 23 | [Senior Secops](https://tashan.sh/capability/skill-alirezarezvani-senior-secops.html) | 44 | 2 repos | active |
-| 24 | [Eu AI Act Specialist](https://tashan.sh/capability/skill-alirezarezvani-eu-ai-act-specialist.html) | 44 | 2 repos | active |
-| 25 | [Capa Officer](https://tashan.sh/capability/skill-alirezarezvani-capa-officer.html) | 44 | 2 repos | active |
-| 26 | [Fda Consultant Specialist](https://tashan.sh/capability/skill-alirezarezvani-fda-consultant-specialist.html) | 44 | 2 repos | active |
-| 27 | [Gdpr Dsgvo Expert](https://tashan.sh/capability/skill-alirezarezvani-gdpr-dsgvo-expert.html) | 44 | 2 repos | active |
-| 28 | [Information Security Manager Iso27001](https://tashan.sh/capability/skill-alirezarezvani-information-security-manager-iso27001.html) | 44 | 2 repos | active |
-| 29 | [Isms Audit Expert](https://tashan.sh/capability/skill-alirezarezvani-isms-audit-expert.html) | 44 | 2 repos | active |
-| 30 | [Mdr 745 Specialist](https://tashan.sh/capability/skill-alirezarezvani-mdr-745-specialist.html) | 44 | 2 repos | active |
-| 31 | [Qms Audit Expert](https://tashan.sh/capability/skill-alirezarezvani-qms-audit-expert.html) | 44 | 2 repos | active |
-| 32 | [Quality Documentation Manager](https://tashan.sh/capability/skill-alirezarezvani-quality-documentation-manager.html) | 44 | 2 repos | active |
-| 33 | [Quality Manager Qmr](https://tashan.sh/capability/skill-alirezarezvani-quality-manager-qmr.html) | 44 | 2 repos | active |
-| 34 | [Quality Manager Qms Iso13485](https://tashan.sh/capability/skill-alirezarezvani-quality-manager-qms-iso13485.html) | 44 | 2 repos | active |
-| 35 | [Regulatory Affairs Head](https://tashan.sh/capability/skill-alirezarezvani-regulatory-affairs-head.html) | 44 | 2 repos | active |
-| 36 | [Risk Management Specialist](https://tashan.sh/capability/skill-alirezarezvani-risk-management-specialist.html) | 44 | 2 repos | active |
-| 37 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 43 | 5 ★ | active |
-| 38 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 43 | 1 ★ | active |
-| 39 | [Marrow](https://tashan.sh/capability/pkg-getmarrow-mcp.html) | 69 | 1k/wk | active |
-| 40 | [Governance SDK](https://tashan.sh/capability/pkg-governance-sdk.html) | 68 | 3k/wk | active |
+| 13 | [Soc2 Compliance](https://tashan.sh/capability/skill-alirezarezvani-soc2-compliance.html) | 44 | 2 repos | active |
+| 14 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 43 | 5 ★ | active |
+| 15 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 43 | 1 ★ | active |
+| 16 | [Marrow](https://tashan.sh/capability/pkg-getmarrow-mcp.html) | 69 | 1k/wk | active |
+| 17 | [Governance SDK](https://tashan.sh/capability/pkg-governance-sdk.html) | 68 | 3k/wk | active |
+| 18 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 50 | 95/wk | active |
+| 19 | [Dingdawg Compliance](https://tashan.sh/capability/pkg-dingdawg-compliance.html) | 48 | 88/wk | active |
+| 20 | [Agent Passport System — Cryptographic Identity for AI Agents](https://tashan.sh/capability/pkg-agent-passport-system-mcp.html) | 57 | 325/wk | active |
+| 21 | [SWT3 AI Witness](https://tashan.sh/capability/pkg-tenova-swt3-mcp.html) | 54 | 241/wk | active |
+| 22 | [Nexus Agents](https://tashan.sh/capability/pkg-nexus-agents.html) | 53 | 194/wk | active |
+| 23 | [Thesmos Governance](https://tashan.sh/capability/pkg-thesmos-governance.html) | 50 | 150/wk | active |
+| 24 | [Lexvibe](https://tashan.sh/capability/pkg-lexvibe-mcp.html) | 49 | 81/wk | active |
+| 25 | [Graph Aave](https://tashan.sh/capability/pkg-graph-aave-mcp.html) | 47 | 154/wk | active |
+| 26 | [Kasbah](https://tashan.sh/capability/pkg-yobekasbah-mcp-server.html) | 45 | 94/wk | active |
+| 27 | [Company Gi](https://tashan.sh/capability/pkg-company-gi-mcp.html) | not scored | 55/wk | abandoned |
+| 28 | [Ges](https://tashan.sh/capability/pkg-greenarmor-ges-mcp-server.html) | 63 | 649/wk | active |
+| 29 | [H1veframework](https://tashan.sh/capability/pkg-h1veframework-cli.html) | 62 | 488/wk | active |
+| 30 | [Compliance](https://tashan.sh/capability/pkg-yawlabs-mcp-compliance.html) | 60 | 519/wk | active |
+| 31 | [Compliance · yaktool-compliance-mcp](https://tashan.sh/capability/pkg-yaktool-compliance-mcp.html) | 55 | 187/wk | active |
+| 32 | [VITNA — Agent Compliance Preflight](https://tashan.sh/capability/pkg-costrinity-vitna-compliance-mcp.html) | 54 | 317/wk | active |
+| 33 | [Epa](https://tashan.sh/capability/pkg-cyanheads-epa-mcp-server.html) | 54 | 172/wk | active |
+| 34 | [ComplyEdge TrustLint — offline EU AI Act compliance checks](https://tashan.sh/capability/pkg-complyedge-mcp.html) | 52 | 58/wk | active |
+| 35 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 49 | 139/wk | active |
+| 36 | [Regixo](https://tashan.sh/capability/pkg-regixo.html) | 48 | 63/wk | active |
+| 37 | [Evolith Architecture Governance](https://tashan.sh/capability/pkg-beyondnet-evolith-mcp.html) | 47 | 32/wk | active |
+| 38 | [Privacypage](https://tashan.sh/capability/pkg-privacypage-mcp.html) | 46 | 41/wk | active |
+| 39 | [Guardian · @mcp-guardian](https://tashan.sh/capability/pkg-mcp-guardian-server.html) | 45 | 93/wk | active |
+| 40 | [Aga](https://tashan.sh/capability/pkg-attested-intelligence-aga-mcp-server.html) | 45 | 76/wk | active |
 
-Showing the top 40 of 71. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
+Showing the top 40 of 48. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
 
 ## What these numbers are not
 

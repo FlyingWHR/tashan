@@ -27,32 +27,29 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Bleu](https://tashan.sh/capability/plugin-nirvaan05-bleu-plugin-bleu.html) | 43 | 3 ★ | active |
 | 15 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 43 | 40 ★ | active |
 | 16 | [Integration Guide](https://tashan.sh/capability/pkg-tosspayments-integration-guide-mcp.html) | 71 | 887/wk | active |
-| 17 | [PDF · anthropics](https://tashan.sh/capability/skill-anthropics-pdf.html) | 50 | 4 repos | active |
-| 18 | [Changelog Generator](https://tashan.sh/capability/skill-alirezarezvani-changelog-generator.html) | 49 | 4 repos | active |
-| 19 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 49 | 4 repos | active |
-| 20 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | 48 | 3 repos | active |
-| 21 | [Docx · anthropics](https://tashan.sh/capability/skill-anthropics-docx.html) | 48 | 3 repos | active |
-| 22 | [Knowledge Ops](https://tashan.sh/capability/skill-alirezarezvani-knowledge-ops.html) | 47 | 3 repos | active |
-| 23 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 47 | 3 repos | active |
-| 24 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 46 | 3 ★ | active |
-| 25 | [Living Manual](https://tashan.sh/capability/plugin-dougstanford-living-manual-living-manual.html) | 45 | 2 ★ | active |
-| 26 | [Runbook Generator](https://tashan.sh/capability/skill-alirezarezvani-runbook-generator.html) | 44 | 2 repos | active |
-| 27 | [Roadmap Communicator](https://tashan.sh/capability/skill-alirezarezvani-roadmap-communicator.html) | 44 | 2 repos | active |
-| 28 | [Confluence Expert](https://tashan.sh/capability/skill-alirezarezvani-confluence-expert.html) | 44 | 2 repos | active |
-| 29 | [Quality Documentation Manager](https://tashan.sh/capability/skill-alirezarezvani-quality-documentation-manager.html) | 44 | 2 repos | active |
-| 30 | [Mintlify](https://tashan.sh/capability/plugin-mintlify-mintlify-claude-plugin-mintlify.html) | 48 | 5 ★ | active |
-| 31 | [Doccupine](https://tashan.sh/capability/pkg-doccupine.html) | 60 | 323/wk | active |
-| 32 | [Wso2 Docs](https://tashan.sh/capability/pkg-wso2-docs-mcp-server.html) | 56 | 362/wk | active |
-| 33 | [Context7 · upstash](https://tashan.sh/capability/plugin-upstash-context7-context7.html) | 77 | 60k ★ | active |
-| 34 | [Sourcey](https://tashan.sh/capability/pkg-sourcey.html) | 61 | 2k/wk | active |
-| 35 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 60 | 371/wk | active |
-| 36 | [Mantine](https://tashan.sh/capability/pkg-mantine-mcp-server.html) | 70 | 2k/wk | active |
-| 37 | [Adobe Commerce Docs](https://tashan.sh/capability/pkg-adobe-commerce-docs-mcp.html) | 64 | 758/wk | active |
-| 38 | [Matra](https://tashan.sh/capability/pkg-matrajs-mcp.html) | 62 | 355/wk | active |
-| 39 | [IMBA Agent Docs](https://tashan.sh/capability/pkg-imba-wallet-agent-mcp-docs.html) | 59 | 457/wk | active |
-| 40 | [Ignis Docs](https://tashan.sh/capability/pkg-venizia-ignis-docs.html) | 55 | 140/wk | active |
-
-Showing the top 40 of 43. The full ranked shelf is at https://tashan.sh/task/technical-documentation.html.
+| 17 | [Grill With Docs](https://tashan.sh/capability/skill-alirezarezvani-grill-with-docs.html) | 49 | 4 repos | active |
+| 18 | [PDF · anthropics](https://tashan.sh/capability/skill-anthropics-pdf.html) | 48 | 3 repos | active |
+| 19 | [Docs Index Keeper](https://tashan.sh/capability/plugin-oleg-koval-docs-index-keeper-docs-index-keeper.html) | 46 | 3 ★ | active |
+| 20 | [Doc Coauthoring](https://tashan.sh/capability/skill-anthropics-doc-coauthoring.html) | 45 | 2 repos | active |
+| 21 | [Living Manual](https://tashan.sh/capability/plugin-dougstanford-living-manual-living-manual.html) | 45 | 2 ★ | active |
+| 22 | [Knowledge Ops](https://tashan.sh/capability/skill-alirezarezvani-knowledge-ops.html) | 44 | 2 repos | active |
+| 23 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 44 | 2 repos | active |
+| 24 | [Changelog Generator](https://tashan.sh/capability/skill-alirezarezvani-changelog-generator.html) | 44 | 2 repos | active |
+| 25 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 44 | 2 repos | active |
+| 26 | [Mintlify](https://tashan.sh/capability/plugin-mintlify-mintlify-claude-plugin-mintlify.html) | 48 | 5 ★ | active |
+| 27 | [Doccupine](https://tashan.sh/capability/pkg-doccupine.html) | 60 | 323/wk | active |
+| 28 | [Wso2 Docs](https://tashan.sh/capability/pkg-wso2-docs-mcp-server.html) | 56 | 362/wk | active |
+| 29 | [Context7 · upstash](https://tashan.sh/capability/plugin-upstash-context7-context7.html) | 77 | 60k ★ | active |
+| 30 | [Sourcey](https://tashan.sh/capability/pkg-sourcey.html) | 61 | 2k/wk | active |
+| 31 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 60 | 371/wk | active |
+| 32 | [Mantine](https://tashan.sh/capability/pkg-mantine-mcp-server.html) | 70 | 2k/wk | active |
+| 33 | [Adobe Commerce Docs](https://tashan.sh/capability/pkg-adobe-commerce-docs-mcp.html) | 64 | 758/wk | active |
+| 34 | [Matra](https://tashan.sh/capability/pkg-matrajs-mcp.html) | 62 | 355/wk | active |
+| 35 | [IMBA Agent Docs](https://tashan.sh/capability/pkg-imba-wallet-agent-mcp-docs.html) | 59 | 457/wk | active |
+| 36 | [Ignis Docs](https://tashan.sh/capability/pkg-venizia-ignis-docs.html) | 55 | 140/wk | active |
+| 37 | [Google Tools](https://tashan.sh/capability/pkg-google-tools-mcp.html) | 53 | 165/wk | active |
+| 38 | [Google MCP Suite](https://tashan.sh/capability/pkg-google-mcp-suite.html) | 51 | 100/wk | active |
+| 39 | [Google Docs · a1-x-tech](https://tashan.sh/capability/pkg-a1-x-tech-mcp-google-docs.html) | 47 | 55/wk | active |
 
 ## What these numbers are not
 

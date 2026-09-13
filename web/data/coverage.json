@@ -3,10 +3,10 @@
  "all": {
   "full": 1138,
   "grade": 3811,
-  "n": 93006,
-  "scan": 8161,
-  "score": 52096,
-  "task": 4621
+  "n": 93380,
+  "scan": 8263,
+  "score": 53202,
+  "task": 4632
  },
  "axes": [
   {
@@ -34,7 +34,7 @@
   "graded_pct": 30,
   "scanned_pct": 100,
   "scored_pct": 98,
-  "tasked_pct": 53,
+  "tasked_pct": 52,
   "tier": "top1000"
  },
  "queue": [
@@ -133,6 +133,16 @@
    "name": "@raishin/vanguard-frontier-agentic"
   },
   {
+   "downloads": 149099,
+   "id": "pkg:@transcend-io/mcp-server-discovery",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@transcend-io/mcp-server-discovery"
+  },
+  {
    "downloads": 128977,
    "id": "pkg:agent-device",
    "kind": "npm",
@@ -190,16 +200,6 @@
    "name": "azure"
   },
   {
-   "downloads": 95430,
-   "id": "pkg:@modelcontextprotocol/server-postgres",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade"
-   ],
-   "name": "@modelcontextprotocol/server-postgres"
-  },
-  {
    "downloads": 94136,
    "id": "pkg:@oh-my-pi/pi-mnemopi",
    "kind": "npm",
@@ -207,15 +207,6 @@
     "grade"
    ],
    "name": "@oh-my-pi/pi-mnemopi"
-  },
-  {
-   "downloads": 93355,
-   "id": "pkg:decocms",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "decocms"
   },
   {
    "downloads": 91463,
@@ -236,6 +227,16 @@
     "grade"
    ],
    "name": "@modelcontextprotocol/server-github"
+  },
+  {
+   "downloads": 78432,
+   "id": "pkg:@modelcontextprotocol/server-postgres",
+   "kind": "npm",
+   "missing": [
+    "score",
+    "grade"
+   ],
+   "name": "@modelcontextprotocol/server-postgres"
   },
   {
    "downloads": 78074,
@@ -425,20 +426,20 @@
  ],
  "tiers": {
   "top100": {
-   "full": 32,
-   "grade": 36,
+   "full": 33,
+   "grade": 37,
    "n": 100,
    "scan": 100,
    "score": 96,
-   "task": 64
+   "task": 62
   },
   "top1000": {
-   "full": 251,
-   "grade": 298,
+   "full": 250,
+   "grade": 299,
    "n": 1000,
    "scan": 1000,
-   "score": 984,
-   "task": 531
+   "score": 985,
+   "task": 523
   }
  }
 }

@@ -20,39 +20,39 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 7 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 63 | 68 ★ | active |
 | 8 | [Episodic Memory](https://tashan.sh/capability/plugin-obra-episodic-memory-episodic-memory.html) | 60 | 452 ★ | active |
 | 9 | [Opentrace Oss](https://tashan.sh/capability/plugin-opentrace-opentrace-opentrace-oss.html) | 60 | 104 ★ | active |
-| 10 | [Airweave MCP Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 58 | 1k/wk | active |
+| 10 | [Airweave MCP Search](https://tashan.sh/capability/pkg-airweave-mcp-search.html) | 57 | 1k/wk | active |
 | 11 | [Pixeltable](https://tashan.sh/capability/plugin-pixeltable-pixeltable-skill-pixeltable.html) | 51 | 5 ★ | active |
 | 12 | [Retrieve The Forgotten Memory](https://tashan.sh/capability/plugin-roomi-fields-rtfm-retrieve-the-forgotten-memory.html) | 48 | 20 ★ | active |
 | 13 | [Mako AI](https://tashan.sh/capability/plugin-drhalto-agentmako-mako-ai.html) | 46 | 51 ★ | active |
 | 14 | [Zilliz](https://tashan.sh/capability/plugin-zilliztech-zilliz-plugin-zilliz.html) | 45 | 3 ★ | active |
 | 15 | [Twelvelabs · twelvelabs-io](https://tashan.sh/capability/plugin-twelvelabs-io-twelve-labs-claude-code-plugin-twelvelabs.html) | 45 | 20 ★ | active |
-| 16 | [Senior Ml Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-ml-engineer.html) | 44 | 2 repos | active |
-| 17 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | 44 | 2 repos | active |
-| 18 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 64 | 402 ★ | active |
-| 19 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 71 | 3k ★ | active |
-| 20 | [Local RAG](https://tashan.sh/capability/pkg-mcp-local-rag.html) | 71 | 3k/wk | active |
-| 21 | [Grepmax](https://tashan.sh/capability/pkg-grepmax.html) | 68 | 1k/wk | active |
-| 22 | [Loki Mode](https://tashan.sh/capability/pkg-loki-mode.html) | 67 | 2k/wk | active |
-| 23 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 59 | 347/wk | active |
-| 24 | [Basemind](https://tashan.sh/capability/pkg-basemind.html) | 58 | 451/wk | active |
-| 25 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 58 | 212/wk | active |
-| 26 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 56 | 144/wk | active |
-| 27 | [Freshvault](https://tashan.sh/capability/pkg-freshvault.html) | 53 | 258/wk | active |
-| 28 | [Infino AI](https://tashan.sh/capability/pkg-infino-ai-mcp-server.html) | 52 | 180/wk | active |
-| 29 | [Ori Memory](https://tashan.sh/capability/pkg-ori-memory.html) | 52 | 154/wk | active |
-| 30 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 51 | 141/wk | active |
-| 31 | [Memory Graph](https://tashan.sh/capability/pkg-mcp-memory-graph.html) | 50 | 141/wk | active |
-| 32 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 75 | 96k/wk | active |
-| 33 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 68 | 1k/wk | active |
-| 34 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 66 | 2k/wk | active |
-| 35 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 63 | 680/wk | active |
-| 36 | [Engram Wiki](https://tashan.sh/capability/pkg-engram-wiki-mcp.html) | 58 | 639/wk | active |
-| 37 | [Paparats – Local Semantic Code Search](https://tashan.sh/capability/pkg-paparats-cli.html) | 56 | 250/wk | active |
-| 38 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 56 | 205/wk | active |
-| 39 | [Sciverse · opendatalab](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 56 | 181/wk | active |
-| 40 | [Cortex · danielblomma](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 54 | 153/wk | active |
+| 16 | [Context Engine](https://tashan.sh/capability/plugin-context-engine-ai-context-engine-context-engine.html) | 64 | 402 ★ | active |
+| 17 | [Cocoindex Code](https://tashan.sh/capability/plugin-cocoindex-io-cocoindex-code-cocoindex-code.html) | 71 | 3k ★ | active |
+| 18 | [Local RAG](https://tashan.sh/capability/pkg-mcp-local-rag.html) | 71 | 3k/wk | active |
+| 19 | [Grepmax](https://tashan.sh/capability/pkg-grepmax.html) | 68 | 1k/wk | active |
+| 20 | [Loki Mode](https://tashan.sh/capability/pkg-loki-mode.html) | 67 | 2k/wk | active |
+| 21 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 59 | 347/wk | active |
+| 22 | [Basemind](https://tashan.sh/capability/pkg-basemind.html) | 58 | 451/wk | active |
+| 23 | [Enconvert](https://tashan.sh/capability/pkg-enconvert-mcp.html) | 58 | 212/wk | active |
+| 24 | [Clawmem](https://tashan.sh/capability/pkg-clawmem.html) | 56 | 144/wk | active |
+| 25 | [Freshvault](https://tashan.sh/capability/pkg-freshvault.html) | 53 | 258/wk | active |
+| 26 | [Infino AI](https://tashan.sh/capability/pkg-infino-ai-mcp-server.html) | 52 | 180/wk | active |
+| 27 | [Ori Memory](https://tashan.sh/capability/pkg-ori-memory.html) | 52 | 154/wk | active |
+| 28 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 51 | 141/wk | active |
+| 29 | [Memory Graph](https://tashan.sh/capability/pkg-mcp-memory-graph.html) | 50 | 141/wk | active |
+| 30 | [Agentdb](https://tashan.sh/capability/pkg-agentdb.html) | 75 | 96k/wk | active |
+| 31 | [Docdex](https://tashan.sh/capability/pkg-docdex.html) | 68 | 1k/wk | active |
+| 32 | [Octocode](https://tashan.sh/capability/pkg-octocode-mcp.html) | 66 | 2k/wk | active |
+| 33 | [Obsidian Hybrid Search](https://tashan.sh/capability/pkg-obsidian-hybrid-search.html) | 63 | 680/wk | active |
+| 34 | [Engram Wiki](https://tashan.sh/capability/pkg-engram-wiki-mcp.html) | 58 | 639/wk | active |
+| 35 | [Paparats – Local Semantic Code Search](https://tashan.sh/capability/pkg-paparats-cli.html) | 56 | 250/wk | active |
+| 36 | [Edk2 Opencode](https://tashan.sh/capability/pkg-edk2-opencode.html) | 56 | 205/wk | active |
+| 37 | [Sciverse · opendatalab](https://tashan.sh/capability/pkg-sciverse-mcp-server.html) | 56 | 181/wk | active |
+| 38 | [Cortex · danielblomma](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 54 | 153/wk | active |
+| 39 | [Obsidian Semantic Search](https://tashan.sh/capability/pkg-dalecb-obsidian-semantic-mcp.html) | 53 | 283/wk | active |
+| 40 | [Calibre](https://tashan.sh/capability/pkg-calibre-mcp.html) | 53 | 159/wk | active |
 
-Showing the top 40 of 92. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
+Showing the top 40 of 90. The full ranked shelf is at https://tashan.sh/task/retrieval-systems.html.
 
 ## What these numbers are not
 

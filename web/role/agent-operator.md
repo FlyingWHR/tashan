@@ -21,8 +21,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Cxpak](https://tashan.sh/capability/plugin-barnett-studios-cxpak-cxpak.html) | 54 | 19 ★ | active |
 | 9 | [Imessage](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 53 | 24 ★ | active |
 | 10 | [Claude RPC](https://tashan.sh/capability/plugin-rar-file-claude-rpc-claude-rpc.html) | 51 | 13 ★ | active |
-| 11 | [Budgetclaw](https://tashan.sh/capability/plugin-roninforge-budgetclaw-budgetclaw.html) | 50 | 8 ★ | active |
-| 12 | [Pith](https://tashan.sh/capability/plugin-abhisekjha-pith-pith.html) | 50 | 97 ★ | active |
+| 11 | [Pith](https://tashan.sh/capability/plugin-abhisekjha-pith-pith.html) | 50 | 97 ★ | active |
+| 12 | [Budgetclaw](https://tashan.sh/capability/plugin-roninforge-budgetclaw-budgetclaw.html) | 49 | 8 ★ | active |
 | 13 | [Writ](https://tashan.sh/capability/plugin-infinri-writ-writ.html) | 49 | 163 ★ | active |
 | 14 | [Mr Meeseeks](https://tashan.sh/capability/plugin-thephw-claude-meseeks-mr-meeseeks.html) | 46 | 79 ★ | active |
 | 15 | [Agented](https://tashan.sh/capability/plugin-frane-agented-agented.html) | 45 | 5 ★ | active |
@@ -35,9 +35,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Codeam CLI](https://tashan.sh/capability/pkg-codeam-cli.html) | 71 | 2k/wk | active |
 | 23 | [Skillfish](https://tashan.sh/capability/pkg-skillfish.html) | 69 | 5k/wk | active |
 | 24 | [Privateer Agent](https://tashan.sh/capability/pkg-privateer-agent.html) | 69 | 2k/wk | active |
-| 25 | [Agentsmesh](https://tashan.sh/capability/pkg-agentsmesh.html) | 69 | 1k/wk | active |
-| 26 | [Wozcode](https://tashan.sh/capability/plugin-withwoz-wozcode-plugin-wozcode.html) | 64 | 196 ★ | active |
-| 27 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 63 | 68 ★ | active |
+| 25 | [Agentsmesh](https://tashan.sh/capability/pkg-agentsmesh.html) | 67 | 731/wk | active |
+| 26 | [Claude Code Hermit](https://tashan.sh/capability/plugin-gtapps-claude-code-hermit-claude-code-hermit.html) | 63 | 68 ★ | active |
+| 27 | [Wozcode](https://tashan.sh/capability/plugin-withwoz-wozcode-plugin-wozcode.html) | 63 | 196 ★ | active |
 | 28 | [Nlpm](https://tashan.sh/capability/plugin-xiaolai-nlpm-for-claude-nlpm.html) | 61 | 95 ★ | active |
 | 29 | [Agent Session Resume](https://tashan.sh/capability/plugin-hacktivist123-agent-session-resume-agent-session-resume.html) | 61 | 235 ★ | active |
 | 30 | [Snowflake Cortex Code](https://tashan.sh/capability/plugin-snowflake-labs-snowflake-ai-kit-snowflake-cortex-code.html) | 60 | 32 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 55 | 27 ★ | active |
 | 40 | [Vibe Replay](https://tashan.sh/capability/plugin-tuo-lei-vibe-replay-vibe-replay.html) | 55 | 33 ★ | active |
 
-Showing the top 40 of 123. The full ranked shelf is at https://tashan.sh/role/agent-operator.html.
+Showing the top 40 of 117. The full ranked shelf is at https://tashan.sh/role/agent-operator.html.
 
 ## What these numbers are not
 

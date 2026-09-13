@@ -38,21 +38,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Axe](https://tashan.sh/capability/pkg-axe-mcp-server.html) | 68 | 1k/wk | active |
 | 26 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 57 | 96 ★ | active |
 | 27 | [Review · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-review.html) | 55 | 8 repos | active |
-| 28 | [Super Claude For Sap](https://tashan.sh/capability/plugin-babamba2-superclaude-for-sap-super-claude-for-sap.html) | 51 | 46 ★ | active |
-| 29 | [Test Driven Development](https://tashan.sh/capability/skill-obra-test-driven-development.html) | 48 | 3 repos | active |
-| 30 | [Verification Before Completion](https://tashan.sh/capability/skill-obra-verification-before-completion.html) | 48 | 3 repos | active |
-| 31 | [Init · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-init.html) | 47 | 3 repos | active |
-| 32 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 47 | 1 ★ | active |
-| 33 | [Webapp Testing](https://tashan.sh/capability/skill-anthropics-webapp-testing.html) | 45 | 2 repos | active |
-| 34 | [Generate · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-generate.html) | 44 | 2 repos | active |
-| 35 | [Migrate](https://tashan.sh/capability/skill-alirezarezvani-migrate.html) | 44 | 2 repos | active |
-| 36 | [Senior QA](https://tashan.sh/capability/skill-alirezarezvani-senior-qa.html) | 44 | 2 repos | active |
-| 37 | [Tdd Guide](https://tashan.sh/capability/skill-alirezarezvani-tdd-guide.html) | 44 | 2 repos | active |
-| 38 | [Chaos Engineering](https://tashan.sh/capability/skill-alirezarezvani-chaos-engineering.html) | 44 | 2 repos | active |
-| 39 | [API Test Suite Builder](https://tashan.sh/capability/skill-alirezarezvani-api-test-suite-builder.html) | 44 | 2 repos | active |
-| 40 | [Skill Tester](https://tashan.sh/capability/skill-alirezarezvani-skill-tester.html) | 44 | 2 repos | active |
+| 28 | [Report](https://tashan.sh/capability/skill-alirezarezvani-report.html) | 54 | 7 repos | active |
+| 29 | [Verification Before Completion](https://tashan.sh/capability/skill-obra-verification-before-completion.html) | 53 | 6 repos | active |
+| 30 | [Test Driven Development](https://tashan.sh/capability/skill-obra-test-driven-development.html) | 51 | 5 repos | active |
+| 31 | [Super Claude For Sap](https://tashan.sh/capability/plugin-babamba2-superclaude-for-sap-super-claude-for-sap.html) | 51 | 46 ★ | active |
+| 32 | [Webapp Testing](https://tashan.sh/capability/skill-anthropics-webapp-testing.html) | 48 | 3 repos | active |
+| 33 | [Coverage](https://tashan.sh/capability/skill-alirezarezvani-coverage.html) | 47 | 3 repos | active |
+| 34 | [Init · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-init.html) | 47 | 3 repos | active |
+| 35 | [Migrate](https://tashan.sh/capability/skill-alirezarezvani-migrate.html) | 47 | 3 repos | active |
+| 36 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 47 | 1 ★ | active |
+| 37 | [Fix](https://tashan.sh/capability/skill-alirezarezvani-fix.html) | 44 | 2 repos | active |
+| 38 | [Skill Tester](https://tashan.sh/capability/skill-alirezarezvani-skill-tester.html) | 44 | 2 repos | active |
+| 39 | [Localstack · localstack](https://tashan.sh/capability/plugin-localstack-skills-localstack.html) | 44 | 12 ★ | active |
+| 40 | [Agentiqa](https://tashan.sh/capability/plugin-agentiqa-agentiqa-plugin-agentiqa.html) | 43 | 1 ★ | active |
 
-Showing the top 40 of 99. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
+Showing the top 40 of 96. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
 
 ## What these numbers are not
 

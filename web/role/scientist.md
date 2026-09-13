@@ -26,17 +26,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 47 | 5 ★ | active |
 | 14 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 45 | 59 ★ | active |
 | 15 | [Qmt Skills](https://tashan.sh/capability/plugin-dfkai-xtquantai-qmt-skills.html) | 43 | 151 ★ | active |
-| 16 | [Ab Test Setup](https://tashan.sh/capability/skill-alirezarezvani-ab-test-setup.html) | 47 | 3 repos | active |
-| 17 | [Math Olympiad](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-math-olympiad.html) | 46 | 2 marketplaces | — |
-| 18 | [Clinical Research](https://tashan.sh/capability/skill-alirezarezvani-clinical-research.html) | 44 | 2 repos | active |
-| 19 | [Grants](https://tashan.sh/capability/skill-alirezarezvani-grants.html) | 44 | 2 repos | active |
-| 20 | [Litreview](https://tashan.sh/capability/skill-alirezarezvani-litreview.html) | 44 | 2 repos | active |
-| 21 | [Senior Computer Vision](https://tashan.sh/capability/skill-alirezarezvani-senior-computer-vision.html) | 44 | 2 repos | active |
-| 22 | [Statistical Analyst](https://tashan.sh/capability/skill-alirezarezvani-statistical-analyst.html) | 44 | 2 repos | active |
-| 23 | [Supply Chain Skills](https://tashan.sh/capability/plugin-kishorkukreja-awesome-supply-chain-supply-chain-skills.html) | 50 | 51 ★ | active |
-| 24 | [Alphagenome](https://tashan.sh/capability/plugin-genomicsxai-alphagenome-pytorch-alphagenome.html) | 61 | 159 ★ | active |
-| 25 | [Scios Skill](https://tashan.sh/capability/pkg-scios-skill.html) | 55 | 243/wk | active |
-| 26 | [Uniprot](https://tashan.sh/capability/pkg-cyanheads-uniprot-mcp-server.html) | 52 | 99/wk | active |
+| 16 | [Math Olympiad](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-math-olympiad.html) | 46 | 2 marketplaces | — |
+| 17 | [Supply Chain Skills](https://tashan.sh/capability/plugin-kishorkukreja-awesome-supply-chain-supply-chain-skills.html) | 50 | 51 ★ | active |
+| 18 | [Alphagenome](https://tashan.sh/capability/plugin-genomicsxai-alphagenome-pytorch-alphagenome.html) | 61 | 159 ★ | active |
+| 19 | [Scios Skill](https://tashan.sh/capability/pkg-scios-skill.html) | 55 | 243/wk | active |
+| 20 | [Uniprot](https://tashan.sh/capability/pkg-cyanheads-uniprot-mcp-server.html) | 52 | 99/wk | active |
 
 ## What these numbers are not
 

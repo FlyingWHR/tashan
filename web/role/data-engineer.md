@@ -51,13 +51,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 60 | 90 ★ | active |
 | 34 | [AWS Data Analytics](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-data-analytics.html) | 48 | 3 marketplaces | — |
 | 35 | [Oracle AI Data Platform Workbench Spark Connectors](https://tashan.sh/capability/plugin-oracle-samples-oracle-aidp-samples-oracle-ai-data-platform-workbench-spark-connectors.html) | 48 | 3 marketplaces | — |
-| 36 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 47 | 3 repos | active |
-| 37 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 44 | 3 marketplaces | active |
-| 38 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 44 | 3 marketplaces | active |
-| 39 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | 44 | 2 repos | active |
-| 40 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | 44 | 2 repos | active |
+| 36 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 44 | 3 marketplaces | active |
+| 37 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 44 | 3 marketplaces | active |
+| 38 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 43 | 1 ★ | active |
+| 39 | [Oe · openenterprise](https://tashan.sh/capability/pkg-openenterprise-oe-mcp.html) | not scored | 63/wk | abandoned |
+| 40 | [MongoDB · mongodb](https://tashan.sh/capability/plugin-mongodb-agent-skills-mongodb.html) | 68 | 164 ★ | active |
 
-Showing the top 40 of 68. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
+Showing the top 40 of 60. The full ranked shelf is at https://tashan.sh/role/data-engineer.html.
 
 ## What these numbers are not
 

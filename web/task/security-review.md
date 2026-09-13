@@ -40,19 +40,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 51 | 12 ★ | active |
 | 28 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 51 | 11 ★ | active |
 | 29 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 50 | 4 marketplaces | — |
-| 30 | [Red Team](https://tashan.sh/capability/skill-alirezarezvani-red-team.html) | 49 | 4 repos | active |
-| 31 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 47 | 1 ★ | active |
-| 32 | [Claude Security](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-claude-security.html) | 46 | 2 marketplaces | — |
-| 33 | [Security Guidance](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-security-guidance.html) | 46 | 2 marketplaces | — |
-| 34 | [Stackhawk Hawkscan](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-hawkscan.html) | 45 | 3 marketplaces | active |
-| 35 | [Stackhawk API](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-api.html) | 45 | 3 marketplaces | active |
-| 36 | [Ciso Advisor](https://tashan.sh/capability/skill-alirezarezvani-ciso-advisor.html) | 44 | 2 repos | active |
-| 37 | [AI Security](https://tashan.sh/capability/skill-alirezarezvani-ai-security.html) | 44 | 2 repos | active |
-| 38 | [Cloud Security](https://tashan.sh/capability/skill-alirezarezvani-cloud-security.html) | 44 | 2 repos | active |
-| 39 | [Senior Secops](https://tashan.sh/capability/skill-alirezarezvani-senior-secops.html) | 44 | 2 repos | active |
-| 40 | [Senior Security](https://tashan.sh/capability/skill-alirezarezvani-senior-security.html) | 44 | 2 repos | active |
+| 30 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 47 | 1 ★ | active |
+| 31 | [Claude Security](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-claude-security.html) | 46 | 2 marketplaces | — |
+| 32 | [Security Guidance](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-security-guidance.html) | 46 | 2 marketplaces | — |
+| 33 | [Stackhawk Hawkscan](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-hawkscan.html) | 45 | 3 marketplaces | active |
+| 34 | [Stackhawk API](https://tashan.sh/capability/plugin-stackhawk-agent-skills-stackhawk-api.html) | 45 | 3 marketplaces | active |
+| 35 | [Incident Response](https://tashan.sh/capability/skill-alirezarezvani-incident-response.html) | 44 | 2 repos | active |
+| 36 | [Gomboc AI Community](https://tashan.sh/capability/plugin-gomboc-ai-gomboc-community-skills-gomboc-ai-community.html) | 43 | 6 ★ | active |
+| 37 | [Codeguard Security](https://tashan.sh/capability/plugin-cosai-oasis-project-codeguard-codeguard-security.html) | 66 | 276 ★ | active |
+| 38 | [Aikido](https://tashan.sh/capability/plugin-aikidosec-aikido-claude-plugin-aikido.html) | 56 | 11 ★ | active |
+| 39 | [Semgrep](https://tashan.sh/capability/plugin-semgrep-mcp-marketplace-semgrep.html) | 55 | 10 ★ | active |
+| 40 | [Openzeppelin Skills](https://tashan.sh/capability/plugin-openzeppelin-openzeppelin-skills-openzeppelin-skills.html) | 55 | 202 ★ | active |
 
-Showing the top 40 of 100. The full ranked shelf is at https://tashan.sh/task/security-review.html.
+Showing the top 40 of 90. The full ranked shelf is at https://tashan.sh/task/security-review.html.
 
 ## What these numbers are not
 

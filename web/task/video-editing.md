@@ -35,9 +35,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Botverse](https://tashan.sh/capability/pkg-botverse-mcp.html) | 45 | 84/wk | active |
 | 23 | [Fablecut](https://tashan.sh/capability/plugin-ronak-create-fablecut-fablecut.html) | 70 | 597 ★ | active |
 | 24 | [Video Extract](https://tashan.sh/capability/pkg-yanlinglabs-video-extract-mcp.html) | 68 | 666/wk | active |
-| 25 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 67 | 1k/wk | active |
-| 26 | [Marketing Studio](https://tashan.sh/capability/plugin-ucsandman-marketing-studio-marketing-studio.html) | 66 | 227 ★ | active |
-| 27 | [Bilibili](https://tashan.sh/capability/pkg-xzxzzx-bilibili-mcp.html) | 65 | 705/wk | active |
+| 25 | [Marketing Studio](https://tashan.sh/capability/plugin-ucsandman-marketing-studio-marketing-studio.html) | 66 | 227 ★ | active |
+| 26 | [Bilibili](https://tashan.sh/capability/pkg-xzxzzx-bilibili-mcp.html) | 65 | 705/wk | active |
+| 27 | [Siluzan Cso CLI](https://tashan.sh/capability/pkg-siluzan-cso-cli.html) | 63 | 279/wk | active |
 | 28 | [Leclap](https://tashan.sh/capability/pkg-leclap-mcp.html) | 59 | 427/wk | active |
 | 29 | [AppsGolem YouTube Cutter](https://tashan.sh/capability/pkg-appsgolem-mcp.html) | 56 | 370/wk | active |
 | 30 | [Katto](https://tashan.sh/capability/pkg-katto-mcp.html) | 56 | 140/wk | active |
@@ -47,7 +47,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 34 | [Orcadub](https://tashan.sh/capability/pkg-orcadub-cli.html) | 49 | 139/wk | active |
 | 35 | [Transcribe](https://tashan.sh/capability/pkg-transcribe-mcp.html) | 49 | 82/wk | active |
 | 36 | [Adobe Premiere](https://tashan.sh/capability/pkg-adobe-premiere-mcp.html) | 47 | 123/wk | active |
-| 37 | [Aleph Siliconflow](https://tashan.sh/capability/pkg-aleph-siliconflow-mcp.html) | 50 | 1k/wk | active |
+| 37 | [Aleph Siliconflow](https://tashan.sh/capability/pkg-aleph-siliconflow-mcp.html) | 49 | 879/wk | active |
 
 ## What these numbers are not
 

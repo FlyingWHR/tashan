@@ -27,32 +27,32 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Claude Md Optimizer](https://tashan.sh/capability/plugin-wrsmith108-claude-md-optimizer-claude-md-optimizer.html) | 44 | 21 ★ | active |
 | 15 | [Gpt Image 2 Prompts](https://tashan.sh/capability/plugin-youmind-openlab-gpt-image-2-prompts-search-gpt-image-2-prompts.html) | 44 | 6 ★ | active |
 | 16 | [LLM Transpile](https://tashan.sh/capability/plugin-epicsagas-llm-transpile-llm-transpile.html) | 43 | 5 ★ | active |
-| 17 | [Senior Prompt Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-prompt-engineer.html) | 44 | 2 repos | active |
-| 18 | [LLM Cost Optimizer](https://tashan.sh/capability/skill-alirezarezvani-llm-cost-optimizer.html) | 44 | 2 repos | active |
-| 19 | [Prompt Governance](https://tashan.sh/capability/skill-alirezarezvani-prompt-governance.html) | 44 | 2 repos | active |
-| 20 | [Prompt Engineer Toolkit](https://tashan.sh/capability/skill-alirezarezvani-prompt-engineer-toolkit.html) | 44 | 2 repos | active |
-| 21 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 44 | 20 ★ | active |
-| 22 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 70 | 218 ★ | active |
-| 23 | [Prompt Engineering Skills](https://tashan.sh/capability/plugin-treylom-prompt-engineering-skills-prompt-engineering-skills.html) | 62 | 168 ★ | active |
-| 24 | [Co Dialectic](https://tashan.sh/capability/plugin-thewhyman-prompt-engineering-in-action-co-dialectic.html) | 48 | 9 ★ | active |
-| 25 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 98 | 1.1m/wk | active |
-| 26 | [Contextecf Codeledger](https://tashan.sh/capability/pkg-contextecf-codeledger.html) | 60 | 283/wk | active |
-| 27 | [Claude Prompts](https://tashan.sh/capability/pkg-claude-prompts.html) | 54 | 110/wk | active |
-| 28 | [Forkmind](https://tashan.sh/capability/pkg-forkmind.html) | 49 | 143/wk | active |
-| 29 | [Clarifyprompt](https://tashan.sh/capability/pkg-clarifyprompt-mcp.html) | 49 | 81/wk | active |
-| 30 | [Tanuki Context](https://tashan.sh/capability/pkg-tanuki-context.html) | 49 | 60/wk | active |
-| 31 | [Slimdex](https://tashan.sh/capability/pkg-slimdex-mcp.html) | 46 | 127/wk | active |
-| 32 | [Kubernetes · containers](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 79 | 9k/wk | active |
-| 33 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 67 | 1k/wk | active |
-| 34 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 63 | 780/wk | active |
-| 35 | [Codesight](https://tashan.sh/capability/pkg-codesight.html) | 62 | 1k/wk | active |
-| 36 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 61 | 61k/wk | active |
-| 37 | [Madar](https://tashan.sh/capability/pkg-lubab-madar.html) | 57 | 233/wk | active |
-| 38 | [Mcpfy SDK](https://tashan.sh/capability/pkg-mcpfy-sdk.html) | 54 | 538/wk | active |
-| 39 | [Cortex · danielblomma](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 54 | 153/wk | active |
-| 40 | [Odin](https://tashan.sh/capability/plugin-outlinedriven-odin-claude-plugin-odin.html) | 52 | 34 ★ | active |
+| 17 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 43 | 20 ★ | active |
+| 18 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 70 | 218 ★ | active |
+| 19 | [Prompt Engineering Skills](https://tashan.sh/capability/plugin-treylom-prompt-engineering-skills-prompt-engineering-skills.html) | 62 | 168 ★ | active |
+| 20 | [Co Dialectic](https://tashan.sh/capability/plugin-thewhyman-prompt-engineering-in-action-co-dialectic.html) | 48 | 9 ★ | active |
+| 21 | [Context7](https://tashan.sh/capability/pkg-upstash-context7-mcp.html) | 98 | 1.1m/wk | active |
+| 22 | [Contextecf Codeledger](https://tashan.sh/capability/pkg-contextecf-codeledger.html) | 60 | 283/wk | active |
+| 23 | [Claude Prompts](https://tashan.sh/capability/pkg-claude-prompts.html) | 54 | 110/wk | active |
+| 24 | [Forkmind](https://tashan.sh/capability/pkg-forkmind.html) | 49 | 143/wk | active |
+| 25 | [Clarifyprompt](https://tashan.sh/capability/pkg-clarifyprompt-mcp.html) | 49 | 81/wk | active |
+| 26 | [Tanuki Context](https://tashan.sh/capability/pkg-tanuki-context.html) | 49 | 60/wk | active |
+| 27 | [Slimdex](https://tashan.sh/capability/pkg-slimdex-mcp.html) | 46 | 127/wk | active |
+| 28 | [Kubernetes · containers](https://tashan.sh/capability/pkg-kubernetes-mcp-server.html) | 78 | 6k/wk | active |
+| 29 | [Lean Ctx Bin](https://tashan.sh/capability/pkg-lean-ctx-bin.html) | 67 | 1k/wk | active |
+| 30 | [Llmtrim](https://tashan.sh/capability/pkg-llmtrim-cli.html) | 63 | 780/wk | active |
+| 31 | [Codesight](https://tashan.sh/capability/pkg-codesight.html) | 62 | 1k/wk | active |
+| 32 | [Framework](https://tashan.sh/capability/pkg-mcp-framework.html) | 61 | 61k/wk | active |
+| 33 | [Madar](https://tashan.sh/capability/pkg-lubab-madar.html) | 57 | 233/wk | active |
+| 34 | [Mcpfy SDK](https://tashan.sh/capability/pkg-mcpfy-sdk.html) | 54 | 538/wk | active |
+| 35 | [Cortex · danielblomma](https://tashan.sh/capability/pkg-danielblomma-cortex-mcp.html) | 54 | 153/wk | active |
+| 36 | [Odin](https://tashan.sh/capability/plugin-outlinedriven-odin-claude-plugin-odin.html) | 52 | 34 ★ | active |
+| 37 | [Daybrain](https://tashan.sh/capability/pkg-daybrain.html) | 52 | 274/wk | active |
+| 38 | [Stackguide](https://tashan.sh/capability/pkg-stackguide-mcp-server.html) | 52 | 104/wk | active |
+| 39 | [Ctxfile](https://tashan.sh/capability/pkg-ctxfile.html) | 47 | 104/wk | active |
+| 40 | [Aistoragedepot](https://tashan.sh/capability/pkg-aistoragedepot-mcp.html) | 47 | 78/wk | active |
 
-Showing the top 40 of 87. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
+Showing the top 40 of 83. The full ranked shelf is at https://tashan.sh/task/prompt-engineering.html.
 
 ## What these numbers are not
 

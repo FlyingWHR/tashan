@@ -55,10 +55,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Stackhawk Skills For Claude](https://tashan.sh/capability/plugin-stackhawk-claude-skills-stackhawk-skills-for-claude.html) | 51 | 12 ★ | active |
 | 37 | [Clawvet Guard](https://tashan.sh/capability/plugin-mohibshaikh-clawvet-clawvet-guard.html) | 51 | 11 ★ | active |
 | 38 | [Vanta MCP Plugin](https://tashan.sh/capability/plugin-vantainc-vanta-mcp-plugin-vanta-mcp-plugin.html) | 50 | 4 marketplaces | — |
-| 39 | [Red Team](https://tashan.sh/capability/skill-alirezarezvani-red-team.html) | 49 | 4 repos | active |
+| 39 | [Challenge](https://tashan.sh/capability/skill-alirezarezvani-challenge.html) | 49 | 4 repos | active |
 | 40 | [42crunch API Security Testing](https://tashan.sh/capability/plugin-42crunch-ai-claude-plugins-42crunch-api-security-testing.html) | 47 | 1 ★ | active |
 
-Showing the top 40 of 176. The full ranked shelf is at https://tashan.sh/role/security.html.
+Showing the top 40 of 144. The full ranked shelf is at https://tashan.sh/role/security.html.
 
 ## What these numbers are not
 

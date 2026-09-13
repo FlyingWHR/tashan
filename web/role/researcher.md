@@ -12,8 +12,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 - **Knowledge management** — [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) · tashan score 74
 - **Web scraping** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 83
 - **Web research** — [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) · tashan score 68
-- **Literature review** — [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) · tashan score 76
 - **Scientific research** — [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) · tashan score 67
+- **Literature review** — [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) · tashan score 76
 
 ## Ranked
 
@@ -47,7 +47,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 45 | 7 ★ | active |
 | 27 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 45 | 12 ★ | active |
 | 28 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 44 | 28 ★ | active |
-| 29 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 81 | 27k/wk | active |
+| 29 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 81 | 30k/wk | active |
 | 30 | [Desktop Commander · wonderwhy-er](https://tashan.sh/capability/plugin-wonderwhy-er-desktopcommandermcp-desktop-commander.html) | 78 | 9k ★ | active |
 | 31 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 78 | 62k ★ | active |
 | 32 | [Claude Mem](https://tashan.sh/capability/plugin-thedotmack-claude-mem-claude-mem.html) | 77 | 89k ★ | active |
@@ -60,7 +60,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Faf CLI](https://tashan.sh/capability/pkg-faf-cli.html) | 66 | 662/wk | active |
 | 40 | [Slack · slackapi](https://tashan.sh/capability/plugin-slackapi-slack-mcp-plugin-slack.html) | 65 | 86 ★ | active |
 
-Showing the top 40 of 399. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 384. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

@@ -24,10 +24,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Gitwand](https://tashan.sh/capability/pkg-gitwand-mcp.html) | 67 | 1k/wk | active |
 | 12 | [Audit](https://tashan.sh/capability/pkg-sofagent-audit.html) | 67 | 827/wk | active |
 | 13 | [Avcs](https://tashan.sh/capability/pkg-izagood-avcs.html) | 67 | 721/wk | active |
-| 14 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 64 | 1k/wk | active |
-| 15 | [Komnet](https://tashan.sh/capability/pkg-komnet.html) | 64 | 347/wk | active |
-| 16 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 54 | 171/wk | active |
-| 17 | [Quilt](https://tashan.sh/capability/pkg-quilt-dev-cli.html) | 53 | 119/wk | active |
+| 14 | [Komnet](https://tashan.sh/capability/pkg-komnet.html) | 64 | 347/wk | active |
+| 15 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 54 | 171/wk | active |
+| 16 | [Quilt](https://tashan.sh/capability/pkg-quilt-dev-cli.html) | 53 | 119/wk | active |
+| 17 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 48 | 33/wk | active |
 | 18 | [Atlassian Bitbucket](https://tashan.sh/capability/pkg-aashari-mcp-server-atlassian-bitbucket.html) | 45 | 4k/wk | abandoned |
 | 19 | [Uvcs](https://tashan.sh/capability/pkg-proanima-uvcs-mcp.html) | 44 | 65/wk | active |
 

@@ -44,15 +44,15 @@ Ranked by the tashan score
 | 31 | [Kolbo](https://tashan.sh/capability/pkg-kolbo-mcp.html) | 72 | 4k/wk | active |
 | 32 | [Primeng](https://tashan.sh/capability/pkg-primeng-mcp.html) | 72 | 4k/wk | active |
 | 33 | [Robloxstudio](https://tashan.sh/capability/pkg-chrrxs-robloxstudio-mcp.html) | 72 | 4k/wk | active |
-| 34 | [Cds](https://tashan.sh/capability/pkg-coinbase-cds-mcp-server.html) | 72 | 2k/wk | active |
-| 35 | [Codesign](https://tashan.sh/capability/pkg-imgly-codesign-mcp.html) | 72 | 1k/wk | active |
-| 36 | [Factory](https://tashan.sh/capability/plugin-hmlongco-factory-factory.html) | 71 | 3k ★ | active |
-| 37 | [Gsap Skills](https://tashan.sh/capability/plugin-greensock-gsap-skills-gsap-skills.html) | 71 | 15k ★ | active |
-| 38 | [Igniteui Theming](https://tashan.sh/capability/pkg-igniteui-theming.html) | 71 | 9k/wk | active |
-| 39 | [Roast My Design System](https://tashan.sh/capability/pkg-roast-my-design-system.html) | 71 | 2k/wk | active |
-| 40 | [Design](https://tashan.sh/capability/pkg-12ui-design.html) | 71 | 2k/wk | active |
+| 34 | [Musea](https://tashan.sh/capability/pkg-vizejs-musea-mcp-server.html) | 72 | 3k/wk | active |
+| 35 | [Cds](https://tashan.sh/capability/pkg-coinbase-cds-mcp-server.html) | 72 | 2k/wk | active |
+| 36 | [Codesign](https://tashan.sh/capability/pkg-imgly-codesign-mcp.html) | 72 | 1k/wk | active |
+| 37 | [Factory](https://tashan.sh/capability/plugin-hmlongco-factory-factory.html) | 71 | 3k ★ | active |
+| 38 | [Gsap Skills](https://tashan.sh/capability/plugin-greensock-gsap-skills-gsap-skills.html) | 71 | 15k ★ | active |
+| 39 | [Igniteui Theming](https://tashan.sh/capability/pkg-igniteui-theming.html) | 71 | 9k/wk | active |
+| 40 | [React](https://tashan.sh/capability/pkg-heroui-react-mcp.html) | 71 | 3k/wk | active |
 
-Showing the top 40 of 1,132. The full ranked shelf is at https://tashan.sh/category/design.html.
+Showing the top 40 of 1,125. The full ranked shelf is at https://tashan.sh/category/design.html.
 
 ## What these numbers are not
 

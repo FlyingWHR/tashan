@@ -31,28 +31,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Lean Kg](https://tashan.sh/capability/plugin-freepeak-leankg-lean-kg.html) | 64 | 213 ★ | active |
 | 19 | [Sqlew](https://tashan.sh/capability/pkg-sqlew.html) | 49 | 47/wk | active |
 | 20 | [AWS Startup Advisor](https://tashan.sh/capability/plugin-awslabs-startups-aws-startup-advisor.html) | 48 | 3 marketplaces | — |
-| 21 | [Cto Advisor](https://tashan.sh/capability/skill-alirezarezvani-cto-advisor.html) | 47 | 3 repos | active |
-| 22 | [Agent Designer](https://tashan.sh/capability/skill-alirezarezvani-agent-designer.html) | 47 | 3 repos | active |
-| 23 | [Database Schema Designer](https://tashan.sh/capability/skill-alirezarezvani-database-schema-designer.html) | 47 | 3 repos | active |
-| 24 | [Code Modernization](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-code-modernization.html) | 46 | 2 marketplaces | — |
-| 25 | [Feature Dev](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-feature-dev.html) | 46 | 2 marketplaces | — |
-| 26 | [Greptile](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-greptile.html) | 46 | 2 marketplaces | — |
-| 27 | [AWS Solution Architect](https://tashan.sh/capability/skill-alirezarezvani-aws-solution-architect.html) | 44 | 2 repos | active |
-| 28 | [Azure Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-azure-cloud-architect.html) | 44 | 2 repos | active |
-| 29 | [GCP Cloud Architect](https://tashan.sh/capability/skill-alirezarezvani-gcp-cloud-architect.html) | 44 | 2 repos | active |
-| 30 | [Senior Architect](https://tashan.sh/capability/skill-alirezarezvani-senior-architect.html) | 44 | 2 repos | active |
-| 31 | [Senior Backend](https://tashan.sh/capability/skill-alirezarezvani-senior-backend.html) | 44 | 2 repos | active |
-| 32 | [Tech Stack Evaluator](https://tashan.sh/capability/skill-alirezarezvani-tech-stack-evaluator.html) | 44 | 2 repos | active |
-| 33 | [API Design Reviewer](https://tashan.sh/capability/skill-alirezarezvani-api-design-reviewer.html) | 44 | 2 repos | active |
-| 34 | [Database Designer](https://tashan.sh/capability/skill-alirezarezvani-database-designer.html) | 44 | 2 repos | active |
-| 35 | [Migration Architect](https://tashan.sh/capability/skill-alirezarezvani-migration-architect.html) | 44 | 2 repos | active |
-| 36 | [Monorepo Navigator](https://tashan.sh/capability/skill-alirezarezvani-monorepo-navigator.html) | 44 | 2 repos | active |
-| 37 | [Socraticode](https://tashan.sh/capability/plugin-giancarloerra-socraticode-socraticode.html) | 74 | 3k ★ | active |
-| 38 | [Diagrams So](https://tashan.sh/capability/pkg-diagrams-so-mcp.html) | 54 | 373/wk | active |
-| 39 | [Weavatrix Online](https://tashan.sh/capability/pkg-weavatrix-online.html) | 53 | 374/wk | active |
-| 40 | [Forgecraft](https://tashan.sh/capability/pkg-forgecraft-mcp.html) | 45 | 110/wk | active |
-
-Showing the top 40 of 49. The full ranked shelf is at https://tashan.sh/task/software-architecture.html.
+| 21 | [Code Modernization](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-code-modernization.html) | 46 | 2 marketplaces | — |
+| 22 | [Feature Dev](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-feature-dev.html) | 46 | 2 marketplaces | — |
+| 23 | [Greptile](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-greptile.html) | 46 | 2 marketplaces | — |
+| 24 | [Socraticode](https://tashan.sh/capability/plugin-giancarloerra-socraticode-socraticode.html) | 74 | 3k ★ | active |
+| 25 | [Diagrams So](https://tashan.sh/capability/pkg-diagrams-so-mcp.html) | 54 | 373/wk | active |
+| 26 | [Weavatrix Online](https://tashan.sh/capability/pkg-weavatrix-online.html) | 53 | 374/wk | active |
+| 27 | [Forgecraft](https://tashan.sh/capability/pkg-forgecraft-mcp.html) | 45 | 110/wk | active |
+| 28 | [Systemdox](https://tashan.sh/capability/pkg-systemdox-mcp-server.html) | 58 | 415/wk | active |
+| 29 | [Cloudarch](https://tashan.sh/capability/pkg-cloud-arch-mcp-server.html) | 57 | 344/wk | active |
+| 30 | [Avodado](https://tashan.sh/capability/pkg-avodado-mcp.html) | 55 | 212/wk | active |
+| 31 | [Architector](https://tashan.sh/capability/pkg-mcp-architector.html) | 54 | 76/wk | active |
+| 32 | [Ovecc](https://tashan.sh/capability/pkg-ovecc.html) | 51 | 205/wk | active |
+| 33 | [Skeletiq](https://tashan.sh/capability/pkg-skeletiq-mcp.html) | 51 | 114/wk | active |
+| 34 | [Getfacade](https://tashan.sh/capability/pkg-getfacade-mcp.html) | 47 | 59/wk | active |
+| 35 | [Drawarch](https://tashan.sh/capability/pkg-drawarch-mcp.html) | 46 | 68/wk | active |
+| 36 | [Repo Cartographer](https://tashan.sh/capability/pkg-repo-cartographer.html) | 45 | 59/wk | active |
 
 ## What these numbers are not
 

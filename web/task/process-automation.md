@@ -37,22 +37,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 24 | [Conversiontools](https://tashan.sh/capability/plugin-conversiontools-agent-skills-conversiontools.html) | 43 | 5 ★ | active |
 | 25 | [Openowl](https://tashan.sh/capability/pkg-openowl.html) | 65 | 2k/wk | active |
 | 26 | [Imessage · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-imessage-mcp-imessage-mcp.html) | 45 | 2 ★ | active |
-| 27 | [Process Mapper](https://tashan.sh/capability/skill-alirezarezvani-process-mapper.html) | 44 | 2 repos | active |
-| 28 | [Coo Advisor](https://tashan.sh/capability/skill-alirezarezvani-coo-advisor.html) | 44 | 2 repos | active |
-| 29 | [Google Workspace CLI](https://tashan.sh/capability/skill-alirezarezvani-google-workspace-cli.html) | 44 | 2 repos | active |
-| 30 | [Loop](https://tashan.sh/capability/skill-alirezarezvani-loop.html) | 44 | 2 repos | active |
-| 31 | [Workflow Builder](https://tashan.sh/capability/skill-alirezarezvani-workflow-builder.html) | 44 | 2 repos | active |
-| 32 | [Mise · brentmitchell25](https://tashan.sh/capability/plugin-brentmitchell25-mise-plugin-mise.html) | 44 | 2 ★ | active |
-| 33 | [Klarity](https://tashan.sh/capability/plugin-klarity-ai-klarity-mcp-klarity.html) | 43 | 1 ★ | active |
-| 34 | [Shippo](https://tashan.sh/capability/plugin-goshippo-ai-shippo.html) | 43 | 1 ★ | active |
-| 35 | [Slack · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-slack-mcp-slack-mcp.html) | 43 | 1 ★ | active |
-| 36 | [Superglue](https://tashan.sh/capability/plugin-superglue-ai-cli-superglue.html) | 43 | 1 ★ | active |
-| 37 | [Zapier](https://tashan.sh/capability/plugin-zapier-zapier-mcp-zapier.html) | 70 | 363 ★ | active |
-| 38 | [Servicenow SDK](https://tashan.sh/capability/plugin-servicenow-sdk-servicenow-sdk.html) | 67 | 104 ★ | active |
-| 39 | [Agenticmail](https://tashan.sh/capability/plugin-agenticmail-agenticmail-agenticmail.html) | 63 | 180 ★ | active |
-| 40 | [Airtable · airtable](https://tashan.sh/capability/plugin-airtable-skills-airtable.html) | 61 | 38 ★ | active |
+| 27 | [Mise · brentmitchell25](https://tashan.sh/capability/plugin-brentmitchell25-mise-plugin-mise.html) | 44 | 2 ★ | active |
+| 28 | [Klarity](https://tashan.sh/capability/plugin-klarity-ai-klarity-mcp-klarity.html) | 43 | 1 ★ | active |
+| 29 | [Shippo](https://tashan.sh/capability/plugin-goshippo-ai-shippo.html) | 43 | 1 ★ | active |
+| 30 | [Slack · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-slack-mcp-slack-mcp.html) | 43 | 1 ★ | active |
+| 31 | [Superglue](https://tashan.sh/capability/plugin-superglue-ai-cli-superglue.html) | 43 | 1 ★ | active |
+| 32 | [Zapier](https://tashan.sh/capability/plugin-zapier-zapier-mcp-zapier.html) | 70 | 363 ★ | active |
+| 33 | [Servicenow SDK](https://tashan.sh/capability/plugin-servicenow-sdk-servicenow-sdk.html) | 67 | 104 ★ | active |
+| 34 | [Agenticmail](https://tashan.sh/capability/plugin-agenticmail-agenticmail-agenticmail.html) | 63 | 180 ★ | active |
+| 35 | [Airtable · airtable](https://tashan.sh/capability/plugin-airtable-skills-airtable.html) | 61 | 38 ★ | active |
+| 36 | [Rk Skills](https://tashan.sh/capability/plugin-richkuo-rk-skills-rk-skills.html) | 57 | 43 ★ | active |
+| 37 | [Temporal](https://tashan.sh/capability/plugin-temporalio-claude-temporal-plugin-temporal.html) | 54 | 23 ★ | active |
+| 38 | [Versori Skills](https://tashan.sh/capability/plugin-versori-cli-versori-skills.html) | 51 | 12 ★ | active |
+| 39 | [Outlook](https://tashan.sh/capability/pkg-mcp-z-mcp-outlook.html) | 67 | 1k/wk | active |
+| 40 | [Gmail](https://tashan.sh/capability/pkg-mcp-z-mcp-gmail.html) | 65 | 915/wk | active |
 
-Showing the top 40 of 50. The full ranked shelf is at https://tashan.sh/task/process-automation.html.
+Showing the top 40 of 45. The full ranked shelf is at https://tashan.sh/task/process-automation.html.
 
 ## What these numbers are not
 

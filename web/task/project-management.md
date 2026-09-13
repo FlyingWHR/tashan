@@ -33,26 +33,26 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 20 | [Agent Estimate](https://tashan.sh/capability/plugin-haoranc-agent-estimate-agent-estimate.html) | 44 | 3 ★ | active |
 | 21 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 62 | 205 ★ | active |
 | 22 | [Sq](https://tashan.sh/capability/plugin-derekstride-sq-sq.html) | 51 | 13 ★ | active |
-| 23 | [Executing Plans](https://tashan.sh/capability/skill-obra-executing-plans.html) | 50 | 4 repos | active |
+| 23 | [Executing Plans](https://tashan.sh/capability/skill-obra-executing-plans.html) | 48 | 3 repos | active |
 | 24 | [Writing Plans](https://tashan.sh/capability/skill-obra-writing-plans.html) | 48 | 3 repos | active |
-| 25 | [Agile Product Owner](https://tashan.sh/capability/skill-alirezarezvani-agile-product-owner.html) | 47 | 3 repos | active |
-| 26 | [Deep Work · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-deep-work.html) | 47 | 3 repos | active |
-| 27 | [The H AI K U Method](https://tashan.sh/capability/plugin-gigsmart-haiku-method-the-h-ai-k-u-method.html) | 47 | 24 ★ | active |
-| 28 | [Asana · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-asana.html) | 46 | 2 marketplaces | — |
-| 29 | [GitHub · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-github.html) | 46 | 2 marketplaces | — |
-| 30 | [GitLab · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-gitlab.html) | 46 | 2 marketplaces | — |
-| 31 | [Linear · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-linear.html) | 46 | 2 marketplaces | — |
-| 32 | [Clickup Custom](https://tashan.sh/capability/pkg-clickup-custom-mcp.html) | 46 | 58/wk | active |
-| 33 | [Capacity Planner](https://tashan.sh/capability/skill-alirezarezvani-capacity-planner.html) | 44 | 2 repos | active |
-| 34 | [Change Management](https://tashan.sh/capability/skill-alirezarezvani-change-management.html) | 44 | 2 repos | active |
-| 35 | [Company OS](https://tashan.sh/capability/skill-alirezarezvani-company-os.html) | 44 | 2 repos | active |
-| 36 | [Coo Advisor](https://tashan.sh/capability/skill-alirezarezvani-coo-advisor.html) | 44 | 2 repos | active |
-| 37 | [Decision Logger](https://tashan.sh/capability/skill-alirezarezvani-decision-logger.html) | 44 | 2 repos | active |
-| 38 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | 44 | 2 repos | active |
-| 39 | [Tech Debt Tracker](https://tashan.sh/capability/skill-alirezarezvani-tech-debt-tracker.html) | 44 | 2 repos | active |
-| 40 | [Weekly Review](https://tashan.sh/capability/skill-alirezarezvani-weekly-review.html) | 44 | 2 repos | active |
+| 25 | [Execute](https://tashan.sh/capability/skill-alirezarezvani-execute.html) | 47 | 3 repos | active |
+| 26 | [The H AI K U Method](https://tashan.sh/capability/plugin-gigsmart-haiku-method-the-h-ai-k-u-method.html) | 47 | 24 ★ | active |
+| 27 | [Asana · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-asana.html) | 46 | 2 marketplaces | — |
+| 28 | [GitHub · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-github.html) | 46 | 2 marketplaces | — |
+| 29 | [GitLab · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-gitlab.html) | 46 | 2 marketplaces | — |
+| 30 | [Linear · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-linear.html) | 46 | 2 marketplaces | — |
+| 31 | [Clickup Custom](https://tashan.sh/capability/pkg-clickup-custom-mcp.html) | 46 | 58/wk | active |
+| 32 | [Postmortem](https://tashan.sh/capability/skill-alirezarezvani-postmortem.html) | 44 | 2 repos | active |
+| 33 | [Change Management](https://tashan.sh/capability/skill-alirezarezvani-change-management.html) | 44 | 2 repos | active |
+| 34 | [Weekly Review](https://tashan.sh/capability/skill-alirezarezvani-weekly-review.html) | 44 | 2 repos | active |
+| 35 | [Shipyard · Acendas](https://tashan.sh/capability/plugin-acendas-shipyard-shipyard.html) | 44 | 2 ★ | active |
+| 36 | [Launchpad](https://tashan.sh/capability/plugin-builtform-launchpad-launchpad.html) | 43 | 1 ★ | active |
+| 37 | [Atlassian · atlassian](https://tashan.sh/capability/plugin-atlassian-atlassian-mcp-server-atlassian.html) | 72 | 911 ★ | active |
+| 38 | [Shortcut](https://tashan.sh/capability/pkg-shortcut-mcp.html) | 71 | 19k/wk | active |
+| 39 | [Airtable · airtable](https://tashan.sh/capability/plugin-airtable-skills-airtable.html) | 61 | 38 ★ | active |
+| 40 | [Gsd Plugin](https://tashan.sh/capability/plugin-jnuyens-gsd-plugin-gsd-plugin.html) | 60 | 84 ★ | active |
 
-Showing the top 40 of 96. The full ranked shelf is at https://tashan.sh/task/project-management.html.
+Showing the top 40 of 83. The full ranked shelf is at https://tashan.sh/task/project-management.html.
 
 ## What these numbers are not
 

@@ -11,10 +11,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 - **Project management** — [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) · tashan score 74
 - **PRDs and specs** — [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) · tashan score 75
-- **Product strategy** — [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) · tashan score 69
 - **Market analysis** — [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) · tashan score 76
 - **Risk assessment** — [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) · tashan score 69
-- **User research** — [Frog](https://tashan.sh/capability/pkg-frog.html) · tashan score 73
+- **Product strategy** — [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) · tashan score 69
+- **Design critique** — [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) · tashan score 79
 
 ## Ranked
 
@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Karma](https://tashan.sh/capability/plugin-show-karma-skills-karma.html) | 54 | 27 ★ | active |
 | 40 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 54 | 220/wk | active |
 
-Showing the top 40 of 229. The full ranked shelf is at https://tashan.sh/role/pm.html.
+Showing the top 40 of 179. The full ranked shelf is at https://tashan.sh/role/pm.html.
 
 ## What these numbers are not
 

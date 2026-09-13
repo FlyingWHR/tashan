@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Requesting Code Review](https://tashan.sh/capability/skill-obra-requesting-code-review.html) | 48 | 3 repos | active |
 | 40 | [Code Review · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-code-review.html) | 46 | 2 marketplaces | — |
 
-Showing the top 40 of 96. The full ranked shelf is at https://tashan.sh/task/code-review.html.
+Showing the top 40 of 93. The full ranked shelf is at https://tashan.sh/task/code-review.html.
 
 ## What these numbers are not
 

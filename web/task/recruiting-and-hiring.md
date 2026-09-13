@@ -11,21 +11,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Chro Advisor](https://tashan.sh/capability/skill-alirezarezvani-chro-advisor.html) | 44 | 2 repos | active |
-| 2 | [Vpe Advisor](https://tashan.sh/capability/skill-alirezarezvani-vpe-advisor.html) | 44 | 2 repos | active |
-| 3 | [Interview System Designer](https://tashan.sh/capability/skill-alirezarezvani-interview-system-designer.html) | 44 | 2 repos | active |
-| 4 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 65 | 1k/wk | active |
-| 5 | [MCP FactorialHR](https://tashan.sh/capability/pkg-t4dhg-mcp-factorial.html) | 66 | 667/wk | active |
-| 6 | [Glassdoor](https://tashan.sh/capability/pkg-hasdata-glassdoor-mcp.html) | 61 | 109/wk | active |
-| 7 | [Ashby](https://tashan.sh/capability/pkg-mcp-ashby.html) | 57 | 352/wk | active |
-| 8 | [Bothire](https://tashan.sh/capability/pkg-bothire-mcp.html) | 56 | 381/wk | active |
-| 9 | [Matchcv](https://tashan.sh/capability/pkg-matchcv-mcp.html) | 55 | 257/wk | active |
-| 10 | [ATS Jobs — open roles and hiring changes](https://tashan.sh/capability/pkg-ats-jobs-mcp.html) | 54 | 187/wk | active |
-| 11 | [cv.json — open CV data](https://tashan.sh/capability/pkg-cvjson-mcp.html) | 51 | 77/wk | active |
-| 12 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 49 | 153/wk | active |
-| 13 | [Juicedresume](https://tashan.sh/capability/pkg-juicedresume-mcp.html) | 46 | 19/wk | active |
-| 14 | [Osf Data Marketplace](https://tashan.sh/capability/pkg-osf-data-marketplace.html) | 45 | 47/wk | active |
-| 15 | [Ask Xverum](https://tashan.sh/capability/pkg-xverum-mcp.html) | not scored | 91/wk | abandoned |
+| 1 | [Cvx](https://tashan.sh/capability/pkg-hrtips-cvx.html) | 65 | 1k/wk | active |
+| 2 | [MCP FactorialHR](https://tashan.sh/capability/pkg-t4dhg-mcp-factorial.html) | 66 | 667/wk | active |
+| 3 | [Glassdoor](https://tashan.sh/capability/pkg-hasdata-glassdoor-mcp.html) | 61 | 109/wk | active |
+| 4 | [Ashby](https://tashan.sh/capability/pkg-mcp-ashby.html) | 57 | 352/wk | active |
+| 5 | [Bothire](https://tashan.sh/capability/pkg-bothire-mcp.html) | 56 | 381/wk | active |
+| 6 | [Matchcv](https://tashan.sh/capability/pkg-matchcv-mcp.html) | 55 | 257/wk | active |
+| 7 | [ATS Jobs — open roles and hiring changes](https://tashan.sh/capability/pkg-ats-jobs-mcp.html) | 54 | 187/wk | active |
+| 8 | [cv.json — open CV data](https://tashan.sh/capability/pkg-cvjson-mcp.html) | 51 | 77/wk | active |
+| 9 | [Resume Optimizer](https://tashan.sh/capability/pkg-resume-optimizer.html) | 49 | 153/wk | active |
+| 10 | [Juicedresume](https://tashan.sh/capability/pkg-juicedresume-mcp.html) | 46 | 19/wk | active |
+| 11 | [Osf Data Marketplace](https://tashan.sh/capability/pkg-osf-data-marketplace.html) | 45 | 47/wk | active |
+| 12 | [Ask Xverum](https://tashan.sh/capability/pkg-xverum-mcp.html) | not scored | 91/wk | abandoned |
 
 ## What these numbers are not
 

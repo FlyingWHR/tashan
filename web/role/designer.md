@@ -44,21 +44,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Claude2figma](https://tashan.sh/capability/plugin-senlindesign-claude2figma-claude2figma.html) | 40 | 180 ★ | active |
 | 26 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 76 | 34k ★ | active |
 | 27 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
-| 28 | [Brand Guidelines](https://tashan.sh/capability/skill-anthropics-brand-guidelines.html) | 53 | 6 repos | active |
-| 29 | [Canvas Design](https://tashan.sh/capability/skill-anthropics-canvas-design.html) | 50 | 4 repos | active |
-| 30 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 50 | 4 repos | active |
-| 31 | [Theme Factory](https://tashan.sh/capability/skill-anthropics-theme-factory.html) | 48 | 3 repos | active |
-| 32 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 48 | 9 ★ | active |
-| 33 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 48 | 43/wk | active |
-| 34 | [Algorithmic Art](https://tashan.sh/capability/skill-anthropics-algorithmic-art.html) | 48 | 3 repos | active |
-| 35 | [Slack Gif Creator](https://tashan.sh/capability/skill-anthropics-slack-gif-creator.html) | 48 | 3 repos | active |
-| 36 | [Design System · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-design-system.html) | 47 | 3 repos | active |
-| 37 | [UI Design System](https://tashan.sh/capability/skill-alirezarezvani-ui-design-system.html) | 47 | 3 repos | active |
-| 38 | [Product Manager Toolkit](https://tashan.sh/capability/skill-alirezarezvani-product-manager-toolkit.html) | 47 | 3 repos | active |
-| 39 | [UX Researcher Designer](https://tashan.sh/capability/skill-alirezarezvani-ux-researcher-designer.html) | 47 | 3 repos | active |
-| 40 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
+| 28 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | 53 | 6 repos | active |
+| 29 | [Brand Guidelines](https://tashan.sh/capability/skill-anthropics-brand-guidelines.html) | 48 | 3 repos | active |
+| 30 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 48 | 9 ★ | active |
+| 31 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 48 | 43/wk | active |
+| 32 | [Design System · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-design-system.html) | 47 | 3 repos | active |
+| 33 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
+| 34 | [UI Theme Designer](https://tashan.sh/capability/plugin-sap-ui-theme-designer-plugins-for-coding-agents-ui-theme-designer.html) | 46 | 1 ★ | active |
+| 35 | [Hyperframes · heygen-com](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes.html) | 46 | 3 marketplaces | active |
+| 36 | [Frank Grimes](https://tashan.sh/capability/plugin-misfitdev-claude-plugins-frank-grimes.html) | 46 | 2 ★ | active |
+| 37 | [Fullstory](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 46 | 2 marketplaces | — |
+| 38 | [Playground](https://tashan.sh/capability/skill-anthropics-playground.html) | 46 | 2 repos | active |
+| 39 | [Canvas Design](https://tashan.sh/capability/skill-anthropics-canvas-design.html) | 45 | 2 repos | active |
+| 40 | [A11y Audit](https://tashan.sh/capability/skill-alirezarezvani-a11y-audit.html) | 44 | 2 repos | active |
 
-Showing the top 40 of 155. The full ranked shelf is at https://tashan.sh/role/designer.html.
+Showing the top 40 of 141. The full ranked shelf is at https://tashan.sh/role/designer.html.
 
 ## What these numbers are not
 

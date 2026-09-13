@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Mind](https://tashan.sh/capability/plugin-memvid-claude-brain-mind.html) | 52 | 533 ★ | stable |
 | 40 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 50 | 10 ★ | active |
 
-Showing the top 40 of 271. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
+Showing the top 40 of 262. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
 
 ## What these numbers are not
 

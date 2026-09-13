@@ -31,20 +31,20 @@ Ranked by the tashan score
 | 18 | [Earth2studio](https://tashan.sh/capability/plugin-nvidia-earth2studio-earth2studio.html) | 69 | 1k ★ | active |
 | 19 | [Biomcp Ts](https://tashan.sh/capability/pkg-biomcp.html) | 69 | 2k/wk | active |
 | 20 | [Airtable](https://tashan.sh/capability/pkg-airtable-mcp-cli.html) | 69 | 1k/wk | active |
-| 21 | [Frase SEO](https://tashan.sh/capability/pkg-frase-mcp-server.html) | 69 | 797/wk | active |
-| 22 | [Mapbox](https://tashan.sh/capability/pkg-mapbox-mcp-server.html) | 69 | 614/wk | active |
-| 23 | [Fastsqla](https://tashan.sh/capability/plugin-hadrien-fastsqla-fastsqla.html) | 68 | 85 ★ | active |
-| 24 | [Citable](https://tashan.sh/capability/pkg-citable-mcp.html) | 68 | 2k/wk | active |
-| 25 | [Gscdump](https://tashan.sh/capability/pkg-gscdump-cli.html) | 66 | 1k/wk | active |
-| 26 | [Myco](https://tashan.sh/capability/pkg-goondocks-myco.html) | 65 | 1k/wk | active |
-| 27 | [Lighthouse · priyankark](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 65 | 752/wk | active |
-| 28 | [Claude Lens](https://tashan.sh/capability/plugin-astro-han-claude-lens-claude-lens.html) | 64 | 216 ★ | active |
-| 29 | [Orchyn](https://tashan.sh/capability/pkg-orchyn-mcp.html) | 64 | 460/wk | active |
-| 30 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 63 | 68 ★ | active |
-| 31 | [Devcoach](https://tashan.sh/capability/pkg-devcoach.html) | 63 | 441/wk | active |
-| 32 | [Seatable](https://tashan.sh/capability/pkg-seatable-mcp-seatable.html) | 63 | 440/wk | active |
-| 33 | [Apple Health](https://tashan.sh/capability/pkg-neiltron-apple-health-mcp.html) | 62 | 1k/wk | active |
-| 34 | [Placeroot](https://tashan.sh/capability/pkg-placeroot.html) | 62 | 890/wk | active |
+| 21 | [Mapbox](https://tashan.sh/capability/pkg-mapbox-mcp-server.html) | 69 | 614/wk | active |
+| 22 | [Fastsqla](https://tashan.sh/capability/plugin-hadrien-fastsqla-fastsqla.html) | 68 | 85 ★ | active |
+| 23 | [Citable](https://tashan.sh/capability/pkg-citable-mcp.html) | 68 | 2k/wk | active |
+| 24 | [Frase SEO](https://tashan.sh/capability/pkg-frase-mcp-server.html) | 68 | 211/wk | active |
+| 25 | [France Data](https://tashan.sh/capability/pkg-france-data-mcp.html) | 67 | 762/wk | active |
+| 26 | [Gscdump](https://tashan.sh/capability/pkg-gscdump-cli.html) | 66 | 1k/wk | active |
+| 27 | [Myco](https://tashan.sh/capability/pkg-goondocks-myco.html) | 65 | 1k/wk | active |
+| 28 | [Lighthouse · priyankark](https://tashan.sh/capability/pkg-lighthouse-mcp.html) | 65 | 752/wk | active |
+| 29 | [Claude Lens](https://tashan.sh/capability/plugin-astro-han-claude-lens-claude-lens.html) | 64 | 216 ★ | active |
+| 30 | [Orchyn](https://tashan.sh/capability/pkg-orchyn-mcp.html) | 64 | 460/wk | active |
+| 31 | [Pinecone](https://tashan.sh/capability/plugin-pinecone-io-pinecone-claude-code-plugin-pinecone.html) | 63 | 68 ★ | active |
+| 32 | [Devcoach](https://tashan.sh/capability/pkg-devcoach.html) | 63 | 441/wk | active |
+| 33 | [Seatable](https://tashan.sh/capability/pkg-seatable-mcp-seatable.html) | 63 | 440/wk | active |
+| 34 | [Apple Health](https://tashan.sh/capability/pkg-neiltron-apple-health-mcp.html) | 62 | 1k/wk | active |
 | 35 | [Ottersnap](https://tashan.sh/capability/pkg-ottersnap-mcp.html) | 62 | 559/wk | active |
 | 36 | [Altmetric](https://tashan.sh/capability/pkg-altmetric-mcp.html) | 62 | 357/wk | active |
 | 37 | [Stathead](https://tashan.sh/capability/pkg-stathead-mcp.html) | 62 | 212/wk | active |
@@ -52,7 +52,7 @@ Ranked by the tashan score
 | 39 | [Search Console · saurabhsharma2u](https://tashan.sh/capability/pkg-search-console-mcp.html) | 61 | 609/wk | active |
 | 40 | [PropLine — Sports Betting Odds & Prop Resolution](https://tashan.sh/capability/pkg-propline-mcp.html) | 61 | 550/wk | active |
 
-Showing the top 40 of 409. The full ranked shelf is at https://tashan.sh/category/data.html.
+Showing the top 40 of 407. The full ranked shelf is at https://tashan.sh/category/data.html.
 
 ## What these numbers are not
 

@@ -49,10 +49,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 36 | [Wormhole X402](https://tashan.sh/capability/pkg-wormhole-x402.html) | 50 | 30/wk | active |
 | 37 | [Lightning Wallet](https://tashan.sh/capability/pkg-lightning-wallet-mcp.html) | 49 | 127/wk | active |
 | 38 | [Azeth](https://tashan.sh/capability/pkg-azeth-mcp-server.html) | 47 | 86/wk | active |
-| 39 | [three.ws Billing](https://tashan.sh/capability/pkg-three-ws-billing-mcp.html) | 45 | 39/wk | active |
-| 40 | [Stablecoinx](https://tashan.sh/capability/pkg-stablecoinx-mcp.html) | 44 | 36/wk | active |
+| 39 | [Jaz AI](https://tashan.sh/capability/plugin-teamtinvio-jaz-ai-jaz-ai.html) | 46 | 7 ★ | active |
+| 40 | [three.ws Billing](https://tashan.sh/capability/pkg-three-ws-billing-mcp.html) | 45 | 39/wk | active |
 
-Showing the top 40 of 45. The full ranked shelf is at https://tashan.sh/task/bookkeeping.html.
+Showing the top 40 of 46. The full ranked shelf is at https://tashan.sh/task/bookkeeping.html.
 
 ## What these numbers are not
 

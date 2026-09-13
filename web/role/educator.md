@@ -17,9 +17,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 44 | 26 ★ | active |
 | 5 | [Gogcli MCP Classroom](https://tashan.sh/capability/pkg-gogcli-mcp-classroom.html) | 64 | 525/wk | active |
 | 6 | [Claude Education Skills Library](https://tashan.sh/capability/plugin-garethmanning-claude-education-skills-claude-education-skills-library.html) | 59 | 471 ★ | active |
-| 7 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 49 | 4 repos | active |
-| 8 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 47 | 3 repos | active |
-| 9 | [Learning Output Style](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-learning-output-style.html) | 46 | 2 marketplaces | — |
+| 7 | [Learning Output Style](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-learning-output-style.html) | 46 | 2 marketplaces | — |
+| 8 | [Code Tour](https://tashan.sh/capability/skill-alirezarezvani-code-tour.html) | 44 | 2 repos | active |
+| 9 | [Codebase Onboarding](https://tashan.sh/capability/skill-alirezarezvani-codebase-onboarding.html) | 44 | 2 repos | active |
 | 10 | [StudioMeyer Academy](https://tashan.sh/capability/pkg-mcp-academy.html) | 55 | 330/wk | active |
 | 11 | [Smarter Weather Developer Onboarding](https://tashan.sh/capability/pkg-smarterweather-mcp-onboarding.html) | 55 | 212/wk | active |
 | 12 | [Merekit](https://tashan.sh/capability/pkg-merekit-cli.html) | 54 | 81/wk | active |

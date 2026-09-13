@@ -29,21 +29,18 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Oracle AI Data Platform Workbench Spark Connectors](https://tashan.sh/capability/plugin-oracle-samples-oracle-aidp-samples-oracle-ai-data-platform-workbench-spark-connectors.html) | 48 | 3 marketplaces | — |
 | 17 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 44 | 3 marketplaces | active |
 | 18 | [Data Engineering](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 44 | 3 marketplaces | active |
-| 19 | [Chief Data Officer Advisor](https://tashan.sh/capability/skill-alirezarezvani-chief-data-officer-advisor.html) | 44 | 2 repos | active |
-| 20 | [Senior Data Engineer](https://tashan.sh/capability/skill-alirezarezvani-senior-data-engineer.html) | 44 | 2 repos | active |
-| 21 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | 44 | 2 repos | active |
-| 22 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 43 | 1 ★ | active |
-| 23 | [Oe · openenterprise](https://tashan.sh/capability/pkg-openenterprise-oe-mcp.html) | not scored | 63/wk | abandoned |
-| 24 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 58 | 32 ★ | active |
-| 25 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 58 | 25 ★ | active |
-| 26 | [Bigtable](https://tashan.sh/capability/plugin-googlecloudplatform-cloud-bigtable-ecosystem-bigtable.html) | 53 | 20 ★ | active |
-| 27 | [Versori Skills](https://tashan.sh/capability/plugin-versori-cli-versori-skills.html) | 51 | 12 ★ | active |
-| 28 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 48 | 6 ★ | active |
-| 29 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 44 | 3 ★ | active |
-| 30 | [Launch Kit](https://tashan.sh/capability/pkg-launchsecure-launch-kit.html) | 67 | 2k/wk | active |
-| 31 | [Agentic Kdd](https://tashan.sh/capability/pkg-agentic-kdd.html) | 56 | 243/wk | active |
-| 32 | [Moysklad](https://tashan.sh/capability/pkg-theyahia-moysklad-mcp.html) | 44 | 100/wk | active |
-| 33 | [Dpf It](https://tashan.sh/capability/pkg-dpf-it-mcp-server.html) | not scored | 93/wk | abandoned |
+| 19 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 43 | 1 ★ | active |
+| 20 | [Oe · openenterprise](https://tashan.sh/capability/pkg-openenterprise-oe-mcp.html) | not scored | 63/wk | abandoned |
+| 21 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 58 | 32 ★ | active |
+| 22 | [Knowledge Catalog](https://tashan.sh/capability/plugin-gemini-cli-extensions-knowledge-catalog-knowledge-catalog.html) | 58 | 25 ★ | active |
+| 23 | [Bigtable](https://tashan.sh/capability/plugin-googlecloudplatform-cloud-bigtable-ecosystem-bigtable.html) | 53 | 20 ★ | active |
+| 24 | [Versori Skills](https://tashan.sh/capability/plugin-versori-cli-versori-skills.html) | 51 | 12 ★ | active |
+| 25 | [Scylladb](https://tashan.sh/capability/plugin-scylladb-agent-skills-scylladb.html) | 48 | 6 ★ | active |
+| 26 | [Altimate Code](https://tashan.sh/capability/plugin-altimateai-altimate-claude-plugin-altimate-code.html) | 44 | 3 ★ | active |
+| 27 | [Launch Kit](https://tashan.sh/capability/pkg-launchsecure-launch-kit.html) | 67 | 2k/wk | active |
+| 28 | [Agentic Kdd](https://tashan.sh/capability/pkg-agentic-kdd.html) | 56 | 243/wk | active |
+| 29 | [Moysklad](https://tashan.sh/capability/pkg-theyahia-moysklad-mcp.html) | 44 | 100/wk | active |
+| 30 | [Dpf It](https://tashan.sh/capability/pkg-dpf-it-mcp-server.html) | not scored | 93/wk | abandoned |
 
 ## What these numbers are not
 

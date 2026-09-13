@@ -32,32 +32,32 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 76 | 34k ★ | active |
 | 15 | [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) | 76 | 28k/wk | active |
 | 16 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 69 | 150 ★ | active |
-| 17 | [Algorithmic Art](https://tashan.sh/capability/skill-anthropics-algorithmic-art.html) | 48 | 3 repos | active |
-| 18 | [Slack Gif Creator](https://tashan.sh/capability/skill-anthropics-slack-gif-creator.html) | 48 | 3 repos | active |
-| 19 | [Hyperframes · heygen-com](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes.html) | 46 | 3 marketplaces | active |
-| 20 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 43 | 1 ★ | active |
-| 21 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 856/wk | active |
-| 22 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 63 | 700/wk | active |
-| 23 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 57 | 276/wk | active |
-| 24 | [Rendobar](https://tashan.sh/capability/pkg-rendobar-mcp.html) | 55 | 197/wk | active |
-| 25 | [Rive](https://tashan.sh/capability/pkg-rive-mcp-server.html) | 54 | 381/wk | active |
-| 26 | [Chamade](https://tashan.sh/capability/pkg-chamade-mcp-server.html) | 51 | 116/wk | active |
-| 27 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 50 | 248/wk | active |
-| 28 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 50 | 165/wk | active |
-| 29 | [Furlen](https://tashan.sh/capability/pkg-furlen-mcp.html) | 48 | 97/wk | active |
-| 30 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 71 | 4k/wk | active |
-| 31 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 66 | 305/wk | active |
-| 32 | [Oh My Cassette](https://tashan.sh/capability/plugin-cassette-editor-oh-my-cassette-oh-my-cassette.html) | 66 | 138 ★ | active |
-| 33 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 65 | 518/wk | active |
-| 34 | [Runapi](https://tashan.sh/capability/pkg-runapi-ai-mcp.html) | 64 | 588/wk | active |
-| 35 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 63 | 885/wk | active |
-| 36 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 61 | 570/wk | active |
-| 37 | [Cursor Chat Bridge](https://tashan.sh/capability/pkg-cursor-telegram-chat.html) | 59 | 475/wk | active |
-| 38 | [Kodelyth Ecc](https://tashan.sh/capability/pkg-kodelyth-ecc.html) | 55 | 307/wk | active |
-| 39 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 54 | 239/wk | active |
-| 40 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 54 | 164/wk | active |
+| 17 | [Hyperframes · heygen-com](https://tashan.sh/capability/plugin-heygen-com-hyperframes-hyperframes.html) | 46 | 3 marketplaces | active |
+| 18 | [Mulmocast](https://tashan.sh/capability/plugin-receptron-mulmocast-claude-plugin-mulmocast.html) | 43 | 1 ★ | active |
+| 19 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 71 | 856/wk | active |
+| 20 | [Gemini](https://tashan.sh/capability/pkg-chrischall-gemini-mcp.html) | 63 | 700/wk | active |
+| 21 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 57 | 276/wk | active |
+| 22 | [Rendobar](https://tashan.sh/capability/pkg-rendobar-mcp.html) | 55 | 197/wk | active |
+| 23 | [Rive](https://tashan.sh/capability/pkg-rive-mcp-server.html) | 54 | 381/wk | active |
+| 24 | [Chamade](https://tashan.sh/capability/pkg-chamade-mcp-server.html) | 51 | 116/wk | active |
+| 25 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 50 | 248/wk | active |
+| 26 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 50 | 165/wk | active |
+| 27 | [Furlen](https://tashan.sh/capability/pkg-furlen-mcp.html) | 48 | 97/wk | active |
+| 28 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 71 | 4k/wk | active |
+| 29 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 66 | 305/wk | active |
+| 30 | [Oh My Cassette](https://tashan.sh/capability/plugin-cassette-editor-oh-my-cassette-oh-my-cassette.html) | 66 | 138 ★ | active |
+| 31 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 65 | 518/wk | active |
+| 32 | [Runapi](https://tashan.sh/capability/pkg-runapi-ai-mcp.html) | 64 | 588/wk | active |
+| 33 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 63 | 885/wk | active |
+| 34 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 61 | 570/wk | active |
+| 35 | [Cursor Chat Bridge](https://tashan.sh/capability/pkg-cursor-telegram-chat.html) | 59 | 475/wk | active |
+| 36 | [Kodelyth Ecc](https://tashan.sh/capability/pkg-kodelyth-ecc.html) | 55 | 307/wk | active |
+| 37 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 54 | 239/wk | active |
+| 38 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 54 | 164/wk | active |
+| 39 | [Media Gen](https://tashan.sh/capability/pkg-media-gen-mcp-server.html) | 53 | 141/wk | active |
+| 40 | [Gpt Image](https://tashan.sh/capability/pkg-runapi-ai-gpt-image-mcp.html) | 52 | 221/wk | active |
 
-Showing the top 40 of 135. The full ranked shelf is at https://tashan.sh/role/creator.html.
+Showing the top 40 of 133. The full ranked shelf is at https://tashan.sh/role/creator.html.
 
 ## What these numbers are not
 

@@ -9,8 +9,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 ## The short answer
 
-- **Content marketing** — [Save To Spotify](https://tashan.sh/capability/plugin-spotify-save-to-spotify-save-to-spotify.html) · tashan score 70
 - **SEO** — [Search Console](https://tashan.sh/capability/plugin-aminforou-mcp-gsc-search-console-mcp.html) · tashan score 69
+- **Content marketing** — [Save To Spotify](https://tashan.sh/capability/plugin-spotify-save-to-spotify-save-to-spotify.html) · tashan score 70
 - **Market analysis** — [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) · tashan score 76
 - **Copywriting** — [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) · tashan score 72
 - **Conversion optimisation** — [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) · tashan score 73
@@ -54,13 +54,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Claude SEO](https://tashan.sh/capability/plugin-agricidaniel-claude-seo-claude-seo.html) | 78 | 12k ★ | active |
 | 34 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 61 | 484/wk | active |
 | 35 | [Xrpl Utilities](https://tashan.sh/capability/pkg-xrpl-utilities-mcp.html) | 61 | 467/wk | active |
-| 36 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 50 | 4 repos | active |
-| 37 | [Marketing Ideas](https://tashan.sh/capability/skill-alirezarezvani-marketing-ideas.html) | 49 | 4 repos | active |
-| 38 | [Resend](https://tashan.sh/capability/plugin-resend-resend-skills-resend.html) | 48 | 3 marketplaces | — |
-| 39 | [Competitor Alternatives](https://tashan.sh/capability/skill-alirezarezvani-competitor-alternatives.html) | 47 | 3 repos | active |
-| 40 | [Content Creator](https://tashan.sh/capability/skill-alirezarezvani-content-creator.html) | 47 | 3 repos | active |
+| 36 | [Resend](https://tashan.sh/capability/plugin-resend-resend-skills-resend.html) | 48 | 3 marketplaces | — |
+| 37 | [Bigdata Com](https://tashan.sh/capability/plugin-bigdata-com-bigdata-plugins-marketplace-bigdata-com.html) | 46 | 2 ★ | active |
+| 38 | [Barker Stablecoin Skills](https://tashan.sh/capability/plugin-ybsbarker-barker-stablecoin-skills-barker-stablecoin-skills.html) | 46 | 3 ★ | active |
+| 39 | [Internal Comms](https://tashan.sh/capability/skill-anthropics-internal-comms.html) | 45 | 2 repos | active |
+| 40 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 45 | 0 ★ | active |
 
-Showing the top 40 of 167. The full ranked shelf is at https://tashan.sh/role/marketer.html.
+Showing the top 40 of 126. The full ranked shelf is at https://tashan.sh/role/marketer.html.
 
 ## What these numbers are not
 

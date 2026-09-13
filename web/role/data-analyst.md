@@ -17,7 +17,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 54k/wk | active |
+| 1 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 56k/wk | active |
 | 2 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 58 | 523 ★ | active |
 | 3 | [Growthbook · growthbook](https://tashan.sh/capability/plugin-growthbook-skills-growthbook.html) | 58 | 18 ★ | active |
 | 4 | [Spotify Ads API](https://tashan.sh/capability/plugin-spotify-ads-claude-plugin-spotify-ads-api.html) | 58 | 14 ★ | active |
@@ -45,20 +45,20 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 26 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 70 | 417 ★ | active |
 | 27 | [NexQL Postgres](https://tashan.sh/capability/pkg-nexql-mcp.html) | 60 | 367/wk | active |
 | 28 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 50 | 4 marketplaces | — |
-| 29 | [Xlsx](https://tashan.sh/capability/skill-anthropics-xlsx.html) | 48 | 3 repos | active |
-| 30 | [Pptx](https://tashan.sh/capability/skill-anthropics-pptx.html) | 48 | 3 repos | active |
-| 31 | [Grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
-| 32 | [Chart · @bicharts](https://tashan.sh/capability/pkg-bicharts-chart-mcp.html) | 48 | 70/wk | active |
-| 33 | [Ab Test Setup](https://tashan.sh/capability/skill-alirezarezvani-ab-test-setup.html) | 47 | 3 repos | active |
-| 34 | [Analytics Tracking](https://tashan.sh/capability/skill-alirezarezvani-analytics-tracking.html) | 47 | 3 repos | active |
-| 35 | [Paid Ads](https://tashan.sh/capability/skill-alirezarezvani-paid-ads.html) | 47 | 3 repos | active |
-| 36 | [Fullstory](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 46 | 2 marketplaces | — |
-| 37 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 45 | 0 ★ | active |
-| 38 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 45 | 2 ★ | active |
-| 39 | [Snowflake Development](https://tashan.sh/capability/skill-alirezarezvani-snowflake-development.html) | 44 | 2 repos | active |
-| 40 | [SQL Database Assistant](https://tashan.sh/capability/skill-alirezarezvani-sql-database-assistant.html) | 44 | 2 repos | active |
+| 29 | [Grafana · grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
+| 30 | [Chart · @bicharts](https://tashan.sh/capability/pkg-bicharts-chart-mcp.html) | 48 | 70/wk | active |
+| 31 | [Fullstory](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 46 | 2 marketplaces | — |
+| 32 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 45 | 0 ★ | active |
+| 33 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 45 | 2 ★ | active |
+| 34 | [Paid Ads](https://tashan.sh/capability/skill-alirezarezvani-paid-ads.html) | 44 | 2 repos | active |
+| 35 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 43 | 1 ★ | active |
+| 36 | [Rill](https://tashan.sh/capability/plugin-rilldata-agent-skills-rill.html) | 43 | 0 ★ | active |
+| 37 | [Postgres · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-postgres.html) | not scored | 78k/wk | abandoned |
+| 38 | [MySQL](https://tashan.sh/capability/pkg-benborla29-mcp-server-mysql.html) | 65 | 11k/wk | active |
+| 39 | [Looker](https://tashan.sh/capability/plugin-gemini-cli-extensions-looker-looker.html) | 62 | 52 ★ | active |
+| 40 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 61 | 30 ★ | active |
 
-Showing the top 40 of 158. The full ranked shelf is at https://tashan.sh/role/data-analyst.html.
+Showing the top 40 of 146. The full ranked shelf is at https://tashan.sh/role/data-analyst.html.
 
 ## What these numbers are not
 

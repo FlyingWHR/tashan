@@ -18,11 +18,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Stata](https://tashan.sh/capability/pkg-aliveranme-stata-mcp.html) | 50 | 87/wk | active |
 | 6 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 45 | 59 ★ | active |
 | 7 | [Qmt Skills](https://tashan.sh/capability/plugin-dfkai-xtquantai-qmt-skills.html) | 43 | 151 ★ | active |
-| 8 | [Ab Test Setup](https://tashan.sh/capability/skill-alirezarezvani-ab-test-setup.html) | 47 | 3 repos | active |
-| 9 | [Senior Computer Vision](https://tashan.sh/capability/skill-alirezarezvani-senior-computer-vision.html) | 44 | 2 repos | active |
-| 10 | [Statistical Analyst](https://tashan.sh/capability/skill-alirezarezvani-statistical-analyst.html) | 44 | 2 repos | active |
-| 11 | [Clinical Research](https://tashan.sh/capability/skill-alirezarezvani-clinical-research.html) | 44 | 2 repos | active |
-| 12 | [Supply Chain Skills](https://tashan.sh/capability/plugin-kishorkukreja-awesome-supply-chain-supply-chain-skills.html) | 50 | 51 ★ | active |
+| 8 | [Supply Chain Skills](https://tashan.sh/capability/plugin-kishorkukreja-awesome-supply-chain-supply-chain-skills.html) | 50 | 51 ★ | active |
 
 ## What these numbers are not
 
