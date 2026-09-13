@@ -152,6 +152,9 @@ STAGES = [
     ("stats-page",      ["pipeline/gen_stats.py"], "site",
      "/stats.html — the ecosystem in numbers, licensed CC BY and built to be cited"),
     ("registry",        ["pipeline/gen_registry.py"], "site", "agent endpoints (/v0.1/servers, /v0.1/scores)"),
+    # The same endpoints, described in the format every gateway and client generator onboards from.
+    # Runs after `registry` because it states the corpus size those files publish.
+    ("openapi",         ["pipeline/gen_openapi.py"], "site", "/openapi.json — the API as a spec, for gateways and agent platforms"),
     ("content",         ["pipeline/gen_content.py"], "site", "learn articles"),
     # THE PAID DELIVERY PATH. redact_paid() strips the audit's detail from every public file, so this
     # is the only way it reaches the people who bought it. A day this does not run is a day paying

@@ -94,6 +94,7 @@ python3 pipeline/check_payments.py --selftest || fail=1
 # 3b2e. the demo script's figures are read off the published data — it once told the presenter to say
 # a measured count and a settled total that were both a week stale, on camera
 python3 pipeline/demo.py --selftest || fail=1
+python3 pipeline/gen_openapi.py --selftest || fail=1
 
 # 3b3. every published `npx …` must name a package that resolves to us (shipped wrong twice)
 echo; echo "── npx package name ───────────────────────────"
