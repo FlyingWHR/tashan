@@ -1,6 +1,6 @@
 {
   "name": "tashan-cli",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "mcpName": "sh.tashan/tashan",
   "description": "The trusted directory for your agent's toolbox \u2014 search, check and install MCP servers and agent skills from your terminal, with the evidence behind every score.",
   "type": "module",

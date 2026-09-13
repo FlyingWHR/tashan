@@ -3,7 +3,7 @@
   "name": "sh.tashan/tashan",
   "title": "tashan",
   "description": "Check any MCP server or agent skill before installing: upkeep, real adoption, and OSV advisories.",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "websiteUrl": "https://tashan.sh",
   "repository": {
     "url": "https://github.com/FlyingWHR/tashan",
@@ -14,7 +14,7 @@
     {
       "registryType": "npm",
       "identifier": "tashan-cli",
-      "version": "0.1.4",
+      "version": "0.2.0",
       "transport": {
         "type": "stdio"
       },
