@@ -202,31 +202,85 @@ verification is the product."*
 
 ## 4. The money layer — the part nobody else publishes
 
+> **Read this before demoing it.** The numbers below come from a *different population* than the
+> rest of the site, and sliding between the two is the fastest way to lose a room. The x402 listing
+> is ~1,000 services. Our catalogue is ~12,000 capabilities. They overlap by 77. Say them
+> separately.
+
+### 4.0 What x402 is, in one breath
+
+**A way for software to pay software.** A server answers `402 Payment Required` with a price; the
+caller sends a stablecoin (USDC, on Base) and gets the answer. No account, no card, no signup.
+
+It exists because an AI agent that needs *one* answer cannot sign up for a monthly subscription. If
+agents are going to buy things, this is roughly the shape it takes.
+
 ### 4.1 Which AI services have actually been paid — *live*
 
-**What it is.** Directories list thousands of x402 services and publish no evidence about any of
-them. We asked the chain about every payment address we could resolve, and joined the receipts to
-the capabilities we measure.
+**What it is, as a chain of four steps** — this is the order to say it in:
 
-Today: **998 of 1,079** listed services have been paid at least once, **81 never have**, **$247,318**
-settled in total — and **the median service has earned $0.51 in its entire life**.
+1. There is a **public listing** where x402 services advertise themselves, each with a wallet
+   address to pay. We resolved every address on it: **1,079**.
+2. That listing publishes **no evidence about any of them**. It tells you a service exists and wants
+   money. It does not tell you whether anyone has ever sent any.
+3. So we **asked the Base chain** how much each of those 1,079 addresses has actually received, ever.
+4. Then we **joined the receipts back to our own catalogue**, so a capability page can say *this one
+   has really been paid*.
 
-**Why it matters.** Downloads, stars and publish cadence can all exist without one person finding a
-thing useful. A settled payment cannot. It is the only signal here that is not a proxy.
+**What came back:**
 
-**Demo — 40 seconds, the centrepiece**
+| | |
+|---|---|
+| paid at least once | **998** |
+| never paid a cent | **81** |
+| total settled | **$247,318** across **10.4M** payments — average **2.4¢** each |
+| **median service, over its entire life** | **$0.51** |
+| earned under $1 | 591 |
+| earned over $1,000 | **9** |
+| the single largest receiver's share of all money | **67%** (top five: 89%) |
+
+**Say it in one sentence:** *the agent economy is real, tiny, and almost entirely one company.* Half
+of everything advertising itself as a paid AI service has made less than fifty-one cents, ever.
+
+**Why it matters — the reason this is the centrepiece.** Everything else on this site is a **proxy**.
+Downloads count machines running `npm install`, which is mostly CI. Stars count people who liked a
+tweet. Neither means a human ever found the thing useful. **A settled payment is not a proxy** —
+somebody decided it was worth money and sent money. It is the only non-proxy signal we have, and the
+only number here that cannot be reproduced by scraping npm.
+
+**And the honest answer beats the hopeful one.** A builder deciding whether to charge agents is
+better served by "the median is fifty-one cents and two thirds of the money is one receiver" than by
+any forecast. That is the finding, and nobody else is publishing it.
+
+**The join, stated plainly** (this is what the table at the bottom of the page is): of the 1,079
+addresses, **77** map to a capability we measure and **57** have a published dossier. Those 57
+capability pages carry a `Settled` line. The other ~1,000 addresses are services we do not otherwise
+track — they count toward the market figures above, and nowhere else.
+
+**Demo — 40 seconds, the centrepiece. Three moves, in this order.**
 ```
 /paid.html
 ```
-Read the four figures off the page, then scroll to the table and land on **blockrun-mcp**: $166,661
-across 8,718,793 calls, tashan score 68.
-Say: *"Adoption and payment are different questions, and this is what it looks like when they
-disagree. Payment is deliberately **not** an input to the score — 'someone pays for this' and 'this
-is well made' are different claims."*
 
-Then ⌘F for `tashan` and land on our own row: **$0.00, never paid.**
-Say: *"We publish a price too, so we are in our own table, on zero. Nobody put us there and nobody
-exempted us. An instrument that leaves itself out of its own measurement is not an instrument."*
+**Move 1 — the market.** Read the figures off the top of the page.
+Say: *"Nine hundred and ninety-eight of a thousand and seventy-nine listed services have ever been
+paid. Eighty-one never have. Two hundred and forty-seven thousand dollars in total — and the median
+service has earned fifty-one cents in its entire life."*
+
+**Move 2 — one row where the signals disagree.** Scroll to the table, land on **blockrun-mcp**:
+$166,661 across 8,718,793 calls, tashan score **68**.
+Say: *"Two thirds of all the money in this market is that one row. And it scores sixty-eight —
+perfectly healthy, not the top of our board. Adoption and payment are different questions, and this
+is what it looks like when they disagree. Payment is deliberately **not** an input to the score:
+'someone pays for this' and 'this is well made' are different claims."*
+
+**Move 3 — us.** ⌘F for `tashan`, land on our own row: **$0.00, never paid.**
+Say: *"We publish an x402 price too, so we are in our own table — on zero. Nobody put us there and
+nobody exempted us. An instrument that leaves itself out of its own measurement is not an
+instrument."*
+
+> Do **not** say "the last row" — the table is regenerated nightly and another zero-earning row can
+> sort below us by name.
 
 ### 4.2 It is re-runnable, and the page prints the query — *live*
 
@@ -349,7 +403,8 @@ A judge who has read this far will ask. Answering first is worth more than the q
 1. `npx tashan-cli doctor` — find rot on the judge's own machine. *(§2.1)*
 2. The homepage, then any dossier — every number shows its work. *(§1.2)*
 3. `python3 tests/test_firewall.py` — nobody can buy a rank, and it is a build failure. *(§1.3)*
-4. `/paid.html` — the median AI service has earned fifty-one cents, and we are in our own table on
+4. `/paid.html` — x402 lets software pay software. Of the ~1,000 services advertising themselves
+   that way, the median has earned **fifty-one cents**, ever — and we are in our own table on
    zero. *(§4.1)*
 5. `claude mcp add tashan` — the agent checks before it installs. *(§3.1)*
 
