@@ -493,5 +493,12 @@ if os.path.exists(_about_p) and os.path.exists(_exp_p):
        bool(_m) and _m.group(1).replace(",", "") == str(len(_sk)),
        f"page says {_m.group(1) if _m else 'nothing'} — prerender bakes this, so re-run it")
 
+# NOTE: a guard for outward superlatives ("the only published index of…", "nobody else can publish")
+# was written here and REMOVED, because it did not fire. Planted the exact claim that had shipped and
+# the check still passed — text() and the page glob disagree about what reaches the matcher. A test
+# that cannot fail is worse than no test: it converts an unchecked rule into a checked-looking one.
+# The two claims it was meant to catch are fixed at their source (pipeline/gen_stats.py,
+# pipeline/gen_openapi.py). Rewrite this only with a planted-failure proof.
+
 print(("CLAIMS OK" if not fail else "CLAIMS FAILED"))
 sys.exit(fail)

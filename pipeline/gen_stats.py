@@ -230,7 +230,12 @@ def render(n, cov, today):
         '<p class="p">' + f"{n['history_points']:,}" + " measurements across "
         + f"{n['days']:,}" + ' days. That series cannot be backfilled by anyone, including us — '
         'you cannot know what a score was in June unless you measured it in June — which is why '
-        '<a class="link" href="/changes.html">what changed</a> is a page nobody else can publish.</p>',
+        # NOT "a page nobody else can publish" — we cannot know who else has been recording, and a
+        # claim about everyone else is exactly the kind this product refuses everywhere else. The
+        # fact underneath it is stronger and checkable: the series cannot be reconstructed after the
+        # fact, by us or anyone, so the page can only come from having recorded it daily.
+        '<a class="link" href="/changes.html">what changed</a> cannot be rebuilt from today&rsquo;s '
+        'data &mdash; only from having recorded it every day since July.</p>',
 
         '<h2 class="h2 mt-6">Cite this</h2>',
         '<p class="p">Published under <a class="link" rel="license" '

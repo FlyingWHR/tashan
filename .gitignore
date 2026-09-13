@@ -34,3 +34,4 @@ tools/node_modules/
 # Browser-session artifacts: screenshots and DOM snapshots from a QA pass are evidence for the
 # session that took them, not for the repo.
 .playwright-mcp/
+_submission/
