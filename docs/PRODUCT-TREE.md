@@ -24,7 +24,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | board.json, index.json, tasks.json | post-sale | 33 |
 | `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | board.json, coverage.json, index.json, requests.json, tasks.json | free | 33 |
 | `/about.html` | What tashan measures, where it is going, and the principles the scoring follows. | site, terminal | board.json, index.json, tasks.json | free | 32 |
-| `/compare.html` | Pick any two capabilities and see them side by side. The 395 pre-generated pairs cover what people search for; this covers the comparison they have. | compare, site, terminal | board.json, compare.json, index.json, tasks.json | free | 31 |
+| `/compare.html` | Pick any two capabilities and see them side by side. The pre-generated pairs cover what people search for; this covers the comparison they have. | compare, site, terminal | board.json, compare.json, index.json, tasks.json | free | 31 |
 | `/privacy.html` | What we collect, which is close to nothing. | site, terminal | board.json, index.json, tasks.json | free | 31 |
 | `/stats.html` | The ecosystem in numbers, CC BY 4.0 with a citation line — built so the articles that outrank us cite us instead. | site | — | free | 31 |
 | `/support.html` | How to get help, and what we can see when you ask. | site, terminal | board.json, index.json, tasks.json | free | 31 |

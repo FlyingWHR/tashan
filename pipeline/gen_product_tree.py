@@ -34,7 +34,10 @@ OUT = os.path.join(ROOT, "docs", "PRODUCT-TREE.md")
 PURPOSE = {
     "/index.html":        ("The Index. Find a capability by job or category, ranked and audited.", "free"),
     "/browse.html":       ("Parent index for every category and task hub — the full taxonomy.", "free"),
-    "/compare.html":      ("Pick any two capabilities and see them side by side. The 395 pre-generated "
+    # NO COUNT IN THE PURPOSE LINE. This file's whole premise is that the derived columns come from
+    # disk on every run; a hand-typed "395" in the prose beside a Pages column reading 420 is the
+    # exact drift it exists to prevent, one column over.
+    "/compare.html":      ("Pick any two capabilities and see them side by side. The pre-generated "
                            "pairs cover what people search for; this covers the comparison they have.", "free"),
     "/audit.html":        ("Paste your MCP config and see every risk we hold about what is in it. Parsed in the browser, so keys never leave the page.", "free"),
     "/start.html":        ("How to use it: the CLI, the MCP server, the plugin.", "free"),
