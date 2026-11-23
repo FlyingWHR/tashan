@@ -253,14 +253,13 @@ python3 pipeline/build.py            # 2. registry + npm → SQLite → web JSON
 python3 pipeline/gen_badges.py       # embeddable badges
 
 # preview locally
-cd web && python3 -m http.server 4173 --bind 127.0.0.1   # → http://localhost:4173
+python3 pipeline/serve.py 4173
 
-# deploy (static)  — Cloudflare Pages, project "tashan", domain tashan.sh
-npx wrangler@3 pages deploy web --project-name tashan
+# Production measurement, verification and deployment to Cloudflare Pages
+gh workflow run daily.yml --ref main
 ```
 
-**Deploy status: BLOCKED on Cloudflare re-auth.** Run `npx wrangler@3 login`, then the deploy command
-above. Same CF account as stilltime.io. The earlier OAuth token expired.
+GitHub Actions uses the repository's Cloudflare credentials and checks the public lookup after deployment. See the [daily workflow](.github/workflows/daily.yml) for deployment status checks and incident handling.
 
 ---
 
