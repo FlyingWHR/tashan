@@ -136,11 +136,10 @@ def spec():
                 "operationId": "kitForTask",
                 "summary": "Name a job, get something that runs",
                 "description":
-                    "Free: the ranked shortlist for that job, plus everything we excluded and why "
-                    "— an exclusion is a risk, and risks are never behind a paywall.\n\n"
-                    f"${kit} with `kit: true`: assembled. Every pick pinned to the version the "
-                    "advisory scan cleared, and a ready-to-paste config for your host. An unpinned "
-                    "config is an unverified one; the verification is the product.",
+                    "The free shortlist reports exclusions and counts.verified_installs. When possible it reserves "
+                    "one place for a runnable package with an advisory-free scan of its current version within seven days. "
+                    f"With kit=true, ${kit} buys verified version pins and a host configuration. "
+                    "If no package qualifies, the paid request returns 422 without quoting a charge.",
                 "requestBody": {"required": True, "content": {"application/json": {"schema": {
                     "type": "object", "anyOf": [{"required": ["task"]}, {"required": ["goal"]}], "properties": {
                         "goal": {"type": "string", "minLength": 1, "example": "I need to scrape websites"},

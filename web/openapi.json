@@ -281,7 +281,7 @@
    "post": {
     "operationId": "kitForTask",
     "summary": "Name a job, get something that runs",
-    "description": "Free: the ranked shortlist for that job, plus everything we excluded and why — an exclusion is a risk, and risks are never behind a paywall.\n\n$0.05 with `kit: true`: assembled. Every pick pinned to the version the advisory scan cleared, and a ready-to-paste config for your host. An unpinned config is an unverified one; the verification is the product.",
+    "description": "The free shortlist reports exclusions and counts.verified_installs. When possible it reserves one place for a runnable package with an advisory-free scan of its current version within seven days. With kit=true, $0.05 buys verified version pins and a host configuration. If no package qualifies, the paid request returns 422 without quoting a charge.",
     "requestBody": {
      "required": true,
      "content": {

@@ -7,7 +7,7 @@ curl 'https://tashan.sh/v0.1/lookup?name=tavily-mcp'
 curl 'https://tashan.sh/v0.1/search?q=database&limit=3'
 ```
 
-The [OpenAPI contract](https://tashan.sh/openapi.json) describes free queries and paid operations. Request the current HTTP 402 quote before authorizing payment. HTTP clients need no npm package. `npx tashan-cli` inspects a local stack, and `npx -y tashan-cli mcp` connects it to a stdio MCP host. The CLI ships under [MIT](cli/LICENSE). Published measurements carry [CC BY 4.0](https://tashan.sh/terms).
+The [OpenAPI contract](https://tashan.sh/openapi.json) describes free queries and paid operations. Request the current HTTP 402 quote before authorizing payment. HTTP clients need no npm package. `npx tashan-cli` inspects a local stack, and `npx -y tashan-cli mcp` connects it to a stdio MCP host. The CLI, stdio MCP server and Claude plugin ship under MIT. Published measurements carry CC BY 4.0. See the [license scopes](LICENSE).
 
 ## Agent access
 

@@ -16,7 +16,12 @@ name: daily
 on:
   schedule:
     - cron: "17 6 * * *"      # 06:17 UTC daily — off the hour, registries are quieter
-  workflow_dispatch:           # and runnable by hand
+  workflow_dispatch:
+    inputs:
+      publish_snapshot:
+        description: Publish the checked-in snapshot and service code without remeasuring sources
+        type: boolean
+        default: false
 
 permissions:
   contents: write              # to commit the day's snapshot back
@@ -27,7 +32,32 @@ concurrency:
   cancel-in-progress: false    # never interrupt a run mid-write; the DB is the source of truth
 
 jobs:
+  publish_snapshot:
+    if: github.event_name == 'workflow_dispatch' && inputs.publish_snapshot && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Restore the database for the verification suite
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 pipeline/db_store.py pull
+      - name: Verify the checked-in release
+        run: bash tests/run.sh
+      - name: Publish the verified release
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: bash pipeline/publish_snapshot.sh
+
   measure:
+    if: github.event_name != 'workflow_dispatch' || !inputs.publish_snapshot
     runs-on: ubuntu-latest
     # 90, RAISED FROM 45 ON 18 AUG BECAUSE THE PIPELINE OUTGREW IT. The run was cancelled mid
     # `registry+npm` at 47 minutes and committed "PIPELINE CRASHED" — it had not crashed, it had run
@@ -198,20 +228,7 @@ jobs:
       - name: Deploy to Cloudflare Pages
         id: deploy
         if: steps.verify.outcome == 'success' && steps.pipeline.outcome == 'success' && env.CLOUDFLARE_API_TOKEN != ''
-        run: |
-          # Pages refuses any deployment over 20,000 files. Check BEFORE uploading: the failure
-          # arrives after wrangler has walked the whole tree, and the site is then unpublishable with
-          # no warning anywhere earlier in the pipeline. This is how it was found the first time.
-          FILES=$(find web -type f | wc -l | tr -d ' ')
-          echo "web/ holds $FILES files (Cloudflare Pages hard limit: 20,000)"
-          if [ "$FILES" -ge 20000 ]; then
-            echo "::error::$FILES files exceeds the Pages limit — deployment would be REFUSED outright."
-            echo "::error::Badges are already served by functions/badge; the next lever is pages per capability."
-            exit 1
-          fi
-          npx wrangler@3 pages deploy web --project-name tashan --branch main --commit-dirty=true
-          # Prove the custom domain is serving this measurement before resolving the incident.
-          python3 pipeline/check_publication.py
+        run: bash pipeline/publish_snapshot.sh
 
       # THE CACHE IS THE ONLY COPY NOW. data/tashan.db is no longer in git, so a push that fails
       # every night means the object silently stops advancing and every run starts from an older
