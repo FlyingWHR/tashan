@@ -249,18 +249,43 @@ jobs:
       # continue-on-error: a broken checkout must not stop the site publishing, but it must be
       # impossible to miss in the run summary.
       - name: Check the payment path
-        if: always()
+        id: payments
+        if: ${{ !cancelled() }}
         continue-on-error: true
         run: |
-          python3 pipeline/check_payments.py | tee /tmp/pay.txt
-          if grep -q FAIL /tmp/pay.txt; then
-            echo "## Payment path — NOT READY" >> "$GITHUB_STEP_SUMMARY"
-          else
-            echo "## Payment path — ready" >> "$GITHUB_STEP_SUMMARY"
-          fi
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          status=0
+          python3 pipeline/check_payments.py > /tmp/pay.txt 2>&1 || status=$?
+          cat /tmp/pay.txt
+          if [ "$status" = 0 ]; then heading="checks passed"; else heading="checks failed"; fi
+          printf '## Production payment path — %s\n\n```\n' "$heading" >> "$GITHUB_STEP_SUMMARY"
           cat /tmp/pay.txt >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
+
+      - name: Track payment incidents until the live checks recover
+        if: ${{ !cancelled() && (steps.payments.outcome == 'failure' || steps.payments.outcome == 'success') }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAYMENT_OUTCOME: ${{ steps.payments.outcome }}
+        run: |
+          title="nightly: production payment checks failed"
+          issue=$(gh issue list --state all --author 'app/github-actions' --search "\"$title\" in:title" \
+            --json number,title,state | jq -r --arg title "$title" '.[] | select(.title == $title) | "\(.number) \(.state)"' | head -1)
+          link="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          if [ "$PAYMENT_OUTCOME" = failure ]; then
+            printf 'The production payment checks failed. The run summary contains the failed checks and provider responses.\n\n%s\n' "$link" > /tmp/payment-incident.md
+            if [ -z "$issue" ]; then
+              gh issue create --title "$title" --body-file /tmp/payment-incident.md
+            else
+              read -r number state <<< "$issue"
+              if [ "$state" = CLOSED ]; then gh issue reopen "$number"; fi
+              gh issue comment "$number" --body-file /tmp/payment-incident.md
+            fi
+            exit 1
+          elif [ -n "$issue" ]; then
+            read -r number state <<< "$issue"
+            if [ "$state" = OPEN ]; then gh issue close "$number" --comment "The production payment checks passed in $link."; fi
+          fi
 
       # WHAT THE SITE EARNED, printed into the run summary. The events have been landing in
       # Analytics Engine since 9 Aug and nobody has ever read them — docs/ANALYTICS.md documents the

@@ -14,6 +14,7 @@ The September production snapshot contained 13,313 HTML files. A static inventor
 
 - **Critical** — the November 22 run could not upload a 460.9 MiB compressed database through Wrangler. The cache now stores large objects in checksum-verified parts and publishes the manifest last. Reads support both formats and the weekday backups.
 - **High** — the publication incident could clear on a successful build even if deployment was skipped. It now requires the public lookup to serve the expected snapshot, record and score.
+- **High** — a payment-check crash could produce a ready summary. The workflow now uses the checker's exit status and tracks payment failures in a dedicated GitHub issue until the live checks recover.
 - **High** — the HTTP suite caught its own missing-slug exception and reported that the local server was absent. It now resolves compact index IDs and checks the responses, sizes and timing of the sampled dossiers. A failed check stops publication.
 - **High** — an unverified npm version could enter a paid host config. New scans record the exact version returned by a successful OSV query. A paid kit requires a matching current scan, and returns HTTP 422 without requesting payment when there are no verified pins.
 - **High** — the nightly gate compared a dated hackathon submission to live measurements. The submission is archived. The checks for published data, current outreach, classification accuracy and historical series continuity remain in place.
