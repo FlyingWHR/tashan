@@ -1946,7 +1946,6 @@ def export(con):
         withhold_borrowed_grade(o)
         if junk(o):
             continue
-        o.pop("npm_runnable", None)   # a membership test, not a published finding
         o["co_used"] = json.loads(o["co_used"]) if o["co_used"] else []
         o["gh_topics"] = o["gh_topics"].split(",") if o["gh_topics"] else []
         o["slug"] = slugify(o["id"])                     # stable per-cap slug (matches gen_badges + prerender)
@@ -2446,7 +2445,7 @@ def export(con):
     # and has no first-paint budget because nothing renders it — 5,787 rows, ~200 KB gz, fetched by a
     # terminal, once.
     LOOKUP = ["id", "name", "label", "kind", "npm_pkg", "category", "official", "slug", "tashan_score",
-              "npm_latest_version", "remote_host",
+              "npm_latest_version", "npm_runnable", "remote_host",
               "vitality", "expertise_verdict", "npm_downloads", "gh_stars", "npm_deprecated",
               "gh_archived", "registry_status", "single_maintainer", "similar_official", "rated",
               # WHY a row is unrated, not just that it is. Without this the CLI can only say

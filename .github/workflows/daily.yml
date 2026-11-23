@@ -116,7 +116,7 @@ jobs:
       # incremental cursors for no reason.
       - name: Store the database cache
         id: dbpush
-        if: always()
+        if: ${{ !cancelled() }}
         continue-on-error: true       # reported at the end instead, so it cannot block the deploy
         run: python3 pipeline/db_store.py push
 
@@ -289,8 +289,8 @@ jobs:
         run: |
           TITLE="nightly: site publication is frozen"
           BODY=$(printf '%s\n' \
-            "The daily run could not publish. Retention shards were preserved; every site artifact" \
-            "was withheld and nothing was deployed, so **tashan.sh is serving stale data**." \
+            "The daily run did not confirm its snapshot on the public lookup." \
+            "Inspect the deployment and public readback before closing this incident." \
             "" \
             "- pipeline: \`${{ steps.pipeline.outcome }}\`" \
             "- suite:    \`${{ steps.verify.outcome }}\`" \
@@ -321,10 +321,8 @@ jobs:
           [ -n "$NUM" ] && gh issue close "$NUM" \
             --comment "Published again — run ${{ github.run_id }}." || true
 
-      - name: Surface the verification result
-        if: steps.verify.outcome != 'success'
+      - name: Require a verified production publication
+        if: ${{ !cancelled() && (steps.verify.outcome != 'success' || steps.pipeline.outcome != 'success' || steps.deploy.outcome != 'success') }}
         run: |
-          echo "::error::tests/run.sh failed. The day's retention shards were preserved; every site"
-          echo "::error::artifact was withheld and is NOT committed, and NOTHING was deployed."
-          echo "::error::Fix the suite, then re-run."
+          echo "::error::Publication unconfirmed (pipeline=${{ steps.pipeline.outcome }}, suite=${{ steps.verify.outcome }}, deploy=${{ steps.deploy.outcome }})."
           exit 1

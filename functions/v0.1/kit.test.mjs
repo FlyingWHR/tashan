@@ -22,7 +22,7 @@ const LOOKUP = {
   generated_at: "2026-08-14T00:00:00Z", scorer: "s5",
   records: [
     rec({ id: "pkg:good-a", name: "good-a", label: "Good A", slug: "pkg-good-a", tashan_score: 91,
-          npm_pkg: "good-a", npm_latest_version: "2.1.0", sec_advisory_count: 0, sec_provenance: 1,
+          npm_pkg: "good-a", npm_runnable: 1, npm_latest_version: "2.1.0", sec_advisory_count: 0, sec_provenance: 1,
           npm_downloads: 120000, expertise_verdict: "deep", sec_scanned_at: scanDate, sec_scanned_version: "2.1.0" }),
     rec({ id: "pkg:good-b", name: "good-b", label: "Good B", slug: "pkg-good-b", tashan_score: 84,
           npm_pkg: "good-b", npm_latest_version: "0.4.2", sec_advisory_count: 0 }),
@@ -241,13 +241,16 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
 }
 
 // An unscanned, stale, or newly published package cannot become a paid install instruction.
-for (const changes of [{ sec_scanned_at: null }, { sec_scanned_at: "2020-01-01" },
+for (const changes of [{ npm_runnable: 0 }, { npm_runnable: null }, { sec_scanned_at: null }, { sec_scanned_at: "2020-01-01" },
                        { sec_scanned_version: "1.0.0" }, { sec_advisory_count: null }]) {
   const good = LOOKUP.records[0];
   const original = { ...good };
   Object.assign(good, changes);
   const denied = await post({ task: "web-scraping", kit: true, limit: 1 });
   ok("an unverified exact version cannot trigger a charge", denied.status === 422);
+  const preview = await read(await post({ task: "web-scraping", limit: 1 }));
+  ok("the free shortlist tells agents the kit is unavailable",
+     preview.status === 200 && preview.body.kit_available === false);
   Object.assign(good, original);
 }
 

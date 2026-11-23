@@ -210,7 +210,7 @@ export async function onRequestPost({ request, env }) {
   // threw on `c.file`. It could only ever surface on the PAID path, because the free and 402 paths
   // never assemble, so the first customer to actually pay would have got a 500.
   const asked = String((body && body.client) || "");
-  const client = CLIENTS[asked] ? asked : "claude-code";
+  const client = Object.hasOwn(CLIENTS, asked) ? asked : "claude-code";
   const limit = Math.min(Math.max(parseInt(body && body.limit, 10) || 5, 1), MAX_PICKS);
 
   const origin = new URL(request.url).origin;
@@ -280,17 +280,20 @@ export async function onRequestPost({ request, env }) {
   };
 
   // This proof belongs to the scan. npm enrichment may have observed a newer release since.
-  const pins = picks.filter(r => r.npm_pkg && r.sec_scanned_version
+  const pins = picks.filter(r => r.npm_pkg && r.npm_runnable === 1 && r.sec_scanned_version
     && r.sec_scanned_version === r.npm_latest_version && r.sec_advisory_count === 0
     && Number.isFinite(Date.parse(r.sec_scanned_at))
     && Date.parse(r.sec_scanned_at) <= Date.now()
     && Date.now() - Date.parse(r.sec_scanned_at) <= 7 * 86400000);
   const assemble = async () => {
     const c = CLIENTS[client];
-    const servers = {};
+    const servers = Object.create(null);
     for (const r of pins) {
       const pin = `${r.npm_pkg}@${r.sec_scanned_version}`;
-      servers[(r.name || r.npm_pkg).replace(/^@[^/]+\//, "").replace(/[^a-zA-Z0-9_-]/g, "-")] = {
+      const baseName = (r.name || r.npm_pkg).replace(/^@[^/]+\//, "").replace(/[^a-zA-Z0-9_-]/g, "-");
+      let name = baseName;
+      for (let i = 2; Object.hasOwn(servers, name); i++) name = `${baseName}-${i}`;
+      servers[name] = {
         command: "npx",
         args: ["-y", pin],
       };
@@ -304,7 +307,7 @@ export async function onRequestPost({ request, env }) {
         // config without saying why is the kind of silent shortfall a paid artifact cannot have.
         not_in_config: picks.filter((r) => !pins.includes(r)).map((r) => ({
           id: r.id, name: r.name, install_via: installVia(r), source: sourceOf(r),
-          say: r.npm_pkg ? "No current, advisory-free scan for this exact npm version."
+          say: r.npm_pkg ? "No verified npm executable with a current, advisory-free scan for this exact version."
             : installVia(r) === "claude-plugin"
             ? "A Claude Code plugin — added from its marketplace, not an mcpServers entry."
             : installVia(r) === "agent-skill"
@@ -330,9 +333,10 @@ export async function onRequestPost({ request, env }) {
     };
   };
 
-  if (body.kit && pins.length === 0) {
+  if (pins.length === 0) {
     return json({ ...free, kit_available: false,
-      reason: "No selected package has a current scan for its exact npm version. No payment is required." }, 422);
+      reason: "No selected npm executable has a current, advisory-free scan for its exact version. No payment is required." },
+      body.kit ? 422 : 200);
   }
   if (!body.kit) {
     return json({

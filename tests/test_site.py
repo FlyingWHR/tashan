@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """tashan site test suite — structure, load budgets, SEO/AEO, CSP.
 
-Runs against the built web/ tree (static checks) and, if a server is reachable,
-against live HTTP (waterfall + status codes). Dependency-free (stdlib only).
+Runs against the built web/ tree and a local HTTP server. Dependency-free (stdlib only).
 
-    python3 tests/test_site.py                 # static + live (auto-detects :4173)
+    python3 tests/test_site.py                 # static + live at :4173
     python3 tests/test_site.py --url http://127.0.0.1:4173
     python3 tests/test_site.py --static-only   # no server needed
 
@@ -114,7 +113,7 @@ def static_checks():
     print("\n# structure")
     board = load_board()
     have = page_slugs()
-    want = {slugify(r["id"]) for r in board}
+    want = {r.get("slug") or slugify(r["id"]) for r in board}
 
     # 1. every board row has a real page — no 404 on click (the bug we just fixed).
     # The slim index no longer SHIPS `slug`: it is exactly slugify(id), and a second copy of every id
@@ -334,14 +333,15 @@ def live_checks(base):
     step = max(1, len(board) // 25)
     slow = []; notok = []; heavy = []
     for r in board[::step]:
-        url = base + "/capability/" + r["slug"] + ".html"
+        slug = r.get("slug") or slugify(r["id"])
+        url = base + "/capability/" + slug + ".html"
         st, hd, body, dt = http_get(url)
         if st != 200:
-            notok.append((r["slug"], st))
+            notok.append((slug, st))
         if dt > PAGE_TTFB_MAX:
-            slow.append((r["slug"], round(dt*1000)))
+            slow.append((slug, round(dt*1000)))
         if len(body) > CAP_HTML_MAX:
-            heavy.append((r["slug"], len(body)))
+            heavy.append((slug, len(body)))
     check("sampled detail pages all 200", not notok, f"{notok[:3]}")
     check("sampled detail pages all fast", not slow, f"slow: {slow[:3]}")
     check("sampled detail pages all within HTML budget", not heavy, f"{heavy[:2]}")
@@ -383,12 +383,7 @@ def main():
 
     static_checks()
     if not a.static_only:
-        # only run live checks if the server answers
-        try:
-            http_get(a.url + "/")
-            live_checks(a.url)
-        except Exception:
-            print(f"\n# live HTTP — skipped (no server at {a.url}; run `cd web && python3 -m http.server 4173`)")
+        live_checks(a.url)
 
     cli_field_contract()
 
