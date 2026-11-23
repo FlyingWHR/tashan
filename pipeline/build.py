@@ -137,7 +137,7 @@ MIGRATE = ["expertise REAL", "expertise_verdict TEXT", "expertise_note TEXT",
            "sec_permissions TEXT",       # JSON ["shell","network",…] from DECLARED dependencies
            "sec_remote_content INTEGER", # can carry third-party text into the model's context
            "sec_dep_count INTEGER",
-           "sec_scanned_at TEXT",
+           "sec_scanned_at TEXT", "sec_scanned_version TEXT",
            "npm_license TEXT",
            # Is the documentation actually ABOUT this capability? 79 of 836 staged rows ship a README
            # byte-identical to another capability's, and whole families are never named in the only
@@ -1573,7 +1573,7 @@ def export(con):
             # security audit — the detail page and the CLI both read these. sec_advisories carries the
             # full finding list; the page decides what a free reader sees and what needs a licence.
             "sec_advisory_count","sec_max_severity","sec_install_script","sec_permissions",
-            "sec_provenance","sec_remote_content","sec_dep_count","sec_scanned_at","sec_advisories",
+            "sec_provenance","sec_remote_content","sec_dep_count","sec_scanned_at","sec_scanned_version","sec_advisories",
             # L5 — the resolved dependency tree. LOOKUP names these, but a column absent from THIS
             # select never reaches the row dict, so it was stripped as null and the lookup carried
             # nothing. The column list is the gate; adding to LOOKUP alone changes nothing.
@@ -2457,7 +2457,7 @@ def export(con):
               "rating_basis",
               # the security audit, so `doctor` can warn about something already installed
               "sec_advisory_count", "sec_max_severity", "sec_install_script", "sec_permissions",
-              "sec_perm_n", "sec_provenance", "sec_remote_content", "sec_scanned_at",
+              "sec_perm_n", "sec_provenance", "sec_remote_content", "sec_scanned_at", "sec_scanned_version",
               # L5 — what it INSTALLS, not just what it is called. A capability with a clean name
               # and a vulnerable dependency read identically before this.
               "dep_tree_n", "dep_vuln_n", "dep_vulns", "dep_scanned_at",

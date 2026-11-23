@@ -25,6 +25,17 @@ import scan_security as sec
 
 fail = 0
 
+# A successful OSV lookup can legitimately return {}. An unreachable OSV cannot clear a release.
+from unittest.mock import patch
+_manifest = {"dist-tags": {"latest": "1.0.0"}, "versions": {"1.0.0": {"name": "test-package"}}}
+with patch.object(sec, "get_json", return_value=_manifest):
+    with patch.object(sec, "post_json", return_value=None):
+        assert sec.scan_npm("test-package") is None
+    with patch.object(sec, "post_json", return_value={}):
+        _checked = sec.summarize(sec.scan_npm("test-package"))
+        assert _checked["sec_scanned_version"] == "1.0.0" and _checked["sec_advisory_count"] == 0
+
+
 
 def ok(name, cond):
     global fail

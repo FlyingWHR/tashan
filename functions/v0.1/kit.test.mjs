@@ -16,13 +16,14 @@ const TAGS = { generated_at: "2026-08-14", tasks: { "web-scraping": [
   "pkg:good-a", "plugin:acme/pack/thing", "skill:acme/helper", "pkg:good-b",
   "pkg:sick", "pkg:dead", "pkg:remote" ] } };
 
+const scanDate = new Date(Date.now() - 60000).toISOString();
 const rec = (o) => ({ rated: true, vitality: "active", ...o });
 const LOOKUP = {
   generated_at: "2026-08-14T00:00:00Z", scorer: "s5",
   records: [
     rec({ id: "pkg:good-a", name: "good-a", label: "Good A", slug: "pkg-good-a", tashan_score: 91,
           npm_pkg: "good-a", npm_latest_version: "2.1.0", sec_advisory_count: 0, sec_provenance: 1,
-          npm_downloads: 120000, expertise_verdict: "deep", sec_scanned_at: "2026-08-13T00:00:00Z" }),
+          npm_downloads: 120000, expertise_verdict: "deep", sec_scanned_at: scanDate, sec_scanned_version: "2.1.0" }),
     rec({ id: "pkg:good-b", name: "good-b", label: "Good B", slug: "pkg-good-b", tashan_score: 84,
           npm_pkg: "good-b", npm_latest_version: "0.4.2", sec_advisory_count: 0 }),
     rec({ id: "pkg:sick", name: "sick", slug: "pkg-sick", tashan_score: 97,
@@ -134,7 +135,7 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
      JSON.stringify(body.kit.pinned.map((p) => p.install)));
   ok("...and the pin carries the version the scan actually cleared",
      pinned.version_checked === "2.1.0" && pinned.advisories_at_that_version === 0
-     && pinned.scanned_at === "2026-08-13T00:00:00Z");
+     && pinned.scanned_at === scanDate);
 
   ok("the config targets the client that was asked for",
      body.kit.client === "cursor" && body.kit.config_file === "~/.cursor/mcp.json");
@@ -172,7 +173,7 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
      Object.keys(k.config.mcpServers).every((n) => !/thing|helper/.test(n)),
      JSON.stringify(Object.keys(k.config.mcpServers)));
   ok("EVERY pick the config cannot express is listed, with how to install it instead",
-     k.not_in_config.length === 2
+     k.not_in_config.length + k.pinned.length === paid.body.shortlist.length
      && k.not_in_config.every((x) => x.say && x.source),
      JSON.stringify(k.not_in_config));
   ok("...and the shortfall is explained in words, not left as arithmetic",
@@ -237,6 +238,17 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
   ok("GET still explains how to POST", g.body.usage && g.body.usage.method === "POST");
   ok("...but answers 402 so discovery can see the price", g.status === 402);
   ok("...and says plainly what we do not sell", /do not sell/i.test(g.body.usage.not_sold));
+}
+
+// An unscanned, stale, or newly published package cannot become a paid install instruction.
+for (const changes of [{ sec_scanned_at: null }, { sec_scanned_at: "2020-01-01" },
+                       { sec_scanned_version: "1.0.0" }, { sec_advisory_count: null }]) {
+  const good = LOOKUP.records[0];
+  const original = { ...good };
+  Object.assign(good, changes);
+  const denied = await post({ task: "web-scraping", kit: true, limit: 1 });
+  ok("an unverified exact version cannot trigger a charge", denied.status === 422);
+  Object.assign(good, original);
 }
 
 console.log(`\nv0.1 kit: ${n}/${n} passed · all green`);

@@ -152,6 +152,7 @@ def spec():
                                 "description": f"Assemble it. Paid: ${kit} per call."}}}}}},
                 "responses": {
                     "200": {"description": "The shortlist, or the assembled kit when paid"},
+                    "422": {"description": "The shortlist has no current, verified npm pins. No payment is requested."},
                     "402": {"description": f"Payment required (${kit}). The body carries the price, "
                                            "a checkout link, and the free endpoints that answer the "
                                            "same question."}}}},

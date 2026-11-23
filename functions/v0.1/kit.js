@@ -279,12 +279,17 @@ export async function onRequestPost({ request, env }) {
         + "a score, a rank or a listing.",
   };
 
+  // This proof belongs to the scan. npm enrichment may have observed a newer release since.
+  const pins = picks.filter(r => r.npm_pkg && r.sec_scanned_version
+    && r.sec_scanned_version === r.npm_latest_version && r.sec_advisory_count === 0
+    && Number.isFinite(Date.parse(r.sec_scanned_at))
+    && Date.parse(r.sec_scanned_at) <= Date.now()
+    && Date.now() - Date.parse(r.sec_scanned_at) <= 7 * 86400000);
   const assemble = async () => {
     const c = CLIENTS[client];
     const servers = {};
-    for (const r of picks) {
-      if (!r.npm_pkg) continue;
-      const pin = r.npm_latest_version ? `${r.npm_pkg}@${r.npm_latest_version}` : r.npm_pkg;
+    for (const r of pins) {
+      const pin = `${r.npm_pkg}@${r.sec_scanned_version}`;
       servers[(r.name || r.npm_pkg).replace(/^@[^/]+\//, "").replace(/[^a-zA-Z0-9_-]/g, "-")] = {
         command: "npx",
         args: ["-y", pin],
@@ -297,9 +302,10 @@ export async function onRequestPost({ request, env }) {
         // EVERY PICK IS ACCOUNTED FOR. The config can only express servers, so the rest are listed
         // here with how they are actually installed. Returning a five-row shortlist and a two-row
         // config without saying why is the kind of silent shortfall a paid artifact cannot have.
-        not_in_config: picks.filter((r) => installVia(r) !== "mcp-server").map((r) => ({
+        not_in_config: picks.filter((r) => !pins.includes(r)).map((r) => ({
           id: r.id, name: r.name, install_via: installVia(r), source: sourceOf(r),
-          say: installVia(r) === "claude-plugin"
+          say: r.npm_pkg ? "No current, advisory-free scan for this exact npm version."
+            : installVia(r) === "claude-plugin"
             ? "A Claude Code plugin — added from its marketplace, not an mcpServers entry."
             : installVia(r) === "agent-skill"
               ? "An agent skill — a folder you place in .claude/skills/, not an mcpServers entry."
@@ -308,10 +314,10 @@ export async function onRequestPost({ request, env }) {
         // The pin is the point. "latest" resolves to whatever ships tomorrow, and the advisory scan
         // that cleared this package ran against THIS version — so an unpinned config is an
         // unverified one, and the verification is what was paid for.
-        pinned: picks.filter((r) => r.npm_pkg).map((r) => ({
+        pinned: pins.map((r) => ({
           id: r.id,
-          install: r.npm_latest_version ? `${r.npm_pkg}@${r.npm_latest_version}` : r.npm_pkg,
-          version_checked: r.npm_latest_version || null,
+          install: `${r.npm_pkg}@${r.sec_scanned_version}`,
+          version_checked: r.sec_scanned_version,
           advisories_at_that_version: r.sec_advisory_count || 0,
           scanned_at: r.sec_scanned_at || null,
           build_provenance: Boolean(r.sec_provenance),
@@ -324,6 +330,10 @@ export async function onRequestPost({ request, env }) {
     };
   };
 
+  if (body.kit && pins.length === 0) {
+    return json({ ...free, kit_available: false,
+      reason: "No selected package has a current scan for its exact npm version. No payment is required." }, 422);
+  }
   if (!body.kit) {
     return json({
       ...free,

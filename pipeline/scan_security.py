@@ -121,7 +121,8 @@ SEVERITY_ORDER = ["LOW", "MODERATE", "MEDIUM", "HIGH", "CRITICAL", "MALICIOUS"]
 # 3: records whether the package declares a `bin`. Nothing about an existing finding's meaning
 #    changed, but the field cannot be back-filled from a cached entry, and "absent" must not be read
 #    as "no bin" — the board gate below treats unknown and false very differently.
-CACHE_VERSION = 3
+# 4: a successful, version-specific OSV response is required for a checked version.
+CACHE_VERSION = 4
 
 
 def _rank(sev):
@@ -198,6 +199,8 @@ def scan_npm(pkg):
         return None
     latest = (doc.get("dist-tags") or {}).get("latest")
     v = (doc.get("versions") or {}).get(latest) or {}
+    if not latest or not v:
+        return None
     scripts = v.get("scripts") or {}
     deps = sorted((v.get("dependencies") or {}).keys())
     dist = v.get("dist") or {}
@@ -206,7 +209,9 @@ def scan_npm(pkg):
     payload = {"package": {"name": pkg, "ecosystem": "npm"}}
     if latest:
         payload["version"] = latest
-    osv = post_json(OSV, payload) or {}
+    osv = post_json(OSV, payload)
+    if not isinstance(osv, dict) or "error" in osv or not isinstance(osv.get("vulns", []), list):
+        return None  # A failed lookup provides no new evidence. Keep the prior dated finding.
     advisories = []
     for x in (osv.get("vulns") or []):
         advisories.append({
@@ -271,6 +276,7 @@ def summarize(f):
         "sec_remote_content": 1 if f.get("remote_content") else 0,
         "sec_dep_count": f.get("deps"),
         "sec_scanned_at": f.get("scanned_at"),
+        "sec_scanned_version": f.get("version"),
         "npm_license": f.get("license"),
         "npm_latest_version": f.get("version"),
     }
@@ -301,7 +307,7 @@ def main():
     print(f"  walking {len(rows):,} npm-backed capabilities, budget {SEC_CAP:,} fetches "
           f"({len(cache)} cached)...", flush=True)
 
-    scanned = fresh = flagged = 0
+    scanned = fresh = attempted = flagged = 0
     for cid, pkg in rows:
         if build.bad_pkg(pkg):
             continue
@@ -317,8 +323,9 @@ def main():
             # one, and the whole point of the demand-first walk is that the answer stays true.
             f = None
         if f is None:
-            if fresh >= SEC_CAP:
+            if attempted >= SEC_CAP:
                 continue             # budget spent; the rest of the walk still syncs from cache
+            attempted += 1
             f = scan_npm(pkg)
             if f is None:
                 continue
