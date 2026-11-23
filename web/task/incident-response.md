@@ -11,18 +11,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 67 | 101 ★ | active |
-| 2 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 45 | 6 ★ | active |
-| 3 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 44 | 3 ★ | active |
-| 4 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 44 | 3 ★ | active |
-| 5 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 60 | 90 ★ | active |
-| 6 | [Firehydrant](https://tashan.sh/capability/pkg-firehydrant-mcp.html) | 51 | 7k/wk | abandoned |
-| 7 | [Grafana · grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
-| 8 | [Copaw Ops](https://tashan.sh/capability/plugin-chujianyun-skills-copaw-ops.html) | 36 | 1 marketplaces | active |
-| 9 | [Openclaw Ops](https://tashan.sh/capability/plugin-chujianyun-skills-openclaw-ops.html) | 36 | 1 marketplaces | active |
-| 10 | [Hermes Ops](https://tashan.sh/capability/plugin-chujianyun-skills-hermes-ops.html) | 36 | 1 marketplaces | active |
-| 11 | [Honeycomb](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 59 | 18 ★ | active |
-| 12 | [Debugbundle](https://tashan.sh/capability/pkg-debugbundle-mcp.html) | 52 | 190/wk | active |
+| 1 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 56 | 101 ★ | active |
+| 2 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 38 | 6 ★ | active |
+| 3 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 37 | 3 ★ | active |
+| 4 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 37 | 3 ★ | active |
+| 5 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 51 | 90 ★ | active |
+| 6 | [Grafana · grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
+| 7 | [Firehydrant](https://tashan.sh/capability/pkg-firehydrant-mcp.html) | 38 | 783/wk | abandoned |
+| 8 | [Honeycomb · honeycombio](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 50 | 18 ★ | active |
+| 9 | [Debugbundle](https://tashan.sh/capability/pkg-debugbundle-mcp.html) | 43 | 190/wk | active |
 
 ## What these numbers are not
 

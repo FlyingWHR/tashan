@@ -11,14 +11,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 75 | 11k ★ | active |
-| 2 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 59 | 284 ★ | active |
-| 3 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 42 | 18 ★ | active |
-| 4 | [Cad Studio](https://tashan.sh/capability/pkg-mcp-cad-studio.html) | 56 | 612/wk | active |
-| 5 | [Shapeitup](https://tashan.sh/capability/pkg-shapeitup-mcp-server.html) | 55 | 99/wk | active |
-| 6 | [Onshape](https://tashan.sh/capability/pkg-onshape-mcp.html) | 53 | 307/wk | active |
-| 7 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 51 | 138/wk | active |
-| 8 | [Cadlens](https://tashan.sh/capability/pkg-cadlens-mcp-server.html) | 47 | 66/wk | active |
+| 1 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 69 | 11k ★ | active |
+| 2 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 49 | 284 ★ | active |
+| 3 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 37 | 18 ★ | abandoned |
+| 4 | [Opencad](https://tashan.sh/capability/plugin-caid-technologies-opencad-opencad.html) | 51 | 65 ★ | active |
+| 5 | [Bitbybit CAD](https://tashan.sh/capability/pkg-bitbybit-dev-mcp.html) | 49 | 425/wk | active |
+| 6 | [Onshape](https://tashan.sh/capability/pkg-gpambrozio-onshape-mcp.html) | 49 | 355/wk | active |
+| 7 | [Shapeitup](https://tashan.sh/capability/pkg-shapeitup-mcp-server.html) | 45 | 99/wk | active |
+| 8 | [Onshape · altendky](https://tashan.sh/capability/pkg-onshape-mcp.html) | 43 | 307/wk | active |
+| 9 | [Zelpi](https://tashan.sh/capability/pkg-zelpi.html) | 43 | 138/wk | active |
+| 10 | [Cadlens](https://tashan.sh/capability/pkg-cadlens-mcp-server.html) | 38 | 66/wk | active |
+| 11 | [Document Svg](https://tashan.sh/capability/plugin-ryusui-hiro-document-svg-document-svg.html) | 36 | 1 ★ | active |
 
 ## What these numbers are not
 

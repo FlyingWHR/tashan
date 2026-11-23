@@ -11,48 +11,48 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 83 | 20k/wk | active |
-| 2 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 68 | 542 ★ | active |
-| 3 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 63 | 2k/wk | active |
-| 4 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 57 | 228/wk | active |
-| 5 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 53 | 32 ★ | active |
-| 6 | [Bluesky](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 50 | 121/wk | active |
-| 7 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 81 | 30k/wk | active |
-| 8 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 76 | 5k ★ | active |
-| 9 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 76 | 54k ★ | active |
-| 10 | [Blockrun](https://tashan.sh/capability/pkg-blockrun-mcp.html) | 68 | 636/wk | active |
-| 11 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 65 | 433 ★ | active |
-| 12 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 64 | 50 ★ | active |
-| 13 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-firecrawl-claude-plugin-firecrawl.html) | 64 | 174 ★ | active |
-| 14 | [Search1api](https://tashan.sh/capability/pkg-search1api-mcp.html) | 61 | 394/wk | active |
-| 15 | [Parallel](https://tashan.sh/capability/plugin-parallel-web-parallel-agent-skills-parallel.html) | 57 | 62 ★ | active |
-| 16 | [Antigravity · MarcosNahuel](https://tashan.sh/capability/plugin-marcosnahuel-antigravity-plugin-cc-antigravity.html) | 53 | 21 ★ | active |
-| 17 | [Serpapi Claude Plugin](https://tashan.sh/capability/plugin-serpapi-serpapi-claude-plugin-serpapi-claude-plugin.html) | 52 | 13 ★ | active |
-| 18 | [Releases](https://tashan.sh/capability/plugin-buildinternet-releases-cli-releases.html) | 45 | 3 ★ | active |
-| 19 | [Trends Hub](https://tashan.sh/capability/pkg-mcp-trends-hub.html) | 38 | 1k/wk | abandoned |
-| 20 | [Stepfun](https://tashan.sh/capability/pkg-stepfun-mcp.html) | 37 | 624/wk | active |
-| 21 | [Travel Search And Booking API And Skills](https://tashan.sh/capability/plugin-alibaba-flyai-flyai-skill-travel-search-and-booking-api-and-skills.html) | 56 | 880 ★ | active |
-| 22 | [Brightdata Plugin](https://tashan.sh/capability/plugin-brightdata-skills-brightdata-plugin.html) | 50 | 4 marketplaces | — |
-| 23 | [Context7 · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-context7.html) | 46 | 2 marketplaces | — |
-| 24 | [Feedpik](https://tashan.sh/capability/pkg-feedpik.html) | 43 | 25/wk | active |
-| 25 | [Comparative Landscape Brief](https://tashan.sh/capability/plugin-enalbenerraw-blanewarrene-comparative-landscape-brief.html) | 40 | 1 marketplaces | active |
-| 26 | [Learn · agent-sh](https://tashan.sh/capability/plugin-agent-sh-learn-learn.html) | 40 | 2 ★ | active |
-| 27 | [Research](https://tashan.sh/capability/skill-alirezarezvani-research.html) | not scored | 9 repos | active |
-| 28 | [Brave Search · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-brave-search.html) | not scored | 13k/wk | abandoned |
-| 29 | [Brave Search Skills](https://tashan.sh/capability/plugin-brave-brave-search-skills-brave-search-skills.html) | 60 | 161 ★ | active |
-| 30 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 55 | 14 ★ | active |
-| 31 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 59 | 2k/wk | active |
-| 32 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 59 | 347/wk | active |
-| 33 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 54 | 133/wk | active |
-| 34 | [One Search](https://tashan.sh/capability/pkg-one-search-mcp.html) | 53 | 189/wk | active |
-| 35 | [Agent Search](https://tashan.sh/capability/pkg-agent-search-mcp.html) | 52 | 225/wk | active |
-| 36 | [SERPdive Web Search](https://tashan.sh/capability/pkg-serpdive-mcp.html) | 48 | 124/wk | active |
-| 37 | [Netlens](https://tashan.sh/capability/pkg-netlens-mcp.html) | 47 | 75/wk | active |
-| 38 | [Firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) | 86 | 27k/wk | active |
-| 39 | [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) | 81 | 17k/wk | active |
-| 40 | [SearXNG Search](https://tashan.sh/capability/pkg-mcp-searxng.html) | 74 | 9k/wk | active |
+| 1 | [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) | 80 | 15k/wk | active |
+| 2 | [Reddit MCP Buddy](https://tashan.sh/capability/pkg-reddit-mcp-buddy.html) | 69 | 2k/wk | active |
+| 3 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-cli-firecrawl.html) | 58 | 542 ★ | active |
+| 4 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 47 | 228/wk | active |
+| 5 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 45 | 32 ★ | active |
+| 6 | [Bluesky · cyanheads](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 41 | 121/wk | active |
+| 7 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 77 | 30k/wk | active |
+| 8 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 70 | 5k ★ | active |
+| 9 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 70 | 54k ★ | active |
+| 10 | [Blockrun](https://tashan.sh/capability/pkg-blockrun-mcp.html) | 62 | 582/wk | active |
+| 11 | [Tavily · tavily-ai](https://tashan.sh/capability/plugin-tavily-ai-skills-tavily.html) | 55 | 433 ★ | active |
+| 12 | [Firecrawl · firecrawl](https://tashan.sh/capability/plugin-firecrawl-firecrawl-claude-plugin-firecrawl.html) | 55 | 174 ★ | active |
+| 13 | [Nimble](https://tashan.sh/capability/plugin-nimbleway-agent-skills-nimble.html) | 54 | 50 ★ | active |
+| 14 | [Search1api](https://tashan.sh/capability/pkg-search1api-mcp.html) | 49 | 241/wk | active |
+| 15 | [Parallel](https://tashan.sh/capability/plugin-parallel-web-parallel-agent-skills-parallel.html) | 48 | 62 ★ | active |
+| 16 | [Antigravity · MarcosNahuel](https://tashan.sh/capability/plugin-marcosnahuel-antigravity-plugin-cc-antigravity.html) | 45 | 21 ★ | active |
+| 17 | [Serpapi Claude Plugin](https://tashan.sh/capability/plugin-serpapi-serpapi-claude-plugin-serpapi-claude-plugin.html) | 44 | 13 ★ | active |
+| 18 | [Releases](https://tashan.sh/capability/plugin-buildinternet-releases-cli-releases.html) | 38 | 3 ★ | active |
+| 19 | [Travel Search And Booking API And Skills](https://tashan.sh/capability/plugin-alibaba-flyai-flyai-skill-travel-search-and-booking-api-and-skills.html) | 53 | 880 ★ | stable |
+| 20 | [Brightdata Plugin](https://tashan.sh/capability/plugin-brightdata-skills-brightdata-plugin.html) | 50 | 4 marketplaces | — |
+| 21 | [Context7 · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-context7.html) | 46 | 2 marketplaces | — |
+| 22 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | not scored | 12 repos | active |
+| 23 | [Brave Search · modelcontextprotocol](https://tashan.sh/capability/pkg-modelcontextprotocol-server-brave-search.html) | not scored | 34k/wk | abandoned |
+| 24 | [Brave Search Skills](https://tashan.sh/capability/plugin-brave-brave-search-skills-brave-search-skills.html) | 50 | 161 ★ | active |
+| 25 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 47 | 14 ★ | active |
+| 26 | [Novada](https://tashan.sh/capability/pkg-novada-mcp.html) | 48 | 347/wk | active |
+| 27 | [Wigolo](https://tashan.sh/capability/pkg-wigolo.html) | 46 | 909/wk | active |
+| 28 | [One Search](https://tashan.sh/capability/pkg-one-search-mcp.html) | 44 | 189/wk | active |
+| 29 | [Scavio](https://tashan.sh/capability/pkg-scavio-mcp-server.html) | 44 | 133/wk | active |
+| 30 | [Agent Search](https://tashan.sh/capability/pkg-agent-search-mcp.html) | 43 | 225/wk | active |
+| 31 | [SERPdive Web Search](https://tashan.sh/capability/pkg-serpdive-mcp.html) | 40 | 124/wk | active |
+| 32 | [Netlens](https://tashan.sh/capability/pkg-netlens-mcp.html) | 38 | 75/wk | active |
+| 33 | [Firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) | 87 | 190k/wk | active |
+| 34 | [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) | 75 | 24k/wk | active |
+| 35 | [SearXNG Search](https://tashan.sh/capability/pkg-mcp-searxng.html) | 75 | 15k/wk | active |
+| 36 | [Google Surf](https://tashan.sh/capability/pkg-google-surf-mcp.html) | 52 | 326/wk | active |
+| 37 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 46 | 158/wk | active |
+| 38 | [Webhound](https://tashan.sh/capability/pkg-webhound-mcp.html) | 45 | 267/wk | active |
+| 39 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 45 | 164/wk | active |
+| 40 | [Keenable Web Search](https://tashan.sh/capability/pkg-keenable-mcp.html) | 42 | 82/wk | active |
 
-Showing the top 40 of 68. The full ranked shelf is at https://tashan.sh/task/web-research.html.
+Showing the top 40 of 61. The full ranked shelf is at https://tashan.sh/task/web-research.html.
 
 ## What these numbers are not
 

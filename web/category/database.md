@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) | 98 | 112k/wk | active |
-| 2 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 84 | 56k/wk | active |
-| 3 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 80 | 12k/wk | active |
-| 4 | [Pi Mnemopi](https://tashan.sh/capability/pkg-oh-my-pi-pi-mnemopi.html) | 79 | 94k/wk | active |
-| 5 | [Agent Swarm](https://tashan.sh/capability/pkg-desplega-ai-agent-swarm.html) | 76 | 5k/wk | active |
-| 6 | [Manifest](https://tashan.sh/capability/pkg-absolutejs-manifest.html) | 75 | 47k/wk | active |
-| 7 | [Postgres](https://tashan.sh/capability/pkg-yawlabs-postgres-mcp.html) | 75 | 26k/wk | active |
-| 8 | [Instantdb](https://tashan.sh/capability/pkg-instantdb-mcp.html) | 75 | 2k/wk | active |
-| 9 | [Runpod](https://tashan.sh/capability/pkg-runpod-mcp-server.html) | 74 | 5k/wk | active |
-| 10 | [Whodb](https://tashan.sh/capability/plugin-clidey-whodb-whodb.html) | 73 | 5k ★ | active |
-| 11 | [Dynoxide](https://tashan.sh/capability/pkg-dynoxide.html) | 73 | 12k/wk | active |
-| 12 | [Firebase](https://tashan.sh/capability/plugin-firebase-firebase-tools-firebase.html) | 72 | 4k ★ | active |
-| 13 | [ClickHouse Best Practices](https://tashan.sh/capability/plugin-clickhouse-agent-skills-clickhouse-best-practices.html) | 71 | 498 ★ | active |
-| 14 | [Fortemi](https://tashan.sh/capability/pkg-fortemi-core.html) | 70 | 2k/wk | active |
-| 15 | [Postgres · henkey](https://tashan.sh/capability/pkg-henkey-postgres-mcp-server.html) | 69 | 1k/wk | active |
-| 16 | [KEPTA — Agent Memory](https://tashan.sh/capability/pkg-kepta-mcp.html) | 69 | 2k/wk | active |
-| 17 | [MongoDB · mongodb](https://tashan.sh/capability/plugin-mongodb-agent-skills-mongodb.html) | 68 | 164 ★ | active |
-| 18 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 68 | 558 ★ | active |
-| 19 | [Postgrest](https://tashan.sh/capability/pkg-supabase-mcp-server-postgrest.html) | 67 | 2k/wk | active |
-| 20 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 66 | 81 ★ | active |
-| 21 | [Runner](https://tashan.sh/capability/pkg-synapsor-runner.html) | 66 | 1k/wk | active |
-| 22 | [MySQL](https://tashan.sh/capability/pkg-benborla29-mcp-server-mysql.html) | 65 | 11k/wk | active |
-| 23 | [Mimi Seed](https://tashan.sh/capability/pkg-yoonion-mimi-seed-mcp.html) | 64 | 775/wk | active |
-| 24 | [SQLite](https://tashan.sh/capability/pkg-mokei-mcp-sqlite.html) | 63 | 457/wk | active |
-| 25 | [Co2 Tracker](https://tashan.sh/capability/plugin-gwittebolle-claude-carbon-co2-tracker.html) | 63 | 149 ★ | active |
-| 26 | [SQL Preview](https://tashan.sh/capability/pkg-sql-preview.html) | 63 | 782/wk | active |
-| 27 | [Postmark](https://tashan.sh/capability/pkg-activecampaign-postmark-mcp.html) | 62 | 688/wk | active |
-| 28 | [Cloud](https://tashan.sh/capability/pkg-unified-product-graph-cloud-server.html) | 62 | 614/wk | active |
-| 29 | [remem-mcp — Local-first MCP Memory + CodeGraph + Wiki](https://tashan.sh/capability/pkg-remem-mcp.html) | 62 | 508/wk | active |
-| 30 | [PostgreSQL (hardened, read-only)](https://tashan.sh/capability/pkg-postgres-mcp-hardened.html) | 61 | 799/wk | active |
-| 31 | [Backblaze B2](https://tashan.sh/capability/pkg-backblaze-labs-b2-mcp.html) | 61 | 227/wk | active |
-| 32 | [Read Only Local MySQL](https://tashan.sh/capability/pkg-hovecapital-read-only-mysql-mcp-server.html) | 61 | 203/wk | active |
-| 33 | [Cloud SQL PostgreSQL](https://tashan.sh/capability/plugin-gemini-cli-extensions-cloud-sql-postgresql-cloud-sql-postgresql.html) | 60 | 41 ★ | active |
-| 34 | [Firestore Native](https://tashan.sh/capability/plugin-gemini-cli-extensions-firestore-native-firestore-native.html) | 60 | 30 ★ | active |
-| 35 | [Statecore](https://tashan.sh/capability/pkg-statecore-mcp.html) | 60 | 958/wk | active |
-| 36 | [NexQL Postgres](https://tashan.sh/capability/pkg-nexql-mcp.html) | 60 | 367/wk | active |
-| 37 | [Alloydb](https://tashan.sh/capability/plugin-gemini-cli-extensions-alloydb-alloydb.html) | 59 | 22 ★ | active |
-| 38 | [Seedfast](https://tashan.sh/capability/pkg-seedfast.html) | 59 | 421/wk | active |
-| 39 | [Mongo](https://tashan.sh/capability/pkg-mcp-mongo-server.html) | 58 | 649/wk | active |
-| 40 | [MySQL · berthojoris](https://tashan.sh/capability/pkg-berthojoris-mcp-mysql-server.html) | 58 | 509/wk | active |
+| 1 | [Supabase](https://tashan.sh/capability/pkg-supabase-mcp-server-supabase.html) | 99 | 239k/wk | active |
+| 2 | [Runpod](https://tashan.sh/capability/pkg-runpod-mcp-server.html) | 80 | 10k/wk | active |
+| 3 | [MongoDB](https://tashan.sh/capability/pkg-mongodb-mcp-server.html) | 79 | 119k/wk | active |
+| 4 | [Dbhub](https://tashan.sh/capability/pkg-bytebase-dbhub.html) | 78 | 44k/wk | active |
+| 5 | [Add](https://tashan.sh/capability/pkg-add-mcp.html) | 74 | 220k/wk | active |
+| 6 | [Pi Mnemopi](https://tashan.sh/capability/pkg-oh-my-pi-pi-mnemopi.html) | 74 | 144k/wk | active |
+| 7 | [Agent Swarm](https://tashan.sh/capability/pkg-desplega-ai-agent-swarm.html) | 73 | 10k/wk | active |
+| 8 | [Cloud Run](https://tashan.sh/capability/pkg-google-cloud-cloud-run-mcp.html) | 72 | 22k/wk | active |
+| 9 | [Firebase](https://tashan.sh/capability/plugin-firebase-firebase-tools-firebase.html) | 71 | 4k ★ | active |
+| 10 | [Dbx App](https://tashan.sh/capability/pkg-dbx-app-mcp-server.html) | 70 | 13k/wk | active |
+| 11 | [Mbcli](https://tashan.sh/capability/pkg-mightybot-mbcli.html) | 68 | 5k/wk | active |
+| 12 | [PostgreSQL](https://tashan.sh/capability/pkg-yawlabs-postgres-mcp.html) | 67 | 6k/wk | active |
+| 13 | [Whodb](https://tashan.sh/capability/plugin-clidey-whodb-whodb.html) | 66 | 5k ★ | active |
+| 14 | [Sessions](https://tashan.sh/capability/pkg-hasna-sessions.html) | 66 | 17k/wk | active |
+| 15 | [IBM Db2 for i](https://tashan.sh/capability/pkg-mcp-server-db2i.html) | 66 | 4k/wk | active |
+| 16 | [Atrium](https://tashan.sh/capability/pkg-lacneu-atrium-mcp.html) | 66 | 3k/wk | active |
+| 17 | [Dynoxide](https://tashan.sh/capability/pkg-dynoxide.html) | 65 | 7k/wk | active |
+| 18 | [Qdrant Skills](https://tashan.sh/capability/plugin-qdrant-skills-qdrant-skills.html) | 63 | 221 ★ | active |
+| 19 | [Fortemi](https://tashan.sh/capability/pkg-fortemi-core.html) | 63 | 3k/wk | active |
+| 20 | [ClickHouse Best Practices](https://tashan.sh/capability/plugin-clickhouse-agent-skills-clickhouse-best-practices.html) | 62 | 498 ★ | active |
+| 21 | [Shopify AI Toolkit](https://tashan.sh/capability/plugin-shopify-shopify-ai-toolkit-shopify-ai-toolkit.html) | 62 | 476 ★ | active |
+| 22 | [Dataverse](https://tashan.sh/capability/pkg-microsoft-dataverse.html) | 61 | 939/wk | active |
+| 23 | [Zapier](https://tashan.sh/capability/plugin-zapier-zapier-mcp-zapier.html) | 60 | 363 ★ | active |
+| 24 | [Databricks](https://tashan.sh/capability/plugin-databricks-databricks-agent-skills-databricks.html) | 59 | 228 ★ | active |
+| 25 | [Postgres](https://tashan.sh/capability/pkg-henkey-postgres-mcp-server.html) | 59 | 954/wk | active |
+| 26 | [Homebutler](https://tashan.sh/capability/pkg-homebutler.html) | 59 | 865/wk | active |
+| 27 | [Dataverse · microsoft](https://tashan.sh/capability/plugin-microsoft-dataverse-skills-dataverse.html) | 58 | 184 ★ | active |
+| 28 | [Geosql](https://tashan.sh/capability/plugin-dekart-xyz-geosql-geosql.html) | 58 | 558 ★ | active |
+| 29 | [Data Agent Kit Starter Pack](https://tashan.sh/capability/plugin-gemini-cli-extensions-data-agent-kit-starter-pack-data-agent-kit-starter-pack.html) | 57 | 151 ★ | active |
+| 30 | [MongoDB · mongodb](https://tashan.sh/capability/plugin-mongodb-agent-skills-mongodb.html) | 57 | 164 ★ | active |
+| 31 | [Mssql](https://tashan.sh/capability/pkg-mssql-mcp.html) | 57 | 1k/wk | active |
+| 32 | [DuckDB Skills](https://tashan.sh/capability/plugin-duckdb-duckdb-skills-duckdb-skills.html) | 56 | 523 ★ | stable |
+| 33 | [Storage](https://tashan.sh/capability/pkg-google-cloud-storage-mcp.html) | 56 | 49k/wk | abandoned |
+| 34 | [Pinecone Database](https://tashan.sh/capability/pkg-pinecone-database-mcp.html) | 56 | 4k/wk | active |
+| 35 | [Postgrest](https://tashan.sh/capability/pkg-supabase-mcp-server-postgrest.html) | 56 | 2k/wk | active |
+| 36 | [Instantdb](https://tashan.sh/capability/pkg-instantdb-mcp.html) | 56 | 102/wk | active |
+| 37 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 55 | 81 ★ | active |
+| 38 | [ORM Preflight](https://tashan.sh/capability/pkg-orm-preflight.html) | 55 | 766/wk | active |
+| 39 | [Pi Durabletask](https://tashan.sh/capability/pkg-pi-durabletask-mcp.html) | 55 | 764/wk | active |
+| 40 | [Rebase](https://tashan.sh/capability/pkg-rebasepro-mcp.html) | 55 | 426/wk | active |
 
-Showing the top 40 of 169. The full ranked shelf is at https://tashan.sh/category/database.html.
+Showing the top 40 of 328. The full ranked shelf is at https://tashan.sh/category/database.html.
 
 ## What these numbers are not
 

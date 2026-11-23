@@ -11,38 +11,36 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Git](https://tashan.sh/capability/pkg-cyanheads-git-mcp-server.html) | 80 | 7k/wk | active |
-| 2 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 79 | 82k/wk | active |
-| 3 | [Gk CLI](https://tashan.sh/capability/pkg-gitkraken-gk.html) | 64 | 5k/wk | active |
-| 4 | [Bitbucket · MatanYemini](https://tashan.sh/capability/pkg-bitbucket-mcp.html) | 38 | 3k/wk | abandoned |
-| 5 | [Gitea · seepine](https://tashan.sh/capability/pkg-gitea-mcp.html) | 37 | 132/wk | active |
-| 6 | [Nomoreide](https://tashan.sh/capability/pkg-nomoreide.html) | 61 | 443/wk | active |
-| 7 | [Project Knowledge](https://tashan.sh/capability/pkg-project-knowledge.html) | 57 | 182/wk | active |
-| 8 | [Gitpin](https://tashan.sh/capability/pkg-gitpin.html) | 53 | 208/wk | active |
-| 9 | [Udacity Commit](https://tashan.sh/capability/pkg-mcp-udacity-commit.html) | 45 | 50/wk | active |
-| 10 | [Weavatrix Git](https://tashan.sh/capability/pkg-weavatrix-git.html) | 43 | 62/wk | active |
-| 11 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 42 | 66/wk | active |
-| 12 | [Perforce](https://tashan.sh/capability/plugin-tjboudreaux-cc-plugin-perforce-perforce.html) | 24 | 8 ★ | abandoned |
-| 13 | [Kobo](https://tashan.sh/capability/pkg-loicngr-kobo.html) | 69 | 1k/wk | active |
-| 14 | [Rebase](https://tashan.sh/capability/pkg-rebasepro-mcp.html) | 69 | 1k/wk | active |
-| 15 | [Gitwand](https://tashan.sh/capability/pkg-gitwand-mcp.html) | 67 | 1k/wk | active |
-| 16 | [Audit](https://tashan.sh/capability/pkg-sofagent-audit.html) | 67 | 827/wk | active |
-| 17 | [Avcs](https://tashan.sh/capability/pkg-izagood-avcs.html) | 67 | 721/wk | active |
-| 18 | [Komnet](https://tashan.sh/capability/pkg-komnet.html) | 64 | 347/wk | active |
-| 19 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 54 | 171/wk | active |
-| 20 | [Quilt](https://tashan.sh/capability/pkg-quilt-dev-cli.html) | 53 | 119/wk | active |
-| 21 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 48 | 33/wk | active |
-| 22 | [Atlassian Bitbucket](https://tashan.sh/capability/pkg-aashari-mcp-server-atlassian-bitbucket.html) | 45 | 4k/wk | abandoned |
-| 23 | [Uvcs](https://tashan.sh/capability/pkg-proanima-uvcs-mcp.html) | 44 | 65/wk | active |
-| 24 | [General](https://tashan.sh/capability/plugin-kingstinct-github-general.html) | 42 | 1 marketplaces | — |
-| 25 | [Dryrun Pr Review](https://tashan.sh/capability/plugin-dryrunsecurity-external-plugin-marketplace-dryrun-pr-review.html) | 42 | 1 marketplaces | — |
-| 26 | [Git Clean Gone](https://tashan.sh/capability/plugin-smykla-skalski-sai-git-clean-gone.html) | 42 | 1 marketplaces | — |
-| 27 | [Git Stage Hunk](https://tashan.sh/capability/plugin-smykla-skalski-sai-git-stage-hunk.html) | 42 | 1 marketplaces | — |
-| 28 | [Shuryne Skills](https://tashan.sh/capability/plugin-shuryne-skills-shuryne-skills.html) | 39 | 0 ★ | active |
-| 29 | [Dig](https://tashan.sh/capability/pkg-mcp-server-dig.html) | 37 | 117/wk | active |
-| 30 | [Useclawhub](https://tashan.sh/capability/pkg-useclawhub-mcp.html) | 35 | 17/wk | active |
-| 31 | [Git · abhishekmcp](https://tashan.sh/capability/pkg-abhishekmcp-git.html) | 40 | 71/wk | active |
-| 32 | [Bitbucket · shyamayadav154](https://tashan.sh/capability/pkg-mcp-bitbucket.html) | 40 | 37/wk | active |
+| 1 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 73 | 143k/wk | active |
+| 2 | [Git](https://tashan.sh/capability/pkg-cyanheads-git-mcp-server.html) | 72 | 4k/wk | active |
+| 3 | [Gk CLI](https://tashan.sh/capability/pkg-gitkraken-gk.html) | 71 | 44k/wk | active |
+| 4 | [Project Knowledge](https://tashan.sh/capability/pkg-project-knowledge.html) | 47 | 182/wk | active |
+| 5 | [Gitpin](https://tashan.sh/capability/pkg-gitpin.html) | 43 | 208/wk | active |
+| 6 | [Udacity Commit](https://tashan.sh/capability/pkg-mcp-udacity-commit.html) | 37 | 50/wk | active |
+| 7 | [Perforce](https://tashan.sh/capability/plugin-tjboudreaux-cc-plugin-perforce-perforce.html) | 19 | 8 ★ | abandoned |
+| 8 | [Bkt](https://tashan.sh/capability/plugin-avivsinai-bitbucket-cli-bkt.html) | 60 | 211 ★ | active |
+| 9 | [Kobo](https://tashan.sh/capability/pkg-loicngr-kobo.html) | 60 | 1k/wk | active |
+| 10 | [Rebase](https://tashan.sh/capability/pkg-rebasepro-mcp.html) | 55 | 426/wk | active |
+| 11 | [Audit](https://tashan.sh/capability/pkg-sofagent-audit.html) | 55 | 371/wk | active |
+| 12 | [Git Why](https://tashan.sh/capability/pkg-alliecatowo-git-why.html) | 54 | 751/wk | active |
+| 13 | [Avcs](https://tashan.sh/capability/pkg-izagood-avcs.html) | 53 | 389/wk | active |
+| 14 | [Komnet](https://tashan.sh/capability/pkg-komnet.html) | 53 | 347/wk | active |
+| 15 | [Git History](https://tashan.sh/capability/pkg-mcp-server-git-history.html) | 52 | 538/wk | active |
+| 16 | [Gitwand](https://tashan.sh/capability/pkg-gitwand-mcp.html) | 52 | 214/wk | active |
+| 17 | [Git Reflog Archaeologist](https://tashan.sh/capability/pkg-git-reflog-archaeologist-mcp.html) | 48 | 267/wk | active |
+| 18 | [Evidence Diff](https://tashan.sh/capability/pkg-evidence-diff-mcp.html) | 46 | 244/wk | active |
+| 19 | [Repo Forensics · mrfentmen](https://tashan.sh/capability/pkg-repo-forensics-mcp.html) | 45 | 203/wk | active |
+| 20 | [Git · paretools](https://tashan.sh/capability/pkg-paretools-git.html) | 44 | 171/wk | active |
+| 21 | [Merge Conflict Forecaster](https://tashan.sh/capability/pkg-merge-conflict-forecaster-mcp.html) | 43 | 123/wk | active |
+| 22 | [Quilt](https://tashan.sh/capability/pkg-quilt-dev-cli.html) | 43 | 119/wk | active |
+| 23 | [General](https://tashan.sh/capability/plugin-kingstinct-github-general.html) | 42 | 1 marketplaces | — |
+| 24 | [Dryrun Pr Review](https://tashan.sh/capability/plugin-dryrunsecurity-external-plugin-marketplace-dryrun-pr-review.html) | 42 | 1 marketplaces | — |
+| 25 | [Git Clean Gone](https://tashan.sh/capability/plugin-smykla-skalski-sai-git-clean-gone.html) | 42 | 1 marketplaces | — |
+| 26 | [Git Stage Hunk](https://tashan.sh/capability/plugin-smykla-skalski-sai-git-stage-hunk.html) | 42 | 1 marketplaces | — |
+| 27 | [Worktree Orbit](https://tashan.sh/capability/pkg-worktree-orbit-mcp.html) | 42 | 105/wk | active |
+| 28 | [Atlassian Bitbucket](https://tashan.sh/capability/pkg-aashari-mcp-server-atlassian-bitbucket.html) | 40 | 6k/wk | abandoned |
+| 29 | [Midsummer Sol](https://tashan.sh/capability/pkg-midsummer-sol.html) | 40 | 33/wk | active |
+| 30 | [Uvcs](https://tashan.sh/capability/pkg-proanima-uvcs-mcp.html) | 36 | 65/wk | active |
 
 ## What these numbers are not
 

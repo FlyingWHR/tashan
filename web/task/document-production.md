@@ -11,48 +11,48 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 62 | 519/wk | active |
-| 2 | [Drawio · lgazo](https://tashan.sh/capability/pkg-drawio-mcp-server.html) | 55 | 717/wk | active |
-| 3 | [Carbone Skill](https://tashan.sh/capability/plugin-carboneio-carbone-skill-carbone-skill.html) | 44 | 4 ★ | active |
-| 4 | [Google Sheets · domdomegg](https://tashan.sh/capability/pkg-google-sheets-mcp.html) | 43 | 237/wk | active |
-| 5 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 40 | 2k/wk | abandoned |
-| 6 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 66 | 1k/wk | active |
-| 7 | [Gogcli MCP Docs](https://tashan.sh/capability/pkg-gogcli-mcp-docs.html) | 62 | 383/wk | active |
-| 8 | [Htmlify](https://tashan.sh/capability/plugin-zakelfassi-htmlify-htmlify.html) | 41 | 13 ★ | active |
-| 9 | [Gezhe](https://tashan.sh/capability/pkg-gezhe-mcp-server.html) | 40 | 867/wk | abandoned |
-| 10 | [Google Workspace · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-google-workspace-mcp-google-workspace-mcp.html) | 39 | 1 ★ | active |
-| 11 | [Indian Banking Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-banking-drafting-litigation-indian-banking-drafting.html) | 38 | 1 ★ | active |
-| 12 | [Indian Company Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-company-drafting-indian-company-drafting.html) | 38 | 1 ★ | active |
-| 13 | [Indian Consumer Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-consumer-drafting-indian-consumer-drafting.html) | 38 | 1 ★ | active |
-| 14 | [Indian Contracts Drafting](https://tashan.sh/capability/plugin-wolfgangrush-indian-contracts-drafting-litigation-indian-contracts-drafting.html) | 38 | 1 ★ | active |
-| 15 | [Google Docs · mcp-google-docs](https://tashan.sh/capability/pkg-mcp-google-docs.html) | 35 | 1k/wk | abandoned |
-| 16 | [pdfnative MCP — PDF generation, PAdES signing & introspection](https://tashan.sh/capability/pkg-pdfnative-mcp.html) | 52 | 337/wk | active |
-| 17 | [Magictex](https://tashan.sh/capability/pkg-magictex-mcp.html) | 52 | 196/wk | active |
-| 18 | [Kordoc](https://tashan.sh/capability/pkg-kordoc.html) | 74 | 13k/wk | active |
-| 19 | [Pdfops](https://tashan.sh/capability/pkg-pdfops-mcp.html) | 53 | 353/wk | active |
-| 20 | [Docx · knorq](https://tashan.sh/capability/pkg-knorq-docx-mcp-server.html) | 49 | 297/wk | active |
-| 21 | [Miniframe Tools](https://tashan.sh/capability/pkg-miniframe-tools-mcp.html) | 45 | 69/wk | active |
-| 22 | [Puzzletide](https://tashan.sh/capability/pkg-puzzletide.html) | 44 | 80/wk | active |
-| 23 | [PDF Toolkit](https://tashan.sh/capability/pkg-aryanbv-pdf-toolkit-mcp.html) | 43 | 166/wk | active |
-| 24 | [Quillpdf](https://tashan.sh/capability/pkg-quillpdf-mcp.html) | 42 | 66/wk | active |
-| 25 | [Grabzit](https://tashan.sh/capability/pkg-grabzit-mcp-server.html) | 42 | 51/wk | active |
-| 26 | [MDMagic — Markdown to professional documents](https://tashan.sh/capability/pkg-mdmagic-mcp-server.html) | 41 | 90/wk | active |
-| 27 | [Truepath PDF](https://tashan.sh/capability/pkg-truepathpdf-mcp-server.html) | 41 | 68/wk | active |
-| 28 | [PDF It](https://tashan.sh/capability/pkg-pdf-it-mcp.html) | 41 | 38/wk | active |
-| 29 | [Pdfgate](https://tashan.sh/capability/pkg-pdfgate-mcp-server.html) | 39 | 94/wk | active |
-| 30 | [Packforai](https://tashan.sh/capability/pkg-packforai-mcp.html) | 39 | 36/wk | active |
-| 31 | [RAG Vault](https://tashan.sh/capability/pkg-robthepcguy-rag-vault.html) | 38 | 107/wk | active |
-| 32 | [Slideshot](https://tashan.sh/capability/pkg-slideshot-mcp.html) | 38 | 88/wk | active |
-| 33 | [Filetopdf](https://tashan.sh/capability/pkg-filetopdf-mcp.html) | 38 | 75/wk | active |
-| 34 | [Office Oxide](https://tashan.sh/capability/pkg-aimino-opendocswork-mcp.html) | 38 | 58/wk | active |
-| 35 | [Md2word](https://tashan.sh/capability/plugin-cp-yu-md2word-md2word.html) | 37 | 13 ★ | active |
-| 36 | [LayerOne (DocX + Sign)](https://tashan.sh/capability/pkg-layerone-mcp.html) | 37 | 46/wk | active |
-| 37 | [Formatix AI](https://tashan.sh/capability/pkg-formatix-ai-mcp.html) | 37 | 39/wk | active |
-| 38 | [Ppt Master](https://tashan.sh/capability/plugin-hugohe3-ppt-master-ppt-master.html) | 83 | 50k ★ | active |
-| 39 | [PDF Generator](https://tashan.sh/capability/pkg-mcp-z-mcp-pdf.html) | 65 | 761/wk | active |
-| 40 | [Deckprobe](https://tashan.sh/capability/pkg-deckflow-deckprobe-mcp.html) | 64 | 311/wk | active |
+| 1 | [Drawio · lgazo](https://tashan.sh/capability/pkg-drawio-mcp-server.html) | 56 | 914/wk | active |
+| 2 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 51 | 212/wk | active |
+| 3 | [Carbone Skill](https://tashan.sh/capability/plugin-carboneio-carbone-skill-carbone-skill.html) | 36 | 4 ★ | active |
+| 4 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 35 | 4k/wk | abandoned |
+| 5 | [Google Sheets · domdomegg](https://tashan.sh/capability/pkg-google-sheets-mcp.html) | 35 | 237/wk | active |
+| 6 | [Gogcli MCP Docs](https://tashan.sh/capability/pkg-gogcli-mcp-docs.html) | 61 | 1k/wk | active |
+| 7 | [Gogcli MCP Slides](https://tashan.sh/capability/pkg-gogcli-mcp-slides.html) | 61 | 915/wk | active |
+| 8 | [Htmlify](https://tashan.sh/capability/plugin-zakelfassi-htmlify-htmlify.html) | 34 | 13 ★ | active |
+| 9 | [pdfnative MCP — PDF/A & PDF/X-4 generation, PAdES signing & introspection](https://tashan.sh/capability/pkg-pdfnative-mcp.html) | 43 | 337/wk | active |
+| 10 | [Magictex](https://tashan.sh/capability/pkg-magictex-mcp.html) | 42 | 196/wk | active |
+| 11 | [Kordoc](https://tashan.sh/capability/pkg-kordoc.html) | 72 | 46k/wk | active |
+| 12 | [Pdfops](https://tashan.sh/capability/pkg-pdfops-mcp.html) | 43 | 353/wk | active |
+| 13 | [Docx · knorq](https://tashan.sh/capability/pkg-knorq-docx-mcp-server.html) | 40 | 297/wk | active |
+| 14 | [Puzzletide](https://tashan.sh/capability/pkg-puzzletide.html) | 36 | 80/wk | active |
+| 15 | [PDF Toolkit](https://tashan.sh/capability/pkg-aryanbv-pdf-toolkit-mcp.html) | 35 | 166/wk | active |
+| 16 | [Md2word](https://tashan.sh/capability/plugin-cp-yu-md2word-md2word.html) | 30 | 13 ★ | active |
+| 17 | [Ppt Master](https://tashan.sh/capability/plugin-hugohe3-ppt-master-ppt-master.html) | 75 | 50k ★ | active |
+| 18 | [Anymd](https://tashan.sh/capability/pkg-sylphx-anymd.html) | 71 | 9k/wk | active |
+| 19 | [Academic Skills](https://tashan.sh/capability/plugin-shzhao27208-aut-sci-write-academic-skills.html) | 56 | 208 ★ | active |
+| 20 | [Page Scanner](https://tashan.sh/capability/pkg-page-scanner-mcp.html) | 56 | 733/wk | active |
+| 21 | [PDF Generator](https://tashan.sh/capability/pkg-mcp-z-mcp-pdf.html) | 53 | 370/wk | active |
+| 22 | [Deckprobe](https://tashan.sh/capability/pkg-deckflow-deckprobe-mcp.html) | 53 | 311/wk | active |
+| 23 | [AI Metadata Cleaner](https://tashan.sh/capability/pkg-aimetadatacleaner-mcp.html) | 51 | 458/wk | active |
+| 24 | [Polydoc](https://tashan.sh/capability/pkg-polydoc-mcp.html) | 51 | 382/wk | active |
+| 25 | [Pressa - LaTeX to PDF](https://tashan.sh/capability/pkg-pressa-mcp.html) | 51 | 222/wk | active |
+| 26 | [Omitly](https://tashan.sh/capability/pkg-omitly-mcp.html) | 50 | 194/wk | active |
+| 27 | [PDF Verify (PDF Agent Stack)](https://tashan.sh/capability/pkg-shuji-bonji-pdf-verify-mcp.html) | 50 | 134/wk | active |
+| 28 | [PDF Reader (PDF Agent Stack)](https://tashan.sh/capability/pkg-shuji-bonji-pdf-reader-mcp.html) | 49 | 341/wk | active |
+| 29 | [Agent Deck · @agent-deck](https://tashan.sh/capability/pkg-agent-deck-cli.html) | 49 | 194/wk | active |
+| 30 | [Decaframe](https://tashan.sh/capability/pkg-decaframe.html) | 48 | 378/wk | active |
+| 31 | [Safe Docx](https://tashan.sh/capability/pkg-usejunior-safe-docx.html) | 47 | 348/wk | active |
+| 32 | [Document Generator](https://tashan.sh/capability/pkg-mrfentmen-document-generator-mcp.html) | 47 | 262/wk | active |
+| 33 | [Stayput](https://tashan.sh/capability/pkg-stayput-mcp.html) | 47 | 210/wk | active |
+| 34 | [Papersprocket](https://tashan.sh/capability/pkg-papersprocket-mcp.html) | 47 | 191/wk | active |
+| 35 | [Docx](https://tashan.sh/capability/pkg-usejunior-docx-mcp.html) | 46 | 341/wk | active |
+| 36 | [Deck Of Cards](https://tashan.sh/capability/pkg-deck-of-cards-mcp.html) | 46 | 230/wk | active |
+| 37 | [PDF Spec (PDF Agent Stack)](https://tashan.sh/capability/pkg-shuji-bonji-pdf-spec-mcp.html) | 46 | 70/wk | active |
+| 38 | [Agentmd](https://tashan.sh/capability/pkg-agentmd-mcp.html) | 45 | 310/wk | active |
+| 39 | [Reportflow](https://tashan.sh/capability/pkg-reportflow-mcp.html) | 45 | 258/wk | active |
+| 40 | [Pdfcheck](https://tashan.sh/capability/pkg-jayjex-pdfcheck-mcp.html) | 45 | 235/wk | active |
 
-Showing the top 40 of 85. The full ranked shelf is at https://tashan.sh/task/document-production.html.
+Showing the top 40 of 74. The full ranked shelf is at https://tashan.sh/task/document-production.html.
 
 ## What these numbers are not
 

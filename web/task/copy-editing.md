@@ -11,34 +11,32 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) | 72 | 4k ★ | active |
-| 2 | [Ru Text](https://tashan.sh/capability/plugin-talkstream-ru-text-ru-text.html) | 53 | 169 ★ | active |
-| 3 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 53 | 32 ★ | active |
-| 4 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 49 | 123 ★ | active |
-| 5 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 50 | 4 ★ | active |
-| 6 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 44 | 26 ★ | active |
-| 7 | [AI Slop](https://tashan.sh/capability/plugin-se-uhd-ai-slop-skill-ai-slop.html) | 39 | 8 ★ | active |
-| 8 | [Fk Writing Kit](https://tashan.sh/capability/plugin-furkankoykiran-claude-fk-writing-kit.html) | 40 | 1 marketplaces | active |
-| 9 | [Humanizer · adelaidasofia](https://tashan.sh/capability/plugin-adelaidasofia-humanizer-humanizer.html) | 38 | 1 ★ | active |
-| 10 | [Remove AI Flavor](https://tashan.sh/capability/plugin-chujianyun-skills-remove-ai-flavor.html) | 36 | 1 marketplaces | active |
-| 11 | [Source Library](https://tashan.sh/capability/pkg-source-library-mcp-server.html) | 47 | 113/wk | active |
-| 12 | [Deepl](https://tashan.sh/capability/pkg-deepl-mcp-server.html) | 63 | 338/wk | active |
-| 13 | [Goldbean](https://tashan.sh/capability/pkg-goldbean-mcp.html) | 52 | 130/wk | active |
-| 14 | [I18n Agent](https://tashan.sh/capability/pkg-i18n-agent-mcp-client.html) | 43 | 126/wk | active |
-| 15 | [Ditto Workflows](https://tashan.sh/capability/pkg-ditto-workflows-mcp.html) | 43 | 38/wk | active |
-| 16 | [Paxalabs](https://tashan.sh/capability/pkg-paxalabs-mcp.html) | 68 | 1k/wk | active |
-| 17 | [The I18n](https://tashan.sh/capability/pkg-the-i18n-mcp.html) | 61 | 530/wk | active |
-| 18 | [Safe Docx](https://tashan.sh/capability/pkg-usejunior-safe-docx.html) | 56 | 348/wk | active |
-| 19 | [Xcomet](https://tashan.sh/capability/pkg-xcomet-mcp-server.html) | 52 | 148/wk | active |
-| 20 | [Langapi](https://tashan.sh/capability/pkg-langapi-mcp-server.html) | 49 | 39/wk | active |
-| 21 | [Getlinnk](https://tashan.sh/capability/pkg-getlinnk-mcp-server.html) | 49 | 30/wk | active |
-| 22 | [L10n.dev - AI Localization Agent](https://tashan.sh/capability/pkg-ai-l10n-mcp.html) | 48 | 70/wk | active |
-| 23 | [I18n Codelens](https://tashan.sh/capability/pkg-i18n-codelens-mcp.html) | 48 | 43/wk | active |
-| 24 | [Claude Translate](https://tashan.sh/capability/pkg-claude-translate.html) | 46 | 45/wk | active |
-| 25 | [Prose](https://tashan.sh/capability/plugin-dabd-tacit-prose.html) | 44 | 1 ★ | active |
-| 26 | [Local Translate](https://tashan.sh/capability/pkg-damoqiongqiu-mcp-local-translate.html) | 44 | 76/wk | active |
-| 27 | [StudioMeyer Video](https://tashan.sh/capability/pkg-studiomeyer-mcp-video.html) | 38 | 32/wk | active |
-| 28 | [Translatize](https://tashan.sh/capability/pkg-translatize-mcp.html) | 45 | 99/wk | active |
+| 1 | [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) | 65 | 4k ★ | active |
+| 2 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 45 | 32 ★ | active |
+| 3 | [Ru Text](https://tashan.sh/capability/plugin-talkstream-ru-text-ru-text.html) | 42 | 169 ★ | active |
+| 4 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 39 | 123 ★ | active |
+| 5 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 42 | 4 ★ | active |
+| 6 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 37 | 26 ★ | active |
+| 7 | [AI Slop](https://tashan.sh/capability/plugin-se-uhd-ai-slop-skill-ai-slop.html) | 31 | 8 ★ | active |
+| 8 | [Source Library](https://tashan.sh/capability/pkg-source-library-mcp-server.html) | 39 | 113/wk | active |
+| 9 | [Deepl](https://tashan.sh/capability/pkg-deepl-mcp-server.html) | 51 | 338/wk | active |
+| 10 | [Goldbean](https://tashan.sh/capability/pkg-goldbean-mcp.html) | 43 | 130/wk | active |
+| 11 | [I18n Agent](https://tashan.sh/capability/pkg-i18n-agent-mcp-client.html) | 37 | 126/wk | abandoned |
+| 12 | [Ditto Workflows](https://tashan.sh/capability/pkg-ditto-workflows-mcp.html) | 35 | 38/wk | active |
+| 13 | [The I18n](https://tashan.sh/capability/pkg-the-i18n-mcp.html) | 51 | 263/wk | active |
+| 14 | [Paxalabs](https://tashan.sh/capability/pkg-paxalabs-mcp.html) | 51 | 253/wk | active |
+| 15 | [I18n Le](https://tashan.sh/capability/pkg-i18n-le-mcp.html) | 48 | 190/wk | active |
+| 16 | [Safe Docx](https://tashan.sh/capability/pkg-usejunior-safe-docx.html) | 47 | 348/wk | active |
+| 17 | [Equalang](https://tashan.sh/capability/pkg-equalang-mcp.html) | 44 | 61/wk | active |
+| 18 | [Xcomet](https://tashan.sh/capability/pkg-xcomet-mcp-server.html) | 43 | 148/wk | active |
+| 19 | [Translation](https://tashan.sh/capability/pkg-translation-mcp.html) | 43 | 140/wk | active |
+| 20 | [Langapi](https://tashan.sh/capability/pkg-langapi-mcp-server.html) | 41 | 39/wk | active |
+| 21 | [Getlinnk](https://tashan.sh/capability/pkg-getlinnk-mcp-server.html) | 41 | 30/wk | active |
+| 22 | [L10n.dev - AI Localization Agent](https://tashan.sh/capability/pkg-ai-l10n-mcp.html) | 39 | 70/wk | active |
+| 23 | [I18n Codelens](https://tashan.sh/capability/pkg-i18n-codelens-mcp.html) | 39 | 43/wk | active |
+| 24 | [Claude Translate](https://tashan.sh/capability/pkg-claude-translate.html) | 38 | 45/wk | active |
+| 25 | [Local Translate](https://tashan.sh/capability/pkg-damoqiongqiu-mcp-local-translate.html) | 36 | 76/wk | active |
+| 26 | [Translatize](https://tashan.sh/capability/pkg-translatize-mcp.html) | 36 | 99/wk | active |
 
 ## What these numbers are not
 

@@ -11,14 +11,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) | 69 | 829 ★ | active |
-| 2 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 75 | 11k ★ | active |
-| 3 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 47 | 5 ★ | active |
+| 1 | [Kicad Happy](https://tashan.sh/capability/plugin-aklofas-kicad-happy-kicad-happy.html) | 59 | 829 ★ | active |
+| 2 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 69 | 11k ★ | active |
+| 3 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 39 | 5 ★ | active |
 | 4 | [Cwc Makers](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-cwc-makers.html) | 46 | 2 marketplaces | — |
-| 5 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 58 | 466/wk | active |
-| 6 | [Trustrails](https://tashan.sh/capability/pkg-trustrails-mcp-server.html) | 38 | 93/wk | active |
-| 7 | [Embedcalc](https://tashan.sh/capability/pkg-embedcalc-mcp.html) | 52 | 208/wk | active |
-| 8 | [Rftools](https://tashan.sh/capability/pkg-rftools-mcp.html) | 47 | 151/wk | active |
+| 5 | [Easyeda MCP Pro](https://tashan.sh/capability/pkg-easyeda-mcp-pro.html) | 48 | 466/wk | active |
+| 6 | [Embedcalc](https://tashan.sh/capability/pkg-embedcalc-mcp.html) | 43 | 208/wk | active |
+| 7 | [Rftools](https://tashan.sh/capability/pkg-rftools-mcp.html) | 39 | 151/wk | active |
 
 ## What these numbers are not
 

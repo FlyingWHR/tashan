@@ -11,22 +11,22 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 46 | 143 ★ | active |
-| 2 | [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) | 67 | 802/wk | active |
-| 3 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 65 | 284 ★ | active |
-| 4 | [Sciverse](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 61 | 78 ★ | active |
-| 5 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 56 | 197/wk | active |
-| 6 | [Boltz](https://tashan.sh/capability/plugin-boltz-bio-boltz-api-skills-boltz.html) | 53 | 4 ★ | active |
-| 7 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | stable |
-| 8 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 47 | 5 ★ | active |
-| 9 | [Research Co Pilot](https://tashan.sh/capability/plugin-marazii-research-co-pilot-research-co-pilot.html) | 42 | 5 ★ | active |
-| 10 | [Nnsight](https://tashan.sh/capability/plugin-ndif-team-skills-nnsight.html) | 42 | 9 ★ | active |
-| 11 | [Research Paper Writing](https://tashan.sh/capability/plugin-yuanyuanma03-research-paper-writing-skills-research-paper-writing.html) | 41 | 3 ★ | active |
+| 1 | [Agent Loops](https://tashan.sh/capability/plugin-gaasher-agent-loop-skills-agent-loops.html) | 37 | 143 ★ | active |
+| 2 | [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) | 58 | 916/wk | active |
+| 3 | [Sciagent Skills](https://tashan.sh/capability/plugin-jaechang-hits-sciagent-skills-sciagent-skills.html) | 55 | 284 ★ | active |
+| 4 | [Sciverse](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 52 | 78 ★ | active |
+| 5 | [Gyoshu](https://tashan.sh/capability/plugin-yeachan-heo-my-jogyo-gyoshu.html) | 49 | 240 ★ | stable |
+| 6 | [Openephemeris](https://tashan.sh/capability/pkg-openephemeris-mcp-server.html) | 47 | 197/wk | active |
+| 7 | [Boltz](https://tashan.sh/capability/plugin-boltz-bio-boltz-api-skills-boltz.html) | 45 | 4 ★ | active |
+| 8 | [Flexcompute](https://tashan.sh/capability/plugin-flexcompute-plugin-marketplace-flexcompute.html) | 39 | 5 ★ | active |
+| 9 | [Research Co Pilot](https://tashan.sh/capability/plugin-marazii-research-co-pilot-research-co-pilot.html) | 36 | 5 ★ | active |
+| 10 | [Nnsight](https://tashan.sh/capability/plugin-ndif-team-skills-nnsight.html) | 35 | 9 ★ | active |
+| 11 | [Research Paper Writing](https://tashan.sh/capability/plugin-yuanyuanma03-research-paper-writing-skills-research-paper-writing.html) | 35 | 3 ★ | active |
 | 12 | [Math Olympiad](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-math-olympiad.html) | 46 | 2 marketplaces | — |
-| 13 | [Research Toolkit · gioviat](https://tashan.sh/capability/plugin-gioviat-research-toolkit-research-toolkit.html) | 34 | 2 ★ | active |
-| 14 | [Alphagenome](https://tashan.sh/capability/plugin-genomicsxai-alphagenome-pytorch-alphagenome.html) | 61 | 159 ★ | active |
-| 15 | [Scios Skill](https://tashan.sh/capability/pkg-scios-skill.html) | 55 | 243/wk | active |
-| 16 | [Uniprot](https://tashan.sh/capability/pkg-cyanheads-uniprot-mcp-server.html) | 52 | 99/wk | active |
+| 13 | [Scios Skill](https://tashan.sh/capability/pkg-scios-skill.html) | 45 | 243/wk | active |
+| 14 | [Figshare](https://tashan.sh/capability/pkg-figshare-mcp.html) | 43 | 127/wk | active |
+| 15 | [Plos](https://tashan.sh/capability/pkg-plos-mcp.html) | 42 | 104/wk | active |
+| 16 | [Uniprot · cyanheads](https://tashan.sh/capability/pkg-cyanheads-uniprot-mcp-server.html) | 42 | 99/wk | active |
 
 ## What these numbers are not
 

@@ -11,14 +11,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 79 | 51k ★ | active |
-| 2 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 55 | 302 ★ | active |
-| 3 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 55 | 28 ★ | active |
-| 4 | [Debate](https://tashan.sh/capability/plugin-agent-sh-debate-debate.html) | 46 | 3 ★ | active |
-| 5 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 48 | 9 ★ | active |
-| 6 | [Frank Grimes](https://tashan.sh/capability/plugin-misfitdev-claude-plugins-frank-grimes.html) | 46 | 2 ★ | active |
-| 7 | [Council · smykla-skalski](https://tashan.sh/capability/plugin-smykla-skalski-sai-council.html) | 42 | 1 marketplaces | — |
-| 8 | [Plan Critic](https://tashan.sh/capability/plugin-smykla-skalski-sai-plan-critic.html) | 42 | 1 marketplaces | — |
+| 1 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 72 | 51k ★ | active |
+| 2 | [Memi](https://tashan.sh/capability/plugin-memi-design-memi-memi.html) | 47 | 28 ★ | active |
+| 3 | [Naksha Studio](https://tashan.sh/capability/plugin-adityaraj0421-naksha-studio-naksha-studio.html) | 45 | 302 ★ | active |
+| 4 | [Debate](https://tashan.sh/capability/plugin-agent-sh-debate-debate.html) | 39 | 3 ★ | active |
+| 5 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 41 | 9 ★ | active |
+| 6 | [Frank Grimes](https://tashan.sh/capability/plugin-misfitdev-claude-plugins-frank-grimes.html) | 39 | 2 ★ | active |
+| 7 | [TheDesignAgent](https://tashan.sh/capability/pkg-thedesignagent-mcp.html) | 49 | 86/wk | active |
+| 8 | [Council · smykla-skalski](https://tashan.sh/capability/plugin-smykla-skalski-sai-council.html) | 42 | 1 marketplaces | — |
+| 9 | [Plan Critic](https://tashan.sh/capability/plugin-smykla-skalski-sai-plan-critic.html) | 42 | 1 marketplaces | — |
 
 ## What these numbers are not
 

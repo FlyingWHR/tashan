@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Admin](https://tashan.sh/capability/pkg-transcend-io-mcp-server-admin.html) | 87 | 124k/wk | active |
-| 2 | [Acw Tools](https://tashan.sh/capability/pkg-bangdao-ai-acw-tools.html) | 80 | 8k/wk | active |
-| 3 | [Qmd](https://tashan.sh/capability/plugin-tobi-qmd-qmd.html) | 78 | 29k ★ | active |
-| 4 | [N8n](https://tashan.sh/capability/pkg-n8n-mcp.html) | 77 | 170k/wk | active |
-| 5 | [Hevy](https://tashan.sh/capability/pkg-hevy-mcp.html) | 77 | 39k/wk | active |
-| 6 | [Todoist](https://tashan.sh/capability/pkg-doist-todoist-mcp.html) | 77 | 3k/wk | active |
-| 7 | [Prompts Chat](https://tashan.sh/capability/plugin-f-prompts-chat-prompts-chat.html) | 76 | 168k ★ | active |
-| 8 | [Superset](https://tashan.sh/capability/plugin-superset-sh-superset-superset.html) | 75 | 13k ★ | active |
-| 9 | [Doit](https://tashan.sh/capability/pkg-doitintl-doit-mcp-server.html) | 75 | 2k/wk | active |
-| 10 | [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) | 74 | 2k/wk | active |
-| 11 | [Qmd · tobilu](https://tashan.sh/capability/pkg-tobilu-qmd.html) | 73 | 39k/wk | active |
-| 12 | [Linear](https://tashan.sh/capability/pkg-tacticlaunch-mcp-linear.html) | 73 | 12k/wk | active |
-| 13 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 73 | 9k/wk | active |
-| 14 | [Backlog](https://tashan.sh/capability/pkg-backlog-mcp-server.html) | 73 | 8k/wk | active |
-| 15 | [Sellable](https://tashan.sh/capability/pkg-sellable-mcp.html) | 73 | 2k/wk | active |
-| 16 | [Maker](https://tashan.sh/capability/pkg-taptap-maker.html) | 73 | 780/wk | active |
-| 17 | [Atlassian · atlassian](https://tashan.sh/capability/plugin-atlassian-atlassian-mcp-server-atlassian.html) | 72 | 911 ★ | active |
-| 18 | [Bitbucket](https://tashan.sh/capability/pkg-nexus2520-bitbucket-mcp-server.html) | 72 | 4k/wk | active |
-| 19 | [Brilliant Directories](https://tashan.sh/capability/pkg-brilliant-directories-mcp.html) | 72 | 3k/wk | active |
-| 20 | [Toggl 2.0](https://tashan.sh/capability/pkg-togglhq-mcp.html) | 72 | 2k/wk | active |
-| 21 | [Adeu](https://tashan.sh/capability/pkg-adeu-mcp-server.html) | 72 | 931/wk | active |
-| 22 | [Shortcut](https://tashan.sh/capability/pkg-shortcut-mcp.html) | 71 | 19k/wk | active |
-| 23 | [Admin · sellable](https://tashan.sh/capability/pkg-sellable-admin-mcp.html) | 71 | 2k/wk | active |
-| 24 | [Quantum Management](https://tashan.sh/capability/pkg-chkp-quantum-management-mcp.html) | 71 | 641/wk | active |
-| 25 | [Zapier](https://tashan.sh/capability/plugin-zapier-zapier-mcp-zapier.html) | 70 | 363 ★ | active |
-| 26 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 70 | 417 ★ | active |
-| 27 | [Jira](https://tashan.sh/capability/pkg-atlassian-dc-mcp-jira.html) | 70 | 3k/wk | active |
-| 28 | [Claude Code Session Manager](https://tashan.sh/capability/pkg-claude-code-session-manager.html) | 70 | 2k/wk | active |
-| 29 | [Trycompai](https://tashan.sh/capability/pkg-trycompai-mcp-server.html) | 70 | 639/wk | active |
-| 30 | [Formio](https://tashan.sh/capability/pkg-formio-mcp.html) | 70 | 615/wk | active |
-| 31 | [Mediawiki](https://tashan.sh/capability/pkg-professional-wiki-mediawiki-mcp-server.html) | 70 | 566/wk | active |
-| 32 | [Chorus](https://tashan.sh/capability/plugin-chorus-aidlc-chorus-chorus.html) | 69 | 1k ★ | active |
-| 33 | [Zoteus](https://tashan.sh/capability/pkg-oscardvs-zoteus.html) | 69 | 2k/wk | active |
-| 34 | [Monday API](https://tashan.sh/capability/pkg-mondaydotcomorg-monday-api-mcp.html) | 69 | 1k/wk | active |
-| 35 | [Anytype](https://tashan.sh/capability/pkg-anyproto-anytype-mcp.html) | 69 | 802/wk | active |
-| 36 | [Cube](https://tashan.sh/capability/pkg-edgescaleai-cube-mcp.html) | 69 | 456/wk | active |
-| 37 | [Opsee](https://tashan.sh/capability/pkg-opsee-mcp-server.html) | 68 | 1k/wk | active |
-| 38 | [Hf](https://tashan.sh/capability/pkg-llmindset-hf-mcp-server.html) | 68 | 879/wk | active |
-| 39 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 68 | 660/wk | active |
-| 40 | [Apideck](https://tashan.sh/capability/pkg-apideck-mcp.html) | 68 | 353/wk | active |
+| 1 | [Admin](https://tashan.sh/capability/pkg-transcend-io-mcp-server-admin.html) | 79 | 56k/wk | active |
+| 2 | [Clarity](https://tashan.sh/capability/pkg-microsoft-clarity-mcp-server.html) | 77 | 33k/wk | active |
+| 3 | [Backlog](https://tashan.sh/capability/pkg-backlog-mcp-server.html) | 77 | 16k/wk | active |
+| 4 | [Sellable](https://tashan.sh/capability/pkg-sellable-mcp.html) | 75 | 5k/wk | active |
+| 5 | [N8n](https://tashan.sh/capability/pkg-n8n-mcp.html) | 74 | 103k/wk | active |
+| 6 | [Toggl 2.0](https://tashan.sh/capability/pkg-togglhq-mcp.html) | 74 | 18k/wk | active |
+| 7 | [Maker](https://tashan.sh/capability/pkg-taptap-maker.html) | 73 | 6k/wk | active |
+| 8 | [Cube](https://tashan.sh/capability/pkg-edgescaleai-cube-mcp.html) | 73 | 4k/wk | active |
+| 9 | [Bitbucket](https://tashan.sh/capability/pkg-nexus2520-bitbucket-mcp-server.html) | 72 | 10k/wk | active |
+| 10 | [Monday API](https://tashan.sh/capability/pkg-mondaydotcomorg-monday-api-mcp.html) | 72 | 3k/wk | active |
+| 11 | [Qmd](https://tashan.sh/capability/plugin-tobi-qmd-qmd.html) | 71 | 29k ★ | active |
+| 12 | [Linear](https://tashan.sh/capability/pkg-tacticlaunch-mcp-linear.html) | 71 | 35k/wk | active |
+| 13 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 70 | 3k/wk | active |
+| 14 | [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) | 69 | 5k/wk | active |
+| 15 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 69 | 26k/wk | active |
+| 16 | [Workflow](https://tashan.sh/capability/pkg-agimon-ai-workflow-mcp.html) | 69 | 11k/wk | active |
+| 17 | [Hevy](https://tashan.sh/capability/pkg-hevy-mcp.html) | 69 | 10k/wk | active |
+| 18 | [Apple Notes](https://tashan.sh/capability/pkg-apple-notes-mcp.html) | 69 | 6k/wk | active |
+| 19 | [Linear CLI](https://tashan.sh/capability/plugin-schpet-linear-cli-linear-cli.html) | 68 | 964 ★ | active |
+| 20 | [Chorus](https://tashan.sh/capability/plugin-chorus-aidlc-chorus-chorus.html) | 68 | 1k ★ | active |
+| 21 | [Qmd · tobilu](https://tashan.sh/capability/pkg-tobilu-qmd.html) | 68 | 75k/wk | active |
+| 22 | [Jira](https://tashan.sh/capability/pkg-atlassian-dc-mcp-jira.html) | 66 | 5k/wk | active |
+| 23 | [Mediawiki](https://tashan.sh/capability/pkg-professional-wiki-mediawiki-mcp-server.html) | 66 | 685/wk | active |
+| 24 | [Bitbucket · atlassian-dc-mcp](https://tashan.sh/capability/pkg-atlassian-dc-mcp-bitbucket.html) | 65 | 4k/wk | active |
+| 25 | [Atlassian · atlassian](https://tashan.sh/capability/plugin-atlassian-atlassian-mcp-server-atlassian.html) | 64 | 911 ★ | active |
+| 26 | [Shortcut](https://tashan.sh/capability/pkg-shortcut-mcp.html) | 64 | 23k/wk | active |
+| 27 | [Confluence](https://tashan.sh/capability/pkg-atlassian-dc-mcp-confluence.html) | 64 | 3k/wk | active |
+| 28 | [Local](https://tashan.sh/capability/pkg-local-mcp.html) | 64 | 2k/wk | active |
+| 29 | [Adeu](https://tashan.sh/capability/pkg-adeu-mcp-server.html) | 64 | 393/wk | active |
+| 30 | [Gsheets](https://tashan.sh/capability/pkg-mcp-gsheets.html) | 63 | 5k/wk | active |
+| 31 | [Claude Code Session Manager](https://tashan.sh/capability/pkg-claude-code-session-manager.html) | 63 | 2k/wk | active |
+| 32 | [Zoteus](https://tashan.sh/capability/pkg-oscardvs-zoteus.html) | 62 | 2k/wk | active |
+| 33 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 61 | 417 ★ | active |
+| 34 | [Confluence · pchuri](https://tashan.sh/capability/plugin-pchuri-confluence-cli-confluence.html) | 61 | 293 ★ | active |
+| 35 | [Formio](https://tashan.sh/capability/pkg-formio-mcp.html) | 61 | 337/wk | active |
+| 36 | [Airtable](https://tashan.sh/capability/pkg-airtable-mcp-cli.html) | 60 | 1k/wk | active |
+| 37 | [P4plan](https://tashan.sh/capability/pkg-perforce-p4plan-mcp.html) | 60 | 298/wk | active |
+| 38 | [Brilliant Directories](https://tashan.sh/capability/pkg-brilliant-directories-mcp.html) | 58 | 1k/wk | active |
+| 39 | [Jira Stdio](https://tashan.sh/capability/pkg-mcp-jira-stdio.html) | 58 | 1k/wk | active |
+| 40 | [Al Buddy Memory](https://tashan.sh/capability/pkg-al-buddy-memory.html) | 58 | 771/wk | active |
 
-Showing the top 40 of 580. The full ranked shelf is at https://tashan.sh/category/productivity.html.
+Showing the top 40 of 578. The full ranked shelf is at https://tashan.sh/category/productivity.html.
 
 ## What these numbers are not
 

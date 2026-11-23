@@ -11,48 +11,48 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 92 | 3.3m/wk | active |
-| 2 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 76 | 3k/wk | active |
-| 3 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 58 | 335 ★ | active |
-| 4 | [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) | 85 | 4.6m/wk | active |
-| 5 | [Browser Harness](https://tashan.sh/capability/plugin-browser-use-browser-harness-browser-harness.html) | 76 | 16k ★ | active |
-| 6 | [Chrome DevTools Axi](https://tashan.sh/capability/pkg-chrome-devtools-axi.html) | 70 | 4k/wk | active |
-| 7 | [Subtext](https://tashan.sh/capability/plugin-fullstorydev-subtext-subtext.html) | 59 | 64 ★ | active |
-| 8 | [Tap](https://tashan.sh/capability/pkg-taprun-cli.html) | 56 | 282/wk | active |
-| 9 | [Browser Use](https://tashan.sh/capability/plugin-browser-use-plugins-browser-use.html) | 48 | 7 ★ | active |
-| 10 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 45 | 38 ★ | active |
-| 11 | [Patchright MCP Jalikey](https://tashan.sh/capability/pkg-patchright-mcp-jalikey.html) | 44 | 37/wk | active |
-| 12 | [Realbrowser](https://tashan.sh/capability/plugin-darkamenosa-realbrowser-realbrowser.html) | 43 | 57 ★ | active |
-| 13 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 42 | 15 ★ | active |
-| 14 | [Ever Browser](https://tashan.sh/capability/plugin-namuh-eng-everbrowser-ever-browser.html) | 40 | 6 ★ | active |
-| 15 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 39 | 22 ★ | active |
-| 16 | [Hyperbrowser](https://tashan.sh/capability/pkg-hyperbrowser-mcp.html) | 38 | 4k/wk | abandoned |
-| 17 | [Playwright Pro](https://tashan.sh/capability/plugin-alirezarezvani-claude-skills-playwright-pro.html) | 75 | 23k ★ | active |
-| 18 | [Shiplight](https://tashan.sh/capability/pkg-shiplightai-mcp.html) | 65 | 2k/wk | active |
-| 19 | [Chrome Bridge](https://tashan.sh/capability/pkg-chrome-bridge-mcp.html) | 49 | 104/wk | active |
-| 20 | [Agentiqa](https://tashan.sh/capability/plugin-agentiqa-agentiqa-plugin-agentiqa.html) | 43 | 1 ★ | active |
-| 21 | [Foxcode](https://tashan.sh/capability/plugin-korchasa-foxcode-foxcode.html) | 40 | 0 ★ | active |
-| 22 | [Firefox DevTools · mozilla](https://tashan.sh/capability/plugin-mozilla-firefox-devtools-mcp-firefox-devtools-mcp.html) | 40 | 1 marketplaces | active |
-| 23 | [Claude Mac Chrome](https://tashan.sh/capability/plugin-yolo-labz-claude-mac-chrome-claude-mac-chrome.html) | 39 | 1 ★ | active |
-| 24 | [Puppeteer](https://tashan.sh/capability/pkg-modelcontextprotocol-server-puppeteer.html) | not scored | 28k/wk | abandoned |
-| 25 | [Actionbook](https://tashan.sh/capability/plugin-actionbook-actionbook-actionbook.html) | 70 | 2k ★ | active |
-| 26 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 55 | 14 ★ | active |
-| 27 | [Cypress](https://tashan.sh/capability/plugin-cypress-io-ai-toolkit-cypress.html) | 54 | 37 ★ | active |
-| 28 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 46 | 21 ★ | active |
-| 29 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 71 | 3k/wk | active |
-| 30 | [Desktop Touch](https://tashan.sh/capability/pkg-harusame64-desktop-touch-mcp.html) | 68 | 1k/wk | active |
-| 31 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 65 | 965/wk | active |
-| 32 | [Camoufox](https://tashan.sh/capability/pkg-mcp-camoufox.html) | 62 | 707/wk | active |
-| 33 | [Machine Bridge](https://tashan.sh/capability/pkg-machine-bridge-mcp.html) | 59 | 794/wk | active |
-| 34 | [Pagebolt](https://tashan.sh/capability/pkg-pagebolt-mcp.html) | 58 | 349/wk | active |
-| 35 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 57 | 234/wk | active |
-| 36 | [Getcourse](https://tashan.sh/capability/pkg-getcourse-mcp.html) | 55 | 438/wk | active |
-| 37 | [Sidebutton · sidebutton](https://tashan.sh/capability/pkg-sidebutton.html) | 54 | 174/wk | active |
-| 38 | [Safari DevTools](https://tashan.sh/capability/pkg-safari-devtools-mcp.html) | 43 | 125/wk | active |
-| 39 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 72 | 11k/wk | stable |
-| 40 | [Vibium](https://tashan.sh/capability/pkg-vibium.html) | 67 | 2k/wk | active |
+| 1 | [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) | 83 | 1.7m/wk | active |
+| 2 | [Trusty Squire](https://tashan.sh/capability/pkg-trusty-squire-mcp.html) | 78 | 5k/wk | active |
+| 3 | [Superpowers Chrome](https://tashan.sh/capability/plugin-obra-superpowers-chrome-superpowers-chrome.html) | 49 | 335 ★ | active |
+| 4 | [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) | 80 | 8.5m/wk | active |
+| 5 | [Browser Harness](https://tashan.sh/capability/plugin-browser-use-browser-harness-browser-harness.html) | 69 | 16k ★ | active |
+| 6 | [Chrome DevTools Axi](https://tashan.sh/capability/pkg-chrome-devtools-axi.html) | 69 | 9k/wk | active |
+| 7 | [Subtext](https://tashan.sh/capability/plugin-fullstorydev-subtext-subtext.html) | 49 | 64 ★ | active |
+| 8 | [Tap](https://tashan.sh/capability/pkg-taprun-cli.html) | 46 | 282/wk | active |
+| 9 | [Browser Use](https://tashan.sh/capability/plugin-browser-use-plugins-browser-use.html) | 39 | 7 ★ | active |
+| 10 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 36 | 38 ★ | active |
+| 11 | [Patchright MCP Jalikey](https://tashan.sh/capability/pkg-patchright-mcp-jalikey.html) | 36 | 37/wk | active |
+| 12 | [Realbrowser](https://tashan.sh/capability/plugin-darkamenosa-realbrowser-realbrowser.html) | 34 | 57 ★ | active |
+| 13 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 34 | 15 ★ | active |
+| 14 | [Ever Browser](https://tashan.sh/capability/plugin-namuh-eng-everbrowser-ever-browser.html) | 33 | 6 ★ | active |
+| 15 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 32 | 22 ★ | active |
+| 16 | [Shiplight](https://tashan.sh/capability/pkg-shiplightai-mcp.html) | 70 | 517/wk | active |
+| 17 | [Playwright Pro](https://tashan.sh/capability/plugin-alirezarezvani-claude-skills-playwright-pro.html) | 69 | 23k ★ | active |
+| 18 | [Chrome Bridge](https://tashan.sh/capability/pkg-chrome-bridge-mcp.html) | 40 | 104/wk | active |
+| 19 | [Agentiqa](https://tashan.sh/capability/plugin-agentiqa-agentiqa-plugin-agentiqa.html) | 36 | 1 ★ | active |
+| 20 | [Puppeteer](https://tashan.sh/capability/pkg-modelcontextprotocol-server-puppeteer.html) | not scored | 40k/wk | abandoned |
+| 21 | [Actionbook](https://tashan.sh/capability/plugin-actionbook-actionbook-actionbook.html) | 61 | 2k ★ | active |
+| 22 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 47 | 14 ★ | active |
+| 23 | [Cypress](https://tashan.sh/capability/plugin-cypress-io-ai-toolkit-cypress.html) | 45 | 37 ★ | active |
+| 24 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 38 | 21 ★ | active |
+| 25 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 71 | 3k/wk | active |
+| 26 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 66 | 4k/wk | active |
+| 27 | [Desktop Touch](https://tashan.sh/capability/pkg-harusame64-desktop-touch-mcp.html) | 50 | 286/wk | active |
+| 28 | [Machine Bridge](https://tashan.sh/capability/pkg-machine-bridge-mcp.html) | 48 | 588/wk | active |
+| 29 | [Pagebolt](https://tashan.sh/capability/pkg-pagebolt-mcp.html) | 48 | 349/wk | active |
+| 30 | [Crawlio Browser](https://tashan.sh/capability/pkg-crawlio-browser.html) | 47 | 234/wk | active |
+| 31 | [Sidebutton · sidebutton](https://tashan.sh/capability/pkg-sidebutton.html) | 45 | 174/wk | active |
+| 32 | [Camoufox · RobithYusuf](https://tashan.sh/capability/pkg-mcp-camoufox.html) | 44 | 83/wk | active |
+| 33 | [Getcourse](https://tashan.sh/capability/pkg-getcourse-mcp.html) | 40 | 37/wk | active |
+| 34 | [Safari DevTools](https://tashan.sh/capability/pkg-safari-devtools-mcp.html) | 37 | 125/wk | abandoned |
+| 35 | [Playwright · executeautomation](https://tashan.sh/capability/pkg-executeautomation-playwright-mcp-server.html) | 72 | 15k/wk | stable |
+| 36 | [Stock SDK](https://tashan.sh/capability/pkg-stock-sdk.html) | 66 | 3k/wk | active |
+| 37 | [Vibium](https://tashan.sh/capability/pkg-vibium.html) | 57 | 3k/wk | active |
+| 38 | [Camofox Browser](https://tashan.sh/capability/pkg-camofox-browser.html) | 49 | 298/wk | active |
+| 39 | [Mcpbrowser](https://tashan.sh/capability/pkg-mcpbrowser.html) | 49 | 297/wk | active |
+| 40 | [Cloakbrowser](https://tashan.sh/capability/pkg-cloakbrowser-mcp.html) | 49 | 231/wk | active |
 
-Showing the top 40 of 162. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
+Showing the top 40 of 152. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
 
 ## What these numbers are not
 

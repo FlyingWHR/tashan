@@ -11,13 +11,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 73 | 9k/wk | active |
-| 2 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 69 | 1k ★ | active |
-| 3 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 42 | 7 ★ | active |
+| 1 | [Frog](https://tashan.sh/capability/pkg-frog.html) | 69 | 26k/wk | active |
+| 2 | [Cookiy](https://tashan.sh/capability/plugin-cookiy-ai-user-research-skill-cookiy.html) | 59 | 1k ★ | active |
+| 3 | [Deepmiro](https://tashan.sh/capability/plugin-kakarot-dev-deepmiro-deepmiro.html) | 36 | 7 ★ | abandoned |
 | 4 | [Fullstory](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 46 | 2 marketplaces | — |
-| 5 | [Windmill Hr](https://tashan.sh/capability/plugin-windmill-dev-windmill-plugin-windmill-hr.html) | 43 | 1 ★ | active |
-| 6 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 69 | 504 ★ | active |
-| 7 | [Fullstory · fullstorydev](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 44 | 9 ★ | active |
+| 5 | [Windmill Hr](https://tashan.sh/capability/plugin-windmill-dev-windmill-plugin-windmill-hr.html) | 36 | 1 ★ | active |
+| 6 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 59 | 504 ★ | active |
+| 7 | [Fullstory · fullstorydev](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 37 | 9 ★ | active |
 
 ## What these numbers are not
 
