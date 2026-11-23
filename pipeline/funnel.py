@@ -62,6 +62,12 @@ def n(row, k, default=0):
         return default
 
 
+def kit_interest(days):
+    return sql("SELECT blob9 AS task, blob4 AS stage, SUM(_sample_interval) AS c "
+               f"FROM {DATASET} WHERE blob1='x402' AND blob9!='' AND "
+               f"timestamp > NOW() - INTERVAL '{int(days)}' DAY GROUP BY task, stage")
+
+
 def collect(days):
     """Every number in one place, so the report cannot cite a metric it did not fetch."""
     since = "timestamp > NOW() - INTERVAL '%d' DAY" % days

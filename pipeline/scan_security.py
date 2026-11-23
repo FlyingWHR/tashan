@@ -284,6 +284,7 @@ def summarize(f):
 
 def main():
     import build                                   # reuse db(), schema, migrations
+    from buyer_queue import priority
     full = "--full" in sys.argv
     con = build.db()
     con.execute("PRAGMA busy_timeout = 30000")
@@ -301,20 +302,22 @@ def main():
     # the most-used has to outrank breadth. Breadth still advances every night — the fetch budget is
     # spent on whatever is stale or new as the walk goes down, and a cached, current row costs nothing.
     rows = con.execute(
-        "SELECT id, npm_pkg FROM capabilities WHERE npm_pkg IS NOT NULL "
+        "SELECT id, npm_pkg, npm_latest_version FROM capabilities WHERE npm_pkg IS NOT NULL "
         "ORDER BY npm_downloads DESC NULLS LAST, (sec_scanned_at IS NULL) DESC, config_reach DESC"
     ).fetchall()
+    ranked = priority("security")
+    rows.sort(key=lambda row: ranked.get(row[0], len(ranked)))
     print(f"  walking {len(rows):,} npm-backed capabilities, budget {SEC_CAP:,} fetches "
           f"({len(cache)} cached)...", flush=True)
 
     scanned = fresh = attempted = flagged = 0
-    for cid, pkg in rows:
+    for cid, pkg, latest in rows:
         if build.bad_pkg(pkg):
             continue
         f = cache.get(pkg)
         if f is not None and f.get("v") != CACHE_VERSION:
             f = None                 # computed by an older rule — re-fetch rather than trust it
-        elif f is not None and expired(f.get("scanned_at")):
+        elif f is not None and ((latest and latest != f.get("version")) or expired(f.get("scanned_at"))):
             # AND AN ADVISORY SCAN GOES OFF. A version bump alone would have frozen this cache the
             # moment the sweep finished: scanned once, correct that day, served for ever. Everything
             # this stage reads is a moving target — a new CVE lands against the version already

@@ -37,7 +37,7 @@
 const SELF = ["tashan-payment-check", "tashan-selfcheck"];
 
 /** One row per demand event. Never throws — telemetry must not cost a sale, or a refusal. */
-export function demand(env, request, stage, resource, reason) {
+export function demand(env, request, stage, resource, reason, task = "") {
   try {
     if (!env || !env.TASHAN_AE) return;
     const ua = (request && request.headers && request.headers.get("user-agent")) || "";
@@ -56,6 +56,7 @@ export function demand(env, request, stage, resource, reason) {
         // asking (a Claude Code host, a bespoke script, a crawler). It is not a person, carries no
         // identifier, and is capped so a hostile one cannot bloat a row.
         ua.slice(0, 64),
+        task, // validated taxonomy slug, populated only after a kit task has matched
       ],
       doubles: [1],
     });

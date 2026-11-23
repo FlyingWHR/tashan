@@ -52,6 +52,8 @@ STAGES = [
     # The security audit belongs in the DAILY loop, not in a developer's hands: an advisory published
     # today is only useful if it reaches the board tomorrow. Cached and incremental, so a re-run costs
     # almost nothing and a new package is picked up the day it appears.
+    ("kit-priority",    ["pipeline/buyer_queue.py"], "enrich",
+     "measure paid kit coverage and prioritise missing evidence for buying agents"),
     ("security",        ["pipeline/scan_security.py"], "enrich",
      "OSV advisories for the current release + install scripts, provenance, permission surface"),
     # L5. scan_security answers about the package's own name; this resolves what it actually
@@ -72,7 +74,7 @@ STAGES = [
     # on POPULAR packages was far worse than the headline. "An agent hitting absences on popular
     # packages learns to stop querying" is the whole risk, and neither pass ran in the nightly loop.
     #
-    # Both need ANTHROPIC_API_KEY and both no-op loudly without it, like the CF_* push stages — a
+    # Both need OPENAI_API_KEY and both no-op loudly without it, like the CF_* push stages — a
     # missing credential must never take down the measurement, and must never be silent either.
     # STAGING WAS NOT IN THE LOOP, so the grader ran nightly against a manifest only a human ever
     # refreshed. grade_expertise.py reads data/readmes/manifest.json and nothing wrote it on a
@@ -81,9 +83,9 @@ STAGES = [
     # each run stages the next TOP_N ungraded capabilities, in demand order.
     ("readmes",         ["pipeline/fetch_readmes.py"], "enrich",
      "stage the next ungraded READMEs, most-used first — the grader's input queue"),
-    ("expertise",       ["pipeline/grade_expertise.py"], "enrich",
+    ("expertise",       ["pipeline/grade_expertise.py", "--limit", "24"], "enrich",
      "grade how well each capability documents itself, against the published rubric (needs a key)"),
-    ("task-grade",      ["pipeline/tag_capabilities.py", "--grade", "--limit", "150"], "enrich",
+    ("task-grade",      ["pipeline/tag_capabilities.py", "--grade", "--limit", "60"], "enrich",
      "map the most-used capabilities to the work they are for (needs a key)"),
     # Skills carry their own SKILL.md and no grade — the expertise rubric is server-shaped
     # and a skill has no tools. This reads the documents we already hold and states facts.
@@ -189,11 +191,19 @@ SITE_ONLY = {s[0] for s in STAGES if s[2] == "site"}
 def run(name, argv, full):
     cmd = [PY] + [os.path.join(ROOT, argv[0])] + argv[1:]
     env = dict(os.environ)
+    if name not in ("task-grade", "expertise"):
+        env.pop("OPENAI_API_KEY", None)
     if full:
         env["REG_FULL"] = "1"
     t0 = time.time()
     print(f"\n\033[1m▸ {name}\033[0m  ({' '.join(argv)})", flush=True)
-    r = subprocess.run(cmd, cwd=ROOT, env=env)
+    # A registry or model outage must not hold back a verified index snapshot.
+    optional_limits = {"readmes": 100, "expertise": 210, "task-grade": 210}
+    try:
+        r = subprocess.run(cmd, cwd=ROOT, env=env, timeout=optional_limits.get(name))
+    except subprocess.TimeoutExpired:
+        print(f"::warning::{name} reached its publication time limit. Continuing with saved evidence.")
+        return True
     dt = time.time() - t0
     if r.returncode != 0:
         print(f"  ✗ {name} failed ({r.returncode}) after {dt:.0f}s", flush=True)

@@ -265,11 +265,11 @@ async function facilitate(env, path, payload, requirements) {
  * Any error — a refusal, a malformed response, a facilitator that is simply down — denies. An
  * outage must never become a free tier, and it must never become a charge for nothing either.
  */
-export async function charge(env, pr, payload, work, request = null) {
+export async function charge(env, pr, payload, work, request = null, task = "") {
   // EVERY OUTCOME IS RECORDED, and the failures matter more than the success. Without this a
   // refused payment is indistinguishable from nobody having come at all.
   const res = (pr && pr.resource && pr.resource.url) || "";
-  demand(env, request, "attempted", res);
+  demand(env, request, "attempted", res, "", task);
   const requirements = pr.accepts[0];
   let v;
   try {
@@ -284,7 +284,7 @@ export async function charge(env, pr, payload, work, request = null) {
       m.includes("credential_rejected") ? "verification_credential_rejected" :
       /http_\d+/.test(m)               ? "verification_" + (m.match(/http_\d+/) || [""])[0] :
                                          "verification_unreachable";
-    demand(env, request, "failed", reason);
+    demand(env, request, "failed", res, reason, task);
     return { ok: false, reason, detail: m };
   }
   // AN EXPLICIT YES, OR NOTHING. This used to deny only when the facilitator said `isValid: false`
@@ -299,8 +299,8 @@ export async function charge(env, pr, payload, work, request = null) {
   // positive assertion, and every other answer — including an unrecognised one — denies.
   const said_yes = v && (v.isValid === true || v.valid === true);
   if (!said_yes) {
-    demand(env, request, "failed",
-           (v && (v.invalidReason || v.errorReason)) || "payment_invalid");
+    demand(env, request, "failed", res,
+           (v && (v.invalidReason || v.errorReason)) || "payment_invalid", task);
     return { ok: false,
              reason: (v && (v.invalidReason || v.errorReason)) || "payment_invalid",
              detail: (v && (v.invalidMessage || v.errorMessage)) || undefined };
@@ -318,7 +318,7 @@ export async function charge(env, pr, payload, work, request = null) {
       ? { ...payload, resource: pr.resource } : payload;
     s = await facilitate(env, "/settle", settlePayload, requirements);
   } catch (e) {
-    demand(env, request, "failed", "settle_unavailable");
+    demand(env, request, "failed", res, "settle_unavailable", task);
     return { ok: false, reason: "settlement_unavailable", detail: String(e) };
   }
   // AN EXPLICIT YES AT SETTLE TOO, AND A TRANSACTION TO PROVE IT.
@@ -335,17 +335,17 @@ export async function charge(env, pr, payload, work, request = null) {
   const settled = s && s.success === true;
   const tx = s && (s.transaction || s.txHash || s.transactionHash);
   if (!settled) {
-    demand(env, request, "failed", "settle:" + ((s && s.errorReason) || "settlement_failed"));
+    demand(env, request, "failed", res, "settle:" + ((s && s.errorReason) || "settlement_failed"), task);
     return { ok: false, reason: (s && s.errorReason) || "settlement_failed" };
   }
   if (!tx) {
     // A yes with no transaction is not a payment. Fail closed rather than invent one — a settle we
     // cannot point at a block for is indistinguishable from a facilitator bug.
-    demand(env, request, "failed", "settle:no_transaction");
+    demand(env, request, "failed", res, "settle:no_transaction", task);
     return { ok: false, reason: "settlement_without_transaction" };
   }
   // The hash rides in the event so the metric can be audited against the chain rather than trusted.
-  demand(env, request, "settled", res, String(tx).slice(0, 80));
+  demand(env, request, "settled", res, String(tx).slice(0, 80), task);
   return { ok: true, result, settlement: s };
 }
 

@@ -240,6 +240,22 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
   ok("...and says plainly what we do not sell", /do not sell/i.test(g.body.usage.not_sold));
 }
 
+// A higher scoring plugin must not hide the best verified executable.
+{
+  const good = LOOKUP.records[0];
+  const score = good.tashan_score;
+  good.tashan_score = 30;
+  const points = [];
+  const env = { TASHAN_AE: { writeDataPoint(p) { points.push(p); } } };
+  const preview = await read(await post({ task: "web-scraping", limit: 2 }));
+  ok("reserve one slot for a verified install and keep the top alternative",
+     preview.body.shortlist.length === 2 && preview.body.shortlist[1].id === good.id &&
+     preview.body.shortlist[0].id === "plugin:acme/pack/thing" && preview.body.kit_available);
+  await post({ goal: "web scraping", kit: true, limit: 2 }, { env });
+  ok("quote records the matched taxonomy slug", points[0].blobs[8] === "web-scraping");
+  good.tashan_score = score;
+}
+
 // An unscanned, stale, or newly published package cannot become a paid install instruction.
 for (const changes of [{ npm_runnable: 0 }, { npm_runnable: null }, { sec_scanned_at: null }, { sec_scanned_at: "2020-01-01" },
                        { sec_scanned_version: "1.0.0" }, { sec_advisory_count: null }]) {

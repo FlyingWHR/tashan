@@ -164,7 +164,7 @@ def follow(rec, cache):
     # limitations live at the BOTTOM of a long README, so truncation reads as "documents nothing"
     # for precisely the thorough documents the top band is meant to find. Re-read the whole file.
     if len(md) >= 14000:
-        for name in ("README.md", "readme.md"):
+        for name in dict.fromkeys((rec.get("readme_path") or "README.md", "readme.md")):
             full = _raw(m.group(1), m.group(2), name, cache)
             if full and len(full) > len(md):
                 md, _ = full, got.append("README.md (full, %d chars)" % len(full))
@@ -183,15 +183,13 @@ def _raw(owner, name, path, cache):
     """One file from a GitHub repo, cached on disk so a re-grade costs no network."""
     key = f"{owner}/{name}:{path}"
     if key not in cache:
-        cache[key] = ""
-        for br in ("main", "master"):
-            url = f"https://raw.githubusercontent.com/{owner}/{name}/{br}/{path.lstrip('./')}"
-            try:
-                req = urllib.request.Request(url, headers={"User-Agent": "tashan"})
-                with urllib.request.urlopen(req, timeout=20) as r:
-                    cache[key] = r.read().decode("utf-8", "replace"); break
-            except Exception:
-                pass
+        url = f"https://raw.githubusercontent.com/{owner}/{name}/HEAD/{path.lstrip('./')}"
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "tashan"})
+            with urllib.request.urlopen(req, timeout=4) as r:
+                cache[key] = r.read(800_000).decode("utf-8", "replace")
+        except (OSError, ValueError):
+            return ""
     return cache[key]
 
 

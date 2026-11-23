@@ -10,7 +10,7 @@ Taxonomy: web/data/tasks.json — the SINGLE definition. Do not mirror these slu
 15 domain categories are duplicated in six places and that is the mistake this avoids.
 
     python3 pipeline/tag_capabilities.py --declared     # free, deterministic, attributable
-    ANTHROPIC_API_KEY=sk-... python3 pipeline/tag_capabilities.py --grade --limit 200
+    python3 pipeline/tag_capabilities.py --grade --limit 200
     python3 pipeline/tag_capabilities.py --grade --dry-run   # build prompts, no API call
     python3 pipeline/tag_capabilities.py --eval         # accuracy against data/tags/truth.json
     python3 pipeline/tag_capabilities.py --report       # coverage, no writes
@@ -32,7 +32,10 @@ being blind to the half of the corpus where media, audio and video servers live:
 capabilities that read as creator work are `pkg:`/`registry:`, and the Creator/video shelf showed 19.
 The DECLARED pass needs no model and no README to fix that — the author already told us.
 """
-import json, os, re, sys, urllib.request, urllib.error
+import glob, json, os, re, sys
+from pathlib import Path
+import openai_grading
+import buyer_queue
 import build
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,8 +43,6 @@ TASKS = os.path.join(ROOT, "web", "data", "tasks.json")
 OUTDIR = os.path.join(ROOT, "data", "tags")
 GRADED = os.path.join(OUTDIR, "graded.json")
 TRUTH = os.path.join(OUTDIR, "truth.json")
-MODEL = os.environ.get("TAG_MODEL", "claude-sonnet-5")
-API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MAX_TAGS = 4          # a capability that claims to do everything is telling you nothing
 BODY_CHARS = 6000     # SKILL.md bodies reach 70 KB; the top of the doc carries the intent
 
@@ -246,7 +247,7 @@ def run_declared(con, tasks, dry=False):
 # keywords are ['mcp','firecrawl','web-search','web-data','web-interaction'] — the author never
 # declared scraping. Task coverage is 21.6% of scored capabilities (3,121 of 14,419); the remaining
 # 11,298 are invisible to every job, role and kit query. The ONLY measured way to close that is
-# --grade, which needs ANTHROPIC_API_KEY. That is a cost decision, not an engineering gap, and
+# --grade, which needs OPENAI_API_KEY. That is a cost decision, not an engineering gap, and
 # pretending a lexical rule can substitute for it has now been measured and rejected twice.
 IDF_MIN = 1.5          # terms this common carry no signal at all
 FIELD_W = {"name": 3.0, "desc": 2.0, "body": 1.0}
@@ -336,79 +337,86 @@ def rubric(tasks):
         "answer for generic infrastructure that serves no particular job.\n"
         "- Judge the work it does, not the technology it uses. A Postgres client used to pull numbers for "
         "a report is 'query-a-database', not 'analyze-a-dataset', unless it actually analyses.\n"
-        "- For each tag give confidence 0-1 and a SHORT verbatim quote from the text as evidence. Never "
+        "- Only emit tags you are at least 0.8 confident about. Give a SHORT verbatim quote from the description or docs as evidence. Never "
         "invent a quote.\n\n"
         'Respond with ONLY this JSON, nothing else:\n'
         '{"tags":[{"tag":"<slug>","confidence":0.0,"evidence":"<quote from the text>"}]}')
 
 
+def source_text(desc, full, body):
+    return ((full or desc or "")[:1200] + "\n\n" + (body or "")[:BODY_CHARS]).strip()
+
+
 def prompt_for(name, desc, full, body):
-    text = (full or desc or "")
-    if body:
-        text += "\n\n--- documentation ---\n" + body[:BODY_CHARS]
-    return f"Capability name: {name}\n\nIts own description and docs:\n{text[:BODY_CHARS + 1200]}"
+    return f"Capability name: {name}\n\nIts own description and docs:\n{source_text(desc, full, body)}"
 
 
-def call_api(system, user):
-    body = json.dumps({"model": MODEL, "max_tokens": 700, "system": system,
-                       "messages": [{"role": "user", "content": user}]}).encode()
-    req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, method="POST",
-                                 headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01",
-                                          "content-type": "application/json"})
-    with urllib.request.urlopen(req, timeout=90) as r:
-        d = json.load(r)
-    return "".join(p.get("text", "") for p in d.get("content", []))
+def parse_tags(raw, valid, source):
+    tags = json.loads(raw)["tags"]
+    if not isinstance(tags, list) or len(tags) > MAX_TAGS:
+        raise ValueError("invalid tag list")
+    keep = []
+    for item in tags:
+        slug, confidence, quote = item["tag"], item["confidence"], item["evidence"]
+        if (slug not in valid or slug in {t[0] for t in keep} or type(confidence) not in (int, float)
+                or not 0.8 <= confidence <= 1 or not isinstance(quote, str)
+                or not 4 <= len(quote.strip()) <= 300 or quote not in source):
+            raise ValueError("unsupported tag or evidence")
+        keep.append((slug, confidence, quote))
+    return keep
 
 
 def run_grade(con, tasks, limit, dry=False):
     valid = {t["slug"] for t in tasks}
     sysmsg = rubric(tasks)
     os.makedirs(OUTDIR, exist_ok=True)
-    done = {}
-    if os.path.exists(GRADED):
-        try:
-            done = json.load(open(GRADED))
-        except Exception:
-            done = {}
-    todo = [r for r in rows_with_text(con) if r[0] not in done and (r[3] or r[2])]
-    todo = todo[:limit]
-    print(f"grading {len(todo)} capabilities ({len(done)} already graded, resumable)")
-    if dry:
-        cap_id, name, desc, full, body = todo[0]
-        print("\n--- system (first 700 chars) ---\n" + sysmsg[:700])
-        print("\n--- user (first 700 chars) ---\n" + prompt_for(name, desc, full, body)[:700])
-        print(f"\ndry run — nothing called. {len(todo)} would be graded.")
+    target = Path(GRADED)
+    done = json.loads(target.read_text()) if target.exists() else {}
+    manual = set()
+    for f in glob.glob(os.path.join(MANUAL, "*.json")):
+        manual.update(json.loads(Path(f).read_text()))
+    rows = con.execute("""SELECT c.id, c.name, c.description, t.full_description, t.doc_body
+        FROM capabilities c LEFT JOIN capability_text t ON t.cap_id = c.id
+        WHERE c.kind IN ('skill','plugin','npm') AND c.tashan_score IS NOT NULL
+        ORDER BY c.npm_downloads DESC NULLS LAST, c.config_reach DESC NULLS LAST, c.tashan_score DESC, c.id""")
+    todo = buyer_queue.select([r for r in rows if r[0] not in done and r[0] not in manual
+                               and (r[3] or r[2] or r[4])], "tasks", limit)
+    if not dry:
+        for cid, pairs in done.items():
+            if cid not in manual:
+                put_tags(con, cid, pairs, "graded")
+        con.commit()
+    print(f"grading {len(todo)} capabilities ({len(done)} previously reviewed by API)")
+    if dry or not todo or not os.getenv("OPENAI_API_KEY"):
+        if dry and todo:
+            print(prompt_for(*todo[0][1:])[:700])
+        print("Skipping paid task requests: dry run, empty queue or OPENAI_API_KEY unavailable")
         return 0
-    if not API_KEY:
-        # SKIP, NOT FAIL — the same rule grade_expertise.py already follows and the same rule the
-        # CF_* push stages follow. This became a nightly pipeline stage, and returning 1 painted the
-        # whole run red for a credential that is optional by design: `run.py` reports the failure,
-        # the daily workflow gates its commit on a green suite, and one absent key would have stopped
-        # the measurement it has nothing to do with. A missing credential must never take down the
-        # measurement, and must never be silent either.
-        print("SKIPPED — ANTHROPIC_API_KEY is not set, so no capability is task-graded tonight. "
-              "The free --declared pass has already run; task coverage stays where it is, which is "
-              "the axis that makes the job and role pages work.")
-        return 0
-    for i, (cap_id, name, desc, full, body) in enumerate(todo, 1):
-        try:
-            raw = call_api(sysmsg, prompt_for(name, desc, full, body))
-            m = re.search(r"\{.*\}", raw, re.S)
-            got = json.loads(m.group(0)) if m else {"tags": []}
-            keep = [(t["tag"], float(t.get("confidence") or 0), t.get("evidence"))
-                    for t in (got.get("tags") or []) if t.get("tag") in valid][:MAX_TAGS]
+    budget = None
+    accepted = 0
+    try:
+        budget = openai_grading.Session("tasks")
+        for cap_id, name, desc, full, body in todo:
+            prompt = prompt_for(name, desc, full, body)
+            try:
+                keep = parse_tags(budget.grade(sysmsg, prompt, 500), valid, source_text(desc, full, body))
+            except (ValueError, KeyError, TypeError):
+                print(f"  {cap_id}: invalid task grade")
+                continue
             done[cap_id] = keep
             put_tags(con, cap_id, keep, "graded")
-        except Exception as e:
-            print(f"  ! {cap_id}: {type(e).__name__} {e}")
-            continue
-        if i % 25 == 0:
+            accepted += 1
+    except openai_grading.StopGrading as e:
+        openai_grading.report(f"Task grading paused: {e}")
+    finally:
+        if accepted:
             con.commit()
-            json.dump(done, open(GRADED, "w"))
-            print(f"  {i}/{len(todo)}", flush=True)
-    con.commit()
-    json.dump(done, open(GRADED, "w"))
-    print(f"graded {len(todo)}; {sum(1 for v in done.values() if v)} carry at least one tag")
+            temp = target.with_suffix(".tmp")
+            temp.write_text(json.dumps(done) + "\n")
+            temp.replace(target)
+        if budget:
+            budget.close()
+    openai_grading.report(f"Accepted {accepted} task reviews from {len(todo)} queued.")
     return 0
 
 
@@ -422,7 +430,7 @@ def run_eval(con, tasks):
         return 1
     truth = {k: set(v) for k, v in json.load(open(TRUTH)).items() if not k.startswith("_")}
     import glob as _g
-    labelled = set()
+    labelled = set(json.loads(Path(GRADED).read_text())) if Path(GRADED).exists() else set()
     for f in _g.glob(os.path.join(MANUAL, "*.json")):
         labelled |= {k for k in json.load(open(f)) if not k.startswith("_")}
 

@@ -137,7 +137,7 @@ so the rubric is now conjunctive (deep requires all four of per-tool docs, two w
 setup/auth, a stated limitation) with override rules. `pipeline/doc_signals.py` measures whether a
 capability's README is even ABOUT it: 79 of 836 share one byte-for-byte with another capability and
 23 are never named in the only document they have — those cap at `thin`, because a grade must not
-borrow credit from a document describing something else. Grading has two paths: **in-session subagents** (write `scores_*.json`) for hand-curation, or the **automated batch** `grade_expertise.py` (`ANTHROPIC_API_KEY=… python3 pipeline/grade_expertise.py`, same rubric, writes `scores_auto.json`) — the scalable path, since hand-grading only reached ~1% of the corpus. Run `--dry-run` to self-check without a key.
+borrow credit from a document describing something else. Grading has two paths: **in-session subagents** (write `scores_*.json`) for hand-curation, or the **automated batch** `grade_expertise.py` (`python3 pipeline/grade_expertise.py` with `OPENAI_API_KEY` and GitHub write access to the grading ledger, same rubric, writes `scores_auto.json`) — the scalable path, since hand-grading only reached ~1% of the corpus. Run `--dry-run` to self-check without a key.
   **Never grade a README straight from the manifest.** `pipeline/grade_evidence.py --follow <id>…`
   extracts the four conjunctive criteria and prints the line that produced each, and its `--follow`
   is not optional politeness: the manifest holds a **14,000-char prefix**, and 36 of the 57

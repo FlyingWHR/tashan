@@ -17,7 +17,9 @@ each score band so the correlation means something.
     python3 pipeline/fetch_readmes.py --stratified          # PER_BAND=30 across 5 bands
     PER_BAND=50 python3 pipeline/fetch_readmes.py --stratified
 """
-import json, os, sqlite3, sys, urllib.request, urllib.parse
+import json, os, sqlite3, sys, time, urllib.request, urllib.parse
+from pathlib import Path
+import buyer_queue
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, "data", "tashan.db")
@@ -26,7 +28,7 @@ os.makedirs(OUT, exist_ok=True)
 # 24 was a hand-grading batch size, from when a human read every README in the manifest. This is a
 # nightly queue now (pipeline/run.py, stage `readmes`), and the grader takes whatever is staged, so
 # the default is the size of a night's work rather than an afternoon's.
-TOP_N = int(os.environ.get("TOP_N", "120"))
+TOP_N = int(os.environ.get("TOP_N", "36"))
 # 4,000 was too little to grade on and it showed: 735 of 836 staged READMEs hit the cap exactly, and
 # the first pass came back 84% "solid" with zero wrapper and zero slop — implausible for an ecosystem
 # whose rubric has a "slop" band because the filler is real. The evidence that separates thin from
@@ -35,22 +37,21 @@ TOP_N = int(os.environ.get("TOP_N", "120"))
 MAXLEN = 14000
 
 def raw(repo, path):
-    for ref in ("HEAD", "main", "master"):
-        url = f"https://raw.githubusercontent.com/{repo}/{ref}/{path}"
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "tashan"})
-            with urllib.request.urlopen(req, timeout=15) as r:
-                return r.read().decode("utf-8", "ignore")
-        except Exception:
-            continue
-    return None
+    url = f"https://raw.githubusercontent.com/{repo}/HEAD/{path}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "tashan"})
+        with urllib.request.urlopen(req, timeout=4) as r:
+            return r.read(240_000).decode("utf-8", "ignore")
+    except (OSError, ValueError):
+        return None
 
 con = sqlite3.connect(DB)
 SEL = "SELECT id,name,source_repo,npm_pkg,description FROM capabilities"
 # Already-graded rows were not excluded, so a bigger TOP_N re-fetched and re-staged the same top
 # capabilities every run — the queue looked full while coverage stayed at 2.6%.
 WHERE = (" WHERE tashan_score IS NOT NULL AND source_repo IS NOT NULL"
-         " AND expertise_verdict IS NULL")
+         " AND expertise_verdict IS NULL AND grade_withheld IS NULL AND kind != 'skill'"
+         " AND COALESCE(doc_shared_with, 0) = 0 AND COALESCE(doc_names_self, 1) != 0")
 if "--stratified" in sys.argv:
     # Equal draw per band. Skills are excluded: every skill in a monorepo carries the SAME repo
     # signal, so they cluster on one score and would swamp whichever band they land in.
@@ -75,12 +76,16 @@ else:
     # queue was busy grading things further down the board. Score answers "is this good"; the queue
     # has to answer "will someone look this up". Same fix as the scan and task queues already carry.
     rows = con.execute(SEL + WHERE + " ORDER BY npm_downloads DESC NULLS LAST, adoption DESC NULLS LAST,"
-                       " tashan_score DESC LIMIT ?", (TOP_N,)).fetchall()
+                       " tashan_score DESC, id").fetchall()
+    rows = buyer_queue.select(rows, "expertise", TOP_N)
 man = []
+deadline = time.monotonic() + 80 if "--stratified" not in sys.argv else float("inf")
 for cid, name, repo, pkg, desc in rows:
     # try common README locations
     txt = None
     for p in ("README.md", "readme.md", "Readme.md", "docs/README.md"):
+        if time.monotonic() >= deadline:
+            break
         txt = raw(repo, p)
         if txt:
             break
@@ -88,7 +93,11 @@ for cid, name, repo, pkg, desc in rows:
         print(f"  no README: {cid} ({repo})")
         continue
     man.append({"id": cid, "name": name, "repo": repo, "npm_pkg": pkg,
-                "description": desc, "readme": txt[:MAXLEN]})
+                "description": desc, "readme": txt[:MAXLEN], "readme_path": p})
     print(f"  ok {cid}  ({len(txt)} chars)")
-json.dump(man, open(os.path.join(OUT, "manifest.json"), "w"), indent=2)
+if man:
+    target = Path(OUT) / "manifest.json"
+    temp = target.with_suffix(".tmp")
+    temp.write_text(json.dumps(man, indent=2))
+    temp.replace(target)
 print(f"\n{len(man)} READMEs -> {OUT}/manifest.json")

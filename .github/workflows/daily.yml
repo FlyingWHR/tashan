@@ -93,7 +93,7 @@ jobs:
           # The two coverage axes an agent notices missing — expertise grade and task mapping — both
           # need this and neither ran in the loop. Without it both stages skip loudly and coverage
           # simply stops advancing, which is how 18 of the top 20 by downloads ended up ungraded.
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         # SAME LESSON AS THE SUITE GATE BELOW, ONE LEVEL UP, AND IT TOOK FOUR LOST DAYS TO SEE.
         # A crash in any stage failed the job, so the commit step never ran and the day was gone —
         # and five source stages run before the snapshot, every one of them doing network I/O

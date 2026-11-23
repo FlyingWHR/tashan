@@ -127,6 +127,7 @@ python3 tests/test_links.py || fail=1
 # 3c0. a published grade must not contradict itself (four shipped that did)
 echo; echo "── expertise grades (self-consistency) ────────"
 python3 tests/test_expertise.py || fail=1
+python3 tests/test_openai_grading.py || fail=1
 
 # 3c1. four of the first 39 icons rendered as nothing, with no error anywhere
 echo; echo "── icons (visible at ship size) ───────────────"

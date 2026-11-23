@@ -227,8 +227,8 @@ export async function onRequestPost({ request, env }) {
     return json({ error: "measurement data unavailable", detail: String(e) }, 502);
   }
 
-  const ids = (tags.tasks || {})[task];
-  if (!ids || !ids.length) {
+  const ids = Object.hasOwn(tags.tasks || {}, task) ? tags.tasks[task] : null;
+  if (!Array.isArray(ids) || !ids.length) {
     return json({ task, measured: false,
                   error: "no capabilities mapped to that task yet",
                   tasks: origin + "/data/tags.json" }, 404);
@@ -238,14 +238,11 @@ export async function onRequestPost({ request, env }) {
   // Shipping a kit that installs a package with a live advisory would make the whole artifact
   // worthless, and it is the one mistake an agent cannot check for us.
   const rows = ids.map((i) => byId.get(i)).filter(Boolean);
-  const safe = rows.filter((r) => !r.sec_advisory_count && !r.npm_deprecated && !r.gh_archived
-                                  && r.registry_status !== "deleted");
+  const safe = rows.filter(safeForKit);
   const excluded = rows.filter((r) => !safe.includes(r) && risksOf(r).length)
     .slice(0, 10)
     .map((r) => ({ id: r.id, name: r.name, why_not: risksOf(r) }));
-  const picks = safe
-    .sort((a, b) => (b.tashan_score || 0) - (a.tashan_score || 0))
-    .slice(0, limit);
+  const { picks, pins } = selectKit(safe, limit);
 
   const free = {
     task,
@@ -268,7 +265,7 @@ export async function onRequestPost({ request, env }) {
     // NAMED, NOT HIDDEN. What we left out and why is the most useful half of a recommendation, and
     // it is a risk, so it is free.
     excluded,
-    counts: { mapped: rows.length, eligible: safe.length, returned: picks.length },
+    counts: { mapped: rows.length, eligible: safe.length, returned: picks.length, verified_installs: pins.length },
     generated_at: lookup.generated_at,
     scorer: lookup.scorer,
     method: origin + "/methodology.html",
@@ -279,12 +276,6 @@ export async function onRequestPost({ request, env }) {
         + "a score, a rank or a listing.",
   };
 
-  // This proof belongs to the scan. npm enrichment may have observed a newer release since.
-  const pins = picks.filter(r => r.npm_pkg && r.npm_runnable === 1 && r.sec_scanned_version
-    && r.sec_scanned_version === r.npm_latest_version && r.sec_advisory_count === 0
-    && Number.isFinite(Date.parse(r.sec_scanned_at))
-    && Date.parse(r.sec_scanned_at) <= Date.now()
-    && Date.now() - Date.parse(r.sec_scanned_at) <= 7 * 86400000);
   const assemble = async () => {
     const c = CLIENTS[client];
     const servers = Object.create(null);
@@ -334,6 +325,7 @@ export async function onRequestPost({ request, env }) {
   };
 
   if (pins.length === 0) {
+    if (body.kit) demand(env, request, "kit-unavailable", PRICE_KEY, "", task);
     return json({ ...free, kit_available: false,
       reason: "No selected npm executable has a current, advisory-free scan for its exact version. No payment is required." },
       body.kit ? 422 : 200);
@@ -342,6 +334,8 @@ export async function onRequestPost({ request, env }) {
     return json({
       ...free,
       kit_available: {
+        verified_installs: pins.length,
+        selection: "Rank by score and reserve one place for a verified executable when available.",
         how: 're-send with {"kit": true}',
         buys: "Versions pinned to the release the advisory scan actually cleared, a ready-to-paste "
             + "config for your host, and the remote alternatives where they exist.",
@@ -358,19 +352,21 @@ export async function onRequestPost({ request, env }) {
   if (key) {
     const v = await validate(env, key, activationFrom(request));
     if (!v.ok) return json({ error: v.why, docs: "https://tashan.sh/pricing" }, v.status || 403);
-    return json(await assemble());
+    const kit = await assemble();
+    demand(env, request, "licensed", PRICE_KEY, "", task);
+    return json(kit);
   }
 
   const pr = paymentRequired(env, PRICE_KEY, origin + "/v0.1/kit",
                              "payment required to assemble the kit");
   const payment = paymentFrom(request);
   if (pr && payment) {
-    const out = await charge(env, pr, payment, assemble, request);
+    const out = await charge(env, pr, payment, assemble, request, task);
     if (!out.ok) return json({ ...pr, error: "payment " + out.reason }, 402, requiredHeader(pr));
     return json(out.result, 200, responseHeader(out.settlement));
   }
 
-  demand(env, request, "quoted", "capability-kit");
+  demand(env, request, "quoted", PRICE_KEY, "", task);
   return json({
     ...(pr || {}),
     error: "payment required to assemble the kit",
@@ -383,3 +379,28 @@ export async function onRequestPost({ request, env }) {
 
 // A probe that cannot HEAD this endpoint reports us down. See _head.js.
 export const onRequestHead = headOf(onRequestGet);
+
+// Keep the ranked alternatives and reserve one place for a usable install when one exists.
+export function safeForKit(r) {
+  return !r.sec_advisory_count && !r.npm_deprecated && !r.gh_archived && r.registry_status !== "deleted";
+}
+
+export function selectKit(safe, limit, now = Date.now()) {
+  const ranked = [...safe].sort((a, b) => (b.tashan_score || 0) - (a.tashan_score || 0));
+  const currentPin = r => {
+    const age = now - Date.parse(r.sec_scanned_at);
+    return r.npm_pkg && r.npm_runnable === 1 && r.sec_scanned_version
+      && r.sec_scanned_version === r.npm_latest_version && r.sec_advisory_count === 0
+      && age >= 0 && age <= 7 * 86400000;
+  };
+  const picks = ranked.slice(0, limit);
+  const pins = picks.filter(currentPin);
+  if (!pins.length) {
+    const installable = ranked.slice(limit).find(currentPin);
+    if (installable) {
+      picks[picks.length - 1] = installable;
+      pins.push(installable);
+    }
+  }
+  return { picks, pins };
+}

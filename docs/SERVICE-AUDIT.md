@@ -23,7 +23,7 @@ The September production snapshot contained 13,313 HTML files. A static inventor
 
 The npm package supports local inventory and stdio MCP. HTTP consumers can call the service directly. Demand for other services on the payments page measures receipts at observed addresses. Tashan’s own paid-call conversions are recorded separately in the nightly funnel.
 
-The repository has no `ANTHROPIC_API_KEY` Actions secret. Author-declared task mapping continues automatically. Model-assisted task and expertise grading require a funded credential.
+The original audit found both model-assisted grading stages skipped for lack of a credential. They now share a $10 monthly OpenAI allowance. Author-declared task mapping continues independently.
 
 ## Production recovery
 
@@ -34,3 +34,5 @@ A second inventory checked all 13,424 HTML files in the published snapshot and 5
 At the default shortlist size, 53 of 68 mapped tasks had at least one qualifying package. The production database-access shortlist returned HTTP 200 and its paid request returned an x402 quote. The risk-assessment shortlist reported its kit unavailable and its paid request returned HTTP 422 without a quote. Both served the new snapshot. The published `tashan-cli@0.2.1` completed the MCP handshake, listed all four tools and returned a live package dossier.
 
 The seven-day funnel ending with this run recorded 2,274 pageviews, 14 Polar checkout handoffs, 35 machine quotes and zero tracked x402 attempts or settlements. The payment probes passed 25 checks. The independent comparison against the facilitator's supported terms was unverified, and the probes did not spend funds.
+
+On the same snapshot, reserving one shortlist position for a verified executable raised kit availability to 56 of 68 mapped tasks. Risk assessment, incident response and software architecture had qualifying packages below the old cutoff. Twelve mapped jobs still had no verified install and fourteen had only one. One further taxonomy job had no published mapping. The full index pipeline took 41m04s, the pre-publication suite 37s and the Cloudflare deploy step 25s in run `45092602053`. The grading allowance, expected cost and review queues are documented in [the operating notes](DO-THIS-NEXT.md#0c--nightly-openai-grading).

@@ -1,8 +1,8 @@
 # Do this next — the things only you can do
 
-*Rewritten 15 Aug 2026. Everything doable from a keyboard has been done. What is left needs an
-identity, a dashboard, or money in an account. The history below §1 is kept for its reasoning; this
-header is the current state and supersedes any summary further down.*
+**23 November 2026.** The OpenAI key is configured in GitHub Actions. The API returned `credit_balance_exhausted`. The subscription owner can claim the included API credits in ChatGPT Settings → Billing and select the organization that owns this key. An eligible $200 Pro subscription grants $200 per full billing period once linked. The first grant is prorated. [OpenAI credit eligibility and activation](https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions)
+
+The November audit covers the live service, payment verification and the published `tashan-cli@0.2.1`. The August notes below are historical. [Service audit](SERVICE-AUDIT.md)
 
 ## ✅ The payment path is working. Nothing on it is waiting for you.
 
@@ -148,14 +148,10 @@ second time this has been measured and rejected; the reasoning is written into
 attributable: 14 synonyms added to the taxonomy for author keywords that mapped to nothing
 (`scraper`, `crawl`, `screenshot`, `deploy`, `text to speech`), covering 87 keyword occurrences.
 
-**The only measured way to close the rest is `--grade`, which needs `ANTHROPIC_API_KEY`.** That is a
-cost decision, not an engineering gap. Sonnet, ~60 capabilities a run, one call each.
+The funded `--grade` pass now uses OpenAI with a shared $10 monthly allowance for both queues.
 
 ## Deliberately not done, with the reasoning written down
 
-- **`ANTHROPIC_API_KEY` for batch grading** — on hold until there is a paying user; grading runs
-  in-session at no API cost. 2,889 capabilities graded that way. See the section above for what the
-  hold actually costs now that it has been measured rather than assumed.
 - **A verdict word for skills** — `docs/GRADING-RUBRIC.md` has the measurement: the server rubric
   lands skills at 2.7% `deep` against servers' 16–20%, because a skill has no tools. A validated
   replacement criterion exists (16.8%). What ships instead is facts, not a grade, because a new
@@ -214,33 +210,23 @@ Two traps this hit on the way, both now fixed in the workflow rather than in a p
 
 ---
 
-## 0c · Add `ANTHROPIC_API_KEY` — grading has never once run in the loop
+## 0c · Nightly OpenAI grading
 
-`gh secret list` shows only `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`. The daily workflow
-passes `ANTHROPIC_API_KEY` to two stages and neither has ever had it, so both skip every night:
+GitHub Actions supplies `OPENAI_API_KEY` to the two grading stages. Each receives half of the day's share of $10 per UTC calendar month. The private key stays in Actions secrets. Budget reservations and aggregate usage live on the `codex/grading-budget` branch. A run reserves funds before calling OpenAI and returns unused funds when it finishes. An interrupted run can consume that queue's allowance for the day. The next UTC day has its own allocation. Local live runs need `gh` write access to the same ledger. Both graders support `--dry-run` without credentials. The application cap covers these two graders at the pinned model's published prices.
 
-- `grade_expertise.py` — instruction depth, the grade shown on every dossier and hub
-- `tag_capabilities.py --grade` — the job/role mapping that `/browse`, `/task/*` and `/role/*` rank on
+| Nightly work | Maximum reviews | Sample mean input tokens | Assumed output tokens | 30-day model cost |
+|---|---:|---:|---:|---:|
+| Documentation for a shortlisted package | 24 | 4,608 | 150 | $0.80 |
+| Task fit for a measured capability | 60 | 2,248 | 100 | $1.03 |
+| **Total** | **84** | | | **$1.83** |
 
-Coverage is **858 of 9,643 scored capabilities (8.9%)**, and essentially all of it was graded by
-hand. That is the weakest part of the *free* product, and the free product is what does the
-acquisition — an agent asking "which of these is documented well enough to use" gets `null` nine
-times in ten.
+The estimate uses 60 staged documentation prompts and 150 task prompts, the `o200k_base` tokenizer, standard uncached GPT-5.4 nano input at $0.20 and output at $1.25 per million tokens. Actual throughput depends on available evidence, response time and credits. The Actions summary reports accepted reviews, metered cost and unresolved reservations. The cost excludes hosting, payments and other users of the API key. [OpenAI model pricing](https://developers.openai.com/api/docs/models/gpt-5.4-nano)
 
-The grader was also reading only the first 14,000 characters of every document until 8 Aug, which
-biased it against exactly the thorough READMEs that earn the top band; it now reads the full file
-plus the in-repo docs a README links to. So this is worth switching on now rather than before.
+Four of every five review slots go to the buying queue while both queues have eligible work. Documentation follows the paid shortlist; task mapping starts with verified, runnable packages without a published job. Within shortlist work, the last 30 days of settled and licensed kits, signed attempts, unavailable kit requests and task-specific quotes set the order. The number of verified alternatives breaks ties. The fifth slot keeps measuring the wider index. Empty slots go to the other queue.
 
-**Do** — GitHub → Settings → Secrets and variables → Actions → **New repository secret**
+At the November 23 snapshot this identified 77 shortlisted pins missing a documentation grade and 594 ranked installable packages with no published task. At the planned allocation these represent roughly four to five and thirteen funded nights respectively if all were eligible, before deferrals, prior empty reviews and new arrivals. Real quotes and sales are the basis for revisiting the budget. At $0.05 per kit, 37 sales cover the modeled monthly OpenAI usage in gross receipts. The $10 ceiling would take 200.
 
-| field | value |
-|---|---|
-| Name | `ANTHROPIC_API_KEY` |
-| Secret | a key from console.anthropic.com |
-
-Cost is small and bounded: Sonnet, ~60 capabilities a run, one call each. Verify on the next daily
-run — the log currently prints `SKIPPED — ANTHROPIC_API_KEY is not set`; it should instead start
-printing grades. `python3 pipeline/grade_expertise.py --dry-run` checks the prompt path with no key.
+The index updates daily at 06:17 UTC. Document staging has 100 seconds and each grader has 210 seconds. Together they can add at most 8 minutes 40 seconds to a normal run, apart from process startup and teardown. Security scans also refresh when the observed npm version changes. The customer pays only for a kit containing an executable with an exact-version, advisory-free scan from the preceding seven days.
 
 ---
 
@@ -422,5 +408,5 @@ python3 tests/test_outreach_numbers.py
   620 more capabilities before a deploy is *refused*, not degraded. It has been hit once already.
   `docs/SCALE.md` has the move (prerendered pages behind an SSR Function); the suite now fails at
   19,000 so it cannot surprise a deploy.
-- **Expertise and task coverage.** 29% and 36% on the top 1,000 — the honest weak spot. Both need
-  `ANTHROPIC_API_KEY` as a repo secret; the nightly stages are wired and skip loudly without it.
+- **Expertise and task coverage.** 29% and 36% on the top 1,000 — the honest weak spot. Both use
+  the nightly OpenAI grading allowance.
