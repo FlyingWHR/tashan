@@ -1,11 +1,13 @@
-# tashan
+# Tashan
 
-**The intelligence layer for AI capabilities.** *Measure what actually works.*
+Tashan publishes evidence about MCP servers and agent skills. Search the index, check a package before installing, or compare observed x402 payments on Base. The measurements carry their dates and sources.
 
-Not another directory — an instrument that scores capabilities on **public evidence**
-(not stars, not listings, not opinions). V2 tracks the **whole MCP field** (official registry)
-and ranks it by a transparent **Trust** score — maintenance + freshness, gated by real
-adoption. Roadmap: retention/churn, expertise eval, security, controlled evals, cost.
+```sh
+curl 'https://tashan.sh/v0.1/lookup?name=tavily-mcp'
+curl 'https://tashan.sh/v0.1/search?q=database&limit=3'
+```
+
+The [OpenAPI contract](https://tashan.sh/openapi.json) describes free queries and paid operations. Request the current HTTP 402 quote before authorizing payment. HTTP clients need no npm package. `npx tashan-cli` inspects a local stack, and `npx -y tashan-cli mcp` connects it to a stdio MCP host. The CLI ships under [MIT](cli/LICENSE). Published measurements carry [CC BY 4.0](https://tashan.sh/terms).
 
 ## ETHOnline 2026 — what is pre-existing and what was built in the window
 

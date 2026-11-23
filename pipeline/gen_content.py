@@ -260,7 +260,7 @@ def x402_article(caps):
     rows = "".join(
         "<tr><td><code>" + esc(c.get("npm_pkg") or c["id"]) + "</code></td>"
         "<td class=\"mono\">" + (f"{c['npm_downloads']:,}" if c.get("npm_downloads") else "&mdash;") + "</td>"
-        "<td>" + esc((c.get("description") or "")[:90]) + "</td>"
+        '<td data-source="publisher">' + esc((c.get("description") or "")[:90]) + "</td>"
         "<td>" + ('<a class="link" href="/capability/' + esc(c["slug"]) + '.html">measured</a>'
                   if c.get("slug") else "&mdash;") + "</td></tr>"
         for c in x[:15])
@@ -305,8 +305,8 @@ def x402_article(caps):
                   "Prefer packages with build provenance — published from CI, not a laptop.",
                   "Treat the payment claim as the author's, until you have tested it yourself."],
         "faq": [("Does tashan take agent payments?",
-                 "The endpoints are built and quote a price in every 402; settlement is not enabled "
-                 "yet, and until it is we quote no payment option we cannot verify."),
+                 "Request a paid operation to get its current HTTP 402 quote. When settlement is available, "
+                 "the response includes the accepted network, asset and amount. Lookups are free."),
                 ("Is this list current?",
                  "It is recounted from npm descriptions every night, and the page does not render "
                  "at all below 25 — a table of six would be noise dressed as a trend.")],

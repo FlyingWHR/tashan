@@ -35,3 +35,8 @@ tools/node_modules/
 # session that took them, not for the repo.
 .playwright-mcp/
 _submission/
+
+# Temporary R2 transfers, including an interrupted upload.
+data/tashan.db.*
+data/skills_cache.json.*
+data/.db_store_stamp.*

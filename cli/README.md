@@ -10,6 +10,8 @@ npx tashan-cli info context7   # should I install this? The verdict first, then 
 npx tashan-cli search database # find capabilities, ranked on public evidence
 ```
 
+Use `GET https://tashan.sh/v0.1/lookup?name=tavily-mcp` for a single remote check. The HTTP API needs no installation. The npm package adds local config inventory and a stdio MCP server.
+
 ## What `tashan` (doctor) tells you
 
 - **What needs attention.** Anything deprecated, archived, abandoned, removed from the registry,

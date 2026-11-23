@@ -53,29 +53,61 @@
           "name": {
            "type": "string"
           },
-          "label": {
-           "type": "string"
+          "generated_at": {
+           "type": [
+            "string",
+            "null"
+           ],
+           "format": "date-time"
+          },
+          "measured": {
+           "type": "boolean"
+          },
+          "url": {
+           "type": [
+            "string",
+            "null"
+           ],
+           "format": "uri"
+          },
+          "markdown": {
+           "type": [
+            "string",
+            "null"
+           ],
+           "format": "uri"
           },
           "tashan_score": {
-           "type": "integer",
+           "type": [
+            "integer",
+            "null"
+           ],
            "minimum": 0,
            "maximum": 100,
            "description": "Absent when unmeasured. Never 0 to mean unknown."
           },
           "vitality": {
-           "type": "string",
+           "type": [
+            "string",
+            "null"
+           ],
            "enum": [
             "active",
             "stable",
-            "abandoned"
+            "abandoned",
+            null
            ]
           },
           "expertise": {
-           "type": "string",
+           "type": [
+            "string",
+            "null"
+           ],
            "enum": [
             "deep",
             "solid",
-            "thin"
+            "thin",
+            null
            ]
           },
           "evidence": {
@@ -109,6 +141,8 @@
       "in": "query",
       "schema": {
        "type": "integer",
+       "minimum": 1,
+       "maximum": 50,
        "default": 10
       }
      }
@@ -133,29 +167,61 @@
              "name": {
               "type": "string"
              },
-             "label": {
-              "type": "string"
+             "generated_at": {
+              "type": [
+               "string",
+               "null"
+              ],
+              "format": "date-time"
+             },
+             "measured": {
+              "type": "boolean"
+             },
+             "url": {
+              "type": [
+               "string",
+               "null"
+              ],
+              "format": "uri"
+             },
+             "markdown": {
+              "type": [
+               "string",
+               "null"
+              ],
+              "format": "uri"
              },
              "tashan_score": {
-              "type": "integer",
+              "type": [
+               "integer",
+               "null"
+              ],
               "minimum": 0,
               "maximum": 100,
               "description": "Absent when unmeasured. Never 0 to mean unknown."
              },
              "vitality": {
-              "type": "string",
+              "type": [
+               "string",
+               "null"
+              ],
               "enum": [
                "active",
                "stable",
-               "abandoned"
+               "abandoned",
+               null
               ]
              },
              "expertise": {
-              "type": "string",
+              "type": [
+               "string",
+               "null"
+              ],
               "enum": [
                "deep",
                "solid",
-               "thin"
+               "thin",
+               null
               ]
              },
              "evidence": {
@@ -222,10 +288,24 @@
       "application/json": {
        "schema": {
         "type": "object",
-        "required": [
-         "task"
+        "anyOf": [
+         {
+          "required": [
+           "task"
+          ]
+         },
+         {
+          "required": [
+           "goal"
+          ]
+         }
         ],
         "properties": {
+         "goal": {
+          "type": "string",
+          "minLength": 1,
+          "example": "I need to scrape websites"
+         },
          "task": {
           "type": "string",
           "example": "web-scraping"
@@ -234,17 +314,17 @@
           "type": "string",
           "enum": [
            "claude-code",
-           "claude",
+           "claude-desktop",
            "cursor",
-           "desktop",
-           "codex",
-           "npx"
+           "vscode",
+           "windsurf"
           ]
          },
          "limit": {
           "type": "integer",
           "default": 5,
-          "maximum": 10
+          "minimum": 1,
+          "maximum": 8
          },
          "kit": {
           "type": "boolean",
@@ -354,12 +434,39 @@
       "application/json": {
        "schema": {
         "type": "object",
-        "required": [
-         "servers"
+        "anyOf": [
+         {
+          "required": [
+           "servers"
+          ]
+         },
+         {
+          "required": [
+           "history",
+           "count"
+          ],
+          "properties": {
+           "history": {
+            "const": true
+           }
+          },
+          "not": {
+           "required": [
+            "servers"
+           ]
+          }
+         }
         ],
         "properties": {
+         "count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Quote history without transmitting package names."
+         },
          "servers": {
           "type": "array",
+          "minItems": 1,
+          "description": "The first 200 names are audited.",
           "items": {
            "type": "string"
           },

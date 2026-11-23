@@ -59,7 +59,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -196,6 +196,7 @@ jobs:
       # runs the whole pipeline and simply skips this step instead of failing red for a reason that
       # has nothing to do with the measurement.
       - name: Deploy to Cloudflare Pages
+        id: deploy
         if: steps.verify.outcome == 'success' && steps.pipeline.outcome == 'success' && env.CLOUDFLARE_API_TOKEN != ''
         run: |
           # Pages refuses any deployment over 20,000 files. Check BEFORE uploading: the failure
@@ -208,7 +209,9 @@ jobs:
             echo "::error::Badges are already served by functions/badge; the next lever is pages per capability."
             exit 1
           fi
-          npx wrangler@3 pages deploy web --project-name tashan --commit-dirty=true
+          npx wrangler@3 pages deploy web --project-name tashan --branch main --commit-dirty=true
+          # Prove the custom domain is serving this measurement before resolving the incident.
+          python3 pipeline/check_publication.py
 
       # THE CACHE IS THE ONLY COPY NOW. data/tashan.db is no longer in git, so a push that fails
       # every night means the object silently stops advancing and every run starts from an older
@@ -221,7 +224,7 @@ jobs:
       # sitemap nightly is both throttled and untrue. Never fatal — this is distribution, and the
       # job's real work is measurement.
       - name: Tell IndexNow what changed
-        if: steps.verify.outcome == 'success' && steps.pipeline.outcome == 'success'
+        if: steps.deploy.outcome == 'success'
         continue-on-error: true
         run: python3 pipeline/indexnow.py
 
@@ -279,7 +282,7 @@ jobs:
       # than duplicated, the comment count is the number of nights the site has been frozen, which
       # is the one number that makes the cost obvious.
       - name: Raise an issue when publication is frozen
-        if: always() && (steps.verify.outcome != 'success' || steps.pipeline.outcome != 'success')
+        if: always() && steps.deploy.outcome != 'success'
         env:
           GH_TOKEN: ${{ github.token }}
         continue-on-error: true      # never let the alarm itself become the failure
@@ -291,6 +294,7 @@ jobs:
             "" \
             "- pipeline: \`${{ steps.pipeline.outcome }}\`" \
             "- suite:    \`${{ steps.verify.outcome }}\`" \
+            "- deploy:   \`${{ steps.deploy.outcome }}\`" \
             "- run:      ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
             "" \
             "Each comment below is one more night frozen. Close this issue once a run publishes.")
@@ -307,7 +311,7 @@ jobs:
       # And close it the moment a run publishes again, so an open issue always means "frozen right
       # now" rather than "was broken once". An alarm that stays on after the fire is out gets muted.
       - name: Clear the alarm once publishing resumes
-        if: steps.verify.outcome == 'success' && steps.pipeline.outcome == 'success'
+        if: always() && steps.deploy.outcome == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
         continue-on-error: true

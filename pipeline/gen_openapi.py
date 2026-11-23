@@ -21,7 +21,7 @@ that answer 402 with their terms in the body. The licence-gated /api/* endpoints
 they need an account, and an agent discovering us through a gateway has none. Publishing them would
 advertise a door that answers 401 to every reader of this document.
 """
-import argparse, json, os, sys
+import argparse, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://tashan.sh"
@@ -39,30 +39,32 @@ def facts():
             pass
     # The prices live in the Functions that charge them; reading the source keeps the document and
     # the paywall from drifting the way the pricing page and the code once did.
-    for key, rel, needle in (("kit_usd", "kit.js", "kit"), ("audit_usd", "audit.js", "history")):
-        f = os.path.join(ROOT, "functions", "v0.1", rel)
-        if not os.path.exists(f):
-            continue
-        src = open(f, encoding="utf-8").read()
-        import re
-        m = re.search(r'PRICE\s*=\s*["\']?\$?([0-9.]+)', src) or re.search(r'"?price"?\s*:\s*["\']?\$?([0-9.]+)', src)
-        if m:
-            out[key] = m.group(1)
+    with open(os.path.join(ROOT, "functions", "api", "_x402.js"), encoding="utf-8") as source:
+        prices = source.read()
+    for key, resource in (("kit_usd", "capability-kit"), ("audit_usd", "config-audit")):
+        match = re.search(r'"' + resource + r'":\s*\{.*?\busd:\s*([0-9.]+),', prices, re.S)
+        if not match:
+            raise ValueError(f"Missing public price for {resource}")
+        out[key] = match[1]
     return out
 
 
 def spec():
     f = facts()
     n = f"{f['measured']:,}" if f["measured"] else "every measured"
-    kit = f["kit_usd"] or "0.05"
-    aud = f["audit_usd"] or "0.01"
+    kit = f["kit_usd"]
+    aud = f["audit_usd"]
     cap = {"type": "object", "properties": {
         "id": {"type": "string", "example": "pkg:tavily-mcp"},
-        "name": {"type": "string"}, "label": {"type": "string"},
-        "tashan_score": {"type": "integer", "minimum": 0, "maximum": 100,
+        "name": {"type": "string"},
+        "generated_at": {"type": ["string", "null"], "format": "date-time"},
+        "measured": {"type": "boolean"},
+        "url": {"type": ["string", "null"], "format": "uri"},
+        "markdown": {"type": ["string", "null"], "format": "uri"},
+        "tashan_score": {"type": ["integer", "null"], "minimum": 0, "maximum": 100,
                          "description": "Absent when unmeasured. Never 0 to mean unknown."},
-        "vitality": {"type": "string", "enum": ["active", "stable", "abandoned"]},
-        "expertise": {"type": "string", "enum": ["deep", "solid", "thin"]},
+        "vitality": {"type": ["string", "null"], "enum": ["active", "stable", "abandoned", None]},
+        "expertise": {"type": ["string", "null"], "enum": ["deep", "solid", "thin", None]},
         "evidence": {"type": "string", "example": "32,517 npm downloads/week"},
     }}
     return {
@@ -110,7 +112,7 @@ def spec():
                 "parameters": [
                     {"name": "q", "in": "query", "required": True, "schema": {"type": "string"},
                      "example": "postgres"},
-                    {"name": "limit", "in": "query", "schema": {"type": "integer", "default": 10}}],
+                    {"name": "limit", "in": "query", "schema": {"type": "integer", "minimum": 1, "maximum": 50, "default": 10}}],
                 "responses": {"200": {"description": "Ranked matches", "content": {
                     "application/json": {"schema": {"type": "object", "properties": {
                         "results": {"type": "array", "items": cap}}}}}}}}},
@@ -140,11 +142,12 @@ def spec():
                     "advisory scan cleared, and a ready-to-paste config for your host. An unpinned "
                     "config is an unverified one; the verification is the product.",
                 "requestBody": {"required": True, "content": {"application/json": {"schema": {
-                    "type": "object", "required": ["task"], "properties": {
+                    "type": "object", "anyOf": [{"required": ["task"]}, {"required": ["goal"]}], "properties": {
+                        "goal": {"type": "string", "minLength": 1, "example": "I need to scrape websites"},
                         "task": {"type": "string", "example": "web-scraping"},
                         "client": {"type": "string",
-                                   "enum": ["claude-code", "claude", "cursor", "desktop", "codex", "npx"]},
-                        "limit": {"type": "integer", "default": 5, "maximum": 10},
+                                   "enum": ["claude-code", "claude-desktop", "cursor", "vscode", "windsurf"]},
+                        "limit": {"type": "integer", "default": 5, "minimum": 1, "maximum": 8},
                         "kit": {"type": "boolean", "default": False,
                                 "description": f"Assemble it. Paid: ${kit} per call."}}}}}},
                 "responses": {
@@ -202,8 +205,10 @@ def spec():
                     "its direction of travel. Direction is the one thing a static index cannot "
                     "tell you.",
                 "requestBody": {"required": True, "content": {"application/json": {"schema": {
-                    "type": "object", "required": ["servers"], "properties": {
-                        "servers": {"type": "array", "items": {"type": "string"},
+                    "type": "object", "anyOf": [{"required": ["servers"]}, {"required": ["history", "count"],
+                        "properties": {"history": {"const": True}}, "not": {"required": ["servers"]}}], "properties": {
+                        "count": {"type": "integer", "minimum": 1, "description": "Quote history without transmitting package names."},
+                        "servers": {"type": "array", "minItems": 1, "description": "The first 200 names are audited.", "items": {"type": "string"},
                                     "example": ["tavily-mcp", "firecrawl-mcp"]},
                         "history": {"type": "boolean", "default": False,
                                     "description": f"Add the series. Paid: ${aud} per call."}}}}}},

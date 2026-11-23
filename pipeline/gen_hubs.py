@@ -689,8 +689,11 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
          "public evidence — npm downloads and publish cadence, GitHub activity, registry status, and how "
          "often a server appears in real public agent configs. Nobody can pay to change a score, rank, or "
          "listing; payment buys depth and tooling only.", "",
-         "Generated: " + (gen or "")[:10] + ". Capabilities tracked: " + str(len(caps)) +
-         " ranked. Every number below links to the public source it came from.", "",
+         "Measurement date: " + (gen or "unknown")[:10] + ". Published dossiers: " + str(len(caps)) + ".", "",
+         "## Connect", "",
+         "- [API contract](https://tashan.sh/openapi.json): request schemas, free routes and paid operations.",
+         "- [Lookup example](https://tashan.sh/v0.1/lookup?name=tavily-mcp): a dated result for one package.",
+         "- [Local MCP and CLI](https://tashan.sh/start): run `npx -y tashan-cli mcp` for stdio.", "",
          # THE MARKDOWN CONVENTION, ANNOUNCED. Every capability has a plain-markdown twin at
          # <page>.md — no JS, no chrome, the same facts. They were generated and then mentioned
          # nowhere: not the sitemap, not a link, not here. An answer engine cannot use a convention
@@ -714,12 +717,7 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
          "answer in a few hundred bytes:", "",
          "    GET /v0.1/lookup?name=<package>     one measurement, or measured:false if we have none",
          "    GET /v0.1/search?q=<query>&limit=10 ranked matches, exact name first", "",
-         "Send a User-Agent that identifies your client. Cloudflare refuses the literal string",
-         "`Python-urllib` across its entire network — not a setting of ours, and it affects every",
-         "site behind Cloudflare — so `urllib.request.urlopen(url)` with its default header gets a",
-         "403 here and everywhere else. `requests`, curl, node-fetch and Go are all fine, as is",
-         "urllib with one line:", "",
-         "    r = urllib.request.Request(url, headers={\"User-Agent\": \"your-tool/1.0\"})", "",
+         "Use an identifying User-Agent such as `my-agent/1.0` when making HTTP requests.", "",
          "Each response carries the score, what the score is NOT, the licence terms for quoting it,",
          "and a link to both the HTML page and its markdown twin. `measured:false` answers 200, not",
          "404 — we have no evidence for that package, which is not a finding about the package.", "",

@@ -21,11 +21,11 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Geist-Variable.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/GeistMono-Variable.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/site.css?v=306">
+  <link rel="stylesheet" href="/css/site.css?v=307">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Audit and choose AI capabilities with tashan","description":"Check the MCP servers and agent skills already installed on your machine, then find and install measured replacements.","step":[{"@type":"HowToStep","position":1,"name":"Audit what you already have","text":"Run npx tashan-cli doctor. It reads your local agent config and reports what is deprecated, archived, abandoned, or shares a name with an official package. Nothing is uploaded."},{"@type":"HowToStep","position":2,"name":"Find something better","text":"Run npx tashan-cli search <query>, or browse the Index by category. Results are ranked by a tashan score derived from public evidence."},{"@type":"HowToStep","position":3,"name":"Install it","text":"Run npx tashan-cli add <name> to get the exact install command for your client — Claude Code, Cursor, Claude Desktop, Codex or plain npx."}]}</script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span><span class="brand__wm">tashan</span></a><div class="nav__links"><a href="/">Find skills</a><a href="/browse.html">Jobs</a><a href="/audit.html">Check my setup</a><a href="/pricing.html">Pricing</a><a class="nav__acct" id="navAcct" href="/account.html" title="Your account" aria-label="Your account"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span class="nav__pro mono" id="navPro" hidden>Pro</span></a></div></div></nav>
+  <a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav__in"><a class="brand" href="/"><span class="brand__mark"></span><span class="brand__wm">tashan</span></a><div class="nav__links"><a href="/">Index</a><a href="/paid.html">Payments</a><a href="/for-hosts.html">Agent API</a><a href="/pricing.html">Pricing</a><a class="nav__acct" id="navAcct" href="/account.html" title="Your account" aria-label="Your account"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span class="nav__pro mono" id="navPro" hidden>Pro</span></a></div></div></nav>
 
   <main class="wrap wrap--doc" id="main">
     <header class="phead">
@@ -61,21 +61,7 @@
       <p class="capsec__sub">Exit code is <code>2</code> when something needs attention, so it drops into CI:
         <code>npx tashan-cli doctor || echo "stack needs a look"</code>. Add <code>--json</code> to pipe it.</p>
 
-      <div class="callout use-note"><b>We measure this package the same way.</b> Being asked to
-        <code>npx</code> an unfamiliar package in order to find risky packages is a fair thing to be
-        suspicious about. So <code>tashan-cli</code> is in the Index like anything else, scanned by
-        the same scanner, scored by the same rules, including the parts that do not flatter us.
-        Today: <b>no install script</b>. <b>Zero dependencies</b>, so nothing is pulled in behind it.
-        <b>One maintainer</b>, which our own scorer counts against it. <b>No build provenance</b>,
-        which puts us in the same majority we point at for exactly that.
-        <b>That last one is not fixed, and the reason is worth stating.</b> npm generates a
-        provenance attestation from a public source repository; ours is private, so publishing from
-        CI signs the release but cannot attest it. Publishing runs from a workflow
-        (<code>.github/workflows/publish-cli.yml</code>) with no long-lived token, and that workflow
-        fails the release if it ever claims an attestation it did not get. That is how we found this.
-        Making the CLI attestable means publishing it from a public repository: a decision we have
-        not taken, not a task we have finished.
-        Read the dossier: <a href="/capability.html?id=pkg%3Atashan-cli">tashan-cli &rsaquo;</a></div>
+      <div class="callout use-note"><b>Check the release before installing.</b> The CLI has zero runtime dependencies. Its public source repository and npm package let you verify the release and its provenance. <a href="https://www.npmjs.com/package/tashan-cli">Inspect the published package</a> or <a href="/capability.html?id=pkg%3Atashan-cli">read its measurements</a>.</div>
     </section>
 
     <section class="capsec use-step">
@@ -136,9 +122,9 @@ npx tashan-cli info context7</code></pre>
       <a class="btn btn--ghost ml-3" href="/methodology.html">How we measure &rsaquo;</a></p>
   </main>
 
-  <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The trusted directory for your AI's toolbox.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col"><p class="footer__h">Explore</p><a href="/">The Index</a><a href="/browse.html">Browse</a><a href="/compare.html">Compare</a><a href="/audit.html">Check my setup</a><a href="/start.html">Use it</a><a href="/learn/">Learn</a><a href="/for-hosts.html">For hosts</a><a href="/changes.html">What changed</a><a href="/stats.html">The numbers</a><a href="/paid.html">Who gets paid</a></nav><nav class="footer__col"><p class="footer__h">How it works</p><a href="/methodology.html">Methodology</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/requests.html">Requests</a></nav><nav class="footer__col"><p class="footer__h">Your account</p><a href="/account.html">Account</a><a href="/support.html">Support</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav><nav class="footer__col"><p class="footer__h">Legal</p><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></nav><nav class="footer__col"><p class="footer__h">Sources</p><a href="https://registry.modelcontextprotocol.io/" rel="noopener">MCP registry ↗</a><a href="https://www.npmjs.com/" rel="noopener">npm ↗</a><a href="https://github.com/" rel="noopener">GitHub ↗</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>Measured from public sources. Every tool, on the record.</span></div></footer>
+  <footer class="footer"><div class="wrap footer__in"><div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span><p class="footer__tag">The trusted directory for your AI's toolbox.</p><p class="footer__meta" id="footMethod"></p></div><nav class="footer__col" aria-label="Explore"><p class="footer__h">Explore</p><a href="/browse.html">Jobs & categories</a><a href="/compare.html">Compare tools</a><a href="/changes.html">What changed</a><a href="/stats.html">Coverage</a><a href="/learn/">Guides</a></nav><nav class="footer__col" aria-label="Use the data"><p class="footer__h">Use the data</p><a href="/audit.html">Check my setup</a><a href="/start.html">CLI & MCP</a><a href="/openapi.json">OpenAPI</a><a href="/llms.txt">Agent guide</a></nav><nav class="footer__col" aria-label="About"><p class="footer__h">About</p><a href="/methodology.html">Methodology</a><a href="/about.html">About Tashan</a><a href="/requests.html">Request a grade</a><a href="/support.html">Support</a></nav><nav class="footer__col" aria-label="Terms"><p class="footer__h">Terms</p><a href="/terms.html">Service terms</a><a href="/privacy.html">Privacy</a><a href="/refunds.html">Cancel & refunds</a><a href="mailto:hello@tashan.sh">hello@tashan.sh</a></nav></div><div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span><span>他山之石，可以攻玉</span></div></footer>
 
-  <script src="/js/terminal.js?v=306" defer></script>
-  <script src="/js/site.js?v=306" defer></script>
+  <script src="/js/terminal.js?v=307" defer></script>
+  <script src="/js/site.js?v=307" defer></script>
 </body>
 </html>

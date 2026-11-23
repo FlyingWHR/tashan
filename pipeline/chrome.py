@@ -41,14 +41,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # asserts every nav destination exists on disk — correctly, since a nav link to a 404 is worse than
 # no link at all. Add the item when the index page exists.
 NAV = [
-    ("/", "Find skills"),
-    ("/browse.html", "Jobs"),
-    # "Check my setup" REPLACED "Doctor" (/start.html), which named our furniture: a page about
-    # installing our CLI. /audit.html does the same job in the browser with nothing to install, and
-    # it was the only page on the site where a visitor could DO anything rather than read about it.
-    # /start.html keeps its footer slot for people who want the CLI.
-    ("/audit.html", "Check my setup"),
-    ("/pricing.html", "Pricing"),
+    ("/", "Index"), ("/paid.html", "Payments"),
+    ("/for-hosts.html", "Agent API"), ("/pricing.html", "Pricing"),
 ]
 
 # The account is not a sixth thing to read. It sits apart, as a glyph, in the corner — the position
@@ -56,38 +50,16 @@ NAV = [
 ACCOUNT = ("/account.html", "Your account")
 
 FOOTER = [
-    ("Explore", [("/", "The Index"), ("/browse.html", "Browse"), ("/compare.html", "Compare"),
-                 ("/audit.html", "Check my setup"),
-                 ("/start.html", "Use it"), ("/learn/", "Learn"), ("/for-hosts.html", "For hosts"),
-                 ("/changes.html", "What changed"), ("/stats.html", "The numbers"),
-                 # The money signal needs a door. A page nothing links to is a page nobody reads,
-                 # and this one carries the only evidence here that is not a proxy for demand.
-                 ("/paid.html", "Who gets paid")]),
-    ("How it works", [("/methodology.html", "Methodology"), ("/about.html", "About"),
-                      ("/pricing.html", "Pricing"), ("/requests.html", "Requests")]),
-    # CONTACT IN THE FOOTER, NOT ONLY BEHIND /support. hello@tashan.sh was on seven pages and
-    # reachable from none of the other 9,700 — a reader on a capability page who wanted to correct
-    # a grade or ask what a finding meant had no address in front of them. For an instrument that
-    # publishes judgments about other people's work, being contactable is not a nicety.
-    ("Your account", [("/account.html", "Account"), ("/support.html", "Support"),
-                      ("/refunds.html", "Cancel & refunds"),
-                      ("mailto:hello@tashan.sh", "hello@tashan.sh")]),
-    ("Legal", [("/terms.html", "Terms"), ("/privacy.html", "Privacy")]),
-    ("Sources", [("https://registry.modelcontextprotocol.io/", "MCP registry ↗"),
-                 ("https://www.npmjs.com/", "npm ↗"), ("https://github.com/", "GitHub ↗")]),
+    ("Explore", [("/browse.html", "Jobs & categories"), ("/compare.html", "Compare tools"),
+                 ("/changes.html", "What changed"), ("/stats.html", "Coverage"), ("/learn/", "Guides")]),
+    ("Use the data", [("/audit.html", "Check my setup"), ("/start.html", "CLI & MCP"),
+                      ("/openapi.json", "OpenAPI"), ("/llms.txt", "Agent guide")]),
+    ("About", [("/methodology.html", "Methodology"), ("/about.html", "About Tashan"),
+               ("/requests.html", "Request a grade"), ("/support.html", "Support")]),
+    ("Terms", [("/terms.html", "Service terms"), ("/privacy.html", "Privacy"),
+               ("/refunds.html", "Cancel & refunds"), ("mailto:hello@tashan.sh", "hello@tashan.sh")]),
 ]
 
-# THE TOOLBOX IS THEIRS; THE CHECKING IS OURS. "The measured layer for AI capabilities" named our
-# method and our schema — two engineering nouns and a process — which is what the reader least needs
-# from a tagline. A tool is what MCP's own spec calls these things AND what someone's mother would
-# call them, which almost never happens; "your AI's toolbox" keeps ownership with the reader, since
-# we host nothing and supply nothing. `capability` stays where it belongs: the database, the export
-# fields, /v0.1 and the CLI's JSON.
-#
-# AND IT DOES NOT EXPLAIN ITSELF. The second clause — "tools and skills, with the evidence behind
-# every score" — was the tagline apologising for the first clause. A positioning line that has to
-# gloss its own nouns is not finished; the evidence claim is made eleven times elsewhere on every
-# page, by showing the evidence.
 TAGLINE = "The trusted directory for your AI's toolbox."
 
 
@@ -203,7 +175,7 @@ def footer_html():
         a = "".join(
             f'<a href="{h}"{" rel=\"noopener\"" if h.startswith("http") else ""}>{l}</a>'
             for h, l in links)
-        cols += f'<nav class="footer__col"><p class="footer__h">{heading}</p>{a}</nav>'
+        cols += f'<nav class="footer__col" aria-label="{heading}"><p class="footer__h">{heading}</p>{a}</nav>'
     return ('<footer class="footer"><div class="wrap footer__in">'
             '<div class="footer__brand"><span class="brand"><span class="brand__mark"></span>tashan</span>'
             f'<p class="footer__tag">{TAGLINE}</p>'
@@ -213,7 +185,7 @@ def footer_html():
             # THE SIGN-OFF. Hermes closes on "THE INTERNET'S OWN AI" — four words that claim a
             # position and explain nothing. The old line here spent eleven words defending our
             # method in the one slot on the page where nobody is arguing with us.
-            "<span>Measured from public sources. Every tool, on the record.</span></div></footer>")
+            "<span>他山之石，可以攻玉</span></div></footer>")
 
 
 NAV_RE = re.compile(r"(?:<a class=\"skip\"[^>]*>.*?</a>)?<nav class=\"nav\">.*?</nav>", re.S)
@@ -320,21 +292,17 @@ def pro_panel(lede, key, extra=(), pid=None):
     measurement. `data-state="free"` is what site.js::proPaid() swaps so an active subscriber is
     never sold a trial.
     """
-    bullets = list(extra) + [
-        "The whole series behind any row, back to the first day we measured it",
-        "The replacement, named &mdash; not just the news that something died",
-        "<code>tashan doctor</code> over your own config, on your own machine",
-    ]
+    bullets = list(extra)
     return (
         '<section class="pro"' + (' id="' + pid + '"' if pid else '') + ' data-state="free">'
         '<div class="pro__hd"><span class="pro__tag mono">tashan Pro</span>'
         '<span class="pro__price mono">' + PRO_PRICE[0]
         + '<span class="pro__per">' + PRO_PRICE[1] + '</span></span></div>'
         '<p class="pro__lede">' + lede + '</p>'
-        '<ul class="pro__list">' + "".join("<li>" + b + "</li>" for b in bullets[:3]) + '</ul>'
+        + ('<ul class="pro__list">' + "".join("<li>" + b + "</li>" for b in bullets[:3]) + '</ul>' if bullets else "") +
         '<p class="pro__cta"><a class="btn btn--primary" href="/pricing.html" '
         'data-e="cta" data-k="' + key + '">Start a 7-day trial &rsaquo;</a>'
-        '<span class="pro__free mono"> Everything measured on this page stays free.</span></p>'
+        '</p>'
         '</section>')
 
 

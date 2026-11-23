@@ -31,7 +31,7 @@ state, by construction), a full registry re-walk instead of an incremental one, 
 of `capability_text`. Each of those is a bad night, not a lost record. That is exactly why the
 series is sharded as text and the cache is not.
 """
-import json, gzip
+import json, gzip, hashlib, tempfile
 import shutil
 import os, re, subprocess, sqlite3, sys
 import time
@@ -108,6 +108,89 @@ def _run(args):
     return out
 
 
+PART_BYTES = 128 * 1024 * 1024
+
+
+def _put(key, path, mime):
+    return _run(["r2", "object", "put", f"{BUCKET}/{key}", "--file", path,
+                 "--content-type", mime])
+
+
+def _get(key, path):
+    return _run(["r2", "object", "get", f"{BUCKET}/{key}", "--file", path])
+
+
+def _store_gzip(key, path, backup=None):
+    """Publish completed parts before the pointer. Legacy single objects still read directly."""
+    with tempfile.TemporaryDirectory() as tmp:
+        stored, mime = path, "application/gzip"
+        if os.path.getsize(path) > PART_BYTES:
+            # Two weeks of slots protect the previous weekday backup during replacement.
+            # Alternate banks on same-day retries too, so a failed write cannot corrupt today's cache.
+            day = datetime.now(timezone.utc).date().toordinal() % 14
+            pointer = os.path.join(tmp, "pointer")
+            bank = 0
+            current = _get(key, pointer)
+            if current.returncode == 0:
+                with open(pointer, "rb") as f:
+                    if f.read(1) == b"{":
+                        f.seek(0)
+                        previous = json.load(f)
+                        if previous["slot"] == day:
+                            bank = 1 - previous["bank"]
+            elif not _missing(current):
+                return current
+            parts = []
+            piece = os.path.join(tmp, "part")
+            with open(path, "rb") as f:
+                while chunk := f.read(PART_BYTES):
+                    with open(piece, "wb") as out:
+                        out.write(chunk)
+                    part = f"{key}.parts/{day}/{bank}/{len(parts)}"
+                    r = _put(part, piece, "application/octet-stream")
+                    if r.returncode:
+                        return r
+                    parts.append(hashlib.sha256(chunk).hexdigest())
+            with open(pointer, "w") as out:
+                json.dump({"format": 1, "key": key, "slot": day, "bank": bank, "parts": parts}, out)
+            stored, mime = pointer, "application/json"
+        result = _put(key, stored, mime)
+        if backup and result.returncode == 0:
+            result = _put(backup, stored, mime)
+        return result
+
+
+def _missing(result):
+    reason = _reason(result).lower()
+    return any(v in reason for v in ("does not exist", "not found", "10007", "10022"))
+
+
+def _fetch_gzip(key, path):
+    result = _get(key, path)
+    if result.returncode:
+        return result
+    with open(path, "rb") as src:
+        if src.read(1) != b"{":
+            return result
+        src.seek(0)
+        manifest = json.load(src)
+    if manifest.get("format") != 1 or not manifest.get("parts"):
+        raise ValueError(f"invalid cache manifest for {key}")
+    with tempfile.TemporaryDirectory() as tmp, open(path, "wb") as out:
+        piece = os.path.join(tmp, "part")
+        for i, digest in enumerate(manifest["parts"]):
+            part = f"{manifest['key']}.parts/{manifest['slot']}/{manifest['bank']}/{i}"
+            result = _get(part, piece)
+            if result.returncode:
+                raise OSError(f"missing cache part {i} for {key}: {_reason(result)}")
+            with open(piece, "rb") as f:
+                chunk = f.read()
+            if hashlib.sha256(chunk).hexdigest() != digest:
+                raise ValueError(f"cache checksum mismatch for {part}")
+            out.write(chunk)
+    return result
+
+
 def usable(path=DB):
     """Is this file actually a readable SQLite database with our data in it?
 
@@ -173,7 +256,7 @@ def pull():
     # an older revision still restores. The fallback can be deleted once a gzipped object exists.
     gz = tmp + ".gz"
     used = GZKEY
-    r = _run(["r2", "object", "get", f"{BUCKET}/{GZKEY}", "--file", gz])
+    r = _fetch_gzip(GZKEY, gz)
     if r.returncode == 0 and os.path.exists(gz) and os.path.getsize(gz) > 0:
         try:
             with gzip.open(gz, "rb") as fin, open(tmp, "wb") as fout:
@@ -201,7 +284,7 @@ def pull():
     # costs a slow re-fetch of README text and nothing else. The cursors, the scores and the change
     # history all travelled in the core object that has already landed.
     tgz = DB + ".text.gz"
-    rt = _run(["r2", "object", "get", f"{BUCKET}/{TEXTKEY}", "--file", tgz])
+    rt = _fetch_gzip(TEXTKEY, tgz)
     if rt.returncode == 0 and os.path.exists(tgz) and os.path.getsize(tgz) > 0:
         tpath = DB + ".text"
         try:
@@ -235,7 +318,7 @@ def _pull_aux():
     for rel, key in AUX:
         dest = _aux_paths(rel)
         gz = dest + ".gz"
-        r = _run(["r2", "object", "get", f"{BUCKET}/{key}", "--file", gz])
+        r = _fetch_gzip(key, gz)
         if r.returncode != 0 or not os.path.exists(gz) or os.path.getsize(gz) == 0:
             print(f"  db_store: no {key} in R2 — {rel} will rebuild as it goes")
             if os.path.exists(gz):
@@ -263,8 +346,7 @@ def _push_aux():
         gz = src + ".gz"
         with open(src, "rb") as fin, gzip.open(gz, "wb", compresslevel=6) as fout:
             shutil.copyfileobj(fin, fout, 1024 * 1024)
-        r = _run(["r2", "object", "put", f"{BUCKET}/{key}", "--file", gz,
-                  "--content-type", "application/gzip"])
+        r = _store_gzip(key, gz)
         size = os.path.getsize(gz) / 1048576
         os.remove(gz)
         # NOT fatal. The database is the state that must survive; this is a speed cache, and losing
@@ -372,24 +454,11 @@ def push():
     mib = os.path.getsize(blob) / 1048576
     print(f"  db_store: {raw_mib:.1f} MiB -> core {os.path.getsize(core) / 1048576:.1f} MiB "
           f"-> {mib:.1f} MiB gzipped, text cache split out")
-    if mib > 290:
-        print("  db_store: REFUSING to push — even split and compressed this is near wrangler's "
-              "300 MiB ceiling. The next thing to lift out is cap_state, or move to the S3 API.")
-        for p_ in (blob, core, text):
-            if p_ and os.path.exists(p_):
-                os.remove(p_)
+    backup = f"backup/{datetime.now(timezone.utc).strftime('%a').lower()}.db.gz"
+    result = _store_gzip(GZKEY, blob, backup)
+    if result.returncode:
+        print(f"  db_store: failed to store database or backup: {_reason(result)}")
         return 1
-    for key in (GZKEY, f"backup/{datetime.now(timezone.utc).strftime('%a').lower()}.db.gz"):
-        r = _run(["r2", "object", "put", f"{BUCKET}/{key}", "--file", blob,
-                  "--content-type", "application/gzip"])
-        if r.returncode != 0:
-            if key != GZKEY:
-                print(f"  db_store: pushed the live object; the dated copy failed ({_reason(r)})")
-                return 0                       # the working copy landed; a missing backup is not fatal
-            print("  db_store: PUSH FAILED — the next run will start from a stale cache")
-            print("           " + _reason(r))
-            return 1
-        print(f"  db_store: pushed {mib:.1f} MiB to r2://{BUCKET}/{key}")
     os.remove(blob)
     os.remove(core)
     # The text cache, as its own object. NOT fatal — same posture as the aux caches: losing it costs
@@ -400,8 +469,7 @@ def push():
         with open(text, "rb") as fin, gzip.open(tgz, "wb", compresslevel=6) as fout:
             shutil.copyfileobj(fin, fout, 1024 * 1024)
         tmib = os.path.getsize(tgz) / 1048576
-        r = _run(["r2", "object", "put", f"{BUCKET}/{TEXTKEY}", "--file", tgz,
-                  "--content-type", "application/gzip"])
+        r = _store_gzip(TEXTKEY, tgz)
         print(f"  db_store: {'pushed' if r.returncode == 0 else 'FAILED to push'} {tmib:.1f} MiB "
               f"{TEXTKEY}" + ("" if r.returncode == 0 else f" ({_reason(r)}) — it will re-fetch"))
         os.remove(tgz)
@@ -467,8 +535,35 @@ def _selftest_split():
 
 
 def _selftest():
+    from unittest.mock import patch
+    from pathlib import Path
+    with tempfile.TemporaryDirectory() as d:
+        objects = {}
+        def put(key, path, mime):
+            objects[key] = Path(path).read_bytes()
+            return subprocess.CompletedProcess([], 0)
+        def get(key, path):
+            if key not in objects:
+                return subprocess.CompletedProcess([], 1, stderr="not found")
+            Path(path).write_bytes(objects[key])
+            return subprocess.CompletedProcess([], 0)
+        src, restored = os.path.join(d, "source"), os.path.join(d, "restored")
+        with patch(__name__ + "._put", put), patch(__name__ + "._get", get), patch(__name__ + ".PART_BYTES", 8):
+            for value in (b"old", b"first large snapshot", b"second large snapshot"):
+                Path(src).write_bytes(value)
+                assert _store_gzip("core", src, "backup").returncode == 0
+                assert _fetch_gzip("backup", restored).returncode == 0
+                assert Path(restored).read_bytes() == value
+            current = json.loads(objects["core"])
+            objects[f"core.parts/{current['slot']}/{current['bank']}/0"] = b"damaged"
+            try:
+                _fetch_gzip("core", restored)
+            except ValueError:
+                pass
+            else:
+                raise AssertionError("a corrupted cache part must not be accepted")
+    print("  ok — legacy and chunked R2 caches round trip, backups resolve, and corruption is detected")
     _selftest_split()
-    import tempfile
     with tempfile.TemporaryDirectory() as d:
         good, empty, junk = (os.path.join(d, n) for n in ("g.db", "e.db", "j.db"))
         con = sqlite3.connect(good)

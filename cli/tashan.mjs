@@ -27,7 +27,7 @@ import { scan, loadLedger, saveLedger, reconcile, usage, usageOf } from "./inven
 // SYMLINK, so a path derived from how the process was invoked points somewhere else entirely.
 // See [[npm-bin-is-a-symlink]]. Falls back rather than throwing: a missing package.json must not
 // take down every command in the CLI just because one of them wanted to print a number.
-const VERSION = (() => {
+export const VERSION = (() => {
   try { return JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf8")).version; }
   catch { return "unknown"; }
 })();

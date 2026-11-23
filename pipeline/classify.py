@@ -238,28 +238,21 @@ DECLARED = {
 
 def declared_labels():
     """Extra training rows from plugin manifests, keyed by the same id ingest_plugins.py writes."""
-    import re as _re
+    from ingest_plugins import parse, plugin_id
     path = os.path.join(ROOT, "data", "plugins_cache.json")
     if not os.path.exists(path):
         return {}
-    try:
-        cache = json.load(open(path))
-    except Exception:
-        return {}
-    out = {}
-    for k, v in cache.items():
-        if not k.startswith("man:"):
-            continue
-        repo = k[4:]
-        try:
-            m = json.loads(v)
-        except Exception:
-            continue
-        for pl in (m.get("plugins") or []):
-            cat = DECLARED.get((pl.get("category") or "").strip().lower())
-            if cat and pl.get("name"):
-                cid = "plugin:" + repo.lower() + "/" + _re.sub(r"[^a-z0-9]+", "-", str(pl["name"]).lower()).strip("-")
-                out[cid] = cat
+    with open(path, encoding="utf-8") as source:
+        cache = json.load(source)
+    labels = collections.defaultdict(set)
+    for key, manifest in cache.items():
+        if key.startswith("man:"):
+            for plugin in parse(manifest, key[4:]):
+                category = DECLARED.get(plugin["category"])
+                if category:
+                    labels[plugin_id(plugin)].add(category)
+    # Two marketplaces may disagree about a plugin. Neither is a reliable training label.
+    out = {cid: next(iter(values)) for cid, values in labels.items() if len(values) == 1}
 
     # CAP PER CLASS. These are the plugin AUTHOR'S OWN category, and authors overwhelmingly write
     # "development" or "productivity": declared labels alone sit at 69.4% top-2 concentration against

@@ -709,40 +709,8 @@ dl.stat { display:grid; gap: var(--sp-6); grid-template-columns: repeat(auto-fit
 
 /* ============ terminal frame: ticker · status line · command palette ============ */
 body { padding-bottom: 30px; }
-/* top ticker */
-.ticker { overflow:hidden; border-bottom:1px solid var(--hairline); background:#0b0b0e;
-  font-family: var(--font-mono); font-size:var(--fs-xs); white-space:nowrap; position:relative; }
-.ticker::after { content:""; position:absolute; inset:0 0 0 auto; width:64px; pointer-events:none;
-  background: linear-gradient(90deg, transparent, #0b0b0e); }
-.ticker__track { display:inline-block; padding-block:5px; animation: tick 80s linear infinite; }
-.ticker:hover .ticker__track { animation-play-state: paused; }
-@keyframes tick { from{ transform:translateX(0) } to{ transform:translateX(-50%) } }
-.tk-lead { color: var(--jade); margin:0 1.4rem 0 1rem; letter-spacing:.08em; }
-.tk { color: var(--text-dim); } .tk-n { color: var(--text); } .tk-t { color: var(--jade); }
-.tk-sep { color: var(--text-faint); margin:0 1rem; }
-.tk-v { text-transform:uppercase; font-size:var(--fs-micro); letter-spacing:.05em; margin-left:.15rem; }
-.tk-v--deep{color:var(--green)} .tk-v--solid{color:var(--jade)} .tk-v--thin{color:var(--text-faint)}
-/* bottom status line (tmux-style) */
-.statusline { position:fixed; left:0; right:0; bottom:0; z-index:60; height:30px;
-  display:flex; align-items:center; gap: var(--sp-6); padding:0 var(--sp-6);
-  background:#0b0b0e; border-top:1px solid var(--hairline); font-family: var(--font-mono);
-  font-size:var(--fs-xs); color: var(--text-faint); overflow:hidden; }
-.statusline b { color: var(--text-dim); font-weight:600; }
-.sl-a { color: var(--jade); font-weight:600; letter-spacing:.02em; }
-.sl-i { white-space:nowrap; } .sl-sp { flex:1; } .sl-k { color: var(--text-dim); } .sl-dim { color: var(--text-faint); }
 kbd { font-family: var(--font-mono); border:1px solid var(--hairline); border-bottom-width:2px;
   border-radius:4px; padding:0 .35em; color: var(--text-dim); font-size:var(--fs-micro); }
-@media (max-width:720px){ .sl-i:nth-child(n+4), .sl-dim { display:none; } }
-/* The ⌘K hint survived the 720px rule and overflowed the fixed status bar on phones — where it is also
-   pointless, since there is no keyboard shortcut to press. Measured at 390px before removing. */
-@media (max-width:560px){ .sl-k { display:none; } .statusline { font-size:var(--fs-xs); } }
-/* THE TICKER IS DESKTOP FURNITURE. At 390px the ticker, nav and fixed status strip take 137px —
-   16% of the screen — before a single measured row, and the ticker is the one of the three that
-   does no work there: it scrolls past at a fixed speed, cannot be paused without a hover, and
-   every name in it is one tap away in the board underneath. Removed rather than shrunk; a smaller
-   version of something not worth reading is still not worth reading. `body`'s bottom padding is
-   for the fixed statusline and stays. */
-@media (max-width:560px){ .ticker { display:none; } }
 /* command palette */
 .pal { position:fixed; inset:0; z-index:100; background: rgba(6,6,8,.72);
   backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
@@ -1451,3 +1419,15 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .aud__act { display:flex; align-items:center; gap: var(--sp-4); flex-wrap:wrap; margin-top: var(--sp-3); }
 .aud__ex { font-size: var(--fs-sm); color: var(--text-faint); }
 .aud__ex:hover { color: var(--jade-bright); }
+
+/* Keep primary actions and evidence readable on small screens. */
+.hero__cmd a { display: inline-block; padding-block: .55rem; }
+.snip { max-width: 100%; overflow-x: auto; }
+@media (max-width: 40rem) {
+  .section--figures .stat { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero__in .herosearch { text-align: left; }
+}
+
+.tablewrap { max-width: 100%; overflow-x: auto; }
+.prose .callout, .prose p { overflow-wrap: anywhere; }
+.hero__cmd a { color: var(--text-dim); }

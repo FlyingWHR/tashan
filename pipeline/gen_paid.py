@@ -189,7 +189,7 @@ def render(demand, export, today):
         "isAccessibleForFree": True,
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "creator": {"@type": "Organization", "name": "tashan", "url": BASE},
-        "dateModified": today,
+        **({"dateModified": today} if today else {}),
         "measurementTechnique": BASE + "/methodology.html",
         "variableMeasured": [
             {"@type": "PropertyValue", "name": "Settled volume (USD, all time)", "value": total},
@@ -205,6 +205,7 @@ def render(demand, export, today):
         '<h1 class="h1">Which AI services have actually been paid.</h1>',
         '<p class="lede">' + esc(lede) + "</p>",
         '<p class="lede">' + esc(finding) + "</p>",
+        '<p class="mnote">' + ("Chain read " + esc(today) if today else "Chain read date unavailable for this archived snapshot") + "</p>",
         '<p class="mono fs-sm o-70">Read from a subgraph on The Graph Network, through The '
         'Graph’s Subgraph MCP server. The call is printed below — re-run it yourself. '
         'Free, CC BY 4.0.</p>',
@@ -309,7 +310,7 @@ def main():
         return 0
     demand = json.load(open(DEMAND, encoding="utf-8"))
     export = json.load(open(EXPORT, encoding="utf-8")) if os.path.exists(EXPORT) else {}
-    today = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")
+    today = (demand.get("measured_at") or "")[:10]
     rows = rows_from(demand, export)
     lds, body, lede = render(demand, export, today)
 

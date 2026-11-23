@@ -3,10 +3,8 @@
 Everything the Hacker Dashboard form asks for, written out. Nothing here needs editing to be
 submitted; trim if a field has a shorter limit than expected.
 
-**One caveat before pasting:** the figures below were true at 03:00 on 13 September and are
-recomputed nightly. `/paid.html` always carries the current ones. If you are submitting much later,
-open the page and copy the four headline numbers across — quoting a stale figure is the single
-thing this project cannot afford to be caught doing.
+**Historical snapshot, 13 September 2026.** The figures below describe the submission window.
+The current measurements are published on `/paid.html` and the index.
 
 **Track:** Continuity (Extend Open Source / Ship a Feature) — *not* Classic "From Scratch".
 tashan predates the event, the pre-existing work is documented at the top of `README.md`, and the

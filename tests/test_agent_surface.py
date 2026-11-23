@@ -288,7 +288,7 @@ if os.path.exists(sj):
     check("the manifest version matches the published CLI version",
           m.get("version") == cli.get("version") == pkg.get("version"),
           f"manifest {m.get('version')} / package {pkg.get('version')} / cli {cli.get('version')}")
-    args = [a.get("value") for a in (pkg.get("runtimeArguments") or [])]
+    args = [a.get("value") for a in (pkg.get("packageArguments") or [])]
     plug = json.load(open(os.path.join(ROOT, "plugin", ".claude-plugin", "plugin.json"), encoding="utf-8"))
     want = ((plug.get("mcpServers") or {}).get("tashan") or {}).get("args") or []
     # The plugin and the registry entry are two published ways to start the same server. If they

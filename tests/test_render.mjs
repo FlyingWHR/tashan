@@ -117,9 +117,9 @@ console.log(`ok — render() ran clean on ${checked} sampled pages `
 // trial" to somebody already paying $6/mo. Run the real paint() against a real panel, both states.
 {
   const SITEJS = fs.readFileSync(path.join(ROOT, "web/js/site.js"), "utf8");
-  const home = fs.readFileSync(path.join(ROOT, "web/index.html"), "utf8");
-  const m = home.match(/<section class="pro"[\s\S]*?<\/section>/);
-  assert.ok(m, "web/index.html no longer carries a .pro panel — the homepage CTA regressed");
+  const auditPage = fs.readFileSync(path.join(ROOT, "web/audit.html"), "utf8");
+  const m = auditPage.match(/<section class="pro"[\s\S]*?<\/section>/);
+  assert.ok(m, "Missing result-based Pro offer on the audit page");
 
   const run = (account) => {
     let html = m[0];

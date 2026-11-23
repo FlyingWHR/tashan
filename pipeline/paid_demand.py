@@ -448,6 +448,7 @@ def main():
         "source": (f"subgraph {X402_SUBGRAPH} via subgraphs.mcp.thegraph.com" if via == "subgraph-mcp"
                    else ENDPOINT or SSE_NOTE),
         "via": via,
+        "measured_at": datetime.now(timezone.utc).isoformat() if via else None,
         "paid_measured": bool(via),
         "economy": economy,
         "receivers_indexed": len(addr_hosts),

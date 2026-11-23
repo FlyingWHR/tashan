@@ -84,14 +84,23 @@ def restore(con, out_dir=OUT):
     """
     if not os.path.isdir(out_dir):
         return 0
-    have = {(r[0], r[1], r[2]) for r in
-            con.execute("SELECT cap_id, metric, at FROM signal_history")}
-    missing = [r for r in load(out_dir) if (r[0], r[1], r[3]) not in have]
-    if missing:
-        con.executemany("INSERT INTO signal_history (cap_id, metric, value, at, scorer) "
-                        "VALUES (?,?,?,?,?)", missing)
-        con.commit()
-    return len(missing)
+    restored = 0
+    # The corpus has millions of observations. Bound memory to one day for old and new caches.
+    for filename in sorted(os.listdir(out_dir)):
+        if not filename.endswith(".csv.gz"):
+            continue
+        day = filename[:-7]
+        have = set(con.execute("SELECT cap_id, metric, at FROM signal_history WHERE at >= ? AND at < ?",
+                               (day, day + "~")))
+        with gzip.open(os.path.join(out_dir, filename), "rt") as source:
+            missing = [(r["cap_id"], r["metric"], float(r["value"]), r["at"], r["scorer"])
+                       for r in csv.DictReader(source) if (r["cap_id"], r["metric"], r["at"]) not in have]
+        if missing:
+            with con:
+                con.executemany("INSERT INTO signal_history (cap_id, metric, value, at, scorer) "
+                                "VALUES (?,?,?,?,?)", missing)
+            restored += len(missing)
+    return restored
 
 
 def main():

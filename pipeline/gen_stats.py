@@ -259,7 +259,8 @@ def main():
     p = os.path.join(ROOT, "web", "data", "coverage.json")
     if os.path.exists(p):
         cov = json.load(open(p, encoding="utf-8"))
-    today = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")
+    with open(os.path.join(ROOT, "web", "data", "index.json"), encoding="utf-8") as src:
+        today = json.load(src)["generated_at"][:10]
     lds, body, lede = render(n, cov, today)
 
     import gen_hubs

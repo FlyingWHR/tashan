@@ -36,6 +36,8 @@ def ok(name, cond, detail=""):
 def text(pg):
     h = open(os.path.join(WEB, pg), encoding="utf-8").read()
     h = re.sub(r"<(script|style)[\s\S]*?</\1>", " ", h)
+    # Quoted third-party product descriptions are evidence, not Tashan entitlements.
+    h = re.sub(r'<td data-source="publisher">.*?</td>', ' ', h, flags=re.S)
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", h)).lower()
 
 

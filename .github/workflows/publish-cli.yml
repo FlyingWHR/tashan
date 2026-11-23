@@ -159,21 +159,25 @@ jobs:
       # where it is achievable — if this repository is ever made public, its absence becomes a real
       # regression and this fails again.
       - name: verify the publish landed
+        id: verify
         if: ${{ !inputs.dry_run }}
         env:
           IS_PRIVATE: ${{ github.event.repository.private }}
         run: |
-          sleep 15
           node --input-type=module -e "
             import { readFileSync } from 'node:fs';
+            import { setTimeout as delay } from 'node:timers/promises';
             const v = JSON.parse(readFileSync('./cli/package.json', 'utf8')).version;
-            const d = await fetch('https://registry.npmjs.org/tashan-cli').then(r => r.json());
-            if (!d.versions?.[v]) {
-              console.error('tashan-cli@' + v + ' is NOT on npm — the publish did not land.');
-              process.exit(1);
+            let manifest;
+            for (let i = 0; i < 12; i++) {
+              const r = await fetch('https://registry.npmjs.org/tashan-cli/' + v, { cache: 'no-store' });
+              if (r.ok) manifest = await r.json();
+              if (manifest?.version === v && (manifest.dist?.attestations || process.env.IS_PRIVATE === 'true')) break;
+              await delay(10000);
             }
-            console.log('tashan-cli@' + v + ' is live; latest =', d['dist-tags']?.latest);
-            const att = !!d.versions?.[v]?.dist?.attestations;
+            if (manifest?.version !== v) throw new Error('Registry has not confirmed tashan-cli@' + v);
+            console.log('Confirmed tashan-cli@' + v);
+            const att = !!manifest.dist?.attestations;
             console.log('tashan-cli@' + v + ' attestations:', att);
             if (att || process.env.IS_PRIVATE === 'true') {
               if (!att) console.log('no provenance: npm builds attestations from a PUBLIC source');
@@ -201,10 +205,12 @@ jobs:
               echo "To publish for real: **Run workflow** → **uncheck \`DRY RUN\`** → Run workflow."
             } >> "$GITHUB_STEP_SUMMARY"
             echo "::warning::DRY RUN — nothing was published. Re-run with dry_run unchecked."
-          else
+          elif [ "${{ steps.verify.outcome }}" = success ]; then
             {
               echo "## ✅ Published \`tashan-cli@$V\`"
               echo ""
               echo "Verify: \`npx tashan-cli@latest --version\`"
             } >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "## Release unconfirmed. Inspect the publish and registry checks before retrying." >> "$GITHUB_STEP_SUMMARY"
           fi

@@ -22,43 +22,40 @@
 
 import { realpathSync } from "node:fs";
 import { disp, search, find, installSnippets, pretty, slugify, advisoriesOf, installScriptOf,
-         resolveLicence } from "./tashan.mjs";
+         resolveLicence, VERSION } from "./tashan.mjs";
 import { tokensOf } from "./doctor.mjs";
 import { configLocations, skillLocations, collect, resolve, assess, summarize } from "./doctor.mjs";
 
 const SITE = process.env.TASHAN_SITE || "https://tashan.sh";
 const NAME = "tashan";
-const VERSION = "0.1.0";
 // The client tells us which protocol revision it speaks. Echoing it back is deliberate: this server
 // uses only the universal core (initialize / tools/list / tools/call), so pinning a hardcoded date
 // would break against a newer client for no reason. Falls back to a known-good revision.
 const FALLBACK_PROTOCOL = "2025-06-18";
 
-let cache = null, lookupCache = null;
+// A host can keep this process running for weeks. Refresh each export independently.
+const cache = new Map();
+const CACHE_MS = 15 * 60 * 1000;
 async function get(path) {
-  const r = await fetch(`${SITE}${path}`, { headers: { "user-agent": `${NAME}-mcp/${VERSION}` } });
-  if (!r.ok) throw new Error(`tashan ${path} unavailable (HTTP ${r.status})`);
-  return r.json();
+  const entry = cache.get(path);
+  if (entry && Date.now() < entry.expires) return entry.result;
+  const result = fetch(`${SITE}${path}`, {
+    headers: { "user-agent": `${NAME}-mcp/${VERSION}` },
+    signal: AbortSignal.timeout(20000),
+  }).then(r => {
+    if (!r.ok) throw new Error(`tashan ${path} unavailable (HTTP ${r.status})`);
+    return r.json();
+  });
+  cache.set(path, { expires: Date.now() + CACHE_MS, result });
+  try { return await result; }
+  catch (err) { cache.delete(path); throw err; }
 }
-// The board answers "what is good" (ranked, for find/check); the lookup answers "what is this"
-// (complete and keyed, for audit). Using the board for both is what made audit blind to every remote,
-// docker and python entry and to two thirds of the npm packages we measure.
 async function rows() {
-  if (!cache) { const d = await get("/data/index.json"); cache = d.capabilities || d; }
-  return cache;
+  const data = await get("/data/index.json");
+  return data.capabilities || data;
 }
-async function lookup() {
-  if (!lookupCache) lookupCache = await get("/data/lookup.json");
-  return lookupCache;
-}
-// Settled x402 receipts. A THIRD file, deliberately: the board answers "what is good", the lookup
-// answers "what is this", and this answers "has anyone actually paid for it" — the only one of the
-// three that is not a proxy for demand.
-let demandCache = null;
-async function demand() {
-  if (!demandCache) demandCache = await get("/data/demand.json");
-  return demandCache;
-}
+function lookup() { return get("/data/lookup.json"); }
+function demand() { return get("/data/demand.json"); }
 
 // ---- the evidence line. One string an agent can quote to a human without over-claiming. ----
 export function evidence(c) {

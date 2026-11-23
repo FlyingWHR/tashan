@@ -1,5 +1,6 @@
 // node cli/mcp.test.mjs — protocol + rendering for the MCP server. No network.
 import { handle, handshake, evidence, risks, renderFind, renderCheck, renderPaid, trendBlock } from "./mcp.mjs";
+import { VERSION } from "./tashan.mjs";
 import assert from "node:assert";
 
 const rpc = (method, params, id = 1) => handle({ jsonrpc: "2.0", id, method, params });
@@ -13,6 +14,7 @@ assert.ok(/find_capability|check_capability/.test(handshake({}).instructions),
 
 // ---- protocol ----
 const init = await rpc("initialize", { protocolVersion: "2025-06-18" });
+assert.strictEqual(init.result.serverInfo.version, VERSION);
 assert.strictEqual(init.jsonrpc, "2.0"); assert.ok(init.result.serverInfo.name === "tashan");
 
 const list = await rpc("tools/list");
