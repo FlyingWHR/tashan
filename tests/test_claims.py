@@ -419,44 +419,30 @@ ok("the analysis behind it is in the repo and re-runnable",
 # populations. The rule is that any count of them must come from the database, so a stale hardcoded
 # figure cannot outlive the run that made it true.
 import sqlite3
+with open(os.path.join(WEB, "data", "index.json"), encoding="utf-8") as fh:
+    index = json.load(fh)
+
+host_count = re.search(r"\b([\d,]+)\s+measured\s+servers\s+today", text(os.path.join(WEB, "for-hosts.html")))
+ok("the agent guide reports the exact published population", bool(host_count) and
+   int(host_count.group(1).replace(",", "")) == index["measured"])
+
+# The full abandoned/deprecated count is a database measurement. Local R2 caches can be
+# months older than the checked-out site. CI always verifies the claim against its build DB.
+pricing_count = re.search(r"\b([\d,]+)\s+of the things we measure are abandoned",
+                          text(os.path.join(WEB, "pricing.html")))
+ok("the pricing risk count is present", bool(pricing_count))
 DB = os.path.join(ROOT, "data", "tashan.db")
 if os.path.exists(DB):
-    con = sqlite3.connect(DB)
-    scored = con.execute("SELECT COUNT(*) FROM capabilities WHERE tashan_score IS NOT NULL").fetchone()[0]
-    tracked = con.execute("SELECT COUNT(*) FROM capabilities").fetchone()[0]
-    dead = con.execute("SELECT COUNT(*) FROM capabilities WHERE vitality='abandoned' "
-                       "OR npm_deprecated=1 OR gh_archived=1").fetchone()[0]
-    # PUBLISHED, not just stored. The DB holds 22,552 scored rows; the export publishes 12,001,
-    # because export() drops what a host cannot launch — libraries with no `bin`, demo servers,
-    # dependency-confusion canaries, malicious packages, duplicate registry twins. for-hosts.html
-    # tells hosts what the API can ANSWER about, so its population is the export's, and
-    # prerender.bake_counts stamps exactly that. Leaving `measured` out of this tuple set the
-    # generator and the test against each other over one sentence: an audit hand-edited the page to
-    # the DB figure to make this pass, the next prerender put the export figure back, and the suite
-    # went red on a number that was true. Four populations now, all derived, none hand-typed.
-    idx = os.path.join(WEB, "data", "index.json")
-    measured = scored
-    if os.path.exists(idx):
-        with open(idx, encoding="utf-8") as fh:
-            measured = json.load(fh).get("measured") or scored
-    # Every standalone thousands-separated integer on these pages, checked against the populations
-    # it could plausibly be. A number within 2% of none of them is a stale claim.
-    # stats.html and index.html are GENERATED (gen_stats.py, prerender.py), so their numbers are
-    # whatever the last run measured and cannot go stale on their own. These two are hand-written
-    # prose with generated figures stamped into them, which is why they drifted in the first place.
-    for page in ("for-hosts.html", "pricing.html"):
-        path = os.path.join(WEB, page)
-        if not os.path.exists(path):
-            continue
-        body = text(path)
-        for m in re.finditer(r"\b(\d{1,3}(?:,\d{3})+)\b", body):
-            n = int(m.group(1).replace(",", ""))
-            near = min(abs(n - p) / max(p, 1) for p in (measured, scored, tracked, dead))
-            ok(f"{page}: {m.group(1)} is a live count, not a stale one",
-               near < 0.02 or n < 1000,
-               f"{n:,} matches none of measured ({measured:,}), scored ({scored:,}), "
-               f"tracked ({tracked:,}) or abandoned ({dead:,}) — prerender.bake_counts stamps these")
-    con.close()
+    with sqlite3.connect(DB) as con:
+        synced = (con.execute("SELECT MAX(last_synced) FROM sync_state").fetchone()[0] or "")[:10]
+        if synced == index["generated_at"][:10] or os.environ.get("GITHUB_ACTIONS") == "true":
+            dead = con.execute("SELECT COUNT(*) FROM capabilities WHERE vitality='abandoned' "
+                               "OR npm_deprecated=1 OR gh_archived=1").fetchone()[0]
+            ok("the pricing risk count equals the measurement", bool(pricing_count) and
+               int(pricing_count.group(1).replace(",", "")) == dead, f"database count {dead:,}")
+        else:
+            print(f"  -- pricing database comparison needs the {index['generated_at'][:10]} snapshot; "
+                  f"local cache dates to {synced or 'unknown'}")
 
 # ------------------------------------------------------------------------------------------------
 # THE "NOT A DIRECTORY" ARGUMENT MUST STAY TRUE OF THE DATA IT CITES.

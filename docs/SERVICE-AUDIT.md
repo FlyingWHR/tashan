@@ -24,3 +24,13 @@ The September production snapshot contained 13,313 HTML files. A static inventor
 The npm package supports local inventory and stdio MCP. HTTP consumers can call the service directly. Demand for other services on the payments page measures receipts at observed addresses. Tashan’s own paid-call conversions are recorded separately in the nightly funnel.
 
 The repository has no `ANTHROPIC_API_KEY` Actions secret. Author-declared task mapping continues automatically. Model-assisted task and expertise grading require a funded credential.
+
+## Production recovery
+
+GitHub Actions run `45092602053` published the 23 November snapshot at `2026-11-23T01:45:41Z`. The public lookup returned the same record, score and timestamp as the export. Issue #1 closed automatically. The run saved 115 daily history shards and successfully stored the 464.9 MiB compressed core and 305.4 MiB compressed skills cache in R2.
+
+A second inventory checked all 13,424 HTML files in the published snapshot and 51,274 distinct internal destinations. It found no broken internal destinations. The query-based `noindex` dossier shell is the sole canonical exception. The 36-page browser check passed at 390 px and 1,280 px. The fresh corpus contains 12,773 measured capabilities out of 119,247 tracked.
+
+At the default shortlist size, 53 of 68 mapped tasks had at least one qualifying package. The production database-access shortlist returned HTTP 200 and its paid request returned an x402 quote. The risk-assessment shortlist reported its kit unavailable and its paid request returned HTTP 422 without a quote. Both served the new snapshot. The published `tashan-cli@0.2.1` completed the MCP handshake, listed all four tools and returned a live package dossier.
+
+The seven-day funnel ending with this run recorded 2,274 pageviews, 14 Polar checkout handoffs, 35 machine quotes and zero tracked x402 attempts or settlements. The payment probes passed 25 checks. The independent comparison against the facilitator's supported terms was unverified, and the probes did not spend funds.
