@@ -12,7 +12,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Cad](https://tashan.sh/capability/plugin-earthtojake-text-to-cad-cad.html) | 69 | 11k ★ | active |
-| 2 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 49 | 284 ★ | active |
+| 2 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 48 | 284 ★ | active |
 | 3 | [Rocketsmith](https://tashan.sh/capability/plugin-ppak10-rocketsmith-rocketsmith.html) | 37 | 18 ★ | abandoned |
 | 4 | [Opencad](https://tashan.sh/capability/plugin-caid-technologies-opencad-opencad.html) | 51 | 65 ★ | active |
 | 5 | [Bitbybit CAD](https://tashan.sh/capability/pkg-bitbybit-dev-mcp.html) | 49 | 425/wk | active |

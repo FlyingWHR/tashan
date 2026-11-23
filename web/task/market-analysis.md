@@ -33,7 +33,6 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 20 | [Algovault Skills](https://tashan.sh/capability/plugin-algovaultlabs-algovault-skills-algovault-skills.html) | 36 | 1 ★ | active |
 | 21 | [Crypto Price](https://tashan.sh/capability/pkg-mcp-crypto-price.html) | 42 | 205/wk | active |
 | 22 | [Sandbase Skills](https://tashan.sh/capability/plugin-sandbaseai-sandbase-skills-sandbase-skills.html) | 49 | 29 ★ | active |
-| 23 | [Raportagent](https://tashan.sh/capability/pkg-raportagent-mcp.html) | 35 | 48/wk | active |
 
 ## What these numbers are not
 

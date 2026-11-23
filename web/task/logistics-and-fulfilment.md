@@ -18,7 +18,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Daiso](https://tashan.sh/capability/pkg-daiso.html) | 42 | 281/wk | active |
 | 6 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 42 | 177/wk | active |
 | 7 | [AI Trust](https://tashan.sh/capability/pkg-ai-trust.html) | 41 | 185/wk | active |
-| 8 | [Supply Chain Guard](https://tashan.sh/capability/pkg-supply-chain-guard.html) | 63 | 2k/wk | active |
+| 8 | [Supply Chain Guard](https://tashan.sh/capability/pkg-supply-chain-guard.html) | 66 | 1k/wk | active |
 | 9 | [Repo Forensics](https://tashan.sh/capability/plugin-alexgreensh-repo-forensics-repo-forensics.html) | 62 | 181 ★ | active |
 | 10 | [Warp Agent](https://tashan.sh/capability/pkg-warp-agent-mcp.html) | 59 | 336/wk | active |
 | 11 | [Agentgate](https://tashan.sh/capability/pkg-zhiliangtech-agentgate.html) | 54 | 449/wk | active |

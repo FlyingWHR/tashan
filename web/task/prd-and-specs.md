@@ -27,14 +27,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [Specops](https://tashan.sh/capability/plugin-sanmak-specops-specops.html) | 39 | 50 ★ | active |
 | 15 | [Product Org OS](https://tashan.sh/capability/plugin-yohayetsion-product-org-os-product-org-os.html) | 33 | 4 ★ | active |
 | 16 | [Spec · kamioj](https://tashan.sh/capability/plugin-kamioj-spec-workflow-spec.html) | 32 | 9 ★ | active |
-| 17 | [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) | 71 | 22k/wk | active |
+| 17 | [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) | 72 | 4k/wk | active |
 | 18 | [Prd Ce](https://tashan.sh/capability/plugin-mattgierhart-prd-driven-context-engineering-prd-ce.html) | 52 | 205 ★ | active |
 | 19 | [Aldc Spec Tdd Development Framework For Al](https://tashan.sh/capability/plugin-javiarmesto-aldc-al-development-collection-aldc-spec-tdd-development-framework-for-al.html) | 49 | 96 ★ | active |
 | 20 | [Memex Checkout](https://tashan.sh/capability/plugin-mindset-ai-memex-ai-memex-checkout.html) | 46 | 29 ★ | active |
 | 21 | [Guided AI Product Management](https://tashan.sh/capability/plugin-tarunccet-pm-skills-guided-ai-product-management.html) | 40 | 5 ★ | active |
 | 22 | [Belmont](https://tashan.sh/capability/plugin-blake-simpson-belmont-belmont.html) | 36 | 4 ★ | active |
-| 23 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 35 | 5 ★ | active |
-| 24 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 35 | 20 ★ | active |
+| 23 | [Ferrox Core](https://tashan.sh/capability/plugin-ferroxlabs-ferrox-factory-ferrox-core.html) | 35 | 20 ★ | active |
+| 24 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 34 | 5 ★ | active |
 | 25 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 34 | 3 ★ | active |
 | 26 | [Mindpowers](https://tashan.sh/capability/plugin-rohitgehe05-mindpowers-mindpowers.html) | 31 | 3 ★ | active |
 | 27 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 59 | 504 ★ | active |
@@ -43,7 +43,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [Aioproductoscom](https://tashan.sh/capability/pkg-aioproductoscom-mcp.html) | 46 | 215/wk | active |
 | 31 | [Lanhu](https://tashan.sh/capability/pkg-mcp-lanhu.html) | 42 | 243/wk | active |
 | 32 | [Ainative Prd](https://tashan.sh/capability/pkg-ainative-prd-mcp.html) | 41 | 229/wk | active |
-| 33 | [Studio](https://tashan.sh/capability/pkg-aioproductoscom-mcp-studio.html) | 40 | 170/wk | active |
+| 33 | [Studio](https://tashan.sh/capability/pkg-aioproductoscom-mcp-studio.html) | 39 | 170/wk | active |
 | 34 | [Pointcast](https://tashan.sh/capability/pkg-pointcast.html) | 57 | 926/wk | active |
 | 35 | [Compliance](https://tashan.sh/capability/pkg-yawlabs-mcp-compliance.html) | 53 | 369/wk | active |
 | 36 | [Cloud](https://tashan.sh/capability/pkg-unified-product-graph-cloud-server.html) | 52 | 293/wk | active |

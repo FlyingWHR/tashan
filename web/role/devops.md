@@ -10,7 +10,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Infrastructure and deployment** — [Argocd](https://tashan.sh/capability/pkg-argocd-mcp.html) · tashan score 72
-- **Observability** — [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) · tashan score 76
+- **Observability** — [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) · tashan score 81
 
 ## Ranked
 
@@ -23,14 +23,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 49 | 15 ★ | active |
 | 6 | [Cockroachdb](https://tashan.sh/capability/plugin-cockroachdb-claude-plugin-cockroachdb.html) | 45 | 3 ★ | active |
 | 7 | [Local CI](https://tashan.sh/capability/plugin-mrpuls-local-ci-local-ci.html) | 35 | 3 ★ | active |
-| 8 | [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) | 76 | 13k/wk | active |
+| 8 | [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) | 81 | 19k/wk | active |
 | 9 | [SSH — policy-gated remote access](https://tashan.sh/capability/pkg-ssh-mcp.html) | 74 | 11k/wk | active |
 | 10 | [Expo](https://tashan.sh/capability/plugin-expo-skills-expo.html) | 69 | 2k ★ | active |
 | 11 | [Azure · microsoft](https://tashan.sh/capability/plugin-microsoft-azure-skills-azure.html) | 65 | 1k ★ | active |
 | 12 | [Dokploy](https://tashan.sh/capability/pkg-dokploy-mcp.html) | 63 | 3k/wk | active |
 | 13 | [Dynatrace Managed](https://tashan.sh/capability/pkg-dynatrace-oss-dynatrace-managed-mcp-server.html) | 63 | 681/wk | active |
-| 14 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 59 | 643 ★ | active |
-| 15 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 58 | 86 ★ | active |
+| 14 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 58 | 86 ★ | active |
+| 15 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 58 | 643 ★ | active |
 | 16 | [Teamcity CLI](https://tashan.sh/capability/plugin-jetbrains-teamcity-cli-teamcity-cli.html) | 56 | 119 ★ | active |
 | 17 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 56 | 101 ★ | active |
 | 18 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 55 | 81 ★ | active |

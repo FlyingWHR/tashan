@@ -12,7 +12,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Langfuse Observability](https://tashan.sh/capability/plugin-langfuse-claude-observability-plugin-langfuse-observability.html) | 49 | 15 ★ | active |
-| 2 | [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) | 76 | 13k/wk | active |
+| 2 | [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) | 81 | 19k/wk | active |
 | 3 | [Dynatrace Managed](https://tashan.sh/capability/pkg-dynatrace-oss-dynatrace-managed-mcp-server.html) | 63 | 681/wk | active |
 | 4 | [Sentry CLI](https://tashan.sh/capability/plugin-getsentry-cli-sentry-cli.html) | 56 | 101 ★ | active |
 | 5 | [Posthog](https://tashan.sh/capability/plugin-posthog-ai-plugin-posthog.html) | 54 | 64 ★ | active |
@@ -24,9 +24,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 11 | [Iris](https://tashan.sh/capability/plugin-iris-eval-mcp-server-iris.html) | 37 | 8 ★ | active |
 | 12 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 37 | 3 ★ | active |
 | 13 | [Loki](https://tashan.sh/capability/plugin-lexfrei-mcp-loki-loki.html) | 34 | 3 ★ | active |
-| 14 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 64 | 2k/wk | active |
-| 15 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 51 | 90 ★ | active |
-| 16 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 50 | 4 marketplaces | — |
+| 14 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 59 | 159/wk | active |
+| 15 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 50 | 4 marketplaces | — |
+| 16 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 50 | 90 ★ | active |
 | 17 | [Grafana · grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
 | 18 | [Sap Btp Cloud Logging](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-cloud-logging.html) | 42 | 1 marketplaces | — |
 | 19 | [Render](https://tashan.sh/capability/plugin-render-oss-render-plugin-claude-code-render.html) | 38 | 0 ★ | active |

@@ -30,17 +30,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 17 | [Paper Desktop](https://tashan.sh/capability/plugin-paper-design-agent-plugins-paper-desktop.html) | 34 | 11 ★ | active |
 | 18 | [Get Design Done](https://tashan.sh/capability/plugin-hegemonart-get-design-done-get-design-done.html) | 34 | 4 ★ | active |
 | 19 | [The Design Library](https://tashan.sh/capability/plugin-zeta92-design-library-plugin-the-design-library.html) | 33 | 10 ★ | active |
-| 20 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
+| 20 | [Frontend Design](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
 | 21 | [Css Development](https://tashan.sh/capability/plugin-2389-research-claude-plugins-css-development.html) | 42 | 1 marketplaces | — |
 | 22 | [F MCP Bridge](https://tashan.sh/capability/plugin-atezer-fmcp-f-mcp-bridge.html) | 41 | 9 ★ | active |
 | 23 | [UI Theme Designer](https://tashan.sh/capability/plugin-sap-ui-theme-designer-plugins-for-coding-agents-ui-theme-designer.html) | 39 | 1 ★ | active |
 | 24 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 39 | 43/wk | active |
 | 25 | [Pluginos Figma Operations Platform](https://tashan.sh/capability/plugin-lsdimi-pluginos-pluginos-figma-operations-platform.html) | 37 | 2 ★ | active |
 | 26 | [PDF Forge](https://tashan.sh/capability/plugin-syx-labs-pdf-forge-pdf-forge.html) | 36 | 1 ★ | active |
-| 27 | [Frontend Design](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | not scored | 7 repos | active |
+| 27 | [Frontend Design · anthropics](https://tashan.sh/capability/skill-anthropics-frontend-design.html) | not scored | 6 repos | active |
 | 28 | [Magicpath](https://tashan.sh/capability/plugin-magicpathai-agent-skills-magicpath.html) | 49 | 84 ★ | active |
 | 29 | [Figma Console](https://tashan.sh/capability/pkg-figma-console-mcp.html) | 82 | 47k/wk | active |
-| 30 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 66 | 4k/wk | active |
+| 30 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 72 | 4k/wk | active |
 | 31 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 57 | 184/wk | active |
 | 32 | [Figma MCP Express](https://tashan.sh/capability/pkg-figma-mcp-express.html) | 44 | 154/wk | active |
 | 33 | [Identityforge](https://tashan.sh/capability/pkg-identityforge.html) | 44 | 108/wk | active |

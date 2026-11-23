@@ -14,12 +14,12 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Sem](https://tashan.sh/capability/pkg-ataraxy-labs-sem.html) | 69 | 8k/wk | active |
 | 2 | [Weavatrix](https://tashan.sh/capability/pkg-weavatrix.html) | 49 | 358/wk | active |
 | 3 | [Roundtable](https://tashan.sh/capability/plugin-wan-huiyan-agent-review-panel-roundtable.html) | 47 | 30 ★ | active |
-| 4 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 47 | 23 ★ | active |
+| 4 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 46 | 23 ★ | active |
 | 5 | [Archy](https://tashan.sh/capability/plugin-hslee16-archy-archy.html) | 41 | 6 ★ | active |
 | 6 | [Temper](https://tashan.sh/capability/plugin-galando-temper-temper.html) | 38 | 13 ★ | active |
 | 7 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 71 | 191k ★ | active |
 | 8 | [Sigmap](https://tashan.sh/capability/pkg-sigmap.html) | 67 | 4k/wk | active |
-| 9 | [Code Index](https://tashan.sh/capability/pkg-regsorm-code-index-mcp.html) | 63 | 2k/wk | active |
+| 9 | [Code Index](https://tashan.sh/capability/pkg-regsorm-code-index-mcp.html) | 63 | 349/wk | active |
 | 10 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 61 | 2k ★ | active |
 | 11 | [Memtrace](https://tashan.sh/capability/pkg-memtrace.html) | 61 | 1k/wk | active |
 | 12 | [Brooks Lint](https://tashan.sh/capability/plugin-hyhmrright-brooks-lint-brooks-lint.html) | 60 | 1k ★ | active |
@@ -46,13 +46,13 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 33 | [Deslop · agent-sh](https://tashan.sh/capability/plugin-agent-sh-deslop-deslop.html) | 34 | 3 ★ | active |
 | 34 | [Githits](https://tashan.sh/capability/pkg-githits.html) | 71 | 2k/wk | active |
 | 35 | [Monomind](https://tashan.sh/capability/pkg-monomind.html) | 68 | 7k/wk | active |
-| 36 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 64 | 2k/wk | active |
+| 36 | [Neat](https://tashan.sh/capability/pkg-neat-is-mcp.html) | 59 | 159/wk | active |
 | 37 | [Praxis Engineering](https://tashan.sh/capability/plugin-borghei-claude-skills-praxis-engineering.html) | 56 | 413 ★ | active |
 | 38 | [Memtrace Skills](https://tashan.sh/capability/pkg-memtrace-skills.html) | 54 | 307/wk | active |
 | 39 | [Code Review · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-code-review.html) | 46 | 2 marketplaces | — |
 | 40 | [Code Simplifier](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-code-simplifier.html) | 46 | 2 marketplaces | — |
 
-Showing the top 40 of 135. The full ranked shelf is at https://tashan.sh/task/code-review.html.
+Showing the top 40 of 132. The full ranked shelf is at https://tashan.sh/task/code-review.html.
 
 ## What these numbers are not
 

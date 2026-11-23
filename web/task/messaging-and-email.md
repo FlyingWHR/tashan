@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Agentmail](https://tashan.sh/capability/pkg-agentmail-mcp.html) | 71 | 3k/wk | active |
+| 1 | [Agentmail](https://tashan.sh/capability/pkg-agentmail-mcp.html) | 69 | 1k/wk | active |
 | 2 | [Discord · @discord-mcp](https://tashan.sh/capability/pkg-discord-mcp-cli.html) | 48 | 289/wk | active |
 | 3 | [Discord · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-discord.html) | 46 | 2 marketplaces | — |
 | 4 | [Imessage](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-imessage.html) | 46 | 2 marketplaces | — |
@@ -21,8 +21,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Microsoft Teams API](https://tashan.sh/capability/pkg-teams-api.html) | 53 | 350/wk | active |
 | 9 | [Mailwarden](https://tashan.sh/capability/pkg-mailwarden.html) | 53 | 323/wk | active |
 | 10 | [Slack · jtalk22](https://tashan.sh/capability/pkg-jtalk22-slack-mcp.html) | 50 | 262/wk | active |
-| 11 | [Clize](https://tashan.sh/capability/pkg-clize-clize.html) | 48 | 174/wk | active |
-| 12 | [Shipmail](https://tashan.sh/capability/pkg-shipmail-mcp.html) | 48 | 159/wk | active |
+| 11 | [Shipmail](https://tashan.sh/capability/pkg-shipmail-mcp.html) | 48 | 159/wk | active |
+| 12 | [Clize](https://tashan.sh/capability/pkg-clize-clize.html) | 47 | 174/wk | active |
 | 13 | [Converse](https://tashan.sh/capability/pkg-converse-mcp-server.html) | 45 | 228/wk | active |
 | 14 | [Paydirt](https://tashan.sh/capability/pkg-paydirt-mcp.html) | 45 | 162/wk | active |
 | 15 | [Mailpouch](https://tashan.sh/capability/pkg-mailpouch.html) | 45 | 60/wk | active |
@@ -48,11 +48,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Mail Index](https://tashan.sh/capability/pkg-mail-index.html) | 37 | 30/wk | active |
 | 36 | [Dragapp](https://tashan.sh/capability/pkg-dragapp-mcp-server.html) | 36 | 128/wk | active |
 | 37 | [Timergy](https://tashan.sh/capability/pkg-timergy-mcp.html) | 36 | 77/wk | active |
-| 38 | [Google Workspace · pm990320](https://tashan.sh/capability/pkg-google-workspace-mcp.html) | 35 | 2k/wk | abandoned |
-| 39 | [Agentchannels](https://tashan.sh/capability/plugin-agentchannels-agentchannels-agentchannels.html) | 31 | 13 ★ | abandoned |
-| 40 | [Google Workspace](https://tashan.sh/capability/plugin-taylorwilsdon-google-workspace-mcp-google-workspace-mcp.html) | 71 | 3k ★ | active |
+| 38 | [Agentchannels](https://tashan.sh/capability/plugin-agentchannels-agentchannels-agentchannels.html) | 31 | 13 ★ | abandoned |
+| 39 | [Google Workspace](https://tashan.sh/capability/plugin-taylorwilsdon-google-workspace-mcp-google-workspace-mcp.html) | 71 | 3k ★ | active |
+| 40 | [Conversations](https://tashan.sh/capability/pkg-hasna-conversations.html) | 71 | 35k/wk | active |
 
-Showing the top 40 of 157. The full ranked shelf is at https://tashan.sh/task/messaging-and-email.html.
+Showing the top 40 of 155. The full ranked shelf is at https://tashan.sh/task/messaging-and-email.html.
 
 ## What these numbers are not
 

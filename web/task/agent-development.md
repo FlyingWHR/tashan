@@ -19,9 +19,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Twining](https://tashan.sh/capability/plugin-daveangulo-twining-mcp-twining.html) | 41 | 7 ★ | active |
 | 7 | [Mistral](https://tashan.sh/capability/plugin-swih-mistral-mcp-mistral-mcp.html) | 38 | 14 ★ | active |
 | 8 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 36 | 7 ★ | active |
-| 9 | [Praxis · xD4O](https://tashan.sh/capability/plugin-xd4o-praxis-praxis.html) | 36 | 27 ★ | active |
+| 9 | [Praxis · xD4O](https://tashan.sh/capability/plugin-xd4o-praxis-praxis.html) | 35 | 27 ★ | active |
 | 10 | [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) | 85 | 2.1m/wk | active |
-| 11 | [Use](https://tashan.sh/capability/pkg-mcp-use.html) | 84 | 46k/wk | active |
+| 11 | [Use · mcp-use](https://tashan.sh/capability/pkg-mcp-use.html) | 84 | 46k/wk | active |
 | 12 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 71 | 18k/wk | active |
 | 13 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 70 | 62k ★ | active |
 | 14 | [Atomic Agents](https://tashan.sh/capability/plugin-brainblend-ai-atomic-agents-atomic-agents.html) | 69 | 6k ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Tap · HUA-Labs](https://tashan.sh/capability/plugin-hua-labs-tap-tap.html) | 37 | 23 ★ | active |
 | 40 | [Triflux](https://tashan.sh/capability/plugin-tellang-triflux-triflux.html) | 37 | 7 ★ | active |
 
-Showing the top 40 of 549. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
+Showing the top 40 of 547. The full ranked shelf is at https://tashan.sh/task/agent-development.html.
 
 ## What these numbers are not
 

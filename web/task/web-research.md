@@ -17,7 +17,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Redditapis](https://tashan.sh/capability/pkg-redditapis-mcp.html) | 47 | 228/wk | active |
 | 5 | [Phdtaketaketake](https://tashan.sh/capability/plugin-powerofjinbo-phdtaketaketake-phdtaketaketake.html) | 45 | 32 ★ | active |
 | 6 | [Bluesky · cyanheads](https://tashan.sh/capability/pkg-cyanheads-bluesky-mcp-server.html) | 41 | 121/wk | active |
-| 7 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 77 | 30k/wk | active |
+| 7 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 80 | 87k/wk | active |
 | 8 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 70 | 5k ★ | active |
 | 9 | [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) | 70 | 54k ★ | active |
 | 10 | [Blockrun](https://tashan.sh/capability/pkg-blockrun-mcp.html) | 62 | 582/wk | active |
@@ -43,8 +43,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [Agent Search](https://tashan.sh/capability/pkg-agent-search-mcp.html) | 43 | 225/wk | active |
 | 31 | [SERPdive Web Search](https://tashan.sh/capability/pkg-serpdive-mcp.html) | 40 | 124/wk | active |
 | 32 | [Netlens](https://tashan.sh/capability/pkg-netlens-mcp.html) | 38 | 75/wk | active |
-| 33 | [Firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) | 87 | 190k/wk | active |
-| 34 | [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) | 75 | 24k/wk | active |
+| 33 | [Firecrawl](https://tashan.sh/capability/pkg-firecrawl-mcp.html) | 94 | 112k/wk | active |
+| 34 | [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) | 75 | 23k/wk | active |
 | 35 | [SearXNG Search](https://tashan.sh/capability/pkg-mcp-searxng.html) | 75 | 15k/wk | active |
 | 36 | [Google Surf](https://tashan.sh/capability/pkg-google-surf-mcp.html) | 52 | 326/wk | active |
 | 37 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 46 | 158/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 45 | 164/wk | active |
 | 40 | [Keenable Web Search](https://tashan.sh/capability/pkg-keenable-mcp.html) | 42 | 82/wk | active |
 
-Showing the top 40 of 61. The full ranked shelf is at https://tashan.sh/task/web-research.html.
+Showing the top 40 of 60. The full ranked shelf is at https://tashan.sh/task/web-research.html.
 
 ## What these numbers are not
 

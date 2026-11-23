@@ -14,7 +14,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Voicenter](https://tashan.sh/capability/plugin-voicenterteam-claude-marketplace-voicenter.html) | 37 | 2 ★ | active |
 | 2 | [Help Scout](https://tashan.sh/capability/pkg-help-scout-mcp-server.html) | 43 | 188/wk | active |
 | 3 | [Freescout](https://tashan.sh/capability/pkg-verygoodplugins-mcp-freescout.html) | 39 | 239/wk | abandoned |
-| 4 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 70 | 3k/wk | active |
+| 4 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 72 | 2k/wk | active |
 | 5 | [Connectwise Psa](https://tashan.sh/capability/pkg-mcp-connectwise-psa.html) | 44 | 368/wk | active |
 | 6 | [Eventbrite](https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html) | 42 | 273/wk | active |
 | 7 | [Zd](https://tashan.sh/capability/pkg-zd-mcp-server.html) | 38 | 370/wk | active |
@@ -25,7 +25,6 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Casemargin](https://tashan.sh/capability/pkg-casemargin-mcp-server.html) | 39 | 124/wk | active |
 | 13 | [Tomticket](https://tashan.sh/capability/pkg-mcp-tomticket.html) | 37 | 68/wk | active |
 | 14 | [Telos Ready](https://tashan.sh/capability/pkg-telos-ready-mcp.html) | 36 | 47/wk | active |
-| 15 | [Zendesk · markusvankempen](https://tashan.sh/capability/pkg-markusvankempen-zendesk-mcp-server.html) | 35 | 179/wk | active |
 
 ## What these numbers are not
 

@@ -38,7 +38,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route pattern | Pages | Generator |
 |---|---|---|
-| `/capability/*.html` | 12,773 | `pipeline/prerender.py` |
+| `/capability/*.html` | 12,818 | `pipeline/prerender.py` |
 | `/category/*.html` | 112 | `pipeline/gen_hubs.py` |
 | `/task/*.html` | 65 | `pipeline/gen_hubs.py` |
 | `/role/*.html` | 23 | `pipeline/gen_hubs.py` |
@@ -96,6 +96,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `tests/test_identity.py` — One thing must not be ranked twice at two different numbers.
 - `tests/test_links.py` — Every link and every install instruction must lead somewhere that exists.
 - `tests/test_official.py` — The "✓ Official" badge is an endorsement claim. It must be provable from the namespace.
+- `tests/test_openai_grading.py` — Exercise the actual reservation and parsing paths without a credential or network."""
 - `tests/test_outreach_numbers.py` — Every number in docs/OUTREACH.md must still be true of the database.
 - `tests/test_pkg_name.py` — Every `npx …` invocation we publish must name a package that actually resolves to US.
 - `tests/test_product_tree.py` — docs/PRODUCT-TREE.md must describe every surface that exists, and describe none that don't.

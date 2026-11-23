@@ -15,7 +15,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Genshijin](https://tashan.sh/capability/plugin-interfacex-co-jp-genshijin-genshijin.html) | 55 | 287 ★ | active |
 | 3 | [Reprompter](https://tashan.sh/capability/plugin-aytuncyildizli-reprompter-reprompter.html) | 52 | 111 ★ | active |
 | 4 | [Cxpak](https://tashan.sh/capability/plugin-barnett-studios-cxpak-cxpak.html) | 45 | 19 ★ | active |
-| 5 | [Praxis · xD4O](https://tashan.sh/capability/plugin-xd4o-praxis-praxis.html) | 36 | 27 ★ | active |
+| 5 | [Praxis · xD4O](https://tashan.sh/capability/plugin-xd4o-praxis-praxis.html) | 35 | 27 ★ | active |
 | 6 | [Caveman](https://tashan.sh/capability/plugin-juliusbrussee-caveman-caveman.html) | 70 | 93k ★ | active |
 | 7 | [Prompt Improver](https://tashan.sh/capability/plugin-severity1-claude-code-prompt-improver-prompt-improver.html) | 47 | 2k ★ | active |
 | 8 | [Token Saver](https://tashan.sh/capability/plugin-ppgranger-token-saver-token-saver.html) | 46 | 121 ★ | active |

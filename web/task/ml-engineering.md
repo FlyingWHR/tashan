@@ -26,7 +26,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 13 | [Inference](https://tashan.sh/capability/pkg-bsvkey-inference-mcp.html) | 46 | 173/wk | active |
 | 14 | [Neurarch](https://tashan.sh/capability/pkg-neurarch-mcp.html) | 46 | 94/wk | active |
 | 15 | [Ultralytics Platform](https://tashan.sh/capability/pkg-ultralytics-mcp.html) | 45 | 37/wk | active |
-| 16 | [Overfit](https://tashan.sh/capability/plugin-devonbike-overfit-overfit.html) | 39 | 15 ★ | active |
+| 16 | [Anycloud](https://tashan.sh/capability/plugin-anycloud-sh-anycloud-skills-anycloud.html) | 40 | 1 ★ | active |
+| 17 | [Overfit](https://tashan.sh/capability/plugin-devonbike-overfit-overfit.html) | 39 | 15 ★ | active |
 
 ## What these numbers are not
 

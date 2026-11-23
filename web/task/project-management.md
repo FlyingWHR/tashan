@@ -19,7 +19,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 6 | [Hyperflow](https://tashan.sh/capability/plugin-mohammed-abdelhady-hyperflow-hyperflow.html) | 42 | 3 ★ | active |
 | 7 | [Specclaw](https://tashan.sh/capability/plugin-chan4lk-specclaw-specclaw.html) | 42 | 10 ★ | active |
 | 8 | [Dominion Flow](https://tashan.sh/capability/plugin-thierryn-fire-flow-dominion-flow.html) | 34 | 77 ★ | active |
-| 9 | [Astravue](https://tashan.sh/capability/plugin-astravueorg-astravue-mcp-server-astravue.html) | 34 | 12 ★ | active |
+| 9 | [Astravue](https://tashan.sh/capability/plugin-astravueorg-astravue-mcp-server-astravue.html) | 33 | 12 ★ | active |
 | 10 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 73 | 143k/wk | active |
 | 11 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 71 | 191k ★ | active |
 | 12 | [AI Devkit](https://tashan.sh/capability/plugin-codeaholicguy-ai-devkit-ai-devkit.html) | 61 | 2k ★ | active |
@@ -45,14 +45,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Clickup Custom](https://tashan.sh/capability/pkg-clickup-custom-mcp.html) | 37 | 58/wk | active |
 | 33 | [Belmont](https://tashan.sh/capability/plugin-blake-simpson-belmont-belmont.html) | 36 | 4 ★ | active |
 | 34 | [Launchpad](https://tashan.sh/capability/plugin-builtform-launchpad-launchpad.html) | 36 | 1 ★ | active |
-| 35 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 35 | 5 ★ | active |
+| 35 | [Pm AI Partner Framework](https://tashan.sh/capability/plugin-ahmedkhaledmohamed-pm-ai-partner-framework-pm-ai-partner-framework.html) | 34 | 5 ★ | active |
 | 36 | [8 Habit AI Dev](https://tashan.sh/capability/plugin-pitimon-8-habit-ai-dev-8-habit-ai-dev.html) | 34 | 3 ★ | active |
 | 37 | [Atlassian · atlassian](https://tashan.sh/capability/plugin-atlassian-atlassian-mcp-server-atlassian.html) | 64 | 911 ★ | active |
 | 38 | [Shortcut](https://tashan.sh/capability/pkg-shortcut-mcp.html) | 64 | 23k/wk | active |
 | 39 | [Airtable · airtable](https://tashan.sh/capability/plugin-airtable-skills-airtable.html) | 52 | 38 ★ | active |
 | 40 | [Gsd Plugin](https://tashan.sh/capability/plugin-jnuyens-gsd-plugin-gsd-plugin.html) | 51 | 84 ★ | active |
 
-Showing the top 40 of 98. The full ranked shelf is at https://tashan.sh/task/project-management.html.
+Showing the top 40 of 96. The full ranked shelf is at https://tashan.sh/task/project-management.html.
 
 ## What these numbers are not
 

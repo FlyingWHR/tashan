@@ -35,10 +35,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Qmd Ja](https://tashan.sh/capability/plugin-joycodetech-qmd-ja-qmd-ja.html) | 38 | 3 ★ | active |
 | 16 | [Longhand](https://tashan.sh/capability/plugin-wynelson94-longhand-longhand.html) | 37 | 12 ★ | active |
 | 17 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 36 | 7 ★ | active |
-| 18 | [Praxis · xD4O](https://tashan.sh/capability/plugin-xd4o-praxis-praxis.html) | 36 | 27 ★ | active |
+| 18 | [Praxis · xD4O](https://tashan.sh/capability/plugin-xd4o-praxis-praxis.html) | 35 | 27 ★ | active |
 | 19 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 35 | 28 ★ | active |
 | 20 | [Handler](https://tashan.sh/capability/pkg-mcp-handler.html) | 85 | 2.1m/wk | active |
-| 21 | [Use](https://tashan.sh/capability/pkg-mcp-use.html) | 84 | 46k/wk | active |
+| 21 | [Use · mcp-use](https://tashan.sh/capability/pkg-mcp-use.html) | 84 | 46k/wk | active |
 | 22 | [Ts Core](https://tashan.sh/capability/pkg-cyanheads-mcp-ts-core.html) | 71 | 18k/wk | active |
 | 23 | [Deepeval](https://tashan.sh/capability/plugin-confident-ai-deepeval-deepeval.html) | 71 | 17k ★ | active |
 | 24 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 70 | 62k ★ | active |
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Fiftyone](https://tashan.sh/capability/plugin-voxel51-fiftyone-skills-fiftyone.html) | 51 | 37 ★ | active |
 | 40 | [Mlflow](https://tashan.sh/capability/plugin-mlflow-skills-mlflow.html) | 51 | 61 ★ | active |
 
-Showing the top 40 of 803. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
+Showing the top 40 of 801. The full ranked shelf is at https://tashan.sh/role/ai-engineer.html.
 
 ## What these numbers are not
 

@@ -12,7 +12,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
 | 1 | [Zscaler](https://tashan.sh/capability/plugin-zscaler-zscaler-mcp-server-zscaler.html) | 53 | 41 ★ | active |
-| 2 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 47 | 23 ★ | active |
+| 2 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 46 | 23 ★ | active |
 | 3 | [Agentic Security](https://tashan.sh/capability/plugin-clear-capabilities-agentic-security-agentic-security.html) | 40 | 73 ★ | active |
 | 4 | [Qodo](https://tashan.sh/capability/plugin-qodo-ai-qodo-skills-qodo.html) | 54 | 44 ★ | active |
 | 5 | [Sonarqube](https://tashan.sh/capability/plugin-sonarsource-sonarqube-agent-plugins-sonarqube.html) | 54 | 98 ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Codeguard Security](https://tashan.sh/capability/plugin-cosai-oasis-project-codeguard-codeguard-security.html) | 55 | 276 ★ | active |
 | 40 | [Aikido](https://tashan.sh/capability/plugin-aikidosec-aikido-claude-plugin-aikido.html) | 47 | 11 ★ | active |
 
-Showing the top 40 of 119. The full ranked shelf is at https://tashan.sh/task/security-review.html.
+Showing the top 40 of 117. The full ranked shelf is at https://tashan.sh/task/security-review.html.
 
 ## What these numbers are not
 

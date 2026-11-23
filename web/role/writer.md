@@ -34,30 +34,30 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 16 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 53 | 1k ★ | active |
 | 17 | [Gogcli MCP Sheets](https://tashan.sh/capability/pkg-gogcli-mcp-sheets.html) | 51 | 212/wk | active |
 | 18 | [Yapi Plugin](https://tashan.sh/capability/plugin-leeguooooo-cross-request-master-yapi-plugin.html) | 49 | 167 ★ | active |
-| 19 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 48 | 238 ★ | active |
+| 19 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 47 | 238 ★ | active |
 | 20 | [Vibe Replay](https://tashan.sh/capability/plugin-tuo-lei-vibe-replay-vibe-replay.html) | 46 | 33 ★ | active |
 | 21 | [Officecli](https://tashan.sh/capability/plugin-officecli-officecli-skills-officecli.html) | 45 | 72 ★ | active |
 | 22 | [Openhop](https://tashan.sh/capability/plugin-naorsabag-openhop-openhop.html) | 44 | 40 ★ | active |
 | 23 | [Sdd · applica-software-guru](https://tashan.sh/capability/plugin-applica-software-guru-sdd-sdd.html) | 42 | 11 ★ | active |
 | 24 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 42 | 4 ★ | active |
-| 25 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 40 | 4 ★ | active |
-| 26 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 39 | 73 ★ | active |
-| 27 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 39 | 4 ★ | active |
-| 28 | [Sync Docs](https://tashan.sh/capability/plugin-agent-sh-sync-docs-sync-docs.html) | 39 | 3 ★ | active |
+| 25 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 39 | 73 ★ | active |
+| 26 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 39 | 4 ★ | active |
+| 27 | [Sync Docs](https://tashan.sh/capability/plugin-agent-sh-sync-docs-sync-docs.html) | 39 | 3 ★ | active |
+| 28 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 39 | 4 ★ | active |
 | 29 | [Jamdesk](https://tashan.sh/capability/plugin-jamdesk-jamdesk-claude-plugin-jamdesk.html) | 38 | 3 ★ | active |
 | 30 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 37 | 26 ★ | active |
 | 31 | [Carbone Skill](https://tashan.sh/capability/plugin-carboneio-carbone-skill-carbone-skill.html) | 36 | 4 ★ | active |
 | 32 | [Bleu](https://tashan.sh/capability/plugin-nirvaan05-bleu-plugin-bleu.html) | 36 | 3 ★ | active |
-| 33 | [Mermaid · hustcc](https://tashan.sh/capability/pkg-mcp-mermaid.html) | 35 | 4k/wk | abandoned |
-| 34 | [Google Sheets · domdomegg](https://tashan.sh/capability/pkg-google-sheets-mcp.html) | 35 | 237/wk | active |
-| 35 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 35 | 3 ★ | active |
-| 36 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 35 | 40 ★ | active |
-| 37 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 33 | 3 ★ | active |
-| 38 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 32 | 22 ★ | active |
-| 39 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 32 | 19 ★ | active |
-| 40 | [Post Bridge](https://tashan.sh/capability/plugin-post-bridge-hq-agent-mode-post-bridge.html) | 32 | 13 ★ | active |
+| 33 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 35 | 3 ★ | active |
+| 34 | [Html Skills](https://tashan.sh/capability/plugin-f-labs-io-agent-html-skills-html-skills.html) | 35 | 40 ★ | active |
+| 35 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 33 | 3 ★ | active |
+| 36 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 32 | 22 ★ | active |
+| 37 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 32 | 19 ★ | active |
+| 38 | [Post Bridge](https://tashan.sh/capability/plugin-post-bridge-hq-agent-mode-post-bridge.html) | 32 | 13 ★ | active |
+| 39 | [AI Slop](https://tashan.sh/capability/plugin-se-uhd-ai-slop-skill-ai-slop.html) | 31 | 8 ★ | active |
+| 40 | [Kroki Diagrams](https://tashan.sh/capability/plugin-smoldrago-kroki-diagrams-kroki-diagrams.html) | 29 | 5 ★ | active |
 
-Showing the top 40 of 202. The full ranked shelf is at https://tashan.sh/role/writer.html.
+Showing the top 40 of 201. The full ranked shelf is at https://tashan.sh/role/writer.html.
 
 ## What these numbers are not
 

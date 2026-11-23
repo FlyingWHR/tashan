@@ -9,14 +9,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 ## The short answer
 
-- **Animation and generated imagery** — [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) · tashan score 71
+- **Animation and generated imagery** — [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) · tashan score 70
 - **Video editing** — [Davinci Resolve](https://tashan.sh/capability/pkg-davinci-resolve-mcp.html) · tashan score 68
 
 ## Ranked
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 71 | 29k/wk | active |
+| 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 70 | 13k/wk | active |
 | 2 | [Claude Video Vision](https://tashan.sh/capability/plugin-jordanrendric-claude-video-vision-claude-video-vision.html) | 56 | 1k ★ | active |
 | 3 | [Watch](https://tashan.sh/capability/plugin-bradautomates-claude-video-watch.html) | 48 | 11k ★ | active |
 | 4 | [Phantom · fadelabs](https://tashan.sh/capability/plugin-fadelabs-phantom-phantom.html) | 41 | 21 ★ | active |
@@ -45,19 +45,19 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Notation](https://tashan.sh/capability/pkg-gradusmusic-notation-mcp.html) | 41 | 165/wk | active |
 | 28 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 40 | 248/wk | active |
 | 29 | [Furlen](https://tashan.sh/capability/pkg-furlen-mcp.html) | 38 | 97/wk | active |
-| 30 | [Aetherwave](https://tashan.sh/capability/pkg-aetherwave-studio-mcp.html) | 35 | 51/wk | active |
-| 31 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 61 | 3k/wk | active |
-| 32 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 56 | 305/wk | active |
-| 33 | [Runapi](https://tashan.sh/capability/pkg-runapi-ai-mcp.html) | 55 | 468/wk | active |
-| 34 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 55 | 197/wk | active |
-| 35 | [Oh My Cassette](https://tashan.sh/capability/plugin-cassette-editor-oh-my-cassette-oh-my-cassette.html) | 55 | 138 ★ | active |
-| 36 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 54 | 362/wk | active |
-| 37 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 52 | 555/wk | active |
-| 38 | [Kodelyth Ecc](https://tashan.sh/capability/pkg-kodelyth-ecc.html) | 46 | 307/wk | active |
-| 39 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 45 | 164/wk | active |
-| 40 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 44 | 239/wk | active |
+| 30 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 61 | 3k/wk | active |
+| 31 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 56 | 305/wk | active |
+| 32 | [Runapi](https://tashan.sh/capability/pkg-runapi-ai-mcp.html) | 55 | 468/wk | active |
+| 33 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 55 | 197/wk | active |
+| 34 | [Oh My Cassette](https://tashan.sh/capability/plugin-cassette-editor-oh-my-cassette-oh-my-cassette.html) | 55 | 138 ★ | active |
+| 35 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 54 | 362/wk | active |
+| 36 | [Video Analyzer](https://tashan.sh/capability/pkg-mcp-video-analyzer.html) | 52 | 555/wk | active |
+| 37 | [Kodelyth Ecc](https://tashan.sh/capability/pkg-kodelyth-ecc.html) | 46 | 307/wk | active |
+| 38 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 45 | 164/wk | active |
+| 39 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 44 | 239/wk | active |
+| 40 | [Media Gen](https://tashan.sh/capability/pkg-media-gen-mcp-server.html) | 44 | 141/wk | active |
 
-Showing the top 40 of 179. The full ranked shelf is at https://tashan.sh/role/creator.html.
+Showing the top 40 of 176. The full ranked shelf is at https://tashan.sh/role/creator.html.
 
 ## What these numbers are not
 

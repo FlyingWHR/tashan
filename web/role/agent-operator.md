@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Mine](https://tashan.sh/capability/plugin-anipotts-claude-code-tips-mine.html) | 47 | 27 ★ | active |
 | 40 | [Superpowers Optimized](https://tashan.sh/capability/plugin-repozy-superpowers-optimized-superpowers-optimized.html) | 47 | 128 ★ | stable |
 
-Showing the top 40 of 126. The full ranked shelf is at https://tashan.sh/role/agent-operator.html.
+Showing the top 40 of 127. The full ranked shelf is at https://tashan.sh/role/agent-operator.html.
 
 ## What these numbers are not
 

@@ -17,7 +17,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Imessage · linq-team](https://tashan.sh/capability/plugin-linq-team-claude-code-imessage-channel-imessage.html) | 44 | 24 ★ | active |
 | 5 | [Desktop Commander](https://tashan.sh/capability/pkg-wonderwhy-er-desktop-commander.html) | 80 | 349k/wk | active |
 | 6 | [N8n](https://tashan.sh/capability/pkg-n8n-mcp.html) | 74 | 103k/wk | active |
-| 7 | [Bunqueue](https://tashan.sh/capability/pkg-bunqueue.html) | 69 | 7k/wk | active |
+| 7 | [Bunqueue](https://tashan.sh/capability/pkg-bunqueue.html) | 72 | 5k/wk | active |
 | 8 | [Nvidia Skills](https://tashan.sh/capability/plugin-nvidia-skills-nvidia-skills.html) | 68 | 3k ★ | active |
 | 9 | [Open Computer Use](https://tashan.sh/capability/pkg-open-computer-use.html) | 65 | 3k/wk | active |
 | 10 | [Claude Harness](https://tashan.sh/capability/plugin-chachamaru127-claude-code-harness-claude-harness.html) | 64 | 3k ★ | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Sn](https://tashan.sh/capability/plugin-tehubersheezy-servicenow-cli-sn.html) | 30 | 3 ★ | active |
 | 40 | [Zapier](https://tashan.sh/capability/plugin-zapier-zapier-mcp-zapier.html) | 60 | 363 ★ | active |
 
-Showing the top 40 of 53. The full ranked shelf is at https://tashan.sh/task/process-automation.html.
+Showing the top 40 of 52. The full ranked shelf is at https://tashan.sh/task/process-automation.html.
 
 ## What these numbers are not
 

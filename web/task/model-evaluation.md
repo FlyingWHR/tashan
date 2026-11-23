@@ -23,7 +23,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [HuggingFace Skills](https://tashan.sh/capability/plugin-huggingface-skills-huggingface-skills.html) | 71 | 11k ★ | active |
 | 11 | [Promptfoo Evals](https://tashan.sh/capability/plugin-promptfoo-promptfoo-promptfoo-evals.html) | 70 | 24k ★ | active |
 | 12 | [Agent Eval Harness · redhat-global-engineering](https://tashan.sh/capability/plugin-redhat-global-engineering-ge-public-skills-agent-eval-harness.html) | 40 | 5 ★ | active |
-| 13 | [Setup](https://tashan.sh/capability/skill-alirezarezvani-setup.html) | not scored | 13 repos | active |
+| 13 | [Setup](https://tashan.sh/capability/skill-alirezarezvani-setup.html) | not scored | 10 repos | active |
 | 14 | [Langfuse](https://tashan.sh/capability/plugin-langfuse-skills-langfuse.html) | 61 | 218 ★ | active |
 | 15 | [Nexus Agents](https://tashan.sh/capability/plugin-williamzujkowski-nexus-agents-nexus-agents.html) | 45 | 16 ★ | active |
 | 16 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 46 | 158/wk | active |

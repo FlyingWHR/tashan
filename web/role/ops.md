@@ -10,7 +10,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Knowledge management** — [Atlassian](https://tashan.sh/capability/pkg-mcp-atlassian.html) · tashan score 69
-- **Messaging and email** — [Agentmail](https://tashan.sh/capability/pkg-agentmail-mcp.html) · tashan score 71
+- **Messaging and email** — [Agentmail](https://tashan.sh/capability/pkg-agentmail-mcp.html) · tashan score 69
 - **Browser automation** — [Chrome DevTools](https://tashan.sh/capability/pkg-chrome-devtools-mcp.html) · tashan score 83
 - **Project management** — [Backlog](https://tashan.sh/capability/pkg-backlog-mcp-server.html) · tashan score 77
 - **Web research** — [Exa](https://tashan.sh/capability/pkg-exa-mcp-server.html) · tashan score 80
@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 36 | 7 ★ | active |
 | 40 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 35 | 28 ★ | active |
 
-Showing the top 40 of 922. The full ranked shelf is at https://tashan.sh/role/ops.html.
+Showing the top 40 of 912. The full ranked shelf is at https://tashan.sh/role/ops.html.
 
 ## What these numbers are not
 

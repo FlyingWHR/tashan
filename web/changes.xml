@@ -9,6 +9,14 @@
   <author><name>tashan</name><uri>https://tashan.sh</uri></author>
   <rights>CC BY 4.0 — attribute tashan (tashan.sh).</rights>
   <entry>
+    <title>Firecrawl — firecrawl-mcp has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-firecrawl-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-firecrawl-mcp.html#ownership_changed-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
+  </entry>
+  <entry>
     <title>Currents — @currents/mcp has a different set of npm maintainers than it did</title>
     <link href="https://tashan.sh/capability/pkg-currents-mcp.html"/>
     <id>https://tashan.sh/capability/pkg-currents-mcp.html#ownership_changed-2026-11-23</id>
@@ -17,9 +25,33 @@
     <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
   </entry>
   <entry>
+    <title>Cline — cline has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-cline.html"/>
+    <id>https://tashan.sh/capability/pkg-cline.html#ownership_changed-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
+  </entry>
+  <entry>
+    <title>Codesign — @imgly/codesign-mcp has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-imgly-codesign-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-imgly-codesign-mcp.html#ownership_changed-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
+  </entry>
+  <entry>
     <title>Dev — @shopify/dev-mcp has a different set of npm maintainers than it did</title>
     <link href="https://tashan.sh/capability/pkg-shopify-dev-mcp.html"/>
     <id>https://tashan.sh/capability/pkg-shopify-dev-mcp.html#ownership_changed-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
+  </entry>
+  <entry>
+    <title>WordPress Remote — @automattic/mcp-wordpress-remote has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-automattic-mcp-wordpress-remote.html"/>
+    <id>https://tashan.sh/capability/pkg-automattic-mcp-wordpress-remote.html#ownership_changed-2026-11-23</id>
     <updated>2026-11-23T00:00:00Z</updated>
     <category term="ownership_changed"/>
     <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
@@ -41,6 +73,14 @@
     <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
   </entry>
   <entry>
+    <title>Heroku — @heroku/mcp-server has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-heroku-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-heroku-mcp-server.html#ownership_changed-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
+  </entry>
+  <entry>
     <title>Acw Tools — @bangdao-ai/acw-tools has a different set of npm maintainers than it did</title>
     <link href="https://tashan.sh/capability/pkg-bangdao-ai-acw-tools.html"/>
     <id>https://tashan.sh/capability/pkg-bangdao-ai-acw-tools.html#ownership_changed-2026-11-23</id>
@@ -55,6 +95,14 @@
     <updated>2026-11-23T00:00:00Z</updated>
     <category term="install_script_changed"/>
     <summary>The code that executes on your machine is not the code you last approved.  Compare the new command on the dossier against what you accepted.</summary>
+  </entry>
+  <entry>
+    <title>Lib — @aleph-alpha/lib-mcp has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-aleph-alpha-lib-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-aleph-alpha-lib-mcp.html#ownership_changed-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
   </entry>
   <entry>
     <title>Element — @siemens/element-mcp has a different set of npm maintainers than it did</title>
@@ -76,6 +124,22 @@
     <title>Domains — @hasna/domains now reaches credentials</title>
     <link href="https://tashan.sh/capability/pkg-hasna-domains.html"/>
     <id>https://tashan.sh/capability/pkg-hasna-domains.html#permissions_widened-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Takt — takt now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-takt.html"/>
+    <id>https://tashan.sh/capability/pkg-takt.html#install_script_added-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
+    <title>Harness MCP V2 — harness-mcp-v2 now reaches database</title>
+    <link href="https://tashan.sh/capability/pkg-harness-mcp-v2.html"/>
+    <id>https://tashan.sh/capability/pkg-harness-mcp-v2.html#permissions_widened-2026-11-23</id>
     <updated>2026-11-23T00:00:00Z</updated>
     <category term="permissions_widened"/>
     <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
@@ -105,36 +169,12 @@
     <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
   </entry>
   <entry>
-    <title>Takt — takt now runs a script when it installs</title>
-    <link href="https://tashan.sh/capability/pkg-takt.html"/>
-    <id>https://tashan.sh/capability/pkg-takt.html#install_script_added-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="install_script_added"/>
-    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
-  </entry>
-  <entry>
     <title>Monomind — the command monomind runs at install time changed</title>
     <link href="https://tashan.sh/capability/pkg-monomind.html"/>
     <id>https://tashan.sh/capability/pkg-monomind.html#install_script_changed-2026-11-23</id>
     <updated>2026-11-23T00:00:00Z</updated>
     <category term="install_script_changed"/>
     <summary>The code that executes on your machine is not the code you last approved.  Compare the new command on the dossier against what you accepted.</summary>
-  </entry>
-  <entry>
-    <title>Harness MCP V2 — harness-mcp-v2 now reaches database</title>
-    <link href="https://tashan.sh/capability/pkg-harness-mcp-v2.html"/>
-    <id>https://tashan.sh/capability/pkg-harness-mcp-v2.html#permissions_widened-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
-  </entry>
-  <entry>
-    <title>Advanced GitLab — @structured-world/gitlab-mcp now reaches shell</title>
-    <link href="https://tashan.sh/capability/pkg-structured-world-gitlab-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-structured-world-gitlab-mcp.html#permissions_widened-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="permissions_widened"/>
-    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
   </entry>
   <entry>
     <title>Spacefast — mcp now reaches network</title>
@@ -151,6 +191,14 @@
     <updated>2026-11-23T00:00:00Z</updated>
     <category term="install_script_changed"/>
     <summary>The code that executes on your machine is not the code you last approved.  Compare the new command on the dossier against what you accepted.</summary>
+  </entry>
+  <entry>
+    <title>Formio — formio-mcp now reaches network</title>
+    <link href="https://tashan.sh/capability/pkg-formio-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-formio-mcp.html#permissions_widened-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
   </entry>
   <entry>
     <title>MCP Event Intelligence — event-intelligence now reaches database</title>
@@ -185,6 +233,14 @@
     <summary>The code that executes on your machine is not the code you last approved.  Compare the new command on the dossier against what you accepted.</summary>
   </entry>
   <entry>
+    <title>Cotal AI — cotal-ai now runs a script when it installs</title>
+    <link href="https://tashan.sh/capability/pkg-cotal-ai.html"/>
+    <id>https://tashan.sh/capability/pkg-cotal-ai.html#install_script_added-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="install_script_added"/>
+    <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
+  </entry>
+  <entry>
     <title>Kineti — kineti now runs a script when it installs</title>
     <link href="https://tashan.sh/capability/pkg-kineti.html"/>
     <id>https://tashan.sh/capability/pkg-kineti.html#install_script_added-2026-11-23</id>
@@ -193,9 +249,25 @@
     <summary>Install-time code executes on your machine before you have used the tool once, and it did not do this before.  Read the command on the dossier — it is free — before your next install or CI run.</summary>
   </entry>
   <entry>
+    <title>Netintel — netintel-mcp now reaches network</title>
+    <link href="https://tashan.sh/capability/pkg-netintel-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-netintel-mcp.html#permissions_widened-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
     <title>SEO Webmaster — seo-webmaster-mcp now reaches browser, network</title>
     <link href="https://tashan.sh/capability/pkg-seo-webmaster-mcp.html"/>
     <id>https://tashan.sh/capability/pkg-seo-webmaster-mcp.html#permissions_widened-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Rea Agents — rea-agents now reaches shell</title>
+    <link href="https://tashan.sh/capability/pkg-rea-agents.html"/>
+    <id>https://tashan.sh/capability/pkg-rea-agents.html#permissions_widened-2026-11-23</id>
     <updated>2026-11-23T00:00:00Z</updated>
     <category term="permissions_widened"/>
     <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
@@ -207,6 +279,78 @@
     <updated>2026-11-23T00:00:00Z</updated>
     <category term="permissions_widened"/>
     <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Xactions — xactions now reaches database, network</title>
+    <link href="https://tashan.sh/capability/pkg-xactions.html"/>
+    <id>https://tashan.sh/capability/pkg-xactions.html#permissions_widened-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Keycloak — mcp-keycloak now reaches network</title>
+    <link href="https://tashan.sh/capability/pkg-dockndevai-mcp-keycloak.html"/>
+    <id>https://tashan.sh/capability/pkg-dockndevai-mcp-keycloak.html#permissions_widened-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>SEO Audit Console — seo-audit-console now reaches credentials</title>
+    <link href="https://tashan.sh/capability/pkg-houtini-seo-audit-console.html"/>
+    <id>https://tashan.sh/capability/pkg-houtini-seo-audit-console.html#permissions_widened-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="permissions_widened"/>
+    <summary>Its declared dependencies reach further into your machine than they did before.  Confirm the new reach is something this tool should have.</summary>
+  </entry>
+  <entry>
+    <title>Slack · sigmacomputing — @sigmacomputing/slack-mcp-server has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-sigmacomputing-slack-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-sigmacomputing-slack-mcp-server.html#ownership_changed-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
+  </entry>
+  <entry>
+    <title>Hubspot — @hubspot/mcp-server has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-hubspot-mcp-server.html"/>
+    <id>https://tashan.sh/capability/pkg-hubspot-mcp-server.html#ownership_changed-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
+  </entry>
+  <entry>
+    <title>Reins — the author of reins has declared it unmaintained</title>
+    <link href="https://tashan.sh/capability/pkg-r2rlabs-reins.html"/>
+    <id>https://tashan.sh/capability/pkg-r2rlabs-reins.html#declared_unmaintained-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="declared_unmaintained"/>
+    <summary>Nobody is going to fix the next problem with this, including a security one.  Plan a replacement. The dossier links what else does this work.</summary>
+  </entry>
+  <entry>
+    <title>Stripe · @stripe — @stripe/mcp has a different set of npm maintainers than it did</title>
+    <link href="https://tashan.sh/capability/pkg-stripe-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-stripe-mcp.html#ownership_changed-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="ownership_changed"/>
+    <summary>Who can publish this package changed — the classic supply-chain handoff, and invisible to a maintainer count that did not move.  Pin the version you have audited and read the next release&#x27;s diff before taking it.</summary>
+  </entry>
+  <entry>
+    <title>Stripe · @stripe — @stripe/mcp was marked deprecated on npm</title>
+    <link href="https://tashan.sh/capability/pkg-stripe-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-stripe-mcp.html#deprecated-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="deprecated"/>
+    <summary>The publisher is telling installers to stop using it.  Move to the successor named in the deprecation notice.</summary>
+  </entry>
+  <entry>
+    <title>Design System · dgesteves — design-system-mcp was marked deprecated on npm</title>
+    <link href="https://tashan.sh/capability/pkg-dgesteves-design-system-mcp.html"/>
+    <id>https://tashan.sh/capability/pkg-dgesteves-design-system-mcp.html#deprecated-2026-11-23</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <category term="deprecated"/>
+    <summary>The publisher is telling installers to stop using it.  Move to the successor named in the deprecation notice.</summary>
   </entry>
   <entry>
     <title>Nx — nx-mcp now reads as abandoned, was active</title>
@@ -260,150 +404,6 @@
     <title>Jira · nexus2520 — @nexus2520/jira-mcp-server now reads as abandoned, was active</title>
     <link href="https://tashan.sh/capability/pkg-nexus2520-jira-mcp-server.html"/>
     <id>https://tashan.sh/capability/pkg-nexus2520-jira-mcp-server.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Air — @air/mcp now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-air-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-air-mcp.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Metabase · serdnaley — @serdnaley/metabase-mcp now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-serdnaley-metabase-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-serdnaley-metabase-mcp.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Slack · mintmcp — @mintmcp/slack-mcp-server now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-mintmcp-slack-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-mintmcp-slack-mcp-server.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Unthread IO — @unthread-io/mcp-server now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-unthread-io-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-unthread-io-mcp-server.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Claude Skills Library — claude-skills-library now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-claude-skills-library.html"/>
-    <id>https://tashan.sh/capability/pkg-claude-skills-library.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Gitee — @gitee/mcp-gitee now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-gitee-mcp-gitee.html"/>
-    <id>https://tashan.sh/capability/pkg-gitee-mcp-gitee.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Sinch — @sinch/mcp now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-sinch-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-sinch-mcp.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Simplenote — simplenote-mcp now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-automattic-simplenote-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-automattic-simplenote-mcp.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Trade Router — trade-router-mcp now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-traderouter-trade-router-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-traderouter-trade-router-mcp.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Openfeature — mcp now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-openfeature-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-openfeature-mcp.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>SDK · appsflyer — @appsflyer/sdk-mcp-server now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-appsflyer-sdk-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-appsflyer-sdk-mcp-server.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Ghost — @fanyangmeng/ghost-mcp now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-fanyangmeng-ghost-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-fanyangmeng-ghost-mcp.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Notebooklm · PleasePrompto — notebooklm-mcp now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-notebooklm-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-notebooklm-mcp.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>EOxElements — EOxElements now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-eox-elements-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-eox-elements-mcp-server.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Chub — @aisuite/chub now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-aisuite-chub.html"/>
-    <id>https://tashan.sh/capability/pkg-aisuite-chub.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Teamcity — teamcity now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-daghis-teamcity-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-daghis-teamcity-mcp.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Aidemd — @aidemd-mcp/server now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-aidemd-mcp-server.html"/>
-    <id>https://tashan.sh/capability/pkg-aidemd-mcp-server.html#abandoned-2026-11-23</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <category term="abandoned"/>
-    <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>
-  </entry>
-  <entry>
-    <title>Rolli — mcp now reads as abandoned, was active</title>
-    <link href="https://tashan.sh/capability/pkg-rolli-mcp.html"/>
-    <id>https://tashan.sh/capability/pkg-rolli-mcp.html#abandoned-2026-11-23</id>
     <updated>2026-11-23T00:00:00Z</updated>
     <category term="abandoned"/>
     <summary>Upkeep signals stopped, under enough issue pressure that it is not merely finished.  Check whether an alternative is better maintained before you depend on it further.</summary>

@@ -43,7 +43,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 21 | [Adcp Client](https://tashan.sh/capability/plugin-adcontextprotocol-adcp-client-adcp-client.html) | 48 | 18 ★ | active |
 | 22 | [Noosphere](https://tashan.sh/capability/plugin-jinning6-noosphere-noosphere.html) | 48 | 18 ★ | active |
 | 23 | [Roundtable](https://tashan.sh/capability/plugin-wan-huiyan-agent-review-panel-roundtable.html) | 47 | 30 ★ | active |
-| 24 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 47 | 23 ★ | active |
+| 24 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 46 | 23 ★ | active |
 | 25 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 46 | 381 ★ | active |
 | 26 | [Scandit SDK](https://tashan.sh/capability/plugin-scandit-scandit-sdk-skills-scandit-sdk.html) | 45 | 15 ★ | active |
 | 27 | [Asc · pofky](https://tashan.sh/capability/pkg-pofky-asc-mcp.html) | 45 | 177/wk | active |
@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Archy](https://tashan.sh/capability/plugin-hslee16-archy-archy.html) | 41 | 6 ★ | active |
 | 40 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 41 | 6 ★ | active |
 
-Showing the top 40 of 1,021. The full ranked shelf is at https://tashan.sh/role/engineer.html.
+Showing the top 40 of 1,005. The full ranked shelf is at https://tashan.sh/role/engineer.html.
 
 ## What these numbers are not
 

@@ -23,9 +23,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Reqvire](https://tashan.sh/capability/plugin-reqvire-org-reqvire-reqvire.html) | 42 | 15 ★ | active |
 | 11 | [Supergraph](https://tashan.sh/capability/plugin-datit309-supergraph-supergraph.html) | 41 | 22 ★ | active |
 | 12 | [Groundwork](https://tashan.sh/capability/plugin-etr-groundwork-groundwork.html) | 41 | 41 ★ | active |
-| 13 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 40 | 4 ★ | active |
-| 14 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 39 | 4 ★ | active |
-| 15 | [Nova Thesis](https://tashan.sh/capability/plugin-jerry7991-nova-thesis-nova-thesis.html) | 39 | 12 ★ | stable |
+| 13 | [Drift Detect](https://tashan.sh/capability/plugin-agent-sh-drift-detect-drift-detect.html) | 39 | 4 ★ | active |
+| 14 | [Nova Thesis](https://tashan.sh/capability/plugin-jerry7991-nova-thesis-nova-thesis.html) | 39 | 12 ★ | stable |
+| 15 | [Adr Kit](https://tashan.sh/capability/plugin-rvdbreemen-adr-kit-adr-kit.html) | 39 | 4 ★ | active |
 | 16 | [Archcore](https://tashan.sh/capability/plugin-archcore-ai-archcore-plugin-archcore.html) | 37 | 50 ★ | active |
 | 17 | [Three Pillars](https://tashan.sh/capability/plugin-curtisthe-three-pillars-plugin-three-pillars.html) | 34 | 4 ★ | active |
 | 18 | [Excalidrawer](https://tashan.sh/capability/plugin-guohaonan-shy-excalidrawer-excalidrawer.html) | 33 | 3 ★ | active |
@@ -45,7 +45,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 32 | [Weavatrix Online](https://tashan.sh/capability/pkg-weavatrix-online.html) | 43 | 374/wk | active |
 | 33 | [Forgecraft](https://tashan.sh/capability/pkg-forgecraft-mcp.html) | 37 | 110/wk | active |
 | 34 | [Guard](https://tashan.sh/capability/pkg-codapult-guard.html) | 54 | 587/wk | active |
-| 35 | [Spec Driven Develop](https://tashan.sh/capability/plugin-zhu1090093659-spec-driven-develop-spec-driven-develop.html) | 53 | 978 ★ | active |
+| 35 | [Spec Driven Develop](https://tashan.sh/capability/plugin-zhu1090093659-spec-driven-develop-spec-driven-develop.html) | 52 | 978 ★ | active |
 | 36 | [Crayon C4](https://tashan.sh/capability/pkg-crayon-c4-mcp.html) | 50 | 374/wk | active |
 | 37 | [Systemdox](https://tashan.sh/capability/pkg-systemdox-mcp-server.html) | 50 | 180/wk | active |
 | 38 | [Archprint](https://tashan.sh/capability/pkg-archprint.html) | 49 | 105/wk | active |

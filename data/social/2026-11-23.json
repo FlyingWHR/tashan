@@ -1,9 +1,9 @@
 {
- "subject": "pkg:@currents/mcp",
+ "subject": "pkg:firecrawl-mcp",
  "kind": "ownership_changed",
- "x": "Currents changed.\n\nMeasured 2026-11-23. https://tashan.sh/capability/pkg-currents-mcp",
- "threads": "Currents changed.\n\nPin the version you have audited and read the next release's diff before taking it.\n\nMeasured 2026-11-23 from public evidence, free to check: https://tashan.sh/capability/pkg-currents-mcp",
- "farcaster": "Currents changed.\n\nPin the version you have audited and read the next release's diff before taking it.\n\nMeasured 2026-11-23 from public evidence, free to check: https://tashan.sh/capability/pkg-currents-mcp",
+ "x": "Firecrawl changed.\n\nMeasured 2026-11-23. https://tashan.sh/capability/pkg-firecrawl-mcp",
+ "threads": "Firecrawl changed.\n\nPin the version you have audited and read the next release's diff before taking it.\n\nMeasured 2026-11-23 from public evidence, free to check: https://tashan.sh/capability/pkg-firecrawl-mcp",
+ "farcaster": "Firecrawl changed.\n\nPin the version you have audited and read the next release's diff before taking it.\n\nMeasured 2026-11-23 from public evidence, free to check: https://tashan.sh/capability/pkg-firecrawl-mcp",
  "day": "2026-11-23",
  "status": "draft"
 }

@@ -31,28 +31,28 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Rdstation CRM](https://tashan.sh/capability/pkg-rdstation-crm-mcp.html) | 40 | 258/wk | active |
 | 19 | [Propstack](https://tashan.sh/capability/pkg-propstack-mcp-server.html) | 36 | 92/wk | active |
 | 20 | [Acculynx CLI](https://tashan.sh/capability/pkg-opsrev-acculynx-cli.html) | 36 | 47/wk | active |
-| 21 | [Gtm Tech Stack Signal Scraper](https://tashan.sh/capability/pkg-mambalabsdev-mcp-gtm-tech-stack-signal-scraper.html) | 35 | 99/wk | active |
-| 22 | [Conduyt CRM](https://tashan.sh/capability/pkg-conduyt-mcp.html) | 61 | 1k/wk | active |
-| 23 | [Affinity](https://tashan.sh/capability/pkg-alludium-affinity-mcp-server.html) | 56 | 364/wk | active |
-| 24 | [Crmincloud](https://tashan.sh/capability/pkg-memori-ai-mcp-crmincloud.html) | 53 | 374/wk | active |
-| 25 | [Skills · vruum](https://tashan.sh/capability/pkg-vruum-skills.html) | 53 | 284/wk | active |
-| 26 | [B2bleads](https://tashan.sh/capability/pkg-b2bleads-mcp.html) | 52 | 589/wk | active |
-| 27 | [Gambot WhatsApp Business API](https://tashan.sh/capability/pkg-gambot-mcp.html) | 48 | 236/wk | active |
-| 28 | [Free AI Ops](https://tashan.sh/capability/pkg-miraigent-free-ai-ops-mcp.html) | 46 | 115/wk | active |
-| 29 | [Luca](https://tashan.sh/capability/pkg-setluca-mcp.html) | 45 | 346/wk | active |
-| 30 | [Holded](https://tashan.sh/capability/pkg-t4dhg-mcp-holded.html) | 45 | 156/wk | active |
-| 31 | [Keepsake](https://tashan.sh/capability/pkg-keepsake-mcp.html) | 44 | 232/wk | active |
-| 32 | [Outbound Infrastructure Fingerprint](https://tashan.sh/capability/pkg-mambalabsdev-mcp-outbound-infrastructure-fingerprint.html) | 43 | 341/wk | active |
-| 33 | [Dealsurface](https://tashan.sh/capability/pkg-dealsurface-mcp-server.html) | 43 | 158/wk | active |
-| 34 | [Hubertino: Google Maps leads](https://tashan.sh/capability/pkg-hubertino-mcp-server.html) | 43 | 98/wk | active |
-| 35 | [Salesforce Cloud](https://tashan.sh/capability/pkg-aaronsb-salesforce-cloud-mcp.html) | 43 | 60/wk | active |
-| 36 | [Livespace CRM](https://tashan.sh/capability/pkg-livespace-crm-mcp.html) | 42 | 313/wk | active |
-| 37 | [Misarreach](https://tashan.sh/capability/pkg-misarreach-mcp.html) | 42 | 44/wk | active |
-| 38 | [Founders OS](https://tashan.sh/capability/pkg-ourthinktank-founders-os.html) | 42 | 39/wk | active |
-| 39 | [Fullstackgtm](https://tashan.sh/capability/pkg-fullstackgtm.html) | 41 | 99/wk | active |
-| 40 | [Astramindapp](https://tashan.sh/capability/pkg-astramindapp-mcp-server.html) | 40 | 106/wk | active |
+| 21 | [Conduyt CRM](https://tashan.sh/capability/pkg-conduyt-mcp.html) | 61 | 1k/wk | active |
+| 22 | [Affinity](https://tashan.sh/capability/pkg-alludium-affinity-mcp-server.html) | 56 | 364/wk | active |
+| 23 | [Crmincloud](https://tashan.sh/capability/pkg-memori-ai-mcp-crmincloud.html) | 53 | 374/wk | active |
+| 24 | [Skills · vruum](https://tashan.sh/capability/pkg-vruum-skills.html) | 53 | 284/wk | active |
+| 25 | [B2bleads](https://tashan.sh/capability/pkg-b2bleads-mcp.html) | 52 | 589/wk | active |
+| 26 | [Gambot WhatsApp Business API](https://tashan.sh/capability/pkg-gambot-mcp.html) | 48 | 236/wk | active |
+| 27 | [Free AI Ops](https://tashan.sh/capability/pkg-miraigent-free-ai-ops-mcp.html) | 46 | 115/wk | active |
+| 28 | [Luca](https://tashan.sh/capability/pkg-setluca-mcp.html) | 45 | 346/wk | active |
+| 29 | [Holded](https://tashan.sh/capability/pkg-t4dhg-mcp-holded.html) | 45 | 156/wk | active |
+| 30 | [Outbound Infrastructure Fingerprint](https://tashan.sh/capability/pkg-mambalabsdev-mcp-outbound-infrastructure-fingerprint.html) | 43 | 341/wk | active |
+| 31 | [Dealsurface](https://tashan.sh/capability/pkg-dealsurface-mcp-server.html) | 43 | 158/wk | active |
+| 32 | [Hubertino: Google Maps leads](https://tashan.sh/capability/pkg-hubertino-mcp-server.html) | 43 | 98/wk | active |
+| 33 | [Salesforce Cloud](https://tashan.sh/capability/pkg-aaronsb-salesforce-cloud-mcp.html) | 43 | 60/wk | active |
+| 34 | [Livespace CRM](https://tashan.sh/capability/pkg-livespace-crm-mcp.html) | 42 | 313/wk | active |
+| 35 | [Misarreach](https://tashan.sh/capability/pkg-misarreach-mcp.html) | 42 | 44/wk | active |
+| 36 | [Founders OS](https://tashan.sh/capability/pkg-ourthinktank-founders-os.html) | 42 | 39/wk | active |
+| 37 | [Fullstackgtm](https://tashan.sh/capability/pkg-fullstackgtm.html) | 41 | 99/wk | active |
+| 38 | [Astramindapp](https://tashan.sh/capability/pkg-astramindapp-mcp-server.html) | 40 | 106/wk | active |
+| 39 | [Ergora Specialists](https://tashan.sh/capability/pkg-ergora-specialists-mcp.html) | 40 | 46/wk | active |
+| 40 | [Chirak](https://tashan.sh/capability/pkg-chirak-mcp.html) | 40 | 43/wk | active |
 
-Showing the top 40 of 47. The full ranked shelf is at https://tashan.sh/role/sales.html.
+Showing the top 40 of 45. The full ranked shelf is at https://tashan.sh/role/sales.html.
 
 ## What these numbers are not
 

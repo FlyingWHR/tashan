@@ -10,7 +10,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Project management** — [Backlog](https://tashan.sh/capability/pkg-backlog-mcp-server.html) · tashan score 77
-- **PRDs and specs** — [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) · tashan score 71
+- **PRDs and specs** — [Paqad AI](https://tashan.sh/capability/pkg-paqad-ai.html) · tashan score 72
 - **Market analysis** — [Last30days](https://tashan.sh/capability/plugin-mvanhorn-last30days-skill-last30days.html) · tashan score 70
 - **Design critique** — [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) · tashan score 72
 - **User research** — [Frog](https://tashan.sh/capability/pkg-frog.html) · tashan score 69
@@ -34,7 +34,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 12 | [Gooseworks](https://tashan.sh/capability/plugin-gooseworks-ai-gooseworks-gooseworks.html) | 41 | 6 ★ | active |
 | 13 | [Mangrovetrader](https://tashan.sh/capability/plugin-mangrovetechnologies-mangrove-trader-plugin-mangrovetrader.html) | 38 | 3 ★ | active |
 | 14 | [Dominion Flow](https://tashan.sh/capability/plugin-thierryn-fire-flow-dominion-flow.html) | 34 | 77 ★ | active |
-| 15 | [Astravue](https://tashan.sh/capability/plugin-astravueorg-astravue-mcp-server-astravue.html) | 34 | 12 ★ | active |
+| 15 | [Astravue](https://tashan.sh/capability/plugin-astravueorg-astravue-mcp-server-astravue.html) | 33 | 12 ★ | active |
 | 16 | [GitLab](https://tashan.sh/capability/pkg-zereight-mcp-gitlab.html) | 73 | 143k/wk | active |
 | 17 | [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) | 72 | 51k ★ | active |
 | 18 | [Growthbook](https://tashan.sh/capability/pkg-growthbook-mcp.html) | 72 | 11k/wk | active |
@@ -61,7 +61,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Claude Ops](https://tashan.sh/capability/plugin-lifecycle-innovations-limited-claude-ops-claude-ops.html) | 45 | 20 ★ | active |
 | 40 | [Eurostat · cyanheads](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 45 | 214/wk | active |
 
-Showing the top 40 of 217. The full ranked shelf is at https://tashan.sh/role/pm.html.
+Showing the top 40 of 214. The full ranked shelf is at https://tashan.sh/role/pm.html.
 
 ## What these numbers are not
 

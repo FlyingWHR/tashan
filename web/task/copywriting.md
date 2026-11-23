@@ -14,7 +14,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 1 | [Humanize Korean](https://tashan.sh/capability/plugin-epoko77-ai-im-not-ai-humanize-korean.html) | 65 | 4k ★ | active |
 | 2 | [Natural Japanese](https://tashan.sh/capability/plugin-coji-natural-japanese-natural-japanese.html) | 39 | 123 ★ | active |
 | 3 | [Claude Blog](https://tashan.sh/capability/plugin-agricidaniel-claude-blog-claude-blog.html) | 53 | 1k ★ | active |
-| 4 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 48 | 238 ★ | active |
+| 4 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 47 | 238 ★ | active |
 | 5 | [Idiolect](https://tashan.sh/capability/plugin-nagisanzenin-idiolect-idiolect.html) | 32 | 19 ★ | active |
 | 6 | [Claude Scholar](https://tashan.sh/capability/plugin-galaxy-dawn-claude-scholar-claude-scholar.html) | 64 | 5k ★ | active |
 | 7 | [Scrivener](https://tashan.sh/capability/pkg-scrivener-mcp.html) | 42 | 141/wk | active |

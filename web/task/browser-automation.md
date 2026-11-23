@@ -23,20 +23,20 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Jobpilot](https://tashan.sh/capability/plugin-suxrobgm-jobpilot-jobpilot.html) | 36 | 38 ★ | active |
 | 11 | [Patchright MCP Jalikey](https://tashan.sh/capability/pkg-patchright-mcp-jalikey.html) | 36 | 37/wk | active |
 | 12 | [Realbrowser](https://tashan.sh/capability/plugin-darkamenosa-realbrowser-realbrowser.html) | 34 | 57 ★ | active |
-| 13 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 34 | 15 ★ | active |
+| 13 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 33 | 15 ★ | active |
 | 14 | [Ever Browser](https://tashan.sh/capability/plugin-namuh-eng-everbrowser-ever-browser.html) | 33 | 6 ★ | active |
 | 15 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 32 | 22 ★ | active |
 | 16 | [Shiplight](https://tashan.sh/capability/pkg-shiplightai-mcp.html) | 70 | 517/wk | active |
 | 17 | [Playwright Pro](https://tashan.sh/capability/plugin-alirezarezvani-claude-skills-playwright-pro.html) | 69 | 23k ★ | active |
 | 18 | [Chrome Bridge](https://tashan.sh/capability/pkg-chrome-bridge-mcp.html) | 40 | 104/wk | active |
 | 19 | [Agentiqa](https://tashan.sh/capability/plugin-agentiqa-agentiqa-plugin-agentiqa.html) | 36 | 1 ★ | active |
-| 20 | [Puppeteer](https://tashan.sh/capability/pkg-modelcontextprotocol-server-puppeteer.html) | not scored | 40k/wk | abandoned |
+| 20 | [Puppeteer](https://tashan.sh/capability/pkg-modelcontextprotocol-server-puppeteer.html) | not scored | 26k/wk | abandoned |
 | 21 | [Actionbook](https://tashan.sh/capability/plugin-actionbook-actionbook-actionbook.html) | 61 | 2k ★ | active |
 | 22 | [Tinyfish](https://tashan.sh/capability/plugin-tinyfish-io-tinyfish-web-agent-integrations-tinyfish.html) | 47 | 14 ★ | active |
 | 23 | [Cypress](https://tashan.sh/capability/plugin-cypress-io-ai-toolkit-cypress.html) | 45 | 37 ★ | active |
 | 24 | [Browser Act](https://tashan.sh/capability/plugin-browser-act-claude-code-browser-act-browser-act.html) | 38 | 21 ★ | active |
-| 25 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 71 | 3k/wk | active |
-| 26 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 66 | 4k/wk | active |
+| 25 | [Accessibility Scanner](https://tashan.sh/capability/pkg-mcp-accessibility-scanner.html) | 72 | 4k/wk | active |
+| 26 | [Safari](https://tashan.sh/capability/pkg-safari-mcp.html) | 71 | 3k/wk | active |
 | 27 | [Desktop Touch](https://tashan.sh/capability/pkg-harusame64-desktop-touch-mcp.html) | 50 | 286/wk | active |
 | 28 | [Machine Bridge](https://tashan.sh/capability/pkg-machine-bridge-mcp.html) | 48 | 588/wk | active |
 | 29 | [Pagebolt](https://tashan.sh/capability/pkg-pagebolt-mcp.html) | 48 | 349/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Mcpbrowser](https://tashan.sh/capability/pkg-mcpbrowser.html) | 49 | 297/wk | active |
 | 40 | [Cloakbrowser](https://tashan.sh/capability/pkg-cloakbrowser-mcp.html) | 49 | 231/wk | active |
 
-Showing the top 40 of 152. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
+Showing the top 40 of 150. The full ranked shelf is at https://tashan.sh/task/browser-automation.html.
 
 ## What these numbers are not
 

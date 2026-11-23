@@ -15,7 +15,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Zscaler](https://tashan.sh/capability/plugin-zscaler-zscaler-mcp-server-zscaler.html) | 53 | 41 ★ | active |
 | 3 | [Australian Tax](https://tashan.sh/capability/pkg-ato-mcp.html) | 53 | 363/wk | active |
 | 4 | [Openstates](https://tashan.sh/capability/pkg-cyanheads-openstates-mcp-server.html) | 49 | 317/wk | active |
-| 5 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 47 | 23 ★ | active |
+| 5 | [GitHub Autopilot](https://tashan.sh/capability/plugin-shweta-mishra-ai-github-autopilot-github-autopilot.html) | 46 | 23 ★ | active |
 | 6 | [Courtlistener · cyanheads](https://tashan.sh/capability/pkg-cyanheads-courtlistener-mcp-server.html) | 44 | 157/wk | active |
 | 7 | [Agentic Security](https://tashan.sh/capability/plugin-clear-capabilities-agentic-security-agentic-security.html) | 40 | 73 ★ | active |
 | 8 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 62 | 283/wk | active |
@@ -28,7 +28,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Shieldcortex](https://tashan.sh/capability/pkg-shieldcortex.html) | 52 | 281/wk | active |
 | 16 | [Crowdstrike Falcon Foundry](https://tashan.sh/capability/plugin-crowdstrike-foundry-skills-crowdstrike-falcon-foundry.html) | 51 | 22 ★ | active |
 | 17 | [Armorclaude](https://tashan.sh/capability/plugin-armoriq-armorclaude-armorclaude.html) | 51 | 44 ★ | active |
-| 18 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 49 | 284 ★ | active |
+| 18 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 48 | 284 ★ | active |
 | 19 | [Crowdsec](https://tashan.sh/capability/plugin-crowdsecurity-crowdsec-skill-crowdsec.html) | 46 | 21 ★ | active |
 | 20 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 46 | 27 ★ | active |
 | 21 | [Nist Nvd](https://tashan.sh/capability/pkg-cyanheads-nist-nvd-mcp-server.html) | 46 | 139/wk | active |
@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Security Guidance](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-security-guidance.html) | 46 | 2 marketplaces | — |
 | 40 | [Prodsec Skills Ge Core](https://tashan.sh/capability/plugin-redhatproductsecurity-prodsec-skills-prodsec-skills-ge-core.html) | 46 | 43 ★ | active |
 
-Showing the top 40 of 173. The full ranked shelf is at https://tashan.sh/role/security.html.
+Showing the top 40 of 170. The full ranked shelf is at https://tashan.sh/role/security.html.
 
 ## What these numbers are not
 

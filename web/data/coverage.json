@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 1121,
+  "full": 1120,
   "grade": 3811,
-  "n": 116481,
-  "scan": 8923,
-  "score": 77454,
-  "task": 5297
+  "n": 118683,
+  "scan": 9233,
+  "score": 78266,
+  "task": 5336
  },
  "axes": [
   {
@@ -31,10 +31,10 @@
   }
  ],
  "headline": {
-  "graded_pct": 27,
+  "graded_pct": 26,
   "scanned_pct": 100,
-  "scored_pct": 98,
-  "tasked_pct": 48,
+  "scored_pct": 97,
+  "tasked_pct": 49,
   "tier": "top1000"
  },
  "queue": [
@@ -46,6 +46,16 @@
     "grade"
    ],
    "name": "agent-install"
+  },
+  {
+   "downloads": 1665896,
+   "id": "pkg:fallow",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "fallow"
   },
   {
    "downloads": 1264551,
@@ -189,16 +199,6 @@
    "name": "@oh-my-pi/pi-mnemopi"
   },
   {
-   "downloads": 134967,
-   "id": "pkg:@modelcontextprotocol/server-github",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade"
-   ],
-   "name": "@modelcontextprotocol/server-github"
-  },
-  {
    "downloads": 134579,
    "id": "pkg:@sentry/mcp-server",
    "kind": "npm",
@@ -213,8 +213,7 @@
    "id": "pkg:@modelcontextprotocol/conformance",
    "kind": "npm",
    "missing": [
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "@modelcontextprotocol/conformance"
   },
@@ -227,6 +226,15 @@
     "task"
    ],
    "name": "agentation-mcp"
+  },
+  {
+   "downloads": 120167,
+   "id": "pkg:nx-mcp",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "nx-mcp"
   },
   {
    "downloads": 120075,
@@ -297,6 +305,16 @@
    "name": "@bike4mind/cli"
   },
   {
+   "downloads": 101228,
+   "id": "pkg:@modelcontextprotocol/server-github",
+   "kind": "npm",
+   "missing": [
+    "score",
+    "grade"
+   ],
+   "name": "@modelcontextprotocol/server-github"
+  },
+  {
    "downloads": 97309,
    "id": "pkg:agentic-flow",
    "kind": "npm",
@@ -344,6 +362,16 @@
    "name": "@claude-flow/cli-core"
   },
   {
+   "downloads": 75911,
+   "id": "pkg:metaharness",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "metaharness"
+  },
+  {
    "downloads": 75836,
    "id": "pkg:@azure/mcp-win32-x64",
    "kind": "npm",
@@ -363,15 +391,6 @@
    "name": "@tobilu/qmd"
   },
   {
-   "downloads": 69469,
-   "id": "pkg:nx-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "nx-mcp"
-  },
-  {
    "downloads": 69317,
    "id": "pkg:@serdnaley/metabase-mcp",
    "kind": "npm",
@@ -381,60 +400,41 @@
    "name": "@serdnaley/metabase-mcp"
   },
   {
-   "downloads": 64227,
-   "id": "pkg:@azure/mcp-linux-x64",
+   "downloads": 69234,
+   "id": "pkg:@hubspot/mcp-server",
    "kind": "npm",
    "missing": [
     "grade",
     "task"
    ],
-   "name": "@azure/mcp-linux-x64"
+   "name": "@hubspot/mcp-server"
   },
   {
-   "downloads": 64170,
-   "id": "pkg:@shopify/dev-mcp",
+   "downloads": 64325,
+   "id": "pkg:@imgly/codesign-mcp",
    "kind": "npm",
    "missing": [
     "grade"
    ],
-   "name": "@shopify/dev-mcp"
-  },
-  {
-   "downloads": 63194,
-   "id": "pkg:@google-cloud/observability-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@google-cloud/observability-mcp"
-  },
-  {
-   "downloads": 59711,
-   "id": "pkg:@softeria/ms-365-mcp-server",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@softeria/ms-365-mcp-server"
+   "name": "@imgly/codesign-mcp"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 37,
-   "grade": 40,
+   "full": 38,
+   "grade": 42,
    "n": 100,
    "scan": 100,
-   "score": 95,
-   "task": 62
+   "score": 96,
+   "task": 64
   },
   "top1000": {
-   "full": 217,
-   "grade": 271,
+   "full": 213,
+   "grade": 263,
    "n": 1000,
    "scan": 1000,
-   "score": 975,
-   "task": 483
+   "score": 972,
+   "task": 489
   }
  }
 }

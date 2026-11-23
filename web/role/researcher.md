@@ -47,7 +47,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 27 | [Artel](https://tashan.sh/capability/plugin-nicolasprimeau-artel-artel.html) | 36 | 7 ★ | active |
 | 28 | [Local RAG · TheWinci](https://tashan.sh/capability/plugin-thewinci-local-rag-local-rag.html) | 35 | 28 ★ | active |
 | 29 | [Arx](https://tashan.sh/capability/plugin-eric-tramel-arx-arx.html) | 30 | 7 ★ | active |
-| 30 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 77 | 30k/wk | active |
+| 30 | [Perplexity API Platform](https://tashan.sh/capability/pkg-perplexity-ai-mcp-server.html) | 80 | 87k/wk | active |
 | 31 | [Desktop Commander · wonderwhy-er](https://tashan.sh/capability/plugin-wonderwhy-er-desktopcommandermcp-desktop-commander.html) | 71 | 9k ★ | active |
 | 32 | [Mem0](https://tashan.sh/capability/plugin-mem0ai-mem0-mem0.html) | 70 | 62k ★ | active |
 | 33 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 70 | 5k ★ | active |
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Seekstone](https://tashan.sh/capability/pkg-seekstone.html) | 57 | 452/wk | active |
 | 40 | [Outline](https://tashan.sh/capability/plugin-vortiago-mcp-outline-mcp-outline.html) | 56 | 154 ★ | active |
 
-Showing the top 40 of 457. The full ranked shelf is at https://tashan.sh/role/researcher.html.
+Showing the top 40 of 450. The full ranked shelf is at https://tashan.sh/role/researcher.html.
 
 ## What these numbers are not
 

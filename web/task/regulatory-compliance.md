@@ -16,7 +16,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Openstates](https://tashan.sh/capability/pkg-cyanheads-openstates-mcp-server.html) | 49 | 317/wk | active |
 | 4 | [Courtlistener · cyanheads](https://tashan.sh/capability/pkg-cyanheads-courtlistener-mcp-server.html) | 44 | 157/wk | active |
 | 5 | [Scf](https://tashan.sh/capability/pkg-mcp-server-scf.html) | 62 | 283/wk | active |
-| 6 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 49 | 284 ★ | active |
+| 6 | [Architecture Studio](https://tashan.sh/capability/plugin-alpacalabsllc-skills-for-architects-architecture-studio.html) | 48 | 284 ★ | active |
 | 7 | [Healthclaw Guardrails](https://tashan.sh/capability/plugin-aks129-healthclawguardrails-healthclaw-guardrails.html) | 46 | 27 ★ | active |
 | 8 | [Akf](https://tashan.sh/capability/plugin-hmakt99-akf-akf.html) | 42 | 13 ★ | active |
 | 9 | [Ris Austria](https://tashan.sh/capability/pkg-cyanheads-ris-austria-mcp-server.html) | 41 | 82/wk | active |
@@ -27,7 +27,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 14 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 46 | 37 ★ | active |
 | 15 | [Fianu Skills](https://tashan.sh/capability/plugin-fianulabs-fianu-skills-fianu-skills.html) | 36 | 1 ★ | active |
 | 16 | [Langguard Scope](https://tashan.sh/capability/plugin-langguard-ai-scope-mcp-langguard-scope-mcp.html) | 35 | 5 ★ | active |
-| 17 | [Governance SDK](https://tashan.sh/capability/pkg-governance-sdk.html) | 59 | 6k/wk | active |
+| 17 | [Governance SDK](https://tashan.sh/capability/pkg-governance-sdk.html) | 50 | 514/wk | active |
 | 18 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 41 | 95/wk | active |
 | 19 | [Dingdawg Compliance](https://tashan.sh/capability/pkg-dingdawg-compliance.html) | 40 | 88/wk | active |
 | 20 | [Agent Passport System — Cryptographic Identity for AI Agents](https://tashan.sh/capability/pkg-agent-passport-system-mcp.html) | 47 | 325/wk | active |
@@ -38,21 +38,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 25 | [Lexvibe](https://tashan.sh/capability/pkg-lexvibe-mcp.html) | 40 | 81/wk | active |
 | 26 | [Zentric Protocol](https://tashan.sh/capability/pkg-zentric-protocol-mcp.html) | 36 | 108/wk | active |
 | 27 | [Kasbah](https://tashan.sh/capability/pkg-yobekasbah-mcp-server.html) | 36 | 94/wk | active |
-| 28 | [Checker](https://tashan.sh/capability/pkg-oksigenia-checker-mcp.html) | 35 | 67/wk | active |
-| 29 | [Company Gi](https://tashan.sh/capability/pkg-company-gi-mcp.html) | not scored | 55/wk | abandoned |
-| 30 | [Prowler](https://tashan.sh/capability/plugin-prowler-cloud-prowler-prowler.html) | 73 | 15k ★ | active |
-| 31 | [Agt Governance](https://tashan.sh/capability/plugin-microsoft-agent-governance-toolkit-agt-governance.html) | 72 | 6k ★ | active |
-| 32 | [Compliance](https://tashan.sh/capability/pkg-yawlabs-mcp-compliance.html) | 53 | 369/wk | active |
-| 33 | [Compliance Checker](https://tashan.sh/capability/pkg-guardbee-mcp-compliance-checker.html) | 52 | 383/wk | active |
-| 34 | [Solana X402 Compliance](https://tashan.sh/capability/pkg-msantagiulianab-x402-mcp-server.html) | 49 | 141/wk | active |
-| 35 | [Ges](https://tashan.sh/capability/pkg-greenarmor-ges-mcp-server.html) | 48 | 225/wk | active |
-| 36 | [Consent Proof Record Lint](https://tashan.sh/capability/pkg-readystack-consent-proof-record-lint.html) | 47 | 336/wk | active |
-| 37 | [H1veframework](https://tashan.sh/capability/pkg-h1veframework-cli.html) | 47 | 73/wk | active |
-| 38 | [Helio](https://tashan.sh/capability/pkg-gethelio-proxy.html) | 47 | 54/wk | active |
-| 39 | [Compliance · yaktool-compliance-mcp](https://tashan.sh/capability/pkg-yaktool-compliance-mcp.html) | 44 | 187/wk | active |
-| 40 | [Epa](https://tashan.sh/capability/pkg-cyanheads-epa-mcp-server.html) | 44 | 172/wk | active |
+| 28 | [Company Gi](https://tashan.sh/capability/pkg-company-gi-mcp.html) | not scored | 55/wk | abandoned |
+| 29 | [Prowler](https://tashan.sh/capability/plugin-prowler-cloud-prowler-prowler.html) | 73 | 15k ★ | active |
+| 30 | [Agt Governance](https://tashan.sh/capability/plugin-microsoft-agent-governance-toolkit-agt-governance.html) | 71 | 6k ★ | active |
+| 31 | [Compliance](https://tashan.sh/capability/pkg-yawlabs-mcp-compliance.html) | 53 | 369/wk | active |
+| 32 | [Compliance Checker](https://tashan.sh/capability/pkg-guardbee-mcp-compliance-checker.html) | 52 | 383/wk | active |
+| 33 | [Solana X402 Compliance](https://tashan.sh/capability/pkg-msantagiulianab-x402-mcp-server.html) | 49 | 141/wk | active |
+| 34 | [Ges](https://tashan.sh/capability/pkg-greenarmor-ges-mcp-server.html) | 48 | 225/wk | active |
+| 35 | [Consent Proof Record Lint](https://tashan.sh/capability/pkg-readystack-consent-proof-record-lint.html) | 47 | 336/wk | active |
+| 36 | [H1veframework](https://tashan.sh/capability/pkg-h1veframework-cli.html) | 47 | 73/wk | active |
+| 37 | [Helio](https://tashan.sh/capability/pkg-gethelio-proxy.html) | 47 | 54/wk | active |
+| 38 | [Compliance · yaktool-compliance-mcp](https://tashan.sh/capability/pkg-yaktool-compliance-mcp.html) | 44 | 187/wk | active |
+| 39 | [Epa](https://tashan.sh/capability/pkg-cyanheads-epa-mcp-server.html) | 44 | 172/wk | active |
+| 40 | [Moodle Dev](https://tashan.sh/capability/plugin-saadrahman01-claude-moodle-dev-moodle-dev.html) | 43 | 31 ★ | active |
 
-Showing the top 40 of 54. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
+Showing the top 40 of 51. The full ranked shelf is at https://tashan.sh/task/regulatory-compliance.html.
 
 ## What these numbers are not
 

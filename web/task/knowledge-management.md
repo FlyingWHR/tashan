@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Loreconvo](https://tashan.sh/capability/plugin-labyrinth-analytics-loreconvo-loreconvo.html) | 42 | 10 ★ | active |
 | 40 | [Oh My Obsidian](https://tashan.sh/capability/plugin-hongdangmoo49-oh-my-obsidian-oh-my-obsidian.html) | 42 | 27 ★ | active |
 
-Showing the top 40 of 307. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
+Showing the top 40 of 304. The full ranked shelf is at https://tashan.sh/task/knowledge-management.html.
 
 ## What these numbers are not
 

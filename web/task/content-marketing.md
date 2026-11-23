@@ -17,7 +17,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 4 | [Postiz](https://tashan.sh/capability/plugin-gitroomhq-postiz-agent-postiz.html) | 46 | 381 ★ | active |
 | 5 | [Sanity](https://tashan.sh/capability/plugin-sanity-io-agent-toolkit-sanity.html) | 58 | 168 ★ | active |
 | 6 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 53 | 137 ★ | active |
-| 7 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 48 | 238 ★ | active |
+| 7 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 47 | 238 ★ | active |
 | 8 | [Akii SEO AI Search Optimizer](https://tashan.sh/capability/plugin-akii-technologies-ltd-akii-seo-ai-search-optimizer-akii-seo-ai-search-optimizer.html) | 39 | 73 ★ | active |
 | 9 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 35 | 3 ★ | active |
 | 10 | [Socials](https://tashan.sh/capability/plugin-brainrot-creations-socials-claude-code-plugin-socials.html) | 32 | 22 ★ | active |
@@ -36,21 +36,21 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 23 | [Socialcrawl](https://tashan.sh/capability/pkg-socialcrawl-mcp.html) | 40 | 133/wk | active |
 | 24 | [Posteverywhere](https://tashan.sh/capability/pkg-posteverywhere-mcp.html) | 39 | 98/wk | active |
 | 25 | [Company Social Presence Mapper](https://tashan.sh/capability/pkg-mambalabsdev-mcp-company-social-presence-mapper.html) | 39 | 91/wk | active |
-| 26 | [Captapi](https://tashan.sh/capability/pkg-captapi-mcp.html) | 35 | 73/wk | active |
-| 27 | [Marketing Skills](https://tashan.sh/capability/plugin-coreyhaines31-marketingskills-marketing-skills.html) | 73 | 51k ★ | active |
-| 28 | [Chirpie](https://tashan.sh/capability/pkg-chirpie-mcp.html) | 63 | 2k/wk | active |
-| 29 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 58 | 3k ★ | active |
+| 26 | [Marketing Skills](https://tashan.sh/capability/plugin-coreyhaines31-marketingskills-marketing-skills.html) | 73 | 51k ★ | active |
+| 27 | [Chirpie](https://tashan.sh/capability/pkg-chirpie-mcp.html) | 63 | 2k/wk | active |
+| 28 | [Aaron Marketing](https://tashan.sh/capability/plugin-aaron-he-zhu-aaron-marketing-skills-aaron-marketing.html) | 58 | 3k ★ | active |
+| 29 | [Bulkpublish](https://tashan.sh/capability/pkg-bulkpublish-mcp-server.html) | 57 | 140/wk | active |
 | 30 | [Cmskite](https://tashan.sh/capability/pkg-cmskite-mcp.html) | 56 | 970/wk | active |
 | 31 | [Markaestro](https://tashan.sh/capability/pkg-markaestro-mcp.html) | 54 | 679/wk | active |
 | 32 | [Meta Ads](https://tashan.sh/capability/pkg-mikusnuz-meta-ads-mcp.html) | 54 | 434/wk | active |
 | 33 | [Omnisocials](https://tashan.sh/capability/pkg-omnisocials-mcp-server.html) | 51 | 179/wk | active |
 | 34 | [Persuasion Taxonomy](https://tashan.sh/capability/pkg-coppica-persuasion-mcp.html) | 50 | 282/wk | active |
 | 35 | [Postsider](https://tashan.sh/capability/pkg-postsider-mcp.html) | 48 | 274/wk | active |
-| 36 | [Wahlu](https://tashan.sh/capability/pkg-wahlu-mcp-server.html) | 48 | 57/wk | active |
-| 37 | [Marketing Studio](https://tashan.sh/capability/plugin-ucsandman-marketing-studio-marketing-studio.html) | 47 | 248 ★ | active |
-| 38 | [Fetch](https://tashan.sh/capability/pkg-kazuph-mcp-fetch.html) | 47 | 2k/wk | active |
-| 39 | [Posterly](https://tashan.sh/capability/pkg-posterly-mcp-server.html) | 47 | 310/wk | active |
-| 40 | [Postraid](https://tashan.sh/capability/pkg-postraid-mcp.html) | 47 | 244/wk | active |
+| 36 | [Postquickai](https://tashan.sh/capability/pkg-postquickai-mcp.html) | 48 | 73/wk | active |
+| 37 | [Wahlu](https://tashan.sh/capability/pkg-wahlu-mcp-server.html) | 48 | 57/wk | active |
+| 38 | [Marketing Studio](https://tashan.sh/capability/plugin-ucsandman-marketing-studio-marketing-studio.html) | 47 | 248 ★ | active |
+| 39 | [Fetch](https://tashan.sh/capability/pkg-kazuph-mcp-fetch.html) | 47 | 2k/wk | active |
+| 40 | [Posterly](https://tashan.sh/capability/pkg-posterly-mcp-server.html) | 47 | 310/wk | active |
 
 Showing the top 40 of 56. The full ranked shelf is at https://tashan.sh/task/content-marketing.html.
 

@@ -10,7 +10,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 ## The short answer
 
 - **Visual design** — [Shadcn UI](https://tashan.sh/capability/pkg-jpisnice-shadcn-ui-mcp-server.html) · tashan score 77
-- **Animation and generated imagery** — [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) · tashan score 71
+- **Animation and generated imagery** — [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) · tashan score 70
 - **Design critique** — [Impeccable](https://tashan.sh/capability/plugin-pbakaus-impeccable-impeccable.html) · tashan score 72
 - **User research** — [Frog](https://tashan.sh/capability/pkg-frog.html) · tashan score 69
 
@@ -18,7 +18,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 71 | 29k/wk | active |
+| 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 70 | 13k/wk | active |
 | 2 | [Obsidian Visual Skills](https://tashan.sh/capability/plugin-axtonliu-axton-obsidian-visual-skills-obsidian-visual-skills.html) | 45 | 3k ★ | active |
 | 3 | [Excalidraw Skill](https://tashan.sh/capability/plugin-edwingao28-excalidraw-toolkit-excalidraw-skill.html) | 42 | 182 ★ | stable |
 | 4 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 40 | 5 ★ | active |
@@ -50,7 +50,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [The Design Library](https://tashan.sh/capability/plugin-zeta92-design-library-plugin-the-design-library.html) | 33 | 10 ★ | active |
 | 31 | [Next AI Drawio](https://tashan.sh/capability/plugin-dayuanjiang-next-ai-draw-io-next-ai-drawio.html) | 69 | 34k ★ | active |
 | 32 | [Adobe For Creativity](https://tashan.sh/capability/plugin-adobe-skills-adobe-for-creativity.html) | 59 | 150 ★ | active |
-| 33 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
+| 33 | [Frontend Design](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
 | 34 | [Fullstory](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 46 | 2 marketplaces | — |
 | 35 | [Playground](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-playground.html) | 46 | 2 marketplaces | — |
 | 36 | [Css Development](https://tashan.sh/capability/plugin-2389-research-claude-plugins-css-development.html) | 42 | 1 marketplaces | — |
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [UI Theme Designer](https://tashan.sh/capability/plugin-sap-ui-theme-designer-plugins-for-coding-agents-ui-theme-designer.html) | 39 | 1 ★ | active |
 | 40 | [Mzizi](https://tashan.sh/capability/pkg-nyuchi-mzizi-mcp.html) | 39 | 43/wk | active |
 
-Showing the top 40 of 191. The full ranked shelf is at https://tashan.sh/role/designer.html.
+Showing the top 40 of 190. The full ranked shelf is at https://tashan.sh/role/designer.html.
 
 ## What these numbers are not
 

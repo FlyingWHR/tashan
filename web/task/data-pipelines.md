@@ -31,8 +31,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 18 | [Sap Btp Master Data Integration](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-btp-master-data-integration.html) | 42 | 1 marketplaces | — |
 | 19 | [Sap Datasphere](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-datasphere.html) | 42 | 1 marketplaces | — |
 | 20 | [Sap Hana Cloud Data Intelligence](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cloud-data-intelligence.html) | 42 | 1 marketplaces | — |
-| 21 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 37 | 3 marketplaces | active |
-| 22 | [Data Engineering · astronomer](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 37 | 3 marketplaces | active |
+| 21 | [Astronomer Data Agents](https://tashan.sh/capability/plugin-astronomer-agents-astronomer-data-agents.html) | 36 | 3 marketplaces | active |
+| 22 | [Data Engineering · astronomer](https://tashan.sh/capability/plugin-astronomer-agents-data-engineering.html) | 36 | 3 marketplaces | active |
 | 23 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 36 | 1 ★ | active |
 | 24 | [Spiceai Skills](https://tashan.sh/capability/plugin-spiceai-skills-spiceai-skills.html) | 34 | 3 ★ | active |
 | 25 | [Atlan](https://tashan.sh/capability/plugin-atlanhq-agent-toolkit-atlan.html) | 49 | 32 ★ | active |

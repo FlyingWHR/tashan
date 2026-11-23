@@ -22,37 +22,37 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 65 | 4k ★ | active |
 | 10 | [Fullstory](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 46 | 2 marketplaces | — |
 | 11 | [Marcopolo](https://tashan.sh/capability/plugin-immersa-co-marcopolo-plugin-marcopolo.html) | 36 | 1 ★ | active |
-| 12 | [AI Analyst Plugin](https://tashan.sh/capability/plugin-amar1404-ai-analyst-ai-analyst-plugin.html) | 35 | 1 ★ | active |
-| 13 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 51 | 30 ★ | active |
-| 14 | [ClickHouse · clickhouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 46 | 5 ★ | active |
-| 15 | [Fullstory · fullstorydev](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 37 | 9 ★ | active |
-| 16 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 57 | 1k/wk | active |
-| 17 | [Scopewalker](https://tashan.sh/capability/pkg-scopewalker-mcp.html) | 43 | 370/wk | active |
-| 18 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 40 | 248/wk | active |
-| 19 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 50 | 371/wk | active |
-| 20 | [Appfigures](https://tashan.sh/capability/pkg-appfigures-cli.html) | 47 | 159/wk | active |
-| 21 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 43 | 210/wk | active |
-| 22 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 42 | 124/wk | active |
-| 23 | [Rolli](https://tashan.sh/capability/pkg-rolli-mcp.html) | 40 | 148/wk | abandoned |
-| 24 | [Yandex Metrica · BoxLab-Ltd](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 39 | 146/wk | active |
-| 25 | [Clarity](https://tashan.sh/capability/pkg-microsoft-clarity-mcp-server.html) | 77 | 33k/wk | active |
-| 26 | [Analytics](https://tashan.sh/capability/pkg-armature-tech-mcp-analytics.html) | 74 | 6k/wk | active |
-| 27 | [Memlab](https://tashan.sh/capability/pkg-memlab-mcp-server.html) | 68 | 3k/wk | active |
-| 28 | [Oecd](https://tashan.sh/capability/pkg-mrfentmen-oecd-mcp.html) | 49 | 354/wk | active |
-| 29 | [Cryptoquant](https://tashan.sh/capability/pkg-cryptoquant-mcp.html) | 49 | 259/wk | active |
-| 30 | [Umami](https://tashan.sh/capability/pkg-asif2bd-umami-mcp.html) | 48 | 352/wk | active |
-| 31 | [X402 Ads](https://tashan.sh/capability/pkg-forgemeshlabs-x402-ads-mcp.html) | 48 | 256/wk | active |
-| 32 | [Umami · mikusnuz](https://tashan.sh/capability/pkg-mikusnuz-umami-mcp.html) | 48 | 97/wk | active |
-| 33 | [CSV](https://tashan.sh/capability/pkg-mrfentmen-csv-mcp.html) | 47 | 308/wk | active |
-| 34 | [Rybbit](https://tashan.sh/capability/pkg-rybbit-mcp.html) | 47 | 273/wk | active |
-| 35 | [College Scorecard](https://tashan.sh/capability/pkg-college-scorecard-mcp.html) | 47 | 262/wk | active |
-| 36 | [Cdc Data](https://tashan.sh/capability/pkg-cdc-data-mcp.html) | 47 | 259/wk | active |
-| 37 | [Claudestat](https://tashan.sh/capability/pkg-statforge-claudestat.html) | 47 | 121/wk | active |
-| 38 | [Ops](https://tashan.sh/capability/pkg-uluops-ops-mcp.html) | 45 | 46/wk | active |
-| 39 | [Ackee](https://tashan.sh/capability/pkg-ackee-mcp.html) | 44 | 165/wk | active |
-| 40 | [Shynet](https://tashan.sh/capability/pkg-shynet-mcp.html) | 44 | 146/wk | active |
+| 12 | [Amplitude](https://tashan.sh/capability/plugin-amplitude-mcp-marketplace-amplitude.html) | 51 | 30 ★ | active |
+| 13 | [ClickHouse · clickhouse](https://tashan.sh/capability/plugin-clickhouse-clickhouse-claude-code-plugin-clickhouse.html) | 46 | 5 ★ | active |
+| 14 | [Fullstory · fullstorydev](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 37 | 9 ★ | active |
+| 15 | [Samarth Gtm](https://tashan.sh/capability/pkg-samarth-gtm-mcp.html) | 57 | 1k/wk | active |
+| 16 | [Scopewalker](https://tashan.sh/capability/pkg-scopewalker-mcp.html) | 43 | 370/wk | active |
+| 17 | [Apple Podcasts](https://tashan.sh/capability/pkg-conorbronsdon-apple-podcasts-mcp.html) | 40 | 248/wk | active |
+| 18 | [Docs Skills](https://tashan.sh/capability/pkg-docs-skills.html) | 50 | 371/wk | active |
+| 19 | [Appfigures](https://tashan.sh/capability/pkg-appfigures-cli.html) | 47 | 159/wk | active |
+| 20 | [Nevent](https://tashan.sh/capability/pkg-mcp-nevent.html) | 43 | 210/wk | active |
+| 21 | [Ainative Gtm](https://tashan.sh/capability/pkg-ainative-gtm-mcp.html) | 42 | 124/wk | active |
+| 22 | [Rolli](https://tashan.sh/capability/pkg-rolli-mcp.html) | 40 | 148/wk | abandoned |
+| 23 | [Yandex Metrica · BoxLab-Ltd](https://tashan.sh/capability/pkg-yandex-metrica-mcp.html) | 39 | 146/wk | active |
+| 24 | [Clarity](https://tashan.sh/capability/pkg-microsoft-clarity-mcp-server.html) | 77 | 33k/wk | active |
+| 25 | [Analytics](https://tashan.sh/capability/pkg-armature-tech-mcp-analytics.html) | 76 | 3k/wk | active |
+| 26 | [Memlab](https://tashan.sh/capability/pkg-memlab-mcp-server.html) | 68 | 3k/wk | active |
+| 27 | [Oecd](https://tashan.sh/capability/pkg-mrfentmen-oecd-mcp.html) | 49 | 354/wk | active |
+| 28 | [Cryptoquant](https://tashan.sh/capability/pkg-cryptoquant-mcp.html) | 49 | 259/wk | active |
+| 29 | [Umami](https://tashan.sh/capability/pkg-asif2bd-umami-mcp.html) | 48 | 352/wk | active |
+| 30 | [X402 Ads](https://tashan.sh/capability/pkg-forgemeshlabs-x402-ads-mcp.html) | 48 | 256/wk | active |
+| 31 | [Umami · mikusnuz](https://tashan.sh/capability/pkg-mikusnuz-umami-mcp.html) | 48 | 97/wk | active |
+| 32 | [CSV](https://tashan.sh/capability/pkg-mrfentmen-csv-mcp.html) | 47 | 308/wk | active |
+| 33 | [Rybbit](https://tashan.sh/capability/pkg-rybbit-mcp.html) | 47 | 273/wk | active |
+| 34 | [College Scorecard](https://tashan.sh/capability/pkg-college-scorecard-mcp.html) | 47 | 262/wk | active |
+| 35 | [Cdc Data](https://tashan.sh/capability/pkg-cdc-data-mcp.html) | 47 | 259/wk | active |
+| 36 | [Claudestat](https://tashan.sh/capability/pkg-statforge-claudestat.html) | 47 | 121/wk | active |
+| 37 | [Ops](https://tashan.sh/capability/pkg-uluops-ops-mcp.html) | 45 | 46/wk | active |
+| 38 | [Ackee](https://tashan.sh/capability/pkg-ackee-mcp.html) | 44 | 165/wk | active |
+| 39 | [Shynet](https://tashan.sh/capability/pkg-shynet-mcp.html) | 44 | 146/wk | active |
+| 40 | [Analyga](https://tashan.sh/capability/pkg-analyga.html) | 44 | 78/wk | active |
 
-Showing the top 40 of 60. The full ranked shelf is at https://tashan.sh/task/exploratory-data-analysis.html.
+Showing the top 40 of 58. The full ranked shelf is at https://tashan.sh/task/exploratory-data-analysis.html.
 
 ## What these numbers are not
 

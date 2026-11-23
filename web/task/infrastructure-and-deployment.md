@@ -21,8 +21,8 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 8 | [Expo](https://tashan.sh/capability/plugin-expo-skills-expo.html) | 69 | 2k ★ | active |
 | 9 | [Azure · microsoft](https://tashan.sh/capability/plugin-microsoft-azure-skills-azure.html) | 65 | 1k ★ | active |
 | 10 | [Dokploy](https://tashan.sh/capability/pkg-dokploy-mcp.html) | 63 | 3k/wk | active |
-| 11 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 59 | 643 ★ | active |
-| 12 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 58 | 86 ★ | active |
+| 11 | [Base44](https://tashan.sh/capability/plugin-base44-skills-base44.html) | 58 | 86 ★ | active |
+| 12 | [Rustunnel](https://tashan.sh/capability/plugin-joaoh82-rustunnel-rustunnel.html) | 58 | 643 ★ | active |
 | 13 | [Teamcity CLI](https://tashan.sh/capability/plugin-jetbrains-teamcity-cli-teamcity-cli.html) | 56 | 119 ★ | active |
 | 14 | [Neon](https://tashan.sh/capability/plugin-neondatabase-agent-skills-neon.html) | 55 | 81 ★ | active |
 | 15 | [Motus](https://tashan.sh/capability/plugin-lithos-ai-motus-motus.html) | 55 | 482 ★ | active |

@@ -15,7 +15,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Graylog Log Search](https://tashan.sh/capability/plugin-pranavj17-mcp-server-graylog-graylog-log-search.html) | 38 | 6 ★ | active |
 | 3 | [Usap Skills](https://tashan.sh/capability/plugin-jaskaranhundal-usap-skills-usap-skills.html) | 37 | 3 ★ | active |
 | 4 | [Resolve AI](https://tashan.sh/capability/plugin-resolve-ai-oss-resolve-ai-plugins-resolve-ai.html) | 37 | 3 ★ | active |
-| 5 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 51 | 90 ★ | active |
+| 5 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 50 | 90 ★ | active |
 | 6 | [Grafana · grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
 | 7 | [Firehydrant](https://tashan.sh/capability/pkg-firehydrant-mcp.html) | 38 | 783/wk | abandoned |
 | 8 | [Honeycomb · honeycombio](https://tashan.sh/capability/plugin-honeycombio-agent-skill-honeycomb.html) | 50 | 18 ★ | active |

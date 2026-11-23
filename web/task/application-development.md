@@ -52,7 +52,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [Salesforce Metadata](https://tashan.sh/capability/pkg-salesforce-metadata-mcp.html) | 50 | 274/wk | active |
 | 40 | [Harness Kit](https://tashan.sh/capability/plugin-romabeckman-harness-kit-harness-kit.html) | 49 | 25 ★ | active |
 
-Showing the top 40 of 281. The full ranked shelf is at https://tashan.sh/task/application-development.html.
+Showing the top 40 of 278. The full ranked shelf is at https://tashan.sh/task/application-development.html.
 
 ## What these numbers are not
 

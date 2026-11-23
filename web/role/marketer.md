@@ -40,7 +40,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 20 | [Wonda](https://tashan.sh/capability/plugin-degausai-wonda-wonda.html) | 53 | 137 ★ | active |
 | 21 | [Vibe Prospecting](https://tashan.sh/capability/plugin-explorium-ai-vibeprospecting-plugin-vibe-prospecting.html) | 50 | 18 ★ | active |
 | 22 | [Eia Energy](https://tashan.sh/capability/pkg-cyanheads-eia-energy-mcp-server.html) | 49 | 256/wk | active |
-| 23 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 48 | 238 ★ | active |
+| 23 | [Self Media Suite](https://tashan.sh/capability/plugin-yanhua1010-self-media-content-workflow-self-media-suite.html) | 47 | 238 ★ | active |
 | 24 | [Eurostat · cyanheads](https://tashan.sh/capability/pkg-cyanheads-eurostat-mcp-server.html) | 45 | 214/wk | active |
 | 25 | [Sui Analytics](https://tashan.sh/capability/pkg-sui-analytics-mcp.html) | 44 | 220/wk | active |
 | 26 | [Llamaventures](https://tashan.sh/capability/pkg-llamaventures-cli.html) | 44 | 125/wk | active |
@@ -59,7 +59,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 39 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 53 | 396/wk | active |
 | 40 | [Resend](https://tashan.sh/capability/plugin-resend-resend-skills-resend.html) | 48 | 3 marketplaces | — |
 
-Showing the top 40 of 165. The full ranked shelf is at https://tashan.sh/role/marketer.html.
+Showing the top 40 of 163. The full ranked shelf is at https://tashan.sh/role/marketer.html.
 
 ## What these numbers are not
 

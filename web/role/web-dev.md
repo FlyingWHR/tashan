@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Vuetify](https://tashan.sh/capability/pkg-vuetify-mcp.html) | 70 | 2k/wk | active |
+| 1 | [Vuetify](https://tashan.sh/capability/pkg-vuetify-mcp.html) | 73 | 3k/wk | active |
 | 2 | [Tray API](https://tashan.sh/capability/plugin-tray-tecnologia-tray-api-claude-plugin-tray-api.html) | 41 | 13 ★ | active |
 | 3 | [Filestack Claude Plugin](https://tashan.sh/capability/plugin-filestack-filestack-claude-plugin-filestack-claude-plugin.html) | 34 | 3 ★ | active |
 | 4 | [Shadcn UI](https://tashan.sh/capability/pkg-jpisnice-shadcn-ui-mcp-server.html) | 77 | 6k/wk | active |
@@ -41,7 +41,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 28 | [Sap Fiori](https://tashan.sh/capability/plugin-sap-open-ux-tools-sap-fiori-mcp-server.html) | 57 | 153 ★ | active |
 | 29 | [Daisyui Blueprint](https://tashan.sh/capability/pkg-daisyui-blueprint.html) | 56 | 725/wk | active |
 | 30 | [WordPress](https://tashan.sh/capability/pkg-mcp-wordpress.html) | 53 | 396/wk | active |
-| 31 | [Frontend Design · anthropics](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
+| 31 | [Frontend Design](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-frontend-design.html) | 46 | 2 marketplaces | — |
 | 32 | [Laravel Boost](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-laravel-boost.html) | 46 | 2 marketplaces | — |
 | 33 | [Playground](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-playground.html) | 46 | 2 marketplaces | — |
 | 34 | [Css Development](https://tashan.sh/capability/plugin-2389-research-claude-plugins-css-development.html) | 42 | 1 marketplaces | — |

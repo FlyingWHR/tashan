@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Anki](https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html) | 73 | 2k/wk | active |
+| 1 | [Anki](https://tashan.sh/capability/pkg-ankimcp-anki-mcp-server.html) | 73 | 945/wk | active |
 | 2 | [Guide · OriNachum](https://tashan.sh/capability/plugin-orinachum-onboarding-claude-code-guide.html) | 47 | 117 ★ | active |
 | 3 | [Campus CLI](https://tashan.sh/capability/pkg-campus-cli.html) | 42 | 50/wk | active |
 | 4 | [Claude English Buddy](https://tashan.sh/capability/plugin-xiaolai-claude-english-buddy-for-claude-claude-english-buddy.html) | 37 | 26 ★ | active |

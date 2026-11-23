@@ -15,9 +15,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 2 | [Ios Simulator](https://tashan.sh/capability/pkg-ios-simulator-mcp.html) | 58 | 5k/wk | active |
 | 3 | [Adcp Client](https://tashan.sh/capability/plugin-adcontextprotocol-adcp-client-adcp-client.html) | 48 | 18 ★ | active |
 | 4 | [Local CI](https://tashan.sh/capability/plugin-mrpuls-local-ci-local-ci.html) | 35 | 3 ★ | active |
-| 5 | [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) | 80 | 8.5m/wk | active |
-| 6 | [Mobile](https://tashan.sh/capability/pkg-mobilenext-mobile-mcp.html) | 76 | 60k/wk | active |
-| 7 | [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) | 76 | 13k/wk | active |
+| 5 | [Smartbear](https://tashan.sh/capability/pkg-smartbear-mcp.html) | 81 | 19k/wk | active |
+| 6 | [Playwright](https://tashan.sh/capability/pkg-at-playwright-mcp.html) | 80 | 8.5m/wk | active |
+| 7 | [Mobile](https://tashan.sh/capability/pkg-mobilenext-mobile-mcp.html) | 76 | 60k/wk | active |
 | 8 | [Superpowers](https://tashan.sh/capability/plugin-obra-superpowers-superpowers.html) | 74 | 269k ★ | active |
 | 9 | [Postman](https://tashan.sh/capability/pkg-postman-postman-mcp-server.html) | 73 | 6k/wk | active |
 | 10 | [Mattpocock Skills](https://tashan.sh/capability/plugin-mattpocock-skills-mattpocock-skills.html) | 71 | 191k ★ | active |
@@ -50,9 +50,9 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 37 | [Ranger](https://tashan.sh/capability/plugin-ranger-testing-trailhead-ranger.html) | 36 | 1 ★ | active |
 | 38 | [Ironflow](https://tashan.sh/capability/plugin-zhijiang-li1111-ironflow-ironflow.html) | 35 | 10 ★ | abandoned |
 | 39 | [Quick Question](https://tashan.sh/capability/plugin-tykisgod-quick-question-quick-question.html) | 31 | 10 ★ | active |
-| 40 | [Review · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-review.html) | not scored | 8 repos | active |
+| 40 | [Auto Mobile](https://tashan.sh/capability/pkg-kaeawc-auto-mobile.html) | 63 | 2k/wk | active |
 
-Showing the top 40 of 119. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
+Showing the top 40 of 116. The full ranked shelf is at https://tashan.sh/task/test-automation.html.
 
 ## What these numbers are not
 

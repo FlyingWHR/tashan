@@ -11,23 +11,23 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 54 | 536/wk | active |
-| 2 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 41 | 95/wk | active |
-| 3 | [Bastion](https://tashan.sh/capability/pkg-mcp-bastion.html) | 45 | 328/wk | active |
-| 4 | [Nexus Agents · nexus-substrate](https://tashan.sh/capability/pkg-nexus-agents.html) | 44 | 194/wk | active |
-| 5 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 42 | 177/wk | active |
-| 6 | [Audit · charlacsina](https://tashan.sh/capability/pkg-openaeo-audit.html) | 42 | 125/wk | active |
-| 7 | [Cyberaudit Skill](https://tashan.sh/capability/pkg-cyberaudit-skill.html) | 38 | 37/wk | active |
-| 8 | [Vorim](https://tashan.sh/capability/pkg-vorim-mcp-server.html) | 37 | 87/wk | active |
-| 9 | [Kya OS](https://tashan.sh/capability/pkg-kya-os-mcp.html) | 77 | 12k/wk | active |
-| 10 | [Roast My Design System](https://tashan.sh/capability/pkg-roast-my-design-system.html) | 69 | 6k/wk | active |
-| 11 | [Claude Ads](https://tashan.sh/capability/plugin-agricidaniel-claude-ads-claude-ads.html) | 57 | 8k ★ | active |
-| 12 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 57 | 3k/wk | active |
-| 13 | [Mindforge](https://tashan.sh/capability/pkg-mindforge-mcp-server.html) | 57 | 834/wk | active |
-| 14 | [Crosscheck · fxspeiser](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 55 | 604/wk | active |
-| 15 | [Audit](https://tashan.sh/capability/pkg-sofagent-audit.html) | 55 | 371/wk | active |
+| 1 | [Conformance](https://tashan.sh/capability/pkg-modelcontextprotocol-conformance.html) | 65 | 132k/wk | abandoned |
+| 2 | [Nsauditor AI](https://tashan.sh/capability/pkg-nsauditor-ai.html) | 54 | 536/wk | active |
+| 3 | [GIA — Governed Intelligence Architecture](https://tashan.sh/capability/pkg-gia-mcp-server.html) | 41 | 95/wk | active |
+| 4 | [Bastion](https://tashan.sh/capability/pkg-mcp-bastion.html) | 45 | 328/wk | active |
+| 5 | [Nexus Agents · nexus-substrate](https://tashan.sh/capability/pkg-nexus-agents.html) | 44 | 194/wk | active |
+| 6 | [Trustcard](https://tashan.sh/capability/pkg-mcp-trustcard.html) | 42 | 177/wk | active |
+| 7 | [Audit · charlacsina](https://tashan.sh/capability/pkg-openaeo-audit.html) | 42 | 125/wk | active |
+| 8 | [Cyberaudit Skill](https://tashan.sh/capability/pkg-cyberaudit-skill.html) | 38 | 37/wk | active |
+| 9 | [Vorim](https://tashan.sh/capability/pkg-vorim-mcp-server.html) | 37 | 87/wk | active |
+| 10 | [Kya OS](https://tashan.sh/capability/pkg-kya-os-mcp.html) | 77 | 12k/wk | active |
+| 11 | [Roast My Design System](https://tashan.sh/capability/pkg-roast-my-design-system.html) | 69 | 6k/wk | active |
+| 12 | [Claude Ads](https://tashan.sh/capability/plugin-agricidaniel-claude-ads-claude-ads.html) | 57 | 8k ★ | active |
+| 13 | [Lighthouse](https://tashan.sh/capability/pkg-danielsogl-lighthouse-mcp.html) | 57 | 3k/wk | active |
+| 14 | [Mindforge](https://tashan.sh/capability/pkg-mindforge-mcp-server.html) | 57 | 834/wk | active |
+| 15 | [Crosscheck · fxspeiser](https://tashan.sh/capability/pkg-crosscheck-mcp.html) | 55 | 604/wk | active |
 | 16 | [Claude Code](https://tashan.sh/capability/pkg-ory-claude-code.html) | 55 | 83/wk | active |
-| 17 | [Audit · commitshow](https://tashan.sh/capability/pkg-commitshow-mcp.html) | 51 | 359/wk | active |
+| 17 | [Audit](https://tashan.sh/capability/pkg-commitshow-mcp.html) | 51 | 359/wk | active |
 | 18 | [Security Proxy](https://tashan.sh/capability/pkg-guardbee-mcp-security-proxy.html) | 51 | 338/wk | active |
 | 19 | [npm Registry](https://tashan.sh/capability/pkg-yawlabs-npmjs-mcp.html) | 50 | 383/wk | active |
 | 20 | [Uxlint](https://tashan.sh/capability/pkg-uxlint-net-uxlint.html) | 49 | 367/wk | active |
@@ -48,9 +48,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 35 | [Auditor · sitelint](https://tashan.sh/capability/pkg-sitelint-auditor-mcp.html) | 39 | 48/wk | active |
 | 36 | [Make Audit](https://tashan.sh/capability/pkg-make-audit-mcp.html) | 37 | 71/wk | active |
 | 37 | [Risk](https://tashan.sh/capability/pkg-mcp-risk.html) | 36 | 40/wk | active |
-| 38 | [Hook Conformance](https://tashan.sh/capability/pkg-mcp-hook-conformance.html) | 35 | 84/wk | active |
-| 39 | [Xlsx Audit](https://tashan.sh/capability/pkg-xlsx-audit-mcp.html) | 35 | 45/wk | active |
-| 40 | [Taplid](https://tashan.sh/capability/pkg-taplid-mcp.html) | 45 | 225/wk | active |
+| 38 | [Taplid](https://tashan.sh/capability/pkg-taplid-mcp.html) | 45 | 225/wk | active |
 
 ## What these numbers are not
 

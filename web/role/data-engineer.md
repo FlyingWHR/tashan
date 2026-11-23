@@ -48,7 +48,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 30 | [Dataproc](https://tashan.sh/capability/plugin-gemini-cli-extensions-dataproc-dataproc.html) | 39 | 1 ★ | active |
 | 31 | [Deepread](https://tashan.sh/capability/plugin-deepread-tech-skills-deepread.html) | 38 | 4 ★ | active |
 | 32 | [Daft](https://tashan.sh/capability/plugin-eventual-inc-daft-daft.html) | 66 | 6k ★ | active |
-| 33 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 51 | 90 ★ | active |
+| 33 | [Monte Carlo Agent Toolkit](https://tashan.sh/capability/plugin-monte-carlo-data-mc-agent-toolkit-monte-carlo-agent-toolkit.html) | 50 | 90 ★ | active |
 | 34 | [AWS Data Analytics](https://tashan.sh/capability/plugin-aws-agent-toolkit-for-aws-aws-data-analytics.html) | 48 | 3 marketplaces | — |
 | 35 | [Oracle AI Data Platform Workbench Spark Connectors](https://tashan.sh/capability/plugin-oracle-samples-oracle-aidp-samples-oracle-ai-data-platform-workbench-spark-connectors.html) | 48 | 3 marketplaces | — |
 | 36 | [Sap Abap Cds](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-abap-cds.html) | 42 | 1 marketplaces | — |

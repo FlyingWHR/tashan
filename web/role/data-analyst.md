@@ -41,24 +41,24 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 22 | [Everyday Causal Skills](https://tashan.sh/capability/plugin-robsontigre-everyday-causal-skills-everyday-causal-skills.html) | 36 | 59 ★ | active |
 | 23 | [Qmt Skills](https://tashan.sh/capability/plugin-dfkai-xtquantai-qmt-skills.html) | 35 | 151 ★ | active |
 | 24 | [Adspirer Ads Agent](https://tashan.sh/capability/plugin-amekala-adspirer-mcp-plugin-adspirer-ads-agent.html) | 35 | 3 ★ | active |
-| 25 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 65 | 4k ★ | active |
-| 26 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 61 | 417 ★ | active |
-| 27 | [NexQL Postgres](https://tashan.sh/capability/pkg-nexql-mcp.html) | 50 | 367/wk | active |
-| 28 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 50 | 4 marketplaces | — |
-| 29 | [Grafana · grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
-| 30 | [Fullstory](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 46 | 2 marketplaces | — |
-| 31 | [Sap Hana CLI](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cli.html) | 42 | 1 marketplaces | — |
-| 32 | [Sap Sqlscript](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sqlscript.html) | 42 | 1 marketplaces | — |
-| 33 | [Sap Sac Custom Widget](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-custom-widget.html) | 42 | 1 marketplaces | — |
-| 34 | [Sap Sac Planning](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-planning.html) | 42 | 1 marketplaces | — |
-| 35 | [Sap Sac Scripting](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-scripting.html) | 42 | 1 marketplaces | — |
-| 36 | [Sap Hana Cloud Data Intelligence](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cloud-data-intelligence.html) | 42 | 1 marketplaces | — |
-| 37 | [Sap Hana Ml](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-ml.html) | 42 | 1 marketplaces | — |
-| 38 | [RegiaBI charts](https://tashan.sh/capability/pkg-bicharts-chart-mcp.html) | 39 | 70/wk | active |
-| 39 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 38 | 0 ★ | active |
-| 40 | [Skillmeter](https://tashan.sh/capability/plugin-skillbench-ai-skillmeter-claude-code-marketplace-skillmeter.html) | 38 | 2 ★ | active |
+| 25 | [Dbx App](https://tashan.sh/capability/pkg-dbx-app-mcp-server.html) | 70 | 13k/wk | active |
+| 26 | [Qsv Data Wrangling](https://tashan.sh/capability/plugin-dathere-qsv-qsv-data-wrangling.html) | 65 | 4k ★ | active |
+| 27 | [Monday CRM](https://tashan.sh/capability/plugin-mondaycom-mcp-monday-crm.html) | 61 | 417 ★ | active |
+| 28 | [NexQL Postgres](https://tashan.sh/capability/pkg-nexql-mcp.html) | 50 | 367/wk | active |
+| 29 | [Grafana Assistant](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-assistant.html) | 50 | 4 marketplaces | — |
+| 30 | [Grafana · grafana](https://tashan.sh/capability/plugin-grafana-ai-marketplace-grafana-mcp.html) | 48 | 3 marketplaces | — |
+| 31 | [Fullstory](https://tashan.sh/capability/plugin-anthropics-claude-plugins-official-fullstory.html) | 46 | 2 marketplaces | — |
+| 32 | [Sap Hana CLI](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cli.html) | 42 | 1 marketplaces | — |
+| 33 | [Sap Sqlscript](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sqlscript.html) | 42 | 1 marketplaces | — |
+| 34 | [Sap Sac Custom Widget](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-custom-widget.html) | 42 | 1 marketplaces | — |
+| 35 | [Sap Sac Planning](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-planning.html) | 42 | 1 marketplaces | — |
+| 36 | [Sap Sac Scripting](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-sac-scripting.html) | 42 | 1 marketplaces | — |
+| 37 | [Sap Hana Cloud Data Intelligence](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-cloud-data-intelligence.html) | 42 | 1 marketplaces | — |
+| 38 | [Sap Hana Ml](https://tashan.sh/capability/plugin-andreafusar-https-github-com-secondsky-sap-skills-sap-hana-ml.html) | 42 | 1 marketplaces | — |
+| 39 | [RegiaBI apps](https://tashan.sh/capability/pkg-bicharts-chart-mcp.html) | 39 | 70/wk | active |
+| 40 | [Windsor AI](https://tashan.sh/capability/plugin-windsor-ai-claude-windsor-ai-plugin-windsor-ai.html) | 38 | 0 ★ | active |
 
-Showing the top 40 of 188. The full ranked shelf is at https://tashan.sh/role/data-analyst.html.
+Showing the top 40 of 185. The full ranked shelf is at https://tashan.sh/role/data-analyst.html.
 
 ## What these numbers are not
 

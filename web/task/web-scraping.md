@@ -22,7 +22,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 9 | [Parallel](https://tashan.sh/capability/plugin-parallel-web-parallel-agent-skills-parallel.html) | 48 | 62 ★ | active |
 | 10 | [Serpapi Claude Plugin](https://tashan.sh/capability/plugin-serpapi-serpapi-claude-plugin-serpapi-claude-plugin.html) | 44 | 13 ★ | active |
 | 11 | [Browser Use](https://tashan.sh/capability/plugin-browser-use-plugins-browser-use.html) | 39 | 7 ★ | active |
-| 12 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 34 | 15 ★ | active |
+| 12 | [Vibesurfer](https://tashan.sh/capability/plugin-frane-vibesurfer-vibesurfer.html) | 33 | 15 ★ | active |
 | 13 | [Scraper](https://tashan.sh/capability/pkg-mcp-scraper.html) | 67 | 4k/wk | active |
 | 14 | [Brightdata Plugin](https://tashan.sh/capability/plugin-brightdata-skills-brightdata-plugin.html) | 50 | 4 marketplaces | — |
 | 15 | [Haunt API](https://tashan.sh/capability/plugin-darko893-haunt-mcp-server-haunt-api.html) | 37 | 2 ★ | active |
@@ -42,17 +42,17 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 29 | [Scrapingdog](https://tashan.sh/capability/pkg-scrapingdog-mcp.html) | 41 | 294/wk | active |
 | 30 | [Netlens](https://tashan.sh/capability/pkg-netlens-mcp.html) | 38 | 75/wk | active |
 | 31 | [Skim402](https://tashan.sh/capability/pkg-skim-mcp.html) | 37 | 61/wk | active |
-| 32 | [Web Fetcher](https://tashan.sh/capability/pkg-mcp-server-web-fetcher.html) | 35 | 68/wk | active |
-| 33 | [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) | 75 | 24k/wk | active |
-| 34 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 59 | 1k/wk | active |
-| 35 | [Anakin IO](https://tashan.sh/capability/pkg-anakin-io-mcp.html) | 49 | 253/wk | active |
-| 36 | [Search1api](https://tashan.sh/capability/pkg-search1api-mcp.html) | 49 | 241/wk | active |
-| 37 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 48 | 351/wk | active |
-| 38 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 46 | 158/wk | active |
-| 39 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 45 | 164/wk | active |
-| 40 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 43 | 234/wk | active |
+| 32 | [Tavily](https://tashan.sh/capability/pkg-tavily-mcp.html) | 75 | 23k/wk | active |
+| 33 | [Crw](https://tashan.sh/capability/pkg-crw-mcp.html) | 59 | 1k/wk | active |
+| 34 | [Anakin IO](https://tashan.sh/capability/pkg-anakin-io-mcp.html) | 49 | 253/wk | active |
+| 35 | [Search1api](https://tashan.sh/capability/pkg-search1api-mcp.html) | 49 | 241/wk | active |
+| 36 | [True402 Dev](https://tashan.sh/capability/pkg-true402-dev-mcp-server.html) | 48 | 351/wk | active |
+| 37 | [Auxiliar](https://tashan.sh/capability/pkg-auxiliar-mcp.html) | 46 | 158/wk | active |
+| 38 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 45 | 164/wk | active |
+| 39 | [Gate402](https://tashan.sh/capability/pkg-gate402-mcp.html) | 43 | 234/wk | active |
+| 40 | [Fetch · zcaceres](https://tashan.sh/capability/pkg-mcp-fetch-server.html) | 42 | 6k/wk | abandoned |
 
-Showing the top 40 of 88. The full ranked shelf is at https://tashan.sh/task/web-scraping.html.
+Showing the top 40 of 84. The full ranked shelf is at https://tashan.sh/task/web-scraping.html.
 
 ## What these numbers are not
 

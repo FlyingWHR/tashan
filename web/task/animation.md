@@ -11,7 +11,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 71 | 29k/wk | active |
+| 1 | [Comfyui](https://tashan.sh/capability/pkg-comfyui-mcp.html) | 70 | 13k/wk | active |
 | 2 | [Webmotion](https://tashan.sh/capability/plugin-superhq-ai-webmotion-webmotion.html) | 40 | 5 ★ | active |
 | 3 | [Sanzaru](https://tashan.sh/capability/plugin-tjc-lp-sanzaru-sanzaru.html) | 29 | 6 ★ | active |
 | 4 | [Touchdesigner](https://tashan.sh/capability/pkg-touchdesigner-mcp-server.html) | 62 | 2k/wk | active |
@@ -28,31 +28,31 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 15 | [Raven](https://tashan.sh/capability/pkg-raven-mcp.html) | 57 | 184/wk | active |
 | 16 | [Agent Canvas](https://tashan.sh/capability/pkg-modellix-agent-canvas.html) | 47 | 276/wk | active |
 | 17 | [Rendobar](https://tashan.sh/capability/pkg-rendobar-mcp.html) | 46 | 197/wk | active |
-| 18 | [Aetherwave](https://tashan.sh/capability/pkg-aetherwave-studio-mcp.html) | 35 | 51/wk | active |
-| 19 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 61 | 3k/wk | active |
-| 20 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 56 | 305/wk | active |
-| 21 | [Runapi](https://tashan.sh/capability/pkg-runapi-ai-mcp.html) | 55 | 468/wk | active |
-| 22 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 55 | 197/wk | active |
-| 23 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 54 | 362/wk | active |
-| 24 | [Kodelyth Ecc](https://tashan.sh/capability/pkg-kodelyth-ecc.html) | 46 | 307/wk | active |
-| 25 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 45 | 164/wk | active |
-| 26 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 44 | 239/wk | active |
-| 27 | [Media Gen](https://tashan.sh/capability/pkg-media-gen-mcp-server.html) | 44 | 141/wk | active |
-| 28 | [Gpt Image](https://tashan.sh/capability/pkg-runapi-ai-gpt-image-mcp.html) | 43 | 221/wk | active |
-| 29 | [Z Image](https://tashan.sh/capability/pkg-runapi-ai-z-image-mcp.html) | 43 | 219/wk | active |
-| 30 | [Gpt 4o Image](https://tashan.sh/capability/pkg-runapi-ai-gpt-4o-image-mcp.html) | 43 | 213/wk | active |
-| 31 | [Gpt Image 2](https://tashan.sh/capability/pkg-runapi-ai-gpt-image-2-mcp.html) | 43 | 210/wk | active |
-| 32 | [Chutes Media](https://tashan.sh/capability/pkg-chutes-media-mcp.html) | 42 | 98/wk | active |
-| 33 | [Qwen Image](https://tashan.sh/capability/pkg-runapi-ai-qwen-image-mcp.html) | 39 | 181/wk | active |
-| 34 | [Distribea](https://tashan.sh/capability/pkg-distribea-mcp.html) | 39 | 98/wk | active |
-| 35 | [Corent](https://tashan.sh/capability/pkg-corent-mcp.html) | 38 | 57/wk | active |
-| 36 | [Gemini Image](https://tashan.sh/capability/pkg-jimothy-snicket-gemini-image-mcp.html) | 37 | 171/wk | active |
-| 37 | [Pixel Plugin](https://tashan.sh/capability/plugin-willibrandon-pixel-plugin-pixel-plugin.html) | 36 | 291 ★ | stable |
-| 38 | [Reel Estate](https://tashan.sh/capability/pkg-reel-estate-mcp.html) | 36 | 111/wk | active |
-| 39 | [Codesign](https://tashan.sh/capability/pkg-imgly-codesign-mcp.html) | 75 | 9k/wk | active |
-| 40 | [Diffusers](https://tashan.sh/capability/plugin-huggingface-diffusers-diffusers.html) | 74 | 35k ★ | active |
+| 18 | [Image](https://tashan.sh/capability/pkg-mcp-image.html) | 61 | 3k/wk | active |
+| 19 | [Runware](https://tashan.sh/capability/pkg-runware-mcp.html) | 56 | 305/wk | active |
+| 20 | [Runapi](https://tashan.sh/capability/pkg-runapi-ai-mcp.html) | 55 | 468/wk | active |
+| 21 | [Vaaya](https://tashan.sh/capability/pkg-vaaya-mcp.html) | 55 | 197/wk | active |
+| 22 | [Rivemcp](https://tashan.sh/capability/pkg-rivemcp.html) | 54 | 362/wk | active |
+| 23 | [Kodelyth Ecc](https://tashan.sh/capability/pkg-kodelyth-ecc.html) | 46 | 307/wk | active |
+| 24 | [Vaaya CLI](https://tashan.sh/capability/pkg-vaaya-cli.html) | 45 | 164/wk | active |
+| 25 | [GlianaAI](https://tashan.sh/capability/pkg-gliana-ai-mcp.html) | 44 | 239/wk | active |
+| 26 | [Media Gen](https://tashan.sh/capability/pkg-media-gen-mcp-server.html) | 44 | 141/wk | active |
+| 27 | [Gpt Image](https://tashan.sh/capability/pkg-runapi-ai-gpt-image-mcp.html) | 43 | 221/wk | active |
+| 28 | [Z Image](https://tashan.sh/capability/pkg-runapi-ai-z-image-mcp.html) | 43 | 219/wk | active |
+| 29 | [Gpt 4o Image](https://tashan.sh/capability/pkg-runapi-ai-gpt-4o-image-mcp.html) | 43 | 213/wk | active |
+| 30 | [Gpt Image 2](https://tashan.sh/capability/pkg-runapi-ai-gpt-image-2-mcp.html) | 43 | 210/wk | active |
+| 31 | [Chutes Media](https://tashan.sh/capability/pkg-chutes-media-mcp.html) | 42 | 98/wk | active |
+| 32 | [Qwen Image](https://tashan.sh/capability/pkg-runapi-ai-qwen-image-mcp.html) | 39 | 181/wk | active |
+| 33 | [Distribea](https://tashan.sh/capability/pkg-distribea-mcp.html) | 39 | 98/wk | active |
+| 34 | [Corent](https://tashan.sh/capability/pkg-corent-mcp.html) | 38 | 57/wk | active |
+| 35 | [Gemini Image](https://tashan.sh/capability/pkg-jimothy-snicket-gemini-image-mcp.html) | 37 | 171/wk | active |
+| 36 | [Pixel Plugin](https://tashan.sh/capability/plugin-willibrandon-pixel-plugin-pixel-plugin.html) | 36 | 291 ★ | stable |
+| 37 | [Reel Estate](https://tashan.sh/capability/pkg-reel-estate-mcp.html) | 36 | 111/wk | active |
+| 38 | [Codesign](https://tashan.sh/capability/pkg-imgly-codesign-mcp.html) | 84 | 64k/wk | active |
+| 39 | [Diffusers](https://tashan.sh/capability/plugin-huggingface-diffusers-diffusers.html) | 74 | 35k ★ | active |
+| 40 | [Kolbo](https://tashan.sh/capability/pkg-kolbo-mcp.html) | 68 | 5k/wk | active |
 
-Showing the top 40 of 87. The full ranked shelf is at https://tashan.sh/task/animation.html.
+Showing the top 40 of 86. The full ranked shelf is at https://tashan.sh/task/animation.html.
 
 ## What these numbers are not
 
