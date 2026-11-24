@@ -551,7 +551,7 @@ function repoHealth(c) {
     // failure mode is the worst one available here, a page quietly offering to install something we
     // have been told is switched off. Mirrors prerender.py::summary.
     if (c.discontinued) {
-      var notice = c.self_unmaintained || c.description || "";
+      var notice = c.self_unmaintained || "";
       return '<div class="callout callout--stop"><b>Discontinued — do not install.</b> ' +
         (notice ? "The author's own notice: &ldquo;" + esc(String(notice).slice(0, 200)) + "&rdquo; " : "") +
         "It stays listed so anyone already running it can find this page, and so " +
@@ -854,12 +854,12 @@ function repoHealth(c) {
     if (v < 100) return "$" + v.toFixed(2);
     return "$" + Math.round(v).toLocaleString("en-US");
   }
-  function paidShort(c) { return (c.paid_calls ? paidUsd(c.paid_usd) : "never paid"); }
+  function paidShort(c) { return (c.paid_calls ? paidUsd(c.paid_usd) : "0 indexed"); }
   function paidWhy(c) {
-    if (!c.paid_calls) return "its payment address has never been paid (Base, all time)";
+    if (!c.paid_calls) return "No indexed event at the sampled Base receiver as of " + String(c.paid_seen_at).slice(0, 10) + "";
     var n = (c.paid_address || "").split(",").filter(Boolean).length;
-    return c.paid_calls.toLocaleString("en-US") + " settled x402 calls"
-      + (n > 1 ? " at " + n + " payment addresses" : "") + " — Base, all time";
+    return c.paid_calls.toLocaleString("en-US") + " indexed events"
+      + (n > 1 ? " at " + n + " payment addresses" : "") + " on Base as of " + String(c.paid_seen_at).slice(0, 10);
   }
   function fdate(iso) { if (!iso) return ""; return new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }); }
   function notfound() { return '<div class="cap-hd"><a class="back" href="/">&lsaquo; The Index</a><h1>Not tracked yet</h1><div class="cid">This capability isn\'t in the current pass. The Index grows every run.</div></div>'; }

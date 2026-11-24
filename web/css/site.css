@@ -1,6 +1,6 @@
 /* tashan — the intelligence layer for AI capabilities.
- * Identity: warm stone-black greyscale + jade green (攻玉 — the polished jade), accent reserved for data only.
- * Geist + Geist Mono (data = instrument readout) + an ASCII mountain motif (他山). Cinematic, developer-trustworthy — not an exchange.
+ * Identity: warm stone-black greyscale + jade green, accent reserved for data only.
+ * Geist + Geist Mono (data = instrument readout) + an ASCII mountain motif. Cinematic, developer-trustworthy — not an exchange.
  */
 
 @font-face {
@@ -13,7 +13,7 @@
 }
 
 :root {
-  /* the tashan mark (他山之石 faceted stone) as a reusable image — used for the nav brand, the status-line
+  /* the tashan mark (faceted stone) as a reusable image — used for the nav brand, the status-line
      marker, and every dossier section bullet, so the brand shows instead of a generic ◆/□ glyph */
   --logo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M17 4 L23 10 L29 22 L18 28 L5 24 L4 13 Z' fill='%2334e0a0'/%3E%3Cpath d='M17 4 L4 13 L14 15 Z' fill='%235cf0c0'/%3E%3Cpath d='M17 4 L23 10 L29 22 L18 28 L14 15 Z' fill='%231f9e78'/%3E%3C/svg%3E");
   --bg:          #0b0b0a;
@@ -276,7 +276,7 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-mono); font-size:var(--fs-base); color: var(--text-dim); }
 .hero__stat b { color: var(--text); font-weight:500; }
 .hero__stat .k { color: var(--jade); }
-/* name story + the 他山 ridge — organic, permeating, low-key */
+/* name story + the mountain ridge — organic, permeating, low-key */
 .hero__name { margin: var(--sp-6) 0 0; font-family: var(--font-mono); font-size:var(--fs-sm);
   color: var(--text-faint); letter-spacing:.01em; max-width: 48rem; line-height:1.6; }
 .hero__name .zh { color: var(--jade); letter-spacing:.2em; margin-right:.55rem; font-size:var(--fs-md); }
@@ -447,6 +447,12 @@ img { max-width: 100%; display: block; }
 .board { border:1px solid var(--hairline); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
 .board__scroll { overflow-x:auto; }
 table.board__t { width:100%; border-collapse: collapse; font-size:var(--fs-base); min-width: 720px; }
+table.payment-distribution { min-width:0; max-width:42rem; }
+.payment-distribution caption { text-align:left; color:var(--text-dim); padding-block:.6rem; }
+.payment-distribution tbody tr { cursor:default; }
+.payment-activity h2 { margin-block-start:var(--sp-8); }
+.payment-activity > p { max-width:75ch; }
+.payment-activity .link { color:var(--jade); text-decoration:underline; text-underline-offset:.18em; }
 .board__t thead th { font-family: var(--font-mono); font-size:var(--fs-micro); letter-spacing:.08em; text-transform:uppercase;
   color: var(--text-faint); text-align:left; font-weight:500; padding: .8rem 1rem; border-bottom:1px solid var(--hairline);
   background: var(--surface); white-space:nowrap; }

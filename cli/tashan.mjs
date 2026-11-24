@@ -482,14 +482,9 @@ function infoCard(r) {
                     r.npm_latest_version ? "latest " + r.npm_latest_version : null,
                     r.single_maintainer ? "one primary maintainer" : null].filter(Boolean).join(" · ")));
   if (r.expertise_verdict) kv("Docs", jade(verdict(r.expertise_verdict)) + (r.expertise != null ? dim("  (" + r.expertise + "/100)") : ""));
-  // SETTLED RECEIPTS, directly under adoption, because the contrast IS the signal: this row reads
-  // "636 downloads/wk" and "$166,659 settled". Printed only where paid_seen_at says we asked the
-  // chain — an em-dash would read as "we looked and found nothing" for the ~11,700 capabilities
-  // that never published a price and had nothing to look for.
   if (r.paid_seen_at || r.paid_usd != null) {
-    L.push("  Settled      " + dim(paidUsd(r.paid_usd) + (r.paid_calls
-      ? " · " + fmtNum(r.paid_calls) + " x402 calls, all time"
-      : " — its payment address has never been paid")));
+    const measured = r.paid_seen_at ? " · checked " + r.paid_seen_at.slice(0, 10) : "";
+    L.push("  Base USDC    " + dim(paidUsd(r.paid_usd) + " · " + fmtNum(r.paid_calls) + " indexed events" + measured));
   }
   if (r.category) L.push("  Category     " + dim(r.category));
   if (r.npm_deprecated) L.push("  " + red("⚠ deprecated on npm"));

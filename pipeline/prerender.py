@@ -523,9 +523,9 @@ def paid_line(c):
         return None
     usd, calls = c.get("paid_usd") or 0.0, c.get("paid_calls") or 0
     addrs = len([a for a in (c.get("paid_address") or "").split(",") if a])
-    where = (" at %d payment addresses" % addrs) if addrs > 1 else " at its own payment address"
+    where = (" at %d payment addresses" % addrs) if addrs > 1 else " at the matched payment address"
     if not calls:
-        return "none yet — its payment address has never been paid (Base, all time)"
+        return "No indexed event at the sampled Base receiver as of " + c["paid_seen_at"][:10]
     # Precision the number deserves: a half-cent must not round to zero and $166,658.8173 must not
     # print four decimals as if the cents were the point. Mirrors gen_paid.money().
     if usd < 0.01:
@@ -534,7 +534,7 @@ def paid_line(c):
         amount = "$%.2f" % usd
     else:
         amount = "$" + fmt(int(round(usd)))
-    return "%s across %s x402 calls%s (Base, all time)" % (amount, fmt(calls), where)
+    return "%s across %s indexed events%s (Base, as of %s)" % (amount, fmt(calls), where, c["paid_seen_at"][:10])
 
 
 def summary(c, gen=""):
@@ -572,7 +572,7 @@ def summary(c, gen=""):
     # URL keeps answering and so someone already running the thing finds out — not to help anyone
     # start. The notice is the author's own words, quoted rather than paraphrased.
     if c.get("discontinued"):
-        note = c.get("self_unmaintained") or c.get("description") or ""
+        note = c.get("self_unmaintained") or ""
         gone = ('<div class="callout callout--stop"><b>Discontinued — do not install.</b> '
                 + ("The author's own notice: &ldquo;" + esc(clip_notice(note)) + "&rdquo; "
                    if note else "")
@@ -1103,9 +1103,9 @@ def bake_hero(caps, total, gen=""):
                 eco = (json.load(fh) or {}).get("economy") or {}
             usd = eco.get("paid_usd") or 0
             if usd >= 1000:
-                paid_txt = "$%dk in settled agent payments \u203a" % round(usd / 1000)
+                paid_txt = "$%dk in indexed Base receipts \u203a" % round(usd / 1000)
             elif usd:
-                paid_txt = "$%d in settled agent payments \u203a" % round(usd)
+                paid_txt = "$%d in indexed Base receipts \u203a" % round(usd)
         except (OSError, ValueError):
             pass
     # The homepage's third card states the finding, not the feature. Baked from the same file the
@@ -1117,13 +1117,7 @@ def bake_hero(caps, total, gen=""):
                 eco_all = (json.load(fh) or {}).get("economy") or {}
         except (OSError, ValueError):
             eco_all = {}
-    paid_card = ("Settled x402 receipts on Base, joined to the capabilities we measure. "
-                 "The one signal here that is not a proxy for demand.")
-    if eco_all.get("receivers_paid") and eco_all.get("median_usd") is not None:
-        paid_card = (f"{eco_all['receivers_paid']:,} of "
-                     f"{eco_all['receivers_paid'] + eco_all.get('receivers_never_paid', 0):,} "
-                     f"x402 services have ever been paid \u2014 and the median one has earned "
-                     f"${eco_all['median_usd']:,.2f} in its life.")
+    paid_card = "Base USDC payment activity at sampled receiver addresses, with source dates and coverage."
     # The figures band. Each id is baked here and refreshed by index.js at runtime, so the page is
     # right before JS runs and stays right after — the pre-JS state is what every crawler and answer
     # engine sees, and it used to be em-dashes.

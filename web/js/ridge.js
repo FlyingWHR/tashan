@@ -1,5 +1,5 @@
-// tashan — hero 山水, rendered as "variable typographic ASCII" (after chenglou's pretext technique):
-// a SMOOTH grayscale field — layered mountain silhouettes (前 near-bright/low → 后 far-dim/high), drifting
+// tashan — hero landscape, rendered as "variable typographic ASCII" (after chenglou's pretext technique):
+// a SMOOTH grayscale field — layered mountain silhouettes (near-bright/low → far-dim/high), drifting
 // mist, and the day/night key light — is painted to a tiny offscreen canvas, read back per cell, and drawn
 // as glyphs from a density ramp at a CONTINUOUS font-weight (light→bold). Tone comes from typography, not
 // directional /\ hatching — so no scratch, no banding, no dash runs. Self-hosted, strict-CSP-safe (own
@@ -62,13 +62,13 @@
   function env(c) { var x = c / cols; return x * x * (3 - 2 * x); }
   function reseed() {
     var s = 1 + Math.random() * 90;
-    // val = field brightness of the layer: 近山 bright & low (front) → 远山 dim & high (misty distance)
+    // val = field brightness of the layer: foreground bright & low (front) → background dim & high (misty distance)
     layers = [
-      { crest: makeHill(s + 3, 0.9, 0.56, 0.085), lift: 0.08, val: 0.34 },   // 远山
-      { crest: makeHill(s + 7, 1.1, 0.69, 0.105), lift: 0.13, val: 0.60 },   // 中景
-      { crest: makeHill(s + 1, 1.3, 0.82, 0.130), lift: 0.18, val: 1.00 }    // 近山
+      { crest: makeHill(s + 3, 0.9, 0.56, 0.085), lift: 0.08, val: 0.34 },   // background
+      { crest: makeHill(s + 7, 1.1, 0.69, 0.105), lift: 0.13, val: 0.60 },   // middle distance
+      { crest: makeHill(s + 1, 1.3, 0.82, 0.130), lift: 0.18, val: 1.00 }    // foreground
     ];
-    // drifting mist wisps (soft additive blobs) — the living 云雾 of the scene
+    // drifting mist wisps (soft additive blobs) — the living mist of the scene
     mist = [];
     // more, SMALLER wisps: a big soft blob brightens a whole region at once (a flash); small ones read as
     // something travelling across the slope.
@@ -106,7 +106,7 @@
     var fw = cols, fh = rows;
     fctx.globalCompositeOperation = "source-over";
     fctx.fillStyle = "#000"; fctx.fillRect(0, 0, fw, fh);
-    // mountains far→near (near paints over far = clean 前后 occlusion). Painted PER COLUMN so EACH column's
+    // mountains far→near (near paints over far = clean occlusion). Painted PER COLUMN so EACH column's
     // crest is the bright lit edge — a clear ridgeline — fading down to a dark valley base (contrast = shape).
     var band = Math.max(2.2, fh * 0.11);   // crest-band thickness in ROWS — the density knob, independent of height
     for (var li = 0; li < layers.length; li++) {

@@ -290,11 +290,7 @@ const TOOLS = [
   {
     name: "paid_demand",
     description:
-      "Which AI services have actually been PAID, from settled x402 payments on Base — the only "
-      + "demand signal here that is not a proxy. Call it with a name to ask whether that specific "
-      + "capability has ever been paid, or with no argument for the shape of the whole paid economy. "
-      + "Use it when the user is choosing between capabilities and wants evidence of real use, or "
-      + "asks who is making money from agent tooling. Always free.",
+      "Read dated Base USDC payment activity for a sampled receiver or the sample as a whole. Includes Coinbase Bazaar, PayAI and MPP directory coverage and indexed receipts. A host match does not establish revenue or buyer identity.",
     inputSchema: {
       type: "object",
       properties: {
@@ -428,47 +424,24 @@ export function renderPaid(doc, q) {
     return "No settled-payment data published yet. That means we have not read the chain, not that "
       + "nothing has been paid — say so rather than guessing.";
   }
-  const recs = (doc.records || []).filter((r) => r.attributable);
+  const scope = `Base receiver sample. Chain query ${doc.measured_at || "date unavailable"}. Indexed through ${doc.indexed_block?.timestamp || "unknown"}.`;
+  const lines = [scope];
   if (q) {
-    const t = String(q).toLowerCase();
-    const hit = recs.filter((r) => (r.capabilities || []).some((c) => c.toLowerCase().includes(t))
-      || (r.hosts || []).some((h) => h.toLowerCase().includes(t)));
-    if (!hit.length) {
-      return `No settled x402 payments are attributable to "${q}".\n\n`
-        + "This is NOT a negative signal about it. Almost every MCP server is free by design and "
-        + "never publishes a payment address, so there is nothing to measure. It means only that "
-        + "this capability has no payment address we can resolve, or that its address is shared "
-        + "with other services and the chain cannot separate them.";
-    }
-    const L = [`Settled x402 payments attributable to "${q}" (Base, all time):\n`];
-    for (const r of hit) {
-      L.push(`- ${(r.capabilities || []).join(", ")} — ${paidUsd(r.paid_usd)} across `
-        + `${(r.calls || 0).toLocaleString("en-US")} settled calls, at ${r.address}`);
-      L.push(`  host: ${(r.hosts || []).join(", ")}`);
-    }
-    L.push("", `Context: the median paid service in this economy has earned ${paidUsd(eco.median_usd)} `
-      + `in its life, and ${eco.under_1_usd} of ${eco.receivers_paid} have earned under $1.`);
-    L.push("Payment is not an input to the tashan score: being paid and being well made are "
-      + "different claims.");
-    return L.join("\n");
+    const term = String(q).toLowerCase();
+    const hits = (doc.records || []).filter(r => r.attributable && [...(r.capabilities || []), ...(r.hosts || [])].some(v => v.toLowerCase().includes(term)));
+    if (!hits.length) return `${scope} No unambiguous match for ${q}. An absent match is NOT a negative signal.`;
+    for (const r of hits) lines.push(`${r.address} · ${(r.hosts || []).join(", ")} · ${paidUsd(r.paid_usd)} across ${r.calls} indexed events`);
+    lines.push("Payment is not an input to the tashan score.");
+  } else {
+    lines.push(`${eco.receivers_paid} of ${doc.receivers_indexed} sampled addresses had an indexed event.`,
+      `Cumulative volume ${paidUsd(eco.paid_usd)}. Median ${paidUsd(eco.median_usd)} (${doc.distribution_basis || "receivers with observed volume"}).`,
+      `Largest receiver share ${Math.round(eco.top1_share * 100)}%.`);
+    if (doc.providers?.payai) lines.push(`x402 directories: ${doc.providers.coinbase.observed_resources} Coinbase resource URLs, ${doc.providers.payai.observed_resources} PayAI resource URLs, ${doc.providers.x402_overlap_urls} exact URLs in both.`);
+    if (doc.providers?.mpp?.services != null) lines.push(`MPP directory: ${doc.providers.mpp.services} services as of ${doc.providers.mpp.checked_at}. Settlement volume unavailable.`);
+    if (doc.directory?.activity_reported != null) lines.push(`Directory checked ${doc.directory.harvested}. ${doc.directory.active_resources_30d} resources reported activity out of ${doc.directory.activity_reported} with counts.`);
   }
-  return [
-    "The x402 paid economy, measured (Base, all time):",
-    "",
-    `- ${eco.receivers_paid} of ${doc.receivers_indexed} listed payment addresses have ever been paid; `
-      + `${eco.receivers_never_paid} never have.`,
-    `- ${paidUsd(eco.paid_usd)} settled in total, across ${(eco.calls || 0).toLocaleString("en-US")} payments `
-      + `(mean ${paidUsd(eco.mean_payment_usd)} per call).`,
-    `- The MEDIAN paid service has earned ${paidUsd(eco.median_usd)}. ${eco.under_1_usd} have earned under $1, `
-      + `${eco.under_10_usd} under $10, and only ${eco.over_1000_usd} more than $1,000.`,
-    `- Concentration: the single largest receiver is ${Math.round((eco.top1_share || 0) * 100)}% of all volume; `
-      + `the top five are ${Math.round((eco.top5_share || 0) * 100)}%.`,
-    `- ${doc.paid_capabilities} capabilities in the tashan catalog have receipts attributable to them.`,
-    "",
-    "If you are quoting the total, quote the median beside it — a sum is the one statistic a "
-      + "concentrated economy always passes.",
-    `Source: ${doc.source}. Detail: ${SITE}/paid.html`,
-  ].join("\n");
+  lines.push(`Volume at an address does not establish service revenue. ${SITE}/paid`);
+  return lines.join("\n");
 }
 
 async function callTool(name, args) {

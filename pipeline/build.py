@@ -1553,6 +1553,29 @@ def junk(o):
     return leaf in DENY
 
 
+# Keep source-language evidence in SQLite. Public copy retains complete English clauses.
+HAN_TEXT = re.compile(r"[\u2e80-\u2fdf\u3005\u3007\u3021-\u3029\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\U00020000-\U000323ff]")
+
+
+def public_copy(row):
+    for field in ('title', 'label', 'description', 'expertise_note', 'self_unmaintained'):
+        text = row.get(field)
+        if not text or not HAN_TEXT.search(text):
+            continue
+        # A notice is a direct quotation. Omit it instead of editing the author's words.
+        clauses = [] if field == 'self_unmaintained' else re.split(r'\s+[|—]\s+|(?<=[.!?。！？])\s+|[\r\n]+', text)
+        english = ' '.join(part.strip() for part in clauses if part.strip() and not HAN_TEXT.search(part))
+        if english:
+            row[field] = english
+        elif field == 'label':
+            row[field] = row.get('npm_pkg') or row['slug']
+        else:
+            row.pop(field, None)
+    topics = row.get('gh_topics')
+    if isinstance(topics, list):
+        row['gh_topics'] = [t for t in topics if not HAN_TEXT.search(t)]
+
+
 def export(con):
     cols = ["id","name","kind","title","description","npm_pkg","source_repo","registry_status",
             "config_reach","config_repos","stars_median","stars_max","last_seen",
@@ -2292,6 +2315,7 @@ def export(con):
         # which is the only reason it is still exported.
         if not c.get("category"):
             c["category"] = "other"
+        public_copy(c)
     ranked = [c for c in caps if c.get("tashan_score") is not None]
     catalogued = [c for c in caps if c.get("tashan_score") is None]
     tot = con.execute("SELECT COUNT(*) FROM capabilities").fetchone()[0]
@@ -2516,6 +2540,8 @@ def export(con):
     # `malicious` and `delisted` are fetched fresh from SQL, AFTER caps were redacted — so they
     # arrived carrying the raw install command and full advisory blob into a public file. Redact on
     # the way in, where every row passes, rather than at each source.
+    for c in delisted + malicious:
+        public_copy(c)
     for c in caps + delisted + malicious:
         # A CONFIRMED-MALICIOUS ROW MUST NOT CARRY A SCORE, for the same reason a discontinued one
         # does not: eligibility overrides score. Four of the six did — claude-cup led with

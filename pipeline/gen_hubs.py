@@ -841,13 +841,7 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
           "Atom feed at " + BASE + "/changes.xml.",
           # THE ONLY SIGNAL HERE THAT IS MONEY, and the one an answer engine cannot get anywhere
           # else: a directory of x402 services publishes no evidence about any of them.
-          "- [Who gets paid](" + BASE + "/paid.html) — settled x402 payments on Base, joined to the "
-          "capabilities we measure. Of the listed payment addresses we could resolve, most have been "
-          "paid at least once, but the MEDIAN service has earned well under a dollar in its entire "
-          "life and two thirds of all volume belongs to one receiver. Quote the median beside the "
-          "total: a sum is the one statistic a concentrated economy always passes. Machine-readable "
-          "at " + BASE + "/data/demand.json. Read from a subgraph on The Graph Network through The "
-          "Graph's Subgraph MCP server, so the query is reproducible — the page prints it.",
+          "- [Agent payment activity](" + BASE + "/paid) — Coinbase Bazaar, PayAI and MPP directory coverage, plus cumulative Base USDC receipts at sampled addresses. Coverage, denominators and the source are published in [the data](" + BASE + "/data/demand.json).",
           "- [Methodology](" + BASE + "/methodology.html) — every input, weight and known limitation.",
           "- [Learn](" + BASE + "/learn/) — install guides and comparisons, backed by the live ranking.",
           "- [About](" + BASE + "/about.html) — who builds this and the payment firewall.",

@@ -161,25 +161,17 @@ def spec():
             # makes it an API rather than a download.
             "/data/demand.json": {"get": {
                 "operationId": "paidDemand",
-                "summary": "Which AI services have actually been paid",
-                "description":
-                    "Settled x402 receipts on Base, read from a subgraph on The Graph Network and "
-                    "joined to the capabilities we measure. Free.\n\n"
-                    "Every other signal in this space is a proxy — downloads count machines running "
-                    "an install, stars count people who liked a link. A settled payment is not a "
-                    "proxy. The public directory that lists these services publishes no evidence "
-                    "about whether any of them has ever been paid; these figures are that "
-                    "evidence.\n\n"
-                    "`economy` carries the distribution, never the total alone: a sum is the one "
-                    "statistic a concentrated economy always passes. `records` carries one row per "
-                    "payment address, and an address shared by several services is counted in the "
-                    "totals and never attributed to a single project.\n\n"
-                    "Payment is deliberately not an input to any score. Unpaid is the normal case "
-                    "for an MCP server and is never a defect.",
+                "summary": "Base USDC payment observations",
+                "description": "Coinbase Bazaar, PayAI and MPP directory coverage, plus indexed receipts at sampled Base receiver addresses. `directory` gives the directory harvest date, eligible resources and reported 30-day activity. `measured_at`, `cohort_date` and `indexed_block` distinguish the chain query time, its sample and the latest indexed block. A shared receiver is excluded from catalog attribution. An address balance or payment count does not establish sales by an individual service. Payment is not an input to any score.",
                 "responses": {"200": {"description": "The market, and the rows behind it",
                                       "content": {"application/json": {"schema": {
                     "type": "object", "properties": {
-                        "economy": {"type": "object", "properties": {
+                        "providers": {"type": "object", "description": "Per-source resource or service counts, exact x402 URL overlap and MPP payment methods. Directory units are not additive."},
+                        "directory": {"type": "object", "description": "Coinbase Bazaar resource counts, coverage and harvest date"},
+                        "measured_at": {"type": ["string", "null"]},
+                        "cohort_date": {"type": "string"},
+                        "indexed_block": {"type": ["object", "null"], "description": "Fixed Base block number and UTC timestamp"},
+                        "economy": {"type": ["object", "null"], "properties": {
                             "paid_usd": {"type": "number"},
                             "calls": {"type": "integer"},
                             "receivers_paid": {"type": "integer"},
@@ -230,7 +222,7 @@ def _selftest():
     # The money signal must keep its caveats wherever it is described. An agent reading only this
     # document must not come away thinking unpaid means bad.
     pd = paths["/data/demand.json"]["get"]["description"]
-    assert "never attributed" in pd and "never a defect" in pd and "not a proxy" in pd
+    assert "shared receiver is excluded" in pd and "does not establish sales" in pd and "indexed_block" in pd
     ids = [op["operationId"] for p in paths.values() for op in p.values()]
     assert len(ids) == len(set(ids)), f"duplicate operationId: {ids}"
     # THE PAID ENDPOINTS MUST DOCUMENT THE 402. A gateway that does not know a route can answer 402

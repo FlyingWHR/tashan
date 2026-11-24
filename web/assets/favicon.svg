@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- rough triangular stone (他山之石), faceted, transparent ground -->
+  <!-- rough triangular stone, faceted, transparent ground -->
   <path d="M17 4 L23 10 L29 22 L18 28 L5 24 L4 13 Z" fill="#34e0a0"/>
   <path d="M17 4 L4 13 L14 15 Z" fill="#5cf0c0"/>
   <path d="M17 4 L23 10 L29 22 L18 28 L14 15 Z" fill="#1f9e78"/>

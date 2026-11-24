@@ -1,18 +1,9 @@
-# tashan — the demand side of the agent economy, indexed.
-#
-# WHAT THIS INDEXES. USDC transfers on Base whose recipient is an address some x402 service has
-# PUBLISHED as its payTo in Coinbase's public discovery index. One such transfer is one settled
-# agent call: x402 answers an HTTP 402 with a signed payment, and the receipt lands here.
-#
-# WHY topic2. Without an indexed-argument filter a subgraph on USDC/Base must process every transfer
-# on the chain — tens of millions — to find the few thousand that are agent payments. topic2 is the
-# Transfer event's indexed `to`, so graph-node matches at the log level and the sync is bounded by
-# the size of the economy rather than the size of the chain. Requires specVersion >= 1.2.0.
-#
+# Base USDC transfers to receiver addresses published in Coinbase x402 Bazaar.
+# A transfer can include other activity at the same address.
 # THE ADDRESS LIST IS GENERATED, NOT HAND-KEPT. `node scripts/receivers.mjs` rewrites it from the
 # Bazaar. Editing subgraph.yaml by hand loses the next harvest; edit this template instead.
 specVersion: 1.2.0
-description: Settled x402 payments on Base — receipts against the Bazaar's listings.
+description: Base USDC transfers to addresses listed in Coinbase x402 Bazaar.
 repository: https://github.com/FlyingWHR/tashan
 schema:
   file: ./schema.graphql

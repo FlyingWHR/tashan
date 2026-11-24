@@ -6,7 +6,7 @@ a "Quick Answer" block (40–60 words, the exact command/path first), question-f
 Article + FAQPage + HowTo JSON-LD. Out-authorities directory sites by backing "best X" lists with
 tashan's live tashan score ranking (data-backed = more citable than curated opinion).
 
-This ships the FRAMEWORK + a few exemplar articles (EN + 中文). The full query-cluster sweep
+This ships the FRAMEWORK + a few exemplar articles in English. The full query-cluster sweep
 (where-stored / how-to-install / best-X / is-X-safe × every client × EN/CN) is LLM-in-loop and runs
 as a separate pass — this file is the deterministic renderer + template those articles slot into.
 Stdlib only.
@@ -364,24 +364,17 @@ def build_articles(caps):
         "itemlist": [{"name": pretty(c["name"]), "url": BASE + "/capability/" + c["slug"] + ".html", "tashan_score": c["tashan_score"]}
                      for c in [x for x in caps if x.get("tashan_score") is not None and x.get("kind") in ("npm", "pkg")][:12]],
     })
-    # 3. 中文 cluster — tutorial-that-curates shell (CN long-tail)
-    # Same fix as the EN best-X page: 「最靠谱」/「靠不靠谱」 reads as a trustworthiness verdict, which is
-    # the claim methodology.html says the arithmetic cannot support. Rewritten to the two things actually
-    # measured — 还在维护 (upkeep/freshness) and 有人在用 (adoption) — in natural Chinese, not a gloss of
-    # the English. Title keeps the 「怎么选」 long-tail; only the promise changes.
+    # Keep the established URL for existing bookmarks.
     A.append({
-        "slug": "mcp-fuwuqi-tuijian", "lang": "zh",
-        "title": "MCP 服务器怎么选？用 tashan score 看维护活跃度和真实采用量",
-        "desc": "面对上千个 MCP 服务器，怎么看出哪些还在维护、真的有人在用？tashan 用公开证据打分（tashan score = 维护 + 更新，按真实采用度加权），附带专家评级和安装方法。",
-        "quick": "选 MCP 服务器别只看 star。tashan 用<b>公开证据</b>打 tashan score 分（维护活跃度 + 更新新鲜度，按真实下载量加权），并对每个能力做 <b>deep / solid / thin</b> 专家评级。下面是按 tashan score 排名的榜单，点开任意一行看完整安装方法和仓库健康度。",
+        "slug": "mcp-fuwuqi-tuijian", "lang": "en",
+        "title": "How to compare MCP server upkeep and adoption",
+        "desc": "Check release activity, observed adoption and the source repository before installing an MCP server.",
+        "quick": "Start with the work you need to do. Compare the candidate servers’ recent releases, measured use and known advisories, then inspect the installation instructions for your host.",
         "sections": [
-            {"q": "怎么判断一个 MCP 服务器还在维护、有没有人用？",
-             "body": "<p>看三件事：是否<b>仍在维护</b>（最近提交/发版）、有多少<b>真实采用</b>（npm 周下载）、以及是否有<b>单一维护者/已归档</b>风险。tashan 把这些合成一个可复现的 tashan score 分。</p>" + top_table(caps, lambda c: c.get("kind") in ("npm","pkg"), 12)},
-            {"q": "MCP 服务器和 Agent Skill 有什么区别？",
-             "body": "<p>MCP 服务器通过 Model Context Protocol 给 AI 暴露工具；Agent Skill 是一个带 SKILL.md 的文件夹，按需加载。tashan 用同一套模型同时追踪并打分。</p>"},
+            {"q": "Which packages can I compare?", "body": top_table(caps, lambda c: c.get("kind") in ("npm", "pkg"), 12)},
+            {"q": "What should I verify before installation?", "body": "<p>Open the package dossier. Check its source, supported client, release date and advisory evidence for the version you plan to install.</p>"},
         ],
-        "faq": [("这个榜单收钱排名吗？", "不收。排名由公开证据算出——下载量、发版节奏和仓库健康度，没有付费位。"),
-                ("怎么安装？", "点开任意能力页，复制对应客户端（Claude Code / Cursor / Claude Desktop / Codex）的安装片段即可。")],
+        "faq": [("How are packages ordered?", "The Tashan score uses public evidence about upkeep, freshness and adoption. The methodology documents its inputs.")],
     })
     # 4. how-to-install cluster (EN) — Cursor, HowTo schema, exact path first
     A.append({
@@ -439,10 +432,9 @@ def build_articles(caps):
 def index_page(A):
     cards = ""
     for a in A:
-        lang = " · 中文" if a.get("lang") == "zh" else ""
         cards += ('<a class="card card--link" href="/learn/' + a["slug"] + '.html">'
                   '<h3 class="card__h">' + esc(a["title"]) + '</h3>'
-                  '<p class="card__desc">' + esc(a["desc"][:120]) + '…<span class="mono faint">' + lang + '</span></p></a>')
+                  '<p class="card__desc">' + esc(a["desc"][:120]) + '…</p></a>')
     body = ('<main class="wrap" id="main"><article class="prose"><h1>Learn</h1>'
             '<p class="lede">Practical, evidence-backed guides to MCP servers and agent skills — where they live, '
             'how to install them in every client, and which ones are actually worth it.</p>'

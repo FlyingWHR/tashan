@@ -18,6 +18,10 @@ on:
     - cron: "17 6 * * *"      # 06:17 UTC daily — off the hour, registries are quieter
   workflow_dispatch:
     inputs:
+      refresh_payments:
+        description: Refresh directory and payment evidence and rebuild the site
+        type: boolean
+        default: false
       publish_snapshot:
         description: Publish the checked-in snapshot and service code without remeasuring sources
         type: boolean
@@ -105,6 +109,11 @@ jobs:
         continue-on-error: true
         run: python3 pipeline/db_store.py pull
 
+      - name: Refresh the Base USDC directory sample
+        id: directory
+        continue-on-error: true
+        run: node subgraph/scripts/receivers.mjs
+
       - name: Run the pipeline (incremental)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # scraper + registry ingest use the gh CLI
@@ -132,7 +141,14 @@ jobs:
         # else here. The pipeline is allowed to fail; it is not allowed to take the record with it.
         id: pipeline
         continue-on-error: true
-        run: python3 pipeline/run.py
+        run: |
+          if [[ "${{ inputs.refresh_payments }}" == "true" ]]; then
+            [[ "${{ steps.dbpull.outcome }}" == "success" && "${{ steps.directory.outcome }}" == "success" ]] || exit 1
+            python3 pipeline/paid_demand.py --require-fresh
+            python3 pipeline/run.py --site
+          else
+            python3 pipeline/run.py
+          fi
 
       # Whatever the pipeline managed to score, get it onto disk as a shard. snapshot_history writes
       # nothing for a day with no rows, so a pipeline that died before compute_scores leaves no

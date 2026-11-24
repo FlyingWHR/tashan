@@ -1,28 +1,8 @@
 #!/usr/bin/env python3
-"""tashan — PAID DEMAND: which agent services have actually been paid, from the chain.
+"""Measure indexed activity at receiver addresses published in Coinbase x402 Bazaar.
 
-WHY THIS IS A NEW KIND OF SIGNAL. Every number tashan already carries is an upstream claim measured
-from the outside: npm downloads, publish cadence, GitHub activity, how often a server turns up in a
-public config. Each is a proxy for "is anyone using this". None of them is money.
-
-x402 changed that. A service answers HTTP 402 with a price, the caller signs a USDC transfer, and
-the receipt settles on chain — so for the slice of the field that has adopted it there is now a
-public, unforgeable record of demand. Coinbase's Bazaar publishes the DIRECTORY of those services,
-14,536 of them, and no evidence about any: not one number saying whether a listed endpoint has ever
-been paid once. That gap is the whole reason this file exists.
-
-WHERE THE DATA COMES FROM. A subgraph (see ../subgraph) indexes USDC transfers on Base whose
-recipient is an address a service published as its payTo. This stage reads it and writes two things:
-
-    data/paid_demand.json      per receiver: settled calls, volume, distinct payers, first/last seen
-    web/data/demand.json       the site's export, joined to capabilities where the host is one we know
-
-THE JOIN IS DELIBERATELY NARROW. A receiver address maps to the hosts that published it, and a host
-maps to a capability only when we already hold that exact host as the capability's homepage or
-repository. Anything looser — fuzzy name matching, registrable-domain guessing — would attach real
-money to the wrong project, which is the one error an evidence product cannot make. Unmatched
-receivers are still published; they are simply reported as economy-level facts with no capability
-attached.
+Discovery lists payment offers and resource-level activity. The primary settlement index
+aggregates events per address. Catalog associations require a unique homepage host.
 
     python3 pipeline/paid_demand.py              # query, store, export
     python3 pipeline/paid_demand.py --selftest   # no network, no credentials
@@ -66,12 +46,12 @@ QUERY = """
 """
 
 
-def query(endpoint, body=QUERY, timeout=30):
+def query(endpoint, body=QUERY, timeout=30, headers=None):
     """Ask the subgraph. Raises on transport failure; the caller decides whether that is fatal."""
     req = urllib.request.Request(
         endpoint,
         data=json.dumps({"query": body}).encode(),
-        headers={"content-type": "application/json", "user-agent": "tashan/paid-demand (+https://tashan.sh)"},
+        headers={"content-type": "application/json", "user-agent": "tashan/paid-demand (+https://tashan.sh)", **(headers or {})},
     )
     with urllib.request.urlopen(req, timeout=timeout) as r:
         doc = json.load(r)
@@ -110,40 +90,53 @@ def receipts(addrs, subgraph_id=X402_SUBGRAPH):
     receiver the chain does not know is reported as never paid rather than omitted.
     """
     import subgraph_mcp
+    with subgraph_mcp.Session() as session:
+        def get(graphql):
+            result = session.call_tool("execute_query_by_subgraph_id", {"subgraph_id": subgraph_id, "query": graphql})
+            if not isinstance(result, dict) or result.get("errors"):
+                raise ValueError("Missing or invalid subgraph response")
+            return result.get("data", result)
+        return read_cohort(addrs, get)
+
+
+def read_cohort(addresses, get, transfers=False):
+    meta = get("{ _meta { hasIndexingErrors block { number timestamp } } }")["_meta"]
+    if meta.get("hasIndexingErrors") is not False:
+        raise ValueError("Subgraph reports indexing errors")
+    block = int(meta["block"]["number"])
+    stamp = int(meta["block"]["timestamp"])
+    if block <= 0 or stamp <= 0 or stamp > datetime.now(timezone.utc).timestamp() + 600:
+        raise ValueError("Invalid indexed block")
     found = {}
-    with subgraph_mcp.Session() as s:
-        for i in range(0, len(addrs), BATCH):
-            batch = addrs[i:i + BATCH]
-            q = ("{ x402AddressSummaries(first: 1000, where: {role: RECIPIENT, address_in: ["
-                 + ",".join('"%s"' % a for a in batch)
-                 + "]}) { address totalPayments totalVolume firstPaymentTimestamp"
-                   " lastPaymentTimestamp } }")
-            out = s.call_tool("execute_query_by_subgraph_id",
-                              {"subgraph_id": subgraph_id, "query": q})
-            if not isinstance(out, dict):
-                raise RuntimeError(f"unexpected payload: {str(out)[:160]}")
-            if out.get("errors"):
-                raise RuntimeError(f"subgraph: {out['errors'][0].get('message', 'query failed')}")
-            for r in (out.get("data") or {}).get("x402AddressSummaries") or []:
-                found[str(r["address"]).lower()] = r
-    return found
+    for start in range(0, len(addresses), BATCH):
+        batch = addresses[start:start+BATCH]
+        values = json.dumps(batch)
+        args = f"first: 1000, block: {{ number: {block} }}"
+        if transfers:
+            query_text = f"{{ receivers({args}, where: {{id_in: {values}}}) {{ address:id totalVolume:totalPaid totalPayments:payments firstPaymentTimestamp:firstPaymentAt lastPaymentTimestamp:lastPaymentAt }} }}"
+            field = "receivers"
+        else:
+            query_text = f"{{ x402AddressSummaries({args}, where: {{role: RECIPIENT, address_in: {values}}}) {{ address totalPayments totalVolume firstPaymentTimestamp lastPaymentTimestamp }} }}"
+            field = "x402AddressSummaries"
+        rows = get(query_text)[field]
+        if not isinstance(rows, list):
+            raise ValueError("Missing recipient results")
+        for row in rows:
+            address = row['address'].lower()
+            if address not in batch or address in found or any(int(row[k]) < 0 for k in ('totalPayments', 'totalVolume', 'firstPaymentTimestamp','lastPaymentTimestamp')):
+                raise ValueError("Unexpected recipient result")
+            found[address] = row
+    return found, {"number": block, "timestamp": datetime.fromtimestamp(stamp, timezone.utc).isoformat()}
 
 
 def distribution(paid_usd):
-    """What a total hides. A sum is the one statistic a concentrated economy can always pass.
-
-    $247,247 settled sounds like a market. Two thirds of it is ONE receiver, 89% is five, and the
-    median service has earned 51 cents in its life. Publishing the total alone would be the same
-    mistake as ranking by stars: technically true, and it would tell a reader the opposite of what
-    is happening. So the page gets the shape, not the headline — and these are the numbers that
-    make the shape checkable.
-    """
+    """Summarize all sampled addresses, including those with no indexed event."""
     v = sorted(x for x in paid_usd if x is not None)
-    total = round(sum(v), 4)
+    total = round(sum(v), 6)
     if not v:
         return {"total_usd": 0.0, "receivers": 0}
     mid = len(v) // 2
-    median = v[mid] if len(v) % 2 else round((v[mid - 1] + v[mid]) / 2, 4)
+    median = v[mid] if len(v) % 2 else round((v[mid - 1] + v[mid]) / 2, 7)
     return {
         "total_usd": total,
         "receivers": len(v),
@@ -194,7 +187,7 @@ def charging(addr_hosts, host_to_cap):
 def usd(atomic):
     """Atomic USDC to dollars. Kept in one place so no caller ever prints 6-decimal units as money."""
     try:
-        return round(int(atomic) / USDC, 4)
+        return int(atomic) / USDC
     except (TypeError, ValueError):
         return 0.0
 
@@ -253,23 +246,17 @@ def hostname(url):
 
 
 def host_index(con):
-    """host -> capability id, built only from hosts we already store. Exact match, nothing inferred."""
+    """Map each exact homepage host to a capability only if the match is unique."""
     idx = {}
-    try:
-        cur = con.execute("SELECT id, homepage, gh_homepage, source_repo FROM capabilities "
-                          "WHERE homepage IS NOT NULL OR gh_homepage IS NOT NULL "
-                          "OR source_repo IS NOT NULL")
-    except Exception:
-        return idx
-    for cap_id, homepage, gh_homepage, source_repo in cur:
-        # A source repo is where the code lives, not where the service answers, so it is the weakest
-        # of the three — but a project that publishes an x402 endpoint on its own domain usually
-        # lists that domain as its homepage, and an exact host match is an exact host match.
-        for url in (homepage, gh_homepage, source_repo):
+    cur = con.execute("SELECT id, homepage, gh_homepage FROM capabilities WHERE homepage IS NOT NULL OR gh_homepage IS NOT NULL")
+    for cap_id, homepage, gh_homepage in cur:
+        for url in (homepage, gh_homepage):
             if not url or "://" not in str(url):
                 continue
-            idx.setdefault(hostname(url), cap_id)
-    return idx
+            host = hostname(url)
+            if host and host not in ("github.com", "gitlab.com", "npmjs.com", "pypi.org"):
+                idx.setdefault(host, set()).add(cap_id)
+    return {host: next(iter(ids)) for host, ids in idx.items() if len(ids) == 1}
 
 
 def build_records(addr_hosts, host_to_cap, found):
@@ -344,6 +331,7 @@ def store(records):
         return 0
     con = build.db()
     n = 0
+    con.execute("UPDATE capabilities SET paid_usd=NULL, paid_calls=NULL, paid_address=NULL, paid_first=NULL, paid_last=NULL, paid_seen_at=NULL WHERE paid_seen_at IS NOT NULL")
     for cap, a in per_capability(records).items():
         cur = con.execute(
             "UPDATE capabilities SET paid_usd=?, paid_calls=?, paid_address=?, "
@@ -396,40 +384,40 @@ def bank(eco, path=None):
 
 
 def main():
+    with open(RECEIVERS) as f:
+        cohort = json.load(f)
     addr_hosts = hosts_for()
-    host_to_cap = {}
-    try:
-        import build
-        host_to_cap = host_index(build.db())
-    except Exception:
-        pass    # without the DB we still publish the economy; the join is the enrichment, not the point
-
-    # THE STAGE USED TO WRITE NOTHING WITHOUT A PUBLISHED SUBGRAPH, and that was a mistake of
-    # sequencing rather than of honesty: the half that says WHO CHARGES needs no chain at all, and
-    # withholding it meant the whole signal was invisible until a wallet had been connected.
+    if not addr_hosts:
+        raise ValueError("Missing receiver cohort")
+    import build
+    host_to_cap = host_index(build.db())
     charges = charging(addr_hosts, host_to_cap)
-    found, via = {}, None
+    found, via, head = {}, None, None
     if os.environ.get("GRAPH_API_KEY"):
         try:
-            found = receipts(sorted(addr_hosts))
+            found, head = receipts(sorted(addr_hosts))
             via = "subgraph-mcp"
         except Exception as e:
-            print(f"  paid-demand: Subgraph MCP unreachable ({e}) — publishing who charges only.")
+            print(f"Subgraph MCP unavailable ({type(e).__name__}). Retrying the same index via The Graph gateway.")
+            try:
+                url = "https://gateway.thegraph.com/api/subgraphs/id/" + X402_SUBGRAPH
+                auth = {"Authorization": "Bearer " + os.environ["GRAPH_API_KEY"]}
+                found, head = read_cohort(sorted(addr_hosts), lambda q: query(url, q, headers=auth))
+                via = "graph-gateway"
+            except (KeyError, ValueError, RuntimeError, OSError) as error:
+                # Errors from the public GraphQL schema help diagnose an index change; never log a credentialed endpoint.
+                reason = str(error)[:240] if isinstance(error, (KeyError, ValueError, RuntimeError)) else type(error).__name__
+                print(f"::warning::Graph settlement index unavailable ({reason}). Keeping the previous chain read.")
     elif ENDPOINT:
         try:
-            data = query(ENDPOINT)
-            found = {str(r["id"]).lower(): {"address": r["id"], "totalVolume": r.get("totalPaid", 0),
-                                            "totalPayments": r.get("payments", 0),
-                                            "firstPaymentTimestamp": r.get("firstPaymentAt", 0),
-                                            "lastPaymentTimestamp": r.get("lastPaymentAt", 0)}
-                     for r in (data.get("receivers") or [])}
+            found, head = read_cohort(sorted(addr_hosts), lambda q: query(ENDPOINT, q), transfers=True)
             via = "gateway"
         except Exception as e:
-            print(f"  paid-demand: gateway unreachable ({e}) — publishing who charges only.")
+            print(f"::warning::Gateway refresh unavailable ({type(e).__name__}). Keeping the previous chain read.")
 
     if via:
         records = build_records(addr_hosts, host_to_cap, found)
-        dist = distribution([r["paid_usd"] for r in records if r["paid_usd"]])
+        dist = distribution([r["paid_usd"] for r in records])
         paid_rows = [r for r in records if r["paid_usd"] or r["calls"]]
         economy = {
             "paid_usd": dist["total_usd"],
@@ -446,8 +434,15 @@ def main():
     attributed = [r for r in records if r.get("attributable")]
     doc = {
         "source": (f"subgraph {X402_SUBGRAPH} via subgraphs.mcp.thegraph.com" if via == "subgraph-mcp"
-                   else ENDPOINT or SSE_NOTE),
+                   else f"subgraph {X402_SUBGRAPH} via gateway.thegraph.com" if via == "graph-gateway"
+                   else "configured Base USDC transfers subgraph" if via else SSE_NOTE),
         "via": via,
+        "cohort_date": cohort["harvested"],
+        "last_refresh_attempt": {"at": datetime.now(timezone.utc).isoformat(), "status": "updated" if via else "unavailable"},
+        "directory": dict(cohort.get("coverage", {}), harvested=cohort["harvested"], source=cohort["source"]),
+        "providers": cohort.get("providers", {}),
+        "indexed_block": head,
+        "distribution_basis": "all sampled receiver addresses",
         "measured_at": datetime.now(timezone.utc).isoformat() if via else None,
         "paid_measured": bool(via),
         "economy": economy,
@@ -471,10 +466,17 @@ def main():
         except (OSError, ValueError):
             prev = {}
         if prev.get("paid_measured"):
-            print("  paid-demand: no key this run — KEEPING the last chain read "
+            print("  paid-demand: refresh unavailable — KEEPING the last chain read "
                   f"({prev.get('receivers_paid', 0)} paid receivers, source: {prev.get('source')}). "
                   "Set GRAPH_API_KEY to refresh it.")
-            return 0
+            prev["providers"] = doc["providers"]
+            prev["directory"] = doc["directory"]
+            prev["last_refresh_attempt"] = dict(doc["last_refresh_attempt"], status="retained")
+            for path in (OUT, SITE):
+                with open(path, "w") as f:
+                    json.dump(prev, f, indent=2 if path == OUT else None)
+                    f.write("\n")
+            return 1 if "--require-fresh" in sys.argv else 0
 
     for path in (OUT, SITE):
         os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -493,7 +495,7 @@ def main():
         print(f"  paid-demand: no chain read (set GRAPH_API_KEY) — published "
               f"{doc['charging_capabilities']} capabilities that CHARGE, of {len(addr_hosts)} "
               f"listed receivers, with payment columns unmeasured")
-    return 0
+    return 1 if "--require-fresh" in sys.argv and not via else 0
 
 
 def _selftest():
@@ -519,6 +521,18 @@ def _selftest():
         assert "receivers_paid" not in only, only
         assert bank({}, os.path.join(td, "c.jsonl")) is False, "nothing to bank is not a write"
     print("ok — market series: write-once per day, absent figures omitted not zeroed")
+
+    queries = []
+    def fixed_block(q):
+        queries.append(q)
+        if "_meta" in q:
+            return {"_meta": {"hasIndexingErrors": False, "block": {"number": 42, "timestamp": 1700000000}}}
+        return {"x402AddressSummaries": []}
+    sample = [f"0x{i:040x}" for i in range(BATCH + 1)]
+    found, block = read_cohort(sample, fixed_block)
+    assert not found and block["number"] == 42 and len(queries) == 3
+    assert all("block: { number: 42 }" in q for q in queries[1:])
+    assert distribution([0, 0.000001])["median_usd"] == 0.0000005
 
     assert usd(10000) == 0.01, "a cent must not print as 10000"
     assert usd(1_000_000) == 1.0

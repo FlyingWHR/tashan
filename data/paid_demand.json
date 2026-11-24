@@ -20,7 +20,7 @@
   "receivers_indexed": 1079,
   "receivers_paid": 1026,
   "charging_capabilities": 69,
-  "paid_capabilities": 61,
+  "paid_capabilities": 52,
   "matched_to_capability": 80,
   "unmatched": 999,
   "records": [
@@ -17171,5 +17171,52 @@
       "last": null,
       "attributable": false
     }
-  ]
+  ],
+  "paid_capabilities_note": "capabilities with an attributable receipt AND a published dossier; see data/paid_demand.json for the pre-export count",
+  "providers": {
+    "coinbase": {
+      "source": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources",
+      "reported_resources": 40518,
+      "observed_resources": 40517,
+      "base_usdc_resources": 40319,
+      "receivers": 2160,
+      "activity_reported": 39946,
+      "active_resources_30d": 39889
+    },
+    "payai": {
+      "source": "https://facilitator.payai.network/discovery/resources",
+      "reported_resources": 18158,
+      "observed_resources": 18036,
+      "base_usdc_resources": 13974,
+      "receivers": 1057,
+      "activity_reported": 0,
+      "active_resources_30d": 0
+    },
+    "mpp": {
+      "source": "https://mpp.dev/api/services",
+      "checked_at": "2026-11-24T04:49:48.921Z",
+      "services": 142,
+      "methods": {
+        "tempo": 139,
+        "evm": 1,
+        "stripe": 10
+      }
+    },
+    "x402_overlap_urls": 4405,
+    "x402_union_urls": 54148
+  },
+  "directory": {
+    "reported_resources": 40518,
+    "observed_resources": 40517,
+    "base_usdc_resources": 40319,
+    "receivers": 2160,
+    "activity_reported": 39946,
+    "active_resources_30d": 39889,
+    "harvested": "2026-11-24",
+    "source": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources"
+  },
+  "last_refresh_attempt": {
+    "at": "2026-11-24T04:50:21.998423+00:00",
+    "status": "retained"
+  }
 }

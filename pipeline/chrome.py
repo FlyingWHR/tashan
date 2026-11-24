@@ -182,10 +182,7 @@ def footer_html():
             '<p class="footer__meta" id="footMethod"></p></div>'
             f"{cols}</div>"
             '<div class="wrap footer__bar"><span>© 2026 SeroLabs, Inc.</span>'
-            # THE SIGN-OFF. Hermes closes on "THE INTERNET'S OWN AI" — four words that claim a
-            # position and explain nothing. The old line here spent eleven words defending our
-            # method in the one slot on the page where nobody is arguing with us.
-            "<span>他山之石，可以攻玉</span></div></footer>")
+            '</div></footer>')
 
 
 NAV_RE = re.compile(r"(?:<a class=\"skip\"[^>]*>.*?</a>)?<nav class=\"nav\">.*?</nav>", re.S)

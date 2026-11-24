@@ -3,12 +3,7 @@
 > **tashan** — the intelligence layer for AI capabilities. *Measure what actually works.*
 
 ## The name
-**tashan** (他山) is from the Chinese proverb **他山之石，可以攻玉** — *a stone from another
-mountain can polish your jade.* It's the product thesis in three characters, and it is the same
-idea as the toolbox: **every tool in your AI's toolbox was made on somebody else's mountain.**
-We host none of them and sell none of them. We judge the field using the field's **own public
-evidence** — registries, npm, git history, the READMEs people wrote — to say which stones polish
-the jade and which scratch it.
+Use the lowercase wordmark **tashan**. The faceted jade mark and the mountain ridge are the visual identity.
 
 **The voice, in one line:** *the trusted directory for your AI's toolbox.* `tool` is both the word
 MCP's spec uses and the word a non-technical reader uses, which is why it is the public noun;

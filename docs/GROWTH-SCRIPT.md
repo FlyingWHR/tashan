@@ -24,7 +24,7 @@ argument. Read every line below deadpan. Nothing is exclaimed.
 
 | Time | Voiceover | On screen |
 |---|---|---|
-| 0:00–0:07 | "This was the top-ranked security tool on my own site. Its README opens with three words: *we've decided not to maintain this.*" | The dossier, Trust **70**, `#1`. Then the README scrolls to `# 不维护决定`. |
+| 0:00–0:07 | "This was the top-ranked security tool on my own site. Its README opens with three words: *we've decided not to maintain this.*" | The dossier, Trust **70**, `#1`. Then the README scrolls to the author’s maintenance notice. |
 | 0:07–0:15 | "My scorer couldn't read it. It was checking whether GitHub's archive box was ticked. Nobody ticks the box. They just write it and walk away." | The GitHub repo page. Archive box: unticked. Last push: 18 days ago. |
 | 0:15–0:24 | "That's the whole problem with picking an MCP server. Everything you can check quickly is a proxy, and every proxy has a way of being wrong." | Stars, downloads, last-commit badges — each greying out one by one. |
 | 0:24–0:36 | "So: 12,638 capabilities tracked. 6,075 scored on public evidence — adoption, maintenance, freshness. The arithmetic is on the page. You can disagree with it." | The index scrolling. Hover a score → the methodology breakdown opens. |

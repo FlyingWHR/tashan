@@ -121,7 +121,7 @@ Artificially narrows future development
 Grandiose and logically false
 “Real separation rather than noise”
 Claims statistical significance without a defined uncertainty model
-The About page should explain the user problem, the job-oriented product, and the meaning of 他山之石. Methodological and commercial policies should live in concise supporting pages.
+The About page should explain the user problem, the job-oriented product, and its measurement method. Methodological and commercial policies should live in concise supporting pages.
  
 ⸻
  
@@ -250,7 +250,7 @@ Other site surfaces still use it as though it means:
 	•	Most suitable
 	•	Strongest recommendation
 	•	Real separation between alternatives
-The English learning page describes the highest-score entries as the “most trustworthy MCP servers.” The Chinese guide uses “最靠谱.” Task and role page metadata uses “Best plugins and skills.” (Tashan⁠)
+The English learning page describes the highest-score entries as the “most trustworthy MCP servers.” The Chinese guide uses “most reliable.” Task and role page metadata uses “Best plugins and skills.” (Tashan⁠)
 That recreates the exact overclaim the methodology was rewritten to avoid.
 Recommended semantic model
 Keep the Tashan score in the data layer, but present it as:
@@ -683,7 +683,7 @@ Complete immediately:
 	4.	Rebuild every page from a single score snapshot.
 	5.	Suppress installation and recommendations for discontinued products.
 	6.	Correct security wording around undetected permission surfaces.
-	7.	Remove “best,” “most trusted,” and “最靠谱” where only operational evidence is measured.
+	7.	Remove “best,” “most trusted,” and “most reliable” where only operational evidence is measured.
 	8.	Suspend generated comparison pages that do not represent real substitutes.
 P1: Repair the unique product
 	1.	Publish the job-mapping methodology.
@@ -722,7 +722,7 @@ AI skills should be organized around the work they do.
 Body
 The supply of AI skills, MCP servers, plugins, and agent tools is growing faster than anyone can evaluate it. Most directories organize them around package formats and technical categories. Tashan starts with a different question: what are you trying to accomplish?
 We map capabilities to real jobs and tasks, then show the evidence needed to choose between them: task fit, maintenance, adoption, compatibility, instruction depth, and known-risk checks.
-Tashan comes from 他山之石，可以攻玉—a stone from another mountain can help polish your jade. The right external tool or body of knowledge can improve your own work.
+The right external tool or body of knowledge can improve your own work.
 Our goal is to make AI skills easier to find, compare, install, and keep current—first as a directory and, over time, as a marketplace.
 Commercial relationships never influence task fit, measurements, findings, rankings, or editorial recommendations.
  

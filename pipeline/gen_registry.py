@@ -109,9 +109,7 @@ def main():
                 "usd": c.get("paid_usd"),
                 "payments": c.get("paid_calls"),
                 "protocol": "x402", "chain": "base", "measured_at": c["paid_seen_at"],
-                "note": ("settled payments at this capability's own payment address, all time. A "
-                         "zero here is measured, not missing. Deliberately NOT an input to the "
-                         "score: being paid and being well made are different claims."),
+                "note": "Cumulative indexed activity at matched Base receiver addresses. The association does not establish service revenue. Payment does not affect the score.",
             }
         if c.get("registry_status"):
             meta["io.modelcontextprotocol.registry/official"] = {"status": c["registry_status"]}

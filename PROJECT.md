@@ -23,11 +23,8 @@ Consumer Reports than to npm or the GPT Store: trusted because it **measures**, 
 coverage" is an aspiration, not a fact, and claiming it is the same sin as any other unmeasured claim —
 publish `N of ~M known, from these sources, synced T` (see `docs/SOURCING.md` §0).
 
-### The name (the whole thesis in three characters)
-**他山** (*tashan*), from **他山之石，可以攻玉** — *a stone from another mountain can polish your jade.*
-We bring no stone of our own to sell; we judge the field with the field's **own public evidence** (its
-stones — the registry, npm, git history, the READMEs people wrote) and let the jade show itself. Always
-**lowercase** — it's a command you run (`tashan`, `tashan.sh`, `npx tashan-cli`), not a brand you shout.
+### The name
+Use the lowercase wordmark **tashan** in product copy.
 
 ---
 
@@ -151,9 +148,9 @@ install path, and official tags Agensi lacks.
   restraint, not just hue). `--jade-bright #5cf0c0`.
 - **Type:** Geist (sans, UI) + GeistMono (all data/numbers/labels — the instrument readout), self-hosted
   woff2, no external requests. Serif reserved for the occasional editorial pull-quote.
-- **Logo/mark:** a **jade stone** (他山之石) — organic pebble with a polished facet. `favicon.svg` +
+- **Logo/mark:** a **jade stone** — organic pebble with a polished facet. `favicon.svg` +
   `.brand__mark` (CSS mask so the `--jade` token drives color; shape-following drop-shadow glow).
-- **Signature motifs:** ASCII mountain ridge in the hero (他山); the 他山之石 name-story line; a cool
+- **Signature motifs:** ASCII mountain ridge in the hero; a cool
   jade-teal canvas smoke (`js/smoke.js`, CSP-safe, reduced-motion aware); staggered headline + "works"
   underline draw + rotating dimension line + blinking caret (`js/hero.js`).
 - **Terminal frame** (`js/terminal.js`, every page): a scrolling **ticker** (live cap readouts +
@@ -179,7 +176,7 @@ install path, and official tags Agensi lacks.
 - **Pricing** — free Index forever; **tashan Pro $6/mo ($60/yr)**; pay by **card or USDC (Coinbase x402)**;
   plus **$0.20 USDC pay-per-use** deep-grade with no account. Neutrality guarantee stated plainly.
 - **Methodology / About** — the trust core: exactly what's measured, the Trust formula, what we *don't*
-  do, and the 他山之石 story.
+  do, and the underlying sources.
 - **Badges** — 299 embeddable jade SVGs at `/badge/<slug>.svg` (the flagship growth loop).
 
 ---
@@ -265,8 +262,7 @@ GitHub Actions uses the repository's Cloudflare credentials and checks the publi
 
 ## 12. Taste & working principles (for whoever builds next)
 
-- **Plain, grounded copy.** No precious/poetic marketing ("装逼"). Under-write. The one endorsed flourish
-  is the 他山之石 story — kept to a single sentence.
+- **Plain, grounded copy.** Use direct language.
 - **Convenience is felt, not sold.** Payment ease shows up at checkout, never as a feature bullet.
 - **Premium = restraint + one clean number**, not price or saturation. (Pro is round $6, not $5.99;
   accent on data only.)
