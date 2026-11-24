@@ -34,6 +34,10 @@ name: publish cli
 on:
   workflow_dispatch:
     inputs:
+      verify_only:
+        description: Verify an already-published version without submitting another release
+        type: boolean
+        default: false
       dry_run:
         # UNCHECK THIS TO ACTUALLY PUBLISH. It stays defaulted to true — a publish is irreversible
         # after 72 hours and the safe default is the one that does nothing — but a dry run used to
@@ -139,7 +143,7 @@ jobs:
       # attestation itself. If this fails with an auth error, the trusted publisher above has not
       # been configured yet, or one of its fields does not match this repo exactly.
       - name: publish
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run && !inputs.verify_only }}
         working-directory: cli
         run: npm publish --access public
 
@@ -160,7 +164,7 @@ jobs:
       # regression and this fails again.
       - name: verify the publish landed
         id: verify
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run || inputs.verify_only }}
         env:
           IS_PRIVATE: ${{ github.event.repository.private }}
         run: |
@@ -170,7 +174,7 @@ jobs:
             const v = JSON.parse(readFileSync('./cli/package.json', 'utf8')).version;
             let manifest;
             for (let i = 0; i < 12; i++) {
-              const r = await fetch('https://registry.npmjs.org/tashan-cli/' + v, { cache: 'no-store' });
+              const r = await fetch('https://registry.npmjs.org/tashan-cli/' + v + '?verify=' + Date.now(), { cache: 'no-store', signal: AbortSignal.timeout(15000) });
               if (r.ok) manifest = await r.json();
               if (manifest?.version === v && (manifest.dist?.attestations || process.env.IS_PRIVATE === 'true')) break;
               await delay(10000);
@@ -196,7 +200,9 @@ jobs:
         if: always()
         run: |
           V=$(node -p "require('./cli/package.json').version")
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
+          if [ "${{ inputs.verify_only }}" = "true" ]; then
+            echo "Registry verification for tashan-cli@$V — ${{ steps.verify.outcome }}" >> "$GITHUB_STEP_SUMMARY"
+          elif [ "${{ inputs.dry_run }}" = "true" ]; then
             {
               echo "## ⚠️ DRY RUN — nothing was published"
               echo ""
