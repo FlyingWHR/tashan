@@ -16,7 +16,7 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 | `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 41 |
 | `/audit.html` | Paste your MCP config and see every risk we hold about what is in it. Parsed in the browser, so keys never leave the page. | audit, site, terminal | board.json, index.json, tasks.json | free | 40 |
 | `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 37 |
-| `/paid.html` | Settled x402 receipts on Base, joined to the catalog — the only signal here that is not a proxy for demand. Read through The Graph's Subgraph MCP, and the page prints the query so a reader can re-run it. | site | — | free | 37 |
+| `/paid.html` | Settled x402 receipts on Base, joined to the catalog — the only signal here that is not a proxy for demand. Read through The Graph's Subgraph MCP, and the page prints the query so a reader can re-run it. | site | demand.json | free | 37 |
 | `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | board.json, index.json, tasks.json | free | 35 |
 | `/support.html` | How to get help, and what we can see when you ask. | site, terminal | board.json, index.json, tasks.json | free | 35 |
 | `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 34 |
@@ -101,6 +101,7 @@ Each of these exists because the failure it prevents already shipped once.
 - `tests/test_pkg_name.py` — Every `npx …` invocation we publish must name a package that actually resolves to US.
 - `tests/test_product_tree.py` — docs/PRODUCT-TREE.md must describe every surface that exists, and describe none that don't.
 - `tests/test_promises.py` — Every feature the pricing page sells must have code that delivers it.
+- `tests/test_public_copy.py` — Check rendered public copy, including escaped text in machine-readable exports."""
 - `tests/test_score.py` — The two score-shape properties everything else rests on.
 - `tests/test_scorer_version.py` — SCORER_VERSION must change whenever the scoring changes.
 - `tests/test_scrape.py` — capability_id() — the config parser that decides what a row IS.
