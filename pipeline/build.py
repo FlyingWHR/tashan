@@ -1571,6 +1571,11 @@ def public_copy(row):
             row[field] = row.get('npm_pkg') or row['slug']
         else:
             row.pop(field, None)
+    # Task evidence is a verbatim upstream quote. The same field feeds JSON,
+    # Markdown and the role board tooltips; keep the source quote in SQLite.
+    for task in row.get('tasks') or []:
+        if task.get('e') and HAN_TEXT.search(task['e']):
+            task['e'] = None
     topics = row.get('gh_topics')
     if isinstance(topics, list):
         row['gh_topics'] = [t for t in topics if not HAN_TEXT.search(t)]
