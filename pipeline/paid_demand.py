@@ -317,7 +317,7 @@ def per_capability(records):
     return agg
 
 
-def store(records):
+def store(records, measured_at):
     """Write the per-capability money facts to the DB, so every surface reads one source.
 
     Only attributable rows, by construction — see attributable(). The columns live beside every other
@@ -325,20 +325,20 @@ def store(records):
     field up for free; a JSON file read by one page would have been a second source of truth, and
     this repo has paid for that mistake before.
     """
-    try:
-        import build
-    except Exception:
-        return 0
+    import build
+    # Replaying retained evidence must preserve its chain observation time.
+    seen_at = datetime.fromisoformat(measured_at).astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     con = build.db()
     n = 0
     con.execute("UPDATE capabilities SET paid_usd=NULL, paid_calls=NULL, paid_address=NULL, paid_first=NULL, paid_last=NULL, paid_seen_at=NULL WHERE paid_seen_at IS NOT NULL")
     for cap, a in per_capability(records).items():
         cur = con.execute(
             "UPDATE capabilities SET paid_usd=?, paid_calls=?, paid_address=?, "
-            "paid_first=?, paid_last=?, paid_seen_at=datetime('now') WHERE id=?",
-            (a["paid_usd"], a["calls"], ",".join(a["addresses"]), a["first"], a["last"], cap))
+            "paid_first=?, paid_last=?, paid_seen_at=? WHERE id=?",
+            (a["paid_usd"], a["calls"], ",".join(a["addresses"]), a["first"], a["last"], seen_at, cap))
         n += cur.rowcount or 0      # rowcount, not total_changes: the latter is cumulative
     con.commit()
+    con.close()
     return n
 
 
@@ -384,6 +384,14 @@ def bank(eco, path=None):
 
 
 def main():
+    if "--restore-snapshot" in sys.argv:
+        with open(SITE) as src:
+            saved = json.load(src)
+        if not saved.get("paid_measured"):
+            raise ValueError("The saved snapshot contains no settlement measurement")
+        count = store(saved["records"], saved["measured_at"])
+        print(f"Restored payment facts for {count} capabilities from {saved['measured_at']}")
+        return 0
     with open(RECEIVERS) as f:
         cohort = json.load(f)
     addr_hosts = hosts_for()
@@ -415,6 +423,7 @@ def main():
         except Exception as e:
             print(f"::warning::Gateway refresh unavailable ({type(e).__name__}). Keeping the previous chain read.")
 
+    measured_at = datetime.now(timezone.utc).isoformat() if via else None
     if via:
         records = build_records(addr_hosts, host_to_cap, found)
         dist = distribution([r["paid_usd"] for r in records])
@@ -427,7 +436,7 @@ def main():
             "mean_payment_usd": round(dist["total_usd"] / max(sum(r["calls"] for r in records), 1), 6),
             **{k: v for k, v in dist.items() if k != "total_usd"},
         }
-        stored = store(records)
+        stored = store(records, measured_at)
     else:
         records, economy, stored = charges, None, 0
 
@@ -443,7 +452,7 @@ def main():
         "providers": cohort.get("providers", {}),
         "indexed_block": head,
         "distribution_basis": "all sampled receiver addresses",
-        "measured_at": datetime.now(timezone.utc).isoformat() if via else None,
+        "measured_at": measured_at,
         "paid_measured": bool(via),
         "economy": economy,
         "receivers_indexed": len(addr_hosts),
@@ -466,6 +475,7 @@ def main():
         except (OSError, ValueError):
             prev = {}
         if prev.get("paid_measured"):
+            store(prev["records"], prev["measured_at"])
             print("  paid-demand: refresh unavailable — KEEPING the last chain read "
                   f"({prev.get('receivers_paid', 0)} paid receivers, source: {prev.get('source')}). "
                   "Set GRAPH_API_KEY to refresh it.")
@@ -499,11 +509,25 @@ def main():
 
 
 def _selftest():
+    import build, tempfile
+    from unittest.mock import patch
+    with tempfile.TemporaryDirectory() as tmp, patch.object(build, "DB", os.path.join(tmp, "test.db")):
+        con = build.db()
+        con.executemany("INSERT INTO capabilities (id, paid_usd, paid_seen_at) VALUES (?, 99, '2026-11-27')",
+                        [("pkg:test",), ("pkg:old",)])
+        con.commit()
+        con.close()
+        record = {"attributable": True, "capabilities": ["pkg:test"], "paid_usd": 2.5,
+                  "calls": 3, "address": "0xa"}
+        assert store([record], "2026-11-24T04:57:00+00:00") == 1
+        con = build.db()
+        assert con.execute("SELECT paid_usd, paid_seen_at FROM capabilities ORDER BY id").fetchall() == [
+            (None, None), (2.5, "2026-11-24 04:57:00")]
+        con.close()
     # ---- the market series is write-once, and that is the whole guarantee ----------------------
     # A second run on the same day must not revise a day already recorded: the value of this file is
     # that it says what we believed on the morning we believed it. If a re-run could rewrite today,
     # a bad chain read would quietly overwrite a good one and nothing would show it.
-    import tempfile
     with tempfile.TemporaryDirectory() as td:
         hp = os.path.join(td, "demand_history.jsonl")
         eco = {"paid_usd": 247353.28, "calls": 10418946, "receivers_paid": 998,

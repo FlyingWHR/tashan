@@ -123,6 +123,7 @@ jobs:
             # Verify and publish counters from the same generation of the database.
             # The live cache can be several nights newer than the checked-in pages.
             [[ "${{ steps.dbpull.outcome }}" == "success" ]] && test -s data/tashan.db || exit 1
+            python3 pipeline/paid_demand.py --restore-snapshot
             python3 pipeline/run.py --site
           elif [[ "${{ inputs.refresh_payments }}" == "true" ]]; then
             [[ "${{ steps.dbpull.outcome }}" == "success" && "${{ steps.directory.outcome }}" == "success" ]] || exit 1
