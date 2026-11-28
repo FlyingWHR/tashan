@@ -173,9 +173,19 @@ jobs:
             import { setTimeout as delay } from 'node:timers/promises';
             const v = JSON.parse(readFileSync('./cli/package.json', 'utf8')).version;
             let manifest;
-            for (let i = 0; i < 12; i++) {
-              const r = await fetch('https://registry.npmjs.org/tashan-cli/' + v + '?verify=' + Date.now(), { cache: 'no-store', signal: AbortSignal.timeout(15000) });
-              if (r.ok) manifest = await r.json();
+            // npm can acknowledge the upload several minutes before public replicas
+            // serve the manifest. Retry reads only, never the immutable publish.
+            const deadline = Date.now() + 10 * 60_000;
+            while (Date.now() < deadline) {
+              try {
+                const r = await fetch('https://registry.npmjs.org/tashan-cli/' + v + '?verify=' + Date.now(), { cache: 'no-store', signal: AbortSignal.timeout(15000) });
+                if (r.ok) manifest = await r.json();
+                else if (r.status !== 404 && r.status !== 429 && r.status < 500)
+                  throw new Error('Unexpected registry status ' + r.status);
+              } catch (err) {
+                if (!(err instanceof TypeError) && err.name !== 'TimeoutError') throw err;
+                console.warn('Retrying a registry read:', err.message);
+              }
               if (manifest?.version === v && (manifest.dist?.attestations || process.env.IS_PRIVATE === 'true')) break;
               await delay(10000);
             }
