@@ -23,7 +23,7 @@ on:
         type: boolean
         default: false
       publish_snapshot:
-        description: Publish the checked-in snapshot and service code without remeasuring sources
+        description: Rebuild and publish from saved measurements without re-fetching sources
         type: boolean
         default: false
 
@@ -36,32 +36,8 @@ concurrency:
   cancel-in-progress: false    # never interrupt a run mid-write; the DB is the source of truth
 
 jobs:
-  publish_snapshot:
-    if: github.event_name == 'workflow_dispatch' && inputs.publish_snapshot && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
-        with:
-          python-version: "3.12"
-      - name: Restore the database for the verification suite
-        env:
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: python3 pipeline/db_store.py pull
-      - name: Verify the checked-in release
-        run: npm ci --prefix cli --ignore-scripts && bash tests/run.sh
-      - name: Publish the verified release
-        env:
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: bash pipeline/publish_snapshot.sh
-
   measure:
-    if: github.event_name != 'workflow_dispatch' || !inputs.publish_snapshot
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     # 90, RAISED FROM 45 ON 18 AUG BECAUSE THE PIPELINE OUTGREW IT. The run was cancelled mid
     # `registry+npm` at 47 minutes and committed "PIPELINE CRASHED" — it had not crashed, it had run
@@ -111,6 +87,7 @@ jobs:
 
       - name: Refresh the Base USDC directory sample
         id: directory
+        if: ${{ !inputs.publish_snapshot }}
         continue-on-error: true
         run: node subgraph/scripts/receivers.mjs
 
@@ -142,7 +119,12 @@ jobs:
         id: pipeline
         continue-on-error: true
         run: |
-          if [[ "${{ inputs.refresh_payments }}" == "true" ]]; then
+          if [[ "${{ inputs.publish_snapshot }}" == "true" ]]; then
+            # Verify and publish counters from the same generation of the database.
+            # The live cache can be several nights newer than the checked-in pages.
+            [[ "${{ steps.dbpull.outcome }}" == "success" ]] && test -s data/tashan.db || exit 1
+            python3 pipeline/run.py --site
+          elif [[ "${{ inputs.refresh_payments }}" == "true" ]]; then
             [[ "${{ steps.dbpull.outcome }}" == "success" && "${{ steps.directory.outcome }}" == "success" ]] || exit 1
             python3 pipeline/paid_demand.py --require-fresh
             python3 pipeline/run.py --site
@@ -162,7 +144,7 @@ jobs:
       # incremental cursors for no reason.
       - name: Store the database cache
         id: dbpush
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() && !inputs.publish_snapshot }}
         continue-on-error: true       # reported at the end instead, so it cannot block the deploy
         run: python3 pipeline/db_store.py push
 
