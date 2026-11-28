@@ -53,7 +53,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: python3 pipeline/db_store.py pull
       - name: Verify the checked-in release
-        run: bash tests/run.sh
+        run: npm ci --prefix cli --ignore-scripts && bash tests/run.sh
       - name: Publish the verified release
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -174,7 +174,7 @@ jobs:
       - name: Verify before publishing anything
         id: verify
         continue-on-error: true
-        run: bash tests/run.sh
+        run: npm ci --prefix cli --ignore-scripts && bash tests/run.sh
 
       - name: Commit the day's snapshot
         if: always()          # the record outlives every failure above it

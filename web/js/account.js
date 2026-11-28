@@ -83,9 +83,7 @@
         '<a class="acct__quiet" href="/refunds.html">Cancel</a>' +
       "</div>" +
     "</section>" +
-    (a.active ? '<p class="acct__note">Signed in on this browser, so capability pages show the full ' +
-      "security detail. On another machine, run <code>npx tashan-cli login</code> and approve it " +
-      "here — one click, no key to copy.</p>"
+    (a.active ? '<p class="acct__note">To use Pro on another machine, run <code>npx tashan-cli login</code> and approve its code here.</p>'
       : "");
   }
 
@@ -99,21 +97,19 @@
     return '<section class="acct__card acct__card--in">' +
       '<span class="acct__av acct__av--lg" aria-hidden="true"></span>' +
       "<h1>Sign in</h1>" +
-      '<p class="acct__lede">Your plan, the machines you have activated, your licence key and your invoices.</p>' +
+      '<p class="acct__lede">See your devices and manage billing.</p>' +
       notice +
       '<div class="acct__way">' +
         '<p class="acct__wayh">With your licence key</p>' +
         window.tashanSignin.html({ id: "aKey", cta: "Sign in &rsaquo;" }) +
-        '<p class="acct__wayd">From your purchase email. Once only — after this, every machine is ' +
-          "approved with a click from <code>npx tashan-cli login</code>.</p>" +
+        '<p class="acct__wayd">Find the key in your purchase email.</p>' +
       "</div>" +
       '<p class="acct__or"><span>or</span></p>' +
       '<div class="acct__way">' +
         '<p class="acct__wayh">From a machine that already has it</p>' +
         '<div class="install__cmd"><code>npx tashan-cli account</code>' +
           '<button class="install__copy" type="button" data-copy="npx tashan-cli account">Copy</button></div>' +
-        '<p class="acct__wayd">Opens this page already signed in, using the licence that machine ' +
-          "already holds. Nothing to type, nothing to paste.</p>" +
+        '<p class="acct__wayd">Run this on a machine where you already use Pro.</p>' +
       "</div>" +
       '<p class="acct__or"><span>or</span></p>' +
       '<a class="btn btn--ghost acct__wide" href="' + esc((a && a.portal) || "https://polar.sh/tashan/portal") +

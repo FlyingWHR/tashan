@@ -39,6 +39,7 @@ const json = (body, status = 200, extra = {}) =>
     headers: {
       "content-type": "application/json; charset=utf-8",
       "access-control-allow-origin": "*",
+      "access-control-expose-headers": "payment-required, payment-response",
       "cache-control": "no-store",
       ...extra,
     },
@@ -87,6 +88,7 @@ export const onRequestGet = ({ request, env } = {}) => {
 const CLIENTS = {
   "claude-code": { file: "~/.claude.json", key: "mcpServers" },
   "claude-desktop": { file: "claude_desktop_config.json", key: "mcpServers" },
+  codex: { file: "~/.codex/config.toml", key: "mcp_servers" },
   cursor: { file: "~/.cursor/mcp.json", key: "mcpServers" },
   vscode: { file: ".vscode/mcp.json", key: "servers" },
   windsurf: { file: "~/.codeium/windsurf/mcp_config.json", key: "mcpServers" },
@@ -125,6 +127,8 @@ function risksOf(r) {
   if (r.npm_deprecated) f.push("deprecated by its author");
   if (r.gh_archived) f.push("repository archived");
   if (r.single_maintainer) f.push("one maintainer");
+  if (r.registry_status === "deprecated") f.push("deprecated in the MCP registry");
+  if (r.sec_max_severity === "MALICIOUS") f.push("listed as malicious");
   if (r.registry_status === "deleted") f.push("removed from the MCP registry");
   if (r.sec_remote_content) f.push("can carry third-party text into context");
   return f;
@@ -182,6 +186,19 @@ export async function onRequestPost({ request, env }) {
   let body;
   try { body = await request.json(); } catch { return json({ error: "body must be JSON" }, 400); }
 
+  // The signed proof is the retrieval credential. Bind its digest to this exact
+  // kit request so a lost response can be read again after the index changes.
+  const payment = paymentFrom(request);
+  let receiptKey;
+  if (body?.kit && payment && env.TASHAN_KV && !keyFrom(request)) {
+    const identity = JSON.stringify([new URL(request.url).origin, body.task ?? null, body.goal ?? null,
+      body.client ?? "claude-code", body.limit ?? 5, request.headers.get("payment-signature")]);
+    const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(identity));
+    receiptKey = "kit-receipt:" + Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, "0")).join("");
+    const stored = await env.TASHAN_KV.get(receiptKey, "json");
+    if (stored) return json(stored.result, 200, responseHeader(stored.settlement));
+  }
+
   let task = String((body && body.task) || "").trim().toLowerCase();
   let resolved_from = null;
   if (!task && body && body.goal) {
@@ -203,14 +220,10 @@ export async function onRequestPost({ request, env }) {
       tasks: "https://tashan.sh/data/tags.json",
     }, 400);
   }
-  // THE DEFAULT HAD TO BE THE ASSIGNED VALUE, NOT JUST THE TESTED ONE. This read
-  //     CLIENTS[String(body.client || "claude-code")] ? body.client : "claude-code"
-  // so with no `client` in the body the lookup succeeded on the fallback string and then assigned
-  // `body.client` — undefined. Every later read of CLIENTS[client] was undefined, and assemble()
-  // threw on `c.file`. It could only ever surface on the PAID path, because the free and 402 paths
-  // never assemble, so the first customer to actually pay would have got a 500.
-  const asked = String((body && body.client) || "");
-  const client = Object.hasOwn(CLIENTS, asked) ? asked : "claude-code";
+  const client = body.client === undefined ? "claude-code" : body.client;
+  if (typeof client !== "string" || !Object.hasOwn(CLIENTS, client)) {
+    return json({ error: "Unsupported client", supported_clients: Object.keys(CLIENTS) }, 400);
+  }
   const limit = Math.min(Math.max(parseInt(body && body.limit, 10) || 5, 1), MAX_PICKS);
 
   const origin = new URL(request.url).origin;
@@ -238,10 +251,11 @@ export async function onRequestPost({ request, env }) {
   // Shipping a kit that installs a package with a live advisory would make the whole artifact
   // worthless, and it is the one mistake an agent cannot check for us.
   const rows = ids.map((i) => byId.get(i)).filter(Boolean);
-  const safe = rows.filter(safeForKit);
-  const excluded = rows.filter((r) => !safe.includes(r) && risksOf(r).length)
+  const supportsHost = r => client === "claude-code" || installVia(r) !== "claude-plugin";
+  const safe = rows.filter(r => supportsHost(r) && safeForKit(r));
+  const excluded = rows.filter((r) => !supportsHost(r) || (!safe.includes(r) && risksOf(r).length))
     .slice(0, 10)
-    .map((r) => ({ id: r.id, name: r.name, why_not: risksOf(r) }));
+    .map((r) => ({ id: r.id, name: r.name, why_not: supportsHost(r) ? risksOf(r) : [...risksOf(r), "Requires a Claude Code plugin host"] }));
   const { picks, pins } = selectKit(safe, limit);
 
   const free = {
@@ -318,6 +332,12 @@ export async function onRequestPost({ request, env }) {
         })),
         config_file: c.file,
         config: { [c.key]: servers },
+        config_format: client === "codex" ? "toml" : "json",
+        ...(client === "codex" ? {
+          config_text: Object.entries(servers).map(([name, server]) =>
+            `[mcp_servers.${JSON.stringify(name)}]\ncommand = "npx"\nargs = ${JSON.stringify(server.args)}`
+          ).join("\n\n"),
+        } : {}),
         remote_alternatives: picks.filter((r) => r.remote_host)
           .map((r) => ({ id: r.id, host: r.remote_host })),
       },
@@ -359,10 +379,23 @@ export async function onRequestPost({ request, env }) {
 
   const pr = paymentRequired(env, PRICE_KEY, origin + "/v0.1/kit",
                              "payment required to assemble the kit");
-  const payment = paymentFrom(request);
   if (pr && payment) {
     const out = await charge(env, pr, payment, assemble, request, task);
-    if (!out.ok) return json({ ...pr, error: "payment " + out.reason }, 402, requiredHeader(pr));
+    if (!out.ok) {
+      if (["settlement_unavailable", "settlement_without_transaction"].includes(out.reason))
+        return json({ error: "Settlement could not be confirmed. Check your wallet before authorizing another payment.",
+          reason: out.reason }, 503);
+      return json({ ...pr, error: "payment " + out.reason }, 402, requiredHeader(pr));
+    }
+    if (receiptKey) {
+      try {
+        await env.TASHAN_KV.put(receiptKey, JSON.stringify({ result: out.result, settlement: out.settlement }),
+          { expirationTtl: 86400 });
+      } catch {
+        // Payment already settled. Deliver the result even if recovery storage is down.
+        console.error("Could not save settled kit for retrieval");
+      }
+    }
     return json(out.result, 200, responseHeader(out.settlement));
   }
 
@@ -382,7 +415,7 @@ export const onRequestHead = headOf(onRequestGet);
 
 // Keep the ranked alternatives and reserve one place for a usable install when one exists.
 export function safeForKit(r) {
-  return !r.sec_advisory_count && !r.npm_deprecated && !r.gh_archived && r.registry_status !== "deleted";
+  return !r.sec_advisory_count && !r.npm_deprecated && !r.gh_archived && !["deleted", "deprecated"].includes(r.registry_status) && r.sec_max_severity !== "MALICIOUS";
 }
 
 export function selectKit(safe, limit, now = Date.now()) {

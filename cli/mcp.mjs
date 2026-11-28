@@ -264,13 +264,27 @@ const TOOLS = [
     description:
       "Find an MCP server or agent skill for a task, ranked on public evidence rather than guesswork. "
       + "Use this BEFORE suggesting or installing any MCP server or skill, so the recommendation is "
-      + "measured and carries its evidence. Returns the install command for the user's client.",
+      + "measured and carries its evidence. Returns the install command for the user's client. Set quote_kit to request current payment terms for a pinned kit.",
     inputSchema: {
       type: "object",
       properties: {
         task: { type: "string", description: "What the user wants to do, e.g. 'search the web', 'work with PDFs', 'query postgres'" },
         client: { type: "string", description: "Target client for the install command: claude, cursor, desktop, codex or npx", enum: ["claude", "cursor", "desktop", "codex", "npx"] },
         limit: { type: "number", description: "How many candidates to return (default 3)" },
+        quote_kit: { type: "boolean", description: "Get the HTTP request and live x402 terms for a pinned kit. No payment is submitted." },
+      },
+      required: ["task"],
+    },
+  },
+  {
+    name: "get_tool_kit",
+    description: "Get checked package versions and install settings for your client. This paid tool accepts a wallet-authorized x402 payment. Use find_capability for a free shortlist or quote.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        task: { type: "string", description: "Describe the job, e.g. review code." },
+        client: { type: "string", enum: ["claude", "claude-code", "desktop", "claude-desktop", "codex", "cursor", "vscode", "windsurf"] },
+        limit: { type: "integer", minimum: 1, maximum: 8 },
       },
       required: ["task"],
     },
@@ -442,6 +456,29 @@ export function renderPaid(doc, q) {
   }
   lines.push(`Volume at an address does not establish service revenue. ${SITE}/paid`);
   return lines.join("\n");
+}
+
+async function requestKit(args, quoteOnly, meta) {
+  const client = args.client === "desktop" ? "claude-desktop" : args.client === "claude" ? "claude-code" : args.client;
+  const body = { goal: args.task, client, limit: args.limit ?? 3, kit: true };
+  const url = SITE + "/v0.1/kit";
+  const headers = { "content-type": "application/json" };
+  const payment = !quoteOnly && meta?.["x402/payment"];
+  if (payment) headers["payment-signature"] = Buffer.from(JSON.stringify(payment)).toString("base64");
+  const response = await fetch(url, { method: "POST", headers, redirect: "error",
+    body: JSON.stringify(body), signal: AbortSignal.timeout(30000) });
+  const result = await response.json();
+  if (!response.ok && response.status !== 402) throw new Error(result.reason || result.error || `Kit unavailable (HTTP ${response.status})`);
+  const data = quoteOnly ? { status: response.status, request: { method: "POST", url, body },
+    payment_required: response.headers.get("payment-required"), result } : result;
+  const reply = { content: [{ type: "text", text: JSON.stringify(data) }], structuredContent: data };
+  if (!quoteOnly && response.status === 402) reply.isError = true;
+  if (payment && response.ok) {
+    const receipt = response.headers.get("payment-response");
+    if (!receipt) throw new Error("Settlement receipt missing. Check your wallet before retrying.");
+    reply._meta = { "x402/payment-response": JSON.parse(Buffer.from(receipt, "base64").toString("utf8")) };
+  }
+  return reply;
 }
 
 async function callTool(name, args) {
@@ -629,6 +666,9 @@ export async function handle(msg) {
             `${params.name} requires ${missing.map((m) => `"${m}"`).join(", ")}. `
             + `This is a problem with the call, not a result — do not report it as "nothing found".` }],
         });
+      }
+      if (params.name === "get_tool_kit" || (params.name === "find_capability" && args.quote_kit === true)) {
+        return reply(await requestKit(args, params.name === "find_capability", params._meta));
       }
       const text = await callTool(params.name, args);
       return reply({ content: [{ type: "text", text }] });

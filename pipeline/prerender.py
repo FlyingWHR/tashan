@@ -1200,7 +1200,7 @@ def bake_counts(measured):
         ("about.html", r'(<b id="abCatalogued">)[^<]*(</b>)', f"{catalogued:,}"),
         ("about.html", r'(<b id="abDays">)[^<]*(</b>)', f"{days:,}"),
         ("pricing.html",
-         r"(<b>)[\d,]+(</b>\s+of\s+the\s+things\s+we\s+measure\s+are\s+abandoned)", f"{dead:,}"),
+         r"(<b>)[\d,]+(</b>\s+tools\s+are\s+marked\s+abandoned)", f"{dead:,}"),
     )
     for page, pat, val in edits:
         path = os.path.join(ROOT, "web", page)

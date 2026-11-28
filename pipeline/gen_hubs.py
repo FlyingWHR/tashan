@@ -656,9 +656,8 @@ def pricing_block():
         "every security finding's EXISTENCE and severity, advisory ids, the version that fixes "
         "them, and the install command. Quote any of it.",
         "",
-        "**tashan Pro — " + price + ", 7 days free.** It buys depth about YOUR stack, never a "
-        "different answer: the score history behind a capability, and `tashan doctor` run over "
-        "the config on your own machine.",
+        "**tashan Pro — " + price + ", 7 days free.** Automatically compact JSON text from connected local MCP tools and track removed tokens with `tashan daily`, view score history, and request checked tool setups.",
+        "Use `find_capability` for a free quote. An authorized MCP wallet can call `get_tool_kit` to buy the setup and receive a settlement receipt.",
         "",
         # Through our own origin, like every other buy button. An agent quoting the raw Polar URL
         # would send a human down the one route that skips the success_url repair.
@@ -785,7 +784,7 @@ def llms_txt(caps, cats, by_cat, gen, roles=()):
           "or point any host at `npx -y tashan-cli mcp` over stdio. Three tools, all free, no "
           "account: `find_capability` (what should I install for X), `check_capability` (is this "
           "one safe and maintained), `audit_config` (what is already in this config, and what is "
-          "wrong with it). Zero dependencies; `audit_config` reads local files and sends nothing.",
+          "wrong with it). The MCP server uses Node built-ins. `audit_config` reads local files and sends nothing.",
           "- [/v0.1/scores](" + BASE + "/v0.1/scores) — compact lookup, `name -> [score, vitality, "
           "evidence, slug]`. This is the BULK feed — to check ONE package use /v0.1/lookup instead. "
           "An absent name is UNMEASURED, not bad.",

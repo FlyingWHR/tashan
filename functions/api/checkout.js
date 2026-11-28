@@ -18,8 +18,8 @@
 // POLAR_ORG_TOKEN can read every customer's record. This function turns a checkout id — a value
 // that travels in a redirect URL and lands in browser history — into a signed-in session. So:
 //
-//   1. SINGLE USE. The id is burned in KV before the cookie is issued. A replay of a leaked URL
-//      gets nothing. Without KV we refuse outright rather than run without that guarantee.
+//   1. SINGLE USE. A conditional R2 write claims the checkout before issuing a cookie. KV
+//      still holds redemptions made before the switch.
 //   2. THE CHECKOUT MUST BE PAID. An abandoned or expired checkout signs nobody in — otherwise
 //      anyone who started a checkout and walked away holds a key to that customer's account.
 //   3. FRESHNESS. A checkout older than the window is refused. The redirect happens seconds after
@@ -34,19 +34,20 @@ import { setCookie } from "./_license.js";
 
 const POLAR = "https://api.polar.sh/v1";
 const MAX_AGE_S = 60 * 60 * 24;      // a checkout older than a day is not someone arriving from it
-const BURN_TTL_S = 60 * 60 * 24 * 30;
 
 const back = (origin, q = "") => Response.redirect(origin + "/welcome" + q, 302);
 
 async function polar(env, path, init = {}, token = null) {
   const r = await fetch(POLAR + path, {
+    signal: AbortSignal.timeout(10000),
     ...init,
     headers: {
       authorization: "Bearer " + (token || env.POLAR_ORG_TOKEN),
       "content-type": "application/json",
       ...(init.headers || {}),
     },
-  });
+  }).catch(() => null);
+  if (!r) return { ok: false, status: 503 };
   if (!r.ok) return { ok: false, status: r.status };
   return { ok: true, data: await r.json().catch(() => null) };
 }
@@ -69,24 +70,21 @@ export async function onRequest({ request, env }) {
   // site is not set up is evident to anyone who completes a purchase, and no value is disclosed.
   if (!env.POLAR_ORG_TOKEN) return back(url.origin, "?e=unconfigured");
   // No KV means no single-use guarantee. Refuse rather than issue a session from a replayable URL.
-  if (!env.TASHAN_KV) return back(url.origin, "?e=unconfigured");
+  if (!env.TASHAN_KV || !env.CHECKOUT_CLAIMS) return back(url.origin, "?e=unconfigured");
 
-  // 1. Burn the id FIRST. Doing this after the exchange would leave a window where two concurrent
-  //    requests with the same id both succeed.
+  // Skip an already redeemed link. Recheck before issuing the session below.
   const burnKey = "co:" + id;
   if (await env.TASHAN_KV.get(burnKey)) return back(url.origin, "?e=used");
-  await env.TASHAN_KV.put(burnKey, "1", { expirationTtl: BURN_TTL_S });
 
   const co = await polar(env, "/checkouts/" + encodeURIComponent(id));
   if (!co.ok || !co.data) return back(url.origin);
 
-  // 2. Paid, and recent. Polar's terminal success status is "succeeded"; "confirmed" is accepted
-  //    too because it is the state a confirmed-but-settling payment sits in.
+  // Only a completed, recent checkout can issue a browser session.
   const status = String(co.data.status || "").toLowerCase();
-  if (status !== "succeeded" && status !== "confirmed") return back(url.origin, "?e=unpaid");
+  if (status !== "succeeded") return back(url.origin, "?e=unpaid");
 
   const when = Date.parse(co.data.modified_at || co.data.created_at || "");
-  if (when && (Date.now() - when) / 1000 > MAX_AGE_S) return back(url.origin, "?e=stale");
+  if (!Number.isFinite(when) || when > Date.now() + 60000 || (Date.now() - when) / 1000 > MAX_AGE_S) return back(url.origin, "?e=stale");
 
   const customerId = co.data.customer_id || (co.data.customer && co.data.customer.id);
   if (!customerId) return back(url.origin);
@@ -104,12 +102,24 @@ export async function onRequest({ request, env }) {
 
   const items = keys.data.items || keys.data.result?.items || [];
   // Prefer a granted key; a customer who has churned and re-subscribed can hold several.
-  const rec = items.find((k) => String(k.status || "").toLowerCase() === "granted") || items[0];
+  const rec = items.find(k => k.status === "granted" && (k.key || k.license_key) &&
+    (!k.expires_at || Date.parse(k.expires_at) > Date.now()));
   const key = rec && (rec.key || rec.license_key);
-  if (!key) return back(url.origin);
+  if (!key) return back(url.origin, "?e=pending");
+
+  // Only one request can create this marker, even across regions. The marker
+  // contains no customer data. Delay the claim until the licence is ready.
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(id));
+  const claimKey = "checkout-claims/" + Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, "0")).join("");
+  try {
+    const claimed = await env.CHECKOUT_CLAIMS.put(claimKey, "", { onlyIf: new Headers({ "If-None-Match": "*" }) });
+    if (!claimed) return back(url.origin, "?e=used");
+  } catch {
+    return back(url.origin, "?e=unavailable");
+  }
 
   return new Response(null, {
     status: 302,
-    headers: { location: url.origin + "/welcome", "set-cookie": setCookie(key) },
+    headers: { location: url.origin + "/welcome", "cache-control": "no-store", "referrer-policy": "no-referrer", "set-cookie": setCookie(key) },
   });
 }

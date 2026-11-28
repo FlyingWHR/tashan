@@ -99,6 +99,14 @@
    "delivered_by": "npx tashan-cli doctor"
   },
   {
+   "id": "compact-json",
+   "label": "Automatically compact connected MCP tool results or export compact JSON",
+   "free": false,
+   "pro": true,
+   "status": "beta",
+   "delivered_by": "tashan wrap -- <server> or tashan tokens <file> --emit (CLI 0.3.0)"
+  },
+  {
    "id": "watch",
    "label": "Proactive notification on the day something in your stack changes",
    "free": false,

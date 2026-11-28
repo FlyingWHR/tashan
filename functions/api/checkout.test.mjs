@@ -36,7 +36,14 @@ function polarStub({ co, keys = [{ status: "granted", key: "tashan_live" }], ses
 const PAID = { status: "succeeded", customer_id: "cus_1", modified_at: new Date().toISOString() };
 
 const call = (env, id = "co_1") =>
-  onRequest({ request: new Request(`https://tashan.sh/api/checkout?id=${id}`), env });
+  onRequest({ request: new Request(`https://tashan.sh/api/checkout?id=${id}`), env: { ...env,
+    CHECKOUT_CLAIMS: { async put(key, value, opts) {
+      assert.equal(opts.onlyIf.get("if-none-match"), "*");
+      if (env.TASHAN_KV.m.has(key)) return null;
+      env.TASHAN_KV.m.set(key, value);
+      return { key };
+    } },
+  } });
 
 const cookieOf = (r) => r.headers.get("set-cookie") || "";
 const locOf = (r) => r.headers.get("location") || "";

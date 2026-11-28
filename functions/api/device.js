@@ -143,6 +143,8 @@ async function decide(request, env, userCodeRaw, approve) {
   const res = await fetchLicence(env, key);
   if (res.error === "unavailable") return json({ error: "unavailable" }, 503);
   if (res.error) return json({ error: "not signed in" }, 401);
+  if (res.data?.status !== "granted" || (res.data.expires_at && !(Date.parse(res.data.expires_at) > Date.now())))
+    return json({ error: "An active Pro licence is required." }, 403);
 
   rec.state = "approved";
   rec.key = key;

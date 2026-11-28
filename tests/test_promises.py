@@ -43,11 +43,19 @@ PRICING = read("web/pricing.html")
 # claim key -> (a phrase that appears in the pricing copy, [(file, regex that proves delivery)])
 CLAIMS = {
     "named replacement": (
-        "The replacement, named",
+        "suggested replacements",
         [("cli/tashan.mjs", r"if \(pro\)")],
     ),
+    "compact tool results": (
+        "Export compact tool results",
+        [("cli/tashan.mjs", r"compareJson\(input"), ("cli/tokens.mjs", r"function compareJson")],
+    ),
+    "wallet tool setup": (
+        "Call get_tool_kit with a wallet",
+        [("cli/mcp.mjs", r'x402/payment-response'), ("functions/v0.1/kit.js", r'await charge\(')],
+    ),
     "score history": (
-        "Every score since we started measuring",
+        "Get score history",
         [("functions/api/history.js", r"validate\(env"),
          ("cli/tashan.mjs", r"/api/history")],
     ),
@@ -75,7 +83,7 @@ CLAIMS = {
 }
 
 for key, (phrase, proofs) in CLAIMS.items():
-    sold = phrase.lower() in re.sub(r"\s+", " ", PRICING).lower()
+    sold = phrase.lower() in re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", PRICING)).lower()
     if not sold:
         print(f"  --   '{key}' is no longer sold on the pricing page — nothing to deliver")
         continue
@@ -95,7 +103,7 @@ for key, (phrase, proofs) in CLAIMS.items():
 # write: it is what a search result and a chat unfurl show. Nothing here checks taste; it checks that
 # the two tags on one page name the same headline feature.
 _og = lambda k: (re.search(r'(?:property|name)="%s" content="([^"]*)"' % k, PRICING) or [None, ""])[1]
-_HEADLINE = re.compile(r"advisor|which CVE|the fix|version that fixes", re.I)
+_HEADLINE = re.compile(r"fewer input tokens", re.I)
 ok("og:title names the feature that is delivered today", bool(_HEADLINE.search(_og("og:title"))),
    "og:title = %r" % _og("og:title"))
 ok("og:description leads with the same feature as og:title, not with the IOU",

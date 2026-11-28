@@ -19,7 +19,7 @@ assert.strictEqual(init.jsonrpc, "2.0"); assert.ok(init.result.serverInfo.name =
 
 const list = await rpc("tools/list");
 const names = list.result.tools.map((t) => t.name).sort();
-assert.deepStrictEqual(names, ["audit_config", "check_capability", "find_capability", "paid_demand"]);
+assert.deepStrictEqual(names, ["audit_config", "check_capability", "find_capability", "get_tool_kit", "paid_demand"]);
 for (const t of list.result.tools) {
   assert.ok(t.description.length > 40, `${t.name} needs a description an agent can route on`);
   assert.strictEqual(t.inputSchema.type, "object", `${t.name} schema must be an object`);
@@ -479,3 +479,23 @@ assert.ok(/NOT a negative signal/.test(miss),
 assert.ok(/have not read the chain/.test(renderPaid(null, null)),
   "no data must say so rather than implying nothing has ever been paid");
 console.log("ok — paid_demand: totals carry the median, shared addresses excluded, absence explained");
+
+// A wallet needs the identical request body and the original quote header.
+{
+  const original = globalThis.fetch;
+  try {
+    globalThis.fetch = async (url, init) => {
+      assert.ok(url.endsWith("/v0.1/kit"));
+      assert.deepEqual(Object.keys(init.headers), ["content-type"]);
+      assert.deepEqual(JSON.parse(init.body), { goal: "review code", client: "codex", limit: 3, kit: true });
+      return new Response(JSON.stringify({ accepts: [{ amount: "50000" }] }),
+        { status: 402, headers: { "payment-required": "fixture-quote" } });
+    };
+    const reply = await handle({ id: 1, method: "tools/call",
+      params: { name: "find_capability", arguments: { task: "review code", client: "codex", quote_kit: true } } });
+    const quote = JSON.parse(reply.result.content[0].text);
+    assert.equal(quote.request.body.client, "codex");
+    assert.equal(quote.payment_required, "fixture-quote");
+    assert.equal(quote.status, 402);
+  } finally { globalThis.fetch = original; }
+}

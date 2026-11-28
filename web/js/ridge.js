@@ -10,10 +10,12 @@
   var cv = document.getElementById("ridge");
   if (!cv || !cv.getContext) return;
   var ctx = cv.getContext("2d", { alpha: true });
-  var pre = document.querySelector(".ascii-range");
-  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!ctx) return;
+  var wall = cv.parentElement.classList.contains("ridge-panels");
+  var motion = matchMedia("(prefers-reduced-motion: reduce)");
+  var reduce = motion.matches;
 
-  var FONT_PX = 15, LINE = 17, CELLW = 9;
+  var FONT_PX = wall ? 11 : 15, LINE = wall ? 10 : 17, CELLW = 9;
   // Calm knobs — turn these, not the code, when the art reads busy or too faint.
   // Ramp is deliberately SHORT and letterform-free: 'a e z n x Q B' read as text noise, not as tone.
   var RAMP = " ..--=+*#";                       // light → heavy (ASCII-only: no missing-glyph tofu)
@@ -21,7 +23,7 @@
   var GAMMA = 1.05;                               // >1 pushes mid-tones toward blank (calm), <1 fills in
   // Keep leading spaces in RAMP to ONE: more, and the ramp starts blanking before CUT does, so turning CUT
   // stops doing anything and the art silently goes empty.
-  var SKY = 0.40;                                 // upper band kept clear (the headline lives there)
+  var SKY = wall ? 0.06 : 0.40;                                 // upper band kept clear (the headline lives there)
   var DAY_MS = 600000;                            // a full day↔night in ~10 min (was 4 — the light
                                                   // sweep is what pops glyphs; slower sweep = calmer)
 
@@ -61,12 +63,18 @@
   }
   function env(c) { var x = c / cols; return x * x * (3 - 2 * x); }
   function reseed() {
-    var s = 1 + Math.random() * 90;
+    var s = wall ? 28 : 1 + Math.random() * 90;
     // val = field brightness of the layer: foreground bright & low (front) → background dim & high (misty distance)
     layers = [
       { crest: makeHill(s + 3, 0.9, 0.56, 0.085), lift: 0.08, val: 0.34 },   // background
       { crest: makeHill(s + 7, 1.1, 0.69, 0.105), lift: 0.13, val: 0.60 },   // middle distance
       { crest: makeHill(s + 1, 1.3, 0.82, 0.130), lift: 0.18, val: 1.00 }    // foreground
+    ];
+    // A wider tonal range makes the separate prints legible at poster size.
+    if (wall) layers = [
+      { crest: makeHill(s + 3, 1.4, 0.38, 0.21), lift: 0.05, val: 0.42 },
+      { crest: makeHill(s + 7, 1.7, 0.58, 0.23), lift: 0.11, val: 0.70 },
+      { crest: makeHill(s + 1, 1.9, 0.85, 0.24), lift: 0.19, val: 1.00 }
     ];
     // drifting mist wisps (soft additive blobs) — the living mist of the scene
     mist = [];
@@ -108,7 +116,7 @@
     fctx.fillStyle = "#000"; fctx.fillRect(0, 0, fw, fh);
     // mountains far→near (near paints over far = clean occlusion). Painted PER COLUMN so EACH column's
     // crest is the bright lit edge — a clear ridgeline — fading down to a dark valley base (contrast = shape).
-    var band = Math.max(2.2, fh * 0.11);   // crest-band thickness in ROWS — the density knob, independent of height
+    var band = Math.max(2.2, fh * (wall ? 0.45 : 0.11));   // crest-band thickness in ROWS — the density knob, independent of height
     for (var li = 0; li < layers.length; li++) {
       var L = layers[li], peak = Math.min(1, 0.62 + 0.38 * L.val);
       // always-on life: a wave TRAVELLING along each ridge, not a uniform bob. Uniform motion lifts every
@@ -131,8 +139,8 @@
         // 0.005, i.e. under CUT, so the body below stays empty.
         var g = fctx.createLinearGradient(0, y0, 0, y0 + band);
         g.addColorStop(0, "rgba(255,255,255," + peak.toFixed(3) + ")");
-        g.addColorStop(0.32, "rgba(255,255,255," + (peak * 0.30).toFixed(3) + ")");
-        g.addColorStop(0.70, "rgba(255,255,255," + (peak * 0.10).toFixed(3) + ")");
+        g.addColorStop(0.32, "rgba(255,255,255," + (peak * (wall ? 0.74 : 0.30)).toFixed(3) + ")");
+        g.addColorStop(0.70, "rgba(255,255,255," + (peak * (wall ? 0.32 : 0.10)).toFixed(3) + ")");
         g.addColorStop(1, "rgba(255,255,255,0.005)");
         fctx.fillStyle = g; fctx.fillRect(c, y0, 1.02, fh - y0);
       }
@@ -207,7 +215,7 @@
         var ch = RAMP[gi]; if (ch === " ") continue;
         var wq = 220 + gi * 60;                                 // weight follows the HELD glyph, so it can't pop on its own
         if (wq !== lastW) { ctx.font = wq + " " + FONT_PX + "px 'GeistMono', ui-monospace, monospace"; lastW = wq; }
-        ctx.globalAlpha = Math.min(1, 0.15 + 0.60 * bb) * rv;   // dim cells actually recede instead of floor-40%
+        ctx.globalAlpha = Math.min(1, (wall ? 0.37 : 0.15) + (wall ? 0.95 : 0.60) * bb) * rv;   // dim cells actually recede instead of floor-40%
         ctx.fillStyle = tint(bb, sky);
         ctx.fillText(ch, c * CELLW, rowBase);
       }
@@ -231,7 +239,10 @@
   }
 
   function resize() {
-    W = cv.clientWidth; H = cv.clientHeight; cv.width = W; cv.height = H;
+    W = cv.clientWidth; H = cv.clientHeight;
+    var scale = Math.min(devicePixelRatio || 1, 2);
+    cv.width = Math.round(W * scale); cv.height = Math.round(H * scale);
+    ctx.setTransform(scale, 0, 0, scale, 0, 0);
     ctx.font = "500 " + FONT_PX + 'px "GeistMono", ui-monospace, monospace'; ctx.textBaseline = "top";
     CELLW = Math.max(6, ctx.measureText("M").width);
     cols = Math.ceil(W / CELLW); rows = Math.ceil(H / LINE);
@@ -241,7 +252,7 @@
 
   function render(now) {
     if (!running) return;
-    requestAnimationFrame(render);
+    raf = requestAnimationFrame(render);
     if (now - prev < 55) return;            // ~18fps — enough for the sweep to read as continuous motion
     // CLAMP. prev is reset to 0 when the tab regains focus, and a backgrounded tab can be away for
     // hours; an unclamped dt would advance the mist by every one of those milliseconds in a single
@@ -252,20 +263,30 @@
     if (!t0) t0 = now;
     if (!resolveStart) resolveStart = now;
     var res = Math.min(1, (now - resolveStart) / 1900);
-    frame(now, res >= 1 ? 1 : 1 - Math.pow(1 - res, 3), dt);   // resolve-from-nothing flourish on first paint
+    frame(now, wall || res >= 1 ? 1 : 1 - Math.pow(1 - res, 3), dt);   // resolve-from-nothing flourish on first paint
   }
 
+  var raf = 0, visible = true, ready = false;
+  function sync() {
+    if (!ready) return;
+    cancelAnimationFrame(raf);
+    running = visible && !document.hidden && !reduce;
+    if (!W || !H) return;
+    if (running) { prev = 0; raf = requestAnimationFrame(render); }
+    else if (reduce) { frame(0.25 * DAY_MS, 1, 0); }
+  }
   function init() {
-    if (pre) pre.style.display = "none";
-    reseed(); resize();
-    if (reduce) { t0 = 0; frame(0.25 * DAY_MS, 1, 0); return; }   // dt=0: one static frame, nothing advances   // one bright static frame
-    requestAnimationFrame(render);
+    reseed(); resize(); ready = true;
+    frame(0.25 * DAY_MS, 1, 0);
+    cv.classList.add("is-painted");
+    sync();
   }
-
-  addEventListener("resize", function () { resize(); if (reduce) init(); });
-  document.addEventListener("visibilitychange", function () {
-    running = !document.hidden; if (running && !reduce) { prev = 0; requestAnimationFrame(render); }
-  });
+  addEventListener("resize", function () { if (ready) { resize(); sync(); } });
+  document.addEventListener("visibilitychange", sync);
+  motion.addEventListener("change", function () { reduce = motion.matches; sync(); });
+  if (typeof IntersectionObserver === "function") new IntersectionObserver(function (entries) {
+    visible = entries[0].isIntersecting; sync();
+  }).observe(cv);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(init); else init();
 
   // ponytail: dev self-check — ramp is ASCII-only, starts blank, and stays letterform-free (no alphabet soup)

@@ -75,7 +75,7 @@ jobs:
       # in the installed tarball and passed every in-repo run. Test what ships.
       - name: test on Node ${{ matrix.node }}
         working-directory: cli
-        run: node -v && npm test
+        run: npm ci --ignore-scripts && npm test
 
   publish:
     needs: test

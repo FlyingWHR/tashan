@@ -146,7 +146,7 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
   ok("remote alternatives are surfaced where they exist",
      body.kit.remote_alternatives.some((x) => x.host === "mcp.remote.example"));
   ok("the free half is still present alongside the paid half",
-     body.shortlist.length === 5 && body.excluded.length === 2);
+     body.shortlist.every(r => r.install_via !== "claude-plugin") && body.excluded.some(r => r.why_not.includes("Requires a Claude Code plugin host")));
 }
 
 // ---- not everything on a shelf is an mcpServers entry ---------------------------------------------
@@ -217,12 +217,15 @@ const read = async (r) => ({ status: r.status, body: await r.json(), headers: r.
   ok("...and the config file path is the real one",
      body.kit.config_file === "~/.claude.json", body.kit && body.kit.config_file);
 
-  const { body: b2 } = await read(await post(
-    { task: "web-scraping", kit: true, client: "nonsense-editor" },
+  const invalid = await read(await post({ task: "web-scraping", kit: true, client: "nonsense-editor" }));
+  ok("reject an unsupported host before quoting", invalid.status === 400 && !invalid.body.accepts
+     && invalid.body.supported_clients.includes("codex"));
+  const { body: paid } = await read(await post({ task: "web-scraping", kit: true, client: "codex" },
     { headers: { authorization: "Bearer real" }, env: { POLAR_ORG_ID: "org" },
       stubLicence: { status: "granted" } }));
-  ok("an unknown client falls back rather than producing a config for nothing",
-     b2.kit.client === "claude-code", b2.kit && b2.kit.client);
+  ok("Codex gets pinned TOML for its own config", paid.kit.config_file === "~/.codex/config.toml"
+     && paid.kit.config_format === "toml" && paid.kit.config_text.includes('[mcp_servers."good-a"]')
+     && paid.kit.config_text.includes(JSON.stringify(paid.kit.config.mcp_servers["good-a"].args)));
 }
 
 // ---- shape ----------------------------------------------------------------------------------------

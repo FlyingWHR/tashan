@@ -240,7 +240,9 @@ img { max-width: 100%; display: block; }
 /* Both billing periods, side by side — neither is a footnote to the other. */
 .plan__alt { margin-top: calc(-1 * var(--sp-2)); color: var(--text-faint); font-size: var(--fs-sm); }
 .plan__buys { display:flex; gap: var(--sp-2); flex-wrap: wrap; }
-.plan__buys .plan__cta { flex: 1 1 auto; }
+.plan__buys .plan__cta { flex: 1 1 100%; }
+.plan__buys .plan__note { margin: 0; width: 100%; }
+.plan__buys .plan__note:empty { display: none; }
 
 /* Compatibility level. native is a fact about the format; installable is the client's own promise. */
 .wchip__lvl { font-style: normal; font-size: var(--fs-micro); color: var(--text-faint); margin-left: .35em; }
@@ -765,6 +767,9 @@ body.pal-open { overflow:hidden; }
 .pricing-detail { max-width: 46rem; }
 
 .plans { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--sp-6); margin-bottom: var(--sp-8); }
+@media (min-width:960px){ .plans--buyers { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media (min-width:721px) and (max-width:959px){ .plans--buyers .plan:last-child { grid-column:1 / -1; } }
+.plans--buyers .callout, #discovery code, #tokens code { overflow-wrap:anywhere; }
 @media (max-width:720px){ .plans { grid-template-columns:1fr; } }
 .plan { position:relative; border:1px solid var(--hairline); border-radius: var(--radius); background: var(--surface);
   padding: var(--sp-8); display:flex; flex-direction:column; }
@@ -1437,3 +1442,64 @@ code.paid { font-family: var(--font-mono); font-size:var(--fs-xs); color: var(--
 .tablewrap { max-width: 100%; overflow-x: auto; }
 .prose .callout, .prose p { overflow-wrap: anywhere; }
 .hero__cmd a { color: var(--text-dim); }
+
+/* The moving print and the information below it share the same frame. */
+.wall-mast { display:grid; grid-template-columns:minmax(0, 0.87fr) minmax(0, 1.13fr);
+  align-items:stretch; border-block:1px solid var(--hairline); }
+.hero.hero--wall { min-height:0; padding-block:var(--sp-8) 0; }
+.wall-mast .hero__in, .wall-mast__copy { align-self:center; padding:var(--sp-12) var(--sp-6) var(--sp-12) 0; text-shadow:none; }
+.wall-mast .hero__in::before { display:none; }
+.wall-mast .hero__title { max-width:11ch; font-size:clamp(3.3rem, 6vw, 5.8rem); }
+.wall-mast .hero__cmd { max-width:35em; }
+.wall-mast .herosearch { width:100%; }
+.ridge-panels { position:relative; isolation:isolate; overflow:hidden; min-height:17rem;
+  background:#101512 url('/assets/ridge-print.webp') center / cover no-repeat; }
+.ridge-panels #ridge { inset:0; width:100%; height:100%; mask:none; -webkit-mask:none; }
+.ridge-panels #ridge.is-painted { background:#101512; }
+.ridge-panels::after { content:""; position:absolute; inset:0 31% 0 32%; pointer-events:none;
+  border-inline:4px solid var(--bg); box-shadow:-1px 0 var(--hairline), 1px 0 var(--hairline); }
+.wall-mast.phead { max-width:none; margin:var(--sp-8) 0 0; }
+.wall-mast__copy .phead__h { margin:0; font-size:clamp(2.5rem, 5vw, 4.6rem); line-height:1.02; max-width:9ch; }
+.wall-mast__copy .phead__sub { max-width:34ch; }
+.wall-pricing .plans--buyers { gap:1px; border:1px solid var(--hairline); border-top:0;
+  background:var(--hairline); margin:0 0 var(--sp-12); }
+.plans--buyers > .plan { border:0; border-radius:0; box-shadow:none; }
+.plans--buyers > .plan--pro { background:#111a16; box-shadow:inset 0 2px var(--jade); }
+.plans--buyers .plan__buys { margin-top:auto; }
+.wall-pricing .capsec { border-top:1px solid var(--hairline); padding-top:var(--sp-6); }
+.wall-index .section--figures { padding-top:0; }
+.wall-index .section--figures dl.stat { gap:0; padding:0; margin:0; border-radius:0; }
+.wall-index .stat__i { padding:var(--sp-5); }
+.wall-index .stat__i + .stat__i { border-left:1px solid var(--hairline); }
+.wall-index .rolegrid { gap:1px; border:1px solid var(--hairline); background:var(--hairline); }
+.wall-index .rolecard { border:0; border-radius:0; }
+@media (min-width:721px) and (max-width:959px) {
+  .wall-pricing .plans--buyers { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .wall-pricing .plans--buyers .plan { grid-column:auto; padding:var(--sp-4); }
+  .wall-pricing .plan__top { flex-wrap:wrap; }
+}
+@media (max-width:720px) {
+  .wall-mast { grid-template-columns:minmax(0,1fr); }
+  .wall-mast .hero__in, .wall-mast__copy { padding:var(--sp-6) 0; }
+  .wall-mast .hero__title, .wall-mast__copy .phead__h { max-width:none; }
+  .ridge-panels { min-height:8.5rem; }
+  .wall-mast__copy .phead__sub { max-width:100%; }
+  .wall-index .stat__i { padding:var(--sp-3); }
+}
+
+/* Use a still from the same canvas on forms, where movement competes with input. */
+#activate::before, #welcome::before, .acct::before {
+  content:""; display:block; height:4.5rem; margin-bottom:var(--sp-6);
+  background:#101512 url('/assets/ridge-print.webp') center 57% / cover no-repeat;
+  border-block:1px solid var(--hairline);
+}
+.footer__brand::after {
+  content:""; display:block; width:min(13rem,100%); height:2rem; margin-top:var(--sp-3);
+  background:url('/assets/ridge-print.webp') center 60% / cover no-repeat;
+}
+
+.token-preview { display:grid; gap:.8rem; max-width:46rem; margin:1.25rem 0 2rem; padding:clamp(1rem,3vw,2rem); border:1px solid var(--jade-line); }
+.token-preview textarea { box-sizing:border-box; width:100%; resize:vertical; padding:.75rem; font:inherit; font-family:monospace; color:inherit; background:transparent; border:1px solid currentColor; }
+.token-preview__actions { display:flex; flex-wrap:wrap; gap:.6rem; }
+.token-preview output { font-variant-numeric:tabular-nums; font-weight:650; }
+.token-preview output:empty { display:none; }

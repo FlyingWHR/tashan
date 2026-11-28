@@ -145,13 +145,17 @@ def spec():
                         "goal": {"type": "string", "minLength": 1, "example": "I need to scrape websites"},
                         "task": {"type": "string", "example": "web-scraping"},
                         "client": {"type": "string",
-                                   "enum": ["claude-code", "claude-desktop", "cursor", "vscode", "windsurf"]},
+                                   "enum": ["claude-code", "claude-desktop", "codex", "cursor", "vscode", "windsurf"]},
                         "limit": {"type": "integer", "default": 5, "minimum": 1, "maximum": 8},
                         "kit": {"type": "boolean", "default": False,
                                 "description": f"Assemble it. Paid: ${kit} per call."}}}}}},
                 "responses": {
-                    "200": {"description": "The shortlist, or the assembled kit when paid"},
+                    "200": {"description": "The shortlist or paid kit. Codex kits include config_text in TOML.",
+                            "headers": {"PAYMENT-RESPONSE": {"description": "Base64 x402 settlement receipt for wallet purchases.",
+                                                           "schema": {"type": "string"}}}},
+                    "400": {"description": "Missing task or unsupported client. No payment requested."},
                     "422": {"description": "The shortlist has no current, verified npm pins. No payment is requested."},
+                    "503": {"description": "Service unavailable. If settlement is uncertain, check the wallet before issuing another authorization."},
                     "402": {"description": f"Payment required (${kit}). The body carries the price, "
                                            "a checkout link, and the free endpoints that answer the "
                                            "same question."}}}},

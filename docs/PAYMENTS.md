@@ -163,7 +163,7 @@ Checkout Links → each link → *Success URL*:
     https://tashan.sh/api/checkout?id={CHECKOUT_ID}
 
 `{CHECKOUT_ID}` is Polar's own template token — paste it literally, braces included. Everything else
-is already built: single-use burn in KV, paid-status and freshness checks, nothing echoed in a
+is already built: a conditional R2 write for single use, completed-checkout and freshness checks, nothing echoed in a
 response body, and every failure still lands on `/welcome` with the paste form so an outage on
 Polar's side never strands a customer.
 
@@ -198,8 +198,9 @@ site keeps updating — the worst possible split.
 
 ### What a customer's path actually is
 
-Buy → the licence key arrives by email → `tashan activate <key>` on each machine → `tashan account`
-opens https://tashan.sh/account.html already signed in.
+Monthly and annual checkouts return to `/api/checkout?checkout_id={CHECKOUT_ID}`. An active licence opens the welcome page. Run `tashan login` and approve the terminal code there. A customer can also paste the emailed key or use `tashan activate <key>` in CI.
+
+The pilot Pages configuration binds `CHECKOUT_CLAIMS` to the existing `tashan-state` R2 bucket. It uses a conditional write under `checkout-claims/` so only one browser can redeem a checkout, even if two callbacks arrive together. Keep the KV binding for previously redeemed links. If R2 is unavailable, the emailed key still works. The local purchase test runs with `node tests/test_purchase_paths.mjs`.
 
 ```sh
 curl -H "Authorization: Bearer <key>" "https://tashan.sh/api/history?id=pkg:tavily-mcp"

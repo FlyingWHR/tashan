@@ -49,3 +49,8 @@ id = "1f68077762cc4fdb938d3dcf35774c69"
 [[analytics_engine_datasets]]
 binding = "TASHAN_AE"
 dataset = "tashan_events"
+
+# Atomic single-use checkout sign-in. This bucket already holds the pipeline cache.
+[[r2_buckets]]
+binding = "CHECKOUT_CLAIMS"
+bucket_name = "tashan-state"

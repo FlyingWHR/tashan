@@ -211,6 +211,7 @@ node functions/api/device.test.mjs 2>/dev/null || { node functions/api/device.te
 # 5d3. post-purchase sign-in — turns a checkout id into a session using a token that can read every
 # customer's record. Almost every test here is about what it must refuse.
 echo; echo "── post-purchase sign-in (checkout) ───────────"
+node tests/test_purchase_paths.mjs || fail=1
 node functions/api/checkout.test.mjs 2>/dev/null || { node functions/api/checkout.test.mjs; fail=1; }
 node functions/api/buy.test.mjs 2>/dev/null || { node functions/api/buy.test.mjs; fail=1; }
 
@@ -235,6 +236,7 @@ node cli/tashan.test.mjs || fail=1
 # 6b. the MCP server — how agents reach us; protocol + ranking must not regress
 echo; echo "── mcp server (agent surface) ─────────────────"
 node cli/mcp.test.mjs || fail=1
+node cli/tokens.test.mjs || fail=1
 
 echo
 [ "$fail" = 0 ] && echo "ALL SUITES GREEN ✓" || echo "SOME SUITES FAILED ✗"

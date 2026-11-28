@@ -1,8 +1,8 @@
 {
   "name": "tashan-cli",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "mcpName": "sh.tashan/tashan",
-  "description": "The trusted directory for your agent's toolbox \u2014 search, check and install MCP servers and agent skills from your terminal, with the evidence behind every score.",
+  "description": "The trusted directory for your agent's toolbox — search, check and install MCP servers and agent skills from your terminal, with the evidence behind every score.",
   "type": "module",
   "bin": {
     "tashan-cli": "tashan.mjs",
@@ -16,6 +16,9 @@
     "tashan.mjs",
     "doctor.mjs",
     "inventory.mjs",
+    "tokens.mjs",
+    "savings.mjs",
+    "costs.mjs",
     "mcp.mjs",
     "README.md"
   ],
@@ -31,7 +34,7 @@
   "homepage": "https://tashan.sh",
   "license": "MIT",
   "scripts": {
-    "test": "node tashan.test.mjs && node mcp.test.mjs"
+    "test": "node tashan.test.mjs && node mcp.test.mjs && node tokens.test.mjs"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -44,5 +47,8 @@
   },
   "bugs": {
     "url": "https://tashan.sh/support"
+  },
+  "dependencies": {
+    "gpt-tokenizer": "4.1.2"
   }
 }

@@ -147,7 +147,7 @@ export async function onRequest({ request, env }) {
 
   // Rule 1 — the repair is best-effort, always. Rule 2 — usually it does not even open a socket.
   try {
-    await ensureSuccessUrl(env, secret, url.origin);
+    if (url.origin === "https://tashan.sh") await ensureSuccessUrl(env, secret, url.origin);
   } catch (_) { /* Polar down, token revoked, KV hiccup: the customer still gets to buy */ }
 
   return new Response(null, {

@@ -13,12 +13,12 @@
 //   npx tashan-cli mcp                   run as an MCP server, so your AGENT can ask before installing
 //
 // Reads live public data from https://tashan.sh/data/index.json (no account, no backend, no telemetry).
-// Zero dependencies. The pure functions are exported for cli/tashan.test.mjs.
+// The tokenizer loads only for the tokens command. The pure functions are exported for cli/tashan.test.mjs.
 
 import { spawn } from "node:child_process";
 import { readFileSync, writeFileSync, mkdirSync, rmSync, chmodSync, realpathSync } from "node:fs";
 import { homedir, hostname, platform } from "node:os";
-import { join, dirname, basename } from "node:path";
+import { join, dirname, basename, resolve as absolutePath } from "node:path";
 import { configLocations, skillLocations, collect, match, resolve, assess, summarize, trend, withTrend,
          suggest, tokenFrequency, isDying, identify } from "./doctor.mjs";
 import { scan, loadLedger, saveLedger, reconcile, usage, usageOf } from "./inventory.mjs";
@@ -76,10 +76,10 @@ export function resolveKey(a = {}) {
   return l ? l.key : null;
 }
 
-async function polar(path, body) {
+async function polar(path, body, signal) {
   try {
     const r = await fetch(POLAR_LK + path, {
-      method: "POST",
+      method: "POST", signal,
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ organization_id: ORG_ID, ...body }),
     });
@@ -623,17 +623,17 @@ async function loadLookup() {
 // confirmation the $6 was doing anything. That is the "did my payment even work" ticket, then the
 // cancellation. Ask Polar, the actual source of truth, rather than inferring from our own API.
 // Never report "active" on a network failure: a false all-clear is worse than admitting we cannot tell.
-async function verifyLicence(lic) {
+async function verifyLicence(lic, signal) {
   if (!lic || !lic.key) return null;
   const { status, json } = await polar("/validate",
-    lic.activation_id ? { key: lic.key, activation_id: lic.activation_id } : { key: lic.key });
+    lic.activation_id ? { key: lic.key, activation_id: lic.activation_id } : { key: lic.key }, signal);
   if (status === 404 || status === 422) {
     // A 404 here is ambiguous and the two cases need OPPOSITE actions from the user. If the key
     // still validates on its own, the subscription is fine and only this device was released —
     // exactly what happens after freeing a seat in the portal. Telling that person their key is
     // invalid sends them to support over a one-command fix.
     if (lic.activation_id) {
-      const bare = await polar("/validate", { key: lic.key });
+      const bare = await polar("/validate", { key: lic.key }, signal);
       if (bare.status === 200 && bare.json && bare.json.status === "granted") return "deactivated";
     }
     return "invalid";
@@ -668,6 +668,10 @@ ${bold("tashan")} — check your agent's toolbox: anything dead, deprecated or m
   ${jade("tashan")}                      check the toolbox you already have ${dim("(the default)")}
   ${jade("tashan search")} <query>       find MCP servers & skills, ranked on public evidence
   ${jade("tashan info")} <name>          one capability in full, and how to install it
+  ${jade("tashan wrap")} [--table] -- <server> [args]   measure MCP tool results, compact automatically with Pro
+  ${jade("tashan daily")}                 show daily input tokens removed and still available
+  ${jade("tashan costs")} <file>       compare usage and spend for the same tasks
+  ${jade("tashan tokens")} <file|->    preview input tokens (--table for JSON, --emit with Pro)
   ${jade("tashan mcp")}                  run tashan as an MCP server, so your agent can ask
   ${dim("tashan login")} ${dim("/")} ${dim("logout")}         ${dim("Pro: the replacement for anything dead, and 30 days of history")}
 
@@ -908,6 +912,42 @@ export function renderDoctor(results, problems, sum, pro = false, verbose = fals
 export const NEEDS_INDEX = new Set(["search", "top", "info", "add", "doctor"]);
 
 export async function main(argv) {
+  if (argv[0] === "wrap" || argv[0] === "daily") {
+    const path = join(dirname(keyPath()), "tool-usage.jsonl");
+    try {
+      const { wrapServer, dailySavings, dailyText } = await import("./savings.mjs");
+      if (argv[0] === "daily") {
+        if (argv.length > 2 || (argv.length === 2 && argv[1] !== "--json")) {
+          process.stderr.write("Usage: tashan daily [--json]\n");
+          return 2;
+        }
+        const days = await dailySavings(path);
+        process.stdout.write(argv[1] === "--json" ? JSON.stringify({ encoding: "o200k_base", days }) + "\n" : dailyText(days));
+        return 0;
+      }
+      const split = argv.indexOf("--");
+      const table = split === 2 && argv[1] === "--table";
+      if ((!table && split !== 1) || !argv[split + 1]) {
+        process.stderr.write("Usage: tashan wrap [--table] -- <MCP server command> [arguments]\n");
+        return 2;
+      }
+      let active = false, expires = 0;
+      async function getPro() {
+        if (Date.now() >= expires) {
+          const licence = resolveLicence();
+          const state = licence && await verifyLicence(licence, AbortSignal.timeout(3000));
+          active = state === "active";
+          if (licence && !active) process.stderr.write("Pro could not be verified. Measuring in free mode.\n");
+          expires = Date.now() + (active ? 300_000 : 60_000);
+        }
+        return active;
+      }
+      return await wrapServer(argv[split + 1], argv.slice(split + 2), { path, table, getPro });
+    } catch (err) {
+      process.stderr.write(err.message + "\n");
+      return 1;
+    }
+  }
   const a = parseArgs(argv);
   // NO ARGUMENT MEANS DOCTOR. `npx tashan-cli` used to print the menu, which is what you show
   // somebody who already knows what the tool is. doctor is the only command that needs no argument,
@@ -919,6 +959,71 @@ export async function main(argv) {
   // as a broken install. Read from package.json so it can never drift from what npm published.
   if (cmd === "--version" || cmd === "-v" || cmd === "version") {
     process.stdout.write(VERSION + "\n"); return 0;
+  }
+
+  if (cmd === "costs") {
+    if (a._.length !== 2) {
+      process.stderr.write("Usage: tashan costs <paired-runs.json> [--json]\n");
+      return 2;
+    }
+    try {
+      const { compareCosts } = await import("./costs.mjs");
+      const r = compareCosts(JSON.parse(readFileSync(a._[1], "utf8")));
+      if (a.json) process.stdout.write(JSON.stringify(r) + "\n");
+      else {
+        const net = r.net_savings_usd === null ? "Not established; check the outcomes." : "$" + r.net_savings_usd;
+        process.stdout.write(`${r.period} · ${r.cases} paired cases\nBefore: $${r.baseline.usd} · ${r.baseline.accepted} accepted\nWith tashan: $${r.tashan.usd} · ${r.tashan.accepted} accepted\nFee: $${r.fee_usd}\nNet saving: ${net}\n`);
+        process.stdout.write(`Provider tokens: ${r.baseline.total_tokens ?? "unknown"} before · ${r.tashan.total_tokens ?? "unknown"} with tashan\n`);
+        if (r.tokens_saved !== null) {
+          const change = r.tokens_saved < 0 ? "more" : "fewer";
+          process.stdout.write(`Token use: ${r.tokens_saved === 0 ? "unchanged" : Math.abs(r.tokens_saved) + " " + change}\n`);
+        }
+      }
+      return 0;
+    } catch (err) {
+      process.stderr.write(err.message + "\n");
+      return 1;
+    }
+  }
+
+  if (cmd === "tokens") {
+    const args = a._.slice(1);
+    const emit = args.includes("--emit");
+    const ci = args.includes("--ci");
+    const files = args.filter(t => !["--emit", "--ci", "--table"].includes(t));
+    if (files.length !== 1 || (files[0] === "-" && process.stdin.isTTY) || (emit && a.json) ||
+        (ci && (files[0] === "-" || args.includes("--table")))) {
+      process.stderr.write("Usage: tashan tokens <file.json|-> [--table] [--json | --emit]\n       tashan tokens <build.log> --ci [--json | --emit]\n");
+      return 2;
+    }
+    if (emit) {
+      const state = await verifyLicence(resolveLicence(a));
+      if (state !== "active") {
+        process.stderr.write(state === "unknown" ? "Licence service unavailable. Try again.\n"
+          : "Export requires an active Pro licence. Run tashan login or preview without --emit.\n");
+        return 1;
+      }
+    }
+    try {
+      let bytes;
+      if (files[0] === "-") {
+        const chunks = [];
+        for await (const chunk of process.stdin) chunks.push(chunk);
+        bytes = Buffer.concat(chunks);
+      } else {
+        bytes = readFileSync(files[0]);
+      }
+      const input = new TextDecoder("utf-8", { fatal: true, ignoreBOM: true }).decode(bytes);
+      const { compareCiLog, compareJson } = await import("./tokens.mjs");
+      const { output, report } = ci ? compareCiLog(input, absolutePath(files[0])) : compareJson(input, args.includes("--table"));
+      if (emit) process.stdout.write(output);
+      else if (a.json) process.stdout.write(JSON.stringify(report) + "\n");
+      else process.stdout.write(`${report.encoding} input tokens  ${report.before} → ${report.after}  (${report.saved} fewer)\nFormat: ${report.format}\n`);
+      return 0;
+    } catch (err) {
+      process.stderr.write(err instanceof SyntaxError ? "Expected one valid JSON document.\n" : err.message + "\n");
+      return 1;
+    }
   }
 
   // Only the commands that read the Index download it. `activate`, `account` and `mcp` do not touch

@@ -40,3 +40,6 @@ _submission/
 data/tashan.db.*
 data/skills_cache.json.*
 data/.db_store_stamp.*
+
+# Local Wrangler emulator state and build scratch files.
+.wrangler/

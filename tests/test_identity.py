@@ -42,12 +42,19 @@ SLACK = 1.15
 def groups(con):
     """Every (repo, name) that exists as more than one row, with the spread of its scores."""
     return con.execute(
-        """SELECT LOWER(source_repo) AS repo, LOWER(name) AS name, COUNT(*) AS rows,
+        """WITH versions AS (
+               SELECT *, DENSE_RANK() OVER (
+                   PARTITION BY LOWER(source_repo), LOWER(name), COALESCE(NULLIF(registry_name,''), id)
+                   ORDER BY registry_updated DESC
+               ) AS recency
+                 FROM capabilities
+           )
+           SELECT LOWER(source_repo) AS repo, LOWER(name) AS name, COUNT(*) AS rows,
                   COUNT(DISTINCT kind) AS kinds,
                   MAX(tashan_score) - MIN(tashan_score) AS spread,
                   COUNT(tashan_score) AS scored
-             FROM capabilities
-            WHERE source_repo IS NOT NULL AND source_repo <> ''
+             FROM versions
+            WHERE recency = 1 AND source_repo IS NOT NULL AND source_repo <> ''
               AND name IS NOT NULL AND name <> ''
          GROUP BY repo, name
            HAVING rows > 1"""
@@ -75,6 +82,22 @@ def measure(con):
 
 
 def main():
+    # A registry listing can move from Docker to npm. Keep its historical
+    # measurements, but compare only concurrent distributions in the raw gate.
+    # Regardless of the raw spread, the two public exports must agree exactly.
+    published = {}
+    for filename, key in (("capabilities", "capabilities"), ("lookup", "records")):
+        with open(os.path.join(ROOT, "web", "data", filename + ".json")) as src:
+            for row in json.load(src)[key]:
+                repo, name, score = row.get("source_repo"), row.get("name"), row.get("tashan_score")
+                if not repo or not name or score is None:
+                    continue
+                identity = (repo.lower(), name.lower())
+                previous = published.setdefault(identity, score)
+                if previous != score:
+                    print(f"  FAIL  {identity} has published scores {previous} and {score} ({filename})")
+                    return 1
+    print(f"  ok    {len(published):,} published repo/name identities agree across board and lookup")
     if not os.path.exists(DB):
         print("  skip  no database")
         return 0

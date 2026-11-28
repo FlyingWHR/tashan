@@ -428,7 +428,7 @@ ok("the agent guide reports the exact published population", bool(host_count) an
 
 # The full abandoned/deprecated count is a database measurement. Local R2 caches can be
 # months older than the checked-out site. CI always verifies the claim against its build DB.
-pricing_count = re.search(r"\b([\d,]+)\s+of the things we measure are abandoned",
+pricing_count = re.search(r"\b([\d,]+)\s+tools are marked abandoned",
                           text(os.path.join(WEB, "pricing.html")))
 ok("the pricing risk count is present", bool(pricing_count))
 DB = os.path.join(ROOT, "data", "tashan.db")

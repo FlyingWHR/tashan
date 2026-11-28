@@ -47,52 +47,36 @@
 
   function signedIn(a) {
     var who = a.email || a.name || "your account";
+    if (!a.active) {
+      host.innerHTML = "<h1>Check your subscription</h1><p>Open your account to check your plan and licence.</p>" +
+        '<a class="btn btn--primary" href="/account.html">Open account</a>';
+      return;
+    }
     host.innerHTML =
-      '<p class="kicker">Welcome to tashan Pro</p>' +
-      "<h1>You're in.</h1>" +
-      '<p class="lede">Signed in as <b>' + esc(who) + "</b>. One command puts Pro on any machine you " +
-      "work on — there is no key to copy and nothing to add to your shell profile.</p>" +
-
+      '<p class="kicker">tashan Pro</p><h1>Connect your terminal</h1>' +
+      '<p class="lede">Signed in as <b>' + esc(who) + '</b>. Run this command and approve the code in your browser.</p>' +
       '<div class="callout mono fs-sm">npx tashan-cli login</div>' +
-      "<p>It prints a short code and opens your browser. Because this browser is signed in, approving " +
-      "is one click — the same flow as <code>gh auth login</code>. Repeat it on every machine.</p>" +
-
-      "<h2>Then</h2>" +
-      '<div class="callout mono fs-sm">npx tashan-cli doctor</div>' +
-      "<p>Reads your Claude Code, Cursor and Desktop configs and tells you what to do about what it " +
-      "finds. Nothing about your config is uploaded — the CLI reads local files and asks us only " +
-      "about capability names. That was true before you paid and it is true now.</p>" +
-
-      "<h2>What the licence changed</h2>" +
-      "<p>Free <code>doctor</code> named every finding: how many advisories, whether something runs a " +
-      "script at install, what it can reach. It still does, for everyone, permanently. With the " +
-      "licence it also gives you <b>the part you act on</b> — which advisory and the version that " +
-      "fixes it, what the install script runs, the full permission list, and the replacement to move " +
-      "to.</p>" +
-
-      '<p class="mt-12"><a class="btn btn--primary" href="/account.html">Your account &rsaquo;</a>' +
-      '<a class="btn btn--ghost ml-3" href="/support.html">Get help &rsaquo;</a></p>';
+      '<h2>Use fewer input tokens</h2><p>Put tashan wrap -- before one local MCP server’s command and reconnect. Pro now compacts JSON results from that tool.</p>' +
+      '<div class="callout mono fs-sm">tashan daily</div>' +
+      '<p><a class="link" href="/account.html">Manage subscription</a> &nbsp;·&nbsp; <a class="link" href="/support.html">Get help</a></p>';
   }
 
   // /api/checkout redirects here with ?e= when the exchange could not complete. Say which, plainly:
   // "it did not work" sends someone to support, "that link was already used" does not.
   var NOTE = {
-    used:   "That sign-in link had already been used. Your key is in your purchase email — paste it once below.",
-    unpaid: "That checkout has not completed. If you have just paid, give it a moment and reload.",
-    stale:  "That sign-in link has expired. Paste your key once below and this browser stays signed in.",
-    // Not the buyer's fault and not their problem to solve — say so, and do not imply they did
-    // something wrong. Their key is real and the paste form below works.
-    unconfigured: "Automatic sign-in is not switched on for this site yet — that is on us, not you. " +
-                  "Your key is in your purchase email; paste it once below and this browser stays signed in.",
+    used: "This sign-in link was already used. Use the key from your purchase email.",
+    unpaid: "Checkout is still open. Finish the payment in Polar, then return here.",
+    pending: "Your licence is being prepared. Use the key when your purchase email arrives.",
+    stale: "This sign-in link expired. Use the key from your purchase email.",
+    unavailable: "Automatic sign-in is temporarily unavailable. Use the key from your purchase email.",
+    unconfigured: "Automatic sign-in is unavailable. Use the key from your purchase email.",
   }[new URLSearchParams(location.search).get("e")] || "";
 
   function signedOut() {
     host.innerHTML =
       '<p class="kicker">Welcome to tashan Pro</p>' +
-      "<h1>One paste, once.</h1>" +
-      '<p class="lede">Your licence key is in the email that just arrived. Paste it here and this ' +
-      "browser stays signed in — after that, every machine you ever work on is approved with a " +
-      "click, and you never type it again.</p>" +
+      "<h1>Sign in with your licence key</h1>" +
+      '<p class="lede">Find the key in your purchase email and paste it below.</p>' +
       (NOTE ? '<div class="callout"><b>' + NOTE + "</b></div>" : "") +
       window.tashanSignin.html({ id: "wKey", autofocus: true }) +
       '<p class="note">In CI, where there is no browser to open, <code>npx tashan-cli activate &lt;key&gt;</code> ' +

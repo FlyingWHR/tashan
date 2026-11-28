@@ -71,23 +71,18 @@
     host.innerHTML =
       '<h1>Sign in to authorise</h1>' +
       codeBlock() +
-      '<p class="lede">This browser is not signed in yet, so there is nothing to hand the terminal. ' +
-      "Two ways in — after either one, you never do this again on any machine.</p>" +
-
+      '<p class="lede">Sign in to connect your terminal to Pro.</p>' +
       '<div class="actv__doors">' +
         '<div class="actv__door">' +
           '<p class="actv__k mono">I already bought Pro</p>' +
           '<h2>Paste your licence key, once</h2>' +
-          '<p>It is in your purchase email. This is the only time you will type it — every machine ' +
-          "after this one is approved with a click.</p>" +
+          '<p>Find it in your purchase email.</p>' +
           window.tashanSignin.html({ id: "keyF", cta: "Sign in &rsaquo;" }) +
         "</div>" +
         '<div class="actv__door">' +
           '<p class="actv__k mono">I do not have Pro</p>' +
           '<h2>What the licence adds</h2>' +
-          '<p>The free tier names every finding and always will. Pro tells you which advisory, the ' +
-          "version that fixes it, what an install script actually runs, and the replacement for " +
-          "anything dead in your config.</p>" +
+          '<p>Export compact tool results and get checked tool setups.</p>' +
           '<p><a class="btn btn--ghost" href="/pricing.html">See what Pro costs &rsaquo;</a></p>' +
         "</div>" +
       "</div>";
@@ -102,8 +97,6 @@
       codeBlock() +
       '<p class="lede">A terminal asked to sign in as <b>' + esc(who) + "</b>. Confirm the code above " +
       "matches the one it printed, then approve.</p>" +
-      (acct.active ? "" : '<div class="callout"><b>Heads up.</b> This licence is ' + esc(acct.status || "not active") +
-        ". You can still approve the device; the CLI will show the free tier until the licence is live again.</div>") +
       '<p class="actv__cta">' +
         '<button class="btn btn--primary" id="yes" type="button">Approve this device &rsaquo;</button>' +
         '<button class="btn btn--ghost" id="no" type="button">Not me &mdash; deny</button>' +
@@ -142,17 +135,10 @@
   function done(ok, who) {
     host.innerHTML = ok
       ? '<h1>Approved.</h1>' +
-        '<p class="lede">Your terminal has it — it will say <code>Pro is active on this machine</code> ' +
-        "within a few seconds. You can close this tab.</p>" +
-        '<div class="callout"><b>Next.</b> <code>npx tashan-cli doctor</code> reads your Claude Code, ' +
-        "Cursor and Desktop configs and now names the fix for everything it finds, not just the " +
-        "finding.</div>" +
+        '<p class="lede">Return to your terminal to finish signing in.</p>' +
         '<p class="mt-12"><a class="btn btn--ghost" href="/account.html">Your account &rsaquo;</a></p>'
       : '<h1>Denied.</h1>' +
-        '<p class="lede">Nothing was handed over. The terminal will stop waiting and report that the ' +
-        "request was denied.</p>" +
-        '<p class="note">If that was not you, nothing has leaked — a code is useless without an ' +
-        "approval from a signed-in browser, and this one is now dead.</p>" +
+        '<p class="lede">The terminal request was cancelled.</p>' +
         '<p class="mt-12"><a class="btn btn--ghost" href="/">Back to the Index &rsaquo;</a></p>';
   }
 
@@ -171,6 +157,11 @@
       return api("/api/account").then(function (r) {
         // No session, unreachable API, or an error — all render signed out. Never optimistic.
         if (!r.ok || !r.body || !r.body.signed_in) return signedOut();
+        if (!r.body.active) {
+          host.innerHTML = '<h1>Check your licence</h1><p>You need an active Pro subscription to connect this device.</p>' +
+            '<a class="btn btn--primary" href="/account.html">Open account</a>';
+          return;
+        }
         approve(r.body);
       });
     }).catch(function () {

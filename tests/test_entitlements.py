@@ -60,6 +60,7 @@ KEYWORDS = {
     "advisory-detail": ("advisor", "cve", "ghsa"),
     "install-script": ("install script", "install-time", "install time"),
     "permissions": ("permission",),
+    "compact-json": ("compact json",),
     "history": ("history", "historic"),
     "replacement": ("replacement", "replace"),
 }
