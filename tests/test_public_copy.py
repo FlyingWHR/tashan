@@ -9,7 +9,7 @@ from build import HAN_TEXT, public_copy
 
 sample = {"tasks": [{"t": "agent-development", "e": "运行模型"}, {"t": "testing", "e": "run tests"}]}
 public_copy(sample)
-assert sample["tasks"] == [{"t": "agent-development", "e": None}, {"t": "testing", "e": "run tests"}]
+assert sample["tasks"] == [{"t": "testing", "e": "run tests"}]
 
 for path in (ROOT / "web").rglob("*"):
     if path.suffix not in {".html", ".json", ".txt", ".md", ".js", ".css", ".svg", ".xml"} and path.parent.name != "v0.1":
