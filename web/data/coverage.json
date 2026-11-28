@@ -1,12 +1,12 @@
 {
  "_why": "Coverage weighted by demand. The aggregate ratio falls whenever discovery succeeds, so it is reported but never targeted; the tiers are what we commit to.",
  "all": {
-  "full": 1120,
-  "grade": 3811,
-  "n": 118683,
-  "scan": 9233,
-  "score": 78266,
-  "task": 5336
+  "full": 1126,
+  "grade": 3816,
+  "n": 127491,
+  "scan": 9802,
+  "score": 81559,
+  "task": 5483
  },
  "axes": [
   {
@@ -31,15 +31,15 @@
   }
  ],
  "headline": {
-  "graded_pct": 26,
+  "graded_pct": 25,
   "scanned_pct": 100,
   "scored_pct": 97,
-  "tasked_pct": 49,
+  "tasked_pct": 47,
   "tier": "top1000"
  },
  "queue": [
   {
-   "downloads": 3344631,
+   "downloads": 5059932,
    "id": "pkg:agent-install",
    "kind": "npm",
    "missing": [
@@ -48,12 +48,11 @@
    "name": "agent-install"
   },
   {
-   "downloads": 1665896,
+   "downloads": 2785468,
    "id": "pkg:fallow",
    "kind": "npm",
    "missing": [
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "fallow"
   },
@@ -152,6 +151,36 @@
    "name": "@pandacss/mcp"
   },
   {
+   "downloads": 257895,
+   "id": "pkg:@tanstack/ai-mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@tanstack/ai-mcp"
+  },
+  {
+   "downloads": 182844,
+   "id": "pkg:@modelcontextprotocol/server-slack",
+   "kind": "npm",
+   "missing": [
+    "score",
+    "grade"
+   ],
+   "name": "@modelcontextprotocol/server-slack"
+  },
+  {
+   "downloads": 173977,
+   "id": "pkg:@processon/mcp-server-processon-node",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@processon/mcp-server-processon-node"
+  },
+  {
    "downloads": 173562,
    "id": "pkg:@raishin/vanguard-frontier-agentic",
    "kind": "npm",
@@ -174,8 +203,7 @@
    "id": "pkg:repomix",
    "kind": "npm",
    "missing": [
-    "grade",
-    "task"
+    "grade"
    ],
    "name": "repomix"
   },
@@ -197,6 +225,35 @@
     "grade"
    ],
    "name": "@oh-my-pi/pi-mnemopi"
+  },
+  {
+   "downloads": 141745,
+   "id": "pkg:@azure-devops/mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@azure-devops/mcp"
+  },
+  {
+   "downloads": 140788,
+   "id": "pkg:@kubb/mcp",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@kubb/mcp"
+  },
+  {
+   "downloads": 137431,
+   "id": "pkg:figma-developer-mcp",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "figma-developer-mcp"
   },
   {
    "downloads": 134579,
@@ -228,36 +285,7 @@
    "name": "agentation-mcp"
   },
   {
-   "downloads": 120167,
-   "id": "pkg:nx-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "nx-mcp"
-  },
-  {
-   "downloads": 120075,
-   "id": "pkg:@azure-devops/mcp",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@azure-devops/mcp"
-  },
-  {
-   "downloads": 116746,
-   "id": "pkg:@modelcontextprotocol/server-slack",
-   "kind": "npm",
-   "missing": [
-    "score",
-    "grade"
-   ],
-   "name": "@modelcontextprotocol/server-slack"
-  },
-  {
-   "downloads": 116675,
+   "downloads": 122354,
    "id": "pkg:@modelcontextprotocol/server-postgres",
    "kind": "npm",
    "missing": [
@@ -267,14 +295,22 @@
    "name": "@modelcontextprotocol/server-postgres"
   },
   {
-   "downloads": 115916,
-   "id": "pkg:@tanstack/ai-mcp",
+   "downloads": 120167,
+   "id": "pkg:nx-mcp",
    "kind": "npm",
    "missing": [
-    "grade",
-    "task"
+    "grade"
    ],
-   "name": "@tanstack/ai-mcp"
+   "name": "nx-mcp"
+  },
+  {
+   "downloads": 105242,
+   "id": "pkg:@launchdarkly/mcp-server",
+   "kind": "npm",
+   "missing": [
+    "grade"
+   ],
+   "name": "@launchdarkly/mcp-server"
   },
   {
    "downloads": 105236,
@@ -284,6 +320,16 @@
     "grade"
    ],
    "name": "@ui5/mcp-server"
+  },
+  {
+   "downloads": 103438,
+   "id": "pkg:@softeria/ms-365-mcp-server",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@softeria/ms-365-mcp-server"
   },
   {
    "downloads": 102854,
@@ -296,13 +342,13 @@
    "name": "@aikidosec/mcp"
   },
   {
-   "downloads": 101718,
-   "id": "pkg:@bike4mind/cli",
+   "downloads": 102666,
+   "id": "pkg:@claude-flow/cli",
    "kind": "npm",
    "missing": [
     "grade"
    ],
-   "name": "@bike4mind/cli"
+   "name": "@claude-flow/cli"
   },
   {
    "downloads": 101228,
@@ -325,22 +371,33 @@
    "name": "agentic-flow"
   },
   {
-   "downloads": 93241,
-   "id": "pkg:figma-developer-mcp",
+   "downloads": 92956,
+   "id": "pkg:@azure/mcp-linux-x64",
    "kind": "npm",
    "missing": [
-    "grade"
+    "grade",
+    "task"
    ],
-   "name": "figma-developer-mcp"
+   "name": "@azure/mcp-linux-x64"
   },
   {
-   "downloads": 90799,
-   "id": "pkg:@claude-flow/cli",
+   "downloads": 92487,
+   "id": "pkg:@tacticlaunch/mcp-linear",
    "kind": "npm",
    "missing": [
     "grade"
    ],
-   "name": "@claude-flow/cli"
+   "name": "@tacticlaunch/mcp-linear"
+  },
+  {
+   "downloads": 90274,
+   "id": "pkg:@zencoderai/slack-mcp-server",
+   "kind": "npm",
+   "missing": [
+    "grade",
+    "task"
+   ],
+   "name": "@zencoderai/slack-mcp-server"
   },
   {
    "downloads": 88194,
@@ -353,88 +410,31 @@
    "name": "@currents/mcp"
   },
   {
-   "downloads": 82806,
-   "id": "pkg:@claude-flow/cli-core",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@claude-flow/cli-core"
-  },
-  {
-   "downloads": 75911,
-   "id": "pkg:metaharness",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "metaharness"
-  },
-  {
-   "downloads": 75836,
-   "id": "pkg:@azure/mcp-win32-x64",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@azure/mcp-win32-x64"
-  },
-  {
-   "downloads": 74853,
+   "downloads": 87383,
    "id": "pkg:@tobilu/qmd",
    "kind": "npm",
    "missing": [
     "grade"
    ],
    "name": "@tobilu/qmd"
-  },
-  {
-   "downloads": 69317,
-   "id": "pkg:@serdnaley/metabase-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@serdnaley/metabase-mcp"
-  },
-  {
-   "downloads": 69234,
-   "id": "pkg:@hubspot/mcp-server",
-   "kind": "npm",
-   "missing": [
-    "grade",
-    "task"
-   ],
-   "name": "@hubspot/mcp-server"
-  },
-  {
-   "downloads": 64325,
-   "id": "pkg:@imgly/codesign-mcp",
-   "kind": "npm",
-   "missing": [
-    "grade"
-   ],
-   "name": "@imgly/codesign-mcp"
   }
  ],
  "tiers": {
   "top100": {
-   "full": 38,
-   "grade": 42,
+   "full": 39,
+   "grade": 44,
    "n": 100,
    "scan": 100,
    "score": 96,
-   "task": 64
+   "task": 67
   },
   "top1000": {
-   "full": 213,
-   "grade": 263,
+   "full": 204,
+   "grade": 252,
    "n": 1000,
    "scan": 1000,
-   "score": 972,
-   "task": 489
+   "score": 968,
+   "task": 473
   }
  }
 }

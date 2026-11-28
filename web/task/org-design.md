@@ -11,11 +11,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Fourchan](https://tashan.sh/capability/pkg-fourchan-mcp.html) | 45 | 193/wk | active |
-| 2 | [Workshop Pack](https://tashan.sh/capability/plugin-polar-bear-org-claude-skills-workshop-pack.html) | 40 | 1 marketplaces | active |
-| 3 | [Review Cycle Pack](https://tashan.sh/capability/plugin-polar-bear-org-claude-skills-review-cycle-pack.html) | 40 | 1 marketplaces | active |
-| 4 | [Editing Pack](https://tashan.sh/capability/plugin-polar-bear-org-claude-skills-editing-pack.html) | 40 | 1 marketplaces | active |
-| 5 | [Design Thinking Pack](https://tashan.sh/capability/plugin-polar-bear-org-claude-skills-design-thinking-pack.html) | 40 | 1 marketplaces | active |
+| 1 | [Workshop Pack](https://tashan.sh/capability/plugin-polar-bear-org-claude-skills-workshop-pack.html) | 39 | 1 marketplaces | active |
+| 2 | [Review Cycle Pack](https://tashan.sh/capability/plugin-polar-bear-org-claude-skills-review-cycle-pack.html) | 39 | 1 marketplaces | active |
+| 3 | [Editing Pack](https://tashan.sh/capability/plugin-polar-bear-org-claude-skills-editing-pack.html) | 39 | 1 marketplaces | active |
+| 4 | [Design Thinking Pack](https://tashan.sh/capability/plugin-polar-bear-org-claude-skills-design-thinking-pack.html) | 39 | 1 marketplaces | active |
+| 5 | [Fourchan](https://tashan.sh/capability/pkg-fourchan-mcp.html) | 44 | 193/wk | active |
 
 ## What these numbers are not
 

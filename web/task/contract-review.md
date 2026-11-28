@@ -11,13 +11,14 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 42 | 4 ★ | active |
-| 2 | [Legalrabbit Docx](https://tashan.sh/capability/plugin-legalrabbit-ai-legalrabbit-docx-claude-plugin-legalrabbit-docx.html) | 40 | 46 ★ | active |
+| 1 | [Bengo Toolkit](https://tashan.sh/capability/plugin-llamadrive-bengo-toolkit-bengo-toolkit.html) | 41 | 4 ★ | active |
+| 2 | [Legalrabbit Docx](https://tashan.sh/capability/plugin-legalrabbit-ai-legalrabbit-docx-claude-plugin-legalrabbit-docx.html) | 39 | 46 ★ | active |
 | 3 | [L4 Computational Law](https://tashan.sh/capability/plugin-smucclaw-l4-ide-l4-computational-law.html) | 46 | 37 ★ | active |
 | 4 | [Bettercallclaude](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-bettercallclaude.html) | 49 | 33 ★ | active |
 | 5 | [Bettercallclaude Italia](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-italia-bettercallclaude-italia.html) | 41 | 41 ★ | active |
-| 6 | [Contract Diff](https://tashan.sh/capability/pkg-contract-diff-mcp.html) | 47 | 278/wk | active |
-| 7 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 40 | 139/wk | active |
+| 6 | [Contracko](https://tashan.sh/capability/pkg-contracko-mcp.html) | 60 | 327/wk | active |
+| 7 | [Legal Doc Analyzer](https://tashan.sh/capability/pkg-legal-doc-analyzer.html) | 39 | 139/wk | active |
+| 8 | [Contract Diff](https://tashan.sh/capability/pkg-contract-diff-mcp.html) | 46 | 278/wk | active |
 
 ## What these numbers are not
 

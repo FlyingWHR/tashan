@@ -11,48 +11,48 @@ Ranked by the tashan score
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Freee](https://tashan.sh/capability/pkg-freee-mcp.html) | 77 | 19k/wk | active |
+| 1 | [Freee](https://tashan.sh/capability/pkg-freee-mcp.html) | 83 | 21k/wk | active |
 | 2 | [Ccxt](https://tashan.sh/capability/plugin-ccxt-ccxt-ccxt-mcp.html) | 74 | 44k ★ | active |
-| 3 | [Phantom](https://tashan.sh/capability/pkg-phantom-mcp-server.html) | 73 | 5k/wk | active |
-| 4 | [Stock Deep Analyzer](https://tashan.sh/capability/plugin-wbh604-uzi-skill-stock-deep-analyzer.html) | 71 | 7k ★ | active |
-| 5 | [Shinjuku Shielded](https://tashan.sh/capability/pkg-shinjuku-shielded.html) | 71 | 3k/wk | active |
-| 6 | [Asrai — crypto market analysis (API key)](https://tashan.sh/capability/pkg-asrai-mcp-apikey.html) | 69 | 1k/wk | active |
-| 7 | [Stripe](https://tashan.sh/capability/plugin-stripe-ai-stripe.html) | 67 | 2k ★ | active |
-| 8 | [Okx Trade](https://tashan.sh/capability/pkg-okx-ai-okx-trade-mcp.html) | 67 | 872/wk | active |
-| 9 | [Stock SDK](https://tashan.sh/capability/pkg-stock-sdk.html) | 66 | 3k/wk | active |
-| 10 | [Itr Wala](https://tashan.sh/capability/plugin-karanb192-itr-wala-itr-wala.html) | 65 | 867 ★ | active |
-| 11 | [Apiguru Amazon Data](https://tashan.sh/capability/pkg-apiguru-mcp.html) | 65 | 3k/wk | active |
-| 12 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 63 | 1k/wk | active |
-| 13 | [Q402](https://tashan.sh/capability/pkg-quackai-q402-mcp.html) | 63 | 826/wk | active |
-| 14 | [Savvly](https://tashan.sh/capability/pkg-savvly-mcp-server.html) | 62 | 339/wk | active |
-| 15 | [Solana Finance](https://tashan.sh/capability/plugin-quicknode-solana-finance-claude-plugin-solana-finance.html) | 61 | 94 ★ | active |
-| 16 | [Ankr Agent RPC](https://tashan.sh/capability/pkg-w3tech-io-agent-rpc-mcp.html) | 61 | 84/wk | active |
-| 17 | [Houki Nta](https://tashan.sh/capability/pkg-shuji-bonji-houki-nta-mcp.html) | 60 | 1k/wk | active |
-| 18 | [Agentsolis](https://tashan.sh/capability/pkg-agentsolis-mcp.html) | 60 | 451/wk | active |
-| 19 | [Oracle](https://tashan.sh/capability/pkg-oracle-agent-oracle.html) | 58 | 891/wk | active |
-| 20 | [Keyban Agent Wallet](https://tashan.sh/capability/pkg-keyban-agent-wallet-mcp.html) | 58 | 284/wk | active |
-| 21 | [Escro](https://tashan.sh/capability/pkg-escro-mcp.html) | 58 | 246/wk | active |
-| 22 | [minia2a — x402 Marketplace](https://tashan.sh/capability/pkg-minia2a-mcp.html) | 57 | 759/wk | active |
-| 23 | [T2000](https://tashan.sh/capability/pkg-t2000-cli.html) | 57 | 685/wk | active |
-| 24 | [Next Finance](https://tashan.sh/capability/pkg-next-finance-mcp.html) | 57 | 663/wk | active |
-| 25 | [Ironflowsh](https://tashan.sh/capability/pkg-ironflowsh-mcp.html) | 56 | 735/wk | active |
-| 26 | [Redfin](https://tashan.sh/capability/pkg-redfin-mcp.html) | 56 | 568/wk | active |
-| 27 | [Tomtom](https://tashan.sh/capability/pkg-tomtom-org-tomtom-mcp.html) | 56 | 303/wk | active |
-| 28 | [Blindpay](https://tashan.sh/capability/pkg-blindpay-mcp.html) | 56 | 261/wk | active |
-| 29 | [Cluster](https://tashan.sh/capability/pkg-clusteragent-cluster-mcp.html) | 55 | 788/wk | active |
-| 30 | [Secedgar](https://tashan.sh/capability/pkg-cyanheads-secedgar-mcp-server.html) | 55 | 376/wk | active |
-| 31 | [Crush Protocol](https://tashan.sh/capability/pkg-crush-protocol-mcp-client.html) | 55 | 296/wk | active |
-| 32 | [Market Fiyati](https://tashan.sh/capability/pkg-market-fiyati-mcp.html) | 55 | 101/wk | active |
-| 33 | [Tonghuasun Agent](https://tashan.sh/capability/plugin-zhuyifang-tonghuasun-agent-tonghuasun-agent.html) | 54 | 205 ★ | active |
-| 34 | [Agentcash](https://tashan.sh/capability/pkg-agentcash.html) | 54 | 2k/wk | active |
-| 35 | [Datasinking](https://tashan.sh/capability/pkg-datasinking-mcp.html) | 54 | 845/wk | active |
-| 36 | [Phantom · @phantomid](https://tashan.sh/capability/pkg-phantomid-mcp-server.html) | 54 | 727/wk | active |
-| 37 | [Google Trends](https://tashan.sh/capability/pkg-hasdata-google-trends-mcp.html) | 54 | 282/wk | active |
-| 38 | [Litport](https://tashan.sh/capability/pkg-litportnet-litport-mcp.html) | 53 | 809/wk | active |
-| 39 | [Cheapshark](https://tashan.sh/capability/pkg-cheapshark-mcp.html) | 53 | 796/wk | active |
-| 40 | [Minia2a X402](https://tashan.sh/capability/pkg-minia2a-x402.html) | 53 | 792/wk | active |
+| 3 | [Itr Wala](https://tashan.sh/capability/plugin-karanb192-itr-wala-itr-wala.html) | 74 | 891 ★ | active |
+| 4 | [Phantom](https://tashan.sh/capability/pkg-phantom-mcp-server.html) | 72 | 5k/wk | active |
+| 5 | [Stock Deep Analyzer](https://tashan.sh/capability/plugin-wbh604-uzi-skill-stock-deep-analyzer.html) | 71 | 7k ★ | active |
+| 6 | [Stock SDK](https://tashan.sh/capability/pkg-stock-sdk.html) | 71 | 3k/wk | active |
+| 7 | [Shinjuku Shielded](https://tashan.sh/capability/pkg-shinjuku-shielded.html) | 70 | 3k/wk | active |
+| 8 | [Bykaranteli](https://tashan.sh/capability/pkg-bykaranteli-mcp.html) | 70 | 2k/wk | active |
+| 9 | [K12 Education](https://tashan.sh/capability/plugin-anthropics-k12-teacher-skills-k12-education.html) | 69 | 649 ★ | active |
+| 10 | [Openalpha](https://tashan.sh/capability/pkg-openalpha-mcp.html) | 69 | 2k/wk | active |
+| 11 | [Driftline](https://tashan.sh/capability/pkg-aidriftline-driftline.html) | 69 | 939/wk | active |
+| 12 | [CAPPZ Marketplace](https://tashan.sh/capability/pkg-cappz-market.html) | 68 | 2k/wk | active |
+| 13 | [Ens](https://tashan.sh/capability/pkg-thenamespace-ens-mcp.html) | 68 | 669/wk | active |
+| 14 | [Okx Trade](https://tashan.sh/capability/pkg-okx-ai-okx-trade-mcp.html) | 67 | 872/wk | active |
+| 15 | [Stables](https://tashan.sh/capability/pkg-stables-mcp-server.html) | 67 | 601/wk | active |
+| 16 | [Stripe](https://tashan.sh/capability/plugin-stripe-ai-stripe.html) | 66 | 2k ★ | active |
+| 17 | [CalcBloc tax and salary calculator](https://tashan.sh/capability/pkg-calcbloc-mcp.html) | 65 | 775/wk | active |
+| 18 | [S1000D Verify (S1000D Stack)](https://tashan.sh/capability/pkg-shuji-bonji-s1000d-verify-mcp.html) | 65 | 518/wk | active |
+| 19 | [Apiguru Amazon Data](https://tashan.sh/capability/pkg-apiguru-mcp.html) | 64 | 3k/wk | active |
+| 20 | [DFM · The Fund Management OS](https://tashan.sh/capability/pkg-dfm-fi-agent.html) | 64 | 535/wk | active |
+| 21 | [Webdata Tools](https://tashan.sh/capability/pkg-webdata-tools-mcp.html) | 64 | 528/wk | active |
+| 22 | [Q402](https://tashan.sh/capability/pkg-quackai-q402-mcp.html) | 63 | 826/wk | active |
+| 23 | [Sa Municipal Finance](https://tashan.sh/capability/pkg-sa-municipal-finance-mcp.html) | 63 | 758/wk | active |
+| 24 | [Imali](https://tashan.sh/capability/pkg-imali-mcp.html) | 63 | 722/wk | active |
+| 25 | [Symbolon City wallet](https://tashan.sh/capability/pkg-symbolon-city-wallet.html) | 63 | 554/wk | active |
+| 26 | [Agichainai Agent Tools](https://tashan.sh/capability/pkg-agichainai-agent-tools.html) | 62 | 630/wk | active |
+| 27 | [Webberdoo Agent Intelligence](https://tashan.sh/capability/pkg-webberdoo-wai-mcp.html) | 62 | 518/wk | active |
+| 28 | [Risk Calculation](https://tashan.sh/capability/pkg-risk-calculation-mcp.html) | 62 | 432/wk | active |
+| 29 | [Savvly](https://tashan.sh/capability/pkg-savvly-mcp-server.html) | 62 | 339/wk | active |
+| 30 | [Vcp Signal](https://tashan.sh/capability/pkg-vcp-signal-mcp.html) | 61 | 496/wk | active |
+| 31 | [PolyTest](https://tashan.sh/capability/pkg-polytest-mcp.html) | 61 | 475/wk | active |
+| 32 | [Finimpulse](https://tashan.sh/capability/pkg-finimpulse-mcp-server.html) | 61 | 393/wk | active |
+| 33 | [Solana Finance](https://tashan.sh/capability/plugin-quicknode-solana-finance-claude-plugin-solana-finance.html) | 60 | 94 ★ | active |
+| 34 | [Fourohtwo](https://tashan.sh/capability/pkg-fourohtwo-mcp.html) | 60 | 455/wk | active |
+| 35 | [Agentsolis](https://tashan.sh/capability/pkg-agentsolis-mcp.html) | 60 | 451/wk | active |
+| 36 | [Ankr Agent RPC](https://tashan.sh/capability/pkg-w3tech-io-agent-rpc-mcp.html) | 60 | 84/wk | active |
+| 37 | [Oracle](https://tashan.sh/capability/pkg-oracle-agent-oracle.html) | 58 | 891/wk | active |
+| 38 | [Ebay Bid Tracker Tracker](https://tashan.sh/capability/pkg-mrfentmen-ebay-bid-tracker-mcp.html) | 58 | 399/wk | active |
+| 39 | [API Triangle](https://tashan.sh/capability/pkg-api-triangle-mcp.html) | 58 | 385/wk | active |
+| 40 | [Escro](https://tashan.sh/capability/pkg-escro-mcp.html) | 58 | 246/wk | active |
 
-Showing the top 40 of 600. The full ranked shelf is at https://tashan.sh/category/finance.html.
+Showing the top 40 of 621. The full ranked shelf is at https://tashan.sh/category/finance.html.
 
 ## What these numbers are not
 

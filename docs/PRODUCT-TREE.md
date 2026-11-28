@@ -13,16 +13,16 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 |---|---|---|---|---|---|
 | `/index.html` | The Index. Find a capability by job or category, ranked and audited. | hero, index, ridge, site, terminal | board.json, capabilities.json, categories.json, index.json, tags.json, tasks.json | free | 84 |
 | `/methodology.html` | How every number is derived, so the score is re-checkable. | methodology, site, terminal | board.json, coverage.json, index.json, tasks.json | free | 45 |
-| `/pricing.html` | What Pro costs and exactly what it adds. | site, terminal | board.json, index.json, tasks.json | sells | 41 |
+| `/pricing.html` | What Pro costs and exactly what it adds. | ridge, site, terminal | board.json, index.json, tasks.json | sells | 43 |
 | `/audit.html` | Paste your MCP config and see every risk we hold about what is in it. Parsed in the browser, so keys never leave the page. | audit, site, terminal | board.json, index.json, tasks.json | free | 40 |
 | `/account.html` *(noindex)* | Your plan, machines, licence key and invoices — read live from /api/account. | account, signin, site, terminal | board.json, index.json, tasks.json | post-sale | 37 |
-| `/paid.html` | Settled x402 receipts on Base, joined to the catalog — the only signal here that is not a proxy for demand. Read through The Graph's Subgraph MCP, and the page prints the query so a reader can re-run it. | site | demand.json | free | 37 |
-| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | board.json, index.json, tasks.json | free | 35 |
+| `/paid.html` | Settled x402 receipts on Base, joined to the catalog — the only signal here that is not a proxy for demand. Read through The Graph's Subgraph MCP, and the page prints the query so a reader can re-run it. | site | demand.json | free | 36 |
 | `/support.html` | How to get help, and what we can see when you ask. | site, terminal | board.json, index.json, tasks.json | free | 35 |
 | `/browse.html` | Parent index for every category and task hub — the full taxonomy. | — | — | free | 34 |
 | `/changes.html` | What moved in the ecosystem, dated — the only page built from a series that cannot be backfilled, and the freshest thing we publish. | site | — | free | 34 |
 | `/requests.html` | Ask for a capability to be measured. | requests, site, terminal | board.json, coverage.json, index.json, requests.json, tasks.json | free | 34 |
 | `/start.html` | How to use it: the CLI, the MCP server, the plugin. | site, terminal | board.json, capabilities.json, index.json, tasks.json | free | 34 |
+| `/for-hosts.html` | For IDEs and agent hosts: swap one base URL, get the measurement. | site, terminal | board.json, index.json, tasks.json | free | 33 |
 | `/refunds.html` | Cancellation and the 7-day refund. | site, terminal | board.json, index.json, tasks.json | post-sale | 33 |
 | `/stats.html` | The ecosystem in numbers, CC BY 4.0 with a citation line — built so the articles that outrank us cite us instead. | site | — | free | 32 |
 | `/about.html` | What tashan measures, where it is going, and the principles the scoring follows. | site, terminal | board.json, index.json, tasks.json | free | 31 |
@@ -38,11 +38,11 @@ Derived columns come from disk on every run. **Purpose** is hand-written in
 
 | Route pattern | Pages | Generator |
 |---|---|---|
-| `/capability/*.html` | 12,818 | `pipeline/prerender.py` |
-| `/category/*.html` | 112 | `pipeline/gen_hubs.py` |
+| `/capability/*.html` | 12,921 | `pipeline/prerender.py` |
+| `/category/*.html` | 115 | `pipeline/gen_hubs.py` |
 | `/task/*.html` | 65 | `pipeline/gen_hubs.py` |
 | `/role/*.html` | 23 | `pipeline/gen_hubs.py` |
-| `/compare/*.html` | 420 | `pipeline/gen_compare.py` |
+| `/compare/*.html` | 413 | `pipeline/gen_compare.py` |
 | `/learn/*.html` | 9 | `pipeline/gen_content.py` |
 
 ## Non-page surfaces
@@ -66,6 +66,7 @@ Each of these exists because the failure it prevents already shipped once.
 
 - `cli/mcp.test.mjs` — node cli/mcp.test.mjs — protocol + rendering for the MCP server. No network.
 - `cli/tashan.test.mjs` — node cli/tashan.test.mjs  — pure-logic tests for the CLI (no network, no deps).
+- `cli/tokens.test.mjs` — 
 - `functions/api/_cdp.test.mjs` — CDP auth. A wrong claim here is a 401 with no explanation, and a 401 means charge() denies — so
 - `functions/api/_demand.test.mjs` — node functions/api/_demand.test.mjs
 - `functions/api/_head.test.mjs` — node functions/api/_head.test.mjs

@@ -11,11 +11,11 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 
 | # | Capability | tashan score | Adoption evidence | Activity |
 |---|---|---|---|---|
-| 1 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 41 | 3k/wk | abandoned |
-| 2 | [Arx](https://tashan.sh/capability/plugin-eric-tramel-arx-arx.html) | 30 | 7 ★ | active |
-| 3 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 70 | 5k ★ | active |
+| 1 | [Notebooklm · PleasePrompto](https://tashan.sh/capability/pkg-notebooklm-mcp.html) | 42 | 4k/wk | abandoned |
+| 2 | [Arx](https://tashan.sh/capability/plugin-eric-tramel-arx-arx.html) | 29 | 7 ★ | active |
+| 3 | [Exa · exa-labs](https://tashan.sh/capability/plugin-exa-labs-exa-mcp-server-exa.html) | 69 | 5k ★ | active |
 | 4 | [Clinicaltrialsgov](https://tashan.sh/capability/pkg-clinicaltrialsgov-mcp-server.html) | 58 | 916/wk | active |
-| 5 | [Sciverse](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 52 | 78 ★ | active |
+| 5 | [Sciverse](https://tashan.sh/capability/plugin-opendatalab-sciverse-agent-tools-sciverse.html) | 51 | 78 ★ | active |
 | 6 | [Phd Deepread](https://tashan.sh/capability/plugin-heleninsights-dot-phd-deepread-workflow-phd-deepread.html) | 36 | 56 ★ | active |
 | 7 | [Research Co Pilot](https://tashan.sh/capability/plugin-marazii-research-co-pilot-research-co-pilot.html) | 36 | 5 ★ | active |
 | 8 | [Research · alirezarezvani](https://tashan.sh/capability/skill-alirezarezvani-research.html) | not scored | 12 repos | active |
@@ -23,9 +23,10 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 10 | [Bettercallclaude](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-bettercallclaude.html) | 49 | 33 ★ | active |
 | 11 | [Bettercallclaude Italia](https://tashan.sh/capability/plugin-fedec65-bettercallclaude-italia-bettercallclaude-italia.html) | 41 | 41 ★ | active |
 | 12 | [Pubcrawl](https://tashan.sh/capability/pkg-pharmatools-pubcrawl.html) | 43 | 334/wk | active |
-| 13 | [Openalex Research](https://tashan.sh/capability/pkg-openalex-research-mcp.html) | 39 | 224/wk | active |
-| 14 | [Europepmc](https://tashan.sh/capability/pkg-europepmc-mcp.html) | 47 | 251/wk | active |
-| 15 | [Pubmed · mrfentmen](https://tashan.sh/capability/pkg-mrfentmen-pubmed-mcp.html) | 45 | 146/wk | active |
+| 13 | [Openalex Research](https://tashan.sh/capability/pkg-openalex-research-mcp.html) | 38 | 224/wk | active |
+| 14 | [Europepmc](https://tashan.sh/capability/pkg-europepmc-mcp.html) | 46 | 251/wk | active |
+| 15 | [Imbad0202 Academic Research Skills](https://tashan.sh/capability/plugin-imbad0202-academic-research-skills-imbad0202-academic-research-skills.html) | 45 | 1 marketplaces | active |
+| 16 | [Pubmed · mrfentmen](https://tashan.sh/capability/pkg-mrfentmen-pubmed-mcp.html) | 45 | 146/wk | active |
 
 ## What these numbers are not
 

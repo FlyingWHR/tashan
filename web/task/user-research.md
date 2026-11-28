@@ -18,6 +18,7 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 5 | [Windmill Hr](https://tashan.sh/capability/plugin-windmill-dev-windmill-plugin-windmill-hr.html) | 36 | 1 ★ | active |
 | 6 | [Pm Skills](https://tashan.sh/capability/plugin-product-on-purpose-pm-skills-pm-skills.html) | 59 | 504 ★ | active |
 | 7 | [Fullstory · fullstorydev](https://tashan.sh/capability/plugin-fullstorydev-fullstory-skills-fullstory.html) | 37 | 9 ★ | active |
+| 8 | [Research](https://tashan.sh/capability/pkg-userintuition-ai-mcp.html) | 63 | 328/wk | active |
 
 ## What these numbers are not
 

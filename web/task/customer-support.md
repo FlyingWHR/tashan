@@ -16,15 +16,15 @@ Ranked by fit for the task, then how well it documents itself, then the tashan s
 | 3 | [Freescout](https://tashan.sh/capability/pkg-verygoodplugins-mcp-freescout.html) | 39 | 239/wk | abandoned |
 | 4 | [Zendesk](https://tashan.sh/capability/pkg-fruggr-zendesk-mcp-server.html) | 72 | 2k/wk | active |
 | 5 | [Connectwise Psa](https://tashan.sh/capability/pkg-mcp-connectwise-psa.html) | 44 | 368/wk | active |
-| 6 | [Eventbrite](https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html) | 42 | 273/wk | active |
-| 7 | [Zd](https://tashan.sh/capability/pkg-zd-mcp-server.html) | 38 | 370/wk | active |
-| 8 | [NexTool MCP for GLPI](https://tashan.sh/capability/pkg-nextoolsolutions-mcp-glpi.html) | 64 | 534/wk | active |
-| 9 | [Bridge](https://tashan.sh/capability/pkg-mgsoftwarebv-mcp-server-bridge.html) | 54 | 450/wk | active |
-| 10 | [Ticket Demo](https://tashan.sh/capability/pkg-mcp-ticket-demo.html) | 53 | 875/wk | active |
-| 11 | [Quick Desk](https://tashan.sh/capability/pkg-quick-desk-mcp.html) | 41 | 202/wk | active |
-| 12 | [Casemargin](https://tashan.sh/capability/pkg-casemargin-mcp-server.html) | 39 | 124/wk | active |
-| 13 | [Tomticket](https://tashan.sh/capability/pkg-mcp-tomticket.html) | 37 | 68/wk | active |
-| 14 | [Telos Ready](https://tashan.sh/capability/pkg-telos-ready-mcp.html) | 36 | 47/wk | active |
+| 6 | [Eventbrite](https://tashan.sh/capability/pkg-chrischall-eventbrite-mcp.html) | 41 | 273/wk | active |
+| 7 | [Zd](https://tashan.sh/capability/pkg-zd-mcp-server.html) | 37 | 370/wk | active |
+| 8 | [NexTool MCP for GLPI](https://tashan.sh/capability/pkg-nextoolsolutions-mcp-glpi.html) | 63 | 534/wk | active |
+| 9 | [Grief Support Guide Matcher](https://tashan.sh/capability/pkg-mrfentmen-grief-support-guide-mcp.html) | 58 | 369/wk | active |
+| 10 | [Bridge](https://tashan.sh/capability/pkg-mgsoftwarebv-mcp-server-bridge.html) | 54 | 450/wk | active |
+| 11 | [Ticket Demo](https://tashan.sh/capability/pkg-mcp-ticket-demo.html) | 53 | 875/wk | active |
+| 12 | [Quick Desk](https://tashan.sh/capability/pkg-quick-desk-mcp.html) | 40 | 202/wk | active |
+| 13 | [Casemargin](https://tashan.sh/capability/pkg-casemargin-mcp-server.html) | 39 | 124/wk | active |
+| 14 | [Tomticket](https://tashan.sh/capability/pkg-mcp-tomticket.html) | 37 | 68/wk | active |
 
 ## What these numbers are not
 
