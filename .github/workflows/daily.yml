@@ -250,7 +250,7 @@ jobs:
         run: python3 pipeline/onchain.py | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Surface a failed cache store
-        if: always() && steps.dbpush.outcome != 'success'
+        if: always() && !inputs.publish_snapshot && steps.dbpush.outcome != 'success'
         run: |
           echo "::error::db_store push FAILED — r2://tashan-state/tashan.db was not updated."
           echo "::error::Every later run will start from a stale cache and the incremental"
